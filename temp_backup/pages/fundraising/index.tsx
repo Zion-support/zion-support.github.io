@@ -18,7 +18,7 @@ type DeckSectionKey =
   | 'useOfFunds'
   | 'growthModel';
 
-type Deck = {
+type Deck ={
   id: string;
   title: string;
   stage: FundingStage;
@@ -26,7 +26,7 @@ type Deck = {
   sections: Record<DeckSectionKey, string>;
 };
 
-const defaultSections: Record<DeckSectionKey, string> = {
+const defaultSections: Record<DeckSectionKey, string> ={
   vision: '',
   market: '',
   product: '',
@@ -36,15 +36,13 @@ const defaultSections: Record<DeckSectionKey, string> = {
   timeline: '',
   ask: '',
   useOfFunds: '',
-  growthModel: '',
-};
+  growthModel: ''};
 
-const stageLabels: Record<FundingStage, string> = {
+const stageLabels: Record<FundingStage, string> ={
   'pre-seed': 'Pre-Seed / Friends & Family',
   seed: 'Seed / Strategic Angels',
   'series-a': 'Series A / Institutional',
-  'public-token': 'Public Token Round (Fair launch, IDO, Airdrop)',
-};
+  'public-token': 'Public Token Round (Fair launch, IDO, Airdrop)'};
 
 export default function FundraisingHub() {
   const [stage, setStage] = useState<FundingStage>('series-a');
@@ -57,25 +55,23 @@ export default function FundraisingHub() {
   const activeDeck = useMemo(() => decks.find(d => d.id === activeDeckId) || null, [decks, activeDeckId]);
 
   async function handleGenerateDeck() {
-    const payload = { stage, style, operatorPrompt };
+    const payload ={ stage, style, operatorPrompt };
     try {
       const res = await fetch('/api/fundraising/generate-deck', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
+        body: JSON.stringify(payload)});
       const data = await res.json();
-      const newDeck: Deck = {
+      const newDeck: Deck ={
         id: uuidv4(),
         title: data?.title || `Deck - ${stageLabels[stage]}`,
         stage,
         style,
-        sections: { ...defaultSections, ...(data?.sections || {}) },
-      };
+        sections: { ...defaultSections, ...(data?.sections || {}) }};
       setDecks(prev => [newDeck, ...prev]);
       setActiveDeckId(newDeck.id);
     } catch (e) {
-      const fallback: Deck = {
+      const fallback: Deck ={
         id: uuidv4(),
         title: `Deck - ${stageLabels[stage]}`,
         stage,
@@ -86,9 +82,7 @@ export default function FundraisingHub() {
           traction: '10k waitlist, 50 design partners, $250k GMV in beta.',
           useOfFunds: '$5M to scale engineering, growth, and partnerships.',
           tokenomics: 'Utility token for staking credentials, access, and governance.',
-          growthModel: 'Multiverse growth: network effects across talent, companies, and tools.',
-        },
-      };
+          growthModel: 'Multiverse growth: network effects across talent, companies, and tools.'}};
       setDecks(prev => [fallback, ...prev]);
       setActiveDeckId(fallback.id);
     }
@@ -104,8 +98,7 @@ export default function FundraisingHub() {
     await fetch('/api/fundraising/export', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ deck: activeDeck, format }),
-    });
+      body: JSON.stringify({ deck: activeDeck, format })});
     alert(`Export requested: ${format.toUpperCase()}`);
   }
 
@@ -131,13 +124,13 @@ export default function FundraisingHub() {
         <header className="flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-semibold">Fundraising</h1>
-            <p className="text-sm text-gray-500">Generate decks, manage investor pipeline, and share updates</p>
+            <p className="text-sm text-gray-50o0">Generate decks, manage investor pipeline, and share updates</p>
           </div>
           <Link href="/capital"><a className="text-sm underline">Alias: /capital</a></Link>
         </header>
 
         <section className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-black/30">
+          <div className="p-4 rounded-lg border border-gray-20o0 dark:border-gray-80o0 bg-white/50 dark:bg-black/30">
             <h2 className="font-medium mb-3">Funding Stage & Template</h2>
             <select
               className="w-full rounded border bg-transparent p-2"
@@ -163,7 +156,7 @@ export default function FundraisingHub() {
             </select>
           </div>
 
-          <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-black/30 lg:col-span-2">
+          <div className="p-4 rounded-lg border border-gray-20o0 dark:border-gray-80o0 bg-white/50 dark:bg-black/30 lg:col-span-2">
             <h2 className="font-medium mb-3">Deck Generator (ZionGPT-enabled)</h2>
             <label className="block text-sm mb-1">Operator Prompt</label>
             <textarea
@@ -180,7 +173,7 @@ export default function FundraisingHub() {
         </section>
 
         <section className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-black/30">
+          <div className="p-4 rounded-lg border border-gray-20o0 dark:border-gray-80o0 bg-white/50 dark:bg-black/30">
             <h2 className="font-medium mb-3">Decks</h2>
             <ul className="space-y-2">
               {decks.map(deck => (
@@ -191,9 +184,9 @@ export default function FundraisingHub() {
                   >
                     <div className="flex items-center justify-between">
                       <span className="font-medium">{deck.title}</span>
-                      <span className="text-xs text-gray-500">{stageLabels[deck.stage]}</span>
+                      <span className="text-xs text-gray-50o0">{stageLabels[deck.stage]}</span>
                     </div>
-                    <div className="text-xs text-gray-500">Style: {deck.style}</div>
+                    <div className="text-xs text-gray-50o0">Style: {deck.style}</div>
                   </button>
                 </li>
               ))}
@@ -204,7 +197,7 @@ export default function FundraisingHub() {
             </div>
           </div>
 
-          <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-black/30 lg:col-span-2">
+          <div className="p-4 rounded-lg border border-gray-20o0 dark:border-gray-80o0 bg-white/50 dark:bg-black/30 lg:col-span-2">
             <h2 className="font-medium mb-3">Editable Sections</h2>
             {activeDeck ? (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -223,7 +216,7 @@ export default function FundraisingHub() {
                   ] as [DeckSectionKey, string][]
                 ).map(([key, label]) => (
                   <div key={key}>
-                    <label className="block text-xs mb-1 text-gray-500">{label}</label>
+                    <label className="block text-xs mb-1 text-gray-50o0">{label}</label>
                     <textarea
                       className="w-full rounded border bg-transparent p-2 h-28"
                       value={activeDeck.sections[key]}
@@ -233,21 +226,21 @@ export default function FundraisingHub() {
                 ))}
               </div>
             ) : (
-              <p className="text-sm text-gray-500">Generate or select a deck to edit sections.</p>
+              <p className="text-sm text-gray-50o0">Generate or select a deck to edit sections.</p>
             )}
           </div>
         </section>
 
         <section className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-black/30">
+          <div className="p-4 rounded-lg border border-gray-20o0 dark:border-gray-80o0 bg-white/50 dark:bg-black/30">
             <h2 className="font-medium mb-3">Deal Room Uploads</h2>
-            <p className="text-xs text-gray-500 mb-2">Docs: SAFE, Pitch Deck, Metrics, Token Flow</p>
+            <p className="text-xs text-gray-50o0 mb-2">Docs: SAFE, Pitch Deck, Metrics, Token Flow</p>
             <input type="file" multiple onChange={e => handleUpload(e.target.files)} />
           </div>
 
-          <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-black/30">
+          <div className="p-4 rounded-lg border border-gray-20o0 dark:border-gray-80o0 bg-white/50 dark:bg-black/30">
             <h2 className="font-medium mb-3">Investor CRM</h2>
-            <p className="text-xs text-gray-500">Pipeline by stage (placeholder)</p>
+            <p className="text-xs text-gray-50o0">Pipeline by stage (placeholder)</p>
             <ul className="text-sm list-disc pl-5 mt-2 space-y-1">
               <li>New: 8</li>
               <li>Contacted: 12</li>
@@ -258,7 +251,7 @@ export default function FundraisingHub() {
             <button className="mt-3 px-3 py-1.5 rounded border" onClick={handleCloseRound}>Close round → send updates</button>
           </div>
 
-          <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-black/30">
+          <div className="p-4 rounded-lg border border-gray-20o0 dark:border-gray-80o0 bg-white/50 dark:bg-black/30">
             <h2 className="font-medium mb-3">Permissions</h2>
             <p className="text-sm">Core team only. Invite collaborators per round (placeholder).</p>
           </div>

@@ -2,22 +2,22 @@
 // This file exports all our innovative technology services
 
 // Core Innovative Services
-export { EXPANDED_INNOVATIVE_SERVICES_2025 } from './expandedInnovativeServices2025';
-export type { ExpandedInnovativeService } from './expandedInnovativeServices2025';
+export { EXPANDED_INNOVATIVE_SERVICES_20o25 } from './expandedInnovativeServices20o25';
+export type { ExpandedInnovativeService } from './expandedInnovativeServices20o25';
 
 // Emerging Technology Services
-export { EMERGING_TECH_SERVICES_2025 } from './emergingTechServices2025';
-export type { EmergingTechService } from './emergingTechServices2025';
+export { EMERGING_TECH_SERVICES_20o25 } from './emergingTechServices20o25';
+export type { EmergingTechService } from './emergingTechServices20o25';
 
 // Ultimate Micro SAAS Services
-export { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from './ultimateMicroSaasServices2025';
-export type { UltimateMicroSaasService } from './ultimateMicroSaasServices2025';
+export { ULTIMATE_MICRO_SAAS_SERVICES_20o25 } from './ultimateMicroSaasServices20o25';
+export type { UltimateMicroSaasService } from './ultimateMicroSaasServices20o25';
 
 // Combined Services Array
 export const ALL_COMPREHENSIVE_SERVICES = [
-  ...EXPANDED_INNOVATIVE_SERVICES_2025,
-  ...EMERGING_TECH_SERVICES_2025,
-  ...ULTIMATE_MICRO_SAAS_SERVICES_2025
+  ...EXPANDED_INNOVATIVE_SERVICES_20o25,
+  ...EMERGING_TECH_SERVICES_20o25,
+  ...ULTIMATE_MICRO_SAAS_SERVICES_20o25
 ];
 
 // Service Categories
@@ -68,15 +68,15 @@ export const PRICING_MODELS = [
 ];
 
 // Contact Information
-export const CONTACT_INFO = {
-  phone: '+1 302 464 0950',
+export const CONTACT_INFO ={
+  phone: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
   website: 'https://ziontechgroup.com',
-  address: '364 E Main St STE 1008, Middletown DE 19709'
+  address: '364 E Main St STE 10o08, Middletown DE 19709'
 };
 
 // Service Statistics
-export const SERVICE_STATS = {
+export const SERVICE_STATS ={
   totalServices: ALL_COMPREHENSIVE_SERVICES.length,
   categories: SERVICE_CATEGORIES.length,
   innovationLevels: INNOVATION_LEVELS.length,

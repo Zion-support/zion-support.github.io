@@ -1,8 +1,7 @@
-import React from "react";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-export const ServiceLandingTemplate = ({ title, subtitle, heroImage, description, benefits, testimonials, ctaText, ctaLink, }) => {
+export const ServiceLandingTemplate = ({ title, subtitle, heroImage, description, benefits, testimonials, ctaText, ctaLink}) => {
     return (<div className="bg-background text-white">
       <section className="bg-zion-blue py-16 px-4 text-center">
         <div className="container mx-auto">
@@ -12,7 +11,7 @@ export const ServiceLandingTemplate = ({ title, subtitle, heroImage, description
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             {subtitle}
           </p>
-          {heroImage && (<img loading="lazy" src={heroImage} alt={title} className="mx-auto mt-8 rounded-lg shadow-xl max-w-3xl"/>)}
+          {heroImage && (<img loading="lazy" src={heroImage} alt={title} className="mx-auto mt-8 rounded-lg shadow-xl max-w-3xl" />)}
         </div>
       </section>
 
@@ -49,14 +48,14 @@ export const ServiceLandingTemplate = ({ title, subtitle, heroImage, description
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.map((t, idx) => (<Card key={idx} className="bg-zion-blue-dark border-zion-purple/30">
                 <CardContent className="pt-6">
-                  <p className="text-gray-200 mb-6">"{t.text}"</p>
+                  <p className="text-gray-20o0 mb-6">"{t.text}"</p>
                 </CardContent>
                 <CardFooter className="border-t border-zion-purple/20 pt-4">
                   <div className="flex items-center">
-                    {t.avatar && (<img loading="lazy" src={t.avatar} alt={t.name} className="h-10 w-10 rounded-full mr-4"/>)}
+                    {t.avatar && (<img loading="lazy" src={t.avatar} alt={t.name} className="h-10 w-10 rounded-full mr-4" />)}
                     <div>
                       <p className="font-semibold text-white">{t.name}</p>
-                      {t.role && (<p className="text-sm text-gray-400">{t.role}</p>)}
+                      {t.role && (<p className="text-sm text-gray-40o0">{t.role}</p>)}
                     </div>
                   </div>
                 </CardFooter>

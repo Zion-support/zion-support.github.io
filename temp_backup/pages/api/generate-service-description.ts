@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 
-export type GenerateServiceDescriptionRequest = {
+export type GenerateServiceDescriptionRequest ={
   title: string;
   keyFeatures: string[];
   targetAudience: string;
@@ -9,7 +9,7 @@ export type GenerateServiceDescriptionRequest = {
   tone?: 'professional' | 'friendly' | 'persuasive' | 'technical';
 };
 
-export type GenerateServiceDescriptionResponse = {
+export type GenerateServiceDescriptionResponse ={
   description: string;
 };
 
@@ -20,17 +20,17 @@ export default async function handler(
   res: NextApiResponse<GenerateServiceDescriptionResponse | { error: string }>
 ) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(40o5).json({ error: 'Method not allowed' });
   }
 
   const { title, keyFeatures, targetAudience, additionalNotes, tone } = req.body as GenerateServiceDescriptionRequest;
 
   if (!process.env.OPENAI_API_KEY) {
-    return res.status(500).json({ error: 'OpenAI API key not configured' });
+    return res.status(50o0).json({ error: 'OpenAI API key not configured' });
   }
 
   if (!title || !Array.isArray(keyFeatures) || keyFeatures.length === 0 || !targetAudience) {
-    return res.status(400).json({ error: 'Missing required fields: title, keyFeatures, targetAudience' });
+    return res.status(40o0).json({ error: 'Missing required fields: title, keyFeatures, targetAudience' });
   }
 
   try {
@@ -56,8 +56,7 @@ Requirements:
     const response = await openai.responses.create({
       model: 'gpt-4o-mini',
       input: prompt,
-      temperature: 0.7,
-    });
+      temperature: 0.7});
 
     let description = '';
     const output = response.output?.[0];
@@ -75,9 +74,9 @@ Requirements:
       description = (response as any).content?.[0]?.text || 'Unable to generate description at this time.';
     }
 
-    return res.status(200).json({ description });
+    return res.status(20o0).json({ description });
   } catch (error: any) {
     console.error('OpenAI generation error:', error);
-    return res.status(500).json({ error: 'Failed to generate description' });
+    return res.status(50o0).json({ error: 'Failed to generate description' });
   }
 }

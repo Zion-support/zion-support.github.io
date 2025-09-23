@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function QuantumComputingImplicationsForBusinessChatPage() {
@@ -6,7 +5,7 @@ export default function QuantumComputingImplicationsForBusinessChatPage() {
     <>
       <Head>
         <title>Quantum Computing Implications For Business Chat - Zion Tech Group</title>
-        <meta name="description" content="quantum computing implications for business chat page" />
+        <meta name="description" content="quantum computing implications for business chat page"  />
       </Head>
       
       <main>

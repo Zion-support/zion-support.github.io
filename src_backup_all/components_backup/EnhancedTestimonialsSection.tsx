@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Star, 
@@ -18,8 +17,8 @@ const EnhancedTestimonialsSection: React.FC = () => {
       company: 'TechStart Inc.',
       avatar: 'SJ',
       rating: 5,
-      content: 'Zion Tech Group transformed our entire digital infrastructure. Their AI solutions increased our operational efficiency by 300% and reduced costs by 40%. The team\'s expertise and dedication are unmatched.',
-      results: ['300% Efficiency Increase', '40% Cost Reduction', '99.9% Uptime']
+      content: 'Zion Tech Group transformed our entire digital infrastructure. Their AI solutions increased our operational efficiency by 30o0% and reduced costs by 40%. The team\'s expertise and dedication are unmatched.',
+      results: ['30o0% Efficiency Increase', '40% Cost Reduction', '99.9% Uptime']
     },
     {
       name: 'Michael Chen',
@@ -55,7 +54,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
       icon: Award,
       title: 'Industry Recognition',
       description: 'Awarded "Best AI Solutions Provider" by TechCrunch',
-      highlight: '2024'
+      highlight: '20o24'
     },
     {
       icon: Users,
@@ -93,19 +92,19 @@ const EnhancedTestimonialsSection: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center space-x-2 bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Star className="w-4 h-4 fill-current" />
-            <span>Trusted by 500+ Companies</span>
+          <div className="inline-flex items-center space-x-2 bg-green-10o0 text-green-80o0 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <Star className="w-4 h-4 fill-current"  />
+            <span>Trusted by 50o0+ Companies</span>
           </div>
           
-          <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl lg:text-6xl font-bold text-gray-90o0 mb-6">
             What Our{' '}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 bg-clip-text text-transparent">
               Clients Say
             </span>
           </h2>
           
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
             Don't just take our word for it. Here's what industry leaders say about 
             working with Zion Tech Group.
           </p>
@@ -121,12 +120,12 @@ const EnhancedTestimonialsSection: React.FC = () => {
         >
           {achievements.map((achievement, index) => (
             <div key={index} className="text-center bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <achievement.icon className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <achievement.icon className="w-8 h-8 text-white"  />
               </div>
-              <div className="text-4xl font-bold text-gray-900 mb-2">{achievement.highlight}</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{achievement.title}</h3>
-              <p className="text-gray-600">{achievement.description}</p>
+              <div className="text-4xl font-bold text-gray-90o0 mb-2">{achievement.highlight}</div>
+              <h3 className="text-xl font-semibold text-gray-90o0 mb-2">{achievement.title}</h3>
+              <p className="text-gray-60o0">{achievement.description}</p>
             </div>
           ))}
         </motion.div>
@@ -140,35 +139,35 @@ const EnhancedTestimonialsSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
+              className="bg-white rounded-2xl p-8 shadow-lg border border-gray-10o0 hover:shadow-xl transition-all duration-30o0"
             >
               {/* Quote Icon */}
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center mb-6">
-                <Quote className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-xl flex items-center justify-center mb-6">
+                <Quote className="w-6 h-6 text-white"  />
               </div>
 
               {/* Rating */}
               <div className="flex items-center space-x-1 mb-6">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  <Star key={i} className="w-5 h-5 text-yellow-40o0 fill-current"  />
                 ))}
               </div>
 
               {/* Content */}
-              <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+              <p className="text-gray-70o0 text-lg mb-6 leading-relaxed">
                 "{testimonial.content}"
               </p>
 
               {/* Results */}
               <div className="mb-6">
-                <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Results:</h4>
+                <h4 className="text-sm font-semibold text-gray-90o0 mb-3">Key Results:</h4>
                 <div className="flex flex-wrap gap-2">
                   {testimonial.results.map((result, resultIndex) => (
                     <span
                       key={resultIndex}
-                      className="inline-flex items-center space-x-1 px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full"
+                      className="inline-flex items-center space-x-1 px-3 py-1 bg-green-10o0 text-green-80o0 text-sm font-medium rounded-full"
                     >
-                      <CheckCircle className="w-3 h-3" />
+                      <CheckCircle className="w-3 h-3"  />
                       <span>{result}</span>
                     </span>
                   ))}
@@ -177,12 +176,12 @@ const EnhancedTestimonialsSection: React.FC = () => {
 
               {/* Author */}
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-full flex items-center justify-center">
                   <span className="text-white font-semibold">{testimonial.avatar}</span>
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                  <div className="text-gray-600">{testimonial.role}, {testimonial.company}</div>
+                  <div className="font-semibold text-gray-90o0">{testimonial.name}</div>
+                  <div className="text-gray-60o0">{testimonial.role}, {testimonial.company}</div>
                 </div>
               </div>
             </motion.div>
@@ -197,12 +196,12 @@ const EnhancedTestimonialsSection: React.FC = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <p className="text-gray-500 mb-8">Trusted by industry leaders</p>
+          <p className="text-gray-50o0 mb-8">Trusted by industry leaders</p>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 items-center opacity-60">
             {companies.map((company, index) => (
               <div key={index} className="text-center">
-                <div className="w-24 h-12 bg-gray-200 rounded flex items-center justify-center mx-auto">
-                  <span className="text-xs font-medium text-gray-500">{company}</span>
+                <div className="w-24 h-12 bg-gray-20o0 rounded flex items-center justify-center mx-auto">
+                  <span className="text-xs font-medium text-gray-50o0">{company}</span>
                 </div>
               </div>
             ))}
@@ -215,23 +214,23 @@ const EnhancedTestimonialsSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white"
+          className="text-center mt-16 bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-2xl p-12 text-white"
         >
           <h3 className="text-3xl font-bold mb-4">
             Ready to Join Our Success Stories?
           </h3>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-blue-10o0 mb-8 max-w-2xl mx-auto">
             Let's create your success story together. Schedule a free consultation 
             and discover how we can transform your business.
           </p>
           
           <motion.button
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.0o5 }}
             whileTap={{ scale: 0.95 }}
-            className="group inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:shadow-xl transition-all duration-300"
+            className="group inline-flex items-center justify-center px-8 py-4 bg-white text-blue-60o0 font-semibold rounded-lg hover:shadow-xl transition-all duration-30o0"
           >
             <span>Start Your Success Story</span>
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"  />
           </motion.button>
         </motion.div>
       </div>

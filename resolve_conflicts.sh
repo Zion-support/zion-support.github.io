@@ -1,33 +1,39 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by choosing the main branch version
-# This will resolve conflicts by keeping the main branch version (HEAD)
+# Script to resolve merge conflicts by keeping HEAD version
+# This will resolve conflicts by taking the current (HEAD) version of all conflicted files
 
-echo "Resolving merge conflicts by keeping main branch version..."
+echo "Resolving merge conflicts by keeping HEAD version..."
 
 # Get list of conflicted files
-git status --porcelain | grep "^UU\|^AA\|^DD" | cut -c4- > conflicted_files.txt
+conflicted_files=$(git diff --name-only --diff-filter=U)
 
-echo "Found $(wc -l < conflicted_files.txt) conflicted files"
-
-# For each conflicted file, resolve by choosing main branch version
-while IFS= read -r file; do
+for file in $conflicted_files; do
+    echo "Resolving conflicts in: $file"
+    
+    # Check if file exists
     if [ -f "$file" ]; then
-        echo "Resolving conflict in: $file"
-        # Use git checkout to choose the main branch version (HEAD)
-        git checkout --ours "$file"
+        # Extract HEAD version (between <<<<<<< HEAD and =======)
+        # Remove conflict markers and keep only the HEAD version
+        sed -n '/^<<<<<<< HEAD$/,/^=======$/p' "$file" | sed '1d;$d' > "${file}.head"
+        
+        # Check if we have a HEAD section
+        if [ -s "${file}.head" ]; then
+            # Replace the entire file with HEAD version
+            cp "${file}.head" "$file"
+            echo "  ✓ Resolved by keeping HEAD version"
+        else
+            echo "  ⚠ No HEAD section found, keeping original"
+        fi
+        
+        # Clean up temporary file
+        rm -f "${file}.head"
+        
+        # Mark as resolved
         git add "$file"
+    else
+        echo "  ⚠ File not found: $file"
     fi
-done < conflicted_files.txt
+done
 
-# Clean up
-rm conflicted_files.txt
-
-echo "Conflicts resolved. Committing merge..."
-git commit -m "Resolve merge conflicts by keeping main branch version
-
-- Merged origin/auto/autonomy-17186719616 into main
-- Resolved conflicts by choosing main branch version
-- All conflicts automatically resolved"
-
-echo "Merge completed successfully!"
+echo "All conflicts resolved. Files marked for commit."

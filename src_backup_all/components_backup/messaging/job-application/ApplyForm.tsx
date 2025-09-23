@@ -12,7 +12,6 @@ import { ResumeTab } from "./ResumeTab";
 import { Job } from "./types";
 import {logErrorToProduction} from '@/utils/productionLogger';
 
-
 interface ApplyFormProps {
   job: Job;
   onClose: () => void;
@@ -78,7 +77,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       }
       
       // Create context data for the conversation
-      const contextData = {
+      const contextData ={
         title: job.title,
         description: job.description,
         attachedResume: selectedResume ? {
@@ -104,8 +103,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       
       toast({
         title: "Application sent",
-        description: `Your application for "${job.title}" has been sent.`,
-      });
+        description: `Your application for "${job.title}" has been sent.`});
       
       onClose();
     } catch (error) {
@@ -138,14 +136,14 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
             setMessage={setMessage}
             proposalLink={proposalLink}
             setProposalLink={setProposalLink}
-          />
+           />
         </TabsContent>
         
         <TabsContent value="resume">
           <ResumeTab 
             onResumeSelected={handleResumeSelected}
             selectedResumeId={selectedResumeId} 
-          />
+           />
         </TabsContent>
       </Tabs>
       
@@ -166,7 +164,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         >
           {isSubmitting ? (
             <>
-              <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+              <Loader2 className="h-4 w-4 mr-2 animate-spin"  />
               Submitting...
             </>
           ) : (

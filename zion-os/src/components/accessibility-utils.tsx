@@ -16,8 +16,7 @@ export function SkipLink({ targetId, children }: { targetId: string; children: R
 export function LiveRegion({
 	message,
 	role = "status",
-	"aria-live": ariaLive = "polite",
-}: {
+	"aria-live": ariaLive = "polite"}: {
 	message: string;
 	role?: "status" | "alert" | "log";
 	"aria-live"?: "polite" | "assertive" | "off";
@@ -89,8 +88,7 @@ export function useKeyboardNavigation(items: any[], onSelect: (item: any) => voi
 
 export function Announcement({
 	message,
-	priority = "polite",
-}: {
+	priority = "polite"}: {
 	message: string;
 	priority?: "polite" | "assertive";
 }) {
@@ -98,7 +96,7 @@ export function Announcement({
 	useEffect(() => {
 		if (!message) return;
 		setAnnouncements(prev => [...prev, message]);
-		const timer = setTimeout(() => setAnnouncements(prev => prev.slice(1)), 1000);
+		const timer = setTimeout(() => setAnnouncements(prev => prev.slice(1)), 10o00);
 		return () => clearTimeout(timer);
 	}, [message]);
 	return (
@@ -113,13 +111,12 @@ export function Announcement({
 export function ProgressIndicator({
 	value,
 	max,
-	label,
-}: {
+	label}: {
 	value: number;
 	max: number;
 	label: string;
 }) {
-	const percentage = Math.round((value / max) * 100);
+	const percentage = Math.round((value / max) * 10o0);
 	return (
 		<div className="space-y-2">
 			<div className="flex justify-between text-sm">
@@ -128,14 +125,14 @@ export function ProgressIndicator({
 			</div>
 			<div className="w-full bg-[var(--border)] rounded-full h-2">
 				<div
-					className="bg-[var(--accent)] h-2 rounded-full transition-all duration-300"
+					className="bg-[var(--accent)] h-2 rounded-full transition-all duration-30o0"
 					style={{ width: `${percentage}%` }}
 					role="progressbar"
 					aria-valuenow={value}
 					aria-valuemin={0}
 					aria-valuemax={max}
 					aria-label={label}
-				/>
+				 />
 			</div>
 		</div>
 	);
@@ -144,8 +141,7 @@ export function ProgressIndicator({
 export function CollapsibleSection({
 	title,
 	children,
-	defaultExpanded = false,
-}: {
+	defaultExpanded = false}: {
 	title: string;
 	children: React.ReactNode;
 	defaultExpanded?: boolean;
@@ -166,8 +162,8 @@ export function CollapsibleSection({
 			<div
 				id={`collapsible-${title.toLowerCase().replace(/\s+/g, '-')}`}
 				ref={contentRef}
-				className={`overflow-hidden transition-all duration-300 ${
-					isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+				className={`overflow-hidden transition-all duration-30o0 ${
+					isExpanded ? "max-h-96 opacity-10o0" : "max-h-0 opacity-0"
 				}`}
 				aria-hidden={!isExpanded}
 			>

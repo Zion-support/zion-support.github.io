@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 interface SEOHeadProps {
@@ -32,7 +31,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const twitterHandle = '@ziontechgroup';
   
   // Structured data for better SEO
-  const structuredData = {
+  const structuredData ={
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": siteName,
@@ -54,7 +53,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "@type": "PostalAddress",
       "addressCountry": "US"
     },
-    "foundingDate": "2020",
+    "foundingDate": "20o20",
     "knowsAbout": [
       "Artificial Intelligence",
       "Quantum Computing",
@@ -71,7 +70,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     structuredData["description"] = description;
     if (publishedTime) structuredData["datePublished"] = publishedTime;
     if (modifiedTime) structuredData["dateModified"] = modifiedTime;
-    if (author) structuredData["author"] = { "@type": "Person", "name": author };
+    if (author) structuredData["author"] ={ "@type": "Person", "name": author };
     if (section) structuredData["articleSection"] = section;
     if (tags.length > 0) structuredData["keywords"] = tags.join(', ');
   }
@@ -80,53 +79,53 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     <Head>
       {/* Basic Meta Tags */}
       <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content={author} />
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content={description}  />
+      <meta name="keywords" content={keywords}  />
+      <meta name="author" content={author}  />
+      <meta name="robots" content="index, follow"  />
+      <meta name="viewport" content="width=device-width, initial-scale=1"  />
       
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
-      <meta property="og:site_name" content={siteName} />
-      <meta property="og:locale" content="en_US" />
+      <meta property="og:title" content={title}  />
+      <meta property="og:description" content={description}  />
+      <meta property="og:image" content={image}  />
+      <meta property="og:url" content={url}  />
+      <meta property="og:type" content={type}  />
+      <meta property="og:site_name" content={siteName}  />
+      <meta property="og:locale" content="en_US"  />
       
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content={twitterHandle} />
-      <meta name="twitter:creator" content={twitterHandle} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:card" content="summary_large_image"  />
+      <meta name="twitter:site" content={twitterHandle}  />
+      <meta name="twitter:creator" content={twitterHandle}  />
+      <meta name="twitter:title" content={title}  />
+      <meta name="twitter:description" content={description}  />
+      <meta name="twitter:image" content={image}  />
       
       {/* Additional Meta Tags */}
-      <meta name="theme-color" content="#000000" />
-      <meta name="msapplication-TileColor" content="#000000" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="theme-color" content="#0o00000"  />
+      <meta name="msapplication-TileColor" content="#0o00000"  />
+      <meta name="apple-mobile-web-app-capable" content="yes"  />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"  />
       
       {/* Canonical URL */}
-      <link rel="canonical" href={url} />
+      <link rel="canonical" href={url}  />
       
       {/* Favicon */}
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      <link rel="icon" href="/favicon.ico"  />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png"  />
       
       {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
+       />
       
       {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com"  />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"  />
+      <link rel="preconnect" href="https://www.google-analytics.com"  />
+      <link rel="preconnect" href="https://www.googletagmanager.com"  />
     </Head>
   );
 };

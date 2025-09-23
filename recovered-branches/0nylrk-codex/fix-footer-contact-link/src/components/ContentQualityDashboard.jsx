@@ -101,12 +101,12 @@ const ContentQualityDashboard = ({ className = '' }) => {
     };
     const getStatusColor = (score) => {
         if (score >= 80)
-            return 'text-green-600 bg-green-50 border-green-200';
+            return 'text-green-60o0 bg-green-50 border-green-20o0';
         if (score >= 60)
-            return 'text-yellow-600 bg-yellow-50 border-yellow-200';
+            return 'text-yellow-60o0 bg-yellow-50 border-yellow-20o0';
         if (score >= 40)
-            return 'text-orange-600 bg-orange-50 border-orange-200';
-        return 'text-red-600 bg-red-50 border-red-200';
+            return 'text-orange-60o0 bg-orange-50 border-orange-20o0';
+        return 'text-red-60o0 bg-red-50 border-red-20o0';
     };
     const getStatusText = (score) => {
         if (score >= 80)
@@ -143,17 +143,17 @@ const ContentQualityDashboard = ({ className = '' }) => {
     const filteredPages = getFilteredPages();
     return (<div className={`fixed bottom-6 left-6 z-50 ${className}`}>
       {/* Floating Action Button */}
-      <button onClick={() => setIsOpen(!isOpen)} className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" aria-label="Toggle Content Quality Dashboard">
-        <BarChart3 className="w-6 h-6"/>
+      <button onClick={() => setIsOpen(!isOpen)} className="bg-gradient-to-r from-green-60o0 to-blue-60o0 hover:from-green-70o0 hover:to-blue-70o0 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-30o0 transform hover:scale-10o5" aria-label="Toggle Content Quality Dashboard">
+        <BarChart3 className="w-6 h-6" />
       </button>
 
       {/* Dashboard Panel */}
-      {isOpen && (<div className="absolute bottom-16 left-0 w-[800px] bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+      {isOpen && (<div className="absolute bottom-16 left-0 w-[80o0px] bg-white dark:bg-gray-90o0 rounded-lg shadow-2xl border border-gray-20o0 dark:border-gray-70o0 overflow-hidden">
           {/* Header */}
-          <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white p-4">
+          <div className="bg-gradient-to-r from-green-60o0 to-blue-60o0 text-white p-4">
             <div className="flex items-center justify-between">
               <h3 className="text-lg font-semibold flex items-center gap-2">
-                <FileText className="w-5 h-5"/>
+                <FileText className="w-5 h-5" />
                 Content Quality Dashboard
               </h3>
               <button onClick={() => setIsOpen(false)} className="text-white/80 hover:text-white transition-colors">
@@ -165,100 +165,100 @@ const ContentQualityDashboard = ({ className = '' }) => {
             {report && (<div className="grid grid-cols-4 gap-4 mt-3">
                 <div className="text-center">
                   <div className="text-2xl font-bold">{report.totalPages}</div>
-                  <div className="text-sm text-green-100">Total Pages</div>
+                  <div className="text-sm text-green-10o0">Total Pages</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold">{report.averageWordCount}</div>
-                  <div className="text-sm text-green-100">Avg Words</div>
+                  <div className="text-sm text-green-10o0">Avg Words</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold">{report.averageSeoScore}%</div>
-                  <div className="text-sm text-green-100">Avg SEO</div>
+                  <div className="text-sm text-green-10o0">Avg SEO</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold">{report.pagesWithIssues}</div>
-                  <div className="text-sm text-red-100">Need Fixes</div>
+                  <div className="text-sm text-red-10o0">Need Fixes</div>
                 </div>
               </div>)}
           </div>
 
           {/* Content */}
-          <div className="p-4 max-h-[600px] overflow-y-auto">
+          <div className="p-4 max-h-[60o0px] overflow-y-auto">
             {isLoading ? (<div className="flex items-center justify-center py-8">
-                <RefreshCw className="w-6 h-6 animate-spin text-green-600"/>
-                <span className="ml-2 text-gray-600">Analyzing content...</span>
+                <RefreshCw className="w-6 h-6 animate-spin text-green-60o0" />
+                <span className="ml-2 text-gray-60o0">Analyzing content...</span>
               </div>) : report ? (<div className="space-y-4">
                 {/* Filters and Search */}
                 <div className="flex gap-3 items-center">
                   <div className="flex-1 relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"/>
-                    <input type="text" placeholder="Search pages..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent"/>
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-40o0" />
+                    <input type="text" placeholder="Search pages..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-30o0 rounded-md focus:ring-2 focus:ring-green-50o0 focus:border-transparent"/>
                   </div>
-                  <select value={filterStatus} onChange={(e) => setFilterStatus(e.target.value)} className="px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                  <select value={filterStatus} onChange={(e) => setFilterStatus(e.target.value)} className="px-3 py-2 border border-gray-30o0 rounded-md focus:ring-2 focus:ring-green-50o0 focus:border-transparent">
                     <option value="all">All Pages</option>
                     <option value="excellent">Excellent (80%+)</option>
                     <option value="good">Good (60-79%)</option>
                     <option value="poor">Poor (&lt;40%)</option>
                   </select>
-                  <button onClick={exportReport} className="px-3 py-2 bg-green-600 hover:bg-green-700 text-white rounded-md transition-colors flex items-center gap-2">
-                    <Download className="w-4 h-4"/>
+                  <button onClick={exportReport} className="px-3 py-2 bg-green-60o0 hover:bg-green-70o0 text-white rounded-md transition-colors flex items-center gap-2">
+                    <Download className="w-4 h-4" />
                     Export
                   </button>
                 </div>
 
                 {/* Top Issues */}
-                {report.topIssues.length > 0 && (<div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg">
-                    <h4 className="font-medium text-yellow-800 dark:text-yellow-200 mb-2 flex items-center gap-2">
-                      <AlertTriangle className="w-4 h-4"/>
+                {report.topIssues.length > 0 && (<div className="bg-yellow-50 dark:bg-yellow-90o0/20 p-4 rounded-lg">
+                    <h4 className="font-medium text-yellow-80o0 dark:text-yellow-20o0 mb-2 flex items-center gap-2">
+                      <AlertTriangle className="w-4 h-4" />
                       Top Issues to Address
                     </h4>
                     <div className="space-y-1">
-                      {report.topIssues.slice(0, 3).map((issue, index) => (<div key={index} className="text-sm text-yellow-700 dark:text-yellow-300">
+                      {report.topIssues.slice(0, 3).map((issue, index) => (<div key={index} className="text-sm text-yellow-70o0 dark:text-yellow-30o0">
                           • {issue}
                         </div>))}
                     </div>
                   </div>)}
 
                 {/* Pages Table */}
-                <div className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden">
+                <div className="bg-gray-50 dark:bg-gray-80o0 rounded-lg overflow-hidden">
                   <div className="overflow-x-auto">
                     <table className="w-full">
-                      <thead className="bg-gray-100 dark:bg-gray-700">
+                      <thead className="bg-gray-10o0 dark:bg-gray-70o0">
                         <tr>
-                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-50o0 uppercase tracking-wider">
                             Page
                           </th>
-                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-50o0 uppercase tracking-wider">
                             Word Count
                           </th>
-                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-50o0 uppercase tracking-wider">
                             SEO Score
                           </th>
-                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-50o0 uppercase tracking-wider">
                             Overall
                           </th>
-                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-50o0 uppercase tracking-wider">
                             Status
                           </th>
                         </tr>
                       </thead>
-                      <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
-                        {filteredPages.map((page, index) => (<tr key={index} className="hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer" onClick={() => setSelectedPage(page)}>
+                      <tbody className="bg-white dark:bg-gray-80o0 divide-y divide-gray-20o0 dark:divide-gray-70o0">
+                        {filteredPages.map((page, index) => (<tr key={index} className="hover:bg-gray-50 dark:hover:bg-gray-70o0 cursor-pointer" onClick={() => setSelectedPage(page)}>
                             <td className="px-4 py-3">
-                              <div className="text-sm font-medium text-gray-900 dark:text-white">
+                              <div className="text-sm font-medium text-gray-90o0 dark:text-white">
                                 {page.title}
                               </div>
-                              <div className="text-xs text-gray-500 dark:text-gray-400">
+                              <div className="text-xs text-gray-50o0 dark:text-gray-40o0">
                                 {page.pageUrl}
                               </div>
                             </td>
-                            <td className="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                            <td className="px-4 py-3 text-sm text-gray-90o0 dark:text-white">
                               {page.wordCount}
                             </td>
-                            <td className="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                            <td className="px-4 py-3 text-sm text-gray-90o0 dark:text-white">
                               {page.seoScore}%
                             </td>
-                            <td className="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                            <td className="px-4 py-3 text-sm text-gray-90o0 dark:text-white">
                               {page.overallScore}%
                             </td>
                             <td className="px-4 py-3">
@@ -274,51 +274,51 @@ const ContentQualityDashboard = ({ className = '' }) => {
 
                 {/* Page Details Modal */}
                 {selectedPage && (<div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                    <div className="bg-white dark:bg-gray-900 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto">
+                    <div className="bg-white dark:bg-gray-90o0 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto">
                       <div className="flex items-center justify-between mb-4">
-                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                        <h3 className="text-lg font-semibold text-gray-90o0 dark:text-white">
                           Page Analysis: {selectedPage.title}
                         </h3>
-                        <button onClick={() => setSelectedPage(null)} className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
-                          <X className="w-5 h-5"/>
+                        <button onClick={() => setSelectedPage(null)} className="text-gray-40o0 hover:text-gray-60o0 dark:hover:text-gray-30o0">
+                          <X className="w-5 h-5" />
                         </button>
                       </div>
                       
                       <div className="space-y-4">
                         <div className="grid grid-cols-2 gap-4">
-                          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                            <div className="text-sm text-gray-500 dark:text-gray-400">Word Count</div>
-                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.wordCount}</div>
+                          <div className="bg-gray-50 dark:bg-gray-80o0 p-3 rounded-lg">
+                            <div className="text-sm text-gray-50o0 dark:text-gray-40o0">Word Count</div>
+                            <div className="text-lg font-semibold text-gray-90o0 dark:text-white">{selectedPage.wordCount}</div>
                           </div>
-                          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                            <div className="text-sm text-gray-500 dark:text-gray-400">Headings</div>
-                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.headingCount}</div>
+                          <div className="bg-gray-50 dark:bg-gray-80o0 p-3 rounded-lg">
+                            <div className="text-sm text-gray-50o0 dark:text-gray-40o0">Headings</div>
+                            <div className="text-lg font-semibold text-gray-90o0 dark:text-white">{selectedPage.headingCount}</div>
                           </div>
-                          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                            <div className="text-sm text-gray-500 dark:text-gray-400">Images</div>
-                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.imageCount}</div>
+                          <div className="bg-gray-50 dark:bg-gray-80o0 p-3 rounded-lg">
+                            <div className="text-sm text-gray-50o0 dark:text-gray-40o0">Images</div>
+                            <div className="text-lg font-semibold text-gray-90o0 dark:text-white">{selectedPage.imageCount}</div>
                           </div>
-                          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                            <div className="text-sm text-gray-500 dark:text-gray-400">Links</div>
-                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.linkCount}</div>
+                          <div className="bg-gray-50 dark:bg-gray-80o0 p-3 rounded-lg">
+                            <div className="text-sm text-gray-50o0 dark:text-gray-40o0">Links</div>
+                            <div className="text-lg font-semibold text-gray-90o0 dark:text-white">{selectedPage.linkCount}</div>
                           </div>
                         </div>
 
                         {selectedPage.issues.length > 0 && (<div>
-                            <h4 className="font-medium text-red-600 dark:text-red-400 mb-2">Issues Found</h4>
+                            <h4 className="font-medium text-red-60o0 dark:text-red-40o0 mb-2">Issues Found</h4>
                             <div className="space-y-2">
-                              {selectedPage.issues.map((issue, index) => (<div key={index} className="flex items-start gap-2 text-sm text-red-600 dark:text-red-400">
-                                  <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0"/>
+                              {selectedPage.issues.map((issue, index) => (<div key={index} className="flex items-start gap-2 text-sm text-red-60o0 dark:text-red-40o0">
+                                  <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0" />
                                   <span>{issue}</span>
                                 </div>))}
                             </div>
                           </div>)}
 
                         {selectedPage.recommendations.length > 0 && (<div>
-                            <h4 className="font-medium text-green-600 dark:text-green-400 mb-2">Recommendations</h4>
+                            <h4 className="font-medium text-green-60o0 dark:text-green-40o0 mb-2">Recommendations</h4>
                             <div className="space-y-2">
-                              {selectedPage.recommendations.map((rec, index) => (<div key={index} className="flex items-start gap-2 text-sm text-green-600 dark:text-green-400">
-                                  <Zap className="w-4 h-4 mt-0.5 flex-shrink-0"/>
+                              {selectedPage.recommendations.map((rec, index) => (<div key={index} className="flex items-start gap-2 text-sm text-green-60o0 dark:text-green-40o0">
+                                  <Zap className="w-4 h-4 mt-0.5 flex-shrink-0" />
                                   <span>{rec}</span>
                                 </div>))}
                             </div>
@@ -326,18 +326,18 @@ const ContentQualityDashboard = ({ className = '' }) => {
                       </div>
                     </div>
                   </div>)}
-              </div>) : (<div className="text-center py-8 text-gray-500">
+              </div>) : (<div className="text-center py-8 text-gray-50o0">
                 No content quality data available
               </div>)}
           </div>
 
           {/* Footer Actions */}
-          <div className="bg-gray-50 dark:bg-gray-800 p-3 flex gap-2">
-            <button onClick={analyzeAllPages} disabled={isLoading} className="flex-1 bg-green-600 hover:bg-green-700 disabled:bg-green-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2">
-              <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`}/>
+          <div className="bg-gray-50 dark:bg-gray-80o0 p-3 flex gap-2">
+            <button onClick={analyzeAllPages} disabled={isLoading} className="flex-1 bg-green-60o0 hover:bg-green-70o0 disabled:bg-green-40o0 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2">
+              <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
               {isLoading ? 'Analyzing...' : 'Analyze All Pages'}
             </button>
-            <button onClick={() => contentAnalyzer.clearCache()} className="px-3 py-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 text-sm transition-colors">
+            <button onClick={() => contentAnalyzer.clearCache()} className="px-3 py-2 text-gray-60o0 hover:text-gray-80o0 dark:text-gray-40o0 dark:hover:text-gray-20o0 text-sm transition-colors">
               Clear Cache
             </button>
           </div>

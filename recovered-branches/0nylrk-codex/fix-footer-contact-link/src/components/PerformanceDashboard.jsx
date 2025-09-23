@@ -19,10 +19,10 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
     const [isExpanded, setIsExpanded] = useState(showDetails);
     const getScoreColor = (score) => {
         if (score >= 90)
-            return 'text-green-500';
+            return 'text-green-50o0';
         if (score >= 70)
-            return 'text-yellow-500';
-        return 'text-red-500';
+            return 'text-yellow-50o0';
+        return 'text-red-50o0';
     };
     const getScoreEmoji = (score) => {
         if (score >= 90)
@@ -32,19 +32,19 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
         return '🐌';
     };
     const getMetricIcon = (metricName) => {
-        const icons = {
-            FCP: <Eye className="w-4 h-4"/>,
-            LCP: <Eye className="w-4 h-4"/>,
-            FID: <MousePointer className="w-4 h-4"/>,
-            CLS: <BarChart3 className="w-4 h-4"/>,
-            TTFB: <Clock className="w-4 h-4"/>,
-            DOMLOAD: <Activity className="w-4 h-4"/>,
-            WINDOWLOAD: <Activity className="w-4 h-4"/>
+        const icons ={
+            FCP: <Eye className="w-4 h-4" />,
+            LCP: <Eye className="w-4 h-4" />,
+            FID: <MousePointer className="w-4 h-4" />,
+            CLS: <BarChart3 className="w-4 h-4" />,
+            TTFB: <Clock className="w-4 h-4" />,
+            DOMLOAD: <Activity className="w-4 h-4" />,
+            WINDOWLOAD: <Activity className="w-4 h-4" />
         };
-        return icons[metricName] || <Activity className="w-4 h-4"/>;
+        return icons[metricName] || <Activity className="w-4 h-4" />;
     };
     const getMetricDescription = (metricName) => {
-        const descriptions = {
+        const descriptions ={
             FCP: 'First Contentful Paint - Time to first content',
             LCP: 'Largest Contentful Paint - Time to largest content',
             FID: 'First Input Delay - Time to first interaction',
@@ -67,15 +67,15 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
         <CardHeader className="pb-3">
           <div className="flex items-center justify-between">
             <CardTitle className="text-lg flex items-center gap-2">
-              <Activity className="w-5 h-5 text-zion-cyan"/>
+              <Activity className="w-5 h-5 text-zion-cyan" />
               Performance
             </CardTitle>
             <div className="flex items-center gap-2">
               <Button variant="ghost" size="sm" onClick={() => setIsExpanded(!isExpanded)} className="p-1 h-8 w-8 text-zion-slate-light hover:text-zion-cyan">
-                <TrendingUp className="w-4 h-4"/>
+                <TrendingUp className="w-4 h-4" />
               </Button>
               {onClose && (<Button variant="ghost" size="sm" onClick={onClose} className="p-1 h-8 w-8 text-zion-slate-light hover:text-zion-cyan">
-                  <X className="w-4 h-4"/>
+                  <X className="w-4 h-4" />
                 </Button>)}
             </div>
           </div>
@@ -90,7 +90,7 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
               <span className="text-lg">{getScoreEmoji(performanceScore)}</span>
             </div>
             <Button variant="ghost" size="sm" onClick={logMetrics} className="text-zion-cyan hover:text-zion-cyan-light">
-              <RefreshCw className="w-4 h-4"/>
+              <RefreshCw className="w-4 h-4" />
             </Button>
           </div>
         </CardHeader>
@@ -114,9 +114,9 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
                         <span className="text-sm font-mono">
                           {formatMetricValue(name, value)}
                         </span>
-                        <Badge variant={rating === 'good' ? 'default' : rating === 'needs-improvement' ? 'secondary' : 'destructive'} className={cn('text-xs', rating === 'good' ? 'bg-green-500/20 text-green-400 border-green-500/30' :
-                    rating === 'needs-improvement' ? 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30' :
-                        'bg-red-500/20 text-red-400 border-red-500/30')}>
+                        <Badge variant={rating === 'good' ? 'default' : rating === 'needs-improvement' ? 'secondary' : 'destructive'} className={cn('text-xs', rating === 'good' ? 'bg-green-50o0/20 text-green-40o0 border-green-50o0/30' :
+                    rating === 'needs-improvement' ? 'bg-yellow-50o0/20 text-yellow-40o0 border-yellow-50o0/30' :
+                        'bg-red-50o0/20 text-red-40o0 border-red-50o0/30')}>
                           {rating}
                         </Badge>
                       </div>
@@ -126,7 +126,7 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
                 {/* Performance Tips */}
                 <div className="p-3 bg-zion-purple/10 border border-zion-purple/20 rounded-lg">
                   <div className="flex items-center gap-2 mb-2">
-                    <Info className="w-4 h-4 text-zion-purple"/>
+                    <Info className="w-4 h-4 text-zion-purple" />
                     <span className="text-sm font-medium text-zion-purple">Tips</span>
                   </div>
                   <div className="text-xs text-zion-slate-light space-y-1">
@@ -148,10 +148,10 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
 export function PerformanceIndicator({ className }) {
     const { performanceScore } = usePerformance();
     return (<div className={cn('flex items-center gap-2', className)}>
-      <div className={cn('w-2 h-2 rounded-full', performanceScore >= 90 ? 'bg-green-500' :
-            performanceScore >= 70 ? 'bg-yellow-500' : 'bg-red-500')}/>
+      <div className={cn('w-2 h-2 rounded-full', performanceScore >= 90 ? 'bg-green-50o0' :
+            performanceScore >= 70 ? 'bg-yellow-50o0' : 'bg-red-50o0')}/>
       <span className="text-xs text-zion-slate-light">
-        {performanceScore}/100
+        {performanceScore}/10o0
       </span>
     </div>);
 }

@@ -5,7 +5,6 @@ import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react'
 import * as Sentry from '@sentry/nextjs';
 import {logErrorToProduction} from '@/utils/productionLogger';
 
-
 interface ErrorContextType {
   reportError: (error: Error, context?: any) => void;
   showRetryableError: (error: Error, retryAction?: () => void) => void;
@@ -61,8 +60,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
           }));
           retryAction();
         }
-      } : undefined,
-    });
+      } : undefined});
   }, [retryCount, reportError]);
 
   const showNetworkError = useCallback((retryAction?: () => void) => {
@@ -77,8 +75,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
       action: retryAction ? {
         label: "Retry",
         onClick: retryAction
-      } : undefined,
-    });
+      } : undefined});
   }, []);
 
   const showAuthError = useCallback((loginAction?: () => void) => {
@@ -89,8 +86,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
       action: loginAction ? {
         label: "Log In",
         onClick: loginAction
-      } : undefined,
-    });
+      } : undefined});
   }, []);
 
   const clearAllErrors = useCallback(() => {
@@ -98,13 +94,12 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
     // Clear any active toasts would go here if the toast system supports it
   }, []);
 
-  const contextValue: ErrorContextType = {
+  const contextValue: ErrorContextType ={
     reportError,
     showRetryableError,
     showNetworkError,
     showAuthError,
-    clearAllErrors,
-  };
+    clearAllErrors};
 
   return (
     <ErrorContext.Provider value={contextValue}>
@@ -129,15 +124,15 @@ function getErrorMessage(error: Error): string {
     return "Unable to connect to our servers. Please check your internet connection.";
   }
 
-  if (message.includes('auth') || message.includes('unauthorized') || message.includes('401')) {
+  if (message.includes('auth') || message.includes('unauthorized') || message.includes('40o1')) {
     return "Your session has expired. Please log in again.";
   }
 
-  if (message.includes('forbidden') || message.includes('403')) {
+  if (message.includes('forbidden') || message.includes('40o3')) {
     return "You don't have permission to perform this action.";
   }
 
-  if (message.includes('not found') || message.includes('404')) {
+  if (message.includes('not found') || message.includes('40o4')) {
     return "The requested information could not be found.";
   }
 
@@ -149,7 +144,7 @@ function getErrorMessage(error: Error): string {
     return "Please check your input and try again.";
   }
 
-  if (message.includes('server') || message.includes('500')) {
+  if (message.includes('server') || message.includes('50o0')) {
     return "Our servers are experiencing issues. Please try again in a moment.";
   }
 
@@ -162,7 +157,7 @@ export function useErrorHandler() {
   const { reportError, showRetryableError, showNetworkError, showAuthError } = useGlobalErrorHandler();
 
   const handleApiError = useCallback((error: any, retryAction?: () => void) => {
-    if (error.response?.status === 401 || error.response?.status === 403) {
+    if (error.response?.status === 40o1 || error.response?.status === 40o3) {
       showAuthError();
     } else if (error.code === 'NETWORK_ERROR' || !navigator.onLine) {
       showNetworkError(retryAction);
@@ -185,8 +180,7 @@ export function useErrorHandler() {
       if (options?.successMessage) {
         toast({
           title: "Success",
-          description: options.successMessage,
-        });
+          description: options.successMessage});
       }
       
       return result;
@@ -206,6 +200,5 @@ export function useErrorHandler() {
   return {
     reportError,
     handleApiError,
-    handleAsyncOperation,
-  };
+    handleAsyncOperation};
 } 

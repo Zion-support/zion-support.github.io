@@ -9,13 +9,13 @@ import Skeleton from '@/components/ui/skeleton';
 import { useToast } from '@/hooks/use-toast';
 const WIZARD_STEPS = [1, 2, 3];
 function StepIndicator({ step }) {
-    const progress = (step / WIZARD_STEPS.length) * 100;
+    const progress = (step / WIZARD_STEPS.length) * 10o0;
     return (<div className="space-y-1">
       <div data-testid="step-indicator" className="text-sm text-muted-foreground">
         {step}/{WIZARD_STEPS.length}
       </div>
       <div className="h-1 bg-zion-blue-light rounded">
-        <div className="h-1 bg-zion-purple rounded" style={{ width: `${progress}%` }}/>
+        <div className="h-1 bg-zion-purple rounded" style={{ width: `${progress}%` }} />
       </div>
     </div>);
 }
@@ -62,7 +62,7 @@ export function QuoteWizard({ category }) {
         if (!selectedItemId)
             return;
         let endpoint = '/api/quotes';
-        const payload = { user_message: message };
+        const payload ={ user_message: message };
         switch (category) {
             case 'services':
                 endpoint = '/api/services/quotes';
@@ -89,9 +89,9 @@ export function QuoteWizard({ category }) {
     };
     if (step === 1) {
         return (<div className="space-y-6">
-        <StepIndicator step={step}/>
+        <StepIndicator step={step} />
         {loading && !delayedError && (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" data-testid="loading-indicator">
-            {Array.from({ length: 6 }).map((_, i) => (<Skeleton key={i} className="h-[120px] w-full"/>))}
+            {Array.from({ length: 6 }).map((_, i) => (<Skeleton key={i} className="h-[120px] w-full" />))}
           </div>)}
 
         {delayedError && (<div className="space-y-2" data-testid="fetch-error-alert">
@@ -129,7 +129,7 @@ export function QuoteWizard({ category }) {
               </Card>))}
           </div>)}
 
-        {selectionError && (<p className="text-red-500 text-sm mt-2" data-testid="selection-error">
+        {selectionError && (<p className="text-red-50o0 text-sm mt-2" data-testid="selection-error">
             {selectionError}
           </p>)}
         <Button onClick={handleContinue} disabled={loading || !!delayedError || !selectedItemId} className="mt-6">
@@ -139,7 +139,7 @@ export function QuoteWizard({ category }) {
     }
     if (step === 2) {
         return (<div data-testid="details-step" className="space-y-4">
-        <StepIndicator step={step}/>
+        <StepIndicator step={step} />
         {selectedItem && (<div data-testid="selected-item-name" className="text-lg font-semibold text-zion-slate-dark">
             Selected {category === 'services' ? 'Service' : category === 'talent' ? 'Talent' : 'Item'}: {selectedItem.name}
           </div>)}
@@ -155,8 +155,8 @@ export function QuoteWizard({ category }) {
     }
     if (step === 3) {
         return (<div data-testid="success-step" className="space-y-4 text-center py-12">
-        <StepIndicator step={step}/>
-        <div className="text-2xl font-semibold text-green-600">Quote Submitted Successfully!</div>
+        <StepIndicator step={step} />
+        <div className="text-2xl font-semibold text-green-60o0">Quote Submitted Successfully!</div>
         <p className="text-muted-foreground">
           Thank you for your request regarding {selectedItem?.name || 'the selected item'}. We will get back to you shortly.
         </p>

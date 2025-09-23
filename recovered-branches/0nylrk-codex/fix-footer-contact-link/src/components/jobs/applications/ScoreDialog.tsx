@@ -31,7 +31,7 @@ export function ScoreDialog({
           <ApplicationScoreCard 
             application={application}
             onScoreUpdated={onScoreUpdated}
-          />
+           />
         )}
       </DialogContent>
     </Dialog>

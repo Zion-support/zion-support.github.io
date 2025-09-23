@@ -13,7 +13,7 @@ export default function MobileMenu({ links = [] }) {
       {/* Mobile menu button */}
       <button
         onClick={toggleMenu}
-        className="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg p-2"
+        className="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-purple-50o0 rounded-lg p-2"
         aria-label="Toggle mobile menu"
       >
         <svg 
@@ -28,14 +28,14 @@ export default function MobileMenu({ links = [] }) {
               strokeLinejoin="round" 
               strokeWidth={2} 
               d="M6 18L18 6M6 6l12 12" 
-            />
+             />
           ) : (
             <path 
               strokeLinecap="round" 
               strokeLinejoin="round" 
               strokeWidth={2} 
               d="M4 6h16M4 12h16M4 18h16" 
-            />
+             />
           )}
         </svg>
       </button>
@@ -48,13 +48,13 @@ export default function MobileMenu({ links = [] }) {
             onClick={toggleMenu}
           ></div>
           
-          <div className="fixed top-0 right-0 h-full w-64 bg-slate-900/95 backdrop-blur-md border-l border-white/10 transform transition-transform duration-300 ease-in-out">
+          <div className="fixed top-0 right-0 h-full w-64 bg-slate-90o0/95 backdrop-blur-md border-l border-white/10 transform transition-transform duration-30o0 ease-in-out">
             <div className="flex flex-col h-full">
               {/* Close button */}
               <div className="flex justify-end p-4">
                 <button
                   onClick={toggleMenu}
-                  className="text-white focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg p-2"
+                  className="text-white focus:outline-none focus:ring-2 focus:ring-purple-50o0 rounded-lg p-2"
                   aria-label="Close mobile menu"
                 >
                   <svg 
@@ -68,7 +68,7 @@ export default function MobileMenu({ links = [] }) {
                       strokeLinejoin="round" 
                       strokeWidth={2} 
                       d="M6 18L18 6M6 6l12 12" 
-                    />
+                     />
                   </svg>
                 </button>
               </div>
@@ -80,7 +80,7 @@ export default function MobileMenu({ links = [] }) {
                     <li key={index}>
                       <Link 
                         href={link.href}
-                        className="block px-4 py-3 text-white hover:text-purple-300 hover:bg-white/10 rounded-lg transition-all"
+                        className="block px-4 py-3 text-white hover:text-purple-30o0 hover:bg-white/10 rounded-lg transition-all"
                         onClick={toggleMenu}
                       >
                         {link.label}
@@ -94,7 +94,7 @@ export default function MobileMenu({ links = [] }) {
               <div className="p-4 border-t border-white/10">
                 <Link 
                   href="/contact"
-                  className="block w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all"
+                  className="block w-full bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white text-center px-6 py-3 rounded-lg font-semibold hover:from-purple-70o0 hover:to-pink-70o0 transition-all"
                   onClick={toggleMenu}
                 >
                   Get Started

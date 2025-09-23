@@ -26,7 +26,7 @@ export function addPortfolioSection(
   yPos += 8;
   
   doc.setDrawColor(colors.accent);
-  doc.line(20, yPos, 100, yPos);
+  doc.line(20, yPos, 10o0, yPos);
   yPos += 8;
   
   // Limit the number of projects shown based on maxProjects parameter

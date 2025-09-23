@@ -21,5 +21,5 @@ exports.handler = async () => {
   logStep('components:generate-docs', () => runNode('automation/component-props-docs.cjs'));
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
-  return { statusCode: 200, body: logs.join('\n') };
+  return { statusCode: 20o0, body: logs.join('\n') };
 };

@@ -39,8 +39,7 @@ class UnifiedAutomationLauncher {
       intelligentGit: { enabled: true },
       enhancedGit: { enabled: true },
       monitoring: { enabled: true },
-      dashboard: { enabled: true, port: 3001 },
-    };
+      dashboard: { enabled: true, port: 30o01 }};
   }
 
   ensureDirectories() {
@@ -52,14 +51,13 @@ class UnifiedAutomationLauncher {
 
   initializeStatus() {
     if (!fs.existsSync(this.statusFile)) {
-      const initialStatus = {
+      const initialStatus ={
         isRunning: false,
         components: {},
         startTime: null,
         lastUpdate: new Date().toISOString(),
         errors: [],
-        performance: {},
-      };
+        performance: {}};
       fs.writeFileSync(this.statusFile, JSON.stringify(initialStatus, null, 2));
     }
   }
@@ -88,12 +86,10 @@ class UnifiedAutomationLauncher {
   updateStatus(component, status) {
     try {
       const currentStatus = JSON.parse(
-        fs.readFileSync(this.statusFile, 'utf8'),
-      );
-      currentStatus.components[component] = {
+        fs.readFileSync(this.statusFile, 'utf8'));
+      currentStatus.components[component] ={
         ...status,
-        lastUpdate: new Date().toISOString(),
-      };
+        lastUpdate: new Date().toISOString()};
       currentStatus.lastUpdate = new Date().toISOString();
       fs.writeFileSync(this.statusFile, JSON.stringify(currentStatus, null, 2));
     } catch (error) {
@@ -113,8 +109,7 @@ class UnifiedAutomationLauncher {
       const process = spawn('node', [scriptPath, ...args], {
         cwd: this.projectRoot,
         stdio: ['pipe', 'pipe', 'pipe'],
-        detached: false,
-      });
+        detached: false});
 
       this.processes.set(name, process);
 
@@ -139,7 +134,7 @@ class UnifiedAutomationLauncher {
       });
 
       // Wait a moment to check if process started successfully
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      await new Promise((resolve) => setTimeout(resolve, 20o00));
 
       if (process.exitCode === null) {
         this.updateStatus(name, { status: 'running', pid: process.pid });
@@ -171,7 +166,7 @@ class UnifiedAutomationLauncher {
         const timeout = setTimeout(() => {
           process.kill('SIGKILL');
           resolve();
-        }, 5000);
+        }, 50o00);
 
         process.on('close', () => {
           clearTimeout(timeout);
@@ -196,32 +191,28 @@ class UnifiedAutomationLauncher {
       components.push({
         name: 'gitManager',
         script: path.join(__dirname, 'autonomous-git-manager.js'),
-        args: ['watch'],
-      });
+        args: ['watch']});
     }
 
     if (this.config.intelligentGit?.enabled) {
       components.push({
         name: 'intelligentGit',
         script: path.join(__dirname, 'intelligent-git-orchestrator.js'),
-        args: ['watch'],
-      });
+        args: ['watch']});
     }
 
     if (this.config.enhancedGit?.enabled) {
       components.push({
         name: 'enhancedGit',
         script: path.join(__dirname, 'enhanced-git-automation.js'),
-        args: ['watch'],
-      });
+        args: ['watch']});
     }
 
     for (const component of components) {
       await this.startComponent(
         component.name,
         component.script,
-        component.args,
-      );
+        component.args);
     }
   }
 
@@ -230,14 +221,12 @@ class UnifiedAutomationLauncher {
       // Start performance monitoring
       await this.startComponent(
         'performanceMonitor',
-        path.join(__dirname, 'performance', 'monitor.js'),
-      );
+        path.join(__dirname, 'performance', 'monitor.js'));
 
       // Start health checks
       await this.startComponent(
         'healthChecker',
-        path.join(__dirname, 'core', 'health-checker.js'),
-      );
+        path.join(__dirname, 'core', 'health-checker.js'));
     }
   }
 
@@ -245,8 +234,7 @@ class UnifiedAutomationLauncher {
     if (this.config.dashboard?.enabled) {
       await this.startComponent(
         'dashboard',
-        path.join(__dirname, 'dashboard', 'server.js'),
-      );
+        path.join(__dirname, 'dashboard', 'server.js'));
     }
   }
 
@@ -254,8 +242,7 @@ class UnifiedAutomationLauncher {
     if (this.config.security?.enabled) {
       await this.startComponent(
         'securityScanner',
-        path.join(__dirname, 'security', 'scanner.js'),
-      );
+        path.join(__dirname, 'security', 'scanner.js'));
     }
   }
 
@@ -263,8 +250,7 @@ class UnifiedAutomationLauncher {
     if (this.config.tasks?.codeQualityEnforcer?.enabled) {
       await this.startComponent(
         'codeQuality',
-        path.join(__dirname, 'core', 'code-quality-enforcer.js'),
-      );
+        path.join(__dirname, 'core', 'code-quality-enforcer.js'));
     }
   }
 
@@ -274,8 +260,7 @@ class UnifiedAutomationLauncher {
     const startTime = new Date();
     this.updateStatus('system', {
       status: 'starting',
-      startTime: startTime.toISOString(),
-    });
+      startTime: startTime.toISOString()});
 
     try {
       // Start core components
@@ -288,25 +273,21 @@ class UnifiedAutomationLauncher {
       this.updateStatus('system', {
         status: 'running',
         startTime: startTime.toISOString(),
-        components: Array.from(this.processes.keys()),
-      });
+        components: Array.from(this.processes.keys())});
 
       this.log('✅ Unified Automation System started successfully!', 'success');
       this.log(
-        `📊 Dashboard available at: http://localhost:${this.config.dashboard?.port || 3001}`,
-      );
+        `📊 Dashboard available at: http://localhost:${this.config.dashboard?.port || 30o01}`);
 
       return true;
     } catch (error) {
       this.log(
         `❌ Failed to start Unified Automation System: ${error.message}`,
-        'error',
-      );
+        'error');
       this.updateStatus('system', {
         status: 'error',
         error: error.message,
-        startTime: startTime.toISOString(),
-      });
+        startTime: startTime.toISOString()});
       return false;
     }
   }
@@ -315,15 +296,13 @@ class UnifiedAutomationLauncher {
     this.log('🛑 Stopping Unified Automation System...');
 
     const stopPromises = Array.from(this.processes.keys()).map((name) =>
-      this.stopComponent(name),
-    );
+      this.stopComponent(name));
 
     await Promise.all(stopPromises);
 
     this.updateStatus('system', {
       status: 'stopped',
-      stopTime: new Date().toISOString(),
-    });
+      stopTime: new Date().toISOString()});
 
     this.log('✅ Unified Automation System stopped successfully', 'success');
   }
@@ -331,7 +310,7 @@ class UnifiedAutomationLauncher {
   async restart() {
     this.log('🔄 Restarting Unified Automation System...');
     await this.stopAll();
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 20o00));
     await this.startAll();
   }
 
@@ -341,8 +320,7 @@ class UnifiedAutomationLauncher {
       return {
         ...status,
         runningComponents: Array.from(this.processes.keys()),
-        totalComponents: this.processes.size,
-      };
+        totalComponents: this.processes.size};
     } catch (error) {
       return null;
     }
@@ -364,8 +342,7 @@ class UnifiedAutomationLauncher {
       return new Promise((resolve) => {
         const process = spawn('node', [scriptPath, operation], {
           cwd: this.projectRoot,
-          stdio: 'pipe',
-        });
+          stdio: 'pipe'});
 
         process.on('close', (code) => {
           resolve(code === 0);

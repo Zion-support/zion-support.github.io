@@ -1,4 +1,4 @@
-type Manifesto = {
+type Manifesto ={
   title: string;
   videoProvider: 'youtube' | 'ipfs';
   videoIdOrCid: string;
@@ -17,9 +17,9 @@ export default function WelcomeManifesto({ manifesto }: { manifesto: Manifesto }
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-          />
+           />
         ) : (
-          <video className="w-full h-full" controls src={`https://ipfs.io/ipfs/${manifesto.videoIdOrCid}`} />
+          <video className="w-full h-full" controls src={`https://ipfs.io/ipfs/${manifesto.videoIdOrCid}`}  />
         )}
       </div>
       <div className="prose dark:prose-invert max-w-none">

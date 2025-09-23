@@ -6,10 +6,8 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogDescription,
-} from "@/components/ui/dialog";
+  DialogDescription} from "@/components/ui/dialog";
 import { DisputeForm } from "./DisputeForm";
-import { useRouter } from 'next/router';
 import { ShieldAlert } from 'lucide-react'
 
 interface RaiseDisputeButtonProps {
@@ -43,7 +41,7 @@ export function RaiseDisputeButton({
         className={className} 
         onClick={() => setIsDialogOpen(true)}
       >
-        <ShieldAlert className="h-4 w-4 mr-2" />
+        <ShieldAlert className="h-4 w-4 mr-2"  />
         Raise Dispute
       </Button>
       

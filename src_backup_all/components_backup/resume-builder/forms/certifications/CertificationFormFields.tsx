@@ -19,9 +19,9 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
             <FormItem>
               <FormLabel>Certification Name</FormLabel>
               <FormControl>
-                <Input placeholder="AWS Certified Solutions Architect, PMP, etc." {...field} />
+                <Input placeholder="AWS Certified Solutions Architect, PMP, etc." {...field}  />
               </FormControl>
-              <FormMessage />
+              <FormMessage  />
             </FormItem>
           )}
         />
@@ -33,9 +33,9 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
             <FormItem>
               <FormLabel>Issuing Organization</FormLabel>
               <FormControl>
-                <Input placeholder="Amazon Web Services, PMI, etc." {...field} />
+                <Input placeholder="Amazon Web Services, PMI, etc." {...field}  />
               </FormControl>
-              <FormMessage />
+              <FormMessage  />
             </FormItem>
           )}
         />
@@ -53,9 +53,9 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
                   type="date" 
                   {...field}
                   value={field.value || ''}
-                />
+                 />
               </FormControl>
-              <FormMessage />
+              <FormMessage  />
             </FormItem>
           )}
         />
@@ -71,9 +71,9 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
                   type="date" 
                   {...field}
                   value={field.value || ''}
-                />
+                 />
               </FormControl>
-              <FormMessage />
+              <FormMessage  />
             </FormItem>
           )}
         />
@@ -87,9 +87,9 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
             <FormItem>
               <FormLabel>Credential ID (Optional)</FormLabel>
               <FormControl>
-                <Input placeholder="ABC123XYZ" {...field} />
+                <Input placeholder="ABC123XYZ" {...field}  />
               </FormControl>
-              <FormMessage />
+              <FormMessage  />
             </FormItem>
           )}
         />
@@ -101,9 +101,9 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
             <FormItem>
               <FormLabel>Credential URL (Optional)</FormLabel>
               <FormControl>
-                <Input placeholder="https://www.credential.com/verify/abc123" {...field} />
+                <Input placeholder="https://www.credential.com/verify/abc123" {...field}  />
               </FormControl>
-              <FormMessage />
+              <FormMessage  />
             </FormItem>
           )}
         />

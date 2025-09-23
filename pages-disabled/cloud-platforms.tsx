@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ModernHeader } from '../src/components/header/ModernHeader';
@@ -80,34 +79,34 @@ export default function CloudPlatforms() {
     <>
       <Head>
         <title>Cloud Platforms - Zion Tech Group</title>
-        <meta name="description" content="Expert cloud platform services including AWS, Azure, and Google Cloud. Infrastructure as Code, managed databases, and enterprise security." />
-        <meta name="keywords" content="cloud platforms, AWS, Azure, Google Cloud, infrastructure as code, managed services" />
+        <meta name="description" content="Expert cloud platform services including AWS, Azure, and Google Cloud. Infrastructure as Code, managed databases, and enterprise security."  />
+        <meta name="keywords" content="cloud platforms, AWS, Azure, Google Cloud, infrastructure as code, managed services"  />
       </Head>
 
-      <ModernHeader />
+      <ModernHeader  />
 
       <main className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20">
+        <section className="bg-gradient-to-br from-blue-90o0 via-blue-80o0 to-indigo-90o0 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Cloud Platform Solutions
               </h1>
-              <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl text-blue-10o0 mb-8 max-w-3xl mx-auto">
                 Harness the power of leading cloud platforms with our expert implementation and management services
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center"
+                  className="bg-white text-blue-90o0 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center"
                 >
                   Get Started
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-5 w-5"  />
                 </Link>
                 <Link
                   href="/pricing"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors inline-flex items-center justify-center"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-90o0 transition-colors inline-flex items-center justify-center"
                 >
                   View Pricing
                 </Link>
@@ -120,10 +119,10 @@ export default function CloudPlatforms() {
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">
                 Comprehensive Cloud Solutions
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
                 From infrastructure setup to ongoing management, we provide end-to-end cloud platform services
               </p>
             </div>
@@ -132,16 +131,16 @@ export default function CloudPlatforms() {
               {features.map((feature, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
-                    <div className="p-3 bg-blue-100 rounded-lg mr-4">
-                      <feature.icon className="h-8 w-8 text-blue-600" />
+                    <div className="p-3 bg-blue-10o0 rounded-lg mr-4">
+                      <feature.icon className="h-8 w-8 text-blue-60o0"  />
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
+                    <h3 className="text-xl font-semibold text-gray-90o0">{feature.title}</h3>
                   </div>
-                  <p className="text-gray-600 mb-4">{feature.description}</p>
+                  <p className="text-gray-60o0 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-700">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                      <li key={idx} className="flex items-center text-sm text-gray-70o0">
+                        <CheckCircle className="h-4 w-4 text-green-50o0 mr-2 flex-shrink-0"  />
                         {benefit}
                       </li>
                     ))}
@@ -156,10 +155,10 @@ export default function CloudPlatforms() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">
                 Supported Cloud Platforms
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
                 We work with all major cloud providers to give you the best solution for your needs
               </p>
             </div>
@@ -167,13 +166,13 @@ export default function CloudPlatforms() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {platforms.map((platform, index) => (
                 <div key={index} className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">{platform.name}</h3>
-                  <p className="text-gray-600 mb-6">{platform.description}</p>
+                  <h3 className="text-2xl font-semibold text-gray-90o0 mb-4">{platform.name}</h3>
+                  <p className="text-gray-60o0 mb-6">{platform.description}</p>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-3">Key Services:</h4>
+                    <h4 className="font-semibold text-gray-90o0 mb-3">Key Services:</h4>
                     <div className="flex flex-wrap gap-2">
                       {platform.services.map((service, idx) => (
-                        <span key={idx} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                        <span key={idx} className="bg-blue-10o0 text-blue-80o0 px-3 py-1 rounded-full text-sm">
                           {service}
                         </span>
                       ))}
@@ -186,25 +185,25 @@ export default function CloudPlatforms() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-blue-900 text-white">
+        <section className="py-20 bg-blue-90o0 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Scale Your Cloud Infrastructure?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-blue-10o0 mb-8 max-w-3xl mx-auto">
               Let our cloud experts help you design, implement, and manage your cloud platform strategy
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center"
+                className="bg-white text-blue-90o0 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center"
               >
                 Start Your Cloud Journey
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Link>
               <Link
                 href="/case-studies"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors inline-flex items-center justify-center"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-90o0 transition-colors inline-flex items-center justify-center"
               >
                 View Case Studies
               </Link>
@@ -213,7 +212,7 @@ export default function CloudPlatforms() {
         </section>
       </main>
 
-      <SimpleFooter />
+      <SimpleFooter  />
     </>
   );
 }

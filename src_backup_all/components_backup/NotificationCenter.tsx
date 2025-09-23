@@ -70,7 +70,7 @@ export const NotificationCenter: React.FC = () => {
     <Popover open={open} onOpenChange={(v) => setOpen(v ?? false)}>
       <PopoverTrigger asChild>
         <Button variant="ghost" size="icon" className="relative" aria-label="Open notifications">
-          <Bell className="h-5 w-5 text-zion-slate-light" />
+          <Bell className="h-5 w-5 text-zion-slate-light"  />
           {unreadCount > 0 && (
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">
               {unreadCount > 9 ? '9+' : unreadCount}
@@ -78,16 +78,16 @@ export const NotificationCenter: React.FC = () => {
           )}
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">
+      <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[50o0px] flex flex-col">
         <NotificationHeader 
           unreadCount={unreadCount} 
           onMarkAllAsRead={handleMarkAllAsRead} 
-        />
+         />
         
         <NotificationFilter 
           filter={filter as FilterType} 
           onFilterChange={handleFilterChange} 
-        />
+         />
         
         <NotificationList 
           loading={loading}
@@ -96,7 +96,7 @@ export const NotificationCenter: React.FC = () => {
           onMarkAsRead={markAsRead}
           onDismiss={dismissNotification}
           onRetry={fetchNotifications}
-        />
+         />
         
         <NotificationFooter onClose={() => setOpen(false)} />
       </PopoverContent>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function MicroSaasServicesPage() {
 	return (
 		<main className="min-h-screen py-20 px-4">
@@ -8,3 +9,5 @@ export default function MicroSaasServicesPage() {
 		</main>
 	);
 }
+=======
+>>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

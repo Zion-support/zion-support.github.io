@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
@@ -161,7 +159,7 @@ class ComprehensiveErrorPrevention {
     // Set up interval for continuous error prevention
     setInterval(async () => {
       await this.runComprehensiveCheck();
-    }, 900000); // Run every 15 minutes
+    }, 90o0000); // Run every 15 minutes
   }
 }
 

@@ -23,7 +23,7 @@ export function ReferralLeaderboard() {
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Award className="h-5 w-5" />
+          <Award className="h-5 w-5"  />
           Leaderboard
         </CardTitle>
         <CardDescription>Top referrers this month</CardDescription>
@@ -39,11 +39,11 @@ export function ReferralLeaderboard() {
                 <div 
                   className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${
                     entry.rank === 1
-                      ? "bg-yellow-200 text-yellow-800"
+                      ? "bg-yellow-20o0 text-yellow-80o0"
                       : entry.rank === 2
-                      ? "bg-slate-200 text-slate-800"
+                      ? "bg-slate-20o0 text-slate-80o0"
                       : entry.rank === 3
-                      ? "bg-amber-200 text-amber-800"
+                      ? "bg-amber-20o0 text-amber-80o0"
                       : "bg-muted text-muted-foreground"
                   }`}
                 >

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { 
   Menu, 
   X, 
@@ -65,27 +64,27 @@ export default function NeoFuturisticNavigation() {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '/', icon: <Zap className="w-4 h-4" /> },
-    { name: 'Services', href: '/services', icon: <Cloud className="w-4 h-4" />, dropdown: [
-      { name: 'AI & Machine Learning', href: '/services?category=AI%20%26%20Machine%20Learning', icon: <Brain className="w-4 h-4" /> },
-      { name: 'Cloud & Infrastructure', href: '/services?category=Cloud%20%26%20Infrastructure', icon: <Cloud className="w-4 h-4" /> },
-      { name: 'Cybersecurity', href: '/services?category=Cybersecurity', icon: <Shield className="w-4 h-4" /> },
-      { name: 'Analytics & BI', href: '/services?category=Analytics%20%26%20Business%20Intelligence', icon: <BarChart3 className="w-4 h-4" /> },
-      { name: 'Quantum Computing', href: '/services?category=Quantum%20Computing', icon: <Atom className="w-4 h-4" /> },
+    { name: 'Home', href: '/', icon: <Zap className="w-4 h-4"  /> },
+    { name: 'Services', href: '/services', icon: <Cloud className="w-4 h-4"  />, dropdown: [
+      { name: 'AI & Machine Learning', href: '/services?category=AI%20%26%20Machine%20Learning', icon: <Brain className="w-4 h-4"  /> },
+      { name: 'Cloud & Infrastructure', href: '/services?category=Cloud%20%26%20Infrastructure', icon: <Cloud className="w-4 h-4"  /> },
+      { name: 'Cybersecurity', href: '/services?category=Cybersecurity', icon: <Shield className="w-4 h-4"  /> },
+      { name: 'Analytics & BI', href: '/services?category=Analytics%20%26%20Business%20Intelligence', icon: <BarChart3 className="w-4 h-4"  /> },
+      { name: 'Quantum Computing', href: '/services?category=Quantum%20Computing', icon: <Atom className="w-4 h-4"  /> },
     ]},
-    { name: 'IT Services', href: '/it-services', icon: <Globe className="w-4 h-4" /> },
-    { name: 'AI Services', href: '/ai-services', icon: <Brain className="w-4 h-4" /> },
-    { name: 'Micro SaaS', href: '/micro-saas', icon: <Bot className="w-4 h-4" /> },
-    { name: 'Pricing', href: '/pricing', icon: <BarChart3 className="w-4 h-4" /> },
-    { name: 'Market Pricing', href: '/market-pricing', icon: <DollarSign className="w-4 h-4" /> },
-    { name: 'About', href: '/about', icon: <Shield className="w-4 h-4" /> },
-    { name: 'Contact', href: '/contact', icon: <Rocket className="w-4 h-4" /> },
+    { name: 'IT Services', href: '/it-services', icon: <Globe className="w-4 h-4"  /> },
+    { name: 'AI Services', href: '/ai-services', icon: <Brain className="w-4 h-4"  /> },
+    { name: 'Micro SaaS', href: '/micro-saas', icon: <Bot className="w-4 h-4"  /> },
+    { name: 'Pricing', href: '/pricing', icon: <BarChart3 className="w-4 h-4"  /> },
+    { name: 'Market Pricing', href: '/market-pricing', icon: <DollarSign className="w-4 h-4"  /> },
+    { name: 'About', href: '/about', icon: <Shield className="w-4 h-4"  /> },
+    { name: 'Contact', href: '/contact', icon: <Rocket className="w-4 h-4"  /> },
   ];
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    address: '364 E Main St STE 10o08 Middletown DE 19709'
   };
 
   useEffect(() => {
@@ -112,8 +111,8 @@ export default function NeoFuturisticNavigation() {
     {
       name: 'Quantum Computing & AI',
       description: 'Revolutionary quantum AI solutions with unprecedented computing power',
-      icon: <Atom className="w-5 h-5" />,
-      color: 'from-purple-500 to-pink-500',
+      icon: <Atom className="w-5 h-5"  />,
+      color: 'from-purple-50o0 to-pink-50o0',
       services: [
         { name: 'Quantum AI Platform', description: 'AI-powered quantum computing', price: '$299/month', href: '/quantum-ai-cognitive' },
         { name: 'Quantum Optimization', description: 'Quantum algorithms for complex problems', price: '$199/month', href: '/quantum-ai-cognitive' },
@@ -123,8 +122,8 @@ export default function NeoFuturisticNavigation() {
     {
       name: 'AI & Machine Learning',
       description: 'Advanced artificial intelligence and ML platforms',
-      icon: <Brain className="w-5 h-5" />,
-      color: 'from-blue-500 to-cyan-500',
+      icon: <Brain className="w-5 h-5"  />,
+      color: 'from-blue-50o0 to-cyan-50o0',
       services: [
         { name: 'AI Content Generator', description: 'Professional AI content creation', price: '$49/month', href: '/ai-content-generator' },
         { name: 'AI Analytics Platform', description: 'Advanced business intelligence', price: '$99/month', href: '/ai-data-analytics' },
@@ -134,8 +133,8 @@ export default function NeoFuturisticNavigation() {
     {
       name: 'Cybersecurity',
       description: 'Next-generation security solutions',
-      icon: <Shield className="w-5 h-5" />,
-      color: 'from-red-500 to-orange-500',
+      icon: <Shield className="w-5 h-5"  />,
+      color: 'from-red-50o0 to-orange-50o0',
       services: [
         { name: 'Quantum Cybersecurity', description: 'Post-quantum era security', price: '$159/month', href: '/quantum-cybersecurity' },
         { name: 'AI Threat Detection', description: 'Intelligent security monitoring', price: '$89/month', href: '/security' },
@@ -145,8 +144,8 @@ export default function NeoFuturisticNavigation() {
     {
       name: 'Blockchain & Web3',
       description: 'Future-proof blockchain and decentralized solutions',
-      icon: <LinkIcon className="w-5 h-5" />,
-      color: 'from-indigo-500 to-purple-500',
+      icon: <LinkIcon className="w-5 h-5"  />,
+      color: 'from-indigo-50o0 to-purple-50o0',
       services: [
         { name: 'Quantum Blockchain', description: 'Post-quantum blockchain platform', price: '$349/month', href: '/quantum-blockchain' },
         { name: 'DeFi Protocol Suite', description: 'Complete DeFi solutions', price: '$199/month', href: '/services?category=Blockchain%20%26%20Web3' },
@@ -156,8 +155,8 @@ export default function NeoFuturisticNavigation() {
     {
       name: 'IoT & Smart Cities',
       description: 'Connected devices and intelligent infrastructure',
-      icon: <Globe className="w-5 h-5" />,
-      color: 'from-teal-500 to-green-500',
+      icon: <Globe className="w-5 h-5"  />,
+      color: 'from-teal-50o0 to-green-50o0',
       services: [
         { name: 'Quantum IoT Platform', description: 'Quantum-secured IoT solutions', price: '$199/month', href: '/quantum-iot' },
         { name: 'Smart City Suite', description: 'Complete urban intelligence', price: '$299/month', href: '/services?category=IoT%20%26%20Smart%20Cities' },
@@ -167,8 +166,8 @@ export default function NeoFuturisticNavigation() {
     {
       name: 'Metaverse & VR/AR',
       description: 'Immersive digital experiences and virtual worlds',
-      icon: <Eye className="w-5 h-5" />,
-      color: 'from-pink-500 to-rose-500',
+      icon: <Eye className="w-5 h-5"  />,
+      color: 'from-pink-50o0 to-rose-50o0',
       services: [
         { name: 'Quantum Metaverse', description: 'Quantum-enhanced virtual reality', price: '$499/month', href: '/quantum-metaverse' },
         { name: 'VR Development', description: 'Complete VR platform', price: '$299/month', href: '/services?category=Metaverse%20%26%20VR/AR' },
@@ -178,8 +177,8 @@ export default function NeoFuturisticNavigation() {
     {
       name: 'Robotics & Automation',
       description: 'Intelligent automation and robotic systems',
-      icon: <Cpu className="w-5 h-5" />,
-      color: 'from-orange-500 to-red-500',
+      icon: <Cpu className="w-5 h-5"  />,
+      color: 'from-orange-50o0 to-red-50o0',
       services: [
         { name: 'Quantum Robotics', description: 'AI-powered robotics platform', price: '$799/month', href: '/quantum-robotics' },
         { name: 'Manufacturing AI', description: 'Autonomous manufacturing', price: '$199/month', href: '/autonomous-manufacturing' },
@@ -189,8 +188,8 @@ export default function NeoFuturisticNavigation() {
     {
       name: 'Healthcare & Biotechnology',
       description: 'AI-powered biomedical research and drug discovery platforms',
-      icon: <FlaskConical className="w-5 h-5" />,
-      color: 'from-green-500 to-emerald-500',
+      icon: <FlaskConical className="w-5 h-5"  />,
+      color: 'from-green-50o0 to-emerald-50o0',
       services: [
         { name: 'Quantum Energy', description: 'AI-optimized energy management', price: '$299/month', href: '/quantum-energy' },
         { name: 'Smart Grid', description: 'Intelligent energy distribution', price: '$199/month', href: '/services?category=Energy%20%26%20Sustainability' },
@@ -200,8 +199,8 @@ export default function NeoFuturisticNavigation() {
     {
       name: 'Financial Technology',
       description: 'Quantum-powered financial optimization and trading platforms',
-      icon: <DollarSign className="w-5 h-5" />,
-      color: 'from-yellow-500 to-amber-500',
+      icon: <DollarSign className="w-5 h-5"  />,
+      color: 'from-yellow-50o0 to-amber-50o0',
       services: [
         { name: 'Quantum Trading', description: 'Quantum-enhanced algorithmic trading', price: '$899/month', href: '/quantum-financial-trading' },
         { name: 'AI Risk Management', description: 'Intelligent financial risk analysis', price: '$399/month', href: '/services?category=Financial%20Technology' },
@@ -211,8 +210,8 @@ export default function NeoFuturisticNavigation() {
     {
       name: 'Cybersecurity & Privacy',
       description: 'Quantum-resistant security for the post-quantum era',
-      icon: <Shield className="w-5 h-5" />,
-      color: 'from-red-500 to-pink-500',
+      icon: <Shield className="w-5 h-5"  />,
+      color: 'from-red-50o0 to-pink-50o0',
       services: [
         { name: 'Biotech AI', description: 'AI-powered drug discovery', price: '$599/month', href: '/biotech-ai' },
         { name: 'Healthcare Analytics', description: 'Medical data intelligence', price: '$299/month', href: '/services?category=Biotechnology%20%26%20Healthcare' },
@@ -225,25 +224,25 @@ export default function NeoFuturisticNavigation() {
     {
       name: 'About Zion Tech Group',
       description: 'Leading the global micro SaaS revolution',
-      icon: <Rocket className="w-5 h-5" />,
+      icon: <Rocket className="w-5 h-5"  />,
       link: '/about'
     },
     {
       name: 'Our Mission',
       description: 'Transform businesses with revolutionary technology',
-      icon: <Target className="w-5 h-5" />,
+      icon: <Target className="w-5 h-5"  />,
       link: '/mission'
     },
     {
       name: 'Leadership Team',
       description: 'Meet our visionary leaders',
-      icon: <Users className="w-5 h-5" />,
+      icon: <Users className="w-5 h-5"  />,
       link: '/team'
     },
     {
       name: 'Careers',
       description: 'Join our revolutionary team',
-      icon: <Star className="w-5 h-5" />,
+      icon: <Star className="w-5 h-5"  />,
       link: '/careers'
     }
   ];
@@ -252,25 +251,25 @@ export default function NeoFuturisticNavigation() {
     {
       name: 'Documentation',
       description: 'Comprehensive service guides',
-      icon: <BookOpen className="w-5 h-5" />,
+      icon: <BookOpen className="w-5 h-5"  />,
       link: '/docs'
     },
     {
       name: 'API Reference',
       description: 'Developer documentation',
-      icon: <Code className="w-5 h-5" />,
+      icon: <Code className="w-5 h-5"  />,
       link: '/api'
     },
     {
       name: 'Blog & Insights',
       description: 'Latest technology trends',
-      icon: <FileText className="w-5 h-5" />,
+      icon: <FileText className="w-5 h-5"  />,
       link: '/blog'
     },
     {
       name: 'Case Studies',
       description: 'Success stories from clients',
-      icon: <ChartBar className="w-5 h-5" />,
+      icon: <ChartBar className="w-5 h-5"  />,
       link: '/case-studies'
     }
   ];
@@ -278,15 +277,15 @@ export default function NeoFuturisticNavigation() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Top contact bar */}
-      <div className="hidden md:block bg-black/60 backdrop-blur-xl border-b border-gray-700/40">
-        <div className="max-w-7xl mx-auto px-4 py-2 text-xs text-gray-300">
+      <div className="hidden md:block bg-black/60 backdrop-blur-xl border-b border-gray-70o0/40">
+        <div className="max-w-7xl mx-auto px-4 py-2 text-xs text-gray-30o0">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-6">
-              <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="flex items-center gap-2 hover:text-white"><Phone className="w-3 h-3 text-cyan-400" />{contactInfo.mobile}</a>
-              <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-2 hover:text-white"><Mail className="w-3 h-3 text-purple-400" />{contactInfo.email}</a>
-              <a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white"><MapPin className="w-3 h-3 text-emerald-400" />{contactInfo.address}</a>
+              <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="flex items-center gap-2 hover:text-white"><Phone className="w-3 h-3 text-cyan-40o0"  />{contactInfo.mobile}</a>
+              <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-2 hover:text-white"><Mail className="w-3 h-3 text-purple-40o0"  />{contactInfo.email}</a>
+              <a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white"><MapPin className="w-3 h-3 text-emerald-40o0"  />{contactInfo.address}</a>
             </div>
-            <div className="hidden lg:flex items-center gap-4 text-gray-400">
+            <div className="hidden lg:flex items-center gap-4 text-gray-40o0">
               <span>99.99% uptime</span>
               <span>Free trials available</span>
               <span>24/7 AI support</span>
@@ -296,20 +295,20 @@ export default function NeoFuturisticNavigation() {
       </div>
 
       {/* Main nav */}
-      <nav className={`${scrolled ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10' : 'bg-transparent'} transition-all`}>
+      <nav className={`${scrolled ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-50o0/20 shadow-2xl shadow-cyan-50o0/10' : 'bg-transparent'} transition-all`}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
               <div className="relative">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-cyan-500 via-blue-600 to-purple-600 rounded-2xl flex items-center justify-center">
-                  <Zap className="w-6 h-6 md:w-7 md:h-7 text-white" />
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-cyan-50o0 via-blue-60o0 to-purple-60o0 rounded-2xl flex items-center justify-center">
+                  <Zap className="w-6 h-6 md:w-7 md:h-7 text-white"  />
                 </div>
-                <div className="absolute inset-0 rounded-2xl blur-xl bg-gradient-to-br from-cyan-500 via-blue-600 to-purple-600 opacity-40" />
+                <div className="absolute inset-0 rounded-2xl blur-xl bg-gradient-to-br from-cyan-50o0 via-blue-60o0 to-purple-60o0 opacity-40"  />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">Zion Tech Group</span>
-                <span className="hidden md:block text-[10px] tracking-widest text-gray-400">REVOLUTIONARY AI & QUANTUM SOLUTIONS</span>
+                <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-40o0 via-blue-40o0 to-purple-40o0 bg-clip-text text-transparent">Zion Tech Group</span>
+                <span className="hidden md:block text-[10px] tracking-widest text-gray-40o0">REVOLUTIONARY AI & QUANTUM SOLUTIONS</span>
               </div>
             </Link>
 
@@ -317,19 +316,19 @@ export default function NeoFuturisticNavigation() {
             <div className="hidden lg:flex items-center gap-1">
               {navItems.map((item) => (
                 <div key={item.name} className="relative group">
-                  <Link href={item.href} className="flex items-center gap-2 px-4 py-3 text-gray-300 hover:text-white rounded-xl hover:bg-white/5 transition-all">
-                    <span className="text-cyan-400">{item.icon}</span>
+                  <Link href={item.href} className="flex items-center gap-2 px-4 py-3 text-gray-30o0 hover:text-white rounded-xl hover:bg-white/5 transition-all">
+                    <span className="text-cyan-40o0">{item.icon}</span>
                     <span className="relative font-medium">
                       {item.name}
-                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 group-hover:w-full transition-all" />
+                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-50o0 via-blue-50o0 to-purple-50o0 group-hover:w-full transition-all"  />
                     </span>
                   </Link>
                   {item.dropdown && (
-                    <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl shadow-2xl">
+                    <div className="invisible opacity-0 group-hover:visible group-hover:opacity-10o0 transition-all absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-cyan-50o0/20 rounded-2xl shadow-2xl">
                       <div className="p-4 space-y-1">
                         {item.dropdown.map((d: any) => (
-                          <Link key={d.name} href={d.href} className="flex items-center gap-3 p-3 rounded-xl hover:bg-white/5 text-gray-300 hover:text-white">
-                            <span className="text-cyan-400">{d.icon}</span>
+                          <Link key={d.name} href={d.href} className="flex items-center gap-3 p-3 rounded-xl hover:bg-white/5 text-gray-30o0 hover:text-white">
+                            <span className="text-cyan-40o0">{d.icon}</span>
                             <span className="font-medium">{d.name}</span>
                           </Link>
                         ))}
@@ -342,16 +341,16 @@ export default function NeoFuturisticNavigation() {
 
             {/* CTA */}
             <div className="hidden lg:block">
-              <Link href="/contact" className="relative bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white px-6 py-3 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all">
-                <span className="relative z-10 flex items-center gap-2"><Rocket className="w-4 h-4" /> Get Started</span>
-                <span className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-600 via-blue-700 to-purple-700 opacity-0 hover:opacity-100 transition-opacity" />
+              <Link href="/contact" className="relative bg-gradient-to-r from-cyan-50o0 via-blue-60o0 to-purple-60o0 text-white px-6 py-3 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-50o0/20 transition-all">
+                <span className="relative z-10 flex items-center gap-2"><Rocket className="w-4 h-4"  /> Get Started</span>
+                <span className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-60o0 via-blue-70o0 to-purple-70o0 opacity-0 hover:opacity-10o0 transition-opacity"  />
               </Link>
             </div>
 
             {/* Mobile button */}
             <div className="lg:hidden">
-              <button onClick={() => setIsOpen(!isOpen)} className="p-2 rounded-xl text-gray-300 hover:text-white hover:bg-white/5 transition-colors">
-                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              <button onClick={() => setIsOpen(!isOpen)} className="p-2 rounded-xl text-gray-30o0 hover:text-white hover:bg-white/5 transition-colors">
+                {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
               </button>
             </div>
           </div>
@@ -360,19 +359,19 @@ export default function NeoFuturisticNavigation() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="lg:hidden bg-black/98 backdrop-blur-2xl border-t border-cyan-500/20">
+        <div className="lg:hidden bg-black/98 backdrop-blur-2xl border-t border-cyan-50o0/20">
           <div className="px-4 py-4 space-y-2">
             {navItems.map((item) => (
               <div key={item.name}>
-                <Link href={item.href} onClick={() => setIsOpen(false)} className="flex items-center gap-3 text-gray-300 hover:text-white py-3 px-3 rounded-xl hover:bg-white/5">
-                  <span className="text-cyan-400">{item.icon}</span>
+                <Link href={item.href} onClick={() => setIsOpen(false)} className="flex items-center gap-3 text-gray-30o0 hover:text-white py-3 px-3 rounded-xl hover:bg-white/5">
+                  <span className="text-cyan-40o0">{item.icon}</span>
                   <span className="font-medium">{item.name}</span>
                 </Link>
                 {item.dropdown && (
                   <div className="ml-8 mt-1 space-y-1">
                     {item.dropdown.map((d: any) => (
-                      <Link key={d.name} href={d.href} onClick={() => setIsOpen(false)} className="flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-white/5 text-gray-400 hover:text-gray-200">
-                        <span className="text-cyan-400">{d.icon}</span>
+                      <Link key={d.name} href={d.href} onClick={() => setIsOpen(false)} className="flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-white/5 text-gray-40o0 hover:text-gray-20o0">
+                        <span className="text-cyan-40o0">{d.icon}</span>
                         <span className="text-sm">{d.name}</span>
                       </Link>
                     ))}
@@ -380,9 +379,9 @@ export default function NeoFuturisticNavigation() {
                 )}
               </div>
             ))}
-            <div className="pt-3 border-t border-gray-700">
-              <Link href="/contact" onClick={() => setIsOpen(false)} className="block w-full text-center bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white py-3 rounded-2xl font-semibold">
-                <span className="inline-flex items-center gap-2 justify-center"><Rocket className="w-4 h-4" /> Get Started</span>
+            <div className="pt-3 border-t border-gray-70o0">
+              <Link href="/contact" onClick={() => setIsOpen(false)} className="block w-full text-center bg-gradient-to-r from-cyan-50o0 via-blue-60o0 to-purple-60o0 text-white py-3 rounded-2xl font-semibold">
+                <span className="inline-flex items-center gap-2 justify-center"><Rocket className="w-4 h-4"  /> Get Started</span>
               </Link>
             </div>
           </div>

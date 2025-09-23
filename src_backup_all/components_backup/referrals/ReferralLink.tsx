@@ -17,14 +17,14 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
   const handleCopy = () => {
     onCopy();
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setTimeout(() => setCopied(false), 20o00);
   };
 
   return (
     <Card className="mt-6">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Link className="h-5 w-5" />
+          <Link className="h-5 w-5"  />
           Your Referral Link
         </CardTitle>
         <CardDescription>
@@ -38,15 +38,15 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               value={referralLink}
               readOnly
               className="font-mono text-sm"
-            />
+             />
             <Button variant="outline" size="icon" onClick={handleCopy} aria-label="Copy referral link">
-              <Copy className="h-4 w-4" />
+              <Copy className="h-4 w-4"  />
               <span className="sr-only">Copy</span>
             </Button>
           </div>
           
           {copied && (
-            <p className="text-sm text-green-600 dark:text-green-500">
+            <p className="text-sm text-green-60o0 dark:text-green-50o0">
               Copied to clipboard!
             </p>
           )}
@@ -62,7 +62,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               className="flex items-center gap-2"
               onClick={() => onShare('twitter')}
             >
-              <Twitter className="h-4 w-4" />
+              <Twitter className="h-4 w-4"  />
               Twitter
             </Button>
             <Button 
@@ -71,7 +71,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               className="flex items-center gap-2"
               onClick={() => onShare('facebook')}
             >
-              <Facebook className="h-4 w-4" />
+              <Facebook className="h-4 w-4"  />
               Facebook
             </Button>
             <Button 
@@ -80,7 +80,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               className="flex items-center gap-2"
               onClick={() => onShare('linkedin')}
             >
-              <Share className="h-4 w-4" />
+              <Share className="h-4 w-4"  />
               LinkedIn
             </Button>
           </div>

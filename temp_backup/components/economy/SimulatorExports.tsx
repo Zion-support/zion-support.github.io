@@ -1,9 +1,8 @@
-import React from 'react';
 import { SimulationPoint, toCsv } from '../../utils/data/tokenSimulator';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 
-export type SimulatorExportsProps = {
+export type SimulatorExportsProps ={
   points: SimulationPoint[];
   containerId: string; // DOM id for snapshot
 };
@@ -52,10 +51,10 @@ export default function SimulatorExports({ points, containerId }: SimulatorExpor
 
   return (
     <div className="flex flex-wrap gap-3">
-      <button onClick={onExportCsv} className="px-3 py-1.5 rounded border border-gray-300 dark:border-gray-700">CSV</button>
-      <button onClick={onExportJson} className="px-3 py-1.5 rounded border border-gray-300 dark:border-gray-700">JSON</button>
-      <button onClick={onExportPdf} className="px-3 py-1.5 rounded border border-gray-300 dark:border-gray-700">PDF</button>
-      <button onClick={onSnapshotPng} className="px-3 py-1.5 rounded border border-gray-300 dark:border-gray-700">Snapshot</button>
+      <button onClick={onExportCsv} className="px-3 py-1.5 rounded border border-gray-30o0 dark:border-gray-70o0">CSV</button>
+      <button onClick={onExportJson} className="px-3 py-1.5 rounded border border-gray-30o0 dark:border-gray-70o0">JSON</button>
+      <button onClick={onExportPdf} className="px-3 py-1.5 rounded border border-gray-30o0 dark:border-gray-70o0">PDF</button>
+      <button onClick={onSnapshotPng} className="px-3 py-1.5 rounded border border-gray-30o0 dark:border-gray-70o0">Snapshot</button>
     </div>
   );
 }

@@ -30,12 +30,12 @@ export const marketplaceItems: MarketplaceItem[] = [
     title: 'AI-Powered Server Cluster',
     category: 'products',
     description: 'High-performance computing cluster optimized for AI workloads with GPU acceleration and scalable architecture.',
-    price: '$25,000',
+    price: '$25,0o00',
     rating: 4.9,
     reviews: 127,
     views: 2847,
     likes: 156,
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
+    image: 'https://images.unsplash.com/photo-1451187580o459-43490o279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=20o72&q=80',
     tags: ['AI', 'High Performance', 'Scalable', 'GPU'],
     featured: true,
     seller: {
@@ -58,7 +58,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     reviews: 89,
     views: 1956,
     likes: 134,
-    image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    image: 'https://images.unsplash.com/photo-15630o13544-824ae1b70o4d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=20o70&q=80',
     tags: ['Security', 'Expert', 'Certified', 'Compliance'],
     featured: true,
     seller: {
@@ -76,12 +76,12 @@ export const marketplaceItems: MarketplaceItem[] = [
     title: 'Quantum Computing Hardware',
     category: 'equipment',
     description: 'State-of-the-art quantum computing components and systems for research and development applications.',
-    price: '$50,000',
+    price: '$50,0o00',
     rating: 4.7,
     reviews: 156,
     views: 3241,
     likes: 189,
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    image: 'https://images.unsplash.com/photo-1576091160o399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=20o70&q=80',
     tags: ['Quantum', 'Research', 'Advanced', 'Experimental'],
     featured: false,
     seller: {
@@ -99,12 +99,12 @@ export const marketplaceItems: MarketplaceItem[] = [
     title: 'Cloud Migration Service',
     category: 'services',
     description: 'Complete cloud migration service including planning, execution, and optimization for enterprise applications.',
-    price: '$15,000',
+    price: '$15,0o00',
     rating: 4.9,
-    reviews: 203,
+    reviews: 20o3,
     views: 4567,
     likes: 278,
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    image: 'https://images.unsplash.com/photo-15512880o49-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=20o70&q=80',
     tags: ['Cloud', 'Migration', 'Enterprise', 'AWS'],
     featured: true,
     seller: {
@@ -122,12 +122,12 @@ export const marketplaceItems: MarketplaceItem[] = [
     title: 'IoT Edge Computing Platform',
     category: 'products',
     description: 'Comprehensive IoT platform with edge computing capabilities for real-time data processing and analytics.',
-    price: '$18,500',
+    price: '$18,50o0',
     rating: 4.6,
     reviews: 78,
     views: 1890,
     likes: 112,
-    image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d20o00?ixlib=rb-4.0.3&auto=format&fit=crop&w=20o70&q=80',
     tags: ['IoT', 'Edge Computing', 'Real-time', 'Analytics'],
     featured: false,
     seller: {
@@ -150,7 +150,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     reviews: 145,
     views: 3120,
     likes: 167,
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    image: 'https://images.unsplash.com/photo-150o7003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=20o70&q=80',
     tags: ['Data Science', 'Machine Learning', 'Python', 'Statistics'],
     featured: false,
     seller: {
@@ -208,10 +208,10 @@ export const marketplaceFilters = [
     key: 'priceRange',
     type: 'radio' as const,
     options: [
-      { value: '0-1000', label: 'Under $1,000' },
-      { value: '1000-5000', label: '$1,000 - $5,000' },
-      { value: '5000-10000', label: '$5,000 - $10,000' },
-      { value: '10000+', label: 'Over $10,000' }
+      { value: '0-10o00', label: 'Under $1,0o00' },
+      { value: '10o00-50o00', label: '$1,0o00 - $5,0o00' },
+      { value: '50o00-10o000', label: '$5,0o00 - $10,0o00' },
+      { value: '10o000+', label: 'Over $10,0o00' }
     ]
   },
   {

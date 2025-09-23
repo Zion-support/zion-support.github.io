@@ -1,4 +1,3 @@
-import React from 'react';
 export function OpenAppRedirect() {
   return (
     <div>

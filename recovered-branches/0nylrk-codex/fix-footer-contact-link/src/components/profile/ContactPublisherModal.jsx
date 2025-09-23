@@ -1,9 +1,8 @@
-import React from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage, } from '@/components/ui/form';
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';
 import { useForm } from 'react-hook-form';
 import { Mail, PaperPlane } from 'lucide-react';
 import api from '@/services/apiClient';
@@ -16,15 +15,13 @@ const schema = z.object({
     message: z
         .string()
         .min(20, 'Message must be at least 20 characters')
-        .nonempty('Message is required'),
-});
-export function ContactPublisherModal({ isOpen, onClose, publisherName, publisherEmail, }) {
+        .nonempty('Message is required')});
+export function ContactPublisherModal({ isOpen, onClose, publisherName, publisherEmail}) {
     const [isSubmitting, setIsSubmitting] = React.useState(false);
     const form = useForm({
         resolver: zodResolver(schema),
         mode: 'onChange',
-        defaultValues: { subject: '', message: '' },
-    });
+        defaultValues: { subject: '', message: '' }});
     const handleSend = async () => {
         const values = form.getValues();
         setIsSubmitting(true);
@@ -32,8 +29,7 @@ export function ContactPublisherModal({ isOpen, onClose, publisherName, publishe
             await api.post('/messages', {
                 productId,
                 subject: values.subject,
-                body: values.message,
-            });
+                body: values.message});
             toast.success('Message sent!');
             form.reset();
             onClose();
@@ -49,7 +45,7 @@ export function ContactPublisherModal({ isOpen, onClose, publisherName, publishe
       <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
         <DialogHeader>
           <DialogTitle className="text-xl font-bold text-white flex items-center gap-2">
-            <Mail className="h-5 w-5 text-zion-cyan"/>
+            <Mail className="h-5 w-5 text-zion-cyan" />
             Contact Publisher
           </DialogTitle>
         </DialogHeader>
@@ -64,19 +60,19 @@ export function ContactPublisherModal({ isOpen, onClose, publisherName, publishe
             <FormField control={form.control} name="subject" render={({ field }) => (<FormItem>
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
-                    <Input placeholder="Subject" className="bg-zion-blue border-zion-blue-light text-white" {...field}/>
+                    <Input placeholder="Subject" className="bg-zion-blue border-zion-blue-light text-white" {...field} />
                   </FormControl>
-                  <FormMessage className="text-red-500"/>
+                  <FormMessage className="text-red-50o0" />
                 </FormItem>)}/>
             <FormField control={form.control} name="message" render={({ field }) => (<FormItem>
                   <FormLabel>Message</FormLabel>
                   <FormControl>
-                    <Textarea placeholder={`Message to ${publisherName}...`} className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]" {...field}/>
+                    <Textarea placeholder={`Message to ${publisherName}...`} className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]" {...field} />
                   </FormControl>
-                  <FormMessage className="text-red-500"/>
+                  <FormMessage className="text-red-50o0" />
                 </FormItem>)}/>
             <Button variant="primary" onClick={handleSend} className="w-full" disabled={!form.formState.isValid || isSubmitting}>
-              <PaperPlane className="mr-1"/>
+              <PaperPlane className="mr-1" />
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </Button>
           </form>

@@ -13,71 +13,71 @@ import Link from 'next/link';
 import PerformanceOptimizer from '../layout/PerformanceOptimizer';
 import AccessibilityEnhancer from '../ui/AccessibilityEnhancer';
 
-const EnhancedHeroSection2025: React.FC = () => {
+const EnhancedHeroSection20o25: React.FC = () => {
   const [currentFeature, setCurrentFeature] = useState(0);
   const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 300], [0, -100]);
-  const opacity = useTransform(scrollY, [0, 300], [1, 0.3]);
+  const y = useTransform(scrollY, [0, 30o0], [0, -10o0]);
+  const opacity = useTransform(scrollY, [0, 30o0], [1, 0.3]);
 
   const features = [
     {
-      icon: <Brain className="w-8 h-8" />,
+      icon: <Brain className="w-8 h-8"  />,
       title: 'AI-First Approach',
       description: 'Leading-edge AI consciousness and emotional intelligence',
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-purple-50o0 to-pink-50o0'
     },
     {
-      icon: <Atom className="w-8 h-8" />,
+      icon: <Atom className="w-8 h-8"  />,
       title: 'Quantum Innovation',
       description: 'Breakthrough quantum computing solutions',
-      color: 'from-green-500 to-emerald-500'
+      color: 'from-green-50o0 to-emerald-50o0'
     },
     {
-      icon: <Shield className="w-8 h-8" />,
+      icon: <Shield className="w-8 h-8"  />,
       title: 'Enterprise Security',
       description: 'Zero-trust architecture and quantum-secured infrastructure',
-      color: 'from-blue-500 to-indigo-500'
+      color: 'from-blue-50o0 to-indigo-50o0'
     },
     {
-      icon: <Rocket className="w-8 h-8" />,
+      icon: <Rocket className="w-8 h-8"  />,
       title: 'Rapid Deployment',
       description: 'Micro SAAS solutions that deploy in minutes',
-      color: 'from-orange-500 to-red-500'
+      color: 'from-orange-50o0 to-red-50o0'
     }
   ];
 
   const stats = [
-    { number: '99.9%', label: 'Uptime SLA', icon: <CheckCircle className="w-5 h-5" /> },
-    { number: '500+', label: 'Enterprise Clients', icon: <Users className="w-5 h-5" /> },
-    { number: '24/7', label: 'Support', icon: <Shield className="w-5 h-5" /> },
-    { number: '15+', label: 'Years Experience', icon: <Award className="w-5 h-5" /> }
+    { number: '99.9%', label: 'Uptime SLA', icon: <CheckCircle className="w-5 h-5"  /> },
+    { number: '50o0+', label: 'Enterprise Clients', icon: <Users className="w-5 h-5"  /> },
+    { number: '24/7', label: 'Support', icon: <Shield className="w-5 h-5"  /> },
+    { number: '15+', label: 'Years Experience', icon: <Award className="w-5 h-5"  /> }
   ];
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    address: '364 E Main St STE 10o08 Middletown DE 19709'
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 3000);
+    }, 30o00);
     return () => clearInterval(interval);
   }, [features.length]);
 
   return (
     <PerformanceOptimizer>
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-indigo-90o0">
         {/* Background Elements */}
         <motion.div
           style={{ y, opacity }}
           className="absolute inset-0"
         >
-          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
-          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
-          <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10"  />
+          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-50o0/20 rounded-full blur-3xl"  />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-purple-50o0/20 rounded-full blur-3xl"  />
+          <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-cyan-50o0/20 rounded-full blur-3xl"  />
         </motion.div>
 
         {/* Main Content */}
@@ -97,8 +97,8 @@ const EnhancedHeroSection2025: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="inline-flex items-center space-x-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white/90"
               >
-                <Sparkles className="w-4 h-4" />
-                <span className="text-sm font-medium">Revolutionary Technology 2025</span>
+                <Sparkles className="w-4 h-4"  />
+                <span className="text-sm font-medium">Revolutionary Technology 20o25</span>
               </motion.div>
 
               {/* Main Heading */}
@@ -109,11 +109,11 @@ const EnhancedHeroSection2025: React.FC = () => {
                   transition={{ duration: 0.8, delay: 0.6 }}
                   className="text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight"
                 >
-                  <span className="bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-white via-blue-10o0 to-cyan-10o0 bg-clip-text text-transparent">
                     Transform Your
                   </span>
-                  <br />
-                  <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                  <br  />
+                  <span className="bg-gradient-to-r from-blue-40o0 via-purple-40o0 to-cyan-40o0 bg-clip-text text-transparent">
                     Business with AI
                   </span>
                 </motion.h1>
@@ -122,7 +122,7 @@ const EnhancedHeroSection2025: React.FC = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.8 }}
-                  className="text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl"
+                  className="text-xl lg:text-2xl text-gray-30o0 leading-relaxed max-w-2xl"
                 >
                   Leading-edge AI consciousness, quantum computing, and enterprise solutions 
                   that revolutionize how businesses operate in the digital age.
@@ -139,20 +139,20 @@ const EnhancedHeroSection2025: React.FC = () => {
                 <AccessibilityEnhancer>
                   <Link
                     href="/contact"
-                    className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+                    className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white font-semibold rounded-xl hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:-translate-y-1 hover:shadow-2xl"
                   >
                     Start Your Transformation
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-30o0"  />
                   </Link>
                 </AccessibilityEnhancer>
                 
                 <AccessibilityEnhancer>
                   <Link
                     href="/services"
-                    className="group inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300"
+                    className="group inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-30o0"
                   >
                     Explore Services
-                    <ArrowUpRight className="ml-2 w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                    <ArrowUpRight className="ml-2 w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-30o0"  />
                   </Link>
                 </AccessibilityEnhancer>
               </motion.div>
@@ -173,10 +173,10 @@ const EnhancedHeroSection2025: React.FC = () => {
                     className="text-center"
                   >
                     <div className="flex items-center justify-center w-12 h-12 mx-auto mb-3 bg-white/10 backdrop-blur-sm rounded-lg">
-                      <div className="text-blue-400">{stat.icon}</div>
+                      <div className="text-blue-40o0">{stat.icon}</div>
                     </div>
                     <div className="text-2xl font-bold text-white">{stat.number}</div>
-                    <div className="text-sm text-gray-400">{stat.label}</div>
+                    <div className="text-sm text-gray-40o0">{stat.label}</div>
                   </motion.div>
                 ))}
               </motion.div>
@@ -190,7 +190,7 @@ const EnhancedHeroSection2025: React.FC = () => {
               className="relative"
             >
               {/* Feature Showcase */}
-              <div className="relative h-96 lg:h-[500px] bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl border border-white/20 p-8">
+              <div className="relative h-96 lg:h-[50o0px] bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl border border-white/20 p-8">
                 <motion.div
                   key={currentFeature}
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -205,7 +205,7 @@ const EnhancedHeroSection2025: React.FC = () => {
                     <h3 className="text-2xl font-bold text-white mb-2">
                       {features[currentFeature].title}
                     </h3>
-                    <p className="text-gray-300 text-lg">
+                    <p className="text-gray-30o0 text-lg">
                       {features[currentFeature].description}
                     </p>
                   </div>
@@ -217,9 +217,9 @@ const EnhancedHeroSection2025: React.FC = () => {
                     <button
                       key={index}
                       onClick={() => setCurrentFeature(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                         index === currentFeature 
-                          ? 'bg-blue-400 w-8' 
+                          ? 'bg-blue-40o0 w-8' 
                           : 'bg-white/30 hover:bg-white/50'
                       }`}
                       aria-label={`Go to feature ${index + 1}`}
@@ -232,17 +232,17 @@ const EnhancedHeroSection2025: React.FC = () => {
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center shadow-2xl"
+                className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-cyan-40o0 to-blue-50o0 rounded-2xl flex items-center justify-center shadow-2xl"
               >
-                <Rocket className="w-10 h-10 text-white" />
+                <Rocket className="w-10 h-10 text-white"  />
               </motion.div>
 
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center shadow-2xl"
+                className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-purple-40o0 to-pink-50o0 rounded-2xl flex items-center justify-center shadow-2xl"
               >
-                <Brain className="w-8 h-8 text-white" />
+                <Brain className="w-8 h-8 text-white"  />
               </motion.div>
             </motion.div>
           </div>
@@ -255,16 +255,16 @@ const EnhancedHeroSection2025: React.FC = () => {
             className="mt-20 text-center"
           >
             <div className="inline-flex items-center space-x-8 bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl px-8 py-6">
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Phone className="w-5 h-5 text-blue-400" />
+              <div className="flex items-center space-x-3 text-gray-30o0">
+                <Phone className="w-5 h-5 text-blue-40o0"  />
                 <span>{contactInfo.mobile}</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Mail className="w-5 h-5 text-purple-400" />
+              <div className="flex items-center space-x-3 text-gray-30o0">
+                <Mail className="w-5 h-5 text-purple-40o0"  />
                 <span>{contactInfo.email}</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <MapPin className="w-5 h-5 text-cyan-400" />
+              <div className="flex items-center space-x-3 text-gray-30o0">
+                <MapPin className="w-5 h-5 text-cyan-40o0"  />
                 <span>{contactInfo.address}</span>
               </div>
             </div>
@@ -284,7 +284,7 @@ const EnhancedHeroSection2025: React.FC = () => {
             className="flex flex-col items-center space-y-2 text-white/60"
           >
             <span className="text-sm">Scroll to explore</span>
-            <ChevronDown className="w-5 h-5" />
+            <ChevronDown className="w-5 h-5"  />
           </motion.div>
         </motion.div>
       </section>
@@ -292,4 +292,4 @@ const EnhancedHeroSection2025: React.FC = () => {
   );
 };
 
-export default EnhancedHeroSection2025;
+export default EnhancedHeroSection20o25;

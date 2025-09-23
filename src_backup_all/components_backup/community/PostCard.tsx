@@ -1,5 +1,4 @@
 
-import React from 'react';
 import { formatDistanceToNow } from "date-fns";
 import Link from "next/link";
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from 'lucide-react'
@@ -10,7 +9,6 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ForumPost } from "@/types/community";
 import { logInfo } from '@/utils/productionLogger';
-
 
 interface PostCardProps {
   post: ForumPost;
@@ -30,7 +28,7 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
       <p>DEBUG: PostCard ID: {post?.id}</p>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">
         <Avatar className="h-10 w-10">
-          <AvatarImage src={post.authorAvatar} alt={post.authorName} />
+          <AvatarImage src={post.authorAvatar} alt={post.authorName}  />
           <AvatarFallback>{post.authorName.charAt(0)}</AvatarFallback>
         </Avatar>
         <div className="flex-1">
@@ -39,13 +37,13 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
               {post.title}
             </Link>
             {post.isAnswered && (
-              <CheckCircle className="h-4 w-4 text-green-500 ml-2" />
+              <CheckCircle className="h-4 w-4 text-green-50o0 ml-2"  />
             )}
             {post.isPinned && (
-              <Pin className="h-4 w-4 text-amber-500 ml-2" />
+              <Pin className="h-4 w-4 text-amber-50o0 ml-2"  />
             )}
             {post.isLocked && (
-              <Lock className="h-4 w-4 text-red-500 ml-2" />
+              <Lock className="h-4 w-4 text-red-50o0 ml-2"  />
             )}
           </div>
           <div className="text-sm text-muted-foreground">
@@ -72,16 +70,16 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-1">
             <Button variant="ghost" size="sm" className="px-2">
-              <ThumbsUp className="h-4 w-4 mr-1" />
+              <ThumbsUp className="h-4 w-4 mr-1"  />
               <span>{post.upvotes}</span>
             </Button>
             <Button variant="ghost" size="sm" className="px-2">
-              <ThumbsDown className="h-4 w-4 mr-1" />
+              <ThumbsDown className="h-4 w-4 mr-1"  />
               <span>{post.downvotes}</span>
             </Button>
           </div>
           <div className="flex items-center gap-1">
-            <MessageSquare className="h-4 w-4" />
+            <MessageSquare className="h-4 w-4"  />
             <span className="text-sm">{post.replyCount} replies</span>
           </div>
         </div>

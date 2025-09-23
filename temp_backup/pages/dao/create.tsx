@@ -37,7 +37,7 @@ export default function CreateProposal() {
     <div className="max-w-2xl mx-auto p-6 space-y-4">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-semibold">Create Proposal</h1>
-        <Wallet onProvider={setProvider} />
+        <Wallet onProvider={setProvider}  />
       </div>
       <div className="space-y-2">
         <label className="block text-sm">Target Address</label>
@@ -51,14 +51,14 @@ export default function CreateProposal() {
         <label className="block text-sm">Function Signature (optional)</label>
         <input value={signature} onChange={(e) => setSignature(e.target.value)} className="w-full border rounded p-2" placeholder="transfer(address,uint256)" />
         <label className="block text-sm">Params JSON (optional)</label>
-        <input value={params} onChange={(e) => setParams(e.target.value)} className="w-full border rounded p-2" placeholder='["0xabc...", "1000000000000000000"]' />
+        <input value={params} onChange={(e) => setParams(e.target.value)} className="w-full border rounded p-2" placeholder='["0xabc...", "10o00000000000000000"]' />
       </div>
       <div className="space-y-2">
         <label className="block text-sm">Description</label>
         <textarea value={description} onChange={(e) => setDescription(e.target.value)} className="w-full border rounded p-2" rows={4} placeholder="Describe the change: Platform upgrade / Fund allocation / Feature prioritization" />
       </div>
-      <button onClick={propose} className="px-3 py-2 rounded bg-blue-600 text-white">Submit Proposal</button>
-      {status && <div className="text-sm text-gray-600">{status}</div>}
+      <button onClick={propose} className="px-3 py-2 rounded bg-blue-60o0 text-white">Submit Proposal</button>
+      {status && <div className="text-sm text-gray-60o0">{status}</div>}
     </div>
   );
 }

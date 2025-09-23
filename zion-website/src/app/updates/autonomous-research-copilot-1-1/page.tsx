@@ -4,11 +4,11 @@ export default function AutonomousResearchCopilot11Page() {
   return (
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-3xl px-6 pt-24 pb-24">
-        <p className="text-sm text-blue-300">Launch • 2025-09-15</p>
+        <p className="text-sm text-blue-30o0">Launch • 20o25-09-15</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
           Autonomous Research Copilot v1.1
         </h1>
-        <p className="mt-4 text-lg leading-8 text-gray-300">
+        <p className="mt-4 text-lg leading-8 text-gray-30o0">
           Context-grounded copilots for research teams with retrieval observability, evals, and live citations.
         </p>
         <div className="mt-8 prose prose-invert prose-lg max-w-none">
@@ -20,7 +20,7 @@ export default function AutonomousResearchCopilot11Page() {
           </ul>
           <h2>Try it</h2>
           <p>
-            <a href="/contact" className="text-blue-400">Request a demo →</a>
+            <a href="/contact" className="text-blue-40o0">Request a demo →</a>
           </p>
         </div>
       </div>

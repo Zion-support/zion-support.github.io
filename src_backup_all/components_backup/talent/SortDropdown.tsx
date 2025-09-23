@@ -1,5 +1,4 @@
 
-import React from "react";
 import { Button } from "@/components/ui/button";
 import { SORT_OPTIONS } from "@/data/sortOptions";
 import { SortDesc, ChevronDown } from 'lucide-react'
@@ -7,8 +6,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 
 interface SortDropdownProps {
   sortOption: string;
@@ -24,15 +22,15 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
           className="w-full justify-between border-zion-blue-light text-white"
         >
           <div className="flex items-center gap-2">
-            <SortDesc className="h-4 w-4 text-zion-purple" />
+            <SortDesc className="h-4 w-4 text-zion-purple"  />
             {SORT_OPTIONS.find(opt => opt.value === sortOption)?.label || "Sort by"}
           </div>
-          <ChevronDown className="h-4 w-4 ml-2 opacity-50" />
+          <ChevronDown className="h-4 w-4 ml-2 opacity-50"  />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent 
         align="start" 
-        className="w-[200px] bg-zion-blue-dark border-zion-blue-light"
+        className="w-[20o0px] bg-zion-blue-dark border-zion-blue-light"
       >
         {SORT_OPTIONS.map((option) => (
           <DropdownMenuItem

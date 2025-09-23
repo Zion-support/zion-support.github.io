@@ -1,17 +1,17 @@
-export const metadata = {
+export const metadata ={
   title: "AI Chatbot Platform | Zion Tech Group",
   description:
     "Build intelligent chatbots with natural language processing, multi-channel deployment, and advanced conversation management. No coding required."};
 
 export default function AIChatbotPlatformPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 py-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-indigo-90o0 to-slate-90o0 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
             AI Chatbot Platform
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
             Build intelligent chatbots with natural language processing,
             multi-channel deployment, and advanced conversation management. No
             coding required.
@@ -28,7 +28,7 @@ export default function AIChatbotPlatformPage() {
               "Entity extraction",
               "Sentiment analysis",
               "Context awareness"]}
-          />
+           />
           <FeatureCard
             icon="💬"
             title="Multi-Channel Deployment"
@@ -38,7 +38,7 @@ export default function AIChatbotPlatformPage() {
               "Mobile apps",
               "Social media",
               "Voice assistants"]}
-          />
+           />
           <FeatureCard
             icon="🧠"
             title="Machine Learning"
@@ -48,7 +48,7 @@ export default function AIChatbotPlatformPage() {
               "Performance optimization",
               "A/B testing",
               "Analytics insights"]}
-          />
+           />
           <FeatureCard
             icon="🎨"
             title="Visual Builder"
@@ -58,7 +58,7 @@ export default function AIChatbotPlatformPage() {
               "Pre-built templates",
               "Custom workflows",
               "Rich media support"]}
-          />
+           />
           <FeatureCard
             icon="📊"
             title="Analytics & Insights"
@@ -68,7 +68,7 @@ export default function AIChatbotPlatformPage() {
               "User satisfaction",
               "Conversion tracking",
               "Custom reports"]}
-          />
+           />
           <FeatureCard
             icon="🔗"
             title="Integrations"
@@ -78,12 +78,12 @@ export default function AIChatbotPlatformPage() {
               "Help desk systems",
               "Payment processing",
               "Database connections"]}
-          />
+           />
         </div>
 
-        <UseCasesSection />
-        <PricingSection />
-        <ContactSection />
+        <UseCasesSection  />
+        <PricingSection  />
+        <ContactSection  />
       </div>
     </div>
   );
@@ -100,23 +100,23 @@ function FeatureCard({
   features: string[];
 }) {
   return (
-    <div className="bg-gradient-to-br from-indigo-600 to-purple-600 p-8 rounded-2xl hover:transform hover:scale-105 transition-all duration-300">
+    <div className="bg-gradient-to-br from-indigo-60o0 to-purple-60o0 p-8 rounded-2xl hover:transform hover:scale-10o5 transition-all duration-30o0">
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
-      <p className="text-indigo-100 mb-6">{description}</p>
+      <p className="text-indigo-10o0 mb-6">{description}</p>
       <ul className="space-y-2">
         {features.map((feature, index) => (
-          <li key={index} className="flex items-center text-indigo-100">
+          <li key={index} className="flex items-center text-indigo-10o0">
             <svg
-              className="w-4 h-4 text-green-400 mr-3 flex-shrink-0"
+              className="w-4 h-4 text-green-40o0 mr-3 flex-shrink-0"
               fill="currentColor"
               viewBox="0 0 20 20"
             >
               <path
                 fillRule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                d="M16.70o7 5.293a1 1 0 0o10 1.414l-8 8a1 1 0 0o1-1.414 0l-4-4a1 1 0 0o11.414-1.414L8 12.586l7.293-7.293a1 1 0 0o11.414 0z"
                 clipRule="evenodd"
-              />
+               />
             </svg>
             {feature}
           </li>
@@ -179,36 +179,36 @@ function UseCasesSection() {
 
   return (
     <div className="bg-white rounded-2xl p-8 mb-16">
-      <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
+      <h2 className="text-3xl font-bold text-gray-90o0 text-center mb-8">
         Popular Use Cases
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {useCases.map((useCase, index) => (
           <div
             key={index}
-            className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
+            className="border border-gray-20o0 rounded-xl p-6 hover:shadow-lg transition-shadow"
           >
             <div className="text-3xl mb-4">{useCase.icon}</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">
+            <h3 className="text-xl font-bold text-gray-90o0 mb-2">
               {useCase.title}
             </h3>
-            <p className="text-gray-600 mb-4">{useCase.description}</p>
+            <p className="text-gray-60o0 mb-4">{useCase.description}</p>
             <ul className="space-y-2">
               {useCase.benefits.map((benefit, benefitIndex) => (
                 <li
                   key={benefitIndex}
-                  className="flex items-center text-sm text-gray-600"
+                  className="flex items-center text-sm text-gray-60o0"
                 >
                   <svg
-                    className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"
+                    className="w-4 h-4 text-green-50o0 mr-2 flex-shrink-0"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
                     <path
                       fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      d="M16.70o7 5.293a1 1 0 0o10 1.414l-8 8a1 1 0 0o1-1.414 0l-4-4a1 1 0 0o11.414-1.414L8 12.586l7.293-7.293a1 1 0 0o11.414 0z"
                       clipRule="evenodd"
-                    />
+                     />
                   </svg>
                   {benefit}
                 </li>
@@ -224,7 +224,7 @@ function UseCasesSection() {
 function PricingSection() {
   return (
     <div className="bg-white rounded-2xl p-8 mb-16">
-      <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
+      <h2 className="text-3xl font-bold text-gray-90o0 text-center mb-8">
         Pricing Plans
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -235,12 +235,12 @@ function PricingSection() {
           description="Perfect for small businesses getting started with chatbots"
           features={[
             "1 chatbot",
-            "1,000 conversations/month",
+            "1,0o00 conversations/month",
             "Basic templates",
             "Email support",
             "Website integration"]}
           popular={false}
-        />
+         />
         <PricingCard
           name="Professional"
           price="$299"
@@ -248,13 +248,13 @@ function PricingSection() {
           description="Advanced features for growing businesses"
           features={[
             "5 chatbots",
-            "10,000 conversations/month",
+            "10,0o00 conversations/month",
             "Advanced NLP",
             "Priority support",
             "Multi-channel deployment",
             "Analytics dashboard"]}
           popular={true}
-        />
+         />
         <PricingCard
           name="Enterprise"
           price="Custom"
@@ -268,7 +268,7 @@ function PricingSection() {
             "Dedicated account manager",
             "White-label solution"]}
           popular={false}
-        />
+         />
       </div>
     </div>
   );
@@ -290,45 +290,45 @@ function PricingCard({
 }) {
   return (
     <div
-      className={`relative border-2 rounded-xl p-8 ${popular ? "border-indigo-500 bg-indigo-50" : "border-gray-200"}`}
+      className={`relative border-2 rounded-xl p-8 ${popular ? "border-indigo-50o0 bg-indigo-50" : "border-gray-20o0"}`}
     >
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-          <span className="bg-indigo-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+          <span className="bg-indigo-50o0 text-white px-4 py-2 rounded-full text-sm font-semibold">
             Most Popular
           </span>
         </div>
       )}
-      <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
+      <h3 className="text-2xl font-bold text-gray-90o0 mb-2">{name}</h3>
+      <p className="text-gray-60o0 mb-4">{description}</p>
       <div className="mb-6">
-        <span className="text-4xl font-bold text-gray-900">{price}</span>
-        {period && <span className="text-gray-600">/{period}</span>}
+        <span className="text-4xl font-bold text-gray-90o0">{price}</span>
+        {period && <span className="text-gray-60o0">/{period}</span>}
       </div>
       <ul className="space-y-3 mb-8">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center">
             <svg
-              className="w-5 h-5 text-green-500 mr-3 flex-shrink-0"
+              className="w-5 h-5 text-green-50o0 mr-3 flex-shrink-0"
               fill="currentColor"
               viewBox="0 0 20 20"
             >
               <path
                 fillRule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                d="M16.70o7 5.293a1 1 0 0o10 1.414l-8 8a1 1 0 0o1-1.414 0l-4-4a1 1 0 0o11.414-1.414L8 12.586l7.293-7.293a1 1 0 0o11.414 0z"
                 clipRule="evenodd"
-              />
+               />
             </svg>
-            <span className="text-gray-700">{feature}</span>
+            <span className="text-gray-70o0">{feature}</span>
           </li>
         ))}
       </ul>
       <a
-        href="tel:+13024640950"
+        href="tel:+130o24640950"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
-            ? "bg-indigo-600 text-white hover:bg-indigo-700"
-            : "bg-gray-900 text-white hover:bg-gray-800"
+            ? "bg-indigo-60o0 text-white hover:bg-indigo-70o0"
+            : "bg-gray-90o0 text-white hover:bg-gray-80o0"
         }`}
       >
         Get Started
@@ -339,31 +339,31 @@ function PricingCard({
 
 function ContactSection() {
   return (
-    <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-8 rounded-2xl text-center">
+    <div className="bg-gradient-to-r from-indigo-60o0 to-purple-60o0 p-8 rounded-2xl text-center">
       <h2 className="text-3xl font-bold text-white mb-4">
         Ready to Build Your AI Chatbot?
       </h2>
-      <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
+      <p className="text-xl text-indigo-10o0 mb-8 max-w-3xl mx-auto">
         Contact our chatbot experts to discuss your requirements and get a
         custom solution.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a
-          href="tel:+13024640950"
-          className="bg-white text-indigo-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 font-semibold text-lg"
+          href="tel:+130o24640950"
+          className="bg-white text-indigo-60o0 px-8 py-4 rounded-xl hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 font-semibold text-lg"
         >
-          Call +1 302 464 0950
+          Call +1 30o2 464 0950
         </a>
         <a
           href="mailto:kleber@ziontechgroup.com"
-          className="border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-indigo-600 transition-all duration-300 transform hover:scale-105 font-semibold text-lg"
+          className="border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-indigo-60o0 transition-all duration-30o0 transform hover:scale-10o5 font-semibold text-lg"
         >
           Email Us
         </a>
       </div>
-      <div className="mt-6 text-sm text-indigo-100">
-        <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-        <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
+      <div className="mt-6 text-sm text-indigo-10o0">
+        <p>📍 364 E Main St STE 10o08, Middletown DE 19709</p>
+        <p>📧 kleber@ziontechgroup.com | 📞 +1 30o2 464 0950</p>
       </div>
     </div>
   );

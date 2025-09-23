@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
@@ -14,54 +13,54 @@ export default function QuantumServicesPage() {
       title: "Quantum Algorithm Development",
       description: "Custom quantum algorithms designed for specific business problems",
       features: ["Optimization Algorithms", "Machine Learning", "Cryptography", "Simulation"],
-      price: "From $15,000",
+      price: "From $15,0o00",
       icon: Atom,
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-50o0 to-cyan-50o0"
     },
     {
       title: "Quantum Security Solutions",
       description: "Quantum-resistant cryptography and security protocols",
       features: ["Post-Quantum Cryptography", "Quantum Key Distribution", "Security Auditing", "Compliance"],
-      price: "From $12,000",
+      price: "From $12,0o00",
       icon: Shield,
-      color: "from-red-500 to-orange-500"
+      color: "from-red-50o0 to-orange-50o0"
     },
     {
       title: "Quantum Computing Infrastructure",
       description: "Quantum computing hardware and cloud access solutions",
       features: ["Cloud Quantum Access", "Hardware Integration", "Performance Optimization", "Scalability"],
-      price: "From $8,000",
+      price: "From $8,0o00",
       icon: Cpu,
-      color: "from-indigo-500 to-purple-500"
+      color: "from-indigo-50o0 to-purple-50o0"
     },
     {
       title: "Quantum AI Integration",
       description: "Hybrid quantum-classical AI systems for enhanced performance",
       features: ["Quantum Neural Networks", "Hybrid Algorithms", "Performance Enhancement", "Future-Proofing"],
-      price: "From $20,000",
+      price: "From $20,0o00",
       icon: Zap,
-      color: "from-emerald-500 to-teal-500"
+      color: "from-emerald-50o0 to-teal-50o0"
     }
   ];
 
   const stats = [
-    { number: "100+", label: "Quantum Algorithms", icon: Atom },
+    { number: "10o0+", label: "Quantum Algorithms", icon: Atom },
     { number: "99.99%", label: "Security Guarantee", icon: Shield },
     { number: "10x", label: "Performance Boost", icon: TrendingUp },
     { number: "24/7", label: "Quantum Support", icon: Clock }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-90o0 to-slate-950 text-white">
       <Head>
         <title>Quantum Computing Services - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary quantum computing solutions from Zion Tech Group. Quantum algorithms, security, and AI integration for the future of computing." />
-        <meta property="og:title" content="Quantum Computing Services - Zion Tech Group" />
-        <meta property="og:description" content="Revolutionary quantum computing solutions for the future of computing." />
-        <link rel="canonical" href="https://ziontechgroup.com/services/quantum" />
+        <meta name="description" content="Revolutionary quantum computing solutions from Zion Tech Group. Quantum algorithms, security, and AI integration for the future of computing."  />
+        <meta property="og:title" content="Quantum Computing Services - Zion Tech Group"  />
+        <meta property="og:description" content="Revolutionary quantum computing solutions for the future of computing."  />
+        <link rel="canonical" href="https://ziontechgroup.com/services/quantum"  />
       </Head>
 
-      <EnhancedNavigation />
+      <EnhancedNavigation  />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">
@@ -72,7 +71,7 @@ export default function QuantumServicesPage() {
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-40o0 via-cyan-40o0 to-blue-40o0 bg-clip-text text-transparent mb-6">
               Quantum Computing
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
@@ -90,9 +89,9 @@ export default function QuantumServicesPage() {
               Experience the future of computing with our quantum solutions. From algorithm development 
               to security protocols, we're pioneering the quantum revolution.
             </p>
-            <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
+            <button className="px-8 py-4 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 hover:from-blue-70o0 hover:to-cyan-70o0 rounded-full font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
               Explore Quantum Solutions
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-5 h-5"  />
             </button>
           </motion.div>
         </div>
@@ -111,8 +110,8 @@ export default function QuantumServicesPage() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-cyan-400" />
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-50o0/20 to-cyan-50o0/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="w-8 h-8 text-cyan-40o0"  />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
@@ -146,24 +145,24 @@ export default function QuantumServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300"
+                className="bg-gradient-to-br from-slate-80o0/50 to-slate-90o0/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-50o0/30 transition-all duration-30o0"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
-                  <service.icon className="w-8 h-8 text-white" />
+                  <service.icon className="w-8 h-8 text-white"  />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-white/70 mb-6">{service.description}</p>
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center text-white/80">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-cyan-40o0 mr-3 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
                 </ul>
                 <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                  <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
+                  <span className="text-2xl font-bold text-cyan-40o0">{service.price}</span>
+                  <button className="px-6 py-3 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 hover:from-blue-70o0 hover:to-cyan-70o0 rounded-full font-semibold text-white transition-all duration-30o0 transform hover:scale-10o5">
                     Get Started
                   </button>
                 </div>
@@ -189,10 +188,10 @@ export default function QuantumServicesPage() {
               Let's explore how quantum computing can revolutionize your business operations and solve previously impossible problems.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 hover:from-blue-70o0 hover:to-cyan-70o0 rounded-full font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5">
                 Schedule Quantum Demo
               </button>
-              <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
+              <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-30o0 backdrop-blur-sm bg-white/5 hover:bg-white/10">
                 Learn More
               </button>
             </div>
@@ -200,7 +199,7 @@ export default function QuantumServicesPage() {
         </div>
       </section>
 
-      <EnhancedFooter />
+      <EnhancedFooter  />
     </div>
   );
 }

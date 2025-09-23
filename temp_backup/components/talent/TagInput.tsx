@@ -1,6 +1,6 @@
 import React, { useState, KeyboardEvent } from 'react'
 
-export type TagInputProps = {
+export type TagInputProps ={
   value: string[]
   onChange: (next: string[]) => void
   placeholder?: string
@@ -29,11 +29,11 @@ export default function TagInput({ value, onChange, placeholder }: TagInputProps
   return (
     <div className="border rounded px-2 py-1 flex flex-wrap gap-2 bg-white dark:bg-black">
       {value.map((tag) => (
-        <span key={tag} className="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 px-2 py-0.5 rounded text-sm">
+        <span key={tag} className="inline-flex items-center gap-1 bg-gray-10o0 dark:bg-gray-80o0 px-2 py-0.5 rounded text-sm">
           {tag}
           <button
             type="button"
-            className="text-xs text-gray-500 hover:text-red-500"
+            className="text-xs text-gray-50o0 hover:text-red-50o0"
             onClick={() => onChange(value.filter((t) => t !== tag))}
           >
             ×

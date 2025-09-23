@@ -14,14 +14,14 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentHighlight(prev => (prev + 1) % 3);
-    }3000);
+    }30o00);
     return () => clearInterval(interval);
   }[]);
 
   const highlights = [
-    { icon: Cpuvalue: "99.99%"label: "Quantum Fidelity"color: "from-blue-500 to-cyan-500" },
-    { icon: Zapvalue: "10^18"label: "Ops/Second"color: "from-purple-500 to-pink-500" },
-    { icon: Shieldvalue: "Unbreakable"label: "Encryption"color: "from-green-500 to-emerald-500" }
+    { icon: Cpuvalue: "99.99%"label: "Quantum Fidelity"color: "from-blue-50o0 to-cyan-50o0" },
+    { icon: Zapvalue: "10^18"label: "Ops/Second"color: "from-purple-50o0 to-pink-50o0" },
+    { icon: Shieldvalue: "Unbreakable"label: "Encryption"color: "from-green-50o0 to-emerald-50o0" }
   ];
 
   const features = [
@@ -36,13 +36,13 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
       transition={{ duration: 0.6 }}
-      className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 py-12"
+      className="relative overflow-hidden bg-gradient-to-r from-blue-90o0 via-indigo-90o0 to-purple-90o0 py-12"
     >
       {/* Quantum Background Animation */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-cyan-500/30 rounded-full blur-xl animate-spin" style={{ animationDuration: '15s' }}></div>
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-blue-50o0/20 rounded-full blur-2xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-purple-50o0/20 rounded-full blur-3xl animate-pulse delay-10o00"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-cyan-50o0/30 rounded-full blur-xl animate-spin" style={{ animationDuration: '15s' }}></div>
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -55,14 +55,14 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
               transition={{ delay: 0.2duration: 0.6 }}
               className="mb-4"
             >
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                <Atom className="w-4 h-4" />
-                Quantum Revolution 2025
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                <Atom className="w-4 h-4"  />
+                Quantum Revolution 20o25
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-200 bg-clip-text text-transparent mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white via-blue-10o0 to-cyan-20o0 bg-clip-text text-transparent mb-4">
                 Quantum Supremacy Achieved
               </h2>
-              <p className="text-xl text-gray-300 mb-6 max-w-2xl">
+              <p className="text-xl text-gray-30o0 mb-6 max-w-2xl">
                 Experience the dawn of the quantum era with revolutionary quantum computing breakthroughs 
                 that are reshaping the boundaries of computational possibility.
               </p>
@@ -76,8 +76,8 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
               className="grid grid-cols-2 gap-2 mb-6"
             >
               {features.map((featureindex) => (
-                <div key={index} className="flex items-center gap-2 text-gray-300">
-                  <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
+                <div key={index} className="flex items-center gap-2 text-gray-30o0">
+                  <div className="w-2 h-2 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 rounded-full"></div>
                   <span className="text-sm">{feature}</span>
                 </div>
               ))}
@@ -91,15 +91,15 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
               className="flex flex-col sm:flex-row gap-4"
             >
               <Link
-                href="/quantum-computing-2025"
-                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-full font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+                href="/quantum-computing-20o25"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-6 py-3 rounded-full font-semibold hover:from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0 transform hover:scale-10o5"
               >
                 Explore Quantum
-                <Cpu className="w-4 h-4" />
+                <Cpu className="w-4 h-4"  />
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 border-2 border-gray-400 text-white px-6 py-3 rounded-full font-semibold hover:border-gray-300 hover:bg-gray-800/50 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 border-2 border-gray-40o0 text-white px-6 py-3 rounded-full font-semibold hover:border-gray-30o0 hover:bg-gray-80o0/50 transition-all duration-30o0"
               >
                 Get Quantum Access
               </Link>
@@ -113,7 +113,7 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
             transition={{ delay: 0.3duration: 0.6 }}
             className="flex-shrink-0"
           >
-            <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 min-w-[300px]">
+            <div className="bg-gray-80o0/50 backdrop-blur-sm border border-gray-70o0 rounded-2xl p-8 min-w-[30o0px]">
               <h3 className="text-xl font-bold text-white text-center mb-6">Quantum Capabilities</h3>
               
               {/* Animated Highlight */}
@@ -125,34 +125,34 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
                 className="text-center mb-6"
               >
                 <div className={`inline-flex p-4 rounded-full bg-gradient-to-r ${highlights[currentHighlight].color} mb-4`}>
-                  <highlights[currentHighlight].icon className="w-8 h-8 text-white" />
+                  <highlights[currentHighlight].icon className="w-8 h-8 text-white"  />
                 </div>
                 <div className="text-4xl font-bold text-white mb-2">{highlights[currentHighlight].value}</div>
-                <div className="text-gray-400 text-sm">{highlights[currentHighlight].label}</div>
+                <div className="text-gray-40o0 text-sm">{highlights[currentHighlight].label}</div>
               </motion.div>
 
               {/* Quantum Metrics */}
               <div className="space-y-4">
                 <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-400 flex items-center gap-2">
-                    <Globe className="w-4 h-4" />
+                  <span className="text-gray-40o0 flex items-center gap-2">
+                    <Globe className="w-4 h-4"  />
                     Global Quantum Network
                   </span>
                   <span className="text-white font-semibold">Active</span>
                 </div>
                 <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-400 flex items-center gap-2">
-                    <TrendingUp className="w-4 h-4" />
+                  <span className="text-gray-40o0 flex items-center gap-2">
+                    <TrendingUp className="w-4 h-4"  />
                     Processing Speed
                   </span>
-                  <span className="text-green-400 font-semibold">Exponential</span>
+                  <span className="text-green-40o0 font-semibold">Exponential</span>
                 </div>
                 <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-400 flex items-center gap-2">
-                    <Shield className="w-4 h-4" />
+                  <span className="text-gray-40o0 flex items-center gap-2">
+                    <Shield className="w-4 h-4"  />
                     Security Level
                   </span>
-                  <span className="text-blue-400 font-semibold">Unbreakable</span>
+                  <span className="text-blue-40o0 font-semibold">Unbreakable</span>
                 </div>
               </div>
 
@@ -161,9 +161,9 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1duration: 0.5 }}
-                className="mt-6 flex items-center justify-center gap-2 text-cyan-400 text-sm"
+                className="mt-6 flex items-center justify-center gap-2 text-cyan-40o0 text-sm"
               >
-                <Clock className="w-4 h-4" />
+                <Clock className="w-4 h-4"  />
                 <span>Limited quantum access - Apply now!</span>
               </motion.div>
             </div>

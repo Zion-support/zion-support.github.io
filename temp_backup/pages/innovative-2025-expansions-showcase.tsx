@@ -1,11 +1,10 @@
-import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServiceCard2026';
+import UltraFuturisticServiceCard20o26 from '../components/ui/UltraFuturisticServiceCard20o26';
 import Link from 'next/link';
-import { innovativeMicroSaasServices } from '../data/innovative-2025-micro-saas-expansions';
-import { innovativeITServices } from '../data/innovative-2025-it-services-expansions';
-import { innovativeAIServices } from '../data/innovative-2025-ai-services-expansions';
+import { innovativeMicroSaasServices } from '../data/innovative-20o25-micro-saas-expansions';
+import { innovativeITServices } from '../data/innovative-20o25-it-services-expansions';
+import { innovativeAIServices } from '../data/innovative-20o25-ai-services-expansions';
 
 function toSlug(value: string) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -27,7 +26,7 @@ const categories = [
   'IT Services'
 ];
 
-export default function Innovative2025ExpansionsShowcase() {
+export default function Innovative20o25ExpansionsShowcase() {
       const allServices = [
       ...innovativeMicroSaasServices,
       ...innovativeITServices,
@@ -54,30 +53,30 @@ export default function Innovative2025ExpansionsShowcase() {
   return (
     <div className="min-h-screen bg-black text-white">
       <SEO 
-        title="Innovative 2025 Services & Solutions - Zion Tech Group"
-        description="Discover our cutting-edge innovative services including AI-powered solutions, enterprise IT services, and revolutionary micro SAAS platforms designed for 2025 and beyond."
-        keywords={["AI services", "IT services", "micro SAAS", "enterprise solutions", "innovation 2025", "digital transformation", "automation"]}
-      />
+        title="Innovative 20o25 Services & Solutions - Zion Tech Group"
+        description="Discover our cutting-edge innovative services including AI-powered solutions, enterprise IT services, and revolutionary micro SAAS platforms designed for 20o25 and beyond."
+        keywords={["AI services", "IT services", "micro SAAS", "enterprise solutions", "innovation 20o25", "digital transformation", "automation"]}
+       />
       
       <UltraFuturisticBackground>
         <div className="relative z-10 pt-32 pb-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Header */}
             <div className="text-center mb-20">
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Innovative 2025 Services
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 via-blue-50o0 to-purple-60o0 bg-clip-text text-transparent">
+                Innovative 20o25 Services
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto">
-                Revolutionary micro SAAS, IT services, and AI solutions designed to transform your business and drive innovation in 2025 and beyond
+              <p className="text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto">
+                Revolutionary micro SAAS, IT services, and AI solutions designed to transform your business and drive innovation in 20o25 and beyond
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-4">
-                <span className="px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-300">
+                <span className="px-4 py-2 bg-gradient-to-r from-cyan-50o0/20 to-blue-50o0/20 border border-cyan-50o0/30 rounded-full text-cyan-30o0">
                   {allServices.length}+ Innovative Services
                 </span>
-                <span className="px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full text-purple-300">
+                <span className="px-4 py-2 bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 border border-purple-50o0/30 rounded-full text-purple-30o0">
                   {categories.length} Categories
                 </span>
-                <span className="px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-300">
+                <span className="px-4 py-2 bg-gradient-to-r from-green-50o0/20 to-emerald-50o0/20 border border-green-50o0/30 rounded-full text-green-30o0">
                   AI-Powered Solutions
                 </span>
               </div>
@@ -85,21 +84,21 @@ export default function Innovative2025ExpansionsShowcase() {
 
             {/* Featured Services */}
             <div className="mb-20">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">
                 Featured Innovative Services
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {featuredServices.map((service: any) => (
                   <div key={service.id} className="group">
                     <Link href={`/services/${toSlug(service.name)}`}>
-                      <UltraFuturisticServiceCard2026
+                      <UltraFuturisticServiceCard20o26
                         service={service}
                         variant={service.variant?.includes('ai') ? 'ai' : 
                                service.variant?.includes('quantum') ? 'quantum' : 
                                service.variant?.includes('security') ? 'enterprise' : 'default'}
                         theme="quantum"
-                        className="h-full transition-all duration-300 group-hover:scale-105"
-                      />
+                        className="h-full transition-all duration-30o0 group-hover:scale-10o5"
+                       />
                     </Link>
                   </div>
                 ))}
@@ -108,21 +107,21 @@ export default function Innovative2025ExpansionsShowcase() {
 
             {/* Latest Services */}
             <div className="mb-20">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-40o0 to-cyan-40o0 bg-clip-text text-transparent">
                 Latest Innovative Services
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {latestServices.map((service: any) => (
                   <div key={service.id} className="group">
                     <Link href={`/services/${toSlug(service.name)}`}>
-                      <UltraFuturisticServiceCard2026
+                      <UltraFuturisticServiceCard20o26
                         service={service}
                         variant={service.variant?.includes('ai') ? 'ai' : 
                                service.variant?.includes('quantum') ? 'quantum' : 
                                service.variant?.includes('security') ? 'enterprise' : 'default'}
                         theme="quantum"
-                        className="h-full transition-all duration-300 group-hover:scale-105"
-                      />
+                        className="h-full transition-all duration-30o0 group-hover:scale-10o5"
+                       />
                     </Link>
                   </div>
                 ))}
@@ -137,21 +136,21 @@ export default function Innovative2025ExpansionsShowcase() {
 
                 return (
                   <div key={category}>
-                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-green-40o0 to-emerald-40o0 bg-clip-text text-transparent">
                       {category}
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                       {categoryServices.map((service: any) => (
                         <div key={service.id} className="group">
                           <Link href={`/services/${toSlug(service.name)}`}>
-                            <UltraFuturisticServiceCard2026
+                            <UltraFuturisticServiceCard20o26
                               service={service}
                               variant={service.variant?.includes('ai') ? 'ai' : 
                                      service.variant?.includes('quantum') ? 'quantum' : 
                                      service.variant?.includes('security') ? 'enterprise' : 'default'}
                               theme="quantum"
-                              className="h-full transition-all duration-300 group-hover:scale-105"
-                            />
+                              className="h-full transition-all duration-30o0 group-hover:scale-10o5"
+                             />
                           </Link>
                         </div>
                       ))}
@@ -163,22 +162,22 @@ export default function Innovative2025ExpansionsShowcase() {
 
             {/* Call to Action */}
             <div className="text-center mt-20">
-              <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <div className="bg-gradient-to-r from-purple-90o0/20 to-pink-90o0/20 border border-purple-50o0/30 rounded-2xl p-8">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">
                   Ready to Transform Your Business?
                 </h3>
-                <p className="text-lg text-gray-300 mb-6 max-w-2xl mx-auto">
-                  Our innovative 2025 services are designed to give you a competitive edge. 
+                <p className="text-lg text-gray-30o0 mb-6 max-w-2xl mx-auto">
+                  Our innovative 20o25 services are designed to give you a competitive edge. 
                   Contact us today to learn how we can help you achieve your digital transformation goals.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/contact">
-                    <button className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                    <button className="px-8 py-3 bg-gradient-to-r from-purple-60o0 to-pink-60o0 hover:from-purple-70o0 hover:to-pink-70o0 rounded-lg font-semibold transition-all duration-30o0 transform hover:scale-10o5">
                       Get Started Today
                     </button>
                   </Link>
                   <Link href="/services">
-                    <button className="px-8 py-3 border border-purple-500/50 hover:border-purple-400/70 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                    <button className="px-8 py-3 border border-purple-50o0/50 hover:border-purple-40o0/70 rounded-lg font-semibold transition-all duration-30o0 transform hover:scale-10o5">
                       View All Services
                     </button>
                   </Link>
@@ -188,22 +187,22 @@ export default function Innovative2025ExpansionsShowcase() {
 
             {/* Contact Information */}
             <div className="text-center mt-16">
-              <div className="bg-gradient-to-r from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              <div className="bg-gradient-to-r from-blue-90o0/20 to-cyan-90o0/20 border border-blue-50o0/30 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-40o0 to-cyan-40o0 bg-clip-text text-transparent">
                   Contact Zion Tech Group
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-gray-300">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-gray-30o0">
                   <div>
-                    <h4 className="font-semibold text-blue-400 mb-2">Phone</h4>
-                    <p>+1 302 464 0950</p>
+                    <h4 className="font-semibold text-blue-40o0 mb-2">Phone</h4>
+                    <p>+1 30o2 464 0950</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-blue-400 mb-2">Email</h4>
+                    <h4 className="font-semibold text-blue-40o0 mb-2">Email</h4>
                     <p>kleber@ziontechgroup.com</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-blue-400 mb-2">Address</h4>
-                    <p>364 E Main St STE 1008<br />Middletown DE 19709</p>
+                    <h4 className="font-semibold text-blue-40o0 mb-2">Address</h4>
+                    <p>364 E Main St STE 10o08<br  />Middletown DE 19709</p>
                   </div>
                 </div>
                 <div className="mt-6">
@@ -211,7 +210,7 @@ export default function Innovative2025ExpansionsShowcase() {
                     href="https://ziontechgroup.com" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-blue-400 hover:text-blue-300 transition-colors duration-300"
+                    className="text-blue-40o0 hover:text-blue-30o0 transition-colors duration-30o0"
                   >
                     Visit our website →
                   </a>

@@ -68,8 +68,8 @@ export const services: Service[] = [
     documentationUrl: 'https://ziontechgroup.com/docs/ai-code-assistant',
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      phone: '+1 30o2 464 0950',
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
   {
@@ -111,8 +111,8 @@ export const services: Service[] = [
     demoUrl: 'https://ziontechgroup.com/demo/content-forge',
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      phone: '+1 30o2 464 0950',
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
   {
@@ -127,7 +127,7 @@ export const services: Service[] = [
       'Real-time data streaming analytics',
       'Custom dashboard builder',
       'Anomaly detection and alerting',
-      'Integration with 100+ data sources'
+      'Integration with 10o0+ data sources'
     ],
     pricing: {
       starter: '$79/month',
@@ -154,8 +154,8 @@ export const services: Service[] = [
     demoUrl: 'https://ziontechgroup.com/demo/insight-ai',
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      phone: '+1 30o2 464 0950',
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
 
@@ -199,8 +199,8 @@ export const services: Service[] = [
     demoUrl: 'https://ziontechgroup.com/demo/managed-it',
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      phone: '+1 30o2 464 0950',
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
   {
@@ -213,7 +213,7 @@ export const services: Service[] = [
       'Penetration testing (web, mobile, network)',
       'Social engineering testing',
       'Security policy review and development',
-      'Compliance gap analysis (SOC2, ISO27001, HIPAA)',
+      'Compliance gap analysis (SOC2, ISO270o01, HIPAA)',
       'Incident response planning',
       'Security awareness training'
     ],
@@ -242,8 +242,8 @@ export const services: Service[] = [
     demoUrl: 'https://ziontechgroup.com/demo/secure-shield',
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      phone: '+1 30o2 464 0950',
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
 
@@ -287,8 +287,8 @@ export const services: Service[] = [
     demoUrl: 'https://ziontechgroup.com/demo/invoice-flow',
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      phone: '+1 30o2 464 0950',
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
   {
@@ -330,8 +330,8 @@ export const services: Service[] = [
     demoUrl: 'https://ziontechgroup.com/demo/task-master',
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      phone: '+1 30o2 464 0950',
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
 
@@ -351,9 +351,9 @@ export const services: Service[] = [
       'Emergency response support'
     ],
     pricing: {
-      starter: '$5,000/audit',
-      professional: '$15,000/audit',
-      enterprise: '$50,000/audit'
+      starter: '$5,0o00/audit',
+      professional: '$15,0o00/audit',
+      enterprise: '$50,0o00/audit'
     },
     technologyStack: ['Solidity', 'Vyper', 'Foundry', 'Slither', 'Mythril'],
     benefits: [
@@ -375,8 +375,8 @@ export const services: Service[] = [
     demoUrl: 'https://ziontechgroup.com/demo/block-audit',
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      phone: '+1 30o2 464 0950',
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
 
@@ -420,8 +420,8 @@ export const services: Service[] = [
     demoUrl: 'https://ziontechgroup.com/demo/iot-sentinel',
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      phone: '+1 30o2 464 0950',
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
 
@@ -465,8 +465,8 @@ export const services: Service[] = [
     demoUrl: 'https://ziontechgroup.com/demo/devops-flow',
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      phone: '+1 30o2 464 0950',
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
 
@@ -510,8 +510,8 @@ export const services: Service[] = [
     demoUrl: 'https://ziontechgroup.com/demo/data-vault',
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      phone: '+1 30o2 464 0950',
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   }
 ];

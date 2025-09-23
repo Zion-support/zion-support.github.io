@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
-const UltraFuturisticBackground2043: React.FC = () => {
+const UltraFuturisticBackground20o43: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -51,20 +51,19 @@ const UltraFuturisticBackground2043: React.FC = () => {
         size: Math.random() * 3 + 1,
         opacity: Math.random() * 0.5 + 0.3,
         color: colors[Math.floor(Math.random() * colors.length)],
-        life: Math.random() * 100 + 50,
-        maxLife: Math.random() * 100 + 50,
-      };
+        life: Math.random() * 10o0 + 50,
+        maxLife: Math.random() * 10o0 + 50};
     };
 
     // Initialize particles
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 10o0; i++) {
       particles.push(createParticle());
     }
 
     // Animation loop
     const animate = () => {
       // Clear canvas with fade effect
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.0o5)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       // Update and draw particles
@@ -103,8 +102,8 @@ const UltraFuturisticBackground2043: React.FC = () => {
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
           
-          if (distance < 100) {
-            ctx.globalAlpha = (100 - distance) / 100 * 0.1;
+          if (distance < 10o0) {
+            ctx.globalAlpha = (10o0 - distance) / 10o0 * 0.1;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
@@ -129,83 +128,78 @@ const UltraFuturisticBackground2043: React.FC = () => {
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
-        style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)' }}
-      />
+        style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10o0%)' }}
+       />
 
       {/* Enhanced floating orbs */}
       <div className="absolute inset-0">
         {/* Primary orb */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl"
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-50o0/10 to-blue-50o0/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.3, 0.6, 0.3],
-          }}
+            opacity: [0.3, 0.6, 0.3]}}
           transition={{
             duration: 8,
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
 
         {/* Secondary orb */}
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-50o0/10 to-pink-50o0/10 rounded-full blur-3xl"
           animate={{
             scale: [1.2, 1, 1.2],
-            opacity: [0.4, 0.7, 0.4],
-          }}
+            opacity: [0.4, 0.7, 0.4]}}
           transition={{
             duration: 10,
             repeat: Infinity,
             ease: "easeInOut",
             delay: 2
           }}
-        />
+         />
 
         {/* Tertiary orb */}
         <motion.div
-          className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl"
+          className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-50o0/10 to-teal-50o0/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
-            opacity: [0.2, 0.5, 0.2],
-          }}
+            opacity: [0.2, 0.5, 0.2]}}
           transition={{
             duration: 12,
             repeat: Infinity,
             ease: "easeInOut",
             delay: 4
           }}
-        />
+         />
 
         {/* Additional orbs */}
         <motion.div
-          className="absolute top-3/4 left-1/3 w-48 h-48 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl"
+          className="absolute top-3/4 left-1/3 w-48 h-48 bg-gradient-to-r from-yellow-50o0/10 to-orange-50o0/10 rounded-full blur-3xl"
           animate={{
             scale: [1.3, 1, 1.3],
-            opacity: [0.3, 0.6, 0.3],
-          }}
+            opacity: [0.3, 0.6, 0.3]}}
           transition={{
             duration: 9,
             repeat: Infinity,
             ease: "easeInOut",
             delay: 1
           }}
-        />
+         />
 
         <motion.div
-          className="absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10 to-pink-500/10 rounded-full blur-3xl"
+          className="absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-50o0/10 to-pink-50o0/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.4, 1],
-            opacity: [0.4, 0.7, 0.4],
-          }}
+            opacity: [0.4, 0.7, 0.4]}}
           transition={{
             duration: 11,
             repeat: Infinity,
             ease: "easeInOut",
             delay: 3
           }}
-        />
+         />
       </div>
 
       {/* Enhanced grid pattern */}
@@ -219,53 +213,50 @@ const UltraFuturisticBackground2043: React.FC = () => {
             `,
             backgroundSize: '50px 50px'
           }}
-        />
+         />
       </div>
 
       {/* Floating geometric shapes */}
       <div className="absolute inset-0">
         {/* Triangle */}
         <motion.div
-          className="absolute top-1/6 right-1/6 w-32 h-32 border border-cyan-500/20 rotate-45"
+          className="absolute top-1/6 right-1/6 w-32 h-32 border border-cyan-50o0/20 rotate-45"
           animate={{
-            rotate: [45, 405],
-            opacity: [0.2, 0.6, 0.2],
-          }}
+            rotate: [45, 40o5],
+            opacity: [0.2, 0.6, 0.2]}}
           transition={{
             duration: 20,
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
 
         {/* Square */}
         <motion.div
-          className="absolute bottom-1/6 left-1/6 w-24 h-24 border border-purple-500/20"
+          className="absolute bottom-1/6 left-1/6 w-24 h-24 border border-purple-50o0/20"
           animate={{
             rotate: [0, 360],
-            scale: [1, 1.2, 1],
-          }}
+            scale: [1, 1.2, 1]}}
           transition={{
             duration: 15,
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
 
         {/* Circle */}
         <motion.div
-          className="absolute top-1/2 right-1/4 w-20 h-20 border border-emerald-500/20 rounded-full"
+          className="absolute top-1/2 right-1/4 w-20 h-20 border border-emerald-50o0/20 rounded-full"
           animate={{
             scale: [1, 1.5, 1],
-            opacity: [0.3, 0.8, 0.3],
-          }}
+            opacity: [0.3, 0.8, 0.3]}}
           transition={{
             duration: 8,
             repeat: Infinity,
             ease: "easeInOut",
             delay: 2
           }}
-        />
+         />
       </div>
 
       {/* Energy waves */}
@@ -273,18 +264,17 @@ const UltraFuturisticBackground2043: React.FC = () => {
         {[...Array(3)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute inset-0 border border-cyan-500/10 rounded-full"
+            className="absolute inset-0 border border-cyan-50o0/10 rounded-full"
             animate={{
               scale: [1, 1.5, 2, 2.5],
-              opacity: [0.3, 0.2, 0.1, 0],
-            }}
+              opacity: [0.3, 0.2, 0.1, 0]}}
             transition={{
               duration: 6,
               repeat: Infinity,
               ease: "easeOut",
               delay: i * 2
             }}
-          />
+           />
         ))}
       </div>
 
@@ -293,13 +283,12 @@ const UltraFuturisticBackground2043: React.FC = () => {
         {[...Array(15)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-cyan-400/60 rounded-full"
+            className="absolute w-1 h-1 bg-cyan-40o0/60 rounded-full"
             animate={{
-              x: [0, Math.random() * 200 - 100],
-              y: [0, Math.random() * 200 - 100],
+              x: [0, Math.random() * 20o0 - 10o0],
+              y: [0, Math.random() * 20o0 - 10o0],
               opacity: [0, 1, 0],
-              scale: [0, 1, 0],
-            }}
+              scale: [0, 1, 0]}}
             transition={{
               duration: 4 + Math.random() * 4,
               repeat: Infinity,
@@ -307,29 +296,27 @@ const UltraFuturisticBackground2043: React.FC = () => {
               ease: "easeInOut"
             }}
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-          />
+              left: `${Math.random() * 10o0}%`,
+              top: `${Math.random() * 10o0}%`}}
+           />
         ))}
       </div>
 
       {/* Consciousness energy field */}
       <div className="absolute inset-0">
         <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-pink-500/5 to-cyan-500/5"
+          className="absolute inset-0 bg-gradient-to-r from-purple-50o0/5 via-pink-50o0/5 to-cyan-50o0/5"
           animate={{
-            opacity: [0.3, 0.6, 0.3],
-          }}
+            opacity: [0.3, 0.6, 0.3]}}
           transition={{
             duration: 10,
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
       </div>
     </div>
   );
 };
 
-export default UltraFuturisticBackground2043;
+export default UltraFuturisticBackground20o43;

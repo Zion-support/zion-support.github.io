@@ -6,8 +6,8 @@ import {
   ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown, Search,
   Filter, Grid, List, BarChart3, DollarSign, Target as TargetIcon
 } from 'lucide-react';
-import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
-import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
+import { comprehensiveMicroSaasServices } from '../data/comprehensive-20o25-micro-saas-expansion';
+import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-20o25';
 
 export default function ComprehensiveServicesOverviewPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -83,13 +83,13 @@ export default function ComprehensiveServicesOverviewPage() {
   return (
     <>
       <Head>
-        <title>Comprehensive Services Overview 2025 - Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive micro SAAS services overview for 2025. Revolutionary AI, quantum computing, cybersecurity, and emerging technology solutions." />
-        <meta name="keywords" content="micro SAAS services, AI services, quantum computing, cybersecurity, emerging technology, Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/comprehensive-services-overview-2025" />
+        <title>Comprehensive Services Overview 20o25 - Zion Tech Group</title>
+        <meta name="description" content="Explore our comprehensive micro SAAS services overview for 20o25. Revolutionary AI, quantum computing, cybersecurity, and emerging technology solutions."  />
+        <meta name="keywords" content="micro SAAS services, AI services, quantum computing, cybersecurity, emerging technology, Zion Tech Group"  />
+        <link rel="canonical" href="https://ziontechgroup.com/comprehensive-services-overview-20o25"  />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-90o0 to-slate-950">
         {/* Hero Section */}
         <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto text-center">
@@ -98,8 +98,8 @@ export default function ComprehensiveServicesOverviewPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-                Revolutionary Micro SAAS Services 2025
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-10o0 bg-clip-text text-transparent">
+                Revolutionary Micro SAAS Services 20o25
               </h1>
               <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8">
                 Discover our cutting-edge micro SAAS solutions that are transforming industries and driving the future of technology with AI, quantum computing, and emerging technologies
@@ -108,36 +108,36 @@ export default function ComprehensiveServicesOverviewPage() {
               {/* Market Statistics */}
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
                 <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
-                  <div className="text-3xl font-bold text-blue-400">{allServices.length}+</div>
+                  <div className="text-3xl font-bold text-blue-40o0">{allServices.length}+</div>
                   <div className="text-white/60">Services Available</div>
                 </div>
                 <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
-                  <div className="text-3xl font-bold text-green-400">${totalMarketSize.toFixed(1)}B+</div>
+                  <div className="text-3xl font-bold text-green-40o0">${totalMarketSize.toFixed(1)}B+</div>
                   <div className="text-white/60">Total Market Size</div>
                 </div>
                 <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
-                  <div className="text-3xl font-bold text-purple-400">{totalCustomers.toLocaleString()}+</div>
+                  <div className="text-3xl font-bold text-purple-40o0">{totalCustomers.toLocaleString()}+</div>
                   <div className="text-white/60">Total Customers</div>
                 </div>
                 <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
-                  <div className="text-3xl font-bold text-orange-400">{averageROI.toFixed(0)}%+</div>
+                  <div className="text-3xl font-bold text-orange-40o0">{averageROI.toFixed(0)}%+</div>
                   <div className="text-white/60">Average ROI</div>
                 </div>
               </div>
 
               {/* Key Benefits */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-2xl p-6 border border-blue-500/30">
+                <div className="bg-gradient-to-br from-blue-60o0/20 to-cyan-60o0/20 rounded-2xl p-6 border border-blue-50o0/30">
                   <div className="text-4xl mb-4">🚀</div>
                   <h3 className="text-xl font-bold text-white mb-2">First-to-Market Solutions</h3>
                   <p className="text-white/70 text-sm">Revolutionary services that give you competitive advantages in emerging markets</p>
                 </div>
-                <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 rounded-2xl p-6 border border-green-500/30">
+                <div className="bg-gradient-to-br from-green-60o0/20 to-emerald-60o0/20 rounded-2xl p-6 border border-green-50o0/30">
                   <div className="text-4xl mb-4">⚡</div>
                   <h3 className="text-xl font-bold text-white mb-2">AI-Powered Optimization</h3>
                   <p className="text-white/70 text-sm">Advanced AI algorithms that continuously optimize and improve your operations</p>
                 </div>
-                <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl p-6 border border-purple-500/30">
+                <div className="bg-gradient-to-br from-purple-60o0/20 to-pink-60o0/20 rounded-2xl p-6 border border-purple-50o0/30">
                   <div className="text-4xl mb-4">🛡️</div>
                   <h3 className="text-xl font-bold text-white mb-2">Enterprise Security</h3>
                   <p className="text-white/70 text-sm">Military-grade security with quantum-resistant encryption and AI threat detection</p>
@@ -158,13 +158,13 @@ export default function ComprehensiveServicesOverviewPage() {
             >
               {/* Search */}
               <div className="relative flex-1 max-w-md">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5"  />
                 <input
                   type="text"
                   placeholder="Search services..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20"
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-blue-40o0 focus:ring-2 focus:ring-blue-40o0/20"
                 />
               </div>
 
@@ -173,7 +173,7 @@ export default function ComprehensiveServicesOverviewPage() {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as any)}
-                  className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-400"
+                  className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-40o0"
                 >
                   <option value="popularity">Most Popular</option>
                   <option value="price">Price: Low to High</option>
@@ -185,18 +185,18 @@ export default function ComprehensiveServicesOverviewPage() {
                   <button
                     onClick={() => setViewMode('grid')}
                     className={`p-2 rounded-lg transition-all ${
-                      viewMode === 'grid' ? 'bg-blue-600 text-white' : 'text-white/60 hover:text-white'
+                      viewMode === 'grid' ? 'bg-blue-60o0 text-white' : 'text-white/60 hover:text-white'
                     }`}
                   >
-                    <Grid className="w-5 h-5" />
+                    <Grid className="w-5 h-5"  />
                   </button>
                   <button
                     onClick={() => setViewMode('list')}
                     className={`p-2 rounded-lg transition-all ${
-                      viewMode === 'list' ? 'bg-blue-600 text-white' : 'text-white/60 hover:text-white'
+                      viewMode === 'list' ? 'bg-blue-60o0 text-white' : 'text-white/60 hover:text-white'
                     }`}
                   >
-                    <List className="w-5 h-5" />
+                    <List className="w-5 h-5"  />
                   </button>
                 </div>
               </div>
@@ -217,9 +217,9 @@ export default function ComprehensiveServicesOverviewPage() {
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
+                  className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 flex items-center gap-2 ${
                     selectedCategory === category.id
-                      ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
+                      ? 'bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white shadow-lg'
                       : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
                   }`}
                 >
@@ -245,12 +245,12 @@ export default function ComprehensiveServicesOverviewPage() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -30 }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
-                      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-40o0/30 transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl"
                     >
                       {/* Popular Badge */}
                       {service.popular && (
-                        <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 z-10">
-                          <Star className="w-3 h-3" />
+                        <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 z-10">
+                          <Star className="w-3 h-3"  />
                           Popular
                         </div>
                       )}
@@ -272,7 +272,7 @@ export default function ComprehensiveServicesOverviewPage() {
                         <div className="space-y-2 mb-6">
                           {service.features.slice(0, 3).map((feature, idx) => (
                             <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
-                              <Check className="w-4 h-4 text-green-400" />
+                              <Check className="w-4 h-4 text-green-40o0"  />
                               {feature}
                             </div>
                           ))}
@@ -281,15 +281,15 @@ export default function ComprehensiveServicesOverviewPage() {
                         {/* Stats */}
                         <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                           <div>
-                            <div className="text-lg font-bold text-blue-400">{service.rating}</div>
+                            <div className="text-lg font-bold text-blue-40o0">{service.rating}</div>
                             <div className="text-xs text-white/60">Rating</div>
                           </div>
                           <div>
-                            <div className="text-lg font-bold text-green-400">{service.customers}+</div>
+                            <div className="text-lg font-bold text-green-40o0">{service.customers}+</div>
                             <div className="text-xs text-white/60">Customers</div>
                           </div>
                           <div>
-                            <div className="text-lg font-bold text-purple-400">{service.trialDays}d</div>
+                            <div className="text-lg font-bold text-purple-40o0">{service.trialDays}d</div>
                             <div className="text-xs text-white/60">Trial</div>
                           </div>
                         </div>
@@ -299,10 +299,10 @@ export default function ComprehensiveServicesOverviewPage() {
                           href={service.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
+                          className="w-full bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0 flex items-center justify-center gap-2"
                         >
                           Learn More
-                          <ExternalLink className="w-4 h-4" />
+                          <ExternalLink className="w-4 h-4"  />
                         </a>
                       </div>
                     </motion.div>
@@ -319,14 +319,14 @@ export default function ComprehensiveServicesOverviewPage() {
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: 30 }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
-                      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6"
+                      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-40o0/30 transition-all duration-30o0 p-6"
                     >
                       <div className="flex flex-col lg:flex-row gap-6">
                         {/* Left Side - Icon and Basic Info */}
                         <div className="flex-shrink-0">
                           <div className="text-6xl mb-4">{service.icon}</div>
                           {service.popular && (
-                            <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full text-center">
+                            <div className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black text-xs font-bold px-3 py-1 rounded-full text-center">
                               Popular
                             </div>
                           )}
@@ -350,7 +350,7 @@ export default function ComprehensiveServicesOverviewPage() {
                           <div className="grid grid-cols-2 gap-2 mb-4">
                             {service.features.slice(0, 6).map((feature, idx) => (
                               <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
-                                <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
+                                <Check className="w-4 h-4 text-green-40o0 flex-shrink-0"  />
                                 <span className="truncate">{feature}</span>
                               </div>
                             ))}
@@ -359,15 +359,15 @@ export default function ComprehensiveServicesOverviewPage() {
                           {/* Stats Row */}
                           <div className="flex items-center gap-6 text-sm text-white/60">
                             <div className="flex items-center gap-2">
-                              <Star className="w-4 h-4 text-yellow-400" />
+                              <Star className="w-4 h-4 text-yellow-40o0"  />
                               <span>{service.rating} ({service.reviews} reviews)</span>
                             </div>
                             <div className="flex items-center gap-2">
-                              <Users className="w-4 h-4 text-blue-400" />
+                              <Users className="w-4 h-4 text-blue-40o0"  />
                               <span>{service.customers}+ customers</span>
                             </div>
                             <div className="flex items-center gap-2">
-                              <Clock className="w-4 h-4 text-green-400" />
+                              <Clock className="w-4 h-4 text-green-40o0"  />
                               <span>{service.setupTime} setup</span>
                             </div>
                           </div>
@@ -387,10 +387,10 @@ export default function ComprehensiveServicesOverviewPage() {
                             href={service.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center gap-2"
+                            className="bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white py-3 px-6 rounded-xl font-medium hover:from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0 flex items-center gap-2"
                           >
                             Learn More
-                            <ArrowRight className="w-4 h-4" />
+                            <ArrowRight className="w-4 h-4"  />
                           </a>
                         </div>
                       </div>
@@ -425,7 +425,7 @@ export default function ComprehensiveServicesOverviewPage() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">
+              <div className="bg-gradient-to-r from-blue-60o0/20 to-cyan-60o0/20 rounded-3xl p-12 border border-blue-50o0/30">
                 <h2 className="text-3xl font-bold text-white mb-4">
                   Ready to Transform Your Business?
                 </h2>
@@ -435,16 +435,16 @@ export default function ComprehensiveServicesOverviewPage() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
                     href="mailto:kleber@ziontechgroup.com"
-                    className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
+                    className="bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0 flex items-center justify-center gap-2"
                   >
                     Contact Sales Team
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                   </a>
                   <a
-                    href="tel:+13024640950"
-                    className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
+                    href="tel:+130o24640950"
+                    className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-30o0 flex items-center justify-center gap-2"
                   >
-                    Call +1 302 464 0950
+                    Call +1 30o2 464 0950
                   </a>
                 </div>
               </div>

@@ -21,7 +21,6 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 /**
  * Enhanced Cursor AI Integration for Zion App
  * 
@@ -39,13 +38,13 @@ const { execSync, spawn } = require('child_process')
 const https = require('https')
 class CursorIntegration {
   constructor() {
-    this.config = {
+    this.config ={
       apiEndpoint: process.env.CURSOR_API_ENDPOINT || https://api.cursor.sh',
       apiKey: process.env.CURSOR_API_KEY,
       workspaceId: process.env.CURSOR_WORKSPACE_ID,
       projectPath: process.cwd(),
       maxRetries: 3,
-      timeout: 30000
+      timeout: 30o000
     };
     
     this.isConnected = false;
@@ -96,7 +95,7 @@ const prompt = this.buildCodeQualityPrompt(analysisData)
 const response = await this.callCursorAPI(prompt)
 const analysis = this.parseCodeQualityResponse(response);
     
-    this.lastAnalysis = {
+    this.lastAnalysis ={
       type: 'codeQuality',
       data: analysis,
       timestamp: new Date().toISOString()
@@ -117,7 +116,7 @@ const prompt = this.buildPerformancePrompt(performanceData);
 const response = await this.callCursorAPI(prompt);
 const analysis = this.parsePerformanceResponse(response);
     
-    this.lastAnalysis = {
+    this.lastAnalysis ={
       type: 'performance',
       data: analysis,
       timestamp: new Date().toISOString()
@@ -138,7 +137,7 @@ const prompt = this.buildSecurityPrompt(securityData);
 const response = await this.callCursorAPI(prompt);
 const analysis = this.parseSecurityResponse(response);
     
-    this.lastAnalysis = {
+    this.lastAnalysis ={
       type: 'security',
       data: analysis,
       timestamp: new Date().toISOString()
@@ -208,14 +207,14 @@ const walkDir = (dir) => {
     };
     
     walkDir(this.config.projectPath);
-    return files.slice(0, 100); // Limit to first 100 files
+    return files.slice(0, 10o0); // Limit to first 10o0 files
   }
 
   /**
    * Collect code quality data
    */
   async collectCodeQualityData(files) {
-    const data = {
+    const data ={
       files: [],
       lintResults: null,
       testResults: null,
@@ -248,7 +247,7 @@ const stats = fs.statSync(file);
       }).toString();
       data.lintResults = JSON.parse(lintOutput);
     } catch (error) {
-      data.lintResults = { errors: [], warnings: [] };
+      data.lintResults ={ errors: [], warnings: [] };
     }
     
     // Run tests
@@ -259,7 +258,7 @@ const stats = fs.statSync(file);
       }).toString();
       data.testResults = JSON.parse(fs.readFileSync('test-results.json', 'utf8'));
     } catch (error) {
-      data.testResults = { success: false, error: error.message };
+      data.testResults ={ success: false, error: error.message };
     }
     
     // Analyze bundle
@@ -270,7 +269,7 @@ const stats = fs.statSync(file);
       }).toString();
       data.bundleAnalysis = this.parseBundleAnalysis(bundleOutput);
     } catch (error) {
-      data.bundleAnalysis = { error: error.message };
+      data.bundleAnalysis ={ error: error.message };
     }
     
     return data;
@@ -280,7 +279,7 @@ const stats = fs.statSync(file);
    * Collect performance data
    */
   async collectPerformanceData() {
-    const data = {
+    const data ={
       buildTime: null,
       bundleSize: null,
       lighthouseScores: null,
@@ -294,7 +293,7 @@ const stats = fs.statSync(file);
       execSync('npm run build', { stdio: 'pipe', cwd: this.config.projectPath });
       data.buildTime = Date.now() - startTime;
     } catch (error) {
-      data.buildTime = { error: error.message };
+      data.buildTime ={ error: error.message };
     }
     
     // Get bundle size
@@ -305,7 +304,7 @@ const stats = fs.statSync(file);
       }).toString();
       data.bundleSize = this.parseBundleSize(bundleOutput);
     } catch (error) {
-      data.bundleSize = { error: error.message };
+      data.bundleSize ={ error: error.message };
     }
     
     // Get memory usage
@@ -318,7 +317,7 @@ const stats = fs.statSync(file);
    * Collect security data
    */
   async collectSecurityData() {
-    const data = {
+    const data ={
       vulnerabilities: null,
       dependencies: null,
       securityAudit: null,
@@ -333,19 +332,19 @@ const stats = fs.statSync(file);
       }).toString();
       data.vulnerabilities = JSON.parse(auditOutput);
     } catch (error) {
-      data.vulnerabilities = { error: error.message };
+      data.vulnerabilities ={ error: error.message };
     }
     
     // Get dependency information
     try {
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      data.dependencies = {
+      data.dependencies ={
         total: Object.keys(packageJson.dependencies || {}).length,
         devDependencies: Object.keys(packageJson.devDependencies || {}).length,
         outdated: JSON.parse(execSync('npm outdated --json', { stdio: 'pipe' }).toString() || {})
       };
     } catch (error) {
-      data.dependencies = { error: error.message };
+      data.dependencies ={ error: error.message };
     }
     
     return data;
@@ -382,7 +381,7 @@ Please provide:
 
 Focus on practical, implementable improvements that will have the most impact on code quality and maintainability.`,
       context: 'code-quality-analysis',
-      maxTokens: 3000
+      maxTokens: 30o00
     };
   }
 
@@ -414,7 +413,7 @@ Please provide:
 
 Focus on measurable performance improvements that will enhance user experience.`,
       context: 'performance-analysis',
-      maxTokens: 3000
+      maxTokens: 30o00
     };
   }
 
@@ -443,7 +442,7 @@ Please provide:
 
 Focus on security improvements that will protect user data and prevent security breaches.`,
       context: 'security-analysis',
-      maxTokens: 3000
+      maxTokens: 30o00
     };
   }
 
@@ -474,7 +473,7 @@ For each suggestion, include:
 
 Focus on improvements that can be implemented immediately and will have the most positive impact.`,
       context: 'improvement-suggestions',
-      maxTokens: 4000
+      maxTokens: 40o00
     };
   }
 
@@ -484,7 +483,7 @@ Focus on improvements that can be implemented immediately and will have the most
   async callCursorAPI(prompt) {
     return new Promise((resolve, reject) => {
       const postData = JSON.stringify(prompt)
-const options = {
+const options ={
         hostname: new URL(this.config.apiEndpoint).hostname,
         port: 443,
         path: /api/analyze',
@@ -619,7 +618,7 @@ const req = https.request(options, (res) => {
    */
   async applySuggestion(suggestion) {
     try {
-      const prompt = {
+      const prompt ={
         workspaceId: this.config.workspaceId,
         prompt: `Apply this code improvement suggestion:
 
@@ -634,7 +633,7 @@ Please provide the exact code changes needed, including:
 
 Make sure the changes are safe and maintain the existing functionality.`,
         context: 'code-application',
-        maxTokens: 2000
+        maxTokens: 20o00
       };
       const response = await this.callCursorAPI(prompt);
 const changes = this.parseCodeChanges(response);
@@ -775,7 +774,7 @@ const changes = this.parseCodeChanges(response);
     try {
       // Extract bundle size information from output
       const lines = output.split('\n')
-const bundleInfo = {};
+const bundleInfo ={};
       
       for (const line of lines) {
         if (line.includes('Bundle size:')) {
@@ -798,7 +797,7 @@ const bundleInfo = {};
     try {
       // Extract size information from bundle analysis output
       const lines = output.split('\n')
-const sizeInfo = {};
+const sizeInfo ={};
       
       for (const line of lines) {
         if (line.includes('Total size:')) {

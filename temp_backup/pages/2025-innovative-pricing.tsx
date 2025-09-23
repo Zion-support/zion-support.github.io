@@ -6,16 +6,16 @@ import {
   Brain, Building, Target, Rocket, ArrowRight
 } from 'lucide-react';
 
-// Import our new 2025 services
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
-import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services';
-import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';
-import { emergingTechnologyServices } from '../data/2025-emerging-technology-services';
+// Import our new 20o25 services
+import { advancedAIAutomationServices20o25 } from '../data/20o25-advanced-ai-automation-services';
+import { innovativeITInfrastructureServices20o25 } from '../data/20o25-innovative-it-infrastructure-services';
+import { innovativeMicroSaasSolutions20o25 } from '../data/20o25-innovative-micro-saas-solutions';
+import { emergingTechnologyServices } from '../data/20o25-emerging-technology-services';
 
-const contact = {
-  mobile: '+1 302 464 0950',
+const contact ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
@@ -24,29 +24,29 @@ const serviceCategories = [
   {
     id: 'enterprise-ai',
     name: 'Enterprise AI Services',
-    icon: <Brain className="w-8 h-8" />,
-    color: 'from-purple-500 to-pink-500',
-    services: advancedAIAutomationServices2025
+    icon: <Brain className="w-8 h-8"  />,
+    color: 'from-purple-50o0 to-pink-50o0',
+    services: advancedAIAutomationServices20o25
   },
   {
     id: 'it-infrastructure',
     name: 'IT Infrastructure Services',
-    icon: <Building className="w-8 h-8" />,
-    color: 'from-blue-500 to-indigo-500',
-    services: innovativeITInfrastructureServices2025
+    icon: <Building className="w-8 h-8"  />,
+    color: 'from-blue-50o0 to-indigo-50o0',
+    services: innovativeITInfrastructureServices20o25
   },
   {
     id: 'micro-saas',
     name: 'Micro SAAS Solutions',
-    icon: <Target className="w-8 h-8" />,
-    color: 'from-green-500 to-emerald-500',
-    services: innovativeMicroSaasSolutions2025
+    icon: <Target className="w-8 h-8"  />,
+    color: 'from-green-50o0 to-emerald-50o0',
+    services: innovativeMicroSaasSolutions20o25
   },
   {
     id: 'emerging-tech',
     name: 'Emerging Technology Services',
-    icon: <Rocket className="w-8 h-8" />,
-    color: 'from-orange-500 to-red-500',
+    icon: <Rocket className="w-8 h-8"  />,
+    color: 'from-orange-50o0 to-red-50o0',
     services: emergingTechnologyServices
   }
 ];
@@ -65,7 +65,7 @@ const pricingTiers = [
       'Community documentation',
       'Basic analytics'
     ],
-    color: 'from-gray-500 to-slate-500'
+    color: 'from-gray-50o0 to-slate-50o0'
   },
   {
     name: 'Professional',
@@ -80,7 +80,7 @@ const pricingTiers = [
       'Advanced analytics',
       'Team collaboration'
     ],
-    color: 'from-blue-500 to-indigo-500',
+    color: 'from-blue-50o0 to-indigo-50o0',
     popular: true
   },
   {
@@ -98,7 +98,7 @@ const pricingTiers = [
       'Custom training',
       'On-premise options'
     ],
-    color: 'from-purple-500 to-pink-500'
+    color: 'from-purple-50o0 to-pink-50o0'
   }
 ];
 
@@ -124,7 +124,7 @@ const getServicePeriod = (service: any) => {
   return '';
 };
 
-export default function InnovativePricing2025() {
+export default function InnovativePricing20o25() {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   // Normalize services to unified format
@@ -187,9 +187,9 @@ export default function InnovativePricing2025() {
     
     if (selectedCategory === 'all') {
       return [
-        ...advancedAIAutomationServices2025,
-        ...innovativeITInfrastructureServices2025,
-        ...innovativeMicroSaasSolutions2025,
+        ...advancedAIAutomationServices20o25,
+        ...innovativeITInfrastructureServices20o25,
+        ...innovativeMicroSaasSolutions20o25,
         ...emergingTechnologyServices
       ];
     }
@@ -198,16 +198,16 @@ export default function InnovativePricing2025() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">
       <SEO 
-        title="2025 Innovative Services Pricing | Zion Tech Group"
-        description="Comprehensive pricing for our 2025 innovative services including AI automation, IT infrastructure, micro SAAS solutions, and emerging technology services."
-        keywords="2025 pricing, innovative services pricing, AI automation pricing, IT infrastructure pricing, micro SAAS pricing, Zion Tech Group"
-      />
+        title="20o25 Innovative Services Pricing | Zion Tech Group"
+        description="Comprehensive pricing for our 20o25 innovative services including AI automation, IT infrastructure, micro SAAS solutions, and emerging technology services."
+        keywords="20o25 pricing, innovative services pricing, AI automation pricing, IT infrastructure pricing, micro SAAS pricing, Zion Tech Group"
+       />
 
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-60o0/20 to-blue-60o0/20"  />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <motion.h1 
@@ -216,8 +216,8 @@ export default function InnovativePricing2025() {
               transition={{ duration: 0.8 }}
               className="text-5xl md:text-7xl font-bold text-white mb-6"
             >
-              2025 Innovative
-              <span className="block bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              20o25 Innovative
+              <span className="block bg-gradient-to-r from-purple-40o0 to-blue-40o0 bg-clip-text text-transparent">
                 Services Pricing
               </span>
             </motion.h1>
@@ -225,7 +225,7 @@ export default function InnovativePricing2025() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
+              className="text-xl text-gray-30o0 max-w-3xl mx-auto mb-8"
             >
               Transparent, competitive pricing for our cutting-edge portfolio of AI automation, 
               IT infrastructure, micro SAAS solutions, and emerging technology services.
@@ -256,12 +256,12 @@ export default function InnovativePricing2025() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 ${
-                tier.popular ? 'border-purple-500/50 ring-2 ring-purple-500/20' : ''
+                tier.popular ? 'border-purple-50o0/50 ring-2 ring-purple-50o0/20' : ''
               }`}
             >
               {tier.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-bold px-4 py-2 rounded-full">
+                  <span className="bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white text-sm font-bold px-4 py-2 rounded-full">
                     MOST POPULAR
                   </span>
                 </div>
@@ -271,23 +271,23 @@ export default function InnovativePricing2025() {
                 <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
                 <div className="mb-4">
                   <span className="text-4xl font-bold text-white">{tier.price}</span>
-                  <span className="text-gray-400">{tier.period}</span>
+                  <span className="text-gray-40o0">{tier.period}</span>
                 </div>
-                <p className="text-gray-300">{tier.description}</p>
+                <p className="text-gray-30o0">{tier.description}</p>
               </div>
 
               <ul className="space-y-4 mb-8">
                 {tier.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center gap-3 text-gray-300">
-                    <Check className="w-5 h-5 text-green-400 flex-shrink-0" />
+                  <li key={idx} className="flex items-center gap-3 text-gray-30o0">
+                    <Check className="w-5 h-5 text-green-40o0 flex-shrink-0"  />
                     <span>{feature}</span>
                   </li>
                 ))}
               </ul>
 
-              <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-200 ${
+              <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-20o0 ${
                 tier.popular
-                  ? 'bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white'
+                  ? 'bg-gradient-to-r from-purple-50o0 to-blue-50o0 hover:from-purple-60o0 hover:to-blue-60o0 text-white'
                   : 'bg-white/20 text-white hover:bg-white/30 border border-white/30'
               }`}>
                 Get Started
@@ -303,7 +303,7 @@ export default function InnovativePricing2025() {
           <h2 className="text-4xl font-bold text-white mb-4">
             Service Categories & Pricing
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
             Explore our comprehensive portfolio of innovative services with transparent pricing
           </p>
         </div>
@@ -312,10 +312,10 @@ export default function InnovativePricing2025() {
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           <button
             onClick={() => setSelectedCategory('all')}
-            className={`px-6 py-3 rounded-xl font-semibold transition-all duration-200 ${
+            className={`px-6 py-3 rounded-xl font-semibold transition-all duration-20o0 ${
               selectedCategory === 'all'
-                ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white'
-                : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
+                ? 'bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white'
+                : 'bg-white/10 text-gray-30o0 hover:bg-white/20 border border-white/20'
             }`}
           >
             All Services
@@ -324,10 +324,10 @@ export default function InnovativePricing2025() {
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`px-6 py-3 rounded-xl font-semibold transition-all duration-200 flex items-center gap-2 ${
+              className={`px-6 py-3 rounded-xl font-semibold transition-all duration-20o0 flex items-center gap-2 ${
                 selectedCategory === category.id
-                  ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
+                  ? 'bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white'
+                  : 'bg-white/10 text-gray-30o0 hover:bg-white/20 border border-white/20'
               }`}
             >
               {category.icon}
@@ -344,21 +344,21 @@ export default function InnovativePricing2025() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-500/50 transition-all duration-300"
+              className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-50o0/50 transition-all duration-30o0"
             >
               <div className="flex items-start justify-between mb-4">
                 <div className="text-3xl">🚀</div>
               </div>
               
               <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-              <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
+              <p className="text-gray-30o0 text-sm mb-4">{service.tagline}</p>
               
               <div className="mb-4">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-2xl font-bold text-purple-400">
+                  <span className="text-2xl font-bold text-purple-40o0">
                     {getServicePricingDisplay(service)}
                   </span>
-                  <span className="text-gray-400">
+                  <span className="text-gray-40o0">
                     {getServicePeriod(service)}
                   </span>
                 </div>
@@ -371,20 +371,20 @@ export default function InnovativePricing2025() {
               </div>
 
               <div className="space-y-2 mb-6">
-                <div className="text-xs text-gray-400">
-                  <span className="text-gray-500">Type:</span> {service.type}
+                <div className="text-xs text-gray-40o0">
+                  <span className="text-gray-50o0">Type:</span> {service.type}
                 </div>
-                <div className="text-xs text-gray-400">
-                  <span className="text-gray-500">Market Size:</span> {service.marketSize}
+                <div className="text-xs text-gray-40o0">
+                  <span className="text-gray-50o0">Market Size:</span> {service.marketSize}
                 </div>
               </div>
 
               <a
                 href={service.slug || `/services/${service.id}`}
-                className="w-full bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 group"
+                className="w-full bg-gradient-to-r from-purple-50o0 to-blue-50o0 hover:from-purple-60o0 hover:to-blue-60o0 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-20o0 flex items-center justify-center gap-2 group"
               >
                 View Details
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform"  />
               </a>
             </motion.div>
           ))}
@@ -393,12 +393,12 @@ export default function InnovativePricing2025() {
 
       {/* Enterprise Features */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-3xl p-8 border border-white/20">
+        <div className="bg-gradient-to-r from-purple-60o0/20 to-blue-60o0/20 rounded-3xl p-8 border border-white/20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">
               Enterprise Features & Benefits
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
               Unlock the full potential of our innovative services with enterprise-grade features
             </p>
           </div>
@@ -406,22 +406,22 @@ export default function InnovativePricing2025() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                icon: <Shield className="w-12 h-12" />,
+                icon: <Shield className="w-12 h-12"  />,
                 title: 'Enterprise Security',
                 description: 'SOC 2 Type II, GDPR, HIPAA compliance with advanced security features'
               },
               {
-                icon: <Globe className="w-12 h-12" />,
+                icon: <Globe className="w-12 h-12"  />,
                 title: 'Global Support',
                 description: '24/7 dedicated support with SLA guarantees and custom training'
               },
               {
-                icon: <Zap className="w-12 h-12" />,
+                icon: <Zap className="w-12 h-12"  />,
                 title: 'Custom Integration',
                 description: 'White-label options and custom integrations for your business needs'
               },
               {
-                icon: <TrendingUp className="w-12 h-12" />,
+                icon: <TrendingUp className="w-12 h-12"  />,
                 title: 'Scalable Solutions',
                 description: 'On-premise options and unlimited scaling for enterprise growth'
               }
@@ -433,11 +433,11 @@ export default function InnovativePricing2025() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-purple-400 mb-4 flex justify-center">
+                <div className="text-purple-40o0 mb-4 flex justify-center">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300 text-sm">{feature.description}</p>
+                <p className="text-gray-30o0 text-sm">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -446,33 +446,33 @@ export default function InnovativePricing2025() {
 
       {/* Contact Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-3xl p-8 border border-white/20 text-center">
+        <div className="bg-gradient-to-r from-purple-60o0/20 to-blue-60o0/20 rounded-3xl p-8 border border-white/20 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Get Started?
           </h2>
-          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-30o0 mb-6 max-w-2xl mx-auto">
             Contact us today to discuss your needs and get a personalized quote for our innovative services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href={`tel:${contact.mobile}`}
-              className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 flex items-center gap-2"
+              className="bg-green-50o0 hover:bg-green-60o0 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-20o0 flex items-center gap-2"
             >
               <span>📞</span>
               {contact.mobile}
             </a>
             <a
               href={`mailto:${contact.email}`}
-              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 flex items-center gap-2"
+              className="bg-blue-50o0 hover:bg-blue-60o0 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-20o0 flex items-center gap-2"
             >
               <span>✉️</span>
               {contact.email}
             </a>
           </div>
-          <div className="mt-6 text-gray-400 text-sm">
+          <div className="mt-6 text-gray-40o0 text-sm">
             <p>{contact.address}</p>
             <p className="mt-2">
-              Visit our website: <a href={contact.website} className="text-blue-400 hover:underline">{contact.website}</a>
+              Visit our website: <a href={contact.website} className="text-blue-40o0 hover:underline">{contact.website}</a>
             </p>
           </div>
         </div>

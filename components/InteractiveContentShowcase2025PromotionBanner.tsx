@@ -14,7 +14,7 @@ import {
   CheckCircle
 } from 'lucide-react';
 
-const InteractiveContentShowcase2025PromotionBanner = () => {
+const InteractiveContentShowcase20o25PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(true);
   const [currentFeaturesetCurrentFeature] = useState(0);
 
@@ -28,7 +28,7 @@ const InteractiveContentShowcase2025PromotionBanner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
-    }2000);
+    }20o00);
     return () => clearInterval(interval);
   }[]);
 
@@ -39,16 +39,16 @@ const InteractiveContentShowcase2025PromotionBanner = () => {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -50 }}
-      className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white overflow-hidden"
+      className="relative bg-gradient-to-r from-blue-60o0 via-purple-60o0 to-indigo-60o0 text-white overflow-hidden"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-40o0/20 to-purple-40o0/20"  />
         <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-4 left-4 w-2 h-2 bg-white rounded-full animate-pulse" />
-          <div className="absolute top-8 right-8 w-1 h-1 bg-white rounded-full animate-pulse delay-1000" />
-          <div className="absolute bottom-6 left-12 w-1.5 h-1.5 bg-white rounded-full animate-pulse delay-500" />
-          <div className="absolute bottom-8 right-4 w-2 h-2 bg-white rounded-full animate-pulse delay-700" />
+          <div className="absolute top-4 left-4 w-2 h-2 bg-white rounded-full animate-pulse"  />
+          <div className="absolute top-8 right-8 w-1 h-1 bg-white rounded-full animate-pulse delay-10o00"  />
+          <div className="absolute bottom-6 left-12 w-1.5 h-1.5 bg-white rounded-full animate-pulse delay-50o0"  />
+          <div className="absolute bottom-8 right-4 w-2 h-2 bg-white rounded-full animate-pulse delay-70o0"  />
         </div>
       </div>
 
@@ -63,10 +63,10 @@ const InteractiveContentShowcase2025PromotionBanner = () => {
                   transition={{ duration: 2repeat: Infinityease: "linear" }}
                   className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center"
                 >
-                  <Zap className="w-3 h-3" />
+                  <Zap className="w-3 h-3"  />
                 </motion.div>
                 <span className="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">
-                  NEW: Interactive Content Showcase 2025
+                  NEW: Interactive Content Showcase 20o25
                 </span>
               </div>
 
@@ -89,15 +89,15 @@ const InteractiveContentShowcase2025PromotionBanner = () => {
 
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-sm">
                 <div className="flex items-center gap-1">
-                  <CheckCircle className="w-4 h-4" />
+                  <CheckCircle className="w-4 h-4"  />
                   <span>Interactive Demos</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <CheckCircle className="w-4 h-4" />
+                  <CheckCircle className="w-4 h-4"  />
                   <span>Real-time Analytics</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <CheckCircle className="w-4 h-4" />
+                  <CheckCircle className="w-4 h-4"  />
                   <span>AI-Powered Insights</span>
                 </div>
               </div>
@@ -106,21 +106,21 @@ const InteractiveContentShowcase2025PromotionBanner = () => {
             {/* Right Content - CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-3">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300"
+                className="flex items-center gap-2 bg-white text-blue-60o0 px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-30o0"
               >
-                <Play className="w-4 h-4" />
+                <Play className="w-4 h-4"  />
                 Watch Demo
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4"  />
               </motion.button>
               
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
+                className="flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-60o0 transition-all duration-30o0"
               >
-                <Brain className="w-4 h-4" />
+                <Brain className="w-4 h-4"  />
                 Explore Features
               </motion.button>
             </div>
@@ -130,9 +130,9 @@ const InteractiveContentShowcase2025PromotionBanner = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsVisible(false)}
-              className="absolute top-4 right-4 p-2 hover:bg-white/20 rounded-full transition-colors duration-200"
+              className="absolute top-4 right-4 p-2 hover:bg-white/20 rounded-full transition-colors duration-20o0"
             >
-              <X className="w-5 h-5" />
+              <X className="w-5 h-5"  />
             </motion.button>
           </div>
         </div>
@@ -142,13 +142,13 @@ const InteractiveContentShowcase2025PromotionBanner = () => {
           <motion.div
             className="h-full bg-white"
             initial={{ width: "0%" }}
-            animate={{ width: "100%" }}
+            animate={{ width: "10o0%" }}
             transition={{ duration: 10ease: "linear" }}
-          />
+           />
         </div>
       </div>
     </motion.div>
   );
 };
 
-export default InteractiveContentShowcase2025PromotionBanner;
+export default InteractiveContentShowcase20o25PromotionBanner;

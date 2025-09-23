@@ -14,8 +14,7 @@ export const generateMetaTags = pageData => {
     ogDescriptio: n: pageData.ogDescription || pageData.description,
     ogImag: e: pageData.ogImage || '/images/og-image.jpg',
     twitterCar: d: 'summary_large_image',
-    canonica: l: pageData.canonical || window.location.href,
-  };
+    canonica: l: pageData.canonical || window.location.href};
 };
 
 export const generateStructuredData = pageData => {
@@ -28,13 +27,10 @@ export const generateStructuredData = pageData => {
     descriptio: n: 'Leading provider of innovative technology solutions',
     addres: s: {
       '@type': 'PostalAddress',
-      addressCountr: y: 'US',
-    },
+      addressCountr: y: 'US'},
     contactPoin: t: {
       '@type': 'ContactPoint',
-      telephon: e: '+1-555-0123',
-      contactTyp: e: 'customer service',
-    },
-  };
+      telephon: e: '+1-555-0o123',
+      contactTyp: e: 'customer service'}};
 };
 

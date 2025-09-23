@@ -1,4 +1,4 @@
-// Expanded Services Pricing Guide 2027 - Zion Tech Group
+// Expanded Services Pricing Guide 20o27 - Zion Tech Group
 // Comprehensive pricing information for all expanded innovative services
 
 export interface ExpandedServicePricing {
@@ -85,7 +85,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
     subcategory: 'Threat Intelligence',
     pricingTiers: {
       starter: {
-        price: 2500,
+        price: 250o0,
         currency: 'USD',
         billingCycle: 'monthly',
         features: [
@@ -94,7 +94,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           'Basic incident response',
           'Standard compliance reporting',
           'Email support',
-          'Up to 100 endpoints'
+          'Up to 10o0 endpoints'
         ],
         limitations: [
           'Limited threat intelligence feeds',
@@ -108,11 +108,11 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           'Healthcare organizations',
           'Government agencies'
         ],
-        setupFee: 5000,
+        setupFee: 50o00,
         contractTerm: '12 months'
       },
       professional: {
-        price: 5000,
+        price: 50o00,
         currency: 'USD',
         billingCycle: 'monthly',
         features: [
@@ -121,7 +121,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           'Automated incident response',
           'Enhanced compliance automation',
           'Priority support (2 hour response)',
-          'Up to 1000 endpoints',
+          'Up to 10o00 endpoints',
           'Custom threat intelligence feeds',
           'Advanced analytics dashboard'
         ],
@@ -136,11 +136,11 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           'High-security environments',
           'Compliance-focused organizations'
         ],
-        setupFee: 10000,
+        setupFee: 10o000,
         contractTerm: '12 months'
       },
       enterprise: {
-        price: 10000,
+        price: 10o000,
         currency: 'USD',
         billingCycle: 'monthly',
         features: [
@@ -160,12 +160,12 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           'Custom implementation timeline'
         ],
         bestFor: [
-          'Fortune 500 companies',
+          'Fortune 50o0 companies',
           'Global enterprises',
           'Critical infrastructure',
           'Defense contractors'
         ],
-        setupFee: 25000,
+        setupFee: 250o00,
         contractTerm: '24 months'
       },
       custom: {
@@ -190,7 +190,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           'Highly regulated industries',
           'Custom security requirements'
         ],
-        setupFee: 50000,
+        setupFee: 50o000,
         contractTerm: 'negotiable'
       }
     },
@@ -202,7 +202,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
     },
     roiAnalysis: {
       paybackPeriod: '6-8 months',
-      annualROI: '400-600%',
+      annualROI: '40o0-60o0%',
       costSavings: [
         'Reduced security incidents by 90%',
         'Automated compliance saves 40 hours/month',
@@ -232,10 +232,10 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
       ]
     },
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/quantum-threat-hunter',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
   {
@@ -245,7 +245,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
     subcategory: 'Compliance Automation',
     pricingTiers: {
       starter: {
-        price: 1500,
+        price: 150o0,
         currency: 'USD',
         billingCycle: 'monthly',
         features: [
@@ -266,11 +266,11 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           'Startups',
           'Basic compliance needs'
         ],
-        setupFee: 2000,
+        setupFee: 20o00,
         contractTerm: '12 months'
       },
       professional: {
-        price: 3000,
+        price: 30o00,
         currency: 'USD',
         billingCycle: 'monthly',
         features: [
@@ -279,7 +279,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           'Custom compliance workflows',
           'Real-time monitoring',
           'Priority support',
-          'Up to 200 users',
+          'Up to 20o0 users',
           'Advanced reporting',
           'Integration capabilities'
         ],
@@ -293,11 +293,11 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           'Financial services',
           'Growing businesses'
         ],
-        setupFee: 5000,
+        setupFee: 50o00,
         contractTerm: '12 months'
       },
       enterprise: {
-        price: 6000,
+        price: 60o00,
         currency: 'USD',
         billingCycle: 'monthly',
         features: [
@@ -318,7 +318,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           'Multi-national companies',
           'Highly regulated industries'
         ],
-        setupFee: 10000,
+        setupFee: 10o000,
         contractTerm: '24 months'
       },
       custom: {
@@ -339,7 +339,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           'Military organizations',
           'Custom compliance requirements'
         ],
-        setupFee: 20000,
+        setupFee: 20o000,
         contractTerm: 'negotiable'
       }
     },
@@ -351,7 +351,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
     },
     roiAnalysis: {
       paybackPeriod: '4-6 months',
-      annualROI: '300-500%',
+      annualROI: '30o0-50o0%',
       costSavings: [
         '90% reduction in compliance costs',
         'Automated reporting saves 60 hours/month',
@@ -381,10 +381,10 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
       ]
     },
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/ai-compliance-automator',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   }
 ];
@@ -398,7 +398,7 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
     subcategory: 'Predictive Analytics',
     pricingTiers: {
       starter: {
-        price: 1800,
+        price: 180o0,
         currency: 'USD',
         billingCycle: 'monthly',
         features: [
@@ -406,7 +406,7 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
           'Standard dashboards',
           'Data visualization tools',
           'Email support',
-          'Up to 100GB data processing',
+          'Up to 10o0GB data processing',
           'Basic API access'
         ],
         limitations: [
@@ -419,11 +419,11 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
           'Startups',
           'Basic analytics needs'
         ],
-        setupFee: 3000,
+        setupFee: 30o00,
         contractTerm: '12 months'
       },
       professional: {
-        price: 3500,
+        price: 350o0,
         currency: 'USD',
         billingCycle: 'monthly',
         features: [
@@ -445,11 +445,11 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
           'E-commerce businesses',
           'Manufacturing firms'
         ],
-        setupFee: 6000,
+        setupFee: 60o00,
         contractTerm: '12 months'
       },
       enterprise: {
-        price: 7000,
+        price: 70o00,
         currency: 'USD',
         billingCycle: 'monthly',
         features: [
@@ -470,7 +470,7 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
           'Data-driven companies',
           'Research institutions'
         ],
-        setupFee: 15000,
+        setupFee: 150o00,
         contractTerm: '24 months'
       },
       custom: {
@@ -491,7 +491,7 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
           'Government agencies',
           'Custom AI requirements'
         ],
-        setupFee: 30000,
+        setupFee: 30o000,
         contractTerm: 'negotiable'
       }
     },
@@ -503,7 +503,7 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
     },
     roiAnalysis: {
       paybackPeriod: '5-7 months',
-      annualROI: '250-400%',
+      annualROI: '250-40o0%',
       costSavings: [
         'Reduced manual analysis by 70%',
         'Faster decision making',
@@ -533,10 +533,10 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
       ]
     },
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/predictive-insights-engine',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   }
 ];
@@ -550,7 +550,7 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
     subcategory: 'Multi-Cloud Management',
     pricingTiers: {
       starter: {
-        price: 2000,
+        price: 20o00,
         currency: 'USD',
         billingCycle: 'monthly',
         features: [
@@ -571,11 +571,11 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
           'Multi-cloud beginners',
           'Basic cloud management needs'
         ],
-        setupFee: 4000,
+        setupFee: 40o00,
         contractTerm: '12 months'
       },
       professional: {
-        price: 4000,
+        price: 40o00,
         currency: 'USD',
         billingCycle: 'monthly',
         features: [
@@ -597,11 +597,11 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
           'Growing cloud environments',
           'Cost optimization focus'
         ],
-        setupFee: 8000,
+        setupFee: 80o00,
         contractTerm: '12 months'
       },
       enterprise: {
-        price: 8000,
+        price: 80o00,
         currency: 'USD',
         billingCycle: 'monthly',
         features: [
@@ -622,7 +622,7 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
           'Global cloud deployments',
           'Complex multi-cloud environments'
         ],
-        setupFee: 20000,
+        setupFee: 20o000,
         contractTerm: '24 months'
       },
       custom: {
@@ -643,7 +643,7 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
           'Military organizations',
           'Custom cloud requirements'
         ],
-        setupFee: 40000,
+        setupFee: 40o000,
         contractTerm: 'negotiable'
       }
     },
@@ -655,7 +655,7 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
     },
     roiAnalysis: {
       paybackPeriod: '3-5 months',
-      annualROI: '200-400%',
+      annualROI: '20o0-40o0%',
       costSavings: [
         '30-50% reduction in cloud costs',
         'Automated optimization saves 20 hours/month',
@@ -685,10 +685,10 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
       ]
     },
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/multi-cloud-orchestrator',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   }
 ];
@@ -702,7 +702,7 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
     subcategory: 'Industrial IoT',
     pricingTiers: {
       starter: {
-        price: 2800,
+        price: 280o0,
         currency: 'USD',
         billingCycle: 'monthly',
         features: [
@@ -710,7 +710,7 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
           'Standard dashboards',
           'Email alerts',
           'Email support',
-          'Up to 100 devices',
+          'Up to 10o0 devices',
           'Basic analytics'
         ],
         limitations: [
@@ -723,11 +723,11 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
           'Basic monitoring needs',
           'Equipment tracking'
         ],
-        setupFee: 5000,
+        setupFee: 50o00,
         contractTerm: '12 months'
       },
       professional: {
-        price: 5500,
+        price: 550o0,
         currency: 'USD',
         billingCycle: 'monthly',
         features: [
@@ -735,7 +735,7 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
           'Predictive maintenance',
           'Advanced analytics',
           'Priority support',
-          'Up to 500 devices',
+          'Up to 50o0 devices',
           'Custom dashboards',
           'Integration capabilities',
           'Performance optimization'
@@ -749,11 +749,11 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
           'Industrial facilities',
           'Predictive maintenance focus'
         ],
-        setupFee: 10000,
+        setupFee: 10o000,
         contractTerm: '12 months'
       },
       enterprise: {
-        price: 11000,
+        price: 110o00,
         currency: 'USD',
         billingCycle: 'monthly',
         features: [
@@ -774,7 +774,7 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
           'Multi-site operations',
           'Advanced IoT requirements'
         ],
-        setupFee: 25000,
+        setupFee: 250o00,
         contractTerm: '24 months'
       },
       custom: {
@@ -795,7 +795,7 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
           'Military installations',
           'Custom IoT requirements'
         ],
-        setupFee: 50000,
+        setupFee: 50o000,
         contractTerm: 'negotiable'
       }
     },
@@ -807,7 +807,7 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
     },
     roiAnalysis: {
       paybackPeriod: '6-8 months',
-      annualROI: '250-400%',
+      annualROI: '250-40o0%',
       costSavings: [
         '40-60% reduction in equipment downtime',
         '20-30% energy cost savings',
@@ -837,10 +837,10 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
       ]
     },
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/industrial-iot-intelligence',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   }
 ];
@@ -854,14 +854,14 @@ export const finTechPricing: ExpandedServicePricing[] = [
     subcategory: 'Quantum Finance',
     pricingTiers: {
       starter: {
-        price: 8000,
+        price: 80o00,
         currency: 'USD',
         billingCycle: 'monthly',
         features: [
           'Basic quantum models',
           'Standard financial tools',
           'Email support',
-          'Up to 100 calculations/month',
+          'Up to 10o0 calculations/month',
           'Basic API access',
           'Standard compliance'
         ],
@@ -875,11 +875,11 @@ export const finTechPricing: ExpandedServicePricing[] = [
           'Startup fintech companies',
           'Basic quantum finance needs'
         ],
-        setupFee: 15000,
+        setupFee: 150o00,
         contractTerm: '12 months'
       },
       professional: {
-        price: 15000,
+        price: 150o00,
         currency: 'USD',
         billingCycle: 'monthly',
         features: [
@@ -887,7 +887,7 @@ export const finTechPricing: ExpandedServicePricing[] = [
           'Advanced quantum algorithms',
           'Custom financial models',
           'Priority support',
-          'Up to 1000 calculations/month',
+          'Up to 10o00 calculations/month',
           'Advanced API access',
           'Custom integrations',
           'Enhanced compliance'
@@ -901,11 +901,11 @@ export const finTechPricing: ExpandedServicePricing[] = [
           'Hedge funds',
           'Asset management companies'
         ],
-        setupFee: 30000,
+        setupFee: 30o000,
         contractTerm: '12 months'
       },
       enterprise: {
-        price: 30000,
+        price: 30o000,
         currency: 'USD',
         billingCycle: 'monthly',
         features: [
@@ -926,7 +926,7 @@ export const finTechPricing: ExpandedServicePricing[] = [
           'Major hedge funds',
           'Research institutions'
         ],
-        setupFee: 75000,
+        setupFee: 750o00,
         contractTerm: '24 months'
       },
       custom: {
@@ -947,7 +947,7 @@ export const finTechPricing: ExpandedServicePricing[] = [
           'Military organizations',
           'Custom quantum requirements'
         ],
-        setupFee: 150000,
+        setupFee: 150o000,
         contractTerm: 'negotiable'
       }
     },
@@ -959,9 +959,9 @@ export const finTechPricing: ExpandedServicePricing[] = [
     },
     roiAnalysis: {
       paybackPeriod: '8-12 months',
-      annualROI: '500-1000%',
+      annualROI: '50o0-10o00%',
       costSavings: [
-        '1000x faster calculations',
+        '10o00x faster calculations',
         'Reduced computational costs',
         'Superior risk assessment'
       ],
@@ -989,10 +989,10 @@ export const finTechPricing: ExpandedServicePricing[] = [
       ]
     },
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/quantum-financial-modeling',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   }
 ];
@@ -1006,7 +1006,7 @@ export const healthcarePricing: ExpandedServicePricing[] = [
     subcategory: 'AI Diagnostics',
     pricingTiers: {
       starter: {
-        price: 3500,
+        price: 350o0,
         currency: 'USD',
         billingCycle: 'monthly',
         features: [
@@ -1027,11 +1027,11 @@ export const healthcarePricing: ExpandedServicePricing[] = [
           'Private practices',
           'Basic diagnostic needs'
         ],
-        setupFee: 7000,
+        setupFee: 70o00,
         contractTerm: '12 months'
       },
       professional: {
-        price: 7000,
+        price: 70o00,
         currency: 'USD',
         billingCycle: 'monthly',
         features: [
@@ -1039,7 +1039,7 @@ export const healthcarePricing: ExpandedServicePricing[] = [
           'Advanced diagnostic tools',
           'Custom AI models',
           'Priority support',
-          'Up to 200 providers',
+          'Up to 20o0 providers',
           'Advanced integrations',
           'Enhanced compliance',
           'Custom workflows'
@@ -1053,11 +1053,11 @@ export const healthcarePricing: ExpandedServicePricing[] = [
           'Specialty clinics',
           'Diagnostic centers'
         ],
-        setupFee: 15000,
+        setupFee: 150o00,
         contractTerm: '12 months'
       },
       enterprise: {
-        price: 14000,
+        price: 140o00,
         currency: 'USD',
         billingCycle: 'monthly',
         features: [
@@ -1078,7 +1078,7 @@ export const healthcarePricing: ExpandedServicePricing[] = [
           'Academic medical centers',
           'Research institutions'
         ],
-        setupFee: 35000,
+        setupFee: 350o00,
         contractTerm: '24 months'
       },
       custom: {
@@ -1099,7 +1099,7 @@ export const healthcarePricing: ExpandedServicePricing[] = [
           'Military medical facilities',
           'Custom medical requirements'
         ],
-        setupFee: 70000,
+        setupFee: 70o000,
         contractTerm: 'negotiable'
       }
     },
@@ -1111,7 +1111,7 @@ export const healthcarePricing: ExpandedServicePricing[] = [
     },
     roiAnalysis: {
       paybackPeriod: '6-10 months',
-      annualROI: '300-600%',
+      annualROI: '30o0-60o0%',
       costSavings: [
         'Improved diagnostic accuracy',
         'Reduced diagnostic time',
@@ -1141,10 +1141,10 @@ export const healthcarePricing: ExpandedServicePricing[] = [
       ]
     },
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/ai-diagnostic-assistant',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   }
 ];

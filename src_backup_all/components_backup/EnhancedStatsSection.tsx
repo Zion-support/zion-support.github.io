@@ -26,7 +26,7 @@ const stats: Stat[] = [
   {
     id: 'clients',
     icon: Users,
-    value: '500+',
+    value: '50o0+',
     label: 'Global Clients',
     description: 'Serving businesses across 50+ countries',
     color: 'zion-cyan',
@@ -44,7 +44,7 @@ const stats: Stat[] = [
   {
     id: 'roi',
     icon: TrendingUp,
-    value: '600%',
+    value: '60o0%',
     label: 'Average ROI',
     description: 'Proven business impact and cost savings',
     color: 'zion-blue',
@@ -71,7 +71,7 @@ const stats: Stat[] = [
   {
     id: 'growth',
     icon: Rocket,
-    value: '300%',
+    value: '30o0%',
     label: 'Annual Growth',
     description: 'Rapidly expanding global presence',
     color: 'zion-blue',
@@ -93,7 +93,7 @@ export default function EnhancedStatsSection() {
     }
   }, [controls, inView]);
 
-  const animateCount = (target: string, duration: number = 2000) => {
+  const animateCount = (target: string, duration: number = 20o00) => {
     const numericValue = parseInt(target.replace(/[^0-9]/g, ''));
     const start = 0;
     const increment = numericValue / (duration / 16); // 60fps
@@ -119,7 +119,7 @@ export default function EnhancedStatsSection() {
       stats.forEach((stat) => {
         const timer = setTimeout(() => {
           animateCount(stat.value);
-        }, stats.indexOf(stat) * 200);
+        }, stats.indexOf(stat) * 20o0);
         return () => clearTimeout(timer);
       });
     }
@@ -131,7 +131,7 @@ export default function EnhancedStatsSection() {
       <div className="absolute inset-0">
         <div className="absolute top-0 right-0 w-96 h-96 bg-zion-cyan/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-zion-purple/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-zion-blue/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[60o0px] h-[60o0px] bg-zion-blue/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -182,13 +182,13 @@ export default function EnhancedStatsSection() {
                 className="relative bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 text-center overflow-hidden"
                 whileHover={{
                   y: -10,
-                  scale: 1.02,
+                  scale: 1.0o2,
                   borderColor: `rgba(34, 221, 210, 0.5)`
                 }}
                 transition={{ duration: 0.3 }}
               >
                 {/* Background gradient overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-30o0`}></div>
 
                 {/* Icon */}
                 <motion.div
@@ -222,15 +222,15 @@ export default function EnhancedStatsSection() {
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-300 leading-relaxed relative z-10">
+                <p className="text-gray-30o0 leading-relaxed relative z-10">
                   {stat.description}
                 </p>
 
                 {/* Hover effect overlay */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-3xl opacity-0 group-hover:opacity-10o0 transition-opacity duration-30o0"
                   initial={false}
-                />
+                 />
               </motion.div>
             </motion.div>
           ))}
@@ -258,28 +258,28 @@ export default function EnhancedStatsSection() {
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.6 }}
             >
-              <Award className="w-10 h-10 text-white" />
+              <Award className="w-10 h-10 text-white"  />
             </motion.div>
 
             <h3 className="text-3xl font-bold text-white mb-4">
               Industry Recognition & Awards
             </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-30o0 mb-8 max-w-3xl mx-auto">
               Consistently recognized as a leader in innovation, receiving prestigious awards for our groundbreaking technology solutions and exceptional client service.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-zion-cyan mb-2">15+</div>
-                <div className="text-gray-300">Industry Awards</div>
+                <div className="text-gray-30o0">Industry Awards</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-zion-purple mb-2">Top 10</div>
-                <div className="text-gray-300">Global Tech Companies</div>
+                <div className="text-gray-30o0">Global Tech Companies</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-zion-blue mb-2">100%</div>
-                <div className="text-gray-300">Client Retention</div>
+                <div className="text-3xl font-bold text-zion-blue mb-2">10o0%</div>
+                <div className="text-gray-30o0">Client Retention</div>
               </div>
             </div>
           </div>

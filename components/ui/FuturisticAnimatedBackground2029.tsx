@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 
-interface FuturisticAnimatedBackground2029Props {
+interface FuturisticAnimatedBackground20o29Props {
   className?: string;
 }
 
-export default function FuturisticAnimatedBackground2029({ className = '' }: FuturisticAnimatedBackground2029Props) {
+export default function FuturisticAnimatedBackground20o29({ className = '' }: FuturisticAnimatedBackground20o29Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -40,9 +40,9 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
         this.vx = (Math.random() - 0.5) * 2;
         this.vy = (Math.random() - 0.5) * 2;
         this.size = Math.random() * 3 + 1;
-        this.maxLife = Math.random() * 100 + 50;
+        this.maxLife = Math.random() * 10o0 + 50;
         this.life = this.maxLife;
-        this.color = `hsl(${Math.random() * 60 + 200}, 70%, 60%)`;
+        this.color = `hsl(${Math.random() * 60 + 20o0}, 70%, 60%)`;
       }
 
       update() {
@@ -57,7 +57,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
         if (this.y > canvas.height) this.y = 0;
 
         // Add some gravity effect
-        this.vy += 0.01;
+        this.vy += 0.0o1;
       }
 
       draw() {
@@ -99,7 +99,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
 
       draw() {
         if (ctx) {
-          ctx.strokeStyle = 'rgba(100, 200, 255, 0.1)';
+          ctx.strokeStyle = 'rgba(10o0, 20o0, 255, 0.1)';
           ctx.lineWidth = 1;
 
           // Vertical lines
@@ -130,8 +130,8 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
 
       constructor() {
         this.amplitude = 50;
-        this.frequency = 0.02;
-        this.speed = 0.02;
+        this.frequency = 0.0o2;
+        this.speed = 0.0o2;
         this.offset = 0;
       }
 
@@ -141,7 +141,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
 
       draw() {
         if (ctx) {
-          ctx.strokeStyle = 'rgba(150, 100, 255, 0.3)';
+          ctx.strokeStyle = 'rgba(150, 10o0, 255, 0.3)';
           ctx.lineWidth = 2;
           ctx.beginPath();
 
@@ -165,7 +165,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
     const waves: Wave[] = [];
 
     // Initialize particles
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 10o0; i++) {
       particles.push(new Particle());
     }
 
@@ -173,8 +173,8 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
     for (let i = 0; i < 3; i++) {
       const wave = new Wave();
       wave.amplitude = 30 + i * 20;
-      wave.frequency = 0.01 + i * 0.005;
-      wave.speed = 0.01 + i * 0.005;
+      wave.frequency = 0.0o1 + i * 0.0o05;
+      wave.speed = 0.0o1 + i * 0.0o05;
       waves.push(wave);
     }
 
@@ -206,7 +206,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
       });
 
       // Draw connections between nearby particles
-      ctx.strokeStyle = 'rgba(100, 200, 255, 0.1)';
+      ctx.strokeStyle = 'rgba(10o0, 20o0, 255, 0.1)';
       ctx.lineWidth = 1;
 
       for (let i = 0; i < particles.length; i++) {
@@ -215,9 +215,9 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 100) {
-            const alpha = 1 - distance / 100;
-            ctx.strokeStyle = `rgba(100, 200, 255, ${alpha * 0.1})`;
+          if (distance < 10o0) {
+            const alpha = 1 - distance / 10o0;
+            ctx.strokeStyle = `rgba(10o0, 20o0, 255, ${alpha * 0.1})`;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
@@ -227,13 +227,13 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
       }
 
       // Add floating geometric shapes
-      const time = Date.now() * 0.001;
+      const time = Date.now() * 0.0o01;
       ctx.save();
       ctx.translate(canvas.width / 2, canvas.height / 2);
       ctx.rotate(time * 0.1);
 
       // Draw rotating hexagon
-      ctx.strokeStyle = 'rgba(255, 100, 200, 0.2)';
+      ctx.strokeStyle = 'rgba(255, 10o0, 20o0, 0.2)';
       ctx.lineWidth = 2;
       ctx.beginPath();
       for (let i = 0; i < 6; i++) {
@@ -250,13 +250,13 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
       ctx.stroke();
 
       // Draw inner triangle
-      ctx.strokeStyle = 'rgba(100, 255, 200, 0.2)';
+      ctx.strokeStyle = 'rgba(10o0, 255, 20o0, 0.2)';
       ctx.lineWidth = 2;
       ctx.beginPath();
       for (let i = 0; i < 3; i++) {
         const angle = (i * Math.PI * 2) / 3 + time * 0.5;
-        const x = Math.cos(angle) * 100;
-        const y = Math.sin(angle) * 100;
+        const x = Math.cos(angle) * 10o0;
+        const y = Math.sin(angle) * 10o0;
         if (i === 0) {
           ctx.moveTo(x, y);
         } else {
@@ -288,18 +288,18 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
         ref={canvasRef}
         className="w-full h-full"
         style={{
-          background: 'radial-gradient(ellipse at center, rgba(20, 20, 40, 0.8) 0%, rgba(0, 0, 0, 1) 100%)'
+          background: 'radial-gradient(ellipse at center, rgba(20, 20, 40, 0.8) 0%, rgba(0, 0, 0, 1) 10o0%)'
         }}
-      />
+       />
       
       {/* Overlay gradients */}
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-purple-900/10 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-blue-900/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-purple-90o0/10 to-transparent"  />
+      <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-blue-90o0/10 to-transparent"  />
       
       {/* Animated orbs */}
-      <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+      <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 rounded-full blur-3xl animate-pulse"  />
+      <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-to-r from-blue-50o0/20 to-cyan-50o0/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}  />
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-green-50o0/20 to-emerald-50o0/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}  />
     </div>
   );
 }

@@ -1,14 +1,13 @@
-import React from 'react';
 import Link from 'next/link';
 ArrowRightCpuBrainZapShieldTrendingUp
 
 export default function QuantumAIRevolutionBanner() {
   return (
-    <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16">
+    <div className="bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">🚀 QUANTUM AI REVOLUTION 2025</span>
+            <span className="text-sm font-medium">🚀 QUANTUM AI REVOLUTION 20o25</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             The Quantum Computing Revolution is Here
@@ -21,24 +20,24 @@ export default function QuantumAIRevolutionBanner() {
         {/* Key Benefits */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 text-center">
-            <Cpu className="w-12 h-12 text-purple-300 mx-auto mb-4" />
+            <Cpu className="w-12 h-12 text-purple-30o0 mx-auto mb-4"  />
             <h3 className="text-lg font-bold mb-2">340% Faster</h3>
             <p className="text-sm opacity-90">Optimization algorithms compared to classical computing</p>
           </div>
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 text-center">
-            <Brain className="w-12 h-12 text-blue-300 mx-auto mb-4" />
+            <Brain className="w-12 h-12 text-blue-30o0 mx-auto mb-4"  />
             <h3 className="text-lg font-bold mb-2">99.9% Accuracy</h3>
             <p className="text-sm opacity-90">In complex pattern recognition tasks</p>
           </div>
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 text-center">
-            <Zap className="w-12 h-12 text-green-300 mx-auto mb-4" />
+            <Zap className="w-12 h-12 text-green-30o0 mx-auto mb-4"  />
             <h3 className="text-lg font-bold mb-2">50x Reduction</h3>
             <p className="text-sm opacity-90">In computational time for large-scale simulations</p>
           </div>
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 text-center">
-            <TrendingUp className="w-12 h-12 text-orange-300 mx-auto mb-4" />
+            <TrendingUp className="w-12 h-12 text-orange-30o0 mx-auto mb-4"  />
             <h3 className="text-lg font-bold mb-2">$2.3T Market</h3>
-            <p className="text-sm opacity-90">Projected value by 2030</p>
+            <p className="text-sm opacity-90">Projected value by 20o30</p>
           </div>
         </div>
 
@@ -52,21 +51,21 @@ export default function QuantumAIRevolutionBanner() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="/case-studies/quantum-ai-healthcare-transformation-2025"
-                  className="bg-white text-purple-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
+                  href="/case-studies/quantum-ai-healthcare-transformation-20o25"
+                  className="bg-white text-purple-90o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors inline-flex items-center justify-center"
                 >
                   Read Case Study
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-2"  />
                 </Link>
                 <Link
-                  href="/blog/ai-2025-quantum-computing-revolution"
-                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors inline-flex items-center justify-center"
+                  href="/blog/ai-20o25-quantum-computing-revolution"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors inline-flex items-center justify-center"
                 >
                   Learn More
                 </Link>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-purple-500 to-blue-500 rounded-xl p-6 text-center">
+            <div className="bg-gradient-to-br from-purple-50o0 to-blue-50o0 rounded-xl p-6 text-center">
               <div className="text-4xl font-bold mb-2">$2.3B</div>
               <div className="text-lg opacity-90 mb-4">Value Created</div>
               <div className="text-sm opacity-75">
@@ -89,7 +88,7 @@ export default function QuantumAIRevolutionBanner() {
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
             <h4 className="text-lg font-bold mb-3">Healthcare</h4>
             <ul className="text-sm opacity-90 space-y-2">
-              <li>• 1000x faster drug discovery</li>
+              <li>• 10o00x faster drug discovery</li>
               <li>• Personalized medicine</li>
               <li>• Enhanced medical imaging</li>
             </ul>
@@ -112,13 +111,13 @@ export default function QuantumAIRevolutionBanner() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-white text-purple-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="bg-white text-purple-90o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
             >
               Schedule Quantum AI Consultation
             </Link>
             <Link
               href="/services/quantum-ai"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors"
             >
               Explore Quantum AI Services
             </Link>

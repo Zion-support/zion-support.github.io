@@ -15,5 +15,5 @@ function basicMarkdownToHtml(md: string): string {
 export default function PostContent({ body }: { body: string }) {
   const isHtml = body.trim().startsWith('<');
   const html = sanitizeHtml(isHtml ? body : basicMarkdownToHtml(body));
-  return <div className="prose dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: html }} />;
+  return <div className="prose dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: html }}  />;
 }

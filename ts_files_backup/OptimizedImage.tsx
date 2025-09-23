@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 
 interface OptimizedImageProps {
@@ -28,7 +27,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       className={className}
       priority={priority}
       quality={quality}
-    />
+     />
   );
 };
 

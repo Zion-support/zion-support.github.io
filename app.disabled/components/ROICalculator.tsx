@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client";
 import React from 'react';
 
@@ -41,3 +42,5 @@ export default function ROICalculator() {
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-e382
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
+=======
+>>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

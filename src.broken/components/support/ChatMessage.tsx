@@ -1,4 +1,3 @@
-import React from 'react';
 export function ChatMessage() {
   return (
     <div>

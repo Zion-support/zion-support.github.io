@@ -31,13 +31,9 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
-
-
 const fs = require('fs').promises;
 const path = require('path');
 
-  
   const automationDir = __dirname;
   const files = [
     'core/IntelligentAutomationOrchestrator.js',
@@ -122,7 +118,6 @@ if (require.main === module) {
 }
 
 module.exports = ;
-
 
 // Graceful shutdown handling
 process.on('SIGINT', () => {

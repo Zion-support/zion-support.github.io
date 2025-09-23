@@ -17,21 +17,17 @@ const logger = winston.createLogger({
   format: winston.format.combine(
     winston.format.timestamp(),
     winston.format.errors({ stack: true }),
-    winston.format.json(),
-  ),
+    winston.format.json()),
   defaultMeta: { service: 'automation-script' },
   transports: [
     new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' }),
-  ],
-});
+  ]});
 
 if (process.env.NODE_ENV !== 'production') {
   logger.add(
     new winston.transports.Console({
-      format: winston.format.simple(),
-    }),
-  );
+      format: winston.format.simple()}));
 }
 
 class ContinuousImprovement {
@@ -61,14 +57,12 @@ class ContinuousImprovement {
 
       logger.info(`✅ Applied ${applied.length} automatic improvements`);
       logger.info(
-        `📝 Generated ${manualSuggestions.length} manual suggestions`,
-      );
+        `📝 Generated ${manualSuggestions.length} manual suggestions`);
 
       return {
         applied,
         manualSuggestions,
-        total: applied.length + manualSuggestions.length,
-      };
+        total: applied.length + manualSuggestions.length};
     } catch (error) {
       logger.error('❌ Error applying improvements:', error);
       throw error;
@@ -99,8 +93,7 @@ class ContinuousImprovement {
         priority: 'high',
         description: 'Fix lint errors',
         action: 'run_lint_fix',
-        automatic: true,
-      });
+        automatic: true});
     }
 
     if (monitorData.codeQuality?.testCoverage < 80) {
@@ -109,19 +102,17 @@ class ContinuousImprovement {
         priority: 'medium',
         description: 'Improve test coverage',
         action: 'add_tests',
-        automatic: false,
-      });
+        automatic: false});
     }
 
     // Performance improvements
-    if (monitorData.performance?.bundleSize > 1000) {
+    if (monitorData.performance?.bundleSize > 10o00) {
       suggestions.push({
         type: 'performance',
         priority: 'medium',
         description: 'Optimize bundle size',
         action: 'optimize_bundle',
-        automatic: false,
-      });
+        automatic: false});
     }
 
     if (monitorData.performance?.lighthouseScore < 80) {
@@ -130,8 +121,7 @@ class ContinuousImprovement {
         priority: 'high',
         description: 'Improve Lighthouse score',
         action: 'optimize_performance',
-        automatic: false,
-      });
+        automatic: false});
     }
 
     // Security improvements
@@ -141,8 +131,7 @@ class ContinuousImprovement {
         priority: 'high',
         description: 'Fix security vulnerabilities',
         action: 'audit_fix',
-        automatic: true,
-      });
+        automatic: true});
     }
 
     if (monitorData.security?.outdatedPackages > 10) {
@@ -151,8 +140,7 @@ class ContinuousImprovement {
         priority: 'medium',
         description: 'Update outdated packages',
         action: 'update_packages',
-        automatic: true,
-      });
+        automatic: true});
     }
 
     return suggestions;
@@ -169,15 +157,13 @@ class ContinuousImprovement {
             applied.push({
               ...suggestion,
               appliedAt: new Date().toISOString(),
-              result: result.message,
-            });
+              result: result.message});
             logger.info(`✅ Applied: ${suggestion.description}`);
           }
         } catch (error) {
           logger.error(
             `❌ Failed to apply ${suggestion.description}:`,
-            error.message,
-          );
+            error.message);
         }
       }
     }
@@ -234,18 +220,16 @@ class ContinuousImprovement {
       .map((suggestion) => ({
         ...suggestion,
         generatedAt: new Date().toISOString(),
-        instructions: this.getInstructions(suggestion),
-      }));
+        instructions: this.getInstructions(suggestion)}));
   }
 
   getInstructions(suggestion) {
-    const instructions = {
+    const instructions ={
       add_tests: 'Add unit tests and integration tests to improve coverage',
       optimize_bundle:
         'Implement code splitting, lazy loading, and tree shaking',
       optimize_performance:
-        'Optimize images, implement caching, and reduce bundle size',
-    };
+        'Optimize images, implement caching, and reduce bundle size'};
 
     return (
       instructions[suggestion.action] ||
@@ -254,16 +238,14 @@ class ContinuousImprovement {
   }
 
   async saveResults(applied, manualSuggestions) {
-    const results = {
+    const results ={
       timestamp: new Date().toISOString(),
       applied,
       manualSuggestions,
       summary: {
         totalApplied: applied.length,
         totalManual: manualSuggestions.length,
-        total: applied.length + manualSuggestions.length,
-      },
-    };
+        total: applied.length + manualSuggestions.length}};
 
     const resultsPath = path.join(__dirname, 'improvement-results.json');
     fs.writeFileSync(resultsPath, JSON.stringify(results, null, 2));
@@ -279,8 +261,6 @@ class ContinuousImprovement {
             action: 'add',
             file: 'src/components/ErrorBoundary.tsx',
             content: `
-import React from 'react';
-
 interface ErrorBoundaryState {
   hasError: boolean;
   error?: Error;
@@ -294,7 +274,7 @@ interface ErrorBoundaryProps {
 class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
-    this.state = { hasError: false };
+    this.state ={ hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {
@@ -309,7 +289,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     if (this.state.hasError) {
       const FallbackComponent = this.props.fallback;
       if (FallbackComponent) {
-        return <FallbackComponent error={this.state.error!} />;
+        return <FallbackComponent error={this.state.error!}  />;
       }
       return (
         <div className="error-boundary">
@@ -327,10 +307,8 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 }
 
 export default ErrorBoundary;
-            `.trim(),
-          },
-        ],
-      },
+            `.trim()},
+        ]},
       {
         type: 'dependency',
         description: 'Update React to latest version for better performance',
@@ -338,15 +316,12 @@ export default ErrorBoundary;
           {
             action: 'update',
             package: 'react',
-            version: '18.2.0',
-          },
+            version: '18.2.0'},
           {
             action: 'update',
             package: 'react-dom',
-            version: '18.2.0',
-          },
-        ],
-      },
+            version: '18.2.0'},
+        ]},
     ];
 
     return exampleSuggestions;

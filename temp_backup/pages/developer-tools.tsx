@@ -20,7 +20,7 @@ import {
 export default function DeveloperToolsPage() {
   const developerTools = [
     {
-      icon: <Code className="w-8 h-8 text-white" />,
+      icon: <Code className="w-8 h-8 text-white"  />,
       title: 'GitHub Copilot',
       description: 'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.',
       features: [
@@ -31,14 +31,14 @@ export default function DeveloperToolsPage() {
       pricing: '$10/month',
       marketPrice: '$10-20/month',
       website: 'https://github.com/features/copilot',
-      color: 'bg-gradient-to-br from-gray-500 to-black',
-      textColor: 'text-gray-400',
-      gradient: 'from-gray-400 to-black',
+      color: 'bg-gradient-to-br from-gray-50o0 to-black',
+      textColor: 'text-gray-40o0',
+      gradient: 'from-gray-40o0 to-black',
       popular: true,
       category: 'Code Generation'
     },
     {
-      icon: <GitBranch className="w-8 h-8 text-white" />,
+      icon: <GitBranch className="w-8 h-8 text-white"  />,
       title: 'GitHub Pro',
       description: 'Advanced GitHub features for professional developers including private repositories, advanced tools, and priority support.',
       features: [
@@ -49,14 +49,14 @@ export default function DeveloperToolsPage() {
       pricing: '$4/month',
       marketPrice: '$4/month',
       website: 'https://github.com/pricing',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      textColor: 'text-green-400',
-      gradient: 'from-green-400 to-emerald-500',
+      color: 'bg-gradient-to-br from-green-50o0 to-emerald-60o0',
+      textColor: 'text-green-40o0',
+      gradient: 'from-green-40o0 to-emerald-50o0',
       popular: true,
       category: 'Version Control'
     },
     {
-      icon: <Database className="w-8 h-8 text-white" />,
+      icon: <Database className="w-8 h-8 text-white"  />,
       title: 'MongoDB Atlas',
       description: 'Fully managed cloud database service with automatic scaling, backup, and monitoring for modern applications.',
       features: [
@@ -67,14 +67,14 @@ export default function DeveloperToolsPage() {
       pricing: '$9/month',
       marketPrice: '$9-57/month',
       website: 'https://www.mongodb.com/atlas',
-      color: 'bg-gradient-to-br from-green-500 to-blue-600',
-      textColor: 'text-green-400',
-      gradient: 'from-green-400 to-blue-500',
+      color: 'bg-gradient-to-br from-green-50o0 to-blue-60o0',
+      textColor: 'text-green-40o0',
+      gradient: 'from-green-40o0 to-blue-50o0',
       popular: false,
       category: 'Database'
     },
     {
-      icon: <Cloud className="w-8 h-8 text-white" />,
+      icon: <Cloud className="w-8 h-8 text-white"  />,
       title: 'Vercel Pro',
       description: 'Next.js deployment platform with automatic deployments, preview deployments, and advanced analytics.',
       features: [
@@ -85,14 +85,14 @@ export default function DeveloperToolsPage() {
       pricing: '$20/month',
       marketPrice: '$20/month',
       website: 'https://vercel.com/pricing',
-      color: 'bg-gradient-to-br from-black to-gray-600',
-      textColor: 'text-gray-400',
-      gradient: 'from-black to-gray-500',
+      color: 'bg-gradient-to-br from-black to-gray-60o0',
+      textColor: 'text-gray-40o0',
+      gradient: 'from-black to-gray-50o0',
       popular: false,
       category: 'Deployment'
     },
     {
-      icon: <Shield className="w-8 h-8 text-white" />,
+      icon: <Shield className="w-8 h-8 text-white"  />,
       title: 'Snyk',
       description: 'Developer security platform that finds and fixes vulnerabilities in code, dependencies, and containers.',
       features: [
@@ -101,16 +101,16 @@ export default function DeveloperToolsPage() {
         'CI/CD integration'
       ],
       pricing: '$25/month',
-      marketPrice: '$25-100/month',
+      marketPrice: '$25-10o0/month',
       website: 'https://snyk.io/pricing',
-      color: 'bg-gradient-to-br from-red-500 to-pink-600',
-      textColor: 'text-red-400',
-      gradient: 'from-red-400 to-pink-500',
+      color: 'bg-gradient-to-br from-red-50o0 to-pink-60o0',
+      textColor: 'text-red-40o0',
+      gradient: 'from-red-40o0 to-pink-50o0',
       popular: false,
       category: 'Security'
     },
     {
-      icon: <Zap className="w-8 h-8 text-white" />,
+      icon: <Zap className="w-8 h-8 text-white"  />,
       title: 'Postman',
       description: 'Complete API development platform for building, testing, and documenting APIs with team collaboration.',
       features: [
@@ -121,9 +121,9 @@ export default function DeveloperToolsPage() {
       pricing: '$12/month',
       marketPrice: '$12-99/month',
       website: 'https://www.postman.com/pricing',
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      textColor: 'text-orange-400',
-      gradient: 'from-orange-400 to-red-500',
+      color: 'bg-gradient-to-br from-orange-50o0 to-red-60o0',
+      textColor: 'text-orange-40o0',
+      gradient: 'from-orange-40o0 to-red-50o0',
       popular: false,
       category: 'API Development'
     }
@@ -222,27 +222,27 @@ export default function DeveloperToolsPage() {
     <>
       <Head>
         <title>Developer Tools & Services | Zion Tech Group - Real Dev Tools with Pricing</title>
-        <meta name="description" content="Discover real developer tools and services including GitHub Copilot, MongoDB Atlas, Vercel, and more. All tools include pricing, features, and direct links." />
-        <meta property="og:title" content="Developer Tools & Services | Zion Tech Group" />
-        <meta property="og:description" content="Real developer tools with pricing and direct links to boost your development workflow." />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="description" content="Discover real developer tools and services including GitHub Copilot, MongoDB Atlas, Vercel, and more. All tools include pricing, features, and direct links."  />
+        <meta property="og:title" content="Developer Tools & Services | Zion Tech Group"  />
+        <meta property="og:description" content="Real developer tools with pricing and direct links to boost your development workflow."  />
+        <meta name="twitter:card" content="summary_large_image"  />
       </Head>
 
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]" />
-        <div className="absolute inset-0 bg-grid opacity-10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,20o4,0.08),transparent_50%)]"  />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,20o4,0.0o6),transparent_50%)]"  />
+        <div className="absolute inset-0 bg-grid opacity-10"  />
         
         <div className="relative z-10 container-cursor text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">
-            <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />
+            <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse"  />
             Developer Tools & Services
           </div>
           <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg">
             Professional Developer Tools That Actually Work
           </h1>
-          <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
+          <p className="text-responsive-md text-gray-30o0 max-w-5xl mx-auto leading-relaxed">
             Curated developer tools and services that professionals use daily. Each tool has been tested and verified 
             to provide real value for developers and development teams.
           </p>
@@ -256,7 +256,7 @@ export default function DeveloperToolsPage() {
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               Developer Tools Market Insights
             </h2>
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-responsive-md text-gray-40o0 max-w-4xl mx-auto leading-relaxed">
               Understanding the developer tools landscape helps you make informed decisions about your development stack.
             </p>
           </div>
@@ -271,8 +271,8 @@ export default function DeveloperToolsPage() {
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-white mb-3">{stat.title}</h3>
                   <div className="text-2xl font-bold text-cursor-blue mb-2">{stat.value}</div>
-                  <div className="text-sm text-green-400 mb-3">{stat.growth}</div>
-                  <p className="text-sm text-gray-400">{stat.description}</p>
+                  <div className="text-sm text-green-40o0 mb-3">{stat.growth}</div>
+                  <p className="text-sm text-gray-40o0">{stat.description}</p>
                 </div>
               </Card>
             ))}
@@ -287,7 +287,7 @@ export default function DeveloperToolsPage() {
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               Curated Developer Tools & Services
             </h2>
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-responsive-md text-gray-40o0 max-w-4xl mx-auto leading-relaxed">
               Each tool has been carefully selected based on performance, reliability, and real-world developer usage.
             </p>
           </div>
@@ -304,7 +304,7 @@ export default function DeveloperToolsPage() {
                 {tool.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <div className="inline-flex items-center px-3 py-1 rounded-full bg-cursor-blue text-white text-xs font-medium">
-                      <Star className="w-3 h-3 mr-1" />
+                      <Star className="w-3 h-3 mr-1"  />
                       Most Popular
                     </div>
                   </div>
@@ -312,10 +312,10 @@ export default function DeveloperToolsPage() {
 
                 <div className="flex items-start space-x-6">
                   <div className="relative">
-                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
+                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-30o0`}>
                       {tool.icon}
                     </div>
-                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
+                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-30o0 blur-sm`}  />
                   </div>
                   
                   <div className="flex-1">
@@ -323,30 +323,30 @@ export default function DeveloperToolsPage() {
                       <h3 className={`text-2xl font-bold ${tool.textColor}`}>
                         {tool.title}
                       </h3>
-                      <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">
+                      <span className="text-xs bg-gray-80o0 text-gray-30o0 px-2 py-1 rounded-full">
                         {tool.category}
                       </span>
                     </div>
                     
-                    <p className="text-gray-400 leading-relaxed mb-6">
+                    <p className="text-gray-40o0 leading-relaxed mb-6">
                       {tool.description}
                     </p>
                     
                     <div className="mb-6">
                       <div className="flex items-center justify-between mb-3">
-                        <span className="text-sm text-gray-500">Service Price:</span>
+                        <span className="text-sm text-gray-50o0">Service Price:</span>
                         <span className="text-lg font-semibold text-cursor-blue">{tool.pricing}</span>
                       </div>
                       <div className="flex items-center justify-between mb-3">
-                        <span className="text-sm text-gray-500">Market Average:</span>
-                        <span className="text-sm text-gray-400">{tool.marketPrice}</span>
+                        <span className="text-sm text-gray-50o0">Market Average:</span>
+                        <span className="text-sm text-gray-40o0">{tool.marketPrice}</span>
                       </div>
                     </div>
 
                     <ul className="space-y-2 mb-6">
                       {tool.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                        <li key={featureIndex} className="flex items-center text-gray-30o0">
+                          <CheckCircle className="w-4 h-4 text-green-40o0 mr-3 flex-shrink-0"  />
                           {feature}
                         </li>
                       ))}
@@ -360,10 +360,10 @@ export default function DeveloperToolsPage() {
                         className="bg-cursor-blue hover:bg-cursor-blue-dark"
                       >
                         Try Tool
-                        <ExternalLink className="w-4 h-4 ml-2" />
+                        <ExternalLink className="w-4 h-4 ml-2"  />
                       </Button>
                       <div className="text-right">
-                        <div className="text-xs text-gray-500">Direct Link</div>
+                        <div className="text-xs text-gray-50o0">Direct Link</div>
                         <div className="text-xs text-cursor-blue font-mono">{tool.website}</div>
                       </div>
                     </div>
@@ -382,7 +382,7 @@ export default function DeveloperToolsPage() {
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               Complete Developer Workflow
             </h2>
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-responsive-md text-gray-40o0 max-w-4xl mx-auto leading-relaxed">
               Build a complete development pipeline with these essential tools that work together seamlessly.
             </p>
           </div>
@@ -396,10 +396,10 @@ export default function DeveloperToolsPage() {
               >
                 <div className="p-6 text-center">
                   <div className="w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Cpu className="w-8 h-8 text-cursor-blue" />
+                    <Cpu className="w-8 h-8 text-cursor-blue"  />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{phase.phase}</h3>
-                  <p className="text-gray-400 mb-4">{phase.description}</p>
+                  <p className="text-gray-40o0 mb-4">{phase.description}</p>
                   <div className="space-y-1">
                     {phase.tools.map((tool, toolIndex) => (
                       <div key={toolIndex} className="text-sm text-cursor-blue font-medium">
@@ -421,7 +421,7 @@ export default function DeveloperToolsPage() {
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               Developer Tool Categories
             </h2>
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-responsive-md text-gray-40o0 max-w-4xl mx-auto leading-relaxed">
               Understanding the different types of developer tools helps you build a comprehensive development stack.
             </p>
           </div>
@@ -435,9 +435,9 @@ export default function DeveloperToolsPage() {
               >
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-white mb-3">{category.name}</h3>
-                  <p className="text-gray-400 mb-4">{category.description}</p>
+                  <p className="text-gray-40o0 mb-4">{category.description}</p>
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-500">Tools Available: <span className="text-white">{category.tools}</span></span>
+                    <span className="text-gray-50o0">Tools Available: <span className="text-white">{category.tools}</span></span>
                     <span className="text-cursor-blue font-semibold">{category.avgPrice}</span>
                   </div>
                 </div>
@@ -453,7 +453,7 @@ export default function DeveloperToolsPage() {
           <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
             Ready to Level Up Your Development?
           </h2>
-          <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed mb-12">
+          <p className="text-responsive-md text-gray-40o0 max-w-4xl mx-auto leading-relaxed mb-12">
             Start with one tool or build a complete development stack. Each tool is designed to work independently 
             and integrate seamlessly with your existing workflow.
           </p>

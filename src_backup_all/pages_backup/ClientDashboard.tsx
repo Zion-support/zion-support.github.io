@@ -52,7 +52,7 @@ function ClientDashboardContent() {
       <SEO
         title="Client Dashboard | Zion AI Marketplace"
         description="Manage your jobs and talent requests in the Zion AI Marketplace."
-      />
+       />
       <main className="container mx-auto px-4 py-8">
         <div className={`flex flex-col ${!isMobile ? 'md:flex-row md:justify-between md:items-center' : ''} mb-8 gap-4`}>
           <div>
@@ -62,12 +62,12 @@ function ClientDashboardContent() {
           <div className={`flex gap-2 ${isMobile ? 'flex-col' : ''}`}>
             <Button variant="outline" asChild className={isMobile ? 'w-full justify-center' : ''}>
               <Link href="/hiring-tracker">
-                <Kanban className="h-4 w-4 mr-2" /> Hiring Pipeline
+                <Kanban className="h-4 w-4 mr-2"  /> Hiring Pipeline
               </Link>
             </Button>
             <Button asChild className={isMobile ? 'w-full justify-center' : ''}>
               <Link href="/post-job">
-                <PlusCircle className="h-4 w-4 mr-2" /> Post New Job
+                <PlusCircle className="h-4 w-4 mr-2"  /> Post New Job
               </Link>
             </Button>
           </div>
@@ -150,7 +150,7 @@ function ClientDashboardContent() {;
       <SEO;
         title="Client Dashboard | Zion AI Marketplace";
         description="Manage your jobs and talent requests in the Zion AI Marketplace.";
-      />;
+       />;
       <main className="container mx-auto px-4 py-8">;
         <div className={`flex flex-col ${!isMobile ? 'md:flex-row md:justify-between md:items-center' : ''} mb-8 gap-4`}>;
           <div>;
@@ -160,12 +160,12 @@ function ClientDashboardContent() {;
           <div className={`flex gap-2 ${isMobile ? 'flex-col' : ''}`}>;
             <Button variant="outline" asChild className={isMobile ? 'w-full justify-center' : ''}>;
               <Link href="/hiring-tracker">;
-                <Kanban className="h-4 w-4 mr-2" /> Hiring Pipeline;
+                <Kanban className="h-4 w-4 mr-2"  /> Hiring Pipeline;
               </Link>;
             </Button>;
             <Button asChild className={isMobile ? 'w-full justify-center' : ''}>;
               <Link href="/post-job">;
-                <PlusCircle className="h-4 w-4 mr-2" /> Post New Job;
+                <PlusCircle className="h-4 w-4 mr-2"  /> Post New Job;
     onboarding_status.response_received;
 /**
  * ClientDashboardContent - Function description
@@ -182,7 +182,7 @@ function ClientDashboardContent() {
     onboarding_status.invite_sent &&;
     onboarding_status.response_received;
   // Set the first job as selected when jobs are loaded (if any);
-  useEffect ((, ) => {
+  useEffect (() => {
     // Check condition
 if ( {) {
   $2
@@ -205,7 +205,7 @@ if ( {) {
       <SEO;
         title="Client Dashboard | Zion AI Marketplace";
         description="Manage your jobs and talent requests in the Zion AI Marketplace.";
-      />;
+       />;
       <main className="container mx - auto px - 4 py - 8">;
         <div className={`flex flex - col ${!is_mobile ? 'md:flex - row md:justify - between md:items - center' : ''} mb - 8 gap - 4`}>;
           <div>;
@@ -215,25 +215,23 @@ if ( {) {
           <div className={`flex gap - 2 ${is_mobile ? 'flex - col' : ''}`}>;
             <Button variant="outline" as_child className={is_mobile ? 'w - full justify - center' : ''}>;
               <Link href="/hiring - tracker">;
-                <Kanban className="h - 4 w - 4 mr - 2" /> Hiring Pipeline;
+                <Kanban className="h - 4 w - 4 mr - 2"  /> Hiring Pipeline;
               </Link>;
             </Button>;
             <Button as_child className={is_mobile ? 'w - full justify - center' : ''}>;
               <Link href="/post - job">;
-                <PlusCircle className="h - 4 w - 4 mr - 2" /> Post New Job;
+                <PlusCircle className="h - 4 w - 4 mr - 2"  /> Post New Job;
               </Link>;
             </Button>;
           </div>;
         </div>;
 
-
-
         {/* New Onboarding Steps */}
         <div className="mb-8">
-          <ClientOnboardingSteps />
+          <ClientOnboardingSteps  />
           {showAdvanced && (
             <div className="mt-6">
-              <AdvancedOnboardingSteps />
+              <AdvancedOnboardingSteps  />
             </div>
           )}
 
@@ -248,45 +246,39 @@ if ( {) {
                 <TabsTrigger value="filled" className={isMobile ? 'flex-1' : ''}>Filled</TabsTrigger>
                 <TabsTrigger value="closed" className={isMobile ? 'flex-1' : ''}>Closed</TabsTrigger>
               </TabsList>
-              
-
-
 
               <TabsContent value="all" className="mt-0">
-                <JobsList onSelectJob={handleJobSelect} />
+                <JobsList onSelectJob={handleJobSelect}  />
               </TabsContent>
               <TabsContent value="new" className="mt-0">
-                <JobsList filter="new" onSelectJob={handleJobSelect} />
+                <JobsList filter="new" onSelectJob={handleJobSelect}  />
               </TabsContent>
               <TabsContent value="in_progress" className="mt-0">
-                <JobsList filter="in_progress" onSelectJob={handleJobSelect} />
+                <JobsList filter="in_progress" onSelectJob={handleJobSelect}  />
               </TabsContent>
               <TabsContent value="filled" className="mt-0">
-                <JobsList filter="filled" onSelectJob={handleJobSelect} />
+                <JobsList filter="filled" onSelectJob={handleJobSelect}  />
               </TabsContent>
               <TabsContent value="closed" className="mt-0">
-                <JobsList filter="closed" onSelectJob={handleJobSelect} />
+                <JobsList filter="closed" onSelectJob={handleJobSelect}  />
               </TabsContent>
             </Tabs>
           </div>
 
-
-
-
           <div>
             <div className="sticky top-4 space-y-6">
               {/* Active Projects Card */}
-              <ActiveProjectsCard />
+              <ActiveProjectsCard  />
               {/* Upcoming Interviews Card */}
-              <UpcomingInterviewsCard />
+              <UpcomingInterviewsCard  />
               {/* AI Talent Suggestions */}
               <div>
                 <h2 className="text-xl font-semibold mb-4 flex items-center">
-                  <BriefcaseIcon className="mr-2 h-5 w-5 text-primary" />
+                  <BriefcaseIcon className="mr-2 h-5 w-5 text-primary"  />
                   AI Talent Suggestions
                 </h2>
                 {selectedJobId ? (
-                  <SuggestedTalents job_id={selectedJobId} />) : (
+                  <SuggestedTalents job_id={selectedJobId}  />) : (
                   <div className="bg - muted / 30 border rounded - lg p - 6 text - center">;
                     <p className="text - muted - foreground">;
                       Select a job to see AI - matched talent suggestions;
@@ -300,13 +292,11 @@ if ( {) {
     </>);
 }
 
-
-
         </div>;
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
           <div className="lg:col-span-2">;
-            <Tabs defaultValue="all" onValueChange={(value,) => setActiveTab(value as JobStatus | "all")}>;
+            <Tabs defaultValue="all" onValueChange={(value) => setActiveTab(value as JobStatus | "all")}>;
               <TabsList className={`mb-6 ${isMobile ? 'w-full' : ''}`}>;
                 <TabsTrigger value="all" className={isMobile ? 'flex-1' : ''}>All</TabsTrigger>;
                 <TabsTrigger value="new" className={isMobile ? 'flex-1' : ''}>New</TabsTrigger>;
@@ -316,19 +306,19 @@ if ( {) {
               </TabsList>;
 
               <TabsContent value="all" className="mt-0">;
-                <JobsList onSelectJob={handleJobSelect} />;
+                <JobsList onSelectJob={handleJobSelect}  />;
               </TabsContent>;
               <TabsContent value="new" className="mt-0">;
-                <JobsList filter="new" onSelectJob={handleJobSelect} />;
+                <JobsList filter="new" onSelectJob={handleJobSelect}  />;
               </TabsContent>;
               <TabsContent value="in_progress" className="mt-0">;
-                <JobsList filter="in_progress" onSelectJob={handleJobSelect} />;
+                <JobsList filter="in_progress" onSelectJob={handleJobSelect}  />;
               </TabsContent>;
               <TabsContent value="filled" className="mt-0">;
-                <JobsList filter="filled" onSelectJob={handleJobSelect} />;
+                <JobsList filter="filled" onSelectJob={handleJobSelect}  />;
               </TabsContent>;
               <TabsContent value="closed" className="mt-0">;
-                <JobsList filter="closed" onSelectJob={handleJobSelect} />;
+                <JobsList filter="closed" onSelectJob={handleJobSelect}  />;
               </TabsContent>;
             </Tabs>;
           </div>;
@@ -336,27 +326,25 @@ if ( {) {
           <div>;
             <div className="sticky top-4 space-y-6">;
 
-  return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"};
+  return (<ProtectedRoute> <ClientDashboardContent  /> </ProtectedRoute> '"};
 ;
 
-
-          
           <div>
             <div className="sticky top-4 space-y-6">
 
               {/* Active Projects Card */}
-              <ActiveProjectsCard />;
+              <ActiveProjectsCard  />;
               {/* Upcoming Interviews Card */}
-              <UpcomingInterviewsCard />;
+              <UpcomingInterviewsCard  />;
               {/* AI Talent Suggestions */}
               <div>;
                 <h2 className="text - xl font - semibold mb - 4 flex items - center">;
-                  <BriefcaseIcon className="mr - 2 h - 5 w - 5 text - primary" />;
+                  <BriefcaseIcon className="mr - 2 h - 5 w - 5 text - primary"  />;
                   AI Talent Suggestions;
                 </h2>;
 
                 {selectedJobId ? (
-                  <SuggestedTalents jobId={selectedJobId} />
+                  <SuggestedTalents jobId={selectedJobId}  />
                 ) : (
                   <div className="bg-muted/30 border rounded-lg p-6 text-center">
                     <p className="text-muted-foreground">
@@ -377,7 +365,7 @@ if ( {) {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
           <div className="lg:col-span-2">;
-            <Tabs defaultValue="all" onValueChange={(value,) => setActiveTab(value as JobStatus | "all")}>;
+            <Tabs defaultValue="all" onValueChange={(value) => setActiveTab(value as JobStatus | "all")}>;
               <TabsList className={`mb-6 ${isMobile ? 'w-full' : ''}`}>;
                 <TabsTrigger value="all" className={isMobile ? 'flex-1' : ''}>All</TabsTrigger>;
                 <TabsTrigger value="new" className={isMobile ? 'flex-1' : ''}>New</TabsTrigger>;
@@ -387,19 +375,19 @@ if ( {) {
               </TabsList>;
 
               <TabsContent value="all" className="mt-0">;
-                <JobsList onSelectJob={handleJobSelect} />;
+                <JobsList onSelectJob={handleJobSelect}  />;
               </TabsContent>;
               <TabsContent value="new" className="mt-0">;
-                <JobsList filter="new" onSelectJob={handleJobSelect} />;
+                <JobsList filter="new" onSelectJob={handleJobSelect}  />;
               </TabsContent>;
               <TabsContent value="in_progress" className="mt-0">;
-                <JobsList filter="in_progress" onSelectJob={handleJobSelect} />;
+                <JobsList filter="in_progress" onSelectJob={handleJobSelect}  />;
               </TabsContent>;
               <TabsContent value="filled" className="mt-0">;
-                <JobsList filter="filled" onSelectJob={handleJobSelect} />;
+                <JobsList filter="filled" onSelectJob={handleJobSelect}  />;
               </TabsContent>;
               <TabsContent value="closed" className="mt-0">;
-                <JobsList filter="closed" onSelectJob={handleJobSelect} />;
+                <JobsList filter="closed" onSelectJob={handleJobSelect}  />;
               </TabsContent>;
             </Tabs>;
           </div>;
@@ -407,25 +395,24 @@ if ( {) {
           <div>;
             <div className="sticky top-4 space-y-6">;
 
-  return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"};
+  return (<ProtectedRoute> <ClientDashboardContent  /> </ProtectedRoute> '"};
 ;
 
-          
           <div>
             <div className="sticky top-4 space-y-6">
 
               {/* Active Projects Card */}
-              <ActiveProjectsCard />;
+              <ActiveProjectsCard  />;
               {/* Upcoming Interviews Card */}
-              <UpcomingInterviewsCard />;
+              <UpcomingInterviewsCard  />;
               {/* AI Talent Suggestions */}
               <div>;
                 <h2 className="text-xl font-semibold mb-4 flex items-center">;
-                  <BriefcaseIcon className="mr-2 h-5 w-5 text-primary" />;
+                  <BriefcaseIcon className="mr-2 h-5 w-5 text-primary"  />;
                   AI Talent Suggestions;
                 </h2>;
                 {selectedJobId ? (;
-                  <SuggestedTalents jobId={selectedJobId} />;
+                  <SuggestedTalents jobId={selectedJobId}  />;
                 ) : (;
                   <div className="bg-muted/30 border rounded-lg p-6 text-center">;
                     <p className="text-muted-foreground">;
@@ -445,11 +432,9 @@ if ( {) {
 export default function ClientDashboard() {;
   return (;
     <ProtectedRoute>;
-      <ClientDashboardContent />;
+      <ClientDashboardContent  />;
     </ProtectedRoute>;
   );
-
-
 
 export default /**
  * ClientDashboard - Function description
@@ -457,45 +442,45 @@ export default /**
 function ClientDashboard() {
   return (
     <ProtectedRoute>;
-      <ClientDashboardContent />;
+      <ClientDashboardContent  />;
     </ProtectedRoute>);
 }, [jobs, selectedJobId]);
-return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Manage your jobs and talent requests in the Zion AI Marketplace." /> <main className="container mx - auto px - 4 py - 8"> <div className= {
+return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Manage your jobs and talent requests in the Zion AI Marketplace."  /> <main className="container mx - auto px - 4 py - 8"> <div className={
   `flex flex - col $ {
   !is_mobile ? 'md:flex - row md:justify - between md:items - center' : '';
 }mb - 8 gap - 4`;
-}> <div> <h1 className= {
+}> <div> <h1 className={
   `text-$ {';
   is_mobile ? '2xl': '3xl';
 }font - bold` ";
-}>My Jobs</h1> <p className="text - muted - foreground mt - 1">Manage your job postings and talent applications</p> </div> <div className= {
+}>My Jobs</h1> <p className="text - muted - foreground mt - 1">Manage your job postings and talent applications</p> </div> <div className={
   `flex gap - 2 $ {';
   is_mobile ? 'flex - col': '';
 }` ";
-}> <Button variant="outline" as_child className= {';
+}> <Button variant="outline" as_child className={';
   is_mobile ? 'w - full justify - center': '' ";
-}> <Link href="/hiring - tracker"> <Kanban className="h - 4 w - 4 mr - 2" /> Hiring Pipeline </Link> </Button> <Button as_child className= {';
+}> <Link href="/hiring - tracker"> <Kanban className="h - 4 w - 4 mr - 2"  /> Hiring Pipeline </Link> </Button> <Button as_child className={';
   is_mobile ? 'w - full justify - center': '' ";
-}> <Link href="/post - job"> <PlusCircle className="h - 4 w - 4 mr - 2" /> Post New Job </Link> </Button> </div> </div> {
+}> <Link href="/post - job"> <PlusCircle className="h - 4 w - 4 mr - 2"  /> Post New Job </Link> </Button> </div> </div> {
   /* New Onboarding Steps */ ";
-}<div className="mb - 8"> <ClientOnboardingSteps /> {";
-  show_advanced && (<div className="mt - 6"> <AdvancedOnboardingSteps /> </div>) ";
+}<div className="mb - 8"> <ClientOnboardingSteps  /> {";
+  show_advanced && (<div className="mt - 6"> <AdvancedOnboardingSteps  /> </div>) ";
 }</div> <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8"> </TabsContent> </Tabs> </div> <div> <div className="sticky top - 4 space - y-6"> {
   /* Active Projects Card */;
-}<ActiveProjectsCard /> {
+}<ActiveProjectsCard  /> {
   /* Upcoming Interviews Card */;
-}<UpcomingInterviewsCard /> {
+}<UpcomingInterviewsCard  /> {
   /* AI Talent Suggestions */ ";
-}<div> <h2 className="text - xl font - semibold mb - 4 flex items - center"> <BriefcaseIcon className="mr - 2 h - 5 w - 5 text - primary" /> AI Talent Suggestions </h2> {
-  selectedJobId ? (<SuggestedTalents job_id= {
+}<div> <h2 className="text - xl font - semibold mb - 4 flex items - center"> <BriefcaseIcon className="mr - 2 h - 5 w - 5 text - primary"  /> AI Talent Suggestions </h2> {
+  selectedJobId ? (<SuggestedTalents job_id={
   selectedJobId ";
-}/>) : (<div className="bg - muted / 30 border rounded - lg p - 6 text - center"> <p className="text - muted - foreground"> Select a job to see AI - matched talent suggestions </p> </div>);
+} />) : (<div className="bg - muted / 30 border rounded - lg p - 6 text - center"> <p className="text - muted - foreground"> Select a job to see AI - matched talent suggestions </p> </div>);
 }</div> </div> </div> </div> </main> </>);
 }export default /**
  * ClientDashboard - Function description
  */
 function ClientDashboard() {
-  return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"}
+  return (<ProtectedRoute> <ClientDashboardContent  /> </ProtectedRoute> '"}
 }
 
 ;

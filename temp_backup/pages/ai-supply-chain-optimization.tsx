@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AiSupplyChainOptimization() {
@@ -9,7 +8,7 @@ export default function AiSupplyChainOptimization() {
 			subtitle="Optimize inventory, logistics, and forecasting"
 			pricePerMonthUSD={4999}
 			implementationWeeks="4-6 weeks"
-			roiNote="Companies report 400% ROI via reduced costs and improved service levels"
+			roiNote="Companies report 40o0% ROI via reduced costs and improved service levels"
 			features={[
 				"AI demand forecasting",
 				"Inventory optimization",
@@ -20,6 +19,6 @@ export default function AiSupplyChainOptimization() {
 			]}
 			industries={["Retail", "Manufacturing", "CPG", "Logistics"]}
 			url="https://ziontechgroup.com/ai-supply-chain-optimization"
-		/>
+		 />
 	);
 }

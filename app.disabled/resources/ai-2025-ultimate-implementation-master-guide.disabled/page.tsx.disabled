@@ -1,3 +1,4 @@
+<<<<<<< HEAD:app.disabled/resources/ai-2025-ultimate-implementation-master-guide.disabled/page.tsx.disabled
 <<<<<<<< HEAD:app.disabled/resources/ai-2025-ultimate-implementation-master-guide.disabled/page.tsx
 "use client";
 ========
@@ -446,3 +447,5 @@ export default function AI2025UltimateImplementationMasterGuide() {
     </div>
   );
 // End disabled page content
+=======
+>>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc:app.disabled/resources/ai-2025-ultimate-implementation-master-guide/page.tsx

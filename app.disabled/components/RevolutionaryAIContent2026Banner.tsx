@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function RevolutionaryAIContent2026Banner() {
 	return (
 		<section className="p-8 rounded-2xl bg-white/10 text-white text-center">
@@ -18,3 +19,5 @@ export default function RevolutionaryAIContent2026Banner() {
   );
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
 }
+=======
+>>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

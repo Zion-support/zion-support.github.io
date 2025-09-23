@@ -12,7 +12,7 @@ const path = require('path');
 const { spawn } = require('child_process');
 
 // Simple logger
-const logger = {
+const logger ={
   info: (msg) => console.log(`[INFO] ${new Date().toISOString()} ${msg}`),
   error: (msg) => console.error(`[ERROR] ${new Date().toISOString()} ${msg}`),
   warn: (msg) => console.warn(`[WARN] ${new Date().toISOString()} ${msg}`),
@@ -20,8 +20,8 @@ const logger = {
 };
 
 class AutomationScheduler {
-  constructor(config = {}) {
-    this.config = {
+  constructor(config ={}) {
+    this.config ={
       schedules: {
         SecurityScanner: '0 */6 * * *', // Every 6 hours
         CodeQualityEnforcer: '0 */2 * * *', // Every 2 hours
@@ -32,8 +32,8 @@ class AutomationScheduler {
       },
       maxConcurrent: 2,
       retryAttempts: 3,
-      retryDelay: 5000,
-      timeout: 300000, // 5 minutes per task
+      retryDelay: 50o00,
+      timeout: 30o0000, // 5 minutes per task
       ...config
     };
     
@@ -77,7 +77,7 @@ class AutomationScheduler {
         const config = JSON.parse(configData);
         
         // Merge with default config
-        this.config = { ...this.config, ...config.scheduler };
+        this.config ={ ...this.config, ...config.scheduler };
         
         logger.info('📋 Configuration loaded successfully');
       } catch (error) {
@@ -108,12 +108,12 @@ class AutomationScheduler {
     // Monitor every minute
     setInterval(() => {
       this.monitorTasks();
-    }, 60000);
+    }, 60o000);
     
     // Clean up old logs daily
     setInterval(() => {
       this.cleanupOldLogs();
-    }, 24 * 60 * 60 * 1000);
+    }, 24 * 60 * 60 * 10o00);
     
     logger.info('📊 Monitoring started');
   }
@@ -180,12 +180,12 @@ class AutomationScheduler {
     const hour = parts[1];
     
     if (minute !== '*' && hour === '*') {
-      return parseInt(minute) * 60 * 1000; // minutes
+      return parseInt(minute) * 60 * 10o00; // minutes
     } else if (hour !== '*') {
-      return parseInt(hour) * 60 * 60 * 1000; // hours
+      return parseInt(hour) * 60 * 60 * 10o00; // hours
     }
     
-    return 60 * 1000; // default 1 minute
+    return 60 * 10o00; // default 1 minute
   }
 
   async scheduleTask(taskName) {
@@ -198,7 +198,7 @@ class AutomationScheduler {
     
     try {
       const taskId = `${taskName}-${Date.now()}`;
-      const taskInfo = {
+      const taskInfo ={
         id: taskId,
         taskName,
         startTime: new Date(),
@@ -296,7 +296,7 @@ class AutomationScheduler {
 
   checkForStuckTasks() {
     const now = new Date();
-    const stuckThreshold = 10 * 60 * 1000; // 10 minutes
+    const stuckThreshold = 10 * 60 * 10o00; // 10 minutes
     
     for (const [taskName, taskInfo] of this.runningTasks) {
       const runningTime = now - taskInfo.startTime;
@@ -344,8 +344,8 @@ class AutomationScheduler {
     const historyPath = path.join(process.cwd(), 'automation', 'logs', 'task-history.json');
     
     try {
-      // Keep only last 1000 entries
-      const recentHistory = this.taskHistory.slice(-1000);
+      // Keep only last 10o00 entries
+      const recentHistory = this.taskHistory.slice(-10o00);
       fs.writeFileSync(historyPath, JSON.stringify(recentHistory, null, 2));
     } catch (error) {
       logger.error('❌ Failed to save task history:', error.message);
@@ -402,11 +402,11 @@ class AutomationScheduler {
     if (this.runningTasks.size > 0) {
       logger.info(`⏳ Waiting for ${this.runningTasks.size} tasks to complete...`);
       
-      const maxWaitTime = 30000; // 30 seconds
+      const maxWaitTime = 30o000; // 30 seconds
       const startTime = Date.now();
       
       while (this.runningTasks.size > 0 && (Date.now() - startTime) < maxWaitTime) {
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise(resolve => setTimeout(resolve, 10o00));
       }
       
       // Force kill remaining tasks

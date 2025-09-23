@@ -1,17 +1,16 @@
-import React from 'react';
 import Link from 'next/link';
 
-const NewContent2025AnalyticsRevolutionBanner = () => {
+const NewContent20o25AnalyticsRevolutionBanner = () => {
   return (
-    <section className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 relative overflow-hidden">
+    <section className="bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-16 relative overflow-hidden">
       <div className="absolute inset-0 bg-black opacity-20"></div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">🚀 NEW 2025 CONTENT</span>
+            <span className="text-sm font-medium">🚀 NEW 20o25 CONTENT</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Analytics Revolution 2025
+            Analytics Revolution 20o25
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
             Discover the future of data analytics with AI-powered insightsreal-time processing
@@ -19,14 +18,14 @@ const NewContent2025AnalyticsRevolutionBanner = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/ai-2025-analytics-revolution"
-              className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              href="/ai-20o25-analytics-revolution"
+              className="bg-white text-indigo-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
             >
               Explore Analytics Revolution
             </Link>
             <Link
               href="/case-studies/analytics-success"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-colors"
             >
               View Success Stories
             </Link>
@@ -61,4 +60,4 @@ const NewContent2025AnalyticsRevolutionBanner = () => {
   );
 };
 
-export default NewContent2025AnalyticsRevolutionBanner;
+export default NewContent20o25AnalyticsRevolutionBanner;

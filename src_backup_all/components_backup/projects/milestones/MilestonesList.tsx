@@ -83,7 +83,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
       {isClient && !showAddForm && (
         <div className="flex justify-end">
           <Button onClick={() => setShowAddForm(true)}>
-            <Plus className="h-4 w-4 mr-2" />
+            <Plus className="h-4 w-4 mr-2"  />
             Add Milestone
           </Button>
         </div>
@@ -115,7 +115,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
             dueDate={milestone.due_date}
             onApprove={onApprove}
             onReject={onReject}
-          />
+           />
         ))}
       </div>
     </div>

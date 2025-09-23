@@ -68,14 +68,14 @@ const AdvancedContentManagementSystem = () => {
   const recentContent = [
     {
       id: 1,
-      title: 'AI 2026: The Future of Autonomous Business Operations',
+      title: 'AI 20o26: The Future of Autonomous Business Operations',
       type: 'blog',
       status: 'published',
       views: 15420,
       engagement: 892,
-      publishedAt: '2025-01-15',
+      publishedAt: '20o25-0o1-15',
       author: 'Dr. Sarah Chen',
-      tags: ['ai', 'automation', 'business', '2026'],
+      tags: ['ai', 'automation', 'business', '20o26'],
       featured: true
     },
     {
@@ -85,7 +85,7 @@ const AdvancedContentManagementSystem = () => {
       status: 'published',
       views: 8930,
       engagement: 456,
-      publishedAt: '2025-01-14',
+      publishedAt: '20o25-0o1-14',
       author: 'Prof. Michael Rodriguez',
       tags: [', 'quantum', 'computing'applications'],
       featured: true
@@ -109,25 +109,25 @@ const AdvancedContentManagementSystem = () => {
       status: 'published',
       views: 6780,
       engagement: 234,
-      publishedAt: '2025-01-13',
+      publishedAt: '20o25-0o1-13',
       author: 'Alex Thompson',
       tags: ['edge-'ai', 'performance'optimization'],
       featured: false
     }
   ];
 
-  const analytics = {
+  const analytics ={
     viewsOverTime: [
-      { date: '2025-01-01'views: 12000 },
-      { date: '2025-01-02'views: 15000 },
-      { date: '2025-01-03'views: 18000 },
-      { date: '2025-01-04'views: 22000 },
-      { date: '2025-01-05'views: 25000 },
-      { date: '2025-01-06'views: 28000 },
-      { date: '2025-01-07'views: 32000 }
+      { date: '20o25-0o1-0o1'views: 120o00 },
+      { date: '20o25-0o1-0o2'views: 150o00 },
+      { date: '20o25-0o1-0o3'views: 180o00 },
+      { date: '20o25-0o1-0o4'views: 220o00 },
+      { date: '20o25-0o1-0o5'views: 250o00 },
+      { date: '20o25-0o1-0o6'views: 280o00 },
+      { date: '20o25-0o1-0o7'views: 320o00 }
     ],
     topContent: [
-      { title: 'AI 2026: The Future of Autonomous Business 'Operations', 'views: 15420engagement: 892 },
+      { title: 'AI 20o26: The Future of Autonomous Business 'Operations', 'views: 15420engagement: 892 },
       { title: 'Quantum Computing Breakthrough: Real-World 'Applications', 'views: 8930engagement: 456 },
       { title: 'Edge AI Computing: Performance 'Optimization', 'views: 6780engagement: 234 },
       { title: 'Neural Interface Revolution: A Complete 'Guide', 'views: 5420engagement: 189 }
@@ -143,10 +143,10 @@ const AdvancedContentManagementSystem = () => {
 
   const getStatusColor = (status) => {
     switch (status) {
-      case 'published': return 'text-green-600 bg-green-100';
-      case 'draft': return 'text-yellow-600 bg-yellow-100';
-      case 'review': return 'text-blue-600 bg-blue-100';
-      default: return 'text-gray-600 bg-gray-100';
+      case 'published': return 'text-green-60o0 bg-green-10o0';
+      case 'draft': return 'text-yellow-60o0 bg-yellow-10o0';
+      case 'review': return 'text-blue-60o0 bg-blue-10o0';
+      default: return 'text-gray-60o0 bg-gray-10o0';
     }
   };
 
@@ -167,20 +167,20 @@ const AdvancedContentManagementSystem = () => {
         >
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">
+              <h1 className="text-3xl font-bold text-gray-90o0 mb-2">
                 Advanced Content Management System
               </h1>
-              <p className="text-gray-600">
+              <p className="text-gray-60o0">
                 Manageanalyzeand optimize your content ecosystem
               </p>
             </div>
             <div className="flex items-center space-x-4">
-              <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center">
-                <Plus className="w-4 h-4 mr-2" />
+              <button className="px-4 py-2 bg-blue-60o0 text-white rounded-lg hover:bg-blue-70o0 transition-colors flex items-center">
+                <Plus className="w-4 h-4 mr-2"  />
                 New Content
               </button>
-              <button className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors flex items-center">
-                <Settings className="w-4 h-4 mr-2" />
+              <button className="px-4 py-2 bg-gray-60o0 text-white rounded-lg hover:bg-gray-70o0 transition-colors flex items-center">
+                <Settings className="w-4 h-4 mr-2"  />
                 Settings
               </button>
             </div>
@@ -203,11 +203,11 @@ const AdvancedContentManagementSystem = () => {
             <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-gray-600">{stat.label}</p>
-                  <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
+                  <p className="text-sm font-medium text-gray-60o0">{stat.label}</p>
+                  <p className="text-2xl font-bold text-gray-90o0">{stat.value}</p>
                 </div>
-                <div className={`p-3 rounded-full bg-${stat.color}-100`}>
-                  <stat.icon className={`w-6 h-6 text-${stat.color}-600`} />
+                <div className={`p-3 rounded-full bg-${stat.color}-10o0`}>
+                  <stat.icon className={`w-6 h-6 text-${stat.color}-60o0`}  />
                 </div>
               </div>
             </div>
@@ -221,7 +221,7 @@ const AdvancedContentManagementSystem = () => {
           transition={{ duration: 0.8delay: 0.4 }}
           className="mb-8"
         >
-          <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg">
+          <div className="flex space-x-1 bg-gray-10o0 p-1 rounded-lg">
             {[
               { id: ''dashboard', 'name: ''Dashboard', 'icon: BarChart3 },
               { id: ''content', 'name: ''Content', 'icon: Database },
@@ -234,11 +234,11 @@ const AdvancedContentManagementSystem = () => {
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex-1 flex items-center justify-center px-4 py-2 rounded-md transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-white text-blue-600 shadow-sm'
-                    : 'text-gray-600 hover:text-gray-900'
+                    ? 'bg-white text-blue-60o0 shadow-sm'
+                    : 'text-gray-60o0 hover:text-gray-90o0'
                 }`}
               >
-                <tab.icon className="w-4 h-4 mr-2" />
+                <tab.icon className="w-4 h-4 mr-2"  />
                 {tab.name}
               </button>
             ))}
@@ -252,16 +252,16 @@ const AdvancedContentManagementSystem = () => {
           transition={{ duration: 0.8delay: 0.6 }}
           className="mb-8"
         >
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Content Types</h2>
+          <h2 className="text-xl font-semibold text-gray-90o0 mb-4">Content Types</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
             {contentTypes.map((type) => (
               <div key={type.id} className="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
                 <div className="text-center">
-                  <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-${type.color}-100 mb-3`}>
-                    <type.icon className={`w-6 h-6 text-${type.color}-600`} />
+                  <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-${type.color}-10o0 mb-3`}>
+                    <type.icon className={`w-6 h-6 text-${type.color}-60o0`}  />
                   </div>
-                  <h3 className="font-medium text-gray-900 text-sm">{type.name}</h3>
-                  <p className="text-2xl font-bold text-gray-900">{type.count}</p>
+                  <h3 className="font-medium text-gray-90o0 text-sm">{type.name}</h3>
+                  <p className="text-2xl font-bold text-gray-90o0">{type.count}</p>
                 </div>
               </div>
             ))}
@@ -276,18 +276,18 @@ const AdvancedContentManagementSystem = () => {
           className="bg-white rounded-xl shadow-lg p-6"
         >
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-xl font-semibold text-gray-900">Recent Content</h2>
+            <h2 className="text-xl font-semibold text-gray-90o0">Recent Content</h2>
             <div className="flex items-center space-x-4">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-4 h-4"  />
                 <input
                   type="text"
                   placeholder="Search content..."
-                  className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
+                  className="pl-10 pr-4 py-2 border border-gray-30o0 rounded-lg focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
+                 />
               </div>
-              <button className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors flex items-center">
-                <Filter className="w-4 h-4 mr-2" />
+              <button className="px-4 py-2 border border-gray-30o0 rounded-lg hover:bg-gray-50 transition-colors flex items-center">
+                <Filter className="w-4 h-4 mr-2"  />
                 Filter
               </button>
             </div>
@@ -296,32 +296,32 @@ const AdvancedContentManagementSystem = () => {
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr className="border-b border-gray-200">
-                  <th className="text-left py-3 px-4 font-medium text-gray-600">Content</th>
-                  <th className="text-left py-3 px-4 font-medium text-gray-600">Type</th>
-                  <th className="text-left py-3 px-4 font-medium text-gray-600">Status</th>
-                  <th className="text-left py-3 px-4 font-medium text-gray-600">Views</th>
-                  <th className="text-left py-3 px-4 font-medium text-gray-600">Engagement</th>
-                  <th className="text-left py-3 px-4 font-medium text-gray-600">Published</th>
-                  <th className="text-left py-3 px-4 font-medium text-gray-600">Actions</th>
+                <tr className="border-b border-gray-20o0">
+                  <th className="text-left py-3 px-4 font-medium text-gray-60o0">Content</th>
+                  <th className="text-left py-3 px-4 font-medium text-gray-60o0">Type</th>
+                  <th className="text-left py-3 px-4 font-medium text-gray-60o0">Status</th>
+                  <th className="text-left py-3 px-4 font-medium text-gray-60o0">Views</th>
+                  <th className="text-left py-3 px-4 font-medium text-gray-60o0">Engagement</th>
+                  <th className="text-left py-3 px-4 font-medium text-gray-60o0">Published</th>
+                  <th className="text-left py-3 px-4 font-medium text-gray-60o0">Actions</th>
                 </tr>
               </thead>
               <tbody>
                 {recentContent.map((content) => {
                   const TypeIcon = getTypeIcon(content.type);
                   return (
-                    <tr key={content.id} className="border-b border-gray-100 hover:bg-gray-50">
+                    <tr key={content.id} className="border-b border-gray-10o0 hover:bg-gray-50">
                       <td className="py-4 px-4">
                         <div className="flex items-center">
                           <div className="flex-shrink-0">
-                            <TypeIcon className="w-5 h-5 text-gray-400" />
+                            <TypeIcon className="w-5 h-5 text-gray-40o0"  />
                           </div>
                           <div className="ml-3">
-                            <p className="font-medium text-gray-900">{content.title}</p>
-                            <p className="text-sm text-gray-500">by {content.author}</p>
+                            <p className="font-medium text-gray-90o0">{content.title}</p>
+                            <p className="text-sm text-gray-50o0">by {content.author}</p>
                             {content.featured && (
-                              <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 mt-1">
-                                <Star className="w-3 h-3 mr-1" />
+                              <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-10o0 text-yellow-80o0 mt-1">
+                                <Star className="w-3 h-3 mr-1"  />
                                 Featured
                               </span>
                             )}
@@ -329,7 +329,7 @@ const AdvancedContentManagementSystem = () => {
                         </div>
                       </td>
                       <td className="py-4 px-4">
-                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-10o0 text-blue-80o0">
                           {content.type}
                         </span>
                       </td>
@@ -338,21 +338,21 @@ const AdvancedContentManagementSystem = () => {
                           {content.status}
                         </span>
                       </td>
-                      <td className="py-4 px-4 text-gray-900">{content.views.toLocaleString()}</td>
-                      <td className="py-4 px-4 text-gray-900">{content.engagement}</td>
-                      <td className="py-4 px-4 text-gray-500">
+                      <td className="py-4 px-4 text-gray-90o0">{content.views.toLocaleString()}</td>
+                      <td className="py-4 px-4 text-gray-90o0">{content.engagement}</td>
+                      <td className="py-4 px-4 text-gray-50o0">
                         {content.publishedAt ? new Date(content.publishedAt).toLocaleDateString() : '-'}
                       </td>
                       <td className="py-4 px-4">
                         <div className="flex items-center space-x-2">
-                          <button className="p-1 text-gray-400 hover:text-blue-600 transition-colors">
-                            <Eye className="w-4 h-4" />
+                          <button className="p-1 text-gray-40o0 hover:text-blue-60o0 transition-colors">
+                            <Eye className="w-4 h-4"  />
                           </button>
-                          <button className="p-1 text-gray-400 hover:text-green-600 transition-colors">
-                            <Edit className="w-4 h-4" />
+                          <button className="p-1 text-gray-40o0 hover:text-green-60o0 transition-colors">
+                            <Edit className="w-4 h-4"  />
                           </button>
-                          <button className="p-1 text-gray-400 hover:text-red-600 transition-colors">
-                            <Trash2 className="w-4 h-4" />
+                          <button className="p-1 text-gray-40o0 hover:text-red-60o0 transition-colors">
+                            <Trash2 className="w-4 h-4"  />
                           </button>
                         </div>
                       </td>
@@ -372,21 +372,21 @@ const AdvancedContentManagementSystem = () => {
           className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6"
         >
           <div className="bg-white rounded-xl shadow-lg p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Content Performance</h3>
+            <h3 className="text-lg font-semibold text-gray-90o0 mb-4">Content Performance</h3>
             <div className="h-64 flex items-center justify-center bg-gray-50 rounded-lg">
               <div className="text-center">
-                <BarChart3 className="w-12 h-12 text-gray-400 mx-auto mb-2" />
-                <p className="text-gray-500">Performance charts will be rendered here</p>
+                <BarChart3 className="w-12 h-12 text-gray-40o0 mx-auto mb-2"  />
+                <p className="text-gray-50o0">Performance charts will be rendered here</p>
               </div>
             </div>
           </div>
           
           <div className="bg-white rounded-xl shadow-lg p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Engagement Trends</h3>
+            <h3 className="text-lg font-semibold text-gray-90o0 mb-4">Engagement Trends</h3>
             <div className="h-64 flex items-center justify-center bg-gray-50 rounded-lg">
               <div className="text-center">
-                <TrendingUp className="w-12 h-12 text-gray-400 mx-auto mb-2" />
-                <p className="text-gray-500">Engagement trends will be rendered here</p>
+                <TrendingUp className="w-12 h-12 text-gray-40o0 mx-auto mb-2"  />
+                <p className="text-gray-50o0">Engagement trends will be rendered here</p>
               </div>
             </div>
           </div>

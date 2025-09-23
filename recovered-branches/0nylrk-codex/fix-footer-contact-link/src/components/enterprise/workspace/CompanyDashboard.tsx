@@ -1,5 +1,4 @@
 
-import React from "react";
 import { WorkspaceHeader } from "./WorkspaceHeader";
 import { SharedInbox } from "./SharedInbox";
 import { TeamStats } from "./TeamStats";
@@ -30,18 +29,18 @@ interface CompanyDashboardProps {
 export function CompanyDashboard({ company }: CompanyDashboardProps) {
   return (
     <div className="container mx-auto max-w-7xl py-8 px-4 md:px-6">
-      <WorkspaceHeader company={company} />
+      <WorkspaceHeader company={company}  />
       
       <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-6">
-          <QuickActions />
-          <RecentActivity />
-          <TalentPool />
+          <QuickActions  />
+          <RecentActivity  />
+          <TalentPool  />
         </div>
         
         <div className="space-y-6">
-          <TeamStats />
-          <SharedInbox />
+          <TeamStats  />
+          <SharedInbox  />
         </div>
       </div>
     </div>

@@ -9,12 +9,12 @@ export async function getStaticProps() {
   if (fs.existsSync(recDir)) {
     const latestPath = path.join(recDir, 'latest.json'),
     if (fs.existsSync(latestPath)) {
-      try { latest = JSON.parse(fs.readFileSync(latestPath, 'utf8')).latest, } catch {}
+      try { latest = JSON.parse(fs.readFileSync(latestPath, 'utf8')).latest} catch {}
     }
     if (latest) {
       const p = path.join(recDir, `${latest}.json`),
       if (fs.existsSync(p)) {
-        try { recommendation = JSON.parse(fs.readFileSync(p, 'utf8')), } catch {}
+        try { recommendation = JSON.parse(fs.readFileSync(p, 'utf8'))} catch {}
       }
     }
   }
@@ -25,8 +25,7 @@ export async function getStaticProps() {
     const files = fs.readdirSync(propDir).filter((f) => f.endsWith('.md')).sort().reverse(),
     proposal = files[0] || null
   }
-  return { props: { latest, recommendation, proposal } },
-}
+  return { props: { latest, recommendation, proposal } }}
 
 export default function PolicyPage({ latest, recommendation, proposal }: any) {
   return (
@@ -51,5 +50,4 @@ export default function PolicyPage({ latest, recommendation, proposal }: any) {
         )}
       </div>
     </EnhancedLayout>
-  ),
-}
+  )}

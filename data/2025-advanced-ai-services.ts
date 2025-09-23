@@ -1,4 +1,4 @@
-export const advancedAIServices2025 = [
+export const advancedAIServices20o25 = [
   {
     id: 'ai-powered-business-intelligence-suite',
     name: 'BusinessIntelligence AI Pro',
@@ -9,7 +9,7 @@ export const advancedAIServices2025 = [
       'Predictive analytics and forecasting',
       'Automated report generation',
       'Real-time data monitoring',
-      'Integration with 100+ data sources',
+      'Integration with 10o0+ data sources',
       'Custom AI model training',
       'Advanced security and compliance'
     ],
@@ -22,7 +22,7 @@ export const advancedAIServices2025 = [
     tags: ['AI', 'Business Intelligence', 'Analytics', 'Data Visualization'],
     website: 'https://ziontechgroup.com/business-intelligence-ai-pro',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$27.3B',
@@ -44,15 +44,15 @@ export const advancedAIServices2025 = [
       'Custom AI model training'
     ],
     pricing: {
-      starter: { price: 149, period: 'month', features: ['Up to 10,000 customers', 'Basic analytics', 'Standard reports'] },
-      professional: { price: 399, period: 'month', features: ['Up to 100,000 customers', 'Advanced AI', 'Custom models', 'Real-time insights'] },
+      starter: { price: 149, period: 'month', features: ['Up to 10,0o00 customers', 'Basic analytics', 'Standard reports'] },
+      professional: { price: 399, period: 'month', features: ['Up to 10o0,0o00 customers', 'Advanced AI', 'Custom models', 'Real-time insights'] },
       enterprise: { price: 999, period: 'month', features: ['Unlimited customers', 'Custom AI training', 'White-label solution', 'Dedicated support'] }
     },
     category: 'Customer Analytics',
     tags: ['AI', 'Customer Analytics', 'Personalization', 'Behavior Analysis'],
     website: 'https://ziontechgroup.com/customer-analytics-ai',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$15.8B',
@@ -82,7 +82,7 @@ export const advancedAIServices2025 = [
     tags: ['AI', 'Financial Risk', 'Fraud Detection', 'Compliance'],
     website: 'https://ziontechgroup.com/financial-risk-ai',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$12.4B',
@@ -112,7 +112,7 @@ export const advancedAIServices2025 = [
     tags: ['AI', 'Supply Chain', 'Logistics', 'Optimization'],
     website: 'https://ziontechgroup.com/supply-chain-ai',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$18.7B',
@@ -134,15 +134,15 @@ export const advancedAIServices2025 = [
       'HIPAA compliance'
     ],
     pricing: {
-      starter: { price: 399, period: 'month', features: ['Up to 1,000 scans/month', 'Basic AI analysis', 'Standard reports'] },
-      professional: { price: 999, period: 'month', features: ['Up to 10,000 scans/month', 'Advanced AI', 'Custom models', 'Full diagnostic suite'] },
+      starter: { price: 399, period: 'month', features: ['Up to 1,0o00 scans/month', 'Basic AI analysis', 'Standard reports'] },
+      professional: { price: 999, period: 'month', features: ['Up to 10,0o00 scans/month', 'Advanced AI', 'Custom models', 'Full diagnostic suite'] },
       enterprise: { price: 2499, period: 'month', features: ['Unlimited scans', 'Custom AI training', 'White-label solution', 'Dedicated support'] }
     },
     category: 'Healthcare AI',
     tags: ['AI', 'Healthcare', 'Medical Imaging', 'Diagnostics'],
     website: 'https://ziontechgroup.com/healthcare-diagnostics-ai',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$45.2B',
@@ -164,15 +164,15 @@ export const advancedAIServices2025 = [
       'Legal compliance automation'
     ],
     pricing: {
-      starter: { price: 249, period: 'month', features: ['Up to 100 documents/month', 'Basic AI analysis', 'Standard templates'] },
-      professional: { price: 599, period: 'month', features: ['Up to 1,000 documents/month', 'Advanced AI', 'Custom models', 'Full legal suite'] },
+      starter: { price: 249, period: 'month', features: ['Up to 10o0 documents/month', 'Basic AI analysis', 'Standard templates'] },
+      professional: { price: 599, period: 'month', features: ['Up to 1,0o00 documents/month', 'Advanced AI', 'Custom models', 'Full legal suite'] },
       enterprise: { price: 1499, period: 'month', features: ['Unlimited documents', 'Custom AI training', 'White-label solution', 'Legal consultation'] }
     },
     category: 'Legal AI',
     tags: ['AI', 'Legal Tech', 'Document Analysis', 'Compliance'],
     website: 'https://ziontechgroup.com/legal-document-ai',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$8.9B',
@@ -194,15 +194,15 @@ export const advancedAIServices2025 = [
       'Multi-channel automation'
     ],
     pricing: {
-      starter: { price: 129, period: 'month', features: ['Up to 10,000 contacts', 'Basic AI', 'Standard automation'] },
-      professional: { price: 349, period: 'month', features: ['Up to 100,000 contacts', 'Advanced AI', 'Custom models', 'Full automation suite'] },
+      starter: { price: 129, period: 'month', features: ['Up to 10,0o00 contacts', 'Basic AI', 'Standard automation'] },
+      professional: { price: 349, period: 'month', features: ['Up to 10o0,0o00 contacts', 'Advanced AI', 'Custom models', 'Full automation suite'] },
       enterprise: { price: 899, period: 'month', features: ['Unlimited contacts', 'Custom AI training', 'White-label solution', 'Dedicated support'] }
     },
     category: 'Marketing AI',
     tags: ['AI', 'Marketing Automation', 'Personalization', 'Campaign Optimization'],
     website: 'https://ziontechgroup.com/marketing-automation-ai',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$22.1B',
@@ -232,7 +232,7 @@ export const advancedAIServices2025 = [
     tags: ['AI', 'Sales Optimization', 'Lead Scoring', 'Forecasting'],
     website: 'https://ziontechgroup.com/sales-optimization-ai',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$16.3B',
@@ -255,14 +255,14 @@ export const advancedAIServices2025 = [
     ],
     pricing: {
       starter: { price: 89, period: 'month', features: ['Up to 50 job postings/month', 'Basic AI screening', 'Standard reports'] },
-      professional: { price: 249, period: 'month', features: ['Up to 200 job postings/month', 'Advanced AI', 'Custom models', 'Full recruitment suite'] },
+      professional: { price: 249, period: 'month', features: ['Up to 20o0 job postings/month', 'Advanced AI', 'Custom models', 'Full recruitment suite'] },
       enterprise: { price: 649, period: 'month', features: ['Unlimited job postings', 'Custom AI training', 'White-label solution', 'Dedicated support'] }
     },
     category: 'HR AI',
     tags: ['AI', 'HR Recruitment', 'Candidate Screening', 'Hiring Optimization'],
     website: 'https://ziontechgroup.com/hr-recruitment-ai',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$11.7B',
@@ -284,15 +284,15 @@ export const advancedAIServices2025 = [
       '24/7 security monitoring'
     ],
     pricing: {
-      starter: { price: 199, period: 'month', features: ['Up to 100 endpoints', 'Basic threat detection', 'Email alerts'] },
-      professional: { price: 499, period: 'month', features: ['Up to 1,000 endpoints', 'Advanced AI', 'Custom models', 'Full security suite'] },
+      starter: { price: 199, period: 'month', features: ['Up to 10o0 endpoints', 'Basic threat detection', 'Email alerts'] },
+      professional: { price: 499, period: 'month', features: ['Up to 1,0o00 endpoints', 'Advanced AI', 'Custom models', 'Full security suite'] },
       enterprise: { price: 1299, period: 'month', features: ['Unlimited endpoints', 'Custom AI training', 'White-label solution', 'Dedicated SOC team'] }
     },
     category: 'Cybersecurity AI',
     tags: ['AI', 'Cybersecurity', 'Threat Detection', 'Incident Response'],
     website: 'https://ziontechgroup.com/cybersecurity-ai',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$173.5B',

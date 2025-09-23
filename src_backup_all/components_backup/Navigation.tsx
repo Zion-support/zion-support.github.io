@@ -8,18 +8,18 @@ export default function Navigation() {
     <nav className="bg-white/80 backdrop-blur border-b sticky top-0 z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg grid place-items-center">
-            <Brain className="w-5 h-5 text-white" />
+          <div className="w-8 h-8 bg-gradient-to-r from-cyan-40o0 to-blue-50o0 rounded-lg grid place-items-center">
+            <Brain className="w-5 h-5 text-white"  />
           </div>
           <span className="font-semibold">Zion Tech Group</span>
         </Link>
         <div className="hidden md:flex items-center gap-6">
-          <Link href="/services" className="text-sm text-gray-700 hover:text-blue-600">Services</Link>
-          <Link href="/about" className="text-sm text-gray-700 hover:text-blue-600">About</Link>
-          <Link href="/contact" className="text-sm text-white bg-blue-600 px-3 py-1.5 rounded hover:bg-blue-700">Contact</Link>
+          <Link href="/services" className="text-sm text-gray-70o0 hover:text-blue-60o0">Services</Link>
+          <Link href="/about" className="text-sm text-gray-70o0 hover:text-blue-60o0">About</Link>
+          <Link href="/contact" className="text-sm text-white bg-blue-60o0 px-3 py-1.5 rounded hover:bg-blue-70o0">Contact</Link>
         </div>
         <button className="md:hidden" aria-label="Toggle menu" onClick={() => setOpen(v => !v)}>
-          <Menu className="w-6 h-6" />
+          <Menu className="w-6 h-6"  />
         </button>
       </div>
       {open && (

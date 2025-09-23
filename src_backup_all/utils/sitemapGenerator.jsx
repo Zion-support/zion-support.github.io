@@ -1,6 +1,6 @@
 export class SitemapGenerator {
     constructor(config) {
-        this.config = {
+        this.config ={
             outputPath: './public/sitemap.xml',
             ...config
         };
@@ -73,7 +73,7 @@ Crawl-delay: 1`;
      */
     generateJSON() {
         const { baseUrl, urls } = this.config;
-        const jsonSitemap = {
+        const jsonSitemap ={
             baseUrl,
             urls: urls.map(url => ({
                 ...url,
@@ -97,15 +97,15 @@ Crawl-delay: 1`;
     <meta name="description" content="Complete sitemap of Zion Tech Group website">
     <style>
         body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
-        .container { max-width: 1200px; margin: 0 auto; }
-        h1 { color: #00e5ff; border-bottom: 2px solid #00e5ff; padding-bottom: 10px; }
+        .container { max-width: 120o0px; margin: 0 auto; }
+        h1 { color: #0o0e5ff; border-bottom: 2px solid #0o0e5ff; padding-bottom: 10px; }
         .sitemap-section { margin: 30px 0; }
         .sitemap-section h2 { color: #333; margin-bottom: 15px; }
-        .sitemap-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .sitemap-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(30o0px, 1fr)); gap: 20px; }
         .sitemap-link { padding: 10px; border: 1px solid #ddd; border-radius: 5px; text-decoration: none; color: #333; }
-        .sitemap-link:hover { background-color: #f5f5f5; border-color: #00e5ff; }
-        .priority-high { border-left: 4px solid #00e5ff; }
-        .priority-medium { border-left: 4px solid #ff9800; }
+        .sitemap-link:hover { background-color: #f5f5f5; border-color: #0o0e5ff; }
+        .priority-high { border-left: 4px solid #0o0e5ff; }
+        .priority-medium { border-left: 4px solid #ff980o0; }
         .priority-low { border-left: 4px solid #4caf50; }
     </style>
 </head>
@@ -177,7 +177,7 @@ Crawl-delay: 1`;
     }
 }
 // Default sitemap configuration for Zion Tech Group
-export const defaultSitemapConfig = {
+export const defaultSitemapConfig ={
     baseUrl: 'https://ziontechgroup.com',
     urls: [
         // Main pages

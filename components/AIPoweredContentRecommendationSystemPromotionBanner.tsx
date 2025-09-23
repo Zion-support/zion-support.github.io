@@ -96,20 +96,20 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
       title: 'Real-Time Processing',
       description: 'Instant content analysis and recommendation generation',
       icon: Zap,
-      accuracy: '<100ms'
+      accuracy: '<10o0ms'
     }
   ];
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600">
+    <div className="relative overflow-hidden bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-black/10">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-60o0/20 to-blue-60o0/20"></div>
         <div className="absolute top-0 left-0 w-full h-full">
           <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
-          <div className="absolute top-32 right-20 w-24 h-24 bg-yellow-400/20 rounded-full blur-lg"></div>
-          <div className="absolute bottom-20 left-1/3 w-40 h-40 bg-pink-400/10 rounded-full blur-2xl"></div>
-          <div className="absolute top-1/2 right-1/4 w-20 h-20 bg-cyan-400/20 rounded-full blur-lg"></div>
+          <div className="absolute top-32 right-20 w-24 h-24 bg-yellow-40o0/20 rounded-full blur-lg"></div>
+          <div className="absolute bottom-20 left-1/3 w-40 h-40 bg-pink-40o0/10 rounded-full blur-2xl"></div>
+          <div className="absolute top-1/2 right-1/4 w-20 h-20 bg-cyan-40o0/20 rounded-full blur-lg"></div>
         </div>
       </div>
 
@@ -121,32 +121,32 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
           className="text-center mb-12"
         >
           <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-6">
-            <Brain className="w-4 h-4 mr-2" />
+            <Brain className="w-4 h-4 mr-2"  />
             AI-Powered Intelligence
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Discover Content with
-            <span className="block bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-yellow-40o0 to-orange-40o0 bg-clip-text text-transparent">
               AI Intelligence
             </span>
           </h1>
           
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-blue-10o0 max-w-3xl mx-auto mb-8">
             Experience the future of content discovery with our advanced AI recommendation system. 
             Get personalized content suggestions that match your interests and boost engagement by 67%.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-white text-purple-600 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300 flex items-center justify-center group">
-              <Brain className="w-5 h-5 mr-2" />
+            <button className="px-8 py-4 bg-white text-purple-60o0 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-30o0 flex items-center justify-center group">
+              <Brain className="w-5 h-5 mr-2"  />
               Try AI Recommendations
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />
             </button>
-            <button className="px-8 py-4 bg-white/20 backdrop-blur-sm text-white rounded-xl font-semibold hover:bg-white/30 transition-all duration-300 flex items-center justify-center group">
-              <BarChart3 className="w-5 h-5 mr-2" />
+            <button className="px-8 py-4 bg-white/20 backdrop-blur-sm text-white rounded-xl font-semibold hover:bg-white/30 transition-all duration-30o0 flex items-center justify-center group">
+              <BarChart3 className="w-5 h-5 mr-2"  />
               View Analytics
-              <TrendingUp className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform" />
+              <TrendingUp className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform"  />
             </button>
           </div>
         </motion.div>
@@ -161,10 +161,10 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
           {stats.map((statindex) => (
             <div key={index} className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl mb-4">
-                <stat.icon className="w-8 h-8 text-white" />
+                <stat.icon className="w-8 h-8 text-white"  />
               </div>
               <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-              <div className="text-blue-100 text-sm">{stat.label}</div>
+              <div className="text-blue-10o0 text-sm">{stat.label}</div>
             </div>
           ))}
         </motion.div>
@@ -180,14 +180,14 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mr-4">
-                  <capability.icon className="w-6 h-6 text-white" />
+                  <capability.icon className="w-6 h-6 text-white"  />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-white">{capability.title}</h3>
-                  <div className="text-yellow-400 text-sm font-medium">{capability.accuracy}</div>
+                  <div className="text-yellow-40o0 text-sm font-medium">{capability.accuracy}</div>
                 </div>
               </div>
-              <p className="text-blue-100 text-sm">{capability.description}</p>
+              <p className="text-blue-10o0 text-sm">{capability.description}</p>
             </div>
           ))}
         </motion.div>
@@ -203,11 +203,11 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="flex items-center mb-3">
                 <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center mr-3">
-                  <CheckCircle className="w-5 h-5 text-white" />
+                  <CheckCircle className="w-5 h-5 text-white"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white">{feature}</h3>
               </div>
-              <p className="text-blue-100 text-sm">
+              <p className="text-blue-10o0 text-sm">
                 Advanced AI capabilities that revolutionize how you discover and engage with content.
               </p>
             </div>
@@ -223,17 +223,17 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
         >
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-white mb-2">AI-Powered Content Discovery</h2>
-            <p className="text-blue-100">Intelligent recommendations across all content types</p>
+            <p className="text-blue-10o0">Intelligent recommendations across all content types</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {recommendationTypes.map((typeindex) => (
               <div key={index} className="text-center group">
-                <div className={`inline-flex items-center justify-center w-16 h-16 bg-${type.color}-500/20 rounded-2xl mb-3 group-hover:scale-110 transition-transform duration-300`}>
-                  <type.icon className="w-8 h-8 text-white" />
+                <div className={`inline-flex items-center justify-center w-16 h-16 bg-${type.color}-50o0/20 rounded-2xl mb-3 group-hover:scale-110 transition-transform duration-30o0`}>
+                  <type.icon className="w-8 h-8 text-white"  />
                 </div>
                 <div className="text-white font-semibold text-sm mb-1">{type.label}</div>
-                <div className="text-blue-200 text-xs">{type.count} items</div>
+                <div className="text-blue-20o0 text-xs">{type.count} items</div>
               </div>
             ))}
           </div>
@@ -248,37 +248,37 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
         >
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-white mb-2">See AI in Action</h2>
-            <p className="text-blue-100">Watch how our AI analyzes your preferences and generates recommendations</p>
+            <p className="text-blue-10o0">Watch how our AI analyzes your preferences and generates recommendations</p>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="space-y-4">
               <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
                 <div className="flex items-center mb-2">
-                  <Brain className="w-5 h-5 text-yellow-400 mr-2" />
+                  <Brain className="w-5 h-5 text-yellow-40o0 mr-2"  />
                   <span className="text-white font-medium">AI Analysis</span>
                 </div>
-                <div className="text-blue-100 text-sm">
+                <div className="text-blue-10o0 text-sm">
                   Analyzing reading patternsengagement historyand content preferences...
                 </div>
               </div>
               
               <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
                 <div className="flex items-center mb-2">
-                  <Target className="w-5 h-5 text-green-400 mr-2" />
+                  <Target className="w-5 h-5 text-green-40o0 mr-2"  />
                   <span className="text-white font-medium">Pattern Recognition</span>
                 </div>
-                <div className="text-blue-100 text-sm">
+                <div className="text-blue-10o0 text-sm">
                   Identified 12 content themes and 8 engagement patterns from your activity.
                 </div>
               </div>
               
               <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
                 <div className="flex items-center mb-2">
-                  <Sparkles className="w-5 h-5 text-purple-400 mr-2" />
+                  <Sparkles className="w-5 h-5 text-purple-40o0 mr-2"  />
                   <span className="text-white font-medium">Recommendations Generated</span>
                 </div>
-                <div className="text-blue-100 text-sm">
+                <div className="text-blue-10o0 text-sm">
                   Generated 24 personalized content recommendations with 94.2% accuracy.
                 </div>
               </div>
@@ -288,27 +288,27 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
               <h3 className="text-lg font-semibold text-white mb-4">Live AI Metrics</h3>
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
-                  <span className="text-blue-100">Personalization Score</span>
+                  <span className="text-blue-10o0">Personalization Score</span>
                   <span className="text-white font-bold">98.7%</span>
                 </div>
                 <div className="w-full bg-white/20 rounded-full h-2">
-                  <div className="bg-gradient-to-r from-green-400 to-blue-400 h-2 rounded-full" style={{width: '98.7%'}}></div>
+                  <div className="bg-gradient-to-r from-green-40o0 to-blue-40o0 h-2 rounded-full" style={{width: '98.7%'}}></div>
                 </div>
                 
                 <div className="flex justify-between items-center">
-                  <span className="text-blue-100">Content Match Rate</span>
+                  <span className="text-blue-10o0">Content Match Rate</span>
                   <span className="text-white font-bold">94.2%</span>
                 </div>
                 <div className="w-full bg-white/20 rounded-full h-2">
-                  <div className="bg-gradient-to-r from-yellow-400 to-orange-400 h-2 rounded-full" style={{width: '94.2%'}}></div>
+                  <div className="bg-gradient-to-r from-yellow-40o0 to-orange-40o0 h-2 rounded-full" style={{width: '94.2%'}}></div>
                 </div>
                 
                 <div className="flex justify-between items-center">
-                  <span className="text-blue-100">Engagement Boost</span>
+                  <span className="text-blue-10o0">Engagement Boost</span>
                   <span className="text-white font-bold">+67%</span>
                 </div>
                 <div className="w-full bg-white/20 rounded-full h-2">
-                  <div className="bg-gradient-to-r from-purple-400 to-pink-400 h-2 rounded-full" style={{width: '67%'}}></div>
+                  <div className="bg-gradient-to-r from-purple-40o0 to-pink-40o0 h-2 rounded-full" style={{width: '67%'}}></div>
                 </div>
               </div>
             </div>
@@ -326,20 +326,20 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Experience AI-Powered Content Discovery?
             </h3>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+            <p className="text-blue-10o0 mb-6 max-w-2xl mx-auto">
               Join thousands of users who are already discovering their perfect content with our 
               advanced AI recommendation system. Boost engagement and save time with intelligent suggestions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-xl font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 flex items-center justify-center group">
-                <Brain className="w-5 h-5 mr-2" />
+              <button className="px-8 py-4 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-white rounded-xl font-semibold hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 flex items-center justify-center group">
+                <Brain className="w-5 h-5 mr-2"  />
                 Start AI Recommendations
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />
               </button>
-              <button className="px-8 py-4 bg-white/20 backdrop-blur-sm text-white rounded-xl font-semibold hover:bg-white/30 transition-all duration-300 flex items-center justify-center group">
-                <Play className="w-5 h-5 mr-2" />
+              <button className="px-8 py-4 bg-white/20 backdrop-blur-sm text-white rounded-xl font-semibold hover:bg-white/30 transition-all duration-30o0 flex items-center justify-center group">
+                <Play className="w-5 h-5 mr-2"  />
                 Watch Demo
-                <RefreshCw className="w-4 h-4 ml-2 group-hover:rotate-180 transition-transform" />
+                <RefreshCw className="w-4 h-4 ml-2 group-hover:rotate-180 transition-transform"  />
               </button>
             </div>
           </div>

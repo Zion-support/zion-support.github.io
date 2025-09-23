@@ -1,6 +1,5 @@
 
 import React, { useState, useEffect } from "react";
-import { useRouter } from 'next/router';
 import { useDisputes } from "@/hooks/useDisputes";
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
@@ -34,8 +33,7 @@ export function DisputeDetail() {
   const [isSending, setIsSending] = useState(false);
   const [resolution, setResolution] = useState<{ summary: string; resolution_type: ResolutionType }>({
     summary: "",
-    resolution_type: "compromise",
-  });
+    resolution_type: "compromise"});
   const [activeTab, setActiveTab] = useState("overview");
 
   // Check if user is admin (placeholder - implement proper admin check)
@@ -88,8 +86,7 @@ export function DisputeDetail() {
       return;
     }
     
-      resolution_type: (resolution.resolution_type as ResolutionType) || "compromise",
-    });
+      resolution_type: (resolution.resolution_type as ResolutionType) || "compromise"});
     if (success && dispute) {
       setDispute({
         ...dispute,
@@ -100,8 +97,7 @@ export function DisputeDetail() {
         status: "resolved", 
         resolution_summary: resolution.summary,
         resolution_type: resolution.resolution_type,
-        resolved_at: new Date().toISOString(),
-      });
+        resolved_at: new Date().toISOString()});
     } else {
       toast.error("Failed to resolve dispute");
     }
@@ -184,8 +180,8 @@ export function DisputeDetail() {
       </div>
 
       {dispute.status === "resolved" && dispute.resolution_summary && (
-        <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
-          <Check className="h-4 w-4" />
+        <Alert className="bg-green-50 border-green-20o0 dark:bg-green-90o0/20 dark:border-green-90o0">
+          <Check className="h-4 w-4"  />
           <AlertTitle>This dispute has been resolved</AlertTitle>
           <AlertDescription>
             {dispute.resolution_summary}
@@ -292,10 +288,10 @@ export function DisputeDetail() {
                   <CardDescription>Communication regarding this dispute</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-6 max-h-[600px] overflow-y-auto p-2">
+                  <div className="space-y-6 max-h-[60o0px] overflow-y-auto p-2">
                     {messages.length === 0 ? (
                       <div className="text-center py-12">
-                        <MessageSquare className="mx-auto h-12 w-12 text-muted-foreground mb-2" />
+                        <MessageSquare className="mx-auto h-12 w-12 text-muted-foreground mb-2"  />
                         <p className="text-muted-foreground">No messages yet</p>
                       </div>
                     ) : (
@@ -317,7 +313,7 @@ export function DisputeDetail() {
                               >
                                 <div className="flex items-center gap-2 mb-2">
                                   <Avatar className="h-6 w-6">
-                                    <AvatarImage src={msg.user_profile?.avatar_url} alt={msg.user_profile?.display_name || "User avatar"} />
+                                    <AvatarImage src={msg.user_profile?.avatar_url} alt={msg.user_profile?.display_name || "User avatar"}  />
                                     <AvatarFallback>
                                       {msg.user_profile?.display_name?.[0] || '?'}
                                     </AvatarFallback>
@@ -343,7 +339,7 @@ export function DisputeDetail() {
                       placeholder="Type your message here..."
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
-                      className="min-h-[100px]"
+                      className="min-h-[10o0px]"
                       disabled={isSending}
                     />
                     <div className="flex justify-end">
@@ -364,7 +360,7 @@ export function DisputeDetail() {
                 </CardHeader>
                 <CardContent>
                   <div className="text-center py-12">
-                    <Download className="mx-auto h-12 w-12 text-muted-foreground mb-2" />
+                    <Download className="mx-auto h-12 w-12 text-muted-foreground mb-2"  />
                     <p className="text-muted-foreground">No attachments available</p>
                   </div>
                 </CardContent>
@@ -414,7 +410,7 @@ export function DisputeDetail() {
                             placeholder="Enter resolution summary..."
                             value={resolution.summary}
                             onChange={(e) => setResolution({ ...resolution, summary: e.target.value })}
-                            className="min-h-[100px]"
+                            className="min-h-[10o0px]"
                           />
                           
                           <div className="grid grid-cols-2 gap-4">
@@ -440,15 +436,15 @@ export function DisputeDetail() {
                     
                     <div>
                       <h3 className="font-medium mb-2">Admin Notes</h3>
-                      <div className="space-y-4 max-h-[300px] overflow-y-auto p-2">
+                      <div className="space-y-4 max-h-[30o0px] overflow-y-auto p-2">
                         {messages
                           .filter(msg => msg.is_admin_note)
                           .map((msg) => (
-                          <div key={msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">
+                          <div key={msg.id} className="bg-yellow-50 border-l-4 border-yellow-20o0 p-4 dark:bg-yellow-90o0/20 dark:border-yellow-90o0">
                             <div className="flex items-center justify-between mb-2">
                               <div className="flex items-center gap-2">
                                 <Avatar className="h-6 w-6">
-                                  <AvatarImage src={msg.user_profile?.avatar_url} alt={msg.user_profile?.display_name || "Admin avatar"} />
+                                  <AvatarImage src={msg.user_profile?.avatar_url} alt={msg.user_profile?.display_name || "Admin avatar"}  />
                                   <AvatarFallback>
                                     {msg.user_profile?.display_name?.[0] || 'A'}
                                   </AvatarFallback>
@@ -470,7 +466,7 @@ export function DisputeDetail() {
                         )}
                       </div>
                       
-                      <Separator className="my-4" />
+                      <Separator className="my-4"  />
                       
                       <div className="space-y-4">
                         <Textarea
@@ -508,7 +504,7 @@ export function DisputeDetail() {
             <CardContent className="space-y-6">
               <div className="flex items-start gap-4">
                 <Avatar className="h-10 w-10">
-                  <AvatarImage src={dispute.client_profile?.avatar_url} alt={dispute.client_profile?.display_name || "Client avatar"} />
+                  <AvatarImage src={dispute.client_profile?.avatar_url} alt={dispute.client_profile?.display_name || "Client avatar"}  />
                   <AvatarFallback>C</AvatarFallback>
                 </Avatar>
                 <div>
@@ -520,12 +516,12 @@ export function DisputeDetail() {
               </div>
               
               <div className="flex justify-center">
-                <ArrowDown className="h-6 w-6 text-muted-foreground" />
+                <ArrowDown className="h-6 w-6 text-muted-foreground"  />
               </div>
               
               <div className="flex items-start gap-4">
                 <Avatar className="h-10 w-10">
-                  <AvatarImage src={dispute.talent_profile?.avatar_url} alt={dispute.talent_profile?.display_name || "Talent avatar"} />
+                  <AvatarImage src={dispute.talent_profile?.avatar_url} alt={dispute.talent_profile?.display_name || "Talent avatar"}  />
                   <AvatarFallback>T</AvatarFallback>
                 </Avatar>
                 <div>

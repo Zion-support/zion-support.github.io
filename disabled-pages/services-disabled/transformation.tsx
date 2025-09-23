@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import Navigation from '../../src/components/Navigation';
 import Footer from '../../src/components/Footer';
@@ -6,7 +5,7 @@ import SEOHead from '../../src/components/SEOHead';
 import { Rocket, Zap, Users, Globe, CheckCircle, Award, Brain, Cloud, Shield, Phone, Mail } from 'lucide-react';
 
 const DigitalTransformation = () => {
-  const structuredData = {
+  const structuredData ={
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Digital Transformation Services",
@@ -61,32 +60,32 @@ const DigitalTransformation = () => {
         description="Transform your business with comprehensive digital transformation solutions. Expert strategy, automation, and modernization services."
         keywords="digital transformation, business transformation, automation, cloud migration, data analytics, process optimization"
         structuredData={structuredData}
-      />
+       />
       
-      <Navigation />
+      <Navigation  />
       
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-purple-50 to-pink-100 py-20">
+        <section className="bg-gradient-to-br from-purple-50 to-pink-10o0 py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="flex justify-center mb-6">
-                <div className="p-4 rounded-full bg-gradient-to-r from-purple-500 to-pink-600">
-                  <Rocket className="w-12 h-12 text-white" />
+                <div className="p-4 rounded-full bg-gradient-to-r from-purple-50o0 to-pink-60o0">
+                  <Rocket className="w-12 h-12 text-white"  />
                 </div>
               </div>
-              <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              <h1 className="text-5xl font-bold text-gray-90o0 mb-6">
                 Digital Transformation Services
               </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              <p className="text-xl text-gray-60o0 max-w-3xl mx-auto mb-8">
                 Transform your business for the digital age with our comprehensive transformation solutions. 
                 From strategy to implementation, we guide your digital journey.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                <Link href="/contact" className="bg-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-70o0 transition-colors">
                   Start Transformation
                 </Link>
-                <Link href="/solutions" className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors">
+                <Link href="/solutions" className="border-2 border-purple-60o0 text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-purple-60o0 hover:text-white transition-colors">
                   View Solutions
                 </Link>
               </div>
@@ -98,8 +97,8 @@ const DigitalTransformation = () => {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Transformation Services</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              <h2 className="text-3xl font-bold text-gray-90o0 mb-4">Our Transformation Services</h2>
+              <p className="text-lg text-gray-60o0 max-w-2xl mx-auto">
                 End-to-end digital transformation solutions for modern businesses
               </p>
             </div>
@@ -108,16 +107,16 @@ const DigitalTransformation = () => {
               {services.map((service, index) => (
                 <div key={index} className="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow">
                   <div className="flex items-center mb-6">
-                    <div className="p-3 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 mr-4">
-                      <service.icon className="w-8 h-8 text-white" />
+                    <div className="p-3 rounded-lg bg-gradient-to-r from-purple-50o0 to-pink-60o0 mr-4">
+                      <service.icon className="w-8 h-8 text-white"  />
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
+                    <h3 className="text-2xl font-bold text-gray-90o0">{service.title}</h3>
                   </div>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  <p className="text-gray-60o0 mb-6">{service.description}</p>
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-700">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                      <li key={featureIndex} className="flex items-center text-gray-70o0">
+                        <CheckCircle className="w-5 h-5 text-green-50o0 mr-3 flex-shrink-0"  />
                         {feature}
                       </li>
                     ))}
@@ -132,8 +131,8 @@ const DigitalTransformation = () => {
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Industries We Serve</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              <h2 className="text-3xl font-bold text-gray-90o0 mb-4">Industries We Serve</h2>
+              <p className="text-lg text-gray-60o0 max-w-2xl mx-auto">
                 Specialized digital transformation solutions across various industries
               </p>
             </div>
@@ -141,11 +140,11 @@ const DigitalTransformation = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {industries.map((industry, index) => (
                 <div key={index} className="bg-white rounded-lg p-6 text-center hover:shadow-md transition-shadow">
-                  <div className="p-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-600 w-fit mx-auto mb-4">
-                    <Award className="w-6 h-6 text-white" />
+                  <div className="p-3 rounded-full bg-gradient-to-r from-purple-50o0 to-pink-60o0 w-fit mx-auto mb-4">
+                    <Award className="w-6 h-6 text-white"  />
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">{industry.name}</h3>
-                  <p className="text-sm text-gray-600">{industry.description}</p>
+                  <h3 className="font-semibold text-gray-90o0 mb-2">{industry.name}</h3>
+                  <p className="text-sm text-gray-60o0">{industry.description}</p>
                 </div>
               ))}
             </div>
@@ -156,54 +155,54 @@ const DigitalTransformation = () => {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Transformation Benefits</h2>
-              <p className="text-lg text-gray-600">
+              <h2 className="text-3xl font-bold text-gray-90o0 mb-4">Transformation Benefits</h2>
+              <p className="text-lg text-gray-60o0">
                 Unlock the full potential of your business with digital transformation
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="bg-purple-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Zap className="w-8 h-8 text-purple-600" />
+                <div className="bg-purple-10o0 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <Zap className="w-8 h-8 text-purple-60o0"  />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Increased Efficiency</h3>
-                <p className="text-gray-600">Streamline operations and reduce manual processes</p>
+                <h3 className="text-xl font-semibold text-gray-90o0 mb-3">Increased Efficiency</h3>
+                <p className="text-gray-60o0">Streamline operations and reduce manual processes</p>
               </div>
               
               <div className="text-center">
-                <div className="bg-purple-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Users className="w-8 h-8 text-purple-600" />
+                <div className="bg-purple-10o0 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <Users className="w-8 h-8 text-purple-60o0"  />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Better Customer Experience</h3>
-                <p className="text-gray-600">Deliver exceptional experiences across all touchpoints</p>
+                <h3 className="text-xl font-semibold text-gray-90o0 mb-3">Better Customer Experience</h3>
+                <p className="text-gray-60o0">Deliver exceptional experiences across all touchpoints</p>
               </div>
               
               <div className="text-center">
-                <div className="bg-purple-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Shield className="w-8 h-8 text-purple-600" />
+                <div className="bg-purple-10o0 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <Shield className="w-8 h-8 text-purple-60o0"  />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Competitive Advantage</h3>
-                <p className="text-gray-600">Stay ahead with innovative technology solutions</p>
+                <h3 className="text-xl font-semibold text-gray-90o0 mb-3">Competitive Advantage</h3>
+                <p className="text-gray-60o0">Stay ahead with innovative technology solutions</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600">
+        <section className="py-20 bg-gradient-to-r from-purple-60o0 to-pink-60o0">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-purple-10o0 mb-8 max-w-2xl mx-auto">
               Start your digital transformation journey with expert guidance and proven solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              <Link href="/contact" className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors">
                 Start Transformation
               </Link>
-              <Link href="/about" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+              <Link href="/about" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors">
                 Learn More About Us
               </Link>
             </div>
@@ -211,7 +210,7 @@ const DigitalTransformation = () => {
         </section>
       </main>
       
-      <Footer />
+      <Footer  />
     </>
   );
 };

@@ -4,31 +4,31 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const AI2025UltimateAutomationRevolution50000ROIBanner = () => {
+const AI20o25UltimateAutomationRevolution50o000ROIBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentContent, setCurrentContent] = useState(0);
 
   const contentItems = [
     {
       id: 'ultimate-automation-revolution',
-      title: 'AI 2025: The Ultimate Automation Revolution - 50,000% ROI Breakthrough',
+      title: 'AI 20o25: The Ultimate Automation Revolution - 50,0o00% ROI Breakthrough',
       type: 'blog',
-      url: '/blog/ai-2025-ultimate-automation-revolution-50000-roi-breakthrough',
+      url: '/blog/ai-20o25-ultimate-automation-revolution-50o000-roi-breakthrough',
       metrics: {
-        roi: '50,000%',
+        roi: '50,0o00%',
         savings: '$2.8B+',
-        efficiency: '2,500%',
+        efficiency: '2,50o0%',
         accuracy: '99.97%'
       },
       description: 'Transform your business with revolutionary AI automation that delivers unprecedented returns'
     },
     {
-      id: 'fortune-500-success-story',
-      title: 'Fortune 500 AI Automation Success: $2.8B Annual Savings - 50,000% ROI',
+      id: 'fortune-50o0-success-story',
+      title: 'Fortune 50o0 AI Automation Success: $2.8B Annual Savings - 50,0o00% ROI',
       type: 'case-study',
-      url: '/case-studies/fortune-500-ai-automation-50000-roi-success-story',
+      url: '/case-studies/fortune-50o0-ai-automation-50o000-roi-success-story',
       metrics: {
-        roi: '50,000%',
+        roi: '50,0o00%',
         savings: '$2.8B',
         timeline: '18 months',
         accuracy: '99.97%'
@@ -37,11 +37,11 @@ const AI2025UltimateAutomationRevolution50000ROIBanner = () => {
     },
     {
       id: 'implementation-ultimate-guide',
-      title: 'AI Automation Implementation Ultimate Guide: Complete Roadmap to 50,000% ROI',
+      title: 'AI Automation Implementation Ultimate Guide: Complete Roadmap to 50,0o00% ROI',
       type: 'resource',
-      url: '/resources/ai-automation-implementation-ultimate-guide-50000-roi',
+      url: '/resources/ai-automation-implementation-ultimate-guide-50o000-roi',
       metrics: {
-        roi: '50,000%',
+        roi: '50,0o00%',
         success: '94%',
         timeline: '12-18 months',
         guide: 'Complete'
@@ -53,18 +53,18 @@ const AI2025UltimateAutomationRevolution50000ROIBanner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentContent((prev) => (prev + 1) % contentItems.length);
-    }, 5000);
+    }, 50o00);
 
     return () => clearInterval(interval);
   }, []);
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('ai-2025-ultimate-automation-banner-dismissed', 'true');
+    localStorage.setItem('ai-20o25-ultimate-automation-banner-dismissed', 'true');
   };
 
   useEffect(() => {
-    const dismissed = localStorage.getItem('ai-2025-ultimate-automation-banner-dismissed');
+    const dismissed = localStorage.getItem('ai-20o25-ultimate-automation-banner-dismissed');
     if (dismissed === 'true') {
       setIsVisible(false);
     }
@@ -75,14 +75,14 @@ const AI2025UltimateAutomationRevolution50000ROIBanner = () => {
   const currentItem = contentItems[currentContent];
 
   return (
-    <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
+    <div className="relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/20 to-blue-600/20 animate-pulse"></div>
-        <div className="absolute top-4 left-4 w-2 h-2 bg-yellow-400 rounded-full animate-bounce"></div>
-        <div className="absolute top-8 right-8 w-3 h-3 bg-green-400 rounded-full animate-ping"></div>
-        <div className="absolute bottom-4 left-1/4 w-1 h-1 bg-pink-400 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-8 right-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-60o0/20 to-blue-60o0/20 animate-pulse"></div>
+        <div className="absolute top-4 left-4 w-2 h-2 bg-yellow-40o0 rounded-full animate-bounce"></div>
+        <div className="absolute top-8 right-8 w-3 h-3 bg-green-40o0 rounded-full animate-ping"></div>
+        <div className="absolute bottom-4 left-1/4 w-1 h-1 bg-pink-40o0 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-8 right-1/4 w-2 h-2 bg-cyan-40o0 rounded-full animate-bounce"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -93,20 +93,20 @@ const AI2025UltimateAutomationRevolution50000ROIBanner = () => {
               {contentItems.map((_, index) => (
                 <div
                   key={index}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    index === currentContent ? 'bg-yellow-400' : 'bg-white/30'
+                  className={`w-2 h-2 rounded-full transition-all duration-30o0 ${
+                    index === currentContent ? 'bg-yellow-40o0' : 'bg-white/30'
                   }`}
-                />
+                 />
               ))}
             </div>
 
             {/* Content showcase */}
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-yellow-400 text-black">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-yellow-40o0 text-black">
                   🚀 NEW BREAKTHROUGH
                 </span>
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-400 text-black">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-40o0 text-black">
                   {currentItem.type.toUpperCase()}
                 </span>
               </div>
@@ -115,30 +115,30 @@ const AI2025UltimateAutomationRevolution50000ROIBanner = () => {
                 {currentItem.title}
               </h2>
 
-              <p className="text-lg text-blue-100 max-w-3xl">
+              <p className="text-lg text-blue-10o0 max-w-3xl">
                 {currentItem.description}
               </p>
 
               {/* Metrics display */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold text-yellow-400">{currentItem.metrics.roi}</div>
-                  <div className="text-sm text-blue-100">ROI</div>
+                  <div className="text-2xl font-bold text-yellow-40o0">{currentItem.metrics.roi}</div>
+                  <div className="text-sm text-blue-10o0">ROI</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold text-green-400">{currentItem.metrics.savings}</div>
-                  <div className="text-sm text-blue-100">Annual Savings</div>
+                  <div className="text-2xl font-bold text-green-40o0">{currentItem.metrics.savings}</div>
+                  <div className="text-sm text-blue-10o0">Annual Savings</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold text-cyan-400">{currentItem.metrics.efficiency || currentItem.metrics.timeline || currentItem.metrics.success}</div>
-                  <div className="text-sm text-blue-100">
+                  <div className="text-2xl font-bold text-cyan-40o0">{currentItem.metrics.efficiency || currentItem.metrics.timeline || currentItem.metrics.success}</div>
+                  <div className="text-sm text-blue-10o0">
                     {currentItem.metrics.efficiency ? 'Efficiency' : 
                      currentItem.metrics.timeline ? 'Timeline' : 'Success Rate'}
                   </div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold text-pink-400">{currentItem.metrics.accuracy || currentItem.metrics.guide}</div>
-                  <div className="text-sm text-blue-100">
+                  <div className="text-2xl font-bold text-pink-40o0">{currentItem.metrics.accuracy || currentItem.metrics.guide}</div>
+                  <div className="text-sm text-blue-10o0">
                     {currentItem.metrics.accuracy ? 'Accuracy' : 'Guide Type'}
                   </div>
                 </div>
@@ -148,18 +148,18 @@ const AI2025UltimateAutomationRevolution50000ROIBanner = () => {
               <div className="flex flex-col sm:flex-row gap-4 mt-6">
                 <Link
                   href={currentItem.url}
-                  className="inline-flex items-center px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg hover:bg-yellow-300 transition-colors"
+                  className="inline-flex items-center px-6 py-3 bg-yellow-40o0 text-black font-semibold rounded-lg hover:bg-yellow-30o0 transition-colors"
                 >
                   Read Full {currentItem.type === 'blog' ? 'Article' : currentItem.type === 'case-study' ? 'Case Study' : 'Guide'}
                   <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"  />
                   </svg>
                 </Link>
                 <Link
                   href="/consultation"
-                  className="inline-flex items-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-900 transition-colors"
+                  className="inline-flex items-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-90o0 transition-colors"
                 >
-                  Get Your 50,000% ROI Roadmap
+                  Get Your 50,0o00% ROI Roadmap
                 </Link>
               </div>
             </div>
@@ -172,16 +172,16 @@ const AI2025UltimateAutomationRevolution50000ROIBanner = () => {
             aria-label="Dismiss banner"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"  />
             </svg>
           </button>
         </div>
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-gray-900/50 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-gray-90o0/50 to-transparent"></div>
     </div>
   );
 };
 
-export default AI2025UltimateAutomationRevolution50000ROIBanner;
+export default AI20o25UltimateAutomationRevolution50o000ROIBanner;

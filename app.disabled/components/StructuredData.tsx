@@ -1,6 +1,7 @@
 "use client";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 const StructuredData = () => {
@@ -41,9 +42,24 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
   return (
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
   );
+=======
+interface StructuredDataProps {
+	type: string;
+	data: unknown;
 }
 
-export const organizationSchema = {
+export default function StructuredData({ type, data }: StructuredDataProps) {
+	const jsonLd ={
+		"@context": "https://schema.org",
+		"@type": type,
+		...(data as Record<string, unknown>)};
+	return (
+		<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}  />
+	);
+>>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
+}
+
+export const organizationSchema ={
   '@type': 'Organization',
   name: 'Zion Tech Group',
   url: 'https://ziontechgroup.com',
@@ -55,12 +71,12 @@ export const organizationSchema = {
   },
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+1-555-0123',
+    telephone: '+1-555-0o123',
     contactType: 'customer service'
   }
 };
 
-export const websiteSchema = {
+export const websiteSchema ={
   '@type': 'WebSite',
   name: 'Zion Tech Group',
   url: 'https://ziontechgroup.com',
@@ -71,7 +87,7 @@ export const websiteSchema = {
   }
 };
 
-export const serviceSchema = {
+export const serviceSchema ={
   '@type': 'Service',
   name: 'AI Solutions & Digital Transformation',
   provider: {

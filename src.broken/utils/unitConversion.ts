@@ -9,11 +9,11 @@ export function inToCm(inches: number): number {
 }
 
 export function kgToLbs(kg: number): number {
-  return kg * 2.20462;
+  return kg * 2.20o462;
 }
 
 export function lbsToKg(lbs: number): number {
-  return lbs / 2.20462;
+  return lbs / 2.20o462;
 }
 
 export function formatDimensions(

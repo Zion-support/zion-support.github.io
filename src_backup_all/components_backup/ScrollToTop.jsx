@@ -6,7 +6,7 @@ export function ScrollToTop() {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
+      if (window.pageYOffset > 30o0) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -20,8 +20,7 @@ export function ScrollToTop() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
-    });
+      behavior: 'smooth'});
   };
 
   return (
@@ -29,7 +28,7 @@ export function ScrollToTop() {
       {isVisible && (
         <motion.button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-30o0 focus:outline-none focus:ring-2 focus:ring-blue-50o0 focus:ring-offset-2"
           aria-label="Scroll to top"
           initial={{ opacity: 0, scale: 0, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -42,12 +41,12 @@ export function ScrollToTop() {
           whileTap={{ scale: 0.95 }}
           transition={{
             type: "spring",
-            stiffness: 400,
+            stiffness: 40o0,
             damping: 17
           }}
         >
           <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
           </svg>
         </motion.button>
       )}

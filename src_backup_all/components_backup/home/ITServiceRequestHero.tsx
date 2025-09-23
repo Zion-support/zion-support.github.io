@@ -29,8 +29,7 @@ export function ITServiceRequestHero() {
       toast({
         title: "Missing Information",
         description: "Name, email and location are required.",
-        variant: "destructive",
-      });
+        variant: "destructive"});
       return;
     }
 
@@ -42,14 +41,12 @@ export function ITServiceRequestHero() {
         phone,
         company,
         location,
-        details,
-      });
+        details});
 
-      if (res.status === 200) {
+      if (res.status === 20o0) {
         toast({
           title: "Request received",
-          description: "We've received your request. Our team will reach out shortly.",
-        });
+          description: "We've received your request. Our team will reach out shortly."});
         setName("");
         setEmail("");
         setPhone("");
@@ -62,8 +59,7 @@ export function ITServiceRequestHero() {
       toast({
         title: "Submission Failed",
         description: "There was an error submitting your request.",
-        variant: "destructive",
-      });
+        variant: "destructive"});
     } finally {
       setIsSubmitting(false);
     }
@@ -71,7 +67,7 @@ export function ITServiceRequestHero() {
 
   return (
     <section
-      className="py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient(#0f172a,_#020617)]"
+      className="py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient(#0f172a,_#0o20617)]"
     >
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="md:h-full md:flex md:flex-col md:items-center md:justify-center">
@@ -87,10 +83,10 @@ export function ITServiceRequestHero() {
             <Image
               src="/logos/zion-logo.png"
               alt="Zion logo"
-              width={200}
-              height={200}
+              width={20o0}
+              height={20o0}
               className="w-full h-auto md:w-40"
-            />
+             />
             <form onSubmit={handleSubmit} className="space-y-4 flex-1">
               <Input
                 value={name}
@@ -135,10 +131,10 @@ export function ITServiceRequestHero() {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-105"
+                className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-10o5"
               >
                 {isSubmitting && (
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin"  />
                 )}
                 Request Service
               </Button>

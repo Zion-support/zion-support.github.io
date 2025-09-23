@@ -50,7 +50,7 @@ const EnhancedSEO: React.FC = () => {
 
   // Generate structured data
   const generateStructuredData = useCallback(() => {
-    const organizationSchema = {
+    const organizationSchema ={
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Zion Tech Group",
@@ -59,7 +59,7 @@ const EnhancedSEO: React.FC = () => {
       "description": "Revolutionary technology solutions provider specializing in AI, quantum computing, and autonomous systems.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "364 E Main St STE 1008",
+        "streetAddress": "364 E Main St STE 10o08",
         "addressLocality": "Middletown",
         "addressRegion": "DE",
         "postalCode": "19709",
@@ -67,7 +67,7 @@ const EnhancedSEO: React.FC = () => {
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+1-302-464-0950",
+        "telephone": "+1-30o2-464-0950",
         "contactType": "customer service",
         "email": "kleber@ziontechgroup.com"
       },
@@ -99,7 +99,7 @@ const EnhancedSEO: React.FC = () => {
       }
     };
 
-    const websiteSchema = {
+    const websiteSchema ={
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Zion Tech Group",
@@ -192,7 +192,7 @@ const EnhancedSEO: React.FC = () => {
     const titleLength = seoData.title.length;
     const descriptionLength = seoData.description.length;
     const keywordDensity = seoData.keywords.length;
-    const imageOptimization = seoData.ogImage ? 100 : 0;
+    const imageOptimization = seoData.ogImage ? 10o0 : 0;
     const mobileOptimization = 95; // Assume good mobile optimization
 
     const overallScore = Math.round(
@@ -246,27 +246,27 @@ const EnhancedSEO: React.FC = () => {
       <Head>
         {/* Basic Meta Tags */}
         <title>{metaTags.title}</title>
-        <meta name="description" content={metaTags.description} />
-        <meta name="keywords" content={metaTags.keywords} />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content="index, follow" />
+        <meta name="description" content={metaTags.description}  />
+        <meta name="keywords" content={metaTags.keywords}  />
+        <meta name="author" content="Zion Tech Group"  />
+        <meta name="robots" content="index, follow"  />
         
         {/* Open Graph Meta Tags */}
-        <meta property="og:title" content={metaTags.title} />
-        <meta property="og:description" content={metaTags.description} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={metaTags.canonical} />
-        <meta property="og:image" content={metaTags.ogImage} />
-        <meta property="og:site_name" content="Zion Tech Group" />
+        <meta property="og:title" content={metaTags.title}  />
+        <meta property="og:description" content={metaTags.description}  />
+        <meta property="og:type" content="website"  />
+        <meta property="og:url" content={metaTags.canonical}  />
+        <meta property="og:image" content={metaTags.ogImage}  />
+        <meta property="og:site_name" content="Zion Tech Group"  />
         
         {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={metaTags.title} />
-        <meta name="twitter:description" content={metaTags.description} />
-        <meta name="twitter:image" content={metaTags.ogImage} />
+        <meta name="twitter:card" content="summary_large_image"  />
+        <meta name="twitter:title" content={metaTags.title}  />
+        <meta name="twitter:description" content={metaTags.description}  />
+        <meta name="twitter:image" content={metaTags.ogImage}  />
         
         {/* Canonical URL */}
-        <link rel="canonical" href={metaTags.canonical} />
+        <link rel="canonical" href={metaTags.canonical}  />
         
         {/* Structured Data */}
         <script
@@ -274,26 +274,26 @@ const EnhancedSEO: React.FC = () => {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(metaTags.structuredData.organization)
           }}
-        />
+         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(metaTags.structuredData.website)
           }}
-        />
+         />
         
         {/* Additional Meta Tags */}
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#06b6d4" />
-        <meta name="msapplication-TileColor" content="#06b6d4" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />
+        <meta name="theme-color" content="#0o6b6d4"  />
+        <meta name="msapplication-TileColor" content="#0o6b6d4"  />
         
         {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.googleapis.com"  />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"  />
         
         {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/favicon.ico"  />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png"  />
       </Head>
 
       {/* SEO Analysis Panel */}
@@ -302,35 +302,35 @@ const EnhancedSEO: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         className="fixed bottom-20 left-20 z-50"
       >
-        <div className="bg-gray-900/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl shadow-2xl max-w-sm">
+        <div className="bg-gray-90o0/95 backdrop-blur-xl border border-cyan-50o0/20 rounded-2xl shadow-2xl max-w-sm">
           {/* Header */}
-          <div className="flex items-center gap-3 p-4 border-b border-gray-700/50">
-            <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
-              <Search className="w-5 h-5 text-white" />
+          <div className="flex items-center gap-3 p-4 border-b border-gray-70o0/50">
+            <div className="w-10 h-10 bg-gradient-to-br from-cyan-50o0 to-blue-60o0 rounded-xl flex items-center justify-center">
+              <Search className="w-5 h-5 text-white"  />
             </div>
             <div>
               <h3 className="font-semibold text-white">SEO Analysis</h3>
-              <p className="text-xs text-gray-400">Performance insights</p>
+              <p className="text-xs text-gray-40o0">Performance insights</p>
             </div>
           </div>
 
           {/* SEO Score */}
           {metrics && (
-            <div className="p-4 border-b border-gray-700/50">
+            <div className="p-4 border-b border-gray-70o0/50">
               <div className="flex items-center justify-between mb-3">
-                <span className="text-sm font-medium text-gray-300">SEO Score</span>
+                <span className="text-sm font-medium text-gray-30o0">SEO Score</span>
                 <span className={`text-lg font-bold ${
-                  metrics.overallScore >= 90 ? 'text-green-400' : 
-                  metrics.overallScore >= 70 ? 'text-yellow-400' : 'text-red-400'
+                  metrics.overallScore >= 90 ? 'text-green-40o0' : 
+                  metrics.overallScore >= 70 ? 'text-yellow-40o0' : 'text-red-40o0'
                 }`}>
-                  {metrics.overallScore}/100
+                  {metrics.overallScore}/10o0
                 </span>
               </div>
-              <div className="w-full bg-gray-700 rounded-full h-3">
+              <div className="w-full bg-gray-70o0 rounded-full h-3">
                 <motion.div
                   className={`h-3 rounded-full ${
-                    metrics.overallScore >= 90 ? 'bg-green-500' : 
-                    metrics.overallScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
+                    metrics.overallScore >= 90 ? 'bg-green-50o0' : 
+                    metrics.overallScore >= 70 ? 'bg-yellow-50o0' : 'bg-red-50o0'
                   }`}
                   initial={{ width: 0 }}
                   animate={{ width: `${metrics.overallScore}%` }}
@@ -342,23 +342,23 @@ const EnhancedSEO: React.FC = () => {
 
           {/* Quick Metrics */}
           {metrics && (
-            <div className="p-4 border-b border-gray-700/50">
-              <h4 className="text-sm font-medium text-gray-300 mb-3">Quick Metrics</h4>
+            <div className="p-4 border-b border-gray-70o0/50">
+              <h4 className="text-sm font-medium text-gray-30o0 mb-3">Quick Metrics</h4>
               <div className="grid grid-cols-2 gap-3 text-xs">
-                <div className="bg-gray-800/50 p-2 rounded text-center">
-                  <div className="text-gray-400">Title</div>
+                <div className="bg-gray-80o0/50 p-2 rounded text-center">
+                  <div className="text-gray-40o0">Title</div>
                   <div className="text-white font-mono">{metrics.titleLength} chars</div>
                 </div>
-                <div className="bg-gray-800/50 p-2 rounded text-center">
-                  <div className="text-gray-400">Description</div>
+                <div className="bg-gray-80o0/50 p-2 rounded text-center">
+                  <div className="text-gray-40o0">Description</div>
                   <div className="text-white font-mono">{metrics.descriptionLength} chars</div>
                 </div>
-                <div className="bg-gray-800/50 p-2 rounded text-center">
-                  <div className="text-gray-400">Keywords</div>
+                <div className="bg-gray-80o0/50 p-2 rounded text-center">
+                  <div className="text-gray-40o0">Keywords</div>
                   <div className="text-white font-mono">{metrics.keywordDensity}</div>
                 </div>
-                <div className="bg-gray-800/50 p-2 rounded text-center">
-                  <div className="text-gray-400">Images</div>
+                <div className="bg-gray-80o0/50 p-2 rounded text-center">
+                  <div className="text-gray-40o0">Images</div>
                   <div className="text-white font-mono">{metrics.imageOptimization}%</div>
                 </div>
               </div>
@@ -367,8 +367,8 @@ const EnhancedSEO: React.FC = () => {
 
           {/* Issues List */}
           {issues.length > 0 && (
-            <div className="p-4 border-b border-gray-700/50">
-              <h4 className="text-sm font-medium text-gray-300 mb-3">
+            <div className="p-4 border-b border-gray-70o0/50">
+              <h4 className="text-sm font-medium text-gray-30o0 mb-3">
                 Found {issues.length} issue{issues.length !== 1 ? 's' : ''}
               </h4>
               <div className="space-y-2 max-h-32 overflow-y-auto">
@@ -378,20 +378,20 @@ const EnhancedSEO: React.FC = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     className={`p-2 rounded-lg border text-xs ${
-                      issue.type === 'error' ? 'border-red-500/30 bg-red-500/10' :
-                      issue.type === 'warning' ? 'border-yellow-500/30 bg-yellow-500/10' :
-                      'border-blue-500/30 bg-blue-500/10'
+                      issue.type === 'error' ? 'border-red-50o0/30 bg-red-50o0/10' :
+                      issue.type === 'warning' ? 'border-yellow-50o0/30 bg-yellow-50o0/10' :
+                      'border-blue-50o0/30 bg-blue-50o0/10'
                     }`}
                   >
                     <div className="flex items-start gap-2">
                       {issue.type === 'error' ? (
-                        <AlertTriangle className="w-3 h-3 text-red-400 mt-0.5 flex-shrink-0" />
+                        <AlertTriangle className="w-3 h-3 text-red-40o0 mt-0.5 flex-shrink-0"  />
                       ) : (
-                        <Info className="w-3 h-3 text-blue-400 mt-0.5 flex-shrink-0" />
+                        <Info className="w-3 h-3 text-blue-40o0 mt-0.5 flex-shrink-0"  />
                       )}
                       <div className="flex-1 min-w-0">
                         <div className="font-medium text-white mb-1">{issue.message}</div>
-                        <div className="text-gray-400">{issue.fix}</div>
+                        <div className="text-gray-40o0">{issue.fix}</div>
                       </div>
                     </div>
                   </motion.div>
@@ -399,7 +399,7 @@ const EnhancedSEO: React.FC = () => {
               </div>
               {issues.length > 3 && (
                 <div className="text-center mt-2">
-                  <span className="text-xs text-gray-400">
+                  <span className="text-xs text-gray-40o0">
                     +{issues.length - 3} more issues
                   </span>
                 </div>
@@ -412,16 +412,16 @@ const EnhancedSEO: React.FC = () => {
             <button
               onClick={analyzeSEO}
               disabled={isAnalyzing}
-              className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full px-4 py-2 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white text-sm font-medium rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isAnalyzing ? (
                 <div className="flex items-center justify-center gap-2">
-                  <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                  <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"  />
                   Analyzing...
                 </div>
               ) : (
                 <div className="flex items-center justify-center gap-2">
-                  <BarChart3 className="w-4 h-4" />
+                  <BarChart3 className="w-4 h-4"  />
                   Re-analyze SEO
                 </div>
               )}
@@ -429,9 +429,9 @@ const EnhancedSEO: React.FC = () => {
           </div>
 
           {/* Footer */}
-          <div className="p-3 bg-gray-800/30 rounded-b-2xl">
+          <div className="p-3 bg-gray-80o0/30 rounded-b-2xl">
             <div className="text-center">
-              <div className="flex items-center justify-center gap-4 text-xs text-gray-500">
+              <div className="flex items-center justify-center gap-4 text-xs text-gray-50o0">
                 <span>Google</span>
                 <span>•</span>
                 <span>Bing</span>

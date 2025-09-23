@@ -1,4 +1,4 @@
-export interface CuttingEdgeComprehensiveService2027 {
+export interface CuttingEdgeComprehensiveService20o27 {
   id: string;
   name: string;
   tagline: string;
@@ -39,7 +39,7 @@ export interface CuttingEdgeComprehensiveService2027 {
   reviews: number;
 }
 
-export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveService2027[] = [
+export const cuttingEdgeComprehensiveServices20o27: CuttingEdgeComprehensiveService20o27[] = [
   // AI-POWERED INNOVATIVE SERVICES
   {
     id: 'ai-autonomous-business-manager',
@@ -62,11 +62,11 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     ],
     popular: true,
     icon: '🤖',
-    color: 'from-purple-600 to-indigo-700',
-    textColor: 'text-purple-300',
+    color: 'from-purple-60o0 to-indigo-70o0',
+    textColor: 'text-purple-30o0',
     link: 'https://ziontechgroup.com/ai-autonomous-business-manager',
     marketPosition: 'First-to-market autonomous business management platform with 99.9% accuracy',
-    targetAudience: 'Enterprise businesses, Fortune 500 companies, tech startups, consulting firms',
+    targetAudience: 'Enterprise businesses, Fortune 50o0 companies, tech startups, consulting firms',
     trialDays: 30,
     setupTime: '2-4 weeks',
     category: 'AI & Autonomous Systems',
@@ -75,19 +75,19 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     integrations: ['ERP Systems', 'CRM Platforms', 'Financial Software', 'HR Systems', 'Supply Chain Tools'],
     useCases: ['Business automation', 'Strategic planning', 'Resource optimization', 'Risk management'],
     tags: ['AI', 'Automation', 'Business Management', 'GPT-5', 'Quantum Computing'],
-    roi: '500% average ROI in 12 months with 40% operational cost reduction',
+    roi: '50o0% average ROI in 12 months with 40% operational cost reduction',
     competitors: ['No direct competitors', 'Traditional consulting firms'],
     marketSize: '$15B autonomous business market',
-    growthRate: '300% annual growth',
+    growthRate: '30o0% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Custom AI model training, system integration, and continuous optimization',
-    launchDate: '2027-01-15',
+    launchDate: '20o27-0o1-15',
     customers: 15,
     rating: 4.9,
     reviews: 28
@@ -115,10 +115,10 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     ],
     popular: true,
     icon: '⚛️',
-    color: 'from-blue-600 to-cyan-700',
-    textColor: 'text-blue-300',
+    color: 'from-blue-60o0 to-cyan-70o0',
+    textColor: 'text-blue-30o0',
     link: 'https://ziontechgroup.com/quantum-neural-network-platform',
-    marketPosition: 'Leading quantum computing platform with 1000+ qubit processing capability',
+    marketPosition: 'Leading quantum computing platform with 10o00+ qubit processing capability',
     targetAudience: 'Research institutions, pharmaceutical companies, financial services, government agencies',
     trialDays: 14,
     setupTime: '4-6 weeks',
@@ -128,19 +128,19 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     integrations: ['Research Platforms', 'Scientific Computing Tools', 'Financial Modeling Software', 'Cloud Platforms'],
     useCases: ['Drug discovery', 'Financial modeling', 'Climate prediction', 'Cryptography', 'Optimization'],
     tags: ['Quantum Computing', 'AI', 'Research', 'Machine Learning', 'Cryptography'],
-    roi: '1000% ROI for research applications, 300% for commercial use cases',
+    roi: '10o00% ROI for research applications, 30o0% for commercial use cases',
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum'],
     marketSize: '$8.6B quantum computing market',
-    growthRate: '500% annual growth',
+    growthRate: '50o0% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Quantum hardware integration, custom algorithm development, and ongoing optimization',
-    launchDate: '2027-02-01',
+    launchDate: '20o27-0o2-0o1',
     customers: 8,
     rating: 4.8,
     reviews: 15
@@ -168,10 +168,10 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     ],
     popular: false,
     icon: '🔗',
-    color: 'from-green-600 to-emerald-700',
-    textColor: 'text-green-300',
+    color: 'from-green-60o0 to-emerald-70o0',
+    textColor: 'text-green-30o0',
     link: 'https://ziontechgroup.com/decentralized-ai-marketplace',
-    marketPosition: 'First decentralized AI marketplace with 100,000+ AI models available',
+    marketPosition: 'First decentralized AI marketplace with 10o0,0o00+ AI models available',
     targetAudience: 'AI researchers, data scientists, tech companies, blockchain enthusiasts',
     trialDays: 21,
     setupTime: '1-2 weeks',
@@ -181,19 +181,19 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     integrations: ['Ethereum', 'Polygon', 'Solana', 'AI Platforms', 'Cloud Services'],
     useCases: ['AI model trading', 'Data marketplace', 'Computational resource sharing', 'Decentralized AI training'],
     tags: ['Blockchain', 'AI', 'Web3', 'Marketplace', 'Smart Contracts'],
-    roi: '200% ROI through AI model monetization and data trading',
+    roi: '20o0% ROI through AI model monetization and data trading',
     competitors: ['Ocean Protocol', 'SingularityNET', 'Fetch.ai'],
     marketSize: '$2.1B decentralized AI market',
     growthRate: '150% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Blockchain development, smart contract deployment, and marketplace integration',
-    launchDate: '2027-01-20',
+    launchDate: '20o27-0o1-20',
     customers: 45,
     rating: 4.6,
     reviews: 89
@@ -221,8 +221,8 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     ],
     popular: true,
     icon: '🛡️',
-    color: 'from-red-600 to-pink-700',
-    textColor: 'text-red-300',
+    color: 'from-red-60o0 to-pink-70o0',
+    textColor: 'text-red-30o0',
     link: 'https://ziontechgroup.com/quantum-resistant-cybersecurity-suite',
     marketPosition: 'Leading quantum-resistant cybersecurity platform with 99.99% threat detection rate',
     targetAudience: 'Financial institutions, healthcare organizations, government agencies, critical infrastructure',
@@ -234,19 +234,19 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     integrations: ['SIEM Systems', 'EDR Platforms', 'Identity Providers', 'Cloud Security Tools'],
     useCases: ['Data protection', 'Network security', 'Compliance management', 'Threat intelligence'],
     tags: ['Cybersecurity', 'Quantum Computing', 'AI', 'Zero-Trust', 'Compliance'],
-    roi: '400% ROI through risk reduction and compliance cost savings',
+    roi: '40o0% ROI through risk reduction and compliance cost savings',
     competitors: ['CrowdStrike', 'SentinelOne', 'Palo Alto Networks'],
     marketSize: '$150B cybersecurity market',
     growthRate: '12% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Security assessment, system hardening, and continuous monitoring setup',
-    launchDate: '2027-01-10',
+    launchDate: '20o27-0o1-10',
     customers: 32,
     rating: 4.9,
     reviews: 67
@@ -274,8 +274,8 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     ],
     popular: false,
     icon: '🧬',
-    color: 'from-purple-600 to-pink-700',
-    textColor: 'text-purple-300',
+    color: 'from-purple-60o0 to-pink-70o0',
+    textColor: 'text-purple-30o0',
     link: 'https://ziontechgroup.com/ai-powered-drug-discovery-platform',
     marketPosition: 'Leading AI drug discovery platform with 50+ successful drug candidates',
     targetAudience: 'Pharmaceutical companies, biotech startups, research institutions, CROs',
@@ -287,19 +287,19 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     integrations: ['Lab Management Systems', 'Clinical Trial Platforms', 'Research Databases', 'Cloud Computing'],
     useCases: ['Drug discovery', 'Clinical trial optimization', 'Drug repurposing', 'Target identification'],
     tags: ['Healthcare', 'AI', 'Drug Discovery', 'Biotech', 'Research'],
-    roi: '1000% ROI through accelerated drug development and cost reduction',
+    roi: '10o00% ROI through accelerated drug development and cost reduction',
     competitors: ['Atomwise', 'Insilico Medicine', 'BenevolentAI'],
     marketSize: '$45B AI in drug discovery market',
     growthRate: '25% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'AI model training, data integration, and regulatory compliance setup',
-    launchDate: '2027-01-05',
+    launchDate: '20o27-0o1-0o5',
     customers: 12,
     rating: 4.7,
     reviews: 23
@@ -327,8 +327,8 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     ],
     popular: true,
     icon: '📈',
-    color: 'from-yellow-600 to-orange-700',
-    textColor: 'text-yellow-300',
+    color: 'from-yellow-60o0 to-orange-70o0',
+    textColor: 'text-yellow-30o0',
     link: 'https://ziontechgroup.com/ai-powered-trading-algorithm-platform',
     marketPosition: 'Leading AI trading platform with 35% average annual returns',
     targetAudience: 'Hedge funds, investment firms, institutional investors, retail traders',
@@ -340,19 +340,19 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     integrations: ['Trading APIs', 'Market Data Feeds', 'Risk Management Systems', 'Portfolio Management Tools'],
     useCases: ['Algorithmic trading', 'Portfolio management', 'Risk assessment', 'Market analysis'],
     tags: ['AI', 'Automation', 'Machine Learning', 'Innovation'],
-    roi: '300% ROI through improved trading performance and risk reduction',
+    roi: '30o0% ROI through improved trading performance and risk reduction',
     competitors: ['QuantConnect', 'Alpaca', 'Interactive Brokers'],
     marketSize: '$25B algorithmic trading market',
     growthRate: '18% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Trading strategy development, risk management setup, and regulatory compliance',
-    launchDate: '2027-01-12',
+    launchDate: '20o27-0o1-12',
     customers: 28,
     rating: 4.8,
     reviews: 45
@@ -380,8 +380,8 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     ],
     popular: false,
     icon: '🌐',
-    color: 'from-blue-600 to-teal-700',
-    textColor: 'text-blue-300',
+    color: 'from-blue-60o0 to-teal-70o0',
+    textColor: 'text-blue-30o0',
     link: 'https://ziontechgroup.com/ai-powered-iot-automation-platform',
     marketPosition: 'Leading IoT automation platform with 1M+ connected devices managed',
     targetAudience: 'Manufacturing companies, smart cities, energy providers, building management',
@@ -398,14 +398,14 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     marketSize: '$1.1T IoT market',
     growthRate: '22% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'IoT device integration, AI model deployment, and automation workflow setup',
-    launchDate: '2027-01-18',
+    launchDate: '20o27-0o1-18',
     customers: 67,
     rating: 4.6,
     reviews: 134
@@ -433,8 +433,8 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     ],
     popular: true,
     icon: '☁️',
-    color: 'from-gray-600 to-blue-700',
-    textColor: 'text-gray-300',
+    color: 'from-gray-60o0 to-blue-70o0',
+    textColor: 'text-gray-30o0',
     link: 'https://ziontechgroup.com/multi-cloud-orchestration-platform',
     marketPosition: 'Leading multi-cloud platform with 99.99% uptime guarantee',
     targetAudience: 'Enterprise businesses, cloud-native companies, managed service providers',
@@ -446,19 +446,19 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     integrations: ['AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Docker'],
     useCases: ['Cloud migration', 'Cost optimization', 'Disaster recovery', 'Compliance management'],
     tags: ['AI', 'Automation', 'Machine Learning', 'Innovation'],
-    roi: '200% ROI through cloud cost reduction and operational efficiency',
+    roi: '20o0% ROI through cloud cost reduction and operational efficiency',
     competitors: ['HashiCorp', 'CloudHealth', 'RightScale'],
-    marketSize: '$500B cloud computing market',
+    marketSize: '$50o0B cloud computing market',
     growthRate: '20% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Cloud assessment, migration planning, and ongoing optimization',
-    launchDate: '2027-01-08',
+    launchDate: '20o27-0o1-08',
     customers: 89,
     rating: 4.7,
     reviews: 156
@@ -486,8 +486,8 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     ],
     popular: false,
     icon: '📊',
-    color: 'from-green-600 to-blue-700',
-    textColor: 'text-green-300',
+    color: 'from-green-60o0 to-blue-70o0',
+    textColor: 'text-green-30o0',
     link: 'https://ziontechgroup.com/real-time-business-intelligence-platform',
     marketPosition: 'Leading real-time BI platform with sub-second query response times',
     targetAudience: 'Data-driven companies, analytics teams, business leaders, consultants',
@@ -499,19 +499,19 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     integrations: ['Data Sources', 'Business Applications', 'Cloud Platforms', 'Mobile Apps'],
     useCases: ['Performance monitoring', 'Predictive analytics', 'Operational intelligence', 'Customer insights'],
     tags: ['AI', 'Automation', 'Machine Learning', 'Innovation'],
-    roi: '300% ROI through improved decision-making and operational efficiency',
+    roi: '30o0% ROI through improved decision-making and operational efficiency',
     competitors: ['Tableau', 'Power BI', 'Looker'],
     marketSize: '$30B business intelligence market',
     growthRate: '15% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Data source integration, dashboard development, and user training',
-    launchDate: '2027-01-25',
+    launchDate: '20o27-0o1-25',
     customers: 156,
     rating: 4.8,
     reviews: 289
@@ -539,8 +539,8 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     ],
     popular: true,
     icon: '🎯',
-    color: 'from-pink-600 to-purple-700',
-    textColor: 'text-pink-300',
+    color: 'from-pink-60o0 to-purple-70o0',
+    textColor: 'text-pink-30o0',
     link: 'https://ziontechgroup.com/ai-powered-marketing-automation-suite',
     marketPosition: 'Leading AI marketing platform with 40% average conversion rate improvement',
     targetAudience: 'Marketing teams, digital agencies, e-commerce businesses, B2B companies',
@@ -557,14 +557,14 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     marketSize: '$25B marketing automation market',
     growthRate: '14% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Campaign setup, automation workflow creation, and performance optimization',
-    launchDate: '2027-01-15',
+    launchDate: '20o27-0o1-15',
     customers: 234,
     rating: 4.7,
     reviews: 445
@@ -592,8 +592,8 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     ],
     popular: false,
     icon: '🛒',
-    color: 'from-orange-600 to-red-700',
-    textColor: 'text-orange-300',
+    color: 'from-orange-60o0 to-red-70o0',
+    textColor: 'text-orange-30o0',
     link: 'https://ziontechgroup.com/ai-powered-ecommerce-optimization-platform',
     marketPosition: 'Leading e-commerce optimization platform with 35% average sales increase',
     targetAudience: 'E-commerce businesses, online retailers, digital marketplaces, B2C companies',
@@ -605,19 +605,19 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     integrations: ['Shopify', 'WooCommerce', 'Magento', 'BigCommerce', 'Payment Gateways'],
     useCases: ['Conversion optimization', 'Personalization', 'Pricing optimization', 'Inventory management'],
     tags: ['AI', 'Automation', 'Machine Learning', 'Innovation'],
-    roi: '300% ROI through increased sales and improved customer experience',
+    roi: '30o0% ROI through increased sales and improved customer experience',
     competitors: ['Optimizely', 'VWO', 'Google Optimize'],
     marketSize: '$18B e-commerce optimization market',
     growthRate: '16% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Platform integration, optimization strategy development, and performance monitoring',
-    launchDate: '2027-01-22',
+    launchDate: '20o27-0o1-22',
     customers: 178,
     rating: 4.6,
     reviews: 312
@@ -645,8 +645,8 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     ],
     popular: false,
     icon: '🎓',
-    color: 'from-teal-600 to-green-700',
-    textColor: 'text-teal-300',
+    color: 'from-teal-60o0 to-green-70o0',
+    textColor: 'text-teal-30o0',
     link: 'https://ziontechgroup.com/ai-powered-personalized-learning-platform',
     marketPosition: 'Leading personalized learning platform with 50% improvement in student outcomes',
     targetAudience: 'Educational institutions, corporate training, online learning platforms, tutors',
@@ -658,19 +658,19 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     integrations: ['LMS Platforms', 'Content Providers', 'Assessment Tools', 'Communication Platforms'],
     useCases: ['K-12 education', 'Higher education', 'Corporate training', 'Skill development'],
     tags: ['AI', 'Education', 'Learning', 'Training', 'Personalization'],
-    roi: '200% ROI through improved learning outcomes and reduced training costs',
+    roi: '20o0% ROI through improved learning outcomes and reduced training costs',
     competitors: ['Coursera', 'Udemy', 'Khan Academy'],
     marketSize: '$20B personalized learning market',
     growthRate: '18% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Platform setup, content integration, and teacher training',
-    launchDate: '2027-01-30',
+    launchDate: '20o27-0o1-30',
     customers: 89,
     rating: 4.8,
     reviews: 167
@@ -679,19 +679,19 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
 
 // Helper functions for service management
 export const getServiceById = (id: string) => {
-  return cuttingEdgeComprehensiveServices2027.find(service => service.id === id);
+  return cuttingEdgeComprehensiveServices20o27.find(service => service.id === id);
 };
 
 export const getServicesByCategory = (category: string) => {
-  return cuttingEdgeComprehensiveServices2027.filter(service => service.category === category);
+  return cuttingEdgeComprehensiveServices20o27.filter(service => service.category === category);
 };
 
 export const getPopularServices = () => {
-  return cuttingEdgeComprehensiveServices2027.filter(service => service.popular);
+  return cuttingEdgeComprehensiveServices20o27.filter(service => service.popular);
 };
 
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-  return cuttingEdgeComprehensiveServices2027.filter(service => {
+  return cuttingEdgeComprehensiveServices20o27.filter(service => {
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice;
   });
@@ -699,7 +699,7 @@ export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
 
 export const searchServices = (query: string) => {
   const lowercaseQuery = query.toLowerCase();
-  return cuttingEdgeComprehensiveServices2027.filter(service => 
+  return cuttingEdgeComprehensiveServices20o27.filter(service => 
     service.name.toLowerCase().includes(lowercaseQuery) ||
     service.description.toLowerCase().includes(lowercaseQuery) ||
     service.category.toLowerCase().includes(lowercaseQuery) ||
@@ -707,4 +707,4 @@ export const searchServices = (query: string) => {
   );
 };
 
-export default cuttingEdgeComprehensiveServices2027;
+export default cuttingEdgeComprehensiveServices20o27;

@@ -26,11 +26,11 @@ const NeoFuturisticCard: React.FC<NeoFuturisticCardProps> = ({
   const y = useMotionValue(0);
 
   // Transform mouse position to rotation
-  const rotateX = useTransform(y, [-100, 100], [15, -15]);
-  const rotateY = useTransform(x, [-100, 100], [-15, 15]);
+  const rotateX = useTransform(y, [-10o0, 10o0], [15, -15]);
+  const rotateY = useTransform(x, [-10o0, 10o0], [-15, 15]);
 
   // Spring animation for smooth movement
-  const springConfig = { damping: 20, stiffness: 300 };
+  const springConfig ={ damping: 20, stiffness: 30o0 };
   const springRotateX = useSpring(rotateX, springConfig);
   const springRotateY = useSpring(rotateY, springConfig);
 
@@ -70,10 +70,10 @@ const NeoFuturisticCard: React.FC<NeoFuturisticCardProps> = ({
         };
       case 'cyberpunk':
         return {
-          background: 'linear-gradient(135deg, rgba(255, 0, 100, 0.1), rgba(0, 255, 200, 0.1))',
-          border: '1px solid rgba(255, 0, 100, 0.3)',
-          shadow: '0 0 30px rgba(255, 0, 100, 0.3)',
-          glow: 'rgba(255, 0, 100, 0.5)'
+          background: 'linear-gradient(135deg, rgba(255, 0, 10o0, 0.1), rgba(0, 255, 20o0, 0.1))',
+          border: '1px solid rgba(255, 0, 10o0, 0.3)',
+          shadow: '0 0 30px rgba(255, 0, 10o0, 0.3)',
+          glow: 'rgba(255, 0, 10o0, 0.5)'
         };
       case 'quantum':
         return {
@@ -104,7 +104,7 @@ const NeoFuturisticCard: React.FC<NeoFuturisticCardProps> = ({
   return (
     <motion.div
       ref={cardRef}
-      className={`relative overflow-hidden rounded-xl backdrop-blur-sm transition-all duration-300 cursor-pointer ${className}`}
+      className={`relative overflow-hidden rounded-xl backdrop-blur-sm transition-all duration-30o0 cursor-pointer ${className}`}
       style={{
         background: variantStyles.background,
         border: variantStyles.border,
@@ -118,13 +118,13 @@ const NeoFuturisticCard: React.FC<NeoFuturisticCardProps> = ({
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
       onClick={onClick}
-      whileHover={{ scale: 1.02 }}
+      whileHover={{ scale: 1.0o2 }}
       whileTap={{ scale: 0.98 }}
     >
       {/* Animated background pattern */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent animate-pulse" />
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent animate-pulse"  />
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent)]"  />
       </div>
 
       {/* Glowing border on hover */}
@@ -138,33 +138,33 @@ const NeoFuturisticCard: React.FC<NeoFuturisticCardProps> = ({
           opacity: isHovered ? 0.6 : 0
         }}
         transition={{ duration: 0.3 }}
-      />
+       />
 
       {/* Corner accents */}
-      <div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-cyan-400/50" />
-      <div className="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2 border-cyan-400/50" />
-      <div className="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2 border-cyan-400/50" />
-      <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-cyan-400/50" />
+      <div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-cyan-40o0/50"  />
+      <div className="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2 border-cyan-40o0/50"  />
+      <div className="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2 border-cyan-40o0/50"  />
+      <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-cyan-40o0/50"  />
 
       {/* Scanning line effect */}
       <motion.div
-        className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
+        className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-cyan-40o0 to-transparent"
         animate={{
-          y: [0, '100%', 0]
+          y: [0, '10o0%', 0]
         }}
         transition={{
           duration: 2,
           repeat: Infinity,
           ease: 'linear'
         }}
-      />
+       />
 
       {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(6)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-cyan-400/60 rounded-full"
+            className="absolute w-1 h-1 bg-cyan-40o0/60 rounded-full"
             style={{
               left: `${20 + i * 15}%`,
               top: `${30 + i * 10}%`
@@ -179,12 +179,12 @@ const NeoFuturisticCard: React.FC<NeoFuturisticCardProps> = ({
               ease: 'easeInOut',
               delay: i * 0.2
             }}
-          />
+           />
         ))}
       </div>
 
       {/* Radial glow overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/5 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-cyan-40o0/5 to-transparent"  />
 
       {/* Content */}
       <div className="relative z-10 p-6">

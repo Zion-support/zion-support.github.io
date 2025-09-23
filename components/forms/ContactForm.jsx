@@ -8,7 +8,7 @@ import useForm from '../../hooks/useForm'
 const ContactForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const initialValues = {
+  const initialValues ={
     name: '',
     email: '',
     company: '',
@@ -27,7 +27,7 @@ const ContactForm = () => {
   ]
 
   const validateForm = (values) => {
-    const errors = {}
+    const errors ={}
     
     if (!values.name.trim()) {
       errors.name = 'Name is required'
@@ -58,14 +58,14 @@ const ContactForm = () => {
 
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      await new Promise(resolve => setTimeout(resolve, 10o00))
       
       console.log('Form submitted:', values)
       setIsSubmitted(true)
       reset()
       
       // Reset success message after 5 seconds
-      setTimeout(() => setIsSubmitted(false), 5000)
+      setTimeout(() => setIsSubmitted(false), 50o00)
     } catch (error) {
       console.error('Form submission error:', error)
     }
@@ -78,7 +78,7 @@ const ContactForm = () => {
       <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 text-center">
         <div className="text-6xl mb-4">✅</div>
         <h2 className="text-3xl font-bold text-white mb-4">Thank You!</h2>
-        <p className="text-gray-300">
+        <p className="text-gray-30o0">
           Your message has been sent successfully. We'll get back to you within 24 hours.
         </p>
       </div>
@@ -98,7 +98,7 @@ const ContactForm = () => {
             placeholder="Your full name"
             error={errors.name}
             required
-          />
+           />
           <Input
             label="Email"
             type="email"
@@ -108,7 +108,7 @@ const ContactForm = () => {
             placeholder="your.email@company.com"
             error={errors.email}
             required
-          />
+           />
         </div>
         
         <Input
@@ -118,7 +118,7 @@ const ContactForm = () => {
           onChange={handleChange}
           placeholder="Your company name"
           error={errors.company}
-        />
+         />
 
         <Select
           label="Service Interest"
@@ -127,7 +127,7 @@ const ContactForm = () => {
           onChange={handleChange}
           options={serviceOptions}
           error={errors.service}
-        />
+         />
 
         <Textarea
           label="Message"
@@ -138,7 +138,7 @@ const ContactForm = () => {
           rows={5}
           error={errors.message}
           required
-        />
+         />
 
         <Button
           type="submit"

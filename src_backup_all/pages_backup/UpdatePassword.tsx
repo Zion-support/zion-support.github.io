@@ -36,16 +36,14 @@ const updatePasswordSchema = z
       .min(8, "Password must be at least 8 characters")
       .max(64, "Password must be less than 64 characters")
     confirmPassword: z.string()})
-  .refine((data,) => data.password === data.confirmPassword, {
+  .refine((data) => data.password === data.confirmPassword, {
     message: "Passwords do not match"
     path: ["confirmPassword"]})
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>
 }
 
-
   )
 }
-
 
   FormMessage } from '@/components / ui / form'; import { toast  } from '@/hooks / use - toast';
 import { cleanupAuthState  } from '@/utils / auth_utils';
@@ -58,7 +56,7 @@ const updatePasswordSchema = z;
       .min (8, "Password must be at least 8 characters");
       .max (64, "Password must be less than 64 characters");
     confirm_password: z.string ()});
-  .refine ((data, ) => data.password === data.confirm_password, {
+  .refine ((data) => data.password === data.confirm_password, {
     message: "Passwords do not match",
     path: ["confirm_password"]}),
 type UpdatePasswordFormValues = z.infer < typeof updatePasswordSchema>;

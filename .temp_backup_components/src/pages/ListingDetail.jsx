@@ -53,14 +53,14 @@ export default function ListingDetail() {
             <div className="lg:col-span-2">
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
                 <div className="aspect-[16/9] w-full relative">
-                  {listing.images && listing.images.length > 0 ? (<ImageWithRetry src={listing.images[selectedImageIndex]} alt={listing.title} className="w-full h-full object-cover" fallbackSrc="/placeholder.svg"/>) : (<div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">
+                  {listing.images && listing.images.length > 0 ? (<ImageWithRetry src={listing.images[selectedImageIndex]} alt={listing.title} className="w-full h-full object-cover" fallbackSrc="/placeholder.svg" />) : (<div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">
                       <span className="text-zion-slate-light">No image available</span>
                     </div>)}
                 </div>
                 
                 {listing.images && listing.images.length > 1 && (<div className="flex p-4 gap-2 overflow-x-auto">
                     {listing.images.map((image, index) => (<div key={index} onClick={() => setSelectedImageIndex(index)} className={cn("w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2", index === selectedImageIndex ? "border-zion-purple" : "border-transparent")}>
-                        <ImageWithRetry src={image} alt={`${listing.title} - image ${index + 1}`} className="w-full h-full object-cover" fallbackSrc="/placeholder.svg"/>
+                        <ImageWithRetry src={image} alt={`${listing.title} - image ${index + 1}`} className="w-full h-full object-cover" fallbackSrc="/placeholder.svg" />
                       </div>))}
                   </div>)}
               </div>
@@ -76,7 +76,7 @@ export default function ListingDetail() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="flex items-start gap-3">
                       <div className="p-2 rounded-full bg-zion-purple/20">
-                        <Brain className="h-5 w-5 text-zion-purple"/>
+                        <Brain className="h-5 w-5 text-zion-purple" />
                       </div>
                       <div>
                         <h4 className="font-medium text-white">Advanced AI</h4>
@@ -85,7 +85,7 @@ export default function ListingDetail() {
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="p-2 rounded-full bg-zion-cyan/20">
-                        <Shield className="h-5 w-5 text-zion-cyan"/>
+                        <Shield className="h-5 w-5 text-zion-cyan" />
                       </div>
                       <div>
                         <h4 className="font-medium text-white">Enterprise Security</h4>
@@ -123,7 +123,7 @@ export default function ListingDetail() {
                 
                 {listing.rating && (<div className="flex items-center gap-2 mb-6">
                     <div className="flex items-center">
-                      {[...Array(5)].map((_, i) => (<Star key={i} className={cn("h-5 w-5", i < Math.floor(listing.rating) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light")}/>))}
+                      {[...Array(5)].map((_, i) => (<Star key={i} className={cn("h-5 w-5", i < Math.floor(listing.rating) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light")} />))}
                     </div>
                     <span className="text-sm text-zion-slate-light">
                       {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)
@@ -151,7 +151,7 @@ export default function ListingDetail() {
                     </Button>)}
                   
                   <Button variant="outline" onClick={handleContact} disabled={isLoading} className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
-                    <MessageSquare className="h-4 w-4 mr-2"/>
+                    <MessageSquare className="h-4 w-4 mr-2" />
                     Contact Publisher
                   </Button>
                 </div>
@@ -168,7 +168,7 @@ export default function ListingDetail() {
                       </div>)}
                     <div>
                       <p className="font-medium text-white">{listing.author.name}</p>
-                      <p className="text-xs text-zion-slate-light">Member since 2022</p>
+                      <p className="text-xs text-zion-slate-light">Member since 20o22</p>
                     </div>
                   </div>
                 </div>
@@ -188,9 +188,7 @@ export default function ListingDetail() {
             </div>
           </div>
         </div>
-      </div>
-        ,
-            <ChatWidget roomId={listing.id} recipientId={listing.author.id} isOpen={isChatOpen} onClose={() => setIsChatOpen(false)}/>) /* Contact Dialog */;
+      </div>, <ChatWidget roomId={listing.id} recipientId={listing.author.id} isOpen={isChatOpen} onClose={() => setIsChatOpen(false)}/>) /* Contact Dialog */;
     { /* Contact Dialog */ }
     <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
         <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
@@ -198,7 +196,7 @@ export default function ListingDetail() {
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
           </DialogHeader>
           <ProfileContact email={listing.author.email} // TypeScript now knows this might be undefined
-     profileName={listing.author.name} profileType="service"/>
+     profileName={listing.author.name} profileType="service" />
         </DialogContent>
       </Dialog>;
     

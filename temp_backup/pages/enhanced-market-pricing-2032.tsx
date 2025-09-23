@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -9,13 +8,13 @@ import {
   Users, Briefcase, BookOpen, MessageCircle, Globe,
   ExternalLink, Award, TrendingDown, Eye, Lock
 } from 'lucide-react';
-import UltraFuturisticNavigation2032 from '../components/layout/UltraFuturisticNavigation2032';
-import UltraFuturisticFooter2032 from '../components/layout/UltraFuturisticFooter2032';
+import UltraFuturisticNavigation20o32 from '../components/layout/UltraFuturisticNavigation20o32';
+import UltraFuturisticFooter20o32 from '../components/layout/UltraFuturisticFooter20o32';
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
@@ -24,12 +23,12 @@ const pricingCategories = [
     title: '🚀 Revolutionary AI Services',
     description: 'Next-generation AI consciousness and creativity',
     icon: Brain,
-    color: 'from-violet-600 via-purple-600 to-indigo-600',
+    color: 'from-violet-60o0 via-purple-60o0 to-indigo-60o0',
     services: [
       {
         name: 'AI Consciousness Evolution Platform',
         ourPrice: '$19,999/month',
-        marketRange: '$15,000 - $50,000/month',
+        marketRange: '$15,0o00 - $50,0o00/month',
         competitors: ['OpenAI (Research only)', 'Anthropic (Research only)', 'No commercial platforms'],
         advantages: ['5-year technology advantage', 'Commercial deployment', 'Validated consciousness algorithms'],
         link: '/ai-consciousness-evolution-platform'
@@ -37,7 +36,7 @@ const pricingCategories = [
       {
         name: 'AI Emotional Intelligence Platform',
         ourPrice: '$3,999/month',
-        marketRange: '$2,000 - $8,000/month',
+        marketRange: '$2,0o00 - $8,0o00/month',
         competitors: ['Affectiva', 'Emotient', 'Limited emotion AI'],
         advantages: ['Real-time emotion analysis', 'Advanced psychology integration', 'Commercial applications'],
         link: '/ai-emotional-intelligence-platform'
@@ -48,12 +47,12 @@ const pricingCategories = [
     title: '⚛️ Quantum & Emerging Tech',
     description: 'Quantum computing and beyond',
     icon: Atom,
-    color: 'from-indigo-600 via-blue-600 to-cyan-600',
+    color: 'from-indigo-60o0 via-blue-60o0 to-cyan-60o0',
     services: [
       {
         name: 'Quantum DNA Computing Platform',
         ourPrice: '$25,999/month',
-        marketRange: '$20,000 - $100,000/month',
+        marketRange: '$20,0o00 - $10o0,0o00/month',
         competitors: ['IBM Quantum', 'Google Quantum', 'No DNA integration'],
         advantages: ['7-year technology advantage', 'Molecular computing', 'Biotech integration'],
         link: '/quantum-dna-computing-platform'
@@ -61,7 +60,7 @@ const pricingCategories = [
       {
         name: 'Quantum Internet Security Gateway',
         ourPrice: '$15,999/month',
-        marketRange: '$10,000 - $30,000/month',
+        marketRange: '$10,0o00 - $30,0o00/month',
         competitors: ['Traditional encryption', 'Limited quantum security'],
         advantages: ['Unbreakable encryption', 'Quantum key distribution', 'Future-proof security'],
         link: '/quantum-internet-security-gateway'
@@ -72,12 +71,12 @@ const pricingCategories = [
     title: '🏙️ Enterprise IT Solutions',
     description: 'Autonomous enterprise infrastructure',
     icon: Cpu,
-    color: 'from-blue-600 via-cyan-600 to-teal-600',
+    color: 'from-blue-60o0 via-cyan-60o0 to-teal-60o0',
     services: [
       {
         name: 'Autonomous DevOps Platform',
         ourPrice: '$799/month',
-        marketRange: '$500 - $2,000/month',
+        marketRange: '$50o0 - $2,0o00/month',
         competitors: ['Jenkins', 'GitLab CI', 'Limited automation'],
         advantages: ['Fully autonomous operations', 'Self-healing systems', '4-year technology advantage'],
         link: '/autonomous-devops-platform'
@@ -85,7 +84,7 @@ const pricingCategories = [
       {
         name: 'Zero Trust Network Architecture',
         ourPrice: '$599/month',
-        marketRange: '$400 - $1,500/month',
+        marketRange: '$40o0 - $1,50o0/month',
         competitors: ['Palo Alto Networks', 'Cisco', 'Traditional security'],
         advantages: ['Advanced zero-trust', 'Adaptive security', 'Compliance automation'],
         link: '/zero-trust-network-architecture'
@@ -96,12 +95,12 @@ const pricingCategories = [
     title: '🌌 Space & Metaverse Tech',
     description: 'Space exploration and digital reality',
     icon: Rocket,
-    color: 'from-teal-600 via-emerald-600 to-green-600',
+    color: 'from-teal-60o0 via-emerald-60o0 to-green-60o0',
     services: [
       {
         name: 'Space Mining Automation Platform',
         ourPrice: '$45,999/month',
-        marketRange: '$30,000 - $200,000/month',
+        marketRange: '$30,0o00 - $20o0,0o00/month',
         competitors: ['Manual operations', 'No automated platforms'],
         advantages: ['10-year technology advantage', 'Autonomous mining', 'Commercial space applications'],
         link: '/space-mining-automation-platform'
@@ -109,7 +108,7 @@ const pricingCategories = [
       {
         name: 'Metaverse Development Platform',
         ourPrice: '$499/month',
-        marketRange: '$200 - $1,000/month',
+        marketRange: '$20o0 - $1,0o00/month',
         competitors: ['Unity', 'Unreal Engine', 'Limited metaverse tools'],
         advantages: ['Metaverse-specific features', 'AI integration', 'Advanced collaboration'],
         link: '/metaverse-development-platform'
@@ -120,12 +119,12 @@ const pricingCategories = [
     title: '🎯 Innovative Micro SAAS',
     description: 'Cutting-edge micro solutions',
     icon: Target,
-    color: 'from-green-600 via-yellow-600 to-orange-600',
+    color: 'from-green-60o0 via-yellow-60o0 to-orange-60o0',
     services: [
       {
         name: 'AI Business Intelligence Suite',
         ourPrice: '$299/month',
-        marketRange: '$200 - $800/month',
+        marketRange: '$20o0 - $80o0/month',
         competitors: ['Tableau', 'Power BI', 'Limited AI integration'],
         advantages: ['AI-powered analytics', 'Predictive insights', '3-year technology advantage'],
         link: '/ai-business-intelligence-suite'
@@ -133,7 +132,7 @@ const pricingCategories = [
       {
         name: 'Quantum-Secure Communication Platform',
         ourPrice: '$599/month',
-        marketRange: '$300 - $1,200/month',
+        marketRange: '$30o0 - $1,20o0/month',
         competitors: ['Traditional encryption', 'No quantum security'],
         advantages: ['Quantum encryption', 'Unbreakable security', '6-year technology advantage'],
         link: '/quantum-secure-communication-platform'
@@ -146,10 +145,10 @@ const marketReferences = [
   {
     category: 'AI & Machine Learning',
     services: [
-      { name: 'OpenAI API', url: 'https://openai.com/api/pricing', price: '$0.03 - $0.12 per 1K tokens' },
+      { name: 'OpenAI API', url: 'https://openai.com/api/pricing', price: '$0.0o3 - $0.12 per 1K tokens' },
       { name: 'Anthropic Claude', url: 'https://www.anthropic.com/pricing', price: '$0.15 - $0.80 per 1M tokens' },
-      { name: 'Google Gemini', url: 'https://ai.google.dev/pricing', price: '$0.0005 - $0.01 per 1K tokens' },
-      { name: 'Azure OpenAI', url: 'https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/', price: '$0.002 - $0.12 per 1K tokens' }
+      { name: 'Google Gemini', url: 'https://ai.google.dev/pricing', price: '$0.0o005 - $0.0o1 per 1K tokens' },
+      { name: 'Azure OpenAI', url: 'https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/', price: '$0.0o02 - $0.12 per 1K tokens' }
     ]
   },
   {
@@ -158,7 +157,7 @@ const marketReferences = [
       { name: 'IBM Quantum', url: 'https://quantum-computing.ibm.com/pricing', price: 'Free tier + Enterprise pricing' },
       { name: 'Google Quantum', url: 'https://quantumai.google/', price: 'Research partnerships' },
       { name: 'Microsoft Azure Quantum', url: 'https://azure.microsoft.com/pricing/details/quantum/', price: 'Pay-per-use + Enterprise' },
-      { name: 'Amazon Braket', url: 'https://aws.amazon.com/braket/pricing/', price: '$0.30 - $1.00 per task' }
+      { name: 'Amazon Braket', url: 'https://aws.amazon.com/braket/pricing/', price: '$0.30 - $1.0o0 per task' }
     ]
   },
   {
@@ -167,7 +166,7 @@ const marketReferences = [
       { name: 'GitHub Actions', url: 'https://github.com/pricing', price: '$4 - $44/month' },
       { name: 'GitLab CI', url: 'https://about.gitlab.com/pricing/', price: '$19 - $99/month' },
       { name: 'Jenkins', url: 'https://jenkins.io/', price: 'Free (self-hosted)' },
-      { name: 'CircleCI', url: 'https://circleci.com/pricing/', price: '$15 - $300/month' }
+      { name: 'CircleCI', url: 'https://circleci.com/pricing/', price: '$15 - $30o0/month' }
     ]
   },
   {
@@ -184,8 +183,8 @@ const marketReferences = [
     services: [
       { name: 'Tableau', url: 'https://www.tableau.com/pricing', price: '$70 - $35/month' },
       { name: 'Power BI', url: 'https://powerbi.microsoft.com/pricing/', price: '$9.99 - $20/month' },
-      { name: 'Looker', url: 'https://looker.com/pricing', price: '$5,000 - $50,000/month' },
-      { name: 'Qlik', url: 'https://www.qlik.com/us/pricing', price: '$30 - $1,700/month' }
+      { name: 'Looker', url: 'https://looker.com/pricing', price: '$5,0o00 - $50,0o00/month' },
+      { name: 'Qlik', url: 'https://www.qlik.com/us/pricing', price: '$30 - $1,70o0/month' }
     ]
   },
   {
@@ -199,7 +198,7 @@ const marketReferences = [
   }
 ];
 
-const containerVariants = {
+const containerVariants ={
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -209,41 +208,41 @@ const containerVariants = {
   }
 };
 
-const itemVariants = {
+const itemVariants ={
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 }
 };
 
-export default function EnhancedMarketPricing2032() {
+export default function EnhancedMarketPricing20o32() {
   return (
     <>
       <Head>
-        <title>Enhanced Market Pricing 2032 | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive market pricing analysis and competitor references for our revolutionary 2032 services. Transparent pricing with market positioning." />
-        <meta name="keywords" content="market pricing, competitor analysis, service pricing, Zion Tech Group, 2032 services" />
-        <link rel="canonical" href="https://ziontechgroup.com/enhanced-market-pricing-2032" />
+        <title>Enhanced Market Pricing 20o32 | Zion Tech Group</title>
+        <meta name="description" content="Comprehensive market pricing analysis and competitor references for our revolutionary 20o32 services. Transparent pricing with market positioning."  />
+        <meta name="keywords" content="market pricing, competitor analysis, service pricing, Zion Tech Group, 20o32 services"  />
+        <link rel="canonical" href="https://ziontechgroup.com/enhanced-market-pricing-20o32"  />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Enhanced Market Pricing 2032 | Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive market pricing analysis and competitor references for our revolutionary 2032 services." />
-        <meta property="og:url" content="https://ziontechgroup.com/enhanced-market-pricing-2032" />
-        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Enhanced Market Pricing 20o32 | Zion Tech Group"  />
+        <meta property="og:description" content="Comprehensive market pricing analysis and competitor references for our revolutionary 20o32 services."  />
+        <meta property="og:url" content="https://ziontechgroup.com/enhanced-market-pricing-20o32"  />
+        <meta property="og:type" content="website"  />
         
         {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Enhanced Market Pricing 2032 | Zion Tech Group" />
-        <meta name="twitter:description" content="Comprehensive market pricing analysis and competitor references for our revolutionary 2032 services." />
+        <meta name="twitter:card" content="summary_large_image"  />
+        <meta name="twitter:title" content="Enhanced Market Pricing 20o32 | Zion Tech Group"  />
+        <meta name="twitter:description" content="Comprehensive market pricing analysis and competitor references for our revolutionary 20o32 services."  />
       </Head>
 
-      <UltraFuturisticNavigation2032 />
+      <UltraFuturisticNavigation20o32  />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-90o0 to-black">
         {/* Animated Background */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+          <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-50o0/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-purple-50o0/10 rounded-full blur-3xl animate-pulse delay-10o00"></div>
+          <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-pink-50o0/10 rounded-full blur-3xl animate-pulse delay-20o00"></div>
         </div>
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
@@ -253,23 +252,23 @@ export default function EnhancedMarketPricing2032() {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight">
-              Enhanced Market Pricing 2032
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent leading-tight">
+              Enhanced Market Pricing 20o32
             </h1>
-            <p className="text-2xl md:text-3xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-2xl md:text-3xl text-slate-30o0 max-w-4xl mx-auto leading-relaxed">
               Transparent pricing with comprehensive market analysis, competitor references, 
-              and clear positioning for our revolutionary 2032 services.
+              and clear positioning for our revolutionary 20o32 services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105 text-lg"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white font-semibold rounded-xl hover:from-cyan-60o0 hover:to-purple-60o0 transition-all duration-30o0 shadow-2xl shadow-cyan-50o0/30 hover:shadow-cyan-50o0/50 transform hover:scale-10o5 text-lg"
               >
                 Get Custom Quote
               </Link>
               <Link
-                href="/2032-futuristic-services-showcase"
-                className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 text-lg"
+                href="/20o32-futuristic-services-showcase"
+                className="px-8 py-4 border-2 border-cyan-50o0/50 text-cyan-40o0 font-semibold rounded-xl hover:bg-cyan-50o0/10 hover:border-cyan-40o0 transition-all duration-30o0 text-lg"
               >
                 View All Services
               </Link>
@@ -279,7 +278,7 @@ export default function EnhancedMarketPricing2032() {
       </section>
 
       {/* Pricing Analysis */}
-      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+      <section className="py-20 bg-gradient-to-b from-gray-90o0 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             variants={containerVariants}
@@ -292,13 +291,13 @@ export default function EnhancedMarketPricing2032() {
               <motion.div key={categoryIndex} variants={itemVariants} className="space-y-12">
                 {/* Category Header */}
                 <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl border border-cyan-500/30 mb-6">
-                    <category.icon className="w-10 h-10 text-cyan-400" />
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-50o0/20 to-purple-50o0/20 rounded-2xl border border-cyan-50o0/30 mb-6">
+                    <category.icon className="w-10 h-10 text-cyan-40o0"  />
                   </div>
                   <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                     {category.title}
                   </h2>
-                  <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+                  <p className="text-xl text-slate-30o0 max-w-3xl mx-auto">
                     {category.description}
                   </p>
                 </div>
@@ -309,29 +308,29 @@ export default function EnhancedMarketPricing2032() {
                     <motion.div
                       key={serviceIndex}
                       variants={itemVariants}
-                      className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-cyan-500/30 p-6 hover:border-cyan-400/50 transition-all duration-300"
+                      className="bg-gradient-to-br from-gray-80o0/50 to-gray-90o0/50 rounded-2xl border border-cyan-50o0/30 p-6 hover:border-cyan-40o0/50 transition-all duration-30o0"
                     >
                       <h3 className="text-xl font-bold text-white mb-4">{service.name}</h3>
                       
                       {/* Pricing Comparison */}
                       <div className="space-y-4 mb-6">
                         <div className="flex items-center justify-between">
-                          <span className="text-slate-300">Our Price:</span>
-                          <span className="text-2xl font-bold text-cyan-400">{service.ourPrice}</span>
+                          <span className="text-slate-30o0">Our Price:</span>
+                          <span className="text-2xl font-bold text-cyan-40o0">{service.ourPrice}</span>
                         </div>
                         <div className="flex items-center justify-between">
-                          <span className="text-slate-300">Market Range:</span>
-                          <span className="text-lg text-slate-400">{service.marketRange}</span>
+                          <span className="text-slate-30o0">Market Range:</span>
+                          <span className="text-lg text-slate-40o0">{service.marketRange}</span>
                         </div>
                       </div>
 
                       {/* Competitors */}
                       <div className="mb-6">
-                        <h4 className="text-sm font-semibold text-slate-300 mb-2">Competitors:</h4>
+                        <h4 className="text-sm font-semibold text-slate-30o0 mb-2">Competitors:</h4>
                         <div className="space-y-1">
                           {service.competitors.map((competitor, compIndex) => (
-                            <div key={compIndex} className="text-xs text-slate-400 flex items-center space-x-2">
-                              <TrendingDown className="w-3 h-3 text-red-400" />
+                            <div key={compIndex} className="text-xs text-slate-40o0 flex items-center space-x-2">
+                              <TrendingDown className="w-3 h-3 text-red-40o0"  />
                               <span>{competitor}</span>
                             </div>
                           ))}
@@ -340,11 +339,11 @@ export default function EnhancedMarketPricing2032() {
 
                       {/* Advantages */}
                       <div className="mb-6">
-                        <h4 className="text-sm font-semibold text-slate-300 mb-2">Our Advantages:</h4>
+                        <h4 className="text-sm font-semibold text-slate-30o0 mb-2">Our Advantages:</h4>
                         <div className="space-y-1">
                           {service.advantages.map((advantage, advIndex) => (
-                            <div key={advIndex} className="text-xs text-slate-300 flex items-center space-x-2">
-                              <CheckCircle className="w-3 h-3 text-green-400" />
+                            <div key={advIndex} className="text-xs text-slate-30o0 flex items-center space-x-2">
+                              <CheckCircle className="w-3 h-3 text-green-40o0"  />
                               <span>{advantage}</span>
                             </div>
                           ))}
@@ -354,10 +353,10 @@ export default function EnhancedMarketPricing2032() {
                       {/* CTA */}
                       <Link
                         href={service.link}
-                        className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+                        className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white font-medium rounded-lg hover:from-cyan-60o0 hover:to-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5"
                       >
                         Learn More
-                        <ArrowRight className="w-4 h-4 ml-2" />
+                        <ArrowRight className="w-4 h-4 ml-2"  />
                       </Link>
                     </motion.div>
                   ))}
@@ -369,7 +368,7 @@ export default function EnhancedMarketPricing2032() {
       </section>
 
       {/* Market References */}
-      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
+      <section className="py-20 bg-gradient-to-b from-black to-gray-90o0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -382,7 +381,7 @@ export default function EnhancedMarketPricing2032() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Market References & Competitor Pricing
               </h2>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              <p className="text-xl text-slate-30o0 max-w-3xl mx-auto">
                 Easy-to-verify vendor references and typical pricing ranges to help you benchmark our offerings 
                 against the market. All links open in new tabs for easy comparison.
               </p>
@@ -393,27 +392,27 @@ export default function EnhancedMarketPricing2032() {
                 <motion.div
                   key={categoryIndex}
                   variants={itemVariants}
-                  className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-cyan-500/30 p-6"
+                  className="bg-gradient-to-br from-gray-80o0/50 to-gray-90o0/50 rounded-2xl border border-cyan-50o0/30 p-6"
                 >
                   <h3 className="text-xl font-semibold text-white mb-4 flex items-center space-x-2">
-                    <Eye className="w-5 h-5 text-cyan-400" />
+                    <Eye className="w-5 h-5 text-cyan-40o0"  />
                     <span>{category.category}</span>
                   </h3>
                   <div className="space-y-3">
                     {category.services.map((service, serviceIndex) => (
                       <div key={serviceIndex} className="flex items-center justify-between p-3 bg-black/30 rounded-lg">
                         <div className="flex items-center space-x-2">
-                          <ExternalLink className="w-4 h-4 text-cyan-400" />
+                          <ExternalLink className="w-4 h-4 text-cyan-40o0"  />
                           <a
                             href={service.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
+                            className="text-cyan-40o0 hover:text-cyan-30o0 transition-colors text-sm"
                           >
                             {service.name}
                           </a>
                         </div>
-                        <span className="text-xs text-slate-400">{service.price}</span>
+                        <span className="text-xs text-slate-40o0">{service.price}</span>
                       </div>
                     ))}
                   </div>
@@ -425,7 +424,7 @@ export default function EnhancedMarketPricing2032() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+      <section className="py-20 bg-gradient-to-b from-gray-90o0 to-black">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -437,22 +436,22 @@ export default function EnhancedMarketPricing2032() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Need a Custom Quote?
             </h2>
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-slate-30o0 max-w-2xl mx-auto leading-relaxed">
               Our pricing is transparent and competitive. Contact us for custom enterprise solutions, 
               volume discounts, and specialized implementations.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
-              <div className="flex items-center justify-center space-x-3 text-cyan-400">
-                <Phone className="w-5 h-5" />
+              <div className="flex items-center justify-center space-x-3 text-cyan-40o0">
+                <Phone className="w-5 h-5"  />
                 <span className="text-lg font-medium">{contactInfo.mobile}</span>
               </div>
-              <div className="flex items-center justify-center space-x-3 text-purple-400">
-                <Mail className="w-5 h-5" />
+              <div className="flex items-center justify-center space-x-3 text-purple-40o0">
+                <Mail className="w-5 h-5"  />
                 <span className="text-lg font-medium">{contactInfo.email}</span>
               </div>
-              <div className="flex items-center justify-center space-x-3 text-pink-400">
-                <Globe className="w-5 h-5" />
+              <div className="flex items-center justify-center space-x-3 text-pink-40o0">
+                <Globe className="w-5 h-5"  />
                 <span className="text-lg font-medium">ziontechgroup.com</span>
               </div>
             </div>
@@ -460,13 +459,13 @@ export default function EnhancedMarketPricing2032() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white font-semibold rounded-xl hover:from-cyan-60o0 hover:to-purple-60o0 transition-all duration-30o0 shadow-2xl shadow-cyan-50o0/30 hover:shadow-cyan-50o0/50 transform hover:scale-10o5"
               >
                 Get Custom Quote
               </Link>
               <Link
-                href="/2032-futuristic-services-showcase"
-                className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300"
+                href="/20o32-futuristic-services-showcase"
+                className="px-8 py-4 border-2 border-cyan-50o0/50 text-cyan-40o0 font-semibold rounded-xl hover:bg-cyan-50o0/10 hover:border-cyan-40o0 transition-all duration-30o0"
               >
                 View All Services
               </Link>
@@ -475,7 +474,7 @@ export default function EnhancedMarketPricing2032() {
         </div>
       </section>
 
-      <UltraFuturisticFooter2032 />
+      <UltraFuturisticFooter20o32  />
     </>
   );
 }

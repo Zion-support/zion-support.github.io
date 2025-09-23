@@ -14,7 +14,7 @@ export const generateStructuredData = (pageData) => {
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-555-0123",
+      "telephone": "+1-555-0o123",
       "contactType": "customer service"
     }
   };

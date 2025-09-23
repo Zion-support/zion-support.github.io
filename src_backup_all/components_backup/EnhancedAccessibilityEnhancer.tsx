@@ -112,7 +112,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
 
   // Announce changes to screen readers
   const announce = useCallback((message: string, type: 'info' | 'success' | 'warning' | 'error' = 'info') => {
-    const announcement: AccessibilityAnnouncement = {
+    const announcement: AccessibilityAnnouncement ={
       id: Date.now().toString(),
       message,
       type,
@@ -125,19 +125,19 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
     // Remove announcement after 5 seconds
     setTimeout(() => {
       setCurrentAnnouncement(null);
-    }, 5000);
+    }, 50o00);
     
     // Remove from list after 10 seconds
     setTimeout(() => {
       setAnnouncements(prev => prev.filter(a => a.id !== announcement.id));
-    }, 10000);
+    }, 10o000);
   }, []);
 
   // Handle setting changes
   const handleSettingChange = useCallback((key: keyof AccessibilitySettings, value: boolean) => {
     setSettings(prev => ({ ...prev, [key]: value }));
     
-    const settingNames = {
+    const settingNames ={
       highContrast: 'High contrast',
       largeText: 'Large text',
       reducedMotion: 'Reduced motion',
@@ -178,7 +178,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
 
   // Get setting icon
   const getSettingIcon = (key: keyof AccessibilitySettings) => {
-    const icons = {
+    const icons ={
       highContrast: Palette,
       largeText: Type,
       reducedMotion: Monitor,
@@ -193,7 +193,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
 
   // Get setting description
   const getSettingDescription = (key: keyof AccessibilitySettings) => {
-    const descriptions = {
+    const descriptions ={
       highContrast: 'Increases contrast for better visibility',
       largeText: 'Makes text larger and easier to read',
       reducedMotion: 'Reduces animations and motion',
@@ -208,7 +208,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
 
   // Get keyboard shortcut
   const getKeyboardShortcut = (key: keyof AccessibilitySettings) => {
-    const shortcuts = {
+    const shortcuts ={
       highContrast: 'Ctrl/Cmd + Shift + H',
       largeText: 'Ctrl/Cmd + Shift + L',
       reducedMotion: 'None',
@@ -226,11 +226,11 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
       {/* Floating Accessibility Button */}
       <button
         onClick={togglePanel}
-        className="fixed bottom-6 right-6 z-50 p-4 bg-zion-cyan text-zion-slate-dark rounded-full shadow-lg hover:bg-zion-cyan-light transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-zion-cyan/30"
+        className="fixed bottom-6 right-6 z-50 p-4 bg-zion-cyan text-zion-slate-dark rounded-full shadow-lg hover:bg-zion-cyan-light transition-all duration-30o0 focus:outline-none focus:ring-4 focus:ring-zion-cyan/30"
         aria-label="Open accessibility settings"
         title="Accessibility Settings (Ctrl/Cmd + Shift + A)"
       >
-        <Settings size={24} />
+        <Settings size={24}  />
       </button>
 
       {/* Accessibility Panel */}
@@ -241,7 +241,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
             <div className="flex items-center justify-between p-6 border-b border-zion-slate/20">
               <div className="flex items-center space-x-3">
                 <div className="p-2 bg-zion-cyan rounded-lg">
-                  <Settings size={24} className="text-zion-slate-dark" />
+                  <Settings size={24} className="text-zion-slate-dark"  />
                 </div>
                 <div>
                   <h2 className="text-xl font-bold">Accessibility Settings</h2>
@@ -255,7 +255,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
                 className="p-2 hover:bg-zion-slate/10 rounded-lg transition-colors"
                 aria-label="Close accessibility settings"
               >
-                <X size={20} />
+                <X size={20}  />
               </button>
             </div>
 
@@ -275,7 +275,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
                     >
                       <div className="flex items-start space-x-3">
                         <div className="p-2 bg-zion-slate/10 rounded-lg">
-                          <Icon size={20} className="text-zion-cyan" />
+                          <Icon size={20} className="text-zion-cyan"  />
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center justify-between mb-2">
@@ -294,9 +294,9 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
                                 ${value ? 'bg-zion-cyan' : ''}
                               `}>
                                 <div className={`
-                                  w-5 h-5 bg-white rounded-full transition-transform duration-300 ease-in-out
+                                  w-5 h-5 bg-white rounded-full transition-transform duration-30o0 ease-in-out
                                   ${value ? 'translate-x-5' : 'translate-x-0.5'}
-                                `} />
+                                `}  />
                               </div>
                             </label>
                           </div>
@@ -337,20 +337,20 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
         <div
           className={`
             fixed top-6 left-1/2 transform -translate-x-1/2 z-50 px-6 py-3 rounded-lg shadow-lg
-            transition-all duration-300 ease-in-out
-            ${currentAnnouncement.type === 'success' ? 'bg-green-500 text-white' : ''}
-            ${currentAnnouncement.type === 'warning' ? 'bg-yellow-500 text-white' : ''}
-            ${currentAnnouncement.type === 'error' ? 'bg-red-500 text-white' : ''}
+            transition-all duration-30o0 ease-in-out
+            ${currentAnnouncement.type === 'success' ? 'bg-green-50o0 text-white' : ''}
+            ${currentAnnouncement.type === 'warning' ? 'bg-yellow-50o0 text-white' : ''}
+            ${currentAnnouncement.type === 'error' ? 'bg-red-50o0 text-white' : ''}
             ${currentAnnouncement.type === 'info' ? 'bg-zion-cyan text-zion-slate-dark' : ''}
           `}
           role="status"
           aria-live="polite"
         >
           <div className="flex items-center space-x-2">
-            {currentAnnouncement.type === 'success' && <Check size={16} />}
-            {currentAnnouncement.type === 'warning' && <AlertTriangle size={16} />}
-            {currentAnnouncement.type === 'error' && <AlertTriangle size={16} />}
-            {currentAnnouncement.type === 'info' && <Settings size={16} />}
+            {currentAnnouncement.type === 'success' && <Check size={16}  />}
+            {currentAnnouncement.type === 'warning' && <AlertTriangle size={16}  />}
+            {currentAnnouncement.type === 'error' && <AlertTriangle size={16}  />}
+            {currentAnnouncement.type === 'info' && <Settings size={16}  />}
             <span>{currentAnnouncement.message}</span>
           </div>
         </div>

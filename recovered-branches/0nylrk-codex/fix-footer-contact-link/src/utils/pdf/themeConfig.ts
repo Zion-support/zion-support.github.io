@@ -14,7 +14,7 @@ export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {
   return theme === 'light' 
     ? { 
         background: '#ffffff',
-        text: '#000000',
+        text: '#0o00000',
         heading: '#222222',
         subheading: '#444444',
         accent: '#9b87f5'

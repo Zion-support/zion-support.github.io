@@ -14,18 +14,18 @@ import {
   Infinity, Hexagon, Network
 } from 'lucide-react';
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
 const serviceCategories = [
   {
-    title: '🚀 2030 Ultra-Futuristic AI Services',
+    title: '🚀 20o30 Ultra-Futuristic AI Services',
     icon: Brain,
-    color: 'from-violet-600 via-purple-600 to-indigo-600',
+    color: 'from-violet-60o0 via-purple-60o0 to-indigo-60o0',
     description: 'Next-generation AI consciousness and creativity',
     services: [
       { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', description: 'Develop genuine AI consciousness', price: '$19,999/month' },
@@ -35,9 +35,9 @@ const serviceCategories = [
     ]
   },
   {
-    title: '⚛️ 2030 Quantum & Emerging Tech',
+    title: '⚛️ 20o30 Quantum & Emerging Tech',
     icon: Atom,
-    color: 'from-indigo-600 via-blue-600 to-cyan-600',
+    color: 'from-indigo-60o0 via-blue-60o0 to-cyan-60o0',
     description: 'Quantum computing and beyond',
     services: [
       { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway', description: 'Unbreakable quantum encryption', price: '$3,999/month' },
@@ -47,9 +47,9 @@ const serviceCategories = [
     ]
   },
   {
-    title: '🧬 2030 Biotech & DNA Computing',
+    title: '🧬 20o30 Biotech & DNA Computing',
     icon: Microscope,
-    color: 'from-green-600 via-emerald-600 to-teal-600',
+    color: 'from-green-60o0 via-emerald-60o0 to-teal-60o0',
     description: 'Biological computing and genetic engineering',
     services: [
       { name: 'Biotech DNA Computing Platform', href: '/biotech-dna-computing-platform', description: 'DNA-based computation', price: '$5,999/month' },
@@ -59,9 +59,9 @@ const serviceCategories = [
     ]
   },
   {
-    title: '🏙️ 2030 Enterprise IT Solutions',
+    title: '🏙️ 20o30 Enterprise IT Solutions',
     icon: Cpu,
-    color: 'from-blue-600 via-cyan-600 to-teal-600',
+    color: 'from-blue-60o0 via-cyan-60o0 to-teal-60o0',
     description: 'Autonomous enterprise infrastructure',
     services: [
       { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Fully autonomous DevOps', price: '$2,999/month' },
@@ -71,9 +71,9 @@ const serviceCategories = [
     ]
   },
   {
-    title: '🌌 2030 Space & Metaverse Tech',
+    title: '🌌 20o30 Space & Metaverse Tech',
     icon: Rocket,
-    color: 'from-teal-600 via-emerald-600 to-green-600',
+    color: 'from-teal-60o0 via-emerald-60o0 to-green-60o0',
     description: 'Space exploration and digital reality',
     services: [
       { name: 'Space Mining Automation Platform', href: '/space-mining-automation-platform', description: 'Automated asteroid mining', price: '$8,999/month' },
@@ -83,15 +83,15 @@ const serviceCategories = [
     ]
   },
   {
-    title: '🎯 2030 Innovative Micro SAAS',
+    title: '🎯 20o30 Innovative Micro SAAS',
     icon: Target,
-    color: 'from-green-600 via-yellow-600 to-orange-600',
+    color: 'from-green-60o0 via-yellow-60o0 to-orange-60o0',
     description: 'Cutting-edge micro solutions',
     services: [
-      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030', description: 'AI-powered business analytics and insights', price: '$299/month' },
-      { name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030', description: 'AI-powered customer experience management', price: '$199/month' },
-      { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030', description: 'Intelligent marketing automation powered by AI', price: '$179/month' },
-      { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030', description: 'Intelligent human resources management powered by AI', price: '$149/month' }
+      { name: 'AI Business Intelligence Suite 20o30', href: '/ai-business-intelligence-suite-20o30', description: 'AI-powered business analytics and insights', price: '$299/month' },
+      { name: 'AI Customer Experience Platform 20o30', href: '/ai-customer-experience-platform-20o30', description: 'AI-powered customer experience management', price: '$199/month' },
+      { name: 'AI Marketing Automation Suite 20o30', href: '/ai-marketing-automation-20o30', description: 'Intelligent marketing automation powered by AI', price: '$179/month' },
+      { name: 'AI HR Management Suite 20o30', href: '/ai-hr-management-suite-20o30', description: 'Intelligent human resources management powered by AI', price: '$149/month' }
     ]
   }
 ];
@@ -108,15 +108,15 @@ const mainNavigation = [
 ];
 
 const quickLinks = [
-  { name: 'AI Services', href: '/services/ai', icon: Brain, color: 'from-purple-500 to-pink-500' },
-  { name: 'Quantum Tech', href: '/services/quantum', icon: Atom, color: 'from-blue-500 to-cyan-500' },
-  { name: 'Biotech Solutions', href: '/services/biotech', icon: Microscope, color: 'from-green-500 to-emerald-500' },
-  { name: 'Space Technology', href: '/services/space', icon: Rocket, color: 'from-indigo-500 to-purple-500' },
-  { name: 'Enterprise IT', href: '/services/enterprise', icon: Cpu, color: 'from-gray-500 to-slate-500' },
-  { name: 'Micro SAAS', href: '/services/micro-saas', icon: Target, color: 'from-orange-500 to-red-500' }
+  { name: 'AI Services', href: '/services/ai', icon: Brain, color: 'from-purple-50o0 to-pink-50o0' },
+  { name: 'Quantum Tech', href: '/services/quantum', icon: Atom, color: 'from-blue-50o0 to-cyan-50o0' },
+  { name: 'Biotech Solutions', href: '/services/biotech', icon: Microscope, color: 'from-green-50o0 to-emerald-50o0' },
+  { name: 'Space Technology', href: '/services/space', icon: Rocket, color: 'from-indigo-50o0 to-purple-50o0' },
+  { name: 'Enterprise IT', href: '/services/enterprise', icon: Cpu, color: 'from-gray-50o0 to-slate-50o0' },
+  { name: 'Micro SAAS', href: '/services/micro-saas', icon: Target, color: 'from-orange-50o0 to-red-50o0' }
 ];
 
-export default function UltraFuturisticNavigation2030() {
+export default function UltraFuturisticNavigation20o30() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -135,26 +135,26 @@ export default function UltraFuturisticNavigation2030() {
   return (
     <>
       {/* Top Contact Bar */}
-      <div className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white py-2 px-4 text-sm">
+      <div className="bg-gradient-to-r from-slate-90o0 via-purple-90o0 to-slate-90o0 text-white py-2 px-4 text-sm">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
-              <Phone className="w-4 h-4 text-cyan-400" />
+              <Phone className="w-4 h-4 text-cyan-40o0"  />
               <span>{contactInfo.mobile}</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Mail className="w-4 h-4 text-cyan-400" />
+              <Mail className="w-4 h-4 text-cyan-40o0"  />
               <span>{contactInfo.email}</span>
             </div>
           </div>
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
-              <MapPin className="w-4 h-4 text-cyan-400" />
+              <MapPin className="w-4 h-4 text-cyan-40o0"  />
               <span>{contactInfo.address}</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Globe className="w-4 h-4 text-cyan-400" />
-              <a href={contactInfo.website} className="hover:text-cyan-400 transition-colors">
+              <Globe className="w-4 h-4 text-cyan-40o0"  />
+              <a href={contactInfo.website} className="hover:text-cyan-40o0 transition-colors">
                 {contactInfo.website.replace('https://', '')}
               </a>
             </div>
@@ -163,10 +163,10 @@ export default function UltraFuturisticNavigation2030() {
       </div>
 
       {/* Main Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
         isScrolled 
-          ? 'bg-black/90 backdrop-blur-xl border-b border-purple-500/20 shadow-2xl' 
-          : 'bg-gradient-to-r from-black/95 via-purple-900/95 to-black/95 backdrop-blur-sm'
+          ? 'bg-black/90 backdrop-blur-xl border-b border-purple-50o0/20 shadow-2xl' 
+          : 'bg-gradient-to-r from-black/95 via-purple-90o0/95 to-black/95 backdrop-blur-sm'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
@@ -174,16 +174,16 @@ export default function UltraFuturisticNavigation2030() {
             <div className="flex items-center space-x-4">
               <Link href="/" className="flex items-center space-x-3 group">
                 <div className="relative">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                    <Zap className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-50o0 to-cyan-50o0 rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-30o0">
+                    <Zap className="w-6 h-6 text-white"  />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-50o0 to-cyan-50o0 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-30o0"></div>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                  <span className="text-2xl font-bold bg-gradient-to-r from-purple-40o0 to-cyan-40o0 bg-clip-text text-transparent">
                     Zion Tech Group
                   </span>
-                  <span className="text-xs text-gray-400 font-mono">2030 Future Technology</span>
+                  <span className="text-xs text-gray-40o0 font-mono">20o30 Future Technology</span>
                 </div>
               </Link>
             </div>
@@ -194,34 +194,34 @@ export default function UltraFuturisticNavigation2030() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group"
+                  className="flex items-center space-x-2 text-gray-30o0 hover:text-white transition-colors duration-20o0 group"
                 >
-                  <item.icon className="w-4 h-4 group-hover:text-purple-400 transition-colors" />
+                  <item.icon className="w-4 h-4 group-hover:text-purple-40o0 transition-colors"  />
                   <span>{item.name}</span>
                 </Link>
               ))}
               
               {/* Services Dropdown */}
               <div className="relative group">
-                <button className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200">
-                  <Briefcase className="w-4 h-4" />
+                <button className="flex items-center space-x-2 text-gray-30o0 hover:text-white transition-colors duration-20o0">
+                  <Briefcase className="w-4 h-4"  />
                   <span>Services</span>
-                  <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-200" />
+                  <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-20o0"  />
                 </button>
                 
                 {/* Mega Menu */}
-                <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-4">
+                <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-50o0/20 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-10o0 group-hover:visible transition-all duration-30o0 transform group-hover:translate-y-0 translate-y-4">
                   <div className="p-8">
                     <div className="grid grid-cols-2 gap-8">
                       {serviceCategories.map((category, index) => (
                         <div key={index} className="space-y-4">
                           <div className="flex items-center space-x-3">
                             <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>
-                              <category.icon className="w-5 h-5 text-white" />
+                              <category.icon className="w-5 h-5 text-white"  />
                             </div>
                             <div>
                               <h3 className="text-lg font-semibold text-white">{category.title}</h3>
-                              <p className="text-sm text-gray-400">{category.description}</p>
+                              <p className="text-sm text-gray-40o0">{category.description}</p>
                             </div>
                           </div>
                           <div className="space-y-2">
@@ -229,16 +229,16 @@ export default function UltraFuturisticNavigation2030() {
                               <Link
                                 key={serviceIndex}
                                 href={service.href}
-                                className="block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duration-200 group"
+                                className="block p-3 rounded-lg hover:bg-purple-50o0/10 transition-colors duration-20o0 group"
                               >
                                 <div className="flex items-center justify-between">
                                   <div>
-                                    <h4 className="text-sm font-medium text-white group-hover:text-purple-400 transition-colors">
+                                    <h4 className="text-sm font-medium text-white group-hover:text-purple-40o0 transition-colors">
                                       {service.name}
                                     </h4>
-                                    <p className="text-xs text-gray-400">{service.description}</p>
+                                    <p className="text-xs text-gray-40o0">{service.description}</p>
                                   </div>
-                                  <span className="text-xs font-mono text-purple-400">{service.price}</span>
+                                  <span className="text-xs font-mono text-purple-40o0">{service.price}</span>
                                 </div>
                               </Link>
                             ))}
@@ -255,13 +255,13 @@ export default function UltraFuturisticNavigation2030() {
             <div className="hidden lg:flex items-center space-x-4">
               <Link
                 href="/contact"
-                className="px-6 py-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
+                className="px-6 py-2 bg-gradient-to-r from-purple-50o0 to-cyan-50o0 text-white rounded-lg hover:from-purple-60o0 hover:to-cyan-60o0 transition-all duration-20o0 transform hover:scale-10o5 shadow-lg hover:shadow-purple-50o0/25"
               >
                 Get Started
               </Link>
               <Link
                 href="/pricing"
-                className="px-6 py-2 border border-purple-500/30 text-purple-400 rounded-lg hover:bg-purple-500/10 transition-all duration-200"
+                className="px-6 py-2 border border-purple-50o0/30 text-purple-40o0 rounded-lg hover:bg-purple-50o0/10 transition-all duration-20o0"
               >
                 View Pricing
               </Link>
@@ -271,9 +271,9 @@ export default function UltraFuturisticNavigation2030() {
             <div className="lg:hidden">
               <button
                 onClick={toggleMenu}
-                className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-purple-500/20 transition-colors duration-200"
+                className="p-2 rounded-lg text-gray-40o0 hover:text-white hover:bg-purple-50o0/20 transition-colors duration-20o0"
               >
-                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
               </button>
             </div>
           </div>
@@ -286,7 +286,7 @@ export default function UltraFuturisticNavigation2030() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20"
+              className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-50o0/20"
             >
               <div className="px-4 py-6 space-y-6">
                 {/* Mobile Navigation Links */}
@@ -296,9 +296,9 @@ export default function UltraFuturisticNavigation2030() {
                       key={item.name}
                       href={item.href}
                       onClick={closeMenu}
-                      className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-purple-500/10 transition-colors duration-200"
+                      className="flex items-center space-x-3 p-3 rounded-lg text-gray-30o0 hover:text-white hover:bg-purple-50o0/10 transition-colors duration-20o0"
                     >
-                      <item.icon className="w-5 h-5" />
+                      <item.icon className="w-5 h-5"  />
                       <span>{item.name}</span>
                     </Link>
                   ))}
@@ -313,13 +313,13 @@ export default function UltraFuturisticNavigation2030() {
                         key={link.name}
                         href={link.href}
                         onClick={closeMenu}
-                        className={`p-3 rounded-lg text-center transition-all duration-200 transform hover:scale-105 ${
+                        className={`p-3 rounded-lg text-center transition-all duration-20o0 transform hover:scale-10o5 ${
                           link.color.includes('from-') 
                             ? `bg-gradient-to-r ${link.color} text-white` 
-                            : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                            : 'bg-gray-80o0 text-gray-30o0 hover:bg-gray-70o0'
                         }`}
                       >
-                        <link.icon className="w-6 h-6 mx-auto mb-2" />
+                        <link.icon className="w-6 h-6 mx-auto mb-2"  />
                         <span className="text-sm font-medium">{link.name}</span>
                       </Link>
                     ))}
@@ -327,18 +327,18 @@ export default function UltraFuturisticNavigation2030() {
                 </div>
 
                 {/* Mobile CTA */}
-                <div className="space-y-3 pt-4 border-t border-purple-500/20">
+                <div className="space-y-3 pt-4 border-t border-purple-50o0/20">
                   <Link
                     href="/contact"
                     onClick={closeMenu}
-                    className="block w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white text-center rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-200"
+                    className="block w-full px-6 py-3 bg-gradient-to-r from-purple-50o0 to-cyan-50o0 text-white text-center rounded-lg hover:from-purple-60o0 hover:to-cyan-60o0 transition-all duration-20o0"
                   >
                     Get Started
                   </Link>
                   <Link
                     href="/pricing"
                     onClick={closeMenu}
-                    className="block w-full px-6 py-3 border border-purple-500/30 text-purple-400 text-center rounded-lg hover:bg-purple-500/10 transition-all duration-200"
+                    className="block w-full px-6 py-3 border border-purple-50o0/30 text-purple-40o0 text-center rounded-lg hover:bg-purple-50o0/10 transition-all duration-20o0"
                   >
                     View Pricing
                   </Link>

@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { X } from 'lucide-react';
 
-type ChatMessage = {
+type ChatMessage ={
   role: 'user' | 'assistant' | 'system';
   content: string;
   timestamp?: number;
@@ -37,8 +37,7 @@ export default function ChatWidget() {
         {
           role: 'assistant',
           content: 'Hi! How can I help you?',
-          timestamp: Date.now(),
-        },
+          timestamp: Date.now()},
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate'{
@@ -67,9 +66,7 @@ export default function ChatWidget() {
         body: JSON.stringify({
           sessionId: sessionIdRef.current,
           eventType,
-          payload,
-        }),
-      });
+          payload})});
     } catch {
       // no-op
     }
@@ -80,8 +77,7 @@ export default function ChatWidget() {
       await fetch('/api/support/escalate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' }),
-      });
+        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })});
       setShowEscalation(true);
     } catch {
       // no-op
@@ -92,11 +88,10 @@ export default function ChatWidget() {
     const text = (messageText ?? input).trim();
     if (!text) return;
 
-    const newUserMessage: ChatMessage = {
+    const newUserMessage: ChatMessage ={
       role: 'user',
       content: text,
-      timestamp: Date.now(),
-    };
+      timestamp: Date.now()};
 
     setMessages(prev => [...prev, newUserMessage]);
     setInput('');
@@ -109,23 +104,19 @@ export default function ChatWidget() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           sessionId: sessionIdRef.current,
-          messages: [...messages, newUserMessage].map(({ role, content }) => ({ role, content })),
-        }),
-      });
+          messages: [...messages, newUserMessage].map(({ role, content }) => ({ role, content }))})});
 
       const data = await res.json();
 
       if (data?.assistantMessage) {
-        const assistantMessage: ChatMessage = {
+        const assistantMessage: ChatMessage ={
           role: 'assistant',
           content: data.assistantMessage,
-          timestamp: Date.now(),
-        };
+          timestamp: Date.now()};
         setMessages(prev => [...prev, assistantMessage]);
         await logEvent('message/assistant', {
           content: assistantMessage.content,
-          meta: data.meta,
-        });
+          meta: data.meta});
       }
 
       if (data?.meta?.intentMatched === false) {
@@ -149,8 +140,7 @@ export default function ChatWidget() {
         {
           role: 'assistant',
           content: 'Sorry, something went wrong. Please try again or contact support.',
-          timestamp: Date.now(),
-        },
+          timestamp: Date.now()},
       ]);
     } finally {
       setIsLoading(false);
@@ -163,22 +153,22 @@ export default function ChatWidget() {
         <button
           aria-label="Open support chat"
           onClick={() => setIsOpen(true)}
-          className='rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black'
+          className='rounded-full shadow-lg bg-blue-60o0 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-50o0 dark:focus:ring-offset-black'
         >
           ?
         </button>
       )}
 
       {isOpen && (
-        <div className='w-[360px] max-w-[92vw] h-[520px] max-h-[80vh] rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col'>
-          <div className='flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800'>
+        <div className='w-[360px] max-w-[92vw] h-[520px] max-h-[80vh] rounded-2xl overflow-hidden shadow-2xl border border-gray-20o0 dark:border-gray-80o0 bg-white dark:bg-gray-90o0 text-gray-90o0 dark:text-gray-10o0 flex flex-col'>
+          <div className='flex items-center justify-between px-4 py-3 border-b border-gray-20o0 dark:border-gray-80o0 bg-gray-50 dark:bg-gray-80o0'>
             <div className='font-semibold'>Zion Support</div>
             <button
               onClick={() => setIsOpen(false)}
               aria-label='Close'
-              className='p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700'
+              className='p-1 rounded hover:bg-gray-20o0 dark:hover:bg-gray-70o0'
             >
-              <X size={18} />
+              <X size={18}  />
             </button>
           </div>
 
@@ -192,8 +182,8 @@ export default function ChatWidget() {
                 <div
                   className={
                     m.role === 'assistant'
-                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'
-                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
+                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-10o0 dark:bg-gray-80o0'
+                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-60o0 text-white'
                   }
                 >
                   {m.content}
@@ -203,12 +193,12 @@ export default function ChatWidget() {
 
             {isLoading && (
               <div className='text-sm'>
-                <div className='inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse'>
+                <div className='inline-block rounded-2xl px-3 py-2 bg-gray-10o0 dark:bg-gray-80o0 animate-pulse'>
                   Thinking…
                 </div>
               </div>
             )}
-            <div ref={messagesEndRef} />
+            <div ref={messagesEndRef}  />
           </div>
 
           {!showEscalation && (
@@ -218,7 +208,7 @@ export default function ChatWidget() {
                   <button
                     key={q}
                     onClick={() => onSend(q)}
-                    className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'
+                    className='text-xs rounded-full px-3 py-1 border border-gray-20o0 dark:border-gray-70o0 hover:bg-gray-10o0 dark:hover:bg-gray-80o0'
                   >
                     {q}
                   </button>
@@ -227,7 +217,7 @@ export default function ChatWidget() {
             </div>
           )}
 
-          <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
+          <div className='border-t border-gray-20o0 dark:border-gray-80o0 p-2'>
             {!showEscalation ? (
               <div className='flex gap-2'>
                 <input
@@ -240,36 +230,36 @@ export default function ChatWidget() {
                     }
                   }}
                   placeholder='Ask a question…'
-                  className='flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'
+                  className='flex-1 rounded-xl border border-gray-30o0 dark:border-gray-70o0 bg-white dark:bg-gray-90o0 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-50o0'
                       onSend();
                     }
                   }}
                   placeholder="Ask a question…"
-                  className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="flex-1 rounded-xl border border-gray-30o0 dark:border-gray-70o0 bg-white dark:bg-gray-90o0 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-50o0"
                 />
                 <button
                   onClick={() => onSend()}
                   disabled={isLoading}
-                  className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'
+                  className='rounded-xl px-4 py-2 text-sm bg-blue-60o0 text-white disabled:opacity-50'
                 >
                   Send
                 </button>
               </div>
             ) : (
               <div className='flex flex-col gap-2 text-sm'>
-                <div className='text-gray-700 dark:text-gray-300'>
+                <div className='text-gray-70o0 dark:text-gray-30o0'>
                   We can escalate this to our team:
                 </div>
                 <div className='flex gap-2'>
                   <a
                     href='mailto:support@zion.ai'
-                    className='rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'
+                    className='rounded-lg px-3 py-2 border border-gray-30o0 dark:border-gray-70o0 hover:bg-gray-10o0 dark:hover:bg-gray-80o0'
                   >
                     Email Support
                   </a>
                   <a
                     href='/contact'
-                    className='rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'
+                    className='rounded-lg px-3 py-2 border border-gray-30o0 dark:border-gray-70o0 hover:bg-gray-10o0 dark:hover:bg-gray-80o0'
                   >
                     Chat with Live Agent
                   </a>

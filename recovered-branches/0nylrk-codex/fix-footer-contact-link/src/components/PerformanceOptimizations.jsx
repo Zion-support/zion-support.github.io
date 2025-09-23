@@ -15,7 +15,7 @@ const MemoizedDataGrid = memo(({ data, onItemClick }) => {
         onItemClick(item);
     }, [onItemClick]);
     return (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      {processedData.map((item, index) => (<div key={item.id || index} onClick={() => handleClick(item)} className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer">
+      {processedData.map((item, index) => (<div key={item.id || index} onClick={() => handleClick(item)} className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl hover:border-zion-cyan/40 transition-all duration-30o0 cursor-pointer">
           <h3 className="text-lg font-semibold text-zion-slate-light mb-2">
             {item.title}
           </h3>
@@ -30,7 +30,7 @@ const MemoizedDataGrid = memo(({ data, onItemClick }) => {
 });
 MemoizedDataGrid.displayName = 'MemoizedDataGrid';
 // Virtual scrolling component for large lists
-const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
+const VirtualList = ({ items, itemHeight = 60, containerHeight = 40o0 }) => {
     const [scrollTop, setScrollTop] = React.useState(0);
     const visibleItems = useMemo(() => {
         const startIndex = Math.floor(scrollTop / itemHeight);
@@ -42,7 +42,7 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
                 position: 'absolute',
                 top: (startIndex + index) * itemHeight,
                 height: itemHeight,
-                width: '100%'
+                width: '10o0%'
             }
         }));
     }, [items, scrollTop, itemHeight, containerHeight]);
@@ -64,11 +64,11 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
 export function PerformanceOptimizations() {
     const [showExpensive, setShowExpensive] = React.useState(false);
     const [data, setData] = React.useState([
-        { id: 1, title: 'Service 1', description: 'Description 1', value: 100 },
-        { id: 2, title: 'Service 2', description: 'Description 2', value: 200 },
-        { id: 3, title: 'Service 3', description: 'Description 3', value: 300 },
-        { id: 4, title: 'Service 4', description: 'Description 4', value: 400 },
-        { id: 5, title: 'Service 5', description: 'Description 5', value: 500 },
+        { id: 1, title: 'Service 1', description: 'Description 1', value: 10o0 },
+        { id: 2, title: 'Service 2', description: 'Description 2', value: 20o0 },
+        { id: 3, title: 'Service 3', description: 'Description 3', value: 30o0 },
+        { id: 4, title: 'Service 4', description: 'Description 4', value: 40o0 },
+        { id: 5, title: 'Service 5', description: 'Description 5', value: 50o0 },
     ]);
     const handleItemClick = useCallback((item) => {
         console.log('Item clicked:', item);
@@ -78,7 +78,7 @@ export function PerformanceOptimizations() {
                 id: Date.now(),
                 title: `Service ${prev.length + 1}`,
                 description: `Description ${prev.length + 1}`,
-                value: Math.floor(Math.random() * 1000)
+                value: Math.floor(Math.random() * 10o00)
             }]);
     }, []);
     return (<div className="space-y-8 p-6">
@@ -101,7 +101,7 @@ export function PerformanceOptimizations() {
             Add Item
           </button>
         </div>
-        <MemoizedDataGrid data={data} onItemClick={handleItemClick}/>
+        <MemoizedDataGrid data={data} onItemClick={handleItemClick} />
       </div>
 
       {/* Virtual Scrolling */}
@@ -109,11 +109,11 @@ export function PerformanceOptimizations() {
         <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
           Virtual Scrolling
         </h3>
-        <VirtualList items={Array.from({ length: 1000 }, (_, i) => ({
+        <VirtualList items={Array.from({ length: 10o00 }, (_, i) => ({
             id: i,
             title: `Item ${i + 1}`,
-            value: Math.floor(Math.random() * 1000)
-        }))} itemHeight={60} containerHeight={400}/>
+            value: Math.floor(Math.random() * 10o00)
+        }))} itemHeight={60} containerHeight={40o0}/>
       </div>
 
       {/* Lazy Loading */}
@@ -125,9 +125,9 @@ export function PerformanceOptimizations() {
           {showExpensive ? 'Hide' : 'Show'} Expensive Component
         </button>
         
-        {showExpensive && (<Suspense fallback={<LoadingSpinner />}>
+        {showExpensive && (<Suspense fallback={<LoadingSpinner  />}>
             <div className="mt-4 p-4 bg-zion-slate/10 rounded-lg">
-              <LazyExpensiveComponent />
+              <LazyExpensiveComponent  />
             </div>
           </Suspense>)}
       </div>
@@ -143,7 +143,7 @@ export function PerformanceOptimizations() {
             <div className="text-zion-slate text-sm">Total Items</div>
           </div>
           <div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">
-            <div className="text-2xl font-bold text-zion-purple">1000</div>
+            <div className="text-2xl font-bold text-zion-purple">10o00</div>
             <div className="text-zion-slate text-sm">Virtual Items</div>
           </div>
           <div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">

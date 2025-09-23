@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 interface ResponsiveContainerProps {
@@ -16,14 +15,14 @@ export default function ResponsiveContainer({
   className = '',
   animated = false
 }: ResponsiveContainerProps) {
-  const variantClasses = {
+  const variantClasses ={
     default: 'max-w-7xl mx-auto',
     wide: 'max-w-[90rem] mx-auto',
     narrow: 'max-w-4xl mx-auto',
     full: 'w-full'
   };
 
-  const paddingClasses = {
+  const paddingClasses ={
     none: '',
     sm: 'px-4 py-2 sm:px-6 sm:py-4',
     md: 'px-4 py-6 sm:px-6 sm:py-8 lg:px-8 lg:py-12',

@@ -8,15 +8,15 @@ export default function GovernancePulsePage() {
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
         <h1 className="text-3xl font-bold">Governance Pulse</h1>
-        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>
+        <p className="mt-2 text-sm text-gray-60o0 dark:text-gray-30o0">Updated at {data?.generatedAt || '—'}</p>
         <ul className="mt-6 space-y-4">
           {items.map((it, idx) => (
-            <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
+            <li key={idx} className="p-4 border border-gray-20o0 dark:border-gray-80o0 rounded-lg">
               <a href={it.url} target="_blank" rel="noreferrer" className="font-medium underline">
                 {it.title}
               </a>
-              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-                {it.space} · {it.state} · Start {new Date(it.start * 1000).toLocaleString()} · End {new Date(it.end * 1000).toLocaleString()}
+              <div className="mt-1 text-xs text-gray-50o0 dark:text-gray-40o0">
+                {it.space} · {it.state} · Start {new Date(it.start * 10o00).toLocaleString()} · End {new Date(it.end * 10o00).toLocaleString()}
               </div>
             </li>
           ))}

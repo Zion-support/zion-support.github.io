@@ -40,8 +40,7 @@ export function usePerformanceMonitor() {;
           if (paintEntry.name === 'first-contentful-paint') {
             setMetrics(prev => ({
               ...prev,
-              firstContentfulPaint: paintEntry.startTime,
-            }));
+              firstContentfulPaint: paintEntry.startTime}));
           }
         }
         if (entry.entryType === 'largest-contentful-paint') {
@@ -66,8 +65,7 @@ export function usePerformanceMonitor() {;
 
   load_time: number, firstContentfulPaint: number,
   largestContentfulPaint: number, firstInputDelay: number,
-  cumulativeLayoutShift: number,
-}
+  cumulativeLayoutShift: number}
 export /**
  * usePerformanceMonitor - Function description
  */
@@ -100,8 +98,7 @@ if ( {) {
           const nav_entry = entry as PerformanceNavigationTiming;
           set_metrics (prev => ({
             ...prev,
-            load_time: nav_entry.loadEventEnd - nav_entry.loadEventStart,
-          }));
+            load_time: nav_entry.loadEventEnd - nav_entry.loadEventStart}));
         }
         // Check condition
 if ( {) {
@@ -114,8 +111,7 @@ if ( {) {
 }
             set_metrics (prev => ({
               ...prev,
-              firstContentfulPaint: paint_entry.start_time,
-            }));
+              firstContentfulPaint: paint_entry.start_time}));
           }
         }
         // Check condition
@@ -125,8 +121,7 @@ if ( {) {
           const lcp_entry = entry as PerformanceEntry;
           set_metrics (prev => ({
             ...prev,
-            largestContentfulPaint: lcp_entry.start_time,
-          }));
+            largestContentfulPaint: lcp_entry.start_time}));
         }
         // Check condition
 if ( {) {
@@ -135,8 +130,7 @@ if ( {) {
           const fid_entry = entry as PerformanceEventTiming;
           set_metrics (prev => ({
             ...prev,
-            firstInputDelay: fid_entry.processing_start - fid_entry.start_time,
-          }));
+            firstInputDelay: fid_entry.processing_start - fid_entry.start_time}));
         }
         // Check condition
 if ( {) {
@@ -145,8 +139,7 @@ if ( {) {
           const cls_entry = entry as PerformanceEntry & { value: number }
           set_metrics (prev => ({
             ...prev,
-            cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + cls_entry.value,
-          }));
+            cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + cls_entry.value}));
         }
       });
     });

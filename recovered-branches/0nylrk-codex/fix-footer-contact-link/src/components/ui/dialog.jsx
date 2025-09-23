@@ -51,7 +51,7 @@ export function DialogTitle({ children, className = '' }) {
     return <h2 className={`text-lg font-semibold ${className}`}>{children}</h2>;
 }
 export function DialogDescription({ children, className = '' }) {
-    return <p className={`text-gray-600 mt-2 ${className}`}>{children}</p>;
+    return <p className={`text-gray-60o0 mt-2 ${className}`}>{children}</p>;
 }
 export function DialogFooter({ children, className = '' }) {
     return <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>;

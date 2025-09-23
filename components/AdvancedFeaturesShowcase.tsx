@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 BrainZapShieldGlobeCpuDatabase
 
@@ -50,7 +49,7 @@ const features: Feature[] = [
 
 export default function AdvancedFeaturesShowcase() {
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <section className="py-20 bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -68,10 +67,10 @@ export default function AdvancedFeaturesShowcase() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: index * 0.1 }}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-30o0"
             >
               <div className="flex items-center mb-4">
-                <feature.icon className="h-8 w-8 text-purple-400 mr-3" />
+                <feature.icon className="h-8 w-8 text-purple-40o0 mr-3"  />
                 <h3 className="text-xl font-semibold text-white">
                   {feature.title}
                 </h3>
@@ -84,7 +83,7 @@ export default function AdvancedFeaturesShowcase() {
               <ul className="space-y-2">
                 {feature.benefits.map((benefitIndex) => (
                   <li key={benefitIndex} className="flex items-center text-white/60">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+                    <div className="w-2 h-2 bg-purple-40o0 rounded-full mr-3"></div>
                     {benefit}
                   </li>
                 ))}

@@ -19,7 +19,6 @@ import { toast } from "@/components/ui/use-toast";
 import { useInterviews } from "@/hooks/useInterviews";
 import {logErrorToProduction} from '@/utils/productionLogger';
 
-
 interface InterviewRequestFormProps {
   talent: TalentProfile;
   onClose: () => void;
@@ -28,8 +27,7 @@ interface InterviewRequestFormProps {
 
 const formSchema = z.object({
   date: z.date({
-    required_error: "Please select a date for the interview.",
-  }).refine(date => date > new Date(), {
+    required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
     message: "Interview date must be in the future"
   }),
   time: z.string().min(1, "Please select a time for the interview."),
@@ -37,8 +35,7 @@ const formSchema = z.object({
   platform: z.string().min(1, "Please select a meeting platform."),
   meetingLink: z.string().optional(),
   title: z.string().min(3, "Please provide a brief title for the interview."),
-  notes: z.string().optional(),
-});
+  notes: z.string().optional()});
 
 export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
   const { requestInterview } = useInterviews();
@@ -51,17 +48,14 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       duration: "30",
       platform: "zoom",
       notes: "",
-      meetingLink: "",
-    },
-  });
+      meetingLink: ""}});
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     if (!userDetails?.id) {
       toast({
         title: "Authentication required",
         description: "Please log in to schedule an interview",
-        variant: "destructive",
-      });
+        variant: "destructive"});
       return;
     }
 
@@ -69,7 +63,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
     try {
       // Combine date and time
-      const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`;
+      const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:0o0`;
       const scheduledDate = new Date(dateTimeString);
       
       // Calculate end time based on duration
@@ -89,26 +83,24 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
       toast({
         title: "Interview requested",
-        description: `Your interview request with ${talent.full_name} has been sent.`,
-      });
+        description: `Your interview request with ${talent.full_name} has been sent.`});
       onClose();
     } catch (error) {
       logErrorToProduction('Failed to schedule interview:', { data: error });
       toast({
         title: "Failed to schedule interview",
         description: "An error occurred while scheduling the interview. Please try again.",
-        variant: "destructive",
-      });
+        variant: "destructive"});
     } finally {
       setIsSubmitting(false);
     }
   }
 
   const timeSlots = [
-    "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
-    "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
-    "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
-    "18:00", "18:30", "19:00", "19:30", "20:00"
+    "09:0o0", "09:30", "10:0o0", "10:30", "11:0o0", "11:30",
+    "12:0o0", "12:30", "13:0o0", "13:30", "14:0o0", "14:30",
+    "15:0o0", "15:30", "16:0o0", "16:30", "17:0o0", "17:30",
+    "18:0o0", "18:30", "19:0o0", "19:30", "20:0o0"
   ];
 
   return (
@@ -121,7 +113,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               alt={talent.full_name}
               className="h-full w-full object-cover"
               loading="lazy"
-            />
+             />
           </div>
           <div>
             <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>
@@ -136,9 +128,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             <FormItem>
               <FormLabel>Interview Title</FormLabel>
               <FormControl>
-                <Input placeholder="Brief title for the interview" {...field} />
+                <Input placeholder="Brief title for the interview" {...field}  />
               </FormControl>
-              <FormMessage />
+              <FormMessage  />
             </FormItem>
           )}
         />
@@ -165,7 +157,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                         ) : (
                           <span>Pick a date</span>
                         )}
-                        <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                        <CalendarIcon className="ml-auto h-4 w-4 opacity-50"  />
                       </Button>
                     </FormControl>
                   </PopoverTrigger>
@@ -180,7 +172,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                     />
                   </PopoverContent>
                 </Popover>
-                <FormMessage />
+                <FormMessage  />
               </FormItem>
             )}
           />
@@ -194,10 +186,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select time" />
+                      <SelectValue placeholder="Select time"  />
                     </SelectTrigger>
                   </FormControl>
-                  <SelectContent className="max-h-[300px]">
+                  <SelectContent className="max-h-[30o0px]">
                     {timeSlots.map((time) => (
                       <SelectItem key={time} value={time}>
                         {time}
@@ -205,7 +197,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                     ))}
                   </SelectContent>
                 </Select>
-                <FormMessage />
+                <FormMessage  />
               </FormItem>
             )}
           />
@@ -221,7 +213,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select duration" />
+                      <SelectValue placeholder="Select duration"  />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
@@ -231,7 +223,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                     <SelectItem value="60">60 minutes</SelectItem>
                   </SelectContent>
                 </Select>
-                <FormMessage />
+                <FormMessage  />
               </FormItem>
             )}
           />
@@ -245,7 +237,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select platform" />
+                      <SelectValue placeholder="Select platform"  />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
@@ -255,7 +247,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                     <SelectItem value="other">Other</SelectItem>
                   </SelectContent>
                 </Select>
-                <FormMessage />
+                <FormMessage  />
               </FormItem>
             )}
           />
@@ -272,9 +264,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   <Input
                     placeholder={`Add your ${form.watch('platform')} link here`}
                     {...field}
-                  />
+                   />
                 </FormControl>
-                <FormMessage />
+                <FormMessage  />
               </FormItem>
             )}
           />
@@ -291,9 +283,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   placeholder="Share what you'd like to discuss in this interview"
                   className="h-20"
                   {...field}
-                />
+                 />
               </FormControl>
-              <FormMessage />
+              <FormMessage  />
             </FormItem>
           )}
         />

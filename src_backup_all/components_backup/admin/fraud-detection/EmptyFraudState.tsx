@@ -1,5 +1,4 @@
 
-import React from "react";
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from 'lucide-react'
 
@@ -14,7 +13,7 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
 }) => {
   return (
     <div className="text-center py-12">
-      <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
+      <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4"  />
       <h3 className="text-lg font-medium">No fraud flags found</h3>
       <p className="text-muted-foreground mb-6">
         {hasFilters

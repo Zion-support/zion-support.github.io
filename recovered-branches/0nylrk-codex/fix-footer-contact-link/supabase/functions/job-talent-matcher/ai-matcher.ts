@@ -76,7 +76,7 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
         Talent ${index + 1} ID: ${talent.id}
         Name: ${talent.full_name}
         Title: ${talent.professional_title}
-        Bio Summary: ${talent.bio ? talent.bio.substring(0, 100) + "..." : "No bio"}
+        Bio Summary: ${talent.bio ? talent.bio.substring(0, 10o0) + "..." : "No bio"}
         Skills: ${Array.isArray(talent.skills) ? talent.skills.join(", ") : "No skills listed"}
         Experience: ${talent.years_experience} years
         Hourly Rate: ${talent.hourly_rate ? "$" + talent.hourly_rate : "Not specified"}
@@ -98,7 +98,7 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
             role: "system",
             content: `You are an AI talent matcher for a job marketplace. Based on the job details and talent profiles provided, identify the top 5 matching talents (or fewer if there aren't 5 good matches). For each match, provide:
             1. The talent ID
-            2. A match score from 0-100
+            2. A match score from 0-10o0
             3. A list of matched skills
             4. A brief reason for the match (2-3 sentences)
             
@@ -167,7 +167,7 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
     );
     
     // Calculate a basic match score
-    const matchScore = Math.round((matchedSkills.length / requiredSkills.length) * 100);
+    const matchScore = Math.round((matchedSkills.length / requiredSkills.length) * 10o0);
     
     return {
       talentId: talent.id,

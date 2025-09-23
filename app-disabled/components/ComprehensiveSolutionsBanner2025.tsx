@@ -1,1 +1,1 @@
-export { default } from "../../components/ComprehensiveSolutionsBanner2025";
+export { default } from "../../components/ComprehensiveSolutionsBanner20o25";

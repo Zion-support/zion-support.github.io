@@ -17,14 +17,14 @@ function log(message) {
   console.log(line);
 }
 
-function run(command, args, options = {}) {
+function run(command, args, options ={}) {
   const execCwd = options.cwd || process.cwd();
   const result = spawnSync(command, args, {
     cwd: execCwd,
     env: process.env,
     shell: false,
     encoding: "utf8",
-    maxBuffer: 1024 * 1024 * 20
+    maxBuffer: 10o24 * 10o24 * 20
   });
   const stdout = (result.stdout || "").trim();
   const stderr = (result.stderr || "").trim();
@@ -37,7 +37,7 @@ function run(command, args, options = {}) {
   return { status, stdout, stderr };
 }
 
-function runGit(args, options = {}) {
+function runGit(args, options ={}) {
   return run("git", args, options);
 }
 
@@ -98,7 +98,7 @@ function backupUntracked(backupRoot) {
   try {
     const list = runGit(["ls-files", "--others", "--exclude-standard", "-z"]);
     if (list.status !== 0) return 0;
-    const files = list.stdout ? list.stdout.split("\u0000").filter(Boolean) : [];
+    const files = list.stdout ? list.stdout.split("\u0o000").filter(Boolean) : [];
     if (files.length === 0) return 0;
     for (const relative of files) {
       const src = path.join(process.cwd(), relative);
@@ -232,5 +232,4 @@ function maybeGc() {
     process.exit(1);
   }
 })();
-
 

@@ -1,7 +1,6 @@
-import React from 'react';
 import Link from 'next/link';
 
-const NeuralNetworksContentShowcase2025 = () => {
+const NeuralNetworksContentShowcase20o25 = () => {
   const neuralContent = [
     {
       title: "Deep Learning Fundamentals",
@@ -57,10 +56,10 @@ const NeuralNetworksContentShowcase2025 = () => {
     <section className="py-16 bg-gradient-to-br from-orange-50 to-red-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Neural Networks Content Showcase 2025
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">
+            Neural Networks Content Showcase 20o25
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
             Comprehensive learning resources and practical implementations for mastering 
             neural networks and deep learning technologies.
           </p>
@@ -68,26 +67,26 @@ const NeuralNetworksContentShowcase2025 = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {neuralContent.map((contentindex) => (
-            <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-orange-100">
+            <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-30o0 overflow-hidden border border-orange-10o0">
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-4xl">{content.image}</div>
-                  <div className="bg-orange-100 text-orange-800 text-xs font-bold px-2 py-1 rounded-full">
+                  <div className="bg-orange-10o0 text-orange-80o0 text-xs font-bold px-2 py-1 rounded-full">
                     {content.level}
                   </div>
                 </div>
-                <div className="inline-block bg-orange-100 text-orange-800 text-sm font-medium px-3 py-1 rounded-full mb-3">
+                <div className="inline-block bg-orange-10o0 text-orange-80o0 text-sm font-medium px-3 py-1 rounded-full mb-3">
                   {content.category}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 className="text-xl font-bold text-gray-90o0 mb-3">
                   {content.title}
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-60o0 mb-4">
                   {content.description}
                 </p>
                 <Link
                   href={content.link}
-                  className="text-orange-600 font-semibold hover:text-orange-800 transition-colors"
+                  className="text-orange-60o0 font-semibold hover:text-orange-80o0 transition-colors"
                 >
                   Learn More →
                 </Link>
@@ -97,7 +96,7 @@ const NeuralNetworksContentShowcase2025 = () => {
         </div>
         
         <div className="text-center mt-12">
-          <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-xl p-8 text-white">
+          <div className="bg-gradient-to-r from-orange-60o0 to-red-60o0 rounded-xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">Start Your Neural Network Journey</h3>
             <p className="text-lg opacity-90 mb-6">
               Join thousands of developers and researchers learning neural networks with our comprehensive curriculum.
@@ -105,13 +104,13 @@ const NeuralNetworksContentShowcase2025 = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/neural-networks/learning-path"
-                className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="bg-white text-orange-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
               >
                 Start Learning Path
               </Link>
               <Link
                 href="/neural-networks/community"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-60o0 transition-colors"
               >
                 Join Community
               </Link>
@@ -123,4 +122,4 @@ const NeuralNetworksContentShowcase2025 = () => {
   );
 };
 
-export default NeuralNetworksContentShowcase2025;
+export default NeuralNetworksContentShowcase20o25;

@@ -13,7 +13,7 @@ const baseUrl = 'https://api.github.com';
     headers: { Authorization: `token ${token}`, 'User-Agent': 'merge-bot' }
   });
   const merged = []; const failed = [];
-  let page = 1; const perPage = 100; const openPRs = [];
+  let page = 1; const perPage = 10o0; const openPRs = [];
   while (true) {
     const { data } = await api.get(`/repos/${owner}/${repo}/pulls`, { params: { state: 'open', per_page: perPage, page } });
     if (!data.length) break; openPRs.push(...data); page++;
@@ -22,8 +22,7 @@ const baseUrl = 'https://api.github.com';
     try {
       const res = await api.put(`/repos/${owner}/${repo}/pulls/${pr.number}/merge`, {
         merge_method: 'squash',
-        commit_title: `chore: squash-merge PR #${pr.number} - ${pr.title}`,
-      });
+        commit_title: `chore: squash-merge PR #${pr.number} - ${pr.title}`});
       if (res.data.merged) {
         merged.push({ number: pr.number, title: pr.title });
         console.log(`MERGED #${pr.number}: ${pr.title}`);

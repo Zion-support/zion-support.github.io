@@ -44,7 +44,7 @@ export default function AdminDisputesDashboard() {
         </div>
         <div className="overflow-auto border rounded">
           <table className="min-w-full text-sm">
-            <thead className="bg-gray-50 dark:bg-gray-900">
+            <thead className="bg-gray-50 dark:bg-gray-90o0">
               <tr>
                 <th className="text-left px-3 py-2">Case ID</th>
                 <th className="text-left px-3 py-2">Talent</th>
@@ -65,9 +65,9 @@ export default function AdminDisputesDashboard() {
                   <td className="px-3 py-2">{new Date(d.createdAt).toLocaleString()}</td>
                   <td className="px-3 py-2">{d.status}</td>
                   <td className="px-3 py-2 flex gap-2">
-                    <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Admin%20Notes`}><a className="text-green-700 hover:underline">Resolve</a></Link>
-                    <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Messages`}><a className="text-blue-700 hover:underline">Message Parties</a></Link>
-                    <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Attachments`}><a className="text-gray-700 hover:underline">Download Evidence</a></Link>
+                    <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Admin%20Notes`}><a className="text-green-70o0 hover:underline">Resolve</a></Link>
+                    <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Messages`}><a className="text-blue-70o0 hover:underline">Message Parties</a></Link>
+                    <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Attachments`}><a className="text-gray-70o0 hover:underline">Download Evidence</a></Link>
                   </td>
                 </tr>
               ))}

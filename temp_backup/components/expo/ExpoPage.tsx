@@ -18,7 +18,7 @@ export default function ExpoPage() {
 
   return (
     <div className="space-y-12">
-      <WelcomeManifesto manifesto={expoManifesto} />
+      <WelcomeManifesto manifesto={expoManifesto}  />
 
       <section className="space-y-4">
         <div className="flex items-center justify-between">
@@ -33,35 +33,35 @@ export default function ExpoPage() {
             ))}
           </div>
         </div>
-        <AgendaTimeline items={agendaItems} activeTrack={activeTrack} />
+        <AgendaTimeline items={agendaItems} activeTrack={activeTrack}  />
       </section>
 
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Keynotes</h2>
-        <Keynotes speakers={speakers} />
+        <Keynotes speakers={speakers}  />
       </section>
 
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Partner Booths</h2>
-        <PartnerBooths partners={partners} />
+        <PartnerBooths partners={partners}  />
       </section>
 
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Interactive Map</h2>
-        <GlobeMap locations={locations} />
+        <GlobeMap locations={locations}  />
       </section>
 
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Livestream & Replays</h2>
-        <Livestream agenda={agendaItems} />
+        <Livestream agenda={agendaItems}  />
       </section>
 
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">ZionGPT Assistant</h2>
-        <GPTAssistant />
+        <GPTAssistant  />
       </section>
 
-      <ExportsBar />
+      <ExportsBar  />
     </div>
   );
 }

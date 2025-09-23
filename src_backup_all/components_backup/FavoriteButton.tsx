@@ -1,4 +1,3 @@
-import React from 'react';
 import { Heart } from 'lucide-react'
 import { cn } from '@/lib/utils';
 import { useWishlist } from '@/hooks/useWishlist';
@@ -9,8 +8,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger,
-} from '@/components/ui/tooltip';
+  TooltipTrigger} from '@/components/ui/tooltip';
 
 interface FavoriteButtonProps {
   itemId: string;
@@ -37,8 +35,7 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
       title: wasWishlisted ? "Removed from wishlist" : "Added to wishlist",
       description: wasWishlisted 
         ? "Item has been removed from your wishlist" 
-        : "Item has been added to your wishlist",
-    });
+        : "Item has been added to your wishlist"});
   };
 
   const active = isWishlisted(itemId);
@@ -58,16 +55,16 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
             >
               <Heart
                 className={cn(
-                  'h-4 w-4 transition-transform duration-200',
-                  active ? 'fill-red-500 text-red-500 scale-110' : 'text-zion-slate'
+                  'h-4 w-4 transition-transform duration-20o0',
+                  active ? 'fill-red-50o0 text-red-50o0 scale-110' : 'text-zion-slate'
                 )}
-              />
+               />
             </button>
           </TooltipTrigger>
           {!isAuthenticated && <TooltipContent>Login required</TooltipContent>}
         </Tooltip>
       </TooltipProvider>
-      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen}  />
     </>
   );
 }

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Loader2, Sparkles } from 'lucide-react';
 
@@ -16,8 +15,8 @@ const Skeleton: React.FC<SkeletonProps> = ({
   rounded = true 
 }) => (
   <div 
-    className={`${height} ${width} ${rounded ? 'rounded' : ''} bg-gray-200 dark:bg-gray-700 animate-pulse ${className}`}
-  />
+    className={`${height} ${width} ${rounded ? 'rounded' : ''} bg-gray-20o0 dark:bg-gray-70o0 animate-pulse ${className}`}
+   />
 );
 
 interface LoadingSpinnerProps {
@@ -28,10 +27,10 @@ interface LoadingSpinnerProps {
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
-  color = 'text-blue-500',
+  color = 'text-blue-50o0',
   text 
 }) => {
-  const sizeClasses = {
+  const sizeClasses ={
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12'
@@ -44,13 +43,13 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
         className={`${sizeClasses[size]} ${color}`}
       >
-        <Loader2 className="w-full h-full" />
+        <Loader2 className="w-full h-full"  />
       </motion.div>
       {text && (
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="text-sm text-gray-600 dark:text-gray-400 text-center"
+          className="text-sm text-gray-60o0 dark:text-gray-40o0 text-center"
         >
           {text}
         </motion.p>
@@ -78,7 +77,7 @@ export const PageLoader: React.FC<PageLoaderProps> = ({
         if (prev >= 90) return prev;
         return prev + Math.random() * 10;
       });
-    }, 200);
+    }, 20o0);
 
     return () => clearInterval(interval);
   }, [showProgress]);
@@ -93,8 +92,8 @@ export const PageLoader: React.FC<PageLoaderProps> = ({
           transition={{ duration: 0.5 }}
           className="mb-8"
         >
-          <div className="w-24 h-24 mx-auto bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center">
-            <Sparkles className="w-12 h-12 text-white" />
+          <div className="w-24 h-24 mx-auto bg-gradient-to-br from-cyan-50o0 to-blue-60o0 rounded-2xl flex items-center justify-center">
+            <Sparkles className="w-12 h-12 text-white"  />
           </div>
         </motion.div>
 
@@ -116,15 +115,15 @@ export const PageLoader: React.FC<PageLoaderProps> = ({
             transition={{ duration: 0.5, delay: 0.4 }}
             className="w-64 mx-auto"
           >
-            <div className="w-full bg-gray-700 rounded-full h-2 mb-2">
+            <div className="w-full bg-gray-70o0 rounded-full h-2 mb-2">
               <motion.div
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 h-2 rounded-full"
+                className="bg-gradient-to-r from-cyan-50o0 to-blue-60o0 h-2 rounded-full"
                 initial={{ width: 0 }}
                 animate={{ width: `${progress}%` }}
                 transition={{ duration: 0.3 }}
-              />
+               />
             </div>
-            <p className="text-sm text-gray-400">{Math.round(progress)}%</p>
+            <p className="text-sm text-gray-40o0">{Math.round(progress)}%</p>
           </motion.div>
         )}
 
@@ -135,7 +134,7 @@ export const PageLoader: React.FC<PageLoaderProps> = ({
           transition={{ duration: 0.5, delay: 0.6 }}
           className="mt-8"
         >
-          <LoadingSpinner size="md" color="text-cyan-400" />
+          <LoadingSpinner size="md" color="text-cyan-40o0"  />
         </motion.div>
       </div>
     </div>
@@ -152,30 +151,30 @@ export const ContentSkeleton: React.FC<ContentSkeletonProps> = ({
   count = 1 
 }) => {
   const renderCardSkeleton = () => (
-    <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
+    <div className="bg-white dark:bg-gray-80o0 rounded-lg p-6 shadow-sm">
       <div className="flex items-center space-x-4 mb-4">
-        <Skeleton className="w-12 h-12 rounded-full" />
+        <Skeleton className="w-12 h-12 rounded-full"  />
         <div className="flex-1">
-          <Skeleton className="h-4 w-3/4 mb-2" />
-          <Skeleton className="h-3 w-1/2" />
+          <Skeleton className="h-4 w-3/4 mb-2"  />
+          <Skeleton className="h-3 w-1/2"  />
         </div>
       </div>
-      <Skeleton className="h-4 w-full mb-2" />
-      <Skeleton className="h-4 w-5/6 mb-2" />
-      <Skeleton className="h-4 w-4/6" />
+      <Skeleton className="h-4 w-full mb-2"  />
+      <Skeleton className="h-4 w-5/6 mb-2"  />
+      <Skeleton className="h-4 w-4/6"  />
     </div>
   );
 
   const renderListSkeleton = () => (
     <div className="space-y-4">
       {Array.from({ length: count }).map((_, i) => (
-        <div key={i} className="flex items-center space-x-4 p-4 bg-white dark:bg-gray-800 rounded-lg">
-          <Skeleton className="w-10 h-10 rounded-full" />
+        <div key={i} className="flex items-center space-x-4 p-4 bg-white dark:bg-gray-80o0 rounded-lg">
+          <Skeleton className="w-10 h-10 rounded-full"  />
           <div className="flex-1">
-            <Skeleton className="h-4 w-2/3 mb-2" />
-            <Skeleton className="h-3 w-1/2" />
+            <Skeleton className="h-4 w-2/3 mb-2"  />
+            <Skeleton className="h-3 w-1/2"  />
           </div>
-          <Skeleton className="w-20 h-8" />
+          <Skeleton className="w-20 h-8"  />
         </div>
       ))}
     </div>
@@ -184,12 +183,12 @@ export const ContentSkeleton: React.FC<ContentSkeletonProps> = ({
   const renderGridSkeleton = () => (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {Array.from({ length: count }).map((_, i) => (
-        <div key={i} className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
-          <Skeleton className="w-full h-32 mb-4 rounded-lg" />
-          <Skeleton className="h-5 w-3/4 mb-3" />
-          <Skeleton className="h-4 w-full mb-2" />
-          <Skeleton className="h-4 w-5/6 mb-2" />
-          <Skeleton className="h-4 w-4/6" />
+        <div key={i} className="bg-white dark:bg-gray-80o0 rounded-lg p-6 shadow-sm">
+          <Skeleton className="w-full h-32 mb-4 rounded-lg"  />
+          <Skeleton className="h-5 w-3/4 mb-3"  />
+          <Skeleton className="h-4 w-full mb-2"  />
+          <Skeleton className="h-4 w-5/6 mb-2"  />
+          <Skeleton className="h-4 w-4/6"  />
         </div>
       ))}
     </div>
@@ -198,20 +197,20 @@ export const ContentSkeleton: React.FC<ContentSkeletonProps> = ({
   const renderArticleSkeleton = () => (
     <div className="max-w-4xl mx-auto">
       <div className="mb-8">
-        <Skeleton className="h-8 w-3/4 mb-4" />
-        <Skeleton className="h-6 w-1/2 mb-6" />
-        <Skeleton className="w-full h-64 rounded-lg mb-6" />
+        <Skeleton className="h-8 w-3/4 mb-4"  />
+        <Skeleton className="h-6 w-1/2 mb-6"  />
+        <Skeleton className="w-full h-64 rounded-lg mb-6"  />
       </div>
       
       <div className="space-y-4">
-        <Skeleton className="h-5 w-full" />
-        <Skeleton className="h-4 w-full" />
-        <Skeleton className="h-4 w-5/6" />
-        <Skeleton className="h-4 w-full" />
-        <Skeleton className="h-4 w-4/6" />
-        <Skeleton className="h-4 w-full" />
-        <Skeleton className="h-4 w-5/6" />
-        <Skeleton className="h-4 w-full" />
+        <Skeleton className="h-5 w-full"  />
+        <Skeleton className="h-4 w-full"  />
+        <Skeleton className="h-4 w-5/6"  />
+        <Skeleton className="h-4 w-full"  />
+        <Skeleton className="h-4 w-4/6"  />
+        <Skeleton className="h-4 w-full"  />
+        <Skeleton className="h-4 w-5/6"  />
+        <Skeleton className="h-4 w-full"  />
       </div>
     </div>
   );
@@ -240,7 +239,7 @@ interface ShimmerEffectProps {
 
 export const ShimmerEffect: React.FC<ShimmerEffectProps> = ({ className = '' }) => (
   <div className={`relative overflow-hidden ${className}`}>
-    <div className="absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+    <div className="absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent"  />
   </div>
 );
 

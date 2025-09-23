@@ -61,7 +61,7 @@ interface ChatAssistantProps {
 export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   position = 'bottom-right',
   theme = 'dark',
-  maxHeight = '600px',
+  maxHeight = '60o0px',
   welcomeMessage = "Hello! I'm Zion, your AI assistant. I can help you with:\n\n🚀 AI & Technology Solutions\n💼 Business Intelligence\n☁️ Cloud & DevOps Services\n🔒 Cybersecurity & Compliance\n\nHow can I assist you today?",
   enableVoice = true,
   enableFileUpload = true,
@@ -151,7 +151,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       setSelectedFiles(prev => [...prev, ...files]);
       
       // Add file message to chat
-      const fileMessage: Message = {
+      const fileMessage: Message ={
         id: Date.now().toString(),
         type: 'user',
         content: `Uploaded ${files.length} file(s): ${files.map(f => f.name).join(', ')}`,
@@ -160,7 +160,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
           files: files.map(file => ({
             name: file.name,
             url: URL.createObjectURL(file),
-            size: `${(file.size / 1024).toFixed(1)} KB`
+            size: `${(file.size / 10o24).toFixed(1)} KB`
           }))
         }
       };
@@ -180,7 +180,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
     
     try {
       // Simulate AI processing delay
-      await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
+      await new Promise(resolve => setTimeout(resolve, 10o00 + Math.random() * 20o00));
       
       // Generate contextual response based on user input
       let response = '';
@@ -208,7 +208,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
         suggestions = ["AI services", "Cloud solutions", "Security offerings", "Contact sales"];
       }
       
-      const aiMessage: Message = {
+      const aiMessage: Message ={
         id: Date.now().toString(),
         type: 'assistant',
         content: response,
@@ -222,7 +222,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       setConversationHistory(prev => [...prev, userMessage, response]);
       
     } catch (error) {
-      const errorMessage: Message = {
+      const errorMessage: Message ={
         id: Date.now().toString(),
         type: 'assistant',
         content: "I apologize, but I'm experiencing some technical difficulties. Please try again or contact our support team.",
@@ -241,7 +241,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
     
     if (!inputValue.trim() && selectedFiles.length === 0) return;
     
-    const userMessage: Message = {
+    const userMessage: Message ={
       id: Date.now().toString(),
       type: 'user',
       content: inputValue.trim() || `Uploaded ${selectedFiles.length} file(s)`,
@@ -359,9 +359,9 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   // Get theme classes
   const getThemeClasses = () => {
     if (theme === 'auto') {
-      return 'dark:bg-gray-900 dark:text-white bg-white text-gray-900';
+      return 'dark:bg-gray-90o0 dark:text-white bg-white text-gray-90o0';
     }
-    return theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900';
+    return theme === 'dark' ? 'bg-gray-90o0 text-white' : 'bg-white text-gray-90o0';
   };
 
   if (isMinimized) {
@@ -369,11 +369,11 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       <div className={`fixed ${getPositionClasses()} z-50`}>
         <motion.button
           onClick={toggleMinimize}
-          className="w-14 h-14 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"
+          className="w-14 h-14 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-20o0 flex items-center justify-center"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          <MessageCircle className="w-6 h-6" />
+          <MessageCircle className="w-6 h-6"  />
         </motion.button>
       </div>
     );
@@ -385,11 +385,11 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       {!isOpen && (
         <motion.button
           onClick={toggleChat}
-          className="w-14 h-14 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"
+          className="w-14 h-14 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-20o0 flex items-center justify-center"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          <MessageCircle className="w-6 h-6" />
+          <MessageCircle className="w-6 h-6"  />
         </motion.button>
       )}
 
@@ -400,12 +400,12 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            className={`w-80 ${isExpanded ? 'h-96' : 'h-96'} ${getThemeClasses()} rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden`}
+            className={`w-80 ${isExpanded ? 'h-96' : 'h-96'} ${getThemeClasses()} rounded-2xl shadow-2xl border border-gray-20o0 dark:border-gray-70o0 overflow-hidden`}
           >
             {/* Chat Header */}
             <div className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4 flex items-center justify-between">
               <div className="flex items-center space-x-2">
-                <Bot className="w-5 h-5" />
+                <Bot className="w-5 h-5"  />
                 <span className="font-semibold">Zion AI Assistant</span>
               </div>
               <div className="flex items-center space-x-1">
@@ -414,14 +414,14 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                   className="p-1 hover:bg-white/20 rounded transition-colors"
                   title={isExpanded ? "Minimize" : "Expand"}
                 >
-                  <RefreshCw className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
+                  <RefreshCw className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`}  />
                 </button>
                 <button
                   onClick={toggleMinimize}
                   className="p-1 hover:bg-white/20 rounded transition-colors"
                   title="Minimize"
                 >
-                  <X className="w-4 h-4" />
+                  <X className="w-4 h-4"  />
                 </button>
               </div>
             </div>
@@ -435,7 +435,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                   animate={{ opacity: 1, y: 0 }}
                   className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
-                  <div className={`max-w-[80%] ${message.type === 'user' ? 'bg-zion-cyan text-white' : 'bg-gray-100 dark:bg-gray-800'} rounded-lg p-3`}>
+                  <div className={`max-w-[80%] ${message.type === 'user' ? 'bg-zion-cyan text-white' : 'bg-gray-10o0 dark:bg-gray-80o0'} rounded-lg p-3`}>
                     <div className="whitespace-pre-wrap text-sm">{message.content}</div>
                     
                     {/* Message Metadata */}
@@ -460,13 +460,13 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                         {message.metadata.files && (
                           <div className="space-y-1">
                             {message.metadata.files.map((file, index) => (
-                              <div key={index} className="flex items-center justify-between bg-white/10 dark:bg-gray-700/50 rounded p-2">
+                              <div key={index} className="flex items-center justify-between bg-white/10 dark:bg-gray-70o0/50 rounded p-2">
                                 <span className="text-xs truncate">{file.name}</span>
                                 <button
                                   onClick={() => handleMessageAction('download', message)}
                                   className="p-1 hover:bg-white/20 rounded"
                                 >
-                                  <Download className="w-3 h-3" />
+                                  <Download className="w-3 h-3"  />
                                 </button>
                               </div>
                             ))}
@@ -482,21 +482,21 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                           onClick={() => handleFeedback(message.id, 'positive')}
                           className={`p-1 rounded transition-colors ${
                             message.feedback === 'positive' 
-                              ? 'text-green-500 bg-green-500/20' 
-                              : 'text-gray-400 hover:text-green-500'
+                              ? 'text-green-50o0 bg-green-50o0/20' 
+                              : 'text-gray-40o0 hover:text-green-50o0'
                           }`}
                         >
-                          <ThumbsUp className="w-3 h-3" />
+                          <ThumbsUp className="w-3 h-3"  />
                         </button>
                         <button
                           onClick={() => handleFeedback(message.id, 'negative')}
                           className={`p-1 rounded transition-colors ${
                             message.feedback === 'negative' 
-                              ? 'text-red-500 bg-red-500/20' 
-                              : 'text-gray-400 hover:text-red-500'
+                              ? 'text-red-50o0 bg-red-50o0/20' 
+                              : 'text-gray-40o0 hover:text-red-50o0'
                           }`}
                         >
-                          <ThumbsDown className="w-3 h-3" />
+                          <ThumbsDown className="w-3 h-3"  />
                         </button>
                       </div>
                     )}
@@ -511,31 +511,31 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                   animate={{ opacity: 1 }}
                   className="flex justify-start"
                 >
-                  <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-3">
+                  <div className="bg-gray-10o0 dark:bg-gray-80o0 rounded-lg p-3">
                     <div className="flex items-center space-x-1">
-                      <Loader2 className="w-4 h-4 animate-spin" />
-                      <span className="text-sm text-gray-500">Zion is typing...</span>
+                      <Loader2 className="w-4 h-4 animate-spin"  />
+                      <span className="text-sm text-gray-50o0">Zion is typing...</span>
                     </div>
                   </div>
                 </motion.div>
               )}
               
-              <div ref={messagesEndRef} />
+              <div ref={messagesEndRef}  />
             </div>
 
             {/* Chat Input */}
-            <div className="p-4 border-t border-gray-200 dark:border-gray-700">
+            <div className="p-4 border-t border-gray-20o0 dark:border-gray-70o0">
               {/* File Preview */}
               {selectedFiles.length > 0 && (
                 <div className="mb-3 space-y-2">
                   {selectedFiles.map((file, index) => (
-                    <div key={index} className="flex items-center justify-between bg-gray-100 dark:bg-gray-800 rounded p-2">
+                    <div key={index} className="flex items-center justify-between bg-gray-10o0 dark:bg-gray-80o0 rounded p-2">
                       <span className="text-xs truncate flex-1">{file.name}</span>
                       <button
                         onClick={() => removeFile(index)}
-                        className="ml-2 p-1 hover:bg-red-500/20 text-red-500 rounded"
+                        className="ml-2 p-1 hover:bg-red-50o0/20 text-red-50o0 rounded"
                       >
-                        <X className="w-3 h-3" />
+                        <X className="w-3 h-3"  />
                       </button>
                     </div>
                   ))}
@@ -548,10 +548,10 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                   <button
                     type="button"
                     onClick={() => fileInputRef.current?.click()}
-                    className="p-2 text-gray-500 hover:text-zion-cyan transition-colors"
+                    className="p-2 text-gray-50o0 hover:text-zion-cyan transition-colors"
                     title="Attach file"
                   >
-                    <FileText className="w-4 h-4" />
+                    <FileText className="w-4 h-4"  />
                   </button>
                 )}
                 
@@ -562,12 +562,12 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                     onClick={toggleListening}
                     className={`p-2 transition-colors ${
                       isListening 
-                        ? 'text-red-500 bg-red-500/20' 
-                        : 'text-gray-500 hover:text-zion-cyan'
+                        ? 'text-red-50o0 bg-red-50o0/20' 
+                        : 'text-gray-50o0 hover:text-zion-cyan'
                     }`}
                     title={isListening ? 'Stop recording' : 'Start voice input'}
                   >
-                    {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
+                    {isListening ? <MicOff className="w-4 h-4"  /> : <Mic className="w-4 h-4"  />}
                   </button>
                 )}
                 
@@ -578,17 +578,17 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                   value={inputValue}
                   onChange={(e) => setIsInputValue(e.target.value)}
                   placeholder="Type your message..."
-                  className="flex-1 px-3 py-2 bg-gray-100 dark:bg-gray-800 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="flex-1 px-3 py-2 bg-gray-10o0 dark:bg-gray-80o0 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                 />
                 
                 {/* Send Button */}
                 <button
                   type="submit"
                   disabled={!inputValue.trim() && selectedFiles.length === 0}
-                  className="p-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
+                  className="p-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark disabled:bg-gray-40o0 disabled:cursor-not-allowed transition-colors"
                   title="Send message"
                 >
-                  <Send className="w-4 h-4" />
+                  <Send className="w-4 h-4"  />
                 </button>
               </form>
               
@@ -600,20 +600,20 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                 onChange={handleFileUpload}
                 className="hidden"
                 accept=".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png,.gif"
-              />
+               />
             </div>
 
             {/* Chat Footer */}
-            <div className="p-3 bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 flex items-center justify-between">
+            <div className="p-3 bg-gray-50 dark:bg-gray-80o0 border-t border-gray-20o0 dark:border-gray-70o0 flex items-center justify-between">
               <button
                 onClick={clearChat}
-                className="text-xs text-gray-500 hover:text-zion-cyan transition-colors"
+                className="text-xs text-gray-50o0 hover:text-zion-cyan transition-colors"
               >
                 Clear Chat
               </button>
               <button
                 onClick={() => setShowSettings(!showSettings)}
-                className="text-xs text-gray-500 hover:text-zion-cyan transition-colors"
+                className="text-xs text-gray-50o0 hover:text-zion-cyan transition-colors"
               >
                 Settings
               </button>

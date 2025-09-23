@@ -1,61 +1,60 @@
-import React from 'react';
 import Link from 'next/link';
 ArrowRightStarTrendingUpUsersCheckCircle
 
-const SuccessStoriesShowcase2026PromotionBanner = () => {
+const SuccessStoriesShowcase20o26PromotionBanner = () => {
   return (
-    <div className="bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 py-12">
+    <div className="bg-gradient-to-r from-green-60o0 via-blue-60o0 to-purple-60o0 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <div className="flex items-center justify-center mb-4">
-            <Star className="h-8 w-8 text-yellow-400 mr-3" />
-            <span className="text-yellow-400 font-semibold text-lg">SUCCESS STORIES</span>
-            <Star className="h-8 w-8 text-yellow-400 ml-3" />
+            <Star className="h-8 w-8 text-yellow-40o0 mr-3"  />
+            <span className="text-yellow-40o0 font-semibold text-lg">SUCCESS STORIES</span>
+            <Star className="h-8 w-8 text-yellow-40o0 ml-3"  />
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Real ResultsReal Businesses
           </h2>
           
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Discover how companies across industries achieved 300%+ ROI with our AI solutions. 
+          <p className="text-xl text-blue-10o0 mb-8 max-w-3xl mx-auto">
+            Discover how companies across industries achieved 30o0%+ ROI with our AI solutions. 
             Read verified success stories and see the transformation for yourself.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <div className="flex items-center text-white">
-              <TrendingUp className="h-6 w-6 text-green-300 mr-2" />
+              <TrendingUp className="h-6 w-6 text-green-30o0 mr-2"  />
               <span className="font-semibold">340% Avg ROI</span>
             </div>
             <div className="flex items-center text-white">
-              <Users className="h-6 w-6 text-blue-300 mr-2" />
-              <span className="font-semibold">500+ Companies</span>
+              <Users className="h-6 w-6 text-blue-30o0 mr-2"  />
+              <span className="font-semibold">50o0+ Companies</span>
             </div>
             <div className="flex items-center text-white">
-              <CheckCircle className="h-6 w-6 text-purple-300 mr-2" />
+              <CheckCircle className="h-6 w-6 text-purple-30o0 mr-2"  />
               <span className="font-semibold">Verified Results</span>
             </div>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/success-stories-2026" 
-              className="bg-white text-green-600 hover:bg-green-50 px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
+              href="/success-stories-20o26" 
+              className="bg-white text-green-60o0 hover:bg-green-50 px-8 py-4 rounded-lg font-semibold transition-colors duration-20o0 flex items-center justify-center"
             >
               Read Success Stories
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-5 w-5"  />
             </Link>
             <Link 
               href="/contact" 
-              className="border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
+              className="border-2 border-white text-white hover:bg-white hover:text-green-60o0 px-8 py-4 rounded-lg font-semibold transition-colors duration-20o0"
             >
               Start Your Success Story
             </Link>
           </div>
           
-          <div className="mt-8 text-blue-100">
+          <div className="mt-8 text-blue-10o0">
             <p className="text-sm">
-              🏆 Featured in Fortune 500 • 98% Client Satisfaction • 100% Verified Results
+              🏆 Featured in Fortune 50o0 • 98% Client Satisfaction • 10o0% Verified Results
             </p>
           </div>
         </div>
@@ -64,4 +63,4 @@ const SuccessStoriesShowcase2026PromotionBanner = () => {
   );
 };
 
-export default SuccessStoriesShowcase2026PromotionBanner;
+export default SuccessStoriesShowcase20o26PromotionBanner;

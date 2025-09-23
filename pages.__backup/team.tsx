@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
@@ -54,42 +53,42 @@ export default function TeamPage() {
       description: 'Pioneering the future of artificial intelligence and autonomous systems.',
       members: 25,
       icon: Brain,
-      color: 'from-cyan-400 to-blue-500'
+      color: 'from-cyan-40o0 to-blue-50o0'
     },
     {
       name: 'Quantum Computing',
       description: 'Breaking barriers in quantum technology and computational power.',
       members: 18,
       icon: Zap,
-      color: 'from-purple-400 to-pink-500'
+      color: 'from-purple-40o0 to-pink-50o0'
     },
     {
       name: 'Cloud & Infrastructure',
       description: 'Building scalablesecureand high-performance cloud solutions.',
       members: 32,
       icon: Globe,
-      color: 'from-green-400 to-emerald-500'
+      color: 'from-green-40o0 to-emerald-50o0'
     },
     {
       name: 'Product & Engineering',
       description: 'Creating innovative products that transform business operations.',
       members: 45,
       icon: Rocket,
-      color: 'from-orange-400 to-red-500'
+      color: 'from-orange-40o0 to-red-50o0'
     },
     {
       name: 'Client Success',
       description: 'Ensuring exceptional client experiences and successful implementations.',
       members: 28,
       icon: Star,
-      color: 'from-yellow-400 to-orange-500'
+      color: 'from-yellow-40o0 to-orange-50o0'
     },
     {
       name: 'Business Development',
       description: 'Expanding our global reach and strategic partnerships.',
       members: 22,
       icon: Users,
-      color: 'from-indigo-400 to-purple-500'
+      color: 'from-indigo-40o0 to-purple-50o0'
     }
   ];
 
@@ -120,22 +119,22 @@ export default function TeamPage() {
     <>
       <Head>
         <title>Our Team - Zion Tech Group</title>
-        <meta name="description" content="Meet the exceptional team behind Zion Tech Group's revolutionary technology solutions and innovations." />
-        <meta property="og:title" content="Our Team - Zion Tech Group" />
-        <meta property="og:description" content="Meet the exceptional team behind Zion Tech Group's revolutionary technology solutions and innovations." />
-        <link rel="canonical" href="https://ziontechgroup.com/team" />
+        <meta name="description" content="Meet the exceptional team behind Zion Tech Group's revolutionary technology solutions and innovations."  />
+        <meta property="og:title" content="Our Team - Zion Tech Group"  />
+        <meta property="og:description" content="Meet the exceptional team behind Zion Tech Group's revolutionary technology solutions and innovations."  />
+        <link rel="canonical" href="https://ziontechgroup.com/team"  />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-50o0/10 via-purple-50o0/10 to-pink-50o0/10"  />
           <div className="relative z-10 container mx-auto px-6 text-center">
             <motion.h1 
               initial={{ opacity: 0y: 30 }}
               animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent"
+              className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 bg-clip-text text-transparent"
             >
               Meet Our Team
             </motion.h1>
@@ -154,10 +153,10 @@ export default function TeamPage() {
               transition={{ duration: 0.8delay: 0.4 }}
               className="flex flex-wrap justify-center gap-4"
             >
-              <a href="/careers" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 rounded-lg text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25">
+              <a href="/careers" className="px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 hover:from-cyan-60o0 hover:to-purple-70o0 rounded-lg text-white font-semibold transition-all duration-30o0 hover:shadow-lg hover:shadow-cyan-50o0/25">
                 Join Our Team
               </a>
-              <a href="/contact" className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-300 hover:border-cyan-400/50">
+              <a href="/contact" className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-30o0 hover:border-cyan-40o0/50">
                 Get in Touch
               </a>
             </motion.div>
@@ -174,7 +173,7 @@ export default function TeamPage() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 to-purple-40o0 bg-clip-text text-transparent">
                 Leadership Team
               </h2>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
@@ -190,14 +189,14 @@ export default function TeamPage() {
                   whileInView={{ opacity: 1y: 0 }}
                   transition={{ duration: 0.5delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-cyan-400/30 transition-all duration-300"
+                  className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-cyan-40o0/30 transition-all duration-30o0"
                 >
                   <div className="text-center mb-6">
-                    <div className="w-32 h-32 mx-auto mb-4 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center text-4xl font-bold text-white">
+                    <div className="w-32 h-32 mx-auto mb-4 bg-gradient-to-r from-cyan-40o0 to-purple-50o0 rounded-full flex items-center justify-center text-4xl font-bold text-white">
                       {leader.name.split(' ').map(n => n[0]).join('')}
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-2">{leader.name}</h3>
-                    <p className="text-cyan-400 font-semibold">{leader.title}</p>
+                    <p className="text-cyan-40o0 font-semibold">{leader.title}</p>
                   </div>
                   
                   <p className="text-white/80 mb-4 text-center">{leader.bio}</p>
@@ -218,7 +217,7 @@ export default function TeamPage() {
                     <ul className="space-y-1">
                       {leader.achievements.map((achievementidx) => (
                         <li key={idx} className="text-sm text-white/70 flex items-center">
-                          <Star className="w-4 h-4 text-yellow-400 mr-2" />
+                          <Star className="w-4 h-4 text-yellow-40o0 mr-2"  />
                           {achievement}
                         </li>
                       ))}
@@ -227,18 +226,18 @@ export default function TeamPage() {
                   
                   <div className="flex justify-center space-x-4">
                     {leader.social.linkedin && (
-                      <a href={leader.social.linkedin} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                        <Linkedin className="w-5 h-5" />
+                      <a href={leader.social.linkedin} target="_blank" rel="noopener noreferrer" className="text-cyan-40o0 hover:text-cyan-30o0 transition-colors">
+                        <Linkedin className="w-5 h-5"  />
                       </a>
                     )}
                     {leader.social.twitter && (
-                      <a href={leader.social.twitter} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors">
-                        <Twitter className="w-5 h-5" />
+                      <a href={leader.social.twitter} target="_blank" rel="noopener noreferrer" className="text-blue-40o0 hover:text-blue-30o0 transition-colors">
+                        <Twitter className="w-5 h-5"  />
                       </a>
                     )}
                     {leader.social.github && (
-                      <a href={leader.social.github} target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">
-                        <Github className="w-5 h-5" />
+                      <a href={leader.social.github} target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-30o0 transition-colors">
+                        <Github className="w-5 h-5"  />
                       </a>
                     )}
                   </div>
@@ -258,7 +257,7 @@ export default function TeamPage() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 to-purple-40o0 bg-clip-text text-transparent">
                 Our Departments
               </h2>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
@@ -274,15 +273,15 @@ export default function TeamPage() {
                   whileInView={{ opacity: 1y: 0 }}
                   transition={{ duration: 0.5delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-cyan-400/30 transition-all duration-300"
+                  className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-cyan-40o0/30 transition-all duration-30o0"
                 >
                   <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-r ${dept.color} rounded-xl flex items-center justify-center`}>
-                    <dept.icon className="w-8 h-8 text-white" />
+                    <dept.icon className="w-8 h-8 text-white"  />
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-white text-center">{dept.name}</h3>
                   <p className="text-white/70 text-center mb-4">{dept.description}</p>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-cyan-400">{dept.members}</div>
+                    <div className="text-2xl font-bold text-cyan-40o0">{dept.members}</div>
                     <div className="text-sm text-white/70">Team Members</div>
                   </div>
                 </motion.div>
@@ -301,7 +300,7 @@ export default function TeamPage() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 to-purple-40o0 bg-clip-text text-transparent">
                 Our Team Values
               </h2>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
@@ -317,10 +316,10 @@ export default function TeamPage() {
                   whileInView={{ opacity: 1y: 0 }}
                   transition={{ duration: 0.5delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="text-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
+                  className="text-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-40o0/30 transition-all duration-30o0"
                 >
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center">
-                    <value.icon className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-40o0 to-purple-50o0 rounded-xl flex items-center justify-center">
+                    <value.icon className="w-8 h-8 text-white"  />
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-white">{value.title}</h3>
                   <p className="text-white/70">{value.description}</p>
@@ -339,7 +338,7 @@ export default function TeamPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 to-purple-40o0 bg-clip-text text-transparent">
                 Join Our Team
               </h2>
               <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
@@ -347,10 +346,10 @@ export default function TeamPage() {
                 passionate individuals who want to make a difference.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <a href="/careers" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 rounded-lg text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25">
+                <a href="/careers" className="px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 hover:from-cyan-60o0 hover:to-purple-70o0 rounded-lg text-white font-semibold transition-all duration-30o0 hover:shadow-lg hover:shadow-cyan-50o0/25">
                   View Open Positions
                 </a>
-                <a href="/contact" className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-300 hover:border-cyan-400/50">
+                <a href="/contact" className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-30o0 hover:border-cyan-40o0/50">
                   Contact Us
                 </a>
               </div>

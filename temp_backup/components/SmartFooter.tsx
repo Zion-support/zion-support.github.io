@@ -98,9 +98,9 @@ export default function SmartFooter() {
                       <span className="text-sm">{service.label}</span>
                       {service.status && (
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                          service.status === 'active' ? 'bg-green-500/20 text-green-300' :
-                          service.status === 'beta' ? 'bg-yellow-500/20 text-yellow-300' :
-                          'bg-blue-500/20 text-blue-300'
+                          service.status === 'active' ? 'bg-green-50o0/20 text-green-30o0' :
+                          service.status === 'beta' ? 'bg-yellow-50o0/20 text-yellow-30o0' :
+                          'bg-blue-50o0/20 text-blue-30o0'
                         }`}>
                           {service.status}
                         </span>
@@ -111,7 +111,7 @@ export default function SmartFooter() {
               ))}
             </ul>
             <div className="pt-2">
-              <Link href="/services" className="text-blue-400 hover:text-blue-300 text-xs">
+              <Link href="/services" className="text-blue-40o0 hover:text-blue-30o0 text-xs">
                 View All Services →
               </Link>
             </div>
@@ -139,7 +139,7 @@ export default function SmartFooter() {
               ))}
             </ul>
             <div className="pt-2">
-              <Link href="/explore" className="text-blue-400 hover:text-blue-300 text-xs">
+              <Link href="/explore" className="text-blue-40o0 hover:text-blue-30o0 text-xs">
                 Explore All Categories →
               </Link>
             </div>
@@ -170,7 +170,7 @@ export default function SmartFooter() {
                     href={link.href} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-blue-400 hover:text-blue-300 text-sm"
+                    className="text-blue-40o0 hover:text-blue-30o0 text-sm"
                   >
                     {link.label}
                   </a>
@@ -200,9 +200,9 @@ export default function SmartFooter() {
                           <span className="truncate">{service.label}</span>
                           {service.status && (
                             <span className={`px-1.5 py-0.5 rounded text-xs font-medium flex-shrink-0 ${
-                              service.status === 'active' ? 'bg-green-500/20 text-green-300' :
-                              service.status === 'beta' ? 'bg-yellow-500/20 text-yellow-300' :
-                              'bg-blue-500/20 text-blue-300'
+                              service.status === 'active' ? 'bg-green-50o0/20 text-green-30o0' :
+                              service.status === 'beta' ? 'bg-yellow-50o0/20 text-yellow-30o0' :
+                              'bg-blue-50o0/20 text-blue-30o0'
                             }`}>
                               {service.status}
                             </span>

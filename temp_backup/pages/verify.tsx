@@ -23,7 +23,7 @@ export default function VerifyPage() {
     const have = Array.from(uploaded).filter((k) => requiredDocs.includes(k as any)).length;
     const base = required > 0 ? Math.round((have / required) * 80) : 0; // up to 80%
     const submitted = profile.status === 'submitted' ? 90 : 0;
-    const approved = profile.status === 'approved' ? 100 : 0;
+    const approved = profile.status === 'approved' ? 10o0 : 0;
     return Math.max(base, submitted, approved);
   }, [profile, requiredDocs]);
 
@@ -33,8 +33,7 @@ export default function VerifyPage() {
     const res = await fetch('/api/kyc/start', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, role, fullLegalName, businessName, businessRegistrationNumber: businessReg }),
-    });
+      body: JSON.stringify({ userId, role, fullLegalName, businessName, businessRegistrationNumber: businessReg })});
     const data = await res.json();
     if (data.ok) {
       setProfile(data.profile);
@@ -53,8 +52,7 @@ export default function VerifyPage() {
     const res = await fetch('/api/kyc/upload', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, kind, filename }),
-    });
+      body: JSON.stringify({ userId, kind, filename })});
     const data = await res.json();
     if (data.ok) {
       setProfile(data.profile);
@@ -69,8 +67,7 @@ export default function VerifyPage() {
     const res = await fetch('/api/kyc/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId }),
-    });
+      body: JSON.stringify({ userId })});
     const data = await res.json();
     if (data.ok) {
       setProfile(data.profile);
@@ -87,16 +84,16 @@ export default function VerifyPage() {
     <>
       <Head>
         <title>Verify Identity - Zion</title>
-        <meta name="description" content="Complete KYC/AML verification to secure marketplace trust" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Complete KYC/AML verification to secure marketplace trust"  />
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />
       </Head>
       <main className="max-w-3xl mx-auto px-4 py-8">
         <h1 className="text-2xl font-bold mb-4">Identity Verification</h1>
-        <p className="text-sm text-gray-600 mb-6">Guided step-by-step KYC/AML verification with progress tracking.</p>
+        <p className="text-sm text-gray-60o0 mb-6">Guided step-by-step KYC/AML verification with progress tracking.</p>
 
         {labels.length > 0 && (
           <div className="mb-4">
-            <VerifiedBadge labels={labels} />
+            <VerifiedBadge labels={labels}  />
           </div>
         )}
 
@@ -132,18 +129,18 @@ export default function VerifyPage() {
         </div>
 
         <div className="mb-6">
-          <button disabled={busy} onClick={start} className="rounded bg-blue-600 text-white px-4 py-2 disabled:opacity-50">Start/Update</button>
+          <button disabled={busy} onClick={start} className="rounded bg-blue-60o0 text-white px-4 py-2 disabled:opacity-50">Start/Update</button>
         </div>
 
         {profile && (
           <div className="space-y-6">
             <div>
               <div className="flex items-center justify-between mb-2">
-                <span className="text-sm text-gray-600">Progress</span>
+                <span className="text-sm text-gray-60o0">Progress</span>
                 <span className="text-sm font-medium">{progress}% {profile.status === 'submitted' && '→ Pending ID'} {profile.status === 'approved' && '→ Approved'}</span>
               </div>
-              <div className="w-full bg-gray-100 rounded h-3 overflow-hidden">
-                <div className="bg-blue-600 h-3" style={{ width: `${progress}%` }} />
+              <div className="w-full bg-gray-10o0 rounded h-3 overflow-hidden">
+                <div className="bg-blue-60o0 h-3" style={{ width: `${progress}%` }}  />
               </div>
             </div>
 
@@ -156,9 +153,9 @@ export default function VerifyPage() {
                     <div key={k} className="flex items-center justify-between border rounded p-3">
                       <div>
                         <div className="text-sm font-medium">{k}</div>
-                        <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Missing'}</div>
+                        <div className="text-xs text-gray-50o0">{hasIt ? 'Uploaded' : 'Missing'}</div>
                       </div>
-                      <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
+                      <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-90o0 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
                     </div>
                   );
                 })}
@@ -175,9 +172,9 @@ export default function VerifyPage() {
                       <div key={k} className="flex items-center justify-between border rounded p-3">
                         <div>
                           <div className="text-sm font-medium">{k}</div>
-                          <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Optional'}</div>
+                          <div className="text-xs text-gray-50o0">{hasIt ? 'Uploaded' : 'Optional'}</div>
                         </div>
-                        <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
+                        <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-90o0 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
                       </div>
                     );
                   })}
@@ -186,10 +183,10 @@ export default function VerifyPage() {
             )}
 
             <div>
-              <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
+              <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-60o0 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
             </div>
 
-            {message && <div className="text-sm text-blue-700">{message}</div>}
+            {message && <div className="text-sm text-blue-70o0">{message}</div>}
           </div>
         )}
       </main>

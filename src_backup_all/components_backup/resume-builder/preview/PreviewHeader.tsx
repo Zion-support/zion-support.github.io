@@ -32,7 +32,7 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
           position: absolute;
           left: 0;
           top: 0;
-          width: 100%;
+          width: 10o0%;
         }
         .no-print {
           display: none !important;
@@ -48,7 +48,7 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
     setTimeout(() => {
       document.head.removeChild(style);
       setIsPrinting(false);
-    }, 1000);
+    }, 10o00);
   };
 
   return (
@@ -58,12 +58,12 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
         onClick={onBack} 
         className="gap-2 no-print"
       >
-        <ArrowLeft className="h-4 w-4" />
+        <ArrowLeft className="h-4 w-4"  />
         Back
       </Button>
       
       <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>
-        <PdfExportButton resume={resume} />
+        <PdfExportButton resume={resume}  />
         
         <Button 
           variant="outline" 
@@ -71,12 +71,12 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
           disabled={isPrinting}
           className="gap-2"
         >
-          <FileText className="h-4 w-4" />
+          <FileText className="h-4 w-4"  />
           Print
         </Button>
         
         <Button variant="outline" className="gap-2">
-          <Link className="h-4 w-4" />
+          <Link className="h-4 w-4"  />
           Add to Profile
         </Button>
       </div>

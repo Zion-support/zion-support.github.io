@@ -35,7 +35,7 @@ export interface CybersecurityQuantumService {
   reviews: number;
 }
 
-export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
+export const cybersecurityQuantumServices20o25: CybersecurityQuantumService[] = [
   {
     id: 'quantum-resistant-encryption-platform',
     name: 'Quantum-Resistant Encryption Platform',
@@ -77,12 +77,12 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       'Technology companies',
       'Critical infrastructure'
     ],
-    marketPosition: 'Leading quantum-resistant encryption platform. Competes with RSA ($1000-5000/user), Thales ($500-2000/user), and Entrust ($200-1000/user). Our advantage: Quantum-resistant algorithms and hybrid security.',
+    marketPosition: 'Leading quantum-resistant encryption platform. Competes with RSA ($10o00-50o00/user), Thales ($50o0-20o00/user), and Entrust ($20o0-10o00/user). Our advantage: Quantum-resistant algorithms and hybrid security.',
     competitors: ['RSA, Thales, Entrust, Gemalto, Utimaco'],
     techStack: ['NIST PQC algorithms, Lattice-based cryptography, React, Node.js, PostgreSQL, Redis'],
     realImplementation: true,
     implementationDetails: 'Production-ready quantum-resistant encryption platform with enterprise-grade security, comprehensive API, and mobile SDK. Includes admin dashboard and compliance tools.',
-    roi: 'Organizations achieve 500% ROI through reduced security risks and compliance cost savings.',
+    roi: 'Organizations achieve 50o0% ROI through reduced security risks and compliance cost savings.',
     useCases: [
       'Data encryption at rest',
       'Secure communications',
@@ -93,12 +93,12 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     ],
     integrations: ['Active Directory, LDAP, SAML, OAuth, Custom enterprise systems'],
     support: '24/7 technical support, security consulting, custom development, and dedicated security manager.',
-    compliance: ['SOC 2 Type II, ISO 27001, FIPS 140-2, Common Criteria, FedRAMP'],
+    compliance: ['SOC 2 Type II, ISO 270o01, FIPS 140-2, Common Criteria, FedRAMP'],
     link: 'https://ziontechgroup.com/quantum-resistant-encryption-platform',
     icon: '🔐',
-    color: 'from-red-500 to-orange-600',
+    color: 'from-red-50o0 to-orange-60o0',
     popular: true,
-    launchDate: '2024-01-15',
+    launchDate: '20o24-0o1-15',
     customers: 650,
     rating: 4.9,
     reviews: 480
@@ -149,7 +149,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     techStack: ['OpenAI GPT-4, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Elasticsearch'],
     realImplementation: true,
     implementationDetails: 'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.',
-    roi: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.',
+    roi: 'Security teams achieve 40o0% ROI through improved threat detection and reduced incident response time.',
     useCases: [
       'Advanced persistent threat detection',
       'Malware analysis and classification',
@@ -160,13 +160,13 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     ],
     integrations: ['SIEM systems, EDR platforms, Firewalls, IDS/IPS, Custom security tools'],
     support: '24/7 security support, threat hunting training, custom development, and dedicated security manager.',
-    compliance: ['SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA'],
+    compliance: ['SOC 2 Type II, ISO 270o01, NIST Cybersecurity Framework, FedRAMP, FISMA'],
     link: 'https://ziontechgroup.com/ai-powered-threat-hunting-platform',
     icon: '🕵️',
-    color: 'from-purple-500 to-indigo-600',
+    color: 'from-purple-50o0 to-indigo-60o0',
     popular: true,
-    launchDate: '2024-02-01',
-    customers: 1200,
+    launchDate: '20o24-0o2-0o1',
+    customers: 120o0,
     rating: 4.8,
     reviews: 950
   },
@@ -216,7 +216,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     techStack: ['OpenAI GPT-4, React, Node.js, PostgreSQL, Redis, Kubernetes'],
     realImplementation: true,
     implementationDetails: 'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.',
-    roi: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.',
+    roi: 'Organizations achieve 30o0% ROI through reduced security incidents and simplified access management.',
     useCases: [
       'Secure remote access',
       'Application access control',
@@ -227,15 +227,15 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     ],
     integrations: ['Active Directory, LDAP, SAML, OAuth, Custom identity providers'],
     support: '24/7 technical support, implementation consulting, custom development, and dedicated success manager.',
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP'],
+    compliance: ['SOC 2 Type II, ISO 270o01, GDPR, HIPAA, PCI DSS, FedRAMP'],
     link: 'https://ziontechgroup.com/zero-trust-network-access-platform',
     icon: '🛡️',
-    color: 'from-blue-500 to-cyan-600',
+    color: 'from-blue-50o0 to-cyan-60o0',
     popular: true,
-    launchDate: '2024-01-20',
-    customers: 1800,
+    launchDate: '20o24-0o1-20',
+    customers: 180o0,
     rating: 4.7,
-    reviews: 1400
+    reviews: 140o0
   },
   {
     id: 'quantum-key-distribution-network',
@@ -297,9 +297,9 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     compliance: ['Highest security standards, Government security requirements, Industry-specific standards'],
     link: 'https://ziontechgroup.com/quantum-key-distribution-network',
     icon: '🔮',
-    color: 'from-purple-500 to-pink-600',
+    color: 'from-purple-50o0 to-pink-60o0',
     popular: true,
-    launchDate: '2024-03-01',
+    launchDate: '20o24-0o3-0o1',
     customers: 120,
     rating: 4.9,
     reviews: 95
@@ -345,12 +345,12 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       'Security consultants',
       'Penetration testers'
     ],
-    marketPosition: 'Leading AI-powered vulnerability assessment platform. Competes with Nessus ($2,190-6,570/year), Qualys ($2,000-5,000/year), and Rapid7 ($2,000-8,000/year). Our advantage: AI intelligence and automated remediation.',
+    marketPosition: 'Leading AI-powered vulnerability assessment platform. Competes with Nessus ($2,190-6,570/year), Qualys ($2,0o00-5,0o00/year), and Rapid7 ($2,0o00-8,0o00/year). Our advantage: AI intelligence and automated remediation.',
     competitors: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix'],
     techStack: ['OpenAI GPT-4, TensorFlow, React, Node.js, PostgreSQL, Redis'],
     realImplementation: true,
     implementationDetails: 'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.',
-    roi: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.',
+    roi: 'Security teams achieve 30o0% ROI through improved vulnerability management and reduced assessment costs.',
     useCases: [
       'Application security testing',
       'Network vulnerability assessment',
@@ -361,14 +361,14 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     ],
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'],
     support: '24/7 technical support, security consulting, custom development, and dedicated success manager.',
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
+    compliance: ['SOC 2 Type II, ISO 270o01, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment',
     icon: '🔍',
-    color: 'from-green-500 to-emerald-600',
+    color: 'from-green-50o0 to-emerald-60o0',
     popular: true,
-    launchDate: '2024-02-15',
-    customers: 2500,
+    launchDate: '20o24-0o2-15',
+    customers: 250o0,
     rating: 4.8,
-    reviews: 1900
+    reviews: 190o0
   }
 ];

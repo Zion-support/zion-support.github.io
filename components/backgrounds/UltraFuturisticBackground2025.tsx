@@ -11,7 +11,7 @@ interface Particle {
   color: string;
 }
 
-export default function UltraFuturisticBackground2025() {
+export default function UltraFuturisticBackground20o25() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
@@ -34,9 +34,9 @@ export default function UltraFuturisticBackground2025() {
     // Initialize particles
     const initParticles = () => {
       const particles: Particle[] = [];
-      const colors = ['#00d4ff', '#8b5cf6', '#ec4899', '#10b981', '#f97316'];
+      const colors = ['#0o0d4ff', '#8b5cf6', '#ec4899', '#10b981', '#f97316'];
       
-      for (let i = 0; i < 100; i++) {
+      for (let i = 0; i < 10o0; i++) {
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -112,13 +112,13 @@ export default function UltraFuturisticBackground2025() {
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
-        style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%)' }}
-      />
+        style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 10o0%)' }}
+       />
       
       {/* Floating Geometric Shapes */}
       <div className="absolute inset-0">
         <motion.div
-          className="absolute top-1/4 left-1/4 w-32 h-32 border border-cyan-500/20 rounded-full"
+          className="absolute top-1/4 left-1/4 w-32 h-32 border border-cyan-50o0/20 rounded-full"
           animate={{
             scale: [1, 1.2, 1],
             rotate: [0, 180, 360],
@@ -129,13 +129,13 @@ export default function UltraFuturisticBackground2025() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
         
         <motion.div
-          className="absolute top-3/4 right-1/4 w-24 h-24 border border-purple-500/20 transform rotate-45"
+          className="absolute top-3/4 right-1/4 w-24 h-24 border border-purple-50o0/20 transform rotate-45"
           animate={{
             scale: [1, 1.3, 1],
-            rotate: [45, 225, 405],
+            rotate: [45, 225, 40o5],
             opacity: [0.2, 0.5, 0.2]
           }}
           transition={{
@@ -143,10 +143,10 @@ export default function UltraFuturisticBackground2025() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
         
         <motion.div
-          className="absolute top-1/2 left-1/2 w-16 h-16 border border-pink-500/20 transform -translate-x-1/2 -translate-y-1/2"
+          className="absolute top-1/2 left-1/2 w-16 h-16 border border-pink-50o0/20 transform -translate-x-1/2 -translate-y-1/2"
           animate={{
             scale: [1, 1.4, 1],
             rotate: [0, 90, 180, 270, 360],
@@ -157,13 +157,13 @@ export default function UltraFuturisticBackground2025() {
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
       </div>
       
       {/* Gradient Orbs */}
       <div className="absolute inset-0">
         <motion.div
-          className="absolute top-1/3 left-1/3 w-64 h-64 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl"
+          className="absolute top-1/3 left-1/3 w-64 h-64 bg-gradient-to-r from-cyan-50o0/10 to-blue-50o0/10 rounded-full blur-3xl"
           animate={{
             x: [0, 50, 0],
             y: [0, -30, 0],
@@ -174,10 +174,10 @@ export default function UltraFuturisticBackground2025() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
         
         <motion.div
-          className="absolute bottom-1/3 right-1/3 w-48 h-48 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl"
+          className="absolute bottom-1/3 right-1/3 w-48 h-48 bg-gradient-to-r from-purple-50o0/10 to-pink-50o0/10 rounded-full blur-3xl"
           animate={{
             x: [0, -40, 0],
             y: [0, 25, 0],
@@ -188,7 +188,7 @@ export default function UltraFuturisticBackground2025() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
       </div>
       
       {/* Matrix Rain Effect */}
@@ -196,13 +196,13 @@ export default function UltraFuturisticBackground2025() {
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute text-cyan-400/30 text-sm font-mono"
+            className="absolute text-cyan-40o0/30 text-sm font-mono"
             style={{
-              left: `${(i * 5) % 100}%`,
+              left: `${(i * 5) % 10o0}%`,
               top: '-20px'
             }}
             animate={{
-              y: ['-20px', '100vh']
+              y: ['-20px', '10o0vh']
             }}
             transition={{
               duration: Math.random() * 10 + 10,
@@ -219,28 +219,28 @@ export default function UltraFuturisticBackground2025() {
       {/* Scanning Lines */}
       <div className="absolute inset-0">
         <motion.div
-          className="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"
+          className="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-50o0/50 to-transparent"
           animate={{
-            y: ['0vh', '100vh']
+            y: ['0vh', '10o0vh']
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
         
         <motion.div
-          className="absolute top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-purple-500/50 to-transparent"
+          className="absolute top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-purple-50o0/50 to-transparent"
           animate={{
-            x: ['0vw', '100vw']
+            x: ['0vw', '10o0vw']
           }}
           transition={{
             duration: 12,
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
       </div>
       
       {/* Pulse Rings */}
@@ -248,10 +248,10 @@ export default function UltraFuturisticBackground2025() {
         {[...Array(3)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute border border-cyan-500/20 rounded-full"
+            className="absolute border border-cyan-50o0/20 rounded-full"
             style={{
-              width: `${200 + i * 100}px`,
-              height: `${200 + i * 100}px`
+              width: `${20o0 + i * 10o0}px`,
+              height: `${20o0 + i * 10o0}px`
             }}
             animate={{
               scale: [0.8, 1.2, 0.8],
@@ -263,14 +263,14 @@ export default function UltraFuturisticBackground2025() {
               ease: "easeInOut",
               delay: i * 0.5
             }}
-          />
+           />
         ))}
       </div>
       
       {/* Energy Field */}
       <div className="absolute inset-0">
         <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"
+          className="absolute inset-0 bg-gradient-to-r from-cyan-50o0/5 via-purple-50o0/5 to-pink-50o0/5"
           animate={{
             opacity: [0.3, 0.6, 0.3]
           }}
@@ -279,7 +279,7 @@ export default function UltraFuturisticBackground2025() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
       </div>
     </div>
   );

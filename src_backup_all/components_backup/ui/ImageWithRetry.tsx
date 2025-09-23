@@ -46,7 +46,7 @@ export function ImageWithRetry({
         onError={handleError}
         className={cn(className)}
         fill={fill}
-      />
+       />
       {failed && (
         <button
           type="button"

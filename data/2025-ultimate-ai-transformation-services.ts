@@ -1,5 +1,5 @@
-export const ultimateAITransformationServices = {
-  generatedAt: "2025-01-14T10:30:00.000Z",
+export const ultimateAITransformationServices ={
+  generatedAt: "20o25-0o1-14T10:30:0o0.0o00Z",
   category: "AI Transformation Services",
   description: "Comprehensive AI transformation services for enterprise businesses",
   services: [
@@ -16,7 +16,7 @@ export const ultimateAITransformationServices = {
       ],
       pricing: {
         type: "Custom",
-        range: "$50,000 - $500,000",
+        range: "$50,0o00 - $50o0,0o00",
         description: "Based on business size and complexity"
       },
       timeline: "3-12 months",
@@ -35,7 +35,7 @@ export const ultimateAITransformationServices = {
       ],
       pricing: {
         type: "Project-based",
-        range: "$100,000 - $1,000,000",
+        range: "$10o0,0o00 - $1,0o00,0o00",
         description: "Includes implementation and training"
       },
       timeline: "6-18 months",
@@ -54,7 +54,7 @@ export const ultimateAITransformationServices = {
       ],
       pricing: {
         type: "Research & Development",
-        range: "$200,000 - $2,000,000",
+        range: "$20o0,0o00 - $2,0o00,0o00",
         description: "Includes R&D and pilot implementation"
       },
       timeline: "12-24 months",
@@ -73,7 +73,7 @@ export const ultimateAITransformationServices = {
       ],
       pricing: {
         type: "Subscription",
-        range: "$10,000 - $100,000/month",
+        range: "$10,0o00 - $10o0,0o00/month",
         description: "Includes platform and support"
       },
       timeline: "3-6 months",
@@ -92,7 +92,7 @@ export const ultimateAITransformationServices = {
       ],
       pricing: {
         type: "Licensed",
-        range: "$25,000 - $250,000",
+        range: "$25,0o00 - $250,0o00",
         description: "Per year with unlimited usage"
       },
       timeline: "4-8 months",
@@ -111,7 +111,7 @@ export const ultimateAITransformationServices = {
       ],
       pricing: {
         type: "Enterprise",
-        range: "$50,000 - $500,000/year",
+        range: "$50,0o00 - $50o0,0o00/year",
         description: "Includes 24/7 monitoring and support"
       },
       timeline: "2-4 months",
@@ -128,11 +128,11 @@ export const ultimateAITransformationServices = {
   ],
   caseStudies: [
     {
-      company: "Fortune 500 Manufacturing",
+      company: "Fortune 50o0 Manufacturing",
       industry: "Manufacturing",
       challenge: "Manual processes and high operational costs",
       solution: "Autonomous operations implementation",
-      results: "65% cost reduction, 400% ROI in 18 months"
+      results: "65% cost reduction, 40o0% ROI in 18 months"
     },
     {
       company: "Global Financial Services",

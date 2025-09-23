@@ -1,4 +1,3 @@
-import React from 'react';
 export function ProductVideoSection() {
   return (
     <div>

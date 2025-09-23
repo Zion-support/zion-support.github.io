@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -21,7 +20,7 @@ export default function SitemapPage() {
     { name: 'Contact', href: '/contact', description: 'Get in touch with us' },
     { name: 'Team', href: '/team', description: 'Meet our team' },
     { name: 'Blog', href: '/blog', description: 'Latest insights and news' },
-    { name: 'Pricing', href: '/pricing-2025', description: 'Service pricing information' }
+    { name: 'Pricing', href: '/pricing-20o25', description: 'Service pricing information' }
   ];
 
   const serviceCategories = [
@@ -57,8 +56,8 @@ export default function SitemapPage() {
   ];
 
   const specialPages = [
-    { name: 'Comprehensive Services Showcase', href: '/comprehensive-2025-services-showcase', description: 'Complete service overview' },
-    { name: 'Ultimate Futuristic Services', href: '/ultimate-futuristic-services-showcase-2025', description: 'Future-focused services' },
+    { name: 'Comprehensive Services Showcase', href: '/comprehensive-20o25-services-showcase', description: 'Complete service overview' },
+    { name: 'Ultimate Futuristic Services', href: '/ultimate-futuristic-services-showcase-20o25', description: 'Future-focused services' },
     { name: 'Technology Insights', href: '/technology-insights', description: 'Technology trends and insights' },
     { name: 'Solutions', href: '/solutions', description: 'Industry solutions' },
     { name: 'Startup Tools', href: '/startup-tools', description: 'Tools for startups' },
@@ -72,15 +71,15 @@ export default function SitemapPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-90o0 to-slate-950 text-white">
       <Head>
         <title>Sitemap - Zion Tech Group | Complete Website Structure</title>
-        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all pages, services, and resources organized by category." />
-        <meta name="keywords" content="sitemap, website structure, Zion Tech Group, services, pages" />
-        <link rel="canonical" href="https://ziontechgroup.com/sitemap" />
+        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all pages, services, and resources organized by category."  />
+        <meta name="keywords" content="sitemap, website structure, Zion Tech Group, services, pages"  />
+        <link rel="canonical" href="https://ziontechgroup.com/sitemap"  />
       </Head>
 
-      <EnhancedNavigation />
+      <EnhancedNavigation  />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 px-6">
@@ -90,7 +89,7 @@ export default function SitemapPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-10o0 to-cyan-10o0 bg-clip-text text-transparent mb-6">
               Website Sitemap
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
@@ -110,11 +109,11 @@ export default function SitemapPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-white/10 p-6"
+              className="bg-slate-80o0/50 backdrop-blur-xl rounded-2xl border border-white/10 p-6"
             >
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center">
-                  <Globe className="w-5 h-5 text-white" />
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-60o0 to-cyan-60o0 flex items-center justify-center">
+                  <Globe className="w-5 h-5 text-white"  />
                 </div>
                 <h2 className="text-xl font-bold text-white">Main Pages</h2>
               </div>
@@ -123,9 +122,9 @@ export default function SitemapPage() {
                   <Link
                     key={page.name}
                     href={page.href}
-                    className="block p-3 rounded-lg hover:bg-white/5 transition-colors duration-200 group"
+                    className="block p-3 rounded-lg hover:bg-white/5 transition-colors duration-20o0 group"
                   >
-                    <div className="text-white font-medium group-hover:text-cyan-300 transition-colors duration-200">
+                    <div className="text-white font-medium group-hover:text-cyan-30o0 transition-colors duration-20o0">
                       {page.name}
                     </div>
                     <div className="text-sm text-white/60 mt-1">
@@ -141,11 +140,11 @@ export default function SitemapPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-white/10 p-6"
+              className="bg-slate-80o0/50 backdrop-blur-xl rounded-2xl border border-white/10 p-6"
             >
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center">
-                  <Brain className="w-5 h-5 text-white" />
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-60o0 to-pink-60o0 flex items-center justify-center">
+                  <Brain className="w-5 h-5 text-white"  />
                 </div>
                 <h2 className="text-xl font-bold text-white">Services</h2>
               </div>
@@ -154,9 +153,9 @@ export default function SitemapPage() {
                   <Link
                     key={service.name}
                     href={service.href}
-                    className="block p-3 rounded-lg hover:bg-white/5 transition-colors duration-200 group"
+                    className="block p-3 rounded-lg hover:bg-white/5 transition-colors duration-20o0 group"
                   >
-                    <div className="text-white font-medium group-hover:text-purple-300 transition-colors duration-200">
+                    <div className="text-white font-medium group-hover:text-purple-30o0 transition-colors duration-20o0">
                       {service.name}
                     </div>
                     <div className="text-sm text-white/60 mt-1">
@@ -172,11 +171,11 @@ export default function SitemapPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-white/10 p-6"
+              className="bg-slate-80o0/50 backdrop-blur-xl rounded-2xl border border-white/10 p-6"
             >
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-green-600 to-teal-600 flex items-center justify-center">
-                  <Building className="w-5 h-5 text-white" />
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-green-60o0 to-teal-60o0 flex items-center justify-center">
+                  <Building className="w-5 h-5 text-white"  />
                 </div>
                 <h2 className="text-xl font-bold text-white">Company</h2>
               </div>
@@ -185,9 +184,9 @@ export default function SitemapPage() {
                   <Link
                     key={page.name}
                     href={page.href}
-                    className="block p-3 rounded-lg hover:bg-white/5 transition-colors duration-200 group"
+                    className="block p-3 rounded-lg hover:bg-white/5 transition-colors duration-20o0 group"
                   >
-                    <div className="text-white font-medium group-hover:text-green-300 transition-colors duration-200">
+                    <div className="text-white font-medium group-hover:text-green-30o0 transition-colors duration-20o0">
                       {page.name}
                     </div>
                     <div className="text-sm text-white/60 mt-1">
@@ -203,11 +202,11 @@ export default function SitemapPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-white/10 p-6"
+              className="bg-slate-80o0/50 backdrop-blur-xl rounded-2xl border border-white/10 p-6"
             >
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-yellow-600 to-orange-600 flex items-center justify-center">
-                  <BookOpen className="w-5 h-5 text-white" />
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-yellow-60o0 to-orange-60o0 flex items-center justify-center">
+                  <BookOpen className="w-5 h-5 text-white"  />
                 </div>
                 <h2 className="text-xl font-bold text-white">Resources</h2>
               </div>
@@ -216,9 +215,9 @@ export default function SitemapPage() {
                   <Link
                     key={page.name}
                     href={page.href}
-                    className="block p-3 rounded-lg hover:bg-white/5 transition-colors duration-200 group"
+                    className="block p-3 rounded-lg hover:bg-white/5 transition-colors duration-20o0 group"
                   >
-                    <div className="text-white font-medium group-hover:text-yellow-300 transition-colors duration-200">
+                    <div className="text-white font-medium group-hover:text-yellow-30o0 transition-colors duration-20o0">
                       {page.name}
                     </div>
                     <div className="text-sm text-white/60 mt-1">
@@ -234,11 +233,11 @@ export default function SitemapPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-white/10 p-6"
+              className="bg-slate-80o0/50 backdrop-blur-xl rounded-2xl border border-white/10 p-6"
             >
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-600 to-pink-600 flex items-center justify-center">
-                  <Shield className="w-5 h-5 text-white" />
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-60o0 to-pink-60o0 flex items-center justify-center">
+                  <Shield className="w-5 h-5 text-white"  />
                 </div>
                 <h2 className="text-xl font-bold text-white">Legal & Compliance</h2>
               </div>
@@ -247,9 +246,9 @@ export default function SitemapPage() {
                   <Link
                     key={page.name}
                     href={page.href}
-                    className="block p-3 rounded-lg hover:bg-white/5 transition-colors duration-200 group"
+                    className="block p-3 rounded-lg hover:bg-white/5 transition-colors duration-20o0 group"
                   >
-                    <div className="text-white font-medium group-hover:text-red-300 transition-colors duration-200">
+                    <div className="text-white font-medium group-hover:text-red-30o0 transition-colors duration-20o0">
                       {page.name}
                     </div>
                     <div className="text-sm text-white/60 mt-1">
@@ -265,11 +264,11 @@ export default function SitemapPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-white/10 p-6 lg:col-span-2 xl:col-span-1"
+              className="bg-slate-80o0/50 backdrop-blur-xl rounded-2xl border border-white/10 p-6 lg:col-span-2 xl:col-span-1"
             >
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center">
-                  <Zap className="w-5 h-5 text-white" />
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-60o0 to-purple-60o0 flex items-center justify-center">
+                  <Zap className="w-5 h-5 text-white"  />
                 </div>
                 <h2 className="text-xl font-bold text-white">Special Pages & Tools</h2>
               </div>
@@ -278,9 +277,9 @@ export default function SitemapPage() {
                   <Link
                     key={page.name}
                     href={page.href}
-                    className="block p-3 rounded-lg hover:bg-white/5 transition-colors duration-200 group"
+                    className="block p-3 rounded-lg hover:bg-white/5 transition-colors duration-20o0 group"
                   >
-                    <div className="text-white font-medium group-hover:text-indigo-300 transition-colors duration-200">
+                    <div className="text-white font-medium group-hover:text-indigo-30o0 transition-colors duration-20o0">
                       {page.name}
                     </div>
                     <div className="text-sm text-white/60 mt-1">
@@ -295,7 +294,7 @@ export default function SitemapPage() {
         </div>
       </section>
 
-      <EnhancedFooter />
+      <EnhancedFooter  />
     </div>
   );
 }

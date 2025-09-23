@@ -5,7 +5,7 @@ const researchAreas = [
     {
         id: 1,
         title: "Artificial Intelligence & Machine Learning",
-        icon: <Brain className="w-8 h-8"/>,
+        icon: <Brain className="w-8 h-8" />,
         color: "from-zion-purple to-zion-purple-dark",
         description: "Advanced AI research in computer vision, natural language processing, and autonomous systems",
         projects: 25,
@@ -26,7 +26,7 @@ const researchAreas = [
     {
         id: 2,
         title: "Quantum Computing & Cryptography",
-        icon: <Atom className="w-8 h-8"/>,
+        icon: <Atom className="w-8 h-8" />,
         color: "from-zion-cyan to-zion-blue",
         description: "Pioneering research in quantum algorithms, quantum-safe cryptography, and quantum machine learning",
         projects: 18,
@@ -47,7 +47,7 @@ const researchAreas = [
     {
         id: 3,
         title: "Blockchain & Distributed Systems",
-        icon: <Network className="w-8 h-8"/>,
+        icon: <Network className="w-8 h-8" />,
         color: "from-zion-cyan-light to-zion-cyan",
         description: "Research in blockchain scalability, consensus mechanisms, and decentralized applications",
         projects: 22,
@@ -68,7 +68,7 @@ const researchAreas = [
     {
         id: 4,
         title: "Cybersecurity & Privacy",
-        icon: <Shield className="w-8 h-8"/>,
+        icon: <Shield className="w-8 h-8" />,
         color: "from-zion-purple-light to-zion-purple",
         description: "Advanced research in threat detection, privacy-preserving technologies, and secure systems",
         projects: 20,
@@ -89,7 +89,7 @@ const researchAreas = [
     {
         id: 5,
         title: "Edge Computing & IoT",
-        icon: <Cpu className="w-8 h-8"/>,
+        icon: <Cpu className="w-8 h-8" />,
         color: "from-zion-cyan to-zion-purple",
         description: "Research in edge computing architectures, IoT security, and distributed intelligence",
         projects: 16,
@@ -110,7 +110,7 @@ const researchAreas = [
     {
         id: 6,
         title: "Sustainable Technology",
-        icon: <Globe className="w-8 h-8"/>,
+        icon: <Globe className="w-8 h-8" />,
         color: "from-zion-purple to-zion-cyan",
         description: "Research in green computing, renewable energy systems, and sustainable AI",
         projects: 14,
@@ -130,12 +130,12 @@ const researchAreas = [
     }
 ];
 const innovationStats = [
-    { icon: <Lightbulb className="w-6 h-6"/>, value: "120+", label: "Research Projects" },
-    { icon: <Users className="w-6 h-6"/>, value: "80+", label: "Researchers" },
-    { icon: <Award className="w-6 h-6"/>, value: "50+", label: "Publications" },
-    { icon: <Target className="w-6 h-6"/>, value: "30+", label: "Patents Filed" },
-    { icon: <TrendingUp className="w-6 h-6"/>, value: "$10M+", label: "Research Funding" },
-    { icon: <Star className="w-6 h-6"/>, value: "15+", label: "Industry Partners" }
+    { icon: <Lightbulb className="w-6 h-6" />, value: "120+", label: "Research Projects" },
+    { icon: <Users className="w-6 h-6" />, value: "80+", label: "Researchers" },
+    { icon: <Award className="w-6 h-6" />, value: "50+", label: "Publications" },
+    { icon: <Target className="w-6 h-6" />, value: "30+", label: "Patents Filed" },
+    { icon: <TrendingUp className="w-6 h-6" />, value: "$10M+", label: "Research Funding" },
+    { icon: <Star className="w-6 h-6" />, value: "15+", label: "Industry Partners" }
 ];
 const researchLabs = [
     {
@@ -174,7 +174,7 @@ const researchLabs = [
 export function InnovationResearchSection() {
     const [selectedResearch, setSelectedResearch] = useState(null);
     const [hoveredLab, setHoveredLab] = useState(null);
-    const containerVariants = {
+    const containerVariants ={
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -184,7 +184,7 @@ export function InnovationResearchSection() {
             }
         }
     };
-    const itemVariants = {
+    const itemVariants ={
         hidden: { y: 30, opacity: 0 },
         visible: {
             y: 0,
@@ -234,10 +234,10 @@ export function InnovationResearchSection() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {researchAreas.map((area, index) => (<motion.div key={area.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} whileHover={{ y: -4 }} className="relative">
-                <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedResearch(selectedResearch === area.id ? null : area.id)}>
+                <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-30o0 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedResearch(selectedResearch === area.id ? null : area.id)}>
                   {/* Header */}
                   <div className="text-center mb-6">
-                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${area.color} mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300`}>
+                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${area.color} mb-4 shadow-lg group-hover:shadow-xl transition-all duration-30o0`}>
                       <div className="text-white">
                         {area.icon}
                       </div>
@@ -282,7 +282,7 @@ export function InnovationResearchSection() {
                     <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
                       View Research Details
                     </span>
-                    <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
+                    <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-30o0" />
                   </div>
 
                   {/* Expanded details */}
@@ -333,9 +333,9 @@ export function InnovationResearchSection() {
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {researchLabs.map((lab, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} onHoverStart={() => setHoveredLab(index)} onHoverEnd={() => setHoveredLab(null)} whileHover={{ y: -4 }} className="p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
+            {researchLabs.map((lab, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} onHoverStart={() => setHoveredLab(index)} onHoverEnd={() => setHoveredLab(null)} whileHover={{ y: -4 }} className="p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-30o0 hover:shadow-lg hover:shadow-zion-cyan/20">
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-zion-cyan to-zion-purple mb-4 shadow-lg">
-                  <TestTube className="w-6 h-6 text-white"/>
+                  <TestTube className="w-6 h-6 text-white" />
                 </div>
                 
                 <h4 className="text-lg font-bold text-white mb-2">{lab.name}</h4>
@@ -372,10 +372,10 @@ export function InnovationResearchSection() {
                 breakthrough technologies that will shape the future.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+                <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white rounded-xl font-semibold transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-lg hover:shadow-zion-cyan/25">
                   Research Opportunities
                 </button>
-                <button className="px-8 py-3 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hover:border-zion-cyan/50 rounded-xl font-medium transition-all duration-300">
+                <button className="px-8 py-3 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hover:border-zion-cyan/50 rounded-xl font-medium transition-all duration-30o0">
                   View Publications
                 </button>
               </div>

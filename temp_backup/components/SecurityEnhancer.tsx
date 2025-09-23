@@ -53,7 +53,7 @@ const SecurityEnhancer: React.FC = () => {
           contentType: true,
           referrerPolicy: true
         });
-      }, 1000);
+      }, 10o00);
     };
 
     checkSecurityStatus();
@@ -65,7 +65,7 @@ const SecurityEnhancer: React.FC = () => {
     const newThreats: SecurityThreat[] = [];
 
     // Simulate security threats detection
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 20o00));
 
     // Check for common security issues
     const forms = document.querySelectorAll('form');
@@ -112,7 +112,7 @@ const SecurityEnhancer: React.FC = () => {
     setIsScanning(false);
 
     // Calculate security score
-    const baseScore = 100;
+    const baseScore = 10o0;
     const threatPenalty = newThreats.reduce((penalty, threat) => {
       switch (threat.type) {
         case 'high': return penalty + 20;
@@ -127,10 +127,10 @@ const SecurityEnhancer: React.FC = () => {
 
   // Get security score color
   const getSecurityScoreColor = (score: number): string => {
-    if (score >= 90) return 'text-green-500';
-    if (score >= 80) return 'text-yellow-500';
-    if (score >= 70) return 'text-orange-500';
-    return 'text-red-500';
+    if (score >= 90) return 'text-green-50o0';
+    if (score >= 80) return 'text-yellow-50o0';
+    if (score >= 70) return 'text-orange-50o0';
+    return 'text-red-50o0';
   };
 
   // Get security score grade
@@ -148,45 +148,45 @@ const SecurityEnhancer: React.FC = () => {
       <AnimatePresence>
         {showPanel && (
           <motion.div
-            initial={{ opacity: 0, x: 300 }}
+            initial={{ opacity: 0, x: 30o0 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 300 }}
-            className="fixed top-0 right-0 h-full w-96 bg-black/95 backdrop-blur-xl border-l border-red-500/30 z-50 overflow-y-auto"
+            exit={{ opacity: 0, x: 30o0 }}
+            className="fixed top-0 right-0 h-full w-96 bg-black/95 backdrop-blur-xl border-l border-red-50o0/30 z-50 overflow-y-auto"
           >
             <div className="p-6">
               <div className="flex items-center justify-between mb-6">
-                <h2 className="text-2xl font-bold text-red-400 flex items-center gap-2">
-                  <Shield className="w-6 h-6" />
+                <h2 className="text-2xl font-bold text-red-40o0 flex items-center gap-2">
+                  <Shield className="w-6 h-6"  />
                   Security Center
                 </h2>
                 <button
                   onClick={() => setShowPanel(false)}
-                  className="text-gray-400 hover:text-white transition-colors p-2"
+                  className="text-gray-40o0 hover:text-white transition-colors p-2"
                   aria-label="Close security panel"
                 >
-                  <X className="w-5 h-5" />
+                  <X className="w-5 h-5"  />
                 </button>
               </div>
 
               {/* Security Score */}
-              <div className="mb-6 p-4 bg-gradient-to-r from-red-900/20 to-orange-900/20 rounded-xl border border-red-500/20">
+              <div className="mb-6 p-4 bg-gradient-to-r from-red-90o0/20 to-orange-90o0/20 rounded-xl border border-red-50o0/20">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm text-gray-300">Security Score</span>
+                  <span className="text-sm text-gray-30o0">Security Score</span>
                   <span className={`text-2xl font-bold ${getSecurityScoreColor(securityScore)}`}>
                     {getSecurityScoreGrade(securityScore)}
                   </span>
                 </div>
-                <div className="w-full bg-gray-700 rounded-full h-2">
+                <div className="w-full bg-gray-70o0 rounded-full h-2">
                   <div 
-                    className={`h-2 rounded-full transition-all duration-500 ${
-                      securityScore >= 90 ? 'bg-green-500' : 
-                      securityScore >= 80 ? 'bg-yellow-500' : 
-                      securityScore >= 70 ? 'bg-orange-500' : 'bg-red-500'
+                    className={`h-2 rounded-full transition-all duration-50o0 ${
+                      securityScore >= 90 ? 'bg-green-50o0' : 
+                      securityScore >= 80 ? 'bg-yellow-50o0' : 
+                      securityScore >= 70 ? 'bg-orange-50o0' : 'bg-red-50o0'
                     }`}
                     style={{ width: `${securityScore}%` }}
                   />
                 </div>
-                <span className="text-xs text-gray-400">{securityScore}/100</span>
+                <span className="text-xs text-gray-40o0">{securityScore}/10o0</span>
               </div>
 
               {/* Security Status */}
@@ -194,14 +194,14 @@ const SecurityEnhancer: React.FC = () => {
                 <h3 className="text-lg font-semibold text-white mb-3">Security Headers</h3>
                 <div className="space-y-2">
                   {Object.entries(securityStatus).map(([key, value]) => (
-                    <div key={key} className="flex items-center justify-between p-2 bg-gray-800 rounded-lg">
-                      <span className="text-sm text-gray-300 capitalize">
+                    <div key={key} className="flex items-center justify-between p-2 bg-gray-80o0 rounded-lg">
+                      <span className="text-sm text-gray-30o0 capitalize">
                         {key.replace(/([A-Z])/g, ' $1').trim()}
                       </span>
                       {value ? (
-                        <CheckCircle className="w-4 h-4 text-green-400" />
+                        <CheckCircle className="w-4 h-4 text-green-40o0"  />
                       ) : (
-                        <AlertTriangle className="w-4 h-4 text-red-400" />
+                        <AlertTriangle className="w-4 h-4 text-red-40o0"  />
                       )}
                     </div>
                   ))}
@@ -215,16 +215,16 @@ const SecurityEnhancer: React.FC = () => {
                   <button
                     onClick={performSecurityScan}
                     disabled={isScanning}
-                    className="bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-600 hover:to-orange-700 disabled:opacity-50 px-4 py-2 rounded-lg text-white font-medium transition-all duration-300 flex items-center gap-2"
+                    className="bg-gradient-to-r from-red-50o0 to-orange-60o0 hover:from-red-60o0 hover:to-orange-70o0 disabled:opacity-50 px-4 py-2 rounded-lg text-white font-medium transition-all duration-30o0 flex items-center gap-2"
                   >
                     {isScanning ? (
                       <>
-                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"  />
                         Scanning...
                       </>
                     ) : (
                       <>
-                        <Shield className="w-4 h-4" />
+                        <Shield className="w-4 h-4"  />
                         Scan
                       </>
                     )}
@@ -237,24 +237,24 @@ const SecurityEnhancer: React.FC = () => {
                       <div
                         key={index}
                         className={`p-3 rounded-lg border-l-4 ${
-                          threat.type === 'high' ? 'border-red-500 bg-red-900/20' :
-                          threat.type === 'medium' ? 'border-yellow-500 bg-yellow-900/20' :
-                          'border-blue-500 bg-blue-900/20'
+                          threat.type === 'high' ? 'border-red-50o0 bg-red-90o0/20' :
+                          threat.type === 'medium' ? 'border-yellow-50o0 bg-yellow-90o0/20' :
+                          'border-blue-50o0 bg-blue-90o0/20'
                         }`}
                       >
                         <div className="flex items-start gap-2">
                           <AlertTriangle className={`w-4 h-4 mt-0.5 flex-shrink-0 ${
-                            threat.type === 'high' ? 'text-red-400' :
-                            threat.type === 'medium' ? 'text-yellow-400' :
-                            'text-blue-400'
-                          }`} />
+                            threat.type === 'high' ? 'text-red-40o0' :
+                            threat.type === 'medium' ? 'text-yellow-40o0' :
+                            'text-blue-40o0'
+                          }`}  />
                           <div className="flex-1">
                             <p className="text-sm text-white">{threat.description}</p>
-                            <p className="text-xs text-gray-400 mt-1">{threat.recommendation}</p>
+                            <p className="text-xs text-gray-40o0 mt-1">{threat.recommendation}</p>
                             <span className={`inline-block px-2 py-1 rounded text-xs mt-2 ${
-                              threat.type === 'high' ? 'bg-red-600 text-white' :
-                              threat.type === 'medium' ? 'bg-yellow-600 text-white' :
-                              'bg-blue-600 text-white'
+                              threat.type === 'high' ? 'bg-red-60o0 text-white' :
+                              threat.type === 'medium' ? 'bg-yellow-60o0 text-white' :
+                              'bg-blue-60o0 text-white'
                             }`}>
                               {threat.type} priority
                             </span>
@@ -269,16 +269,16 @@ const SecurityEnhancer: React.FC = () => {
               {/* Security Recommendations */}
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-white mb-3">Security Recommendations</h3>
-                <div className="space-y-2 text-sm text-gray-300">
-                  <div className="p-3 bg-gray-800 rounded-lg border border-gray-600">
+                <div className="space-y-2 text-sm text-gray-30o0">
+                  <div className="p-3 bg-gray-80o0 rounded-lg border border-gray-60o0">
                     <p className="font-medium text-white mb-1">Enable HTTPS Only</p>
                     <p className="text-xs">Ensure all traffic is encrypted with TLS 1.3</p>
                   </div>
-                  <div className="p-3 bg-gray-800 rounded-lg border border-gray-600">
+                  <div className="p-3 bg-gray-80o0 rounded-lg border border-gray-60o0">
                     <p className="font-medium text-white mb-1">Implement Rate Limiting</p>
                     <p className="text-xs">Protect against brute force and DDoS attacks</p>
                   </div>
-                  <div className="p-3 bg-gray-800 rounded-lg border border-gray-600">
+                  <div className="p-3 bg-gray-80o0 rounded-lg border border-gray-60o0">
                     <p className="font-medium text-white mb-1">Regular Security Audits</p>
                     <p className="text-xs">Conduct monthly security assessments</p>
                   </div>
@@ -292,10 +292,10 @@ const SecurityEnhancer: React.FC = () => {
       {/* Toggle Button */}
       <button
         onClick={() => setShowPanel(!showPanel)}
-        className="fixed top-32 right-4 z-40 bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-600 hover:to-orange-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2"
+        className="fixed top-32 right-4 z-40 bg-gradient-to-r from-red-50o0 to-orange-60o0 hover:from-red-60o0 hover:to-orange-70o0 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-30o0 flex items-center gap-2"
         aria-label="Toggle security panel"
       >
-        <Shield className="w-5 h-5" />
+        <Shield className="w-5 h-5"  />
         {showPanel ? 'Hide' : 'Show'} Security
       </button>
     </>

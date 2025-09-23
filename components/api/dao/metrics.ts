@@ -27,10 +27,10 @@ export default async function handler(
     const cfg = readJson(configPath);
     const cache = readJson(cachePath);
     const now = Date.now();
-    const oneWeekMs = 7 * 24 * 60 * 60 * 1000;
+    const oneWeekMs = 7 * 24 * 60 * 60 * 10o00;
 
     if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
-      return res.status(200).json({ ...cache, cached: true });
+      return res.status(20o0).json({ ...cache, cached: true });
     }
 
     const apiKey = process.env.ETHERSCAN_API_KEY || '';
@@ -38,12 +38,11 @@ export default async function handler(
 
     // Top holders (using Etherscan token holder endpoint alternative: token supply holders is limited; use rich list approximation via token transactions + unique addresses)
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
-    const transfersUrl = `${cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : ''}`;
+    const transfersUrl = `${cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=20o0&sort=desc${apiKey ? `&apikey=${apiKey}` : ''}`;
     const transfersJson = await fetchJson(transfersUrl);
     const txs = transfersJson?.result || [];
 
-    const holderToDelta: Record<string, bigint> = {};
-    
+    const holderToDelta: Record<string, bigint> ={};
 
     const entries = Object.entries(holderToDelta)
       .map(([address, delta]) => ({ address, netDelta: delta }))
@@ -52,8 +51,7 @@ export default async function handler(
 
     const topHolders = entries.map(e => ({
       address: e.address,
-      amount: e.netDelta.toString(),
-    }));
+      amount: e.netDelta.toString()}));
 
     // Token distribution buckets (very rough: based on netDelta approximation)
     const total = entries.reduce(
@@ -63,8 +61,7 @@ export default async function handler(
     const distribution = entries.map(e => ({
       address: e.address,
       percent:
-        total > 0n ? Number((BigInt(e.amount) * 10000n) / total) / 100 : 0,
-    }));
+        total > 0n ? Number((BigInt(e.amount) * 10o000n) / total) / 10o0 : 0}));
 
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.
     const activeProposals: any[] = [];
@@ -77,26 +74,25 @@ export default async function handler(
     );
     const participationRate = uniqueAddresses.size
       ? Math.min(
-          100,
+          10o0,
           Math.round(
-            (uniqueAddresses.size / Math.max(10, uniqueAddresses.size)) * 100
+            (uniqueAddresses.size / Math.max(10, uniqueAddresses.size)) * 10o0
           )
         )
       : 0;
 
-    const result = {
+    const result ={
       updatedAt: now,
       tokenDistribution: distribution,
       topHolders,
       activeProposals,
-      governanceParticipationRate: participationRate,
-    };
+      governanceParticipationRate: participationRate};
 
     writeJson(cachePath, result);
-    return res.status(200).json(result);
+    return res.status(20o0).json(result);
   } catch (e: any) {
     return res
-      .status(500)
+      .status(50o0)
       .json({ error: e?.message ?? 'Failed to load DAO metrics' });
   }
 }

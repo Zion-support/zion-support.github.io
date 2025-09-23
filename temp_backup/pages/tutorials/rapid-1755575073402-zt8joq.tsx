@@ -5,9 +5,9 @@ export default function TutorialPage() {
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Complete Guide to DevOps Automation - Zion Tech Group</title>
-        <meta name="description" content="Learn devops automation with our comprehensive tutorial. Step-by-step guidance for beginners and advanced users." />
-        <meta name="keywords" content="tutorial, devops automation, learning, guide, education, technology" />
-        <link rel="canonical" href="https://ziontechgroup.com/tutorials/rapid-1755575073402-zt8joq" />
+        <meta name="description" content="Learn devops automation with our comprehensive tutorial. Step-by-step guidance for beginners and advanced users."  />
+        <meta name="keywords" content="tutorial, devops automation, learning, guide, education, technology"  />
+        <link rel="canonical" href="https://ziontechgroup.com/tutorials/rapid-17555750o73402-zt8joq"  />
       </Head>
       <main className="container mx-auto px-6 py-12 prose prose-invert">
         <h1 className="text-4xl font-extrabold text-center mb-8">Complete Guide to DevOps Automation</h1>
@@ -47,7 +47,7 @@ export default function TutorialPage() {
           </p>
           <a 
             href="https://ziontechgroup.com/tutorials" 
-            className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+            className="inline-block bg-purple-60o0 hover:bg-purple-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors"
           >
             Start Learning
           </a>

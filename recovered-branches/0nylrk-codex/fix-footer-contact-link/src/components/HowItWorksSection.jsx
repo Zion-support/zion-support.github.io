@@ -15,7 +15,7 @@ const HowItWorksSection = () => {
 
   const steps = [
     {
-      number: "01",
+      number: "0o1",
       title: "Discovery & Planning",
       description: "We analyze your requirements and create a comprehensive project roadmap.",
       duration: "1-2 weeks",
@@ -28,7 +28,7 @@ const HowItWorksSection = () => {
       ]
     },
     {
-      number: "02",
+      number: "0o2",
       title: "Development & Testing",
       description: "Our expert team builds your solution with rigorous quality assurance.",
       duration: "4-8 weeks",
@@ -41,11 +41,11 @@ const HowItWorksSection = () => {
       ]
     },
     {
-      number: "03",
+      number: "0o3",
       title: "Deployment & Launch",
       description: "Seamless deployment with monitoring and support for smooth operation.",
       duration: "1-2 weeks",
-      success: "100% uptime",
+      success: "10o0% uptime",
       details: [
         "Production deployment",
         "Performance monitoring",
@@ -55,7 +55,7 @@ const HowItWorksSection = () => {
     }
   ];
 
-  const containerVariants = {
+  const containerVariants ={
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -65,7 +65,7 @@ const HowItWorksSection = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants ={
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
   };
@@ -112,10 +112,10 @@ const HowItWorksSection = () => {
               onHoverStart={() => setHoveredStep(index)} 
               onHoverEnd={() => setHoveredStep(null)} 
               whileHover={{ y: -8 }} 
-              transition={{ type: "spring", stiffness: 300 }}
+              transition={{ type: "spring", stiffness: 30o0 }}
               className="relative group"
             >
-              <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 h-full">
+              <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-30o0 hover:shadow-2xl hover:shadow-zion-cyan/20 h-full">
                 {/* Step number */}
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-zion-cyan to-zion-purple mb-6 text-white font-bold text-xl">
                   {step.number}
@@ -132,11 +132,11 @@ const HowItWorksSection = () => {
                 {/* Duration and success rate */}
                 <div className="space-y-2 mb-4">
                   <div className="flex items-center justify-center gap-2 text-zion-cyan/80 text-xs">
-                    <Clock className="w-3 h-3"/>
+                    <Clock className="w-3 h-3" />
                     <span>{step.duration}</span>
                   </div>
                   <div className="flex items-center justify-center gap-2 text-zion-purple/80 text-xs">
-                    <Target className="w-3 h-3"/>
+                    <Target className="w-3 h-3" />
                     <span>{step.success}</span>
                   </div>
                 </div>
@@ -192,9 +192,9 @@ const HowItWorksSection = () => {
               <p className="text-white text-lg mb-4">
                 Ready to start your project journey?
               </p>
-              <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-purple/25">
+              <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3 rounded-xl font-semibold transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-lg hover:shadow-zion-purple/25">
                 Get Started Today
-                <Rocket className="w-5 h-5"/>
+                <Rocket className="w-5 h-5" />
               </button>
             </div>
           </div>
@@ -210,7 +210,7 @@ const HowItWorksSection = () => {
         >
           <div className="text-center p-6 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r from-zion-cyan to-zion-purple mb-4">
-              <Zap className="w-8 h-8 text-white"/>
+              <Zap className="w-8 h-8 text-white" />
             </div>
             <h4 className="text-white font-semibold mb-2">Fast Setup</h4>
             <p className="text-zion-slate-light text-sm">Get started in minutes, not days</p>
@@ -218,7 +218,7 @@ const HowItWorksSection = () => {
           
           <div className="text-center p-6 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r from-zion-purple to-zion-cyan mb-4">
-              <Shield className="w-8 h-8 text-white"/>
+              <Shield className="w-8 h-8 text-white" />
             </div>
             <h4 className="text-white font-semibold mb-2">Secure & Reliable</h4>
             <p className="text-zion-slate-light text-sm">Enterprise-grade security and uptime</p>
@@ -226,7 +226,7 @@ const HowItWorksSection = () => {
           
           <div className="text-center p-6 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r from-zion-cyan-light to-zion-blue mb-4">
-              <Users className="w-8 h-8 text-white"/>
+              <Users className="w-8 h-8 text-white" />
             </div>
             <h4 className="text-white font-semibold mb-2">Expert Support</h4>
             <p className="text-zion-slate-light text-sm">24/7 support from our team</p>

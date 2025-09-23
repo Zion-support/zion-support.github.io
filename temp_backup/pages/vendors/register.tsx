@@ -33,12 +33,10 @@ export default function VendorRegisterPage() {
       const data = await res.json(),
       if (!res.ok) throw new Error(data?.error || 'Failed to submit'),
       setMessage('Application submitted. Await approval.'),
-      form.reset(),
-    } catch (err: any) {
+      form.reset()} catch (err: any) {
       setMessage(err.message)
     } finally {
-      setLoading(false),
-    }
+      setLoading(false)}
   }
 
   return (
@@ -47,35 +45,34 @@ export default function VendorRegisterPage() {
       <form onSubmit={onSubmit} className="space-y-4">
         <div>
           <label className="block text-sm mb-1">Agency Name</label>
-          <input name="name" required className="w-full border rounded px-3 py-2 bg-transparent" />
+          <input name="name" required className="w-full border rounded px-3 py-2 bg-transparent"  />
         </div>
         <div>
           <label className="block text-sm mb-1">Unique URL Slug</label>
-          <input name="slug" required pattern="[a-z0-9-]+" className="w-full border rounded px-3 py-2 bg-transparent" />
-          <p className="text-xs text-gray-500">Example: acme-ai</p>
+          <input name="slug" required pattern="[a-z0-9-]+" className="w-full border rounded px-3 py-2 bg-transparent"  />
+          <p className="text-xs text-gray-50o0">Example: acme-ai</p>
         </div>
         <div>
           <label className="block text-sm mb-1">Services Offered</label>
-          <input name="servicesOffered" placeholder="AI prototypingData labelingMLOps" className="w-full border rounded px-3 py-2 bg-transparent" />
+          <input name="servicesOffered" placeholder="AI prototypingData labelingMLOps" className="w-full border rounded px-3 py-2 bg-transparent"  />
         </div>
         <div>
           <label className="block text-sm mb-1">Team Size</label>
-          <input name="teamSize" type="number" min={1} className="w-full border rounded px-3 py-2 bg-transparent" />
+          <input name="teamSize" type="number" min={1} className="w-full border rounded px-3 py-2 bg-transparent"  />
         </div>
         <div>
           <label className="block text-sm mb-1">About</label>
-          <textarea name="about" rows={4} className="w-full border rounded px-3 py-2 bg-transparent" />
+          <textarea name="about" rows={4} className="w-full border rounded px-3 py-2 bg-transparent"  />
         </div>
         <div>
           <label className="block text-sm mb-1">Verification Docs (URLscomma-separated)</label>
-          <input name="verificationDocs" className="w-full border rounded px-3 py-2 bg-transparent" />
+          <input name="verificationDocs" className="w-full border rounded px-3 py-2 bg-transparent"  />
         </div>
         <button disabled={loading} className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">
           {loading ? 'Submitting...' : 'Submit Application'}
         </button>
       </form>
       {message && <div className="text-sm">{message}</div>}
-      <div className="text-center text-xs text-gray-500">Powered by Zion</div>
+      <div className="text-center text-xs text-gray-50o0">Powered by Zion</div>
     </div>
-  ),
-}
+  )}

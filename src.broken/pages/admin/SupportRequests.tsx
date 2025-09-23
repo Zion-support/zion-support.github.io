@@ -1,4 +1,3 @@
-import React from 'react';
 export function SupportRequests() {
   return (
     <div>

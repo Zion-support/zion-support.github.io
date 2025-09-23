@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const NewInteractiveContentShowcase2025 = () => {
+const NewInteractiveContentShowcase20o25 = () => {
   const [activeTab, setActiveTab] = useState('trends');
   const [isVisible, setIsVisible] = useState(false);
 
@@ -12,27 +12,27 @@ const NewInteractiveContentShowcase2025 = () => {
     setIsVisible(true);
   }, []);
 
-  const contentSections = {
+  const contentSections ={
     trends: {
-      title: "🚀 Latest AI Trends 2025",
+      title: "🚀 Latest AI Trends 20o25",
       description: "Discover the cutting-edge AI technologies reshaping industries",
       items: [
         {
           title: "Neural Superintelligence Breakthrough",
           description: "Revolutionary AI systems achieving human-level consciousness",
-          roi: "50,000%",
+          roi: "50,0o00%",
           category: "Breakthrough"
         },
         {
           title: "Quantum-Neural Fusion",
           description: "Combining quantum computing with neural networks",
-          roi: "25,000%",
+          roi: "25,0o00%",
           category: "Revolutionary"
         },
         {
           title: "Autonomous Business Ecosystems",
           description: "Self-managing AI systems for enterprise operations",
-          roi: "15,000%",
+          roi: "15,0o00%",
           category: "Transformation"
         }
       ]
@@ -42,15 +42,15 @@ const NewInteractiveContentShowcase2025 = () => {
       description: "Real-world transformations with measurable results",
       items: [
         {
-          title: "Fortune 500 Manufacturing Revolution",
-          description: "Complete automation transformation with 2,500% ROI",
-          roi: "2,500%",
+          title: "Fortune 50o0 Manufacturing Revolution",
+          description: "Complete automation transformation with 2,50o0% ROI",
+          roi: "2,50o0%",
           category: "Manufacturing"
         },
         {
           title: "Global Financial Services AI",
-          description: "AI-powered trading systems generating $500M revenue",
-          roi: "1,200%",
+          description: "AI-powered trading systems generating $50o0M revenue",
+          roi: "1,20o0%",
           category: "Finance"
         },
         {
@@ -88,17 +88,17 @@ const NewInteractiveContentShowcase2025 = () => {
   };
 
   return (
-    <div className={`py-16 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+    <div className={`py-16 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 transition-all duration-10o00 ${isVisible ? 'opacity-10o0 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full px-6 py-2 mb-4">
-            <span className="text-sm font-semibold">✨ NEW CONTENT 2025</span>
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white rounded-full px-6 py-2 mb-4">
+            <span className="text-sm font-semibold">✨ NEW CONTENT 20o25</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-90o0 mb-4">
             Interactive Content Showcase
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
             Explore our latest AI innovations, success stories, and interactive tools designed to transform your business.
           </p>
         </div>
@@ -109,10 +109,10 @@ const NewInteractiveContentShowcase2025 = () => {
             <button
               key={key}
               onClick={() => setActiveTab(key)}
-              className={`px-6 py-3 m-2 rounded-lg font-semibold transition-all duration-300 ${
+              className={`px-6 py-3 m-2 rounded-lg font-semibold transition-all duration-30o0 ${
                 activeTab === key
-                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg transform scale-105'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md'
+                  ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg transform scale-10o5'
+                  : 'bg-white text-gray-70o0 hover:bg-gray-10o0 shadow-md'
               }`}
             >
               {section.title}
@@ -123,10 +123,10 @@ const NewInteractiveContentShowcase2025 = () => {
         {/* Content Display */}
         <div className="bg-white rounded-2xl shadow-xl p-8">
           <div className="mb-6">
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">
+            <h3 className="text-2xl font-bold text-gray-90o0 mb-2">
               {contentSections[activeTab as keyof typeof contentSections].title}
             </h3>
-            <p className="text-gray-600">
+            <p className="text-gray-60o0">
               {contentSections[activeTab as keyof typeof contentSections].description}
             </p>
           </div>
@@ -135,29 +135,29 @@ const NewInteractiveContentShowcase2025 = () => {
             {contentSections[activeTab as keyof typeof contentSections].items.map((item, index) => (
               <div
                 key={index}
-                className="group bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:transform hover:scale-105"
+                className="group bg-gradient-to-br from-gray-50 to-gray-10o0 rounded-xl p-6 hover:shadow-lg transition-all duration-30o0 hover:transform hover:scale-10o5"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                  <span className="bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white px-3 py-1 rounded-full text-sm font-semibold">
                     {item.category}
                   </span>
-                  <span className="text-2xl font-bold text-green-600">
+                  <span className="text-2xl font-bold text-green-60o0">
                     {item.roi}
                   </span>
                 </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                <h4 className="text-xl font-bold text-gray-90o0 mb-3 group-hover:text-purple-60o0 transition-colors">
                   {item.title}
                 </h4>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-60o0 mb-4">
                   {item.description}
                 </p>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors"
+                  className="inline-flex items-center text-purple-60o0 font-semibold hover:text-purple-80o0 transition-colors"
                 >
                   Learn More
                   <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"  />
                   </svg>
                 </Link>
               </div>
@@ -167,7 +167,7 @@ const NewInteractiveContentShowcase2025 = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-12">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
+          <div className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 text-white">
             <h3 className="text-3xl font-bold mb-4">
               Ready to Transform Your Business?
             </h3>
@@ -177,13 +177,13 @@ const NewInteractiveContentShowcase2025 = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/services"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
               >
                 Explore Services
               </Link>
               <Link
                 href="/contact"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors"
               >
                 Get Started Today
               </Link>
@@ -195,4 +195,4 @@ const NewInteractiveContentShowcase2025 = () => {
   );
 };
 
-export default NewInteractiveContentShowcase2025;
+export default NewInteractiveContentShowcase20o25;

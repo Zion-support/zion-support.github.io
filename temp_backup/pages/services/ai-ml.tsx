@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
@@ -14,54 +13,54 @@ export default function AIMLServicesPage() {
       title: "Custom AI Solutions",
       description: "Tailored AI applications built for your specific business needs",
       features: ["Machine Learning Models", "Neural Networks", "Predictive Analytics", "Natural Language Processing"],
-      price: "From $5,000",
+      price: "From $5,0o00",
       icon: Brain,
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-50o0 to-pink-50o0"
     },
     {
       title: "AI-Powered Automation",
       description: "Intelligent automation systems that learn and adapt",
       features: ["Process Automation", "Workflow Optimization", "Smart Decision Making", "Continuous Learning"],
-      price: "From $3,500",
+      price: "From $3,50o0",
       icon: Zap,
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-50o0 to-cyan-50o0"
     },
     {
       title: "Data Intelligence Platform",
       description: "Advanced analytics and insights powered by AI",
       features: ["Big Data Processing", "Real-time Analytics", "Business Intelligence", "Predictive Insights"],
-      price: "From $7,500",
+      price: "From $7,50o0",
       icon: Database,
-      color: "from-emerald-500 to-teal-500"
+      color: "from-emerald-50o0 to-teal-50o0"
     },
     {
       title: "AI Consulting & Strategy",
       description: "Strategic guidance for AI implementation and transformation",
       features: ["AI Roadmap Planning", "Technology Assessment", "Implementation Strategy", "ROI Optimization"],
-      price: "From $2,500",
+      price: "From $2,50o0",
       icon: Rocket,
-      color: "from-orange-500 to-red-500"
+      color: "from-orange-50o0 to-red-50o0"
     }
   ];
 
   const stats = [
-    { number: "500+", label: "AI Models Deployed", icon: Brain },
+    { number: "50o0+", label: "AI Models Deployed", icon: Brain },
     { number: "99.9%", label: "Accuracy Rate", icon: CheckCircle },
     { number: "24/7", label: "AI Monitoring", icon: Clock },
-    { number: "2500%", label: "Average ROI", icon: TrendingUp }
+    { number: "250o0%", label: "Average ROI", icon: TrendingUp }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-90o0 to-slate-950 text-white">
       <Head>
         <title>AI & Machine Learning Services - Zion Tech Group</title>
-        <meta name="description" content="Cutting-edge AI and machine learning solutions from Zion Tech Group. Custom AI applications, automation, and intelligent systems that drive business growth." />
-        <meta property="og:title" content="AI & Machine Learning Services - Zion Tech Group" />
-        <meta property="og:description" content="Cutting-edge AI and machine learning solutions that drive business growth and innovation." />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-ml" />
+        <meta name="description" content="Cutting-edge AI and machine learning solutions from Zion Tech Group. Custom AI applications, automation, and intelligent systems that drive business growth."  />
+        <meta property="og:title" content="AI & Machine Learning Services - Zion Tech Group"  />
+        <meta property="og:description" content="Cutting-edge AI and machine learning solutions that drive business growth and innovation."  />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-ml"  />
       </Head>
 
-      <EnhancedNavigation />
+      <EnhancedNavigation  />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">
@@ -72,7 +71,7 @@ export default function AIMLServicesPage() {
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-40o0 via-pink-40o0 to-purple-40o0 bg-clip-text text-transparent mb-6">
               AI & Machine Learning
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
@@ -90,9 +89,9 @@ export default function AIMLServicesPage() {
               From custom neural networks to intelligent automation systems, we deliver AI solutions 
               that provide measurable business outcomes and competitive advantages.
             </p>
-            <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
+            <button className="px-8 py-4 bg-gradient-to-r from-purple-60o0 to-pink-60o0 hover:from-purple-70o0 hover:to-pink-70o0 rounded-full font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
               Get AI Consultation
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-5 h-5"  />
             </button>
           </motion.div>
         </div>
@@ -111,8 +110,8 @@ export default function AIMLServicesPage() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-purple-400" />
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-50o0/20 to-pink-50o0/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="w-8 h-8 text-purple-40o0"  />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
@@ -146,24 +145,24 @@ export default function AIMLServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-purple-500/30 transition-all duration-300"
+                className="bg-gradient-to-br from-slate-80o0/50 to-slate-90o0/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-purple-50o0/30 transition-all duration-30o0"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
-                  <service.icon className="w-8 h-8 text-white" />
+                  <service.icon className="w-8 h-8 text-white"  />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-white/70 mb-6">{service.description}</p>
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center text-white/80">
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-purple-40o0 mr-3 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
                 </ul>
                 <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-purple-400">{service.price}</span>
-                  <button className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
+                  <span className="text-2xl font-bold text-purple-40o0">{service.price}</span>
+                  <button className="px-6 py-3 bg-gradient-to-r from-purple-60o0 to-pink-60o0 hover:from-purple-70o0 hover:to-pink-70o0 rounded-full font-semibold text-white transition-all duration-30o0 transform hover:scale-10o5">
                     Get Started
                   </button>
                 </div>
@@ -189,10 +188,10 @@ export default function AIMLServicesPage() {
               Let's discuss how our AI solutions can drive innovation, efficiency, and growth for your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-60o0 to-pink-60o0 hover:from-purple-70o0 hover:to-pink-70o0 rounded-full font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5">
                 Schedule Consultation
               </button>
-              <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
+              <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-30o0 backdrop-blur-sm bg-white/5 hover:bg-white/10">
                 View Case Studies
               </button>
             </div>
@@ -200,7 +199,7 @@ export default function AIMLServicesPage() {
         </div>
       </section>
 
-      <EnhancedFooter />
+      <EnhancedFooter  />
     </div>
   );
 }

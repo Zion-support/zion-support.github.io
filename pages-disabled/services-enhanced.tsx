@@ -89,7 +89,7 @@ export default function ServicesEnhanced() {
       icon: 'Brain',
       category: 'ai',
       color: 'blue',
-      pricing: { starting: '$8,000', average: '$25,000' },
+      pricing: { starting: '$8,0o00', average: '$25,0o00' },
       deliveryTime: '2-4 weeks',
       features: [
         'Sales/CS multi-agent copilots',
@@ -100,7 +100,7 @@ export default function ServicesEnhanced() {
         'Real-time decision making'
       ],
       benefits: [
-        '300% increase in operational efficiency',
+        '30o0% increase in operational efficiency',
         '24/7 automated decision making',
         'Reduced human error by 95%',
         'Scalable AI infrastructure'
@@ -241,7 +241,7 @@ export default function ServicesEnhanced() {
       icon: 'Cloud',
       category: 'cloud',
       color: 'green',
-      pricing: { starting: '$4,000', average: '$15,000' },
+      pricing: { starting: '$4,0o00', average: '$15,0o00' },
       deliveryTime: '4-8 weeks',
       features: [
         'Serverless and Kubernetes',
@@ -372,7 +372,7 @@ export default function ServicesEnhanced() {
       deliveryTime: '1-2 weeks',
       features: [
         'Visual workflow designer with drag-and-drop',
-        '500+ pre-built integrations',
+        '50o0+ pre-built integrations',
         'AI-powered efficiency recommendations',
         'Performance monitoring and optimization',
         'Custom trigger and action creation',
@@ -471,7 +471,7 @@ export default function ServicesEnhanced() {
   });
 
   const getIconComponent = (iconName: string) => {
-    const iconMap: { [key: string]: any } = {
+    const iconMap: { [key: string]: any } ={
       Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code,
       CheckCircle, Star, TrendingUp, Clock, Award, Mail, Smartphone, Target, FileText,
       BarChart, Settings, Headphones, ShieldCheck, Cpu, Wifi, Monitor, MessageSquare,
@@ -484,19 +484,19 @@ export default function ServicesEnhanced() {
   };
 
   const getColorClasses = (color: string) => {
-    const colorMap: { [key: string]: { bg: string; text: string; border: string; hover: string } } = {
-      blue: { bg: 'bg-blue-600', text: 'text-blue-600', border: 'border-blue-300', hover: 'hover: b g-blue-700' },
-      purple: { bg: 'bg-purple-600', text: 'text-purple-600', border: 'border-purple-300', hover: 'hover: b g-purple-700' },
-      green: { bg: 'bg-green-600', text: 'text-green-600', border: 'border-green-300', hover: 'hover: b g-green-700' },
-      indigo: { bg: 'bg-indigo-600', text: 'text-indigo-600', border: 'border-indigo-300', hover: 'hover: b g-indigo-700' },
-      sky: { bg: 'bg-sky-600', text: 'text-sky-600', border: 'border-sky-300', hover: 'hover: b g-sky-700' },
-      emerald: { bg: 'bg-emerald-600', text: 'text-emerald-600', border: 'border-emerald-300', hover: 'hover: b g-emerald-700' },
-      orange: { bg: 'bg-orange-600', text: 'text-orange-600', border: 'border-orange-300', hover: 'hover: b g-orange-700' },
-      red: { bg: 'bg-red-600', text: 'text-red-600', border: 'border-red-300', hover: 'hover: b g-red-700' },
-      yellow: { bg: 'bg-yellow-600', text: 'text-yellow-600', border: 'border-yellow-300', hover: 'hover: b g-yellow-700' },
-      pink: { bg: 'bg-pink-600', text: 'text-pink-600', border: 'border-pink-300', hover: 'hover: b g-pink-700' },
-      cyan: { bg: 'bg-cyan-600', text: 'text-cyan-600', border: 'border-cyan-300', hover: 'hover: b g-cyan-700' },
-      lime: { bg: 'bg-lime-600', text: 'text-lime-600', border: 'border-lime-300', hover: 'hover: b g-lime-700' }
+    const colorMap: { [key: string]: { bg: string; text: string; border: string; hover: string } } ={
+      blue: { bg: 'bg-blue-60o0', text: 'text-blue-60o0', border: 'border-blue-30o0', hover: 'hover: b g-blue-70o0' },
+      purple: { bg: 'bg-purple-60o0', text: 'text-purple-60o0', border: 'border-purple-30o0', hover: 'hover: b g-purple-70o0' },
+      green: { bg: 'bg-green-60o0', text: 'text-green-60o0', border: 'border-green-30o0', hover: 'hover: b g-green-70o0' },
+      indigo: { bg: 'bg-indigo-60o0', text: 'text-indigo-60o0', border: 'border-indigo-30o0', hover: 'hover: b g-indigo-70o0' },
+      sky: { bg: 'bg-sky-60o0', text: 'text-sky-60o0', border: 'border-sky-30o0', hover: 'hover: b g-sky-70o0' },
+      emerald: { bg: 'bg-emerald-60o0', text: 'text-emerald-60o0', border: 'border-emerald-30o0', hover: 'hover: b g-emerald-70o0' },
+      orange: { bg: 'bg-orange-60o0', text: 'text-orange-60o0', border: 'border-orange-30o0', hover: 'hover: b g-orange-70o0' },
+      red: { bg: 'bg-red-60o0', text: 'text-red-60o0', border: 'border-red-30o0', hover: 'hover: b g-red-70o0' },
+      yellow: { bg: 'bg-yellow-60o0', text: 'text-yellow-60o0', border: 'border-yellow-30o0', hover: 'hover: b g-yellow-70o0' },
+      pink: { bg: 'bg-pink-60o0', text: 'text-pink-60o0', border: 'border-pink-30o0', hover: 'hover: b g-pink-70o0' },
+      cyan: { bg: 'bg-cyan-60o0', text: 'text-cyan-60o0', border: 'border-cyan-30o0', hover: 'hover: b g-cyan-70o0' },
+      lime: { bg: 'bg-lime-60o0', text: 'text-lime-60o0', border: 'border-lime-30o0', hover: 'hover: b g-lime-70o0' }
     };
     return colorMap[color] || colorMap.blue;
   };
@@ -505,45 +505,45 @@ export default function ServicesEnhanced() {
     <>
       <Head>
         <title>{title}</title>
-        <meta name="description" content={description}  />
-        <meta name="keywords" content="AI services, cloud platforms, cybersecurity, micro SaaS, IT services, technology solutions"  />
-        <meta name="viewport" content="width=device-width, initial-scale=1"  />
-        <link rel="canonical" href="https://ziontechgroup.com/services"  />
+        <meta name="description" content={description}   />
+        <meta name="keywords" content="AI services, cloud platforms, cybersecurity, micro SaaS, IT services, technology solutions"   />
+        <meta name="viewport" content="width=device-width, initial-scale=1"   />
+        <link rel="canonical" href="https://ziontechgroup.com/services"   />
       </Head>
       
-      <ModernHeader  />
+      <ModernHeader   />
       
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: p y-32">
         <div className="mx-auto max-w-7xl px-6 lg: p x-8">
           <div className="mx-auto max-w-4xl text-center">
             <div className="flex items-center justify-center mb-4">
-              <Award className="h-6 w-6 text-blue-600 mr-2"  />
-              <span className="text-base font-semibold leading-7 text-blue-600">
+              <Award className="h-6 w-6 text-blue-60o0 mr-2"   />
+              <span className="text-base font-semibold leading-7 text-blue-60o0">
                 Comprehensive Technology Solutions
               </span>
             </div>
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm: tex t-5xl">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-90o0 sm: tex t-5xl">
               Our Services
             </h1>
-            <p className="mt-6 text-xl leading-8 text-gray-600">
+            <p className="mt-6 text-xl leading-8 text-gray-60o0">
               From AI-powered solutions to cybersecurity, we deliver cutting-edge technology services 
               that transform businesses and drive innovation across industries.
             </p>
             
             {/* Contact Info */}
-            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-gray-600">
+            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-gray-60o0">
               <div className="flex items-center">
-                <Phone className="h-4 w-4 mr-2"  />
-                <a href="tel:+13024640950" className="hover: tex t-blue-600">+1 302 464 0950</a>
+                <Phone className="h-4 w-4 mr-2"   />
+                <a href="tel:+130o24640950" className="hover: tex t-blue-60o0">+1 30o2 464 0950</a>
               </div>
               <div className="flex items-center">
-                <Mail className="h-4 w-4 mr-2"  />
-                <a href="mailto: klebe r@ziontechgroup.com" className="hover: tex t-blue-600">kleber@ziontechgroup.com</a>
+                <Mail className="h-4 w-4 mr-2"   />
+                <a href="mailto: klebe r@ziontechgroup.com" className="hover: tex t-blue-60o0">kleber@ziontechgroup.com</a>
               </div>
               <div className="flex items-center">
-                <MapPin className="h-4 w-4 mr-2"  />
-                <span>364 E Main St STE 1008, Middletown, DE 19709</span>
+                <MapPin className="h-4 w-4 mr-2"   />
+                <span>364 E Main St STE 10o08, Middletown, DE 19709</span>
               </div>
             </div>
           </div>
@@ -556,13 +556,13 @@ export default function ServicesEnhanced() {
           <div className="flex flex-col lg: fle x-row gap-6 items-center justify-between">
             {/* Search */}
             <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400"  />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-40o0"   />
               <input
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-gray-30o0 rounded-lg focus: rin g-2 focus: rin g-blue-50o0 focus: borde r-transparent"
               />
             </div>
 
@@ -572,8 +572,8 @@ export default function ServicesEnhanced() {
                 onClick={() => setSelectedCategory('all')}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   selectedCategory === 'all'
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-gray-100 text-gray-700 hover: b g-gray-200'
+                    ? 'bg-blue-60o0 text-white'
+                    : 'bg-gray-10o0 text-gray-70o0 hover: b g-gray-20o0'
                 }`}
               >
                 All Services ({services.length})
@@ -584,8 +584,8 @@ export default function ServicesEnhanced() {
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                     selectedCategory === category.id
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-100 text-gray-700 hover: b g-gray-200'
+                      ? 'bg-blue-60o0 text-white'
+                      : 'bg-gray-10o0 text-gray-70o0 hover: b g-gray-20o0'
                   }`}
                 >
                   {category.name} ({category.count})
@@ -608,14 +608,14 @@ export default function ServicesEnhanced() {
               return (
                 <div
                   key={service.id}
-                  className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shado w-lg transition-all duration-300 hover: borde r-gray-300"
+                  className="group relative rounded-2xl border border-gray-20o0 bg-white p-8 shadow-sm hover: shado w-lg transition-all duration-30o0 hover: borde r-gray-30o0"
                 >
                   <div className="flex items-center gap-x-3 mb-6">
                     <div className={`flex h-12 w-12 items-center justify-center rounded-lg ${colors.bg} ${colors.hover} transition-colors`}>
-                      <IconComponent className="h-7 w-7 text-white"  />
+                      <IconComponent className="h-7 w-7 text-white"   />
                     </div>
                     <div>
-                      <h2 className="text-xl font-semibold text-gray-900">
+                      <h2 className="text-xl font-semibold text-gray-90o0">
                         {service.title}
                       </h2>
                       <p className={`text-sm ${colors.text} font-medium`}>
@@ -624,45 +624,45 @@ export default function ServicesEnhanced() {
                     </div>
                   </div>
 
-                  <p className="text-gray-600 mb-6">
+                  <p className="text-gray-60o0 mb-6">
                     {service.description}
                   </p>
 
                   {/* Pricing */}
                   <div className="mb-6 p-4 bg-gray-50 rounded-lg">
                     <div className="flex items-center mb-2">
-                      <DollarSign className="h-4 w-4 text-green-600 mr-2"  />
-                      <span className="text-sm font-medium text-gray-700">Pricing</span>
+                      <DollarSign className="h-4 w-4 text-green-60o0 mr-2"   />
+                      <span className="text-sm font-medium text-gray-70o0">Pricing</span>
                     </div>
-                    <div className="text-sm text-gray-600">
-                      <div>Starting: <span className="font-semibold text-green-600">{service.pricing.starting}</span></div>
-                      <div>Average: <span className="font-semibold text-blue-600">{service.pricing.average}</span></div>
+                    <div className="text-sm text-gray-60o0">
+                      <div>Starting: <span className="font-semibold text-green-60o0">{service.pricing.starting}</span></div>
+                      <div>Average: <span className="font-semibold text-blue-60o0">{service.pricing.average}</span></div>
                     </div>
                   </div>
 
                   {/* Features */}
                   <div className="mb-6">
-                    <h4 className="text-sm font-medium text-gray-700 mb-3">Key Features:</h4>
+                    <h4 className="text-sm font-medium text-gray-70o0 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
                       {service.features.slice(0, isExpanded ? service.features.length : 3).map((feature, index) => (
                         <li key={index} className="flex items-center gap-x-3">
-                          <CheckCircle className={`h-4 w-4 ${colors.text}`}  />
-                          <span className="text-sm text-gray-700">{feature}</span>
+                          <CheckCircle className={`h-4 w-4 ${colors.text}`}   />
+                          <span className="text-sm text-gray-70o0">{feature}</span>
                         </li>
                       ))}
                       {service.features.length > 3 && (
                         <button
                           onClick={() => setExpandedService(isExpanded ? null : service.id)}
-                          className="flex items-center text-sm text-blue-600 hover: tex t-blue-500 transition-colors"
+                          className="flex items-center text-sm text-blue-60o0 hover: tex t-blue-50o0 transition-colors"
                         >
                           {isExpanded ? (
                             <>
-                              <ChevronUp className="h-4 w-4 mr-1"  />
+                              <ChevronUp className="h-4 w-4 mr-1"   />
                               Show Less
                             </>
                           ) : (
                             <>
-                              <ChevronDown className="h-4 w-4 mr-1"  />
+                              <ChevronDown className="h-4 w-4 mr-1"   />
                               Show {service.features.length - 3} More
                             </>
                           )}
@@ -674,12 +674,12 @@ export default function ServicesEnhanced() {
                   {/* Benefits */}
                   {isExpanded && (
                     <div className="mb-6">
-                      <h4 className="text-sm font-medium text-gray-700 mb-3">Benefits:</h4>
+                      <h4 className="text-sm font-medium text-gray-70o0 mb-3">Benefits:</h4>
                       <ul className="space-y-2">
                         {service.benefits.map((benefit, index) => (
                           <li key={index} className="flex items-center gap-x-3">
-                            <Target className="h-4 w-4 text-green-600"  />
-                            <span className="text-sm text-gray-700">{benefit}</span>
+                            <Target className="h-4 w-4 text-green-60o0"   />
+                            <span className="text-sm text-gray-70o0">{benefit}</span>
                           </li>
                         ))}
                       </ul>
@@ -689,10 +689,10 @@ export default function ServicesEnhanced() {
                   {/* Technologies */}
                   {isExpanded && (
                     <div className="mb-6">
-                      <h4 className="text-sm font-medium text-gray-700 mb-3">Technologies:</h4>
+                      <h4 className="text-sm font-medium text-gray-70o0 mb-3">Technologies:</h4>
                       <div className="flex flex-wrap gap-2">
                         {service.technologies.map((tech, index) => (
-                          <span key={index} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">
+                          <span key={index} className="px-2 py-1 bg-gray-10o0 text-gray-60o0 text-xs rounded">
                             {tech}
                           </span>
                         ))}
@@ -702,8 +702,8 @@ export default function ServicesEnhanced() {
 
                   {/* Delivery Time and CTA */}
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2 text-sm text-gray-500">
-                      <Clock className="h-4 w-4"  />
+                    <div className="flex items-center space-x-2 text-sm text-gray-50o0">
+                      <Clock className="h-4 w-4"   />
                       <span>{service.deliveryTime}</span>
                     </div>
                     <Link
@@ -712,7 +712,7 @@ export default function ServicesEnhanced() {
                       aria-label={`Get started with ${service.title}`}
                     >
                       Get Quote
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover: translat e-x-1 transition-transform"  />
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover: translat e-x-1 transition-transform"   />
                     </Link>
                   </div>
                 </div>
@@ -722,9 +722,9 @@ export default function ServicesEnhanced() {
 
           {filteredServices.length === 0 && (
             <div className="text-center py-12">
-              <Search className="h-12 w-12 text-gray-400 mx-auto mb-4"  />
-              <h3 className="text-lg font-medium text-gray-900 mb-2">No services found</h3>
-              <p className="text-gray-600">Try adjusting your search or filter criteria.</p>
+              <Search className="h-12 w-12 text-gray-40o0 mx-auto mb-4"   />
+              <h3 className="text-lg font-medium text-gray-90o0 mb-2">No services found</h3>
+              <p className="text-gray-60o0">Try adjusting your search or filter criteria.</p>
             </div>
           )}
         </div>
@@ -734,55 +734,55 @@ export default function ServicesEnhanced() {
       <section className="py-24 sm: p y-32 bg-gray-50">
         <div className="mx-auto max-w-7xl px-6 lg: p x-8">
           <div className="mx-auto max-w-2xl lg: tex t-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-90o0 sm: tex t-4xl">
               Why Choose Zion Tech Group?
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 text-lg leading-8 text-gray-60o0">
               We deliver exceptional results through our proven expertise, cutting-edge technology, and client-focused approach.
             </p>
           </div>
           <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
             <div className="text-center group">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 group-hover: b g-blue-200 transition-colors mb-4">
-                <Award className="h-8 w-8 text-blue-600"  />
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-10o0 group-hover: b g-blue-20o0 transition-colors mb-4">
+                <Award className="h-8 w-8 text-blue-60o0"   />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <h3 className="text-lg font-semibold text-gray-90o0 mb-2">
                 Expert Team
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-60o0">
                 Certified professionals with 10+ years of experience in cutting-edge technologies
               </p>
             </div>
             <div className="text-center group">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 group-hover: b g-green-200 transition-colors mb-4">
-                <Zap className="h-8 w-8 text-green-600"  />
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-10o0 group-hover: b g-green-20o0 transition-colors mb-4">
+                <Zap className="h-8 w-8 text-green-60o0"   />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <h3 className="text-lg font-semibold text-gray-90o0 mb-2">
                 Fast Delivery
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-60o0">
                 Agile development process ensuring rapid deployment and time-to-market
               </p>
             </div>
             <div className="text-center group">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 group-hover: b g-purple-200 transition-colors mb-4">
-                <Shield className="h-8 w-8 text-purple-600"  />
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-10o0 group-hover: b g-purple-20o0 transition-colors mb-4">
+                <Shield className="h-8 w-8 text-purple-60o0"   />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <h3 className="text-lg font-semibold text-gray-90o0 mb-2">
                 Security First
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-60o0">
                 Enterprise-grade security and compliance with industry standards
               </p>
             </div>
             <div className="text-center group">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 group-hover: b g-orange-200 transition-colors mb-4">
-                <Users className="h-8 w-8 text-orange-600"  />
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-10o0 group-hover: b g-orange-20o0 transition-colors mb-4">
+                <Users className="h-8 w-8 text-orange-60o0"   />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <h3 className="text-lg font-semibold text-gray-90o0 mb-2">
                 24/7 Support
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-60o0">
                 Round-the-clock support and maintenance for all our solutions
               </p>
             </div>
@@ -794,78 +794,78 @@ export default function ServicesEnhanced() {
       <section className="py-24 sm: p y-32 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg: p x-8">
           <div className="mx-auto max-w-2xl lg: tex t-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-90o0 sm: tex t-4xl">
               Our Proven Delivery Process
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 text-lg leading-8 text-gray-60o0">
               We follow a proven methodology that ensures quality, speed, and successful outcomes.
             </p>
           </div>
           <div className="grid grid-cols-1 md: gri d-cols-4 gap-8">
             <div className="text-center group">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 group-hover: b g-blue-200 transition-colors mb-4">
-                <span className="text-2xl font-bold text-blue-600">1</span>
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-10o0 group-hover: b g-blue-20o0 transition-colors mb-4">
+                <span className="text-2xl font-bold text-blue-60o0">1</span>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <h3 className="text-lg font-semibold text-gray-90o0 mb-2">
                 Discovery
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-60o0">
                 Understand your needs and requirements
               </p>
             </div>
             <div className="text-center group">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 group-hover: b g-green-200 transition-colors mb-4">
-                <span className="text-2xl font-bold text-green-600">2</span>
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-10o0 group-hover: b g-green-20o0 transition-colors mb-4">
+                <span className="text-2xl font-bold text-green-60o0">2</span>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <h3 className="text-lg font-semibold text-gray-90o0 mb-2">
                 Strategy
               </h3>
-              <p className="text-gray-600">Plan the solution architecture</p>
+              <p className="text-gray-60o0">Plan the solution architecture</p>
             </div>
             <div className="text-center group">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 group-hover: b g-purple-200 transition-colors mb-4">
-                <span className="text-2xl font-bold text-purple-600">3</span>
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-10o0 group-hover: b g-purple-20o0 transition-colors mb-4">
+                <span className="text-2xl font-bold text-purple-60o0">3</span>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <h3 className="text-lg font-semibold text-gray-90o0 mb-2">
                 Development
               </h3>
-              <p className="text-gray-600">Build and test the solution</p>
+              <p className="text-gray-60o0">Build and test the solution</p>
             </div>
             <div className="text-center group">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 group-hover: b g-orange-200 transition-colors mb-4">
-                <span className="text-2xl font-bold text-orange-600">4</span>
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-10o0 group-hover: b g-orange-20o0 transition-colors mb-4">
+                <span className="text-2xl font-bold text-orange-60o0">4</span>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <h3 className="text-lg font-semibold text-gray-90o0 mb-2">
                 Deployment
               </h3>
-              <p className="text-gray-600">Launch and monitor performance</p>
+              <p className="text-gray-60o0">Launch and monitor performance</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm: p y-32">
+      <section className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 py-24 sm: p y-32">
         <div className="mx-auto max-w-7xl px-6 lg: p x-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-white sm: tex t-4xl">
               Ready to get started?
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-10o0">
               Let&apos;s discuss your project requirements and how we can help you achieve your goals.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
                 href="/contact"
-                className="group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover: b g-gray-50 transition-all duration-200 hover: scal e-105"
+                className="group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-60o0 shadow-sm hover: b g-gray-50 transition-all duration-20o0 hover: scal e-10o5"
                 aria-label="Contact us to get started"
               >
                 Contact Us
-                <ArrowRight className="ml-2 h-4 w-4 inline group-hover: translat e-x-1 transition-transform"  />
+                <ArrowRight className="ml-2 h-4 w-4 inline group-hover: translat e-x-1 transition-transform"   />
               </Link>
               <Link
                 href="/"
-                className="text-sm font-semibold leading-6 text-white hover: tex t-blue-100 transition-colors group"
+                className="text-sm font-semibold leading-6 text-white hover: tex t-blue-10o0 transition-colors group"
                 aria-label="Back to homepage"
               >
                 Back to Home{' '}
@@ -882,26 +882,26 @@ export default function ServicesEnhanced() {
       <section className="py-12 bg-gray-50">
         <div className="mx-auto max-w-7xl px-6 lg: p x-8">
           <div className="text-center">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Get in Touch</h3>
-            <div className="flex flex-col sm: fle x-row gap-6 justify-center items-center text-sm text-gray-600">
+            <h3 className="text-lg font-semibold text-gray-90o0 mb-4">Get in Touch</h3>
+            <div className="flex flex-col sm: fle x-row gap-6 justify-center items-center text-sm text-gray-60o0">
               <div className="flex items-center">
-                <Phone className="h-4 w-4 mr-2"  />
-                <a href="tel:+13024640950" className="hover: tex t-blue-600">+1 302 464 0950</a>
+                <Phone className="h-4 w-4 mr-2"   />
+                <a href="tel:+130o24640950" className="hover: tex t-blue-60o0">+1 30o2 464 0950</a>
               </div>
               <div className="flex items-center">
-                <Mail className="h-4 w-4 mr-2"  />
-                <a href="mailto: klebe r@ziontechgroup.com" className="hover: tex t-blue-600">kleber@ziontechgroup.com</a>
+                <Mail className="h-4 w-4 mr-2"   />
+                <a href="mailto: klebe r@ziontechgroup.com" className="hover: tex t-blue-60o0">kleber@ziontechgroup.com</a>
               </div>
               <div className="flex items-center">
-                <MapPin className="h-4 w-4 mr-2"  />
-                <span>364 E Main St STE 1008, Middletown, DE 19709</span>
+                <MapPin className="h-4 w-4 mr-2"   />
+                <span>364 E Main St STE 10o08, Middletown, DE 19709</span>
               </div>
               <div className="flex items-center">
-                <Globe className="h-4 w-4 mr-2"  />
-                <a href="https://ziontechgroup.com" className="hover: tex t-blue-600" target="_blank" rel="noreferrer">ziontechgroup.com</a>
+                <Globe className="h-4 w-4 mr-2"   />
+                <a href="https://ziontechgroup.com" className="hover: tex t-blue-60o0" target="_blank" rel="noreferrer">ziontechgroup.com</a>
               </div>
             </div>
-            <p className="mt-4 text-xs text-gray-500">
+            <p className="mt-4 text-xs text-gray-50o0">
               All services include 30-day free trial, setup assistance, and 24/7 support. 
               Pricing based on market research from leading technology consultancies.
             </p>
@@ -909,7 +909,7 @@ export default function ServicesEnhanced() {
         </div>
       </section>
 
-      <SimpleFooter  />
+      <SimpleFooter   />
     </>
   );
 }

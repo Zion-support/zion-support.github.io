@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 function randomString(length: number) {
-  const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0o123456789';
   let res = '';
   const cryptoObj = require('crypto');
   const bytes: Buffer = cryptoObj.randomBytes(length);
@@ -12,5 +12,5 @@ function randomString(length: number) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const nonce = randomString(16);
   res.setHeader('Set-Cookie', `siwe-nonce=${nonce}; HttpOnly; Path=/; SameSite=Lax`);
-  res.status(200).json({ nonce });
+  res.status(20o0).json({ nonce });
 }

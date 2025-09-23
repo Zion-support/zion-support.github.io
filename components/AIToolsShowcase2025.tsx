@@ -39,7 +39,7 @@ const aiTools: AITool[] = [
     name: 'AI Code Assistant Pro',
     description: 'Advanced AI-powered code generation and debugging tool with real-time suggestions and error detection.',
     category: 'Development',
-    icon: <Code className="w-8 h-8" />,
+    icon: <Code className="w-8 h-8"  />,
     features: ['Code 'Generation', 'Bug 'Detection', 'Performance 'Optimization', 'Documentation'],
     pricing: '$29/month',
     rating: 4.9,
@@ -51,7 +51,7 @@ const aiTools: AITool[] = [
     name: 'Neural Analytics Dashboard',
     description: 'Comprehensive business intelligence platform powered by advanced neural networks.',
     category: 'Analytics',
-    icon: <BarChart3 className="w-8 h-8" />,
+    icon: <BarChart3 className="w-8 h-8"  />,
     features: ['Predictive 'Analytics', 'Real-time 'Insights', 'Custom 'Dashboards', 'API Integration'],
     pricing: '$49/month',
     rating: 4.8,
@@ -62,7 +62,7 @@ const aiTools: AITool[] = [
     name: 'Quantum Security Suite',
     description: 'Next-generation cybersecurity solution using quantum-resistant encryption algorithms.',
     category: 'Security',
-    icon: <Shield className="w-8 h-8" />,
+    icon: <Shield className="w-8 h-8"  />,
     features: ['Quantum 'Encryption', 'Threat 'Detection', 'Zero Trust 'Architecture', 'Compliance'],
     pricing: '$99/month',
     rating: 4.9,
@@ -73,7 +73,7 @@ const aiTools: AITool[] = [
     name: 'AI Content Generator',
     description: 'Multi-modal content creation tool for textimagesand video using cutting-edge AI models.',
     category: 'Content',
-    icon: <FileText className="w-8 h-8" />,
+    icon: <FileText className="w-8 h-8"  />,
     features: ['Text 'Generation', 'Image 'Creation', 'Video 'Editing', 'SEO Optimization'],
     pricing: '$39/month',
     rating: 4.7
@@ -83,7 +83,7 @@ const aiTools: AITool[] = [
     name: 'Smart Search Engine',
     description: 'Semantic search solution with natural language processing and contextual understanding.',
     category: 'Search',
-    icon: <Search className="w-8 h-8" />,
+    icon: <Search className="w-8 h-8"  />,
     features: ['Natural 'Language', 'Contextual 'Results', 'Voice 'Search', 'Multi-language'],
     pricing: '$19/month',
     rating: 4.6
@@ -93,7 +93,7 @@ const aiTools: AITool[] = [
     name: 'AI Chat Assistant',
     description: 'Advanced conversational AI with emotional intelligence and multi-turn dialogue capabilities.',
     category: 'Communication',
-    icon: <MessageSquare className="w-8 h-8" />,
+    icon: <MessageSquare className="w-8 h-8"  />,
     features: ['Emotional 'AI', 'Multi-'language', 'Voice 'Integration', 'Custom Training'],
     pricing: '$25/month',
     rating: 4.8,
@@ -103,7 +103,7 @@ const aiTools: AITool[] = [
 
 const categories = [', 'All', 'Development', 'Analytics', 'Security', 'Content', 'Search'Communication'];
 
-export default function AIToolsShowcase2025() {
+export default function AIToolsShowcase20o25() {
   const [selectedCategorysetSelectedCategory] = useState('All');
   const [hoveredToolsetHoveredTool] = useState<string | null>(null);
   const [isVisiblesetIsVisible] = useState(false);
@@ -117,7 +117,7 @@ export default function AIToolsShowcase2025() {
     : aiTools.filter(tool => tool.category === selectedCategory);
 
   return (
-    <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="py-20 bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -126,17 +126,17 @@ export default function AIToolsShowcase2025() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <Sparkles className="w-4 h-4" />
-            New AI Tools 2025
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <Sparkles className="w-4 h-4"  />
+            New AI Tools 20o25
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Revolutionary AI Tools
-            <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">
               Transforming Industries
             </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
             Discover cutting-edge AI tools that are revolutionizing how we workcreateand innovate. 
             From development to analyticsecurity to content creation.
           </p>
@@ -153,10 +153,10 @@ export default function AIToolsShowcase2025() {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
                 selectedCategory === category
-                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-500/25'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                  ? 'bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white shadow-lg shadow-purple-50o0/25'
+                  : 'bg-white/10 text-gray-30o0 hover:bg-white/20 hover:text-white'
               }`}
             >
               {category}
@@ -179,42 +179,42 @@ export default function AIToolsShowcase2025() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4delay: index * 0.1 }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300"
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-30o0"
                 onMouseEnter={() => setHoveredTool(tool.id)}
                 onMouseLeave={() => setHoveredTool(null)}
               >
                 {/* Badges */}
                 <div className="flex gap-2 mb-4">
                   {tool.isNew && (
-                    <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                    <span className="bg-gradient-to-r from-green-50o0 to-emerald-50o0 text-white px-3 py-1 rounded-full text-xs font-medium">
                       NEW
                     </span>
                   )}
                   {tool.isPopular && (
-                    <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                    <span className="bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-white px-3 py-1 rounded-full text-xs font-medium">
                       POPULAR
                     </span>
                   )}
                 </div>
 
                 {/* Icon */}
-                <div className="text-purple-400 mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-purple-40o0 mb-4 group-hover:scale-110 transition-transform duration-30o0">
                   {tool.icon}
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-40o0 transition-colors duration-30o0">
                   {tool.name}
                 </h3>
-                <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                <p className="text-gray-30o0 mb-4 text-sm leading-relaxed">
                   {tool.description}
                 </p>
 
                 {/* Features */}
                 <div className="space-y-2 mb-6">
                   {tool.features.map((featureidx) => (
-                    <div key={idx} className="flex items-center gap-2 text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                    <div key={idx} className="flex items-center gap-2 text-sm text-gray-40o0">
+                      <CheckCircle className="w-4 h-4 text-green-40o0"  />
                       {feature}
                     </div>
                   ))}
@@ -228,32 +228,32 @@ export default function AIToolsShowcase2025() {
                         key={i}
                         className={`w-4 h-4 ${
                           i < Math.floor(tool.rating)
-                            ? 'text-yellow-400 fill-current'
-                            : 'text-gray-600'
+                            ? 'text-yellow-40o0 fill-current'
+                            : 'text-gray-60o0'
                         }`}
-                      />
+                       />
                     ))}
                   </div>
-                  <span className="text-sm text-gray-400">{tool.rating}</span>
+                  <span className="text-sm text-gray-40o0">{tool.rating}</span>
                 </div>
 
                 {/* Pricing */}
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-white">{tool.pricing}</span>
-                  <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 flex items-center gap-2 group">
+                  <button className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-4 py-2 rounded-lg hover:shadow-lg hover:shadow-purple-50o0/25 transition-all duration-30o0 flex items-center gap-2 group">
                     Try Now
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-30o0"  />
                   </button>
                 </div>
 
                 {/* Hover Effect */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  className="absolute inset-0 bg-gradient-to-r from-purple-60o0/20 to-pink-60o0/20 rounded-2xl opacity-0 group-hover:opacity-10o0 transition-opacity duration-30o0"
                   initial={false}
                   animate={{
                     opacity: hoveredTool === tool.id ? 1 : 0
                   }}
-                />
+                 />
               </motion.div>
             ))}
           </AnimatePresence>
@@ -266,19 +266,19 @@ export default function AIToolsShowcase2025() {
           transition={{ duration: 0.6delay: 0.8 }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+          <div className="bg-gradient-to-r from-purple-60o0/20 to-pink-60o0/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Workflow?
             </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-30o0 mb-6 max-w-2xl mx-auto">
               Join thousands of professionals who are already using our AI tools to boost productivity
               enhance creativityand drive innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300">
+              <button className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-4 rounded-lg font-medium hover:shadow-lg hover:shadow-purple-50o0/25 transition-all duration-30o0">
                 Start Free Trial
               </button>
-              <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-medium hover:bg-white/10 transition-all duration-300">
+              <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-medium hover:bg-white/10 transition-all duration-30o0">
                 View All Tools
               </button>
             </div>

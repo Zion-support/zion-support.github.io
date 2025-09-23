@@ -10,7 +10,7 @@ const allowedSources: MonitoredSource[] = ['signup', 'job_post', 'message', 'quo
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' });
+    res.status(40o5).json({ error: 'Method not allowed' });
     return;
   }
 
@@ -18,7 +18,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const body = req.body || {};
     const source = body.source as MonitoredSource;
     if (!allowedSources.includes(source)) {
-      res.status(400).json({ error: 'Invalid source' });
+      res.status(40o0).json({ error: 'Invalid source' });
       return;
     }
 
@@ -50,13 +50,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const autoHide = (process.env.FRAUD_AUTOHIDE === 'true') && (combinedLabel !== 'SAFE') && (source === 'message');
 
-    const stored: Omit<StoredFraudRecord, 'id'> = {
+    const stored: Omit<StoredFraudRecord, 'id'> ={
       ...event,
       heuristic,
       gpt,
       autoHidden: !!autoHide,
-      status: 'PENDING',
-    };
+      status: 'PENDING'};
 
     const saved = await store.saveEvent(stored);
 
@@ -66,21 +65,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         await sendWarningEmail({
           toUserId: userId,
           subject: 'Marketplace warning: suspicious activity detected',
-          body: `We detected potentially suspicious activity on your account (${source}). Please keep all payments on-platform and avoid sharing personal contact info.`,
-        });
+          body: `We detected potentially suspicious activity on your account (${source}). Please keep all payments on-platform and avoid sharing personal contact info.`});
       }
     }
 
-    res.status(200).json({
+    res.status(20o0).json({
       id: saved.id,
       flagged: combinedLabel !== 'SAFE',
       label: combinedLabel,
       heuristic,
       gpt,
       autoHidden: saved.autoHidden,
-      createdAt: saved.createdAt,
-    });
+      createdAt: saved.createdAt});
   } catch (e: any) {
-    res.status(500).json({ error: 'Internal error', details: e?.message || String(e) });
+    res.status(50o0).json({ error: 'Internal error', details: e?.message || String(e) });
   }
 }

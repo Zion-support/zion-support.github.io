@@ -21,8 +21,7 @@ export function ChatBotPanel() {
             id: "welcome",
             content: "Hi! How can I help you?",
             sender: "bot",
-            timestamp: new Date(),
-        },
+            timestamp: new Date()},
     ]);
     const [inputValue, setInputValue] = useState("");
     const [isLoading, setIsLoading] = useState(false);
@@ -45,24 +44,22 @@ export function ChatBotPanel() {
     const handleSendMessage = async (text = inputValue) => {
         if (!text.trim())
             return;
-        const userMessage = {
+        const userMessage ={
             id: `user-${Date.now()}`,
             content: text,
             sender: "user",
-            timestamp: new Date(),
-        };
+            timestamp: new Date()};
         setMessages((prev) => [...prev, userMessage]);
         setInputValue("");
         setIsLoading(true);
         try {
             // Call the OpenAI-powered support function
             const response = await sendToAIAssistant(text);
-            const botMessage = {
+            const botMessage ={
                 id: `bot-${Date.now()}`,
                 content: response.message || "Sorry, I couldn't process your request. Please try again.",
                 sender: "bot",
-                timestamp: new Date(),
-            };
+                timestamp: new Date()};
             setMessages((prev) => [...prev, botMessage]);
             // Check if the request was successful
             if (!response.success) {
@@ -82,8 +79,7 @@ export function ChatBotPanel() {
             toast({
                 variant: "destructive",
                 title: "Communication Error",
-                description: "We're having trouble connecting to our support service.",
-            });
+                description: "We're having trouble connecting to our support service."});
             setFailedAttempts((prev) => prev + 1);
             if (failedAttempts >= 2) {
                 suggestEscalation();
@@ -98,12 +94,10 @@ export function ChatBotPanel() {
             const response = await apiClient("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json",
-                },
+                    "Content-Type": "application/json"},
                 body: JSON.stringify({
                     messages: [{ role: "user", content: message }]
-                }),
-            });
+                })});
             if (!response.ok) {
                 return {
                     success: false,
@@ -125,12 +119,11 @@ export function ChatBotPanel() {
         }
     };
     const suggestEscalation = () => {
-        const escalationMessage = {
+        const escalationMessage ={
             id: `bot-escalation-${Date.now()}`,
             content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
             sender: "bot",
-            timestamp: new Date(),
-        };
+            timestamp: new Date()};
         setMessages((prev) => [...prev, escalationMessage]);
         // Log this interaction for the support team
         logSupportEscalation();
@@ -173,8 +166,7 @@ export function ChatBotPanel() {
         // In a real implementation, this would trigger a live chat request
         toast({
             title: "Support request submitted",
-            description: "A support agent will be with you shortly.",
-        });
+            description: "A support agent will be with you shortly."});
     };
     const handleEmailSupport = () => {
         setMessages((prev) => [
@@ -196,16 +188,16 @@ export function ChatBotPanel() {
     return (<div className="flex flex-col h-full">
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>
         <div className="flex flex-col gap-4">
-          {messages.map((message) => (<ChatMessage key={message.id} message={message.content} isUser={message.sender === "user"} timestamp={message.timestamp}/>))}
+          {messages.map((message) => (<ChatMessage key={message.id} message={message.content} isUser={message.sender === "user"} timestamp={message.timestamp} />))}
           
           {isLoading && (<div className="flex items-center justify-center py-2">
-              <Loader2 className="h-5 w-5 animate-spin text-zion-purple"/>
+              <Loader2 className="h-5 w-5 animate-spin text-zion-purple" />
             </div>)}
         </div>
       </ScrollArea>
       
       {messages.length === 1 && (<div className="px-4 py-3">
-          <p className={cn("text-sm mb-2", theme === "dark" ? "text-gray-300" : "text-gray-600")}>
+          <p className={cn("text-sm mb-2", theme === "dark" ? "text-gray-30o0" : "text-gray-60o0")}>
             Suggested questions:
           </p>
           <div className="flex flex-wrap gap-2">
@@ -214,7 +206,7 @@ export function ChatBotPanel() {
         </div>)}
       
       {failedAttempts >= 3 && (<div className="px-4 py-3 border-t border-zion-purple/10">
-          <p className={cn("text-sm mb-2 font-medium", theme === "dark" ? "text-gray-300" : "text-gray-600")}>
+          <p className={cn("text-sm mb-2 font-medium", theme === "dark" ? "text-gray-30o0" : "text-gray-60o0")}>
             Need more help?
           </p>
           <div className="flex gap-2">
@@ -227,16 +219,16 @@ export function ChatBotPanel() {
           </div>
         </div>)}
       
-      <div className={cn("p-4 border-t", theme === "dark" ? "border-zion-blue-light" : "border-gray-200")}>
+      <div className={cn("p-4 border-t", theme === "dark" ? "border-zion-blue-light" : "border-gray-20o0")}>
         <form onSubmit={(e) => {
             e.preventDefault();
             handleSendMessage();
         }} className="flex items-center gap-2">
           <Input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Type your question..." className={cn("flex-1", theme === "dark"
             ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple"
-            : "bg-white border-gray-200")}/>
+            : "bg-white border-gray-20o0")}/>
           <Button type="submit" size="icon" disabled={isLoading || !inputValue.trim()} className="bg-zion-cyan hover:bg-zion-cyan/80 text-white">
-            <Send className="h-4 w-4"/>
+            <Send className="h-4 w-4" />
           </Button>
         </form>
       </div>

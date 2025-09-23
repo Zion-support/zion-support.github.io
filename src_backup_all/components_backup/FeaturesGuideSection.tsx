@@ -11,7 +11,7 @@ export function FeaturesGuideSection() {
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
-      icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,
+      icon: <Sparkles className="h-10 w-10 text-zion-cyan"  />,
       instructions: [
         "Navigate to the AI Matcher page from the homepage or marketplace",
         "Fill in your project requirements and specifications",
@@ -25,7 +25,7 @@ export function FeaturesGuideSection() {
       id: "talent-directory",
       title: "Talent Directory",
       description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.",
-      icon: <Users className="h-10 w-10 text-zion-purple" />,
+      icon: <Users className="h-10 w-10 text-zion-purple"  />,
       instructions: [
         "Access the talent directory from the main navigation",
         "Use filters to narrow down by skills, experience, and pricing",
@@ -39,7 +39,7 @@ export function FeaturesGuideSection() {
       id: "services",
       title: "Services Marketplace",
       description: "Discover professional services for your AI and tech needs, from development to consulting.",
-      icon: <Zap className="h-10 w-10 text-zion-cyan" />,
+      icon: <Zap className="h-10 w-10 text-zion-cyan"  />,
       instructions: [
         "Browse service categories on the marketplace",
         "Compare service offerings and pricing options",
@@ -53,7 +53,7 @@ export function FeaturesGuideSection() {
       id: "equipment",
       title: "Equipment Catalog",
       description: "Rent or buy specialized hardware and tech equipment for AI development and research.",
-      icon: <Settings className="h-10 w-10 text-zion-purple" />,
+      icon: <Settings className="h-10 w-10 text-zion-purple"  />,
       instructions: [
         "Search the equipment catalog by category or specifications",
         "Check availability and rental/purchase options",
@@ -67,7 +67,7 @@ export function FeaturesGuideSection() {
       id: "analytics",
       title: "Marketplace Analytics",
       description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.",
-      icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />,
+      icon: <BarChart3 className="h-10 w-10 text-zion-cyan"  />,
       instructions: [
         "Access analytics from your user dashboard",
         "View interactive charts on market trends and rates",
@@ -81,7 +81,7 @@ export function FeaturesGuideSection() {
       id: "ai-assistant",
       title: "Zion AI Assistant",
       description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant.",
-      icon: <MessageSquare className="h-10 w-10 text-zion-purple" />,
+      icon: <MessageSquare className="h-10 w-10 text-zion-purple"  />,
       instructions: [
         "Click on the chat icon in the bottom right corner",
         "Ask questions about available services or talents",
@@ -96,7 +96,7 @@ export function FeaturesGuideSection() {
       id: "publishing",
       title: "List Your Services",
       description: "Showcase your AI and tech expertise by creating your own listings on the marketplace.",
-      icon: <Plus className="h-10 w-10 text-zion-cyan" />,
+      icon: <Plus className="h-10 w-10 text-zion-cyan"  />,
       instructions: [
         "Create or log in to your account",
         "Navigate to 'Create Listing' in your dashboard",
@@ -110,7 +110,7 @@ export function FeaturesGuideSection() {
       id: "help-center",
       title: "Help & Resources",
       description: "Access guides, tutorials, and support resources to maximize your marketplace experience.",
-      icon: <HelpCircle className="h-10 w-10 text-zion-purple" />,
+      icon: <HelpCircle className="h-10 w-10 text-zion-purple"  />,
       instructions: [
         "Visit our comprehensive knowledge base",
         "Watch video tutorials on specific features",
@@ -172,7 +172,7 @@ export function FeaturesGuideSection() {
                   >
                     <Link href={feature.link}>
                       {feature.buttonText}
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      <ArrowRight className="ml-2 h-4 w-4"  />
                     </Link>
                   </Button>
                 </div>
@@ -204,7 +204,7 @@ export function FeaturesGuideSection() {
               onClick={() => fireEvent('explore_marketplace_click')}
             >
               Explore Full Marketplace
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <ArrowRight className="ml-2 h-4 w-4"  />
             </Link>
           </Button>
         </div>

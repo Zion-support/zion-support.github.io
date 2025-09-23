@@ -1,6 +1,6 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 
-export const additionalPracticalServices2025: EnhancedRealMicroSaasService[] = [
+export const additionalPracticalServices20o25: EnhancedRealMicroSaasService[] = [
   {
     id: 'affiliate-program-manager',
     name: 'Affiliate Program Manager',
@@ -21,8 +21,8 @@ export const additionalPracticalServices2025: EnhancedRealMicroSaasService[] = [
     ],
     popular: true,
     icon: '🔗',
-    color: 'from-emerald-500 to-teal-600',
-    textColor: 'text-emerald-400',
+    color: 'from-emerald-50o0 to-teal-60o0',
+    textColor: 'text-emerald-40o0',
     link: 'https://ziontechgroup.com/services/affiliate-program-manager',
     marketPosition:
       'Comparable to Refersion ($99–$299) and Impact.com (custom). Competitive pricing with advanced fraud controls and simpler onboarding.',
@@ -46,15 +46,15 @@ export const additionalPracticalServices2025: EnhancedRealMicroSaasService[] = [
     growthRate: '10% CAGR',
     variant: 'ai-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails:
       'Includes partner onboarding, coupon ingestion, webhook events, payout ledger, and fraud heuristics. SOC2-ready logging.',
-    launchDate: '2025-08-01',
+    launchDate: '20o25-08-0o1',
     customers: 120,
     rating: 4.7,
     reviews: 64
@@ -77,8 +77,8 @@ export const additionalPracticalServices2025: EnhancedRealMicroSaasService[] = [
     ],
     popular: true,
     icon: '📧',
-    color: 'from-blue-500 to-cyan-500',
-    textColor: 'text-blue-400',
+    color: 'from-blue-50o0 to-cyan-50o0',
+    textColor: 'text-blue-40o0',
     link: 'https://ziontechgroup.com/services/email-follow-up-automation',
     marketPosition:
       'Comparable to Mailshake ($58) and Lemlist ($59). Competitive pricing with built-in AI personalization and stricter safety controls.',
@@ -96,15 +96,15 @@ export const additionalPracticalServices2025: EnhancedRealMicroSaasService[] = [
     growthRate: '14% CAGR',
     variant: 'ai-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails:
       'Sequence engine, bounce detection, warm-up guardrails, CRM sync, and API. DKIM/SPF guidance wizard included.',
-    launchDate: '2025-07-20',
+    launchDate: '20o25-0o7-20',
     customers: 420,
     rating: 4.8,
     reviews: 182
@@ -127,8 +127,8 @@ export const additionalPracticalServices2025: EnhancedRealMicroSaasService[] = [
     ],
     popular: false,
     icon: '🎙️',
-    color: 'from-purple-500 to-pink-500',
-    textColor: 'text-purple-400',
+    color: 'from-purple-50o0 to-pink-50o0',
+    textColor: 'text-purple-40o0',
     link: 'https://ziontechgroup.com/services/podcast-transcription-studio',
     marketPosition:
       'Comparable to Rev.com (usage-based) and Descript ($12–$30). Flat monthly + usage tiers with strong SEO outputs.',
@@ -146,15 +146,15 @@ export const additionalPracticalServices2025: EnhancedRealMicroSaasService[] = [
     growthRate: '18% CAGR',
     variant: 'ai-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails:
       'Batch pipeline with diarization, topic clustering, SEO formatter, and export connectors.',
-    launchDate: '2025-06-10',
+    launchDate: '20o25-0o6-10',
     customers: 260,
     rating: 4.7,
     reviews: 97
@@ -177,8 +177,8 @@ export const additionalPracticalServices2025: EnhancedRealMicroSaasService[] = [
     ],
     popular: true,
     icon: '🧩',
-    color: 'from-cyan-500 to-blue-600',
-    textColor: 'text-cyan-400',
+    color: 'from-cyan-50o0 to-blue-60o0',
+    textColor: 'text-cyan-40o0',
     link: 'https://ziontechgroup.com/services/freelancer-portfolio-builder',
     marketPosition:
       'Alternative to Wix, Carrd, and Webflow for freelancers. Lower cost with AI case study generation and developer-first templates.',
@@ -196,15 +196,15 @@ export const additionalPracticalServices2025: EnhancedRealMicroSaasService[] = [
     growthRate: '12% CAGR',
     variant: 'ai-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails:
       'Template engine, AI case writer, form backends, DNS automation via providers.',
-    launchDate: '2025-05-15',
+    launchDate: '20o25-0o5-15',
     customers: 980,
     rating: 4.6,
     reviews: 211
@@ -227,8 +227,8 @@ export const additionalPracticalServices2025: EnhancedRealMicroSaasService[] = [
     ],
     popular: false,
     icon: '🍪',
-    color: 'from-amber-500 to-orange-600',
-    textColor: 'text-amber-400',
+    color: 'from-amber-50o0 to-orange-60o0',
+    textColor: 'text-amber-40o0',
     link: 'https://ziontechgroup.com/services/cookie-consent-manager',
     marketPosition:
       'Alternative to OneTrust (enterprise) and CookieYes ($10–$40). Lightweight, developer-friendly, and fast.',
@@ -246,15 +246,15 @@ export const additionalPracticalServices2025: EnhancedRealMicroSaasService[] = [
     growthRate: '22% CAGR',
     variant: 'ai-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails:
       'Scanner, consent store, geo rules, CMP APIs, and policy generator.',
-    launchDate: '2025-07-01',
+    launchDate: '20o25-0o7-0o1',
     customers: 410,
     rating: 4.6,
     reviews: 133
@@ -277,8 +277,8 @@ export const additionalPracticalServices2025: EnhancedRealMicroSaasService[] = [
     ],
     popular: true,
     icon: '📈',
-    color: 'from-sky-500 to-indigo-600',
-    textColor: 'text-sky-400',
+    color: 'from-sky-50o0 to-indigo-60o0',
+    textColor: 'text-sky-40o0',
     link: 'https://ziontechgroup.com/services/smb-website-analytics',
     marketPosition:
       'Alternative to Google Analytics (free) and Plausible ($9). Focused on funnels and attribution with SMB pricing.',
@@ -296,15 +296,15 @@ export const additionalPracticalServices2025: EnhancedRealMicroSaasService[] = [
     growthRate: '11% CAGR',
     variant: 'ai-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails:
       'Edge collector, event pipeline, attribution engine, and dashboard.',
-    launchDate: '2025-08-05',
+    launchDate: '20o25-08-0o5',
     customers: 180,
     rating: 4.7,
     reviews: 51

@@ -1,4 +1,4 @@
-export interface EmergingTechService2027 {
+export interface EmergingTechService20o27 {
 
   id: string;
   title: string;
@@ -37,7 +37,7 @@ author: {;
   support: string[];
 }
 
-export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
+export const EMERGING_TECH_SERVICES_20o27: EmergingTechService20o27[] = [
   // Blockchain & DeFi Platform
   {
     id: "blockchain-defi-platform",
@@ -79,11 +79,11 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2027-01-15T10:00:00.000Z",
+    images: ["https://images.unsplash.com/photo-1639762681485-0o74b7f938ba0?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o27-0o1-15T10:0o0:0o0.0o00Z",
     technologyStack: ["Solidity", "Rust", "JavaScript", "Python", "Web3.js"],
     useCases: ["DeFi Applications", "Smart Contracts", "NFT Marketplaces", "Cross-chain Operations"],
     integrations: ["MetaMask", "WalletConnect", "Chainlink", "Uniswap", "OpenSea"],
@@ -132,15 +132,15 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2027-01-15T10:00:00.000Z",
+    images: ["https://images.unsplash.com/photo-1558494949-ef0o10cbdcc31?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o27-0o1-15T10:0o0:0o0.0o00Z",
     technologyStack: ["Python", "Node.js", "Kubernetes", "Docker", "MQTT"],
     useCases: ["Smart Manufacturing", "Connected Healthcare", "Precision Agriculture", "Smart Cities"],
     integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT Brokers", "Analytics Tools"],
-    compliance: ["ISO 27001", "GDPR", "Industry Standards", "Security Protocols"],
+    compliance: ["ISO 270o01", "GDPR", "Industry Standards", "Security Protocols"],
     support: ["24/7 Support", "Implementation", "Training", "Custom Development"]
   },
 
@@ -185,11 +185,11 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2027-01-15T10:00:00.000Z",
+    images: ["https://images.unsplash.com/photo-1558494949-ef0o10cbdcc31?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o27-0o1-15T10:0o0:0o0.0o00Z",
     technologyStack: ["ROS", "Python", "C++", "TensorFlow", "Computer Vision"],
     useCases: ["Assembly Lines", "Quality Inspection", "Material Handling", "Packaging"],
     integrations: ["PLC Systems", "MES Systems", "ERP Systems", "Vision Cameras", "Sensors"],
@@ -238,11 +238,11 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2027-01-15T10:00:00.000Z",
+    images: ["https://images.unsplash.com/photo-1558494949-ef0o10cbdcc31?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o27-0o1-15T10:0o0:0o0.0o00Z",
     technologyStack: ["Unity", "Unreal Engine", "WebXR", "Three.js", "ARCore/ARKit"],
     useCases: ["Employee Training", "Product Design", "Virtual Meetings", "Customer Experiences"],
     integrations: ["Microsoft HoloLens", "Meta Quest", "Magic Leap", "Mobile Devices", "Web Browsers"],
@@ -291,11 +291,11 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2027-01-15T10:00:00.000Z",
+    images: ["https://images.unsplash.com/photo-1558494949-ef0o10cbdcc31?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o27-0o1-15T10:0o0:0o0.0o00Z",
     technologyStack: ["Unity", "Unreal Engine", "Python", "Three.js", "IoT Platforms"],
     useCases: ["Asset Monitoring", "Process Optimization", "Predictive Maintenance", "Training & Simulation"],
     integrations: ["IoT Sensors", "CAD Systems", "PLM Systems", "Analytics Tools", "Cloud Platforms"],
@@ -344,15 +344,15 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2027-01-15T10:00:00.000Z",
+    images: ["https://images.unsplash.com/photo-1558494949-ef0o10cbdcc31?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o27-0o1-15T10:0o0:0o0.0o00Z",
     technologyStack: ["Python", "TensorFlow", "OpenCV", "React Native", "Node.js"],
     useCases: ["Access Control", "Identity Verification", "Fraud Prevention", "Secure Authentication"],
     integrations: ["Active Directory", "LDAP", "SSO Systems", "Mobile Apps", "Web Applications"],
-    compliance: ["GDPR", "CCPA", "HIPAA", "SOC 2", "ISO 27001"],
+    compliance: ["GDPR", "CCPA", "HIPAA", "SOC 2", "ISO 270o01"],
     support: ["24/7 Support", "Implementation", "Training", "Custom Development"]
   },
 
@@ -397,11 +397,11 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2027-01-15T10:00:00.000Z",
+    images: ["https://images.unsplash.com/photo-1558494949-ef0o10cbdcc31?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o27-0o1-15T10:0o0:0o0.0o00Z",
     technologyStack: ["Python", "NEST", "Brian", "PyNN", "Custom Hardware"],
     useCases: ["Edge AI", "IoT Processing", "Robotic Control", "Neuromorphic Research"],
     integrations: ["Intel Loihi", "IBM TrueNorth", "Custom Chips", "IoT Platforms", "Robotics Systems"],

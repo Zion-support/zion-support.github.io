@@ -31,11 +31,9 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 const fs = require('fs').promises;
 const path = require('path');
 
-  
   const filePath = path.join(__dirname, 'core/IntelligentAutomationOrchestrator.js');
   const content = await fs.readFile(filePath, utf8');
   
@@ -75,7 +73,6 @@ if (require.main === module) {
 }
 
 module.exports = Script;
-
 
 // Graceful shutdown handling
 process.on('SIGINT', () => {

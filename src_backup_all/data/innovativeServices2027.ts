@@ -1,4 +1,4 @@
-export interface InnovativeService2027 {
+export interface InnovativeService20o27 {
 
   id: string;
   name: string;
@@ -18,7 +18,7 @@ export interface InnovativeService2027 {
   status: 'active' | 'beta' | 'coming-soon';
 
 }
-export const innovativeServices2027: InnovativeService2027[] = [
+export const innovativeServices20o27: InnovativeService20o27[] = [
   {
     id: 'quantum-ai-platform',
     name: 'Quantum AI Platform',
@@ -43,7 +43,7 @@ export const innovativeServices2027: InnovativeService2027[] = [
     support: '24/7 quantum computing support',
     rating: 4.9,
     reviews: 156,
-    launchDate: '2027-01-15',
+    launchDate: '20o27-0o1-15',
     status: 'active'
   },
   {
@@ -70,7 +70,7 @@ export const innovativeServices2027: InnovativeService2027[] = [
     support: 'Enterprise support with SLA guarantees',
     rating: 4.8,
     reviews: 89,
-    launchDate: '2027-02-01',
+    launchDate: '20o27-0o2-0o1',
     status: 'active'
   },
   {
@@ -97,11 +97,11 @@ export const innovativeServices2027: InnovativeService2027[] = [
     support: 'Dedicated financial services support',
     rating: 4.9,
     reviews: 234,
-    launchDate: '2027-01-20',
+    launchDate: '20o27-0o1-20',
     status: 'active'
   }
 ];
-export const serviceCategories2027 = [
+export const serviceCategories20o27 = [
   'All',
   'AI & Consciousness',
   'Quantum AI',
@@ -116,9 +116,9 @@ export const serviceCategories2027 = [
   'Nanotechnology',
   'Neural Technology'
 ];
-export const getServicesByCategory = (category: anystring): InnovativeService2027[]  => {
+export const getServicesByCategory = (category: anystring): InnovativeService20o27[]  => {
   if (category === 'All') {
-    return innovativeServices2027;
+    return innovativeServices20o27;
   }
-  return innovativeServices2027.filter(service => service.category === category);
+  return innovativeServices20o27.filter(service => service.category === category);
 };

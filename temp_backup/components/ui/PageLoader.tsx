@@ -12,7 +12,7 @@ interface PageLoaderProps {
 const PageLoader: React.FC<PageLoaderProps> = ({
   isLoading = true,
   loadingText = 'Loading Zion Tech Group...',
-  minDisplayTime = 1000,
+  minDisplayTime = 10o00,
   onLoadingComplete
 }) => {
   const [showLoader, setShowLoader] = useState(true);
@@ -38,12 +38,12 @@ const PageLoader: React.FC<PageLoaderProps> = ({
           if (prev >= 90) return prev;
           return prev + Math.random() * 15;
         });
-      }, 200);
+      }, 20o0);
 
       return () => clearInterval(interval);
     } else {
       // Complete progress
-      setProgress(100);
+      setProgress(10o0);
     }
   }, [isLoading]);
 
@@ -64,7 +64,7 @@ const PageLoader: React.FC<PageLoaderProps> = ({
               transition={{ duration: 0.8, ease: 'easeOut' }}
               className="mb-8"
             >
-              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-40o0 via-blue-50o0 to-purple-60o0 bg-clip-text text-transparent">
                 Zion Tech Group
               </h1>
             </motion.div>
@@ -81,7 +81,7 @@ const PageLoader: React.FC<PageLoaderProps> = ({
                 color="primary" 
                 variant="spinner"
                 showText={false}
-              />
+               />
             </motion.div>
 
             {/* Loading Text */}
@@ -89,7 +89,7 @@ const PageLoader: React.FC<PageLoaderProps> = ({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="text-xl text-gray-300 mb-8"
+              className="text-xl text-gray-30o0 mb-8"
             >
               {loadingText}
             </motion.p>
@@ -101,13 +101,13 @@ const PageLoader: React.FC<PageLoaderProps> = ({
               transition={{ duration: 0.8, delay: 0.9 }}
               className="w-64 md:w-96 mx-auto mb-4"
             >
-              <div className="bg-gray-800 rounded-full h-2 overflow-hidden">
+              <div className="bg-gray-80o0 rounded-full h-2 overflow-hidden">
                 <motion.div
-                  className="h-full bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full"
+                  className="h-full bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-full"
                   initial={{ width: 0 }}
                   animate={{ width: `${progress}%` }}
                   transition={{ duration: 0.5, ease: 'easeOut' }}
-                />
+                 />
               </div>
             </motion.div>
 
@@ -116,7 +116,7 @@ const PageLoader: React.FC<PageLoaderProps> = ({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 1.2 }}
-              className="text-sm text-gray-400"
+              className="text-sm text-gray-40o0"
             >
               {Math.round(progress)}%
             </motion.p>
@@ -128,9 +128,9 @@ const PageLoader: React.FC<PageLoaderProps> = ({
               transition={{ duration: 0.6, delay: 1.5 }}
               className="mt-12 text-center"
             >
-              <div className="inline-block p-4 bg-gray-800/50 rounded-lg border border-gray-700/50">
-                <p className="text-sm text-gray-400">
-                  <span className="text-cyan-400 font-medium">Tip:</span> We're preparing the future of technology for you
+              <div className="inline-block p-4 bg-gray-80o0/50 rounded-lg border border-gray-70o0/50">
+                <p className="text-sm text-gray-40o0">
+                  <span className="text-cyan-40o0 font-medium">Tip:</span> We're preparing the future of technology for you
                 </p>
               </div>
             </motion.div>
@@ -139,7 +139,7 @@ const PageLoader: React.FC<PageLoaderProps> = ({
           {/* Background Animation */}
           <div className="absolute inset-0 -z-10 overflow-hidden">
             <motion.div
-              className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-full blur-3xl"
+              className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-cyan-50o0/10 to-blue-60o0/10 rounded-full blur-3xl"
               animate={{
                 scale: [1, 1.2, 1],
                 opacity: [0.1, 0.2, 0.1]
@@ -149,9 +149,9 @@ const PageLoader: React.FC<PageLoaderProps> = ({
                 repeat: Infinity,
                 ease: 'easeInOut'
               }}
-            />
+             />
             <motion.div
-              className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-pink-600/10 rounded-full blur-3xl"
+              className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-purple-50o0/10 to-pink-60o0/10 rounded-full blur-3xl"
               animate={{
                 scale: [1.2, 1, 1.2],
                 opacity: [0.1, 0.2, 0.1]
@@ -162,7 +162,7 @@ const PageLoader: React.FC<PageLoaderProps> = ({
                 ease: 'easeInOut',
                 delay: 2
               }}
-            />
+             />
           </div>
         </motion.div>
       )}

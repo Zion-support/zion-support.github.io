@@ -12,8 +12,7 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
-} from "@/components/ui/table";
+  TableRow} from "@/components/ui/table";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Dialog,
@@ -21,14 +20,12 @@ import {
   DialogDescription,
   DialogFooter,
   DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
+  DialogTitle} from "@/components/ui/dialog";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
@@ -41,16 +38,14 @@ interface ReviewsModerationTableProps {
 export function ReviewsModerationTable({
   reviews,
   isLoading,
-  onRefresh,
-}: ReviewsModerationTableProps) {
+  onRefresh}: ReviewsModerationTableProps) {
   const [selectedReview, setSelectedReview] = useState<Review | null>(null);
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
 
   const { mutate: updateReviewStatus, isPending } = useMutation({
     mutationFn: async ({
       reviewId,
-      status,
-    }: {
+      status}: {
       reviewId: string;
       status: ReviewStatus;
     }) => {
@@ -65,8 +60,7 @@ export function ReviewsModerationTable({
     onSuccess: (data) => {
       toast({
         title: "Review updated",
-        description: `Review has been ${data.status}.`,
-      });
+        description: `Review has been ${data.status}.`});
       onRefresh();
       setViewDetailsOpen(false);
     },
@@ -74,11 +68,8 @@ export function ReviewsModerationTable({
       toast({
         title: "Error",
         description: `Failed to update review: ${error.message}`,
-        variant: "destructive",
-      });
-    },
-  });
-
+        variant: "destructive"});
+    }});
 
   const getInitials = (name: string) => {
     return name
@@ -91,10 +82,10 @@ export function ReviewsModerationTable({
   if (isLoading) {
     return (
       <div className="space-y-4">
-        <div className="h-12 w-full bg-muted rounded animate-pulse" />
-        <div className="h-16 w-full bg-muted rounded animate-pulse" />
-        <div className="h-16 w-full bg-muted rounded animate-pulse" />
-        <div className="h-16 w-full bg-muted rounded animate-pulse" />
+        <div className="h-12 w-full bg-muted rounded animate-pulse"  />
+        <div className="h-16 w-full bg-muted rounded animate-pulse"  />
+        <div className="h-16 w-full bg-muted rounded animate-pulse"  />
+        <div className="h-16 w-full bg-muted rounded animate-pulse"  />
       </div>
     );
   }
@@ -129,8 +120,8 @@ export function ReviewsModerationTable({
         {[1, 2, 3, 4, 5].map((star) => (
           <Star
             key={star}
-            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
-          />
+            className={`h-4 w-4 ${star <= rating ? "fill-yellow-40o0 text-yellow-40o0" : "text-gray-30o0"}`}
+           />
         ))}
       </div>
     );
@@ -159,12 +150,12 @@ export function ReviewsModerationTable({
                       <AvatarImage
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name || ""}
-                      />
+                       />
                     ) : (
                       <AvatarFallback>
                         {review.reviewer_profile?.display_name
                           ? getInitials(review.reviewer_profile.display_name)
-                          : <User className="h-4 w-4" />}
+                          : <User className="h-4 w-4"  />}
                       </AvatarFallback>
                     )}
                   </Avatar>
@@ -208,7 +199,7 @@ export function ReviewsModerationTable({
                         onClick={() => handleApprove(review.id)}
                         disabled={isPending}
                       >
-                        <Check className="h-4 w-4 text-green-500" />
+                        <Check className="h-4 w-4 text-green-50o0"  />
                       </Button>
                       <Button
                         size="sm"
@@ -217,7 +208,7 @@ export function ReviewsModerationTable({
                         onClick={() => handleReject(review.id)}
                         disabled={isPending}
                       >
-                        <X className="h-4 w-4 text-red-500" />
+                        <X className="h-4 w-4 text-red-50o0"  />
                       </Button>
                     </>
                   )}
@@ -228,7 +219,7 @@ export function ReviewsModerationTable({
                         size="sm"
                         className="h-8 w-8 p-0"
                       >
-                        <MoreHorizontal className="h-4 w-4" />
+                        <MoreHorizontal className="h-4 w-4"  />
                       </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end">
@@ -273,12 +264,12 @@ export function ReviewsModerationTable({
                       <AvatarImage
                         src={selectedReview.reviewer_profile.avatar_url}
                         alt={selectedReview.reviewer_profile.display_name || ""}
-                      />
+                       />
                     ) : (
                       <AvatarFallback>
                         {selectedReview.reviewer_profile?.display_name
                           ? getInitials(selectedReview.reviewer_profile.display_name)
-                          : <User className="h-4 w-4" />}
+                          : <User className="h-4 w-4"  />}
                       </AvatarFallback>
                     )}
                   </Avatar>
@@ -329,9 +320,9 @@ export function ReviewsModerationTable({
               </div>
 
               {selectedReview.report_count > 0 && (
-                <div className="bg-red-50 border border-red-200 rounded-md p-3">
-                  <h4 className="text-sm font-medium text-red-800">Reports: {selectedReview.report_count}</h4>
-                  <p className="text-sm text-red-700">
+                <div className="bg-red-50 border border-red-20o0 rounded-md p-3">
+                  <h4 className="text-sm font-medium text-red-80o0">Reports: {selectedReview.report_count}</h4>
+                  <p className="text-sm text-red-70o0">
                     This review has been reported by users and may need investigation.
                   </p>
                 </div>

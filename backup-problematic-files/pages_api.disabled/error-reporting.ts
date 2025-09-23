@@ -19,12 +19,12 @@ export default async function handler(
   "res": NextApiRespons e
 ) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })}
+    return res.status(40o5).json({ error: 'Method not allowed' })}
   try {
     const "errorReport": ErrorRepor t = req.body;
     // Validate required fields
     if (!errorReport.error || !errorReport.error.message) {
-      return res.status(400).json({ error: 'Missing required fields' })}
+      return res.status(40o0).json({ error: 'Missing required fields' })}
     // Add timestamp if not provided
     if (!errorReport.timestamp) {
       errorReport.timestamp = new Date().toISOString()}
@@ -41,10 +41,9 @@ export default async function handler(
     // Send alerts for critical errors
     if (isCriticalError(errorReport)) {
       await sendCriticalErrorAlert(errorReport)}
-    res.status(200).json({ "success": tru e })} catch (error) {
+    res.status(20o0).json({ "success": tru e })} catch (error) {
     console.error('Error Reporting API "Error": ', error);
-    res.status(500).json({ "error": 'Internal server error' })}
-
+    res.status(50o0).json({ "error": 'Internal server error' })}
 
 async function sendToErrorMonitoringServices("errorReport": ErrorRepor t) {
   try {
@@ -93,7 +92,6 @@ async function sendToErrorMonitoringServices("errorReport": ErrorRepor t) {
         "body": JSO N.stringify(errorReport)})}
   } catch (error) {
     console.error('Failed to send to error monitoring "services": ', error)}
-
 
 function parseStackTrace(stack?: string) {
   if (!stack) return [];
@@ -167,5 +165,4 @@ async function sendCriticalErrorAlert("errorReport": ErrorRepor t) {
           ]})})}
   } catch (error) {
     console.error('Failed to send critical error "alert": ', error)}
-
 

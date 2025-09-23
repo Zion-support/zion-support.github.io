@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -14,8 +13,8 @@ const footerSections = [
   {
     title: 'Featured Services',
     description: 'Our most popular and innovative solutions',
-    icon: <Star className="w-5 h-5 text-yellow-400" />,
-    color: 'from-yellow-500 to-orange-500',
+    icon: <Star className="w-5 h-5 text-yellow-40o0"  />,
+    color: 'from-yellow-50o0 to-orange-50o0',
     links: [
       { name: 'AI Emotional Intelligence Coach', href: '/ai-emotional-intelligence-coach', featured: true },
       { name: 'AI Autonomous Research Assistant', href: '/ai-autonomous-research-assistant', featured: true },
@@ -32,8 +31,8 @@ const footerSections = [
   {
     title: 'AI & Consciousness',
     description: 'Revolutionary AI platforms and solutions',
-    icon: <Brain className="w-5 h-5 text-cyan-400" />,
-    color: 'from-purple-500 to-pink-500',
+    icon: <Brain className="w-5 h-5 text-cyan-40o0"  />,
+    color: 'from-purple-50o0 to-pink-50o0',
     links: [
       { name: 'AI Emotional Intelligence Coach', href: '/ai-emotional-intelligence-coach' },
       { name: 'AI Autonomous Research Assistant', href: '/ai-autonomous-research-assistant' },
@@ -50,8 +49,8 @@ const footerSections = [
   {
     title: 'Quantum & Emerging Tech',
     description: 'Breakthrough quantum and space technologies',
-    icon: <Atom className="w-5 h-5 text-blue-400" />,
-    color: 'from-blue-500 to-cyan-500',
+    icon: <Atom className="w-5 h-5 text-blue-40o0"  />,
+    color: 'from-blue-50o0 to-cyan-50o0',
     links: [
       { name: 'Quantum Neural Network Platform', href: '/quantum-neural-network-platform' },
       { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform' },
@@ -68,8 +67,8 @@ const footerSections = [
   {
     title: 'Enterprise IT Solutions',
     description: 'Advanced enterprise infrastructure solutions',
-    icon: <Shield className="w-5 h-5 text-purple-400" />,
-    color: 'from-orange-500 to-red-500',
+    icon: <Shield className="w-5 h-5 text-purple-40o0"  />,
+    color: 'from-orange-50o0 to-red-50o0',
     links: [
       { name: 'Quantum-Secure Cloud Infrastructure', href: '/quantum-secure-cloud-infrastructure' },
       { name: 'Autonomous IT Operations Center', href: '/autonomous-it-operations-center' },
@@ -86,8 +85,8 @@ const footerSections = [
   {
     title: 'Micro SAAS Solutions',
     description: 'Innovative business solutions for modern enterprises',
-    icon: <Rocket className="w-5 h-5 text-emerald-400" />,
-    color: 'from-emerald-500 to-cyan-500',
+    icon: <Rocket className="w-5 h-5 text-emerald-40o0"  />,
+    color: 'from-emerald-50o0 to-cyan-50o0',
     links: [
       { name: 'AI Legal Contract Analyzer Pro', href: '/ai-legal-contract-analyzer-pro' },
       { name: 'AI Healthcare Diagnostic Assistant', href: '/ai-healthcare-diagnostic-assistant' },
@@ -104,8 +103,8 @@ const footerSections = [
   {
     title: 'Industry Solutions',
     description: 'Specialized solutions for specific industries',
-    icon: <Building className="w-5 h-5 text-green-400" />,
-    color: 'from-green-500 to-emerald-500',
+    icon: <Building className="w-5 h-5 text-green-40o0"  />,
+    color: 'from-green-50o0 to-emerald-50o0',
     links: [
       { name: 'Financial Services Solutions', href: '/financial-services-solutions' },
       { name: 'Healthcare Technology Solutions', href: '/healthcare-technology-solutions' },
@@ -122,33 +121,33 @@ const footerSections = [
 ];
 
 const quickLinks = [
-  { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },
-  { name: 'Services', href: '/services', icon: <Rocket className="w-4 h-4" /> },
-  { name: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> },
-  { name: 'Contact', href: '/contact', icon: <MessageCircle className="w-4 h-4" /> },
-  { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },
-  { name: 'Documentation', href: '/api-documentation', icon: <FileText className="w-4 h-4" /> },
-  { name: 'Status', href: '/status', icon: <Monitor className="w-4 h-4" /> },
-  { name: 'Blog', href: '/blog', icon: <FileText className="w-4 h-4" /> },
-  { name: 'News', href: '/news', icon: <Bell className="w-4 h-4" /> },
-  { name: 'Resources', href: '/resources', icon: <Database className="w-4 h-4" /> }
+  { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4"  /> },
+  { name: 'Services', href: '/services', icon: <Rocket className="w-4 h-4"  /> },
+  { name: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4"  /> },
+  { name: 'Contact', href: '/contact', icon: <MessageCircle className="w-4 h-4"  /> },
+  { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4"  /> },
+  { name: 'Documentation', href: '/api-documentation', icon: <FileText className="w-4 h-4"  /> },
+  { name: 'Status', href: '/status', icon: <Monitor className="w-4 h-4"  /> },
+  { name: 'Blog', href: '/blog', icon: <FileText className="w-4 h-4"  /> },
+  { name: 'News', href: '/news', icon: <Bell className="w-4 h-4"  /> },
+  { name: 'Resources', href: '/resources', icon: <Database className="w-4 h-4"  /> }
 ];
 
 const socialLinks = [
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" /> },
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" /> }
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5"  /> },
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5"  /> },
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5"  /> },
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5"  /> }
 ];
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
-export default function UltraFuturisticFooter2038() {
+export default function UltraFuturisticFooter20o38() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -156,8 +155,8 @@ export default function UltraFuturisticFooter2038() {
   return (
     <footer className="relative bg-black text-white overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-black" />
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5" />
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-90o0 via-black to-black"  />
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-50o0/5 via-purple-50o0/5 to-pink-50o0/5"  />
       
       {/* Main Footer Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-16">
@@ -167,13 +166,13 @@ export default function UltraFuturisticFooter2038() {
           <div className="lg:col-span-2 xl:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-                  <Zap className="w-7 h-7 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-50o0 to-purple-60o0 rounded-xl flex items-center justify-center">
+                  <Zap className="w-7 h-7 text-white"  />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl blur-lg opacity-50"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50o0 to-purple-60o0 rounded-xl blur-lg opacity-50"></div>
               </div>
               <div>
-                <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-40o0 to-purple-40o0 bg-clip-text text-transparent">
                   Zion Tech Group
                 </h3>
                 <p className="text-sm text-white/60">Future Technology Today</p>
@@ -191,14 +190,14 @@ export default function UltraFuturisticFooter2038() {
                 href={`tel:${contactInfo.mobile}`}
                 className="flex items-center space-x-3 text-white/70 hover:text-white transition-colors"
               >
-                <Phone className="w-4 h-4 text-blue-400" />
+                <Phone className="w-4 h-4 text-blue-40o0"  />
                 <span>{contactInfo.mobile}</span>
               </a>
               <a 
                 href={`mailto:${contactInfo.email}`}
                 className="flex items-center space-x-3 text-white/70 hover:text-white transition-colors"
               >
-                <Mail className="w-4 h-4 text-purple-400" />
+                <Mail className="w-4 h-4 text-purple-40o0"  />
                 <span>{contactInfo.email}</span>
               </a>
               <a 
@@ -207,7 +206,7 @@ export default function UltraFuturisticFooter2038() {
                 rel="noopener noreferrer"
                 className="flex items-center space-x-3 text-white/70 hover:text-white transition-colors"
               >
-                <MapPin className="w-4 h-4 text-green-400" />
+                <MapPin className="w-4 h-4 text-green-40o0"  />
                 <span>{contactInfo.address}</span>
               </a>
               <a 
@@ -216,7 +215,7 @@ export default function UltraFuturisticFooter2038() {
                 rel="noopener noreferrer"
                 className="flex items-center space-x-3 text-white/70 hover:text-white transition-colors"
               >
-                <Globe className="w-4 h-4 text-cyan-400" />
+                <Globe className="w-4 h-4 text-cyan-40o0"  />
                 <span>{contactInfo.website}</span>
               </a>
             </div>
@@ -249,7 +248,7 @@ export default function UltraFuturisticFooter2038() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-purple-500/20 hover:from-blue-500/40 hover:to-purple-500/40 border border-white/10 hover:border-white/20 rounded-xl flex items-center justify-center text-white/60 hover:text-white transition-all duration-300 transform hover:scale-110"
+                  className="w-12 h-12 bg-gradient-to-br from-blue-50o0/20 to-purple-50o0/20 hover:from-blue-50o0/40 hover:to-purple-50o0/40 border border-white/10 hover:border-white/20 rounded-xl flex items-center justify-center text-white/60 hover:text-white transition-all duration-30o0 transform hover:scale-110"
                   title={link.name}
                 >
                   {link.icon}
@@ -287,11 +286,11 @@ export default function UltraFuturisticFooter2038() {
                     href={link.href}
                     className={`flex items-center space-x-2 text-sm transition-colors ${
                       link.featured 
-                        ? 'text-white hover:text-blue-400' 
+                        ? 'text-white hover:text-blue-40o0' 
                         : 'text-white/60 hover:text-white'
                     }`}
                   >
-                    {link.featured && <Star className="w-3 h-3 text-yellow-400" />}
+                    {link.featured && <Star className="w-3 h-3 text-yellow-40o0"  />}
                     <span>{link.name}</span>
                   </Link>
                 ))}
@@ -304,7 +303,7 @@ export default function UltraFuturisticFooter2038() {
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
             <div className="flex items-center space-x-6 text-sm text-white/60">
-              <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>
+              <span>&copy; 20o24 Zion Tech Group. All rights reserved.</span>
               <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
               <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
               <Link href="/security" className="hover:text-white transition-colors">Security</Link>
@@ -312,16 +311,16 @@ export default function UltraFuturisticFooter2038() {
             
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2 text-sm text-white/60">
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <div className="w-2 h-2 bg-green-40o0 rounded-full animate-pulse"></div>
                 <span>Live & Secure</span>
               </div>
               
               <button
                 onClick={scrollToTop}
-                className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 rounded-lg flex items-center justify-center text-white transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                className="w-10 h-10 bg-gradient-to-r from-blue-50o0 to-purple-50o0 hover:from-blue-60o0 hover:to-purple-60o0 rounded-lg flex items-center justify-center text-white transition-all duration-30o0 transform hover:scale-110 hover:shadow-lg"
                 title="Back to top"
               >
-                <ArrowUp className="w-5 h-5" />
+                <ArrowUp className="w-5 h-5"  />
               </button>
             </div>
           </div>

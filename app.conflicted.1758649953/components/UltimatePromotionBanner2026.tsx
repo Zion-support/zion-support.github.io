@@ -1,6 +1,5 @@
 "use client";
 
-
-export default function UltimatePromotionBanner2026() {
+export default function UltimatePromotionBanner20o26() {
   return null;
 }

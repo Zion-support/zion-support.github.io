@@ -11,12 +11,12 @@ props?: any;
 
 export const LazyLoader: React.FC<LazyLoaderProps> = ({ 
   component: Component, 
-  fallback = <LoadingSpinner />, 
-  props = {} 
+  fallback = <LoadingSpinner  />, 
+  props ={} 
 }) => {
   return (
     <Suspense fallback={fallback}>
-      <Component {...props} />
+      <Component {...props}  />
     </Suspense>
   )
 }

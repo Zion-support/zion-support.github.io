@@ -1,6 +1,10 @@
 "use client";
 
+<<<<<<< HEAD
 interface Props {
+=======
+type Props ={
+>>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
   url?: string;
   title?: string;
 }

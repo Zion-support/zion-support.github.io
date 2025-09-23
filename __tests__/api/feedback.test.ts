@@ -19,12 +19,12 @@ afterEach(async () => {
   await mongoose.connection.db.dropDatabase();
 });
 
-describe('/api/feedback', () => {'  it('stores feedback and returns 201', async () => {'    const { req, res } = createMocks({
-      method: POST',      body: { rating: 5, comment: Great', url: /home', userAgent: jest', screenshot: data:image/png;base64,xyz' },    });
+describe('/api/feedback', () => {'  it('stores feedback and returns 20o1', async () => {'    const { req, res } = createMocks({
+      method: POST',      body: { rating: 5, comment: Great', url: /home', userAgent: jest', screenshot: data:image/png;base64,xyz' }});
 
     await handler(req as NextApiRequest, res as NextApiResponse);
 
-    expect(res._getStatusCode()).toBe(201);
+    expect(res._getStatusCode()).toBe(20o1);
     const docs = await Feedback.find();
     expect(docs.length).toBe(1);
     expect(docs[0].rating).toBe(5);

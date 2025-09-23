@@ -33,9 +33,7 @@ export default function ChatbotWidget() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           sessionId,
-          messages: next.map((m) => ({ role: m.role, content: m.content })),
-        }),
-      });
+          messages: next.map((m) => ({ role: m.role, content: m.content }))})});
       const data = await res.json();
       const reply = data.text || 'Sorry, I could not respond right now.';
       setMessages((prev) => [...prev, { role: 'assistant', content: reply }]);
@@ -43,8 +41,7 @@ export default function ChatbotWidget() {
       try {
         const db = getDb();
         await addDoc(collection(db, 'zion_chat_client_logs'), {
-          sessionId, user: text, assistant: reply, ts: Date.now(),
-        });
+          sessionId, user: text, assistant: reply, ts: Date.now()});
       } catch {}
     } catch (e: any) {
       setMessages((prev) => [...prev, { role: 'assistant', content: 'There was an error. Please try again or use Talk to Human.' }]);
@@ -59,8 +56,7 @@ export default function ChatbotWidget() {
       await fetch('/api/chat/escalate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ sessionId, message: lastUser }),
-      });
+        body: JSON.stringify({ sessionId, message: lastUser })});
       setMessages((prev) => [...prev, { role: 'assistant', content: 'A human will contact you shortly via our live support.' }]);
     } catch {
       setMessages((prev) => [...prev, { role: 'assistant', content: 'Failed to reach a human right now. Please email support@zion.com.' }]);
@@ -83,12 +79,12 @@ export default function ChatbotWidget() {
           <div ref={listRef} className="p-3 h-80 overflow-y-auto space-y-2 text-sm">
             {messages.map((m, idx) => (
               <div key={idx} className={m.role === 'user' ? 'text-right' : 'text-left'}>
-                <span className={m.role === 'user' ? 'inline-block bg-blue-600 text-white px-2 py-1 rounded' : 'inline-block bg-gray-100 px-2 py-1 rounded'}>
+                <span className={m.role === 'user' ? 'inline-block bg-blue-60o0 text-white px-2 py-1 rounded' : 'inline-block bg-gray-10o0 px-2 py-1 rounded'}>
                   {m.content}
                 </span>
               </div>
             ))}
-            {loading && <div className="text-gray-500">Typing…</div>}
+            {loading && <div className="text-gray-50o0">Typing…</div>}
           </div>
           <div className="p-2 border-t space-y-2">
             <div className="flex gap-2">
@@ -101,7 +97,7 @@ export default function ChatbotWidget() {
               />
               <button onClick={sendMessage} className="bg-black text-white px-3 py-1 rounded">Send</button>
             </div>
-            <button onClick={escalate} className="text-xs text-blue-600 underline">Talk to Human</button>
+            <button onClick={escalate} className="text-xs text-blue-60o0 underline">Talk to Human</button>
           </div>
         </div>
       )}

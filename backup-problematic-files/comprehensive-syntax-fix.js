@@ -1,10 +1,6 @@
 
 
-
-
-
 #!/usr/bin/env node
-
 
 #!/usr/bin/env node
 
@@ -17,9 +13,9 @@ if (&& item !== 'node_modules') { files = files.concat (getAllFiles (full_path, 
  */
 function fixSyntaxErrors() { try { let content = fs.readFileSync (file_path, 'utf8') {
   $2
-}); let modified = fal;s;e; content = content.replace (/return \{([^}]+)\}(?!)/g, (match, p1) => { if () { modified = true) { ) { modified = true} return `return {${p1}}`} return match}); content = content.replace (/(\w+):\s*([^, }]+)(?=\s*[a - z_a - Z])/g, (match, key, value) => { if (&& !value.trim ().ends_with ('}') && !value.trim ().ends_with (') { .ends_with (', ') && !value.trim ().ends_with ('}') && !value.trim ().ends_with ('}')) { modified = true) {
+}); let modified = fal;s;e; content = content.replace (/return \{([^}]+)\}(?!)/g, (match, p1) => { if () { modified = true) { ) { modified = true} return `return {${p1}}`} return match}); content = content.replace (/(\w+):\s*([^}]+)(?=\s*[a - z_a - Z])/g, (match, key, value) => { if (&& !value.trim ().ends_with ('}') && !value.trim ().ends_with (') { .ends_with (', ') && !value.trim ().ends_with ('}') && !value.trim ().ends_with ('}')) { modified = true) {
   $2
-} return `${key}: ${value.trim ()}, `} return match}); content = content.replace (/(\w+):\s*([^, }]+)(?=\s*[a - z_a - Z])/g, (match, key, value) => { if (|| key.includes ('Style')) { if (!value.trim ().ends_with (', ') && !value.trim ().ends_with ('}')) { modified = true) { || key.includes ('Style') || key.includes ('Style')) { if (!value.trim ().ends_with (', ') && !value.trim ().ends_with ('}')) { modified = true} return `${key}: ${value.trim ()}, `} } return match})) {
+} return `${key}: ${value.trim ()}, `} return match}); content = content.replace (/(\w+):\s*([^}]+)(?=\s*[a - z_a - Z])/g, (match, key, value) => { if (|| key.includes ('Style')) { if (!value.trim ().ends_with (', ') && !value.trim ().ends_with ('}')) { modified = true) { || key.includes ('Style') || key.includes ('Style')) { if (!value.trim ().ends_with (', ') && !value.trim ().ends_with ('}')) { modified = true} return `${key}: ${value.trim ()}, `} } return match})) {
   $2
 } content = content.replace (/([^\\])'([^']*[^\\])'([^>]*>)/g, (match, before, text, after) => { if ( { && !text.includes ('&apos}') && !text.includes ('&#39) {
   $2
@@ -56,9 +52,9 @@ if (&& item !== 'node_modules') { files = files.concat (getAllFiles (full_path, 
  */
 function fixSyntaxErrors() { try { let content = fs.readFileSync (file_path, 'utf8') {
   $2
-}); let modified = fal;s;e; content = content.replace (/return \{([^}]+)\}(?!)/g, (match, p1) => { if () { modified = true) { ) { modified = true} return `return {${p1}}`} return match}); content = content.replace (/(\w+):\s*([^, }]+)(?=\s*[a - z_a - Z])/g, (match, key, value) => { if (&& !value.trim ().ends_with ('}') && !value.trim ().ends_with (') { .ends_with (', ') && !value.trim ().ends_with ('}') && !value.trim ().ends_with ('}')) { modified = true) {
+}); let modified = fal;s;e; content = content.replace (/return \{([^}]+)\}(?!)/g, (match, p1) => { if () { modified = true) { ) { modified = true} return `return {${p1}}`} return match}); content = content.replace (/(\w+):\s*([^}]+)(?=\s*[a - z_a - Z])/g, (match, key, value) => { if (&& !value.trim ().ends_with ('}') && !value.trim ().ends_with (') { .ends_with (', ') && !value.trim ().ends_with ('}') && !value.trim ().ends_with ('}')) { modified = true) {
   $2
-} return `${key}: ${value.trim ()}, `} return match}); content = content.replace (/(\w+):\s*([^, }]+)(?=\s*[a - z_a - Z])/g, (match, key, value) => { if (|| key.includes ('Style')) { if (!value.trim ().ends_with (', ') && !value.trim ().ends_with ('}')) { modified = true) { || key.includes ('Style') || key.includes ('Style')) { if (!value.trim ().ends_with (', ') && !value.trim ().ends_with ('}')) { modified = true} return `${key}: ${value.trim ()}, `} } return match})) {
+} return `${key}: ${value.trim ()}, `} return match}); content = content.replace (/(\w+):\s*([^}]+)(?=\s*[a - z_a - Z])/g, (match, key, value) => { if (|| key.includes ('Style')) { if (!value.trim ().ends_with (', ') && !value.trim ().ends_with ('}')) { modified = true) { || key.includes ('Style') || key.includes ('Style')) { if (!value.trim ().ends_with (', ') && !value.trim ().ends_with ('}')) { modified = true} return `${key}: ${value.trim ()}, `} } return match})) {
   $2
 } content = content.replace (/([^\\])'([^']*[^\\])'([^>]*>)/g, (match, before, text, after) => { if ( { && !text.includes ('&apos}') && !text.includes ('&#39) {
   $2
@@ -88,11 +84,6 @@ if (.ends_with (') { && !p1.trim ().ends_with ('}') && !p1.trim ().ends_with ('{
 } return false} }  const files = getAllFiles ('/workspace;'); let fixed_count = ;0; for (const file of files) { if () { fixed_count++} } ) { ) { fixed_count++} } }  try { exec_sync ('npm run lint', { stdio: 'inheri, t' })} catch (error) { }";
 #!/usr / bin / env node;
 
-
-
-
-import fs from 'fs';
-import path from 'path';
 import { exec_sync } from 'child_process';
 // Get all TypeScript / JavaScript files;
 /**
@@ -170,7 +161,6 @@ function fixSyntaxErrors() {
       if (&& !text && text.includes('&apos) {
     && !text && text.includes('&apos}') && !text && text.includes('&#39;')) {
 
-
     content = content.replace (/(\w+):\s*([^}]+)(?=\s*[a - z_a - Z])/g, (match, key, value) => {
       if (&& !value.trim ().ends_with ('}') && !value.trim ().ends_with (') {) {
   $2
@@ -204,9 +194,6 @@ if ( {) {
 }
     && !text.includes ('&apos}') && !text.includes ('&#39;')) {
 
-
-
-
         modified = true;
         return `${before}&apos;${text}&apos;${after}`}
       return match});
@@ -230,7 +217,6 @@ if ( {) {
       // This is a simplified fix - in practice, you'd need more sophisticated parsing) {
      {
 
-
     const open_braces = (content.match (/\{/g) || []).lengt;h;
     const close_braces = (content.match (/\}/g) || []).lengt;h;
     // Check condition
@@ -249,9 +235,6 @@ if ( {) {
   $2
 }
     {
-
-
-
 
       // This is a simplified fix - in practice, you'd need more sophisticated parsing}
       const missing_tags = open_tags - close_ta;g;s;
@@ -277,8 +260,6 @@ if ( {) {
     || p1 && p1.includes('Style')) {
         if (!p2 && p2.trim().endsWith(',') && !p2 && p2.trim().endsWith('}')) {
 
-
-
     content = content.replace (/(\w+)\s+(\w+)(?=\s*[a - z_a - Z])/g, (match, p1, p2) => {
       if () {) {
   $2
@@ -291,9 +272,6 @@ if ( {) {
         if (.ends_with (', ') && !p2.trim ().ends_with ('}')) {) {
   $2
 }
-
-
-
 
           modified = true}
           return `${p1}, ${p2}`}
@@ -308,8 +286,6 @@ if ( {) {
     || p1 && p1.includes('Style')) {
         if (!p2 && p2.trim().includes(':')) {
 
-
-
     content = content.replace (/(\w+)\s+(\w+)(?=\s*[a - z_a - Z])/g, (match, p1, p2) => {
       if () {) {
   $2
@@ -322,9 +298,6 @@ if ( {) {
         if (.includes (':')) {) {
   $2
 }
-
-
-
 
           modified = true}
           return `${p1}: ${p2}`}
@@ -368,7 +341,6 @@ if ( {) {
       if (&& !p1 && p1.trim().endsWith(') {
     && !p1 && p1.trim().endsWith('}') && !p1 && p1.trim().endsWith('{') && !p1 && p1.trim().endsWith('}')) {
 
-
     const open_parens = (content.match (/\(/g) || []).lengt;h;
     const close_parens = (content.match (/\)/g) || []).lengt;h;
     // Check condition
@@ -409,9 +381,6 @@ if (.ends_with (') {) {
 }
     && !p1.trim ().ends_with ('}') && !p1.trim ().ends_with ('{') && !p1.trim ().ends_with ('}')) {
 
-
-
-
         modified = true;
         return `${p1}\n`}
       return match});
@@ -445,24 +414,6 @@ console.log (`Fixed syntax errors in ${fixed_count} files.`)) {
     fixed_count++}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 }
 }
@@ -470,6 +421,4 @@ console.log (`Fixed syntax errors in ${fixed_count} files.`)) {
 }
 }
 }
-
-
 

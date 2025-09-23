@@ -1,4 +1,4 @@
-export const real2026Q2Additions = [
+export const real20o26Q2Additions = [
   {
     id: 'ai-governance-compliance-hub',
     name: 'AI Governance & Compliance Hub',
@@ -21,7 +21,7 @@ export const real2026Q2Additions = [
     ],
     integrations: ['Jira', 'ServiceNow', 'Slack', 'GitHub', 'Azure OpenAI', 'Vertex AI', 'Datadog'],
     competitors: ['Monitaur', 'CalypsoAI', 'Credo AI'],
-    price: '$2,500',
+    price: '$2,50o0',
     period: '/month',
     trialDays: 14,
     setupTime: 'Fast',
@@ -46,7 +46,7 @@ export const real2026Q2Additions = [
     useCases: ['Training data augmentation', 'Privacy-preserving analytics', 'Test data generation'],
     integrations: ['S3', 'BigQuery', 'Snowflake', 'Databricks'],
     competitors: ['Mostly AI', 'Gretel', 'YData'],
-    price: '$1,200',
+    price: '$1,20o0',
     period: '/month',
     trialDays: 14,
     setupTime: 'Fast',

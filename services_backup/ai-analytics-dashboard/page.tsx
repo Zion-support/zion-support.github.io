@@ -1,4 +1,4 @@
-export const metadata = {
+export const metadata ={
   title: "AI-Powered Analytics Dashboard | Zion Tech Group",
   description:
     "Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time visualization, predictive analytics, and automated reporting."};
@@ -6,10 +6,10 @@ export const metadata = {
 export default function AIAnalyticsDashboardPage() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-gray-900 mb-6">
+      <h1 className="text-4xl font-bold text-gray-90o0 mb-6">
         AI-Powered Analytics Dashboard
       </h1>
-      <p className="text-xl text-gray-600 mb-12">
+      <p className="text-xl text-gray-60o0 mb-12">
         Transform your data into actionable insights with intelligent analytics,
         real-time visualization, and predictive modeling.
       </p>
@@ -22,7 +22,7 @@ export default function AIAnalyticsDashboardPage() {
             "Interactive dashboards",
             "Custom KPI tracking",
             "Automated alerts"]}
-        />
+         />
         <FeatureCard
           title="AI-Powered Insights"
           features={[
@@ -30,7 +30,7 @@ export default function AIAnalyticsDashboardPage() {
             "Anomaly detection",
             "Trend analysis",
             "Smart recommendations"]}
-        />
+         />
         <FeatureCard
           title="Advanced Visualization"
           features={[
@@ -38,75 +38,75 @@ export default function AIAnalyticsDashboardPage() {
             "Drill-down capabilities",
             "Mobile-responsive design",
             "Export & sharing options"]}
-        />
+         />
       </div>
 
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Key Benefits</h2>
+      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-20o0 rounded-xl p-8 mb-16">
+        <h2 className="text-2xl font-bold text-gray-90o0 mb-4">Key Benefits</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="flex items-start">
-            <span className="text-green-500 mr-3 text-xl">✓</span>
+            <span className="text-green-50o0 mr-3 text-xl">✓</span>
             <div>
-              <h3 className="font-semibold text-gray-900">
+              <h3 className="font-semibold text-gray-90o0">
                 Data-Driven Decisions
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-60o0">
                 Make informed business decisions with real-time data and AI
                 insights
               </p>
             </div>
           </div>
           <div className="flex items-start">
-            <span className="text-green-500 mr-3 text-xl">✓</span>
+            <span className="text-green-50o0 mr-3 text-xl">✓</span>
             <div>
-              <h3 className="font-semibold text-gray-900">Cost Reduction</h3>
-              <p className="text-gray-600">
+              <h3 className="font-semibold text-gray-90o0">Cost Reduction</h3>
+              <p className="text-gray-60o0">
                 Identify inefficiencies and optimize operations to reduce costs
                 by up to 30%
               </p>
             </div>
           </div>
           <div className="flex items-start">
-            <span className="text-green-500 mr-3 text-xl">✓</span>
+            <span className="text-green-50o0 mr-3 text-xl">✓</span>
             <div>
-              <h3 className="font-semibold text-gray-900">Scalable Solution</h3>
-              <p className="text-gray-600">
+              <h3 className="font-semibold text-gray-90o0">Scalable Solution</h3>
+              <p className="text-gray-60o0">
                 Grows with your business from startup to enterprise scale
               </p>
             </div>
           </div>
           <div className="flex items-start">
-            <span className="text-green-500 mr-3 text-xl">✓</span>
+            <span className="text-green-50o0 mr-3 text-xl">✓</span>
             <div>
-              <h3 className="font-semibold text-gray-900">Easy Integration</h3>
-              <p className="text-gray-600">
-                Connect with 100+ data sources and existing business tools
+              <h3 className="font-semibold text-gray-90o0">Easy Integration</h3>
+              <p className="text-gray-60o0">
+                Connect with 10o0+ data sources and existing business tools
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      <Pricing />
+      <Pricing  />
 
       <div className="mt-16 text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+        <h2 className="text-2xl font-bold text-gray-90o0 mb-4">
           Ready to Transform Your Data?
         </h2>
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-60o0 mb-6">
           Get started with a free consultation and see how AI analytics can
           boost your business performance.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="tel:+13024640950"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            href="tel:+130o24640950"
+            className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors"
           >
-            Call +1 302 464 0950
+            Call +1 30o2 464 0950
           </a>
           <a
             href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+            className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors"
           >
             Email Us
           </a>
@@ -123,12 +123,12 @@ function FeatureCard({
   features: string[];
 }) {
   return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm">
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <ul className="space-y-2 text-gray-600">
+    <div className="border border-gray-20o0 rounded-xl p-6 bg-white shadow-sm">
+      <h3 className="text-xl font-bold text-gray-90o0 mb-4">{title}</h3>
+      <ul className="space-y-2 text-gray-60o0">
         {features.map((f) => (
           <li key={f} className="flex items-center">
-            <span className="text-blue-500 mr-2">•</span> {f}
+            <span className="text-blue-50o0 mr-2">•</span> {f}
           </li>
         ))}
       </ul>
@@ -139,7 +139,7 @@ function FeatureCard({
 function Pricing() {
   return (
     <div className="mt-16">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+      <h2 className="text-3xl font-bold text-gray-90o0 mb-8 text-center">
         Pricing Plans
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -151,7 +151,7 @@ function Pricing() {
             "Basic dashboards",
             "Email reports",
             "Standard support"]}
-        />
+         />
         <Plan
           name="Professional"
           price="$799/mo"
@@ -162,7 +162,7 @@ function Pricing() {
             "Priority support",
             "Custom visualizations"]}
           popular={true}
-        />
+         />
         <Plan
           name="Enterprise"
           price="$1,999/mo"
@@ -172,7 +172,7 @@ function Pricing() {
             "White-label solution",
             "Dedicated support",
             "On-premise deployment"]}
-        />
+         />
       </div>
     </div>
   );
@@ -190,28 +190,28 @@ function Plan({
 }) {
   return (
     <div
-      className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? "border-blue-500 ring-2 ring-blue-200" : "border-gray-200"}`}
+      className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? "border-blue-50o0 ring-2 ring-blue-20o0" : "border-gray-20o0"}`}
     >
       {popular && (
-        <div className="bg-blue-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
+        <div className="bg-blue-50o0 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
           Most Popular
         </div>
       )}
-      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-blue-600 mb-4">{price}</div>
-      <ul className="space-y-2 text-gray-600 mb-6">
+      <h4 className="text-xl font-bold text-gray-90o0 mb-2">{name}</h4>
+      <div className="text-3xl font-bold text-blue-60o0 mb-4">{price}</div>
+      <ul className="space-y-2 text-gray-60o0 mb-6">
         {features.map((f) => (
           <li key={f} className="flex items-center">
-            <span className="text-green-500 mr-2">✓</span> {f}
+            <span className="text-green-50o0 mr-2">✓</span> {f}
           </li>
         ))}
       </ul>
       <a
-        href="tel:+13024640950"
+        href="tel:+130o24640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
           popular
-            ? "bg-blue-600 text-white hover:bg-blue-700"
-            : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+            ? "bg-blue-60o0 text-white hover:bg-blue-70o0"
+            : "bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0"
         }`}
       >
         Get Started

@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function BusinessIntelligenceChatPage() {
@@ -6,7 +5,7 @@ export default function BusinessIntelligenceChatPage() {
     <>
       <Head>
         <title>Business Intelligence Chat - Zion Tech Group</title>
-        <meta name="description" content="business intelligence chat page" />
+        <meta name="description" content="business intelligence chat page"  />
       </Head>
       
       <main>

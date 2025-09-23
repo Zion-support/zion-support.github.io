@@ -15,8 +15,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
-} from '@/components/ui/form';
+  FormMessage} from '@/components/ui/form';
 import { useState } from 'react';
 import { EducationFormFieldsProps } from './types';
 import { Education } from '@/types/resume';
@@ -30,8 +29,7 @@ const educationSchema = z.object({
   end_date: z.string().optional(),
   is_current: z.boolean().default(false),
   description: z.string().optional(),
-  location: z.string().optional(),
-});
+  location: z.string().optional()});
 
 type EducationFormValues = z.infer<typeof educationSchema>;
 
@@ -52,9 +50,7 @@ export function EducationFormFields({
       start_date: format(new Date(), 'yyyy-MM-dd'),
       is_current: false,
       description: '',
-      location: '',
-    },
-  });
+      location: ''}});
 
   const handleSubmit = async (data: EducationFormValues) => {
     setIsLoading(true);
@@ -79,9 +75,9 @@ export function EducationFormFields({
               <FormItem>
                 <FormLabel>Institution</FormLabel>
                 <FormControl>
-                  <Input placeholder="University of California, MIT, etc." {...field} />
+                  <Input placeholder="University of California, MIT, etc." {...field}  />
                 </FormControl>
-                <FormMessage />
+                <FormMessage  />
               </FormItem>
             )}
           />
@@ -93,9 +89,9 @@ export function EducationFormFields({
               <FormItem>
                 <FormLabel>Degree</FormLabel>
                 <FormControl>
-                  <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field} />
+                  <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field}  />
                 </FormControl>
-                <FormMessage />
+                <FormMessage  />
               </FormItem>
             )}
           />
@@ -108,9 +104,9 @@ export function EducationFormFields({
             <FormItem>
               <FormLabel>Field of Study</FormLabel>
               <FormControl>
-                <Input placeholder="Computer Science, Engineering, etc." {...field} />
+                <Input placeholder="Computer Science, Engineering, etc." {...field}  />
               </FormControl>
-              <FormMessage />
+              <FormMessage  />
             </FormItem>
           )}
         />
@@ -127,9 +123,9 @@ export function EducationFormFields({
                     type="date" 
                     {...field}
                     value={field.value || ''} 
-                  />
+                   />
                 </FormControl>
-                <FormMessage />
+                <FormMessage  />
               </FormItem>
             )}
           />
@@ -144,7 +140,7 @@ export function EducationFormFields({
                     <Checkbox
                       checked={field.value}
                       onCheckedChange={field.onChange}
-                    />
+                     />
                   </FormControl>
                   <div className="space-y-1 leading-none">
                     <FormLabel>I am currently studying here</FormLabel>
@@ -165,9 +161,9 @@ export function EducationFormFields({
                         type="date" 
                         {...field} 
                         value={field.value || ''} 
-                      />
+                       />
                     </FormControl>
-                    <FormMessage />
+                    <FormMessage  />
                   </FormItem>
                 )}
               />
@@ -182,9 +178,9 @@ export function EducationFormFields({
             <FormItem>
               <FormLabel>Location (Optional)</FormLabel>
               <FormControl>
-                <Input placeholder="Cambridge, MA" {...field} />
+                <Input placeholder="Cambridge, MA" {...field}  />
               </FormControl>
-              <FormMessage />
+              <FormMessage  />
             </FormItem>
           )}
         />
@@ -198,11 +194,11 @@ export function EducationFormFields({
               <FormControl>
                 <Textarea
                   placeholder="Notable achievements, courses, activities..."
-                  className="min-h-[100px]"
+                  className="min-h-[10o0px]"
                   {...field}
-                />
+                 />
               </FormControl>
-              <FormMessage />
+              <FormMessage  />
             </FormItem>
           )}
         />
@@ -219,7 +215,7 @@ export function EducationFormFields({
           </Button>
 
           <Button type="submit" disabled={isLoading}>
-            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin"  />}
             {isEditing ? 'Update' : 'Add'} Education
           </Button>
         </div>

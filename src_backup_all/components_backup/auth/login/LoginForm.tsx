@@ -1,6 +1,5 @@
 
 import { useState } from "react";
-import { useRouter } from 'next/router';
 import { useForm, ControllerRenderProps } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -15,8 +14,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+  FormMessage} from "@/components/ui/form";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import Link from "next/link";
 
@@ -25,9 +23,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 const loginSchema = z.object({
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),
   password: z.string().min(6, "Password must be at least 6 characters"),
-  rememberMe: z.boolean(),
-});
-
+  rememberMe: z.boolean()});
 
 type LoginFormValues = z.infer<typeof loginSchema>;
 
@@ -44,9 +40,7 @@ export function LoginForm() {
     defaultValues: {
       email: "",
       password: "",
-      rememberMe: false,
-    },
-  });
+      rememberMe: false}});
 
   const onSubmit = async (data: LoginFormValues) => {
     if (isSubmitting) return;
@@ -139,11 +133,11 @@ export function LoginForm() {
                     aria-invalid={!!form.formState.errors.email}
                     className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
                     {...field}
-                  />
-                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                   />
+                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"  />
                 </div>
               </FormControl>
-              <FormMessage className="text-red-400" />
+              <FormMessage className="text-red-40o0"  />
             </FormItem>
           )}
         />
@@ -162,8 +156,8 @@ export function LoginForm() {
                     aria-invalid={!!form.formState.errors.password}
                     className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
                     {...field}
-                  />
-                  <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                   />
+                  <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"  />
                   <Button
                     type="button"
                     variant="ghost"
@@ -172,9 +166,9 @@ export function LoginForm() {
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? (
-                      <EyeOff className="h-4 w-4" />
+                      <EyeOff className="h-4 w-4"  />
                     ) : (
-                      <Eye className="h-4 w-4" />
+                      <Eye className="h-4 w-4"  />
                     )}
                     <span className="sr-only">
                       {showPassword ? "Hide password" : "Show password"}
@@ -182,7 +176,7 @@ export function LoginForm() {
                   </Button>
                 </div>
               </FormControl>
-              <FormMessage className="text-red-400" />
+              <FormMessage className="text-red-40o0"  />
             </FormItem>
           )}
         />
@@ -197,7 +191,7 @@ export function LoginForm() {
                   onCheckedChange={field.onChange}
                   className="border-zion-blue-light data-[state=checked]:bg-zion-purple data-[state=checked]:text-white"
                   aria-label="Remember me"
-                />
+                 />
               </FormControl>
               <div className="space-y-1 leading-none">
                 <FormLabel className="text-zion-slate-light">Remember me</FormLabel>

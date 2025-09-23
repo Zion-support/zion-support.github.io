@@ -1,5 +1,4 @@
 
-import React from "react";
 import { Quote } from "lucide-react";
 import {
   Carousel,
@@ -46,7 +45,7 @@ export function EnterpriseTestimonials() {
             {testimonials.map((testimonialindex) => (
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
                 <div className="bg-card rounded-xl p-8 border border-border h-full">
-                  <Quote className="h-10 w-10 text-primary/20 mb-4" />
+                  <Quote className="h-10 w-10 text-primary/20 mb-4"  />
                   <blockquote className="text-xl mb-6 italic">
                     "{testimonial.quote}"
                   </blockquote>
@@ -56,7 +55,7 @@ export function EnterpriseTestimonials() {
                         src={testimonial.image}
                         alt={testimonial.author}
                         className="h-full w-full object-cover"
-                      />
+                       />
                     </div>
                     <div>
                       <p className="font-bold">{testimonial.author}</p>
@@ -70,8 +69,8 @@ export function EnterpriseTestimonials() {
             ))}
           </CarouselContent>
           <div className="flex justify-center gap-2 mt-8">
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious  />
+            <CarouselNext  />
           </div>
         </Carousel>
       </div>

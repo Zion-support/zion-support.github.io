@@ -1,16 +1,15 @@
-import React from 'react';
 import Link from 'next/link';
 
-const NewContent2025UltimateSecurityBanner = () => {
+const NewContent20o25UltimateSecurityBanner = () => {
   return (
-    <section className="bg-gradient-to-r from-red-600 via-purple-600 to-blue-600 text-white py-16">
+    <section className="bg-gradient-to-r from-red-60o0 via-purple-60o0 to-blue-60o0 text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">🛡️ NEW 2025 CONTENT</span>
+            <span className="text-sm font-medium">🛡️ NEW 20o25 CONTENT</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            AI 2025 Cybersecurity Revolution
+            AI 20o25 Cybersecurity Revolution
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
             Discover how AI is revolutionizing cybersecurity with advanced threat detection
@@ -48,25 +47,25 @@ const NewContent2025UltimateSecurityBanner = () => {
               <h3 className="text-2xl font-bold mb-4">Real-World Success Stories</h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                  <div className="w-2 h-2 bg-green-40o0 rounded-full"></div>
                   <span className="text-sm">95% reduction in false positive alerts</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                  <div className="w-2 h-2 bg-green-40o0 rounded-full"></div>
                   <span className="text-sm">80% faster threat detection and response</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                  <span className="text-sm">100% prevention of data breaches</span>
+                  <div className="w-2 h-2 bg-green-40o0 rounded-full"></div>
+                  <span className="text-sm">10o0% prevention of data breaches</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                  <div className="w-2 h-2 bg-green-40o0 rounded-full"></div>
                   <span className="text-sm">$15M annual savings in security operations</span>
                 </div>
               </div>
             </div>
             <div className="text-center">
-              <div className="text-6xl font-bold text-green-400 mb-2">99.9%</div>
+              <div className="text-6xl font-bold text-green-40o0 mb-2">99.9%</div>
               <div className="text-lg opacity-90">Threat Detection Accuracy</div>
             </div>
           </div>
@@ -75,20 +74,20 @@ const NewContent2025UltimateSecurityBanner = () => {
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/blog/ai-2025-cybersecurity-revolution-ultimate-guide"
-              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+              href="/blog/ai-20o25-cybersecurity-revolution-ultimate-guide"
+              className="bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-lg"
             >
               Read Full Guide
             </Link>
             <Link
               href="/services/ai-security"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-lg"
             >
               Get AI Security Solutions
             </Link>
           </div>
           <p className="text-sm opacity-75 mt-4">
-            Join 500+ enterprises already protected by AI-powered cybersecurity
+            Join 50o0+ enterprises already protected by AI-powered cybersecurity
           </p>
         </div>
       </div>
@@ -96,4 +95,4 @@ const NewContent2025UltimateSecurityBanner = () => {
   );
 };
 
-export default NewContent2025UltimateSecurityBanner;
+export default NewContent20o25UltimateSecurityBanner;

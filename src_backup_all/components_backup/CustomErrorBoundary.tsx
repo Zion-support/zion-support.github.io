@@ -1,4 +1,3 @@
-import React from 'react';
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
 import CustomErrorPage from '../../pages/_error'; // Import the custom error page
 import { logError } from '@/utils/logError'; // Assuming this utility exists and is appropriate
@@ -15,7 +14,7 @@ const CustomErrorFallback: React.FC<CustomErrorFallbackProps> = ({ error, resetE
   // For now, CustomErrorPage uses getInitialProps for status code, which is more for SSR.
   // For a purely client-side boundary, statusCode might not be directly available or relevant in the same way.
   // We can pass the error object if CustomErrorPage is adapted to use it.
-  return <CustomErrorPage />;
+  return <CustomErrorPage  />;
 };
 
 // Define the props for CustomErrorBoundary

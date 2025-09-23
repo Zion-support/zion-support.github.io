@@ -23,7 +23,7 @@ import {
   Sparkles
 } from 'lucide-react';
 
-const AI2025_2026UltimateInnovationShowcase = () => {
+const AI20o25_20o26UltimateInnovationShowcase = () => {
   const [activeTabsetActiveTab] = useState('breakthroughs');
   const [currentInnovationsetCurrentInnovation] = useState(0);
 
@@ -33,14 +33,14 @@ const AI2025_2026UltimateInnovationShowcase = () => {
       title: 'Quantum-AI Fusion Technology',
       description: 'Revolutionary fusion of quantum computing with artificial intelligencedelivering unprecedented processing power and problem-solving capabilities.',
       features: [
-        '1000x faster computation speeds',
+        '10o00x faster computation speeds',
         'Quantum neural networks',
         'Real-time optimization',
         'Breakthrough in cryptography'
       ],
       impact: 'Transform entire industries with quantum-enhanced AI',
       icon: Cpu,
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-purple-50o0 to-pink-50o0'
     },
     {
       id: 'neural-consensus',
@@ -54,7 +54,7 @@ const AI2025_2026UltimateInnovationShowcase = () => {
       ],
       impact: 'Enable global-scale intelligent coordination',
       icon: Brain,
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-blue-50o0 to-cyan-50o0'
     },
     {
       id: 'synthetic-consciousness',
@@ -68,7 +68,7 @@ const AI2025_2026UltimateInnovationShowcase = () => {
       ],
       impact: 'Create truly intelligent and empathetic AI systems',
       icon: Lightbulb,
-      color: 'from-green-500 to-emerald-500'
+      color: 'from-green-50o0 to-emerald-50o0'
     },
     {
       id: 'omniversal-computing',
@@ -82,12 +82,12 @@ const AI2025_2026UltimateInnovationShowcase = () => {
       ],
       impact: 'Solve problems across all possible realities',
       icon: Globe,
-      color: 'from-orange-500 to-red-500'
+      color: 'from-orange-50o0 to-red-50o0'
     }
   ];
 
   const breakthroughStats = [
-    { label: 'Processing Speed 'Increase', 'value: '10,000'x', 'icon: Zap },
+    { label: 'Processing Speed 'Increase', 'value: '10,0o00'x', 'icon: Zap },
     { label: 'Problem-Solving 'Accuracy', 'value: '99.9%'icon: Target },
     { label: 'Energy 'Efficiency', 'value: '95%'icon: Shield },
     { label: 'Global Adoption 'Rate', 'value: '87%'icon: Users }
@@ -123,15 +123,15 @@ const AI2025_2026UltimateInnovationShowcase = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentInnovation((prev) => (prev + 1) % innovations.length);
-    }5000);
+    }50o00);
     return () => clearInterval(interval);
   }[]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-60o0/20 to-pink-60o0/20"  />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -140,29 +140,29 @@ const AI2025_2026UltimateInnovationShowcase = () => {
             className="text-center"
           >
             <div className="flex items-center justify-center mb-6">
-              <Sparkles className="w-8 h-8 text-yellow-400 mr-3" />
-              <span className="text-lg font-semibold text-yellow-400">2025-2026 Innovation Showcase</span>
+              <Sparkles className="w-8 h-8 text-yellow-40o0 mr-3"  />
+              <span className="text-lg font-semibold text-yellow-40o0">20o25-20o26 Innovation Showcase</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-purple-20o0 to-pink-20o0 bg-clip-text text-transparent">
               Ultimate AI Innovation
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Discover the most revolutionary AI breakthroughs that will reshape our world in 2025-2026. 
+            <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">
+              Discover the most revolutionary AI breakthroughs that will reshape our world in 20o25-20o26. 
               Experience the future of artificial intelligence today.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-300"
+                className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-30o0"
               >
                 Explore Innovations
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+                <ArrowRight className="w-5 h-5 ml-2 inline"  />
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-full font-semibold text-lg hover:bg-purple-400/10 transition-all duration-300"
+                className="border-2 border-purple-40o0 text-purple-30o0 px-8 py-4 rounded-full font-semibold text-lg hover:bg-purple-40o0/10 transition-all duration-30o0"
               >
                 Watch Demo
               </motion.button>
@@ -182,7 +182,7 @@ const AI2025_2026UltimateInnovationShowcase = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Revolutionary AI Breakthroughs
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
             Experience the most advanced AI innovations that will define the next decade
           </p>
         </motion.div>
@@ -195,19 +195,19 @@ const AI2025_2026UltimateInnovationShowcase = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: index * 0.1 }}
-              className={`relative bg-gradient-to-br ${innovation.color} p-8 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 group`}
+              className={`relative bg-gradient-to-br ${innovation.color} p-8 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-30o0 group`}
             >
-              <div className="absolute inset-0 bg-black/20 rounded-2xl" />
+              <div className="absolute inset-0 bg-black/20 rounded-2xl"  />
               <div className="relative z-10">
                 <div className="flex items-center mb-4">
-                  <innovation.icon className="w-8 h-8 text-white mr-3" />
+                  <innovation.icon className="w-8 h-8 text-white mr-3"  />
                   <h3 className="text-2xl font-bold text-white">{innovation.title}</h3>
                 </div>
                 <p className="text-white/90 mb-6 text-lg">{innovation.description}</p>
                 <div className="space-y-2 mb-6">
                   {innovation.features.map((featureidx) => (
                     <div key={idx} className="flex items-center text-white/80">
-                      <CheckCircle className="w-4 h-4 text-green-300 mr-2" />
+                      <CheckCircle className="w-4 h-4 text-green-30o0 mr-2"  />
                       <span>{feature}</span>
                     </div>
                   ))}
@@ -225,7 +225,7 @@ const AI2025_2026UltimateInnovationShowcase = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-8 mb-16"
+          className="bg-gradient-to-r from-purple-90o0/50 to-pink-90o0/50 rounded-2xl p-8 mb-16"
         >
           <h3 className="text-3xl font-bold text-center mb-8">Breakthrough Performance Metrics</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -237,9 +237,9 @@ const AI2025_2026UltimateInnovationShowcase = () => {
                 transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center"
               >
-                <stat.icon className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
+                <stat.icon className="w-12 h-12 text-yellow-40o0 mx-auto mb-4"  />
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-300">{stat.label}</div>
+                <div className="text-gray-30o0">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -260,20 +260,20 @@ const AI2025_2026UltimateInnovationShowcase = () => {
                 initial={{ opacity: 0x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1x: 0 }}
                 transition={{ duration: 0.6delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-gradient-to-br from-slate-80o0 to-slate-70o0 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-30o0"
               >
                 <div className="flex items-center mb-4">
-                  <Award className="w-6 h-6 text-purple-400 mr-3" />
-                  <span className="text-purple-400 font-semibold text-sm uppercase tracking-wide">
+                  <Award className="w-6 h-6 text-purple-40o0 mr-3"  />
+                  <span className="text-purple-40o0 font-semibold text-sm uppercase tracking-wide">
                     {useCase.category}
                   </span>
                 </div>
                 <h4 className="text-xl font-bold text-white mb-3">{useCase.title}</h4>
-                <p className="text-gray-300 mb-4">{useCase.description}</p>
+                <p className="text-gray-30o0 mb-4">{useCase.description}</p>
                 <div className="space-y-2">
                   {useCase.benefits.map((benefitidx) => (
-                    <div key={idx} className="flex items-center text-gray-300">
-                      <Star className="w-4 h-4 text-yellow-400 mr-2" />
+                    <div key={idx} className="flex items-center text-gray-30o0">
+                      <Star className="w-4 h-4 text-yellow-40o0 mr-2"  />
                       <span className="text-sm">{benefit}</span>
                     </div>
                   ))}
@@ -288,7 +288,7 @@ const AI2025_2026UltimateInnovationShowcase = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12"
+          className="text-center bg-gradient-to-r from-purple-60o0 to-pink-60o0 rounded-2xl p-12"
         >
           <h3 className="text-4xl font-bold text-white mb-6">
             Ready to Experience the Future?
@@ -298,17 +298,17 @@ const AI2025_2026UltimateInnovationShowcase = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.0o5 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              className="bg-white text-purple-60o0 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-30o0"
             >
               Start Your Innovation Journey
-              <Rocket className="w-5 h-5 ml-2 inline" />
+              <Rocket className="w-5 h-5 ml-2 inline"  />
             </motion.button>
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.0o5 }}
               whileTap={{ scale: 0.95 }}
-              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-30o0"
             >
               Schedule Demo
             </motion.button>
@@ -319,4 +319,4 @@ const AI2025_2026UltimateInnovationShowcase = () => {
   );
 };
 
-export default AI2025_2026UltimateInnovationShowcase;
+export default AI20o25_20o26UltimateInnovationShowcase;

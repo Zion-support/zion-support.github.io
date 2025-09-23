@@ -20,7 +20,7 @@ export async function processJobMatching(job: JobData, talents: any[]): Promise<
     const jobSkillsNormalized = await normalizeSkillsWithAI(job.skills);
     
     // Prepare job details for matching prompt
-    const jobDetails = {
+    const jobDetails ={
       title: job.title,
       description: job.description,
       category: job.category,

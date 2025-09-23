@@ -18,9 +18,9 @@ export function ContactFields({ control }: ContactFieldsProps) {
           <FormItem>
             <FormLabel>Location</FormLabel>
             <FormControl>
-              <Input placeholder="San Francisco, CA" {...field} />
+              <Input placeholder="San Francisco, CA" {...field}  />
             </FormControl>
-            <FormMessage />
+            <FormMessage  />
           </FormItem>
         )}
       />
@@ -32,9 +32,9 @@ export function ContactFields({ control }: ContactFieldsProps) {
           <FormItem>
             <FormLabel>Website</FormLabel>
             <FormControl>
-              <Input placeholder="https://yourwebsite.com" {...field} />
+              <Input placeholder="https://yourwebsite.com" {...field}  />
             </FormControl>
-            <FormMessage />
+            <FormMessage  />
           </FormItem>
         )}
       />
@@ -46,9 +46,9 @@ export function ContactFields({ control }: ContactFieldsProps) {
           <FormItem>
             <FormLabel>LinkedIn</FormLabel>
             <FormControl>
-              <Input placeholder="https://linkedin.com/in/username" {...field} />
+              <Input placeholder="https://linkedin.com/in/username" {...field}  />
             </FormControl>
-            <FormMessage />
+            <FormMessage  />
           </FormItem>
         )}
       />
@@ -60,9 +60,9 @@ export function ContactFields({ control }: ContactFieldsProps) {
           <FormItem>
             <FormLabel>GitHub</FormLabel>
             <FormControl>
-              <Input placeholder="https://github.com/username" {...field} />
+              <Input placeholder="https://github.com/username" {...field}  />
             </FormControl>
-            <FormMessage />
+            <FormMessage  />
           </FormItem>
         )}
       />

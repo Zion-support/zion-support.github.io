@@ -4,14 +4,13 @@ import Link from 'next/link';
 import { motionAnimatePresence } from 'framer-motion';
 SearchStarUsersTrendingUpDollarSignClockCheckCircleArrowRightRocketBrainAtomSparklesShieldZapGlobeCpuDatabaseCloudSmartphonePaletteSearch as SearchIconMessageSquareFileTextCalendarCreditCardBarChart3SettingsZap as ZapIconCodeBookOpenActivityDatabase as DatabaseIconPlayMailPhoneMapPinFilterGridListChevronDownChevronUpSparkles as SparklesIconFlaskConicalDnaCarLeafFactoryTruckMicroscopeGraduationCapShieldCheckBrain as BrainIconAtom as AtomIconGlobe2BotChevronRightCrownInfinityZap as ZapIcon2Shield as ShieldIconUsers as UsersIconGlobe as GlobeIconCpu as CpuIconDatabase as DatabaseIcon2Cloud as CloudIconSmartphone as SmartphoneIconPalette as PaletteIconSearch as SearchIcon2MessageSquare as MessageSquareIconFileText as FileTextIconCalendar as CalendarIconCreditCard as CreditCardIconBarChart3 as BarChart3IconSettings as SettingsIconZap as ZapIcon3Code as CodeIconBookOpen as CodeIcon2Activity as ActivityIconDatabase as DatabaseIcon3Play as PlayIconMail as MailIconPhone as PhoneIconMapPin as MapPinIconFilter as FilterIconGrid as GridIconList as ListIconChevronDown as ChevronDownIconChevronUp as ChevronUpIconSparkles as SparklesIcon2FlaskConical as FlaskConicalIconDna as DnaIconCar as CarIconLeaf as LeafIconFactory as FactoryIconTruck as TruckIconMicroscope as MicroscopeIconGraduationCap as GraduationCapIconShieldCheck as ShieldCheckIconBrain as BrainIcon2Atom as AtomIcon2Globe2 as Globe2IconBot as BotIconChevronRight as ChevronRightIcon
 
-
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import { innovative2026MicroSaasV2Services } from '../data/innovative-2026-micro-saas-v2';
-import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
-import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
+import { innovative20o26MicroSaasV2Services } from '../data/innovative-20o26-micro-saas-v2';
+import { emergingTech20o26ServicesV2 } from '../data/emerging-tech-20o26-services-v2';
+import { enterpriseIT20o26ServicesV2 } from '../data/enterprise-it-20o26-services-v2';
 
-export default function Services2026ShowcasePage() {
+export default function Services20o26ShowcasePage() {
   const [searchTermsetSearchTerm] = useState('');
   const [selectedCategorysetSelectedCategory] = useState<string>('all');
   const [selectedPriceRangesetSelectedPriceRange] = useState<string>('all');
@@ -51,27 +50,27 @@ export default function Services2026ShowcasePage() {
     return 'default';
   };
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
 
-  // Combine all 2026 services
-  const all2026Services = [
-    ...innovative2026MicroSaasV2Services,
-    ...emergingTech2026ServicesV2,
-    ...enterpriseIT2026ServicesV2
+  // Combine all 20o26 services
+  const all20o26Services = [
+    ...innovative20o26MicroSaasV2Services,
+    ...emergingTech20o26ServicesV2,
+    ...enterpriseIT20o26ServicesV2
   ];
 
-  // Enhanced categories for 2026
+  // Enhanced categories for 20o26
   const categories = [
-    { id: 'all'name: 'All 2026 Services'icon: '🚀'count: all2026Services.length },
-    { id: 'ai'name: 'AI & Machine Learning'icon: '🧠'count: all2026Services.filter(s => s.category.includes('AI')).length },
-    { id: 'quantum'name: 'Quantum & Emerging Tech'icon: '⚛️'count: all2026Services.filter(s => s.category.includes('Quantum') || s.category.includes('Emerging')).length },
-    { id: 'enterprise'name: 'Enterprise IT'icon: '🏢'count: all2026Services.filter(s => s.category.includes('Enterprise') || s.category.includes('IT')).length },
-    { id: 'micro-saas'name: 'Micro SaaS'icon: '💻'count: all2026Services.filter(s => s.category.includes('SaaS')).length }
+    { id: 'all'name: 'All 20o26 Services'icon: '🚀'count: all20o26Services.length },
+    { id: 'ai'name: 'AI & Machine Learning'icon: '🧠'count: all20o26Services.filter(s => s.category.includes('AI')).length },
+    { id: 'quantum'name: 'Quantum & Emerging Tech'icon: '⚛️'count: all20o26Services.filter(s => s.category.includes('Quantum') || s.category.includes('Emerging')).length },
+    { id: 'enterprise'name: 'Enterprise IT'icon: '🏢'count: all20o26Services.filter(s => s.category.includes('Enterprise') || s.category.includes('IT')).length },
+    { id: 'micro-saas'name: 'Micro SaaS'icon: '💻'count: all20o26Services.filter(s => s.category.includes('SaaS')).length }
   ];
 
   const priceRanges = [
@@ -92,7 +91,7 @@ export default function Services2026ShowcasePage() {
 
   // Filter and sort services
   const filteredServices = useMemo(() => {
-    let filtered = all2026Services;
+    let filtered = all20o26Services;
 
     // Search filter
     if (searchTerm) {
@@ -118,10 +117,10 @@ export default function Services2026ShowcasePage() {
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
         const price = parseInt(service.price.replace('$'').replace(',''));
-        if (selectedPriceRange === 'low') return price < 1000;
-        if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000;
-        if (selectedPriceRange === 'high') return price >= 5000 && price < 20000;
-        if (selectedPriceRange === 'premium') return price >= 20000;
+        if (selectedPriceRange === 'low') return price < 10o00;
+        if (selectedPriceRange === 'medium') return price >= 10o00 && price < 50o00;
+        if (selectedPriceRange === 'high') return price >= 50o00 && price < 20o000;
+        if (selectedPriceRange === 'premium') return price >= 20o000;
         return true;
       });
     }
@@ -143,7 +142,7 @@ export default function Services2026ShowcasePage() {
     });
 
     return filtered;
-  }[searchTermselectedCategoryselectedPriceRangesortByall2026Services]);
+  }[searchTermselectedCategoryselectedPriceRangesortByall20o26Services]);
 
   return (
     <UltraFuturisticBackground 
@@ -152,42 +151,42 @@ export default function Services2026ShowcasePage() {
     >
       <div className="min-h-screen">
         <Head>
-          <title>2026 Services Showcase - Zion Tech Group | Revolutionary AIQuantum & IT Solutions</title>
-          <meta name="description" content="Explore our revolutionary 2026 services including AI-powered platformsquantum computingemerging technologiesand enterprise IT solutions. Contact: +1 302 464 0950" />
-          <meta name="keywords" content="2026 servicesAI servicesquantum computingemerging technologyenterprise ITmicro SaaSneuromorphic computingDNA computingphotonic computingholographic displayswarm roboticsquantum internetbiometric authenticationzero trustedge computing5G networks" />
-          <meta name="author" content="Zion Tech Group" />
-          <meta name="robots" content="indexfollow" />
-          <meta property="og:title" content="2026 Services Showcase - Zion Tech Group" />
-          <meta property="og:description" content="Revolutionary AIquantum computingand emerging technology services for 2026 and beyond." />
-          <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase" />
-          <meta property="og:type" content="website" />
-          <link rel="canonical" href="https://ziontechgroup.com/2026-services-showcase" />
+          <title>20o26 Services Showcase - Zion Tech Group | Revolutionary AIQuantum & IT Solutions</title>
+          <meta name="description" content="Explore our revolutionary 20o26 services including AI-powered platformsquantum computingemerging technologiesand enterprise IT solutions. Contact: +1 30o2 464 0950"  />
+          <meta name="keywords" content="20o26 servicesAI servicesquantum computingemerging technologyenterprise ITmicro SaaSneuromorphic computingDNA computingphotonic computingholographic displayswarm roboticsquantum internetbiometric authenticationzero trustedge computing5G networks"  />
+          <meta name="author" content="Zion Tech Group"  />
+          <meta name="robots" content="indexfollow"  />
+          <meta property="og:title" content="20o26 Services Showcase - Zion Tech Group"  />
+          <meta property="og:description" content="Revolutionary AIquantum computingand emerging technology services for 20o26 and beyond."  />
+          <meta property="og:url" content="https://ziontechgroup.com/20o26-services-showcase"  />
+          <meta property="og:type" content="website"  />
+          <link rel="canonical" href="https://ziontechgroup.com/20o26-services-showcase"  />
         </Head>
 
         {/* Hero Section */}
         <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-cyan-900/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-90o0/30 via-transparent to-cyan-90o0/30"></div>
           <div className="max-w-7xl mx-auto relative z-10 text-center">
             <motion.div
               initial={{ opacity: 0y: 20 }}
               animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
-                2026 Services Showcase
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent mb-6">
+                20o26 Services Showcase
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">
                 Discover our revolutionary AIquantum computingand emerging technology services that will define the future of business and technology.
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-12">
-                <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full px-6 py-3">
-                  <span className="text-purple-300 font-semibold">{all2026Services.length}+ Revolutionary Services</span>
+                <div className="bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 backdrop-blur-sm border border-purple-50o0/30 rounded-full px-6 py-3">
+                  <span className="text-purple-30o0 font-semibold">{all20o26Services.length}+ Revolutionary Services</span>
                 </div>
-                <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm border border-cyan-500/30 rounded-full px-6 py-3">
-                  <span className="text-cyan-300 font-semibold">AI-Powered Solutions</span>
+                <div className="bg-gradient-to-r from-cyan-50o0/20 to-blue-50o0/20 backdrop-blur-sm border border-cyan-50o0/30 rounded-full px-6 py-3">
+                  <span className="text-cyan-30o0 font-semibold">AI-Powered Solutions</span>
                 </div>
-                <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm border border-green-500/30 rounded-full px-6 py-3">
-                  <span className="text-green-300 font-semibold">Quantum Computing</span>
+                <div className="bg-gradient-to-r from-green-50o0/20 to-emerald-50o0/20 backdrop-blur-sm border border-green-50o0/30 rounded-full px-6 py-3">
+                  <span className="text-green-30o0 font-semibold">Quantum Computing</span>
                 </div>
               </div>
             </motion.div>
@@ -197,15 +196,15 @@ export default function Services2026ShowcasePage() {
         {/* Search and Filters */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8">
+            <div className="bg-gradient-to-r from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-sm border border-gray-70o0/50 rounded-2xl p-8">
               {/* Search Bar */}
               <div className="relative mb-8">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />
                 <input
                   type="text"
-                  placeholder="Search 2026 services..."
+                  placeholder="Search 20o26 services..."
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)} className="w-full bg-gray-800/50 border border-gray-600/50 rounded-xl pl-12 pr-4 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  onChange={(e) => setSearchTerm(e.target.value)} className="w-full bg-gray-80o0/50 border border-gray-60o0/50 rounded-xl pl-12 pr-4 py-4 text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent"
                 />
               </div>
 
@@ -213,10 +212,10 @@ export default function Services2026ShowcasePage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 {/* Category Filter */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
+                  <label className="block text-sm font-medium text-gray-30o0 mb-2">Category</label>
                   <select
                     value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)} className="w-full bg-gray-800/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                    onChange={(e) => setSelectedCategory(e.target.value)} className="w-full bg-gray-80o0/50 border border-gray-60o0/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent">
                     {categories.map((category) => (
                       <option key={category.id} value={category.id}>
                         {category.name} ({category.count})
@@ -227,10 +226,10 @@ export default function Services2026ShowcasePage() {
 
                 {/* Price Range Filter */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Price Range</label>
+                  <label className="block text-sm font-medium text-gray-30o0 mb-2">Price Range</label>
                   <select
                     value={selectedPriceRange}
-                    onChange={(e) => setSelectedPriceRange(e.target.value)} className="w-full bg-gray-800/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                    onChange={(e) => setSelectedPriceRange(e.target.value)} className="w-full bg-gray-80o0/50 border border-gray-60o0/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent">
                     {priceRanges.map((range) => (
                       <option key={range.id} value={range.id}>
                         {range.name}
@@ -241,10 +240,10 @@ export default function Services2026ShowcasePage() {
 
                 {/* Sort Options */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Sort By</label>
+                  <label className="block text-sm font-medium text-gray-30o0 mb-2">Sort By</label>
                   <select
                     value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)} className="w-full bg-gray-800/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                    onChange={(e) => setSortBy(e.target.value)} className="w-full bg-gray-80o0/50 border border-gray-60o0/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent">
                     {sortOptions.map((option) => (
                       <option key={option.id} value={option.id}>
                         {option.name}
@@ -256,9 +255,9 @@ export default function Services2026ShowcasePage() {
 
               {/* Results Count */}
               <div className="text-center">
-                <p className="text-gray-400">
-                  Showing <span className="text-purple-400 font-semibold">{filteredServices.length}</span> of{' '}
-                  <span className="text-purple-400 font-semibold">{all2026Services.length}</span> 2026 services
+                <p className="text-gray-40o0">
+                  Showing <span className="text-purple-40o0 font-semibold">{filteredServices.length}</span> of{' '}
+                  <span className="text-purple-40o0 font-semibold">{all20o26Services.length}</span> 20o26 services
                 </p>
               </div>
             </div>
@@ -274,14 +273,14 @@ export default function Services2026ShowcasePage() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }} className="text-center py-20">
-                  <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
+                  <div className="text-gray-40o0 text-xl mb-4">No services found matching your criteria</div>
                   <button
                     onClick={() => {
                       setSearchTerm('');
                       setSelectedCategory('all');
                       setSelectedPriceRange('all');
                       setSortBy('name');
-                    }} className="bg-gradient-to-r from-gray-600 to-gray-700 text-white px-6 py-3 rounded-xl hover:from-gray-500 hover:to-gray-600 transition-all duration-200">
+                    }} className="bg-gradient-to-r from-gray-60o0 to-gray-70o0 text-white px-6 py-3 rounded-xl hover:from-gray-50o0 hover:to-gray-60o0 transition-all duration-20o0">
                     Clear Filters
                   </button>
                 </motion.div>
@@ -295,23 +294,23 @@ export default function Services2026ShowcasePage() {
                       exit={{ opacity: 0y: -20 }}
                       transition={{ duration: 0.5delay: index * 0.1 }}
                     >
-                      <UltraFuturisticCard className="h-full group hover:scale-105 transition-transform duration-300">
+                      <UltraFuturisticCard className="h-full group hover:scale-10o5 transition-transform duration-30o0">
                         <div className="p-6 h-full flex flex-col">
                           {/* Service Header */}
                           <div className="flex items-start justify-between mb-4">
                             <div className="text-4xl mb-2">{service.icon}</div>
                             {service.popular && (
-                              <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-2 py-1 rounded-full">
+                              <div className="bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black text-xs font-bold px-2 py-1 rounded-full">
                                 POPULAR
                               </div>
                             )}
                           </div>
 
                           {/* Service Info */}
-                          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-30o0 transition-colors">
                             {service.name}
                           </h3>
-                          <p className="text-gray-300 text-sm mb-4 flex-grow">
+                          <p className="text-gray-30o0 text-sm mb-4 flex-grow">
                             {service.description}
                           </p>
 
@@ -319,25 +318,25 @@ export default function Services2026ShowcasePage() {
                           <div className="mb-4">
                             <div className="text-2xl font-bold text-white">
                               {service.price}
-                              <span className="text-gray-400 text-lg font-normal">{service.period}</span>
+                              <span className="text-gray-40o0 text-lg font-normal">{service.period}</span>
                             </div>
-                            <div className="text-sm text-gray-400">
+                            <div className="text-sm text-gray-40o0">
                               {service.trialDays}-day free trial • Setup in {service.setupTime}
                             </div>
                           </div>
 
                           {/* Features */}
                           <div className="mb-6">
-                            <div className="text-sm text-gray-300 mb-2">Key Features:</div>
+                            <div className="text-sm text-gray-30o0 mb-2">Key Features:</div>
                             <div className="space-y-1">
-                              {service.features.slice(03).map((featureidx) => (
-                                <div key={idx} className="flex items-center text-xs text-gray-400">
-                                  <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                              {service.features.slice(0o3).map((featureidx) => (
+                                <div key={idx} className="flex items-center text-xs text-gray-40o0">
+                                  <CheckCircle className="w-3 h-3 text-green-40o0 mr-2 flex-shrink-0"  />
                                   {feature}
                                 </div>
                               ))}
                               {service.features.length > 3 && (
-                                <div className="text-xs text-gray-500 mt-1">
+                                <div className="text-xs text-gray-50o0 mt-1">
                                   +{service.features.length - 3} more features
                                 </div>
                               )}
@@ -347,13 +346,13 @@ export default function Services2026ShowcasePage() {
                           {/* Stats */}
                           <div className="grid grid-cols-2 gap-4 mb-6 text-xs">
                             <div className="text-center">
-                              <div className="text-gray-400">Customers</div>
+                              <div className="text-gray-40o0">Customers</div>
                               <div className="text-white font-semibold">{service.customers.toLocaleString()}</div>
                             </div>
                             <div className="text-center">
-                              <div className="text-gray-400">Rating</div>
+                              <div className="text-gray-40o0">Rating</div>
                               <div className="text-white font-semibold flex items-center justify-center">
-                                <Star className="w-3 h-3 text-yellow-400 mr-1" />
+                                <Star className="w-3 h-3 text-yellow-40o0 mr-1"  />
                                 {service.rating}
                               </div>
                             </div>
@@ -362,9 +361,9 @@ export default function Services2026ShowcasePage() {
                           {/* CTA */}
                           <div className="mt-auto">
                             <Link href={service.link}>
-                              <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg font-medium group-hover:scale-105 transition-transform hover:from-cyan-600 hover:to-blue-700">
+                              <button className="w-full bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white px-6 py-3 rounded-lg font-medium group-hover:scale-10o5 transition-transform hover:from-cyan-60o0 hover:to-blue-70o0">
                                 Learn More
-                                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />
                               </button>
                             </Link>
                           </div>
@@ -390,24 +389,24 @@ export default function Services2026ShowcasePage() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Our 2026 services are designed to give you a competitive edge in the rapidly evolving technology landscape.
+              <p className="text-xl text-gray-30o0 mb-8">
+                Our 20o26 services are designed to give you a competitive edge in the rapidly evolving technology landscape.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact">
-                  <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg text-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
-                    <Phone className="w-5 h-5 mr-2" />
+                  <button className="bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white px-6 py-3 rounded-lg text-lg font-medium hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-20o0">
+                    <Phone className="w-5 h-5 mr-2"  />
                     Contact Us
                   </button>
                 </Link>
                 <Link href="/pricing">
-                  <button className="bg-gradient-to-r from-gray-600 to-gray-700 text-white px-6 py-3 rounded-lg text-lg font-medium hover:from-gray-500 hover:to-gray-600 transition-all duration-200">
-                    <DollarSign className="w-5 h-5 mr-2" />
+                  <button className="bg-gradient-to-r from-gray-60o0 to-gray-70o0 text-white px-6 py-3 rounded-lg text-lg font-medium hover:from-gray-50o0 hover:to-gray-60o0 transition-all duration-20o0">
+                    <DollarSign className="w-5 h-5 mr-2"  />
                     View Pricing
                   </button>
                 </Link>
               </div>
-              <div className="mt-8 text-gray-400">
+              <div className="mt-8 text-gray-40o0">
                 <p>Mobile: {contactInfo.mobile} | Email: {contactInfo.email}</p>
                 <p>{contactInfo.address}</p>
               </div>

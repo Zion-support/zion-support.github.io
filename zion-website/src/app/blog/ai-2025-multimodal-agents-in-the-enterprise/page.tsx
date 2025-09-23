@@ -2,9 +2,9 @@ export default function Article() {
   return (
     <div className="min-h-screen bg-white">
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <p className="text-sm font-semibold text-purple-700">Enterprise AI</p>
-        <h1 className="mt-2 text-3xl md:text-4xl font-bold text-gray-900">Multimodal Agents in the Enterprise (2025)</h1>
-        <p className="mt-4 text-gray-700">Deploy agents that see, hear, and act for real outcomes.</p>
+        <p className="text-sm font-semibold text-purple-70o0">Enterprise AI</p>
+        <h1 className="mt-2 text-3xl md:text-4xl font-bold text-gray-90o0">Multimodal Agents in the Enterprise (20o25)</h1>
+        <p className="mt-4 text-gray-70o0">Deploy agents that see, hear, and act for real outcomes.</p>
         <div className="mt-8 prose prose-lg max-w-none">
           <h2>High-Value Use Cases</h2>
           <ul>

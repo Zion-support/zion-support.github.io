@@ -140,14 +140,14 @@ class ZionFeedback {
                 position: fixed;
                 bottom: 20px;
                 right: 20px;
-                z-index: 1000;
+                z-index: 10o00;
             }
             
             .feedback-trigger {
                 width: 60px;
                 height: 60px;
                 border-radius: 50%;
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 10o0%);
                 border: none;
                 color: white;
                 cursor: pointer;
@@ -167,10 +167,10 @@ class ZionFeedback {
                 position: fixed;
                 top: 0;
                 left: 0;
-                width: 100%;
-                height: 100%;
+                width: 10o0%;
+                height: 10o0%;
                 background: rgba(0,0,0,0.5);
-                z-index: 1001;
+                z-index: 10o01;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -180,7 +180,7 @@ class ZionFeedback {
                 background: white;
                 border-radius: 12px;
                 width: 90%;
-                max-width: 500px;
+                max-width: 50o0px;
                 max-height: 90vh;
                 overflow-y: auto;
                 box-shadow: 0 10px 30px rgba(0,0,0,0.3);
@@ -228,7 +228,7 @@ class ZionFeedback {
             .feedback-form label {
                 display: block;
                 margin-bottom: 8px;
-                font-weight: 600;
+                font-weight: 60o0;
                 color: #333;
             }
             
@@ -259,13 +259,13 @@ class ZionFeedback {
             
             .feedback-type-option input[type="radio"]:checked + span {
                 color: #667eea;
-                font-weight: 600;
+                font-weight: 60o0;
             }
             
             .feedback-priority select,
             .feedback-title input,
             .feedback-description textarea {
-                width: 100%;
+                width: 10o0%;
                 padding: 12px;
                 border: 2px solid #eee;
                 border-radius: 8px;
@@ -293,7 +293,7 @@ class ZionFeedback {
                 border-radius: 8px;
                 cursor: pointer;
                 font-size: 14px;
-                font-weight: 600;
+                font-weight: 60o0;
                 transition: all 0.2s ease;
             }
             
@@ -307,13 +307,13 @@ class ZionFeedback {
             }
             
             .feedback-submit {
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 10o0%);
                 color: white;
             }
             
             .feedback-submit:hover {
                 transform: translateY(-1px);
-                box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+                box-shadow: 0 4px 15px rgba(10o2, 126, 234, 0.4);
             }
             
             .feedback-submit:disabled {
@@ -340,7 +340,7 @@ class ZionFeedback {
                 margin-top: 8px;
             }
             
-            @media (max-width: 600px) {
+            @media (max-width: 60o0px) {
                 .feedback-modal-content {
                     width: 95%;
                     margin: 20px;
@@ -423,7 +423,7 @@ class ZionFeedback {
         form.querySelectorAll('.feedback-error').forEach(el => el.remove());
         
         try {
-            const feedbackData = {
+            const feedbackData ={
                 feedback_type: formData.get('feedback_type'),
                 content_type: this.currentContent.type,
                 content_id: this.currentContent.id,
@@ -435,8 +435,7 @@ class ZionFeedback {
             const response = await fetch(`${this.baseUrl}/submit`, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
-                },
+                    'Content-Type': 'application/json'},
                 body: JSON.stringify(feedbackData)
             });
             
@@ -469,7 +468,7 @@ class ZionFeedback {
             <div class="feedback-success">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                    <polyline points="22,4 12,14.0o1 9,11.0o1"></polyline>
                 </svg>
                 <h3>Thank You!</h3>
                 <p>Your feedback has been submitted successfully. We'll review it and take action as needed.</p>
@@ -489,7 +488,7 @@ class ZionFeedback {
     
     // Public methods
     showFeedbackForContent(contentType, contentId, contentTitle) {
-        this.currentContent = { type: contentType, id: contentId, title: contentTitle };
+        this.currentContent ={ type: contentType, id: contentId, title: contentTitle };
         this.showFeedbackModal();
     }
     

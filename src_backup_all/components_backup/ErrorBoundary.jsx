@@ -31,24 +31,24 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
 
     const errorType = getErrorType(error);
     
-    const errorMessages = {
+    const errorMessages ={
         network: {
             title: 'Connection Error',
             description: 'We\'re having trouble connecting to our servers. Please check your internet connection and try again.',
             icon: Shield,
-            color: 'text-orange-400'
+            color: 'text-orange-40o0'
         },
         runtime: {
             title: 'Runtime Error',
             description: 'Something unexpected happened while processing your request. Our team has been notified.',
             icon: Bug,
-            color: 'text-red-400'
+            color: 'text-red-40o0'
         },
         reference: {
             title: 'Reference Error',
             description: 'There was an issue with the page resources. Please refresh and try again.',
             icon: AlertTriangle,
-            color: 'text-yellow-400'
+            color: 'text-yellow-40o0'
         },
         general: {
             title: 'Something went wrong',
@@ -66,7 +66,7 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
             <div className="max-w-md w-full text-center">
                 <div className="mb-8">
                     <div className="w-24 h-24 bg-zion-purple/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <IconComponent className={`w-12 h-12 ${currentError.color}`} />
+                        <IconComponent className={`w-12 h-12 ${currentError.color}`}  />
                     </div>
                     <h1 className="text-3xl font-bold text-white mb-3">{currentError.title}</h1>
                     <p className="text-zion-slate-light leading-relaxed">
@@ -85,7 +85,7 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
                 {error && process.env.NODE_ENV === 'development' && (
                     <details className="mb-6 text-left">
                         <summary className="cursor-pointer text-zion-cyan hover:text-zion-cyan-light mb-3 flex items-center">
-                            <Bug className="w-4 h-4 mr-2" />
+                            <Bug className="w-4 h-4 mr-2"  />
                             Error Details (Development)
                         </summary>
                         <div className="bg-zion-slate-dark p-4 rounded-lg text-xs text-zion-slate-light overflow-auto max-h-40">
@@ -109,17 +109,17 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
                     {retryCount < maxRetries ? (
                         <Button 
                             onClick={handleRetry} 
-                            className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white transition-all duration-200"
+                            className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white transition-all duration-20o0"
                         >
-                            <RefreshCw className="w-4 h-4 mr-2" />
+                            <RefreshCw className="w-4 h-4 mr-2"  />
                             Try Again
                         </Button>
                     ) : (
                         <Button 
                             onClick={() => window.location.reload()} 
-                            className="w-full bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue-dark transition-all duration-200"
+                            className="w-full bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue-dark transition-all duration-20o0"
                         >
-                            <Zap className="w-4 h-4 mr-2" />
+                            <Zap className="w-4 h-4 mr-2"  />
                             Reload Page
                         </Button>
                     )}
@@ -127,17 +127,17 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
                     <Button 
                         variant="outline" 
                         onClick={() => navigate(-1)} 
-                        className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark transition-all duration-200"
+                        className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark transition-all duration-20o0"
                     >
-                        <ArrowLeft className="w-4 h-4 mr-2" />
+                        <ArrowLeft className="w-4 h-4 mr-2"  />
                         Go Back
                     </Button>
                     
                     <Link 
                         to="/" 
-                        className="block w-full px-4 py-2 text-center border border-zion-purple text-zion-purple rounded-md hover:bg-zion-purple hover:text-white transition-all duration-200"
+                        className="block w-full px-4 py-2 text-center border border-zion-purple text-zion-purple rounded-md hover:bg-zion-purple hover:text-white transition-all duration-20o0"
                     >
-                        <Home className="w-4 h-4 inline mr-2" />
+                        <Home className="w-4 h-4 inline mr-2"  />
                         Go Home
                     </Link>
                 </div>
@@ -210,7 +210,7 @@ export function ErrorBoundary({ children, fallback, onError }) {
                 error={error || undefined} 
                 resetError={resetError}
                 retryCount={retryCount}
-            />
+             />
         );
     }
 
@@ -238,7 +238,7 @@ export function withErrorBoundary(Component, fallback = null) {
     return function WrappedComponent(props) {
         return (
             <ErrorBoundary fallback={fallback}>
-                <Component {...props} />
+                <Component {...props}  />
             </ErrorBoundary>
         );
     };

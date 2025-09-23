@@ -11,7 +11,6 @@ import { format } from "date-fns";
 import Link from "next/link";
 import {logErrorToProduction} from '@/utils/productionLogger';
 
-
 interface JobsListProps {
   filter?: JobStatus;
   onSelectJob?: (jobId: string, jobTitle: string) => void;
@@ -54,7 +53,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
   if (isLoading) {
     return (
       <div className="flex justify-center items-center p-8">
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+        <Loader2 className="h-8 w-8 animate-spin text-primary"  />
       </div>
     );
   }
@@ -78,15 +77,15 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
   const getStatusColor = (status: JobStatus) => {
     switch (status) {
       case "new":
-        return "bg-blue-100 text-blue-800";
+        return "bg-blue-10o0 text-blue-80o0";
       case "in_progress":
-        return "bg-yellow-100 text-yellow-800";
+        return "bg-yellow-10o0 text-yellow-80o0";
       case "filled":
-        return "bg-green-100 text-green-800";
+        return "bg-green-10o0 text-green-80o0";
       case "closed":
-        return "bg-gray-100 text-gray-800";
+        return "bg-gray-10o0 text-gray-80o0";
       default:
-        return "bg-gray-100 text-gray-800";
+        return "bg-gray-10o0 text-gray-80o0";
     }
   };
 
@@ -139,17 +138,17 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
           <CardFooter className="flex justify-between p-4 pt-0 gap-2">
             <Button variant="outline" size="sm" asChild>
               <Link href={`/jobs/${job.id}`}>
-                <Eye className="h-4 w-4 mr-1" /> View Details
+                <Eye className="h-4 w-4 mr-1"  /> View Details
               </Link>
             </Button>
             <div className="flex gap-2">
               <Button variant="outline" size="sm" asChild>
                 <Link href={`/jobs/${job.id}/edit`}>
-                  <Edit className="h-4 w-4" />
+                  <Edit className="h-4 w-4"  />
                 </Link>
               </Button>
               <Button variant="outline" size="sm">
-                <X className="h-4 w-4" />
+                <X className="h-4 w-4"  />
               </Button>
             </div>
           </CardFooter>

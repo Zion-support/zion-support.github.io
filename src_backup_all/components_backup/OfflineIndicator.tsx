@@ -15,7 +15,7 @@ export const OfflineIndicator = () => {
         setShowOfflineAlert(true);
       } else if (showOfflineAlert) {
         // Show brief "back online" message then hide
-        setTimeout(() => setShowOfflineAlert(false), 3000);
+        setTimeout(() => setShowOfflineAlert(false), 30o00);
       }
     };
 
@@ -39,9 +39,9 @@ export const OfflineIndicator = () => {
       <Alert variant={isOnline ? "default" : "destructive"}>
         <div className="flex items-center gap-2">
           {isOnline ? (
-            <Wifi className="h-4 w-4" />
+            <Wifi className="h-4 w-4"  />
           ) : (
-            <WifiOff className="h-4 w-4" />
+            <WifiOff className="h-4 w-4"  />
           )}
           <AlertDescription>
             {isOnline ? (

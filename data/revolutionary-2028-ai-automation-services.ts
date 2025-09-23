@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface Revolutionary2028AIAutomationService {
+export interface Revolutionary20o28AIAutomationService {
   id: string;
   name: string;
   tagline: string;
@@ -39,11 +39,11 @@ export interface Revolutionary2028AIAutomationService {
   rating: number;
   reviews: number;
 }
-export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomationService[] = [
+export const revolutionary20o28AIAutomationServices: Revolutionary20o28AIAutomationService[] = [
   // AI-Powered Autonomous Manufacturing
   {
-    id: 'ai-autonomous-manufacturing-2028',
-    name: 'AI Autonomous Manufacturing 2028',
+    id: 'ai-autonomous-manufacturing-20o28',
+    name: 'AI Autonomous Manufacturing 20o28',
     tagline: 'Revolutionize manufacturing with fully autonomous AI-powered production systems',
     price: '$2,499',
     period: '/month',
@@ -62,10 +62,10 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
     ],
     popular: true,
     icon: '🏭',
-    color: 'from-orange-600 to-red-700',
-    textColor: 'text-orange-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-manufacturing-2028',
-    marketPosition: 'Competes with Siemens Digital Industries ($100,000/year), Rockwell Automation ($150,000/year), and ABB ($200,000/year). Our advantage: Full autonomy, AI-powered optimization, and competitive pricing.',
+    color: 'from-orange-60o0 to-red-70o0',
+    textColor: 'text-orange-40o0',
+    link: 'https://ziontechgroup.com/ai-autonomous-manufacturing-20o28',
+    marketPosition: 'Competes with Siemens Digital Industries ($10o0,0o00/year), Rockwell Automation ($150,0o00/year), and ABB ($20o0,0o00/year). Our advantage: Full autonomy, AI-powered optimization, and competitive pricing.',
     targetAudience: ['Manufacturing companies', 'Industrial automation firms', 'Automotive manufacturers', 'Electronics producers', 'Chemical plants'],
     trialDays: 90,
     setupTime: '3 months',
@@ -74,28 +74,28 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
     technology: ['Computer Vision', 'Machine Learning', 'IoT Sensors', 'Edge Computing', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
     integrations: ['Siemens', 'Rockwell', 'ABB', 'MES systems', 'ERP platforms', 'SCADA systems', 'Quality management systems'],
     useCases: ['Automotive manufacturing', 'Electronics production', 'Chemical processing', 'Food and beverage', 'Pharmaceutical manufacturing', 'Aerospace production'],
-    roi: 'Manufacturers report 600% ROI through reduced downtime, improved quality, and increased production efficiency.',
+    roi: 'Manufacturers report 60o0% ROI through reduced downtime, improved quality, and increased production efficiency.',
     competitors: ['Siemens Digital Industries', 'Rockwell Automation', 'ABB', 'Honeywell', 'Emerson'],
     marketSize: '$45.8B market',
     growthRate: '320% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'AI-powered autonomous manufacturing platform with computer vision, predictive maintenance, and full production line automation.',
-    launchDate: '2028-01-15',
+    launchDate: '20o28-0o1-15',
     customers: 180,
     rating: 4.9,
     reviews: 120
   },
   // AI-Powered Autonomous Agriculture
   {
-    id: 'ai-autonomous-agriculture-2028',
-    name: 'AI Autonomous Agriculture 2028',
+    id: 'ai-autonomous-agriculture-20o28',
+    name: 'AI Autonomous Agriculture 20o28',
     tagline: 'Transform farming with AI-powered autonomous agricultural systems',
     price: '$1,899',
     period: '/month',
@@ -114,10 +114,10 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
     ],
     popular: false,
     icon: '🌾',
-    color: 'from-green-600 to-emerald-700',
-    textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-agriculture-2028',
-    marketPosition: 'Competes with John Deere ($50,000/year), Trimble ($30,000/year), and Raven ($25,000/year). Our advantage: Full autonomy, AI-powered insights, and comprehensive farm management.',
+    color: 'from-green-60o0 to-emerald-70o0',
+    textColor: 'text-green-40o0',
+    link: 'https://ziontechgroup.com/ai-autonomous-agriculture-20o28',
+    marketPosition: 'Competes with John Deere ($50,0o00/year), Trimble ($30,0o00/year), and Raven ($25,0o00/year). Our advantage: Full autonomy, AI-powered insights, and comprehensive farm management.',
     targetAudience: ['Large-scale farms', 'Agricultural cooperatives', 'Food producers', 'Research institutions', 'Government agencies'],
     trialDays: 60,
     setupTime: '2 months',
@@ -132,22 +132,22 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
     growthRate: '280% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'AI-powered autonomous agriculture platform with crop monitoring, automated irrigation, and comprehensive farm management.',
-    launchDate: '2028-03-20',
+    launchDate: '20o28-0o3-20',
     customers: 320,
     rating: 4.8,
     reviews: 240
   },
   // AI-Powered Autonomous Healthcare
   {
-    id: 'ai-autonomous-healthcare-2028',
-    name: 'AI Autonomous Healthcare 2028',
+    id: 'ai-autonomous-healthcare-20o28',
+    name: 'AI Autonomous Healthcare 20o28',
     tagline: 'Revolutionize healthcare delivery with AI-powered autonomous medical systems',
     price: '$3,299',
     period: '/month',
@@ -166,10 +166,10 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
     ],
     popular: true,
     icon: '🏥',
-    color: 'from-pink-600 to-red-700',
-    textColor: 'text-pink-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-healthcare-2028',
-    marketPosition: 'Competes with Epic ($1,000,000/year), Cerner ($800,000/year), and Allscripts ($500,000/year). Our advantage: AI autonomy, comprehensive automation, and competitive pricing.',
+    color: 'from-pink-60o0 to-red-70o0',
+    textColor: 'text-pink-40o0',
+    link: 'https://ziontechgroup.com/ai-autonomous-healthcare-20o28',
+    marketPosition: 'Competes with Epic ($1,0o00,0o00/year), Cerner ($80o0,0o00/year), and Allscripts ($50o0,0o00/year). Our advantage: AI autonomy, comprehensive automation, and competitive pricing.',
     targetAudience: ['Hospitals', 'Medical clinics', 'Research institutions', 'Pharmaceutical companies', 'Healthcare networks'],
     trialDays: 90,
     setupTime: '4 months',
@@ -178,28 +178,28 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
     technology: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
     integrations: ['Epic', 'Cerner', 'Allscripts', 'Medical devices', 'Lab systems', 'Pharmacy systems', 'Insurance platforms'],
     useCases: ['Patient monitoring', 'Diagnosis assistance', 'Treatment planning', 'Medical research', 'Clinical trials', 'Healthcare compliance'],
-    roi: 'Healthcare organizations report 500% ROI through improved patient outcomes and reduced operational costs.',
+    roi: 'Healthcare organizations report 50o0% ROI through improved patient outcomes and reduced operational costs.',
     competitors: ['Epic', 'Cerner', 'Allscripts', 'Athenahealth', 'NextGen'],
     marketSize: '$65.2B market',
     growthRate: '350% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'AI-powered autonomous healthcare platform with patient monitoring, diagnosis assistance, and comprehensive medical automation.',
-    launchDate: '2028-02-10',
+    launchDate: '20o28-0o2-10',
     customers: 95,
     rating: 4.9,
     reviews: 75
   },
   // AI-Powered Autonomous Logistics
   {
-    id: 'ai-autonomous-logistics-2028',
-    name: 'AI Autonomous Logistics 2028',
+    id: 'ai-autonomous-logistics-20o28',
+    name: 'AI Autonomous Logistics 20o28',
     tagline: 'Transform logistics with fully autonomous AI-powered supply chain management',
     price: '$2,199',
     period: '/month',
@@ -218,10 +218,10 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
     ],
     popular: false,
     icon: '📦',
-    color: 'from-blue-600 to-cyan-700',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-logistics-2028',
-    marketPosition: 'Competes with Manhattan Associates ($100,000/year), JDA Software ($150,000/year), and SAP SCM ($200,000/year). Our advantage: Full autonomy, AI-powered optimization, and competitive pricing.',
+    color: 'from-blue-60o0 to-cyan-70o0',
+    textColor: 'text-blue-40o0',
+    link: 'https://ziontechgroup.com/ai-autonomous-logistics-20o28',
+    marketPosition: 'Competes with Manhattan Associates ($10o0,0o00/year), JDA Software ($150,0o00/year), and SAP SCM ($20o0,0o00/year). Our advantage: Full autonomy, AI-powered optimization, and competitive pricing.',
     targetAudience: ['Logistics companies', 'E-commerce businesses', 'Manufacturing companies', 'Retail chains', 'Distribution centers'],
     trialDays: 60,
     setupTime: '3 months',
@@ -236,22 +236,22 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
     growthRate: '295% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'AI-powered autonomous logistics platform with warehouse automation, route optimization, and comprehensive supply chain management.',
-    launchDate: '2028-04-15',
+    launchDate: '20o28-0o4-15',
     customers: 280,
     rating: 4.7,
     reviews: 210
   },
   // AI-Powered Autonomous Energy Management
   {
-    id: 'ai-autonomous-energy-management-2028',
-    name: 'AI Autonomous Energy Management 2028',
+    id: 'ai-autonomous-energy-management-20o28',
+    name: 'AI Autonomous Energy Management 20o28',
     tagline: 'Optimize energy systems with AI-powered autonomous management and sustainability',
     price: '$1,799',
     period: '/month',
@@ -270,10 +270,10 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
     ],
     popular: false,
     icon: '⚡',
-    color: 'from-yellow-600 to-orange-700',
-    textColor: 'text-yellow-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-energy-management-2028',
-    marketPosition: 'Competes with Siemens Energy ($200,000/year), GE Digital ($150,000/year), and Schneider Electric ($100,000/year). Our advantage: AI autonomy, comprehensive optimization, and competitive pricing.',
+    color: 'from-yellow-60o0 to-orange-70o0',
+    textColor: 'text-yellow-40o0',
+    link: 'https://ziontechgroup.com/ai-autonomous-energy-management-20o28',
+    marketPosition: 'Competes with Siemens Energy ($20o0,0o00/year), GE Digital ($150,0o00/year), and Schneider Electric ($10o0,0o00/year). Our advantage: AI autonomy, comprehensive optimization, and competitive pricing.',
     targetAudience: ['Utility companies', 'Energy producers', 'Industrial facilities', 'Commercial buildings', 'Government agencies'],
     trialDays: 60,
     setupTime: '2 months',
@@ -288,14 +288,14 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
     growthRate: '265% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'AI-powered autonomous energy management platform with power optimization, grid management, and comprehensive sustainability tracking.',
-    launchDate: '2028-06-20',
+    launchDate: '20o28-0o6-20',
     customers: 420,
     rating: 4.8,
     reviews: 320

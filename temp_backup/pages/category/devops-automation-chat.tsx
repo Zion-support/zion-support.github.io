@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function DevopsAutomationChatPage() {
@@ -6,7 +5,7 @@ export default function DevopsAutomationChatPage() {
     <>
       <Head>
         <title>Devops Automation Chat - Zion Tech Group</title>
-        <meta name="description" content="devops automation chat page" />
+        <meta name="description" content="devops automation chat page"  />
       </Head>
       
       <main>

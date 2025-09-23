@@ -44,7 +44,7 @@ export function ApplicationRow({
                 priority={false}
               />
             ) : (
-              <User className="h-5 w-5 text-gray-400" />
+              <User className="h-5 w-5 text-gray-40o0"  />
             )}
           </AvatarPrimitive>
           <div>
@@ -59,12 +59,12 @@ export function ApplicationRow({
       </TableCell>
       <TableCell>
         <div className="flex items-center gap-1">
-          <Calendar className="h-4 w-4 text-muted-foreground" />
+          <Calendar className="h-4 w-4 text-muted-foreground"  />
           <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>
         </div>
       </TableCell>
       <TableCell>
-        <StatusBadge status={application.status} />
+        <StatusBadge status={application.status}  />
       </TableCell>
       <TableCell>
         <Button 
@@ -73,15 +73,15 @@ export function ApplicationRow({
           onClick={() => onViewScore(application)}
           className="flex items-center gap-1"
         >
-          <BarChart className="h-4 w-4 mr-1" />
-          <ScoreBadge application={application} />
+          <BarChart className="h-4 w-4 mr-1"  />
+          <ScoreBadge application={application}  />
         </Button>
       </TableCell>
       <TableCell>
         {application.resume ? (
           <Button variant="ghost" size="sm" asChild>
             <a href={application.resume.file_url || "#"} target="_blank" rel="noopener noreferrer">
-              <FileText className="h-4 w-4 mr-1" /> View
+              <FileText className="h-4 w-4 mr-1"  /> View
             </a>
           </Button>
         ) : (
@@ -94,7 +94,7 @@ export function ApplicationRow({
           processingId={processingId}
           onViewApplication={onViewApplication}
           onStatusChange={onStatusChange}
-        />
+         />
       </TableCell>
     </TableRow>
   );

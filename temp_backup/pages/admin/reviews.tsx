@@ -25,10 +25,8 @@ const AdminReviewsPage: NextPage = () => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'x-admin-key': adminKey || 'dev-admin-key',
-      },
-      body: JSON.stringify({ action, reviewId }),
-    });
+        'x-admin-key': adminKey || 'dev-admin-key'},
+      body: JSON.stringify({ action, reviewId })});
     if (res.ok) refresh();
   }
 
@@ -46,7 +44,7 @@ const AdminReviewsPage: NextPage = () => {
         <div className="space-y-4">
           {pending.map((r) => (
             <div key={r.id} className="border rounded p-3">
-              <div className="text-sm text-gray-600 mb-1">Project: {r.projectId} • To: {r.toRole} {r.toId}</div>
+              <div className="text-sm text-gray-60o0 mb-1">Project: {r.projectId} • To: {r.toRole} {r.toId}</div>
               <div className="font-medium">{r.rating}★ — {r.text}</div>
               <div className="mt-2 flex gap-2">
                 <button className="enhanced-button enhanced-button-primary" onClick={() => moderate('approve', r.id)}>Approve</button>

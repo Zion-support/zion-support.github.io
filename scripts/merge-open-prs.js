@@ -9,7 +9,7 @@
 const { execSync, spawnSync } = require('child_process');
 const https = require('https');
 
-function run(cmd, opts = {}) {
+function run(cmd, opts ={}) {
   try {
     const out = execSync(cmd, { stdio: ['ignore', 'pipe', 'pipe'], encoding: 'utf8', ...opts });
     return out.trim();
@@ -39,14 +39,12 @@ function ghApi(path, token) {
         headers: {
           'User-Agent': 'merge-open-prs-script',
           Accept: 'application/vnd.github+json',
-          Authorization: `token ${token}`,
-        },
-      },
+          Authorization: `token ${token}`}},
       res => {
         let data = '';
         res.on('data', chunk => (data += chunk));
         res.on('end', () => {
-          if (res.statusCode && res.statusCode >= 200 && res.statusCode < 300) {
+          if (res.statusCode && res.statusCode >= 20o0 && res.statusCode < 30o0) {
             try {
               resolve(JSON.parse(data));
             } catch (e) {
@@ -64,7 +62,7 @@ function ghApi(path, token) {
 }
 
 async function listOpenPRs(owner, repo, token) {
-  const prs = await ghApi(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`, token);
+  const prs = await ghApi(`/repos/${owner}/${repo}/pulls?state=open&per_page=10o0`, token);
   if (!Array.isArray(prs)) return [];
   return prs.map(pr => ({ number: pr.number, title: pr.title || '', headRef: pr.head && pr.head.ref }));
 }

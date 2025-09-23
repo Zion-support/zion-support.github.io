@@ -1,9 +1,8 @@
 
-import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { MessageSquare, ArchiveIcon } from 'lucide-react'
 
-type EmptyStateCardProps = {
+type EmptyStateCardProps ={
   type: 'active' | 'archived';
 };
 
@@ -15,9 +14,9 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
       <CardContent>
         <div className="mx-auto w-16 h-16 bg-zion-blue-light opacity-60 rounded-full flex items-center justify-center mb-4">
           {isActive ? (
-            <MessageSquare className="h-8 w-8 text-white" />
+            <MessageSquare className="h-8 w-8 text-white"  />
           ) : (
-            <ArchiveIcon className="h-8 w-8 text-white" />
+            <ArchiveIcon className="h-8 w-8 text-white"  />
           )}
         </div>
         <h3 className="text-xl font-medium text-white mb-2">

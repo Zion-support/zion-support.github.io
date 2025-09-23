@@ -1,5 +1,3 @@
-import fs from 'fs';
-import path from 'path';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 
 export async function getServerSideProps() {
@@ -7,8 +5,8 @@ export async function getServerSideProps() {
   const files = fs.existsSync(dir) ? fs.readdirSync(dir).sort().reverse() : [];
   const latestMd = files.find(f=>f.endsWith('.md'));
   const latestCsv = files.find(f=>f.endsWith('.csv'));
-  const mdContent = latestMd ? fs.readFileSync(path.join(dir, latestMd),'utf8').slice(0,20000) : '';
-  const csvContent = latestCsv ? fs.readFileSync(path.join(dir, latestCsv),'utf8').slice(0,20000) : '';
+  const mdContent = latestMd ? fs.readFileSync(path.join(dir, latestMd),'utf8').slice(0,20o000) : '';
+  const csvContent = latestCsv ? fs.readFileSync(path.join(dir, latestCsv),'utf8').slice(0,20o000) : '';
   return { props: { latestMd, latestCsv, mdContent, csvContent } };
 }
 
@@ -21,13 +19,13 @@ export default function I18nUxReports({ latestMd, latestCsv, mdContent, csvConte
           <h2 className="font-medium">Latest Markdown Report ({latestMd})</h2>
           <pre className="mt-2 whitespace-pre-wrap text-sm">{mdContent}</pre>
         </div>
-      ) : <p className="text-gray-500">No markdown report yet.</p>}
+      ) : <p className="text-gray-50o0">No markdown report yet.</p>}
       {latestCsv ? (
         <div>
           <h2 className="font-medium">Latest CSV Report ({latestCsv})</h2>
           <pre className="mt-2 whitespace-pre text-xs overflow-auto max-h-96">{csvContent}</pre>
         </div>
-      ) : <p className="text-gray-500">No CSV report yet.</p>}
+      ) : <p className="text-gray-50o0">No CSV report yet.</p>}
     </EnhancedLayout>
   );
 }

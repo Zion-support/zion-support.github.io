@@ -22,43 +22,43 @@ interface NavigationItem {
   color?: string;
 }
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
 const navigationItems: NavigationItem[] = [
   {
     name: 'All Services',
-    href: '/comprehensive-services-showcase-2025',
-    icon: <Globe className="w-5 h-5" />,
+    href: '/comprehensive-services-showcase-20o25',
+    icon: <Globe className="w-5 h-5"  />,
     description: 'Complete portfolio of all technology services',
     badge: 'Showcase',
     category: 'main',
-    color: 'from-cyan-500 to-blue-500',
+    color: 'from-cyan-50o0 to-blue-50o0',
     children: [
-      { name: 'View All Services', href: '/comprehensive-services-showcase-2025', description: 'Complete services portfolio' },
-      { name: 'Service Categories', href: '/comprehensive-services-showcase-2025#categories', description: 'Browse by category' },
-      { name: 'Pricing Comparison', href: '/comprehensive-services-showcase-2025#pricing', description: 'Compare service costs' },
-      { name: 'Service Search', href: '/comprehensive-services-showcase-2025#search', description: 'Find specific services' },
-      { name: 'Latest Innovations', href: '/revolutionary-2025-services-showcase', description: 'Cutting-edge solutions' },
-      { name: '2026 Services', href: '/revolutionary-2026-services', description: 'Next generation solutions' },
-      { name: '2027 Services', href: '/revolutionary-2027-services-showcase', description: 'Future-ready services' },
-      { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', description: 'Premium service collection' }
+      { name: 'View All Services', href: '/comprehensive-services-showcase-20o25', description: 'Complete services portfolio' },
+      { name: 'Service Categories', href: '/comprehensive-services-showcase-20o25#categories', description: 'Browse by category' },
+      { name: 'Pricing Comparison', href: '/comprehensive-services-showcase-20o25#pricing', description: 'Compare service costs' },
+      { name: 'Service Search', href: '/comprehensive-services-showcase-20o25#search', description: 'Find specific services' },
+      { name: 'Latest Innovations', href: '/revolutionary-20o25-services-showcase', description: 'Cutting-edge solutions' },
+      { name: '20o26 Services', href: '/revolutionary-20o26-services', description: 'Next generation solutions' },
+      { name: '20o27 Services', href: '/revolutionary-20o27-services-showcase', description: 'Future-ready services' },
+      { name: 'Ultimate 20o26', href: '/ultimate-20o26-services-showcase', description: 'Premium service collection' }
     ]
   },
   {
     name: 'AI & Machine Learning',
     href: '/ai-services',
-    icon: <Brain className="w-5 h-5" />,
+    icon: <Brain className="w-5 h-5"  />,
     description: 'Revolutionary AI consciousness and emotional intelligence',
     badge: 'New',
     category: 'ai',
-    color: 'from-purple-500 to-pink-500',
+    color: 'from-purple-50o0 to-pink-50o0',
     children: [
-      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2025/', description: 'Emotional intelligence and self-awareness' },
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-20o25/', description: 'Emotional intelligence and self-awareness' },
       { name: 'AI Quantum Neural Network', href: '/ai-quantum-neural-network', description: 'Hybrid AI-Quantum computing platform' },
       { name: 'AI Autonomous Research', href: '/ai-autonomous-research-assistant', description: 'Self-directed AI research' },
       { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-training', description: 'EQ training platform' },
@@ -84,11 +84,11 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Quantum & Emerging Tech',
     href: '/quantum-services',
-    icon: <Atom className="w-5 h-5" />,
+    icon: <Atom className="w-5 h-5"  />,
     description: 'Quantum computing and breakthrough technologies',
     badge: 'Hot',
     category: 'quantum',
-    color: 'from-green-500 to-emerald-500',
+    color: 'from-green-50o0 to-emerald-50o0',
     children: [
       { name: 'Space Resource Mining', href: '/space-resource-mining-platform', description: 'Asteroid mining and space resources' },
       { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform', description: 'Unbreakable encryption' },
@@ -111,11 +111,11 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'IT & Infrastructure',
     href: '/it-services',
-    icon: <Cpu className="w-5 h-5" />,
+    icon: <Cpu className="w-5 h-5"  />,
     description: 'Advanced enterprise infrastructure and security',
     badge: 'Enterprise',
     category: 'it',
-    color: 'from-blue-500 to-indigo-500',
+    color: 'from-blue-50o0 to-indigo-50o0',
     children: [
       { name: 'Zero Trust Security', href: '/zero-trust-network-architecture', description: 'Next-generation security framework' },
       { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure', description: 'Quantum-enhanced cloud computing' },
@@ -138,11 +138,11 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Micro SAAS Solutions',
     href: '/micro-saas',
-    icon: <Rocket className="w-5 h-5" />,
+    icon: <Rocket className="w-5 h-5"  />,
     description: 'Innovative business solutions for modern enterprises',
     badge: 'Popular',
     category: 'saas',
-    color: 'from-orange-500 to-red-500',
+    color: 'from-orange-50o0 to-red-50o0',
     children: [
       { name: 'AI Customer Success Automation', href: '/ai-customer-success-automation', description: 'Automate customer success with AI' },
       { name: 'AI Content Marketing Automation', href: '/ai-content-marketing-automation', description: 'AI-powered content marketing' },
@@ -165,11 +165,11 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Business Automation',
     href: '/automation',
-    icon: <Zap className="w-5 h-5" />,
+    icon: <Zap className="w-5 h-5"  />,
     description: 'Intelligent automation and process optimization',
     badge: 'Efficient',
     category: 'automation',
-    color: 'from-yellow-500 to-amber-500',
+    color: 'from-yellow-50o0 to-amber-50o0',
     children: [
       { name: 'Advanced AI Automation', href: '/advanced-ai-automation-services', description: 'AI automation for business processes' },
       { name: 'Business Intelligence Suite', href: '/ai-business-intelligence-suite', description: 'AI-powered business insights' },
@@ -186,11 +186,11 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Customer Success',
     href: '/customer-success',
-    icon: <Users className="w-5 h-5" />,
+    icon: <Users className="w-5 h-5"  />,
     description: 'Customer success and retention automation',
     badge: 'Growth',
     category: 'customer-success',
-    color: 'from-teal-500 to-cyan-500',
+    color: 'from-teal-50o0 to-cyan-50o0',
     children: [
       { name: 'AI Customer Success Automation', href: '/ai-customer-success-automation', description: 'Automate customer success with AI' },
       { name: 'Customer Health Scoring', href: '/customer-health-scoring', description: 'AI-powered customer health analysis' },
@@ -207,11 +207,11 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Marketing & Sales',
     href: '/marketing-sales',
-    icon: <Target className="w-5 h-5" />,
+    icon: <Target className="w-5 h-5"  />,
     description: 'AI-powered marketing and sales intelligence',
     badge: 'Revenue',
     category: 'marketing',
-    color: 'from-pink-500 to-rose-500',
+    color: 'from-pink-50o0 to-rose-50o0',
     children: [
       { name: 'AI Content Marketing Automation', href: '/ai-content-marketing-automation', description: 'AI-powered content marketing' },
       { name: 'AI Sales Intelligence Platform', href: '/ai-sales-intelligence-platform', description: 'AI-powered sales insights' },
@@ -228,11 +228,11 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Finance & Legal',
     href: '/finance-legal',
-    icon: <DollarSign className="w-5 h-5" />,
+    icon: <DollarSign className="w-5 h-5"  />,
     description: 'Financial planning and legal document analysis',
     badge: 'Compliance',
     category: 'finance',
-    color: 'from-emerald-500 to-green-500',
+    color: 'from-emerald-50o0 to-green-50o0',
     children: [
       { name: 'AI Financial Planning Platform', href: '/ai-financial-planning-platform', description: 'AI-powered financial planning' },
       { name: 'AI Legal Document Analysis', href: '/ai-legal-document-analysis', description: 'AI-powered legal analysis' },
@@ -249,11 +249,11 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Healthcare & Manufacturing',
     href: '/healthcare-manufacturing',
-    icon: <Building className="w-5 h-5" />,
+    icon: <Building className="w-5 h-5"  />,
     description: 'Healthcare analytics and manufacturing optimization',
     badge: 'Industry 4.0',
     category: 'healthcare',
-    color: 'from-indigo-500 to-purple-500',
+    color: 'from-indigo-50o0 to-purple-50o0',
     children: [
       { name: 'AI Healthcare Analytics', href: '/ai-healthcare-analytics', description: 'AI-powered healthcare insights' },
       { name: 'AI Manufacturing Optimization', href: '/ai-manufacturing-optimization', description: 'AI-powered manufacturing' },
@@ -270,11 +270,11 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Creative & Media',
     href: '/creative-media',
-    icon: <Palette className="w-5 h-5" />,
+    icon: <Palette className="w-5 h-5"  />,
     description: 'AI-powered creative tools and media production',
     badge: 'Creative',
     category: 'creative',
-    color: 'from-violet-500 to-purple-500',
+    color: 'from-violet-50o0 to-purple-50o0',
     children: [
       { name: 'AI Video Editing', href: '/ai-video-editing', description: 'AI-powered video production' },
       { name: 'AI Content Generation', href: '/ai-content-generation', description: 'AI-powered content creation' },
@@ -291,11 +291,11 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Education & Training',
     href: '/education-training',
-    icon: <GraduationCap className="w-5 h-5" />,
+    icon: <GraduationCap className="w-5 h-5"  />,
     description: 'AI-powered learning and skill development',
     badge: 'Learning',
     category: 'education',
-    color: 'from-blue-500 to-cyan-500',
+    color: 'from-blue-50o0 to-cyan-50o0',
     children: [
       { name: 'AI Education Platform', href: '/ai-education-platform', description: 'AI-powered learning platform' },
       { name: 'AI Skill Assessment', href: '/ai-skill-assessment', description: 'Intelligent skill evaluation' },
@@ -311,7 +311,7 @@ const navigationItems: NavigationItem[] = [
   }
 ];
 
-const UltraAdvancedFuturisticNavigation2025: React.FC = () => {
+const UltraAdvancedFuturisticNavigation20o25: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -334,26 +334,26 @@ const UltraAdvancedFuturisticNavigation2025: React.FC = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
       isScrolled 
-        ? 'bg-black/95 backdrop-blur-xl border-b border-gray-800/50 shadow-2xl shadow-cyan-500/20' 
+        ? 'bg-black/95 backdrop-blur-xl border-b border-gray-80o0/50 shadow-2xl shadow-cyan-50o0/20' 
         : 'bg-transparent'
     }`}>
       {/* Top Contact Bar */}
-      <div className="bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 border-b border-gray-800/30">
+      <div className="bg-gradient-to-r from-cyan-90o0/20 via-purple-90o0/20 to-pink-90o0/20 border-b border-gray-80o0/30">
         <div className="container mx-auto px-4 py-2">
           <div className="flex items-center justify-between text-sm">
             <div className="flex items-center gap-6">
-              <div className="flex items-center gap-2 text-cyan-400">
-                <Phone className="w-4 h-4" />
+              <div className="flex items-center gap-2 text-cyan-40o0">
+                <Phone className="w-4 h-4"  />
                 <span>{contactInfo.mobile}</span>
               </div>
-              <div className="flex items-center gap-2 text-purple-400">
-                <Mail className="w-4 h-4" />
+              <div className="flex items-center gap-2 text-purple-40o0">
+                <Mail className="w-4 h-4"  />
                 <span>{contactInfo.email}</span>
               </div>
-              <div className="flex items-center gap-2 text-pink-400">
-                <MapPin className="w-4 h-4" />
+              <div className="flex items-center gap-2 text-pink-40o0">
+                <MapPin className="w-4 h-4"  />
                 <span>{contactInfo.address}</span>
               </div>
             </div>
@@ -362,7 +362,7 @@ const UltraAdvancedFuturisticNavigation2025: React.FC = () => {
                 href={contactInfo.website} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+                className="text-gray-40o0 hover:text-cyan-40o0 transition-colors duration-20o0"
               >
                 {contactInfo.website}
               </a>
@@ -377,16 +377,16 @@ const UltraAdvancedFuturisticNavigation2025: React.FC = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-30o0">
                 <span className="text-2xl font-bold text-white">Z</span>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 rounded-xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-30o0"></div>
             </div>
             <div>
-              <div className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
+              <div className="text-xl font-bold text-white group-hover:text-cyan-40o0 transition-colors duration-30o0">
                 Zion Tech Group
               </div>
-              <div className="text-xs text-gray-400">Revolutionary Technology Solutions</div>
+              <div className="text-xs text-gray-40o0">Revolutionary Technology Solutions</div>
             </div>
           </Link>
 
@@ -396,7 +396,7 @@ const UltraAdvancedFuturisticNavigation2025: React.FC = () => {
               <div key={item.name} className="relative group">
                 <button
                   onClick={() => toggleDropdown(item.name)}
-                  className="flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 rounded-lg hover:bg-white/5"
+                  className="flex items-center gap-2 px-4 py-2 text-gray-30o0 hover:text-white transition-colors duration-20o0 rounded-lg hover:bg-white/5"
                 >
                   {item.icon}
                   <span>{item.name}</span>
@@ -405,9 +405,9 @@ const UltraAdvancedFuturisticNavigation2025: React.FC = () => {
                       {item.badge}
                     </span>
                   )}
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
                     activeDropdown === item.name ? 'rotate-180' : ''
-                  }`} />
+                  }`}  />
                 </button>
 
                 {/* Dropdown Menu */}
@@ -418,40 +418,40 @@ const UltraAdvancedFuturisticNavigation2025: React.FC = () => {
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-xl shadow-2xl shadow-cyan-500/20 overflow-hidden"
+                      className="absolute top-full left-0 mt-2 w-80 bg-gray-90o0/95 backdrop-blur-xl border border-gray-80o0/50 rounded-xl shadow-2xl shadow-cyan-50o0/20 overflow-hidden"
                       onMouseLeave={closeDropdown}
                     >
                       <div className="p-4">
                         <div className="mb-4">
                           <h3 className="text-lg font-bold text-white mb-2">{item.name}</h3>
-                          <p className="text-sm text-gray-400">{item.description}</p>
+                          <p className="text-sm text-gray-40o0">{item.description}</p>
                         </div>
                         <div className="space-y-2">
                           {item.children?.slice(0, 8).map((child) => (
                             <Link
                               key={child.name}
                               href={child.href}
-                              className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
+                              className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-80o0/50 transition-colors duration-20o0 group"
                               onClick={closeDropdown}
                             >
-                              <div className="w-2 h-2 bg-cyan-500 rounded-full group-hover:scale-150 transition-transform duration-200"></div>
+                              <div className="w-2 h-2 bg-cyan-50o0 rounded-full group-hover:scale-150 transition-transform duration-20o0"></div>
                               <div className="flex-1">
-                                <div className="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors duration-200">
+                                <div className="text-sm font-medium text-white group-hover:text-cyan-40o0 transition-colors duration-20o0">
                                   {child.name}
                                 </div>
-                                <div className="text-xs text-gray-400">{child.description}</div>
+                                <div className="text-xs text-gray-40o0">{child.description}</div>
                               </div>
-                              <ArrowRight className="w-4 h-4 text-gray-600 group-hover:text-cyan-400 transition-colors duration-200" />
+                              <ArrowRight className="w-4 h-4 text-gray-60o0 group-hover:text-cyan-40o0 transition-colors duration-20o0"  />
                             </Link>
                           ))}
                           {item.children && item.children.length > 8 && (
                             <Link
                               href={item.href}
-                              className="flex items-center justify-center gap-2 p-3 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 font-medium"
+                              className="flex items-center justify-center gap-2 p-3 text-cyan-40o0 hover:text-cyan-30o0 transition-colors duration-20o0 font-medium"
                               onClick={closeDropdown}
                             >
                               View All {item.children.length} Services
-                              <ArrowRight className="w-4 h-4" />
+                              <ArrowRight className="w-4 h-4"  />
                             </Link>
                           )}
                         </div>
@@ -465,15 +465,15 @@ const UltraAdvancedFuturisticNavigation2025: React.FC = () => {
 
           {/* Right Side Actions */}
           <div className="hidden lg:flex items-center gap-4">
-            <button className="p-2 text-gray-400 hover:text-white transition-colors duration-200">
-              <Search className="w-5 h-5" />
+            <button className="p-2 text-gray-40o0 hover:text-white transition-colors duration-20o0">
+              <Search className="w-5 h-5"  />
             </button>
-            <button className="p-2 text-gray-400 hover:text-white transition-colors duration-200">
-              <Bell className="w-5 h-5" />
+            <button className="p-2 text-gray-40o0 hover:text-white transition-colors duration-20o0">
+              <Bell className="w-5 h-5"  />
             </button>
             <Link
               href={`tel:${contactInfo.mobile}`}
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:scale-105"
+              className="bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white px-6 py-2 rounded-lg font-medium hover:from-cyan-60o0 hover:to-blue-60o0 transition-all duration-20o0 transform hover:scale-10o5"
             >
               Get Started
             </Link>
@@ -482,9 +482,9 @@ const UltraAdvancedFuturisticNavigation2025: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-gray-400 hover:text-white transition-colors duration-200"
+            className="lg:hidden p-2 text-gray-40o0 hover:text-white transition-colors duration-20o0"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
           </button>
         </div>
       </div>
@@ -497,7 +497,7 @@ const UltraAdvancedFuturisticNavigation2025: React.FC = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50"
+            className="lg:hidden bg-gray-90o0/95 backdrop-blur-xl border-t border-gray-80o0/50"
           >
             <div className="container mx-auto px-4 py-6">
               <div className="space-y-4">
@@ -505,7 +505,7 @@ const UltraAdvancedFuturisticNavigation2025: React.FC = () => {
                   <div key={item.name}>
                     <button
                       onClick={() => toggleDropdown(item.name)}
-                      className="flex items-center justify-between w-full p-3 text-left text-gray-300 hover:text-white transition-colors duration-200 rounded-lg hover:bg-gray-800/50"
+                      className="flex items-center justify-between w-full p-3 text-left text-gray-30o0 hover:text-white transition-colors duration-20o0 rounded-lg hover:bg-gray-80o0/50"
                     >
                       <div className="flex items-center gap-3">
                         {item.icon}
@@ -516,9 +516,9 @@ const UltraAdvancedFuturisticNavigation2025: React.FC = () => {
                           </span>
                         )}
                       </div>
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
                         activeDropdown === item.name ? 'rotate-180' : ''
-                      }`} />
+                      }`}  />
                     </button>
                     
                     {activeDropdown === item.name && (
@@ -527,7 +527,7 @@ const UltraAdvancedFuturisticNavigation2025: React.FC = () => {
                           <Link
                             key={child.name}
                             href={child.href}
-                            className="block p-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+                            className="block p-2 text-sm text-gray-40o0 hover:text-cyan-40o0 transition-colors duration-20o0"
                             onClick={() => setIsOpen(false)}
                           >
                             {child.name}
@@ -536,7 +536,7 @@ const UltraAdvancedFuturisticNavigation2025: React.FC = () => {
                         {item.children && item.children.length > 5 && (
                           <Link
                             href={item.href}
-                            className="block p-2 text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-200 font-medium"
+                            className="block p-2 text-sm text-cyan-40o0 hover:text-cyan-30o0 transition-colors duration-20o0 font-medium"
                             onClick={() => setIsOpen(false)}
                           >
                             View All Services →
@@ -547,10 +547,10 @@ const UltraAdvancedFuturisticNavigation2025: React.FC = () => {
                   </div>
                 ))}
                 
-                <div className="pt-4 border-t border-gray-800">
+                <div className="pt-4 border-t border-gray-80o0">
                   <Link
                     href={`tel:${contactInfo.mobile}`}
-                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200"
+                    className="block w-full bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white px-6 py-3 rounded-lg font-medium text-center hover:from-cyan-60o0 hover:to-blue-60o0 transition-all duration-20o0"
                     onClick={() => setIsOpen(false)}
                   >
                     Get Started
@@ -565,4 +565,4 @@ const UltraAdvancedFuturisticNavigation2025: React.FC = () => {
   );
 };
 
-export default UltraAdvancedFuturisticNavigation2025;
+export default UltraAdvancedFuturisticNavigation20o25;

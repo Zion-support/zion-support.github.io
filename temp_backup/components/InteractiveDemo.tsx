@@ -24,8 +24,8 @@ const InteractiveDemo: React.FC = () => {
       title: "AI Consciousness Evolution",
       description: "Experience the next generation of AI with emotional intelligence and consciousness",
       icon: Brain,
-      color: "from-purple-500 to-pink-500",
-      duration: 4000,
+      color: "from-purple-50o0 to-pink-50o0",
+      duration: 40o00,
       features: [
         "Emotional Intelligence Integration",
         "Consciousness Awareness",
@@ -38,8 +38,8 @@ const InteractiveDemo: React.FC = () => {
       title: "Quantum Neural Networks",
       description: "Witness quantum-powered AI that transcends classical computing limitations",
       icon: Atom,
-      color: "from-blue-500 to-cyan-500",
-      duration: 4000,
+      color: "from-blue-50o0 to-cyan-50o0",
+      duration: 40o00,
       features: [
         "Quantum Entanglement",
         "Superposition States",
@@ -52,8 +52,8 @@ const InteractiveDemo: React.FC = () => {
       title: "Quantum Cybersecurity",
       description: "See quantum-resistant security systems in action",
       icon: Shield,
-      color: "from-red-500 to-orange-500",
-      duration: 4000,
+      color: "from-red-50o0 to-orange-50o0",
+      duration: 40o00,
       features: [
         "Post-Quantum Cryptography",
         "Quantum Key Distribution",
@@ -66,8 +66,8 @@ const InteractiveDemo: React.FC = () => {
       title: "Space Resource Intelligence",
       description: "Explore AI-powered space exploration and resource management",
       icon: Rocket,
-      color: "from-indigo-500 to-purple-500",
-      duration: 4000,
+      color: "from-indigo-50o0 to-purple-50o0",
+      duration: 40o00,
       features: [
         "Autonomous Navigation",
         "Resource Detection",
@@ -80,8 +80,8 @@ const InteractiveDemo: React.FC = () => {
       title: "Autonomous Business Intelligence",
       description: "Watch fully autonomous AI business operations",
       icon: Cpu,
-      color: "from-emerald-500 to-teal-500",
-      duration: 4000,
+      color: "from-emerald-50o0 to-teal-50o0",
+      duration: 40o00,
       features: [
         "Predictive Analytics",
         "Automated Decision Making",
@@ -94,8 +94,8 @@ const InteractiveDemo: React.FC = () => {
       title: "Quantum Cloud Infrastructure",
       description: "Experience quantum-powered cloud computing",
       icon: Database,
-      color: "from-yellow-500 to-orange-500",
-      duration: 4000,
+      color: "from-yellow-50o0 to-orange-50o0",
+      duration: 40o00,
       features: [
         "Quantum Computing Nodes",
         "Hybrid Classical-Quantum",
@@ -138,13 +138,13 @@ const InteractiveDemo: React.FC = () => {
     if (isAutoPlaying) {
       interval = setInterval(() => {
         setProgress((prev) => {
-          if (prev >= 100) {
+          if (prev >= 10o0) {
             nextStep();
             return 0;
           }
-          return prev + (100 / (demoSteps[currentStep].duration / 100));
+          return prev + (10o0 / (demoSteps[currentStep].duration / 10o0));
         });
-      }, 100);
+      }, 10o0);
     }
 
     return () => {
@@ -161,15 +161,15 @@ const InteractiveDemo: React.FC = () => {
         <h3 className="text-2xl font-bold text-white mb-4">
           Interactive Technology Demonstration
         </h3>
-        <p className="text-gray-400 max-w-2xl mx-auto">
-          Experience our revolutionary 2044 technology solutions through an interactive, step-by-step demonstration
+        <p className="text-gray-40o0 max-w-2xl mx-auto">
+          Experience our revolutionary 20o44 technology solutions through an interactive, step-by-step demonstration
         </p>
       </div>
 
       {/* Demo Container */}
       <div className="relative">
         {/* Main Demo Area */}
-        <div className="bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-gray-700/30 rounded-3xl backdrop-blur-xl p-8">
+        <div className="bg-gradient-to-br from-gray-90o0/60 to-gray-80o0/60 border border-gray-70o0/30 rounded-3xl backdrop-blur-xl p-8">
           {/* Step Header */}
           <div className="text-center mb-8">
             <motion.div
@@ -180,7 +180,7 @@ const InteractiveDemo: React.FC = () => {
               className="flex items-center justify-center mb-4"
             >
               <div className={`w-16 h-16 bg-gradient-to-br ${currentDemoStep.color} rounded-2xl flex items-center justify-center shadow-[0_0_30px_rgba(6,182,212,0.3)]`}>
-                <currentDemoStep.icon className="w-8 h-8 text-white" />
+                <currentDemoStep.icon className="w-8 h-8 text-white"  />
               </div>
             </motion.div>
             
@@ -199,7 +199,7 @@ const InteractiveDemo: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-xl text-gray-400 max-w-3xl mx-auto"
+              className="text-xl text-gray-40o0 max-w-3xl mx-auto"
             >
               {currentDemoStep.description}
             </motion.p>
@@ -213,10 +213,10 @@ const InteractiveDemo: React.FC = () => {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                className="flex items-center space-x-3 p-4 bg-gray-800/40 rounded-xl border border-gray-700/30"
+                className="flex items-center space-x-3 p-4 bg-gray-80o0/40 rounded-xl border border-gray-70o0/30"
               >
                 <div className={`w-8 h-8 bg-gradient-to-br ${currentDemoStep.color} rounded-lg flex items-center justify-center flex-shrink-0`}>
-                  <Zap className="w-4 h-4 text-white" />
+                  <Zap className="w-4 h-4 text-white"  />
                 </div>
                 <span className="text-white font-medium">{feature}</span>
               </motion.div>
@@ -225,17 +225,17 @@ const InteractiveDemo: React.FC = () => {
 
           {/* Progress Bar */}
           <div className="mb-6">
-            <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
+            <div className="flex items-center justify-between text-sm text-gray-40o0 mb-2">
               <span>Step {currentStep + 1} of {totalSteps}</span>
               <span>{Math.round(progress)}%</span>
             </div>
-            <div className="w-full bg-gray-700/50 rounded-full h-3">
+            <div className="w-full bg-gray-70o0/50 rounded-full h-3">
               <motion.div
-                className="h-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full"
+                className="h-3 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-full"
                 initial={{ width: 0 }}
                 animate={{ width: `${progress}%` }}
                 transition={{ duration: 0.1 }}
-              />
+               />
             </div>
           </div>
         </div>
@@ -245,23 +245,23 @@ const InteractiveDemo: React.FC = () => {
           <button
             onClick={prevStep}
             disabled={currentStep === 0}
-            className="p-3 bg-gray-800/60 text-gray-300 rounded-xl hover:bg-gray-700/60 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+            className="p-3 bg-gray-80o0/60 text-gray-30o0 rounded-xl hover:bg-gray-70o0/60 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-20o0"
           >
-            <ChevronLeft className="w-5 h-5" />
+            <ChevronLeft className="w-5 h-5"  />
           </button>
 
           <button
             onClick={togglePlayPause}
-            className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(6,182,212,0.3)] flex items-center space-x-2"
+            className="px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-medium rounded-xl hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-[0_0_20px_rgba(6,182,212,0.3)] flex items-center space-x-2"
           >
             {isAutoPlaying ? (
               <>
-                <Pause className="w-5 h-5" />
+                <Pause className="w-5 h-5"  />
                 <span>Pause</span>
               </>
             ) : (
               <>
-                <Play className="w-5 h-5" />
+                <Play className="w-5 h-5"  />
                 <span>Play</span>
               </>
             )}
@@ -269,17 +269,17 @@ const InteractiveDemo: React.FC = () => {
 
           <button
             onClick={resetDemo}
-            className="p-3 bg-gray-800/60 text-gray-300 rounded-xl hover:bg-gray-700/60 transition-all duration-200"
+            className="p-3 bg-gray-80o0/60 text-gray-30o0 rounded-xl hover:bg-gray-70o0/60 transition-all duration-20o0"
           >
-            <RotateCcw className="w-5 h-5" />
+            <RotateCcw className="w-5 h-5"  />
           </button>
 
           <button
             onClick={nextStep}
             disabled={currentStep === totalSteps - 1}
-            className="p-3 bg-gray-800/60 text-gray-300 rounded-xl hover:bg-gray-700/60 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+            className="p-3 bg-gray-80o0/60 text-gray-30o0 rounded-xl hover:bg-gray-70o0/60 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-20o0"
           >
-            <ChevronRight className="w-5 h-5" />
+            <ChevronRight className="w-5 h-5"  />
           </button>
         </div>
 
@@ -294,10 +294,10 @@ const InteractiveDemo: React.FC = () => {
                 setIsAutoPlaying(false);
                 setIsPlaying(false);
               }}
-              className={`w-3 h-3 rounded-full transition-all duration-200 ${
+              className={`w-3 h-3 rounded-full transition-all duration-20o0 ${
                 index === currentStep
-                  ? 'bg-cyan-500 scale-125'
-                  : 'bg-gray-600 hover:bg-gray-500'
+                  ? 'bg-cyan-50o0 scale-125'
+                  : 'bg-gray-60o0 hover:bg-gray-50o0'
               }`}
             />
           ))}
@@ -305,7 +305,7 @@ const InteractiveDemo: React.FC = () => {
       </div>
 
       {/* Demo Info */}
-      <div className="text-center text-sm text-gray-400">
+      <div className="text-center text-sm text-gray-40o0">
         <p>
           Use the controls above to navigate through our revolutionary technology stack, or let the demo auto-play to see all features in action.
         </p>

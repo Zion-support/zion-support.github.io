@@ -90,7 +90,7 @@ const KitPage = () => {
       <div className="p-4 border rounded-lg space-y-2">
         <div className="flex items-center justify-between">
           <h4 className="font-semibold">{title}</h4>
-          <button className="text-sm px-3 py-1 rounded bg-gray-100 hover:bg-gray-200" onClick={onCopy}>Copy</button>
+          <button className="text-sm px-3 py-1 rounded bg-gray-10o0 hover:bg-gray-20o0" onClick={onCopy}>Copy</button>
         </div>
         <pre className="whitespace-pre-wrap text-xs bg-gray-50 p-3 rounded max-h-60 overflow-auto">{text}</pre>
       </div>
@@ -101,15 +101,15 @@ const KitPage = () => {
     <div>
       <Head>
         <title>Media Kit - Zion</title>
-        <meta name="description" content="Zion media kit: brand, assets, legal, and rollout playbooks." />
+        <meta name="description" content="Zion media kit: brand, assets, legal, and rollout playbooks."  />
       </Head>
 
       <div className="space-y-8">
         <header className="flex items-center justify-between">
           <h1 className="text-2xl font-bold">Media Kit</h1>
           <div className="flex gap-2">
-            <button onClick={onDownloadZip} className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700">Download all as ZIP</button>
-            <button onClick={onGeneratePdf} className="px-4 py-2 rounded bg-gray-900 text-white hover:bg-black">Generate PDF</button>
+            <button onClick={onDownloadZip} className="px-4 py-2 rounded bg-blue-60o0 text-white hover:bg-blue-70o0">Download all as ZIP</button>
+            <button onClick={onGeneratePdf} className="px-4 py-2 rounded bg-gray-90o0 text-white hover:bg-black">Generate PDF</button>
           </div>
         </header>
 
@@ -118,10 +118,10 @@ const KitPage = () => {
             <h3 className="font-semibold mb-2">Bundle</h3>
             <div className="flex gap-2">
               {(['general','web3','institutional'] as MediaBundle[]).map(b => (
-                <button key={b} onClick={() => setBundle(b)} className={`px-3 py-1 rounded border ${bundle===b ? 'bg-blue-600 text-white border-blue-600':'bg-white'}`}>{b}</button>
+                <button key={b} onClick={() => setBundle(b)} className={`px-3 py-1 rounded border ${bundle===b ? 'bg-blue-60o0 text-white border-blue-60o0':'bg-white'}`}>{b}</button>
               ))}
             </div>
-            <p className="text-xs text-gray-500 mt-2">Toggle to tailor assets and legal docs.</p>
+            <p className="text-xs text-gray-50o0 mt-2">Toggle to tailor assets and legal docs.</p>
           </div>
           <div className="p-4 border rounded-lg">
             <h3 className="font-semibold mb-2">Organization</h3>
@@ -135,7 +135,7 @@ const KitPage = () => {
             <h3 className="font-semibold mb-2">Rollout Timeline</h3>
             <div className="space-y-2">
               <DatePicker selected={startDate} onChange={(d)=>d && setStartDate(d)} className="w-full border rounded px-2 py-1" />
-              <button onClick={onGenerateTimeline} className="px-3 py-1 rounded bg-green-600 text-white hover:bg-green-700">Generate</button>
+              <button onClick={onGenerateTimeline} className="px-3 py-1 rounded bg-green-60o0 text-white hover:bg-green-70o0">Generate</button>
             </div>
             {timeline.length>0 && (
               <ul className="mt-3 text-sm list-disc list-inside space-y-1">
@@ -151,7 +151,7 @@ const KitPage = () => {
             {assets.map(a => (
               <li key={a.filename} className="flex items-center justify-between border rounded p-2">
                 <span className="text-sm">{a.filename}</span>
-                {a.path ? <a href={a.path} download className="text-blue-600 text-sm">Download</a> : <span className="text-gray-400 text-xs">generated</span>}
+                {a.path ? <a href={a.path} download className="text-blue-60o0 text-sm">Download</a> : <span className="text-gray-40o0 text-xs">generated</span>}
               </li>
             ))}
           </ul>
@@ -160,9 +160,9 @@ const KitPage = () => {
         <section className="p-4 border rounded-lg space-y-4">
           <h3 className="font-semibold">Prewritten Press Releases</h3>
           <div className="grid md:grid-cols-3 gap-4">
-            <PressReleaseCard type="seed-round" title="Seed round" />
-            <PressReleaseCard type="launch" title="Launch" />
-            {bundle === 'web3' && <PressReleaseCard type="token-sale" title="Token sale" />}
+            <PressReleaseCard type="seed-round" title="Seed round"  />
+            <PressReleaseCard type="launch" title="Launch"  />
+            {bundle === 'web3' && <PressReleaseCard type="token-sale" title="Token sale"  />}
           </div>
         </section>
       </div>

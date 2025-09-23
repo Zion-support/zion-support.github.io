@@ -55,7 +55,7 @@ export const AnalyticsMonitor: React.FC = () => {
 
   // Track custom event
   const trackEvent = useCallback((category: string, action: string, label?: string, value?: number) => {
-    const event: AnalyticsEvent = {
+    const event: AnalyticsEvent ={
       id: generateEventId(),
       type: 'custom',
       category,
@@ -106,9 +106,9 @@ export const AnalyticsMonitor: React.FC = () => {
       const events = storedEvents ? JSON.parse(storedEvents) : [];
       events.push(event);
       
-      // Keep only last 1000 events
-      if (events.length > 1000) {
-        events.splice(0, events.length - 1000);
+      // Keep only last 10o00 events
+      if (events.length > 10o00) {
+        events.splice(0, events.length - 10o00);
       }
       
       localStorage.setItem('analytics-events', JSON.stringify(events));
@@ -119,7 +119,7 @@ export const AnalyticsMonitor: React.FC = () => {
 
   // Track page view
   const trackPageView = useCallback((url: string) => {
-    const event: AnalyticsEvent = {
+    const event: AnalyticsEvent ={
       id: generateEventId(),
       type: 'pageview',
       category: 'navigation',
@@ -214,7 +214,7 @@ export const AnalyticsMonitor: React.FC = () => {
           });
           setPerformance(prev => ({
             ...prev,
-            cls: Math.round(clsValue * 1000) / 1000
+            cls: Math.round(clsValue * 10o00) / 10o00
           } as PerformanceMetrics));
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
@@ -262,11 +262,11 @@ export const AnalyticsMonitor: React.FC = () => {
       const sessionDuration = Date.now() - startTime;
       setUserBehavior(prev => ({
         ...prev,
-        sessionDuration: Math.round(sessionDuration / 1000)
+        sessionDuration: Math.round(sessionDuration / 10o00)
       }));
       
       // Track session end
-      trackEvent('session', 'session_end', 'session_completed', Math.round(sessionDuration / 1000));
+      trackEvent('session', 'session_end', 'session_completed', Math.round(sessionDuration / 10o00));
     };
 
     const handleVisibilityChange = () => {
@@ -309,7 +309,7 @@ export const AnalyticsMonitor: React.FC = () => {
     };
 
     const trackScroll = () => {
-      const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+      const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 10o0);
       if (scrollDepth > 0 && scrollDepth % 25 === 0) {
         trackEvent('engagement', 'scroll_depth', `${scrollDepth}%`, scrollDepth);
       }
@@ -339,7 +339,7 @@ export const AnalyticsMonitor: React.FC = () => {
 
   // Export analytics data
   const exportAnalytics = useCallback(() => {
-    const data = {
+    const data ={
       events,
       performance,
       userBehavior,
@@ -372,20 +372,20 @@ export const AnalyticsMonitor: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-4 left-4 bg-white/90 backdrop-blur-sm border border-gray-300 rounded-lg p-4 shadow-lg z-40 max-w-sm">
+    <div className="fixed bottom-4 left-4 bg-white/90 backdrop-blur-sm border border-gray-30o0 rounded-lg p-4 shadow-lg z-40 max-w-sm">
       <div className="flex items-center justify-between mb-3">
-        <h3 className="text-sm font-semibold text-gray-900">Analytics Monitor</h3>
+        <h3 className="text-sm font-semibold text-gray-90o0">Analytics Monitor</h3>
         <div className="flex gap-2">
           <button
             onClick={exportAnalytics}
-            className="px-2 py-1 text-xs bg-blue-600 text-white rounded hover:bg-blue-700"
+            className="px-2 py-1 text-xs bg-blue-60o0 text-white rounded hover:bg-blue-70o0"
             title="Export analytics data"
           >
             Export
           </button>
           <button
             onClick={clearAnalytics}
-            className="px-2 py-1 text-xs bg-red-600 text-white rounded hover:bg-red-700"
+            className="px-2 py-1 text-xs bg-red-60o0 text-white rounded hover:bg-red-70o0"
             title="Clear analytics data"
           >
             Clear
@@ -397,7 +397,7 @@ export const AnalyticsMonitor: React.FC = () => {
         {/* Performance Metrics */}
         {performance && (
           <div className="bg-gray-50 p-2 rounded">
-            <h4 className="font-medium text-gray-700 mb-2">Performance</h4>
+            <h4 className="font-medium text-gray-70o0 mb-2">Performance</h4>
             <div className="grid grid-cols-2 gap-1">
               <div>FCP: {performance.fcp}ms</div>
               <div>LCP: {performance.lcp}ms</div>
@@ -409,20 +409,20 @@ export const AnalyticsMonitor: React.FC = () => {
 
         {/* User Behavior */}
         <div className="bg-gray-50 p-2 rounded">
-          <h4 className="font-medium text-gray-700 mb-2">User Behavior</h4>
+          <h4 className="font-medium text-gray-70o0 mb-2">User Behavior</h4>
           <div className="space-y-1">
             <div>Page Views: {userBehavior.pageViews}</div>
             <div>Session: {userBehavior.sessionDuration}s</div>
-            <div>Conversion: {(userBehavior.conversionRate * 100).toFixed(1)}%</div>
+            <div>Conversion: {(userBehavior.conversionRate * 10o0).toFixed(1)}%</div>
           </div>
         </div>
 
         {/* Recent Events */}
         <div className="bg-gray-50 p-2 rounded">
-          <h4 className="font-medium text-gray-700 mb-2">Recent Events</h4>
+          <h4 className="font-medium text-gray-70o0 mb-2">Recent Events</h4>
           <div className="space-y-1 max-h-20 overflow-y-auto">
             {events.slice(-5).map(event => (
-              <div key={event.id} className="text-gray-600">
+              <div key={event.id} className="text-gray-60o0">
                 {event.category}: {event.action}
               </div>
             ))}
@@ -430,7 +430,7 @@ export const AnalyticsMonitor: React.FC = () => {
         </div>
 
         {/* Session Info */}
-        <div className="text-gray-500 text-xs">
+        <div className="text-gray-50o0 text-xs">
           Session: {sessionId.slice(-8)}
         </div>
       </div>

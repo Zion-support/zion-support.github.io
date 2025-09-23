@@ -39,8 +39,7 @@ export default function CartPage() {
                 await fetch('/api/cart', {
                     method: 'PATCH',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ id, quantity: qty }),
-                });
+                    body: JSON.stringify({ id, quantity: qty })});
             }
             catch (err) {
                 console.error('Failed to update cart', err);
@@ -66,8 +65,7 @@ export default function CartPage() {
         try {
             const res = await apiClient.post('/coupons/validate', {
                 code,
-                amount: subtotal,
-            });
+                amount: subtotal});
             setDiscount(res.data.discount || 0);
         }
         catch (e) {
@@ -78,13 +76,13 @@ export default function CartPage() {
     const total = subtotal - discount;
     if (cartLoading) {
         return (<div className="container py-10 space-y-4">
-        <Skeleton className="h-8 w-1/3"/>
-        <Skeleton className="h-32 w-full"/>
+        <Skeleton className="h-8 w-1/3" />
+        <Skeleton className="h-32 w-full" />
       </div>);
     }
     if (showEmpty) {
         return (<div className="container py-10 text-center">
-        <img loading="lazy" src="/images/empty-cart.svg" alt="Empty cart" className="mx-auto mb-4 w-48 h-36"/>
+        <img loading="lazy" src="/images/empty-cart.svg" alt="Empty cart" className="mx-auto mb-4 w-48 h-36" />
         <p>{t('cart.empty')}</p>
         <Button asChild className="mt-4">
           <Link href="/marketplace">Browse Marketplace</Link>

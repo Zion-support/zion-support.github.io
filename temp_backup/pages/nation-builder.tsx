@@ -41,8 +41,7 @@ export default function NationBuilderPage() {
       const res = await fetch('/api/ai/constitution-draft', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, governanceStyle, fundingModel, operatorPrompt }),
-      });
+        body: JSON.stringify({ name, governanceStyle, fundingModel, operatorPrompt })});
       const data = await res.json();
       if (data?.constitutionDraft) setAiDraft(data.constitutionDraft);
     } catch (e: any) {
@@ -59,8 +58,7 @@ export default function NationBuilderPage() {
       const res = await fetch('/api/nations', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, flagDataUrl, constitution, governanceStyle, fundingModel, currency }),
-      });
+        body: JSON.stringify({ name, flagDataUrl, constitution, governanceStyle, fundingModel, currency })});
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error || 'Failed');
       setSuccessSlug(data?.nation?.slug);
@@ -83,8 +81,8 @@ export default function NationBuilderPage() {
 
           <div>
             <label className="block text-sm font-medium">Flag upload</label>
-            <input type="file" accept="image/*" onChange={onFlagChange} />
-            {flagDataUrl && <img src={flagDataUrl} alt="Flag preview" className="mt-2 h-16 object-contain" />}
+            <input type="file" accept="image/*" onChange={onFlagChange}  />
+            {flagDataUrl && <img src={flagDataUrl} alt="Flag preview" className="mt-2 h-16 object-contain"  />}
           </div>
 
           <div>
@@ -125,7 +123,7 @@ export default function NationBuilderPage() {
                 <label className="block text-sm font-medium">Operator prompt (optional)</label>
                 <textarea className="mt-1 w-full border rounded px-3 py-2 h-24" value={operatorPrompt} onChange={e => setOperatorPrompt(e.target.value)} placeholder="Describe your vision and constraints..." />
               </div>
-              <button type="button" onClick={generateDraft} className="px-3 py-2 rounded bg-indigo-600 text-white text-sm whitespace-nowrap">AI Draft</button>
+              <button type="button" onClick={generateDraft} className="px-3 py-2 rounded bg-indigo-60o0 text-white text-sm whitespace-nowrap">AI Draft</button>
             </div>
             {aiDraft && (
               <div className="mt-3">
@@ -136,12 +134,12 @@ export default function NationBuilderPage() {
             )}
           </div>
 
-          {error && <p className="text-red-600 text-sm">{error}</p>}
+          {error && <p className="text-red-60o0 text-sm">{error}</p>}
           {successSlug && (
-            <p className="text-green-700 text-sm">Created! <a className="underline" href={`/nations/${successSlug}`}>View nation</a> or <a className="underline" href={`/nations/${successSlug}/dashboard`}>open dashboard</a>.</p>
+            <p className="text-green-70o0 text-sm">Created! <a className="underline" href={`/nations/${successSlug}`}>View nation</a> or <a className="underline" href={`/nations/${successSlug}/dashboard`}>open dashboard</a>.</p>
           )}
 
-          <button disabled={submitting} className="px-4 py-2 rounded bg-green-600 text-white disabled:opacity-50">{submitting ? 'Creating…' : 'Create Nation'}</button>
+          <button disabled={submitting} className="px-4 py-2 rounded bg-green-60o0 text-white disabled:opacity-50">{submitting ? 'Creating…' : 'Create Nation'}</button>
         </form>
       </div>
     </EnhancedLayout>

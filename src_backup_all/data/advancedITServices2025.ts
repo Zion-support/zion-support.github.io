@@ -40,7 +40,7 @@ contactInfo: {;
   customers: number;
 }
 
-export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
+export const ADVANCED_IT_SERVICES_20o25: AdvancedITService[] = [
   // AI-Powered IT Infrastructure Management
   {
     id: "ai-it-infrastructure-management",
@@ -87,24 +87,24 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     tags: ["AI", "Infrastructure", "Automation", "Monitoring", "Optimization"],
     estimatedDelivery: "6-10 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$7,999 - $20,000/month",
-    roi: "300-600%",
+    marketPrice: "$7,999 - $20,0o00/month",
+    roi: "30o0-60o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL"],
       integrations: ["AWS", "Azure", "Google Cloud", "VMware", "Kubernetes"],
-      apiEndpoints: 400,
+      apiEndpoints: 40o0,
       uptime: "99.99%",
-      security: ["SOC 2", "ISO 27001", "Encryption", "Access controls"]
+      security: ["SOC 2", "ISO 270o01", "Encryption", "Access controls"]
     },
     competitors: ["ServiceNow", "BMC Software", "BMC Helix", "Ivanti"],
-    marketSize: "$152.4 billion by 2025",
+    marketSize: "$152.4 billion by 20o25",
     growthRate: "180% annual growth",
     rating: 4.8,
     reviews: 234,
@@ -134,7 +134,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       "24/7 support"
     ],
     benefits: [
-      "1000x faster processing",
+      "10o00x faster processing",
       "Unbreakable encryption",
       "Global scalability",
       "Cost optimization",
@@ -157,25 +157,25 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     tags: ["Quantum Computing", "Cloud", "AI", "Encryption", "High Performance"],
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$15,999 - $45,000/month",
-    roi: "500-1000%",
+    marketPrice: "$15,999 - $45,0o00/month",
+    roi: "50o0-10o00%",
     innovationLevel: "Revolutionary",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["Quantum algorithms", "Qiskit", "React", "Python", "PostgreSQL"],
       integrations: ["AWS", "Azure", "Google Cloud", "Quantum simulators", "AI platforms"],
-      apiEndpoints: 800,
+      apiEndpoints: 80o0,
       uptime: "99.99%",
       security: ["Quantum encryption", "SOC 2", "FedRAMP", "Zero-trust"]
     },
     competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Amazon Braket"],
-    marketSize: "$832.1 billion by 2025",
-    growthRate: "300% annual growth",
+    marketSize: "$832.1 billion by 20o25",
+    growthRate: "30o0% annual growth",
     rating: 4.9,
     reviews: 156,
     customers: 234
@@ -227,25 +227,25 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     tags: ["Edge Computing", "IoT", "Real-time", "AI", "Low Latency"],
     estimatedDelivery: "8-12 weeks",
     supportLevel: "premium",
-    marketPrice: "$4,999 - $15,000/month",
-    roi: "250-500%",
+    marketPrice: "$4,999 - $15,0o00/month",
+    roi: "250-50o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["Edge nodes", "IoT protocols", "React", "Python", "MongoDB"],
       integrations: ["IoT devices", "Cloud platforms", "Analytics tools", "Security systems"],
-      apiEndpoints: 300,
+      apiEndpoints: 30o0,
       uptime: "99.9%",
       security: ["Edge security", "Device authentication", "Data encryption"]
     },
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge"],
-    marketSize: "$43.4 billion by 2025",
-    growthRate: "200% annual growth",
+    marketSize: "$43.4 billion by 20o25",
+    growthRate: "20o0% annual growth",
     rating: 4.7,
     reviews: 189,
     customers: 345
@@ -274,7 +274,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       "24/7 SOC support"
     ],
     benefits: [
-      "100% threat detection",
+      "10o0% threat detection",
       "Reduce attack surface by 80%",
       "Automated response",
       "Regulatory compliance",
@@ -297,24 +297,24 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     tags: ["Zero-Trust", "Cybersecurity", "Identity", "Threat Detection", "Compliance"],
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$9,999 - $25,000/month",
-    roi: "400-800%",
+    marketPrice: "$9,999 - $25,0o00/month",
+    roi: "40o0-80o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["AI/ML", "Blockchain", "React", "Python", "PostgreSQL"],
       integrations: ["SIEM", "IAM", "Firewalls", "EDR", "Cloud platforms"],
-      apiEndpoints: 500,
+      apiEndpoints: 50o0,
       uptime: "99.99%",
-      security: ["SOC 2", "ISO 27001", "FedRAMP", "Zero-trust architecture"]
+      security: ["SOC 2", "ISO 270o01", "FedRAMP", "Zero-trust architecture"]
     },
     competitors: ["Palo Alto Networks", "Cisco", "Fortinet", "Check Point"],
-    marketSize: "$67.8 billion by 2025",
+    marketSize: "$67.8 billion by 20o25",
     growthRate: "250% annual growth",
     rating: 4.8,
     reviews: 267,
@@ -367,14 +367,14 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     tags: ["AI", "DevOps", "Automation", "CI/CD", "Testing"],
     estimatedDelivery: "6-10 weeks",
     supportLevel: "premium",
-    marketPrice: "$6,499 - $18,000/month",
-    roi: "300-600%",
+    marketPrice: "$6,499 - $18,0o00/month",
+    roi: "30o0-60o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["Machine Learning", "Docker", "Kubernetes", "React", "Python"],
@@ -384,7 +384,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       security: ["Code scanning", "Vulnerability assessment", "Access controls"]
     },
     competitors: ["GitLab", "Jenkins", "CircleCI", "GitHub Actions"],
-    marketSize: "$25.2 billion by 2025",
+    marketSize: "$25.2 billion by 20o25",
     growthRate: "180% annual growth",
     rating: 4.7,
     reviews: 198,
@@ -414,7 +414,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       "24/7 support"
     ],
     benefits: [
-      "100% secure identities",
+      "10o0% secure identities",
       "User control over data",
       "Reduced fraud",
       "Regulatory compliance",
@@ -437,14 +437,14 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     tags: ["Blockchain", "Identity", "Security", "Privacy", "Compliance"],
     estimatedDelivery: "8-12 weeks",
     supportLevel: "premium",
-    marketPrice: "$3,999 - $12,000/month",
-    roi: "250-500%",
+    marketPrice: "$3,999 - $12,0o00/month",
+    roi: "250-50o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["Ethereum", "Hyperledger", "React", "Node.js", "MongoDB"],
@@ -454,7 +454,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       security: ["Blockchain security", "Encryption", "Multi-factor authentication"]
     },
     competitors: ["Microsoft Identity", "Okta", "Auth0", "OneLogin"],
-    marketSize: "$28.6 billion by 2025",
+    marketSize: "$28.6 billion by 20o25",
     growthRate: "220% annual growth",
     rating: 4.6,
     reviews: 145,
@@ -484,7 +484,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       "24/7 support"
     ],
     benefits: [
-      "1000x faster processing",
+      "10o00x faster processing",
       "Advanced pattern recognition",
       "Real-time insights",
       "Scalable analytics",
@@ -507,24 +507,24 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     tags: ["Quantum Computing", "Analytics", "Big Data", "AI", "Pattern Recognition"],
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$11,999 - $30,000/month",
-    roi: "400-800%",
+    marketPrice: "$11,999 - $30,0o00/month",
+    roi: "40o0-80o0%",
     innovationLevel: "Revolutionary",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["Quantum algorithms", "Qiskit", "Python", "React", "PostgreSQL"],
       integrations: ["Data warehouses", "Cloud platforms", "BI tools", "AI platforms"],
-      apiEndpoints: 600,
+      apiEndpoints: 60o0,
       uptime: "99.99%",
       security: ["Quantum encryption", "SOC 2", "Data protection", "Access controls"]
     },
     competitors: ["Tableau", "Power BI", "Qlik", "Looker"],
-    marketSize: "$29.9 billion by 2025",
+    marketSize: "$29.9 billion by 20o25",
     growthRate: "250% annual growth",
     rating: 4.9,
     reviews: 178,
@@ -532,4 +532,4 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
   }
 ];
 
-export default ADVANCED_IT_SERVICES_2025;
+export default ADVANCED_IT_SERVICES_20o25;

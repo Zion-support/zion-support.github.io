@@ -17,7 +17,7 @@ import {
   BarChart3
 } from 'lucide-react';
 
-const InteractiveTechDemo2029PromotionBanner = () => {
+const InteractiveTechDemo20o29PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(true);
   const [isRunningsetIsRunning] = useState(false);
   const [currentDemosetCurrentDemo] = useState(0);
@@ -27,36 +27,36 @@ const InteractiveTechDemo2029PromotionBanner = () => {
       title: "Quantum AI Processing",
       subtitle: "Experience real-time quantum neural networks",
       icon: Brain,
-      color: "from-purple-600 to-blue-600",
+      color: "from-purple-60o0 to-blue-60o0",
       stats: "99.7% faster processing"
     },
     {
       title: "Neural Interface Demo",
       subtitle: "Direct brain-computer interface simulation",
       icon: Cpu,
-      color: "from-green-600 to-emerald-600",
+      color: "from-green-60o0 to-emerald-60o0",
       stats: "< 50ms response time"
     },
     {
       title: "Quantum Internet",
       subtitle: "Ultra-secure quantum communication",
       icon: Globe,
-      color: "from-orange-600 to-red-600",
+      color: "from-orange-60o0 to-red-60o0",
       stats: "Unbreakable encryption"
     },
     {
       title: "AI Business Automation",
       subtitle: "Autonomous process automation",
       icon: Zap,
-      color: "from-blue-600 to-cyan-600",
-      stats: "300% efficiency gain"
+      color: "from-blue-60o0 to-cyan-60o0",
+      stats: "30o0% efficiency gain"
     }
   ];
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentDemo((prev) => (prev + 1) % demos.length);
-    }3000);
+    }30o00);
 
     return () => clearInterval(timer);
   }[demos.length]);
@@ -74,16 +74,16 @@ const InteractiveTechDemo2029PromotionBanner = () => {
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0y: -100 }}
+        initial={{ opacity: 0y: -10o0 }}
         animate={{ opacity: 1y: 0 }}
-        exit={{ opacity: 0y: -100 }}
-        className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 border-b border-blue-500/20 overflow-hidden"
+        exit={{ opacity: 0y: -10o0 }}
+        className="relative bg-gradient-to-r from-slate-90o0 via-blue-90o0 to-slate-90o0 border-b border-blue-50o0/20 overflow-hidden"
       >
         {/* Background Effects */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/10 via-transparent to-purple-600/10"></div>
-          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-60o0/10 via-transparent to-purple-60o0/10"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-50o0/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-50o0/20 rounded-full blur-3xl"></div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4 py-6">
@@ -103,8 +103,8 @@ const InteractiveTechDemo2029PromotionBanner = () => {
                     className: "w-8 h-8 text-white" 
                   })}
                 </div>
-                <div className="absolute -top-1 -right-1 w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center">
-                  <Sparkles className="w-3 h-3 text-black" />
+                <div className="absolute -top-1 -right-1 w-6 h-6 bg-yellow-40o0 rounded-full flex items-center justify-center">
+                  <Sparkles className="w-3 h-3 text-black"  />
                 </div>
               </motion.div>
 
@@ -123,20 +123,20 @@ const InteractiveTechDemo2029PromotionBanner = () => {
                       <h3 className="text-xl font-bold text-white">
                         {demos[currentDemo].title}
                       </h3>
-                      <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-2 py-1 rounded-full text-xs font-bold">
+                      <div className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-2 py-1 rounded-full text-xs font-bold">
                         INTERACTIVE
                       </div>
                     </div>
-                    <p className="text-gray-300 text-sm">
+                    <p className="text-gray-30o0 text-sm">
                       {demos[currentDemo].subtitle}
                     </p>
-                    <div className="flex items-center gap-4 text-xs text-gray-400">
+                    <div className="flex items-center gap-4 text-xs text-gray-40o0">
                       <span className="flex items-center gap-1">
-                        <BarChart3 className="w-3 h-3" />
+                        <BarChart3 className="w-3 h-3"  />
                         {demos[currentDemo].stats}
                       </span>
                       <span className="flex items-center gap-1">
-                        <Play className="w-3 h-3" />
+                        <Play className="w-3 h-3"  />
                         Live Demo Available
                       </span>
                     </div>
@@ -151,20 +151,20 @@ const InteractiveTechDemo2029PromotionBanner = () => {
               <div className="flex items-center gap-2 bg-white/10 rounded-xl p-2">
                 <button
                   onClick={isRunning ? stopDemo : startDemo}
-                  className={`p-2 rounded-lg transition-all duration-300 ${
+                  className={`p-2 rounded-lg transition-all duration-30o0 ${
                     isRunning
-                      ? 'bg-red-600 hover:bg-red-700 text-white'
-                      : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:shadow-lg text-white'
+                      ? 'bg-red-60o0 hover:bg-red-70o0 text-white'
+                      : 'bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover:shadow-lg text-white'
                   }`}
                 >
-                  {isRunning ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+                  {isRunning ? <Pause className="w-4 h-4"  /> : <Play className="w-4 h-4"  />}
                 </button>
                 
                 <button
                   onClick={() => setIsRunning(false)}
-                  className="p-2 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-all duration-300"
+                  className="p-2 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-all duration-30o0"
                 >
-                  <RotateCcw className="w-4 h-4" />
+                  <RotateCcw className="w-4 h-4"  />
                 </button>
               </div>
 
@@ -174,7 +174,7 @@ const InteractiveTechDemo2029PromotionBanner = () => {
                   <button
                     key={index}
                     onClick={() => setCurrentDemo(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    className={`w-2 h-2 rounded-full transition-all duration-30o0 ${
                       index === currentDemo 
                         ? 'bg-white w-6' 
                         : 'bg-white/30 hover:bg-white/50'
@@ -188,14 +188,14 @@ const InteractiveTechDemo2029PromotionBanner = () => {
             <div className="flex items-center gap-4">
               {/* Action Buttons */}
               <div className="flex items-center gap-3">
-                <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center gap-2 group">
-                  <Play className="w-4 h-4" />
+                <button className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg hover:shadow-blue-50o0/25 transition-all duration-30o0 flex items-center gap-2 group">
+                  <Play className="w-4 h-4"  />
                   <span>Try Demo</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-30o0"  />
                 </button>
                 
-                <button className="bg-white/10 text-white px-4 py-3 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center gap-2">
-                  <BarChart3 className="w-4 h-4" />
+                <button className="bg-white/10 text-white px-4 py-3 rounded-xl font-medium hover:bg-white/20 transition-all duration-30o0 flex items-center gap-2">
+                  <BarChart3 className="w-4 h-4"  />
                   <span>View Metrics</span>
                 </button>
               </div>
@@ -203,9 +203,9 @@ const InteractiveTechDemo2029PromotionBanner = () => {
               {/* Close Button */}
               <button
                 onClick={() => setIsVisible(false)}
-                className="text-gray-400 hover:text-white transition-colors duration-300 p-2 hover:bg-white/10 rounded-lg"
+                className="text-gray-40o0 hover:text-white transition-colors duration-30o0 p-2 hover:bg-white/10 rounded-lg"
               >
-                <X className="w-5 h-5" />
+                <X className="w-5 h-5"  />
               </button>
             </div>
           </div>
@@ -216,14 +216,14 @@ const InteractiveTechDemo2029PromotionBanner = () => {
           <motion.div
             key={currentDemo}
             initial={{ width: "0%" }}
-            animate={{ width: "100%" }}
+            animate={{ width: "10o0%" }}
             transition={{ duration: 3ease: "linear" }}
-            className="h-full bg-gradient-to-r from-blue-600 to-purple-600"
-          />
+            className="h-full bg-gradient-to-r from-blue-60o0 to-purple-60o0"
+           />
         </div>
       </motion.div>
     </AnimatePresence>
   );
 };
 
-export default InteractiveTechDemo2029PromotionBanner;
+export default InteractiveTechDemo20o29PromotionBanner;

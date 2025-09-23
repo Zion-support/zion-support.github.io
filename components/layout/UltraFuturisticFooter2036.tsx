@@ -28,16 +28,16 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 
-const UltraFuturisticFooter2036: React.FC = () => {
+const UltraFuturisticFooter20o36: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
 const footerSections = [
   {
     title: 'Featured Services',
     description: 'Our most popular and innovative solutions',
-    icon: <Star className="w-5 h-5 text-yellow-400" />,
+    icon: <Star className="w-5 h-5 text-yellow-40o0"  />,
     links: [
-      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029', featured: true },
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-20o29', featured: true },
       { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform', featured: true },
       { name: 'Autonomous Business Operations', href: '/autonomous-business-operations-platform', featured: true },
       { name: 'Space Resource Mining', href: '/space-resource-mining-platform', featured: true },
@@ -52,9 +52,9 @@ const footerSections = [
   {
     title: 'AI & Consciousness',
     description: 'Revolutionary AI platforms and solutions',
-    icon: <Brain className="w-5 h-5 text-cyan-400" />,
+    icon: <Brain className="w-5 h-5 text-cyan-40o0"  />,
     links: [
-      { name: 'AI Consciousness Evolution 2029', href: '/ai-consciousness-evolution-2029' },
+      { name: 'AI Consciousness Evolution 20o29', href: '/ai-consciousness-evolution-20o29' },
       { name: 'AI Emotional Intelligence Training', href: '/ai-emotional-intelligence-training' },
       { name: 'AI Autonomous Business Operations', href: '/autonomous-business-operations-platform' },
       { name: 'AI Autonomous Research Assistant', href: '/ai-autonomous-research-assistant' },
@@ -69,7 +69,7 @@ const footerSections = [
   {
     title: 'Quantum & Emerging Tech',
     description: 'Breakthrough quantum and space technologies',
-    icon: <Atom className="w-5 h-5 text-blue-400" />,
+    icon: <Atom className="w-5 h-5 text-blue-40o0"  />,
     links: [
       { name: 'Quantum Neural Network Platform', href: '/quantum-neural-network-platform' },
       { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform' },
@@ -86,7 +86,7 @@ const footerSections = [
   {
     title: 'Enterprise IT Solutions',
     description: 'Advanced enterprise infrastructure solutions',
-    icon: <Shield className="w-5 h-5 text-purple-400" />,
+    icon: <Shield className="w-5 h-5 text-purple-40o0"  />,
     links: [
       { name: 'Quantum-Secure Cloud Infrastructure', href: '/quantum-secure-cloud-infrastructure' },
       { name: 'Autonomous IT Operations Center', href: '/autonomous-it-operations-center' },
@@ -103,7 +103,7 @@ const footerSections = [
   {
     title: 'Micro SAAS Solutions',
     description: 'Innovative business solutions for modern enterprises',
-    icon: <Rocket className="w-5 h-5 text-emerald-400" />,
+    icon: <Rocket className="w-5 h-5 text-emerald-40o0"  />,
     links: [
       { name: 'AI Content Generator', href: '/ai-content-generator' },
       { name: 'AI Code Review', href: '/ai-code-review' },
@@ -120,27 +120,27 @@ const footerSections = [
 ];
 
 const socialLinks = [
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
-  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5" /> },
-  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" /> },
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" /> },
-  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: <Github className="w-5 h-5" /> }
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5"  /> },
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5"  /> },
+  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5"  /> },
+  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5"  /> },
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5"  /> },
+  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: <Github className="w-5 h-5"  /> }
 ];
 
-export default function UltraFuturisticFooter2036() {
+export default function UltraFuturisticFooter20o36() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const fadeInUp = {
+  const fadeInUp ={
     initial: { opacity: 0, y: 30 },
     whileInView: { opacity: 1, y: 0 },
     transition: { duration: 0.6 },
     viewport: { once: true }
   };
 
-  const staggerContainer = {
+  const staggerContainer ={
     animate: {
       transition: {
         staggerChildren: 0.1
@@ -149,10 +149,10 @@ export default function UltraFuturisticFooter2036() {
   };
 
   return (
-    <footer className="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 border-t border-gray-800/50 overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-gray-90o0 via-black to-gray-90o0 border-t border-gray-80o0/50 overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(6,182,212,0.05),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.05),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(6,182,212,0.0o5),transparent_50%)]"  />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.0o5),transparent_50%)]"  />
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
@@ -168,37 +168,37 @@ export default function UltraFuturisticFooter2036() {
             {/* Company Info */}
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center">
-                  <Sparkles className="w-7 h-7 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-2xl flex items-center justify-center">
+                  <Sparkles className="w-7 h-7 text-white"  />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                  <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-40o0 to-blue-50o0 bg-clip-text text-transparent">
                     Zion Tech Group
                   </h3>
-                  <p className="text-sm text-gray-400">Pioneering the Future of Technology</p>
+                  <p className="text-sm text-gray-40o0">Pioneering the Future of Technology</p>
                 </div>
               </div>
               
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-gray-30o0 mb-6 leading-relaxed">
                 Empowering businesses with cutting-edge AI, quantum computing, and innovative solutions that drive digital transformation and competitive advantage.
               </p>
               
               {/* Contact Information */}
               <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors">
-                  <Phone className="w-4 h-4" />
+                <div className="flex items-center space-x-3 text-gray-30o0 hover:text-cyan-40o0 transition-colors">
+                  <Phone className="w-4 h-4"  />
                   <a href={`tel:${contactInfo.mobile}`} className="hover:underline">
                     {contactInfo.mobile}
                   </a>
                 </div>
-                <div className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors">
-                  <Mail className="w-4 h-4" />
+                <div className="flex items-center space-x-3 text-gray-30o0 hover:text-cyan-40o0 transition-colors">
+                  <Mail className="w-4 h-4"  />
                   <a href={`mailto:${contactInfo.email}`} className="hover:underline">
                     {contactInfo.email}
                   </a>
                 </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <MapPin className="w-4 h-4" />
+                <div className="flex items-center space-x-3 text-gray-30o0">
+                  <MapPin className="w-4 h-4"  />
                   <span>{contactInfo.address}</span>
                 </div>
               </div>
@@ -220,18 +220,18 @@ export default function UltraFuturisticFooter2036() {
                       {section.icon}
                       <h4 className="text-lg font-semibold text-white">{section.title}</h4>
                     </div>
-                    <p className="text-sm text-gray-400 mb-4">{section.description}</p>
+                    <p className="text-sm text-gray-40o0 mb-4">{section.description}</p>
                     <ul className="space-y-2">
                       {section.links.slice(0, 5).map((link) => (
                         <li key={link.name}>
                           <Link
                             href={link.href}
-                            className="text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group"
+                            className="text-sm text-gray-30o0 hover:text-cyan-40o0 transition-colors duration-20o0 flex items-center space-x-2 group"
                           >
-                            <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                            <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform"  />
                             <span className="hover:underline">{link.name}</span>
                             {link.featured && (
-                              <span className="px-2 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-xs text-white rounded-full">
+                              <span className="px-2 py-1 bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-xs text-white rounded-full">
                                 Featured
                               </span>
                             )}
@@ -254,10 +254,10 @@ export default function UltraFuturisticFooter2036() {
             className="mb-16"
           >
             <div className="text-center mb-12">
-              <h3 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-4">
+              <h3 className="text-3xl font-bold bg-gradient-to-r from-purple-40o0 to-pink-50o0 bg-clip-text text-transparent mb-4">
                 Complete Service Portfolio
               </h3>
-              <p className="text-gray-300 max-w-2xl mx-auto">
+              <p className="text-gray-30o0 max-w-2xl mx-auto">
                 Explore our comprehensive range of cutting-edge technology solutions designed to accelerate your business growth
               </p>
             </div>
@@ -270,19 +270,19 @@ export default function UltraFuturisticFooter2036() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="p-6 bg-gradient-to-br from-gray-800/30 to-gray-700/30 border border-gray-700/30 rounded-2xl hover:border-cyan-500/30 transition-all duration-300 hover:transform hover:scale-105"
+                  className="p-6 bg-gradient-to-br from-gray-80o0/30 to-gray-70o0/30 border border-gray-70o0/30 rounded-2xl hover:border-cyan-50o0/30 transition-all duration-30o0 hover:transform hover:scale-10o5"
                 >
                   <div className="flex items-center space-x-3 mb-4">
                     {section.icon}
                     <h4 className="text-lg font-semibold text-white">{section.title}</h4>
                   </div>
-                  <p className="text-sm text-gray-400 mb-4">{section.description}</p>
+                  <p className="text-sm text-gray-40o0 mb-4">{section.description}</p>
                   <div className="space-y-2">
                     {section.links.slice(0, 3).map((link) => (
                       <Link
                         key={link.name}
                         href={link.href}
-                        className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-200 hover:translate-x-1 transform"
+                        className="block text-sm text-gray-30o0 hover:text-cyan-40o0 transition-colors duration-20o0 hover:translate-x-1 transform"
                       >
                         {link.name}
                       </Link>
@@ -299,11 +299,11 @@ export default function UltraFuturisticFooter2036() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="flex flex-col lg:flex-row items-center justify-between gap-8 py-8 border-t border-gray-800/50"
+            className="flex flex-col lg:flex-row items-center justify-between gap-8 py-8 border-t border-gray-80o0/50"
           >
             {/* Social Links */}
             <div className="flex items-center space-x-6">
-              <span className="text-gray-400 font-medium">Follow Us:</span>
+              <span className="text-gray-40o0 font-medium">Follow Us:</span>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
@@ -315,7 +315,7 @@ export default function UltraFuturisticFooter2036() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="w-10 h-10 bg-gradient-to-r from-gray-800 to-gray-700 border border-gray-600/30 rounded-xl flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:border-cyan-500/50 hover:bg-gray-800/80 transition-all duration-300 hover:transform hover:scale-110"
+                    className="w-10 h-10 bg-gradient-to-r from-gray-80o0 to-gray-70o0 border border-gray-60o0/30 rounded-xl flex items-center justify-center text-gray-40o0 hover:text-cyan-40o0 hover:border-cyan-50o0/50 hover:bg-gray-80o0/80 transition-all duration-30o0 hover:transform hover:scale-110"
                   >
                     {social.icon}
                   </motion.a>
@@ -324,7 +324,7 @@ export default function UltraFuturisticFooter2036() {
 
               {/* Copyright */}
               <motion.div 
-                className="text-center md:text-right text-gray-400"
+                className="text-center md:text-right text-gray-40o0"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
@@ -332,17 +332,17 @@ export default function UltraFuturisticFooter2036() {
               >
                 <p className="flex items-center justify-center md:justify-end space-x-1">
                   <span>© {currentYear} Zion Tech Group. All rights reserved.</span>
-                  <Heart className="w-4 h-4 text-red-400 mx-1" />
+                  <Heart className="w-4 h-4 text-red-40o0 mx-1"  />
                   <span>Made with innovation</span>
                 </p>
                 <div className="flex items-center justify-center md:justify-end space-x-4 mt-2 text-sm">
-                  <Link href="/privacy" className="hover:text-cyan-400 transition-colors">
+                  <Link href="/privacy" className="hover:text-cyan-40o0 transition-colors">
                     Privacy Policy
                   </Link>
-                  <Link href="/terms" className="hover:text-cyan-400 transition-colors">
+                  <Link href="/terms" className="hover:text-cyan-40o0 transition-colors">
                     Terms of Service
                   </Link>
-                  <Link href="/cookies" className="hover:text-cyan-400 transition-colors">
+                  <Link href="/cookies" className="hover:text-cyan-40o0 transition-colors">
                     Cookie Policy
                   </Link>
                 </div>
@@ -355,9 +355,9 @@ export default function UltraFuturisticFooter2036() {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="px-4 py-2 bg-gray-800/50 border border-gray-600/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300 w-64"
-                />
-                <button className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+                  className="px-4 py-2 bg-gray-80o0/50 border border-gray-60o0/30 rounded-xl text-white placeholder-gray-40o0 focus:outline-none focus:border-cyan-50o0/50 focus:ring-2 focus:ring-cyan-50o0/20 transition-all duration-30o0 w-64"
+                 />
+                <button className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-1 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white text-sm rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0">
                   Subscribe
                 </button>
               </div>
@@ -371,23 +371,23 @@ export default function UltraFuturisticFooter2036() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="py-6 border-t border-gray-800/50"
+          className="py-6 border-t border-gray-80o0/50"
         >
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
             <div className="text-center lg:text-left">
-              <p className="text-gray-400 text-sm">
-                © 2025 Zion Tech Group. All rights reserved. | 
-                <Link href="/privacy" className="hover:text-cyan-400 transition-colors ml-1">Privacy Policy</Link> | 
-                <Link href="/terms" className="hover:text-cyan-400 transition-colors ml-1">Terms of Service</Link>
+              <p className="text-gray-40o0 text-sm">
+                © 20o25 Zion Tech Group. All rights reserved. | 
+                <Link href="/privacy" className="hover:text-cyan-40o0 transition-colors ml-1">Privacy Policy</Link> | 
+                <Link href="/terms" className="hover:text-cyan-40o0 transition-colors ml-1">Terms of Service</Link>
               </p>
             </div>
             
             <div className="flex items-center space-x-4">
               <button
                 onClick={scrollToTop}
-                className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 hover:transform hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/25"
+                className="w-10 h-10 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-xl flex items-center justify-center text-white hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 hover:transform hover:scale-110 hover:shadow-lg hover:shadow-cyan-50o0/25"
               >
-                <ArrowUp className="w-5 h-5" />
+                <ArrowUp className="w-5 h-5"  />
               </button>
             </div>
           </div>
@@ -397,4 +397,4 @@ export default function UltraFuturisticFooter2036() {
   );
 };
 
-export default UltraFuturisticFooter2036;
+export default UltraFuturisticFooter20o36;

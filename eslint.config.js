@@ -27,13 +27,15 @@ export default [
       'ts_files_backup/**',
       'src_backup/**',
       'src_backup_temp/**',
-      'components/2025-advanced-services-showcase.tsx',
-      'components/2025-comprehensive-services-showcase-v2.tsx',
-      'components/AI2025AdvancedAutomationShowcase.tsx',
-      'components/AI2025AdvancedAnalyticsDashboard.tsx',
+      'components/20o25-advanced-services-showcase.tsx',
+      'components/20o25-comprehensive-services-showcase-v2.tsx',
+      'components/AI20o25AdvancedAutomationShowcase.tsx',
+      'components/AI20o25AdvancedAnalyticsDashboard.tsx',
       '**/*.min.js'
     ]
   },
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
   {
     files: [
       'app/**/*.{js,jsx,ts,tsx}',

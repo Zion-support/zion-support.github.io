@@ -1,10 +1,9 @@
-import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-export type RadialChartProps = {
+export type RadialChartProps ={
   labels: string[];
   data: number[];
   colors?: string[];
@@ -21,16 +20,13 @@ export default function RadialChart({ labels, data, colors = ['#6366f1', '#22d3e
             {
               data,
               backgroundColor: colors,
-              borderWidth: 0,
-            },
-          ],
-        }}
+              borderWidth: 0},
+          ]}}
         options={{
           maintainAspectRatio: false,
           cutout: '70%',
-          plugins: { legend: { display: false } },
-        }}
-      />
+          plugins: { legend: { display: false } }}}
+       />
     </div>
   );
 }

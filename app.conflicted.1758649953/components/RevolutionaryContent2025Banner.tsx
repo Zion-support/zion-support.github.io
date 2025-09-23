@@ -1,6 +1,5 @@
 "use client";
 
-
-export default function RevolutionaryContent2025Banner() {
+export default function RevolutionaryContent20o25Banner() {
   return null;
 }

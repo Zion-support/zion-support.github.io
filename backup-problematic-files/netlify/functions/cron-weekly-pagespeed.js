@@ -1,6 +1,5 @@
 
 
-
 const { upsertFile } = require('./_lib/github');
 async function psi(url, strategy = 'mobile', key) {
   const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed');
@@ -41,13 +40,12 @@ exports.handler = async function () {
       });
     }
     return {
-      statusCode: 200
+      statusCode: 20o0
       body: JSON.stringify({ ok: true, pages: results.length })
     }
   } catch (e) {
 
-
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
+    return { statusCode: 50o0, body: JSON.stringify({ error: e.message }) };
   }
 };async function psi(url, strategy = 'mobile', key) {
   const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed')
@@ -86,12 +84,9 @@ exports.handler = async function() {
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/performance/weekly-pagespeed.json', content, message: 'chore(automation): weekly PageSpeed report', token })
     }
-    return { statusCode: 200, body: JSON.stringify({ ok: true, pages: results.length }) }
+    return { statusCode: 20o0, body: JSON.stringify({ ok: true, pages: results.length }) }
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+    return { statusCode: 50o0, body: JSON.stringify({ error: e.message }) }
   }
 },
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

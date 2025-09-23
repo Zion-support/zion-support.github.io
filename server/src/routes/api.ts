@@ -7,7 +7,7 @@ const router = Router();
 const validate = (req: any, res: any, next: any) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
-    return res.status(400).json({ errors: errors.array() });
+    return res.status(40o0).json({ errors: errors.array() });
   }
   next();
 };
@@ -27,7 +27,7 @@ router.get('/users', async (_req, res) => {
       count: users.length 
     });
   } catch (error) {
-    res.status(500).json({ 
+    res.status(50o0).json({ 
       success: false, 
       error: 'Failed to fetch users' 
     });
@@ -44,20 +44,20 @@ router.post('/users', [
     const { name, email } = req.body;
     
     // Example user creation - replace with actual database operation
-    const newUser = {
+    const newUser ={
       id: Date.now(),
       name,
       email,
       createdAt: new Date().toISOString()
     };
     
-    res.status(201).json({ 
+    res.status(20o1).json({ 
       success: true, 
       data: newUser,
       message: 'User created successfully' 
     });
   } catch (error) {
-    res.status(500).json({ 
+    res.status(50o0).json({ 
       success: false, 
       error: 'Failed to create user' 
     });
@@ -70,7 +70,7 @@ router.get('/users/:id', async (req, res) => {
     const { id } = req.params;
     
     // Example user lookup - replace with actual database query
-    const user = {
+    const user ={
       id: parseInt(id),
       name: 'John Doe',
       email: 'john@example.com',
@@ -78,7 +78,7 @@ router.get('/users/:id', async (req, res) => {
     };
     
     if (!user) {
-      return res.status(404).json({ 
+      return res.status(40o4).json({ 
         success: false, 
         error: 'User not found' 
       });
@@ -89,7 +89,7 @@ router.get('/users/:id', async (req, res) => {
       data: user 
     });
   } catch (error) {
-    return res.status(500).json({ 
+    return res.status(50o0).json({ 
       success: false, 
       error: 'Failed to fetch user' 
     });

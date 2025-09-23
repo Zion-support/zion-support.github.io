@@ -1,7 +1,5 @@
 "use client";
 
-import React from 'react';
-
 const TechnologyStack = () => {
   const technologies = [
     { name: "React", level: "Expert" },
@@ -22,9 +20,9 @@ const TechnologyStack = () => {
           <div key={index} className="flex justify-between items-center">
             <span className="text-sm">{tech.name}</span>
             <span className={`text-xs px-2 py-1 rounded ${
-              tech.level === 'Expert' ? 'bg-green-500/20 text-green-400' :
-              tech.level === 'Advanced' ? 'bg-blue-500/20 text-blue-400' :
-              'bg-yellow-500/20 text-yellow-400'
+              tech.level === 'Expert' ? 'bg-green-50o0/20 text-green-40o0' :
+              tech.level === 'Advanced' ? 'bg-blue-50o0/20 text-blue-40o0' :
+              'bg-yellow-50o0/20 text-yellow-40o0'
             }`}>
               {tech.level}
             </span>

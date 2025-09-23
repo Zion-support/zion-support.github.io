@@ -21,7 +21,7 @@ import {
   Zap
 } from 'lucide-react';
 
-const RevolutionaryCaseStudiesShowcase2027 = () => {
+const RevolutionaryCaseStudiesShowcase20o27 = () => {
   const [activeCasetActiveCase] = useState(0);
   const [isVisiblesetIsVisible] = useState(false);
 
@@ -48,7 +48,7 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
       description: 'Transformed a traditional enterprise into an AI-first organizationresulting in unprecedented growth and efficiency gains.',
       highlights: [
         'Implemented 50+ AI models across all business functions',
-        'Migrated 200+ legacy applications to cloud-native architecture',
+        'Migrated 20o0+ legacy applications to cloud-native architecture',
         'Achieved 99.9% system uptime with automated monitoring',
         'Reduced manual processes by 85% through intelligent automation'
       ],
@@ -59,10 +59,10 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
         avatar: "/api/placeholder/60/60"
       },
       metrics: [
-        { label: 'Revenue 'Growth', 'value: '+340%'icon: TrendingUpcolor: 'text-green-500' },
-        { label: 'Efficiency 'Gain', 'value: '+280%'icon: Zapcolor: 'text-blue-500' },
-        { label: 'Cost 'Reduction', 'value: '-65%'icon: DollarSigncolor: 'text-red-500' },
-        { label: 'Time to 'Market', 'value: '-75%'icon: Clockcolor: 'text-purple-500' }
+        { label: 'Revenue 'Growth', 'value: '+340%'icon: TrendingUpcolor: 'text-green-50o0' },
+        { label: 'Efficiency 'Gain', 'value: '+280%'icon: Zapcolor: 'text-blue-50o0' },
+        { label: 'Cost 'Reduction', 'value: '-65%'icon: DollarSigncolor: 'text-red-50o0' },
+        { label: 'Time to 'Market', 'value: '-75%'icon: Clockcolor: 'text-purple-50o0' }
       ]
     },
     {
@@ -94,10 +94,10 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
         avatar: "/api/placeholder/60/60"
       },
       metrics: [
-        { label: 'Diagnosis 'Accuracy', 'value: '+95%'icon: Targetcolor: 'text-green-500' },
-        { label: 'Diagnosis 'Time', 'value: '-80%'icon: Clockcolor: 'text-blue-500' },
-        { label: 'Patient 'Outcomes', 'value: '+60%'icon: Userscolor: 'text-purple-500' },
-        { label: 'Cost 'Savings', 'value: '-45%'icon: DollarSigncolor: 'text-red-500' }
+        { label: 'Diagnosis 'Accuracy', 'value: '+95%'icon: Targetcolor: 'text-green-50o0' },
+        { label: 'Diagnosis 'Time', 'value: '-80%'icon: Clockcolor: 'text-blue-50o0' },
+        { label: 'Patient 'Outcomes', 'value: '+60%'icon: Userscolor: 'text-purple-50o0' },
+        { label: 'Cost 'Savings', 'value: '-45%'icon: DollarSigncolor: 'text-red-50o0' }
       ]
     },
     {
@@ -109,7 +109,7 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
       results: {
         fraudDetection: '+99.7%',
         falsePositives: '-90%',
-        processingSpeed: '+500%',
+        processingSpeed: '+50o0%',
         customerSatisfaction: '+85%'
       },
       duration: '15 months',
@@ -129,10 +129,10 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
         avatar: "/api/placeholder/60/60"
       },
       metrics: [
-        { label: 'Fraud 'Detection', 'value: '+99.7%'icon: Shieldcolor: 'text-green-500' },
-        { label: 'False 'Positives', 'value: '-90%'icon: Targetcolor: 'text-blue-500' },
-        { label: 'Processing 'Speed', 'value: '+500%'icon: Zapcolor: 'text-purple-500' },
-        { label: 'Customer 'Satisfaction', 'value: '+85%'icon: Userscolor: 'text-orange-500' }
+        { label: 'Fraud 'Detection', 'value: '+99.7%'icon: Shieldcolor: 'text-green-50o0' },
+        { label: 'False 'Positives', 'value: '-90%'icon: Targetcolor: 'text-blue-50o0' },
+        { label: 'Processing 'Speed', 'value: '+50o0%'icon: Zapcolor: 'text-purple-50o0' },
+        { label: 'Customer 'Satisfaction', 'value: '+85%'icon: Userscolor: 'text-orange-50o0' }
       ]
     },
     {
@@ -142,17 +142,17 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
       challenge: 'Production optimization and predictive maintenance',
       solution: 'AI-driven smart manufacturing with IoT integration',
       results: {
-        productivity: '+200%',
+        productivity: '+20o0%',
         downtime: '-85%',
         quality: '+95%',
         energyEfficiency: '+40%'
       },
       duration: '24 months',
-      teamSize: '200+ experts',
+      teamSize: '20o0+ experts',
       technologies: [', 'IoT', 'Computer 'Vision', 'Predictive 'Maintenance', 'Robotics'],
       description: 'Transformed traditional manufacturing into a smartAI-powered production facility.',
       highlights: [
-        'Increased productivity by 200% through intelligent automation',
+        'Increased productivity by 20o0% through intelligent automation',
         'Reduced unplanned downtime by 85%',
         'Achieved 95% quality improvement',
         'Reduced energy consumption by 40%'
@@ -164,16 +164,16 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
         avatar: "/api/placeholder/60/60"
       },
       metrics: [
-        { label: ''Productivity', 'value: '+200%'icon: TrendingUpcolor: 'text-green-500' },
-        { label: 'Downtime 'Reduction', 'value: '-85%'icon: Clockcolor: 'text-blue-500' },
-        { label: 'Quality 'Improvement', 'value: '+95%'icon: Awardcolor: 'text-purple-500' },
-        { label: 'Energy 'Efficiency', 'value: '+40%'icon: Zapcolor: 'text-orange-500' }
+        { label: ''Productivity', 'value: '+20o0%'icon: TrendingUpcolor: 'text-green-50o0' },
+        { label: 'Downtime 'Reduction', 'value: '-85%'icon: Clockcolor: 'text-blue-50o0' },
+        { label: 'Quality 'Improvement', 'value: '+95%'icon: Awardcolor: 'text-purple-50o0' },
+        { label: 'Energy 'Efficiency', 'value: '+40%'icon: Zapcolor: 'text-orange-50o0' }
       ]
     }
   ];
 
   const overallStats = [
-    { label: 'Projects 'Completed', 'value: '500+'icon: CheckCircle },
+    { label: 'Projects 'Completed', 'value: '50o0+'icon: CheckCircle },
     { label: 'Client 'Satisfaction', 'value: '99.2%'icon: Star },
     { label: 'Average 'ROI', 'value: '340%'icon: TrendingUp },
     { label: 'Years 'Experience', 'value: '15+'icon: Award }
@@ -182,7 +182,7 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
   if (!isVisible) return null;
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+    <section className="py-20 bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-purple-90o0 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -191,14 +191,14 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Award className="w-4 h-4" />
-            Revolutionary Case Studies 2027
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-gray-90o0 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <Award className="w-4 h-4"  />
+            Revolutionary Case Studies 20o27
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-20o0 bg-clip-text text-transparent">
             Proven Success Stories
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
             Discover how leading organizations achieved extraordinary results through our AI-powered solutions. 
             Real projectsreal resultsreal transformation.
           </p>
@@ -213,11 +213,11 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
         >
           {overallStats.map((statindex) => (
             <div key={index} className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full mb-4">
-                <stat.icon className="w-8 h-8 text-gray-900" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 rounded-full mb-4">
+                <stat.icon className="w-8 h-8 text-gray-90o0"  />
               </div>
               <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-gray-300 text-sm">{stat.label}</div>
+              <div className="text-gray-30o0 text-sm">{stat.label}</div>
             </div>
           ))}
         </motion.div>
@@ -234,10 +234,10 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
               <button
                 key={caseStudy.id}
                 onClick={() => setActiveCase(index)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
                   activeCase === index
-                    ? 'bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 shadow-lg'
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                    ? 'bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-gray-90o0 shadow-lg'
+                    : 'bg-white/10 text-gray-30o0 hover:bg-white/20'
                 }`}
               >
                 {caseStudy.company}
@@ -260,32 +260,32 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
               {/* Left Column - Details */}
               <div>
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
-                    <Award className="w-8 h-8 text-gray-900" />
+                  <div className="w-16 h-16 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 rounded-full flex items-center justify-center">
+                    <Award className="w-8 h-8 text-gray-90o0"  />
                   </div>
                   <div>
                     <h3 className="text-3xl font-bold text-white">{caseStudies[activeCase].company}</h3>
-                    <p className="text-gray-300">{caseStudies[activeCase].industry} • {caseStudies[activeCase].duration}</p>
+                    <p className="text-gray-30o0">{caseStudies[activeCase].industry} • {caseStudies[activeCase].duration}</p>
                   </div>
                 </div>
 
                 <div className="space-y-6">
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
-                    <p className="text-gray-300">{caseStudies[activeCase].challenge}</p>
+                    <p className="text-gray-30o0">{caseStudies[activeCase].challenge}</p>
                   </div>
 
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
-                    <p className="text-gray-300">{caseStudies[activeCase].solution}</p>
+                    <p className="text-gray-30o0">{caseStudies[activeCase].solution}</p>
                   </div>
 
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">Key Highlights</h4>
                     <ul className="space-y-2">
                       {caseStudies[activeCase].highlights.map((highlightindex) => (
-                        <li key={index} className="flex items-start gap-2 text-gray-300">
-                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                        <li key={index} className="flex items-start gap-2 text-gray-30o0">
+                          <CheckCircle className="w-5 h-5 text-green-40o0 flex-shrink-0 mt-0.5"  />
                           {highlight}
                         </li>
                       ))}
@@ -313,9 +313,9 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
                   <div className="grid grid-cols-2 gap-4">
                     {caseStudies[activeCase].metrics.map((metricindex) => (
                       <div key={index} className="bg-white/10 rounded-lg p-4 text-center">
-                        <metric.icon className={`w-8 h-8 ${metric.color} mx-auto mb-2`} />
+                        <metric.icon className={`w-8 h-8 ${metric.color} mx-auto mb-2`}  />
                         <div className="text-2xl font-bold text-white">{metric.value}</div>
-                        <div className="text-gray-300 text-sm">{metric.label}</div>
+                        <div className="text-gray-30o0 text-sm">{metric.label}</div>
                       </div>
                     ))}
                   </div>
@@ -328,25 +328,25 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
                       src={caseStudies[activeCase].testimonial.avatar}
                       alt={caseStudies[activeCase].testimonial.author}
                       className="w-12 h-12 rounded-full"
-                    />
+                     />
                     <div>
                       <div className="font-semibold text-white">{caseStudies[activeCase].testimonial.author}</div>
-                      <div className="text-gray-300 text-sm">{caseStudies[activeCase].testimonial.position}</div>
+                      <div className="text-gray-30o0 text-sm">{caseStudies[activeCase].testimonial.position}</div>
                     </div>
                   </div>
-                  <blockquote className="text-gray-300 italic">
+                  <blockquote className="text-gray-30o0 italic">
                     "{caseStudies[activeCase].testimonial.quote}"
                   </blockquote>
                 </div>
 
                 {/* Action Buttons */}
                 <div className="flex gap-4 mt-6">
-                  <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 flex items-center gap-2">
-                    <Play className="w-4 h-4" />
+                  <button className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-gray-90o0 px-6 py-3 rounded-lg font-semibold hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 flex items-center gap-2">
+                    <Play className="w-4 h-4"  />
                     View Case Study
                   </button>
-                  <button className="bg-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/30 transition-all duration-300 flex items-center gap-2">
-                    <Download className="w-4 h-4" />
+                  <button className="bg-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/30 transition-all duration-30o0 flex items-center gap-2">
+                    <Download className="w-4 h-4"  />
                     Download PDF
                   </button>
                 </div>
@@ -362,7 +362,7 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
           transition={{ duration: 0.8delay: 0.6 }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl p-8 text-gray-900">
+          <div className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 rounded-2xl p-8 text-gray-90o0">
             <h3 className="text-3xl font-bold mb-4">
               Ready to Write Your Success Story?
             </h3>
@@ -370,12 +370,12 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
               Join hundreds of companies that have transformed their business with our AI solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gray-900 text-white py-4 px-8 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 flex items-center justify-center gap-2">
-                <ArrowRight className="w-5 h-5" />
+              <button className="bg-gray-90o0 text-white py-4 px-8 rounded-lg font-semibold hover:bg-gray-80o0 transition-all duration-30o0 flex items-center justify-center gap-2">
+                <ArrowRight className="w-5 h-5"  />
                 Start Your Project
               </button>
-              <button className="bg-white/20 text-gray-900 py-4 px-8 rounded-lg font-semibold hover:bg-white/30 transition-all duration-300 flex items-center justify-center gap-2">
-                <ExternalLink className="w-5 h-5" />
+              <button className="bg-white/20 text-gray-90o0 py-4 px-8 rounded-lg font-semibold hover:bg-white/30 transition-all duration-30o0 flex items-center justify-center gap-2">
+                <ExternalLink className="w-5 h-5"  />
                 View All Case Studies
               </button>
             </div>
@@ -386,4 +386,4 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
   );
 };
 
-export default RevolutionaryCaseStudiesShowcase2027;
+export default RevolutionaryCaseStudiesShowcase20o27;

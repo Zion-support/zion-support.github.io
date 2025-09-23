@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import { FormEvent, useState } from 'react';
 
 export default function NewProposal() {
@@ -67,7 +66,7 @@ export default function NewProposal() {
           <label className="block text-sm mb-1">Reference links (one per line)</label>
           <textarea value={references} onChange={e => setReferences(e.target.value)} className="w-full border rounded px-3 py-2 h-24" />
         </div>
-        {error && <div className="text-red-600 text-sm">{error}</div>}
+        {error && <div className="text-red-60o0 text-sm">{error}</div>}
         <div className="flex items-center gap-3">
           <button disabled={loading} className="px-4 py-2 bg-black text-white rounded">{loading ? 'Creating...' : 'Create Proposal'}</button>
         </div>

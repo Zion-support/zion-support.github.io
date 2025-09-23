@@ -4,8 +4,6 @@ interface MainNavigationProps {
   unreadCount?: number
   className?: string
 
-
-
 import Link from 'next / link';
 import { use_router } from 'next / router';
 import { useState } from 'react';
@@ -19,13 +17,11 @@ import {
   MessageSquare,
   CreditCard,
   ShoppingCart,
-  Wallet,
-} from 'lucide-react';
+  Wallet} from 'lucide-react';
 import { LanguageSelector } from '@/components / header / LanguageSelector';
   HoverCard,
   HoverCardTrigger,
-  HoverCardContent,
-} from '@/components / ui / hover - card';
+  HoverCardContent} from '@/components / ui / hover - card';
 import { MiniCartPreview } from '@/components / cart / MiniCartPreview';
 import { LoginModal } from '@/components / auth / LoginModal'; import { LanguageSelector } from '@/components / header / LanguageSelector';
 import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components / ui / hover - card';
@@ -52,15 +48,13 @@ function MainNavigation() {
   const cart_count = items.length;
   const router = use_router (); // Changed from use_location;
   const { t } = use_translation ();
-  const handleCartClick = (e: React.MouseEvent, ) =>: any {
+  const handleCartClick = (e: React.MouseEvent) =>: any {
     // Check condition
 if ( {) {
   $2
 }
       e.prevent_default ();
       setLoginOpen (true);
-
-
 
       return;
 
@@ -71,13 +65,13 @@ if ( {) {
     {
       key: 'home'
       href: '/'
-      matches: (path: string) => path === '/',    }
+      matches: (path: string) => path === '/'}
     {
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state ={ hasError: false };
   }
   
   static getDerivedStateFromError(error) {
@@ -238,15 +232,12 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path && path.startsWith('/analytics'),;
     });  }
 
-
   return (
     <>
       <button
         className="navbar-toggler md:hidden ml-auto mr-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" // Added ml-auto and mr-4 for positioning
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         aria-expanded={isMobileMenuOpen}
-
-
 
         aria-controls="main-navbar-collapse"
         aria-label="Toggle navigation"
@@ -255,18 +246,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       </button>
       <nav
 
-
         className={cn('navbar', className)}
         role='navigation'
         aria-label='Main navigation'>;
 
-
         <div
           id="main-navbar-collapse"
           className={cn(
-
-
-
 
             'navbar-collapse'
             { open: isMobileMenuOpen }
@@ -291,10 +277,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               <li key={link.name} className="nav-item">
                 <Link 
 
-
-
-
-
                   href={link.href}
                   aria-label={link.name}
 
@@ -318,8 +300,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                       : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >;
-
-
 
                   {link.name}
                 </Link>
@@ -349,7 +329,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                       ? 'bg-zion-purple/20 text-zion-cyan'
                       : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                   )}                >
-                  <Heart className='w-4 h-4' />
+                  <Heart className='w-4 h-4'  />
                   {count > 0 && (
                     <span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center'>
                       {count}
@@ -366,7 +346,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   aria-label='Wallet'
                   onClick={() => setIsMobileMenuOpen(false)}
 
-
                   className={cn(;
                     'nav-link',;
                     'relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',;
@@ -374,7 +353,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                       ? 'bg-zion-purple/20 text-zion-cyan';
                       : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan';
                   )}                >;
-                  <Wallet className='w-4 h-4' />;
+                  <Wallet className='w-4 h-4'  />;
                 </Link>;
               </li>;
 
@@ -394,9 +373,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                       ? 'bg-zion-purple/20 text-zion-cyan';
                       : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan';
                   )}                >;
-                  <MessageSquare className='w-4 h-4' />;
+                  <MessageSquare className='w-4 h-4'  />;
                   {unreadCount > 0 && (;
-                    <span className='absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center'>;
+                    <span className='absolute -top-1 -right-1 bg-red-50o0 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center'>;
 
                       {unreadCount > 9 ? '9+' : unreadCount}
                     </span>;
@@ -407,7 +386,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 ;
             {/* Cart icon with badge */}
             <li className="nav-item">
-              <HoverCard openDelay={100}>
+              <HoverCard openDelay={10o0}>
                 <HoverCardTrigger asChild>
                   <Link
                     href="/cart"
@@ -420,8 +399,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 
                         ? 'bg-zion-purple/20 text-zion-cyan'
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
-                    ),}>;
-                    <ShoppingCart className='w-4 h-4 mr-1' />;
+                    )}>;
+                    <ShoppingCart className='w-4 h-4 mr-1'  />;
                     {t('nav && nav.cart', 'Cart')}
                     {cartCount > 0 && (;
                       <span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center'>;
@@ -429,7 +408,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 
       key: 'marketplace',
       href: '/marketplace',
-      matches: (path: string) => path.starts_with ('/marketplace'),    },
+      matches: (path: string) => path.starts_with ('/marketplace')},
     {
 
       matches: (path: string)  => path.startsWith('/contact')
@@ -442,8 +421,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) =>;
         path === '/dashboard' ||;
         path === '/client - dashboard' ||;
-        path === '/talent - dashboard',
-    }) }
+        path === '/talent - dashboard'}) }
   // Add admin - only links;
   // Check condition
 if ( {) {
@@ -453,8 +431,7 @@ if ( {) {
       key: 'analytics',
       name: t ('nav.analytics'),
       href: '/analytics',
-      matches: (path: string) => path.starts_with ('/analytics'),
-    }) }
+      matches: (path: string) => path.starts_with ('/analytics')}) }
   return (
     <>;
       <button;
@@ -508,7 +485,7 @@ if ( {) {
                     router.pathname === '/wishlist';
                       ? 'bg - zion - purple / 20 text - zion - cyan';
                       : 'text - white hover:bg - zion - purple / 10 hover:text - zion - cyan')}                >;
-                  <Heart className='w - 4 h - 4' />;
+                  <Heart className='w - 4 h - 4'  />;
                   {count > 0 && (
                     <span className='absolute -top - 1 -right - 1 bg - zion - purple text - white text - xs rounded - full h - 4 w - 4 flex items - center justify - center'>;
                       {count}
@@ -528,7 +505,7 @@ if ( {) {
                     router.pathname === '/wallet';
                       ? 'bg - zion - purple / 20 text - zion - cyan';
                       : 'text - white hover:bg - zion - purple / 10 hover:text - zion - cyan')}                >;
-                  <Wallet className='w - 4 h - 4' />;
+                  <Wallet className='w - 4 h - 4'  />;
                 </Link>;
               </li>)}
             {/* Messages link */}
@@ -544,16 +521,16 @@ if ( {) {
                     router.pathname === '/messages';
                       ? 'bg - zion - purple / 20 text - zion - cyan';
                       : 'text - white hover:bg - zion - purple / 10 hover:text - zion - cyan')}                >;
-                  <MessageSquare className='w - 4 h - 4' />;
+                  <MessageSquare className='w - 4 h - 4'  />;
                   {unread_count > 0 && (
-                    <span className='absolute -top - 1 -right - 1 bg - red - 500 text - white text - xs rounded - full h - 4 w - 4 flex items - center justify - center'>;
+                    <span className='absolute -top - 1 -right - 1 bg - red - 50o0 text - white text - xs rounded - full h - 4 w - 4 flex items - center justify - center'>;
                       {unread_count > 9 ? '9+' : unread_count}
                     </span>)}
                 </Link>;
               </li>)}
             {/* Cart icon with badge */}
             <li className='nav - item'>;
-              <HoverCard open_delay={100}>;
+              <HoverCard open_delay={10o0}>;
                 <HoverCardTrigger as_child>;
                   <Link;
                     href='/cart';
@@ -563,9 +540,9 @@ if ( {) {
                       'nav - link',
                       'inline - flex h - 9 items - center justify - center rounded - md px - 4 text - sm font - medium transition - colors relative focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary',                      router.pathname.starts_with ('/cart');
                         ? 'bg - zion - purple / 20 text - zion - cyan';
-                        : 'text - white hover:bg - zion - purple / 10 hover:text - zion - cyan'), }
+                        : 'text - white hover:bg - zion - purple / 10 hover:text - zion - cyan')}
                   >;
-                    <ShoppingCart className='w - 4 h - 4 mr - 1' />;
+                    <ShoppingCart className='w - 4 h - 4 mr - 1'  />;
                     {t ('nav.cart', 'Cart')}
                     {cart_count > 0 && (
                       <span className='absolute -top - 1 -right - 1 bg - zion - purple text - white text - xs rounded - full h - 5 w - 5 flex items - center justify - center'>;
@@ -656,7 +633,7 @@ function Page() { []);
         </AnimatePresence>;
       </div>)}
   return ();
-    <nav class_name = {`${class_name}`}>;
+    <nav class_name ={`${class_name}`}>;
 
       {/* Desktop Navigation */}
 
@@ -757,7 +734,7 @@ export default function Page() {; []);
       </div>;
     )};
   return ();
-    <nav className = {`${className}`}>;
+    <nav className ={`${className}`}>;
       {/* Desktop Navigation */}
       <div className="hidden lg: flex items-center space-x-1">;
         {baseLinks && baseLinks.map((link (;
@@ -776,7 +753,6 @@ export default function Page() {; []);
                     ? 'bg-zion-cyan text-white''
                     : 'text-zion-slate-light hover:text-white hover:bg-white/10'`
 }`}
-
 
                 {link && link.name}
               </Link>;
@@ -807,22 +783,22 @@ export default function Page() {; []);
         on_click={() => setIsMobileMenuOpen (!isMobileMenuOpen)}";
         className="lg:hidden p - 2 text - zion - slate - light hover:text - white hover:bg - white / 10 rounded - md transition - colors";
 ";
-        {isMobileMenuOpen ? <X className="w - 6 h - 6"  /> : <Menu className="w - 6 h - 6"  />}      </button>;
+        {isMobileMenuOpen ? <X className="w - 6 h - 6"   /> : <Menu className="w - 6 h - 6"   />}      </button>;
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isMobileMenuOpen &&;
           <motion.div;
-            initial = {
+            initial ={
   { opacity: 0,
-  coordinate_x: '100%';
+  coordinate_x: '10o0%';
 }}
-            animate = {
+            animate ={
   { opacity: 1,
   coordinate_x: 0;
 }}
-            exit = {
+            exit ={
   { opacity: 0,
-  coordinate_x: '100%';
+  coordinate_x: '10o0%';
 
 }}
             transition={{ duration: 0.3 }}";
@@ -835,7 +811,7 @@ export default function Page() {; []);
                   on_click={() => setIsMobileMenuOpen (false)}";
                   className="p - 2 text - zion - slate - light hover:text - white hover:bg - white / 10 rounded - md transition - colors";
 ";
-                  <X className="w - 6 h - 6"  />                </button>;
+                  <X className="w - 6 h - 6"   />                </button>;
               </div>;
 ";
               <div className="space - y-2">;
@@ -848,7 +824,6 @@ export default function Page() {; []);
                               ? 'bg - zion - cyan text - white'';
                               : 'text - zion - slate - light hover:text - white hover:bg - white / 10'`;
 }`}
-
 
 ;
             {/* Wishlist link */}
@@ -866,7 +841,7 @@ export default function Page() {; []);
                       : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >
-                  <Heart className="w-4 h-4" />
+                  <Heart className="w-4 h-4"  />
                   {count > 0 && (
                     <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
                       {count}
@@ -891,7 +866,7 @@ export default function Page() {; []);
                       : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >
-                  <Wallet className="w-4 h-4" />
+                  <Wallet className="w-4 h-4"  />
                 </Link>
               </li>
             )}
@@ -911,9 +886,9 @@ export default function Page() {; []);
                       : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >
-                  <MessageSquare className="w-4 h-4" />
+                  <MessageSquare className="w-4 h-4"  />
                   {unreadCount > 0 && (
-                    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
+                    <span className="absolute -top-1 -right-1 bg-red-50o0 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
                       {unreadCount > 9 ? '9+' : unreadCount}
                     </span>;
                   )}
@@ -923,7 +898,7 @@ export default function Page() {; []);
 ;
             {/* Cart icon with badge */}
             <li className="nav-item">
-              <HoverCard openDelay={100}>
+              <HoverCard openDelay={10o0}>
                 <HoverCardTrigger asChild>
                   <Link
                     href="/cart"
@@ -936,13 +911,8 @@ export default function Page() {; []);
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan';
                     )}
 
-
-
-
-
-
                   >
-                    <ShoppingCart className="w-4 h-4 mr-1" />
+                    <ShoppingCart className="w-4 h-4 mr-1"  />
                     {t('nav.cartCart')}
                     {cartCount > 0 && (
 
@@ -1031,7 +1001,7 @@ export default function Page() { [])
       </div>
     )}
   return ()
-    <nav className = {`${className}`}>
+    <nav className ={`${className}`}>
       {/* Desktop Navigation */}
       <div className="hidden lg: flex items-center space-x-1">
         {baseLinks.map((link (
@@ -1060,22 +1030,22 @@ export default function Page() { [])
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}"
         className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors"
 "
-        {isMobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}      </button>
+        {isMobileMenuOpen ? <X className="w-6 h-6"   /> : <Menu className="w-6 h-6"   />}      </button>
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isMobileMenuOpen &&
           <motion.div
-            initial = {
+            initial ={
   { opacity: 0
-  x: '100%'
+  x: '10o0%'
 }}
-            animate = {
+            animate ={
   { opacity: 1
   x: 0
 }}
-            exit = {
+            exit ={
   { opacity: 0
-  x: '100%'
+  x: '10o0%'
 }}
             transition={{ duration: 0.3 }}"
             className="lg:hidden fixed inset-y-0 right-0 w-80 bg-zion-slate-dark border-l border-white/10 shadow-xl z-50"
@@ -1087,7 +1057,7 @@ export default function Page() { [])
                   onClick={() => setIsMobileMenuOpen(false)}"
                   className="p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors"
 "
-                  <X className="w-6 h-6"  />                </button>
+                  <X className="w-6 h-6"   />                </button>
               </div>
 "
               <div className="space-y-2">
@@ -1101,15 +1071,15 @@ export default function Page() { [])
                               : 'text-zion-slate-light hover:text-white hover:bg-white/10'`
 }`}
                           {link.name}'`
-                          <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>
+                          <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}   />                        </button>
 
 }`};
 ;
                           {link.name}'`;
-                          <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>;
+                          <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}   />                        </button>;
 
                           {link.name}'`;
-                          <ChevronDown className={`w - 4 h - 4 transition - transform ${active_dropdown === link.key ? 'rotate - 180' : ''}`}  />                        </button>;
+                          <ChevronDown className={`w - 4 h - 4 transition - transform ${active_dropdown === link.key ? 'rotate - 180' : ''}`}   />                        </button>;
                         {active_dropdown === link.key && (";
                           <div className="ml - 4 mt - 2 space - y-1">;
                             {link.children.map ((child: unknown (
@@ -1122,26 +1092,26 @@ export default function Page() { [])
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}";
         className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors";
 ";
-        {isMobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}      </button>;
+        {isMobileMenuOpen ? <X className="w-6 h-6"   /> : <Menu className="w-6 h-6"   />}      </button>;
 
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isMobileMenuOpen && ;
           <motion&& motion.div
-            initial = {
+            initial ={
 
   { opacity: 0,
-  x: '100%'
+  x: '10o0%'
 }}
-            animate = {
+            animate ={
 
   { opacity: 1,
   x: 0
 }}
-            exit = {
+            exit ={
 
   { opacity: 0,
-  x: '100%'
+  x: '10o0%'
 }}
             transition={{ duration: 0 && 0.3 }}"
             className="lg:hidden fixed inset-y-0 right-0 w-80 bg-zion-slate-dark border-l border-white/10 shadow-xl z-50"
@@ -1153,7 +1123,7 @@ export default function Page() { [])
                   onClick={() => setIsMobileMenuOpen(false)}";
                   className="p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors";
 ";
-                  <X className="w-6 h-6"  />                </button>;
+                  <X className="w-6 h-6"   />                </button>;
               </div>;
 ";
               <div className="space-y-2">;
@@ -1168,7 +1138,7 @@ export default function Page() { [])
 }`}
 
                           {link && link.name}'`;
-                          <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link && link.key ? 'rotate-180' : ''}`}  />                        </button>;
+                          <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link && link.key ? 'rotate-180' : ''}`}   />                        </button>;
 
                         {activeDropdown === link && link.key && (;";
                           <div className="ml-4 mt-2 space-y-1">;
@@ -1200,7 +1170,7 @@ export default function Page() { [])
 
                       <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                   >;
-                    <ShoppingCart className="w-4 h-4 mr-1" />;
+                    <ShoppingCart className="w-4 h-4 mr-1"  />;
                     {t('nav.cartCart')}
                     {cartCount > 0 && (;
                       <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;

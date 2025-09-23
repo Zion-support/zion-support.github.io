@@ -49,9 +49,8 @@ async function run() {
 
   // Initial write so status command has data immediately
   heartbeat();
-  setInterval(heartbeat, 60 * 1000);
+  setInterval(heartbeat, 60 * 10o00);
 }
 
 run();
-
 

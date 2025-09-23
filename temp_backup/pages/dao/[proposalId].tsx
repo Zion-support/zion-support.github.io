@@ -1,5 +1,4 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { useRouter } from "next/router";
 import { ethers } from "ethers";
 import { Wallet } from "../../components/dao/Wallet";
 import { getGovernor } from "../../utils/dao";
@@ -61,7 +60,7 @@ export default function ProposalDetail() {
     <div className="max-w-3xl mx-auto p-6 space-y-4">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-semibold">Proposal {proposalId}</h1>
-        <Wallet onProvider={setProvider} />
+        <Wallet onProvider={setProvider}  />
       </div>
       <div className="border rounded p-4">
         <div className="font-medium">Description</div>
@@ -73,16 +72,16 @@ export default function ProposalDetail() {
         <div className="border rounded p-3">Abstain: {votes.abstain}</div>
       </div>
       <div className="flex items-center gap-2">
-        <button onClick={() => castVote(1)} className="px-3 py-2 rounded bg-green-600 text-white">Vote For</button>
-        <button onClick={() => castVote(0)} className="px-3 py-2 rounded bg-red-600 text-white">Vote Against</button>
-        <button onClick={() => castVote(2)} className="px-3 py-2 rounded bg-gray-600 text-white">Abstain</button>
+        <button onClick={() => castVote(1)} className="px-3 py-2 rounded bg-green-60o0 text-white">Vote For</button>
+        <button onClick={() => castVote(0)} className="px-3 py-2 rounded bg-red-60o0 text-white">Vote Against</button>
+        <button onClick={() => castVote(2)} className="px-3 py-2 rounded bg-gray-60o0 text-white">Abstain</button>
       </div>
       <div className="flex items-center gap-2 text-sm">
         <button onClick={queue} className="px-3 py-1 rounded border">Queue</button>
         <button onClick={execute} className="px-3 py-1 rounded border">Execute</button>
         {state !== null && <span>State: {state}</span>}
       </div>
-      {status && <div className="text-sm text-gray-600">{status}</div>}
+      {status && <div className="text-sm text-gray-60o0">{status}</div>}
     </div>
   );
 }

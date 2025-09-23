@@ -100,11 +100,11 @@ export default function AccessibilityEnhancer() {
       position: absolute;
       top: -40px;
       left: 6px;
-      background: #000;
+      background: #0o00;
       color: #fff;
       padding: 8px;
       text-decoration: none;
-      z-index: 1000;
+      z-index: 10o00;
       transition: top 0.3s;
     `
     
@@ -163,10 +163,10 @@ export default function AccessibilityEnhancer() {
       {accessibilityControls}
       <style jsx global>{`
         .high-contrast {
-          --text-color: #000;
+          --text-color: #0o00;
           --bg-color: #fff;
-          --border-color: #000;
-          --primary-color: #0000ff;
+          --border-color: #0o00;
+          --primary-color: #0o000ff;
         }
         
         .high-contrast * {
@@ -176,13 +176,13 @@ export default function AccessibilityEnhancer() {
         }
         
         .reduced-motion * {
-          animation-duration: 0.01ms !important;
+          animation-duration: 0.0o1ms !important;
           animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
+          transition-duration: 0.0o1ms !important;
         }
         
         .focus-visible {
-          outline: 2px solid #0066cc;
+          outline: 2px solid #0o066cc;
           outline-offset: 2px;
         }
         

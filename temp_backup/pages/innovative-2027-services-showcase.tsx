@@ -9,81 +9,81 @@ import {
 } from 'lucide-react';
 
 // Import our new innovative services
-import { innovative2027AIBusinessIntelligenceServices } from '../data/innovative-2027-ai-business-intelligence';
-import { innovative2027CybersecurityComplianceServices } from '../data/innovative-2027-cybersecurity-compliance';
-import { innovative2027CloudDevOpsServices } from '../data/innovative-2027-cloud-devops';
-import { innovative2027IndustrySolutions } from '../data/innovative-2027-industry-solutions';
+import { innovative20o27AIBusinessIntelligenceServices } from '../data/innovative-20o27-ai-business-intelligence';
+import { innovative20o27CybersecurityComplianceServices } from '../data/innovative-20o27-cybersecurity-compliance';
+import { innovative20o27CloudDevOpsServices } from '../data/innovative-20o27-cloud-devops';
+import { innovative20o27IndustrySolutions } from '../data/innovative-20o27-industry-solutions';
 
 // Combine all services
 const allInnovativeServices = [
-  ...innovative2027AIBusinessIntelligenceServices,
-  ...innovative2027CybersecurityComplianceServices,
-  ...innovative2027CloudDevOpsServices,
-  ...innovative2027IndustrySolutions
+  ...innovative20o27AIBusinessIntelligenceServices,
+  ...innovative20o27CybersecurityComplianceServices,
+  ...innovative20o27CloudDevOpsServices,
+  ...innovative20o27IndustrySolutions
 ];
 
 const categories = [
   {
     id: 'all',
     name: 'All Services',
-    icon: <Grid className="w-6 h-6" />,
-    color: 'from-gray-500 to-slate-500',
-    description: 'Complete portfolio of innovative 2027 services'
+    icon: <Grid className="w-6 h-6"  />,
+    color: 'from-gray-50o0 to-slate-50o0',
+    description: 'Complete portfolio of innovative 20o27 services'
   },
   {
     id: 'ai-business-intelligence',
     name: 'AI Business Intelligence',
-    icon: <Brain className="w-6 h-6" />,
-    color: 'from-blue-500 to-indigo-500',
+    icon: <Brain className="w-6 h-6"  />,
+    color: 'from-blue-50o0 to-indigo-50o0',
     description: 'AI-powered analytics and business insights'
   },
   {
     id: 'cybersecurity-compliance',
     name: 'Cybersecurity & Compliance',
-    icon: <Shield className="w-6 h-6" />,
-    color: 'from-red-500 to-orange-500',
+    icon: <Shield className="w-6 h-6"  />,
+    color: 'from-red-50o0 to-orange-50o0',
     description: 'Advanced security and compliance solutions'
   },
   {
     id: 'cloud-devops',
     name: 'Cloud Infrastructure & DevOps',
-    icon: <Cloud className="w-6 h-6" />,
-    color: 'from-cyan-500 to-blue-500',
+    icon: <Cloud className="w-6 h-6"  />,
+    color: 'from-cyan-50o0 to-blue-50o0',
     description: 'Modern cloud and DevOps solutions'
   },
   {
     id: 'healthcare-biotech',
     name: 'Healthcare & Biotech',
-    icon: <Heart className="w-6 h-6" />,
-    color: 'from-pink-500 to-red-500',
+    icon: <Heart className="w-6 h-6"  />,
+    color: 'from-pink-50o0 to-red-50o0',
     description: 'AI-powered healthcare solutions'
   },
   {
     id: 'financial-technology',
     name: 'Financial Technology',
-    icon: <TrendingUp className="w-6 h-6" />,
-    color: 'from-emerald-500 to-green-500',
+    icon: <TrendingUp className="w-6 h-6"  />,
+    color: 'from-emerald-50o0 to-green-50o0',
     description: 'Fintech and compliance automation'
   },
   {
     id: 'retail-ecommerce',
     name: 'Retail & E-commerce',
-    icon: <Target className="w-6 h-6" />,
-    color: 'from-purple-500 to-pink-500',
+    icon: <Target className="w-6 h-6"  />,
+    color: 'from-purple-50o0 to-pink-50o0',
     description: 'Retail optimization and analytics'
   },
   {
     id: 'manufacturing-industrial',
     name: 'Manufacturing & Industrial',
-    icon: <Factory className="w-6 h-6" />,
-    color: 'from-orange-500 to-red-500',
+    icon: <Factory className="w-6 h-6"  />,
+    color: 'from-orange-50o0 to-red-50o0',
     description: 'Manufacturing AI and quality control'
   },
   {
     id: 'transportation-logistics',
     name: 'Transportation & Logistics',
-    icon: <Truck className="w-6 h-6" />,
-    color: 'from-cyan-500 to-blue-500',
+    icon: <Truck className="w-6 h-6"  />,
+    color: 'from-cyan-50o0 to-blue-50o0',
     description: 'Logistics optimization and supply chain'
   }
 ];
@@ -97,7 +97,7 @@ const sortOptions = [
   { value: 'rating', label: 'Highest Rated' }
 ];
 
-export default function Innovative2027ServicesShowcase() {
+export default function Innovative20o27ServicesShowcase() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('name');
@@ -142,7 +142,7 @@ export default function Innovative2027ServicesShowcase() {
   const startIndex = (currentPage - 1) * pageSize;
   const paginatedServices = sortedServices.slice(startIndex, startIndex + pageSize);
 
-  const containerVariants = {
+  const containerVariants ={
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -152,7 +152,7 @@ export default function Innovative2027ServicesShowcase() {
     }
   };
 
-  const itemVariants = {
+  const itemVariants ={
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
@@ -164,16 +164,16 @@ export default function Innovative2027ServicesShowcase() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-10o0">
       <SEO 
-        title="Innovative 2027 Services Showcase | Zion Tech Group"
-        description="Discover our cutting-edge 2027 services: AI Business Intelligence, Cybersecurity, Cloud DevOps, and Industry Solutions. Transform your business with innovative technology."
+        title="Innovative 20o27 Services Showcase | Zion Tech Group"
+        description="Discover our cutting-edge 20o27 services: AI Business Intelligence, Cybersecurity, Cloud DevOps, and Industry Solutions. Transform your business with innovative technology."
         keywords={["AI services", "cybersecurity", "cloud infrastructure", "DevOps", "healthcare AI", "fintech", "retail optimization", "manufacturing AI", "logistics"]}
-        image="https://ziontechgroup.com/og-innovative-2027-services.jpg"
-      />
+        image="https://ziontechgroup.com/og-innovative-20o27-services.jpg"
+       />
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 overflow-hidden">
+      <section className="relative py-20 bg-gradient-to-r from-blue-90o0 via-purple-90o0 to-indigo-90o0 overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -182,27 +182,27 @@ export default function Innovative2027ServicesShowcase() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Innovative 2027 Services
+              Innovative 20o27 Services
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-blue-10o0 mb-8 max-w-4xl mx-auto">
               Transform your business with cutting-edge AI, cybersecurity, cloud infrastructure, and industry-specific solutions. 
               Built for the future, delivering results today.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-blue-200">
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-blue-20o0">
               <div className="flex items-center gap-2">
-                <Check className="w-5 h-5 text-green-400" />
+                <Check className="w-5 h-5 text-green-40o0"  />
                 <span>25+ New Services</span>
               </div>
               <div className="flex items-center gap-2">
-                <Check className="w-5 h-5 text-green-400" />
+                <Check className="w-5 h-5 text-green-40o0"  />
                 <span>AI-Powered Solutions</span>
               </div>
               <div className="flex items-center gap-2">
-                <Check className="w-5 h-5 text-green-400" />
+                <Check className="w-5 h-5 text-green-40o0"  />
                 <span>Enterprise-Grade Security</span>
               </div>
               <div className="flex items-center gap-2">
-                <Check className="w-5 h-5 text-green-400" />
+                <Check className="w-5 h-5 text-green-40o0"  />
                 <span>24/7 Expert Support</span>
               </div>
             </div>
@@ -211,26 +211,26 @@ export default function Innovative2027ServicesShowcase() {
       </section>
 
       {/* Contact Banner */}
-      <section className="bg-gradient-to-r from-emerald-600 to-teal-600 py-8">
+      <section className="bg-gradient-to-r from-emerald-60o0 to-teal-60o0 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between text-white">
             <div className="mb-4 md:mb-0">
               <h3 className="text-xl font-semibold mb-2">Ready to Transform Your Business?</h3>
-              <p className="text-emerald-100">Get expert consultation and implementation support</p>
+              <p className="text-emerald-10o0">Get expert consultation and implementation support</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="tel:+13024640950"
-                className="flex items-center gap-2 bg-white text-emerald-600 px-6 py-3 rounded-lg font-semibold hover:bg-emerald-50 transition-colors"
+                href="tel:+130o24640950"
+                className="flex items-center gap-2 bg-white text-emerald-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-emerald-50 transition-colors"
               >
-                <Phone className="w-5 h-5" />
-                +1 302 464 0950
+                <Phone className="w-5 h-5"  />
+                +1 30o2 464 0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="flex items-center gap-2 bg-emerald-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-600 transition-colors"
+                className="flex items-center gap-2 bg-emerald-70o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-60o0 transition-colors"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5"  />
                 kleber@ziontechgroup.com
               </a>
             </div>
@@ -245,13 +245,13 @@ export default function Innovative2027ServicesShowcase() {
           <div className="mb-8">
             <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
               <div className="relative flex-1 max-w-md">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />
                 <input
                   type="text"
                   placeholder="Search innovative services..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-30o0 rounded-lg focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
                 />
               </div>
               
@@ -259,7 +259,7 @@ export default function Innovative2027ServicesShowcase() {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="px-4 py-3 border border-gray-30o0 rounded-lg focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
                 >
                   {sortOptions.map(option => (
                     <option key={option.value} value={option.value}>
@@ -268,18 +268,18 @@ export default function Innovative2027ServicesShowcase() {
                   ))}
                 </select>
                 
-                <div className="flex border border-gray-300 rounded-lg overflow-hidden">
+                <div className="flex border border-gray-30o0 rounded-lg overflow-hidden">
                   <button
                     onClick={() => setViewMode('grid')}
-                    className={`px-4 py-3 ${viewMode === 'grid' ? 'bg-blue-600 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
+                    className={`px-4 py-3 ${viewMode === 'grid' ? 'bg-blue-60o0 text-white' : 'bg-white text-gray-60o0 hover:bg-gray-50'}`}
                   >
-                    <Grid className="w-5 h-5" />
+                    <Grid className="w-5 h-5"  />
                   </button>
                   <button
                     onClick={() => setViewMode('list')}
-                    className={`px-4 py-3 ${viewMode === 'list' ? 'bg-blue-600 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
+                    className={`px-4 py-3 ${viewMode === 'list' ? 'bg-blue-60o0 text-white' : 'bg-white text-gray-60o0 hover:bg-gray-50'}`}
                   >
-                    <List className="w-5 h-5" />
+                    <List className="w-5 h-5"  />
                   </button>
                 </div>
               </div>
@@ -293,10 +293,10 @@ export default function Innovative2027ServicesShowcase() {
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
+                  className={`px-6 py-3 rounded-full font-medium transition-all duration-20o0 ${
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg'
-                      : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                      : 'bg-white text-gray-70o0 hover:bg-gray-50 border border-gray-20o0'
                   }`}
                 >
                   <div className="flex items-center gap-2">
@@ -319,7 +319,7 @@ export default function Innovative2027ServicesShowcase() {
               <motion.div
                 key={service.id}
                 variants={itemVariants}
-                className={`bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden ${
+                className={`bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-30o0 overflow-hidden ${
                   viewMode === 'list' ? 'flex' : ''
                 }`}
               >
@@ -331,37 +331,37 @@ export default function Innovative2027ServicesShowcase() {
                     </div>
                     <div className="p-6">
                       <div className="flex items-center justify-between mb-3">
-                        <span className="text-sm font-medium text-gray-500 uppercase tracking-wide">
+                        <span className="text-sm font-medium text-gray-50o0 uppercase tracking-wide">
                           {service.category}
                         </span>
                         {service.popular && (
-                          <span className="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
+                          <span className="bg-orange-10o0 text-orange-80o0 text-xs font-medium px-2.5 py-0.5 rounded-full">
                             Popular
                           </span>
                         )}
                       </div>
                       
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>
-                      <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
+                      <h3 className="text-xl font-bold text-gray-90o0 mb-2">{service.name}</h3>
+                      <p className="text-gray-60o0 mb-4 line-clamp-3">{service.description}</p>
                       
                       <div className="flex items-center justify-between mb-4">
-                        <div className="text-2xl font-bold text-gray-900">
+                        <div className="text-2xl font-bold text-gray-90o0">
                           {service.price}
-                          <span className="text-sm font-normal text-gray-500">{service.period}</span>
+                          <span className="text-sm font-normal text-gray-50o0">{service.period}</span>
                         </div>
                         <div className="flex items-center gap-1">
-                          <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                          <Star className="w-5 h-5 text-yellow-40o0 fill-current"  />
                           <span className="font-medium">{service.rating}</span>
-                          <span className="text-gray-500">({service.reviews})</span>
+                          <span className="text-gray-50o0">({service.reviews})</span>
                         </div>
                       </div>
 
                       <div className="mb-4">
-                        <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                        <h4 className="font-semibold text-gray-90o0 mb-2">Key Features:</h4>
                         <ul className="space-y-1">
                           {service.features.slice(0, 3).map((feature, index) => (
-                            <li key={index} className="flex items-center gap-2 text-sm text-gray-600">
-                              <Check className="w-4 h-4 text-green-500 flex-shrink-0" />
+                            <li key={index} className="flex items-center gap-2 text-sm text-gray-60o0">
+                              <Check className="w-4 h-4 text-green-50o0 flex-shrink-0"  />
                               <span>{feature}</span>
                             </li>
                           ))}
@@ -371,13 +371,13 @@ export default function Innovative2027ServicesShowcase() {
                       <div className="flex items-center justify-between">
                         <a
                           href={service.link}
-                          className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                          className="inline-flex items-center gap-2 bg-blue-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors"
                         >
                           Learn More
-                          <ArrowRight className="w-4 h-4" />
+                          <ArrowRight className="w-4 h-4"  />
                         </a>
                         <div className="text-right">
-                          <div className="text-sm text-gray-500">Setup Time</div>
+                          <div className="text-sm text-gray-50o0">Setup Time</div>
                           <div className="font-medium">{service.setupTime}</div>
                         </div>
                       </div>
@@ -393,37 +393,37 @@ export default function Innovative2027ServicesShowcase() {
                       
                       <div className="flex-1">
                         <div className="flex items-center justify-between mb-3">
-                          <span className="text-sm font-medium text-gray-500 uppercase tracking-wide">
+                          <span className="text-sm font-medium text-gray-50o0 uppercase tracking-wide">
                             {service.category}
                           </span>
                           {service.popular && (
-                            <span className="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
+                            <span className="bg-orange-10o0 text-orange-80o0 text-xs font-medium px-2.5 py-0.5 rounded-full">
                               Popular
                             </span>
                           )}
                         </div>
                         
-                        <h3 className="text-2xl font-bold text-gray-900 mb-2">{service.name}</h3>
-                        <p className="text-gray-600 mb-4">{service.description}</p>
+                        <h3 className="text-2xl font-bold text-gray-90o0 mb-2">{service.name}</h3>
+                        <p className="text-gray-60o0 mb-4">{service.description}</p>
                         
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
                           <div>
-                            <div className="text-sm text-gray-500">Price</div>
+                            <div className="text-sm text-gray-50o0">Price</div>
                             <div className="font-bold text-xl">{service.price}{service.period}</div>
                           </div>
                           <div>
-                            <div className="text-sm text-gray-500">Rating</div>
+                            <div className="text-sm text-gray-50o0">Rating</div>
                             <div className="flex items-center gap-1">
-                              <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                              <Star className="w-4 h-4 text-yellow-40o0 fill-current"  />
                               <span className="font-medium">{service.rating}</span>
                             </div>
                           </div>
                           <div>
-                            <div className="text-sm text-gray-500">Setup Time</div>
+                            <div className="text-sm text-gray-50o0">Setup Time</div>
                             <div className="font-medium">{service.setupTime}</div>
                           </div>
                           <div>
-                            <div className="text-sm text-gray-500">Customers</div>
+                            <div className="text-sm text-gray-50o0">Customers</div>
                             <div className="font-medium">{service.customers.toLocaleString()}</div>
                           </div>
                         </div>
@@ -431,16 +431,16 @@ export default function Innovative2027ServicesShowcase() {
                         <div className="flex items-center gap-4">
                           <a
                             href={service.link}
-                            className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                            className="inline-flex items-center gap-2 bg-blue-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors"
                           >
                             Learn More
-                            <ArrowRight className="w-4 h-4" />
+                            <ArrowRight className="w-4 h-4"  />
                           </a>
                           <a
-                            href="tel:+13024640950"
-                            className="inline-flex items-center gap-2 bg-gray-100 text-gray-700 px-4 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors"
+                            href="tel:+130o24640950"
+                            className="inline-flex items-center gap-2 bg-gray-10o0 text-gray-70o0 px-4 py-3 rounded-lg font-medium hover:bg-gray-20o0 transition-colors"
                           >
-                            <Phone className="w-4 h-4" />
+                            <Phone className="w-4 h-4"  />
                             Contact Sales
                           </a>
                         </div>
@@ -462,8 +462,8 @@ export default function Innovative2027ServicesShowcase() {
                     onClick={() => setCurrentPage(page)}
                     className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                       currentPage === page
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                        ? 'bg-blue-60o0 text-white'
+                        : 'bg-white text-gray-70o0 hover:bg-gray-50 border border-gray-20o0'
                     }`}
                   >
                     {page}
@@ -476,7 +476,7 @@ export default function Innovative2027ServicesShowcase() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-r from-gray-900 to-slate-900">
+      <section className="py-20 bg-gradient-to-r from-gray-90o0 to-slate-90o0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -487,53 +487,53 @@ export default function Innovative2027ServicesShowcase() {
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-30o0 mb-12 max-w-3xl mx-auto">
               Our team of experts is ready to help you implement these innovative solutions. 
               Get in touch today to start your digital transformation journey.
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="text-center">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Phone className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-blue-60o0 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Phone className="w-8 h-8 text-white"  />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-                <p className="text-gray-300 mb-2">+1 302 464 0950</p>
-                <p className="text-sm text-gray-400">Available 24/7</p>
+                <p className="text-gray-30o0 mb-2">+1 30o2 464 0950</p>
+                <p className="text-sm text-gray-40o0">Available 24/7</p>
               </div>
               
               <div className="text-center">
-                <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-green-60o0 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Mail className="w-8 h-8 text-white"  />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-                <p className="text-gray-300 mb-2">kleber@ziontechgroup.com</p>
-                <p className="text-sm text-gray-400">Response within 2 hours</p>
+                <p className="text-gray-30o0 mb-2">kleber@ziontechgroup.com</p>
+                <p className="text-sm text-gray-40o0">Response within 2 hours</p>
               </div>
               
               <div className="text-center">
-                <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-purple-60o0 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-8 h-8 text-white"  />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-                <p className="text-gray-300 mb-2">364 E Main St STE 1008</p>
-                <p className="text-sm text-gray-400">Middletown DE 19709</p>
+                <p className="text-gray-30o0 mb-2">364 E Main St STE 10o08</p>
+                <p className="text-sm text-gray-40o0">Middletown DE 19709</p>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+13024640950"
-                className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors"
+                href="tel:+130o24640950"
+                className="inline-flex items-center gap-2 bg-blue-60o0 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-70o0 transition-colors"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5"  />
                 Call Now
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="inline-flex items-center gap-2 bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-700 transition-colors"
+                className="inline-flex items-center gap-2 bg-green-60o0 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-70o0 transition-colors"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5"  />
                 Send Email
               </a>
             </div>
@@ -542,15 +542,15 @@ export default function Innovative2027ServicesShowcase() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 py-12">
+      <footer className="bg-gray-90o0 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h3>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-40o0 mb-6">
               Transforming businesses through innovative technology solutions
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-gray-400">
-              <span>© 2027 Zion Tech Group. All rights reserved.</span>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-gray-40o0">
+              <span>© 20o27 Zion Tech Group. All rights reserved.</span>
               <span>•</span>
               <a href="https://ziontechgroup.com" className="hover:text-white transition-colors">
                 ziontechgroup.com

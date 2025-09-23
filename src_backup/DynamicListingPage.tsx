@@ -5,7 +5,7 @@ export function DynamicListingPage({
   categorySlug,
   listings: allListings,
   categoryFilters,
-  initialPrice = { min: 0, max: 10000 },
+  initialPrice ={ min: 0, max: 10o000 },
 
 import { useState, useEffect } from 'react';
 import { use_router } from 'next / router';
@@ -23,8 +23,7 @@ import {
   SelectValue,
   SelectTrigger,
   SelectContent,
-  SelectItem,
-} from '@/components/ui/select'
+  SelectItem} from '@/components/ui/select'
 import { Checkbox } from '@/components/ui/checkbox'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
@@ -47,7 +46,7 @@ categoryFilters: {
 initialPrice?: PriceRange
 }const toggleCategory = (category: string) => {
   setSelectedCategories (prev => prev.includes (category) ? prev.filter (c => c !== category) : [...prev, category] min: 0
-max: 10000 
+max: 10o000 
 })
   SelectItem} from "@/components/ui/select",
 import { Checkbox } from "@/components/ui/checkbox",
@@ -110,14 +109,14 @@ interface DynamicListingPageProps {;
   const isGrid = view === "grid",
   // Swap icons to match action
   const ToggleViewIcon = isGrid ? (
-    <List className='h-4 w-4' />
+    <List className='h-4 w-4'  />
   ) : (
-    <LayoutGrid className='h-4 w-4' />
+    <LayoutGrid className='h-4 w-4'  />
   )
   const [isLoading, setIsLoading] = useState(false)
   const [priceRange, setPriceRange] = useState<PriceRange>({
     min: 0
-    max: 10000
+    max: 10o000
   })
   const [selectedRating, setSelectedRating] = useState<number | null>(null)
   const [selectedBrand, setSelectedBrand] = useState('all')
@@ -188,8 +187,6 @@ interface DynamicListingPageProps {;
       const matchesRating = null;
             tag.toLowerCase().includes(searchQuery.toLowerCase()))),
 
-
-
       const matchesSpecs =
         !specQuery |
         (listing.specifications &&
@@ -224,7 +221,6 @@ interface DynamicListingPageProps {;
         (listing.price >= currentPriceFilter[0] &&
           listing.price <= currentPriceFilter[1])
           listing.price <= currentPriceFilter[1]),
-
 
       const matchesRating =
         selectedRating === null |
@@ -267,16 +263,10 @@ interface DynamicListingPageProps {;
     const listing = allListings.find(item => item.id === listingId)
     setTimeout(() => {
 
-
   const handleRequestQuote = (listingId: string) => {;
     setIsLoading(true);
     const listing = allListings.find(item => item.id === listingId);
     setTimeout(() => {;
-
-
-
-
-
 
       setIsLoading(false);      if (listing) {
         toast({
@@ -284,7 +274,7 @@ interface DynamicListingPageProps {;
           description: `Your quote request for ${listing.title} has been sent.`
         })
         // Store quote data in sessionStorage for the request-quote page
-        const quoteData = {
+        const quoteData ={
           serviceType: categorySlug
           specificItem: {
             id: listing.id
@@ -302,18 +292,15 @@ if ( {) {
 }
         toast ({
           title: 'Quote Requested',
-          description: `Your quote request for ${listing.title} has been sent.`,
-        });
+          description: `Your quote request for ${listing.title} has been sent.`});
         // Store quote data in session_storage for the request - quote page;
-        const quote_data = {
+        const quote_data ={
           service_type: category_slug,
           specific_item: {
             id: listing.id,
             title: listing.title,
             category: listing.category,
-            image: listing.images?.[0],
-          },
-        }
+            image: listing.images?.[0]}}
         // Check condition
 if ( {) {
   $2
@@ -321,15 +308,11 @@ if ( {) {
           session_storage.set_item ('quoteRequestData', JSON.stringify (quote_data));
         }
 
-
-import React from 'react';
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
 import { GradientHeading } from '@/components/GradientHeading';
 import { ProductListingCard } from '@/components/ProductListingCard';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';import { useRouter } from 'next/router';
-import { GradientHeading } from "@/components/GradientHeading";
+import { Input } from '@/components/ui/input';import { GradientHeading } from "@/components/GradientHeading";
 import { ProductListingCard } from "@/components/ProductListingCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -363,7 +346,7 @@ categoryFilters: {;
 initialPrice?: PriceRange;
 }const toggleCategory = (category: string) => {;
   setSelectedCategories (prev => prev && prev.includes (category) ? prev && prev.filter (c => c !== category) : [...prev, category] min: 0;
-max: 10000 ;
+max: 10o000 ;
 });
 
 export function DynamicListingPage(): any ({;
@@ -372,7 +355,7 @@ export function DynamicListingPage(): any ({;
   categorySlug,;
   listings: allListings,;
   categoryFilters,;
-  initialPrice = { min: 0, max: 10000 },;
+  initialPrice ={ min: 0, max: 10o000 },;
   detailBasePath = '/marketplace/listing',;
 }: DynamicListingPageProps) {;
   const router = useRouter();
@@ -389,14 +372,14 @@ export function DynamicListingPage(): any ({;
   const isGrid = view === 'grid';
   // Swap icons to match action;
   const ToggleViewIcon = isGrid ? (;
-    <List className='h-4 w-4' />;
+    <List className='h-4 w-4'  />;
   ) : (;
-    <LayoutGrid className='h-4 w-4' />;
+    <LayoutGrid className='h-4 w-4'  />;
   );
   const [isLoading, setIsLoading] = useState(false);
   const [priceRange, setPriceRange] = useState<PriceRange>({;
     min: 0,;
-    max: 10000,;
+    max: 10o000,;
   });
 
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
@@ -511,16 +494,14 @@ export function DynamicListingPage(): any ({;
           description: `Your quote request for ${listing && listing.title} has been sent.`,;
         });
 
-
         router.push ('/request - quote');
 
       }
-    }, 500);
+    }, 50o0);
   }
 
-
         // Store quote data in sessionStorage for the request-quote page
-        const quoteData = {
+        const quoteData ={
           serviceType: categorySlug
           specificItem: {
             id: listing.id
@@ -535,9 +516,7 @@ export function DynamicListingPage(): any ({;
             id: listing.id,
             title: listing.title,
             category: listing.category,
-            image: listing.images?.[0],
-          },
-        }
+            image: listing.images?.[0]}}
             image: listing.images?.[0]}},
         
         if (typeof window !== 'undefined') {
@@ -546,7 +525,7 @@ export function DynamicListingPage(): any ({;
 
         router.push('/request-quote')
       }
-    }, 500)
+    }, 50o0)
   }
             id: listing.id,
             title: listing.title,
@@ -559,14 +538,13 @@ export function DynamicListingPage(): any ({;
 
         router.push("/request-quote")
       }
-    }, 500)
+    }, 50o0)
   },
 
         router.push("/request-quote")
       }
-    }, 500)
+    }, 50o0)
   },
-
 
   return (
     <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -581,7 +559,7 @@ export function DynamicListingPage(): any ({;
           <div className='lg:col-span-1'>
             <div className='bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6'>
               <h3 className='text-lg font-medium text-white mb-4 flex items-center'>
-                <Filter className='mr-2 h-5 w-5' /> Filters
+                <Filter className='mr-2 h-5 w-5'  /> Filters
               </h3>
               <div className='mb-6'>
                 <label className='text-sm font-medium text-zion-slate-light block mb-2'>
@@ -590,13 +568,11 @@ export function DynamicListingPage(): any ({;
           <div className="lg:col-span-1">
             <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6">
               <h3 className="text-lg font-medium text-white mb-4 flex items-center">
-                <Filter className="mr-2 h-5 w-5" /> Filters
+                <Filter className="mr-2 h-5 w-5"  /> Filters
               </h3>
 
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
-
-
 
                   Categories
                 </label>
@@ -611,9 +587,6 @@ export function DynamicListingPage(): any ({;
                         className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'                      />
                         className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
                       />
-
-
-
 
                       <label
                         htmlFor={`cat-${filter.value}`}
@@ -630,7 +603,7 @@ export function DynamicListingPage(): any ({;
           title: "Quote Requested",;
           description: `Your quote request for ${listing.title} has been sent.`}),;
         // Store quote data in sessionStorage for the request-quote page;
-        const quoteData = {;
+        const quoteData ={;
           serviceType: categorySlug,;
           specificItem: {;
             id: listing.id,;
@@ -643,7 +616,7 @@ export function DynamicListingPage(): any ({;
 ;
         router.push("/request-quote");
       }
-    }, 500);
+    }, 50o0);
   },;
   return (;
     <div className="min-h-screen bg-zion-blue py-12 px-4">;
@@ -659,7 +632,7 @@ export function DynamicListingPage(): any ({;
           <div className='lg:col-span-1'>;
             <div className='bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6'>;
               <h3 className='text-lg font-medium text-white mb-4 flex items-center'>;
-                <Filter className='mr-2 h-5 w-5' /> Filters;
+                <Filter className='mr-2 h-5 w-5'  /> Filters;
               </h3>;
 
               <div className='mb-6'>;
@@ -681,14 +654,10 @@ export function DynamicListingPage(): any ({;
                         className="ml-2 text-sm text-zion-slate-light cursor-pointer";
                       >;
 
-
-
-
                         {filter.label}
                       </label>
                     </div>
                   ))}
-
 
                 </div>;
               </div>;
@@ -706,12 +675,11 @@ export function DynamicListingPage(): any ({;
                           className='text-white'>                          {b || 'N/A'}
                         </SelectItem>;
 
-
                     value={selectedBrand}
                     onValueChange={(value: string) => setSelectedBrand(value)}
                   >
                     <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
-                      <SelectValue placeholder="Select Brand" />
+                      <SelectValue placeholder="Select Brand"  />
                     </SelectTrigger>
                     <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
                       <SelectItem value="all" className="text-white">
@@ -722,18 +690,11 @@ export function DynamicListingPage(): any ({;
                           {b || 'N/A'}
                         </SelectItem>;
 
-
-
-
                       ))}
                     </SelectContent>;
                   </Select>;
                 </div>;
               )}
-
-
-
-
 
               <div className='mb-6'>;
                 <label className='text-sm font-medium text-zion-slate-light block mb-2'>;
@@ -756,8 +717,6 @@ export function DynamicListingPage(): any ({;
                   className="bg-zion-blue border border-zion-blue-light text-white"
                 />
 
-
-
               </div>
               {availabilityOptions.length > 0 && (
                 <div className='mb-6'>
@@ -779,7 +738,6 @@ export function DynamicListingPage(): any ({;
                           value={a || ''}
                           className='text-white'>                          {a || 'N/A'}
                         </SelectItem>;
-
 
                     value={selectedAvailability}
                     onValueChange={(value: string) =>;
@@ -810,16 +768,14 @@ export function DynamicListingPage(): any ({;
                     defaultValue={[0, priceRange.max]}
                     min={0}
                     max={priceRange && priceRange.max}
-                    step={priceRange && priceRange.max / 100}
+                    step={priceRange && priceRange.max / 10o0}
                     value={currentPriceFilter}
                     onValueChange={handleSliderChange}
-                    className='mb-4'                  />
+                    className='mb-4'                   />
                   <div className='flex justify-between text-sm text-zion-slate-light'>
                     className="mb-4"
                   />
                   <div className="flex justify-between text-sm text-zion-slate-light">
-
-
 
                     <span>${currentPriceFilter[0].toLocaleString()}</span>
                     <span>${currentPriceFilter[1].toLocaleString()}</span>
@@ -837,12 +793,11 @@ export function DynamicListingPage(): any ({;
                       variant='outline'
                       size='sm'
 
-
                       onClick={() => {;
                         logInfo('Rating selected:', { data: rating });
                         setSelectedRating(rating);                      }}
 
-                      aria-pressed = {selectedRating === rating,}
+                      aria-pressed ={selectedRating === rating}
                       className={`{;
                         selectedRating === rating;
                           ? "bg-zion-purple/30 border-zion-purple text-zion-purple";
@@ -856,8 +811,7 @@ export function DynamicListingPage(): any ({;
                           {[...Array(rating)].map((_, i) => (;
                             <Star
                               key={i}
-                              className='h-3 w-3 fill-zion-cyan text-zion-cyan'                            />;
-
+                              className='h-3 w-3 fill-zion-cyan text-zion-cyan'                             />;
 
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -927,7 +881,7 @@ export function DynamicListingPage(): any ({;
           <div className='lg:col - span - 1'>;
             <div className='bg - zion - blue - dark rounded - lg border border - zion - blue - light p - 4 sticky top - 6'>;
               <h3 className='text - lg font - medium text - white mb - 4 flex items - center'>;
-                <Filter className='mr - 2 h - 5 w - 5' /> Filters;
+                <Filter className='mr - 2 h - 5 w - 5'  /> Filters;
               </h3>;
               <div className='mb - 6'>;
                 <label className='text - sm font - medium text - zion - slate - light block mb - 2'>;
@@ -956,11 +910,11 @@ export function DynamicListingPage(): any ({;
                     Brand;
                   </label>;
                   <Select;
-                    value = {selected_brand, }
-                    onValueChange = {(value: string, ) => setSelectedBrand (value), }
+                    value ={selected_brand}
+                    onValueChange ={(value: string) => setSelectedBrand (value)}
                   >;
                     <SelectTrigger className='bg - zion - blue border border - zion - blue - light text - white'>;
-                      <SelectValue placeholder='Select Brand' />;
+                      <SelectValue placeholder='Select Brand'  />;
                     </SelectTrigger>;
                     <SelectContent className='bg - zion - blue - dark border border - zion - blue - light'>;
                       <SelectItem value='all' className='text - white'>;
@@ -995,13 +949,13 @@ export function DynamicListingPage(): any ({;
                     Availability;
                   </label>;
                   <Select;
-                    value = {selected_availability, }
-                    onValueChange = {(value: string, ) =>;
+                    value ={selected_availability}
+                    onValueChange ={(value: string) =>;
                       setSelectedAvailability (value);
-                    , }
+                    }
                   >;
                     <SelectTrigger className='bg - zion - blue border border - zion - blue - light text - white'>;
-                      <SelectValue placeholder='Select Availability' />;
+                      <SelectValue placeholder='Select Availability'  />;
                     </SelectTrigger>;
                     <SelectContent className='bg - zion - blue - dark border border - zion - blue - light'>;
                       <SelectItem value='all' className='text - white'>;
@@ -1027,10 +981,10 @@ export function DynamicListingPage(): any ({;
                     default_value={[0, price_range.max]}
                     min={0}
                     max={price_range.max}
-                    step={price_range.max / 100}
+                    step={price_range.max / 10o0}
                     value={currentPriceFilter}
                     onValueChange={handleSliderChange}
-                    className='mb - 4'                  />;
+                    className='mb - 4'                   />;
                   <div className='flex justify - between text - sm text - zion - slate - light'>;
                     <span>${currentPriceFilter[0].toLocaleString ()}</span>;
                     <span>${currentPriceFilter[1].toLocaleString ()}</span>;
@@ -1050,7 +1004,7 @@ export function DynamicListingPage(): any ({;
                       on_click={() => {
                         log_info ('Rating selected:', { data: rating });
                         setSelectedRating (rating) }}
-                      aria - pressed = {selected_rating === rating, }
+                      aria - pressed ={selected_rating === rating}
                       className={`{
                         selected_rating === rating;
                           ? "bg - zion - purple / 30 border - zion - purple text - zion - purple";
@@ -1063,7 +1017,7 @@ export function DynamicListingPage(): any ({;
                           {[...Array (rating)].map ((_, i) => (
                             <Star;
                               key={i}
-                              className='h - 3 w - 3 fill - zion - cyan text - zion - cyan'                            />))}
+                              className='h - 3 w - 3 fill - zion - cyan text - zion - cyan'                             />))}
                           <span className='ml - 1'>& Up</span>;
                         </div>)}
                     </Button>))}
@@ -1083,13 +1037,11 @@ export function DynamicListingPage(): any ({;
                   setSelectedAvailability ('all');
                 }}
 
-
-
           <div className="lg:col-span-3">
             <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light">
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="relative flex-grow">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"  />
                   <Input
                     type="text"
                     placeholder="Search listings..."
@@ -1118,7 +1070,7 @@ export function DynamicListingPage(): any ({;
             <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light">;
               <div className="flex flex-col md:flex-row gap-4">;
                 <div className="relative flex-grow">;
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"  />;
                   <Input;
                     type="text";
                     placeholder="Search listings...";
@@ -1133,11 +1085,9 @@ export function DynamicListingPage(): any ({;
 
                 <div className="flex items-center gap-2 ml-auto">
 
-
-
                   <Select value={sortOption} onValueChange={setSortOption}>
                     <SelectTrigger className='w-[150px] bg-zion-blue border border-zion-blue-light text-white'>
-                      <SelectValue placeholder='Sort' />
+                      <SelectValue placeholder='Sort'  />
                     </SelectTrigger>
                     <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>
                       <SelectItem value='newest' className='text-white'>
@@ -1155,7 +1105,6 @@ export function DynamicListingPage(): any ({;
                     </SelectContent>
                   </Select>
 
-
                     onChange={(e: React && React.ChangeEvent<HTMLInputElement>) => {;
                       logInfo('Search query:', { data: e && e.target.value });
                       setSearchQuery(e && e.target.value);                    }}
@@ -1166,7 +1115,7 @@ export function DynamicListingPage(): any ({;
                 <div className='flex items-center gap-2 ml-auto'>;
                   <Select value={sortOption} onValueChange={setSortOption}>;
                     <SelectTrigger className='w-[150px] bg-zion-blue border border-zion-blue-light text-white'>;
-                      <SelectValue placeholder='Sort' />;
+                      <SelectValue placeholder='Sort'  />;
                     </SelectTrigger>;
                     <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>;
                       <SelectItem value='newest' className='text-white'>;
@@ -1183,7 +1132,7 @@ export function DynamicListingPage(): any ({;
             <div className='bg - zion - blue - dark rounded - lg p - 4 mb - 6 border border - zion - blue - light'>;
               <div className='flex flex - col md:flex - row gap - 4'>;
                 <div className='relative flex - grow'>;
-                  <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4' />;
+                  <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4'  />;
                   <Input;
                     type='text';
                     placeholder='Search listings...';
@@ -1197,7 +1146,7 @@ export function DynamicListingPage(): any ({;
                 <div className='flex items - center gap - 2 ml - auto'>;
                   <Select value={sort_option} onValueChange={setSortOption}>;
                     <SelectTrigger className='w-[150px] bg - zion - blue border border - zion - blue - light text - white'>;
-                      <SelectValue placeholder='Sort' />;
+                      <SelectValue placeholder='Sort'  />;
                     </SelectTrigger>;
                     <SelectContent className='bg - zion - blue - dark border border - zion - blue - light'>;
                       <SelectItem value='newest' className='text - white'>;
@@ -1216,8 +1165,6 @@ export function DynamicListingPage(): any ({;
                     </SelectContent>;
                   </Select>;
 
-
-
                   <Button
                     variant='outline'
                     size='icon'
@@ -1233,8 +1180,6 @@ export function DynamicListingPage(): any ({;
                     className="border-zion-blue-light text-zion-slate-light focus-visible:ring-zion-purple"
                   >
 
-
-
                     {ToggleViewIcon}
                     <span className="sr-only">
                       {isGrid ? "List view" : "Grid view"}
@@ -1248,7 +1193,6 @@ export function DynamicListingPage(): any ({;
 
             <div className="mb-6">
               <p className="text-zion-slate-light">
-
 
                 Showing {filteredListings.length} results
                 {selectedCategories.length > 0 &&
@@ -1294,12 +1238,12 @@ export function DynamicListingPage(): any ({;
                   <div
                     key={i}
                     className='rounded-lg overflow-hidden border border-zion-blue-light'>;
-                    <Skeleton height={192} width='100%' />;
+                    <Skeleton height={192} width='10o0%'  />;
                     <div className='p-4'>;
-                      <Skeleton height={24} width='33%' className='mb-2' />;
-                      <Skeleton height={32} width='83%' className='mb-4' />;
-                      <Skeleton height={16} width='100%' className='mb-2' />;
-                      <Skeleton height={16} width='80%' className='mb-4' />;
+                      <Skeleton height={24} width='33%' className='mb-2'  />;
+                      <Skeleton height={32} width='83%' className='mb-4'  />;
+                      <Skeleton height={16} width='10o0%' className='mb-2'  />;
+                      <Skeleton height={16} width='80%' className='mb-4'  />;
                       <div className='flex justify-between items-center pt-4'>;
             <div className='mb - 6'>;
               <p className='text - zion - slate - light'>;
@@ -1325,30 +1269,26 @@ export function DynamicListingPage(): any ({;
                   <div
                     key={i}
                     className='rounded-lg overflow-hidden border border-zion-blue-light'                  >
-                    <Skeleton height={192} width='100%' />
+                    <Skeleton height={192} width='10o0%'  />
                     <div className='p-4'>
-                      <Skeleton height={24} width='33%' className='mb-2' />
-                      <Skeleton height={32} width='83%' className='mb-4' />
-                      <Skeleton height={16} width='100%' className='mb-2' />
-                      <Skeleton height={16} width='80%' className='mb-4' />
+                      <Skeleton height={24} width='33%' className='mb-2'  />
+                      <Skeleton height={32} width='83%' className='mb-4'  />
+                      <Skeleton height={16} width='10o0%' className='mb-2'  />
+                      <Skeleton height={16} width='80%' className='mb-4'  />
                       <div className='flex justify-between items-center pt-4'>
-                        <Skeleton height={24} width='25%' />
-                        <Skeleton height={32} width='25%' />
+                        <Skeleton height={24} width='25%'  />
+                        <Skeleton height={32} width='25%'  />
                     className="rounded-lg overflow-hidden border border-zion-blue-light"
                   >
-                    <Skeleton height={192} width="100%" />
+                    <Skeleton height={192} width="10o0%"  />
                     <div className="p-4">
-                      <Skeleton height={24} width="33%" className="mb-2" />
-                      <Skeleton height={32} width="83%" className="mb-4" />
-                      <Skeleton height={16} width="100%" className="mb-2" />
-                      <Skeleton height={16} width="80%" className="mb-4" />
+                      <Skeleton height={24} width="33%" className="mb-2"  />
+                      <Skeleton height={32} width="83%" className="mb-4"  />
+                      <Skeleton height={16} width="10o0%" className="mb-2"  />
+                      <Skeleton height={16} width="80%" className="mb-4"  />
                       <div className="flex justify-between items-center pt-4">
-                        <Skeleton height={24} width="25%" />
-                        <Skeleton height={32} width="25%" />
-
-
-
-
+                        <Skeleton height={24} width="25%"  />
+                        <Skeleton height={32} width="25%"  />
 
                   variant="outline"
                   onClick={() => {
@@ -1361,7 +1301,6 @@ export function DynamicListingPage(): any ({;
                     setSelectedAvailability("all")
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-
 
                 >
                   Clear All
@@ -1378,46 +1317,45 @@ export function DynamicListingPage(): any ({;
 if (typeof window !== 'undefined') {';
   sessionStorage && sessionStorage.setItem ('quoteRequestData', JSON && JSON.stringify (quoteData) ) ;
 
-
-}, 500) ;
+}, 50o0) ;
 };";
-return (</p> </div> <div className="grid grid-cols-1 lg:grid-cols-4 gap-6" > <div className="lg:col-span-1" > <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6" > <h3 className="text-lg font-medium text-white mb-4 flex items-center" > <Filter className="mr-2 h-5 w-5" /> Filters </h3> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Categories </label> > {;
+return (</p> </div> <div className="grid grid-cols-1 lg:grid-cols-4 gap-6" > <div className="lg:col-span-1" > <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6" > <h3 className="text-lg font-medium text-white mb-4 flex items-center" > <Filter className="mr-2 h-5 w-5"  /> Filters </h3> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Categories </label> > {;
   filter && filter.label ;
 }</label> </div>) ) ;
-}</div> </div> Brand </label> <Selectvalue= {
+}</div> </div> Brand </label> <Selectvalue={
   selectedBrand 
-}onValueChange= {
+}onValueChange={
   (value: string) => setSelectedBrand (value) ";
-}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Brand" /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All Brands </SelectItem> </SelectItem>) ) ;
+}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Brand"  /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All Brands </SelectItem> </SelectItem>) ) ;
 }</SelectContent> </Select> </div>) ";
-}<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Specifications </label> <Input Availability </label> <Selectvalue= {
+}<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Specifications </label> <Input Availability </label> <Selectvalue={
   selectedAvailability 
-}onValueChange= {
+}onValueChange={
   (value: string) => setSelectedAvailability (value) ";
-}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Availability" /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All </SelectItem> </SelectItem>) ) ;
+}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Availability"  /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All </SelectItem> </SelectItem>) ) ;
 }</SelectContent> </Select> </div>) ";
 }<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Price Range </label> <div className="mt-6 px-2" > <Slider </div> </div> </div> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Minimum Rating </label> ;
 
-}aria-pressed= {;
+}aria-pressed={;
   selectedRating === rating ;
-}className= {;
+}className={;
   ` {;
   selectedRating === rating <Starkey= {
   i "
-}className="h-3 w-3 fill-zion-cyan text-zion-cyan" />) ) ";
+}className="h-3 w-3 fill-zion-cyan text-zion-cyan"  />) ) ";
 }<span className="ml-1" >& Up</span> </div>) ;
 }</Button>) ) ;
 }</div> </div> <ButtonclearCategories ()
 setCurrentPriceFilter ([0, priceRange && priceRange.max])
-setSelectedRating (null)"> Clear All </Button> </div> </div> <div className="lg:col-span-3" > <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light" > <div className="flex flex-col md:flex-row gap-4" > <div className="relative flex-grow" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input
+setSelectedRating (null)"> Clear All </Button> </div> </div> <div className="lg:col-span-3" > <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light" > <div className="flex flex-col md:flex-row gap-4" > <div className="relative flex-grow" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"  /> <Input
 }"
-}className="pl-10 bg-zion-blue border border-zion-blue-light text-white" /> </div> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="newest" className="text-white" >Newest</SelectItem> <SelectItem value="price-asc" className="text-white" >Price: Low to High</SelectItem> <SelectItem value="price-desc" className="text-white" >Price: High to Low</SelectItem> <SelectItem value="rating" className="text-white" >Highest Rating</SelectItem> </SelectContent> </Select> <Button </span> </Button> </div> </div> </div> </p> </div> {;
-  isLoading ? (<divclassName= {> {;
+}className="pl-10 bg-zion-blue border border-zion-blue-light text-white"  /> </div> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="newest" className="text-white" >Newest</SelectItem> <SelectItem value="price-asc" className="text-white" >Price: Low to High</SelectItem> <SelectItem value="price-desc" className="text-white" >Price: High to Low</SelectItem> <SelectItem value="rating" className="text-white" >Highest Rating</SelectItem> </SelectContent> </Select> <Button </span> </Button> </div> </div> </div> </p> </div> {;
+  isLoading ? (<divclassName={> {;
   [1, 2,  3, 4].map ( (i) => (<divkey= {
   i "
 }className="rounded-lg overflow-hidden border border-zion-blue-light"> </div> </div> </div>) ) ;
 }</div> > {;
-  filteredListings && filteredListings.map ( (listing) => (<ProductListingCardkey= {
+  filteredListings && filteredListings.map ( (listing) => (<ProductListingCardkey={
   listing && listing.id 
                   </div>))}
               </div>) : filtered_listings.length > 0 ? (
@@ -1429,12 +1367,12 @@ setSelectedRating (null)"> Clear All </Button> </div> </div> <div className="lg:
                 }
               >;
                 {filtered_listings.map (listing => (                  <ProductListingCard;
-                    key = {listing.id, }
-                    listing = {listing, }
-                    view = {view, }
-                    onRequestQuote = {handleRequestQuote, }
-                    detailBasePath = {detailBasePath, }
-                  />))}
+                    key ={listing.id}
+                    listing ={listing}
+                    view ={view}
+                    onRequestQuote ={handleRequestQuote}
+                    detailBasePath ={detailBasePath}
+                   />))}
               </div>) : (
               <div className='text - center py - 20'>;
                 <h3 className='text - xl font - bold text - white mb - 2'>;
@@ -1468,108 +1406,108 @@ if ( {') {
   $2
 }
   session_storage.set_item ('quoteRequestData', JSON.stringify (quote_data) );
-}, 500);
+}, 50o0);
 }";
-return (</p> </div> <div className="grid grid - cols - 1 lg:grid - cols - 4 gap - 6" > <div className="lg:col - span - 1" > <div className="bg - zion - blue - dark rounded - lg border border - zion - blue - light p - 4 sticky top - 6" > <h3 className="text - lg font - medium text - white mb - 4 flex items - center" > <Filter className="mr - 2 h - 5 w - 5" /> Filters </h3> <div className="mb - 6" > <label className="text - sm font - medium text - zion - slate - light block mb - 2" > Categories </label> > {
+return (</p> </div> <div className="grid grid - cols - 1 lg:grid - cols - 4 gap - 6" > <div className="lg:col - span - 1" > <div className="bg - zion - blue - dark rounded - lg border border - zion - blue - light p - 4 sticky top - 6" > <h3 className="text - lg font - medium text - white mb - 4 flex items - center" > <Filter className="mr - 2 h - 5 w - 5"  /> Filters </h3> <div className="mb - 6" > <label className="text - sm font - medium text - zion - slate - light block mb - 2" > Categories </label> > {
   filter.label;
 }</label> </div>) );
-}</div> </div> Brand </label> <Select value= {
+}</div> </div> Brand </label> <Select value={
   selected_brand;
-}onValueChange= {
+}onValueChange={
   (value: string) => setSelectedBrand (value) ";
-}> <SelectTrigger className="bg - zion - blue border border - zion - blue - light text - white" > <SelectValue placeholder="Select Brand" /> </SelectTrigger> <SelectContent className="bg - zion - blue - dark border border - zion - blue - light" > <SelectItem value="all" className="text - white" > All Brands </SelectItem> </SelectItem>) );
+}> <SelectTrigger className="bg - zion - blue border border - zion - blue - light text - white" > <SelectValue placeholder="Select Brand"  /> </SelectTrigger> <SelectContent className="bg - zion - blue - dark border border - zion - blue - light" > <SelectItem value="all" className="text - white" > All Brands </SelectItem> </SelectItem>) );
 }</SelectContent> </Select> </div>) ";
-}<div className="mb - 6" > <label className="text - sm font - medium text - zion - slate - light block mb - 2" > Specifications </label> <Input Availability </label> <Select value= {
+}<div className="mb - 6" > <label className="text - sm font - medium text - zion - slate - light block mb - 2" > Specifications </label> <Input Availability </label> <Select value={
   selected_availability;
-}onValueChange= {
+}onValueChange={
   (value: string) => setSelectedAvailability (value) ";
-}> <SelectTrigger className="bg - zion - blue border border - zion - blue - light text - white" > <SelectValue placeholder="Select Availability" /> </SelectTrigger> <SelectContent className="bg - zion - blue - dark border border - zion - blue - light" > <SelectItem value="all" className="text - white" > All </SelectItem> </SelectItem>) );
+}> <SelectTrigger className="bg - zion - blue border border - zion - blue - light text - white" > <SelectValue placeholder="Select Availability"  /> </SelectTrigger> <SelectContent className="bg - zion - blue - dark border border - zion - blue - light" > <SelectItem value="all" className="text - white" > All </SelectItem> </SelectItem>) );
 }</SelectContent> </Select> </div>) ";
 }<div className="mb - 6" > <label className="text - sm font - medium text - zion - slate - light block mb - 2" > Price Range </label> <div className="mt - 6 px - 2" > <Slider </div> </div> </div> <div className="mb - 6" > <label className="text - sm font - medium text - zion - slate - light block mb - 2" > Minimum Rating </label>;
-}aria - pressed= {
+}aria - pressed={
   selected_rating === rating;
-}className= {
+}className={
   ` {
   selected_rating === rating <Star key= {
   i ";
-}className="h - 3 w - 3 fill - zion - cyan text - zion - cyan" />) ) ";
+}className="h - 3 w - 3 fill - zion - cyan text - zion - cyan"  />) ) ";
 }<span className="ml - 1" >& Up</span> </div>);
 }</Button>) );
 }</div> </div> <Button clear_categories ();
 setCurrentPriceFilter ([0, price_range.max]);
 setSelectedRating (null);";
-> Clear All </Button> </div> </div> <div className="lg:col - span - 3" > <div className="bg - zion - blue - dark rounded - lg p - 4 mb - 6 border border - zion - blue - light" > <div className="flex flex - col md:flex - row gap - 4" > <div className="relative flex - grow" > <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" /> <Input;
+> Clear All </Button> </div> </div> <div className="lg:col - span - 3" > <div className="bg - zion - blue - dark rounded - lg p - 4 mb - 6 border border - zion - blue - light" > <div className="flex flex - col md:flex - row gap - 4" > <div className="relative flex - grow" > <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4"  /> <Input;
 }";
-}className="pl - 10 bg - zion - blue border border - zion - blue - light text - white" /> </div> </SelectTrigger> <SelectContent className="bg - zion - blue - dark border border - zion - blue - light" > <SelectItem value="newest" className="text - white" >Newest</SelectItem> <SelectItem value="price - asc" className="text - white" >Price: Low to High</SelectItem> <SelectItem value="price - desc" className="text - white" >Price: High to Low</SelectItem> <SelectItem value="rating" className="text - white" >Highest Rating</SelectItem> </SelectContent> </Select> <Button </span> </Button> </div> </div> </div> </p> </div> {
-  is_loading ? (<div className= {
+}className="pl - 10 bg - zion - blue border border - zion - blue - light text - white"  /> </div> </SelectTrigger> <SelectContent className="bg - zion - blue - dark border border - zion - blue - light" > <SelectItem value="newest" className="text - white" >Newest</SelectItem> <SelectItem value="price - asc" className="text - white" >Price: Low to High</SelectItem> <SelectItem value="price - desc" className="text - white" >Price: High to Low</SelectItem> <SelectItem value="rating" className="text - white" >Highest Rating</SelectItem> </SelectContent> </Select> <Button </span> </Button> </div> </div> </div> </p> </div> {
+  is_loading ? (<div className={
   > {
   [1, 2,  3, 4].map ( (i) => (<div key= {
   i ";
 }className="rounded - lg overflow - hidden border border - zion - blue - light" > </div> </div> </div>) );
 }</div> > {
-  filtered_listings.map ( (listing) => (<ProductListingCard key= {
+  filtered_listings.map ( (listing) => (<ProductListingCard key={
   listing.id;
 
-}listing= {
+}listing={
   listing;
-}view= {
+}view={
   view;
-}onRequestQuote= {
+}onRequestQuote={
   handleRequestQuote;
-}detailBasePath= {
+}detailBasePath={
 
 if (typeof window !== 'undefined') {'
   sessionStorage.setItem ('quoteRequestData', JSON.stringify (quoteData) )
-}, 500)
+}, 50o0)
 };"
-return (</p> </div> <div className="grid grid-cols-1 lg:grid-cols-4 gap-6" > <div className="lg:col-span-1" > <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6" > <h3 className="text-lg font-medium text-white mb-4 flex items-center" > <Filter className="mr-2 h-5 w-5" /> Filters </h3> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Categories </label> > {
+return (</p> </div> <div className="grid grid-cols-1 lg:grid-cols-4 gap-6" > <div className="lg:col-span-1" > <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6" > <h3 className="text-lg font-medium text-white mb-4 flex items-center" > <Filter className="mr-2 h-5 w-5"  /> Filters </h3> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Categories </label> > {
   filter.label
 }</label> </div>) )
-}</div> </div> Brand </label> <Select value= {
+}</div> </div> Brand </label> <Select value={
   selectedBrand
-}onValueChange= {
+}onValueChange={
   (value: string) => setSelectedBrand (value) "
-}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Brand" /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All Brands </SelectItem> </SelectItem>) )
+}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Brand"  /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All Brands </SelectItem> </SelectItem>) )
 }</SelectContent> </Select> </div>) "
-}<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Specifications </label> <Input Availability </label> <Select value= {
+}<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Specifications </label> <Input Availability </label> <Select value={
   selectedAvailability
-}onValueChange= {
+}onValueChange={
   (value: string) => setSelectedAvailability (value) "
-}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Availability" /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All </SelectItem> </SelectItem>) )
+}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Availability"  /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All </SelectItem> </SelectItem>) )
 }</SelectContent> </Select> </div>) "
 }<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Price Range </label> <div className="mt-6 px-2" > <Slider </div> </div> </div> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Minimum Rating </label>
-}aria-pressed= {
+}aria-pressed={
   selectedRating === rating
-}className= {
+}className={
   ` {
   selectedRating === rating <Star key= {
   i "
-}className="h-3 w-3 fill-zion-cyan text-zion-cyan" />) ) "
+}className="h-3 w-3 fill-zion-cyan text-zion-cyan"  />) ) "
 }<span className="ml-1" >& Up</span> </div>)
 }</Button>) )
 }</div> </div> <Button clearCategories ()
 setCurrentPriceFilter ([0, priceRange.max])
 setSelectedRating (null);"
-> Clear All </Button> </div> </div> <div className="lg:col-span-3" > <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light" > <div className="flex flex-col md:flex-row gap-4" > <div className="relative flex-grow" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input
+> Clear All </Button> </div> </div> <div className="lg:col-span-3" > <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light" > <div className="flex flex-col md:flex-row gap-4" > <div className="relative flex-grow" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"  /> <Input
 }"
-}className="pl-10 bg-zion-blue border border-zion-blue-light text-white" /> </div> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="newest" className="text-white" >Newest</SelectItem> <SelectItem value="price-asc" className="text-white" >Price: Low to High</SelectItem> <SelectItem value="price-desc" className="text-white" >Price: High to Low</SelectItem> <SelectItem value="rating" className="text-white" >Highest Rating</SelectItem> </SelectContent> </Select> <Button </span> </Button> </div> </div> </div> </p> </div> {
-  isLoading ? (<div className= {
+}className="pl-10 bg-zion-blue border border-zion-blue-light text-white"  /> </div> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="newest" className="text-white" >Newest</SelectItem> <SelectItem value="price-asc" className="text-white" >Price: Low to High</SelectItem> <SelectItem value="price-desc" className="text-white" >Price: High to Low</SelectItem> <SelectItem value="rating" className="text-white" >Highest Rating</SelectItem> </SelectContent> </Select> <Button </span> </Button> </div> </div> </div> </p> </div> {
+  isLoading ? (<div className={
   > {
   [1, 2,  3, 4].map ( (i) => (<div key= {
   i "
 }className="rounded-lg overflow-hidden border border-zion-blue-light" > </div> </div> </div>) )
 }</div> > {
-  filteredListings.map ( (listing) => (<ProductListingCard key= {
+  filteredListings.map ( (listing) => (<ProductListingCard key={
   listing.id
-}listing= {
+}listing={
   listing
-}view= {
+}view={
   view
-}onRequestQuote= {
+}onRequestQuote={
   handleRequestQuote
-}detailBasePath= {
+}detailBasePath={
   detailBasePath
-}/>) ) "
+} />) ) "
 }</div> No listings found </h3> <p className="text-zion-slate-light mb-6" > Try adjusting your filters or search query </p> <Button clearCategories ()
 setCurrentPriceFilter ([0, priceRange.max])
 setSelectedRating (null)
@@ -1577,8 +1515,6 @@ setSelectedRating (null)
 }</div> </div> </div> </div>)
 }'"  )
 }
-
-
 
 ;
 
@@ -1591,7 +1527,6 @@ setSelectedRating (null);
 }</div> </div> </div> </div>);
 }'"  );
 }
-
 
 ;
 

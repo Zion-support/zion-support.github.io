@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { 
   Phone, 
@@ -54,10 +53,10 @@ import {
 import Button from '../ui/Button';
 
 export default function NeoFuturisticFooter() {
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
 
@@ -117,8 +116,8 @@ export default function NeoFuturisticFooter() {
     { metric: '$12.3B', label: 'Autonomous Manufacturing', growth: '320% annually' },
     { metric: '$6.8B', label: 'Quantum Cybersecurity', growth: '380% annually' },
     { metric: '$4.2B', label: 'Space Technology', growth: '290% annually' },
-    { metric: '$3.6B', label: 'Metaverse Development', growth: '400% annually' },
-    { metric: '$3.2B', label: 'Biomedical AI', growth: '200% annually' }
+    { metric: '$3.6B', label: 'Metaverse Development', growth: '40o0% annually' },
+    { metric: '$3.2B', label: 'Biomedical AI', growth: '20o0% annually' }
   ];
 
   const companyLinks = [
@@ -149,16 +148,16 @@ export default function NeoFuturisticFooter() {
   ];
 
   const socialLinks = [
-    { name: 'Facebook', href: 'https://www.facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5" /> },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
-    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
-    { name: 'Instagram', href: 'https://www.instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" /> },
-    { name: 'YouTube', href: 'https://www.youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" /> },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: <Github className="w-5 h-5" /> }
+    { name: 'Facebook', href: 'https://www.facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5"  /> },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5"  /> },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5"  /> },
+    { name: 'Instagram', href: 'https://www.instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5"  /> },
+    { name: 'YouTube', href: 'https://www.youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5"  /> },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: <Github className="w-5 h-5"  /> }
   ];
 
   const stats = [
-    { number: '500+', label: 'Revolutionary Services' },
+    { number: '50o0+', label: 'Revolutionary Services' },
     { number: '21', label: 'Day Free Trials' },
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'AI-Powered Support' },
@@ -167,7 +166,7 @@ export default function NeoFuturisticFooter() {
   ];
 
   return (
-    <footer className="bg-black/90 backdrop-blur-xl border-t border-gray-700/50">
+    <footer className="bg-black/90 backdrop-blur-xl border-t border-gray-70o0/50">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 mb-12">
@@ -175,18 +174,18 @@ export default function NeoFuturisticFooter() {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center">
-                  <Sparkles className="w-7 h-7 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-40o0 to-purple-50o0 rounded-xl flex items-center justify-center">
+                  <Sparkles className="w-7 h-7 text-white"  />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-40o0 to-purple-50o0 rounded-xl blur-lg opacity-50"></div>
               </div>
               <div>
                 <div className="text-2xl font-bold text-white">Zion Tech Group</div>
-                <div className="text-gray-400">Revolutionary Technology</div>
+                <div className="text-gray-40o0">Revolutionary Technology</div>
               </div>
             </div>
             
-            <p className="text-gray-300 mb-6 leading-relaxed max-w-md">
+            <p className="text-gray-30o0 mb-6 leading-relaxed max-w-md">
               Leading the global micro SaaS revolution with patent-pending quantum AI and autonomous systems. 
               Transform your business with cutting-edge technology solutions.
             </p>
@@ -194,27 +193,27 @@ export default function NeoFuturisticFooter() {
             {/* Contact Information */}
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-cyan-400" />
-                <span className="text-gray-300">{contactInfo.mobile}</span>
+                <Phone className="w-5 h-5 text-cyan-40o0"  />
+                <span className="text-gray-30o0">{contactInfo.mobile}</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-purple-400" />
-                <span className="text-gray-300">{contactInfo.email}</span>
+                <Mail className="w-5 h-5 text-purple-40o0"  />
+                <span className="text-gray-30o0">{contactInfo.email}</span>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-green-400" />
-                <span className="text-gray-300 text-sm">{contactInfo.address}</span>
+                <MapPin className="w-5 h-5 text-green-40o0"  />
+                <span className="text-gray-30o0 text-sm">{contactInfo.address}</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Globe className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">{contactInfo.website}</span>
+                <Globe className="w-5 h-5 text-blue-40o0"  />
+                <span className="text-gray-30o0">{contactInfo.website}</span>
               </div>
             </div>
 
             {/* CTA Button */}
             <Button href="/services" variant="quantum" size="lg" className="group">
-              Explore 500+ Services
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              Explore 50o0+ Services
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"  />
             </Button>
           </div>
 
@@ -225,15 +224,15 @@ export default function NeoFuturisticFooter() {
               {serviceCategories.slice(0, 2).map((category, index) => (
                 <div key={index} className="group">
                   <div className="flex items-center space-x-3 mb-3">
-                    <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                    <div className="text-cyan-40o0 group-hover:text-cyan-30o0 transition-colors">
                       {/* Icon placeholder, as specific icons are not provided in the new_code */}
-                      <Atom className="w-5 h-5" /> 
+                      <Atom className="w-5 h-5"  /> 
                     </div>
                     <div>
-                      <h4 className="text-white font-medium group-hover:text-cyan-400 transition-colors">
+                      <h4 className="text-white font-medium group-hover:text-cyan-40o0 transition-colors">
                         {category.name}
                       </h4>
-                      <p className="text-gray-400 text-sm">{category.name}</p>
+                      <p className="text-gray-40o0 text-sm">{category.name}</p>
                     </div>
                   </div>
                   <div className="ml-8 space-y-2">
@@ -243,7 +242,7 @@ export default function NeoFuturisticFooter() {
                         href={service.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block text-gray-400 hover:text-cyan-400 transition-colors text-sm"
+                        className="block text-gray-40o0 hover:text-cyan-40o0 transition-colors text-sm"
                       >
                         {service.name}
                       </Link>
@@ -262,7 +261,7 @@ export default function NeoFuturisticFooter() {
                 <Link
                   key={index}
                   href={link.href}
-                  className="block text-gray-400 hover:text-cyan-400 transition-colors"
+                  className="block text-gray-40o0 hover:text-cyan-40o0 transition-colors"
                 >
                   {link.name}
                 </Link>
@@ -275,7 +274,7 @@ export default function NeoFuturisticFooter() {
                 <Link
                   key={index}
                   href={link.href}
-                  className="block text-gray-400 hover:text-cyan-400 transition-colors"
+                  className="block text-gray-40o0 hover:text-cyan-40o0 transition-colors"
                 >
                   {link.name}
                 </Link>
@@ -285,18 +284,18 @@ export default function NeoFuturisticFooter() {
         </div>
 
         {/* Stats Section */}
-        <div className="border-t border-gray-700/50 pt-12 mb-12">
+        <div className="border-t border-gray-70o0/50 pt-12 mb-12">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-white mb-4">Our Impact</h3>
-            <p className="text-gray-400">Transforming businesses worldwide with revolutionary technology</p>
+            <p className="text-gray-40o0">Transforming businesses worldwide with revolutionary technology</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-xl p-4 border border-cyan-500/30">
-                  <div className="text-2xl font-bold text-cyan-400 mb-2">{stat.number}</div>
-                  <div className="text-gray-300 text-sm">{stat.label}</div>
+                <div className="bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 rounded-xl p-4 border border-cyan-50o0/30">
+                  <div className="text-2xl font-bold text-cyan-40o0 mb-2">{stat.number}</div>
+                  <div className="text-gray-30o0 text-sm">{stat.label}</div>
                 </div>
               </div>
             ))}
@@ -304,11 +303,11 @@ export default function NeoFuturisticFooter() {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-700/50 pt-8">
+        <div className="border-t border-gray-70o0/50 pt-8">
           <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
             {/* Copyright */}
-            <div className="text-gray-400 text-sm">
-              © 2024 Zion Tech Group. All rights reserved. Revolutionary technology solutions.
+            <div className="text-gray-40o0 text-sm">
+              © 20o24 Zion Tech Group. All rights reserved. Revolutionary technology solutions.
             </div>
 
             {/* Social Links */}
@@ -317,7 +316,7 @@ export default function NeoFuturisticFooter() {
                 <a
                   key={index}
                   href={social.href}
-                  className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-400/10 rounded-lg transition-all duration-300"
+                  className="p-2 text-gray-40o0 hover:text-cyan-40o0 hover:bg-cyan-40o0/10 rounded-lg transition-all duration-30o0"
                   aria-label={social.name}
                 >
                   {social.icon}
@@ -332,7 +331,7 @@ export default function NeoFuturisticFooter() {
               <Link
                 key={index}
                 href={link.href}
-                className="text-gray-500 hover:text-cyan-400 transition-colors"
+                className="text-gray-50o0 hover:text-cyan-40o0 transition-colors"
               >
                 {link.name}
               </Link>
@@ -342,13 +341,13 @@ export default function NeoFuturisticFooter() {
       </div>
 
       {/* Newsletter Signup */}
-      <div className="bg-gradient-to-r from-cyan-900/20 to-purple-900/20 border-t border-gray-700/50">
+      <div className="bg-gradient-to-r from-cyan-90o0/20 to-purple-90o0/20 border-t border-gray-70o0/50">
         <div className="max-w-4xl mx-auto px-4 py-12">
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-4">
               Stay Updated with Revolutionary Technology
             </h3>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-gray-30o0 mb-8 max-w-2xl mx-auto">
               Get the latest insights on AI, quantum computing, and emerging technologies. 
               Join thousands of forward-thinking professionals.
             </p>
@@ -357,15 +356,15 @@ export default function NeoFuturisticFooter() {
               <input
                 type="email"
                 placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              />
+                className="flex-1 px-4 py-3 bg-gray-90o0/50 border border-gray-60o0 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent"
+               />
               <Button variant="quantum" size="lg">
                 Subscribe
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <ArrowRight className="w-4 h-4 ml-2"  />
               </Button>
             </div>
             
-            <p className="text-gray-400 text-sm mt-4">
+            <p className="text-gray-40o0 text-sm mt-4">
               By subscribing, you agree to our Privacy Policy and Terms of Service.
             </p>
           </div>
@@ -373,29 +372,29 @@ export default function NeoFuturisticFooter() {
       </div>
 
       {/* Final CTA */}
-      <div className="bg-black/50 border-t border-gray-700/50">
+      <div className="bg-black/50 border-t border-gray-70o0/50">
         <div className="max-w-4xl mx-auto px-4 py-8 text-center">
           <h3 className="text-xl font-bold text-white mb-4">
             Ready to Transform Your Business?
           </h3>
-          <p className="text-gray-300 mb-6">
+          <p className="text-gray-30o0 mb-6">
             Contact our expert team today for a personalized consultation and demo of our revolutionary micro SaaS services.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button href="/services" variant="quantum" size="lg">
               Explore All Services
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2"  />
             </Button>
             <Button href="/contact" variant="secondary" size="lg">
               Get Started Today
             </Button>
           </div>
           
-          <div className="mt-6 text-gray-400 text-sm">
-            <span className="text-cyan-400 font-semibold">500+</span> Revolutionary Services • 
-            <span className="text-green-400 font-semibold"> 21-Day</span> Free Trials • 
-            <span className="text-purple-400 font-semibold"> 24/7</span> Support
+          <div className="mt-6 text-gray-40o0 text-sm">
+            <span className="text-cyan-40o0 font-semibold">50o0+</span> Revolutionary Services • 
+            <span className="text-green-40o0 font-semibold"> 21-Day</span> Free Trials • 
+            <span className="text-purple-40o0 font-semibold"> 24/7</span> Support
           </div>
         </div>
       </div>

@@ -1,5 +1,4 @@
 
-import React from "react";
 import { 
   Dialog, 
   DialogContent, 
@@ -39,14 +38,14 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
         <DialogHeader>
           <DialogTitle className="text-2xl flex items-center justify-between">
             <span>{quote.project_name}</span>
-            <QuoteStatusBadge status={quote.status} />
+            <QuoteStatusBadge status={quote.status}  />
           </DialogTitle>
           <DialogDescription>
             Quote request submitted on {formatDate(quote.created_at)}
           </DialogDescription>
         </DialogHeader>
         
-        <Separator className="my-4" />
+        <Separator className="my-4"  />
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card>
@@ -54,11 +53,11 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
               <h3 className="text-lg font-medium mb-3">Requester Information</h3>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
-                  <User className="h-4 w-4 text-gray-500" />
+                  <User className="h-4 w-4 text-gray-50o0"  />
                   <span>{quote.requester_name}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Mail className="h-4 w-4 text-gray-500" />
+                  <Mail className="h-4 w-4 text-gray-50o0"  />
                   <span>{quote.requester_email}</span>
                 </div>
               </div>
@@ -70,11 +69,11 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
               <h3 className="text-lg font-medium mb-3">Project Timeline</h3>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
-                  <Calendar className="h-4 w-4 text-gray-500" />
+                  <Calendar className="h-4 w-4 text-gray-50o0"  />
                   <span>Start date: {formatDate(quote.start_date)}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Clock className="h-4 w-4 text-gray-500" />
+                  <Clock className="h-4 w-4 text-gray-50o0"  />
                   <span>Timeline: {quote.timeline}</span>
                 </div>
               </div>
@@ -95,7 +94,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
             )}
             
             <div className="mt-6 flex items-center gap-2">
-              <DollarSign className="h-4 w-4 text-gray-500" />
+              <DollarSign className="h-4 w-4 text-gray-50o0"  />
               <span className="font-medium">Budget: </span>
               {quote.budget_display || 
                (quote.budget_min && quote.budget_max 

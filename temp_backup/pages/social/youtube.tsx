@@ -12,12 +12,12 @@ export default function YouTubeRedirect() {
 		<>
 			<Head>
 				<title>YouTube | Zion Tech Group</title>
-				<link rel="canonical" href="https://www.youtube.com/@ziontechgroup" />
-				<meta httpEquiv="refresh" content="0;url=https://www.youtube.com/@ziontechgroup" />
-				<meta name="robots" content="index, follow" />
+				<link rel="canonical" href="https://www.youtube.com/@ziontechgroup"  />
+				<meta httpEquiv="refresh" content="0;url=https://www.youtube.com/@ziontechgroup"  />
+				<meta name="robots" content="index, follow"  />
 			</Head>
 			<div className="min-h-screen bg-black text-white flex items-center justify-center p-8">
-				<a href="https://www.youtube.com/@ziontechgroup" className="text-cyan-400 underline">
+				<a href="https://www.youtube.com/@ziontechgroup" className="text-cyan-40o0 underline">
 					Continue to YouTube
 				</a>
 			</div>

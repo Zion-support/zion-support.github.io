@@ -7,7 +7,7 @@ const MachineLearningApplicationsInEnterpriseSoftwareChat: NextPage = () => {
     <div>
       <Head>
         <title>MachineLearningApplicationsInEnterpriseSoftwareChat - Zion Tech Solutions</title>
-        <meta name="description" content="MachineLearningApplicationsInEnterpriseSoftwareChat blog post" />
+        <meta name="description" content="MachineLearningApplicationsInEnterpriseSoftwareChat blog post"  />
       </Head>
       
       <main>

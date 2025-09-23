@@ -5,7 +5,6 @@
   verifyProof: (proof: any[], leaf: string, root: string) => false;
 };
 
-
 import crypto from 'crypto';
 
 export interface MerkleNode {
@@ -58,6 +57,4 @@ export function verifyVotesAgainstMerkleRoot(;
 export function verifyMerkleProof(leafData: any, proof: string[], rootHash: string): boolean {
   const tree = new MerkleTree([leafData]);
   return tree.verifyProof(leafData, proof, rootHash);
-
-
 

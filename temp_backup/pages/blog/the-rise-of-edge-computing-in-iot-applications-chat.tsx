@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function TheRiseOfEdgeComputingInIotApplicationsChatPage() {
@@ -6,7 +5,7 @@ export default function TheRiseOfEdgeComputingInIotApplicationsChatPage() {
     <>
       <Head>
         <title>The Rise Of Edge Computing In Iot Applications Chat - Zion Tech Group</title>
-        <meta name="description" content="the rise of edge computing in iot applications chat page" />
+        <meta name="description" content="the rise of edge computing in iot applications chat page"  />
       </Head>
       
       <main>

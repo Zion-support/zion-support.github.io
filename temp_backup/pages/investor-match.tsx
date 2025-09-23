@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 
-type Investor = {
+type Investor ={
   name: string;
   website: string;
   contact?: string;
@@ -62,8 +62,7 @@ export default function InvestorMatchPage() {
       const res = await fetch('/api/investor-match', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ startupName, industry, roundType, teamSize, pitchSummary, deckOrWebsite, location }),
-      });
+        body: JSON.stringify({ startupName, industry, roundType, teamSize, pitchSummary, deckOrWebsite, location })});
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Failed');
       setInvestors(data.investors || []);
@@ -89,9 +88,7 @@ export default function InvestorMatchPage() {
           investorType: inv.type || 'Investor',
           highlights: [industry, roundType, teamSize ? `${teamSize} FTE` : ''],
           pitchSummary,
-          website: deckOrWebsite,
-        }),
-      });
+          website: deckOrWebsite})});
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Failed');
       const blob = new Blob([`Subject: ${data.subject}\n\n${data.body_markdown}`], { type: 'text/markdown' });
@@ -110,7 +107,7 @@ export default function InvestorMatchPage() {
     <EnhancedLayout>
       <Head>
         <title>Investor Match – Zion</title>
-        <meta name="description" content="GPT-based investor matchmaking for startups" />
+        <meta name="description" content="GPT-based investor matchmaking for startups"  />
       </Head>
       {!session ? (
         <div className="max-w-2xl mx-auto p-6 border rounded-xl">
@@ -164,13 +161,13 @@ export default function InvestorMatchPage() {
               <button disabled={!isFormValid || loading} className="inline-flex items-center justify-center px-4 py-2 rounded-md bg-black text-white disabled:opacity-50 dark:bg-white dark:text-black">
                 {loading ? 'Matching…' : 'Find Matches'}
               </button>
-              {error && <p className="text-red-600 text-sm">{error}</p>}
+              {error && <p className="text-red-60o0 text-sm">{error}</p>}
             </form>
           </section>
 
           <section className="space-y-4">
             {favorites.length > 0 && (
-              <div className="p-4 border rounded-xl bg-yellow-50 dark:bg-yellow-900/20 text-sm">
+              <div className="p-4 border rounded-xl bg-yellow-50 dark:bg-yellow-90o0/20 text-sm">
                 <div className="font-medium mb-1">Saved to dashboard</div>
                 <div className="flex flex-wrap gap-2">
                   {favorites.map((f) => (
@@ -193,7 +190,7 @@ export default function InvestorMatchPage() {
                       <span className="px-2 py-0.5 rounded-md border">Score: {Math.round(inv.relevance_score)}</span>
                     </div>
                   </div>
-                  <button onClick={() => toggleFavorite(inv.name)} className={`px-3 py-1 rounded-md border text-sm ${favorites.includes(inv.name) ? 'bg-yellow-100 dark:bg-yellow-900/30' : ''}`}>
+                  <button onClick={() => toggleFavorite(inv.name)} className={`px-3 py-1 rounded-md border text-sm ${favorites.includes(inv.name) ? 'bg-yellow-10o0 dark:bg-yellow-90o0/30' : ''}`}>
                     {favorites.includes(inv.name) ? 'Saved' : 'Save'}
                   </button>
                 </div>

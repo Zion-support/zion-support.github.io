@@ -5,9 +5,9 @@ export default function GenerativeAIRiskRegisterPage() {
     <div className="min-h-screen bg-white">
       <article className="max-w-3xl mx-auto px-6 py-16">
         <header>
-          <p className="text-sm text-gray-500">September 15, 2025</p>
-          <h1 className="mt-2 text-3xl font-bold text-gray-900">AI 2026: Generative AI Risk Register</h1>
-          <p className="mt-3 text-gray-600">A living template to track risks, owners, mitigations, and evidence for enterprise AI programs.</p>
+          <p className="text-sm text-gray-50o0">September 15, 20o25</p>
+          <h1 className="mt-2 text-3xl font-bold text-gray-90o0">AI 20o26: Generative AI Risk Register</h1>
+          <p className="mt-3 text-gray-60o0">A living template to track risks, owners, mitigations, and evidence for enterprise AI programs.</p>
         </header>
 
         <div className="prose mt-8">

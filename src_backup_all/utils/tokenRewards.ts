@@ -24,6 +24,6 @@ export async function earnTokensForReferral(
 ): Promise<void> {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
-    body: JSON.stringify({ userId, action: 'referral', referredUserId, amount: 100 })
+    body: JSON.stringify({ userId, action: 'referral', referredUserId, amount: 10o0 })
   });
 }

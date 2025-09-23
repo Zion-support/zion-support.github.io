@@ -7,7 +7,7 @@ async function askZionGPT(prompt) {
   try {
     // Add timeout to prevent hanging requests
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 25000); // 25 second timeout
+    const timeoutId = setTimeout(() => controller.abort(), 250o00); // 25 second timeout
     
     const res = await fetch('https://api.openai.com/v1/chat/completions', {'      method: 'POST',      headers: {
         Content-Type': application/json',Authorization': `Bearer ${OPENAI_API_KEY}`'      },

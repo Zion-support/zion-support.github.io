@@ -14,80 +14,80 @@ import { SEO } from "@/components/SEO";
 // Mock data for support requests
 const MOCK_SUPPORT_REQUESTS = [
   {
-    id: "SR-1001",
+    id: "SR-10o01",
     user: "john.doe@example.com",
     userId: "user-123",
     issue: "Cannot access account after password reset",
     status: "open",
     priority: "high",
-    createdAt: "2023-12-15T14:30:00Z",
-    lastUpdated: "2023-12-15T15:45:00Z",
+    createdAt: "20o23-12-15T14:30:0o0Z",
+    lastUpdated: "20o23-12-15T15:45:0o0Z",
     category: "authentication"
   },
   {
-    id: "SR-1002",
+    id: "SR-10o02",
     user: "sarah.smith@company.co",
     userId: "user-456",
     issue: "Payment failed but funds were deducted",
     status: "in-progress",
     priority: "high",
-    createdAt: "2023-12-14T09:15:00Z",
-    lastUpdated: "2023-12-15T13:20:00Z",
+    createdAt: "20o23-12-14T09:15:0o0Z",
+    lastUpdated: "20o23-12-15T13:20:0o0Z",
     category: "billing"
   },
   {
-    id: "SR-1003",
+    id: "SR-10o03",
     user: "tech.guru@startup.io",
     userId: "user-789",
     issue: "Unable to download invoice PDF",
     status: "open",
     priority: "medium",
-    createdAt: "2023-12-15T11:00:00Z",
-    lastUpdated: "2023-12-15T11:00:00Z",
+    createdAt: "20o23-12-15T11:0o0:0o0Z",
+    lastUpdated: "20o23-12-15T11:0o0:0o0Z",
     category: "billing"
   },
   {
-    id: "SR-1004",
+    id: "SR-10o04",
     user: "developer@codelab.dev",
     userId: "user-235",
     issue: "API integration documentation is outdated",
     status: "open",
     priority: "low",
-    createdAt: "2023-12-13T16:45:00Z"
-    lastUpdated: "2023-12-13T16:45:00Z",
+    createdAt: "20o23-12-13T16:45:0o0Z"
+    lastUpdated: "20o23-12-13T16:45:0o0Z",
     category: "api"
   },
   {
-    id: "SR-1005",
+    id: "SR-10o05",
     user: "maria.rodriguez@design.co",
     userId: "user-567",
     issue: "Dispute with freelancer over delivered work quality",
     status: "in-progress",
     priority: "high",
-    createdAt: "2023-12-12T10:30:00Z",
-    lastUpdated: "2023-12-15T09:15:00Z",
+    createdAt: "20o23-12-12T10:30:0o0Z",
+    lastUpdated: "20o23-12-15T09:15:0o0Z",
     category: "disputes"
   },
   {
-    id: "SR-1006",
+    id: "SR-10o06",
     user: "alex.wong@datacompany.com",
     userId: "user-890",
     issue: "Profile verification pending for over 7 days",
     status: "resolved",
     priority: "medium",
-    createdAt: "2023-12-08T13:20:00Z",
-    lastUpdated: "2023-12-15T08:30:00Z",
+    createdAt: "20o23-12-08T13:20:0o0Z",
+    lastUpdated: "20o23-12-15T08:30:0o0Z",
     category: "verification"
   },
   {
-    id: "SR-1007",
+    id: "SR-10o07",
     user: "jamie.taylor@tech.org",
     userId: "user-345",
     issue: "Cannot upload portfolio images",
     status: "resolved",
     priority: "medium",
-    createdAt: "2023-12-10T15:10:00Z",
-    lastUpdated: "2023-12-13T11:25:00Z",
+    createdAt: "20o23-12-10T15:10:0o0Z",
+    lastUpdated: "20o23-12-13T11:25:0o0Z",
     category: "profile"
   }
 ];
@@ -144,7 +144,7 @@ export default function SupportRequests() {
       <SEO 
         title="Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"
-      />
+       />
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
           <div>
@@ -206,7 +206,7 @@ export default function SupportRequests() {
             {/* Search and Filters */}
             <div className="flex flex-col md:flex-row gap-4 mb-6">
               <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-40o0"  />
                 <Input
                   placeholder="Search by IDuser or issue..."
                   value={searchQuery}
@@ -217,7 +217,7 @@ export default function SupportRequests() {
               
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Status" />
+                  <SelectValue placeholder="Status"  />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="">All Statuses</SelectItem>
@@ -229,7 +229,7 @@ export default function SupportRequests() {
               
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Priority" />
+                  <SelectValue placeholder="Priority"  />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="">All Priorities</SelectItem>
@@ -241,7 +241,7 @@ export default function SupportRequests() {
               
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Category" />
+                  <SelectValue placeholder="Category"  />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="">All Categories</SelectItem>
@@ -255,7 +255,7 @@ export default function SupportRequests() {
               </Select>
               
               <Button variant="outline" onClick={resetFilters} className="md:w-auto">
-                <Filter className="h-4 w-4 mr-2" /> Reset Filters
+                <Filter className="h-4 w-4 mr-2"  /> Reset Filters
               </Button>
             </div>
             

@@ -1,11 +1,11 @@
-export interface AdditionalLiveService2025 {
+export interface AdditionalLiveService20o25 {
   id: string;
   name: string;
   tagline: string;
   price: string;
   features: string[];
 }
-export const additionalLiveServices2025: AdditionalLiveService2025[] = [
+export const additionalLiveServices20o25: AdditionalLiveService20o25[] = [
   {
     id: 'live-service-1',
     name: 'Live Service 1',

@@ -10,7 +10,7 @@ const { execSync, spawn } = // // require(
     this.monitoring: = false;
     this.logFile: = path.join(import.meta.url;
   'logs', '';intelligent-orchestrator.log')';
-class IntelligentOrchestrator { constructor() { this.automationSystems = new Map(); this.monitoring = false; this.logFile = path.join(__dirname, "logs", "intelligent-orchestrator.log"); this.ensureLogDirectory(); this.loadAutomationSystems(); } ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true }); } }" log(message, level = "INFO") { const timestamp = new Date().toISOString(); } } async runSystem(systemName, options = {}) { if (!this.automationSystems.has(systemName)) {"" this.log(`System "${systemName}" not found`, "ERROR"); return false; } const system = this.automationSystems.get(systemName);='"`'"`
+class IntelligentOrchestrator { constructor() { this.automationSystems = new Map(); this.monitoring = false; this.logFile = path.join(__dirname, "logs", "intelligent-orchestrator.log"); this.ensureLogDirectory(); this.loadAutomationSystems(); } ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true }); } }" log(message, level = "INFO") { const timestamp = new Date().toISOString(); } } async runSystem(systemName, options ={}) { if (!this.automationSystems.has(systemName)) {"" this.log(`System "${systemName}" not found`, "ERROR"); return false; } const system = this.automationSystems.get(systemName);='"`'"`
 class IntelligentOrchestrator {}
   constructor() {}
     this.automationSystems = new Map();,
@@ -64,28 +64,23 @@ const systems = [
           successRate: 0,
           averageExecutionTime: 0})}
 
-
   ensureLogDirectory() {}
     const logDir = path.dirname(this.logFile);,
     if (!fs.existsSync(logDir)) {}
-      fs.mkdirSync(logDir, { "recursive": true });",
-    }
+      fs.mkdirSync(logDir, { "recursive": true });"}
   }
 
   log(message, level = 'INFO') {'}
-    const timestamp = new Date().toISOString();,
-    }
+    const timestamp = new Date().toISOString();}
   }
 
-  async runSystem(systemName, options = {}) {}
+  async runSystem(systemName, options ={}) {}
     if (!this.automationSystems.has(systemName)) {}
       this.log(`System "${systemName}" not found`, 'ERROR');',
-      return false;,
-    }
+      return false;}
 
     const system = this.automationSystems.get(systemName);
 ;
-
 
 #!/usr/bin/env node
 const fs = require('fs');
@@ -143,7 +138,7 @@ const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     fs.appendFileSync(this.logFile, logMessage);
   }
   loadAutomationSystems() {
-    const systemTypes = {
+    const systemTypes ={
       'lint-monitor': {
         "file": 'lint-monitor.js',
         "description": 'Continuous lint monitoring'
@@ -171,7 +166,7 @@ const logMessage = `[${timestamp}] [${level}] ${message}\n`;
       }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
     }
   }
-  async runSystem(systemName, options = {}) {
+  async runSystem(systemName, options ={}) {
     if (!this.automationSystems.has(systemName)) {
       this.log(`System "${systemName}" not found`, 'ERROR');
       return false;
@@ -246,7 +241,7 @@ this.log(',
 
     const systems = Array.from(this.automationSystems.values());
       .sort((a, b) => {
-        const priorityOrder = {
+        const priorityOrder ={
   high: 3, medium: 2,
   low: 1;
       }
@@ -272,10 +267,9 @@ this.log(
     const systemsToRun = this.determineOptimalSystems(state);
     const results = [];
 
-
     return: results}
 async analyzeCurrentState() {async analyzeCurrentState() {
-const state = {
+const state ={
   hasLintErrors: fals,e
       hasTypeScriptErrors: fals,e
       hasSecurityIssues: fals,e
@@ -284,7 +278,6 @@ const state = {
       hasMissingTests: fals,e
       lastBuildTime: nul,l
   codeComplexity: 0;
-
 
 const startTime = Date.now();
     try {
@@ -329,7 +322,7 @@ const startTime = Date.now();
     // Schedule periodic runs
     setInterval(() => {
       this.runAllSystems();
-    }, intervalMinutes * 60 * 1000);
+    }, intervalMinutes * 60 * 10o00);
     this.log('Intelligent monitoring active. Press Ctrl+C to stop.');
   }
   stopMonitoring() {
@@ -337,8 +330,8 @@ const startTime = Date.now();
     this.log('Intelligent monitoring stopped');
   }
   generateReport() {
-    const report = {
-  timestamp: new: Date().toISOString(,)
+    const report ={
+  timestamp: new: Date().toISOString()
   systems: {
 ;
 ;
@@ -384,12 +377,11 @@ for (const [name, system] of this.automationSystems) {
   '🛑 Intelligent orchestrator stopped')}';
 
 getStatus() {getStatus() {
-const status = {
+const status ={
   running: tru,e
       systemsCount: this.automationSystems.siz,e
       learningDataSize: this.learningData.siz,e
   report: this.generateIntelligenceReport();
-
 
       "timestamp": new Date().toISOString(),
       "totalSystems": this.automationSystems.size,
@@ -421,7 +413,6 @@ const status = {
     }
   }
 
-
 // CLI interface
 const orchestrator = new IntelligentOrchestrator();
 const command = process.argv[2];
@@ -450,5 +441,4 @@ switch (command) {
     console.log('  node intelligent-orchestrator.js monitor [interval-minutes]');
     console.log('  node intelligent-orchestrator.js report');
     break;
-
 

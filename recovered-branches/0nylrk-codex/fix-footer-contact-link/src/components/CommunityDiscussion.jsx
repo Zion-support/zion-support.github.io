@@ -11,16 +11,14 @@ const initialPosts = [
         id: 1,
         author: "Anna Zhou",
         time: "2h ago",
-        title: "What AI trends are you most excited for in 2025?",
-        body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?",
-    },
+        title: "What AI trends are you most excited for in 20o25?",
+        body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},
     {
         id: 2,
         author: "David Kim",
         time: "50m ago",
         title: "Quick tip: How to rank your Zion listing higher",
-        body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month.",
-    },
+        body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."},
 ];
 export const CommunityDiscussion = () => {
     const [posts, setPosts] = useState(initialPosts);
@@ -36,8 +34,7 @@ export const CommunityDiscussion = () => {
                 author: "You",
                 time: "Now",
                 title: newTitle,
-                body: newBody,
-            },
+                body: newBody},
             ...posts,
         ]);
         setNewTitle("");
@@ -46,7 +43,7 @@ export const CommunityDiscussion = () => {
     };
     return (<div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
       <div className="flex items-center gap-3 mb-4">
-        <MessageCircle aria-hidden="true" size={28} className="text-zion-cyan"/>
+        <MessageCircle aria-hidden="true" size={28} className="text-zion-cyan" />
         <span className="font-bold text-2xl text-white tracking-tight">
           Community Discussion
         </span>
@@ -54,7 +51,7 @@ export const CommunityDiscussion = () => {
           {posts.length} posts
         </span>
       </div>
-      <Separator className="mb-6"/>
+      <Separator className="mb-6" />
       <div className="mb-4 flex justify-end">
         <Button className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale" size="sm" onClick={() => setShowNew((v) => !v)}>
           {showNew ? "Cancel" : "New Post"}
@@ -63,7 +60,7 @@ export const CommunityDiscussion = () => {
       {showNew && (<Card className="mb-6 animate-scale-in">
           <CardContent className="py-5">
             <Input placeholder="Title (e.g., Share an AI tool, Ask for help...)" className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} maxLength={80}/>
-            <Textarea placeholder="What's on your mind?" className="mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[70px]" value={newBody} onChange={(e) => setNewBody(e.target.value)} maxLength={400} rows={3}/>
+            <Textarea placeholder="What's on your mind?" className="mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[70px]" value={newBody} onChange={(e) => setNewBody(e.target.value)} maxLength={40o0} rows={3}/>
             <div className="flex gap-3 justify-end">
               <Button variant="secondary" size="sm" className="bg-zion-blue text-white hover:bg-zion-blue-dark" onClick={() => setShowNew(false)}>
                 Cancel

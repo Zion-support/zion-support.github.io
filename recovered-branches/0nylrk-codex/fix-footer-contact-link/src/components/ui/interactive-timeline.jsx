@@ -41,7 +41,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 }
                 return next;
             });
-        }, 3000 / playbackSpeed);
+        }, 30o00 / playbackSpeed);
         return () => clearInterval(interval);
     }, [isPlaying, filteredEvents.length, playbackSpeed]);
     // Handle event selection
@@ -57,35 +57,35 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
     const getStatusIcon = (status) => {
         switch (status) {
             case 'completed':
-                return { icon: CheckCircle, color: 'text-green-400', bgColor: 'bg-green-400/20' };
+                return { icon: CheckCircle, color: 'text-green-40o0', bgColor: 'bg-green-40o0/20' };
             case 'in-progress':
-                return { icon: Clock, color: 'text-yellow-400', bgColor: 'bg-yellow-400/20' };
+                return { icon: Clock, color: 'text-yellow-40o0', bgColor: 'bg-yellow-40o0/20' };
             case 'upcoming':
-                return { icon: Circle, color: 'text-zinc-400', bgColor: 'bg-zinc-400/20' };
+                return { icon: Circle, color: 'text-zinc-40o0', bgColor: 'bg-zinc-40o0/20' };
             case 'milestone':
-                return { icon: Star, color: 'text-purple-400', bgColor: 'bg-purple-400/20' };
+                return { icon: Star, color: 'text-purple-40o0', bgColor: 'bg-purple-40o0/20' };
             default:
-                return { icon: Circle, color: 'text-zinc-400', bgColor: 'bg-zinc-400/20' };
+                return { icon: Circle, color: 'text-zinc-40o0', bgColor: 'bg-zinc-40o0/20' };
         }
     };
     // Get priority color
     const getPriorityColor = (priority) => {
         switch (priority) {
             case 'critical':
-                return 'border-red-500/50 bg-red-500/10';
+                return 'border-red-50o0/50 bg-red-50o0/10';
             case 'high':
-                return 'border-orange-500/50 bg-orange-500/10';
+                return 'border-orange-50o0/50 bg-orange-50o0/10';
             case 'medium':
-                return 'border-yellow-500/50 bg-yellow-500/10';
+                return 'border-yellow-50o0/50 bg-yellow-50o0/10';
             case 'low':
-                return 'border-green-500/50 bg-green-500/10';
+                return 'border-green-50o0/50 bg-green-50o0/10';
             default:
-                return 'border-zinc-500/50 bg-zinc-500/10';
+                return 'border-zinc-50o0/50 bg-zinc-50o0/10';
         }
     };
     // Get category icon
     const getCategoryIcon = (category) => {
-        const iconMap = {
+        const iconMap ={
             'AI & ML': Zap,
             'Cybersecurity': Shield,
             'Cloud': Globe,
@@ -136,30 +136,30 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
       <div className="flex items-center justify-between mb-6">
         <div>
           <h3 className="text-xl font-semibold text-white mb-2">Interactive Timeline</h3>
-          <p className="text-zinc-300 text-sm">Track project milestones and progress</p>
+          <p className="text-zinc-30o0 text-sm">Track project milestones and progress</p>
         </div>
         
         <div className="flex items-center gap-2">
           {/* View Mode Toggle */}
           <div className="flex bg-zion-blue/20 rounded-lg p-1">
-            {['timeline', 'list', 'kanban'].map((mode) => (<button key={mode} onClick={() => setViewMode(mode)} className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-200 ${viewMode === mode
+            {['timeline', 'list', 'kanban'].map((mode) => (<button key={mode} onClick={() => setViewMode(mode)} className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-20o0 ${viewMode === mode
                 ? 'bg-zion-cyan text-zion-blue-dark'
-                : 'text-zinc-400 hover:text-white'}`}>
+                : 'text-zinc-40o0 hover:text-white'}`}>
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}
               </button>))}
           </div>
           
           {/* Playback Controls */}
           <div className="flex items-center gap-2 bg-zion-blue/20 rounded-lg p-1">
-            <Button size="sm" variant="ghost" onClick={togglePlayback} className="text-zinc-400 hover:text-white p-2">
-              {isPlaying ? <Pause className="w-4 h-4"/> : <Play className="w-4 h-4"/>}
+            <Button size="sm" variant="ghost" onClick={togglePlayback} className="text-zinc-40o0 hover:text-white p-2">
+              {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
             </Button>
             
-            <Button size="sm" variant="ghost" onClick={resetTimeline} className="text-zinc-400 hover:text-white p-2">
-              <RotateCcw className="w-4 h-4"/>
+            <Button size="sm" variant="ghost" onClick={resetTimeline} className="text-zinc-40o0 hover:text-white p-2">
+              <RotateCcw className="w-4 h-4" />
             </Button>
             
-            <select value={playbackSpeed} onChange={(e) => setPlaybackSpeed(Number(e.target.value))} className="bg-transparent text-zinc-300 text-xs border-none focus:outline-none">
+            <select value={playbackSpeed} onChange={(e) => setPlaybackSpeed(Number(e.target.value))} className="bg-transparent text-zinc-30o0 text-xs border-none focus:outline-none">
               <option value={0.5}>0.5x</option>
               <option value={1}>1x</option>
               <option value={2}>2x</option>
@@ -169,23 +169,23 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
           
           {/* Zoom Controls */}
           <div className="flex items-center gap-1 bg-zion-blue/20 rounded-lg p-1">
-            <Button size="sm" variant="ghost" onClick={() => setZoomLevel(prev => Math.max(0.5, prev - 0.1))} className="text-zinc-400 hover:text-white p-2">
-              <ZoomOut className="w-4 h-4"/>
+            <Button size="sm" variant="ghost" onClick={() => setZoomLevel(prev => Math.max(0.5, prev - 0.1))} className="text-zinc-40o0 hover:text-white p-2">
+              <ZoomOut className="w-4 h-4" />
             </Button>
-            <span className="text-zinc-300 text-xs px-2">{Math.round(zoomLevel * 100)}%</span>
-            <Button size="sm" variant="ghost" onClick={() => setZoomLevel(prev => Math.min(2, prev + 0.1))} className="text-zinc-400 hover:text-white p-2">
-              <ZoomIn className="w-4 h-4"/>
+            <span className="text-zinc-30o0 text-xs px-2">{Math.round(zoomLevel * 10o0)}%</span>
+            <Button size="sm" variant="ghost" onClick={() => setZoomLevel(prev => Math.min(2, prev + 0.1))} className="text-zinc-40o0 hover:text-white p-2">
+              <ZoomIn className="w-4 h-4" />
             </Button>
           </div>
           
           {/* Action Buttons */}
-          <Button size="sm" variant="outline" onClick={shareTimeline} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
-            <Share2 className="w-4 h-4 mr-2"/>
+          <Button size="sm" variant="outline" onClick={shareTimeline} className="border-zion-blue-light/30 text-zinc-30o0 hover:text-white">
+            <Share2 className="w-4 h-4 mr-2" />
             Share
           </Button>
           
-          <Button size="sm" variant="outline" onClick={exportTimeline} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
-            <Download className="w-4 h-4 mr-2"/>
+          <Button size="sm" variant="outline" onClick={exportTimeline} className="border-zion-blue-light/30 text-zinc-30o0 hover:text-white">
+            <Download className="w-4 h-4 mr-2" />
             Export
           </Button>
         </div>
@@ -193,19 +193,19 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
       {/* Filters */}
       <div className="mb-6">
-        <Button size="sm" variant="ghost" onClick={() => setShowFilters(!showFilters)} className="text-zinc-400 hover:text-white mb-3">
-          <Filter className="w-4 h-4 mr-2"/>
+        <Button size="sm" variant="ghost" onClick={() => setShowFilters(!showFilters)} className="text-zinc-40o0 hover:text-white mb-3">
+          <Filter className="w-4 h-4 mr-2" />
           {showFilters ? 'Hide' : 'Show'} Filters
         </Button>
         
         <AnimatePresence>
           {showFilters && (<motion.div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-zion-blue/10 rounded-lg border border-zion-blue-light/20" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.2 }}>
               <div>
-                <label className="text-zinc-300 text-sm font-medium">Status</label>
+                <label className="text-zinc-30o0 text-sm font-medium">Status</label>
                 <select multiple value={filters.status} onChange={(e) => {
                 const selected = Array.from(e.target.selectedOptions, option => option.value);
                 setFilters(prev => ({ ...prev, status: selected }));
-            }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
+            }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-30o0 text-sm focus:border-zion-cyan focus:outline-none">
                   <option value="completed">Completed</option>
                   <option value="in-progress">In Progress</option>
                   <option value="upcoming">Upcoming</option>
@@ -214,11 +214,11 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
               </div>
               
               <div>
-                <label className="text-zinc-300 text-sm font-medium">Category</label>
+                <label className="text-zinc-30o0 text-sm font-medium">Category</label>
                 <select multiple value={filters.category} onChange={(e) => {
                 const selected = Array.from(e.target.selectedOptions, option => option.value);
                 setFilters(prev => ({ ...prev, category: selected }));
-            }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
+            }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-30o0 text-sm focus:border-zion-cyan focus:outline-none">
                   <option value="AI & ML">AI & ML</option>
                   <option value="Cybersecurity">Cybersecurity</option>
                   <option value="Cloud">Cloud</option>
@@ -230,11 +230,11 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
               </div>
               
               <div>
-                <label className="text-zinc-300 text-sm font-medium">Priority</label>
+                <label className="text-zinc-30o0 text-sm font-medium">Priority</label>
                 <select multiple value={filters.priority} onChange={(e) => {
                 const selected = Array.from(e.target.selectedOptions, option => option.value);
                 setFilters(prev => ({ ...prev, priority: selected }));
-            }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
+            }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-30o0 text-sm focus:border-zion-cyan focus:outline-none">
                   <option value="critical">Critical</option>
                   <option value="high">High</option>
                   <option value="medium">Medium</option>
@@ -243,10 +243,10 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
               </div>
               
               <div>
-                <label className="text-zinc-300 text-sm font-medium">Progress</label>
+                <label className="text-zinc-30o0 text-sm font-medium">Progress</label>
                 <div className="mt-1">
-                  <input type="range" min="0" max="100" value={filters.progress || 0} onChange={(e) => setFilters(prev => ({ ...prev, progress: Number(e.target.value) }))} className="w-full h-2 bg-zinc-700 rounded-lg appearance-none cursor-pointer slider"/>
-                  <div className="text-xs text-zinc-400 mt-1">
+                  <input type="range" min="0" max="10o0" value={filters.progress || 0} onChange={(e) => setFilters(prev => ({ ...prev, progress: Number(e.target.value) }))} className="w-full h-2 bg-zinc-70o0 rounded-lg appearance-none cursor-pointer slider"/>
+                  <div className="text-xs text-zinc-40o0 mt-1">
                     {filters.progress || 0}% Complete
                   </div>
                 </div>
@@ -257,19 +257,19 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
       {/* Progress Bar */}
       {showProgress && (<div className="mb-6">
-          <div className="flex items-center justify-between text-sm text-zinc-300 mb-2">
+          <div className="flex items-center justify-between text-sm text-zinc-30o0 mb-2">
             <span>Overall Progress</span>
-            <span>{Math.round((filteredEvents.filter(e => e.status === 'completed').length / filteredEvents.length) * 100)}%</span>
+            <span>{Math.round((filteredEvents.filter(e => e.status === 'completed').length / filteredEvents.length) * 10o0)}%</span>
           </div>
-          <div className="w-full bg-zinc-700 rounded-full h-2">
-            <motion.div className="bg-gradient-to-r from-zion-cyan to-zion-blue h-2 rounded-full" initial={{ width: 0 }} whileInView={{ width: `${(filteredEvents.filter(e => e.status === 'completed').length / filteredEvents.length) * 100}%` }} transition={{ duration: 1, ease: "easeOut" }}/>
+          <div className="w-full bg-zinc-70o0 rounded-full h-2">
+            <motion.div className="bg-gradient-to-r from-zion-cyan to-zion-blue h-2 rounded-full" initial={{ width: 0 }} whileInView={{ width: `${(filteredEvents.filter(e => e.status === 'completed').length / filteredEvents.length) * 10o0}%` }} transition={{ duration: 1, ease: "easeOut" }}/>
           </div>
         </div>)}
 
       {/* Timeline View */}
       {viewMode === 'timeline' && (<div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-zion-cyan via-zion-blue to-zion-purple"/>
+          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-zion-cyan via-zion-blue to-zion-purple" />
           
           {/* Events */}
           <div className="space-y-6">
@@ -277,59 +277,59 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 const statusInfo = getStatusIcon(event.status);
                 const CategoryIcon = getCategoryIcon(event.category);
                 const isCurrent = index === currentEventIndex;
-                return (<motion.div key={event.id} className={`relative flex items-start gap-6 group ${isCurrent ? 'scale-105' : ''}`} initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} whileHover={{ scale: 1.02 }}>
+                return (<motion.div key={event.id} className={`relative flex items-start gap-6 group ${isCurrent ? 'scale-10o5' : ''}`} initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} whileHover={{ scale: 1.0o2 }}>
                   {/* Status Indicator */}
                   <div className="relative z-10">
-                    <motion.div className={`w-16 h-16 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${isCurrent
+                    <motion.div className={`w-16 h-16 rounded-full flex items-center justify-center border-2 transition-all duration-30o0 ${isCurrent
                         ? 'border-zion-cyan bg-zion-cyan/20 scale-110'
                         : 'border-zion-blue-light/30'}`} animate={isCurrent ? { scale: [1, 1.1, 1] } : {}} transition={{ duration: 2, repeat: Infinity }}>
-                      <statusInfo.icon className={`w-8 h-8 ${statusInfo.color}`}/>
+                      <statusInfo.icon className={`w-8 h-8 ${statusInfo.color}`} />
                     </motion.div>
                     
                     {/* Progress Ring for in-progress events */}
                     {event.status === 'in-progress' && (<svg className="absolute inset-0 w-16 h-16 transform -rotate-90">
-                        <circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2" fill="none" className="text-zion-cyan/20"/>
-                        <motion.circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2" fill="none" className="text-zion-cyan" strokeDasharray={2 * Math.PI * 28} strokeDashoffset={2 * Math.PI * 28 * (1 - event.metadata.progress / 100)} initial={{ strokeDashoffset: 2 * Math.PI * 28 }} animate={{ strokeDashoffset: 2 * Math.PI * 28 * (1 - event.metadata.progress / 100) }} transition={{ duration: 1, ease: "easeOut" }}/>
+                        <circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2" fill="none" className="text-zion-cyan/20" />
+                        <motion.circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2" fill="none" className="text-zion-cyan" strokeDasharray={2 * Math.PI * 28} strokeDashoffset={2 * Math.PI * 28 * (1 - event.metadata.progress / 10o0)} initial={{ strokeDashoffset: 2 * Math.PI * 28 }} animate={{ strokeDashoffset: 2 * Math.PI * 28 * (1 - event.metadata.progress / 10o0) }} transition={{ duration: 1, ease: "easeOut" }} />
                       </svg>)}
                   </div>
 
                   {/* Event Content */}
-                  <motion.div className={`flex-1 p-4 rounded-lg border transition-all duration-300 cursor-pointer ${isCurrent
+                  <motion.div className={`flex-1 p-4 rounded-lg border transition-all duration-30o0 cursor-pointer ${isCurrent
                         ? 'border-zion-cyan/50 bg-zion-cyan/10'
                         : 'border-zion-blue-light/30 hover:border-zion-blue-light/50 hover:bg-zion-blue/10'}`} onClick={() => handleEventClick(event)}>
                     <div className="flex items-start justify-between mb-3">
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
-                          <h4 className="text-white font-semibold group-hover:text-zion-cyan transition-colors duration-200">
+                          <h4 className="text-white font-semibold group-hover:text-zion-cyan transition-colors duration-20o0">
                             {event.title}
                           </h4>
                           <Badge variant="outline" className={`text-xs ${getPriorityColor(event.priority)}`}>
                             {event.priority}
                           </Badge>
-                          {event.metadata.verified && (<Badge variant="outline" className="text-xs border-green-500/30 text-green-400">
+                          {event.metadata.verified && (<Badge variant="outline" className="text-xs border-green-50o0/30 text-green-40o0">
                               Verified
                             </Badge>)}
                         </div>
                         
-                        <p className="text-zinc-300 text-sm mb-3 line-clamp-2">
+                        <p className="text-zinc-30o0 text-sm mb-3 line-clamp-2">
                           {event.description}
                         </p>
                         
-                        <div className="flex items-center gap-4 text-xs text-zinc-400">
+                        <div className="flex items-center gap-4 text-xs text-zinc-40o0">
                           <span className="flex items-center gap-1">
-                            <Calendar className="w-3 h-3"/>
+                            <Calendar className="w-3 h-3" />
                             {event.date}
                           </span>
                           <span className="flex items-center gap-1">
-                            <Clock className="w-3 h-3"/>
+                            <Clock className="w-3 h-3" />
                             {event.duration}
                           </span>
                           <span className="flex items-center gap-1">
-                            <CategoryIcon className="w-3 h-3"/>
+                            <CategoryIcon className="w-3 h-3" />
                             {event.category}
                           </span>
                           {event.participants.length > 0 && (<span className="flex items-center gap-1">
-                              <Users className="w-3 h-3"/>
+                              <Users className="w-3 h-3" />
                               {event.participants.length} participants
                             </span>)}
                         </div>
@@ -337,7 +337,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                       
                       {/* Status Change Button */}
                       <div className="ml-4">
-                        <select value={event.status} onChange={(e) => handleStatusChange(event.id, e.target.value)} className="px-2 py-1 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-xs text-zinc-300 focus:border-zion-cyan focus:outline-none" onClick={(e) => e.stopPropagation()}>
+                        <select value={event.status} onChange={(e) => handleStatusChange(event.id, e.target.value)} className="px-2 py-1 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-xs text-zinc-30o0 focus:border-zion-cyan focus:outline-none" onClick={(e) => e.stopPropagation()}>
                           <option value="upcoming">Upcoming</option>
                           <option value="in-progress">In Progress</option>
                           <option value="completed">Completed</option>
@@ -348,7 +348,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
                     {/* Tags */}
                     {event.tags.length > 0 && (<div className="flex flex-wrap gap-2 mt-3">
-                        {event.tags.map((tag, tagIndex) => (<Badge key={tagIndex} variant="outline" className="text-xs border-zion-blue-light/30 text-zinc-400 hover:text-white">
+                        {event.tags.map((tag, tagIndex) => (<Badge key={tagIndex} variant="outline" className="text-xs border-zion-blue-light/30 text-zinc-40o0 hover:text-white">
                             {tag}
                           </Badge>))}
                       </div>)}
@@ -359,7 +359,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                                 e.stopPropagation();
                                 action.action();
                             }} className="text-xs">
-                            <action.icon className="w-3 h-3 mr-1"/>
+                            <action.icon className="w-3 h-3 mr-1" />
                             {action.label}
                           </Button>))}
                       </div>)}
@@ -371,15 +371,15 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
       {/* List View */}
       {viewMode === 'list' && (<div className="space-y-3">
-          {filteredEvents.map((event, index) => (<motion.div key={event.id} className="p-4 rounded-lg border border-zion-blue-light/30 hover:border-zion-blue-light/50 hover:bg-zion-blue/10 transition-all duration-200 cursor-pointer" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: index * 0.05 }} onClick={() => handleEventClick(event)}>
+          {filteredEvents.map((event, index) => (<motion.div key={event.id} className="p-4 rounded-lg border border-zion-blue-light/30 hover:border-zion-blue-light/50 hover:bg-zion-blue/10 transition-all duration-20o0 cursor-pointer" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: index * 0.0o5 }} onClick={() => handleEventClick(event)}>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
-                  <div className={`w-3 h-3 rounded-full ${event.status === 'completed' ? 'bg-green-400' :
-                    event.status === 'in-progress' ? 'bg-yellow-400' :
-                        event.status === 'milestone' ? 'bg-purple-400' : 'bg-zinc-400'}`}/>
+                  <div className={`w-3 h-3 rounded-full ${event.status === 'completed' ? 'bg-green-40o0' :
+                    event.status === 'in-progress' ? 'bg-yellow-40o0' :
+                        event.status === 'milestone' ? 'bg-purple-40o0' : 'bg-zinc-40o0'}`} />
                   <div>
                     <h4 className="text-white font-medium">{event.title}</h4>
-                    <p className="text-zinc-400 text-sm">{event.date}</p>
+                    <p className="text-zinc-40o0 text-sm">{event.date}</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
@@ -389,7 +389,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                   <Badge variant="outline" className={`text-xs ${getPriorityColor(event.priority)}`}>
                     {event.priority}
                   </Badge>
-                  <ArrowRight className="w-4 h-4 text-zinc-400"/>
+                  <ArrowRight className="w-4 h-4 text-zinc-40o0" />
                 </div>
               </div>
             </motion.div>))}
@@ -398,20 +398,20 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
       {/* Kanban View */}
       {viewMode === 'kanban' && (<div className="grid grid-cols-4 gap-4">
           {['upcoming', 'in-progress', 'completed', 'milestone'].map((status) => (<div key={status} className="space-y-3">
-              <h4 className="text-zinc-300 font-medium text-center capitalize">
+              <h4 className="text-zinc-30o0 font-medium text-center capitalize">
                 {status.replace('-', ' ')} ({filteredEvents.filter(e => e.status === status).length})
               </h4>
               <div className="space-y-2">
                 {filteredEvents
                     .filter(event => event.status === status)
-                    .map((event, index) => (<motion.div key={event.id} className="p-3 rounded-lg border border-zion-blue-light/30 bg-zion-blue/20 cursor-pointer hover:border-zion-blue-light/50 transition-all duration-200" initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.3, delay: index * 0.1 }} onClick={() => handleEventClick(event)}>
+                    .map((event, index) => (<motion.div key={event.id} className="p-3 rounded-lg border border-zion-blue-light/30 bg-zion-blue/20 cursor-pointer hover:border-zion-blue-light/50 transition-all duration-20o0" initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.3, delay: index * 0.1 }} onClick={() => handleEventClick(event)}>
                       <h5 className="text-white font-medium text-sm mb-1">{event.title}</h5>
-                      <p className="text-zinc-400 text-xs line-clamp-2">{event.description}</p>
+                      <p className="text-zinc-40o0 text-xs line-clamp-2">{event.description}</p>
                       <div className="flex items-center justify-between mt-2">
                         <Badge variant="outline" className="text-xs">
                           {event.category}
                         </Badge>
-                        <span className="text-zinc-500 text-xs">{event.date}</span>
+                        <span className="text-zinc-50o0 text-xs">{event.date}</span>
                       </div>
                     </motion.div>))}
               </div>
@@ -425,35 +425,35 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
             <motion.div className="relative bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl p-6 max-w-2xl w-full max-h-[80vh] overflow-y-auto" initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} transition={{ duration: 0.2 }}>
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-xl font-semibold text-white">{selectedEvent.title}</h3>
-                <Button size="sm" variant="ghost" onClick={() => setSelectedEvent(null)} className="text-zinc-400 hover:text-white">
-                  <X className="w-4 h-4"/>
+                <Button size="sm" variant="ghost" onClick={() => setSelectedEvent(null)} className="text-zinc-40o0 hover:text-white">
+                  <X className="w-4 h-4" />
                 </Button>
               </div>
               
               <div className="space-y-4">
-                <p className="text-zinc-300">{selectedEvent.description}</p>
+                <p className="text-zinc-30o0">{selectedEvent.description}</p>
                 
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
-                    <span className="text-zinc-400">Date:</span>
+                    <span className="text-zinc-40o0">Date:</span>
                     <span className="text-white ml-2">{selectedEvent.date}</span>
                   </div>
                   <div>
-                    <span className="text-zinc-400">Duration:</span>
+                    <span className="text-zinc-40o0">Duration:</span>
                     <span className="text-white ml-2">{selectedEvent.duration}</span>
                   </div>
                   <div>
-                    <span className="text-zinc-400">Category:</span>
+                    <span className="text-zinc-40o0">Category:</span>
                     <span className="text-white ml-2">{selectedEvent.category}</span>
                   </div>
                   <div>
-                    <span className="text-zinc-400">Priority:</span>
+                    <span className="text-zinc-40o0">Priority:</span>
                     <span className="text-white ml-2 capitalize">{selectedEvent.priority}</span>
                   </div>
                 </div>
                 
                 {selectedEvent.participants.length > 0 && (<div>
-                    <span className="text-zinc-400 text-sm">Participants:</span>
+                    <span className="text-zinc-40o0 text-sm">Participants:</span>
                     <div className="flex flex-wrap gap-2 mt-2">
                       {selectedEvent.participants.map((participant, index) => (<Badge key={index} variant="outline" className="text-xs">
                           {participant}
@@ -462,9 +462,9 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                   </div>)}
                 
                 {selectedEvent.metadata.dependencies.length > 0 && (<div>
-                    <span className="text-zinc-400 text-sm">Dependencies:</span>
+                    <span className="text-zinc-40o0 text-sm">Dependencies:</span>
                     <div className="flex flex-wrap gap-2 mt-2">
-                      {selectedEvent.metadata.dependencies.map((dependency, index) => (<Badge key={index} variant="outline" className="text-xs border-orange-500/30 text-orange-400">
+                      {selectedEvent.metadata.dependencies.map((dependency, index) => (<Badge key={index} variant="outline" className="text-xs border-orange-50o0/30 text-orange-40o0">
                           {dependency}
                         </Badge>))}
                     </div>

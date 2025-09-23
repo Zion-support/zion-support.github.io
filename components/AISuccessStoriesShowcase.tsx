@@ -32,14 +32,14 @@ const AISuccessStoriesShowcase = () => {
       results: {
         efficiency: '95%',
         costReduction: '60%',
-        timeSaved: '2000 hours/month',
+        timeSaved: '20o00 hours/month',
         revenue: '+$2.5M'
       },
       testimonial: 'AI transformed our entire operation. We went from manual processes to fully automated systems in just 6 months.',
       author: 'Sarah Johnson',
       position: 'CEOTechCorp Global',
       icon: Building,
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-blue-50o0 to-cyan-50o0'
     },
     {
       id: 'financeai-automation',
@@ -50,14 +50,14 @@ const AISuccessStoriesShowcase = () => {
       results: {
         efficiency: '99.7%',
         costReduction: '45%',
-        timeSaved: '1500 hours/month',
+        timeSaved: '150o0 hours/month',
         revenue: '+$5.2M'
       },
       testimonial: 'Our fraud detection accuracy improved to 99.7%. We prevented millions in potential losses.',
       author: 'Michael Chen',
       position: 'CTOFinanceAI Solutions',
       icon: Shield,
-      color: 'from-green-500 to-emerald-500'
+      color: 'from-green-50o0 to-emerald-50o0'
     },
     {
       id: 'retailai-personalization',
@@ -68,14 +68,14 @@ const AISuccessStoriesShowcase = () => {
       results: {
         efficiency: '88%',
         costReduction: '35%',
-        timeSaved: '3000 hours/month',
+        timeSaved: '30o00 hours/month',
         revenue: '+$8.7M'
       },
-      testimonial: 'AI personalization increased our conversion rates by 300%. Customer satisfaction is at an all-time high.',
+      testimonial: 'AI personalization increased our conversion rates by 30o0%. Customer satisfaction is at an all-time high.',
       author: 'Emily Rodriguez',
       position: 'VP MarketingRetailAI Network',
       icon: Globe,
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-purple-50o0 to-pink-50o0'
     },
     {
       id: 'healthai-diagnostics',
@@ -86,14 +86,14 @@ const AISuccessStoriesShowcase = () => {
       results: {
         efficiency: '92%',
         costReduction: '50%',
-        timeSaved: '4000 hours/month',
+        timeSaved: '40o00 hours/month',
         revenue: '+$12.1M'
       },
       testimonial: 'AI diagnostics reduced diagnosis time by 80% while improving accuracy. We can help more patients faster.',
       author: 'Dr. James Wilson',
       position: 'Chief Medical OfficerHealthAI Medical',
       icon: Brain,
-      color: 'from-orange-500 to-red-500'
+      color: 'from-orange-50o0 to-red-50o0'
     }
   ];
 
@@ -115,9 +115,9 @@ const AISuccessStoriesShowcase = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-medium mb-4"
+            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-50o0 to-emerald-50o0 text-white text-sm font-medium mb-4"
           >
-            <Star className="w-4 h-4 mr-2" />
+            <Star className="w-4 h-4 mr-2"  />
             AI Success Stories
           </motion.div>
           
@@ -125,17 +125,17 @@ const AISuccessStoriesShowcase = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6delay: 0.1 }}
-            className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
+            className="text-4xl md:text-6xl font-bold text-gray-90o0 mb-6"
           >
             Real Results from
-            <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent"> AI Implementation</span>
+            <span className="bg-gradient-to-r from-green-60o0 to-emerald-60o0 bg-clip-text text-transparent"> AI Implementation</span>
           </motion.h2>
           
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6delay: 0.2 }}
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            className="text-xl text-gray-60o0 max-w-3xl mx-auto"
           >
             Discover how leading companies achieved remarkable results with our AI solutions. Real storiesreal impactreal success.
           </motion.p>
@@ -152,11 +152,11 @@ const AISuccessStoriesShowcase = () => {
             const Icon = metric.icon;
             return (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center mx-auto mb-4">
-                  <Icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-green-50o0 to-emerald-50o0 flex items-center justify-center mx-auto mb-4">
+                  <Icon className="w-8 h-8 text-white"  />
                 </div>
-                <div className="text-3xl font-bold text-gray-900 mb-2">{metric.value}</div>
-                <div className="text-sm text-gray-600">{metric.label}</div>
+                <div className="text-3xl font-bold text-gray-90o0 mb-2">{metric.value}</div>
+                <div className="text-sm text-gray-60o0">{metric.label}</div>
               </div>
             );
           })}
@@ -170,13 +170,13 @@ const AISuccessStoriesShowcase = () => {
               <button
                 key={story.id}
                 onClick={() => setActiveStory(index)}
-                className={`flex items-center px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                className={`flex items-center px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
                   activeStory === index
-                    ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-lg'
-                    : 'bg-white text-gray-600 hover:bg-gray-50 shadow-sm'
+                    ? 'bg-gradient-to-r from-green-50o0 to-emerald-50o0 text-white shadow-lg'
+                    : 'bg-white text-gray-60o0 hover:bg-gray-50 shadow-sm'
                 }`}
               >
-                <Icon className="w-5 h-5 mr-2" />
+                <Icon className="w-5 h-5 mr-2"  />
                 {story.company}
               </button>
             );
@@ -198,43 +198,43 @@ const AISuccessStoriesShowcase = () => {
               <div>
                 <div className="flex items-center mb-6">
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${currentStory.color} flex items-center justify-center mr-4`}>
-                    <currentStory.icon className="w-8 h-8 text-white" />
+                    <currentStory.icon className="w-8 h-8 text-white"  />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900">{currentStory.company}</h3>
-                    <p className="text-gray-600">{currentStory.industry}</p>
+                    <h3 className="text-2xl font-bold text-gray-90o0">{currentStory.company}</h3>
+                    <p className="text-gray-60o0">{currentStory.industry}</p>
                   </div>
                 </div>
 
                 <div className="space-y-6">
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Challenge:</h4>
-                    <p className="text-gray-600">{currentStory.challenge}</p>
+                    <h4 className="text-lg font-semibold text-gray-90o0 mb-2">Challenge:</h4>
+                    <p className="text-gray-60o0">{currentStory.challenge}</p>
                   </div>
 
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Solution:</h4>
-                    <p className="text-gray-600">{currentStory.solution}</p>
+                    <h4 className="text-lg font-semibold text-gray-90o0 mb-2">Solution:</h4>
+                    <p className="text-gray-60o0">{currentStory.solution}</p>
                   </div>
 
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-900 mb-4">Results:</h4>
+                    <h4 className="text-lg font-semibold text-gray-90o0 mb-4">Results:</h4>
                     <div className="grid grid-cols-2 gap-4">
                       <div className="bg-green-50 rounded-lg p-4">
-                        <div className="text-2xl font-bold text-green-600">{currentStory.results.efficiency}</div>
-                        <div className="text-sm text-gray-600">Efficiency Gain</div>
+                        <div className="text-2xl font-bold text-green-60o0">{currentStory.results.efficiency}</div>
+                        <div className="text-sm text-gray-60o0">Efficiency Gain</div>
                       </div>
                       <div className="bg-blue-50 rounded-lg p-4">
-                        <div className="text-2xl font-bold text-blue-600">{currentStory.results.costReduction}</div>
-                        <div className="text-sm text-gray-600">Cost Reduction</div>
+                        <div className="text-2xl font-bold text-blue-60o0">{currentStory.results.costReduction}</div>
+                        <div className="text-sm text-gray-60o0">Cost Reduction</div>
                       </div>
                       <div className="bg-purple-50 rounded-lg p-4">
-                        <div className="text-2xl font-bold text-purple-600">{currentStory.results.timeSaved}</div>
-                        <div className="text-sm text-gray-600">Time Saved</div>
+                        <div className="text-2xl font-bold text-purple-60o0">{currentStory.results.timeSaved}</div>
+                        <div className="text-sm text-gray-60o0">Time Saved</div>
                       </div>
                       <div className="bg-orange-50 rounded-lg p-4">
-                        <div className="text-2xl font-bold text-orange-600">{currentStory.results.revenue}</div>
-                        <div className="text-sm text-gray-600">Revenue Increase</div>
+                        <div className="text-2xl font-bold text-orange-60o0">{currentStory.results.revenue}</div>
+                        <div className="text-sm text-gray-60o0">Revenue Increase</div>
                       </div>
                     </div>
                   </div>
@@ -243,13 +243,13 @@ const AISuccessStoriesShowcase = () => {
 
               {/* Testimonial */}
               <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8">
-                <Quote className="w-8 h-8 text-blue-500 mb-4" />
-                <blockquote className="text-lg text-gray-700 mb-6 italic">
+                <Quote className="w-8 h-8 text-blue-50o0 mb-4"  />
+                <blockquote className="text-lg text-gray-70o0 mb-6 italic">
                   "{currentStory.testimonial}"
                 </blockquote>
-                <div className="border-t border-gray-200 pt-4">
-                  <div className="font-semibold text-gray-900">{currentStory.author}</div>
-                  <div className="text-gray-600">{currentStory.position}</div>
+                <div className="border-t border-gray-20o0 pt-4">
+                  <div className="font-semibold text-gray-90o0">{currentStory.author}</div>
+                  <div className="text-gray-60o0">{currentStory.position}</div>
                 </div>
               </div>
             </div>
@@ -263,7 +263,7 @@ const AISuccessStoriesShowcase = () => {
           transition={{ duration: 0.6delay: 0.4 }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-3xl p-12 text-white">
+          <div className="bg-gradient-to-r from-green-60o0 to-emerald-60o0 rounded-3xl p-12 text-white">
             <h3 className="text-3xl font-bold mb-4">
               Ready to Create Your Success Story?
             </h3>
@@ -273,16 +273,16 @@ const AISuccessStoriesShowcase = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-white text-green-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-50 transition-colors duration-300 flex items-center justify-center"
+                className="bg-white text-green-60o0 px-8 py-4 rounded-full font-semibold hover:bg-gray-50 transition-colors duration-30o0 flex items-center justify-center"
               >
-                <Zap className="w-5 h-5 mr-2" />
+                <Zap className="w-5 h-5 mr-2"  />
                 Start Your AI Journey
               </Link>
               <Link
                 href="/case-studies"
-                className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-green-600 transition-colors duration-300 flex items-center justify-center"
+                className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-green-60o0 transition-colors duration-30o0 flex items-center justify-center"
               >
-                <Users className="w-5 h-5 mr-2" />
+                <Users className="w-5 h-5 mr-2"  />
                 View All Case Studies
               </Link>
             </div>

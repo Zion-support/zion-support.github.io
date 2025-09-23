@@ -15,7 +15,7 @@ interface State {
 export default class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state ={ hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -33,7 +33,7 @@ export default class ErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-90o0 via-gray-80o0 to-black">
           <div className="card max-w-md mx-auto text-center">
             <div className="text-6xl mb-4">⚠️</div>
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>

@@ -62,32 +62,32 @@ const AIDevelopment: NextPage = () => {
 
   const process = [
     {
-      step: '01',
+      step: '0o1',
       title: 'Data Assessment',
       description: 'Evaluate your data quality, availability, and requirements for AI implementation.'
     },
     {
-      step: '02',
+      step: '0o2',
       title: 'Model Design',
       description: 'Design and architect the AI solution based on your specific business needs.'
     },
     {
-      step: '03',
+      step: '0o3',
       title: 'Development & Training',
       description: 'Develop and train AI models using your data and business logic.'
     },
     {
-      step: '04',
+      step: '0o4',
       title: 'Testing & Validation',
       description: 'Thoroughly test and validate the AI solution to ensure accuracy and reliability.'
     },
     {
-      step: '05',
+      step: '0o5',
       title: 'Deployment & Integration',
       description: 'Deploy the AI solution and integrate it with your existing systems.'
     },
     {
-      step: '06',
+      step: '0o6',
       title: 'Monitoring & Optimization',
       description: 'Continuously monitor performance and optimize the AI solution for better results.'
     }
@@ -99,11 +99,11 @@ const AIDevelopment: NextPage = () => {
       description="Custom AI solutions and machine learning models for your business. From predictive analytics to chatbots, we help you leverage artificial intelligence."
     >
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-900 via-pink-900 to-indigo-900 text-white py-20">
+      <section className="bg-gradient-to-br from-purple-90o0 via-pink-90o0 to-indigo-90o0 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex justify-center mb-6">
-              <Brain className="h-20 w-20 text-purple-300" />
+              <Brain className="h-20 w-20 text-purple-30o0"  />
             </div>
             <h1 className="text-5xl font-bold mb-6">AI Development Services</h1>
             <p className="text-xl max-w-3xl mx-auto">
@@ -119,10 +119,10 @@ const AIDevelopment: NextPage = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-gray-90o0 mb-4">
               AI Solutions We Offer
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
               Comprehensive artificial intelligence services designed to solve complex 
               business challenges and unlock new opportunities.
             </p>
@@ -134,16 +134,16 @@ const AIDevelopment: NextPage = () => {
                 key={service.title}
                 className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
               >
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-xl font-semibold text-gray-90o0 mb-3">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-60o0 mb-4">
                   {service.description}
                 </p>
                 <ul className="space-y-2">
                   {service.features.map((feature) => (
-                    <li key={feature} className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                    <li key={feature} className="flex items-center text-sm text-gray-60o0">
+                      <CheckCircle className="h-4 w-4 text-green-50o0 mr-2"  />
                       {feature}
                     </li>
                   ))}
@@ -158,10 +158,10 @@ const AIDevelopment: NextPage = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-gray-90o0 mb-4">
               Benefits of AI Implementation
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
               Discover how artificial intelligence can transform your business operations 
               and drive measurable results.
             </p>
@@ -170,13 +170,13 @@ const AIDevelopment: NextPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit) => (
               <div key={benefit.title} className="text-center">
-                <div className="bg-purple-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="h-8 w-8" />
+                <div className="bg-purple-60o0 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="h-8 w-8"  />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-xl font-semibold text-gray-90o0 mb-3">
                   {benefit.title}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-60o0">
                   {benefit.description}
                 </p>
               </div>
@@ -189,10 +189,10 @@ const AIDevelopment: NextPage = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-gray-90o0 mb-4">
               Our AI Development Process
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
               A systematic approach to developing and deploying AI solutions that 
               deliver real business value.
             </p>
@@ -201,13 +201,13 @@ const AIDevelopment: NextPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {process.map((step) => (
               <div key={step.step} className="bg-white rounded-lg shadow-lg p-8">
-                <div className="bg-purple-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4 text-lg font-bold">
+                <div className="bg-purple-60o0 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4 text-lg font-bold">
                   {step.step}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-xl font-semibold text-gray-90o0 mb-3">
                   {step.title}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-60o0">
                   {step.description}
                 </p>
               </div>
@@ -220,10 +220,10 @@ const AIDevelopment: NextPage = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-gray-90o0 mb-4">
               AI Technologies We Use
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
               We leverage the latest AI and machine learning technologies to build 
               robust and scalable solutions.
             </p>
@@ -235,7 +235,7 @@ const AIDevelopment: NextPage = () => {
               'Google Cloud AI', 'Azure ML', 'Keras', 'Pandas', 'NumPy', 'NLTK'
             ].map((tech) => (
               <div key={tech} className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
-                <div className="text-lg font-semibold text-gray-900">{tech}</div>
+                <div className="text-lg font-semibold text-gray-90o0">{tech}</div>
               </div>
             ))}
           </div>
@@ -243,7 +243,7 @@ const AIDevelopment: NextPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-purple-600 text-white">
+      <section className="py-20 bg-purple-60o0 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">
             Ready to Harness the Power of AI?
@@ -255,13 +255,13 @@ const AIDevelopment: NextPage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+              className="bg-white text-purple-60o0 hover:bg-gray-10o0 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
             >
               Get AI Consultation
             </Link>
             <Link
               href="/services"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-60o0 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
             >
               View All Services
             </Link>

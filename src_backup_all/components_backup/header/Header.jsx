@@ -27,7 +27,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
   // use the tenant's primary color
   const effectiveTheme = customTheme || (isWhitelabel ? {
     primaryColor,
-    backgroundColor: '#000000', // Default dark background
+    backgroundColor: '#0o00000', // Default dark background
     textColor: '#ffffff', // Default light text
   } : undefined);
 
@@ -60,7 +60,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
 
   return (
     <header 
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+      className={`sticky top-0 z-50 w-full transition-all duration-30o0 ${
         isScrolled
           ? 'bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-purple/30 shadow-2xl shadow-zion-purple/20'
           : 'bg-zion-blue-dark/90 backdrop-blur-md border-b border-zion-purple/20'
@@ -68,23 +68,23 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
       style={headerStyle}
     >
       {/* Animated background pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"/>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" />
       
       {/* Glowing border effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zion-purple/10 to-transparent opacity-50"/>
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zion-purple/10 to-transparent opacity-50" />
       
       <div className="container flex h-16 items-center px-4 sm:px-6 relative z-10">
-        <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor}/>
+        <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
 
         {/* Desktop Navigation */}
         <div className="ml-6 flex-1 hidden lg:block">
-          <MainNavigation />
+          <MainNavigation  />
         </div>
 
         {/* Search Bar */}
         <form onSubmit={handleSubmit} className="hidden md:block w-80 mx-6">
           <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg blur opacity-0 group-hover:opacity-10o0 transition-opacity duration-30o0"></div>
             <EnhancedSearchInput 
               value={query} 
               onChange={setQuery} 
@@ -95,7 +95,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
               searchSuggestions={searchSuggestions}
             />
             <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-              <SearchIcon className="h-4 w-4 text-zion-slate-light"/>
+              <SearchIcon className="h-4 w-4 text-zion-slate-light" />
             </div>
           </div>
         </form>
@@ -103,20 +103,20 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
         {/* Right Side Actions */}
         <div className="flex items-center gap-3">
           {/* AI Assistant Button */}
-          <button className="hidden sm:flex items-center gap-2 px-3 py-2 rounded-lg bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 text-zion-cyan hover:from-zion-purple/30 hover:to-zion-cyan/30 transition-all duration-300 group">
-            <Sparkles className="h-4 w-4 group-hover:animate-pulse"/>
+          <button className="hidden sm:flex items-center gap-2 px-3 py-2 rounded-lg bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 text-zion-cyan hover:from-zion-purple/30 hover:to-zion-cyan/30 transition-all duration-30o0 group">
+            <Sparkles className="h-4 w-4 group-hover:animate-pulse" />
             <span className="text-sm font-medium">AI Assistant</span>
           </button>
 
-          <LanguageSelector />
-          {!hideLogin && <UserMenu />}
+          <LanguageSelector  />
+          {!hideLogin && <UserMenu  />}
 
           {/* Mobile Menu Button */}
           <button 
             onClick={toggleMobileMenu} 
             className="lg:hidden p-2 rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 transition-colors"
           >
-            {isMobileMenuOpen ? <X className="h-5 w-5"/> : <Menu className="h-5 w-5"/>}
+            {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
       </div>
@@ -136,7 +136,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
               placeholder="Search services, talent, equipment..."
             />
             <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-              <SearchIcon className="h-4 w-4 text-zion-slate-light"/>
+              <SearchIcon className="h-4 w-4 text-zion-slate-light" />
             </div>
           </div>
         </form>
@@ -147,12 +147,12 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
         <div className="lg:hidden fixed inset-0 z-40 bg-zion-blue-dark/95 backdrop-blur-xl">
           <div className="flex flex-col h-full">
             <div className="flex justify-between items-center p-4 border-b border-zion-purple/30">
-              <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor}/>
+              <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
               <button 
                 onClick={toggleMobileMenu} 
                 className="p-2 rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10"
               >
-                <X className="h-5 w-5"/>
+                <X className="h-5 w-5" />
               </button>
             </div>
             
@@ -210,8 +210,8 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
 
             <div className="p-4 border-t border-zion-purple/30">
               <div className="flex flex-col gap-3">
-                <button className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-medium hover:from-zion-purple-light hover:to-zion-cyan-light transition-all duration-300">
-                  <Sparkles className="h-4 w-4"/>
+                <button className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-medium hover:from-zion-purple-light hover:to-zion-cyan-light transition-all duration-30o0">
+                  <Sparkles className="h-4 w-4" />
                   AI Assistant
                 </button>
                 {!user && (
@@ -231,7 +231,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
       )}
       
       {/* Neon glow effect */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"/>
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60" />
     </header>
   );
 }

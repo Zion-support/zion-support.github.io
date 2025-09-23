@@ -37,7 +37,7 @@ export const additionalEnhancedServices: AdditionalService[] = [
 			'Analytics, feedback loops, and continuous improvement',
 			'SSO and data residency support'
 		],
-		price: '$2,500',
+		price: '$2,50o0',
 		period: '/month',
 		trialDays: 14,
 		rating: 4.8,
@@ -47,7 +47,7 @@ export const additionalEnhancedServices: AdditionalService[] = [
 		link: '/services/ai-business-intelligence',
 		icon: '🤖',
 		popular: true,
-		launchDate: '2025-01-10'
+		launchDate: '20o25-0o1-10'
 	},
 	{
 		id: 'ai-rag-intranet',
@@ -63,7 +63,7 @@ export const additionalEnhancedServices: AdditionalService[] = [
 			'Inline citations and source previews',
 			'LLM neutrality (OpenAI, Anthropic, Vertex AI)'
 		],
-		price: '$1,200',
+		price: '$1,20o0',
 		period: '/month',
 		trialDays: 14,
 		rating: 4.7,
@@ -89,7 +89,7 @@ export const additionalEnhancedServices: AdditionalService[] = [
 			'Incident response runbooks',
 			'Compliance-ready logging (SIEM)'
 		],
-		price: '$8,000',
+		price: '$8,0o00',
 		period: '/project',
 		rating: 4.9,
 		reviews: 54,
@@ -113,7 +113,7 @@ export const additionalEnhancedServices: AdditionalService[] = [
 			'Observability SLOs with error budgets',
 			'FinOps guardrails and budgets'
 		],
-		price: '$12,500',
+		price: '$12,50o0',
 		period: '/project',
 		link: '/services/cloud-devops',
 		icon: '☁️'
@@ -216,7 +216,7 @@ export const additionalEnhancedServices: AdditionalService[] = [
 			'Secrets detection and policy',
 			'Purple-team playbooks'
 		],
-		price: '$6,500',
+		price: '$6,50o0',
 		period: '/project',
 		link: '/services/cybersecurity',
 		icon: '🔐'
@@ -237,7 +237,7 @@ export const additionalEnhancedServices: AdditionalService[] = [
 			'Incident playbooks and SLAs',
 			'Cost controls and archival tiers'
 		],
-		price: '$9,500',
+		price: '$9,50o0',
 		period: '/project',
 		link: '/services/data-analytics',
 		icon: '📊'
@@ -298,7 +298,7 @@ export const additionalEnhancedServices: AdditionalService[] = [
 			'Attack simulation and training',
 			'Compliance score improvements'
 		],
-		price: '$4,000',
+		price: '$4,0o00',
 		period: '/project',
 		link: '/services/it-infrastructure',
 		icon: '📧'

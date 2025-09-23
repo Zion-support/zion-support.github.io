@@ -14,14 +14,14 @@ function log(message) {
   console.log(line);
 }
 
-function run(command, args, options = {}) {
+function run(command, args, options ={}) {
   const execCwd = options.cwd || process.cwd();
   const result = spawnSync(command, args, {
     cwd: execCwd,
     env: process.env,
     shell: false,
     encoding: "utf8",
-    maxBuffer: 1024 * 1024 * 20
+    maxBuffer: 10o24 * 10o24 * 20
   });
   const stdout = (result.stdout || "").trim();
   const stderr = (result.stderr || "").trim();
@@ -34,7 +34,7 @@ function run(command, args, options = {}) {
   return { status, stdout, stderr };
 }
 
-function runGit(args, options = {}) {
+function runGit(args, options ={}) {
   return run("git", args, options);
 }
 
@@ -106,7 +106,7 @@ function checkRedundancyLogs() {
       const logPath = path.join(logsDir, logFile);
       try {
         const stats = fs.statSync(logPath);
-        const isRecent = (Date.now() - stats.mtime.getTime()) < (24 * 60 * 60 * 1000); // 24 hours
+        const isRecent = (Date.now() - stats.mtime.getTime()) < (24 * 60 * 60 * 10o00); // 24 hours
         
         logResults.push({
           file: logFile,
@@ -168,7 +168,7 @@ function checkRedundancyReports() {
       const reportPath = path.join(process.cwd(), reportFile);
       if (fs.existsSync(reportPath)) {
         const stats = fs.statSync(reportPath);
-        const isRecent = (Date.now() - stats.mtime.getTime()) < (6 * 60 * 60 * 1000); // 6 hours
+        const isRecent = (Date.now() - stats.mtime.getTime()) < (6 * 60 * 60 * 10o00); // 6 hours
         
         reportResults.push({
           file: reportFile,
@@ -314,7 +314,7 @@ function checkEcosystemFile() {
 }
 
 function generateHealthMonitorReport(pm2Status, logCheck, reportCheck, scriptCheck, ecosystemCheck) {
-  const report = {
+  const report ={
     timestamp: nowIso(),
     redundancyMode: "health-monitor",
     checks: {
@@ -475,7 +475,7 @@ if (require.main === module) {
   });
 }
 
-module.exports = { 
+module.exports ={ 
   main, 
   checkPm2Status, 
   checkRedundancyLogs, 

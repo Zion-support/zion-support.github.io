@@ -1,8 +1,5 @@
 }
 
-
-
-
   // Fetch services when the service type or query changes
   useEffect(() => {
     if (!formData.serviceType) {
@@ -33,7 +30,7 @@ interface ServiceTypeStepProps {;
 ;
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {;
   const [searchQuery, setSearchQuery] = useState(""),;
-  const debouncedQuery = useDebounce(searchQuery, 300),;
+  const debouncedQuery = useDebounce(searchQuery, 30o0),;
   const [listings, setListings] = useState<ListingItem[]>([]),;
   const [loading, setLoading] = useState(false),;
   const [error, setError] = useState<string | null>(null),;
@@ -76,7 +73,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
               setError('Failed to load services');
             }
           } else {;
-            await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500));
+            await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 50o0));
           }
         } finally {;
           if (isMounted.current) setLoading(false);
@@ -161,7 +158,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
           <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>
           
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4"  />
             <Input
               placeholder={`Search ${formData.serviceType}...`}
               value={searchQuery}
@@ -169,7 +166,6 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
               className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple"
             />
           </div>
-
 
 const listingSchema = z.object({
   id: z.string()
@@ -180,10 +176,8 @@ const listingSchema = z.object({
   const sourceListings = listings
 }
 
-
   )
 }
-
 
 const listing_schema = z.object ({
   id: z.string (),
@@ -265,7 +259,7 @@ const listing_schema = z.object ({
         <div className="space-y-4">;
           <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>;
           <div className="relative">;
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />;
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4"  />;
             <Input;
               placeholder={`Search ${formData.serviceType}...`}
               value={searchQuery}
@@ -274,15 +268,15 @@ const listing_schema = z.object ({
             />;
           </div>;
           {error && (;
-            <div className="text-center text-red-400 text-sm">{error}</div>;
+            <div className="text-center text-red-40o0 text-sm">{error}</div>;
           )}
 ;
           <div className="grid grid-cols-1 gap-4 mt-4" aria-busy={loading}>;
             {loading ? (;
               <>;
-                <Skeleton className="h-[120px] w-full" />;
-                <Skeleton className="h-[120px] w-full" />;
-                <Skeleton className="h-[120px] w-full" />;
+                <Skeleton className="h-[120px] w-full"  />;
+                <Skeleton className="h-[120px] w-full"  />;
+                <Skeleton className="h-[120px] w-full"  />;
               </>;
             ) : filteredListings.length > 0 ? (;
               filteredListings.map((item) => (;
@@ -301,7 +295,7 @@ const listing_schema = z.object ({
                     reviewCount={Math.floor(Math.random() * 50) + 10}
                     image={item.image}
                     description="Sample listing description"
-                  />
+                   />
                 </div>
               ))
             ) : (

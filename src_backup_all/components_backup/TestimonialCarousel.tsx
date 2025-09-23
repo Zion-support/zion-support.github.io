@@ -4,8 +4,7 @@ import {
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+  CarouselPrevious} from "@/components/ui/carousel";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Avatar } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -31,14 +30,13 @@ export function TestimonialCarousel() {
           <Carousel
             opts={{
               align: "start",
-              loop: true,
-            }}
+              loop: true}}
             className="w-full"
           >
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
-                  <Card className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 flex flex-col">
+                  <Card className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-30o0 flex flex-col">
                     <CardContent className="p-8 flex flex-col md:flex-row gap-6 flex-1">
                       <div className="flex-shrink-0 flex flex-col items-center">
                         <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">
@@ -48,7 +46,7 @@ export function TestimonialCarousel() {
                             width={80}
                             height={80}
                             loading="lazy"
-                          />
+                           />
                         </Avatar>
                         <div className="text-center md:text-left">
                           <p className="font-bold text-zion-cyan">{testimonial.author}</p>
@@ -64,10 +62,10 @@ export function TestimonialCarousel() {
                             height={32}
                             className="h-8 w-auto"
                             loading="lazy"
-                          />
+                           />
                           <span className="text-white font-semibold">{testimonial.company}</span>
                         </div>
-                        <Quote className="h-10 w-10 text-zion-cyan opacity-30 mb-3" />
+                        <Quote className="h-10 w-10 text-zion-cyan opacity-30 mb-3"  />
                         <p className="text-white text-lg mb-6">"{testimonial.quote}"</p>
                       </div>
                     </CardContent>
@@ -81,8 +79,8 @@ export function TestimonialCarousel() {
               ))}
             </CarouselContent>
             <div className="flex justify-center mt-8 gap-2">
-              <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
-              <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
+              <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple"  />
+              <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple"  />
             </div>
           </Carousel>
         </div>

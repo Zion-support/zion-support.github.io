@@ -7,8 +7,7 @@ export default function Analytics() {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
         page_title: document.title,
-        page_location: window.location.href,
-      });
+        page_location: window.location.href});
     }
   }, []);
 
@@ -17,7 +16,7 @@ export default function Analytics() {
       <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-      />
+       />
       <Script
         id="google-analytics"
         strategy="afterInteractive"
@@ -28,11 +27,9 @@ export default function Analytics() {
             gtag('js', new Date());
             gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
               page_title: document.title,
-              page_location: window.location.href,
-            });
-          `,
-        }}
-      />
+              page_location: window.location.href});
+          `}}
+       />
     </>
   );
 }

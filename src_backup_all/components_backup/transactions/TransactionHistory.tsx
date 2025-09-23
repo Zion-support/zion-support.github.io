@@ -13,7 +13,6 @@ import { safeStorage } from "@/utils/safeStorage";
 import { useCurrency } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
 
-
 interface Transaction {
   id: string;
   user_id: string;
@@ -76,8 +75,7 @@ export function TransactionHistory() {
       if (error) throw error;
       return data as Transaction[];
     },
-    enabled: !!user,
-  });
+    enabled: !!user});
 
   const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel') => {
     try {
@@ -89,8 +87,7 @@ export function TransactionHistory() {
       
       toast({
         title: "Success",
-        description: (data as any)?.message || "Transaction updated successfully",
-      });
+        description: (data as any)?.message || "Transaction updated successfully"});
       
       refetch();
     } catch (error) {
@@ -98,8 +95,7 @@ export function TransactionHistory() {
       toast({
         title: "Error",
         description: error instanceof Error ? error.message : "Failed to update transaction",
-        variant: "destructive",
-      });
+        variant: "destructive"});
     }
   };
   
@@ -107,54 +103,54 @@ export function TransactionHistory() {
     switch(status) {
       case 'in_escrow':
         return (
-          <Badge variant="outline" className="bg-yellow-500/20 text-yellow-500 border-yellow-500">
-            <Clock className="w-3 h-3 mr-1" /> In Escrow
+          <Badge variant="outline" className="bg-yellow-50o0/20 text-yellow-50o0 border-yellow-50o0">
+            <Clock className="w-3 h-3 mr-1"  /> In Escrow
           </Badge>
         );
       case 'pending':
         return inEscrow ? (
-          <Badge variant="outline" className="bg-yellow-500/20 text-yellow-500 border-yellow-500">
-            <Clock className="w-3 h-3 mr-1" /> In Escrow
+          <Badge variant="outline" className="bg-yellow-50o0/20 text-yellow-50o0 border-yellow-50o0">
+            <Clock className="w-3 h-3 mr-1"  /> In Escrow
           </Badge>
         ) : (
-          <Badge variant="outline" className="bg-blue-500/20 text-blue-500 border-blue-500">
-            <Clock className="w-3 h-3 mr-1" /> Pending
+          <Badge variant="outline" className="bg-blue-50o0/20 text-blue-50o0 border-blue-50o0">
+            <Clock className="w-3 h-3 mr-1"  /> Pending
           </Badge>
         );
       case 'released':
         return (
-          <Badge variant="outline" className="bg-green-500/20 text-green-500 border-green-500">
-            <CheckCircle2 className="w-3 h-3 mr-1" /> Released
+          <Badge variant="outline" className="bg-green-50o0/20 text-green-50o0 border-green-50o0">
+            <CheckCircle2 className="w-3 h-3 mr-1"  /> Released
           </Badge>
         );
       case 'completed':
         return (
-          <Badge variant="outline" className="bg-green-500/20 text-green-500 border-green-500">
-            <CheckCircle2 className="w-3 h-3 mr-1" /> Completed
+          <Badge variant="outline" className="bg-green-50o0/20 text-green-50o0 border-green-50o0">
+            <CheckCircle2 className="w-3 h-3 mr-1"  /> Completed
           </Badge>
         );
       case 'disputed':
         return (
-          <Badge variant="outline" className="bg-red-500/20 text-red-500 border-red-500">
-            <ShieldAlert className="w-3 h-3 mr-1" /> Disputed
+          <Badge variant="outline" className="bg-red-50o0/20 text-red-50o0 border-red-50o0">
+            <ShieldAlert className="w-3 h-3 mr-1"  /> Disputed
           </Badge>
         );
       case 'refunded':
         return (
-          <Badge variant="outline" className="bg-purple-500/20 text-purple-500 border-purple-500">
-            <RefreshCcw className="w-3 h-3 mr-1" /> Refunded
+          <Badge variant="outline" className="bg-purple-50o0/20 text-purple-50o0 border-purple-50o0">
+            <RefreshCcw className="w-3 h-3 mr-1"  /> Refunded
           </Badge>
         );
       case 'cancelled':
         return (
-          <Badge variant="outline" className="bg-red-500/20 text-red-500 border-red-500">
-            <XCircle className="w-3 h-3 mr-1" /> Cancelled
+          <Badge variant="outline" className="bg-red-50o0/20 text-red-50o0 border-red-50o0">
+            <XCircle className="w-3 h-3 mr-1"  /> Cancelled
           </Badge>
         );
       default:
         return (
-          <Badge variant="outline" className="bg-gray-500/20 text-gray-500 border-gray-500">
-            <AlertCircle className="w-3 h-3 mr-1" /> Unknown
+          <Badge variant="outline" className="bg-gray-50o0/20 text-gray-50o0 border-gray-50o0">
+            <AlertCircle className="w-3 h-3 mr-1"  /> Unknown
           </Badge>
         );
     }
@@ -170,11 +166,11 @@ export function TransactionHistory() {
     return (
       <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light">
         <div className="text-center text-zion-slate-light">
-          <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" />
+          <AlertCircle className="mx-auto h-12 w-12 text-red-50o0 mb-4"  />
           <h3 className="font-bold text-xl text-white mb-2">Failed to load transactions</h3>
           <p className="mb-4">{error.message}</p>
           <Button onClick={() => refetch()} variant="outline">
-            <RefreshCcw className="mr-2 h-4 w-4" />
+            <RefreshCcw className="mr-2 h-4 w-4"  />
             Try Again
           </Button>
         </div>
@@ -229,18 +225,18 @@ export function TransactionHistory() {
             <div key={i} className="mb-4">
               <Card className="bg-zion-blue-dark border-zion-blue-light">
                 <CardHeader className="pb-2">
-                  <Skeleton className="h-6 w-3/4 bg-zion-blue-light" />
-                  <Skeleton className="h-4 w-1/4 bg-zion-blue-light mt-2" />
+                  <Skeleton className="h-6 w-3/4 bg-zion-blue-light"  />
+                  <Skeleton className="h-4 w-1/4 bg-zion-blue-light mt-2"  />
                 </CardHeader>
                 <CardContent>
                   <div className="flex justify-between mb-2">
-                    <Skeleton className="h-5 w-1/3 bg-zion-blue-light" />
-                    <Skeleton className="h-5 w-1/4 bg-zion-blue-light" />
+                    <Skeleton className="h-5 w-1/3 bg-zion-blue-light"  />
+                    <Skeleton className="h-5 w-1/4 bg-zion-blue-light"  />
                   </div>
-                  <Skeleton className="h-4 w-2/3 bg-zion-blue-light" />
+                  <Skeleton className="h-4 w-2/3 bg-zion-blue-light"  />
                 </CardContent>
                 <CardFooter>
-                  <Skeleton className="h-9 w-28 bg-zion-blue-light rounded-md" />
+                  <Skeleton className="h-9 w-28 bg-zion-blue-light rounded-md"  />
                 </CardFooter>
               </Card>
             </div>
@@ -317,9 +313,9 @@ export function TransactionHistory() {
                       <Button 
                         onClick={() => handleManageTransaction(transaction.id, 'release')}
                         size="sm"
-                        className="bg-green-600 hover:bg-green-700 text-white"
+                        className="bg-green-60o0 hover:bg-green-70o0 text-white"
                       >
-                        <CheckCircle2 className="mr-1 h-4 w-4" /> Release Funds
+                        <CheckCircle2 className="mr-1 h-4 w-4"  /> Release Funds
                       </Button>
                     )}
                     
@@ -330,7 +326,7 @@ export function TransactionHistory() {
                         variant="outline"
                         className="text-zion-slate-light border-zion-blue-light"
                       >
-                        <RefreshCcw className="mr-1 h-4 w-4" /> Request Refund
+                        <RefreshCcw className="mr-1 h-4 w-4"  /> Request Refund
                       </Button>
                     )}
                     
@@ -339,9 +335,9 @@ export function TransactionHistory() {
                         onClick={() => handleManageTransaction(transaction.id, 'cancel')}
                         size="sm"
                         variant="outline"
-                        className="text-red-400 border-red-400/30 hover:bg-red-400/10"
+                        className="text-red-40o0 border-red-40o0/30 hover:bg-red-40o0/10"
                       >
-                        <XCircle className="mr-1 h-4 w-4" /> Cancel
+                        <XCircle className="mr-1 h-4 w-4"  /> Cancel
                       </Button>
                     )}
                   </CardFooter>
@@ -352,8 +348,8 @@ export function TransactionHistory() {
         ) : (
           <div className="text-center py-12 border border-dashed border-zion-blue-light rounded-lg">
             <div className="mx-auto w-16 h-16 bg-zion-blue-light/30 rounded-full flex items-center justify-center mb-4">
-              <ArrowRight className="h-8 w-8 text-zion-slate-light" />
-              <ArrowLeft className="h-8 w-8 text-zion-slate-light -ml-4" />
+              <ArrowRight className="h-8 w-8 text-zion-slate-light"  />
+              <ArrowLeft className="h-8 w-8 text-zion-slate-light -ml-4"  />
             </div>
             <h3 className="text-xl font-medium text-white mb-2">No transactions found</h3>
             <p className="text-zion-slate-light max-w-md mx-auto">

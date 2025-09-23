@@ -33,7 +33,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="outline" size="sm" className="gap-1">
-                <Filter className="h-3.5 w-3.5" /> 
+                <Filter className="h-3.5 w-3.5"  /> 
                 Filter
               </Button>
             </SheetTrigger>
@@ -84,7 +84,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                         max={20}
                         step={1}
                         className="my-4"
-                      />
+                       />
                       <div className="flex justify-between text-xs text-muted-foreground">
                         <span>0+ years</span>
                         <span>20+ years</span>
@@ -97,7 +97,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                   <Label>Location</Label>
                   <Select>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select location" />
+                      <SelectValue placeholder="Select location"  />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="remote">Remote</SelectItem>
@@ -111,9 +111,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                 <div className="space-y-2">
                   <Label>Salary Range</Label>
                   <div className="flex gap-4 items-center">
-                    <Input placeholder="Min" type="number" className="w-full" />
+                    <Input placeholder="Min" type="number" className="w-full"  />
                     <span>to</span>
-                    <Input placeholder="Max" type="number" className="w-full" />
+                    <Input placeholder="Max" type="number" className="w-full"  />
                   </div>
                 </div>
                 
@@ -131,7 +131,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                 
                 <div className="flex items-center justify-between">
                   <Label>Only show verified profiles</Label>
-                  <Switch />
+                  <Switch  />
                 </div>
               </div>
               
@@ -144,7 +144,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
           
           <Select>
             <SelectTrigger className="w-[120px] h-8">
-              <SelectValue placeholder="Sort By" />
+              <SelectValue placeholder="Sort By"  />
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="newest">Newest</SelectItem>

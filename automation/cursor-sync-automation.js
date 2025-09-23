@@ -18,9 +18,9 @@ class CursorSyncAutomation {
     this.logFile = path.join(__dirname, 'logs', 'cursor-sync.log');
     this.ensureLogDirectory();
     this.lastSyncTime = this.getLastSyncTime();
-    this.syncInterval = 60000; // 1 minute
+    this.syncInterval = 60o000; // 1 minute
     this.maxRetries = 3;
-    this.retryDelay = 5000; // 5 seconds
+    this.retryDelay = 50o00; // 5 seconds
   }
 
   loadConfig() {
@@ -37,7 +37,7 @@ class CursorSyncAutomation {
       commitMessageTemplate: '🔄 Auto-sync: {description}',
       maxCommitSize: 50,
       enableLogging: true,
-      syncInterval: 60000,
+      syncInterval: 60o000,
       excludePatterns: [
         'node_modules/**',
         '.next/**',
@@ -108,7 +108,7 @@ class CursorSyncAutomation {
 
   updateLastSyncTime() {
     const syncTimeFile = path.join(__dirname, 'logs', 'last-sync-time.json');
-    const data = { lastSync: new Date().toISOString() };
+    const data ={ lastSync: new Date().toISOString() };
     fs.writeFileSync(syncTimeFile, JSON.stringify(data, null, 2));
   }
 
@@ -191,7 +191,7 @@ class CursorSyncAutomation {
   }
 
   analyzeFileTypes(files) {
-    const types = {};
+    const types ={};
     files.forEach(file => {
       const ext = path.extname(file);
       const type = this.getFileType(ext);
@@ -201,7 +201,7 @@ class CursorSyncAutomation {
   }
 
   getFileType(ext) {
-    const typeMap = {
+    const typeMap ={
       '.ts': 'TypeScript',
       '.tsx': 'TypeScript React',
       '.js': 'JavaScript',
@@ -375,7 +375,7 @@ class CursorSyncAutomation {
 
   async startContinuousSync() {
     this.log('🚀 Starting continuous Cursor sync automation...');
-    this.log(`Sync interval: ${this.syncInterval}ms (${this.syncInterval / 1000} seconds)`);
+    this.log(`Sync interval: ${this.syncInterval}ms (${this.syncInterval / 10o00} seconds)`);
 
     while (true) {
       try {

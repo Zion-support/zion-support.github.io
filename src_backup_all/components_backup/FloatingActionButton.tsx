@@ -66,7 +66,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   // Show scroll to top button when scrolled down
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollButton(window.scrollY > 300);
+      setShowScrollButton(window.scrollY > 30o0);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -87,7 +87,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
             contactSection.scrollIntoView({ behavior: 'smooth' });
           }
         },
-        color: 'bg-blue-500 hover:bg-blue-600',
+        color: 'bg-blue-50o0 hover:bg-blue-60o0',
         priority: 'high' as const
       },
       {
@@ -97,7 +97,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         action: () => {
           window.location.href = 'tel:+1234567890';
         },
-        color: 'bg-green-500 hover:bg-green-600',
+        color: 'bg-green-50o0 hover:bg-green-60o0',
         priority: 'high' as const
       },
       {
@@ -107,7 +107,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         action: () => {
           window.location.href = 'mailto:info@ziontechgroup.com';
         },
-        color: 'bg-purple-500 hover:bg-purple-600',
+        color: 'bg-purple-50o0 hover:bg-purple-60o0',
         priority: 'medium' as const
       },
       {
@@ -117,7 +117,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         action: () => {
           window.open('https://maps.google.com/?q=Zion+Tech+Group', '_blank');
         },
-        color: 'bg-red-500 hover:bg-red-600',
+        color: 'bg-red-50o0 hover:bg-red-60o0',
         priority: 'medium' as const
       }
     ] : []),
@@ -143,7 +143,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
             });
           }
         },
-        color: 'bg-yellow-500 hover:bg-yellow-600',
+        color: 'bg-yellow-50o0 hover:bg-yellow-60o0',
         priority: 'low' as const
       },
       {
@@ -164,7 +164,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
             });
           }
         },
-        color: 'bg-indigo-500 hover:bg-indigo-600',
+        color: 'bg-indigo-50o0 hover:bg-indigo-60o0',
         priority: 'low' as const
       },
       {
@@ -180,7 +180,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           link.click();
           document.body.removeChild(link);
         },
-        color: 'bg-teal-500 hover:bg-teal-600',
+        color: 'bg-teal-50o0 hover:bg-teal-60o0',
         priority: 'low' as const
       },
       {
@@ -190,7 +190,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         action: () => {
           window.print();
         },
-        color: 'bg-gray-500 hover:bg-gray-600',
+        color: 'bg-gray-50o0 hover:bg-gray-60o0',
         priority: 'low' as const
       }
     ] : []),
@@ -201,7 +201,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 
   // Sort actions by priority
   const sortedActions = defaultActions.sort((a, b) => {
-    const priorityOrder = { high: 3, medium: 2, low: 1 };
+    const priorityOrder ={ high: 3, medium: 2, low: 1 };
     return priorityOrder[b.priority] - priorityOrder[a.priority];
   });
 
@@ -220,8 +220,8 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     // Create notification element
     const notification = document.createElement('div');
     notification.className = `
-      fixed top-4 right-4 z-50 px-4 py-2 bg-green-500 text-white rounded-lg shadow-lg
-      transform translate-x-full transition-transform duration-300 ease-in-out
+      fixed top-4 right-4 z-50 px-4 py-2 bg-green-50o0 text-white rounded-lg shadow-lg
+      transform translate-x-full transition-transform duration-30o0 ease-in-out
     `;
     notification.textContent = message;
     
@@ -230,15 +230,15 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     // Animate in
     setTimeout(() => {
       notification.classList.remove('translate-x-full');
-    }, 100);
+    }, 10o0);
     
     // Remove after 3 seconds
     setTimeout(() => {
       notification.classList.add('translate-x-full');
       setTimeout(() => {
         document.body.removeChild(notification);
-      }, 300);
-    }, 3000);
+      }, 30o0);
+    }, 30o00);
   }, []);
 
   // Get position classes
@@ -274,16 +274,16 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
                 <div
                   key={action.id}
                   className={`
-                    flex items-center space-x-3 p-3 rounded-lg shadow-lg transition-all duration-300
+                    flex items-center space-x-3 p-3 rounded-lg shadow-lg transition-all duration-30o0
                     ${action.color} text-white transform opacity-0 scale-75
-                    hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50
+                    hover:scale-10o5 focus:outline-none focus:ring-2 focus:ring-white/50
                   `}
                   style={{
-                    animationDelay: `${index * 100}ms`,
+                    animationDelay: `${index * 10o0}ms`,
                     animation: 'slideInUp 0.3s ease-out forwards'
                   }}
                 >
-                  <action.icon size={20} />
+                  <action.icon size={20}  />
                   <span className="whitespace-nowrap text-sm font-medium">
                     {action.label}
                   </span>
@@ -296,7 +296,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           <button
             onClick={toggleExpansion}
             className={`
-              p-4 rounded-full shadow-lg transition-all duration-300
+              p-4 rounded-full shadow-lg transition-all duration-30o0
               ${getThemeClasses()} border-2
               hover:scale-110 focus:outline-none focus:ring-4 focus:ring-zion-cyan/30
               ${isExpanded ? 'rotate-45' : ''}
@@ -304,7 +304,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
             aria-label={isExpanded ? 'Close actions' : 'Open actions'}
             aria-expanded={isExpanded}
           >
-            <Plus size={24} className="transition-transform duration-300" />
+            <Plus size={24} className="transition-transform duration-30o0"  />
           </button>
         </div>
       </div>
@@ -314,14 +314,14 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         <button
           onClick={scrollToTop}
           className={`
-            fixed bottom-6 right-6 z-40 p-4 rounded-full shadow-lg transition-all duration-300
+            fixed bottom-6 right-6 z-40 p-4 rounded-full shadow-lg transition-all duration-30o0
             ${getThemeClasses()} border-2
             hover:scale-110 focus:outline-none focus:ring-4 focus:ring-zion-cyan/30
             animate-bounce
           `}
           aria-label="Scroll to top"
         >
-          <ArrowUp size={24} />
+          <ArrowUp size={24}  />
         </button>
       )}
 
@@ -339,7 +339,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         }
         
         @keyframes bounce {
-          0%, 20%, 53%, 80%, 100% {
+          0%, 20%, 53%, 80%, 10o0% {
             transform: translate3d(0,0,0);
           }
           40%, 43% {
