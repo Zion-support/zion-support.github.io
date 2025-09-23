@@ -2,6 +2,7 @@
 import js from '@eslint/js';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+import tseslint from 'typescript-eslint';
 export default [
   // Global ignores for this workspace
   {
@@ -42,20 +43,27 @@ export default [
     ]
   },
   js.configs.recommended,
+  ...tseslint.configs.recommended,
   {
     files: ['app/**/*.{js,jsx,ts,tsx}', 'components/**/*.{js,jsx,ts,tsx}', 'pages/**/*.{js,jsx,ts,tsx}', 'src/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
+      parser: tseslint.parser,
       parserOptions: { ecmaFeatures: { jsx: true } }
     },
     plugins: {
       react,
-      'react-hooks': reactHooks
+      'react-hooks': reactHooks,
+      '@typescript-eslint': tseslint.plugin
     },
-    settings: { react: { version: 'detect' } },
     rules: {
-      'react/react-in-jsx-scope': 'off'
+      'react/react-in-jsx-scope': 'off',
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        { argsIgnorePattern: '^_', varsIgnorePattern: '^(React)$', ignoreRestSiblings: true }
+      ]
     },
     settings: { react: { version: 'detect' } }
   }
