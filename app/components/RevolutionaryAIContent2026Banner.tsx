@@ -1,0 +1,3 @@
+export default function RevolutionaryAIContent2026Banner() {
+	return null;
+}
