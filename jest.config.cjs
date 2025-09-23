@@ -1,7 +1,7 @@
 /** @type {import('jest').Config} */
 module.exports = {
   testEnvironment: 'jsdom',
-  roots: ['<rootDir>/.ci-tests'],
+  roots: ['<rootDir>/__safe_tests__'],
   testMatch: ['**/*.(test|spec).(ts|tsx|js|jsx)'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   setupFilesAfterEnv: [],
@@ -15,12 +15,11 @@ module.exports = {
     }]
   },
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1'
+    '^@/(.*)$': '<rootDir>/$1'
   },
   testPathIgnorePatterns: [
-    '/node_modules/'
-  ],
-  modulePathIgnorePatterns: [
-    '<rootDir>/'
+    '/node_modules/',
+    '/.next/',
+    '<rootDir>/__tests__/'
   ]
 };
