@@ -142,5 +142,6 @@
       "<rootDir>/node_modules/"
     ]
   },
-  "packageManager": "npm@11.6.0"
+  "type": "module",
+  "packageManager": "npm@10"
 }
