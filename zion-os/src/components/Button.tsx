@@ -2,7 +2,7 @@
 
 import React, { forwardRef } from 'react';
 import Link from 'next/link';
-import { LoadingSpinner } from './LoadingSpinner';
+import LoadingSpinner from './LoadingSpinner';
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -20,7 +20,7 @@ interface ButtonProps {
   rounded?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
 }
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ 
   children,
   variant = 'primary',
   size = 'md',
@@ -42,14 +42,14 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
     secondary: 'bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-700 hover:to-gray-800 text-white shadow-lg hover:shadow-xl',
     outline: 'border-2 border-white/20 text-white hover:bg-white/10 hover:border-white/40 backdrop-blur-sm',
     ghost: 'text-white hover:bg-white/10 hover:text-purple-400'
-  };
+  } as const;
   
   const sizeClasses = {
     sm: 'px-4 py-2 text-sm rounded-md',
     md: 'px-6 py-3 text-base rounded-lg',
     lg: 'px-8 py-4 text-lg rounded-xl',
     xl: 'px-10 py-5 text-xl rounded-xl'
-  };
+  } as const;
   
   const roundedClasses = {
     sm: 'rounded',
@@ -57,7 +57,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
     lg: 'rounded-lg',
     xl: 'rounded-xl',
     full: 'rounded-full'
-  };
+  } as const;
   
   const widthClasses = fullWidth ? 'w-full' : '';
   
@@ -65,7 +65,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
   
   const content = (
     <>
-      {loading && <LoadingSpinner size="small" className="mr-2" />}
+      {loading && <LoadingSpinner size="sm" className="mr-2" />}
       {icon && iconPosition === 'left' && !loading && <span className="mr-2">{icon}</span>}
       <span className={loading ? 'opacity-0' : ''}>{children}</span>
       {icon && iconPosition === 'right' && !loading && <span className="ml-2">{icon}</span>}
@@ -92,4 +92,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
       {content}
     </button>
   );
-}
+});
+
+Button.displayName = 'Button';
+
+export default Button;

@@ -3,7 +3,31 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
+const navigation = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Solutions', href: '/solutions' },
+  { name: 'Services', href: '/services' },
+  { name: 'Contact', href: '/contact' },
+];
+
+const services = [
+  { name: 'AI Solutions', href: '/services/ai-solutions' },
+  { name: 'Automation', href: '/services/automation' },
+  { name: 'Consulting', href: '/services/consulting' },
+];
+
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handler = () => setIsScrolled(window.scrollY > 10);
+    handler();
+    window.addEventListener('scroll', handler);
+    return () => window.removeEventListener('scroll', handler);
+  }, []);
+
   return (
     <header 
       className={`sticky top-0 z-50 transition-all duration-300 ${
@@ -132,7 +156,7 @@ export default function Header() {
                   <Link
                     key={service.name}
                     href={service.href}
-                    className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200"
+                    className="block px-3 py-2 text-gray-300 hover:text-white hover:bg_WHITE/5 rounded-lg transition-all duration-200"
                     onClick={() => setIsMenuOpen(false)}
                     aria-label={`Navigate to ${service.name} service page`}
                   >
