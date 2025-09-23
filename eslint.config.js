@@ -12,6 +12,8 @@ export default [
       'dist/**',
       'build/**',
       'public/**',
+      'components/**',
+      'lib/**',
       'automation/**',
       'apps.backup/**',
       'backup/**',
