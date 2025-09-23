@@ -14,6 +14,13 @@ interface NavigationItem {
   children?: NavigationItem[]
 }
 
+interface NavigationItem {
+  name: string
+  href: string
+  external?: boolean
+  children?: NavigationItem[]
+}
+
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)

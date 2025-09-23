@@ -46,6 +46,12 @@ export default function PerformanceMonitor() {
       performanceMetrics.memory = memory.usedJSHeapSize / 1024 / 1024 // MB
     }
 
+    // Memory API (if available)
+    if ('memory' in performance) {
+      const memory = (performance as any).memory
+      performanceMetrics.memory = memory.usedJSHeapSize / 1024 / 1024 // MB
+    }
+
     // Enhanced FCP observer
     const fcpObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
@@ -203,6 +209,18 @@ export default function PerformanceMonitor() {
 
     // Send metrics after 5 seconds
     const timer = setTimeout(sendMetrics, 5000);
+
+    // Monitor for performance regressions
+    const monitorPerformance = () => {
+      if (performanceMetrics.lcp && performanceMetrics.lcp > thresholds.lcp.needsImprovement) {
+        console.warn('⚠️ LCP performance regression detected:', performanceMetrics.lcp)
+      }
+      if (performanceMetrics.cls && performanceMetrics.cls > thresholds.cls.needsImprovement) {
+        console.warn('⚠️ CLS performance regression detected:', performanceMetrics.cls)
+      }
+    }
+
+    setTimeout(monitorPerformance, 2000)
 
     // Monitor for performance regressions
     const monitorPerformance = () => {
