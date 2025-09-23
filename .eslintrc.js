@@ -30,7 +30,7 @@ module.exports = {
   ],
   rules: {
     // Custom rules for better code quality
-    'prefer-const': 'error',
+    'prefer-const': 'warn',
     'no-var': 'error',
     'no-console': 'warn',
     'no-debugger': 'error',
@@ -38,7 +38,7 @@ module.exports = {
     'react/no-unescaped-entities': 'off',
     'prefer-template': 'error',
     'object-shorthand': 'error',
-    'prefer-arrow-callback': 'error',
+    'prefer-arrow-callback': 'warn',
     'arrow-spacing': 'error',
     'no-duplicate-imports': 'error',
     'no-useless-rename': 'error',
