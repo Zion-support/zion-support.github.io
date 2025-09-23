@@ -11,7 +11,7 @@
     "dev": "next dev",
     "build": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" next build",
     "start": "next start",
-    "lint": "eslint src app --no-error-on-unmatched-pattern",
+    "lint": "eslint app components src providers --max-warnings 0",
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "rm -rf .next && npm run build",
     "dev:clean": "rm -rf .next && npm run dev",
