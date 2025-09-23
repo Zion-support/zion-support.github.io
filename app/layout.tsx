@@ -1,17 +1,15 @@
-import type { Metadata } from 'next'
-import type { ReactNode } from 'react'
-import { Inter } from 'next/font/google'
-import './globals.css'
+import type { Metadata } from "next";
+import "../styles/globals.css";
 
-export const metadata = {
-  title: 'Zion App',
-  description: 'Production build layout for Zion App',
+export const metadata: Metadata = {
+  title: "Zion App",
+  description: "Zion application",
 };
 
 export default function RootLayout({
   children,
 }: {
-  children: ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">

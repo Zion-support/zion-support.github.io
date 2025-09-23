@@ -1,14 +1,6 @@
-import React from 'react';
+import React from "react";
 
-interface StructuredDataProps {
-  data: object;
-}
-
-export default function StructuredData({ data }: StructuredDataProps) {
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-    />
-  );
+export default function StructuredData({ type, data }: { type: string; data: Record<string, unknown> }) {
+	const json = JSON.stringify({ "@context": "https://schema.org", "@type": type, ...data });
+	return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: json }} />;
 }

@@ -1,15 +1,3 @@
-import React from 'react';
-
-interface AnimatedCounterProps {
-  value: number;
-  duration?: number;
-  className?: string;
-}
-
-export default function AnimatedCounter({ value, duration = 2000, className = '' }: AnimatedCounterProps) {
-  return (
-    <span className={className}>
-      {value}
-    </span>
-  );
+export default function AnimatedCounter({ end, suffix = "", duration = 1000 }: { end: number; suffix?: string; duration?: number }) {
+	return <span>{end}{suffix}</span>;
 }
