@@ -51,8 +51,9 @@
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^14.2.0",
+    "@next/swc-linux-x64-gnu": "^12.3.4",
     "@testing-library/jest-dom": "^6.0.0",
-    "@testing-library/react": "^14.0.0",
+    "@testing-library/react": "12.1.5",
     "@types/jest": "^29.0.0",
     "@types/node": "^16.18.126",
     "critters": "^0.0.23",
