@@ -84,6 +84,83 @@
     "typescript": "5.9.2",
     "typescript-eslint": "^8.44.1"
   },
-  
+  "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "testMatch": [
+      "**/?(*.)+(spec|test).+(ts|tsx|js|jsx)"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "testEnvironment": "jest-environment-jsdom",
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.setup.js"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/$1"
+    },
+    "modulePathIgnorePatterns": [
+      "<rootDir>/automation/",
+      "<rootDir>/automation/backups/",
+      "<rootDir>/.temp_backup_components/",
+      "<rootDir>/apps.backup/",
+      "<rootDir>/components.apps/",
+      "<rootDir>/components.disabled/",
+      "<rootDir>/server/",
+      "<rootDir>/recovered-branches/",
+      "<rootDir>/zion-os/",
+      "<rootDir>/backup-problematic-files/",
+      "<rootDir>/backup/",
+      "<rootDir>/backups/",
+      "<rootDir>/backup-merge-conflicts/"
+    ],
+    "watchPathIgnorePatterns": [
+      "<rootDir>/automation/",
+      "<rootDir>/automation/backups/",
+      "<rootDir>/.temp_backup_components/",
+      "<rootDir>/apps.backup/",
+      "<rootDir>/components.apps/",
+      "<rootDir>/components.disabled/",
+      "<rootDir>/server/",
+      "<rootDir>/recovered-branches/",
+      "<rootDir>/zion-os/",
+      "<rootDir>/backup-problematic-files/",
+      "<rootDir>/backup/",
+      "<rootDir>/backups/",
+      "<rootDir>/backup-merge-conflicts/"
+    ],
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": [
+        "babel-jest",
+        {
+          "presets": [
+            "next/babel"
+          ]
+        }
+      ]
+    },
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/.next/",
+      "/__tests__/",
+      "/tests/",
+      "/tests.disabled/",
+      "/automation/backups/",
+      "/backups/",
+      "/backup/",
+      "/backup-merge-conflicts/",
+      "/backup-problematic-files/",
+      "/recovered-branches/",
+      "/src.disabled/",
+      "/components.disabled/",
+      "/pages.disabled/",
+      "/ts_files_backup/",
+      "/src_backup_temp/",
+      "/src_backup/"
+    ]
+  },
   "packageManager": "npm@11.6.0"
 }
