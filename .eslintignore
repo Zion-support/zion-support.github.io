@@ -1,0 +1,60 @@
+# Ignore generated, disabled, backups, and non-source directories
+.next/
+node_modules/
+coverage/
+dist/
+build/
+.out/
+
+# Tests and mocks
+__tests__/
+tests/
+test/
+__mocks__/
+
+# Disabled/broken/backup variants
+*.disabled/
+*.broken/
+*backup*/
+src.broken/
+src.disabled/
+src_backup/
+src_backup_temp/
+pages-disabled/
+pages.broken/
+pages_backup/
+pages_backup_before_cleanup/
+components.disabled/
+components.disabled_full/
+
+# Automation and scripts not relevant to app lint
+automation/
+scripts/
+.scripts/
+*.sh
+*.cjs
+*.mjs
+*.py
+*.bat
+
+# Root maintenance and helper scripts
+fix-*.js
+merge-*.js
+resolve-*.js
+*merge*.js
+*conflict*.js
+*automation*.js
+
+# Misc large content and markdown
+public/
+*.md
+*.json
+*.xml
+*.txt
+
+# Misc
+recovered-branches/
+backup*/
+corrupted_backup/
+zion-os/
+server/
