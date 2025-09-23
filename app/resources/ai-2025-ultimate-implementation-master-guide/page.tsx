@@ -198,7 +198,7 @@ export default function AI2025UltimateImplementationMasterGuide() {
               </div>
             </div>
           </div>
-        </section>
+        </div>
 
           {/* Implementation Phases */}
           <section className="mb-12">
@@ -447,7 +447,7 @@ export default function AI2025UltimateImplementationMasterGuide() {
             </Link>
           </div>
         </div>
-      </article>
+      </div>
     </div>
   );
 }
