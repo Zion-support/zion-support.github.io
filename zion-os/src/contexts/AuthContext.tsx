@@ -1,7 +1,6 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState } from "react";
-import { useSession, signIn, signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
 interface User {
@@ -25,63 +24,58 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-  const { data: session, status } = useSession();
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
 
   useEffect(() => {
-    if (status === "loading") {
-      setIsLoading(true);
-      return;
-    }
-
-    if (session?.user) {
-      setUser({
-        id: (session.user as any).id,
-        name: session.user.name || undefined,
-        email: session.user.email!,
-        role: (session.user as any).role || "user",
-        onboardingCompleted: false,
-      });
-    } else {
-      setUser(null);
-    }
-
+    // Restore user from localStorage if present
+    try {
+      const raw = typeof window !== "undefined" ? localStorage.getItem("zion_user") : null;
+      if (raw) {
+        setUser(JSON.parse(raw));
+      }
+    } catch {}
     setIsLoading(false);
-  }, [session, status]);
+  }, []);
 
-  const login = async (email: string, password: string) => {
-    const result = await signIn("credentials", { email, password, redirect: false });
-    if ((result as any)?.error) throw new Error((result as any).error);
+  const persist = (u: User | null) => {
+    if (typeof window === "undefined") return;
+    if (u) localStorage.setItem("zion_user", JSON.stringify(u));
+    else localStorage.removeItem("zion_user");
+  };
+
+  const login = async (email: string, _password: string) => {
+    const fakeUser: User = {
+      id: "local-user",
+      name: email.split("@")[0],
+      email,
+      role: "user",
+      onboardingCompleted: false,
+    };
+    setUser(fakeUser);
+    persist(fakeUser);
     router.push("/dashboard");
   };
 
   const logout = async () => {
-    await signOut({ redirect: false });
+    setUser(null);
+    persist(null);
     router.push("/");
   };
 
   const register = async (name: string, email: string, password: string) => {
-    const response = await fetch("/api/auth/register", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, password }),
-    });
-    if (!response.ok) {
-      const error = await response.json();
-      throw new Error(error.message);
-    }
+    // For stub, registration just logs in
     await login(email, password);
+    setUser((prev) => (prev ? { ...prev, name } : prev));
   };
 
   const completeOnboarding = async () => {
-    const response = await fetch("/api/user/onboarding", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-    });
-    if (!response.ok) throw new Error("Failed to complete onboarding");
-    if (user) setUser({ ...user, onboardingCompleted: true });
+    if (user) {
+      const updated = { ...user, onboardingCompleted: true };
+      setUser(updated);
+      persist(updated);
+    }
   };
 
   const value: AuthContextType = {
