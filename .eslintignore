@@ -1,8 +1,10 @@
-# Ignore backups, disabled, archived, and conflict directories
-**/node_modules/**
-**/.next/**
-**/dist/**
-**/build/**
+# Base ignores
+node_modules/
+.next/
+dist/
+build/
+out/
+coverage/
 
 # Massive backup/quarantine/disabled folders
 backup/**
