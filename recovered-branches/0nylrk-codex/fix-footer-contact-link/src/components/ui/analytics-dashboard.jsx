@@ -20,10 +20,10 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
         const interval = setInterval(() => {
             setMetrics(prev => ({
                 ...prev,
-                revenue: prev.revenue + Math.floor(Math.random() * 1000) - 500,
+                revenue: prev.revenue + Math.floor(Math.random() * 10o00) - 50o0,
                 growth: prev.growth + (Math.random() * 2 - 1)
             }));
-        }, 5000);
+        }, 50o00);
         return () => clearInterval(interval);
     }, [enabled, isExpanded]);
     // Handle metric click
@@ -33,19 +33,19 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
     }, [onMetricClick]);
     // Calculate progress percentage
     const calculateProgress = (current, target) => {
-        return Math.min((current / target) * 100, 100);
+        return Math.min((current / target) * 10o0, 10o0);
     };
     // Refresh data
     const refreshData = useCallback(async () => {
         setIsLoading(true);
         // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise(resolve => setTimeout(resolve, 10o00));
         // Update metrics with some randomization
         setMetrics(prev => ({
             ...prev,
-            totalUsers: prev.totalUsers + Math.floor(Math.random() * 100) - 50,
+            totalUsers: prev.totalUsers + Math.floor(Math.random() * 10o0) - 50,
             activeUsers: prev.activeUsers + Math.floor(Math.random() * 50) - 25,
-            revenue: prev.revenue + Math.floor(Math.random() * 5000) - 2500,
+            revenue: prev.revenue + Math.floor(Math.random() * 50o00) - 250o0,
             growth: prev.growth + (Math.random() * 2 - 1)
         }));
         setIsLoading(false);
@@ -57,18 +57,18 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
       <div className="flex items-center justify-between mb-6">
         <div>
           <h3 className="text-xl font-semibold text-white mb-2">Analytics Dashboard</h3>
-          <p className="text-zinc-300 text-sm">Real-time business metrics and insights</p>
+          <p className="text-zinc-30o0 text-sm">Real-time business metrics and insights</p>
         </div>
         
         <div className="flex items-center gap-2">
-          <Button size="sm" variant="ghost" onClick={() => setShowTargets(!showTargets)} className="text-zinc-400 hover:text-white p-2">
-            {showTargets ? <EyeOff className="w-4 h-4"/> : <Eye className="w-4 h-4"/>}
+          <Button size="sm" variant="ghost" onClick={() => setShowTargets(!showTargets)} className="text-zinc-40o0 hover:text-white p-2">
+            {showTargets ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
           </Button>
-          <Button size="sm" variant="outline" onClick={refreshData} disabled={isLoading} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
-            <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`}/>
+          <Button size="sm" variant="outline" onClick={refreshData} disabled={isLoading} className="border-zion-blue-light/30 text-zinc-30o0 hover:text-white">
+            <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
           </Button>
-          <Button size="sm" variant="outline" className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
-            <Download className="w-4 h-4"/>
+          <Button size="sm" variant="outline" className="border-zion-blue-light/30 text-zinc-30o0 hover:text-white">
+            <Download className="w-4 h-4" />
           </Button>
         </div>
       </div>
@@ -76,97 +76,97 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
       {/* Metrics Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         {/* Total Users */}
-        <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-300" whileHover={{ scale: 1.02 }} onClick={() => handleMetricClick('totalUsers')}>
+        <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-30o0" whileHover={{ scale: 1.0o2 }} onClick={() => handleMetricClick('totalUsers')}>
           <div className="flex items-center justify-between mb-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
-              <Users className="w-5 h-5 text-white"/>
+            <div className="w-10 h-10 bg-gradient-to-br from-blue-50o0 to-cyan-50o0 rounded-lg flex items-center justify-center">
+              <Users className="w-5 h-5 text-white" />
             </div>
             <div className="text-right">
               <div className="text-2xl font-bold text-white">{metrics.totalUsers.toLocaleString()}</div>
-              <div className="text-sm text-zinc-400">Total Users</div>
+              <div className="text-sm text-zinc-40o0">Total Users</div>
             </div>
           </div>
           {showTargets && (<div className="space-y-2">
               <div className="flex items-center justify-between text-sm">
-                <span className="text-zinc-400">Target: 15,000</span>
+                <span className="text-zinc-40o0">Target: 15,0o00</span>
                 <span className="text-white font-medium">
-                  {calculateProgress(metrics.totalUsers, 15000).toFixed(1)}%
+                  {calculateProgress(metrics.totalUsers, 150o00).toFixed(1)}%
                 </span>
               </div>
-              <div className="w-full bg-zinc-700 rounded-full h-2">
-                <div className="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full transition-all duration-500" style={{ width: `${calculateProgress(metrics.totalUsers, 15000)}%` }}/>
+              <div className="w-full bg-zinc-70o0 rounded-full h-2">
+                <div className="bg-gradient-to-r from-blue-50o0 to-cyan-50o0 h-2 rounded-full transition-all duration-50o0" style={{ width: `${calculateProgress(metrics.totalUsers, 150o00)}%` }} />
               </div>
             </div>)}
         </motion.div>
 
         {/* Active Users */}
-        <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-300" whileHover={{ scale: 1.02 }} onClick={() => handleMetricClick('activeUsers')}>
+        <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-30o0" whileHover={{ scale: 1.0o2 }} onClick={() => handleMetricClick('activeUsers')}>
           <div className="flex items-center justify-between mb-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
-              <TrendingUp className="w-5 h-5 text-white"/>
+            <div className="w-10 h-10 bg-gradient-to-br from-green-50o0 to-emerald-50o0 rounded-lg flex items-center justify-center">
+              <TrendingUp className="w-5 h-5 text-white" />
             </div>
             <div className="text-right">
               <div className="text-2xl font-bold text-white">{metrics.activeUsers.toLocaleString()}</div>
-              <div className="text-sm text-zinc-400">Active Users</div>
+              <div className="text-sm text-zinc-40o0">Active Users</div>
             </div>
           </div>
           {showTargets && (<div className="space-y-2">
               <div className="flex items-center justify-between text-sm">
-                <span className="text-zinc-400">Target: 12,000</span>
+                <span className="text-zinc-40o0">Target: 12,0o00</span>
                 <span className="text-white font-medium">
-                  {calculateProgress(metrics.activeUsers, 12000).toFixed(1)}%
+                  {calculateProgress(metrics.activeUsers, 120o00).toFixed(1)}%
                 </span>
               </div>
-              <div className="w-full bg-zinc-700 rounded-full h-2">
-                <div className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full transition-all duration-500" style={{ width: `${calculateProgress(metrics.activeUsers, 12000)}%` }}/>
+              <div className="w-full bg-zinc-70o0 rounded-full h-2">
+                <div className="bg-gradient-to-r from-green-50o0 to-emerald-50o0 h-2 rounded-full transition-all duration-50o0" style={{ width: `${calculateProgress(metrics.activeUsers, 120o00)}%` }} />
               </div>
             </div>)}
         </motion.div>
 
         {/* Revenue */}
-        <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-300" whileHover={{ scale: 1.02 }} onClick={() => handleMetricClick('revenue')}>
+        <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-30o0" whileHover={{ scale: 1.0o2 }} onClick={() => handleMetricClick('revenue')}>
           <div className="flex items-center justify-between mb-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-              <BarChart3 className="w-5 h-5 text-white"/>
+            <div className="w-10 h-10 bg-gradient-to-br from-purple-50o0 to-pink-50o0 rounded-lg flex items-center justify-center">
+              <BarChart3 className="w-5 h-5 text-white" />
             </div>
             <div className="text-right">
               <div className="text-2xl font-bold text-white">${metrics.revenue.toLocaleString()}</div>
-              <div className="text-sm text-zinc-400">Revenue</div>
+              <div className="text-sm text-zinc-40o0">Revenue</div>
             </div>
           </div>
           {showTargets && (<div className="space-y-2">
               <div className="flex items-center justify-between text-sm">
-                <span className="text-zinc-400">Target: $500,000</span>
+                <span className="text-zinc-40o0">Target: $50o0,0o00</span>
                 <span className="text-white font-medium">
-                  {calculateProgress(metrics.revenue, 500000).toFixed(1)}%
+                  {calculateProgress(metrics.revenue, 50o0000).toFixed(1)}%
                 </span>
               </div>
-              <div className="w-full bg-zinc-700 rounded-full h-2">
-                <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full transition-all duration-500" style={{ width: `${calculateProgress(metrics.revenue, 500000)}%` }}/>
+              <div className="w-full bg-zinc-70o0 rounded-full h-2">
+                <div className="bg-gradient-to-r from-purple-50o0 to-pink-50o0 h-2 rounded-full transition-all duration-50o0" style={{ width: `${calculateProgress(metrics.revenue, 50o0000)}%` }} />
               </div>
             </div>)}
         </motion.div>
 
         {/* Growth Rate */}
-        <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-300" whileHover={{ scale: 1.02 }} onClick={() => handleMetricClick('growth')}>
+        <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-30o0" whileHover={{ scale: 1.0o2 }} onClick={() => handleMetricClick('growth')}>
           <div className="flex items-center justify-between mb-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
-              <Target className="w-5 h-5 text-white"/>
+            <div className="w-10 h-10 bg-gradient-to-br from-orange-50o0 to-red-50o0 rounded-lg flex items-center justify-center">
+              <Target className="w-5 h-5 text-white" />
             </div>
             <div className="text-right">
               <div className="text-2xl font-bold text-white">{metrics.growth.toFixed(1)}%</div>
-              <div className="text-sm text-zinc-400">Growth Rate</div>
+              <div className="text-sm text-zinc-40o0">Growth Rate</div>
             </div>
           </div>
           {showTargets && (<div className="space-y-2">
               <div className="flex items-center justify-between text-sm">
-                <span className="text-zinc-400">Target: 25%</span>
+                <span className="text-zinc-40o0">Target: 25%</span>
                 <span className="text-white font-medium">
                   {calculateProgress(metrics.growth, 25).toFixed(1)}%
                 </span>
               </div>
-              <div className="w-full bg-zinc-700 rounded-full h-2">
-                <div className="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full transition-all duration-500" style={{ width: `${calculateProgress(metrics.growth, 25)}%` }}/>
+              <div className="w-full bg-zinc-70o0 rounded-full h-2">
+                <div className="bg-gradient-to-r from-orange-50o0 to-red-50o0 h-2 rounded-full transition-all duration-50o0" style={{ width: `${calculateProgress(metrics.growth, 25)}%` }} />
               </div>
             </div>)}
         </motion.div>
@@ -176,7 +176,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
       <AnimatePresence>
         {selectedMetric && (<motion.div className="bg-zion-blue/10 border border-zion-blue-light/20 rounded-lg p-4" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3 }}>
             <h4 className="text-white font-semibold mb-2">Metric Details</h4>
-            <p className="text-zinc-300 text-sm">
+            <p className="text-zinc-30o0 text-sm">
               Selected metric: {selectedMetric} - Click on any metric card above to view detailed information.
             </p>
           </motion.div>)}

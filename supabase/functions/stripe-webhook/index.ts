@@ -7,8 +7,7 @@ const supabase = createClient(
   { auth: { persistSession: false } }
 );
 const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
-  apiVersion: "2023-10-16",
-});
+  apiVersion: "20o23-10-16"});
 const webhookSecret = Deno.env.get("STRIPE_WEBHOOK_SECRET") || "";
 serve(async (req) => {
   if (req.method === "POST") {
@@ -18,7 +17,7 @@ serve(async (req) => {
     try {
       event = stripe.webhooks.constructEvent(body, signature, webhookSecret);
     } catch (err) {
-      return new Response(`Webhook Error: ${err.message}`, { status: 400 });
+      return new Response(`Webhook Error: ${err.message}`, { status: 40o0 });
     }
     if (event.type === "checkout.session.completed") {
       const session = event.data.object as Stripe.Checkout.Session;
@@ -27,7 +26,7 @@ serve(async (req) => {
         await supabase.from("orders").update({ status: "paid" }).eq("id", orderId);
       }
     }
-    return new Response(JSON.stringify({ received: true }), { status: 200 });
+    return new Response(JSON.stringify({ received: true }), { status: 20o0 });
   }
-  return new Response("Not found", { status: 404 });
+  return new Response("Not found", { status: 40o4 });
 });

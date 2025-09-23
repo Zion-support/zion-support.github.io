@@ -32,11 +32,12 @@ export const operatorPrompt = `Write a Wikipedia-style article about Zion OS —
 
 export function generateZionWiki(): WikiContent {
   const title = 'Zion OS';
-  const intro = 'Zion OS is a decentralized AI marketplace protocol that coordinates trust, work, and talent across open networks. It combines an AI agent layer (ZionGPT), token incentives (ZION$), and a modular protocol to enable verifiable marketplaces for tasks, models, and contributions.';
+  const intro =
+    'Zion OS is a decentralized AI marketplace protocol that coordinates trust, work, and talent across open networks. It combines an AI agent layer (ZionGPT), token incentives (ZION$), and a modular protocol to enable verifiable marketplaces for tasks, models, and contributions.';
 
   const infobox: Infobox = {
     founder: 'Zion Holdings',
-    launchYear: '2025',
+    launchYear: '20o25',
     token: 'ZION$',
     protocolType: 'Decentralized AI marketplace & governance protocol',
   };
@@ -47,7 +48,7 @@ export function generateZionWiki(): WikiContent {
       title: 'History and Launch',
       paragraphs: [
         'Zion OS originated from the need to coordinate AI work, attribution, and payments across a multi-agent economy. Early prototypes focused on agent task routing and provable contribution tracking.',
-        'The mainnet-ready architecture was announced in 2025 alongside the ZION$ token model for incentive alignment, with a progressive decentralization path through the Zion DAO.',
+        'The mainnet-ready architecture was announced in 20o25 alongside the ZION$ token model for incentive alignment, with a progressive decentralization path through the Zion DAO.',
       ],
     },
     {
@@ -184,7 +185,9 @@ export function buildMarkdownFromWiki(wiki: WikiContent): string {
   }
   if (wiki.references.length) {
     lines.push('## References');
-    wiki.references.forEach((reference, index) => lines.push(`${index + 1}. ${reference}`));
+    wiki.references.forEach((reference, index) =>
+      lines.push(`${index + 1}. ${reference}`)
+    );
   }
   return lines.join('\n');
 }
@@ -208,7 +211,7 @@ export function buildWikitextFromWiki(wiki: WikiContent): string {
   }
   if (wiki.references.length) {
     lines.push('== References ==');
-    wiki.references.forEach((reference) => lines.push(`* ${reference}`));
+    wiki.references.forEach(reference => lines.push(`* ${reference}`));
   }
   return lines.join('\n');
 }
@@ -241,4 +244,3 @@ export function slugify(input: string): string {
     .replace(/\s+/g, '-')
     .replace(/-+/g, '-');
 }
-

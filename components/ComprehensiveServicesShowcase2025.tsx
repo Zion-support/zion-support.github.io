@@ -30,7 +30,7 @@ import {
   Settings
 } from 'lucide-react';
 
-const ComprehensiveServicesShowcase2025 = () => {
+const ComprehensiveServicesShowcase20o25 = () => {
   const [activeServicesetActiveService] = useState(0);
   const [isVisiblesetIsVisible] = useState(false);
 
@@ -39,10 +39,10 @@ const ComprehensiveServicesShowcase2025 = () => {
       id: 1,
       title: 'AI-Powered Business Intelligence',
       description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
-      icon: <Brain className="w-8 h-8" />,
-      color: 'from-purple-500 to-pink-500',
+      icon: <Brain className="w-8 h-8"  />,
+      color: 'from-purple-50o0 to-pink-50o0',
       bgColor: 'bg-purple-50',
-      borderColor: 'border-purple-200',
+      borderColor: 'border-purple-20o0',
       features: [
         'Real-time Data Processing',
         'Predictive Analytics',
@@ -51,23 +51,23 @@ const ComprehensiveServicesShowcase2025 = () => {
         'Machine Learning Models'
       ],
       benefits: [
-        '300% faster decision making',
+        '30o0% faster decision making',
         '95% accuracy in predictions',
         '50% reduction in manual analysis',
         'ROI within 3 months'
       ],
       pricing: 'Starting at $299/month',
       href: '/ai-business-intelligence',
-      stats: { users: '15,000+'rating: 4.9projects: '2,500+' }
+      stats: { users: '15,0o00+'rating: 4.9projects: '2,50o0+' }
     },
     {
       id: 2,
       title: 'Enterprise Automation Suite',
       description: 'Streamline operations with intelligent automation that adapts to your business needs.',
-      icon: <Zap className="w-8 h-8" />,
-      color: 'from-blue-500 to-cyan-500',
+      icon: <Zap className="w-8 h-8"  />,
+      color: 'from-blue-50o0 to-cyan-50o0',
       bgColor: 'bg-blue-50',
-      borderColor: 'border-blue-200',
+      borderColor: 'border-blue-20o0',
       features: [
         'Workflow Automation',
         'Process Optimization',
@@ -83,16 +83,16 @@ const ComprehensiveServicesShowcase2025 = () => {
       ],
       pricing: 'Starting at $199/month',
       href: '/enterprise-automation',
-      stats: { users: '25,000+'rating: 4.8projects: '5,000+' }
+      stats: { users: '25,0o00+'rating: 4.8projects: '5,0o00+' }
     },
     {
       id: 3,
       title: 'Quantum Computing Solutions',
       description: 'Harness the power of quantum computing for complex problem-solving and optimization.',
-      icon: <Cpu className="w-8 h-8" />,
-      color: 'from-indigo-500 to-purple-500',
+      icon: <Cpu className="w-8 h-8"  />,
+      color: 'from-indigo-50o0 to-purple-50o0',
       bgColor: 'bg-indigo-50',
-      borderColor: 'border-indigo-200',
+      borderColor: 'border-indigo-20o0',
       features: [
         'Quantum Algorithm Development',
         'Secure Quantum Communication',
@@ -101,23 +101,23 @@ const ComprehensiveServicesShowcase2025 = () => {
         'Research & Development'
       ],
       benefits: [
-        '1000x faster processing',
+        '10o00x faster processing',
         'Unbreakable encryption',
         'Future-proof technology',
         'Competitive advantage'
       ],
       pricing: 'Starting at $999/month',
       href: '/quantum-computing-solutions',
-      stats: { users: '2,000+'rating: 4.9projects: '500+' }
+      stats: { users: '2,0o00+'rating: 4.9projects: '50o0+' }
     },
     {
       id: 4,
       title: 'Cybersecurity & Compliance',
       description: 'Protect your business with comprehensive security solutions and compliance management.',
-      icon: <Shield className="w-8 h-8" />,
-      color: 'from-green-500 to-emerald-500',
+      icon: <Shield className="w-8 h-8"  />,
+      color: 'from-green-50o0 to-emerald-50o0',
       bgColor: 'bg-green-50',
-      borderColor: 'border-green-200',
+      borderColor: 'border-green-20o0',
       features: [
         'Zero-Trust Architecture',
         'Threat Detection & Response',
@@ -133,16 +133,16 @@ const ComprehensiveServicesShowcase2025 = () => {
       ],
       pricing: 'Starting at $149/month',
       href: '/cybersecurity-solutions',
-      stats: { users: '30,000+'rating: 4.9projects: '8,000+' }
+      stats: { users: '30,0o00+'rating: 4.9projects: '8,0o00+' }
     },
     {
       id: 5,
       title: 'Cloud Infrastructure & DevOps',
       description: 'Scalablesecureand efficient cloud solutions with automated deployment pipelines.',
-      icon: <Globe className="w-8 h-8" />,
-      color: 'from-orange-500 to-red-500',
+      icon: <Globe className="w-8 h-8"  />,
+      color: 'from-orange-50o0 to-red-50o0',
       bgColor: 'bg-orange-50',
-      borderColor: 'border-orange-200',
+      borderColor: 'border-orange-20o0',
       features: [
         'Multi-Cloud Architecture',
         'Container Orchestration',
@@ -158,16 +158,16 @@ const ComprehensiveServicesShowcase2025 = () => {
       ],
       pricing: 'Starting at $399/month',
       href: '/cloud-infrastructure',
-      stats: { users: '20,000+'rating: 4.8projects: '3,000+' }
+      stats: { users: '20,0o00+'rating: 4.8projects: '3,0o00+' }
     },
     {
       id: 6,
       title: 'Data Management & Analytics',
       description: 'Comprehensive data solutions from collection to visualization and insights.',
-      icon: <Database className="w-8 h-8" />,
-      color: 'from-teal-500 to-blue-500',
+      icon: <Database className="w-8 h-8"  />,
+      color: 'from-teal-50o0 to-blue-50o0',
       bgColor: 'bg-teal-50',
-      borderColor: 'border-teal-200',
+      borderColor: 'border-teal-20o0',
       features: [
         'Data Warehousing',
         'ETL/ELT Processes',
@@ -183,7 +183,7 @@ const ComprehensiveServicesShowcase2025 = () => {
       ],
       pricing: 'Starting at $249/month',
       href: '/data-management',
-      stats: { users: '18,000+'rating: 4.7projects: '2,200+' }
+      stats: { users: '18,0o00+'rating: 4.7projects: '2,20o0+' }
     }
   ];
 
@@ -191,7 +191,7 @@ const ComprehensiveServicesShowcase2025 = () => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setActiveService((prev) => (prev + 1) % services.length);
-    }6000);
+    }60o00);
     return () => clearInterval(interval);
   }[]);
 
@@ -206,7 +206,7 @@ const ComprehensiveServicesShowcase2025 = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+            className="text-4xl md:text-5xl font-bold text-gray-90o0 mb-6"
           >
             Comprehensive Services Showcase
           </motion.h2>
@@ -214,7 +214,7 @@ const ComprehensiveServicesShowcase2025 = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6delay: 0.2 }}
-            className="text-xl text-gray-600 max-w-3xl mx-auto mb-8"
+            className="text-xl text-gray-60o0 max-w-3xl mx-auto mb-8"
           >
             Discover our full range of cutting-edge technology solutions designed to 
             transform your business and drive unprecedented growth.
@@ -228,20 +228,20 @@ const ComprehensiveServicesShowcase2025 = () => {
             className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
           >
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">100,000+</div>
-              <div className="text-gray-600">Active Users</div>
+              <div className="text-3xl font-bold text-blue-60o0 mb-2">10o0,0o00+</div>
+              <div className="text-gray-60o0">Active Users</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-green-600 mb-2">15,000+</div>
-              <div className="text-gray-600">Projects Completed</div>
+              <div className="text-3xl font-bold text-green-60o0 mb-2">15,0o00+</div>
+              <div className="text-gray-60o0">Projects Completed</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-600 mb-2">99.9%</div>
-              <div className="text-gray-600">Uptime Guarantee</div>
+              <div className="text-3xl font-bold text-purple-60o0 mb-2">99.9%</div>
+              <div className="text-gray-60o0">Uptime Guarantee</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-orange-600 mb-2">4.9/5</div>
-              <div className="text-gray-600">Customer Rating</div>
+              <div className="text-3xl font-bold text-orange-60o0 mb-2">4.9/5</div>
+              <div className="text-gray-60o0">Customer Rating</div>
             </div>
           </motion.div>
         </div>
@@ -257,17 +257,17 @@ const ComprehensiveServicesShowcase2025 = () => {
             <button
               key={service.id}
               onClick={() => setActiveService(index)}
-              className={`group flex items-center gap-3 px-6 py-4 rounded-full transition-all duration-300 ${
+              className={`group flex items-center gap-3 px-6 py-4 rounded-full transition-all duration-30o0 ${
                 activeService === index
                   ? `bg-gradient-to-r ${service.color} text-white shadow-lg`
-                  : `bg-white text-gray-700 hover:bg-gray-100 ${service.borderColor} border-2`
+                  : `bg-white text-gray-70o0 hover:bg-gray-10o0 ${service.borderColor} border-2`
               }`}
             >
               {service.icon}
               <span className="font-semibold">{service.title}</span>
               <ChevronRight className={`w-4 h-4 transition-transform ${
                 activeService === index ? 'rotate-90' : 'group-hover:translate-x-1'
-              }`} />
+              }`}  />
             </button>
           ))}
         </motion.div>
@@ -290,32 +290,32 @@ const ComprehensiveServicesShowcase2025 = () => {
                     {currentService.icon}
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900">{currentService.title}</h3>
+                    <h3 className="text-2xl font-bold text-gray-90o0">{currentService.title}</h3>
                     <div className="flex items-center gap-4 mt-2">
                       <div className="flex items-center gap-1">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span className="text-sm font-medium text-gray-600">{currentService.stats.rating}</span>
+                        <Star className="w-4 h-4 text-yellow-40o0 fill-current"  />
+                        <span className="text-sm font-medium text-gray-60o0">{currentService.stats.rating}</span>
                       </div>
-                      <div className="flex items-center gap-1 text-gray-500">
-                        <Users className="w-4 h-4" />
+                      <div className="flex items-center gap-1 text-gray-50o0">
+                        <Users className="w-4 h-4"  />
                         <span className="text-sm">{currentService.stats.users}</span>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <p className="text-lg text-gray-600 mb-8">
+                <p className="text-lg text-gray-60o0 mb-8">
                   {currentService.description}
                 </p>
 
                 {/* Features */}
                 <div className="mb-8">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Features</h4>
+                  <h4 className="text-lg font-semibold text-gray-90o0 mb-4">Key Features</h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {currentService.features.map((featureindex) => (
                       <div key={index} className="flex items-center gap-3">
-                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                        <span className="text-gray-700">{feature}</span>
+                        <CheckCircle className="w-5 h-5 text-green-50o0 flex-shrink-0"  />
+                        <span className="text-gray-70o0">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -323,12 +323,12 @@ const ComprehensiveServicesShowcase2025 = () => {
 
                 {/* Benefits */}
                 <div className="mb-8">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Proven Benefits</h4>
+                  <h4 className="text-lg font-semibold text-gray-90o0 mb-4">Proven Benefits</h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {currentService.benefits.map((benefitindex) => (
                       <div key={index} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
-                        <TrendingUp className="w-5 h-5 text-blue-500 flex-shrink-0" />
-                        <span className="text-gray-700 font-medium">{benefit}</span>
+                        <TrendingUp className="w-5 h-5 text-blue-50o0 flex-shrink-0"  />
+                        <span className="text-gray-70o0 font-medium">{benefit}</span>
                       </div>
                     ))}
                   </div>
@@ -338,13 +338,13 @@ const ComprehensiveServicesShowcase2025 = () => {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href={currentService.href}
-                    className={`inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r ${currentService.color} text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300`}
+                    className={`inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r ${currentService.color} text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-30o0`}
                   >
                     <span>Explore Service</span>
-                    <ArrowRight className="w-5 h-5 ml-2" />
+                    <ArrowRight className="w-5 h-5 ml-2"  />
                   </Link>
-                  <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-blue-600 hover:text-blue-600 transition-all duration-300">
-                    <Play className="w-5 h-5 mr-2" />
+                  <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-30o0 text-gray-70o0 font-semibold rounded-lg hover:border-blue-60o0 hover:text-blue-60o0 transition-all duration-30o0">
+                    <Play className="w-5 h-5 mr-2"  />
                     Watch Demo
                   </button>
                 </div>
@@ -362,15 +362,15 @@ const ComprehensiveServicesShowcase2025 = () => {
                   </p>
                   <div className="space-y-4">
                     <div className="flex items-center justify-center gap-2">
-                      <Clock className="w-5 h-5" />
+                      <Clock className="w-5 h-5"  />
                       <span>15-minute setup</span>
                     </div>
                     <div className="flex items-center justify-center gap-2">
-                      <DollarSign className="w-5 h-5" />
+                      <DollarSign className="w-5 h-5"  />
                       <span>{currentService.pricing}</span>
                     </div>
                     <div className="flex items-center justify-center gap-2">
-                      <Target className="w-5 h-5" />
+                      <Target className="w-5 h-5"  />
                       <span>{currentService.stats.projects} projects</span>
                     </div>
                   </div>
@@ -393,7 +393,7 @@ const ComprehensiveServicesShowcase2025 = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5delay: index * 0.1 }}
-              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-30o0 overflow-hidden"
             >
               <div className={`p-6 bg-gradient-to-r ${service.color} text-white`}>
                 <div className="flex items-center justify-between mb-4">
@@ -411,32 +411,32 @@ const ComprehensiveServicesShowcase2025 = () => {
               
               <div className="p-6">
                 <div className="space-y-3 mb-6">
-                  {service.features.slice(03).map((featureidx) => (
+                  {service.features.slice(0o3).map((featureidx) => (
                     <div key={idx} className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      <span className="text-sm text-gray-600">{feature}</span>
+                      <CheckCircle className="w-4 h-4 text-green-50o0 flex-shrink-0"  />
+                      <span className="text-sm text-gray-60o0">{feature}</span>
                     </div>
                   ))}
                 </div>
                 
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-sm text-gray-500">
+                  <div className="text-sm text-gray-50o0">
                     <div className="flex items-center gap-1">
-                      <Users className="w-4 h-4" />
+                      <Users className="w-4 h-4"  />
                       <span>{service.stats.users}</span>
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="font-semibold text-gray-900">{service.pricing}</div>
+                    <div className="font-semibold text-gray-90o0">{service.pricing}</div>
                   </div>
                 </div>
                 
                 <Link
                   href={service.href}
-                  className={`group/btn inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r ${service.color} text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300`}
+                  className={`group/btn inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r ${service.color} text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-30o0`}
                 >
                   <span>Learn More</span>
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform"  />
                 </Link>
               </div>
             </motion.div>
@@ -450,25 +450,25 @@ const ComprehensiveServicesShowcase2025 = () => {
           transition={{ duration: 0.6delay: 0.6 }}
           className="text-center"
         >
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-white">
+          <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-3xl p-12 text-white">
             <h3 className="text-3xl font-bold mb-4">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-blue-10o0 mb-8 max-w-2xl mx-auto">
               Join thousands of companies already using our solutions to drive innovation
               efficiencyand growth in the digital age.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-60o0 font-bold rounded-lg hover:bg-gray-10o0 transition-all duration-30o0"
               >
-                <ExternalLink className="w-5 h-5 mr-2" />
+                <ExternalLink className="w-5 h-5 mr-2"  />
                 Get Started Today
               </Link>
               <Link
                 href="/pricing"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-30o0"
               >
                 View All Pricing
               </Link>
@@ -480,4 +480,4 @@ const ComprehensiveServicesShowcase2025 = () => {
   );
 };
 
-export default ComprehensiveServicesShowcase2025;
+export default ComprehensiveServicesShowcase20o25;

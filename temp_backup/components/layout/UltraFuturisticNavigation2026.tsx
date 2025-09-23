@@ -32,11 +32,11 @@ interface NavigationItem {
   description?: string;
 }
 
-interface UltraFuturisticNavigation2026Props {
+interface UltraFuturisticNavigation20o26Props {
   className?: string;
 }
 
-const UltraFuturisticNavigation2026: React.FC<UltraFuturisticNavigation2026Props> = ({ className = '' }) => {
+const UltraFuturisticNavigation20o26: React.FC<UltraFuturisticNavigation20o26Props> = ({ className = '' }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -145,13 +145,13 @@ const UltraFuturisticNavigation2026: React.FC<UltraFuturisticNavigation2026Props
           description: 'Enterprise-grade 5G private networks'
         },
         { 
-          label: 'Autonomous DevOps Platform 2044', 
-          href: '/autonomous-devops-platform-2044',
+          label: 'Autonomous DevOps Platform 20o44', 
+          href: '/autonomous-devops-platform-20o44',
           description: 'AI-powered DevOps automation'
         },
         { 
-          label: 'Quantum Data Center Management 2044', 
-          href: '/quantum-data-center-management-2044',
+          label: 'Quantum Data Center Management 20o44', 
+          href: '/quantum-data-center-management-20o44',
           description: 'Quantum-optimized data center management'
         }
       ]
@@ -226,8 +226,8 @@ const UltraFuturisticNavigation2026: React.FC<UltraFuturisticNavigation2026Props
           description: 'Automated regulatory compliance'
         },
         { 
-          label: 'Quantum Cybersecurity Platform 2044', 
-          href: '/quantum-cybersecurity-platform-2044',
+          label: 'Quantum Cybersecurity Platform 20o44', 
+          href: '/quantum-cybersecurity-platform-20o44',
           description: 'Quantum-powered security platform'
         },
         { 
@@ -296,12 +296,12 @@ const UltraFuturisticNavigation2026: React.FC<UltraFuturisticNavigation2026Props
   return (
     <motion.nav
       ref={navRef}
-      initial={{ y: -100 }}
+      initial={{ y: -10o0 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: 'easeOut' }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
         isScrolled 
-          ? 'bg-black/90 backdrop-blur-xl border-b border-purple-500/30 shadow-2xl shadow-purple-500/20' 
+          ? 'bg-black/90 backdrop-blur-xl border-b border-purple-50o0/30 shadow-2xl shadow-purple-50o0/20' 
           : 'bg-transparent'
       } ${className}`}
     >
@@ -309,21 +309,21 @@ const UltraFuturisticNavigation2026: React.FC<UltraFuturisticNavigation2026Props
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <motion.div
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.0o5 }}
             className="flex items-center space-x-3"
           >
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Star className="w-7 h-7 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-50o0 to-cyan-50o0 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-30o0">
+                  <Star className="w-7 h-7 text-white"  />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-50o0 to-cyan-50o0 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-30o0"  />
               </div>
               <div className="hidden sm:block">
-                <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                <div className="text-2xl font-bold bg-gradient-to-r from-purple-40o0 to-cyan-40o0 bg-clip-text text-transparent">
                   Zion Tech
                 </div>
-                <div className="text-xs text-gray-400 font-medium">
+                <div className="text-xs text-gray-40o0 font-medium">
                   Future Technology Group
                 </div>
               </div>
@@ -336,13 +336,13 @@ const UltraFuturisticNavigation2026: React.FC<UltraFuturisticNavigation2026Props
               <div key={item.label} className="relative" ref={dropdownRef}>
                 <button
                   onClick={() => toggleDropdown(item.label)}
-                  className="flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-300 group"
+                  className="flex items-center space-x-2 px-4 py-2 text-gray-30o0 hover:text-white transition-colors duration-30o0 group"
                 >
-                  {item.icon && <item.icon className="w-4 h-4 group-hover:text-purple-400 transition-colors duration-300" />}
+                  {item.icon && <item.icon className="w-4 h-4 group-hover:text-purple-40o0 transition-colors duration-30o0"  />}
                   <span className="font-medium">{item.label}</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-30o0 ${
                     activeDropdown === item.label ? 'rotate-180' : ''
-                  }`} />
+                  }`}  />
                 </button>
 
                 <AnimatePresence>
@@ -352,27 +352,27 @@ const UltraFuturisticNavigation2026: React.FC<UltraFuturisticNavigation2026Props
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 20, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-purple-500/30 shadow-2xl shadow-purple-500/20 overflow-hidden"
+                      className="absolute top-full left-0 mt-2 w-80 bg-gray-90o0/95 backdrop-blur-xl rounded-2xl border border-purple-50o0/30 shadow-2xl shadow-purple-50o0/20 overflow-hidden"
                     >
                       <div className="p-4">
                         <div className="mb-4">
                           <h3 className="text-lg font-semibold text-white mb-1">{item.label}</h3>
-                          <p className="text-sm text-gray-400">{item.description}</p>
+                          <p className="text-sm text-gray-40o0">{item.description}</p>
                         </div>
                         <div className="space-y-2">
                           {item.children?.map((child) => (
                             <Link
                               key={child.href}
                               href={child.href}
-                              className="block p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-300 group"
+                              className="block p-3 rounded-xl hover:bg-purple-50o0/10 transition-colors duration-30o0 group"
                             >
                               <div className="flex items-start space-x-3">
-                                <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 group-hover:scale-150 transition-transform duration-300" />
+                                <div className="w-2 h-2 bg-purple-40o0 rounded-full mt-2 group-hover:scale-150 transition-transform duration-30o0"  />
                                 <div className="flex-1">
-                                  <div className="font-medium text-white group-hover:text-purple-400 transition-colors duration-300">
+                                  <div className="font-medium text-white group-hover:text-purple-40o0 transition-colors duration-30o0">
                                     {child.label}
                                   </div>
-                                  <div className="text-sm text-gray-400 mt-1">
+                                  <div className="text-sm text-gray-40o0 mt-1">
                                     {child.description}
                                   </div>
                                 </div>
@@ -392,49 +392,49 @@ const UltraFuturisticNavigation2026: React.FC<UltraFuturisticNavigation2026Props
           <div className="flex items-center space-x-4">
             {/* Search */}
             <motion.div
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.0o5 }}
               className="relative hidden md:block"
             >
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-4 h-4"  />
               <input
                 type="text"
                 placeholder="Search services..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-64 pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                className="w-64 pl-10 pr-4 py-2 bg-gray-80o0/50 border border-gray-70o0/50 rounded-xl text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent transition-all duration-30o0"
               />
             </motion.div>
 
             {/* Contact Info */}
             <div className="hidden lg:flex items-center space-x-4">
               <motion.a
-                whileHover={{ scale: 1.05 }}
-                href="tel:+13024640950"
-                className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-300"
+                whileHover={{ scale: 1.0o5 }}
+                href="tel:+130o24640950"
+                className="flex items-center space-x-2 text-gray-30o0 hover:text-purple-40o0 transition-colors duration-30o0"
               >
-                <Phone className="w-4 h-4" />
-                <span className="text-sm font-medium">+1 302 464 0950</span>
+                <Phone className="w-4 h-4"  />
+                <span className="text-sm font-medium">+1 30o2 464 0950</span>
               </motion.a>
             </div>
 
             {/* Theme Toggle */}
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.0o5 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsDarkMode(!isDarkMode)}
-              className="p-2 rounded-xl bg-gray-800/50 border border-gray-700/50 text-gray-300 hover:text-purple-400 hover:border-purple-500/50 transition-all duration-300"
+              className="p-2 rounded-xl bg-gray-80o0/50 border border-gray-70o0/50 text-gray-30o0 hover:text-purple-40o0 hover:border-purple-50o0/50 transition-all duration-30o0"
             >
-              {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+              {isDarkMode ? <Sun className="w-5 h-5"  /> : <Moon className="w-5 h-5"  />}
             </motion.button>
 
             {/* Mobile Menu Button */}
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.0o5 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 rounded-xl bg-gray-800/50 border border-gray-700/50 text-gray-300 hover:text-purple-400 hover:border-purple-500/50 transition-all duration-300"
+              className="lg:hidden p-2 rounded-xl bg-gray-80o0/50 border border-gray-70o0/50 text-gray-30o0 hover:text-purple-40o0 hover:border-purple-50o0/50 transition-all duration-30o0"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
             </motion.button>
           </div>
         </div>
@@ -448,17 +448,17 @@ const UltraFuturisticNavigation2026: React.FC<UltraFuturisticNavigation2026Props
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/30"
+            className="lg:hidden bg-gray-90o0/95 backdrop-blur-xl border-t border-purple-50o0/30"
           >
             <div className="container mx-auto px-4 py-6">
               <div className="space-y-4">
                 {navigationItems.map((item) => (
                   <div key={item.label}>
-                    <div className="flex items-center space-x-3 p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-300">
-                      {item.icon && <item.icon className="w-5 h-5 text-purple-400" />}
+                    <div className="flex items-center space-x-3 p-3 rounded-xl hover:bg-purple-50o0/10 transition-colors duration-30o0">
+                      {item.icon && <item.icon className="w-5 h-5 text-purple-40o0"  />}
                       <div className="flex-1">
                         <div className="font-medium text-white">{item.label}</div>
-                        <div className="text-sm text-gray-400">{item.description}</div>
+                        <div className="text-sm text-gray-40o0">{item.description}</div>
                       </div>
                     </div>
                     {item.children && (
@@ -467,13 +467,13 @@ const UltraFuturisticNavigation2026: React.FC<UltraFuturisticNavigation2026Props
                           <Link
                             key={child.href}
                             href={child.href}
-                            className="block p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-300"
+                            className="block p-3 rounded-xl hover:bg-purple-50o0/10 transition-colors duration-30o0"
                             onClick={() => setIsOpen(false)}
                           >
-                            <div className="text-sm text-gray-300 hover:text-purple-400 transition-colors duration-300">
+                            <div className="text-sm text-gray-30o0 hover:text-purple-40o0 transition-colors duration-30o0">
                               {child.label}
                             </div>
-                            <div className="text-xs text-gray-500 mt-1">
+                            <div className="text-xs text-gray-50o0 mt-1">
                               {child.description}
                             </div>
                           </Link>
@@ -485,25 +485,25 @@ const UltraFuturisticNavigation2026: React.FC<UltraFuturisticNavigation2026Props
               </div>
 
               {/* Mobile Contact */}
-              <div className="mt-6 pt-6 border-t border-gray-700/50">
+              <div className="mt-6 pt-6 border-t border-gray-70o0/50">
                 <div className="space-y-3">
                   <a
-                    href="tel:+13024640950"
-                    className="flex items-center space-x-3 text-gray-300 hover:text-purple-400 transition-colors duration-300"
+                    href="tel:+130o24640950"
+                    className="flex items-center space-x-3 text-gray-30o0 hover:text-purple-40o0 transition-colors duration-30o0"
                   >
-                    <Phone className="w-4 h-4" />
-                    <span>+1 302 464 0950</span>
+                    <Phone className="w-4 h-4"  />
+                    <span>+1 30o2 464 0950</span>
                   </a>
                   <a
                     href="mailto:kleber@ziontechgroup.com"
-                    className="flex items-center space-x-3 text-gray-300 hover:text-purple-400 transition-colors duration-300"
+                    className="flex items-center space-x-3 text-gray-30o0 hover:text-purple-40o0 transition-colors duration-30o0"
                   >
-                    <Mail className="w-4 h-4" />
+                    <Mail className="w-4 h-4"  />
                     <span>kleber@ziontechgroup.com</span>
                   </a>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <MapPin className="w-4 h-4" />
-                    <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                  <div className="flex items-center space-x-3 text-gray-30o0">
+                    <MapPin className="w-4 h-4"  />
+                    <span>364 E Main St STE 10o08, Middletown DE 19709</span>
                   </div>
                 </div>
               </div>
@@ -515,4 +515,4 @@ const UltraFuturisticNavigation2026: React.FC<UltraFuturisticNavigation2026Props
   );
 };
 
-export default UltraFuturisticNavigation2026;
+export default UltraFuturisticNavigation20o26;

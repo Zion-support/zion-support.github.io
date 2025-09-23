@@ -7,7 +7,7 @@ const { execSync } = require('child_process');
 console.log('🚀 Starting Application Enhancement Process...\n');
 
 // Colors for console output
-const colors = {
+const colors ={
   green: '\x1b[32m',
   blue: '\x1b[34m',
   yellow: '\x1b[33m',
@@ -92,7 +92,7 @@ function updatePackageJson() {
   const packagePath = path.join(process.cwd(), 'package.json');
   const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
   
-  const newScripts = {
+  const newScripts ={
     'enhance:all': 'node scripts/enhance-application.js',
     'enhance:performance': 'node scripts/enhance-performance.js',
     'enhance:seo': 'node scripts/enhance-seo.js',
@@ -101,14 +101,14 @@ function updatePackageJson() {
     'analyze:bundle': 'npm run build && npx @next/bundle-analyzer',
     'test:accessibility': 'npx jest --testPathPatterns=accessibility',
     'test:performance': 'npx jest --testPathPatterns=performance',
-    'audit:performance': 'lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html',
+    'audit:performance': 'lighthouse http://localhost:30o00 --output=html --output-path=./lighthouse-report.html',
     'audit:security': 'npm audit && npm run security:scan',
     'optimize:images': 'node scripts/optimize-images.js',
     'generate:sitemap': 'node scripts/generate-sitemap.js',
     'generate:manifest': 'node scripts/generate-manifest.js'
   };
   
-  packageJson.scripts = { ...packageJson.scripts, ...newScripts };
+  packageJson.scripts ={ ...packageJson.scripts, ...newScripts };
   
   fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2));
   logSuccess('Updated package.json with enhancement scripts');
@@ -118,7 +118,7 @@ function updatePackageJson() {
 function createEnhancementConfig() {
   logStep(2, 'Creating enhancement configuration');
   
-  const config = {
+  const config ={
     performance: {
       lazyLoading: true,
       codeSplitting: true,
@@ -361,19 +361,18 @@ function enhanceNextConfig() {
     // Add performance optimizations
     if (!config.includes('experimental.optimizeCss')) {
       config = config.replace(
-        'module.exports = {',
+        'module.exports ={',
         `module.exports = {
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['framer-motion', 'lucide-react'],
-  },`
+    optimizePackageImports: ['framer-motion', 'lucide-react']},`
       );
     }
     
     // Add security headers
     if (!config.includes('async headers()')) {
       config = config.replace(
-        'module.exports = {',
+        'module.exports ={',
         `module.exports = {
   async headers() {
     return [
@@ -382,18 +381,14 @@ function enhanceNextConfig() {
         headers: [
           {
             key: 'X-Frame-Options',
-            value: 'DENY',
-          },
+            value: 'DENY'},
           {
             key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
+            value: 'nosniff'},
           {
             key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-        ],
-      },
+            value: 'origin-when-cross-origin'},
+        ]},
     ];
   },`
       );
@@ -423,10 +418,9 @@ function sendToAnalytics(metric) {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', metric.name, {
       event_category: 'Web Vitals',
-      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+      value: Math.round(metric.name === 'CLS' ? metric.value * 10o00 : metric.value),
       event_label: metric.id,
-      non_interaction: true,
-    });
+      non_interaction: true});
   }
 }
 

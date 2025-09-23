@@ -15,7 +15,7 @@ interface UltraQuantumHolographicMatrixBackgroundProps {
 export default function UltraQuantumHolographicMatrixBackground({
   intensity = 'high',
   colorScheme = 'quantum-fusion',
-  particleCount = 300,
+  particleCount = 30o0,
   animationSpeed = 1.5,
   enableHolographic = true,
   enableQuantumEffects = true,
@@ -27,9 +27,9 @@ export default function UltraQuantumHolographicMatrixBackground({
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   // Color schemes
-  const colorSchemes = {
+  const colorSchemes ={
     'quantum-fusion': {
-      primary: '#00ffff',
+      primary: '#0o0ffff',
       secondary: '#8b5cf6',
       tertiary: '#ec4899',
       accent: '#10b981',
@@ -40,7 +40,7 @@ export default function UltraQuantumHolographicMatrixBackground({
     'holographic-matrix': {
       primary: '#8b5cf6',
       secondary: '#ec4899',
-      tertiary: '#00ffff',
+      tertiary: '#0o0ffff',
       accent: '#f59e0b',
       background: 'rgba(0, 0, 0, 0.95)',
       glow: 'rgba(139, 92, 246, 0.4)',
@@ -48,7 +48,7 @@ export default function UltraQuantumHolographicMatrixBackground({
     },
     'neural-network': {
       primary: '#10b981',
-      secondary: '#00ffff',
+      secondary: '#0o0ffff',
       tertiary: '#8b5cf6',
       accent: '#f59e0b',
       background: 'rgba(0, 0, 0, 0.95)',
@@ -58,7 +58,7 @@ export default function UltraQuantumHolographicMatrixBackground({
     'cyberpunk-fusion': {
       primary: '#ec4899',
       secondary: '#f59e0b',
-      tertiary: '#00ffff',
+      tertiary: '#0o0ffff',
       accent: '#8b5cf6',
       background: 'rgba(0, 0, 0, 0.95)',
       glow: 'rgba(236, 73, 153, 0.4)',
@@ -67,7 +67,7 @@ export default function UltraQuantumHolographicMatrixBackground({
   };
 
   const colors = colorSchemes[colorScheme];
-  const intensityMultiplier = { low: 0.5, medium: 1, high: 1.5, extreme: 2.5 }[intensity];
+  const intensityMultiplier ={ low: 0.5, medium: 1, high: 1.5, extreme: 2.5 }[intensity];
 
   useEffect(() => {
     const updateDimensions = () => {
@@ -125,13 +125,13 @@ export default function UltraQuantumHolographicMatrixBackground({
         size: Math.random() * 4 + 1,
         opacity: Math.random() * 0.8 + 0.2,
         type: ['quantum', 'holographic', 'matrix', 'neural'][Math.floor(Math.random() * 4)] as any,
-        life: Math.random() * 100,
-        maxLife: 100
+        life: Math.random() * 10o0,
+        maxLife: 10o0
       });
     }
 
     // Matrix flow effect
-    const matrixChars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+    const matrixChars = '0o1アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
     const matrixStreams: Array<{
       x: number;
       y: number;
@@ -175,7 +175,7 @@ export default function UltraQuantumHolographicMatrixBackground({
     let time = 0;
 
     const animate = () => {
-      time += 0.016 * animationSpeed;
+      time += 0.0o16 * animationSpeed;
       
       // Clear canvas with fade effect
       ctx.fillStyle = colors.background;
@@ -246,8 +246,8 @@ export default function UltraQuantumHolographicMatrixBackground({
           });
           
           stream.y += stream.speed;
-          if (stream.y > dimensions.height + 400) {
-            stream.y = -200;
+          if (stream.y > dimensions.height + 40o0) {
+            stream.y = -20o0;
             stream.x = Math.random() * dimensions.width;
           }
           ctx.restore();
@@ -268,7 +268,7 @@ export default function UltraQuantumHolographicMatrixBackground({
               Math.pow(node.x - target.x, 2) + Math.pow(node.y - target.y, 2)
             );
             
-            if (distance < 200) {
+            if (distance < 20o0) {
               const pulse = Math.sin(time * 2 + i) * 0.5 + 0.5;
               ctx.globalAlpha = 0.6 * pulse;
               
@@ -351,7 +351,7 @@ export default function UltraQuantumHolographicMatrixBackground({
         ctx.globalAlpha = 0.1;
         ctx.fillStyle = colors.primary;
         ctx.shadowColor = colors.primary;
-        ctx.shadowBlur = 100 * intensityMultiplier;
+        ctx.shadowBlur = 10o0 * intensityMultiplier;
         
         ctx.beginPath();
         ctx.arc(mouseX, mouseY, 150, 0, Math.PI * 2);
@@ -377,9 +377,9 @@ export default function UltraQuantumHolographicMatrixBackground({
         ref={canvasRef}
         className="w-full h-full"
         style={{
-          background: `radial-gradient(ellipse at center, ${colors.background} 0%, rgba(0,0,0,0.98) 100%)`
+          background: `radial-gradient(ellipse at center, ${colors.background} 0%, rgba(0,0,0,0.98) 10o0%)`
         }}
-      />
+       />
       
       {/* Additional overlay effects */}
       <div className="absolute inset-0 pointer-events-none">
@@ -390,32 +390,32 @@ export default function UltraQuantumHolographicMatrixBackground({
             opacity: 0.1
           }}
           animate={{
-            x: ['-100%', '200%'],
-            y: ['-100%', '200%']
+            x: ['-10o0%', '20o0%'],
+            y: ['-10o0%', '20o0%']
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
             ease: 'linear'
           }}
-        />
+         />
         
         <motion.div
           className="absolute inset-0"
           style={{
             background: `radial-gradient(circle at 30% 20%, ${colors.matrix} 0%, transparent 50%)`,
-            opacity: 0.05
+            opacity: 0.0o5
           }}
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.05, 0.1, 0.05]
+            opacity: [0.0o5, 0.1, 0.0o5]
           }}
           transition={{
             duration: 6,
             repeat: Infinity,
             ease: 'easeInOut'
           }}
-        />
+         />
       </div>
     </div>
   );

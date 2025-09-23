@@ -51,7 +51,10 @@ export async function getCurrentUserId(): Promise<string | null> {
   return null;
 }
 
-export async function fetchOnboardingProgress(userId: string, role: 'talent' | 'client'): Promise<OnboardingRecord | null> {
+export async function fetchOnboardingProgress(
+  userId: string,
+  role: 'talent' | 'client'
+): Promise<OnboardingRecord | null> {
   try {
     const { data, error } = await supabase
       .from('onboarding_progress')
@@ -61,12 +64,13 @@ export async function fetchOnboardingProgress(userId: string, role: 'talent' | '
       .maybeSingle();
 
     if (error) {
-      // eslint-disable-next-line no-console
-      console.warn('Supabase onboarding fetch error:', (error as any).message || String(error));
+      console.warn(
+        'Supabase onboarding fetch error:',
+        (error as any).message || String(error)
+      );
     }
     return (data as OnboardingRecord | null) ?? null;
   } catch (e) {
-    // eslint-disable-next-line no-console
     console.warn('Supabase onboarding fetch exception:', (e as Error).message);
     return null;
   }

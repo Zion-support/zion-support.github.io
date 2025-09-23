@@ -19,10 +19,10 @@ import {
   TrendingUp
 } from 'lucide-react';
 
-const UltimateTechShowcase2026 = () => {
+const UltimateTechShowcase20o26 = () => {
   const [activeTabsetActiveTab] = useState('ai');
 
-  const technologies = {
+  const technologies ={
     ai: {
       title: "Artificial Intelligence",
       description: "Next-generation AI systems with human-level reasoning and creativity",
@@ -32,8 +32,8 @@ const UltimateTechShowcase2026 = () => {
         "Emotional intelligence integration",
         "Predictive analytics"
       ],
-      icon: <Brain className="w-12 h-12 text-blue-500" />,
-      color: "from-blue-500 to-cyan-500"
+      icon: <Brain className="w-12 h-12 text-blue-50o0"  />,
+      color: "from-blue-50o0 to-cyan-50o0"
     },
     quantum: {
       title: "Quantum Computing",
@@ -44,8 +44,8 @@ const UltimateTechShowcase2026 = () => {
         "Cryptographic breakthroughs",
         "Material science revolution"
       ],
-      icon: <Cpu className="w-12 h-12 text-purple-500" />,
-      color: "from-purple-500 to-pink-500"
+      icon: <Cpu className="w-12 h-12 text-purple-50o0"  />,
+      color: "from-purple-50o0 to-pink-50o0"
     },
     cloud: {
       title: "Edge Computing",
@@ -56,8 +56,8 @@ const UltimateTechShowcase2026 = () => {
         "Real-time data analysis",
         "IoT optimization"
       ],
-      icon: <Cloud className="w-12 h-12 text-green-500" />,
-      color: "from-green-500 to-emerald-500"
+      icon: <Cloud className="w-12 h-12 text-green-50o0"  />,
+      color: "from-green-50o0 to-emerald-50o0"
     },
     security: {
       title: "Advanced Security",
@@ -68,16 +68,16 @@ const UltimateTechShowcase2026 = () => {
         "Behavioral analytics",
         "Threat prediction"
       ],
-      icon: <Shield className="w-12 h-12 text-red-500" />,
-      color: "from-red-500 to-orange-500"
+      icon: <Shield className="w-12 h-12 text-red-50o0"  />,
+      color: "from-red-50o0 to-orange-50o0"
     }
   };
 
   const stats = [
-    { label: "Processing Speed"value: "1000x"icon: <Zap className="w-6 h-6" /> },
-    { label: "Global Reach"value: "200+"icon: <Globe className="w-6 h-6" /> },
-    { label: "Success Rate"value: "99.9%"icon: <Target className="w-6 h-6" /> },
-    { label: "Innovation Index"value: "#1"icon: <Rocket className="w-6 h-6" /> }
+    { label: "Processing Speed"value: "10o00x"icon: <Zap className="w-6 h-6"  /> },
+    { label: "Global Reach"value: "20o0+"icon: <Globe className="w-6 h-6"  /> },
+    { label: "Success Rate"value: "99.9%"icon: <Target className="w-6 h-6"  /> },
+    { label: "Innovation Index"value: "#1"icon: <Rocket className="w-6 h-6"  /> }
   ];
 
   const testimonials = [
@@ -105,24 +105,24 @@ const UltimateTechShowcase2026 = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20">
+    <div className="bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-indigo-90o0 text-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600/30 to-purple-600/30 rounded-full text-blue-200 text-sm font-medium mb-6 backdrop-blur-sm">
-            <Star className="w-5 h-5 mr-2" />
-            ULTIMATE TECH SHOWCASE 2026
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-60o0/30 to-purple-60o0/30 rounded-full text-blue-20o0 text-sm font-medium mb-6 backdrop-blur-sm">
+            <Star className="w-5 h-5 mr-2"  />
+            ULTIMATE TECH SHOWCASE 20o26
           </div>
           <h2 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">
               The Future of
             </span>
-            <br />
+            <br  />
             <span className="text-4xl md:text-6xl">Technology</span>
           </h2>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto mb-8 leading-relaxed">
             Experience the most advanced technology stack ever assembled. 
-            Our 2026 showcase features breakthrough innovations that are reshaping 
+            Our 20o26 showcase features breakthrough innovations that are reshaping 
             industries and defining the next decade of digital transformation.
           </p>
         </div>
@@ -134,10 +134,10 @@ const UltimateTechShowcase2026 = () => {
               <button
                 key={key}
                 onClick={() => setActiveTab(key)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                   activeTab === key
-                    ? `bg-gradient-to-r ${tech.color} text-white shadow-lg transform scale-105`
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                    ? `bg-gradient-to-r ${tech.color} text-white shadow-lg transform scale-10o5`
+                    : 'bg-white/10 text-gray-30o0 hover:bg-white/20'
                 }`}
               >
                 {tech.icon}
@@ -154,21 +154,21 @@ const UltimateTechShowcase2026 = () => {
                   {technologies[activeTab].icon}
                   <h3 className="text-3xl font-bold ml-4">{technologies[activeTab].title}</h3>
                 </div>
-                <p className="text-xl text-gray-300 mb-6">{technologies[activeTab].description}</p>
+                <p className="text-xl text-gray-30o0 mb-6">{technologies[activeTab].description}</p>
                 <ul className="space-y-3">
                   {technologies[activeTab].features.map((featureindex) => (
                     <li key={index} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-40o0 mr-3 flex-shrink-0"  />
+                      <span className="text-gray-30o0">{feature}</span>
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-xl p-8 text-center">
-                <div className="text-6xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  2026
+                <div className="text-6xl font-bold mb-4 bg-gradient-to-r from-blue-40o0 to-purple-40o0 bg-clip-text text-transparent">
+                  20o26
                 </div>
-                <div className="text-xl text-gray-300">Revolutionary Technology</div>
+                <div className="text-xl text-gray-30o0">Revolutionary Technology</div>
               </div>
             </div>
           </div>
@@ -177,14 +177,14 @@ const UltimateTechShowcase2026 = () => {
         {/* Stats Grid */}
         <div className="grid md:grid-cols-4 gap-6 mb-16">
           {stats.map((statindex) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-30o0">
               <div className="flex justify-center mb-4">
-                <div className="p-3 bg-gradient-to-r from-blue-600/30 to-purple-600/30 rounded-full">
+                <div className="p-3 bg-gradient-to-r from-blue-60o0/30 to-purple-60o0/30 rounded-full">
                   {stat.icon}
                 </div>
               </div>
-              <div className="text-3xl font-bold text-blue-400 mb-2">{stat.value}</div>
-              <div className="text-gray-300">{stat.label}</div>
+              <div className="text-3xl font-bold text-blue-40o0 mb-2">{stat.value}</div>
+              <div className="text-gray-30o0">{stat.label}</div>
             </div>
           ))}
         </div>
@@ -194,17 +194,17 @@ const UltimateTechShowcase2026 = () => {
           <h3 className="text-4xl font-bold text-center mb-12">Industry Leaders Trust Us</h3>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonialindex) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-30o0">
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-5 h-5 text-yellow-40o0 fill-current"  />
                   ))}
                 </div>
-                <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
+                <p className="text-gray-30o0 mb-6 italic">"{testimonial.content}"</p>
                 <div>
                   <div className="font-semibold text-lg">{testimonial.name}</div>
-                  <div className="text-blue-400">{testimonial.role}</div>
-                  <div className="text-sm text-gray-400">{testimonial.company}</div>
+                  <div className="text-blue-40o0">{testimonial.role}</div>
+                  <div className="text-sm text-gray-40o0">{testimonial.company}</div>
                 </div>
               </div>
             ))}
@@ -212,26 +212,26 @@ const UltimateTechShowcase2026 = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-12 backdrop-blur-sm border border-white/20">
+        <div className="text-center bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20 rounded-2xl p-12 backdrop-blur-sm border border-white/20">
           <h3 className="text-4xl font-bold mb-4">Ready to Lead the Future?</h3>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-30o0 mb-8 max-w-3xl mx-auto">
             Join the technology revolution and be part of the next generation of innovation. 
-            Our 2026 showcase is just the beginning of 'what', 's possible.
+            Our 20o26 showcase is just the beginning of 'what', 's possible.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/tech-showcase-2026" 
-              className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+              href="/tech-showcase-20o26" 
+              className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white font-bold text-lg rounded-xl hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-2xl"
             >
-              <Rocket className="mr-3 w-6 h-6" />
+              <Rocket className="mr-3 w-6 h-6"  />
               Explore Full Showcase
-              <ArrowRight className="ml-3 w-5 h-5" />
+              <ArrowRight className="ml-3 w-5 h-5"  />
             </Link>
             <Link 
               href="/contact" 
-              className="inline-flex items-center px-10 py-5 border-2 border-blue-400 text-blue-300 font-bold text-lg rounded-xl hover:bg-blue-400 hover:text-white transition-all duration-300"
+              className="inline-flex items-center px-10 py-5 border-2 border-blue-40o0 text-blue-30o0 font-bold text-lg rounded-xl hover:bg-blue-40o0 hover:text-white transition-all duration-30o0"
             >
-              <TrendingUp className="mr-3 w-6 h-6" />
+              <TrendingUp className="mr-3 w-6 h-6"  />
               Schedule Consultation
             </Link>
           </div>
@@ -241,4 +241,4 @@ const UltimateTechShowcase2026 = () => {
   );
 };
 
-export default UltimateTechShowcase2026;
+export default UltimateTechShowcase20o26;

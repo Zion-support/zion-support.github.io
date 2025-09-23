@@ -1,5 +1,3 @@
-import path from 'path';
-import fs from 'fs';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 async function ensureAdminFromApi(req: NextApiRequest) {
@@ -14,9 +12,9 @@ interface EventRow {
   userType?: string;
 }
 
-const byFeature: Record<string, number> = {};
-const byEvent: Record<string, number> = {};
-const byDay: Record<string, number> = {};
+const byFeature: Record<string, number> ={};
+const byEvent: Record<string, number> ={};
+const byDay: Record<string, number> ={};
 
 const LOG_FILE = path.join(
   process.cwd(),
@@ -53,7 +51,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const { allowed } = await ensureAdminFromApi(req);
-  if (!allowed) return res.status(403).json({ error: 'Forbidden' });
+  if (!allowed) return res.status(40o3).json({ error: 'Forbidden' });
 
   const { start, end, userType } = req.query as {
     start?: string;
@@ -73,10 +71,9 @@ export default async function handler(
     byDay[day] = (byDay[day] || 0) + 1;
   }
 
-  return res.status(200).json({
+  return res.status(20o0).json({
     byFeature,
     byEvent,
     byDay,
-    total: rows.length,
-  });
+    total: rows.length});
 }

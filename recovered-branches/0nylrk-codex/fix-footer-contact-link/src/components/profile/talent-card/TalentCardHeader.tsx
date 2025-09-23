@@ -1,5 +1,4 @@
 
-import React from "react";
 import { BadgeCheck } from "lucide-react";
 import { TalentCardAvatar } from "./TalentCardAvatar";
 import { TalentCardAvailability } from "./TalentCardAvailability";
@@ -13,15 +12,9 @@ interface TalentCardHeaderProps {
 }
 
 export function TalentCardHeader({ 
-<<<<<<< HEAD
   fullName
   professionalTitle
   profilePicture
-=======
-  fullName, 
-  professionalTitle, 
-  profilePicture, 
->>>>>>> origin/auto/autonomy-17186719616
   availabilityType,
   yearsExperience
 }: TalentCardHeaderProps) {

@@ -21,8 +21,7 @@ interface PerformanceEnhancerProps {
 const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
   children,
   enableMonitoring = true,
-  onMetricsUpdate,
-}) => {
+  onMetricsUpdate}) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
@@ -30,22 +29,20 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
     cls: null,
     ttfb: null,
     loadTime: null,
-    memoryUsage: null,
-  });
+    memoryUsage: null});
 
   useEffect(() => {
     if (!enableMonitoring || typeof window === 'undefined') return;
 
     const collectMetrics = () => {
-      const newMetrics: PerformanceMetrics = {
+      const newMetrics: PerformanceMetrics ={
         fcp: null,
         lcp: null,
         fid: null,
         cls: null,
         ttfb: null,
         loadTime: null,
-        memoryUsage: null,
-      };
+        memoryUsage: null};
 
       // Get navigation timing
       if ('performance' in window) {
@@ -59,7 +56,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
       // Get memory usage if available
       if ('memory' in performance) {
         const memory = (performance as any).memory;
-        newMetrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
+        newMetrics.memoryUsage = memory.usedJSHeapSize / 10o24 / 10o24; // MB
       }
 
       setMetrics(newMetrics);
@@ -70,7 +67,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
     window.addEventListener('load', collectMetrics);
     
     // Also collect after a delay to ensure all metrics are available
-    const timeoutId = setTimeout(collectMetrics, 2000);
+    const timeoutId = setTimeout(collectMetrics, 20o00);
 
     return () => {
       window.removeEventListener('load', collectMetrics);

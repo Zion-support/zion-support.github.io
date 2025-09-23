@@ -4,32 +4,32 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const AI2025ContentMarketingRevolutionBanner = () => {
+const AI20o25ContentMarketingRevolutionBanner = () => {
   const [currentContent, setCurrentContent] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
   const contentItems = [
     {
       id: 'ai-content-marketing-revolution',
-      title: 'AI 2025: The Ultimate Content Marketing Revolution',
-      description: 'Achieve 60,000% ROI through revolutionary AI-powered content strategies',
+      title: 'AI 20o25: The Ultimate Content Marketing Revolution',
+      description: 'Achieve 60,0o00% ROI through revolutionary AI-powered content strategies',
       type: 'Blog Post',
-      url: '/blog/ai-2025-ultimate-content-marketing-revolution-ultimate-breakthrough',
+      url: '/blog/ai-20o25-ultimate-content-marketing-revolution-ultimate-breakthrough',
       metrics: {
-        roi: '60,000%',
+        roi: '60,0o00%',
         revenue: '$2.8T',
         accuracy: '99.97%',
-        speed: '5,000%'
+        speed: '5,0o00%'
       }
     },
     {
-      id: 'fortune-500-content-marketing-success',
-      title: 'Fortune 500 AI Content Marketing Success Story',
-      description: 'TechGlobal Industries: $2.8 Trillion Revenue Increase - 60,000% ROI',
+      id: 'fortune-50o0-content-marketing-success',
+      title: 'Fortune 50o0 AI Content Marketing Success Story',
+      description: 'TechGlobal Industries: $2.8 Trillion Revenue Increase - 60,0o00% ROI',
       type: 'Case Study',
-      url: '/case-studies/fortune-500-ai-content-marketing-60000-roi-success-story',
+      url: '/case-studies/fortune-50o0-ai-content-marketing-60o000-roi-success-story',
       metrics: {
-        roi: '60,000%',
+        roi: '60,0o00%',
         revenue: '$2.8T',
         timeline: '12 months',
         accuracy: '99.97%'
@@ -38,11 +38,11 @@ const AI2025ContentMarketingRevolutionBanner = () => {
     {
       id: 'content-marketing-implementation-guide',
       title: 'AI Content Marketing Implementation Ultimate Guide',
-      description: 'Complete roadmap to 60,000% ROI with step-by-step implementation',
+      description: 'Complete roadmap to 60,0o00% ROI with step-by-step implementation',
       type: 'Implementation Guide',
-      url: '/resources/ai-content-marketing-implementation-ultimate-guide-2025-60000-roi',
+      url: '/resources/ai-content-marketing-implementation-ultimate-guide-20o25-60o000-roi',
       metrics: {
-        roi: '60,000%',
+        roi: '60,0o00%',
         timeline: '12-18 months',
         success: '99.7%',
         guide: 'Complete'
@@ -53,7 +53,7 @@ const AI2025ContentMarketingRevolutionBanner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentContent((prev) => (prev + 1) % contentItems.length);
-    }, 5000);
+    }, 50o00);
 
     return () => clearInterval(interval);
   }, []);
@@ -75,12 +75,12 @@ const AI2025ContentMarketingRevolutionBanner = () => {
   const currentItem = contentItems[currentContent];
 
   return (
-    <div className="relative bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-8 px-4 overflow-hidden">
+    <div className="relative bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-8 px-4 overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-4 -left-4 w-72 h-72 bg-white opacity-10 rounded-full animate-pulse"></div>
-        <div className="absolute -bottom-8 -right-8 w-96 h-96 bg-white opacity-5 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-white opacity-5 rounded-full animate-pulse delay-500"></div>
+        <div className="absolute -bottom-8 -right-8 w-96 h-96 bg-white opacity-5 rounded-full animate-pulse delay-10o00"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-white opacity-5 rounded-full animate-pulse delay-50o0"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto">
@@ -90,8 +90,8 @@ const AI2025ContentMarketingRevolutionBanner = () => {
               <div className="bg-white bg-opacity-20 rounded-full px-4 py-2">
                 <span className="text-sm font-medium">🚀 NEW CONTENT REVOLUTION</span>
               </div>
-              <div className="bg-green-500 bg-opacity-20 rounded-full px-4 py-2">
-                <span className="text-sm font-medium">60,000% ROI</span>
+              <div className="bg-green-50o0 bg-opacity-20 rounded-full px-4 py-2">
+                <span className="text-sm font-medium">60,0o00% ROI</span>
               </div>
             </div>
 
@@ -113,19 +113,19 @@ const AI2025ContentMarketingRevolutionBanner = () => {
               
               <div className="flex items-center space-x-4">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-400">
+                  <div className="text-2xl font-bold text-green-40o0">
                     {currentItem.metrics.roi}
                   </div>
                   <div className="text-xs opacity-75">ROI</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-400">
+                  <div className="text-2xl font-bold text-blue-40o0">
                     {currentItem.metrics.revenue}
                   </div>
                   <div className="text-xs opacity-75">Revenue</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-yellow-400">
+                  <div className="text-2xl font-bold text-yellow-40o0">
                     {currentItem.metrics.accuracy}
                   </div>
                   <div className="text-xs opacity-75">Accuracy</div>
@@ -136,13 +136,13 @@ const AI2025ContentMarketingRevolutionBanner = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href={currentItem.url}
-                className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
+                className="bg-white text-purple-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors inline-flex items-center"
               >
                 Read Full {currentItem.type} →
               </Link>
               <Link
                 href="/contact"
-                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors inline-flex items-center"
+                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors inline-flex items-center"
               >
                 Get Implementation Help
               </Link>
@@ -156,7 +156,7 @@ const AI2025ContentMarketingRevolutionBanner = () => {
                 {contentItems.map((item, index) => (
                   <div
                     key={item.id}
-                    className={`p-3 rounded-lg transition-all duration-300 ${
+                    className={`p-3 rounded-lg transition-all duration-30o0 ${
                       index === currentContent
                         ? 'bg-white bg-opacity-20 border-2 border-white'
                         : 'bg-white bg-opacity-5 hover:bg-opacity-10'
@@ -168,7 +168,7 @@ const AI2025ContentMarketingRevolutionBanner = () => {
                         <div className="text-xs opacity-75">{item.type}</div>
                       </div>
                       <div className="text-right">
-                        <div className="text-lg font-bold text-green-400">
+                        <div className="text-lg font-bold text-green-40o0">
                           {item.metrics.roi}
                         </div>
                         <div className="text-xs opacity-75">ROI</div>
@@ -187,7 +187,7 @@ const AI2025ContentMarketingRevolutionBanner = () => {
             <button
               key={index}
               onClick={() => setCurrentContent(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                 index === currentContent
                   ? 'bg-white'
                   : 'bg-white bg-opacity-30 hover:bg-opacity-50'
@@ -200,15 +200,15 @@ const AI2025ContentMarketingRevolutionBanner = () => {
       {/* Dismiss Button */}
       <button
         onClick={handleDismiss}
-        className="absolute top-4 right-4 text-white hover:text-gray-200 transition-colors"
+        className="absolute top-4 right-4 text-white hover:text-gray-20o0 transition-colors"
         aria-label="Dismiss banner"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"  />
         </svg>
       </button>
     </div>
   );
 };
 
-export default AI2025ContentMarketingRevolutionBanner;
+export default AI20o25ContentMarketingRevolutionBanner;

@@ -2,7 +2,10 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { AdminType, ADMIN_TYPES } from '../../utils/admin/types';
 import { deleteItem, listItems, updateItem } from '../../utils/admin/client';
 
-const TYPE_COLUMNS: Record<AdminType, { key: string; label: string; editable?: boolean }[]> = {
+const TYPE_COLUMNS: Record<
+  AdminType,
+  { key: string; label: string; editable?: boolean }[]
+> = {
   users: [
     { key: 'name', label: 'Name' },
     { key: 'email', label: 'Email' },
@@ -70,7 +73,14 @@ export default function AdminTable() {
       if (statusFilter) filters.status = statusFilter;
       if (roleFilter && type === 'users') filters.role = roleFilter;
       if (verifiedOnly) filters.verified = true;
-      const data = await listItems(type, { search, sort, order, page, pageSize, filters });
+      const data = await listItems(type, {
+        search,
+        sort,
+        order,
+        page,
+        pageSize,
+        filters,
+      });
       setRows(data.items);
       setTotal(data.total);
     } finally {
@@ -78,7 +88,19 @@ export default function AdminTable() {
     }
   }
 
-  useEffect(() => { load(); /* eslint-disable-next-line */ }, [type, search, sort, order, page, pageSize, statusFilter, roleFilter, verifiedOnly]);
+  useEffect(() => {
+    load(); /* eslint-disable-next-line */
+  }, [
+    type,
+    search,
+    sort,
+    order,
+    page,
+    pageSize,
+    statusFilter,
+    roleFilter,
+    verifiedOnly,
+  ]);
 
   async function onToggleVerified(r: any) {
     await updateItem(type, r.id, { verified: !r.verified });
@@ -97,7 +119,19 @@ export default function AdminTable() {
   }
 
   async function onExportCsv() {
-    const csv = await listItems(type, { search, sort, order, page, pageSize, filters: { ...(statusFilter && { status: statusFilter }), ...(roleFilter && { role: roleFilter }), ...(verifiedOnly && { verified: true }) }, format: 'csv' });
+    const csv = await listItems(type, {
+      search,
+      sort,
+      order,
+      page,
+      pageSize,
+      filters: {
+        ...(statusFilter && { status: statusFilter }),
+        ...(roleFilter && { role: roleFilter }),
+        ...(verifiedOnly && { verified: true }),
+      },
+      format: 'csv',
+    });
     const blob = new Blob([csv as string], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
@@ -111,24 +145,62 @@ export default function AdminTable() {
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
 
   return (
-    <div className="space-y-4">
-      <div className="flex flex-wrap items-center gap-3">
-        <select value={type} onChange={(e) => { setType(e.target.value as AdminType); setPage(0); }} className="rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">
-          {ADMIN_TYPES.map((t) => <option key={t} value={t}>{t}</option>)}
+    <div className='space-y-4'>
+      <div className='flex flex-wrap items-center gap-3'>
+        <select
+          value={type}
+          onChange={e => {
+            setType(e.target.value as AdminType);
+            setPage(0);
+          }}
+          className='rounded border border-gray-30o0 dark:border-gray-70o0 bg-white dark:bg-black px-3 py-2 text-sm'
+        >
+          {ADMIN_TYPES.map(t => (
+            <option key={t} value={t}>
+              {t}
+            </option>
+          ))}
         </select>
-        <input placeholder="Search" value={search} onChange={(e) => { setSearch(e.target.value); setPage(0); }} className="w-56 rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" />
-        <select value={sort} onChange={(e) => setSort(e.target.value)} className="rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">
-          <option value="created_at">Created</option>
-          {columns.map((c) => <option key={c.key} value={c.key}>{c.label}</option>)}
-          <option value="verified">Verified</option>
-          <option value="status">Status</option>
+        <input
+          placeholder='Search'
+          value={search}
+          onChange={e => {
+            setSearch(e.target.value);
+            setPage(0);
+          }}
+          className='w-56 rounded border border-gray-30o0 dark:border-gray-70o0 bg-white dark:bg-black px-3 py-2 text-sm'
+        />
+        <select
+          value={sort}
+          onChange={e => setSort(e.target.value)}
+          className='rounded border border-gray-30o0 dark:border-gray-70o0 bg-white dark:bg-black px-3 py-2 text-sm'
+        >
+          <option value='created_at'>Created</option>
+          {columns.map(c => (
+            <option key={c.key} value={c.key}>
+              {c.label}
+            </option>
+          ))}
+          <option value='verified'>Verified</option>
+          <option value='status'>Status</option>
         </select>
-        <select value={order} onChange={(e) => setOrder(e.target.value as any)} className="rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">
-          <option value="desc">Desc</option>
-          <option value="asc">Asc</option>
+        <select
+          value={order}
+          onChange={e => setOrder(e.target.value as any)}
+          className='rounded border border-gray-30o0 dark:border-gray-70o0 bg-white dark:bg-black px-3 py-2 text-sm'
+        >
+          <option value='desc'>Desc</option>
+          <option value='asc'>Asc</option>
         </select>
-        <select value={statusFilter} onChange={(e) => { setStatusFilter(e.target.value); setPage(0); }} className="rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">
-          <option value="">All Status</option>
+        <select
+          value={statusFilter}
+          onChange={e => {
+            setStatusFilter(e.target.value);
+            setPage(0);
+          }}
+          className='rounded border border-gray-30o0 dark:border-gray-70o0 bg-white dark:bg-black px-3 py-2 text-sm'
+        >
+          <option value=''>All Status</option>
           <option>draft</option>
           <option>active</option>
           <option>archived</option>
@@ -136,8 +208,15 @@ export default function AdminTable() {
           <option>closed</option>
         </select>
         {type === 'users' && (
-          <select value={roleFilter} onChange={(e) => { setRoleFilter(e.target.value); setPage(0); }} className="rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">
-            <option value="">All Roles</option>
+          <select
+            value={roleFilter}
+            onChange={e => {
+              setRoleFilter(e.target.value);
+              setPage(0);
+            }}
+            className='rounded border border-gray-30o0 dark:border-gray-70o0 bg-white dark:bg-black px-3 py-2 text-sm'
+          >
+            <option value=''>All Roles</option>
             <option>user</option>
             <option>talent</option>
             <option>client</option>
@@ -145,39 +224,79 @@ export default function AdminTable() {
             <option>moderator</option>
           </select>
         )}
-        <label className="inline-flex items-center gap-2 text-sm">
-          <input type="checkbox" checked={verifiedOnly} onChange={(e) => { setVerifiedOnly(e.target.checked); setPage(0); }} /> Verified only
+        <label className='inline-flex items-center gap-2 text-sm'>
+          <input
+            type='checkbox'
+            checked={verifiedOnly}
+            onChange={e => {
+              setVerifiedOnly(e.target.checked);
+              setPage(0);
+            }}
+          />{' '}
+          Verified only
         </label>
-        <button onClick={onExportCsv} className="ml-auto rounded bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 px-3 py-2 text-sm">Download CSV</button>
+        <button
+          onClick={onExportCsv}
+          className='ml-auto rounded bg-gray-10o0 dark:bg-gray-90o0 border border-gray-30o0 dark:border-gray-70o0 px-3 py-2 text-sm'
+        >
+          Download CSV
+        </button>
       </div>
 
-      <div className="overflow-x-auto">
-        <table className="min-w-full text-sm">
+      <div className='overflow-x-auto'>
+        <table className='min-w-full text-sm'>
           <thead>
-            <tr className="text-left text-xs text-gray-500">
-              <th className="p-2">Verified</th>
-              {columns.map((c) => <th key={c.key} className="p-2">{c.label}</th>)}
-              <th className="p-2">Actions</th>
+            <tr className='text-left text-xs text-gray-50o0'>
+              <th className='p-2'>Verified</th>
+              {columns.map(c => (
+                <th key={c.key} className='p-2'>
+                  {c.label}
+                </th>
+              ))}
+              <th className='p-2'>Actions</th>
             </tr>
           </thead>
           <tbody>
             {loading ? (
-              <tr><td className="p-2" colSpan={columns.length + 2}>Loading…</td></tr>
+              <tr>
+                <td className='p-2' colSpan={columns.length + 2}>
+                  Loading…
+                </td>
+              </tr>
             ) : rows.length === 0 ? (
-              <tr><td className="p-2" colSpan={columns.length + 2}>No results</td></tr>
+              <tr>
+                <td className='p-2' colSpan={columns.length + 2}>
+                  No results
+                </td>
+              </tr>
             ) : (
-              rows.map((r) => (
-                <tr key={r.id} className="border-t border-gray-100 dark:border-gray-900">
-                  <td className="p-2">
-                    <label className="inline-flex items-center gap-2">
-                      <input type="checkbox" checked={!!r.verified} onChange={() => onToggleVerified(r)} />
-                      <span className="text-xs">{r.verified ? 'Verified' : 'Unverified'}</span>
+              rows.map(r => (
+                <tr
+                  key={r.id}
+                  className='border-t border-gray-10o0 dark:border-gray-90o0'
+                >
+                  <td className='p-2'>
+                    <label className='inline-flex items-center gap-2'>
+                      <input
+                        type='checkbox'
+                        checked={!!r.verified}
+                        onChange={() => onToggleVerified(r)}
+                      />
+                      <span className='text-xs'>
+                        {r.verified ? 'Verified' : 'Unverified'}
+                      </span>
                     </label>
                   </td>
-                  {columns.map((c) => (
-                    <td key={c.key} className="p-2">
+                  {columns.map(c => (
+                    <td key={c.key} className='p-2'>
                       {c.editable ? (
-                        <select value={r[c.key] || ''} onChange={(e) => onUpdateField(r, c.key, e.target.value)} className="rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-2 py-1 text-xs">
+                        <select
+                          value={r[c.key] || ''}
+                          onChange={e =>
+                            onUpdateField(r, c.key, e.target.value)
+                          }
+                          className='rounded border border-gray-30o0 dark:border-gray-70o0 bg-white dark:bg-black px-2 py-1 text-xs'
+                        >
                           {c.key === 'role' ? (
                             <>
                               <option>user</option>
@@ -203,8 +322,13 @@ export default function AdminTable() {
                       )}
                     </td>
                   ))}
-                  <td className="p-2">
-                    <button onClick={() => onDelete(r)} className="rounded bg-red-600 text-white px-2 py-1 text-xs">Delete</button>
+                  <td className='p-2'>
+                    <button
+                      onClick={() => onDelete(r)}
+                      className='rounded bg-red-60o0 text-white px-2 py-1 text-xs'
+                    >
+                      Delete
+                    </button>
                   </td>
                 </tr>
               ))
@@ -213,15 +337,40 @@ export default function AdminTable() {
         </table>
       </div>
 
-      <div className="flex items-center gap-2 text-sm">
+      <div className='flex items-center gap-2 text-sm'>
         <span>Rows per page</span>
-        <select value={pageSize} onChange={(e) => { setPageSize(Number(e.target.value)); setPage(0); }} className="rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-2 py-1 text-sm">
-          {[10, 20, 50].map((n) => <option key={n} value={n}>{n}</option>)}
+        <select
+          value={pageSize}
+          onChange={e => {
+            setPageSize(Number(e.target.value));
+            setPage(0);
+          }}
+          className='rounded border border-gray-30o0 dark:border-gray-70o0 bg-white dark:bg-black px-2 py-1 text-sm'
+        >
+          {[10, 20, 50].map(n => (
+            <option key={n} value={n}>
+              {n}
+            </option>
+          ))}
         </select>
-        <div className="ml-auto flex items-center gap-2">
-          <button disabled={page <= 0} onClick={() => setPage((p) => Math.max(0, p - 1))} className="rounded border border-gray-300 dark:border-gray-700 px-2 py-1 disabled:opacity-50">Prev</button>
-          <span>Page {page + 1} / {totalPages}</span>
-          <button disabled={page + 1 >= totalPages} onClick={() => setPage((p) => p + 1)} className="rounded border border-gray-300 dark:border-gray-700 px-2 py-1 disabled:opacity-50">Next</button>
+        <div className='ml-auto flex items-center gap-2'>
+          <button
+            disabled={page <= 0}
+            onClick={() => setPage(p => Math.max(0, p - 1))}
+            className='rounded border border-gray-30o0 dark:border-gray-70o0 px-2 py-1 disabled:opacity-50'
+          >
+            Prev
+          </button>
+          <span>
+            Page {page + 1} / {totalPages}
+          </span>
+          <button
+            disabled={page + 1 >= totalPages}
+            onClick={() => setPage(p => p + 1)}
+            className='rounded border border-gray-30o0 dark:border-gray-70o0 px-2 py-1 disabled:opacity-50'
+          >
+            Next
+          </button>
         </div>
       </div>
     </div>

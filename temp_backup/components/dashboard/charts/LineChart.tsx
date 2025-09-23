@@ -1,4 +1,3 @@
-import React from 'react';
 import { Line } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -11,7 +10,15 @@ import {
   Filler,
 } from 'chart.js';
 
-ChartJS.register(LineElement, PointElement, CategoryScale, LinearScale, Tooltip, Legend, Filler);
+ChartJS.register(
+  LineElement,
+  PointElement,
+  CategoryScale,
+  LinearScale,
+  Tooltip,
+  Legend,
+  Filler
+);
 
 export type LineChartProps = {
   labels: string[];
@@ -20,7 +27,12 @@ export type LineChartProps = {
   height?: number;
 };
 
-export default function LineChart({ labels, data, color = '#3b82f6', height = 160 }: LineChartProps) {
+export default function LineChart({
+  labels,
+  data,
+  color = '#3b82f6',
+  height = 160,
+}: LineChartProps) {
   return (
     <div style={{ height }}>
       <Line
@@ -39,7 +51,10 @@ export default function LineChart({ labels, data, color = '#3b82f6', height = 16
         }}
         options={{
           maintainAspectRatio: false,
-          plugins: { legend: { display: false }, tooltip: { intersect: false, mode: 'index' } },
+          plugins: {
+            legend: { display: false },
+            tooltip: { intersect: false, mode: 'index' },
+          },
           scales: {
             x: { display: false },
             y: { display: false },

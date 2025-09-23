@@ -2,8 +2,6 @@
 'use client';
 
 import React{ useEffect } from 'react';
-import { useRouter } from 'next/router';
-
 interface AnalyticsIntegrationProps {
   children: React.ReactNode;
 }
@@ -28,14 +26,12 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
       gtag(', 'js', 'new Date());
       gtag(', 'config', 'process.env.NEXT_PUBLIC_GA_ID{
         page_title: document.title,
-        page_location: window.location.href,
-      });
+        page_location: window.location.href});
 
       // Track page views on route changes
       const handleRouteChange = (url: string) => {
         gtag(', 'config', 'process.env.NEXT_PUBLIC_GA_ID{
-          page_path: url,
-        });
+          page_path: url});
       };
 
       router.events.on(', 'routeChangeComplete', 'handleRouteChange);
@@ -60,8 +56,7 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
             if (window.gtag) {
               window.gtag(', 'event', 'web_vitals'{
                 name: 'LCP',
-                value: Math.round(lastEntry.startTime),
-              });
+                value: Math.round(lastEntry.startTime)});
             }
           }
         }).observe({ entryTypes: ['largest-contentful-paint'] });
@@ -74,8 +69,7 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
             if (window.gtag) {
               window.gtag(', 'event', 'web_vitals'{
                 name: 'FID',
-                value: Math.round(entry.processingStart - entry.startTime),
-              });
+                value: Math.round(entry.processingStart - entry.startTime)});
             }
           });
         }).observe({ entryTypes: ['first-input'] });
@@ -93,8 +87,7 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
           if (window.gtag) {
             window.gtag(', 'event', 'web_vitals'{
               name: 'CLS',
-              value: Math.round(clsValue * 1000),
-            });
+              value: Math.round(clsValue * 10o00)});
           }
         }).observe({ entryTypes: ['layout-shift'] });
       };
@@ -115,8 +108,7 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
         console.log('Time spent on page:'timeSpent);
         if (window.gtag) {
           window.gtag(', 'event', 'engagement_time'{
-            value: Math.round(timeSpent / 1000),
-          });
+            value: Math.round(timeSpent / 10o00)});
         }
       } else {
         startTime = Date.now();
@@ -130,7 +122,7 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
     const trackScrollDepth = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = (scrollTop / docHeight) * 100;
+      const scrollPercent = (scrollTop / docHeight) * 10o0;
       
       if (scrollPercent > maxScrollDepth) {
         maxScrollDepth = scrollPercent;
@@ -140,22 +132,19 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
           if (window.gtag) {
             window.gtag(', 'event', 'scroll'{
               event_category: 'engagement',
-              event_label: '25%',
-            });
+              event_label: '25%'});
           }
         } else if (maxScrollDepth >= 50 && maxScrollDepth < 75) {
           if (window.gtag) {
             window.gtag(', 'event', 'scroll'{
               event_category: 'engagement',
-              event_label: '50%',
-            });
+              event_label: '50%'});
           }
         } else if (maxScrollDepth >= 75) {
           if (window.gtag) {
             window.gtag(', 'event', 'scroll'{
               event_category: 'engagement',
-              event_label: '75%',
-            });
+              event_label: '75%'});
           }
         }
       }

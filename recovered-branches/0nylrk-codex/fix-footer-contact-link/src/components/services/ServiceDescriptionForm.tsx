@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
@@ -34,25 +33,10 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 import z from "zod",
 import { zodResolver } from "@hookform/resolvers/zod",
-=======
-import React, { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
-import { Loader, Sparkles } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { useForm } from "react-hook-form";
-import z from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
->>>>>>> origin/auto/autonomy-17186719616
 
 const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   keyFeatures: z.string(),
-<<<<<<< HEAD
   targetAudience: z.string()}),
 
 type FormData = z.infer<typeof formSchema>,
@@ -209,67 +193,6 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
   }
   },
 
-=======
-  targetAudience: z.string(),
-});
-
-type FormData = z.infer<typeof formSchema>;
-
-interface ServiceDescriptionFormProps {
-  onDescriptionGenerated: (description: string) => void;
-}
-
-export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
-  const { toast } = useToast();
-  const [isLoading, setIsLoading] = useState(false);
-  
-  const form = useForm<FormData>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      title: "",
-      keyFeatures: "",
-      targetAudience: "",
-    },
-  });
-
-  const handleSubmit = async (data: FormData) => {
-    setIsLoading(true);
-    
-    try {
-      const { data: response, error } = await supabase.functions.invoke('generate-service-description', {
-        body: { 
-          title: data.title, 
-          keyFeatures: data.keyFeatures, 
-          targetAudience: data.targetAudience 
-        }
-      });
-
-      if (error) {
-        throw new Error(error.message);
-      }
-      
-      if (response.error) {
-        throw new Error(response.error);
-      }
-
-      onDescriptionGenerated(response.description);
-      
-      toast({
-        title: "Description Generated",
-        description: "Your professional service description has been created."
-      });
-    } catch (error) {
-      console.error("Error generating description:", error);
-      toast({
-        title: "Generation Failed",
-        description: error instanceof Error ? error.message : "Failed to generate description. Please try again.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsLoading(false);
-    }
-  };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -286,31 +209,19 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
             <FormField
-<<<<<<< HEAD
               control={form && form.control}
               name="title"
 
-=======
-              control={form.control}
-              name="title"
->>>>>>> origin/auto/autonomy-17186719616
               render={({ field }) => (
                 <FormItem>
                   <FormLabel className="text-zion-slate-light">Service Title</FormLabel>
                   <FormControl>
-<<<<<<< HEAD
 
                     <Input
                       {...field}
                       placeholder="e.g. Professional Web Design Services"
                       className="bg-zion-blue border border-zion-blue-light text-white"
 
-=======
-                    <Input 
-                      {...field} 
-                      placeholder="e.g. Professional Web Design Services"
-                      className="bg-zion-blue border border-zion-blue-light text-white"
->>>>>>> origin/auto/autonomy-17186719616
                       disabled={isLoading}
                     />
                   </FormControl>
@@ -318,7 +229,6 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
                 </FormItem>
               )}
             />
-<<<<<<< HEAD
             <FormField
 
                     <Input 
@@ -384,7 +294,6 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
             <FormField
               control={form && form.control}
@@ -401,22 +310,10 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
                   <FormControl>;
 
                     <Textarea
-=======
-            
-            <FormField
-              control={form.control}
-              name="keyFeatures"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-zion-slate-light">Key Features</FormLabel>
-                  <FormControl>
-                    <Textarea 
->>>>>>> origin/auto/autonomy-17186719616
                       {...field}
                       placeholder="Enter key features, separated by commas"
                       className="bg-zion-blue border border-zion-blue-light text-white min-h-20"
                       disabled={isLoading}
-<<<<<<< HEAD
                     />;
                   </FormControl>;
                   <FormMessage />;
@@ -428,23 +325,11 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
 
             <FormField
               control={form && form.control}
-=======
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            
-            <FormField
-              control={form.control}
->>>>>>> origin/auto/autonomy-17186719616
               name="targetAudience"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel className="text-zion-slate-light">Target Audience</FormLabel>
                   <FormControl>
-<<<<<<< HEAD
 
                     <Input
                       {...field}
@@ -489,42 +374,11 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
                 </>;
               )}
 
-=======
-                    <Input 
-                      {...field} 
-                      placeholder="e.g. Small businesses, Startups, E-commerce brands"
-                      className="bg-zion-blue border border-zion-blue-light text-white"
-                      disabled={isLoading}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            
-            <Button 
-              type="submit"
-              disabled={isLoading}
-              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-            >
-              {isLoading ? (
-                <>
-                  <Loader className="mr-2 h-4 w-4 animate-spin" />
-                  Generating Description...
-                </>
-              ) : (
-                <>
-                  <Sparkles className="h-4 w-4 mr-2" />
-                  Generate Description
-                </>
-              )}
->>>>>>> origin/auto/autonomy-17186719616
             </Button>
           </form>
         </Form>
       </CardContent>
     </Card>
-<<<<<<< HEAD
   )
 }
             </Button>;
@@ -538,7 +392,4 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
 
 
 
-=======
-  );
-}
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

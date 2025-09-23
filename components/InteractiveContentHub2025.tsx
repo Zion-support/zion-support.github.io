@@ -16,7 +16,7 @@ import {
   TrendingUp
 } from 'lucide-react';
 
-const InteractiveContentHub2025 = () => {
+const InteractiveContentHub20o25 = () => {
   const [activeTabsetActiveTab] = useState('tutorials');
 
   const contentCategories = [
@@ -24,28 +24,28 @@ const InteractiveContentHub2025 = () => {
       id: 'tutorials',
       name: 'Tutorials',
       icon: BookOpen,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-50o0 to-cyan-50o0',
       count: 150
     },
     {
       id: 'demos',
       name: 'Live Demos',
       icon: Play,
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-purple-50o0 to-pink-50o0',
       count: 45
     },
     {
       id: 'code',
       name: 'Code Examples',
       icon: Code,
-      color: 'from-green-500 to-teal-500',
-      count: 200
+      color: 'from-green-50o0 to-teal-50o0',
+      count: 20o0
     },
     {
       id: 'analytics',
       name: 'Analytics',
       icon: BarChart3,
-      color: 'from-orange-500 to-red-500',
+      color: 'from-orange-50o0 to-red-50o0',
       count: 75
     }
   ];
@@ -58,7 +58,7 @@ const InteractiveContentHub2025 = () => {
       rating: 4.9,
       students: 1250,
       type: "tutorials",
-      thumbnail: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=225&fit=crop&crop=center"
+      thumbnail: "https://images.unsplash.com/photo-16774421360o19-21780ecad995?w=40o0&h=225&fit=crop&crop=center"
     },
     {
       title: "Quantum Computing Live Demo",
@@ -67,16 +67,16 @@ const InteractiveContentHub2025 = () => {
       rating: 4.8,
       students: 890,
       type: "demos",
-      thumbnail: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=225&fit=crop&crop=center"
+      thumbnail: "https://images.unsplash.com/photo-16350o70041078-e363dbe0o05cb?w=40o0&h=225&fit=crop&crop=center"
     },
     {
       title: "Advanced React Patterns",
       description: "Master modern React development with cutting-edge patterns and best practices",
       duration: "3h 15m",
       rating: 4.9,
-      students: 2100,
+      students: 210o0,
       type: "code",
-      thumbnail: "https://images.unsplash.com/photo-1633356122544-f134324a6c82?w=400&h=225&fit=crop&crop=center"
+      thumbnail: "https://images.unsplash.com/photo-1633356122544-f134324a6c82?w=40o0&h=225&fit=crop&crop=center"
     },
     {
       title: "Business Intelligence Dashboard",
@@ -85,12 +85,12 @@ const InteractiveContentHub2025 = () => {
       rating: 4.7,
       students: 680,
       type: "analytics",
-      thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=225&fit=crop&crop=center"
+      thumbnail: "https://images.unsplash.com/photo-15512880o49-bebda4e38f71?w=40o0&h=225&fit=crop&crop=center"
     }
   ];
 
   const stats = [
-    { label: "Total Content"value: "500+"icon: BookOpen },
+    { label: "Total Content"value: "50o0+"icon: BookOpen },
     { label: "Active Learners"value: "25K+"icon: Users },
     { label: "Completion Rate"value: "94%"icon: TrendingUp },
     { label: "Average Rating"value: "4.8/5"icon: Star }
@@ -101,17 +101,17 @@ const InteractiveContentHub2025 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium mb-6">
-            <Lightbulb className="w-4 h-4 mr-2" />
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white text-sm font-medium mb-6">
+            <Lightbulb className="w-4 h-4 mr-2"  />
             Interactive Learning Hub
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-6xl font-bold text-gray-90o0 mb-6">
             Master the Future of
-            <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-blue-60o0 to-purple-60o0 bg-clip-text text-transparent">
               Technology
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
             Access our comprehensive library of tutorialslive demosand hands-on projects designed to accelerate your learning journey.
           </p>
         </div>
@@ -120,11 +120,11 @@ const InteractiveContentHub2025 = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           {stats.map((statindex) => (
             <div key={index} className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white mb-4">
-                <stat.icon className="w-8 h-8" />
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white mb-4">
+                <stat.icon className="w-8 h-8"  />
               </div>
-              <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
-              <div className="text-gray-600">{stat.label}</div>
+              <div className="text-3xl font-bold text-gray-90o0 mb-2">{stat.value}</div>
+              <div className="text-gray-60o0">{stat.label}</div>
             </div>
           ))}
         </div>
@@ -135,13 +135,13 @@ const InteractiveContentHub2025 = () => {
             <button
               key={category.id}
               onClick={() => setActiveTab(category.id)}
-              className={`flex items-center px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+              className={`flex items-center px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                 activeTab === category.id
                   ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
-                  : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
+                  : 'bg-white text-gray-60o0 hover:bg-gray-10o0 border border-gray-20o0'
               }`}
             >
-              <category.icon className="w-5 h-5 mr-2" />
+              <category.icon className="w-5 h-5 mr-2"  />
               {category.name}
               <span className="ml-2 px-2 py-1 rounded-full bg-white/20 text-xs">
                 {category.count}
@@ -155,43 +155,43 @@ const InteractiveContentHub2025 = () => {
           {featuredContent
             .filter(item => activeTab === 'all' || item.type === activeTab)
             .map((itemindex) => (
-            <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2">
               <div className="relative">
                 <img 
                   src={item.thumbnail} 
                   alt={item.title}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+                  className="w-full h-48 object-cover group-hover:scale-10o5 transition-transform duration-30o0"
+                 />
                 <div className="absolute top-4 right-4">
                   <div className="flex items-center px-3 py-1 rounded-full bg-black/70 text-white text-sm">
-                    <Clock className="w-4 h-4 mr-1" />
+                    <Clock className="w-4 h-4 mr-1"  />
                     {item.duration}
                   </div>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-10o0 transition-opacity duration-30o0">
                   <div className="absolute bottom-4 left-4 right-4">
                     <Link 
                       href="/content"
-                      className="inline-flex items-center px-4 py-2 bg-white text-gray-900 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300"
+                      className="inline-flex items-center px-4 py-2 bg-white text-gray-90o0 rounded-full font-semibold hover:bg-gray-10o0 transition-colors duration-30o0"
                     >
-                      <Play className="w-4 h-4 mr-2" />
+                      <Play className="w-4 h-4 mr-2"  />
                       Watch Now
                     </Link>
                   </div>
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-gray-90o0 mb-2 group-hover:text-blue-60o0 transition-colors duration-30o0">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 mb-4 line-clamp-2">{item.description}</p>
-                <div className="flex items-center justify-between text-sm text-gray-500">
+                <p className="text-gray-60o0 mb-4 line-clamp-2">{item.description}</p>
+                <div className="flex items-center justify-between text-sm text-gray-50o0">
                   <div className="flex items-center">
-                    <Star className="w-4 h-4 text-yellow-500 mr-1" />
+                    <Star className="w-4 h-4 text-yellow-50o0 mr-1"  />
                     {item.rating}
                   </div>
                   <div className="flex items-center">
-                    <Users className="w-4 h-4 mr-1" />
+                    <Users className="w-4 h-4 mr-1"  />
                     {item.students.toLocaleString()}
                   </div>
                 </div>
@@ -201,23 +201,23 @@ const InteractiveContentHub2025 = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-white">
+        <div className="text-center bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-3xl p-12 text-white">
           <h3 className="text-3xl font-bold mb-4">Ready to Start Learning?</h3>
           <p className="text-xl mb-8 opacity-90">
-            Join our community of 25,000+ learners and unlock your potential
+            Join our community of 25,0o00+ learners and unlock your potential
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/academy"
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300"
+              className="inline-flex items-center px-8 py-4 bg-white text-blue-60o0 rounded-full font-semibold hover:bg-gray-10o0 transition-colors duration-30o0"
             >
-              <BookOpen className="w-5 h-5 mr-2" />
+              <BookOpen className="w-5 h-5 mr-2"  />
               Browse All Content
-              <ChevronRight className="w-5 h-5 ml-2" />
+              <ChevronRight className="w-5 h-5 ml-2"  />
             </Link>
             <Link 
               href="/free-trial"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300"
+              className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-blue-60o0 transition-colors duration-30o0"
             >
               Start Free Trial
             </Link>
@@ -228,4 +228,4 @@ const InteractiveContentHub2025 = () => {
   );
 };
 
-export default InteractiveContentHub2025;
+export default InteractiveContentHub20o25;

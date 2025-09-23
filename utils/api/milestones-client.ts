@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -27,7 +26,6 @@ export async function createMilestone(projectId: string, payload: any) {;
   return res.json();
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 export async /**
  * create_milestone - Function description
@@ -145,7 +143,6 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
 
@@ -154,35 +151,5 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
-=======
-export async function fetchMilestones(projectId: string) {
-  const res = await fetch(`/api/projects/${projectId}/milestones`, {
-    headers: { 'Content-Type': 'application/json' },
-    credentials: 'include',
-  });
-  if (!res.ok) throw new Error('Failed to load milestones');
-  return res.json();
-}
-
-export async function createMilestone(projectId: string, payload: any) {
-  const res = await fetch(`/api/projects/${projectId}/milestones`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    credentials: 'include',
-    body: JSON.stringify(payload),
-  });
-  if (!res.ok) throw new Error(await res.text());
-  return res.json();
-}
-
-export async function updateMilestoneStatus(projectId: string, milestoneId: string, body: any) {
-  const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {
-    method: 'PATCH',
-    headers: { 'Content-Type': 'application/json' },
-    credentials: 'include',
-    body: JSON.stringify(body),
-  });
-  if (!res.ok) throw new Error(await res.text());
-  return res.json();
-}
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

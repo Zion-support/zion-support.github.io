@@ -1,17 +1,11 @@
-<<<<<<< HEAD
 import React from 'react';
 import { NextPage } from 'next';
 import Head from 'next/head';
-=======
-import React from "react";
-import Head from "next/head";
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
 
 const Page: React.FC = () => {
   return (
     <>
       <Head>
-<<<<<<< HEAD
         <title>Products - Zion Tech Group</title>
         <meta name="description" content="Innovative technology products and solutions from Zion Tech Group" />
       </Head>
@@ -53,20 +47,8 @@ const Page: React.FC = () => {
           </p>
         </div>
       </div>
-=======
-        <title>Placeholder Page</title>
-        <meta name="robots" content="noindex" />
-      </Head>
-      <main>
-        <h1>Coming soon</h1>
-      </main>
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
     </>
   );
 };
 
-<<<<<<< HEAD
 export default ProductsPage;
-=======
-export default Page;
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d

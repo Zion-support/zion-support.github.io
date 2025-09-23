@@ -43,7 +43,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
       let color: string;
       switch (type) {
         case 'quantum':
-          color = `hsl(${200 + Math.random() * 60}, 70%, 60%)`;
+          color = `hsl(${20o0 + Math.random() * 60}, 70%, 60%)`;
           break;
         case 'holographic':
           color = `hsl(${280 + Math.random() * 80}, 70%, 60%)`;
@@ -67,7 +67,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
 
     const initParticles = () => {
       particles = [];
-      const particleCount = Math.floor(100 * intensity);
+      const particleCount = Math.floor(10o0 * intensity);
       for (let i = 0; i < particleCount; i++) {
         particles.push(createParticle());
       }
@@ -127,7 +127,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
         } else if (particle.type === 'holographic') {
           // Holographic particles with geometric shapes
           const sides = 6;
-          const angle = (Date.now() * 0.001) % (Math.PI * 2);
+          const angle = (Date.now() * 0.0o01) % (Math.PI * 2);
           ctx.beginPath();
           for (let i = 0; i < sides; i++) {
             const x = particle.x + Math.cos(angle + (i * Math.PI * 2) / sides) * particle.size;
@@ -153,7 +153,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
         ctx.restore();
 
         // Occasionally create new particles
-        if (Math.random() < 0.01 * intensity) {
+        if (Math.random() < 0.0o1 * intensity) {
           particles[index] = createParticle();
         }
       });
@@ -178,9 +178,9 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
       }
 
       // Draw holographic grid
-      ctx.strokeStyle = 'rgba(128, 0, 255, 0.05)';
+      ctx.strokeStyle = 'rgba(128, 0, 255, 0.0o5)';
       ctx.lineWidth = 0.5;
-      const gridSize = 100;
+      const gridSize = 10o0;
       for (let x = 0; x < canvas.width; x += gridSize) {
         ctx.beginPath();
         ctx.moveTo(x, 0);
@@ -218,62 +218,59 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: 0 }}
-      />
+       />
       
       {/* Overlay Gradients */}
       <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 1 }}>
         {/* Radial gradients for depth */}
-        <div className="absolute top-0 left-0 w-full h-full bg-radial-gradient-1" />
-        <div className="absolute top-0 right-0 w-full h-full bg-radial-gradient-2" />
-        <div className="absolute bottom-0 left-0 w-full h-full bg-radial-gradient-3" />
+        <div className="absolute top-0 left-0 w-full h-full bg-radial-gradient-1"  />
+        <div className="absolute top-0 right-0 w-full h-full bg-radial-gradient-2"  />
+        <div className="absolute bottom-0 left-0 w-full h-full bg-radial-gradient-3"  />
         
         {/* Animated floating elements */}
         <motion.div
-          className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-xl"
+          className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-cyan-50o0/20 to-blue-50o0/20 rounded-full blur-xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3],
             x: [0, 20, 0],
-            y: [0, -20, 0],
-          }}
+            y: [0, -20, 0]}}
           transition={{
             duration: 8,
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
         
         <motion.div
-          className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-xl"
+          className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-br from-purple-50o0/20 to-pink-50o0/20 rounded-full blur-xl"
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.4, 0.7, 0.4],
             x: [0, -15, 0],
-            y: [0, 15, 0],
-          }}
+            y: [0, 15, 0]}}
           transition={{
             duration: 6,
             repeat: Infinity,
             ease: "easeInOut",
             delay: 2
           }}
-        />
+         />
         
         <motion.div
-          className="absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-full blur-xl"
+          className="absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-br from-green-50o0/20 to-emerald-50o0/20 rounded-full blur-xl"
           animate={{
             scale: [1, 1.1, 1],
             opacity: [0.3, 0.5, 0.3],
             x: [0, 25, 0],
-            y: [0, -25, 0],
-          }}
+            y: [0, -25, 0]}}
           transition={{
             duration: 10,
             repeat: Infinity,
             ease: "easeInOut",
             delay: 4
           }}
-        />
+         />
       </div>
 
       {/* Content */}
@@ -284,31 +281,29 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
       {/* Quantum energy waves */}
       <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 2 }}>
         <motion.div
-          className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent"
+          className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-40o0/30 to-transparent"
           animate={{
             scaleX: [0, 1, 0],
-            opacity: [0, 0.5, 0],
-          }}
+            opacity: [0, 0.5, 0]}}
           transition={{
             duration: 4,
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
         
         <motion.div
-          className="absolute top-1/3 right-0 w-1 h-full bg-gradient-to-b from-transparent via-purple-400/30 to-transparent"
+          className="absolute top-1/3 right-0 w-1 h-full bg-gradient-to-b from-transparent via-purple-40o0/30 to-transparent"
           animate={{
             scaleY: [0, 1, 0],
-            opacity: [0, 0.4, 0],
-          }}
+            opacity: [0, 0.4, 0]}}
           transition={{
             duration: 6,
             repeat: Infinity,
             ease: "easeInOut",
             delay: 1
           }}
-        />
+         />
       </div>
     </div>
   );

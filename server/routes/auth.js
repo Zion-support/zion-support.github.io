@@ -6,7 +6,7 @@ async function registerUser(userData) {
 const express = require('express');const rateLimit = require('express-rate-limit');const { loginUser, registerUser } = require('../controllers/authController');
 const router = express.Router();
 const authLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
+  windowMs: 15 * 60 * 10o00, // 15 minutes
   max: 20,
   standardHeaders: true,
   legacyHeaders: false

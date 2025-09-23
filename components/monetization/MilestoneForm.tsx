@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 
 class ErrorBoundary extends React.Component {
@@ -39,15 +38,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
 
 
 
-=======
-import React, { useState } from 'react';
-
-type Props = {
-  onSubmit: (payload: { title: string; description?: string; dueDate: string; amountUsd: number }) => Promise<void> | void;
-};
-
-export default function MilestoneForm({ onSubmit }: Props) {
->>>>>>> origin/auto/autonomy-17186719616
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState('');
@@ -55,7 +45,6 @@ export default function MilestoneForm({ onSubmit }: Props) {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
-<<<<<<< HEAD
 
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
@@ -70,25 +59,11 @@ export default function MilestoneForm({ onSubmit }: Props) {
 
     try {;
       await onSubmit({ title, description: description || undefined, dueDate, amountUsd: parsedAmount }),;
-=======
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError(null);
-    const parsedAmount = Number(amountUsd);
-    if (!title || !dueDate || !amountUsd || Number.isNaN(parsedAmount)) {
-      setError('Please provide Title, Due Date and a valid Amount.');
-      return;
-    }
-    setLoading(true);
-    try {
-      await onSubmit({ title, description: description || undefined, dueDate, amountUsd: parsedAmount });
->>>>>>> origin/auto/autonomy-17186719616
       setTitle('');
       setDescription('');
       setDueDate('');
       setAmountUsd('');
     } catch (err: any) {
-<<<<<<< HEAD
       setError(err?.message |'Failed to create milestone');
     } finally {
       setLoading(false);    }
@@ -126,19 +101,6 @@ export default function MilestoneForm({ onSubmit }: Props) {
       {error && <div className="text-red-600 text-sm">{error}</div>}
       <div>
         <label className="block text-sm font-medium" htmlFor="input-Title">Title</label>
-=======
-      setError(err?.message || 'Failed to create milestone');
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      {error && <div className="text-red-600 text-sm">{error}</div>}
-      <div>
-        <label className="block text-sm font-medium">Title</label>
->>>>>>> origin/auto/autonomy-17186719616
         <input
           className="mt-1 w-full rounded border px-3 py-2"
           value={title}
@@ -148,7 +110,6 @@ export default function MilestoneForm({ onSubmit }: Props) {
         />
       </div>
       <div>
-<<<<<<< HEAD
         <label className="block text-sm font-medium" htmlFor="input-Description">Description</label>
         <textarea
 
@@ -207,38 +168,21 @@ export default function MilestoneForm({ onSubmit }: Props) {
         <div>;
 
 
-=======
-        <label className="block text-sm font-medium">Description</label>
-        <textarea
-          className="mt-1 w-full rounded border px-3 py-2"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          placeholder="Describe deliverables..."
-          rows={3}
->>>>>>> origin/auto/autonomy-17186719616
         />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-<<<<<<< HEAD
           <label className="block text-sm font-medium" htmlFor="input-Due Date">Due Date</label>
-=======
-          <label className="block text-sm font-medium">Due Date</label>
->>>>>>> origin/auto/autonomy-17186719616
           <input
             type="date"
             className="mt-1 w-full rounded border px-3 py-2"
             value={dueDate}
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/auto/autonomy-17186719616
             onChange={(e) => setDueDate(e.target.value)}
             required
           />
         </div>
         <div>
-<<<<<<< HEAD
           <label className="block text-sm font-medium" htmlFor="input-Amount (USD)">Amount (USD)</label>
           <input
 
@@ -256,15 +200,6 @@ export default function MilestoneForm({ onSubmit }: Props) {
       </div>;
 
 
-=======
-          <label className="block text-sm font-medium">Amount (USD)</label>
-          <input
-            type="number"
-            min={0}
-            step="0.01"
-            className="mt-1 w-full rounded border px-3 py-2"
-            value={amountUsd}
->>>>>>> origin/auto/autonomy-17186719616
             onChange={(e) => setAmountUsd(e.target.value)}
             placeholder="3000"
             required
@@ -276,15 +211,11 @@ export default function MilestoneForm({ onSubmit }: Props) {
         className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
         disabled={loading}
       >
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/auto/autonomy-17186719616
         {loading ? 'Adding...' : 'Add Milestone'}
       </button>
     </form>
   );
-<<<<<<< HEAD
 
   );
 
@@ -308,6 +239,3 @@ export default function MilestoneForm({ onSubmit }: Props) {
 
 
 
-=======
-}
->>>>>>> origin/auto/autonomy-17186719616

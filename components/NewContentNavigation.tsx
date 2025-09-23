@@ -36,7 +36,7 @@ const NewContentNavigation = () => {
       title: "AI Solutions",
       description: "Revolutionary AI technologies",
       icon: Brain,
-      color: "from-purple-600 to-pink-600",
+      color: "from-purple-60o0 to-pink-60o0",
       href: "/ai-solutions",
       items: [
         "Machine Learning",
@@ -49,7 +49,7 @@ const NewContentNavigation = () => {
       title: "Quantum Computing",
       description: "Next-generation quantum solutions",
       icon: Cpu,
-      color: "from-blue-600 to-cyan-600",
+      color: "from-blue-60o0 to-cyan-60o0",
       href: "/quantum-computing",
       items: [
         "Quantum Algorithms",
@@ -62,7 +62,7 @@ const NewContentNavigation = () => {
       title: "Neural Interfaces",
       description: "Brain-computer interface tech",
       icon: Database,
-      color: "from-green-600 to-emerald-600",
+      color: "from-green-60o0 to-emerald-60o0",
       href: "/neural-interfaces",
       items: [
         "BCI Development",
@@ -75,7 +75,7 @@ const NewContentNavigation = () => {
       title: "Cloud Infrastructure",
       description: "Scalable cloud solutions",
       icon: Cloud,
-      color: "from-orange-600 to-red-600",
+      color: "from-orange-60o0 to-red-60o0",
       href: "/cloud-infrastructure",
       items: [
         "Multi-Cloud Architecture",
@@ -88,7 +88,7 @@ const NewContentNavigation = () => {
       title: "Security Solutions",
       description: "Advanced security measures",
       icon: Shield,
-      color: "from-indigo-600 to-purple-600",
+      color: "from-indigo-60o0 to-purple-60o0",
       href: "/security-solutions",
       items: [
         "Threat Detection",
@@ -101,8 +101,8 @@ const NewContentNavigation = () => {
       title: "Ultimate Showcase",
       description: "Complete technology showcase",
       icon: Sparkles,
-      color: "from-pink-600 to-rose-600",
-      href: "/showcase/ultimate-2025",
+      color: "from-pink-60o0 to-rose-60o0",
+      href: "/showcase/ultimate-20o25",
       items: [
         "All Technologies",
         "Interactive Demos",
@@ -114,7 +114,7 @@ const NewContentNavigation = () => {
 
   const featuredContent = [
     {
-      title: "AI 2025 Breakthrough",
+      title: "AI 20o25 Breakthrough",
       description: "Latest AI innovations transforming industries",
       href: "/ai-solutions",
       badge: "HOT",
@@ -141,24 +141,24 @@ const NewContentNavigation = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={isVisible ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6 }}
-      className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white"
+      className="bg-gradient-to-r from-slate-90o0 via-purple-90o0 to-slate-90o0 text-white"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white text-sm font-semibold mb-4">
-            <Sparkles className="w-4 h-4 mr-2" />
-            NEW CONTENT 2025
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white text-sm font-semibold mb-4">
+            <Sparkles className="w-4 h-4 mr-2"  />
+            NEW CONTENT 20o25
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Explore Revolutionary
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-40o0 to-pink-40o0">
               {" "}Technologies
             </span>
           </h2>
           
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-30o0 max-w-2xl mx-auto">
             Discover cutting-edge AIquantum computingand neural interface technologies 
             that are reshaping the future of business and human potential.
           </p>
@@ -172,22 +172,22 @@ const NewContentNavigation = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: index * 0.1 }}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-30o0 group"
             >
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center">
-                    <item.icon className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-60o0 to-blue-60o0 flex items-center justify-center">
+                    <item.icon className="w-6 h-6 text-white"  />
                   </div>
                   <div>
                     <div className="text-lg font-semibold text-white">{item.title}</div>
-                    <p className="text-sm text-gray-300">{item.description}</p>
+                    <p className="text-sm text-gray-30o0">{item.description}</p>
                   </div>
                 </div>
                 <span className={`px-2 py-1 text-xs font-semibold rounded-full ${
-                  item.badge === 'HOT' ? 'bg-red-500/20 text-red-300' :
-                  item.badge === 'NEW' ? 'bg-green-500/20 text-green-300' :
-                  'bg-blue-500/20 text-blue-300'
+                  item.badge === 'HOT' ? 'bg-red-50o0/20 text-red-30o0' :
+                  item.badge === 'NEW' ? 'bg-green-50o0/20 text-green-30o0' :
+                  'bg-blue-50o0/20 text-blue-30o0'
                 }`}>
                   {item.badge}
                 </span>
@@ -195,10 +195,10 @@ const NewContentNavigation = () => {
               
               <Link
                 href={item.href}
-                className="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium group-hover:translate-x-1 transition-all duration-300"
+                className="inline-flex items-center text-purple-40o0 hover:text-purple-30o0 font-medium group-hover:translate-x-1 transition-all duration-30o0"
               >
                 Explore Now
-                <ArrowRight className="w-4 h-4 ml-1" />
+                <ArrowRight className="w-4 h-4 ml-1"  />
               </Link>
             </motion.div>
           ))}
@@ -208,10 +208,10 @@ const NewContentNavigation = () => {
         <div className="text-center mb-8">
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20"
+            className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-30o0 border border-white/20"
           >
             {isExpanded ? 'Hide' : 'Show'} All Categories
-            <ArrowRight className={`w-4 h-4 ml-2 transition-transform duration-300 ${isExpanded ? 'rotate-90' : ''}`} />
+            <ArrowRight className={`w-4 h-4 ml-2 transition-transform duration-30o0 ${isExpanded ? 'rotate-90' : ''}`}  />
           </button>
         </div>
 
@@ -231,22 +231,22 @@ const NewContentNavigation = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+                  className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-30o0 group"
                 >
                   <div className="flex items-center space-x-4 mb-4">
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${category.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                      <category.icon className="w-6 h-6 text-white" />
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${category.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-30o0`}>
+                      <category.icon className="w-6 h-6 text-white"  />
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-white">{category.title}</h3>
-                      <p className="text-sm text-gray-300">{category.description}</p>
+                      <p className="text-sm text-gray-30o0">{category.description}</p>
                     </div>
                   </div>
                   
                   <div className="space-y-2 mb-6">
                     {category.items.map((itemIndex) => (
-                      <div key={itemIndex} className="flex items-center text-sm text-gray-300">
-                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-3 flex-shrink-0" />
+                      <div key={itemIndex} className="flex items-center text-sm text-gray-30o0">
+                        <div className="w-1.5 h-1.5 bg-purple-40o0 rounded-full mr-3 flex-shrink-0"  />
                         {item}
                       </div>
                     ))}
@@ -254,10 +254,10 @@ const NewContentNavigation = () => {
                   
                   <Link
                     href={category.href}
-                    className="inline-flex items-center w-full justify-center px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 text-purple-300 font-medium rounded-lg hover:from-purple-600/30 hover:to-blue-600/30 transition-all duration-300 group-hover:translate-y-[-2px]"
+                    className="inline-flex items-center w-full justify-center px-4 py-2 bg-gradient-to-r from-purple-60o0/20 to-blue-60o0/20 text-purple-30o0 font-medium rounded-lg hover:from-purple-60o0/30 hover:to-blue-60o0/30 transition-all duration-30o0 group-hover:translate-y-[-2px]"
                   >
                     Explore {category.title}
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />
                   </Link>
                 </motion.div>
               ))}
@@ -272,11 +272,11 @@ const NewContentNavigation = () => {
           transition={{ duration: 0.6delay: 0.3 }}
           className="text-center mt-12"
         >
-          <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-8 border border-white/20">
+          <div className="bg-gradient-to-r from-purple-60o0/20 to-blue-60o0/20 rounded-2xl p-8 border border-white/20">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-30o0 mb-6 max-w-2xl mx-auto">
               Join thousands of companies already using our revolutionary technologies 
               to achieve unprecedented growth and efficiency.
             </p>
@@ -284,17 +284,17 @@ const NewContentNavigation = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl group"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white font-semibold rounded-full hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 shadow-lg hover:shadow-xl group"
               >
                 Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"  />
               </Link>
               
               <Link
                 href="/demo"
-                className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20 group"
+                className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-30o0 border border-white/20 group"
               >
-                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform"  />
                 Watch Demo
               </Link>
             </div>

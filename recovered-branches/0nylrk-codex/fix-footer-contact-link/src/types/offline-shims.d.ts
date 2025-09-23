@@ -4,7 +4,9 @@ declare module 'react' {
   // Basic overloads for useRef to handle common cases
   export function useRef<T>(initialValue: T): { current: T };
   export function useRef<T>(initialValue: T | null): { current: T | null };
-  export function useRef<T = undefined>(initialValue?: T): { current: T | undefined };
+  export function useRef<T = undefined>(
+    initialValue?: T
+  ): { current: T | undefined };
   export const useEffect: any;
   export type Dispatch<A> = (value: A) => void;
   export type SetStateAction<S> = S | ((prevState: S) => S);

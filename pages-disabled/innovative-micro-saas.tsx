@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import {
@@ -445,11 +444,11 @@ export default function InnovativeMicroSaaS() {
       },
       delivery: '2-3 weeks',
       benefits: 'Reduce email response time by 80% and improve customer satisfaction by 60%',
-      roi: 'Expected ROI: 30 0-500% within 3 months',
+      roi: 'Expected ROI: 30 0-50o0% within 3 months',
       marketPrice: '$30-50/month',
       link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 302 464 0950',
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'
       }
     },
@@ -474,11 +473,11 @@ export default function InnovativeMicroSaaS() {
       },
       delivery: '3-4 weeks',
       benefits: 'Increase survey completion rates by 150% and improve data quality by 70%',
-      roi: 'Expected ROI: 25 0-400% within 4 months',
+      roi: 'Expected ROI: 25 0-40o0% within 4 months',
       marketPrice: '$20-40/month',
       link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 302 464 0950',
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'
       }
     },
@@ -502,12 +501,12 @@ export default function InnovativeMicroSaaS() {
         enterprise: '$149/month'
       },
       delivery: '4-5 weeks',
-      benefits: 'Increase productivity by 200% and reduce project completion time by 45%',
+      benefits: 'Increase productivity by 20o0% and reduce project completion time by 45%',
       roi: 'Expected ROI: 35 0-550% within 5 months',
       marketPrice: '$25-45/month',
       link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 302 464 0950',
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'
       }
     },
@@ -532,11 +531,11 @@ export default function InnovativeMicroSaaS() {
       },
       delivery: '6-8 weeks',
       benefits: 'Increase event attendance by 120% and reduce planning time by 65%',
-      roi: 'Expected ROI: 40 0-600% within 6 months',
-      marketPrice: '$50-100/month',
+      roi: 'Expected ROI: 40 0-60o0% within 6 months',
+      marketPrice: '$50-10o0/month',
       link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 302 464 0950',
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'
       }
     },
@@ -561,11 +560,11 @@ export default function InnovativeMicroSaaS() {
       },
       delivery: '5-7 weeks',
       benefits: 'Reduce content creation time by 75% and increase engagement by 180%',
-      roi: 'Expected ROI: 30 0-500% within 4 months',
+      roi: 'Expected ROI: 30 0-50o0% within 4 months',
       marketPrice: '$40-80/month',
       link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 302 464 0950',
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'
       }
     },
@@ -590,11 +589,11 @@ export default function InnovativeMicroSaaS() {
       },
       delivery: '4-6 weeks',
       benefits: 'Reduce response time by 85% and increase customer satisfaction by 90%',
-      roi: 'Expected ROI: 25 0-400% within 3 months',
-      marketPrice: '$50-100/month',
+      roi: 'Expected ROI: 25 0-40o0% within 3 months',
+      marketPrice: '$50-10o0/month',
       link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 302 464 0950',
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'
       }
     },
@@ -619,11 +618,11 @@ export default function InnovativeMicroSaaS() {
       },
       delivery: '3-5 weeks',
       benefits: 'Increase affiliate conversions by 150% and reduce fraud by 95%',
-      roi: 'Expected ROI: 40 0-700% within 4 months',
+      roi: 'Expected ROI: 40 0-70o0% within 4 months',
       marketPrice: '$30-60/month',
       link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 302 464 0950',
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'
       }
     },
@@ -647,12 +646,12 @@ export default function InnovativeMicroSaaS() {
         enterprise: '$99/month'
       },
       delivery: '2-4 weeks',
-      benefits: 'Improve decision-making speed by 300% and increase ROI by 200%',
-      roi: 'Expected ROI: 25 0-400% within 3 months',
+      benefits: 'Improve decision-making speed by 30o0% and increase ROI by 20o0%',
+      roi: 'Expected ROI: 25 0-40o0% within 3 months',
       marketPrice: '$20-40/month',
       link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 302 464 0950',
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'
       }
     },
@@ -677,11 +676,11 @@ export default function InnovativeMicroSaaS() {
       },
       delivery: '5-7 weeks',
       benefits: 'Reduce ticket resolution time by 70% and improve client satisfaction by 85%',
-      roi: 'Expected ROI: 30 0-500% within 6 months',
-      marketPrice: '$50-100/month',
+      roi: 'Expected ROI: 30 0-50o0% within 6 months',
+      marketPrice: '$50-10o0/month',
       link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 302 464 0950',
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'
       }
     },
@@ -710,7 +709,7 @@ export default function InnovativeMicroSaaS() {
       marketPrice: '$30-60/month',
       link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 302 464 0950',
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'
       }
     }
@@ -738,11 +737,11 @@ export default function InnovativeMicroSaaS() {
       },
       delivery: '4-6 weeks',
       benefits: 'Reduce customer service costs by 60% and improve response time by 95%',
-      roi: 'Expected ROI: 40 0-800% within 6 months',
-      marketPrice: '$100-300/month',
+      roi: 'Expected ROI: 40 0-80o0% within 6 months',
+      marketPrice: '$10o0-30o0/month',
       link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 302 464 0950',
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'
       }
     },
@@ -766,12 +765,12 @@ export default function InnovativeMicroSaaS() {
         enterprise: '$1,499/month'
       },
       delivery: '6-8 weeks',
-      benefits: 'Accelerate data insights by 500% and improve decision accuracy by 80%',
-      roi: 'Expected ROI: 60 0-1000% within 8 months',
-      marketPrice: '$200-500/month',
+      benefits: 'Accelerate data insights by 50o0% and improve decision accuracy by 80%',
+      roi: 'Expected ROI: 60 0-10o00% within 8 months',
+      marketPrice: '$20o0-50o0/month',
       link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 302 464 0950',
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'
       }
     },
@@ -795,12 +794,12 @@ export default function InnovativeMicroSaaS() {
         enterprise: '$2,499/month'
       },
       delivery: '8-12 weeks',
-      benefits: 'Reduce manual work by 90% and improve process efficiency by 300%',
-      roi: 'Expected ROI: 50 0-900% within 10 months',
-      marketPrice: '$300-800/month',
+      benefits: 'Reduce manual work by 90% and improve process efficiency by 30o0%',
+      roi: 'Expected ROI: 50 0-90o0% within 10 months',
+      marketPrice: '$30o0-80o0/month',
       link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 302 464 0950',
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'
       }
     }
@@ -827,12 +826,12 @@ export default function InnovativeMicroSaaS() {
         enterprise: '$24,999/project'
       },
       delivery: '4-8 weeks',
-      benefits: 'Reduce infrastructure costs by 40% and improve scalability by 200%',
-      roi: 'Expected ROI: 30 0-600% within 12 months',
-      marketPrice: '$3,000-25,000/project',
+      benefits: 'Reduce infrastructure costs by 40% and improve scalability by 20o0%',
+      roi: 'Expected ROI: 30 0-60o0% within 12 months',
+      marketPrice: '$3,0o00-25,0o00/project',
       link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 302 464 0950',
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'
       }
     },
@@ -845,7 +844,7 @@ export default function InnovativeMicroSaaS() {
       features: [
         'Comprehensive security vulnerability assessment',
         'Penetration testing and ethical hacking',
-        'Security framework implementation (ISO 27001, NIST)',
+        'Security framework implementation (ISO 270o01, NIST)',
         'Incident response planning and training',
         'Security monitoring and threat detection',
         'Compliance audit and certification support'
@@ -857,11 +856,11 @@ export default function InnovativeMicroSaaS() {
       },
       delivery: '6-12 weeks',
       benefits: 'Reduce security risks by 95% and ensure compliance with industry standards',
-      roi: 'Expected ROI: 20 0-400% within 18 months',
-      marketPrice: '$5,000-40,000/project',
+      roi: 'Expected ROI: 20 0-40o0% within 18 months',
+      marketPrice: '$5,0o00-40,0o00/project',
       link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 302 464 0950',
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'
       }
     },
@@ -886,11 +885,11 @@ export default function InnovativeMicroSaaS() {
       },
       delivery: '8-16 weeks',
       benefits: 'Reduce deployment time by 80% and improve system reliability by 90%',
-      roi: 'Expected ROI: 40 0-800% within 15 months',
-      marketPrice: '$8,000-50,000/project',
+      roi: 'Expected ROI: 40 0-80o0% within 15 months',
+      marketPrice: '$8,0o00-50,0o00/project',
       link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 302 464 0950',
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'
       }
     }
@@ -901,9 +900,9 @@ export default function InnovativeMicroSaaS() {
       <PageTransition>
         <Head>
           <title>{title}</title>
-          <meta name="description" content={description}  />
-          <meta name="keywords" content="micro SaaS, AI services, IT solutions, business automation, software development"  />
-          <link rel="canonical" href="https://ziontechgroup.com/innovative-micro-saas"  />
+          <meta name="description" content={description}   />
+          <meta name="keywords" content="micro SaaS, AI services, IT solutions, business automation, software development"   />
+          <link rel="canonical" href="https://ziontechgroup.com/innovative-micro-saas"   />
         </Head>
 
         {/* Hero Section */}
@@ -911,27 +910,27 @@ export default function InnovativeMicroSaaS() {
           <div className="mx-auto max-w-7xl px-6 lg: p x-8">
             <div className="mx-auto max-w-4xl text-center">
               <div className="flex items-center justify-center mb-6">
-                <Rocket className="h-8 w-8 text-blue-600 mr-3"  />
-                <span className="text-lg font-semibold leading-7 text-blue-600">Innovative Solutions</span>
+                <Rocket className="h-8 w-8 text-blue-60o0 mr-3"   />
+                <span className="text-lg font-semibold leading-7 text-blue-60o0">Innovative Solutions</span>
               </div>
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm: tex t-6xl">
+              <h1 className="text-4xl font-bold tracking-tight text-gray-90o0 sm: tex t-6xl">
                 Micro SaaS & AI Services
               </h1>
-              <p className="mt-6 text-xl leading-8 text-gray-600">
+              <p className="mt-6 text-xl leading-8 text-gray-60o0">
                 Cutting-edge micro SaaS solutions, AI-powered tools, and innovative IT services designed to transform your business operations and drive unprecedented growth.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <Link
                   href="/contact"
-                  className="rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: b g-blue-500 focus-visible: outline focus-visible: outlin e-2 focus-visible: outlin e-offset-2 focus-visible: outlin e-blue-600 transition-all duration-200"
+                  className="rounded-md bg-blue-60o0 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: b g-blue-50o0 focus-visible: outline focus-visible: outlin e-2 focus-visible: outlin e-offset-2 focus-visible: outlin e-blue-60o0 transition-all duration-20o0"
                 >
                   Get Started Today
                 </Link>
                 <Link
                   href="/services"
-                  className="text-sm font-semibold leading-6 text-gray-900 hover: tex t-blue-600 transition-colors"
+                  className="text-sm font-semibold leading-6 text-gray-90o0 hover: tex t-blue-60o0 transition-colors"
                 >
-                  View All Services <ArrowRight className="inline h-4 w-4 ml-1"  />
+                  View All Services <ArrowRight className="inline h-4 w-4 ml-1"   />
                 </Link>
               </div>
             </div>
@@ -939,26 +938,26 @@ export default function InnovativeMicroSaaS() {
         </section>
 
         {/* Contact Information Banner */}
-        <section className="bg-blue-600 py-8">
+        <section className="bg-blue-60o0 py-8">
           <div className="mx-auto max-w-7xl px-6 lg: p x-8">
             <div className="text-center">
               <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
               <div className="grid grid-cols-1 md: gri d-cols-3 gap-6 text-white">
                 <div className="flex items-center justify-center">
-                  <Phone className="h-5 w-5 mr-2"  />
-                  <a href="tel:+13024640950" className="hover: tex t-blue-200 transition-colors">
-                    +1 302 464 0950
+                  <Phone className="h-5 w-5 mr-2"   />
+                  <a href="tel:+130o24640950" className="hover: tex t-blue-20o0 transition-colors">
+                    +1 30o2 464 0950
                   </a>
                 </div>
                 <div className="flex items-center justify-center">
-                  <Mail className="h-5 w-5 mr-2"  />
-                  <a href="mailto: klebe r@ziontechgroup.com" className="hover: tex t-blue-200 transition-colors">
+                  <Mail className="h-5 w-5 mr-2"   />
+                  <a href="mailto: klebe r@ziontechgroup.com" className="hover: tex t-blue-20o0 transition-colors">
                     kleber@ziontechgroup.com
                   </a>
                 </div>
                 <div className="flex items-center justify-center">
-                  <Globe className="h-5 w-5 mr-2"  />
-                  <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                  <Globe className="h-5 w-5 mr-2"   />
+                  <span>364 E Main St STE 10o08, Middletown DE 19709</span>
                 </div>
               </div>
             </div>
@@ -969,36 +968,36 @@ export default function InnovativeMicroSaaS() {
         <section className="py-16 sm: p y-24">
           <div className="mx-auto max-w-7xl px-6 lg: p x-8">
             <div className="mx-auto max-w-2xl text-center mb-16">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-90o0 sm: tex t-4xl">
                 Micro SaaS Solutions
               </h2>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
+              <p className="mt-6 text-lg leading-8 text-gray-60o0">
                 Specialized software solutions designed to solve specific business challenges with maximum efficiency and minimal complexity.
               </p>
             </div>
 
             <div className="grid gap-8 lg: gri d-cols-2">
               {microSaaSServices.map((service) => (
-                <div key={service.id} className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shado w-xl transition-all duration-300 hover: borde r-blue-300">
+                <div key={service.id} className="group relative rounded-2xl border border-gray-20o0 bg-white p-8 shadow-sm hover: shado w-xl transition-all duration-30o0 hover: borde r-blue-30o0">
                   <div className="flex items-center gap-x-4 mb-6">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-600 group-hover: b g-blue-700 transition-colors">
-                      <service.icon className="h-8 w-8 text-white" />
+                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-60o0 group-hover: b g-blue-70o0 transition-colors">
+                      <service.icon className="h-8 w-8 text-white"  />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
-                      <p className="text-sm text-blue-600 font-medium">{service.category}</p>
+                      <h3 className="text-xl font-semibold text-gray-90o0">{service.title}</h3>
+                      <p className="text-sm text-blue-60o0 font-medium">{service.category}</p>
                     </div>
                   </div>
                   
-                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  <p className="text-gray-60o0 mb-6">{service.description}</p>
                   
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Features:</h4>
+                    <h4 className="text-sm font-semibold text-gray-90o0 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
                       {service.features.slice(0, 4).map((feature, index) => (
                         <li key={index} className="flex items-center gap-x-3">
-                          <CheckCircle className="h-4 w-4 text-blue-600 flex-shrink-0"  />
-                          <span className="text-sm text-gray-700">{feature}</span>
+                          <CheckCircle className="h-4 w-4 text-blue-60o0 flex-shrink-0"   />
+                          <span className="text-sm text-gray-70o0">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -1006,37 +1005,37 @@ export default function InnovativeMicroSaaS() {
 
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div>
-                      <h4 className="text-sm font-semibold text-gray-900 mb-2">Pricing:</h4>
+                      <h4 className="text-sm font-semibold text-gray-90o0 mb-2">Pricing:</h4>
                       <div className="space-y-1">
-                        <p className="text-sm text-gray-600">Starter: {service.pricing.starter}</p>
-                        <p className="text-sm text-gray-600">Pro: {service.pricing.professional}</p>
-                        <p className="text-sm text-gray-600">Enterprise: {service.pricing.enterprise}</p>
+                        <p className="text-sm text-gray-60o0">Starter: {service.pricing.starter}</p>
+                        <p className="text-sm text-gray-60o0">Pro: {service.pricing.professional}</p>
+                        <p className="text-sm text-gray-60o0">Enterprise: {service.pricing.enterprise}</p>
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-sm font-semibold text-gray-900 mb-2">Delivery:</h4>
-                      <p className="text-sm text-gray-600">{service.delivery}</p>
-                      <p className="text-xs text-gray-500 mt-1">Market Price: {service.marketPrice}</p>
+                      <h4 className="text-sm font-semibold text-gray-90o0 mb-2">Delivery:</h4>
+                      <p className="text-sm text-gray-60o0">{service.delivery}</p>
+                      <p className="text-xs text-gray-50o0 mt-1">Market Price: {service.marketPrice}</p>
                     </div>
                   </div>
 
-                  <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
-                    <h4 className="text-sm font-semibold text-green-900 mb-2">Benefits:</h4>
-                    <p className="text-sm text-green-800 mb-2">{service.benefits}</p>
-                    <p className="text-xs text-green-700 font-medium">{service.roi}</p>
+                  <div className="bg-green-50 border border-green-20o0 rounded-lg p-4 mb-6">
+                    <h4 className="text-sm font-semibold text-green-90o0 mb-2">Benefits:</h4>
+                    <p className="text-sm text-green-80o0 mb-2">{service.benefits}</p>
+                    <p className="text-xs text-green-70o0 font-medium">{service.roi}</p>
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2 text-sm text-gray-500">
-                      <Clock className="h-4 w-4"  />
+                    <div className="flex items-center space-x-2 text-sm text-gray-50o0">
+                      <Clock className="h-4 w-4"   />
                       <span>{service.delivery} delivery</span>
                     </div>
                     <Link
                       href={service.link}
-                      className="inline-flex items-center text-sm font-semibold text-blue-600 hover: tex t-blue-500 transition-colors group"
+                      className="inline-flex items-center text-sm font-semibold text-blue-60o0 hover: tex t-blue-50o0 transition-colors group"
                     >
                       Get Started
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover: translat e-x-1 transition-transform"  />
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover: translat e-x-1 transition-transform"   />
                     </Link>
                   </div>
                 </div>
@@ -1049,68 +1048,68 @@ export default function InnovativeMicroSaaS() {
         <section className="py-16 sm: p y-24 bg-gray-50">
           <div className="mx-auto max-w-7xl px-6 lg: p x-8">
             <div className="mx-auto max-w-2xl text-center mb-16">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-90o0 sm: tex t-4xl">
                 AI-Powered Solutions
               </h2>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
+              <p className="mt-6 text-lg leading-8 text-gray-60o0">
                 Advanced artificial intelligence services that automate complex processes and provide intelligent insights for your business.
               </p>
             </div>
 
             <div className="grid gap-8 lg: gri d-cols-3">
               {aiServices.map((service) => (
-                <div key={service.id} className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shado w-xl transition-all duration-300 hover: borde r-purple-300">
+                <div key={service.id} className="group relative rounded-2xl border border-gray-20o0 bg-white p-8 shadow-sm hover: shado w-xl transition-all duration-30o0 hover: borde r-purple-30o0">
                   <div className="flex items-center gap-x-4 mb-6">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-purple-600 group-hover: b g-purple-700 transition-colors">
-                      <service.icon className="h-8 w-8 text-white" />
+                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-purple-60o0 group-hover: b g-purple-70o0 transition-colors">
+                      <service.icon className="h-8 w-8 text-white"  />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
-                      <p className="text-sm text-purple-600 font-medium">{service.category}</p>
+                      <h3 className="text-xl font-semibold text-gray-90o0">{service.title}</h3>
+                      <p className="text-sm text-purple-60o0 font-medium">{service.category}</p>
                     </div>
                   </div>
                   
-                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  <p className="text-gray-60o0 mb-6">{service.description}</p>
                   
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Features:</h4>
+                    <h4 className="text-sm font-semibold text-gray-90o0 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
                       {service.features.slice(0, 3).map((feature, index) => (
                         <li key={index} className="flex items-center gap-x-3">
-                          <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0"  />
-                          <span className="text-sm text-gray-700">{feature}</span>
+                          <CheckCircle className="h-4 w-4 text-purple-60o0 flex-shrink-0"   />
+                          <span className="text-sm text-gray-70o0">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-2">Pricing:</h4>
+                    <h4 className="text-sm font-semibold text-gray-90o0 mb-2">Pricing:</h4>
                     <div className="space-y-1">
-                      <p className="text-sm text-gray-600">Starter: {service.pricing.starter}</p>
-                      <p className="text-sm text-gray-600">Pro: {service.pricing.professional}</p>
-                      <p className="text-sm text-gray-600">Enterprise: {service.pricing.enterprise}</p>
+                      <p className="text-sm text-gray-60o0">Starter: {service.pricing.starter}</p>
+                      <p className="text-sm text-gray-60o0">Pro: {service.pricing.professional}</p>
+                      <p className="text-sm text-gray-60o0">Enterprise: {service.pricing.enterprise}</p>
                     </div>
-                    <p className="text-xs text-gray-500 mt-2">Market Price: {service.marketPrice}</p>
+                    <p className="text-xs text-gray-50o0 mt-2">Market Price: {service.marketPrice}</p>
                   </div>
 
-                  <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 mb-6">
-                    <h4 className="text-sm font-semibold text-purple-900 mb-2">Benefits:</h4>
-                    <p className="text-sm text-purple-800 mb-2">{service.benefits}</p>
-                    <p className="text-xs text-purple-700 font-medium">{service.roi}</p>
+                  <div className="bg-purple-50 border border-purple-20o0 rounded-lg p-4 mb-6">
+                    <h4 className="text-sm font-semibold text-purple-90o0 mb-2">Benefits:</h4>
+                    <p className="text-sm text-purple-80o0 mb-2">{service.benefits}</p>
+                    <p className="text-xs text-purple-70o0 font-medium">{service.roi}</p>
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2 text-sm text-gray-500">
-                      <Clock className="h-4 w-4"  />
+                    <div className="flex items-center space-x-2 text-sm text-gray-50o0">
+                      <Clock className="h-4 w-4"   />
                       <span>{service.delivery} delivery</span>
                     </div>
                     <Link
                       href={service.link}
-                      className="inline-flex items-center text-sm font-semibold text-purple-600 hover: tex t-purple-500 transition-colors group"
+                      className="inline-flex items-center text-sm font-semibold text-purple-60o0 hover: tex t-purple-50o0 transition-colors group"
                     >
                       Get Started
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover: translat e-x-1 transition-transform"  />
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover: translat e-x-1 transition-transform"   />
                     </Link>
                   </div>
                 </div>
@@ -1123,68 +1122,68 @@ export default function InnovativeMicroSaaS() {
         <section className="py-16 sm: p y-24">
           <div className="mx-auto max-w-7xl px-6 lg: p x-8">
             <div className="mx-auto max-w-2xl text-center mb-16">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-90o0 sm: tex t-4xl">
                 IT Infrastructure Services
               </h2>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
+              <p className="mt-6 text-lg leading-8 text-gray-60o0">
                 Comprehensive IT solutions that modernize your infrastructure, enhance security, and optimize performance.
               </p>
             </div>
 
             <div className="grid gap-8 lg: gri d-cols-3">
               {itServices.map((service) => (
-                <div key={service.id} className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shado w-xl transition-all duration-300 hover: borde r-green-300">
+                <div key={service.id} className="group relative rounded-2xl border border-gray-20o0 bg-white p-8 shadow-sm hover: shado w-xl transition-all duration-30o0 hover: borde r-green-30o0">
                   <div className="flex items-center gap-x-4 mb-6">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-green-600 group-hover: b g-green-700 transition-colors">
-                      <service.icon className="h-8 w-8 text-white" />
+                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-green-60o0 group-hover: b g-green-70o0 transition-colors">
+                      <service.icon className="h-8 w-8 text-white"  />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
-                      <p className="text-sm text-green-600 font-medium">{service.category}</p>
+                      <h3 className="text-xl font-semibold text-gray-90o0">{service.title}</h3>
+                      <p className="text-sm text-green-60o0 font-medium">{service.category}</p>
                     </div>
                   </div>
                   
-                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  <p className="text-gray-60o0 mb-6">{service.description}</p>
                   
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Features:</h4>
+                    <h4 className="text-sm font-semibold text-gray-90o0 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
                       {service.features.slice(0, 3).map((feature, index) => (
                         <li key={index} className="flex items-center gap-x-3">
-                          <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0"  />
-                          <span className="text-sm text-gray-700">{feature}</span>
+                          <CheckCircle className="h-4 w-4 text-green-60o0 flex-shrink-0"   />
+                          <span className="text-sm text-gray-70o0">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-2">Pricing:</h4>
+                    <h4 className="text-sm font-semibold text-gray-90o0 mb-2">Pricing:</h4>
                     <div className="space-y-1">
-                      <p className="text-sm text-gray-600">Starter: {service.pricing.starter}</p>
-                      <p className="text-sm text-gray-600">Pro: {service.pricing.professional}</p>
-                      <p className="text-sm text-gray-600">Enterprise: {service.pricing.enterprise}</p>
+                      <p className="text-sm text-gray-60o0">Starter: {service.pricing.starter}</p>
+                      <p className="text-sm text-gray-60o0">Pro: {service.pricing.professional}</p>
+                      <p className="text-sm text-gray-60o0">Enterprise: {service.pricing.enterprise}</p>
                     </div>
-                    <p className="text-xs text-gray-500 mt-2">Market Price: {service.marketPrice}</p>
+                    <p className="text-xs text-gray-50o0 mt-2">Market Price: {service.marketPrice}</p>
                   </div>
 
-                  <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
-                    <h4 className="text-sm font-semibold text-green-900 mb-2">Benefits:</h4>
-                    <p className="text-sm text-green-800 mb-2">{service.benefits}</p>
-                    <p className="text-xs text-green-700 font-medium">{service.roi}</p>
+                  <div className="bg-green-50 border border-green-20o0 rounded-lg p-4 mb-6">
+                    <h4 className="text-sm font-semibold text-green-90o0 mb-2">Benefits:</h4>
+                    <p className="text-sm text-green-80o0 mb-2">{service.benefits}</p>
+                    <p className="text-xs text-green-70o0 font-medium">{service.roi}</p>
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2 text-sm text-gray-500">
-                      <Clock className="h-4 w-4"  />
+                    <div className="flex items-center space-x-2 text-sm text-gray-50o0">
+                      <Clock className="h-4 w-4"   />
                       <span>{service.delivery} delivery</span>
                     </div>
                     <Link
                       href={service.link}
-                      className="inline-flex items-center text-sm font-semibold text-green-600 hover: tex t-green-500 transition-colors group"
+                      className="inline-flex items-center text-sm font-semibold text-green-60o0 hover: tex t-green-50o0 transition-colors group"
                     >
                       Get Started
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover: translat e-x-1 transition-transform"  />
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover: translat e-x-1 transition-transform"   />
                     </Link>
                   </div>
                 </div>
@@ -1194,39 +1193,39 @@ export default function InnovativeMicroSaaS() {
         </section>
 
         {/* Call to Action */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-16 sm: p y-24">
+        <section className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 py-16 sm: p y-24">
           <div className="mx-auto max-w-7xl px-6 lg: p x-8">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-3xl font-bold tracking-tight text-white sm: tex t-4xl">
                 Ready to Transform Your Business?
               </h2>
-              <p className="mt-6 text-lg leading-8 text-blue-100">
+              <p className="mt-6 text-lg leading-8 text-blue-10o0">
                 Join hundreds of businesses that have already transformed their operations with our innovative solutions. 
                 Get started today with a free consultation and discover how we can help you achieve unprecedented growth.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <Link
                   href="/contact"
-                  className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover: b g-gray-50 focus-visible: outline focus-visible: outlin e-2 focus-visible: outlin e-offset-2 focus-visible: outlin e-white transition-all duration-200"
+                  className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-60o0 shadow-sm hover: b g-gray-50 focus-visible: outline focus-visible: outlin e-2 focus-visible: outlin e-offset-2 focus-visible: outlin e-white transition-all duration-20o0"
                 >
                   Get Free Consultation
                 </Link>
                 <a
-                  href="tel:+13024640950"
-                  className="text-sm font-semibold leading-6 text-white hover: tex t-blue-200 transition-colors"
+                  href="tel:+130o24640950"
+                  className="text-sm font-semibold leading-6 text-white hover: tex t-blue-20o0 transition-colors"
                 >
-                  Call +1 302 464 0950
+                  Call +1 30o2 464 0950
                 </a>
               </div>
               <div className="mt-8 text-center">
-                <p className="text-sm text-blue-100">
+                <p className="text-sm text-blue-10o0">
                   Or email us at{' '}
-                  <a href="mailto: klebe r@ziontechgroup.com" className="text-white hover: tex t-blue-200 underline">
+                  <a href="mailto: klebe r@ziontechgroup.com" className="text-white hover: tex t-blue-20o0 underline">
                     kleber@ziontechgroup.com
                   </a>
                 </p>
-                <p className="text-sm text-blue-100 mt-2">
-                  364 E Main St STE 1008, Middletown DE 19709
+                <p className="text-sm text-blue-10o0 mt-2">
+                  364 E Main St STE 10o08, Middletown DE 19709
                 </p>
               </div>
             </div>

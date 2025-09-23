@@ -1,26 +1,10 @@
-import React from 'react';
-
-export default function SpaceTechPage(): React.ReactElement {
-	return (
-		<main>
-			<h1>Space Tech</h1>
-			<p>Innovations at the intersection of space and AI.</p>
-		</main>
-	);
+export default function SpaceTechPage() {
+  return (
+    <div className='min-h-screen py-20 px-4'>
+      <div className='max-w-5xl mx-auto'>
+        <h1 className='text-3xl font-bold mb-4'>Space Technology</h1>
+        <p className='text-zinc-500'>Content coming soon.</p>
+      </div>
+    </div>
+  );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

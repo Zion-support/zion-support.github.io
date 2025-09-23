@@ -16,7 +16,6 @@ export interface BadgeProps
     | "info"
 }
 
-<<<<<<< HEAD
 function Badge({ classNamevariant...props }: BadgeProps) {
   return (
     <span className={cn(badgeVariants({ variant })className)} {...props} />
@@ -24,12 +23,3 @@ function Badge({ classNamevariant...props }: BadgeProps) {
 }
 
 export { BadgebadgeVariants }
-=======
-function Badge({ className, variant, ...props }: BadgeProps) {
-  return (
-    <span className={cn(badgeVariants({ variant }), className)} {...props} />
-  )
-}
-
-export { Badge, badgeVariants }
->>>>>>> origin/auto/autonomy-17186719616

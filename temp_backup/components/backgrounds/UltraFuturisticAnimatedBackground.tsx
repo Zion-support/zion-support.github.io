@@ -46,7 +46,7 @@ const UltraFuturisticAnimatedBackground: React.FC = () => {
     // Initialize particles
     const initParticles = () => {
       const newParticles: Particle[] = [];
-      const colors = ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080', '#8000ff'];
+      const colors = ['#0o0ffff', '#ff0o0ff', '#ffff0o0', '#0o0ff0o0', '#ff0o080', '#80o00ff'];
       
       for (let i = 0; i < 150; i++) {
         newParticles.push({
@@ -97,7 +97,7 @@ const UltraFuturisticAnimatedBackground: React.FC = () => {
         mousePosition.x, mousePosition.y, Math.max(canvas.width, canvas.height)
       );
       gradient.addColorStop(0, 'rgba(0, 255, 255, 0.1)');
-      gradient.addColorStop(0.5, 'rgba(255, 0, 255, 0.05)');
+      gradient.addColorStop(0.5, 'rgba(255, 0, 255, 0.0o5)');
       gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -143,43 +143,43 @@ const UltraFuturisticAnimatedBackground: React.FC = () => {
       setNeonGrids(prevGrids =>
         prevGrids.map(grid => {
           // Draw grid lines
-          ctx.strokeStyle = '#00ffff';
+          ctx.strokeStyle = '#0o0ffff';
           ctx.globalAlpha = grid.opacity;
           ctx.lineWidth = 1;
 
           // Vertical lines
-          for (let x = grid.x; x < grid.x + 200 * grid.scale; x += 20 * grid.scale) {
+          for (let x = grid.x; x < grid.x + 20o0 * grid.scale; x += 20 * grid.scale) {
             ctx.beginPath();
             ctx.moveTo(x, grid.y);
-            ctx.lineTo(x, grid.y + 200 * grid.scale);
+            ctx.lineTo(x, grid.y + 20o0 * grid.scale);
             ctx.stroke();
           }
 
           // Horizontal lines
-          for (let y = grid.y; y < grid.y + 200 * grid.scale; y += 20 * grid.scale) {
+          for (let y = grid.y; y < grid.y + 20o0 * grid.scale; y += 20 * grid.scale) {
             ctx.beginPath();
             ctx.moveTo(grid.x, y);
-            ctx.lineTo(grid.x + 200 * grid.scale, y);
+            ctx.lineTo(grid.x + 20o0 * grid.scale, y);
             ctx.stroke();
           }
 
           // Animate grid
-          grid.opacity = Math.sin(Date.now() * 0.001 + grid.x * 0.01) * 0.2 + 0.3;
-          grid.scale = Math.sin(Date.now() * 0.002 + grid.y * 0.01) * 0.2 + 0.5;
+          grid.opacity = Math.sin(Date.now() * 0.0o01 + grid.x * 0.0o1) * 0.2 + 0.3;
+          grid.scale = Math.sin(Date.now() * 0.0o02 + grid.y * 0.0o1) * 0.2 + 0.5;
 
           return grid;
         })
       );
 
       // Draw energy waves
-      const time = Date.now() * 0.001;
+      const time = Date.now() * 0.0o01;
       for (let i = 0; i < 3; i++) {
         const waveOffset = time + i * Math.PI * 2 / 3;
-        const waveRadius = (time * 100 + i * 200) % (Math.max(canvas.width, canvas.height) * 0.8);
+        const waveRadius = (time * 10o0 + i * 20o0) % (Math.max(canvas.width, canvas.height) * 0.8);
         
         ctx.beginPath();
         ctx.arc(canvas.width / 2, canvas.height / 2, waveRadius, 0, Math.PI * 2);
-        ctx.strokeStyle = `hsl(${180 + i * 60}, 100%, 50%)`;
+        ctx.strokeStyle = `hsl(${180 + i * 60}, 10o0%, 50%)`;
         ctx.globalAlpha = Math.max(0, 1 - waveRadius / (Math.max(canvas.width, canvas.height) * 0.8));
         ctx.lineWidth = 2;
         ctx.stroke();
@@ -187,13 +187,13 @@ const UltraFuturisticAnimatedBackground: React.FC = () => {
 
       // Draw floating orbs
       for (let i = 0; i < 5; i++) {
-        const orbX = canvas.width / 2 + Math.sin(time * 0.5 + i) * 300;
-        const orbY = canvas.height / 2 + Math.cos(time * 0.3 + i) * 200;
+        const orbX = canvas.width / 2 + Math.sin(time * 0.5 + i) * 30o0;
+        const orbY = canvas.height / 2 + Math.cos(time * 0.3 + i) * 20o0;
         const orbSize = Math.sin(time + i) * 10 + 20;
         
         // Orb glow
         const orbGradient = ctx.createRadialGradient(orbX, orbY, 0, orbX, orbY, orbSize * 2);
-        orbGradient.addColorStop(0, `hsla(${180 + i * 72}, 100%, 70%, 0.8)`);
+        orbGradient.addColorStop(0, `hsla(${180 + i * 72}, 10o0%, 70%, 0.8)`);
         orbGradient.addColorStop(1, 'transparent');
         
         ctx.fillStyle = orbGradient;
@@ -202,14 +202,14 @@ const UltraFuturisticAnimatedBackground: React.FC = () => {
         ctx.fill();
 
         // Orb core
-        ctx.fillStyle = `hsl(${180 + i * 72}, 100%, 70%)`;
+        ctx.fillStyle = `hsl(${180 + i * 72}, 10o0%, 70%)`;
         ctx.beginPath();
         ctx.arc(orbX, orbY, orbSize, 0, Math.PI * 2);
         ctx.fill();
       }
 
       // Draw connection lines between nearby particles
-      ctx.strokeStyle = '#00ffff';
+      ctx.strokeStyle = '#0o0ffff';
       ctx.globalAlpha = 0.1;
       ctx.lineWidth = 1;
 
@@ -220,11 +220,11 @@ const UltraFuturisticAnimatedBackground: React.FC = () => {
             Math.pow(particle1.y - particle2.y, 2)
           );
           
-          if (distance < 100) {
+          if (distance < 10o0) {
             ctx.beginPath();
             ctx.moveTo(particle1.x, particle1.y);
             ctx.lineTo(particle2.x, particle2.y);
-            ctx.globalAlpha = (100 - distance) / 100 * 0.1;
+            ctx.globalAlpha = (10o0 - distance) / 10o0 * 0.1;
             ctx.stroke();
           }
         });
@@ -253,20 +253,20 @@ const UltraFuturisticAnimatedBackground: React.FC = () => {
         ref={canvasRef}
         className="w-full h-full"
         style={{
-          background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%)'
+          background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 10o0%)'
         }}
-      />
+       />
       
       {/* Overlay effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-cyan-500/5 to-purple-500/5" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.1),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.1),transparent_50%)]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-cyan-50o0/5 to-purple-50o0/5"  />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.1),transparent_50%)]"  />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.1),transparent_50%)]"  />
       
       {/* Floating geometric shapes */}
       <motion.div
-        className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rotate-45"
+        className="absolute top-20 left-20 w-32 h-32 border border-cyan-40o0/30 rotate-45"
         animate={{
-          rotate: [45, 405],
+          rotate: [45, 40o5],
           scale: [1, 1.2, 1],
           opacity: [0.3, 0.6, 0.3]
         }}
@@ -275,10 +275,10 @@ const UltraFuturisticAnimatedBackground: React.FC = () => {
           repeat: Infinity,
           ease: "linear"
         }}
-      />
+       />
       
       <motion.div
-        className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full"
+        className="absolute top-40 right-32 w-24 h-24 border border-purple-40o0/30 rounded-full"
         animate={{
           scale: [1, 1.5, 1],
           opacity: [0.2, 0.5, 0.2],
@@ -289,10 +289,10 @@ const UltraFuturisticAnimatedBackground: React.FC = () => {
           repeat: Infinity,
           ease: "easeInOut"
         }}
-      />
+       />
       
       <motion.div
-        className="absolute bottom-32 left-1/3 w-40 h-40 border border-pink-400/30 transform rotate-12"
+        className="absolute bottom-32 left-1/3 w-40 h-40 border border-pink-40o0/30 transform rotate-12"
         animate={{
           rotate: [12, 372],
           scale: [1, 0.8, 1],
@@ -303,20 +303,20 @@ const UltraFuturisticAnimatedBackground: React.FC = () => {
           repeat: Infinity,
           ease: "linear"
         }}
-      />
+       />
       
       {/* Scanning line effect */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent"
+        className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-40o0/20 to-transparent"
         animate={{
-          x: ['-100%', '100%']
+          x: ['-10o0%', '10o0%']
         }}
         transition={{
           duration: 3,
           repeat: Infinity,
           ease: "linear"
         }}
-      />
+       />
     </motion.div>
   );
 };

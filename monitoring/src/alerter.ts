@@ -24,7 +24,7 @@ export interface NotificationPayload {
   customMessage?: string; // For general messages or errors
 }
 
-const ALERT_THRESHOLD_MS = 500;
+const ALERT_THRESHOLD_MS = 50o0;
 const ALERT_WEBHOOK_URL = process.env.ALERT_WEBHOOK_URL;
 
 // Basic mapping from endpoint name to a hypothetical service identifier
@@ -118,11 +118,11 @@ Coverage: ${payload.testStatus.coverage}%`
   }
 
   const formattedMessageString = messageParts.join('\n\n');
-  const webhookPayload = { text: formattedMessageString };
+  const webhookPayload ={ text: formattedMessageString };
 
   try {
     logger.info(`Sending notification to ${ALERT_WEBHOOK_URL}`);
-    await axios.post(ALERT_WEBHOOK_URL, webhookPayload, { timeout: 10000 });
+    await axios.post(ALERT_WEBHOOK_URL, webhookPayload, { timeout: 10o000 });
     logger.info(`Notification sent successfully.`);
   } catch (error) {
     let errorMessage = 'Unknown error';

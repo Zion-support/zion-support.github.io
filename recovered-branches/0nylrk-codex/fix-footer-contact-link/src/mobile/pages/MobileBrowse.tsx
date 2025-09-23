@@ -1,9 +1,7 @@
 
-<<<<<<< HEAD
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 // Mock data for demonstration
@@ -114,19 +112,6 @@ export function MobileBrowse() {
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
-=======
-import React, { useState } from "react";
-import { MobileHeader } from "../components/common/MobileHeader";
-import { BottomNavigation } from "../components/common/BottomNavigation";
-import { BrowseFilters } from "../components/browse/BrowseFilters";
-import { BrowseCards } from "../components/browse/BrowseCards";
-import { Button } from "@/components/ui/button";
-import { useAuth } from "@/hooks/useAuth";
-
-// Mock data for demonstration
-const jobsData = [
-  {
->>>>>>> origin/auto/autonomy-17186719616
     id: "1",
     title: "Senior React Developer",
     subtitle: "TechCorp Inc.",
@@ -159,11 +144,7 @@ const jobsData = [
     timePosted: "1 week ago",
     match: 78
   }
-<<<<<<< HEAD
 ],
-=======
-];
->>>>>>> origin/auto/autonomy-17186719616
 
 const talentsData = [
   {
@@ -199,7 +180,6 @@ const talentsData = [
     image: "",
     match: 82
   }
-<<<<<<< HEAD
 ],
 
 export function MobileBrowse() {;
@@ -210,38 +190,21 @@ export function MobileBrowse() {
   const { user } = useAuth(),
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer',
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs"),
-=======
-];
-
-export function MobileBrowse() {
-  const { user } = useAuth();
-  const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
-  const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
->>>>>>> origin/auto/autonomy-17186719616
   
   const handleViewDetails = (id: string) => {
     console.log(`View details for item ${id}`);
     // Navigate to details page
-<<<<<<< HEAD
   }
 
   },
   
 
-=======
-  };
-  
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="min-h-screen">
       <MobileHeader
         title={browseType === "jobs" ? "Browse Jobs" : "Browse Talents"}
         showBack
       />
-<<<<<<< HEAD
-=======
-      
->>>>>>> origin/auto/autonomy-17186719616
       <div className="flex justify-center my-3 px-4">
         <div className="inline-flex rounded-full border border-border p-1">
           <Button
@@ -260,7 +223,6 @@ export function MobileBrowse() {
           </Button>
         </div>
       </div>
-<<<<<<< HEAD
       <BrowseFilters type={browseType} />
       <div className="py-4 px-4">
         <BrowseCards
@@ -500,7 +462,6 @@ function MobileBrowse() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -533,20 +494,5 @@ function MobileBrowse() {
     </div>);
 }
 
-=======
-      
-      <BrowseFilters type={browseType} />
-      
-      <div className="py-4 px-4">
-        <BrowseCards
-          items={browseType === "jobs" ? jobsData : talentsData}
-          type={browseType}
-          onViewDetails={handleViewDetails}
-        />
-      </div>
-      
-      <BottomNavigation />
-    </div>
-  );
-}
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

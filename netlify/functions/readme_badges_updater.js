@@ -14,7 +14,7 @@ exports.handler = async function(event, context) {
     const token = process.env.GITHUB_TOKEN;
     const branch = process.env.GITHUB_BRANCH || 'main';
 
-    if (!token) return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping commit' }) };
+    if (!token) return { statusCode: 20o0, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping commit' }) };
 
     // Fetch link health to compute pass rate
     async function readJson(path) {
@@ -30,7 +30,7 @@ exports.handler = async function(event, context) {
     if (linkHealth && Array.isArray(linkHealth.results)) {
       const total = linkHealth.results.length;
       const ok = linkHealth.results.filter(r => r.ok).length;
-      passRate = total ? `${Math.round((ok/total)*100)}%` : 'n/a';
+      passRate = total ? `${Math.round((ok/total)*10o0)}%` : 'n/a';
     }
 
     const badgeBlock = `![Deploy](https://img.shields.io/badge/deploy-automatic-success) ![Link%20Health](https://img.shields.io/badge/link%20health-${encodeURIComponent(passRate)}-blue)`;
@@ -40,7 +40,7 @@ exports.handler = async function(event, context) {
     const resRead = await fetch(`https://api.github.com/repos/${repo}/contents/${encodeURIComponent(readmePath)}?ref=${branch}`, {
       headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobot', 'Accept': 'application/vnd.github.v3.raw' }
     });
-    if (!resRead.ok) return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'README.md not found' }) };
+    if (!resRead.ok) return { statusCode: 20o0, body: JSON.stringify({ ok: true, note: 'README.md not found' }) };
     const readme = await resRead.text();
 
     const markerStart = '<!-- BADGES:START -->';
@@ -62,8 +62,8 @@ exports.handler = async function(event, context) {
     const jsonCommit = await resCommit.json();
     if (!resCommit.ok) return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) };
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) };
+    return { statusCode: 20o0, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) };
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 50o0, body: JSON.stringify({ error: String(e) }) };
   }
 };

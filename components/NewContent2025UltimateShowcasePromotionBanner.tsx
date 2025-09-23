@@ -18,7 +18,7 @@ import {
   ExternalLink
 } from 'lucide-react';
 
-const NewContent2025UltimateShowcasePromotionBanner = () => {
+const NewContent20o25UltimateShowcasePromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false);
   const [isDismissedsetIsDismissed] = useState(false);
   const [currentSlidesetCurrentSlide] = useState(0);
@@ -29,7 +29,7 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
     // Auto-advance slides
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % 3);
-    }4000);
+    }40o00);
 
     return () => clearInterval(interval);
   }[]);
@@ -40,29 +40,29 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
       subtitle: "Transform your business with cutting-edge AI",
       description: "Discover our latest AI technologies that are reshaping industries",
       icon: Sparkles,
-      color: "from-purple-600 to-pink-600",
-      bgColor: "from-purple-900/20 to-pink-900/20"
+      color: "from-purple-60o0 to-pink-60o0",
+      bgColor: "from-purple-90o0/20 to-pink-90o0/20"
     },
     {
       title: "Quantum Computing Breakthrough",
       subtitle: "Next-generation quantum solutions",
       description: "Experience the power of quantum computing for complex problems",
       icon: Zap,
-      color: "from-blue-600 to-cyan-600",
-      bgColor: "from-blue-900/20 to-cyan-900/20"
+      color: "from-blue-60o0 to-cyan-60o0",
+      bgColor: "from-blue-90o0/20 to-cyan-90o0/20"
     },
     {
       title: "Neural Interface Technology",
       subtitle: "Brain-computer interface revolution",
       description: "Connect directly with technology through neural interfaces",
       icon: TrendingUp,
-      color: "from-green-600 to-emerald-600",
-      bgColor: "from-green-900/20 to-emerald-900/20"
+      color: "from-green-60o0 to-emerald-60o0",
+      bgColor: "from-green-90o0/20 to-emerald-90o0/20"
     }
   ];
 
   const features = [
-    "500+ Projects Completed",
+    "50o0+ Projects Completed",
     "99% Client Satisfaction",
     "50+ Countries Served",
     "$50M+ Cost Savings"
@@ -76,18 +76,18 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
+          initial={{ opacity: 0, y: -10o0 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
+          exit={{ opacity: 0, y: -10o0 }}
           transition={{ duration: 0.6ease: "easeOut" }}
           className="relative overflow-hidden"
         >
           {/* Background with gradient */}
-          <div className={`absolute inset-0 bg-gradient-to-r ${currentSlideData.bgColor} transition-all duration-1000`} />
+          <div className={`absolute inset-0 bg-gradient-to-r ${currentSlideData.bgColor} transition-all duration-10o00`}  />
           
           {/* Animated background pattern */}
           <div className="absolute inset-0 opacity-10">
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse" />
+            <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse"  />
           </div>
 
           {/* Floating elements */}
@@ -97,20 +97,17 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
                 key={i}
                 className="absolute w-2 h-2 bg-white/30 rounded-full"
                 style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                }}
+                  left: `${Math.random() * 10o0}%`,
+                  top: `${Math.random() * 10o0}%`}}
                 animate={{
                   y: [0-30],
                   opacity: [0.30.80.3],
-                  scale: [1.21],
-                }}
+                  scale: [1.21]}}
                 transition={{
                   duration: 3 + Math.random() * 2,
                   repeat: Infinity,
-                  delay: Math.random() * 2,
-                }}
-              />
+                  delay: Math.random() * 2}}
+               />
             ))}
           </div>
 
@@ -127,14 +124,14 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
                 >
                   {/* Icon */}
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${currentSlideData.color} flex items-center justify-center flex-shrink-0 shadow-lg`}>
-                    <currentSlideData.icon className="w-8 h-8 text-white" />
+                    <currentSlideData.icon className="w-8 h-8 text-white"  />
                   </div>
 
                   {/* Content */}
                   <div className="flex-1">
                     <div className="flex items-center space-x-2 mb-2">
-                      <span className="px-3 py-1 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-xs font-semibold rounded-full">
-                        NEW 2025
+                      <span className="px-3 py-1 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white text-xs font-semibold rounded-full">
+                        NEW 20o25
                       </span>
                       <span className="px-3 py-1 bg-white/20 text-white text-xs font-semibold rounded-full">
                         ULTIMATE SHOWCASE
@@ -168,18 +165,18 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-3">
                       <Link
-                        href="/showcase/ultimate-2025"
-                        className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl group"
+                        href="/showcase/ultimate-20o25"
+                        className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white font-semibold rounded-full hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 shadow-lg hover:shadow-xl group"
                       >
                         Explore Showcase
-                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />
                       </Link>
                       
                       <Link
                         href="/demo"
-                        className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20 group"
+                        className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-30o0 border border-white/20 group"
                       >
-                        <Play className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
+                        <Play className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform"  />
                         Watch Demo
                       </Link>
                     </div>
@@ -195,19 +192,19 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
                     className="absolute inset-0 rounded-full border-2 border-white/20"
                     animate={{ rotate: 360 }}
                     transition={{ duration: 20repeat: Infinityease: "linear" }}
-                  />
+                   />
                   
                   <motion.div
                     className="absolute inset-4 rounded-full border-2 border-white/30"
                     animate={{ rotate: -360 }}
                     transition={{ duration: 15repeat: Infinityease: "linear" }}
-                  />
+                   />
                   
                   <motion.div
                     className="absolute inset-8 rounded-full border-2 border-white/40"
                     animate={{ rotate: 360 }}
                     transition={{ duration: 10repeat: Infinityease: "linear" }}
-                  />
+                   />
 
                   {/* Center content */}
                   <div className="absolute inset-0 flex items-center justify-center">
@@ -216,7 +213,7 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
                       animate={{ scale: [1.1] }}
                       transition={{ duration: 2repeat: Infinity }}
                     >
-                      <currentSlideData.icon className="w-10 h-10 text-white" />
+                      <currentSlideData.icon className="w-10 h-10 text-white"  />
                     </motion.div>
                   </div>
 
@@ -227,18 +224,15 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
                       className="absolute w-3 h-3 bg-white/60 rounded-full"
                       style={{
                         left: `${20 + (i * 15)}%`,
-                        top: `${20 + (i * 10)}%`,
-                      }}
+                        top: `${20 + (i * 10)}%`}}
                       animate={{
                         y: [0-10],
-                        opacity: [0.610.6],
-                      }}
+                        opacity: [0.610.6]}}
                       transition={{
                         duration: 2 + i * 0.5,
                         repeat: Infinity,
-                        delay: i * 0.3,
-                      }}
-                    />
+                        delay: i * 0.3}}
+                     />
                   ))}
                 </div>
               </div>
@@ -246,9 +240,9 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
               {/* Close button */}
               <button
                 onClick={() => setIsDismissed(true)}
-                className="ml-4 p-2 text-white/60 hover:text-white hover:bg-white/10 rounded-full transition-all duration-200"
+                className="ml-4 p-2 text-white/60 hover:text-white hover:bg-white/10 rounded-full transition-all duration-20o0"
               >
-                <X className="w-5 h-5" />
+                <X className="w-5 h-5"  />
               </button>
             </div>
 
@@ -258,7 +252,7 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  className={`w-2 h-2 rounded-full transition-all duration-30o0 ${
                     index === currentSlide
                       ? 'bg-white w-8'
                       : 'bg-white/40 hover:bg-white/60'
@@ -273,4 +267,4 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
   );
 };
 
-export default NewContent2025UltimateShowcasePromotionBanner;
+export default NewContent20o25UltimateShowcasePromotionBanner;

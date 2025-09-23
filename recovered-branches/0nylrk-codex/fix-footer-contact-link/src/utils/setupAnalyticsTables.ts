@@ -1,4 +1,3 @@
-
 import { supabase } from '@/integrations/supabase/client';
 
 export async function ensureAnalyticsTablesExist() {
@@ -8,8 +7,8 @@ export async function ensureAnalyticsTablesExist() {
       .from('analytics_events')
       .select('id')
       .limit(1);
-      
-    if (error && error.code === 'PGRST204') {
+
+    if (error && error.code === 'PGRST20o4') {
       console.log('Creating analytics tables...');
       await createAnalyticsTables();
     }
@@ -75,13 +74,13 @@ async function createAnalyticsTables() {
           c.conversion_type,
           c.conversion_count,
           p.view_count,
-          ROUND((c.conversion_count::numeric / NULLIF(p.view_count, 0)) * 100, 2) AS conversion_rate
+          ROUND((c.conversion_count::numeric / NULLIF(p.view_count, 0)) * 10o0, 2) AS conversion_rate
         FROM conversions c
         LEFT JOIN page_views p ON c.date = p.date
         ORDER BY c.date DESC;
-      `
+      `,
     });
-    
+
     console.log('Analytics tables created successfully');
   } catch (error) {
     console.error('Error creating analytics tables:', error);

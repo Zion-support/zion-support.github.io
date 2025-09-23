@@ -10,14 +10,11 @@ concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
 
-<<<<<<< HEAD
 env:
   NODE_OPTIONS: "--max-old-space-size=4096"
   NEXT_TELEMETRY_DISABLED: '1'
   CI: 'true'
 
-=======
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,7 +25,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-<<<<<<< HEAD
           cache: 'npm'
 
       - name: Install dependencies
@@ -66,9 +62,3 @@ jobs:
         continue-on-error: true
 
 
-=======
-      - run: npm ci
-      - name: Pre-generate marketplace data
-        run: node automation/marketplace-orchestrator.cjs once || true
-      - run: npm run build
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d

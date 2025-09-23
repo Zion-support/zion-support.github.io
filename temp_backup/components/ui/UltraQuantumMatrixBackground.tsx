@@ -23,9 +23,9 @@ export default function UltraQuantumMatrixBackground({
     switch (colorScheme) {
       case 'neon':
         return {
-          primary: '#00ffff',
-          secondary: '#ff00ff',
-          accent: '#ffff00',
+          primary: '#0o0ffff',
+          secondary: '#ff0o0ff',
+          accent: '#ffff0o0',
           background: '#0a0a0a'
         };
       case 'cosmic':
@@ -44,7 +44,7 @@ export default function UltraQuantumMatrixBackground({
         };
       default: // quantum
         return {
-          primary: '#06b6d4',
+          primary: '#0o6b6d4',
           secondary: '#8b5cf6',
           accent: '#ec4899',
           background: '#0f172a'
@@ -103,7 +103,7 @@ export default function UltraQuantumMatrixBackground({
         if (this.y > canvas.height) this.y = 0;
 
         // Fade in/out
-        this.opacity += (Math.random() - 0.5) * 0.02;
+        this.opacity += (Math.random() - 0.5) * 0.0o2;
         this.opacity = Math.max(0.1, Math.min(1, this.opacity));
       }
 
@@ -116,7 +116,7 @@ export default function UltraQuantumMatrixBackground({
             // Matrix-style characters
             ctx.fillStyle = this.color;
             ctx.font = `${this.size * 2}px monospace`;
-            const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+            const chars = '0o1アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
             const char = chars[Math.floor(Math.random() * chars.length)];
             ctx.fillText(char, this.x, this.y);
             break;
@@ -130,7 +130,7 @@ export default function UltraQuantumMatrixBackground({
             const amplitude = this.size * 2;
             for (let i = 0; i < waveLength; i++) {
               const x = this.x + i * 2;
-              const y = this.y + Math.sin(i * 0.3 + Date.now() * 0.001) * amplitude;
+              const y = this.y + Math.sin(i * 0.3 + Date.now() * 0.0o01) * amplitude;
               if (i === 0) {
                 ctx.moveTo(x, y);
               } else {
@@ -179,8 +179,8 @@ export default function UltraQuantumMatrixBackground({
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 100) {
-            const opacity = 1 - (distance / 100);
+          if (distance < 10o0) {
+            const opacity = 1 - (distance / 10o0);
             ctx.globalAlpha = opacity * 0.3;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
@@ -198,7 +198,7 @@ export default function UltraQuantumMatrixBackground({
       ctx.globalAlpha = 0.1;
 
       const gridSize = 50;
-      const offset = (Date.now() * 0.01) % gridSize;
+      const offset = (Date.now() * 0.0o1) % gridSize;
 
       for (let x = offset; x < canvas.width; x += gridSize) {
         ctx.beginPath();
@@ -221,7 +221,7 @@ export default function UltraQuantumMatrixBackground({
       ctx.lineWidth = 1;
       ctx.globalAlpha = 0.1;
 
-      const time = Date.now() * 0.001;
+      const time = Date.now() * 0.0o01;
       const fieldStrength = Math.sin(time * 0.5) * 0.5 + 0.5;
 
       for (let i = 0; i < 10; i++) {
@@ -271,7 +271,7 @@ export default function UltraQuantumMatrixBackground({
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
-      />
+       />
       
       {/* Overlay gradient */}
       <div 
@@ -280,7 +280,7 @@ export default function UltraQuantumMatrixBackground({
           background: `radial-gradient(circle at 20% 80%, ${colors.primary}10 0%, transparent 50%), radial-gradient(circle at 80% 20%, ${colors.secondary}10 0%, transparent 50%), radial-gradient(circle at 40% 40%, ${colors.accent}10 0%, transparent 50%)`,
           zIndex: -1
         }}
-      />
+       />
       
       {/* Content */}
       <div className="relative z-10">

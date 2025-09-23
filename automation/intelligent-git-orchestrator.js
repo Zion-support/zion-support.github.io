@@ -24,8 +24,7 @@ class IntelligentGitOrchestrator {
     this.logFile = path.join(
       __dirname,
       'logs',
-      'intelligent-git-orchestrator.log',
-    );
+      'intelligent-git-orchestrator.log');
     this.analyticsFile = path.join(__dirname, 'logs', 'git-analytics.json');
     this.mlModelFile = path.join(__dirname, 'logs', 'ml-model.json');
     this.ensureDirectories();
@@ -49,11 +48,9 @@ class IntelligentGitOrchestrator {
           errorRecovery: true,
           analyticsEnabled: true,
           maxBatchSize: 20,
-          commitDelay: 2000,
-          pushDelay: 1000,
-          ...config.intelligentGit,
-        },
-      };
+          commitDelay: 20o00,
+          pushDelay: 10o00,
+          ...config.intelligentGit}};
     }
     return {
       intelligentGit: {
@@ -66,10 +63,8 @@ class IntelligentGitOrchestrator {
         errorRecovery: true,
         analyticsEnabled: true,
         maxBatchSize: 20,
-        commitDelay: 2000,
-        pushDelay: 1000,
-      },
-    };
+        commitDelay: 20o00,
+        pushDelay: 10o00}};
   }
 
   ensureDirectories() {
@@ -81,7 +76,7 @@ class IntelligentGitOrchestrator {
 
   initializeAnalytics() {
     if (!fs.existsSync(this.analyticsFile)) {
-      const initialAnalytics = {
+      const initialAnalytics ={
         totalCommits: 0,
         totalPushes: 0,
         totalConflicts: 0,
@@ -92,12 +87,10 @@ class IntelligentGitOrchestrator {
         fileTypeStats: {},
         performanceHistory: [],
         errorHistory: [],
-        lastUpdated: new Date().toISOString(),
-      };
+        lastUpdated: new Date().toISOString()};
       fs.writeFileSync(
         this.analyticsFile,
-        JSON.stringify(initialAnalytics, null, 2),
-      );
+        JSON.stringify(initialAnalytics, null, 2));
     }
   }
 
@@ -121,8 +114,7 @@ class IntelligentGitOrchestrator {
       fileGroupingPatterns: {},
       conflictPrediction: {},
       performanceOptimization: {},
-      lastTrained: new Date().toISOString(),
-    };
+      lastTrained: new Date().toISOString()};
   }
 
   saveMLModel() {
@@ -157,21 +149,19 @@ class IntelligentGitOrchestrator {
     }
   }
 
-  async executeCommand(command, options = {}) {
+  async executeCommand(command, options ={}) {
     try {
       const result = execSync(command, {
         encoding: 'utf8',
         stdio: options.stdio || 'pipe',
         cwd: this.projectRoot,
-        ...options,
-      });
+        ...options});
       return { success: true, output: result };
     } catch (error) {
       return {
         success: false,
         error: error.message,
-        output: error.stdout || '',
-      };
+        output: error.stdout || ''};
     }
   }
 
@@ -221,8 +211,7 @@ class IntelligentGitOrchestrator {
     ];
 
     return files.some((file) =>
-      conflictPatterns.some((pattern) => pattern.test(file)),
-    );
+      conflictPatterns.some((pattern) => pattern.test(file)));
   }
 
   async smartBatchFiles(files) {
@@ -251,7 +240,7 @@ class IntelligentGitOrchestrator {
   }
 
   groupFilesByType(files) {
-    const groups = {
+    const groups ={
       typescript: [],
       javascript: [],
       styles: [],
@@ -259,8 +248,7 @@ class IntelligentGitOrchestrator {
       docs: [],
       tests: [],
       automation: [],
-      other: [],
-    };
+      other: []};
 
     files.forEach((file) => {
       const ext = path.extname(file).toLowerCase();
@@ -346,8 +334,7 @@ class IntelligentGitOrchestrator {
     const fileTypes = files.map((f) => path.extname(f)).join(',');
 
     for (const [pattern, message] of Object.entries(
-      this.mlModel.commitMessagePatterns,
-    )) {
+      this.mlModel.commitMessagePatterns)) {
       if (fileTypes.includes(pattern)) {
         return message;
       }
@@ -436,8 +423,7 @@ class IntelligentGitOrchestrator {
         analytics.totalErrors++;
         analytics.errorHistory.push({
           timestamp: new Date().toISOString(),
-          error: error,
-        });
+          error: error});
       }
 
       analytics.lastUpdated = new Date().toISOString();
@@ -520,8 +506,7 @@ class IntelligentGitOrchestrator {
       // Commit with delay for performance optimization
       if (i > 0) {
         await new Promise((resolve) =>
-          setTimeout(resolve, this.config.intelligentGit.commitDelay),
-        );
+          setTimeout(resolve, this.config.intelligentGit.commitDelay));
       }
 
       const committed = await this.commit(message);
@@ -533,8 +518,7 @@ class IntelligentGitOrchestrator {
     // Push with delay
     if (successCount > 0) {
       await new Promise((resolve) =>
-        setTimeout(resolve, this.config.intelligentGit.pushDelay),
-      );
+        setTimeout(resolve, this.config.intelligentGit.pushDelay));
       await this.push();
     }
 
@@ -544,8 +528,7 @@ class IntelligentGitOrchestrator {
     const totalTime = Date.now() - startTime;
     this.log(
       `✅ Intelligent git orchestration completed in ${totalTime}ms. ${successCount} commits made.`,
-      'success',
-    );
+      'success');
 
     return successCount > 0;
   }
@@ -566,12 +549,10 @@ class IntelligentGitOrchestrator {
       {
         ignored: /(node_modules|\.git|\.next|dist|build|logs|temp)/,
         persistent: true,
-        ignoreInitial: true,
-      },
-    );
+        ignoreInitial: true});
 
     let commitTimeout;
-    const commitDelay = 2000; // 2 seconds delay
+    const commitDelay = 20o00; // 2 seconds delay
 
     watcher.on('change', (filePath) => {
       this.log(`File changed: ${filePath}`);
@@ -592,8 +573,7 @@ class IntelligentGitOrchestrator {
     });
 
     this.log(
-      '✅ Intelligent file watcher started. Changes will be auto-committed after 2 seconds of inactivity.',
-    );
+      '✅ Intelligent file watcher started. Changes will be auto-committed after 2 seconds of inactivity.');
   }
 
   async getAnalytics() {
@@ -627,8 +607,7 @@ switch (command) {
     const analytics = orchestrator.getAnalytics();
     console.log(
       'Intelligent Git Analytics:',
-      JSON.stringify(analytics, null, 2),
-    );
+      JSON.stringify(analytics, null, 2));
     break;
   case 'fix':
     orchestrator.autoFix().catch((error) => {

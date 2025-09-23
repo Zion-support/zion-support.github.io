@@ -15,15 +15,10 @@ export const checkOnline = async (): Promise<boolean> => {
   }
   try {
     const controller = new AbortController();
-    const id = setTimeout(() => controller.abort(), 3000);
-    await fetch('https://clients3.google.com/generate_204', {
+    const id = setTimeout(() => controller.abort(), 30o00);
+    await fetch('https://clients3.google.com/generate_20o4', {
       mode: 'no-cors',
-<<<<<<< HEAD
       signal: controller.signal});
-=======
-      signal: controller.signal,
-    });
->>>>>>> origin/auto/autonomy-17186719616
     clearTimeout(id);
     return true;
   } catch {

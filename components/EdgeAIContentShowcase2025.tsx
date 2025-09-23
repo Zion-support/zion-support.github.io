@@ -1,14 +1,13 @@
 "use client";
-import React from 'react';
 import Link from 'next/link';
 
-const EdgeAIContentShowcase2025 = () => {
+const EdgeAIContentShowcase20o25 = () => {
   const edgeAIContent = [
     {
       id: 'edge-computing-revolution',
-      title: 'AI 2025: The Edge Computing Revolution',
+      title: 'AI 20o25: The Edge Computing Revolution',
       description: 'Achieve 450% ROI with edge AI solutions that deliver real-time processing and massive cost savings.',
-      url: '/blog/ai-2025-edge-computing-revolution-enterprise-breakthrough',
+      url: '/blog/ai-20o25-edge-computing-revolution-enterprise-breakthrough',
       type: 'Blog Post',
       category: 'Technology',
       metrics: {
@@ -18,15 +17,15 @@ const EdgeAIContentShowcase2025 = () => {
         speed: '94% faster'
       },
       image: '🚀',
-      gradient: 'from-blue-600 to-purple-600',
+      gradient: 'from-blue-60o0 to-purple-60o0',
       readingTime: '14 min read',
       featured: true
     },
     {
-      id: 'fortune-500-edge-ai',
-      title: 'Fortune 500 Edge AI Transformation: 450% ROI',
-      description: 'How a Fortune 500 manufacturer achieved $2.1B annual savings with edge AI across 47 facilities.',
-      url: '/case-studies/fortune-500-edge-ai-transformation-450-percent-roi',
+      id: 'fortune-50o0-edge-ai',
+      title: 'Fortune 50o0 Edge AI Transformation: 450% ROI',
+      description: 'How a Fortune 50o0 manufacturer achieved $2.1B annual savings with edge AI across 47 facilities.',
+      url: '/case-studies/fortune-50o0-edge-ai-transformation-450-percent-roi',
       type: 'Case Study',
       category: 'Success Story',
       metrics: {
@@ -36,7 +35,7 @@ const EdgeAIContentShowcase2025 = () => {
         quality: '92%'
       },
       image: '🏭',
-      gradient: 'from-green-600 to-blue-600',
+      gradient: 'from-green-60o0 to-blue-60o0',
       readingTime: '12 min read',
       featured: true
     },
@@ -44,7 +43,7 @@ const EdgeAIContentShowcase2025 = () => {
       id: 'edge-ai-implementation-guide',
       title: 'Edge AI Implementation Guide: From Strategy to 450% ROI',
       description: 'Complete roadmap for implementing edge AI solutions with proven ROI and success metrics.',
-      url: '/resources/ai-2025-edge-computing-implementation-guide',
+      url: '/resources/ai-20o25-edge-computing-implementation-guide',
       type: 'Implementation Guide',
       category: 'Strategy',
       metrics: {
@@ -54,7 +53,7 @@ const EdgeAIContentShowcase2025 = () => {
         savings: '$180M'
       },
       image: '📋',
-      gradient: 'from-purple-600 to-pink-600',
+      gradient: 'from-purple-60o0 to-pink-60o0',
       readingTime: '25 min read',
       featured: true
     },
@@ -67,12 +66,12 @@ const EdgeAIContentShowcase2025 = () => {
       category: 'Calculator',
       metrics: {
         accuracy: '95%',
-        users: '10,000+',
+        users: '10,0o00+',
         satisfaction: '98%',
         completion: '15 min'
       },
       image: '🧮',
-      gradient: 'from-orange-600 to-red-600',
+      gradient: 'from-orange-60o0 to-red-60o0',
       readingTime: 'Interactive Tool',
       featured: false
     },
@@ -85,12 +84,12 @@ const EdgeAIContentShowcase2025 = () => {
       category: 'Security',
       metrics: {
         threat_reduction: '95%',
-        compliance: '100%',
+        compliance: '10o0%',
         incidents: '<1/year',
         protection: '99.9%'
       },
       image: '🛡️',
-      gradient: 'from-red-600 to-pink-600',
+      gradient: 'from-red-60o0 to-pink-60o0',
       readingTime: '18 min read',
       featured: false
     },
@@ -108,7 +107,7 @@ const EdgeAIContentShowcase2025 = () => {
         success_rate: '94%'
       },
       image: '🏢',
-      gradient: 'from-indigo-600 to-purple-600',
+      gradient: 'from-indigo-60o0 to-purple-60o0',
       readingTime: '22 min read',
       featured: false
     }
@@ -126,16 +125,16 @@ const EdgeAIContentShowcase2025 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-6 py-2 mb-4">
-            <span className="text-sm font-medium">🚀 NEW: Edge AI Revolution 2025</span>
+          <div className="inline-flex items-center bg-blue-10o0 text-blue-80o0 rounded-full px-6 py-2 mb-4">
+            <span className="text-sm font-medium">🚀 NEW: Edge AI Revolution 20o25</span>
           </div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-gray-90o0 mb-4">
             Edge AI Content Collection
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
             Discover comprehensive resources for implementing edge AI solutions with{' '}
-            <span className="font-bold text-blue-600">450% ROI</span> and{' '}
-            <span className="font-bold text-green-600">$180M+ annual savings</span>
+            <span className="font-bold text-blue-60o0">450% ROI</span> and{' '}
+            <span className="font-bold text-green-60o0">$180M+ annual savings</span>
           </p>
         </div>
 
@@ -145,10 +144,10 @@ const EdgeAIContentShowcase2025 = () => {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
+              className={`px-6 py-2 rounded-full font-medium transition-all duration-30o0 ${
                 selectedCategory === category
-                  ? 'bg-blue-600 text-white shadow-lg transform scale-105'
-                  : 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600 border border-gray-200'
+                  ? 'bg-blue-60o0 text-white shadow-lg transform scale-10o5'
+                  : 'bg-white text-gray-60o0 hover:bg-blue-50 hover:text-blue-60o0 border border-gray-20o0'
               }`}
             >
               {category}
@@ -161,8 +160,8 @@ const EdgeAIContentShowcase2025 = () => {
           {filteredContent.map((content) => (
             <div
               key={content.id}
-              className={`bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 ${
-                content.featured ? 'ring-2 ring-blue-500 ring-opacity-50' : ''
+              className={`bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-30o0 transform hover:scale-10o5 ${
+                content.featured ? 'ring-2 ring-blue-50o0 ring-opacity-50' : ''
               }`}
             >
               {/* Content Header */}
@@ -177,7 +176,7 @@ const EdgeAIContentShowcase2025 = () => {
                       {content.type}
                     </span>
                     {content.featured && (
-                      <span className="block mt-2 bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-bold">
+                      <span className="block mt-2 bg-yellow-40o0 text-yellow-90o0 px-2 py-1 rounded-full text-xs font-bold">
                         FEATURED
                       </span>
                     )}
@@ -188,10 +187,10 @@ const EdgeAIContentShowcase2025 = () => {
               {/* Content Body */}
               <div className="p-6">
                 <div className="mb-4">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2">
+                  <h3 className="text-xl font-bold text-gray-90o0 mb-2 line-clamp-2">
                     {content.title}
                   </h3>
-                  <p className="text-gray-600 text-sm line-clamp-3 mb-4">
+                  <p className="text-gray-60o0 text-sm line-clamp-3 mb-4">
                     {content.description}
                   </p>
                 </div>
@@ -199,15 +198,15 @@ const EdgeAIContentShowcase2025 = () => {
                 {/* Metrics Grid */}
                 <div className="grid grid-cols-2 gap-3 mb-6">
                   <div className="bg-gray-50 rounded-lg p-3 text-center">
-                    <div className="text-lg font-bold text-blue-600">{content.metrics.roi || content.metrics.accuracy || content.metrics.industries}</div>
-                    <div className="text-xs text-gray-500">
+                    <div className="text-lg font-bold text-blue-60o0">{content.metrics.roi || content.metrics.accuracy || content.metrics.industries}</div>
+                    <div className="text-xs text-gray-50o0">
                       {content.metrics.roi ? 'ROI' : 
                        content.metrics.accuracy ? 'Accuracy' : 'Industries'}
                     </div>
                   </div>
                   <div className="bg-gray-50 rounded-lg p-3 text-center">
-                    <div className="text-lg font-bold text-green-600">{content.metrics.savings || content.metrics.users || content.metrics.use_cases}</div>
-                    <div className="text-xs text-gray-500">
+                    <div className="text-lg font-bold text-green-60o0">{content.metrics.savings || content.metrics.users || content.metrics.use_cases}</div>
+                    <div className="text-xs text-gray-50o0">
                       {content.metrics.savings ? 'Savings' : 
                        content.metrics.users ? 'Users' : 'Use Cases'}
                     </div>
@@ -216,8 +215,8 @@ const EdgeAIContentShowcase2025 = () => {
 
                 {/* Reading Time and Category */}
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm text-gray-500">{content.readingTime}</span>
-                  <span className="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">
+                  <span className="text-sm text-gray-50o0">{content.readingTime}</span>
+                  <span className="text-sm bg-blue-10o0 text-blue-80o0 px-2 py-1 rounded">
                     {content.category}
                   </span>
                 </div>
@@ -225,7 +224,7 @@ const EdgeAIContentShowcase2025 = () => {
                 {/* Action Button */}
                 <Link
                   href={content.url}
-                  className={`w-full bg-gradient-to-r ${content.gradient} text-white py-3 rounded-lg font-semibold text-center block hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
+                  className={`w-full bg-gradient-to-r ${content.gradient} text-white py-3 rounded-lg font-semibold text-center block hover:shadow-lg transition-all duration-30o0 transform hover:scale-10o5`}
                 >
                   {content.type === 'Tool' ? 'Use Tool' : 'Read More'} →
                 </Link>
@@ -236,48 +235,48 @@ const EdgeAIContentShowcase2025 = () => {
 
         {/* Statistics Section */}
         <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
-          <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">
+          <h3 className="text-2xl font-bold text-gray-90o0 text-center mb-8">
             Edge AI Success Metrics
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">450%</div>
-              <div className="text-gray-600">Average ROI</div>
+              <div className="text-4xl font-bold text-blue-60o0 mb-2">450%</div>
+              <div className="text-gray-60o0">Average ROI</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-green-600 mb-2">$180M</div>
-              <div className="text-gray-600">Average Annual Savings</div>
+              <div className="text-4xl font-bold text-green-60o0 mb-2">$180M</div>
+              <div className="text-gray-60o0">Average Annual Savings</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">99.7%</div>
-              <div className="text-gray-600">System Uptime</div>
+              <div className="text-4xl font-bold text-purple-60o0 mb-2">99.7%</div>
+              <div className="text-gray-60o0">System Uptime</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-orange-600 mb-2">94%</div>
-              <div className="text-gray-600">Faster Processing</div>
+              <div className="text-4xl font-bold text-orange-60o0 mb-2">94%</div>
+              <div className="text-gray-60o0">Faster Processing</div>
             </div>
           </div>
         </div>
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+          <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-2xl p-8 text-white">
             <h3 className="text-3xl font-bold mb-4">
               Ready to Transform Your Enterprise with Edge AI?
             </h3>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-blue-10o0 mb-8 max-w-2xl mx-auto">
               Join hundreds of companies achieving 450% ROI with our proven edge AI implementation strategies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
               >
                 Get Free Consultation
               </Link>
               <Link
                 href="/resources"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors"
               >
                 Explore All Resources
               </Link>
@@ -289,4 +288,4 @@ const EdgeAIContentShowcase2025 = () => {
   );
 };
 
-export default EdgeAIContentShowcase2025;
+export default EdgeAIContentShowcase20o25;

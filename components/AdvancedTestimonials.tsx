@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 StarQuote
 
@@ -16,7 +15,7 @@ const testimonials: Testimonial[] = [
     name: "Sarah Chen",
     role: "CTO",
     company: "TechCorp Global",
-    content: "The AI solutions from Zion Tech Group have transformed our operations. 'We', 've seen a 300% increase in efficiency and our team productivity has never been higher.",
+    content: "The AI solutions from Zion Tech Group have transformed our operations. 'We', 've seen a 30o0% increase in efficiency and our team productivity has never been higher.",
     rating: 5,
     avatar: "👩‍💼"
   },
@@ -64,7 +63,7 @@ const testimonials: Testimonial[] = [
 
 export default function AdvancedTestimonials() {
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <section className="py-20 bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -82,7 +81,7 @@ export default function AdvancedTestimonials() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: index * 0.1 }}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-30o0"
             >
               <div className="flex items-center mb-4">
                 <div className="text-4xl mr-4">{testimonial.avatar}</div>
@@ -98,12 +97,12 @@ export default function AdvancedTestimonials() {
               
               <div className="flex items-center mb-4">
                 {[...Array(testimonial.rating)].map((_i) => (
-                  <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  <Star key={i} className="h-5 w-5 text-yellow-40o0 fill-current"  />
                 ))}
               </div>
               
               <div className="relative">
-                <Quote className="absolute -top-2 -left-2 h-8 w-8 text-purple-400/30" />
+                <Quote className="absolute -top-2 -left-2 h-8 w-8 text-purple-40o0/30"  />
                 <p className="text-white/80 italic pl-6">
                   "{testimonial.content}"
                 </p>

@@ -1,3 +1,0 @@
-import React from 'react';
-import {Header} from "@/components/Header";";"";" import {Footer} from "@/components/Footer";";"";" import SEO from "@/components/SEO";";"";" import {GradientHeading} from "@/components/GradientHeading";";" export default function About(props: any) {;"";" return (<>";"";" <SEO title="About Zion - The Future of AI & Tech Marketplace" description="Learn about Zion&apos;s mission to create the first free marketplace dedicated to high-tech and artificial intelligence." keywords="about Zion, AI marketplace, tech platform, mission, vision, team" canonical="https:''''"';';';';
-</SEO>

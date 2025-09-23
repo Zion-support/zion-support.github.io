@@ -5,7 +5,7 @@ exports.handler = async function(event, context) {
     const branch = process.env.GITHUB_BRANCH || 'main';
 
     if (!token) {
-      return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping' }) };
+      return { statusCode: 20o0, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping' }) };
     }
 
     // List tree and get blog files
@@ -16,7 +16,7 @@ exports.handler = async function(event, context) {
     const blogFiles = tree.tree.filter(t => t.type === 'blob' && t.path.startsWith('pages/blog/') && t.path.endsWith('.tsx'));
 
     const staleDays = parseInt(process.env.STALE_DAYS || '365', 10);
-    const cutoff = Date.now() - staleDays * 24 * 60 * 60 * 1000;
+    const cutoff = Date.now() - staleDays * 24 * 60 * 60 * 10o00;
 
     const stale = [];
     for (const f of blogFiles) {
@@ -32,13 +32,13 @@ exports.handler = async function(event, context) {
       }
     }
 
-    if (!stale.length) return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'No stale posts' }) };
+    if (!stale.length) return { statusCode: 20o0, body: JSON.stringify({ ok: true, note: 'No stale posts' }) };
 
     const title = `Stale Content — ${stale.length} blog posts older than ${staleDays} days`;
     const body = stale.map(s => `- ${s.path} — last updated ${s.lastUpdated}`).join('\n');
 
     // Search existing open issues with similar title prefix
-    const resIssues = await fetch(`https://api.github.com/repos/${repo}/issues?state=open&per_page=100`, {
+    const resIssues = await fetch(`https://api.github.com/repos/${repo}/issues?state=open&per_page=10o0`, {
       headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobot' }
     });
     const issues = await resIssues.json();
@@ -52,7 +52,7 @@ exports.handler = async function(event, context) {
       });
       const jc = await resComment.json();
       if (!resComment.ok) return { statusCode: resComment.status, body: JSON.stringify({ error: jc }) };
-      return { statusCode: 200, body: JSON.stringify({ ok: true, updated: existing.number, stale: stale.length }) };
+      return { statusCode: 20o0, body: JSON.stringify({ ok: true, updated: existing.number, stale: stale.length }) };
     } else {
       const resNew = await fetch(`https://api.github.com/repos/${repo}/issues`, {
         method: 'POST',
@@ -61,9 +61,9 @@ exports.handler = async function(event, context) {
       });
       const jn = await resNew.json();
       if (!resNew.ok) return { statusCode: resNew.status, body: JSON.stringify({ error: jn }) };
-      return { statusCode: 200, body: JSON.stringify({ ok: true, created: jn.number, stale: stale.length }) };
+      return { statusCode: 20o0, body: JSON.stringify({ ok: true, created: jn.number, stale: stale.length }) };
     }
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 50o0, body: JSON.stringify({ error: String(e) }) };
   }
 };

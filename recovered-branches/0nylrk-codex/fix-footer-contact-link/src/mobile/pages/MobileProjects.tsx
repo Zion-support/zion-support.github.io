@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 
 
@@ -8,8 +7,6 @@
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -58,20 +55,7 @@ const milestonesData = [;
     dueDate: "Dec 30, 2023";
     status: "pending" as const
     paymentStatus: "pending" as const
-=======
-import React from "react";
-import { MobileHeader } from "../components/common/MobileHeader";
-import { BottomNavigation } from "../components/common/BottomNavigation";
-import { MobileProjectView } from "../components/projects/MobileProjectView";
-
-// Mock data
-const projectData = {
-  id: "project-123",
-  title: "Website Redesign",
-  client: {
-    name: "TechCorp Inc.",
-    avatar: ""
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   },
   startDate: "Oct 15, 2023",
   endDate: "Jan 15, 2024",
@@ -79,11 +63,7 @@ const projectData = {
   totalAmount: "$12,000",
   progress: 60,
   description: "Redesign of the company website with a focus on improving user experience and conversion rates. Includes new homepage, about page, and product listing pages."
-<<<<<<< HEAD
 },
-=======
-};
->>>>>>> origin/auto/autonomy-17186719616
 
 const milestonesData = [
   {
@@ -108,16 +88,10 @@ const milestonesData = [
     dueDate: "Dec 30, 2023",
     status: "pending" as const,
     paymentStatus: "pending" as const,
-<<<<<<< HEAD
 
     amount: "$5,000"
   }
 ],
-=======
-    amount: "$5,000"
-  }
-];
->>>>>>> origin/auto/autonomy-17186719616
 
 export function MobileProjects() {
   return (
@@ -126,7 +100,6 @@ export function MobileProjects() {
         title="Project Details"
         showBack
       />
-<<<<<<< HEAD
       <main className="py-4">
 
         <MobileProjectView
@@ -220,7 +193,6 @@ export function MobileProjects() {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -229,17 +201,5 @@ export function MobileProjects() {;
 
 
 
-=======
-      
-      <main className="py-4">
-        <MobileProjectView 
-          project={projectData} 
-          milestones={milestonesData}
-        />
-      </main>
-      
-      <BottomNavigation />
-    </div>
-  );
-}
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

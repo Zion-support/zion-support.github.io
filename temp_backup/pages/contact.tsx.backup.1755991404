@@ -1,24 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export default function ContactPage() { return null }
-=======
-export default function Contact() { return <main className="p-10"><h1 className="text-2xl font-bold">Contact</h1></main>; }
-=======
-export default function ContactPage() {
-  return (
-    <div className="container mx-auto px-4 py-10">
-      <h1 className="text-2xl font-semibold">Contact</h1>
-      <p className="mt-2 text-gray-600">Reach out to the Zion team. Details coming soon.</p>
-    </div>
-  );
-}
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-<<<<<<< HEAD
 const Contact: NextPage = () => {
   return (
     <div>
@@ -46,18 +28,6 @@ export default function ContactPage() {
   );
 }
 =======
-export default Contact;
-=======
-export default function Contact() {
-  return (
-    <div className="space-y-2">
-      <h1 className="text-3xl font-bold">Contact</h1>
-      <p className="text-gray-600 dark:text-gray-300">Reach us at contact@zion.holdings</p>
-    </div>
-  );
-}
->>>>>>> origin/cursor/design-zion-ai-marketplace-mobile-app-ui-348a
-=======
 const Contact: NextPage = () => (
   <div className="py-10">
     <Head><title>Contact - Zion</title></Head>
@@ -67,5 +37,4 @@ const Contact: NextPage = () => (
 );
 
 export default Contact;
->>>>>>> origin/cursor/build-zion-ai-marketplace-service-listing-9ebf
 >>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e

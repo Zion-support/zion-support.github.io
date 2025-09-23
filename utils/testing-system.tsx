@@ -1,8 +1,10 @@
-import React from 'react';
 import '@testing-library/jest-dom';
 
 export class TestingSystem {
-  static async testUserInteraction(element: HTMLElement, action: 'click' | 'type' | 'hover') {
+  static async testUserInteraction(
+    element: HTMLElement,
+    action: 'click' | 'type' | 'hover'
+  ) {
     switch (action) {
       case 'click':
         element.click();

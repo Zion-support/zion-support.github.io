@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { useEffect, useState } from 'react';
 
@@ -62,8 +62,13 @@ const AnalyticsManager: React.FC<AnalyticsManagerProps> = ({
     if (!enablePerformanceTracking || !isLoaded) return;
 
     const trackPerformance = () => {
-      if (typeof (window as any).gtag !== 'undefined' && 'performance' in window) {
-        const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (
+        typeof (window as any).gtag !== 'undefined' &&
+        'performance' in window
+      ) {
+        const perfData = performance.getEntriesByType(
+          'navigation'
+        )[0] as PerformanceNavigationTiming;
         if (perfData) {
           const loadTime = perfData.loadEventEnd - perfData.fetchStart;
           (window as any).gtag('event', 'page_load_time', {
@@ -95,7 +100,8 @@ const AnalyticsManager: React.FC<AnalyticsManagerProps> = ({
     const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
       if (typeof (window as any).gtag !== 'undefined') {
         (window as any).gtag('event', 'exception', {
-          description: event.reason?.toString() || 'Unhandled promise rejection',
+          description:
+            event.reason?.toString() || 'Unhandled promise rejection',
           fatal: false,
         });
       }
@@ -106,7 +112,10 @@ const AnalyticsManager: React.FC<AnalyticsManagerProps> = ({
 
     return () => {
       window.removeEventListener('error', handleError);
-      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+      window.removeEventListener(
+        'unhandledrejection',
+        handleUnhandledRejection
+      );
     };
   }, [enableErrorTracking, isLoaded]);
 
@@ -128,10 +137,14 @@ export const trackEvent = (event: AnalyticsEvent) => {
 
 export const trackPageView = (url: string, title: string) => {
   if (typeof (window as any).gtag !== 'undefined') {
-    (window as any).gtag('config', process.env.NEXT_PUBLIC_GA_TRACKING_ID || '', {
-      page_title: title,
-      page_location: url,
-    });
+    (window as any).gtag(
+      'config',
+      process.env.NEXT_PUBLIC_GA_TRACKING_ID || '',
+      {
+        page_title: title,
+        page_location: url,
+      }
+    );
   }
 };
 

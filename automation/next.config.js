@@ -1,11 +1,11 @@
-module.exports = {
+module.exports ={
   experimental: {
     esmExternals: false,
     optimizeCss: true
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {
-      config.resolve.fallback = {
+      config.resolve.fallback ={
         ...config.resolve.fallback,
         fs: false,
         net: false,
@@ -23,7 +23,7 @@ module.exports = {
     }
 
     // Handle polyfills
-    config.resolve.alias = {
+    config.resolve.alias ={
       ...config.resolve.alias,
       react-native$': react-native-web
     };

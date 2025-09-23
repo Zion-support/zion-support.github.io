@@ -1,8 +1,10 @@
-import type { MetadataRoute } from "next";
+import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-	return [
-		{ url: "https://example.com/", lastModified: new Date() },
-		{ url: "https://example.com/about", lastModified: new Date() },
-	];
+  const baseUrl = 'https://ziontechgroup.com';
+  const routes = ['/', '/services', '/pricing', '/privacy'];
+  return routes.map(route => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+  }));
 }

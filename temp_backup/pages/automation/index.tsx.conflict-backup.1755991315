@@ -1,20 +1,15 @@
 import React from "react";
 import Head from "next/head";
 
-<<<<<<< HEAD
 import Head from 'next/head';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import RelatedContent from '../../components/RelatedContent';
 import QuickNavigation from '../../components/QuickNavigation';
 
 export default function AutomationHub() {
-=======
-const Page: React.FC = () => {
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
   return (
     <>
       <Head>
-<<<<<<< HEAD
         <title>Automation Hub | Zion Tech Group</title>
         <meta name="description" content="Explore autonomous cloud automations running 24/7 with live monitoring and self-healing systems." />
         <meta property="og:title" content="Automation Hub | Zion Tech Group" />
@@ -204,15 +199,6 @@ const Page: React.FC = () => {
         </a>
       </div>
     </div>
-=======
-        <title>Placeholder Page</title>
-        <meta name="robots" content="noindex" />
-      </Head>
-      <main>
-        <h1>Coming soon</h1>
-      </main>
-    </>
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
   );
 };
 

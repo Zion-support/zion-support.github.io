@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function SeoAutomationSuite() {
@@ -20,6 +19,6 @@ export default function SeoAutomationSuite() {
 			]}
 			industries={["E-commerce", "B2B SaaS", "Publishers"]}
 			url="https://ziontechgroup.com/seo-automation-suite"
-		/>
+		 />
 	);
 }

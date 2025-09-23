@@ -13,7 +13,6 @@ const TEST_STATUS_FILE = path.join(TEMP_DATA_DIR, 'test_status.json');
 // Assuming scripts are in /scripts, logs in /logs
 const JEST_RESULTS_FILE = path.resolve(__dirname, '../logs/tests/hourly-jest-results.json');
 
-
 function main() {
   const coverageSummaryPath = process.argv[2];
   if (!coverageSummaryPath) {
@@ -35,17 +34,16 @@ function main() {
   // Extract coverage percentage (e.g., lines)
   const coveragePct = coverageData.total && coverageData.total.lines ? coverageData.total.lines.pct : 0;
 
-  let jestResultsData = { numPassedTests: 0, numFailedTests: 0, numTotalTests: 0 };
+  let jestResultsData ={ numPassedTests: 0, numFailedTests: 0, numTotalTests: 0 };
   let testCountsError = null; // To store any error/warning message regarding test counts
 
   try {
     if (fs.existsSync(JEST_RESULTS_FILE)) {
       const jestOutput = JSON.parse(fs.readFileSync(JEST_RESULTS_FILE, 'utf-8'));
-      jestResultsData = {
+      jestResultsData ={
         numPassedTests: jestOutput.numPassedTests || 0,
         numFailedTests: jestOutput.numFailedTests || 0,
-        numTotalTests: jestOutput.numTotalTests || 0,
-      };
+        numTotalTests: jestOutput.numTotalTests || 0};
     } else {
       testCountsError = `Jest results file not found at ${JEST_RESULTS_FILE}. Test counts set to zero.`;
       console.warn(testCountsError);
@@ -55,12 +53,11 @@ function main() {
     console.error(testCountsError);
   }
 
-  const testStatusPayload = {
+  const testStatusPayload ={
     passed: jestResultsData.numPassedTests,
     failed: jestResultsData.numFailedTests,
     total: jestResultsData.numTotalTests,
-    coverage: coveragePct,
-  };
+    coverage: coveragePct};
 
   // If there was an issue with test counts, add it as an 'error' field in the status.
   // The TestStatusInfo interface doesn't have 'error', so we log it instead,
@@ -86,12 +83,11 @@ function writeTestStatus(statusData) {
   try {
     fs.mkdirSync(TEMP_DATA_DIR, { recursive: true });
     // Ensure statusData always conforms to TestStatusInfo, even if there was an error string previously.
-    const finalPayload = {
+    const finalPayload ={
         passed: statusData.passed || 0,
         failed: statusData.failed || 0,
         total: statusData.total || 0,
-        coverage: statusData.coverage || 0,
-    };
+        coverage: statusData.coverage || 0};
     // If an error was part of statusData and needs to be recorded, it should be logged
     // or TestStatusInfo interface should be updated. For now, ensure clean payload.
     if (statusData.error) {

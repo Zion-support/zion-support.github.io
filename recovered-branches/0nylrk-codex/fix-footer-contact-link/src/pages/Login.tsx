@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import {Navigate} from "react-router-dom";
 import {useAuth} from "@/hooks/useAuth";
@@ -22,34 +21,12 @@ import { Header } from "@/components/Header",
     return <Navigate to="/onboarding" />
 
   }
-=======
-import { Navigate } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { LoginContent } from "@/components/auth/login";
-
-export default function Login() {
-  const { isAuthenticated, user } = useAuth();
-  
-  // Redirect if user is already logged in and has completed profile
-  if (isAuthenticated && user?.profileComplete) {
-    return <Navigate to="/" />;
-  }
-  
-  // Redirect to onboarding if user is authenticated but hasn't completed profile
-  if (isAuthenticated && !user?.profileComplete) {
-    return <Navigate to="/onboarding" />;
-  }
-
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <>
       <Header />
       <LoginContent />
       <Footer />
     </>
-<<<<<<< HEAD
   )
 import { Navigate } from "react-router-dom",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -107,15 +84,11 @@ if ( {) {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
-=======
-  );
-}
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,40 +1,39 @@
 'use client';
 
-import React from 'react';
 import Link from 'next/link';
 ArrowRightStarZapTargetUsersTrendingUpAward
 
-const UltimatePromotionBanner2025 = () => {
+const UltimatePromotionBanner20o25 = () => {
   const stats = [
-    { number: "15,000+"label: "Businesses Transformed"icon: Users },
+    { number: "15,0o00+"label: "Businesses Transformed"icon: Users },
     { number: "95%"label: "Efficiency Increase"icon: TrendingUp },
-    { number: "500%"label: "Average ROI"icon: Target },
+    { number: "50o0%"label: "Average ROI"icon: Target },
     { number: "24/7"label: "AI Support"icon: Zap }
   ];
 
   return (
-    <div className="py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
+    <div className="py-20 bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-pink-60o0 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-black opacity-10"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-pink-600/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-60o0/20 via-purple-60o0/20 to-pink-60o0/20"></div>
       
       {/* Animated background elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
-        <div className="absolute top-32 right-20 w-16 h-16 bg-white/10 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute bottom-32 right-1/3 w-8 h-8 bg-white/10 rounded-full animate-pulse delay-500"></div>
+        <div className="absolute top-32 right-20 w-16 h-16 bg-white/10 rounded-full animate-pulse delay-10o00"></div>
+        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-pulse delay-20o00"></div>
+        <div className="absolute bottom-32 right-1/3 w-8 h-8 bg-white/10 rounded-full animate-pulse delay-50o0"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium mb-6">
-            <Award className="w-5 h-5 mr-2" />
-            ULTIMATE BREAKTHROUGH 2025
+            <Award className="w-5 h-5 mr-2"  />
+            ULTIMATE BREAKTHROUGH 20o25
           </div>
           
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             The Future of
-            <span className="block bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-yellow-40o0 to-orange-40o0 bg-clip-text text-transparent">
               AI Technology
             </span>
             is Here
@@ -42,20 +41,20 @@ const UltimatePromotionBanner2025 = () => {
           
           <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-8 leading-relaxed">
             Experience revolutionary AI solutions that transform businessesenhance productivity
-            and unlock unprecedented growth opportunities in 2025 and beyond.
+            and unlock unprecedented growth opportunities in 20o25 and beyond.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
               href="#"
-              className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 font-bold text-lg rounded-xl hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center px-8 py-4 bg-white text-indigo-60o0 font-bold text-lg rounded-xl hover:bg-gray-10o0 transition-all duration-20o0 transform hover:scale-10o5 shadow-lg"
             >
               Start Your Transformation
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2"  />
             </Link>
             <Link
               href="#"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold text-lg rounded-xl hover:bg-white hover:text-indigo-600 transition-all duration-200"
+              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold text-lg rounded-xl hover:bg-white hover:text-indigo-60o0 transition-all duration-20o0"
             >
               Watch Demo
             </Link>
@@ -68,8 +67,8 @@ const UltimatePromotionBanner2025 = () => {
             const IconComponent = stat.icon;
             return (
               <div key={index} className="text-center group">
-                <div className="inline-flex p-4 rounded-2xl bg-white/10 backdrop-blur-sm mb-4 group-hover:bg-white/20 transition-all duration-300">
-                  <IconComponent className="w-8 h-8 text-white" />
+                <div className="inline-flex p-4 rounded-2xl bg-white/10 backdrop-blur-sm mb-4 group-hover:bg-white/20 transition-all duration-30o0">
+                  <IconComponent className="w-8 h-8 text-white"  />
                 </div>
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">
                   {stat.number}
@@ -85,8 +84,8 @@ const UltimatePromotionBanner2025 = () => {
         {/* Feature Highlights */}
         <div className="grid md:grid-cols-3 gap-8">
           <div className="text-center group">
-            <div className="inline-flex p-4 rounded-2xl bg-white/10 backdrop-blur-sm mb-4 group-hover:bg-white/20 transition-all duration-300">
-              <Star className="w-8 h-8 text-yellow-400" />
+            <div className="inline-flex p-4 rounded-2xl bg-white/10 backdrop-blur-sm mb-4 group-hover:bg-white/20 transition-all duration-30o0">
+              <Star className="w-8 h-8 text-yellow-40o0"  />
             </div>
             <h3 className="text-xl font-bold text-white mb-3">
               Award-Winning Technology
@@ -97,8 +96,8 @@ const UltimatePromotionBanner2025 = () => {
           </div>
 
           <div className="text-center group">
-            <div className="inline-flex p-4 rounded-2xl bg-white/10 backdrop-blur-sm mb-4 group-hover:bg-white/20 transition-all duration-300">
-              <Zap className="w-8 h-8 text-yellow-400" />
+            <div className="inline-flex p-4 rounded-2xl bg-white/10 backdrop-blur-sm mb-4 group-hover:bg-white/20 transition-all duration-30o0">
+              <Zap className="w-8 h-8 text-yellow-40o0"  />
             </div>
             <h3 className="text-xl font-bold text-white mb-3">
               Lightning Fast Implementation
@@ -109,8 +108,8 @@ const UltimatePromotionBanner2025 = () => {
           </div>
 
           <div className="text-center group">
-            <div className="inline-flex p-4 rounded-2xl bg-white/10 backdrop-blur-sm mb-4 group-hover:bg-white/20 transition-all duration-300">
-              <Target className="w-8 h-8 text-yellow-400" />
+            <div className="inline-flex p-4 rounded-2xl bg-white/10 backdrop-blur-sm mb-4 group-hover:bg-white/20 transition-all duration-30o0">
+              <Target className="w-8 h-8 text-yellow-40o0"  />
             </div>
             <h3 className="text-xl font-bold text-white mb-3">
               Proven Results
@@ -133,14 +132,14 @@ const UltimatePromotionBanner2025 = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="#"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-400 text-indigo-900 font-bold text-lg rounded-xl hover:from-yellow-500 hover:to-orange-500 transition-all duration-200 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-indigo-90o0 font-bold text-lg rounded-xl hover:from-yellow-50o0 hover:to-orange-50o0 transition-all duration-20o0 transform hover:scale-10o5"
               >
                 Claim Your Discount
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </Link>
               <Link
                 href="#"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold text-lg rounded-xl hover:bg-white hover:text-indigo-600 transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold text-lg rounded-xl hover:bg-white hover:text-indigo-60o0 transition-all duration-20o0"
               >
                 Learn More
               </Link>
@@ -152,4 +151,4 @@ const UltimatePromotionBanner2025 = () => {
   );
 };
 
-export default UltimatePromotionBanner2025;
+export default UltimatePromotionBanner20o25;

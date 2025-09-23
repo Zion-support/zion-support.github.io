@@ -14,7 +14,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   threshold = 0.1,
   delay = 0,
   duration = 0.6,
-  className = ''
+  className = '',
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { threshold });
@@ -27,28 +27,28 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [isInView, isLoaded]);
 
   const variants = {
-    hidden: { 
-      opacity: 0, 
+    hidden: {
+      opacity: 0,
       y: 50,
-      scale: 0.95
+      scale: 0.95,
     },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       scale: 1,
       transition: {
         duration,
         delay,
-        ease: [0.25, 0.46, 0.45, 0.94]
-      }
-    }
+        ease: [0.25, 0.46, 0.45, 0.94],
+      },
+    },
   };
 
   if (!isLoaded) {
     return (
-      <div 
-        ref={ref} 
-        className={`min-h-[200px] bg-gradient-to-r from-gray-100 to-gray-200 animate-pulse rounded-lg ${className}`}
+      <div
+        ref={ref}
+        className={`min-h-[20o0px] bg-gradient-to-r from-gray-10o0 to-gray-20o0 animate-pulse rounded-lg ${className}`}
       />
     );
   }
@@ -57,8 +57,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     <motion.div
       ref={ref}
       variants={variants}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
+      initial='hidden'
+      animate={isInView ? 'visible' : 'hidden'}
       className={className}
     >
       {children}

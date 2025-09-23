@@ -1,54 +1,47 @@
-
-import { useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
-import type { UserProfile } from "@/types/auth";
-import { cleanupAuthState } from "@/utils/authUtils";
+import { useState } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from '@/hooks/use-toast';
+import type { UserProfile } from '@/types/auth';
+import { cleanupAuthState } from '@/utils/authUtils';
 
 export const useEmailAuth = (
   setUser: (user: UserProfile | null) => void,
   setIsLoading: (loading: boolean) => void
 ) => {
-  const login = async ({ email, password }: { email: string; password: string }) => {
+  const login = async ({
+    email,
+    password,
+  }: {
+    email: string;
+    password: string;
+  }) => {
     try {
       setIsLoading(true);
       // Clean up any stale auth state before login
       cleanupAuthState();
-      
+
       const { data, error } = await supabase.auth.signInWithPassword({
         email,
-<<<<<<< HEAD
-        password});
-=======
         password,
       });
->>>>>>> origin/auto/autonomy-17186719616
 
       if (error) {
         toast({
-          title: "Login failed",
+          title: 'Login failed',
           description: error.message,
-<<<<<<< HEAD
-          variant: "destructive"});
-=======
-          variant: "destructive",
+          variant: 'destructive',
         });
->>>>>>> origin/auto/autonomy-17186719616
         return { error };
       }
 
       return { data };
     } catch (error: any) {
-      console.error("Login error:", error);
+      console.error('Login error:', error);
       toast({
-        title: "Login failed",
-        description: error.message || "An unexpected error occurred",
-<<<<<<< HEAD
-        variant: "destructive"});
-=======
-        variant: "destructive",
+        title: 'Login failed',
+        description: error.message || 'An unexpected error occurred',
+        variant: 'destructive',
       });
->>>>>>> origin/auto/autonomy-17186719616
       return { error };
     } finally {
       setIsLoading(false);
@@ -60,15 +53,15 @@ export const useEmailAuth = (
       setIsLoading(true);
       // Clean up any stale auth state before signup
       cleanupAuthState();
-      
+
       // Attempt to sign out any existing session first to prevent conflicts
       try {
         await supabase.auth.signOut({ scope: 'global' });
       } catch (err) {
         // Continue even if signout fails
-        console.log("Sign out before signup failed:", err);
+        console.log('Sign out before signup failed:', err);
       }
-      
+
       // Create a proper options object
       const { data, error } = await supabase.auth.signUp({
         email,
@@ -76,48 +69,32 @@ export const useEmailAuth = (
         options: {
           // Only store a simple display name in the profile data
           data: {
-            display_name: userData?.displayName ?? userData?.name ?? ""
-<<<<<<< HEAD
-          }}});
-=======
+            display_name: userData?.displayName ?? userData?.name ?? '',
           },
         },
       });
->>>>>>> origin/auto/autonomy-17186719616
 
       if (error) {
         toast({
-          title: "Signup failed",
+          title: 'Signup failed',
           description: error.message,
-<<<<<<< HEAD
-          variant: "destructive"});
-=======
-          variant: "destructive",
+          variant: 'destructive',
         });
->>>>>>> origin/auto/autonomy-17186719616
         return { error };
       }
 
       toast({
-        title: "Signup successful",
-<<<<<<< HEAD
-        description: "Check your email for verification instructions."});
-=======
-        description: "Check your email for verification instructions.",
+        title: 'Signup successful',
+        description: 'Check your email for verification instructions.',
       });
->>>>>>> origin/auto/autonomy-17186719616
       return { data };
     } catch (error: any) {
-      console.error("Signup error:", error);
+      console.error('Signup error:', error);
       toast({
-        title: "Signup failed",
-        description: error.message || "An unexpected error occurred",
-<<<<<<< HEAD
-        variant: "destructive"});
-=======
-        variant: "destructive",
+        title: 'Signup failed',
+        description: error.message || 'An unexpected error occurred',
+        variant: 'destructive',
       });
->>>>>>> origin/auto/autonomy-17186719616
       return { error };
     } finally {
       setIsLoading(false);
@@ -128,46 +105,30 @@ export const useEmailAuth = (
     try {
       setIsLoading(true);
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
-<<<<<<< HEAD
-        redirectTo: `${window.location.origin}/update-password`});
-=======
         redirectTo: `${window.location.origin}/update-password`,
       });
->>>>>>> origin/auto/autonomy-17186719616
 
       if (error) {
         toast({
-          title: "Password reset failed",
+          title: 'Password reset failed',
           description: error.message,
-<<<<<<< HEAD
-          variant: "destructive"});
-=======
-          variant: "destructive",
+          variant: 'destructive',
         });
->>>>>>> origin/auto/autonomy-17186719616
         return { error };
       }
 
       toast({
-        title: "Password reset email sent",
-<<<<<<< HEAD
-        description: "Check your email for password reset instructions."});
-=======
-        description: "Check your email for password reset instructions.",
+        title: 'Password reset email sent',
+        description: 'Check your email for password reset instructions.',
       });
->>>>>>> origin/auto/autonomy-17186719616
       return {};
     } catch (error: any) {
-      console.error("Password reset error:", error);
+      console.error('Password reset error:', error);
       toast({
-        title: "Password reset failed",
-        description: error.message || "An unexpected error occurred",
-<<<<<<< HEAD
-        variant: "destructive"});
-=======
-        variant: "destructive",
+        title: 'Password reset failed',
+        description: error.message || 'An unexpected error occurred',
+        variant: 'destructive',
       });
->>>>>>> origin/auto/autonomy-17186719616
       return { error };
     } finally {
       setIsLoading(false);

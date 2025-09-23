@@ -1,5 +1,3 @@
-import React from 'react';
-
 export type KpiBadgeProps = {
   label: string;
   value: string | number;
@@ -8,19 +6,28 @@ export type KpiBadgeProps = {
 };
 
 const toneToClasses: Record<NonNullable<KpiBadgeProps['tone']>, string> = {
-  default: 'bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100',
-  success: 'bg-green-100 text-green-900 dark:bg-green-900/40 dark:text-green-200',
-  warning: 'bg-yellow-100 text-yellow-900 dark:bg-yellow-900/40 dark:text-yellow-200',
-  danger: 'bg-red-100 text-red-900 dark:bg-red-900/40 dark:text-red-200',
-  info: 'bg-blue-100 text-blue-900 dark:bg-blue-900/40 dark:text-blue-200',
+  default: 'bg-gray-10o0 text-gray-90o0 dark:bg-gray-80o0 dark:text-gray-10o0',
+  success:
+    'bg-green-10o0 text-green-90o0 dark:bg-green-90o0/40 dark:text-green-20o0',
+  warning:
+    'bg-yellow-10o0 text-yellow-90o0 dark:bg-yellow-90o0/40 dark:text-yellow-20o0',
+  danger: 'bg-red-10o0 text-red-90o0 dark:bg-red-90o0/40 dark:text-red-20o0',
+  info: 'bg-blue-10o0 text-blue-90o0 dark:bg-blue-90o0/40 dark:text-blue-20o0',
 };
 
-export function KpiBadge({ label, value, hint, tone = 'default' }: KpiBadgeProps) {
+export function KpiBadge({
+  label,
+  value,
+  hint,
+  tone = 'default',
+}: KpiBadgeProps) {
   return (
-    <div className={`rounded-xl p-4 border border-black/5 dark:border-white/10 ${toneToClasses[tone]}`}>
-      <div className="text-xs uppercase tracking-wide opacity-70">{label}</div>
-      <div className="text-2xl font-semibold mt-1">{value}</div>
-      {hint && <div className="text-xs opacity-70 mt-1">{hint}</div>}
+    <div
+      className={`rounded-xl p-4 border border-black/5 dark:border-white/10 ${toneToClasses[tone]}`}
+    >
+      <div className='text-xs uppercase tracking-wide opacity-70'>{label}</div>
+      <div className='text-2xl font-semibold mt-1'>{value}</div>
+      {hint && <div className='text-xs opacity-70 mt-1'>{hint}</div>}
     </div>
   );
 }

@@ -2,7 +2,9 @@ import { useState, useCallback } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { Notification, FilterType, NotificationContextType } from './types';
 
-export const useNotificationOperations = (userId?: string): NotificationContextType => {
+export const useNotificationOperations = (
+  userId?: string
+): NotificationContextType => {
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [loading, setLoading] = useState(false);
   const [filter, setFilter] = useState<FilterType>('all');
@@ -27,22 +29,25 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     }
   }, [userId]);
 
-  const markAsRead = useCallback(async (id: string) => {
-    if (!userId) return;
+  const markAsRead = useCallback(
+    async (id: string) => {
+      if (!userId) return;
 
-    try {
-      const { error } = await supabase
-        .from('notifications')
-        .update({ read: true })
-        .eq('id', id)
-        .eq('user_id', userId);
+      try {
+        const { error } = await supabase
+          .from('notifications')
+          .update({ read: true })
+          .eq('id', id)
+          .eq('user_id', userId);
 
-      if (error) throw error;
-      await fetchNotifications();
-    } catch (err) {
-      console.error('Error marking notification as read:', err);
-    }
-  }, [userId, fetchNotifications]);
+        if (error) throw error;
+        await fetchNotifications();
+      } catch (err) {
+        console.error('Error marking notification as read:', err);
+      }
+    },
+    [userId, fetchNotifications]
+  );
 
   const markAllAsRead = useCallback(async () => {
     if (!userId) return;
@@ -61,22 +66,25 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     }
   }, [userId, fetchNotifications]);
 
-  const dismissNotification = useCallback(async (id: string) => {
-    if (!userId) return;
+  const dismissNotification = useCallback(
+    async (id: string) => {
+      if (!userId) return;
 
-    try {
-      const { error } = await supabase
-        .from('notifications')
-        .delete()
-        .eq('id', id)
-        .eq('user_id', userId);
+      try {
+        const { error } = await supabase
+          .from('notifications')
+          .delete()
+          .eq('id', id)
+          .eq('user_id', userId);
 
-      if (error) throw error;
-      await fetchNotifications();
-    } catch (err) {
-      console.error('Error dismissing notification:', err);
-    }
-  }, [userId, fetchNotifications]);
+        if (error) throw error;
+        await fetchNotifications();
+      } catch (err) {
+        console.error('Error dismissing notification:', err);
+      }
+    },
+    [userId, fetchNotifications]
+  );
 
   const filteredNotifications = notifications.filter(notification => {
     switch (filter) {
@@ -105,10 +113,6 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     markAllAsRead,
     dismissNotification,
     setFilter,
-<<<<<<< HEAD
-    fetchNotifications};
-=======
     fetchNotifications,
   };
->>>>>>> origin/auto/autonomy-17186719616
 };

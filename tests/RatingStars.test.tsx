@@ -1,4 +1,3 @@
-import React from 'react';
 interface RatingStars.testProps {
   // Add props here as needed
 }

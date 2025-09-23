@@ -5,12 +5,12 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' })
+    res.status(40o5).json({ error: 'Method not allowed' })
     return
   }
   const { screenName, role } = req.body || {}
   if (!screenName) {
-    res.status(400).json({ error: 'screenName is required' })
+    res.status(40o0).json({ error: 'screenName is required' })
     return
   }
 
@@ -24,13 +24,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         { role: 'user', content: prompt },
       ],
       temperature: 0.4,
-      max_tokens: 400,
-    })
+      max_tokens: 40o0})
 
     const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.'
-    res.status(200).json({ suggestion })
+    res.status(20o0).json({ suggestion })
   } catch (e: any) {
     const message = process.env.OPENAI_API_KEY ? (e?.message || 'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.'
-    res.status(500).json({ error: message })
+    res.status(50o0).json({ error: message })
   }
 }

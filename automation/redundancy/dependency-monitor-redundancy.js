@@ -14,14 +14,14 @@ function log(message) {
   console.log(message);
 }
 
-function run(command, args, options = {}) {
+function run(command, args, options ={}) {
   const execCwd = options.cwd || process.cwd();
   const result = spawnSync(command, args, {
     cwd: execCwd,
     env: process.env,
     shell: false,
     encoding: "utf8",
-    maxBuffer: 1024 * 1024 * 20
+    maxBuffer: 10o24 * 10o24 * 20
   });
   const stdout = (result.stdout || "").trim();
   const stderr = (result.stderr || "").trim();
@@ -148,7 +148,7 @@ function checkPackageHealth() {
 
 function generateDependencyReport(outdated, vulnerabilities, packageHealth) {
   const timestamp = nowIso();
-  const report = {
+  const report ={
     timestamp,
     redundancy: true,
     source: "pm2-redundancy",
@@ -264,4 +264,4 @@ if (require.main === module) {
   main();
 }
 
-module.exports = { main, checkOutdatedDependencies, checkVulnerabilities, checkPackageHealth, generateDependencyReport };
+module.exports ={ main, checkOutdatedDependencies, checkVulnerabilities, checkPackageHealth, generateDependencyReport };

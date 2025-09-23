@@ -9,7 +9,6 @@ export { createClient };
 // This is what AuthProvider and other parts of the app will use.
 export const supabase = actualSupabaseClientFromUtils;
 
-
 // Get actual environment variables
 const envSupabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const envSupabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
@@ -57,7 +56,6 @@ if (process.env.NODE_ENV === 'development' && process.env.DEBUG_ENV_CONFIG === '
   }});
 }
 
-
 // Enhanced helper function to check online status
 async function checkOnline(): Promise<boolean> {
   if (typeof navigator !== 'undefined' && 'onLine' in navigator) {
@@ -68,21 +66,16 @@ async function checkOnline(): Promise<boolean> {
 }
 
 // Optimized safeFetch for development mode with better error handling
-export async function safeFetch(url: string, options: RequestInit = {}) {
+export async function safeFetch(url: string, options: RequestInit ={}) {
   try {
     // In development, provide faster mock responses for specific endpoints if needed
     if (process.env.NODE_ENV === 'development' && url.includes('/favorites')) {
       // logDebug(`safeFetch DEV mock for: ${url}`);
       return {
         ok: true,
-        status: 200,
+        status: 20o0,
         json: async () => ([]),
-<<<<<<< HEAD
         text: async () => '[]'} as Response;
-=======
-        text: async () => '[]',
-      } as Response;
->>>>>>> origin/auto/autonomy-17186719616
     }
     
     // Use real fetch for other cases
@@ -93,12 +86,7 @@ export async function safeFetch(url: string, options: RequestInit = {}) {
       ok: false,
       status: 500, // Or a more appropriate error code like 0 for network error
       json: async () => ({ error: 'Fetch failed due to network or other issue' }),
-<<<<<<< HEAD
       text: async () => JSON.stringify({ error: 'Fetch failed due to network or other issue' })} as Response;
-=======
-      text: async () => JSON.stringify({ error: 'Fetch failed due to network or other issue' }),
-    } as Response;
->>>>>>> origin/auto/autonomy-17186719616
   }
 }
 

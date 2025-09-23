@@ -1,5 +1,5 @@
 
-export type Project = {
+export type Project ={
   id: string;
   clientId: string; // slug for client/user
   talentSlug: string; // slug from TALENT_PROFILES
@@ -15,7 +15,7 @@ export type ReviewCategoryScores = {
 
 };
 
-export type Review = {
+export type Review ={
   id: string;
   projectId: string;
   fromRole: ReviewRole;
@@ -32,7 +32,6 @@ export type Review = {
   reports?: { reason: string; reportedAt: string }[];
   removed?: boolean;
   createdAt: string; // ISO
-
 
 export type ReviewsSummary = {
   averageRating: number;

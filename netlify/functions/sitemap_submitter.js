@@ -23,9 +23,9 @@ exports.handler = async function(event, context) {
     const results = [];
     for (const ep of endpoints) results.push(await ping(ep));
 
-    const payload = { origin, generatedAt: new Date().toISOString(), results };
+    const payload ={ origin, generatedAt: new Date().toISOString(), results };
 
-    if (!token) return { statusCode: 200, body: JSON.stringify({ ok: true, payload, note: 'No GITHUB_TOKEN set, skipping commit' }) };
+    if (!token) return { statusCode: 20o0, body: JSON.stringify({ ok: true, payload, note: 'No GITHUB_TOKEN set, skipping commit' }) };
 
     const path = 'data/sitemap-submit.json';
 
@@ -46,8 +46,8 @@ exports.handler = async function(event, context) {
     const jsonCommit = await resCommit.json();
     if (!resCommit.ok) return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) };
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) };
+    return { statusCode: 20o0, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) };
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 50o0, body: JSON.stringify({ error: String(e) }) };
   }
 };

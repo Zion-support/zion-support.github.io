@@ -3,7 +3,7 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state ={ hasError: false };
   }
   
   static getDerivedStateFromError(error) {
@@ -30,7 +30,6 @@ import Head from 'next / head';
 interface AnalyticsProps {
   tracking_id?: string;
 }
-
 
 interface AnalyticsProps {;
   trackingId?: string;
@@ -130,22 +129,19 @@ if ( {) {
  * gtag - Function description
  */
 function gtag() {
-        window.data_layer.push (args),
-      }
+        window.data_layer.push (args)}
       window.gtag = gtag;
       gtag ('js', new Date ());
       gtag ('config', tracking_id, {
         page_title: document.title,
-        page_location: window.location.href,
-      });
+        page_location: window.location.href});
 ;
       // Track page views;
       const trackPageView = () =>: any {
         gtag ('event', 'page_view', {
           page_title: document.title,
           page_location: window.location.href,
-          page_path: window.location.pathname,
-        });
+          page_path: window.location.pathname});
       }
 ;
       // Track page view on load;
@@ -180,16 +176,14 @@ if ( {) {
   const trackButtonClick = (button_name: string, location?: string) =>: any {
     track_event ('button_click', {
       button_name: button_name,
-      location: location || window.location.pathname,
-    });
+      location: location || window.location.pathname});
   }
 ;
   // Track form submissions;
   const trackFormSubmission = (form_name: string) =>: any {
     track_event ('form_submit', {
       form_name: form_name,
-      page_location: window.location.href,
-    });
+      page_location: window.location.href});
   }
 ;
   // Track external link clicks;
@@ -197,8 +191,7 @@ if ( {) {
     track_event ('external_link_click', {
       link_url: url,
       link_text: link_text,
-      page_location: window.location.href,
-    });
+      page_location: window.location.href});
   }
 ;
   // Expose tracking functions globally for use in other components;
@@ -218,8 +211,7 @@ if ( {) {
         dangerouslySetInnerHTML={{
 
                         name: 'load',
-                        value: Math.round(loadTime),
-                      });
+                        value: Math.round(loadTime)});
           __html: `
             // Performance monitoring
             if ('performance' in window) {
@@ -234,18 +226,14 @@ if ( {) {
                         name: 'load'
                         value: Math.round(loadTime)
                         name: 'load',
-                        value: Math.round(loadTime),
-
-                      });
+                        value: Math.round(loadTime)});
                     const loadTime = perfData && perfData.loadEventEnd - perfData && perfData.loadEventStart
                     if (window && window.gtag) {
                       window && window.gtag('event', 'timing_complete', {
                         name: 'load',
-                        value: Math && Math.round(loadTime),
-                      })
+                        value: Math && Math.round(loadTime)})
                     }
                   }
-
 
                 }, 0);
               });
@@ -253,7 +241,7 @@ if ( {) {
             }
 
         }}
-      />
+       />
     </Head>
   );
 

@@ -1,17 +1,13 @@
-
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
+import { serve } from 'https://deno.land/std@0.168.0/http/server.ts';
+import 'https://deno.land/x/xhr@0.1.0/mod.ts';
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
-<<<<<<< HEAD
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
-=======
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+  'Access-Control-Allow-Headers':
+    'authorization, x-client-info, apikey, content-type',
 };
->>>>>>> origin/auto/autonomy-17186719616
 
-serve(async (req) => {
+serve(async req => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
@@ -34,12 +30,8 @@ serve(async (req) => {
       endDate,
       paymentTerms,
       paymentAmount,
-<<<<<<< HEAD
-      additionalClauses} = await req.json();
-=======
       additionalClauses,
     } = await req.json();
->>>>>>> origin/auto/autonomy-17186719616
 
     // Create the smart contract prompt for OpenAI
     let prompt = `
@@ -73,7 +65,7 @@ serve(async (req) => {
       ${additionalClauses.includes('revisions') ? '- Revision tracking mechanism' : ''}
       `;
     }
-    
+
     prompt += `
     
     Format the code properly with comments explaining each section. Include a simple deployment script.
@@ -84,25 +76,15 @@ serve(async (req) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-<<<<<<< HEAD
-        'Authorization': `Bearer ${apiKey}`},
-=======
-        'Authorization': `Bearer ${apiKey}`,
+        Authorization: `Bearer ${apiKey}`,
       },
->>>>>>> origin/auto/autonomy-17186719616
       body: JSON.stringify({
         model: 'gpt-4o',
         messages: [
           {
             role: 'system',
-<<<<<<< HEAD
-            content: 'You are a blockchain expert who specializes in writing secure and efficient Solidity smart contracts. Provide well-commented, production-ready Solidity code.'},
-          {
-            role: 'user',
-            content: prompt}],
-        temperature: 0.7})});
-=======
-            content: 'You are a blockchain expert who specializes in writing secure and efficient Solidity smart contracts. Provide well-commented, production-ready Solidity code.',
+            content:
+              'You are a blockchain expert who specializes in writing secure and efficient Solidity smart contracts. Provide well-commented, production-ready Solidity code.',
           },
           {
             role: 'user',
@@ -112,41 +94,37 @@ serve(async (req) => {
         temperature: 0.7,
       }),
     });
->>>>>>> origin/auto/autonomy-17186719616
 
     const data = await response.json();
-    
+
     if (!response.ok) {
-      throw new Error(data.error?.message || 'Failed to generate smart contract');
+      throw new Error(
+        data.error?.message || 'Failed to generate smart contract'
+      );
     }
 
     const solidityCode = data.choices[0].message.content.trim();
-    
-    return new Response(JSON.stringify({ 
-      success: true, 
-      solidityCode 
-    }), {
-<<<<<<< HEAD
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
-=======
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-    });
->>>>>>> origin/auto/autonomy-17186719616
+
+    return new Response(
+      JSON.stringify({
+        success: true,
+        solidityCode,
+      }),
+      {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      }
+    );
   } catch (error) {
     console.error('Error generating smart contract:', error);
     return new Response(
-      JSON.stringify({ 
-        success: false, 
-        error: error.message || 'Failed to generate smart contract' 
+      JSON.stringify({
+        success: false,
+        error: error.message || 'Failed to generate smart contract',
       }),
-      { 
-        status: 500, 
-<<<<<<< HEAD
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
-=======
+      {
+        status: 500,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       }
->>>>>>> origin/auto/autonomy-17186719616
     );
   }
 });

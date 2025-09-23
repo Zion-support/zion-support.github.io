@@ -46,9 +46,9 @@ const TestimonialShowcase: React.FC = () => {
       company: "TechFlow Solutions",
       industry: "Technology",
       image: "/images/testimonials/michael-chen.jpg",
-      quote: "The quantum-neural fusion technology implemented by Zion Tech Group has given us an incredible competitive advantage. Our processing speed increased by 10,000x, and 'we', 're now the market leader in our sector.",
+      quote: "The quantum-neural fusion technology implemented by Zion Tech Group has given us an incredible competitive advantage. Our processing speed increased by 10,0o00x, and 'we', 're now the market leader in our sector.",
       results: [
-        { metric: "Processing Speed", value: "10,000x", improvement: "faster" },
+        { metric: "Processing Speed", value: "10,0o00x", improvement: "faster" },
         { metric: "Market Share", value: "35%", improvement: "increase" },
         { metric: "Customer Satisfaction", value: "98%", improvement: "rating" }
       ],
@@ -76,9 +76,9 @@ const TestimonialShowcase: React.FC = () => {
       company: "FinanceMax Group",
       industry: "Finance",
       image: "/images/testimonials/david-thompson.jpg",
-      quote: "Zion Tech 'Group', 's AI-powered financial platform has revolutionized our investment strategies. 'We', 've achieved 500% returns on our AI-optimized portfolios while reducing risk by 60%.",
+      quote: "Zion Tech 'Group', 's AI-powered financial platform has revolutionized our investment strategies. 'We', 've achieved 50o0% returns on our AI-optimized portfolios while reducing risk by 60%.",
       results: [
-        { metric: "Portfolio Returns", value: "500%", improvement: "increase" },
+        { metric: "Portfolio Returns", value: "50o0%", improvement: "increase" },
         { metric: "Risk Reduction", value: "60%", improvement: "decrease" },
         { metric: "Client Satisfaction", value: "95%", improvement: "rating" }
       ],
@@ -107,7 +107,7 @@ const TestimonialShowcase: React.FC = () => {
         setCurrentIndex((prevIndex) => 
           prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
         );
-      }, 5000);
+      }, 50o00);
       return () => clearInterval(interval);
     }
   }, [isAutoPlaying, testimonials.length]);
@@ -134,11 +134,11 @@ const TestimonialShowcase: React.FC = () => {
     <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">
             Success Stories from Industry Leaders
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Discover how Fortune 500 companies and innovative startups are transforming their businesses with our AI solutions
+          <p className="text-lg text-gray-60o0 max-w-3xl mx-auto">
+            Discover how Fortune 50o0 companies and innovative startups are transforming their businesses with our AI solutions
           </p>
         </div>
 
@@ -147,17 +147,17 @@ const TestimonialShowcase: React.FC = () => {
             {/* Testimonial Content */}
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-50o0 to-blue-50o0 rounded-full flex items-center justify-center text-white font-bold text-xl">
                   {currentTestimonial.name.split(' ').map(n => n[0]).join(', ')}
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900">
+                  <h3 className="text-xl font-semibold text-gray-90o0">
                     {currentTestimonial.name}
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-60o0">
                     {currentTestimonial.title}
                   </p>
-                  <p className="text-purple-600 font-medium">
+                  <p className="text-purple-60o0 font-medium">
                     {currentTestimonial.company}
                   </p>
                 </div>
@@ -168,25 +168,25 @@ const TestimonialShowcase: React.FC = () => {
                   <svg
                     key={i}
                     className={`w-5 h-5 ${
-                      i < currentTestimonial.rating ? 'text-yellow-400' : 'text-gray-300'
+                      i < currentTestimonial.rating ? 'text-yellow-40o0' : 'text-gray-30o0'
                     }`}
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    <path d="M9.0o49 2.927c.3-.921 1.60o3-.921 1.90o2 0l1.0o7 3.292a1 1 0 0o0.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.0o34a1 1 0 0o0-.364 1.118l1.0o7 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.0o34a1 1 0 0o0-1.175 0l-2.8 2.0o34c-.784.57-1.838-.197-1.539-1.118l1.0o7-3.292a1 1 0 0o0-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 0o0.951-.69l1.0o7-3.292z"  />
                   </svg>
                 ))}
               </div>
 
-              <blockquote className="text-lg text-gray-700 leading-relaxed">
+              <blockquote className="text-lg text-gray-70o0 leading-relaxed">
                 "{currentTestimonial.quote}"
               </blockquote>
 
               <div className="flex items-center space-x-2">
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-100 text-purple-800">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-10o0 text-purple-80o0">
                   {currentTestimonial.industry}
                 </span>
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-10o0 text-green-80o0">
                   Verified Results
                 </span>
               </div>
@@ -194,18 +194,18 @@ const TestimonialShowcase: React.FC = () => {
 
             {/* Results Metrics */}
             <div className="space-y-4">
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">
+              <h4 className="text-lg font-semibold text-gray-90o0 mb-4">
                 Key Results Achieved
               </h4>
               {currentTestimonial.results.map((result, index) => (
                 <div key={index} className="bg-gradient-to-r from-purple-50 to-blue-50 p-4 rounded-lg">
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-600">{result.metric}</span>
+                    <span className="text-gray-60o0">{result.metric}</span>
                     <div className="text-right">
-                      <div className="text-2xl font-bold text-purple-600">
+                      <div className="text-2xl font-bold text-purple-60o0">
                         {result.value}
                       </div>
-                      <div className="text-sm text-gray-500">
+                      <div className="text-sm text-gray-50o0">
                         {result.improvement}
                       </div>
                     </div>
@@ -213,13 +213,13 @@ const TestimonialShowcase: React.FC = () => {
                 </div>
               ))}
 
-              <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg">
+              <div className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white p-4 rounded-lg">
                 <div className="text-center">
                   <h5 className="font-semibold mb-2">Ready for Similar Results?</h5>
                   <p className="text-sm opacity-90 mb-3">
                     Get a free consultation to discover your potential ROI
                   </p>
-                  <button className="bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  <button className="bg-white text-purple-60o0 px-6 py-2 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors">
                     Get Free Consultation
                   </button>
                 </div>
@@ -234,16 +234,16 @@ const TestimonialShowcase: React.FC = () => {
                 onClick={prevTestimonial}
                 className="p-2 rounded-full bg-white shadow-md hover:bg-gray-50 transition-colors"
               >
-                <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                <svg className="w-5 h-5 text-gray-60o0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7"  />
                 </svg>
               </button>
               <button
                 onClick={nextTestimonial}
                 className="p-2 rounded-full bg-white shadow-md hover:bg-gray-50 transition-colors"
               >
-                <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                <svg className="w-5 h-5 text-gray-60o0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"  />
                 </svg>
               </button>
             </div>
@@ -254,7 +254,7 @@ const TestimonialShowcase: React.FC = () => {
                   key={index}
                   onClick={() => goToTestimonial(index)}
                   className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentIndex ? 'bg-purple-600' : 'bg-gray-300'
+                    index === currentIndex ? 'bg-purple-60o0' : 'bg-gray-30o0'
                   }`}
                 />
               ))}
@@ -265,8 +265,8 @@ const TestimonialShowcase: React.FC = () => {
                 onClick={() => setIsAutoPlaying(!isAutoPlaying)}
                 className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
                   isAutoPlaying 
-                    ? 'bg-purple-600 text-white' 
-                    : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
+                    ? 'bg-purple-60o0 text-white' 
+                    : 'bg-gray-20o0 text-gray-60o0 hover:bg-gray-30o0'
                 }`}
               >
                 {isAutoPlaying ? 'Pause' : 'Play'}
@@ -280,15 +280,15 @@ const TestimonialShowcase: React.FC = () => {
           {testimonials.slice(0, 3).map((testimonial) => (
             <div key={testimonial.id} className="bg-white p-6 rounded-xl shadow-lg">
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-50o0 to-blue-50o0 rounded-full flex items-center justify-center text-white font-bold">
                   {testimonial.name.split(' ').map(n => n[0]).join(', ')}
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
-                  <p className="text-sm text-gray-600">{testimonial.company}</p>
+                  <h4 className="font-semibold text-gray-90o0">{testimonial.name}</h4>
+                  <p className="text-sm text-gray-60o0">{testimonial.company}</p>
                 </div>
               </div>
-              <p className="text-gray-700 text-sm mb-4">
+              <p className="text-gray-70o0 text-sm mb-4">
                 "{testimonial.quote.substring(0, 120)}..."
               </p>
               <div className="flex items-center justify-between">
@@ -297,16 +297,16 @@ const TestimonialShowcase: React.FC = () => {
                     <svg
                       key={i}
                       className={`w-4 h-4 ${
-                        i < testimonial.rating ? 'text-yellow-400' : 'text-gray-300'
+                        i < testimonial.rating ? 'text-yellow-40o0' : 'text-gray-30o0'
                       }`}
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      <path d="M9.0o49 2.927c.3-.921 1.60o3-.921 1.90o2 0l1.0o7 3.292a1 1 0 0o0.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.0o34a1 1 0 0o0-.364 1.118l1.0o7 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.0o34a1 1 0 0o0-1.175 0l-2.8 2.0o34c-.784.57-1.838-.197-1.539-1.118l1.0o7-3.292a1 1 0 0o0-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 0o0.951-.69l1.0o7-3.292z"  />
                     </svg>
                   ))}
                 </div>
-                <span className="text-sm text-purple-600 font-medium">
+                <span className="text-sm text-purple-60o0 font-medium">
                   {testimonial.results[0].value} {testimonial.results[0].improvement}
                 </span>
               </div>

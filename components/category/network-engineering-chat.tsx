@@ -7,17 +7,13 @@ const NetworkEngineeringChat: NextPage = () => {
     <div>
       <Head>
         <title>NetworkEngineeringChat - Zion Tech Solutions</title>
-        <meta name="description" content="NetworkEngineeringChat blog post" />
+        <meta name='description' content='NetworkEngineeringChat blog post' />
       </Head>
-      
+
       <main>
         <h1>NetworkEngineeringChat</h1>
         <p>Blog content coming soon...</p>
-<<<<<<< HEAD
-        <Link href="/blog">Back to Blog</Link>
-=======
-        <a href="/blog">Back to Blog</a>
->>>>>>> origin/auto/autonomy-17186719616
+        <Link href='/blog'>Back to Blog</Link>
       </main>
     </div>
   );

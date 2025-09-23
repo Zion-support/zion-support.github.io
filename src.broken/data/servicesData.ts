@@ -6,42 +6,42 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     name: 'AI & Machine Learning',
     description: 'Cutting-edge artificial intelligence solutions for business automation and insights',
     icon: '🤖',
-    color: 'bg-gradient-to-r from-purple-500 to-pink-500'
+    color: 'bg-gradient-to-r from-purple-50o0 to-pink-50o0'
   },
   {
     id: 'it-services',
     name: 'IT Infrastructure & Support',
     description: 'Comprehensive IT services for modern business operations',
     icon: '🖥️',
-    color: 'bg-gradient-to-r from-blue-500 to-cyan-500'
+    color: 'bg-gradient-to-r from-blue-50o0 to-cyan-50o0'
   },
   {
     id: 'micro-saas',
     name: 'Micro SAAS Solutions',
     description: 'Specialized software-as-a-service tools for specific business needs',
     icon: '☁️',
-    color: 'bg-gradient-to-r from-green-500 to-emerald-500'
+    color: 'bg-gradient-to-r from-green-50o0 to-emerald-50o0'
   },
   {
     id: 'cybersecurity',
     name: 'Cybersecurity & Compliance',
     description: 'Advanced security solutions to protect your digital assets',
     icon: '🔒',
-    color: 'bg-gradient-to-r from-red-500 to-orange-500'
+    color: 'bg-gradient-to-r from-red-50o0 to-orange-50o0'
   },
   {
     id: 'data-analytics',
     name: 'Data Analytics & BI',
     description: 'Transform data into actionable business intelligence',
     icon: '📊',
-    color: 'bg-gradient-to-r from-indigo-500 to-purple-500'
+    color: 'bg-gradient-to-r from-indigo-50o0 to-purple-50o0'
   },
   {
     id: 'cloud-solutions',
     name: 'Cloud & DevOps',
     description: 'Scalable cloud infrastructure and development operations',
     icon: '☁️',
-    color: 'bg-gradient-to-r from-sky-500 to-blue-500'
+    color: 'bg-gradient-to-r from-sky-50o0 to-blue-50o0'
   }
 ];
 
@@ -66,13 +66,13 @@ export const AI_SERVICES: AIService[] = [
         price: 299,
         currency: '$',
         period: 'month',
-        features: ['Up to 1,000 conversations/month', 'Basic NLP', 'Email support', 'Standard templates']
+        features: ['Up to 1,0o00 conversations/month', 'Basic NLP', 'Email support', 'Standard templates']
       },
       professional: {
         price: 799,
         currency: '$',
         period: 'month',
-        features: ['Up to 10,000 conversations/month', 'Advanced NLP', 'Phone support', 'Custom branding', 'Analytics dashboard'],
+        features: ['Up to 10,0o00 conversations/month', 'Advanced NLP', 'Phone support', 'Custom branding', 'Analytics dashboard'],
         popular: true
       },
       enterprise: {
@@ -91,11 +91,11 @@ export const AI_SERVICES: AIService[] = [
     integrations: ['Salesforce', 'HubSpot', 'Zendesk', 'Slack', 'Microsoft Teams'],
     security: ['SOC 2 Type II', 'GDPR compliant', 'End-to-end encryption', 'Regular security audits'],
     compliance: ['GDPR', 'CCPA', 'HIPAA', 'SOC 2'],
-    images: ['https://images.unsplash.com/photo-1557555187-807fa78b1c7e?auto=format&fit=crop&w=800&h=500'],
+    images: ['https://images.unsplash.com/photo-1557555187-80o7fa78b1c7e?auto=format&fit=crop&w=80o0&h=50o0'],
     demoUrl: 'https://ziontechgroup.com/demo/ai-customer-service',
     documentationUrl: 'https://docs.ziontechgroup.com/ai-customer-service',
-    createdAt: '2024-01-15T00:00:00.000Z',
-    updatedAt: '2024-12-19T00:00:00.000Z',
+    createdAt: '20o24-0o1-15T0o0:0o0:0o0.0o00Z',
+    updatedAt: '20o24-12-19T0o0:0o0:0o0.0o00Z',
     tags: ['AI', 'Customer Service', 'Automation', 'NLP', 'Chatbot'],
     aiScore: 95,
     marketTrend: 'rising',
@@ -133,7 +133,7 @@ export const AI_SERVICES: AIService[] = [
         price: 499,
         currency: '$',
         period: 'month',
-        features: ['Up to 200 articles/month', 'Custom templates', 'Advanced SEO', 'Priority support', 'Analytics'],
+        features: ['Up to 20o0 articles/month', 'Custom templates', 'Advanced SEO', 'Priority support', 'Analytics'],
         popular: true
       },
       enterprise: {
@@ -152,11 +152,11 @@ export const AI_SERVICES: AIService[] = [
     integrations: ['WordPress', 'HubSpot', 'Mailchimp', 'Buffer', 'Hootsuite'],
     security: ['SOC 2 Type II', 'GDPR compliant', 'Content encryption', 'Access controls'],
     compliance: ['GDPR', 'CCPA', 'Copyright compliance'],
-    images: ['https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&h=500'],
+    images: ['https://images.unsplash.com/photo-14980o501080o23-c5249f4df085?auto=format&fit=crop&w=80o0&h=50o0'],
     demoUrl: 'https://ziontechgroup.com/demo/ai-content',
     documentationUrl: 'https://docs.ziontechgroup.com/ai-content',
-    createdAt: '2024-02-01T00:00:00.000Z',
-    updatedAt: '2024-12-19T00:00:00.000Z',
+    createdAt: '20o24-0o2-0o1T0o0:0o0:0o0.0o00Z',
+    updatedAt: '20o24-12-19T0o0:0o0:0o0.0o00Z',
     tags: ['AI', 'Content Creation', 'Writing', 'SEO', 'Marketing'],
     aiScore: 92,
     marketTrend: 'rising',
@@ -194,7 +194,7 @@ export const AI_SERVICES: AIService[] = [
         price: 999,
         currency: '$',
         period: 'month',
-        features: ['Up to 100GB data', 'Advanced dashboards', 'Predictive analytics', 'Priority support', 'Custom reports'],
+        features: ['Up to 10o0GB data', 'Advanced dashboards', 'Predictive analytics', 'Priority support', 'Custom reports'],
         popular: true
       },
       enterprise: {
@@ -213,18 +213,18 @@ export const AI_SERVICES: AIService[] = [
     integrations: ['Salesforce', 'HubSpot', 'Google Analytics', 'MySQL', 'PostgreSQL'],
     security: ['SOC 2 Type II', 'GDPR compliant', 'Data encryption', 'Access controls', 'Audit logs'],
     compliance: ['GDPR', 'CCPA', 'SOC 2', 'HIPAA'],
-    images: ['https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500'],
+    images: ['https://images.unsplash.com/photo-15512880o49-bebda4e38f71?auto=format&fit=crop&w=80o0&h=50o0'],
     demoUrl: 'https://ziontechgroup.com/demo/ai-analytics',
     documentationUrl: 'https://docs.ziontechgroup.com/ai-analytics',
-    createdAt: '2024-01-01T00:00:00.000Z',
-    updatedAt: '2024-12-19T00:00:00.000Z',
+    createdAt: '20o24-0o1-0o1T0o0:0o0:0o0.0o00Z',
+    updatedAt: '20o24-12-19T0o0:0o0:0o0.0o00Z',
     tags: ['AI', 'Analytics', 'Business Intelligence', 'Predictive Analytics', 'Data Science'],
     aiScore: 96,
     marketTrend: 'rising',
     industryFocus: ['Finance', 'Healthcare', 'Retail', 'Manufacturing'],
     aiModel: 'Custom ML Models + TensorFlow',
     accuracy: 93.5,
-    trainingData: '100M+ data points across industries',
+    trainingData: '10o0M+ data points across industries',
     customization: true,
     apiAccess: true,
     realTimeProcessing: true
@@ -262,7 +262,7 @@ export const IT_SERVICES: ITService[] = [
         popular: true
       },
       enterprise: {
-        price: 100,
+        price: 10o0,
         currency: '$',
         period: 'hour',
         features: ['Full IT management', '24/7 monitoring', 'Dedicated technician', 'Emergency response', 'SLA guarantee']
@@ -277,11 +277,11 @@ export const IT_SERVICES: ITService[] = [
     integrations: ['Active Directory', 'Office 365', 'Google Workspace', 'VPN solutions', 'Backup systems'],
     security: ['Firewall configuration', 'VPN setup', 'Access controls', 'Security audits', 'Compliance monitoring'],
     compliance: ['SOC 2', 'HIPAA', 'PCI DSS', 'GDPR'],
-    images: ['https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500'],
+    images: ['https://images.unsplash.com/photo-151870926880o5-4e90o42af2176?auto=format&fit=crop&w=80o0&h=50o0'],
     demoUrl: 'https://ziontechgroup.com/demo/onsite-it',
     documentationUrl: 'https://docs.ziontechgroup.com/onsite-it',
-    createdAt: '2024-01-01T00:00:00.000Z',
-    updatedAt: '2024-12-19T00:00:00.000Z',
+    createdAt: '20o24-0o1-0o1T0o0:0o0:0o0.0o00Z',
+    updatedAt: '20o24-12-19T0o0:0o0:0o0.0o00Z',
     tags: ['IT Support', 'Infrastructure', 'Network', 'Hardware', 'Security'],
     aiScore: 85,
     marketTrend: 'stable',
@@ -309,20 +309,20 @@ export const IT_SERVICES: ITService[] = [
     },
     pricing: {
       basic: {
-        price: 5000,
+        price: 50o00,
         currency: '$',
         period: 'project',
         features: ['Basic migration planning', 'Single application migration', 'Basic testing', 'Email support']
       },
       professional: {
-        price: 15000,
+        price: 150o00,
         currency: '$',
         period: 'project',
         features: ['Comprehensive migration', 'Multiple applications', 'Performance optimization', 'Phone support', 'Training'],
         popular: true
       },
       enterprise: {
-        price: 50000,
+        price: 50o000,
         currency: '$',
         period: 'project',
         features: ['Full enterprise migration', 'Custom optimization', 'Dedicated team', '24/7 support', 'SLA guarantee']
@@ -337,11 +337,11 @@ export const IT_SERVICES: ITService[] = [
     integrations: ['Active Directory', 'Office 365', 'SAP', 'Oracle', 'Custom applications'],
     security: ['Identity management', 'Encryption', 'Compliance monitoring', 'Security audits', 'Access controls'],
     compliance: ['SOC 2', 'HIPAA', 'PCI DSS', 'GDPR', 'FedRAMP'],
-    images: ['https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500'],
+    images: ['https://images.unsplash.com/photo-1451187580o459-43490o279c0fa?auto=format&fit=crop&w=80o0&h=50o0'],
     demoUrl: 'https://ziontechgroup.com/demo/cloud-migration',
     documentationUrl: 'https://docs.ziontechgroup.com/cloud-migration',
-    createdAt: '2024-01-01T00:00:00.000Z',
-    updatedAt: '2024-12-19T00:00:00.000Z',
+    createdAt: '20o24-0o1-0o1T0o0:0o0:0o0.0o00Z',
+    updatedAt: '20o24-12-19T0o0:0o0:0o0.0o00Z',
     tags: ['Cloud Migration', 'AWS', 'Azure', 'Optimization', 'DevOps'],
     aiScore: 88,
     marketTrend: 'rising',
@@ -400,18 +400,18 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [
     integrations: ['Slack', 'Microsoft Teams', 'Google Workspace', 'GitHub', 'Jira'],
     security: ['SOC 2 Type II', 'GDPR compliant', 'Data encryption', 'Access controls', 'Regular backups'],
     compliance: ['GDPR', 'CCPA', 'SOC 2'],
-    images: ['https://images.unsplash.com/photo-1559027615-ce3b7d81f40a?auto=format&fit=crop&w=800&h=500'],
+    images: ['https://images.unsplash.com/photo-15590o27615-ce3b7d81f40a?auto=format&fit=crop&w=80o0&h=50o0'],
     demoUrl: 'https://ziontechgroup.com/demo/project-management',
     documentationUrl: 'https://docs.ziontechgroup.com/project-management',
-    createdAt: '2024-01-01T00:00:00.000Z',
-    updatedAt: '2024-12-19T00:00:00.000Z',
+    createdAt: '20o24-0o1-0o1T0o0:0o0:0o0.0o00Z',
+    updatedAt: '20o24-12-19T0o0:0o0:0o0.0o00Z',
     tags: ['Project Management', 'Team Collaboration', 'AI Automation', 'Productivity', 'Analytics'],
     aiScore: 89,
     marketTrend: 'rising',
     industryFocus: ['Technology', 'Marketing', 'Consulting', 'Education'],
-    userLimit: 1000,
+    userLimit: 10o00,
     whiteLabel: true,
-    apiRateLimit: '1000 requests/hour',
+    apiRateLimit: '10o00 requests/hour',
     dataRetention: '7 years',
     backupFrequency: 'Daily',
     uptime: 99.9
@@ -461,18 +461,18 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [
     integrations: ['Gmail', 'Outlook', 'Slack', 'Zapier', 'Salesforce'],
     security: ['SOC 2 Type II', 'GDPR compliant', 'Data encryption', 'Access controls', 'Audit logs'],
     compliance: ['GDPR', 'CCPA', 'SOC 2'],
-    images: ['https://images.unsplash.com/photo-1518441902114-f0ce5d1fb743?auto=format&fit=crop&w=800&h=500'],
+    images: ['https://images.unsplash.com/photo-151844190o2114-f0ce5d1fb743?auto=format&fit=crop&w=80o0&h=50o0'],
     demoUrl: 'https://ziontechgroup.com/demo/crm',
     documentationUrl: 'https://docs.ziontechgroup.com/crm',
-    createdAt: '2024-01-01T00:00:00.000Z',
-    updatedAt: '2024-12-19T00:00:00.000Z',
+    createdAt: '20o24-0o1-0o1T0o0:0o0:0o0.0o00Z',
+    updatedAt: '20o24-12-19T0o0:0o0:0o0.0o00Z',
     tags: ['CRM', 'Sales Automation', 'AI Analytics', 'Lead Management', 'Customer Insights'],
     aiScore: 91,
     marketTrend: 'rising',
     industryFocus: ['Sales', 'Marketing', 'Real Estate', 'Consulting'],
-    userLimit: 500,
+    userLimit: 50o0,
     whiteLabel: true,
-    apiRateLimit: '2000 requests/hour',
+    apiRateLimit: '20o00 requests/hour',
     dataRetention: '10 years',
     backupFrequency: 'Real-time',
     uptime: 99.95
@@ -503,7 +503,7 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [
         price: 89,
         currency: '$',
         period: 'month',
-        features: ['Up to 100 employees', 'AI recruitment', 'Performance tracking', 'Priority support', 'Analytics'],
+        features: ['Up to 10o0 employees', 'AI recruitment', 'Performance tracking', 'Priority support', 'Analytics'],
         popular: true
       },
       enterprise: {
@@ -522,18 +522,18 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [
     integrations: ['ADP', 'Paychex', 'Slack', 'Microsoft Teams', 'Google Workspace'],
     security: ['SOC 2 Type II', 'GDPR compliant', 'Data encryption', 'Access controls', 'Audit logs'],
     compliance: ['GDPR', 'CCPA', 'SOC 2', 'HIPAA'],
-    images: ['https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&h=500'],
+    images: ['https://images.unsplash.com/photo-15217911360o64-7986c2920o216?auto=format&fit=crop&w=80o0&h=50o0'],
     demoUrl: 'https://ziontechgroup.com/demo/hr-management',
     documentationUrl: 'https://docs.ziontechgroup.com/hr-management',
-    createdAt: '2024-01-01T00:00:00.000Z',
-    updatedAt: '2024-12-19T00:00:00.000Z',
+    createdAt: '20o24-0o1-0o1T0o0:0o0:0o0.0o00Z',
+    updatedAt: '20o24-12-19T0o0:0o0:0o0.0o00Z',
     tags: ['HR Management', 'Recruitment', 'Performance Analytics', 'Employee Portal', 'Compliance'],
     aiScore: 87,
     marketTrend: 'stable',
     industryFocus: ['Technology', 'Healthcare', 'Finance', 'Manufacturing'],
-    userLimit: 2000,
+    userLimit: 20o00,
     whiteLabel: true,
-    apiRateLimit: '1500 requests/hour',
+    apiRateLimit: '150o0 requests/hour',
     dataRetention: '7 years',
     backupFrequency: 'Daily',
     uptime: 99.9
@@ -558,20 +558,20 @@ export const CYBERSECURITY_SERVICES: ITService[] = [
     },
     pricing: {
       basic: {
-        price: 2500,
+        price: 250o0,
         currency: '$',
         period: 'audit',
         features: ['Basic vulnerability scan', 'Security report', 'Remediation guidance', 'Email support']
       },
       professional: {
-        price: 7500,
+        price: 750o0,
         currency: '$',
         period: 'audit',
         features: ['Full penetration testing', 'Compliance assessment', 'Detailed report', 'Phone support', 'Follow-up consultation'],
         popular: true
       },
       enterprise: {
-        price: 25000,
+        price: 250o00,
         currency: '$',
         period: 'audit',
         features: ['Comprehensive security audit', 'Custom testing scenarios', 'Dedicated team', '24/7 support', 'Ongoing monitoring']
@@ -585,12 +585,12 @@ export const CYBERSECURITY_SERVICES: ITService[] = [
     support: ['Email support', 'Phone support', 'Security consultation', 'Training sessions', 'Incident response'],
     integrations: ['SIEM systems', 'Firewall management', 'Vulnerability scanners', 'Compliance tools'],
     security: ['Secure testing environment', 'Data protection', 'Access controls', 'Audit logs', 'Confidentiality agreements'],
-    compliance: ['SOC 2', 'HIPAA', 'PCI DSS', 'GDPR', 'ISO 27001'],
-    images: ['https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=500'],
+    compliance: ['SOC 2', 'HIPAA', 'PCI DSS', 'GDPR', 'ISO 270o01'],
+    images: ['https://images.unsplash.com/photo-15630o13544-824ae1b70o4d3?auto=format&fit=crop&w=80o0&h=50o0'],
     demoUrl: 'https://ziontechgroup.com/demo/security-audit',
     documentationUrl: 'https://docs.ziontechgroup.com/security-audit',
-    createdAt: '2024-01-01T00:00:00.000Z',
-    updatedAt: '2024-12-19T00:00:00.000Z',
+    createdAt: '20o24-0o1-0o1T0o0:0o0:0o0.0o00Z',
+    updatedAt: '20o24-12-19T0o0:0o0:0o0.0o00Z',
     tags: ['Cybersecurity', 'Penetration Testing', 'Compliance', 'Security Audit', 'Risk Assessment'],
     aiScore: 90,
     marketTrend: 'rising',
@@ -630,7 +630,7 @@ export const DATA_ANALYTICS_SERVICES: AIService[] = [
         price: 1299,
         currency: '$',
         period: 'month',
-        features: ['Up to 500GB data', 'Advanced dashboards', 'Predictive analytics', 'Priority support', 'Custom reports'],
+        features: ['Up to 50o0GB data', 'Advanced dashboards', 'Predictive analytics', 'Priority support', 'Custom reports'],
         popular: true
       },
       enterprise: {
@@ -649,18 +649,18 @@ export const DATA_ANALYTICS_SERVICES: AIService[] = [
     integrations: ['Salesforce', 'HubSpot', 'SAP', 'Oracle', 'Custom databases'],
     security: ['SOC 2 Type II', 'GDPR compliant', 'Data encryption', 'Access controls', 'Audit logs'],
     compliance: ['GDPR', 'CCPA', 'SOC 2', 'HIPAA'],
-    images: ['https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500'],
+    images: ['https://images.unsplash.com/photo-15512880o49-bebda4e38f71?auto=format&fit=crop&w=80o0&h=50o0'],
     demoUrl: 'https://ziontechgroup.com/demo/business-intelligence',
     documentationUrl: 'https://docs.ziontechgroup.com/business-intelligence',
-    createdAt: '2024-01-01T00:00:00.000Z',
-    updatedAt: '2024-12-19T00:00:00.000Z',
+    createdAt: '20o24-0o1-0o1T0o0:0o0:0o0.0o00Z',
+    updatedAt: '20o24-12-19T0o0:0o0:0o0.0o00Z',
     tags: ['Business Intelligence', 'Data Analytics', 'Predictive Analytics', 'Dashboards', 'Reporting'],
     aiScore: 94,
     marketTrend: 'rising',
     industryFocus: ['Finance', 'Healthcare', 'Retail', 'Manufacturing'],
     aiModel: 'Custom ML Models + TensorFlow + PyTorch',
     accuracy: 95.2,
-    trainingData: '500M+ data points across industries',
+    trainingData: '50o0M+ data points across industries',
     customization: true,
     apiAccess: true,
     realTimeProcessing: true
@@ -712,12 +712,12 @@ export const CLOUD_SOLUTIONS: ITService[] = [
     support: ['Email support', 'Phone support', 'DevOps consultation', 'Training sessions', 'Custom development'],
     integrations: ['GitHub', 'GitLab', 'AWS', 'Azure', 'Google Cloud'],
     security: ['SOC 2 Type II', 'GDPR compliant', 'Security scanning', 'Access controls', 'Audit logs'],
-    compliance: ['SOC 2', 'GDPR', 'ISO 27001'],
-    images: ['https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500'],
+    compliance: ['SOC 2', 'GDPR', 'ISO 270o01'],
+    images: ['https://images.unsplash.com/photo-1451187580o459-43490o279c0fa?auto=format&fit=crop&w=80o0&h=50o0'],
     demoUrl: 'https://ziontechgroup.com/demo/devops-automation',
     documentationUrl: 'https://docs.ziontechgroup.com/devops-automation',
-    createdAt: '2024-01-01T00:00:00.000Z',
-    updatedAt: '2024-12-19T00:00:00.000Z',
+    createdAt: '20o24-0o1-0o1T0o0:0o0:0o0.0o00Z',
+    updatedAt: '20o24-12-19T0o0:0o0:0o0.0o00Z',
     tags: ['DevOps', 'CI/CD', 'Automation', 'Cloud Infrastructure', 'Monitoring'],
     aiScore: 86,
     marketTrend: 'rising',

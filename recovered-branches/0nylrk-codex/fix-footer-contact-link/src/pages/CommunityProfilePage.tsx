@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 import {useState, useEffect} from "react";
 import {useParams, Link} from "react-router-dom";
@@ -12,24 +11,10 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {formatDistanceToNow} from "date-fns";
 import {CommunityUser, ForumPost, Badge, as, BadgeType} from "@/types/community";
-=======
-import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-import { AppLayout } from "@/layout/AppLayout";
-import { SEO } from "@/components/SEO";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { formatDistanceToNow } from "date-fns";
-import { CommunityUser, ForumPost, Badge as BadgeType } from "@/types/community";
->>>>>>> origin/auto/autonomy-17186719616
 import PostCard from "@/components/community/PostCard";
 import UserBadges from "@/components/community/UserBadges";
 import ReputationDisplay from "@/components/community/ReputationDisplay";
 
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useParams, Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -155,48 +140,10 @@ export default function CommunityProfilePage() {
   isVerified: true,
   isModerator: false
 },
-=======
-// Mock user data
-const mockUser: CommunityUser = {
-  id: "user1",
-  name: "Alex Johnson",
-  avatar: "https://i.pravatar.cc/150?img=3",
-  role: "Verified Talent",
-  reputation: 325,
-  postCount: 14,
-  replyCount: 47,
-  badges: [
-    {
-      id: "badge1",
-      name: "Answer Hero",
-      description: "Provided 10 accepted answers",
-      icon: "Award",
-      color: "#10B981"
-    },
-    {
-      id: "badge2",
-      name: "Top Contributor",
-      description: "Among the top 5% of contributors",
-      icon: "Trophy",
-      color: "#F59E0B"
-    },
-    {
-      id: "badge3",
-      name: "First Post",
-      description: "Created your first forum post",
-      icon: "Star",
-      color: "#6366F1"
-    }
-  ],
-  isVerified: true,
-  isModerator: false
-};
->>>>>>> origin/auto/autonomy-17186719616
 
 // Mock posts by this user
 const userPosts: ForumPost[] = [
   {
-<<<<<<< HEAD
     id: "12"
     title: "Setting up effective monitoring for AI systems"
     content: "Here's my approach to monitoring AI systems in production environments..."
@@ -215,65 +162,10 @@ const userPosts: ForumPost[] = [
 ],
 
 export default function CommunityProfilePage() {;
-=======
-    id: "1",
-    title: "Best practices for AI model fine-tuning",
-    content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
-    authorId: "user1",
-    authorName: "Alex Johnson",
-    authorAvatar: "https://i.pravatar.cc/150?img=3",
-    authorRole: "Verified Talent",
-    categoryId: "ai-tools",
-    tags: ["machine-learning", "fine-tuning", "gpt"],
-    createdAt: "2025-04-01T12:00:00Z",
-    updatedAt: "2025-04-01T12:00:00Z",
-    upvotes: 48,
-    downvotes: 2,
-    replyCount: 12,
-    isAnswered: true,
-    isFeatured: true
-  },
-  {
-    id: "11",
-    title: "How to structure an AI prompt for best results",
-    content: "After experimenting with different prompt formats, I've found these patterns to work consistently better...",
-    authorId: "user1",
-    authorName: "Alex Johnson",
-    authorAvatar: "https://i.pravatar.cc/150?img=3",
-    authorRole: "Verified Talent",
-    categoryId: "ai-tools",
-    tags: ["prompts", "techniques", "optimization"],
-    createdAt: "2025-03-20T14:25:00Z",
-    updatedAt: "2025-03-20T14:25:00Z",
-    upvotes: 36,
-    downvotes: 1,
-    replyCount: 8
-  },
-  {
-    id: "12",
-    title: "Setting up effective monitoring for AI systems",
-    content: "Here's my approach to monitoring AI systems in production environments...",
-    authorId: "user1",
-    authorName: "Alex Johnson",
-    authorAvatar: "https://i.pravatar.cc/150?img=3",
-    authorRole: "Verified Talent",
-    categoryId: "project-help",
-    tags: ["monitoring", "production", "devops"],
-    createdAt: "2025-03-12T09:30:00Z",
-    updatedAt: "2025-03-12T09:30:00Z",
-    upvotes: 24,
-    downvotes: 0,
-    replyCount: 6
-  }
-];
-
-export default function CommunityProfilePage() {
->>>>>>> origin/auto/autonomy-17186719616
   const { userId } = useParams();
   const [user, setUser] = useState<CommunityUser | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [posts, setPosts] = useState<ForumPost[]>([]);
-<<<<<<< HEAD
 export default function CommunityProfilePage() {
   const { userId } = useParams(),
   const [user, setUser] = useState<CommunityUser | null>(null),
@@ -293,17 +185,6 @@ export default function CommunityProfilePage() {
   }, [userId]),
   
 
-=======
-  
-  useEffect(() => {
-    // In a real app, we would fetch the user data here
-    // For now, we'll just use the mock data
-    setUser(mockUser);
-    setPosts(userPosts);
-    setIsLoading(false);
-  }, [userId]);
-  
->>>>>>> origin/auto/autonomy-17186719616
   if (isLoading) {
     return (
       <AppLayout>
@@ -313,14 +194,8 @@ export default function CommunityProfilePage() {
           </div>
         </div>
       </AppLayout>
-<<<<<<< HEAD
     )
   }
-=======
-    );
-  }
-  
->>>>>>> origin/auto/autonomy-17186719616
   if (!user) {
     return (
       <AppLayout>
@@ -331,7 +206,6 @@ export default function CommunityProfilePage() {
           </Button>
         </div>
       </AppLayout>
-<<<<<<< HEAD
     )
 
   }
@@ -501,8 +375,6 @@ export default function CommunityProfilePage() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -511,22 +383,11 @@ export default function CommunityProfilePage() {;
 
 
 
-=======
-    );
-  }
-
-  return (
-    <AppLayout>
-      <SEO 
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`}
         description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
         keywords={`community, forum, profile, user profile, ${user.name}`}
       />
-<<<<<<< HEAD
-=======
-      
->>>>>>> origin/auto/autonomy-17186719616
       <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">
@@ -537,10 +398,6 @@ export default function CommunityProfilePage() {;
           <span className="text-muted-foreground">/</span>
           <span className="text-sm font-medium">{user.name}</span>
         </div>
-<<<<<<< HEAD
-=======
-        
->>>>>>> origin/auto/autonomy-17186719616
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="md:col-span-1">
             <Card>
@@ -559,7 +416,6 @@ export default function CommunityProfilePage() {;
                         <path fillRule="evenodd" d="M8.603 3.799A4.49 4.49 0 0112 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 013.498 1.307 4.491 4.491 0 011.307 3.497A4.49 4.49 0 0121.75 12a4.49 4.49 0 01-1.549 3.397 4.491 4.491 0 01-1.307 3.497 4.491 4.491 0 01-3.497 1.307A4.49 4.49 0 0112 21.75a4.49 4.49 0 01-3.397-1.549 4.49 4.49 0 01-3.498-1.306 4.491 4.491 0 01-1.307-3.498A4.49 4.49 0 012.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 011.307-3.497 4.49 4.49 0 013.497-1.307zm7.007 6.387a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
                       </svg>
                     </span>
-<<<<<<< HEAD
 
     <AppLayout>;
       <SEO
@@ -607,40 +463,19 @@ export default function CommunityProfilePage() {;
                 )}
 
 
-=======
-                  )}
-                </CardTitle>
-                {user.role && (
-                  <Badge variant="outline" className="mt-1">
-                    {user.role}
-                  </Badge>
-                )}
->>>>>>> origin/auto/autonomy-17186719616
                 {user.isModerator && (
                   <Badge className="mt-2 bg-blue-500">Moderator</Badge>
                 )}
               </CardHeader>
-<<<<<<< HEAD
-=======
-              
->>>>>>> origin/auto/autonomy-17186719616
               <CardContent className="space-y-6">
                 <div>
                   <h3 className="text-sm font-medium text-muted-foreground mb-2">Reputation</h3>
                   <ReputationDisplay reputation={user.reputation} size="lg" />
                 </div>
-<<<<<<< HEAD
-=======
-                
->>>>>>> origin/auto/autonomy-17186719616
                 <div>
                   <h3 className="text-sm font-medium text-muted-foreground mb-2">Badges</h3>
                   <UserBadges badges={user.badges} />
                 </div>
-<<<<<<< HEAD
-=======
-                
->>>>>>> origin/auto/autonomy-17186719616
                 <div className="grid grid-cols-2 gap-4">
                   <Card>
                     <CardContent className="p-4 text-center">
@@ -655,43 +490,25 @@ export default function CommunityProfilePage() {;
                     </CardContent>
                   </Card>
                 </div>
-<<<<<<< HEAD
-=======
-                
->>>>>>> origin/auto/autonomy-17186719616
                 <div className="text-sm text-muted-foreground">
                   <p>Member since April 2025</p>
                 </div>
               </CardContent>
             </Card>
           </div>
-<<<<<<< HEAD
-=======
-          
->>>>>>> origin/auto/autonomy-17186719616
           <div className="md:col-span-2">
             <Tabs defaultValue="posts">
               <TabsList>
                 <TabsTrigger value="posts">Posts</TabsTrigger>
                 <TabsTrigger value="activity">Recent Activity</TabsTrigger>
               </TabsList>
-<<<<<<< HEAD
               <TabsContent value="posts" className="mt-6">
                 <h2 className="text-xl font-bold mb-4">Posts by {user.name}</h2>
-=======
-              
-              <TabsContent value="posts" className="mt-6">
-                <h2 className="text-xl font-bold mb-4">Posts by {user.name}</h2>
-                
->>>>>>> origin/auto/autonomy-17186719616
                 {posts.length > 0 ? (
                   <div className="space-y-4">
                     {posts.map((post) => (
                       <PostCard key={post.id} post={post} />
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/auto/autonomy-17186719616
                     ))}
                   </div>
                 ) : (
@@ -702,15 +519,8 @@ export default function CommunityProfilePage() {;
                   </Card>
                 )}
               </TabsContent>
-<<<<<<< HEAD
               <TabsContent value="activity" className="mt-6">
                 <h2 className="text-xl font-bold mb-4">Recent Activity</h2>
-=======
-              
-              <TabsContent value="activity" className="mt-6">
-                <h2 className="text-xl font-bold mb-4">Recent Activity</h2>
-                
->>>>>>> origin/auto/autonomy-17186719616
                 <Card>
                   <CardContent className="p-6">
                     <ul className="space-y-4">
@@ -751,11 +561,7 @@ export default function CommunityProfilePage() {;
                           {formatDistanceToNow(new Date("2025-03-25T08:20:00Z"), { addSuffix: true })}
                         </div>
                         <div>
-<<<<<<< HEAD
                           <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover: underline">How to optimize RAG systems for better results</Link></p>
-=======
-                          <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover:underline">How to optimize RAG systems for better results</Link></p>
->>>>>>> origin/auto/autonomy-17186719616
                         </div>
                       </li>
                     </ul>
@@ -767,7 +573,6 @@ export default function CommunityProfilePage() {;
         </div>
       </div>
     </AppLayout>
-<<<<<<< HEAD
   )
 
 
@@ -1107,11 +912,8 @@ if ( {) {
   );
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
-=======
-  );
-}
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

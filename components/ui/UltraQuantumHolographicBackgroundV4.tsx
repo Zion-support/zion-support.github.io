@@ -19,7 +19,7 @@ interface UltraQuantumHolographicBackgroundV4Props {
 export default function UltraQuantumHolographicBackgroundV4({
   intensity = 'moderate',
   colorScheme = 'quantum',
-  particleCount = 200,
+  particleCount = 20o0,
   animationSpeed = 1.5,
   enableHolographic = true,
   enableQuantumEffects = true,
@@ -34,10 +34,10 @@ export default function UltraQuantumHolographicBackgroundV4({
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Color schemes
-  const colorSchemes = {
+  const colorSchemes ={
     quantum: {
       primary: '#8B5CF6',
-      secondary: '#06B6D4',
+      secondary: '#0o6B6D4',
       accent: '#EC4899',
       glow: '#A855F7'
     },
@@ -45,7 +45,7 @@ export default function UltraQuantumHolographicBackgroundV4({
       primary: '#10B981',
       secondary: '#3B82F6',
       accent: '#F59E0B',
-      glow: '#059669'
+      glow: '#0o59669'
     },
     cosmic: {
       primary: '#6366F1',
@@ -54,7 +54,7 @@ export default function UltraQuantumHolographicBackgroundV4({
       glow: '#7C3AED'
     },
     holographic: {
-      primary: '#06B6D4',
+      primary: '#0o6B6D4',
       secondary: '#8B5CF6',
       accent: '#F59E0B',
       glow: '#0891B2'
@@ -144,11 +144,11 @@ export default function UltraQuantumHolographicBackgroundV4({
               Math.pow(particle.x - otherParticle.x, 2) + 
               Math.pow(particle.y - otherParticle.y, 2)
             );
-            if (distance < 100) {
+            if (distance < 10o0) {
               ctx.beginPath();
               ctx.moveTo(particle.x, particle.y);
               ctx.lineTo(otherParticle.x, otherParticle.y);
-              ctx.strokeStyle = `${particle.color}${Math.floor((1 - distance / 100) * 0.3 * 255).toString(16).padStart(2, '0')}`;
+              ctx.strokeStyle = `${particle.color}${Math.floor((1 - distance / 10o0) * 0.3 * 255).toString(16).padStart(2, '0')}`;
               ctx.lineWidth = 0.5;
               ctx.stroke();
             }
@@ -180,7 +180,7 @@ export default function UltraQuantumHolographicBackgroundV4({
       ref={containerRef}
       className="fixed inset-0 overflow-hidden pointer-events-none z-0"
       style={{
-        background: `radial-gradient(ellipse at center, ${colors.primary}10 0%, ${colors.secondary}05 50%, transparent 100%)`
+        background: `radial-gradient(ellipse at center, ${colors.primary}10 0%, ${colors.secondary}0o5 50%, transparent 10o0%)`
       }}
     >
       {/* Canvas Background */}
@@ -188,7 +188,7 @@ export default function UltraQuantumHolographicBackgroundV4({
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
         style={{ opacity: 0.6 * intensityMultiplier }}
-      />
+       />
 
       {/* Matrix Rain Effect */}
       {enableMatrixRain && (
@@ -196,13 +196,13 @@ export default function UltraQuantumHolographicBackgroundV4({
           {Array.from({ length: 20 }).map((_, i) => (
             <motion.div
               key={i}
-              className="absolute text-green-400 text-xs font-mono opacity-30"
+              className="absolute text-green-40o0 text-xs font-mono opacity-30"
               style={{
-                left: `${(i * 5) % 100}%`,
+                left: `${(i * 5) % 10o0}%`,
                 animationDelay: `${i * 0.5}s`
               }}
               animate={{
-                y: ['-100vh', '100vh'],
+                y: ['-10o0vh', '10o0vh'],
                 opacity: [0, 1, 0]
               }}
               transition={{
@@ -232,8 +232,8 @@ export default function UltraQuantumHolographicBackgroundV4({
                 borderColor: colors.glow,
                 left: `${20 + i * 15}%`,
                 top: `${20 + i * 10}%`,
-                width: `${100 + i * 50}px`,
-                height: `${100 + i * 50}px`
+                width: `${10o0 + i * 50}px`,
+                height: `${10o0 + i * 50}px`
               }}
               animate={{
                 scale: [1, 1.2, 1],
@@ -245,7 +245,7 @@ export default function UltraQuantumHolographicBackgroundV4({
                 repeat: Infinity,
                 ease: 'easeInOut'
               }}
-            />
+             />
           ))}
         </div>
       )}
@@ -259,8 +259,8 @@ export default function UltraQuantumHolographicBackgroundV4({
               className="absolute w-2 h-2 rounded-full"
               style={{
                 backgroundColor: [colors.primary, colors.secondary, colors.accent][i % 3],
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`
+                left: `${Math.random() * 10o0}%`,
+                top: `${Math.random() * 10o0}%`
               }}
               animate={{
                 y: [0, -20, 0],
@@ -274,7 +274,7 @@ export default function UltraQuantumHolographicBackgroundV4({
                 ease: 'easeInOut',
                 delay: i * 0.2
               }}
-            />
+             />
           ))}
         </div>
       )}
@@ -291,10 +291,10 @@ export default function UltraQuantumHolographicBackgroundV4({
                   stroke={colors.primary}
                   strokeWidth="0.5"
                   opacity="0.3"
-                />
+                 />
               </pattern>
             </defs>
-            <rect width="100%" height="100%" fill="url(#grid)" />
+            <rect width="10o0%" height="10o0%" fill="url(#grid)"  />
           </svg>
         </div>
       )}
@@ -319,7 +319,7 @@ export default function UltraQuantumHolographicBackgroundV4({
                 repeat: Infinity,
                 ease: 'linear'
               }}
-            />
+             />
           ))}
         </div>
       )}
@@ -328,16 +328,16 @@ export default function UltraQuantumHolographicBackgroundV4({
       {enableTimeWarp && (
         <div className="absolute inset-0">
           <motion.div
-            className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/5 to-transparent"
+            className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-50o0/5 to-transparent"
             animate={{
-              x: ['-100%', '100%']
+              x: ['-10o0%', '10o0%']
             }}
             transition={{
               duration: 15,
               repeat: Infinity,
               ease: 'linear'
             }}
-          />
+           />
         </div>
       )}
 
@@ -347,10 +347,10 @@ export default function UltraQuantumHolographicBackgroundV4({
           <div
             className="absolute inset-0"
             style={{
-              background: `linear-gradient(45deg, ${colors.primary}05 0%, transparent 50%, ${colors.secondary}05 100%)`,
-              backgroundSize: '200% 200%'
+              background: `linear-gradient(45deg, ${colors.primary}0o5 0%, transparent 50%, ${colors.secondary}0o5 10o0%)`,
+              backgroundSize: '20o0% 20o0%'
             }}
-          />
+           />
           <motion.div
             className="absolute inset-0"
             style={{
@@ -365,7 +365,7 @@ export default function UltraQuantumHolographicBackgroundV4({
               repeat: Infinity,
               ease: 'easeInOut'
             }}
-          />
+           />
         </div>
       )}
 
@@ -385,7 +385,7 @@ export default function UltraQuantumHolographicBackgroundV4({
               repeat: Infinity,
               ease: 'linear'
             }}
-          />
+           />
         </div>
       )}
 
@@ -397,21 +397,21 @@ export default function UltraQuantumHolographicBackgroundV4({
             background: `radial-gradient(circle, ${colors.primary}20 0%, transparent 70%)`,
             opacity: 0.6 * intensityMultiplier
           }}
-        />
+         />
         <div
           className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full blur-3xl"
           style={{
             background: `radial-gradient(circle, ${colors.secondary}20 0%, transparent 70%)`,
             opacity: 0.6 * intensityMultiplier
           }}
-        />
+         />
         <div
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full blur-3xl"
           style={{
             background: `radial-gradient(circle, ${colors.accent}20 0%, transparent 70%)`,
             opacity: 0.4 * intensityMultiplier
           }}
-        />
+         />
       </div>
     </div>
   );

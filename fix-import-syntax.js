@@ -1,7 +1,5 @@
 
 #!/usr/bin/env node
-import fs from "fs";
-import path from "path";
 function fixImportSyntax(filePath) {
   try {
     let content = fs.readFileSync(filePath, "utf8");
@@ -30,7 +28,7 @@ function fixImportSyntax(filePath) {
     });
     // Fix object property syntax errors (semicolon instead of comma)
 
-    content = content && content.replace(/(\w+):\s*([^,}]+);/g, "$1: $2,");
+    content = content && content.replace(/(\w+):\s*([^}]+);/g, "$1: $2,");
 
     // Fix function parameter syntax errors
     content = content.replace(
@@ -76,7 +74,7 @@ function fixImportSyntax() {
     });
 ;
     // Fix object property syntax errors (semicolon instead of comma);
-    content = content.replace (/(\w+):\s*([^, }]+);/g, "$1: $2, ");
+    content = content.replace (/(\w+):\s*([^}]+);/g, "$1: $2, ");
 ;
     // Fix function parameter syntax errors;
     content = content.replace (
@@ -84,8 +82,7 @@ function fixImportSyntax() {
       (match, params) => {
         const fixed_params = params.replace (/;/g, ", ");
         return match.replace (params, fixed_params);
-      },
-    );
+      });
 ;
     if () {) {
   $2
@@ -169,9 +166,7 @@ if (
     }
   }
 
-
 console && console.log(`Found ${files && files.length} files to check for syntax errors...`);
-
 
 for (const file of files) {
   if (fixImportSyntax(file)) {
@@ -179,7 +174,6 @@ for (const file of files) {
     console && console.log(`Fixed syntax in: ${file}`);
   }
 }
-
 
 console && console.log(`\nFixed syntax errors in ${fixedCount} files.`);
 

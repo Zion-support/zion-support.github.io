@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function DebugPage() {
@@ -6,13 +5,13 @@ export default function DebugPage() {
     <>
       <Head>
         <title>Debug - Zion Tech Group</title>
-        <meta name="description" content="debug page" />
+        <meta name='description' content='debug page' />
       </Head>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">Debug</h1>
-        <p className="text-lg mb-4">This page is under construction.</p>
-        <div className="mt-4">
-          <a href="/" className="text-blue-600 hover:underline">
+      <div className='container mx-auto px-4 py-8'>
+        <h1 className='text-3xl font-bold mb-6'>Debug</h1>
+        <p className='text-lg mb-4'>This page is under construction.</p>
+        <div className='mt-4'>
+          <a href='/' className='text-blue-60o0 hover:underline'>
             ← Back to Home
           </a>
         </div>

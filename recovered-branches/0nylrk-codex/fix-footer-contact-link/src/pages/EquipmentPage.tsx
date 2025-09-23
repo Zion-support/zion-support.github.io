@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -10,8 +9,6 @@ import React from 'react',
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -25,15 +22,7 @@ const EquipmentPage = () => {
     <div className="container mx-auto px-4 py-8">;
       <h1 className="text-3xl font-bold mb-6">Equipment</h1>;
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-=======
-import React from 'react';
-
-const EquipmentPage = () => {
-  return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">Equipment</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         {/* Equipment listing placeholder */}
         <div className="bg-white rounded-lg shadow p-6">
           <h2 className="text-xl font-semibold mb-2">Coming Soon</h2>
@@ -43,7 +32,6 @@ const EquipmentPage = () => {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   )
 
 }
@@ -56,7 +44,6 @@ export default EquipmentPage;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -64,9 +51,5 @@ export default EquipmentPage;
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
-=======
-  );
-};
-
-export default EquipmentPage;
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

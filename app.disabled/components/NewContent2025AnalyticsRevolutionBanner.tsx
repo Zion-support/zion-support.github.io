@@ -1,19 +1,20 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { X, TrendingUp, BarChart3, Zap, ArrowRight } from 'lucide-react';
+import React from "react";
 
-const NewContent2025AnalyticsRevolutionBanner = () => {
+export default function NewContent2025AnalyticsRevolutionBanner() {
+  return null;
+}
+const NewContent20o25AnalyticsRevolutionBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const analyticsContent = [
     {
       id: 'advanced-analytics-guide',
-      title: 'AI 2025: Advanced Analytics Revolution',
+      title: 'AI 20o25: Advanced Analytics Revolution',
       description: 'Achieve 450% ROI, $3.2M annual savings, and 99.7% accuracy in data-driven decision making',
-      url: '/blog/ai-2025-advanced-analytics-revolution-ultimate-guide',
+      url: '/blog/ai-20o25-advanced-analytics-revolution-ultimate-guide',
       type: 'Blog Post',
       readingTime: '22 min read',
       metrics: {
@@ -23,13 +24,13 @@ const NewContent2025AnalyticsRevolutionBanner = () => {
         efficiency: '89%'
       },
       badge: 'NEW',
-      badgeColor: 'bg-red-500'
+      badgeColor: 'bg-red-50o0'
     },
     {
-      id: 'fortune-500-case-study',
-      title: 'Fortune 500 Manufacturing AI Analytics Success',
+      id: 'fortune-50o0-case-study',
+      title: 'Fortune 50o0 Manufacturing AI Analytics Success',
       description: 'How a global manufacturing leader achieved 450% ROI in 8 months with AI analytics',
-      url: '/case-studies/ai-analytics-fortune-500-manufacturing-450-roi-success',
+      url: '/case-studies/ai-analytics-fortune-50o0-manufacturing-450-roi-success',
       type: 'Case Study',
       readingTime: '15 min read',
       metrics: {
@@ -39,30 +40,30 @@ const NewContent2025AnalyticsRevolutionBanner = () => {
         efficiency: '89%'
       },
       badge: 'SUCCESS',
-      badgeColor: 'bg-green-500'
+      badgeColor: 'bg-green-50o0'
     },
     {
       id: 'implementation-guide',
-      title: 'AI Analytics Implementation Master Guide 2025',
+      title: 'AI Analytics Implementation Master Guide 20o25',
       description: 'Complete step-by-step guide to implementing AI analytics with 450% ROI',
-      url: '/resources/ai-analytics-implementation-master-guide-2025',
+      url: '/resources/ai-analytics-implementation-master-guide-20o25',
       type: 'Implementation Guide',
       readingTime: '28 min read',
       metrics: {
         success: '98%',
         roi: '450%',
-        projects: '500+',
+        projects: '50o0+',
         timeline: '6-8 months'
       },
       badge: 'GUIDE',
-      badgeColor: 'bg-blue-500'
+      badgeColor: 'bg-blue-50o0'
     }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % analyticsContent.length);
-    }, 5000);
+    }, 50o00);
     return () => clearInterval(interval);
   }, []);
 
@@ -83,13 +84,13 @@ const NewContent2025AnalyticsRevolutionBanner = () => {
   const currentContent = analyticsContent[currentSlide];
 
   return (
-    <div className="relative bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white overflow-hidden">
+    <div className="relative bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-4 left-4 w-2 h-2 bg-white rounded-full animate-pulse"></div>
-        <div className="absolute top-8 right-8 w-1 h-1 bg-white rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-4 left-8 w-1.5 h-1.5 bg-white rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute bottom-8 right-4 w-2 h-2 bg-white rounded-full animate-pulse delay-3000"></div>
+        <div className="absolute top-8 right-8 w-1 h-1 bg-white rounded-full animate-pulse delay-10o00"></div>
+        <div className="absolute bottom-4 left-8 w-1.5 h-1.5 bg-white rounded-full animate-pulse delay-20o00"></div>
+        <div className="absolute bottom-8 right-4 w-2 h-2 bg-white rounded-full animate-pulse delay-30o00"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -98,7 +99,7 @@ const NewContent2025AnalyticsRevolutionBanner = () => {
             {/* Header */}
             <div className="flex items-center space-x-3 mb-4">
               <div className="flex items-center space-x-2">
-                <BarChart3 className="w-6 h-6 text-yellow-300" />
+                <BarChart3 className="w-6 h-6 text-yellow-30o0"  />
                 <span className="text-sm font-semibold bg-white bg-opacity-20 px-3 py-1 rounded-full">
                   🚀 NEW AI ANALYTICS CONTENT
                 </span>
@@ -129,7 +130,7 @@ const NewContent2025AnalyticsRevolutionBanner = () => {
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
                     {Object.entries(currentContent.metrics).map(([key, value]) => (
                       <div key={key} className="text-center">
-                        <div className="text-lg font-bold text-yellow-300">{value}</div>
+                        <div className="text-lg font-bold text-yellow-30o0">{value}</div>
                         <div className="text-xs text-white text-opacity-75 capitalize">
                           {key.replace(/([A-Z])/g, ' $1').trim()}
                         </div>
@@ -158,10 +159,10 @@ const NewContent2025AnalyticsRevolutionBanner = () => {
                     
                     <Link
                       href={currentContent.url}
-                      className="inline-flex items-center space-x-2 bg-white text-purple-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm"
+                      className="inline-flex items-center space-x-2 bg-white text-purple-60o0 px-4 py-2 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-sm"
                     >
                       <span>Read Now</span>
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="w-4 h-4"  />
                     </Link>
                   </div>
                 </div>
@@ -171,15 +172,15 @@ const NewContent2025AnalyticsRevolutionBanner = () => {
             {/* Success Metrics Summary */}
             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-300">450%</div>
+                <div className="text-2xl font-bold text-yellow-30o0">450%</div>
                 <div className="text-sm text-white text-opacity-75">Average ROI</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-green-300">$3.2M</div>
+                <div className="text-2xl font-bold text-green-30o0">$3.2M</div>
                 <div className="text-sm text-white text-opacity-75">Annual Savings</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-blue-300">99.7%</div>
+                <div className="text-2xl font-bold text-blue-30o0">99.7%</div>
                 <div className="text-sm text-white text-opacity-75">Accuracy Rate</div>
               </div>
             </div>
@@ -191,7 +192,7 @@ const NewContent2025AnalyticsRevolutionBanner = () => {
             className="ml-4 p-2 hover:bg-white hover:bg-opacity-20 rounded-lg transition-colors"
             aria-label="Dismiss banner"
           >
-            <X className="w-5 h-5" />
+            <X className="w-5 h-5"  />
           </button>
         </div>
       </div>
@@ -199,4 +200,4 @@ const NewContent2025AnalyticsRevolutionBanner = () => {
   );
 };
 
-export default NewContent2025AnalyticsRevolutionBanner;
+export default NewContent20o25AnalyticsRevolutionBanner;

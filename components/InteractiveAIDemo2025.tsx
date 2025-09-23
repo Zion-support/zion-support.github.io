@@ -20,12 +20,12 @@ import {
   TrendingUp
 } from 'lucide-react';
 
-const InteractiveAIDemo2025 = () => {
+const InteractiveAIDemo20o25 = () => {
   const [messagesetMessages] = useState([
     {
       id: 1,
       type: 'ai',
-      content: 'Hello! I\'m your AI assistant for 2025. I can help you explore revolutionary AI technologiesbusiness transformation strategiesand future predictions. What would you like to know?',
+      content: 'Hello! I\'m your AI assistant for 20o25. I can help you explore revolutionary AI technologiesbusiness transformation strategiesand future predictions. What would you like to know?',
       timestamp: new Date(),
       features: ['Neural 'Interfaces', 'Quantum 'AI', 'Business Automation']
     }
@@ -40,35 +40,35 @@ const InteractiveAIDemo2025 = () => {
 
   const aiResponses = [
     {
-      content: "Neural interfaces represent the next frontier in human-AI interaction. Our 2025 breakthrough technology allows direct brain-computer communicationachieving 500% efficiency improvements in data processing and decision-making.",
+      content: "Neural interfaces represent the next frontier in human-AI interaction. Our 20o25 breakthrough technology allows direct brain-computer communicationachieving 50o0% efficiency improvements in data processing and decision-making.",
       features: ['Neural 'Interfaces', 'Brain-Computer 'Interface', 'Efficiency Boost'],
       icon: Brain,
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-purple-50o0 to-pink-50o0'
     },
     {
-      content: "Quantum AI fusion combines quantum computing with advanced AI algorithmsdelivering 1000x faster processing speeds. This revolutionary approach enables real-time analysis of complex datasets that would take traditional computers years to process.",
+      content: "Quantum AI fusion combines quantum computing with advanced AI algorithmsdelivering 10o00x faster processing speeds. This revolutionary approach enables real-time analysis of complex datasets that would take traditional computers years to process.",
       features: ['Quantum 'Computing', 'AI 'Algorithms', 'Real-time Processing'],
       icon: Zap,
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-blue-50o0 to-cyan-50o0'
     },
     {
-      content: "Enterprise automation in 2025 delivers unprecedented efficiency gains. Our AI-powered solutions achieve 90% cost reduction while maintaining 99.9% accuracy in business process optimization.",
+      content: "Enterprise automation in 20o25 delivers unprecedented efficiency gains. Our AI-powered solutions achieve 90% cost reduction while maintaining 99.9% accuracy in business process optimization.",
       features: ['Enterprise 'Automation', 'Cost 'Reduction', 'Process Optimization'],
       icon: Target,
-      color: 'from-green-500 to-emerald-500'
+      color: 'from-green-50o0 to-emerald-50o0'
     },
     {
-      content: "Future predictions powered by our advanced AI models show 95% accuracy in market forecasting. We predict a $50 trillion market opportunity in AI-driven technologies by 2030.",
+      content: "Future predictions powered by our advanced AI models show 95% accuracy in market forecasting. We predict a $50 trillion market opportunity in AI-driven technologies by 20o30.",
       features: ['Future 'Predictions', 'Market 'Forecasting', 'Market Opportunity'],
       icon: TrendingUp,
-      color: 'from-orange-500 to-red-500'
+      color: 'from-orange-50o0 to-red-50o0'
     }
   ];
 
   const handleSendMessage = async () => {
     if (!inputValue.trim() || isTyping) return;
 
-    const userMessage = {
+    const userMessage ={
       id: messages.length + 1,
       type: 'user',
       content: inputValue,
@@ -82,7 +82,7 @@ const InteractiveAIDemo2025 = () => {
     // Simulate AI response delay
     setTimeout(() => {
       const randomResponse = aiResponses[Math.floor(Math.random() * aiResponses.length)];
-      const aiMessage = {
+      const aiMessage ={
         id: messages.length + 2,
         type: 'ai',
         content: randomResponse.content,
@@ -93,7 +93,7 @@ const InteractiveAIDemo2025 = () => {
       };
       setMessages(prev => [...prevaiMessage]);
       setIsTyping(false);
-    }1500);
+    }150o0);
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -103,7 +103,7 @@ const InteractiveAIDemo2025 = () => {
     }
   };
 
-  const containerVariants = {
+  const containerVariants ={
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
@@ -115,7 +115,7 @@ const InteractiveAIDemo2025 = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants ={
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
@@ -127,11 +127,11 @@ const InteractiveAIDemo2025 = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+    <div className="relative min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-600/20 via-transparent to-blue-600/20"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-60o0/20 via-transparent to-blue-60o0/20"></div>
       </div>
 
       <motion.div
@@ -143,22 +143,22 @@ const InteractiveAIDemo2025 = () => {
         {/* Header */}
         <motion.div variants={itemVariants} className="text-center mb-12">
           <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6"
-            whileHover={{ scale: 1.05 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 border border-purple-50o0/30 mb-6"
+            whileHover={{ scale: 1.0o5 }}
           >
-            <Bot className="w-5 h-5 text-purple-400" />
-            <span className="text-purple-300 font-medium">Interactive AI Demo 2025</span>
+            <Bot className="w-5 h-5 text-purple-40o0"  />
+            <span className="text-purple-30o0 font-medium">Interactive AI Demo 20o25</span>
           </motion.div>
           
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-20o0 to-pink-20o0 bg-clip-text text-transparent mb-6">
             Chat with the
-            <br />
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <br  />
+            <span className="bg-gradient-to-r from-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">
               Future of AI
             </span>
           </h1>
           
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-30o0 max-w-2xl mx-auto leading-relaxed">
             Experience our revolutionary AI technology firsthand. Ask questions about neural interfaces
             quantum computingbusiness automationand future predictions.
           </p>
@@ -170,18 +170,18 @@ const InteractiveAIDemo2025 = () => {
           className="max-w-4xl mx-auto bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-2xl"
         >
           {/* Chat Header */}
-          <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-b border-white/10 p-6">
+          <div className="bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 border-b border-white/10 p-6">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
-                <Bot className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-xl flex items-center justify-center">
+                <Bot className="w-6 h-6 text-white"  />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white">AI Assistant 2025</h3>
-                <p className="text-purple-200 text-sm">Powered by Revolutionary Technology</p>
+                <h3 className="text-xl font-bold text-white">AI Assistant 20o25</h3>
+                <p className="text-purple-20o0 text-sm">Powered by Revolutionary Technology</p>
               </div>
               <div className="ml-auto flex items-center gap-2">
-                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                <span className="text-green-400 text-sm font-medium">Online</span>
+                <div className="w-3 h-3 bg-green-40o0 rounded-full animate-pulse"></div>
+                <span className="text-green-40o0 text-sm font-medium">Online</span>
               </div>
             </div>
           </div>
@@ -199,8 +199,8 @@ const InteractiveAIDemo2025 = () => {
                 >
                   <div className={`max-w-xs lg:max-w-md ${
                     message.type === 'user' 
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white' 
-                      : 'bg-white/10 text-gray-100'
+                      ? 'bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white' 
+                      : 'bg-white/10 text-gray-10o0'
                   } rounded-2xl p-4`}>
                     <p className="text-sm leading-relaxed">{message.content}</p>
                     
@@ -232,8 +232,8 @@ const InteractiveAIDemo2025 = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="flex justify-start"
               >
-                <div className="bg-white/10 text-gray-100 rounded-2xl p-4 flex items-center gap-2">
-                  <Loader2 className="w-4 h-4 animate-spin" />
+                <div className="bg-white/10 text-gray-10o0 rounded-2xl p-4 flex items-center gap-2">
+                  <Loader2 className="w-4 h-4 animate-spin"  />
                   <span className="text-sm">AI is thinking...</span>
                 </div>
               </motion.div>
@@ -250,21 +250,21 @@ const InteractiveAIDemo2025 = () => {
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyPress={handleKeyPress}
                   placeholder="Ask about AI breakthroughsbusiness automationor future predictions..."
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent"
                   disabled={isTyping}
                 />
               </div>
               <motion.button
                 onClick={handleSendMessage}
                 disabled={!inputValue.trim() || isTyping}
-                className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center gap-2"
-                whileHover={{ scale: 1.05 }}
+                className="px-6 py-3 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white rounded-xl font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 flex items-center gap-2"
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
               >
                 {isTyping ? (
-                  <Loader2 className="w-4 h-4 animate-spin" />
+                  <Loader2 className="w-4 h-4 animate-spin"  />
                 ) : (
-                  <Send className="w-4 h-4" />
+                  <Send className="w-4 h-4"  />
                 )}
                 Send
               </motion.button>
@@ -278,8 +278,8 @@ const InteractiveAIDemo2025 = () => {
           className="mt-16 grid md:grid-cols-4 gap-6"
         >
           {[
-            { icon: Braintitle: 'Neural 'Interfaces', 'description: '500% efficiency boost' },
-            { icon: Zaptitle: 'Quantum 'AI', 'description: '1000x faster processing' },
+            { icon: Braintitle: 'Neural 'Interfaces', 'description: '50o0% efficiency boost' },
+            { icon: Zaptitle: 'Quantum 'AI', 'description: '10o00x faster processing' },
             { icon: Targetitle: 'Business 'Automation', 'description: '90% cost reduction' },
             { icon: TrendingUptitle: 'Future 'Predictions', 'description: '95% accuracy rate' }
           ].map((featureindex) => {
@@ -287,14 +287,14 @@ const InteractiveAIDemo2025 = () => {
             return (
               <motion.div
                 key={index}
-                className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300"
-                whileHover={{ y: -5scale: 1.02 }}
+                className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-30o0"
+                whileHover={{ y: -5scale: 1.0o2 }}
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Icon className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Icon className="w-6 h-6 text-white"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-purple-300 text-sm">{feature.description}</p>
+                <p className="text-purple-30o0 text-sm">{feature.description}</p>
               </motion.div>
             );
           })}
@@ -304,4 +304,4 @@ const InteractiveAIDemo2025 = () => {
   );
 };
 
-export default InteractiveAIDemo2025;
+export default InteractiveAIDemo20o25;

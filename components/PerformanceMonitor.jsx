@@ -8,28 +8,28 @@ export default function PerformanceMonitor() {
   useEffect(() => {
     // Web Vitals monitoring
     const vitals = {};
-    
-    getCLS((metric) => {
+
+    getCLS(metric => {
       vitals.CLS = metric.value;
       console.log('CLS:', metric);
     });
-    
-    getFID((metric) => {
+
+    getFID(metric => {
       vitals.FID = metric.value;
       console.log('FID:', metric);
     });
-    
-    getFCP((metric) => {
+
+    getFCP(metric => {
       vitals.FCP = metric.value;
       console.log('FCP:', metric);
     });
-    
-    getLCP((metric) => {
+
+    getLCP(metric => {
       vitals.LCP = metric.value;
       console.log('LCP:', metric);
     });
-    
-    getTTFB((metric) => {
+
+    getTTFB(metric => {
       vitals.TTFB = metric.value;
       console.log('TTFB:', metric);
     });
@@ -38,7 +38,7 @@ export default function PerformanceMonitor() {
 
     // Performance API monitoring
     if ('performance' in window) {
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver(list => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'measure') {
             console.log('Performance measure:', entry.name, entry.duration);
@@ -51,61 +51,66 @@ export default function PerformanceMonitor() {
           }
         }
       });
-      
+
       observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
     }
 
     // Error tracking
-    const handleError = (event) => {
+    const handleError = event => {
       console.error('JavaScript error:', event.error);
       // Send to analytics service
       if (window.gtag) {
         window.gtag('event', 'exception', {
           description: event.error?.message || 'Unknown error',
-          fatal: false
+          fatal: false,
         });
       }
     };
 
-    const handleUnhandledRejection = (event) => {
+    const handleUnhandledRejection = event => {
       console.error('Unhandled promise rejection:', event.reason);
       // Send to analytics service
       if (window.gtag) {
         window.gtag('event', 'exception', {
           description: event.reason?.message || 'Unhandled promise rejection',
-          fatal: false
+          fatal: false,
         });
       }
     };
 
     window.addEventListener('error', handleError);
     window.addEventListener('unhandledrejection', handleUnhandledRejection);
-    
+
     return () => {
       window.removeEventListener('error', handleError);
-      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+      window.removeEventListener(
+        'unhandledrejection',
+        handleUnhandledRejection
+      );
     };
   }, []);
 
   // Development mode performance panel
   if (process.env.NODE_ENV === 'development') {
     return (
-      <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
-        <div className="flex items-center gap-2 mb-2">
+      <div className='fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50'>
+        <div className='flex items-center gap-2 mb-2'>
           <span>Performance Monitor</span>
-          <button 
+          <button
             onClick={() => setIsVisible(!isVisible)}
-            className="text-blue-400 hover:text-blue-300"
+            className='text-blue-40o0 hover:text-blue-30o0'
           >
             {isVisible ? 'Hide' : 'Show'}
           </button>
         </div>
         {isVisible && (
-          <div className="space-y-1">
+          <div className='space-y-1'>
             {Object.entries(metrics).map(([key, value]) => (
-              <div key={key} className="flex justify-between gap-4">
+              <div key={key} className='flex justify-between gap-4'>
                 <span>{key}:</span>
-                <span className="text-green-400">{value?.toFixed(2) || 'N/A'}</span>
+                <span className='text-green-40o0'>
+                  {value?.toFixed(2) || 'N/A'}
+                </span>
               </div>
             ))}
           </div>

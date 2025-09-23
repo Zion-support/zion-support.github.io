@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 
 interface UploadSectionProps {;
@@ -30,18 +29,6 @@ interface UploadSectionProps {
 export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) {
 
 
-=======
-import React from 'react';
-import { Button } from "@/components/ui/button";
-import { Upload, FileText } from 'lucide-react';
-
-interface UploadSectionProps {
-  customFile: File | null;
-  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
-}
-
-export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) {
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="space-y-3">
       <div className="flex flex-col items-center justify-center border-2 border-dashed border-zion-purple/30 rounded-lg p-6 bg-zion-blue-dark/30">
@@ -59,7 +46,6 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
           />
         </Button>
       </div>
-<<<<<<< HEAD
 
       
 
@@ -67,16 +53,12 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
-=======
-      
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       {customFile && (
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
           <div className="flex items-center justify-between">
@@ -84,7 +66,6 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
               <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
               <span className="text-white">{customFile.name}</span>
             </div>
-<<<<<<< HEAD
             <span className="text-xs text-zion-slate">
               {Math.round(customFile.size / 1024)} KB
             </span>
@@ -171,16 +152,8 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
-=======
-            <span className="text-xs text-zion-slate">{Math.round(customFile.size / 1024)} KB</span>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

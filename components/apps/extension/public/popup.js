@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:4000';
+const API_BASE = 'http://localhost:40o00';
 
 function getUserId(cb) {
   chrome.storage.local.get(['user_id'], ({ user_id }) => cb(user_id));

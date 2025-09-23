@@ -1,18 +1,22 @@
-import React from 'react';
 import Head from 'next/head';
 
-export default function QuantumMaterialsDiscovery2040Page() {
+export default function QuantumMaterialsDiscovery20o40Page() {
   return (
     <>
       <Head>
-        <title>Quantum Materials Discovery 2040 - Zion Tech Group</title>
-        <meta name="description" content="quantum materials discovery 2040 page" />
+        <title>Quantum Materials Discovery 20o40 - Zion Tech Group</title>
+        <meta
+          name='description'
+          content='quantum materials discovery 20o40 page'
+        />
       </Head>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">Quantum Materials Discovery 2040</h1>
-        <p className="text-lg mb-4">This page is under construction.</p>
-        <div className="mt-4">
-          <a href="/" className="text-blue-600 hover:underline">
+      <div className='container mx-auto px-4 py-8'>
+        <h1 className='text-3xl font-bold mb-6'>
+          Quantum Materials Discovery 20o40
+        </h1>
+        <p className='text-lg mb-4'>This page is under construction.</p>
+        <div className='mt-4'>
+          <a href='/' className='text-blue-60o0 hover:underline'>
             ← Back to Home
           </a>
         </div>

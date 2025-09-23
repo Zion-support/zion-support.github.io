@@ -13,14 +13,10 @@ export function formatDate(date: Date | string | undefined): string {
     return new Intl.DateTimeFormat('en-US', {
       month: 'short',
       day: 'numeric',
-<<<<<<< HEAD
-      year: 'numeric'}).format(d);
-=======
       year: 'numeric',
     }).format(d);
->>>>>>> origin/auto/autonomy-17186719616
   } catch (e) {
-    logErrorToProduction('Error formatting date:', { data:  e });
+    logErrorToProduction('Error formatting date:', { data: e });
     return '-';
   }
 }
@@ -30,10 +26,10 @@ export function formatDate(date: Date | string | undefined): string {
  */
 export function checkUrlForReferralCode(): string | null {
   if (typeof window === 'undefined') return null;
-  
+
   const url = new URL(window.location.href);
   const refCode = url.searchParams.get('ref');
-  
+
   if (refCode) {
     safeStorage.setItem('referral_code', refCode);
     // Remove it from URL to keep it clean
@@ -41,7 +37,7 @@ export function checkUrlForReferralCode(): string | null {
     window.history.replaceState({}, document.title, url.toString());
     return refCode;
   }
-  
+
   return safeStorage.getItem('referral_code');
 }
 
@@ -54,28 +50,20 @@ export async function trackReferral(userId: string, email: string) {
   try {
     const refCode = safeStorage.getItem('referral_code');
     if (!refCode) return false;
-    
+
     // Call API to record the referral
     const response = await apiClient('/api/track-referral', {
       method: 'POST',
       headers: {
-<<<<<<< HEAD
-        'Content-Type': 'application/json'},
-=======
         'Content-Type': 'application/json',
       },
->>>>>>> origin/auto/autonomy-17186719616
       body: JSON.stringify({
         refCode,
         userId,
         email,
         ipAddress: '', // This will be captured by the server
-<<<<<<< HEAD
-      })});
-=======
       }),
     });
->>>>>>> origin/auto/autonomy-17186719616
 
     if (response.status >= 200 && response.status < 300) {
       // Clear the stored referral code

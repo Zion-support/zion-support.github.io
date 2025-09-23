@@ -1,4 +1,3 @@
-import React from 'react';
 export function CreatePostPage() {
   return (
     <div>

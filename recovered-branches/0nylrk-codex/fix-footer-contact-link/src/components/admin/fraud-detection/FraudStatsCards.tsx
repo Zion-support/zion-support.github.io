@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 
 
@@ -13,7 +12,6 @@ import {;
   CardDescription,;
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 } from "@/components/ui/card";
@@ -28,7 +26,6 @@ interface FraudStatsCardsProps {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -38,19 +35,7 @@ interface FraudStatsCardsProps {
 }
 
 
-=======
-import React from "react";
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";
-import { FraudStats } from "@/types/fraud";
-
-interface FraudStatsCardsProps {
-  stats: FraudStats;
-}
-
-export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
-  return (
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">
       <Card>
         <CardHeader className="pb-2">
@@ -58,7 +43,6 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
           <CardDescription>Total Flags</CardDescription>
         </CardHeader>
       </Card>
-<<<<<<< HEAD
 
       
 
@@ -67,7 +51,6 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -75,9 +58,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
-=======
-      
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -87,7 +68,6 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
           {stats.pending_flags > 0 && <ShieldAlert className="h-5 w-5 text-amber-500" />}
         </CardHeader>
       </Card>
-<<<<<<< HEAD
 
       
 
@@ -96,7 +76,6 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -110,19 +89,12 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
             <CardTitle className="text-2xl font-bold text-amber-500">
               {stats.suspicious_count}
             </CardTitle>
-=======
-      
-      <Card>
-        <CardHeader className="pb-2 flex flex-row items-center justify-between">
-          <div>
-            <CardTitle className="text-2xl font-bold text-amber-500">{stats.suspicious_count}</CardTitle>
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <CardDescription>Suspicious</CardDescription>
           </div>
           <AlertTriangle className="h-5 w-5 text-amber-500" />
         </CardHeader>
       </Card>
-<<<<<<< HEAD
 
       
 
@@ -131,7 +103,6 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -145,19 +116,12 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
             <CardTitle className="text-2xl font-bold text-red-500">
               {stats.dangerous_count}
             </CardTitle>
-=======
-      
-      <Card>
-        <CardHeader className="pb-2 flex flex-row items-center justify-between">
-          <div>
-            <CardTitle className="text-2xl font-bold text-red-500">{stats.dangerous_count}</CardTitle>
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <CardDescription>Dangerous</CardDescription>
           </div>
           <AlertCircle className="h-5 w-5 text-red-500" />
         </CardHeader>
       </Card>
-<<<<<<< HEAD
 
       
 
@@ -166,7 +130,6 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -316,22 +279,5 @@ export default FraudStatsCards;
 
 
 
-=======
-      
-      <Card>
-        <CardHeader className="pb-2">
-          <CardTitle className="text-2xl font-bold">{stats.actioned_count}</CardTitle>
-          <CardDescription>Actions Taken</CardDescription>
-        </CardHeader>
-      </Card>
-      
-      <Card>
-        <CardHeader className="pb-2">
-          <CardTitle className="text-2xl font-bold">{stats.false_positives}</CardTitle>
-          <CardDescription>False Positives</CardDescription>
-        </CardHeader>
-      </Card>
-    </div>
-  );
-};
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

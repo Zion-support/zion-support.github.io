@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  Home, 
-  Briefcase, 
-  Users, 
-  FileText, 
-  HelpCircle, 
-  MessageSquare, 
-  BarChart3, 
-  Building, 
-  Code, 
-  Shield, 
-  Zap, 
+import {
+  Home,
+  Briefcase,
+  Users,
+  FileText,
+  HelpCircle,
+  MessageSquare,
+  BarChart3,
+  Building,
+  Code,
+  Shield,
+  Zap,
   ChevronDown,
   Rocket,
   Cpu,
@@ -30,7 +30,7 @@ import {
   Activity,
   PieChart,
   BarChart,
-  X
+  X,
 } from 'lucide-react';
 
 interface SidebarItem {
@@ -50,7 +50,7 @@ export function Sidebar() {
     {
       name: 'Dashboard',
       path: '/',
-      icon: Home
+      icon: Home,
     },
     {
       name: 'Services',
@@ -61,14 +61,30 @@ export function Sidebar() {
         { name: 'Cybersecurity', path: '/cybersecurity', icon: Shield },
         { name: 'Quantum Technology', path: '/quantum-technology', icon: Cpu },
         { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server },
-        { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Zap },
+        {
+          name: 'IT Infrastructure',
+          path: '/services/it-infrastructure',
+          icon: Server,
+        },
+        {
+          name: 'Digital Transformation',
+          path: '/services/digital-transformation',
+          icon: Zap,
+        },
         { name: 'Green IT', path: '/green-it', icon: Leaf },
         { name: 'Space Tech', path: '/space-tech', icon: Rocket },
         { name: 'Mobile Solutions', path: '/mobile', icon: Smartphone },
-        { name: 'Financial Solutions', path: '/financial-solutions', icon: DollarSign },
-        { name: 'Micro SaaS Services', path: '/micro-saas-services', icon: Building }
-      ]
+        {
+          name: 'Financial Solutions',
+          path: '/financial-solutions',
+          icon: DollarSign,
+        },
+        {
+          name: 'Micro SaaS Services',
+          path: '/micro-saas-services',
+          icon: Building,
+        },
+      ],
     },
     {
       name: 'Company',
@@ -80,8 +96,12 @@ export function Sidebar() {
         { name: 'Careers', path: '/careers', icon: Briefcase },
         { name: 'Partners', path: '/partners', icon: Handshake },
         { name: 'Press', path: '/press', icon: FileText },
-        { name: 'Research & Development', path: '/research-development', icon: Lightbulb }
-      ]
+        {
+          name: 'Research & Development',
+          path: '/research-development',
+          icon: Lightbulb,
+        },
+      ],
     },
     {
       name: 'Resources',
@@ -95,8 +115,8 @@ export function Sidebar() {
         { name: 'Tutorials', path: '/tutorials', icon: Code },
         { name: 'Webinars', path: '/webinars', icon: Video },
         { name: 'White Papers', path: '/white-papers', icon: FileSearch },
-        { name: 'Documentation', path: '/documentation', icon: Code }
-      ]
+        { name: 'Documentation', path: '/documentation', icon: Code },
+      ],
     },
     {
       name: 'Support',
@@ -106,10 +126,14 @@ export function Sidebar() {
         { name: 'Help Center', path: '/help-center', icon: HelpCircle },
         { name: 'FAQ', path: '/help-center#faq', icon: HelpCircle },
         { name: 'Contact Support', path: '/contact', icon: MessageSquare },
-        { name: 'Live Chat', path: '/help-center/live-chat', icon: MessageSquare },
+        {
+          name: 'Live Chat',
+          path: '/help-center/live-chat',
+          icon: MessageSquare,
+        },
         { name: 'Status', path: '/status', icon: BarChart3 },
-        { name: 'Request Quote', path: '/contact', icon: MessageSquare }
-      ]
+        { name: 'Request Quote', path: '/contact', icon: MessageSquare },
+      ],
     },
     {
       name: 'Enterprise',
@@ -119,24 +143,32 @@ export function Sidebar() {
         { name: 'Enterprise Solutions', path: '/enterprise', icon: Building },
         { name: 'Custom Solutions', path: '/solutions', icon: Target },
         { name: 'Partnerships', path: '/partners', icon: Handshake },
-        { name: 'Case Studies', path: '/case-studies', icon: Target }
-      ]
+        { name: 'Case Studies', path: '/case-studies', icon: Target },
+      ],
     },
     {
       name: 'Analytics',
       path: '/analytics',
       icon: BarChart3,
       children: [
-        { name: 'Performance Metrics', path: '/analytics/performance', icon: Activity },
+        {
+          name: 'Performance Metrics',
+          path: '/analytics/performance',
+          icon: Activity,
+        },
         { name: 'User Analytics', path: '/analytics/users', icon: Users },
-        { name: 'Business Intelligence', path: '/analytics/bi', icon: PieChart },
-        { name: 'Reports', path: '/analytics/reports', icon: BarChart }
-      ]
-    }
+        {
+          name: 'Business Intelligence',
+          path: '/analytics/bi',
+          icon: PieChart,
+        },
+        { name: 'Reports', path: '/analytics/reports', icon: BarChart },
+      ],
+    },
   ];
 
   const toggleItem = (itemName: string) => {
-    setExpandedItems(prev => 
+    setExpandedItems(prev =>
       prev.includes(itemName)
         ? prev.filter(name => name !== itemName)
         : [...prev, itemName]
@@ -146,26 +178,28 @@ export function Sidebar() {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <div className={`fixed inset-y-0 right-0 z-50 w-80 bg-slate-900/95 backdrop-blur-lg border-l border-white/10 transform transition-transform duration-300 ease-in-out ${
-      isOpen ? 'translate-x-0' : 'translate-x-full'
-    }`}>
-      <div className="flex flex-col h-full">
+    <div
+      className={`fixed inset-y-0 right-0 z-50 w-80 bg-slate-90o0/95 backdrop-blur-lg border-l border-white/10 transform transition-transform duration-30o0 ease-in-out ${
+        isOpen ? 'translate-x-0' : 'translate-x-full'
+      }`}
+    >
+      <div className='flex flex-col h-full'>
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-white/10">
-          <h2 className="text-xl font-semibold text-white">Navigation</h2>
+        <div className='flex items-center justify-between p-6 border-b border-white/10'>
+          <h2 className='text-xl font-semibold text-white'>Navigation</h2>
           <button
             onClick={onClose}
-            className="p-2 rounded-md text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
-            aria-label="Close sidebar"
+            className='p-2 rounded-md text-gray-30o0 hover:text-white hover:bg-white/10 transition-colors'
+            aria-label='Close sidebar'
           >
-            <X className="h-5 w-5" />
+            <X className='h-5 w-5' />
           </button>
         </div>
 
         {/* Navigation Items */}
-        <nav className="flex-1 overflow-y-auto p-6">
-          <div className="space-y-2">
-            {sidebarItems.map((item) => (
+        <nav className='flex-1 overflow-y-auto p-6'>
+          <div className='space-y-2'>
+            {sidebarItems.map(item => (
               <div key={item.name}>
                 {item.children ? (
                   <div>
@@ -173,13 +207,13 @@ export function Sidebar() {
                       onClick={() => toggleItem(item.name)}
                       className={`w-full flex items-center justify-between p-3 rounded-lg text-left transition-colors ${
                         isActive(item.path)
-                          ? 'bg-blue-600/20 text-white'
-                          : 'text-gray-300 hover:text-white hover:bg-white/10'
+                          ? 'bg-blue-60o0/20 text-white'
+                          : 'text-gray-30o0 hover:text-white hover:bg-white/10'
                       }`}
                     >
-                      <div className="flex items-center space-x-3">
-                        <item.icon className="h-5 w-5" />
-                        <span className="font-medium">{item.name}</span>
+                      <div className='flex items-center space-x-3'>
+                        <item.icon className='h-5 w-5' />
+                        <span className='font-medium'>{item.name}</span>
                       </div>
                       <ChevronDown
                         className={`h-4 w-4 transition-transform ${
@@ -187,22 +221,22 @@ export function Sidebar() {
                         }`}
                       />
                     </button>
-                    
+
                     {expandedItems.includes(item.name) && (
-                      <div className="ml-6 mt-2 space-y-1">
-                        {item.children.map((child) => (
+                      <div className='ml-6 mt-2 space-y-1'>
+                        {item.children.map(child => (
                           <Link
                             key={child.path}
                             to={child.path}
                             className={`flex items-center space-x-3 p-2 rounded-lg transition-colors ${
                               isActive(child.path)
-                                ? 'bg-blue-600/20 text-white'
-                                : 'text-gray-400 hover:text-white hover:bg-white/10'
+                                ? 'bg-blue-60o0/20 text-white'
+                                : 'text-gray-40o0 hover:text-white hover:bg-white/10'
                             }`}
                             onClick={onClose}
                           >
-                            <child.icon className="h-4 w-4" />
-                            <span className="text-sm">{child.name}</span>
+                            <child.icon className='h-4 w-4' />
+                            <span className='text-sm'>{child.name}</span>
                           </Link>
                         ))}
                       </div>
@@ -213,13 +247,13 @@ export function Sidebar() {
                     to={item.path}
                     className={`flex items-center space-x-3 p-3 rounded-lg transition-colors ${
                       isActive(item.path)
-                        ? 'bg-blue-600/20 text-white'
-                        : 'text-gray-300 hover:text-white hover:bg-white/10'
+                        ? 'bg-blue-60o0/20 text-white'
+                        : 'text-gray-30o0 hover:text-white hover:bg-white/10'
                     }`}
                     onClick={onClose}
                   >
-                    <item.icon className="h-5 w-5" />
-                    <span className="font-medium">{item.name}</span>
+                    <item.icon className='h-5 w-5' />
+                    <span className='font-medium'>{item.name}</span>
                   </Link>
                 )}
               </div>
@@ -228,12 +262,12 @@ export function Sidebar() {
         </nav>
 
         {/* Footer */}
-        <div className="p-6 border-t border-white/10">
-          <div className="text-center">
-            <p className="text-gray-400 text-sm mb-3">Need help?</p>
+        <div className='p-6 border-t border-white/10'>
+          <div className='text-center'>
+            <p className='text-gray-40o0 text-sm mb-3'>Need help?</p>
             <Link
-              to="/contact"
-              className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 text-center"
+              to='/contact'
+              className='block w-full bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-70o0 hover:to-cyan-70o0 transition-all duration-20o0 text-center'
               onClick={onClose}
             >
               Contact Support

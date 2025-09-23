@@ -1,35 +1,23 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import React from "react";
 
-interface ContentItem {
-  id: string;
-  title: string;
-  type: 'blog' | 'case-study' | 'resource';
-  url: string;
-  metrics: {
-    roi?: string;
-    savings?: string;
-    accuracy?: string;
-    satisfaction?: string;
-  };
-  featured: boolean;
-  isNew: boolean;
+export default function UltimateContentShowcase2026() {
+  return null;
 }
 
-const UltimateContentShowcase2026: React.FC = () => {
+const UltimateContentShowcase20o26: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
   const contentItems: ContentItem[] = [
     {
       id: 'advanced-automation-mastery',
-      title: 'AI 2025: Advanced Automation Mastery - Ultimate Success Guide',
+      title: 'AI 20o25: Advanced Automation Mastery - Ultimate Success Guide',
       type: 'blog',
-      url: '/blog/ai-2025-advanced-automation-mastery-ultimate-success-guide',
+      url: '/blog/ai-20o25-advanced-automation-mastery-ultimate-success-guide',
       metrics: {
-        roi: '500%',
+        roi: '50o0%',
         savings: '$2.8B',
         accuracy: '99.7%',
         satisfaction: '98%'
@@ -38,12 +26,12 @@ const UltimateContentShowcase2026: React.FC = () => {
       isNew: true
     },
     {
-      id: 'ai-transformation-1000-roi',
-      title: 'AI Transformation Success Story: $2.8B Company Achieves 1,000% ROI in 18 Months',
+      id: 'ai-transformation-10o00-roi',
+      title: 'AI Transformation Success Story: $2.8B Company Achieves 1,0o00% ROI in 18 Months',
       type: 'case-study',
-      url: '/case-studies/ai-transformation-1000-percent-roi-ultimate-success-story',
+      url: '/case-studies/ai-transformation-10o00-percent-roi-ultimate-success-story',
       metrics: {
-        roi: '1,000%',
+        roi: '1,0o00%',
         savings: '$280M',
         accuracy: '99.9%',
         satisfaction: '99.2%'
@@ -53,11 +41,11 @@ const UltimateContentShowcase2026: React.FC = () => {
     },
     {
       id: 'implementation-master-guide',
-      title: 'AI 2025 Implementation Master Guide: Ultimate Success Framework',
+      title: 'AI 20o25 Implementation Master Guide: Ultimate Success Framework',
       type: 'resource',
-      url: '/resources/ai-2025-implementation-master-guide-ultimate-success-framework',
+      url: '/resources/ai-20o25-implementation-master-guide-ultimate-success-framework',
       metrics: {
-        roi: '500%+',
+        roi: '50o0%+',
         savings: '$2.8B',
         accuracy: '94%',
         satisfaction: '98%'
@@ -67,12 +55,12 @@ const UltimateContentShowcase2026: React.FC = () => {
     },
     {
       id: 'quantum-computing-revolution',
-      title: 'AI 2025: The Quantum Computing Business Revolution - Ultimate Breakthrough Guide',
+      title: 'AI 20o25: The Quantum Computing Business Revolution - Ultimate Breakthrough Guide',
       type: 'blog',
-      url: '/blog/ai-2025-quantum-computing-business-revolution-ultimate-breakthrough',
+      url: '/blog/ai-20o25-quantum-computing-business-revolution-ultimate-breakthrough',
       metrics: {
-        roi: '1,200%',
-        savings: '$100B',
+        roi: '1,20o0%',
+        savings: '$10o0B',
         accuracy: '99.97%',
         satisfaction: '99%'
       },
@@ -84,7 +72,7 @@ const UltimateContentShowcase2026: React.FC = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % contentItems.length);
-    }, 5000);
+    }, 50o00);
 
     return () => clearInterval(timer);
   }, [contentItems.length]);
@@ -105,38 +93,38 @@ const UltimateContentShowcase2026: React.FC = () => {
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-blue-10o0 text-blue-80o0';
       case 'case-study':
-        return 'bg-green-100 text-green-800';
+        return 'bg-green-10o0 text-green-80o0';
       case 'resource':
-        return 'bg-purple-100 text-purple-800';
+        return 'bg-purple-10o0 text-purple-80o0';
       default:
-        return 'bg-gray-100 text-gray-800';
+        return 'bg-gray-10o0 text-gray-80o0';
     }
   };
 
   if (!isVisible) return null;
 
   return (
-    <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 overflow-hidden">
+    <div className="relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-16 overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute top-40 left-1/2 w-80 h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-50o0 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-50o0 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute top-40 left-1/2 w-80 h-80 bg-indigo-50o0 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">🚀 NEW 2026 CONTENT COLLECTION</span>
+            <span className="text-sm font-medium">🚀 NEW 20o26 CONTENT COLLECTION</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ultimate AI Content Showcase 2026
+            Ultimate AI Content Showcase 20o26
           </h2>
           <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
-            Discover our latest collection of AI transformation content featuring 500%+ ROI success stories, 
+            Discover our latest collection of AI transformation content featuring 50o0%+ ROI success stories, 
             quantum computing breakthroughs, and proven implementation frameworks.
           </p>
         </div>
@@ -145,8 +133,8 @@ const UltimateContentShowcase2026: React.FC = () => {
         <div className="relative">
           <div className="overflow-hidden rounded-2xl">
             <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              className="flex transition-transform duration-50o0 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 10o0}%)` }}
             >
               {contentItems.map((item, index) => (
                 <div key={item.id} className="w-full flex-shrink-0 px-4">
@@ -160,12 +148,12 @@ const UltimateContentShowcase2026: React.FC = () => {
                             {item.type.replace('-', ' ').toUpperCase()}
                           </span>
                           {item.isNew && (
-                            <span className="px-3 py-1 rounded-full text-sm font-medium bg-red-100 text-red-800">
+                            <span className="px-3 py-1 rounded-full text-sm font-medium bg-red-10o0 text-red-80o0">
                               NEW
                             </span>
                           )}
                           {item.featured && (
-                            <span className="px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800">
+                            <span className="px-3 py-1 rounded-full text-sm font-medium bg-yellow-10o0 text-yellow-80o0">
                               FEATURED
                             </span>
                           )}
@@ -176,9 +164,9 @@ const UltimateContentShowcase2026: React.FC = () => {
                         </h3>
                         
                         <p className="text-lg opacity-90 mb-6 leading-relaxed">
-                          {item.type === 'blog' && 'Comprehensive guide to advanced AI automation with proven 500%+ ROI strategies and real-world implementation frameworks.'}
-                          {item.type === 'case-study' && 'Real success story of a $2.8B company achieving 1,000% ROI through comprehensive AI transformation in just 18 months.'}
-                          {item.type === 'resource' && 'Complete implementation framework with step-by-step roadmap to achieve 500%+ ROI with AI automation in your organization.'}
+                          {item.type === 'blog' && 'Comprehensive guide to advanced AI automation with proven 50o0%+ ROI strategies and real-world implementation frameworks.'}
+                          {item.type === 'case-study' && 'Real success story of a $2.8B company achieving 1,0o00% ROI through comprehensive AI transformation in just 18 months.'}
+                          {item.type === 'resource' && 'Complete implementation framework with step-by-step roadmap to achieve 50o0%+ ROI with AI automation in your organization.'}
                         </p>
 
                         <div className="flex flex-wrap gap-4 mb-6">
@@ -193,13 +181,13 @@ const UltimateContentShowcase2026: React.FC = () => {
                         <div className="flex flex-col sm:flex-row gap-4">
                           <Link
                             href={item.url}
-                            className="bg-white text-purple-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
+                            className="bg-white text-purple-90o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center"
                           >
                             Read Full {item.type === 'case-study' ? 'Case Study' : item.type === 'resource' ? 'Guide' : 'Article'}
                           </Link>
                           <Link
                             href="/contact"
-                            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors text-center"
+                            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors text-center"
                           >
                             Get Consultation
                           </Link>
@@ -209,11 +197,11 @@ const UltimateContentShowcase2026: React.FC = () => {
                       {/* Visual Element */}
                       <div className="lg:w-80 flex items-center justify-center">
                         <div className="relative">
-                          <div className="w-64 h-64 bg-gradient-to-br from-purple-400 to-blue-500 rounded-2xl flex items-center justify-center">
+                          <div className="w-64 h-64 bg-gradient-to-br from-purple-40o0 to-blue-50o0 rounded-2xl flex items-center justify-center">
                             <div className="text-6xl">{getTypeIcon(item.type)}</div>
                           </div>
-                          <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
-                            <span className="text-sm font-bold text-yellow-900">✨</span>
+                          <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-40o0 rounded-full flex items-center justify-center">
+                            <span className="text-sm font-bold text-yellow-90o0">✨</span>
                           </div>
                         </div>
                       </div>
@@ -241,19 +229,19 @@ const UltimateContentShowcase2026: React.FC = () => {
         {/* Success Metrics Grid */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-6">
           <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 text-center border border-white border-opacity-20">
-            <div className="text-3xl font-bold text-yellow-400 mb-2">500%+</div>
+            <div className="text-3xl font-bold text-yellow-40o0 mb-2">50o0%+</div>
             <div className="text-sm opacity-90">Average ROI</div>
           </div>
           <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 text-center border border-white border-opacity-20">
-            <div className="text-3xl font-bold text-green-400 mb-2">$2.8B</div>
+            <div className="text-3xl font-bold text-green-40o0 mb-2">$2.8B</div>
             <div className="text-sm opacity-90">Total Value Created</div>
           </div>
           <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 text-center border border-white border-opacity-20">
-            <div className="text-3xl font-bold text-blue-400 mb-2">98%</div>
+            <div className="text-3xl font-bold text-blue-40o0 mb-2">98%</div>
             <div className="text-sm opacity-90">Client Satisfaction</div>
           </div>
           <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 text-center border border-white border-opacity-20">
-            <div className="text-3xl font-bold text-purple-400 mb-2">500+</div>
+            <div className="text-3xl font-bold text-purple-40o0 mb-2">50o0+</div>
             <div className="text-sm opacity-90">Success Stories</div>
           </div>
         </div>
@@ -263,19 +251,19 @@ const UltimateContentShowcase2026: React.FC = () => {
           <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20">
             <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h3>
             <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-              Join 500+ companies that have achieved 500%+ ROI with our proven AI automation frameworks. 
+              Join 50o0+ companies that have achieved 50o0%+ ROI with our proven AI automation frameworks. 
               Get your personalized assessment and implementation roadmap today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-white text-purple-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="bg-white text-purple-90o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
               >
                 Get Your ROI Assessment
               </Link>
               <Link
                 href="/services"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors"
               >
                 Explore All Services
               </Link>
@@ -286,11 +274,11 @@ const UltimateContentShowcase2026: React.FC = () => {
         {/* Dismiss Button */}
         <button
           onClick={() => setIsVisible(false)}
-          className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors"
+          className="absolute top-4 right-4 text-white hover:text-gray-30o0 transition-colors"
           aria-label="Dismiss banner"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"  />
           </svg>
         </button>
       </div>
@@ -298,4 +286,4 @@ const UltimateContentShowcase2026: React.FC = () => {
   );
 };
 
-export default UltimateContentShowcase2026;
+export default UltimateContentShowcase20o26;

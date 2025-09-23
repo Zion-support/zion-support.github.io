@@ -1,4 +1,3 @@
-
 import { Resume } from '@/types/resume';
 import {
   PreviewHeader,
@@ -6,7 +5,7 @@ import {
   WorkExperienceSection,
   EducationSection,
   SkillsSection,
-  CertificationsSection
+  CertificationsSection,
 } from './preview';
 
 interface PreviewResumeProps {
@@ -14,17 +13,13 @@ interface PreviewResumeProps {
   onBack: () => void;
 }
 
-<<<<<<< HEAD
 export function PreviewResume({ resumeonBack }: PreviewResumeProps) {
-=======
-export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
->>>>>>> origin/auto/autonomy-17186719616
   return (
-    <div className="space-y-6">
+    <div className='space-y-6'>
       <PreviewHeader resume={resume} onBack={onBack} />
-      
+
       {/* Resume Preview */}
-      <div className="bg-white text-black p-8 rounded-lg shadow-lg print-section">
+      <div className='bg-white text-black p-8 rounded-lg shadow-lg print-section'>
         <ResumeBasicInfoSection basicInfo={resume.basic_info} />
         <WorkExperienceSection workExperience={resume.work_experience} />
         <EducationSection education={resume.education} />

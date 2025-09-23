@@ -7,17 +7,13 @@ const WebDevelopmentChat: NextPage = () => {
     <div>
       <Head>
         <title>WebDevelopmentChat - Zion Tech Solutions</title>
-        <meta name="description" content="WebDevelopmentChat blog post" />
+        <meta name='description' content='WebDevelopmentChat blog post' />
       </Head>
-      
+
       <main>
         <h1>WebDevelopmentChat</h1>
         <p>Blog content coming soon...</p>
-<<<<<<< HEAD
-        <Link href="/blog">Back to Blog</Link>
-=======
-        <a href="/blog">Back to Blog</a>
->>>>>>> origin/auto/autonomy-17186719616
+        <Link href='/blog'>Back to Blog</Link>
       </main>
     </div>
   );

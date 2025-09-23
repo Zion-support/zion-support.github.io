@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
 import Button from '../../components/ui/Button';
@@ -7,7 +6,6 @@ import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
 import { additionalEnhancedServices } from '../../data/additional-real-services';
-<<<<<<< HEAD
 import { newlyAddedServices } from '../../data/newly-added-services';
 import { curatedMarketServices } from '../../data/curated-market-services';
 import { new2025Services } from '../../data/new-2025-services';
@@ -60,28 +58,6 @@ const mockService: SimpleService = {
 		.concat(augmentedServicesBatch3 as unknown as Service[])
 		.concat(realServicesQ22025 as unknown as Service[])
 		.concat(real2025Q3Additions as unknown as Service[]);
-=======
-import { newRealServices } from '../../data/new-real-services';
-import { marketReadyServices } from '../../data/market-ready-services';
-
-type Service = typeof enhancedRealMicroSaasServices[number];
-
-const contactInfo = {
-	mobile: '+1 302 464 0950',
-	email: 'kleber@ziontechgroup.com',
-	address: '364 E Main St STE 1008 Middletown DE 19709',
-	website: 'https://ziontechgroup.com'
-};
-
-function getAllServices(): Service[] {
-	return enhancedRealMicroSaasServices
-		.concat(
-			extraServices as Service[],
-			additionalEnhancedServices as Service[],
-			newRealServices as Service[],
-			marketReadyServices as Service[]
-		);
->>>>>>> origin/auto/autonomy-17186719616
 }
 
 function toSlug(value: string): string {
@@ -105,7 +81,6 @@ export async function getStaticPaths() {
 	const services = getAllServices();
 	const slugs = new Set<string>();
 
-<<<<<<< HEAD
 	// Define static service slugs that should not be handled by this dynamic route
 	const staticServiceSlugs = [
 		'ai-evaluation-orchestrator',
@@ -118,17 +93,10 @@ export async function getStaticPaths() {
 		// Prefer explicit link under /services/* when available
 		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null;
 		if (fromLink && !staticServiceSlugs.includes(fromLink)) {
-=======
-	for (const s of services) {
-		// Prefer explicit link under /services/* when available
-		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null;
-		if (fromLink) {
->>>>>>> origin/auto/autonomy-17186719616
 			slugs.add(fromLink);
 			continue;
 		}
 		// Fall back to normalized id or name to provide a stable URL under /services/*
-<<<<<<< HEAD
 		const idSlug = s.id ? toSlug(s.id) : '';
 		const nameSlug = s.name ? toSlug(s.name) : '';
 		
@@ -138,66 +106,12 @@ export async function getStaticPaths() {
 		if (nameSlug && !staticServiceSlugs.includes(nameSlug)) {
 			slugs.add(nameSlug);
 		}
-=======
-		if (s.id) slugs.add(toSlug(s.id));
-		else if (s.name) slugs.add(toSlug(s.name));
->>>>>>> origin/auto/autonomy-17186719616
 	}
 
 	return {
 		paths: Array.from(slugs).map((slug) => ({ params: { slug } })),
 		fallback: false
 	};
-<<<<<<< HEAD
-=======
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
-
-export async function getStaticPaths() {
-  // Return empty paths for now to fix build
-  return {
-    paths: [],
-    fallback: 'blocking'
-  };
-}
-
-export async function getStaticProps({ params }: { params: { slug: string } }) {
-  // For now, return mock data to fix build
-  return {
-    props: { 
-      service: mockService,
-      slug: params?.slug || 'default'
-    }
-  };
-}
-
-export default function ServiceDetailPage({ service, slug }: { service: SimpleService; slug: string }) {
-  return (
-    <Layout>
-      <Head>
-        <title>{service.name} | Zion Tech Group</title>
-        <meta name="description" content={service.description} />
-        <link rel="canonical" href={`https://ziontechgroup.com/services/${slug}`} />
-      </Head>
-
-      <div className="container mx-auto px-4 py-16">
-        {/* Back Navigation */}
-        <div className="mb-8">
-          <Link 
-            href="/services" 
-            className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Back to Services
-          </Link>
-        </div>
-
-}
-=======
         <div className="text-center mb-10">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
             {service.name}
@@ -422,4 +336,4 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 		</UltraFuturisticBackground>
 	);
 }
->>>>>>> origin/auto/autonomy-17186719616
+=======

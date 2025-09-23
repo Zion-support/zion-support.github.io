@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import { configureStore  } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import cartReducer from './cartSlice';
 import wishlistReducer from './wishlistSlice';
 import authReducer from './authSlice';
@@ -9,14 +8,6 @@ export const store = configureStore({
     cart: cartReducer,
     wishlist: wishlistReducer,
     auth: authReducer,
-=======
-import { configureStore } from '@reduxjs/toolkit';
-import wishlistReducer from './wishlistSlice';
-
-export const store = configureStore({
-  reducer: {
-    wishlist: wishlistReducer,
->>>>>>> origin/auto/autonomy-17186719616
   },
 });
 

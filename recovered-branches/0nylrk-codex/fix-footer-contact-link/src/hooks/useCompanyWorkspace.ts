@@ -1,6 +1,5 @@
-
-import { useState, useEffect } from "react";
-import { Company } from "@/components/enterprise/workspace/CompanyDashboard";
+import { useState, useEffect } from 'react';
+import { Company } from '@/components/enterprise/workspace/CompanyDashboard';
 
 export function useCompanyWorkspace(companySlug?: string) {
   const [company, setCompany] = useState<Company | null>(null);
@@ -12,31 +11,23 @@ export function useCompanyWorkspace(companySlug?: string) {
     // For now, we'll simulate a delay and return mock data
     setIsLoading(true);
     setTimeout(() => {
-      if (companySlug === "demo" || !companySlug) {
+      if (companySlug === 'demo' || !companySlug) {
         // Demo company data
         setCompany({
-          id: "company-123",
-          name: "Acme Corporation",
-          logoUrl: "/placeholder.svg",
+          id: 'company-123',
+          name: 'Acme Corporation',
+          logoUrl: '/placeholder.svg',
           theme: {
-            primaryColor: "#4f46e5",
-            backgroundColor: "#ffffff",
-<<<<<<< HEAD
-            textColor: "#1f2937"},
-=======
-            textColor: "#1f2937",
+            primaryColor: '#4f46e5',
+            backgroundColor: '#ffffff',
+            textColor: '#1f2937',
           },
->>>>>>> origin/auto/autonomy-17186719616
-          plan: "Business",
+          plan: 'Business',
           teamSize: 12,
           teamLimit: 50,
-          billingCycle: "Annual",
-<<<<<<< HEAD
-          workspaceUrl: "acme.zion-ai.com"});
-=======
-          workspaceUrl: "acme.zion-ai.com",
+          billingCycle: 'Annual',
+          workspaceUrl: 'acme.zion-ai.com',
         });
->>>>>>> origin/auto/autonomy-17186719616
         setError(null);
       } else {
         // For any other slug, we could check if it's a valid company
@@ -44,26 +35,18 @@ export function useCompanyWorkspace(companySlug?: string) {
         setCompany({
           id: `company-${companySlug}`,
           name: companySlug.charAt(0).toUpperCase() + companySlug.slice(1),
-          logoUrl: "/placeholder.svg",
+          logoUrl: '/placeholder.svg',
           theme: {
-            primaryColor: "#4f46e5",
-            backgroundColor: "#ffffff",
-<<<<<<< HEAD
-            textColor: "#1f2937"},
-=======
-            textColor: "#1f2937",
+            primaryColor: '#4f46e5',
+            backgroundColor: '#ffffff',
+            textColor: '#1f2937',
           },
->>>>>>> origin/auto/autonomy-17186719616
-          plan: "Teams",
+          plan: 'Teams',
           teamSize: 5,
           teamLimit: 10,
-          billingCycle: "Monthly",
-<<<<<<< HEAD
-          workspaceUrl: `${companySlug}.zion-ai.com`});
-=======
+          billingCycle: 'Monthly',
           workspaceUrl: `${companySlug}.zion-ai.com`,
         });
->>>>>>> origin/auto/autonomy-17186719616
         setError(null);
       }
       setIsLoading(false);

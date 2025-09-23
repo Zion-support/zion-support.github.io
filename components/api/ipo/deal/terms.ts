@@ -1,20 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 
   const terms = readJsonFile('deal/terms && terms.json', {
-=======
-import { readJsonFile } from '../../../../utils/api/storage';
-import { requireSuperadminApi } from '../../../../utils/api/auth';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
-  const terms = readJsonFile('deal/terms.json', {
->>>>>>> origin/auto/autonomy-17186719616
     round: 'Series A',
     target: '$10,000,000',
     valuationCap: '$80,000,000',
     discount: '20%',
-<<<<<<< HEAD
 
   const terms = readJsonFile('deal/terms.json', {
     round: 'Series A'
@@ -67,12 +57,10 @@ function handler() {
   res.status (200).json (terms);
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -80,9 +68,5 @@ function handler() {
 
 
 
-=======
-    leadInvestor: 'TBD',
-  });
-  res.status(200).json(terms);
-}
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

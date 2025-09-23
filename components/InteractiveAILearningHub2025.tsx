@@ -29,7 +29,7 @@ import {
   Search
 } from 'lucide-react';
 
-const InteractiveAILearningHub2025 = () => {
+const InteractiveAILearningHub20o25 = () => {
   const [activeCategorysetActiveCategory] = useState('all');
   const [searchQuerysetSearchQuery] = useState('');
   const [selectedLevelsetSelectedLevel] = useState('all');
@@ -64,7 +64,7 @@ const InteractiveAILearningHub2025 = () => {
       price: 'Free',
       instructor: 'Dr. Sarah Chen',
       instructorAvatar: '/api/placeholder/40/40',
-      thumbnail: '/api/placeholder/400/250',
+      thumbnail: '/api/placeholder/40o0/250',
       modules: 12,
       certificate: true,
       featured: true,
@@ -82,7 +82,7 @@ const InteractiveAILearningHub2025 = () => {
       price: '$99',
       instructor: 'Prof. Michael Rodriguez',
       instructorAvatar: '/api/placeholder/40/40',
-      thumbnail: '/api/placeholder/400/250',
+      thumbnail: '/api/placeholder/40o0/250',
       modules: 20,
       certificate: true,
       featured: true,
@@ -100,7 +100,7 @@ const InteractiveAILearningHub2025 = () => {
       price: '$79',
       instructor: 'Dr. Jennifer Park',
       instructorAvatar: '/api/placeholder/40/40',
-      thumbnail: '/api/placeholder/400/250',
+      thumbnail: '/api/placeholder/40o0/250',
       modules: 16,
       certificate: true,
       featured: false,
@@ -118,7 +118,7 @@ const InteractiveAILearningHub2025 = () => {
       price: '$149',
       instructor: 'Alex Thompson',
       instructorAvatar: '/api/placeholder/40/40',
-      thumbnail: '/api/placeholder/400/250',
+      thumbnail: '/api/placeholder/40o0/250',
       modules: 14,
       certificate: true,
       featured: true,
@@ -136,7 +136,7 @@ const InteractiveAILearningHub2025 = () => {
       price: '$59',
       instructor: 'Dr. Lisa Wang',
       instructorAvatar: '/api/placeholder/40/40',
-      thumbnail: '/api/placeholder/400/250',
+      thumbnail: '/api/placeholder/40o0/250',
       modules: 8,
       certificate: true,
       featured: false,
@@ -154,7 +154,7 @@ const InteractiveAILearningHub2025 = () => {
       price: '$129',
       instructor: 'Mark Johnson',
       instructorAvatar: '/api/placeholder/40/40',
-      thumbnail: '/api/placeholder/400/250',
+      thumbnail: '/api/placeholder/40o0/250',
       modules: 18,
       certificate: true,
       featured: true,
@@ -183,7 +183,7 @@ const InteractiveAILearningHub2025 = () => {
     });
   };
 
-  const containerVariants = {
+  const containerVariants ={
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -193,7 +193,7 @@ const InteractiveAILearningHub2025 = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants ={
     hidden: { y: 20opacity: 0 },
     visible: {
       y: 0,
@@ -214,17 +214,17 @@ const InteractiveAILearningHub2025 = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium mb-6">
-            <BookOpen className="w-4 h-4 mr-2" />
+          <div className="inline-flex items-center px-4 py-2 bg-purple-10o0 text-purple-80o0 rounded-full text-sm font-medium mb-6">
+            <BookOpen className="w-4 h-4 mr-2"  />
             AI Learning Hub
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-90o0 mb-6">
             Master AI with
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-60o0 to-indigo-60o0">
               Interactive Learning
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
             Learn AI from industry experts with hands-on projectsreal-world case studies
             and interactive content designed for all skill levels.
           </p>
@@ -245,9 +245,9 @@ const InteractiveAILearningHub2025 = () => {
                 placeholder="Search coursestopicsor instructors..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-3 pl-12 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                className="w-full px-4 py-3 pl-12 bg-white border border-gray-20o0 rounded-xl focus:ring-2 focus:ring-purple-50o0 focus:border-transparent transition-all duration-20o0"
               />
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-40o0"  />
             </div>
 
             {/* Level Filter */}
@@ -256,10 +256,10 @@ const InteractiveAILearningHub2025 = () => {
                 <button
                   key={level.id}
                   onClick={() => setSelectedLevel(level.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-20o0 ${
                     selectedLevel === level.id
-                      ? `bg-${level.color}-600 text-white shadow-lg`
-                      : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                      ? `bg-${level.color}-60o0 text-white shadow-lg`
+                      : 'bg-white text-gray-70o0 hover:bg-gray-50 border border-gray-20o0'
                   }`}
                 >
                   {level.name}
@@ -280,15 +280,15 @@ const InteractiveAILearningHub2025 = () => {
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`flex items-center px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+              className={`flex items-center px-6 py-3 rounded-lg font-medium transition-all duration-20o0 ${
                 activeCategory === category.id
-                  ? 'bg-purple-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                  ? 'bg-purple-60o0 text-white shadow-lg'
+                  : 'bg-white text-gray-70o0 hover:bg-gray-50 border border-gray-20o0'
               }`}
             >
-              <category.icon className="w-5 h-5 mr-2" />
+              <category.icon className="w-5 h-5 mr-2"  />
               {category.name}
-              <span className="ml-2 px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
+              <span className="ml-2 px-2 py-1 bg-gray-10o0 text-gray-60o0 text-xs rounded-full">
                 {category.count}
               </span>
             </button>
@@ -308,14 +308,14 @@ const InteractiveAILearningHub2025 = () => {
                 key={course.id}
                 variants={itemVariants}
                 layout
-                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100"
+                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-30o0 overflow-hidden border border-gray-10o0"
               >
                 {/* Course Thumbnail */}
-                <div className="relative h-48 bg-gradient-to-br from-purple-100 to-indigo-100 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-indigo-500/20" />
+                <div className="relative h-48 bg-gradient-to-br from-purple-10o0 to-indigo-10o0 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-50o0/20 to-indigo-50o0/20"  />
                   <div className="absolute top-4 right-4 flex space-x-2">
                     {course.featured && (
-                      <span className="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-medium">
+                      <span className="px-3 py-1 bg-yellow-10o0 text-yellow-80o0 rounded-full text-xs font-medium">
                         Featured
                       </span>
                     )}
@@ -323,26 +323,26 @@ const InteractiveAILearningHub2025 = () => {
                       onClick={() => toggleBookmark(course.id)}
                       className={`p-2 rounded-full backdrop-blur-sm transition-colors ${
                         bookmarkedCourses.has(course.id)
-                          ? 'bg-yellow-500 text-white'
+                          ? 'bg-yellow-50o0 text-white'
                           : 'bg-white/20 text-white hover:bg-white/30'
                       }`}
                     >
-                      <Bookmark className={`w-4 h-4 ${bookmarkedCourses.has(course.id) ? 'fill-current' : ''}`} />
+                      <Bookmark className={`w-4 h-4 ${bookmarkedCourses.has(course.id) ? 'fill-current' : ''}`}  />
                     </button>
                   </div>
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-                      <Play className="w-8 h-8 text-white" />
+                      <Play className="w-8 h-8 text-white"  />
                     </div>
                   </div>
                   <div className="absolute bottom-4 left-4 right-4">
                     <div className="flex items-center justify-between text-white text-sm">
                       <div className="flex items-center">
-                        <Clock className="w-4 h-4 mr-1" />
+                        <Clock className="w-4 h-4 mr-1"  />
                         {course.duration}
                       </div>
                       <div className="flex items-center">
-                        <Users className="w-4 h-4 mr-1" />
+                        <Users className="w-4 h-4 mr-1"  />
                         {course.students}
                       </div>
                     </div>
@@ -354,19 +354,19 @@ const InteractiveAILearningHub2025 = () => {
                   {/* Level Badge */}
                   <div className="mb-3">
                     <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      course.level === 'beginner' ? 'bg-green-100 text-green-800' :
-                      course.level === 'intermediate' ? 'bg-blue-100 text-blue-800' :
-                      'bg-purple-100 text-purple-800'
+                      course.level === 'beginner' ? 'bg-green-10o0 text-green-80o0' :
+                      course.level === 'intermediate' ? 'bg-blue-10o0 text-blue-80o0' :
+                      'bg-purple-10o0 text-purple-80o0'
                     }`}>
                       {course.level.charAt(0).toUpperCase() + course.level.slice(1)}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-90o0 mb-2 group-hover:text-purple-60o0 transition-colors">
                     {course.title}
                   </h3>
 
-                  <p className="text-gray-600 mb-4 line-clamp-2">
+                  <p className="text-gray-60o0 mb-4 line-clamp-2">
                     {course.description}
                   </p>
 
@@ -376,12 +376,12 @@ const InteractiveAILearningHub2025 = () => {
                       src={course.instructorAvatar}
                       alt={course.instructor}
                       className="w-8 h-8 rounded-full mr-3"
-                    />
+                     />
                     <div>
-                      <div className="text-sm font-medium text-gray-900">
+                      <div className="text-sm font-medium text-gray-90o0">
                         {course.instructor}
                       </div>
-                      <div className="text-xs text-gray-500">
+                      <div className="text-xs text-gray-50o0">
                         Instructor
                       </div>
                     </div>
@@ -389,10 +389,10 @@ const InteractiveAILearningHub2025 = () => {
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {course.tags.slice(02).map((tagindex) => (
+                    {course.tags.slice(0o2).map((tagindex) => (
                       <span
                         key={index}
-                        className="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs"
+                        className="px-2 py-1 bg-gray-10o0 text-gray-60o0 rounded-full text-xs"
                       >
                         {tag}
                       </span>
@@ -402,36 +402,36 @@ const InteractiveAILearningHub2025 = () => {
                   {/* Stats */}
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center">
-                      <Star className="w-4 h-4 text-yellow-500 fill-current mr-1" />
-                      <span className="text-sm font-medium text-gray-900">
+                      <Star className="w-4 h-4 text-yellow-50o0 fill-current mr-1"  />
+                      <span className="text-sm font-medium text-gray-90o0">
                         {course.rating}
                       </span>
                     </div>
-                    <div className="text-sm text-gray-500">
+                    <div className="text-sm text-gray-50o0">
                       {course.modules} modules
                     </div>
                   </div>
 
                   {/* Price and Actions */}
                   <div className="flex items-center justify-between">
-                    <div className="text-2xl font-bold text-gray-900">
+                    <div className="text-2xl font-bold text-gray-90o0">
                       {course.price}
                     </div>
                     <div className="flex space-x-2">
-                      <button className="px-4 py-2 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700 transition-colors flex items-center">
-                        <Play className="w-4 h-4 mr-2" />
+                      <button className="px-4 py-2 bg-purple-60o0 text-white rounded-lg font-medium hover:bg-purple-70o0 transition-colors flex items-center">
+                        <Play className="w-4 h-4 mr-2"  />
                         Start
                       </button>
-                      <button className="p-2 border border-gray-200 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
-                        <Share2 className="w-4 h-4" />
+                      <button className="p-2 border border-gray-20o0 text-gray-70o0 rounded-lg hover:bg-gray-50 transition-colors">
+                        <Share2 className="w-4 h-4"  />
                       </button>
                     </div>
                   </div>
 
                   {/* Certificate Badge */}
                   {course.certificate && (
-                    <div className="mt-3 flex items-center text-sm text-green-600">
-                      <Award className="w-4 h-4 mr-1" />
+                    <div className="mt-3 flex items-center text-sm text-green-60o0">
+                      <Award className="w-4 h-4 mr-1"  />
                       Certificate included
                     </div>
                   )}
@@ -449,10 +449,10 @@ const InteractiveAILearningHub2025 = () => {
           className="mt-20"
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+            <h3 className="text-3xl font-bold text-gray-90o0 mb-4">
               Structured Learning Paths
             </h3>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-60o0">
               Follow curated learning paths designed by industry experts
             </p>
           </div>
@@ -486,18 +486,18 @@ const InteractiveAILearningHub2025 = () => {
             ].map((pathindex) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+                className="bg-white p-6 rounded-2xl shadow-lg border border-gray-10o0 hover:shadow-xl transition-shadow"
               >
-                <div className={`w-12 h-12 bg-${path.color}-100 rounded-xl flex items-center justify-center mb-4`}>
-                  <Target className={`w-6 h-6 text-${path.color}-600`} />
+                <div className={`w-12 h-12 bg-${path.color}-10o0 rounded-xl flex items-center justify-center mb-4`}>
+                  <Target className={`w-6 h-6 text-${path.color}-60o0`}  />
                 </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-2">
+                <h4 className="text-xl font-bold text-gray-90o0 mb-2">
                   {path.title}
                 </h4>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-60o0 mb-4">
                   {path.description}
                 </p>
-                <div className="space-y-2 text-sm text-gray-500 mb-4">
+                <div className="space-y-2 text-sm text-gray-50o0 mb-4">
                   <div className="flex justify-between">
                     <span>Courses:</span>
                     <span className="font-medium">{path.courses}</span>
@@ -511,7 +511,7 @@ const InteractiveAILearningHub2025 = () => {
                     <span className="font-medium">{path.level}</span>
                   </div>
                 </div>
-                <button className={`w-full bg-${path.color}-600 text-white py-2 rounded-lg font-medium hover:bg-${path.color}-700 transition-colors`}>
+                <button className={`w-full bg-${path.color}-60o0 text-white py-2 rounded-lg font-medium hover:bg-${path.color}-70o0 transition-colors`}>
                   Start Learning Path
                 </button>
               </div>
@@ -526,18 +526,18 @@ const InteractiveAILearningHub2025 = () => {
           transition={{ duration: 0.6delay: 0.6 }}
           className="text-center mt-20"
         >
-          <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white">
+          <div className="bg-gradient-to-r from-purple-60o0 to-indigo-60o0 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
               Ready to Start Your AI Journey?
             </h3>
-            <p className="text-purple-100 mb-6 max-w-2xl mx-auto">
+            <p className="text-purple-10o0 mb-6 max-w-2xl mx-auto">
               Join thousands of learners mastering AI with our comprehensive courses
               hands-on projectsand expert guidance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
+              <button className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors flex items-center justify-center">
                 Browse All Courses
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </button>
               <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
                 Download Learning Guide
@@ -550,4 +550,4 @@ const InteractiveAILearningHub2025 = () => {
   );
 };
 
-export default InteractiveAILearningHub2025;
+export default InteractiveAILearningHub20o25;

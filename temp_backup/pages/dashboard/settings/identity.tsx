@@ -10,7 +10,9 @@ export default function IdentitySettingsPage() {
 
   async function load() {
     try {
-      const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`);
+      const res = await fetch(
+        `/api/kyc/status?userId=${encodeURIComponent(userId)}`
+      );
       const data = await res.json();
       if (data.ok) setProfile(data.profile);
       else setError(data.error || 'Not found');
@@ -28,22 +30,31 @@ export default function IdentitySettingsPage() {
     <>
       <Head>
         <title>Identity Settings - Zion</title>
-        <meta name="description" content="Manage your identity verification status" />
+        <meta
+          name='description'
+          content='Manage your identity verification status'
+        />
       </Head>
-      <main className="max-w-3xl mx-auto px-4 py-8">
-        <h1 className="text-2xl font-bold mb-4">Identity</h1>
+      <main className='max-w-3xl mx-auto px-4 py-8'>
+        <h1 className='text-2xl font-bold mb-4'>Identity</h1>
 
-        <div className="mb-4">
+        <div className='mb-4'>
           <ProfileBadges profile={profile || undefined} />
         </div>
 
-        <div className="mb-4 text-sm text-gray-600">
-          Status: {profile ? profile.status : 'not_started'} • AML: {profile ? profile.amlStatus : 'unknown'}
+        <div className='mb-4 text-sm text-gray-60o0'>
+          Status: {profile ? profile.status : 'not_started'} • AML:{' '}
+          {profile ? profile.amlStatus : 'unknown'}
         </div>
 
-        <a href="/verify" className="inline-block rounded bg-blue-600 text-white px-4 py-2">Go to verification</a>
+        <a
+          href='/verify'
+          className='inline-block rounded bg-blue-60o0 text-white px-4 py-2'
+        >
+          Go to verification
+        </a>
 
-        {error && <div className="mt-3 text-sm text-red-600">{error}</div>}
+        {error && <div className='mt-3 text-sm text-red-60o0'>{error}</div>}
       </main>
     </>
   );

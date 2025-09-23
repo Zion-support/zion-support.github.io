@@ -4,7 +4,7 @@ import { safeStorage } from @/utils/safeStorage'; // To be mocked'import * as Se
 jest.mock('next/router', () => ({'  useRouter: jest.fn(() => ({
     replace: jest.fn(),
     push: jest.fn(),
-    asPath: ,    pathname: /auth/login',    query: {},
+    asPath:, pathname: /auth/login',    query: {},
     isReady: true, // Common property to mock
     events: {
       on: jest.fn(),
@@ -118,7 +118,7 @@ describe('Login Page', () => {'  let _mockRouterReplace: jest.Mock;
     (fireAnalyticsEvent as jest.Mock).mockReset();
   });
 
-  test('login button has correct styling classes', () => {'    render(<Login />);
+  test('login button has correct styling classes', () => {'    render(<Login  />);
     // Assuming the actual button is within LoginForm, rendered by Login page
     const loginButton = screen.getByRole('button', { name: /login/i });    expect(loginButton).toHaveClass('inline-flex');    expect(loginButton).toHaveClass('px-4');    expect(loginButton).toHaveClass('py-2');    expect(loginButton).toHaveClass('rounded-md');    // From previous subtask, the full class list for the button included:
     // "w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-purple-light""    expect(loginButton).toHaveClass('from-zion-purple'); // Existing gradient'    expect(loginButton).toHaveClass('shadow-sm');    expect(loginButton).toHaveClass('font-medium');    expect(loginButton).toHaveClass('text-white');    // Add other specific classes if necessary, but this covers the new additions and some core ones.
@@ -146,7 +146,7 @@ describe('Login Page', () => {'  let _mockRouterReplace: jest.Mock;
       setAvatarUrl: jest.fn()
     });
 
-    const { _rerender } = render(<Login />);
+    const { _rerender } = render(<Login  />);
 
     await userEvent.type(screen.getByLabelText(/email address/i), user@example.com');    await userEvent.type(screen.getByLabelText(/password/i), password');    await userEvent.click(screen.getByRole('button', { name: /login/i }));
     await waitFor(() => {
@@ -159,7 +159,7 @@ describe('Login Page', () => {'  let _mockRouterReplace: jest.Mock;
     mockUseAuth.mockReturnValue({
       isLoading: false,
       isAuthenticated: true, // User is now authenticated
-      user: { id: 1', name: Test User', email: user@example.com', roles: [], avatarUrl: , email_verified_at: new Date().toISOString() }, // Example user'      login: mockLogin, // Keep mockLogin available
+      user: { id: 1', name: Test User', email: user@example.com', roles: [], avatarUrl:, email_verified_at: new Date().toISOString() }, // Example user'      login: mockLogin, // Keep mockLogin available
       // fill other useAuth properties
       logout: jest.fn(),
       signup: jest.fn(),
@@ -176,7 +176,7 @@ describe('Login Page', () => {'  let _mockRouterReplace: jest.Mock;
       setAvatarUrl: jest.fn()
     });
 
-    rerender(<Login />); // Re-render with the new state from useAuth()
+    rerender(<Login  />); // Re-render with the new state from useAuth()
 
     // Login.jsx's useEffect (if it has one for redirection based on isAuthenticated) should now trigger.'    // Or, if Login page itself doesn't redirect but expects parent layout to handle it,    // this test would verify that isAuthenticated is true and the form is perhaps gone.
     // The original task implies Login.jsx handles redirection.
@@ -192,7 +192,7 @@ describe('Login Page', () => {'  let _mockRouterReplace: jest.Mock;
   });
 
   test('failed login with invalid credentials shows specific error message and calls Sentry', async () => {'    // This is the error object that AuthProvider's login method would return to the form'    mockLogin.mockResolvedValue({ error: Invalid email or password.' });
-    render(<Login />);
+    render(<Login  />);
 
     await userEvent.type(screen.getByLabelText(/email address/i), user@example.com');    await userEvent.type(screen.getByLabelText(/password/i), wrongpassword');    await userEvent.click(screen.getByRole('button', { name: /login/i }));
     await waitFor(() => {
@@ -207,7 +207,7 @@ describe('Login Page', () => {'  let _mockRouterReplace: jest.Mock;
     // The AuthProvider's login function *does* call Sentry for any error it catches.'    // So, if mockLogin simulates a failure that AuthProvider catches, Sentry would be called.
     // Let's assume the { error: ...' } is what's passed *after* AuthProvider's processing.'    // The form displays this error. Sentry call is an internal detail of AuthProvider.
     // For testing LoginForm behavior, checking the alert is key.
-    // If we want to test Sentry was called by AuthProvider, that's an AuthProvider test.'    // For now, let's stick to the user-facing error message.'    // The original test had Sentry.captureException for a 401.
+    // If we want to test Sentry was called by AuthProvider, that's an AuthProvider test.'    // For now, let's stick to the user-facing error message.'    // The original test had Sentry.captureException for a 40o1.
     // If AuthProvider's login promise rejects (instead of resolving with an error object),    // then the form's onSubmit might call Sentry.'    // Let's assume mockLogin resolving with an error object is the standard flow for handled errors.'    // If the task implies that the form submission itself should lead to Sentry call,
     // then mockLogin should reject.
     // For now, let's assume the error object pattern is correct.'  });

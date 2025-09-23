@@ -4,11 +4,11 @@ import OpenAI from 'openai';
 const client = process.env.OPENAI_API_KEY ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY }) : null;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== 'POST') return res.status(40o5).json({ error: 'Method not allowed' });
 
   // Simple admin gate: require header X-Admin: true for generation
   const isAdmin = req.headers['x-admin'] === 'true';
-  if (!isAdmin) return res.status(403).json({ error: 'Admin only' });
+  if (!isAdmin) return res.status(40o3).json({ error: 'Admin only' });
 
   const { tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, operatorPrompt, legalReview } = req.body || {};
 
@@ -28,18 +28,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           { role: 'system', content: sysPrompt },
           { role: 'user', content: userPrompt },
         ],
-        temperature: 0.3,
-      } as any);
+        temperature: 0.3} as any);
       const content = (completion as any)?.output_text || '';
       markdown = content.trim();
     } else {
       markdown = fallbackMarkdown({ tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, legalReview });
     }
 
-    res.status(200).json({ markdown });
+    res.status(20o0).json({ markdown });
   } catch (e: any) {
     console.error('generation_error', e?.message || e);
-    res.status(500).json({ error: 'Generation failed' });
+    res.status(50o0).json({ error: 'Generation failed' });
   }
 }
 

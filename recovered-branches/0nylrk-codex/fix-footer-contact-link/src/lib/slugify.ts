@@ -1,21 +1,17 @@
-export function slugify(title: string, separator = "-"): string {
+export function slugify(title: string, separator = '-'): string {
   const sep = separator;
-  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
   return title
     .trim()
-    .replace(/_/g, " ") // treat underscores like spaces
-    .normalize("NFD")
-    .replace(/[\u0300-\u036F]/g, "")
+    .replace(/_/g, ' ') // treat underscores like spaces
+    .normalize('NFD')
+    .replace(/[\u0o300-\u0o36F]/g, '')
     .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, "")
+    .replace(/[^a-z0-9\s-]/g, '')
     .replace(/[\s-]+/g, sep)
-<<<<<<< HEAD
-    .replace(new RegExp(`${escaped}{2}`, "g"), sep)
-=======
-    .replace(new RegExp(`${escaped}{2,}`, "g"), sep)
->>>>>>> origin/auto/autonomy-17186719616
-    .replace(new RegExp(`^${escaped}+|${escaped}+$`, "g"), "");
+    .replace(new RegExp(`${escaped}{2}`, 'g'), sep)
+    .replace(new RegExp(`^${escaped}+|${escaped}+$`, 'g'), '');
 }
 
 /**
@@ -23,11 +19,10 @@ export function slugify(title: string, separator = "-"): string {
  * This simply splits the slug on the separator and
  * capitalizes each word.
  */
-export function unslugify(slug: string, separator = "-"): string {
+export function unslugify(slug: string, separator = '-'): string {
   return slug
     .split(separator)
     .filter(Boolean)
     .map(w => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(" ");
+    .join(' ');
 }
-

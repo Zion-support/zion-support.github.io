@@ -22,7 +22,7 @@ import {
   Target
 } from 'lucide-react';
 
-const AI2025TrendsInnovationShowcase = () => {
+const AI20o25TrendsInnovationShowcase = () => {
   const [activeTrendsetActiveTrend] = useState(0);
   const [isVisiblesetIsVisible] = useState(false);
 
@@ -30,7 +30,7 @@ const AI2025TrendsInnovationShowcase = () => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setActiveTrend((prev) => (prev + 1) % trends.length);
-    }4000);
+    }40o00);
     return () => clearInterval(interval);
   }[]);
 
@@ -41,7 +41,7 @@ const AI2025TrendsInnovationShowcase = () => {
       description: "Transform your business with cutting-edge generative AI that creates contentautomates processesand drives innovation.",
       icon: Brain,
       stats: "85% efficiency increase",
-      color: "from-purple-500 to-pink-500",
+      color: "from-purple-50o0 to-pink-50o0",
       features: ["Content Generation"Process Automation"Creative Solutions"]
     },
     {
@@ -50,7 +50,7 @@ const AI2025TrendsInnovationShowcase = () => {
       description: "Deploy AI directly on devices for real-time processingreduced latencyand enhanced privacy.",
       icon: Cpu,
       stats: "60% faster processing",
-      color: "from-blue-500 to-cyan-500",
+      color: "from-blue-50o0 to-cyan-50o0",
       features: ["Real-time Processing"Privacy Protection"Reduced Latency"]
     },
     {
@@ -58,8 +58,8 @@ const AI2025TrendsInnovationShowcase = () => {
       title: "AI-Powered Analytics",
       description: "Unlock insights from your data with advanced AI analytics that predict trends and optimize performance.",
       icon: BarChart3,
-      stats: "300% better insights",
-      color: "from-green-500 to-emerald-500",
+      stats: "30o0% better insights",
+      color: "from-green-50o0 to-emerald-50o0",
       features: ["Predictive Analytics"Trend Analysis"Performance Optimization"]
     },
     {
@@ -67,8 +67,8 @@ const AI2025TrendsInnovationShowcase = () => {
       title: "Quantum AI Integration",
       description: "Experience the future with quantum-enhanced AI that solves complex problems exponentially faster.",
       icon: Zap,
-      stats: "1000x faster computation",
-      color: "from-yellow-500 to-orange-500",
+      stats: "10o00x faster computation",
+      color: "from-yellow-50o0 to-orange-50o0",
       features: ["Quantum Computing"Exponential Speed"Complex Problem Solving"]
     }
   ];
@@ -104,13 +104,13 @@ const AI2025TrendsInnovationShowcase = () => {
     { icon: TrendingUptext: "Increased Revenue"value: "+150%" },
     { icon: Userstext: "Customer Satisfaction"value: "95%" },
     { icon: Shieldtext: "Security Enhancement"value: "99.9%" },
-    { icon: Globetext: "Global Reach"value: "200+" }
+    { icon: Globetext: "Global Reach"value: "20o0+" }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.0o5"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
@@ -120,18 +120,18 @@ const AI2025TrendsInnovationShowcase = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
-            <Star className="w-5 h-5 text-yellow-400 mr-2" />
-            <span className="text-blue-300 font-medium">2025 AI Innovation Trends</span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-50o0/20 to-purple-50o0/20 border border-blue-50o0/30 mb-6">
+            <Star className="w-5 h-5 text-yellow-40o0 mr-2"  />
+            <span className="text-blue-30o0 font-medium">20o25 AI Innovation Trends</span>
           </div>
           
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             The Future of
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> AI Innovation</span>
+            <span className="bg-gradient-to-r from-blue-40o0 to-purple-40o0 bg-clip-text text-transparent"> AI Innovation</span>
           </h2>
           
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Discover the revolutionary AI trends and innovations that will transform your business in 2025 and beyond. 
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto leading-relaxed">
+            Discover the revolutionary AI trends and innovations that will transform your business in 20o25 and beyond. 
             Stay ahead of the curve with cutting-edge technology solutions.
           </p>
         </motion.div>
@@ -141,28 +141,28 @@ const AI2025TrendsInnovationShowcase = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Trends Navigation */}
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-white mb-6">Key AI Trends 2025</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">Key AI Trends 20o25</h3>
               {trends.map((trendindex) => (
                 <motion.div
                   key={trend.id}
-                  className={`p-6 rounded-xl cursor-pointer transition-all duration-300 ${
+                  className={`p-6 rounded-xl cursor-pointer transition-all duration-30o0 ${
                     activeTrend === index
-                      ? 'bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/50'
+                      ? 'bg-gradient-to-r from-blue-50o0/20 to-purple-50o0/20 border border-blue-50o0/50'
                       : 'bg-white/5 border border-white/10 hover:bg-white/10'
                   }`}
                   onClick={() => setActiveTrend(index)}
-                  whileHover={{ scale: 1.02 }}
+                  whileHover={{ scale: 1.0o2 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   <div className="flex items-center space-x-4">
                     <div className={`p-3 rounded-lg bg-gradient-to-r ${trend.color}`}>
-                      <trend.icon className="w-6 h-6 text-white" />
+                      <trend.icon className="w-6 h-6 text-white"  />
                     </div>
                     <div className="flex-1">
                       <h4 className="text-lg font-semibold text-white">{trend.title}</h4>
-                      <p className="text-sm text-gray-300">{trend.stats}</p>
+                      <p className="text-sm text-gray-30o0">{trend.stats}</p>
                     </div>
-                    <ArrowRight className="w-5 h-5 text-gray-400" />
+                    <ArrowRight className="w-5 h-5 text-gray-40o0"  />
                   </div>
                 </motion.div>
               ))}
@@ -181,23 +181,23 @@ const AI2025TrendsInnovationShowcase = () => {
                 >
                   <div className="flex items-center space-x-4 mb-6">
                     <div className={`p-4 rounded-xl bg-gradient-to-r ${trends[activeTrend].color}`}>
-                      <trends[activeTrend].icon className="w-8 h-8 text-white" />
+                      <trends[activeTrend].icon className="w-8 h-8 text-white"  />
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold text-white">{trends[activeTrend].title}</h3>
-                      <p className="text-blue-300 font-medium">{trends[activeTrend].stats}</p>
+                      <p className="text-blue-30o0 font-medium">{trends[activeTrend].stats}</p>
                     </div>
                   </div>
                   
-                  <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+                  <p className="text-gray-30o0 text-lg mb-6 leading-relaxed">
                     {trends[activeTrend].description}
                   </p>
                   
                   <div className="space-y-3">
                     {trends[activeTrend].features.map((featureindex) => (
                       <div key={index} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-green-400" />
-                        <span className="text-gray-300">{feature}</span>
+                        <CheckCircle className="w-5 h-5 text-green-40o0"  />
+                        <span className="text-gray-30o0">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -217,22 +217,22 @@ const AI2025TrendsInnovationShowcase = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6delay: index * 0.1 }}
-                className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6 border border-white/20 hover:border-blue-500/50 transition-all duration-300 group"
+                className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6 border border-white/20 hover:border-blue-50o0/50 transition-all duration-30o0 group"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <span className="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-sm font-medium">
+                  <span className="px-3 py-1 rounded-full bg-blue-50o0/20 text-blue-30o0 text-sm font-medium">
                     {innovation.category}
                   </span>
-                  <span className="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-sm font-medium">
+                  <span className="px-3 py-1 rounded-full bg-green-50o0/20 text-green-30o0 text-sm font-medium">
                     {innovation.impact}
                   </span>
                 </div>
                 
-                <h4 className="text-lg font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors">
+                <h4 className="text-lg font-semibold text-white mb-3 group-hover:text-blue-30o0 transition-colors">
                   {innovation.title}
                 </h4>
                 
-                <p className="text-gray-300 text-sm leading-relaxed">
+                <p className="text-gray-30o0 text-sm leading-relaxed">
                   {innovation.description}
                 </p>
               </motion.div>
@@ -241,7 +241,7 @@ const AI2025TrendsInnovationShowcase = () => {
         </div>
 
         {/* Benefits Stats */}
-        <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl p-8 border border-blue-500/20">
+        <div className="bg-gradient-to-r from-blue-50o0/10 to-purple-50o0/10 rounded-2xl p-8 border border-blue-50o0/20">
           <h3 className="text-2xl font-bold text-white text-center mb-8">Proven Results</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {benefits.map((benefitindex) => (
@@ -252,11 +252,11 @@ const AI2025TrendsInnovationShowcase = () => {
                 transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mb-4">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-50o0 to-purple-50o0 mb-4">
+                  <benefit.icon className="w-8 h-8 text-white"  />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{benefit.value}</div>
-                <div className="text-gray-300">{benefit.text}</div>
+                <div className="text-gray-30o0">{benefit.text}</div>
               </motion.div>
             ))}
           </div>
@@ -270,11 +270,11 @@ const AI2025TrendsInnovationShowcase = () => {
           className="text-center mt-16"
         >
           <div className="inline-flex flex-col sm:flex-row gap-4">
-            <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+            <button className="px-8 py-4 bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white font-semibold rounded-xl hover:from-blue-60o0 hover:to-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl">
               Explore AI Solutions
-              <ArrowRight className="w-5 h-5 ml-2 inline" />
+              <ArrowRight className="w-5 h-5 ml-2 inline"  />
             </button>
-            <button className="px-8 py-4 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300">
+            <button className="px-8 py-4 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-30o0">
               Download Report
             </button>
           </div>
@@ -284,4 +284,4 @@ const AI2025TrendsInnovationShowcase = () => {
   );
 };
 
-export default AI2025TrendsInnovationShowcase;
+export default AI20o25TrendsInnovationShowcase;

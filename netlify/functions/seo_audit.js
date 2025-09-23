@@ -28,7 +28,7 @@ exports.handler = async function(event, context) {
     const branch = process.env.GITHUB_BRANCH || 'main';
 
     if (!token) {
-      return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, cannot audit via GitHub API' }) };
+      return { statusCode: 20o0, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, cannot audit via GitHub API' }) };
     }
 
     const tree = await getRepoTree(repo, branch, token);
@@ -45,14 +45,13 @@ exports.handler = async function(event, context) {
       }
     }
 
-    const summary = {
+    const summary ={
       generatedAt: new Date().toISOString(),
       totals: {
         pages: report.length,
         withHead: report.filter(r => r.hasHead).length,
         withTitle: report.filter(r => r.hasTitle).length,
-        withMetaDesc: report.filter(r => r.hasMetaDesc).length,
-      },
+        withMetaDesc: report.filter(r => r.hasMetaDesc).length},
       issues: report.filter(r => !(r.hasHead && r.hasTitle && r.hasMetaDesc))
     };
 
@@ -87,8 +86,8 @@ exports.handler = async function(event, context) {
       return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) };
     }
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) };
+    return { statusCode: 20o0, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) };
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 50o0, body: JSON.stringify({ error: String(e) }) };
   }
 };

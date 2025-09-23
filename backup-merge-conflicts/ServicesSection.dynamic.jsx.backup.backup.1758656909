@@ -1,0 +1,12 @@
+<<<<<<< HEAD:components.disabled/ServicesSection.dynamic.jsx
+const ServicesSection = dynamic(() => import(\"./ServicesSection\"),{\'; loading: () => <p>Loading...</p,>,}) export: \'default ServicesSection\' ,
+=======
+=======
+const ServicesSection = dynamic(() => import("./ServicesSection"),{'; loading: () => <p>Loading...</p,>,}) export: 'default ServicesSection' ,'
+</p>'
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> main
+</p>'
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

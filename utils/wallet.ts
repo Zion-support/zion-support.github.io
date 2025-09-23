@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export async function connectMetaMask(): Promise<string[]> {
   if (typeof window === 'undefined' |!window.ethereum) {
@@ -130,10 +129,8 @@ declare global {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -143,37 +140,7 @@ declare global {
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 }
-=======
-export type WalletProvider = any;
-
-export function getEthereumProvider(): WalletProvider | null {
-  if (typeof window === 'undefined') return null;
-  // @ts-ignore
-  const { ethereum } = window;
-  return ethereum ?? null;
-}
-
-export async function connectMetaMask(): Promise<string[] | null> {
-  const provider = getEthereumProvider();
-  if (!provider) return null;
-  try {
-    const accounts: string[] = await provider.request({ method: 'eth_requestAccounts' });
-    return accounts;
-  } catch (e) {
-    return null;
-  }
-}
-
-export async function getAccounts(): Promise<string[] | null> {
-  const provider = getEthereumProvider();
-  if (!provider) return null;
-  try {
-    const accounts: string[] = await provider.request({ method: 'eth_accounts' });
-    return accounts;
-  } catch (e) {
-    return null;
-  }
-}
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -21,7 +21,6 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 const NetlifyBuildMonitor = require('./netlify-monitor');
 const NetlifyErrorFixer = require('./netlify-error-fixer');
 const fs = require('fs');
@@ -32,17 +31,17 @@ class NetlifyBuildAutomation {
   constructor() {
     this.monitor = new NetlifyBuildMonitor();
     this.fixer = new NetlifyErrorFixer();
-    this.config = {
+    this.config ={
       autoFix: true,
       autoCommit: true,
       autoDeploy: true,
       maxRetries: 3,
-      retryDelay: 60000, // 1 minute
+      retryDelay: 60o000, // 1 minute
       logFile: path.join(__dirname, 'netlify-automation.log'),
       statusFile: path.join(__dirname, 'netlify-automation-status.json')
     };
 
-    this.status = {
+    this.status ={
       isRunning: false,
       lastBuild: null,
       buildHistory: [],
@@ -97,7 +96,7 @@ class NetlifyBuildAutomation {
   async handleBuildSuccess(build) {
     this.log(`Build successful: ${build.id}`);
 
-    this.status.lastBuild = {
+    this.status.lastBuild ={
       id: build.id,
       timestamp: new Date().toISOString(),
       state: 'success'
@@ -125,8 +124,7 @@ class NetlifyBuildAutomation {
 
         if (success) {
           this.log(
-            `Successfully fixed ${error.type} on attempt ${retries + 1}`,
-          );
+            `Successfully fixed ${error.type} on attempt ${retries + 1}`);
 
           this.status.fixesApplied.push({
             timestamp: new Date().toISOString(),
@@ -150,7 +148,7 @@ class NetlifyBuildAutomation {
           retries++;
 
           if (retries < this.config.maxRetries) {
-            this.log(`Retrying in ${this.config.retryDelay / 1000} seconds...`);
+            this.log(`Retrying in ${this.config.retryDelay / 10o00} seconds...`);
             await new Promise((resolve) =>
               
 const timeoutId = 
@@ -344,15 +342,13 @@ const timeoutId = setTimeout(resolve,                                           
 // Store timeoutId for cleanup if needed
 ;
 // Store timeoutId for cleanup if needed
-,
-            );
+);
           }
         }
       } catch (fixError) {
         this.log(
           `Error during fix attempt ${retries + 1}: ${fixError.message}`,
-          'error',
-        );
+          'error');
         retries++;
 
         if (retries < this.config.maxRetries) {
@@ -549,8 +545,7 @@ const timeoutId = setTimeout(resolve,                                           
 // Store timeoutId for cleanup if needed
 ;
 // Store timeoutId for cleanup if needed
-,
-          );
+);
         }
       }
     }
@@ -558,8 +553,7 @@ const timeoutId = setTimeout(resolve,                                           
     if (!success) {
       this.log(
         `Failed to fix ${error.type} after ${this.config.maxRetries} attempts`,
-        'error',
-      );
+        'error');
 
       this.status.fixesApplied.push({
         timestamp: new Date().toISOString(),
@@ -618,8 +612,7 @@ const timeoutId = setTimeout(resolve,                                           
     ];
     const results = await Promise.allSettled(checks);
     const issues = results.filter(
-      (result) => result.status === 'rejected' || result.value === false,
-    );
+      (result) => result.status === 'rejected' || result.value === false);
 
     if (issues.length > 0) {
       this.log(`Found ${issues.length} pre-build issues, applying fixes...`);
@@ -690,18 +683,16 @@ const timeoutId = setTimeout(resolve,                                           
   }
 
   async generateReport() {
-    const report = {
+    const report ={
       timestamp: new Date().toISOString(),
       status: this.status,
       config: this.config,
       summary: {
         totalBuilds: this.status.buildHistory.length,
         successfulBuilds: this.status.buildHistory.filter(
-          (b) => b.state === 'success',
-        ).length,
+          (b) => b.state === 'success').length,
         failedBuilds: this.status.buildHistory.filter(
-          (b) => b.state === 'error',
-        ).length,
+          (b) => b.state === 'error').length,
         totalFixes: this.status.fixesApplied.length,
         successfulFixes: this.status.fixesApplied.filter((f) => f.success)
           .length,
@@ -713,8 +704,7 @@ const timeoutId = setTimeout(resolve,                                           
 
     fs.writeFileSync(
       path.join(__dirname, 'netlify-automation-report.json'),
-      JSON.stringify(report, null, 2),
-    );
+      JSON.stringify(report, null, 2));
     return report;
   }
 
@@ -722,8 +712,7 @@ const timeoutId = setTimeout(resolve,                                           
     try {
       fs.writeFileSync(
         this.config.statusFile,
-        JSON.stringify(this.status, null, 2),
-      );
+        JSON.stringify(this.status, null, 2));
     } catch (error) {
       this.log(`Error saving status: ${error.message}`, 'error');
     }

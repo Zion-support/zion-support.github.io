@@ -1,4 +1,3 @@
-import React from 'react';
 export function ServicesPage() {
   return (
     <div>
@@ -7,4 +6,3 @@ export function ServicesPage() {
     </div>
   );
 }
-

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
@@ -45,20 +44,12 @@ createdAt: now,
 
 
 }
-=======
->>>>>>> origin/auto/autonomy-17186719616
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
 import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";
 import { v4 as uuidv4 } from "uuid";
-<<<<<<< HEAD
 const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
-=======
-
-const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
-
->>>>>>> origin/auto/autonomy-17186719616
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const started = Date.now();
   const auth = await authenticateRequest(req);
@@ -67,35 +58,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   if (!(await enforceRateLimit(auth.apiKey))) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);
-<<<<<<< HEAD
     return res.status(429).json({ error: "Rate limit exceeded" })
-=======
-    return res.status(429).json({ error: "Rate limit exceeded" });
->>>>>>> origin/auto/autonomy-17186719616
   }
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
-<<<<<<< HEAD
     return res.status(405).json({ error: "Method Not Allowed" })
-=======
-    return res.status(405).json({ error: "Method Not Allowed" });
->>>>>>> origin/auto/autonomy-17186719616
   }
   const { name, email, skills, programTrack, certificationStatus } = req.body || {};
   if (!name || !email) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
-<<<<<<< HEAD
     return res.status(400).json({ error: "Missing required fields" })
-=======
-    return res.status(400).json({ error: "Missing required fields" });
->>>>>>> origin/auto/autonomy-17186719616
   }
   await fs.ensureDir(path.dirname(TALENTS_FILE));
   const records = (await fs.pathExists(TALENTS_FILE)) ? await fs.readJSON(TALENTS_FILE) : [];
   const now = new Date().toISOString();
   const record = {
-<<<<<<< HEAD
 
     id: uuidv4(), name,
     email;
@@ -152,8 +130,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const records = (await fs.pathExists(TALENTS_FILE)) ? await fs.readJSON(TALENTS_FILE) : []
   const now = new Date().toISOString()
   const record = {
-=======
->>>>>>> origin/auto/autonomy-17186719616
     id: uuidv4(),
     name,
     email,
@@ -161,7 +137,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     programTrack: programTrack || null,
     certificationStatus: certificationStatus || "pending",
     partnerId: auth.partner.id,
-<<<<<<< HEAD
     createdAt: now},
   records.push(record),
   await fs.writeJSON(TALENTS_FILE, records, { spaces: 2 }),
@@ -172,12 +147,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 }
 
-=======
-    createdAt: now,
-  };
-  records.push(record);
-  await fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });
-  await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
-  return res.status(201).json({ id: record.id });
-}
->>>>>>> origin/auto/autonomy-17186719616

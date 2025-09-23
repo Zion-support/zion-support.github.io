@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function RetailTechnologySolutions() {
@@ -21,6 +20,6 @@ export default function RetailTechnologySolutions() {
 			]}
 			industries={["Retail"CPG"E‑commerce"]}
 			canonical="https://ziontechgroup.com/retail-technology-solutions"
-		/>
+		 />
 	);
 }

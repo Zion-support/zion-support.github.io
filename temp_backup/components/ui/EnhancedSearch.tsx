@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, Filter, Sparkles, Brain, Atom, Shield, Target, Cpu, Globe } from 'lucide-react';
-import { useRouter } from 'next/router';
-
 interface SearchResult {
   id: string;
   title: string;
@@ -34,13 +32,13 @@ const EnhancedSearch: React.FC = () => {
   const router = useRouter();
 
   const categories = [
-    { id: 'all', name: 'All Categories', icon: Sparkles, color: 'from-purple-500 to-pink-500' },
-    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, color: 'from-cyan-500 to-blue-500' },
-    { id: 'quantum', name: 'Quantum Technology', icon: Atom, color: 'from-blue-500 to-indigo-500' },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500' },
-    { id: 'business', name: 'Business Solutions', icon: Target, color: 'from-emerald-500 to-teal-500' },
-    { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from-yellow-500 to-orange-500' },
-    { id: 'space', name: 'Space Technology', icon: Globe, color: 'from-purple-500 to-indigo-500' }
+    { id: 'all', name: 'All Categories', icon: Sparkles, color: 'from-purple-50o0 to-pink-50o0' },
+    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, color: 'from-cyan-50o0 to-blue-50o0' },
+    { id: 'quantum', name: 'Quantum Technology', icon: Atom, color: 'from-blue-50o0 to-indigo-50o0' },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-50o0 to-orange-50o0' },
+    { id: 'business', name: 'Business Solutions', icon: Target, color: 'from-emerald-50o0 to-teal-50o0' },
+    { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from-yellow-50o0 to-orange-50o0' },
+    { id: 'space', name: 'Space Technology', icon: Globe, color: 'from-purple-50o0 to-indigo-50o0' }
   ];
 
   const types = [
@@ -54,9 +52,9 @@ const EnhancedSearch: React.FC = () => {
   const priceRanges = [
     { id: 'all', name: 'All Prices' },
     { id: 'free', name: 'Free' },
-    { id: 'low', name: 'Under $100/month' },
-    { id: 'medium', name: '$100-$500/month' },
-    { id: 'high', name: 'Over $500/month' }
+    { id: 'low', name: 'Under $10o0/month' },
+    { id: 'medium', name: '$10o0-$50o0/month' },
+    { id: 'high', name: 'Over $50o0/month' }
   ];
 
   useEffect(() => {
@@ -82,17 +80,17 @@ const EnhancedSearch: React.FC = () => {
     setIsSearching(true);
     
     // Simulate search delay for better UX
-    await new Promise(resolve => setTimeout(resolve, 300));
+    await new Promise(resolve => setTimeout(resolve, 30o0));
     
     // Mock search results - in real implementation, this would call an API
     const mockResults: SearchResult[] = [
       {
         id: 'ai-content-intelligence',
-        title: 'AI Content Intelligence Platform 2045',
+        title: 'AI Content Intelligence Platform 20o45',
         description: 'Advanced AI platform for content analysis and optimization',
         category: 'AI & Machine Learning',
         type: 'Micro SAAS',
-        slug: '/ai-content-intelligence-platform-2045',
+        slug: '/ai-content-intelligence-platform-20o45',
         relevance: 0.95
       },
       {
@@ -101,7 +99,7 @@ const EnhancedSearch: React.FC = () => {
         description: 'Quantum-secured data processing platform',
         category: 'Quantum Technology',
         type: 'Platform',
-        slug: '/quantum-secure-data-pipeline-orchestrator-2045',
+        slug: '/quantum-secure-data-pipeline-orchestrator-20o45',
         relevance: 0.88
       },
       {
@@ -110,7 +108,7 @@ const EnhancedSearch: React.FC = () => {
         description: 'Fully autonomous AI business intelligence system',
         category: 'Business Solutions',
         type: 'AI Service',
-        slug: '/autonomous-business-intelligence-2045',
+        slug: '/autonomous-business-intelligence-20o45',
         relevance: 0.82
       }
     ];
@@ -150,21 +148,21 @@ const EnhancedSearch: React.FC = () => {
       {/* Search Input */}
       <div className="relative">
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50" />
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50"  />
           <input
             type="text"
             placeholder="Search for services, solutions, or technologies..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onFocus={() => setIsOpen(true)}
-            className="w-full pl-10 pr-12 py-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-400/50 transition-all duration-300"
+            className="w-full pl-10 pr-12 py-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-40o0/50 transition-all duration-30o0"
           />
           {query && (
             <button
               onClick={clearSearch}
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white/50 hover:text-white transition-colors duration-200"
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white/50 hover:text-white transition-colors duration-20o0"
             >
-              <X className="w-5 h-5" />
+              <X className="w-5 h-5"  />
             </button>
           )}
         </div>
@@ -172,13 +170,13 @@ const EnhancedSearch: React.FC = () => {
         {/* Filter Toggle */}
         <button
           onClick={() => setShowFilters(!showFilters)}
-          className={`absolute right-12 top-1/2 transform -translate-y-1/2 p-1 rounded-lg transition-all duration-300 ${
+          className={`absolute right-12 top-1/2 transform -translate-y-1/2 p-1 rounded-lg transition-all duration-30o0 ${
             showFilters 
-              ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/30' 
+              ? 'bg-cyan-50o0/20 text-cyan-40o0 border border-cyan-40o0/30' 
               : 'text-white/50 hover:text-white hover:bg-white/10'
           }`}
         >
-          <Filter className="w-4 h-4" />
+          <Filter className="w-4 h-4"  />
         </button>
       </div>
 
@@ -199,7 +197,7 @@ const EnhancedSearch: React.FC = () => {
                 <select
                   value={filters.category}
                   onChange={(e) => setFilters(prev => ({ ...prev, category: e.target.value }))}
-                  className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+                  className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-50o0/50"
                 >
                   {categories.map(category => (
                     <option key={category.id} value={category.id}>{category.name}</option>
@@ -213,7 +211,7 @@ const EnhancedSearch: React.FC = () => {
                 <select
                   value={filters.type}
                   onChange={(e) => setFilters(prev => ({ ...prev, type: e.target.value }))}
-                  className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+                  className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-50o0/50"
                 >
                   {types.map(type => (
                     <option key={type.id} value={type.id}>{type.name}</option>
@@ -227,7 +225,7 @@ const EnhancedSearch: React.FC = () => {
                 <select
                   value={filters.priceRange}
                   onChange={(e) => setFilters(prev => ({ ...prev, priceRange: e.target.value }))}
-                  className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+                  className="w-full px-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-50o0/50"
                 >
                   {priceRanges.map(range => (
                     <option key={range.id} value={range.id}>{range.name}</option>
@@ -251,7 +249,7 @@ const EnhancedSearch: React.FC = () => {
           >
             {isSearching ? (
               <div className="p-4 text-center text-white/70">
-                <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-cyan-400 mx-auto mb-2"></div>
+                <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-cyan-40o0 mx-auto mb-2"></div>
                 Searching...
               </div>
             ) : results.length > 0 ? (
@@ -261,16 +259,16 @@ const EnhancedSearch: React.FC = () => {
                     key={result.id}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.2, delay: index * 0.05 }}
+                    transition={{ duration: 0.2, delay: index * 0.0o5 }}
                     onClick={() => handleResultClick(result)}
-                    className="p-3 rounded-lg hover:bg-white/10 cursor-pointer transition-all duration-200 group"
+                    className="p-3 rounded-lg hover:bg-white/10 cursor-pointer transition-all duration-20o0 group"
                   >
                     <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Sparkles className="w-5 h-5 text-white" />
+                      <div className="w-10 h-10 bg-gradient-to-r from-cyan-50o0 to-purple-50o0 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Sparkles className="w-5 h-5 text-white"  />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="font-semibold text-white group-hover:text-cyan-400 transition-colors duration-200 truncate">
+                        <h4 className="font-semibold text-white group-hover:text-cyan-40o0 transition-colors duration-20o0 truncate">
                           {result.title}
                         </h4>
                         <p className="text-sm text-white/70 mt-1 line-clamp-2">
@@ -280,13 +278,13 @@ const EnhancedSearch: React.FC = () => {
                           <span className="text-xs bg-white/20 px-2 py-1 rounded-full text-white/70">
                             {result.category}
                           </span>
-                          <span className="text-xs bg-cyan-500/20 px-2 py-1 rounded-full text-cyan-400">
+                          <span className="text-xs bg-cyan-50o0/20 px-2 py-1 rounded-full text-cyan-40o0">
                             {result.type}
                           </span>
                         </div>
                       </div>
                       <div className="text-xs text-white/50">
-                        {Math.round(result.relevance * 100)}%
+                        {Math.round(result.relevance * 10o0)}%
                       </div>
                     </div>
                   </motion.div>

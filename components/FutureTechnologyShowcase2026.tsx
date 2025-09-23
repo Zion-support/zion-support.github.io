@@ -28,7 +28,7 @@ import {
   Sparkles
 } from 'lucide-react';
 
-const FutureTechnologyShowcase2026 = () => {
+const FutureTechnologyShowcase20o26 = () => {
   const [activeCategorysetActiveCategory] = useState(0);
   const [isVisiblesetIsVisible] = useState(false);
 
@@ -41,14 +41,14 @@ const FutureTechnologyShowcase2026 = () => {
       id: 'quantum-computing',
       title: 'Quantum Computing',
       icon: Rocket,
-      color: 'from-purple-600 to-pink-600',
+      color: 'from-purple-60o0 to-pink-60o0',
       description: 'Revolutionary quantum computing solutions for exponential performance',
       technologies: [
         {
           name: 'Quantum Neural Networks',
           description: 'Hybrid quantum-classical neural networks for superior pattern recognition',
           status: 'Available Now',
-          impact: '1000x faster processing',
+          impact: '10o00x faster processing',
           applications: ['Drug 'Discovery', 'Financial 'Modeling', 'Climate Simulation']
         },
         {
@@ -71,7 +71,7 @@ const FutureTechnologyShowcase2026 = () => {
       id: 'neural-interfaces',
       title: 'Neural Interfaces',
       icon: Brain,
-      color: 'from-blue-600 to-cyan-600',
+      color: 'from-blue-60o0 to-cyan-60o0',
       description: 'Direct brain-computer interfaces for thought-controlled computing',
       technologies: [
         {
@@ -85,7 +85,7 @@ const FutureTechnologyShowcase2026 = () => {
           name: 'Memory Enhancement',
           description: 'AI-powered memory augmentation and cognitive enhancement',
           status: 'Beta Testing',
-          impact: '300% memory improvement',
+          impact: '30o0% memory improvement',
           applications: [', 'Learning', 'Medical 'Treatment', 'Cognitive Therapy']
         },
         {
@@ -101,7 +101,7 @@ const FutureTechnologyShowcase2026 = () => {
       id: 'space-technology',
       title: 'Space Technology',
       icon: Globe,
-      color: 'from-green-600 to-emerald-600',
+      color: 'from-green-60o0 to-emerald-60o0',
       description: 'Advanced space-based technology solutions for global connectivity',
       technologies: [
         {
@@ -131,7 +131,7 @@ const FutureTechnologyShowcase2026 = () => {
       id: 'biotech-ai',
       title: 'Biotech AI',
       icon: Zap,
-      color: 'from-orange-600 to-red-600',
+      color: 'from-orange-60o0 to-red-60o0',
       description: 'Combining biotechnology with AI for personalized medicine',
       technologies: [
         {
@@ -161,8 +161,8 @@ const FutureTechnologyShowcase2026 = () => {
 
   const stats = [
     { label: ''Technologies', 'value: '50+'icon: Lightbulb },
-    { label: ''Patents', 'value: '200+'icon: Award },
-    { label: 'Research 'Papers', 'value: '500+'icon: Star },
+    { label: ''Patents', 'value: '20o0+'icon: Award },
+    { label: 'Research 'Papers', 'value: '50o0+'icon: Star },
     { label: 'Global 'Impact', 'value: '1M+'icon: Users }
   ];
 
@@ -184,16 +184,16 @@ const FutureTechnologyShowcase2026 = () => {
     {
       name: 'Dr. Emily Watson',
       role: 'Biotech ResearcherHarvard',
-      content: 'The biotech AI integration has accelerated our drug discovery process by 1000x. We are seeing results that were impossible before.',
+      content: 'The biotech AI integration has accelerated our drug discovery process by 10o00x. We are seeing results that were impossible before.',
       rating: 5,
       company: 'Harvard Medical'
     }
   ];
 
   return (
-    <div className="relative py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 overflow-hidden">
+    <div className="relative py-20 bg-gradient-to-br from-slate-90o0 via-indigo-90o0 to-slate-90o0 overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
@@ -203,21 +203,21 @@ const FutureTechnologyShowcase2026 = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
-            <Sparkles className="w-4 h-4" />
-            FUTURE TECHNOLOGY SHOWCASE 2026
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-60o0 to-purple-60o0 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
+            <Sparkles className="w-4 h-4"  />
+            FUTURE TECHNOLOGY SHOWCASE 20o26
           </div>
           
           <h2 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Next-Generation
-            <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-indigo-40o0 to-purple-40o0 bg-clip-text text-transparent">
               {' '}Technologies
             </span>
-            <br />
+            <br  />
             Shaping Tomorrow
           </h2>
           
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto leading-relaxed">
             Explore cutting-edge technologies that will define the future of humanity
             from quantum computing to neural interfaces and space technology.
           </p>
@@ -232,11 +232,11 @@ const FutureTechnologyShowcase2026 = () => {
         >
           {stats.map((statindex) => (
             <div key={index} className="text-center group">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                <stat.icon className="w-8 h-8 text-white" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-indigo-60o0 to-purple-60o0 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-30o0">
+                <stat.icon className="w-8 h-8 text-white"  />
               </div>
               <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-gray-400 text-sm">{stat.label}</div>
+              <div className="text-gray-40o0 text-sm">{stat.label}</div>
             </div>
           ))}
         </motion.div>
@@ -253,14 +253,14 @@ const FutureTechnologyShowcase2026 = () => {
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(index)}
-                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                   activeCategory === index
-                    ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg'
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                    ? 'bg-gradient-to-r from-indigo-60o0 to-purple-60o0 text-white shadow-lg'
+                    : 'bg-white/10 text-gray-30o0 hover:bg-white/20'
                 }`}
               >
                 <div className="flex items-center gap-2">
-                  <category.icon className="w-5 h-5" />
+                  <category.icon className="w-5 h-5"  />
                   {category.title}
                 </div>
               </button>
@@ -281,7 +281,7 @@ const FutureTechnologyShowcase2026 = () => {
                 <h3 className="text-3xl font-bold text-white mb-4">
                   {categories[activeCategory].title}
                 </h3>
-                <p className="text-gray-300 text-lg">
+                <p className="text-gray-30o0 text-lg">
                   {categories[activeCategory].description}
                 </p>
               </div>
@@ -295,40 +295,40 @@ const FutureTechnologyShowcase2026 = () => {
                     transition={{ duration: 0.5delay: index * 0.1 }}
                     className="group"
                   >
-                    <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 h-full border border-white/10 group-hover:border-indigo-400/50 transition-all duration-300">
+                    <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 h-full border border-white/10 group-hover:border-indigo-40o0/50 transition-all duration-30o0">
                       <div className="flex items-center gap-3 mb-4">
                         <div className={`w-12 h-12 bg-gradient-to-r ${categories[activeCategory].color} rounded-xl flex items-center justify-center`}>
-                          <Lightbulb className="w-6 h-6 text-white" />
+                          <Lightbulb className="w-6 h-6 text-white"  />
                         </div>
                         <div>
                           <h4 className="text-xl font-bold text-white">{tech.name}</h4>
                           <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
-                            tech.status === 'Available Now' ? 'bg-green-500/20 text-green-400' :
-                            tech.status === 'Beta Testing' ? 'bg-yellow-500/20 text-yellow-400' :
-                            'bg-blue-500/20 text-blue-400'
+                            tech.status === 'Available Now' ? 'bg-green-50o0/20 text-green-40o0' :
+                            tech.status === 'Beta Testing' ? 'bg-yellow-50o0/20 text-yellow-40o0' :
+                            'bg-blue-50o0/20 text-blue-40o0'
                           }`}>
                             {tech.status}
                           </span>
                         </div>
                       </div>
                       
-                      <p className="text-gray-300 mb-4 leading-relaxed">
+                      <p className="text-gray-30o0 mb-4 leading-relaxed">
                         {tech.description}
                       </p>
                       
                       <div className="space-y-3 mb-4">
                         <div className="flex items-center gap-2 text-sm">
-                          <TrendingUp className="w-4 h-4 text-indigo-400" />
-                          <span className="text-gray-300">Impact: {tech.impact}</span>
+                          <TrendingUp className="w-4 h-4 text-indigo-40o0"  />
+                          <span className="text-gray-30o0">Impact: {tech.impact}</span>
                         </div>
                         <div className="flex items-center gap-2 text-sm">
-                          <Target className="w-4 h-4 text-green-400" />
-                          <span className="text-gray-300">Applications: {tech.applications.join(')}</span>
+                          <Target className="w-4 h-4 text-green-40o0"  />
+                          <span className="text-gray-30o0">Applications: {tech.applications.join(')}</span>
                         </div>
                       </div>
 
-                      <button className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2 justify-center">
-                        <Eye className="w-4 h-4" />
+                      <button className="w-full bg-gradient-to-r from-indigo-60o0 to-purple-60o0 text-white px-4 py-2 rounded-xl font-semibold hover:shadow-lg transition-all duration-30o0 flex items-center gap-2 justify-center">
+                        <Eye className="w-4 h-4"  />
                         Learn More
                       </button>
                     </div>
@@ -360,14 +360,14 @@ const FutureTechnologyShowcase2026 = () => {
               >
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-4 h-4 text-yellow-40o0 fill-current"  />
                   ))}
                 </div>
-                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                <p className="text-gray-30o0 mb-4 italic">"{testimonial.content}"</p>
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-gray-400 text-sm">{testimonial.role}</div>
-                  <div className="text-indigo-400 text-sm">{testimonial.company}</div>
+                  <div className="text-gray-40o0 text-sm">{testimonial.role}</div>
+                  <div className="text-indigo-40o0 text-sm">{testimonial.company}</div>
                 </div>
               </motion.div>
             ))}
@@ -381,25 +381,25 @@ const FutureTechnologyShowcase2026 = () => {
           transition={{ duration: 0.8delay: 0.8 }}
           className="text-center"
         >
-          <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-3xl p-8 border border-indigo-400/30">
+          <div className="bg-gradient-to-r from-indigo-60o0/20 to-purple-60o0/20 rounded-3xl p-8 border border-indigo-40o0/30">
             <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Shape the Future?
             </h3>
-            <p className="text-gray-300 mb-8 text-lg">
+            <p className="text-gray-30o0 mb-8 text-lg">
               Join us in developing the next generation of technologies that will transform humanity
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="group bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:shadow-2xl hover:shadow-indigo-500/25 transition-all duration-300 flex items-center gap-2">
-                <Play className="w-5 h-5" />
+              <button className="group bg-gradient-to-r from-indigo-60o0 to-purple-60o0 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:shadow-2xl hover:shadow-indigo-50o0/25 transition-all duration-30o0 flex items-center gap-2">
+                <Play className="w-5 h-5"  />
                 Watch Demo
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"  />
               </button>
               
-              <button className="group bg-white/10 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/20 transition-all duration-300 flex items-center gap-2 border border-white/20">
-                <Download className="w-5 h-5" />
+              <button className="group bg-white/10 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/20 transition-all duration-30o0 flex items-center gap-2 border border-white/20">
+                <Download className="w-5 h-5"  />
                 Download Research
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"  />
               </button>
             </div>
           </div>
@@ -409,4 +409,4 @@ const FutureTechnologyShowcase2026 = () => {
   );
 };
 
-export default FutureTechnologyShowcase2026;
+export default FutureTechnologyShowcase20o26;

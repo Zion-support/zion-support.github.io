@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 
 
@@ -37,7 +36,6 @@ import { ArrowRight, Check, ExternalLink } from "lucide-react",
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 export function IntegrationCard(): any ({;
@@ -62,7 +60,6 @@ interface IntegrationCardProps {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -74,32 +71,7 @@ interface IntegrationCardProps {
   onConnect}: IntegrationCardProps) {
   return (
 
-=======
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Check, ExternalLink } from "lucide-react";
-
-interface IntegrationCardProps {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  status?: "connected" | "disconnected" | "pending";
-  href?: string;
-  onConnect?: () => void;
-}
-
-export function IntegrationCard({
-  title,
-  description,
-  icon,
-  status = "disconnected",
-  href,
-  onConnect,
-}: IntegrationCardProps) {
-  return (
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     <Card className="overflow-hidden">
       <CardHeader className="pb-2">
         <div className="flex justify-between items-start">
@@ -132,18 +104,13 @@ export function IntegrationCard({
             <a href={href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
               <span>Manage</span>
               <ExternalLink className="h-3.5 w-3.5" />
-<<<<<<< HEAD
             </Link>
-=======
-            </a>
->>>>>>> origin/auto/autonomy-17186719616
           </Button>
         ) : (
           <Button variant="default" className="w-full" onClick={onConnect}>
             <span>Connect</span>
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
           </Button>
-<<<<<<< HEAD
 
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -216,7 +183,6 @@ export function IntegrationCard({;
   )
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -232,24 +198,18 @@ export function IntegrationCard({;
         )}
       </CardFooter>;
     </Card>;
-=======
-        )}
-      </CardFooter>
-    </Card>
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   );
 }
 
 export function IntegrationCards() {
   return (
-<<<<<<< HEAD
     <div className="grid md:grid-cols-3 gap-6">;
       {/* Integration cards would go here */}
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 }
@@ -261,10 +221,5 @@ export function IntegrationCards() {
 
 
 
-=======
-    <div className="grid md:grid-cols-3 gap-6">
-      {/* Integration cards would go here */}
-    </div>
-  );
-}
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

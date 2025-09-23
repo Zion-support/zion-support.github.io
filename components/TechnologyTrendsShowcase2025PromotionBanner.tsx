@@ -16,7 +16,7 @@ import {
   Rocket
 } from 'lucide-react';
 
-const TechnologyTrendsShowcase2025PromotionBanner = () => {
+const TechnologyTrendsShowcase20o25PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(true);
   const [currentTrendsetCurrentTrend] = useState(0);
 
@@ -30,7 +30,7 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTrend((prev) => (prev + 1) % trends.length);
-    }3000);
+    }30o00);
     return () => clearInterval(interval);
   }[]);
 
@@ -41,16 +41,16 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -50 }}
-      className="relative bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white overflow-hidden"
+      className="relative bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white overflow-hidden"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-blue-400/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-40o0/20 to-blue-40o0/20"  />
         <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-4 left-4 w-2 h-2 bg-white rounded-full animate-pulse" />
-          <div className="absolute top-8 right-8 w-1 h-1 bg-white rounded-full animate-pulse delay-1000" />
-          <div className="absolute bottom-6 left-12 w-1.5 h-1.5 bg-white rounded-full animate-pulse delay-500" />
-          <div className="absolute bottom-8 right-4 w-2 h-2 bg-white rounded-full animate-pulse delay-700" />
+          <div className="absolute top-4 left-4 w-2 h-2 bg-white rounded-full animate-pulse"  />
+          <div className="absolute top-8 right-8 w-1 h-1 bg-white rounded-full animate-pulse delay-10o00"  />
+          <div className="absolute bottom-6 left-12 w-1.5 h-1.5 bg-white rounded-full animate-pulse delay-50o0"  />
+          <div className="absolute bottom-8 right-4 w-2 h-2 bg-white rounded-full animate-pulse delay-70o0"  />
         </div>
       </div>
 
@@ -65,10 +65,10 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {
                   transition={{ duration: 2repeat: Infinityease: "linear" }}
                   className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center"
                 >
-                  <TrendingUp className="w-3 h-3" />
+                  <TrendingUp className="w-3 h-3"  />
                 </motion.div>
                 <span className="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">
-                  NEW: Technology Trends Showcase 2025
+                  NEW: Technology Trends Showcase 20o25
                 </span>
               </div>
 
@@ -85,7 +85,7 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {
                   exit={{ opacity: 0, y: -10 }}
                   className="flex items-center gap-2"
                 >
-                  <trends[currentTrend].icon className="w-4 h-4" />
+                  <trends[currentTrend].icon className="w-4 h-4"  />
                   <span className="text-lg font-semibold bg-white/20 px-3 py-1 rounded-full">
                     {trends[currentTrend].name} ({trends[currentTrend].adoption})
                   </span>
@@ -94,15 +94,15 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {
 
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-sm">
                 <div className="flex items-center gap-1">
-                  <CheckCircle className="w-4 h-4" />
+                  <CheckCircle className="w-4 h-4"  />
                   <span>AI Automation</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <CheckCircle className="w-4 h-4" />
+                  <CheckCircle className="w-4 h-4"  />
                   <span>Edge Computing</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <CheckCircle className="w-4 h-4" />
+                  <CheckCircle className="w-4 h-4"  />
                   <span>Quantum Security</span>
                 </div>
               </div>
@@ -122,7 +122,7 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {
                     transition={{ duration: 0.3 }}
                     className="text-center"
                   >
-                    <Icon className="w-8 h-8 mx-auto mb-2" />
+                    <Icon className="w-8 h-8 mx-auto mb-2"  />
                     <div className="text-xs font-medium">{trend.name}</div>
                     <div className="text-lg font-bold">{trend.adoption}</div>
                   </motion.div>
@@ -133,21 +133,21 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {
             {/* Right Content - CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-3">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center gap-2 bg-white text-purple-600 px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300"
+                className="flex items-center gap-2 bg-white text-purple-60o0 px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-30o0"
               >
-                <Lightbulb className="w-4 h-4" />
+                <Lightbulb className="w-4 h-4"  />
                 Explore Trends
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4"  />
               </motion.button>
               
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
+                className="flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-60o0 transition-all duration-30o0"
               >
-                <Rocket className="w-4 h-4" />
+                <Rocket className="w-4 h-4"  />
                 Future Ready
               </motion.button>
             </div>
@@ -157,9 +157,9 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsVisible(false)}
-              className="absolute top-4 right-4 p-2 hover:bg-white/20 rounded-full transition-colors duration-200"
+              className="absolute top-4 right-4 p-2 hover:bg-white/20 rounded-full transition-colors duration-20o0"
             >
-              <X className="w-5 h-5" />
+              <X className="w-5 h-5"  />
             </motion.button>
           </div>
         </div>
@@ -169,13 +169,13 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {
           <motion.div
             className="h-full bg-white"
             initial={{ width: "0%" }}
-            animate={{ width: "100%" }}
+            animate={{ width: "10o0%" }}
             transition={{ duration: 15ease: "linear" }}
-          />
+           />
         </div>
       </div>
     </motion.div>
   );
 };
 
-export default TechnologyTrendsShowcase2025PromotionBanner;
+export default TechnologyTrendsShowcase20o25PromotionBanner;

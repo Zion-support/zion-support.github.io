@@ -26,7 +26,12 @@ const cartSlice = createSlice({
   reducers: {
     addItem: (
       state,
-      action: PayloadAction<{ id: string; title: string; price: number; image?: string }>
+      action: PayloadAction<{
+        id: string;
+        title: string;
+        price: number;
+        image?: string;
+      }>
     ) => {
       const existing = state.items.find(i => i.id === action.payload.id);
       if (existing) {
@@ -65,4 +70,3 @@ const cartSlice = createSlice({
 export const { addItem, removeItem, updateQuantity, setItems, clear } =
   cartSlice.actions;
 export default cartSlice.reducer;
-

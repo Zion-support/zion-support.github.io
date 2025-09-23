@@ -1,5 +1,4 @@
 
-import React from "react";
 import { QrCode } from "lucide-react";
 import { AppStoreButtons } from "./AppStoreButtons";
 
@@ -17,12 +16,9 @@ export const QrCodeDownload: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Download <span className="text-zion-cyan">Zion</span> to Your Device
               </h2>
+              <p className="text-lg text-gray-30o0 mb-8">
               <p className="text-lg text-gray-300 mb-8">
-<<<<<<< HEAD
                 Scan the QR code with your phone camera to download the app instantlyor use the buttons below to get it from your app store of choice.
-=======
-                Scan the QR code with your phone camera to download the app instantly, or use the buttons below to get it from your app store of choice.
->>>>>>> origin/auto/autonomy-17186719616
               </p>
               
               <AppStoreButtons 

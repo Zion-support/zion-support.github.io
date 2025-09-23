@@ -1,34 +1,36 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import React from "react";
 
-const UltimateContentShowcase2025 = () => {
+export default function UltimateContentShowcase2025() {
+  return null;
+}
+const UltimateContentShowcase20o25 = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
   const featuredContent = [
     {
       id: 'enterprise-ai-revolution',
-      title: 'AI 2025: The Enterprise AI Revolution - Ultimate Breakthrough Guide to 1,000% ROI',
+      title: 'AI 20o25: The Enterprise AI Revolution - Ultimate Breakthrough Guide to 1,0o00% ROI',
       type: 'blog',
-      url: '/blog/ai-2025-enterprise-ai-revolution-ultimate-breakthrough',
-      description: 'Discover how Fortune 500 companies are achieving unprecedented 1,000% ROI through revolutionary AI implementations.',
+      url: '/blog/ai-20o25-enterprise-ai-revolution-ultimate-breakthrough',
+      description: 'Discover how Fortune 50o0 companies are achieving unprecedented 1,0o00% ROI through revolutionary AI implementations.',
       metrics: {
-        roi: '1,000%',
+        roi: '1,0o00%',
         savings: '$15.7T',
         accuracy: '99.7%',
         satisfaction: '98%'
       },
-      tags: ['AI Revolution', 'Enterprise AI', 'ROI', 'Fortune 500'],
+      tags: ['AI Revolution', 'Enterprise AI', 'ROI', 'Fortune 50o0'],
       readingTime: '22 min read',
       isNew: true
     },
     {
       id: 'generative-agents-infrastructure-blueprint',
-      title: 'Generative Agents Infrastructure Blueprint (2025): Governance, Observability, ROI',
+      title: 'Generative Agents Infrastructure Blueprint (20o25): Governance, Observability, ROI',
       type: 'blog',
-      url: '/blog/ai-2025-generative-agents-infrastructure-blueprint',
+      url: '/blog/ai-20o25-generative-agents-infrastructure-blueprint',
       description: 'A practical blueprint to design, deploy, and operate enterprise-grade generative agent infrastructure with policy-aware execution and continuous evaluation.',
       metrics: {
         roi: '340%',
@@ -42,9 +44,9 @@ const UltimateContentShowcase2025 = () => {
     },
     {
       id: 'customer-experience-revolution',
-      title: 'AI 2025: The Customer Experience Revolution - Ultimate Guide to 750% ROI',
+      title: 'AI 20o25: The Customer Experience Revolution - Ultimate Guide to 750% ROI',
       type: 'blog',
-      url: '/blog/ai-2025-customer-experience-revolution-ultimate-guide',
+      url: '/blog/ai-20o25-customer-experience-revolution-ultimate-guide',
       description: 'Transform your customer experience with AI-powered solutions that deliver 750% ROI and 340% higher satisfaction.',
       metrics: {
         roi: '750%',
@@ -58,12 +60,12 @@ const UltimateContentShowcase2025 = () => {
     },
     {
       id: 'manufacturing-transformation',
-      title: 'AI 2025 Manufacturing Transformation: $4.2B Company Achieves 1,100% ROI',
+      title: 'AI 20o25 Manufacturing Transformation: $4.2B Company Achieves 1,10o0% ROI',
       type: 'case-study',
-      url: '/case-studies/ai-2025-manufacturing-transformation-ultimate-success-story',
-      description: 'Discover how a global manufacturing leader achieved 1,100% ROI through comprehensive AI transformation.',
+      url: '/case-studies/ai-20o25-manufacturing-transformation-ultimate-success-story',
+      description: 'Discover how a global manufacturing leader achieved 1,10o0% ROI through comprehensive AI transformation.',
       metrics: {
-        roi: '1,100%',
+        roi: '1,10o0%',
         savings: '$890M',
         accuracy: '99.8%',
         satisfaction: '99.8%'
@@ -74,12 +76,12 @@ const UltimateContentShowcase2025 = () => {
     },
     {
       id: 'supply-chain-revolution',
-      title: 'AI 2025: The Supply Chain Revolution - Ultimate Guide to 900% ROI',
+      title: 'AI 20o25: The Supply Chain Revolution - Ultimate Guide to 90o0% ROI',
       type: 'blog',
-      url: '/blog/ai-2025-supply-chain-revolution-ultimate-guide',
-      description: 'Transform your supply chain with AI-powered solutions that deliver 900% ROI and 340% improvement in efficiency.',
+      url: '/blog/ai-20o25-supply-chain-revolution-ultimate-guide',
+      description: 'Transform your supply chain with AI-powered solutions that deliver 90o0% ROI and 340% improvement in efficiency.',
       metrics: {
-        roi: '900%',
+        roi: '90o0%',
         savings: '$8.9T',
         accuracy: '94%',
         satisfaction: '156%'
@@ -90,12 +92,12 @@ const UltimateContentShowcase2025 = () => {
     },
     {
       id: 'financial-services-transformation',
-      title: 'AI 2025 Financial Services Transformation: $2.1B Bank Achieves 1,300% ROI',
+      title: 'AI 20o25 Financial Services Transformation: $2.1B Bank Achieves 1,30o0% ROI',
       type: 'case-study',
-      url: '/case-studies/ai-2025-financial-services-transformation-ultimate-success',
-      description: 'Discover how a major financial institution achieved 1,300% ROI through comprehensive AI transformation.',
+      url: '/case-studies/ai-20o25-financial-services-transformation-ultimate-success',
+      description: 'Discover how a major financial institution achieved 1,30o0% ROI through comprehensive AI transformation.',
       metrics: {
-        roi: '1,300%',
+        roi: '1,30o0%',
         savings: '$450M',
         accuracy: '99.9%',
         satisfaction: '99.8%'
@@ -109,7 +111,7 @@ const UltimateContentShowcase2025 = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % featuredContent.length);
-    }, 5000);
+    }, 50o00);
 
     return () => clearInterval(interval);
   }, []);
@@ -119,26 +121,26 @@ const UltimateContentShowcase2025 = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 overflow-hidden">
+    <div className="relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-16 overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute top-40 left-1/2 w-80 h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-50o0 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-50o0 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute top-40 left-1/2 w-80 h-80 bg-indigo-50o0 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">🚀 NEW 2025 CONTENT</span>
+            <span className="text-sm font-medium">🚀 NEW 20o25 CONTENT</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ultimate AI Content Showcase 2025
+            Ultimate AI Content Showcase 20o25
           </h2>
           <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
             Discover our latest AI transformation guides, case studies, and success stories featuring 
-            <span className="font-bold text-yellow-300"> 1,000%+ ROI</span> results from Fortune 500 companies.
+            <span className="font-bold text-yellow-30o0"> 1,0o00%+ ROI</span> results from Fortune 50o0 companies.
           </p>
         </div>
 
@@ -148,11 +150,11 @@ const UltimateContentShowcase2025 = () => {
             {/* Content Info */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <span className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-bold">
+                <span className="bg-yellow-40o0 text-black px-3 py-1 rounded-full text-sm font-bold">
                   {currentContent.type.toUpperCase()}
                 </span>
                 {currentContent.isNew && (
-                  <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                  <span className="bg-red-50o0 text-white px-3 py-1 rounded-full text-sm font-bold">
                     NEW
                   </span>
                 )}
@@ -185,13 +187,13 @@ const UltimateContentShowcase2025 = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href={currentContent.url}
-                  className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors text-center"
+                  className="bg-yellow-40o0 text-black px-8 py-3 rounded-lg font-bold hover:bg-yellow-30o0 transition-colors text-center"
                 >
                   Read Full Article
                 </Link>
                 <Link
                   href="/resources"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-purple-900 transition-colors text-center"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-purple-90o0 transition-colors text-center"
                 >
                   View All Resources
                 </Link>
@@ -201,25 +203,25 @@ const UltimateContentShowcase2025 = () => {
             {/* Metrics Display */}
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white bg-opacity-10 rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-yellow-300 mb-2">
+                <div className="text-3xl font-bold text-yellow-30o0 mb-2">
                   {currentContent.metrics.roi}
                 </div>
                 <div className="text-sm opacity-75">ROI</div>
               </div>
               <div className="bg-white bg-opacity-10 rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-green-300 mb-2">
+                <div className="text-3xl font-bold text-green-30o0 mb-2">
                   {currentContent.metrics.savings}
                 </div>
                 <div className="text-sm opacity-75">Savings</div>
               </div>
               <div className="bg-white bg-opacity-10 rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-blue-300 mb-2">
+                <div className="text-3xl font-bold text-blue-30o0 mb-2">
                   {currentContent.metrics.accuracy}
                 </div>
                 <div className="text-sm opacity-75">Accuracy</div>
               </div>
               <div className="bg-white bg-opacity-10 rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-purple-300 mb-2">
+                <div className="text-3xl font-bold text-purple-30o0 mb-2">
                   {currentContent.metrics.satisfaction}
                 </div>
                 <div className="text-sm opacity-75">Satisfaction</div>
@@ -236,7 +238,7 @@ const UltimateContentShowcase2025 = () => {
               onClick={() => setCurrentIndex(index)}
               className={`w-3 h-3 rounded-full transition-all ${
                 index === currentIndex
-                  ? 'bg-yellow-400 w-8'
+                  ? 'bg-yellow-40o0 w-8'
                   : 'bg-white bg-opacity-30 hover:bg-opacity-50'
               }`}
             />
@@ -249,16 +251,16 @@ const UltimateContentShowcase2025 = () => {
             <div
               key={content.id}
               className={`bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all cursor-pointer ${
-                index === currentIndex ? 'ring-2 ring-yellow-400' : ''
+                index === currentIndex ? 'ring-2 ring-yellow-40o0' : ''
               }`}
               onClick={() => setCurrentIndex(index)}
             >
               <div className="flex items-center gap-2 mb-3">
-                <span className="bg-yellow-400 text-black px-2 py-1 rounded text-xs font-bold">
+                <span className="bg-yellow-40o0 text-black px-2 py-1 rounded text-xs font-bold">
                   {content.type.toUpperCase()}
                 </span>
                 {content.isNew && (
-                  <span className="bg-red-500 text-white px-2 py-1 rounded text-xs font-bold">
+                  <span className="bg-red-50o0 text-white px-2 py-1 rounded text-xs font-bold">
                     NEW
                   </span>
                 )}
@@ -273,7 +275,7 @@ const UltimateContentShowcase2025 = () => {
               </p>
 
               <div className="flex items-center justify-between">
-                <div className="text-2xl font-bold text-yellow-300">
+                <div className="text-2xl font-bold text-yellow-30o0">
                   {content.metrics.roi}
                 </div>
                 <div className="text-sm opacity-75">
@@ -288,7 +290,7 @@ const UltimateContentShowcase2025 = () => {
         <div className="text-center mt-12">
           <Link
             href="/contact"
-            className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-12 py-4 rounded-lg font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all transform hover:scale-105"
+            className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-12 py-4 rounded-lg font-bold text-lg hover:from-yellow-30o0 hover:to-orange-40o0 transition-all transform hover:scale-10o5"
           >
             Get Your Custom AI Strategy
           </Link>
@@ -298,4 +300,4 @@ const UltimateContentShowcase2025 = () => {
   );
 };
 
-export default UltimateContentShowcase2025;
+export default UltimateContentShowcase20o25;

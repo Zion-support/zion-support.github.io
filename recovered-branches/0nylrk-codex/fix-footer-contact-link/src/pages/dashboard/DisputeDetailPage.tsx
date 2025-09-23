@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 import React from 'react';
 import { SEO  } from '@/components/SEO';
@@ -32,8 +31,6 @@ import { ProtectedRoute } from '@/components/ProtectedRoute',
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -42,20 +39,11 @@ import { ProtectedRoute } from '@/components/ProtectedRoute',
 
 
 
-=======
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { AppHeader } from '@/layout/AppHeader';
-import { Footer } from '@/components/Footer';
-import { DisputeDetail } from '@/components/disputes';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 function DisputeDetailPage() {
   return (
     <ProtectedRoute>
       <>
-<<<<<<< HEAD
 
         <SEO
           title="Dispute Details | Zion AI Marketplace"
@@ -101,24 +89,6 @@ function DisputeDetailPage() {
     </ProtectedRoute>);
 }
 
-=======
-;
-
-
-export default DisputeDetailPage;
-
-    </ProtectedRoute>);
-}
-
-;
-
-export default DisputeDetailPage;
-
-;
-export default DisputeDetailPage;
-
-
-=======
         <SEO 
           title="Dispute Details | Zion AI Marketplace" 
           description="View and manage dispute details"
@@ -132,4 +102,5 @@ export default DisputeDetailPage;
 }
 
 export default DisputeDetailPage;
->>>>>>> origin/auto/autonomy-17186719616
+=======
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

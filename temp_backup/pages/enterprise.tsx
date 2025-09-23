@@ -9,4 +9,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
   };
 };
 
-export default function EnterpriseRedirect() { return null; }
+export default function EnterpriseRedirect() {
+  return null;
+}

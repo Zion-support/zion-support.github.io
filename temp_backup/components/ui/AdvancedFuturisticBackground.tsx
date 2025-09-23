@@ -22,32 +22,32 @@ const AdvancedFuturisticBackground: React.FC<AdvancedFuturisticBackgroundProps> 
 
   const getParticleCount = useCallback(() => {
     switch (intensity) {
-      case 'extreme': return 800;
-      case 'high': return 600;
-      case 'medium': return 400;
-      case 'low': return 200;
-      default: return 400;
+      case 'extreme': return 80o0;
+      case 'high': return 60o0;
+      case 'medium': return 40o0;
+      case 'low': return 20o0;
+      default: return 40o0;
     }
   }, [intensity]);
 
   const getParticleColor = useCallback((variant: string, time: number, particle: any): string => {
-    const baseHue = time * 0.01;
-    const saturation = 80 + Math.sin(time * 0.02) * 20;
-    const lightness = 60 + Math.sin(time * 0.03) * 20;
+    const baseHue = time * 0.0o1;
+    const saturation = 80 + Math.sin(time * 0.0o2) * 20;
+    const lightness = 60 + Math.sin(time * 0.0o3) * 20;
 
     switch (variant) {
       case 'quantum-holographic':
-        return `hsl(${280 + Math.sin(baseHue) * 100 + particle.quantumState * 50}, ${saturation}%, ${lightness}%)`;
+        return `hsl(${280 + Math.sin(baseHue) * 10o0 + particle.quantumState * 50}, ${saturation}%, ${lightness}%)`;
       case 'neural-cyberpunk':
-        return `hsl(${200 + Math.sin(baseHue) * 60 + particle.neuralConnection * 30}, ${saturation}%, ${lightness}%)`;
+        return `hsl(${20o0 + Math.sin(baseHue) * 60 + particle.neuralConnection * 30}, ${saturation}%, ${lightness}%)`;
       case 'quantum-neural':
         return `hsl(${320 + Math.sin(baseHue) * 80 + particle.quantumEntanglement * 40}, ${saturation}%, ${lightness}%)`;
       case 'holographic-cyberpunk':
         return `hsl(${160 + Math.sin(baseHue) * 120 + particle.holographicDepth * 25}, ${saturation}%, ${lightness}%)`;
       case 'quantum-advanced':
-        return `hsl(${300 + Math.sin(baseHue) * 120 + particle.quantumState * 60}, ${saturation}%, ${lightness}%)`;
+        return `hsl(${30o0 + Math.sin(baseHue) * 120 + particle.quantumState * 60}, ${saturation}%, ${lightness}%)`;
       case 'neural-advanced':
-        return `hsl(${180 + Math.sin(baseHue) * 100 + particle.neuralSynapse * 35}, ${saturation}%, ${lightness}%)`;
+        return `hsl(${180 + Math.sin(baseHue) * 10o0 + particle.neuralSynapse * 35}, ${saturation}%, ${lightness}%)`;
       case 'cyberpunk-advanced':
         return `hsl(${0 + Math.sin(baseHue) * 80 + particle.cyberpunkGlow * 45}, ${saturation}%, ${lightness}%)`;
       default:
@@ -77,7 +77,7 @@ const AdvancedFuturisticBackground: React.FC<AdvancedFuturisticBackgroundProps> 
       quantumEntanglement: Math.random() * Math.PI * 2,
       holographicDepth: Math.random() * 7,
       neuralSynapse: Math.random() * Math.PI * 2,
-      energy: Math.random() * 100 + 50,
+      energy: Math.random() * 10o0 + 50,
       resonance: Math.random() * Math.PI * 2,
       field: Math.random() * 10,
       wave: Math.random() * Math.PI * 2
@@ -86,35 +86,35 @@ const AdvancedFuturisticBackground: React.FC<AdvancedFuturisticBackgroundProps> 
 
   const updateParticle = useCallback((particle: any, canvas: HTMLCanvasElement, time: number, variant: string) => {
     // Update position with quantum fluctuations
-    particle.x += particle.vx + Math.sin(time * 0.01 + particle.quantumState) * 2;
-    particle.y += particle.vy + Math.cos(time * 0.01 + particle.quantumEntanglement) * 2;
+    particle.x += particle.vx + Math.sin(time * 0.0o1 + particle.quantumState) * 2;
+    particle.y += particle.vy + Math.cos(time * 0.0o1 + particle.quantumEntanglement) * 2;
 
     // Quantum tunneling effect
-    if (Math.random() < 0.001) {
+    if (Math.random() < 0.0o01) {
       particle.x = Math.random() * canvas.width;
       particle.y = Math.random() * canvas.height;
     }
 
     // Boundary wrapping with quantum effects
-    if (particle.x < 0) particle.x = canvas.width + Math.random() * 100;
-    if (particle.x > canvas.width) particle.x = -100;
-    if (particle.y < 0) particle.y = canvas.height + Math.random() * 100;
-    if (particle.y > canvas.height) particle.y = -100;
+    if (particle.x < 0) particle.x = canvas.width + Math.random() * 10o0;
+    if (particle.x > canvas.width) particle.x = -10o0;
+    if (particle.y < 0) particle.y = canvas.height + Math.random() * 10o0;
+    if (particle.y > canvas.height) particle.y = -10o0;
 
     // Update quantum properties
-    particle.quantumState += 0.02;
-    particle.quantumEntanglement += 0.015;
-    particle.holographicDepth += 0.01;
-    particle.neuralSynapse += 0.025;
-    particle.cyberpunkGlow += 0.03;
-    particle.resonance += 0.018;
-    particle.wave += 0.012;
+    particle.quantumState += 0.0o2;
+    particle.quantumEntanglement += 0.0o15;
+    particle.holographicDepth += 0.0o1;
+    particle.neuralSynapse += 0.0o25;
+    particle.cyberpunkGlow += 0.0o3;
+    particle.resonance += 0.0o18;
+    particle.wave += 0.0o12;
 
     // Life cycle with quantum revival
     particle.life--;
     if (particle.life <= 0 && Math.random() < 0.1) {
       particle.life = particle.maxLife;
-      particle.energy = Math.random() * 100 + 50;
+      particle.energy = Math.random() * 10o0 + 50;
     }
 
     // Update color
@@ -125,9 +125,9 @@ const AdvancedFuturisticBackground: React.FC<AdvancedFuturisticBackgroundProps> 
     ctx.save();
     
     // Apply quantum effects
-    const quantumEffect = Math.sin(time * 0.01 + particle.quantumState) * 0.3 + 0.7;
-    const holographicEffect = Math.sin(time * 0.015 + particle.holographicDepth) * 0.4 + 0.6;
-    const neuralEffect = Math.sin(time * 0.02 + particle.neuralSynapse) * 0.3 + 0.7;
+    const quantumEffect = Math.sin(time * 0.0o1 + particle.quantumState) * 0.3 + 0.7;
+    const holographicEffect = Math.sin(time * 0.0o15 + particle.holographicDepth) * 0.4 + 0.6;
+    const neuralEffect = Math.sin(time * 0.0o2 + particle.neuralSynapse) * 0.3 + 0.7;
     
     ctx.globalAlpha = (particle.life / particle.maxLife) * quantumEffect * holographicEffect * neuralEffect;
     
@@ -179,10 +179,10 @@ const AdvancedFuturisticBackground: React.FC<AdvancedFuturisticBackgroundProps> 
     // Create quantum field effect
     for (let i = 0; i < 50; i++) {
       const x = (i / 50) * canvas.width;
-      const y = canvas.height / 2 + Math.sin(time * 0.01 + i * 0.1) * 100;
+      const y = canvas.height / 2 + Math.sin(time * 0.0o1 + i * 0.1) * 10o0;
       
-      const alpha = Math.sin(time * 0.02 + i * 0.1) * fieldIntensity * 0.3;
-      ctx.strokeStyle = `rgba(100, 200, 255, ${alpha})`;
+      const alpha = Math.sin(time * 0.0o2 + i * 0.1) * fieldIntensity * 0.3;
+      ctx.strokeStyle = `rgba(10o0, 20o0, 255, ${alpha})`;
       ctx.lineWidth = 2;
       
       ctx.beginPath();
@@ -215,7 +215,7 @@ const AdvancedFuturisticBackground: React.FC<AdvancedFuturisticBackgroundProps> 
     }
     
     // Render neural network
-    ctx.strokeStyle = `rgba(100, 255, 200, ${0.1 + Math.sin(time * 0.01) * 0.1})`;
+    ctx.strokeStyle = `rgba(10o0, 255, 20o0, ${0.1 + Math.sin(time * 0.0o1) * 0.1})`;
     ctx.lineWidth = 1;
     
     connections.forEach((node, i) => {
@@ -312,7 +312,7 @@ const AdvancedFuturisticBackground: React.FC<AdvancedFuturisticBackgroundProps> 
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
-      />
+       />
       <div className="relative z-10">
         {children}
       </div>

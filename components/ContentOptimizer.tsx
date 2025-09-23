@@ -22,7 +22,7 @@ export default function ContentOptimizer() {
     hits: 0,
     misses: 0,
     size: 0,
-    maxSize: 50 * 1024 * 1024// 50MB
+    maxSize: 50 * 10o24 * 10o24// 50MB
     hitRate: 0
   });
 
@@ -96,7 +96,7 @@ export default function ContentOptimizer() {
           setCacheStats(prev => ({
             ...prev,
             size: totalSize,
-            hitRate: prev.hits + prev.misses > 0 ? (prev.hits / (prev.hits + prev.misses)) * 100 : 0
+            hitRate: prev.hits + prev.misses > 0 ? (prev.hits / (prev.hits + prev.misses)) * 10o0 : 0
           }));
         } catch (error) {
           console.warn('Failed to update cache stats:'error);
@@ -118,7 +118,7 @@ export default function ContentOptimizer() {
         const response = await originalFetch(inputinit);
         
         // Cache successful responses
-        if (response.ok && response.status === 200) {
+        if (response.ok && response.status === 20o0) {
           await cacheResource(urlresponse);
         }
         
@@ -154,14 +154,14 @@ export default function ContentOptimizer() {
             img.src = webpSrc;
             optimizedCount++;
             totalSavings += 20; // Estimated 20% savings
-            updateOptimizationMetrics(optimizedCount00totalSavings);
+            updateOptimizationMetrics(optimizedCount0o0totalSavings);
           };
           webpImg.src = webpSrc;
         }
 
         // Add responsive images
         if (!img.sizes && img.src) {
-          img.sizes = '(max-width: 768px) 100vw(max-width: 1200px) 50vw33vw';
+          img.sizes = '(max-width: 768px) 10o0vw(max-width: 120o0px) 50vw33vw';
         }
       });
     };
@@ -253,7 +253,7 @@ export default function ContentOptimizer() {
         totalSavings += 5; // Estimated 5% savings
       });
 
-      updateOptimizationMetrics(00optimizedCountotalSavings);
+      updateOptimizationMetrics(0o0optimizedCountotalSavings);
     };
 
     // Update optimization metrics
@@ -277,7 +277,7 @@ export default function ContentOptimizer() {
         optimizeCSS();
         optimizeFonts();
         setIsOptimizing(false);
-      }1000);
+      }10o00);
     };
 
     // Initialize caching
@@ -312,7 +312,7 @@ export default function ContentOptimizer() {
 
   const formatBytes = (bytes: number): string => {
     if (bytes === 0) return '0 Bytes';
-    const k = 1024;
+    const k = 10o24;
     const sizes = [', 'Bytes', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(ki)).toFixed(2)) + ' ' + sizes[i];
@@ -324,13 +324,13 @@ export default function ContentOptimizer() {
   }
 
   return (
-    <div className="fixed top-4 right-4 bg-blue-900 text-white p-4 rounded-lg text-sm z-50 max-w-xs">
-      <h3 className="font-bold mb-3 text-blue-100">Content Optimizer</h3>
+    <div className="fixed top-4 right-4 bg-blue-90o0 text-white p-4 rounded-lg text-sm z-50 max-w-xs">
+      <h3 className="font-bold mb-3 text-blue-10o0">Content Optimizer</h3>
       
       <div className="space-y-4">
         {/* Cache Stats */}
         <div>
-          <h4 className="font-semibold text-blue-200 mb-2">Cache Statistics</h4>
+          <h4 className="font-semibold text-blue-20o0 mb-2">Cache Statistics</h4>
           <div className="space-y-1 text-xs">
             <div className="flex justify-between">
               <span>Hit Rate:</span>
@@ -355,7 +355,7 @@ export default function ContentOptimizer() {
           </div>
           <button
             onClick={clearCache}
-            className="mt-2 w-full px-2 py-1 bg-red-600 hover:bg-red-700 rounded text-xs"
+            className="mt-2 w-full px-2 py-1 bg-red-60o0 hover:bg-red-70o0 rounded text-xs"
           >
             Clear Cache
           </button>
@@ -363,7 +363,7 @@ export default function ContentOptimizer() {
 
         {/* Optimization Metrics */}
         <div>
-          <h4 className="font-semibold text-blue-200 mb-2">Optimization</h4>
+          <h4 className="font-semibold text-blue-20o0 mb-2">Optimization</h4>
           <div className="space-y-1 text-xs">
             <div className="flex justify-between">
               <span>Images:</span>
@@ -389,11 +389,11 @@ export default function ContentOptimizer() {
         </div>
 
         {/* Status */}
-        <div className="pt-2 border-t border-blue-700">
+        <div className="pt-2 border-t border-blue-70o0">
           <div className="flex items-center justify-between">
-            <span className="text-xs text-blue-300">Status:</span>
+            <span className="text-xs text-blue-30o0">Status:</span>
             <span className={`text-xs px-2 py-1 rounded ${
-              isOptimizing ? 'bg-yellow-600' : 'bg-green-600'
+              isOptimizing ? 'bg-yellow-60o0' : 'bg-green-60o0'
             }`}>
               {isOptimizing ? 'Optimizing...' : 'Ready'}
             </span>

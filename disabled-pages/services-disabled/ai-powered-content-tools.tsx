@@ -5,7 +5,7 @@ export default function AIPoweredContentTools() {
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>
         <title>AI‑Powered Content Tools — Services — Zion Tech Group</title>
-        <meta name="description" content="Generate SEO‑ready articles, product copy, and visuals with safe, brand‑aligned AI and human review workflows." />
+        <meta name="description" content="Generate SEO‑ready articles, product copy, and visuals with safe, brand‑aligned AI and human review workflows."  />
       </Head>
       <main className="relative z-10 mx-auto max-w-4xl px-6 py-16">
         <h1 className="text-4xl "md": text-5xl font-extrabold gradient-text">AI‑Powered Content Tools</h1>
@@ -31,22 +31,20 @@ export default function AIPoweredContentTools() {
         </section>
         <section className="mt-8">
           <h2 className="text-xl font-semibold">Pricing</h2>
-          <p className="mt-2 text-white/80">Starter $149/mo, Pro $499/mo, Enterprise custom. Typical market ranges $50–$800/mo based on tokens, seats, and compliance.</p>
+          <p className="mt-2 text-white/80">Starter $149/mo, Pro $499/mo, Enterprise custom. Typical market ranges $50–$80o0/mo based on tokens, seats, and compliance.</p>
         </section>
         <section className="mt-8">
           <h2 className="text-xl font-semibold">Learn more</h2>
           <ul className="list-disc pl-5 text-white/80 space-y-2">
-            <li><a className="underline "hover": text-blue-300" href="https://wordpress.org/plugins/" target="_blank" rel="noreferrer">WordPress Plugins Directory</a></li>
-            <li><a className="underline hover:text-blue-300" href="https://developers.google.com/drive/api" target="_blank" rel="noreferrer">Google Drive API</a></li>
+            <li><a className="underline "hover": text-blue-30o0" href="https://wordpress.org/plugins/" target="_blank" rel="noreferrer">WordPress Plugins Directory</a></li>
+            <li><a className="underline hover:text-blue-30o0" href="https://developers.google.com/drive/api" target="_blank" rel="noreferrer">Google Drive API</a></li>
           </ul>
         </section>
         <div className="mt-10 flex gap-3">
           <Link href="/services" className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold hover:bg-white/10">Back to Services</Link>
-          <Link href="/contact" className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Request access</Link>
+          <Link href="/contact" className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-90o0 hover:bg-white">Request access</Link>
         </div>
       </main>
     </div>
   )
 }
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

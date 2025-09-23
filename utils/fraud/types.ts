@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 // Fraud detection types
 export type AdminActionType =
@@ -13,7 +12,6 @@ export type AdminActionType =
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   id: string;
   case_id: string;
@@ -28,7 +26,6 @@ export interface AdminAction {
   id: string;
   case_id: string;
   type: AdminActionType;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   admin_id: string;
@@ -109,76 +106,5 @@ export interface FraudDetectionConfig {
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
-=======
-export type MonitoredSource = 'signup' | 'job_post' | 'message' | 'quote' | 'review';
-
-export type GptClassificationLabel = 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
-
-export interface FraudEvent {
-  id: string;
-  userId: string | null;
-  source: MonitoredSource;
-  content: string | null;
-  metadata: Record<string, unknown> | null;
-  ipAddress: string | null;
-  createdAt: string; // ISO string
-}
-
-export interface HeuristicEvaluation {
-  flagged: boolean;
-  reasons: string[];
-  severity: 'low' | 'medium' | 'high';
-}
-
-export interface GptClassification {
-  label: GptClassificationLabel;
-  reason: string;
-  confidence: number; // 0..1
-}
-
-export type FraudReviewStatus = 'PENDING' | 'WARNED' | 'SUSPENDED' | 'IGNORED';
-
-export interface StoredFraudRecord extends FraudEvent {
-  heuristic: HeuristicEvaluation;
-  gpt?: GptClassification;
-  autoHidden: boolean;
-  status: FraudReviewStatus;
-}
-
-export type AdminActionType = 'SUSPEND' | 'WARN' | 'IGNORE';
-
-export interface AdminActionRecord {
-  id: string;
-  fraudId: string;
-  action: AdminActionType;
-  adminId: string | null;
-  reason: string | null;
-  createdAt: string; // ISO
-}
-
-export interface PrivacySettings {
-  userId: string;
-  monitoringContentAnalysisOptOut: boolean;
-  updatedAt: string; // ISO
-}
-
-export interface ListFilters {
-  source?: MonitoredSource;
-  userId?: string;
-  label?: GptClassificationLabel;
-  status?: FraudReviewStatus;
-}
-
-export interface MonthlyReport {
-  month: string; // YYYY-MM
-  totals: {
-    all: number;
-    safe: number;
-    suspicious: number;
-    dangerous: number;
-  };
-  bySource: Record<MonitoredSource, number>;
-  falsePositives: number; // count of IGNORED actions
-  topReasons: Array<{ reason: string; count: number }>;
-}
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

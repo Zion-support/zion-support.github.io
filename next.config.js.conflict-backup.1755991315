@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-<<<<<<< HEAD
 const nextConfig = {
   // Enable static export for Next.js 14
   output: 'export',
@@ -40,9 +39,6 @@ const nextConfig = {
     return config;
   },
 };
-=======
-const path = require('path');
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
 
 let withSentryConfig = (cfg) => cfg;
 try {

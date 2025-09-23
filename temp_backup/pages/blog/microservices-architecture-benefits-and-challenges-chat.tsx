@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function MicroservicesArchitectureBenefitsAndChallengesChatPage() {
@@ -6,7 +5,7 @@ export default function MicroservicesArchitectureBenefitsAndChallengesChatPage()
     <>
       <Head>
         <title>Microservices Architecture Benefits And Challenges Chat - Zion Tech Group</title>
-        <meta name="description" content="microservices architecture benefits and challenges chat page" />
+        <meta name="description" content="microservices architecture benefits and challenges chat page"  />
       </Head>
       
       <main>

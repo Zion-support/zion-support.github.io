@@ -81,19 +81,16 @@ class ComprehensiveSyntaxFixer {
     // Fix malformed function declarations
     content = content.replace(
       /export\s+default\s+function\s+([^{]+)\s*{/g,
-      'export default function $1 {',
-    );
+      'export default function $1 {');
     content = content.replace(/function\s+([^{]+)\s*{/g, 'function $1 {');
 
     // Fix malformed JSX components
     content = content.replace(
       /export\s+default\s+function\s+([^{]+)\s*{/g,
-      'export default function $1 {',
-    );
+      'export default function $1 {');
     content = content.replace(
       /const\s+([^{]+)\s*=\s*\(\s*\)\s*=>\s*{/g,
-      'const $1 = () => {',
-    );
+      'const $1 = () => {');
 
     // Fix malformed return statements
     content = content.replace(/return\s*\(\s*;/g, 'return (');
@@ -144,19 +141,16 @@ class ComprehensiveSyntaxFixer {
     // Fix export statements
     content = content.replace(
       /export\s+default\s+([^;]+);;/g,
-      'export default $1;',
-    );
+      'export default $1;');
     content = content.replace(/export\s+([^;]+);;/g, 'export $1;');
 
     // Fix missing quotes in imports
     content = content.replace(
       /import\s+React\s+from\s+react';/g,
-      "import React from 'react';",
-    );
+      "import React from 'react';");
     content = content.replace(
       /import\s+Head\s+from\s+next\/head';/g,
-      "import Head from 'next/head';",
-    );
+      "import Head from 'next/head';");
 
     return content;
   }
@@ -167,19 +161,16 @@ class ComprehensiveSyntaxFixer {
     // Fix malformed handler functions
     content = content.replace(
       /export\s+default\s+async\s+function\s+([^{]+)\s*{/g,
-      'export default async function $1 {',
-    );
+      'export default async function $1 {');
     content = content.replace(
       /export\s+default\s+function\s+([^{]+)\s*{/g,
-      'export default function $1 {',
-    );
+      'export default function $1 {');
 
     // Fix malformed NextApiRequest/NextApiResponse
     content = content.replace(/req:\s*NextApiRequest;/g, 'req: NextApiRequest');
     content = content.replace(
       /res:\s*NextApiResponse;/g,
-      'res: NextApiResponse',
-    );
+      'res: NextApiResponse');
 
     // Fix malformed try-catch blocks
     content = content.replace(/try\s*{/g, 'try {');
@@ -215,8 +206,7 @@ class ComprehensiveSyntaxFixer {
     } catch (error) {
       this.log(
         `Error processing directory ${dirPath}: ${error.message}`,
-        'error',
-      );
+        'error');
     }
   }
 
@@ -234,8 +224,7 @@ class ComprehensiveSyntaxFixer {
     }
 
     this.log(
-      `✅ Comprehensive syntax fix completed. Fixed ${this.fixedFiles.length} files.`,
-    );
+      `✅ Comprehensive syntax fix completed. Fixed ${this.fixedFiles.length} files.`);
 
     if (this.errors.length > 0) {
       this.log(`⚠️ ${this.errors.length} errors encountered:`, 'warn');

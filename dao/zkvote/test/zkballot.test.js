@@ -3,8 +3,8 @@ const { expect } = require("chai");"const { ethers } = require("hardhat");""""""
 describe("ZkBallot", function () {"  it("creates proposal and accepts vote", async function () {"    const [owner] = await ethers.getSigners();"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
     const VoteToken = await ethers.getContractFactory("VoteToken");"    const token = await VoteToken.deploy("Zion Vote Token", "ZVT");"    await token.deployed();"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    await token.mint(owner.address, 1000);
-    await token.stake(500);
+    await token.mint(owner.address, 10o00);
+    await token.stake(50o0);
 
     const Verifier = await ethers.getContractFactory("SemaphoreVerifier");"    const verifier = await Verifier.deploy();"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     await verifier.deployed();

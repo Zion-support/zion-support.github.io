@@ -1,20 +1,9 @@
-<<<<<<< HEAD
-=======
-#!/usr/bin/env node
-
->>>>>>> origin/enhance-app-with-new-services-and-advertising
 const fs = require('fs');
 const path = require('path');
 
 function fixMergeConflicts(filePath) {
   try {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    const content = fs.readFileSync(filePath, 'utf8');
-    
->>>>>>> cursor/automate-test-improve-and-merge-code-85f4
     // Check if file has merge conflict markers
     if (
       content.includes('<<<<<<< HEAD') ||
@@ -91,7 +80,6 @@ function processDirectory(dirPath) {
 console.log('Starting merge conflict fixes...');
 const fixedCount = processDirectory('./components');
 console.log(`Fixed ${fixedCount} files`);
-=======
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Remove all merge conflict markers and keep HEAD version
@@ -112,4 +100,3 @@ console.log(`Fixed ${fixedCount} files`);
 
 // Fix the specific file
 fixMergeConflicts('src/components/EnhancedSearch.tsx');
->>>>>>> origin/enhance-app-with-new-services-and-advertising

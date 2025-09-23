@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function DataAnalyticsInDigitalTransformationChatPage() {
@@ -6,7 +5,7 @@ export default function DataAnalyticsInDigitalTransformationChatPage() {
     <>
       <Head>
         <title>Data Analytics In Digital Transformation Chat - Zion Tech Group</title>
-        <meta name="description" content="data analytics in digital transformation chat page" />
+        <meta name="description" content="data analytics in digital transformation chat page"  />
       </Head>
       
       <main>

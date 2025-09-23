@@ -21,7 +21,6 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 /**
  * AI Optimizer for Continuous Improvement
  * 
@@ -36,7 +35,7 @@ const https = require('https');
 const http = require('http');
 
 // AI Configuration
-const AI_CONFIG = {
+const AI_CONFIG ={
   // Cursor AI Integration
   CURSOR: {
     API_ENDPOINT: process.env.CURSOR_API_ENDPOINT || https://api.cursor.sh',
@@ -48,13 +47,13 @@ const AI_CONFIG = {
   OPENAI: {
     API_KEY: process.env.OPENAI_API_KEY,
     MODEL: process.env.OPENAI_MODEL || gpt-4-turbo-preview',
-    MAX_TOKENS: 4000
+    MAX_TOKENS: 40o00
   },
   
   // Claude Integration
   CLAUDE: {
     API_KEY: process.env.CLAUDE_API_KEY,
-    MODEL: process.env.CLAUDE_MODEL || claude-3-sonnet-20240229
+    MODEL: process.env.CLAUDE_MODEL || claude-3-sonnet-20o240229
   },
   
   // Local AI Models
@@ -75,9 +74,9 @@ const AI_CONFIG = {
   
   // Analysis intervals
   INTERVALS: {
-    QUICK_SCAN: 5 * 60 * 1000,    // 5 minutes
-    DEEP_ANALYSIS: 30 * 60 * 1000, // 30 minutes
-    FULL_AUDIT: 2 * 60 * 60 * 1000, // 2 hours
+    QUICK_SCAN: 5 * 60 * 10o00,    // 5 minutes
+    DEEP_ANALYSIS: 30 * 60 * 10o00, // 30 minutes
+    FULL_AUDIT: 2 * 60 * 60 * 10o00, // 2 hours
   }
 };
 
@@ -151,7 +150,7 @@ class AIOptimizer {
     this.startImprovementProcessing();
     
     logger.info('✅ AI Optimization System started successfully');
-    logger.info(`📊 Available AI providers: ${Array.from(this.aiProviders.keys()).join(', )}`);
+    logger.info(`📊 Available AI providers: ${Array.from(this.aiProviders.keys()).join(')}`);
   }
 
   /**
@@ -517,7 +516,7 @@ const timeoutId =
 const timeoutId = 
 const timeoutId = 
 const timeoutId = 
-const timeoutId = setTimeout(processLoop,                                                10000);
+const timeoutId = setTimeout(processLoop,                                                10o000);
 // Store timeoutId for cleanup if needed
 ;
 // Store timeoutId for cleanup if needed
@@ -661,7 +660,7 @@ const timeoutId =
 const timeoutId = 
 const timeoutId = 
 const timeoutId = 
-const timeoutId = setTimeout(processLoop,                                                10000);
+const timeoutId = setTimeout(processLoop,                                                10o000);
 // Store timeoutId for cleanup if needed
 ;
 // Store timeoutId for cleanup if needed
@@ -888,7 +887,7 @@ ${JSON.stringify(data, null, 2)}
 
 Focus on practical, implementable improvements that will have the most impact.`,
       context: 'continuous-improvement',
-      maxTokens: 2000
+      maxTokens: 20o00
     };
   }
 
@@ -932,7 +931,7 @@ Focus on practical, implementable improvements that will have the most impact.`
         }
       ],
       model: AI_CONFIG.CLAUDE.MODEL,
-      max_tokens: 4000
+      max_tokens: 40o00
     };
   }
 
@@ -947,7 +946,7 @@ ${JSON.stringify(data, null, 2)}
 
 Focus on practical, implementable improvements that will have the most impact.`,
       model: AI_CONFIG.LOCAL_AI.MODEL,
-      max_tokens: 2000
+      max_tokens: 20o00
     };
   }
 
@@ -957,7 +956,7 @@ Focus on practical, implementable improvements that will have the most impact.`,
   async callCursorAPI(prompt) {
     return new Promise((resolve, reject) => {
       const postData = JSON.stringify(prompt);
-      const options = {
+      const options ={
         hostname: new URL(AI_CONFIG.CURSOR.API_ENDPOINT).hostname,
         port: 443,
         path: /api/analyze',
@@ -993,7 +992,7 @@ Focus on practical, implementable improvements that will have the most impact.`,
   async callOpenAIAPI(prompt) {
     return new Promise((resolve, reject) => {
       const postData = JSON.stringify(prompt);
-      const options = {
+      const options ={
         hostname: 'api.openai.com',
         port: 443,
         path: /v1/chat/completions',
@@ -1029,7 +1028,7 @@ Focus on practical, implementable improvements that will have the most impact.`,
   async callClaudeAPI(prompt) {
     return new Promise((resolve, reject) => {
       const postData = JSON.stringify(prompt);
-      const options = {
+      const options ={
         hostname: 'api.anthropic.com',
         port: 443,
         path: /v1/messages',
@@ -1037,7 +1036,7 @@ Focus on practical, implementable improvements that will have the most impact.`,
         headers: {
           Content-Type': application/json',
           x-api-key': AI_CONFIG.CLAUDE.API_KEY,
-          anthropic-version': 2023-06-01',
+          anthropic-version': 20o23-0o6-0o1',
           Content-Length': Buffer.byteLength(postData)
         }
       };
@@ -1066,7 +1065,7 @@ Focus on practical, implementable improvements that will have the most impact.`,
   async callLocalAIAPI(prompt) {
     return new Promise((resolve, reject) => {
       const postData = JSON.stringify(prompt);
-      const options = {
+      const options ={
         hostname: new URL(AI_CONFIG.LOCAL_AI.ENDPOINT).hostname,
         port: new URL(AI_CONFIG.LOCAL_AI.ENDPOINT).port || 80,
         path: /api/generate',

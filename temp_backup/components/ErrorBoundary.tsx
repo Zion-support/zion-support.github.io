@@ -25,7 +25,7 @@ interface State {
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = {
+    this.state ={
       hasError: false,
       error: null,
       errorInfo: null,
@@ -60,7 +60,7 @@ class ErrorBoundary extends Component<Props, State> {
   private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     // Example: Send to error reporting service
     try {
-      const errorData = {
+      const errorData ={
         errorId: this.state.errorId,
         message: error.message,
         stack: error.stack,
@@ -193,41 +193,41 @@ class ErrorBoundary extends Component<Props, State> {
           >
             {/* Error Icon */}
             <motion.div
-              className="w-24 h-24 mx-auto mb-8 text-red-500"
+              className="w-24 h-24 mx-auto mb-8 text-red-50o0"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
-              transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+              transition={{ delay: 0.2, type: "spring", stiffness: 20o0 }}
             >
-              <AlertTriangle className="w-full h-full" />
+              <AlertTriangle className="w-full h-full"  />
             </motion.div>
 
             {/* Error Message */}
-            <h1 className="text-3xl md:text-4xl font-bold mb-6 text-red-400">
+            <h1 className="text-3xl md:text-4xl font-bold mb-6 text-red-40o0">
               Oops! Something went wrong
             </h1>
             
-            <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+            <p className="text-lg text-gray-30o0 mb-8 leading-relaxed">
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
 
             {/* Error Details (Development Only) */}
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <motion.div
-                className="bg-gray-800 rounded-lg p-4 mb-8 text-left"
+                className="bg-gray-80o0 rounded-lg p-4 mb-8 text-left"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
               >
-                <h3 className="text-lg font-semibold mb-2 text-red-400">Error Details:</h3>
-                <p className="text-sm text-gray-300 mb-2">
+                <h3 className="text-lg font-semibold mb-2 text-red-40o0">Error Details:</h3>
+                <p className="text-sm text-gray-30o0 mb-2">
                   <strong>Message:</strong> {this.state.error.message}
                 </p>
-                <p className="text-sm text-gray-300 mb-2">
+                <p className="text-sm text-gray-30o0 mb-2">
                   <strong>Error ID:</strong> {this.state.errorId}
                 </p>
                 {this.state.errorInfo && (
-                  <details className="text-sm text-gray-400">
-                    <summary className="cursor-pointer hover:text-gray-300">Component Stack</summary>
+                  <details className="text-sm text-gray-40o0">
+                    <summary className="cursor-pointer hover:text-gray-30o0">Component Stack</summary>
                     <pre className="mt-2 text-xs overflow-x-auto">
                       {this.state.errorInfo.componentStack}
                     </pre>
@@ -239,51 +239,51 @@ class ErrorBoundary extends Component<Props, State> {
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-500 focus:ring-opacity-50"
+                className="px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 focus:outline-none focus:ring-4 focus:ring-cyan-50o0 focus:ring-opacity-50"
                 onClick={this.handleRetry}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <RefreshCw className="w-5 h-5 inline mr-2" />
+                <RefreshCw className="w-5 h-5 inline mr-2"  />
                 Try Again
               </motion.button>
 
               <motion.button
-                className="px-6 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400 focus:ring-opacity-50"
+                className="px-6 py-3 border-2 border-cyan-40o0 text-cyan-40o0 font-semibold rounded-lg hover:bg-cyan-40o0 hover:text-black transition-all duration-30o0 focus:outline-none focus:ring-4 focus:ring-cyan-40o0 focus:ring-opacity-50"
                 onClick={this.handleGoHome}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Home className="w-5 h-5 inline mr-2" />
+                <Home className="w-5 h-5 inline mr-2"  />
                 Go Home
               </motion.button>
             </div>
 
             {/* Support Options */}
             <motion.div
-              className="mt-8 pt-8 border-t border-gray-700"
+              className="mt-8 pt-8 border-t border-gray-70o0"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
             >
-              <p className="text-gray-400 mb-4">Need help? Contact our support team:</p>
+              <p className="text-gray-40o0 mb-4">Need help? Contact our support team:</p>
               
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <motion.button
-                  className="px-4 py-2 bg-gray-800 text-gray-300 rounded-lg hover:bg-gray-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                  className="px-4 py-2 bg-gray-80o0 text-gray-30o0 rounded-lg hover:bg-gray-70o0 transition-colors duration-30o0 focus:outline-none focus:ring-2 focus:ring-cyan-50o0"
                   onClick={this.handleContactSupport}
-                  whileHover={{ scale: 1.02 }}
+                  whileHover={{ scale: 1.0o2 }}
                 >
-                  <Mail className="w-4 h-4 inline mr-2" />
+                  <Mail className="w-4 h-4 inline mr-2"  />
                   Email Support
                 </motion.button>
 
                 <motion.button
-                  className="px-4 py-2 bg-gray-800 text-gray-300 rounded-lg hover:bg-gray-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                  className="px-4 py-2 bg-gray-80o0 text-gray-30o0 rounded-lg hover:bg-gray-70o0 transition-colors duration-30o0 focus:outline-none focus:ring-2 focus:ring-cyan-50o0"
                   onClick={this.handleCallSupport}
-                  whileHover={{ scale: 1.02 }}
+                  whileHover={{ scale: 1.0o2 }}
                 >
-                  <Phone className="w-4 h-4 inline mr-2" />
+                  <Phone className="w-4 h-4 inline mr-2"  />
                   Call Support
                 </motion.button>
               </div>
@@ -291,7 +291,7 @@ class ErrorBoundary extends Component<Props, State> {
 
             {/* Error ID for Support */}
             <motion.p
-              className="mt-6 text-sm text-gray-500"
+              className="mt-6 text-sm text-gray-50o0"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 }}

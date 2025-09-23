@@ -2,7 +2,7 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state ={ hasError: false };
   }
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -17,8 +17,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React from 'react';
-
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -36,7 +34,7 @@ const ServicesIndex: NextPage = () => {
         'Recommendation Systems',
         'Fraud Detection & Risk Assessment'
       ],
-      pricing: 'Starting at $2,500/month',
+      pricing: 'Starting at $2,50o0/month',
 
       icon: '🧠',
 
@@ -54,7 +52,7 @@ const ServicesIndex: NextPage = () => {
         'Auto-scaling & Load Balancing',
         'Disaster Recovery & Backup'
       ],
-      pricing: 'Starting at $1,800/month',
+      pricing: 'Starting at $1,80o0/month',
 
       icon: '☁️',
 
@@ -72,7 +70,7 @@ const ServicesIndex: NextPage = () => {
         'Token Development & ICOs',
         'Blockchain Security Audits'
       ],
-      pricing: 'Starting at $3,500/month',
+      pricing: 'Starting at $3,50o0/month',
 
       icon: '🔗',
 
@@ -90,7 +88,7 @@ const ServicesIndex: NextPage = () => {
         'Sensor Data Processing',
         'Remote Device Control'
       ],
-      pricing: 'Starting at $2,200/month',
+      pricing: 'Starting at $2,20o0/month',
 
       icon: '🌐',
 
@@ -108,7 +106,7 @@ const ServicesIndex: NextPage = () => {
         'Business Process Optimization',
         'Third-party Integrations'
       ],
-      pricing: 'Starting at $1,500/month',
+      pricing: 'Starting at $1,50o0/month',
 
       icon: '⚡',
 
@@ -126,7 +124,7 @@ const ServicesIndex: NextPage = () => {
         'Security Training & Awareness',
         'Vulnerability Management'
       ],
-      pricing: 'Starting at $2,000/month',
+      pricing: 'Starting at $2,0o00/month',
 
       icon: '🔒',
 
@@ -144,7 +142,7 @@ const ServicesIndex: NextPage = () => {
         'API Development & Integration',
         'Performance Optimization'
       ],
-      pricing: 'Starting at $1,200/month',
+      pricing: 'Starting at $1,20o0/month',
 
       icon: '💻',
 
@@ -162,7 +160,7 @@ const ServicesIndex: NextPage = () => {
         'Data Visualization',
         'Custom Reporting Solutions'
       ],
-      pricing: 'Starting at $1,800/month',
+      pricing: 'Starting at $1,80o0/month',
 
       icon: '📊',
 
@@ -217,7 +215,7 @@ const ServicesIndex: NextPage = () => {;
         'Recommendation Systems',;
         'Fraud Detection & Risk Assessment';
       ],;
-      pricing: 'Starting at $2,500/month',;
+      pricing: 'Starting at $2,50o0/month',;
       icon: '🧠',;
       link: '/services/ai-development';
     },;
@@ -233,7 +231,7 @@ const ServicesIndex: NextPage = () => {;
         'Auto-scaling & Load Balancing',;
         'Disaster Recovery & Backup';
       ],;
-      pricing: 'Starting at $1,800/month',;
+      pricing: 'Starting at $1,80o0/month',;
       icon: '☁️',;
       link: '/services/cloud-solutions';
     },;
@@ -249,7 +247,7 @@ const ServicesIndex: NextPage = () => {;
         'Token Development & ICOs',;
         'Blockchain Security Audits';
       ],;
-      pricing: 'Starting at $3,500/month',;
+      pricing: 'Starting at $3,50o0/month',;
       icon: '🔗',;
       link: '/services/blockchain';
     },;
@@ -265,7 +263,7 @@ const ServicesIndex: NextPage = () => {;
         'Sensor Data Processing',;
         'Remote Device Control';
       ],;
-      pricing: 'Starting at $2,200/month',;
+      pricing: 'Starting at $2,20o0/month',;
       icon: '🌐',;
       link: '/services/iot-platforms';
     },;
@@ -281,7 +279,7 @@ const ServicesIndex: NextPage = () => {;
         'Business Process Optimization',;
         'Third-party Integrations';
       ],;
-      pricing: 'Starting at $1,500/month',;
+      pricing: 'Starting at $1,50o0/month',;
       icon: '⚡',;
       link: '/products/micro-saas';
     },;
@@ -297,7 +295,7 @@ const ServicesIndex: NextPage = () => {;
         'Security Training & Awareness',;
         'Vulnerability Management';
       ],;
-      pricing: 'Starting at $2,000/month',;
+      pricing: 'Starting at $2,0o00/month',;
       icon: '🔒',;
       link: '/services/cybersecurity';
     },;
@@ -313,7 +311,7 @@ const ServicesIndex: NextPage = () => {;
         'API Development & Integration',;
         'Performance Optimization';
       ],;
-      pricing: 'Starting at $1,200/month',;
+      pricing: 'Starting at $1,20o0/month',;
       icon: '💻',;
       link: '/services/web-development';
     },;
@@ -329,7 +327,7 @@ const ServicesIndex: NextPage = () => {;
         'Data Visualization',;
         'Custom Reporting Solutions';
       ],;
-      pricing: 'Starting at $1,800/month',;
+      pricing: 'Starting at $1,80o0/month',;
       icon: '📊',;
       link: '/services/data-analytics';
   const microSaasServices = [;
@@ -374,35 +372,35 @@ const ServicesIndex: NextPage = () => {;
       name: "Cloud Migration & Architecture",;
       description: "Complete cloud transformation with AWS, Azure, and Google Cloud expertise",;
       features: ["Multi-cloud strategy", "Security implementation", "Cost optimization", "24/7 monitoring"],;
-      pricing: "Starting at $5,000/project",;
+      pricing: "Starting at $5,0o00/project",;
       link: "/services/cloud-migration";
     },;
     {;
       name: "Cybersecurity Solutions",;
       description: "Comprehensive security assessment, implementation, and ongoing protection",;
       features: ["Security audits", "Penetration testing", "Compliance management", "Incident response"],;
-      pricing: "Starting at $3,000/month",;
+      pricing: "Starting at $3,0o00/month",;
       link: "/services/cybersecurity-solutions";
     },;
     {;
       name: "DevOps & CI/CD Implementation",;
       description: "Automated deployment pipelines and infrastructure as code solutions",;
       features: ["CI/CD pipelines", "Infrastructure automation", "Monitoring setup", "Performance optimization"],;
-      pricing: "Starting at $4,000/month",;
+      pricing: "Starting at $4,0o00/month",;
       link: "/services/devops-implementation";
     },;
     {;
       name: "Database Design & Optimization",;
       description: "High-performance database architecture and optimization services",;
       features: ["Database design", "Performance tuning", "Backup strategies", "Scalability planning"],;
-      pricing: "Starting at $2,500/project",;
+      pricing: "Starting at $2,50o0/project",;
       link: "/services/database-optimization";
     },;
     {;
       name: "API Development & Integration",;
       description: "Custom API development and third-party system integration",;
       features: ["RESTful APIs", "GraphQL", "Microservices", "Documentation"],;
-      pricing: "Starting at $3,500/project",;
+      pricing: "Starting at $3,50o0/project",;
       link: "/services/api-development";
     }
   ];
@@ -411,35 +409,35 @@ const ServicesIndex: NextPage = () => {;
       name: "Custom AI Model Development",;
       description: "Tailored machine learning models for your specific business needs",;
       features: ["Custom model training", "Data preprocessing", "Model deployment", "Performance monitoring"],;
-      pricing: "Starting at $8,000/project",;
+      pricing: "Starting at $8,0o00/project",;
       link: "/services/custom-ai-models";
     },;
     {;
       name: "Natural Language Processing",;
       description: "Advanced NLP solutions for text analysis, chatbots, and content generation",;
       features: ["Text analysis", "Chatbot development", "Content generation", "Sentiment analysis"],;
-      pricing: "Starting at $4,500/project",;
+      pricing: "Starting at $4,50o0/project",;
       link: "/services/nlp-solutions";
     },;
     {;
       name: "Computer Vision Solutions",;
       description: "Image and video analysis with object detection and recognition capabilities",;
       features: ["Object detection", "Image classification", "Video analysis", "Real-time processing"],;
-      pricing: "Starting at $6,000/project",;
+      pricing: "Starting at $6,0o00/project",;
       link: "/services/computer-vision";
     },;
     {;
       name: "Predictive Analytics Platform",;
       description: "Advanced forecasting and predictive modeling for business intelligence",;
       features: ["Time series forecasting", "Risk assessment", "Trend analysis", "Automated insights"],;
-      pricing: "Starting at $5,500/month",;
+      pricing: "Starting at $5,50o0/month",;
       link: "/services/predictive-analytics";
     },;
     {;
       name: "AI-Powered Automation",;
       description: "Intelligent process automation to streamline business operations",;
       features: ["Process mapping", "Workflow automation", "Decision trees", "Integration capabilities"],;
-      pricing: "Starting at $3,000/month",;
+      pricing: "Starting at $3,0o00/month",;
       link: "/services/ai-automation";
 
     }
@@ -452,44 +450,4 @@ interface IndexProps {
 }
 
 export default function ServicesIndex() {
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-
-  return (
-    <>
-      <Head>
-        <title>Our Services - Zion Tech Group | AI, Cloud, Blockchain & IT Solutions</title>
-        <meta name="description" content="Comprehensive technology services including AI development, cloud solutions, blockchain, IoT platforms, and micro SAAS solutions. Expert IT services for modern businesses." />
-        <meta name="keywords" content="AI development services, cloud solutions, blockchain development, IoT platforms, micro SAAS, cybersecurity, web development, data analytics" />
-      </Head>
-
-
-                    Learn More
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12 text-center text-white">
-          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
-          <p className="text-xl mb-8">Let's discuss how our technology solutions can accelerate your growth</p>
-          <div className="flex justify-center gap-4">
-            <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Get Started Today
-            </Link>
-            <Link href="/about" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-              Learn More About Us
-            </Link>
-          </div>
-        </section>
-      </main>
-    </div>
-  );
-};
-export default ServicesIndex;
-
-
 

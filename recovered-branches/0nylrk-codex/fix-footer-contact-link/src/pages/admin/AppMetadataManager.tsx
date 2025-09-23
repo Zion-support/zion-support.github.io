@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 
 
@@ -34,7 +33,6 @@ class ErrorBoundary extends React.Component {
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 import React from "react";
@@ -54,7 +52,6 @@ import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager",
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -65,22 +62,11 @@ const AppMetadataManager: React.FC = () => {
     <AppLayout>;
 
       <SEO
-=======
-import React from "react";
-import { AppLayout } from "@/layout/AppLayout";
-import { SEO } from "@/components/SEO";
-import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager";
-
-const AppMetadataManager: React.FC = () => {
-  return (
-    <AppLayout>
-      <SEO 
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         title="App Metadata Manager"
         description="Manage app store metadata for the Zion mobile application"
         noindex={true}
       />
-<<<<<<< HEAD
       <div className="container py-8">
         <h1 className="text-3xl font-bold text-zion-cyan mb-8">App Metadata Manager</h1>
         <MetadataManager />
@@ -117,21 +103,9 @@ const AppMetadataManager: React.FC = () => {;
 ;
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export default AppMetadataManager;
 
-=======
-      
-      <div className="container py-8">
-        <h1 className="text-3xl font-bold text-zion-cyan mb-8">App Metadata Manager</h1>
-        
-        <MetadataManager />
-      </div>
-    </AppLayout>
-  );
-};
-
-export default AppMetadataManager;
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

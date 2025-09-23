@@ -8,7 +8,8 @@ interface ServiceWorkerRegistrationProps {
 export const useServiceWorker = (props?: ServiceWorkerRegistrationProps) => {
   const [isUpdateAvailable, setIsUpdateAvailable] = useState(false);
   const [isUpdateInstalled, setIsUpdateInstalled] = useState(false);
-  const [registration, setRegistration] = useState<ServiceWorkerRegistration | null>(null);
+  const [registration, setRegistration] =
+    useState<ServiceWorkerRegistration | null>(null);
 
   useEffect(() => {
     if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
@@ -25,7 +26,10 @@ export const useServiceWorker = (props?: ServiceWorkerRegistrationProps) => {
           const newWorker = swRegistration.installing;
           if (newWorker) {
             newWorker.addEventListener('statechange', () => {
-              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              if (
+                newWorker.state === 'installed' &&
+                navigator.serviceWorker.controller
+              ) {
                 setIsUpdateAvailable(true);
                 props?.onUpdateAvailable?.();
               }
@@ -41,7 +45,7 @@ export const useServiceWorker = (props?: ServiceWorkerRegistrationProps) => {
         });
 
         // Handle service worker messages
-        navigator.serviceWorker.addEventListener('message', (event) => {
+        navigator.serviceWorker.addEventListener('message', event => {
           if (event.data && event.data.type === 'SKIP_WAITING') {
             swRegistration.waiting?.postMessage({ type: 'SKIP_WAITING' });
           }
@@ -85,7 +89,9 @@ export const useServiceWorker = (props?: ServiceWorkerRegistrationProps) => {
   };
 };
 
-export const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = (props) => {
+export const ServiceWorkerRegistration: React.FC<
+  ServiceWorkerRegistrationProps
+> = props => {
   const { isUpdateAvailable, updateServiceWorker } = useServiceWorker(props);
 
   if (!isUpdateAvailable) {
@@ -93,13 +99,13 @@ export const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps>
   }
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4 shadow-lg">
-      <div className="flex items-center gap-3">
-        <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-        <span className="text-white text-sm">Update available</span>
+    <div className='fixed bottom-4 right-4 z-50 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4 shadow-lg'>
+      <div className='flex items-center gap-3'>
+        <div className='w-3 h-3 bg-green-40o0 rounded-full animate-pulse'></div>
+        <span className='text-white text-sm'>Update available</span>
         <button
           onClick={updateServiceWorker}
-          className="px-3 py-1 bg-cyan-500 text-white text-xs rounded hover:bg-cyan-600 transition-colors"
+          className='px-3 py-1 bg-cyan-50o0 text-white text-xs rounded hover:bg-cyan-60o0 transition-colors'
         >
           Update
         </button>

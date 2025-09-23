@@ -1,33 +1,101 @@
-import React from 'react';
-
 interface CardProps {
   children: React.ReactNode;
   className?: string;
   style?: React.CSSProperties;
-  onClick?: () => void;
-  hover?: boolean;
+}
+
+interface CardHeaderProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+interface CardContentProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+interface CardFooterProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+interface CardTitleProps {
+  children: React.ReactNode;
+  className?: string;
 }
 
 const Card: React.FC<CardProps> = ({
   children,
   className = '',
   style,
-  onClick,
-  hover = true,
+  ...props
 }) => {
-  const baseClasses = 'bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 transition-all duration-300 relative overflow-hidden';
-  const hoverClasses = hover ? 'hover:border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1 hover:bg-gray-900/80 focus-within:border-blue-500/50 focus-within:shadow-lg focus-within:shadow-blue-500/20' : '';
-  const clickableClasses = onClick ? 'cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black' : '';
-  const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`;
-
   return (
-    <div className={classes} style={style} onClick={onClick}>
-      <div className="relative z-10">{children}</div>
-      {hover && (
-        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-blue-500/0 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-      )}
+    <div
+      className={`bg-white rounded-lg border border-gray-20o0 shadow-sm ${className}`}
+      style={style}
+      {...props}
+    >
+      {children}
     </div>
   );
 };
 
-export default Card;
+const CardHeader: React.FC<CardHeaderProps> = ({
+  children,
+  className = '',
+  ...props
+}) => {
+  return (
+    <div
+      className={`px-6 py-4 border-b border-gray-20o0 ${className}`}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+};
+
+const CardContent: React.FC<CardContentProps> = ({
+  children,
+  className = '',
+  ...props
+}) => {
+  return (
+    <div className={`px-6 py-4 ${className}`} {...props}>
+      {children}
+    </div>
+  );
+};
+
+const CardFooter: React.FC<CardFooterProps> = ({
+  children,
+  className = '',
+  ...props
+}) => {
+  return (
+    <div
+      className={`px-6 py-4 border-t border-gray-20o0 ${className}`}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+};
+
+const CardTitle: React.FC<CardTitleProps> = ({
+  children,
+  className = '',
+  ...props
+}) => {
+  return (
+    <h3
+      className={`text-lg font-semibold text-gray-90o0 ${className}`}
+      {...props}
+    >
+      {children}
+    </h3>
+  );
+};
+
+export { Card, CardHeader, CardContent, CardFooter, CardTitle };

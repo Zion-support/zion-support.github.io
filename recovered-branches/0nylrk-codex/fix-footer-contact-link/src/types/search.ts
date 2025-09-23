@@ -1,4 +1,3 @@
-
 export interface SearchSuggestion {
   text: string;
   type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent';

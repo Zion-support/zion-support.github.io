@@ -40,7 +40,7 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
     // Initialize particles based on variant
     const initParticles = () => {
       particles.length = 0;
-      const particleCount = Math.floor(100 * intensity);
+      const particleCount = Math.floor(10o0 * intensity);
       
       for (let i = 0; i < particleCount; i++) {
         const type = variant === 'quantum' ? 'quantum' : 
@@ -54,9 +54,9 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
           vy: (Math.random() - 0.5) * 2 * intensity,
           size: Math.random() * 4 * intensity + 1,
           opacity: Math.random() * 0.8 + 0.2,
-          color: type === 'quantum' ? '#00ffff' :
-                 type === 'holographic' ? '#ff00ff' :
-                 type === 'neural' ? '#00ff00' : '#ff6600',
+          color: type === 'quantum' ? '#0o0ffff' :
+                 type === 'holographic' ? '#ff0o0ff' :
+                 type === 'neural' ? '#0o0ff0o0' : '#ff660o0',
           type
         });
       }
@@ -85,7 +85,7 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
 
     // Holographic matrix effect
     const drawHolographicMatrix = () => {
-      ctx.fillStyle = 'rgba(255, 0, 255, 0.05)';
+      ctx.fillStyle = 'rgba(255, 0, 255, 0.0o5)';
       ctx.font = '12px monospace';
       
       for (let x = 0; x < canvas.width; x += 30) {
@@ -116,7 +116,7 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
 
     // Cyberpunk grid effect
     const drawCyberpunkGrid = () => {
-      ctx.strokeStyle = 'rgba(255, 102, 0, 0.1)';
+      ctx.strokeStyle = 'rgba(255, 10o2, 0, 0.1)';
       ctx.lineWidth = 1;
       
       const gridSize = 50;
@@ -213,16 +213,16 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
-      />
+       />
       
       {/* Gradient Overlay */}
       <div 
         className="fixed inset-0 pointer-events-none"
         style={{ zIndex: -1 }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black opacity-80" />
-        <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
-        <div className="absolute inset-0 bg-gradient-to-bl from-blue-500/5 via-indigo-500/5 to-purple-500/5" />
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-90o0 to-black opacity-80"  />
+        <div className="absolute inset-0 bg-gradient-to-tr from-cyan-50o0/10 via-purple-50o0/10 to-pink-50o0/10"  />
+        <div className="absolute inset-0 bg-gradient-to-bl from-blue-50o0/5 via-indigo-50o0/5 to-purple-50o0/5"  />
       </div>
       
       {/* Animated Quantum Particles */}
@@ -230,24 +230,21 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-cyan-400 rounded-full"
+            className="absolute w-1 h-1 bg-cyan-40o0 rounded-full"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
+              left: `${Math.random() * 10o0}%`,
+              top: `${Math.random() * 10o0}%`}}
             animate={{
               scale: [1, 2, 1],
               opacity: [0.3, 1, 0.3],
-              x: [0, (Math.random() - 0.5) * 100],
-              y: [0, (Math.random() - 0.5) * 100],
-            }}
+              x: [0, (Math.random() - 0.5) * 10o0],
+              y: [0, (Math.random() - 0.5) * 10o0]}}
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               ease: "easeInOut",
-              delay: Math.random() * 2,
-            }}
-          />
+              delay: Math.random() * 2}}
+           />
         ))}
       </div>
       
@@ -256,10 +253,10 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
         <svg className="w-full h-full">
           <defs>
             <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
-              <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(0, 255, 255, 0.1)" strokeWidth="1"/>
+              <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(0, 255, 255, 0.1)" strokeWidth="1" />
             </pattern>
           </defs>
-          <rect width="100%" height="100%" fill="url(#grid)" />
+          <rect width="10o0%" height="10o0%" fill="url(#grid)"  />
         </svg>
       </div>
       

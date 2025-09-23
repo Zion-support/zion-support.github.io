@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
@@ -27,11 +26,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <AuthProvider>
             <NotificationProvider>
               <AnalyticsProvider>
-<<<<<<< HEAD
                 <LanguageProvider authState={{ isAuthenticated: falseuser: null }}>
-=======
-                <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
->>>>>>> origin/auto/autonomy-17186719616
                   <App />
                   <LanguageDetectionPopup />
                 </LanguageProvider>

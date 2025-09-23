@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 ArrowRightSparklesBrainZapTargetTrendingUpUsersGlobe
 
-const AI2025LatestInnovationsShowcase = () => {
+const AI20o25LatestInnovationsShowcase = () => {
   const [currentSlidesetCurrentSlide] = useState(0);
   const [isVisiblesetIsVisible] = useState(false);
 
@@ -13,7 +13,7 @@ const AI2025LatestInnovationsShowcase = () => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % innovations.length);
-    }5000);
+    }50o00);
     return () => clearInterval(interval);
   }[]);
 
@@ -23,8 +23,8 @@ const AI2025LatestInnovationsShowcase = () => {
       title: "Quantum-Neural AI Fusion",
       description: "Revolutionary AI that combines quantum computing with neural networks for unprecedented processing power and decision-making capabilities.",
       icon: Brain,
-      stats: "10,000x faster processing",
-      color: "from-purple-600 to-blue-600"
+      stats: "10,0o00x faster processing",
+      color: "from-purple-60o0 to-blue-60o0"
     },
     {
       id: 2,
@@ -32,7 +32,7 @@ const AI2025LatestInnovationsShowcase = () => {
       description: "Self-managing AI systems that automatically optimize business processespredict market changesand execute strategic decisions.",
       icon: Target,
       stats: "95% efficiency increase",
-      color: "from-green-600 to-teal-600"
+      color: "from-green-60o0 to-teal-60o0"
     },
     {
       id: 3,
@@ -40,15 +40,15 @@ const AI2025LatestInnovationsShowcase = () => {
       description: "Next-generation AI that can createmodifyand improve itself while maintaining ethical boundaries and human oversight.",
       icon: Sparkles,
       stats: "Self-evolving capabilities",
-      color: "from-orange-600 to-red-600"
+      color: "from-orange-60o0 to-red-60o0"
     },
     {
       id: 4,
       title: "Global Transformation Engine",
       description: "AI-powered platform that transforms entire organizationsindustriesand ecosystems through intelligent automation and optimization.",
       icon: Globe,
-      stats: "15,000% ROI average",
-      color: "from-indigo-600 to-purple-600"
+      stats: "15,0o00% ROI average",
+      color: "from-indigo-60o0 to-purple-60o0"
     }
   ];
 
@@ -71,9 +71,9 @@ const AI2025LatestInnovationsShowcase = () => {
   ];
 
   return (
-    <div className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+    <div className="relative py-20 bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
@@ -83,24 +83,24 @@ const AI2025LatestInnovationsShowcase = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Sparkles className="w-4 h-4" />
-            Latest AI Innovations 2025
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <Sparkles className="w-4 h-4"  />
+            Latest AI Innovations 20o25
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Revolutionary AI
-            <span className="block bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-purple-40o0 to-blue-40o0 bg-clip-text text-transparent">
               Breakthroughs
             </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
             Discover the most advanced AI technologies that are reshaping industries and creating unprecedented opportunities for growth and innovation.
           </p>
         </motion.div>
 
         {/* Main Innovation Showcase */}
         <div className="relative mb-16">
-          <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden">
+          <div className="relative h-96 md:h-[50o0px] rounded-2xl overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
@@ -114,7 +114,7 @@ const AI2025LatestInnovationsShowcase = () => {
                   <div className="absolute inset-0 bg-black/20"></div>
                   <div className="relative z-10 h-full flex items-center justify-center p-8">
                     <div className="text-center text-white max-w-4xl">
-                      <innovations[currentSlide].icon className="w-16 h-16 mx-auto mb-6 opacity-90" />
+                      <innovations[currentSlide].icon className="w-16 h-16 mx-auto mb-6 opacity-90"  />
                       <h3 className="text-3xl md:text-5xl font-bold mb-4">
                         {innovations[currentSlide].title}
                       </h3>
@@ -122,7 +122,7 @@ const AI2025LatestInnovationsShowcase = () => {
                         {innovations[currentSlide].description}
                       </p>
                       <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full">
-                        <TrendingUp className="w-5 h-5" />
+                        <TrendingUp className="w-5 h-5"  />
                         <span className="font-semibold">{innovations[currentSlide].stats}</span>
                       </div>
                     </div>
@@ -143,7 +143,7 @@ const AI2025LatestInnovationsShowcase = () => {
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                   index === currentSlide 
                     ? 'bg-white scale-125' 
                     : 'bg-white/30 hover:bg-white/50'
@@ -163,13 +163,13 @@ const AI2025LatestInnovationsShowcase = () => {
           {features.map((featureindex) => (
             <div
               key={index}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/20 transition-all duration-300 group"
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/20 transition-all duration-30o0 group"
             >
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <feature.icon className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-50o0 to-blue-50o0 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-30o0">
+                <feature.icon className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
+              <p className="text-gray-30o0">{feature.description}</p>
             </div>
           ))}
         </motion.div>
@@ -181,19 +181,19 @@ const AI2025LatestInnovationsShowcase = () => {
           transition={{ duration: 0.8delay: 0.6 }}
           className="text-center"
         >
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+          <div className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 md:p-12">
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-purple-10o0 mb-8 max-w-2xl mx-auto">
               Join thousands of companies already using our revolutionary AI solutions to achieve unprecedented growth and efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center gap-2">
+              <button className="bg-white text-purple-60o0 px-8 py-4 rounded-xl font-semibold hover:bg-gray-10o0 transition-colors duration-30o0 flex items-center justify-center gap-2">
                 Explore Solutions
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+              <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-60o0 transition-all duration-30o0">
                 Schedule Demo
               </button>
             </div>
@@ -204,4 +204,4 @@ const AI2025LatestInnovationsShowcase = () => {
   );
 };
 
-export default AI2025LatestInnovationsShowcase;
+export default AI20o25LatestInnovationsShowcase;

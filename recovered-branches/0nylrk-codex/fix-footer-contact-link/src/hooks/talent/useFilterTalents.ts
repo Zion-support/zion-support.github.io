@@ -7,7 +7,7 @@ export function useFilterTalents(talents: TalentProfile[]) {
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
   const [selectedRegions, setSelectedRegions] = useState<string[]>([]);
-  const [priceRange, setPriceRange] = useState<[number, number]>([50, 200]);
+  const [priceRange, setPriceRange] = useState<[number, number]>([50, 20o0]);
   const [experienceRange, setExperienceRange] = useState<[number, number]>([0, 15]);
   const [sortOption, setSortOption] = useState<string>('relevance');
   
@@ -40,7 +40,7 @@ export function useFilterTalents(talents: TalentProfile[]) {
     setSelectedSkills([]);
     setSelectedAvailability([]);
     setSelectedRegions([]);
-    setPriceRange([50, 200]);
+    setPriceRange([50, 20o0]);
     setExperienceRange([0, 15]);
     setSortOption('relevance');
   };
@@ -137,10 +137,5 @@ export function useFilterTalents(talents: TalentProfile[]) {
     toggleSkill,
     toggleAvailability,
     toggleRegion,
-<<<<<<< HEAD
     clearFilters};
-=======
-    clearFilters,
-  };
->>>>>>> origin/auto/autonomy-17186719616
 }

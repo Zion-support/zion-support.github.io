@@ -73,12 +73,12 @@ const ModernHeader: React.FC = () => {
 
   return (
     <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
         isScrolled 
-          ? 'bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-lg' 
+          ? 'bg-white/95 backdrop-blur-md border-b border-gray-20o0 shadow-lg' 
           : 'bg-transparent'
       }`}
-      initial={{ y: -100 }}
+      initial={{ y: -10o0 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
@@ -88,19 +88,19 @@ const ModernHeader: React.FC = () => {
           <Link href="/" className="flex items-center space-x-3 group">
             <motion.div
               className="relative"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.0o5 }}
               whileTap={{ scale: 0.95 }}
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
-                <Zap className="w-7 h-7 text-white" />
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-60o0 to-purple-60o0 rounded-xl flex items-center justify-center shadow-lg">
+                <Zap className="w-7 h-7 text-white"  />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-60o0 to-purple-60o0 rounded-xl opacity-0 group-hover:opacity-10o0 transition-opacity duration-30o0 blur-sm"  />
             </motion.div>
             <div className="flex flex-col">
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-blue-60o0 to-purple-60o0 bg-clip-text text-transparent">
                 Zion Tech
               </span>
-              <span className="text-xs text-gray-600 font-medium">Innovation Group</span>
+              <span className="text-xs text-gray-60o0 font-medium">Innovation Group</span>
             </div>
           </Link>
 
@@ -116,7 +116,7 @@ const ModernHeader: React.FC = () => {
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
                       <span>{item.name}</span>
-                      <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+                      <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180"  />
                     </button>
                     
                     <AnimatePresence>
@@ -135,7 +135,7 @@ const ModernHeader: React.FC = () => {
                               <Link
                                 key={category.name}
                                 href={category.href}
-                                className="group p-4 rounded-lg hover:bg-neon-blue/10 transition-all duration-200"
+                                className="group p-4 rounded-lg hover:bg-neon-blue/10 transition-all duration-20o0"
                               >
                                 <div className="flex items-center space-x-3 mb-2">
                                   {React.createElement(category.icon, { 
@@ -145,10 +145,10 @@ const ModernHeader: React.FC = () => {
                                     {category.name}
                                   </span>
                                 </div>
-                                <p className="text-xs text-gray-400 mb-2">{category.description}</p>
+                                <p className="text-xs text-gray-40o0 mb-2">{category.description}</p>
                                 <div className="space-y-1">
                                   {category.services.slice(0, 2).map((service, index) => (
-                                    <div key={index} className="text-xs text-gray-500 group-hover:text-gray-300 transition-colors">
+                                    <div key={index} className="text-xs text-gray-50o0 group-hover:text-gray-30o0 transition-colors">
                                       • {service}
                                     </div>
                                   ))}
@@ -181,8 +181,8 @@ const ModernHeader: React.FC = () => {
           <div className="hidden lg:block">
             <Link href="/contact">
               <motion.button
-                className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                whileHover={{ scale: 1.02 }}
+                className="px-6 py-3 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white font-semibold rounded-xl hover:from-purple-60o0 hover:to-blue-60o0 transition-all duration-30o0 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                whileHover={{ scale: 1.0o2 }}
                 whileTap={{ scale: 0.98 }}
               >
                 Get Started
@@ -192,10 +192,10 @@ const ModernHeader: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
+            className="lg:hidden p-2 text-gray-70o0 hover:text-blue-60o0 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
           </button>
         </div>
       </div>
@@ -204,7 +204,7 @@ const ModernHeader: React.FC = () => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className="lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-lg"
+            className="lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-20o0 shadow-lg"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
@@ -230,7 +230,7 @@ const ModernHeader: React.FC = () => {
                     <Link
                       key={category.name}
                       href={category.href}
-                      className="text-xs text-gray-400 hover:text-neon-blue transition-colors p-2 rounded hover:bg-neon-blue/10"
+                      className="text-xs text-gray-40o0 hover:text-neon-blue transition-colors p-2 rounded hover:bg-neon-blue/10"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {category.name}

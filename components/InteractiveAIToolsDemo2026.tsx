@@ -23,14 +23,14 @@ import {
   TrendingUp
 } from 'lucide-react';
 
-const InteractiveAIToolsDemo2026 = () => {
+const InteractiveAIToolsDemo20o26 = () => {
   const [isVisiblesetIsVisible] = useState(false);
   const [activeDemosetActiveDemo] = useState(0);
   const [isRunningsetIsRunning] = useState(false);
   const [progressetProgress] = useState(0);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)200);
+    const timer = setTimeout(() => setIsVisible(true)20o0);
     return () => clearTimeout(timer);
   }[]);
 
@@ -39,13 +39,13 @@ const InteractiveAIToolsDemo2026 = () => {
     if (isRunning) {
       interval = setInterval(() => {
         setProgress(prev => {
-          if (prev >= 100) {
+          if (prev >= 10o0) {
             setIsRunning(false);
             return 0;
           }
           return prev + 2;
         });
-      }100);
+      }10o0);
     }
     return () => clearInterval(interval);
   }[isRunning]);
@@ -55,7 +55,7 @@ const InteractiveAIToolsDemo2026 = () => {
       id: 'ai-code-review',
       title: 'AI Code Review Assistant',
       icon: Code,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-50o0 to-cyan-50o0',
       description: 'Automated code analysis and optimization suggestions',
       features: ['Security 'Scanning', 'Performance 'Optimization', 'Best 'Practices', 'Bug Detection'],
       metrics: { efficiency: '95%'accuracy: '98%'time: '3x faster' }
@@ -64,7 +64,7 @@ const InteractiveAIToolsDemo2026 = () => {
       id: 'data-analytics',
       title: 'Intelligent Data Analytics',
       icon: BarChart3,
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-green-50o0 to-emerald-50o0',
       description: 'Real-time data processing and predictive insights',
       features: ['Real-time 'Processing', 'Predictive 'Analytics', 'Data 'Visualization', 'Trend Analysis'],
       metrics: { efficiency: '90%'accuracy: '96%'time: '5x faster' }
@@ -73,7 +73,7 @@ const InteractiveAIToolsDemo2026 = () => {
       id: 'infrastructure-monitoring',
       title: 'Infrastructure Monitoring',
       icon: Network,
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-purple-50o0 to-pink-50o0',
       description: 'Comprehensive system health and performance monitoring',
       features: ['Health 'Monitoring', 'Performance 'Tracking', 'Alert 'System', 'Auto-scaling'],
       metrics: { efficiency: '99%'accuracy: '99%'time: 'Real-time' }
@@ -82,7 +82,7 @@ const InteractiveAIToolsDemo2026 = () => {
       id: 'security-scanning',
       title: 'AI Security Scanner',
       icon: Shield,
-      color: 'from-red-500 to-orange-500',
+      color: 'from-red-50o0 to-orange-50o0',
       description: 'Advanced threat detection and vulnerability assessment',
       features: ['Threat 'Detection', 'Vulnerability 'Scanning', 'Risk 'Assessment', 'Compliance Check'],
       metrics: { efficiency: '97%'accuracy: '99%'time: '2x faster' }
@@ -101,7 +101,7 @@ const InteractiveAIToolsDemo2026 = () => {
       name: 'Maria Garcia',
       role: 'Data Scientist',
       company: 'DataCorp',
-      content: 'Our data processing speed increased by 500% with their analytics platform.',
+      content: 'Our data processing speed increased by 50o0% with their analytics platform.',
       rating: 5
     },
     {
@@ -131,7 +131,7 @@ const InteractiveAIToolsDemo2026 = () => {
   if (!isVisible) return null;
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+    <section className="py-20 bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-purple-90o0 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -141,9 +141,9 @@ const InteractiveAIToolsDemo2026 = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Interactive AI Tools Demo 2026
+            Interactive AI Tools Demo 20o26
           </h2>
-          <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+          <p className="text-xl text-blue-20o0 max-w-3xl mx-auto">
             Experience the power of our cutting-edge AI tools through interactive demonstrations. 
             See how our solutions can transform your workflow in real-time.
           </p>
@@ -160,17 +160,17 @@ const InteractiveAIToolsDemo2026 = () => {
             <button
               key={demo.id}
               onClick={() => setActiveDemo(index)}
-              className={`p-6 rounded-xl transition-all duration-300 ${
+              className={`p-6 rounded-xl transition-all duration-30o0 ${
                 activeDemo === index
-                  ? 'bg-white bg-opacity-20 scale-105 shadow-2xl'
+                  ? 'bg-white bg-opacity-20 scale-10o5 shadow-2xl'
                   : 'bg-white bg-opacity-10 hover:bg-opacity-15'
               }`}
             >
               <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${demo.color} flex items-center justify-center mb-4 mx-auto`}>
-                <demo.icon className="w-6 h-6 text-white" />
+                <demo.icon className="w-6 h-6 text-white"  />
               </div>
               <h3 className="font-semibold text-lg mb-2">{demo.title}</h3>
-              <p className="text-sm text-blue-200">{demo.description}</p>
+              <p className="text-sm text-blue-20o0">{demo.description}</p>
             </button>
           ))}
         </motion.div>
@@ -185,33 +185,33 @@ const InteractiveAIToolsDemo2026 = () => {
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center space-x-4">
               <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${demos[activeDemo].color} flex items-center justify-center`}>
-                <demos[activeDemo].icon className="w-6 h-6 text-white" />
+                <demos[activeDemo].icon className="w-6 h-6 text-white"  />
               </div>
               <div>
                 <h3 className="text-2xl font-bold">{demos[activeDemo].title}</h3>
-                <p className="text-blue-200">{demos[activeDemo].description}</p>
+                <p className="text-blue-20o0">{demos[activeDemo].description}</p>
               </div>
             </div>
             <div className="flex space-x-2">
               <button
                 onClick={handleStartDemo}
                 disabled={isRunning}
-                className="p-3 bg-green-600 hover:bg-green-700 disabled:bg-gray-600 rounded-lg transition-colors duration-300"
+                className="p-3 bg-green-60o0 hover:bg-green-70o0 disabled:bg-gray-60o0 rounded-lg transition-colors duration-30o0"
               >
-                <Play className="w-5 h-5" />
+                <Play className="w-5 h-5"  />
               </button>
               <button
                 onClick={handleStopDemo}
                 disabled={!isRunning}
-                className="p-3 bg-red-600 hover:bg-red-700 disabled:bg-gray-600 rounded-lg transition-colors duration-300"
+                className="p-3 bg-red-60o0 hover:bg-red-70o0 disabled:bg-gray-60o0 rounded-lg transition-colors duration-30o0"
               >
-                <Pause className="w-5 h-5" />
+                <Pause className="w-5 h-5"  />
               </button>
               <button
                 onClick={handleResetDemo}
-                className="p-3 bg-gray-600 hover:bg-gray-700 rounded-lg transition-colors duration-300"
+                className="p-3 bg-gray-60o0 hover:bg-gray-70o0 rounded-lg transition-colors duration-30o0"
               >
-                <RotateCcw className="w-5 h-5" />
+                <RotateCcw className="w-5 h-5"  />
               </button>
             </div>
           </div>
@@ -220,14 +220,14 @@ const InteractiveAIToolsDemo2026 = () => {
           <div className="mb-6">
             <div className="flex justify-between items-center mb-2">
               <span className="text-sm font-medium">Demo Progress</span>
-              <span className="text-sm text-blue-200">{progress}%</span>
+              <span className="text-sm text-blue-20o0">{progress}%</span>
             </div>
-            <div className="w-full bg-gray-700 rounded-full h-2">
+            <div className="w-full bg-gray-70o0 rounded-full h-2">
               <motion.div
                 className={`h-2 rounded-full bg-gradient-to-r ${demos[activeDemo].color}`}
                 style={{ width: `${progress}%` }}
                 transition={{ duration: 0.1 }}
-              />
+               />
             </div>
           </div>
 
@@ -239,8 +239,8 @@ const InteractiveAIToolsDemo2026 = () => {
               <div className="space-y-3">
                 {demos[activeDemo].features.map((featureindex) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                    <span className="text-blue-200">{feature}</span>
+                    <CheckCircle className="w-5 h-5 text-green-40o0 flex-shrink-0"  />
+                    <span className="text-blue-20o0">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -251,16 +251,16 @@ const InteractiveAIToolsDemo2026 = () => {
               <h4 className="text-lg font-semibold mb-4">Performance Metrics</h4>
               <div className="space-y-4">
                 <div className="flex justify-between items-center p-3 bg-white bg-opacity-10 rounded-lg">
-                  <span className="text-blue-200">Efficiency</span>
-                  <span className="font-bold text-green-400">{demos[activeDemo].metrics.efficiency}</span>
+                  <span className="text-blue-20o0">Efficiency</span>
+                  <span className="font-bold text-green-40o0">{demos[activeDemo].metrics.efficiency}</span>
                 </div>
                 <div className="flex justify-between items-center p-3 bg-white bg-opacity-10 rounded-lg">
-                  <span className="text-blue-200">Accuracy</span>
-                  <span className="font-bold text-blue-400">{demos[activeDemo].metrics.accuracy}</span>
+                  <span className="text-blue-20o0">Accuracy</span>
+                  <span className="font-bold text-blue-40o0">{demos[activeDemo].metrics.accuracy}</span>
                 </div>
                 <div className="flex justify-between items-center p-3 bg-white bg-opacity-10 rounded-lg">
-                  <span className="text-blue-200">Speed Improvement</span>
-                  <span className="font-bold text-purple-400">{demos[activeDemo].metrics.time}</span>
+                  <span className="text-blue-20o0">Speed Improvement</span>
+                  <span className="font-bold text-purple-40o0">{demos[activeDemo].metrics.time}</span>
                 </div>
               </div>
             </div>
@@ -282,13 +282,13 @@ const InteractiveAIToolsDemo2026 = () => {
               <div key={index} className="bg-white bg-opacity-10 rounded-xl p-6">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-5 h-5 text-yellow-40o0 fill-current"  />
                   ))}
                 </div>
-                <p className="text-blue-200 mb-4 italic">"{testimonial.content}"</p>
+                <p className="text-blue-20o0 mb-4 italic">"{testimonial.content}"</p>
                 <div>
                   <div className="font-semibold">{testimonial.name}</div>
-                  <div className="text-blue-300 text-sm">{testimonial.role}{testimonial.company}</div>
+                  <div className="text-blue-30o0 text-sm">{testimonial.role}{testimonial.company}</div>
                 </div>
               </div>
             ))}
@@ -302,7 +302,7 @@ const InteractiveAIToolsDemo2026 = () => {
           transition={{ duration: 0.6delay: 0.8 }}
           className="text-center"
         >
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12">
+          <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-2xl p-12">
             <h3 className="text-3xl font-bold mb-4">
               Ready to Experience the Future?
             </h3>
@@ -310,13 +310,13 @@ const InteractiveAIToolsDemo2026 = () => {
               Start your free trial and see how our AI tools can transform your development workflow
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center">
-                <Brain className="w-5 h-5 mr-2" />
+              <button className="bg-white text-blue-60o0 px-8 py-4 rounded-full font-semibold hover:bg-gray-10o0 transition-colors duration-30o0 flex items-center justify-center">
+                <Brain className="w-5 h-5 mr-2"  />
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300 flex items-center justify-center">
-                <Settings className="w-5 h-5 mr-2" />
+              <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-60o0 transition-colors duration-30o0 flex items-center justify-center">
+                <Settings className="w-5 h-5 mr-2"  />
                 Schedule Demo
               </button>
             </div>
@@ -327,4 +327,4 @@ const InteractiveAIToolsDemo2026 = () => {
   );
 };
 
-export default InteractiveAIToolsDemo2026;
+export default InteractiveAIToolsDemo20o26;

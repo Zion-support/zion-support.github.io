@@ -7,7 +7,7 @@ const originalConsoleError = console.error;
 const originalEnv = process.env;
 
 beforeAll(() => {
-  process.env = {
+  process.env ={
     ...originalEnv,
     NEXT_PUBLIC_SENTRY_DSN: test-dsn', // Ensure Sentry is "active""  };"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
   console.error = (..._args: unknown[]) => {
@@ -32,7 +32,7 @@ const ErrorThrowingComponent = (): ReactNode => {
 
 // Mock a component that is used in App's routing, e.g., Home.'// When this mocked component is rendered, it will instead render ErrorThrowingComponent.
 vi.mock('../../src/pages/Home', () => ({'  __esModule: true,
-  default: (): ReactNode => <ErrorThrowingComponent />
+  default: (): ReactNode => <ErrorThrowingComponent  />
 }));
 
 describe('GlobalErrorBoundary Integration Test', () => {'  beforeEach(() => {
@@ -41,13 +41,13 @@ describe('GlobalErrorBoundary Integration Test', () => {'  beforeEach(() => {
     // Setup window.location.reload mock for each test
     const originalWindowLocation = window.location;
     // @ts-expect-error JSDOM doesn't fully implement location.reload'    delete window.location;
-    // @ts-expect-error JSDOM doesn't fully implement location.reload'    window.location = { ...originalWindowLocation, assign: vi.fn(), reload: vi.fn() };
+    // @ts-expect-error JSDOM doesn't fully implement location.reload'    window.location ={ ...originalWindowLocation, assign: vi.fn(), reload: vi.fn() };
   });
 
   it('should display fallback UI, call Sentry with route, and handle retry', () => {'    act(() => {
       render(
         <MemoryRouter initialEntries={['/test-route']}>          {/* Mocking Home to throw error, App will render it for /' or /test-route' if Home is default */}          {/* Forcing a specific error-throwing route might be cleaner if Home is not guaranteed for /test-route */}
-          {/* But current Home mock will throw for any route it's mapped to, assuming /' is one such route */}          <App />
+          {/* But current Home mock will throw for any route it's mapped to, assuming /' is one such route */}          <App  />
         </MemoryRouter>
       );
     });

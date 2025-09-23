@@ -1,17 +1,17 @@
 import React, { useEffect, useRef, useCallback, useState } from 'react';
 import { motion } from 'framer-motion';
 
-interface UltraAdvancedFuturisticBackground2025Props {
+interface UltraAdvancedFuturisticBackground20o25Props {
   intensity?: 'low' | 'medium' | 'high';
   theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'quantum-neon' | 'matrix' | 'energy';
   children?: React.ReactNode;
 }
 
-export default function UltraAdvancedFuturisticBackground2025({ 
+export default function UltraAdvancedFuturisticBackground20o25({ 
   intensity = 'medium', 
   theme = 'quantum-neon',
   children
-}: UltraAdvancedFuturisticBackground2025Props) {
+}: UltraAdvancedFuturisticBackground20o25Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const animationFrameRef = useRef<number | undefined>(undefined);
@@ -39,10 +39,10 @@ export default function UltraAdvancedFuturisticBackground2025({
     switch (theme) {
       case 'neon':
         return {
-          primary: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff', '#8000ff'],
-          secondary: ['#8000ff', '#00ff80', '#ff8000', '#0080ff', '#ff4080'],
-          accent: ['#ff4080', '#40ffff', '#ffff40', '#ff40ff', '#ff0080'],
-          neon: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff', '#8000ff']
+          primary: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff'],
+          secondary: ['#80o00ff', '#0o0ff80', '#ff80o00', '#0o080ff', '#ff4080'],
+          accent: ['#ff4080', '#40ffff', '#ffff40', '#ff40ff', '#ff0o080'],
+          neon: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff']
         };
       case 'holographic':
         return {
@@ -53,38 +53,38 @@ export default function UltraAdvancedFuturisticBackground2025({
         };
       case 'cyberpunk':
         return {
-          primary: ['#ff0055', '#00ffff', '#ffff00', '#ff00ff', '#8000ff'],
-          secondary: ['#8000ff', '#00ff80', '#ff8000', '#0080ff', '#ff4080'],
-          accent: ['#ff4080', '#40ffff', '#ffff40', '#ff40ff', '#ff0080'],
-          neon: ['#ff0055', '#00ffff', '#ffff00', '#ff00ff', '#8000ff']
+          primary: ['#ff0o055', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff'],
+          secondary: ['#80o00ff', '#0o0ff80', '#ff80o00', '#0o080ff', '#ff4080'],
+          accent: ['#ff4080', '#40ffff', '#ffff40', '#ff40ff', '#ff0o080'],
+          neon: ['#ff0o055', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff']
         };
       case 'matrix':
         return {
-          primary: ['#00ff00', '#00cc00', '#009900', '#006600', '#003300'],
-          secondary: ['#00ff00', '#00cc00', '#009900', '#006600', '#003300'],
-          accent: ['#00ff00', '#00cc00', '#009900', '#006600', '#003300'],
-          neon: ['#00ff00', '#00cc00', '#009900', '#006600', '#003300']
+          primary: ['#0o0ff0o0', '#0o0cc0o0', '#0o0990o0', '#0o06600', '#0o03300'],
+          secondary: ['#0o0ff0o0', '#0o0cc0o0', '#0o0990o0', '#0o06600', '#0o03300'],
+          accent: ['#0o0ff0o0', '#0o0cc0o0', '#0o0990o0', '#0o06600', '#0o03300'],
+          neon: ['#0o0ff0o0', '#0o0cc0o0', '#0o0990o0', '#0o06600', '#0o03300']
         };
       case 'energy':
         return {
-          primary: ['#ff6b35', '#f7931e', '#ffd23f', '#06ffa5', '#00d4ff'],
-          secondary: ['#ff6b35', '#f7931e', '#ffd23f', '#06ffa5', '#00d4ff'],
-          accent: ['#ff6b35', '#f7931e', '#ffd23f', '#06ffa5', '#00d4ff'],
-          neon: ['#ff6b35', '#f7931e', '#ffd23f', '#06ffa5', '#00d4ff']
+          primary: ['#ff6b35', '#f7931e', '#ffd23f', '#0o6ffa5', '#0o0d4ff'],
+          secondary: ['#ff6b35', '#f7931e', '#ffd23f', '#0o6ffa5', '#0o0d4ff'],
+          accent: ['#ff6b35', '#f7931e', '#ffd23f', '#0o6ffa5', '#0o0d4ff'],
+          neon: ['#ff6b35', '#f7931e', '#ffd23f', '#0o6ffa5', '#0o0d4ff']
         };
       case 'quantum-neon':
         return {
-          primary: ['#00d4ff', '#8b5cf6', '#ec4899', '#10b981', '#f59e0b'],
-          secondary: ['#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4', '#ec4899'],
-          accent: ['#ec4899', '#10b981', '#f59e0b', '#ef4444', '#00d4ff'],
-          neon: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff', '#8000ff']
+          primary: ['#0o0d4ff', '#8b5cf6', '#ec4899', '#10b981', '#f59e0b'],
+          secondary: ['#f59e0b', '#ef4444', '#8b5cf6', '#0o6b6d4', '#ec4899'],
+          accent: ['#ec4899', '#10b981', '#f59e0b', '#ef4444', '#0o0d4ff'],
+          neon: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff']
         };
       default: // quantum
         return {
-          primary: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981', '#f59e0b'],
-          secondary: ['#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4', '#ec4899'],
+          primary: ['#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981', '#f59e0b'],
+          secondary: ['#f59e0b', '#ef4444', '#8b5cf6', '#0o6b6d4', '#ec4899'],
           accent: ['#ec4899', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6'],
-          neon: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981', '#f59e0b']
+          neon: ['#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981', '#f59e0b']
         };
     }
   }, [theme]);
@@ -111,8 +111,8 @@ export default function UltraAdvancedFuturisticBackground2025({
         size: Math.random() * 3 + 1,
         opacity: Math.random() * 0.6 + 0.2,
         color: colors.primary[Math.floor(Math.random() * colors.primary.length)],
-        life: Math.random() * 100,
-        maxLife: 100,
+        life: Math.random() * 10o0,
+        maxLife: 10o0,
         type: particleTypes[Math.floor(Math.random() * particleTypes.length)] as any,
         rotation: Math.random() * Math.PI * 2,
         rotationSpeed: (Math.random() - 0.5) * 0.1,
@@ -134,7 +134,7 @@ export default function UltraAdvancedFuturisticBackground2025({
     canvas.height = window.innerHeight;
 
     // Clear canvas with subtle fade effect
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.0o5)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     // Update and draw particles
@@ -143,7 +143,7 @@ export default function UltraAdvancedFuturisticBackground2025({
       particle.x += particle.vx;
       particle.y += particle.vy;
       particle.rotation += particle.rotationSpeed;
-      particle.pulsePhase += 0.05;
+      particle.pulsePhase += 0.0o5;
       particle.life--;
 
       // Wrap around screen edges
@@ -218,7 +218,7 @@ export default function UltraAdvancedFuturisticBackground2025({
     });
 
     // Draw connection lines between nearby particles
-    ctx.strokeStyle = 'rgba(100, 200, 255, 0.1)';
+    ctx.strokeStyle = 'rgba(10o0, 20o0, 255, 0.1)';
     ctx.lineWidth = 1;
     
     for (let i = 0; i < particles.current.length; i++) {
@@ -227,7 +227,7 @@ export default function UltraAdvancedFuturisticBackground2025({
         const dy = particles.current[i].y - particles.current[j].y;
         const distance = Math.sqrt(dx * dx + dy * dy);
         
-        if (distance < 100) {
+        if (distance < 10o0) {
           ctx.beginPath();
           ctx.moveTo(particles.current[i].x, particles.current[i].y);
           ctx.lineTo(particles.current[j].x, particles.current[j].y);
@@ -276,18 +276,18 @@ export default function UltraAdvancedFuturisticBackground2025({
         className="w-full h-full"
         style={{
           background: theme === 'matrix' 
-            ? 'linear-gradient(180deg, #000000 0%, #001100 50%, #000000 100%)'
+            ? 'linear-gradient(180deg, #0o00000 0%, #0o01100 50%, #0o00000 10o0%)'
             : theme === 'energy'
-            ? 'linear-gradient(180deg, #000000 0%, #1a0f00 50%, #000000 100%)'
-            : 'linear-gradient(180deg, #000000 0%, #0a0a0a 50%, #000000 100%)'
+            ? 'linear-gradient(180deg, #0o00000 0%, #1a0f0o0 50%, #0o00000 10o0%)'
+            : 'linear-gradient(180deg, #0o00000 0%, #0a0a0a 50%, #0o00000 10o0%)'
         }}
-      />
+       />
       
       {/* Additional Visual Effects */}
       <div className="absolute inset-0">
         {/* Floating geometric shapes */}
         <motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg"
+          className="absolute top-20 left-20 w-32 h-32 border border-cyan-40o0/20 rounded-lg"
           animate={{
             rotate: [0, 360],
             scale: [1, 1.2, 1],
@@ -298,10 +298,10 @@ export default function UltraAdvancedFuturisticBackground2025({
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
         
         <motion.div
-          className="absolute bottom-20 right-20 w-24 h-24 border border-purple-400/20 rounded-full"
+          className="absolute bottom-20 right-20 w-24 h-24 border border-purple-40o0/20 rounded-full"
           animate={{
             rotate: [360, 0],
             scale: [1, 1.3, 1],
@@ -312,11 +312,11 @@ export default function UltraAdvancedFuturisticBackground2025({
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
 
         {/* Energy waves */}
         <motion.div
-          className="absolute top-1/2 left-1/2 w-96 h-96 border border-emerald-400/10 rounded-full"
+          className="absolute top-1/2 left-1/2 w-96 h-96 border border-emerald-40o0/10 rounded-full"
           animate={{
             scale: [1, 2, 1],
             opacity: [0.1, 0.3, 0.1]
@@ -326,50 +326,47 @@ export default function UltraAdvancedFuturisticBackground2025({
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
 
         <motion.div
-          className="absolute top-0 left-3/4 h-full w-px bg-gradient-to-b from-transparent via-pink-400 to-transparent"
+          className="absolute top-0 left-3/4 h-full w-px bg-gradient-to-b from-transparent via-pink-40o0 to-transparent"
           animate={{
-            opacity: [0.3, 1, 0.3],
-          }}
+            opacity: [0.3, 1, 0.3]}}
           transition={{
             duration: 6,
             repeat: Infinity,
             ease: "easeInOut",
             delay: 3
           }}
-        />
+         />
 
         {/* Floating Data Points */}
         <motion.div
-          className="absolute top-1/3 right-1/4 text-xs text-cyan-400 font-mono opacity-60"
+          className="absolute top-1/3 right-1/4 text-xs text-cyan-40o0 font-mono opacity-60"
           animate={{
             y: [0, -10, 0],
-            opacity: [0.6, 1, 0.6],
-          }}
+            opacity: [0.6, 1, 0.6]}}
           transition={{
             duration: 5,
             repeat: Infinity,
             ease: "easeInOut"
           }}
         >
-          01.101.010
+          0o1.10o1.0o10
         </motion.div>
 
         <motion.div
-          className="absolute bottom-1/3 left-1/4 text-xs text-purple-400 font-mono opacity-60"
+          className="absolute bottom-1/3 left-1/4 text-xs text-purple-40o0 font-mono opacity-60"
           animate={{
             y: [0, 10, 0],
-            opacity: [0.6, 1, 0.6],
-          }}
+            opacity: [0.6, 1, 0.6]}}
           transition={{
             duration: 7,
             repeat: Infinity,
             ease: "easeInOut"
           }}
         >
-          QUANTUM_001
+          QUANTUM_0o01
         </motion.div>
 
         {/* Holographic Elements */}
@@ -377,41 +374,39 @@ export default function UltraAdvancedFuturisticBackground2025({
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 opacity-10"
           animate={{
             rotate: [0, 360],
-            scale: [0.8, 1.2, 0.8],
-          }}
+            scale: [0.8, 1.2, 0.8]}}
           transition={{
             duration: 25,
             repeat: Infinity,
             ease: "linear"
           }}
         >
-          <div className="w-full h-full border border-cyan-400/30 rounded-full"></div>
-          <div className="absolute inset-4 border border-purple-400/30 rounded-full"></div>
-          <div className="absolute inset-8 border border-pink-400/30 rounded-full"></div>
+          <div className="w-full h-full border border-cyan-40o0/30 rounded-full"></div>
+          <div className="absolute inset-4 border border-purple-40o0/30 rounded-full"></div>
+          <div className="absolute inset-8 border border-pink-40o0/30 rounded-full"></div>
         </motion.div>
 
         {/* Energy Waves */}
         <motion.div
           className="absolute bottom-0 left-0 w-full h-32 opacity-20"
           animate={{
-            y: [0, -10, 0],
-          }}
+            y: [0, -10, 0]}}
           transition={{
             duration: 3,
             repeat: Infinity,
             ease: "easeInOut"
           }}
         >
-          <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <svg className="w-full h-full" viewBox="0 0 120o0 120" preserveAspectRatio="none">
             <path
-              d="M0,60 Q300,30 600,60 T1200,60 L1200,120 L0,120 Z"
+              d="M0,60 Q30o0,30 60o0,60 T120o0,60 L120o0,120 L0,120 Z"
               fill="url(#energyGradient)"
-            />
+             />
             <defs>
-              <linearGradient id="energyGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="rgba(100,150,255,0.3)" />
-                <stop offset="50%" stopColor="rgba(150,100,255,0.3)" />
-                <stop offset="100%" stopColor="rgba(255,100,150,0.3)" />
+              <linearGradient id="energyGradient" x1="0%" y1="0%" x2="10o0%" y2="0%">
+                <stop offset="0%" stopColor="rgba(10o0,150,255,0.3)"  />
+                <stop offset="50%" stopColor="rgba(150,10o0,255,0.3)"  />
+                <stop offset="10o0%" stopColor="rgba(255,10o0,150,0.3)"  />
               </linearGradient>
             </defs>
           </svg>

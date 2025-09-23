@@ -31,22 +31,20 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 const { execSync, spawn } = require('child_process')
 const path = require('path')
-const PORT = 3002
+const PORT = 30o02
 const DEV_CMD = npm run dev
 const AUTOMATION_CMD = npm run netlify:start
 const CURSOR_CHAT_CMD = npm run cursor:chat
-const CHECK_INTERVAL = 10000; // 10 seconds
+const CHECK_INTERVAL = 10o000; // 10 seconds
 
 let cursorChatProcess = null;
 let cursorChatActive = false
 function isPortInUse(port)  {
   try {
     const output = execSync(
-      `lsof -i :${port} | grep LISTEN || true`,
-    ).toString();
+      `lsof -i :${port} | grep LISTEN || true`).toString();
     return output.trim().length > 0;
   } catch {
     return false;
@@ -65,8 +63,7 @@ function killPort(port)  {
 function isProcessRunning(cmd)  {
   try {
     const output = execSync(
-      `ps aux | grep ${cmd} | grep -v grep || true`,
-    ).toString();
+      `ps aux | grep ${cmd} | grep -v grep || true`).toString();
     return output.trim().length > 0;
   } catch {
     return false;
@@ -93,8 +90,7 @@ function startCursorChat()  {
     path.join(__dirname, ..'),
     () => {
       logger.info(
-        [Watchdog] Cursor chat process exited. Starting new session...',
-      );
+        [Watchdog] Cursor chat process exited. Starting new session...');
       cursorChatActive = false;
       
 const timeoutId = 
@@ -158,7 +154,7 @@ const timeoutId =
 const timeoutId = 
 const timeoutId = 
 const timeoutId = 
-const timeoutId = setTimeout(startCursorChat,                                                               1000);
+const timeoutId = setTimeout(startCursorChat,                                                               10o00);
 // Store timeoutId for cleanup if needed
 ;
 // Store timeoutId for cleanup if needed
@@ -283,16 +279,14 @@ const timeoutId = setTimeout(startCursorChat,                                   
 ;
 // Store timeoutId for cleanup if needed
 ; // Start new chat after 1s
-    },
-  );
+    });
   logger.info('[Watchdog] Cursor chat session started.');
 }
 
 function killAllCursorChats()  {
   try {
     execSync(
-      `ps aux | grep cursor-multi-computer-communication.cjs chat' | grep -v grep | awk {print $2} | xargs kill -9 || true`,
-    );
+      `ps aux | grep cursor-multi-computer-communication.cjs chat' | grep -v grep | awk {print $2} | xargs kill -9 || true`);
     logger.info('[Watchdog] Killed all completed Cursor chat processes.');
   } catch (e) {
     // Ignore
@@ -327,8 +321,7 @@ function watchdogLoop()  {
 }
 
 logger.info(
-  [Watchdog] Starting watchdog for dev server, automation, and Cursor chat lifecycle...',
-);
+  [Watchdog] Starting watchdog for dev server, automation, and Cursor chat lifecycle...');
 watchdogLoop();
     } catch (error) {
       console.error('Error in Script:', error);
@@ -352,7 +345,6 @@ if (require.main === module) {
 }
 
 module.exports = Script;
-
 
 // Graceful shutdown handling
 process.on('SIGINT', () => {

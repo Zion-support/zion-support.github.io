@@ -1,9 +1,9 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 
-export default function AI2025ROICalculator() {
-  const [currentRevenuesetCurrentRevenue] = useState(1000000);
-  const [implementationCostsetImplementationCost] = useState(100000);
+export default function AI20o25ROICalculator() {
+  const [currentRevenuesetCurrentRevenue] = useState(10o00000);
+  const [implementationCostsetImplementationCost] = useState(10o0000);
   const [timeframesetTimeframe] = useState(12);
   const [calculatedROIsetCalculatedROI] = useState(0);
   const [revenueIncreasetRevenueIncrease] = useState(0);
@@ -11,13 +11,13 @@ export default function AI2025ROICalculator() {
   const [totalReturnsetTotalReturns] = useState(0);
 
   useEffect(() => {
-    // Calculate ROI based on AI 2025 breakthrough potential
-    const baseROI = 10000; // 10,000% base ROI
+    // Calculate ROI based on AI 20o25 breakthrough potential
+    const baseROI = 10o000; // 10,0o00% base ROI
     const timeframeMultiplier = Math.min(timeframe / 12); // Up to 2x for longer timeframes
-    const revenueMultiplier = Math.log10(currentRevenue / 1000000) + 1; // Scale with revenue size
+    const revenueMultiplier = Math.log10(currentRevenue / 10o00000) + 1; // Scale with revenue size
     
     const finalROI = baseROI * timeframeMultiplier * revenueMultiplier;
-    const revenueIncreaseAmount = (currentRevenue * finalROI) / 100;
+    const revenueIncreaseAmount = (currentRevenue * finalROI) / 10o0;
     const costSavingsAmount = implementationCost * 5; // 5x cost savings
     const totalReturnsAmount = revenueIncreaseAmount + costSavingsAmount;
     
@@ -32,31 +32,30 @@ export default function AI2025ROICalculator() {
       style: 'currency',
       currency: 'USD',
       minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    }).format(amount);
+      maximumFractionDigits: 0}).format(amount);
   };
 
   return (
-    <div className="py-16 px-4 bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white">
+    <div className="py-16 px-4 bg-gradient-to-br from-green-90o0 via-blue-90o0 to-purple-90o0 text-white">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500 to-blue-500 text-white text-sm font-bold rounded-full mb-6 animate-pulse">
-            🧮 AI 2025 ROI CALCULATOR - REVOLUTIONARY RETURNS
+          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-50o0 to-blue-50o0 text-white text-sm font-bold rounded-full mb-6 animate-pulse">
+            🧮 AI 20o25 ROI CALCULATOR - REVOLUTIONARY RETURNS
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-40o0 via-blue-50o0 to-purple-60o0 bg-clip-text text-transparent">
             Calculate Your Revolutionary ROI
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover the potential returns from implementing our AI 2025 breakthrough technologies. 
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
+            Discover the potential returns from implementing our AI 20o25 breakthrough technologies. 
             Our revolutionary AI delivers unprecedented ROI through quantum-enhanced neural networks.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Input Section */}
-          <div className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-8 rounded-xl border border-gray-600/30 backdrop-blur-sm">
-            <h3 className="text-2xl font-bold mb-6 text-green-400">Investment Parameters</h3>
+          <div className="bg-gradient-to-br from-gray-80o0/30 to-gray-90o0/30 p-8 rounded-xl border border-gray-60o0/30 backdrop-blur-sm">
+            <h3 className="text-2xl font-bold mb-6 text-green-40o0">Investment Parameters</h3>
             
             <div className="space-y-6">
               {/* Current Annual Revenue */}
@@ -65,16 +64,16 @@ export default function AI2025ROICalculator() {
                   Current Annual Revenue
                 </label>
                 <div className="relative">
-                  <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-lg">$</span>
+                  <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-40o0 text-lg">$</span>
                   <input
                     type="number"
                     value={currentRevenue}
                     onChange={(e) => setCurrentRevenue(Number(e.target.value))}
-                    className="w-full pl-8 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white text-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
-                    placeholder="1,000,000"
+                    className="w-full pl-8 pr-4 py-3 bg-gray-80o0/50 border border-gray-60o0 rounded-lg text-white text-lg focus:outline-none focus:border-green-50o0 focus:ring-2 focus:ring-green-50o0/20"
+                    placeholder="1,0o00,0o00"
                   />
                 </div>
-                <p className="text-sm text-gray-400 mt-2">
+                <p className="text-sm text-gray-40o0 mt-2">
                   Your current annual business revenue
                 </p>
               </div>
@@ -82,20 +81,20 @@ export default function AI2025ROICalculator() {
               {/* Implementation Investment */}
               <div>
                 <label className="block text-lg font-semibold mb-3 text-white">
-                  AI 2025 Implementation Investment
+                  AI 20o25 Implementation Investment
                 </label>
                 <div className="relative">
-                  <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-lg">$</span>
+                  <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-40o0 text-lg">$</span>
                   <input
                     type="number"
                     value={implementationCost}
                     onChange={(e) => setImplementationCost(Number(e.target.value))}
-                    className="w-full pl-8 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white text-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
-                    placeholder="100,000"
+                    className="w-full pl-8 pr-4 py-3 bg-gray-80o0/50 border border-gray-60o0 rounded-lg text-white text-lg focus:outline-none focus:border-blue-50o0 focus:ring-2 focus:ring-blue-50o0/20"
+                    placeholder="10o0,0o00"
                   />
                 </div>
-                <p className="text-sm text-gray-400 mt-2">
-                  Total investment in AI 2025 breakthrough system
+                <p className="text-sm text-gray-40o0 mt-2">
+                  Total investment in AI 20o25 breakthrough system
                 </p>
               </div>
 
@@ -107,7 +106,7 @@ export default function AI2025ROICalculator() {
                 <select
                   value={timeframe}
                   onChange={(e) => setTimeframe(Number(e.target.value))}
-                  className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white text-lg focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20"
+                  className="w-full px-4 py-3 bg-gray-80o0/50 border border-gray-60o0 rounded-lg text-white text-lg focus:outline-none focus:border-purple-50o0 focus:ring-2 focus:ring-purple-50o0/20"
                 >
                   <option value={6}>6 Months</option>
                   <option value={12}>12 Months</option>
@@ -115,7 +114,7 @@ export default function AI2025ROICalculator() {
                   <option value={24}>24 Months</option>
                   <option value={36}>36 Months</option>
                 </select>
-                <p className="text-sm text-gray-400 mt-2">
+                <p className="text-sm text-gray-40o0 mt-2">
                   Expected timeframe for full implementation
                 </p>
               </div>
@@ -125,41 +124,41 @@ export default function AI2025ROICalculator() {
           {/* Results Section */}
           <div className="space-y-6">
             {/* Main ROI Display */}
-            <div className="bg-gradient-to-r from-green-600 to-blue-600 p-8 rounded-xl text-center">
+            <div className="bg-gradient-to-r from-green-60o0 to-blue-60o0 p-8 rounded-xl text-center">
               <h3 className="text-2xl font-bold mb-4 text-white">Your Revolutionary ROI</h3>
-              <div className="text-6xl font-bold text-yellow-400 mb-2">
+              <div className="text-6xl font-bold text-yellow-40o0 mb-2">
                 {calculatedROI.toLocaleString()}%
               </div>
-              <p className="text-xl text-green-100">
-                Expected return on investment with AI 2025 breakthrough
+              <p className="text-xl text-green-10o0">
+                Expected return on investment with AI 20o25 breakthrough
               </p>
             </div>
 
             {/* Detailed Breakdown */}
-            <div className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-xl border border-gray-600/30 backdrop-blur-sm">
-              <h4 className="text-xl font-bold mb-4 text-purple-400">Detailed Breakdown</h4>
+            <div className="bg-gradient-to-br from-gray-80o0/30 to-gray-90o0/30 p-6 rounded-xl border border-gray-60o0/30 backdrop-blur-sm">
+              <h4 className="text-xl font-bold mb-4 text-purple-40o0">Detailed Breakdown</h4>
               <div className="space-y-4">
-                <div className="flex justify-between items-center py-2 border-b border-gray-600">
-                  <span className="text-gray-300">Revenue Increase</span>
-                  <span className="text-green-400 font-bold text-lg">
+                <div className="flex justify-between items-center py-2 border-b border-gray-60o0">
+                  <span className="text-gray-30o0">Revenue Increase</span>
+                  <span className="text-green-40o0 font-bold text-lg">
                     {formatCurrency(revenueIncrease)}
                   </span>
                 </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-600">
-                  <span className="text-gray-300">Cost Savings</span>
-                  <span className="text-blue-400 font-bold text-lg">
+                <div className="flex justify-between items-center py-2 border-b border-gray-60o0">
+                  <span className="text-gray-30o0">Cost Savings</span>
+                  <span className="text-blue-40o0 font-bold text-lg">
                     {formatCurrency(costSavings)}
                   </span>
                 </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-600">
-                  <span className="text-gray-300">Total Investment</span>
-                  <span className="text-red-400 font-bold text-lg">
+                <div className="flex justify-between items-center py-2 border-b border-gray-60o0">
+                  <span className="text-gray-30o0">Total Investment</span>
+                  <span className="text-red-40o0 font-bold text-lg">
                     {formatCurrency(implementationCost)}
                   </span>
                 </div>
-                <div className="flex justify-between items-center py-3 border-t-2 border-green-500">
-                  <span className="text-green-400 font-bold text-xl">Net Profit</span>
-                  <span className="text-green-400 font-bold text-2xl">
+                <div className="flex justify-between items-center py-3 border-t-2 border-green-50o0">
+                  <span className="text-green-40o0 font-bold text-xl">Net Profit</span>
+                  <span className="text-green-40o0 font-bold text-2xl">
                     {formatCurrency(totalReturns - implementationCost)}
                   </span>
                 </div>
@@ -167,28 +166,28 @@ export default function AI2025ROICalculator() {
             </div>
 
             {/* Key Benefits */}
-            <div className="bg-gradient-to-br from-purple-800/30 to-pink-800/30 p-6 rounded-xl border border-purple-500/30 backdrop-blur-sm">
-              <h4 className="text-xl font-bold mb-4 text-purple-400">Revolutionary Benefits</h4>
+            <div className="bg-gradient-to-br from-purple-80o0/30 to-pink-80o0/30 p-6 rounded-xl border border-purple-50o0/30 backdrop-blur-sm">
+              <h4 className="text-xl font-bold mb-4 text-purple-40o0">Revolutionary Benefits</h4>
               <div className="space-y-3">
                 <div className="flex items-center">
-                  <span className="text-green-400 mr-3">✓</span>
-                  <span className="text-gray-300">10,000x faster processing speeds</span>
+                  <span className="text-green-40o0 mr-3">✓</span>
+                  <span className="text-gray-30o0">10,0o00x faster processing speeds</span>
                 </div>
                 <div className="flex items-center">
-                  <span className="text-green-400 mr-3">✓</span>
-                  <span className="text-gray-300">99.9% accuracy in decision-making</span>
+                  <span className="text-green-40o0 mr-3">✓</span>
+                  <span className="text-gray-30o0">99.9% accuracy in decision-making</span>
                 </div>
                 <div className="flex items-center">
-                  <span className="text-green-400 mr-3">✓</span>
-                  <span className="text-gray-300">95%+ process automation</span>
+                  <span className="text-green-40o0 mr-3">✓</span>
+                  <span className="text-gray-30o0">95%+ process automation</span>
                 </div>
                 <div className="flex items-center">
-                  <span className="text-green-400 mr-3">✓</span>
-                  <span className="text-gray-300">Quantum-enhanced neural networks</span>
+                  <span className="text-green-40o0 mr-3">✓</span>
+                  <span className="text-gray-30o0">Quantum-enhanced neural networks</span>
                 </div>
                 <div className="flex items-center">
-                  <span className="text-green-400 mr-3">✓</span>
-                  <span className="text-gray-300">Autonomous decision systems</span>
+                  <span className="text-green-40o0 mr-3">✓</span>
+                  <span className="text-gray-30o0">Autonomous decision systems</span>
                 </div>
               </div>
             </div>
@@ -197,25 +196,25 @@ export default function AI2025ROICalculator() {
 
         {/* Call to Action */}
         <div className="mt-12 text-center">
-          <div className="bg-gradient-to-r from-purple-800/30 to-pink-800/30 p-8 rounded-xl border border-purple-500/30 backdrop-blur-sm">
+          <div className="bg-gradient-to-r from-purple-80o0/30 to-pink-80o0/30 p-8 rounded-xl border border-purple-50o0/30 backdrop-blur-sm">
             <h3 className="text-2xl font-bold mb-4 text-white">
               Ready to Achieve Revolutionary ROI?
             </h3>
-            <p className="text-gray-300 mb-6">
-              Join thousands of companies already experiencing unprecedented success with our AI 2025 breakthrough technologies.
+            <p className="text-gray-30o0 mb-6">
+              Join thousands of companies already experiencing unprecedented success with our AI 20o25 breakthrough technologies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="bg-gradient-to-r from-green-500 to-blue-500 px-8 py-3 rounded-lg font-bold text-white hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+                className="bg-gradient-to-r from-green-50o0 to-blue-50o0 px-8 py-3 rounded-lg font-bold text-white hover:from-green-60o0 hover:to-blue-60o0 transition-all duration-30o0 transform hover:scale-10o5"
               >
                 Start Your Implementation
               </a>
               <a
-                href="/ai-2025-ultimate-breakthrough-revolution"
-                className="bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-3 rounded-lg font-bold text-white hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
+                href="/ai-20o25-ultimate-breakthrough-revolution"
+                className="bg-gradient-to-r from-purple-50o0 to-pink-50o0 px-8 py-3 rounded-lg font-bold text-white hover:from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 transform hover:scale-10o5"
               >
-                Learn About AI 2025 Breakthrough
+                Learn About AI 20o25 Breakthrough
               </a>
             </div>
           </div>

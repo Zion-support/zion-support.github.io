@@ -27,18 +27,30 @@ export default function PageShareButtons({
   }, [url, utm]);
 
   const handle = (network: string) => () => {
-    try { onShare && onShare(network); } catch {}
+    try {
+      onShare && onShare(network);
+    } catch {}
   };
 
   return (
-    <div className="flex items-center gap-3">
-      <LinkedinShareButton url={withUtm} title={title} summary={description} onClick={handle('linkedin')}>
+    <div className='flex items-center gap-3'>
+      <LinkedinShareButton
+        url={withUtm}
+        title={title}
+        summary={description}
+        onClick={handle('linkedin')}
+      >
         <LinkedinIcon size={36} round />
       </LinkedinShareButton>
       <TwitterShareButton url={withUtm} title={title} onClick={handle('x')}>
         <TwitterIcon size={36} round />
       </TwitterShareButton>
-      <FacebookShareButton url={withUtm} quote={title} hashtag="#ZionAI" onClick={handle('facebook')}>
+      <FacebookShareButton
+        url={withUtm}
+        quote={title}
+        hashtag='#ZionAI'
+        onClick={handle('facebook')}
+      >
         <FacebookIcon size={36} round />
       </FacebookShareButton>
     </div>

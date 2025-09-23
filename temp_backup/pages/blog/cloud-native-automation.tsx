@@ -1,7 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import React from 'react';
-
 export default function CloudNativeAutomation() {
   return (
     <>
@@ -30,7 +28,7 @@ export default function CloudNativeAutomation() {
             <nav className='mb-8'>
               <Link
                 href='/blog'
-                className='text-cyan-400 hover:text-cyan-300 transition-colors'
+                className='text-cyan-40o0 hover:text-cyan-30o0 transition-colors'
               >
                 ← Back to Blog
               </Link>
@@ -39,16 +37,16 @@ export default function CloudNativeAutomation() {
             <article className='prose prose-invert prose-lg max-w-none'>
               <header className='mb-12 text-center'>
                 <div className='flex items-center gap-3 justify-center mb-4'>
-                  <span className='px-3 py-1 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30'>
+                  <span className='px-3 py-1 bg-green-40o0/20 text-green-40o0 text-sm rounded-full border border-green-40o0/30'>
                     Infrastructure
                   </span>
                   <span className='text-white/60 text-sm'>
-                    January 12, 2025
+                    January 12, 20o25
                   </span>
                   <span className='text-white/60 text-sm'>•</span>
                   <span className='text-white/60 text-sm'>10 min read</span>
                 </div>
-                <h1 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>
+                <h1 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 bg-clip-text text-transparent'>
                   Building Cloud-Native Automation Infrastructure
                 </h1>
                 <p className='text-xl text-white/80 max-w-3xl mx-auto'>
@@ -59,7 +57,7 @@ export default function CloudNativeAutomation() {
               </header>
 
               <section className='mb-12'>
-                <h2 className='text-2xl font-semibold mb-6 text-cyan-400'>
+                <h2 className='text-2xl font-semibold mb-6 text-cyan-40o0'>
                   The Foundation: Microservices Architecture
                 </h2>
                 <p className='text-white/90 mb-4'>
@@ -82,7 +80,7 @@ export default function CloudNativeAutomation() {
               </section>
 
               <section className='mb-12'>
-                <h2 className='text-2xl font-semibold mb-6 text-fuchsia-400'>
+                <h2 className='text-2xl font-semibold mb-6 text-fuchsia-40o0'>
                   Containerization and Orchestration
                 </h2>
                 <p className='text-white/90 mb-4'>
@@ -109,7 +107,7 @@ export default function CloudNativeAutomation() {
               </section>
 
               <section className='mb-12'>
-                <h2 className='text-2xl font-semibold mb-6 text-green-400'>
+                <h2 className='text-2xl font-semibold mb-6 text-green-40o0'>
                   Infrastructure as Code
                 </h2>
                 <p className='text-white/90 mb-4'>
@@ -134,7 +132,7 @@ export default function CloudNativeAutomation() {
               </section>
 
               <section className='mb-12'>
-                <h2 className='text-2xl font-semibold mb-6 text-blue-400'>
+                <h2 className='text-2xl font-semibold mb-6 text-blue-40o0'>
                   Monitoring and Observability
                 </h2>
                 <p className='text-white/90 mb-4'>
@@ -154,7 +152,7 @@ export default function CloudNativeAutomation() {
               </section>
 
               <section className='mb-12'>
-                <h2 className='text-2xl font-semibold mb-6 text-purple-400'>
+                <h2 className='text-2xl font-semibold mb-6 text-purple-40o0'>
                   Security and Compliance
                 </h2>
                 <p className='text-white/90 mb-4'>
@@ -177,7 +175,7 @@ export default function CloudNativeAutomation() {
               </section>
 
               <section className='mb-12'>
-                <h2 className='text-2xl font-semibold mb-6 text-yellow-400'>
+                <h2 className='text-2xl font-semibold mb-6 text-yellow-40o0'>
                   Looking Ahead
                 </h2>
                 <p className='text-white/90 mb-4'>
@@ -199,7 +197,7 @@ export default function CloudNativeAutomation() {
               </section>
 
               <div className='mt-12 p-6 bg-white/10 rounded-xl border border-white/20'>
-                <h3 className='text-xl font-semibold mb-4 text-cyan-400'>
+                <h3 className='text-xl font-semibold mb-4 text-cyan-40o0'>
                   Ready to Transform Your Infrastructure?
                 </h3>
                 <p className='text-white/80 mb-4'>
@@ -209,13 +207,13 @@ export default function CloudNativeAutomation() {
                 <div className='flex flex-wrap gap-4'>
                   <Link
                     href='/contact'
-                    className='px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'
+                    className='px-6 py-3 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 text-white rounded-lg font-semibold hover:from-cyan-50o0 hover:to-fuchsia-50o0 transition-all duration-30o0'
                   >
                     Get Started
                   </Link>
                   <Link
                     href='/case-studies'
-                    className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300'
+                    className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-40o0/50 transition-all duration-30o0'
                   >
                     View Case Studies
                   </Link>

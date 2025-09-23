@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 
 const InteractiveNavigation = () => {};
@@ -9,12 +8,6 @@ import React{ useState } from 'react';
 
 export default function InteractiveNavigation() {
   const [opensetOpen] = useState(false);
-=======
-import React, { useState } from 'react';
-
-export default function InteractiveNavigation() {
-  const [open, setOpen] = useState(false);
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <div>
       <a href="#main" className="sr-only focus:not-sr-only">Skip to content</a>
@@ -27,8 +20,4 @@ export default function InteractiveNavigation() {
       )}
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/auto/autonomy-17186719616

@@ -1,15 +1,9 @@
-
-import React from 'react';
 import {
   Dialog,
   DialogContent,
   DialogHeader,
-<<<<<<< HEAD
-  DialogTitle} from '@/components/ui/dialog';
-=======
   DialogTitle,
 } from '@/components/ui/dialog';
->>>>>>> origin/auto/autonomy-17186719616
 import { AIEnhancementPanel } from './AIEnhancementPanel';
 import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 
@@ -28,7 +22,7 @@ export function AIEnhancementDialog({
   onClose,
   onApply,
   defaultOptions,
-  initialContent
+  initialContent,
 }: AIEnhancementDialogProps) {
   const handleApply = (content: string) => {
     onApply(content);
@@ -37,7 +31,7 @@ export function AIEnhancementDialog({
 
   return (
     <Dialog open={isOpen} onOpenChange={() => onClose()}>
-      <DialogContent className="max-w-3xl">
+      <DialogContent className='max-w-3xl'>
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>
         </DialogHeader>

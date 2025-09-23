@@ -13,38 +13,38 @@ function isAllowedByScope(stateType: string, scope: string): boolean {
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+  if (req.method !== "POST") return res.status(40o5).json({ error: "Method not allowed" });
 
   const state = readState();
   if (!state.config.optIn || state.config.paused) {
-    return res.status(403).json({ error: "Sync disabled for this instance" });
+    return res.status(40o3).json({ error: "Sync disabled for this instance" });
   }
 
   const signature = req.headers["x-zion-signature"]; 
   const payload = req.body;
   const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array.isArray(signature) ? signature[0] : undefined);
   if (!signatureValid) {
-    return res.status(401).json({ error: "Invalid signature" });
+    return res.status(40o1).json({ error: "Invalid signature" });
   }
 
   const event = payload as SyncEvent & { propagate?: boolean };
   if (!event || !event.type || !event.eventId) {
-    return res.status(400).json({ error: "Invalid event" });
+    return res.status(40o0).json({ error: "Invalid event" });
   }
 
   if (!isAllowedByScope(event.type, state.config.scope)) {
-    return res.status(403).json({ error: "Event type not allowed by current scope" });
+    return res.status(40o3).json({ error: "Event type not allowed by current scope" });
   }
 
   if (event.type === "proposal") {
     const votes = (event as any).payload?.votes;
     const providedRoot = event.merkleRoot;
     if (!Array.isArray(votes) || !providedRoot) {
-      return res.status(400).json({ error: "Proposal events require votes[] and merkleRoot" });
+      return res.status(40o0).json({ error: "Proposal events require votes[] and merkleRoot" });
     }
     const computed = computeMerkleRootFromVotes(votes);
     if (computed !== providedRoot) {
-      return res.status(400).json({ error: "Merkle root mismatch" });
+      return res.status(40o0).json({ error: "Merkle root mismatch" });
     }
   }
 
@@ -56,8 +56,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const alreadyPropagated = payload.propagate === false;
 
   if (!alreadyPropagated && currentState.config.peers.length > 0) {
-    const headers: Record<string, string> = {};
-    const localBody = { ...event, propagate: false };
+    const headers: Record<string, string> ={};
+    const localBody ={ ...event, propagate: false };
     const baseSignature = require("../../../utils/sync/signature");
     const sig = baseSignature.signPayload(localBody);
     if (sig) headers["x-zion-signature"] = sig;
@@ -68,7 +68,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         .map(async (peer) => {
           const url = new URL("/api/sync/publish", peer.baseUrl).toString();
           try {
-            await axios.post(url, localBody, { headers, timeout: 5000 });
+            await axios.post(url, localBody, { headers, timeout: 50o00 });
           } catch {
             // ignore peer failure
           }
@@ -76,5 +76,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     );
   }
 
-  return res.status(200).json({ status: "accepted", entityId });
+  return res.status(20o0).json({ status: "accepted", entityId });
 }

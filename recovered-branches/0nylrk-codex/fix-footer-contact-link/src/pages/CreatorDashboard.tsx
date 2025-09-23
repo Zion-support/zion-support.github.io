@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 
 
@@ -10,16 +9,9 @@ import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
-=======
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/creator/CreatorSidebar";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function CreatorDashboard() {
   return (
@@ -61,7 +53,6 @@ export default function CreatorDashboard() {
               <p className="text-zion-slate text-lg mb-2 max-w-prose">
                 Create new content, monitor your analytics, or manage your account using the sidebar menu.
               </p>
-<<<<<<< HEAD
 
 
 
@@ -88,7 +79,6 @@ export default function CreatorDashboard() {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -99,15 +89,5 @@ export default function CreatorDashboard() {;
 
 
 
-=======
-              {/* Placeholder for more creator-specific content */}
-            </div>
-          </main>
-          <Footer />
-        </div>
-      </div>
-      <SidebarTrigger />
-    </SidebarProvider>
-  );
-}
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

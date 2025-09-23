@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Users, Zap, Shield, Clock, CheckCircle } from 'lucide-react';
 
@@ -47,7 +46,7 @@ interface RevolutionaryServiceCardProps {
 }
 
 const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ service, index }) => {
-  const cardVariants = {
+  const cardVariants ={
     hidden: { 
       opacity: 0, 
       y: 50,
@@ -65,7 +64,7 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
     },
     hover: {
       y: -10,
-      scale: 1.02,
+      scale: 1.0o2,
       transition: {
         duration: 0.3,
         ease: "easeInOut" as const
@@ -73,11 +72,11 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
     }
   };
 
-  const glowVariants = {
+  const glowVariants ={
     initial: { opacity: 0.5, scale: 1 },
     animate: { 
       opacity: [0.5, 0.8, 0.5], 
-      scale: [1, 1.05, 1],
+      scale: [1, 1.0o5, 1],
       transition: {
         duration: 3,
         repeat: Infinity,
@@ -86,7 +85,7 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
     }
   };
 
-  const featureVariants = {
+  const featureVariants ={
     hidden: { opacity: 0, x: -20 },
     visible: (i: number) => ({
       opacity: 1,
@@ -105,7 +104,7 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
       initial="hidden"
       whileInView="visible"
       whileHover="hover"
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, margin: "-10o0px" }}
       className="relative group"
     >
       {/* Glow effect */}
@@ -113,15 +112,15 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
         variants={glowVariants}
         initial="initial"
         animate="animate"
-        className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${service.color} opacity-20 blur-xl group-hover:opacity-30 transition-opacity duration-300`}
-      />
+        className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${service.color} opacity-20 blur-xl group-hover:opacity-30 transition-opacity duration-30o0`}
+       />
 
       {/* Main card */}
       <div className="relative bg-black/40 backdrop-blur-xl border border-white/10 rounded-2xl p-8 overflow-hidden">
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent)]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-cyan-40o0 via-purple-50o0 to-pink-50o0"  />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent)]"  />
         </div>
 
         {/* Popular badge */}
@@ -129,10 +128,10 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
           <motion.div
             initial={{ scale: 0, rotate: -180 }}
             animate={{ scale: 1, rotate: 0 }}
-            transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
-            className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1"
+            transition={{ delay: 0.5, type: "spring", stiffness: 20o0 }}
+            className="absolute top-4 right-4 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1"
           >
-            <Star className="w-3 h-3 fill-current" />
+            <Star className="w-3 h-3 fill-current"  />
             POPULAR
           </motion.div>
         )}
@@ -143,43 +142,43 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
             <div className="text-4xl mb-2">{service.icon}</div>
             <div className="text-right">
               <div className="text-2xl font-bold text-white">{service.price}</div>
-              <div className="text-gray-400 text-sm">{service.period}</div>
+              <div className="text-gray-40o0 text-sm">{service.period}</div>
             </div>
           </div>
           
           <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-          <p className="text-gray-300 text-sm leading-relaxed">{service.tagline}</p>
+          <p className="text-gray-30o0 text-sm leading-relaxed">{service.tagline}</p>
         </div>
 
         {/* Description */}
         <div className="relative z-10 mb-6">
-          <p className="text-gray-400 text-sm leading-relaxed">{service.description}</p>
+          <p className="text-gray-40o0 text-sm leading-relaxed">{service.description}</p>
         </div>
 
         {/* Market position and ROI */}
         <div className="relative z-10 mb-6 space-y-3">
           <div className="flex items-center gap-2 text-sm">
-            <TrendingUp className="w-4 h-4 text-green-400" />
-            <span className="text-gray-300">{service.marketSize}</span>
+            <TrendingUp className="w-4 h-4 text-green-40o0"  />
+            <span className="text-gray-30o0">{service.marketSize}</span>
           </div>
           <div className="flex items-center gap-2 text-sm">
-            <Zap className="w-4 h-4 text-yellow-400" />
-            <span className="text-gray-300">{service.roi}</span>
+            <Zap className="w-4 h-4 text-yellow-40o0"  />
+            <span className="text-gray-30o0">{service.roi}</span>
           </div>
           <div className="flex items-center gap-2 text-sm">
-            <Users className="w-4 h-4 text-blue-400" />
-            <span className="text-gray-300">{service.customers} customers</span>
+            <Users className="w-4 h-4 text-blue-40o0"  />
+            <span className="text-gray-30o0">{service.customers} customers</span>
           </div>
           <div className="flex items-center gap-2 text-sm">
-            <Star className="w-4 h-4 text-purple-400" />
-            <span className="text-gray-300">{service.rating}/5 ({service.reviews} reviews)</span>
+            <Star className="w-4 h-4 text-purple-40o0"  />
+            <span className="text-gray-30o0">{service.rating}/5 ({service.reviews} reviews)</span>
           </div>
         </div>
 
         {/* Features */}
         <div className="relative z-10 mb-6">
           <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
-            <CheckCircle className="w-4 h-4 text-green-400" />
+            <CheckCircle className="w-4 h-4 text-green-40o0"  />
             Key Features
           </h4>
           <div className="space-y-2">
@@ -191,9 +190,9 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="flex items-center gap-2 text-sm text-gray-300"
+                className="flex items-center gap-2 text-sm text-gray-30o0"
               >
-                <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full" />
+                <div className="w-1.5 h-1.5 bg-cyan-40o0 rounded-full"  />
                 {feature}
               </motion.div>
             ))}
@@ -203,7 +202,7 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
         {/* Technology stack */}
         <div className="relative z-10 mb-6">
           <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
-            <Zap className="w-4 h-4 text-yellow-400" />
+            <Zap className="w-4 h-4 text-yellow-40o0"  />
             Technology Stack
           </h4>
           <div className="flex flex-wrap gap-2">
@@ -213,7 +212,7 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: i * 0.1 }}
-                className="px-2 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-300"
+                className="px-2 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-30o0"
               >
                 {tech}
               </motion.span>
@@ -222,13 +221,13 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
         </div>
 
         {/* Trial and setup info */}
-        <div className="relative z-10 mb-6 flex items-center justify-between text-sm text-gray-400">
+        <div className="relative z-10 mb-6 flex items-center justify-between text-sm text-gray-40o0">
           <div className="flex items-center gap-2">
-            <Clock className="w-4 h-4" />
+            <Clock className="w-4 h-4"  />
             <span>{service.trialDays} day trial</span>
           </div>
           <div className="flex items-center gap-2">
-            <Shield className="w-4 h-4" />
+            <Shield className="w-4 h-4"  />
             <span>Setup: {service.setupTime}</span>
           </div>
         </div>
@@ -236,7 +235,7 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
         {/* Contact info */}
         <div className="relative z-10 mb-6 p-4 bg-white/5 rounded-lg border border-white/10">
           <h4 className="text-white font-semibold mb-2 text-sm">Contact Information</h4>
-          <div className="space-y-1 text-xs text-gray-300">
+          <div className="space-y-1 text-xs text-gray-30o0">
             <div>📱 {service.contactInfo.mobile}</div>
             <div>✉️ {service.contactInfo.email}</div>
             <div>📍 {service.contactInfo.address}</div>
@@ -246,12 +245,12 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
         {/* CTA Button */}
         <motion.a
           href={service.link}
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1.0o5 }}
           whileTap={{ scale: 0.95 }}
-          className="relative z-10 w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-3 px-6 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
+          className="relative z-10 w-full bg-gradient-to-r from-cyan-50o0 to-purple-60o0 hover:from-cyan-40o0 hover:to-purple-50o0 text-white font-semibold py-3 px-6 rounded-xl flex items-center justify-center gap-2 transition-all duration-30o0 group-hover:shadow-lg group-hover:shadow-cyan-50o0/25"
         >
           Explore Service
-          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-30o0"  />
         </motion.a>
 
         {/* Floating particles effect */}
@@ -259,7 +258,7 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
           {[...Array(5)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-1 h-1 bg-cyan-400 rounded-full"
+              className="absolute w-1 h-1 bg-cyan-40o0 rounded-full"
               style={{
                 left: `${20 + i * 15}%`,
                 top: `${30 + i * 10}%`
@@ -275,7 +274,7 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
                 ease: "easeInOut",
                 delay: i * 0.5
               }}
-            />
+             />
           ))}
         </div>
       </div>

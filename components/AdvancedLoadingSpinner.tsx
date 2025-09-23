@@ -1,8 +1,6 @@
 "use client";
 'use client';
 
-import React from 'react';
-
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'white' | 'gray';
@@ -18,25 +16,25 @@ const AdvancedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   fullScreen = false,
   className = ', '
 }) => {
-  const sizeClasses = {
+  const sizeClasses ={
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
     xl: 'w-16 h-16'
   };
 
-  const colorClasses = {
-    primary: 'text-blue-600',
-    secondary: 'text-gray-600',
+  const colorClasses ={
+    primary: 'text-blue-60o0',
+    secondary: 'text-gray-60o0',
     white: 'text-white',
-    gray: 'text-gray-400'
+    gray: 'text-gray-40o0'
   };
 
   const spinner = (
     <div className={`flex flex-col items-center justify-center ${className}`}>
       <div className="relative">
         {/* Outer ring */}
-        <div className={`${sizeClasses[size]} border-4 border-gray-200 rounded-full animate-spin`}></div>
+        <div className={`${sizeClasses[size]} border-4 border-gray-20o0 rounded-full animate-spin`}></div>
         {/* Inner ring */}
         <div className={`${sizeClasses[size]} border-4 border-t-transparent border-r-transparent ${colorClasses[color]} rounded-full animate-spin absolute top-0 left-0`}></div>
       </div>
@@ -61,9 +59,9 @@ const AdvancedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
 // Skeleton loading components
 export const SkeletonCard: React.FC<{ className?: string }> = ({ className = ', ' }) => (
-  <div className={`animate-pulse bg-gray-200 rounded-lg ${className}`}>
-    <div className="h-4 bg-gray-300 rounded w-3/4 mb-2"></div>
-    <div className="h-3 bg-gray-300 rounded w-1/2"></div>
+  <div className={`animate-pulse bg-gray-20o0 rounded-lg ${className}`}>
+    <div className="h-4 bg-gray-30o0 rounded w-3/4 mb-2"></div>
+    <div className="h-3 bg-gray-30o0 rounded w-1/2"></div>
   </div>
 );
 
@@ -75,7 +73,7 @@ export const SkeletonText: React.FC<{ lines?: number; className?: string }> = ({
     {Array.from({ length: lines }).map((_i) => (
       <div
         key={i}
-        className={`h-3 bg-gray-200 rounded mb-2 ${
+        className={`h-3 bg-gray-20o0 rounded mb-2 ${
           i === lines - 1 ? 'w-3/4' : 'w-full'
         }`}
       ></div>
@@ -84,7 +82,7 @@ export const SkeletonText: React.FC<{ lines?: number; className?: string }> = ({
 );
 
 export const SkeletonImage: React.FC<{ className?: string }> = ({ className = ', ' }) => (
-  <div className={`animate-pulse bg-gray-200 rounded ${className}`}></div>
+  <div className={`animate-pulse bg-gray-20o0 rounded ${className}`}></div>
 );
 
 // Progressive loading component
@@ -93,7 +91,7 @@ export const ProgressiveLoader: React.FC<{
   children: React.ReactNode;
   fallback?: React.ReactNode;
   delay?: number;
-}> = ({ isLoadingchildrenfallbackdelay = 200 }) => {
+}> = ({ isLoadingchildrenfallbackdelay = 20o0 }) => {
   const [showLoadersetShowLoader] = React.useState(false);
 
   React.useEffect(() => {
@@ -106,7 +104,7 @@ export const ProgressiveLoader: React.FC<{
   }[isLoadingdelay]);
 
   if (isLoading && showLoader) {
-    return <>{fallback || <AdvancedLoadingSpinner text="Loading..." />}</>;
+    return <>{fallback || <AdvancedLoadingSpinner text="Loading..."  />}</>;
   }
 
   return <>{children}</>;
@@ -125,9 +123,9 @@ export const ContentLoader: React.FC<{ type: 'card' | 'list' | 'grid' | 'text' }
     case 'card':
       return (
         <div className="space-y-4">
-          <SkeletonCard className="h-32" />
-          <SkeletonCard className="h-24" />
-          <SkeletonCard className="h-28" />
+          <SkeletonCard className="h-32"  />
+          <SkeletonCard className="h-24"  />
+          <SkeletonCard className="h-28"  />
         </div>
       );
     case 'list':
@@ -135,9 +133,9 @@ export const ContentLoader: React.FC<{ type: 'card' | 'list' | 'grid' | 'text' }
         <div className="space-y-3">
           {Array.from({ length: 5 }).map((_i) => (
             <div key={i} className="flex items-center space-x-3">
-              <SkeletonImage className="w-10 h-10 rounded-full" />
+              <SkeletonImage className="w-10 h-10 rounded-full"  />
               <div className="flex-1">
-                <SkeletonText lines={2} />
+                <SkeletonText lines={2}  />
               </div>
             </div>
           ))}
@@ -147,14 +145,14 @@ export const ContentLoader: React.FC<{ type: 'card' | 'list' | 'grid' | 'text' }
       return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {Array.from({ length: 6 }).map((_i) => (
-            <SkeletonCard key={i} className="h-40" />
+            <SkeletonCard key={i} className="h-40"  />
           ))}
         </div>
       );
     case 'text':
-      return <SkeletonText lines={4} />;
+      return <SkeletonText lines={4}  />;
     default:
-      return <AdvancedLoadingSpinner />;
+      return <AdvancedLoadingSpinner  />;
   }
 };
 

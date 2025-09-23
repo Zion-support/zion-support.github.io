@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["zion-website/src/*"]
+    },
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -28,37 +28,40 @@
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "pages/**/*.ts",
-    "pages/**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.tsx",
     "types/**/*.d.ts"
   ],
   "exclude": [
     "node_modules",
+    "**/node_modules/**",
+    ".next/cache",
+    "dist",
+    "out",
+    "coverage",
+    "build",
+    "public/build",
+    "server/**",
+    "zion-os/**",
+    "zion-os.disabled/**",
+    "zion-ai-assistant/**",
+    "zion-website/**",
+    "apps.backup/**",
+    "data_backup/**",
+    "backups/**",
+    "backup/**",
     "data_backup",
-    "backup",
-    "backups",
     "pages_backup_conflict",
-    "apps.backup",
     "corrupted-files-backup",
     "lib_backup",
     "**/*backup*",
     "**/*conflict*",
     "**/*temp*",
-    "zion-os",
-    "zion-os/**",
-    "server",
-    "server/**",
-    ".temp_backup_components",
-    ".temp_backup_components/**",
-    "automation",
-    "automation/**",
-    "src",
-    "src/**",
-    "utils",
-    "utils/**",
-    "zion-ai-assistant",
-    "zion-ai-assistant/**",
-    "zion-os.disabled",
-    "zion-os.disabled/**"
+    "app/**/*.disabled/**",
+    "src/pages_backup/**",
+    "src/pages.broken/**",
+    "src.broken/**",
+    "src.disabled/**",
+    "src.pages.disabled/**"
   ]
 }

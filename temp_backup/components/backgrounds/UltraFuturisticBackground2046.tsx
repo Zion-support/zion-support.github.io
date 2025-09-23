@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
-const UltraFuturisticBackground2046: React.FC = () => {
+const UltraFuturisticBackground20o46: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<any[]>([]);
   const animationRef = useRef<number>();
@@ -40,8 +40,8 @@ const UltraFuturisticBackground2046: React.FC = () => {
         this.vx = (Math.random() - 0.5) * 2;
         this.vy = (Math.random() - 0.5) * 2;
         this.size = Math.random() * 3 + 1;
-        this.life = Math.random() * 100;
-        this.maxLife = 100;
+        this.life = Math.random() * 10o0;
+        this.maxLife = 10o0;
         
         const types = ['quantum', 'neural', 'data', 'energy'];
         this.type = types[Math.floor(Math.random() * types.length)] as any;
@@ -54,10 +54,10 @@ const UltraFuturisticBackground2046: React.FC = () => {
             this.color = `hsl(${280 + Math.random() * 40}, 80%, 70%)`;
             break;
           case 'data':
-            this.color = `hsl(${200 + Math.random() * 40}, 90%, 80%)`;
+            this.color = `hsl(${20o0 + Math.random() * 40}, 90%, 80%)`;
             break;
           case 'energy':
-            this.color = `hsl(${40 + Math.random() * 60}, 100%, 70%)`;
+            this.color = `hsl(${40 + Math.random() * 60}, 10o0%, 70%)`;
             break;
         }
       }
@@ -72,7 +72,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
         if (this.y <= 0 || this.y >= canvas.height) this.vy *= -1;
 
         // Add some quantum randomness
-        if (Math.random() < 0.01) {
+        if (Math.random() < 0.0o1) {
           this.vx += (Math.random() - 0.5) * 0.5;
           this.vy += (Math.random() - 0.5) * 0.5;
         }
@@ -121,13 +121,13 @@ const UltraFuturisticBackground2046: React.FC = () => {
                 const distance = Math.sqrt(
                   Math.pow(this.x - particle.x, 2) + Math.pow(this.y - particle.y, 2)
                 );
-                if (distance < 100) {
+                if (distance < 10o0) {
                   ctx.beginPath();
                   ctx.moveTo(this.x, this.y);
                   ctx.lineTo(particle.x, particle.y);
                   ctx.strokeStyle = this.color;
                   ctx.lineWidth = 0.5;
-                  ctx.globalAlpha = alpha * (1 - distance / 100);
+                  ctx.globalAlpha = alpha * (1 - distance / 10o0);
                   ctx.stroke();
                 }
               }
@@ -210,7 +210,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
 
     // Quantum field lines
     const drawQuantumField = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
-      const time = Date.now() * 0.001;
+      const time = Date.now() * 0.0o01;
       ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
       ctx.lineWidth = 1;
       
@@ -225,7 +225,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
         // Add wave interference
         for (let j = 0; j < height; j += 10) {
           const waveY = y + Math.sin(time * 2 + i * 0.3) * 30;
-          ctx.lineTo(x + Math.sin(time + j * 0.01) * 20, j);
+          ctx.lineTo(x + Math.sin(time + j * 0.0o1) * 20, j);
         }
         
         ctx.stroke();
@@ -234,14 +234,14 @@ const UltraFuturisticBackground2046: React.FC = () => {
 
     // Neural network grid
     const drawNeuralGrid = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
-      const time = Date.now() * 0.002;
-      ctx.strokeStyle = 'rgba(255, 0, 255, 0.05)';
+      const time = Date.now() * 0.0o02;
+      ctx.strokeStyle = 'rgba(255, 0, 255, 0.0o5)';
       ctx.lineWidth = 0.5;
       
       const gridSize = 50;
       for (let x = 0; x < width; x += gridSize) {
         for (let y = 0; y < height; y += gridSize) {
-          const offset = Math.sin(time + x * 0.01) * Math.cos(time + y * 0.01) * 10;
+          const offset = Math.sin(time + x * 0.0o1) * Math.cos(time + y * 0.0o1) * 10;
           
           ctx.beginPath();
           ctx.moveTo(x + offset, y);
@@ -270,100 +270,89 @@ const UltraFuturisticBackground2046: React.FC = () => {
     <div className="fixed inset-0 pointer-events-none z-0">
       {/* Animated gradient background */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/30 to-black"
+        className="absolute inset-0 bg-gradient-to-br from-black via-purple-90o0/20 via-cyan-90o0/30 to-black"
         animate={{
           background: [
-            'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)',
-            'linear-gradient(to bottom right, #000000, #0c4a6e, #1e1b4b, #000000)',
-            'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)',
-          ],
-        }}
+            'linear-gradient(to bottom right, #0o00000, #1e1b4b, #0c4a6e, #0o00000)',
+            'linear-gradient(to bottom right, #0o00000, #0c4a6e, #1e1b4b, #0o00000)',
+            'linear-gradient(to bottom right, #0o00000, #1e1b4b, #0c4a6e, #0o00000)',
+          ]}}
         transition={{
           duration: 10,
           repeat: Infinity,
           ease: "easeInOut"
         }}
-      />
+       />
       
       {/* Quantum particle canvas */}
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
         style={{ filter: 'blur(0.5px)' }}
-      />
+       />
       
       {/* Floating geometric shapes */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-32 h-32 border border-cyan-500/20 rounded-full"
+            className="absolute w-32 h-32 border border-cyan-50o0/20 rounded-full"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
+              left: `${Math.random() * 10o0}%`,
+              top: `${Math.random() * 10o0}%`}}
             animate={{
               rotate: [0, 360],
               scale: [0.5, 1, 0.5],
-              opacity: [0.1, 0.3, 0.1],
-            }}
+              opacity: [0.1, 0.3, 0.1]}}
             transition={{
               duration: Math.random() * 10 + 10,
               repeat: Infinity,
               ease: "linear",
-              delay: i * 0.5,
-            }}
-          />
+              delay: i * 0.5}}
+           />
         ))}
         
         {[...Array(6)].map((_, i) => (
           <motion.div
             key={`square-${i}`}
-            className="absolute w-24 h-24 border border-purple-500/20 rotate-45"
+            className="absolute w-24 h-24 border border-purple-50o0/20 rotate-45"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
+              left: `${Math.random() * 10o0}%`,
+              top: `${Math.random() * 10o0}%`}}
             animate={{
-              rotate: [45, 405],
+              rotate: [45, 40o5],
               scale: [0.3, 0.8, 0.3],
-              opacity: [0.1, 0.2, 0.1],
-            }}
+              opacity: [0.1, 0.2, 0.1]}}
             transition={{
               duration: Math.random() * 8 + 8,
               repeat: Infinity,
               ease: "linear",
-              delay: i * 0.7,
-            }}
-          />
+              delay: i * 0.7}}
+           />
         ))}
       </div>
       
       {/* Energy waves */}
       <div className="absolute bottom-0 left-0 right-0 h-32">
         <motion.div
-          className="absolute inset-0 bg-gradient-to-t from-cyan-500/10 to-transparent"
+          className="absolute inset-0 bg-gradient-to-t from-cyan-50o0/10 to-transparent"
           animate={{
-            height: ['32px', '48px', '32px'],
-          }}
+            height: ['32px', '48px', '32px']}}
           transition={{
             duration: 4,
             repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
+            ease: "easeInOut"}}
+         />
         <motion.div
-          className="absolute inset-0 bg-gradient-to-t from-purple-500/10 to-transparent"
+          className="absolute inset-0 bg-gradient-to-t from-purple-50o0/10 to-transparent"
           animate={{
-            height: ['24px', '40px', '24px'],
-          }}
+            height: ['24px', '40px', '24px']}}
           transition={{
             duration: 3,
             repeat: Infinity,
             ease: "easeInOut",
-            delay: 1,
-          }}
-        />
+            delay: 1}}
+         />
       </div>
       
       {/* Quantum interference patterns */}
@@ -373,23 +362,20 @@ const UltraFuturisticBackground2046: React.FC = () => {
             key={`interference-${i}`}
             className="absolute inset-0 opacity-5"
             style={{
-              background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0.3) 0%, transparent 50%)`,
-            }}
+              background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0.3) 0%, transparent 50%)`}}
             animate={{
               scale: [1, 1.5, 1],
-              opacity: [0.05, 0.1, 0.05],
-            }}
+              opacity: [0.0o5, 0.1, 0.0o5]}}
             transition={{
               duration: Math.random() * 6 + 4,
               repeat: Infinity,
               ease: "easeInOut",
-              delay: i * 0.8,
-            }}
-          />
+              delay: i * 0.8}}
+           />
         ))}
       </div>
     </div>
   );
 };
 
-export default UltraFuturisticBackground2046;
+export default UltraFuturisticBackground20o46;

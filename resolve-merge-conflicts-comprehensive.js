@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
 import { execSync } from 'child_process';
 
 console.log('🔧 Resolving merge conflicts comprehensively...');
@@ -46,12 +44,10 @@ const resolveConflicts = (filePath) => {
       let content = fs.readFileSync(filePath, 'utf8');
       
       // Remove conflict markers and keep HEAD version
-      content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g, '$1');
+      content = content.replace(/
       
       // Clean up any remaining conflict markers
-      content = content.replace(/<<<<<<< HEAD\n?/g, '');
-      content = content.replace(/=======\n?/g, '');
-      content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
+      content = content.replace(/
       
       fs.writeFileSync(filePath, content);
       return true;

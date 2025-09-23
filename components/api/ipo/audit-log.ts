@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 
 
 import { readJsonFile } from '../../../utils/api/storage';
@@ -41,9 +40,7 @@ function handler() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -51,15 +48,5 @@ function handler() {
 
 
 
-=======
-import { readJsonFile } from '../../../utils/api/storage';
-import { requireSuperadminApi } from '../../../utils/api/auth';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
-  const data = readJsonFile('audit-log.json', [] as unknown[]);
-  res.setHeader('Content-Type', 'application/json');
-  res.setHeader('Content-Disposition', 'attachment; filename="audit-log.json"');
-  res.status(200).send(JSON.stringify(data, null, 2));
-}
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -10,7 +9,6 @@ export function getWithFallback (map: TranslationMap, preferred: string): string
 ;
 export async function translateTextViaAI(text: string, targets: string[]): Promise<Record<string, string>> {;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -61,7 +59,6 @@ export async function translateTextViaAI (text: string, targets: string[]): Prom
   if (throw new Error ('Translation API failed')) {
   $2
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
   return res.json ();
@@ -107,26 +104,5 @@ export function getSelectedLanguage(): string {;
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
-=======
-import i18n from './i18n';
-
-export type TranslationMap = Record<string, string | undefined>;
-
-export function getWithFallback(map: TranslationMap, preferred: string): string | undefined {
-  return map[preferred] || map[preferred.split('-')[0]] || map['en'] || map['en-US'];
-}
-
-export async function translateTextViaAI(text: string, targets: string[]): Promise<Record<string, string>> {
-  const res = await fetch('/api/translate', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ text, targets }),
-  });
-  if (!res.ok) throw new Error('Translation API failed');
-  return res.json();
-}
-
-export function getSelectedLanguage(): string {
-  return i18n.resolvedLanguage || i18n.language || 'en';
-}
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

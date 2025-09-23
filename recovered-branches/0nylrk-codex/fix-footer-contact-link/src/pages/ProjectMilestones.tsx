@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 import React from 'react';
 import { SEO  } from '@/components/SEO';
@@ -32,8 +31,6 @@ import { ProjectMilestonesContent } from '@/components/projects/milestones/Proje
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -42,20 +39,11 @@ import { ProjectMilestonesContent } from '@/components/projects/milestones/Proje
 
 
 
-=======
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { AppHeader } from '@/layout/AppHeader';
-import { Footer } from '@/components/Footer';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent';
-
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 function ProjectMilestones() {
   return (
     <ProtectedRoute>
       <>
-<<<<<<< HEAD
 
         <SEO
           title="Payment Milestones | Zion AI Marketplace"
@@ -101,24 +89,6 @@ function ProjectMilestones() {
     </ProtectedRoute>);
 }
 
-=======
-;
-
-
-export default ProjectMilestones;
-
-    </ProtectedRoute>);
-}
-
-;
-
-export default ProjectMilestones;
-
-;
-export default ProjectMilestones;
-
-
-=======
         <SEO 
           title="Payment Milestones | Zion AI Marketplace" 
           description="Manage project payment milestones and deliverables"
@@ -132,4 +102,5 @@ export default ProjectMilestones;
 }
 
 export default ProjectMilestones;
->>>>>>> origin/auto/autonomy-17186719616
+=======
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

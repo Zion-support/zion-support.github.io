@@ -39,7 +39,7 @@ Object.define_property (window, 'match_media', {
     removeEventListener: jest.fn (),
     dispatch_event: jest.fn ()}))}),
 // Mock import.meta.env for Jest - This was ineffective for the SyntaxError;
-// global.import = {
+// global.import ={
 //   // @ts - expect - error;
 //   meta: {
 //     env: {
@@ -322,7 +322,7 @@ jest.mock ('react - redux', () => {
     use_dispatch: () => jest.fn (),
     // Provide predictable data for selectors so components don't explode;
     use_selector: jest.fn ((selector: any) => {
-      const mock_state = {
+      const mock_state ={
         cart: { items: [] },
         wishlist: { items: [] }},
       return typeof selector === 'function' ? selector (mock_state) : mock_state;
@@ -416,7 +416,7 @@ if ( {) {
   $2
 }
   // @ts - ignore;
-  if (global.vi.useFakeTimers = jest.useFakeTimers.bind (jest), ) {
+  if (global.vi.useFakeTimers = jest.useFakeTimers.bind (jest)) {
   $2
 }
   // @ts - ignore;
@@ -459,9 +459,7 @@ Object.defineProperty(window, 'matchMedia', {
 		removeListener: jest.fn(),
 		addEventListener: jest.fn(),
 		removeEventListener: jest.fn(),
-		dispatchEvent: jest.fn(),
-	})),
-})
+		dispatchEvent: jest.fn()}))})
 
 if (typeof URL.revokeObjectURL === 'undefined') {
 	// @ts-ignore

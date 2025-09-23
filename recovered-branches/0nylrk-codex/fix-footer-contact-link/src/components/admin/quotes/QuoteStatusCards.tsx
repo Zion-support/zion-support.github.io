@@ -1,9 +1,7 @@
 
-import React from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
-<<<<<<< HEAD
 
 import React from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
@@ -12,15 +10,10 @@ import { Badge } from "@/components/ui/badge";
 interface QuoteStatusCardsProps {
   status_counts: {
 
-=======
-interface QuoteStatusCardsProps {
-  statusCounts: {
->>>>>>> origin/auto/autonomy-17186719616
     new: number;
     in_review: number;
     responded: number;
     accepted: number;
-<<<<<<< HEAD
 
 
 
@@ -47,14 +40,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
 
   return (
 
-=======
-    closed: number;
-  };
-}
-
-export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts }) => {
-  return (
->>>>>>> origin/auto/autonomy-17186719616
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
@@ -64,7 +49,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
           </CardTitle>
         </CardHeader>
         <CardContent>
-<<<<<<< HEAD
           <p className="text-sm text-zion-slate-light">
             Unreviewed quote requests
           </p>
@@ -78,20 +62,13 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
-=======
-          <p className="text-sm text-zion-slate-light">Unreviewed quote requests</p>
-        </CardContent>
-      </Card>
-      
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -100,7 +77,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
           </CardTitle>
         </CardHeader>
         <CardContent>
-<<<<<<< HEAD
           <p className="text-sm text-zion-slate-light">
             Quotes being evaluated
           </p>
@@ -114,7 +90,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -122,12 +97,7 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
-=======
-          <p className="text-sm text-zion-slate-light">Quotes being evaluated</p>
-        </CardContent>
-      </Card>
-      
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -136,7 +106,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
           </CardTitle>
         </CardHeader>
         <CardContent>
-<<<<<<< HEAD
           <p className="text-sm text-zion-slate-light">
             Quotes with responses sent
           </p>
@@ -150,7 +119,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -158,12 +126,7 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
-=======
-          <p className="text-sm text-zion-slate-light">Quotes with responses sent</p>
-        </CardContent>
-      </Card>
-      
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -172,7 +135,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
           </CardTitle>
         </CardHeader>
         <CardContent>
-<<<<<<< HEAD
           <p className="text-sm text-zion-slate-light">
             Successfully converted quotes
           </p>
@@ -186,7 +148,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -194,12 +155,7 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
-=======
-          <p className="text-sm text-zion-slate-light">Successfully converted quotes</p>
-        </CardContent>
-      </Card>
-      
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -208,7 +164,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
           </CardTitle>
         </CardHeader>
         <CardContent>
-<<<<<<< HEAD
           <p className="text-sm text-zion-slate-light">
             Finalized or declined quotes
           </p>
@@ -272,7 +227,6 @@ export const QuoteStatusCards: React.FC < QuoteStatusCardsProps> = ({
 
           <p className="text-sm text-zion-slate-light">;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       <Card className="bg - zion - blue - dark border border - zion - blue - light">;
@@ -341,11 +295,5 @@ export const QuoteStatusCards: React.FC < QuoteStatusCardsProps> = ({
 
 export default QuoteStatusCards;
 
-=======
-          <p className="text-sm text-zion-slate-light">Finalized or declined quotes</p>
-        </CardContent>
-      </Card>
-    </div>
-  );
-};
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

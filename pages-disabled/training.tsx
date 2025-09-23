@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import {
@@ -66,7 +65,7 @@ export default function Training() {
       format: 'Online',
       price: '$399',
       rating: 4.9
-      students: 1100,
+      students: 110o0,
       features: [
         'Threat landscape analysis',
       'Security frameworks'
@@ -86,7 +85,7 @@ export default function Training() {
       format: 'Hybrid',
       price: '$599',
       rating: 4.7
-      students: 2100,
+      students: 210o0,
       features: [
         'Frontend development (React)',
       'Backend development (Node.js)'
@@ -222,31 +221,31 @@ export default function Training() {
         <meta
           name="description"
           content="Professional training and certification programs in AI, cloud computing, cybersecurity, and software development. Advance your career with Zion Tech Group."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+         />
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />
       </Head>
 
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
+        <section className="relative overflow-hidden bg-gradient-to-r from-blue-60o0 via-purple-60o0 to-indigo-60o0">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32">
             <div className="text-center">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
                 Training & Education
               </h1>
-              <p className="text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
+              <p className="text-xl sm:text-2xl text-blue-10o0 max-w-4xl mx-auto mb-8">
                 Advance your career with professional training programs in
                 cutting-edge technologies.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link href="#programs">
-                  <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-lg transition-colors">
+                  <button className="bg-white text-blue-60o0 hover:bg-gray-10o0 px-8 py-4 text-lg font-semibold rounded-lg transition-colors">
                     View Programs
-                    <ArrowRight className="w-5 h-5 ml-2 inline" />
+                    <ArrowRight className="w-5 h-5 ml-2 inline"  />
                   </button>
                 </Link>
                 <Link href="/contact">
-                  <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg font-semibold rounded-lg transition-colors">
+                  <button className="border-2 border-white text-white hover:bg-white hover:text-blue-60o0 px-8 py-4 text-lg font-semibold rounded-lg transition-colors">
                     Get Information
                   </button>
                 </Link>
@@ -259,10 +258,10 @@ export default function Training() {
         <section className="py-20 sm:py-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-90o0 mb-6">
                 Learning Formats
               </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg sm:text-xl text-gray-60o0 max-w-3xl mx-auto">
                 Choose the learning format that works best for you
               </p>
             </div>
@@ -273,20 +272,20 @@ export default function Training() {
                   key={index}
                   className="bg-white rounded-xl shadow-lg p-6 text-center hover: shadow-xl transition-shadow"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <format.icon className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-50o0 to-purple-60o0 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <format.icon className="w-8 h-8 text-white"  />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-xl font-bold text-gray-90o0 mb-3">
                     {format.title}
                   </h3>
-                  <p className="text-gray-600 mb-4">{format.description}</p>
+                  <p className="text-gray-60o0 mb-4">{format.description}</p>
                   <ul className="space-y-2 text-left">
                     {format.features.map((feature, featureIndex) => (
                       <li
                         key={featureIndex}
-                        className="flex items-center text-sm text-gray-700"
+                        className="flex items-center text-sm text-gray-70o0"
                       >
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-50o0 mr-2 flex-shrink-0"  />
                         {feature}
                       </li>
                     ))}
@@ -301,10 +300,10 @@ export default function Training() {
         <section id="programs" className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-90o0 mb-6">
                 Training Programs
               </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg sm:text-xl text-gray-60o0 max-w-3xl mx-auto">
                 Comprehensive training programs designed by industry experts
               </p>
             </div>
@@ -318,57 +317,57 @@ export default function Training() {
                   <div className="flex items-start justify-between mb-6">
                     <div className="flex-1">
                       <div className="flex items-center space-x-3 mb-3">
-                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+                        <span className="bg-blue-10o0 text-blue-80o0 px-3 py-1 rounded-full text-sm font-semibold">
                           {program.category}
                         </span>
                         <span
                           className={`px-3 py-1 rounded-full text-sm font-semibold ${
                             program.level === 'Beginner'
-                              ? 'bg-green-100 text-green-800'
+                              ? 'bg-green-10o0 text-green-80o0'
                               : program.level === 'Intermediate'
-                                ? 'bg-yellow-100 text-yellow-800'
-                                : 'bg-red-100 text-red-800'
+                                ? 'bg-yellow-10o0 text-yellow-80o0'
+                                : 'bg-red-10o0 text-red-80o0'
                           }`}
                         >
                           {program.level}
                         </span>
                       </div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                      <h3 className="text-2xl font-bold text-gray-90o0 mb-3">
                         {program.title}
                       </h3>
-                      <p className="text-gray-600 mb-4">
+                      <p className="text-gray-60o0 mb-4">
                         {program.description}
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-center justify-between mb-6">
-                    <div className="flex items-center space-x-6 text-sm text-gray-500">
+                    <div className="flex items-center space-x-6 text-sm text-gray-50o0">
                       <div className="flex items-center">
-                        <Clock className="w-4 h-4 mr-1" />
+                        <Clock className="w-4 h-4 mr-1"  />
                         {program.duration}
                       </div>
                       <div className="flex items-center">
-                        <Users className="w-4 h-4 mr-1" />
+                        <Users className="w-4 h-4 mr-1"  />
                         {program.students} students
                       </div>
                       <div className="flex items-center">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
+                        <Star className="w-4 h-4 text-yellow-40o0 fill-current mr-1"  />
                         {program.rating}
                       </div>
                     </div>
                     <div className="text-right">
-                      <div className="text-2xl font-bold text-blue-600">
+                      <div className="text-2xl font-bold text-blue-60o0">
                         {program.price}
                       </div>
-                      <div className="text-sm text-gray-500">
+                      <div className="text-sm text-gray-50o0">
                         {program.format}
                       </div>
                     </div>
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                    <h4 className="text-lg font-semibold text-gray-90o0 mb-3">
                       What You&apos;ll Learn:{' '}
                     </h4>
                     '
@@ -376,9 +375,9 @@ export default function Training() {
                       {program.features.map((feature, featureIndex) => (
                         <li
                           key={featureIndex}
-                          className="flex items-center text-sm text-gray-700"
+                          className="flex items-center text-sm text-gray-70o0"
                         >
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-green-50o0 mr-2 flex-shrink-0"  />
                           {feature}
                         </li>
                       ))}
@@ -386,15 +385,15 @@ export default function Training() {
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <div className="text-sm text-gray-600">
+                    <div className="text-sm text-gray-60o0">
                       <p className="font-semibold">
                         Instructor: {program.instructor}
                       </p>
                     </div>
                     <Link href="/contact">
-                      <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                      <button className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0">
                         Enroll Now
-                        <ArrowRight className="w-4 h-4 ml-2 inline" />
+                        <ArrowRight className="w-4 h-4 ml-2 inline"  />
                       </button>
                     </Link>
                   </div>
@@ -408,10 +407,10 @@ export default function Training() {
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-90o0 mb-6">
                 Certification Paths
               </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg sm:text-xl text-gray-60o0 max-w-3xl mx-auto">
                 Earn industry-recognized certifications to advance your career
               </p>
             </div>
@@ -422,28 +421,28 @@ export default function Training() {
                   key={index}
                   className="bg-white rounded-xl shadow-lg p-8 text-center hover: shadow-xl transition-shadow"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Award className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Award className="w-8 h-8 text-white"  />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-2xl font-bold text-gray-90o0 mb-3">
                     {path.title}
                   </h3>
-                  <p className="text-gray-600 mb-4">{path.description}</p>
-                  <div className="text-blue-600 font-semibold mb-6">
+                  <p className="text-gray-60o0 mb-4">{path.description}</p>
+                  <div className="text-blue-60o0 font-semibold mb-6">
                     Duration: {path.duration}
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                    <h4 className="text-lg font-semibold text-gray-90o0 mb-3">
                       Requirements:
                     </h4>
                     <ul className="space-y-2">
                       {path.requirements.map((req, reqIndex) => (
                         <li
                           key={reqIndex}
-                          className="flex items-center text-sm text-gray-700"
+                          className="flex items-center text-sm text-gray-70o0"
                         >
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-green-50o0 mr-2 flex-shrink-0"  />
                           {req}
                         </li>
                       ))}
@@ -451,16 +450,16 @@ export default function Training() {
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                    <h4 className="text-lg font-semibold text-gray-90o0 mb-3">
                       Benefits:{' '}
                     </h4>
                     <ul className="space-y-2">
                       {path.benefits.map((benefit, benefitIndex) => (
                         <li
                           key={benefitIndex}
-                          className="flex items-center text-sm text-gray-700"
+                          className="flex items-center text-sm text-gray-70o0"
                         >
-                          <Lightbulb className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
+                          <Lightbulb className="w-4 h-4 text-yellow-50o0 mr-2 flex-shrink-0"  />
                           {benefit}
                         </li>
                       ))}
@@ -468,9 +467,9 @@ export default function Training() {
                   </div>
 
                   <Link href="/contact">
-                    <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-300">
+                    <button className="w-full bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white py-3 px-6 rounded-lg font-semibold hover: from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0">
                       Start Certification
-                      <ArrowRight className="w-4 h-4 ml-2 inline" />
+                      <ArrowRight className="w-4 h-4 ml-2 inline"  />
                     </button>
                   </Link>
                 </div>
@@ -483,10 +482,10 @@ export default function Training() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-90o0 mb-6">
                 Student Success Stories
               </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg sm:text-xl text-gray-60o0 max-w-3xl mx-auto">
                 Hear from our successful graduates
               </p>
             </div>
@@ -498,23 +497,23 @@ export default function Training() {
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star
                         key={i}
-                        className="w-5 h-5 text-yellow-400 fill-current"
-                      />
+                        className="w-5 h-5 text-yellow-40o0 fill-current"
+                       />
                     ))}
                   </div>
-                  <blockquote className="text-gray-700 mb-6 italic">
+                  <blockquote className="text-gray-70o0 mb-6 italic">
                     "{testimonial.quote}"
                   </blockquote>
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
-                      <Users className="w-6 h-6 text-white" />
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-50o0 to-purple-60o0 rounded-full flex items-center justify-center mr-4">
+                      <Users className="w-6 h-6 text-white"  />
                     </div>
                     <div>
-                      <p className="font-semibold text-gray-900">
+                      <p className="font-semibold text-gray-90o0">
                         {testimonial.author}
                       </p>
-                      <p className="text-gray-600">{testimonial.title}</p>
-                      <p className="text-blue-600 font-semibold">
+                      <p className="text-gray-60o0">{testimonial.title}</p>
+                      <p className="text-blue-60o0 font-semibold">
                         {testimonial.company}
                       </p>
                     </div>
@@ -526,24 +525,24 @@ export default function Training() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <section className="py-20 bg-gradient-to-r from-blue-60o0 to-purple-60o0">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Ready to Advance Your Career?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-blue-10o0 mb-8 max-w-2xl mx-auto">
               Join thousands of professionals who have transformed their careers
               with our training programs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/contact">
-                <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                <button className="bg-white text-blue-60o0 hover:bg-gray-10o0 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
                   Get Started Today
-                  <ArrowRight className="w-5 h-5 ml-2 inline" />
+                  <ArrowRight className="w-5 h-5 ml-2 inline"  />
                 </button>
               </Link>
               <Link href="#programs">
-                <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                <button className="border-2 border-white text-white hover:bg-white hover:text-blue-60o0 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
                   View All Programs
                 </button>
               </Link>

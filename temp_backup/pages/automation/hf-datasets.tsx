@@ -8,12 +8,12 @@ export default function HfDatasetsPage() {
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
         <h1 className="text-3xl font-bold">Hugging Face Datasets</h1>
-        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>
+        <p className="mt-2 text-sm text-gray-60o0 dark:text-gray-30o0">Updated at {data?.generatedAt || '—'}</p>
         <ul className="mt-6 space-y-4">
           {items.map((it, idx) => (
-            <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
+            <li key={idx} className="p-4 border border-gray-20o0 dark:border-gray-80o0 rounded-lg">
               <a className="font-medium underline" href={`https://huggingface.co/datasets/${it.id}`} target="_blank" rel="noreferrer">{it.id}</a>
-              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Downloads {it.downloads} · Likes {it.likes}</div>
+              <div className="mt-1 text-xs text-gray-50o0 dark:text-gray-40o0">Downloads {it.downloads} · Likes {it.likes}</div>
             </li>
           ))}
         </ul>

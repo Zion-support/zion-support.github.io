@@ -1,17 +1,13 @@
-
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
+import { serve } from 'https://deno.land/std@0.168.0/http/server.ts';
+import 'https://deno.land/x/xhr@0.1.0/mod.ts';
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
-<<<<<<< HEAD
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
-=======
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+  'Access-Control-Allow-Headers':
+    'authorization, x-client-info, apikey, content-type',
 };
->>>>>>> origin/auto/autonomy-17186719616
 
-serve(async (req) => {
+serve(async req => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
@@ -26,7 +22,7 @@ serve(async (req) => {
 
     // Parse request body
     const { scope, startDate, endDate, projectType } = await req.json();
-    
+
     // Create prompt for OpenAI
     const prompt = `
     You are an expert project manager who specializes in breaking down projects into clear milestones.
@@ -56,25 +52,15 @@ serve(async (req) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-<<<<<<< HEAD
-        'Authorization': `Bearer ${apiKey}`},
-=======
-        'Authorization': `Bearer ${apiKey}`,
+        Authorization: `Bearer ${apiKey}`,
       },
->>>>>>> origin/auto/autonomy-17186719616
       body: JSON.stringify({
         model: 'gpt-4o-mini',
         messages: [
           {
             role: 'system',
-<<<<<<< HEAD
-            content: 'You are a project management expert that breaks work into appropriate milestones.'},
-          {
-            role: 'user',
-            content: prompt}],
-        temperature: 0.7})});
-=======
-            content: 'You are a project management expert that breaks work into appropriate milestones.',
+            content:
+              'You are a project management expert that breaks work into appropriate milestones.',
           },
           {
             role: 'user',
@@ -84,10 +70,9 @@ serve(async (req) => {
         temperature: 0.7,
       }),
     });
->>>>>>> origin/auto/autonomy-17186719616
 
     const data = await response.json();
-    
+
     if (!response.ok) {
       throw new Error(data.error?.message || 'Failed to generate milestones');
     }
@@ -97,14 +82,10 @@ serve(async (req) => {
       const content = data.choices[0].message.content.trim();
       // Try to parse the response as JSON
       const milestones = JSON.parse(content);
-      
+
       return new Response(JSON.stringify({ milestones }), {
-<<<<<<< HEAD
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
-=======
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       });
->>>>>>> origin/auto/autonomy-17186719616
     } catch (parseError) {
       // If parsing fails, try to extract JSON from the text
       console.error('Failed to parse AI response as JSON:', parseError);
@@ -113,15 +94,13 @@ serve(async (req) => {
   } catch (error) {
     console.error('Error generating milestones:', error);
     return new Response(
-      JSON.stringify({ error: error.message || 'Failed to generate milestones' }),
-      { 
-        status: 500, 
-<<<<<<< HEAD
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
-=======
+      JSON.stringify({
+        error: error.message || 'Failed to generate milestones',
+      }),
+      {
+        status: 500,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       }
->>>>>>> origin/auto/autonomy-17186719616
     );
   }
 });

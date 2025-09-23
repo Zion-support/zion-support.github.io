@@ -7,14 +7,14 @@ import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
-import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
-import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
-import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3';
-import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
-import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
+import { innovative20o26MicroSaasServicesV2 } from '../data/innovative-20o26-micro-saas-v2';
+import { emergingTech20o26ServicesV2 } from '../data/emerging-tech-20o26-services-v2';
+import { enterpriseIT20o26ServicesV2 } from '../data/enterprise-it-20o26-services-v2';
+import { innovative20o26AIServicesV3 } from '../data/innovative-20o26-ai-services-v3';
+import { emergingTech20o26ServicesV3 } from '../data/emerging-tech-20o26-services-v3';
+import { enterpriseIT20o26ServicesV3 } from '../data/enterprise-it-20o26-services-v3';
 
-export default function Services2026ShowcaseEnhancedPage() {
+export default function Services20o26ShowcaseEnhancedPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
@@ -55,33 +55,33 @@ export default function Services2026ShowcaseEnhancedPage() {
     return 'default';
   };
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
 
-  // Combine all 2026 services including new ones
-  const all2026Services = [
-    ...innovative2026MicroSaasServicesV2,
-    ...emergingTech2026ServicesV2,
-    ...enterpriseIT2026ServicesV2,
-    ...innovative2026AIServicesV3,
-    ...emergingTech2026ServicesV3,
-    ...enterpriseIT2026ServicesV3
+  // Combine all 20o26 services including new ones
+  const all20o26Services = [
+    ...innovative20o26MicroSaasServicesV2,
+    ...emergingTech20o26ServicesV2,
+    ...enterpriseIT20o26ServicesV2,
+    ...innovative20o26AIServicesV3,
+    ...emergingTech20o26ServicesV3,
+    ...enterpriseIT20o26ServicesV3
   ];
 
-  // Enhanced categories for 2026
+  // Enhanced categories for 20o26
   const categories = [
-    { id: 'all', name: 'All 2026 Services', icon: '🚀', count: all2026Services.length },
-    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: all2026Services.filter(s => s.category.includes('AI')).length },
-    { id: 'quantum', name: 'Quantum & Emerging Tech', icon: '⚛️', count: all2026Services.filter(s => s.category.includes('Quantum') || s.category.includes('Emerging')).length },
-    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: all2026Services.filter(s => s.category.includes('Enterprise') || s.category.includes('IT')).length },
-    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: all2026Services.filter(s => s.category.includes('SaaS')).length },
-    { id: 'healthcare', name: 'Healthcare & Biotech', icon: '🏥', count: all2026Services.filter(s => s.category.includes('Healthcare') || s.category.includes('Biotech')).length },
-    { id: 'financial', name: 'Financial Technology', icon: '💰', count: all2026Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length },
-    { id: 'manufacturing', name: 'Manufacturing & IoT', icon: '🏭', count: all2026Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length }
+    { id: 'all', name: 'All 20o26 Services', icon: '🚀', count: all20o26Services.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: all20o26Services.filter(s => s.category.includes('AI')).length },
+    { id: 'quantum', name: 'Quantum & Emerging Tech', icon: '⚛️', count: all20o26Services.filter(s => s.category.includes('Quantum') || s.category.includes('Emerging')).length },
+    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: all20o26Services.filter(s => s.category.includes('Enterprise') || s.category.includes('IT')).length },
+    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: all20o26Services.filter(s => s.category.includes('SaaS')).length },
+    { id: 'healthcare', name: 'Healthcare & Biotech', icon: '🏥', count: all20o26Services.filter(s => s.category.includes('Healthcare') || s.category.includes('Biotech')).length },
+    { id: 'financial', name: 'Financial Technology', icon: '💰', count: all20o26Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length },
+    { id: 'manufacturing', name: 'Manufacturing & IoT', icon: '🏭', count: all20o26Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length }
   ];
 
   const priceRanges = [
@@ -103,7 +103,7 @@ export default function Services2026ShowcaseEnhancedPage() {
 
   // Filter and sort services
   const filteredServices = useMemo(() => {
-    let filtered = all2026Services;
+    let filtered = all20o26Services;
 
     // Search filter
     if (searchTerm) {
@@ -137,10 +137,10 @@ export default function Services2026ShowcaseEnhancedPage() {
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
         const price = parseInt(service.price.replace(/[^0-9]/g, ''));
-        if (selectedPriceRange === 'low') return price < 1000;
-        if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000;
-        if (selectedPriceRange === 'high') return price >= 5000 && price < 20000;
-        if (selectedPriceRange === 'premium') return price >= 20000;
+        if (selectedPriceRange === 'low') return price < 10o00;
+        if (selectedPriceRange === 'medium') return price >= 10o00 && price < 50o00;
+        if (selectedPriceRange === 'high') return price >= 50o00 && price < 20o000;
+        if (selectedPriceRange === 'premium') return price >= 20o000;
         return true;
       });
     }
@@ -164,51 +164,45 @@ export default function Services2026ShowcaseEnhancedPage() {
     });
 
     return filtered;
-  }, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
+  }, [all20o26Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
 
   // Service statistics
-  const serviceStats = {
-    totalServices: all2026Services.length,
-    aiServices: all2026Services.filter(s => s.category.includes('AI')).length,
-    quantumServices: all2026Services.filter(s => s.category.includes('Quantum')).length,
-    enterpriseServices: all2026Services.filter(s => s.category.includes('Enterprise') || s.category.includes('IT')).length,
-    microSaasServices: all2026Services.filter(s => s.category.includes('SaaS')).length,
-    healthcareServices: all2026Services.filter(s => s.category.includes('Healthcare') || s.category.includes('Biotech')).length,
-    financialServices: all2026Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length,
-    manufacturingServices: all2026Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length
+  const serviceStats ={
+    totalServices: all20o26Services.length,
+    aiServices: all20o26Services.filter(s => s.category.includes('AI')).length,
+    quantumServices: all20o26Services.filter(s => s.category.includes('Quantum')).length,
+    enterpriseServices: all20o26Services.filter(s => s.category.includes('Enterprise') || s.category.includes('IT')).length,
+    microSaasServices: all20o26Services.filter(s => s.category.includes('SaaS')).length,
+    healthcareServices: all20o26Services.filter(s => s.category.includes('Healthcare') || s.category.includes('Biotech')).length,
+    financialServices: all20o26Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length,
+    manufacturingServices: all20o26Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length
   };
 
   return (
     <UltraFuturisticBackground variant="holographic" intensity="high">
       <div className="min-h-screen">
         <Head>
-          <title>Enhanced 2026 Services Showcase - Zion Tech Group</title>
-          <meta name="description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services. Transform your business with cutting-edge technology." />
-          <meta name="keywords" content="2026 services, micro SAAS, AI services, quantum computing, enterprise IT, blockchain, 5G networks, edge computing, zero trust security" />
-          <link rel="icon" href="/favicon.svg" />
+          <title>Enhanced 20o26 Services Showcase - Zion Tech Group</title>
+          <meta name="description" content="Discover our comprehensive collection of innovative 20o26 micro SAAS services, AI solutions, quantum computing, and enterprise IT services. Transform your business with cutting-edge technology."  />
+          <meta name="keywords" content="20o26 services, micro SAAS, AI services, quantum computing, enterprise IT, blockchain, 5G networks, edge computing, zero trust security"  />
+          <link rel="icon" href="/favicon.svg"  />
           
           {/* Open Graph */}
+          <meta property="og:title" content="Enhanced 20o26 Services Showcase - Zion Tech Group"  />
+          <meta property="og:description" content="Discover our comprehensive collection of innovative 20o26 micro SAAS services, AI solutions, quantum computing, and enterprise IT services."  />
+          <meta property="og:type" content="website"  />
           <meta property="og:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
           <meta property="og:type" content="website" />
-<<<<<<< HEAD
           <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase-enhanced/" />
           <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
           <meta property="og:image:type" content="image/svg+xml" />
-=======
-          <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase-enhanced" />
-          <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
->>>>>>> origin/auto/autonomy-17186719616
           
           {/* Twitter */}
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
           <meta name="twitter:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
-<<<<<<< HEAD
           <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
-=======
-          <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
->>>>>>> origin/auto/autonomy-17186719616
         </Head>
 
         {/* Enhanced Header Section */}

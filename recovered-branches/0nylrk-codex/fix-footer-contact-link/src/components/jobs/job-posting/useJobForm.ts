@@ -43,15 +43,8 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
       is_remote: false,
       category: '',
       status: '',
-<<<<<<< HEAD
       external_apply_link: ''},
     mode: "onChange"});
-=======
-      external_apply_link: '',
-    },
-    mode: "onChange",
-  });
->>>>>>> origin/auto/autonomy-17186719616
 
   // Function to create/update jobs that will be implemented by parent component
   const submitJob = async (values: JobSchemaType) => {
@@ -61,27 +54,14 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
       return;
     }
 
-<<<<<<< HEAD
 
-=======
-    setIsLoading(true);
-
-    try {
-      const publishedDate = startDate ? startDate.toString() : '';
-      const expiryDate = endDate ? endDate.toString() : '';
->>>>>>> origin/auto/autonomy-17186719616
 
       const jobData = {
         ...values,
         published_date: publishedDate,
         expiry_date: expiryDate,
         is_remote: isRemote,
-<<<<<<< HEAD
         user_id: user.id};
-=======
-        user_id: user.id,
-      };
->>>>>>> origin/auto/autonomy-17186719616
 
       if (onSuccess) {
         onSuccess();

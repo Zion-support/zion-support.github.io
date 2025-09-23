@@ -5,13 +5,13 @@ export default function ProductPage() {
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Integration Hub - Zion Tech Group</title>
-        <meta name="description" content="Integration Hub - The ultimate solution for modern businesses seeking innovation and efficiency." />
-        <meta name="keywords" content="integration hub, product, technology, innovation, business solution" />
-        <link rel="canonical" href="https://ziontechgroup.com/products/rapid-1755541926378-y1q26k" />
+        <meta name="description" content="Integration Hub - The ultimate solution for modern businesses seeking innovation and efficiency."  />
+        <meta name="keywords" content="integration hub, product, technology, innovation, business solution"  />
+        <link rel="canonical" href="https://ziontechgroup.com/products/rapid-1755541926378-y1q26k"  />
       
-        <meta property="og:title" content="Integration Hub" />
-        <meta property="og:description" content="Integration Hub — automatically suggested description." />
-        <meta name="twitter:card" content="summary_large_image" /></Head>
+        <meta property="og:title" content="Integration Hub"  />
+        <meta property="og:description" content="Integration Hub — automatically suggested description."  />
+        <meta name="twitter:card" content="summary_large_image"  /></Head>
       <main className="container mx-auto px-6 py-12 prose prose-invert">
         <h1 className="text-4xl font-extrabold text-center mb-8">Integration Hub</h1>
         
@@ -50,7 +50,7 @@ export default function ProductPage() {
           </p>
           <a 
             href="https://ziontechgroup.com/demo" 
-            className="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+            className="inline-block bg-green-60o0 hover:bg-green-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors"
           >
             Request Demo
           </a>
@@ -60,10 +60,7 @@ export default function ProductPage() {
   );
 }
 
-
-
-
-<Link href="/products/rapid-1755539340460-oastx4" className="internal-link">Related Content</Link>
+<Link href="/products/rapid-1755539340o460-oastx4" className="internal-link">Related Content</Link>
 
 <Link href="/products/rapid-1755539347155-oli1gc" className="internal-link">Related Content</Link>
 

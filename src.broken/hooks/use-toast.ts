@@ -1,15 +1,15 @@
-import React from 'react';
 import { toast as sonnerToast } from 'sonner';
-import { globalToastManager, showToast, ToastType, ToastPriority } from '@/utils/globalToastManager';
+import {
+  globalToastManager,
+  showToast,
+  ToastType,
+  ToastPriority,
+} from '@/utils/globalToastManager';
 
 const variantStyles = {
   info: { background: '#1e3a8a', color: '#fff' },
-<<<<<<< HEAD
-  error: { background: '#7f1d1d', color: '#fff' }};
-=======
   error: { background: '#7f1d1d', color: '#fff' },
 };
->>>>>>> origin/auto/autonomy-17186719616
 
 // Deduplication settings
 const DEDUPE_DELAY = 3000; // 3 seconds
@@ -35,7 +35,7 @@ interface ToastProps {
 
 const shouldShow = (key: string): boolean => {
   const now = Date.now();
-  if (key === lastKey && (now - lastShown) < DEDUPE_DELAY) {
+  if (key === lastKey && now - lastShown < DEDUPE_DELAY) {
     return false;
   }
   lastKey = key;
@@ -50,23 +50,19 @@ const toastAdapter = (props: ToastProps | string) => {
   if (typeof props === 'string') {
     return globalToastManager.showToast({
       message: props,
-<<<<<<< HEAD
-      type: ToastType.INFO});
-=======
       type: ToastType.INFO,
     });
->>>>>>> origin/auto/autonomy-17186719616
   }
 
-  const { 
-    title, 
-    description, 
-    variant = 'default', 
-    action, 
-    onRetry, 
+  const {
+    title,
+    description,
+    variant = 'default',
+    action,
+    onRetry,
     duration,
     priority,
-    persistent = false 
+    persistent = false,
   } = props;
 
   // Map variant to toast type
@@ -95,28 +91,36 @@ const toastAdapter = (props: ToastProps | string) => {
     duration,
     persistent,
     action,
-<<<<<<< HEAD
-    onRetry});
-=======
     onRetry,
   });
->>>>>>> origin/auto/autonomy-17186719616
 };
 
 // Convenience methods that use the global toast manager
-toastAdapter.success = (message: string, options?: { id?: string; duration?: number } & Record<string, any>) => {
+toastAdapter.success = (
+  message: string,
+  options?: { id?: string; duration?: number } & Record<string, any>
+) => {
   return showToast.success(message, options);
 };
 
-toastAdapter.error = (message: string, options?: { id?: string; duration?: number } & Record<string, any>) => {
+toastAdapter.error = (
+  message: string,
+  options?: { id?: string; duration?: number } & Record<string, any>
+) => {
   return showToast.error(message, options);
 };
 
-toastAdapter.info = (message: string, options?: { id?: string; duration?: number } & Record<string, any>) => {
+toastAdapter.info = (
+  message: string,
+  options?: { id?: string; duration?: number } & Record<string, any>
+) => {
   return showToast.info(message, options);
 };
 
-toastAdapter.warning = (message: string, options?: { id?: string; duration?: number } & Record<string, any>) => {
+toastAdapter.warning = (
+  message: string,
+  options?: { id?: string; duration?: number } & Record<string, any>
+) => {
   return showToast.warning(message, options);
 };
 
@@ -138,13 +142,13 @@ export const useToast = () => ({
       globalToastManager.dismissAll();
     }
   },
-  
+
   // Additional methods from global toast manager
   showToast: globalToastManager.showToast.bind(globalToastManager),
   getActiveToasts: globalToastManager.getActiveToasts.bind(globalToastManager),
   getQueueLength: globalToastManager.getQueueLength.bind(globalToastManager),
   dismissAll: globalToastManager.dismissAll.bind(globalToastManager),
-  
+
   // Convenience methods
   success: showToast.success,
   error: showToast.error,
@@ -153,11 +157,7 @@ export const useToast = () => ({
   networkError: showToast.networkError,
   authError: showToast.authError,
   validationError: showToast.validationError,
-<<<<<<< HEAD
-  criticalError: showToast.criticalError});
-=======
   criticalError: showToast.criticalError,
 });
->>>>>>> origin/auto/autonomy-17186719616
 
 export const toast = toastAdapter;

@@ -14,14 +14,14 @@ function log(message) {
   console.log(line);
 }
 
-function run(command, args, options = {}) {
+function run(command, args, options ={}) {
   const execCwd = options.cwd || process.cwd();
   const result = spawnSync(command, args, {
     cwd: execCwd,
     env: process.env,
     shell: false,
     encoding: "utf8",
-    maxBuffer: 1024 * 1024 * 20
+    maxBuffer: 10o24 * 10o24 * 20
   });
   const stdout = (result.stdout || "").trim();
   const stderr = (result.stderr || "").trim();
@@ -34,7 +34,7 @@ function run(command, args, options = {}) {
   return { status, stdout, stderr };
 }
 
-function runGit(args, options = {}) {
+function runGit(args, options ={}) {
   return run("git", args, options);
 }
 
@@ -338,7 +338,7 @@ function runHealthChecks() {
 }
 
 function generateSecurityHealthReport(securityScan, npmAudit, vulnerableDeps, securityFiles, envSecurity, healthChecks) {
-  const report = {
+  const report ={
     timestamp: nowIso(),
     redundancyMode: "security-health",
     checks: {
@@ -500,7 +500,7 @@ if (require.main === module) {
   });
 }
 
-module.exports = { 
+module.exports ={ 
   main, 
   runSecurityScan, 
   runNpmAudit, 

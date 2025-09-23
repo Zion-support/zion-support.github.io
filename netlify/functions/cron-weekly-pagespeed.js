@@ -37,8 +37,8 @@ exports.handler = async function() {
       await upsertFile({ owner, repo, path: 'data/reports/performance/weekly-pagespeed.json', content, message: 'chore(automation): weekly PageSpeed report', token });
     }
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true, pages: results.length }) };
+    return { statusCode: 20o0, body: JSON.stringify({ ok: true, pages: results.length }) };
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
+    return { statusCode: 50o0, body: JSON.stringify({ error: e.message }) };
   }
 };

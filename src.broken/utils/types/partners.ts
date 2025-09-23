@@ -1,10 +1,10 @@
 export type UseCaseType =
-  | "Education Partnership"
-  | "Workforce Development"
-  | "Token Integration"
-  | "Custom Marketplace Instance";
+  | 'Education Partnership'
+  | 'Workforce Development'
+  | 'Token Integration'
+  | 'Custom Marketplace Instance';
 
-export type PartnerStatus = "pending" | "approved" | "rejected";
+export type PartnerStatus = 'pending' | 'approved' | 'rejected';
 
 export interface PartnerPointOfContact {
   name: string;

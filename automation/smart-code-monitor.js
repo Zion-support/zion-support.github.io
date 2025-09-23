@@ -25,7 +25,7 @@ class SmartCodeMonitor {
     // Pattern recognition configuration
     this.patternLearningEnabled = process.env.PATTERN_LEARNING === 'enabled';
     this.minConfidenceScore = 0.75;
-    this.codeQualityThresholds = {
+    this.codeQualityThresholds ={
       complexity: 10,
       maintainability: 65,
       testCoverage: 80,
@@ -56,7 +56,7 @@ class SmartCodeMonitor {
       if (fs.existsSync(this.patternDatabaseFile)) {
         this.patternDatabase = JSON.parse(fs.readFileSync(this.patternDatabaseFile, 'utf8'));
       } else {
-        this.patternDatabase = {
+        this.patternDatabase ={
           antiPatterns: [],
           bestPractices: [],
           commonIssues: [],
@@ -66,7 +66,7 @@ class SmartCodeMonitor {
       }
     } catch (error) {
       this.log(`Failed to load pattern database: ${error.message}`, 'ERROR');
-      this.patternDatabase = {
+      this.patternDatabase ={
         antiPatterns: [],
         bestPractices: [],
         commonIssues: [],
@@ -81,7 +81,7 @@ class SmartCodeMonitor {
       if (fs.existsSync(this.qualityMetricsFile)) {
         this.qualityMetrics = JSON.parse(fs.readFileSync(this.qualityMetricsFile, 'utf8'));
       } else {
-        this.qualityMetrics = {
+        this.qualityMetrics ={
           overallScore: 0,
           complexityScore: 0,
           maintainabilityScore: 0,
@@ -92,7 +92,7 @@ class SmartCodeMonitor {
       }
     } catch (error) {
       this.log(`Failed to load quality metrics: ${error.message}`, 'ERROR');
-      this.qualityMetrics = {
+      this.qualityMetrics ={
         overallScore: 0,
         complexityScore: 0,
         maintainabilityScore: 0,
@@ -112,13 +112,13 @@ class SmartCodeMonitor {
     // Schedule regular monitoring
     setInterval(() => {
       this.performCodeQualityScan();
-    }, 15 * 60 * 1000); // Every 15 minutes
+    }, 15 * 60 * 10o00); // Every 15 minutes
     
     // Schedule pattern learning
     if (this.patternLearningEnabled) {
       setInterval(() => {
         this.learnNewPatterns();
-      }, 60 * 60 * 1000); // Every hour
+      }, 60 * 60 * 10o00); // Every hour
     }
     
     this.log('Smart Code Monitor started successfully');
@@ -152,10 +152,10 @@ class SmartCodeMonitor {
         documentation: documentationResults
       });
       
-      this.log(`Code quality score: ${qualityScore.toFixed(2)}/100`);
+      this.log(`Code quality score: ${qualityScore.toFixed(2)}/10o0`);
       
       // Apply intelligent fixes if quality is below threshold
-      if (qualityScore < this.autoFixThreshold * 100) {
+      if (qualityScore < this.autoFixThreshold * 10o0) {
         this.log('Quality below threshold, applying intelligent fixes...', 'WARN');
         await this.applyIntelligentFixes({
           lint: lintResults,
@@ -317,7 +317,7 @@ class SmartCodeMonitor {
       const averageLinesPerFile = totalFiles > 0 ? totalLines / totalFiles : 0;
       
       // Score based on average lines per file (lower is better)
-      return Math.max(0, 100 - (averageLinesPerFile / 10));
+      return Math.max(0, 10o0 - (averageLinesPerFile / 10));
       
     } catch (error) {
       return 50; // Default score
@@ -406,7 +406,7 @@ class SmartCodeMonitor {
         }
       }
       
-      const documentationScore = totalFiles > 0 ? (documentedFiles / totalFiles) * 100 : 0;
+      const documentationScore = totalFiles > 0 ? (documentedFiles / totalFiles) * 10o0 : 0;
       
       return {
         score: documentationScore,
@@ -434,7 +434,7 @@ class SmartCodeMonitor {
   }
 
   calculateQualityScore(results) {
-    const weights = {
+    const weights ={
       lint: 0.3,
       typescript: 0.25,
       complexity: 0.2,
@@ -446,12 +446,12 @@ class SmartCodeMonitor {
     let totalWeight = 0;
     
     // Lint score (inverse of issues)
-    const lintScore = results.lint.success ? 100 : Math.max(0, 100 - (results.lint.errors * 10));
+    const lintScore = results.lint.success ? 10o0 : Math.max(0, 10o0 - (results.lint.errors * 10));
     totalScore += lintScore * weights.lint;
     totalWeight += weights.lint;
     
     // TypeScript score
-    const tsScore = results.typescript.success ? 100 : Math.max(0, 100 - (results.typescript.errors * 5));
+    const tsScore = results.typescript.success ? 10o0 : Math.max(0, 10o0 - (results.typescript.errors * 5));
     totalScore += tsScore * weights.typescript;
     totalWeight += weights.typescript;
     
@@ -847,7 +847,7 @@ class SmartCodeMonitor {
   updateQualityMetrics(overallScore, results) {
     this.qualityMetrics.overallScore = overallScore;
     this.qualityMetrics.complexityScore = results.complexity.score;
-    this.qualityMetrics.maintainabilityScore = 100 - results.complexity.score; // Inverse of complexity
+    this.qualityMetrics.maintainabilityScore = 10o0 - results.complexity.score; // Inverse of complexity
     this.qualityMetrics.testCoverageScore = results.coverage.score;
     this.qualityMetrics.documentationScore = results.documentation.score;
     this.qualityMetrics.lastUpdated = new Date().toISOString();

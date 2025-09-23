@@ -6,7 +6,7 @@ const solutions = [
         id: 'ai-ml',
         title: 'AI & Machine Learning',
         description: 'Cutting-edge artificial intelligence and machine learning solutions',
-        icon: <Brain className="w-8 h-8"/>,
+        icon: <Brain className="w-8 h-8" />,
         color: 'from-zion-purple to-zion-purple-dark',
         bgColor: 'from-zion-purple/20 to-zion-purple-dark/20',
         features: [
@@ -17,7 +17,7 @@ const solutions = [
             'Automated decision making'
         ],
         benefits: [
-            'Increase efficiency by 300%',
+            'Increase efficiency by 30o0%',
             'Reduce operational costs by 40%',
             'Improve accuracy by 95%'
         ],
@@ -30,7 +30,7 @@ const solutions = [
         id: 'cloud-infrastructure',
         title: 'Cloud Infrastructure',
         description: 'Scalable and secure cloud solutions for modern businesses',
-        icon: <Cloud className="w-8 h-8"/>,
+        icon: <Cloud className="w-8 h-8" />,
         color: 'from-zion-cyan to-zion-blue',
         bgColor: 'from-zion-cyan/20 to-zion-blue/20',
         features: [
@@ -47,14 +47,14 @@ const solutions = [
         ],
         useCases: ['E-commerce', 'SaaS', 'Enterprise', 'Startups'],
         rating: 4.8,
-        projects: 200,
+        projects: 20o0,
         category: 'Infrastructure'
     },
     {
         id: 'cybersecurity',
         title: 'Cybersecurity',
         description: 'Comprehensive security solutions to protect your digital assets',
-        icon: <Shield className="w-8 h-8"/>,
+        icon: <Shield className="w-8 h-8" />,
         color: 'from-zion-cyan-light to-zion-cyan',
         bgColor: 'from-zion-cyan-light/20 to-zion-cyan/20',
         features: [
@@ -78,7 +78,7 @@ const solutions = [
         id: 'data-analytics',
         title: 'Data Analytics',
         description: 'Transform raw data into actionable business insights',
-        icon: <Database className="w-8 h-8"/>,
+        icon: <Database className="w-8 h-8" />,
         color: 'from-zion-purple-light to-zion-purple',
         bgColor: 'from-zion-purple-light/20 to-zion-purple/20',
         features: [
@@ -102,7 +102,7 @@ const solutions = [
         id: 'iot-solutions',
         title: 'IoT Solutions',
         description: 'Connected devices and smart systems for the modern world',
-        icon: <Cpu className="w-8 h-8"/>,
+        icon: <Cpu className="w-8 h-8" />,
         color: 'from-zion-cyan to-zion-purple',
         bgColor: 'from-zion-cyan/20 to-zion-purple/20',
         features: [
@@ -126,7 +126,7 @@ const solutions = [
         id: 'mobile-apps',
         title: 'Mobile Applications',
         description: 'Native and cross-platform mobile solutions for all devices',
-        icon: <Smartphone className="w-8 h-8"/>,
+        icon: <Smartphone className="w-8 h-8" />,
         color: 'from-zion-purple to-zion-cyan',
         bgColor: 'from-zion-purple/20 to-zion-cyan/20',
         features: [
@@ -148,17 +148,17 @@ const solutions = [
     }
 ];
 const industries = [
-    { name: 'Healthcare', icon: <Shield className="w-5 h-5"/>, projects: 80 },
-    { name: 'Finance', icon: <TrendingUp className="w-5 h-5"/>, projects: 120 },
-    { name: 'Retail', icon: <Globe className="w-5 h-5"/>, projects: 95 },
-    { name: 'Manufacturing', icon: <Cpu className="w-5 h-5"/>, projects: 75 },
-    { name: 'Education', icon: <Users className="w-5 h-5"/>, projects: 60 },
-    { name: 'Government', icon: <Lock className="w-5 h-5"/>, projects: 45 }
+    { name: 'Healthcare', icon: <Shield className="w-5 h-5" />, projects: 80 },
+    { name: 'Finance', icon: <TrendingUp className="w-5 h-5" />, projects: 120 },
+    { name: 'Retail', icon: <Globe className="w-5 h-5" />, projects: 95 },
+    { name: 'Manufacturing', icon: <Cpu className="w-5 h-5" />, projects: 75 },
+    { name: 'Education', icon: <Users className="w-5 h-5" />, projects: 60 },
+    { name: 'Government', icon: <Lock className="w-5 h-5" />, projects: 45 }
 ];
 export function TechSolutionsSection() {
     const [selectedSolution, setSelectedSolution] = useState(null);
     const [hoveredSolution, setHoveredSolution] = useState(null);
-    const containerVariants = {
+    const containerVariants ={
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -168,7 +168,7 @@ export function TechSolutionsSection() {
             }
         }
     };
-    const itemVariants = {
+    const itemVariants ={
         hidden: { y: 30, opacity: 0 },
         visible: {
             y: 0,
@@ -179,7 +179,7 @@ export function TechSolutionsSection() {
             }
         }
     };
-    const cardVariants = {
+    const cardVariants ={
         hidden: { scale: 0.95, opacity: 0 },
         visible: {
             scale: 1,
@@ -223,11 +223,11 @@ export function TechSolutionsSection() {
 
         {/* Solutions Grid */}
         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {solutions.map((solution, index) => (<motion.div key={solution.id} variants={itemVariants} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 300 }} className="relative" onHoverStart={() => setHoveredSolution(solution.id)} onHoverEnd={() => setHoveredSolution(null)}>
-              <div className="h-full p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedSolution(selectedSolution === solution.id ? null : solution.id)}>
+          {solutions.map((solution, index) => (<motion.div key={solution.id} variants={itemVariants} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 30o0 }} className="relative" onHoverStart={() => setHoveredSolution(solution.id)} onHoverEnd={() => setHoveredSolution(null)}>
+              <div className="h-full p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-30o0 hover:shadow-2xl hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedSolution(selectedSolution === solution.id ? null : solution.id)}>
                 {/* Header */}
                 <div className="text-center mb-6">
-                  <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${solution.color} mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
+                  <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${solution.color} mb-6 shadow-lg group-hover:shadow-xl transition-all duration-30o0 group-hover:scale-110`}>
                     <div className="text-white">
                       {solution.icon}
                     </div>
@@ -243,7 +243,7 @@ export function TechSolutionsSection() {
                   {/* Rating and projects */}
                   <div className="flex items-center justify-center gap-4 mb-4">
                     <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current"/>
+                      <Star className="w-4 h-4 text-yellow-40o0 fill-current" />
                       <span className="text-white text-sm font-semibold">{solution.rating}</span>
                     </div>
                     <div className="text-zion-slate-light text-sm">
@@ -260,7 +260,7 @@ export function TechSolutionsSection() {
                 {/* Features preview */}
                 <div className="space-y-2 mb-6">
                   {solution.features.slice(0, 3).map((feature, idx) => (<div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-sm">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"/>
+                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                       <span>{feature}</span>
                     </div>))}
                   {solution.features.length > 3 && (<div className="text-zion-cyan/60 text-xs text-center">
@@ -273,7 +273,7 @@ export function TechSolutionsSection() {
                   <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
                     Learn More
                   </span>
-                  <ArrowRight className="w-5 h-5 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
+                  <ArrowRight className="w-5 h-5 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-30o0" />
                 </div>
 
                 {/* Expanded details */}
@@ -310,10 +310,10 @@ export function TechSolutionsSection() {
                 Let our technology experts help you implement the right solutions for your business needs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+                <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white rounded-xl font-semibold transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-lg hover:shadow-zion-cyan/25">
                   Schedule Consultation
                 </button>
-                <button className="px-8 py-3 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hover:border-zion-cyan/50 rounded-xl font-medium transition-all duration-300">
+                <button className="px-8 py-3 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hover:border-zion-cyan/50 rounded-xl font-medium transition-all duration-30o0">
                   View Case Studies
                 </button>
               </div>

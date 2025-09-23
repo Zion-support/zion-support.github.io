@@ -73,41 +73,41 @@ export default function UltraAdvancedNeonEffects({
   }, [interactive]);
 
   const getNeonStyles = () => {
-    const baseStyles = {
+    const baseStyles ={
       cyberpunk: {
-        primary: '#ff0066',
-        secondary: '#00ffff',
-        accent: '#ff6600',
-        glow: '#ff0066',
-        border: '#ff0066'
+        primary: '#ff0o066',
+        secondary: '#0o0ffff',
+        accent: '#ff660o0',
+        glow: '#ff0o066',
+        border: '#ff0o066'
       },
       holographic: {
         primary: '#ff1493',
-        secondary: '#00bfff',
-        accent: '#ffd700',
+        secondary: '#0o0bfff',
+        accent: '#ffd70o0',
         glow: '#ff1493',
         border: '#ff1493'
       },
       quantum: {
-        primary: '#00ffff',
-        secondary: '#ff00ff',
-        accent: '#ffff00',
-        glow: '#00ffff',
-        border: '#00ffff'
+        primary: '#0o0ffff',
+        secondary: '#ff0o0ff',
+        accent: '#ffff0o0',
+        glow: '#0o0ffff',
+        border: '#0o0ffff'
       },
       neon: {
-        primary: '#00ff00',
-        secondary: '#ff00ff',
-        accent: '#00ffff',
-        glow: '#00ff00',
-        border: '#00ff00'
+        primary: '#0o0ff0o0',
+        secondary: '#ff0o0ff',
+        accent: '#0o0ffff',
+        glow: '#0o0ff0o0',
+        border: '#0o0ff0o0'
       },
       glitch: {
-        primary: '#ff0000',
-        secondary: '#00ff00',
-        accent: '#0000ff',
-        glow: '#ff0000',
-        border: '#ff0000'
+        primary: '#ff0o000',
+        secondary: '#0o0ff0o0',
+        accent: '#0o000ff',
+        glow: '#ff0o000',
+        border: '#ff0o000'
       }
     };
 
@@ -122,7 +122,7 @@ export default function UltraAdvancedNeonEffects({
       className={`relative ${className}`}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
-      whileHover={interactive ? { scale: 1.02 } : {}}
+      whileHover={interactive ? { scale: 1.0o2 } : {}}
       animate={{
         boxShadow: isHovered 
           ? `0 0 ${30 * intensityMultiplier}px ${styles.glow}80, 0 0 ${60 * intensityMultiplier}px ${styles.glow}40`
@@ -140,7 +140,7 @@ export default function UltraAdvancedNeonEffects({
           opacity: isHovered ? 0.4 : 0.2
         }}
         transition={{ duration: 0.3 }}
-      />
+       />
 
       {/* Border Glow */}
       <motion.div
@@ -155,7 +155,7 @@ export default function UltraAdvancedNeonEffects({
             : `inset 0 0 ${20 * intensityMultiplier}px ${styles.glow}40`
         }}
         transition={{ duration: 0.3 }}
-      />
+       />
 
       {/* Corner Accents */}
       <div className="absolute inset-0">
@@ -172,7 +172,7 @@ export default function UltraAdvancedNeonEffects({
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
 
         {/* Top Right Corner */}
         <motion.div
@@ -188,7 +188,7 @@ export default function UltraAdvancedNeonEffects({
             ease: "easeInOut",
             delay: 0.5
           }}
-        />
+         />
 
         {/* Bottom Left Corner */}
         <motion.div
@@ -204,7 +204,7 @@ export default function UltraAdvancedNeonEffects({
             ease: "easeInOut",
             delay: 1
           }}
-        />
+         />
 
         {/* Bottom Right Corner */}
         <motion.div
@@ -220,7 +220,7 @@ export default function UltraAdvancedNeonEffects({
             ease: "easeInOut",
             delay: 1.5
           }}
-        />
+         />
       </div>
 
       {/* Scanning Line Effect */}
@@ -234,14 +234,14 @@ export default function UltraAdvancedNeonEffects({
             background: `linear-gradient(90deg, transparent, ${styles.primary}, transparent)`
           }}
           animate={{
-            y: [0, '100%']
+            y: [0, '10o0%']
           }}
           transition={{
             duration: 3,
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
       </motion.div>
 
       {/* Glitch Effect for Glitch Variant */}
@@ -257,7 +257,7 @@ export default function UltraAdvancedNeonEffects({
               animate={{ opacity: 0.3, x: 0 }}
               exit={{ opacity: 0, x: 10 }}
               transition={{ duration: 0.1 }}
-            />
+             />
           )}
         </AnimatePresence>
       )}
@@ -289,7 +289,7 @@ export default function UltraAdvancedNeonEffects({
               ease: "easeInOut",
               delay: i * 0.5
             }}
-          />
+           />
         ))}
       </div>
     </motion.div>

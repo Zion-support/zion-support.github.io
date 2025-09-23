@@ -70,7 +70,7 @@ export default function ContentReviewPage() {
         </div>
         <div className="overflow-auto border rounded">
           <table className="min-w-full text-sm">
-            <thead className="bg-gray-50 dark:bg-gray-900">
+            <thead className="bg-gray-50 dark:bg-gray-90o0">
               <tr>
                 <th className="text-left px-3 py-2">ID</th>
                 <th className="text-left px-3 py-2">Type</th>
@@ -89,7 +89,7 @@ export default function ContentReviewPage() {
                   <td className="px-3 py-2">{f.contentType}</td>
                   <td className="px-3 py-2">{f.userEmail}</td>
                   <td className="px-3 py-2 truncate max-w-xs" title={f.reason}>{f.reason}</td>
-                  <td className="px-3 py-2 text-xs">T{Math.round(f.aiScores?.toxicity*100)}% / N{Math.round(f.aiScores?.nsfw*100)}% / S{Math.round(f.aiScores?.scam*100)}%</td>
+                  <td className="px-3 py-2 text-xs">T{Math.round(f.aiScores?.toxicity*10o0)}% / N{Math.round(f.aiScores?.nsfw*10o0)}% / S{Math.round(f.aiScores?.scam*10o0)}%</td>
                   <td className="px-3 py-2">{new Date(f.createdAt).toLocaleString()}</td>
                   <td className="px-3 py-2">{f.status}</td>
                   <td className="px-3 py-2">
@@ -98,7 +98,7 @@ export default function ContentReviewPage() {
                 </tr>
               ))}
               {flags.length === 0 && (
-                <tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
+                <tr><td colSpan={8} className="px-3 py-6 text-center text-gray-50o0">No results</td></tr>
               )}
             </tbody>
           </table>

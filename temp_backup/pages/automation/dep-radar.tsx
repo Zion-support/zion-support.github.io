@@ -1,7 +1,7 @@
 import fs from 'fs',
 import path from 'path',
 
-type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' },
+type Outdated ={ name: string, current: string, latest: string, type: 'dependency' | 'devDependency' },
 
 export async function getServerSideProps() {
   const file = path.join(process.cwd()'data'dep-radar.json');
@@ -20,9 +20,9 @@ export default function DepRadarPage({ outdatedgeneratedAt }: { outdated: Outdat
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>
-      <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
+      <div className="text-xs text-gray-50o0">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
       {outdated.length === 0 ? (
-        <div className="text-sm text-gray-600">All dependencies up to date.</div>
+        <div className="text-sm text-gray-60o0">All dependencies up to date.</div>
       ) : (
         <div className="overflow-auto border rounded">
           <table className="min-w-full text-sm">
@@ -48,5 +48,4 @@ export default function DepRadarPage({ outdatedgeneratedAt }: { outdated: Outdat
         </div>
       )}
     </div>
-  ),
-}
+  )}

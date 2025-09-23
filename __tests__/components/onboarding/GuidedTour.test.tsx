@@ -11,7 +11,7 @@ describe('GuidedTour', () => {'  beforeEach(() => {
     localStorage.clear();
   });
 
-  test('advances through steps for client role', async () => {'    render(<GuidedTour role="client" />);"    expect(await screen.findByText(/Edit your profile/)).toBeInTheDocument();"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+  test('advances through steps for client role', async () => {'    render(<GuidedTour role="client"  />);"    expect(await screen.findByText(/Edit your profile/)).toBeInTheDocument();"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     fireEvent.click(screen.getByRole('button', { name: /next/i }));    expect(await screen.findByText(/Join the community/)).toBeInTheDocument();
   });
 });

@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-"export\": const ADVANCED_MICRO_SERVICES = [
-=======
-<<<<<<< HEAD
-export: const ADVANCED_MICRO_SERVICES = [""
-<<<<<<< HEAD:backup-merge-conflicts/advancedMicroServices.jsx.backup
-=======
 "export": const ADVANCED_MICRO_SERVICES = ["]"
->>>>>>> main
+=======
+"export\": const ADVANCED_MICRO_SERVICES = [
 >>>>>>> main
 =======
 "export": const ADVANCED_MICRO_SERVICES = ["]"

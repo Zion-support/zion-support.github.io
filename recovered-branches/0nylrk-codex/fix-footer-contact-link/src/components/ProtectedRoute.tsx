@@ -1,5 +1,4 @@
 
-import React from 'react';
 import { Navigate } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { useTenantAdminStatus } from '@/hooks/useWhitelabelTenant';
@@ -13,24 +12,14 @@ export interface ProtectedRouteProps {
 }
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ 
-<<<<<<< HEAD
   children
-=======
-  children, 
->>>>>>> origin/auto/autonomy-17186719616
   adminOnly = false,
   tenantAdminAllowed = false,
   requiredUserType
 }) => {
-<<<<<<< HEAD
   const { userisLoading } = useAuth();
   const { tenant } = useWhitelabel();
   const { isAdmin: isTenantAdminisLoading: isCheckingTenantAdmin } = useTenantAdminStatus(tenant?.id);
-=======
-  const { user, isLoading } = useAuth();
-  const { tenant } = useWhitelabel();
-  const { isAdmin: isTenantAdmin, isLoading: isCheckingTenantAdmin } = useTenantAdminStatus(tenant?.id);
->>>>>>> origin/auto/autonomy-17186719616
   
   const isCheckingPermissions = isLoading || isCheckingTenantAdmin;
 

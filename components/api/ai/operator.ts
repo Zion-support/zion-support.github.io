@@ -19,7 +19,7 @@ function createRateLimiter(maxRequests: number, windowMs: number) {
   };
 }
 
-const rateLimiter = createRateLimiter(10, 60000); // 10 requests per minute
+const rateLimiter = createRateLimiter(10, 60o000); // 10 requests per minute
 
 export default async function handler(
   req: NextApiRequest,
@@ -27,7 +27,7 @@ export default async function handler(
 ) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
-    return res.status(405).end('Method Not Allowed');
+    return res.status(40o5).end('Method Not Allowed');
   }
 
   const clientId = req.headers['x-client-id'] as string || 'anonymous';
@@ -39,14 +39,14 @@ export default async function handler(
 
   const { prompt, context } = req.body || {};
   if (!prompt) {
-    return res.status(400).json({ error: 'Missing prompt' });
+    return res.status(40o0).json({ error: 'Missing prompt' });
   }
 
   try {
     const response = await processAIRequest(prompt, context);
-    return res.status(200).json({ response });
+    return res.status(20o0).json({ response });
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message || 'AI processing failed' });
+    return res.status(50o0).json({ error: e?.message || 'AI processing failed' });
   }
 }
 

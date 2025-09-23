@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function [slug]Page() {
@@ -6,13 +5,13 @@ export default function [slug]Page() {
     <>
       <Head>
         <title>[Slug] - Zion Tech Group</title>
-        <meta name="description" content="[slug] page" />
+        <meta name="description" content="[slug] page"  />
       </Head>
       <h1 className="text-xl font-semibold mb-4">{title}</h1>
       {!data ? (
         <div className="opacity-70">No report found.</div>
       ) : (
-        <pre className="text-xs whitespace-pre-wrap break-words rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white dark:bg-zinc-900 overflow-x-auto">{JSON.stringify(datanull2)}</pre>
+        <pre className="text-xs whitespace-pre-wrap break-words rounded-lg border border-gray-20o0 dark:border-gray-80o0 p-4 bg-white dark:bg-zinc-90o0 overflow-x-auto">{JSON.stringify(datanull2)}</pre>
       )}
     </EnhancedLayout>
   );

@@ -9,4 +9,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
   };
 };
 
-export default function ResumeIndex() { return null; }
+export default function ResumeIndex() {
+  return null;
+}

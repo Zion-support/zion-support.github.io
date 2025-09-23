@@ -1,12 +1,7 @@
-
-<<<<<<< HEAD
-import { FormFieldFormItemFormLabelFormControlFormMessage } from "@/components/ui/form";
-=======
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
->>>>>>> origin/auto/autonomy-17186719616
-import { Input } from "@/components/ui/input";
-import { UseFormReturn } from "react-hook-form";
-import { FormValues } from "./useHireRequestForm";
+import { FormFieldFormItemFormLabelFormControlFormMessage } from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { UseFormReturn } from 'react-hook-form';
+import { FormValues } from './useHireRequestForm';
 
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>;
@@ -17,34 +12,34 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
     <>
       <FormField
         control={form.control}
-        name="requesterName"
+        name='requesterName'
         render={({ field }) => (
           <FormItem>
-            <FormLabel className="text-white">Your Name</FormLabel>
+            <FormLabel className='text-white'>Your Name</FormLabel>
             <FormControl>
-              <Input 
-                placeholder="Enter your full name" 
+              <Input
+                placeholder='Enter your full name'
                 {...field}
-                className="bg-zion-blue-light/20 border-zion-blue-light text-white"
+                className='bg-zion-blue-light/20 border-zion-blue-light text-white'
               />
             </FormControl>
             <FormMessage />
           </FormItem>
         )}
       />
-      
+
       <FormField
         control={form.control}
-        name="requesterEmail"
+        name='requesterEmail'
         render={({ field }) => (
           <FormItem>
-            <FormLabel className="text-white">Your Email</FormLabel>
+            <FormLabel className='text-white'>Your Email</FormLabel>
             <FormControl>
-              <Input 
-                placeholder="Enter your email address" 
-                type="email"
+              <Input
+                placeholder='Enter your email address'
+                type='email'
                 {...field}
-                className="bg-zion-blue-light/20 border-zion-blue-light text-white"
+                className='bg-zion-blue-light/20 border-zion-blue-light text-white'
               />
             </FormControl>
             <FormMessage />

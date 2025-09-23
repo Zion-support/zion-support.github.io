@@ -6,7 +6,10 @@ function getClient(): OpenAI | null {
   return new OpenAI({ apiKey });
 }
 
-export async function generateText(prompt: string, system?: string): Promise<string> {
+export async function generateText(
+  prompt: string,
+  system?: string
+): Promise<string> {
   const client = getClient();
   if (!client) {
     return `AI disabled. Mock response for prompt: ${prompt.slice(0, 120)}...`;
@@ -15,14 +18,9 @@ export async function generateText(prompt: string, system?: string): Promise<str
     model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
     messages: [
       ...(system ? [{ role: 'system' as const, content: system }] : []),
-<<<<<<< HEAD
-      { role: 'user', content: prompt }],
-    temperature: 0.4});
-=======
       { role: 'user', content: prompt },
     ],
     temperature: 0.4,
   });
->>>>>>> origin/auto/autonomy-17186719616
   return resp.choices?.[0]?.message?.content || '';
 }

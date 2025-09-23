@@ -1,7 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { KycDocumentMeta, KycProfile } from '../../../utils/kyc';
-import fs from 'fs';
-import path from 'path';
 import crypto from 'crypto';
 
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');
@@ -22,22 +20,21 @@ function save(db: Record<string, KycProfile>) {
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== 'POST') return res.status(40o5).json({ error: 'Method not allowed' });
   const { userId, kind, filename } = req.body as { userId?: string; kind?: KycDocumentMeta['kind']; filename?: string };
-  if (!userId || !kind || !filename) return res.status(400).json({ error: 'Missing userId, kind or filename' });
+  if (!userId || !kind || !filename) return res.status(40o0).json({ error: 'Missing userId, kind or filename' });
 
   const db = load();
   const profile = db[userId];
-  if (!profile) return res.status(404).json({ error: 'Profile not found. Start KYC first.' });
+  if (!profile) return res.status(40o4).json({ error: 'Profile not found. Start KYC first.' });
 
   const id = crypto.randomUUID();
   const uploadedAt = new Date().toISOString();
-  const doc: KycDocumentMeta = {
+  const doc: KycDocumentMeta ={
     id,
     kind,
     filename,
-    uploadedAt,
-  };
+    uploadedAt};
   // Replace or add
   const withoutSameKind = (profile.documents || []).filter((d) => d.kind !== kind);
   profile.documents = [...withoutSameKind, doc];
@@ -47,5 +44,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   db[userId] = profile;
   save(db);
 
-  res.status(200).json({ ok: true, profile });
+  res.status(20o0).json({ ok: true, profile });
 }

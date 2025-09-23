@@ -1,8 +1,6 @@
 
 
-
 console && console.log('🔧 Starting automatic merge conflict resolution...');
-
 
 // Function to resolve conflicts by accepting the incoming changes
 function resolveConflicts() {
@@ -10,7 +8,6 @@ function resolveConflicts() {
     // Get list of conflicted files
     const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
 
-    
     console && console.log(`Found ${conflictedFiles && conflictedFiles.length} conflicted files: `),
     conflictedFiles && conflictedFiles.forEach(file => console && console.log(`  - ${file}`));
     // For each conflicted file, accept the incoming changes (from the PR)
@@ -20,7 +17,6 @@ function resolveConflicts() {
         // Read the file content
         let content = fs.readFileSync(file, 'utf8');
 ([\s\S]*?)
-        
 
         // Write the resolved content back
         fs.writeFileSync(file, content);
@@ -33,7 +29,6 @@ function resolveConflicts() {
     // Handle deleted files (modify/delete conflicts)
     const deletedFiles = execSync('git ls-files --deleted', { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
 
-    
     deletedFiles && deletedFiles.forEach(file => {
       console && console.log(`Handling deleted file: ${file}`);
       // Remove from index to accept the deletion
@@ -52,7 +47,6 @@ function mergePR(prBranch) {
   try {
 
     console && console.log(`\n🔄 Attempting to merge ${prBranch}...`);
-    
 
     // Try to merge
     execSync(`git merge origin/${prBranch} --no-ff`, { stdio: 'pipe' });
@@ -61,7 +55,6 @@ function mergePR(prBranch) {
   } catch (error) {
 
     console && console.log(`⚠️  Merge conflicts detected in ${prBranch}`);
-    
 
     // Resolve conflicts
     if (resolveConflicts()) {
@@ -78,8 +71,6 @@ function mergePR(prBranch) {
       console && console.error(` Failed to resolve conflicts for ${prBranch}`);
 #!/usr / bin / env node;
 import {exec_sync} from 'child_process';
-import fs from 'fs';
-import path from 'path';
 ;
 console.log (' Starting automatic merge conflict resolution...');
 ;
@@ -167,9 +158,7 @@ function mergePR() {
   }
 }
 
-  
   console && console.log('🚀 Starting PR merge process...');
-  
 
   for (const branch of prBranches) {
     try {
@@ -218,7 +207,6 @@ function main() {
       }
     } catch (error) {
 
-  
   console && console.log('\n🎉 PR merge process completed!');
   // Show final status
   try {
@@ -230,9 +218,7 @@ function main() {
   }
 }
 
-
 main().catch(console && console.error);
-
 
       console.error (`❌ Error processing ${branch}:`, error.message);
     }
