@@ -59,8 +59,12 @@ const MobileResponsiveLayout: React.FC<MobileResponsiveLayoutProps> = ({
     const isDownSwipe = deltaY < -50;
 
     if (enableSwipeNavigation) {
-      if (isLeftSwipe) console.log('Swipe left - next content');
-      if (isRightSwipe) console.log('Swipe right - previous content');
+      if (isLeftSwipe) {
+        // no-op placeholder for swipe left action
+      }
+      if (isRightSwipe) {
+        // no-op placeholder for swipe right action
+      }
     }
 
     if (isUpSwipe) window.scrollTo({ top: 0, behavior: 'smooth' });

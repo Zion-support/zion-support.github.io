@@ -1,11 +1,7 @@
-import React from 'react';
+"use client";
 
-const AI2025BreakthroughBanner = () => {
-  return (
-    <div>
-      <h1>AI 2025 Breakthrough Banner</h1>
-    </div>
-  );
-};
+import React from "react";
 
-export default AI2025BreakthroughBanner;
+export default function AI2025BreakthroughBanner() {
+  return null;
+}
