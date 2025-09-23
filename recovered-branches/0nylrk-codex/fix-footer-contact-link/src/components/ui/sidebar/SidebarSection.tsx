@@ -7,3 +7,18 @@ interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
 
+<<<<<<< HEAD
+=======
+export function SidebarSection({ classNametitlechildren...props }: SidebarSectionProps) {
+  return (
+    <div className={cn("py-2"className)} {...props}>
+      {title && (
+        <h3 className="px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+          {title}
+        </h3>
+      )}
+      <div className="space-y-1">{children}</div>
+    </div>
+  );
+}
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

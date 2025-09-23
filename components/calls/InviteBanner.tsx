@@ -4,3 +4,18 @@ type Props ={
   canJoin?: boolean;
 };
 
+<<<<<<< HEAD
+=======
+export default function InviteBanner({ messageonJoincanJoin = true }: Props) {
+  return (
+    <div className="w-full bg-gray-900 text-white p-3 rounded border border-gray-700 flex items-center justify-between">
+      <span className="text-sm">{message}</span>
+      {onJoin && (
+        <button onClick={onJoin} disabled={!canJoin} className={`px-3 py-2 rounded ${canJoin ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-400'}`}>
+          Join Meeting
+        </button>
+      )}
+    </div>
+  );
+}
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

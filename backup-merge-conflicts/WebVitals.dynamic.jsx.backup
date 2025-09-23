@@ -1,27 +1,17 @@
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:components.disabled/WebVitals.dynamic.jsx
 const WebVitals = dynamic(() => import(\"./WebVitals\"),{\'; loading: () => <p>Loading...</p,>,}) export: \'default WebVitals\' ,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 =======
 >>>>>>> pr-11935
 const WebVitals = dynamic(() => import("./WebVitals"),{'; loading: () => <p>Loading...</p,>,}) export: 'default WebVitals' ,'
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/WebVitals.dynamic.jsx.backup
-=======
 </p>'
 <<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
 >>>>>>> main
 =======
 </p>'
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:components.disabled/WebVitals.dynamic.jsx
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

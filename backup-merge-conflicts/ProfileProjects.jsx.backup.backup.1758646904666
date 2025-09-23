@@ -1,0 +1,21 @@
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> pr-11935
+import React from 'react';
+
+interface ProfileProjectsProps {
+  // Add props here as needed
+}
+
+export default function ProfileProjects({ }: ProfileProjectsProps) {
+  return (
+    <div>
+      <h1>ProfileProjects</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

@@ -30,3 +30,77 @@ export function useSmartContracts() {
           endDate: values.endDate?.toISOString(),
           paymentTerms: values.paymentTerms,
           paymentAmount: values.paymentAmount,
+<<<<<<< HEAD
+=======
+          additionalClauses: values.additionalClauses || []}
+      });
+      
+      if (error) throw error;
+      
+      if (data && data.solidityCode) {
+        return data.solidityCode;
+      } else {
+        throw new Error("Failed to generate Solidity contract");
+      }
+    } catch (err: any) {
+      console.error("Error generating Solidity contract:", err);
+      toast.error("Failed to generate smart contract");
+      throw err;
+    } finally {
+      setIsLoading(false);
+    }
+  };
+  
+  const deploySmartContract = async (
+    contractCode: string,
+    options: DeploymentOptions
+  ): Promise<SmartContractInfo | null> => {
+    if (!user?.id) {
+      toast.error("You must be logged in to deploy a contract");
+      return null;
+    }
+    
+    try {
+      setDeploymentStatus('deploying');
+      
+      // This would normally connect to MetaMask or other Web3 provider
+      // For now, we'll just simulate success
+      const mockTransactionHash = `0x${Array.from({length: 64}, () => 
+        Math.floor(Math.random() * 16).toString(16)).join('')}`;
+      
+      const mockSmartContractInfo: SmartContractInfo = {
+        id: crypto.randomUUID(),
+        transactionHash: mockTransactionHash,
+        networkName: options.network,
+        blockNumber: Math.floor(Math.random() * 1000000),
+        deployedAddress: `0x${Array.from({length: 40}, () => 
+          Math.floor(Math.random() * 16).toString(16)).join('')}`,
+        contractType: 'escrow',
+        createdAt: new Date().toISOString(),
+        createdBy: user.id,
+        status: 'deployed'
+      };
+      
+      // Wait to simulate blockchain transaction time
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      setDeploymentStatus('success');
+      toast.success("Smart contract deployed successfully!");
+      
+      return mockSmartContractInfo;
+    } catch (err: any) {
+      console.error("Error deploying smart contract:", err);
+      toast.error("Failed to deploy smart contract");
+      setDeploymentStatus('error');
+      return null;
+    }
+  };
+  
+  return {
+    generateSolidityContract,
+    deploySmartContract,
+    isLoading,
+    deploymentStatus
+  };
+}
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

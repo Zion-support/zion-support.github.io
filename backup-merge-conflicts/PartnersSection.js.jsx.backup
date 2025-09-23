@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-=======
 const partners = [ { "name": 'Partner: A,',"logo": 'https:'''";",;"]"}
 =======
 <<<<<<< HEAD:src.disabled/components/summit/PartnersSection.jsx
 const partners = [ { "name": 'Partner: A,',"logo": 'https:'''";",;"]"}
 const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
->>>>>>> pr-11914:backup-merge-conflicts/PartnersSection.js.jsx.backup
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935

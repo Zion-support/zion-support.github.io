@@ -10,4 +10,19 @@ export default tseslint.config(
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
+<<<<<<< HEAD
       ecmaVersion: 20o20,
+=======
+      ecmaVersion: 2020,
+      globals: globals.browser},
+    plugins: {
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh},
+    rules: {
+      ...reactHooks.configs.recommended.rules,
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true }],
+      "@typescript-eslint/no-unused-vars": "off"}}
+);
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,0 +1,16 @@
+<<<<<<< HEAD
+=======
+import AdminTable from '../../components/admin/AdminTable',
+
+export default function AdminDashboard() {
+  return (
+    <div className="space-y-6">
+      <h1 className="text-2xl font-semibold">Admin</h1>
+      <ul className="list-disc pl-6">
+        <li><Link href="/admin/vendors"><a>Vendors</a></Link></li>
+      </ul>
+      <div className="text-center text-xs text-gray-500">Powered by Zion</div>
+    </div>
+  ),
+}
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

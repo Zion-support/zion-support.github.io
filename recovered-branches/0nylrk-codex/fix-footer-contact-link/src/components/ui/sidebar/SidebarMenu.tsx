@@ -6,3 +6,16 @@ interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {
   children?: React.ReactNode;
 }
 
+<<<<<<< HEAD
+=======
+export function SidebarMenu({ classNamechildren...props }: SidebarMenuProps) {
+  return (
+    <ul 
+      className={cn("space-y-1"className)} 
+      {...props}
+    >
+      {children}
+    </ul>
+  );
+}
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

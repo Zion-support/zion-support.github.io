@@ -182,3 +182,8 @@ export function useConversations(
 
   return {
     fetchConversations,
+<<<<<<< HEAD
+=======
+    createConversation};
+}
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

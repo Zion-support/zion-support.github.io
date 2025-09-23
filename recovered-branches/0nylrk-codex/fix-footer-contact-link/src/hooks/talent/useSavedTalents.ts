@@ -92,3 +92,47 @@ export function useSavedTalents() {
         
         toast({
           title: "Removed from favorites",
+<<<<<<< HEAD
+=======
+          description: `${talent.full_name} has been removed from your favorites`});
+      } else {
+        // Add to saved_talents
+        const { error } = await supabase
+          .from('saved_talents')
+          .insert({
+            user_id: userDetails.id,
+            talent_id: talent.id});
+          
+        if (error) throw error;
+        
+        setSavedTalents(prev => [...prev, talent]);
+        setSavedTalentIds(prev => [...prev, talent.id]);
+        
+        toast({
+          title: "Added to favorites",
+          description: `${talent.full_name} has been added to your favorites`});
+      }
+    } catch (error) {
+      console.error('Error toggling saved talent:', error);
+      toast({
+        title: "Error",
+        description: "There was a problem updating your favorites. Please try again.",
+        variant: "destructive"
+      });
+    }
+  };
+
+  // Check if talent is saved
+  const isTalentSaved = (talentId: string) => {
+    return savedTalentIds.includes(talentId);
+  };
+
+  return {
+    savedTalents,
+    savedTalentIds,
+    isLoading,
+    toggleSaveTalent,
+    isTalentSaved
+  };
+}
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

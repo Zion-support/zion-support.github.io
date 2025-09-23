@@ -28,3 +28,23 @@ export const DownloadSection: React.FC = () => {
               
               <div className="text-sm text-gray-40o0">
                 <p>Compatible with iOS 14+ and Android 8.0+</p>
+<<<<<<< HEAD
+=======
+                <p>Free downloadin-app purchases available</p>
+              </div>
+            </div>
+            
+            <div className="flex-shrink-0 bg-white p-4 rounded-lg">
+              <div className="w-36 h-36 flex items-center justify-center bg-white rounded-lg">
+                <QrCodeIcon className="w-full h-full p-2" />
+                {/* This would be replaced with an actual QR code in production */}
+              </div>
+              <p className="text-center text-xs mt-2 text-zion-blue-dark">Scan to download</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -11,3 +11,35 @@ export function useUIState() {
     availability: true,
     region: true,
     experience: true,
+<<<<<<< HEAD
+=======
+    price: true});
+  
+  // Toggle expanded sections in the sidebar
+  const toggleSection = (sectionName: keyof typeof expandedSections) => {
+    setExpandedSections(prev => ({
+      ...prev,
+      [sectionName]: !prev[sectionName]
+    }));
+  };
+  
+  // Handler for closing mobile filter sidebar
+  const closeMobileFilter = () => {
+    setIsMobileFilterOpen(false);
+  };
+  
+  // Effect to listen for the custom event to close mobile filter
+  // This would typically be in a useEffect hook, but we'll handle it via the button's onClick
+  
+  return {
+    isMobileFilterOpen,
+    setIsMobileFilterOpen,
+    isHireModalOpen,
+    setIsHireModalOpen,
+    selectedTalent,
+    setSelectedTalent,
+    expandedSections,
+    toggleSection,
+    closeMobileFilter};
+}
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 const AI20o26AutonomousEnterpriseBanner = () => {
   return (
+<<<<<<< HEAD:app.disabled/components/AI2026AutonomousEnterpriseBanner.tsx
     <section className="bg-gradient-to-r from-emerald-60o0 via-teal-60o0 to-cyan-60o0 text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
@@ -53,6 +54,9 @@ const AI20o26AutonomousEnterpriseBanner = () => {
             </p>
             <div className="text-lg font-bold text-emerald-30o0">10o0% Aligned</div>
     <section className="bg-gradient-to-r from-emerald-90o0 via-teal-90o0 to-cyan-90o0 text-white py-16 relative overflow-hidden">
+=======
+    <section className="bg-gradient-to-r from-emerald-900 via-teal-900 to-cyan-900 text-white py-16 relative overflow-hidden">
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)):app-disabled/components/AI2026AutonomousEnterpriseBanner.tsx.backup.1757880714
       {/* Background Effects */}
       <div className="absolute inset-0 bg-black opacity-20"></div>
       <div className="absolute top-0 left-0 w-full h-full">
@@ -101,6 +105,7 @@ const AI20o26AutonomousEnterpriseBanner = () => {
         </div>
 
         <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20 mb-8">
+<<<<<<< HEAD:app.disabled/components/AI2026AutonomousEnterpriseBanner.tsx
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div>
               <h3 className="text-2xl font-bold mb-4">Industry Transformations</h3>
@@ -129,6 +134,8 @@ const AI20o26AutonomousEnterpriseBanner = () => {
                 Autonomous Enterprise<br  />
                 Systems 20o26
               </div>
+=======
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)):app-disabled/components/AI2026AutonomousEnterpriseBanner.tsx.backup.1757880714
           <h3 className="text-2xl font-bold mb-6 text-center">Revolutionary Success Stories</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white bg-opacity-5 rounded-lg p-4">
@@ -139,7 +146,11 @@ const AI20o26AutonomousEnterpriseBanner = () => {
             <div className="bg-white bg-opacity-5 rounded-lg p-4">
               <h4 className="font-bold text-lg mb-2">Manufacturing Conglomerate</h4>
               <p className="text-sm opacity-90 mb-2">99.9% autonomous production with zero quality defects</p>
+<<<<<<< HEAD:app.disabled/components/AI2026AutonomousEnterpriseBanner.tsx
               <div className="text-green-30o0 font-bold">$8.7B in cost savings achieved</div>
+=======
+              <div className="text-green-300 font-bold">$8.7B in cost savings achieved</div>
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)):app-disabled/components/AI2026AutonomousEnterpriseBanner.tsx.backup.1757880714
             </div>
           </div>
         </div>
@@ -147,6 +158,7 @@ const AI20o26AutonomousEnterpriseBanner = () => {
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             <Link
+<<<<<<< HEAD:app.disabled/components/AI2026AutonomousEnterpriseBanner.tsx
               href="/blog/ai-20o26-autonomous-enterprise-systems"
               className="bg-white text-emerald-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
             >
@@ -170,6 +182,10 @@ const AI20o26AutonomousEnterpriseBanner = () => {
             <span className="text-emerald-40o0 font-semibold"> Free implementation roadmap available</span>
               href="/blog/ai-20o26-autonomous-enterprise-revolution"
               className="bg-gradient-to-r from-emerald-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-70o0 hover:to-cyan-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg"
+=======
+              href="/blog/ai-2026-autonomous-enterprise-revolution"
+              className="bg-gradient-to-r from-emerald-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)):app-disabled/components/AI2026AutonomousEnterpriseBanner.tsx.backup.1757880714
             >
               Read Full Article →
             </Link>
@@ -181,7 +197,11 @@ const AI20o26AutonomousEnterpriseBanner = () => {
             </Link>
           </div>
           <p className="text-sm opacity-75">
+<<<<<<< HEAD:app.disabled/components/AI2026AutonomousEnterpriseBanner.tsx
             Join 1,0o00+ enterprises already operating autonomously
+=======
+            Join 1,000+ enterprises already operating autonomously
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)):app-disabled/components/AI2026AutonomousEnterpriseBanner.tsx.backup.1757880714
           </p>
         </div>
       </div>

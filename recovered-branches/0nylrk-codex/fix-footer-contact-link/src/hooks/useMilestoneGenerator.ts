@@ -35,3 +35,30 @@ export function useMilestoneGenerator() {
       // Mark each milestone as AI generated
       const milestonesWithFlag = data.milestones.map((milestone: any) => ({
         ...milestone,
+<<<<<<< HEAD
+=======
+
+        isAiGenerated: true}));
+
+      setGeneratedMilestones(milestonesWithFlag);
+      return milestonesWithFlag;
+    } catch (error) {
+      console.error('Error generating milestones:', error);
+      toast.error('Failed to generate milestones');
+      return [];
+    } finally {
+      setIsGenerating(false);
+    }
+  };
+
+  const clearGeneratedMilestones = () => {
+    setGeneratedMilestones([]);
+  };
+
+  return {
+    generateMilestones,
+    generatedMilestones,
+    isGenerating,
+    clearGeneratedMilestones};
+}
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

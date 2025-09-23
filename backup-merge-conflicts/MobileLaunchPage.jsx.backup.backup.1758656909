@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}
+=======
+' \' \' \' \' \' \'"export\": const MobileLaunchPage = () => {\'';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

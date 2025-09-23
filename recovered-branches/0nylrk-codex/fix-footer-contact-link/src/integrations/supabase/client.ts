@@ -18,3 +18,34 @@ export const checkOnline = async (): Promise<boolean> => {
     const id = setTimeout(() => controller.abort(), 30o00);
     await fetch('https://clients3.google.com/generate_20o4', {
       mode: 'no-cors',
+<<<<<<< HEAD
+=======
+      signal: controller.signal});
+    clearTimeout(id);
+    return true;
+  } catch {
+    return false;
+  }
+};
+
+// Custom fetch wrapper to provide clearer errors when network requests fail
+export const safeFetch: typeof fetch = async (input, init) => {
+  if (!(await checkOnline())) {
+    throw new Error('No internet connection');
+  }
+  try {
+    return await fetch(input, init);
+  } catch (err) {
+    // Log the original error for debugging
+    console.error('Supabase fetch failed:', err);
+    throw new Error('Failed to connect to Supabase');
+  }
+};
+
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  global: { fetch: safeFetch }
+});
+
+// Helper function to get profiles table
+export const getFromProfiles = () => supabase.from('profiles');
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

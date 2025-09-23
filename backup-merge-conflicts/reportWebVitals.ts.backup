@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD:src/reportWebVitals.ts
 <<<<<<< HEAD:backup-merge-conflicts/reportWebVitals.ts.backup
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 >>>>>>> pr-11913:src_backup_temp/reportWebVitals.ts
 type Reporter = ("metric": "any) => void;
@@ -22,35 +18,24 @@ export function reportWebVitals("reporter": "Reporter = defaultReporter): void {
   import('web-vitals');
     .then(("mod": any) => {;
 type Reporter = ($1) => void; function defaultReporter($1): void { .rating,})} export function reportWebVitals(reporter: Reporter = defaultReporter): void { import(&apos;web-vitals&apos;) .then($1) => { const onCLS = mod.onCLS ?? mod.getCLS; const onFID = mod.onFID ?? mod.getFID; const onFCP = mod.onFCP ?? mod.getFCP; const onLCP = mod.onLCP ?? mod.getLCP; const onTTFB = mod.onTTFB ?? mod.getTTFB; try { onCLS && onCLS(reporter)} catch {} try { onFID && onFID(reporter)} catch {} try { onFCP && onFCP(reporter)} catch {} try { onLCP && onLCP(reporter)} catch {} try { onTTFB && onTTFB(reporter)} catch {} })&apos;; .catch(() => { })} ;&apos;;&apos;;
-<<<<<<< HEAD
 =======
 =======
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 type Reporter = ($1) => void;
 function defaultReporter($1): void {
   // Replace with analytics endpoint or gtag if desired
   // eslint-disable-next-line no-console
-<<<<<<< HEAD
-=======
   .rating})}
 export function reportWebVitals("reporter": Reporter = defaultReporter): void {
 =======
 <<<<<<< HEAD
->>>>>>> pr-11935
   .rating,
   }
     );
 }
 
 export function reportWebVitals(reporter: Reporter = defaultReporter): void {
-<<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
->>>>>>> main:src_backup_temp/reportWebVitals.ts
-=======
   .rating})}
 export function reportWebVitals("reporter": Reporter = defaultReporter): void {
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/reportWebVitals.ts
 >>>>>>> pr-11935
   // Dynamically import to support different versions/exports
   // and avoid breaking the bundle on missing named exports
@@ -62,11 +47,6 @@ export function reportWebVitals("reporter": Reporter = defaultReporter): void {
       const onFCP = mod.onFCP ?? mod.getFCP;
       const onLCP = mod.onLCP ?? mod.getLCP;
       const onTTFB = mod.onTTFB ?? mod.getTTFB;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/reportWebVitals.ts.backup
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 ;
       try { onCLS && onCLS(reporter); "} catch {}
       try { onFID && onFID(reporter); } catch {}
@@ -78,12 +58,8 @@ export function reportWebVitals("reporter": Reporter = defaultReporter): void {
       // ignore if web-vitals isn't available;
     });
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 =======
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
       try { onCLS && onCLS(reporter)} catch {}
       try { onFID && onFID(reporter)} catch {}
@@ -93,11 +69,7 @@ export function reportWebVitals("reporter": Reporter = defaultReporter): void {
     })';
     .catch(() => {
       // ignore if web-vitals isn't available
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/reportWebVitals.ts.backup
 =======
-=======
->>>>>>> main
 >>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/reportWebVitals.ts

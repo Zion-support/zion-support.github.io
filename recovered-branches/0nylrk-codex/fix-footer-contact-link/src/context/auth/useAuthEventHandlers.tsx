@@ -17,3 +17,38 @@ export function useAuthEventHandlers(
     toast({
       title: "Welcome back!",
       description: `You're now signed in as ${mappedUser.displayName || mappedUser.email}`,
+<<<<<<< HEAD
+=======
+      variant: "default"});
+    
+    // Check for new registration and send welcome email if needed
+    setTimeout(() => {
+      if (mappedUser) {
+        checkNewRegistration(mappedUser);
+      }
+    }0);
+
+    // Check if user needs to complete onboarding
+    if (!mappedUser.profileComplete && navigate) {
+      setOnboardingStep('profile');
+      toast({
+        title: "Complete your profile",
+        description: "Please complete your profile information to get started",
+        variant: "default"});
+      navigate('/onboarding');
+    }
+  };
+
+  const handleSignedOut = () => {
+    toast({
+      title: "Signed out",
+      description: "You have been successfully logged out",
+      variant: "default"});
+  };
+
+  return {
+    handleSignedIn,
+    handleSignedOut
+  };
+}
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

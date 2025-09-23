@@ -31,3 +31,57 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
         : '';
       const headers = {
         ...instance.defaults.headers.common,
+<<<<<<< HEAD
+=======
+        ...(init as any).headers};
+      const opts = { ...init, headers } as RequestInit;
+      delete (opts as any).params;
+      return request(baseURL + url + params, 'GET', opts);
+    },
+    async post(url, data = {}, init = {}) {
+      const headers = {
+        'Content-Type': 'application/json',
+        ...instance.defaults.headers.common,
+        ...(init as any).headers};
+      const opts = { ...init, body: JSON.stringify(data), headers } as RequestInit;
+      return request(baseURL + url, 'POST', opts);
+    }};
+
+  // Request interceptor
+  instance.interceptors.request.use(
+    (config: any) => {
+      // Add auth token if available
+      if (typeof window !== 'undefined') {
+        const token = safeStorage.getItem('auth-token');
+        if (token && config.headers) {
+          config.headers.Authorization = `Bearer ${token}`;
+        }
+      }
+      return config;
+    },
+    (error: any) => {
+      return Promise.reject(error);
+    }
+  );
+
+  // Response interceptor
+  instance.interceptors.response.use(
+    (response: any) => response,
+    (error: any) => {
+      if (error?.response?.status === 401) {
+        // Handle unauthorized access
+        if (typeof window !== 'undefined') {
+          safeStorage.removeItem('auth-token');
+          window.location.href = '/auth/login';
+        }
+      }
+      return Promise.reject(error);
+    }
+  );
+
+  return instance;
+};
+
+// Export the function instead of calling it immediately to avoid temporal dead zone issues
+export default createAxiosInstance;
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

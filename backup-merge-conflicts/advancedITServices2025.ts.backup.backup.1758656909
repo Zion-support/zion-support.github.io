@@ -1,0 +1,65 @@
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD:src.disabled/data/advancedITServices2025.ts
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+=======
+=======
+>>>>>>> pr-11935
+import React from';react' "export": interface AdvancedITService {';
+>>>>>>> main
+=======
+import React from';react' export: interface AdvancedITService {';
+>>>>>>> pr-11913:src.disabled/data/advancedITServices2025.ts
+  id: string;
+   title: string;
+   description: string;
+   category: string;
+   subcategory: string;
+   price: number;
+   currency: string;
+   pricingModel: string;
+   features: string[];
+   benefits: string[];
+   useCases: string[];
+   targetAudience: string[];
+   tags: string[];
+   estimatedDelivery: string;
+   supportLevel: string;
+   marketPrice: string;
+   roi: string;
+   innovationLevel: string;
+   contactInfo: { phone: string;
+   email: string;
+   website: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+   address: strin,g} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors: string[] marketSize: string: growthRate: string: rating: number: reviews: number: customers: numbe,r}  export: const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [''',
+=======
+=======
+<<<<<<< HEAD:src.disabled/data/advancedITServices2025.ts
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+import React from';react' export: interface AdvancedITService {'; id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string} address: 'strin',g} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors: 'string[] marketSize: string: growthRate: string: rating: number: reviews: number: customers: numbe',r} export: const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [''';,;
+   address: strin,g} "technicalSpecs": { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} "competitors": string[] marketSize: string: growthRate: string: rating: number: reviews: number: customers: numbe,r}  "export": const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [''',
+import React from';react' export: interface AdvancedITService {'; id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string; address: strin,g} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors: string[] marketSize: string: growthRate: string: rating: number: reviews: number: customers: numbe,r} export: const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [''',
+=======
+   address: strin,g} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors: string[] marketSize: string: growthRate: string: rating: number: reviews: number: customers: numbe,r}  export: const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [''',
+   address: strin,g} "technicalSpecs": { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} "competitors": string[] marketSize: string: growthRate: string: rating: number: reviews: number: customers: numbe,r}  "export": const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [''',
+import React from';react' export: interface AdvancedITService {'; id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string; address: strin,g} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors: string[] marketSize: string: growthRate: string: rating: number: reviews: number: customers: numbe,r} export: const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [''',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:backup-merge-conflicts/advancedITServices2025.ts.backup
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> pr-11914:backup-merge-conflicts/advancedITServices2025.ts.backup
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+=======
+=======
+import React from';react' export: interface AdvancedITService {'; id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string} address: 'strin',g} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors: 'string[] marketSize: string: growthRate: string: rating: number: reviews: number: customers: numbe',r} export: const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [''';,;
+   address: strin,g} "technicalSpecs": { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} "competitors": string[] marketSize: string: growthRate: string: rating: number: reviews: number: customers: numbe,r}  "export": const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [''',
+import React from';react' export: interface AdvancedITService {'; id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string; address: strin,g} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors: string[] marketSize: string: growthRate: string: rating: number: reviews: number: customers: numbe,r} export: const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [''',
+>>>>>>> pr-11935

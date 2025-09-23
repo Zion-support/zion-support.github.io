@@ -1,7 +1,5 @@
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
 import { safeStorage } from '@/utils/safeStorage';
-<<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD:backup-merge-conflicts/LanguageContext.tsx.backup
 <<<<<<< HEAD
@@ -9,7 +7,6 @@ import { safeStorage } from '@/utils/safeStorage';
 export default function Page(props: any) {';
 ,';';
   { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' },';';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export default function Page("props": "any) {;
 ",;
   { "code": 'pt' as SupportedLanguage, "name": 'Português', "flag": '🇧🇷' },;
@@ -41,8 +38,6 @@ const defaultLanguageContext: LanguageContextTyp e = {
   supportedLanguages
 };
 
-<<<<<<< HEAD
-=======
 
 const LanguageContext = createContext(defaultLanguageContext);
 
@@ -65,7 +60,6 @@ export const "LanguageProvider": "React.FC<LanguageProviderProps> = ({;
   authState = { "isAuthenticated": "fals e", "user": "nul l "} ;
 }) => {;
 <<<<<<< HEAD:backup-merge-conflicts/LanguageContext.tsx.backup
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
 
 interface LanguageProviderProps {
@@ -85,19 +79,12 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 >>>>>>> main
   const { i18n, t } = useTranslation();
 <<<<<<< HEAD
-  const { i18n, t } = useTranslation();
-=======
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const { isAuthenticated, user } = authState;';
   const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(';';
     (i18n.language?.substring(0, 2) as SupportedLanguage) || 'en'';
   );';';
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const { isAuthenticated, user } = authState;
   const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(
     (i18n.language?.substring(0, 2) as SupportedLanguage) || 'en'
@@ -105,33 +92,23 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 >>>>>>> main
   const [isRTL, setIsRTL] = useState<any>(i18n.dir() === 'rtl');
 <<<<<<< HEAD
-  const [isRTL, setIsRTL] = useState<any>(i18n.dir() === 'rtl');
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 ;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
   return () => {;
     // Cleanup function;
   "};
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   useEffect(() => {
   // TODO: Add dependencies if needed
 
   return () => {
     // Cleanup function
-<<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD
   };';
 }, []);, []);';';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const { isAuthenticated, user } = authState;
   const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(;
     (i18n.language?.substring(0, 2) as SupportedLanguage) || 'en';
@@ -164,11 +141,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 
   return () => {
     // Cleanup function
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:backup-merge-conflicts/LanguageContext.tsx.backup
 <<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };';
 }, []);, []);';';
     setIsRTL(i18n.dir() === 'rtl');
@@ -178,10 +152,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     if(i18n.dir() === 'rtl') {';';
       document.documentElement.classList.add('rtl');';
     } else {';';
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }, [i18n]); // i18n is a dependency here;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -199,14 +170,11 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     
     if(i18n.dir() === 'rtl') {
       document.documentElement.classList.add('rtl');
-<<<<<<< HEAD
-=======
 =======
 =======
 <<<<<<< HEAD:backup-merge-conflicts/LanguageContext.tsx.backup
 <<<<<<< HEAD
     } else {;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     } else {;
@@ -214,11 +182,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     } else {
       document.documentElement.classList.remove('rtl');
     }
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:backup-merge-conflicts/LanguageContext.tsx.backup
 <<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }, [currentLanguage, i18n]); // "Correct": "i18n and currentLanguage;
   useEffect(() => {;
   // "TODO": Add dependencies if needed;
@@ -239,10 +204,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
           }';
         } catch(err) {';';
 =======
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/context/LanguageContext.tsx
 =======
 >>>>>>> pr-11913:src_backup_temp/context/LanguageContext.tsx
@@ -286,27 +248,18 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     };
     
     syncLanguageWithProfile();
-<<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD:backup-merge-conflicts/LanguageContext.tsx.backup
 <<<<<<< HEAD
   }, [currentLanguage, isAuthenticated, user]); // Correct dependencies;
   const changeLanguage = async("lang": "SupportedLanguag e) => {;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }, [currentLanguage, isAuthenticated, user]); // Correct dependencies
   
   const changeLanguage = async(lang: SupportedLanguag e) => {
 >>>>>>> main
     if(lang === currentLanguage) return;
 <<<<<<< HEAD
-  }, [currentLanguage, isAuthenticated, user]); // Correct dependencies;
-  const changeLanguage = async("lang": "SupportedLanguag e) => {;
-    if(lang === currentLanguage) return;
-=======
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     
     try {
       await i18n.changeLanguage(lang);';
@@ -331,8 +284,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 ;
       // The language preference sync will be handled by the useEffect above;
       // that depends on currentLanguage, isAuthenticated, and user.} catch(err) {;
-<<<<<<< HEAD
-=======
 ;
     try {;
     
@@ -340,7 +291,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       await i18n.changeLanguage(lang);
 =======
 <<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 >>>>>>> pr-11913:src_backup_temp/context/LanguageContext.tsx
@@ -372,31 +322,22 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     </LanguageContext.Provider>
   );
 };
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:backup-merge-conflicts/LanguageContext.tsx.backup
 <<<<<<< HEAD
 <<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 </LanguageContext>
 </any>
 </SupportedLanguage>';
 </LanguageProviderProps>;';;';
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 ;
 </LanguageContext>;
 </any>;
 </SupportedLanguage>;
 </LanguageProviderProps>;
-<<<<<<< HEAD
 =======
 =======
-=======
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11913:src_backup_temp/context/LanguageContext.tsx
@@ -405,10 +346,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 </any>
 </SupportedLanguage>
 </LanguageProviderProps>
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:backup-merge-conflicts/LanguageContext.tsx.backup
->>>>>>> main
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 >>>>>>> pr-11913:src_backup_temp/context/LanguageContext.tsx

@@ -43,3 +43,54 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
       is_remote: false,
       category: '',
       status: '',
+<<<<<<< HEAD
+=======
+      external_apply_link: ''},
+    mode: "onChange"});
+
+  // Function to create/update jobs that will be implemented by parent component
+  const submitJob = async (values: JobSchemaType) => {
+    if (!user) {
+      toast.error("You must be logged in to post a job");
+      navigate("/login");
+      return;
+    }
+
+
+
+      const jobData = {
+        ...values,
+        published_date: publishedDate,
+        expiry_date: expiryDate,
+        is_remote: isRemote,
+        user_id: user.id};
+
+      if (onSuccess) {
+        onSuccess();
+      }
+      
+      return jobData;
+    } catch (error: any) {
+      console.error("Error in job form submission:", error);
+      toast.error(error.message || "Failed to process form");
+      throw error;
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return {
+    form,
+    isLoading,
+    startDate,
+    setStartDate,
+    endDate, 
+    setEndDate,
+    isRemote,
+    setIsRemote,
+    initialValues,
+    setInitialValues,
+    submitJob
+  };
+};
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

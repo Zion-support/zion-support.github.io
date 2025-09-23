@@ -9,3 +9,21 @@ interface MobileFilterDrawerProps {
 }
 
 export function MobileFilterDrawer({ 
+<<<<<<< HEAD
+=======
+  isMobileFilterOpen
+  setIsMobileFilterOpen
+  filterProps
+}: MobileFilterDrawerProps) {
+  return (
+    <Drawer open={isMobileFilterOpen} onOpenChange={setIsMobileFilterOpen}>
+      <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto">
+        <FilterSidebar 
+          {...filterProps}
+          isMobileFilterOpen={isMobileFilterOpen}
+        />
+      </div>
+    </Drawer>
+  );
+}
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

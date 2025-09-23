@@ -26,3 +26,18 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <AuthProvider>
             <NotificationProvider>
               <AnalyticsProvider>
+<<<<<<< HEAD
+=======
+                <LanguageProvider authState={{ isAuthenticated: falseuser: null }}>
+                  <App />
+                  <LanguageDetectionPopup />
+                </LanguageProvider>
+              </AnalyticsProvider>
+            </NotificationProvider>
+          </AuthProvider>
+        </Router>
+      </WhitelabelProvider>
+    </HelmetProvider>
+  </React.StrictMode>,
+);
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

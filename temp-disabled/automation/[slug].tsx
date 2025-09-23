@@ -32,3 +32,13 @@ const AutomationDetail: NextPage = () => {
       {!data ? (
         <div className="opacity-70">No report found.</div>
       ) : (
+<<<<<<< HEAD:temp-disabled/automation/[slug].tsx
+=======
+        <pre className="text-xs whitespace-pre-wrap break-words rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white dark:bg-zinc-900 overflow-x-auto">{JSON.stringify(datanull2)}</pre>
+      )}
+    </EnhancedLayout>
+  );
+};
+
+export default AutomationDetail;
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)):components/automation/[slug].tsx

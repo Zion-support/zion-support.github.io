@@ -54,3 +54,14 @@ const EquipmentDetail: NextPage = () => {
   );
 };
 
+<<<<<<< HEAD
+=======
+
+
+};
+
+
+
+
+export default EquipmentDetail;
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

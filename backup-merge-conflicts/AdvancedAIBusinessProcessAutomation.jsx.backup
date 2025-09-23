@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const React,{ useState,useRef } from "react"; export function AdvancedAIBusinessProcessAutomation () {; import { GitFork,Brain,Settings,X,Maximize2,Minimize2,Search,CheckCircle,BarChart3,TrendingUp,Target,Activity,Users,FileText,AlertTriangle,Lightbulb,DollarSign,PieChart,MoreVertical,Edit3,Server,Play,Loader } from "lucide-react"} return null}''"
 <<<<<<< HEAD:backup-merge-conflicts/AdvancedAIBusinessProcessAutomation.jsx.backup
 =======
@@ -10,20 +8,10 @@ import _React,{ useState,useRef } from 'react'; export function AdvancedAIBusine
 <<<<<<< HEAD:src.disabled/src/components/disabled/AdvancedAIBusinessProcessAutomation.jsx
 import _React,{ useState,useRef } from 'react'; export function AdvancedAIBusinessProcessAutomation () {; import { GitFork,Brain,Settings,X,Maximize2,Minimize2,Search,CheckCircle,BarChart3,TrendingUp,Target,Activity,Users,FileText,AlertTriangle,Lightbulb,DollarSign,PieChart,MoreVertical,Edit3,Server,Play,Loader } from 'lucide-react'} return null}
 =======
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
-<<<<<<< HEAD
-import React,{ useState,useRef } from \'react\'; export function AdvancedAIBusinessProcessAutomation () {; import { GitFork,Brain,Settings,X,Maximize2,Minimize2,Search,CheckCircle,BarChart3,TrendingUp,Target,Activity,Users,FileText,AlertTriangle,Lightbulb,DollarSign,PieChart,MoreVertical,Edit3,Server,Play,Loader } from \'lucide-react\'} return null}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
->>>>>>> main
-=======
 import _React,{ useState,useRef } from 'react'; export function AdvancedAIBusinessProcessAutomation () {; import { GitFork,Brain,Settings,X,Maximize2,Minimize2,Search,CheckCircle,BarChart3,TrendingUp,Target,Activity,Users,FileText,AlertTriangle,Lightbulb,DollarSign,PieChart,MoreVertical,Edit3,Server,Play,Loader } from 'lucide-react'} return null}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/components/disabled/AdvancedAIBusinessProcessAutomation.jsx
-<<<<<<< HEAD
-=======
 import _React,{ useState,useRef } from 'react'; export function AdvancedAIBusinessProcessAutomation () {; import { GitFork,Brain,Settings,X,Maximize2,Minimize2,Search,CheckCircle,BarChart3,TrendingUp,Target,Activity,Users,FileText,AlertTriangle,Lightbulb,DollarSign,PieChart,MoreVertical,Edit3,Server,Play,Loader } from 'lucide-react'} return null}
 =======
 <<<<<<< HEAD
->>>>>>> pr-11914:backup-merge-conflicts/AdvancedAIBusinessProcessAutomation.jsx.backup
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
 =======

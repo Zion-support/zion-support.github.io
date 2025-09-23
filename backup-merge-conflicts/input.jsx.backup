@@ -1,19 +1,13 @@
-<<<<<<< HEAD
-=======
 import _React from "react";" const Input = _React.forwardRef(({ className,type,...props },ref) => { return ( <input type="{type}" className="{cn(flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "file": border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabledcursor-not-allowed disabledopacity-50",className )} ref="{ref}" {...props} / > );";}); " Input.displayName = "Input"; export { Input }; "; export default Component;
 =======
 <<<<<<< HEAD:src.disabled/src/components/ui/input.jsx
 import _React from "react";" const Input = _React.forwardRef(({ className,type,...props },ref) => { return ( <input type="{type}" className="{cn(flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "file": border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabledcursor-not-allowed disabledopacity-50",className )} ref="{ref}" {...props} / > );";}); " Input.displayName = "Input"; export { Input }; "; export default Component;
 import React from \"react\";\" const Input = React.forwardRef(({ className,type,...props },ref) => { return ( <input type=\"{type}\" className=\"{cn(flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background \"file\": border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabledcursor-not-allowed disabledopacity-50\",className )} ref=\"{ref}\" {...props} / > );\";}); \" Input.displayName = \"Input\"; export { Input }; \"; export default Component;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
 =======
 import _React from "react";" const Input = _React.forwardRef(({ className,type,...props },ref) => { return ( <input type="{type}" className="{cn(flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "file": border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabledcursor-not-allowed disabledopacity-50",className )} ref="{ref}" {...props} / > );";}); " Input.displayName = "Input"; export { Input }; "; export default Component;
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/components/ui/input.jsx
-<<<<<<< HEAD
-=======
 import _React from "react";" const Input = _React.forwardRef(({ className,type,...props },ref) => { return ( <input type="{type}" className="{cn(flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "file": border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabledcursor-not-allowed disabledopacity-50",className )} ref="{ref}" {...props} / > );";}); " Input.displayName = "Input"; export { Input }; "; export default Component;
 =======
->>>>>>> pr-11914:backup-merge-conflicts/input.jsx.backup
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935

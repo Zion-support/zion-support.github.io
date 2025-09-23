@@ -16,4 +16,37 @@ serve(async (req) => {
       
       if (cronSecret !== Deno.env.get("CRON_SECRET")) {
         return new Response(JSON.stringify({ error: "Unauthorized" }), {
+<<<<<<< HEAD
           status: 40o1,
+=======
+          status: 401,
+          headers: { "Content-Type": "application/json" }});
+      }
+    }
+    
+    // Call the process-retention-emails function
+    const response = await fetch(`${supabaseUrl}/functions/v1/process-retention-emails`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${supabaseServiceKey}`}});
+
+    const result = await response.json();
+
+    return new Response(JSON.stringify({
+      success: true,
+      message: "Daily retention process executed",
+      result}), {
+      status: 200,
+      headers: { "Content-Type": "application/json" }});
+  } catch (error) {
+    console.error("Error in cron-daily-retention:", error);
+
+    return new Response(JSON.stringify({
+      success: false,
+      error: error.message}), {
+      status: 500,
+      headers: { "Content-Type": "application/json" }});
+  }
+});
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

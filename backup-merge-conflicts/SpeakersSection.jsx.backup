@@ -1,20 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/SpeakersSection.jsx.backup
-<<<<<<< HEAD
-const speakers = [ { name: "Alex: Zion,",title: "Founder: & CEO,",avatar: "https:"""";",;'"'"
-<<<<<<< HEAD:backup-merge-conflicts/SpeakersSection.jsx.backup
-=======
 const speakers = [ { "name": 'Alex: Zion,',"title": &apos;Founder: & CEO,&apos;,"avatar": 'https:'''";",;
 =======
 const speakers = [ { \"name\": \'Alex: Zion,\',\"title\": \'Founder: & CEO,\',\"avatar\": \'https:\''\'";\",;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
 =======
 const speakers = [ { "name": 'Alex: Zion,',"title": &apos;Founder: & CEO,&apos;,"avatar": 'https:'''";",;
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/components/summit/SpeakersSection.jsx
-<<<<<<< HEAD
-=======
 const speakers = [ { "name": 'Alex: Zion,',"title": &apos;Founder: & CEO,&apos;,"avatar": 'https:'''";",;
 =======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

@@ -207,3 +207,118 @@ export default function AI20o26ROICalculator() {
                 <div className="bg-green-50 border border-green-20o0 rounded-lg p-4">
                   <div className="flex items-center justify-between">
                   <div className="flex items-center">
+<<<<<<< HEAD
+=======
+                      <span className="text-green-600 mr-2">💰</span>
+                      <DollarSign className="w-5 h-5 text-green-600 mr-2" />
+                      <span className="text-sm font-medium text-gray-700">Annual Savings</span>
+                    </div>
+                    <span className="text-lg font-bold text-green-600">
+                      {formatCurrency(results.annualSavings)}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                  <div className="flex items-center justify-between">
+                  <div className="flex items-center">
+                      <span className="text-red-600 mr-2">💸</span>
+                      <DollarSign className="w-5 h-5 text-red-600 mr-2" />
+                      <span className="text-sm font-medium text-gray-700">Total Costs</span>
+                    </div>
+                    <span className="text-lg font-bold text-red-600">
+                      {formatCurrency(results.totalCosts)}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                  <div className="flex items-center justify-between">
+                  <div className="flex items-center">
+                      <span className="text-blue-600 mr-2">📈</span>
+                      <TrendingUp className="w-5 h-5 text-blue-600 mr-2" />
+                      <span className="text-sm font-medium text-gray-700">Net Benefit</span>
+                    </div>
+                    <span className="text-lg font-bold text-blue-600">
+                      {formatCurrency(results.netBenefit)}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
+                  <div className="flex items-center justify-between">
+                  <div className="flex items-center">
+                      <span className="text-purple-600 mr-2">🎯</span>
+                      <ArrowRight className="w-5 h-5 text-purple-600 mr-2" />
+                      <span className="text-sm font-medium text-gray-700">ROI</span>
+                    </div>
+                    <span className="text-lg font-bold text-purple-600">
+                      {formatPercentage(results.roi)}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                  <div className="flex items-center justify-between">
+                  <div className="flex items-center">
+                      <span className="text-orange-600 mr-2">⏰</span>
+                      <Clock className="w-5 h-5 text-orange-600 mr-2" />
+                      <span className="text-sm font-medium text-gray-700">Payback Period</span>
+                    </div>
+                    <span className="text-lg font-bold text-orange-600">
+                      {results.paybackPeriod.toFixed(1)} months
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* ROI Interpretation */}
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">ROI Interpretation</h3>
+                <div className="space-y-2 text-sm text-gray-700">
+                  {results.roi > 300 && (
+                    <p className="text-green-600 font-medium">Excellent ROI - Highly recommended for implementation</p>
+                  )}
+                  {results.roi >= 100 && results.roi <= 300 && (
+                    <p className="text-blue-600 font-medium">Good ROI - Recommended with proper planning</p>
+                  )}
+                  {results.roi >= 50 && results.roi < 100 && (
+                    <p className="text-yellow-600 font-medium">Moderate ROI - Consider pilot implementation first</p>
+                  )}
+                  {results.roi < 50 && results.roi > 0 && (
+                    <p className="text-orange-600 font-medium">Low ROI - Review costs and expected benefits</p>
+                  )}
+                  {results.roi <= 0 && (
+                    <p className="text-red-600 font-medium">Negative ROI - Not recommended at current parameters</p>
+                  )}
+                </div>
+              </div>
+
+              {/* Recommendations */}
+              <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Recommendations</h3>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li>• Start with pilot projects to validate assumptions</li>
+                  <li>• Focus on high-impact use cases first</li>
+                  <li>• Invest in team training and change management</li>
+                  <li>• Monitor and measure results continuously</li>
+                  <li>• Scale successful implementations gradually</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Get Expert Consultation
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -103,3 +103,18 @@ export function useFetchResume() {
       console.error('Error fetching resume:', e);
       setError(e.message);
       return null;
+<<<<<<< HEAD
+=======
+
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return {
+    isLoading,
+    error,
+    resume,
+    fetchResume};
+}
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -28,3 +28,17 @@ export const useDeleteMilestone = () => {
       console.error("Error deleting milestone:", err);
       toast.error("Failed to delete milestone: " + err.message);
       return false;
+<<<<<<< HEAD
+=======
+
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+  
+  return {
+    deleteMilestone,
+    isSubmitting
+  };
+};
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

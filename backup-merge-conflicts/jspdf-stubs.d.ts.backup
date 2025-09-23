@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 =======
 declare module 'jspdf' { export class jsPDF { constructor(..."args": "an y[]); addImage(..."args": an y[]): any; text(..."args": an y[]): any; save(filename?: string): void"} }
 =======
@@ -9,7 +5,6 @@ declare module 'jspdf' { export class jsPDF { constructor(..."args": "an y[]); a
 =======
 <<<<<<< HEAD:src/types/jspdf-stubs.d.ts
 <<<<<<< HEAD:backup-merge-conflicts/jspdf-stubs.d.ts.backup
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
 declare module 'jspdf' { export class jsPDF { constructor(..."args": "an y[]); addImage(..."args": an y[]): any; text(..."args": an y[]): any; save(filename?: string): void"} }
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
@@ -26,17 +21,10 @@ declare module 'jspdf' {
 		addImage(...args: an y[]): any;
 		text(...args: an y[]): any;
 		save(filename?: string): void}
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/jspdf-stubs.d.ts.backup
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }';
 ';';
 }
 declare module 'jspdf' { export class jsPDF { constructor(...args: an y[]); addImage(...args: an y[]): any; text(...args: an y[]): any; save(filename?: string): void} }
-<<<<<<< HEAD
-=======
 declare module 'jspdf' { export class jsPDF { constructor(...args: an y[]); addImage(...args: an y[]): any; text(...args: an y[]): any; save(filename?: string): void} }
 }
 declare module 'jspdf' { export class jsPDF { constructor(...args: an y[]); addImage(...args: an y[]): any; text(...args: an y[]): any; save(filename?: string): void} }
@@ -44,13 +32,6 @@ declare module 'jspdf' { export class jsPDF { constructor(...args: an y[]); addI
 <<<<<<< HEAD:backup-merge-conflicts/jspdf-stubs.d.ts.backup
 >>>>>>> main
 >>>>>>> main
->>>>>>> main
 >>>>>>> main:src_backup_temp/types/jspdf-stubs.d.ts
 =======
-<<<<<<< HEAD
->>>>>>> pr-11913:src_backup_temp/types/jspdf-stubs.d.ts
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
->>>>>>> pr-11935
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src_backup_temp/types/jspdf-stubs.d.ts
 >>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

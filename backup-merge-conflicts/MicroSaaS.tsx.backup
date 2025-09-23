@@ -1,9 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:backup-merge-conflicts/MicroSaaS.tsx.backup
 <<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Link } from 'react-router-dom';
 
 const MicroSaaS: React.FC = () => {
@@ -460,10 +457,7 @@ const MicroSaaS: React.FC = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 ;
 const "MicroSaaS": "React.FC = () => {;
   return (;

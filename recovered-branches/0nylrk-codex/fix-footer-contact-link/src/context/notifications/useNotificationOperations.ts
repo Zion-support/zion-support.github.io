@@ -105,3 +105,8 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     markAllAsRead,
     dismissNotification,
     setFilter,
+<<<<<<< HEAD
+=======
+    fetchNotifications};
+};
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

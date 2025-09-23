@@ -22,3 +22,32 @@ export const useCreateMilestone = (projectId?: string) => {
         .insert({
           ...milestoneData,
           project_id: projectId,
+<<<<<<< HEAD
+=======
+          created_by: user.id})
+        .select()
+        .single();
+      
+      if (error) throw error;
+      
+      // Create activity record
+      await recordMilestoneActivity(data.id, 'created', null, 'pending', 'Milestone created');
+      
+      toast.success("Milestone created successfully");
+      
+      return data;
+    } catch (err: any) {
+      console.error("Error creating milestone:", err);
+      toast.error("Failed to create milestone: " + err.message);
+      return null;
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+  
+  return {
+    createMilestone,
+    isSubmitting
+  };
+};
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 const StructuredData = () => {
@@ -28,6 +29,8 @@ const StructuredData = () => {
 
 export default StructuredData;
 =======
+=======
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))
 type StructuredDataProps = {
   type: string;
   data: Record<string, unknown>;
@@ -97,4 +100,3 @@ export const serviceSchema ={
   description: 'Comprehensive AI solutions, cloud computing, and digital transformation services to transform your business.',
   serviceType: 'Technology Services'
 };
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1

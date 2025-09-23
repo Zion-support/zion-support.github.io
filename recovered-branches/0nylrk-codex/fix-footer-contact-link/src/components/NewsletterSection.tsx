@@ -9,3 +9,16 @@ export function NewsletterSection() {
         <div className="max-w-4xl mx-auto text-center">
           <GradientHeading>Stay Informed</GradientHeading>
           <p className="mt-4 text-zion-slate-light text-xl mb-8">
+<<<<<<< HEAD
+=======
+            Subscribe to our newsletter for the latest updates on Zion's servicesGoogle trending tech newsand marketplace opportunities.
+          </p>
+          <div className="max-w-md mx-auto">
+            <EnhancedNewsletterForm />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

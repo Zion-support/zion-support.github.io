@@ -16,3 +16,76 @@ const mockTalent: TalentProfile = {
   professional_title: 'Full Stack Developer',
   hourly_rate: 85,
   profile_picture_url: '',
+<<<<<<< HEAD
+=======
+  skills: ['React'Node.js'Smart Contracts']};
+
+export function ContractBuilderContent() {
+  const { user } = useAuth();
+  const [showBuilderTypesetShowBuilderType] = useState<'none' | 'standard' | 'smart'>('none');
+  const [recentContractsetRecentContracts] = useState([
+    {
+      id: 'contract-1',
+      title: 'Website Redesign',
+      client: 'Acme Corp',
+      talent: 'Alex Chen',
+      date: '2025-05-15',
+      isSmartContract: true
+    },
+    {
+      id: 'contract-2'
+      title: 'Mobile App Development',
+      client: 'TechStart Inc',
+      talent: 'Sarah Williams',
+      date: '2025-05-10',
+      isSmartContract: false
+    }
+  ]);
+
+  const handleContractGenerated = (content: string) => {
+    console.log('Contract generated:'content.substring(0100) + '...');
+  };
+
+  const handleViewContract = (contractId: string) => {
+    console.log('Viewing contract:'contractId);
+    // Future implementation: View specific contract details
+  };
+
+  return (
+    <>
+      <ContractHeader onCreateClick={() => setShowBuilderType('smart')} />
+      
+      <ContractTypeCards 
+        onStandardClick={() => setShowBuilderType('standard')}
+        onSmartClick={() => setShowBuilderType('smart')}
+      />
+      
+      <RecentContractsTable 
+        contracts={recentContracts}
+        onViewContract={handleViewContract}
+      />
+      
+      {showBuilderType === 'standard' && (
+        <ContractBuilder
+          isOpen={true}
+          onClose={() => setShowBuilderType('none')}
+          talent={mockTalent}
+          clientName={user?.displayName || 'Client'}
+          onContractGenerated={handleContractGenerated}
+        />
+      )}
+      
+      {showBuilderType === 'smart' && (
+        <SmartContractBuilder
+          isOpen={true}
+          onClose={() => setShowBuilderType('none')}
+          talent={mockTalent}
+          clientName={user?.displayName || 'Client'}
+          onContractGenerated={handleContractGenerated}
+        />
+      )}
+    </>
+  );
+}
+
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -14,3 +14,22 @@ interface PreviewResumeProps {
   onBack: () => void;
 }
 
+<<<<<<< HEAD
+=======
+export function PreviewResume({ resumeonBack }: PreviewResumeProps) {
+  return (
+    <div className="space-y-6">
+      <PreviewHeader resume={resume} onBack={onBack} />
+      
+      {/* Resume Preview */}
+      <div className="bg-white text-black p-8 rounded-lg shadow-lg print-section">
+        <ResumeBasicInfoSection basicInfo={resume.basic_info} />
+        <WorkExperienceSection workExperience={resume.work_experience} />
+        <EducationSection education={resume.education} />
+        <SkillsSection skills={resume.skills} />
+        <CertificationsSection certifications={resume.certifications} />
+      </div>
+    </div>
+  );
+}
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

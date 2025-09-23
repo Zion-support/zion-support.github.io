@@ -13,3 +13,15 @@ export function LoginContent() {
             <div className="max-w-md text-center">
               <h3 className="text-3xl font-bold text-white mb-4">Join the Zion Community</h3>
               <p className="text-lg text-white/80">
+<<<<<<< HEAD
+=======
+                Connect with thousands of AI professionalsdiscover new opportunitiesand showcase your services to a global audience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))
