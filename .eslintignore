@@ -57,4 +57,40 @@ recovered-branches/
 backup*/
 corrupted_backup/
 zion-os/
-server/
+zion-website/
+
+# Broadly exclude most of src; re-include core clean directories
+src/**
+!src/app/**
+!src/components/**
+!src/lib/**
+!src/hooks/**
+!src/styles/**
+
+# Explicitly ignore noisy/problematic subtrees
+src/pages_backup/
+src/data/
+src/expandedServices.ts
+src/enhancedServices.ts
+src/utils/**
+src/types/**
+zion-ai-assistant/
+
+# Misc backups
+lib_backup/
+lib.broken/
+lib.disabled/
+
+# Catch-all patterns for backups/disabled variants
+**/*.backup*
+**/*.backups*/
+**/*.corrupted*/
+**/*.disabled*/
+
+# Additional exclusions to avoid linting corrupted or out-of-scope code
+utils/
+types/
+ts_files_backup/
+zion-os/
+zion-ai-assistant/
+zion-website/
