@@ -12,6 +12,8 @@ export default [
       'dist/**',
       'build/**',
       'public/**',
+      'components/**',
+      'lib/**',
       'automation/**',
       'apps.backup/**',
       'backup/**',
@@ -33,7 +35,7 @@ export default [
       '**/*.min.js',
     ],
   },
-  js.configs.recommended,
+  eslintJs.configs.recommended,
   ...tseslint.configs.recommended,
   {
     files: [
@@ -42,10 +44,18 @@ export default [
       'src/**/*.{js,jsx,ts,tsx}',
     ],
     languageOptions: {
+<<<<<<< HEAD
       ecmaVersion: 2021,
       sourceType: 'module',
     },
     plugins: { react, 'react-hooks': reactHooks },
+=======
+      parser: tseslint.parser,
+      ecmaVersion: 2021,
+      sourceType: 'module'
+    },
+    plugins: { react: eslintReact, 'react-hooks': eslintReactHooks, '@typescript-eslint': tseslint.plugin },
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-9be7
     settings: { react: { version: 'detect' } },
     rules: {
       'react/react-in-jsx-scope': 'off',

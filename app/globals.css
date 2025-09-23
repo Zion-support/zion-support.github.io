@@ -6,6 +6,7 @@
 :root {
   --foreground-rgb: 17, 24, 39;
   --background-rgb: 255, 255, 255;
+  --background-start-rgb: 255, 255, 255;
   --primary-50: 239, 246, 255;
   --primary-100: 219, 234, 254;
   --primary-500: 59, 130, 246;
@@ -18,12 +19,19 @@
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-rgb: 17, 24, 39;
+    --background-start-rgb: 17, 24, 39;
   }
 }
 
 /* Base Styles */
 html {
   scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {

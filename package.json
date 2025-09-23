@@ -17,9 +17,9 @@
     "dev:clean": "rm -rf .next && npm run dev",
     "lint:fix": "eslint app src providers lib hooks --fix",
     "type-check": "tsc --noEmit",
-    "test": "jest --config jest.config.mjs --runInBand --passWithNoTests --no-cache",
-    "test:watch": "jest --config jest.config.mjs --watch --runInBand",
-    "test:coverage": "jest --config jest.config.mjs --coverage",
+    "test": "jest --config jest.config.cjs --runInBand --passWithNoTests --no-cache",
+    "test:watch": "jest --config jest.config.cjs --watch --runInBand",
+    "test:coverage": "jest --config jest.config.cjs --coverage",
     "preview": "npm run build && npm run start",
     "clean": "rm -rf .next out dist build",
     "export": "npm run build && next export",
@@ -84,5 +84,10 @@
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.44.1"
   },
+<<<<<<< HEAD
+=======
+  
+  
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-9be7
   "packageManager": "npm@11.6.0"
 }
