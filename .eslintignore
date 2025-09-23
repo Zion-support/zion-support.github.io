@@ -1,3 +1,27 @@
+# Ignore noisy and non-source directories/files
+node_modules/
+.next/
+dist/
+build/
+coverage/
+out/
+
+# Project-specific noisy directories
+pages-disabled/**
+pages.__backup/**
+apps.backup/**
+backup/**
+backups/**
+backup-merge-conflicts/**
+backup-problematic-files/**
+recovered-branches/**
+automation/backups/**
+
+# Subprojects build and dependencies
+zion-website/.next/**
+zion-website/node_modules/**
+zion-os/.next/**
+zion-os/node_modules/**
 *
 !zion-website
 !zion-website/**

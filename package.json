@@ -10,7 +10,7 @@
     "dev": "next dev",
     "build": "NODE_OPTIONS='--max-old-space-size=4096 --openssl-legacy-provider' next build --no-lint",
     "start": "next start",
-    "lint": "eslint .",
+    "lint": "eslint app src providers components lib utils hooks types zion-website zion-os",
     "lint:fix": "eslint . --fix",
     "type-check": "tsc --noEmit",
     "build:analyze": "ANALYZE=true npm run build",
