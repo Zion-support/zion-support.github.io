@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function DashboardPage(): React.ReactElement {
-	return (
-		<main>
-			<h1>Dashboard</h1>
-			<p>Welcome to your dashboard.</p>
-		</main>
-	);
-}
-
-
-
-
-
-=======
 "use client";
 
 import { useAuth } from "@/contexts/AuthContext";
@@ -149,4 +132,3 @@ export default function DashboardPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047
