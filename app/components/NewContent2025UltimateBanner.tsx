@@ -51,17 +51,17 @@ const NewContent2025UltimateBanner = () => {
                 <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
                 <span>Predictive Intelligence</span>
               </div>
-            <div className="flex items-center text-sm text-green-400 mb-4">
-              <TrendingUp className="w-4 h-4 mr-2" />
-              <span>400% Average ROI Achieved</span>
+              <div className="flex items-center text-sm text-green-400 mb-4">
+                <TrendingUp className="w-4 h-4 mr-2" />
+                <span>400% Average ROI Achieved</span>
+              </div>
+              <Link 
+                href="/blog/ai-2025-data-analytics-revolution-enterprise-intelligence"
+                className="inline-flex items-center bg-gradient-to-r from-green-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Read Full Guide →
+              </Link>
             </div>
-            <Link 
-              href="/blog/ai-2025-data-analytics-revolution-enterprise-intelligence"
-              className="inline-flex items-center bg-gradient-to-r from-green-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-            >
-              Read Full Guide →
-            </Link>
-          </div>
 
           {/* Blockchain Integration */}
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20">
@@ -145,7 +145,10 @@ const NewContent2025UltimateBanner = () => {
                   </div>
                 </div>
               </div>
-        {/* Case Studies Section */}
+            </div>
+          </div>
+
+          {/* Case Studies Section */}
         <div className="bg-gradient-to-r from-emerald-800 to-cyan-800 rounded-2xl p-8 mb-16">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold mb-4">Real-World Success Stories</h3>
@@ -187,7 +190,10 @@ const NewContent2025UltimateBanner = () => {
                   Read Full Case Study →
                 </Link>
               </div>
-        {/* Implementation Checklist */}
+            </div>
+          </div>
+
+          {/* Implementation Checklist */}
         <div className="bg-white bg-opacity-15 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
           <div className="flex items-center justify-between mb-6">
             <div>
@@ -231,6 +237,9 @@ const NewContent2025UltimateBanner = () => {
             >
               Explore Services
             </Link>
+          </div>
+        </div>
+
         {/* Resources Section */}
         <div className="text-center">
           <h3 className="text-3xl font-bold mb-8">Free Implementation Resources</h3>
@@ -256,6 +265,9 @@ const NewContent2025UltimateBanner = () => {
                 Schedule Consultation →
               </Link>
             </div>
+          </div>
+        </div>
+
         {/* Trust Indicators */}
         <div className="mt-12 text-center">
           <p className="text-gray-300 mb-4">Trusted by leading organizations worldwide</p>
@@ -270,3 +282,5 @@ const NewContent2025UltimateBanner = () => {
     </section>
   );
 }
+
+export default NewContent2025UltimateBanner;

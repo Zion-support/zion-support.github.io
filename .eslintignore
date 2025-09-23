@@ -59,6 +59,20 @@ temp_conflicts/
 temp-disabled/
 temp_exclude/
 
+# Large subprojects not part of primary app
+zion-os/
+zion-website/
+zion-ai-assistant/
+
+# Backup TypeScript files
+ts_files_backup/
+
+# Problematic single files
+vite.config-backup.ts
+workbox-config.js
+ultimate-fix.js
+ultimate-merge-conflict-resolver.js
+
 # Misc backups
 lib_backup/
 lib.broken/
