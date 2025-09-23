@@ -11,7 +11,7 @@ export default function SignUpPage() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
-  const { register } = useAuth();
+  const { signIn } = useAuth();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -25,7 +25,7 @@ export default function SignUpPage() {
     }
 
     try {
-      await register(name, email, password);
+      await signIn(email, password);
     } catch (error) {
       setError(error instanceof Error ? error.message : "Registration failed");
     } finally {
@@ -128,7 +128,7 @@ export default function SignUpPage() {
             </div>
 
             <div>
-              <label htmlFor="confirmPassword" className="block text-sm font-medium text-zinc-300 mb-2">
+              <label htmlFor="confirmPassword" className="block text sm font-medium text-zinc-300 mb-2">
                 Confirm Password
               </label>
               <input
@@ -153,7 +153,7 @@ export default function SignUpPage() {
 
           <div className="mt-6 text-center">
             <p className="text-zinc-400 text-sm">
-              Already have an account?{" "}
+              Already have an account? {""}
               <Link href="/auth/signin" className="text-blue-400 hover:text-blue-300 font-medium">
                 Sign in
               </Link>
@@ -163,11 +163,11 @@ export default function SignUpPage() {
 
         <div className="text-center">
           <p className="text-zinc-500 text-xs">
-            By signing up, you agree to our{" "}
+            By signing up, you agree to our {""}
             <Link href="/terms" className="text-zinc-400 hover:text-zinc-300">
               Terms of Service
             </Link>{" "}
-            and{" "}
+            and {" "}
             <Link href="/privacy" className="text-zinc-400 hover:text-zinc-300">
               Privacy Policy
             </Link>
