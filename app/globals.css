@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -88,7 +87,8 @@ body {
   .no-print {
     display: none !important;
   }
-=======
+}
+
 /* Basic reset */
 * {
   box-sizing: border-box;
