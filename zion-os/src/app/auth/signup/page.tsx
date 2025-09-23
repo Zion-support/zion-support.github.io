@@ -24,8 +24,8 @@ export default function SignUpPage() {
     }
     try {
       await register(name, email, password);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Registration failed");
+    } catch (error) {
+      setError(error instanceof Error ? error.message : "Registration failed");
     } finally {
       setIsLoading(false);
     }
