@@ -88,11 +88,7 @@ export default function StudioHostPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ episodeId: episode.id }),
       });
-<<<<<<< HEAD
       await res.json();
-=======
-      const data = await res.json();
->>>>>>> f8c5ea439523d2ce0733666810df367abf9ff500
       alert('Episode published successfully!');
     } catch (e) {
       console.error(e);
@@ -106,48 +102,26 @@ export default function StudioHostPage() {
     <div className="space-y-8">
       <h1 className="text-3xl font-bold">Podcast Studio Host</h1>
       
-      <section className="space-y-6">
+      <section className="space-y-4">
         <h2 className="text-xl font-semibold">Configuration</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-<<<<<<< HEAD
-            <label className="block text-sm font-medium mb-2">Host Persona</label>
+            <label className="block text-sm font-medium mb-2">Voice</label>
             <select
-=======
-            <label className="block text-sm font-medium" htmlFor="voice">
-              Voice
-            </label>
-            <select
-              id="voice"
-              className="mt-1 w-full border rounded p-2"
->>>>>>> f8c5ea439523d2ce0733666810df367abf9ff500
               value={persona.voice}
               onChange={(e) => setPersona({ ...persona, voice: e.target.value })}
               className="w-full p-2 border rounded"
             >
               <option value="Visionary">Visionary</option>
               <option value="Technical">Technical</option>
-<<<<<<< HEAD
               <option value="Casual">Casual</option>
-=======
-              <option value="Conversational">Conversational</option>
->>>>>>> f8c5ea439523d2ce0733666810df367abf9ff500
             </select>
           </div>
           
           <div>
-<<<<<<< HEAD
             <label className="block text-sm font-medium mb-2">Language</label>
             <select
-=======
-            <label className="block text-sm font-medium" htmlFor="language">
-              Language
-            </label>
-            <select
-              id="language"
-              className="mt-1 w-full border rounded p-2"
->>>>>>> f8c5ea439523d2ce0733666810df367abf9ff500
               value={persona.language}
               onChange={(e) => setPersona({ ...persona, language: e.target.value })}
               className="w-full p-2 border rounded"
@@ -157,7 +131,6 @@ export default function StudioHostPage() {
               <option value="French">French</option>
             </select>
           </div>
-<<<<<<< HEAD
         </div>
 
         <div>
@@ -208,51 +181,6 @@ export default function StudioHostPage() {
           disabled={generating}
         >
           {generating ? 'Generating...' : 'Generate Episode'}
-=======
-          <div>
-            <label className="block text-sm font-medium" htmlFor="inviteeName">
-              Invitee Name
-            </label>
-            <input
-              id="inviteeName"
-              type="text"
-              className="mt-1 w-full border rounded p-2"
-              value={inviteeName}
-              onChange={(e) => setInviteeName(e.target.value)}
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium" htmlFor="topic">
-              Topic
-            </label>
-            <input
-              id="topic"
-              type="text"
-              className="mt-1 w-full border rounded p-2"
-              value={topic}
-              onChange={(e) => setTopic(e.target.value)}
-            />
-          </div>
-        </div>
-        <div className="md:col-span-3">
-          <label className="block text-sm font-medium" htmlFor="operatorPrompt">
-            Operator Prompt
-          </label>
-          <textarea
-            id="operatorPrompt"
-            className="mt-1 w-full border rounded p-2"
-            rows={3}
-            value={operatorPrompt}
-            onChange={(e) => setOperatorPrompt(e.target.value)}
-          />
-        </div>
-        <button
-          className="px-4 py-2 bg-blue-600 text-white rounded"
-          onClick={handleGenerate}
-          disabled={generating}
-        >
-          {generating ? 'Generating…' : 'Generate Episode'}
->>>>>>> f8c5ea439523d2ce0733666810df367abf9ff500
         </button>
       </section>
 
@@ -262,6 +190,7 @@ export default function StudioHostPage() {
           <div className="border rounded p-4 space-y-3">
             <p className="text-sm text-gray-600">ID: {episode.id}</p>
             <h3 className="text-lg font-bold">{episode.title}</h3>
+            
             <div>
               <h4 className="font-semibold">Questions</h4>
               <ol className="list-decimal list-inside space-y-2">
@@ -270,50 +199,34 @@ export default function StudioHostPage() {
                 ))}
               </ol>
             </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> f8c5ea439523d2ce0733666810df367abf9ff500
             <div>
               <h4 className="font-semibold">Best Quote</h4>
               <p>{episode.bestQuote}</p>
             </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> f8c5ea439523d2ce0733666810df367abf9ff500
             <div>
               <h4 className="font-semibold">YouTube Description</h4>
-              <pre className="whitespace-pre-wrap text-sm bg-gray-100 p-2 rounded">
+              <pre className="bg-gray-100 p-2 rounded text-sm whitespace-pre-wrap">
                 {episode.youtubeDescription}
               </pre>
             </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> f8c5ea439523d2ce0733666810df367abf9ff500
             <div>
               <h4 className="font-semibold">Spotify Description</h4>
-              <pre className="whitespace-pre-wrap text-sm bg-gray-100 p-2 rounded">
+              <pre className="bg-gray-100 p-2 rounded text-sm whitespace-pre-wrap">
                 {episode.spotifyDescription}
               </pre>
             </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> f8c5ea439523d2ce0733666810df367abf9ff500
             <div>
               <h4 className="font-semibold">Transcript</h4>
-              <pre className="whitespace-pre-wrap text-sm bg-gray-100 p-2 rounded">
+              <pre className="bg-gray-100 p-2 rounded text-sm whitespace-pre-wrap">
                 {episode.transcript}
               </pre>
             </div>
-<<<<<<< HEAD
 
-            <div className="flex space-x-4">
-=======
-            <div className="flex gap-2">
->>>>>>> f8c5ea439523d2ce0733666810df367abf9ff500
+            <div className="flex space-x-2">
               <button
                 className="px-4 py-2 bg-purple-600 text-white rounded"
                 onClick={handleSynthesize}
@@ -326,10 +239,9 @@ export default function StudioHostPage() {
                 onClick={handlePublish}
                 disabled={publishing}
               >
-                {publishing ? 'Publishing...' : 'Update RSS'}
+                {publishing ? 'Publishing…' : 'Update RSS'}
               </button>
             </div>
-<<<<<<< HEAD
 
             {episode.audio && (
               <div className="space-y-2">
@@ -339,7 +251,7 @@ export default function StudioHostPage() {
                     <a
                       href={episode.audio.mp3Url}
                       download
-                      className="px-4 py-2 bg-blue-600 text-white rounded"
+                      className="px-3 py-1 bg-blue-600 text-white rounded text-sm"
                     >
                       Download MP3
                     </a>
@@ -348,7 +260,7 @@ export default function StudioHostPage() {
                     <a
                       href={episode.audio.wavUrl}
                       download
-                      className="px-4 py-2 bg-green-600 text-white rounded"
+                      className="px-3 py-1 bg-green-600 text-white rounded text-sm"
                     >
                       Download WAV
                     </a>
@@ -357,41 +269,12 @@ export default function StudioHostPage() {
                     <a
                       href={episode.audio.mp4Url}
                       download
-                      className="px-4 py-2 bg-red-600 text-white rounded"
+                      className="px-3 py-1 bg-red-600 text-white rounded text-sm"
                     >
                       Download MP4
                     </a>
                   )}
                 </div>
-=======
-            {episode.audio && (
-              <div className="space-y-2">
-                <h4 className="font-semibold">Audio Files</h4>
-                {episode.audio.mp3Url && (
-                  <a
-                    href={episode.audio.mp3Url}
-                    className="text-blue-600 underline block"
-                  >
-                    Download MP3
-                  </a>
-                )}
-                {episode.audio.wavUrl && (
-                  <a
-                    href={episode.audio.wavUrl}
-                    className="text-blue-600 underline block"
-                  >
-                    Download WAV
-                  </a>
-                )}
-                {episode.audio.mp4Url && (
-                  <a
-                    href={episode.audio.mp4Url}
-                    className="text-blue-600 underline block"
-                  >
-                    Download MP4
-                  </a>
-                )}
->>>>>>> f8c5ea439523d2ce0733666810df367abf9ff500
               </div>
             )}
           </div>
