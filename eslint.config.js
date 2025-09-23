@@ -6,6 +6,7 @@ import globals from 'globals';
 
 export default [
   {
+    // Keep linting fast and avoid scanning huge backups and generated folders
     ignores: [
       'node_modules/**',
       '.next/**',
@@ -91,6 +92,7 @@ export default [
       react,
       'react-hooks': reactHooks
     },
+    plugins: { react, 'react-hooks': reactHooks },
     settings: { react: { version: 'detect' } },
     rules: {
       'no-empty': 'off',
