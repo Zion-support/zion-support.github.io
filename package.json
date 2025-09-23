@@ -65,6 +65,8 @@
     "@types/node": "^16.18.126",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
+    "@typescript-eslint/eslint-plugin": "^8.44.1",
+    "@typescript-eslint/parser": "^8.44.1",
     "babel-jest": "^29.7.0",
     "critters": "^0.0.23",
     "eslint": "^8.0.0",
@@ -88,14 +90,13 @@
       "^@/(.*)$": "<rootDir>/$1"
     },
     "modulePathIgnorePatterns": [
-      "<rootDir>/automation/backups/.*",
-      "<rootDir>/apps.backup/.*",
-      "<rootDir>/components/apps/.*",
-      "<rootDir>/.temp_backup_components/.*",
-      "<rootDir>/backup/.*",
-      "<rootDir>/backups/.*",
-      "<rootDir>/backup-merge-conflicts/.*",
-      "<rootDir>/recovered-branches/.*"
+      "<rootDir>/automation/",
+      "<rootDir>/.temp_backup_components/",
+      "<rootDir>/recovered-branches/",
+      "<rootDir>/apps.backup/",
+      "<rootDir>/components/apps/",
+      "<rootDir>/backup-problematic-files/",
+      "<rootDir>/server/"
     ],
     "watchPathIgnorePatterns": [
       "<rootDir>/automation/backups/.*",
@@ -159,15 +160,6 @@
       "<rootDir>/components/api/docs/",
       "<rootDir>/data/api-docs/",
       "<rootDir>/e2e/"
-    ],
-    "modulePathIgnorePatterns": [
-      "<rootDir>/automation/",
-      "<rootDir>/.temp_backup_components/",
-      "<rootDir>/recovered-branches/",
-      "<rootDir>/apps.backup/",
-      "<rootDir>/components/apps/",
-      "<rootDir>/backup-problematic-files/",
-      "<rootDir>/server/"
     ]
   },
   "packageManager": "npm@11.6.0"
