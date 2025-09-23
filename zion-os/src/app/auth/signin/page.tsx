@@ -1,31 +1,50 @@
 "use client";
 
+export const dynamic = "force-dynamic";
+
 import { useState } from "react";
 import Link from "next/link";
+import { useAuth } from "@/contexts/AuthContext";
 
 export default function SignInPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
+  const { signIn } = useAuth();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    // TODO: Implement actual sign in logic
-    console.log("Sign in:", email, password);
-    setIsLoading(false);
+    setError("");
+
+    try {
+      await signIn(email, password);
+    } catch (error) {
+      setError(error instanceof Error ? error.message : "Login failed");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8">
-        <div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-            Sign in to your account
-          </h2>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">
+      <div className="max-w-md w-full space-y-8 p-8">
+        <div className="text-center">
+          <h1 className="text-3xl font-bold text-white mb-2">Welcome Back</h1>
+          <p className="text-zinc-400">
+            Sign in to access your Zion OS dashboard and continue building
+          </p>
         </div>
-        <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-          <div className="rounded-md shadow-sm -space-y-px">
+
+        <div className="bg-zinc-800/50 backdrop-blur-sm rounded-xl p-6 border border-zinc-700/50">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            {error && (
+              <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-3">
+                <p className="text-red-400 text-sm">{error}</p>
+              </div>
+            )}
+
             <div>
               <label htmlFor="email-address" className="sr-only">
                 Email address
@@ -42,6 +61,7 @@ export default function SignInPage() {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
+
             <div>
               <label htmlFor="password" className="sr-only">
                 Password
@@ -58,9 +78,7 @@ export default function SignInPage() {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-          </div>
 
-          <div>
             <button
               type="submit"
               disabled={isLoading}
@@ -68,14 +86,30 @@ export default function SignInPage() {
             >
               {isLoading ? "Signing in..." : "Sign in"}
             </button>
-          </div>
+          </form>
 
-          <div className="text-center">
-            <Link href="/auth/signup" className="text-indigo-600 hover:text-indigo-500">
-              Don't have an account? Sign up
-            </Link>
+          <div className="mt-6 text-center">
+            <p className="text-zinc-400 text-sm">
+              Don't have an account?{" "}
+              <Link href="/auth/signup" className="text-blue-400 hover:text-blue-300 font-medium">
+                Sign up for free
+              </Link>
+            </p>
           </div>
-        </form>
+        </div>
+
+        <div className="text-center">
+          <p className="text-zinc-500 text-xs">
+            By signing in, you agree to our{" "}
+            <Link href="/terms" className="text-zinc-400 hover:text-zinc-300">
+              Terms of Service
+            </Link>{" "}
+            and{" "}
+            <Link href="/privacy" className="text-zinc-400 hover:text-zinc-300">
+              Privacy Policy
+            </Link>
+          </p>
+        </div>
       </div>
     </div>
   );

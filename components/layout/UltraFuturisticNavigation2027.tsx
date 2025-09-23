@@ -647,6 +647,6 @@ export default function UltraFuturisticNavigation2027() {
       </AnimatePresence>
     </header>
   );
-};
+}
 
 export default UltraFuturisticNavigation2027;

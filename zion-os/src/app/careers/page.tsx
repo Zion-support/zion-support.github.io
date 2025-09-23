@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'Careers - Zion Tech Group',
-  description: 'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.',
+  description: 'Join our team of innovators and build the future of technology with Zion Tech Group.',
   keywords: 'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs',
 };
 
