@@ -56,10 +56,4 @@ export function Analytics() {
   return null; // This component doesn't render anything
 }
 
-<<<<<<< HEAD
-
-export function Analytics(): React.ReactElement | null {
-  return null;
-}
-
 export default Analytics;
