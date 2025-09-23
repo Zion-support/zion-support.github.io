@@ -42,7 +42,6 @@ class ErrorPreventionAutomation {
     console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
   }
-<<<<<<< HEAD
 
   log(message) {
     const timestamp = new Date().toISOString(;
@@ -52,7 +51,6 @@ class ErrorPreventionAutomation {
     console.log(logMessage.trim(););
     fs.appendFileSync(this.logFile, logMessage)}
 
-=======
 ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 =======
   log(message) {
@@ -77,7 +75,6 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 };ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       // Run all prevention checks
       results.checks.linting = await this.checkLinting();
->>>>>>> main
       results.checks.types = await this.checkTypes();
       results.checks.build = await this.checkBuild();
       results.checks.dependencies = await this.checkDependencies();

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export function AccessibilityMenu(props: any) {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
@@ -11,7 +9,6 @@ export function AccessibilityMenu(props: any) {
     );
     useEffect(() => {
         // Load settings from localStorage
->>>>>>> main
         const savedSettings = localStorage.getItem('accessibility-settings');
         if (savedSettings) {;
             setSettings(JSON.parse(savedSettings))}
@@ -164,11 +161,8 @@ export function AccessibilityMenu(props: any) {
 
 </motion>
 </motion>
-<<<<<<< HEAD:backup-merge-conflicts/accessibility-menu.js.jsx.backup
 </motion>
-=======
 
->>>>>>> main
 =======
 </motion>
 </motion>

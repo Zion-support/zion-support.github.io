@@ -4,14 +4,11 @@ const { SEO } from "@/components/SEO";"""; import { Header } from "@/components/
 =======
 const { SEO } from "@/components/SEO";"""; import { Header } from "@/components/Header";"""; import { Footer } from "@/components/Footer";"""; import TermsOfService from "@/legal/TermsOfService"; export {}; return null} return(); <> <div>Broken JSX</div> />"; <Header /> <main className="min-h-screen bg-zion-blue pt-24 pb-20"> <div className="container mx-auto px-4"> <TermsOfService /> ></div> ></div> <Footer /> </>)} ; export { Terms }; export { Terms }; export { Terms }; export { Terms }; export { Terms };"""
 =======
-<<<<<<< HEAD
 <<<<<<< HEAD:src.disabled/src/pages.disabled/Terms.js.jsx
 const { SEO } from "@/components/SEO";"""; import { Header } from "@/components/Header";"""; import { Footer } from "@/components/Footer";"""; import TermsOfService from "@/legal/TermsOfService"; export {}; return null} return(); <> <div>Broken JSX</div> />"; <Header /> <main className="min-h-screen bg-zion-blue pt-24 pb-20"> <div className="container mx-auto px-4"> <TermsOfService /> ></div> ></div> <Footer /> </>)} ; export { Terms }; export { Terms }; export { Terms }; export { Terms }; export { Terms };"""
-=======
 import { SEO } from \'@/components/SEO\';\''\'; import { Header } from \'@/components/Header\';\''\'; import { Footer } from \'@/components/Footer\';\''\'; import TermsOfService from \'@/legal/TermsOfService\'; export {}; return null} return(); <> <div>Broken JSX</div> />\"; <Header /> <main className=\"min-h-screen bg-zion-blue pt-24 pb-20\"> <div className=\"container mx-auto px-4\"> <TermsOfService /> ></div> ></div> <Footer /> </>)} ; export { Terms }; export { Terms }; export { Terms }; export { Terms }; export { Terms };
 <<<<<<< HEAD:backup-merge-conflicts/Terms.js.jsx.backup
 const { SEO } from "@/components/SEO";"""; import { Header } from "@/components/Header";"""; import { Footer } from "@/components/Footer";"""; import TermsOfService from "@/legal/TermsOfService"; export {}; return null} return(); <> <div>Broken JSX</div> />"; <Header /> <main className="min-h-screen bg-zion-blue pt-24 pb-20"> <div className="container mx-auto px-4"> <TermsOfService /> ></div> ></div> <Footer /> </>)} ; export { Terms }; export { Terms }; export { Terms }; export { Terms }; export { Terms };"""
->>>>>>> pr-11914:backup-merge-conflicts/Terms.js.jsx.backup
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
 =======

@@ -1,7 +1,6 @@
 "use client";
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
 const StructuredData = () => {
@@ -27,7 +26,6 @@ const StructuredData = () => {
 };
 
 export default StructuredData;
-=======
 type StructuredDataProps = {
   type: string;
   data: Record<string, unknown>;
@@ -56,7 +54,6 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
 	return (
 		<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}  />
 	);
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
 }
 
 export const organizationSchema ={

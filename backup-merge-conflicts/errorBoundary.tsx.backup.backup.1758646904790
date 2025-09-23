@@ -1,6 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 ;
 interface Props extends React.PropsWithChildren<{}> {;
   "children": "ReactNode;
@@ -79,7 +78,6 @@ class ErrorBoundary extends Component<Props, State> {;
               animate={{ "scale": "1 "}}
               className="text-center";
             >;
-=======
 interface Props extends React.PropsWithChildren<{}> {
   "children": ReactNode;
   fallback?: ReactNode;
@@ -116,7 +114,6 @@ class ErrorBoundary extends Component<Props, State> {
     }
     );
 
->>>>>>> pr-11913:src_backup_temp/utils/errorBoundary.tsx
     // Log error to external service
     this.logError(error, errorInfo);
   }

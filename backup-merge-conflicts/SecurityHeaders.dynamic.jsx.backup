@@ -1,10 +1,7 @@
-<<<<<<< HEAD:components.disabled/SecurityHeaders.dynamic.jsx
 const SecurityHeaders = dynamic(() => import(\"./SecurityHeaders\"),{\'; loading: () => <p>Loading...</p,>,}) export: \'default SecurityHeaders\' ,
-=======
 =======
 const SecurityHeaders = dynamic(() => import("./SecurityHeaders"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SecurityHeaders' ,'
 </p>'
->>>>>>> main
 >>>>>>> main
 </p>'
 =======

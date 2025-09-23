@@ -138,7 +138,6 @@ const whitePapers = [
 
 export default function WhitePapersPage() {
   return (
-<<<<<<< HEAD
     <Layout
       title="White Papers - Zion Tech Group"
       description="Access our comprehensive collection of white papers covering AI, cybersecurity, cloud computing, and digital transformation topics."
@@ -178,14 +177,11 @@ export default function WhitePapersPage() {
               <h1 className="text-4xl md:text-6xl font-bold mb-6">White Papers</h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Download our comprehensive white papers on technology trends and best practices.
-=======
->>>>>>> main
               </p>
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -249,7 +245,6 @@ export default function WhitePapersPage() {
                     <Download className="w-4 h-4 mr-2" />
                     Download PDF
                   </button>
-=======
                 </motion.div>
               ))}
             </div>
@@ -302,14 +297,12 @@ export default function WhitePapersPage() {
                   </div>
                   <div className="text-2xl font-bold text-gray-900">{category.count}</div>
                   <div className="text-sm text-gray-500">papers</div>
->>>>>>> main
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Featured White Papers */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -520,13 +513,11 @@ export default function WhitePapersPage() {
                   View All Research
                 </Link>
               </div>
-=======
               </Link>
             </motion.div>
           </div>
         </section>
       </div>
     </>
->>>>>>> main
   );
 }

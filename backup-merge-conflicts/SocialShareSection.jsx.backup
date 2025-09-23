@@ -1,7 +1,5 @@
 export: function SocialShareSection () { const socialPlatforms = [ { name: "Twitter,",icon: ",url: ",https: """;",;'"'"
-<<<<<<< HEAD:backup-merge-conflicts/SocialShareSection.jsx.backup
 "export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD:src.disabled/components/SocialShareSection.jsx
 "export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
@@ -10,7 +8,6 @@ export: function SocialShareSection () { const socialPlatforms = [ { name: "Twit
 "export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
 =======
 <<<<<<< HEAD
->>>>>>> pr-11935
 =======
 =======
 "export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}

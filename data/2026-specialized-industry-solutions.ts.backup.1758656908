@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 export interface SpecializedIndustrySolution {
 export interface SpecializedIndustrySolution2026 {
-=======
 export interface SpecializedIndustrySolution {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f
   id: string;
   name: string;
   tagline: string;
@@ -41,7 +38,6 @@ export interface SpecializedIndustrySolution {
   customers: number;
   rating: number;
   reviews: number;
-<<<<<<< HEAD
 }
   benefits: string[];
   capabilities: string[];
@@ -50,17 +46,14 @@ export interface SpecializedIndustrySolution {
   featuresCapabilities: string[];
 }
 
-=======
 }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-<<<<<<< HEAD
 
 export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
   {
@@ -143,8 +136,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     marketAdvantage: 'AI-powered risk management at 90% lower cost than traditional solutions',
     averageMarketPrice: '$18,000/year',
     featuresCapabilities: ['Risk assessment', 'Portfolio optimization', 'Predictive analytics']
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f
   }
 ];
 
@@ -154,11 +145,8 @@ export const INDUSTRY_SOLUTION_CATEGORIES = [
   'Manufacturing Technology',
   'Retail Technology',
   'Logistics Technology'
-<<<<<<< HEAD
 ];
 ];
 
 export default specializedIndustrySolutions2026;
-=======
 ];
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f

@@ -12,7 +12,6 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
-<<<<<<< HEAD
   'agentic-safety-patterns-2025': {
     id: 'agentic-safety-patterns-2025',
     title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
@@ -56,14 +55,12 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     excerpt:
       'A pragmatic framework for dual-layer governance blending automated policy engines with human oversight for AI systems at scale.',
     category: 'AI Governance',
-=======
   'agent-safety-guardrails-2025': {
     id: 'agent-safety-guardrails-2025',
     title: 'Agent Safety Guardrails: Designing Trustworthy Autonomous Systems in 2025',
     excerpt:
       'Practical blueprints for policy engines, intervention strategies, and auditable controls that keep autonomous agents safe and aligned.',
     category: 'AI Solutions',
->>>>>>> cursor/create-and-deploy-new-content-4789
     author: 'Dr. Emily Watson',
     date: '2025-09-15',
     readTime: '8 min read',

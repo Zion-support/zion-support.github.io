@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
@@ -43,8 +42,6 @@ import { ArrowLeft, Star, Clock, DollarSign, Users, MapPin, Phone, Mail } from '
               </p>
               <p className="text-white mt-4">
                 Our equipment detail page is coming soon. You'll be able to view comprehensive information about each piece of equipment.
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 import React from 'react';
 import { Header } from '@/components/header/Header';
 import { Footer } from '@/components/Footer';

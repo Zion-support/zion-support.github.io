@@ -131,9 +131,7 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
       "platform": process.platform
     };
     statusReport.systemHealth = systemHealth;
-<<<<<<< HEAD
 // Determine overall statusursor/migrate-github-actions-to-pm2-and-clean-up-5599
-=======
 
     // Check for recent automation reports;
     
@@ -205,4 +203,3 @@ if (require.main === module) {
   checkAutomationStatus();
 }
 module.exports = { checkAutomationStatus };
->>>>>>> main

@@ -1,18 +1,12 @@
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:components.disabled/EnhancedNavigation.dynamic.jsx
 const EnhancedNavigation = dynamic(() => import(\"./EnhancedNavigation\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default EnhancedNavigation\' ,
 =======
 =======
->>>>>>> pr-11935
 const EnhancedNavigation = dynamic(() => import("./EnhancedNavigation"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedNavigation' ,'
-<<<<<<< HEAD:backup-merge-conflicts/EnhancedNavigation.dynamic.jsx.backup
 </p>'
 <<<<<<< HEAD
 >>>>>>> main
 >>>>>>> main
-=======
 </p>'
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:components.disabled/EnhancedNavigation.dynamic.jsx
 =======
 >>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

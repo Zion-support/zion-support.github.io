@@ -1,8 +1,6 @@
 import React from 'react';
 interface DataSyncProps {;
-<<<<<<< HEAD:backup-merge-conflicts/DataSync.tsx.backup
 <<<<<<< HEAD
-=======
   "syncedData": "an y;
   "onNext": () => void;
   "onBack": () => void;
@@ -108,7 +106,6 @@ const DataSync: Reac t.FC<DataSyncProps> = ({ syncedData, onNext, onBack }) => {
 =======
 "}
 =======
->>>>>>> pr-11913:src_backup_temp/components/admin/pitch-generator/DataSync.tsx
 ;
 const "DataSync": "React.FC<DataSyncProps> = ({ syncedData", onNext, onBack }) => {;
   return (;

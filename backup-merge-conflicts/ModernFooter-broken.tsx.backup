@@ -1,5 +1,4 @@
 =======
-<<<<<<< HEAD:src/components/layout/ModernFooter-broken.tsx
 import React from 'react'; Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin, Linkedin, Twitter, Github, ArrowUp, ExternalLink} from 'lucide-react'; ; const ModernFooter = ("props": "any) => {; const currentYear = new Date().getFullYear(); ; const footerSections = [;
   {; "title": 'Services' "links": ['",;
   { "name": 'AI Solutions', "href": '/ai-services', "icon": "Brai n "}, { "name": 'Cloud & DevOps', "href": '/services/cloud-devops', "icon": "Clou d "}, { "name": 'Cybersecurity', "href": '/services/ai-compliance-copilot', "icon": "Shiel d "}, { "name": 'Edge & IoT', "href": '/services/edge-computing-platform', "icon": "Za p "}, { "name": 'Digital Transformation', "href": '/it-services', "icon": "User s "}] }, {; "title": 'Company' "links": "['",;
@@ -77,7 +76,6 @@ import React from 'react'; Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail,
   { name: 'LinkedIn', href: 'https:,,"}
     );,"})'
 export default function ModernFooter(props: any) {return ("
-=======
 import React from 'react'; Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin, Linkedin, Twitter, Github, ArrowUp, ExternalLink} from 'lucide-react'; const ModernFooter = (props) => {; const currentYear = new Date().getFullYear(); const footerSections = [{; "title": 'Services' links: [',
   { "name": 'AI Solutions', "href": '/ai-services', "icon": Brai n }, { "name": 'Cloud & DevOps', "href": '/services/cloud-devops', "icon": Clou d }, { "name": 'Cybersecurity', "href": '/services/ai-compliance-copilot', "icon": Shiel d }, { "name": 'Edge & IoT', "href": '/services/edge-computing-platform', "icon": Za p }, { "name": 'Digital Transformation', "href": '/it-services', "icon": User s }] }, {; "title": 'Company' links: [',
   { "name": 'About Us', "href": '/about' }, { "name": 'Our Team', "href": '/about#team' }, { "name": 'Careers', "href": '/careers' }, { "name": 'News & Updates', "href": '/news' }, { "name": 'Case Studies', "href": '/case-studies' }] }, {; "title": 'Resources' links: [',
@@ -102,7 +100,6 @@ import React from 'react'; Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail,
   { "name": 'LinkedIn', "href": 'https:,,"});,"})'
 export default function ModernFooter($1) {return ("
 =======
->>>>>>> pr-11913:src_backup_temp/components/layout/ModernFooter-broken.tsx
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="ModernFooter - Zion Tech Group" description="Professional ModernFooter services by Zion Tech Group"  />"
       <div className="container mx-auto px-4 py-20">"

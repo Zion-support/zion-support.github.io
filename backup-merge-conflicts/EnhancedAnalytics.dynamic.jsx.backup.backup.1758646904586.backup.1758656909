@@ -1,10 +1,7 @@
 =======
-<<<<<<< HEAD
 const EnhancedAnalytics = dynamic(() => import("./EnhancedAnalytics"),{"; loading: () => <p>Loading.</p,>}) export: "default EnhancedAnalytics" ,"""
 <<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11935
 const EnhancedAnalytics = dynamic(() => import("./EnhancedAnalytics"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedAnalytics' ,'
 >>>>>>> main
 >>>>>>> main

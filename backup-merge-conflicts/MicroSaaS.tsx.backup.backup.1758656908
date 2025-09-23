@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:backup-merge-conflicts/MicroSaaS.tsx.backup
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
 
@@ -457,7 +456,6 @@ const MicroSaaS: React.FC = () => {
           </div>
         </div>
       </div>
-=======
 ;
 const "MicroSaaS": "React.FC = () => {;
   return (;
@@ -469,7 +467,6 @@ const "MicroSaaS": "React.FC = () => {;
         <p className="text-xl text-gray-600 text-center">Coming soon...</p>;
       </div>;
     </div>;
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/pages/MicroSaaS.tsx
   );

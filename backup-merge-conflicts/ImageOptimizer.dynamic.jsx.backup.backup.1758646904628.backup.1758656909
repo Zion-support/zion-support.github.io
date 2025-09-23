@@ -1,10 +1,7 @@
 =======
-<<<<<<< HEAD
 const ImageOptimizer = dynamic(() => import("./ImageOptimizer"),{"; loading: () => <p>Loading.</p,>}) export: "default ImageOptimizer" ,"""
 <<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11935
 const ImageOptimizer = dynamic(() => import("./ImageOptimizer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ImageOptimizer' ,'
 >>>>>>> main
 >>>>>>> main

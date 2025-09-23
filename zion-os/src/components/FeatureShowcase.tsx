@@ -25,7 +25,7 @@ const features: Feature[] = [
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={2}
-          d="M19 21V5a2 2 0 0o0-2-2H7a2 2 0 0o0-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 0o11-1h2a1 1 0 0o11 1v5m-4 0h4"
+          d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
          />
       </svg>
     ),
@@ -48,7 +48,7 @@ const features: Feature[] = [
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={2}
-          d="M9.663 17h4.673M12 3v1m6.364 1.636l-.70o7.70o7M21 12h-1M4 12H3m3.343-5.657l-.70o7-.70o7m2.828 9.9a5 5 0 117.0o72 0l-.548.547A3.374 3.374 0 0o014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+          d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
          />
       </svg>
     ),
@@ -71,7 +71,7 @@ const features: Feature[] = [
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={2}
-          d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.40o2 2.599 1M12 8V7m0 1v8m0 0v1m0-1c1.11 0 2.08-.40o2 2.599-1"
+          d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08-.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c1.11 0 2.08-.402 2.599-1"
          />
       </svg>
     ),
@@ -95,21 +95,21 @@ export function FeatureShowcase() {
 
   const getColorClasses = (color: Feature["color"]) => {
     const colorMap ={
-      blue: "from-blue-50o0 to-blue-60o0",
-      purple: "from-purple-50o0 to-purple-60o0",
-      green: "from-green-50o0 to-green-60o0",
-      red: "from-red-50o0 to-red-60o0",
-      yellow: "from-yellow-50o0 to-yellow-60o0",
-      indigo: "from-indigo-50o0 to-indigo-60o0"} as const;
-    return colorMap[color] || "from-blue-50o0 to-blue-60o0";
+      blue: "from-blue-500 to-blue-600",
+      purple: "from-purple-500 to-purple-600",
+      green: "from-green-500 to-green-600",
+      red: "from-red-500 to-red-600",
+      yellow: "from-yellow-500 to-yellow-600",
+      indigo: "from-indigo-500 to-indigo-600"} as const;
+    return colorMap[color] || "from-blue-500 to-blue-600";
   };
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-90o0/50 to-black/50">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900/50 to-black/50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Explore Our Features</h2>
-          <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             Dive deep into the powerful capabilities that make Zion OS the ultimate platform for digital economies
           </p>
         </div>
@@ -120,12 +120,12 @@ export function FeatureShowcase() {
             {features.map((feature, index) => (
               <div
                 key={feature.id}
-                className={`card cursor-pointer transform transition-all duration-30o0 hover:scale-10o5 ${
+                className={`card cursor-pointer transform transition-all duration-300 hover:scale-105 ${
                   activeFeature === feature.id
-                    ? `ring-2 ring-${feature.color}-50o0/50 bg-white/10`
+                    ? `ring-2 bg-white/10`
                     : 'hover:bg-white/10'
-                } ${isVisible ? 'opacity-10o0 translate-x-0' : 'opacity-0 translate-x-10'}`}
-                style={{ transitionDelay: `${index * 10o0}ms` }}
+                } ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
+                style={{ transitionDelay: `${index * 100}ms` }}
                 onClick={() => setActiveFeature(activeFeature === feature.id ? null : feature.id)}
               >
                 <div className="flex items-start space-x-4">
@@ -134,22 +134,22 @@ export function FeatureShowcase() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-semibold mb-2 text-white">{feature.title}</h3>
-                    <p className="text-gray-40o0 mb-3">{feature.description}</p>
+                    <p className="text-gray-400 mb-3">{feature.description}</p>
                     {activeFeature === feature.id && (
                       <div className="space-y-2 animate-fade-in">
                         {feature.details.map((detail, idx) => (
-                          <div key={idx} className="flex items-center space-x-2 text-sm text-gray-30o0">
-                            <div className={`w-1.5 h-1.5 bg-${feature.color}-50o0 rounded-full`}></div>
+                          <div key={idx} className="flex items-center space-x-2 text-sm text-gray-300">
+                            <div className="w-1.5 h-1.5 bg-white/50 rounded-full"></div>
                             <span>{detail}</span>
                           </div>
                         ))}
                       </div>
                     )}
                   </div>
-                  <div className={`transform transition-transform duration-30o0 ${
+                  <div className={`transform transition-transform duration-300 ${
                     activeFeature === feature.id ? 'rotate-180' : 'rotate-0'
                   }`}>
-                    <svg className="w-5 h-5 text-gray-40o0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />
                     </svg>
                   </div>
@@ -160,12 +160,12 @@ export function FeatureShowcase() {
 
           {/* Interactive Demo Area */}
           <div className="relative">
-            <div className="card bg-gradient-to-br from-blue-60o0/20 to-purple-60o0/20 border-blue-50o0/30 p-8">
+            <div className="card bg-gradient-to-br from-blue-600/20 to-purple-600/20 p-8">
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold mb-2 text-white">
                   {activeFeature ? features.find((f) => f.id === activeFeature)?.title : 'Select a Feature'}
                 </h3>
-                <p className="text-gray-30o0">
+                <p className="text-gray-300">
                   {activeFeature
                     ? 'Explore the capabilities and see how it works'
                     : 'Click on any feature to see detailed information and demonstrations'}
@@ -211,8 +211,8 @@ export function FeatureShowcase() {
                 </div>
               ) : (
                 <div className="text-center py-12">
-                  <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-r from-blue-50o0/20 to-purple-50o0/20 rounded-full flex items-center justify-center">
-                    <svg className="w-12 h-12 text-blue-40o0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full flex items-center justify-center">
+                    <svg className="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"  />
                     </svg>
                   </div>

@@ -1,10 +1,7 @@
 =======
-<<<<<<< HEAD
 const SEOOptimizer = dynamic(() => import("./SEOOptimizer"),{"; loading: () => <p>Loading.</p,>,}) export: "default SEOOptimizer" ,"""
 <<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11935
 const SEOOptimizer = dynamic(() => import("./SEOOptimizer"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SEOOptimizer' ,'
 >>>>>>> main
 >>>>>>> main

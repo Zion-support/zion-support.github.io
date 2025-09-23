@@ -1,10 +1,7 @@
-<<<<<<< HEAD:components.disabled/TestimonialsSection.dynamic.jsx
 const TestimonialsSection = dynamic(() => import(\"./TestimonialsSection\"),{\'; loading: () => <p>Loading...</p,>,}) export: \'default TestimonialsSection\' ,
-=======
 =======
 const TestimonialsSection = dynamic(() => import("./TestimonialsSection"),{'; loading: () => <p>Loading...</p,>,}) export: 'default TestimonialsSection' ,'
 </p>'
->>>>>>> main
 >>>>>>> main
 </p>'
 =======

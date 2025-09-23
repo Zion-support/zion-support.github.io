@@ -12,7 +12,6 @@
     "start": "next start",
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
     "lint": "eslint src pages app lib components hooks --no-error-on-unmatched-pattern",
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "rm -rf .next && npm run build",
@@ -26,10 +25,8 @@
     "dev:clean": "rm -rf .next && npm run dev",
     "lint:fix": "eslint app --fix",
     "type-check": "NODE_OPTIONS='--max-old-space-size=8192' tsc --noEmit",
-=======
     "lint:fix": "next lint --fix",
     "type-check": "NODE_OPTIONS='--max-old-space-size=8192' tsc --noEmit -p tsconfig.app.json",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3530
     "test": "jest --runInBand --passWithNoTests --no-cache",
 =======
     "lint": "eslint src app components",
@@ -103,11 +100,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
     "@next/swc-linux-x64-gnu": "^15.5.3",
-=======
     "@next/swc-linux-x64-gnu": "^15.5.3",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8
 =======
     "@next/swc-linux-x64-gnu": "^15.5.3",
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1
@@ -139,9 +133,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6fc7
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3530
 =======
@@ -162,14 +153,11 @@
     "jest-environment-jsdom": "^29.0.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.0",
-<<<<<<< HEAD
     "typescript": "^5.9.2"
     "typescript": "^5.0.0",
     "typescript-eslint": "^8.44.1"
-=======
     "typescript": "^5.0.0",
     "@next/swc-linux-x64-gnu": "15.5.3"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125
   },
   "jest": {
     "roots": [
@@ -189,7 +177,6 @@
     "moduleNameMapper": {
       "^@/(.*)$": "<rootDir>/$1"
     },
-<<<<<<< HEAD
     "modulePathIgnorePatterns": [
 <<<<<<< HEAD
       "<rootDir>/automation/",
@@ -220,8 +207,6 @@
       "<rootDir>/recovered-branches/.*",
       "<rootDir>/zion-os/.*"
     ],
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
 =======
     "modulePathIgnorePatterns": ["<rootDir>/automation/", "<rootDir>/apps.backup/", "<rootDir>/components.apps/", "<rootDir>/components.disabled/", "<rootDir>/zion-os/", "<rootDir>/zion-os.disabled/", "<rootDir>/zion-ai-assistant/", "<rootDir>/server/", "<rootDir>/recovered-branches/", "<rootDir>/automation/backups/", "<rootDir>/.temp_backup_components/", "<rootDir>/backup-problematic-files/"],
     "watchPathIgnorePatterns": ["<rootDir>/automation/", "<rootDir>/apps.backup/", "<rootDir>/components.apps/", "<rootDir>/components.disabled/", "<rootDir>/zion-os/", "<rootDir>/zion-os.disabled/", "<rootDir>/zion-ai-assistant/", "<rootDir>/server/", "<rootDir>/recovered-branches/", "<rootDir>/automation/backups/", "<rootDir>/.temp_backup_components/", "<rootDir>/backup-problematic-files/"],
@@ -268,7 +253,6 @@
       "<rootDir>/temp_exclude/",
       "<rootDir>/corrupted_backup/",
       "<rootDir>/e2e/"
-<<<<<<< HEAD
     ]
 <<<<<<< HEAD
   },
@@ -276,9 +260,7 @@
 <<<<<<< HEAD
   "type": "module"
   "packageManager": "npm@11.6.0"
-=======
   "packageManager": "npm@11.6.0"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3530
 =======
     ],
     "modulePathIgnorePatterns": [

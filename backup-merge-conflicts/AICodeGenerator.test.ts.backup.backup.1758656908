@@ -1,10 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 =======
-=======
->>>>>>> pr-11914:backup-merge-conflicts/AICodeGenerator.test.ts.backup
 import AICodeGenerator from './AICodeGenerator;
 describe('AICodeGenerator', () => {;
   it('renders without crashing', () => {;
@@ -17,9 +14,7 @@ describe('AICodeGenerator', () => {;
     render(<AICodeGenerator />);
 import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />); }); ; it('handles user interactions',() => {; render(<AICodeGenerator />)});,});
 // Add interaction tests based on component functionality})});
-<<<<<<< HEAD
 import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});
-=======
 <<<<<<< HEAD:components.disabled_full/AICodeGenerator.test.ts
 import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />); }); ; it('handles user interactions',() => {; render(<AICodeGenerator />)});,});
 // Add interaction tests based on component functionality})});
@@ -28,7 +23,6 @@ import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() 
 }),
 });
 <<<<<<< HEAD
->>>>>>> pr-11935
 =======
 import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />); }); ; it('handles user interactions',() => {; render(<AICodeGenerator />)});,});
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import {;
   Star;
   Users;
@@ -91,7 +90,6 @@ export function EnhancedServicesShowcase2025() {;
                   : 'bg-white text-gray-700 "hover": "bg-blue-50 "hover":text-blue-600 shadow-md';
               "}`}
             >;
-=======
 import {
   Star,
   Users,
@@ -182,7 +180,6 @@ export function EnhancedServicesShowcase2025() {
           ))}
 =======
         </div>
->>>>>>> main
 =======
         </div>;
 

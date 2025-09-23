@@ -114,21 +114,18 @@ export function AnalyticsManager("props": "any) {;
 
       saveSessionData(currentSession)}
   }, [currentSession]) };
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
 <<<<<<< HEAD
 ;
     // Scroll tracking';
     document.addEventListener('scroll', handleScroll, { "passive": "tru e "});
 ;
     // Page unload tracking';
-=======
 
     // Scroll tracking'
     document.addEventListener('scroll', handleScroll, { passive: tru e }
     );
 
     // Page unload tracking'
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/AnalyticsManager.tsx
     window.addEventListener('beforeunload', handleBeforeUnload)}, []);
@@ -173,55 +170,46 @@ export function AnalyticsManager("props": "any) {;
         if(fcp) {;
 
           trackPerformance('fcp', fcp.startTime)}
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
 <<<<<<< HEAD
       });
       fcpObserver.observe({ "entryTypes": "['paint'] "});
 ;
       // Largest Contentful Paint;
-=======
       }
     );
       fcpObserver.observe({ entryTypes: ['paint'] }
     );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 >>>>>>> pr-11913:src_backup_temp/components/AnalyticsManager.tsx
 
         if(lcp) {;
 
           trackPerformance('lcp', lcp.startTime)}
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
 <<<<<<< HEAD
       });
       lcpObserver.observe({ "entryTypes": "['largest-contentful-paint'] "});
 ;
       // First Input Delay;
-=======
       }
     );
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
     );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 >>>>>>> pr-11913:src_backup_temp/components/AnalyticsManager.tsx
 
         if(fid) {;
 
           trackPerformance('fid', fid.processingStart - fid.startTime)}
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
 <<<<<<< HEAD
       });
       fidObserver.observe({ "entryTypes": "['first-input'] "});
 ;
       // Cumulative Layout Shift;
       const clsObserver = new PerformanceObserver(list => {;
-=======
       }
     );
       fidObserver.observe({ entryTypes: ['first-input'] }
     );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 >>>>>>> pr-11913:src_backup_temp/components/AnalyticsManager.tsx
 
@@ -232,7 +220,6 @@ export function AnalyticsManager("props": "any) {;
             clsValue += (entry as any).value}
         }
 =======
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
 <<<<<<< HEAD
         trackPerformance('cls', clsValue)});
       clsObserver.observe({ "entryTypes": "['layout-shift'] "})}
@@ -240,15 +227,12 @@ export function AnalyticsManager("props": "any) {;
     );
       clsObserver.observe({ entryTypes: ['layout-shift'] })}
 >>>>>>> main
-=======
         trackPerformance('cls', clsValue)});
       clsObserver.observe({ "entryTypes": "['layout-shift'] "})}
->>>>>>> pr-11913:src_backup_temp/components/AnalyticsManager.tsx
   }, []) }
     }, 30000) ;
 ;
     return () => clearInterval(activityInterval) }, [currentSession]) ;
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
 <<<<<<< HEAD
 ;
         trackEvent('page_view', { path });
@@ -257,7 +241,6 @@ export function AnalyticsManager("props": "any) {;
         sendAnalyticsData('page_view', { path, "timestamp": "Dat e.now() "})}
     },;
     [currentSession];
-=======
 
         trackEvent('page_view', { path }
     );
@@ -266,7 +249,6 @@ export function AnalyticsManager("props": "any) {;
         sendAnalyticsData('page_view', { path, timestamp: Dat e.now() })}
     },
     [currentSession]
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/AnalyticsManager.tsx
   );

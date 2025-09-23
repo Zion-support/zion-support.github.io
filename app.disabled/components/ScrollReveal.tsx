@@ -1,6 +1,5 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 "use client";
 import React from "react";
 
@@ -13,7 +12,6 @@ type ScrollRevealProps = {
 export default function ScrollReveal({ children }: ScrollRevealProps) {
   return <>{children}</>;
 }
-=======
 'use client';
 
 import React from 'react';
@@ -34,7 +32,6 @@ export default function ScrollReveal({ children }: ScrollRevealProps) {
 	return <>{children}</>;
 }
 <<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-e382
 =======
 >>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
 =======

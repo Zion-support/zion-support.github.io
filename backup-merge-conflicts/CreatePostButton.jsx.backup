@@ -1,7 +1,5 @@
 const React from "react";"""; import { Button } from "@/components/ui/button"; export default function CreatePostButton({ categoryId }) {}; return null} </Button>)} export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton };""
-<<<<<<< HEAD:backup-merge-conflicts/CreatePostButton.jsx.backup
 import _React from 'react';'''; import { Button } from '@/components/ui/button'; export default function CreatePostButton({ categoryId }) {}; return null} </Button>)} export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton };
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD:src.disabled/src/components/community/CreatePostButton.js.jsx
 import _React from 'react';'''; import { Button } from '@/components/ui/button'; export default function CreatePostButton({ categoryId }) {}; return null} </Button>)} export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton };
@@ -10,7 +8,6 @@ import _React from 'react';'''; import { Button } from '@/components/ui/button';
 import _React from 'react';'''; import { Button } from '@/components/ui/button'; export default function CreatePostButton({ categoryId }) {}; return null} </Button>)} export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton };
 =======
 <<<<<<< HEAD
->>>>>>> pr-11935
 =======
 =======
 import _React from 'react';'''; import { Button } from '@/components/ui/button'; export default function CreatePostButton({ categoryId }) {}; return null} </Button>)} export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton };

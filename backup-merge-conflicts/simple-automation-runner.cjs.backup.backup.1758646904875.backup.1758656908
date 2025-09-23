@@ -2,7 +2,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 async function runSimpleAutomation() {
@@ -311,7 +310,6 @@ module.exports = { runSimpleAutomation }) {
   runSimpleAutomation().catch(console.error)}
 
 module.exports = { runSimpleAutomation }}
-=======
 const { execSync } = require('child_process')
   console.log(' Starting Simple Automation Runner...')
     "overallStatus"
@@ -334,4 +332,3 @@ const { execSync } = require('child_process')
         return { "status": 'skipped', "message"}
     console.error(' Simple automation "failed")
         "status"
->>>>>>> main

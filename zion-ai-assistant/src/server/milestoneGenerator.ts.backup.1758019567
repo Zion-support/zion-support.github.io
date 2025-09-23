@@ -1,11 +1,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
   const user = {;
     scopeOfWork: input.scopeOfWork;
@@ -182,7 +179,6 @@ async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMil
     scopeOfWork: input.scopeOfWork,
     startDateIso: input.startDateIso,
     endDateIso: input.endDateIso,
-<<<<<<< HEAD
       ? parsed.milestones;
       : [],
     // Check condition
@@ -195,7 +191,6 @@ if (return null, ) {
       suggestedDueDateIso: String (m.suggestedDueDateIso),
       estimatedEffortHours: Math.max (1, parse_int (String (m.estimatedEffortHours), 10) || 8),
       tags: ["AI Suggested"];
-=======
     projectType: input.projectType
   };
 
@@ -292,7 +287,6 @@ async function callOpenAI(input:MilestoneSuggestionInput):Promise<SuggestedMiles
     })),;
   } catch {;
     return null,;
->>>>>>> origin/merged-prs
   }
   return milestones;
 }

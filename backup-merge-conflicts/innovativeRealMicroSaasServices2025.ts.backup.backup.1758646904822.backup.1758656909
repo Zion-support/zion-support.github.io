@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export const INNOVATIVE_REAL_MICRO_SAAS_SERVICES_2025 = [
   {
     id: 'ai-content-creator-pro',';';
@@ -43,7 +41,6 @@ export const INNOVATIVE_REAL_MICRO_SAAS_SERVICES_2025 = [{
       'Team collaboration and approval workflows',
       'Analytics and performance tracking',
       'API access for integrations',
->>>>>>> main
 >>>>>>> pr-11935
       'Custom content templates'
     ],

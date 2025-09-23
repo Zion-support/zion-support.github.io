@@ -41,7 +41,6 @@ const RevolutionaryContent2026Banner: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
-<<<<<<< HEAD
 const RevolutionaryContent2026Banner: React.FC = () => {
     return () => clearInterval(timer);
   }, [contentItems.length]);
@@ -293,7 +292,6 @@ const RevolutionaryContent2026Banner: React.FC = () => {
             >
               Get Expert Guidance
             </Link>
-=======
   return (
     <AnimatePresence>
       {isVisible && (
@@ -464,7 +462,6 @@ const RevolutionaryContent2026Banner: React.FC = () => {
                 </div>
               </div>
             </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-ba4f
           </div>
         </motion.section>
       )}

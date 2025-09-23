@@ -18,7 +18,6 @@ const qualityChecks = [{
       } catch (error) {
         
       }
-<<<<<<< HEAD
     },
   },
   {
@@ -209,7 +208,5 @@ console.log(' Code Quality Checker Starting...\n')
     "name"
             content.match(/^import\s+.*from\s+['"][^'')]
     "status"
-=======
 console.log(`📄 Quality report saved to: ${reportFile}`);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main

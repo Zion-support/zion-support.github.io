@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 import ErrorBoundary from './components/ErrorBoundary';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 export const metadata = {
   title: {
@@ -78,6 +79,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <Header />
           <main className='min-h-screen'>{children}</main>
           <Footer />
+          <ScrollToTop />
         </ErrorBoundary>
       </body>
     </html>

@@ -1,12 +1,9 @@
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
 interface: SitemapUrl {
-=======
 <<<<<<< HEAD
 =======
 =======
->>>>>>> pr-11935
 "interface": SitemapUrl {
 >>>>>>> main
   url: string;

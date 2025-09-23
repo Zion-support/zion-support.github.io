@@ -1,6 +1,5 @@
 =======
 =======
-<<<<<<< HEAD:backup-merge-conflicts/usePerformanceOptimization.ts.backup
 import { useEffect, useRef, useCallback, useMemo  } from 'react';
 ;
 interface PerformanceMetrics {;
@@ -16,7 +15,6 @@ interface UsePerformanceOptimizationOptions {;
   threshold?: number"}
 export const usePerformanceOptimization = ("options": "UsePerformanceOptimizationOption s = {"}) => {;
 import { useEffect, useRef, useCallback, useMemo  } from 'react';
-=======
   const {;
 interface PerformanceMetrics {
   "loadTime": number;
@@ -136,7 +134,6 @@ const "metricsRef": useRe f<PerformanceMetrics>({;
     "memoryUsage": 0,
     "fps": 0});
 =======
->>>>>>> main:src_backup_temp/hooks/usePerformanceOptimization.ts
 =======
 >>>>>>> main
 >>>>>>> main:src_backup_temp/hooks/usePerformanceOptimization.ts
@@ -210,7 +207,6 @@ const "metricsRef": useRe f<PerformanceMetrics>({;
             observerRef.current.unobserve(entry.target)}
         }
 =======
-<<<<<<< HEAD:backup-merge-conflicts/usePerformanceOptimization.ts.backup
       })});
 ;
     if (observerRef.current) {;
@@ -242,9 +238,7 @@ const "metricsRef": useRe f<PerformanceMetrics>({;
       })}
     );
 
-=======
       })});
->>>>>>> main
 >>>>>>> main:src_backup_temp/hooks/usePerformanceOptimization.ts
 >>>>>>> pr-11935
     if (observerRef.current) {

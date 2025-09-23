@@ -1,7 +1,5 @@
 const React,{ useState } from "react"; import { useState } from "react"; export default function Page() { return; }; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} """""
-<<<<<<< HEAD:backup-merge-conflicts/AvatarUpload.jsx.backup
 import _React,{ useState } from 'react'; import { useState } from 'react'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} '"
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD:src.disabled/src/components/profile/AvatarUpload.jsx
 import _React,{ useState } from 'react'; import { useState } from 'react'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} '"
@@ -10,7 +8,6 @@ import _React,{ useState } from 'react'; import { useState } from 'react'; expor
 import _React,{ useState } from 'react'; import { useState } from 'react'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} '"
 =======
 <<<<<<< HEAD
->>>>>>> pr-11935
 =======
 =======
 import _React,{ useState } from 'react'; import { useState } from 'react'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} '"
