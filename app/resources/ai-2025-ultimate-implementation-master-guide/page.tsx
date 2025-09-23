@@ -448,7 +448,7 @@ export default function AI2025UltimateImplementationMasterGuide() {
             </Link>
           </div>
         </div>
-      </article>
+      </div>
     </div>
   );
 }
