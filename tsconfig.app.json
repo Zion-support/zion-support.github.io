@@ -33,5 +33,14 @@
     "composite": true,
     "noEmit": true
   },
-  "include": ["src", "pages", "types"]
+  "include": ["src", "pages"],
+  "exclude": [
+    "node_modules",
+    "src/pages_backup/**",
+    "**/*backup*/**",
+    "**/backup/**",
+    "**/backups/**",
+    "**/recovered-branches/**",
+    "types/**"
+  ]
 }
