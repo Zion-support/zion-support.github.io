@@ -84,6 +84,11 @@
     "typescript": "5.9.2",
     "typescript-eslint": "^8.44.1"
   },
-  
+  "jest": {
+    "testEnvironment": "jest-environment-jsdom",
+    "testMatch": ["**/?(*.)+(spec|test).+(ts|tsx|js|jsx)", "!**/src.disabled/**", "!**/components.disabled/**", "!**/ts_files_backup/**", "!**/backups/**", "!**/backup/**", "!**/backup-merge-conflicts/**", "!**/backup-problematic-files/**", "!**/__tests__/**", "!**/tests/**", "!**/__safe_tests__/**"],
+    "testPathIgnorePatterns": ["/node_modules/", "/.next/", "/src.disabled/", "/components.disabled/", "/ts_files_backup/", "/backups/", "/backup/", "/backup-merge-conflicts/", "/backup-problematic-files/", "/__tests__/", "/tests/", "/__safe_tests__/"],
+    "roots": ["<rootDir>/src"]
+  },
   "packageManager": "npm@11.6.0"
 }
