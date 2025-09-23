@@ -1,24 +1,5 @@
-import Head from 'next/head';
+import Head from 'next/head'
 
-<<<<<<< HEAD:components/SEO.tsx
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-}
-
-export const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - AI-Powered Technology Solutions',
-  description = 'Leading provider of AI-powered technology solutions, cloud services, and digital transformation services for enterprises.',
-  keywords = 'AI, artificial intelligence, cloud services, digital transformation, technology solutions',
-  image = '/og-image.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website'
-}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
 interface SEOHeadProps {
   title?: string
   description?: string
@@ -50,13 +31,6 @@ export default function SEOHead({
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-<<<<<<< HEAD:components/SEO.tsx
-      <meta name="keywords" content={keywords} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="icon" href="/favicon.ico" />
-      
-      {/* Open Graph */}
-      <meta property="og:type" content={type} />
       <meta name="keywords" content={keywords.join(', ')} />
       <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
       <link rel="canonical" href={canonicalUrl} />
@@ -68,20 +42,7 @@ export default function SEOHead({
       <meta property="og:image" content={ogImage} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:site_name" content="Zion Tech Group" />
-<<<<<<< HEAD:components/SEO.tsx
       
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      
-      {/* Additional SEO */}
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <link rel="canonical" href={url} />
-      <meta property="og:locale" content="en_US" />
-
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
@@ -106,9 +67,7 @@ export default function SEOHead({
       {structuredData && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData)
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       )}
 
@@ -116,7 +75,5 @@ export default function SEOHead({
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
     </Head>
-  );
-};
-
-export default SEO;
+  )
+}
