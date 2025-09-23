@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = "force-dynamic";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -15,7 +16,6 @@ export default function SignInPage() {
     e.preventDefault();
     setIsLoading(true);
     setError("");
-
     try {
       await signIn(email, password);
     } catch (error) {
@@ -30,7 +30,9 @@ export default function SignInPage() {
       <div className="max-w-md w-full space-y-8 p-8">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-white mb-2">Welcome Back</h1>
-          <p className="text-zinc-400">Sign in to access your Zion OS dashboard</p>
+          <p className="text-zinc-400">
+            Sign in to access your Zion OS dashboard and continue building
+          </p>
         </div>
         <div className="bg-zinc-800/50 backdrop-blur-sm rounded-xl p-6 border border-zinc-700/50">
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -83,6 +85,18 @@ export default function SignInPage() {
               </Link>
             </p>
           </div>
+        </div>
+        <div className="text-center">
+          <p className="text-zinc-500 text-xs">
+            By signing in, you agree to our{" "}
+            <Link href="/terms" className="text-zinc-400 hover:text-zinc-300">
+              Terms of Service
+            </Link>{" "}
+            and{" "}
+            <Link href="/privacy" className="text-zinc-400 hover:text-zinc-300">
+              Privacy Policy
+            </Link>
+          </p>
         </div>
       </div>
     </div>
