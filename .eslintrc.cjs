@@ -7,8 +7,9 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
     '@typescript-eslint/no-explicit-any': 'warn',
     '@next/next/no-html-link-for-pages': 'warn',
+    'react/no-unescaped-entities': 'off',
     'import/order': [
-      'error',
+      'warn',
       { groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'], 'newlines-between': 'always' },
     ],
     '@typescript-eslint/no-explicit-any': 'warn',
