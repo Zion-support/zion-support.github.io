@@ -2,14 +2,14 @@ import React from 'react';
 
 interface StructuredDataProps {
   type: string;
-  data: any;
+  data: Record<string, unknown>;
 }
 
 const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': type,
-    ...data
+    ...data,
   };
 
   return (
