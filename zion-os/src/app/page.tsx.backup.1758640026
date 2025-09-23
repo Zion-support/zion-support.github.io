@@ -1,5 +1,82 @@
 import React from 'react';
 
+<<<<<<< HEAD
+export default function HomePage(): React.ReactElement {
+	return (
+		<main>
+			<h1>Zion OS</h1>
+			<p>Welcome to Zion OS.</p>
+		</main>
+	);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======
 export default function HomePage() {
   return (
     <div className="min-h-screen">
@@ -22,3 +99,4 @@ export default function HomePage() {
     </div>
   );
 }
+>>>>>>> origin/pr/22992

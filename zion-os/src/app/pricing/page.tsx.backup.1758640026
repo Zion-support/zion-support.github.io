@@ -1,3 +1,48 @@
+<<<<<<< HEAD
+import React from 'react';
+
+export default function PricingPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>Pricing</h1>
+			<p>Choose the plan that fits your needs.</p>
+		</main>
+	);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======
 "use client";
 
 import { useState } from "react";
@@ -103,3 +148,4 @@ export default function PricingPage() {
     </div>
   );
 }
+>>>>>>> origin/pr/22992

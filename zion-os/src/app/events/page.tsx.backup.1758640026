@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+import React from 'react';
+
+export default function EventsPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>Events</h1>
+			<p>Upcoming events and webinars.</p>
+		</main>
+	);
+}
+
+
+
+
+
+
+
+
+
+
+
+=======
 import Link from "next/link";
 
 export const metadata = {
@@ -28,3 +51,4 @@ export default function EventsPage() {
     </div>
   );
 }
+>>>>>>> origin/pr/22992
