@@ -1,20 +1,12 @@
-export default function MicroSaaSPage() {
-  return (
-    <main style={{ padding: "2rem" }}>
-      <h1>Micro SaaS</h1>
-      <p>Lightweight SaaS offerings tailored to niche workflows.</p>
-    </main>
-  );
+  name: string;
+  description: string;
+  targetMarket: string[];
+  features: string[];
+  pricing: string;
+  startingPrice: number;
+  contactLink: string;
+  icon: string;
+  benefits: string[];
+  integrations: string[];
+  deployment: string;
 }
-
-
-
-
-
-
-
-
-
-
-
-

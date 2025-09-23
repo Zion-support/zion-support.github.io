@@ -1,20 +1,12 @@
-export default function ItSolutionsPage() {
-  return (
-    <main style={{ padding: "2rem" }}>
-      <h1>IT Solutions</h1>
-      <p>Comprehensive IT solution offerings and blueprints.</p>
-    </main>
-  );
+  name: string;
+  description: string;
+  deliverables: string[];
+  timeline: string;
+  pricing: string;
+  startingPrice: number;
+  contactLink: string;
+  icon: string;
+  features: string[];
+  technologies: string[];
+  industries: string[];
 }
-
-
-
-
-
-
-
-
-
-
-
-

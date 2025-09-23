@@ -1,40 +1,14 @@
-export default function PricingPage() {
-  return (
-    <main style={{ padding: "2rem" }}>
-      <h1>Pricing</h1>
-      <p>Simple and transparent pricing plans.</p>
-    </main>
-  );
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular?: boolean;
+  cta: string;
+  ctaLink: string;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  category: string;
+  description: string;
+  tiers: PricingTier[];
+  features: string[];
+  benefits: string[];
+}

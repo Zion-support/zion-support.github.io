@@ -9,17 +9,16 @@ export default function SignInPage() {
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
-  const { signIn } = useAuth();
+  const { login } = useAuth();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     setError("");
-
     try {
-      await signIn(email, password);
-    } catch (error) {
-      setError(error instanceof Error ? error.message : "Login failed");
+      await login(email, password);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Login failed");
     } finally {
       setIsLoading(false);
     }
@@ -30,11 +29,8 @@ export default function SignInPage() {
       <div className="max-w-md w-full space-y-8 p-8">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-white mb-2">Welcome Back</h1>
-          <p className="text-zinc-400">
-            Sign in to access your Zion OS dashboard and continue building
-          </p>
+          <p className="text-zinc-400">Sign in to access your Zion OS dashboard</p>
         </div>
-
         <div className="bg-zinc-800/50 backdrop-blur-sm rounded-xl p-6 border border-zinc-700/50">
           <form onSubmit={handleSubmit} className="space-y-6">
             {error && (
@@ -42,7 +38,6 @@ export default function SignInPage() {
                 <p className="text-red-400 text-sm">{error}</p>
               </div>
             )}
-
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-zinc-300 mb-2">
                 Email Address
@@ -57,7 +52,6 @@ export default function SignInPage() {
                 placeholder="Enter your email"
               />
             </div>
-
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-zinc-300 mb-2">
                 Password
@@ -72,7 +66,6 @@ export default function SignInPage() {
                 placeholder="Enter your password"
               />
             </div>
-
             <button
               type="submit"
               disabled={isLoading}
@@ -81,7 +74,6 @@ export default function SignInPage() {
               {isLoading ? "Signing In..." : "Sign In"}
             </button>
           </form>
-
           <div className="mt-6 text-center">
             <p className="text-zinc-400 text-sm">
               Don't have an account?{" "}
@@ -90,19 +82,6 @@ export default function SignInPage() {
               </Link>
             </p>
           </div>
-        </div>
-
-        <div className="text-center">
-          <p className="text-zinc-500 text-xs">
-            By signing in, you agree to our{" "}
-            <Link href="/terms" className="text-zinc-400 hover:text-zinc-300">
-              Terms of Service
-            </Link>{" "}
-            and{" "}
-            <Link href="/privacy" className="text-zinc-400 hover:text-zinc-300">
-              Privacy Policy
-            </Link>
-          </p>
         </div>
       </div>
     </div>
