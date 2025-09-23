@@ -8,6 +8,7 @@ import tsParser from '@typescript-eslint/parser';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
 
 export default [
+	// Global ignores for this monorepo-like workspace
 	{
 		ignores: [
 			'node_modules/**',
@@ -24,6 +25,12 @@ export default [
 			'backup-merge-conflicts/**',
 			'backup-problematic-files/**',
 			'apps.backup/**',
+			'api/**',
+			'server/**',
+			'netlify/**',
+			'app_backup/**',
+			'app-disabled/**',
+			'app-minimal/**',
 			'components.disabled/**',
 			'components.disabled_full/**',
 			'pages-disabled/**',
@@ -32,7 +39,6 @@ export default [
 			'pages.broken/**',
 			'pages.corrupted*',
 			'recovered-branches/**',
-			'server/**',
 			'temp_backup/**',
 			'temp_exclude/**',
 			'tests.disabled/**',
@@ -40,6 +46,27 @@ export default [
 			'zion-os/**',
 			'zion-os.*',
 			'zion-website/**',
+			'zion-ai-assistant/**',
+			'zion_academy/**',
+			'services/**',
+			'solutions/**',
+			'solutions.disabled/**',
+			'src_backup/**',
+			'src_backup_temp/**',
+			'src/**/*.backup/**',
+			'src/**/*.bak/**',
+			'src/**/*.disabled/**',
+			'styles_backup/**',
+			'workflow_backups/**',
+			'src/pages_backup/**',
+			'src/data/**',
+			'src/expandedServices.ts',
+			'src/comprehensiveServices.ts',
+			'tests/**',
+			'test/**',
+			'test_build/**',
+			'**/jest.setup.*',
+			'**/*.min.js'
 		],
 	},
 	js.configs.recommended,
