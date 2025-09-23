@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { FeatureKeys } from "@/lib/zod";
+import { Globe, Shield, Building2, Users, Zap, Crown, Rocket } from "lucide-react";
 
 import LoadingSpinner from "@/app/components/LoadingSpinner";
 
@@ -256,9 +257,10 @@ export default function AdminDeployPage() {
                     </div>
                   </div>
                 </label>
-              </div>
-              
-              <div className="space-y-2">
+              ))}
+            </div>
+
+            <div className="space-y-2">
                 <label className="block text-white font-medium">
                   Vertical
                   <select name="vertical" className="select-field mt-2">

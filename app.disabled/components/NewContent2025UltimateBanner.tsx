@@ -1,5 +1,6 @@
 <<<<<<< HEAD:app.disabled/components/NewContent2025UltimateBanner.tsx
 <<<<<<< HEAD:app.disabled/components/NewContent2025UltimateBanner.tsx
+<<<<<<< HEAD:app.disabled/components/NewContent2025UltimateBanner.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -319,6 +320,11 @@ const NewContent2025UltimateBanner: React.FC = () => {
             <div className="text-2xl font-bold">Government</div>
           </div>
 =======
+=======
+"use client";
+
+import Link from 'next/link';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1:app/components/NewContent2025UltimateBanner.tsx
 
 export default function NewContent2025UltimateBanner() {
   return (
@@ -332,11 +338,11 @@ export default function NewContent2025UltimateBanner() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/blog" className="bg-white text-purple-900 px-6 py-3 rounded-lg font-semibold">View Blog</Link>
           <Link href="/resources" className="border border-white px-6 py-3 rounded-lg font-semibold">Resources</Link>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1
         </div>
       </div>
     </section>
   );
+<<<<<<< HEAD:app.disabled/components/NewContent2025UltimateBanner.tsx
 <<<<<<< HEAD
 =======
 import React from 'react';
@@ -414,3 +420,6 @@ export default function NewContent2025UltimateBanner() {
 =======
 export default NewContent2025UltimateBanner;
 >>>>>>> cursor/check-fix-push-and-merge-to-main-8578:app/components/NewContent2025UltimateBanner.tsx
+=======
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1:app/components/NewContent2025UltimateBanner.tsx

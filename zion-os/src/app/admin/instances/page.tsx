@@ -22,27 +22,9 @@ interface InstanceWithCounts {
   };
 }
 
-export default async function InstancesPage() {
-
-  let instances: InstanceWithCounts[] = [];
-  let error: string | null = null;
-
-  try {
-    instances = await prisma.instance.findMany({
-      include: {
-        daoConfig: true,
-        _count: { select: { deployments: true, features: true } },
-      },
-      orderBy: { createdAt: "desc" },
-    });
-  } catch (err) {
-    console.error("Database connection error:", err);
-    error = "Unable to connect to database";
-  }
-
-  const instances: any[] = []; // Temporary empty array
-
 export default function InstancesPage() {
+  const instances: InstanceWithCounts[] = [];
+  const error: string | null = null;
   return (
 
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
