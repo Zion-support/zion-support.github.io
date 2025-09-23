@@ -1,22 +1,5 @@
 {
   "root": true,
-  "extends": [
-    "next/core-web-vitals"
-  ],
-  "parserOptions": {
-    "ecmaVersion": 2021,
-    "sourceType": "module"
-  },
-  "env": {
-    "browser": true,
-    "node": true,
-    "es2021": true,
-    "jest": true
-  }
-}
-
-{
-  "root": true,
   "extends": ["next/core-web-vitals", "next/typescript"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -47,6 +30,7 @@
     "components.disabled/**",
     "pages.disabled/**",
     "pages-disabled/**",
+    "pages.__backup/**",
     "pages.bak/**",
     "pages._archive_corrupted/**",
     "src.disabled/**",
@@ -59,7 +43,6 @@
     "temp_*/**",
     "temp_exclude/",
     "ts_files_backup/",
-    "zion-os/**",
     "zion-ai-assistant/**",
     "zion-website/**",
     "src-clean/**",
