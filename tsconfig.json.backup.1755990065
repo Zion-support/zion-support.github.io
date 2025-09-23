@@ -1,20 +1,5 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
-    "target": "es5",
-    "lib": [
-      "ES2024",
-      "DOM",
-      "DOM.Iterable",
-      "WebWorker",
-      "WebWorker.Iterable"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-=======
     "target": "ES2024",
     "useDefineForClassFields": true,
     "lib": ["ES2024", "DOM", "DOM.Iterable", "WebWorker", "WebWorker.Iterable"],
@@ -39,14 +24,11 @@
     },
     /* Bundler mode */
     "moduleResolution": "bundler",
->>>>>>> origin/automation-error-fixes
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-<<<<<<< HEAD
-=======
     /* Linting */
     "strict": true,
     "noUnusedLocals": false,
@@ -58,7 +40,6 @@
     "incremental": true,
     "typeRoots": ["./node_modules/@types", "./types"],
     "types": ["node"],
->>>>>>> origin/automation-error-fixes
     "jsx": "preserve",
     "incremental": true
   },

@@ -13,9 +13,7 @@ export function ThemeToggle() {
         <button
           onClick={() => setTheme("light")}
           className={`rounded px-2 py-1 text-sm transition-colors ${
-            theme === "light"
-              ? "bg-zion-blue text-white"
-              : "text-zinc-400 hover:text-zinc-100"
+            theme === "light" ? "bg-zion-blue text-white" : "text-zinc-400 hover:text-zinc-100"
           }`}
           aria-label="Switch to light theme"
           aria-pressed={theme === "light"}
@@ -25,9 +23,7 @@ export function ThemeToggle() {
         <button
           onClick={() => setTheme("system")}
           className={`rounded px-2 py-1 text-sm transition-colors ${
-            theme === "system"
-              ? "bg-zion-blue text-white"
-              : "text-zinc-400 hover:text-zinc-100"
+            theme === "system" ? "bg-zion-blue text-white" : "text-zinc-400 hover:text-zinc-100"
           }`}
           aria-label="Switch to system theme"
           aria-pressed={theme === "system"}
@@ -37,9 +33,7 @@ export function ThemeToggle() {
         <button
           onClick={() => setTheme("dark")}
           className={`rounded px-2 py-1 text-sm transition-colors ${
-            theme === "dark"
-              ? "bg-zion-blue text-white"
-              : "text-zinc-400 hover:text-zinc-100"
+            theme === "dark" ? "bg-zion-blue text-white" : "text-zinc-400 hover:text-zinc-100"
           }`}
           aria-label="Switch to dark theme"
           aria-pressed={theme === "dark"}

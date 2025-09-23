@@ -1,9 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Button from '../components/ui/Button';
 import { Shield, CheckCircle, FileText, Lock, Users, Globe, Award, ArrowRight } from 'lucide-react';
@@ -242,9 +239,6 @@ export default function CompliancePage() {
       </div>
     </UltraFuturisticBackground>
   );
-<<<<<<< HEAD
-}
-=======
 }
 =======
 import { Shield, CheckCircle, FileText, Lock, Users, Globe, Award, TrendingUp } from 'lucide-react';
@@ -541,5 +535,4 @@ const CompliancePage: React.FC = () => {
 };
 
 export default CompliancePage;
->>>>>>> origin/HEAD
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60

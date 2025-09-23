@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-# NPM configuration for Netlify builds
-legacy-peer-deps=true
-prefer-offline=true
-cache-min=86400
-audit=false
-fund=false
-# Force use of Yarn
-package-manager=yarn
-=======
 engine-strict=true
 fund=false
 audit=false
@@ -21,4 +11,3 @@ prefer-offline=true
 
 # Build optimization
 ignore-scripts=false
->>>>>>> origin/backup-main-final-20250913-063409

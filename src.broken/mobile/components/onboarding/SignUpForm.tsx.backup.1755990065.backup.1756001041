@@ -2,11 +2,6 @@ import React from 'react';
 export function SignUpForm() {
   return (
 <<<<<<< HEAD
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-=======
-<<<<<<< HEAD
     <div className="space-y-4 px-4">
       <h2 className="text-xl font-medium text-center">
         {signupMode ? "Create your account" : "Welcome back"}
@@ -149,7 +144,6 @@ export function SignUpForm() {
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     </div>
   );

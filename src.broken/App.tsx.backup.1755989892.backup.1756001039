@@ -24,8 +24,6 @@ import {
   SellerRoutes
 } from './routes';
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import Home from './pages/Home';
 import AIMatcherPage from './pages/AIMatcher';
 import TalentDirectory from './pages/TalentDirectory';
@@ -53,7 +51,6 @@ import RequestQuotePage from './pages/RequestQuote';
 import Checkout from './pages/Checkout';
 import ProductPage from './pages/ProductPage';
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 const Home = React.lazy(() => import('./pages/Home'));
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
@@ -76,9 +73,6 @@ const ThemeTest = React.lazy(() => import('./pages/ThemeTest'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
-<<<<<<< HEAD
-=======
->>>>>>> origin/8z9e37-codex/implement-light/dark-theme-with-persistence
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 const baseRoutes = [
@@ -118,16 +112,12 @@ const baseRoutes = [
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
 <<<<<<< HEAD
-  { path: '/theme-test', element: <ThemeTest /> },
-=======
-<<<<<<< HEAD
   { path: '/wishlist', element: <WishlistPage /> },
   { path: '/cart', element: <CartPage /> },
   { path: '/checkout', element: <Checkout /> },
   { path: '/privacy-settings', element: <PrivacySettings /> },
 =======
   { path: '/theme-test', element: <ThemeTest /> },
->>>>>>> origin/8z9e37-codex/implement-light/dark-theme-with-persistence
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 ];
 

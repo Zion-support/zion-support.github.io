@@ -19,11 +19,8 @@
   "blockchain-enterprise-platform",
   "brain-computer-interface",
   "customer-intelligence-platform",
-<<<<<<< HEAD
-=======
   "energy-technology-solutions",
   "entertainment-media-solutions",
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-b7a7
   "industrial-automation-ai",
   "intelligent-project-management-suite",
   "marketing-ai-platform",
@@ -48,11 +45,6 @@
   "quantum-risk-financial-manager",
   "quantum-supply-chain-optimizer",
   "quantum-threat-detection",
-<<<<<<< HEAD
-  "services/data-contracts-hub",
-  "services/serverless-lakehouse-starter",
-  "space-data-analytics",
-=======
   "real-estate-technology-solutions",
   "satellite-technology-solutions",
   "services/data-contracts-hub",
@@ -60,7 +52,6 @@
   "space-colonization-services",
   "space-communications-network",
   "space-infrastructure-platform",
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-b7a7
   "space-mining-automation-platform",
   "space-mining-platform",
   "space-robotics-platform"

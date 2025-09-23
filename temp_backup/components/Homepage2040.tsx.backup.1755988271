@@ -252,25 +252,9 @@ const Homepage2040: React.FC = () => {
       <div className="absolute top-40 right-32 w-24 h-24 bg-purple-500/10 rounded-full blur-xl animate-pulse delay-1000"></div>
       <div className="absolute bottom-40 left-1/3 w-28 h-28 bg-pink-500/10 rounded-full blur-xl animate-pulse delay-2000"></div>
 
-<<<<<<< HEAD
-      {/* Enhanced Header with Navigation */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-cyan-500/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Zion Tech
-              </span>
-            </Link>
-=======
                 {/* SVG Pattern Background */}
                 <div className="absolute inset-0 bg-gray-800/20"></div>
               </motion.div>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-b38d
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">

@@ -19,9 +19,6 @@ import { advancedITInfrastructureServices } from '../../data/2025-advanced-it-in
 import { innovativeBusinessSolutions2025 } from '../../data/2025-innovative-business-solutions';
 
 const UltraAdvancedServicesShowcase2025: React.FC = () => {
-<<<<<<< HEAD
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('popularity');
@@ -98,7 +95,6 @@ const UltraAdvancedServicesShowcase2025: React.FC = () => {
     website: 'https://ziontechgroup.com'
   };
 
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   return (
     <section 
       ref={sectionRef}

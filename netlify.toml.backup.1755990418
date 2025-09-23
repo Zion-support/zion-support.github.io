@@ -11,7 +11,6 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
-
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -82,13 +81,8 @@
   schedule = "*/1 * * * *" # every minute
 
 [[scheduled.functions]]
-<<<<<<< HEAD
-  name = "agent-swarm-orchestrator"
-  schedule = "*/1 * * * *" # every minute
-=======
   name = "autonomous-meta-orchestrator"
   schedule = "*/2 * * * *" # every 2 minutes
->>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-acae
 
 [[scheduled.functions]]
   name = "trigger-all-and-commit"

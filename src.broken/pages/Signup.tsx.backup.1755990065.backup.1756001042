@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from react-router-dom
 import { useFormik } from 'formik';
@@ -14,7 +12,6 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter';
 import { AuthButtons } from '@/components/AuthButtons';
 import { AlertCircle, CheckCircle, Mail } from 'lucide-react';
-
 
 import { useAuth } from "@/hooks/useAuth";
 import { registerUser } from "@/services/authService";
@@ -55,7 +52,6 @@ const signupSchema = z
     message: "Passwords do not match",
     path: ["confirmPassword"],
   });
-
 
 const SignupSchema = Yup.object({
   name: Yup.string().required('Name is required'),
@@ -806,7 +802,6 @@ export default function Signup() {
       </div>
     </AuthLayout>
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React from 'react';
 export function Signup() {
   return (
@@ -814,9 +809,6 @@ export function Signup() {
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   );
 }

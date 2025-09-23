@@ -58,15 +58,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
   }
 
-<<<<<<< HEAD
-  private generateErrorId(): string {
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
-
-  private logErrorToService(error: Error, errorInfo: ErrorInfo) {
-=======
   private logErrorToService = (error: Error, errorInfo: ErrorInfo, errorId: string) => {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ffbd
     try {
       // Send error to external service (e.g., Sentry, LogRocket, etc.)
       const errorData = {

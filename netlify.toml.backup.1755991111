@@ -11,7 +11,6 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
-
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -57,14 +56,11 @@
   name = "sitemap_runner"
   schedule = "0 */12 * * *" # twice per day
 
-<<<<<<< HEAD
-=======
 [[redirects]]
   from = "/team"
   to = "/about"
   status = 301
 
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-9d10
 [[scheduled.functions]]
   name = "fast-front-promoter"
   schedule = "*/15 * * * *" # every 15 minutes
@@ -301,8 +297,6 @@
 [[scheduled.functions]]
   name = "intelligent-meta-orchestrator"
   schedule = "*/3 * * * *"
-<<<<<<< HEAD
-=======
 [[scheduled.functions]]
   name = "fast-front-promoter"
   schedule = "*/15 * * * *" # every 15 minutes
@@ -502,4 +496,3 @@
 [[scheduled.functions]]
   name = "ultra-innovation-accelerator"
   schedule = "*/3 * * * *"
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-9d10

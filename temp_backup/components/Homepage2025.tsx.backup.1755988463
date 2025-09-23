@@ -1,16 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Layout from './layout/Layout';
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
-<<<<<<< HEAD
-import { Sparkles, Grid } from 'lucide-react';
-=======
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
   ArrowRight, Star,
   Brain, Atom, Shield, Zap
 } from 'lucide-react';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-225e
 
 const Homepage2025: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -496,14 +492,6 @@ const Homepage2025: React.FC = () => {
               viewport={{ once: true }}
               className="text-center mt-12"
             >
-<<<<<<< HEAD
-              <Link href="/services">
-                <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-purple-500/25">
-                  View All Services
-                  <ArrowRight className="w-5 h-5" />
-                </button>
-              </Link>
-=======
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/comprehensive-2036-services-showcase">
                   <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
@@ -519,7 +507,6 @@ const Homepage2025: React.FC = () => {
                   </button>
                 </Link>
               </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-225e
             </motion.div>
           </motion.div>
         </section>

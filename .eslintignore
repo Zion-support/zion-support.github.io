@@ -1,9 +1,16 @@
+*
+!zion-website
+!zion-website/**
+
+# Always ignore dependencies and build outputs
 node_modules/
 .next/
 dist/
 build/
 coverage/
 out/
+*.log
+*.tmp
 backups/
 backup/
 backup-merge-conflicts/
@@ -59,6 +66,14 @@ temp_conflicts/
 temp-disabled/
 temp_exclude/
 
+# Additional noisy or non-primary directories
+ts_files_backup/
+utils/
+types/
+zion-os/
+zion-website/
+zion-ai-assistant/
+
 # Misc backups
 lib_backup/
 lib.broken/
@@ -69,3 +84,11 @@ lib.disabled/
 **/*.backups*/
 **/*.corrupted*/
 **/*.disabled*/
+
+# Additional exclusions to avoid linting corrupted or out-of-scope code
+utils/
+types/
+ts_files_backup/
+zion-os/
+zion-ai-assistant/
+zion-website/

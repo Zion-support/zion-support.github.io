@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-name: Cloud Automations
-
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: '*/30 * * * *' # every 30 minutes
-=======
 name: Autonomous Automations
 
 on:
   schedule:
     - cron: '0 */6 * * *'
   workflow_dispatch: {}
->>>>>>> origin/cursor/create-dynamic-listing-pages-with-filters-fc72
 
 permissions:
   contents: write
@@ -21,21 +12,6 @@ jobs:
   run-automations:
     runs-on: ubuntu-latest
     steps:
-<<<<<<< HEAD
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: npm
-      - name: Install dependencies
-        run: npm ci --no-audit --no-fund
-      - name: Run workflow
-        run: echo "Workflow completed successfully"
-=======
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
@@ -59,4 +35,3 @@ jobs:
             git commit -m "chore(automation): update reports [skip ci]"
             git push
           fi
->>>>>>> origin/cursor/create-dynamic-listing-pages-with-filters-fc72

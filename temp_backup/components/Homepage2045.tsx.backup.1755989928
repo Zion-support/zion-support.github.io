@@ -3,12 +3,7 @@ import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon,
-<<<<<<< HEAD
-  Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity,
-  Cloud, Network, Lock, Users, Code, Palette, Lightbulb, Globe2, Satellite, Microscope, BookOpen, Mail, Phone
-=======
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, MessageCircle, ArrowUp
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 } from 'lucide-react';
 
 // Import our new revolutionary services
@@ -21,24 +16,12 @@ const Homepage2045: React.FC = () => {
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-<<<<<<< HEAD
-  const [hoveredService, setHoveredService] = useState<string | null>(null);
-  
-  useEffect(() => {
-    setIsVisible(true);
-    
-    // Auto-rotate featured services
-    const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % 8);
-    }, 5000);
-=======
   const [showScrollToTop, setShowScrollToTop] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   
   useEffect(() => {
     setIsVisible(true);
     setIsLoading(false);
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
     
     // Track mouse movement for parallax effects
     const handleMouseMove = (e: MouseEvent) => {
@@ -46,10 +29,7 @@ const Homepage2045: React.FC = () => {
     };
     
     window.addEventListener('mousemove', handleMouseMove);
-<<<<<<< HEAD
-=======
     window.addEventListener('scroll', handleScroll);
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
     
     return () => {
       clearInterval(interval);
@@ -58,19 +38,6 @@ const Homepage2045: React.FC = () => {
   }, []);
 
   // Combine all revolutionary services
-<<<<<<< HEAD
-  const allRevolutionaryServices = [
-    ...revolutionary2045AIConsciousnessServices,
-    ...revolutionary2045ITInfrastructureServices,
-    ...revolutionary2045MicroSaasServices
-  ];
-
-  // Get featured services for rotation
-  const featuredServices = allRevolutionaryServices.slice(0, 8);
-
-  // Filter services by category
-  const getFilteredServices = () => {
-=======
   const allRevolutionaryServices = useMemo(() => [
     ...revolutionary2045AdvancedRealMicroSaas,
     ...revolutionary2045AdvancedITServices,
@@ -79,49 +46,11 @@ const Homepage2045: React.FC = () => {
 
   // Filter services by category
   const getFilteredServices = useCallback(() => {
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
     if (selectedCategory === 'all') return allRevolutionaryServices;
     return allRevolutionaryServices.filter(service => 
       service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
       service.type.toLowerCase().includes(selectedCategory.toLowerCase())
     );
-<<<<<<< HEAD
-  };
-
-  const categories = [
-    { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500' },
-    { id: 'ai', name: 'AI Consciousness', icon: BrainIcon, color: 'from-cyan-500 to-blue-500' },
-    { id: 'quantum', name: 'Quantum Technology', icon: AtomIcon, color: 'from-blue-500 to-indigo-500' },
-    { id: 'infrastructure', name: 'IT Infrastructure', icon: Cloud, color: 'from-emerald-500 to-teal-500' },
-    { id: 'space', name: 'Space Technology', icon: RocketIcon, color: 'from-indigo-500 to-purple-500' },
-    { id: 'business', name: 'Business Solutions', icon: Target, color: 'from-yellow-500 to-orange-500' },
-    { id: 'health', name: 'Bio-Digital Health', icon: Heart, color: 'from-pink-500 to-red-500' },
-    { id: 'education', name: 'Quantum Education', icon: BookOpen, color: 'from-green-500 to-blue-500' }
-  ];
-
-  const features = [
-    { icon: Brain, title: "AI Consciousness Evolution 2045", description: "Next-generation AI consciousness with emotional intelligence", href: "/ai-consciousness-evolution-2045", color: "from-purple-500 to-pink-500" },
-    { icon: Atom, title: "Quantum Consciousness Computing 2045", description: "Quantum-powered consciousness with infinite scalability", href: "/quantum-consciousness-computing-2045", color: "from-blue-500 to-cyan-500" },
-    { icon: Cloud, title: "Quantum Cloud Infrastructure 2045", description: "Quantum-powered cloud with infinite scalability", href: "/quantum-cloud-infrastructure-2045", color: "from-emerald-500 to-teal-500" },
-    { icon: Rocket, title: "Space-Based Computing 2045", description: "Orbital computing with global coverage", href: "/space-based-computing-infrastructure-2045", color: "from-indigo-500 to-purple-500" },
-    { icon: Shield, title: "Quantum Cybersecurity 2045", description: "Quantum-resistant security with AI consciousness", href: "/quantum-cybersecurity-platform-2045", color: "from-red-500 to-orange-500" },
-    { icon: Target, title: "Autonomous Business Automation 2045", description: "Fully autonomous business process automation", href: "/autonomous-business-process-automation-2045", color: "from-yellow-500 to-orange-500" },
-    { icon: Heart, title: "Bio-Digital Health Platform 2045", description: "Seamless bio-digital health integration", href: "/bio-digital-health-platform-2045", color: "from-pink-500 to-red-500" },
-    { icon: BookOpen, title: "Quantum Education Platform 2045", description: "Quantum-powered immersive learning", href: "/quantum-education-platform-2045", color: "from-green-500 to-blue-500" }
-  ];
-
-  const stats = [
-    { number: "2500+", label: "Revolutionary Services", icon: Star },
-    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp },
-    { number: "24/7", label: "AI Consciousness Support", icon: Brain },
-    { number: "250+", label: "Countries Served", icon: Globe },
-    { number: "∞", label: "Scalability", icon: Infinity },
-    { number: "2045", label: "Future Technology", icon: SparklesIcon }
-  ];
-
-  const handleGetStarted = useCallback(() => {
-    window.location.href = '/revolutionary-2045-pricing-showcase';
-=======
   }, [selectedCategory, allRevolutionaryServices]);
 
   const categories = useMemo(() => [
@@ -175,19 +104,12 @@ const Homepage2045: React.FC = () => {
 
   const handleGetStarted = useCallback(() => {
     window.location.href = '/contact';
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
   }, []);
 
   const handleWatchDemo = useCallback(() => {
     window.location.href = '/services';
   }, []);
 
-<<<<<<< HEAD
-  const handleServiceClick = useCallback((service: any) => {
-    window.location.href = service.slug;
-  }, []);
-
-=======
   const handleServiceClick = useCallback((service: { id: string; slug: string }) => {
     window.location.href = service.slug;
   }, []);
@@ -215,24 +137,18 @@ const Homepage2045: React.FC = () => {
     );
   }
 
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
   return (
     <Layout>
       {/* Main Content */}
       <main className="relative z-10">
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-<<<<<<< HEAD
-          {/* Animated Background Elements */}
-          <div className="absolute inset-0 overflow-hidden">
-=======
           {/* Enhanced Animated Background */}
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-cyan-900/20" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]" />
             
             {/* Enhanced Floating Elements with Parallax */}
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
             <motion.div
               className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl"
               animate={{
@@ -245,13 +161,10 @@ const Homepage2045: React.FC = () => {
                 repeat: 999999,
                 ease: "linear"
               }}
-<<<<<<< HEAD
-=======
               className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg"
               style={{
                 transform: `translateX(${mousePosition.x * 0.01}px) translateY(${mousePosition.y * 0.01}px)`
               }}
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
             />
             <motion.div
               className="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl"
@@ -265,13 +178,10 @@ const Homepage2045: React.FC = () => {
                 repeat: 999999,
                 ease: "linear"
               }}
-<<<<<<< HEAD
-=======
               className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full"
               style={{
                 transform: `translateX(${-mousePosition.x * 0.008}px) translateY(${-mousePosition.y * 0.008}px)`
               }}
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
             />
             <motion.div
               className="absolute bottom-20 left-1/2 w-80 h-80 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl"
@@ -285,13 +195,10 @@ const Homepage2045: React.FC = () => {
                 repeat: 999999,
                 ease: "linear"
               }}
-<<<<<<< HEAD
-=======
               className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
               style={{
                 transform: `translateX(${mousePosition.x * 0.012}px) translateY(${mousePosition.y * 0.012}px)`
               }}
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
             />
           </div>
 
@@ -303,20 +210,6 @@ const Homepage2045: React.FC = () => {
               transition={{ duration: 1 }}
               className="mb-8"
             >
-<<<<<<< HEAD
-              <motion.div
-                className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-6"
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 0.5, type: "spring" }}
-              >
-                <SparklesIcon className="w-4 h-4 mr-2" />
-                Revolutionary Technology 2045
-              </motion.div>
-              
-              <motion.h1
-                className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6 leading-tight"
-=======
               {/* Enhanced Main Heading */}
               <div className="space-y-6">
                 <motion.h1 
@@ -351,26 +244,10 @@ const Homepage2045: React.FC = () => {
               {/* Enhanced CTA Buttons */}
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7, duration: 1 }}
               >
-<<<<<<< HEAD
-                The Future of
-                <br />
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                  AI Consciousness
-                </span>
-                <br />
-                <span className="bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-600 bg-clip-text text-transparent">
-                  & Technology
-                </span>
-              </motion.h1>
-              
-              <motion.p
-                className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"
-=======
                 <button
                   onClick={handleGetStarted}
                   className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40"
@@ -396,7 +273,6 @@ const Homepage2045: React.FC = () => {
               {/* Enhanced Stats */}
               <motion.div 
                 className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-12"
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1, duration: 1 }}
@@ -405,79 +281,6 @@ const Homepage2045: React.FC = () => {
                 quantum computing infrastructure, and autonomous systems that redefine what's possible in 2045.
               </motion.p>
             </motion.div>
-<<<<<<< HEAD
-
-            {/* CTA Buttons */}
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.2, duration: 1 }}
-            >
-              <motion.button
-                onClick={handleGetStarted}
-                className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-lg shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span className="flex items-center">
-                  Get Started
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </span>
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
-              </motion.button>
-              
-              <motion.button
-                onClick={handleWatchDemo}
-                className="group relative px-8 py-4 bg-transparent border-2 border-cyan-400 text-cyan-400 font-semibold rounded-full text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span className="flex items-center">
-                  <Play className="mr-2 w-5 h-5" />
-                  Watch Demo
-                </span>
-              </motion.button>
-            </motion.div>
-
-            {/* Stats Grid */}
-            <motion.div
-              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.5, duration: 1 }}
-            >
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  className="text-center group"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1.5 + index * 0.1, duration: 0.8 }}
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl border border-purple-500/30 mb-3 group-hover:scale-110 transition-transform duration-300">
-                    <stat.icon className="w-8 h-8 text-purple-400" />
-                  </div>
-                  <div className="text-2xl md:text-3xl font-bold text-white mb-1">{stat.number}</div>
-                  <div className="text-sm text-gray-400">{stat.label}</div>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Services Categories */}
-        <section className="py-20 px-6">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              viewport={{ once: true }}
-            >
-=======
           </div>
 
           {/* Floating Contact Button */}
@@ -503,7 +306,6 @@ const Homepage2045: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Revolutionary Services
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> 2045</span>
@@ -514,16 +316,6 @@ const Homepage2045: React.FC = () => {
               </p>
             </motion.div>
 
-<<<<<<< HEAD
-            {/* Category Filter */}
-            <motion.div
-              className="flex flex-wrap justify-center gap-4 mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              viewport={{ once: true }}
-            >
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <motion.div
@@ -626,7 +418,6 @@ const Homepage2045: React.FC = () => {
 
             {/* Enhanced Category Filter */}
             <div className="flex flex-wrap justify-center gap-4 mb-12">
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
               {categories.map((category) => (
                 <motion.button
                   key={category.id}

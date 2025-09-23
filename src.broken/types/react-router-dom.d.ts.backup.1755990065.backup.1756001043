@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 declare module 'react-router-dom' {
   const ReactRouterDom: unknown;
   export default ReactRouterDom;
@@ -18,12 +16,8 @@ declare module 'react-router-dom' {
   export function useSearchParams(): any;
 }
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 // Type definitions for react-router-dom.d;
 export interface react-router-dom.d {;
   // TODO: Add proper type definitions;
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

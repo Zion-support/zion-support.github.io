@@ -116,11 +116,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     setIsOptimizing(false);
   };
 
-<<<<<<< HEAD
-  if (!showMetrics) {
-    return null;
-  }
-=======
     // Run optimizations in sequence
     await new Promise(resolve => setTimeout(resolve, 500));
     optimizeImages();
@@ -157,7 +152,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [metrics]);
 
   const performanceGrade = getPerformanceGrade();
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 >>>>>>> 5e27e402e0b68b9c85b868b0fd8919518fd31198
 
   return (
@@ -202,32 +196,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
               </span>
             </div>
           </div>
-<<<<<<< HEAD
-        )}
-
-        {optimizations.length > 0 && (
-          <div className="border-t border-gray-700 pt-3">
-            <h4 className="text-xs font-medium text-gray-300 mb-2">Optimization Suggestions:</h4>
-            <ul className="space-y-1">
-              {optimizations.slice(0, 3).map((suggestion, index) => (
-                <li key={index} className="text-xs text-gray-400 flex items-start">
-                  <AlertTriangle className="w-3 h-3 mr-1 mt-0.5 text-yellow-400 flex-shrink-0" />
-                  {suggestion}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </motion.div>
-    </div>
-=======
           {isOptimizing && (
             <div className="text-cyan-400 text-xs mt-2">Optimizing resources...</div>
           )}
         </motion.div>
       )}
     </>
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 >>>>>>> 5e27e402e0b68b9c85b868b0fd8919518fd31198
   );
 };

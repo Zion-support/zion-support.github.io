@@ -1,28 +1,4 @@
 {
-<<<<<<< HEAD
-  "generatedAt": "2025-08-14T00:10:42.982Z",
-  "functions": [
-    "a11y-alt-text-runner",
-    "adaptive-orchestrator",
-    "agent-of-agents",
-    "ai-changelog-runner",
-    "ai-trends-radar-runner",
-    "auto-discovery-runner",
-    "auto-scheduler",
-    "automation-heartbeat",
-    "automation-matrix",
-    "autonomous-cloud-trigger",
-    "autonomous-invention-orchestrator",
-    "autonomous-meta-orchestrator",
-    "broken-image-scanner",
-    "broken-image-scanner-runner",
-    "canonical-auditor",
-    "cloud-trigger-hub",
-    "cloud_orchestrator",
-    "code-smell-audit-runner",
-    "component-props-docs-runner",
-    "component-size-report",
-=======
   "generatedAt": "2025-08-19T03:44:13.291Z",
   "functions": [
     "a11y-audit-runner",
@@ -38,7 +14,6 @@
     "canonical-auditor",
     "cloud-swarm-committer",
     "cloud_orchestrator",
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "continuous-front-runner",
     "continuous-orchestrator",
     "contributing-refresher",
@@ -55,11 +30,7 @@
     "features-capabilities-benefits-advertiser",
     "front-ads-promoter",
     "front-enhancer",
-<<<<<<< HEAD
-    "front-enhancer",
-=======
     "front-index-directory-builder",
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "front-index-futurizer",
     "front-index-orchestrator",
     "front-index-scheduler",
@@ -94,21 +65,13 @@
     "og-image-update-runner",
     "orchestrator-swarm",
     "orphan-pages-detector",
-<<<<<<< HEAD
-=======
     "pagespeed-insights-runner",
     "pm2-automation-redundancy",
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "readme-advertiser",
     "redirect-manager",
     "repo-knowledge-graph-runner",
     "repo-radar-and-graph",
     "repo-radar-runner",
-<<<<<<< HEAD
-    "revenue-ideas-lab",
-    "roadmap-curator",
-=======
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "schedule-content-index",
     "schedule-homepage",
     "schedule-knowledge-graph",
@@ -116,17 +79,9 @@
     "schema-org-enhancer",
     "security-audit",
     "security-audit-runner",
-<<<<<<< HEAD
-    "seo-audit-runner",
-    "site-crawler",
-    "sitemap_runner",
-    "stale-content-auditor-runner",
-    "structured-data-auditor",
-=======
     "site-crawler",
     "sitemap-prioritizer",
     "sitemap_runner",
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "todo-scanner-runner",
     "todo-summary-runner",
     "trigger-all-and-commit",

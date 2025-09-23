@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { CardHeaderCardContentCardTitle } from "@/components/ui/card";
-=======
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
->>>>>>> origin/auto/autonomy-17186719616
 import { TalentProfile } from "@/types/talent";
 
 interface ProfileCardProps {

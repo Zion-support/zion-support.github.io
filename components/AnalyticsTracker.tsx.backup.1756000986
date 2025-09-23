@@ -1,32 +1,12 @@
-<<<<<<< HEAD
-import React, { useEffect, useCallback } from 'react';
-import { useRouter } from 'next/router';
-
-// Browser API types are declared globally in PerformanceOptimizer.tsx
-
-// Performance entry types for Core Web Vitals
-=======
 import React, { useEffect, useRef } from 'react';
 
 // Performance entry types
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
   processingEnd: number;
   target?: any;
 }
 
-<<<<<<< HEAD
-interface AnalyticsTrackerProps {
-  pageTitle?: string;
-  pagePath?: string;
-  customEvents?: Array<{ action: string; parameters: Record<string, unknown> }>;
-}
-
-const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
-  trackingId = 'G-XXXXXXXXXX',
-  enableTracking = true
-=======
 interface LayoutShift extends PerformanceEntry {
   value: number;
   sources?: LayoutShiftSource[];
@@ -46,7 +26,6 @@ interface AnalyticsTrackerProps {
 const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({ 
   trackingId = 'G-XXXXXXXXXX', 
   enableTracking = true 
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 }) => {
   const router = useRouter();
   const trackingId = Math.random().toString(36).substr(2, 9);
@@ -419,12 +398,8 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
 
   // This component doesn't render anything
   return null;
-<<<<<<< HEAD
-};
-=======
 }
 
 // gtag is declared globally in PerformanceOptimizer.tsx
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 
 export default AnalyticsTracker;

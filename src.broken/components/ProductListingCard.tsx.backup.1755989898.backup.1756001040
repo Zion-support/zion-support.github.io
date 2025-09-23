@@ -5,11 +5,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ProductListing } from "@/types/listings";
 <<<<<<< HEAD
-import { DollarSign } from "lucide-react";
-import { RatingStars } from "./RatingStars";
-import { FavoriteButton } from "@/components/FavoriteButton";
-=======
-<<<<<<< HEAD
 import { Star, DollarSign, Heart } from "lucide-react";
 import { useAppDispatch } from "@/store/hooks";
 import { addToWishlist, getApiUrl } from "@/store/wishlistSlice";
@@ -20,7 +15,6 @@ import { toast } from "sonner";
 import { DollarSign } from "lucide-react";
 import { RatingStars } from "./RatingStars";
 import { FavoriteButton } from "@/components/FavoriteButton";
->>>>>>> origin/9lfw2u-codex/render-filled-stars-for-ratings
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 interface ProductListingCardProps {
@@ -214,11 +208,8 @@ const ProductListingCardComponent = ({
             </Badge>
             {listing.rating && (
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
               <RatingStars value={listing.rating} count={listing.reviewCount ?? 0} />
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
               <div className="flex items-center text-zion-slate-light">
                 <RatingStars value={listing.rating} />
                 <span className="ml-1">{listing.rating.toFixed(1)}</span>
@@ -226,9 +217,6 @@ const ProductListingCardComponent = ({
                   <span className="text-xs ml-1">({listing.reviewCount})</span>
                 )}
               </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/9lfw2u-codex/render-filled-stars-for-ratings
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
             )}
           </div>

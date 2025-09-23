@@ -2,26 +2,6 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  ArrowRight, 
-  CheckCircle,
-  Code,
-  Database,
-  Lock,
-  Cpu,
-  Globe,
-  BarChart3
-} from 'lucide-react';
-
-const EnhancedServicesShowcase = () => {
-  const [activeService, setActiveService] = useState(0);
-
-  const services = [
-=======
   Brain, Shield, Rocket, Cpu, Database, Atom, Users, 
   CheckCircle, TrendingUp, Clock, Star, Filter, ChevronDown
 } from 'lucide-react';
@@ -50,7 +30,6 @@ const EnhancedServicesShowcase: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const services: Service[] = [
->>>>>>> origin/backup-main-final-20250913-063409
     {
       id: 'ai',
       title: 'AI & Machine Learning',
@@ -171,37 +150,6 @@ const EnhancedServicesShowcase: React.FC = () => {
           </p>
         </motion.div>
 
-<<<<<<< HEAD
-        {/* Service Tabs */}
-        <div className="mb-12">
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {services.map((service, index) => (
-              <button
-                key={service.id}
-                onClick={() => setActiveService(index)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                  activeService === index
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                }`}
-              >
-                {service.title}
-              </button>
-            ))}
-          </div>
-
-          {/* Service Details */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeService}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"
-            >
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-=======
         {/* Filters */}
         <div className="flex flex-col md:flex-row gap-4 mb-12 justify-center items-center">
           {/* Category Filter */}
@@ -263,7 +211,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                   </div>
                 </div>
 
->>>>>>> origin/backup-main-final-20250913-063409
                 {/* Service Info */}
                 <div>
                   <div className="flex items-center space-x-4 mb-6">
@@ -307,22 +254,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                   </div>
                 </div>
 
-<<<<<<< HEAD
-                {/* Technologies & CTA */}
-                <div className="space-y-8">
-                  <div>
-                    <h4 className="text-xl font-semibold text-white mb-4">Technologies We Use</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {services[activeService].technologies.map((tech, index) => (
-                        <span
-                          key={index}
-                          className="px-3 py-1 bg-white/10 text-gray-300 rounded-full text-sm"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-=======
                 {/* Key Features */}
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-white mb-3">Key Features:</h4>
@@ -333,37 +264,8 @@ const EnhancedServicesShowcase: React.FC = () => {
                         {feature}
                       </div>
                     ))}
->>>>>>> origin/backup-main-final-20250913-063409
                   </div>
 
-<<<<<<< HEAD
-                  <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6">
-                    <h4 className="text-xl font-semibold text-white mb-4">Ready to Get Started?</h4>
-                    <p className="text-gray-300 mb-6">
-                      Let's discuss how our {services[activeService].title.toLowerCase()} solutions 
-                      can transform your business.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4">
-                      <Link
-                        href={services[activeService].href}
-                        className="flex-1 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 text-center"
-                      >
-                        Learn More
-                        <ArrowRight className="w-4 h-4 ml-2 inline" />
-                      </Link>
-                      <Link
-                        href="/contact"
-                        className="flex-1 px-6 py-3 border border-white/20 text-white hover:bg-white/10 font-semibold rounded-lg transition-all duration-300 text-center"
-                      >
-                        Get Quote
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </AnimatePresence>
-=======
                 {/* Benefits */}
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-white mb-3">Key Benefits:</h4>
@@ -404,7 +306,6 @@ const EnhancedServicesShowcase: React.FC = () => {
               </div>
             </div>
           ))}
->>>>>>> origin/backup-main-final-20250913-063409
         </div>
 
         {/* Stats Section */}
@@ -427,20 +328,9 @@ const EnhancedServicesShowcase: React.FC = () => {
         </motion.div>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12">
-            <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-=======
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20">
             <h3 className="text-2xl font-bold text-white mb-4">
->>>>>>> origin/backup-main-final-20250913-063409
               Ready to Transform Your Business?
             </h3>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
@@ -448,26 +338,6 @@ const EnhancedServicesShowcase: React.FC = () => {
               with our cutting-edge technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-              <Link
-                href="/contact"
-                className="px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-              >
-                Start Your Project
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
-              </Link>
-              <Link
-                href="/portfolio"
-                className="px-8 py-4 border border-white/20 text-white hover:bg-white/10 font-semibold rounded-lg transition-all duration-300"
-              >
-                View Our Work
-              </Link>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </div>
-=======
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=Consultation Request"
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
@@ -485,7 +355,6 @@ const EnhancedServicesShowcase: React.FC = () => {
         </div>
       </div>
     </section>
->>>>>>> origin/backup-main-final-20250913-063409
   );
 };
 

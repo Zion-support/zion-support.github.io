@@ -1,23 +1,6 @@
 name: Cloud Orchestrator Plus
 
 on:
-<<<<<<< HEAD
-  workflow_dispatch: {}
-  schedule:
-    - cron: '*/10 * * * *'
-
-permissions:
-  contents: write
-  actions: read
-
-jobs:
-  main:
-    name: Main Job
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    steps:
-      - name: Checkout repository
-=======
   schedule:
     - cron: "*/3 * * * *"
   workflow_dispatch: {}
@@ -28,7 +11,6 @@ jobs:
 <<<<<<< HEAD
 =======
     timeout-minutes: 10
->>>>>>> origin/cursor/fix-github-actions-errors-987b
     permissions:
       contents: write
       pull-requests: write
@@ -39,20 +21,6 @@ jobs:
         with:
           fetch-depth: 0
 
-<<<<<<< HEAD
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci --no-audit --no-fund
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-=======
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -79,6 +47,4 @@ concurrency:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: node automation/advanced-git-sync.cjs || node automation/git-sync.cjs
-
->>>>>>> origin/automation/git-sync/2025-08-13T22-22-32-390Z
 

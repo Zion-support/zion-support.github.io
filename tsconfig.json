@@ -1,5 +1,11 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "zion-website/src/*"
+      ]
+    },
     "lib": [
       "dom",
       "dom.iterable",
@@ -28,20 +34,54 @@
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx"
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "lib/**/*.ts",
+    "lib/**/*.tsx"
   ],
   "exclude": [
     "node_modules",
+    "**/node_modules/**",
+    ".next",
+    "dist",
+    "out",
+    "coverage",
+    "build",
+    "public/build",
     "data_backup",
     "backup",
     "backups",
-    "pages_backup_conflict",
     "apps.backup",
     "corrupted-files-backup",
     "lib_backup",
     "**/*backup*",
     "**/*conflict*",
-    "**/*temp*"
+    "**/*temp*",
+    "src",
+    "src.*",
+    "src_*",
+    "src-*/**",
+    "src_backup/**",
+    "src_backup_temp/**",
+    "src.broken/**",
+    "src.corrupted/**",
+    "src.disabled/**",
+    "src.pages.disabled/**",
+    "zion-os/**",
+    "utils/**",
+    "utils.disabled/**",
+    "ts_files_backup/**",
+    "tests/**",
+    "__tests__/**",
+    "test/**",
+    "test-results/**",
+    "test-reports/**",
+    "types/**"
   ]
 }

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-node_modules
-.DS_Store
-.env
-server/.env
-npm-debug.log*
-yarn-error.log
-=======
 # Node
 node_modules/
 *.log
@@ -42,4 +34,3 @@ Thumbs.db
 # Editors
 .vscode/
 .idea/
->>>>>>> origin/cursor/build-zion-os-developer-sdk-83c5

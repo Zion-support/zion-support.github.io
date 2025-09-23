@@ -43,38 +43,6 @@ const DocsPage: React.FC = () => {
       ]
     },
     {
-<<<<<<< HEAD
-      title: "Space Technology",
-      description: "Space resource intelligence and autonomous systems",
-      icon: Rocket,
-      color: "from-orange-500 to-red-500",
-      articles: [
-        { title: "Space Resource API", description: "Access space resource intelligence", href: "/docs/space-resource-api" },
-        { title: "Satellite Systems", description: "Build autonomous satellite systems", href: "/docs/satellite-systems" },
-        { title: "Mission Control", description: "Manage space missions", href: "/docs/mission-control" }
-      ]
-    },
-    {
-      title: "Cybersecurity",
-      description: "Advanced security and threat detection",
-      icon: Shield,
-      color: "from-green-500 to-emerald-500",
-      articles: [
-        { title: "Zero Trust Security", description: "Implement zero trust architecture", href: "/docs/zero-trust" },
-        { title: "Threat Detection", description: "AI-powered threat detection", href: "/docs/threat-detection" },
-        { title: "Security API", description: "Security and compliance APIs", href: "/docs/security-api" }
-      ]
-    },
-    {
-      title: "API Reference",
-      description: "Complete API documentation and examples",
-      icon: Code,
-      color: "from-yellow-500 to-orange-500",
-      articles: [
-        { title: "REST API", description: "Complete REST API reference", href: "/docs/rest-api" },
-        { title: "GraphQL API", description: "GraphQL API documentation", href: "/docs/graphql-api" },
-        { title: "SDKs & Libraries", description: "Client libraries and SDKs", href: "/docs/sdks" }
-=======
       title: "Space Technology APIs",
       description: "Documentation for autonomous space exploration and resource intelligence.",
       icon: <Rocket className="w-8 h-8" />,
@@ -84,44 +52,10 @@ const DocsPage: React.FC = () => {
         { name: "Authentication", description: "API authentication and authorization", status: "Complete" },
         { name: "Endpoints", description: "Complete API endpoint reference", status: "Complete" },
         { name: "Webhooks", description: "Real-time data streaming setup", status: "Complete" }
->>>>>>> 7d0a781e658cc5d79dae76ad53c5e567dc7e5315
       ]
     }
   ];
 
-<<<<<<< HEAD
-  const popularArticles = [
-    {
-      title: "Getting Started with AI Consciousness",
-      description: "Learn how to integrate AI consciousness into your applications",
-      category: "AI & Machine Learning",
-      readTime: "10 min read",
-      href: "/docs/ai-consciousness-getting-started"
-    },
-    {
-      title: "Quantum Security Implementation",
-      description: "Implement quantum-resistant security in your systems",
-      category: "Cybersecurity",
-      readTime: "15 min read",
-      href: "/docs/quantum-security-implementation"
-    },
-    {
-      title: "Space Resource Intelligence API",
-      description: "Access and analyze space resource data",
-      category: "Space Technology",
-      readTime: "12 min read",
-      href: "/docs/space-resource-api-guide"
-    }
-  ];
-
-  const searchSuggestions = [
-    "AI consciousness", "Quantum algorithms", "Space technology", "Cybersecurity", "API integration"
-  ];
-
-  return (
-    <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-=======
   const quickStartGuides = [
     {
       title: "AI Consciousness Platform",
@@ -230,7 +164,6 @@ const DocsPage: React.FC = () => {
       keywords="documentation, API reference, developer resources, AI consciousness, quantum computing, cybersecurity, Zion Tech Group"
     >
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
->>>>>>> 7d0a781e658cc5d79dae76ad53c5e567dc7e5315
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4">
           <div className="max-w-7xl mx-auto text-center">

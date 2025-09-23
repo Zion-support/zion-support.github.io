@@ -1,181 +1,12 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { 
-  Users, Award, Target, Globe, Brain, Atom, Shield, Rocket, 
-  Star, TrendingUp, CheckCircle, Phone, Mail, MapPin,
-  ArrowRight, Zap, Cpu, Database, Cloud, Palette,
-  Play, FileText, Video, Download, Calendar, Clock,
-  Code
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-} from 'lucide-react';
-import Link from 'next/link';
-
-const GetStarted: React.FC = () => {
-  const [currentStep, setCurrentStep] = useState(1);
-  const [selectedPath, setSelectedPath] = useState('');
-
-  const paths = [
-    {
-      id: 'ai',
-      name: 'AI & Machine Learning',
-      description: 'Get started with our AI consciousness and machine learning platforms',
-      icon: <Brain className="w-8 h-8" />,
-      color: 'from-cyan-500 to-blue-500',
-      steps: [
-        'Schedule AI consultation call',
-        'Review current AI infrastructure',
-        'Define AI implementation goals',
-        'Receive customized AI roadmap',
-        'Begin AI platform deployment'
-      ]
-    },
-    {
-      id: 'quantum',
-      name: 'Quantum Computing',
-      description: 'Explore quantum computing solutions for your organization',
-      icon: <Atom className="w-8 h-8" />,
-      color: 'from-purple-500 to-pink-500',
-      steps: [
-        'Quantum readiness assessment',
-        'Identify quantum use cases',
-        'Quantum infrastructure planning',
-        'Quantum algorithm development',
-        'Quantum solution deployment'
-      ]
-    },
-    {
-      id: 'space',
-      name: 'Space Technology',
-      description: 'Leverage space technology for resource intelligence and exploration',
-      icon: <Rocket className="w-8 h-8" />,
-      color: 'from-blue-500 to-cyan-500',
-      steps: [
-        'Space technology consultation',
-        'Resource intelligence assessment',
-        'Satellite system planning',
-        'Space data integration',
-        'Space platform deployment'
-      ]
-    }
-  ];
-
-  const onboardingSteps = [
-    {
-      step: 1,
-      title: 'Initial Consultation',
-      description: 'Schedule a free consultation with our technology experts to discuss your needs and goals.',
-      duration: '30 minutes',
-      icon: <Phone className="w-6 h-6" />,
-      actions: [
-        'Book consultation call',
-        'Prepare questions and goals',
-        'Review current technology stack'
-      ]
-    },
-    {
-      step: 2,
-      title: 'Assessment & Planning',
-      description: 'We conduct a comprehensive assessment of your current infrastructure and create a customized implementation plan.',
-      duration: '1-2 weeks',
-      icon: <Target className="w-6 h-6" />,
-      actions: [
-        'Infrastructure review',
-        'Requirements gathering',
-        'Custom roadmap creation'
-      ]
-    },
-    {
-      step: 3,
-      title: 'Solution Design',
-      description: 'Our team designs a tailored solution architecture that meets your specific business requirements.',
-      duration: '2-3 weeks',
-      icon: <Cpu className="w-6 h-6" />,
-      actions: [
-        'Architecture design',
-        'Technology selection',
-        'Integration planning'
-      ]
-    },
-    {
-      step: 4,
-      title: 'Implementation',
-      description: 'We deploy your solution with minimal disruption to your operations, ensuring a smooth transition.',
-      duration: '4-8 weeks',
-      icon: <Rocket className="w-6 h-6" />,
-      actions: [
-        'Phased deployment',
-        'Testing and validation',
-        'Performance optimization'
-      ]
-    },
-    {
-      step: 5,
-      title: 'Training & Support',
-      description: 'Comprehensive training for your team and ongoing support to ensure long-term success.',
-      duration: '1-2 weeks',
-      icon: <Users className="w-6 h-6" />,
-      actions: [
-        'Team training sessions',
-        'Documentation delivery',
-        'Ongoing support setup'
-      ]
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-    }
-  ];
-
-  const successStories = [
-    {
-      title: 'Getting Started Guide',
-      description: 'Comprehensive guide to implementing Zion Tech Group solutions',
-      type: 'PDF',
-      icon: <FileText className="w-6 h-6" />,
-      download: true
-    },
-    {
-      title: 'Video Tutorials',
-      description: 'Step-by-step video guides for common implementation tasks',
-      type: 'Video Series',
-      icon: <Video className="w-6 h-6" />,
-      download: false
-    },
-    {
-      title: 'API Documentation',
-      description: 'Complete API reference and integration guides',
-      type: 'Web',
-      icon: <Code className="w-6 h-6" />,
-      download: false
-    },
-    {
-      title: 'Best Practices',
-      description: 'Industry best practices and implementation recommendations',
-      type: 'Guide',
-      icon: <Star className="w-6 h-6" />,
-      download: true
-    }
-  ];
-
-  const nextStep = () => {
-    if (currentStep < 5) setCurrentStep(currentStep + 1);
-  };
-
-  const prevStep = () => {
-    if (currentStep > 1) setCurrentStep(currentStep - 1);
-  };
-
-  return (
-    <Layout>
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
-=======
 import { Rocket, Brain, Atom, Shield, Users, CheckCircle, ArrowRight, Star, Zap, Globe, BookOpen } from 'lucide-react';
 
 const GetStarted: React.FC = () => {
   return (
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-black via-orange-900/20 to-red-900/20">
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
         {/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -261,24 +92,6 @@ const GetStarted: React.FC = () => {
                   <h3 className="text-2xl font-bold text-white mb-4">{option.title}</h3>
                   <p className="text-gray-400 mb-6">{option.description}</p>
                   
-<<<<<<< HEAD
-                  <h3 className="text-lg font-bold text-white mb-2 text-center">{resource.title}</h3>
-                  <p className="text-gray-400 text-sm text-center mb-4">{resource.description}</p>
-                  
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs text-gray-500 bg-gray-800/50 px-2 py-1 rounded">
-                      {resource.type}
-                    </span>
-                    {resource.download && (
-                      <Download className="w-4 h-4 text-cyan-400" />
-                    )}
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-                  </div>
-                  
-                  <button className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-sm">
-                    {resource.download ? 'Download' : 'Access'}
-                    <ArrowRight className="w-4 h-4 ml-2" />
-=======
                   <ul className="space-y-3 mb-8">
                     {option.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-3 text-gray-300">
@@ -290,7 +103,6 @@ const GetStarted: React.FC = () => {
 
                   <button className={`w-full px-6 py-3 bg-gradient-to-r ${option.color} text-white rounded-xl font-semibold hover:shadow-xl transition-all duration-300`}>
                     {option.buttonText}
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
                   </button>
                 </motion.div>
               ))}
@@ -298,16 +110,9 @@ const GetStarted: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Quick Start Options */}
-        <section className="py-20 bg-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
         {/* Getting Started Steps */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -448,18 +253,6 @@ const GetStarted: React.FC = () => {
               <p className="text-xl text-gray-400 mb-8">
                 Join the companies already revolutionizing their operations with our technology
               </p>
-<<<<<<< HEAD
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Schedule Consultation
-                </Link>
-                <a href="tel:+13024640950" className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call Now
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-                </a>
-=======
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-2xl font-semibold hover:shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 flex items-center gap-2">
                   Start Your Journey
@@ -468,7 +261,6 @@ const GetStarted: React.FC = () => {
                 <button className="px-8 py-4 border border-orange-500/30 text-orange-300 rounded-2xl hover:bg-orange-500/10 transition-all duration-300">
                   Contact Sales
                 </button>
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
               </div>
             </motion.div>
           </div>

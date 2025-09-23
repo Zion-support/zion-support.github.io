@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export default function AutomationIndex() { return <div className="p-6">Automation</div>; }
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -13,4 +10,3 @@ const AutomationIndexPage: NextPage = () => (
 );
 
 export default AutomationIndexPage;
->>>>>>> origin/cursor/build-digital-nation-creation-module-4d41

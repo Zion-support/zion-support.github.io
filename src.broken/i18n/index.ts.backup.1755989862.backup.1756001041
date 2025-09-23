@@ -3,8 +3,6 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { safeStorage } from '../utils/safeStorage';
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { setCookie } from '../utils/cookies';
 
 import enTranslation from './locales/en/translation.json';
@@ -14,7 +12,6 @@ import ptTranslation from './locales/pt/translation.json';
 import frTranslation from './locales/fr/translation.json';
 import arTranslation from './locales/ar/translation.json';
 import {logErrorToProduction} from '@/utils/productionLogger';
-
 
 if (!i18n) {
   logErrorToProduction("CRITICAL: i18next failed to import. Internationalization will not work.");
@@ -59,7 +56,6 @@ if (!i18n) {
     //   error: console.error,
     // },
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import Cookies from 'js-cookie';
 
 import enTranslation from '../../public/locales/en-US/common.json';
@@ -80,9 +76,6 @@ i18n
     },
     fallbackLng: 'en-US', // Default language
     debug: process.env.NODE_ENV === 'development',
-<<<<<<< HEAD
-=======
->>>>>>> origin/5i6q3p-codex/add-i18n-support-with-next-i18next
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     interpolation: {
       escapeValue: false, // React already escapes by default
@@ -94,20 +87,14 @@ i18n
     initImmediate: false, // Initialize synchronously to avoid missing key warnings
     detection: {
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
       order: ['cookie', 'navigator'], // Keep navigator as a fallback for first-time users
       lookupCookie: 'i18n_lang',
       caches: ['cookie'], // Re-enabled cookie caching for better performance
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       order: ['cookie', 'localStorage', 'navigator'],
       lookupCookie: 'zion_language',
       lookupLocalStorage: 'zion_language',
       caches: ['cookie']
-<<<<<<< HEAD
-=======
->>>>>>> origin/5i6q3p-codex/add-i18n-support-with-next-i18next
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     },
   })
@@ -125,8 +112,6 @@ i18n
     i18n.on('languageChanged', (lng) => {
       document.documentElement.dir = i18n.dir();
 
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
       // Save language preference to cookie and localStorage
       setCookie('i18n_lang', lng);
@@ -168,16 +153,12 @@ i18n.on('missingKey', (lngs, namespace, key) => {
     }
   }
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   // Save language preference to cookie and localStorage
   Cookies.set('zion_language', lng, { expires: 365 });
   safeStorage.setItem('zion_language', lng);
   
   // If user is authenticated, save language preference to profile
   // This will be implemented in the LanguageContext
-<<<<<<< HEAD
-=======
->>>>>>> origin/5i6q3p-codex/add-i18n-support-with-next-i18next
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 });
 

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export default function AutomationStatus() { return <main className="p-8">Automation status coming soon.</main>; }
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -21,4 +18,3 @@ const AutomationStatus: NextPage = () => {
 };
 
 export default AutomationStatus;
->>>>>>> origin/cursor/build-ai-pricing-suggestion-engine-ea4e

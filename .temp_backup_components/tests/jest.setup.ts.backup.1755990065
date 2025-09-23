@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import '@testing-library/jest-dom';
-
-=======
 // Polyfill fetch and enable fetch mocks;
 import whatwg-fetch';import fetchMock from jest-fetch-mock';fetchMock.enableMocks();
 
@@ -496,4 +492,3 @@ jest.mock('@supabase/supabase-js', () => {'  const authStub = {
     createClient: jest.fn(() => ({ auth: authStub }))
   };
 });
->>>>>>> origin/automation-error-fixes

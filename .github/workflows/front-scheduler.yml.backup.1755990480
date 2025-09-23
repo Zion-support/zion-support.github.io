@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-name: Front Scheduler
-
-on:
-  workflow_dispatch: {}
-  schedule:
-    - cron: '*/10 * * * *'
-
-permissions:
-  contents: read
-
-concurrency:
-  group: front-scheduler-${{ github.ref }}
-  cancel-in-progress: true
-
-jobs:
-  main:
-    name: Main Job
-    runs-on: ubuntu-latest
-    timeout-minutes: 25
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-=======
 name: Front Continuous Scheduler
 
 on:
@@ -49,7 +23,6 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: true
->>>>>>> origin/cursor/migrate-pm2-to-github-actions-bbfe
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -58,14 +31,6 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-<<<<<<< HEAD
-        run: npm ci --no-audit --no-fund
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
-=======
         run: npm ci
 
       - name: Configure Git identity
@@ -99,4 +64,3 @@ concurrency:
           git add -A
           git commit -m "chore: front CI sync [skip ci]" || true
           git push origin "$BRANCH" || true
->>>>>>> origin/cursor/migrate-pm2-to-github-actions-bbfe

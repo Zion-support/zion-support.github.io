@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-name: Issue Triage
-
-on:
-  issues:
-    types: [opened, edited]
-
-permissions:
-  issues: write
-=======
 name: AI Issue & PR Triage
 
 on:
@@ -20,28 +10,11 @@ permissions:
   contents: read
   issues: write
   pull-requests: write
->>>>>>> origin/cursor/build-zion-ai-marketplace-service-listing-9ebf
 
 jobs:
   triage:
     runs-on: ubuntu-latest
     steps:
-<<<<<<< HEAD
-      - uses: actions/github-script@v7
-        with:
-          script: |
-            const { owner, repo } = context.repo;
-            const issue = context.payload.issue;
-            const title = issue.title.toLowerCase() + ' ' + (issue.body || '').toLowerCase();
-            const labels = [];
-            if (title.includes('security') || title.includes('vulnerability')) labels.push('security');
-            if (title.includes('performance') || title.includes('lighthouse')) labels.push('performance');
-            if (title.includes('link') && (title.includes('broken') || title.includes('404'))) labels.push('link-check');
-            if (title.includes('dependency') || title.includes('bump')) labels.push('dependencies');
-            if (labels.length > 0) {
-              await github.rest.issues.addLabels({ owner, repo, issue_number: issue.number, labels });
-            }
-=======
       - name: Triage with OpenAI
         uses: actions/github-script@v7
         env:
@@ -76,4 +49,3 @@ jobs:
               await github.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number: number, body: `AI triage summary:\n\n${result.summary}` });
             }
             core.info('Triage complete');
->>>>>>> origin/cursor/build-zion-ai-marketplace-service-listing-9ebf

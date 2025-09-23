@@ -1,14 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
-<<<<<<< HEAD
-interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-=======
 interface PerformanceLayoutShift {
   value: number;
 }
@@ -19,15 +11,11 @@ interface PerformanceMetrics {
   firstContentfulPaint: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
->>>>>>> cd4748dc562b148d65a1b4346338fa475b702844
 }
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
-<<<<<<< HEAD
-=======
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
->>>>>>> cd4748dc562b148d65a1b4346338fa475b702844
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ 
@@ -61,17 +49,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-<<<<<<< HEAD
-        // First Input Delay
-        const fidObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const fidEntry = entries[0] as FirstInputEntry;
-          if (fidEntry && 'processingStart' in fidEntry) {
-            setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
-          }
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
-=======
     const newMetrics: PerformanceMetrics = {
       loadTime: navigation.loadEventEnd - navigation.loadEventStart,
       domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
@@ -80,7 +57,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       cumulativeLayoutShift: layoutShiftEntries.reduce((sum, entry) => sum + (entry as PerformanceLayoutShift).value, 0)
     };
   }, []);
->>>>>>> cd4748dc562b148d65a1b4346338fa475b702844
 
         // Cumulative Layout Shift
         const clsObserver = new PerformanceObserver((list) => {

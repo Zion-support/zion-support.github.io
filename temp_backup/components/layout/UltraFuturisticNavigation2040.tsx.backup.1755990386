@@ -35,24 +35,6 @@ const navigationItems: NavigationItem[] = [
         description: 'Advanced AI solutions for enterprise'
       },
       {
-<<<<<<< HEAD
-        label: 'AI Consciousness Evolution',
-        href: '/ai-consciousness-evolution',
-        icon: <Brain className="w-4 h-4" />,
-        description: 'Revolutionary AI consciousness platform'
-      },
-      {
-        label: 'AI Ethics & Governance',
-        href: '/ai-ethics-governance',
-        icon: <Shield className="w-4 h-4" />,
-        description: 'Responsible AI development framework'
-      },
-      {
-        label: 'Innovative 2040 Services',
-        href: '/innovative-2040-futuristic-services-showcase',
-        icon: <Star className="w-4 h-4" />,
-        description: 'Cutting-edge futuristic technology solutions'
-=======
         label: 'Cybersecurity',
         href: '/cybersecurity',
         icon: <Lock className="w-4 h-4" />,
@@ -63,7 +45,6 @@ const navigationItems: NavigationItem[] = [
         href: '/cloud-platform',
         icon: <Globe className="w-4 h-4" />,
         description: 'Scalable cloud infrastructure'
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-78c3
       },
       {
         label: 'Quantum Computing',
@@ -72,18 +53,6 @@ const navigationItems: NavigationItem[] = [
         description: 'Next-generation quantum solutions'
       },
       {
-<<<<<<< HEAD
-        label: 'Cybersecurity',
-        href: '/cybersecurity',
-        icon: <Shield className="w-4 h-4" />,
-        description: 'Enterprise security solutions'
-      },
-      {
-        label: 'Cloud Platform',
-        href: '/cloud-platform',
-        icon: <Cloud className="w-4 h-4" />,
-        description: 'Scalable cloud infrastructure'
-=======
         label: 'Space Technology',
         href: '/space-tech',
         icon: <Star className="w-4 h-4" />,
@@ -94,7 +63,6 @@ const navigationItems: NavigationItem[] = [
         href: '/innovative-2040-futuristic-services-showcase',
         icon: <Star className="w-4 h-4" />,
         description: 'Cutting-edge futuristic technology solutions'
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-78c3
       },
       {
         label: 'Space Technology',

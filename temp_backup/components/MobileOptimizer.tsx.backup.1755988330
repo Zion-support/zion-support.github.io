@@ -50,24 +50,6 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
       }
     };
 
-<<<<<<< HEAD
-    const checkBattery = async () => {
-      if ('getBattery' in navigator) {
-        try {
-          const battery = await (navigator as any).getBattery();
-          setBatteryLevel(battery.level * 100);
-          setIsCharging(battery.charging);
-          
-          battery.addEventListener('levelchange', () => {
-            setBatteryLevel(battery.level * 100);
-          });
-          
-          battery.addEventListener('chargingchange', () => {
-            setIsCharging(battery.charging);
-          });
-        } catch (error) {
-          console.log('Battery API not supported');
-=======
     // Initial detection
     detectDevice();
     
@@ -156,15 +138,10 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
         
         if (deltaY > deltaX && deltaY > 10) {
           isScrolling = true;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-17ce
         }
       }
     };
 
-<<<<<<< HEAD
-    const handleResize = () => {
-      setIsLandscape(window.innerWidth > window.innerHeight);
-=======
     const handleTouchEnd = (e: TouchEvent) => {
       if (!isScrolling) {
         const deltaY = e.changedTouches[0].clientY - startY;
@@ -182,7 +159,6 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
           document.dispatchEvent(new Event('swipeDown'));
         }
       }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-17ce
     };
 
     const handleOrientationChange = () => {

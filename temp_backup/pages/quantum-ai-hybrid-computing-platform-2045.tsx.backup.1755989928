@@ -2,9 +2,6 @@ import React from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 import { 
   Brain, Atom, Shield, Rocket, Cpu, Database, Target, Sparkles,
   ArrowRight, CheckCircle, Star, Users, TrendingUp, Award, Clock,
@@ -71,8 +68,6 @@ const QuantumAIHybridComputingPlatform2045: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.1),transparent_50%)]" />
           
           <div className="relative z-10 container mx-auto px-4 text-center">
-<<<<<<< HEAD
-=======
 =======
 import { Atom, Brain, Zap, Cpu, Database, Target, CheckCircle, ArrowRight, Star, Globe, Shield, Rocket } from 'lucide-react';
 
@@ -146,16 +141,12 @@ const QuantumAIHybridComputingPlatform: React.FC = () => {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> origin/cursor/website-audit-and-enhancement-edce
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
             >
               <div className="inline-flex items-center space-x-2 px-4 py-2 bg-cyan-500/20 border border-cyan-500/30 rounded-full text-cyan-300 text-sm mb-6">
                 <Atom className="w-4 h-4" />
@@ -168,8 +159,6 @@ const QuantumAIHybridComputingPlatform: React.FC = () => {
               
               <p className="text-xl md:text-2xl text-white/80 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Advanced computing platform that combines quantum computing with AI consciousness to provide unprecedented computational power and intelligent problem-solving capabilities.
-<<<<<<< HEAD
-=======
 =======
               className="text-center"
             >
@@ -189,7 +178,6 @@ const QuantumAIHybridComputingPlatform: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
                 Experience the future of computing with our revolutionary quantum AI hybrid platform. 
                 Combining quantum processing power with artificial intelligence consciousness for unprecedented computational capabilities.
->>>>>>> origin/cursor/website-audit-and-enhancement-edce
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
               </p>
               
@@ -198,21 +186,15 @@ const QuantumAIHybridComputingPlatform: React.FC = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center gap-2"
                 >
                   Get Started Today
                   <ArrowRight className="w-5 h-5" />
-<<<<<<< HEAD
-=======
 =======
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center"
                 >
                   Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5" />
->>>>>>> origin/cursor/website-audit-and-enhancement-edce
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
                 </motion.button>
                 <motion.button
@@ -223,15 +205,9 @@ const QuantumAIHybridComputingPlatform: React.FC = () => {
                 >
                   Request Demo
 =======
-<<<<<<< HEAD
-                  className="px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all duration-300"
-                >
-                  Request Demo
-=======
                   className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
                 >
                   Watch Demo
->>>>>>> origin/cursor/website-audit-and-enhancement-edce
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
                 </motion.button>
               </div>
@@ -240,9 +216,6 @@ const QuantumAIHybridComputingPlatform: React.FC = () => {
         </section>
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
         {/* Stats Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-900/10 via-black to-blue-900/10">
           <div className="container mx-auto px-4">
@@ -264,8 +237,6 @@ const QuantumAIHybridComputingPlatform: React.FC = () => {
                   </div>
                   <div className="text-white/70">
                     {stat.label}
-<<<<<<< HEAD
-=======
 =======
         {/* Features Section */}
         <section className="py-20">
@@ -299,7 +270,6 @@ const QuantumAIHybridComputingPlatform: React.FC = () => {
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                     <p className="text-gray-300">{feature.description}</p>
->>>>>>> origin/cursor/website-audit-and-enhancement-edce
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
                   </div>
                 </motion.div>
@@ -313,24 +283,15 @@ const QuantumAIHybridComputingPlatform: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
 =======
-<<<<<<< HEAD
-        {/* Features Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-=======
         {/* Capabilities Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-500/5 to-blue-500/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> origin/cursor/website-audit-and-enhancement-edce
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
               viewport={{ once: true }}
               className="text-center mb-16"
             >
@@ -339,8 +300,6 @@ const QuantumAIHybridComputingPlatform: React.FC = () => {
               </h2>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
                 Our platform provides cutting-edge quantum-AI hybrid capabilities for unprecedented computational power
-<<<<<<< HEAD
-=======
 =======
               className="text-center mb-16"
             >
@@ -349,16 +308,12 @@ const QuantumAIHybridComputingPlatform: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Unlock unprecedented computational power with our quantum AI hybrid platform
->>>>>>> origin/cursor/website-audit-and-enhancement-edce
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
               </p>
             </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
               {features.map((feature, index) => (
                 <motion.div
                   key={feature}
@@ -416,8 +371,6 @@ const QuantumAIHybridComputingPlatform: React.FC = () => {
                       {benefit}
                     </h3>
                   </div>
-<<<<<<< HEAD
-=======
 =======
               {capabilities.map((capability, index) => (
                 <motion.div
@@ -431,7 +384,6 @@ const QuantumAIHybridComputingPlatform: React.FC = () => {
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <p className="text-lg text-gray-300">{capability}</p>
->>>>>>> origin/cursor/website-audit-and-enhancement-edce
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
                 </motion.div>
               ))}
@@ -444,20 +396,13 @@ const QuantumAIHybridComputingPlatform: React.FC = () => {
 <<<<<<< HEAD
           <div className="container mx-auto px-4">
 =======
-<<<<<<< HEAD
-          <div className="container mx-auto px-4">
-=======
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> origin/cursor/website-audit-and-enhancement-edce
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
               viewport={{ once: true }}
               className="text-center mb-16"
             >
@@ -485,8 +430,6 @@ const QuantumAIHybridComputingPlatform: React.FC = () => {
                   <h3 className="text-white font-medium">
                     {useCase}
                   </h3>
-<<<<<<< HEAD
-=======
 =======
               className="text-center mb-16"
             >
@@ -512,7 +455,6 @@ const QuantumAIHybridComputingPlatform: React.FC = () => {
                   </div>
                   <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
                   <p className="text-gray-300 text-lg">{useCase.description}</p>
->>>>>>> origin/cursor/website-audit-and-enhancement-edce
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
                 </motion.div>
               ))}
@@ -521,9 +463,6 @@ const QuantumAIHybridComputingPlatform: React.FC = () => {
         </section>
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
         {/* Pricing Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-900/10 via-black to-blue-900/10">
           <div className="container mx-auto px-4">
@@ -653,22 +592,16 @@ const QuantumAIHybridComputingPlatform: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
-<<<<<<< HEAD
-=======
 =======
         {/* CTA Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> origin/cursor/website-audit-and-enhancement-edce
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -693,8 +626,6 @@ const QuantumAIHybridComputingPlatform: React.FC = () => {
                   className="px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all duration-300"
                 >
                   Schedule Demo
-<<<<<<< HEAD
-=======
 =======
               className="text-center"
             >
@@ -711,7 +642,6 @@ const QuantumAIHybridComputingPlatform: React.FC = () => {
                   className="px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-lg"
                 >
                   Get Started Now
->>>>>>> origin/cursor/website-audit-and-enhancement-edce
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
                 </motion.button>
               </div>
@@ -719,9 +649,6 @@ const QuantumAIHybridComputingPlatform: React.FC = () => {
           </div>
         </section>
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 
         {/* Contact Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-900/10 via-black to-blue-900/10">
@@ -766,10 +693,7 @@ const QuantumAIHybridComputingPlatform: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-edce
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
       </div>
     </Layout>
@@ -779,9 +703,5 @@ const QuantumAIHybridComputingPlatform: React.FC = () => {
 <<<<<<< HEAD
 export default QuantumAIHybridComputingPlatform2045;
 =======
-<<<<<<< HEAD
-export default QuantumAIHybridComputingPlatform2045;
-=======
 export default QuantumAIHybridComputingPlatform;
->>>>>>> origin/cursor/website-audit-and-enhancement-edce
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60

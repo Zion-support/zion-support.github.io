@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-name: "CodeQL"
-=======
 name: CodeQL
->>>>>>> origin/cursor/automate-project-enhancement-and-merge-cac0
 
 on:
   push:
@@ -10,51 +6,17 @@ on:
   pull_request:
     branches: [ main ]
   schedule:
-<<<<<<< HEAD
-    - cron: '0 2 * * 1'
-
-permissions:
-  contents: read
-=======
     - cron: '0 3 * * 1'
 
 permissions:
   contents: read
   security-events: write
   actions: read
->>>>>>> origin/cursor/automate-project-enhancement-and-merge-cac0
 
 jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
-<<<<<<< HEAD
-    permissions:
-      actions: read
-      contents: read
-      security-events: write
-    strategy:
-      fail-fast: false
-      matrix:
-        language: [ 'javascript' ]
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3
-        with:
-          languages: ${{ matrix.language }}
-
-      - name: Autobuild
-        uses: github/codeql-action/autobuild@v3
-
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v3
-        with:
-          category: '/language:${{matrix.language}}'
-=======
     strategy:
       fail-fast: false
     steps:
@@ -66,4 +28,3 @@ jobs:
       - uses: github/codeql-action/analyze@v3
         with:
           category: '/language:javascript'
->>>>>>> origin/cursor/automate-project-enhancement-and-merge-cac0

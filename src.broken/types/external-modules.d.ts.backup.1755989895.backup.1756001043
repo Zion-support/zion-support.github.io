@@ -81,8 +81,6 @@ declare module 'react-i18next';
 declare module 'react-day-picker';
 declare module 'recharts';
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 declare module 'lucide-react';
 declare module 'react-helmet-async';
 declare module 'sonner';
@@ -104,7 +102,6 @@ declare global {
       [elem: string]: any;
     }
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 declare module 'next' {
   export type GetStaticPaths = any;
   export type GetStaticProps<P = any, Q = any> = any;
@@ -121,9 +118,6 @@ declare module 'next/router' {
     query: Record<string, string | string[]>
       main
     isFallback?: boolean
-<<<<<<< HEAD
-=======
->>>>>>> origin/92kxb3-codex/populate-forum-category-with-posts
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   }
 }

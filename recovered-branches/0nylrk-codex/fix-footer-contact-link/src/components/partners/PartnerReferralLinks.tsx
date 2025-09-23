@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import { useRefuseState } from "react";
-import { Button } from "@/components/ui/button";
-import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { CopyDownloadLinkPlus } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
-import { useReferrals } from "@/hooks/useReferrals";
-import { DialogContentDialogDescriptionDialogFooterDialogHeaderDialogTitleDialogTrigger } from "@/components/ui/dialog";
-import { Label } from "@/components/ui/label";
-import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
-
-export function PartnerReferralLinks() {
-  const { referralCodegetReferralLinkcopyReferralLinkshareOnSocialMedia } = useReferrals();
-  const [isDialogOpensetIsDialogOpen] = useState(false);
-  const [selectedCampaignsetSelectedCampaign] = useState<string>("default");
-  const [customParamsetCustomParam] = useState<string>("");
-  const [generatedLinksetGeneratedLinks] = useState<{name: stringlink: string}[]>([]);
-=======
 import { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -34,7 +15,6 @@ export function PartnerReferralLinks() {
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
   const [customParam, setCustomParam] = useState<string>("");
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]);
->>>>>>> origin/auto/autonomy-17186719616
   
   // Get the base referral link
   const baseLink = getReferralLink();
@@ -54,20 +34,12 @@ export function PartnerReferralLinks() {
       
       // Add custom campaign parameter if selected
       if (selectedCampaign !== "default") {
-<<<<<<< HEAD
-        url.searchParams.append("campaign"selectedCampaign);
-=======
         url.searchParams.append("campaign", selectedCampaign);
->>>>>>> origin/auto/autonomy-17186719616
       }
       
       // Add custom parameter if provided
       if (customParam) {
-<<<<<<< HEAD
-        url.searchParams.append("source"customParam);
-=======
         url.searchParams.append("source", customParam);
->>>>>>> origin/auto/autonomy-17186719616
       }
       
       const newLink = {
@@ -75,11 +47,7 @@ export function PartnerReferralLinks() {
         link: url.toString()
       };
       
-<<<<<<< HEAD
-      setGeneratedLinks(prev => [...prevnewLink]);
-=======
       setGeneratedLinks(prev => [...prev, newLink]);
->>>>>>> origin/auto/autonomy-17186719616
       setIsDialogOpen(false);
       setCustomParam("");
     }
@@ -87,11 +55,7 @@ export function PartnerReferralLinks() {
   
   const handleDownloadLinks = () => {
     const allLinks = [
-<<<<<<< HEAD
-      { name: "Default"link: baseLink },
-=======
       { name: "Default", link: baseLink },
->>>>>>> origin/auto/autonomy-17186719616
       ...generatedLinks
     ];
     
@@ -100,19 +64,11 @@ export function PartnerReferralLinks() {
       ...allLinks.map(l => `${l.name},${l.link}`)
     ].join("\n");
     
-<<<<<<< HEAD
-    const blob = new Blob([csvContent]{ type: 'text/csv;charset=utf-8;' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.setAttribute("href"url);
-    link.setAttribute("download"zion_referral_links.csv");
-=======
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.setAttribute("href", url);
     link.setAttribute("download", "zion_referral_links.csv");
->>>>>>> origin/auto/autonomy-17186719616
     link.style.visibility = 'hidden';
     document.body.appendChild(link);
     link.click();
@@ -192,11 +148,7 @@ export function PartnerReferralLinks() {
                 <Label htmlFor="custom">Custom Parameter (Optional)</Label>
                 <Input 
                   id="custom" 
-<<<<<<< HEAD
-                  placeholder="spring_campaignvideo_123etc." 
-=======
                   placeholder="spring_campaign, video_123, etc." 
->>>>>>> origin/auto/autonomy-17186719616
                   value={customParam}
                   onChange={(e) => setCustomParam(e.target.value)}
                 />
@@ -224,11 +176,7 @@ export function PartnerReferralLinks() {
 
       <div className="grid gap-4">
         {generatedLinks.length > 0 ? (
-<<<<<<< HEAD
-          generatedLinks.map((itemindex) => (
-=======
           generatedLinks.map((item, index) => (
->>>>>>> origin/auto/autonomy-17186719616
             <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
               <CardHeader className="pb-2">
                 <CardTitle className="text-base flex items-center justify-between">

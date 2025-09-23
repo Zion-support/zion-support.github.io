@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-export default function TalentIndexPage() {
-  return <div>Talent</div>;
-}
-=======
 export default function Talent(){
   return <div style={{padding:20}}>Talent</div>
 }
->>>>>>> origin/cursor/deploy-anonymous-zk-voting-for-dao-e4d6
 =======
 export default function TalentIndex() {
   return <div className="py-10">Talent Directory</div>;

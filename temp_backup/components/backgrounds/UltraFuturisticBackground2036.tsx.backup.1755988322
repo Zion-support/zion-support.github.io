@@ -371,20 +371,6 @@ const UltraFuturisticBackground2036: React.FC = () => {
         }}
       />
       
-<<<<<<< HEAD
-      {/* Additional Visual Layers */}
-      <div className="absolute inset-0">
-        {/* Floating Grid */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="w-full h-full" style={{
-            backgroundImage: `
-              linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: '50px 50px'
-          }} />
-        </div>
-=======
       {/* Animated canvas background */}
       <canvas
         ref={canvasRef}
@@ -448,7 +434,6 @@ const UltraFuturisticBackground2036: React.FC = () => {
           backgroundSize: '50px 50px'
         }} />
       </div>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-db78
 
         {/* Quantum Energy Fields */}
         <motion.div
@@ -461,15 +446,9 @@ const UltraFuturisticBackground2036: React.FC = () => {
             opacity: [0.1, 0.3, 0.1]
           }}
           transition={{
-<<<<<<< HEAD
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut"
-=======
             duration: 8,
             repeat: -1,
             ease: 'linear'
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-db78
           }}
         />
 
@@ -537,13 +516,8 @@ const UltraFuturisticBackground2036: React.FC = () => {
           }}
           transition={{
             duration: 10,
-<<<<<<< HEAD
-            repeat: Infinity,
-            ease: "linear"
-=======
             repeat: -1,
             ease: 'linear'
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-db78
           }}
         />
       </div>

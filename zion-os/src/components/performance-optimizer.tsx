@@ -1,20 +1,18 @@
 "use client";
 
-import { Suspense, lazy, Component, ReactNode } from "react";
+import { Suspense, Component, ReactNode } from "react";
 import { useState, useEffect } from "react";
 
-// Lazy load components for better performance
-const LazyComponent = ({ component: Component, fallback, ...props }: {
+const LazyComponent = ({ component: ComponentImpl, fallback, ...props }: {
   component: React.ComponentType<any>;
   fallback: ReactNode;
   [key: string]: any;
 }) => (
   <Suspense fallback={fallback}>
-    <Component {...props} />
+    <ComponentImpl {...props} />
   </Suspense>
 );
 
-// Error boundary for better error handling
 interface ErrorBoundaryState {
   hasError: boolean;
   error?: Error;
@@ -58,25 +56,23 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
   }
 }
 
-// Loading spinner component
-export function LoadingSpinner({ size = "md", className = "" }: { 
-  size?: "sm" | "md" | "lg"; 
+export function LoadingSpinner({ size = "md", className = "" }: {
+  size?: "sm" | "md" | "lg";
   className?: string;
 }) {
   const sizeClasses = {
     sm: "w-4 h-4",
     md: "w-6 h-6",
-    lg: "w-8 h-8"
-  };
+    lg: "w-8 h-8",
+  } as const;
 
   return (
     <div className={`animate-spin rounded-full border-2 border-[var(--border)] border-t-[var(--accent)] ${sizeClasses[size]} ${className}`} />
   );
 }
 
-// Skeleton loading component
-export function Skeleton({ className = "", lines = 1 }: { 
-  className?: string; 
+export function Skeleton({ className = "", lines = 1 }: {
+  className?: string;
   lines?: number;
 }) {
   return (
@@ -92,30 +88,22 @@ export function Skeleton({ className = "", lines = 1 }: {
   );
 }
 
-// Performance monitoring hook
 export function usePerformanceMonitor(componentName: string) {
   const startTime = performance.now();
-  
   return {
     endMeasure: () => {
       const endTime = performance.now();
       const duration = endTime - startTime;
-      
-      // Log performance metrics in development
       if (process.env.NODE_ENV === "development") {
         console.log(`${componentName} render time: ${duration.toFixed(2)}ms`);
       }
-      
-      // Send to analytics in production
       if (process.env.NODE_ENV === "production" && duration > 100) {
-        // Could send to analytics service here
         console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
       }
     }
   };
 }
 
-// Intersection observer hook for lazy loading
 export function useIntersectionObserver(
   ref: React.RefObject<HTMLElement>,
   options: IntersectionObserverInit = {}
@@ -125,33 +113,22 @@ export function useIntersectionObserver(
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
-
     const observer = new IntersectionObserver(([entry]) => {
       setIsIntersecting(entry.isIntersecting);
     }, options);
-
     observer.observe(element);
-
     return () => observer.disconnect();
   }, [ref, options]);
 
   return isIntersecting;
 }
 
-// Debounced search hook for better performance
 export function useDebounce<T>(value: T, delay: number): T {
   const [debouncedValue, setDebouncedValue] = useState<T>(value);
-
   useEffect(() => {
-    const handler = setTimeout(() => {
-      setDebouncedValue(value);
-    }, delay);
-
-    return () => {
-      clearTimeout(handler);
-    };
+    const handler = setTimeout(() => setDebouncedValue(value), delay);
+    return () => clearTimeout(handler);
   }, [value, delay]);
-
   return debouncedValue;
 }
 

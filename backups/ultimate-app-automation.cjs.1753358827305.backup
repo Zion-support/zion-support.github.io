@@ -21,7 +21,6 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')
@@ -431,7 +430,6 @@ if (require.main === module) {
 }
 
 module.exports = UltimateAppAutomation;
-
 
 // Graceful shutdown handling
 process.on('SIGINT', () => {

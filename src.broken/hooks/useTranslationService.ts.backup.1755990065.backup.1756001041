@@ -1,10 +1,7 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import {logErrorToProduction} from '@/utils/productionLogger';
-
 
 // Only use the public client-side OpenAI key - never reference server-side secrets
 const openAiKey = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
@@ -164,13 +161,9 @@ export function useTranslationService() {
   };
 }
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 // Hook for useTranslationService;
 export const useUseTranslationService: unknown = () => {
   // TODO: Implement hook logic;
   return {};
 };
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

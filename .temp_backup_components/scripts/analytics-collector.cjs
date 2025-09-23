@@ -10,8 +10,4 @@ console.log(' Starting Analytics Collection...')
     'yarn.lock'
     '.env.local'
     '.env.example'
-<<<<<<< HEAD
     'next.config.js'
-=======
-    'next.config.js'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

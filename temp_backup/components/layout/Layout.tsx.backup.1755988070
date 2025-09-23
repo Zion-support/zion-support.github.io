@@ -19,14 +19,12 @@ export default function Layout({ children }: LayoutProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
 
-
   useEffect(() => {
     // Check for saved theme preference
     const savedTheme = localStorage.getItem('theme') as 'dark' | 'light';
     if (savedTheme) {
       setTheme(savedTheme);
     }
-
 
     // Simulate loading time for better UX
     const timer = setTimeout(() => setIsLoading(false), 1000);
@@ -77,9 +75,6 @@ export default function Layout({ children }: LayoutProps) {
   }
 
   return (
-<<<<<<< HEAD
-    <PerformanceOptimizer>
-=======
     <>
       <Head>
         <title>{title}</title>
@@ -194,7 +189,6 @@ export default function Layout({ children }: LayoutProps) {
         <link rel="preload" href="/_next/static/css/app.css" as="style" />
       </Head>
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-eb99
       <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
         {/* Skip to content link for accessibility */}
         <a href="#main" className="skip-link">Skip to main content</a>

@@ -60,13 +60,9 @@ export function useWebhooks() {
       const response = await api.get(`${getWebhookUrl()}/webhooks`, {
         headers: {
 <<<<<<< HEAD
-          Authorization: `Bearer ${session.access_token}`,
-=======
-<<<<<<< HEAD
           'Authorization': `Bearer ${(session as any)?.access_token}`,
 =======
           Authorization: `Bearer ${session.access_token}`,
->>>>>>> origin/4b9zsu-codex/surface-api-errors-across-the-app
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
           'Content-Type': 'application/json'
         }
@@ -105,8 +101,6 @@ export function useWebhooks() {
       }
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
       const response = await fetch(`${getWebhookUrl()}/create`, {
         method: 'POST',
         headers: {
@@ -121,7 +115,6 @@ export function useWebhooks() {
         })
       });
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       const response = await api.post(
         `${getWebhookUrl()}/create`,
         { name, url, eventTypes, secret },
@@ -132,9 +125,6 @@ export function useWebhooks() {
           }
         }
       );
-<<<<<<< HEAD
-=======
->>>>>>> origin/4b9zsu-codex/surface-api-errors-across-the-app
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
       if (response.status < 200 || response.status >= 300) {
@@ -180,8 +170,6 @@ export function useWebhooks() {
       }
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
       const response = await fetch(`${getWebhookUrl()}/toggle`, {
         method: 'POST',
         headers: {
@@ -191,7 +179,6 @@ export function useWebhooks() {
         body: JSON.stringify({ webhookId, isActive })
       });
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       const response = await api.post(
         `${getWebhookUrl()}/toggle`,
         { webhookId, isActive },
@@ -202,9 +189,6 @@ export function useWebhooks() {
           }
         }
       );
-<<<<<<< HEAD
-=======
->>>>>>> origin/4b9zsu-codex/surface-api-errors-across-the-app
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
       if (response.status < 200 || response.status >= 300) {
@@ -252,8 +236,6 @@ export function useWebhooks() {
       }
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
       const response = await fetch(`${getWebhookUrl()}/delete`, {
         method: 'POST',
         headers: {
@@ -263,7 +245,6 @@ export function useWebhooks() {
         body: JSON.stringify({ webhookId })
       });
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       const response = await api.post(
         `${getWebhookUrl()}/delete`,
         { webhookId },
@@ -274,9 +255,6 @@ export function useWebhooks() {
           }
         }
       );
-<<<<<<< HEAD
-=======
->>>>>>> origin/4b9zsu-codex/surface-api-errors-across-the-app
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
       if (response.status < 200 || response.status >= 300) {
@@ -323,8 +301,6 @@ export function useWebhooks() {
       }
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
       const response = await fetch(`${getWebhookUrl()}/test`, {
         method: 'POST',
         headers: {
@@ -334,7 +310,6 @@ export function useWebhooks() {
         body: JSON.stringify({ webhookId, eventType })
       });
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       const response = await api.post(
         `${getWebhookUrl()}/test`,
         { webhookId, eventType },
@@ -345,9 +320,6 @@ export function useWebhooks() {
           }
         }
       );
-<<<<<<< HEAD
-=======
->>>>>>> origin/4b9zsu-codex/surface-api-errors-across-the-app
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
       if (response.status < 200 || response.status >= 300) {

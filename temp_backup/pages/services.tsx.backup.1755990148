@@ -77,8 +77,6 @@ import { innovativeAIAutonomousEcosystemServices2025 } from '../data/2025-innova
 import { cuttingEdgeITInfrastructureInnovations2025 } from '../data/2025-cutting-edge-it-infrastructure-innovations';
 import { innovativeMicroSaasBreakthroughs2025 } from '../data/2025-innovative-micro-saas-breakthroughs';
 
-
-
 // Import our new 2025 advanced services
 import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';
 import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion';
@@ -142,14 +140,6 @@ const allServices = [
   ...realEnterpriseMicroSaas2025,
   ...innovative2025AIAutonomousServices,
   
-<<<<<<< HEAD
-  // Our new 2025 advanced services
-  ...advancedITInfrastructureServices2025,
-  ...advancedEnterpriseServices2025,
-  ...quantumEmergingTechServices2025,
-  
-  // Existing services
-=======
   // Our new innovative services expansion
   ...innovativeAIAutonomousServices2025Expansion,
   ...innovativeITInfrastructureServices2025Expansion,
@@ -158,7 +148,6 @@ const allServices = [
   ...enterpriseITSolutions,
   ...innovativeMicroSaasSolutions,
   ...cuttingEdgeAIServices,
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-86a5
   ...realMicroSaasServices,
   ...innovativeAIServices,
   ...enterpriseITServices,

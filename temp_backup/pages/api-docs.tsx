@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import { GetServerSideProps } from 'next';
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  return {
-    redirect: {
-      destination: '/developers/docs',
-      permanent: true,
-    },
-  };
-};
-
-export default function ApiDocsRedirect() {
-  return null;
-}
-=======
 import React from 'react';
 import Head from 'next/head';
 
@@ -32,4 +16,3 @@ export default function ApiDocsPage() {
     </>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

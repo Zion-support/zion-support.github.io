@@ -35,13 +35,8 @@ export function useMilestoneGenerator() {
       // Mark each milestone as AI generated
       const milestonesWithFlag = data.milestones.map((milestone: any) => ({
         ...milestone,
-<<<<<<< HEAD
-
-        isAiGenerated: true}));
-=======
         isAiGenerated: true,
       }));
->>>>>>> origin/auto/autonomy-17186719616
 
       setGeneratedMilestones(milestonesWithFlag);
       return milestonesWithFlag;
@@ -62,10 +57,6 @@ export function useMilestoneGenerator() {
     generateMilestones,
     generatedMilestones,
     isGenerating,
-<<<<<<< HEAD
-    clearGeneratedMilestones};
-=======
     clearGeneratedMilestones,
   };
->>>>>>> origin/auto/autonomy-17186719616
 }

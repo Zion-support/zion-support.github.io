@@ -4,23 +4,14 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 <<<<<<< HEAD
-import { MessageSquare, ShoppingCart } from "lucide-react";
-import { useCart } from "@/context/CartContext";
-=======
-<<<<<<< HEAD
 =======
 import { MessageSquare, ShoppingCart } from "lucide-react";
 import { useCart } from "@/context/CartContext";
->>>>>>> origin/8aozst-codex/implement-cart-functionality-with-react-context
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import { useTranslation } from "react-i18next";
 import { useFavorites } from "@/hooks/useFavorites";
 import { useCart } from "@/context/CartContext";
 import { Heart, MessageSquare, CreditCard, ShoppingCart, Wallet } from 'lucide-react';
-
-
-
-
 
 import { LanguageSelector } from '@/components/header/LanguageSelector';
 import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card';
@@ -111,8 +102,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   }
   
   return (
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
     <>
       <button
@@ -267,7 +256,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     <nav className={cn("navbar ml-6 hidden md:flex", className)}>
       <ul className="flex items-center gap-1">
         {links.map((link) => (
@@ -331,9 +319,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         </li>
       </ul>
     </nav>
-<<<<<<< HEAD
-=======
->>>>>>> origin/8aozst-codex/implement-cart-functionality-with-react-context
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   );
 }

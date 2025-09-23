@@ -33,47 +33,32 @@ export function ThemeProvider({
 
   useEffect(() => {
     setMounted(true);
-    
-    // Only access localStorage on the client side
     if (typeof window !== "undefined") {
       const storedTheme = localStorage.getItem(storageKey) as Theme;
-      if (storedTheme) {
-        setTheme(storedTheme);
-      }
+      if (storedTheme) setTheme(storedTheme);
     }
   }, [storageKey]);
 
   useEffect(() => {
     if (!mounted) return;
-
     const root = window.document.documentElement;
-
     root.classList.remove("light", "dark");
-
     if (theme === "system") {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-        .matches
-        ? "dark"
-        : "light";
-
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
       root.classList.add(systemTheme);
       return;
     }
-
     root.classList.add(theme);
   }, [theme, mounted]);
 
-  const value = {
+  const value: ThemeProviderState = {
     theme,
-    setTheme: (theme: Theme) => {
-      if (typeof window !== "undefined") {
-        localStorage.setItem(storageKey, theme);
-      }
-      setTheme(theme);
+    setTheme: (next: Theme) => {
+      if (typeof window !== "undefined") localStorage.setItem(storageKey, next);
+      setTheme(next);
     },
   };
 
-  // Prevent hydration mismatch by not rendering until mounted
   if (!mounted) {
     return <>{children}</>;
   }
@@ -87,9 +72,6 @@ export function ThemeProvider({
 
 export const useTheme = () => {
   const context = useContext(ThemeProviderContext);
-
-  if (context === undefined)
-    throw new Error("useTheme must be used within a ThemeProvider");
-
+  if (context === undefined) throw new Error("useTheme must be used within a ThemeProvider");
   return context;
 };

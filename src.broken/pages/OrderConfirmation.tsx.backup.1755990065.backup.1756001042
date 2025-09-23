@@ -1,8 +1,4 @@
 <<<<<<< HEAD
-import React from 'react';
-export function OrderConfirmation() {
-=======
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
@@ -11,7 +7,6 @@ export default function OrderConfirmation() {
 =======
 import React from 'react';
 export function OrderConfirmation() {
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   return (
     <div>

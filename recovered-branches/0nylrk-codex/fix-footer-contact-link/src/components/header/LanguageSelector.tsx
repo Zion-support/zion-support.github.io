@@ -2,23 +2,11 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
-<<<<<<< HEAD
-Globe
-=======
 import { Globe } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-<<<<<<< HEAD
-  DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
-import { useLanguageSupportedLanguage } from '@/context/LanguageContext';
-
-export function LanguageSelector() {
-  const { t } = useTranslation();
-  const { currentLanguagechangeLanguagesupportedLanguages } = useLanguage();
-=======
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { useLanguage, SupportedLanguage } from '@/context/LanguageContext';
@@ -26,7 +14,6 @@ import { useLanguage, SupportedLanguage } from '@/context/LanguageContext';
 export function LanguageSelector() {
   const { t } = useTranslation();
   const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <DropdownMenu>

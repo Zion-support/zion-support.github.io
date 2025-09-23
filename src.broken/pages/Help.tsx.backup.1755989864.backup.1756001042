@@ -1,12 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Header } from '@/components/Header';
 <<<<<<< HEAD
-import { Footer } from '@/components/Footer';
-=======
-<<<<<<< HEAD
 =======
 import { Footer } from '@/components/Footer';
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import { GradientHeading } from '@/components/GradientHeading';
 import { Input } from '@/components/ui/input';
@@ -14,12 +10,9 @@ import { Markdown } from '@/components/ui/markdown';
 import { SEO } from '@/components/SEO';
 import { SupportChatbot } from '@/components/SupportChatbot';
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {logErrorToProduction} from '@/utils/productionLogger';
 
 =======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 interface Article { slug: string; title: string; content: string; }
@@ -28,8 +21,6 @@ export default function Help() {
   const [query, setQuery] = useState('');
   const [articles, setArticles] = useState<Article[]>([]);
   const [selected, setSelected] = useState<Article | null>(null);
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -64,16 +55,12 @@ export default function Help() {
       active = false;
     };
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
   useEffect(() => {
     fetch(`/api/help/articles?q=${encodeURIComponent(query)}`)
       .then(r => r.json())
       .then(setArticles)
       .catch(() => setArticles([]));
-<<<<<<< HEAD
-=======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   }, [query]);
 
@@ -96,8 +83,6 @@ export default function Help() {
             />
           </div>
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
           {loading && (
             <p className="text-center text-white my-4">Loading...</p>
           )}
@@ -110,7 +95,6 @@ export default function Help() {
             </div>
           )}
 =======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
           <div className="grid gap-4 max-w-3xl mx-auto">
             {articles.map(a => (
@@ -129,12 +113,8 @@ export default function Help() {
       </main>
       <SupportChatbot />
 <<<<<<< HEAD
-      <Footer />
-=======
-<<<<<<< HEAD
 =======
       <Footer />
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     </>
   );

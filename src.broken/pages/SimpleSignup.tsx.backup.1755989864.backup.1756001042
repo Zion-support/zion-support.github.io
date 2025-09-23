@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from useNavigate
 import { useFormik } from 'formik';
@@ -10,7 +8,6 @@ import { toast } from '@/hooks/use-toast';
 import { signup } from '@/services/signupApi';
 import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter';
 import {logErrorToProduction} from '@/utils/productionLogger';
-
 
 const SignupSchema = Yup.object({
   email: Yup.string().email('Invalid email').required('Email is required'),
@@ -107,7 +104,6 @@ export default function SimpleSignup() {
       >
         {formik.isSubmitting ? 'Signing Up...' : 'Sign Up'}
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 export default function SimpleSignup() {
@@ -144,9 +140,6 @@ export default function SimpleSignup() {
       />
       <button type="submit" className="bg-blue-500 text-white px-4 py-2">
         Sign Up
-<<<<<<< HEAD
-=======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       </button>
     </form>

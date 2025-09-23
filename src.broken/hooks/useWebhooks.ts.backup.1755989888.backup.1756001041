@@ -3,13 +3,9 @@ import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 <<<<<<< HEAD
-import { apiClient } from "@/utils/apiClient";
-=======
-<<<<<<< HEAD
 import api from '@/lib/api';
 =======
 import { apiClient } from "@/utils/apiClient";
->>>>>>> origin/8arrdw-codex/centralize-fetch-error-handling
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 export type WebhookEventType = 'new_application' | 'quote_received' | 'milestone_approved' | 'talent_hired';
@@ -67,9 +63,6 @@ export function useWebhooks() {
       }
 
 <<<<<<< HEAD
-      const response = await apiClient(`${getWebhookUrl()}/webhooks`, {
-=======
-<<<<<<< HEAD
       const authHeader = (typeof session === 'object' && session !== null && 'access_token' in session && typeof (session as { access_token: unknown }).access_token === 'string')
         ? `Bearer ${(session as { access_token: string }).access_token}`
         : undefined;
@@ -77,7 +70,6 @@ export function useWebhooks() {
       const response = await fetch(`${getWebhookUrl()}/webhooks`, {
 =======
       const response = await apiClient(`${getWebhookUrl()}/webhooks`, {
->>>>>>> origin/8arrdw-codex/centralize-fetch-error-handling
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
         method: 'GET',
         headers: {
@@ -120,9 +112,6 @@ export function useWebhooks() {
       }
 
 <<<<<<< HEAD
-      const response = await apiClient(`${getWebhookUrl()}/create`, {
-=======
-<<<<<<< HEAD
       const authHeader = (typeof session === 'object' && session !== null && 'access_token' in session && typeof (session as { access_token: unknown }).access_token === 'string')
         ? `Bearer ${(session as { access_token: string }).access_token}`
         : undefined;
@@ -130,7 +119,6 @@ export function useWebhooks() {
       const response = await fetch(`${getWebhookUrl()}/create`, {
 =======
       const response = await apiClient(`${getWebhookUrl()}/create`, {
->>>>>>> origin/8arrdw-codex/centralize-fetch-error-handling
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
         method: 'POST',
         headers: {
@@ -189,9 +177,6 @@ export function useWebhooks() {
       }
 
 <<<<<<< HEAD
-      const response = await apiClient(`${getWebhookUrl()}/toggle`, {
-=======
-<<<<<<< HEAD
       const authHeader = (typeof session === 'object' && session !== null && 'access_token' in session && typeof (session as { access_token: unknown }).access_token === 'string')
         ? `Bearer ${(session as { access_token: string }).access_token}`
         : undefined;
@@ -199,7 +184,6 @@ export function useWebhooks() {
       const response = await fetch(`${getWebhookUrl()}/toggle`, {
 =======
       const response = await apiClient(`${getWebhookUrl()}/toggle`, {
->>>>>>> origin/8arrdw-codex/centralize-fetch-error-handling
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
         method: 'POST',
         headers: {
@@ -255,9 +239,6 @@ export function useWebhooks() {
       }
 
 <<<<<<< HEAD
-      const response = await apiClient(`${getWebhookUrl()}/delete`, {
-=======
-<<<<<<< HEAD
       const authHeader = (typeof session === 'object' && session !== null && 'access_token' in session && typeof (session as { access_token: unknown }).access_token === 'string')
         ? `Bearer ${(session as { access_token: string }).access_token}`
         : undefined;
@@ -265,7 +246,6 @@ export function useWebhooks() {
       const response = await fetch(`${getWebhookUrl()}/delete`, {
 =======
       const response = await apiClient(`${getWebhookUrl()}/delete`, {
->>>>>>> origin/8arrdw-codex/centralize-fetch-error-handling
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
         method: 'POST',
         headers: {
@@ -320,9 +300,6 @@ export function useWebhooks() {
       }
 
 <<<<<<< HEAD
-      const response = await apiClient(`${getWebhookUrl()}/test`, {
-=======
-<<<<<<< HEAD
       const authHeader = (typeof session === 'object' && session !== null && 'access_token' in session && typeof (session as { access_token: unknown }).access_token === 'string')
         ? `Bearer ${(session as { access_token: string }).access_token}`
         : undefined;
@@ -330,7 +307,6 @@ export function useWebhooks() {
       const response = await fetch(`${getWebhookUrl()}/test`, {
 =======
       const response = await apiClient(`${getWebhookUrl()}/test`, {
->>>>>>> origin/8arrdw-codex/centralize-fetch-error-handling
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
         method: 'POST',
         headers: {

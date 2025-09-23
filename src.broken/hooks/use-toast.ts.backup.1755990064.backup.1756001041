@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { toast as hotToast, type ToastOptions as HotToastOptions } from 'react-hot-toast';
 
 export type ToastOptions = HotToastOptions & {
@@ -29,13 +27,9 @@ toast.success = (message: string) => hotToast.success(message);
 
 export { toast };
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 // Hook for use-toast;
 export const useUse-toast = () => {;
   // TODO: Implement hook logic;
   return {};
 };
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

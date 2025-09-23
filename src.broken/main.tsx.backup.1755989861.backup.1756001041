@@ -27,16 +27,11 @@ import { NotificationProvider } from './context';
 // Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
 <<<<<<< HEAD
-import { initGA } from './lib/gtag';
-import { ErrorBoundary } from './components/ErrorBoundary';
-=======
-<<<<<<< HEAD
 import { ViewModeProvider } from './context/ViewModeContext';
 import { registerServiceWorker } from './serviceWorkerRegistration';
 =======
 import { initGA } from './lib/gtag';
 import { ErrorBoundary } from './components/ErrorBoundary';
->>>>>>> origin/5dtq58-codex/implement-analytics-and-error-tracking
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 // Initialize a React Query client with global error handling
@@ -51,8 +46,6 @@ const queryClient = new QueryClient({
   },
 });
 
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 function GlobalErrorFallback({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) {
   const { t } = useTranslation();
@@ -127,7 +120,6 @@ try {
 
 registerServiceWorker();
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 initGA();
 // Render the app with proper provider structure
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -154,7 +146,4 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     </HelmetProvider>
   </React.StrictMode>,
 );
-<<<<<<< HEAD
-=======
->>>>>>> origin/5dtq58-codex/implement-analytics-and-error-tracking
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

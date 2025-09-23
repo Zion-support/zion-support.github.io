@@ -69,9 +69,6 @@
   --holographic-events: 0 0 1000px rgba(255, 20, 147, 0.04);
 }
 
-<<<<<<< HEAD
-/* Enhanced Scrollbar */
-=======
 * {
   box-sizing: border-box;
   padding: 0;
@@ -220,7 +217,6 @@ body {
 }
 
 /* Custom Scrollbar */
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-62dc
 ::-webkit-scrollbar {
   width: 12px;
 }

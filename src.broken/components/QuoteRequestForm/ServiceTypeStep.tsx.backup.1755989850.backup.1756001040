@@ -6,16 +6,12 @@ import { Search } from 'lucide-react';
 
 import { ListingScoreCard } from "@/components/ListingScoreCard";
 <<<<<<< HEAD
-import api from '@/lib/api';
-=======
-<<<<<<< HEAD
 import { captureException } from "@/utils/sentry";
 import Skeleton from "@/components/ui/skeleton";
 import { useDebounce } from "@/hooks/useDebounce";
 import { useIsMounted } from "@/hooks/useIsMounted";
 import { z } from "zod";
 import {logErrorToProduction} from '@/utils/productionLogger';
-
 
 const listingSchema = z.object({
   id: z.string(),
@@ -27,14 +23,12 @@ const listingSchema = z.object({
 const listingsSchema = z.array(listingSchema);
 =======
 import api from '@/lib/api';
->>>>>>> origin/4b9zsu-codex/surface-api-errors-across-the-app
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
-
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState("");
@@ -53,8 +47,6 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
 
     const fetchServices = async () => {
       setLoading(true);
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
       setError(null);
       const url = `/api/public/services?category=${encodeURIComponent(
@@ -92,7 +84,6 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
           if (isMounted.current) setLoading(false);
         }
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       try {
         const response = await api.get(
           `/api/services?categoryId=${encodeURIComponent(formData.serviceType)}`
@@ -105,9 +96,6 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
         setListings(SAMPLE_LISTINGS.filter(item => item.category.toLowerCase() === formData.serviceType.toLowerCase()));
       } finally {
         setLoading(false);
-<<<<<<< HEAD
-=======
->>>>>>> origin/4b9zsu-codex/surface-api-errors-across-the-app
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       }
     };

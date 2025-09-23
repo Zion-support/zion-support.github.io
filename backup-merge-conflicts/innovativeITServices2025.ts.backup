@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-export interface InnovativeITService { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string}; technicalSpecs?: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[]}; competitors?: string[]; marketSize?: string}; export const INNOVATIVE_IT_SERVICES_2025: InnovativeITServic e[] = [;
-=======
 <<<<<<< HEAD:backup-merge-conflicts/innovativeITServices2025.ts.backup
 <<<<<<< HEAD
 <<<<<<< HEAD
 export interface InnovativeITService { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string}; technicalSpecs?: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[]}; competitors?: string[]; marketSize?: string}; export const INNOVATIVE_IT_SERVICES_2025: InnovativeITServic e[] = [;
 =======
 =======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/data/innovativeITServices2025.ts
 export interface InnovativeITService2025 {
   id: string;
   title: string;
@@ -294,16 +290,11 @@ export const "INNOVATIVE_IT_SERVICES_2025": "InnovativeITService2025[] = [;
     "growthRate": "25.3% annually";
   }
 ];
-<<<<<<< HEAD:backup-merge-conflicts/innovativeITServices2025.ts.backup
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 =======
 <<<<<<< HEAD
 =======
 export interface InnovativeITService { "id": string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string}; technicalSpecs?: { "technology": string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[]}; competitors?: string[]; marketSize?: string}; export const "INNOVATIVE_IT_SERVICES_2025": InnovativeITServic e[] = [;
 <<<<<<< HEAD:backup-merge-conflicts/innovativeITServices2025.ts.backup
->>>>>>> main
 export interface InnovativeITService { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string}; technicalSpecs?: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[]}; competitors?: string[]; marketSize?: string}; export const INNOVATIVE_IT_SERVICES_2025: InnovativeITServic e[] = [;
 >>>>>>> main
 >>>>>>> main

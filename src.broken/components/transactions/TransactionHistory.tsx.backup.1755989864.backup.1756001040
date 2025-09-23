@@ -7,30 +7,17 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 <<<<<<< HEAD
-import { Skeleton } from "@/components/ui/skeleton";
-import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle, ShieldAlert } from "lucide-react";
-=======
-<<<<<<< HEAD
 import Skeleton from "@/components/ui/skeleton";
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle, ShieldAlert } from 'lucide-react';
 
-
-
-
-
-
-
-
 =======
 import { Skeleton } from "@/components/ui/skeleton";
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle, ShieldAlert } from "lucide-react";
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import { formatDistanceToNow } from "date-fns";
 import { safeStorage } from "@/utils/safeStorage";
 import { useCurrency } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
-
 
 interface Transaction {
   id: string;
@@ -84,13 +71,9 @@ export function TransactionHistory() {
         query = query.eq('status', 'pending');
       } else if (filter === 'completed') {
 <<<<<<< HEAD
-        query = query.in('status', ['completed', 'released']);
-=======
-<<<<<<< HEAD
         query = query.eq('status', 'released');
 =======
         query = query.in('status', ['completed', 'released']);
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       } else if (filter === 'escrow') {
         query = query.eq('in_escrow', true);
@@ -290,17 +273,11 @@ export function TransactionHistory() {
               const canRelease = !isClient && isPending && isInEscrow;
               const canCancel = isClient && isPending;
 <<<<<<< HEAD
-              const canRefund =
-                isClient &&
-                (transaction.status === 'completed' || transaction.status === 'released');
-=======
-<<<<<<< HEAD
               const canRefund = isClient && transaction.status === 'released';
 =======
               const canRefund =
                 isClient &&
                 (transaction.status === 'completed' || transaction.status === 'released');
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
               
               const counterpartyName = isClient 

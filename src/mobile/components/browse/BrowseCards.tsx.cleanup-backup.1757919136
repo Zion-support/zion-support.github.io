@@ -1,46 +1,8 @@
 
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { Card, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
 import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-<<<<<<< HEAD
-
-
-
-import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react'
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-
-interface BrowseItem {
-  id: string,
-  title: string,
-  subtitle: string,
-  description: string,
-  location?: string,
-  badges: string[],
-  price?: string,
-  image?: string,
-  match?: number,
-  timePosted?: string
-}
-
-interface BrowseCardsProps {
-  items: BrowseItem[],
-  type: "jobs" | "talents",
-  onViewDetails: (id: string) => void
-}
-
-export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
-  const [savedItems, setSavedItems] = useState<string[]>([]),
-=======
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react'
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
@@ -65,20 +27,14 @@ interface BrowseCardsProps {
 
 export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
   const [savedItems, setSavedItems] = useState<string[]>([]);
->>>>>>> origin/auto/autonomy-17186719616
   
   const toggleSaved = (id: string) => {
     setSavedItems(prev => 
       prev.includes(id) 
         ? prev.filter(itemId => itemId !== id)
         : [...prev, id]
-<<<<<<< HEAD
-    ),
-  },
-=======
     );
   };
->>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <div className="space-y-4 pb-24">
@@ -103,21 +59,9 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     <p className="text-sm text-muted-foreground">{item.subtitle}</p>
                   </div>
                 </div>
-<<<<<<< HEAD
-                <button
-                  className='h-8 w-8 flex items-center justify-center'
-                  onClick={() => toggleSaved(item.id)}                >
                 
                 <button 
                   className="h-8 w-8 flex items-center justify-center"
-
-
-
-=======
-                
-                <button 
-                  className="h-8 w-8 flex items-center justify-center"
->>>>>>> origin/auto/autonomy-17186719616
                   onClick={() => toggleSaved(item.id)}
                 >
                   {savedItems.includes(item.id) ? (
@@ -144,37 +88,22 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
               
               <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">
                 {item.location && (
-<<<<<<< HEAD
-                  <div className='flex items-center gap-1'>
-                    <MapPin className='h-3 w-3' />
-=======
                   <div className="flex items-center gap-1">
                     <MapPin className="h-3 w-3" />
->>>>>>> origin/auto/autonomy-17186719616
                     <span>{item.location}</span>
                   </div>
                 )}
                 
                 {item.price && (
-<<<<<<< HEAD
-                  <div className='flex items-center gap-1'>
-                    <DollarSign className='h-3 w-3' />
-=======
                   <div className="flex items-center gap-1">
                     <DollarSign className="h-3 w-3" />
->>>>>>> origin/auto/autonomy-17186719616
                     <span>{item.price}</span>
                   </div>
                 )}
                 
                 {item.timePosted && (
-<<<<<<< HEAD
-                  <div className='flex items-center gap-1'>
-                    <Clock className='h-3 w-3' />
-=======
                   <div className="flex items-center gap-1">
                     <Clock className="h-3 w-3" />
->>>>>>> origin/auto/autonomy-17186719616
                     <span>{item.timePosted}</span>
                   </div>
                 )}
@@ -200,9 +129,5 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
         </Card>
       ))}
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

@@ -3,6 +3,8 @@ import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import globals from 'globals';
+import tsParser from '@typescript-eslint/parser';
+import tsPlugin from '@typescript-eslint/eslint-plugin';
 
 export default [
   js.configs.recommended,
@@ -11,6 +13,7 @@ export default [
     languageOptions: {
       ecmaVersion: 2020,
       sourceType: 'module',
+      parser: tsParser,
       globals: {
         ...globals.browser,
         ...globals.node,
@@ -34,13 +37,32 @@ export default [
     plugins: {
       react,
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh
+      'react-refresh': reactRefresh,
+      '@typescript-eslint': tsPlugin
     },
     rules: {
-      'no-unused-vars': 'warn',
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
       'no-console': 'warn',
       'react/jsx-uses-react': 'off',
       'react/react-in-jsx-scope': 'off'
+    }
+  },
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      parser: tsParser,
+      parserOptions: {
+        sourceType: 'module',
+        ecmaVersion: 2020,
+        ecmaFeatures: { jsx: true }
+      }
+    },
+    plugins: {
+      '@typescript-eslint': tsPlugin
+    },
+    rules: {
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }]
     }
   },
   {
@@ -64,6 +86,39 @@ export default [
       'zion-os/.next/**',
       'zion.app/**',
       'zion_academy/**',
+      // Additional ignores to avoid linting backups/alt projects
+      'ts_files_backup/**',
+      'src.broken/**',
+      'src-corrupted/**',
+      'src.corrupted/**',
+      'src.disabled/**',
+      'types/**',
+      'types.disabled/**',
+      'utils/**',
+      'utils.disabled/**',
+      'zion-os/**',
+      'temp_*/**',
+      'temp-*/**',
+      'temp/**',
+      'temp_backup/**',
+      'temp_broken_files/**',
+      'temp_components/**',
+      'temp_components.disabled/**',
+      'temp_disabled/**',
+      'temp-disabled-pages/**',
+      'temp_exclude/**',
+      'temp-problematic-pages/**',
+      'temp_working/**',
+      'src_backup/**',
+      'src_backup_temp/**',
+      'services_backup/**',
+      'styles_backup/**',
+      'workflow_backups/**',
+      // Individual utility scripts that are not part of app linting
+      'workbox-config.js',
+      'verify-and-complete-merges.js',
+      'ultimate-fix.js',
+      'ultimate-merge-conflict-resolver.js',
       '**/static/**',
       '**/*.min.js'
     ]

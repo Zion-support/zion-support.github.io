@@ -90,8 +90,8 @@ const blogPosts: Record<string, any> = {
   }
 }
 
-export default async function BlogPostPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params
+export default function BlogPostPage({ params }: any) {
+  const { id } = params
   const post = blogPosts[id]
   
   if (!post) {
@@ -206,4 +206,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
       </div>
     </div>
   )
+}
+
+export function generateStaticParams() {
+  return Object.keys(blogPosts).map((id) => ({ id: String(id) }))
 }

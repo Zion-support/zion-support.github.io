@@ -2,14 +2,11 @@ import React, { useState, useEffect } from 'react';
 import Layout from './layout/Layout';
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
 import { 
   ArrowRight, Star, 
   Brain, Atom, Shield, Zap, TrendingUp, Globe,
   CheckCircle, Users, Award, Rocket
 } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-a21b
 
 const Homepage2025: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -260,8 +257,6 @@ const Homepage2025: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
-=======
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Our Services
               </h2>
@@ -271,7 +266,6 @@ const Homepage2025: React.FC = () => {
             </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-a21b
               <UltraFuturisticServiceCard2026
                 service={{
                   id: 'ai-ml',
@@ -673,46 +667,6 @@ const Homepage2025: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
-              About Zion Tech Group
-            </motion.h2>
-            <motion.p 
-              className="text-xl text-gray-300 mb-8 leading-relaxed"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              We are a forward-thinking technology company dedicated to transforming businesses through cutting-edge AI, quantum computing, and automation solutions. Our mission is to empower organizations with the tools they need to thrive in the digital age.
-            </motion.p>
-            <motion.div 
-              className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🚀</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-2 text-white">Innovation</h3>
-                <p className="text-gray-400">Pushing the boundaries of what's possible</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">💡</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-2 text-white">Excellence</h3>
-                <p className="text-gray-400">Delivering quality solutions that exceed expectations</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🤝</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-2 text-white">Partnership</h3>
-                <p className="text-gray-400">Building long-term relationships with our clients</p>
-=======
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent">
                 Ready to Transform Your Business?
               </h2>
@@ -730,7 +684,6 @@ const Homepage2025: React.FC = () => {
                     Schedule Free Demo
                   </button>
                 </Link>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-a21b
               </div>
             </motion.div>
           </motion.div>

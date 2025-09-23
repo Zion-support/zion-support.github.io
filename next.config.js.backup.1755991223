@@ -2,23 +2,6 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },
-<<<<<<< HEAD
-  swcMinify: true,
-  // Static export for Netlify deployment
-  // output: 'export',
-  trailingSlash: true,
-  productionBrowserSourceMaps: false,
-  images: { unoptimized: true },
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-  experimental: {
-    forceSwcTransforms: true,
-  },
-  reactStrictMode: false,
-  // React version enforcement
-  webpack: (config, { isServer }) => {
-    // Ensure React version consistency
-=======
 
   transpilePackages: [
     'react-markdown',
@@ -211,7 +194,6 @@ const nextConfig = {
           }),
         })
       );
-
 
     }
     
@@ -413,8 +395,6 @@ const nextConfig = {
       /memory.*cache/i,
     ];
 
-
-
     // PHASE 2: Enhanced Bundle Splitting for Performance Optimization
     if (!isServer) {
       config.optimization = {
@@ -587,14 +567,11 @@ const nextConfig = {
 
     // COMPREHENSIVE ESM FIX for Next.js 15 + React 19
     // Handle formik and lodash ESM issues with multiple strategies
->>>>>>> origin/cursor/build-project-with-netlify-95a5
     config.resolve.alias = {
       ...config.resolve.alias,
       'react': require.resolve('react'),
       'react-dom': require.resolve('react-dom'),
     };
-<<<<<<< HEAD
-=======
 
     // Override module resolution for problematic packages
     config.resolve.extensionAlias = {
@@ -729,7 +706,6 @@ const nextConfig = {
       };
     }
 
->>>>>>> origin/cursor/build-project-with-netlify-95a5
     return config;
   },
 };

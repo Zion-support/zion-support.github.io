@@ -6,11 +6,8 @@ import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 import { getStripe } from '@/utils/getStripe';
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { apiClient } from '@/utils/apiClient';
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import { CheckoutShippingOptions, ShippingRate } from '@/components/CheckoutShippingOptions';
 import {
   Form,
@@ -20,9 +17,6 @@ import {
   FormControl,
   FormMessage,
 } from '@/components/ui/form';
-<<<<<<< HEAD
-=======
->>>>>>> origin/a12zhz-codex/support-metric--imperial-units
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 interface CartItem {
@@ -75,12 +69,9 @@ export default function CheckoutPage() {
     }
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
     setIsSubmitting(true);
     
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     const stored = safeStorage.getItem('cart');
     if (stored) {
       try {
@@ -96,17 +87,11 @@ export default function CheckoutPage() {
   const total = subtotal + (shippingRate ? parseFloat(shippingRate.rate) : 0) + (shippingRate?.tax ? parseFloat(shippingRate.tax) : 0);
 
   const onSubmit = async (data: CheckoutForm) => {
-<<<<<<< HEAD
-=======
->>>>>>> origin/a12zhz-codex/support-metric--imperial-units
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     try {
       const response = await apiClient('/api/checkout_sessions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-        body: JSON.stringify({ amount: total }),
-=======
 <<<<<<< HEAD
         body: JSON.stringify({
           items: items.map(item => ({
@@ -119,7 +104,6 @@ export default function CheckoutPage() {
         }),
 =======
         body: JSON.stringify({ amount: total }),
->>>>>>> origin/a12zhz-codex/support-metric--imperial-units
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       });
 

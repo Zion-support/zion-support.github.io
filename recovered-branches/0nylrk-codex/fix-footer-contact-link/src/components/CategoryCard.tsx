@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React{ ReactNode } from "react";
-=======
 import React, { ReactNode } from "react";
->>>>>>> origin/auto/autonomy-17186719616
 import { cn } from "@/lib/utils";
 import { slugify } from "@/lib/slugify";
 import { Link } from "react-router-dom";
@@ -21,11 +17,7 @@ interface CategoryCardProps {
   className?: string;
 }
 
-<<<<<<< HEAD
-export function CategoryCard({ titledescriptioniconcolorcountclassName }: CategoryCardProps) {
-=======
 export function CategoryCard({ title, description, icon, color, count, className }: CategoryCardProps) {
->>>>>>> origin/auto/autonomy-17186719616
   // Create a URL-friendly slug from the category title
   const slug = slugify(title);
 

@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-name: Sitemap Ping
-
-on:
-  schedule:
-    - cron: '5 1 * * *'
-  workflow_dispatch: {}
-
-jobs:
-  ping:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Ping Google & Bing
-        run: |
-          curl -s "https://www.google.com/ping?sitemap=https://ziontechgroup.com/sitemap.xml" || true
-          curl -s "https://www.bing.com/ping?sitemap=https://ziontechgroup.com/sitemap.xml" || true
-=======
 name: Sitemap Generate and Ping
 
 on:
@@ -55,4 +38,3 @@ jobs:
         run: |
           curl -fsSL "https://www.google.com/ping?sitemap=${SITEMAP_URL}" || true
           curl -fsSL "https://www.bing.com/ping?sitemap=${SITEMAP_URL}" || true
->>>>>>> origin/cursor/design-zion-ai-marketplace-mobile-app-ui-348a

@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { createContext, useContext, useEffect } from 'react';
 import type { CartContextType, CartAction, CartItem } from '@/types/cart';
 import { useSelector, useDispatch } from 'react-redux';
@@ -10,7 +8,6 @@ import { safeStorage } from '@/utils/safeStorage'; // Import safeStorage
 import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
 
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
 import { CartContextType, CartItem, CartAction } from '@/types/cart';
 import { saveCart, getCart } from '@/lib/db';
@@ -45,9 +42,6 @@ function cartReducer(state: CartState, action: CartAction): CartState {
       return state;
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -59,8 +53,6 @@ export function useCart(): CartContextType {
 }
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
   if (process.env.NODE_ENV === 'development') {
     logInfo('[CartProvider] Initializing...');
@@ -101,7 +93,6 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     }
   };
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   const [state, dispatch] = useReducer(cartReducer, initialState);
 
   useEffect(() => {
@@ -115,9 +106,6 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     saveCart(state.items);
   }, [state.items]);
-<<<<<<< HEAD
-=======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
   const value: CartContextType = {

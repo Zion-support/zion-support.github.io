@@ -25,28 +25,6 @@ interface SidebarItem {
 
 const sidebarItems: SidebarItem[] = [
   {
-<<<<<<< HEAD
-    name: 'Home',
-    href: '/',
-    icon: <Home className="w-5 h-5" />,
-    description: 'Welcome to Zion Tech Group'
-  },
-  {
-    name: 'Services',
-    href: '/services',
-    icon: <Rocket className="w-5 h-5" />,
-    description: 'Our comprehensive technology solutions',
-    badge: 'Featured',
-    children: [
-      { name: 'All Services', href: '/services', icon: <Rocket className="w-4 h-4" />, featured: true },
-      { name: 'AI & Machine Learning', href: '/ai-services', icon: <Brain className="w-4 h-4" /> },
-      { name: 'Quantum Technology', href: '/quantum-services', icon: <Atom className="w-4 h-4" /> },
-      { name: 'Cybersecurity', href: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },
-      { name: 'Cloud & Infrastructure', href: '/it-services', icon: <Cloud className="w-4 h-4" /> },
-      { name: 'Business Intelligence', href: '/data-analytics', icon: <BarChart className="w-4 h-4" /> },
-      { name: 'DevOps & Automation', href: '/devops-automation', icon: <Code className="w-4 h-4" /> },
-      { name: 'Space Technology', href: '/space-tech', icon: <RocketIcon className="w-4 h-4" /> }
-=======
     title: 'AI & Consciousness',
     icon: <Brain className="w-5 h-5" />,
     color: 'text-violet-400',
@@ -128,7 +106,6 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Customer Service AI', href: '/ai-customer-service' },
       { name: 'HR & Recruitment', href: '/ai-hr-recruitment' },
       { name: 'Legal Contract Analysis', href: '/ai-legal-contract-analyzer' }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-512d
     ]
   },
   {

@@ -24,8 +24,6 @@ import {
   SellerRoutes
 } from './routes';
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const Home = React.lazy(() => import('./pages/Home'));
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
@@ -49,7 +47,6 @@ const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 const WishlistPage = React.lazy(() => import('./pages/Wishlist'));
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import Home from './pages/Home';
 import AIMatcherPage from './pages/AIMatcher';
 import TalentDirectory from './pages/TalentDirectory';
@@ -80,9 +77,6 @@ import WishlistPage from './pages/Wishlist';
 import CartPage from './pages/Cart';
 import Checkout from './pages/Checkout';
 import PrivacySettings from './pages/PrivacySettings';
-<<<<<<< HEAD
-=======
->>>>>>> origin/7yshjv-codex/implement-eprivacy-directive-consent-banner
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 const baseRoutes = [
@@ -156,20 +150,14 @@ const App = () => {
         <Toaster />
         <SonnerToaster position="top-right" />
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
         <SupportChatbot />
         <PwaInstallButton />
       </ThemeProvider>
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
           <CookieBanner />
           <PwaInstallButton />
         </ThemeProvider>
       </ConsentProvider>
-<<<<<<< HEAD
-=======
->>>>>>> origin/7yshjv-codex/implement-eprivacy-directive-consent-banner
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     </WhitelabelProvider>
   );

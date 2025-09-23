@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from useParams
 import { SEO } from '@/components/SEO';
@@ -73,7 +71,6 @@ export default function TalentProfilePage() {
       </main>
     </>
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React from 'react'
 ;
 export export export default function [id]()      {;
@@ -82,9 +79,6 @@ export export export default function [id]()      {;
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   );
 }

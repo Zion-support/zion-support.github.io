@@ -41,11 +41,7 @@ class ErrorMonitor {
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> main
     // Initial health check
     await this.performHealthCheck();
 
@@ -83,20 +79,12 @@ class ErrorMonitor {
       if (this.monitoringReport.metrics.totalErrors > this.alertThreshold) {
         await this.triggerErrorFixer();
       }
-<<<<<<< HEAD
-      
-=======
->>>>>>> main
     } catch (error) {
       console.error('❌ Health check failed:', error);
       this.monitoringReport.errorsDetected.push({
         type: 'health_check_failure',
         message: error.message,
-<<<<<<< HEAD
-        timestamp: new Date().toISOString()
-=======
         timestamp: new Date().toISOString(),
->>>>>>> main
       });
     }
   }
@@ -111,10 +99,6 @@ class ErrorMonitor {
 
       this.monitoringReport.metrics.typeCheckSuccess = true;
       console.log('✅ TypeScript check passed');
-<<<<<<< HEAD
-      
-=======
->>>>>>> main
     } catch (error) {
       if (error.stdout) {
         const errors = this.parseTypeScriptErrors(error.stdout);
@@ -136,10 +120,6 @@ class ErrorMonitor {
 
       this.monitoringReport.metrics.lintSuccess = true;
       console.log('✅ ESLint check passed');
-<<<<<<< HEAD
-      
-=======
->>>>>>> main
     } catch (error) {
       if (error.stdout) {
         const errors = this.parseESLintErrors(error.stdout);
@@ -163,10 +143,6 @@ class ErrorMonitor {
 
       this.monitoringReport.metrics.buildSuccess = true;
       console.log('✅ Build check passed');
-<<<<<<< HEAD
-      
-=======
->>>>>>> main
     } catch (error) {
       this.monitoringReport.metrics.buildSuccess = false;
       this.monitoringReport.errorsDetected.push({
@@ -218,20 +194,12 @@ class ErrorMonitor {
             line: parseInt(match[2]),
             column: parseInt(match[3]),
             message: match[4].trim(),
-<<<<<<< HEAD
-            timestamp: new Date().toISOString()
-=======
             timestamp: new Date().toISOString(),
->>>>>>> main
           });
         }
       }
     }
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> main
     return errors;
   }
 
@@ -248,19 +216,11 @@ class ErrorMonitor {
           line: parseInt(match[2]),
           column: parseInt(match[3]),
           message: match[4].trim(),
-<<<<<<< HEAD
-          timestamp: new Date().toISOString()
-        });
-      }
-    }
-    
-=======
           timestamp: new Date().toISOString(),
         });
       }
     }
 
->>>>>>> main
     return errors;
   }
 
@@ -285,11 +245,6 @@ class ErrorMonitor {
     console.log(`📊 Health Status: ${status.toUpperCase()}`);
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
-<<<<<<< HEAD
-    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
-    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
-    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
-=======
     console.log(
       `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
     );
@@ -299,7 +254,6 @@ class ErrorMonitor {
     console.log(
       `🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`
     );
->>>>>>> main
   }
 
   async triggerErrorFixer() {
@@ -309,24 +263,14 @@ class ErrorMonitor {
       const ErrorFixerAutomation = require('./error-fixer-automation.js');
       const automation = new ErrorFixerAutomation();
       await automation.run();
-<<<<<<< HEAD
-      
-      console.log('✅ Error fixer completed');
-      
-=======
 
       console.log('✅ Error fixer completed');
->>>>>>> main
     } catch (error) {
       console.error('❌ Error fixer failed:', error);
       this.monitoringReport.errorsDetected.push({
         type: 'error_fixer_failure',
         message: error.message,
-<<<<<<< HEAD
-        timestamp: new Date().toISOString()
-=======
         timestamp: new Date().toISOString(),
->>>>>>> main
       });
     }
   }
@@ -355,11 +299,7 @@ class ErrorMonitor {
     if (!fs.existsSync(reportDir)) {
       fs.mkdirSync(reportDir, { recursive: true });
     }
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> main
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
 

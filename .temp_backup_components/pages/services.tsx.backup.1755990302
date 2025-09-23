@@ -8,8 +8,6 @@ import {
   Lock, Palette, Cpu, Layers, Globe2, Truck, Zap, ArrowRight, CheckCircle, ShoppingCart
 } from 'lucide-react';
 
-<<<<<<< HEAD:pages/services.tsx
-=======
 <<<<<<< HEAD
 =======
 const Services: React.FC = () => {
@@ -58,7 +56,6 @@ import { ultimate2025AIServicesExpansion } from '../data/2025-ultimate-ai-servic
 
 // Import our new 2025 Q4 innovative services
 import { innovative2025Q4NewServices } from '../data/innovative-2025-q4-new-services';
-
 
 // Import our new innovative 2040 services
 import { innovative2040ITServices } from '../data/innovative-2040-it-services';
@@ -324,7 +321,6 @@ const categories = [
   }
 ];
 
->>>>>>> 3c69eec6124bf95995ad8db99e4fcc1addda60da
 const sortOptions = [
   { value: 'name', label: 'Name A-Z' },
   { value: 'price-low', label: 'Price: Low to High' },
@@ -386,7 +382,6 @@ import { ultimate2025AIServicesExpansion } from '../data/2025-ultimate-ai-servic
 // Import our new 2025 Q4 innovative services
 import { innovative2025Q4NewServices } from '../data/innovative-2025-q4-new-services';
 
-
 // Import our new innovative 2040 services
 import { innovative2040ITServices } from '../data/innovative-2040-it-services';
 import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
@@ -443,8 +438,6 @@ const getServiceDescription = (service: any) => {
   if (service.tagline) return service.tagline;
   return 'No description available';
 };
-
-
 
 export default function Services() {
   const [searchQuery, setSearchQuery] = useState('');

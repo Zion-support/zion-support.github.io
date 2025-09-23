@@ -5,8 +5,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { ShoppingCart, Truck, Shield, RotateCcw, Clock } from "lucide-react";
 import { RatingStars } from "@/components/RatingStars";
 import { toast } from "@/hooks/use-toast";
@@ -14,7 +12,6 @@ import { useAuth } from "@/hooks/useAuth";
 import { getStripe } from "@/utils/getStripe";
 import { apiClient } from "@/utils/apiClient";
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react";
 import { Switch } from '@/components/ui/switch';
 import { toast } from "@/hooks/use-toast";
@@ -23,9 +20,6 @@ import { getStripe } from "@/utils/getStripe";
 import { safeStorage } from '@/utils/safeStorage';
 import { useUnitSystem } from '@/context';
 import { formatDimensions, formatWeight } from '@/utils/unitConversion';
-<<<<<<< HEAD
-=======
->>>>>>> origin/a12zhz-codex/support-metric--imperial-units
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 interface EquipmentSpecification {
@@ -57,8 +51,6 @@ interface EquipmentDetails {
   depthCm?: number;
 }
 
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 // Convert ProductListing to EquipmentDetails format
 function convertProductListingToEquipmentDetails(item: ProductListing): EquipmentDetails {
@@ -93,7 +85,6 @@ export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
     return acc;
   }, {} as { [key: string]: EquipmentDetails });
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 // Sample data - in a real app this would come from an API
 const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
   "2u-rack-mount-server": {
@@ -216,9 +207,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     returnPolicy: "21-day return policy for items in original condition"
   }
 };
-<<<<<<< HEAD
-=======
->>>>>>> origin/a12zhz-codex/support-metric--imperial-units
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 export default function EquipmentDetail() {
@@ -231,12 +219,9 @@ export default function EquipmentDetail() {
   const [quantity, setQuantity] = useState(1);
   const [isAdding, setIsAdding] = useState(false);
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   const { unit, setUnit } = useUnitSystem();
   
   // In a real app, this would fetch from an API
@@ -278,9 +263,6 @@ export default function EquipmentDetail() {
       </>
     );
   }
-<<<<<<< HEAD
-=======
->>>>>>> origin/a12zhz-codex/support-metric--imperial-units
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
   const [equipment, setEquipment] = useState<EquipmentDetails | undefined>();
@@ -541,8 +523,6 @@ export default function EquipmentDetail() {
               </div>
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
               {/* Price */}
               <div className="bg-zion-blue-light rounded-lg p-4">
                 <div className="text-3xl font-bold text-zion-cyan mb-2">
@@ -555,7 +535,6 @@ export default function EquipmentDetail() {
                   </span>
                 </div>
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
               {/* Product Details Tabs */}
               <div className="mt-8">
                 <Tabs defaultValue="description" className="w-full">
@@ -615,9 +594,6 @@ export default function EquipmentDetail() {
                     </div>
                   </TabsContent>
                 </Tabs>
-<<<<<<< HEAD
-=======
->>>>>>> origin/a12zhz-codex/support-metric--imperial-units
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
               </div>
 

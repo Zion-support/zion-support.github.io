@@ -1,14 +1,9 @@
-<<<<<<< HEAD
----
-=======
->>>>>>> origin/auto/autonomy-17186719616
 name: Security Weekly
 
 on:
   schedule:
     - cron: '0 2 * * 1'
   workflow_dispatch:
-
 
 concurrency:
   group: "github.workflow-${{ github.ref }}"

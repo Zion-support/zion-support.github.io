@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 
-// Skip link component for keyboard navigation
 export function SkipLink({ targetId, children }: { targetId: string; children: React.ReactNode }) {
   return (
     <a
@@ -14,69 +13,52 @@ export function SkipLink({ targetId, children }: { targetId: string; children: R
   );
 }
 
-// Live region for screen reader announcements
-export function LiveRegion({ 
-  message, 
-  role = "status", 
-  "aria-live": ariaLive = "polite" 
-}: { 
-  message: string; 
-  role?: "status" | "alert" | "log"; 
+export function LiveRegion({
+  message,
+  role = "status",
+  "aria-live": ariaLive = "polite",
+}: {
+  message: string;
+  role?: "status" | "alert" | "log";
   "aria-live"?: "polite" | "assertive" | "off";
 }) {
   return (
-    <div
-      role={role}
-      aria-live={ariaLive}
-      className="sr-only"
-      aria-atomic="true"
-    >
+    <div role={role} aria-live={ariaLive} className="sr-only" aria-atomic="true">
       {message}
     </div>
   );
 }
 
-// Focus trap for modals and dialogs
 export function useFocusTrap(enabled: boolean = true) {
   const containerRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     if (!enabled || !containerRef.current) return;
-
     const container = containerRef.current;
-    const focusableElements = container.querySelectorAll(
+    const focusable = container.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
-    const firstElement = focusableElements[0] as HTMLElement;
-    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-
+    const first = focusable[0] as HTMLElement;
+    const last = focusable[focusable.length - 1] as HTMLElement;
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Tab") {
-        if (e.shiftKey) {
-          if (document.activeElement === firstElement) {
-            e.preventDefault();
-            lastElement.focus();
-          }
-        } else {
-          if (document.activeElement === lastElement) {
-            e.preventDefault();
-            firstElement.focus();
-          }
+      if (e.key !== "Tab") return;
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
         }
+      } else if (document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
       }
     };
-
     container.addEventListener("keydown", handleKeyDown);
     return () => container.removeEventListener("keydown", handleKeyDown);
   }, [enabled]);
-
   return containerRef;
 }
 
-// Keyboard navigation hook
 export function useKeyboardNavigation(items: any[], onSelect: (item: any) => void) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
-
   const handleKeyDown = (e: KeyboardEvent) => {
     switch (e.key) {
       case "ArrowDown":
@@ -90,68 +72,54 @@ export function useKeyboardNavigation(items: any[], onSelect: (item: any) => voi
       case "Enter":
       case " ":
         e.preventDefault();
-        if (selectedIndex >= 0) {
-          onSelect(items[selectedIndex]);
-        }
+        if (selectedIndex >= 0) onSelect(items[selectedIndex]);
         break;
       case "Escape":
         setSelectedIndex(-1);
         break;
     }
   };
-
   useEffect(() => {
-    document.addEventListener("keydown", handleKeyDown);
-    return () => document.removeEventListener("keydown", handleKeyDown);
+    const listener = (e: KeyboardEvent) => handleKeyDown(e);
+    document.addEventListener("keydown", listener);
+    return () => document.removeEventListener("keydown", listener);
   }, [items, selectedIndex, onSelect]);
-
   return { selectedIndex, setSelectedIndex };
 }
 
-// Announcement component for screen readers
-export function Announcement({ 
-  message, 
-  priority = "polite" 
-}: { 
-  message: string; 
+export function Announcement({
+  message,
+  priority = "polite",
+}: {
+  message: string;
   priority?: "polite" | "assertive";
 }) {
   const [announcements, setAnnouncements] = useState<string[]>([]);
-
   useEffect(() => {
-    if (message) {
-      setAnnouncements(prev => [...prev, message]);
-      
-      // Clear announcement after a delay
-      const timer = setTimeout(() => {
-        setAnnouncements(prev => prev.slice(1));
-      }, 1000);
-
-      return () => clearTimeout(timer);
-    }
+    if (!message) return;
+    setAnnouncements(prev => [...prev, message]);
+    const timer = setTimeout(() => setAnnouncements(prev => prev.slice(1)), 1000);
+    return () => clearTimeout(timer);
   }, [message]);
-
   return (
     <div aria-live={priority} aria-atomic="true" className="sr-only">
-      {announcements.map((announcement, index) => (
-        <div key={index}>{announcement}</div>
+      {announcements.map((a, i) => (
+        <div key={i}>{a}</div>
       ))}
     </div>
   );
 }
 
-// Progress indicator component
-export function ProgressIndicator({ 
-  value, 
-  max, 
-  label 
-}: { 
-  value: number; 
-  max: number; 
+export function ProgressIndicator({
+  value,
+  max,
+  label,
+}: {
+  value: number;
+  max: number;
   label: string;
 }) {
   const percentage = Math.round((value / max) * 100);
-  
   return (
     <div className="space-y-2">
       <div className="flex justify-between text-sm">
@@ -173,19 +141,17 @@ export function ProgressIndicator({
   );
 }
 
-// Collapsible section component
-export function CollapsibleSection({ 
-  title, 
-  children, 
-  defaultExpanded = false 
-}: { 
-  title: string; 
-  children: React.ReactNode; 
+export function CollapsibleSection({
+  title,
+  children,
+  defaultExpanded = false,
+}: {
+  title: string;
+  children: React.ReactNode;
   defaultExpanded?: boolean;
 }) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded);
   const contentRef = useRef<HTMLDivElement>(null);
-
   return (
     <div className="border border-[var(--border)] rounded-lg">
       <button
@@ -195,11 +161,8 @@ export function CollapsibleSection({
         aria-controls={`collapsible-${title.toLowerCase().replace(/\s+/g, '-')}`}
       >
         {title}
-        <span className="text-[var(--accent)]">
-          {isExpanded ? "−" : "+"}
-        </span>
+        <span className="text-[var(--accent)]">{isExpanded ? "−" : "+"}</span>
       </button>
-      
       <div
         id={`collapsible-${title.toLowerCase().replace(/\s+/g, '-')}`}
         ref={contentRef}
@@ -208,57 +171,9 @@ export function CollapsibleSection({
         }`}
         aria-hidden={!isExpanded}
       >
-        <div className="px-4 pb-3">
-          {children}
-        </div>
+        <div className="px-4 pb-3">{children}</div>
       </div>
     </div>
   );
 }
 
-// Tooltip component with proper accessibility
-export function Tooltip({ 
-  children, 
-  content, 
-  position = "top" 
-}: { 
-  children: React.ReactNode; 
-  content: string; 
-  position?: "top" | "bottom" | "left" | "right";
-}) {
-  const [isVisible, setIsVisible] = useState(false);
-  const [tooltipId] = useState(() => `tooltip-${Math.random().toString(36).substr(2, 9)}`);
-
-  const positionClasses = {
-    top: "bottom-full left-1/2 transform -translate-x-1/2 mb-2",
-    bottom: "top-full left-1/2 transform -translate-x-1/2 mt-2",
-    left: "right-full top-1/2 transform -translate-y-1/2 mr-2",
-    right: "left-full top-1/2 transform -translate-y-1/2 ml-2"
-  } as const;
-
-  return (
-    <div className="relative inline-block">
-      <div
-        onMouseEnter={() => setIsVisible(true)}
-        onMouseLeave={() => setIsVisible(false)}
-        onFocus={() => setIsVisible(true)}
-        onBlur={() => setIsVisible(false)}
-        aria-describedby={tooltipId}
-        tabIndex={0}
-      >
-        {children}
-      </div>
-      
-      {isVisible && (
-        <div
-          id={tooltipId}
-          className={`absolute z-50 px-2 py-1 text-sm text-white bg-gray-900 rounded shadow-lg ${positionClasses[position]}`}
-          role="tooltip"
-        >
-          {content}
-          <div className="absolute w-2 h-2 bg-gray-900 transform rotate-45" />
-        </div>
-      )}
-    </div>
-  );
-}

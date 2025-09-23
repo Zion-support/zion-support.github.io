@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { FileText, Shield, Users, Globe, Clock, CheckCircle, AlertTriangle, Scale } from 'lucide-react';
 
 const TermsPage: React.FC = () => {
@@ -31,7 +29,6 @@ const TermsPage: React.FC = () => {
     {
 =======
 =======
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
       title: 'AI Consciousness Services',
       terms: [
         'Services are provided on an "as-is" basis with no warranties',
@@ -334,31 +331,6 @@ export default function TermsPage() {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Terms Content */}
-      <section className="py-24 bg-gradient-to-b from-cursor-dark to-cursor-darker">
-        <div className="container-cursor">
-          <div className="max-w-4xl mx-auto space-y-12">
-            <Card className="hover:border-cursor-blue/30">
-              <h2 className="text-3xl font-bold mb-6 text-cursor-blue">1. Acceptance of Terms</h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
-                By accessing and using Zion Tech Group services, you accept and agree to be bound by the terms and provision of this agreement.
-              </p>
-              <div className="flex items-center justify-center gap-4 text-gray-400">
-                <Clock className="w-5 h-5" />
-                <span>Last updated: January 15, 2025</span>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Key Terms Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-=======
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -477,7 +449,6 @@ export default function Terms() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
 =======
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Key Terms & Conditions
@@ -1539,9 +1510,6 @@ export default function Terms() {
   );
 };
 
-<<<<<<< HEAD
-export default TermsPage;
-=======
 import Head from 'next/head';
   return (
     <>
@@ -1550,4 +1518,3 @@ import Head from 'next/head';
   );
 =======
 export default Terms;
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84

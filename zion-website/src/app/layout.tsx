@@ -1,5 +1,8 @@
+import React from 'react'
+import type { ReactNode } from 'react'
 import Footer from '@/components/Footer'
 import Navigation from '@/components/Navigation'
+import React from 'react'
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'

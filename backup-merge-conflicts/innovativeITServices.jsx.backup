@@ -1,12 +1,8 @@
 <<<<<<< HEAD
-"export\": const INNOVATIVE_IT_SERVICES = [
-=======
-<<<<<<< HEAD
 export: const INNOVATIVE_IT_SERVICES = [""
 <<<<<<< HEAD:backup-merge-conflicts/innovativeITServices.jsx.backup
 =======
 "export": const INNOVATIVE_IT_SERVICES = ["]"
->>>>>>> main
 >>>>>>> main
 =======
 "export": const INNOVATIVE_IT_SERVICES = ["]"

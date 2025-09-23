@@ -121,14 +121,6 @@ const getServiceCategory = (service: any) => {
 };
 
 // Helper function to get service pricing
-<<<<<<< HEAD:pages/services.tsx
-const getServicePricing = (service: { pricing?: { starter?: string; monthly?: number | string }; price?: { monthly?: number } | string }) => {
-  if (service.pricing?.starter) return service.pricing.starter;
-  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
-  if (typeof service.price === 'string') return service.price;
-  if (service.price?.monthly) return `$${service.price.monthly}/month`;
-  return 'Contact for pricing';
-=======
 const getServicePricing = (service: any) => {
   try {
     if (service.pricing?.starter) return service.pricing.starter;
@@ -147,7 +139,6 @@ const getServicePricing = (service: any) => {
     console.warn('Error getting service pricing:', error, service);
     return 'Contact for pricing';
   }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9ffa:pages/services.tsx.disabled
 };
 
 // Helper function to get service features
@@ -177,14 +168,8 @@ const allServices = [
   ...realOperationalServices,
   ...marketReadyServices,
   ...marketValidatedServices,
-<<<<<<< HEAD:pages/services.tsx
-  // Our new 2025 Q4 innovative services
-  ...innovative2025Q4NewServices,
-  ...advancedITInfrastructureServices2025,
-=======
   ...revolutionary2043AdvancedServices,
   ...revolutionary2044FuturisticServices,
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9ffa:pages/services.tsx.disabled
   ...industryRealServices,
   ...real2025Q4AugmentedBatch,
   ...real2029Q3Additions,
@@ -221,14 +206,6 @@ const allServices = [
   // Our new 2025 innovative services expansion
   ...innovative2025MicroSaasExpansion,
   ...innovative2025ITSolutionsExpansion,
-<<<<<<< HEAD:pages/services.tsx
-  ...innovative2025AIServicesExpansion,
-  // Our new 2025 advanced enterprise services
-  ...advancedEnterpriseServices,
-  ...innovative2025MicroSaasExpansion,
-  ...cuttingEdgeITInfrastructureServices
-];
-=======
   ...innovative2025AIServicesExpansion
 ].filter(service => {
   // Filter out services with invalid price structures
@@ -240,7 +217,6 @@ const allServices = [
   }
   return true;
 });
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9ffa:pages/services.tsx.disabled
 
 const categories = [
   {

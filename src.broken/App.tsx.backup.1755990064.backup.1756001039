@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
@@ -95,7 +93,6 @@ const App = () => {
       </ConsentProvider>
     </WhitelabelProvider>
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React from 'react';
 export function App() {
   return (
@@ -103,9 +100,6 @@ export function App() {
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   );
 }

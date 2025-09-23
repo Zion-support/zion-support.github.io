@@ -1,16 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Newspaper, Calendar, User, Tag, ArrowRight, 
   Star, Zap, Brain, Atom, Rocket, Globe,
   Clock, TrendingUp
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
-=======
-  Newspaper, Calendar, User, Tag, ArrowRight, 
-  Star, Zap, Brain, Atom, Rocket, Globe,
-  Clock, TrendingUp
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -268,36 +261,6 @@ export default function News() {
   ];
 
   const categories = [
-<<<<<<< HEAD
-    { name: 'All News', count: newsArticles.length, active: true },
-    { name: 'AI Innovation', count: 2, active: false },
-    { name: 'Quantum Computing', count: 1, active: false },
-    { name: 'Company News', count: 1, active: false },
-    { name: 'Partnerships', count: 1, active: false },
-    { name: 'AI Ethics', count: 1, active: false },
-    { name: 'Space Technology', count: 1, active: false }
-  ];
-
-  const featuredArticle = newsArticles.find(article => article.featured);
-
-  return (
-    <Layout
-      title="Latest News & Updates - Zion Tech Group"
-      description="Stay updated with the latest news, breakthroughs, and announcements from Zion Tech Group. Discover our latest innovations in AI consciousness and quantum computing."
-      keywords="Zion Tech Group news, AI consciousness updates, quantum computing news, technology breakthroughs, company announcements"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden py-20 lg:py-32">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20" />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-=======
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
               className="text-center"
             >
               <div className="flex items-center justify-center mb-6">
@@ -1274,40 +1237,6 @@ export default function News() {
         </div>
       </section>
 
-<<<<<<< HEAD
-        {/* Categories Filter */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold mb-4">Browse by Category</h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Filter news by topic to find the information most relevant to you
-              </p>
-            </motion.div>
-
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {categories.map((category, index) => (
-                <motion.button
-                  key={category.name}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.1 * index }}
-                  className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                    category.active
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'
-                  }`}
-                >
-                  {category.name} ({category.count})
-                </motion.button>
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-              ))}
-=======
       {/* Newsletter Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -1334,7 +1263,6 @@ export default function News() {
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                 Subscribe
               </button>
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
             </div>
             
             <p className="text-sm text-gray-400 mt-4">
@@ -1344,15 +1272,7 @@ export default function News() {
         </div>
       </section>
 
-<<<<<<< HEAD
-        {/* News Grid */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-        {/* CTA Section */}
-        <section className="py-20 relative">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-=======
           <div className="max-w-7xl mx-auto">
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -1646,9 +1566,6 @@ export default function News() {
   );
 }
 =======
-<<<<<<< HEAD
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
       {/* Call to Action */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1679,4 +1596,3 @@ export default function News() {
     </div>
   );
 }
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
