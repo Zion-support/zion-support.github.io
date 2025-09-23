@@ -1,19 +1,13 @@
 #!/usr/bin/env node;
 /**
-<<<<<<< HEAD
-/**
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
  * Syntax Error Fixer;
  * Automatically fixes common syntax errors in the codebase;
  */
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
-=======
 
 
 
@@ -23,7 +17,6 @@ const path = require('path')
 
   log(message) {
     console.log(`🔧 ${message}`);
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   }
 
   fixFile(filePath) {
@@ -63,18 +56,6 @@ const path = require('path')
       }
       return match;
     });
-<<<<<<< HEAD
-// Fix missing semicolons
-    content = content.replace(/([^;}])\n/g, '$1;\n');
-
-    // Fix merge conflict markers
-    content = content.replace(/[\s\S]*?[\s\S]*?
-
-
-    // Fix missing semicolons
-    content = content.replace(/([^;}])\n/g, '$1;\n');
-    // Fix merge conflict markers
-=======
     
     // Fix missing semicolons
     content = content.replace(/([^;}])\n/g, '$1;\n');
@@ -86,7 +67,6 @@ const path = require('path')
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     // Fix common JSX issues
     content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*\/>/g, '<$1 />');
     // Fix missing commas in objects
@@ -178,11 +158,6 @@ module.exports = SyntaxErrorFixer;
       execSync('npm run format', { "stdio"})
       this.log(` Syntax fixing "failed"`)
 
-<<<<<<< HEAD
-  generateReport() {
-    const report = {
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

@@ -174,6 +174,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       'src/pages/index.tsx',
     ];
 
+    for (const file of criticalFiles) {
+      const filePath = path.join(this.projectRoot, file);
+      if (!fs.existsSync(filePath)) {
+        this.monitoringReport.errorsDetected.push({
+          type: 'missing_critical_file',
+          file: file,
           message: `Critical file ${file} is missing`,
           timestamp: new Date().toISOString(),
         });
@@ -307,6 +313,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
       console.log('✅ Error fixer completed');
+      console.log('✅ Error fixer completed');
     } catch (error) {
       console.error('❌ Error fixer failed:', error);
       this.monitoringReport.errorsDetected.push({
@@ -408,12 +415,3 @@ module.exports = ErrorMonitor;ursor/automate-test-improve-and-merge-code-646c;
 }
 module.exports = ErrorMonitor;
 }
-// Run the monitor
-if (require.main === module) {
-  const monitor = new ErrorMonitor();
-  monitor.start().catch(console.error);
-}
-
-module.exports = ErrorMonitor;
-}
-module.exports = ErrorMonitor;

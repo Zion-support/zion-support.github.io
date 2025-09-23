@@ -1,11 +1,8 @@
 
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     log('info', `Total "tasks": ${masterReport.summary.totalTasks}`);
     log('info', `"Successful": ${masterReport.summary.successful}`);
     log('info', `"Failed": ${masterReport.summary.failed}`);
@@ -42,19 +39,10 @@
 }
 
 // Run the enhanced orchestrator
-<<<<<<< HEAD
-main();#!/usr/bin/env node;
-#!/usr/bin/env node;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
 main();
 
 #!/usr/bin/env node;
-<<<<<<< HEAD
-    process.exit(1)}
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
@@ -116,10 +104,7 @@ console.log('======')
     const phase5Tasks = [{ name: 'Metrics Generation', "command": 'echo "Generating final metrics..."}]
       { "name": 'Report Generation', "command": 'echo "Generating comprehensive report..."}
 
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

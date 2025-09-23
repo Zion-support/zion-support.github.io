@@ -1,39 +1,10 @@
-
-    autoprefixer: {}}}
-export default {
-    autoprefixer: {}}}export default {
-
 export default {
   plugins: {
-    tailwindcss: {}
+    tailwindcss: {},
+<<<<<<< HEAD
     autoprefixer: {}}}
-
-export default {;
-  plugins: {;
-    tailwindcss: {};
-
-    autoprefixer: {}}}
-export default {plugins: {;
-    tailwindcss: {}
-export default {;
-  plugins: {;
-    tailwindcss: {};
-    autoprefixer: {}}}
-
-    autoprefixer: {}}}
-
-    autoprefixer: {}}}
-
-export default {
-  // TODO: Implement
+=======
+    autoprefixer: {},
+  },
 }
-  plugins: {,
-  tailwindcss: {}
-    autoprefixer: {}}}
-
-export default {;
-  plugins: {;,
-  tailwindcss: {};
-
-export default {plugins: {;,
-pr-12325
+>>>>>>> origin/auto/autonomy-17186719616

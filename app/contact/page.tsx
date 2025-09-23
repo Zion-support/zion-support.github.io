@@ -1,10 +1,108 @@
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react'
+'use client'
+
+import { useState } from 'react'
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import Card from '../components/Card'
-import Button from '../components/Button'
+import { Card } from '../components/Card'
+import { Button } from '../components/Button'
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    subject: '',
+    message: ''
+  })
+  const [formErrors, setFormErrors] = useState({})
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitSuccess, setSubmitSuccess] = useState(false)
+
+  const validateForm = () => {
+    const errors = {}
+    
+    if (!formData.firstName.trim()) {
+      errors.firstName = 'First name is required'
+    }
+    
+    if (!formData.lastName.trim()) {
+      errors.lastName = 'Last name is required'
+    }
+    
+    if (!formData.email.trim()) {
+      errors.email = 'Email is required'
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      errors.email = 'Please enter a valid email address'
+    }
+    
+    if (!formData.subject.trim()) {
+      errors.subject = 'Subject is required'
+    }
+    
+    if (!formData.message.trim()) {
+      errors.message = 'Message is required'
+    }
+    
+    setFormErrors(errors)
+    return Object.keys(errors).length === 0
+  }
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData({
+      ...formData,
+      [name]: value
+    })
+    
+    // Clear error when user starts typing
+    if (formErrors[name]) {
+      setFormErrors({
+        ...formErrors,
+        [name]: ''
+      })
+    }
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    
+    if (!validateForm()) {
+      return
+    }
+    
+    setIsSubmitting(true)
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+      
+      const result = await response.json()
+      
+      if (result.success) {
+        setSubmitSuccess(true)
+        setFormData({ firstName: '', lastName: '', email: '', company: '', subject: '', message: '' })
+        setFormErrors({})
+        
+        // Reset success message after 5 seconds
+        setTimeout(() => setSubmitSuccess(false), 5000)
+      } else {
+        setFormErrors({ submit: result.message || 'Failed to send message. Please try again.' })
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      setFormErrors({ submit: 'Network error. Please check your connection and try again.' })
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   const contactInfo = [
     {
       icon: Mail,
@@ -94,7 +192,22 @@ export default function ContactPage() {
             {/* Contact Form */}
             <Card variant="glass" className="p-8 border-white/20">
               <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
-              <form className="space-y-6">
+              
+              {submitSuccess && (
+                <div className="mb-6 p-4 bg-green-600/20 border border-green-500/50 text-green-400 rounded-lg flex items-center">
+                  <CheckCircle className="w-5 h-5 mr-2" />
+                  Thank you for your message! We'll get back to you soon.
+                </div>
+              )}
+              
+              {formErrors.submit && (
+                <div className="mb-6 p-4 bg-red-600/20 border border-red-500/50 text-red-400 rounded-lg flex items-center">
+                  <AlertCircle className="w-5 h-5 mr-2" />
+                  {formErrors.submit}
+                </div>
+              )}
+              
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
@@ -104,10 +217,15 @@ export default function ContactPage() {
                       type="text"
                       id="firstName"
                       name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent ${
+                        formErrors.firstName ? 'border-red-500 focus:ring-red-500' : 'border-white/20 focus:ring-blue-500'
+                      }`}
                       placeholder="John"
                     />
+                    {formErrors.firstName && <p className="text-red-400 text-sm mt-1">{formErrors.firstName}</p>}
                   </div>
                   <div>
                     <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-2">
@@ -117,10 +235,15 @@ export default function ContactPage() {
                       type="text"
                       id="lastName"
                       name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent ${
+                        formErrors.lastName ? 'border-red-500 focus:ring-red-500' : 'border-white/20 focus:ring-blue-500'
+                      }`}
                       placeholder="Doe"
                     />
+                    {formErrors.lastName && <p className="text-red-400 text-sm mt-1">{formErrors.lastName}</p>}
                   </div>
                 </div>
                 
@@ -132,10 +255,15 @@ export default function ContactPage() {
                     type="email"
                     id="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent ${
+                      formErrors.email ? 'border-red-500 focus:ring-red-500' : 'border-white/20 focus:ring-blue-500'
+                    }`}
                     placeholder="john@company.com"
                   />
+                  {formErrors.email && <p className="text-red-400 text-sm mt-1">{formErrors.email}</p>}
                 </div>
                 
                 <div>
@@ -146,6 +274,8 @@ export default function ContactPage() {
                     type="text"
                     id="company"
                     name="company"
+                    value={formData.company}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Your Company"
                   />
@@ -159,10 +289,15 @@ export default function ContactPage() {
                     type="text"
                     id="subject"
                     name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent ${
+                      formErrors.subject ? 'border-red-500 focus:ring-red-500' : 'border-white/20 focus:ring-blue-500'
+                    }`}
                     placeholder="How can we help you?"
                   />
+                  {formErrors.subject && <p className="text-red-400 text-sm mt-1">{formErrors.subject}</p>}
                 </div>
                 
                 <div>
@@ -172,16 +307,21 @@ export default function ContactPage() {
                   <textarea
                     id="message"
                     name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     rows={5}
                     required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent resize-none ${
+                      formErrors.message ? 'border-red-500 focus:ring-red-500' : 'border-white/20 focus:ring-blue-500'
+                    }`}
                     placeholder="Tell us about your project and how we can help..."
                   />
+                  {formErrors.message && <p className="text-red-400 text-sm mt-1">{formErrors.message}</p>}
                 </div>
                 
-                <Button size="lg" className="w-full">
+                <Button size="lg" className="w-full" disabled={isSubmitting}>
                   <Send className="w-5 h-5 mr-2" />
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
               </form>
             </Card>

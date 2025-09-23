@@ -1,47 +1,53 @@
-'use client'
+'use client';
 
-import { useState, useEffect } from 'react'
-import { ChevronUp } from 'lucide-react'
-import Button from './Button'
+import React, { useState, useEffect } from 'react';
 
 export default function ScrollToTop() {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 300) {
-        setIsVisible(true)
+        setIsVisible(true);
       } else {
-        setIsVisible(false)
+        setIsVisible(false);
       }
-    }
+    };
 
-    window.addEventListener('scroll', toggleVisibility)
-    return () => window.removeEventListener('scroll', toggleVisibility)
-  }, [])
+    window.addEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
-    })
-  }
+      behavior: 'smooth',
+    });
+  };
 
   if (!isVisible) {
-    return null
+    return null;
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
-      <Button
-        onClick={scrollToTop}
-        variant="primary"
-        size="sm"
-        className="rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300"
-        aria-label="Scroll to top"
+    <button
+      onClick={scrollToTop}
+      className="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50"
+      aria-label="Scroll to top"
+    >
+      <svg
+        className="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
       >
-        <ChevronUp className="w-5 h-5" />
-      </Button>
-    </div>
-  )
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M5 10l7-7m0 0l7 7m-7-7v18"
+        />
+      </svg>
+    </button>
+  );
 }

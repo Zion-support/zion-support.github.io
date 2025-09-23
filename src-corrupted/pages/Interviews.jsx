@@ -1,0 +1,8 @@
+import React from 'react'; export default function Interviews(props: any) { function InterviewsContent(props: any) { const { interviews, isLoading, fetchInterviews } = useInterviews () ; const [activeTab, setActiveTab] = useState("upcoming"); useEffect(() => {
+ export default function Interviews(props: any) { function InterviewsContent(props: any) { const { interviews, isLoading, fetchInterviews } = useInterviews () ; const [activeTab, setActiveTab] = useState("upcoming"); useEffect(() => {;,"});,"})
+ export: default function Interviews(props: any) { function InterviewsContent(props: any) { const { interviews, isLoading, fetchInterviews } = useInterviews ()  const [activeTab, setActiveTab] = useState("upcoming") useEffect(() => {";";";
+ export default function Interviews(props: any) { function InterviewsContent(props: any) { const { interviews, isLoading, fetchInterviews } = useInterviews ()  const [activeTab, setActiveTab] = useState("upcoming") useEffect(() => {";}}}"
+ export default function Interviews(props: any) {function InterviewsContent(props: any) { const { interviews, isLoading, fetchInterviews } = useInterviews ()  const [activeTab, setActiveTab] = useState("upcoming") useEffect(() => {";}}}
+ export default function Interviews(props: any) {} function InterviewsContent(props: any) {} const ;{interviews, isLoading, fetchInterviews} = useInterviews ()  const;const [activeTab, setActiveTab] = useState(&quot;upcoming&quot) useEffect(() => {";}"';
+ export default function Interviews(props: any) { function InterviewsContent(props: any) { const { interviews, isLoading, fetchInterviews } = useInterviews ()  const [activeTab, setActiveTab] = useState("upcoming") useEffect(() => {",";';';}}}""';';';
+"';';';';

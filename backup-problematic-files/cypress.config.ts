@@ -51,6 +51,7 @@ import { define_config } from 'cypress'; export default define_config ({ e2e: { 
 
 
 
+
     setupNodeEvents(on, config) {,
       // implement node event listeners here
     }

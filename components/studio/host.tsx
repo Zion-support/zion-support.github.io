@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react';
 
 type PersonaConfig = {
@@ -14,8 +15,9 @@ type Episode = {
   spotifyDescription: string;
   transcript: string;
   audio?: {
-    wavUrl: string;
-    mp4Url: string;
+    mp3Url?: string;
+    wavUrl?: string;
+    mp4Url?: string;
   };
 };
 
@@ -245,20 +247,33 @@ export default function StudioHostPage() {
               <div className="space-y-2">
                 <h4 className="font-semibold">Audio Files</h4>
                 <div className="flex space-x-4">
-                  <a
-                    href={episode.audio.wavUrl}
-                    download
-                    className="px-3 py-1 bg-green-600 text-white rounded text-sm"
-                  >
-                    Download WAV
-                  </a>
-                  <a
-                    href={episode.audio.mp4Url}
-                    download
-                    className="px-3 py-1 bg-red-600 text-white rounded text-sm"
-                  >
-                    Download MP4
-                  </a>
+                  {episode.audio.mp3Url && (
+                    <a
+                      href={episode.audio.mp3Url}
+                      download
+                      className="px-3 py-1 bg-blue-600 text-white rounded text-sm"
+                    >
+                      Download MP3
+                    </a>
+                  )}
+                  {episode.audio.wavUrl && (
+                    <a
+                      href={episode.audio.wavUrl}
+                      download
+                      className="px-3 py-1 bg-green-600 text-white rounded text-sm"
+                    >
+                      Download WAV
+                    </a>
+                  )}
+                  {episode.audio.mp4Url && (
+                    <a
+                      href={episode.audio.mp4Url}
+                      download
+                      className="px-3 py-1 bg-red-600 text-white rounded text-sm"
+                    >
+                      Download MP4
+                    </a>
+                  )}
                 </div>
               </div>
             )}

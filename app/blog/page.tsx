@@ -1,10 +1,19 @@
+'use client'
+
+import { useState } from 'react'
 import Link from 'next/link'
-import { Calendar, Clock, ArrowRight, Search, Filter } from 'lucide-react'
+import { Calendar, Clock, ArrowRight, Search, Filter, Mail, CheckCircle, AlertCircle } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import Card from '../components/Card'
+import { Card } from '../components/Card'
+import { Button } from '../components/Button'
 
 export default function BlogPage() {
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('All')
+  const [newsletterEmail, setNewsletterEmail] = useState('')
+  const [newsletterStatus, setNewsletterStatus] = useState(null)
+  const [isSubscribing, setIsSubscribing] = useState(false)
   const blogPosts = [
     {
       title: 'AI 2025: Multimodal Agents in the Enterprise',
@@ -66,6 +75,56 @@ export default function BlogPage() {
     'Risk Management'
   ]
 
+  // Filter posts based on search term and category
+  const filteredPosts = blogPosts.filter(post => {
+    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         post.category.toLowerCase().includes(searchTerm.toLowerCase())
+    
+    const matchesCategory = selectedCategory === 'All Posts' || post.category === selectedCategory
+    
+    return matchesSearch && matchesCategory
+  })
+
+  const handleNewsletterSubmit = async (e) => {
+    e.preventDefault()
+    
+    if (!newsletterEmail) {
+      setNewsletterStatus({ type: 'error', message: 'Please enter your email address' })
+      return
+    }
+
+    setIsSubscribing(true)
+    setNewsletterStatus(null)
+
+    try {
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: newsletterEmail }),
+      })
+      
+      const result = await response.json()
+      
+      if (result.success) {
+        setNewsletterStatus({ type: 'success', message: result.message })
+        setNewsletterEmail('')
+        
+        // Reset status after 5 seconds
+        setTimeout(() => setNewsletterStatus(null), 5000)
+      } else {
+        setNewsletterStatus({ type: 'error', message: result.message })
+      }
+    } catch (error) {
+      console.error('Newsletter subscription error:', error)
+      setNewsletterStatus({ type: 'error', message: 'Network error. Please try again.' })
+    } finally {
+      setIsSubscribing(false)
+    }
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -94,6 +153,8 @@ export default function BlogPage() {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
               <input
                 type="text"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Search articles..."
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
@@ -102,7 +163,11 @@ export default function BlogPage() {
             {/* Category Filter */}
             <div className="flex items-center gap-2">
               <Filter className="w-5 h-5 text-gray-400" />
-              <select className="bg-white/10 border border-white/20 rounded-lg text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+              <select 
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="bg-white/10 border border-white/20 rounded-lg text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              >
                 {categories.map((category) => (
                   <option key={category} value={category} className="bg-gray-800">
                     {category}
@@ -160,7 +225,8 @@ export default function BlogPage() {
         {/* Blog Posts Grid */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-20">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {blogPosts.slice(1).map((post, index) => (
+            {filteredPosts.slice(1).length > 0 ? (
+              filteredPosts.slice(1).map((post, index) => (
               <Card
                 key={index}
                 variant="glass"
@@ -195,7 +261,23 @@ export default function BlogPage() {
                   </Link>
                 </div>
               </Card>
-            ))}
+              ))
+            ) : (
+              <div className="col-span-full text-center py-12">
+                <div className="text-6xl mb-4">🔍</div>
+                <h3 className="text-2xl font-bold text-white mb-4">No articles found</h3>
+                <p className="text-gray-300 mb-6">Try adjusting your search terms or category filter.</p>
+                <Button 
+                  onClick={() => {
+                    setSearchTerm('')
+                    setSelectedCategory('All Posts')
+                  }}
+                  variant="outline"
+                >
+                  Clear Filters
+                </Button>
+              </div>
+            )}
           </div>
         </div>
 
@@ -208,16 +290,33 @@ export default function BlogPage() {
             <p className="text-xl text-gray-300 mb-8">
               Subscribe to our newsletter for the latest AI and technology insights delivered to your inbox.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            {newsletterStatus && (
+              <div className={`mb-6 px-4 py-3 rounded-lg ${
+                newsletterStatus.type === 'success' 
+                  ? 'bg-green-600/20 border border-green-500/50 text-green-400' 
+                  : 'bg-red-600/20 border border-red-500/50 text-red-400'
+              }`}>
+                {newsletterStatus.message}
+              </div>
+            )}
+            
+            <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <input
                 type="email"
+                value={newsletterEmail}
+                onChange={(e) => setNewsletterEmail(e.target.value)}
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all">
-                Subscribe
-              </button>
-            </div>
+              <Button 
+                type="submit"
+                disabled={isSubscribing}
+                className="inline-flex items-center justify-center"
+              >
+                <Mail className="w-5 h-5 mr-2" />
+                {isSubscribing ? 'Subscribing...' : 'Subscribe'}
+              </Button>
+            </form>
           </Card>
         </div>
       </main>

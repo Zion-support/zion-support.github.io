@@ -237,18 +237,11 @@ async function runSimpleAutomation() {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
       return size}}
 
-<<<<<<< HEAD
-      return size}}
-    totalSize = getDirectorySize(buildDir);
-      return size}}
-    const recommendations = [];
-=======
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     totalSize = getDirectorySize(buildDir);
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
     const recommendations = [];
     if ( { // > 1MB
@@ -274,25 +267,17 @@ if (require.main === module) {
     process.exit(1);
   });
 }
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
 
-<<<<<<< HEAD
-module.exports = SimpleAutomationRunner;
-
-=======
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
@@ -323,10 +308,6 @@ const { execSync } = require('child_process')
         return { "status": 'skipped', "message"}
     console.error(' Simple automation "failed")
 
-<<<<<<< HEAD
-        "status"
-        "status"
-=======
 
 
 
@@ -336,4 +317,3 @@ const { execSync } = require('child_process')
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
