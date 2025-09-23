@@ -1,6 +1,10 @@
 
 import React from "react";
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+=======
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Progress } from "@/components/ui/progress";
 
 export function TeamStats() {

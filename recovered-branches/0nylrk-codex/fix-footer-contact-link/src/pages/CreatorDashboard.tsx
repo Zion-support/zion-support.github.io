@@ -1,8 +1,25 @@
 
+<<<<<<< HEAD
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/creator/CreatorSidebar";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+=======
+
+
+
+
+import {SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
+import {AppSidebar} from "@/components/creator/CreatorSidebar";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export default function CreatorDashboard() {
   return (
@@ -44,6 +61,7 @@ export default function CreatorDashboard() {
               <p className="text-zion-slate text-lg mb-2 max-w-prose">
                 Create new content, monitor your analytics, or manage your account using the sidebar menu.
               </p>
+<<<<<<< HEAD
               {/* Placeholder for more creator-specific content */}
             </div>
           </main>
@@ -54,3 +72,42 @@ export default function CreatorDashboard() {
     </SidebarProvider>
   );
 }
+=======
+
+
+
+
+
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",;
+import { AppSidebar } from "@/components/creator/CreatorSidebar",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer";
+export default function CreatorDashboard() {;
+  return (
+    <SidebarProvider>;
+      <div className="min-h-screen flex w-full bg-zion-blue">;
+        <AppSidebar />;
+        <div className="flex flex-col w-full">;
+          <Header />;
+          <main className="flex-1 p-6 md:p-10 bg-zion-blue">;
+            <h1 className="text-2xl font-bold text-white mb-8">Creator Dashboard</h1>;
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">;
+
+
+
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

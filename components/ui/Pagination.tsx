@@ -8,8 +8,13 @@ export type PaginationProps = {
   onChange: (nextPage: number) => void;
 };
 
+<<<<<<< HEAD
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
+=======
+export default function Pagination({ pageSizetotalonChange }: PaginationProps) {
+  const totalPages = Math.max(1Math.ceil(total / pageSize));
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const canPrev = page > 1;
   const canNext = page < totalPages;
 

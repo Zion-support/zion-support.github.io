@@ -3,17 +3,29 @@ import { format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
 import { UseFormReturn } from "react-hook-form";
 import { 
+<<<<<<< HEAD
   FormField, 
   FormItem, 
   FormLabel, 
   FormControl, 
   FormDescription, 
+=======
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormDescription
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   FormMessage 
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+=======
+import { PopoverContentPopoverTrigger } from "@/components/ui/popover";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 
@@ -46,7 +58,11 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
             <FormLabel>Scope Summary</FormLabel>
             <FormControl>
               <Textarea
+<<<<<<< HEAD
                 placeholder="Describe the project scope, deliverables, and expectations..."
+=======
+                placeholder="Describe the project scopedeliverablesand expectations..."
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 className="min-h-[120px]"
                 {...field}
               />
@@ -74,7 +90,11 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
                       {field.value ? (
+<<<<<<< HEAD
                         format(field.value, "PPP")
+=======
+                        format(field.value"PPP")
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       ) : (
                         <span>Pick a date</span>
                       )}
@@ -111,7 +131,11 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
                       {field.value ? (
+<<<<<<< HEAD
                         format(field.value, "PPP")
+=======
+                        format(field.value"PPP")
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       ) : (
                         <span>Pick a date</span>
                       )}

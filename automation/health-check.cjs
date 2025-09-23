@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
 
 const fs = require('fs');
 const path = require('path');
@@ -230,4 +231,7 @@ checks.forEach(check => {
     console.log(`❌ ${check.name}: FAILED`);
   }
 });
+=======
+ursor/automate-test-improve-and-merge-code-ceec
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> cursor/automate-test-improve-and-merge-code-85f4

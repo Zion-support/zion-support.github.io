@@ -23,97 +23,145 @@ export const publicPages: SitemapItem[] = [
     description: 'The world\'s first free marketplace dedicated to high-tech and artificial intelligence',
     priority: 1.0,
     changeFreq: 'weekly',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
+=======
+    lastmod: currentDate},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     path: '/about',
     label: 'About Us',
     description: 'Learn about the Zion AI Marketplace mission and team',
     priority: 0.8,
     changeFreq: 'monthly',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
+=======
+    lastmod: currentDate},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     path: '/contact',
     label: 'Contact',
     description: 'Get in touch with the Zion team',
     priority: 0.8, 
     changeFreq: 'monthly',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
+=======
+    lastmod: currentDate},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     path: '/talent',
     label: 'Talent Directory',
     description: 'Browse skilled AI and tech professionals',
     priority: 0.9,
     changeFreq: 'daily',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
+=======
+    lastmod: currentDate},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     path: '/marketplace',
     label: 'Marketplace',
     description: 'Explore AI services, products and equipment',
     priority: 0.9,
     changeFreq: 'daily',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
+=======
+    lastmod: currentDate},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     path: '/services',
     label: 'Services',
     description: 'Find professional tech and AI services',
     priority: 0.8,
     changeFreq: 'weekly',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
+=======
+    lastmod: currentDate},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     path: '/equipment',
     label: 'Equipment',
     description: 'Specialized hardware and tech equipment',
     priority: 0.8,
     changeFreq: 'weekly',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
+=======
+    lastmod: currentDate},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     path: '/categories',
     label: 'Categories',
     description: 'Browse service and talent categories',
     priority: 0.7,
     changeFreq: 'monthly',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
+=======
+    lastmod: currentDate},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     path: '/blog',
     label: 'Blog',
     description: 'Articles and insights about AI and tech',
     priority: 0.9,
     changeFreq: 'daily',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
+=======
+    lastmod: currentDate},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     path: '/faq',
     label: 'FAQ',
     description: 'Frequently asked questions about Zion',
     priority: 0.7,
     changeFreq: 'monthly',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
+=======
+    lastmod: currentDate},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     path: '/terms',
     label: 'Terms of Service',
     description: 'Terms and conditions for using Zion',
     priority: 0.5,
     changeFreq: 'monthly',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
+=======
+    lastmod: currentDate},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     path: '/privacy',
     label: 'Privacy Policy',
     description: 'How we handle your data',
     priority: 0.5,
     changeFreq: 'monthly',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
 ];
+=======
+    lastmod: currentDate}];
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 // Authentication Pages
 export const authPages: SitemapItem[] = [
@@ -123,8 +171,12 @@ export const authPages: SitemapItem[] = [
     description: 'Sign in to your account',
     priority: 0.6,
     changeFreq: 'monthly',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
+=======
+    lastmod: currentDate},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     path: '/signup',
     label: 'Sign Up',
@@ -139,16 +191,24 @@ export const authPages: SitemapItem[] = [
         description: 'Sign up as a talent or creator',
         priority: 0.6,
         changeFreq: 'monthly',
+<<<<<<< HEAD
         lastmod: currentDate,
       },
+=======
+        lastmod: currentDate},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       {
         path: '/signup/client',
         label: 'Client Registration',
         description: 'Sign up as an employer or buyer',
         priority: 0.6,
         changeFreq: 'monthly',
+<<<<<<< HEAD
         lastmod: currentDate,
       }
+=======
+        lastmod: currentDate}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     ]
   },
   {
@@ -157,9 +217,13 @@ export const authPages: SitemapItem[] = [
     description: 'Reset your password',
     priority: 0.5,
     changeFreq: 'monthly',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
 ];
+=======
+    lastmod: currentDate}];
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 // Talent/Creator Routes - Requires authentication and appropriate role
 export const talentRoutes: SitemapItem[] = [
@@ -171,8 +235,12 @@ export const talentRoutes: SitemapItem[] = [
     requiredRoles: ['jobSeeker', 'creator'],
     priority: 0.9,
     changeFreq: 'daily',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
+=======
+    lastmod: currentDate},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     path: '/talent-onboarding',
     label: 'Talent Onboarding',
@@ -181,8 +249,12 @@ export const talentRoutes: SitemapItem[] = [
     requiredRoles: ['jobSeeker', 'creator'],
     priority: 0.8,
     changeFreq: 'monthly',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
+=======
+    lastmod: currentDate},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     path: '/portfolio',
     label: 'Portfolio',
@@ -191,8 +263,12 @@ export const talentRoutes: SitemapItem[] = [
     requiredRoles: ['jobSeeker', 'creator'],
     priority: 0.8,
     changeFreq: 'weekly',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
+=======
+    lastmod: currentDate},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     path: '/create-profile',
     label: 'Create Profile',
@@ -201,9 +277,13 @@ export const talentRoutes: SitemapItem[] = [
     requiredRoles: ['jobSeeker', 'creator'],
     priority: 0.7,
     changeFreq: 'monthly',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
 ];
+=======
+    lastmod: currentDate}];
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 // Client/Employer Routes - Requires authentication and appropriate role
 export const clientRoutes: SitemapItem[] = [
@@ -215,8 +295,12 @@ export const clientRoutes: SitemapItem[] = [
     requiredRoles: ['employer', 'buyer'],
     priority: 0.9,
     changeFreq: 'daily',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
+=======
+    lastmod: currentDate},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     path: '/post-job',
     label: 'Post a Job',
@@ -225,8 +309,12 @@ export const clientRoutes: SitemapItem[] = [
     requiredRoles: ['employer', 'buyer'],
     priority: 0.8,
     changeFreq: 'weekly',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
+=======
+    lastmod: currentDate},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     path: '/hiring-tracker',
     label: 'Hiring Pipeline',
@@ -235,9 +323,13 @@ export const clientRoutes: SitemapItem[] = [
     requiredRoles: ['employer', 'buyer'],
     priority: 0.7,
     changeFreq: 'daily',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
 ];
+=======
+    lastmod: currentDate}];
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 // Shared Routes - Authenticated Users
 export const sharedRoutes: SitemapItem[] = [
@@ -248,8 +340,12 @@ export const sharedRoutes: SitemapItem[] = [
     requiredAuth: true,
     priority: 0.9,
     changeFreq: 'hourly',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
+=======
+    lastmod: currentDate},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     path: '/notifications',
     label: 'Notifications',
@@ -257,8 +353,12 @@ export const sharedRoutes: SitemapItem[] = [
     requiredAuth: true,
     priority: 0.8,
     changeFreq: 'hourly',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
+=======
+    lastmod: currentDate},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     path: '/project/:projectId/room',
     label: 'Project Room',
@@ -266,8 +366,12 @@ export const sharedRoutes: SitemapItem[] = [
     requiredAuth: true,
     priority: 0.6,
     changeFreq: 'never',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
+=======
+    lastmod: currentDate},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     path: '/dashboard/disputes',
     label: 'Disputes',
@@ -275,9 +379,13 @@ export const sharedRoutes: SitemapItem[] = [
     requiredAuth: true,
     priority: 0.7,
     changeFreq: 'daily',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
 ];
+=======
+    lastmod: currentDate}];
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 // Admin Routes
 export const adminRoutes: SitemapItem[] = [
@@ -289,8 +397,12 @@ export const adminRoutes: SitemapItem[] = [
     requiredRoles: ['admin'],
     priority: 0.9,
     changeFreq: 'daily',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
+=======
+    lastmod: currentDate},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     path: '/admin/reviews',
     label: 'Reviews Moderation',
@@ -299,8 +411,12 @@ export const adminRoutes: SitemapItem[] = [
     requiredRoles: ['admin'],
     priority: 0.7,
     changeFreq: 'daily',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
+=======
+    lastmod: currentDate},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     path: '/admin/disputes',
     label: 'Dispute Management',
@@ -309,9 +425,13 @@ export const adminRoutes: SitemapItem[] = [
     requiredRoles: ['admin'],
     priority: 0.8,
     changeFreq: 'daily',
+<<<<<<< HEAD
     lastmod: currentDate,
   },
 ];
+=======
+    lastmod: currentDate}];
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 // Dynamic Path Patterns
 export const dynamicPaths = {
@@ -321,8 +441,12 @@ export const dynamicPaths = {
   projectRoom: '/project/:projectId/room',
   jobDetails: '/job/:id',
   categoryDetails: '/categories/:slug',
+<<<<<<< HEAD
   disputeDetails: '/dashboard/disputes/:disputeId',
 };
+=======
+  disputeDetails: '/dashboard/disputes/:disputeId'};
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 // The complete sitemap
 export const completeSitemap: SitemapItem[] = [
@@ -331,8 +455,12 @@ export const completeSitemap: SitemapItem[] = [
   ...talentRoutes,
   ...clientRoutes,
   ...sharedRoutes,
+<<<<<<< HEAD
   ...adminRoutes,
 ];
+=======
+  ...adminRoutes];
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 // Helper function to get appropriate routes based on user role
 export const getAccessibleRoutes = (

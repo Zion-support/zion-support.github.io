@@ -7,7 +7,11 @@ interface BudgetStepProps {
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
 
+<<<<<<< HEAD
 export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
+=======
+export function BudgetStep({ formDataupdateFormData }: BudgetStepProps) {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const handleBudgetTypeSelect = (type: "fixed" | "hourly" | "range") => {
     if (type === "range" && !formData.budget.maxAmount) {
       updateFormData({
@@ -28,7 +32,11 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
   };
 
   const formatCurrency = (value: number) => {
+<<<<<<< HEAD
     return new Intl.NumberFormat('en-US', {
+=======
+    return new Intl.NumberFormat('en-US'{
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       style: 'currency',
       currency: 'USD',
       maximumFractionDigits: 0
@@ -89,7 +97,11 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
                 max={50000}
                 step={500}
                 onValueChange={(value) => updateFormData({
+<<<<<<< HEAD
                   budget: { ...formData.budget, amount: value[0] }
+=======
+                  budget: { ...formData.budgetamount: value[0] }
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 })}
                 className="py-4"
               />
@@ -110,7 +122,11 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
                 max={500}
                 step={5}
                 onValueChange={(value) => updateFormData({
+<<<<<<< HEAD
                   budget: { ...formData.budget, amount: value[0] }
+=======
+                  budget: { ...formData.budgetamount: value[0] }
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 })}
                 className="py-4"
               />
@@ -137,7 +153,11 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
                     
                     updateFormData({
                       budget: { 
+<<<<<<< HEAD
                         ...formData.budget, 
+=======
+                        ...formData.budget
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                         amount: newAmount,
                         maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount
                       }
@@ -161,7 +181,11 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
                   max={100000}
                   step={500}
                   onValueChange={(value) => updateFormData({
+<<<<<<< HEAD
                     budget: { ...formData.budget, maxAmount: value[0] }
+=======
+                    budget: { ...formData.budgetmaxAmount: value[0] }
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   })}
                   className="py-4"
                 />

@@ -176,18 +176,10 @@ import AI2025UltimateBreakthroughRevolutionBanner from './components/AI2025Ultim
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import AI2025UltimateBreakthroughBanner from '../components/AI2025UltimateBreakthroughBanner';
-<<<<<<< HEAD
-=======
-
->>>>>>> 0898e5119e1743cc34bc24d7b78e613422d39ff1
 // Import new 2025 breakthrough promotional components
 import QuantumAI2025BreakthroughPromotionBanner from '../components/QuantumAI2025BreakthroughPromotionBanner';
 import AutonomousBusinessOperationsPromotionBanner from '../components/AutonomousBusinessOperationsPromotionBanner';
 import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBanner';
-<<<<<<< HEAD
-=======
-
->>>>>>> 0898e5119e1743cc34bc24d7b78e613422d39ff1
 // Import new 2026 AI breakthrough promotional components
 import AI2026RevolutionaryBreakthroughUltimatePromotionBanner from '../components/AI2026RevolutionaryBreakthroughUltimatePromotionBanner';
 import AI2026GlobalTransformation800ROISuccessBanner from '../components/AI2026GlobalTransformation800ROISuccessBanner';
@@ -363,7 +355,6 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
         {/* NEW CONTENT PROMOTION BANNER 2025 - NEWEST FEATURED */}
         <NewContentPromotionBanner2025 />
         

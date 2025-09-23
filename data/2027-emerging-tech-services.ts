@@ -15,7 +15,10 @@ export interface Service {
   link: string;
   tags: string[];
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const emergingTech2027Services: Service[] = [
   {
     id: 'quantum-machine-learning',

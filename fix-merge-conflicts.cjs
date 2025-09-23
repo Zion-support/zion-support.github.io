@@ -1,12 +1,20 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 const fs = require('fs');
 const path = require('path');
 
 function fixMergeConflicts(filePath) {
   try {
+<<<<<<< HEAD
     const content = fs.readFileSync(filePath, 'utf8');
     
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     // Check if file has merge conflict markers
     if (
       content.includes('<<<<<<< HEAD') ||

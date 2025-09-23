@@ -1,0 +1,33 @@
+import React from 'react';
+import Layout from '../../components/layout/Layout';
+import { motion } from 'framer-motion';
+import { 
+  Building, Users, Shield, Cpu, Database, Globe, Zap, Target, 
+  TrendingUp, BarChart3, Lock, Cloud, Server, Network, Settings, Brain,
+  DollarSign, CreditCard, PieChart, LineChart, Shield as ShieldIcon
+} from 'lucide-react';
+import UltraFuturisticBackground from '../../components/backgrounds/UltraFuturisticBackground2045';
+
+const FinancialSolutionsPage: React.FC = () => {
+  const solutions = [
+    {
+            </motion.div>
+          </div>
+        </section>
+
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+  );
+};
+
+export default FinancialSolutionsPage;

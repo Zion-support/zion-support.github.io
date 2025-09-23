@@ -3,7 +3,11 @@ import React from 'react';
 import { format } from 'date-fns';
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+=======
+import { PopoverContentPopoverTrigger } from "@/components/ui/popover";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Calendar } from "@/components/ui/calendar";
 import { FormControl } from "@/components/ui/form";
 import { cn } from "@/lib/utils";
@@ -15,7 +19,11 @@ interface DateFieldsProps {
   setEndDate: (date: Date | undefined) => void;
 }
 
+<<<<<<< HEAD
 export function DateFields({ startDate, setStartDate, endDate, setEndDate }: DateFieldsProps) {
+=======
+export function DateFields({ startDatesetStartDatendDatesetEndDate }: DateFieldsProps) {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div>
@@ -31,7 +39,11 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
                 )}
               >
                 {startDate ? (
+<<<<<<< HEAD
                   format(startDate, "PPP")
+=======
+                  format(startDate"PPP")
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 ) : (
                   <span>Pick a date</span>
                 )}
@@ -65,7 +77,11 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
                 )}
               >
                 {endDate ? (
+<<<<<<< HEAD
                   format(endDate, "PPP")
+=======
+                  format(endDate"PPP")
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 ) : (
                   <span>Pick a date</span>
                 )}

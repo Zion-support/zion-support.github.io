@@ -14,9 +14,14 @@ import { newOperationalServices2025 } from '../data/new-operational-services-202
 import { innovative2025Services } from '../data/innovative-2025-services';
 import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
 import { professionalServices } from '../data/professional-services';
+<<<<<<< HEAD
 
 export type ServiceRecord = any;
 
+=======
+import { real2029Q2Additions } from '../data/real-2029-q2-additions';
+export type ServiceRecord = any;
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 const allServiceArrays: ServiceRecord[][] = [
 	enhancedRealMicroSaasServices,
 	innovativeMicroSaasServices,
@@ -34,8 +39,13 @@ const allServiceArrays: ServiceRecord[][] = [
 	innovative2025Services,
 	emergingTech2025Services,
 	professionalServices
+<<<<<<< HEAD
 ];
 
+=======
+	,real2029Q2Additions
+];
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export function findServiceBySlug(slug: string): ServiceRecord | undefined {
 	for (const arr of allServiceArrays) {
 		const hit = arr.find((s: any) => {
@@ -55,7 +65,10 @@ export function findServiceBySlug(slug: string): ServiceRecord | undefined {
 	}
 	return undefined;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export function listServicesByCategory(categoryIncludes: string): ServiceRecord[] {
 	const results: ServiceRecord[] = [];
 	for (const arr of allServiceArrays) {
@@ -74,4 +87,7 @@ export function listServicesByCategory(categoryIncludes: string): ServiceRecord[
 		return true;
 	});
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

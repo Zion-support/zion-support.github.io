@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
@@ -39,3 +40,23 @@ if (!i18n.isInitialized) {
 }
 
 export default i18n;
+=======
+
+export const supportedLocales = ['en', 'pt', 'es', 'ar'] as const;
+export function isRtl(locale: string): boolean {
+
+
+export function isRtl(locale: string): boolean {;
+  return ['ar', 'he', 'fa', 'ur'].includes(locale);
+}
+export const i18n = {
+  language: 'en'
+  resolvedLanguage: 'en'
+}
+
+  language: 'en',
+  resolvedLanguage: 'en';
+};
+
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

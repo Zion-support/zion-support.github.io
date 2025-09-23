@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+<<<<<<< HEAD
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
@@ -9,6 +10,17 @@ import { ContractForm, ContractFormValues } from "./components/ContractForm";
 import { ContractPreview } from "./components/ContractPreview";
 import { TemplateManager } from "./templates/TemplateManager";
 import { BlockchainNetwork, DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts";
+=======
+import { DialogContent } from "@/components/ui/dialog";
+import { TabsListTabsTriggerTabsContent } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
+import { Save } from "lucide-react";
+import { TalentProfile } from "@/types/talent";
+import { ContractFormValues } from "./components/ContractForm";
+import { ContractPreview } from "./components/ContractPreview";
+import { TemplateManager } from "./templates/TemplateManager";
+import { BlockchainNetworkDeploymentOptionsSmartContractInfo } from "@/types/smart-contracts";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { useSmartContracts } from "@/hooks/useSmartContracts";
 import { toast } from "sonner";
 
@@ -29,6 +41,7 @@ export function SmartContractBuilder({
   onContractGenerated,
   onDeploy
 }: SmartContractBuilderProps) {
+<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState<string>("form");
   const [generatedContract, setGeneratedContract] = useState<string | null>(null);
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
@@ -36,14 +49,30 @@ export function SmartContractBuilder({
   );
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({
+=======
+  const [activeTabsetActiveTab] = useState<string>("form");
+  const [generatedContractsetGeneratedContract] = useState<string | null>(null);
+  const [formValuesetFormValues] = useState<ContractFormValues | undefined>(
+    undefined
+  );
+  const [templateManagerOpensetTemplateManagerOpen] = useState(false);
+  const [deployOptionsetDeployOptions] = useState<DeploymentOptions>({
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     network: 'ethereum',
     useEscrow: true,
     deployToChain: false
   });
+<<<<<<< HEAD
   const [deployStatus, setDeployStatus] = useState<string>('');
   const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null);
   
   const { generateSolidityContract, deploySmartContract, deploymentStatus } = useSmartContracts();
+=======
+  const [deployStatusetDeployStatus] = useState<string>('');
+  const [deploymentInfosetDeploymentInfo] = useState<SmartContractInfo | null>(null);
+  
+  const { generateSolidityContractdeploySmartContractdeploymentStatus } = useSmartContracts();
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const handleLoadTemplate = (templateData: ContractFormValues) => {
     setFormValues(templateData);
@@ -53,14 +82,22 @@ export function SmartContractBuilder({
   const handleContractGenerated = async (formValues: ContractFormValues) => {
     if (!formValues) return;
     try {
+<<<<<<< HEAD
       const generatedContractText = await generateSolidityContract(formValues, talent, clientName);
+=======
+      const generatedContractText = await generateSolidityContract(formValuestalentclientName);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       setGeneratedContract(generatedContractText);
       setActiveTab("preview");
       if (onContractGenerated) {
         onContractGenerated(generatedContractText);
       }
     } catch (error) {
+<<<<<<< HEAD
       console.error("Error generating contract:", error);
+=======
+      console.error("Error generating contract:"error);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       toast.error("Failed to generate smart contract");
     }
   };
@@ -70,7 +107,11 @@ export function SmartContractBuilder({
     
     try {
       setDeployStatus('deploying');
+<<<<<<< HEAD
       const contractInfo = await deploySmartContract(generatedContract, deployOptions);
+=======
+      const contractInfo = await deploySmartContract(generatedContractdeployOptions);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       
       if (contractInfo) {
         setDeploymentInfo(contractInfo);
@@ -81,7 +122,11 @@ export function SmartContractBuilder({
         toast.error("Failed to deploy smart contract");
       }
     } catch (error) {
+<<<<<<< HEAD
       console.error("Error deploying contract:", error);
+=======
+      console.error("Error deploying contract:"error);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       setDeployStatus('error');
       toast.error("Failed to deploy smart contract");
     }
@@ -90,7 +135,11 @@ export function SmartContractBuilder({
   // Modified to match the expected interface
   const handleFormSubmit = (contract: string) => {
     // This should be a function that takes a string (contract content)
+<<<<<<< HEAD
     // Since we need to adapt the interface, we'll implement the simplest solution that works
+=======
+    // Since we need to adapt the interfacewe'll implement the simplest solution that works
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     if (onContractGenerated) {
       onContractGenerated(contract);
     }

@@ -1,13 +1,21 @@
 
 import React from "react";
+<<<<<<< HEAD
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+=======
+import { AvatarImageAvatarFallback } from "@/components/ui/avatar";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface TalentCardAvatarProps {
   profilePicture?: string;
   fullName: string;
 }
 
+<<<<<<< HEAD
 export function TalentCardAvatar({ profilePicture, fullName }: TalentCardAvatarProps) {
+=======
+export function TalentCardAvatar({ profilePicturefullName }: TalentCardAvatarProps) {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Get initials for avatar fallback
   const getInitials = (name: string) => {
     return name

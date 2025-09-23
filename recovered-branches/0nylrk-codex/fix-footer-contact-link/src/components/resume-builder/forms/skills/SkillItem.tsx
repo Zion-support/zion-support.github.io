@@ -1,10 +1,17 @@
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+<<<<<<< HEAD
 import { Trash2 } from 'lucide-react';
 import { SkillItemProps } from './types';
 
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
+=======
+Trash2
+import { SkillItemProps } from './types';
+
+export const SkillItem = ({ skillcategoryonDelete }: SkillItemProps) => {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <Badge 
       key={skill.id} 
@@ -19,7 +26,11 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
         variant="ghost"
         size="icon"
         className="h-5 w-5 p-0 ml-1"
+<<<<<<< HEAD
         onClick={() => onDelete(skill.id!, category)}
+=======
+        onClick={() => onDelete(skill.id!category)}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       >
         <Trash2 className="h-3 w-3" />
       </Button>

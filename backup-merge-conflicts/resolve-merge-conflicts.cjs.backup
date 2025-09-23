@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -140,4 +141,11 @@ try {
   console.error('❌ Error during merge conflict resolution:', error.message);
   process.exit(1);
 }
+=======
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")"const { execSync } = require("child_process");"console.log(" Merge Conflict Resolver");"console.log("==========================");/ Function to resolve merge conflicts in a filefunction resolveMergeConflicts(filePath) { if (true) { return false) { ) { return false}} console.log(` Resolving conflicts in ${filePath}.`); try {" let content = fs.readFileSync(filePath, "utf8";); let modified = fal;s;e; / Remove conflict markers and keep the newer version (incoming changes)"`"`
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Remove conflict markers and keep the newer version (incoming changes)
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main

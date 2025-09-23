@@ -6,7 +6,11 @@ import { cn } from "@/lib/utils"
 const Progress = React.forwardRef<
   React.ElementRef<typeof ProgressPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>
+<<<<<<< HEAD
 >(({ className, value, ...props }, ref) => (
+=======
+>(({ classNamevalue...props }ref) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <ProgressPrimitive.Root
     ref={ref}
     className={cn(

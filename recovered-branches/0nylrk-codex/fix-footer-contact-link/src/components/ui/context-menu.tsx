@@ -1,6 +1,10 @@
 import * as React from "react"
 import * as ContextMenuPrimitive from "@radix-ui/react-context-menu"
+<<<<<<< HEAD
 import { Check, ChevronRight, Circle } from "lucide-react"
+=======
+import { CheckChevronRightCircle } from "lucide-react"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 import { cn } from "@/lib/utils"
 
@@ -21,7 +25,11 @@ const ContextMenuSubTrigger = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubTrigger> & {
     inset?: boolean
   }
+<<<<<<< HEAD
 >(({ className, inset, children, ...props }, ref) => (
+=======
+>(({ classNameinsetchildren...props }ref) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <ContextMenuPrimitive.SubTrigger
     ref={ref}
     className={cn(
@@ -40,7 +48,11 @@ ContextMenuSubTrigger.displayName = ContextMenuPrimitive.SubTrigger.displayName
 const ContextMenuSubContent = React.forwardRef<
   React.ElementRef<typeof ContextMenuPrimitive.SubContent>,
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubContent>
+<<<<<<< HEAD
 >(({ className, ...props }, ref) => (
+=======
+>(({ className...props }ref) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <ContextMenuPrimitive.SubContent
     ref={ref}
     className={cn(
@@ -55,7 +67,11 @@ ContextMenuSubContent.displayName = ContextMenuPrimitive.SubContent.displayName
 const ContextMenuContent = React.forwardRef<
   React.ElementRef<typeof ContextMenuPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Content>
+<<<<<<< HEAD
 >(({ className, ...props }, ref) => (
+=======
+>(({ className...props }ref) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <ContextMenuPrimitive.Portal>
     <ContextMenuPrimitive.Content
       ref={ref}
@@ -74,7 +90,11 @@ const ContextMenuItem = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Item> & {
     inset?: boolean
   }
+<<<<<<< HEAD
 >(({ className, inset, ...props }, ref) => (
+=======
+>(({ classNameinset...props }ref) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <ContextMenuPrimitive.Item
     ref={ref}
     className={cn(
@@ -90,7 +110,11 @@ ContextMenuItem.displayName = ContextMenuPrimitive.Item.displayName
 const ContextMenuCheckboxItem = React.forwardRef<
   React.ElementRef<typeof ContextMenuPrimitive.CheckboxItem>,
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.CheckboxItem>
+<<<<<<< HEAD
 >(({ className, children, checked, ...props }, ref) => (
+=======
+>(({ classNamechildrenchecked...props }ref) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <ContextMenuPrimitive.CheckboxItem
     ref={ref}
     className={cn(
@@ -114,7 +138,11 @@ ContextMenuCheckboxItem.displayName =
 const ContextMenuRadioItem = React.forwardRef<
   React.ElementRef<typeof ContextMenuPrimitive.RadioItem>,
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.RadioItem>
+<<<<<<< HEAD
 >(({ className, children, ...props }, ref) => (
+=======
+>(({ classNamechildren...props }ref) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <ContextMenuPrimitive.RadioItem
     ref={ref}
     className={cn(
@@ -138,7 +166,11 @@ const ContextMenuLabel = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Label> & {
     inset?: boolean
   }
+<<<<<<< HEAD
 >(({ className, inset, ...props }, ref) => (
+=======
+>(({ classNameinset...props }ref) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <ContextMenuPrimitive.Label
     ref={ref}
     className={cn(
@@ -154,10 +186,17 @@ ContextMenuLabel.displayName = ContextMenuPrimitive.Label.displayName
 const ContextMenuSeparator = React.forwardRef<
   React.ElementRef<typeof ContextMenuPrimitive.Separator>,
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Separator>
+<<<<<<< HEAD
 >(({ className, ...props }, ref) => (
   <ContextMenuPrimitive.Separator
     ref={ref}
     className={cn("-mx-1 my-1 h-px bg-border", className)}
+=======
+>(({ className...props }ref) => (
+  <ContextMenuPrimitive.Separator
+    ref={ref}
+    className={cn("-mx-1 my-1 h-px bg-border"className)}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     {...props}
   />
 ))
@@ -194,5 +233,9 @@ export {
   ContextMenuSub,
   ContextMenuSubContent,
   ContextMenuSubTrigger,
+<<<<<<< HEAD
   ContextMenuRadioGroup,
 }
+=======
+  ContextMenuRadioGroup}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

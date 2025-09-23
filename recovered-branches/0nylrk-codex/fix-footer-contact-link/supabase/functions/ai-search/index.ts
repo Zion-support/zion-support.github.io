@@ -4,8 +4,12 @@ import { Configuration, OpenAIApi } from "npm:openai@4.28.0";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
+<<<<<<< HEAD
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
+=======
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -32,8 +36,12 @@ serve(async (req) => {
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [{ role: "user", content: prompt }],
+<<<<<<< HEAD
       temperature: 0.1,
     });
+=======
+      temperature: 0.1});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     const responseText = completion.choices[0].message.content || "";
     let filters;

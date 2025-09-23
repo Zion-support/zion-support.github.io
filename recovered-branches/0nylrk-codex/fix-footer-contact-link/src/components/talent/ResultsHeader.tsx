@@ -6,7 +6,11 @@ interface ResultsHeaderProps {
   resultCount: number;
 }
 
+<<<<<<< HEAD
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
+=======
+export function ResultsHeader({ isLoadingresultCount }: ResultsHeaderProps) {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <div className="flex items-center mb-6 text-zion-slate-light">
       {isLoading ? (

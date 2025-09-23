@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
+=======
+"use client";
+import React{ useEffectuseState } from 'react';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import Link from 'next/link';
 
 type EpisodeListItem = {
@@ -15,8 +20,13 @@ type EpisodeListItem = {
 };
 
 export default function PodcastIndexPage() {
+<<<<<<< HEAD
   const [episodes, setEpisodes] = useState<EpisodeListItem[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+=======
+  const [episodesetEpisodes] = useState<EpisodeListItem[]>([]);
+  const [loadingsetLoading] = useState<boolean>(true);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   useEffect(() => {
     const load = async () => {
@@ -31,7 +41,11 @@ export default function PodcastIndexPage() {
       }
     };
     load();
+<<<<<<< HEAD
   }, []);
+=======
+  }[]);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   if (loading) return <div>Loading episodes…</div>;
 

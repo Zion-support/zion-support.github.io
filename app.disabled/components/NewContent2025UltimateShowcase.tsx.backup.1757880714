@@ -1,120 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-60fa
-<<<<<<< HEAD
 <<<<<<< HEAD
 import { ArrowRight, Star, TrendingUp, Users, Award, Zap } from 'lucide-react';
-=======
-'use client';
-
-import React, { useState } from 'react';
-import Link from 'next/link';
-
-interface ContentItem {
-  id: string;
-  title: string;
-  type: 'blog' | 'case-study' | 'resource';
-  url: string;
-  metrics: {
-    roi: string;
-    savings: string;
-    efficiency: string;
-  };
-  readingTime: string;
-  featured: boolean;
-  description: string;
-}
-
-const NewContent2025UltimateShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-
-  const newContent: ContentItem[] = [
-    {
-      id: 'autonomous-enterprise-systems',
-      title: 'AI 2025: Next-Generation Autonomous Enterprise Systems - Ultimate Breakthrough Guide',
-      type: 'blog',
-      url: '/blog/ai-2025-next-generation-autonomous-enterprise-systems-ultimate-breakthrough',
-      metrics: {
-        roi: '1,500%',
-        savings: '$45.2M',
-        efficiency: '99.8%'
-      },
-      readingTime: '28 min read',
-      featured: true,
-      description: 'Discover how Fortune 500 companies are achieving 1,500% ROI with next-generation autonomous enterprise systems that operate independently with 99.8% reliability.'
-    },
-    {
-      id: 'fortune-500-transformation',
-      title: 'Fortune 500 Autonomous Enterprise Transformation: $8.2B Company Achieves 1,500% ROI in 18 Months',
-      type: 'case-study',
-      url: '/case-studies/fortune-500-autonomous-enterprise-transformation-1500-roi-success',
-      metrics: {
-        roi: '1,500%',
-        savings: '$67M',
-        efficiency: '99.8%'
-      },
-      readingTime: '22 min read',
-      featured: true,
-      description: 'Real-world success story of how a Fortune 500 manufacturing giant transformed their operations with autonomous enterprise systems, achieving unprecedented efficiency and profitability.'
-    },
-    {
-      id: 'implementation-master-guide',
-      title: 'Autonomous Enterprise Implementation Master Guide 2025: From Strategy to 1,500% ROI',
-      type: 'resource',
-      url: '/resources/autonomous-enterprise-implementation-master-guide-2025',
-      metrics: {
-        roi: '1,500%',
-        savings: '$218M',
-        efficiency: '95%'
-      },
-      readingTime: '35 min read',
-      featured: true,
-      description: 'Comprehensive guide to implementing autonomous enterprise systems that deliver exceptional ROI, featuring proven frameworks, best practices, and real-world success stories.'
-    }
-  ];
-
-  const categories = [
-    { id: 'all', label: 'All Content', count: newContent.length },
-    { id: 'blog', label: 'Blog Posts', count: newContent.filter(item => item.type === 'blog').length },
-    { id: 'case-study', label: 'Case Studies', count: newContent.filter(item => item.type === 'case-study').length },
-    { id: 'resource', label: 'Resources', count: newContent.filter(item => item.type === 'resource').length }
-  ];
-
-  const filteredContent = selectedCategory === 'all' 
-    ? newContent 
-    : newContent.filter(item => item.type === selectedCategory);
-
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'blog': return 'bg-blue-100 text-blue-800 border-blue-200';
-      case 'case-study': return 'bg-green-100 text-green-800 border-green-200';
-      case 'resource': return 'bg-purple-100 text-purple-800 border-purple-200';
-      default: return 'bg-gray-100 text-gray-800 border-gray-200';
-    }
-  };
-
-  const getTypeLabel = (type: string) => {
-    switch (type) {
-      case 'blog': return 'Blog Post';
-      case 'case-study': return 'Case Study';
-      case 'resource': return 'Implementation Guide';
-      default: return 'Content';
-    }
-  };
-
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'blog': return '📝';
-      case 'case-study': return '📊';
-      case 'resource': return '📚';
-      default: return '📄';
-    }
-  };
->>>>>>> 0898e5119e1743cc34bc24d7b78e613422d39ff1
 
 const NewContent2025UltimateShowcase = () => {
   return (
@@ -138,7 +26,6 @@ const NewContent2025UltimateShowcase = () => {
           </p>
         </div>
 
-<<<<<<< HEAD
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {/* Featured Blog Post */}
@@ -151,9 +38,6 @@ const NewContent2025UltimateShowcase = () => {
                 <span className="text-sm text-yellow-400 font-medium">FEATURED</span>
                 <h3 className="text-lg font-bold">AI Enterprise Transformation</h3>
               </div>
-=======
-=======
->>>>>>> origin/main
 
 const NewContent2025UltimateShowcase = () => {
   return (
@@ -301,7 +185,6 @@ const NewContent2025UltimateShowcase = () => {
               >
                 Download Guide
               </Link>
-<<<<<<< HEAD
 >>>>>>> origin/main
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
@@ -398,15 +281,11 @@ const NewContent2025UltimateShowcase = () => {
           <div className="text-center">
             <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>
             <div className="text-gray-300">Support Available</div>
-=======
-            </div>
->>>>>>> origin/main
           </div>
         </div>
 
         {/* Call to Action */}
         <div className="text-center">
-<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20">
             <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h3>
@@ -441,26 +320,6 @@ const NewContent2025UltimateShowcase = () => {
             <span className="bg-white bg-opacity-10 px-4 py-2 rounded-full text-sm">Digital Transformation</span>
             <span className="bg-white bg-opacity-10 px-4 py-2 rounded-full text-sm">Cloud Migration</span>
             <span className="bg-white bg-opacity-10 px-4 py-2 rounded-full text-sm">AI Ethics Framework</span>
-=======
-          <h3 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h3>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join thousands of organizations already benefiting from our AI solutions. 
-            Get started with a free consultation and discover your transformation potential.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
-            >
-              Get Free Consultation
-            </Link>
-            <Link
-              href="/services"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors text-lg"
-            >
-              Explore Services
-            </Link>
->>>>>>> origin/main
           </div>
 =======
           <h3 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h3>
@@ -486,9 +345,6 @@ const NewContent2025UltimateShowcase = () => {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-040d
 >>>>>>> 786cfaaf0d2bc00b11a733dfcf6fcdeaa815440e
 =======
 

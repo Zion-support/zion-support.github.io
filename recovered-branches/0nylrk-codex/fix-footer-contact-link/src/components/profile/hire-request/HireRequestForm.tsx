@@ -1,6 +1,10 @@
 
 import React from "react";
+<<<<<<< HEAD
 import { useHireRequestForm, FormValues } from "./useHireRequestForm";
+=======
+import { useHireRequestFormValues } from "./useHireRequestForm";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Button } from "@/components/ui/button";
 import { DialogFooter } from "@/components/ui/dialog";
 import { Form } from "@/components/ui/form";
@@ -23,10 +27,17 @@ export interface HireRequestFormProps {
   onSubmitSuccess?: () => void;
 }
 
+<<<<<<< HEAD
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
   const { form, isSubmitting, onSubmit } = useHireRequestForm({ 
     talent, 
     onClose: onSubmitSuccess || onClose, 
+=======
+export function HireRequestForm({ talentonCloseinitialJobTitleuserDetailsonSubmitSuccess }: HireRequestFormProps) {
+  const { formisSubmittingonSubmit } = useHireRequestForm({ 
+    talent
+    onClose: onSubmitSuccess || onClose
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     initialJobTitle,
     userDetails 
   });

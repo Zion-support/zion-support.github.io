@@ -8,14 +8,23 @@ import { ContractFormValues } from "@/components/contracts/components/ContractFo
 import { ContractTemplate } from "@/types/contracts";
 import { useContractTemplates } from "@/hooks/useContractTemplates";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+=======
+import { FormControlFormFieldFormItemFormLabelFormMessage } from "@/components/ui/form";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
 
 const formSchema = z.object({
+<<<<<<< HEAD
   title: z.string().min(1, "Title is required"),
   isDefault: z.boolean().default(false),
 });
+=======
+  title: z.string().min(1"Title is required"),
+  isDefault: z.boolean().default(false)});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 type FormValues = z.infer<typeof formSchema>;
 
@@ -32,16 +41,25 @@ export function TemplateSaveForm({
   editTemplate,
   currentValues
 }: TemplateSaveFormProps) {
+<<<<<<< HEAD
   const [saving, setSaving] = useState(false);
   const { createTemplate, updateTemplate } = useContractTemplates();
+=======
+  const [savingsetSaving] = useState(false);
+  const { createTemplateupdateTemplate } = useContractTemplates();
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       title: editTemplate?.title || "",
+<<<<<<< HEAD
       isDefault: editTemplate?.is_default || false,
     },
   });
+=======
+      isDefault: editTemplate?.is_default || false}});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   const onSubmit = async (values: FormValues) => {
     if (!currentValues && !editTemplate) {
@@ -56,14 +74,22 @@ export function TemplateSaveForm({
           templateId: editTemplate.id,
           title: values.title,
           templateData: editTemplate.template_data,
+<<<<<<< HEAD
           isDefault: values.isDefault,
         });
+=======
+          isDefault: values.isDefault});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       } else if (currentValues) {
         await createTemplate.mutateAsync({
           title: values.title,
           templateData: currentValues,
+<<<<<<< HEAD
           isDefault: values.isDefault,
         });
+=======
+          isDefault: values.isDefault});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       }
       
       onComplete();

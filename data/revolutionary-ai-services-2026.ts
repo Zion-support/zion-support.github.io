@@ -1,5 +1,8 @@
 import { ServiceVariant } from '../types/service-variants';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface RevolutionaryAIService2026 {
   id: string;
   name: string;
@@ -40,7 +43,10 @@ export interface RevolutionaryAIService2026 {
   rating: number;
   reviews: number;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
   // AI Multimodal Fusion Platform
   {
@@ -94,7 +100,10 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
     rating: 4.9,
     reviews: 145
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // AI Autonomous Business Platform
   {
     id: 'ai-autonomous-business-platform',
@@ -147,7 +156,10 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
     rating: 4.8,
     reviews: 67
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // AI Creative Studio Platform
   {
     id: 'ai-creative-studio-platform',
@@ -200,7 +212,10 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
     rating: 4.9,
     reviews: 389
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // AI Healthcare Companion Platform
   {
     id: 'ai-healthcare-companion-platform',
@@ -253,7 +268,10 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
     rating: 4.9,
     reviews: 112
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Quantum Logistics Platform
   {
     id: 'quantum-logistics-platform',

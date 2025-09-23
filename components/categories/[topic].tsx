@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import type { GetServerSideProps, NextPage } from 'next';
+=======
+import type { GetServerSidePropsNextPage } from 'next';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import Head from 'next/head';
 import Link from 'next/link';
 import { BlogPost } from '@/utils/types/blog';
@@ -8,7 +12,11 @@ import BlogCard from '@/components/blog/BlogCard';
 
 type Props = { topic: string; posts: BlogPost[] };
 
+<<<<<<< HEAD
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {
+=======
+const TopicPage: NextPage<Props> = ({ topicposts }) => {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <div>
       <Head>
@@ -30,7 +38,11 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {
             title={`${topic} - Zion Blog`}
             url={typeof window === 'undefined' ? `https://zion.app/categories/${encodeURIComponent(topic)}` : window.location.href}
             description={`Articles about ${topic}`}
+<<<<<<< HEAD
             onShare={(network) => fetch('/api/analytics/share', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ url: window.location.href, title: `${topic} - Zion Blog`, network, utm: 'utm_source=' + network + '&utm_medium=share&utm_campaign=category' }) }).catch(() => {})}
+=======
+            onShare={(network) => fetch('/api/analytics/share'{ method: ''POST', 'headers: { 'Content-Type': 'application/json' }body: JSON.stringify({ url: window.location.hreftitle: `${topic} - Zion Blog`networkutm: 'utm_source=' + network + '&utm_medium=share&utm_campaign=category' }) }).catch(() => {})}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -45,9 +57,15 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
+<<<<<<< HEAD
   const topic = String(ctx.params?.topic || '');
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
   return { props: { topic, posts } };
+=======
+  const topic = String(ctx.params?.topic || ', ');
+  const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
+  return { props: { topicposts } };
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 };
 
 export default TopicPage;

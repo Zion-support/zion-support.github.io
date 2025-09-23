@@ -14,7 +14,11 @@ interface PreviewResumeProps {
   onBack: () => void;
 }
 
+<<<<<<< HEAD
 export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
+=======
+export function PreviewResume({ resumeonBack }: PreviewResumeProps) {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <div className="space-y-6">
       <PreviewHeader resume={resume} onBack={onBack} />

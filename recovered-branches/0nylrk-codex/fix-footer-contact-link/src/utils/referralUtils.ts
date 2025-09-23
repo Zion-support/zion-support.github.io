@@ -50,15 +50,23 @@ export async function trackReferral(userId: string, email: string) {
     const response = await fetch('/api/track-referral', {
       method: 'POST',
       headers: {
+<<<<<<< HEAD
         'Content-Type': 'application/json',
       },
+=======
+        'Content-Type': 'application/json'},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       body: JSON.stringify({
         refCode,
         userId,
         email,
         ipAddress: '', // This will be captured by the server
+<<<<<<< HEAD
       }),
     });
+=======
+      })});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     
     if (response.ok) {
       // Clear the stored referral code

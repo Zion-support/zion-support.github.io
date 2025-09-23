@@ -22,7 +22,10 @@ export type InnovativeMicroSaas = {
 	rating?: number;
 	launchDate?: string;
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 	{
 		id: 'podcast-transcription-seo-suite',

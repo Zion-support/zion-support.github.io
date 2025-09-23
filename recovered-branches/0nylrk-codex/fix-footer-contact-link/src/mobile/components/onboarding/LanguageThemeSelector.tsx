@@ -1,9 +1,17 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/hooks/useTheme";
 import { Moon, Sun, Check } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+=======
+import React{ useState } from "react";
+import { Button } from "@/components/ui/button";
+import { useTheme } from "@/hooks/useTheme";
+import { MoonSunCheck } from "lucide-react";
+import { CardContent } from "@/components/ui/card";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface Language {
   code: string;
@@ -12,6 +20,7 @@ interface Language {
 }
 
 const languages: Language[] = [
+<<<<<<< HEAD
   { code: "en", name: "English", flag: "🇺🇸" },
   { code: "es", name: "Español", flag: "🇪🇸" },
   { code: "fr", name: "Français", flag: "🇫🇷" },
@@ -22,6 +31,17 @@ const languages: Language[] = [
 export function LanguageThemeSelector() {
   const { theme, setTheme } = useTheme();
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
+=======
+  { code: "en"name: "English"flag: "🇺🇸" },
+  { code: "es"name: "Español"flag: "🇪🇸" },
+  { code: "fr"name: "Français"flag: "🇫🇷" },
+  { code: "de"name: "Deutsch"flag: "🇩🇪" },
+  { code: "zh"name: "中文"flag: "🇨🇳" }];
+
+export function LanguageThemeSelector() {
+  const { themesetTheme } = useTheme();
+  const [selectedLanguagesetSelectedLanguage] = useState<string>("en");
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <div className="space-y-8 px-4">
@@ -36,6 +56,10 @@ export function LanguageThemeSelector() {
               className={`cursor-pointer transition-all ${
                 selectedLanguage === language.code 
                   ? "border-primary bg-primary/5" 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   : "border-border hover:border-primary/40"
               }`}
               onClick={() => setSelectedLanguage(language.code)}

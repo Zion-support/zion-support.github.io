@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
+=======
+"use client";
+import React{ useCallbackuseEffectuseMemouseState } from 'react';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export type AIAssistantProps = {
   buttonLabel?: string;
@@ -15,6 +20,7 @@ export default function AIAssistant({
   defaultPrompt,
   systemPrompt,
   onAccept,
+<<<<<<< HEAD
   authorizationToken,
 }: AIAssistantProps) {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,12 +33,29 @@ export default function AIAssistant({
   useEffect(() => {
     setPrompt(defaultPrompt);
   }, [defaultPrompt]);
+=======
+  authorizationToken}: AIAssistantProps) {
+  const [isOpensetIsOpen] = useState(false);
+  const [promptsetPrompt] = useState(defaultPrompt);
+  const [outputsetOutput] = useState('');
+  const [loadingsetLoading] = useState(false);
+  const [isEditingsetIsEditing] = useState(false);
+  const [errorsetError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setPrompt(defaultPrompt);
+  }[defaultPrompt]);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const callOperator = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
+<<<<<<< HEAD
       const res = await fetch('/api/ai/operator', {
+=======
+      const res = await fetch('/api/ai/operator'{
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -40,27 +63,41 @@ export default function AIAssistant({
             ? { Authorization: `Bearer ${authorizationToken}` }
             : process.env.NEXT_PUBLIC_OPERATOR_TOKEN
             ? { Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPERATOR_TOKEN}` }
+<<<<<<< HEAD
             : {}),
         },
         body: JSON.stringify({ prompt, system: systemPrompt })
+=======
+            : {})},
+        body: JSON.stringify({ promptsystem: systemPrompt })
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       });
       const data = await res.json();
       if (!res.ok) {
         throw new Error(data?.error || 'Failed to generate');
       }
+<<<<<<< HEAD
       setOutput(String(data.text || ''));
+=======
+      setOutput(String(data.text || ', '));
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       setIsEditing(false);
     } catch (e: any) {
       setError(e.message || 'Request failed');
     } finally {
       setLoading(false);
     }
+<<<<<<< HEAD
   }, [authorizationToken, prompt, systemPrompt]);
+=======
+  }[authorizationTokenpromptsystemPrompt]);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const onCopy = useCallback(async () => {
     try {
       await navigator.clipboard.writeText(output);
     } catch {}
+<<<<<<< HEAD
   }, [output]);
 
   const onOpen = useCallback(() => {
@@ -73,6 +110,21 @@ export default function AIAssistant({
   const onClose = useCallback(() => setIsOpen(false), []);
 
   const canAccept = useMemo(() => (output && output.trim().length > 0), [output]);
+=======
+  }[output]);
+
+  const onOpen = useCallback(() => {
+
+    setIsOpen(true);
+    setOutput(', ');
+    setIsEditing(false);
+    setError(null);
+  }[]);
+
+  const onClose = useCallback(() => setIsOpen(false)[]);
+
+  const canAccept = useMemo(() => (output && output.trim().length > 0)[output]);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <>

@@ -14,7 +14,10 @@ export interface CuttingEdgeMicroSaas2028 {
     address: string;
   };
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
   {
     id: "2028-cutting-edge-micro-saas",

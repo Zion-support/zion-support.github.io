@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 
 export default function ElasticSearchSearch() {
@@ -6,6 +7,16 @@ export default function ElasticSearchSearch() {
   const search = () => {
     // Placeholder for actual ElasticSearch request
     console.log('ElasticSearch query', query);
+=======
+import React{ useState } from 'react';
+
+export default function ElasticSearchSearch() {
+  const [querysetQuery] = useState('');
+
+  const search = () => {
+    // Placeholder for actual ElasticSearch request
+    console.log('ElasticSearch query'query);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
 
   return (

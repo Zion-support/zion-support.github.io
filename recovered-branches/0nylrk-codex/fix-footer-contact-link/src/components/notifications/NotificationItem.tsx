@@ -1,14 +1,24 @@
 
 import React from 'react';
 // Use the centralized icon wrapper to avoid missing icons
+<<<<<<< HEAD
 import { Check, Trash2, ChevronRight } from '@/components/icons';
+=======
+import { CheckTrash2ChevronRight } from '@/components/icons';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { formatDistanceToNow } from 'date-fns';
 import { cn } from '@/lib/utils';
+<<<<<<< HEAD
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { useNavigate } from 'react-router-dom';
 import { Notification, NotificationType } from '@/context/notifications';
+=======
+import { TooltipContentTooltipProviderTooltipTrigger } from '@/components/ui/tooltip';
+import { useNavigate } from 'react-router-dom';
+import { NotificationType } from '@/context/notifications';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
@@ -36,8 +46,13 @@ interface NotificationItemProps {
 }
 
 export const NotificationItem: React.FC<NotificationItemProps> = ({ 
+<<<<<<< HEAD
   notification, 
   onMarkAsRead, 
+=======
+  notification
+  onMarkAsRead
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   onDismiss 
 }) => {
   const navigate = useNavigate();
@@ -46,7 +61,11 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
     if (!notification.read) {
       onMarkAsRead(notification.id);
     }
+<<<<<<< HEAD
     // If there's an action URL, navigate to it
+=======
+    // If there's an action URLnavigate to it
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     if (notification.action_url) {
       navigate(notification.action_url);
     }
@@ -71,7 +90,11 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
           <p className="text-sm text-zion-slate-light">{notification.message || "You have a new notification"}</p>
           <div className="flex justify-between items-center mt-1">
             <p className="text-xs text-zion-slate">
+<<<<<<< HEAD
               {notification.created_at ? formatDistanceToNow(new Date(notification.created_at), { addSuffix: true }) : "Just now"}
+=======
+              {notification.created_at ? formatDistanceToNow(new Date(notification.created_at){ addSuffix: true }) : "Just now"}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </p>
             
             {notification.action_url && notification.action_text && (

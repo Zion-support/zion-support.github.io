@@ -6,7 +6,11 @@ import { useReactId } from "@/hooks/useReactId"
 import { cn } from "@/lib/utils"
 
 // Format: { THEME_NAME: CSS_SELECTOR }
+<<<<<<< HEAD
 const THEMES = { light: "", dark: ".dark" } as const
+=======
+const THEMES = { light: ""dark: ".dark" } as const
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export type ChartConfig = Record<
   string,
@@ -15,7 +19,11 @@ export type ChartConfig = Record<
     icon?: React.ComponentType
   } & (
     | { color?: string; theme?: never }
+<<<<<<< HEAD
     | { color?: never; theme: Record<keyof typeof THEMES, string> }
+=======
+    | { color?: never; theme: Record<keyof typeof THEMESstring> }
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   )
 >
 
@@ -24,8 +32,12 @@ type ChartContextProps = {
 }
 
 const ChartContext = React.createContext<ChartContextProps>({
+<<<<<<< HEAD
   config: {},
 })
+=======
+  config: {}})
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 function useChart(): ChartContextProps {
   return React.useContext(ChartContext)
@@ -39,9 +51,15 @@ const ChartContainer = React.forwardRef<
       typeof RechartsPrimitive.ResponsiveContainer
     >["children"]
   }
+<<<<<<< HEAD
 >(({ id, className, children, config, ...props }, ref) => {
   const uniqueId = useReactId()
   const chartId = `chart-${id || uniqueId.replace(/:/g, "")}`
+=======
+>(({ idclassNamechildrenconfig...props }ref) => {
+  const uniqueId = useReactId()
+  const chartId = `chart-${id || uniqueId.replace(/:/g"")}`
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <ChartContext.Provider value={{ config }}>
@@ -64,9 +82,15 @@ const ChartContainer = React.forwardRef<
 })
 ChartContainer.displayName = "Chart"
 
+<<<<<<< HEAD
 const ChartStyle = ({ id, config }: { id: string; config: ChartConfig }) => {
   const colorConfig = Object.entries(config).filter(
     ([_, config]) => config.theme || config.color
+=======
+const ChartStyle = ({ idconfig }: { id: string; config: ChartConfig }) => {
+  const colorConfig = Object.entries(config).filter(
+    ([_config]) => config.theme || config.color
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   )
 
   if (!colorConfig.length) {
@@ -78,10 +102,17 @@ const ChartStyle = ({ id, config }: { id: string; config: ChartConfig }) => {
       dangerouslySetInnerHTML={{
         __html: Object.entries(THEMES)
           .map(
+<<<<<<< HEAD
             ([theme, prefix]) => `
 ${prefix} [data-chart=${id}] {
 ${colorConfig
   .map(([key, itemConfig]) => {
+=======
+            ([themeprefix]) => `
+${prefix} [data-chart=${id}] {
+${colorConfig
+  .map(([keyitemConfig]) => {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     const color =
       itemConfig.theme?.[theme as keyof typeof itemConfig.theme] ||
       itemConfig.color
@@ -91,8 +122,12 @@ ${colorConfig
 }
 `
           )
+<<<<<<< HEAD
           .join("\n"),
       }}
+=======
+          .join("\n")}}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     />
   )
 }
@@ -124,8 +159,12 @@ const ChartTooltipContent = React.forwardRef<
       formatter,
       color,
       nameKey,
+<<<<<<< HEAD
       labelKey,
     },
+=======
+      labelKey},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     ref
   ) => {
     const { config } = useChart()
@@ -137,7 +176,11 @@ const ChartTooltipContent = React.forwardRef<
 
       const [item] = payload
       const key = `${labelKey || item.dataKey || item.name || "value"}`
+<<<<<<< HEAD
       const itemConfig = getPayloadConfigFromPayload(config, item, key)
+=======
+      const itemConfig = getPayloadConfigFromPayload(configitemkey)
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       const value =
         !labelKey && typeof label === "string"
           ? config[label as keyof typeof config]?.label || label
@@ -145,8 +188,13 @@ const ChartTooltipContent = React.forwardRef<
 
       if (labelFormatter) {
         return (
+<<<<<<< HEAD
           <div className={cn("font-medium", labelClassName)}>
             {labelFormatter(value, payload)}
+=======
+          <div className={cn("font-medium"labelClassName)}>
+            {labelFormatter(valuepayload)}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           </div>
         )
       }
@@ -155,16 +203,25 @@ const ChartTooltipContent = React.forwardRef<
         return null
       }
 
+<<<<<<< HEAD
       return <div className={cn("font-medium", labelClassName)}>{value}</div>
     }, [
+=======
+      return <div className={cn("font-medium"labelClassName)}>{value}</div>
+    }[
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       label,
       labelFormatter,
       payload,
       hideLabel,
       labelClassName,
       config,
+<<<<<<< HEAD
       labelKey,
     ])
+=======
+      labelKey])
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     if (!active || !payload?.length) {
       return null
@@ -182,9 +239,15 @@ const ChartTooltipContent = React.forwardRef<
       >
         {!nestLabel ? tooltipLabel : null}
         <div className="grid gap-1.5">
+<<<<<<< HEAD
           {payload.map((item, index) => {
             const key = `${nameKey || item.name || item.dataKey || "value"}`
             const itemConfig = getPayloadConfigFromPayload(config, item, key)
+=======
+          {payload.map((itemindex) => {
+            const key = `${nameKey || item.name || item.dataKey || "value"}`
+            const itemConfig = getPayloadConfigFromPayload(configitemkey)
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             const indicatorColor = color || item.payload.fill || item.color
 
             return (
@@ -196,7 +259,11 @@ const ChartTooltipContent = React.forwardRef<
                 )}
               >
                 {formatter && item?.value !== undefined && item.name ? (
+<<<<<<< HEAD
                   formatter(item.value, item.name, item, index, item.payload)
+=======
+                  formatter(item.valueitem.nameitemindexitem.payload)
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 ) : (
                   <>
                     {itemConfig?.icon ? (
@@ -211,14 +278,22 @@ const ChartTooltipContent = React.forwardRef<
                               "w-1": indicator === "line",
                               "w-0 border-[1.5px] border-dashed bg-transparent":
                                 indicator === "dashed",
+<<<<<<< HEAD
                               "my-0.5": nestLabel && indicator === "dashed",
                             }
+=======
+                              "my-0.5": nestLabel && indicator === "dashed"}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                           )}
                             style={
                               {
                                 "--color-bg": indicatorColor,
+<<<<<<< HEAD
                                 "--color-border": indicatorColor,
                               } as CSSProperties
+=======
+                                "--color-border": indicatorColor} as CSSProperties
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                             }
                         />
                       )
@@ -265,7 +340,11 @@ const ChartLegendContent = React.forwardRef<
     }
 >(
   (
+<<<<<<< HEAD
     { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey },
+=======
+    { classNamehideIcon = falsepayloadverticalAlign = "bottom"nameKey },
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     ref
   ) => {
     const { config } = useChart()
@@ -285,7 +364,11 @@ const ChartLegendContent = React.forwardRef<
       >
         {payload.map((item) => {
           const key = `${nameKey || item.dataKey || "value"}`
+<<<<<<< HEAD
           const itemConfig = getPayloadConfigFromPayload(config, item, key)
+=======
+          const itemConfig = getPayloadConfigFromPayload(configitemkey)
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
           return (
             <div
@@ -300,8 +383,12 @@ const ChartLegendContent = React.forwardRef<
                 <div
                   className="h-2 w-2 shrink-0 rounded-[2px]"
                   style={{
+<<<<<<< HEAD
                     backgroundColor: item.color,
                   }}
+=======
+                    backgroundColor: item.color}}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 />
               )}
               {itemConfig?.label}
@@ -359,5 +446,9 @@ export {
   ChartTooltipContent,
   ChartLegend,
   ChartLegendContent,
+<<<<<<< HEAD
   ChartStyle,
 }
+=======
+  ChartStyle}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

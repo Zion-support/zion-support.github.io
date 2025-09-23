@@ -1,8 +1,15 @@
 
+<<<<<<< HEAD
 import React, { useState, useRef } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Upload, Trash2, Plus } from "lucide-react";
+=======
+import React{ useStateuseRef } from "react";
+import { CardHeaderCardTitleCardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { UploadTrash2Plus } from "lucide-react";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { AppPlatform } from "./MetadataManager";
 import { toast } from "sonner";
 
@@ -17,8 +24,13 @@ type Screenshot = {
 };
 
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {
+<<<<<<< HEAD
   const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
   const [isDragging, setIsDragging] = useState(false);
+=======
+  const [screenshotsetScreenshots] = useState<Screenshot[]>([]);
+  const [isDraggingsetIsDragging] = useState(false);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const fileInputRef = useRef<HTMLInputElement>(null);
   
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -45,15 +57,26 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       return;
     }
     
+<<<<<<< HEAD
     const filesToAdd = imageFiles.slice(0, availableSlots);
     
     const newScreenshots = filesToAdd.map(file => ({
       id: Math.random().toString(36).substring(2, 9),
+=======
+    const filesToAdd = imageFiles.slice(0availableSlots);
+    
+    const newScreenshots = filesToAdd.map(file => ({
+      id: Math.random().toString(36).substring(29),
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       url: URL.createObjectURL(file),
       file
     }));
     
+<<<<<<< HEAD
     setScreenshots(prev => [...prev, ...newScreenshots]);
+=======
+    setScreenshots(prev => [...prev...newScreenshots]);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     
     if (filesToAdd.length < imageFiles.length) {
       toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`);

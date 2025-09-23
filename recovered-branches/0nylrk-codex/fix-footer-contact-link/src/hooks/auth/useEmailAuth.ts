@@ -17,15 +17,23 @@ export const useEmailAuth = (
       
       const { data, error } = await supabase.auth.signInWithPassword({
         email,
+<<<<<<< HEAD
         password,
       });
+=======
+        password});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
       if (error) {
         toast({
           title: "Login failed",
           description: error.message,
+<<<<<<< HEAD
           variant: "destructive",
         });
+=======
+          variant: "destructive"});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         return { error };
       }
 
@@ -35,8 +43,12 @@ export const useEmailAuth = (
       toast({
         title: "Login failed",
         description: error.message || "An unexpected error occurred",
+<<<<<<< HEAD
         variant: "destructive",
       });
+=======
+        variant: "destructive"});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       return { error };
     } finally {
       setIsLoading(false);
@@ -65,31 +77,47 @@ export const useEmailAuth = (
           // Only store a simple display name in the profile data
           data: {
             display_name: userData?.displayName ?? userData?.name ?? ""
+<<<<<<< HEAD
           },
         },
       });
+=======
+          }}});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
       if (error) {
         toast({
           title: "Signup failed",
           description: error.message,
+<<<<<<< HEAD
           variant: "destructive",
         });
+=======
+          variant: "destructive"});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         return { error };
       }
 
       toast({
         title: "Signup successful",
+<<<<<<< HEAD
         description: "Check your email for verification instructions.",
       });
+=======
+        description: "Check your email for verification instructions."});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       return { data };
     } catch (error: any) {
       console.error("Signup error:", error);
       toast({
         title: "Signup failed",
         description: error.message || "An unexpected error occurred",
+<<<<<<< HEAD
         variant: "destructive",
       });
+=======
+        variant: "destructive"});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       return { error };
     } finally {
       setIsLoading(false);
@@ -100,30 +128,46 @@ export const useEmailAuth = (
     try {
       setIsLoading(true);
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
+<<<<<<< HEAD
         redirectTo: `${window.location.origin}/update-password`,
       });
+=======
+        redirectTo: `${window.location.origin}/update-password`});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
       if (error) {
         toast({
           title: "Password reset failed",
           description: error.message,
+<<<<<<< HEAD
           variant: "destructive",
         });
+=======
+          variant: "destructive"});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         return { error };
       }
 
       toast({
         title: "Password reset email sent",
+<<<<<<< HEAD
         description: "Check your email for password reset instructions.",
       });
+=======
+        description: "Check your email for password reset instructions."});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       return {};
     } catch (error: any) {
       console.error("Password reset error:", error);
       toast({
         title: "Password reset failed",
         description: error.message || "An unexpected error occurred",
+<<<<<<< HEAD
         variant: "destructive",
       });
+=======
+        variant: "destructive"});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       return { error };
     } finally {
       setIsLoading(false);

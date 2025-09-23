@@ -1,16 +1,27 @@
 
 import { useState } from "react";
 import { useJobApplications } from "@/hooks/useJobApplications";
+<<<<<<< HEAD
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Loader2, MessageSquare, ExternalLink } from "lucide-react";
+=======
+import { CardContentCardHeaderCardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Loader2MessageSquareExternalLink } from "lucide-react";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { formatDistanceToNow } from "date-fns";
 import { Link } from "react-router-dom";
 import { ApplicationStatus } from "@/types/jobs";
 
 export function MyApplications() {
+<<<<<<< HEAD
   const { applications, isLoading, error } = useJobApplications();
+=======
+  const { applicationsisLoadingerror } = useJobApplications();
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   const getStatusBadge = (status: ApplicationStatus) => {
     switch (status) {
@@ -32,6 +43,10 @@ export function MyApplications() {
   };
   
   if (isLoading) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     return (
       <div className="flex justify-center items-center p-8">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
@@ -74,7 +89,11 @@ export function MyApplications() {
               {getStatusBadge(application.status)}
             </div>
             <p className="text-sm text-muted-foreground">
+<<<<<<< HEAD
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
+=======
+              Applied {formatDistanceToNow(new Date(application.created_at){ addSuffix: true })}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </p>
           </CardHeader>
           <CardContent>

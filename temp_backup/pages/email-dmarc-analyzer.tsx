@@ -1,10 +1,18 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import Layout from '../components/layout/Layout';
 
 export default function EmailDmarcAnalyzerPage() {
   return (
     <Layout>
+=======
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+
+export default function EmailDmarcAnalyzerPage() {
+  return (
+    <UltraAdvancedFuturisticBackground>
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <Head>
         <title>Email DMARC Analyzer | Zion Tech Group</title>
         <meta name="description" content="Monitor DMARC aggregate reports, SPF/DKIM posture, domain reputation hints, and deliverability scorecards." />
@@ -25,7 +33,11 @@ export default function EmailDmarcAnalyzerPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </Layout>
+=======
+    </UltraAdvancedFuturisticBackground>
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   );
 }
 

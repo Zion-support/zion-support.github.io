@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { Control } from "react-hook-form";
 import { 
@@ -5,21 +6,41 @@ import {
   FormItem, 
   FormLabel, 
   FormControl, 
+=======
+import React{ useState } from "react";
+import { Control } from "react-hook-form";
+import { 
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   FormMessage 
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";
+<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card";
+=======
+import { CardContent } from "@/components/ui/card";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface BasicInfoFieldsProps {
   control: Control<any>;
 }
 
 export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => {
+<<<<<<< HEAD
   const [minBudget, setMinBudget] = useState<string>("");
   const [maxBudget, setMaxBudget] = useState<string>("");
 
   const handleSuggestionApplied = (min: number, max: number) => {
+=======
+  const [minBudgetsetMinBudget] = useState<string>("");
+  const [maxBudgetsetMaxBudget] = useState<string>("");
+
+  const handleSuggestionApplied = (min: numbermax: number) => {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     setMinBudget(min.toString());
     setMaxBudget(max.toString());
   };
@@ -84,7 +105,11 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
         <FormField
           control={control}
           name="budgetMin"
+<<<<<<< HEAD
           render={({ field: { onChange, ...rest } }) => (
+=======
+          render={({ field: { onChange...rest } }) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <FormItem>
               <FormLabel>Budget (Min)</FormLabel>
               <FormControl>
@@ -107,7 +132,11 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
         <FormField
           control={control}
           name="budgetMax"
+<<<<<<< HEAD
           render={({ field: { onChange, ...rest } }) => (
+=======
+          render={({ field: { onChange...rest } }) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <FormItem>
               <FormLabel>Budget (Max)</FormLabel>
               <FormControl>
@@ -139,6 +168,10 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
         </CardContent>
       </Card>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <FormField
         control={control}
         name="location"
@@ -146,7 +179,11 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
           <FormItem>
             <FormLabel>Location</FormLabel>
             <FormControl>
+<<<<<<< HEAD
               <Input placeholder="e.g. Remote, San Francisco, etc." {...field} />
+=======
+              <Input placeholder="e.g. RemoteSan Franciscoetc." {...field} />
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </FormControl>
             <FormMessage />
           </FormItem>

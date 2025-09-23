@@ -1,5 +1,9 @@
 "use client";
 'use client';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 

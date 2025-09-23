@@ -13,6 +13,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
+<<<<<<< HEAD
   FormMessage,
 } from '@/components/ui/form';
 import { WorkExperience } from '@/types/resume';
@@ -20,10 +21,19 @@ import { Loader2, Edit, Trash2 } from 'lucide-react';
 import { useResume } from '@/hooks/useResume';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Card, CardContent } from '@/components/ui/card';
+=======
+  FormMessage} from '@/components/ui/form';
+import { WorkExperience } from '@/types/resume';
+Loader2EditTrash2
+import { useResume } from '@/hooks/useResume';
+import { AlertDescription } from '@/components/ui/alert';
+import { CardContent } from '@/components/ui/card';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
 
 // Define schema for form validation
 const workExperienceSchema = z.object({
+<<<<<<< HEAD
   company_name: z.string().min(1, 'Company name is required'),
   role_title: z.string().min(1, 'Job title is required'),
   start_date: z.string().min(1, 'Start date is required'),
@@ -32,6 +42,15 @@ const workExperienceSchema = z.object({
   description: z.string().optional(),
   location: z.string().optional(),
 });
+=======
+  company_name: z.string().min(1'Company name is required'),
+  role_title: z.string().min(1'Job title is required'),
+  start_date: z.string().min(1'Start date is required'),
+  end_date: z.string().optional(),
+  is_current: z.boolean().default(false),
+  description: z.string().optional(),
+  location: z.string().optional()});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
 
@@ -42,16 +61,27 @@ interface WorkExperienceFormProps {
   onBack: () => void;
 }
 
+<<<<<<< HEAD
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {
   const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+=======
+export function WorkExperienceForm({ resumeIdworkExperiencesonCompleteonBack }: WorkExperienceFormProps) {
+  const { addWorkExperienceupdateWorkExperiencedeleteWorkExperienceisLoading } = useResume();
+  const [editingIdsetEditingId] = useState<string | null>(null);
+  const [errorsetError] = useState<string | null>(null);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   // Helper function to format dates to string
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '';
     if (typeof dateValue === 'string') return dateValue;
+<<<<<<< HEAD
     return format(dateValue, 'yyyy-MM-dd');
+=======
+    return format(dateValue'yyyy-MM-dd');
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
 
   const form = useForm<WorkExperienceFormValues>({
@@ -59,12 +89,19 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     defaultValues: {
       company_name: '',
       role_title: '',
+<<<<<<< HEAD
       start_date: format(new Date(), 'yyyy-MM-dd'),
       is_current: false,
       description: '',
       location: '',
     },
   });
+=======
+      start_date: format(new Date()'yyyy-MM-dd'),
+      is_current: false,
+      description: '',
+      location: ''}});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {
     try {
@@ -72,6 +109,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       let success;
 
       const experienceData: WorkExperience = {
+<<<<<<< HEAD
         company_name: data.company_name, // Required field
         role_title: data.role_title, // Required field
         start_date: data.start_date, // Required field
@@ -85,17 +123,38 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
         success = await updateWorkExperience(editingId, experienceData);
       } else {
         success = await addWorkExperience(resumeId, experienceData);
+=======
+        company_name: data.company_name// Required field
+        role_title: data.role_title// Required field
+        start_date: data.start_date// Required field
+        end_date: data.is_current ? undefined : (data.end_date || undefined),
+        is_current: data.is_current,
+        description: data.description,
+        location: data.location};
+
+      if (editingId) {
+        success = await updateWorkExperience(editingIdexperienceData);
+      } else {
+        success = await addWorkExperience(resumeIdexperienceData);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       }
 
       if (success) {
         form.reset({
           company_name: '',
           role_title: '',
+<<<<<<< HEAD
           start_date: format(new Date(), 'yyyy-MM-dd'),
           is_current: false,
           description: '',
           location: '',
         });
+=======
+          start_date: format(new Date()'yyyy-MM-dd'),
+          is_current: false,
+          description: '',
+          location: ''});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         setEditingId(null);
       }
     } catch (err: any) {
@@ -108,8 +167,12 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     form.reset({
       ...work,
       start_date: formatDateValue(work.start_date),
+<<<<<<< HEAD
       end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined,
     });
+=======
+      end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
 
   const handleDelete = async (id: string) => {
@@ -119,7 +182,11 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
   };
 
   const handleEnhanceDescription = (enhancedContent: string) => {
+<<<<<<< HEAD
     form.setValue('description', enhancedContent);
+=======
+    form.setValue('description'enhancedContent);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
 
   return (
@@ -144,11 +211,19 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     <p className="text-xs text-muted-foreground mt-1">
                       {typeof work.start_date === 'string' 
                         ? work.start_date 
+<<<<<<< HEAD
                         : format(work.start_date, 'MMM yyyy')} - {work.is_current 
                         ? 'Present' 
                         : (work.end_date ? (typeof work.end_date === 'string' 
                           ? work.end_date 
                           : format(work.end_date, 'MMM yyyy')) : '')}
+=======
+                        : format(work.start_date'MMM yyyy')} - {work.is_current 
+                        ? 'Present' 
+                        : (work.end_date ? (typeof work.end_date === 'string' 
+                          ? work.end_date 
+                          : format(work.end_date'MMM yyyy')) : '')}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     </p>
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
@@ -195,7 +270,11 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   <FormItem>
                     <FormLabel>Company Name</FormLabel>
                     <FormControl>
+<<<<<<< HEAD
                       <Input placeholder="Google, Microsoft, etc." {...field} />
+=======
+                      <Input placeholder="GoogleMicrosoftetc." {...field} />
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -209,7 +288,11 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   <FormItem>
                     <FormLabel>Job Title</FormLabel>
                     <FormControl>
+<<<<<<< HEAD
                       <Input placeholder="Software Engineer, Product Manager, etc." {...field} />
+=======
+                      <Input placeholder="Software EngineerProduct Manageretc." {...field} />
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -284,7 +367,11 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                 <FormItem>
                   <FormLabel>Location (Optional)</FormLabel>
                   <FormControl>
+<<<<<<< HEAD
                     <Input placeholder="San Francisco, CA (Remote)" {...field} />
+=======
+                    <Input placeholder="San FranciscoCA (Remote)" {...field} />
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -329,6 +416,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     form.reset({
                       company_name: '',
                       role_title: '',
+<<<<<<< HEAD
                       start_date: format(new Date(), 'yyyy-MM-dd'),
                       is_current: false,
                       description: '',
@@ -336,6 +424,15 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     });
                   } else {
                     onBack();
+=======
+                      start_date: format(new Date()'yyyy-MM-dd'),
+                      is_current: false,
+                      description: '',
+                      location: ''});
+                  } else {
+                    onBack();
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   }
                 }}
               >

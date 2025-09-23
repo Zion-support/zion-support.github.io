@@ -1,15 +1,23 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 import { Check, X } from "lucide-react";
+=======
+import { CheckX } from "lucide-react";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
   TableRow,
 } from "@/components/ui/table";
+=======
+  TableRow} from "@/components/ui/table";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Badge } from "@/components/ui/badge";
 
 export function EnterprisePricingTable() {
@@ -22,6 +30,7 @@ export function EnterprisePricingTable() {
       users: "Up to 10 users",
       popular: false,
       features: [
+<<<<<<< HEAD
         { name: "Private hiring portal", included: true },
         { name: "Dedicated talent pool", included: true },
         { name: "Standard SLA (24h)", included: true },
@@ -33,6 +42,17 @@ export function EnterprisePricingTable() {
         { name: "Dedicated success manager", included: false },
       ],
     },
+=======
+        { name: "Private hiring portal"included: true },
+        { name: "Dedicated talent pool"included: true },
+        { name: "Standard SLA (24h)"included: true },
+        { name: "Basic branding"included: true },
+        { name: "Admin dashboard"included: true },
+        { name: "Team collaboration"included: true },
+        { name: "API access"included: false },
+        { name: "Custom integrations"included: false },
+        { name: "Dedicated success manager"included: false }]},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     {
       name: "Business",
       price: "$1,999",
@@ -41,6 +61,7 @@ export function EnterprisePricingTable() {
       users: "Up to 50 users",
       popular: true,
       features: [
+<<<<<<< HEAD
         { name: "Private hiring portal", included: true },
         { name: "Dedicated talent pool", included: true },
         { name: "Enhanced SLA (8h)", included: true },
@@ -52,6 +73,17 @@ export function EnterprisePricingTable() {
         { name: "Dedicated success manager", included: false },
       ],
     },
+=======
+        { name: "Private hiring portal"included: true },
+        { name: "Dedicated talent pool"included: true },
+        { name: "Enhanced SLA (8h)"included: true },
+        { name: "Advanced branding"included: true },
+        { name: "Admin dashboard"included: true },
+        { name: "Team collaboration"included: true },
+        { name: "API access"included: true },
+        { name: "Custom integrations"included: false },
+        { name: "Dedicated success manager"included: false }]},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     {
       name: "Enterprise",
       price: "Custom",
@@ -60,6 +92,7 @@ export function EnterprisePricingTable() {
       users: "Unlimited users",
       popular: false,
       features: [
+<<<<<<< HEAD
         { name: "Private hiring portal", included: true },
         { name: "Dedicated talent pool", included: true },
         { name: "Premium SLA (1h)", included: true },
@@ -72,6 +105,17 @@ export function EnterprisePricingTable() {
       ],
     },
   ];
+=======
+        { name: "Private hiring portal"included: true },
+        { name: "Dedicated talent pool"included: true },
+        { name: "Premium SLA (1h)"included: true },
+        { name: "Full white labeling"included: true },
+        { name: "Admin dashboard"included: true },
+        { name: "Team collaboration"included: true },
+        { name: "API access"included: true },
+        { name: "Custom integrations"included: true },
+        { name: "Dedicated success manager"included: true }]}];
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <section id="pricing" className="py-20 px-4 md:px-6">
@@ -117,7 +161,11 @@ export function EnterprisePricingTable() {
               </TableRow>
             </TableHeader>
             <TableBody>
+<<<<<<< HEAD
               {plans[0].features.map((feature, index) => (
+=======
+              {plans[0].features.map((featureindex) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <TableRow key={feature.name}>
                   <TableCell className="font-medium">{feature.name}</TableCell>
                   {plans.map((plan) => (
@@ -136,7 +184,11 @@ export function EnterprisePricingTable() {
         </div>
 
         <div className="mt-8 text-center text-sm text-muted-foreground">
+<<<<<<< HEAD
           All plans include SSL security, 99.9% uptime SLA, and dedicated support
+=======
+          All plans include SSL security99.9% uptime SLAand dedicated support
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         </div>
       </div>
     </section>

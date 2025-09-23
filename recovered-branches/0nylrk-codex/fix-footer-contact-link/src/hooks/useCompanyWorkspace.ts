@@ -21,14 +21,22 @@ export function useCompanyWorkspace(companySlug?: string) {
           theme: {
             primaryColor: "#4f46e5",
             backgroundColor: "#ffffff",
+<<<<<<< HEAD
             textColor: "#1f2937",
           },
+=======
+            textColor: "#1f2937"},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           plan: "Business",
           teamSize: 12,
           teamLimit: 50,
           billingCycle: "Annual",
+<<<<<<< HEAD
           workspaceUrl: "acme.zion-ai.com",
         });
+=======
+          workspaceUrl: "acme.zion-ai.com"});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         setError(null);
       } else {
         // For any other slug, we could check if it's a valid company
@@ -40,14 +48,22 @@ export function useCompanyWorkspace(companySlug?: string) {
           theme: {
             primaryColor: "#4f46e5",
             backgroundColor: "#ffffff",
+<<<<<<< HEAD
             textColor: "#1f2937",
           },
+=======
+            textColor: "#1f2937"},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           plan: "Teams",
           teamSize: 5,
           teamLimit: 10,
           billingCycle: "Monthly",
+<<<<<<< HEAD
           workspaceUrl: `${companySlug}.zion-ai.com`,
         });
+=======
+          workspaceUrl: `${companySlug}.zion-ai.com`});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         setError(null);
       }
       setIsLoading(false);

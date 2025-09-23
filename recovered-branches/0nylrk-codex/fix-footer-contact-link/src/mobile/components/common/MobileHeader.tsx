@@ -1,7 +1,11 @@
 
 import React from "react";
 import { useNavigate } from "react-router-dom";
+<<<<<<< HEAD
 import { ChevronLeft, Bell, Settings } from "lucide-react";
+=======
+import { ChevronLeftBellSettings } from "lucide-react";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -22,8 +26,12 @@ export function MobileHeader({
   showSettings = false,
   className,
   onNotificationsClick,
+<<<<<<< HEAD
   onSettingsClick,
 }: MobileHeaderProps) {
+=======
+  onSettingsClick}: MobileHeaderProps) {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const navigate = useNavigate();
 
   return (

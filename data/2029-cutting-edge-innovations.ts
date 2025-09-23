@@ -1,5 +1,8 @@
 import { ServiceVariant } from '../types/service-variants';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface CuttingEdge2029Service {
   id: string;
   name: string;
@@ -40,7 +43,10 @@ export interface CuttingEdge2029Service {
   rating: number;
   reviews: number;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
   // AI Consciousness & Neural Interface Services
   {

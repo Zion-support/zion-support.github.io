@@ -81,8 +81,12 @@ export function useApiKeys() {
       toast({
         variant: "destructive",
         title: "Error fetching API keys",
+<<<<<<< HEAD
         description: err instanceof Error ? err.message : 'An unknown error occurred',
       });
+=======
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     } finally {
       setLoading(false);
     }
@@ -130,8 +134,12 @@ export function useApiKeys() {
       
       toast({
         title: "API Key Created",
+<<<<<<< HEAD
         description: "Your new API key has been generated. Save it now, you won't be able to see it again.",
       });
+=======
+        description: "Your new API key has been generated. Save it now, you won't be able to see it again."});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       
       return result;
     } catch (err) {
@@ -140,8 +148,12 @@ export function useApiKeys() {
       toast({
         variant: "destructive",
         title: "Error creating API key",
+<<<<<<< HEAD
         description: err instanceof Error ? err.message : 'An unknown error occurred',
       });
+=======
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     } finally {
       setLoading(false);
     }
@@ -187,8 +199,12 @@ export function useApiKeys() {
       
       toast({
         title: "API Key Regenerated",
+<<<<<<< HEAD
         description: "Your API key has been regenerated. Save it now, you won't be able to see it again.",
       });
+=======
+        description: "Your API key has been regenerated. Save it now, you won't be able to see it again."});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       
       return result;
     } catch (err) {
@@ -197,8 +213,12 @@ export function useApiKeys() {
       toast({
         variant: "destructive",
         title: "Error regenerating API key",
+<<<<<<< HEAD
         description: err instanceof Error ? err.message : 'An unknown error occurred',
       });
+=======
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     } finally {
       setLoading(false);
     }
@@ -240,8 +260,12 @@ export function useApiKeys() {
       
       toast({
         title: "API Key Revoked",
+<<<<<<< HEAD
         description: "The API key has been revoked successfully.",
       });
+=======
+        description: "The API key has been revoked successfully."});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       
       return result;
     } catch (err) {
@@ -250,8 +274,12 @@ export function useApiKeys() {
       toast({
         variant: "destructive",
         title: "Error revoking API key",
+<<<<<<< HEAD
         description: err instanceof Error ? err.message : 'An unknown error occurred',
       });
+=======
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     } finally {
       setLoading(false);
     }
@@ -298,8 +326,12 @@ export function useApiKeys() {
       toast({
         variant: "destructive",
         title: "Error fetching API logs",
+<<<<<<< HEAD
         description: err instanceof Error ? err.message : 'An unknown error occurred',
       });
+=======
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     } finally {
       setLoading(false);
     }

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
@@ -19,6 +20,8 @@ import { useAuth } from "@/hooks/useAuth";
 import { getStripe } from "@/utils/getStripe";
 import { EQUIPMENT_DETAILS, EquipmentDetails } from "@/data/equipmentDetails";
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 import { motion } from 'framer-motion';
 import { ArrowLeft, Star, Clock, DollarSign, Users, MapPin, Phone, Mail } from 'lucide-react';

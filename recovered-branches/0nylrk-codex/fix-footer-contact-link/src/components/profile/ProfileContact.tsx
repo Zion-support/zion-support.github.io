@@ -2,7 +2,11 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+<<<<<<< HEAD
 import { Mail, Send } from "lucide-react";
+=======
+import { MailSend } from "lucide-react";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
 
@@ -12,10 +16,17 @@ interface ProfileContactProps {
   profileType: 'service' | 'talent';
 }
 
+<<<<<<< HEAD
 export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
   const [message, setMessage] = useState("");
   const [subject, setSubject] = useState("");
   const [isSending, setIsSending] = useState(false);
+=======
+export function ProfileContact({ emailprofileNameprofileType }: ProfileContactProps) {
+  const [messagesetMessage] = useState("");
+  const [subjectsetSubject] = useState("");
+  const [isSendingsetIsSending] = useState(false);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   const handleSendMessage = (e: React.FormEvent) => {
     e.preventDefault();
@@ -28,9 +39,14 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
       setSubject("");
       toast({
         title: "Message Sent",
+<<<<<<< HEAD
         description: `Your message has been sent to ${profileName}.`,
       });
     }, 1000);
+=======
+        description: `Your message has been sent to ${profileName}.`});
+    }1000);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
 
   return (

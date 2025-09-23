@@ -5,8 +5,12 @@ import { Configuration, OpenAIApi } from "https://esm.sh/openai@3.2.1";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
+<<<<<<< HEAD
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
+=======
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface HireRequest {
   talent: {
@@ -58,8 +62,12 @@ serve(async (req) => {
     if (openAiKey) {
       try {
         const configuration = new Configuration({
+<<<<<<< HEAD
           apiKey: openAiKey,
         });
+=======
+          apiKey: openAiKey});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         const openai = new OpenAIApi(configuration);
         
         const prompt = `
@@ -80,8 +88,12 @@ serve(async (req) => {
           model: "gpt-3.5-turbo-instruct",
           prompt,
           max_tokens: 150,
+<<<<<<< HEAD
           temperature: 0.3,
         });
+=======
+          temperature: 0.3});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         
         const responseText = completion.data.choices[0]?.text || "";
         
@@ -187,9 +199,13 @@ serve(async (req) => {
             ${enhancedContent?.projectType ? `<p><strong>Project Type:</strong> ${enhancedContent.projectType}</p>` : ''}
             <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>
             <p>Best regards,<br>The Zion AI Marketplace Team</p>
+<<<<<<< HEAD
           `,
         },
       });
+=======
+          `}});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       
       console.log("Email sending result:", emailResponse);
     }
@@ -202,8 +218,12 @@ serve(async (req) => {
       }),
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
+<<<<<<< HEAD
         status: 200,
       }
+=======
+        status: 200}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     );
   } catch (error) {
     console.error("Error processing hire request:", error.message);
@@ -216,8 +236,12 @@ serve(async (req) => {
       }),
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
+<<<<<<< HEAD
         status: 500,
       }
+=======
+        status: 500}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     );
   }
 });

@@ -1,8 +1,13 @@
+<<<<<<< HEAD
+=======
+"use client";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
 
+<<<<<<< HEAD
 const categories: GrantCategory[] = ['Ecosystem Tools', 'Talent Development', 'Regional Expansion', 'Research Grants'];
 
 export default function ApplyGrantPage() {
@@ -20,12 +25,35 @@ export default function ApplyGrantPage() {
   const [sector, setSector] = useState<string>('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+=======
+const categories: GrantCategory[] = ['Ecosystem 'Tools', 'Talent 'Development', 'Regional 'Expansion', 'Research Grants'];
+
+export default function ApplyGrantPage() {
+  const router = useRouter();
+  const [programsetProgram] = useState<'grant' | 'incubator'>('grant');
+  const [projectNamesetProjectName] = useState('');
+  const [teamInfosetTeamInfo] = useState('');
+  const [proposalSummarysetProposalSummary] = useState('');
+  const [timelinesetTimeline] = useState('');
+  const [budgetAmountsetBudgetAmount] = useState<number>(0);
+  const [budgetCurrencysetBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
+  const [supportingLinksetSupportingLinks] = useState<string>(', ');
+  const [pitchDeckUrlsetPitchDeckUrl] = useState('');
+  const [regionsetRegion] = useState('');
+  const [sectorsetSector] = useState<string>(', ');
+  const [loadingsetLoading] = useState(false);
+  const [errorsetError] = useState<string | null>(null);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const save = async (submit: boolean) => {
     try {
       setLoading(true);
       setError(null);
+<<<<<<< HEAD
       const resp = await fetch('/api/grants', {
+=======
+      const resp = await fetch('/api/grants'{
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -43,9 +71,13 @@ export default function ApplyGrantPage() {
           pitchDeckUrl,
           region,
           sector: (sector as any) || undefined,
+<<<<<<< HEAD
           submit,
         }),
       });
+=======
+          submit})});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       const data = await resp.json();
       if (!resp.ok) throw new Error(data?.error || 'Failed');
       router.push(`/grants/${data.id}`);
@@ -97,7 +129,11 @@ export default function ApplyGrantPage() {
             </select>
           </label>
           <label className="text-sm">Region
+<<<<<<< HEAD
             <input className="mt-1 w-full border rounded p-2" value={region} onChange={(e) => setRegion(e.target.value)} placeholder="e.g., LATAM, EU, Global" />
+=======
+            <input className="mt-1 w-full border rounded p-2" value={region} onChange={(e) => setRegion(e.target.value)} placeholder="e.g.LATAMEUGlobal" />
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           </label>
         </div>
         <label className="text-sm">Supporting Links (one per line)

@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+=======
+import { TabsListTabsTrigger } from "@/components/ui/tabs";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { StepProps } from "./types";
 
 interface ResumeStepsProps {
@@ -8,7 +12,11 @@ interface ResumeStepsProps {
   onChange: (value: string) => void;
 }
 
+<<<<<<< HEAD
 export const ResumeSteps = ({ steps, activeTab, onChange }: ResumeStepsProps) => {
+=======
+export const ResumeSteps = ({ stepsactiveTabonChange }: ResumeStepsProps) => {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8">
       {steps.map((step) => (

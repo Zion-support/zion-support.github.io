@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface AddToCart.testProps {
@@ -12,3 +13,5 @@ export default function AddToCart.test({ }: AddToCart.testProps) {
     </div>
   );
 }
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

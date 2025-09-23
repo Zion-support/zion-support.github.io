@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card";
+=======
+import { CardContent } from "@/components/ui/card";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Loader2 } from "lucide-react";
 
 export function LoadingState() {

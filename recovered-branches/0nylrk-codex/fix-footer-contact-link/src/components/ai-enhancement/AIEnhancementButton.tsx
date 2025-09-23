@@ -1,8 +1,13 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+<<<<<<< HEAD
 import { Sparkles, Loader2, RefreshCw, Check, X } from '@/components/icons';
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
+=======
+import { SparklesLoader2RefreshCwCheckX } from '@/components/icons';
+import { useAIContentEnhancerAIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { toast } from '@/hooks/use-toast';
 
 interface AIEnhancementButtonProps {
@@ -24,9 +29,15 @@ export function AIEnhancementButton({
   size = "sm",
   contentLength = 10
 }: AIEnhancementButtonProps) {
+<<<<<<< HEAD
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
   const [showActions, setShowActions] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<string | null>(null);
+=======
+  const { enhanceContentisEnhancing } = useAIContentEnhancer();
+  const [showActionsetShowActions] = useState(false);
+  const [generatedContentsetGeneratedContent] = useState<string | null>(null);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   const handleEnhance = async () => {
     if ((!options.content || options.content.trim().length < contentLength) && 
@@ -54,8 +65,12 @@ export function AIEnhancementButton({
       setGeneratedContent(null);
       toast({
         title: "Content applied",
+<<<<<<< HEAD
         description: "AI-enhanced content has been applied.",
       });
+=======
+        description: "AI-enhanced content has been applied."});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   };
   

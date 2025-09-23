@@ -38,8 +38,12 @@ class IntelligentOrchestrator {
       { name: 'content-generator', path: 'content-generator.cjs', priority: 'low' },
       { name: 'seo-optimizer', path: 'seo-optimizer.cjs', priority: 'medium' },
       { name: 'security-scanner', path: 'security-scanner.cjs', priority: 'high' },
+<<<<<<< HEAD
       { name: 'test-generator', path: 'test-generator.cjs', priority: 'medium' },
       { name: 'app-intelligence', path: 'app-intelligence-enhancer.cjs', priority: 'medium' }
+=======
+      { name: 'test-generator', path: 'test-generator.cjs', priority: 'medium' }
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     ];
 
     for (const system of systems) {
@@ -78,6 +82,7 @@ class IntelligentOrchestrator {
       this.updateSystemMetrics(systemName, true, executionTime);
       
       this.log(`✅ System completed: ${systemName} (${executionTime}ms)`);
+<<<<<<< HEAD
       // Best-effort git sync after successful system run
       try {
         const syncPath = path.join(__dirname, 'git-sync.cjs');
@@ -87,6 +92,8 @@ class IntelligentOrchestrator {
       } catch (e) {
         this.log(`⚠️ Git sync failed: ${e.message}`);
       }
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       return { success: true, output: result, executionTime };
     } catch (error) {
       const executionTime = Date.now() - startTime;

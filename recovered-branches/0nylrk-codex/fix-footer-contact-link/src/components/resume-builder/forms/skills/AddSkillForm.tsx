@@ -2,7 +2,11 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+<<<<<<< HEAD
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+=======
+import { SelectContentSelectItemSelectTriggerSelectValue } from '@/components/ui/select';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Skill } from '@/types/resume';
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
 
@@ -11,10 +15,17 @@ interface AddSkillFormProps {
   onAddSkill: (skill: Skill) => Promise<boolean>;
 }
 
+<<<<<<< HEAD
 export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
   const [skillName, setSkillName] = useState('');
   const [skillCategory, setSkillCategory] = useState('');
   const [proficiency, setProficiency] = useState<number>(3);
+=======
+export const AddSkillForm = ({ resumeIdonAddSkill }: AddSkillFormProps) => {
+  const [skillNamesetSkillName] = useState('');
+  const [skillCategorysetSkillCategory] = useState('');
+  const [proficiencysetProficiency] = useState<number>(3);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,8 +35,12 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
     const newSkill: Skill = {
       name: skillName.trim(),
       category: skillCategory || 'Other',
+<<<<<<< HEAD
       proficiency: proficiency,
     };
+=======
+      proficiency: proficiency};
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     
     const success = await onAddSkill(newSkill);
     if (success) {
@@ -47,7 +62,11 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
             id="skill-name"
             value={skillName}
             onChange={(e) => setSkillName(e.target.value)}
+<<<<<<< HEAD
             placeholder="Enter a skill (e.g., React)"
+=======
+            placeholder="Enter a skill (e.g.React)"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           />
         </div>
         

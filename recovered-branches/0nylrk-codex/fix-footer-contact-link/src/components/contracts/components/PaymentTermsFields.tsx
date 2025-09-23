@@ -1,19 +1,34 @@
 
 import { UseFormReturn } from "react-hook-form";
 import { 
+<<<<<<< HEAD
   FormField, 
   FormItem, 
   FormLabel, 
   FormControl, 
   FormDescription, 
+=======
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormDescription
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   FormMessage 
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { 
+<<<<<<< HEAD
   Select, 
   SelectContent, 
   SelectItem, 
   SelectTrigger, 
+=======
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   SelectValue 
 } from "@/components/ui/select";
 import { MilestoneSuggestions } from "@/components/projects/milestones/MilestoneSuggestions";
@@ -28,7 +43,11 @@ interface PaymentTermsFieldsProps {
 }
 
 export function PaymentTermsFields({ 
+<<<<<<< HEAD
   form, 
+=======
+  form
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   talent,
   handleMilestonesGenerated 
 }: PaymentTermsFieldsProps) {

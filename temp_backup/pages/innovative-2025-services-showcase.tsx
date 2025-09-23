@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -68,10 +69,17 @@ const Innovative2025ServicesShowcase: React.FC = () => {
     }
   };
 
+=======
+import React from 'react';
+import Head from 'next/head';
+
+export default function Innovative2025ServicesShowcasePage() {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <>
       <Head>
         <title>Innovative 2025 Services Showcase - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Discover Zion Tech Group's innovative 2025 services including AI-powered solutions, advanced IT infrastructure, and cutting-edge micro SAAS platforms. Transform your business with our revolutionary technology solutions." />
         <meta name="keywords" content="innovative services 2025, AI services, IT infrastructure, micro SAAS, cybersecurity, cloud solutions, Zion Tech Group" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -405,10 +413,25 @@ const Innovative2025ServicesShowcase: React.FC = () => {
               </div>
             </div>
           </motion.footer>
+=======
+        <meta name="description" content="innovative 2025 services showcase page" />
+      </Head>
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-6">Innovative 2025 Services Showcase</h1>
+        <p className="text-lg mb-4">This page is under construction.</p>
+        <div className="mt-4">
+          <a href="/" className="text-blue-600 hover:underline">
+            ← Back to Home
+          </a>
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         </div>
       </div>
     </>
   );
+<<<<<<< HEAD
 };
 
 export default Innovative2025ServicesShowcase;
+=======
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
