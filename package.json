@@ -172,7 +172,7 @@
       "<rootDir>/pages.bak/",
       "<rootDir>/tests.disabled/",
       "<rootDir>/e2e/",
-      ".*"
+      ".*",
       "<rootDir>/zion-os/",
       "<rootDir>/zion-os.disabled/",
       "<rootDir>/zion-ai-assistant/"
