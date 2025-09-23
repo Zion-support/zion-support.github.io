@@ -1,10 +1,4 @@
-import React, {
-  createContext,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react';
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react'
 
 export type UserRole = 'client' | 'talent';
 
@@ -33,7 +27,7 @@ const DEFAULT_USER: User = {
 };
 
 export function UserProvider({ children }: { children: React.ReactNode }) {
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<User | null>(null)
 
   useEffect(() => {
     try {
@@ -46,30 +40,32 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     } catch {
       setUser(DEFAULT_USER);
     }
-  }, []);
+  }, [])
 
   useEffect(() => {
     try {
-      if (user) localStorage.setItem('zion.user', JSON.stringify(user));
-      else localStorage.removeItem('zion.user');
+      if (user) {
+        localStorage.setItem('zion.user', JSON.stringify(user))
+      } else {
+        localStorage.removeItem('zion.user')
+      }
     } catch {
       // Intentionally ignoring storage write errors (e.g., private mode)
       // to avoid disrupting app state updates.
     }
-  }, [user]);
+  }, [user])
 
-  const value = useMemo<UserContextValue>(
-    () => ({
-      user,
-      setUser,
-      logout: () => setUser(null),
-      completeOnboarding: () =>
-        setUser(prev => (prev ? { ...prev, onboardingCompleted: true } : prev)),
-    }),
-    [user]
-  );
+  const value = useMemo<UserContextValue>(() => ({
+    user,
+    setUser,
+    logout: () => setUser(null),
+    completeOnboarding: () =>
+      setUser(previousUser =>
+        previousUser ? { ...previousUser, onboardingCompleted: true } : previousUser
+      ),
+  }), [user])
 
-  return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>
 }
 
 export function useUser() {
