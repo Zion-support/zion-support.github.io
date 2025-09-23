@@ -1,10 +1,21 @@
-// ESLint flat config to prevent failures with ESLint v9
-// Keep it minimal; we only define ignores so lint doesn't crash.
+import js from '@eslint/js';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import globals from 'globals';
+import tsParser from '@typescript-eslint/parser';
+import tsPlugin from '@typescript-eslint/eslint-plugin';
+
 export default [
+  // Global ignores (flat config)
   {
     ignores: [
       'node_modules/**',
       '.next/**',
+      '**/.next/**',
+      'out/**',
+      'dist/**',
+      'build/**',
       'automation/**',
       'apps.backup/**',
       '.temp_backup_components/**',
@@ -39,17 +50,6 @@ export default [
       'e2e/**',
     ],
   },
-];
-
-import js from '@eslint/js';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
-import globals from 'globals';
-import tsParser from '@typescript-eslint/parser';
-import tsPlugin from '@typescript-eslint/eslint-plugin';
-
-export default [
   js.configs.recommended,
   {
     files: [
