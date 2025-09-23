@@ -33,40 +33,15 @@
   },
   "include": [
     "next-env.d.ts",
-<<<<<<< HEAD
     ".next/types/**/*.ts",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "app-minimal/**/*.ts",
-    "app-minimal/**/*.tsx",
-    "zion-website/src/**/*.ts",
-    "zion-website/src/**/*.tsx",
-    "src-clean/**/*.ts",
-    "src-clean/**/*.tsx",
-    "pages/**/*.ts",
-    "pages/**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.tsx",
     "types/**/*.d.ts"
-=======
-    "src/**/*.ts",
-    "src/**/*.tsx"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6fc7
-=======
-    "**/*.ts",
-    "**/*.tsx"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
-=======
-    "src/**/*.ts",
-    "src/**/*.tsx"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125
-=======
-    "src/**/*.ts",
-    "src/**/*.tsx"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
   ],
   "exclude": [
     "node_modules",
-<<<<<<< HEAD
     "**/node_modules/**",
     ".next/cache",
     "dist",
@@ -74,104 +49,15 @@
     "coverage",
     "build",
     "public/build",
-    "app",
-    "pages",
-    "components",
-    "lib",
-    "types",
-    "utils",
-=======
-    "data_backup",
-    "backup",
-    "backups",
-    "pages_backup_conflict",
-    "apps.backup",
-    "corrupted-files-backup",
-    "lib_backup",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-5719
-    "zion-os",
-    "**/*backup*",
-    "**/*conflict*",
-    "**/*temp*",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "zion-os/**",
-    "server",
     "server/**",
-    ".temp_backup_components",
-    ".temp_backup_components/**",
-    "automation",
-    "automation/**",
-    "src",
-    "src/**",
-    "src",
-    "src.*",
-    "src_*",
-    "src-*/**",
-    "src_backup/**",
-    "src_backup_temp/**",
-    "src.broken/**",
-    "src.corrupted/**",
-    "src.disabled/**",
-    "src.pages.disabled/**",
-    "components/**",
-    "lib/**",
-    "zion-os/**",
-    "utils/**",
-    "hooks/**",
-    "types/**",
-    "utils.disabled/**",
-    "ts_files_backup/**",
-    "tests/**",
-    "__tests__/**",
-    "test/**",
-    "test-results/**",
-    "test-reports/**",
-    "zion-ai-assistant",
-    "zion-ai-assistant/**",
-    "zion-os.disabled",
-    "zion-os.disabled/**"
-=======
-    "zion-os/**"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850
-=======
-    "zion-os/**"
-    ,
-    "zion-ai-assistant/**",
-    "zion-os.disabled/**",
-    "utils/types/**",
-    "utils/wallet.ts",
-    "utils/validation.ts"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8d12
-=======
-    "zion-os",
-    "zion-os.disabled",
-    "zion-ai-assistant"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6fc7
-=======
     "zion-os/**",
     "zion-ai-assistant/**",
     "zion-website/**",
-    "utils/**",
-    "zion-os.disabled/**"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3530
-=======
-    "zion-os/**",
-    "server/**"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
-=======
-    "zion-os/**"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125
-=======
-    "zion-os",
-    "zion-os.disabled",
-    "zion-ai-assistant",
-    "utils"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
+    "apps.backup/**",
+    "backups/**",
+    "backup/**",
+    "**/*backup*",
+    "**/*conflict*",
+    "**/*temp*"
   ]
 }
