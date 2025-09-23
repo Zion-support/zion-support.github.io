@@ -1,4 +1,5 @@
-"use client";
+import React from 'react';
+
 import { useAuth } from "@/contexts/AuthContext";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
@@ -33,12 +34,8 @@ export default function DashboardPage() {
     <div className="space-y-8">
       {/* Welcome Header */}
       <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/20">
-        <h1 className="text-3xl font-bold text-white mb-2">
-          Welcome back, {user?.name || "User"}! 👋
-        </h1>
-        <p className="text-zinc-300 text-lg">
-          Ready to continue building your digital economy? Here's what you can do next.
-        </p>
+        <h1 className="text-3xl font-bold text-white mb-2">Welcome back, {user?.name || "User"}! 👋</h1>
+        <p className="text-zinc-300 text-lg">Ready to continue building your digital economy? Here&apos;s what you can do next.</p>
       </div>
 
       {/* Quick Actions */}
@@ -52,9 +49,7 @@ export default function DashboardPage() {
               <span className="text-3xl">🚀</span>
             </div>
             <h3 className="font-semibold text-white text-lg">Launch New Instance</h3>
-            <p className="text-zinc-400 text-sm">
-              Create a new digital economy with marketplace and governance tools
-            </p>
+            <p className="text-zinc-400 text-sm">Create a new digital economy with marketplace and governance tools</p>
           </div>
         </Link>
 
@@ -67,9 +62,7 @@ export default function DashboardPage() {
               <span className="text-3xl">⚙️</span>
             </div>
             <h3 className="font-semibold text-white text-lg">Manage Instances</h3>
-            <p className="text-zinc-400 text-sm">
-              Monitor and configure your deployed instances and settings
-            </p>
+            <p className="text-zinc-400 text-sm">Monitor and configure your deployed instances and settings</p>
           </div>
         </Link>
 
@@ -82,9 +75,7 @@ export default function DashboardPage() {
               <span className="text-3xl">📚</span>
             </div>
             <h3 className="font-semibold text-white text-lg">Documentation</h3>
-            <p className="text-zinc-400 text-sm">
-              Learn more about features and best practices
-            </p>
+            <p className="text-zinc-400 text-sm">Learn more about features and best practices</p>
           </div>
         </Link>
       </div>
@@ -100,7 +91,7 @@ export default function DashboardPage() {
           </div>
           <div className="flex items-center gap-3 text-sm text-zinc-400">
             <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-            <span>Onboarding completed. You're ready to start building!</span>
+            <span>Onboarding completed. You&apos;re ready to start building!</span>
             <span className="text-zinc-500">Just now</span>
           </div>
         </div>
@@ -131,3 +122,8 @@ export default function DashboardPage() {
     </div>
   );
 }
+
+
+
+
+

@@ -1,13 +1,9 @@
-<<<<<<< HEAD
+// Minimal analytics placeholder to avoid build-time conflicts
+// Replace with real analytics integration as needed
+import React from 'react';
 
+export function Analytics(): React.ReactElement | null {
+  return null;
+}
 
-
-
-
-=======
-            const layoutShiftEntry = entry as any;
-            cls += layoutShiftEntry.value;
-          }
-        }
-      });
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
+export default Analytics;

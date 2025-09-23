@@ -1,56 +1,93 @@
 "use client";
+import React, { createContext, useContext, useMemo, useState } from "react";
 
-import { createContext, useContext, useEffect, useState } from "react";
-import { useSession, signIn, signOut } from "next-auth/react";
-import { useRouter } from "next/navigation";
-
-interface User {
+<<<<<<< HEAD
+type AuthUser = {
   id: string;
-  name?: string;
   email: string;
-  role: string;
-  onboardingCompleted: boolean;
-}
+  name?: string;
+};
 
-interface AuthContextType {
-  user: User | null;
-  isLoading: boolean;
-  isAuthenticated: boolean;
+type AuthContextValue = {
+  user: AuthUser | null;
   signIn: (email: string, password: string) => Promise<void>;
+  signOut: () => Promise<void>;
   login: (email: string, password: string) => Promise<void>;
   logout: () => Promise<void>;
   register: (name: string, email: string, password: string) => Promise<void>;
-  completeOnboarding: () => Promise<void>;
+=======
+type AuthUser = { id: string; email: string } | null;
+
+type AuthContextValue = {
+	user: AuthUser;
+	signIn: (email: string, _password: string) => Promise<void>;
+	signOut: () => Promise<void>;
+>>>>>>> origin/main
+};
+
+const AuthContext = createContext<AuthContextValue | undefined>(undefined);
+
+<<<<<<< HEAD
+export function AuthProvider({ children }: { children: React.ReactNode }) {
+  const [user, setUser] = useState<AuthUser | null>(null);
+
+  const signIn = async (email: string, _password: string) => {
+    setUser({ id: "demo", email });
+  };
+
+  const signOut = async () => {
+    setUser(null);
+  };
+
+  const register = async (name: string, email: string, _password: string) => {
+    setUser({ id: "demo", email, name });
+  };
+
+  const value = useMemo<AuthContextValue>(
+    () => ({ user, signIn, signOut, login: signIn, logout: signOut, register }),
+    [user]
+  );
+
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
 
-const AuthContext = createContext<AuthContextType | undefined>(undefined);
+export function useAuth(): AuthContextValue {
+  const ctx = useContext(AuthContext);
+  if (!ctx) {
+    throw new Error("useAuth must be used within an AuthProvider");
+  }
+  return ctx;
+}
+=======
+export function AuthProvider({ children }: { children: React.ReactNode }): React.ReactElement {
+	const [user, setUser] = useState<AuthUser>(null);
 
-export function AuthProvider({ children }: { children: React.ReactNode }) {
-  const { data: session, status } = useSession();
-  const [user, setUser] = useState<User | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const router = useRouter();
+	const signIn = async (email: string): Promise<void> => {
+		setUser({ id: "demo-user", email });
+	};
 
-  useEffect(() => {
-    if (status === "loading") {
-      setIsLoading(true);
-      return;
-    }
+	const signOut = async (): Promise<void> => {
+		setUser(null);
+	};
 
-    if (session?.user) {
-      setUser({
-        id: (session.user as any).id,
-        name: session.user.name || undefined,
-        email: session.user.email!,
-        role: (session.user as any).role || "user",
-        onboardingCompleted: false,
-      });
-    } else {
-      setUser(null);
-    }
+	const value = useMemo<AuthContextValue>(() => ({ user, signIn, signOut }), [user]);
 
-    setIsLoading(false);
-  }, [session, status]);
+	return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+}
+
+export function useAuth(): AuthContextValue {
+	const ctx = useContext(AuthContext);
+	if (!ctx) {
+		throw new Error("useAuth must be used within an AuthProvider");
+	}
+	return ctx;
+}
+
+>>>>>>> origin/main
+
+
+
+
 
   const login = async (email: string, password: string) => {
     try {
@@ -60,9 +97,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         redirect: false,
       });
 
-      if ((result as any)?.error) {
-        throw new Error((result as any).error);
-      }
 
       router.push("/dashboard");
     } catch (error) {
@@ -70,13 +104,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
-  // Alias for compatibility
-  const signInFunction = login;
-
-  const logout = async () => {
-    await signOut({ redirect: false });
-    router.push("/");
-  };
 
   const register = async (name: string, email: string, password: string) => {
     try {
@@ -88,10 +115,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         body: JSON.stringify({ name, email, password }),
       });
 
-      if (!response.ok) {
-        const error = await response.json();
-        throw new Error(error.message);
-      }
 
       await login(email, password);
     } catch (error) {
@@ -108,9 +131,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         },
       });
 
-      if (!response.ok) {
-        throw new Error("Failed to complete onboarding");
-      }
 
       if (user) {
         setUser({ ...user, onboardingCompleted: true });
@@ -120,19 +140,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
-  const value: AuthContextType = {
-    user,
-    isLoading,
-    isAuthenticated: !!user,
-    signIn: signInFunction,
-    login,
-    logout,
-    register,
-    completeOnboarding,
-  };
 
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
-}
 
 export function useAuth() {
   const context = useContext(AuthContext);
