@@ -1,30 +1,20 @@
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function middleware(_request: NextRequest) {
-  return NextResponse.next()
-}
-
-export const config = {
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
-}
-
-=======
-export function middleware(_req: NextRequest) {
-=======
-export function middleware(_request: NextRequest) {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0efa
-	return NextResponse.next()
+// Simple middleware that allows all requests
+export function middleware(request: NextRequest) {
+  return NextResponse.next();
 }
 
 export const config = {
-<<<<<<< HEAD
-	matcher: ['/((?!_next/static|_next/image|favicon.ico).*)']
-}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2af7
-=======
-	matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)']
-}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0efa
+  matcher: [
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     */
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+  ],
+};
