@@ -1,14 +1,10 @@
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular?: boolean;
-  cta: string;
-  ctaLink: string;
-}
-  category: string;
-  description: string;
-  tiers: PricingTier[];
-  features: string[];
-  benefits: string[];
+export default function PricingPage() {
+	return (
+		<div className="min-h-screen py-20 px-4">
+			<div className="max-w-5xl mx-auto">
+				<h1 className="text-3xl font-bold mb-4">Pricing</h1>
+				<p className="text-zinc-500">Contact us for a tailored quote.</p>
+			</div>
+		</div>
+	);
 }

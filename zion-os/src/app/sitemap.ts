@@ -1,4 +1,12 @@
-<<<<<<< HEAD
+import type { MetadataRoute } from 'next';
 
-=======
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
+export default function sitemap(): MetadataRoute.Sitemap {
+	return [
+		{
+			url: 'https://www.ziontechgroup.com/',
+			lastModified: new Date(),
+			changeFrequency: 'weekly',
+			priority: 1,
+		},
+	];
+}
