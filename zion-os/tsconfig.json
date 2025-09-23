@@ -17,15 +17,16 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    },
+  "paths": {
+    "@/*": [
+      "src/*"
+    ]
+  },
     "plugins": [
       {
         "name": "next"
       }
-    ],
-    "target": "ES2017"
+    ]
   },
   "include": [
     "next-env.d.ts",
