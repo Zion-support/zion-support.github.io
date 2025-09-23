@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
@@ -465,3 +466,6 @@ export const config = {
 	matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
 };
+=======
+export {};
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf
