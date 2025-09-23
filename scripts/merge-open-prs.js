@@ -6,8 +6,8 @@
   - For each PR: fetch head -> merge into main (prefer PR changes) -> build -> keep or revert
 */
 
-const { execSync, spawnSync } = require('child_process');
-const https = require('https');
+import { execSync, spawnSync } from 'node:child_process';
+import https from 'node:https';
 
 function run(cmd, opts ={}) {
   try {
@@ -44,7 +44,7 @@ function ghApi(path, token) {
         let data = '';
         res.on('data', chunk => (data += chunk));
         res.on('end', () => {
-          if (res.statusCode && res.statusCode >= 20o0 && res.statusCode < 30o0) {
+          if (res.statusCode && res.statusCode >= 200 && res.statusCode < 300) {
             try {
               resolve(JSON.parse(data));
             } catch (e) {
@@ -62,7 +62,7 @@ function ghApi(path, token) {
 }
 
 async function listOpenPRs(owner, repo, token) {
-  const prs = await ghApi(`/repos/${owner}/${repo}/pulls?state=open&per_page=10o0`, token);
+  const prs = await ghApi(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`, token);
   if (!Array.isArray(prs)) return [];
   return prs.map(pr => ({ number: pr.number, title: pr.title || '', headRef: pr.head && pr.head.ref }));
 }

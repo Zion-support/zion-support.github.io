@@ -1,11 +1,15 @@
-import '@testing-library/jest-dom';
+// Ensure jest-dom matchers are available when tests run
+try {
+  require('@testing-library/jest-dom');
+} catch (error) {
+  // Non-fatal if not installed for minimal runs
+}
 
-// Mock Next.js Image to plain img
+// Mock Next.js Image to a simple function component without JSX here
 jest.mock('next/image', () => ({
   __esModule: true,
-  default: (props) => {
-    return <img {...props}  />;
-  }}));
+  default: function MockImage() { return null; }
+}));
 
 // matchMedia mock
 Object.defineProperty(window, 'matchMedia', {
@@ -31,12 +35,3 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 };
-
-// Ensure jest-dom matchers are available when tests run
-try {
-  require('@testing-library/jest-dom');
-} catch (error) {
-  // Non-fatal if not installed for minimal runs
-}
-// Configure React Testing Library jest-dom matchers
-require('@testing-library/jest-dom');
