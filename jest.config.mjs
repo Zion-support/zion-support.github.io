@@ -7,6 +7,7 @@ const createJestConfig = nextJest({
 
 // Add any custom config to be passed to Jest
 const customJestConfig = {
+  roots: ['<rootDir>/app'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jest-environment-jsdom',
   testPathIgnorePatterns: [
@@ -15,34 +16,23 @@ const customJestConfig = {
     '<rootDir>/__tests__/',
     '<rootDir>/tests/',
     '<rootDir>/tests.disabled/',
-    '<rootDir>/.temp_backup_components/',
-    '<rootDir>/automation/backups/',
-    '<rootDir>/**/*.backup*/',
-    '<rootDir>/**/*backup*/',
-    '<rootDir>/**/*corrupt*/',
-    '<rootDir>/**/*conflict*/',
-    '<rootDir>/src.disabled/',
-    '<rootDir>/src_backup_temp/',
-    '<rootDir>/src_backup/',
-    '<rootDir>/backup-problematic-files/',
-    '<rootDir>/pages-disabled/',
-    '<rootDir>/pages.bak/',
-    '<rootDir>/components.disabled/',
-    '<rootDir>/components.disabled_full/',
-    '<rootDir>/pages.disabled/',
-    '<rootDir>/pages.disabled_auto/',
-    '<rootDir>/pages.disabled_full/',
-    '<rootDir>/pages_backup_before_cleanup/',
-    '<rootDir>/pages.broken/',
-    '<rootDir>/pages.corrupted',
-    '<rootDir>/pages.corrupted.*',
-    '<rootDir>/recovered-branches/',
-    '<rootDir>/ts_files_backup/',
-    '<rootDir>/temp_exclude/',
-    '<rootDir>/corrupted_backup/',
-    '<rootDir>/e2e/',
   ],
-  moduleNameMapping: {
+  modulePathIgnorePatterns: [
+    '<rootDir>/automation/',
+    '<rootDir>/automation/backups/',
+    '<rootDir>/apps.backup/',
+    '<rootDir>/backup/',
+    '<rootDir>/backups/',
+    '<rootDir>/backup-merge-conflicts/',
+    '<rootDir>/backup-problematic-files/',
+    '<rootDir>/recovered-branches/',
+    '<rootDir>/components/apps/',
+    '<rootDir>/zion-os/',
+    '<rootDir>/zion-website/',
+    '<rootDir>/zion-ai-assistant/',
+    '<rootDir>/server/'
+  ],
+  moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
 }
