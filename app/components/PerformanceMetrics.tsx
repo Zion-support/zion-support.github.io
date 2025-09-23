@@ -1,5 +1,4 @@
 "use client";
-<<<<<<< HEAD
 import React from 'react';
 
 export default function PerformanceMetrics() {
@@ -10,9 +9,3 @@ export default function PerformanceMetrics() {
     </div>
   );
 }
-=======
-
-export default function PerformanceMetrics() {
-	return null;
-}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f

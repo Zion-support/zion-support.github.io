@@ -1,5 +1,4 @@
 "use client";
-<<<<<<< HEAD
 import React from 'react';
 
 export default function AI2026QuantumRevolutionBanner() {
@@ -11,9 +10,4 @@ export default function AI2026QuantumRevolutionBanner() {
 			</div>
 		</section>
 	);
-=======
-
-export default function AI2026QuantumRevolutionBanner() {
-	return null;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f
 }
