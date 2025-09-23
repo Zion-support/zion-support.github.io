@@ -1,11 +1,14 @@
-export default function DocsPage() {
-  return (
-    <main style={{ padding: "2rem" }}>
-      <h1>Documentation</h1>
-      <p>Read the docs for Zion OS.</p>
-    </main>
-  );
+import React from 'react';
+
+export default function DocsPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>Documentation</h1>
+			<p>Browse product and API documentation.</p>
+		</main>
+	);
 }
+
 
 
 

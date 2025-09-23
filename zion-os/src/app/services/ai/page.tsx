@@ -1,8 +1,11 @@
-export default function AiServicesPage() {
-  return (
-    <main style={{ padding: "2rem" }}>
-      <h1>AI Services</h1>
-      <p>End-to-end AI services for your business.</p>
-    </main>
-  );
+import React from 'react';
+
+export default function AiServicesPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>AI Services</h1>
+			<p>Explore our AI services.</p>
+		</main>
+	);
 }
+

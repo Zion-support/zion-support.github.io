@@ -1,8 +1,11 @@
-export default function BlockchainServicesPage() {
-  return (
-    <main style={{ padding: "2rem" }}>
-      <h1>Blockchain Services</h1>
-      <p>Enterprise blockchain and smart contract solutions.</p>
-    </main>
-  );
+import React from 'react';
+
+export default function BlockchainServicesPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>Blockchain Services</h1>
+			<p>Blockchain and Web3 consulting and development.</p>
+		</main>
+	);
 }
+
