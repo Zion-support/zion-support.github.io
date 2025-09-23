@@ -15,6 +15,15 @@ const customJestConfig = {
     '/out/',
     '/dist/',
     '/__tests__/',
+    '/recovered-branches/',
+    '/src_backup/',
+    '/backup/',
+    '/backup-problematic-files/',
+    '/components.disabled/',
+    '/pages-disabled/',
+    '/pages.disabled/',
+    '/tests/',
+    '/temp_exclude/'
   ],
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }]
