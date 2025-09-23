@@ -218,6 +218,7 @@ export default function HomePage() {
 =======
 import FeatureCard from './components/FeatureCard';
 
+<<<<<<< HEAD
 export default function HomePage() {
   const features = [
     {
@@ -924,3 +925,5 @@ export default function HomePage() {
   );
 }
 
+=======
+>>>>>>> 45bde326a2e7 (fix(zion-os): repair corrupted pages, add path alias, implement minimal onboarding route; fix signin/signup/dashboard pages; clean homepage duplicates; build zion-website and zion-ai-assistant)
