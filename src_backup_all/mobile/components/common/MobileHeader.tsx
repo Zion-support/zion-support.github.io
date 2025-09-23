@@ -1,5 +1,3 @@
-import React from "react";
-import { useRouter } from 'next/router';
 import { ChevronLeft, Bell, Settings } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -21,8 +19,7 @@ export function MobileHeader({
   showSettings = false,
   className,
   onNotificationsClick,
-  onSettingsClick,
-}: MobileHeaderProps) {
+  onSettingsClick}: MobileHeaderProps) {
   const router = useRouter();
 
   return (
@@ -39,7 +36,7 @@ export function MobileHeader({
               className="mr-2" 
               onClick={() => router.back()}
             >
-              <ChevronLeft className="h-5 w-5" />
+              <ChevronLeft className="h-5 w-5"  />
               <span className="sr-only">Back</span>
             </Button>
           )}
@@ -54,7 +51,7 @@ export function MobileHeader({
               size="icon"
               onClick={onNotificationsClick}
             >
-              <Bell className="h-5 w-5" />
+              <Bell className="h-5 w-5"  />
               <span className="sr-only">Notifications</span>
             </Button>
           )}
@@ -64,7 +61,7 @@ export function MobileHeader({
               size="icon"
               onClick={onSettingsClick}
             >
-              <Settings className="h-5 w-5" />
+              <Settings className="h-5 w-5"  />
               <span className="sr-only">Settings</span>
             </Button>
           )}

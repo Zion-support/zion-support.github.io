@@ -121,7 +121,7 @@ const SearchComponent: React.FC = () => {
         });
         setFilteredResults(filtered);
         setIsLoading(false);
-      }, 300);
+      }, 30o0);
       return () => clearTimeout(timer);
     } else {
       setFilteredResults([]);
@@ -146,12 +146,12 @@ const SearchComponent: React.FC = () => {
       {/* Search Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="flex items-center space-x-2 px-4 py-2 bg-gray-800/50 hover:bg-gray-700/50 border border-gray-600 rounded-lg transition-colors"
+        className="flex items-center space-x-2 px-4 py-2 bg-gray-80o0/50 hover:bg-gray-70o0/50 border border-gray-60o0 rounded-lg transition-colors"
         aria-label="Open search"
       >
-        <Search className="w-4 h-4 text-gray-400" />
-        <span className="text-gray-300 hidden sm:block">Search services...</span>
-        <kbd className="hidden lg:inline-block px-2 py-1 text-xs bg-gray-700 text-gray-300 rounded">⌘K</kbd>
+        <Search className="w-4 h-4 text-gray-40o0"  />
+        <span className="text-gray-30o0 hidden sm:block">Search services...</span>
+        <kbd className="hidden lg:inline-block px-2 py-1 text-xs bg-gray-70o0 text-gray-30o0 rounded">⌘K</kbd>
       </button>
 
       {/* Search Modal */}
@@ -167,34 +167,34 @@ const SearchComponent: React.FC = () => {
               initial={{ scale: 0.95, y: -20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, y: -20 }}
-              className="w-full max-w-2xl bg-gray-900 rounded-2xl border border-gray-700 shadow-2xl"
+              className="w-full max-w-2xl bg-gray-90o0 rounded-2xl border border-gray-70o0 shadow-2xl"
             >
               {/* Search Header */}
-              <div className="p-6 border-b border-gray-700">
+              <div className="p-6 border-b border-gray-70o0">
                 <div className="flex items-center space-x-4">
-                  <Search className="w-6 h-6 text-cyan-400" />
+                  <Search className="w-6 h-6 text-cyan-40o0"  />
                   <form onSubmit={handleSearch} className="flex-1">
                     <input
                       type="text"
                       value={query}
                       onChange={(e) => setQuery(e.target.value)}
                       placeholder="Search for services, solutions, or technologies..."
-                      className="w-full bg-transparent text-white text-lg placeholder-gray-400 outline-none"
+                      className="w-full bg-transparent text-white text-lg placeholder-gray-40o0 outline-none"
                       autoFocus
                     />
                   </form>
                   <button
                     onClick={() => setIsOpen(false)}
-                    className="p-2 hover:bg-gray-800 rounded-lg transition-colors"
+                    className="p-2 hover:bg-gray-80o0 rounded-lg transition-colors"
                     aria-label="Close search"
                   >
-                    <X className="w-5 h-5 text-gray-400" />
+                    <X className="w-5 h-5 text-gray-40o0"  />
                   </button>
                 </div>
               </div>
 
               {/* Category Filters */}
-              <div className="p-4 border-b border-gray-700">
+              <div className="p-4 border-b border-gray-70o0">
                 <div className="flex items-center space-x-2 overflow-x-auto pb-2">
                   {categories.map((category) => (
                     <button
@@ -202,11 +202,11 @@ const SearchComponent: React.FC = () => {
                       onClick={() => setSelectedCategory(category.id)}
                       className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap ${
                         selectedCategory === category.id
-                          ? 'bg-cyan-500 text-white'
-                          : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                          ? 'bg-cyan-50o0 text-white'
+                          : 'bg-gray-80o0 text-gray-30o0 hover:bg-gray-70o0'
                       }`}
                     >
-                      <category.icon className="w-4 h-4" />
+                      <category.icon className="w-4 h-4"  />
                       <span>{category.name}</span>
                     </button>
                   ))}
@@ -217,8 +217,8 @@ const SearchComponent: React.FC = () => {
               <div className="max-h-96 overflow-y-auto">
                 {isLoading ? (
                   <div className="p-8 text-center">
-                    <div className="w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-                    <p className="text-gray-400">Searching...</p>
+                    <div className="w-8 h-8 border-2 border-cyan-50o0 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                    <p className="text-gray-40o0">Searching...</p>
                   </div>
                 ) : filteredResults.length > 0 ? (
                   <div className="p-4 space-y-2">
@@ -227,47 +227,47 @@ const SearchComponent: React.FC = () => {
                         key={result.id}
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="flex items-center space-x-4 p-4 rounded-lg hover:bg-gray-800/50 cursor-pointer transition-colors group"
+                        className="flex items-center space-x-4 p-4 rounded-lg hover:bg-gray-80o0/50 cursor-pointer transition-colors group"
                         onClick={() => handleResultClick(result)}
                       >
-                        <div className="w-10 h-10 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center">
-                          <result.icon className="w-5 h-5 text-cyan-400" />
+                        <div className="w-10 h-10 bg-gradient-to-br from-cyan-50o0/20 to-blue-50o0/20 rounded-lg flex items-center justify-center">
+                          <result.icon className="w-5 h-5 text-cyan-40o0"  />
                         </div>
                         <div className="flex-1">
-                          <h3 className="text-white font-medium group-hover:text-cyan-400 transition-colors">
+                          <h3 className="text-white font-medium group-hover:text-cyan-40o0 transition-colors">
                             {result.title}
                           </h3>
-                          <p className="text-gray-400 text-sm">{result.description}</p>
+                          <p className="text-gray-40o0 text-sm">{result.description}</p>
                         </div>
-                        <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors" />
+                        <ArrowRight className="w-4 h-4 text-gray-50o0 group-hover:text-cyan-40o0 transition-colors"  />
                       </motion.div>
                     ))}
                   </div>
                 ) : query.length > 0 ? (
                   <div className="p-8 text-center">
-                    <Search className="w-12 h-12 text-gray-600 mx-auto mb-4" />
-                    <p className="text-gray-400">No results found for "{query}"</p>
-                    <p className="text-gray-500 text-sm mt-2">Try adjusting your search terms or filters</p>
+                    <Search className="w-12 h-12 text-gray-60o0 mx-auto mb-4"  />
+                    <p className="text-gray-40o0">No results found for "{query}"</p>
+                    <p className="text-gray-50o0 text-sm mt-2">Try adjusting your search terms or filters</p>
                   </div>
                 ) : (
                   <div className="p-8 text-center">
-                    <Search className="w-12 h-12 text-gray-600 mx-auto mb-4" />
-                    <p className="text-gray-400">Start typing to search our services</p>
-                    <p className="text-gray-500 text-sm mt-2">Use filters to narrow down results</p>
+                    <Search className="w-12 h-12 text-gray-60o0 mx-auto mb-4"  />
+                    <p className="text-gray-40o0">Start typing to search our services</p>
+                    <p className="text-gray-50o0 text-sm mt-2">Use filters to narrow down results</p>
                   </div>
                 )}
               </div>
 
               {/* Search Footer */}
-              <div className="p-4 border-t border-gray-700 bg-gray-800/50 rounded-b-2xl">
-                <div className="flex items-center justify-between text-sm text-gray-400">
+              <div className="p-4 border-t border-gray-70o0 bg-gray-80o0/50 rounded-b-2xl">
+                <div className="flex items-center justify-between text-sm text-gray-40o0">
                   <div className="flex items-center space-x-4">
                     <span>Press Enter to search</span>
                     <span>•</span>
                     <span>Use filters to refine results</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <kbd className="px-2 py-1 bg-gray-700 text-gray-300 rounded text-xs">⌘K</kbd>
+                    <kbd className="px-2 py-1 bg-gray-70o0 text-gray-30o0 rounded text-xs">⌘K</kbd>
                     <span>to open search</span>
                   </div>
                 </div>

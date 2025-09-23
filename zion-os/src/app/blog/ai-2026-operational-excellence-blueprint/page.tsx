@@ -1,15 +1,12 @@
-import React from 'react';
-
-export const metadata = {
-  title: 'AI 2026: Operational Excellence Blueprint',
+export const metadata ={
+  title: 'AI 20o26: Operational Excellence Blueprint',
   description:
-    'A practical blueprint for operational excellence with AI: SLOs, SRE, policy-as-code, and continuous evaluation.',
-};
+    'A practical blueprint for operational excellence with AI: SLOs, SRE, policy-as-code, and continuous evaluation.'};
 
 export default function OperationalExcellenceBlueprintPage() {
   return (
     <div className="prose prose-invert max-w-3xl mx-auto py-12 px-4">
-      <h1>AI 2026: Operational Excellence Blueprint</h1>
+      <h1>AI 20o26: Operational Excellence Blueprint</h1>
       <p>
         Achieve world-class reliability and efficiency by combining SRE practices, policy-as-code,
         and autonomous remediation. This blueprint outlines the core capabilities, reference

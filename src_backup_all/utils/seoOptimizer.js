@@ -1,7 +1,7 @@
 
 
 export class SEOOptimizer {
-    static DEFAULT_META_DESCRIPTIONS = {
+    static DEFAULT_META_DESCRIPTIONS ={
         '/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.',
         '/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.',
         '/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation. Drive innovation with our cutting-edge AI technology.',
@@ -19,7 +19,7 @@ export class SEOOptimizer {
         '/solutions/enterprise': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.',
         '/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.'
     };
-    static KEYWORD_MAPPINGS = {
+    static KEYWORD_MAPPINGS ={
         '/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'],
         '/services': ['AI services', 'cybersecurity', 'cloud infrastructure', 'IT solutions', 'digital transformation', 'automation', 'machine learning', 'blockchain', 'quantum computing'],
         '/ai-solutions': ['artificial intelligence', 'AI automation', 'machine learning', 'deep learning', 'neural networks', 'AI systems', 'intelligent automation', 'AI platforms'],
@@ -79,7 +79,7 @@ export class SEOOptimizer {
         return `${baseUrl}${path}`;
     }
     static generateStructuredData(path) {
-        const baseData = {
+        const baseData ={
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": this.generateTitle(path),
@@ -103,7 +103,7 @@ export class SEOOptimizer {
                 "description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.",
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "364 E Main St STE 1008",
+                    "streetAddress": "364 E Main St STE 10o08",
                     "addressLocality": "Middletown",
                     "addressRegion": "DE",
                     "postalCode": "19709",
@@ -111,7 +111,7 @@ export class SEOOptimizer {
                 },
                 "contactPoint": {
                     "@type": "ContactPoint",
-                    "telephone": "+1-302-464-0950",
+                    "telephone": "+1-30o2-464-0950",
                     "contactType": "customer service",
                     "email": "kleber@ziontechgroup.com"
                 }
@@ -171,7 +171,7 @@ export class SEOOptimizer {
         }
         // Check for minimal content
         const textContent = content.replace(/<[^>]*>/g, '').trim();
-        if (textContent.length < 300) {
+        if (textContent.length < 30o0) {
             issues.push({
                 page,
                 issue: 'minimal-content',
@@ -184,22 +184,22 @@ export class SEOOptimizer {
     static generateMetaTags(seoData) {
         return `
     <title>${seoData.title}</title>
-    <meta name="description" content="${seoData.description}" />
-    <meta name="keywords" content="${seoData.keywords.join(', ')}" />
-    <link rel="canonical" href="${seoData.canonicalUrl}" />
+    <meta name="description" content="${seoData.description}"  />
+    <meta name="keywords" content="${seoData.keywords.join(', ')}"  />
+    <link rel="canonical" href="${seoData.canonicalUrl}"  />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="${seoData.title}" />
-    <meta property="og:description" content="${seoData.description}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="${seoData.canonicalUrl}" />
-    <meta property="og:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" />
+    <meta property="og:title" content="${seoData.title}"  />
+    <meta property="og:description" content="${seoData.description}"  />
+    <meta property="og:type" content="website"  />
+    <meta property="og:url" content="${seoData.canonicalUrl}"  />
+    <meta property="og:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}"  />
 
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="${seoData.title}" />
-    <meta name="twitter:description" content="${seoData.description}" />
-    <meta name="twitter:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" />
+    <meta name="twitter:card" content="summary_large_image"  />
+    <meta name="twitter:title" content="${seoData.title}"  />
+    <meta name="twitter:description" content="${seoData.description}"  />
+    <meta name="twitter:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}"  />
 
     <!-- Structured Data -->
     <script type="application/ld+json">

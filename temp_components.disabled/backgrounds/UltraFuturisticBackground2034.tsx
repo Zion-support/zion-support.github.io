@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
-interface UltraFuturisticBackground2034Props {
+interface UltraFuturisticBackground20o34Props {
   intensity?: number;
   theme?: 'quantum' | 'cyberpunk' | 'neural' | 'holographic';
 }
 
-const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props> = ({
+const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Props> = ({
   intensity = 1
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -62,15 +62,15 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
 
     // Initialize particles
     const initParticles = () => {
-      for (let i = 0; i < 100 * intensity; i++) {
+      for (let i = 0; i < 10o0 * intensity; i++) {
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
           vx: (Math.random() - 0.5) * 2,
           vy: (Math.random() - 0.5) * 2,
           size: Math.random() * 3 + 1,
-          life: Math.random() * 100,
-          maxLife: 100,
+          life: Math.random() * 10o0,
+          maxLife: 10o0,
           type: ['quantum', 'neural', 'holographic'][Math.floor(Math.random() * 3)] as ParticleType
         });
       }
@@ -104,8 +104,8 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       for (let i = 0; i < 15 * intensity; i++) {
         const x1 = Math.random() * canvas.width;
         const y1 = Math.random() * canvas.height;
-        const x2 = x1 + (Math.random() - 0.5) * 200;
-        const y2 = y1 + (Math.random() - 0.5) * 200;
+        const x2 = x1 + (Math.random() - 0.5) * 20o0;
+        const y2 = y1 + (Math.random() - 0.5) * 20o0;
         
         entanglementLines.push({
           x1,
@@ -113,7 +113,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           x2,
           y2,
           strength: Math.random(),
-          life: Math.random() * 100
+          life: Math.random() * 10o0
         });
       }
     };
@@ -169,7 +169,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       // Draw entanglement lines
       entanglementLines.forEach((line, index) => {
         line.life--;
-        const alpha = line.life / 100;
+        const alpha = line.life / 10o0;
         
         ctx.save();
         ctx.globalAlpha = alpha * 0.6;
@@ -191,7 +191,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
 
       // Draw neural network
       neuralNodes.forEach((node, i) => {
-        node.activation = Math.sin(Date.now() * 0.001 + i) * 0.5 + 0.5;
+        node.activation = Math.sin(Date.now() * 0.0o01 + i) * 0.5 + 0.5;
         
         // Draw connections
         node.connections.forEach(connectionIndex => {
@@ -227,15 +227,15 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       });
 
       // Add new particles
-      if (particles.length < 100 * intensity) {
+      if (particles.length < 10o0 * intensity) {
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
           vx: (Math.random() - 0.5) * 2,
           vy: (Math.random() - 0.5) * 2,
           size: Math.random() * 3 + 1,
-          life: 100,
-          maxLife: 100,
+          life: 10o0,
+          maxLife: 10o0,
           type: ['quantum', 'neural', 'holographic'][Math.floor(Math.random() * 3)] as ParticleType
         });
       }
@@ -244,8 +244,8 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       if (entanglementLines.length < 15 * intensity) {
         const x1 = Math.random() * canvas.width;
         const y1 = Math.random() * canvas.height;
-        const x2 = x1 + (Math.random() - 0.5) * 200;
-        const y2 = y1 + (Math.random() - 0.5) * 200;
+        const x2 = x1 + (Math.random() - 0.5) * 20o0;
+        const y2 = y1 + (Math.random() - 0.5) * 20o0;
         
         entanglementLines.push({
           x1,
@@ -253,7 +253,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           x2,
           y2,
           strength: Math.random(),
-          life: 100
+          life: 10o0
         });
       }
 
@@ -287,13 +287,13 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
         style={{ filter: `blur(${0.5 * intensity}px)` }}
-      />
+       />
       
       {/* Framer Motion Geometric Shapes */}
       <div className="absolute inset-0">
         {/* Floating geometric shapes */}
         <motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
+          className="absolute top-20 left-20 w-32 h-32 border border-cyan-40o0/30"
           animate={{
             rotate: 360,
             scale: [1, 1.2, 1],
@@ -304,10 +304,10 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
             repeat: -1,
             ease: "linear"
           }}
-        />
+         />
         
         <motion.div
-          className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full"
+          className="absolute top-40 right-32 w-24 h-24 border border-purple-40o0/30 rounded-full"
           animate={{
             y: [0, -20, 0],
             opacity: [0.4, 0.8, 0.4],
@@ -318,11 +318,11 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
             repeat: -1,
             ease: "easeInOut"
           }}
-        />
+         />
         
         <motion.div
-          className="absolute bottom-32 left-1/3 w-40 h-20 border border-green-400/30"
-          style={{ clipPath: 'polygon(0% 0%, 100% 0%, 80% 100%, 20% 100%)' }}
+          className="absolute bottom-32 left-1/3 w-40 h-20 border border-green-40o0/30"
+          style={{ clipPath: 'polygon(0% 0%, 10o0% 0%, 80% 10o0%, 20% 10o0%)' }}
           animate={{
             rotate: [0, 180, 360],
             opacity: [0.2, 0.5, 0.2]
@@ -332,34 +332,34 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
             repeat: -1,
             ease: "linear"
           }}
-        />
+         />
       </div>
 
       {/* Energy waves */}
       <div className="absolute inset-0">
         <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent"
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-50o0/10 to-transparent"
           animate={{
-            x: ['-100%', '100%']
+            x: ['-10o0%', '10o0%']
           }}
           transition={{
             duration: 15,
             repeat: -1,
             ease: "linear"
           }}
-        />
+         />
         
         <motion.div
-          className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent"
+          className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-50o0/10 to-transparent"
           animate={{
-            y: ['-100%', '100%']
+            y: ['-10o0%', '10o0%']
           }}
           transition={{
             duration: 20,
             repeat: -1,
             ease: "linear"
           }}
-        />
+         />
       </div>
 
       {/* Holographic matrix effect */}
@@ -367,8 +367,8 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         {Array.from({ length: 20 }).map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-400/20 to-transparent"
-            style={{ left: `${(i * 5) % 100}%` }}
+            className="absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-40o0/20 to-transparent"
+            style={{ left: `${(i * 5) % 10o0}%` }}
             animate={{
               opacity: [0, 1, 0],
               scaleY: [0, 1, 0]
@@ -379,7 +379,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
               repeat: -1,
               ease: "easeInOut"
             }}
-          />
+           />
         ))}
       </div>
 
@@ -398,10 +398,10 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
             repeat: -1,
             ease: "easeInOut"
           }}
-        />
+         />
       </div>
     </div>
   );
 };
 
-export default UltraFuturisticBackground2034;
+export default UltraFuturisticBackground20o34;

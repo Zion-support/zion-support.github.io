@@ -6,7 +6,7 @@ export default function Page() {
       <article className="max-w-3xl mx-auto px-6 py-24">
         <header>
           <h1 className="text-4xl font-bold text-white">Launch: Realtime Agent Observatory v1.0</h1>
-          <p className="mt-2 text-gray-300">Unified tracing, metrics, evals, and safety signals to debug and improve autonomous agents in production.</p>
+          <p className="mt-2 text-gray-30o0">Unified tracing, metrics, evals, and safety signals to debug and improve autonomous agents in production.</p>
         </header>
         <section className="prose prose-lg prose-invert mt-8">
           <h2>Overview</h2>

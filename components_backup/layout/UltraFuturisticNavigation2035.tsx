@@ -23,10 +23,10 @@ interface NavigationItem {
   category?: string;
 }
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
@@ -44,24 +44,24 @@ function normalizeHref(href: string): string {
 const navigationItems: NavigationItem[] = [
   {
     name: 'All Services',
-    href: '/comprehensive-services-showcase-2025',
-    icon: <Globe className="w-5 h-5" />,
+    href: '/comprehensive-services-showcase-20o25',
+    icon: <Globe className="w-5 h-5"  />,
     description: 'Complete portfolio of all technology services',
     badge: 'Showcase',
     featured: true,
     children: [
-      { name: 'View All Services', href: '/comprehensive-services-showcase-2025', description: 'Complete services portfolio' },
-      { name: 'Ultimate 2025 Micro SAAS', href: '/ultimate-2025-micro-saas-showcase', description: 'Latest innovative services', featured: true },
-      { name: 'Comprehensive Services 2025', href: '/comprehensive-services-showcase-2025', description: 'Complete services portfolio' },
-      { name: 'Service Categories', href: '/comprehensive-services-showcase-2025#categories', description: 'Browse by category' },
-      { name: 'Pricing Comparison', href: '/comprehensive-services-showcase-2025#pricing', description: 'Compare service costs' },
-      { name: 'Service Search', href: '/comprehensive-services-showcase-2025#search', description: 'Find specific services' },
-      { name: 'Latest Innovations', href: '/revolutionary-2025-services-showcase', description: 'Cutting-edge solutions' },
-      { name: 'Revolutionary 2026 Services', href: '/revolutionary-2026-services', description: 'Next generation solutions' },
-      { name: '2026 Services', href: '/revolutionary-2026-services', description: 'Next generation solutions' },
-      { name: '2027 Services', href: '/revolutionary-2027-services-showcase', description: 'Future-ready services' },
-      { name: 'Ultimate 2026 Showcase', href: '/ultimate-2026-services-showcase', description: 'Premium service collection' },
-      { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', description: 'Premium service collection' },
+      { name: 'View All Services', href: '/comprehensive-services-showcase-20o25', description: 'Complete services portfolio' },
+      { name: 'Ultimate 20o25 Micro SAAS', href: '/ultimate-20o25-micro-saas-showcase', description: 'Latest innovative services', featured: true },
+      { name: 'Comprehensive Services 20o25', href: '/comprehensive-services-showcase-20o25', description: 'Complete services portfolio' },
+      { name: 'Service Categories', href: '/comprehensive-services-showcase-20o25#categories', description: 'Browse by category' },
+      { name: 'Pricing Comparison', href: '/comprehensive-services-showcase-20o25#pricing', description: 'Compare service costs' },
+      { name: 'Service Search', href: '/comprehensive-services-showcase-20o25#search', description: 'Find specific services' },
+      { name: 'Latest Innovations', href: '/revolutionary-20o25-services-showcase', description: 'Cutting-edge solutions' },
+      { name: 'Revolutionary 20o26 Services', href: '/revolutionary-20o26-services', description: 'Next generation solutions' },
+      { name: '20o26 Services', href: '/revolutionary-20o26-services', description: 'Next generation solutions' },
+      { name: '20o27 Services', href: '/revolutionary-20o27-services-showcase', description: 'Future-ready services' },
+      { name: 'Ultimate 20o26 Showcase', href: '/ultimate-20o26-services-showcase', description: 'Premium service collection' },
+      { name: 'Ultimate 20o26', href: '/ultimate-20o26-services-showcase', description: 'Premium service collection' },
       { name: 'Enterprise Solutions', href: '/enterprise-solutions-showcase', description: 'Enterprise-grade solutions' },
       { name: 'Innovative Business Solutions', href: '/innovative-business-solutions', description: 'Business transformation services' }
     ]
@@ -69,7 +69,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'AI & Consciousness',
     href: '/ai-services',
-    icon: <Brain className="w-5 h-5" />,
+    icon: <Brain className="w-5 h-5"  />,
     description: 'Revolutionary AI consciousness and emotional intelligence',
     badge: 'Revolutionary',
     category: 'ai-consciousness',
@@ -81,7 +81,7 @@ const navigationItems: NavigationItem[] = [
       { name: 'AI Decision Engine', href: '/ai-powered-decision-engine', description: 'AI-powered business decisions' },
       { name: 'AI Content Automation', href: '/intelligent-content-automation-platform', description: 'Automate content creation' },
       { name: 'AI HR Analytics', href: '/intelligent-hr-analytics-platform', description: 'Transform HR with AI insights' },
-      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2025', description: 'Emotional intelligence and self-awareness' },
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-20o25', description: 'Emotional intelligence and self-awareness' },
       { name: 'AI Quantum Neural Network', href: '/ai-quantum-neural-network', description: 'Hybrid AI-Quantum computing platform' },
       { name: 'Advanced AI Automation', href: '/advanced-ai-automation-services', description: 'AI automation for development and DevOps' }
     ]
@@ -89,7 +89,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'IT & Infrastructure',
     href: '/it-services',
-    icon: <Cpu className="w-5 h-5" />,
+    icon: <Cpu className="w-5 h-5"  />,
     description: 'Next-generation IT solutions and infrastructure',
     badge: 'Quantum',
     category: 'it-infrastructure',
@@ -102,7 +102,7 @@ const navigationItems: NavigationItem[] = [
       { name: 'CRM Intelligence Suite', href: '/smart-crm-intelligence-suite', description: 'Transform your CRM with AI' },
       { name: 'Content Automation Platform', href: '/intelligent-content-automation-platform', description: 'AI-powered content management' },
       { name: 'Decision Engine', href: '/ai-powered-decision-engine', description: 'AI-powered business decisions' },
-      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2025', description: 'Emotional intelligence and self-awareness' },
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-20o25', description: 'Emotional intelligence and self-awareness' },
       { name: 'AI Autonomous Business Operations', href: '/ai-autonomous-business-operations', description: 'Fully autonomous business management' },
       { name: 'AI Autonomous Research', href: '/ai-autonomous-research-assistant', description: 'Self-directed AI research' },
       { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-training', description: 'EQ training platform' },
@@ -127,7 +127,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Quantum & Emerging Tech',
     href: '/quantum-services',
-    icon: <Atom className="w-5 h-5" />,
+    icon: <Atom className="w-5 h-5"  />,
     description: 'Quantum computing and breakthrough technologies',
     badge: 'Hot',
     featured: true,
@@ -156,7 +156,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Enterprise IT',
     href: '/enterprise-it',
-    icon: <Shield className="w-5 h-5" />,
+    icon: <Shield className="w-5 h-5"  />,
     description: 'Advanced enterprise infrastructure and security solutions',
     badge: 'Enterprise',
     featured: true,
@@ -183,7 +183,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Solutions',
     href: '/solutions',
-    icon: <Target className="w-5 h-5" />,
+    icon: <Target className="w-5 h-5"  />,
     description: 'Industry-specific solutions and use cases',
     children: [
       { name: 'Healthcare Solutions', href: '/healthcare-solutions', description: 'AI-powered healthcare technology' },
@@ -199,7 +199,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Advanced AI Automation',
     href: '/advanced-ai-automation-services',
-    icon: <Brain className="w-5 h-5" />,
+    icon: <Brain className="w-5 h-5"  />,
     description: 'Revolutionary AI automation for development, testing, DevOps, and security',
     badge: 'Advanced',
     category: 'advanced-solutions',
@@ -244,7 +244,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Advanced IT Infrastructure',
     href: '/advanced-it-infrastructure-services',
-    icon: <Cloud className="w-5 h-5" />,
+    icon: <Cloud className="w-5 h-5"  />,
     description: 'Next-generation infrastructure with quantum computing and edge computing',
     badge: 'Advanced',
     children: [
@@ -263,7 +263,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Innovative Business Solutions',
     href: '/innovative-business-solutions',
-    icon: <Target className="w-5 h-5" />,
+    icon: <Target className="w-5 h-5"  />,
     description: 'AI-powered business intelligence, marketing, sales, and HR solutions',
     badge: 'Innovative',
     children: [
@@ -279,7 +279,7 @@ const navigationItems: NavigationItem[] = [
   }
 ];
 
-export default function UltraFuturisticNavigation2035() {
+export default function UltraFuturisticNavigation20o35() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -302,31 +302,31 @@ export default function UltraFuturisticNavigation2035() {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
       isScrolled 
-        ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10' 
+        ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-50o0/20 shadow-2xl shadow-cyan-50o0/10' 
         : 'bg-black/80 backdrop-blur-lg'
     }`}>
       {/* Top Contact Bar */}
-      <div className="bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-b border-cyan-500/20">
+      <div className="bg-gradient-to-r from-cyan-90o0/20 via-blue-90o0/20 to-purple-90o0/20 border-b border-cyan-50o0/20">
         <div className="container mx-auto px-4 py-2">
           <div className="flex items-center justify-between text-sm">
             <div className="flex items-center space-x-6">
-              <a href={`tel:${contactInfo.mobile}`} className="flex items-center text-cyan-300 hover:text-cyan-200 transition-colors">
-                <Phone className="w-4 h-4 mr-2" />
+              <a href={`tel:${contactInfo.mobile}`} className="flex items-center text-cyan-30o0 hover:text-cyan-20o0 transition-colors">
+                <Phone className="w-4 h-4 mr-2"  />
                 {contactInfo.mobile}
               </a>
-              <a href={`mailto:${contactInfo.email}`} className="flex items-center text-cyan-300 hover:text-cyan-200 transition-colors">
-                <Mail className="w-4 h-4 mr-2" />
+              <a href={`mailto:${contactInfo.email}`} className="flex items-center text-cyan-30o0 hover:text-cyan-20o0 transition-colors">
+                <Mail className="w-4 h-4 mr-2"  />
                 {contactInfo.email}
               </a>
-              <div className="flex items-center text-cyan-300">
-                <MapPin className="w-4 h-4 mr-2" />
+              <div className="flex items-center text-cyan-30o0">
+                <MapPin className="w-4 h-4 mr-2"  />
                 {contactInfo.address}
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <a href={contactInfo.website} className="text-cyan-300 hover:text-cyan-200 transition-colors">
+              <a href={contactInfo.website} className="text-cyan-30o0 hover:text-cyan-20o0 transition-colors">
                 {contactInfo.website}
               </a>
             </div>
@@ -340,16 +340,16 @@ export default function UltraFuturisticNavigation2035() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
-                <Rocket className="w-7 h-7 text-white" />
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-xl flex items-center justify-center">
+                <Rocket className="w-7 h-7 text-white"  />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity"></div>
             </div>
             <div>
-              <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              <div className="text-2xl font-bold bg-gradient-to-r from-cyan-40o0 to-blue-50o0 bg-clip-text text-transparent">
                 Zion Tech Group
               </div>
-              <div className="text-sm text-gray-400">Innovation • Intelligence • Impact</div>
+              <div className="text-sm text-gray-40o0">Innovation • Intelligence • Impact</div>
             </div>
           </Link>
 
@@ -359,23 +359,23 @@ export default function UltraFuturisticNavigation2035() {
               <div key={item.name} className="relative group">
                 <button
                   onClick={() => toggleDropdown(item.name)}
-                  className="flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-white transition-colors rounded-lg hover:bg-gray-800/50"
+                  className="flex items-center space-x-2 px-4 py-2 text-gray-30o0 hover:text-white transition-colors rounded-lg hover:bg-gray-80o0/50"
                 >
                   {item.icon}
                   <span>{item.name}</span>
                   {item.badge && (
                     <span className={`px-2 py-1 text-xs rounded-full ${
-                      item.badge === 'New' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :
-                      item.badge === 'Hot' ? 'bg-red-500/20 text-red-400 border border-red-500/30' :
-                      item.badge === 'Advanced' ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30' :
-                      item.badge === 'Enterprise' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' :
-                      item.badge === 'Innovative' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' :
-                      'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+                      item.badge === 'New' ? 'bg-green-50o0/20 text-green-40o0 border border-green-50o0/30' :
+                      item.badge === 'Hot' ? 'bg-red-50o0/20 text-red-40o0 border border-red-50o0/30' :
+                      item.badge === 'Advanced' ? 'bg-purple-50o0/20 text-purple-40o0 border border-purple-50o0/30' :
+                      item.badge === 'Enterprise' ? 'bg-blue-50o0/20 text-blue-40o0 border border-blue-50o0/30' :
+                      item.badge === 'Innovative' ? 'bg-orange-50o0/20 text-orange-40o0 border border-orange-50o0/30' :
+                      'bg-cyan-50o0/20 text-cyan-40o0 border border-cyan-50o0/30'
                     }`}>
                       {item.badge}
                     </span>
                   )}
-                  <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+                  <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180"  />
                 </button>
 
                 {/* Dropdown Menu */}
@@ -386,29 +386,29 @@ export default function UltraFuturisticNavigation2035() {
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-cyan-500/20 rounded-xl shadow-2xl shadow-cyan-500/20 overflow-hidden"
+                      className="absolute top-full left-0 mt-2 w-80 bg-gray-90o0/95 backdrop-blur-xl border border-cyan-50o0/20 rounded-xl shadow-2xl shadow-cyan-50o0/20 overflow-hidden"
                       onMouseLeave={closeDropdown}
                     >
                       <div className="p-6">
                         <div className="mb-4">
                           <h3 className="text-lg font-semibold text-white mb-2">{item.title || item.name}</h3>
-                          <p className="text-sm text-gray-400">{item.description}</p>
+                          <p className="text-sm text-gray-40o0">{item.description}</p>
                         </div>
                         <div className="space-y-2">
                           {item.children?.map((child) => (
                             <Link
                               key={child.name}
                               href={child.href}
-                              className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
+                              className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-80o0/50 transition-colors group"
                             >
                               <div>
-                                <div className="text-white group-hover:text-cyan-400 transition-colors">
+                                <div className="text-white group-hover:text-cyan-40o0 transition-colors">
                                   {child.name}
                                 </div>
-                                <div className="text-sm text-gray-400">{child.description}</div>
+                                <div className="text-sm text-gray-40o0">{child.description}</div>
                               </div>
                               {child.featured && (
-                                <Star className="w-4 h-4 text-cyan-400" />
+                                <Star className="w-4 h-4 text-cyan-40o0"  />
                               )}
                             </Link>
                           ))}
@@ -425,13 +425,13 @@ export default function UltraFuturisticNavigation2035() {
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               href="/contact"
-              className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              className="px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-medium rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5"
             >
               Get Started
             </Link>
             <Link
               href="/pricing"
-              className="px-6 py-3 border border-cyan-500/30 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+              className="px-6 py-3 border border-cyan-50o0/30 text-cyan-40o0 font-medium rounded-lg hover:bg-cyan-50o0/10 transition-all duration-30o0"
             >
               View Pricing
             </Link>
@@ -440,9 +440,9 @@ export default function UltraFuturisticNavigation2035() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors"
+            className="lg:hidden p-2 text-gray-30o0 hover:text-white transition-colors"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
           </button>
         </div>
       </div>
@@ -455,7 +455,7 @@ export default function UltraFuturisticNavigation2035() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20"
+            className="lg:hidden bg-gray-90o0/95 backdrop-blur-xl border-t border-cyan-50o0/20"
           >
             <div className="container mx-auto px-4 py-6">
               <div className="space-y-4">
@@ -463,25 +463,25 @@ export default function UltraFuturisticNavigation2035() {
                   <div key={item.name}>
                     <button
                       onClick={() => toggleDropdown(item.name)}
-                      className="flex items-center justify-between w-full p-3 text-left text-gray-300 hover:text-white transition-colors rounded-lg hover:bg-gray-800/50"
+                      className="flex items-center justify-between w-full p-3 text-left text-gray-30o0 hover:text-white transition-colors rounded-lg hover:bg-gray-80o0/50"
                     >
                       <div className="flex items-center space-x-3">
                         {item.icon}
                         <span>{item.name}</span>
                         {item.badge && (
                           <span className={`px-2 py-1 text-xs rounded-full ${
-                            item.badge === 'New' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :
-                            item.badge === 'Hot' ? 'bg-red-500/20 text-red-400 border border-red-500/30' :
-                            item.badge === 'Advanced' ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30' :
-                            item.badge === 'Enterprise' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' :
-                            item.badge === 'Innovative' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' :
-                            'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+                            item.badge === 'New' ? 'bg-green-50o0/20 text-green-40o0 border border-green-50o0/30' :
+                            item.badge === 'Hot' ? 'bg-red-50o0/20 text-red-40o0 border border-red-50o0/30' :
+                            item.badge === 'Advanced' ? 'bg-purple-50o0/20 text-purple-40o0 border border-purple-50o0/30' :
+                            item.badge === 'Enterprise' ? 'bg-blue-50o0/20 text-blue-40o0 border border-blue-50o0/30' :
+                            item.badge === 'Innovative' ? 'bg-orange-50o0/20 text-orange-40o0 border border-orange-50o0/30' :
+                            'bg-cyan-50o0/20 text-cyan-40o0 border border-cyan-50o0/30'
                           }`}>
                             {item.badge}
                           </span>
                         )}
                       </div>
-                      <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === item.name ? 'rotate-180' : ''}`} />
+                      <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === item.name ? 'rotate-180' : ''}`}  />
                     </button>
                     
                     {activeDropdown === item.name && (
@@ -496,7 +496,7 @@ export default function UltraFuturisticNavigation2035() {
                           <Link
                             key={child.name}
                             href={child.href}
-                            className="block p-3 text-gray-400 hover:text-cyan-400 transition-colors rounded-lg hover:bg-gray-800/50"
+                            className="block p-3 text-gray-40o0 hover:text-cyan-40o0 transition-colors rounded-lg hover:bg-gray-80o0/50"
                             onClick={() => setIsOpen(false)}
                           >
                             <div className="font-medium">{child.name}</div>
@@ -512,14 +512,14 @@ export default function UltraFuturisticNavigation2035() {
                 <div className="pt-4 space-y-3">
                   <Link
                     href="/contact"
-                    className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                    className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-medium rounded-lg text-center hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0"
                     onClick={() => setIsOpen(false)}
                   >
                     Get Started
                   </Link>
                   <Link
                     href="/pricing"
-                    className="block w-full px-6 py-3 border border-cyan-500/30 text-cyan-400 font-medium rounded-lg text-center hover:bg-cyan-500/10 transition-all duration-300"
+                    className="block w-full px-6 py-3 border border-cyan-50o0/30 text-cyan-40o0 font-medium rounded-lg text-center hover:bg-cyan-50o0/10 transition-all duration-30o0"
                     onClick={() => setIsOpen(false)}
                   >
                     View Pricing

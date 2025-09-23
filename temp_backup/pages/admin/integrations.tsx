@@ -31,8 +31,8 @@ export default function AdminIntegrationsPage() {
     setLoading(true);
     try {
       // Open mock oauth popup
-      window.open(`/api/integrations/oauth/${providerId}/start`, 'oauth', 'width=500,height=700');
-      await new Promise(r => setTimeout(r, 500));
+      window.open(`/api/integrations/oauth/${providerId}/start`, 'oauth', 'width=50o0,height=70o0');
+      await new Promise(r => setTimeout(r, 50o0));
       await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) });
       await refresh();
     } finally { setLoading(false); }
@@ -56,23 +56,22 @@ export default function AdminIntegrationsPage() {
 
   const grouped = useMemo(() => ({
     crm: providers.filter(p => p.category === 'crm'),
-    ats: providers.filter(p => p.category === 'ats'),
-  }), [providers]);
+    ats: providers.filter(p => p.category === 'ats')}), [providers]);
 
   function Card({ p }: { p: ProviderMeta }) {
     const conn = connections[p.id] || { status: 'disconnected' };
     const isConnected = conn.status === 'connected';
     return (
-      <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 flex flex-col gap-3 bg-white/60 dark:bg-black/40">
+      <div className="rounded-lg border border-gray-20o0 dark:border-gray-80o0 p-4 flex flex-col gap-3 bg-white/60 dark:bg-black/40">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="h-8 w-8 rounded bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-xs">{p.name.slice(0,2)}</div>
+            <div className="h-8 w-8 rounded bg-gray-10o0 dark:bg-gray-80o0 flex items-center justify-center text-xs">{p.name.slice(0,2)}</div>
             <div>
               <div className="font-semibold">{p.name}</div>
-              <div className="text-xs text-gray-500">{p.description}</div>
+              <div className="text-xs text-gray-50o0">{p.description}</div>
             </div>
           </div>
-          <StatusIcon status={conn.status} />
+          <StatusIcon status={conn.status}  />
         </div>
         <div className="flex items-center gap-2">
           {!isConnected && (
@@ -80,7 +79,7 @@ export default function AdminIntegrationsPage() {
           )}
           {isConnected && (
             <>
-              <button onClick={() => resync(p.id)} disabled={loading} className="px-3 py-1.5 rounded bg-blue-600 text-white text-sm">Resync Now</button>
+              <button onClick={() => resync(p.id)} disabled={loading} className="px-3 py-1.5 rounded bg-blue-60o0 text-white text-sm">Resync Now</button>
               <button onClick={() => setSelected(p.id)} className="px-3 py-1.5 rounded border text-sm">Configure</button>
               <button onClick={() => disconnect(p.id)} disabled={loading} className="px-3 py-1.5 rounded border text-sm">Disconnect</button>
             </>
@@ -96,7 +95,7 @@ export default function AdminIntegrationsPage() {
     const isCrm = provider.category === 'crm';
     return (
       <div className="fixed inset-0 bg-black/40 flex items-center justify-center">
-        <div className="w-full max-w-md rounded-lg bg-white dark:bg-neutral-900 p-4 border border-gray-200 dark:border-gray-800">
+        <div className="w-full max-w-md rounded-lg bg-white dark:bg-neutral-90o0 p-4 border border-gray-20o0 dark:border-gray-80o0">
           <div className="font-semibold mb-2">Sync Rules — {provider.name}</div>
           <div className="space-y-3 text-sm">
             {isCrm ? (
@@ -131,25 +130,25 @@ export default function AdminIntegrationsPage() {
       <Head><title>Admin Integrations • Zion</title></Head>
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-2xl font-semibold mb-2">Integrations</h1>
-        <p className="text-sm text-gray-600 mb-6">Connect your CRM and ATS to sync contacts, applicants, and activity.</p>
+        <p className="text-sm text-gray-60o0 mb-6">Connect your CRM and ATS to sync contacts, applicants, and activity.</p>
 
         <section className="mb-8">
           <h2 className="text-lg font-semibold mb-3">CRM</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {grouped.crm.map(p => <Card key={p.id} p={p} />)}
+            {grouped.crm.map(p => <Card key={p.id} p={p}  />)}
           </div>
         </section>
 
         <section className="mb-10">
           <h2 className="text-lg font-semibold mb-3">ATS</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {grouped.ats.map(p => <Card key={p.id} p={p} />)}
+            {grouped.ats.map(p => <Card key={p.id} p={p}  />)}
           </div>
         </section>
 
         <section className="mb-10">
           <h2 className="text-lg font-semibold mb-2">Zapier</h2>
-          <div className="text-sm text-gray-600">Polling endpoints:</div>
+          <div className="text-sm text-gray-60o0">Polling endpoints:</div>
           <ul className="list-disc pl-6 text-sm mt-2">
             <li>New Zion Job Posted → GET <code>/api/integrations/zapier/jobs-posted?since=TIMESTAMP</code></li>
             <li>Talent Matched → GET <code>/api/integrations/zapier/talent-matched?since=TIMESTAMP</code></li>
@@ -158,10 +157,10 @@ export default function AdminIntegrationsPage() {
 
         <section>
           <h2 className="text-lg font-semibold mb-2">Manual Overrides</h2>
-          <ManualOverrideForm />
+          <ManualOverrideForm  />
         </section>
       </main>
-      <RulesModal />
+      <RulesModal  />
     </>
   );
 }
@@ -179,7 +178,7 @@ function ManualOverrideForm() {
   }
 
   return (
-    <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl">
+    <div className="rounded-lg border border-gray-20o0 dark:border-gray-80o0 p-4 bg-white/60 dark:bg-black/40 max-w-xl">
       <div className="grid grid-cols-1 gap-3">
         <label className="text-sm">Job/Post ID
           <input value={jobId} onChange={e => setJobId(e.target.value)} placeholder="job_123" className="w-full mt-1 px-3 py-2 rounded border bg-transparent" />
@@ -188,7 +187,7 @@ function ManualOverrideForm() {
         <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={disableAtsSync} onChange={e => setDisableAtsSync(e.target.checked)} /> Disable ATS sync</label>
         <div className="flex items-center gap-2">
           <button onClick={save} className="px-3 py-1.5 rounded bg-black text-white text-sm">Save Override</button>
-          <div className="text-sm text-gray-500">{message}</div>
+          <div className="text-sm text-gray-50o0">{message}</div>
         </div>
       </div>
     </div>

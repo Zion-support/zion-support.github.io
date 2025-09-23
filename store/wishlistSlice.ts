@@ -10,9 +10,8 @@ export interface WishlistState {
   items: WishlistItem[];
 }
 
-const initialState: WishlistState = {
-  items: [],
-};
+const initialState: WishlistState ={
+  items: []};
 
 export const getApiUrl = () => {
   const env = (import.meta as any)?.env ?? process.env;
@@ -40,14 +39,12 @@ const wishlistSlice = createSlice({
     },
     removeFromWishlist(state, action: PayloadAction<{ id: string }>) {
       state.items = state.items.filter((item) => item.id !== action.payload.id);
-    },
-  },
+    }},
   extraReducers: (builder) => {
     builder.addCase(loadWishlistFromDB.fulfilled, (state, action) => {
       state.items = action.payload;
     });
-  },
-});
+  }});
 
 export const { addToWishlist, removeFromWishlist } = wishlistSlice.actions;
 export default wishlistSlice.reducer;

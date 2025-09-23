@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Brain, 
@@ -28,13 +27,13 @@ import {
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
-const InnovativeServices2025: React.FC = () => {
+const InnovativeServices20o25: React.FC = () => {
   const serviceCategories = [
     {
       title: "AI Automation Services",
       description: "Revolutionary AI-powered automation solutions that transform business operations",
       icon: Brain,
-      color: "from-blue-600 to-cyan-600",
+      color: "from-blue-60o0 to-cyan-60o0",
       services: [
         {
           name: "AI Code Review & Quality Assurance",
@@ -66,7 +65,7 @@ const InnovativeServices2025: React.FC = () => {
       title: "Advanced IT Infrastructure",
       description: "Cutting-edge infrastructure solutions with quantum computing and neuromorphic technology",
       icon: Cpu,
-      color: "from-purple-600 to-indigo-600",
+      color: "from-purple-60o0 to-indigo-60o0",
       services: [
         {
           name: "Quantum-Secure Cloud Infrastructure",
@@ -98,7 +97,7 @@ const InnovativeServices2025: React.FC = () => {
       title: "Innovative Micro-SaaS Solutions",
       description: "Specialized SaaS solutions for specific industries and business needs",
       icon: Sparkles,
-      color: "from-green-600 to-emerald-600",
+      color: "from-green-60o0 to-emerald-60o0",
       services: [
         {
           name: "AI Legal Document Automation",
@@ -130,7 +129,7 @@ const InnovativeServices2025: React.FC = () => {
       title: "Cutting-Edge AI Research",
       description: "Revolutionary AI platforms for advanced research and scientific discovery",
       icon: Rocket,
-      color: "from-orange-600 to-red-600",
+      color: "from-orange-60o0 to-red-60o0",
       services: [
         {
           name: "AI Drug Discovery Platform",
@@ -160,22 +159,22 @@ const InnovativeServices2025: React.FC = () => {
     }
   ];
 
-  const contactInfo = {
-    mobile: "+1 302 464 0950",
+  const contactInfo ={
+    mobile: "+1 30o2 464 0950",
     email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008 Middletown DE 19709",
+    address: "364 E Main St STE 10o08 Middletown DE 19709",
     website: "https://ziontechgroup.com"
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0">
       <SEOHead 
         config={{
-          title: "Innovative Services 2025 - Zion Tech Group",
+          title: "Innovative Services 20o25 - Zion Tech Group",
           description: "Discover our cutting-edge AI, IT infrastructure, and micro-SaaS services. Revolutionary solutions for the future of business and technology.",
           keywords: "AI services, IT infrastructure, micro-SaaS, quantum computing, neuromorphic computing, AI automation, Zion Tech Group"
         }}
-      />
+       />
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -186,26 +185,26 @@ const InnovativeServices2025: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">
-                Innovative Services 2025
+              <span className="bg-gradient-to-r from-blue-40o0 via-cyan-40o0 to-emerald-40o0 bg-clip-text text-transparent">
+                Innovative Services 20o25
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">
               Revolutionary AI, IT infrastructure, and micro-SaaS solutions that transform businesses and drive innovation
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="#services"
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center gap-2"
+                className="bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0 flex items-center gap-2"
               >
                 Explore Services
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </a>
               <a
                 href={`tel:${contactInfo.mobile}`}
-                className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 flex items-center gap-2"
+                className="bg-gradient-to-r from-emerald-60o0 to-teal-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-70o0 hover:to-teal-70o0 transition-all duration-30o0 flex items-center gap-2"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5"  />
                 Contact Us
               </a>
             </div>
@@ -226,7 +225,7 @@ const InnovativeServices2025: React.FC = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Cutting-Edge Service Categories
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
               Our comprehensive suite of innovative services spans multiple domains, from AI automation to quantum computing infrastructure
             </p>
           </motion.div>
@@ -239,15 +238,15 @@ const InnovativeServices2025: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-slate-800/50 rounded-2xl p-8 backdrop-blur-sm border border-slate-700/50"
+                className="bg-slate-80o0/50 rounded-2xl p-8 backdrop-blur-sm border border-slate-70o0/50"
               >
                 <div className="flex items-center gap-4 mb-8">
                   <div className={`p-3 rounded-xl bg-gradient-to-r ${category.color}`}>
-                    <category.icon className="w-8 h-8 text-white" />
+                    <category.icon className="w-8 h-8 text-white"  />
                   </div>
                   <div>
                     <h3 className="text-2xl md:text-3xl font-bold text-white">{category.title}</h3>
-                    <p className="text-gray-300">{category.description}</p>
+                    <p className="text-gray-30o0">{category.description}</p>
                   </div>
                 </div>
 
@@ -259,28 +258,28 @@ const InnovativeServices2025: React.FC = () => {
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
                       viewport={{ once: true }}
-                      className={`bg-slate-700/50 rounded-xl p-6 border transition-all duration-300 hover:scale-105 ${
-                        service.popular ? 'border-blue-500/50 shadow-lg shadow-blue-500/20' : 'border-slate-600/50'
+                      className={`bg-slate-70o0/50 rounded-xl p-6 border transition-all duration-30o0 hover:scale-10o5 ${
+                        service.popular ? 'border-blue-50o0/50 shadow-lg shadow-blue-50o0/20' : 'border-slate-60o0/50'
                       }`}
                     >
                       {service.popular && (
                         <div className="flex items-center gap-2 mb-4">
-                          <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                          <span className="text-sm font-semibold text-yellow-400">Popular</span>
+                          <Star className="w-5 h-5 text-yellow-40o0 fill-current"  />
+                          <span className="text-sm font-semibold text-yellow-40o0">Popular</span>
                         </div>
                       )}
                       
                       <h4 className="text-xl font-bold text-white mb-3">{service.name}</h4>
-                      <p className="text-gray-300 text-sm mb-4">{service.description}</p>
+                      <p className="text-gray-30o0 text-sm mb-4">{service.description}</p>
                       
                       <div className="mb-4">
-                        <span className="text-2xl font-bold text-emerald-400">{service.price}</span>
+                        <span className="text-2xl font-bold text-emerald-40o0">{service.price}</span>
                       </div>
 
                       <ul className="space-y-2 mb-6">
                         {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-300">
-                            <CheckCircle className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                          <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-30o0">
+                            <CheckCircle className="w-4 h-4 text-emerald-40o0 flex-shrink-0"  />
                             {feature}
                           </li>
                         ))}
@@ -290,10 +289,10 @@ const InnovativeServices2025: React.FC = () => {
                         href={service.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 w-full justify-center"
+                        className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0 w-full justify-center"
                       >
                         Learn More
-                        <ExternalLink className="w-4 h-4" />
+                        <ExternalLink className="w-4 h-4"  />
                       </a>
                     </motion.div>
                   ))}
@@ -305,7 +304,7 @@ const InnovativeServices2025: React.FC = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-80o0/30">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -316,20 +315,20 @@ const InnovativeServices2025: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-gray-300 mb-12">
+            <p className="text-xl text-gray-30o0 mb-12">
               Contact us today to learn how our innovative services can revolutionize your operations and drive growth
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="flex flex-col items-center gap-4">
-                <div className="p-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl">
-                  <Phone className="w-8 h-8 text-white" />
+                <div className="p-4 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 rounded-xl">
+                  <Phone className="w-8 h-8 text-white"  />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
                   <a
                     href={`tel:${contactInfo.mobile}`}
-                    className="text-emerald-400 hover:text-emerald-300 transition-colors"
+                    className="text-emerald-40o0 hover:text-emerald-30o0 transition-colors"
                   >
                     {contactInfo.mobile}
                   </a>
@@ -337,14 +336,14 @@ const InnovativeServices2025: React.FC = () => {
               </div>
 
               <div className="flex flex-col items-center gap-4">
-                <div className="p-4 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-xl">
-                  <Mail className="w-8 h-8 text-white" />
+                <div className="p-4 bg-gradient-to-r from-emerald-60o0 to-teal-60o0 rounded-xl">
+                  <Mail className="w-8 h-8 text-white"  />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
                   <a
                     href={`mailto:${contactInfo.email}`}
-                    className="text-emerald-400 hover:text-emerald-300 transition-colors"
+                    className="text-emerald-40o0 hover:text-emerald-30o0 transition-colors"
                   >
                     {contactInfo.email}
                   </a>
@@ -352,12 +351,12 @@ const InnovativeServices2025: React.FC = () => {
               </div>
 
               <div className="flex flex-col items-center gap-4">
-                <div className="p-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl">
-                  <MapPin className="w-8 h-8 text-white" />
+                <div className="p-4 bg-gradient-to-r from-purple-60o0 to-pink-60o0 rounded-xl">
+                  <MapPin className="w-8 h-8 text-white"  />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
-                  <p className="text-gray-300 text-sm">{contactInfo.address}</p>
+                  <p className="text-gray-30o0 text-sm">{contactInfo.address}</p>
                 </div>
               </div>
             </div>
@@ -365,16 +364,16 @@ const InnovativeServices2025: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href={`tel:${contactInfo.mobile}`}
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
+                className="bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0 flex items-center justify-center gap-2"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5"  />
                 Call Now
               </a>
               <a
                 href={`mailto:${contactInfo.email}`}
-                className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 flex items-center justify-center gap-2"
+                className="bg-gradient-to-r from-emerald-60o0 to-teal-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-70o0 hover:to-teal-70o0 transition-all duration-30o0 flex items-center justify-center gap-2"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5"  />
                 Send Email
               </a>
             </div>
@@ -395,7 +394,7 @@ const InnovativeServices2025: React.FC = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Why Choose Zion Tech Group?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
               Our innovative services provide unmatched value and competitive advantages in the market
             </p>
           </motion.div>
@@ -406,13 +405,13 @@ const InnovativeServices2025: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50"
+              className="bg-slate-80o0/50 rounded-xl p-6 border border-slate-70o0/50"
             >
-              <div className="p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg w-fit mb-4">
-                <Target className="w-8 h-8 text-white" />
+              <div className="p-3 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 rounded-lg w-fit mb-4">
+                <Target className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Market Leadership</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-30o0">
                 First-to-market solutions in quantum computing, neuromorphic computing, and AI research platforms
               </p>
             </motion.div>
@@ -422,13 +421,13 @@ const InnovativeServices2025: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50"
+              className="bg-slate-80o0/50 rounded-xl p-6 border border-slate-70o0/50"
             >
-              <div className="p-3 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-lg w-fit mb-4">
-                <Zap className="w-8 h-8 text-white" />
+              <div className="p-3 bg-gradient-to-r from-emerald-60o0 to-teal-60o0 rounded-lg w-fit mb-4">
+                <Zap className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Performance Excellence</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-30o0">
                 Up to 90% improvement in processing speed, 80% reduction in costs, and 70% faster time-to-market
               </p>
             </motion.div>
@@ -438,13 +437,13 @@ const InnovativeServices2025: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
-              className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50"
+              className="bg-slate-80o0/50 rounded-xl p-6 border border-slate-70o0/50"
             >
-              <div className="p-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg w-fit mb-4">
-                <ShieldCheck className="w-8 h-8 text-white" />
+              <div className="p-3 bg-gradient-to-r from-purple-60o0 to-pink-60o0 rounded-lg w-fit mb-4">
+                <ShieldCheck className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Enterprise Security</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-30o0">
                 Quantum-resistant encryption, zero-trust architecture, and comprehensive compliance frameworks
               </p>
             </motion.div>

@@ -13,8 +13,7 @@ export function ITServicePricingTable() {
     direction: "ascending" | "descending";
   }>({
     key: "country",
-    direction: "ascending",
-  });
+    direction: "ascending"});
 
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing];
@@ -46,15 +45,14 @@ export function ITServicePricingTable() {
       direction: 
         sortConfig.key === key && sortConfig.direction === "ascending" 
           ? "descending" 
-          : "ascending",
-    });
+          : "ascending"});
   };
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
       <div className="flex items-center mb-6">
         <div className="relative flex-1">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light"  />
           <Input
             placeholder="Search by country..."
             value={searchQuery}
@@ -75,7 +73,7 @@ export function ITServicePricingTable() {
                   className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"
                 >
                   <span>Country</span>
-                  <ArrowUpDown className="h-4 w-4" />
+                  <ArrowUpDown className="h-4 w-4"  />
                 </Button>
               </TableHead>
               <TableHead className="text-right text-zion-cyan font-medium">
@@ -85,7 +83,7 @@ export function ITServicePricingTable() {
                   className="hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light"
                 >
                   <span>Price Per Incident</span>
-                  <ArrowUpDown className="h-4 w-4" />
+                  <ArrowUpDown className="h-4 w-4"  />
                 </Button>
               </TableHead>
             </TableRow>
@@ -95,7 +93,7 @@ export function ITServicePricingTable() {
               sortedData.map((item) => (
                 <TableRow key={item.country} className="border-b border-zion-blue-light hover:bg-zion-blue/50">
                   <TableCell className="flex items-center space-x-2">
-                    <Globe className="h-4 w-4 text-zion-purple" />
+                    <Globe className="h-4 w-4 text-zion-purple"  />
                     <span className="text-white">{item.country}</span>
                   </TableCell>
                   <TableCell className="text-right font-medium text-white">${item.pricePerIncident.toFixed(2)}</TableCell>

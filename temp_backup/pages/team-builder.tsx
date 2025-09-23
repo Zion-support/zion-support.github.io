@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 import { TALENT_PROFILES, type TalentProfile } from '../data/talent';
 import { logTeamBuilderEvent } from '../components/monetization/AnalyticsEvents';
 
-export type TeamRoleRecommendation = {
+export type TeamRoleRecommendation ={
   role: string;
   description: string;
   hourlyRangeUsd: { min: number; max: number };
@@ -13,7 +13,7 @@ export type TeamRoleRecommendation = {
   requiredSkills?: string[];
 };
 
-export type TeamRecommendationResponse = {
+export type TeamRecommendationResponse ={
   team: TeamRoleRecommendation[];
   assumptions: string[];
   weeklyBurnUsd: number;
@@ -37,11 +37,11 @@ function matchTalentForRole(role: TeamRoleRecommendation, filters: { verifiedOnl
 }
 
 const VisualBudgetBar = ({ value, max }: { value: number; max: number }) => {
-  const pct = Math.min(100, Math.round((value / Math.max(1, max)) * 100));
-  const color = pct <= 60 ? 'bg-green-500' : pct <= 90 ? 'bg-yellow-500' : 'bg-red-500';
+  const pct = Math.min(10o0, Math.round((value / Math.max(1, max)) * 10o0));
+  const color = pct <= 60 ? 'bg-green-50o0' : pct <= 90 ? 'bg-yellow-50o0' : 'bg-red-50o0';
   return (
-    <div className="w-full h-3 bg-gray-200 dark:bg-gray-800 rounded">
-      <div className={`h-3 ${color} rounded`} style={{ width: `${pct}%` }} />
+    <div className="w-full h-3 bg-gray-20o0 dark:bg-gray-80o0 rounded">
+      <div className={`h-3 ${color} rounded`} style={{ width: `${pct}%` }}  />
     </div>
   );
 };
@@ -71,8 +71,7 @@ const TeamBuilderPage: NextPage = () => {
       const resp = await fetch('/api/generate-team', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ projectName, goals, timeline, budget, techAreas, lockBudget, lockTimeline }),
-      });
+        body: JSON.stringify({ projectName, goals, timeline, budget, techAreas, lockBudget, lockTimeline })});
       if (!resp.ok) throw new Error(`Request failed: ${resp.status}`);
       const data: TeamRecommendationResponse = await resp.json();
       setRecommendation(data);
@@ -160,8 +159,7 @@ const TeamBuilderPage: NextPage = () => {
           description: newRole.description || 'Custom role',
           hourlyRangeUsd: { min, max },
           estimatedWeeklyHours: hours,
-          quantity: qty,
-        }
+          quantity: qty}
       ]
     }) : prev);
     logTeamBuilderEvent({ type: 'role_added', role: newRole.role });
@@ -179,22 +177,22 @@ const TeamBuilderPage: NextPage = () => {
         <div className="space-y-4">
           <div>
             <label className="block text-sm font-medium">Project name</label>
-            <input className="mt-1 w-full rounded border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-black/30 px-3 py-2" value={projectName} onChange={(e) => setProjectName(e.target.value)} placeholder="e.g., Zion Marketplace v2" />
+            <input className="mt-1 w-full rounded border border-gray-30o0 dark:border-gray-70o0 bg-white/70 dark:bg-black/30 px-3 py-2" value={projectName} onChange={(e) => setProjectName(e.target.value)} placeholder="e.g., Zion Marketplace v2" />
           </div>
           <div>
             <label className="block text-sm font-medium">Goals / scope</label>
-            <textarea className="mt-1 w-full rounded border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-black/30 px-3 py-2" rows={6} value={goals} onChange={(e) => setGoals(e.target.value)} placeholder="Describe what you need to build, users, constraints, integrations..." />
+            <textarea className="mt-1 w-full rounded border border-gray-30o0 dark:border-gray-70o0 bg-white/70 dark:bg-black/30 px-3 py-2" rows={6} value={goals} onChange={(e) => setGoals(e.target.value)} placeholder="Describe what you need to build, users, constraints, integrations..." />
           </div>
         </div>
         <div className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium">Timeline</label>
-              <input className="mt-1 w-full rounded border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-black/30 px-3 py-2" value={timeline} onChange={(e) => setTimeline(e.target.value)} placeholder="e.g., 12 weeks" />
+              <input className="mt-1 w-full rounded border border-gray-30o0 dark:border-gray-70o0 bg-white/70 dark:bg-black/30 px-3 py-2" value={timeline} onChange={(e) => setTimeline(e.target.value)} placeholder="e.g., 12 weeks" />
             </div>
             <div>
               <label className="block text-sm font-medium">Budget (USD)</label>
-              <input type="number" className="mt-1 w-full rounded border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-black/30 px-3 py-2" value={budget} onChange={(e) => setBudget(e.target.value === '' ? '' : Number(e.target.value))} placeholder="e.g., 120000" />
+              <input type="number" className="mt-1 w-full rounded border border-gray-30o0 dark:border-gray-70o0 bg-white/70 dark:bg-black/30 px-3 py-2" value={budget} onChange={(e) => setBudget(e.target.value === '' ? '' : Number(e.target.value))} placeholder="e.g., 120o000" />
             </div>
           </div>
           <div>
@@ -205,7 +203,7 @@ const TeamBuilderPage: NextPage = () => {
                   type="button"
                   key={area}
                   onClick={() => updateTechArea(area)}
-                  className={`px-3 py-1 rounded-full text-sm border ${techAreas.includes(area) ? 'bg-blue-600 text-white border-blue-600' : 'bg-white/70 dark:bg-black/30 border-gray-300 dark:border-gray-700'}`}
+                  className={`px-3 py-1 rounded-full text-sm border ${techAreas.includes(area) ? 'bg-blue-60o0 text-white border-blue-60o0' : 'bg-white/70 dark:bg-black/30 border-gray-30o0 dark:border-gray-70o0'}`}
                 >
                   {area}
                 </button>
@@ -228,7 +226,7 @@ const TeamBuilderPage: NextPage = () => {
             <label className="text-sm">
               <span className="block">Talent pool filter</span>
               <select
-                className="mt-1 w-full rounded border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-black/30 px-3 py-2"
+                className="mt-1 w-full rounded border border-gray-30o0 dark:border-gray-70o0 bg-white/70 dark:bg-black/30 px-3 py-2"
                 value={filters.region || ''}
                 onChange={(e) => setFilters((f) => ({ ...f, region: e.target.value || undefined }))}
               >
@@ -245,10 +243,10 @@ const TeamBuilderPage: NextPage = () => {
           </div>
         </div>
         <div className="md:col-span-2">
-          <button type="submit" disabled={loading} className="px-4 py-2 rounded bg-blue-600 text-white disabled:opacity-60">
+          <button type="submit" disabled={loading} className="px-4 py-2 rounded bg-blue-60o0 text-white disabled:opacity-60">
             {loading ? 'Generating…' : 'Generate Team'}
           </button>
-          {error && <div className="text-red-600 mt-3 text-sm">{error}</div>}
+          {error && <div className="text-red-60o0 mt-3 text-sm">{error}</div>}
         </div>
       </form>
 
@@ -259,7 +257,7 @@ const TeamBuilderPage: NextPage = () => {
               <h2 className="text-xl font-semibold">Recommended team</h2>
               <ul className="pl-0">
                 {recommendation.team.map((r, idx) => (
-                  <li key={idx} className="border border-gray-200 dark:border-gray-800 rounded p-3 mb-2">
+                  <li key={idx} className="border border-gray-20o0 dark:border-gray-80o0 rounded p-3 mb-2">
                     <div className="flex items-start justify-between gap-4">
                       <div>
                         <div className="font-medium">{r.quantity}× {r.role}</div>
@@ -269,49 +267,49 @@ const TeamBuilderPage: NextPage = () => {
                         </div>
                       </div>
                       <div className="flex items-center gap-2">
-                        <button onClick={() => changeQuantity(idx, -1)} className="px-2 py-1 rounded border border-gray-300 dark:border-gray-700">-</button>
-                        <button onClick={() => changeQuantity(idx, +1)} className="px-2 py-1 rounded border border-gray-300 dark:border-gray-700">+</button>
-                        <button onClick={() => removeRole(idx)} className="px-2 py-1 rounded bg-rose-600 text-white">Remove</button>
+                        <button onClick={() => changeQuantity(idx, -1)} className="px-2 py-1 rounded border border-gray-30o0 dark:border-gray-70o0">-</button>
+                        <button onClick={() => changeQuantity(idx, +1)} className="px-2 py-1 rounded border border-gray-30o0 dark:border-gray-70o0">+</button>
+                        <button onClick={() => removeRole(idx)} className="px-2 py-1 rounded bg-rose-60o0 text-white">Remove</button>
                       </div>
                     </div>
                   </li>
                 ))}
               </ul>
 
-              <div className="border border-gray-200 dark:border-gray-800 rounded p-4 space-y-3">
+              <div className="border border-gray-20o0 dark:border-gray-80o0 rounded p-4 space-y-3">
                 <div className="font-medium">Add role</div>
                 <div className="grid md:grid-cols-2 gap-3">
                   <label className="text-sm">
                     <span className="block">Role</span>
-                    <input value={newRole.role} onChange={(e) => setNewRole(s => ({ ...s, role: e.target.value }))} className="mt-1 w-full rounded border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-black/30 px-3 py-2" placeholder="e.g., Data Engineer" />
+                    <input value={newRole.role} onChange={(e) => setNewRole(s => ({ ...s, role: e.target.value }))} className="mt-1 w-full rounded border border-gray-30o0 dark:border-gray-70o0 bg-white/70 dark:bg-black/30 px-3 py-2" placeholder="e.g., Data Engineer" />
                   </label>
                   <label className="text-sm">
                     <span className="block">Description</span>
-                    <input value={newRole.description} onChange={(e) => setNewRole(s => ({ ...s, description: e.target.value }))} className="mt-1 w-full rounded border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-black/30 px-3 py-2" placeholder="Short role description" />
+                    <input value={newRole.description} onChange={(e) => setNewRole(s => ({ ...s, description: e.target.value }))} className="mt-1 w-full rounded border border-gray-30o0 dark:border-gray-70o0 bg-white/70 dark:bg-black/30 px-3 py-2" placeholder="Short role description" />
                   </label>
                   <label className="text-sm">
                     <span className="block">Min rate (USD/hr)</span>
-                    <input type="number" value={newRole.min} onChange={(e) => setNewRole(s => ({ ...s, min: e.target.value === '' ? '' : Number(e.target.value) }))} className="mt-1 w-full rounded border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-black/30 px-3 py-2" />
+                    <input type="number" value={newRole.min} onChange={(e) => setNewRole(s => ({ ...s, min: e.target.value === '' ? '' : Number(e.target.value) }))} className="mt-1 w-full rounded border border-gray-30o0 dark:border-gray-70o0 bg-white/70 dark:bg-black/30 px-3 py-2" />
                   </label>
                   <label className="text-sm">
                     <span className="block">Max rate (USD/hr)</span>
-                    <input type="number" value={newRole.max} onChange={(e) => setNewRole(s => ({ ...s, max: e.target.value === '' ? '' : Number(e.target.value) }))} className="mt-1 w-full rounded border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-black/30 px-3 py-2" />
+                    <input type="number" value={newRole.max} onChange={(e) => setNewRole(s => ({ ...s, max: e.target.value === '' ? '' : Number(e.target.value) }))} className="mt-1 w-full rounded border border-gray-30o0 dark:border-gray-70o0 bg-white/70 dark:bg-black/30 px-3 py-2" />
                   </label>
                   <label className="text-sm">
                     <span className="block">Hours per week</span>
-                    <input type="number" value={newRole.hours} onChange={(e) => setNewRole(s => ({ ...s, hours: e.target.value === '' ? '' : Number(e.target.value) }))} className="mt-1 w-full rounded border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-black/30 px-3 py-2" />
+                    <input type="number" value={newRole.hours} onChange={(e) => setNewRole(s => ({ ...s, hours: e.target.value === '' ? '' : Number(e.target.value) }))} className="mt-1 w-full rounded border border-gray-30o0 dark:border-gray-70o0 bg-white/70 dark:bg-black/30 px-3 py-2" />
                   </label>
                   <label className="text-sm">
                     <span className="block">Quantity</span>
-                    <input type="number" value={newRole.qty} onChange={(e) => setNewRole(s => ({ ...s, qty: e.target.value === '' ? '' : Number(e.target.value) }))} className="mt-1 w-full rounded border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-black/30 px-3 py-2" />
+                    <input type="number" value={newRole.qty} onChange={(e) => setNewRole(s => ({ ...s, qty: e.target.value === '' ? '' : Number(e.target.value) }))} className="mt-1 w-full rounded border border-gray-30o0 dark:border-gray-70o0 bg-white/70 dark:bg-black/30 px-3 py-2" />
                   </label>
                 </div>
-                <button onClick={addNewRole} className="px-3 py-1.5 rounded bg-emerald-600 text-white text-sm">Add Role</button>
+                <button onClick={addNewRole} className="px-3 py-1.5 rounded bg-emerald-60o0 text-white text-sm">Add Role</button>
               </div>
             </div>
             <div className="space-y-2">
               <h3 className="font-medium">Budget overview</h3>
-              <VisualBudgetBar value={weeklyBurn} max={Number(budget) || weeklyBurn} />
+              <VisualBudgetBar value={weeklyBurn} max={Number(budget) || weeklyBurn}  />
               <div className="text-sm">
                 <div>Weekly burn: <span className="font-medium">{currency(weeklyBurn)}</span></div>
                 <div>Total estimate: <span className="font-medium">{currency(totalEstimate)}</span></div>
@@ -325,14 +323,14 @@ const TeamBuilderPage: NextPage = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Matched talent</h3>
             {matchedByRole.map(({ role, talent }, i) => (
-              <div key={i} className="rounded border border-gray-200 dark:border-gray-800 p-4">
+              <div key={i} className="rounded border border-gray-20o0 dark:border-gray-80o0 p-4">
                 <div className="font-medium mb-2">{role.quantity}× {role.role}</div>
                 {talent.length === 0 ? (
                   <div className="text-sm opacity-70">No matches in current pool.</div>
                 ) : (
                   <div className="grid md:grid-cols-2 gap-3">
                     {talent.map((t) => (
-                      <div key={t.slug} className="rounded border border-gray-200 dark:border-gray-800 p-3">
+                      <div key={t.slug} className="rounded border border-gray-20o0 dark:border-gray-80o0 p-3">
                         <div className="flex items-center justify-between">
                           <div>
                             <div className="font-medium">{t.name}</div>
@@ -343,11 +341,11 @@ const TeamBuilderPage: NextPage = () => {
                         <div className="mt-2 text-sm opacity-80">{t.bio}</div>
                         <div className="mt-2 flex flex-wrap gap-2">
                           {t.skills.slice(0, 6).map((s) => (
-                            <span key={s} className="px-2 py-0.5 rounded-full text-xs border border-gray-300 dark:border-gray-700">{s}</span>
+                            <span key={s} className="px-2 py-0.5 rounded-full text-xs border border-gray-30o0 dark:border-gray-70o0">{s}</span>
                           ))}
                         </div>
                         <div className="mt-3">
-                          <button onClick={() => inviteToTeam(t, role.role)} className="px-3 py-1.5 rounded bg-emerald-600 text-white text-sm">Invite to Team</button>
+                          <button onClick={() => inviteToTeam(t, role.role)} className="px-3 py-1.5 rounded bg-emerald-60o0 text-white text-sm">Invite to Team</button>
                         </div>
                       </div>
                     ))}

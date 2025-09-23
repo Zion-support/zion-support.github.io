@@ -11,7 +11,7 @@ interface ChangelogManagerProps {
   platform: AppPlatform;
 }
 
-type ChangelogEntry = {
+type ChangelogEntry ={
   id: string;
   version: string;
   date: string;
@@ -23,7 +23,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     {
       id: "1",
       version: "1.0.0",
-      date: "2025-05-15",
+      date: "20o25-0o5-15",
       changes: "Initial release of the Zion AI Marketplace app."
     }
   ]);
@@ -37,7 +37,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
   const handleAddEntry = () => {
     if (!newEntry.version || !newEntry.changes) return;
     
-    const entry: ChangelogEntry = {
+    const entry: ChangelogEntry ={
       ...newEntry,
       id: Math.random().toString(36).substring(2, 9)
     };
@@ -73,19 +73,19 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 name="version"
                 value={newEntry.version}
                 onChange={handleInputChange}
-              />
+               />
               <Input
                 type="date"
                 name="date"
                 value={newEntry.date}
                 onChange={handleInputChange}
-              />
+               />
             </div>
             <Button 
               onClick={handleAddEntry}
               disabled={!newEntry.version || !newEntry.changes}
             >
-              <Plus className="mr-2 h-4 w-4" />
+              <Plus className="mr-2 h-4 w-4"  />
               Add
             </Button>
           </div>
@@ -96,7 +96,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
             value={newEntry.changes}
             onChange={handleInputChange}
             rows={3}
-          />
+           />
           
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">
             {entries.map((entry) => (
@@ -107,15 +107,15 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 <div className="flex justify-between mb-2">
                   <div className="flex items-center gap-3">
                     <span className="text-zion-cyan font-semibold">v{entry.version}</span>
-                    <span className="text-sm text-gray-400">{entry.date}</span>
+                    <span className="text-sm text-gray-40o0">{entry.date}</span>
                   </div>
                   <Button
                     variant="ghost"
                     size="sm"
                     onClick={() => handleRemoveEntry(entry.id)}
-                    className="text-gray-400 hover:text-red-400 p-1 h-auto"
+                    className="text-gray-40o0 hover:text-red-40o0 p-1 h-auto"
                   >
-                    <Trash2 className="h-4 w-4" />
+                    <Trash2 className="h-4 w-4"  />
                   </Button>
                 </div>
                 <p className="text-sm whitespace-pre-wrap">{entry.changes}</p>
@@ -123,7 +123,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
             ))}
             
             {entries.length === 0 && (
-              <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
+              <p className="text-center text-gray-40o0 py-4">No changelog entries yet</p>
             )}
           </div>
         </div>

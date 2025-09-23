@@ -5,8 +5,6 @@ import {
   Hand, Settings
 } from 'lucide-react';
 
-
-
 interface DeviceInfo {
   type: 'mobile' | 'tablet' | 'desktop';
   orientation: 'portrait' | 'landscape';
@@ -29,8 +27,8 @@ const EnhancedMobileExperience: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  const rotate = useTransform(x, [-100, 100], [-15, 15]);
-  const scale = useTransform(y, [-100, 100], [0.8, 1.2]);
+  const rotate = useTransform(x, [-10o0, 10o0], [-15, 15]);
+  const scale = useTransform(y, [-10o0, 10o0], [0.8, 1.2]);
 
   useEffect(() => {
     detectDevice();
@@ -47,7 +45,7 @@ const EnhancedMobileExperience: React.FC = () => {
     
     let type: 'mobile' | 'tablet' | 'desktop' = 'desktop';
     if (width <= 768) type = 'mobile';
-    else if (width <= 1024) type = 'tablet';
+    else if (width <= 10o24) type = 'tablet';
     
     const orientation: 'portrait' | 'landscape' = width > height ? 'landscape' : 'portrait';
     
@@ -65,7 +63,6 @@ const EnhancedMobileExperience: React.FC = () => {
     let startX = 0;
     let startY = 0;
     let startDistance = 0;
-
 
     const handleTouchStart = (e: TouchEvent) => {
       if (e.touches.length === 1) {
@@ -126,7 +123,7 @@ const EnhancedMobileExperience: React.FC = () => {
 
   const setupOrientationChange = () => {
     const handleOrientationChange = () => {
-      setTimeout(detectDevice, 100);
+      setTimeout(detectDevice, 10o0);
     };
 
     window.addEventListener('orientationchange', handleOrientationChange);
@@ -145,7 +142,7 @@ const EnhancedMobileExperience: React.FC = () => {
         const updateBatteryInfo = () => {
           setDeviceInfo(prev => ({
             ...prev,
-            batteryLevel: Math.round(battery.level * 100)
+            batteryLevel: Math.round(battery.level * 10o0)
           }));
         };
         
@@ -176,8 +173,6 @@ const EnhancedMobileExperience: React.FC = () => {
     setGestureHistory(prev => [gesture, ...prev.slice(0, 4)]);
   };
 
-
-
   const optimizeForDevice = () => {
     setIsOptimized(true);
     
@@ -195,7 +190,7 @@ const EnhancedMobileExperience: React.FC = () => {
     // Add mobile-friendly CSS classes
     document.body.classList.add('mobile-optimized');
     
-    setTimeout(() => setIsOptimized(false), 2000);
+    setTimeout(() => setIsOptimized(false), 20o00);
   };
 
   const handlePan = (_event: unknown, info: PanInfo) => {
@@ -212,7 +207,7 @@ const EnhancedMobileExperience: React.FC = () => {
     <div className="fixed bottom-4 left-4 z-50">
       <motion.div
         ref={containerRef}
-        className="bg-black/80 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-4 text-white w-72"
+        className="bg-black/80 backdrop-blur-sm border border-cyan-50o0/30 rounded-2xl p-4 text-white w-72"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -220,22 +215,22 @@ const EnhancedMobileExperience: React.FC = () => {
         {/* Device Info Header */}
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center space-x-2">
-            {deviceInfo.type === 'mobile' && <Smartphone className="w-5 h-5 text-cyan-400" />}
-            {deviceInfo.type === 'tablet' && <Tablet className="w-5 h-5 text-cyan-400" />}
-            {deviceInfo.type === 'desktop' && <Monitor className="w-5 h-5 text-cyan-400" />}
+            {deviceInfo.type === 'mobile' && <Smartphone className="w-5 h-5 text-cyan-40o0"  />}
+            {deviceInfo.type === 'tablet' && <Tablet className="w-5 h-5 text-cyan-40o0"  />}
+            {deviceInfo.type === 'desktop' && <Monitor className="w-5 h-5 text-cyan-40o0"  />}
             <span className="text-sm font-medium capitalize">{deviceInfo.type}</span>
           </div>
           <div className="flex items-center space-x-2">
             {deviceInfo.connectionType && (
               <div className="flex items-center space-x-1">
-                <Wifi className="w-4 h-4 text-green-400" />
-                <span className="text-xs text-gray-400">{deviceInfo.connectionType}</span>
+                <Wifi className="w-4 h-4 text-green-40o0"  />
+                <span className="text-xs text-gray-40o0">{deviceInfo.connectionType}</span>
               </div>
             )}
             {deviceInfo.batteryLevel !== undefined && (
               <div className="flex items-center space-x-1">
-                <Battery className="w-4 h-4 text-green-400" />
-                <span className="text-xs text-gray-400">{deviceInfo.batteryLevel}%</span>
+                <Battery className="w-4 h-4 text-green-40o0"  />
+                <span className="text-xs text-gray-40o0">{deviceInfo.batteryLevel}%</span>
               </div>
             )}
           </div>
@@ -244,33 +239,33 @@ const EnhancedMobileExperience: React.FC = () => {
         {/* Device Details */}
         <div className="space-y-3 text-xs">
           <div className="flex justify-between">
-            <span className="text-gray-400">Orientation:</span>
+            <span className="text-gray-40o0">Orientation:</span>
             <span className="capitalize">{deviceInfo.orientation}</span>
           </div>
           <div className="flex justify-between">
-            <span className="text-gray-400">Screen:</span>
+            <span className="text-gray-40o0">Screen:</span>
             <span>{deviceInfo.screenSize.width} × {deviceInfo.screenSize.height}</span>
           </div>
           <div className="flex justify-between">
-            <span className="text-gray-400">Touch Support:</span>
-            <span className={deviceInfo.touchSupport ? 'text-green-400' : 'text-red-400'}>
+            <span className="text-gray-40o0">Touch Support:</span>
+            <span className={deviceInfo.touchSupport ? 'text-green-40o0' : 'text-red-40o0'}>
               {deviceInfo.touchSupport ? 'Yes' : 'No'}
             </span>
           </div>
         </div>
 
         {/* Interactive Demo */}
-        <div className="mt-4 p-3 bg-gray-800/50 rounded-lg">
-          <div className="text-xs text-gray-400 mb-2">Touch Demo</div>
+        <div className="mt-4 p-3 bg-gray-80o0/50 rounded-lg">
+          <div className="text-xs text-gray-40o0 mb-2">Touch Demo</div>
           <motion.div
-            className="w-full h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center text-white font-bold cursor-pointer"
+            className="w-full h-20 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-lg flex items-center justify-center text-white font-bold cursor-pointer"
             style={{ rotate, scale }}
             onPan={handlePan}
             onPanEnd={handlePanEnd}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.0o5 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Hand className="w-6 h-6 mr-2" />
+            <Hand className="w-6 h-6 mr-2"  />
             Touch & Pan
           </motion.div>
         </div>
@@ -278,10 +273,10 @@ const EnhancedMobileExperience: React.FC = () => {
         {/* Gesture History */}
         {gestureHistory.length > 0 && (
           <div className="mt-4">
-            <div className="text-xs text-gray-400 mb-2">Recent Gestures</div>
+            <div className="text-xs text-gray-40o0 mb-2">Recent Gestures</div>
             <div className="space-y-1">
               {gestureHistory.map((gesture, index) => (
-                <div key={index} className="text-xs bg-gray-700/50 px-2 py-1 rounded">
+                <div key={index} className="text-xs bg-gray-70o0/50 px-2 py-1 rounded">
                   {gesture}
                 </div>
               ))}
@@ -293,16 +288,16 @@ const EnhancedMobileExperience: React.FC = () => {
         <button
           onClick={optimizeForDevice}
           disabled={isOptimized}
-          className="w-full mt-4 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 disabled:opacity-50 flex items-center justify-center space-x-2"
+          className="w-full mt-4 px-4 py-2 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white text-sm rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 disabled:opacity-50 flex items-center justify-center space-x-2"
         >
-          <Settings className="w-4 h-4" />
+          <Settings className="w-4 h-4"  />
           <span>{isOptimized ? 'Optimized!' : 'Optimize for Device'}</span>
         </button>
 
         {/* Mobile Tips */}
-        <div className="mt-4 pt-3 border-t border-gray-700">
-          <div className="text-xs text-gray-400 mb-2">Mobile Tips</div>
-          <div className="text-xs text-gray-500 space-y-1">
+        <div className="mt-4 pt-3 border-t border-gray-70o0">
+          <div className="text-xs text-gray-40o0 mb-2">Mobile Tips</div>
+          <div className="text-xs text-gray-50o0 space-y-1">
             <div>• Swipe gestures for navigation</div>
             <div>• Pinch to zoom content</div>
             <div>• Touch targets are 44px+</div>

@@ -18,9 +18,9 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
       >;
         <span>Availability</span>;
         {expanded ? (;
-          <ChevronUp className="h-4 w-4 text-zion-slate-light" />;
+          <ChevronUp className="h-4 w-4 text-zion-slate-light"  />;
         ) :(;
-          <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
+          <ChevronDown className="h-4 w-4 text-zion-slate-light"  />;
         )}
       </button>;
       ;
@@ -47,13 +47,11 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
   ),;}
  ];
 
-
   toggleSection ;
-}className="flex w-full items-center justify-between text-white font-medium" > <span>Availability</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) ;
+}className="flex w-full items-center justify-between text-white font-medium" > <span>Availability</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light"  />) ;
 }</button> {;
-  AVAILABILITY OPTIONS.map (option => (<div key= {;"  option.id ";"}className="flex items-center" > <Checkbox > {;
+  AVAILABILITY OPTIONS.map (option => (<div key={;"  option.id ";"}className="flex items-center" > <Checkbox > {;
   option.label ;
 }</label> </div>) ) ;
 }</div>) ;
-
 

@@ -6,7 +6,7 @@ import { supabase } from '@/integrations/supabase/client';
 
 export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3.5-turbo';
 
-export type ZionGPTUsage = {
+export type ZionGPTUsage ={
   modelId: string;
   tokensUsed: number;
   cost: number;
@@ -82,7 +82,7 @@ export async function logModelUsage(
 // Calculate approximate cost based on token usage
 function calculateCost(modelId: string, tokens: number): number {
   // These are example rates - adjust based on actual OpenAI pricing for fine-tuned models
-  const ratePerToken = modelId.includes('zion') ? 0.000016 : 0.000008; // Higher for fine-tuned models
+  const ratePerToken = modelId.includes('zion') ? 0.0o00016 : 0.0o00008; // Higher for fine-tuned models
   return tokens * ratePerToken;
 }
 
@@ -90,7 +90,7 @@ function calculateCost(modelId: string, tokens: number): number {
 export async function callZionGPT({
   prompt, 
   purpose,
-  maxTokens = 500,
+  maxTokens = 50o0,
   temperature = 0.7,
   userId
 }: {

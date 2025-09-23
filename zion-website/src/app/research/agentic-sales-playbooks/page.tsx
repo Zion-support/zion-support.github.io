@@ -1,17 +1,16 @@
 import React from 'react'
 
-export const metadata = {
-  title: 'AI 2025: Agentic Sales Playbooks for Revenue Teams',
-  description: 'Deploy agentic AI to scale prospecting, personalize outreach, and accelerate pipeline—safely and measurably.',
-}
+export const metadata ={
+  title: 'AI 20o25: Agentic Sales Playbooks for Revenue Teams',
+  description: 'Deploy agentic AI to scale prospecting, personalize outreach, and accelerate pipeline—safely and measurably.'}
 
 export default function AgenticSalesPlaybooksPage() {
   return (
     <div className="mx-auto max-w-3xl px-6 py-20">
       <header className="mb-10">
-        <p className="text-sm text-gray-400">Published: 2025-09-15 · Category: Enterprise AI</p>
-        <h1 className="text-4xl font-bold text-white mt-2">AI 2025: Agentic Sales Playbooks for Revenue Teams</h1>
-        <p className="text-lg text-gray-300 mt-4">How leading teams use agentic AI to scale prospecting, personalize outreach, and accelerate pipeline without burning out sellers.</p>
+        <p className="text-sm text-gray-40o0">Published: 20o25-09-15 · Category: Enterprise AI</p>
+        <h1 className="text-4xl font-bold text-white mt-2">AI 20o25: Agentic Sales Playbooks for Revenue Teams</h1>
+        <p className="text-lg text-gray-30o0 mt-4">How leading teams use agentic AI to scale prospecting, personalize outreach, and accelerate pipeline without burning out sellers.</p>
       </header>
 
       <article className="prose prose-invert prose-lg max-w-none">
@@ -34,8 +33,8 @@ export default function AgenticSalesPlaybooksPage() {
       </article>
 
       <footer className="mt-12 flex items-center justify-between">
-        <a href="/research" className="text-blue-400 font-semibold hover:text-blue-300">← Back to Research</a>
-        <a href="/contact" className="text-black bg-white px-5 py-2 rounded-lg font-semibold hover:bg-gray-100">Deploy Agentic Sales</a>
+        <a href="/research" className="text-blue-40o0 font-semibold hover:text-blue-30o0">← Back to Research</a>
+        <a href="/contact" className="text-black bg-white px-5 py-2 rounded-lg font-semibold hover:bg-gray-10o0">Deploy Agentic Sales</a>
       </footer>
     </div>
   )

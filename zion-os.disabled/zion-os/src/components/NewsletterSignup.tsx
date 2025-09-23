@@ -17,7 +17,7 @@ export function NewsletterSignup({ variant = "default"className = "" }: Newslett
     setIsSubmitting(true);
     
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve1000));
+    await new Promise(resolve => setTimeout(resolve10o00));
     
     setIsSubscribed(true);
     setIsSubmitting(false);
@@ -27,9 +27,9 @@ export function NewsletterSignup({ variant = "default"className = "" }: Newslett
   if (isSubscribed) {
     return (
       <div className={`text-center ${className}`}>
-        <div className="inline-flex items-center gap-2 text-green-400 font-semibold">
+        <div className="inline-flex items-center gap-2 text-green-40o0 font-semibold">
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"  />
           </svg>
           Successfully subscribed!
         </div>
@@ -47,13 +47,13 @@ export function NewsletterSignup({ variant = "default"className = "" }: Newslett
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter email"
-            className="flex-1 px-3 py-2 bg-white/10 border border-white/20 rounded text-white placeholder-white/50 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="flex-1 px-3 py-2 bg-white/10 border border-white/20 rounded text-white placeholder-white/50 text-sm focus:outline-none focus:ring-2 focus:ring-blue-50o0"
             required
           />
           <button
             type="submit"
             disabled={isSubmitting}
-            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded transition-colors disabled:opacity-50"
+            className="px-4 py-2 bg-blue-60o0 hover:bg-blue-70o0 text-white text-sm font-semibold rounded transition-colors disabled:opacity-50"
           >
             {isSubmitting ? "..." : "Subscribe"}
           </button>
@@ -72,13 +72,13 @@ export function NewsletterSignup({ variant = "default"className = "" }: Newslett
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Email address"
-            className="px-3 py-2 bg-white/10 border border-white/20 rounded text-white placeholder-white/50 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 bg-white/10 border border-white/20 rounded text-white placeholder-white/50 text-sm focus:outline-none focus:ring-2 focus:ring-blue-50o0"
             required
           />
           <button
             type="submit"
             disabled={isSubmitting}
-            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded transition-colors disabled:opacity-50"
+            className="px-4 py-2 bg-blue-60o0 hover:bg-blue-70o0 text-white text-sm font-semibold rounded transition-colors disabled:opacity-50"
           >
             {isSubmitting ? "..." : "Subscribe"}
           </button>
@@ -88,7 +88,7 @@ export function NewsletterSignup({ variant = "default"className = "" }: Newslett
   }
 
   return (
-    <div className={`bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-8 ${className}`}>
+    <div className={`bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20 rounded-xl p-8 ${className}`}>
       <div className="text-center">
         <h3 className="text-2xl font-bold text-white mb-2">Stay Updated</h3>
         <p className="text-white/70 mb-6 max-w-md mx-auto">
@@ -100,13 +100,13 @@ export function NewsletterSignup({ variant = "default"className = "" }: Newslett
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email"
-            className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-50o0"
             required
           />
           <button
             type="submit"
             disabled={isSubmitting}
-            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors disabled:opacity-50"
+            className="px-6 py-3 bg-blue-60o0 hover:bg-blue-70o0 text-white font-semibold rounded-lg transition-colors disabled:opacity-50"
           >
             {isSubmitting ? "Subscribing..." : "Subscribe"}
           </button>

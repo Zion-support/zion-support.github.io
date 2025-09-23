@@ -1,6 +1,6 @@
 import { ProductListing } from "@/types/listings";
 
-export const ADVANCED_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
+export const ADVANCED_MICRO_SAAS_SERVICES_20o25: ProductListing[] = [
   // AI-Powered Content Creation & Marketing
   {
     id: "ai-content-studio-pro",
@@ -13,7 +13,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
     tags: ["Content Creation", "AI Writing", "SEO Optimization", "Multi-language", "Brand Voice"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-content-studio.jpg"],
-    createdAt: "2024-01-15T10:00:00.000Z",
+    createdAt: "20o24-0o1-15T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 156,
     featured: true,
@@ -21,14 +21,14 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
     availability: "Immediate",
     aiScore: 96,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-content-studio",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$250-500/month",
+    marketPrice: "$250-50o0/month",
     competitors: ["Jasper", "Copy.ai", "Writesonic"],
-    roi: "400% within 3 months",
+    roi: "40o0% within 3 months",
     setupTime: "Immediate",
     integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Google Docs", "Notion"]
   },
@@ -45,20 +45,20 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
     tags: ["Customer Support", "Chatbot", "24/7 Support", "Multi-language", "Human Handoff"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-customer-support.jpg"],
-    createdAt: "2024-01-20T10:00:00.000Z",
+    createdAt: "20o24-0o1-20T10:0o0:0o0.0o00Z",
     rating: 4.9,
-    reviewCount: 203,
+    reviewCount: 20o3,
     featured: true,
     location: "Global",
     availability: "1-2 Days",
     aiScore: 97,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-customer-support",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$150-400/month",
+    marketPrice: "$150-40o0/month",
     competitors: ["Intercom", "Zendesk", "Freshdesk"],
     roi: "350% within 4 months",
     setupTime: "1-2 days",
@@ -77,7 +77,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
     tags: ["HR Management", "Recruitment", "AI Screening", "Skill Assessment", "Cultural Fit"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-hr-recruitment.jpg"],
-    createdAt: "2024-01-25T10:00:00.000Z",
+    createdAt: "20o24-0o1-25T10:0o0:0o0.0o00Z",
     rating: 4.7,
     reviewCount: 89,
     featured: true,
@@ -85,14 +85,14 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
     availability: "3-5 Days",
     aiScore: 94,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-hr-recruitment",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$300-800/month",
+    marketPrice: "$30o0-80o0/month",
     competitors: ["BambooHR", "Workday", "Greenhouse"],
-    roi: "300% within 6 months",
+    roi: "30o0% within 6 months",
     setupTime: "3-5 days",
     integrations: ["LinkedIn", "Indeed", "Glassdoor", "Slack", "Microsoft Teams", "Google Workspace"]
   },
@@ -109,7 +109,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
     tags: ["Legal Tech", "Document Analysis", "Contract Review", "Risk Assessment", "Compliance"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-legal-document.jpg"],
-    createdAt: "2024-01-30T10:00:00.000Z",
+    createdAt: "20o24-0o1-30T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 67,
     featured: true,
@@ -117,14 +117,14 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
     availability: "5-7 Days",
     aiScore: 98,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-legal-document",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$500-1,200/month",
+    marketPrice: "$50o0-1,20o0/month",
     competitors: ["DocuSign", "ContractPodAi", "Evisort"],
-    roi: "500% within 8 months",
+    roi: "50o0% within 8 months",
     setupTime: "5-7 days",
     integrations: ["DocuSign", "Adobe Acrobat", "Microsoft Word", "Google Docs", "Dropbox", "OneDrive"]
   },
@@ -141,7 +141,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
     tags: ["Financial Trading", "AI Trading", "Risk Management", "Predictive Analytics", "Automation"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-financial-trading.jpg"],
-    createdAt: "2024-02-05T10:00:00.000Z",
+    createdAt: "20o24-0o2-0o5T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 134,
     featured: true,
@@ -149,14 +149,14 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
     availability: "7-10 Days",
     aiScore: 95,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-financial-trading",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$600-1,500/month",
+    marketPrice: "$60o0-1,50o0/month",
     competitors: ["Alpaca", "Interactive Brokers", "TD Ameritrade"],
-    roi: "600% within 12 months",
+    roi: "60o0% within 12 months",
     setupTime: "7-10 days",
     integrations: ["Bloomberg", "Reuters", "Yahoo Finance", "TradingView", "MetaTrader", "cTrader"]
   },
@@ -173,7 +173,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
     tags: ["Healthcare Analytics", "Patient Data", "Predictive Diagnostics", "Treatment Optimization", "HIPAA Compliant"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-healthcare-analytics.jpg"],
-    createdAt: "2024-02-10T10:00:00.000Z",
+    createdAt: "20o24-0o2-10T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 78,
     featured: true,
@@ -181,14 +181,14 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
     availability: "10-14 Days",
     aiScore: 96,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-healthcare-analytics",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$700-2,000/month",
+    marketPrice: "$70o0-2,0o00/month",
     competitors: ["Epic", "Cerner", "Allscripts"],
-    roi: "400% within 18 months",
+    roi: "40o0% within 18 months",
     setupTime: "10-14 days",
     integrations: ["Epic", "Cerner", "Allscripts", "Practice Fusion", "Kareo", "Athenahealth"]
   },
@@ -205,7 +205,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
     tags: ["Supply Chain", "Demand Forecasting", "Inventory Management", "Logistics", "Optimization"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-supply-chain.jpg"],
-    createdAt: "2024-02-15T10:00:00.000Z",
+    createdAt: "20o24-0o2-15T10:0o0:0o0.0o00Z",
     rating: 4.7,
     reviewCount: 112,
     featured: true,
@@ -213,12 +213,12 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
     availability: "7-10 Days",
     aiScore: 93,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-supply-chain",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$500-1,200/month",
+    marketPrice: "$50o0-1,20o0/month",
     competitors: ["SAP", "Oracle", "Manhattan Associates"],
     roi: "350% within 10 months",
     setupTime: "7-10 days",
@@ -237,7 +237,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
     tags: ["Project Management", "Task Automation", "Progress Tracking", "Resource Optimization", "Team Collaboration"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-project-management.jpg"],
-    createdAt: "2024-02-20T10:00:00.000Z",
+    createdAt: "20o24-0o2-20T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 189,
     featured: true,
@@ -245,14 +245,14 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
     availability: "2-3 Days",
     aiScore: 95,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-project-management",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$200-500/month",
+    marketPrice: "$20o0-50o0/month",
     competitors: ["Asana", "Monday.com", "ClickUp"],
-    roi: "300% within 4 months",
+    roi: "30o0% within 4 months",
     setupTime: "2-3 days",
     integrations: ["Slack", "Microsoft Teams", "Zoom", "Google Workspace", "Microsoft 365", "Notion"]
   },
@@ -269,7 +269,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
     tags: ["Workflow Automation", "Process Mapping", "Decision Automation", "Performance Analytics", "RPA"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-workflow-automation.jpg"],
-    createdAt: "2024-02-25T10:00:00.000Z",
+    createdAt: "20o24-0o2-25T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 156,
     featured: true,
@@ -277,14 +277,14 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
     availability: "3-5 Days",
     aiScore: 97,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-workflow-automation",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$300-700/month",
+    marketPrice: "$30o0-70o0/month",
     competitors: ["Zapier", "Make", "n8n"],
-    roi: "400% within 5 months",
+    roi: "40o0% within 5 months",
     setupTime: "3-5 days",
     integrations: ["Slack", "Microsoft Teams", "Google Workspace", "Microsoft 365", "Salesforce", "HubSpot"]
   },
@@ -301,7 +301,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
     tags: ["SEO", "Marketing Automation", "Keyword Research", "Content Optimization", "Campaign Management"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-seo-marketing.jpg"],
-    createdAt: "2024-03-01T10:00:00.000Z",
+    createdAt: "20o24-0o3-0o1T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 234,
     featured: true,
@@ -309,12 +309,12 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
     availability: "Immediate",
     aiScore: 94,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-seo-marketing",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$150-400/month",
+    marketPrice: "$150-40o0/month",
     competitors: ["SEMrush", "Ahrefs", "Moz"],
     roi: "350% within 6 months",
     setupTime: "Immediate",

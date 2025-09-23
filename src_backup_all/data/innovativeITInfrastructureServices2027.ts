@@ -1,6 +1,6 @@
 import { ProductListing } from "@/types/listings";
 
-export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
+export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_20o27: ProductListing[] = [
   // Cloud-Native Infrastructure Platform
   {
     id: "cloud-native-infrastructure-platform",
@@ -13,7 +13,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     tags: ["Cloud Native", "Multi-Cloud", "Auto-scaling", "Self-healing", "Zero-downtime"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/cloud-native-infrastructure.jpg"],
-    createdAt: "2024-01-01T10:00:00.000Z",
+    createdAt: "20o24-0o1-0o1T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 234,
     featured: true,
@@ -21,14 +21,14 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 96,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/cloud-native-infrastructure",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$8,000-18,000",
+    marketPrice: "$8,0o00-18,0o00",
     competitors: ["AWS", "Azure", "Google Cloud"],
-    roi: "600% within 10 months",
+    roi: "60o0% within 10 months",
     setupTime: "6-8 weeks",
     integrations: ["Kubernetes", "Docker", "Terraform", "Jenkins", "Prometheus", "Grafana"]
   },
@@ -45,7 +45,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     tags: ["AI DevOps", "CI/CD Automation", "Predictive Analytics", "Auto-remediation", "Pipeline Optimization"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-devops-automation.jpg"],
-    createdAt: "2024-01-05T10:00:00.000Z",
+    createdAt: "20o24-0o1-0o5T10:0o0:0o0.0o00Z",
     rating: 4.7,
     reviewCount: 189,
     featured: true,
@@ -53,14 +53,14 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     availability: "5-7 Weeks",
     aiScore: 95,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-devops-automation",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$6,000-15,000",
+    marketPrice: "$6,0o00-15,0o00",
     competitors: ["GitLab", "Jenkins", "CircleCI"],
-    roi: "500% within 8 months",
+    roi: "50o0% within 8 months",
     setupTime: "5-7 weeks",
     integrations: ["Git", "Jenkins", "GitLab", "GitHub Actions", "Docker", "Kubernetes"]
   },
@@ -77,7 +77,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     tags: ["Zero Trust", "Network Security", "Micro-segmentation", "Continuous Verification", "Least Privilege"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/zero-trust-network.jpg"],
-    createdAt: "2024-01-10T10:00:00.000Z",
+    createdAt: "20o24-0o1-10T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 156,
     featured: true,
@@ -85,14 +85,14 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     availability: "8-10 Weeks",
     aiScore: 97,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/zero-trust-network",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$12,000-25,000",
+    marketPrice: "$12,0o00-25,0o00",
     competitors: ["Cisco", "Palo Alto Networks", "Fortinet"],
-    roi: "800% within 12 months",
+    roi: "80o0% within 12 months",
     setupTime: "8-10 weeks",
     integrations: ["Active Directory", "Okta", "Duo", "CrowdStrike", "Splunk"]
   },
@@ -109,7 +109,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     tags: ["Edge Computing", "Distributed Systems", "Low Latency", "IoT", "Real-time Processing"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/edge-computing-infrastructure.jpg"],
-    createdAt: "2024-01-15T10:00:00.000Z",
+    createdAt: "20o24-0o1-15T10:0o0:0o0.0o00Z",
     rating: 4.6,
     reviewCount: 123,
     featured: true,
@@ -117,12 +117,12 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 94,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/edge-computing-infrastructure",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$7,000-16,000",
+    marketPrice: "$7,0o00-16,0o00",
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT"],
     roi: "550% within 9 months",
     setupTime: "6-8 weeks",
@@ -141,7 +141,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     tags: ["Hybrid Cloud", "Multi-Cloud", "Governance", "Cost Optimization", "Workload Migration"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/hybrid-cloud-management.jpg"],
-    createdAt: "2024-01-20T10:00:00.000Z",
+    createdAt: "20o24-0o1-20T10:0o0:0o0.0o00Z",
     rating: 4.7,
     reviewCount: 178,
     featured: true,
@@ -149,12 +149,12 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     availability: "5-7 Weeks",
     aiScore: 93,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/hybrid-cloud-management",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$6,000-14,000",
+    marketPrice: "$6,0o00-14,0o00",
     competitors: ["VMware", "Red Hat", "HashiCorp"],
     roi: "450% within 8 months",
     setupTime: "5-7 weeks",
@@ -173,7 +173,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     tags: ["Data Center", "AI Optimization", "Energy Management", "Cooling Systems", "Resource Allocation"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-data-center-optimization.jpg"],
-    createdAt: "2024-01-25T10:00:00.000Z",
+    createdAt: "20o24-0o1-25T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 145,
     featured: true,
@@ -181,14 +181,14 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     availability: "7-9 Weeks",
     aiScore: 95,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-data-center-optimization",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$9,000-20,000",
+    marketPrice: "$9,0o00-20,0o00",
     competitors: ["Schneider Electric", "Siemens", "Honeywell"],
-    roi: "700% within 12 months",
+    roi: "70o0% within 12 months",
     setupTime: "7-9 weeks",
     integrations: ["Building Management Systems", "IoT Sensors", "Energy Management", "HVAC Systems", "Power Management"]
   },
@@ -205,7 +205,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     tags: ["Container Orchestration", "Kubernetes", "Service Mesh", "Multi-cluster", "Auto-scaling"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/container-orchestration.jpg"],
-    createdAt: "2024-01-30T10:00:00.000Z",
+    createdAt: "20o24-0o1-30T10:0o0:0o0.0o00Z",
     rating: 4.6,
     reviewCount: 167,
     featured: true,
@@ -213,14 +213,14 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     availability: "4-6 Weeks",
     aiScore: 92,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/container-orchestration",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$5,000-12,000",
+    marketPrice: "$5,0o00-12,0o00",
     competitors: ["Red Hat OpenShift", "VMware Tanzu", "Rancher"],
-    roi: "400% within 7 months",
+    roi: "40o0% within 7 months",
     setupTime: "4-6 weeks",
     integrations: ["Docker", "Kubernetes", "Helm", "Istio", "Prometheus", "Grafana"]
   },
@@ -237,7 +237,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     tags: ["Network Monitoring", "AI Analytics", "Performance Optimization", "Anomaly Detection", "Real-time Visibility"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/network-performance-monitoring.jpg"],
-    createdAt: "2024-02-05T10:00:00.000Z",
+    createdAt: "20o24-0o2-0o5T10:0o0:0o0.0o00Z",
     rating: 4.5,
     reviewCount: 134,
     featured: true,
@@ -245,12 +245,12 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     availability: "3-5 Weeks",
     aiScore: 91,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/network-performance-monitoring",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$4,000-10,000",
+    marketPrice: "$4,0o00-10,0o00",
     competitors: ["SolarWinds", "PagerDuty", "Datadog"],
     roi: "350% within 6 months",
     setupTime: "3-5 weeks",
@@ -269,7 +269,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     tags: ["Disaster Recovery", "Backup", "Replication", "Failover", "Business Continuity"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/disaster-recovery-service.jpg"],
-    createdAt: "2024-02-10T10:00:00.000Z",
+    createdAt: "20o24-0o2-10T10:0o0:0o0.0o00Z",
     rating: 4.7,
     reviewCount: 89,
     featured: true,
@@ -277,14 +277,14 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 94,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/disaster-recovery-service",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$7,000-16,000",
+    marketPrice: "$7,0o00-16,0o00",
     competitors: ["Veeam", "Zerto", "Commvault"],
-    roi: "600% within 10 months",
+    roi: "60o0% within 10 months",
     setupTime: "6-8 weeks",
     integrations: ["VMware", "Hyper-V", "AWS", "Azure", "Google Cloud", "Storage Systems"]
   },
@@ -301,7 +301,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     tags: ["API Gateway", "API Management", "Rate Limiting", "Authentication", "Microservices"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/api-gateway-management.jpg"],
-    createdAt: "2024-02-15T10:00:00.000Z",
+    createdAt: "20o24-0o2-15T10:0o0:0o0.0o00Z",
     rating: 4.6,
     reviewCount: 156,
     featured: true,
@@ -309,14 +309,14 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     availability: "3-5 Weeks",
     aiScore: 93,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/api-gateway-management",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$3,500-8,000",
+    marketPrice: "$3,50o0-8,0o00",
     competitors: ["Kong", "Apigee", "AWS API Gateway"],
-    roi: "400% within 6 months",
+    roi: "40o0% within 6 months",
     setupTime: "3-5 weeks",
     integrations: ["OAuth", "JWT", "LDAP", "Monitoring Tools", "Analytics Platforms", "CI/CD Pipelines"]
   }

@@ -28,7 +28,7 @@ export function MilestoneSuggestions({
   const [showSuggestions, setShowSuggestions] = useState(false);
 
   const handleGenerateMilestones = async () => {
-    const input: MilestoneInput = {
+    const input: MilestoneInput ={
       scope: `${projectName}: ${scopeSummary}`,
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,
@@ -64,12 +64,12 @@ export function MilestoneSuggestions({
         >
           {isGenerating ? (
             <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              <Loader2 className="mr-2 h-4 w-4 animate-spin"  />
               Generating milestones...
             </>
           ) : (
             <>
-              <Sparkles className="mr-2 h-4 w-4" />
+              <Sparkles className="mr-2 h-4 w-4"  />
               Suggest Project Milestones with AI
             </>
           )}
@@ -80,7 +80,7 @@ export function MilestoneSuggestions({
         <Card>
           <CardHeader className="pb-3">
             <CardTitle className="text-lg flex items-center">
-              <Sparkles className="h-5 w-5 mr-2 text-primary" />
+              <Sparkles className="h-5 w-5 mr-2 text-primary"  />
               AI-Suggested Milestones
             </CardTitle>
           </CardHeader>
@@ -107,7 +107,7 @@ export function MilestoneSuggestions({
               ))}
 
               <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
-                <Check className="h-4 w-4 mr-1 text-green-500" />
+                <Check className="h-4 w-4 mr-1 text-green-50o0"  />
                 These milestones will be added to your contract
               </div>
             </div>

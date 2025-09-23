@@ -1,6 +1,6 @@
 import { ProductListing } from "@/types/listings";
 
-export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
+export const EMERGING_TECHNOLOGY_SERVICES_20o27: ProductListing[] = [
   // Quantum Computing as a Service
   {
     id: "quantum-computing-as-a-service",
@@ -13,7 +13,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     tags: ["Quantum Computing", "Quantum Algorithms", "Optimization", "Quantum Software", "Enterprise Platform"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/quantum-computing-service.jpg"],
-    createdAt: "2024-01-01T10:00:00.000Z",
+    createdAt: "20o24-0o1-0o1T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 67,
     featured: true,
@@ -21,14 +21,14 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     availability: "12-16 Weeks",
     aiScore: 99,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-computing-service",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$25,000-50,000",
+    marketPrice: "$25,0o00-50,0o00",
     competitors: ["IBM Q", "Google Quantum AI", "Microsoft Quantum"],
-    roi: "2000% within 48 months",
+    roi: "20o00% within 48 months",
     setupTime: "12-16 weeks",
     integrations: ["Quantum Simulators", "Classical Computing", "ML Frameworks", "Scientific Computing", "Research Tools"]
   },
@@ -45,7 +45,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     tags: ["Space Technology", "Satellite Operations", "Space Data", "Earth Observation", "Space Infrastructure"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/space-technology-platform.jpg"],
-    createdAt: "2024-01-05T10:00:00.000Z",
+    createdAt: "20o24-0o1-0o5T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 45,
     featured: true,
@@ -53,14 +53,14 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     availability: "10-14 Weeks",
     aiScore: 97,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/space-technology-platform",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$18,000-40,000",
+    marketPrice: "$18,0o00-40,0o00",
     competitors: ["Planet Labs", "Maxar", "Airbus Defence"],
-    roi: "1500% within 36 months",
+    roi: "150o0% within 36 months",
     setupTime: "10-14 weeks",
     integrations: ["Satellite Systems", "GIS Platforms", "Data Analytics", "Cloud Services", "IoT Networks"]
   },
@@ -69,7 +69,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
   {
     id: "neuromorphic-computing-platform",
     title: "Neuromorphic Computing Platform",
-    description: "Brain-inspired computing platform that mimics neural networks for ultra-efficient AI processing. Achieves 1000x better energy efficiency than traditional AI chips and enables edge AI applications with minimal power consumption.",
+    description: "Brain-inspired computing platform that mimics neural networks for ultra-efficient AI processing. Achieves 10o00x better energy efficiency than traditional AI chips and enables edge AI applications with minimal power consumption.",
     category: "AI & Computing",
     subcategory: "Neuromorphic Computing",
     price: 24999,
@@ -77,7 +77,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     tags: ["Neuromorphic Computing", "Brain-inspired AI", "Energy Efficiency", "Edge AI", "Neural Networks"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/neuromorphic-computing.jpg"],
-    createdAt: "2024-01-10T10:00:00.000Z",
+    createdAt: "20o24-0o1-10T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 34,
     featured: true,
@@ -85,14 +85,14 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     availability: "14-18 Weeks",
     aiScore: 98,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/neuromorphic-computing",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$22,000-45,000",
+    marketPrice: "$22,0o00-45,0o00",
     competitors: ["Intel Loihi", "IBM TrueNorth", "BrainChip"],
-    roi: "1800% within 42 months",
+    roi: "180o0% within 42 months",
     setupTime: "14-18 weeks",
     integrations: ["AI Frameworks", "IoT Devices", "Edge Computing", "Neural Networks", "Hardware Accelerators"]
   },
@@ -109,7 +109,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     tags: ["Synthetic Biology", "Computational Biology", "Drug Discovery", "Bio-manufacturing", "AI Biology"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/synthetic-biology-platform.jpg"],
-    createdAt: "2024-01-15T10:00:00.000Z",
+    createdAt: "20o24-0o1-15T10:0o0:0o0.0o00Z",
     rating: 4.7,
     reviewCount: 56,
     featured: true,
@@ -117,14 +117,14 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     availability: "12-16 Weeks",
     aiScore: 96,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/synthetic-biology-platform",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$16,000-35,000",
+    marketPrice: "$16,0o00-35,0o00",
     competitors: ["Ginkgo Bioworks", "Twist Bioscience", "Benchling"],
-    roi: "1200% within 30 months",
+    roi: "120o0% within 30 months",
     setupTime: "12-16 weeks",
     integrations: ["Lab Equipment", "DNA Synthesis", "Protein Design", "Bioinformatics", "CRISPR Tools"]
   },
@@ -141,7 +141,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     tags: ["Fusion Energy", "Plasma Physics", "Clean Energy", "AI Control", "Zero Emissions"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/fusion-energy-platform.jpg"],
-    createdAt: "2024-01-20T10:00:00.000Z",
+    createdAt: "20o24-0o1-20T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 23,
     featured: true,
@@ -149,14 +149,14 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     availability: "20-24 Weeks",
     aiScore: 99,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/fusion-energy-platform",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$45,000-100,000",
+    marketPrice: "$45,0o00-10o0,0o00",
     competitors: ["Commonwealth Fusion", "General Fusion", "Helion Energy"],
-    roi: "3000% within 60 months",
+    roi: "30o00% within 60 months",
     setupTime: "20-24 weeks",
     integrations: ["Power Grid", "Energy Storage", "Monitoring Systems", "Control Systems", "Safety Systems"]
   },
@@ -173,7 +173,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     tags: ["Metaverse", "Virtual Worlds", "VR/AR", "Digital Twins", "Blockchain Integration"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/metaverse-development-platform.jpg"],
-    createdAt: "2024-01-25T10:00:00.000Z",
+    createdAt: "20o24-0o1-25T10:0o0:0o0.0o00Z",
     rating: 4.6,
     reviewCount: 89,
     featured: true,
@@ -181,14 +181,14 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     availability: "8-12 Weeks",
     aiScore: 94,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/metaverse-development-platform",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$14,000-30,000",
+    marketPrice: "$14,0o00-30,0o00",
     competitors: ["Unity", "Unreal Engine", "Roblox"],
-    roi: "800% within 18 months",
+    roi: "80o0% within 18 months",
     setupTime: "8-12 weeks",
     integrations: ["VR Headsets", "AR Glasses", "Blockchain", "Payment Systems", "Social Platforms"]
   },
@@ -205,7 +205,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     tags: ["Brain-Computer Interface", "Neurotechnology", "Assistive Technology", "Medical Rehabilitation", "Neural Signals"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/brain-computer-interface.jpg"],
-    createdAt: "2024-01-30T10:00:00.000Z",
+    createdAt: "20o24-0o1-30T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 28,
     featured: true,
@@ -213,14 +213,14 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     availability: "16-20 Weeks",
     aiScore: 97,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/brain-computer-interface",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$30,000-60,000",
+    marketPrice: "$30,0o00-60,0o00",
     competitors: ["Neuralink", "Kernel", "CTRL-labs"],
-    roi: "2500% within 48 months",
+    roi: "250o0% within 48 months",
     setupTime: "16-20 weeks",
     integrations: ["EEG Sensors", "Medical Devices", "AI Processing", "Control Systems", "Safety Protocols"]
   },
@@ -237,7 +237,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     tags: ["Quantum Internet", "Quantum Entanglement", "Quantum Key Distribution", "Ultra-secure Communication", "Quantum Networks"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/quantum-internet-platform.jpg"],
-    createdAt: "2024-02-05T10:00:00.000Z",
+    createdAt: "20o24-0o2-0o5T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 19,
     featured: true,
@@ -245,14 +245,14 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     availability: "18-22 Weeks",
     aiScore: 99,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-internet-platform",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$35,000-70,000",
+    marketPrice: "$35,0o00-70,0o00",
     competitors: ["Quantum Xchange", "ID Quantique", "Toshiba"],
-    roi: "3000% within 54 months",
+    roi: "30o00% within 54 months",
     setupTime: "18-22 weeks",
     integrations: ["Quantum Repeaters", "Fiber Networks", "Quantum Memory", "Classical Networks", "Security Protocols"]
   },
@@ -269,7 +269,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     tags: ["Autonomous Vehicles", "AI Driving", "Sensor Fusion", "Safety Systems", "Level 4-5 Autonomy"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/autonomous-vehicle-platform.jpg"],
-    createdAt: "2024-02-10T10:00:00.000Z",
+    createdAt: "20o24-0o2-10T10:0o0:0o0.0o00Z",
     rating: 4.7,
     reviewCount: 67,
     featured: true,
@@ -277,14 +277,14 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     availability: "14-18 Weeks",
     aiScore: 95,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/autonomous-vehicle-platform",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$25,000-50,000",
+    marketPrice: "$25,0o00-50,0o00",
     competitors: ["Waymo", "Tesla", "Cruise"],
-    roi: "1800% within 36 months",
+    roi: "180o0% within 36 months",
     setupTime: "14-18 weeks",
     integrations: ["LiDAR", "Cameras", "Radar", "GPS", "Vehicle Control Systems", "Safety Systems"]
   },
@@ -301,7 +301,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     tags: ["Advanced Robotics", "Human-like Dexterity", "AI Decision Making", "Collaborative Robots", "Safe Human-Robot Interaction"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/advanced-robotics-platform.jpg"],
-    createdAt: "2024-02-15T10:00:00.000Z",
+    createdAt: "20o24-0o2-15T10:0o0:0o0.0o00Z",
     rating: 4.6,
     reviewCount: 78,
     featured: true,
@@ -309,14 +309,14 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     availability: "12-16 Weeks",
     aiScore: 94,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/advanced-robotics-platform",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$20,000-40,000",
+    marketPrice: "$20,0o00-40,0o00",
     competitors: ["Boston Dynamics", "ABB", "KUKA"],
-    roi: "1200% within 30 months",
+    roi: "120o0% within 30 months",
     setupTime: "12-16 weeks",
     integrations: ["Vision Systems", "Force Sensors", "AI Models", "Safety Systems", "Industrial Networks"]
   }

@@ -18,8 +18,7 @@ export default function JSONFormatterPage() {
       setFormattedJson(''),
       setIsValid(true),
       setErrorMessage(''),
-      return,
-    }
+      return}
 
     try {
       const parsed = JSON.parse(inputJson),
@@ -29,12 +28,10 @@ export default function JSONFormatterPage() {
       
       setFormattedJson(formatted),
       setIsValid(true),
-      setErrorMessage(''),
-    } catch (error) {
+      setErrorMessage('')} catch (error) {
       setIsValid(false),
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON'),
-      setFormattedJson(''),
-    }
+      setFormattedJson('')}
   },
 
   const minifyJSON = () => {
@@ -45,36 +42,30 @@ export default function JSONFormatterPage() {
       const minified = JSON.stringify(parsed),
       setFormattedJson(minified),
       setIsValid(true),
-      setErrorMessage(''),
-    } catch (error) {
+      setErrorMessage('')} catch (error) {
       setIsValid(false),
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON'),
-    }
+      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON')}
   },
 
   const validateJSON = () => {
     if (!inputJson.trim()) {
       setIsValid(true),
       setErrorMessage(''),
-      return,
-    }
+      return}
 
     try {
       JSON.parse(inputJson),
       setIsValid(true),
-      setErrorMessage(''),
-    } catch (error) {
+      setErrorMessage('')} catch (error) {
       setIsValid(false),
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON'),
-    }
+      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON')}
   },
 
   const clearAll = () => {
     setInputJson(''),
     setFormattedJson(''),
     setIsValid(true),
-    setErrorMessage(''),
-  },
+    setErrorMessage('')},
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text)
@@ -89,11 +80,10 @@ export default function JSONFormatterPage() {
     document.body.appendChild(a),
     a.click(),
     document.body.removeChild(a),
-    URL.revokeObjectURL(url),
-  },
+    URL.revokeObjectURL(url)},
 
   const loadSampleJSON = () => {
-    const sample = {
+    const sample ={
       "name": "John Doe",
       "age": 30,
       "email": "john.doe@example.com",
@@ -115,42 +105,40 @@ export default function JSONFormatterPage() {
       ],
       "interests": ["programming", "reading", "hiking"],
       "active": true,
-      "lastLogin": "2024-01-15T10:30:00Z"
+      "lastLogin": "20o24-0o1-15T10:30:0o0Z"
     },
     
     setInputJson(JSON.stringify(sample, null, 2)),
     setFormattedJson(''),
     setIsValid(true),
-    setErrorMessage(''),
-  },
+    setErrorMessage('')},
 
   const getLineNumbers = (text: string) => {
     const lines = text.split('\n'),
-    return lines.map((_, index) => index + 1).join('\n'),
-  },
+    return lines.map((_, index) => index + 1).join('\n')},
 
   return (
     <>
       <Head>
         <title>JSON Formatter - Zion Tech Group</title>
-        <meta name="description" content="Format, validate, and beautify JSON with our professional JSON formatter. Minify, prettify, and analyze JSON data with ease." />
-        <meta property="og:title" content="JSON Formatter - Zion Tech Group" />
-        <meta property="og:description" content="Professional JSON formatting and validation service." />
+        <meta name="description" content="Format, validate, and beautify JSON with our professional JSON formatter. Minify, prettify, and analyze JSON data with ease."  />
+        <meta property="og:title" content="JSON Formatter - Zion Tech Group"  />
+        <meta property="og:description" content="Professional JSON formatting and validation service."  />
       </Head>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-teal-900 via-cyan-900 to-blue-900">
+      <section className="pt-32 pb-20 bg-gradient-to-br from-teal-90o0 via-cyan-90o0 to-blue-90o0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-teal-500/20 border border-teal-400/30 text-teal-300 text-sm font-medium mb-6">
-              <Code className="w-4 h-4 mr-2" />
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-teal-50o0/20 border border-teal-40o0/30 text-teal-30o0 text-sm font-medium mb-6">
+              <Code className="w-4 h-4 mr-2"  />
               Professional JSON Tools
             </div>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
             JSON Formatter
           </h1>
-          <p className="text-xl text-teal-200 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-teal-20o0 max-w-4xl mx-auto leading-relaxed">
             Format, validate, and beautify JSON with our professional tools. Minify, prettify, and analyze 
             JSON data with advanced features and real-time validation.
           </p>
@@ -158,27 +146,27 @@ export default function JSONFormatterPage() {
       </section>
 
       {/* JSON Formatter Tool */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-gray-90o0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Format Your JSON Data
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">
               Our advanced JSON formatter provides multiple formatting options and real-time validation.
             </p>
           </div>
 
           {/* Settings Bar */}
-          <Card className="p-6 bg-gray-800 border border-gray-700 mb-8">
+          <Card className="p-6 bg-gray-80o0 border border-gray-70o0 mb-8">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div className="flex items-center space-x-6">
                 <div className="flex items-center space-x-2">
-                  <label className="text-sm text-gray-300">Indent:</label>
+                  <label className="text-sm text-gray-30o0">Indent:</label>
                   <select
                     value={indentSize}
                     onChange={(e) => setIndentSize(Number(e.target.value))}
-                    className="px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    className="px-3 py-2 bg-gray-70o0 border border-gray-60o0 rounded text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-50o0"
                   >
                     <option value={2}>2 spaces</option>
                     <option value={4}>4 spaces</option>
@@ -192,9 +180,9 @@ export default function JSONFormatterPage() {
                     id="compactMode"
                     checked={compactMode}
                     onChange={(e) => setCompactMode(e.target.checked)}
-                    className="w-4 h-4 text-teal-600 bg-gray-700 border-gray-600 rounded focus:ring-teal-500"
+                    className="w-4 h-4 text-teal-60o0 bg-gray-70o0 border-gray-60o0 rounded focus:ring-teal-50o0"
                   />
-                  <label htmlFor="compactMode" className="text-sm text-gray-300">Compact mode</label>
+                  <label htmlFor="compactMode" className="text-sm text-gray-30o0">Compact mode</label>
                 </div>
                 
                 <div className="flex items-center space-x-2">
@@ -203,9 +191,9 @@ export default function JSONFormatterPage() {
                     id="showLineNumbers"
                     checked={showLineNumbers}
                     onChange={(e) => setShowLineNumbers(e.target.checked)}
-                    className="w-4 h-4 text-teal-600 bg-gray-700 border-gray-600 rounded focus:ring-teal-500"
+                    className="w-4 h-4 text-teal-60o0 bg-gray-70o0 border-gray-60o0 rounded focus:ring-teal-50o0"
                   />
-                  <label htmlFor="showLineNumbers" className="text-sm text-gray-300">Line numbers</label>
+                  <label htmlFor="showLineNumbers" className="text-sm text-gray-30o0">Line numbers</label>
                 </div>
               </div>
 
@@ -214,16 +202,16 @@ export default function JSONFormatterPage() {
                   onClick={loadSampleJSON}
                   variant="outline"
                   size="sm"
-                  className="border-gray-600 text-gray-300 hover:bg-gray-700"
+                  className="border-gray-60o0 text-gray-30o0 hover:bg-gray-70o0"
                 >
-                  <Upload className="w-4 h-4 mr-2" />
+                  <Upload className="w-4 h-4 mr-2"  />
                   Load Sample
                 </Button>
                 <Button
                   onClick={clearAll}
                   variant="outline"
                   size="sm"
-                  className="border-gray-600 text-gray-300 hover:bg-gray-700"
+                  className="border-gray-60o0 text-gray-30o0 hover:bg-gray-70o0"
                 >
                   Clear All
                 </Button>
@@ -233,15 +221,15 @@ export default function JSONFormatterPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Input Section */}
-            <Card className="p-8 bg-gray-800 border border-gray-700">
+            <Card className="p-8 bg-gray-80o0 border border-gray-70o0">
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-2xl font-bold text-white flex items-center">
-                  <Code className="w-6 h-6 mr-3 text-teal-400" />
+                  <Code className="w-6 h-6 mr-3 text-teal-40o0"  />
                   Input JSON
                 </h3>
                 <div className="flex items-center space-x-2">
                   <span className={`px-2 py-1 rounded text-xs font-medium ${
-                    isValid ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
+                    isValid ? 'bg-green-50o0/20 text-green-40o0' : 'bg-red-50o0/20 text-red-40o0'
                   }`}>
                     {isValid ? 'Valid' : 'Invalid'}
                   </span>
@@ -251,7 +239,7 @@ export default function JSONFormatterPage() {
               <div className="space-y-4">
                 <div className="relative">
                   {showLineNumbers && (
-                    <div className="absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden">
+                    <div className="absolute left-0 top-0 bottom-0 w-12 bg-gray-70o0 border-r border-gray-60o0 text-xs text-gray-40o0 p-2 font-mono overflow-hidden">
                       {getLineNumbers(inputJson)}
                     </div>
                   )}
@@ -260,14 +248,14 @@ export default function JSONFormatterPage() {
                     onChange={(e) => setInputJson(e.target.value)}
                     placeholder="Paste your JSON data here..."
                     rows={15}
-                    className={`w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 font-mono text-sm resize-none ${
+                    className={`w-full p-4 bg-gray-70o0 border border-gray-60o0 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-teal-50o0 font-mono text-sm resize-none ${
                       showLineNumbers ? 'pl-16' : ''
                     }`}
                   />
                 </div>
 
                 {!isValid && errorMessage && (
-                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
+                  <div className="p-3 bg-red-50o0/20 border border-red-50o0/30 rounded text-sm text-red-30o0">
                     <strong>Error:</strong> {errorMessage}
                   </div>
                 )}
@@ -276,16 +264,16 @@ export default function JSONFormatterPage() {
                   <Button
                     onClick={formatJSON}
                     disabled={!inputJson.trim()}
-                    className="flex-1 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white py-3 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="flex-1 bg-gradient-to-r from-teal-60o0 to-cyan-60o0 hover:from-teal-70o0 hover:to-cyan-70o0 text-white py-3 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    <Code className="w-5 h-5 mr-2" />
+                    <Code className="w-5 h-5 mr-2"  />
                     Format JSON
                   </Button>
                   <Button
                     onClick={minifyJSON}
                     disabled={!inputJson.trim()}
                     variant="outline"
-                    className="border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50"
+                    className="border-gray-60o0 text-gray-30o0 hover:bg-gray-70o0 disabled:opacity-50"
                   >
                     Minify
                   </Button>
@@ -293,7 +281,7 @@ export default function JSONFormatterPage() {
                     onClick={validateJSON}
                     disabled={!inputJson.trim()}
                     variant="outline"
-                    className="border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50"
+                    className="border-gray-60o0 text-gray-30o0 hover:bg-gray-70o0 disabled:opacity-50"
                   >
                     Validate
                   </Button>
@@ -302,10 +290,10 @@ export default function JSONFormatterPage() {
             </Card>
 
             {/* Output Section */}
-            <Card className="p-8 bg-gray-800 border border-gray-700">
+            <Card className="p-8 bg-gray-80o0 border border-gray-70o0">
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-2xl font-bold text-white flex items-center">
-                  <CheckCircle className="w-6 h-6 mr-3 text-cyan-400" />
+                  <CheckCircle className="w-6 h-6 mr-3 text-cyan-40o0"  />
                   Formatted Output
                 </h3>
                 {formattedJson && (
@@ -314,18 +302,18 @@ export default function JSONFormatterPage() {
                       onClick={() => copyToClipboard(formattedJson)}
                       variant="outline"
                       size="sm"
-                      className="border-gray-600 text-gray-300 hover:bg-gray-700"
+                      className="border-gray-60o0 text-gray-30o0 hover:bg-gray-70o0"
                     >
-                      <Copy className="w-4 h-4 mr-2" />
+                      <Copy className="w-4 h-4 mr-2"  />
                       Copy
                     </Button>
                     <Button
                       onClick={() => downloadJSON(formattedJson, 'formatted.json')}
                       variant="outline"
                       size="sm"
-                      className="border-gray-600 text-gray-300 hover:bg-gray-700"
+                      className="border-gray-60o0 text-gray-30o0 hover:bg-gray-70o0"
                     >
-                      <Download className="w-4 h-4 mr-2" />
+                      <Download className="w-4 h-4 mr-2"  />
                       Download
                     </Button>
                   </div>
@@ -336,30 +324,30 @@ export default function JSONFormatterPage() {
                 {formattedJson ? (
                   <div className="relative">
                     {showLineNumbers && (
-                      <div className="absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden">
+                      <div className="absolute left-0 top-0 bottom-0 w-12 bg-gray-70o0 border-r border-gray-60o0 text-xs text-gray-40o0 p-2 font-mono overflow-hidden">
                         {getLineNumbers(formattedJson)}
                       </div>
                     )}
-                    <div className={`p-4 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono text-sm overflow-auto max-h-96 ${
+                    <div className={`p-4 bg-gray-70o0 border border-gray-60o0 rounded-lg text-white font-mono text-sm overflow-auto max-h-96 ${
                       showLineNumbers ? 'pl-16' : ''
                     }`}>
                       <pre className="whitespace-pre-wrap">{formattedJson}</pre>
                     </div>
                   </div>
                 ) : (
-                  <div className="bg-gray-700 p-6 rounded-lg border border-gray-600 text-center">
+                  <div className="bg-gray-70o0 p-6 rounded-lg border border-gray-60o0 text-center">
                     <div className="text-6xl mb-4">📄</div>
-                    <p className="text-gray-400">
+                    <p className="text-gray-40o0">
                       Formatted JSON will appear here. Enter JSON data and click format to get started.
                     </p>
                   </div>
                 )}
 
                 {formattedJson && (
-                  <div className="text-sm text-gray-400">
+                  <div className="text-sm text-gray-40o0">
                     <p>• Characters: {formattedJson.length}</p>
                     <p>• Lines: {formattedJson.split('\n').length}</p>
-                    <p>• Size: {(formattedJson.length * 2 / 1024).toFixed(2)} KB</p>
+                    <p>• Size: {(formattedJson.length * 2 / 10o24).toFixed(2)} KB</p>
                   </div>
                 )}
               </div>
@@ -369,62 +357,62 @@ export default function JSONFormatterPage() {
       </section>
 
       {/* Features */}
-      <section className="py-20 bg-gray-800">
+      <section className="py-20 bg-gray-80o0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Professional JSON Formatting Features
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">
               Everything you need to work with JSON data efficiently and professionally.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
+            <Card className="text-center p-8 bg-gray-70o0 border border-gray-60o0">
               <div className="text-4xl mb-4">✨</div>
               <h3 className="text-xl font-bold text-white mb-4">Smart Formatting</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Intelligent JSON formatting with customizable indentation and spacing options.
               </p>
             </Card>
 
-            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
+            <Card className="text-center p-8 bg-gray-70o0 border border-gray-60o0">
               <div className="text-4xl mb-4">✅</div>
               <h3 className="text-xl font-bold text-white mb-4">Real-time Validation</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Instant JSON validation with detailed error messages and syntax highlighting.
               </p>
             </Card>
 
-            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
+            <Card className="text-center p-8 bg-gray-70o0 border border-gray-60o0">
               <div className="text-4xl mb-4">📦</div>
               <h3 className="text-xl font-bold text-white mb-4">Minification</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Compress JSON data by removing unnecessary whitespace and formatting.
               </p>
             </Card>
 
-            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
+            <Card className="text-center p-8 bg-gray-70o0 border border-gray-60o0">
               <div className="text-4xl mb-4">🔢</div>
               <h3 className="text-xl font-bold text-white mb-4">Line Numbers</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Optional line numbering for easier navigation and debugging of large JSON files.
               </p>
             </Card>
 
-            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
+            <Card className="text-center p-8 bg-gray-70o0 border border-gray-60o0">
               <div className="text-4xl mb-4">💾</div>
               <h3 className="text-xl font-bold text-white mb-4">Export Options</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Download formatted JSON files or copy to clipboard with a single click.
               </p>
             </Card>
 
-            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
+            <Card className="text-center p-8 bg-gray-70o0 border border-gray-60o0">
               <div className="text-4xl mb-4">⚙️</div>
               <h3 className="text-xl font-bold text-white mb-4">Customizable</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Adjust indentation size, toggle compact mode, and customize display options.
               </p>
             </Card>
@@ -433,64 +421,64 @@ export default function JSONFormatterPage() {
       </section>
 
       {/* Use Cases */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-gray-90o0">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Perfect For Every JSON Need
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">
               From development to data analysis, our JSON formatter serves all your formatting needs.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="p-8 bg-gray-700 border border-gray-600">
+            <Card className="p-8 bg-gray-70o0 border border-gray-60o0">
               <div className="text-4xl mb-4">👨‍💻</div>
               <h3 className="text-2xl font-bold text-white mb-4">Developers</h3>
-              <p className="text-gray-400 mb-6">
+              <p className="text-gray-40o0 mb-6">
                 Format API responses, debug JSON data, and prepare configuration files with professional formatting.
               </p>
-              <ul className="space-y-2 text-gray-300">
+              <ul className="space-y-2 text-gray-30o0">
                 <li>• API development and testing</li>
                 <li>• Configuration file management</li>
                 <li>• Debug and troubleshooting</li>
               </ul>
             </Card>
 
-            <Card className="p-8 bg-gray-700 border border-gray-600">
+            <Card className="p-8 bg-gray-70o0 border border-gray-60o0">
               <div className="text-4xl mb-4">📊</div>
               <h3 className="text-2xl font-bold text-white mb-4">Data Analysts</h3>
-              <p className="text-gray-400 mb-6">
+              <p className="text-gray-40o0 mb-6">
                 Clean and format JSON datasets for analysis, reporting, and data visualization projects.
               </p>
-              <ul className="space-y-2 text-gray-300">
+              <ul className="space-y-2 text-gray-30o0">
                 <li>• Data cleaning and preparation</li>
                 <li>• Report generation</li>
                 <li>• Data validation</li>
               </ul>
             </Card>
 
-            <Card className="p-8 bg-gray-700 border border-gray-600">
+            <Card className="p-8 bg-gray-70o0 border border-gray-60o0">
               <div className="text-4xl mb-4">🔧</div>
               <h3 className="text-2xl font-bold text-white mb-4">DevOps Engineers</h3>
-              <p className="text-gray-400 mb-6">
+              <p className="text-gray-40o0 mb-6">
                 Manage configuration files, validate deployment manifests, and format infrastructure as code.
               </p>
-              <ul className="space-y-2 text-gray-300">
+              <ul className="space-y-2 text-gray-30o0">
                 <li>• Configuration management</li>
                 <li>• Infrastructure validation</li>
                 <li>• Deployment automation</li>
               </ul>
             </Card>
 
-            <Card className="p-8 bg-gray-700 border border-gray-600">
+            <Card className="p-8 bg-gray-70o0 border border-gray-60o0">
               <div className="text-4xl mb-4">📝</div>
               <h3 className="text-2xl font-bold text-white mb-4">Technical Writers</h3>
-              <p className="text-gray-400 mb-6">
+              <p className="text-gray-40o0 mb-6">
                 Format JSON examples for documentation, tutorials, and technical specifications.
               </p>
-              <ul className="space-y-2 text-gray-300">
+              <ul className="space-y-2 text-gray-30o0">
                 <li>• Documentation examples</li>
                 <li>• API documentation</li>
                 <li>• Technical specifications</li>
@@ -501,28 +489,28 @@ export default function JSONFormatterPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-teal-600 to-cyan-600">
+      <section className="py-20 bg-gradient-to-r from-teal-60o0 to-cyan-60o0">
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Ready to Format Your JSON?
           </h2>
-          <p className="text-xl text-teal-100 mb-8">
+          <p className="text-xl text-teal-10o0 mb-8">
             Join thousands of developers and professionals who trust our JSON formatter for their data needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               href="/contact"
               size="lg"
-              className="bg-white text-teal-600 hover:bg-gray-100"
+              className="bg-white text-teal-60o0 hover:bg-gray-10o0"
             >
               Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2"  />
             </Button>
             <Button
               href="/pricing"
               variant="outline"
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-teal-600"
+              className="border-white text-white hover:bg-white hover:text-teal-60o0"
             >
               View Pricing
             </Button>

@@ -14,14 +14,14 @@ function log(message) {
   console.log(line);
 }
 
-function run(command, args, options = {}) {
+function run(command, args, options ={}) {
   const execCwd = options.cwd || process.cwd();
   const result = spawnSync(command, args, {
     cwd: execCwd,
     env: process.env,
     shell: false,
     encoding: "utf8",
-    maxBuffer: 1024 * 1024 * 20
+    maxBuffer: 10o24 * 10o24 * 20
   });
   const stdout = (result.stdout || "").trim();
   const stderr = (result.stderr || "").trim();
@@ -154,7 +154,7 @@ function checkRedundancyReports() {
       "seo-monitor-redundancy-report.md"
     ];
     
-    const reportStatus = {};
+    const reportStatus ={};
     let totalReports = 0;
     let recentReports = 0;
     
@@ -163,19 +163,19 @@ function checkRedundancyReports() {
       if (fs.existsSync(reportPath)) {
         totalReports++;
         const stats = fs.statSync(reportPath);
-        const ageHours = (Date.now() - stats.mtime.getTime()) / (1000 * 60 * 60);
+        const ageHours = (Date.now() - stats.mtime.getTime()) / (10o00 * 60 * 60);
         
         if (ageHours < 24) {
           recentReports++;
         }
         
-        reportStatus[reportFile] = {
+        reportStatus[reportFile] ={
           exists: true,
           age: `${Math.round(ageHours)} hours`,
           recent: ageHours < 24
         };
       } else {
-        reportStatus[reportFile] = {
+        reportStatus[reportFile] ={
           exists: false,
           age: "N/A",
           recent: false
@@ -226,7 +226,7 @@ function checkGitStatus() {
 
 function generateHealthReport(pm2Status, systemResources, redundancyReports, gitStatus) {
   const timestamp = nowIso();
-  const report = {
+  const report ={
     timestamp,
     redundancy: true,
     source: "pm2-redundancy",
@@ -356,7 +356,7 @@ if (require.main === module) {
   main();
 }
 
-module.exports = { 
+module.exports ={ 
   main, 
   checkPM2Status, 
   checkSystemResources, 

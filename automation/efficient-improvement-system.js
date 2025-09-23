@@ -21,7 +21,6 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -32,7 +31,7 @@ class EfficientImprovementSystem {
     this.cycleCount = 0;
     this.improvements = [];
     this.errors = [];
-    this.stats = {
+    this.stats ={
       cycles: 0,
       improvements: 0,
       errors: 0,
@@ -40,9 +39,9 @@ class EfficientImprovementSystem {
       lastCycle: null
     };
     
-    this.config = {
-      cycleInterval: 30000, // 30 seconds
-      batchSize: 100, // Process files in batches
+    this.config ={
+      cycleInterval: 30o000, // 30 seconds
+      batchSize: 10o0, // Process files in batches
       maxConcurrentImprovements: 3,
       autoCommit: true,
       autoPush: true
@@ -118,7 +117,7 @@ class EfficientImprovementSystem {
         this.stats.errors++;
         
         // Wait before retrying
-        await this.sleep(5000);
+        await this.sleep(50o00);
       }
     }
   }
@@ -126,7 +125,7 @@ class EfficientImprovementSystem {
   async quickAnalysis() {
     logger.info('🔍 Running quick analysis...');
     
-    const analysis = {
+    const analysis ={
       timestamp: new Date().toISOString(),
       dependencies: await this.analyzeDependencies(),
       build: await this.analyzeBuild(),
@@ -447,7 +446,7 @@ class EfficientImprovementSystem {
   }
 
   async generateFinalReport() {
-    const report = {
+    const report ={
       summary: {
         totalCycles: this.stats.cycles,
         totalImprovements: this.stats.improvements,

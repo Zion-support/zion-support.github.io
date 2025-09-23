@@ -1,5 +1,4 @@
 
-import React from "react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -32,11 +31,11 @@ export function MobileConversationList({
     <div className="space-y-4">
       <div className="px-4 mb-2">
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground"  />
           <Input
             placeholder="Search messages..."
             className="pl-9"
-          />
+           />
         </div>
       </div>
       
@@ -61,7 +60,7 @@ export function MobileConversationList({
           >
             <div className="flex items-center gap-3 py-3 cursor-pointer">
               <Avatar>
-                <AvatarImage src={conversation.avatar} alt={conversation.name} />
+                <AvatarImage src={conversation.avatar} alt={conversation.name}  />
                 <AvatarFallback>
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>

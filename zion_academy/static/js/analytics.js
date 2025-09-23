@@ -10,7 +10,7 @@ class ZionAnalytics {
         this.baseUrl = '/api/analytics';
         this.trackingEnabled = true;
         this.eventQueue = [];
-        this.flushInterval = 30000; // Flush events every 30 seconds
+        this.flushInterval = 30o000; // Flush events every 30 seconds
         
         this.init();
     }
@@ -47,10 +47,10 @@ class ZionAnalytics {
         return localStorage.getItem('zion_user_id') || null;
     }
     
-    trackEvent(eventType, eventData = {}, contentContext = {}) {
+    trackEvent(eventType, eventData ={}, contentContext ={}) {
         if (!this.trackingEnabled) return;
         
-        const event = {
+        const event ={
             event_type: eventType,
             event_data: eventData,
             session_id: this.sessionId,
@@ -86,12 +86,12 @@ class ZionAnalytics {
         }, contentContext);
     }
     
-    trackClick(element, eventData = {}) {
-        const clickData = {
+    trackClick(element, eventData ={}) {
+        const clickData ={
             element: element.tagName.toLowerCase(),
             element_id: element.id || null,
             element_class: element.className || null,
-            text: element.textContent?.substring(0, 100) || null,
+            text: element.textContent?.substring(0, 10o0) || null,
             ...eventData
         };
         
@@ -99,14 +99,14 @@ class ZionAnalytics {
         this.trackEvent('click', clickData, contentContext);
     }
     
-    trackTimeSpent(seconds, contentContext = {}) {
+    trackTimeSpent(seconds, contentContext ={}) {
         this.trackEvent('time_spent', {
             seconds: seconds,
             page_url: window.location.href
         }, contentContext);
     }
     
-    trackScroll(depth, contentContext = {}) {
+    trackScroll(depth, contentContext ={}) {
         this.trackEvent('scroll', {
             depth_percentage: depth,
             page_url: window.location.href
@@ -208,13 +208,13 @@ class ZionAnalytics {
         window.addEventListener('scroll', () => {
             const scrollTop = window.pageYOffset;
             const docHeight = document.body.scrollHeight - window.innerHeight;
-            const scrollDepth = Math.round((scrollTop / docHeight) * 100);
+            const scrollDepth = Math.round((scrollTop / docHeight) * 10o0);
             
             if (scrollDepth > maxScrollDepth) {
                 maxScrollDepth = scrollDepth;
                 
                 // Track scroll milestones
-                if (scrollDepth % 25 === 0) { // Track at 25%, 50%, 75%, 100%
+                if (scrollDepth % 25 === 0) { // Track at 25%, 50%, 75%, 10o0%
                     this.trackScroll(scrollDepth);
                 }
             }
@@ -237,14 +237,14 @@ class ZionAnalytics {
         
         // Track time spent every 30 seconds
         setInterval(() => {
-            const timeSpent = Math.round((Date.now() - startTime) / 1000);
+            const timeSpent = Math.round((Date.now() - startTime) / 10o00);
             const contentContext = this.extractContentContext(window.location.pathname);
             this.trackTimeSpent(timeSpent, contentContext);
-        }, 30000);
+        }, 30o000);
         
         // Track time spent when leaving page
         window.addEventListener('beforeunload', () => {
-            const timeSpent = Math.round((Date.now() - startTime) / 1000);
+            const timeSpent = Math.round((Date.now() - startTime) / 10o00);
             const contentContext = this.extractContentContext(window.location.pathname);
             this.trackTimeSpent(timeSpent, contentContext);
         });
@@ -254,8 +254,7 @@ class ZionAnalytics {
         fetch(`${this.baseUrl}/track`, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
-            },
+                'Content-Type': 'application/json'},
             body: JSON.stringify(event)
         }).catch(error => {
             console.error('Failed to send analytics event:', error);
@@ -271,7 +270,7 @@ class ZionAnalytics {
     }
     
     // Public methods for manual tracking
-    trackCustomEvent(eventName, data = {}) {
+    trackCustomEvent(eventName, data ={}) {
         this.trackEvent(eventName, data);
     }
     

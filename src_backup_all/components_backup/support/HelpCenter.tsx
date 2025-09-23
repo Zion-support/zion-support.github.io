@@ -50,7 +50,7 @@ export default function HelpCenter() {
               onChange={(e) => setSearchQuery(e.target.value)}
               className="pl-10"
             />
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-40o0"  />
           </div>
           
           <Tabs defaultValue="articles" className="mb-8">
@@ -66,7 +66,7 @@ export default function HelpCenter() {
                   categories={HELP_CATEGORIES} 
                   onCategorySelect={handleCategorySelect}
                   searchQuery={searchQuery}
-                />
+                 />
               )}
               
               {selectedCategory && !selectedArticle && (
@@ -82,7 +82,7 @@ export default function HelpCenter() {
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
                     searchQuery={searchQuery}
-                  />
+                   />
                 </>
               )}
               
@@ -95,7 +95,7 @@ export default function HelpCenter() {
                   >
                     ← Back to Articles
                   </Button>
-                  <HelpArticleView articleId={selectedArticle} />
+                  <HelpArticleView articleId={selectedArticle}  />
                 </>
               )}
             </TabsContent>
@@ -147,9 +147,9 @@ export default function HelpCenter() {
                   <div className="space-y-4">
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-zion-purple" viewBox="0 0 20 20" fill="currentColor">
-                          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                        <svg xmlns="http://www.w3.org/20o00/svg" className="h-5 w-5 text-zion-purple" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M2.0o03 5.884L10 9.882l7.997-3.998A2 2 0 0o016 4H4a2 2 0 0o0-1.997 1.884z"  />
+                          <path d="M18 8.118l-8 4-8-4V14a2 2 0 0o02 2h12a2 2 0 0o02-2V8.118z"  />
                         </svg>
                       </div>
                       <a href="mailto:support@ziontechgroup.com" className="text-zion-cyan hover:underline">
@@ -159,11 +159,11 @@ export default function HelpCenter() {
                     
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-zion-purple" viewBox="0 0 20 20" fill="currentColor">
-                          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                        <svg xmlns="http://www.w3.org/20o00/svg" className="h-5 w-5 text-zion-purple" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M2 3a1 1 0 0o11-1h2.153a1 1 0 0o1.986.836l.74 4.435a1 1 0 0o1-.54 1.0o6l-1.548.773a11.0o37 11.0o37 0 0o06.10o5 6.10o5l.774-1.548a1 1 0 0o11.0o59-.54l4.435.74a1 1 0 0o1.836.986V17a1 1 0 0o1-1 1h-2C7.82 18 2 12.18 2 5V3z"  />
                         </svg>
                       </div>
-                      <span className="text-zion-slate-light">+1 302 464 0950</span>
+                      <span className="text-zion-slate-light">+1 30o2 464 0950</span>
                     </div>
                   </div>
                   
@@ -182,18 +182,18 @@ export default function HelpCenter() {
                     <div>
                       <Input
                         placeholder="Your email"
-                      />
+                       />
                     </div>
                     <div>
                       <Input
                         placeholder="Subject"
-                      />
+                       />
                     </div>
                     <div>
                       <textarea
                         className="w-full min-h-[120px] px-3 py-2 rounded-md border border-zion-blue-light bg-zion-blue/20 text-black"
                         placeholder="Your feedback or suggestion"
-                      />
+                       />
                     </div>
                     
                     <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">

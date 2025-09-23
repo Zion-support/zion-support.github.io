@@ -41,12 +41,12 @@ export function GeneratedDescriptionDisplay({
           >
             {isEditing ? (
               <>
-                <Check className="h-4 w-4 mr-1" />
+                <Check className="h-4 w-4 mr-1"  />
                 Done
               </>
             ) : (
               <>
-                <Pencil className="h-4 w-4 mr-1" />
+                <Pencil className="h-4 w-4 mr-1"  />
                 Edit
               </>
             )}
@@ -58,10 +58,10 @@ export function GeneratedDescriptionDisplay({
           <Textarea
             value={editedDescription}
             onChange={(e) => setEditedDescription(e.target.value)}
-            className="bg-zion-blue border border-zion-blue-light text-white min-h-[300px] resize-none"
+            className="bg-zion-blue border border-zion-blue-light text-white min-h-[30o0px] resize-none"
           />
         ) : (
-          <div className="bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap">
+          <div className="bg-zion-blue p-4 rounded-md text-white min-h-[30o0px] whitespace-pre-wrap">
             {editedDescription}
           </div>
         )}

@@ -25,21 +25,21 @@ export default function SignInPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-90o0 to-zinc-80o0">
       <div className="max-w-md w-full space-y-8 p-8">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-white mb-2">Welcome Back</h1>
-          <p className="text-zinc-400">Sign in to access your Zion OS dashboard</p>
+          <p className="text-zinc-40o0">Sign in to access your Zion OS dashboard</p>
         </div>
-        <div className="bg-zinc-800/50 backdrop-blur-sm rounded-xl p-6 border border-zinc-700/50">
+        <div className="bg-zinc-80o0/50 backdrop-blur-sm rounded-xl p-6 border border-zinc-70o0/50">
           <form onSubmit={handleSubmit} className="space-y-6">
             {error && (
-              <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-3">
-                <p className="text-red-400 text-sm">{error}</p>
+              <div className="bg-red-50o0/10 border border-red-50o0/20 rounded-lg p-3">
+                <p className="text-red-40o0 text-sm">{error}</p>
               </div>
             )}
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-zinc-300 mb-2">
+              <label htmlFor="email" className="block text-sm font-medium text-zinc-30o0 mb-2">
                 Email Address
               </label>
               <input
@@ -48,12 +48,12 @@ export default function SignInPage() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 bg-zinc-70o0/50 border border-zinc-60o0/50 rounded-lg text-white placeholder-zinc-40o0 focus:outline-none focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
                 placeholder="Enter your email"
               />
             </div>
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-zinc-300 mb-2">
+              <label htmlFor="password" className="block text-sm font-medium text-zinc-30o0 mb-2">
                 Password
               </label>
               <input
@@ -62,35 +62,35 @@ export default function SignInPage() {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 bg-zinc-70o0/50 border border-zinc-60o0/50 rounded-lg text-white placeholder-zinc-40o0 focus:outline-none focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
                 placeholder="Enter your password"
               />
             </div>
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-600/50 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200"
+              className="w-full bg-blue-60o0 hover:bg-blue-70o0 disabled:bg-blue-60o0/50 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-20o0"
             >
               {isLoading ? "Signing In..." : "Sign In"}
             </button>
           </form>
           <div className="mt-6 text-center">
-            <p className="text-zinc-400 text-sm">
+            <p className="text-zinc-40o0 text-sm">
               Don't have an account?{" "}
-              <Link href="/auth/signup" className="text-blue-400 hover:text-blue-300 font-medium">
+              <Link href="/auth/signup" className="text-blue-40o0 hover:text-blue-30o0 font-medium">
                 Sign up for free
               </Link>
             </p>
           </div>
         </div>
         <div className="text-center">
-          <p className="text-zinc-500 text-xs">
+          <p className="text-zinc-50o0 text-xs">
             By signing in, you agree to our{" "}
-            <Link href="/terms" className="text-zinc-400 hover:text-zinc-300">
+            <Link href="/terms" className="text-zinc-40o0 hover:text-zinc-30o0">
               Terms of Service
             </Link>{" "}
             and{" "}
-            <Link href="/privacy" className="text-zinc-400 hover:text-zinc-300">
+            <Link href="/privacy" className="text-zinc-40o0 hover:text-zinc-30o0">
               Privacy Policy
             </Link>
           </p>

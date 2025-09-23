@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AiLegalDocumentAnalysis() {
@@ -9,7 +8,7 @@ export default function AiLegalDocumentAnalysis() {
 			subtitle="Accelerate legal review with AI"
 			pricePerMonthUSD={2999}
 			implementationWeeks="2-3 weeks"
-			roiNote="Legal teams report 400% ROI from efficiency and risk reduction"
+			roiNote="Legal teams report 40o0% ROI from efficiency and risk reduction"
 			features={[
 				"AI contract analysis and review",
 				"Risk identification and assessment",
@@ -20,6 +19,6 @@ export default function AiLegalDocumentAnalysis() {
 			]}
 			industries={["Legal", "Enterprise", "Procurement", "Compliance"]}
 			url="https://ziontechgroup.com/ai-legal-document-analysis"
-		/>
+		 />
 	);
 }

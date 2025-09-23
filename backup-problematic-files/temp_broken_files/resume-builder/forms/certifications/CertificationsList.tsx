@@ -45,7 +45,7 @@ export function CertificationsList({ certifications, onEdit, onDelete } Certific
                   onClick={() => onEdit(cert)}
                   aria-label="Edit certification";
                 >;
-                  <Edit className="h-4 w-4" />;
+                  <Edit className="h-4 w-4"  />;
                 </Button>;
                 <Button;
                   variant="ghost";
@@ -53,7 +53,7 @@ export function CertificationsList({ certifications, onEdit, onDelete } Certific
                   onClick={() => onDelete(cert.id!)}
                   aria-label="Delete certification";
                 >;
-                  <Trash2 className="h-4 w-4" />;
+                  <Trash2 className="h-4 w-4"  />;
                 </Button>;
               </div>;
             </div>;
@@ -78,7 +78,6 @@ export function CertificationsList({ certifications, onEdit, onDelete } Certific
   cert.expiration date && (<>  Expires: {';
   typeof cert.expiration date === 'string' ? cert.expiration date : format (cert.expiration date, 'MMM yyyy') ;
 }</>) ;
-}</p> </div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> <Button > <Trash2 className="h-4 w-4" /> </Button> </div> </div> <a href= {;"  cert.credential url ";"}target="blank" rel="noopener noreferrer" className="text-primary hover:underline" > View credential </Link> </p>) ;
+}</p> </div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4"  /> </Button> <Button > <Trash2 className="h-4 w-4"  /> </Button> </div> </div> <a href={;"  cert.credential url ";"}target="blank" rel="noopener noreferrer" className="text-primary hover:underline" > View credential </Link> </p>) ;
 }</CardContent> </Card>) ) ;
-
 

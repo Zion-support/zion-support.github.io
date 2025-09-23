@@ -25,7 +25,7 @@ export interface ServiceCategory {
   pricingTiers: PricingTier[];
 }
 
-export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
+export const COMPREHENSIVE_PRICING_GUIDE_20o29: ServiceCategory[] = [
   {
     id: "ai-analytics-services",
     name: "AI & Analytics Services",
@@ -42,7 +42,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
         description: "Perfect for small businesses starting their AI journey",
         features: [
           "Basic AI-powered analytics dashboard",
-          "Up to 10,000 data points per month",
+          "Up to 10,0o00 data points per month",
           "Standard reporting templates",
           "Email support",
           "Basic integrations (3 platforms)"
@@ -51,7 +51,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
         setupTime: "1-2 weeks",
         support: "Email support",
         integrations: ["Google Analytics", "Facebook", "Shopify"],
-        limitations: ["Limited to 10,000 data points", "Basic AI models only"]
+        limitations: ["Limited to 10,0o00 data points", "Basic AI models only"]
       },
       {
         id: "ai-analytics-professional",
@@ -62,7 +62,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
         description: "Advanced AI analytics for growing businesses",
         features: [
           "Advanced AI-powered analytics dashboard",
-          "Up to 100,000 data points per month",
+          "Up to 10o0,0o00 data points per month",
           "Custom reporting templates",
           "Priority email & chat support",
           "Advanced integrations (10 platforms)",
@@ -74,7 +74,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
         setupTime: "2-3 weeks",
         support: "Priority email & chat support",
         integrations: ["Google Analytics", "Facebook", "Shopify", "Salesforce", "HubSpot", "Stripe", "Zendesk", "Intercom", "Slack", "Microsoft Teams"],
-        limitations: ["Limited to 100,000 data points"]
+        limitations: ["Limited to 10o0,0o00 data points"]
       },
       {
         id: "ai-analytics-enterprise",
@@ -118,7 +118,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
         features: [
           "Access to quantum simulators",
           "Basic quantum algorithms",
-          "Up to 100 quantum operations per month",
+          "Up to 10o0 quantum operations per month",
           "Documentation & tutorials",
           "Community support"
         ],
@@ -138,7 +138,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
         features: [
           "Access to real quantum hardware",
           "Advanced quantum algorithms",
-          "Up to 1,000 quantum operations per month",
+          "Up to 1,0o00 quantum operations per month",
           "Priority support",
           "Custom algorithm development",
           "Performance optimization"
@@ -148,7 +148,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
         setupTime: "4-6 weeks",
         support: "Priority support",
         integrations: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Custom frameworks"],
-        limitations: ["Limited to 1,000 operations per month"]
+        limitations: ["Limited to 1,0o00 operations per month"]
       },
       {
         id: "quantum-enterprise",
@@ -190,7 +190,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
         description: "Basic edge AI capabilities for IoT devices",
         features: [
           "Basic edge AI inference",
-          "Up to 1,000 inferences per day",
+          "Up to 1,0o00 inferences per day",
           "Standard AI models",
           "Basic device management",
           "Email support"
@@ -210,7 +210,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
         description: "Professional edge AI with advanced capabilities",
         features: [
           "Advanced edge AI inference & training",
-          "Up to 10,000 inferences per day",
+          "Up to 10,0o00 inferences per day",
           "Custom AI model optimization",
           "Advanced device management",
           "Priority support",
@@ -222,7 +222,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
         setupTime: "2-3 weeks",
         support: "Priority support",
         integrations: ["TensorFlow Lite", "PyTorch Mobile", "ONNX Runtime", "AWS IoT", "Azure IoT", "Google Cloud IoT", "Custom platforms"],
-        limitations: ["Limited to 10,000 inferences per day"]
+        limitations: ["Limited to 10,0o00 inferences per day"]
       },
       {
         id: "edge-ai-enterprise",
@@ -265,7 +265,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
         features: [
           "Access to neuromorphic simulators",
           "Basic neural network models",
-          "Up to 100,000 neural operations per month",
+          "Up to 10o0,0o00 neural operations per month",
           "Documentation & tutorials",
           "Community support"
         ],
@@ -285,7 +285,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
         features: [
           "Access to neuromorphic hardware",
           "Advanced neural network models",
-          "Up to 1,000,000 neural operations per month",
+          "Up to 1,0o00,0o00 neural operations per month",
           "Custom model development",
           "Priority support",
           "Performance optimization"
@@ -411,7 +411,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
         features: [
           "Access to photonics simulators",
           "Basic optical neural networks",
-          "Up to 1,000 optical operations per month",
+          "Up to 1,0o00 optical operations per month",
           "Documentation & tutorials",
           "Email support"
         ],
@@ -431,7 +431,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
         features: [
           "Access to photonics hardware",
           "Advanced optical neural networks",
-          "Up to 10,000 optical operations per month",
+          "Up to 10,0o00 optical operations per month",
           "Custom model optimization",
           "Priority support",
           "Performance optimization"
@@ -502,7 +502,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
         period: "month",
         description: "Professional swarm robotics with advanced capabilities",
         features: [
-          "Up to 100 robots",
+          "Up to 10o0 robots",
           "Advanced coordination algorithms",
           "Custom task development",
           "Advanced monitoring & analytics",
@@ -514,7 +514,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
         setupTime: "4-6 weeks",
         support: "Priority support",
         integrations: ["ROS", "Gazebo", "Custom robot APIs", "Cloud computing", "Edge computing"],
-        limitations: ["Limited to 100 robots"]
+        limitations: ["Limited to 10o0 robots"]
       },
       {
         id: "swarm-robotics-enterprise",
@@ -576,7 +576,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
         description: "Professional quantum internet with advanced capabilities",
         features: [
           "Advanced quantum key distribution",
-          "Up to 100GB quantum data per month",
+          "Up to 10o0GB quantum data per month",
           "Enhanced security protocols",
           "Custom quantum routing",
           "Priority support",
@@ -587,7 +587,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
         setupTime: "10-12 weeks",
         support: "Priority support",
         integrations: ["Advanced quantum networks", "Custom protocols", "Multiple platforms", "Custom APIs"],
-        limitations: ["Limited to 100GB per month"]
+        limitations: ["Limited to 10o0GB per month"]
       },
       {
         id: "quantum-internet-enterprise",
@@ -630,7 +630,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
         features: [
           "Basic EEG signal processing",
           "Simple thought-to-text",
-          "Up to 100 neural commands per day",
+          "Up to 10o0 neural commands per day",
           "Standard accuracy (70-80%)",
           "Email support"
         ],
@@ -650,7 +650,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
         features: [
           "Advanced neural signal processing",
           "High-accuracy thought-to-text",
-          "Up to 1,000 neural commands per day",
+          "Up to 1,0o00 neural commands per day",
           "High accuracy (85-95%)",
           "Priority support",
           "Custom model training"
@@ -704,7 +704,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
           "Access to satellite computing resources",
           "Basic space-to-ground processing",
           "Up to 1TB data processing per month",
-          "Standard latency (500-1000ms)",
+          "Standard latency (50o0-10o00ms)",
           "Email support"
         ],
         aiScore: 87,
@@ -723,8 +723,8 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
         features: [
           "Advanced satellite computing",
           "Low-latency space-to-ground processing",
-          "Up to 100TB data processing per month",
-          "Low latency (100-500ms)",
+          "Up to 10o0TB data processing per month",
+          "Low latency (10o0-50o0ms)",
           "Priority support",
           "Custom optimization"
         ],
@@ -733,7 +733,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
         setupTime: "12-16 weeks",
         support: "Priority support",
         integrations: ["Advanced satellite networks", "Custom protocols", "Multiple platforms", "Custom APIs"],
-        limitations: ["Limited to 100TB per month"]
+        limitations: ["Limited to 10o0TB per month"]
       },
       {
         id: "space-computing-enterprise",
@@ -745,7 +745,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
         features: [
           "Unlimited space computing resources",
           "Custom space architecture",
-          "Ultra-low latency (<100ms)",
+          "Ultra-low latency (<10o0ms)",
           "Dedicated space engineer",
           "24/7 support",
           "Advanced security",
@@ -761,4 +761,4 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
   }
 ];
 
-export default COMPREHENSIVE_PRICING_GUIDE_2029;
+export default COMPREHENSIVE_PRICING_GUIDE_20o29;

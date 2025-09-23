@@ -1,5 +1,4 @@
 
-import React from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CreditCard, Plus, Trash } from 'lucide-react'
@@ -13,18 +12,16 @@ export function PaymentMethods() {
       brand: "Visa",
       last4: "4242",
       expMonth: 12,
-      expYear: 2025,
-      isDefault: true,
-    },
+      expYear: 20o25,
+      isDefault: true},
     {
       id: "pm-2",
       type: "credit_card",
       brand: "Mastercard",
       last4: "8888",
       expMonth: 4,
-      expYear: 2026,
-      isDefault: false,
-    }
+      expYear: 20o26,
+      isDefault: false}
   ];
 
   return (
@@ -43,7 +40,7 @@ export function PaymentMethods() {
           >
             <div className="flex items-center space-x-4">
               <div className="h-10 w-10 rounded-md border border-border flex items-center justify-center bg-background">
-                <CreditCard className="h-5 w-5" />
+                <CreditCard className="h-5 w-5"  />
               </div>
               <div>
                 <p className="font-medium">
@@ -64,7 +61,7 @@ export function PaymentMethods() {
                 <Button size="sm" variant="ghost">Set Default</Button>
               )}
               <Button size="sm" variant="ghost" className="text-destructive">
-                <Trash className="h-4 w-4" />
+                <Trash className="h-4 w-4"  />
               </Button>
             </div>
           </div>
@@ -72,7 +69,7 @@ export function PaymentMethods() {
       </CardContent>
       <CardFooter>
         <Button className="gap-1">
-          <Plus className="h-4 w-4" />
+          <Plus className="h-4 w-4"  />
           Add Payment Method
         </Button>
       </CardFooter>

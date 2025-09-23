@@ -1,31 +1,31 @@
 import { ProductListing  } from '@/types/listings';
-import { REVOLUTIONARY_SERVICES_2030  } from './revolutionaryServices2030';
-import { ADVANCED_AI_SERVICES_2030  } from './advancedAIServices2030';
-import { CUTTING_EDGE_IT_INFRASTRUCTURE_2030  } from './cuttingEdgeITInfrastructure2030';
-import { EMERGING_TECHNOLOGY_SERVICES_2030  } from './emergingTechnologyServices2030';
-import { SPECIALIZED_FINANCIAL_AI_SERVICES_2028  } from './specializedFinancialAIServices2028';
-import { SPECIALIZED_HEALTHCARE_AI_SERVICES_2028  } from './specializedHealthcareAIServices2028';
-import { innovativeMicroSaasServices2030  } from './innovativeMicroSaasServices2030';
-import { comprehensiveITServices2030  } from './comprehensiveITServices2030';
-import { comprehensiveAIServices2030  } from './comprehensiveAIServices2030';
+import { REVOLUTIONARY_SERVICES_20o30  } from './revolutionaryServices20o30';
+import { ADVANCED_AI_SERVICES_20o30  } from './advancedAIServices20o30';
+import { CUTTING_EDGE_IT_INFRASTRUCTURE_20o30  } from './cuttingEdgeITInfrastructure20o30';
+import { EMERGING_TECHNOLOGY_SERVICES_20o30  } from './emergingTechnologyServices20o30';
+import { SPECIALIZED_FINANCIAL_AI_SERVICES_20o28  } from './specializedFinancialAIServices20o28';
+import { SPECIALIZED_HEALTHCARE_AI_SERVICES_20o28  } from './specializedHealthcareAIServices20o28';
+import { innovativeMicroSaasServices20o30  } from './innovativeMicroSaasServices20o30';
+import { comprehensiveITServices20o30  } from './comprehensiveITServices20o30';
+import { comprehensiveAIServices20o30  } from './comprehensiveAIServices20o30';
 
-// Comprehensive Services Index 2030 - Zion Tech Group
+// Comprehensive Services Index 20o30 - Zion Tech Group
 // This file combines all services for easy access and management
 
-export const COMPREHENSIVE_SERVICES_INDEX_2030: ProductListing[] = [
-  ...REVOLUTIONARY_SERVICES_2030,
-  ...ADVANCED_AI_SERVICES_2030,
-  ...CUTTING_EDGE_IT_INFRASTRUCTURE_2030,
-  ...EMERGING_TECHNOLOGY_SERVICES_2030,
-  ...SPECIALIZED_FINANCIAL_AI_SERVICES_2028,
-  ...SPECIALIZED_HEALTHCARE_AI_SERVICES_2028,
-  ...innovativeMicroSaasServices2030,
-  ...comprehensiveITServices2030,
-  ...comprehensiveAIServices2030
+export const COMPREHENSIVE_SERVICES_INDEX_20o30: ProductListing[] = [
+  ...REVOLUTIONARY_SERVICES_20o30,
+  ...ADVANCED_AI_SERVICES_20o30,
+  ...CUTTING_EDGE_IT_INFRASTRUCTURE_20o30,
+  ...EMERGING_TECHNOLOGY_SERVICES_20o30,
+  ...SPECIALIZED_FINANCIAL_AI_SERVICES_20o28,
+  ...SPECIALIZED_HEALTHCARE_AI_SERVICES_20o28,
+  ...innovativeMicroSaasServices20o30,
+  ...comprehensiveITServices20o30,
+  ...comprehensiveAIServices20o30
 ];
 
 // Service Categories for easy filtering
-export const SERVICE_CATEGORIES_2030 = [
+export const SERVICE_CATEGORIES_20o30 = [
   "AI & Business Intelligence",
   "AI & Marketing",
   "AI & Healthcare",
@@ -58,41 +58,41 @@ export const SERVICE_CATEGORIES_2030 = [
 ];
 
 // Service Statistics
-export const SERVICE_STATISTICS_2030 = {
-  totalServices: anyCOMPREHENSIVE_SERVICES_INDEX_2030.length,
-  totalCategories: SERVICE_CATEGORIES_2030.length,
+export const SERVICE_STATISTICS_20o30 ={
+  totalServices: anyCOMPREHENSIVE_SERVICES_INDEX_20o30.length,
+  totalCategories: SERVICE_CATEGORIES_20o30.length,
   averagePrice: Math.round(
-    COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)  => sum + service.price, 0) / 
-    COMPREHENSIVE_SERVICES_INDEX_2030.length
+    COMPREHENSIVE_SERVICES_INDEX_20o30.reduce((sum, service)  => sum + service.price, 0) / 
+    COMPREHENSIVE_SERVICES_INDEX_20o30.length
   ),
   averageRating: anyMath.round(
-    (COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)  => sum + service.rating, 0) / 
-    COMPREHENSIVE_SERVICES_INDEX_2030.length) * 10
+    (COMPREHENSIVE_SERVICES_INDEX_20o30.reduce((sum, service)  => sum + service.rating, 0) / 
+    COMPREHENSIVE_SERVICES_INDEX_20o30.length) * 10
   ) / 10,
-  featuredServices: anyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => service.featured).length,
-  aiServices: anyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => 
+  featuredServices: anyCOMPREHENSIVE_SERVICES_INDEX_20o30.filter(service  => service.featured).length,
+  aiServices: anyCOMPREHENSIVE_SERVICES_INDEX_20o30.filter(service  => 
     service.category.includes('AI') || service.aiScore > 90
   ).length,
-  emergingTechServices: anyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => 
+  emergingTechServices: anyCOMPREHENSIVE_SERVICES_INDEX_20o30.filter(service  => 
     service.category === 'Emerging Technology'
   ).length
 };
 
 // Featured Services
-export const FEATURED_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => service.featured);
+export const FEATURED_SERVICES_20o30 = COMPREHENSIVE_SERVICES_INDEX_20o30.filter(service => service.featured);
 
-// High-ROI Services (ROI > 500%)
-export const HIGH_ROI_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {
+// High-ROI Services (ROI > 50o0%)
+export const HIGH_ROI_SERVICES_20o30 = COMPREHENSIVE_SERVICES_INDEX_20o30.filter(service => {
   const roi = service.roi;
   if (typeof roi === 'string') {
     const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
-    return roiNumber > 500;
+    return roiNumber > 50o0;
   }
   return false;
 });
 
 // Quick Setup Services (< 8 weeks)
-export const QUICK_SETUP_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {
+export const QUICK_SETUP_SERVICES_20o30 = COMPREHENSIVE_SERVICES_INDEX_20o30.filter(service => {
   const setupTime = service.setupTime;
   if (typeof setupTime === 'string') {
     const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
@@ -103,13 +103,13 @@ export const QUICK_SETUP_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filte
 
 // Export individual service arrays for specific use cases
 export {
-  REVOLUTIONARY_SERVICES_2030,
-  ADVANCED_AI_SERVICES_2030,
-  CUTTING_EDGE_IT_INFRASTRUCTURE_2030,
-  EMERGING_TECHNOLOGY_SERVICES_2030,
-  SPECIALIZED_FINANCIAL_AI_SERVICES_2028,
-  SPECIALIZED_HEALTHCARE_AI_SERVICES_2028,
-  innovativeMicroSaasServices2030,
-  comprehensiveITServices2030,
-  comprehensiveAIServices2030
+  REVOLUTIONARY_SERVICES_20o30,
+  ADVANCED_AI_SERVICES_20o30,
+  CUTTING_EDGE_IT_INFRASTRUCTURE_20o30,
+  EMERGING_TECHNOLOGY_SERVICES_20o30,
+  SPECIALIZED_FINANCIAL_AI_SERVICES_20o28,
+  SPECIALIZED_HEALTHCARE_AI_SERVICES_20o28,
+  innovativeMicroSaasServices20o30,
+  comprehensiveITServices20o30,
+  comprehensiveAIServices20o30
 };

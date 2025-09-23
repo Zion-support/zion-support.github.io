@@ -7,15 +7,13 @@
  * and applies comprehensive improvements to the application.
  */
 
-import fs from 'fs';
-import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Configuration
-const CONFIG = {
+const CONFIG ={
   componentsDir: path.join(__dirname, '../components'),
   appDir: path.join(__dirname, '../app'),
   scriptsDir: __dirname,
@@ -195,12 +193,12 @@ class EnhancementAutomation {
 
       // Add components to the page if not already present
       const componentAdditions = [
-        '<AdvancedPerformanceOptimizer />',
-        '<AIContentGenerator />',
-        '<AdvancedAnalyticsDashboard />',
-        '<EnhancedSEO />',
-        '<PerformanceMonitor />',
-        '<InteractiveAICalculator />'
+        '<AdvancedPerformanceOptimizer  />',
+        '<AIContentGenerator  />',
+        '<AdvancedAnalyticsDashboard  />',
+        '<EnhancedSEO  />',
+        '<PerformanceMonitor  />',
+        '<InteractiveAICalculator  />'
       ];
 
       let componentsAdded = 0;
@@ -244,7 +242,7 @@ class EnhancementAutomation {
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
       
       // Add new scripts for enhancement automation
-      const newScripts = {
+      const newScripts ={
         'enhance:all': 'node scripts/comprehensive-enhancement-automation.js',
         'enhance:performance': 'node scripts/performance-optimization.js',
         'enhance:seo': 'node scripts/seo-optimization.js',
@@ -254,7 +252,7 @@ class EnhancementAutomation {
       };
 
       if (!packageJson.scripts) {
-        packageJson.scripts = {};
+        packageJson.scripts ={};
       }
 
       let scriptsAdded = 0;
@@ -289,8 +287,7 @@ class EnhancementAutomation {
         fs.mkdirSync(enhancedPageDir, { recursive: true });
       }
 
-      const enhancedPageContent = `import React from 'react';
-import { Suspense } from 'react';
+      const enhancedPageContent = `import { Suspense } from 'react';
 import AdvancedPerformanceOptimizer from '../../components/AdvancedPerformanceOptimizer';
 import AIContentGenerator from '../../components/AIContentGenerator';
 import AdvancedAnalyticsDashboard from '../../components/AdvancedAnalyticsDashboard';
@@ -303,35 +300,35 @@ import InteractiveAICalculator from '../../components/InteractiveAICalculator';
 export default function EnhancedDemoPage() {
   return (
     <EnhancedErrorBoundary>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-90o0 dark:to-gray-80o0">
         <EnhancedSEO 
           title="Enhanced Demo - Advanced Features"
           description="Demonstration of all advanced components and features"
           keywords={['demo', 'enhanced', 'advanced', 'features', 'components']}
-        />
+         />
         
-        <Suspense fallback={<EnhancedLoadingSpinner variant="fullscreen" />}>
+        <Suspense fallback={<EnhancedLoadingSpinner variant="fullscreen"  />}>
           <div className="container mx-auto px-4 py-8 space-y-12">
             <div className="text-center mb-12">
-              <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              <h1 className="text-4xl font-bold text-gray-90o0 dark:text-white mb-4">
                 Enhanced Features Demo
               </h1>
-              <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-60o0 dark:text-gray-40o0 max-w-3xl mx-auto">
                 Experience all the advanced components and features in action. 
                 This page demonstrates performance optimization, AI content generation, 
                 analytics, and interactive tools.
               </p>
             </div>
 
-            <PerformanceMonitor />
+            <PerformanceMonitor  />
             
-            <AdvancedPerformanceOptimizer />
+            <AdvancedPerformanceOptimizer  />
             
-            <AIContentGenerator />
+            <AIContentGenerator  />
             
-            <AdvancedAnalyticsDashboard />
+            <AdvancedAnalyticsDashboard  />
             
-            <InteractiveAICalculator />
+            <InteractiveAICalculator  />
           </div>
         </Suspense>
       </div>

@@ -1,4 +1,3 @@
-import React from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
@@ -16,7 +15,7 @@ const CulturePage: React.FC = () => {
       icon: Heart,
       title: "People First",
       description: "We believe that our people are our greatest asset. We invest in their growth, well-being, and success.",
-      color: "from-red-500 to-pink-500",
+      color: "from-red-50o0 to-pink-50o0",
       examples: [
         "Comprehensive health and wellness programs",
         "Flexible work arrangements and remote options",
@@ -28,7 +27,7 @@ const CulturePage: React.FC = () => {
       icon: Lightbulb,
       title: "Innovation & Creativity",
       description: "We foster an environment where creativity thrives and innovative ideas are celebrated and nurtured.",
-      color: "from-yellow-500 to-orange-500",
+      color: "from-yellow-50o0 to-orange-50o0",
       examples: [
         "20% time for personal projects and innovation",
         "Regular hackathons and innovation challenges",
@@ -40,7 +39,7 @@ const CulturePage: React.FC = () => {
       icon: Globe2,
       title: "Diversity & Inclusion",
       description: "We celebrate diversity and create an inclusive environment where everyone feels valued and heard.",
-      color: "from-green-500 to-emerald-500",
+      color: "from-green-50o0 to-emerald-50o0",
       examples: [
         "Diverse hiring practices and inclusive policies",
         "Employee resource groups and communities",
@@ -52,7 +51,7 @@ const CulturePage: React.FC = () => {
       icon: Users,
       title: "Collaboration & Teamwork",
       description: "We believe that the best results come from working together and supporting each other.",
-      color: "from-blue-500 to-cyan-500",
+      color: "from-blue-50o0 to-cyan-50o0",
       examples: [
         "Cross-functional project teams",
         "Regular team building activities",
@@ -154,7 +153,7 @@ const CulturePage: React.FC = () => {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-90o0 to-blue-90o0">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -164,14 +163,14 @@ const CulturePage: React.FC = () => {
               transition={{ duration: 0.8 }}
               className="mb-8"
             >
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6">
-                <Heart className="w-4 h-4 mr-2" />
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-50o0/20 to-cyan-50o0/20 border border-blue-50o0/30 text-blue-30o0 text-sm font-medium mb-6">
+                <Heart className="w-4 h-4 mr-2"  />
                 Our Culture
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent mb-6">
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-40o0 via-cyan-40o0 to-indigo-40o0 bg-clip-text text-transparent mb-6">
                 Life at Zion Tech Group
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed">
                 Discover what makes Zion Tech Group an extraordinary place to work, grow, and innovate. 
                 Our culture is built on trust, creativity, and a shared passion for transforming the future.
               </p>
@@ -189,7 +188,7 @@ const CulturePage: React.FC = () => {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Culture Pillars</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
                 These fundamental principles guide everything we do and shape our workplace culture.
               </p>
             </motion.div>
@@ -201,20 +200,20 @@ const CulturePage: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20"
+                  className="bg-gray-90o0/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-70o0/50 hover:border-blue-50o0/50 transition-all duration-30o0 hover:shadow-2xl hover:shadow-blue-50o0/20"
                 >
                   <div className="flex items-center mb-6">
                     <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${pillar.color} mr-6`}>
-                      <pillar.icon className="w-8 h-8 text-white" />
+                      <pillar.icon className="w-8 h-8 text-white"  />
                     </div>
                     <h3 className="text-2xl font-bold text-white">{pillar.title}</h3>
                   </div>
-                  <p className="text-lg text-gray-300 mb-6 leading-relaxed">{pillar.description}</p>
+                  <p className="text-lg text-gray-30o0 mb-6 leading-relaxed">{pillar.description}</p>
                   <div className="space-y-3">
                     {pillar.examples.map((example, exampleIndex) => (
                       <div key={exampleIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
-                        <span className="text-gray-300">{example}</span>
+                        <CheckCircle className="w-5 h-5 text-emerald-40o0 mr-3 flex-shrink-0"  />
+                        <span className="text-gray-30o0">{example}</span>
                       </div>
                     ))}
                   </div>
@@ -234,7 +233,7 @@ const CulturePage: React.FC = () => {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Work-Life Balance</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
                 We believe that happy, balanced employees are the most productive and innovative.
               </p>
             </motion.div>
@@ -246,13 +245,13 @@ const CulturePage: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="text-center bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
+                  className="text-center bg-gray-90o0/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-70o0/50 hover:border-blue-50o0/50 transition-all duration-30o0"
                 >
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
-                    <benefit.icon className="w-8 h-8 text-blue-400" />
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-50o0/20 to-cyan-50o0/20 border border-blue-50o0/30 mb-6">
+                    <benefit.icon className="w-8 h-8 text-blue-40o0"  />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                  <p className="text-gray-400 leading-relaxed">{benefit.description}</p>
+                  <p className="text-gray-40o0 leading-relaxed">{benefit.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -269,7 +268,7 @@ const CulturePage: React.FC = () => {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Fun & Activities</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
                 Work hard, play hard! We believe in having fun and building strong relationships outside of work.
               </p>
             </motion.div>
@@ -281,13 +280,13 @@ const CulturePage: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="text-center bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
+                  className="text-center bg-gray-90o0/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-70o0/50 hover:border-blue-50o0/50 transition-all duration-30o0"
                 >
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
-                    <activity.icon className="w-8 h-8 text-purple-400" />
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 border border-purple-50o0/30 mb-6">
+                    <activity.icon className="w-8 h-8 text-purple-40o0"  />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{activity.title}</h3>
-                  <p className="text-gray-400 leading-relaxed">{activity.description}</p>
+                  <p className="text-gray-40o0 leading-relaxed">{activity.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -304,7 +303,7 @@ const CulturePage: React.FC = () => {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Growth & Development</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
                 Your success is our success. We provide numerous opportunities for professional and personal growth.
               </p>
             </motion.div>
@@ -316,13 +315,13 @@ const CulturePage: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="text-center bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
+                  className="text-center bg-gray-90o0/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-70o0/50 hover:border-blue-50o0/50 transition-all duration-30o0"
                 >
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 mb-6">
-                    <opportunity.icon className="w-8 h-8 text-emerald-400" />
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-50o0/20 to-teal-50o0/20 border border-emerald-50o0/30 mb-6">
+                    <opportunity.icon className="w-8 h-8 text-emerald-40o0"  />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{opportunity.title}</h3>
-                  <p className="text-gray-400 leading-relaxed">{opportunity.description}</p>
+                  <p className="text-gray-40o0 leading-relaxed">{opportunity.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -339,7 +338,7 @@ const CulturePage: React.FC = () => {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">What Our Team Says</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
                 Hear directly from our team members about their experience working at Zion Tech Group.
               </p>
             </motion.div>
@@ -351,19 +350,19 @@ const CulturePage: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
+                  className="bg-gray-90o0/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-70o0/50 hover:border-blue-50o0/50 transition-all duration-30o0"
                 >
                   <div className="text-center mb-6">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-4">
-                      <Users className="w-8 h-8 text-blue-400" />
+                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-50o0/20 to-cyan-50o0/20 border border-blue-50o0/30 mb-4">
+                      <Users className="w-8 h-8 text-blue-40o0"  />
                     </div>
                   </div>
-                  <blockquote className="text-gray-300 italic mb-6 leading-relaxed">
+                  <blockquote className="text-gray-30o0 italic mb-6 leading-relaxed">
                     "{quote.quote}"
                   </blockquote>
                   <div className="text-center">
                     <div className="font-semibold text-white">{quote.author}</div>
-                    <div className="text-sm text-gray-400">{quote.role}</div>
+                    <div className="text-sm text-gray-40o0">{quote.role}</div>
                   </div>
                 </motion.div>
               ))}
@@ -382,23 +381,23 @@ const CulturePage: React.FC = () => {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Join Our Team?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-30o0 mb-8 leading-relaxed">
                 If our culture resonates with you and you're excited about the opportunity to work with 
                 revolutionary technology, we'd love to hear from you.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/careers"
-                  className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 transform hover:scale-105"
+                  className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-blue-50o0 to-cyan-50o0 text-white font-semibold hover:from-blue-60o0 hover:to-cyan-60o0 transition-all duration-20o0 transform hover:scale-10o5"
                 >
-                  <Award className="w-5 h-5 mr-2" />
+                  <Award className="w-5 h-5 mr-2"  />
                   View Open Positions
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center px-8 py-4 rounded-xl border border-blue-500/50 text-blue-400 font-semibold hover:bg-blue-500/10 transition-all duration-200"
+                  className="inline-flex items-center px-8 py-4 rounded-xl border border-blue-50o0/50 text-blue-40o0 font-semibold hover:bg-blue-50o0/10 transition-all duration-20o0"
                 >
-                  <Users className="w-5 h-5 mr-2" />
+                  <Users className="w-5 h-5 mr-2"  />
                   Contact Us
                 </Link>
               </div>

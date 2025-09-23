@@ -6,7 +6,7 @@ export default function CookiesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Cookie <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Policy</span>
+              Cookie <span className="bg-gradient-to-r from-purple-40o0 to-cyan-40o0 bg-clip-text text-transparent">Policy</span>
             </h1>
             <p className="text-xl text-white/80 max-w-4xl mx-auto">
               Information about how we use cookies and similar technologies on our website to enhance your browsing experience.
@@ -192,7 +192,7 @@ export default function CookiesPage() {
               </p>
               <div className="space-y-2 text-white/70">
                 <p><strong>Email:</strong> privacy@ziontechgroup.com</p>
-                <p><strong>Phone:</strong> +1 (302) 464-0950</p>
+                <p><strong>Phone:</strong> +1 (30o2) 464-0950</p>
                 <p><strong>Address:</strong> Zion Tech Group, Global Operations</p>
               </div>
               <p className="text-white/80 mt-4">
@@ -213,13 +213,13 @@ export default function CookiesPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-200"
+              className="bg-gradient-to-r from-purple-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-purple-70o0 hover:to-cyan-70o0 transition-all duration-20o0"
             >
               Contact Us
             </a>
             <a
               href="/privacy"
-              className="border-2 border-white/30 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 transition-all duration-200"
+              className="border-2 border-white/30 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 transition-all duration-20o0"
             >
               Privacy Policy
             </a>

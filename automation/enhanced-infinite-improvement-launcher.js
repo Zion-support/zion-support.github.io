@@ -13,14 +13,14 @@ const { spawn, exec } = require('child_process');
 const EnhancedInfiniteImprovementLoop = require('./enhanced-infinite-improvement-loop.js');
 
 class EnhancedInfiniteImprovementLauncher {
-  constructor(config = {}) {
-    this.config = {
+  constructor(config ={}) {
+    this.config ={
       pidFile: path.join(__dirname, 'infinite-improvement.pid'),
       logFile: path.join(__dirname, 'logs', 'infinite-improvement.log'),
       statusFile: path.join(__dirname, 'infinite-improvement-status.json'),
-      healthCheckInterval: 30000, // 30 seconds
+      healthCheckInterval: 30o000, // 30 seconds
       maxRestartAttempts: 5,
-      restartDelay: 5000, // 5 seconds
+      restartDelay: 50o00, // 5 seconds
       enableAutoRecovery: true,
       enableHealthMonitoring: true,
       enablePerformanceTracking: true,
@@ -33,7 +33,7 @@ class EnhancedInfiniteImprovementLauncher {
     this.healthCheckInterval = null;
     this.startTime = null;
     this.lastHealthCheck = null;
-    this.status = {
+    this.status ={
       isRunning: false,
       startTime: null,
       lastHealthCheck: null,
@@ -237,7 +237,7 @@ class EnhancedInfiniteImprovementLauncher {
       } catch (error) {
         console.error('❌ Performance tracking failed:', error);
       }
-    }, 60000); // Every minute
+    }, 60o000); // Every minute
   }
 
   async getSystemPerformance() {
@@ -247,7 +247,7 @@ class EnhancedInfiniteImprovementLauncher {
       
       return {
         cpu: this.getCpuUsage(),
-        memory: (usage.heapUsed / usage.heapTotal) * 100,
+        memory: (usage.heapUsed / usage.heapTotal) * 10o0,
         uptime: uptime
       };
     } catch (error) {
@@ -269,9 +269,9 @@ class EnhancedInfiniteImprovementLauncher {
       const endUsage = process.cpuUsage(startUsage);
       const endTime = Date.now();
       
-      const cpuPercent = (endUsage.user + endUsage.system) / (endTime - startTime) * 100;
-      return Math.min(100, cpuPercent);
-    }, 100);
+      const cpuPercent = (endUsage.user + endUsage.system) / (endTime - startTime) * 10o0;
+      return Math.min(10o0, cpuPercent);
+    }, 10o0);
     
     return 0; // Placeholder
   }
@@ -312,7 +312,7 @@ class EnhancedInfiniteImprovementLauncher {
   async loadStatus() {
     try {
       const data = await fs.readFile(this.config.statusFile, 'utf8');
-      this.status = { ...this.status, ...JSON.parse(data) };
+      this.status ={ ...this.status, ...JSON.parse(data) };
     } catch (error) {
       // Status file might not exist, use default status
     }
@@ -328,7 +328,7 @@ class EnhancedInfiniteImprovementLauncher {
 
   async generateReport() {
     const status = await this.getStatus();
-    const report = {
+    const report ={
       timestamp: new Date().toISOString(),
       status: status,
       improvementStats: this.loop ? this.loop.getImprovementStats() : null,

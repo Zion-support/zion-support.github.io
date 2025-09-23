@@ -1,29 +1,26 @@
 import Link from "next/link";
-import React from "react";
-
-export const metadata = {
+export const metadata ={
   title: "Hybrid quantum-classical pipeline boosts optimization accuracy by 38%",
   description:
     "A new hybrid quantum-classical workflow delivers a 38% accuracy improvement on combinatorial optimization benchmarks.",
   keywords:
-    "quantum computing, hybrid pipeline, optimization, QAOA, variational methods",
-};
+    "quantum computing, hybrid pipeline, optimization, QAOA, variational methods"};
 
 export default function ArticlePage() {
   return (
     <div className="min-h-screen">
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <div className="mb-6 text-sm text-gray-400">
-            <span className="px-2 py-1 rounded-full mr-3 text-xs font-bold bg-purple-500/20 text-purple-400">
+          <div className="mb-6 text-sm text-gray-40o0">
+            <span className="px-2 py-1 rounded-full mr-3 text-xs font-bold bg-purple-50o0/20 text-purple-40o0">
               QUANTUM
             </span>
-            <span>September 02, 2025</span>
+            <span>September 0o2, 20o25</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Hybrid quantum-classical pipeline boosts optimization accuracy by 38%
           </h1>
-          <p className="text-gray-300 text-lg mb-10">
+          <p className="text-gray-30o0 text-lg mb-10">
             By combining classical heuristics with variational quantum circuits,
             the pipeline demonstrates consistent improvements on routing and
             scheduling problems across multiple datasets.

@@ -30,7 +30,7 @@ interface State {
 export class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = {
+    this.state ={
       hasError: false,
       error: null,
       errorInfo: null,
@@ -92,7 +92,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
   sendErrorReport(error: Error, errorInfo: ErrorInfo) {
     try {
       // Example: Send error report to analytics
-      const errorReport = {
+      const errorReport ={
         id: this.state.errorId,
         message: error.message,
         stack: error.stack,
@@ -188,7 +188,7 @@ Timestamp: ${new Date().toISOString()}
   handleShareError = async () => {
     if (!this.state.error) return;
 
-    const shareData = {
+    const shareData ={
       title: 'Error Report - Zion Tech Group',
       text: `I encountered an error: ${this.state.error.message}`,
       url: `${window.location.origin}/error-report/${this.state.errorId}`
@@ -210,13 +210,13 @@ Timestamp: ${new Date().toISOString()}
   showToast = (message: string) => {
     // Create and show a toast notification
     const toast = document.createElement('div');
-    toast.className = 'fixed top-4 right-4 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg z-50';
+    toast.className = 'fixed top-4 right-4 bg-green-60o0 text-white px-4 py-2 rounded-lg shadow-lg z-50';
     toast.textContent = message;
     document.body.appendChild(toast);
 
     setTimeout(() => {
       toast.remove();
-    }, 3000);
+    }, 30o00);
   };
 
   render() {
@@ -227,30 +227,30 @@ Timestamp: ${new Date().toISOString()}
 
       // Default error UI
       return (
-        <div className="min-h-screen bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 flex items-center justify-center p-4">
+        <div className="min-h-screen bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-90o0/20 dark:to-orange-90o0/20 flex items-center justify-center p-4">
           <motion.div
             initial={{ opacity: 0, y: 20, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            className="max-w-2xl w-full bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border border-red-200 dark:border-red-800 p-8"
+            className="max-w-2xl w-full bg-white dark:bg-gray-90o0 rounded-2xl shadow-2xl border border-red-20o0 dark:border-red-80o0 p-8"
           >
             {/* Error Header */}
             <div className="text-center mb-8">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-red-100 dark:bg-red-900/30 rounded-full mb-4">
-                <AlertTriangle className="w-10 h-10 text-red-600 dark:text-red-400" />
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-red-10o0 dark:bg-red-90o0/30 rounded-full mb-4">
+                <AlertTriangle className="w-10 h-10 text-red-60o0 dark:text-red-40o0"  />
               </div>
-              <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+              <h1 className="text-3xl font-bold text-gray-90o0 dark:text-white mb-2">
                 Oops! Something went wrong
               </h1>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-gray-60o0 dark:text-gray-40o0">
                 We're sorry, but something unexpected happened. Our team has been notified.
               </p>
             </div>
 
             {/* Error ID */}
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 mb-6">
+            <div className="bg-gray-50 dark:bg-gray-80o0 rounded-lg p-4 mb-6">
               <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-600 dark:text-gray-400">Error ID:</span>
-                <code className="text-sm font-mono bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">
+                <span className="text-sm text-gray-60o0 dark:text-gray-40o0">Error ID:</span>
+                <code className="text-sm font-mono bg-gray-20o0 dark:bg-gray-70o0 px-2 py-1 rounded">
                   {this.state.errorId}
                 </code>
               </div>
@@ -261,9 +261,9 @@ Timestamp: ${new Date().toISOString()}
               <div className="mb-6">
                 <button
                   onClick={this.handleToggleErrorDetails}
-                  className="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+                  className="flex items-center gap-2 text-sm font-medium text-gray-70o0 dark:text-gray-30o0 hover:text-gray-90o0 dark:hover:text-white transition-colors"
                 >
-                  <Bug className="w-4 h-4" />
+                  <Bug className="w-4 h-4"  />
                   {this.state.showErrorDetails ? 'Hide' : 'Show'} Error Details
                 </button>
                 
@@ -273,24 +273,24 @@ Timestamp: ${new Date().toISOString()}
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
-                      className="mt-3 bg-red-50 dark:bg-red-900/20 rounded-lg p-4 overflow-hidden"
+                      className="mt-3 bg-red-50 dark:bg-red-90o0/20 rounded-lg p-4 overflow-hidden"
                     >
                       <div className="space-y-3">
                         <div>
-                          <h4 className="text-sm font-medium text-red-800 dark:text-red-200 mb-1">
+                          <h4 className="text-sm font-medium text-red-80o0 dark:text-red-20o0 mb-1">
                             Error Message:
                           </h4>
-                          <p className="text-sm text-red-700 dark:text-red-300 font-mono">
+                          <p className="text-sm text-red-70o0 dark:text-red-30o0 font-mono">
                             {this.state.error.message}
                           </p>
                         </div>
                         
                         {this.state.error.stack && (
                           <div>
-                            <h4 className="text-sm font-medium text-red-800 dark:text-red-200 mb-1">
+                            <h4 className="text-sm font-medium text-red-80o0 dark:text-red-20o0 mb-1">
                               Stack Trace:
                             </h4>
-                            <pre className="text-xs text-red-700 dark:text-red-300 font-mono bg-red-100 dark:bg-red-900/40 p-3 rounded overflow-x-auto">
+                            <pre className="text-xs text-red-70o0 dark:text-red-30o0 font-mono bg-red-10o0 dark:bg-red-90o0/40 p-3 rounded overflow-x-auto">
                               {this.state.error.stack}
                             </pre>
                           </div>
@@ -298,10 +298,10 @@ Timestamp: ${new Date().toISOString()}
                         
                         {this.state.errorInfo?.componentStack && (
                           <div>
-                            <h4 className="text-sm font-medium text-red-800 dark:text-red-200 mb-1">
+                            <h4 className="text-sm font-medium text-red-80o0 dark:text-red-20o0 mb-1">
                               Component Stack:
                             </h4>
-                            <pre className="text-xs text-red-700 dark:text-red-300 font-mono bg-red-100 dark:bg-red-900/40 p-3 rounded overflow-x-auto">
+                            <pre className="text-xs text-red-70o0 dark:text-red-30o0 font-mono bg-red-10o0 dark:bg-red-90o0/40 p-3 rounded overflow-x-auto">
                               {this.state.errorInfo.componentStack}
                             </pre>
                           </div>
@@ -317,17 +317,17 @@ Timestamp: ${new Date().toISOString()}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
               <button
                 onClick={this.handleRetry}
-                className="flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                className="flex items-center justify-center gap-2 px-6 py-3 bg-blue-60o0 text-white rounded-lg hover:bg-blue-70o0 transition-colors font-medium"
               >
-                <RefreshCw className="w-5 h-5" />
+                <RefreshCw className="w-5 h-5"  />
                 Try Again
               </button>
               
               <button
                 onClick={this.handleGoHome}
-                className="flex items-center justify-center gap-2 px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors font-medium"
+                className="flex items-center justify-center gap-2 px-6 py-3 bg-gray-60o0 text-white rounded-lg hover:bg-gray-70o0 transition-colors font-medium"
               >
-                <Home className="w-5 h-5" />
+                <Home className="w-5 h-5"  />
                 Go Home
               </button>
             </div>
@@ -336,9 +336,9 @@ Timestamp: ${new Date().toISOString()}
             <div className="flex flex-wrap gap-3 justify-center">
               <button
                 onClick={this.handleGoBack}
-                className="flex items-center gap-2 px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                className="flex items-center gap-2 px-4 py-2 text-gray-60o0 dark:text-gray-40o0 hover:text-gray-90o0 dark:hover:text-white transition-colors"
               >
-                <ArrowLeft className="w-4 h-4" />
+                <ArrowLeft className="w-4 h-4"  />
                 Go Back
               </button>
               
@@ -346,17 +346,17 @@ Timestamp: ${new Date().toISOString()}
                 <>
                   <button
                     onClick={this.handleCopyErrorDetails}
-                    className="flex items-center gap-2 px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 text-gray-60o0 dark:text-gray-40o0 hover:text-gray-90o0 dark:hover:text-white transition-colors"
                   >
-                    <Download className="w-4 h-4" />
+                    <Download className="w-4 h-4"  />
                     Copy Details
                   </button>
                   
                   <button
                     onClick={this.handleShareError}
-                    className="flex items-center gap-2 px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 text-gray-60o0 dark:text-gray-40o0 hover:text-gray-90o0 dark:hover:text-white transition-colors"
                   >
-                    <Share2 className="w-4 h-4" />
+                    <Share2 className="w-4 h-4"  />
                     Share Report
                   </button>
                 </>
@@ -364,25 +364,25 @@ Timestamp: ${new Date().toISOString()}
             </div>
 
             {/* Help Section */}
-            <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+            <div className="mt-8 pt-6 border-t border-gray-20o0 dark:border-gray-70o0">
               <div className="text-center">
-                <div className="inline-flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-2">
-                  <Info className="w-4 h-4" />
+                <div className="inline-flex items-center gap-2 text-sm text-gray-50o0 dark:text-gray-40o0 mb-2">
+                  <Info className="w-4 h-4"  />
                   Need help?
                 </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <p className="text-sm text-gray-60o0 dark:text-gray-40o0">
                   If this problem persists, please contact our support team with the Error ID above.
                 </p>
                 <div className="mt-3 space-x-4">
                   <a
                     href="/contact"
-                    className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
+                    className="text-sm text-blue-60o0 dark:text-blue-40o0 hover:underline"
                   >
                     Contact Support
                   </a>
                   <a
                     href="/help"
-                    className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
+                    className="text-sm text-blue-60o0 dark:text-blue-40o0 hover:underline"
                   >
                     Help Center
                   </a>
@@ -393,10 +393,10 @@ Timestamp: ${new Date().toISOString()}
             {/* Close Button */}
             <button
               onClick={this.handleRetry}
-              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+              className="absolute top-4 right-4 text-gray-40o0 hover:text-gray-60o0 dark:hover:text-gray-30o0 transition-colors"
               aria-label="Close error dialog"
             >
-              <X className="w-6 h-6" />
+              <X className="w-6 h-6"  />
             </button>
           </motion.div>
         </div>
@@ -434,7 +434,7 @@ export function withErrorBoundary<P extends object>(
   return function WithErrorBoundary(props: P) {
     return (
       <EnhancedErrorBoundary {...errorBoundaryProps}>
-        <Component {...props} />
+        <Component {...props}  />
       </EnhancedErrorBoundary>
     );
   };

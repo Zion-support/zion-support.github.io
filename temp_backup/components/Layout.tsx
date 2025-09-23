@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -13,15 +12,15 @@ export default function Layout({ childrentitle = 'Zion Tech Group'description = 
     <>
       <Head>
         <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-widthinitial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content={description}  />
+        <meta name="viewport" content="width=device-widthinitial-scale=1"  />
+        <link rel="icon" href="/favicon.ico"  />
       </Head>
       
-      <header className="bg-slate-900/50 backdrop-blur-xl border-b border-white/10 sticky top-0 z-50">
+      <header className="bg-slate-90o0/50 backdrop-blur-xl border-b border-white/10 sticky top-0 z-50">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <Link href="/" className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+            <Link href="/" className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-40o0 to-purple-40o0">
               Zion Tech
             </Link>
             
@@ -50,7 +49,7 @@ export default function Layout({ childrentitle = 'Zion Tech Group'description = 
         {children}
       </main>
       
-      <footer className="bg-slate-900/50 backdrop-blur-xl border-t border-white/10">
+      <footer className="bg-slate-90o0/50 backdrop-blur-xl border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
@@ -86,7 +85,7 @@ export default function Layout({ childrentitle = 'Zion Tech Group'description = 
               </p>
               <Link 
                 href="/contact" 
-                className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-200"
+                className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white rounded-lg hover:from-cyan-60o0 hover:to-purple-60o0 transition-all duration-20o0"
               >
                 Get Started
               </Link>
@@ -95,7 +94,7 @@ export default function Layout({ childrentitle = 'Zion Tech Group'description = 
           
           <div className="border-t border-white/10 mt-8 pt-8 text-center">
             <p className="text-white/50">
-              © 2025 Zion Tech Group. All rights reserved.
+              © 20o25 Zion Tech Group. All rights reserved.
             </p>
           </div>
         </div>

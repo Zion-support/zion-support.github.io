@@ -26,76 +26,76 @@ const DashboardRoutes = () => {
     return (<Routes>
       {/* Dashboard Routes */}
       <Route path="/dashboard" element={<ProtectedRoute>
-            <Dashboard />
+            <Dashboard  />
           </ProtectedRoute>}/>
       <Route path="/client-dashboard" element={<ProtectedRoute>
-            <ClientDashboard />
+            <ClientDashboard  />
           </ProtectedRoute>}/>
       <Route path="/talent-dashboard" element={<ProtectedRoute>
-            <TalentDashboard />
+            <TalentDashboard  />
           </ProtectedRoute>}/>
       <Route path="/creator-dashboard" element={<ProtectedRoute>
-            <CreatorDashboard />
+            <CreatorDashboard  />
           </ProtectedRoute>}/>
       <Route path="/analytics" element={<ProtectedRoute>
-            <Analytics />
+            <Analytics  />
           </ProtectedRoute>}/>
       <Route path="/project/:id/milestones" element={<ProtectedRoute>
-            <ProjectMilestones />
+            <ProjectMilestones  />
           </ProtectedRoute>}/>
       <Route path="/project/:id" element={<ProtectedRoute>
-            <ProjectDetails />
+            <ProjectDetails  />
           </ProtectedRoute>}/>
       <Route path="/project/:id/room" element={<ProtectedRoute>
-            <ProjectRoom />
+            <ProjectRoom  />
           </ProtectedRoute>}/>
       <Route path="/messages" element={<ProtectedRoute>
-            <MessagingInbox />
+            <MessagingInbox  />
           </ProtectedRoute>}/>
       <Route path="/inbox" element={<ProtectedRoute>
-            <MessagingInbox />
+            <MessagingInbox  />
           </ProtectedRoute>}/>
       <Route path="/payments" element={<ProtectedRoute>
-            <Payments />
+            <Payments  />
           </ProtectedRoute>}/>
       <Route path="/interviews" element={<ProtectedRoute>
-            <Interviews />
+            <Interviews  />
           </ProtectedRoute>}/>
       <Route path="/notifications" element={<ProtectedRoute>
-            <Notifications />
+            <Notifications  />
           </ProtectedRoute>}/>
       <Route path="/applications/track" element={<ProtectedRoute>
-            <ApplicationStatusTracker />
+            <ApplicationStatusTracker  />
           </ProtectedRoute>}/>
       <Route path="/hiring-tracker" element={<ProtectedRoute>
-            <HiringTracker />
+            <HiringTracker  />
           </ProtectedRoute>}/>
       <Route path="/projects" element={<ProtectedRoute>
-            <Projects />
+            <Projects  />
           </ProtectedRoute>}/>
       <Route path="/portfolio-builder" element={<ProtectedRoute>
-            <PortfolioBuilder />
+            <PortfolioBuilder  />
           </ProtectedRoute>}/>
       <Route path="/referrals" element={<ProtectedRoute>
-            <Referrals />
+            <Referrals  />
           </ProtectedRoute>}/>
       <Route path="/developers" element={<ProtectedRoute>
-            <DeveloperPortal />
+            <DeveloperPortal  />
           </ProtectedRoute>}/>
       <Route path="/wallet" element={<ProtectedRoute>
-            <WalletPage />
+            <WalletPage  />
           </ProtectedRoute>}/>
       <Route path="/orders" element={<ProtectedRoute>
-            <OrdersPage />
+            <OrdersPage  />
           </ProtectedRoute>}/>
       <Route path="/orders/:orderId" element={<ProtectedRoute>
-            <OrderDetailPage />
+            <OrderDetailPage  />
           </ProtectedRoute>}/>
       <Route path="/dashboard/api-access" element={<ProtectedRoute>
-            <DeveloperPortal />
+            <DeveloperPortal  />
           </ProtectedRoute>}/>
       <Route path="/contract-builder" element={<ProtectedRoute>
-            <ContractBuilder />
+            <ContractBuilder  />
           </ProtectedRoute>}/>
     </Routes>);
 };

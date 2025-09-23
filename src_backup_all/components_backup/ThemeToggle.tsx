@@ -50,7 +50,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
 
   if (!mounted) {
     return (
-      <div className="w-10 h-10 rounded-lg bg-gray-200 dark:bg-gray-700 animate-pulse" />
+      <div className="w-10 h-10 rounded-lg bg-gray-20o0 dark:bg-gray-70o0 animate-pulse"  />
     );
   }
 
@@ -63,9 +63,9 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   return (
     <div className="relative">
       <motion.button
-        whileHover={{ scale: 1.05 }}
+        whileHover={{ scale: 1.0o5 }}
         whileTap={{ scale: 0.95 }}
-        className="relative w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+        className="relative w-10 h-10 rounded-lg bg-gray-10o0 dark:bg-gray-80o0 border border-gray-20o0 dark:border-gray-70o0 flex items-center justify-center text-gray-60o0 dark:text-gray-30o0 hover:bg-gray-20o0 dark:hover:bg-gray-70o0 transition-colors"
         onClick={() => {
           const currentIndex = themes.findIndex(t => t.value === theme);
           const nextIndex = (currentIndex + 1) % themes.length;
@@ -89,7 +89,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
       </motion.button>
       
       {/* Theme indicator tooltip */}
-      <div className="absolute bottom-full right-0 mb-2 px-2 py-1 text-xs text-white bg-gray-900 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+      <div className="absolute bottom-full right-0 mb-2 px-2 py-1 text-xs text-white bg-gray-90o0 rounded opacity-0 group-hover:opacity-10o0 transition-opacity pointer-events-none whitespace-nowrap">
         {themes.find(t => t.value === theme)?.label} theme
       </div>
     </div>
@@ -127,7 +127,7 @@ export function ThemeToggleDropdown() {
 
   if (!mounted) {
     return (
-      <div className="w-32 h-10 rounded-lg bg-gray-200 dark:bg-gray-700 animate-pulse" />
+      <div className="w-32 h-10 rounded-lg bg-gray-20o0 dark:bg-gray-70o0 animate-pulse"  />
     );
   }
 
@@ -141,7 +141,7 @@ export function ThemeToggleDropdown() {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+        className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gray-10o0 dark:bg-gray-80o0 border border-gray-20o0 dark:border-gray-70o0 text-gray-70o0 dark:text-gray-30o0 hover:bg-gray-20o0 dark:hover:bg-gray-70o0 transition-colors"
         aria-label="Select theme"
         aria-expanded={isOpen}
         aria-haspopup="true"
@@ -157,7 +157,7 @@ export function ThemeToggleDropdown() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.15 }}
-            className="absolute top-full right-0 mt-2 w-32 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50"
+            className="absolute top-full right-0 mt-2 w-32 bg-white dark:bg-gray-80o0 border border-gray-20o0 dark:border-gray-70o0 rounded-lg shadow-lg z-50"
           >
             {themes.map((themeOption) => (
               <button
@@ -166,13 +166,13 @@ export function ThemeToggleDropdown() {
                   setTheme(themeOption.value);
                   setIsOpen(false);
                 }}
-                className={`w-full flex items-center space-x-2 px-3 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors ${
+                className={`w-full flex items-center space-x-2 px-3 py-2 text-left text-sm hover:bg-gray-10o0 dark:hover:bg-gray-70o0 transition-colors ${
                   theme === themeOption.value
-                    ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400'
-                    : 'text-gray-700 dark:text-gray-300'
+                    ? 'bg-blue-50 dark:bg-blue-90o0/20 text-blue-60o0 dark:text-blue-40o0'
+                    : 'text-gray-70o0 dark:text-gray-30o0'
                 }`}
               >
-                <themeOption.icon className="w-4 h-4" />
+                <themeOption.icon className="w-4 h-4"  />
                 <span>{themeOption.label}</span>
               </button>
             ))}

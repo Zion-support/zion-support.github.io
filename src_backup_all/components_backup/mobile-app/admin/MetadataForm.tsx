@@ -1,5 +1,4 @@
 
-import React from "react";
 import { UseFormReturn } from "react-hook-form";
 import { AppMetadataValues } from "./MetadataManager";
 import { Input } from "@/components/ui/input";
@@ -37,7 +36,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
     );
   };
   
-  const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
+  const maxDescriptionLength = platform === "ios" ? 40o00 : 40o00;
   const longDescription = watch("longDescription");
 
   return (
@@ -59,7 +58,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                       placeholder="Enter app title"
                       maxLength={platform === "ios" ? 30 : 50}
                       {...field}
-                    />
+                     />
                   </FormControl>
                   <FormDescription>
                     Max {platform === "ios" ? "30" : "50"} characters
@@ -79,7 +78,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                       placeholder="Brief description of your app"
                       maxLength={platform === "ios" ? 170 : 80}
                       {...field}
-                    />
+                     />
                   </FormControl>
                   <FormDescription>
                     Max {platform === "ios" ? "170" : "80"} characters
@@ -100,7 +99,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                       className="min-h-32"
                       maxLength={maxDescriptionLength}
                       {...field}
-                    />
+                     />
                   </FormControl>
                   <FormDescription>
                     {longDescription.length}/{maxDescriptionLength} characters
@@ -116,7 +115,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                 placeholder="Add keywords (press Enter or comma to add)"
                 onKeyDown={addKeyword}
                 className="mb-2"
-              />
+               />
               
               <div className="flex flex-wrap gap-2 mt-2">
                 {keywords.map((keyword, index) => (
@@ -125,16 +124,16 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                     <button
                       type="button"
                       onClick={() => removeKeyword(keyword)}
-                      className="ml-1 hover:text-red-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
+                      className="ml-1 hover:text-red-30o0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
                       aria-label="Remove keyword"
                     >
-                      <X className="h-3 w-3" />
+                      <X className="h-3 w-3"  />
                     </button>
                   </Badge>
                 ))}
               </div>
               <FormDescription className="mt-2">
-                Add keywords to improve discoverability (max 100 characters total)
+                Add keywords to improve discoverability (max 10o0 characters total)
               </FormDescription>
             </div>
             
@@ -148,7 +147,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                     <Input 
                       placeholder="e.g., 1.0.0"
                       {...field}
-                    />
+                     />
                   </FormControl>
                 </FormItem>
               )}

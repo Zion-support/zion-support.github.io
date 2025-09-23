@@ -1,4 +1,3 @@
-import React from 'react';
 export function AdvancedOnboardingSteps() {
   return (
     <div>

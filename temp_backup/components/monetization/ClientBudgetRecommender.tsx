@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PricingSuggestionBox from '@/components/monetization/PricingSuggestionBox';
 import axios from 'axios';
 
-export type ClientBudgetRecommenderProps = {
+export type ClientBudgetRecommenderProps ={
   // Integrate into Job Post Form
   title: string;
   category: string;
@@ -31,8 +31,7 @@ export default function ClientBudgetRecommender(props: ClientBudgetRecommenderPr
         category: props.category,
         timelineWeeks: props.timelineWeeks,
         scope: props.scope,
-        experienceLevel: props.experienceLevel,
-      });
+        experienceLevel: props.experienceLevel});
       const s = res.data?.suggestion;
       if (s) {
         setSuggestion({ min: s.min, max: s.max, confidence: s.confidence, rationale: s.rationale });
@@ -56,11 +55,11 @@ export default function ClientBudgetRecommender(props: ClientBudgetRecommenderPr
         type="button"
         onClick={fetchSuggestion}
         disabled={loading}
-        className="inline-flex items-center rounded-md bg-gray-900 px-3 py-1.5 text-sm font-medium text-white hover:bg-black disabled:opacity-50"
+        className="inline-flex items-center rounded-md bg-gray-90o0 px-3 py-1.5 text-sm font-medium text-white hover:bg-black disabled:opacity-50"
       >
         {loading ? 'Generating…' : 'Suggest Budget with AI'}
       </button>
-      {error && <div className="text-sm text-red-600">{error}</div>}
+      {error && <div className="text-sm text-red-60o0">{error}</div>}
       {suggestion && (
         <PricingSuggestionBox
           type="client"

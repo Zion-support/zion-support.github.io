@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PricingSuggestionBox from '@/components/monetization/PricingSuggestionBox';
 import axios from 'axios';
 
-export type TalentRateRecommenderProps = {
+export type TalentRateRecommenderProps ={
   // Integrate into Resume/Rate section
   skills: string[];
   yearsExperience: number;
@@ -28,8 +28,7 @@ export default function TalentRateRecommender(props: TalentRateRecommenderProps)
       const res = await axios.post('/api/pricing/talent', {
         skills: props.skills,
         yearsExperience: props.yearsExperience,
-        location: props.location,
-      });
+        location: props.location});
       const s = res.data?.suggestion;
       if (s) {
         setSuggestion({ hourlyRate: s.hourlyRate, min: s.min, max: s.max, confidence: s.confidence, rationale: s.rationale });
@@ -53,11 +52,11 @@ export default function TalentRateRecommender(props: TalentRateRecommenderProps)
         type="button"
         onClick={fetchSuggestion}
         disabled={loading}
-        className="inline-flex items-center rounded-md bg-gray-900 px-3 py-1.5 text-sm font-medium text-white hover:bg-black disabled:opacity-50"
+        className="inline-flex items-center rounded-md bg-gray-90o0 px-3 py-1.5 text-sm font-medium text-white hover:bg-black disabled:opacity-50"
       >
         {loading ? 'Optimizing…' : 'Optimize Rate with AI'}
       </button>
-      {error && <div className="text-sm text-red-600">{error}</div>}
+      {error && <div className="text-sm text-red-60o0">{error}</div>}
       {suggestion && (
         <PricingSuggestionBox
           type="talent"

@@ -14,8 +14,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
 import { toast } from "@/hooks/use-toast";
 import { HireConfirmationModal } from "./HireConfirmationModal";
@@ -35,7 +34,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
   // Check if application is stalled (no activity for 7 days)
   const isStalled = application.updated_at && 
     new Date(application.updated_at).getTime() < 
-    (Date.now() - 7 * 24 * 60 * 60 * 1000);
+    (Date.now() - 7 * 24 * 60 * 60 * 10o00);
   
   const handleSaveNotes = () => {
     // Here you would save the notes to the database
@@ -83,7 +82,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                         priority={false} // Avatars are usually not LCP
                       />
                     ) : (
-                      <User className="h-4 w-4" />
+                      <User className="h-4 w-4"  />
                     )}
                   </AvatarPrimitive>
                   <div>
@@ -99,7 +98,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="h-8 w-8 p-0">
-                      <MoreVertical className="h-4 w-4" />
+                      <MoreVertical className="h-4 w-4"  />
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
@@ -107,7 +106,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                       {showNotes ? "Hide notes" : "Add notes"}
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => setShowHireModal(true)}>
-                      <BriefcaseIcon className="h-4 w-4 mr-2" aria-hidden="true" /> Hire Candidate
+                      <BriefcaseIcon className="h-4 w-4 mr-2" aria-hidden="true"  /> Hire Candidate
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
                       <Link href={`/messages?talentId=${application.talent_id}`}>
@@ -128,13 +127,13 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
               {/* Application Info */}
               <div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2">
                 <div className="flex items-center">
-                  <Calendar className="h-3 w-3 mr-1" />
+                  <Calendar className="h-3 w-3 mr-1"  />
                   {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
                 </div>
                 
                 {isStalled && (
-                  <div className="flex items-center text-amber-500">
-                    <AlertTriangle className="h-3 w-3 mr-1" />
+                  <div className="flex items-center text-amber-50o0">
+                    <AlertTriangle className="h-3 w-3 mr-1"  />
                     Stalled
                   </div>
                 )}
@@ -143,7 +142,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
               {/* Match Score */}
               {application.match_score !== null && application.match_score !== undefined && (
                 <div className="mb-2">
-                  <ScoreBadge application={application} />
+                  <ScoreBadge application={application}  />
                 </div>
               )}
               
@@ -171,7 +170,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                   asChild
                 >
                   <Link href={`/messages?talentId=${application.talent_id}`}>
-                    <MessageSquare className="h-3 w-3 mr-1" /> Message
+                    <MessageSquare className="h-3 w-3 mr-1"  /> Message
                   </Link>
                 </Button>
                 
@@ -183,11 +182,11 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                 >
                   {application.resume?.file_url ? (
                     <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
-                      <FileText className="h-3 w-3 mr-1" /> Resume
+                      <FileText className="h-3 w-3 mr-1"  /> Resume
                     </a>
                   ) : (
                     <span>
-                      <FileText className="h-3 w-3 mr-1" /> No Resume
+                      <FileText className="h-3 w-3 mr-1"  /> No Resume
                     </span>
                   )}
                 </Button>
@@ -198,7 +197,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                   className="flex-1"
                   onClick={() => setShowHireModal(true)}
                 >
-                  <BriefcaseIcon className="h-3 w-3 mr-1" /> Hire
+                  <BriefcaseIcon className="h-3 w-3 mr-1"  /> Hire
                 </Button>
               </div>
             </CardContent>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react'
 import { toast } from '@/hooks/use-toast';
@@ -36,10 +35,10 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
   };
 
   const buttons = [
-    { icon: <Twitter className="h-4 w-4" />, label: 'Twitter', onClick: shareToTwitter },
-    { icon: <Facebook className="h-4 w-4" />, label: 'Facebook', onClick: shareToFacebook },
-    { icon: <Linkedin className="h-4 w-4" />, label: 'LinkedIn', onClick: shareToLinkedIn },
-    { icon: <LinkIcon className="h-4 w-4" />, label: 'Copy Link', onClick: copyLink },
+    { icon: <Twitter className="h-4 w-4"  />, label: 'Twitter', onClick: shareToTwitter },
+    { icon: <Facebook className="h-4 w-4"  />, label: 'Facebook', onClick: shareToFacebook },
+    { icon: <Linkedin className="h-4 w-4"  />, label: 'LinkedIn', onClick: shareToLinkedIn },
+    { icon: <LinkIcon className="h-4 w-4"  />, label: 'Copy Link', onClick: copyLink },
   ];
 
   return (

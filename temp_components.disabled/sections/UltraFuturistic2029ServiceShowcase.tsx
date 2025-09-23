@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Eye, Timer, Sparkles, Filter, Search } from 'lucide-react';
 import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
-import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
+import { CuttingEdgeInnovation20o29 } from '../../data/20o29-cutting-edge-innovations';
 
 interface Service {
   id: string;
@@ -55,41 +55,41 @@ interface Service {
   variant: string;
 }
 
-interface UltraFuturistic2029ServiceShowcaseProps {
+interface UltraFuturistic20o29ServiceShowcaseProps {
   services: Service[];
   title?: string;
   subtitle?: string;
   maxServices?: number;
 }
 
-const categoryColors: { [key: string]: string } = {
-  'AI & Consciousness': 'from-purple-600 to-pink-600',
-  'Quantum & Neuroscience': 'from-indigo-600 to-purple-600',
-  'Space Colonization': 'from-red-600 to-orange-600',
-  'Space Mining': 'from-yellow-600 to-orange-600',
-  'Space Architecture': 'from-green-600 to-teal-600',
-  'Space Energy': 'from-yellow-500 to-orange-500',
-  'AI & Business': 'from-blue-600 to-cyan-600',
-  'Quantum & Time': 'from-green-600 to-emerald-600',
-  'AI & Augmented Reality': 'from-orange-600 to-red-600',
-  'AI & Emotional Intelligence': 'from-pink-600 to-rose-600',
-  'AI & Transportation': 'from-blue-600 to-indigo-600',
-  'AI & Creative Content': 'from-purple-600 to-pink-600',
-  'AI & Healthcare': 'from-green-600 to-emerald-600',
-  'AI & Finance': 'from-yellow-600 to-orange-600',
-  'Cybersecurity & Quantum': 'from-indigo-600 to-purple-600',
-  'Blockchain & Identity': 'from-green-600 to-teal-600',
-  'AI & Cybersecurity': 'from-red-600 to-pink-600',
-  'Blockchain & Supply Chain': 'from-blue-600 to-cyan-600',
-  'DeFi & AI': 'from-yellow-500 to-orange-500',
-  'IoT & Smart Cities': 'from-blue-600 to-cyan-600',
-  'IoT & Industrial': 'from-gray-600 to-blue-600',
-  'IoT & Environment': 'from-green-600 to-emerald-600',
-  'Edge Computing & AI': 'from-yellow-600 to-orange-600',
-  'IoT & Security': 'from-red-600 to-pink-600'
+const categoryColors: { [key: string]: string } ={
+  'AI & Consciousness': 'from-purple-60o0 to-pink-60o0',
+  'Quantum & Neuroscience': 'from-indigo-60o0 to-purple-60o0',
+  'Space Colonization': 'from-red-60o0 to-orange-60o0',
+  'Space Mining': 'from-yellow-60o0 to-orange-60o0',
+  'Space Architecture': 'from-green-60o0 to-teal-60o0',
+  'Space Energy': 'from-yellow-50o0 to-orange-50o0',
+  'AI & Business': 'from-blue-60o0 to-cyan-60o0',
+  'Quantum & Time': 'from-green-60o0 to-emerald-60o0',
+  'AI & Augmented Reality': 'from-orange-60o0 to-red-60o0',
+  'AI & Emotional Intelligence': 'from-pink-60o0 to-rose-60o0',
+  'AI & Transportation': 'from-blue-60o0 to-indigo-60o0',
+  'AI & Creative Content': 'from-purple-60o0 to-pink-60o0',
+  'AI & Healthcare': 'from-green-60o0 to-emerald-60o0',
+  'AI & Finance': 'from-yellow-60o0 to-orange-60o0',
+  'Cybersecurity & Quantum': 'from-indigo-60o0 to-purple-60o0',
+  'Blockchain & Identity': 'from-green-60o0 to-teal-60o0',
+  'AI & Cybersecurity': 'from-red-60o0 to-pink-60o0',
+  'Blockchain & Supply Chain': 'from-blue-60o0 to-cyan-60o0',
+  'DeFi & AI': 'from-yellow-50o0 to-orange-50o0',
+  'IoT & Smart Cities': 'from-blue-60o0 to-cyan-60o0',
+  'IoT & Industrial': 'from-gray-60o0 to-blue-60o0',
+  'IoT & Environment': 'from-green-60o0 to-emerald-60o0',
+  'Edge Computing & AI': 'from-yellow-60o0 to-orange-60o0',
+  'IoT & Security': 'from-red-60o0 to-pink-60o0'
 };
 
-const categoryIcons: { [key: string]: any } = {
+const categoryIcons: { [key: string]: any } ={
   'AI & Consciousness': Brain,
   'Quantum & Neuroscience': Cpu,
   'Space Colonization': Rocket,
@@ -116,9 +116,9 @@ const categoryIcons: { [key: string]: any } = {
   'IoT & Security': Lock
 };
 
-const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceShowcaseProps> = ({
+const UltraFuturistic20o29ServiceShowcase: React.FC<UltraFuturistic20o29ServiceShowcaseProps> = ({
   services,
-  title = "2029 Ultra-Futuristic Innovations",
+  title = "20o29 Ultra-Futuristic Innovations",
   subtitle = "Experience the future of technology with our revolutionary services",
   maxServices = 20
 }) => {
@@ -145,7 +145,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
           // Default to 'Advanced' if innovationLevel is not available
           const aLevel = (a as any).innovationLevel || 'Advanced';
           const bLevel = (b as any).innovationLevel || 'Advanced';
-          const innovationOrder = { 'Revolutionary': 4, 'Breakthrough': 3, 'Advanced': 2, 'Emerging': 1 };
+          const innovationOrder ={ 'Revolutionary': 4, 'Breakthrough': 3, 'Advanced': 2, 'Emerging': 1 };
           return (innovationOrder[bLevel] || 0) - (innovationOrder[aLevel] || 0);
         case 'price':
           return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
@@ -159,7 +159,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
     })
     .slice(0, maxServices);
 
-  const containerVariants = {
+  const containerVariants ={
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -169,7 +169,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
     }
   };
 
-  const itemVariants = {
+  const itemVariants ={
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
@@ -183,8 +183,8 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
   return (
     <section className="py-20 bg-black/50 relative overflow-hidden">
       {/* Enhanced Background Effects */}
-      <div className="absolute inset-0 bg-quantum-gradient-2029 opacity-30" />
-      <div className="absolute inset-0 holographic-matrix-2029 opacity-10" />
+      <div className="absolute inset-0 bg-quantum-gradient-20o29 opacity-30"  />
+      <div className="absolute inset-0 holographic-matrix-20o29 opacity-10"  />
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Enhanced Header */}
@@ -194,36 +194,36 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-glow-2029">
+          <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent neon-glow-20o29">
             {title}
           </h2>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed">
             {subtitle}
           </p>
           
           {/* Enhanced Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
             <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 neon-glow-2029">{services.length}+</div>
-              <div className="text-gray-400">Innovative Services</div>
+              <div className="text-3xl font-bold text-cyan-40o0 neon-glow-20o29">{services.length}+</div>
+              <div className="text-gray-40o0">Innovative Services</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 neon-glow-2029">
+              <div className="text-3xl font-bold text-purple-40o0 neon-glow-20o29">
                 {services.filter(s => s.innovationLevel === 'Revolutionary').length}
               </div>
-              <div className="text-gray-400">Revolutionary</div>
+              <div className="text-gray-40o0">Revolutionary</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-pink-400 neon-glow-2029">
+              <div className="text-3xl font-bold text-pink-40o0 neon-glow-20o29">
                 {services.filter(s => s.popular).length}
               </div>
-              <div className="text-gray-400">Popular</div>
+              <div className="text-gray-40o0">Popular</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-green-400 neon-glow-2029">
+              <div className="text-3xl font-bold text-green-40o0 neon-glow-20o29">
                 {Math.round(services.reduce((acc, s) => acc + s.rating, 0) / services.length * 10) / 10}
               </div>
-              <div className="text-gray-400">Avg Rating</div>
+              <div className="text-gray-40o0">Avg Rating</div>
             </div>
           </div>
         </motion.div>
@@ -235,16 +235,16 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-12"
         >
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-cyan-500/20">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-cyan-50o0/20">
             {/* Search */}
             <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />
               <input
                 type="text"
                 placeholder="Search innovative services..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
+                className="w-full pl-10 pr-4 py-3 bg-black/50 border border-cyan-50o0/30 rounded-xl text-white placeholder-gray-40o0 focus:outline-none focus:border-cyan-40o0 focus:ring-2 focus:ring-cyan-40o0/20 transition-all"
               />
             </div>
 
@@ -256,8 +256,8 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                     selectedCategory === category
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg'
-                      : 'bg-black/50 text-gray-300 hover:bg-black/70 border border-gray-600 hover:border-cyan-500/50'
+                      ? 'bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white shadow-lg'
+                      : 'bg-black/50 text-gray-30o0 hover:bg-black/70 border border-gray-60o0 hover:border-cyan-50o0/50'
                   }`}
                 >
                   {category === 'all' ? 'All Categories' : category}
@@ -270,7 +270,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as any)}
-                className="px-4 py-2 bg-black/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
+                className="px-4 py-2 bg-black/50 border border-gray-60o0 rounded-lg text-white focus:outline-none focus:border-cyan-40o0"
               >
                 <option value="innovation">Sort by Innovation</option>
                 <option value="price">Sort by Price</option>
@@ -280,9 +280,9 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
               
               <button
                 onClick={() => setShowFilters(!showFilters)}
-                className="px-4 py-2 bg-black/50 border border-gray-600 rounded-lg text-white hover:bg-black/70 hover:border-cyan-500/50 transition-all flex items-center gap-2"
+                className="px-4 py-2 bg-black/50 border border-gray-60o0 rounded-lg text-white hover:bg-black/70 hover:border-cyan-50o0/50 transition-all flex items-center gap-2"
               >
-                <Filter className="w-4 h-4" />
+                <Filter className="w-4 h-4"  />
                 Filters
               </button>
             </div>
@@ -294,46 +294,46 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-cyan-500/20 mt-4"
+              className="bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-cyan-50o0/20 mt-4"
             >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Innovation Level</label>
+                  <label className="block text-sm font-medium text-gray-30o0 mb-2">Innovation Level</label>
                   <div className="space-y-2">
                     {['Revolutionary', 'Breakthrough', 'Advanced', 'Emerging'].map((level) => (
                       <label key={level} className="flex items-center">
-                        <input type="checkbox" className="mr-2 text-cyan-500" />
-                        <span className="text-gray-300">{level}</span>
+                        <input type="checkbox" className="mr-2 text-cyan-50o0"  />
+                        <span className="text-gray-30o0">{level}</span>
                       </label>
                     ))}
                   </div>
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Price Range</label>
+                  <label className="block text-sm font-medium text-gray-30o0 mb-2">Price Range</label>
                   <div className="space-y-2">
                     <label className="flex items-center">
-                      <input type="checkbox" className="mr-2 text-cyan-500" />
-                      <span className="text-gray-300">Under $5K/month</span>
+                      <input type="checkbox" className="mr-2 text-cyan-50o0"  />
+                      <span className="text-gray-30o0">Under $5K/month</span>
                     </label>
                     <label className="flex items-center">
-                      <input type="checkbox" className="mr-2 text-cyan-500" />
-                      <span className="text-gray-300">$5K - $20K/month</span>
+                      <input type="checkbox" className="mr-2 text-cyan-50o0"  />
+                      <span className="text-gray-30o0">$5K - $20K/month</span>
                     </label>
                     <label className="flex items-center">
-                      <input type="checkbox" className="mr-2 text-cyan-500" />
-                      <span className="text-gray-300">Over $20K/month</span>
+                      <input type="checkbox" className="mr-2 text-cyan-50o0"  />
+                      <span className="text-gray-30o0">Over $20K/month</span>
                     </label>
                   </div>
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Technology</label>
+                  <label className="block text-sm font-medium text-gray-30o0 mb-2">Technology</label>
                   <div className="space-y-2">
                     {['AI', 'Quantum', 'Blockchain', 'IoT', 'Edge Computing', 'Cybersecurity'].map((tech) => (
                       <label key={tech} className="flex items-center">
-                        <input type="checkbox" className="mr-2 text-cyan-500" />
-                        <span className="text-gray-300">{tech}</span>
+                        <input type="checkbox" className="mr-2 text-cyan-50o0"  />
+                        <span className="text-gray-30o0">{tech}</span>
                       </label>
                     ))}
                   </div>
@@ -356,7 +356,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
               variants={itemVariants}
               className="group"
             >
-              <UltraFuturisticServiceCard service={service} />
+              <UltraFuturisticServiceCard service={service}  />
             </motion.div>
           ))}
         </motion.div>
@@ -369,14 +369,14 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
             className="text-center py-20"
           >
             <div className="text-6xl mb-6">🔍</div>
-            <h3 className="text-2xl font-bold text-gray-300 mb-4">No services found</h3>
-            <p className="text-gray-500 mb-8">Try adjusting your search criteria or browse all categories</p>
+            <h3 className="text-2xl font-bold text-gray-30o0 mb-4">No services found</h3>
+            <p className="text-gray-50o0 mb-8">Try adjusting your search criteria or browse all categories</p>
             <button
               onClick={() => {
                 setSearchTerm('');
                 setSelectedCategory('all');
               }}
-              className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-600 transition-all transform hover:scale-105"
+              className="px-8 py-3 bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white rounded-xl font-medium hover:from-cyan-60o0 hover:to-purple-60o0 transition-all transform hover:scale-10o5"
             >
               View All Services
             </button>
@@ -390,19 +390,19 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-center mt-20"
         >
-          <div className="bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-cyan-500/20">
+          <div className="bg-gradient-to-r from-cyan-50o0/10 via-purple-50o0/10 to-pink-50o0/10 rounded-2xl p-8 border border-cyan-50o0/20">
             <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-30o0 mb-6 max-w-2xl mx-auto">
               Join the future of technology with our cutting-edge services. 
               Get in touch to discuss how we can revolutionize your operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-600 transition-all transform hover:scale-105">
+              <button className="px-8 py-3 bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white rounded-xl font-medium hover:from-cyan-60o0 hover:to-purple-60o0 transition-all transform hover:scale-10o5">
                 Schedule a Demo
               </button>
-              <button className="px-8 py-3 bg-transparent border border-cyan-500 text-cyan-400 rounded-xl font-medium hover:bg-cyan-500/10 transition-all">
+              <button className="px-8 py-3 bg-transparent border border-cyan-50o0 text-cyan-40o0 rounded-xl font-medium hover:bg-cyan-50o0/10 transition-all">
                 Contact Sales
               </button>
             </div>
@@ -413,4 +413,4 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
   );
 };
 
-export default UltraFuturistic2029ServiceShowcase;
+export default UltraFuturistic20o29ServiceShowcase;

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -66,7 +65,7 @@ export function JobMatchCard({
         {/* Match score indicator */}
         <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-3 flex justify-between items-center">
           <div className="flex items-center gap-1">
-            <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
+            <Star className="h-4 w-4 text-yellow-50o0 fill-yellow-50o0"  />
             <span className="font-medium">{matchPercent}% Match</span>
           </div>
           <Badge variant="outline" className="bg-background">
@@ -92,10 +91,10 @@ export function JobMatchCard({
           <div className="flex items-center gap-2 mb-2">
             <Avatar className="h-6 w-6">
               {avatar ? (
-                <AvatarImage src={avatar} alt={name} />
+                <AvatarImage src={avatar} alt={name}  />
               ) : (
                 <AvatarFallback>
-                  <Building className="h-3 w-3" />
+                  <Building className="h-3 w-3"  />
                 </AvatarFallback>
               )}
             </Avatar>
@@ -104,7 +103,7 @@ export function JobMatchCard({
           
           <div className="space-y-1 text-sm text-muted-foreground mb-3">
             <div className="flex items-center gap-1">
-              <MapPin className="h-3.5 w-3.5" />
+              <MapPin className="h-3.5 w-3.5"  />
               <span>{location || 'Remote'}</span>
             </div>
           </div>

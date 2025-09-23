@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function EdgeComputingOrchestrationPlatform() {
@@ -21,6 +20,6 @@ export default function EdgeComputingOrchestrationPlatform() {
 			industries={["Retail", "Telecom", "Manufacturing", "Media"]}
 			ctaHref="/contact"
 			canonical="https://ziontechgroup.com/edge-computing-orchestration-platform"
-		/>
+		 />
 	);
 }

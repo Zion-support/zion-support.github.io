@@ -37,7 +37,7 @@ export function PortfolioBuilder() {
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+        <Loader2 className="h-8 w-8 animate-spin text-primary"  />
       </div>
     );
   }
@@ -54,7 +54,7 @@ export function PortfolioBuilder() {
           className="gap-2"
           disabled={showAddProject || !!editingProject}
         >
-          <FilePlus className="h-4 w-4" />
+          <FilePlus className="h-4 w-4"  />
           Add Project
         </Button>
       </div>
@@ -97,7 +97,7 @@ export function PortfolioBuilder() {
             <CardContent>
               <div className="flex flex-col items-center gap-4">
                 <div className="bg-muted/50 p-6 rounded-full">
-                  <FilePlus className="h-12 w-12 text-muted-foreground" />
+                  <FilePlus className="h-12 w-12 text-muted-foreground"  />
                 </div>
                 <h3 className="text-xl font-medium">No portfolio projects yet</h3>
                 <p className="text-muted-foreground max-w-md mx-auto">

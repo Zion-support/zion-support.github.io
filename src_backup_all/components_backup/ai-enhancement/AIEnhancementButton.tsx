@@ -54,8 +54,7 @@ export function AIEnhancementButton({
       setGeneratedContent(null);
       toast({
         title: "Content applied",
-        description: "AI-enhanced content has been applied.",
-      });
+        description: "AI-enhanced content has been applied."});
     }
   };
   
@@ -76,9 +75,9 @@ export function AIEnhancementButton({
           variant="ghost"
           size="sm"
           onClick={handleAccept}
-          className="text-green-500 hover:text-green-700 hover:bg-green-100/20"
+          className="text-green-50o0 hover:text-green-70o0 hover:bg-green-10o0/20"
         >
-          <Check className="h-4 w-4 mr-1" />
+          <Check className="h-4 w-4 mr-1"  />
           Apply
         </Button>
         <Button
@@ -86,13 +85,13 @@ export function AIEnhancementButton({
           variant="ghost"
           size="sm"
           onClick={handleRegenerate}
-          className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20"
+          className="text-blue-50o0 hover:text-blue-70o0 hover:bg-blue-10o0/20"
           disabled={isEnhancing}
         >
           {isEnhancing ? (
-            <Loader2 className="h-4 w-4 mr-1 animate-spin" />
+            <Loader2 className="h-4 w-4 mr-1 animate-spin"  />
           ) : (
-            <RefreshCw className="h-4 w-4 mr-1" />
+            <RefreshCw className="h-4 w-4 mr-1"  />
           )}
           Regenerate
         </Button>
@@ -101,9 +100,9 @@ export function AIEnhancementButton({
           variant="ghost"
           size="sm"
           onClick={handleCancel}
-          className="text-gray-500 hover:text-gray-700 hover:bg-gray-100/20"
+          className="text-gray-50o0 hover:text-gray-70o0 hover:bg-gray-10o0/20"
         >
-          <X className="h-4 w-4 mr-1" />
+          <X className="h-4 w-4 mr-1"  />
           Cancel
         </Button>
       </div>
@@ -120,9 +119,9 @@ export function AIEnhancementButton({
       disabled={isEnhancing}
     >
       {isEnhancing ? (
-        <Loader2 className="h-4 w-4 animate-spin" />
+        <Loader2 className="h-4 w-4 animate-spin"  />
       ) : (
-        <Sparkles className="h-4 w-4" />
+        <Sparkles className="h-4 w-4"  />
       )}
       <span className="text-xs">{buttonText}</span>
     </Button>

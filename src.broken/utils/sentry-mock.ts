@@ -25,5 +25,4 @@ export default {
   withSentryWebpackConfig,
   withSentryServerConfig,
   withSentryClientConfig,
-  withSentryEdgeConfig,
-};
+  withSentryEdgeConfig};

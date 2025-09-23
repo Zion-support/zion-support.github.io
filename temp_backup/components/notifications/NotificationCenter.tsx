@@ -1,4 +1,3 @@
-import React from 'react';
 import NotificationItem from './NotificationItem';
 import { useNotifications, NotificationFilter } from '../../hooks/useNotifications';
 
@@ -14,20 +13,19 @@ export default function NotificationCenter() {
     unreadCount,
     markAsRead,
     markAllAsRead,
-    dismiss,
-  } = useNotifications();
+    dismiss} = useNotifications();
 
   return (
     <div className="mx-auto w-full max-w-3xl">
       <div className="mb-6 flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-semibold">Notifications</h1>
-          <p className="text-sm text-gray-600 dark:text-gray-300">Stay on top of reminders, nudges, and system alerts.</p>
+          <p className="text-sm text-gray-60o0 dark:text-gray-30o0">Stay on top of reminders, nudges, and system alerts.</p>
         </div>
         <div className="flex items-center gap-2">
           <button
             onClick={markAllAsRead}
-            className="inline-flex items-center rounded-lg border border-gray-200 dark:border-gray-700 px-3 py-1.5 text-sm hover:bg-gray-50 dark:hover:bg-gray-800"
+            className="inline-flex items-center rounded-lg border border-gray-20o0 dark:border-gray-70o0 px-3 py-1.5 text-sm hover:bg-gray-50 dark:hover:bg-gray-80o0"
           >
             Mark all as read
           </button>
@@ -43,8 +41,8 @@ export default function NotificationCenter() {
               key={f}
               className={
                 isActive
-                  ? `${base} border-transparent text-white bg-gradient-to-r from-blue-500 via-cyan-500 to-purple-500`
-                  : `${base} border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800`
+                  ? `${base} border-transparent text-white bg-gradient-to-r from-blue-50o0 via-cyan-50o0 to-purple-50o0`
+                  : `${base} border-gray-20o0 dark:border-gray-70o0 text-gray-70o0 dark:text-gray-20o0 hover:bg-gray-50 dark:hover:bg-gray-80o0`
               }
               onClick={() => setFilter(f)}
             >
@@ -61,22 +59,22 @@ export default function NotificationCenter() {
 
       <div className="space-y-3">
         {loading && (
-          <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-4 text-sm text-gray-600 dark:text-gray-300">
+          <div className="rounded-xl border border-gray-20o0 dark:border-gray-80o0 p-4 text-sm text-gray-60o0 dark:text-gray-30o0">
             Loading notifications...
           </div>
         )}
         {error && (
-          <div className="rounded-xl border border-red-300/60 bg-red-50 dark:border-red-900/50 dark:bg-red-950/30 p-3 text-sm text-red-700 dark:text-red-300">
+          <div className="rounded-xl border border-red-30o0/60 bg-red-50 dark:border-red-90o0/50 dark:bg-red-950/30 p-3 text-sm text-red-70o0 dark:text-red-30o0">
             {error}
           </div>
         )}
         {!loading && notifications.length === 0 && (
-          <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-6 text-center text-sm text-gray-600 dark:text-gray-300">
+          <div className="rounded-xl border border-gray-20o0 dark:border-gray-80o0 p-6 text-center text-sm text-gray-60o0 dark:text-gray-30o0">
             You're all caught up. No notifications.
           </div>
         )}
         {notifications.map((n) => (
-          <NotificationItem key={n.id} item={n} onMarkRead={markAsRead} onDismiss={dismiss} />
+          <NotificationItem key={n.id} item={n} onMarkRead={markAsRead} onDismiss={dismiss}  />
         ))}
       </div>
     </div>

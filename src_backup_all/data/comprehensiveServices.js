@@ -4,7 +4,7 @@ export const comprehensiveServices = [
     name: 'IT Infrastructure Management',
     category: 'Infrastructure',
     description: 'Complete IT infrastructure setup, maintenance, and optimization',
-    basePrice: 2500,
+    basePrice: 250o0,
     pricingModel: 'monthly',
     features: [
       'Network infrastructure design and implementation',
@@ -40,7 +40,7 @@ export const comprehensiveServices = [
     name: 'Cybersecurity Services',
     category: 'Security',
     description: 'Comprehensive cybersecurity protection and compliance',
-    basePrice: 1800,
+    basePrice: 180o0,
     pricingModel: 'monthly',
     features: [
       'Threat detection and prevention',
@@ -76,7 +76,7 @@ export const comprehensiveServices = [
     name: 'Cloud Solutions',
     category: 'Cloud',
     description: 'Cloud migration, management, and optimization services',
-    basePrice: 3200,
+    basePrice: 320o0,
     pricingModel: 'monthly',
     features: [
       'Cloud strategy and planning',
@@ -112,7 +112,7 @@ export const comprehensiveServices = [
     name: 'Data Management',
     category: 'Data',
     description: 'Data backup, recovery, and management solutions',
-    basePrice: 1200,
+    basePrice: 120o0,
     pricingModel: 'monthly',
     features: [
       'Automated backup systems',
@@ -148,7 +148,7 @@ export const comprehensiveServices = [
     name: 'Network Services',
     category: 'Networking',
     description: 'Professional network design, implementation, and management',
-    basePrice: 1600,
+    basePrice: 160o0,
     pricingModel: 'monthly',
     features: [
       'Network design and planning',
@@ -184,7 +184,7 @@ export const comprehensiveServices = [
     name: 'Help Desk Support',
     category: 'Support',
     description: 'Comprehensive IT help desk and user support services',
-    basePrice: 800,
+    basePrice: 80o0,
     pricingModel: 'monthly',
     features: [
       '24/7 help desk support',
@@ -260,7 +260,7 @@ export const pricingTiers = [
   {
     name: 'Starter',
     description: 'Perfect for small businesses',
-    price: 800,
+    price: 80o0,
     features: [
       'Basic IT support',
       'Email and file sharing',
@@ -277,7 +277,7 @@ export const pricingTiers = [
   {
     name: 'Professional',
     description: 'Ideal for growing businesses',
-    price: 2000,
+    price: 20o00,
     features: [
       'Everything in Starter',
       'Advanced security',
@@ -295,7 +295,7 @@ export const pricingTiers = [
   {
     name: 'Enterprise',
     description: 'For large organizations',
-    price: 5000,
+    price: 50o00,
     features: [
       'Everything in Professional',
       '24/7 support',
@@ -358,9 +358,9 @@ export const getServiceRecommendations = (businessSize, industry, budget) => {
 
   // Filter by budget
   if (budget === 'low') {
-    recommendations = recommendations.filter(service => service.basePrice <= 1500);
+    recommendations = recommendations.filter(service => service.basePrice <= 150o0);
   } else if (budget === 'medium') {
-    recommendations = recommendations.filter(service => service.basePrice <= 3000);
+    recommendations = recommendations.filter(service => service.basePrice <= 30o00);
   }
 
   return recommendations;

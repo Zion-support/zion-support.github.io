@@ -14,8 +14,7 @@ import { Switch } from "@/components/ui/switch";
 
 const formSchema = z.object({
   title: z.string().min(1, "Title is required"),
-  isDefault: z.boolean(),
-});
+  isDefault: z.boolean()});
 
 type FormValues = z.infer<typeof formSchema>;
 
@@ -39,9 +38,7 @@ export function TemplateSaveForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
       title: editTemplate?.title || "",
-      isDefault: editTemplate?.is_default || false,
-    },
-  });
+      isDefault: editTemplate?.is_default || false}});
   
   const onSubmit = async (values: FormValues) => {
     if (!currentValues && !editTemplate) {
@@ -56,14 +53,12 @@ export function TemplateSaveForm({
           templateId: editTemplate.id,
           title: values.title,
           templateData: editTemplate.template_data,
-          isDefault: values.isDefault,
-        });
+          isDefault: values.isDefault});
       } else if (currentValues) {
         await createTemplate.mutateAsync({
           title: values.title,
           templateData: currentValues,
-          isDefault: values.isDefault,
-        });
+          isDefault: values.isDefault});
       }
       
       onComplete();
@@ -82,9 +77,9 @@ export function TemplateSaveForm({
             <FormItem>
               <FormLabel>Template Name</FormLabel>
               <FormControl>
-                <Input {...field} placeholder="Enter template name" />
+                <Input {...field} placeholder="Enter template name"  />
               </FormControl>
-              <FormMessage />
+              <FormMessage  />
             </FormItem>
           )}
         />
@@ -100,9 +95,9 @@ export function TemplateSaveForm({
                   aria-label="Default template"
                   checked={field.value}
                   onCheckedChange={field.onChange}
-                />
+                 />
               </FormControl>
-              <FormMessage />
+              <FormMessage  />
             </FormItem>
           )}
         />
@@ -114,7 +109,7 @@ export function TemplateSaveForm({
           <Button type="submit" disabled={saving}>
             {saving ? (
               <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                <Loader2 className="mr-2 h-4 w-4 animate-spin"  />
                 Saving...
               </>
             ) : (

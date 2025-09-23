@@ -1,5 +1,3 @@
-import React from 'react';
-
 export interface GuidedTourProps {
   role?: 'client' | 'talent' | string;
 }

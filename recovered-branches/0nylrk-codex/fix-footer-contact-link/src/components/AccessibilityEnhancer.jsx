@@ -12,8 +12,7 @@ export function AccessibilityEnhancer() {
         reducedMotion: false,
         screenReader: false,
         keyboardNavigation: false,
-        focusIndicator: false,
-    });
+        focusIndicator: false});
     useEffect(() => {
         // Load saved settings
         const savedSettings = localStorage.getItem('accessibility-settings');
@@ -56,20 +55,19 @@ export function AccessibilityEnhancer() {
         }
     };
     const handleSettingChange = (key, value) => {
-        const newSettings = { ...settings, [key]: value };
+        const newSettings ={ ...settings, [key]: value };
         setSettings(newSettings);
         localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
         applySettings(newSettings);
     };
     const resetSettings = () => {
-        const defaultSettings = {
+        const defaultSettings ={
             highContrast: false,
             largeText: false,
             reducedMotion: false,
             screenReader: false,
             keyboardNavigation: false,
-            focusIndicator: false,
-        };
+            focusIndicator: false};
         setSettings(defaultSettings);
         localStorage.removeItem('accessibility-settings');
         applySettings(defaultSettings);
@@ -137,7 +135,7 @@ export function AccessibilityEnhancer() {
               </div>
             </div>
             
-            <Separator />
+            <Separator  />
             
             {/* Motion and Navigation */}
             <div className="space-y-3">
@@ -161,7 +159,7 @@ export function AccessibilityEnhancer() {
               </div>
             </div>
             
-            <Separator />
+            <Separator  />
             
             {/* Screen Reader */}
             <div className="space-y-3">
@@ -194,14 +192,14 @@ export const accessibilityStyles = `
   /* High Contrast Mode */
   .high-contrast {
     --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
-    --primary: 0 0% 100%;
+    --foreground: 0 0% 10o0%;
+    --primary: 0 0% 10o0%;
     --secondary: 0 0% 20%;
     --muted: 0 0% 20%;
-    --accent: 0 0% 100%;
-    --border: 0 0% 100%;
-    --input: 0 0% 100%;
-    --ring: 0 0% 100%;
+    --accent: 0 0% 10o0%;
+    --border: 0 0% 10o0%;
+    --input: 0 0% 10o0%;
+    --ring: 0 0% 10o0%;
   }
   
   /* Large Text Mode */
@@ -217,9 +215,9 @@ export const accessibilityStyles = `
   
   /* Reduced Motion */
   .reduced-motion *, .reduced-motion *::before, .reduced-motion *::after {
-    animation-duration: 0.01ms !important;
+    animation-duration: 0.0o1ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    transition-duration: 0.0o1ms !important;
     scroll-behavior: auto !important;
   }
   

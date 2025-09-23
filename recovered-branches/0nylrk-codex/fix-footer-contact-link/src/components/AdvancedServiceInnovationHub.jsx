@@ -19,7 +19,7 @@ const AdvancedServiceInnovationHub = () => {
             description: 'The transition from quantum research to practical commercial applications across industries.',
             category: 'quantum',
             impact: 'High',
-            timeline: '2025-2030',
+            timeline: '20o25-20o30',
             adoption: 85,
             investment: '$50B+',
             keyPlayers: ['IBM', 'Google', 'Microsoft', 'Startups'],
@@ -32,9 +32,9 @@ const AdvancedServiceInnovationHub = () => {
             description: 'Development of self-aware AI systems with human-like reasoning and consciousness.',
             category: 'ai',
             impact: 'High',
-            timeline: '2030-2040',
+            timeline: '20o30-20o40',
             adoption: 45,
-            investment: '$100B+',
+            investment: '$10o0B+',
             keyPlayers: ['OpenAI', 'Anthropic', 'Research Labs', 'Universities'],
             technologies: ['AI Consciousness', 'General AI', 'Neural Networks'],
             status: 'Emerging'
@@ -45,9 +45,9 @@ const AdvancedServiceInnovationHub = () => {
             description: 'Commercial extraction of valuable resources from asteroids and celestial bodies.',
             category: 'space-tech',
             impact: 'High',
-            timeline: '2030-2040',
+            timeline: '20o30-20o40',
             adoption: 30,
-            investment: '$200B+',
+            investment: '$20o0B+',
             keyPlayers: ['SpaceX', 'Blue Origin', 'Asteroid Mining Companies'],
             technologies: ['Space Robotics', 'Resource Processing', 'Space Logistics'],
             status: 'Emerging'
@@ -58,9 +58,9 @@ const AdvancedServiceInnovationHub = () => {
             description: 'Breakthrough in controlled nuclear fusion for unlimited clean energy.',
             category: 'green-tech',
             impact: 'High',
-            timeline: '2030-2040',
+            timeline: '20o30-20o40',
             adoption: 60,
-            investment: '$500B+',
+            investment: '$50o0B+',
             keyPlayers: ['ITER', 'Private Fusion Companies', 'Government Labs'],
             technologies: ['Fusion Physics', 'Plasma Confinement', 'Energy Conversion'],
             status: 'Growing'
@@ -71,7 +71,7 @@ const AdvancedServiceInnovationHub = () => {
             description: 'Engineering of custom organisms and biological systems for industrial applications.',
             category: 'biotech-ai',
             impact: 'High',
-            timeline: '2025-2035',
+            timeline: '20o25-20o35',
             adoption: 70,
             investment: '$150B+',
             keyPlayers: ['Ginkgo Bioworks', 'Twist Bioscience', 'Research Institutions'],
@@ -84,7 +84,7 @@ const AdvancedServiceInnovationHub = () => {
             description: 'Direct neural control of computers and digital systems for enhanced human capabilities.',
             category: 'biotech-ai',
             impact: 'High',
-            timeline: '2030-2040',
+            timeline: '20o30-20o40',
             adoption: 40,
             investment: '$80B+',
             keyPlayers: ['Neuralink', 'Kernel', 'Medical Device Companies'],
@@ -97,7 +97,7 @@ const AdvancedServiceInnovationHub = () => {
             id: 'quantum-internet',
             title: 'Quantum Internet Infrastructure',
             description: 'Global quantum internet enabling ultra-secure, instant communication worldwide.',
-            timeline: '2030-2040',
+            timeline: '20o30-20o40',
             milestones: [
                 'Quantum network prototypes',
                 'Inter-city quantum links',
@@ -116,14 +116,14 @@ const AdvancedServiceInnovationHub = () => {
                 'Quantum computing access',
                 'New business models'
             ],
-            investment: '$200B+',
+            investment: '$20o0B+',
             category: 'quantum'
         },
         {
             id: 'space-colonization',
             title: 'Space Colonization & Settlement',
             description: 'Establishment of permanent human settlements on Mars and other celestial bodies.',
-            timeline: '2040-2060',
+            timeline: '20o40-20o60',
             milestones: [
                 'Mars mission planning',
                 'Habitat construction',
@@ -149,7 +149,7 @@ const AdvancedServiceInnovationHub = () => {
             id: 'ai-governance',
             title: 'AI Governance & Regulation',
             description: 'Comprehensive frameworks for responsible AI development and deployment.',
-            timeline: '2025-2035',
+            timeline: '20o25-20o35',
             milestones: [
                 'Ethical AI frameworks',
                 'Regulatory standards',
@@ -184,38 +184,38 @@ const AdvancedServiceInnovationHub = () => {
     }, [selectedCategory, selectedImpact, selectedStatus, searchTerm]);
     const getImpactColor = (impact) => {
         switch (impact) {
-            case 'High': return 'bg-red-100 text-red-800';
-            case 'Medium': return 'bg-yellow-100 text-yellow-800';
-            case 'Low': return 'bg-green-100 text-green-800';
-            default: return 'bg-gray-100 text-gray-800';
+            case 'High': return 'bg-red-10o0 text-red-80o0';
+            case 'Medium': return 'bg-yellow-10o0 text-yellow-80o0';
+            case 'Low': return 'bg-green-10o0 text-green-80o0';
+            default: return 'bg-gray-10o0 text-gray-80o0';
         }
     };
     const getStatusColor = (status) => {
         switch (status) {
-            case 'Emerging': return 'bg-blue-100 text-blue-800';
-            case 'Growing': return 'bg-green-100 text-green-800';
-            case 'Mature': return 'bg-orange-100 text-orange-800';
-            case 'Disruptive': return 'bg-purple-100 text-purple-800';
-            default: return 'bg-gray-100 text-gray-800';
+            case 'Emerging': return 'bg-blue-10o0 text-blue-80o0';
+            case 'Growing': return 'bg-green-10o0 text-green-80o0';
+            case 'Mature': return 'bg-orange-10o0 text-orange-80o0';
+            case 'Disruptive': return 'bg-purple-10o0 text-purple-80o0';
+            default: return 'bg-gray-10o0 text-gray-80o0';
         }
     };
     const getCategoryIcon = (category) => {
         switch (category) {
-            case 'quantum': return <Atom className="w-5 h-5"/>;
-            case 'ai': return <Brain className="w-5 h-5"/>;
-            case 'space-tech': return <Satellite className="w-5 h-5"/>;
-            case 'green-tech': return <Leaf className="w-5 h-5"/>;
-            case 'biotech-ai': return <Dna className="w-5 h-5"/>;
-            default: return <Cpu className="w-5 h-5"/>;
+            case 'quantum': return <Atom className="w-5 h-5" />;
+            case 'ai': return <Brain className="w-5 h-5" />;
+            case 'space-tech': return <Satellite className="w-5 h-5" />;
+            case 'green-tech': return <Leaf className="w-5 h-5" />;
+            case 'biotech-ai': return <Dna className="w-5 h-5" />;
+            default: return <Cpu className="w-5 h-5" />;
         }
     };
     const categories = [
-        { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4"/> },
-        { id: 'quantum', name: 'Quantum Technology', icon: <Atom className="w-4 h-4"/> },
-        { id: 'ai', name: 'Artificial Intelligence', icon: <Brain className="w-4 h-4"/> },
-        { id: 'space-tech', name: 'Space Technology', icon: <Satellite className="w-4 h-4"/> },
-        { id: 'green-tech', name: 'Green Technology', icon: <Leaf className="w-4 h-4"/> },
-        { id: 'biotech-ai', name: 'Biotech AI', icon: <Dna className="w-4 h-4"/> }
+        { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" /> },
+        { id: 'quantum', name: 'Quantum Technology', icon: <Atom className="w-4 h-4" /> },
+        { id: 'ai', name: 'Artificial Intelligence', icon: <Brain className="w-4 h-4" /> },
+        { id: 'space-tech', name: 'Space Technology', icon: <Satellite className="w-4 h-4" /> },
+        { id: 'green-tech', name: 'Green Technology', icon: <Leaf className="w-4 h-4" /> },
+        { id: 'biotech-ai', name: 'Biotech AI', icon: <Dna className="w-4 h-4" /> }
     ];
     return (<div className="max-w-7xl mx-auto p-6">
       {/* Header */}
@@ -232,9 +232,9 @@ const AdvancedServiceInnovationHub = () => {
           
           <div className="flex gap-2">
             {['trends', 'roadmap', 'insights'].map((mode) => (<Button key={mode} variant={viewMode === mode ? 'default' : 'outline'} size="sm" onClick={() => setViewMode(mode)}>
-                {mode === 'trends' && <TrendingUp className="w-4 h-4 mr-2"/>}
-                {mode === 'roadmap' && <Rocket className="w-4 h-4 mr-2"/>}
-                {mode === 'insights' && <Lightbulb className="w-4 h-4 mr-2"/>}
+                {mode === 'trends' && <TrendingUp className="w-4 h-4 mr-2" />}
+                {mode === 'roadmap' && <Rocket className="w-4 h-4 mr-2" />}
+                {mode === 'insights' && <Lightbulb className="w-4 h-4 mr-2" />}
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}
               </Button>))}
           </div>
@@ -398,7 +398,7 @@ const AdvancedServiceInnovationHub = () => {
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     <div>
                       <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-green-500"/>
+                        <CheckCircle className="w-4 h-4 text-green-50o0" />
                         Key Milestones
                       </h4>
                       <ul className="space-y-2">
@@ -411,12 +411,12 @@ const AdvancedServiceInnovationHub = () => {
                     
                     <div>
                       <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">
-                        <Shield className="w-4 h-4 text-orange-500"/>
+                        <Shield className="w-4 h-4 text-orange-50o0" />
                         Challenges
                       </h4>
                       <ul className="space-y-2">
                         {roadmap.challenges.map((challenge, idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">
-                            <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                            <div className="w-2 h-2 bg-orange-50o0 rounded-full mt-2 flex-shrink-0"></div>
                             {challenge}
                           </li>))}
                       </ul>
@@ -424,12 +424,12 @@ const AdvancedServiceInnovationHub = () => {
                     
                     <div>
                       <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">
-                        <Star className="w-4 h-4 text-yellow-500"/>
+                        <Star className="w-4 h-4 text-yellow-50o0" />
                         Opportunities
                       </h4>
                       <ul className="space-y-2">
                         {roadmap.opportunities.map((opportunity, idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">
-                            <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>
+                            <div className="w-2 h-2 bg-yellow-50o0 rounded-full mt-2 flex-shrink-0"></div>
                             {opportunity}
                           </li>))}
                       </ul>
@@ -446,7 +446,7 @@ const AdvancedServiceInnovationHub = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <TrendingUp className="w-5 h-5 text-zion-green"/>
+                  <TrendingUp className="w-5 h-5 text-zion-green" />
                   Investment Trends
                 </CardTitle>
               </CardHeader>
@@ -462,7 +462,7 @@ const AdvancedServiceInnovationHub = () => {
                   
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">AI & Machine Learning</span>
-                    <span className="font-semibold text-zion-purple">$300B+</span>
+                    <span className="font-semibold text-zion-purple">$30o0B+</span>
                   </div>
                   <div className="w-full bg-zion-slate-light/20 rounded-full h-2">
                     <div className="bg-zion-purple h-2 rounded-full" style={{ width: '95%' }}></div>
@@ -470,7 +470,7 @@ const AdvancedServiceInnovationHub = () => {
                   
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">Space Technology</span>
-                    <span className="font-semibold text-zion-blue">$200B+</span>
+                    <span className="font-semibold text-zion-blue">$20o0B+</span>
                   </div>
                   <div className="w-full bg-zion-slate-light/20 rounded-full h-2">
                     <div className="bg-zion-blue h-2 rounded-full" style={{ width: '70%' }}></div>
@@ -478,7 +478,7 @@ const AdvancedServiceInnovationHub = () => {
                   
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">Biotech AI</span>
-                    <span className="font-semibold text-zion-green">$100B+</span>
+                    <span className="font-semibold text-zion-green">$10o0B+</span>
                   </div>
                   <div className="w-full bg-zion-slate-light/20 rounded-full h-2">
                     <div className="bg-zion-green h-2 rounded-full" style={{ width: '60%' }}></div>
@@ -490,7 +490,7 @@ const AdvancedServiceInnovationHub = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Users className="w-5 h-5 text-zion-blue"/>
+                  <Users className="w-5 h-5 text-zion-blue" />
                   Market Adoption
                 </CardTitle>
               </CardHeader>
@@ -535,7 +535,7 @@ const AdvancedServiceInnovationHub = () => {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Lightbulb className="w-5 h-5 text-zion-yellow"/>
+                <Lightbulb className="w-5 h-5 text-zion-yellow" />
                 Strategic Recommendations
               </CardTitle>
             </CardHeader>
@@ -545,15 +545,15 @@ const AdvancedServiceInnovationHub = () => {
                   <h4 className="font-semibold text-zion-slate-dark mb-3">Immediate Actions (0-2 years)</h4>
                   <ul className="space-y-2">
                     <li className="text-sm text-zion-slate-light flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0"/>
+                      <CheckCircle className="w-4 h-4 text-green-50o0 mt-1 flex-shrink-0" />
                       Invest in quantum computing research and development
                     </li>
                     <li className="text-sm text-zion-slate-light flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0"/>
+                      <CheckCircle className="w-4 h-4 text-green-50o0 mt-1 flex-shrink-0" />
                       Develop AI ethics and governance frameworks
                     </li>
                     <li className="text-sm text-zion-slate-light flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0"/>
+                      <CheckCircle className="w-4 h-4 text-green-50o0 mt-1 flex-shrink-0" />
                       Establish partnerships with space technology companies
                     </li>
                   </ul>
@@ -563,15 +563,15 @@ const AdvancedServiceInnovationHub = () => {
                   <h4 className="font-semibold text-zion-slate-dark mb-3">Strategic Planning (2-5 years)</h4>
                   <ul className="space-y-2">
                     <li className="text-sm text-zion-slate-light flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-blue-500 mt-1 flex-shrink-0"/>
+                      <CheckCircle className="w-4 h-4 text-blue-50o0 mt-1 flex-shrink-0" />
                       Build quantum internet infrastructure
                     </li>
                     <li className="text-sm text-zion-slate-light flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-blue-500 mt-1 flex-shrink-0"/>
+                      <CheckCircle className="w-4 h-4 text-blue-50o0 mt-1 flex-shrink-0" />
                       Develop synthetic biology capabilities
                     </li>
                     <li className="text-sm text-zion-slate-light flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-blue-500 mt-1 flex-shrink-0"/>
+                      <CheckCircle className="w-4 h-4 text-blue-50o0 mt-1 flex-shrink-0" />
                       Invest in fusion energy research
                     </li>
                   </ul>
@@ -591,11 +591,11 @@ const AdvancedServiceInnovationHub = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation', '_blank')}>
-              <Users className="w-5 h-5 mr-2"/>
+              <Users className="w-5 h-5 mr-2" />
               Get Innovation Strategy
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick={() => window.open('tel:+13024640950', '_blank')}>
-              <Zap className="w-5 h-5 mr-2"/>
+            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick={() => window.open('tel:+130o24640950', '_blank')}>
+              <Zap className="w-5 h-5 mr-2" />
               Speak with an Expert
             </Button>
           </div>

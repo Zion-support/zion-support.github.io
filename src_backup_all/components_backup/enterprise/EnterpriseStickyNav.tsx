@@ -14,7 +14,7 @@ export function EnterpriseStickyNav() {
             aria-label="Toggle navigation"
             aria-expanded={open}
           >
-            <Menu className="h-6 w-6" />
+            <Menu className="h-6 w-6"  />
           </button>
           <ul className={`${open ? "flex" : "hidden"} flex-col gap-4 md:flex md:flex-row md:gap-8 w-full md:w-auto`}>
             <li>

@@ -1,7 +1,7 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state ={ hasError: false };
   }
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -16,8 +16,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React from 'react';
-
 const RetailSolutions = ({ className }) => {
   return (
     <div className={className || ''}>

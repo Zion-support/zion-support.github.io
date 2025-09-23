@@ -30,7 +30,7 @@ export const marketplaceItems = [
     title: "AI-Powered Business Intelligence Platform",
     description: "Advanced analytics and machine learning insights for enterprise decision-making",
     category: "AI Services",
-    price: "$2,500/month",
+    price: "$2,50o0/month",
     rating: 4.8,
     location: "Global",
     availability: "Available",
@@ -42,7 +42,7 @@ export const marketplaceItems = [
     title: "Cloud DevOps Automation Suite",
     description: "Complete infrastructure automation and deployment pipeline solution",
     category: "Cloud Computing",
-    price: "$1,800/month",
+    price: "$1,80o0/month",
     rating: 4.7,
     location: "Global",
     availability: "Available",
@@ -54,7 +54,7 @@ export const marketplaceItems = [
     title: "Cybersecurity Threat Detection System",
     description: "AI-powered security monitoring and threat prevention platform",
     category: "Cybersecurity",
-    price: "$3,200/month",
+    price: "$3,20o0/month",
     rating: 4.9,
     location: "Global",
     availability: "Available",
@@ -78,7 +78,7 @@ export const marketplaceItems = [
     title: "IT Infrastructure Management",
     description: "Comprehensive IT infrastructure monitoring and management solution",
     category: "IT Infrastructure",
-    price: "$1,500/month",
+    price: "$1,50o0/month",
     rating: 4.5,
     location: "Global",
     availability: "Available",
@@ -88,7 +88,7 @@ export const marketplaceItems = [
 ];
 
 // Marketplace filters configuration
-export const marketplaceFilters = {
+export const marketplaceFilters ={
   productTypes: [
     "AI Services",
     "Cloud Computing", 

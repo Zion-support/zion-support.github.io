@@ -37,7 +37,7 @@ export function ListingScoreCard({
 
   return (
     <div className={cn(
-      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",
+      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-30o0 group",
       className
     )}>
       {image && !mainImageError && (
@@ -45,10 +45,10 @@ export function ListingScoreCard({
           <Image
             src={image} 
             alt={title} 
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            className="object-cover transition-transform duration-30o0 group-hover:scale-10o5"
             onError={() => setMainImageError(true)}
             priority={false}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // General sizes
+            sizes="(max-width: 768px) 10o0vw, (max-width: 120o0px) 50vw, 33vw" // General sizes
           />
         </div>
       )}
@@ -89,7 +89,7 @@ export function ListingScoreCard({
                       ? "text-zion-cyan fill-zion-cyan" 
                       : "text-zion-slate-light"
                   )}
-                />
+                 />
               ))}
             </div>
             <span className="text-sm text-zion-slate-light ml-1">

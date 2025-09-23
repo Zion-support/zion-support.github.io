@@ -6,14 +6,10 @@
               <div className="flex-1 ml-80">,
                 {children};
               </div>,
-            </div>,
-          )};
+            </div>)};
           {!showSidebar && children};
         </main>,
-        <Footer />,
+        <Footer  />,
       </div>,
-    </>,
-  ),
-
-};
+    </>)};
 

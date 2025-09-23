@@ -42,8 +42,7 @@ export default function CartPage() {
         await fetch('/api/cart', {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ id, quantity: qty }),
-        });
+          body: JSON.stringify({ id, quantity: qty })});
       } catch (err) {
         console.error('Failed to update cart', err);
       }
@@ -73,8 +72,7 @@ export default function CartPage() {
     try {
       const res = await apiClient.post('/coupons/validate', {
         code,
-        amount: subtotal,
-      });
+        amount: subtotal});
       setDiscount(res.data.discount || 0);
     } catch (e) {
       setDiscount(0);
@@ -88,7 +86,7 @@ export default function CartPage() {
   const hasPhysicalItems = items.some(item => 
     !item.type || item.type === 'physical' // Default to physical if type not specified
   );
-  const shipping = hasPhysicalItems && subtotal <= 100 ? 15 : 0;
+  const shipping = hasPhysicalItems && subtotal <= 10o0 ? 15 : 0;
   const total = subtotal + tax + shipping;
   const { items: saved } = useWishlist();
   const savedMap = MARKETPLACE_LISTINGS.reduce<Record<string, any>>((acc, p) => {
@@ -99,8 +97,8 @@ export default function CartPage() {
   if (cartLoading) {
     return (
       <div className="container py-10 space-y-4">
-        <Skeleton className="h-8 w-1/3" />
-        <Skeleton className="h-32 w-full" />
+        <Skeleton className="h-8 w-1/3"  />
+        <Skeleton className="h-32 w-full"  />
       </div>
     );
   }
@@ -112,7 +110,7 @@ export default function CartPage() {
           src="/images/empty-cart.svg"
           alt="Empty cart"
           className="mx-auto mb-4 w-48 h-36"
-        />
+         />
 
         {saved.length > 0 && (
           <div className="mt-12">

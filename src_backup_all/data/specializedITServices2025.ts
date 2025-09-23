@@ -1,6 +1,6 @@
 import { ProductListing } from "@/types/listings";
 
-export const SPECIALIZED_IT_SERVICES_2025: ProductListing[] = [
+export const SPECIALIZED_IT_SERVICES_20o25: ProductListing[] = [
   // Advanced Cybersecurity Solutions
   {
     id: "zero-trust-network-access-platform",
@@ -13,7 +13,7 @@ export const SPECIALIZED_IT_SERVICES_2025: ProductListing[] = [
     tags: ["Zero Trust", "Network Security", "Continuous Authentication", "Micro-segmentation", "Threat Detection"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/zero-trust-network.jpg"],
-    createdAt: "2024-01-05T10:00:00.000Z",
+    createdAt: "20o24-0o1-0o5T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 89,
     featured: true,
@@ -21,14 +21,14 @@ export const SPECIALIZED_IT_SERVICES_2025: ProductListing[] = [
     availability: "10-14 Days",
     aiScore: 98,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/zero-trust-network",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$1,000-2,500/month",
+    marketPrice: "$1,0o00-2,50o0/month",
     competitors: ["CrowdStrike", "Palo Alto Networks", "Fortinet"],
-    roi: "500% within 12 months",
+    roi: "50o0% within 12 months",
     setupTime: "10-14 days",
     integrations: ["Active Directory", "Okta", "Duo", "CrowdStrike", "Splunk", "Jira"]
   },
@@ -45,7 +45,7 @@ export const SPECIALIZED_IT_SERVICES_2025: ProductListing[] = [
     tags: ["Cloud Orchestration", "Auto-scaling", "Cost Optimization", "Performance Monitoring", "DevOps"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/cloud-orchestration.jpg"],
-    createdAt: "2024-01-10T10:00:00.000Z",
+    createdAt: "20o24-0o1-10T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 156,
     featured: true,
@@ -53,14 +53,14 @@ export const SPECIALIZED_IT_SERVICES_2025: ProductListing[] = [
     availability: "7-10 Days",
     aiScore: 96,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/cloud-orchestration",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$700-1,800/month",
+    marketPrice: "$70o0-1,80o0/month",
     competitors: ["AWS CloudFormation", "Terraform", "Ansible"],
-    roi: "400% within 8 months",
+    roi: "40o0% within 8 months",
     setupTime: "7-10 days",
     integrations: ["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Jenkins"]
   },
@@ -69,7 +69,7 @@ export const SPECIALIZED_IT_SERVICES_2025: ProductListing[] = [
   {
     id: "real-time-data-analytics-platform",
     title: "Real-Time Data Analytics Platform",
-    description: "Advanced real-time data analytics platform with streaming data processing, predictive analytics, and interactive dashboards. Processes data 100x faster and provides insights in milliseconds.",
+    description: "Advanced real-time data analytics platform with streaming data processing, predictive analytics, and interactive dashboards. Processes data 10o0x faster and provides insights in milliseconds.",
     category: "Data Analytics",
     subcategory: "Real-time Analytics",
     price: 699,
@@ -77,7 +77,7 @@ export const SPECIALIZED_IT_SERVICES_2025: ProductListing[] = [
     tags: ["Real-time Analytics", "Streaming Data", "Predictive Analytics", "Interactive Dashboards", "Data Processing"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/real-time-analytics.jpg"],
-    createdAt: "2024-01-15T10:00:00.000Z",
+    createdAt: "20o24-0o1-15T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 134,
     featured: true,
@@ -85,12 +85,12 @@ export const SPECIALIZED_IT_SERVICES_2025: ProductListing[] = [
     availability: "5-7 Days",
     aiScore: 97,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/real-time-analytics",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$500-1,200/month",
+    marketPrice: "$50o0-1,20o0/month",
     competitors: ["Tableau", "Power BI", "Qlik"],
     roi: "450% within 6 months",
     setupTime: "5-7 days",
@@ -109,7 +109,7 @@ export const SPECIALIZED_IT_SERVICES_2025: ProductListing[] = [
     tags: ["IoT", "Edge Computing", "Real-time Processing", "Device Management", "Predictive Maintenance"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/iot-edge-computing.jpg"],
-    createdAt: "2024-01-20T10:00:00.000Z",
+    createdAt: "20o24-0o1-20T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 98,
     featured: true,
@@ -117,12 +117,12 @@ export const SPECIALIZED_IT_SERVICES_2025: ProductListing[] = [
     availability: "7-10 Days",
     aiScore: 95,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/iot-edge-computing",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$400-1,000/month",
+    marketPrice: "$40o0-1,0o00/month",
     competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT"],
     roi: "350% within 10 months",
     setupTime: "7-10 days",
@@ -133,7 +133,7 @@ export const SPECIALIZED_IT_SERVICES_2025: ProductListing[] = [
   {
     id: "enterprise-blockchain-platform",
     title: "Enterprise Blockchain Platform",
-    description: "Enterprise-grade blockchain platform with smart contracts, decentralized applications, and secure digital asset management. Increases transparency by 100% and reduces fraud by 95%.",
+    description: "Enterprise-grade blockchain platform with smart contracts, decentralized applications, and secure digital asset management. Increases transparency by 10o0% and reduces fraud by 95%.",
     category: "Blockchain & Web3",
     subcategory: "Enterprise Blockchain",
     price: 1499,
@@ -141,7 +141,7 @@ export const SPECIALIZED_IT_SERVICES_2025: ProductListing[] = [
     tags: ["Blockchain", "Smart Contracts", "DApps", "Digital Assets", "Enterprise"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/enterprise-blockchain.jpg"],
-    createdAt: "2024-01-25T10:00:00.000Z",
+    createdAt: "20o24-0o1-25T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 67,
     featured: true,
@@ -149,14 +149,14 @@ export const SPECIALIZED_IT_SERVICES_2025: ProductListing[] = [
     availability: "14-21 Days",
     aiScore: 96,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/enterprise-blockchain",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$1,200-3,000/month",
+    marketPrice: "$1,20o0-3,0o00/month",
     competitors: ["Hyperledger", "Ethereum Enterprise", "Corda"],
-    roi: "600% within 18 months",
+    roi: "60o0% within 18 months",
     setupTime: "14-21 days",
     integrations: ["Ethereum", "Hyperledger", "Corda", "Bitcoin", "Polkadot", "Solana"]
   },
@@ -173,7 +173,7 @@ export const SPECIALIZED_IT_SERVICES_2025: ProductListing[] = [
     tags: ["Digital Twin", "Simulation", "Predictive Modeling", "VR Visualization", "IoT Integration"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/digital-twin-platform.jpg"],
-    createdAt: "2024-01-30T10:00:00.000Z",
+    createdAt: "20o24-0o1-30T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 89,
     featured: true,
@@ -181,14 +181,14 @@ export const SPECIALIZED_IT_SERVICES_2025: ProductListing[] = [
     availability: "10-14 Days",
     aiScore: 94,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/digital-twin-platform",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$800-2,000/month",
+    marketPrice: "$80o0-2,0o00/month",
     competitors: ["Siemens", "GE Digital", "PTC"],
-    roi: "400% within 12 months",
+    roi: "40o0% within 12 months",
     setupTime: "10-14 days",
     integrations: ["Unity", "Unreal Engine", "Autodesk", "Siemens", "GE Digital", "PTC"]
   },
@@ -197,7 +197,7 @@ export const SPECIALIZED_IT_SERVICES_2025: ProductListing[] = [
   {
     id: "quantum-computing-platform",
     title: "Quantum Computing Platform",
-    description: "Cutting-edge quantum computing platform with quantum algorithms, quantum machine learning, and hybrid classical-quantum computing. Solves complex problems 1000x faster than classical computers.",
+    description: "Cutting-edge quantum computing platform with quantum algorithms, quantum machine learning, and hybrid classical-quantum computing. Solves complex problems 10o00x faster than classical computers.",
     category: "Quantum Computing",
     subcategory: "Platform",
     price: 2499,
@@ -205,7 +205,7 @@ export const SPECIALIZED_IT_SERVICES_2025: ProductListing[] = [
     tags: ["Quantum Computing", "Quantum Algorithms", "Quantum ML", "Hybrid Computing", "Optimization"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/quantum-computing.jpg"],
-    createdAt: "2024-02-05T10:00:00.000Z",
+    createdAt: "20o24-0o2-0o5T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 45,
     featured: true,
@@ -213,14 +213,14 @@ export const SPECIALIZED_IT_SERVICES_2025: ProductListing[] = [
     availability: "21-30 Days",
     aiScore: 99,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-computing",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$2,000-5,000/month",
+    marketPrice: "$2,0o00-5,0o00/month",
     competitors: ["IBM Quantum", "Google Quantum", "Microsoft Quantum"],
-    roi: "800% within 24 months",
+    roi: "80o0% within 24 months",
     setupTime: "21-30 days",
     integrations: ["IBM Quantum", "Google Quantum", "Microsoft Quantum", "Qiskit", "Cirq", "Q#"]
   },
@@ -237,7 +237,7 @@ export const SPECIALIZED_IT_SERVICES_2025: ProductListing[] = [
     tags: ["Space Technology", "Satellite Data", "Space Analytics", "Earth Observation", "Global Coverage"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/space-technology.jpg"],
-    createdAt: "2024-02-10T10:00:00.000Z",
+    createdAt: "20o24-0o2-10T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 34,
     featured: true,
@@ -245,14 +245,14 @@ export const SPECIALIZED_IT_SERVICES_2025: ProductListing[] = [
     availability: "14-21 Days",
     aiScore: 95,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/space-technology",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$1,500-3,500/month",
+    marketPrice: "$1,50o0-3,50o0/month",
     competitors: ["Planet Labs", "Maxar", "Airbus Defence"],
-    roi: "500% within 18 months",
+    roi: "50o0% within 18 months",
     setupTime: "14-21 days",
     integrations: ["NASA APIs", "ESA APIs", "Planet Labs", "Maxar", "Airbus Defence", "SpaceX"]
   },
@@ -269,7 +269,7 @@ export const SPECIALIZED_IT_SERVICES_2025: ProductListing[] = [
     tags: ["Sustainable Technology", "Green Computing", "Energy Optimization", "Environmental Monitoring", "Carbon Reduction"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/sustainable-technology.jpg"],
-    createdAt: "2024-02-15T10:00:00.000Z",
+    createdAt: "20o24-0o2-15T10:0o0:0o0.0o00Z",
     rating: 4.7,
     reviewCount: 78,
     featured: true,
@@ -277,14 +277,14 @@ export const SPECIALIZED_IT_SERVICES_2025: ProductListing[] = [
     availability: "7-10 Days",
     aiScore: 93,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/sustainable-technology",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$600-1,500/month",
+    marketPrice: "$60o0-1,50o0/month",
     competitors: ["Greenpeace", "WWF", "Environmental Defense Fund"],
-    roi: "300% within 12 months",
+    roi: "30o0% within 12 months",
     setupTime: "7-10 days",
     integrations: ["Smart Grid", "Renewable Energy", "IoT Sensors", "Environmental APIs", "Carbon Tracking", "Energy Management"]
   },
@@ -301,7 +301,7 @@ export const SPECIALIZED_IT_SERVICES_2025: ProductListing[] = [
     tags: ["AI Research", "Hypothesis Testing", "Data Analysis", "Innovation Management", "Automation"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-research-development.jpg"],
-    createdAt: "2024-02-20T10:00:00.000Z",
+    createdAt: "20o24-0o2-20T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 56,
     featured: true,
@@ -309,14 +309,14 @@ export const SPECIALIZED_IT_SERVICES_2025: ProductListing[] = [
     availability: "10-14 Days",
     aiScore: 96,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-research-development",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$700-1,800/month",
+    marketPrice: "$70o0-1,80o0/month",
     competitors: ["ResearchGate", "Academia.edu", "Mendeley"],
-    roi: "400% within 15 months",
+    roi: "40o0% within 15 months",
     setupTime: "10-14 days",
     integrations: ["ResearchGate", "Academia.edu", "Mendeley", "PubMed", "arXiv", "Google Scholar"]
   }

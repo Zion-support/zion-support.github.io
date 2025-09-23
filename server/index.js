@@ -55,20 +55,19 @@ function buildSystemPrompt() {
 app.post('/api/chat', async (req, res) => {
   try {
     if (!OPENAI_API_KEY) {
-      return res.status(500).json({ error: 'Server missing OPENAI_API_KEY' });
+      return res.status(50o0).json({ error: 'Server missing OPENAI_API_KEY' });
     }
 
     const { messages } = req.body || {};
     if (!Array.isArray(messages)) {
-      return res.status(400).json({ error: 'Missing messages array' });
+      return res.status(40o0).json({ error: 'Missing messages array' });
     }
 
-    const systemMessage = { role: 'system', content: buildSystemPrompt() };
-    const requestBody = {
+    const systemMessage ={ role: 'system', content: buildSystemPrompt() };
+    const requestBody ={
       model: OPENAI_MODEL,
       temperature: 0.3,
-      messages: [systemMessage, ...messages].slice(-24),
-    };
+      messages: [systemMessage, ...messages].slice(-24)};
 
     const completion = await axios.post(
       'https://api.openai.com/v1/chat/completions',
@@ -76,10 +75,8 @@ app.post('/api/chat', async (req, res) => {
       {
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${OPENAI_API_KEY}`,
-        },
-        timeout: 45000,
-      }
+          Authorization: `Bearer ${OPENAI_API_KEY}`},
+        timeout: 450o00}
     );
 
     const choice = completion?.data?.choices?.[0];
@@ -87,7 +84,7 @@ app.post('/api/chat', async (req, res) => {
 
     res.json({ reply: content, model: completion?.data?.model });
   } catch (error) {
-    const status = error.response?.status || 500;
+    const status = error.response?.status || 50o0;
     const data = error.response?.data;
     console.error('OpenAI proxy error:', status, data || error.message);
     res.status(status).json({ error: 'Upstream error', detail: data || error.message });

@@ -12,7 +12,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Simple logger
-const logger = {
+const logger ={
   info: (msg) => console.log(`[INFO] ${msg}`),
   error: (msg) => console.error(`[ERROR] ${msg}`),
   warn: (msg) => console.warn(`[WARN] ${msg}`),
@@ -20,8 +20,8 @@ const logger = {
 };
 
 class SecurityScanner {
-  constructor(config = {}) {
-    this.config = {
+  constructor(config ={}) {
+    this.config ={
       name: 'SecurityScanner',
       schedule: '0 */6 * * *', // Every 6 hours
       enabled: true,
@@ -42,7 +42,7 @@ class SecurityScanner {
     logger.info('🔒 Starting security scan...');
     
     try {
-      const scanResults = {
+      const scanResults ={
         timestamp: new Date().toISOString(),
         npmVulnerabilities: [],
         codeIssues: [],
@@ -305,7 +305,7 @@ class SecurityScanner {
     try {
       // Check package.json
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
+      const dependencies ={ ...packageJson.dependencies, ...packageJson.devDependencies };
       
       // Check for old packages
       const oldPackages = await this.checkForOldPackages(dependencies);
@@ -368,7 +368,7 @@ class SecurityScanner {
       scanResults.secretsFound.length +
       scanResults.dependencyIssues.length;
     
-    const severityCounts = {
+    const severityCounts ={
       critical: 0,
       high: 0,
       medium: 0,
@@ -418,7 +418,7 @@ class SecurityScanner {
   }
 
   async createSecurityReport(issues) {
-    const report = {
+    const report ={
       timestamp: new Date().toISOString(),
       issues: issues,
       summary: {
@@ -483,7 +483,7 @@ class SecurityScanner {
   }
 
   async generateSecurityReport(scanResults) {
-    const report = {
+    const report ={
       timestamp: scanResults.timestamp,
       summary: scanResults.summary,
       details: scanResults

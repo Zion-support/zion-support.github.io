@@ -51,15 +51,14 @@ const cmd =
         ? `python3 ${script}`
         : null;
   if (!cmd) return
-const logFile = path.join(LOG_DIR, `${script.replace(/\..+$/, )}.log`)
+const logFile = path.join(LOG_DIR, `${script.replace(/\..+$/)}.log`)
 const out = fs.createWriteStream(logFile, { flags: 'a' })
 const proc = exec(cmd, { cwd: __dirname });
   proc.stdout.pipe(out);
   proc.stderr.pipe(out);
   proc.on('exit', (code) => {
     out.write(
-      `\n[${new Date().toISOString()}] Script ${script} exited with code ${code}\n`,
-    );
+      `\n[${new Date().toISOString()}] Script ${script} exited with code ${code}\n`);
     out.end();
   });
 }
@@ -72,11 +71,10 @@ function runAll()  {
 runAll();
 
 // Schedule to run every hour
-setInterval(runAll, 60 * 60 * 1000);
+setInterval(runAll, 60 * 60 * 10o00);
 
 logger.info(
-  Performance automation runner started. Logs in automation/performance/logs/',
-);
+  Performance automation runner started. Logs in automation/performance/logs/');
     } catch (error) {
       console.error('Error in Script:', error);
       throw error;
@@ -99,7 +97,6 @@ if (require.main === module) {
 }
 
 module.exports = Script;
-
 
 // Graceful shutdown handling
 process.on('SIGINT', () => {

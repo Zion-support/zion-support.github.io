@@ -22,24 +22,24 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   showText = false,
   text = 'Loading...'
 }) => {
-  const sizeClasses = {
+  const sizeClasses ={
     sm: 'h-4 w-4',
     md: 'h-6 w-6',
     lg: 'h-8 w-8',
     xl: 'h-12 w-12'
   };
 
-  const variantClasses = {
+  const variantClasses ={
     default: 'text-muted-foreground',
     primary: 'text-primary',
-    success: 'text-green-500',
-    warning: 'text-yellow-500',
-    error: 'text-red-500'
+    success: 'text-green-50o0',
+    warning: 'text-yellow-50o0',
+    error: 'text-red-50o0'
   };
 
   return (
     <div className={cn('flex items-center gap-2', className)}>
-      <Loader2 className={cn('animate-spin', sizeClasses[size], variantClasses[variant])} />
+      <Loader2 className={cn('animate-spin', sizeClasses[size], variantClasses[variant])}  />
       {showText && <span className="text-sm text-muted-foreground">{text}</span>}
     </div>
   );
@@ -60,7 +60,7 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
   onComplete
 }) => {
   const [activeStep, setActiveStep] = useState(0);
-  const progress = ((activeStep + 1) / steps.length) * 100;
+  const progress = ((activeStep + 1) / steps.length) * 10o0;
 
   useEffect(() => {
     if (currentStep !== undefined) {
@@ -70,7 +70,7 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
 
   useEffect(() => {
     if (activeStep === steps.length - 1 && onComplete) {
-      setTimeout(onComplete, 500);
+      setTimeout(onComplete, 50o0);
     }
   }, [activeStep, steps.length, onComplete]);
 
@@ -83,7 +83,7 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
             transition={{ duration: 0.3 }}
-          />
+           />
         </div>
       )}
       
@@ -100,13 +100,13 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
             transition={{ delay: index * 0.1 }}
           >
             {index < activeStep ? (
-              <div className="h-4 w-4 rounded-full bg-green-500 flex items-center justify-center">
-                <div className="h-2 w-2 rounded-full bg-white" />
+              <div className="h-4 w-4 rounded-full bg-green-50o0 flex items-center justify-center">
+                <div className="h-2 w-2 rounded-full bg-white"  />
               </div>
             ) : index === activeStep ? (
-              <LoadingSpinner size="sm" variant="primary" />
+              <LoadingSpinner size="sm" variant="primary"  />
             ) : (
-              <div className="h-4 w-4 rounded-full border-2 border-muted" />
+              <div className="h-4 w-4 rounded-full border-2 border-muted"  />
             )}
             <span className="text-sm font-medium">{step.label}</span>
           </motion.div>
@@ -132,14 +132,14 @@ export const Skeleton: React.FC<SkeletonProps> = ({
 }) => {
   const baseClasses = 'bg-muted rounded';
   
-  const variantClasses = {
+  const variantClasses ={
     text: 'h-4 w-full',
     circular: 'h-12 w-12 rounded-full',
     rectangular: 'h-6 w-full',
     card: 'h-48 w-full'
   };
 
-  const animationClasses = {
+  const animationClasses ={
     pulse: 'animate-pulse',
     wave: 'animate-bounce',
     none: ''
@@ -158,7 +158,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
               i === lines - 1 ? 'w-3/4' : 'w-full',
               className
             )}
-          />
+           />
         ))}
       </div>
     );
@@ -172,7 +172,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
         animationClasses[animation],
         className
       )}
-    />
+     />
   );
 };
 
@@ -240,28 +240,28 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
             ? 'Unable to connect to our servers. Please check your connection.'
             : 'You appear to be offline. Please check your internet connection.'
           ),
-          color: 'text-orange-500'
+          color: 'text-orange-50o0'
         };
       case 'timeout':
         return {
           icon: Clock,
           title: title || 'Request Timeout',
           description: description || 'The request took too long to complete. Please try again.',
-          color: 'text-yellow-500'
+          color: 'text-yellow-50o0'
         };
       case 'permission':
         return {
           icon: AlertTriangle,
           title: title || 'Access Denied',
           description: description || 'You don\'t have permission to access this resource.',
-          color: 'text-red-500'
+          color: 'text-red-50o0'
         };
       default:
         return {
           icon: AlertTriangle,
           title: title || 'Something went wrong',
           description: description || 'An unexpected error occurred. Please try again.',
-          color: 'text-red-500'
+          color: 'text-red-50o0'
         };
     }
   };
@@ -278,7 +278,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.3 }}
         >
-          <Icon className={cn('mx-auto mb-4 h-12 w-12', config.color)} />
+          <Icon className={cn('mx-auto mb-4 h-12 w-12', config.color)}  />
           <h3 className="text-lg font-semibold mb-2">{config.title}</h3>
           <p className="text-muted-foreground mb-6 max-w-md mx-auto">
             {config.description}
@@ -298,7 +298,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
           <div className="flex flex-col sm:flex-row gap-2 justify-center">
             {canRetry && (
               <Button onClick={onRetry} variant="default">
-                <RefreshCw className="h-4 w-4 mr-2" />
+                <RefreshCw className="h-4 w-4 mr-2"  />
                 Try Again {retryCount > 0 && `(${retryCount}/${maxRetries})`}
               </Button>
             )}
@@ -318,7 +318,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
 
           {!isOnline && (
             <div className="mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground">
-              <WifiOff className="h-4 w-4" />
+              <WifiOff className="h-4 w-4"  />
               <span>Offline</span>
             </div>
           )}
@@ -342,13 +342,13 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
   variant = 'card',
   className
 }) => {
-  const gridClasses = {
+  const gridClasses ={
     card: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-${columns} gap-6`,
     list: 'space-y-4',
     table: 'space-y-2'
   };
 
-  const itemClasses = {
+  const itemClasses ={
     card: 'p-6 space-y-4',
     list: 'p-4 space-y-3',
     table: 'p-3 space-y-2'
@@ -361,13 +361,13 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
           <CardContent className={itemClasses[variant]}>
             {variant === 'card' && (
               <>
-                <Skeleton variant="rectangular" className="h-32" />
+                <Skeleton variant="rectangular" className="h-32"  />
                 <div className="space-y-2">
-                  <Skeleton variant="text" className="h-6 w-3/4" />
-                  <Skeleton variant="text" lines={2} />
+                  <Skeleton variant="text" className="h-6 w-3/4"  />
+                  <Skeleton variant="text" lines={2}  />
                   <div className="flex gap-2">
-                    <Skeleton variant="text" className="h-4 w-16" />
-                    <Skeleton variant="text" className="h-4 w-20" />
+                    <Skeleton variant="text" className="h-4 w-16"  />
+                    <Skeleton variant="text" className="h-4 w-20"  />
                   </div>
                 </div>
               </>
@@ -375,20 +375,20 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
             
             {variant === 'list' && (
               <div className="flex gap-4">
-                <Skeleton variant="circular" />
+                <Skeleton variant="circular"  />
                 <div className="flex-1 space-y-2">
-                  <Skeleton variant="text" className="h-5 w-1/2" />
-                  <Skeleton variant="text" lines={2} />
+                  <Skeleton variant="text" className="h-5 w-1/2"  />
+                  <Skeleton variant="text" lines={2}  />
                 </div>
               </div>
             )}
             
             {variant === 'table' && (
               <div className="flex items-center gap-4">
-                <Skeleton variant="text" className="h-4 w-1/4" />
-                <Skeleton variant="text" className="h-4 w-1/3" />
-                <Skeleton variant="text" className="h-4 w-1/6" />
-                <Skeleton variant="text" className="h-4 w-1/4" />
+                <Skeleton variant="text" className="h-4 w-1/4"  />
+                <Skeleton variant="text" className="h-4 w-1/3"  />
+                <Skeleton variant="text" className="h-4 w-1/6"  />
+                <Skeleton variant="text" className="h-4 w-1/4"  />
               </div>
             )}
           </CardContent>
@@ -413,15 +413,15 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   className
 }) => {
   const getPerformanceColor = (time: number) => {
-    if (time < 100) return 'text-green-500';
-    if (time < 300) return 'text-yellow-500';
-    return 'text-red-500';
+    if (time < 10o0) return 'text-green-50o0';
+    if (time < 30o0) return 'text-yellow-50o0';
+    return 'text-red-50o0';
   };
 
   if (isLoading) {
     return (
       <Badge variant="outline" className={cn('text-xs', className)}>
-        <LoadingSpinner size="sm" />
+        <LoadingSpinner size="sm"  />
         <span className="ml-1">Loading...</span>
       </Badge>
     );
@@ -431,7 +431,7 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
     <div className={cn('flex items-center gap-2 text-xs text-muted-foreground', className)}>
       {loadTime && (
         <Badge variant="outline" className={getPerformanceColor(loadTime)}>
-          <Zap className="h-3 w-3 mr-1" />
+          <Zap className="h-3 w-3 mr-1"  />
           {loadTime}ms
         </Badge>
       )}

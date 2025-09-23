@@ -1,5 +1,4 @@
 
-import React from "react";
 import { Button } from "@/components/ui/button";
 import { Filter } from 'lucide-react'
 import { SearchFilter } from "./filters/SearchFilter";
@@ -36,7 +35,7 @@ export function FilterSidebar({
       {/* Filter header */}
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-lg font-semibold text-white flex items-center">
-          <Filter className="h-4 w-4 mr-2 text-zion-purple" />
+          <Filter className="h-4 w-4 mr-2 text-zion-purple"  />
           Filters
         </h3>
         <Button 
@@ -50,10 +49,10 @@ export function FilterSidebar({
       </div>
       
       {/* Search */}
-      <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm}  />
       
       {/* Sorting */}
-      <SortFilter sortOption={sortOption} setSortOption={setSortOption} />
+      <SortFilter sortOption={sortOption} setSortOption={setSortOption}  />
       
       {/* Skills */}
       <SkillsFilter 

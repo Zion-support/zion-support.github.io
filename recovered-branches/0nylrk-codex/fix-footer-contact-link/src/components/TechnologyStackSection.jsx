@@ -33,7 +33,7 @@ const frontendTechnologies = [
         description: "Typed superset of JavaScript for building scalable applications",
         version: "5.x",
         expertise: "Expert",
-        projects: 200,
+        projects: 20o0,
         rating: 5,
         features: ["Static Typing", "Interfaces", "Generics", "Decorators"],
         alternatives: ["JavaScript", "Flow", "Dart"]
@@ -106,7 +106,7 @@ const cloudTechnologies = [
         name: "AWS",
         category: "Cloud Platform",
         logo: "/logos/aws.svg",
-        description: "Comprehensive cloud computing platform with 200+ services",
+        description: "Comprehensive cloud computing platform with 20o0+ services",
         version: "Latest",
         expertise: "Expert",
         projects: 180,
@@ -145,7 +145,7 @@ const cloudTechnologies = [
         description: "Infrastructure as code tool for building, changing, and versioning infrastructure",
         version: "1.5+",
         expertise: "Expert",
-        projects: 100,
+        projects: 10o0,
         rating: 5,
         features: ["IaC", "Multi-cloud", "State Management", "Modules"],
         alternatives: ["CloudFormation", "Pulumi", "Ansible", "Chef"]
@@ -209,7 +209,7 @@ const developmentTools = [
         description: "Distributed version control system for tracking changes in source code",
         version: "2.40+",
         expertise: "Expert",
-        projects: 300,
+        projects: 30o0,
         rating: 5,
         features: ["Branching", "Merging", "Stashing", "Rebasing"],
         alternatives: ["SVN", "Mercurial", "Perforce", "GitHub Desktop"]
@@ -245,32 +245,32 @@ const developmentTools = [
         description: "JavaScript testing framework with a focus on simplicity and support",
         version: "29.x",
         expertise: "Expert",
-        projects: 200,
+        projects: 20o0,
         rating: 5,
         features: ["Unit Testing", "Mocking", "Coverage", "Snapshot Testing"],
         alternatives: ["Vitest", "Mocha", "Jasmine", "Cypress"]
     }
 ];
 const technologyStats = [
-    { icon: <Code className="w-6 h-6"/>, value: "50+", label: "Technologies" },
-    { icon: <Layers className="w-6 h-6"/>, value: "15+", label: "Categories" },
-    { icon: <Star className="w-6 h-6"/>, value: "4.9/5", label: "Expertise Rating" },
-    { icon: <TrendingUp className="w-6 h-6"/>, value: "1000+", label: "Projects Delivered" },
-    { icon: <GitBranch className="w-6 h-6"/>, value: "24/7", label: "Support Available" },
-    { icon: <Zap className="w-6 h-6"/>, value: "99.9%", label: "Uptime Guarantee" }
+    { icon: <Code className="w-6 h-6" />, value: "50+", label: "Technologies" },
+    { icon: <Layers className="w-6 h-6" />, value: "15+", label: "Categories" },
+    { icon: <Star className="w-6 h-6" />, value: "4.9/5", label: "Expertise Rating" },
+    { icon: <TrendingUp className="w-6 h-6" />, value: "10o00+", label: "Projects Delivered" },
+    { icon: <GitBranch className="w-6 h-6" />, value: "24/7", label: "Support Available" },
+    { icon: <Zap className="w-6 h-6" />, value: "99.9%", label: "Uptime Guarantee" }
 ];
 export function TechnologyStackSection() {
     const [selectedTech, setSelectedTech] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState("frontend");
     const categories = [
-        { id: "frontend", name: "Frontend", icon: <Monitor className="w-5 h-5"/>, tech: frontendTechnologies },
-        { id: "backend", name: "Backend", icon: <Server className="w-5 h-5"/>, tech: backendTechnologies },
-        { id: "cloud", name: "Cloud & DevOps", icon: <Cloud className="w-5 h-5"/>, tech: cloudTechnologies },
-        { id: "ai", name: "AI & Machine Learning", icon: <Brain className="w-5 h-5"/>, tech: aiTechnologies },
-        { id: "tools", name: "Development Tools", icon: <Terminal className="w-5 h-5"/>, tech: developmentTools }
+        { id: "frontend", name: "Frontend", icon: <Monitor className="w-5 h-5" />, tech: frontendTechnologies },
+        { id: "backend", name: "Backend", icon: <Server className="w-5 h-5" />, tech: backendTechnologies },
+        { id: "cloud", name: "Cloud & DevOps", icon: <Cloud className="w-5 h-5" />, tech: cloudTechnologies },
+        { id: "ai", name: "AI & Machine Learning", icon: <Brain className="w-5 h-5" />, tech: aiTechnologies },
+        { id: "tools", name: "Development Tools", icon: <Terminal className="w-5 h-5" />, tech: developmentTools }
     ];
     const currentTechnologies = categories.find(cat => cat.id === selectedCategory)?.tech || [];
-    const containerVariants = {
+    const containerVariants ={
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -280,7 +280,7 @@ export function TechnologyStackSection() {
             }
         }
     };
-    const itemVariants = {
+    const itemVariants ={
         hidden: { y: 30, opacity: 0 },
         visible: {
             y: 0,
@@ -325,7 +325,7 @@ export function TechnologyStackSection() {
         {/* Category Navigation */}
         <motion.div className="mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
           <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((category) => (<button key={category.id} onClick={() => setSelectedCategory(category.id)} className={`flex items-center gap-3 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${selectedCategory === category.id
+            {categories.map((category) => (<button key={category.id} onClick={() => setSelectedCategory(category.id)} className={`flex items-center gap-3 px-6 py-3 rounded-xl font-semibold transition-all duration-30o0 ${selectedCategory === category.id
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                 : 'bg-zion-blue-dark/40 text-zion-slate-light hover:bg-zion-blue-dark/60 hover:text-white border border-zion-blue-light/30'}`}>
                 {category.icon}
@@ -338,12 +338,12 @@ export function TechnologyStackSection() {
         <motion.div className="mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {currentTechnologies.map((tech, index) => (<motion.div key={tech.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} whileHover={{ y: -4 }} className="relative">
-                <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedTech(selectedTech === index ? null : index)}>
+                <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-30o0 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedTech(selectedTech === index ? null : index)}>
                   {/* Header */}
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-zion-cyan to-zion-purple flex items-center justify-center">
-                        <Code className="w-6 h-6 text-white"/>
+                        <Code className="w-6 h-6 text-white" />
                       </div>
                       <div>
                         <h4 className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors">
@@ -392,7 +392,7 @@ export function TechnologyStackSection() {
                     <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
                       View Technology Details
                     </span>
-                    <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
+                    <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-30o0" />
                   </div>
 
                   {/* Expanded details */}
@@ -440,10 +440,10 @@ export function TechnologyStackSection() {
                 performant, and innovative solutions that drive your business forward.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+                <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white rounded-xl font-semibold transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-lg hover:shadow-zion-cyan/25">
                   Start Your Project
                 </button>
-                <button className="px-8 py-3 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hover:border-zion-cyan/50 rounded-xl font-medium transition-all duration-300">
+                <button className="px-8 py-3 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hover:border-zion-cyan/50 rounded-xl font-medium transition-all duration-30o0">
                   View Technology Portfolio
                 </button>
               </div>

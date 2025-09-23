@@ -1,4 +1,4 @@
-export const emergingTechInnovations2025 = [
+export const emergingTechInnovations20o25 = [
     // Quantum Computing Services
     {
         id: 'quantum-computing-as-a-service',
@@ -8,7 +8,7 @@ export const emergingTechInnovations2025 = [
         price: '$2,999',
         period: '/month',
         features: [
-            'Access to 100+ qubit quantum processors',
+            'Access to 10o0+ qubit quantum processors',
             'Quantum algorithm library and optimization tools',
             'Hybrid quantum-classical computing workflows',
             'Real-time quantum circuit visualization',
@@ -31,18 +31,18 @@ export const emergingTechInnovations2025 = [
             'Machine learning acceleration'
         ],
         integrations: ['AWS Braket', 'Azure Quantum', 'IBM Quantum', 'Google Quantum AI', 'D-Wave Leap'],
-        compliance: ['ISO 27001', 'SOC2', 'FedRAMP', 'GDPR', 'CCPA'],
+        compliance: ['ISO 270o01', 'SOC2', 'FedRAMP', 'GDPR', 'CCPA'],
         website: 'https://ziontechgroup.com/quantum-computing-as-a-service',
         contact: {
-            phone: '+1 302 464 0950',
+            phone: '+1 30o2 464 0950',
             email: 'kleber@ziontechgroup.com',
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 10o08 Middletown DE 19709'
         },
         trialDays: 7,
         setupTime: '2-4 weeks',
         competitors: ['IBM Quantum', 'Google Quantum AI', 'D-Wave', 'Rigetti', 'IonQ'],
         roi: 'Average customer accelerates research by 10x and reduces computational costs by 60%',
-        launchDate: '2024-01-10',
+        launchDate: '20o24-0o1-10',
         customers: 85,
         rating: 4.9,
         reviews: 45,
@@ -83,18 +83,18 @@ export const emergingTechInnovations2025 = [
             'Insurance risk assessment'
         ],
         integrations: ['ArcGIS', 'QGIS', 'Google Earth Engine', 'Planet Labs', 'Maxar', 'ESA Copernicus'],
-        compliance: ['ISO 19100', 'OGC standards', 'GDPR', 'CCPA', 'Environmental regulations'],
+        compliance: ['ISO 1910o0', 'OGC standards', 'GDPR', 'CCPA', 'Environmental regulations'],
         website: 'https://ziontechgroup.com/satellite-data-analytics-platform',
         contact: {
-            phone: '+1 302 464 0950',
+            phone: '+1 30o2 464 0950',
             email: 'kleber@ziontechgroup.com',
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 10o08 Middletown DE 19709'
         },
         trialDays: 14,
         setupTime: '1-2 weeks',
         competitors: ['Planet Labs', 'Maxar', 'DigitalGlobe', 'Airbus Defence', 'ESA'],
         roi: 'Average customer improves operational efficiency by 45% and reduces costs by 35%',
-        launchDate: '2024-02-15',
+        launchDate: '20o24-0o2-15',
         customers: 320,
         rating: 4.8,
         reviews: 180,
@@ -135,18 +135,18 @@ export const emergingTechInnovations2025 = [
             'Autonomous vehicle systems'
         ],
         integrations: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'IBM Watson IoT', 'Siemens MindSphere'],
-        compliance: ['ISO 27001', 'SOC2', 'GDPR', 'CCPA', 'Industry-specific standards'],
+        compliance: ['ISO 270o01', 'SOC2', 'GDPR', 'CCPA', 'Industry-specific standards'],
         website: 'https://ziontechgroup.com/iot-edge-intelligence-platform',
         contact: {
-            phone: '+1 302 464 0950',
+            phone: '+1 30o2 464 0950',
             email: 'kleber@ziontechgroup.com',
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 10o08 Middletown DE 19709'
         },
         trialDays: 21,
         setupTime: '2-3 weeks',
         competitors: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'IBM Watson IoT', 'Siemens'],
         roi: 'Average customer reduces latency by 80% and bandwidth costs by 60%',
-        launchDate: '2024-03-01',
+        launchDate: '20o24-0o3-0o1',
         customers: 450,
         rating: 4.7,
         reviews: 220,
@@ -190,15 +190,15 @@ export const emergingTechInnovations2025 = [
         compliance: ['GDPR', 'CCPA', 'SOX', 'PCI DSS', 'Industry-specific regulations'],
         website: 'https://ziontechgroup.com/enterprise-blockchain-platform',
         contact: {
-            phone: '+1 302 464 0950',
+            phone: '+1 30o2 464 0950',
             email: 'kleber@ziontechgroup.com',
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 10o08 Middletown DE 19709'
         },
         trialDays: 14,
         setupTime: '3-4 weeks',
         competitors: ['IBM Blockchain', 'Microsoft Azure Blockchain', 'Amazon Managed Blockchain', 'ConsenSys', 'R3 Corda'],
         roi: 'Average customer improves transparency by 90% and reduces fraud by 70%',
-        launchDate: '2024-01-20',
+        launchDate: '20o24-0o1-20',
         customers: 280,
         rating: 4.8,
         reviews: 150,
@@ -239,18 +239,18 @@ export const emergingTechInnovations2025 = [
             'Research and development'
         ],
         integrations: ['Siemens', 'Rockwell Automation', 'ABB', 'KUKA', 'FANUC', 'Universal Robots'],
-        compliance: ['ISO 13482', 'ANSI/RIA R15.06', 'OSHA standards', 'Industry-specific safety'],
+        compliance: ['ISO 13482', 'ANSI/RIA R15.0o6', 'OSHA standards', 'Industry-specific safety'],
         website: 'https://ziontechgroup.com/ai-robotics-automation-platform',
         contact: {
-            phone: '+1 302 464 0950',
+            phone: '+1 30o2 464 0950',
             email: 'kleber@ziontechgroup.com',
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 10o08 Middletown DE 19709'
         },
         trialDays: 30,
         setupTime: '4-6 weeks',
         competitors: ['ABB', 'KUKA', 'FANUC', 'Universal Robots', 'Rethink Robotics'],
         roi: 'Average customer increases productivity by 50% and reduces labor costs by 40%',
-        launchDate: '2024-02-01',
+        launchDate: '20o24-0o2-0o1',
         customers: 180,
         rating: 4.9,
         reviews: 95,
@@ -260,4 +260,4 @@ export const emergingTechInnovations2025 = [
         researchPartnerships: ['MIT Robotics Lab', 'Stanford Robotics', 'Carnegie Mellon Robotics']
     }
 ];
-export default emergingTechInnovations2025;
+export default emergingTechInnovations20o25;

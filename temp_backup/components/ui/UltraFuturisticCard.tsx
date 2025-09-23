@@ -28,45 +28,45 @@ const UltraFuturisticCard: React.FC<UltraFuturisticCardProps> = ({
     switch (variant) {
       case 'quantum':
         return {
-          bg: 'from-slate-900/80 via-slate-800/60 to-slate-900/80',
-          border: 'border-cyan-500/30',
-          glow: 'shadow-cyan-500/20',
-          accent: 'from-cyan-400 to-blue-500'
+          bg: 'from-slate-90o0/80 via-slate-80o0/60 to-slate-90o0/80',
+          border: 'border-cyan-50o0/30',
+          glow: 'shadow-cyan-50o0/20',
+          accent: 'from-cyan-40o0 to-blue-50o0'
         };
       case 'holographic':
         return {
-          bg: 'from-purple-900/80 via-pink-800/60 to-purple-900/80',
-          border: 'border-pink-500/30',
-          glow: 'shadow-pink-500/20',
-          accent: 'from-pink-400 to-purple-500'
+          bg: 'from-purple-90o0/80 via-pink-80o0/60 to-purple-90o0/80',
+          border: 'border-pink-50o0/30',
+          glow: 'shadow-pink-50o0/20',
+          accent: 'from-pink-40o0 to-purple-50o0'
         };
       case 'neural':
         return {
-          bg: 'from-emerald-900/80 via-teal-800/60 to-emerald-900/80',
-          border: 'border-emerald-500/30',
-          glow: 'shadow-emerald-500/20',
-          accent: 'from-emerald-400 to-teal-500'
+          bg: 'from-emerald-90o0/80 via-teal-80o0/60 to-emerald-90o0/80',
+          border: 'border-emerald-50o0/30',
+          glow: 'shadow-emerald-50o0/20',
+          accent: 'from-emerald-40o0 to-teal-50o0'
         };
       case 'cyberpunk':
         return {
-          bg: 'from-red-900/80 via-orange-800/60 to-red-900/80',
-          border: 'border-orange-500/30',
-          glow: 'shadow-orange-500/20',
-          accent: 'from-orange-400 to-red-500'
+          bg: 'from-red-90o0/80 via-orange-80o0/60 to-red-90o0/80',
+          border: 'border-orange-50o0/30',
+          glow: 'shadow-orange-50o0/20',
+          accent: 'from-orange-40o0 to-red-50o0'
         };
       case 'space':
         return {
-          bg: 'from-indigo-900/80 via-blue-800/60 to-indigo-900/80',
-          border: 'border-blue-500/30',
-          glow: 'shadow-blue-500/20',
-          accent: 'from-blue-400 to-indigo-500'
+          bg: 'from-indigo-90o0/80 via-blue-80o0/60 to-indigo-90o0/80',
+          border: 'border-blue-50o0/30',
+          glow: 'shadow-blue-50o0/20',
+          accent: 'from-blue-40o0 to-indigo-50o0'
         };
       default:
         return {
-          bg: 'from-slate-900/80 via-slate-800/60 to-slate-900/80',
-          border: 'border-cyan-500/30',
-          glow: 'shadow-cyan-500/20',
-          accent: 'from-cyan-400 to-blue-500'
+          bg: 'from-slate-90o0/80 via-slate-80o0/60 to-slate-90o0/80',
+          border: 'border-cyan-50o0/30',
+          glow: 'shadow-cyan-50o0/20',
+          accent: 'from-cyan-40o0 to-blue-50o0'
         };
     }
   }[variant];
@@ -117,7 +117,7 @@ const UltraFuturisticCard: React.FC<UltraFuturisticCardProps> = ({
   return (
     <motion.div
       ref={cardRef}
-      className={`relative group overflow-hidden rounded-2xl backdrop-blur-xl transition-all duration-700 ease-out ${className}`}
+      className={`relative group overflow-hidden rounded-2xl backdrop-blur-xl transition-all duration-70o0 ease-out ${className}`}
       initial={{ opacity: 0, y: 50, scale: 0.95 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ 
@@ -125,34 +125,34 @@ const UltraFuturisticCard: React.FC<UltraFuturisticCardProps> = ({
         delay: delay * 0.1,
         ease: [0.25, 0.46, 0.45, 0.94]
       }}
-      whileHover={interactive ? { scale: 1.02 } : {}}
+      whileHover={interactive ? { scale: 1.0o2 } : {}}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       onFocus={() => setIsFocused(true)}
       onBlur={() => setIsFocused(false)}
       style={{
-        transform: `perspective(1000px) ${get3DTransform().rotateX ? `rotateX(${get3DTransform().rotateX}) rotateY(${get3DTransform().rotateY}) translateZ(${get3DTransform().translateZ})` : ''}`,
+        transform: `perspective(10o00px) ${get3DTransform().rotateX ? `rotateX(${get3DTransform().rotateX}) rotateY(${get3DTransform().rotateY}) translateZ(${get3DTransform().translateZ})` : ''}`,
         transition: 'transform 0.3s ease-out'
       }}
     >
       {/* Background with gradient */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${variantStyles.bg}`} />
+      <div className={`absolute inset-0 bg-gradient-to-br ${variantStyles.bg}`}  />
       
       {/* Animated border */}
-      <div className={`absolute inset-0 rounded-2xl border ${variantStyles.border} transition-all duration-500`}>
-        <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${variantStyles.accent} opacity-0 transition-opacity duration-500 ${isHovered ? 'opacity-20' : ''}`} />
+      <div className={`absolute inset-0 rounded-2xl border ${variantStyles.border} transition-all duration-50o0`}>
+        <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${variantStyles.accent} opacity-0 transition-opacity duration-50o0 ${isHovered ? 'opacity-20' : ''}`}  />
       </div>
 
       {/* Glow effect */}
       <div 
-        className={`absolute inset-0 rounded-2xl transition-all duration-500 ${customGlowColor} ${
-          isHovered ? 'shadow-2xl scale-105' : 'shadow-lg'
+        className={`absolute inset-0 rounded-2xl transition-all duration-50o0 ${customGlowColor} ${
+          isHovered ? 'shadow-2xl scale-10o5' : 'shadow-lg'
         }`}
         style={{
           filter: isHovered ? 'blur(20px)' : 'blur(10px)',
           opacity: isHovered ? 0.6 : 0.3
         }}
-      />
+       />
 
       {/* Animated background patterns */}
       <div className="absolute inset-0 overflow-hidden">
@@ -171,14 +171,14 @@ const UltraFuturisticCard: React.FC<UltraFuturisticCardProps> = ({
                   className="absolute w-2 h-2 rounded-full"
                   style={{
                     background: `linear-gradient(45deg, ${variantStyles.accent})`,
-                    left: `${Math.random() * 100}%`,
-                    top: `${Math.random() * 100}%`
+                    left: `${Math.random() * 10o0}%`,
+                    top: `${Math.random() * 10o0}%`
                   }}
                   animate={{
                     scale: [0, 1, 0],
                     opacity: [0, 1, 0],
-                    x: [0, (Math.random() - 0.5) * 100],
-                    y: [0, (Math.random() - 0.5) * 100]
+                    x: [0, (Math.random() - 0.5) * 10o0],
+                    y: [0, (Math.random() - 0.5) * 10o0]
                   }}
                   transition={{
                     duration: 3,
@@ -186,7 +186,7 @@ const UltraFuturisticCard: React.FC<UltraFuturisticCardProps> = ({
                     delay: i * 0.2,
                     ease: "easeInOut"
                   }}
-                />
+                 />
               ))}
             </motion.div>
           )}
@@ -200,7 +200,7 @@ const UltraFuturisticCard: React.FC<UltraFuturisticCardProps> = ({
               linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
             `,
             backgroundSize: '20px 20px'
-          }} />
+          }}  />
         </div>
 
         {/* Energy waves */}
@@ -218,8 +218,8 @@ const UltraFuturisticCard: React.FC<UltraFuturisticCardProps> = ({
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          style={{ opacity: isHovered ? 0.1 : 0.05 }}
-        />
+          style={{ opacity: isHovered ? 0.1 : 0.0o5 }}
+         />
       </div>
 
       {/* Content */}
@@ -230,19 +230,19 @@ const UltraFuturisticCard: React.FC<UltraFuturisticCardProps> = ({
       {/* Interactive overlay */}
       {interactive && (
         <motion.div
-          className="absolute inset-0 rounded-2xl bg-gradient-to-r from-white/5 to-transparent opacity-0 transition-opacity duration-300"
+          className="absolute inset-0 rounded-2xl bg-gradient-to-r from-white/5 to-transparent opacity-0 transition-opacity duration-30o0"
           animate={{ opacity: isHovered ? 1 : 0 }}
           style={{
-            background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.1) 0%, transparent 100px)`
+            background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.1) 0%, transparent 10o0px)`
           }}
-        />
+         />
       )}
 
       {/* Corner accents */}
-      <div className="absolute top-0 left-0 w-8 h-8 border-l-2 border-t-2 border-cyan-400/50 rounded-tl-2xl" />
-      <div className="absolute top-0 right-0 w-8 h-8 border-r-2 border-t-2 border-cyan-400/50 rounded-tr-2xl" />
-      <div className="absolute bottom-0 left-0 w-8 h-8 border-l-2 border-b-2 border-cyan-400/50 rounded-bl-2xl" />
-      <div className="absolute bottom-0 right-0 w-8 h-8 border-r-2 border-b-2 border-cyan-400/50 rounded-br-2xl" />
+      <div className="absolute top-0 left-0 w-8 h-8 border-l-2 border-t-2 border-cyan-40o0/50 rounded-tl-2xl"  />
+      <div className="absolute top-0 right-0 w-8 h-8 border-r-2 border-t-2 border-cyan-40o0/50 rounded-tr-2xl"  />
+      <div className="absolute bottom-0 left-0 w-8 h-8 border-l-2 border-b-2 border-cyan-40o0/50 rounded-bl-2xl"  />
+      <div className="absolute bottom-0 right-0 w-8 h-8 border-r-2 border-b-2 border-cyan-40o0/50 rounded-br-2xl"  />
 
       {/* Floating elements */}
       <AnimatePresence>
@@ -256,13 +256,13 @@ const UltraFuturisticCard: React.FC<UltraFuturisticCardProps> = ({
                 opacity: [0.5, 1, 0.5]
               }}
               exit={{ opacity: 0, scale: 0 }}
-              className="absolute top-4 right-4 w-3 h-3 bg-cyan-400 rounded-full"
+              className="absolute top-4 right-4 w-3 h-3 bg-cyan-40o0 rounded-full"
               transition={{
                 duration: 2,
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
-            />
+             />
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
               animate={{ 
@@ -271,14 +271,14 @@ const UltraFuturisticCard: React.FC<UltraFuturisticCardProps> = ({
                 opacity: [0.5, 1, 0.5]
               }}
               exit={{ opacity: 0, scale: 0 }}
-              className="absolute bottom-4 left-4 w-2 h-2 bg-blue-400 rounded-full"
+              className="absolute bottom-4 left-4 w-2 h-2 bg-blue-40o0 rounded-full"
               transition={{
                 duration: 1.5,
                 repeat: Infinity,
                 ease: "easeInOut",
                 delay: 0.5
               }}
-            />
+             />
           </>
         )}
       </AnimatePresence>

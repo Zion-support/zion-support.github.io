@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Rocket, Brain, Atom, Shield, Globe, Zap } from 'lucide-react';
 import Button from '../ui/Button';
 
-export default function UltraAdvancedNavigation2026V2() {
+export default function UltraAdvancedNavigation20o26V2() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -37,14 +37,14 @@ export default function UltraAdvancedNavigation2026V2() {
     { name: 'Contact', href: '/contact' }
   ];
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    address: '364 E Main St STE 10o08 Middletown DE 19709'
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
       isScrolled 
         ? 'bg-black/80 backdrop-blur-xl border-b border-white/10' 
         : 'bg-transparent'
@@ -58,10 +58,10 @@ export default function UltraAdvancedNavigation2026V2() {
             transition={{ duration: 0.6 }}
             className="flex items-center space-x-3"
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-              <Rocket className="w-6 h-6 text-white" />
+            <div className="w-10 h-10 bg-gradient-to-br from-blue-50o0 to-purple-60o0 rounded-xl flex items-center justify-center">
+              <Rocket className="w-6 h-6 text-white"  />
             </div>
-            <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-40o0 to-purple-50o0 bg-clip-text text-transparent">
               Zion Tech Group
             </Link>
           </motion.div>
@@ -80,9 +80,9 @@ export default function UltraAdvancedNavigation2026V2() {
               >
                 {item.dropdown ? (
                   <div className="relative">
-                    <button className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors py-2">
+                    <button className="flex items-center space-x-1 text-gray-30o0 hover:text-white transition-colors py-2">
                       <span>{item.name}</span>
-                      <ChevronDown className="w-4 h-4" />
+                      <ChevronDown className="w-4 h-4"  />
                     </button>
                     
                     <AnimatePresence>
@@ -101,14 +101,14 @@ export default function UltraAdvancedNavigation2026V2() {
                                 href={dropdownItem.href}
                                 className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-colors group"
                               >
-                                <div className="w-10 h-10 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover:from-blue-500/40 group-hover:to-purple-500/40 transition-all duration-300">
-                                  <dropdownItem.icon className="w-5 h-5 text-blue-400 group-hover:text-blue-300" />
+                                <div className="w-10 h-10 bg-gradient-to-br from-blue-50o0/20 to-purple-50o0/20 rounded-lg flex items-center justify-center group-hover:from-blue-50o0/40 group-hover:to-purple-50o0/40 transition-all duration-30o0">
+                                  <dropdownItem.icon className="w-5 h-5 text-blue-40o0 group-hover:text-blue-30o0"  />
                                 </div>
                                 <div>
-                                  <div className="text-white font-medium group-hover:text-blue-300 transition-colors">
+                                  <div className="text-white font-medium group-hover:text-blue-30o0 transition-colors">
                                     {dropdownItem.name}
                                   </div>
-                                  <div className="text-gray-400 text-sm">
+                                  <div className="text-gray-40o0 text-sm">
                                     {dropdownItem.description}
                                   </div>
                                 </div>
@@ -122,7 +122,7 @@ export default function UltraAdvancedNavigation2026V2() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-gray-300 hover:text-white transition-colors py-2"
+                    className="text-gray-30o0 hover:text-white transition-colors py-2"
                   >
                     {item.name}
                   </Link>
@@ -141,7 +141,7 @@ export default function UltraAdvancedNavigation2026V2() {
             <Button
               href="/contact"
               variant="outline"
-              className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white transition-all duration-300"
+              className="border border-purple-50o0 text-purple-40o0 hover:bg-purple-50o0 hover:text-white transition-all duration-30o0"
             >
               Get Started
             </Button>
@@ -155,7 +155,7 @@ export default function UltraAdvancedNavigation2026V2() {
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors"
           >
-            {isOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
+            {isOpen ? <X className="w-6 h-6 text-white"  /> : <Menu className="w-6 h-6 text-white"  />}
           </motion.button>
         </div>
       </div>
@@ -181,7 +181,7 @@ export default function UltraAdvancedNavigation2026V2() {
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className="block text-gray-400 hover:text-white transition-colors py-1"
+                            className="block text-gray-40o0 hover:text-white transition-colors py-1"
                             onClick={() => setIsOpen(false)}
                           >
                             {dropdownItem.name}
@@ -192,7 +192,7 @@ export default function UltraAdvancedNavigation2026V2() {
                   ) : (
                     <Link
                       href={item.href}
-                      className="block text-white hover:text-purple-400 transition-colors py-2"
+                      className="block text-white hover:text-purple-40o0 transition-colors py-2"
                       onClick={() => setIsOpen(false)}
                     >
                       {item.name}
@@ -204,16 +204,16 @@ export default function UltraAdvancedNavigation2026V2() {
               {/* Mobile Contact Info */}
               <div className="pt-4 border-t border-white/10">
                 <div className="space-y-3">
-                  <div className="flex items-center space-x-3 text-gray-400">
-                    <Phone className="w-4 h-4" />
+                  <div className="flex items-center space-x-3 text-gray-40o0">
+                    <Phone className="w-4 h-4"  />
                     <span>{contactInfo.mobile}</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-400">
-                    <Mail className="w-4 h-4" />
+                  <div className="flex items-center space-x-3 text-gray-40o0">
+                    <Mail className="w-4 h-4"  />
                     <span>{contactInfo.email}</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-400">
-                    <MapPin className="w-4 h-4" />
+                  <div className="flex items-center space-x-3 text-gray-40o0">
+                    <MapPin className="w-4 h-4"  />
                     <span className="text-sm">{contactInfo.address}</span>
                   </div>
                 </div>

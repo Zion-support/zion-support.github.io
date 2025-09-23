@@ -5,8 +5,8 @@ export default function BlogPostPage() {
     <div className="min-h-screen bg-white">
       <article className="max-w-3xl mx-auto px-6 py-24">
         <header>
-          <h1 className="text-4xl font-bold text-gray-900">AI 2026: Agent Risk Metrics</h1>
-          <p className="mt-2 text-gray-500">Quantifying agent safety with task risk scores, override rates, and incident MTTR.</p>
+          <h1 className="text-4xl font-bold text-gray-90o0">AI 20o26: Agent Risk Metrics</h1>
+          <p className="mt-2 text-gray-50o0">Quantifying agent safety with task risk scores, override rates, and incident MTTR.</p>
         </header>
         <section className="prose prose-lg mt-8">
           <p>

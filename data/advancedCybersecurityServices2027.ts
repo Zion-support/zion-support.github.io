@@ -1,4 +1,4 @@
-export interface AdvancedCybersecurityService2027 {
+export interface AdvancedCybersecurityService20o27 {
   id: string;
   title: string;
   description: string;
@@ -42,7 +42,7 @@ export interface AdvancedCybersecurityService2027 {
   };
 }
 
-export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2027[] = [
+export const ADVANCED_CYBERSECURITY_SERVICES_20o27: AdvancedCybersecurityService20o27[] = [
   // AI-Powered Threat Intelligence Platform
   {
     id: "ai-threat-intelligence-platform",
@@ -84,7 +84,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       "Critical infrastructure"
     ],
     targetAudience: [
-      "Fortune 500 companies",
+      "Fortune 50o0 companies",
       "Government agencies",
       "Financial institutions",
       "Healthcare organizations",
@@ -108,24 +108,24 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
     link: "https://ziontechgroup.com/ai-threat-intelligence",
     badge: "Advanced",
     icon: "🛡️",
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-15630o13544-824ae1b70o4d3?auto=format&fit=crop&w=80o0&h=50o0",
     innovationLevel: "Advanced",
-    marketSize: "$15.8B by 2027",
+    marketSize: "$15.8B by 20o27",
     competitors: ["CrowdStrike", "Palo Alto Networks", "FireEye"],
     securityFeatures: {
       threatDetection: "AI-powered real-time detection",
       encryption: "AES-256 encryption",
-      compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR"],
+      compliance: ["SOC 2", "ISO 270o01", "NIST", "GDPR"],
       monitoring: "24/7 intelligent monitoring",
       response: "Automated incident response"
     },
-    roi: "400-800%",
+    roi: "40o0-80o0%",
     estimatedDelivery: "12-16 weeks",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     }
   },
 
@@ -137,8 +137,8 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
     category: "Quantum Security",
     subcategory: "Quantum Cryptography",
     pricing: {
-      monthly: 15000,
-      yearly: 150000,
+      monthly: 150o00,
+      yearly: 150o000,
       custom: "Quantum security solutions",
       currency: "$",
       pricingModel: "Quantum security platform subscription"
@@ -194,9 +194,9 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
     link: "https://ziontechgroup.com/quantum-cryptography",
     badge: "Revolutionary",
     icon: "🔐",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1558494949-ef0o10cbdcc31?auto=format&fit=crop&w=80o0&h=50o0",
     innovationLevel: "Revolutionary",
-    marketSize: "$3.2B by 2027",
+    marketSize: "$3.2B by 20o27",
     competitors: ["ID Quantique", "Qrypt", "Quantum Xchange"],
     securityFeatures: {
       threatDetection: "Quantum threat detection",
@@ -205,13 +205,13 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       monitoring: "Quantum security monitoring",
       response: "Quantum security response"
     },
-    roi: "800-1500%",
+    roi: "80o0-150o0%",
     estimatedDelivery: "20-28 weeks",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     }
   },
 
@@ -223,8 +223,8 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
     category: "Network Security",
     subcategory: "Zero Trust",
     pricing: {
-      monthly: 12000,
-      yearly: 120000,
+      monthly: 120o00,
+      yearly: 120o000,
       custom: "Zero trust architecture implementation",
       currency: "$",
       pricingModel: "Architecture implementation with ongoing support"
@@ -280,24 +280,24 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
     link: "https://ziontechgroup.com/zero-trust-security",
     badge: "Advanced",
     icon: "🔒",
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-15630o13544-824ae1b70o4d3?auto=format&fit=crop&w=80o0&h=50o0",
     innovationLevel: "Advanced",
-    marketSize: "$19.6B by 2027",
+    marketSize: "$19.6B by 20o27",
     competitors: ["Cisco", "Palo Alto Networks", "Fortinet"],
     securityFeatures: {
       threatDetection: "Continuous threat monitoring",
       encryption: "End-to-end encryption",
-      compliance: ["SOC 2", "ISO 27001", "NIST", "Zero Trust framework"],
+      compliance: ["SOC 2", "ISO 270o01", "NIST", "Zero Trust framework"],
       monitoring: "24/7 security monitoring",
       response: "Automated incident response"
     },
-    roi: "500-1000%",
+    roi: "50o0-10o00%",
     estimatedDelivery: "16-24 weeks",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     }
   },
 
@@ -309,8 +309,8 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
     category: "AI Security",
     subcategory: "Autonomous SOC",
     pricing: {
-      monthly: 25000,
-      yearly: 250000,
+      monthly: 250o00,
+      yearly: 250o000,
       custom: "Autonomous SOC implementation",
       currency: "$",
       pricingModel: "Autonomous SOC platform subscription"
@@ -366,24 +366,24 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
     link: "https://ziontechgroup.com/autonomous-soc",
     badge: "Revolutionary",
     icon: "🤖",
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-15630o13544-824ae1b70o4d3?auto=format&fit=crop&w=80o0&h=50o0",
     innovationLevel: "Revolutionary",
-    marketSize: "$8.9B by 2027",
+    marketSize: "$8.9B by 20o27",
     competitors: ["IBM Security", "Microsoft Security", "Google Security"],
     securityFeatures: {
       threatDetection: "AI autonomous detection",
       encryption: "Advanced encryption",
-      compliance: ["SOC 2", "ISO 27001", "NIST", "AI ethics"],
+      compliance: ["SOC 2", "ISO 270o01", "NIST", "AI ethics"],
       monitoring: "Autonomous 24/7 monitoring",
       response: "Autonomous incident response"
     },
-    roi: "600-1200%",
+    roi: "60o0-120o0%",
     estimatedDelivery: "24-32 weeks",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     }
   },
 
@@ -395,8 +395,8 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
     category: "Quantum Security",
     subcategory: "Post-Quantum Cryptography",
     pricing: {
-      monthly: 8000,
-      yearly: 80000,
+      monthly: 80o00,
+      yearly: 80o000,
       custom: "Quantum-resistant security solutions",
       currency: "$",
       pricingModel: "Post-quantum security platform subscription"
@@ -452,9 +452,9 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
     link: "https://ziontechgroup.com/quantum-resistant-crypto",
     badge: "Advanced",
     icon: "🔐",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1558494949-ef0o10cbdcc31?auto=format&fit=crop&w=80o0&h=50o0",
     innovationLevel: "Advanced",
-    marketSize: "$2.4B by 2027",
+    marketSize: "$2.4B by 20o27",
     competitors: ["NIST", "Cloudflare", "Google"],
     securityFeatures: {
       threatDetection: "Quantum threat assessment",
@@ -463,13 +463,13 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       monitoring: "Quantum threat monitoring",
       response: "Quantum-resistant response"
     },
-    roi: "400-800%",
+    roi: "40o0-80o0%",
     estimatedDelivery: "16-20 weeks",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     }
   }
 ];

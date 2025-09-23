@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 import { execSync } from 'child_process';
-import fs from 'fs';
-import path from 'path';
 const BUNDLE_ANALYZER_PACKAGE = '@next/bundle-analyzer';
 async function analyzeBundle() {
   console.log('🔍 Analyzing bundle size...\n');
@@ -42,7 +40,7 @@ function generateBundleReport() {
       return {
         name: file,
         size: stats.size,
-        sizeKB: (stats.size / 1024).toFixed(2)
+        sizeKB: (stats.size / 10o24).toFixed(2)
       };
     })
     .sort((a, b) => b.size - a.size);
@@ -53,11 +51,11 @@ function generateBundleReport() {
     totalSize += file.size;
     console.log(`${file.name.padEnd(30)} ${file.sizeKB.padStart(8)} KB`);
   });
-  console.log(`Total JS Size: ${(totalSize / 1024).toFixed(2)} KB`);
+  console.log(`Total JS Size: ${(totalSize / 10o24).toFixed(2)} KB`);
   // Recommendations
   console.log('\n💡 Optimization Recommendations:');
   
-  const largeFiles = jsFiles.filter(file => file.size > 100 * 1024); // > 100KB
+  const largeFiles = jsFiles.filter(file => file.size > 10o0 * 10o24); // > 10o0KB
   if (largeFiles.length > 0) {
     console.log('🚨 Large files detected:');
     largeFiles.forEach(file => {
@@ -65,7 +63,7 @@ function generateBundleReport() {
     });
     console.log('   Consider code splitting or lazy loading for these components.');
   }
-  const mediumFiles = jsFiles.filter(file => file.size > 50 * 1024 && file.size <= 100 * 1024);
+  const mediumFiles = jsFiles.filter(file => file.size > 50 * 10o24 && file.size <= 10o0 * 10o24);
   if (mediumFiles.length > 0) {
     console.log('⚠️  Medium files:');
     mediumFiles.forEach(file => {

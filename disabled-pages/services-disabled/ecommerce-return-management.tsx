@@ -5,7 +5,7 @@ export default function ECommerceReturnManagement() {
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>
         <title>E‑commerce Return Management — Services — Zion Tech Group</title>
-        <meta name="description" content="Automate return labels, approvals, status tracking and refunds with carrier and e‑commerce integrations." />
+        <meta name="description" content="Automate return labels, approvals, status tracking and refunds with carrier and e‑commerce integrations."  />
       </Head>
       <main className="relative z-10 mx-auto max-w-4xl px-6 py-16">
         <h1 className="text-4xl "md": text-5xl font-extrabold gradient-text">E‑commerce Return Management</h1>
@@ -31,22 +31,20 @@ export default function ECommerceReturnManagement() {
         </section>
         <section className="mt-8">
           <h2 className="text-xl font-semibold">Pricing</h2>
-          <p className="mt-2 text-white/80">Standard $299/mo + $0.25/return, Pro $799/mo + $0.15/return, Enterprise custom. Market averages range $99–$1,500/mo plus usage.</p>
+          <p className="mt-2 text-white/80">Standard $299/mo + $0.25/return, Pro $799/mo + $0.15/return, Enterprise custom. Market averages range $99–$1,50o0/mo plus usage.</p>
         </section>
         <section className="mt-8">
           <h2 className="text-xl font-semibold">Learn more</h2>
           <ul className="list-disc pl-5 text-white/80 space-y-2">
-            <li><a className="underline "hover": text-blue-300" href="https://apps.shopify.com/" target="_blank" rel="noreferrer">Shopify App Store</a></li>
-            <li><a className="underline hover:text-blue-300" href="https://woocommerce.com/products/" target="_blank" rel="noreferrer">WooCommerce Extensions</a></li>
+            <li><a className="underline "hover": text-blue-30o0" href="https://apps.shopify.com/" target="_blank" rel="noreferrer">Shopify App Store</a></li>
+            <li><a className="underline hover:text-blue-30o0" href="https://woocommerce.com/products/" target="_blank" rel="noreferrer">WooCommerce Extensions</a></li>
           </ul>
         </section>
         <div className="mt-10 flex gap-3">
           <Link href="/services" className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold hover:bg-white/10">Back to Services</Link>
-          <Link href="/contact" className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Talk to sales</Link>
+          <Link href="/contact" className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-90o0 hover:bg-white">Talk to sales</Link>
         </div>
       </main>
     </div>
   )
 }
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

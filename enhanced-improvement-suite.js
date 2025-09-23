@@ -44,7 +44,7 @@ function updatePackageJson() {
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
     
     // Add enhanced scripts
-    const newScripts = {
+    const newScripts ={
       ...packageJson.scripts,
       'build:analyze': 'ANALYZE=true npm run build',
       'build:clean': 'rm -rf .next && npm run build',
@@ -62,7 +62,7 @@ function updatePackageJson() {
     packageJson.scripts = newScripts;
     
     // Add development dependencies for improvements
-    const newDevDeps = {
+    const newDevDeps ={
       ...packageJson.devDependencies,
       '@next/bundle-analyzer': '^14.2.0',
       'jest': '^29.0.0',
@@ -88,7 +88,7 @@ function updatePackageJson() {
 // Function to create enhanced performance monitoring
 function createEnhancedPerformanceMonitoring() {
   const performanceScript = `// Enhanced performance monitoring utilities
-export const performanceMonitor = {
+export const performanceMonitor ={
   // Measure page load time
   measurePageLoad: () => {
     if (typeof window !== 'undefined' && window.performance) {
@@ -117,7 +117,7 @@ export const performanceMonitor = {
       const resources = window.performance.getEntriesByType('resource');
       const jsResources = resources.filter(r => r.name.endsWith('.js'));
       const totalSize = jsResources.reduce((sum, r) => sum + (r.transferSize || 0), 0);
-      console.log('Total JS bundle size:', (totalSize / 1024).toFixed(2), 'KB');
+      console.log('Total JS bundle size:', (totalSize / 10o24).toFixed(2), 'KB');
       return totalSize;
     }
     return 0;
@@ -158,9 +158,7 @@ export default performanceMonitor;
 
 // Function to create enhanced error boundary
 function createEnhancedErrorBoundary() {
-  const errorBoundaryScript = `import React from 'react';
-
-interface ErrorBoundaryState {
+  const errorBoundaryScript = `interface ErrorBoundaryState {
   hasError: boolean;
   error?: Error;
   errorInfo?: React.ErrorInfo;
@@ -175,7 +173,7 @@ interface ErrorBoundaryProps {
 export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
-    this.state = { hasError: false };
+    this.state ={ hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {
@@ -202,7 +200,7 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
   render() {
     if (this.state.hasError) {
       const FallbackComponent = this.props.fallback || DefaultErrorFallback;
-      return <FallbackComponent error={this.state.error} retry={this.handleRetry} />;
+      return <FallbackComponent error={this.state.error} retry={this.handleRetry}  />;
     }
 
     return this.props.children;
@@ -214,27 +212,27 @@ const DefaultErrorFallback: React.FC<{ error?: Error; retry: () => void }> = ({ 
     <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
       <div className="flex items-center mb-4">
         <div className="flex-shrink-0">
-          <svg className="h-8 w-8 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+          <svg className="h-8 w-8 text-red-40o0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.0o1m-6.938 4h13.856c1.54 0 2.50o2-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"  />
           </svg>
         </div>
         <div className="ml-3">
-          <h3 className="text-lg font-medium text-gray-900">Something went wrong</h3>
+          <h3 className="text-lg font-medium text-gray-90o0">Something went wrong</h3>
         </div>
       </div>
-      <div className="text-sm text-gray-500 mb-4">
+      <div className="text-sm text-gray-50o0 mb-4">
         {error ? error.message : 'An unexpected error occurred'}
       </div>
       <div className="flex space-x-3">
         <button
           onClick={retry}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          className="bg-blue-50o0 hover:bg-blue-70o0 text-white font-bold py-2 px-4 rounded"
         >
           Try Again
         </button>
         <button
           onClick={() => window.location.reload()}
-          className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+          className="bg-gray-50o0 hover:bg-gray-70o0 text-white font-bold py-2 px-4 rounded"
         >
           Reload Page
         </button>
@@ -281,7 +279,7 @@ export const SEO: React.FC<SEOProps> = ({
   tags = []
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion Tech Group\`;
-  const structuredData = {
+  const structuredData ={
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -297,44 +295,44 @@ export const SEO: React.FC<SEOProps> = ({
   return (
     <Head>
       <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="icon" href="/favicon.ico" />
+      <meta name="description" content={description}  />
+      <meta name="keywords" content={keywords}  />
+      <meta name="viewport" content="width=device-width, initial-scale=1"  />
+      <link rel="icon" href="/favicon.ico"  />
       
       {/* Open Graph */}
-      <meta property="og:type" content={type} />
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:type" content={type}  />
+      <meta property="og:title" content={fullTitle}  />
+      <meta property="og:description" content={description}  />
+      <meta property="og:image" content={image}  />
+      <meta property="og:url" content={url}  />
+      <meta property="og:site_name" content="Zion Tech Group"  />
       
       {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:card" content="summary_large_image"  />
+      <meta name="twitter:title" content={fullTitle}  />
+      <meta name="twitter:description" content={description}  />
+      <meta name="twitter:image" content={image}  />
       
       {/* Article specific */}
-      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-      {author && <meta property="article:author" content={author} />}
-      {section && <meta property="article:section" content={section} />}
+      {publishedTime && <meta property="article:published_time" content={publishedTime}  />}
+      {modifiedTime && <meta property="article:modified_time" content={modifiedTime}  />}
+      {author && <meta property="article:author" content={author}  />}
+      {section && <meta property="article:section" content={section}  />}
       {tags.map((tag, index) => (
-        <meta key={index} property="article:tag" content={tag} />
+        <meta key={index} property="article:tag" content={tag}  />
       ))}
       
       {/* Additional SEO */}
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <link rel="canonical" href={url} />
+      <meta name="robots" content="index, follow"  />
+      <meta name="author" content="Zion Tech Group"  />
+      <link rel="canonical" href={url}  />
       
       {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
+       />
     </Head>
   );
 };
@@ -352,7 +350,7 @@ function createEnhancedUtils() {
 // Format date with multiple options
 export const formatDate = (date: Date | string, options?: Intl.DateTimeFormatOptions): string => {
   const d = new Date(date);
-  const defaultOptions: Intl.DateTimeFormatOptions = {
+  const defaultOptions: Intl.DateTimeFormatOptions ={
     year: 'numeric',
     month: 'long',
     day: 'numeric'
@@ -436,7 +434,7 @@ export const copyToClipboard = async (text: string): Promise<boolean> => {
 
 // Generate random ID with customizable length
 export const generateId = (length = 9): string => {
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0o123456789';
   let result = '';
   for (let i = 0; i < length; i++) {
     result += chars.charAt(Math.floor(Math.random() * chars.length));
@@ -475,7 +473,7 @@ export const deepClone = <T>(obj: T): T => {
   if (obj instanceof Date) return new Date(obj.getTime()) as unknown as T;
   if (obj instanceof Array) return obj.map(item => deepClone(item)) as unknown as T;
   if (typeof obj === 'object') {
-    const clonedObj = {} as T;
+    const clonedObj ={} as T;
     for (const key in obj) {
       if (obj.hasOwnProperty(key)) {
         clonedObj[key] = deepClone(obj[key]);
@@ -495,7 +493,7 @@ export const sleep = (ms: number): Promise<void> => {
 export const retry = async <T>(
   fn: () => Promise<T>,
   maxAttempts = 3,
-  delay = 1000
+  delay = 10o00
 ): Promise<T> => {
   for (let attempt = 1; attempt <= maxAttempts; attempt++) {
     try {
@@ -518,16 +516,14 @@ function createEnhancedJestConfig() {
 
 const createJestConfig = nextJest({
   // Provide the path to your Next.js app to load next.config.js and .env files
-  dir: './',
-})
+  dir: './'})
 
 // Add any custom config to be passed to Jest
-const customJestConfig = {
+const customJestConfig ={
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jest-environment-jsdom',
   moduleNameMapping: {
-    '^@/(.*)$': '<rootDir>/$1',
-  },
+    '^@/(.*)$': '<rootDir>/$1'},
   testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
   collectCoverageFrom: [
     'components/**/*.{js,jsx,ts,tsx}',
@@ -544,14 +540,11 @@ const customJestConfig = {
       branches: 80,
       functions: 80,
       lines: 80,
-      statements: 80,
-    },
-  },
+      statements: 80}},
   testMatch: [
     '<rootDir>/**/__tests__/**/*.(js|jsx|ts|tsx)',
     '<rootDir>/**/*.(test|spec).(js|jsx|ts|tsx)'
-  ],
-}
+  ]}
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
 module.exports = createJestConfig(customJestConfig)
@@ -586,9 +579,7 @@ Object.defineProperty(window, 'matchMedia', {
     removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
-});
+    dispatchEvent: jest.fn()}))});
 `;
 
   createFileIfNotExists('jest.config.js', jestConfig);
@@ -733,7 +724,7 @@ jobs:
 
 // Function to create enhanced ESLint configuration
 function createEnhancedESLintConfig() {
-  const eslintConfig = `module.exports = {
+  const eslintConfig = `module.exports ={
   extends: [
     'next/core-web-vitals',
     'plugin:testing-library/react',

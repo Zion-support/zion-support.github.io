@@ -7,7 +7,7 @@ const caseStudies = [
         title: 'Healthcare AI Revolution',
         company: 'MedTech Solutions',
         industry: 'Healthcare',
-        icon: <Shield className="w-8 h-8"/>,
+        icon: <Shield className="w-8 h-8" />,
         color: 'from-zion-cyan to-zion-blue',
         bgColor: 'from-zion-cyan/20 to-zion-blue/20',
         challenge: 'Needed to reduce diagnostic errors by 40% while improving patient outcomes',
@@ -33,13 +33,13 @@ const caseStudies = [
         title: 'Next-Gen Fintech Platform',
         company: 'DigitalBank Pro',
         industry: 'Financial Services',
-        icon: <TrendingUp className="w-8 h-8"/>,
+        icon: <TrendingUp className="w-8 h-8" />,
         color: 'from-zion-purple to-zion-purple-dark',
         bgColor: 'from-zion-purple/20 to-zion-purple-dark/20',
         challenge: 'Required a scalable, secure platform to handle 10M+ daily transactions',
         solution: 'Built enterprise-grade fintech platform with advanced security and real-time processing',
         results: [
-            { metric: 'Transaction Volume', value: '+300%', improvement: 'Increased from 3M to 12M daily transactions' },
+            { metric: 'Transaction Volume', value: '+30o0%', improvement: 'Increased from 3M to 12M daily transactions' },
             { metric: 'Security Score', value: '99.99%', improvement: 'Zero security breaches in 2 years' },
             { metric: 'Performance', value: '-85%', improvement: 'Reduced transaction time from 2s to 0.3s' },
             { metric: 'User Growth', value: '+250%', improvement: 'Customer base expanded significantly' }
@@ -59,10 +59,10 @@ const caseStudies = [
         title: 'Retail Digital Transformation',
         company: 'Global Retail Co.',
         industry: 'Retail',
-        icon: <Globe className="w-8 h-8"/>,
+        icon: <Globe className="w-8 h-8" />,
         color: 'from-zion-cyan-light to-zion-cyan',
         bgColor: 'from-zion-cyan-light/20 to-zion-cyan/20',
-        challenge: 'Needed to modernize 500+ store locations with unified digital experience',
+        challenge: 'Needed to modernize 50o0+ store locations with unified digital experience',
         solution: 'Created comprehensive digital transformation strategy with omnichannel capabilities',
         results: [
             { metric: 'Online Sales', value: '+180%', improvement: 'E-commerce revenue increased dramatically' },
@@ -85,10 +85,10 @@ const caseStudies = [
         title: 'Smart Manufacturing IoT',
         company: 'Advanced Manufacturing Inc.',
         industry: 'Manufacturing',
-        icon: <Zap className="w-8 h-8"/>,
+        icon: <Zap className="w-8 h-8" />,
         color: 'from-zion-purple-light to-zion-purple',
         bgColor: 'from-zion-purple-light/20 to-zion-purple/20',
-        challenge: 'Required real-time monitoring and predictive maintenance for 200+ production lines',
+        challenge: 'Required real-time monitoring and predictive maintenance for 20o0+ production lines',
         solution: 'Implemented comprehensive IoT solution with AI-powered predictive analytics',
         results: [
             { metric: 'Downtime Reduction', value: '-75%', improvement: 'Significantly reduced production interruptions' },
@@ -108,17 +108,17 @@ const caseStudies = [
     }
 ];
 const industries = [
-    { name: 'Healthcare', count: 25, icon: <Shield className="w-5 h-5"/> },
-    { name: 'Finance', count: 32, icon: <TrendingUp className="w-5 h-5"/> },
-    { name: 'Retail', count: 18, icon: <Globe className="w-5 h-5"/> },
-    { name: 'Manufacturing', count: 15, icon: <Zap className="w-5 h-5"/> },
-    { name: 'Education', count: 12, icon: <Users className="w-5 h-5"/> },
-    { name: 'Government', count: 8, icon: <Building className="w-5 h-5"/> }
+    { name: 'Healthcare', count: 25, icon: <Shield className="w-5 h-5" /> },
+    { name: 'Finance', count: 32, icon: <TrendingUp className="w-5 h-5" /> },
+    { name: 'Retail', count: 18, icon: <Globe className="w-5 h-5" /> },
+    { name: 'Manufacturing', count: 15, icon: <Zap className="w-5 h-5" /> },
+    { name: 'Education', count: 12, icon: <Users className="w-5 h-5" /> },
+    { name: 'Government', count: 8, icon: <Building className="w-5 h-5" /> }
 ];
 export function CaseStudiesSection() {
     const [selectedCase, setSelectedCase] = useState(null);
     const [hoveredCase, setHoveredCase] = useState(null);
-    const containerVariants = {
+    const containerVariants ={
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -128,7 +128,7 @@ export function CaseStudiesSection() {
             }
         }
     };
-    const itemVariants = {
+    const itemVariants ={
         hidden: { y: 30, opacity: 0 },
         visible: {
             y: 0,
@@ -172,11 +172,11 @@ export function CaseStudiesSection() {
 
         {/* Case Studies Grid */}
         <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {caseStudies.map((caseStudy, index) => (<motion.div key={caseStudy.id} variants={itemVariants} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 300 }} className="relative" onHoverStart={() => setHoveredCase(caseStudy.id)} onHoverEnd={() => setHoveredCase(null)}>
-              <div className="h-full p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedCase(selectedCase === caseStudy.id ? null : caseStudy.id)}>
+          {caseStudies.map((caseStudy, index) => (<motion.div key={caseStudy.id} variants={itemVariants} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 30o0 }} className="relative" onHoverStart={() => setHoveredCase(caseStudy.id)} onHoverEnd={() => setHoveredCase(null)}>
+              <div className="h-full p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-30o0 hover:shadow-2xl hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedCase(selectedCase === caseStudy.id ? null : caseStudy.id)}>
                 {/* Header */}
                 <div className="flex items-start justify-between mb-6">
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${caseStudy.color} mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300`}>
+                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${caseStudy.color} mb-4 shadow-lg group-hover:shadow-xl transition-all duration-30o0`}>
                     <div className="text-white">
                       {caseStudy.icon}
                     </div>
@@ -234,7 +234,7 @@ export function CaseStudiesSection() {
                   <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
                     View Full Case Study
                   </span>
-                  <ArrowRight className="w-5 h-5 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
+                  <ArrowRight className="w-5 h-5 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-30o0" />
                 </div>
 
                 {/* Expanded results */}
@@ -260,7 +260,7 @@ export function CaseStudiesSection() {
                             <div className="text-zion-slate-light text-xs">{caseStudy.role}</div>
                           </div>
                           <div className="flex items-center gap-1">
-                            {[...Array(caseStudy.rating)].map((_, i) => (<Star key={i} className="w-4 h-4 text-yellow-400 fill-current"/>))}
+                            {[...Array(caseStudy.rating)].map((_, i) => (<Star key={i} className="w-4 h-4 text-yellow-40o0 fill-current" />))}
                           </div>
                         </div>
                       </div>
@@ -281,10 +281,10 @@ export function CaseStudiesSection() {
                 Let us help you achieve similar results. Our proven methodology and expert team are ready to transform your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+                <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white rounded-xl font-semibold transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-lg hover:shadow-zion-cyan/25">
                   Start Your Project
                 </button>
-                <button className="px-8 py-3 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hover:border-zion-cyan/50 rounded-xl font-medium transition-all duration-300">
+                <button className="px-8 py-3 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hover:border-zion-cyan/50 rounded-xl font-medium transition-all duration-30o0">
                   View All Case Studies
                 </button>
               </div>

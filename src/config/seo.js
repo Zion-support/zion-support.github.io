@@ -1,5 +1,5 @@
 // SEO Meta Tags Configuration
-export const defaultSEO = {
+export const defaultSEO ={
   siteName: 'Zion Tech Group',
   title: 'Zion Tech Group - AI-Powered Business Solutions',
   description:
@@ -18,30 +18,23 @@ export const defaultSEO = {
         url: 'https://ziontechgroup.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Zion Tech Group - AI-Powered Business Solutions',
-      },
-    ],
-  },
+        alt: 'Zion Tech Group - AI-Powered Business Solutions'},
+    ]},
   twitter: {
     handle: '@ziontechgroup',
     site: '@ziontechgroup',
-    cardType: 'summary_large_image',
-  },
+    cardType: 'summary_large_image'},
   additionalMetaTags: [
     {
       name: 'viewport',
-      content: 'width=device-width, initial-scale=1',
-    },
+      content: 'width=device-width, initial-scale=1'},
     {
       name: 'theme-color',
-      content: '#1e40af',
-    },
+      content: '#1e40af'},
     {
       name: 'msapplication-TileColor',
-      content: '#1e40af',
-    },
-  ],
-};
+      content: '#1e40af'},
+  ]};
 
 export default defaultSEO;
 

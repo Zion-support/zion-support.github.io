@@ -1,7 +1,7 @@
-export const innovativeITServices2026 = [
+export const innovativeITServices20o26 = [
   {
-    id: 'quantum-cloud-infrastructure-2026',
-    name: 'Quantum Cloud Infrastructure 2026',
+    id: 'quantum-cloud-infrastructure-20o26',
+    name: 'Quantum Cloud Infrastructure 20o26',
     description: 'Next-generation cloud infrastructure platform that leverages quantum computing for superior performance, security, and scalability across all cloud services.',
     features: [
       'Quantum-enhanced cloud computing',
@@ -20,9 +20,9 @@ export const innovativeITServices2026 = [
     },
     category: 'Quantum Cloud',
     tags: ['Quantum Computing', 'Cloud Infrastructure', 'Quantum Security', 'Cloud Optimization'],
-    website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-2026',
+    website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-20o26',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$156.7B',
@@ -30,8 +30,8 @@ export const innovativeITServices2026 = [
     competitiveAdvantage: 'First-of-its-kind quantum cloud infrastructure, superior performance, and breakthrough security protocols'
   },
   {
-    id: 'edge-computing-orchestrator-2026',
-    name: 'Edge Computing Orchestrator 2026',
+    id: 'edge-computing-orchestrator-20o26',
+    name: 'Edge Computing Orchestrator 20o26',
     description: 'Advanced edge computing platform that provides intelligent orchestration, real-time processing, and seamless integration across distributed computing environments.',
     features: [
       'Intelligent edge orchestration',
@@ -50,9 +50,9 @@ export const innovativeITServices2026 = [
     },
     category: 'Edge Computing',
     tags: ['Edge Computing', 'Distributed Computing', 'Edge AI', 'Real-time Processing'],
-    website: 'https://ziontechgroup.com/edge-computing-orchestrator-2026',
+    website: 'https://ziontechgroup.com/edge-computing-orchestrator-20o26',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$67.8B',
@@ -60,8 +60,8 @@ export const innovativeITServices2026 = [
     competitiveAdvantage: 'Advanced edge orchestration, superior real-time processing, and comprehensive distributed computing management'
   },
   {
-    id: 'zero-trust-security-platform-2026',
-    name: 'Zero Trust Security Platform 2026',
+    id: 'zero-trust-security-platform-20o26',
+    name: 'Zero Trust Security Platform 20o26',
     description: 'Revolutionary zero-trust security platform that provides comprehensive protection, continuous verification, and adaptive security across all digital assets.',
     features: [
       'Continuous identity verification',
@@ -80,9 +80,9 @@ export const innovativeITServices2026 = [
     },
     category: 'Cybersecurity',
     tags: ['Zero Trust', 'Cybersecurity', 'Identity Verification', 'Access Control'],
-    website: 'https://ziontechgroup.com/zero-trust-security-platform-2026',
+    website: 'https://ziontechgroup.com/zero-trust-security-platform-20o26',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$173.5B',
@@ -90,8 +90,8 @@ export const innovativeITServices2026 = [
     competitiveAdvantage: 'Advanced zero-trust architecture, superior identity verification, and comprehensive adaptive security'
   },
   {
-    id: 'blockchain-enterprise-platform-2026',
-    name: 'Blockchain Enterprise Platform 2026',
+    id: 'blockchain-enterprise-platform-20o26',
+    name: 'Blockchain Enterprise Platform 20o26',
     description: 'Next-generation enterprise blockchain platform that provides secure, scalable, and intelligent blockchain solutions for modern business operations.',
     features: [
       'Enterprise-grade blockchain infrastructure',
@@ -110,9 +110,9 @@ export const innovativeITServices2026 = [
     },
     category: 'Blockchain',
     tags: ['Blockchain', 'Smart Contracts', 'Enterprise Solutions', 'Distributed Ledger'],
-    website: 'https://ziontechgroup.com/blockchain-enterprise-platform-2026',
+    website: 'https://ziontechgroup.com/blockchain-enterprise-platform-20o26',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$45.2B',
@@ -120,8 +120,8 @@ export const innovativeITServices2026 = [
     competitiveAdvantage: 'Advanced enterprise blockchain, superior smart contract automation, and comprehensive multi-chain interoperability'
   },
   {
-    id: 'ai-powered-devops-2026',
-    name: 'AI-Powered DevOps 2026',
+    id: 'ai-powered-devops-20o26',
+    name: 'AI-Powered DevOps 20o26',
     description: 'Revolutionary DevOps platform that leverages artificial intelligence for intelligent automation, predictive analytics, and seamless development operations.',
     features: [
       'AI-powered automation',
@@ -140,9 +140,9 @@ export const innovativeITServices2026 = [
     },
     category: 'DevOps',
     tags: ['AI DevOps', 'Automation', 'Predictive Analytics', 'Development Operations'],
-    website: 'https://ziontechgroup.com/ai-powered-devops-2026',
+    website: 'https://ziontechgroup.com/ai-powered-devops-20o26',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$78.9B',
@@ -150,8 +150,8 @@ export const innovativeITServices2026 = [
     competitiveAdvantage: 'Advanced AI-powered automation, superior predictive analytics, and comprehensive DevOps optimization'
   },
   {
-    id: 'quantum-networking-2026',
-    name: 'Quantum Networking 2026',
+    id: 'quantum-networking-20o26',
+    name: 'Quantum Networking 20o26',
     description: 'Next-generation quantum networking platform that provides ultra-secure, high-speed, and quantum-enhanced communication across global networks.',
     features: [
       'Quantum-enhanced networking',
@@ -170,9 +170,9 @@ export const innovativeITServices2026 = [
     },
     category: 'Quantum Networking',
     tags: ['Quantum Networking', 'Quantum Security', 'Network Optimization', 'Quantum Communication'],
-    website: 'https://ziontechgroup.com/quantum-networking-2026',
+    website: 'https://ziontechgroup.com/quantum-networking-20o26',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$89.3B',
@@ -180,8 +180,8 @@ export const innovativeITServices2026 = [
     competitiveAdvantage: 'Advanced quantum networking, superior security protocols, and breakthrough communication capabilities'
   },
   {
-    id: 'autonomous-it-operations-2026',
-    name: 'Autonomous IT Operations 2026',
+    id: 'autonomous-it-operations-20o26',
+    name: 'Autonomous IT Operations 20o26',
     description: 'Revolutionary platform that enables IT systems to operate autonomously, self-manage, and optimize performance without human intervention.',
     features: [
       'Autonomous system management',
@@ -200,9 +200,9 @@ export const innovativeITServices2026 = [
     },
     category: 'Autonomous IT',
     tags: ['Autonomous Operations', 'Self-Management', 'Predictive Maintenance', 'IT Optimization'],
-    website: 'https://ziontechgroup.com/autonomous-it-operations-2026',
+    website: 'https://ziontechgroup.com/autonomous-it-operations-20o26',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$67.8B',
@@ -210,8 +210,8 @@ export const innovativeITServices2026 = [
     competitiveAdvantage: 'Advanced autonomous operations, superior self-optimization, and comprehensive predictive maintenance'
   },
   {
-    id: 'quantum-data-center-2026',
-    name: 'Quantum Data Center 2026',
+    id: 'quantum-data-center-20o26',
+    name: 'Quantum Data Center 20o26',
     description: 'Next-generation data center platform that leverages quantum computing for superior performance, energy efficiency, and intelligent resource management.',
     features: [
       'Quantum-enhanced data processing',
@@ -230,9 +230,9 @@ export const innovativeITServices2026 = [
     },
     category: 'Quantum Data Center',
     tags: ['Quantum Computing', 'Data Center', 'Resource Management', 'Energy Optimization'],
-    website: 'https://ziontechgroup.com/quantum-data-center-2026',
+    website: 'https://ziontechgroup.com/quantum-data-center-20o26',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$156.7B',
@@ -240,8 +240,8 @@ export const innovativeITServices2026 = [
     competitiveAdvantage: 'Advanced quantum data center, superior resource management, and breakthrough energy optimization'
   },
   {
-    id: 'quantum-cybersecurity-2026',
-    name: 'Quantum Cybersecurity 2026',
+    id: 'quantum-cybersecurity-20o26',
+    name: 'Quantum Cybersecurity 20o26',
     description: 'Revolutionary cybersecurity platform that leverages quantum computing for advanced threat detection, zero-day vulnerability discovery, and automated incident response.',
     features: [
       'Quantum-enhanced threat detection',
@@ -260,9 +260,9 @@ export const innovativeITServices2026 = [
     },
     category: 'Quantum Cybersecurity',
     tags: ['Quantum Computing', 'Cybersecurity', 'Threat Detection', 'Quantum Security'],
-    website: 'https://ziontechgroup.com/quantum-cybersecurity-2026',
+    website: 'https://ziontechgroup.com/quantum-cybersecurity-20o26',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$173.5B',
@@ -270,8 +270,8 @@ export const innovativeITServices2026 = [
     competitiveAdvantage: 'Advanced quantum cybersecurity, superior threat detection, and breakthrough security capabilities'
   },
   {
-    id: 'quantum-cloud-migration-2026',
-    name: 'Quantum Cloud Migration 2026',
+    id: 'quantum-cloud-migration-20o26',
+    name: 'Quantum Cloud Migration 20o26',
     description: 'Next-generation cloud migration platform that leverages quantum computing for intelligent migration planning, optimization, and seamless transition management.',
     features: [
       'Intelligent migration planning',
@@ -290,9 +290,9 @@ export const innovativeITServices2026 = [
     },
     category: 'Cloud Migration',
     tags: ['Quantum Computing', 'Cloud Migration', 'Migration Planning', 'Cloud Optimization'],
-    website: 'https://ziontechgroup.com/quantum-cloud-migration-2026',
+    website: 'https://ziontechgroup.com/quantum-cloud-migration-20o26',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$67.8B',

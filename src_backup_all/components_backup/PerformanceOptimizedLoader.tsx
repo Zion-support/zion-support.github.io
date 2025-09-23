@@ -14,12 +14,12 @@ export const PerformanceOptimizedLoader = memo<LoaderProps>(({
   text,
   fullScreen = false
 }: LoaderProps) => {
-  const sizeClasses = {
+  const sizeClasses ={
     sm: 'w-6 h-6',
     md: 'w-12 h-12',
     lg: 'w-16 h-16'
   };
-  const textSizes = {
+  const textSizes ={
     sm: 'text-xs',
     md: 'text-sm',
     lg: 'text-base'
@@ -41,7 +41,7 @@ export const PerformanceOptimizedLoader = memo<LoaderProps>(({
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
         {/* Logo text */}
         {showLogo && (
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold text-lg">
@@ -86,7 +86,7 @@ export function SkeletonLoader({
           style={{
             width: `${Math.random() * 40 + 60}%`
           }}
-        />
+         />
       ))}
     </div>
   );
@@ -97,17 +97,17 @@ export function CardSkeleton({ className = "" }: { className?: string }) {
     <div className={`bg-zion-blue-dark/50 border border-zion-purple/20 rounded-2xl p-6 ${className}`}>
       <div className="space-y-4">
         {/* Image skeleton */}
-        <div className="w-full h-48 bg-zion-blue-light/20 rounded-xl animate-pulse" />
+        <div className="w-full h-48 bg-zion-blue-light/20 rounded-xl animate-pulse"  />
         {/* Content skeleton */}
         <div className="space-y-3">
-          <div className="h-6 bg-zion-blue-light/20 rounded-lg animate-pulse w-3/4" />
-          <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-full" />
-          <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-2/3" />
+          <div className="h-6 bg-zion-blue-light/20 rounded-lg animate-pulse w-3/4"  />
+          <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-full"  />
+          <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-2/3"  />
         </div>
         {/* Button skeleton */}
         <div className="flex gap-3 pt-4">
-          <div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse flex-1" />
-          <div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse w-24" />
+          <div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse flex-1"  />
+          <div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse w-24"  />
         </div>
       </div>
     </div>
@@ -126,7 +126,7 @@ export function GridSkeleton({
   return (
     <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
       {Array.from({ length: columns * rows }).map((_, index) => (
-        <CardSkeleton key={index} />
+        <CardSkeleton key={index}  />
       ))}
     </div>
   );
@@ -137,15 +137,15 @@ export function PageSkeleton({ className = "" }: { className?: string }) {
     <div className={`space-y-8 ${className}`}>
       {/* Header skeleton */}
       <div className="space-y-4">
-        <div className="h-12 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/3" />
-        <div className="h-6 bg-zion-blue-light/20 rounded-lg animate-pulse w-2/3" />
+        <div className="h-12 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/3"  />
+        <div className="h-6 bg-zion-blue-light/20 rounded-lg animate-pulse w-2/3"  />
       </div>
       {/* Content skeleton */}
-      <GridSkeleton columns={3} rows={2} />
+      <GridSkeleton columns={3} rows={2}  />
       {/* Footer skeleton */}
       <div className="space-y-3">
-        <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/2" />
-        <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/3" />
+        <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/2"  />
+        <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/3"  />
       </div>
     </div>
   );

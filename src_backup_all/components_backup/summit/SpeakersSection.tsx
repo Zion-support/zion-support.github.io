@@ -13,10 +13,9 @@ const speakers: Speaker[] = [
   {
     name: 'Alex Zion',
     title: 'Founder & CEO',
-    avatar: 'https://placehold.co/100x100',
+    avatar: 'https://placehold.co/10o0x10o0',
     twitter: '#',
-    linkedin: '#',
-  },
+    linkedin: '#'},
 ];
 
 export function SpeakersSection() {
@@ -34,7 +33,7 @@ export function SpeakersSection() {
                 height={96}
                 className="rounded-full mx-auto"
                 loading="lazy"
-              />
+               />
               <p className="font-semibold">{sp.name}</p>
               <p className="text-sm opacity-80">{sp.title}</p>
               <div className="flex justify-center gap-3 text-zion-cyan">
@@ -46,7 +45,7 @@ export function SpeakersSection() {
                     rel="noopener noreferrer"
                     className="flex items-center"
                   >
-                    <Twitter className="h-4 w-4" aria-hidden="true" />
+                    <Twitter className="h-4 w-4" aria-hidden="true"  />
                     <span className="sr-only">Twitter</span>
                   </a>
                 )}
@@ -58,7 +57,7 @@ export function SpeakersSection() {
                     rel="noopener noreferrer"
                     className="flex items-center"
                   >
-                    <Linkedin className="h-4 w-4" aria-hidden="true" />
+                    <Linkedin className="h-4 w-4" aria-hidden="true"  />
                     <span className="sr-only">LinkedIn</span>
                   </a>
                 )}

@@ -12,8 +12,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
-} from '@/components/ui/form';
+  FormMessage} from '@/components/ui/form';
 import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react'
 import { PortfolioProject } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
@@ -31,8 +30,7 @@ const projectSchema = z.object({
   demo_url: z
     .union([z.string().url('Please enter a valid URL'), z.literal('')])
     .optional(),
-  pdf_url: z.string().optional(),
-});
+  pdf_url: z.string().optional()});
 
 type ProjectFormValues = z.infer<typeof projectSchema>;
 
@@ -57,8 +55,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       image_url: project?.image_url || '',
       github_url: project?.github_url || '',
       demo_url: project?.demo_url || '',
-      pdf_url: project?.pdf_url || '',
-    }
+      pdf_url: project?.pdf_url || ''}
   });
   
   const onSubmit = async (data: ProjectFormValues) => {
@@ -67,7 +64,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     setIsLoading(true);
     
     try {
-      const projectData: PortfolioProject = {
+      const projectData: PortfolioProject ={
         title: data.title,
         description: data.description,
         technologies: data.technologies ? 
@@ -75,8 +72,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         image_url: data.image_url,
         github_url: data.github_url || undefined,
         demo_url: data.demo_url || undefined,
-        pdf_url: data.pdf_url,
-      };
+        pdf_url: data.pdf_url};
       
       let success = false;
       
@@ -108,9 +104,9 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
             <FormItem>
               <FormLabel>Project Title</FormLabel>
               <FormControl>
-                <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />
+                <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field}  />
               </FormControl>
-              <FormMessage />
+              <FormMessage  />
             </FormItem>
           )}
         />
@@ -124,11 +120,11 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
               <FormControl>
                 <Textarea 
                   placeholder="Describe what the project does and your role in it..."
-                  className="min-h-[100px]"
+                  className="min-h-[10o0px]"
                   {...field} 
-                />
+                 />
               </FormControl>
-              <FormMessage />
+              <FormMessage  />
             </FormItem>
           )}
         />
@@ -140,9 +136,9 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
             <FormItem>
               <FormLabel>Technologies Used</FormLabel>
               <FormControl>
-                <Input placeholder="React, Node.js, MongoDB, etc. (comma separated)" {...field} />
+                <Input placeholder="React, Node.js, MongoDB, etc. (comma separated)" {...field}  />
               </FormControl>
-              <FormMessage />
+              <FormMessage  />
             </FormItem>
           )}
         />
@@ -154,13 +150,13 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel className="flex items-center gap-2">
-                  <Github className="h-4 w-4" />
+                  <Github className="h-4 w-4"  />
                   GitHub URL
                 </FormLabel>
                 <FormControl>
-                  <Input placeholder="https://github.com/yourusername/project" {...field} />
+                  <Input placeholder="https://github.com/yourusername/project" {...field}  />
                 </FormControl>
-                <FormMessage />
+                <FormMessage  />
               </FormItem>
             )}
           />
@@ -171,13 +167,13 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel className="flex items-center gap-2">
-                  <Link className="h-4 w-4" />
+                  <Link className="h-4 w-4"  />
                   Demo URL
                 </FormLabel>
                 <FormControl>
-                  <Input placeholder="https://your-project-demo.com" {...field} />
+                  <Input placeholder="https://your-project-demo.com" {...field}  />
                 </FormControl>
-                <FormMessage />
+                <FormMessage  />
               </FormItem>
             )}
           />
@@ -189,13 +185,13 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel className="flex items-center gap-2">
-                <FileImage className="h-4 w-4" />
+                <FileImage className="h-4 w-4"  />
                 Screenshot URL
               </FormLabel>
               <FormControl>
-                <Input placeholder="https://example.com/screenshot.jpg" {...field} />
+                <Input placeholder="https://example.com/screenshot.jpg" {...field}  />
               </FormControl>
-              <FormMessage />
+              <FormMessage  />
             </FormItem>
           )}
         />
@@ -207,7 +203,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
             Cancel
           </Button>
           <Button type="submit" disabled={isLoading}>
-            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin"  />}
             {isEditing ? 'Update' : 'Add'} Project
           </Button>
         </div>

@@ -42,15 +42,13 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       if (query) url += `?${query}`;
     }
 
-    const options: RequestInit = {
+    const options: RequestInit ={
       method,
       headers: {
         Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
+        "Content-Type": "application/json"},
       // Add timeout to prevent hanging
-      signal: AbortSignal.timeout(15000),
-    };
+      signal: AbortSignal.timeout(150o00)};
 
     if (method !== "GET" && method !== "DELETE") {
       try {
@@ -123,7 +121,7 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       <Button onClick={sendRequest} disabled={loading}>
         {loading ? "Sending..." : "Send Request"}
       </Button>
-      {response && <CodeBlock code={response} language="json" />}
+      {response && <CodeBlock code={response} language="json"  />}
     </div>
   );
 }

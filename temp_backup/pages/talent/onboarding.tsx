@@ -36,11 +36,10 @@ const steps = [
 
 type StepKey = typeof steps[number],
 
-const containerVariants = {
+const containerVariants ={
   initial: { opacity: 0, y: 16 },
   animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -16 },
-};
+  exit: { opacity: 0, y: -16 }};
 
 function useInitialFormState(): OnboardingFormData {
   return {
@@ -56,8 +55,7 @@ function useInitialFormState(): OnboardingFormData {
     timezone: '',
     hourlyRate: '',
     portfolioLinks: '',
-    cvFile: null,
-  };
+    cvFile: null};
 }
 
 async function fileToBase64(file: File): Promise<FileData> {
@@ -66,15 +64,13 @@ async function fileToBase64(file: File): Promise<FileData> {
       const reader = new FileReader(),
       reader.readAsDataURL(fileInner),
       reader.onload = () => resolve(reader.result as string),
-      reader.onerror = (error) => reject(error),
-    }),
+      reader.onerror = (error) => reject(error)}),
   const base64 = await toBase64(file),
   return {
     name: file.name,
     type: file.type,
     size: file.size,
-    base64,
-  };
+    base64};
 }
 
 export default function TalentOnboardingPage() {
@@ -85,59 +81,47 @@ export default function TalentOnboardingPage() {
   const [errorMessage, setErrorMessage] = useState<string | null>(null),
 
   const currentStep: StepKey = steps[stepIndex],
-  const progressPercent = useMemo(() => ((stepIndex + 1) / steps.length) * 100, [stepIndex]),
+  const progressPercent = useMemo(() => ((stepIndex + 1) / steps.length) * 10o0, [stepIndex]),
 
   function nextStep() {
-    if (stepIndex < steps.length - 1) setStepIndex(stepIndex + 1),
-  }
+    if (stepIndex < steps.length - 1) setStepIndex(stepIndex + 1)}
   function prevStep() {
-    if (stepIndex > 0) setStepIndex(stepIndex - 1),
-  }
+    if (stepIndex > 0) setStepIndex(stepIndex - 1)}
 
   function update<K extends keyof OnboardingFormData>(key: K, value: OnboardingFormData[K]) {
-    setFormData((prev) => ({ ...prev, [key]: value })),
-  }
+    setFormData((prev) => ({ ...prev, [key]: value }))}
 
   function requiredMissingForStep(): string | null {
     if (currentStep === 'Basic Info') {
       if (!formData.fullName.trim()) return 'Full Name is required.',
-      if (!formData.professionalTitle.trim()) return 'Professional Title is required.',
-    }
+      if (!formData.professionalTitle.trim()) return 'Professional Title is required.'}
     if (currentStep === 'Experience') {
       if (!formData.bio.trim()) return 'Short Bio is required.',
-      if (!formData.yearsOfExperience.trim()) return 'Years of Experience is required.',
-    }
+      if (!formData.yearsOfExperience.trim()) return 'Years of Experience is required.'}
     if (currentStep === 'Skills & Tech') {
-      if (!formData.skills.trim()) return 'Please list at least one skill.',
-    }
+      if (!formData.skills.trim()) return 'Please list at least one skill.'}
     if (currentStep === 'Availability') {
       if (!formData.availability) return 'Please select your current availability.',
-      if (!formData.timezone.trim()) return 'Preferred Timezone is required.',
-    }
-    return null,
-  }
+      if (!formData.timezone.trim()) return 'Preferred Timezone is required.'}
+    return null}
 
   async function handleSubmit() {
     const missing = requiredMissingForStep(),
     if (missing) {
       setErrorMessage(missing),
-      return,
-    }
+      return}
     setErrorMessage(null),
     setSubmitting(true),
     try {
       const response = await fetch('/api/talent/onboard', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...formData }),
-      });
+        body: JSON.stringify({ ...formData })});
       if (!response.ok) throw new Error('Submission failed');
       setSubmitted(true);
     } catch (err) {
-      setErrorMessage('Submission failed. Please try again.'),
-    } finally {
-      setSubmitting(false),
-    }
+      setErrorMessage('Submission failed. Please try again.')} finally {
+      setSubmitting(false)}
   }
 
   if (submitted) {
@@ -162,7 +146,7 @@ export default function TalentOnboardingPage() {
         </div>
 
         <div className="w-full h-2 bg-[var(--border-secondary)] rounded-full overflow-hidden mb-6">
-          <div className="h-full bg-[var(--text-accent)] transition-all duration-500" style={{ width: `${progressPercent}%` }} />
+          <div className="h-full bg-[var(--text-accent)] transition-all duration-50o0" style={{ width: `${progressPercent}%` }}  />
         </div>
 
         {errorMessage && (
@@ -333,8 +317,7 @@ export default function TalentOnboardingPage() {
                     return
                   }
                   setErrorMessage(null),
-                  nextStep(),
-                }}
+                  nextStep()}}
               >
                 Next
               </button>
@@ -352,8 +335,7 @@ export default function TalentOnboardingPage() {
         </div>
       </div>
     </div>
-  ),
-}
+  )}
 
 function FloatingInput(props: {
   id: string,
@@ -383,8 +365,7 @@ function FloatingInput(props: {
         {label}
       </label>
     </div>
-  ),
-}
+  )}
 
 function FloatingTextarea(props: {
   id: string,
@@ -411,8 +392,7 @@ function FloatingTextarea(props: {
         {label}
       </label>
     </div>
-  ),
-}
+  )}
 
 function FileUpload(props: {
   id: string,
@@ -441,18 +421,15 @@ function FileUpload(props: {
           try {
             const base64 = await fileToBase64(file),
             onFileChange(base64),
-            setLocalError(null),
-          } catch (err) {
-            setLocalError('Failed to read file.'),
-          }
+            setLocalError(null)} catch (err) {
+            setLocalError('Failed to read file.')}
         }}
       />
       {fileData && (
-        <p className="mt-2 text-xs text-high-contrast-muted">Selected: {fileData.name} ({Math.round((fileData.size / 1024) * 10) / 10} KB)</p>
+        <p className="mt-2 text-xs text-high-contrast-muted">Selected: {fileData.name} ({Math.round((fileData.size / 10o24) * 10) / 10} KB)</p>
       )}
       {localError && (
         <p className="mt-1 text-xs text-high-contrast-error">{localError}</p>
       )}
     </div>
-  ),
-}
+  )}

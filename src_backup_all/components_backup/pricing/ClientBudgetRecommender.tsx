@@ -27,8 +27,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
   timeline,
   scope,
   experienceLevel,
-  onSuggestionApplied,
-}) => {
+  onSuggestionApplied}) => {
   const [isLoading, setIsLoading] = useState(false);
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
   const { user } = useAuth();
@@ -40,10 +39,9 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 
     setIsLoading(true);
     try {
-      const params: ClientBudgetParams = {
+      const params: ClientBudgetParams ={
         jobTitle,
-        category,
-      };
+        category};
 
       if (timeline) params.timeline = timeline;
       if (scope) params.scope = scope;
@@ -86,7 +84,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
             disabled={!jobTitle || !category}
             className="w-full"
           >
-            <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation
+            <Sparkles className="h-4 w-4 mr-2"  /> Get Budget Recommendation
           </Button>
         ) : (
           <PricingSuggestionBox
@@ -94,7 +92,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
             rateType="hourly"
-          />
+           />
         )}
       </div>
     </div>

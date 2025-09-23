@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function IntelligentHrAnalyticsPlatform() {
@@ -20,6 +19,6 @@ export default function IntelligentHrAnalyticsPlatform() {
 			]}
 			industries={["Enterprise", "Mid-market", "Healthcare", "Financial Services", "Manufacturing"]}
 			url="https://ziontechgroup.com/intelligent-hr-analytics-platform"
-		/>
+		 />
 	);
 }

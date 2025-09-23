@@ -12,7 +12,7 @@ export default function NationDashboard({ nation: initialNation }: { nation: any
 
   async function addMilestone() {
     if (!milestoneTitle) return;
-    const next = { ...nation };
+    const next ={ ...nation };
     next.milestones = [
       { id: uuidv4(), title: milestoneTitle, status: 'planned' },
       ...(next.milestones || []),
@@ -21,8 +21,7 @@ export default function NationDashboard({ nation: initialNation }: { nation: any
     await fetch(`/api/nations/${nation.slug}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ milestones: next.milestones }),
-    });
+      body: JSON.stringify({ milestones: next.milestones })});
     setMilestoneTitle('');
   }
 
@@ -31,8 +30,7 @@ export default function NationDashboard({ nation: initialNation }: { nation: any
     await fetch(`/api/nations/${nation.slug}/proposals`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ title: proposalTitle, description: proposalDesc }),
-    });
+      body: JSON.stringify({ title: proposalTitle, description: proposalDesc })});
     setProposalTitle('');
     setProposalDesc('');
     window.location.reload();
@@ -46,29 +44,29 @@ export default function NationDashboard({ nation: initialNation }: { nation: any
       <div className="max-w-5xl mx-auto space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            {nation.flagDataUrl && <img src={nation.flagDataUrl} className="h-12 w-12 rounded object-contain" />}
+            {nation.flagDataUrl && <img src={nation.flagDataUrl} className="h-12 w-12 rounded object-contain"  />}
             <div>
               <h1 className="text-2xl font-semibold">{nation.name} Dashboard</h1>
-              <p className="text-sm text-gray-600">Currency: {nation.currency} • Governance: {nation.governanceStyle}</p>
+              <p className="text-sm text-gray-60o0">Currency: {nation.currency} • Governance: {nation.governanceStyle}</p>
             </div>
           </div>
           <div className="text-right">
-            <div className="text-sm text-gray-600">Population</div>
+            <div className="text-sm text-gray-60o0">Population</div>
             <div className="text-xl font-semibold">{nation.population}</div>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="p-4 rounded border">
-            <div className="text-sm text-gray-600">Talent vs. Client ratio</div>
+            <div className="text-sm text-gray-60o0">Talent vs. Client ratio</div>
             <div className="text-xl font-semibold">{talentRatio}:{clientRatio}</div>
           </div>
           <div className="p-4 rounded border">
-            <div className="text-sm text-gray-600">Milestones</div>
+            <div className="text-sm text-gray-60o0">Milestones</div>
             <div className="text-xl font-semibold">{nation.milestones?.length || 0}</div>
           </div>
           <div className="p-4 rounded border">
-            <div className="text-sm text-gray-600">Open Proposals</div>
+            <div className="text-sm text-gray-60o0">Open Proposals</div>
             <div className="text-xl font-semibold">{(nation.proposals || []).filter((p: any) => p.status === 'open').length}</div>
           </div>
         </div>
@@ -78,16 +76,16 @@ export default function NationDashboard({ nation: initialNation }: { nation: any
             <h2 className="font-semibold">Roadmap</h2>
             <div className="flex gap-2">
               <input className="flex-1 border rounded px-3 py-2" placeholder="Milestone title" value={milestoneTitle} onChange={e => setMilestoneTitle(e.target.value)} />
-              <button className="px-3 py-2 rounded bg-indigo-600 text-white" onClick={addMilestone}>Add</button>
+              <button className="px-3 py-2 rounded bg-indigo-60o0 text-white" onClick={addMilestone}>Add</button>
             </div>
             <ul className="space-y-2">
               {(nation.milestones || []).map((m: any) => (
                 <li key={m.id} className="p-2 rounded border flex items-center justify-between">
                   <div>
                     <div className="font-medium text-sm">{m.title}</div>
-                    <div className="text-xs text-gray-600">{m.status}</div>
+                    <div className="text-xs text-gray-60o0">{m.status}</div>
                   </div>
-                  <span className="text-xs px-2 py-1 rounded bg-gray-100">{m.status}</span>
+                  <span className="text-xs px-2 py-1 rounded bg-gray-10o0">{m.status}</span>
                 </li>
               ))}
             </ul>
@@ -96,7 +94,7 @@ export default function NationDashboard({ nation: initialNation }: { nation: any
             <h2 className="font-semibold">Create Proposal</h2>
             <input className="w-full border rounded px-3 py-2" placeholder="Title" value={proposalTitle} onChange={e => setProposalTitle(e.target.value)} />
             <textarea className="w-full border rounded px-3 py-2 h-28" placeholder="Description" value={proposalDesc} onChange={e => setProposalDesc(e.target.value)} />
-            <button className="px-3 py-2 rounded bg-green-600 text-white" onClick={createProposal}>Submit</button>
+            <button className="px-3 py-2 rounded bg-green-60o0 text-white" onClick={createProposal}>Submit</button>
           </div>
         </div>
       </div>

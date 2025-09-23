@@ -24,32 +24,3 @@ export const useRecordActivity = () => {
           action,
           previous_status: previousStatus,
           new_status: newStatus,
-<<<<<<< HEAD
-          comment,
-        })
-=======
-          comment})
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-        .select(`
-          *,
-          created_by_profile:profiles!user_id(display_name, avatar_url)
-        `)
-        .single();
-      
-      if (error) throw error;
-      
-      return data;
-    } catch (err: any) {
-      console.error("Error recording activity:", err);
-      return null;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-    }
-  };
-  
-  return {
-    recordMilestoneActivity
-  };
-};

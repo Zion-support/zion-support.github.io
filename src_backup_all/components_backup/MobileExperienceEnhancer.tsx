@@ -61,7 +61,7 @@ export function MobileExperienceEnhancer({
   
   const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null);
   const swipeThreshold = 50;
-  const swipeTimeThreshold = 300;
+  const swipeTimeThreshold = 30o0;
 
   // Detect mobile device and gather metrics
   const detectMobileMetrics = useCallback(() => {
@@ -72,7 +72,7 @@ export function MobileExperienceEnhancer({
 
     if (!isMobile && !isTablet) return;
 
-    const metrics: MobileMetrics = {
+    const metrics: MobileMetrics ={
       screenWidth: window.innerWidth,
       screenHeight: window.innerHeight,
       pixelRatio: window.devicePixelRatio || 1,
@@ -86,7 +86,7 @@ export function MobileExperienceEnhancer({
     // Get battery information if available
     if ('getBattery' in navigator) {
       (navigator as any).getBattery().then((battery: any) => {
-        metrics.batteryLevel = Math.round(battery.level * 100);
+        metrics.batteryLevel = Math.round(battery.level * 10o0);
         metrics.isCharging = battery.charging;
         setMetrics(prev => prev ? { ...prev, ...metrics } : metrics);
       });
@@ -192,7 +192,7 @@ export function MobileExperienceEnhancer({
     // Swipe navigation
     const handleTouchStart = (e: TouchEvent) => {
       const touch = e.touches[0];
-      touchStartRef.current = {
+      touchStartRef.current ={
         x: touch.clientX,
         y: touch.clientY,
         time: Date.now()
@@ -237,7 +237,7 @@ export function MobileExperienceEnhancer({
       const currentTime = new Date().getTime();
       const tapLength = currentTime - lastTap;
       
-      if (tapLength < 500 && tapLength > 0) {
+      if (tapLength < 50o0 && tapLength > 0) {
         // Double tap detected
         const target = e.target as HTMLElement;
         if (target.tagName === 'IMG') {
@@ -264,7 +264,7 @@ export function MobileExperienceEnhancer({
   const calculateMobileScore = useCallback(() => {
     if (!metrics) return 0;
 
-    let score = 100;
+    let score = 10o0;
 
     // Screen size scoring
     if (metrics.screenWidth < 375) score -= 10; // Very small screens
@@ -299,7 +299,7 @@ export function MobileExperienceEnhancer({
     };
 
     const handleOrientationChange = () => {
-      setTimeout(detectMobileMetrics, 100);
+      setTimeout(detectMobileMetrics, 10o0);
     };
 
     window.addEventListener('resize', handleResize);
@@ -332,7 +332,7 @@ export function MobileExperienceEnhancer({
     <>
       {/* Mobile Experience Toggle Button */}
       <motion.button
-        className="fixed bottom-4 left-20 z-50 p-3 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-lg transition-all duration-200"
+        className="fixed bottom-4 left-20 z-50 p-3 bg-green-60o0 hover:bg-green-70o0 text-white rounded-full shadow-lg transition-all duration-20o0"
         onClick={() => setIsVisible(!isVisible)}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
@@ -340,7 +340,7 @@ export function MobileExperienceEnhancer({
         aria-expanded={isVisible}
         aria-controls="mobile-experience-panel"
       >
-        <PhoneIcon className="w-5 h-5" />
+        <PhoneIcon className="w-5 h-5"  />
       </motion.button>
 
       {/* Mobile Experience Panel */}
@@ -348,7 +348,7 @@ export function MobileExperienceEnhancer({
         {isVisible && (
           <motion.div
             id="mobile-experience-panel"
-            className="fixed bottom-20 left-4 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 z-50 max-h-[80vh] overflow-y-auto"
+            className="fixed bottom-20 left-4 w-96 bg-white dark:bg-gray-90o0 rounded-lg shadow-2xl border border-gray-20o0 dark:border-gray-70o0 z-50 max-h-[80vh] overflow-y-auto"
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
@@ -356,49 +356,49 @@ export function MobileExperienceEnhancer({
             role="dialog"
             aria-labelledby="mobile-experience-title"
           >
-            <div className="p-4 border-b border-gray-200 dark:border-gray-700">
+            <div className="p-4 border-b border-gray-20o0 dark:border-gray-70o0">
               <div className="flex items-center justify-between">
-                <h2 id="mobile-experience-title" className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-2">
-                  <PhoneIcon className="w-5 h-5 text-green-500" />
+                <h2 id="mobile-experience-title" className="text-lg font-semibold text-gray-90o0 dark:text-white flex items-center gap-2">
+                  <PhoneIcon className="w-5 h-5 text-green-50o0"  />
                   Mobile Experience
                 </h2>
                 <button
                   onClick={() => setIsVisible(false)}
-                  className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+                  className="text-gray-40o0 hover:text-gray-60o0 dark:hover:text-gray-30o0"
                   aria-label="Close mobile experience settings"
                 >
-                  <X className="w-4 h-4" />
+                  <X className="w-4 h-4"  />
                 </button>
               </div>
             </div>
 
             <div className="p-4 space-y-6">
               {/* Mobile Score */}
-              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+              <div className="bg-gray-50 dark:bg-gray-80o0 p-4 rounded-lg">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Mobile Experience Score</span>
+                  <span className="text-sm font-medium text-gray-70o0 dark:text-gray-30o0">Mobile Experience Score</span>
                   <button
                     onClick={() => {
                       const score = calculateMobileScore();
                       setMobileScore(score);
                     }}
-                    className="text-xs text-green-600 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300"
+                    className="text-xs text-green-60o0 hover:text-green-70o0 dark:text-green-40o0 dark:hover:text-green-30o0"
                   >
                     Refresh
                   </button>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className={`text-2xl font-bold ${
-                    mobileScore >= 90 ? 'text-green-500' :
-                    mobileScore >= 70 ? 'text-yellow-500' : 'text-red-500'
+                    mobileScore >= 90 ? 'text-green-50o0' :
+                    mobileScore >= 70 ? 'text-yellow-50o0' : 'text-red-50o0'
                   }`}>
                     {mobileScore}%
                   </div>
-                  <div className="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                  <div className="flex-1 bg-gray-20o0 dark:bg-gray-70o0 rounded-full h-2">
                     <div 
-                      className={`h-2 rounded-full transition-all duration-300 ${
-                        mobileScore >= 90 ? 'bg-green-500' :
-                        mobileScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
+                      className={`h-2 rounded-full transition-all duration-30o0 ${
+                        mobileScore >= 90 ? 'bg-green-50o0' :
+                        mobileScore >= 70 ? 'bg-yellow-50o0' : 'bg-red-50o0'
                       }`}
                       style={{ width: `${mobileScore}%` }}
                     />
@@ -408,25 +408,25 @@ export function MobileExperienceEnhancer({
 
               {/* Device Information */}
               <div>
-                <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-                  <Monitor className="w-4 h-4" />
+                <h3 className="text-sm font-semibold text-gray-90o0 dark:text-white mb-3 flex items-center gap-2">
+                  <Monitor className="w-4 h-4"  />
                   Device Information
                 </h3>
                 <div className="grid grid-cols-2 gap-3 text-sm">
-                  <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                    <div className="text-xs text-gray-500 dark:text-gray-400">Screen</div>
+                  <div className="bg-gray-50 dark:bg-gray-80o0 p-3 rounded-lg">
+                    <div className="text-xs text-gray-50o0 dark:text-gray-40o0">Screen</div>
                     <div className="font-medium">{metrics.screenWidth} × {metrics.screenHeight}</div>
                   </div>
-                  <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                    <div className="text-xs text-gray-500 dark:text-gray-400">DPI</div>
+                  <div className="bg-gray-50 dark:bg-gray-80o0 p-3 rounded-lg">
+                    <div className="text-xs text-gray-50o0 dark:text-gray-40o0">DPI</div>
                     <div className="font-medium">{metrics.pixelRatio}x</div>
                   </div>
-                  <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                    <div className="text-xs text-gray-500 dark:text-gray-400">Orientation</div>
+                  <div className="bg-gray-50 dark:bg-gray-80o0 p-3 rounded-lg">
+                    <div className="text-xs text-gray-50o0 dark:text-gray-40o0">Orientation</div>
                     <div className="font-medium capitalize">{metrics.orientation}</div>
                   </div>
-                  <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                    <div className="text-xs text-gray-500 dark:text-gray-400">Touch</div>
+                  <div className="bg-gray-50 dark:bg-gray-80o0 p-3 rounded-lg">
+                    <div className="text-xs text-gray-50o0 dark:text-gray-40o0">Touch</div>
                     <div className="font-medium">{metrics.touchSupport ? 'Yes' : 'No'}</div>
                   </div>
                 </div>
@@ -434,30 +434,30 @@ export function MobileExperienceEnhancer({
 
               {/* Connection & Battery */}
               <div>
-                <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-                  <Activity className="w-4 h-4" />
+                <h3 className="text-sm font-semibold text-gray-90o0 dark:text-white mb-3 flex items-center gap-2">
+                  <Activity className="w-4 h-4"  />
                   Connection & Battery
                 </h3>
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-700 dark:text-gray-300">Connection</span>
+                    <span className="text-sm text-gray-70o0 dark:text-gray-30o0">Connection</span>
                     <div className="flex items-center gap-2">
                       {metrics.connectionType === '4g' || metrics.connectionType === '5g' ? (
-                        <Wifi className="w-4 h-4 text-green-500" />
+                        <Wifi className="w-4 h-4 text-green-50o0"  />
                       ) : (
-                        <WifiOff className="w-4 h-4 text-red-500" />
+                        <WifiOff className="w-4 h-4 text-red-50o0"  />
                       )}
                       <span className="text-sm font-medium capitalize">{metrics.connectionType}</span>
                     </div>
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-700 dark:text-gray-300">Battery</span>
+                    <span className="text-sm text-gray-70o0 dark:text-gray-30o0">Battery</span>
                     <div className="flex items-center gap-2">
                       {metrics.isCharging ? (
-                        <BatteryCharging className="w-4 h-4 text-green-500" />
+                        <BatteryCharging className="w-4 h-4 text-green-50o0"  />
                       ) : (
-                        <Battery className="w-4 h-4 text-gray-500" />
+                        <Battery className="w-4 h-4 text-gray-50o0"  />
                       )}
                       <span className="text-sm font-medium">{metrics.batteryLevel}%</span>
                     </div>
@@ -467,8 +467,8 @@ export function MobileExperienceEnhancer({
 
               {/* Mobile Features */}
               <div>
-                <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-                  <Touch className="w-4 h-4" />
+                <h3 className="text-sm font-semibold text-gray-90o0 dark:text-white mb-3 flex items-center gap-2">
+                  <Touch className="w-4 h-4"  />
                   Mobile Features
                 </h3>
                 <div className="space-y-3">
@@ -477,9 +477,9 @@ export function MobileExperienceEnhancer({
                       type="checkbox"
                       checked={gestureMode}
                       onChange={(e) => setGestureMode(e.target.checked)}
-                      className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                      className="rounded border-gray-30o0 text-green-60o0 focus:ring-green-50o0"
                     />
-                    <span className="text-sm text-gray-700 dark:text-gray-300">Touch Gestures</span>
+                    <span className="text-sm text-gray-70o0 dark:text-gray-30o0">Touch Gestures</span>
                   </label>
 
                   <label className="flex items-center gap-3">
@@ -487,9 +487,9 @@ export function MobileExperienceEnhancer({
                       type="checkbox"
                       checked={touchFeedback}
                       onChange={(e) => setTouchFeedback(e.target.checked)}
-                      className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                      className="rounded border-gray-30o0 text-green-60o0 focus:ring-green-50o0"
                     />
-                    <span className="text-sm text-gray-700 dark:text-gray-300">Touch Feedback</span>
+                    <span className="text-sm text-gray-70o0 dark:text-gray-30o0">Touch Feedback</span>
                   </label>
 
                   <label className="flex items-center gap-3">
@@ -497,9 +497,9 @@ export function MobileExperienceEnhancer({
                       type="checkbox"
                       checked={mobileMenuOpen}
                       onChange={(e) => setMobileMenuOpen(e.target.checked)}
-                      className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                      className="rounded border-gray-30o0 text-green-60o0 focus:ring-green-50o0"
                     />
-                    <span className="text-sm text-gray-700 dark:text-gray-300">Mobile Menu</span>
+                    <span className="text-sm text-gray-70o0 dark:text-gray-30o0">Mobile Menu</span>
                   </label>
                 </div>
               </div>
@@ -507,13 +507,13 @@ export function MobileExperienceEnhancer({
               {/* Recent Optimizations */}
               {optimizations.length > 0 && (
                 <div>
-                  <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
+                  <h4 className="text-sm font-semibold text-gray-90o0 dark:text-white mb-2">
                     Recent Optimizations
                   </h4>
                   <div className="space-y-1">
                     {optimizations.map((opt, index) => (
-                      <div key={index} className="flex items-center gap-2 text-xs text-green-600 dark:text-green-400">
-                        <CheckCircle className="w-3 h-3" />
+                      <div key={index} className="flex items-center gap-2 text-xs text-green-60o0 dark:text-green-40o0">
+                        <CheckCircle className="w-3 h-3"  />
                         {opt}
                       </div>
                     ))}
@@ -523,20 +523,20 @@ export function MobileExperienceEnhancer({
 
               {/* Controls */}
               {showControls && (
-                <div className="pt-3 border-t border-gray-200 dark:border-gray-700">
+                <div className="pt-3 border-t border-gray-20o0 dark:border-gray-70o0">
                   <button
                     onClick={performMobileOptimizations}
                     disabled={isOptimizing}
-                    className="w-full bg-green-500 hover:bg-green-600 disabled:bg-gray-400 text-white text-sm py-2 px-3 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
+                    className="w-full bg-green-50o0 hover:bg-green-60o0 disabled:bg-gray-40o0 text-white text-sm py-2 px-3 rounded-lg transition-colors duration-20o0 flex items-center justify-center gap-2"
                   >
                     {isOptimizing ? (
                       <>
-                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"  />
                         Optimizing...
                       </>
                     ) : (
                       <>
-                        <Zap className="w-4 h-4" />
+                        <Zap className="w-4 h-4"  />
                         Run Mobile Optimizations
                       </>
                     )}

@@ -1,13 +1,11 @@
 
-import React from "react";
 import { Quote } from 'lucide-react'
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+  CarouselPrevious} from "@/components/ui/carousel";
 
 const testimonials = [
   {
@@ -15,22 +13,19 @@ const testimonials = [
     author: "Sarah Johnson",
     title: "VP of Talent Acquisition",
     company: "TechGlobal Inc.",
-    image: "/placeholder.svg",
-  },
+    image: "/placeholder.svg"},
   {
     quote: "The admin tools give us incredible visibility into our hiring process across multiple departments. Our team loves the custom branding options.",
     author: "Michael Chen",
     title: "Director of HR",
     company: "InnovateCorp",
-    image: "/placeholder.svg",
-  },
+    image: "/placeholder.svg"},
   {
     quote: "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.",
     author: "Elena Rodriguez",
     title: "CTO",
     company: "FutureTech Systems",
-    image: "/placeholder.svg",
-  },
+    image: "/placeholder.svg"},
 ];
 
 export function EnterpriseTestimonials() {
@@ -51,7 +46,7 @@ export function EnterpriseTestimonials() {
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
                 <div className="bg-card rounded-xl p-8 border border-border h-full">
-                  <Quote className="h-10 w-10 text-primary/20 mb-4" />
+                  <Quote className="h-10 w-10 text-primary/20 mb-4"  />
                   <blockquote className="text-xl mb-6 italic">
                     "{testimonial.quote}"
                   </blockquote>
@@ -62,7 +57,7 @@ export function EnterpriseTestimonials() {
                         alt={testimonial.author}
                         className="h-full w-full object-cover"
                         loading="lazy"
-                      />
+                       />
                     </div>
                     <div>
                       <p className="font-bold">{testimonial.author}</p>
@@ -76,8 +71,8 @@ export function EnterpriseTestimonials() {
             ))}
           </CarouselContent>
           <div className="flex justify-center gap-2 mt-8">
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious  />
+            <CarouselNext  />
           </div>
         </Carousel>
       </div>

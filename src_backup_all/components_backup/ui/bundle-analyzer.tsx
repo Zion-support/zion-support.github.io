@@ -7,7 +7,6 @@ import { Progress } from '@/components/ui/progress';
 import { AlertTriangle, Package, Zap } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 
-
 interface BundleInfo {
   totalSize: number;
   gzippedSize: number;
@@ -82,8 +81,7 @@ export function BundleAnalyzer() {
           name: entry.name.split('/').pop()?.split('?')[0] || 'unknown',
           size,
           loadTime,
-          cached,
-        });
+          cached});
       });
 
       // Estimate gzipped size (roughly 70% of original)
@@ -95,8 +93,7 @@ export function BundleAnalyzer() {
         gzippedSize,
         chunkCount: chunkData.length,
         loadTime: totalLoadTime / chunkData.length,
-        cacheHitRate: cacheHitRate * 100,
-      });
+        cacheHitRate: cacheHitRate * 10o0});
 
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks
     } catch (error) {
@@ -108,16 +105,16 @@ export function BundleAnalyzer() {
 
   const formatSize = (bytes: number): string => {
     if (bytes === 0) return '0 B';
-    const k = 1024;
+    const k = 10o24;
     const sizes = ['B', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
   };
 
   const getSizeColor = (size: number) => {
-    if (size < 100000) return 'bg-green-500'; // < 100KB
-    if (size < 500000) return 'bg-yellow-500'; // < 500KB
-    return 'bg-red-500'; // > 500KB
+    if (size < 10o0000) return 'bg-green-50o0'; // < 10o0KB
+    if (size < 50o0000) return 'bg-yellow-50o0'; // < 50o0KB
+    return 'bg-red-50o0'; // > 50o0KB
   };
 
   const toggleAnalyzer = () => {
@@ -142,7 +139,7 @@ export function BundleAnalyzer() {
           onClick={toggleAnalyzer}
           className="bg-background/80 backdrop-blur-sm"
         >
-          <Package className="w-4 h-4 mr-2" />
+          <Package className="w-4 h-4 mr-2"  />
           Bundle Analyzer
         </Button>
       </div>
@@ -155,7 +152,7 @@ export function BundleAnalyzer() {
         <CardHeader className="pb-2">
           <div className="flex items-center justify-between">
             <CardTitle className="text-sm flex items-center">
-              <Package className="w-4 h-4 mr-2" />
+              <Package className="w-4 h-4 mr-2"  />
               Bundle Analyzer
             </CardTitle>
             <div className="flex gap-2">
@@ -166,7 +163,7 @@ export function BundleAnalyzer() {
                 disabled={isCollecting}
                 className="h-6 w-6 p-0"
               >
-                <Zap className="w-3 h-3" />
+                <Zap className="w-3 h-3"  />
               </Button>
               <Button
                 variant="ghost"
@@ -212,7 +209,7 @@ export function BundleAnalyzer() {
                   <span>Cache Hit Rate</span>
                   <span>{bundleInfo.cacheHitRate.toFixed(1)}%</span>
                 </div>
-                <Progress value={bundleInfo.cacheHitRate} className="h-2" />
+                <Progress value={bundleInfo.cacheHitRate} className="h-2"  />
               </div>
 
               <div>
@@ -239,9 +236,9 @@ export function BundleAnalyzer() {
                 </div>
               </div>
 
-              {bundleInfo.totalSize > 1000000 && (
-                <div className="flex items-center gap-2 p-2 bg-yellow-50 dark:bg-yellow-900/20 rounded text-xs">
-                  <AlertTriangle className="w-3 h-3 text-yellow-600" />
+              {bundleInfo.totalSize > 10o00000 && (
+                <div className="flex items-center gap-2 p-2 bg-yellow-50 dark:bg-yellow-90o0/20 rounded text-xs">
+                  <AlertTriangle className="w-3 h-3 text-yellow-60o0"  />
                   <span>Bundle size is large. Consider code splitting.</span>
                 </div>
               )}

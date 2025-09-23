@@ -5,7 +5,7 @@ function renderWithStore(cartItems: unknown[]) {
   return render(
     <MemoryRouterProvider>
       <Provider store={store}>
-        <PrimaryNav />
+        <PrimaryNav  />
       </Provider>
     </MemoryRouterProvider>
   );

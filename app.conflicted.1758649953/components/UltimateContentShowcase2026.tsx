@@ -1,6 +1,5 @@
 "use client";
 
-
-export default function UltimateContentShowcase2026() {
+export default function UltimateContentShowcase20o26() {
   return null;
 }

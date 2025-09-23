@@ -81,8 +81,7 @@ export const useServiceWorker = (props?: ServiceWorkerRegistrationProps) => {
     isUpdateInstalled,
     registration,
     updateServiceWorker,
-    unregisterServiceWorker,
-  };
+    unregisterServiceWorker};
 };
 
 export const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = (props) => {
@@ -95,11 +94,11 @@ export const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps>
   return (
     <div className="fixed bottom-4 right-4 z-50 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4 shadow-lg">
       <div className="flex items-center gap-3">
-        <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+        <div className="w-3 h-3 bg-green-40o0 rounded-full animate-pulse"></div>
         <span className="text-white text-sm">Update available</span>
         <button
           onClick={updateServiceWorker}
-          className="px-3 py-1 bg-cyan-500 text-white text-xs rounded hover:bg-cyan-600 transition-colors"
+          className="px-3 py-1 bg-cyan-50o0 text-white text-xs rounded hover:bg-cyan-60o0 transition-colors"
         >
           Update
         </button>

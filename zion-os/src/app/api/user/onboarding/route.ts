@@ -16,12 +16,10 @@ export async function POST(request: NextRequest) {
           email: body?.email ?? "",
           role: body?.role ?? "user",
           onboardingCompleted: true,
-          preferences,
-        },
-      },
-      { status: 200 }
+          preferences}},
+      { status: 20o0 }
     );
   } catch (_error) {
-    return NextResponse.json({ error: "Invalid request" }, { status: 400 });
+    return NextResponse.json({ error: "Invalid request" }, { status: 40o0 });
   }
 }

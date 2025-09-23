@@ -43,11 +43,11 @@ import {
   MapPin,
   ExternalLink
 } from 'lucide-react';
-import { CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/cleanInnovativeMicroSaasServices2025';
-import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from '../data/additionalInnovativeServices2025';
-import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
+import { CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_20o25 } from '../data/cleanInnovativeMicroSaasServices20o25';
+import { ADDITIONAL_INNOVATIVE_SERVICES_20o25 } from '../data/additionalInnovativeServices20o25';
+import { EMERGING_TECH_SERVICES_20o25 } from '../data/emergingTechServices20o25';
 
-const ComprehensiveServicesShowcase2025 = () => {
+const ComprehensiveServicesShowcase20o25 = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('innovation');
@@ -56,32 +56,32 @@ const ComprehensiveServicesShowcase2025 = () => {
 
   // Combine all services
   const allServices = [
-    ...CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_2025,
-    ...ADDITIONAL_INNOVATIVE_SERVICES_2025,
-    ...EMERGING_TECH_SERVICES_2025
+    ...CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_20o25,
+    ...ADDITIONAL_INNOVATIVE_SERVICES_20o25,
+    ...EMERGING_TECH_SERVICES_20o25
   ];
 
   // Enhanced categories with new services
   const categories = [
-    { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀', color: 'from-blue-600 to-cyan-500' },
-    { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s => s.category === 'AI & Analytics').length, icon: '🤖', color: 'from-purple-600 to-cyan-500' },
-    { id: 'AI & Legal Tech', name: 'AI & Legal Tech', count: allServices.filter(s => s.category === 'AI & Legal Tech').length, icon: '⚖️', color: 'from-blue-600 to-indigo-500' },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-red-600 to-pink-500' },
-    { id: 'AI & Research', name: 'AI & Research', count: allServices.filter(s => s.category === 'AI & Research').length, icon: '🔬', color: 'from-purple-600 to-violet-500' },
-    { id: 'AI & Green Tech', name: 'AI & Green Tech', count: allServices.filter(s => s.category === 'AI & Green Tech').length, icon: '🌱', color: 'from-green-600 to-emerald-500' },
-    { id: 'AI & Metaverse', name: 'AI & Metaverse', count: allServices.filter(s => s.category === 'AI & Metaverse').length, icon: '🌍', color: 'from-purple-600 to-indigo-500' },
-    { id: 'AI & Blockchain', name: 'AI & Blockchain', count: allServices.filter(s => s.category === 'AI & Blockchain').length, icon: '🔗', color: 'from-green-600 to-emerald-500' },
-    { id: 'AI & Edge Computing', name: 'AI & Edge Computing', count: allServices.filter(s => s.category === 'AI & Edge Computing').length, icon: '🌐', color: 'from-blue-600 to-cyan-500' },
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-purple-600 to-pink-500' },
-    { id: 'AI & Space Tech', name: 'AI & Space Tech', count: allServices.filter(s => s.category === 'AI & Space Tech').length, icon: '🚀', color: 'from-indigo-600 to-purple-500' },
-    { id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s => s.category === 'AI & Content').length, icon: '✍️', color: 'from-orange-600 to-red-500' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-green-600 to-blue-500' },
-    { id: 'AI & HR', name: 'AI & HR', count: allServices.filter(s => s.category === 'AI & HR').length, icon: '👥', color: 'from-purple-600 to-cyan-500' },
-    { id: 'Quantum Finance', name: 'Quantum Finance', count: allServices.filter(s => s.category === 'Quantum Finance').length, icon: '💰', color: 'from-yellow-600 to-orange-500' },
-    { id: 'Autonomous Systems', name: 'Autonomous Systems', count: allServices.filter(s => s.category === 'Autonomous Systems').length, icon: '🤖', color: 'from-blue-600 to-green-500' },
-    { id: 'Neuromorphic Computing', name: 'Neuromorphic Computing', count: allServices.filter(s => s.category === 'Neuromorphic Computing').length, icon: '🧠', color: 'from-purple-600 to-blue-500' },
-    { id: 'Synthetic Biology', name: 'Synthetic Biology', count: allServices.filter(s => s.category === 'Synthetic Biology').length, icon: '🧬', color: 'from-green-600 to-blue-500' },
-    { id: 'Quantum Internet', name: 'Quantum Internet', count: allServices.filter(s => s.category === 'Quantum Internet').length, icon: '🌐', color: 'from-indigo-600 to-purple-500' }
+    { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀', color: 'from-blue-60o0 to-cyan-50o0' },
+    { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s => s.category === 'AI & Analytics').length, icon: '🤖', color: 'from-purple-60o0 to-cyan-50o0' },
+    { id: 'AI & Legal Tech', name: 'AI & Legal Tech', count: allServices.filter(s => s.category === 'AI & Legal Tech').length, icon: '⚖️', color: 'from-blue-60o0 to-indigo-50o0' },
+    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-red-60o0 to-pink-50o0' },
+    { id: 'AI & Research', name: 'AI & Research', count: allServices.filter(s => s.category === 'AI & Research').length, icon: '🔬', color: 'from-purple-60o0 to-violet-50o0' },
+    { id: 'AI & Green Tech', name: 'AI & Green Tech', count: allServices.filter(s => s.category === 'AI & Green Tech').length, icon: '🌱', color: 'from-green-60o0 to-emerald-50o0' },
+    { id: 'AI & Metaverse', name: 'AI & Metaverse', count: allServices.filter(s => s.category === 'AI & Metaverse').length, icon: '🌍', color: 'from-purple-60o0 to-indigo-50o0' },
+    { id: 'AI & Blockchain', name: 'AI & Blockchain', count: allServices.filter(s => s.category === 'AI & Blockchain').length, icon: '🔗', color: 'from-green-60o0 to-emerald-50o0' },
+    { id: 'AI & Edge Computing', name: 'AI & Edge Computing', count: allServices.filter(s => s.category === 'AI & Edge Computing').length, icon: '🌐', color: 'from-blue-60o0 to-cyan-50o0' },
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-purple-60o0 to-pink-50o0' },
+    { id: 'AI & Space Tech', name: 'AI & Space Tech', count: allServices.filter(s => s.category === 'AI & Space Tech').length, icon: '🚀', color: 'from-indigo-60o0 to-purple-50o0' },
+    { id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s => s.category === 'AI & Content').length, icon: '✍️', color: 'from-orange-60o0 to-red-50o0' },
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-green-60o0 to-blue-50o0' },
+    { id: 'AI & HR', name: 'AI & HR', count: allServices.filter(s => s.category === 'AI & HR').length, icon: '👥', color: 'from-purple-60o0 to-cyan-50o0' },
+    { id: 'Quantum Finance', name: 'Quantum Finance', count: allServices.filter(s => s.category === 'Quantum Finance').length, icon: '💰', color: 'from-yellow-60o0 to-orange-50o0' },
+    { id: 'Autonomous Systems', name: 'Autonomous Systems', count: allServices.filter(s => s.category === 'Autonomous Systems').length, icon: '🤖', color: 'from-blue-60o0 to-green-50o0' },
+    { id: 'Neuromorphic Computing', name: 'Neuromorphic Computing', count: allServices.filter(s => s.category === 'Neuromorphic Computing').length, icon: '🧠', color: 'from-purple-60o0 to-blue-50o0' },
+    { id: 'Synthetic Biology', name: 'Synthetic Biology', count: allServices.filter(s => s.category === 'Synthetic Biology').length, icon: '🧬', color: 'from-green-60o0 to-blue-50o0' },
+    { id: 'Quantum Internet', name: 'Quantum Internet', count: allServices.filter(s => s.category === 'Quantum Internet').length, icon: '🌐', color: 'from-indigo-60o0 to-purple-50o0' }
   ];
 
   const filteredServices = allServices.filter(service => {
@@ -108,7 +108,7 @@ const ComprehensiveServicesShowcase2025 = () => {
     }
   });
 
-  const containerVariants = {
+  const containerVariants ={
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -118,7 +118,7 @@ const ComprehensiveServicesShowcase2025 = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants ={
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
@@ -131,10 +131,10 @@ const ComprehensiveServicesShowcase2025 = () => {
 
       const getInnovationColor = (level) => {
     switch (level) {
-      case 'Revolutionary': return 'text-purple-600 bg-purple-100';
-      case 'Cutting-edge': return 'text-blue-600 bg-blue-100';
-      case 'Advanced': return 'text-green-600 bg-green-100';
-      default: return 'text-gray-600 bg-gray-100';
+      case 'Revolutionary': return 'text-purple-60o0 bg-purple-10o0';
+      case 'Cutting-edge': return 'text-blue-60o0 bg-blue-10o0';
+      case 'Advanced': return 'text-green-60o0 bg-green-10o0';
+      default: return 'text-gray-60o0 bg-gray-10o0';
     }
   };
 
@@ -146,7 +146,7 @@ const ComprehensiveServicesShowcase2025 = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 text-white py-20">
+      <div className="bg-gradient-to-r from-blue-60o0 via-purple-60o0 to-cyan-60o0 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h1 
             initial={{ y: 30, opacity: 0 }}
@@ -171,15 +171,15 @@ const ComprehensiveServicesShowcase2025 = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-lg px-6 py-3">
-              <Phone className="w-5 h-5" />
-              <span>+1 302 464 0950</span>
+              <Phone className="w-5 h-5"  />
+              <span>+1 30o2 464 0950</span>
             </div>
             <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-lg px-6 py-3">
-              <Mail className="w-5 h-5" />
+              <Mail className="w-5 h-5"  />
               <span>kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-lg px-6 py-3">
-              <MapPin className="w-5 h-5" />
+              <MapPin className="w-5 h-5"  />
               <span>Middletown, DE 19709</span>
             </div>
           </motion.div>
@@ -189,10 +189,10 @@ const ComprehensiveServicesShowcase2025 = () => {
       {/* Services Overview */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl font-bold text-gray-90o0 mb-6">
             {allServices.length}+ Revolutionary Services
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
             From AI-powered business intelligence to quantum computing solutions, our comprehensive portfolio covers every aspect of modern technology needs
           </p>
         </div>
@@ -205,8 +205,8 @@ const ComprehensiveServicesShowcase2025 = () => {
             transition={{ duration: 0.5 }}
             className="text-center p-6 bg-white rounded-xl shadow-lg"
           >
-            <div className="text-4xl font-bold text-blue-600 mb-2">{allServices.length}+</div>
-            <div className="text-gray-600">Innovative Services</div>
+            <div className="text-4xl font-bold text-blue-60o0 mb-2">{allServices.length}+</div>
+            <div className="text-gray-60o0">Innovative Services</div>
           </motion.div>
           <motion.div 
             initial={{ scale: 0.8, opacity: 0 }}
@@ -214,8 +214,8 @@ const ComprehensiveServicesShowcase2025 = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-center p-6 bg-white rounded-xl shadow-lg"
           >
-            <div className="text-4xl font-bold text-purple-600 mb-2">25+</div>
-            <div className="text-gray-600">Technology Categories</div>
+            <div className="text-4xl font-bold text-purple-60o0 mb-2">25+</div>
+            <div className="text-gray-60o0">Technology Categories</div>
           </motion.div>
           <motion.div 
             initial={{ scale: 0.8, opacity: 0 }}
@@ -223,8 +223,8 @@ const ComprehensiveServicesShowcase2025 = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-center p-6 bg-white rounded-xl shadow-lg"
           >
-            <div className="text-4xl font-bold text-green-600 mb-2">99.9%</div>
-            <div className="text-gray-600">Uptime Guarantee</div>
+            <div className="text-4xl font-bold text-green-60o0 mb-2">99.9%</div>
+            <div className="text-gray-60o0">Uptime Guarantee</div>
           </motion.div>
           <motion.div 
             initial={{ scale: 0.8, opacity: 0 }}
@@ -232,8 +232,8 @@ const ComprehensiveServicesShowcase2025 = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-center p-6 bg-white rounded-xl shadow-lg"
           >
-            <div className="text-4xl font-bold text-orange-600 mb-2">24/7</div>
-            <div className="text-gray-600">Expert Support</div>
+            <div className="text-4xl font-bold text-orange-60o0 mb-2">24/7</div>
+            <div className="text-gray-60o0">Expert Support</div>
           </motion.div>
         </div>
 
@@ -242,13 +242,13 @@ const ComprehensiveServicesShowcase2025 = () => {
           <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
             <div className="flex-1 max-w-md">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />
                 <input
                   type="text"
                   placeholder="Search services..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-30o0 rounded-lg focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
                 />
               </div>
             </div>
@@ -257,7 +257,7 @@ const ComprehensiveServicesShowcase2025 = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="px-4 py-2 border border-gray-30o0 rounded-lg focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
               >
                 <option value="innovation">Sort by Innovation</option>
                 <option value="price">Sort by Price</option>
@@ -265,16 +265,16 @@ const ComprehensiveServicesShowcase2025 = () => {
                 <option value="name">Sort by Name</option>
               </select>
               
-              <div className="flex border border-gray-300 rounded-lg">
+              <div className="flex border border-gray-30o0 rounded-lg">
                 <button
                   onClick={() => setViewMode('grid')}
-                  className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-blue-600 text-white' : 'bg-white text-gray-600'}`}
+                  className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-blue-60o0 text-white' : 'bg-white text-gray-60o0'}`}
                 >
                   Grid
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
-                  className={`px-3 py-2 ${viewMode === 'list' ? 'bg-blue-600 text-white' : 'bg-white text-gray-600'}`}
+                  className={`px-3 py-2 ${viewMode === 'list' ? 'bg-blue-60o0 text-white' : 'bg-white text-gray-60o0'}`}
                 >
                   List
                 </button>
@@ -290,12 +290,12 @@ const ComprehensiveServicesShowcase2025 = () => {
               <motion.button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-30o0 ${
                   activeCategory === category.id
                     ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md'
+                    : 'bg-white text-gray-70o0 hover:bg-gray-10o0 shadow-md'
                 }`}
               >
                 <span className="mr-2">{category.icon}</span>
@@ -316,8 +316,8 @@ const ComprehensiveServicesShowcase2025 = () => {
             <motion.div
               key={service.id}
               variants={itemVariants}
-              whileHover={{ y: -5, scale: 1.02 }}
-              className={`bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 ${
+              whileHover={{ y: -5, scale: 1.0o2 }}
+              className={`bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-30o0 ${
                 viewMode === 'list' ? 'flex' : ''
               }`}
             >
@@ -330,33 +330,33 @@ const ComprehensiveServicesShowcase2025 = () => {
                     </span>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                  <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
+                  <h3 className="text-xl font-bold text-gray-90o0 mb-3">{service.title}</h3>
+                  <p className="text-gray-60o0 mb-4 line-clamp-3">{service.description}</p>
                   
                   <div className="flex items-center justify-between mb-4">
-                    <div className="text-2xl font-bold text-blue-600">
+                    <div className="text-2xl font-bold text-blue-60o0">
                       {service.currency}{service.price.toLocaleString()}
-                      <span className="text-sm text-gray-500">/month</span>
+                      <span className="text-sm text-gray-50o0">/month</span>
                     </div>
-                    <div className="text-sm text-green-600 font-medium">
+                    <div className="text-sm text-green-60o0 font-medium">
                       ROI: {service.roi}
                     </div>
                   </div>
                   
                   <div className="flex items-center justify-between mb-4">
-                    <div className="text-sm text-gray-500">
-                      <Clock className="inline w-4 h-4 mr-1" />
+                    <div className="text-sm text-gray-50o0">
+                      <Clock className="inline w-4 h-4 mr-1"  />
                       {service.estimatedDelivery}
                     </div>
-                    <div className="text-sm text-gray-500">
-                      <Shield className="inline w-4 h-4 mr-1" />
+                    <div className="text-sm text-gray-50o0">
+                      <Shield className="inline w-4 h-4 mr-1"  />
                       {service.supportLevel}
                     </div>
                   </div>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
                     {service.tags.slice(0, 3).map((tag, tagIndex) => (
-                      <span key={tagIndex} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">
+                      <span key={tagIndex} className="px-2 py-1 bg-gray-10o0 text-gray-70o0 text-xs rounded-full">
                         {tag}
                       </span>
                     ))}
@@ -364,7 +364,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                   
                   <button
                     onClick={() => setSelectedService(service)}
-                    className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-3 rounded-lg font-medium hover:from-blue-700 hover:to-cyan-600 transition-all duration-300"
+                    className="w-full bg-gradient-to-r from-blue-60o0 to-cyan-50o0 text-white py-3 rounded-lg font-medium hover:from-blue-70o0 hover:to-cyan-60o0 transition-all duration-30o0"
                   >
                     View Details
                   </button>
@@ -375,8 +375,8 @@ const ComprehensiveServicesShowcase2025 = () => {
                     <div className="flex items-center space-x-4">
                       <div className="text-3xl">{getCategoryIcon(service.category)}</div>
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
-                        <p className="text-gray-600">{service.description}</p>
+                        <h3 className="text-xl font-bold text-gray-90o0">{service.title}</h3>
+                        <p className="text-gray-60o0">{service.description}</p>
                       </div>
                     </div>
                     <span className={`px-3 py-1 rounded-full text-xs font-medium ${getInnovationColor(service.innovationLevel)}`}>
@@ -386,36 +386,36 @@ const ComprehensiveServicesShowcase2025 = () => {
                   
                   <div className="grid grid-cols-4 gap-4 mb-4">
                     <div>
-                      <div className="text-2xl font-bold text-blue-600">
+                      <div className="text-2xl font-bold text-blue-60o0">
                         {service.currency}{service.price.toLocaleString()}
                       </div>
-                      <div className="text-sm text-gray-500">Monthly</div>
+                      <div className="text-sm text-gray-50o0">Monthly</div>
                     </div>
                     <div>
-                      <div className="text-lg font-bold text-green-600">{service.roi}</div>
-                      <div className="text-sm text-gray-500">ROI</div>
+                      <div className="text-lg font-bold text-green-60o0">{service.roi}</div>
+                      <div className="text-sm text-gray-50o0">ROI</div>
                     </div>
                     <div>
-                      <div className="text-lg font-bold text-gray-700">{service.estimatedDelivery}</div>
-                      <div className="text-sm text-gray-500">Delivery</div>
+                      <div className="text-lg font-bold text-gray-70o0">{service.estimatedDelivery}</div>
+                      <div className="text-sm text-gray-50o0">Delivery</div>
                     </div>
                     <div>
-                      <div className="text-lg font-bold text-gray-700">{service.supportLevel}</div>
-                      <div className="text-sm text-gray-500">Support</div>
+                      <div className="text-lg font-bold text-gray-70o0">{service.supportLevel}</div>
+                      <div className="text-sm text-gray-50o0">Support</div>
                     </div>
                   </div>
                   
                   <div className="flex items-center justify-between">
                     <div className="flex flex-wrap gap-2">
                       {service.tags.slice(0, 5).map((tag, tagIndex) => (
-                        <span key={tagIndex} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">
+                        <span key={tagIndex} className="px-2 py-1 bg-gray-10o0 text-gray-70o0 text-xs rounded-full">
                           {tag}
                         </span>
                       ))}
                     </div>
                     <button
                       onClick={() => setSelectedService(service)}
-                      className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-cyan-600 transition-all duration-300"
+                      className="bg-gradient-to-r from-blue-60o0 to-cyan-50o0 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-70o0 hover:to-cyan-60o0 transition-all duration-30o0"
                     >
                       View Details
                     </button>
@@ -428,33 +428,33 @@ const ComprehensiveServicesShowcase2025 = () => {
 
         {/* Contact CTA */}
         <div className="mt-20 text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
+          <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-2xl p-12 text-white">
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
             <p className="text-xl mb-8 opacity-90">
               Get in touch with our experts to discuss how our revolutionary services can drive your success
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href="tel:+13024640950"
-                className="flex items-center space-x-2 bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+                href="tel:+130o24640950"
+                className="flex items-center space-x-2 bg-white text-blue-60o0 px-8 py-3 rounded-lg font-medium hover:bg-gray-10o0 transition-colors"
               >
-                <Phone className="w-5 h-5" />
-                <span>+1 302 464 0950</span>
+                <Phone className="w-5 h-5"  />
+                <span>+1 30o2 464 0950</span>
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="flex items-center space-x-2 bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+                className="flex items-center space-x-2 bg-white text-blue-60o0 px-8 py-3 rounded-lg font-medium hover:bg-gray-10o0 transition-colors"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5"  />
                 <span>kleber@ziontechgroup.com</span>
               </a>
               <a
                 href="https://ziontechgroup.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+                className="flex items-center space-x-2 bg-white text-blue-60o0 px-8 py-3 rounded-lg font-medium hover:bg-gray-10o0 transition-colors"
               >
-                <ExternalLink className="w-5 h-5" />
+                <ExternalLink className="w-5 h-5"  />
                 <span>Visit Website</span>
               </a>
             </div>
@@ -484,13 +484,13 @@ const ComprehensiveServicesShowcase2025 = () => {
                   <div className="flex items-center space-x-4">
                     <div className="text-4xl">{getCategoryIcon(selectedService.category)}</div>
                     <div>
-                      <h2 className="text-3xl font-bold text-gray-900">{selectedService.title}</h2>
-                      <p className="text-gray-600 text-lg">{selectedService.description}</p>
+                      <h2 className="text-3xl font-bold text-gray-90o0">{selectedService.title}</h2>
+                      <p className="text-gray-60o0 text-lg">{selectedService.description}</p>
                     </div>
                   </div>
                   <button
                     onClick={() => setSelectedService(null)}
-                    className="text-gray-400 hover:text-gray-600 text-2xl"
+                    className="text-gray-40o0 hover:text-gray-60o0 text-2xl"
                   >
                     ×
                   </button>
@@ -498,34 +498,34 @@ const ComprehensiveServicesShowcase2025 = () => {
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">Service Details</h3>
+                    <h3 className="text-xl font-bold text-gray-90o0 mb-4">Service Details</h3>
                     <div className="space-y-4">
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Category:</span>
+                        <span className="text-gray-60o0">Category:</span>
                         <span className="font-medium">{selectedService.category}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Subcategory:</span>
+                        <span className="text-gray-60o0">Subcategory:</span>
                         <span className="font-medium">{selectedService.subcategory}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Price:</span>
-                        <span className="font-medium text-blue-600">{selectedService.currency}{selectedService.price.toLocaleString()}/month</span>
+                        <span className="text-gray-60o0">Price:</span>
+                        <span className="font-medium text-blue-60o0">{selectedService.currency}{selectedService.price.toLocaleString()}/month</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">ROI:</span>
-                        <span className="font-medium text-green-600">{selectedService.roi}</span>
+                        <span className="text-gray-60o0">ROI:</span>
+                        <span className="font-medium text-green-60o0">{selectedService.roi}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Delivery:</span>
+                        <span className="text-gray-60o0">Delivery:</span>
                         <span className="font-medium">{selectedService.estimatedDelivery}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Support:</span>
+                        <span className="text-gray-60o0">Support:</span>
                         <span className="font-medium">{selectedService.supportLevel}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Innovation Level:</span>
+                        <span className="text-gray-60o0">Innovation Level:</span>
                         <span className={`px-3 py-1 rounded-full text-sm font-medium ${getInnovationColor(selectedService.innovationLevel)}`}>
                           {selectedService.innovationLevel}
                         </span>
@@ -534,11 +534,11 @@ const ComprehensiveServicesShowcase2025 = () => {
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">Features</h3>
+                    <h3 className="text-xl font-bold text-gray-90o0 mb-4">Features</h3>
                     <ul className="space-y-2">
                       {selectedService.features.map((feature, index) => (
                         <li key={index} className="flex items-center space-x-2">
-                          <CheckCircle className="w-5 h-5 text-green-500" />
+                          <CheckCircle className="w-5 h-5 text-green-50o0"  />
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -547,22 +547,22 @@ const ComprehensiveServicesShowcase2025 = () => {
                 </div>
 
                 <div className="mt-8">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Benefits</h3>
+                  <h3 className="text-xl font-bold text-gray-90o0 mb-4">Benefits</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {selectedService.benefits.map((benefit, index) => (
                       <div key={index} className="flex items-center space-x-2 p-3 bg-green-50 rounded-lg">
-                        <TrendingUp className="w-5 h-5 text-green-600" />
-                        <span className="text-green-800">{benefit}</span>
+                        <TrendingUp className="w-5 h-5 text-green-60o0"  />
+                        <span className="text-green-80o0">{benefit}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
                 <div className="mt-8">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Use Cases</h3>
+                  <h3 className="text-xl font-bold text-gray-90o0 mb-4">Use Cases</h3>
                   <div className="flex flex-wrap gap-2">
                     {selectedService.useCases.map((useCase, index) => (
-                      <span key={index} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
+                      <span key={index} className="px-3 py-1 bg-blue-10o0 text-blue-80o0 rounded-full text-sm">
                         {useCase}
                       </span>
                     ))}
@@ -570,10 +570,10 @@ const ComprehensiveServicesShowcase2025 = () => {
                 </div>
 
                 <div className="mt-8">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Target Audience</h3>
+                  <h3 className="text-xl font-bold text-gray-90o0 mb-4">Target Audience</h3>
                   <div className="flex flex-wrap gap-2">
                     {selectedService.targetAudience.map((audience, index) => (
-                      <span key={index} className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">
+                      <span key={index} className="px-3 py-1 bg-purple-10o0 text-purple-80o0 rounded-full text-sm">
                         {audience}
                       </span>
                     ))}
@@ -582,40 +582,40 @@ const ComprehensiveServicesShowcase2025 = () => {
 
                 {selectedService.technicalSpecs && (
                   <div className="mt-8">
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">Technical Specifications</h3>
+                    <h3 className="text-xl font-bold text-gray-90o0 mb-4">Technical Specifications</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <h4 className="font-medium text-gray-700 mb-2">Technology Stack</h4>
+                        <h4 className="font-medium text-gray-70o0 mb-2">Technology Stack</h4>
                         <div className="flex flex-wrap gap-2">
                           {selectedService.technicalSpecs.technology.map((tech, index) => (
-                            <span key={index} className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-sm">
+                            <span key={index} className="px-2 py-1 bg-gray-10o0 text-gray-70o0 rounded text-sm">
                               {tech}
                             </span>
                           ))}
                         </div>
                       </div>
                       <div>
-                        <h4 className="font-medium text-gray-700 mb-2">Integrations</h4>
+                        <h4 className="font-medium text-gray-70o0 mb-2">Integrations</h4>
                         <div className="flex flex-wrap gap-2">
                           {selectedService.technicalSpecs.integrations.map((integration, index) => (
-                            <span key={index} className="px-2 py-1 bg-blue-100 text-blue-700 rounded text-sm">
+                            <span key={index} className="px-2 py-1 bg-blue-10o0 text-blue-70o0 rounded text-sm">
                               {integration}
                             </span>
                           ))}
                         </div>
                       </div>
                       <div>
-                        <h4 className="font-medium text-gray-700 mb-2">Security & Compliance</h4>
+                        <h4 className="font-medium text-gray-70o0 mb-2">Security & Compliance</h4>
                         <div className="flex flex-wrap gap-2">
                           {selectedService.technicalSpecs.security.map((security, index) => (
-                            <span key={index} className="px-2 py-1 bg-green-100 text-green-700 rounded text-sm">
+                            <span key={index} className="px-2 py-1 bg-green-10o0 text-green-70o0 rounded text-sm">
                               {security}
                             </span>
                           ))}
                         </div>
                       </div>
                       <div>
-                        <h4 className="font-medium text-gray-700 mb-2">Performance</h4>
+                        <h4 className="font-medium text-gray-70o0 mb-2">Performance</h4>
                         <div className="space-y-2">
                           <div className="flex justify-between">
                             <span>API Endpoints:</span>
@@ -633,14 +633,14 @@ const ComprehensiveServicesShowcase2025 = () => {
 
                 <div className="mt-8 flex flex-col sm:flex-row gap-4">
                   <a
-                    href="tel:+13024640950"
-                    className="flex-1 bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-3 px-6 rounded-lg font-medium text-center hover:from-blue-700 hover:to-cyan-600 transition-all duration-300"
+                    href="tel:+130o24640950"
+                    className="flex-1 bg-gradient-to-r from-blue-60o0 to-cyan-50o0 text-white py-3 px-6 rounded-lg font-medium text-center hover:from-blue-70o0 hover:to-cyan-60o0 transition-all duration-30o0"
                   >
-                    Call Now: +1 302 464 0950
+                    Call Now: +1 30o2 464 0950
                   </a>
                   <a
                     href="mailto:kleber@ziontechgroup.com"
-                    className="flex-1 bg-gradient-to-r from-purple-600 to-pink-500 text-white py-3 px-6 rounded-lg font-medium text-center hover:from-purple-700 hover:to-pink-600 transition-all duration-300"
+                    className="flex-1 bg-gradient-to-r from-purple-60o0 to-pink-50o0 text-white py-3 px-6 rounded-lg font-medium text-center hover:from-purple-70o0 hover:to-pink-60o0 transition-all duration-30o0"
                   >
                     Email: kleber@ziontechgroup.com
                   </a>
@@ -654,4 +654,4 @@ const ComprehensiveServicesShowcase2025 = () => {
   );
 };
 
-export default ComprehensiveServicesShowcase2025;
+export default ComprehensiveServicesShowcase20o25;

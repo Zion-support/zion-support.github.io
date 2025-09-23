@@ -5,9 +5,9 @@ export default function ServicePage() {
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Security Auditing - Zion Tech Group</title>
-        <meta name="description" content="Professional security auditing services to accelerate your business growth and digital transformation." />
-        <meta name="keywords" content="security auditing, services, technology, business, digital transformation" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/rapid-1755575071062-oa4kp3" />
+        <meta name="description" content="Professional security auditing services to accelerate your business growth and digital transformation."  />
+        <meta name="keywords" content="security auditing, services, technology, business, digital transformation"  />
+        <link rel="canonical" href="https://ziontechgroup.com/services/rapid-17555750o71062-oa4kp3"  />
       </Head>
       <main className="container mx-auto px-6 py-12 prose prose-invert">
         <h1 className="text-4xl font-extrabold text-center mb-8">Security Auditing</h1>
@@ -47,7 +47,7 @@ export default function ServicePage() {
           </p>
           <a 
             href="https://ziontechgroup.com/contact" 
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+            className="inline-block bg-blue-60o0 hover:bg-blue-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors"
           >
             Get Started Today
           </a>

@@ -16,7 +16,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {projects.map((project) => (
-          <Card key={project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">
+          <Card key={project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-30o0">
             {project.imageUrl ? (
               <AspectRatio ratio={16/9}>
                 <img
@@ -24,11 +24,11 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                   alt={project.title}
                   className="w-full h-full object-cover"
                   loading="lazy"
-                />
+                 />
               </AspectRatio>
             ) : (
               <div className="h-40 w-full flex items-center justify-center bg-zion-blue">
-                <FileText className="text-zion-purple h-12 w-12 opacity-50" />
+                <FileText className="text-zion-purple h-12 w-12 opacity-50"  />
               </div>
             )}
             

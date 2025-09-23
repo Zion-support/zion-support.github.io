@@ -271,8 +271,8 @@ export default function Navigation() {
     >
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 py-20">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
+          <h1 className="text-4xl font-bold text-gray-90o0 mb-6">Page</h1>
+          <p className="text-xl text-gray-60o0">Coming soon...</p>
         </div>
       </div>
     </MainLayout>

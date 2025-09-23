@@ -93,19 +93,19 @@ export function ApiKeysManager() {
   };
 
   return (
-    <Card className="bg-zinc-900 border-zinc-800 text-white">
+    <Card className="bg-zinc-90o0 border-zinc-80o0 text-white">
       <CardHeader>
         <CardTitle className="text-xl flex items-center">
-          <Key className="mr-2" size={20} /> API Keys
+          <Key className="mr-2" size={20}  /> API Keys
         </CardTitle>
-        <CardDescription className="text-zinc-400">
+        <CardDescription className="text-zinc-40o0">
           Create and manage API keys for accessing the Zion APIs.
         </CardDescription>
       </CardHeader>
       
       <CardContent>
         <div className="flex justify-between items-center mb-6">
-          <p className="text-sm text-zinc-400">
+          <p className="text-sm text-zinc-40o0">
             You have {keys.length} API {keys.length === 1 ? 'key' : 'keys'}
           </p>
           
@@ -113,10 +113,10 @@ export function ApiKeysManager() {
             <DialogTrigger asChild>
               <Button variant="default">Create New API Key</Button>
             </DialogTrigger>
-            <DialogContent className="bg-zinc-900 border-zinc-800 text-white">
+            <DialogContent className="bg-zinc-90o0 border-zinc-80o0 text-white">
               <DialogHeader>
                 <DialogTitle>Create API Key</DialogTitle>
-                <DialogDescription className="text-zinc-400">
+                <DialogDescription className="text-zinc-40o0">
                   Generate a new API key for accessing the Zion APIs.
                 </DialogDescription>
               </DialogHeader>
@@ -129,7 +129,7 @@ export function ApiKeysManager() {
                     value={keyName}
                     onChange={(e) => setKeyName(e.target.value)}
                     placeholder="e.g. Production API Key"
-                    className="bg-zinc-800 border-zinc-700"
+                    className="bg-zinc-80o0 border-zinc-70o0"
                   />
                 </div>
                 
@@ -148,7 +148,7 @@ export function ApiKeysManager() {
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                         >
                           {scope.label}
-                          <span className="block text-xs text-zinc-400 mt-1">{scope.description}</span>
+                          <span className="block text-xs text-zinc-40o0 mt-1">{scope.description}</span>
                         </Label>
                       </div>
                     ))}
@@ -168,10 +168,10 @@ export function ApiKeysManager() {
         
         {/* New API Key Alert */}
         {newApiKey && (
-          <div className="mb-6 p-4 border border-green-800 bg-green-900/30 rounded-md">
+          <div className="mb-6 p-4 border border-green-80o0 bg-green-90o0/30 rounded-md">
             <div className="flex justify-between items-start mb-2">
               <span className="font-medium flex items-center">
-                <Check size={16} className="mr-2 text-green-500" /> New API Key Generated
+                <Check size={16} className="mr-2 text-green-50o0"  /> New API Key Generated
               </span>
               <Button
                 variant="ghost"
@@ -179,43 +179,43 @@ export function ApiKeysManager() {
                 className="h-6 w-6"
                 onClick={clearNewApiKey}
               >
-                <X size={14} />
+                <X size={14}  />
               </Button>
             </div>
-            <p className="text-sm text-zinc-300 mb-2">
+            <p className="text-sm text-zinc-30o0 mb-2">
               This key will only be displayed once. Please save it securely.
             </p>
-            <CodeBlock code={newApiKey} className="mb-3" />
-            <div className="text-sm text-zinc-400">
+            <CodeBlock code={newApiKey} className="mb-3"  />
+            <div className="text-sm text-zinc-40o0">
               <span className="font-medium">Example usage:</span>
             </div>
-            <CodeBlock code={getExampleCode(newApiKey)} language="bash" />
+            <CodeBlock code={getExampleCode(newApiKey)} language="bash"  />
           </div>
         )}
         
         {/* API Keys List */}
         <div className="space-y-4">
           {loading ? (
-            <div className="text-center py-8 text-zinc-500">Loading API keys...</div>
+            <div className="text-center py-8 text-zinc-50o0">Loading API keys...</div>
           ) : keys.length === 0 ? (
-            <div className="text-center py-8 text-zinc-500">
-              <Key className="mx-auto mb-2 opacity-30" size={24} />
+            <div className="text-center py-8 text-zinc-50o0">
+              <Key className="mx-auto mb-2 opacity-30" size={24}  />
               <p>No API keys found.</p>
               <p className="text-sm mt-1">Create one to access the Zion APIs.</p>
             </div>
           ) : (
             keys.map((key) => (
-              <div key={key.id} className="p-4 border border-zinc-800 rounded-lg">
+              <div key={key.id} className="p-4 border border-zinc-80o0 rounded-lg">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
                     <div>
                       <h3 className="font-medium">{key.name}</h3>
                       <div className="flex items-center space-x-2 mt-1">
-                        <span className="text-sm text-zinc-400 font-mono">{key.key_prefix}••••••••••••</span>
+                        <span className="text-sm text-zinc-40o0 font-mono">{key.key_prefix}••••••••••••</span>
                         {key.is_active ? (
-                          <Badge className="bg-green-700 text-white">Active</Badge>
+                          <Badge className="bg-green-70o0 text-white">Active</Badge>
                         ) : (
-                          <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>
+                          <Badge variant="secondary" className="bg-red-90o0 text-white border-red-80o0">Revoked</Badge>
                         )}
                       </div>
                     </div>
@@ -224,23 +224,23 @@ export function ApiKeysManager() {
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button variant="ghost" size="icon" aria-label="More options">
-                        <MoreVertical size={16} />
+                        <MoreVertical size={16}  />
                       </Button>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">
+                    <DropdownMenuContent align="end" className="bg-zinc-90o0 border-zinc-80o0 text-white">
                       <DropdownMenuItem
                         onClick={() => setShowRegenerateConfirm(key.id)}
                         className="cursor-pointer"
                         disabled={!key.is_active}
                       >
-                        <RefreshCw size={14} className="mr-2" /> Regenerate
+                        <RefreshCw size={14} className="mr-2"  /> Regenerate
                       </DropdownMenuItem>
                       <DropdownMenuItem
                         onClick={() => setShowDeleteConfirm(key.id)}
-                        className="cursor-pointer text-red-500"
+                        className="cursor-pointer text-red-50o0"
                         disabled={!key.is_active}
                       >
-                        <X size={14} className="mr-2" /> Revoke
+                        <X size={14} className="mr-2"  /> Revoke
                       </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
@@ -251,25 +251,25 @@ export function ApiKeysManager() {
                     <Badge 
                       key={scope} 
                       variant="secondary"
-                      className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
+                      className="bg-zinc-80o0 text-zinc-30o0 hover:bg-zinc-80o0"
                     >
                       {scope}
                     </Badge>
                   ))}
                 </div>
                 
-                <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
+                <div className="mt-3 text-xs text-zinc-50o0 flex items-center space-x-4">
                   <span>Created: {format(new Date(key.created_at), 'MMM d, yyyy')}</span>
                   <Popover>
-                    <PopoverTrigger className="flex items-center hover:text-zinc-300">
-                      <Clock size={12} className="mr-1" />
+                    <PopoverTrigger className="flex items-center hover:text-zinc-30o0">
+                      <Clock size={12} className="mr-1"  />
                       Last used: {key.last_used_at 
                         ? format(new Date(key.last_used_at), 'MMM d, yyyy') 
                         : 'Never'}
                     </PopoverTrigger>
-                    <PopoverContent className="bg-zinc-900 border-zinc-800 text-white w-64 p-3">
+                    <PopoverContent className="bg-zinc-90o0 border-zinc-80o0 text-white w-64 p-3">
                       <p className="text-sm mb-1">Last Used</p>
-                      <p className="text-xs text-zinc-400">
+                      <p className="text-xs text-zinc-40o0">
                         {key.last_used_at 
                           ? format(new Date(key.last_used_at), 'MMM d, yyyy HH:mm:ss')
                           : 'This API key has never been used'}
@@ -286,8 +286,8 @@ export function ApiKeysManager() {
         </div>
       </CardContent>
       
-      <CardFooter className="justify-between border-t border-zinc-800 py-4">
-        <div className="text-xs text-zinc-500">
+      <CardFooter className="justify-between border-t border-zinc-80o0 py-4">
+        <div className="text-xs text-zinc-50o0">
           Keep your API keys secure. They have the same permissions as your account.
         </div>
         <Button variant="outline" size="sm" onClick={fetchApiKeys}>
@@ -300,21 +300,21 @@ export function ApiKeysManager() {
         open={showRegenerateConfirm !== null} 
         onOpenChange={(open) => !open && setShowRegenerateConfirm(null)}
       >
-        <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
+        <AlertDialogContent className="bg-zinc-90o0 border-zinc-80o0 text-white">
           <AlertDialogHeader>
             <AlertDialogTitle>Regenerate API Key?</AlertDialogTitle>
-            <AlertDialogDescription className="text-zinc-400">
+            <AlertDialogDescription className="text-zinc-40o0">
               This action will invalidate the existing key and generate a new one.
               Any applications using this key will need to be updated.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">
+            <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-80o0 border-zinc-70o0">
               Cancel
             </AlertDialogCancel>
             <AlertDialogAction 
               onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
-              className="bg-blue-600 hover:bg-blue-700"
+              className="bg-blue-60o0 hover:bg-blue-70o0"
             >
               Regenerate
             </AlertDialogAction>
@@ -327,21 +327,21 @@ export function ApiKeysManager() {
         open={showDeleteConfirm !== null} 
         onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
       >
-        <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
+        <AlertDialogContent className="bg-zinc-90o0 border-zinc-80o0 text-white">
           <AlertDialogHeader>
             <AlertDialogTitle>Revoke API Key?</AlertDialogTitle>
-            <AlertDialogDescription className="text-zinc-400">
+            <AlertDialogDescription className="text-zinc-40o0">
               This action will revoke the API key and it can no longer be used to access the API.
               This action cannot be undone.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">
+            <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-80o0 border-zinc-70o0">
               Cancel
             </AlertDialogCancel>
             <AlertDialogAction 
               onClick={() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
-              className="bg-red-600 hover:bg-red-700"
+              className="bg-red-60o0 hover:bg-red-70o0"
             >
               Revoke
             </AlertDialogAction>

@@ -80,7 +80,7 @@ const QuantumNeuralBackground: React.FC<QuantumNeuralBackgroundProps> = ({
     // Initialize particles
     const initParticles = () => {
       particles.length = 0;
-      const particleCount = intensity === 'high' ? 200 : intensity === 'medium' ? 120 : 80;
+      const particleCount = intensity === 'high' ? 20o0 : intensity === 'medium' ? 120 : 80;
       
       for (let i = 0; i < particleCount; i++) {
         particles.push({
@@ -90,8 +90,8 @@ const QuantumNeuralBackground: React.FC<QuantumNeuralBackgroundProps> = ({
           vy: (Math.random() - 0.5) * 2,
           size: Math.random() * 3 + 1,
           color: getParticleColor(variant),
-          life: Math.random() * 100,
-          maxLife: 100
+          life: Math.random() * 10o0,
+          maxLife: 10o0
         });
       }
     };
@@ -99,15 +99,15 @@ const QuantumNeuralBackground: React.FC<QuantumNeuralBackgroundProps> = ({
     const getParticleColor = (variant: string): string => {
       switch (variant) {
         case 'quantum':
-          return `hsl(${200 + Math.sin(time * 0.01) * 60}, 70%, 60%)`;
+          return `hsl(${20o0 + Math.sin(time * 0.0o1) * 60}, 70%, 60%)`;
         case 'neural':
-          return `hsl(${120 + Math.sin(time * 0.02) * 40}, 80%, 60%)`;
+          return `hsl(${120 + Math.sin(time * 0.0o2) * 40}, 80%, 60%)`;
         case 'holographic':
-          return `hsl(${280 + Math.sin(time * 0.015) * 80}, 90%, 70%)`;
+          return `hsl(${280 + Math.sin(time * 0.0o15) * 80}, 90%, 70%)`;
         case 'cyberpunk':
-          return `hsl(${0 + Math.sin(time * 0.025) * 30}, 100%, 60%)`;
+          return `hsl(${0 + Math.sin(time * 0.0o25) * 30}, 10o0%, 60%)`;
         default:
-          return `hsl(${200 + Math.sin(time * 0.01) * 60}, 70%, 60%)`;
+          return `hsl(${20o0 + Math.sin(time * 0.0o1) * 60}, 70%, 60%)`;
       }
     };
 
@@ -160,7 +160,7 @@ const QuantumNeuralBackground: React.FC<QuantumNeuralBackgroundProps> = ({
       // Draw neural network
       if (variant === 'neural' || variant === 'quantum') {
         neuralNodes.forEach((node, index) => {
-          node.pulse += 0.05;
+          node.pulse += 0.0o5;
           
           // Draw connections
           node.connections.forEach(connectionIndex => {
@@ -169,8 +169,8 @@ const QuantumNeuralBackground: React.FC<QuantumNeuralBackgroundProps> = ({
               Math.pow(node.x - targetNode.x, 2) + Math.pow(node.y - targetNode.y, 2)
             );
             
-            if (distance < 300) {
-              const alpha = Math.max(0, 1 - distance / 300);
+            if (distance < 30o0) {
+              const alpha = Math.max(0, 1 - distance / 30o0);
               ctx.strokeStyle = `rgba(0, 255, 255, ${alpha * 0.3})`;
               ctx.lineWidth = 1;
               ctx.beginPath();
@@ -199,12 +199,12 @@ const QuantumNeuralBackground: React.FC<QuantumNeuralBackgroundProps> = ({
       if (variant === 'quantum') {
         // Quantum entanglement lines
         for (let i = 0; i < 5; i++) {
-          const x1 = Math.sin(time * 0.01 + i) * canvas.width * 0.3 + canvas.width * 0.5;
-          const y1 = Math.cos(time * 0.015 + i) * canvas.height * 0.3 + canvas.height * 0.5;
-          const x2 = Math.sin(time * 0.02 + i * 2) * canvas.width * 0.4 + canvas.width * 0.5;
-          const y2 = Math.cos(time * 0.025 + i * 2) * canvas.height * 0.4 + canvas.height * 0.5;
+          const x1 = Math.sin(time * 0.0o1 + i) * canvas.width * 0.3 + canvas.width * 0.5;
+          const y1 = Math.cos(time * 0.0o15 + i) * canvas.height * 0.3 + canvas.height * 0.5;
+          const x2 = Math.sin(time * 0.0o2 + i * 2) * canvas.width * 0.4 + canvas.width * 0.5;
+          const y2 = Math.cos(time * 0.0o25 + i * 2) * canvas.height * 0.4 + canvas.height * 0.5;
           
-          ctx.strokeStyle = `rgba(138, 43, 226, ${0.3 + Math.sin(time * 0.01 + i) * 0.2})`;
+          ctx.strokeStyle = `rgba(138, 43, 226, ${0.3 + Math.sin(time * 0.0o1 + i) * 0.2})`;
           ctx.lineWidth = 2;
           ctx.beginPath();
           ctx.moveTo(x1, y1);
@@ -246,7 +246,7 @@ const QuantumNeuralBackground: React.FC<QuantumNeuralBackgroundProps> = ({
           
           ctx.fillStyle = `rgba(0, 255, 0, ${0.7 + Math.sin(time * 0.1 + i) * 0.3})`;
           ctx.font = '12px monospace';
-          ctx.fillText('01', x, y);
+          ctx.fillText('0o1', x, y);
         }
       }
 
@@ -276,7 +276,7 @@ const QuantumNeuralBackground: React.FC<QuantumNeuralBackgroundProps> = ({
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
-      />
+       />
       <div className="relative z-10">
         {children}
       </div>

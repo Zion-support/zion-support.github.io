@@ -75,11 +75,10 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     localStorage.setItem('theme', theme);
   }, [theme]);
 
-  const value = {
+  const value ={
     theme,
     setTheme,
-    isDark,
-  };
+    isDark};
 
   return (
     <ThemeContext.Provider value={value}>

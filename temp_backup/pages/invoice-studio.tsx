@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function InvoiceStudio() {
@@ -22,6 +21,6 @@ export default function InvoiceStudio() {
 			]}
 			industries={["Freelancers", "Agencies", "SMBs", "SaaS"]}
 			canonical="https://ziontechgroup.com/invoice-studio"
-		/>
+		 />
 	);
 }

@@ -7,7 +7,7 @@ const CloudNativeArchitectureBestPracticesChat: NextPage = () => {
     <div>
       <Head>
         <title>CloudNativeArchitectureBestPracticesChat - Zion Tech Solutions</title>
-        <meta name="description" content="CloudNativeArchitectureBestPracticesChat blog post" />
+        <meta name="description" content="CloudNativeArchitectureBestPracticesChat blog post"  />
       </Head>
       
       <main>

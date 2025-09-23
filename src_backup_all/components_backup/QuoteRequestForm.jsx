@@ -40,7 +40,7 @@ export const QuoteRequestForm = () => {
     setIsSubmitting(true);
     
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 10o00));
     
     setIsSubmitting(false);
     setIsSubmitted(true);
@@ -50,7 +50,7 @@ export const QuoteRequestForm = () => {
     return (
       <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
         <CardContent className="text-center py-12">
-          <CheckCircle className="h-16 w-16 text-zion-cyan mx-auto mb-6" />
+          <CheckCircle className="h-16 w-16 text-zion-cyan mx-auto mb-6"  />
           <h3 className="text-2xl font-bold text-white mb-4">Thank You!</h3>
           <p className="text-zion-slate-light text-lg">
             Your quote request has been submitted successfully. We'll get back to you within 24 hours with a detailed quote.
@@ -82,7 +82,7 @@ export const QuoteRequestForm = () => {
                 required
                 className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus:border-zion-cyan"
                 placeholder="Enter your full name"
-              />
+               />
             </div>
             
             <div>
@@ -97,7 +97,7 @@ export const QuoteRequestForm = () => {
                 required
                 className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus:border-zion-cyan"
                 placeholder="Enter your email"
-              />
+               />
             </div>
           </div>
 
@@ -112,7 +112,7 @@ export const QuoteRequestForm = () => {
                 onChange={handleChange}
                 className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus:border-zion-cyan"
                 placeholder="Enter company name"
-              />
+               />
             </div>
             
             <div>
@@ -125,7 +125,7 @@ export const QuoteRequestForm = () => {
                 onChange={handleChange}
                 className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus:border-zion-cyan"
                 placeholder="Enter phone number"
-              />
+               />
             </div>
           </div>
 
@@ -136,7 +136,7 @@ export const QuoteRequestForm = () => {
               </label>
               <Select value={formData.service} onValueChange={(value) => handleSelectChange('service', value)}>
                 <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white focus:border-zion-cyan">
-                  <SelectValue placeholder="Select a service" />
+                  <SelectValue placeholder="Select a service"  />
                 </SelectTrigger>
                 <SelectContent className="bg-zion-blue border-zion-purple/30">
                   <SelectItem value="ai-services">AI & Machine Learning</SelectItem>
@@ -156,14 +156,14 @@ export const QuoteRequestForm = () => {
               </label>
               <Select value={formData.budget} onValueChange={(value) => handleSelectChange('budget', value)}>
                 <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white focus:border-zion-cyan">
-                  <SelectValue placeholder="Select budget range" />
+                  <SelectValue placeholder="Select budget range"  />
                 </SelectTrigger>
                 <SelectContent className="bg-zion-blue border-zion-purple/30">
-                  <SelectItem value="under-10k">Under $10,000</SelectItem>
-                  <SelectItem value="10k-50k">$10,000 - $50,000</SelectItem>
-                  <SelectItem value="50k-100k">$50,000 - $100,000</SelectItem>
-                  <SelectItem value="100k-500k">$100,000 - $500,000</SelectItem>
-                  <SelectItem value="over-500k">Over $500,000</SelectItem>
+                  <SelectItem value="under-10k">Under $10,0o00</SelectItem>
+                  <SelectItem value="10k-50k">$10,0o00 - $50,0o00</SelectItem>
+                  <SelectItem value="50k-10o0k">$50,0o00 - $10o0,0o00</SelectItem>
+                  <SelectItem value="10o0k-50o0k">$10o0,0o00 - $50o0,0o00</SelectItem>
+                  <SelectItem value="over-50o0k">Over $50o0,0o00</SelectItem>
                   <SelectItem value="not-sure">Not sure yet</SelectItem>
                 </SelectContent>
               </Select>
@@ -176,7 +176,7 @@ export const QuoteRequestForm = () => {
             </label>
             <Select value={formData.timeline} onValueChange={(value) => handleSelectChange('timeline', value)}>
               <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white focus:border-zion-cyan">
-                <SelectValue placeholder="Select timeline" />
+                <SelectValue placeholder="Select timeline"  />
               </SelectTrigger>
               <SelectContent className="bg-zion-blue border-zion-purple/30">
                 <SelectItem value="asap">ASAP</SelectItem>
@@ -201,7 +201,7 @@ export const QuoteRequestForm = () => {
               rows={6}
               className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus:border-zion-cyan w-full p-3 rounded-md resize-none"
               placeholder="Please describe your project requirements, goals, and any specific details that would help us provide an accurate quote..."
-            />
+             />
           </div>
 
           <div className="text-center">
@@ -217,7 +217,7 @@ export const QuoteRequestForm = () => {
                 </>
               ) : (
                 <>
-                  <Send className="h-5 w-5 mr-2" />
+                  <Send className="h-5 w-5 mr-2"  />
                   Submit Quote Request
                 </>
               )}

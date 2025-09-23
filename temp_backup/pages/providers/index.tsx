@@ -10,8 +10,7 @@ export default function ProvidersPage() {
     category: 'all',
     minRating: 0,
     minAiMatch: 0,
-    sortBy: 'relevance',
-  });
+    sortBy: 'relevance'});
 
   const filtered = useMemo(() => {
     let list: ServiceProvider[] = [...PROVIDERS];
@@ -50,21 +49,21 @@ export default function ProvidersPage() {
     <div>
       <Head>
         <title>IT Service Providers</title>
-        <meta name="description" content="Discover and filter IT service providers. Compare AI-matched scores, ratings, and request quotes." />
+        <meta name="description" content="Discover and filter IT service providers. Compare AI-matched scores, ratings, and request quotes."  />
       </Head>
 
       <div className="mb-6">
         <h1 className="text-2xl font-semibold mb-2">IT Service Providers</h1>
-        <p className="text-sm text-gray-600 dark:text-gray-300">Browse vetted providers. Filter by category, rating, and AI match. Click Request Quote to get started.</p>
+        <p className="text-sm text-gray-60o0 dark:text-gray-30o0">Browse vetted providers. Filter by category, rating, and AI match. Click Request Quote to get started.</p>
       </div>
 
       <div className="mb-6">
-        <ProviderFilters state={filters} onChange={setFilters} />
+        <ProviderFilters state={filters} onChange={setFilters}  />
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {filtered.map((p) => (
-          <ProviderCard key={p.id} provider={p} />
+          <ProviderCard key={p.id} provider={p}  />
         ))}
       </div>
 

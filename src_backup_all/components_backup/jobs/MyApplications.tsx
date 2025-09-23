@@ -19,13 +19,13 @@ export function MyApplications() {
       case "viewed":
         return <Badge variant="outline">Viewed</Badge>;
       case "shortlisted":
-        return <Badge className="bg-blue-100 text-blue-800">Shortlisted</Badge>;
+        return <Badge className="bg-blue-10o0 text-blue-80o0">Shortlisted</Badge>;
       case "interview":
-        return <Badge className="bg-purple-100 text-purple-800">Interview</Badge>;
+        return <Badge className="bg-purple-10o0 text-purple-80o0">Interview</Badge>;
       case "hired":
-        return <Badge className="bg-green-100 text-green-800">Hired</Badge>;
+        return <Badge className="bg-green-10o0 text-green-80o0">Hired</Badge>;
       case "rejected":
-        return <Badge className="bg-red-100 text-red-800">Rejected</Badge>;
+        return <Badge className="bg-red-10o0 text-red-80o0">Rejected</Badge>;
       default:
         return <Badge variant="outline">{status}</Badge>;
     }
@@ -34,14 +34,14 @@ export function MyApplications() {
   if (isLoading) {
     return (
       <div className="flex justify-center items-center p-8">
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+        <Loader2 className="h-8 w-8 animate-spin text-primary"  />
       </div>
     );
   }
   
   if (error) {
     return (
-      <div className="text-center p-6 border rounded-md bg-red-50 text-red-800">
+      <div className="text-center p-6 border rounded-md bg-red-50 text-red-80o0">
         <p>{error}</p>
       </div>
     );
@@ -93,7 +93,7 @@ export function MyApplications() {
                   asChild
                 >
                   <Link href={`/jobs/${application.job_id}`}>
-                    <ExternalLink className="h-3 w-3 mr-1" /> View Job
+                    <ExternalLink className="h-3 w-3 mr-1"  /> View Job
                   </Link>
                 </Button>
                 
@@ -104,7 +104,7 @@ export function MyApplications() {
                   asChild
                 >
                   <Link href={`/messages?jobId=${application.job_id}`}>
-                    <MessageSquare className="h-3 w-3 mr-1" /> Contact Client
+                    <MessageSquare className="h-3 w-3 mr-1"  /> Contact Client
                   </Link>
                 </Button>
               </div>

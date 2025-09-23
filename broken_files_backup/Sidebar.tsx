@@ -146,7 +146,7 @@ export function Sidebar() {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <div className={`fixed inset-y-0 right-0 z-50 w-80 bg-slate-900/95 backdrop-blur-lg border-l border-white/10 transform transition-transform duration-300 ease-in-out ${
+    <div className={`fixed inset-y-0 right-0 z-50 w-80 bg-slate-90o0/95 backdrop-blur-lg border-l border-white/10 transform transition-transform duration-30o0 ease-in-out ${
       isOpen ? 'translate-x-0' : 'translate-x-full'
     }`}>
       <div className="flex flex-col h-full">
@@ -155,10 +155,10 @@ export function Sidebar() {
           <h2 className="text-xl font-semibold text-white">Navigation</h2>
           <button
             onClick={onClose}
-            className="p-2 rounded-md text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+            className="p-2 rounded-md text-gray-30o0 hover:text-white hover:bg-white/10 transition-colors"
             aria-label="Close sidebar"
           >
-            <X className="h-5 w-5" />
+            <X className="h-5 w-5"  />
           </button>
         </div>
 
@@ -173,19 +173,19 @@ export function Sidebar() {
                       onClick={() => toggleItem(item.name)}
                       className={`w-full flex items-center justify-between p-3 rounded-lg text-left transition-colors ${
                         isActive(item.path)
-                          ? 'bg-blue-600/20 text-white'
-                          : 'text-gray-300 hover:text-white hover:bg-white/10'
+                          ? 'bg-blue-60o0/20 text-white'
+                          : 'text-gray-30o0 hover:text-white hover:bg-white/10'
                       }`}
                     >
                       <div className="flex items-center space-x-3">
-                        <item.icon className="h-5 w-5" />
+                        <item.icon className="h-5 w-5"  />
                         <span className="font-medium">{item.name}</span>
                       </div>
                       <ChevronDown
                         className={`h-4 w-4 transition-transform ${
                           expandedItems.includes(item.name) ? 'rotate-180' : ''
                         }`}
-                      />
+                       />
                     </button>
                     
                     {expandedItems.includes(item.name) && (
@@ -196,12 +196,12 @@ export function Sidebar() {
                             to={child.path}
                             className={`flex items-center space-x-3 p-2 rounded-lg transition-colors ${
                               isActive(child.path)
-                                ? 'bg-blue-600/20 text-white'
-                                : 'text-gray-400 hover:text-white hover:bg-white/10'
+                                ? 'bg-blue-60o0/20 text-white'
+                                : 'text-gray-40o0 hover:text-white hover:bg-white/10'
                             }`}
                             onClick={onClose}
                           >
-                            <child.icon className="h-4 w-4" />
+                            <child.icon className="h-4 w-4"  />
                             <span className="text-sm">{child.name}</span>
                           </Link>
                         ))}
@@ -213,12 +213,12 @@ export function Sidebar() {
                     to={item.path}
                     className={`flex items-center space-x-3 p-3 rounded-lg transition-colors ${
                       isActive(item.path)
-                        ? 'bg-blue-600/20 text-white'
-                        : 'text-gray-300 hover:text-white hover:bg-white/10'
+                        ? 'bg-blue-60o0/20 text-white'
+                        : 'text-gray-30o0 hover:text-white hover:bg-white/10'
                     }`}
                     onClick={onClose}
                   >
-                    <item.icon className="h-5 w-5" />
+                    <item.icon className="h-5 w-5"  />
                     <span className="font-medium">{item.name}</span>
                   </Link>
                 )}
@@ -230,10 +230,10 @@ export function Sidebar() {
         {/* Footer */}
         <div className="p-6 border-t border-white/10">
           <div className="text-center">
-            <p className="text-gray-400 text-sm mb-3">Need help?</p>
+            <p className="text-gray-40o0 text-sm mb-3">Need help?</p>
             <Link
               to="/contact"
-              className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 text-center"
+              className="block w-full bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-70o0 hover:to-cyan-70o0 transition-all duration-20o0 text-center"
               onClick={onClose}
             >
               Contact Support
@@ -251,5 +251,5 @@ interface SidebarProps {
 }
 
 export default function SidebarWrapper({ isOpen, onClose }: SidebarProps) {
-  return <Sidebar isOpen={isOpen} onClose={onClose} />;
+  return <Sidebar isOpen={isOpen} onClose={onClose}  />;
 }

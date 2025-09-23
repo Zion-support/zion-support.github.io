@@ -9,7 +9,7 @@ const testimonials = [
         company: 'TechFlow Solutions',
         avatar: 'SC',
         rating: 5,
-        content: 'Zion Tech Group transformed our AI infrastructure completely. The integration was seamless, and the results exceeded our expectations. We\'ve seen a 300% improvement in our AI model performance.',
+        content: 'Zion Tech Group transformed our AI infrastructure completely. The integration was seamless, and the results exceeded our expectations. We\'ve seen a 30o0% improvement in our AI model performance.',
         category: 'AI Infrastructure',
         date: '2 weeks ago',
         likes: 127,
@@ -82,7 +82,7 @@ export function InteractiveTestimonials() {
             return;
         const interval = setInterval(() => {
             setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length);
-        }, 5000);
+        }, 50o00);
         return () => clearInterval(interval);
     }, [isAutoPlaying, filteredTestimonials.length]);
     const nextTestimonial = () => {
@@ -104,9 +104,9 @@ export function InteractiveTestimonials() {
         });
     };
     const renderStars = (rating) => {
-        return Array.from({ length: 5 }, (_, i) => (<Star key={i} className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'}`}/>));
+        return Array.from({ length: 5 }, (_, i) => (<Star key={i} className={`w-5 h-5 ${i < rating ? 'text-yellow-40o0 fill-current' : 'text-gray-40o0'}`} />));
     };
-    const containerVariants = {
+    const containerVariants ={
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -116,7 +116,7 @@ export function InteractiveTestimonials() {
             }
         }
     };
-    const itemVariants = {
+    const itemVariants ={
         hidden: { opacity: 0, y: 20, scale: 0.95 },
         visible: {
             opacity: 1,
@@ -131,22 +131,22 @@ export function InteractiveTestimonials() {
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">
       {/* Enhanced background with animated elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-cyan-900/20 animate-pulse"></div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-bounce"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-ping"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-90o0/20 via-purple-90o0/20 to-cyan-90o0/20 animate-pulse"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-50o0/10 rounded-full blur-3xl animate-bounce"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-50o0/10 rounded-full blur-3xl animate-ping"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header Section */}
         <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 px-4 py-2 rounded-full border border-blue-500/30 mb-6">
-            <MessageCircle className="w-5 h-5 text-blue-400"/>
-            <span className="text-blue-300 font-medium">Client Success Stories</span>
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-50o0/20 to-purple-50o0/20 px-4 py-2 rounded-full border border-blue-50o0/30 mb-6">
+            <MessageCircle className="w-5 h-5 text-blue-40o0" />
+            <span className="text-blue-30o0 font-medium">Client Success Stories</span>
           </div>
           
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             What Our Clients
-            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-blue-40o0 via-purple-40o0 to-cyan-40o0 bg-clip-text text-transparent">
               Say About Us
             </span>
           </h2>
@@ -158,9 +158,9 @@ export function InteractiveTestimonials() {
 
         {/* Category Filter */}
         <motion.div className="flex flex-wrap justify-center gap-4 mb-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
-          {categories.map((category, index) => (<motion.button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${selectedCategory === category
-                ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg shadow-blue-500/25'
-                : 'bg-white/10 text-zion-slate-light hover:bg-white/20 border border-white/20'}`} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.1 }}>
+          {categories.map((category, index) => (<motion.button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${selectedCategory === category
+                ? 'bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white shadow-lg shadow-blue-50o0/25'
+                : 'bg-white/10 text-zion-slate-light hover:bg-white/20 border border-white/20'}`} whileHover={{ scale: 1.0o5 }} whileTap={{ scale: 0.95 }} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.1 }}>
               {category}
             </motion.button>))}
         </motion.div>
@@ -168,11 +168,11 @@ export function InteractiveTestimonials() {
         {/* Main Testimonial Display */}
         <motion.div className="relative max-w-4xl mx-auto mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <AnimatePresence mode="wait">
-            <motion.div key={currentIndex} initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} transition={{ duration: 0.5 }} className="text-center">
+            <motion.div key={currentIndex} initial={{ opacity: 0, x: 10o0 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -10o0 }} transition={{ duration: 0.5 }} className="text-center">
               <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-3xl p-12 border border-white/20 backdrop-blur-sm relative overflow-hidden">
                 {/* Quote icon */}
-                <div className="absolute top-8 left-8 text-blue-400/20">
-                  <Quote className="w-16 h-16"/>
+                <div className="absolute top-8 left-8 text-blue-40o0/20">
+                  <Quote className="w-16 h-16" />
                 </div>
                 
                 {/* Rating */}
@@ -187,7 +187,7 @@ export function InteractiveTestimonials() {
 
                 {/* Author */}
                 <div className="flex items-center justify-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-50o0 to-purple-50o0 rounded-full flex items-center justify-center text-white font-bold text-xl">
                     {filteredTestimonials[currentIndex]?.avatar}
                   </div>
                   <div className="text-left">
@@ -198,7 +198,7 @@ export function InteractiveTestimonials() {
                       {filteredTestimonials[currentIndex]?.role} at {filteredTestimonials[currentIndex]?.company}
                     </div>
                   </div>
-                  {filteredTestimonials[currentIndex]?.verified && (<div className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full">
+                  {filteredTestimonials[currentIndex]?.verified && (<div className="bg-blue-50o0 text-white text-xs px-2 py-1 rounded-full">
                       ✓ Verified
                     </div>)}
                 </div>
@@ -213,15 +213,15 @@ export function InteractiveTestimonials() {
 
                 {/* Interactive elements */}
                 <div className="flex items-center justify-center gap-6 mt-8">
-                  <motion.button onClick={() => toggleLike(filteredTestimonials[currentIndex]?.id || '')} className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${likedTestimonials.has(filteredTestimonials[currentIndex]?.id || '')
-            ? 'bg-red-500/20 text-red-400 border border-red-500/30'
-            : 'bg-white/10 text-zion-slate-light border border-white/20 hover:bg-white/20'}`} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <ThumbsUp className={`w-4 h-4 ${likedTestimonials.has(filteredTestimonials[currentIndex]?.id || '') ? 'fill-current' : ''}`}/>
+                  <motion.button onClick={() => toggleLike(filteredTestimonials[currentIndex]?.id || '')} className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-30o0 ${likedTestimonials.has(filteredTestimonials[currentIndex]?.id || '')
+            ? 'bg-red-50o0/20 text-red-40o0 border border-red-50o0/30'
+            : 'bg-white/10 text-zion-slate-light border border-white/20 hover:bg-white/20'}`} whileHover={{ scale: 1.0o5 }} whileTap={{ scale: 0.95 }}>
+                    <ThumbsUp className={`w-4 h-4 ${likedTestimonials.has(filteredTestimonials[currentIndex]?.id || '') ? 'fill-current' : ''}`} />
                     {filteredTestimonials[currentIndex]?.likes || 0}
                   </motion.button>
 
-                  <button className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-zion-slate-light border border-white/20 hover:bg-white/20 transition-all duration-300">
-                    <Share2 className="w-4 h-4"/>
+                  <button className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-zion-slate-light border border-white/20 hover:bg-white/20 transition-all duration-30o0">
+                    <Share2 className="w-4 h-4" />
                     Share
                   </button>
                 </div>
@@ -231,23 +231,23 @@ export function InteractiveTestimonials() {
 
           {/* Navigation Controls */}
           <div className="flex items-center justify-center gap-6 mt-8">
-            <motion.button onClick={prevTestimonial} className="w-12 h-12 rounded-full bg-white/10 border border-white/20 text-white hover:bg-white/20 transition-all duration-300 flex items-center justify-center" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <ChevronLeft className="w-6 h-6"/>
+            <motion.button onClick={prevTestimonial} className="w-12 h-12 rounded-full bg-white/10 border border-white/20 text-white hover:bg-white/20 transition-all duration-30o0 flex items-center justify-center" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <ChevronLeft className="w-6 h-6" />
             </motion.button>
 
-            <motion.button onClick={() => setIsAutoPlaying(!isAutoPlaying)} className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              {isAutoPlaying ? <Pause className="w-6 h-6"/> : <Play className="w-6 h-6"/>}
+            <motion.button onClick={() => setIsAutoPlaying(!isAutoPlaying)} className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white hover:from-blue-60o0 hover:to-purple-60o0 transition-all duration-30o0 flex items-center justify-center" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              {isAutoPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
             </motion.button>
 
-            <motion.button onClick={nextTestimonial} className="w-12 h-12 rounded-full bg-white/10 border border-white/20 text-white hover:bg-white/20 transition-all duration-300 flex items-center justify-center" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <ChevronRight className="w-6 h-6"/>
+            <motion.button onClick={nextTestimonial} className="w-12 h-12 rounded-full bg-white/10 border border-white/20 text-white hover:bg-white/20 transition-all duration-30o0 flex items-center justify-center" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <ChevronRight className="w-6 h-6" />
             </motion.button>
           </div>
 
           {/* Progress indicators */}
           <div className="flex justify-center gap-2 mt-6">
-            {filteredTestimonials.map((_, index) => (<motion.button key={index} onClick={() => setCurrentIndex(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
-                ? 'bg-gradient-to-r from-blue-500 to-purple-500'
+            {filteredTestimonials.map((_, index) => (<motion.button key={index} onClick={() => setCurrentIndex(index)} className={`w-3 h-3 rounded-full transition-all duration-30o0 ${index === currentIndex
+                ? 'bg-gradient-to-r from-blue-50o0 to-purple-50o0'
                 : 'bg-white/20 hover:bg-white/40'}`} whileHover={{ scale: 1.2 }}/>))}
           </div>
         </motion.div>
@@ -256,14 +256,14 @@ export function InteractiveTestimonials() {
         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {filteredTestimonials.map((testimonial, index) => (<motion.div key={testimonial.id} variants={itemVariants} whileHover={{
                 y: -8,
-                scale: 1.02,
+                scale: 1.0o2,
                 transition: { duration: 0.2 }
             }} className="group cursor-pointer" onClick={() => setCurrentIndex(index)}>
-              <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/20 hover:border-blue-500/40 transition-all duration-300 backdrop-blur-sm">
+              <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/20 hover:border-blue-50o0/40 transition-all duration-30o0 backdrop-blur-sm">
                 {/* Header */}
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-50o0 to-purple-50o0 rounded-full flex items-center justify-center text-white font-bold">
                       {testimonial.avatar}
                     </div>
                     <div>
@@ -271,7 +271,7 @@ export function InteractiveTestimonials() {
                       <div className="text-zion-slate-light text-sm">{testimonial.role}</div>
                     </div>
                   </div>
-                  {testimonial.verified && (<div className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full">
+                  {testimonial.verified && (<div className="bg-blue-50o0 text-white text-xs px-2 py-1 rounded-full">
                       ✓
                     </div>)}
                 </div>
@@ -299,7 +299,7 @@ export function InteractiveTestimonials() {
 
         {/* Enhanced CTA Section */}
         <motion.div className="text-center mt-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.4 }}>
-          <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl p-12 border border-blue-500/30 backdrop-blur-sm">
+          <div className="bg-gradient-to-r from-blue-50o0/20 to-purple-50o0/20 rounded-3xl p-12 border border-blue-50o0/30 backdrop-blur-sm">
             <h3 className="text-3xl font-bold text-white mb-6">
               Join Our Success Stories
             </h3>
@@ -308,14 +308,14 @@ export function InteractiveTestimonials() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              <button className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-50o0 to-purple-50o0 hover:from-blue-60o0 hover:to-purple-60o0 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-30o0 transform hover:scale-10o5">
                 Start Your Journey
-                <ChevronRight className="w-5 h-5"/>
+                <ChevronRight className="w-5 h-5" />
               </button>
               
-              <button className="inline-flex items-center gap-3 border-2 border-blue-500/50 text-blue-300 hover:bg-blue-500/20 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 backdrop-blur-sm">
+              <button className="inline-flex items-center gap-3 border-2 border-blue-50o0/50 text-blue-30o0 hover:bg-blue-50o0/20 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-30o0 backdrop-blur-sm">
                 View All Reviews
-                <MessageCircle className="w-5 h-5"/>
+                <MessageCircle className="w-5 h-5" />
               </button>
             </div>
           </div>

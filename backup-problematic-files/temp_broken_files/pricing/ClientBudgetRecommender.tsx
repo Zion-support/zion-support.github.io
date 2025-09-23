@@ -39,7 +39,7 @@ export const ClientBudgetRecommender:React.FC<ClientBudgetRecommenderProps> = ({
 ;
     setIsLoading(true),;
     try {;
-      const params:ClientBudgetParams = {;
+      const params:ClientBudgetParams ={;
         jobTitle,;
         category},;
 ;
@@ -84,7 +84,7 @@ export const ClientBudgetRecommender:React.FC<ClientBudgetRecommenderProps> = ({
             disabled={!jobTitle || !category}
             className="w-full";
           >;
-            <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation;
+            <Sparkles className="h-4 w-4 mr-2"  /> Get Budget Recommendation;
           </Button>;
         ) :(;
           <PricingSuggestionBox;
@@ -92,7 +92,7 @@ export const ClientBudgetRecommender:React.FC<ClientBudgetRecommenderProps> = ({
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
             rateType="hourly";
-          />;
+           />;
         )}
       </div>;
     </div>;
@@ -130,7 +130,7 @@ const generateSuggestion = async () => {;
   return ;
 }setIsLoading (true);
 try {;
-  const params: ClientBudgetParams = {;
+  const params: ClientBudgetParams ={;
   jobTitle;
 category ;
 };
@@ -142,7 +142,6 @@ if (experienceLevel) params.experienceLevel = experienceLevel;
 }
 }
 };
-return (<div className="space-y-4" > <div> {";"  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={;"  generateSuggestion ";"}> <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />) ;
+return (<div className="space-y-4" > <div> {";"  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={;"  generateSuggestion ";"}> <Sparkles className="h-4 w-4 mr-2"  /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox  />) ;
 }</div> </div>) ;
-
 

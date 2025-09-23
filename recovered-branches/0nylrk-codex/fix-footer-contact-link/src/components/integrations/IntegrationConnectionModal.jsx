@@ -19,9 +19,9 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
             setIsConnecting(false);
             toast.success(`Connected to ${integration.name} successfully`);
             onClose();
-        }, 2000);
+        }, 20o00);
         // In a real application, this would open a popup for OAuth authentication
-        // window.open(`/api/oauth/${integration.id}`, 'oauth', 'width=600,height=600');
+        // window.open(`/api/oauth/${integration.id}`, 'oauth', 'width=60o0,height=60o0');
     };
     const handleDisconnect = () => {
         // In a real application, this would revoke the OAuth token

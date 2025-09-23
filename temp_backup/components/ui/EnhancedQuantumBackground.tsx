@@ -43,11 +43,11 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
       type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk';
     }> = [];
 
-    const colors = {
-      quantum: ['#00ffff', '#0080ff', '#8000ff', '#ff0080'],
-      holographic: ['#ff00ff', '#8000ff', '#0080ff', '#00ffff'],
-      neural: ['#00ff80', '#80ff00', '#ff8000', '#ff0080'],
-      cyberpunk: ['#ff0000', '#ff8000', '#ffff00', '#80ff00']
+    const colors ={
+      quantum: ['#0o0ffff', '#0o080ff', '#80o00ff', '#ff0o080'],
+      holographic: ['#ff0o0ff', '#80o00ff', '#0o080ff', '#0o0ffff'],
+      neural: ['#0o0ff80', '#80ff0o0', '#ff80o00', '#ff0o080'],
+      cyberpunk: ['#ff0o000', '#ff80o00', '#ffff0o0', '#80ff0o0']
     };
 
     const createParticle = () => {
@@ -59,15 +59,15 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
         vx: (Math.random() - 0.5) * 2 * intensity,
         vy: (Math.random() - 0.5) * 2 * intensity,
         size: Math.random() * 3 * intensity + 1,
-        life: Math.random() * 100,
-        maxLife: 100,
+        life: Math.random() * 10o0,
+        maxLife: 10o0,
         color: colorSet[Math.floor(Math.random() * colorSet.length)],
         type
       };
     };
 
     // Initialize particles
-    for (let i = 0; i < 100 * intensity; i++) {
+    for (let i = 0; i < 10o0 * intensity; i++) {
       particles.push(createParticle());
     }
 
@@ -118,8 +118,8 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
             Math.pow(particle1.y - particle2.y, 2)
           );
           
-          if (distance < 100 * intensity) {
-            const alpha = (100 - distance) / 100 * 0.1;
+          if (distance < 10o0 * intensity) {
+            const alpha = (10o0 - distance) / 10o0 * 0.1;
             ctx.globalAlpha = alpha;
             ctx.strokeStyle = particle1.color;
             ctx.lineWidth = 1;
@@ -133,12 +133,12 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
 
       // Draw quantum field effects
       if (variant === 'quantum' || variant === 'default') {
-        ctx.globalAlpha = 0.05;
-        ctx.fillStyle = '#00ffff';
+        ctx.globalAlpha = 0.0o5;
+        ctx.fillStyle = '#0o0ffff';
         for (let i = 0; i < 5; i++) {
-          const x = Math.sin(Date.now() * 0.001 + i) * canvas.width * 0.5 + canvas.width * 0.5;
-          const y = Math.cos(Date.now() * 0.001 + i) * canvas.height * 0.5 + canvas.height * 0.5;
-          const radius = 50 + Math.sin(Date.now() * 0.002 + i) * 30;
+          const x = Math.sin(Date.now() * 0.0o01 + i) * canvas.width * 0.5 + canvas.width * 0.5;
+          const y = Math.cos(Date.now() * 0.0o01 + i) * canvas.height * 0.5 + canvas.height * 0.5;
+          const radius = 50 + Math.sin(Date.now() * 0.0o02 + i) * 30;
           
           ctx.beginPath();
           ctx.arc(x, y, radius, 0, Math.PI * 2);
@@ -148,8 +148,8 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
 
       // Draw holographic matrix
       if (variant === 'holographic') {
-        ctx.globalAlpha = 0.03;
-        ctx.strokeStyle = '#ff00ff';
+        ctx.globalAlpha = 0.0o3;
+        ctx.strokeStyle = '#ff0o0ff';
         ctx.lineWidth = 1;
         
         for (let i = 0; i < canvas.width; i += 50) {
@@ -169,17 +169,17 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
 
       // Draw neural network
       if (variant === 'neural') {
-        ctx.globalAlpha = 0.02;
-        ctx.strokeStyle = '#00ff80';
+        ctx.globalAlpha = 0.0o2;
+        ctx.strokeStyle = '#0o0ff80';
         ctx.lineWidth = 2;
         
         const nodes = 8;
         for (let i = 0; i < nodes; i++) {
           for (let j = i + 1; j < nodes; j++) {
             const x1 = (i / (nodes - 1)) * canvas.width;
-            const y1 = Math.sin(Date.now() * 0.001 + i) * 100 + canvas.height * 0.5;
+            const y1 = Math.sin(Date.now() * 0.0o01 + i) * 10o0 + canvas.height * 0.5;
             const x2 = (j / (nodes - 1)) * canvas.width;
-            const y2 = Math.cos(Date.now() * 0.001 + j) * 100 + canvas.height * 0.5;
+            const y2 = Math.cos(Date.now() * 0.0o01 + j) * 10o0 + canvas.height * 0.5;
             
             ctx.beginPath();
             ctx.moveTo(x1, y1);
@@ -191,8 +191,8 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
 
       // Draw cyberpunk grid
       if (variant === 'cyberpunk') {
-        ctx.globalAlpha = 0.04;
-        ctx.strokeStyle = '#ff0000';
+        ctx.globalAlpha = 0.0o4;
+        ctx.strokeStyle = '#ff0o000';
         ctx.lineWidth = 1;
         
         const gridSize = 80;
@@ -231,7 +231,7 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
-      />
+       />
       
       {/* Gradient Overlays */}
       <div className="fixed inset-0 pointer-events-none" style={{ zIndex: -1 }}>
@@ -243,7 +243,7 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
                          radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
                          radial-gradient(circle at 40% 40%, rgba(236, 73, 153, 0.3) 0%, transparent 50%)`
           }}
-        />
+         />
         
         {/* Quantum field effects */}
         <div 
@@ -251,17 +251,17 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
           style={{
             background: `radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.2) 0%, transparent 70%)`
           }}
-        />
+         />
         
         {/* Holographic matrix overlay */}
         {variant === 'holographic' && (
           <div 
             className="absolute inset-0 opacity-10"
             style={{
-              background: `linear-gradient(90deg, transparent 0%, rgba(255, 0, 255, 0.1) 50%, transparent 100%),
-                           linear-gradient(0deg, transparent 0%, rgba(0, 255, 255, 0.1) 50%, transparent 100%)`
+              background: `linear-gradient(90deg, transparent 0%, rgba(255, 0, 255, 0.1) 50%, transparent 10o0%),
+                           linear-gradient(0deg, transparent 0%, rgba(0, 255, 255, 0.1) 50%, transparent 10o0%)`
             }}
-          />
+           />
         )}
         
         {/* Neural network overlay */}
@@ -272,7 +272,7 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
               background: `radial-gradient(circle at 30% 70%, rgba(0, 255, 128, 0.2) 0%, transparent 40%),
                            radial-gradient(circle at 70% 30%, rgba(128, 255, 0, 0.2) 0%, transparent 40%)`
             }}
-          />
+           />
         )}
         
         {/* Cyberpunk overlay */}
@@ -280,16 +280,16 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
           <div 
             className="absolute inset-0 opacity-20"
             style={{
-              background: `linear-gradient(45deg, transparent 0%, rgba(255, 0, 0, 0.1) 25%, transparent 50%, rgba(255, 128, 0, 0.1) 75%, transparent 100%)`
+              background: `linear-gradient(45deg, transparent 0%, rgba(255, 0, 0, 0.1) 25%, transparent 50%, rgba(255, 128, 0, 0.1) 75%, transparent 10o0%)`
             }}
-          />
+           />
         )}
       </div>
 
       {/* Floating geometric shapes */}
       <div className="fixed inset-0 pointer-events-none" style={{ zIndex: -1 }}>
         <motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-full"
+          className="absolute top-20 left-20 w-32 h-32 border border-cyan-40o0/20 rounded-full"
           animate={{
             scale: [1, 1.2, 1],
             rotate: [0, 180, 360],
@@ -300,13 +300,13 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
         
         <motion.div
-          className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 transform rotate-45"
+          className="absolute top-40 right-32 w-24 h-24 border border-purple-40o0/20 transform rotate-45"
           animate={{
             scale: [1, 1.5, 1],
-            rotate: [45, 225, 405],
+            rotate: [45, 225, 40o5],
             opacity: [0.1, 0.4, 0.1]
           }}
           transition={{
@@ -315,10 +315,10 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
             ease: "easeInOut",
             delay: 2
           }}
-        />
+         />
         
         <motion.div
-          className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 rounded-full"
+          className="absolute bottom-32 left-32 w-40 h-40 border border-pink-40o0/20 rounded-full"
           animate={{
             scale: [1, 0.8, 1],
             rotate: [0, -180, -360],
@@ -330,7 +330,7 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
             ease: "easeInOut",
             delay: 4
           }}
-        />
+         />
       </div>
 
       {/* Content */}

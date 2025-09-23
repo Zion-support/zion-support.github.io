@@ -5,16 +5,14 @@ import {
   FacebookShareButton,
   FacebookIcon,
   TwitterShareButton,
-  TwitterIcon,
-} from 'react-share';
+  TwitterIcon} from 'react-share';
 
 export default function PageShareButtons({
   title,
   url,
   description,
   onShare,
-  utm = 'utm_source=social&utm_medium=share&utm_campaign=blog',
-}: {
+  utm = 'utm_source=social&utm_medium=share&utm_campaign=blog'}: {
   title: string;
   url: string;
   description?: string;
@@ -33,13 +31,13 @@ export default function PageShareButtons({
   return (
     <div className="flex items-center gap-3">
       <LinkedinShareButton url={withUtm} title={title} summary={description} onClick={handle('linkedin')}>
-        <LinkedinIcon size={36} round />
+        <LinkedinIcon size={36} round  />
       </LinkedinShareButton>
       <TwitterShareButton url={withUtm} title={title} onClick={handle('x')}>
-        <TwitterIcon size={36} round />
+        <TwitterIcon size={36} round  />
       </TwitterShareButton>
       <FacebookShareButton url={withUtm} quote={title} hashtag="#ZionAI" onClick={handle('facebook')}>
-        <FacebookIcon size={36} round />
+        <FacebookIcon size={36} round  />
       </FacebookShareButton>
     </div>
   );

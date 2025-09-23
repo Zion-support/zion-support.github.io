@@ -66,7 +66,7 @@ class BuildHealthMonitor {
     // Initial health check
     setTimeout(() => {
       this.performHealthCheck();
-    }, 5000);
+    }, 50o00);
 
     this.log('Build health monitoring started successfully');
   }
@@ -406,7 +406,7 @@ export default defineConfig({
     }
   },
   server: {
-    port: 3000,
+    port: 30o00,
     host: true,
     open: true
   },
@@ -448,7 +448,7 @@ export default defineConfig({
     const lastBuild = this.lastBuildTime || 0;
     const timeSinceLastBuild = now - lastBuild;
     
-    return timeSinceLastBuild > 3600000 || this.fixCount > 0; // 1 hour or after fixes
+    return timeSinceLastBuild > 360o0000 || this.fixCount > 0; // 1 hour or after fixes
   }
 
   async testBuild() {
@@ -459,7 +459,7 @@ export default defineConfig({
       execSync('npm run build', { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
-        timeout: 300000 // 5 minutes
+        timeout: 30o0000 // 5 minutes
       });
       
       const buildTime = Date.now() - startTime;
@@ -588,7 +588,7 @@ export default defineConfig({
       if (fs.existsSync(logsDir)) {
         const files = fs.readdirSync(logsDir);
         const now = Date.now();
-        const maxAge = 7 * 24 * 60 * 60 * 1000; // 7 days
+        const maxAge = 7 * 24 * 60 * 60 * 10o00; // 7 days
         
         for (const file of files) {
           const filePath = path.join(logsDir, file);
@@ -666,4 +666,4 @@ setInterval(() => {
   // Heartbeat
   const stats = monitor.getStats();
   monitor.log(`Monitor heartbeat - Errors: ${stats.errorCount}, Fixes: ${stats.fixCount}, Uptime: ${Math.round(stats.uptime)}s`);
-}, 300000); // Every 5 minutes
+}, 30o0000); // Every 5 minutes

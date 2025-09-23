@@ -74,7 +74,7 @@ export function TalentCard({
             </div>
             {talent.is_verified && (
               <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">
-                <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
+                <CheckCircle2 className="w-5 h-5 text-zion-cyan"  />
               </div>
             )}
           </div>
@@ -88,7 +88,7 @@ export function TalentCard({
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
                 onClick={handleToggleSave}
               >
-                <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
+                <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-40o0 text-yellow-40o0" : ""}`}  />
                 <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
               </Button>
             </div>
@@ -97,13 +97,13 @@ export function TalentCard({
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
                 <div className="flex items-center text-zion-slate-light">
-                  <MapPin className="h-4 w-4 mr-1" />
+                  <MapPin className="h-4 w-4 mr-1"  />
                   <span>{talent.location}</span>
                 </div>
               )}
               {talent.availability_type && (
                 <div className="flex items-center text-zion-slate-light">
-                  <Clock className="h-4 w-4 mr-1" />
+                  <Clock className="h-4 w-4 mr-1"  />
                   <span>{talent.availability_type}</span>
                 </div>
               )}
@@ -160,7 +160,7 @@ export function TalentCard({
               onClick={handleViewProfile}
               className="text-zion-cyan hover:text-white hover:bg-zion-blue-light"
             >
-              View <ArrowRight className="ml-1 h-4 w-4" />
+              View <ArrowRight className="ml-1 h-4 w-4"  />
             </Button>
           </div>
         </div>

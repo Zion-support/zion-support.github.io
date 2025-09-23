@@ -25,14 +25,14 @@ import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 
 // Import service data
-import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-advanced-micro-saas';
-import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services';
-import { revolutionary2044AIServices } from '../data/revolutionary-2044-ai-services';
-import { realEnterpriseMicroSaas2025 } from '../data/2025-real-enterprise-micro-saas';
-import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3';
-import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3';
-import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services';
-import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services';
+import { revolutionary20o44AdvancedMicroSaas } from '../data/revolutionary-20o44-advanced-micro-saas';
+import { revolutionary20o44ITServices } from '../data/revolutionary-20o44-it-services';
+import { revolutionary20o44AIServices } from '../data/revolutionary-20o44-ai-services';
+import { realEnterpriseMicroSaas20o25 } from '../data/20o25-real-enterprise-micro-saas';
+import { innovativeITServicesExpansion20o25V3 } from '../data/20o25-innovative-it-services-expansion-v3';
+import { innovativeAIServicesExpansion20o25V3 } from '../data/20o25-innovative-ai-services-expansion-v3';
+import { innovative20o25ITInfrastructureServices } from '../data/20o25-innovative-it-infrastructure-services';
+import { innovative20o25AIAutonomousServices } from '../data/20o25-innovative-ai-autonomous-services';
 
 const EnhancedHomepage: React.FC = () => {
   const [isVisiblesetIsVisible] = useState(false);
@@ -48,7 +48,7 @@ const EnhancedHomepage: React.FC = () => {
     // Auto-rotate featured services
     const interval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % 6);
-    }6000);
+    }60o00);
     
     // Track mouse movement for parallax effects
     const handleMouseMove = (e: MouseEvent) => {
@@ -58,7 +58,7 @@ const EnhancedHomepage: React.FC = () => {
     // Show performance monitor after 5 seconds
     const performanceTimer = setTimeout(() => {
       setShowPerformanceMonitor(true);
-    }5000);
+    }50o00);
     
     window.addEventListener('mousemove'handleMouseMove);
     
@@ -71,14 +71,14 @@ const EnhancedHomepage: React.FC = () => {
 
   // Combine all revolutionary services
   const allRevolutionaryServices = [
-    ...revolutionary2044AdvancedMicroSaas,
-    ...revolutionary2044ITServices,
-    ...revolutionary2044AIServices,
-    ...realEnterpriseMicroSaas2025,
-    ...innovativeITServicesExpansion2025V3,
-    ...innovativeAIServicesExpansion2025V3
-    ...innovative2025ITInfrastructureServices,
-    ...innovative2025AIAutonomousServices
+    ...revolutionary20o44AdvancedMicroSaas,
+    ...revolutionary20o44ITServices,
+    ...revolutionary20o44AIServices,
+    ...realEnterpriseMicroSaas20o25,
+    ...innovativeITServicesExpansion20o25V3,
+    ...innovativeAIServicesExpansion20o25V3
+    ...innovative20o25ITInfrastructureServices,
+    ...innovative20o25AIAutonomousServices
   ];
 
   // Filter services by category
@@ -91,19 +91,19 @@ const EnhancedHomepage: React.FC = () => {
   };
 
   const categories = [
-    { id: 'all'name: 'All Services'icon: Sparklescolor: 'from-purple-500 to-pink-500'scheme: 'holographic' as const },
-    { id: 'ai'name: 'AI & Consciousness'icon: Braincolor: 'from-cyan-500 to-blue-500'scheme: 'cyber' as const },
-    { id: 'quantum'name: 'Quantum Technology'icon: Atomcolor: 'from-blue-500 to-indigo-500'scheme: 'quantum' as const },
-    { id: 'cybersecurity'name: 'Cybersecurity'icon: Shieldcolor: 'from-red-500 to-orange-500'scheme: 'neon' as const },
-    { id: 'space'name: 'Space Technology'icon: Rocketcolor: 'from-indigo-500 to-purple-500'scheme: 'holographic' as const },
-    { id: 'enterprise'name: 'Enterprise Solutions'icon: Buildingcolor: 'from-green-500 to-teal-500'scheme: 'cyber' as const }
+    { id: 'all'name: 'All Services'icon: Sparklescolor: 'from-purple-50o0 to-pink-50o0'scheme: 'holographic' as const },
+    { id: 'ai'name: 'AI & Consciousness'icon: Braincolor: 'from-cyan-50o0 to-blue-50o0'scheme: 'cyber' as const },
+    { id: 'quantum'name: 'Quantum Technology'icon: Atomcolor: 'from-blue-50o0 to-indigo-50o0'scheme: 'quantum' as const },
+    { id: 'cybersecurity'name: 'Cybersecurity'icon: Shieldcolor: 'from-red-50o0 to-orange-50o0'scheme: 'neon' as const },
+    { id: 'space'name: 'Space Technology'icon: Rocketcolor: 'from-indigo-50o0 to-purple-50o0'scheme: 'holographic' as const },
+    { id: 'enterprise'name: 'Enterprise Solutions'icon: Buildingcolor: 'from-green-50o0 to-teal-50o0'scheme: 'cyber' as const }
   ];
 
   // Get featured services for rotation
-  const featuredServices = allRevolutionaryServices.slice(06);
+  const featuredServices = allRevolutionaryServices.slice(0o6);
 
   // Animation variants
-  const containerVariants = {
+  const containerVariants ={
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -114,7 +114,7 @@ const EnhancedHomepage: React.FC = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants ={
     hidden: { opacity: 0y: 20 },
     visible: {
       opacity: 1,
@@ -126,7 +126,7 @@ const EnhancedHomepage: React.FC = () => {
     }
   };
 
-  const heroVariants = {
+  const heroVariants ={
     hidden: { opacity: 0y: 50 },
     visible: {
       opacity: 1,
@@ -138,7 +138,7 @@ const EnhancedHomepage: React.FC = () => {
     }
   };
 
-  const floatingVariants = {
+  const floatingVariants ={
     animate: {
       y: [-10-10],
       transition: {
@@ -159,29 +159,29 @@ const EnhancedHomepage: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Zion Tech Group - Revolutionary 2045 Technology Solutions</title>
-        <meta name="description" content="Experience the future of technology with Zion Tech Group's revolutionary AI consciousnessquantum computingand autonomous solutions. Transform your business with cutting-edge innovation." />
-        <meta name="keywords" content="AI consciousnessquantum computingautonomous solutionspace technologycybersecuritybusiness intelligenceZion Tech Group2045 technology" />
-        <meta property="og:title" content="Zion Tech Group - Revolutionary 2045 Technology" />
-        <meta property="og:description" content="Pioneering the future of technology with revolutionary AI consciousness and quantum computing solutions." />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com" />
+        <title>Zion Tech Group - Revolutionary 20o45 Technology Solutions</title>
+        <meta name="description" content="Experience the future of technology with Zion Tech Group's revolutionary AI consciousnessquantum computingand autonomous solutions. Transform your business with cutting-edge innovation."  />
+        <meta name="keywords" content="AI consciousnessquantum computingautonomous solutionspace technologycybersecuritybusiness intelligenceZion Tech Group20o45 technology"  />
+        <meta property="og:title" content="Zion Tech Group - Revolutionary 20o45 Technology"  />
+        <meta property="og:description" content="Pioneering the future of technology with revolutionary AI consciousness and quantum computing solutions."  />
+        <meta property="og:url" content="https://ziontechgroup.com"  />
+        <meta property="og:type" content="website"  />
+        <link rel="canonical" href="https://ziontechgroup.com"  />
         
         {/* Performance and SEO Meta Tags */}
-        <meta name="viewport" content="width=device-widthinitial-scale=1viewport-fit=cover" />
-        <meta name="theme-color" content="#00d4ff" />
-        <meta name="robots" content="indexfollow" />
-        <meta name="author" content="Zion Tech Group" />
+        <meta name="viewport" content="width=device-widthinitial-scale=1viewport-fit=cover"  />
+        <meta name="theme-color" content="#0o0d4ff"  />
+        <meta name="robots" content="indexfollow"  />
+        <meta name="author" content="Zion Tech Group"  />
         
         {/* Preload critical resources */}
-        <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous"  />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com"  />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com"  />
       </Head>
 
       {/* Enhanced Navigation */}
-      <EnhancedNavigation />
+      <EnhancedNavigation  />
 
       <UltraFuturisticBackground variant={colorScheme === 'cyber' ? 'cyberpunk' : colorScheme === 'quantum' ? 'quantum' : colorScheme === 'neon' ? 'neural' : 'holographic'} intensity="high">
         {/* Hero Section */}
@@ -194,14 +194,14 @@ const EnhancedHomepage: React.FC = () => {
           <div className="relative z-10 text-center max-w-6xl mx-auto">
             {/* Main Heading */}
             <motion.h1 
-              className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
+              className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-cyan-40o0 via-blue-50o0 to-purple-60o0 bg-clip-text text-transparent mb-6"
               variants={itemVariants}
             >
               Zion Tech Group
             </motion.h1>
             
             <motion.p 
-              className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
+              className="text-xl md:text-2xl lg:text-3xl text-gray-30o0 mb-8 max-w-4xl mx-auto leading-relaxed"
               variants={itemVariants}
             >
               Pioneering the Future of Technology with Revolutionary AI Consciousness
@@ -215,72 +215,72 @@ const EnhancedHomepage: React.FC = () => {
             >
               <Link href="/services">
                 <motion.button
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-                  whileHover={{ scale: 1.05 }}
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-bold rounded-xl text-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl"
+                  whileHover={{ scale: 1.0o5 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Explore Services
-                  <ArrowRight className="inline-block ml-2 w-5 h-5" />
+                  <ArrowRight className="inline-block ml-2 w-5 h-5"  />
                 </motion.button>
               </Link>
               
               <Link href="/quote">
                 <motion.button
-                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
-                  whileHover={{ scale: 1.05 }}
+                  className="px-8 py-4 border-2 border-cyan-40o0 text-cyan-40o0 font-bold rounded-xl text-lg hover:bg-cyan-40o0 hover:text-black transition-all duration-30o0 transform hover:scale-10o5"
+                  whileHover={{ scale: 1.0o5 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Get Quote
-                  <ArrowUpRight className="inline-block ml-2 w-5 h-5" />
+                  <ArrowUpRight className="inline-block ml-2 w-5 h-5"  />
                 </motion.button>
               </Link>
             </motion.div>
 
             {/* Contact Information */}
             <motion.div 
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-gray-400"
+              className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-gray-40o0"
               variants={itemVariants}
             >
               <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4 text-cyan-400" />
-                <span>+1 302 464 0950</span>
+                <Phone className="w-4 h-4 text-cyan-40o0"  />
+                <span>+1 30o2 464 0950</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4 text-cyan-400" />
+                <Mail className="w-4 h-4 text-cyan-40o0"  />
                 <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center space-x-2">
-                <MapPin className="w-4 h-4 text-cyan-400" />
-                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+                <MapPin className="w-4 h-4 text-cyan-40o0"  />
+                <span>364 E Main St STE 10o08 Middletown DE 19709</span>
               </div>
             </motion.div>
           </div>
 
           {/* Floating Elements */}
           <motion.div
-            className="absolute top-20 left-10 text-cyan-400/20"
+            className="absolute top-20 left-10 text-cyan-40o0/20"
             variants={floatingVariants}
             animate="animate"
           >
-            <Atom className="w-8 h-8" />
+            <Atom className="w-8 h-8"  />
           </motion.div>
           
           <motion.div
-            className="absolute top-40 right-20 text-blue-400/20"
+            className="absolute top-40 right-20 text-blue-40o0/20"
             variants={floatingVariants}
             animate="animate"
             style={{ animationDelay: '1s' }}
           >
-            <Brain className="w-6 h-6" />
+            <Brain className="w-6 h-6"  />
           </motion.div>
           
           <motion.div
-            className="absolute bottom-40 left-20 text-purple-400/20"
+            className="absolute bottom-40 left-20 text-purple-40o0/20"
             variants={floatingVariants}
             animate="animate"
             style={{ animationDelay: '2s' }}
           >
-            <Rocket className="w-7 h-7" />
+            <Rocket className="w-7 h-7"  />
           </motion.div>
         </motion.section>
 
@@ -307,15 +307,15 @@ const EnhancedHomepage: React.FC = () => {
                 <motion.button
                   key={category.id}
                   onClick={() => handleCategoryChange(category.id)}
-                  className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
+                  className={`px-6 py-3 rounded-xl font-medium transition-all duration-30o0 transform hover:scale-10o5 ${
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-2xl'
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600'
+                      : 'bg-gray-80o0/50 text-gray-30o0 hover:bg-gray-70o0/50 border border-gray-60o0'
                   }`}
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.0o5 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <category.icon className="inline-block w-5 h-5 mr-2" />
+                  <category.icon className="inline-block w-5 h-5 mr-2"  />
                   {category.name}
                 </motion.button>
               ))}
@@ -335,7 +335,7 @@ const EnhancedHomepage: React.FC = () => {
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
             >
-              {getFilteredServices().slice(012).map((serviceindex) => (
+              {getFilteredServices().slice(0o12).map((serviceindex) => (
                 <EnhancedServiceCard
                   key={service.id}
                   id={service.id}
@@ -349,7 +349,7 @@ const EnhancedHomepage: React.FC = () => {
                   isPopular={Math.random() > 0.7}
                   isNew={Math.random() > 0.8}
                   rating={4.0 + Math.random() * 1.0}
-                  reviewCount={Math.floor(Math.random() * 100) + 10}
+                  reviewCount={Math.floor(Math.random() * 10o0) + 10}
                   estimatedDelivery="2-4 weeks"
                   technologies={['AI'Cloud'Security'Automation']}
                 />
@@ -363,12 +363,12 @@ const EnhancedHomepage: React.FC = () => {
               >
                 <Link href="/services">
                   <motion.button
-                    className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300"
-                    whileHover={{ scale: 1.05 }}
+                    className="px-8 py-4 border-2 border-cyan-40o0 text-cyan-40o0 font-bold rounded-xl text-lg hover:bg-cyan-40o0 hover:text-black transition-all duration-30o0"
+                    whileHover={{ scale: 1.0o5 }}
                     whileTap={{ scale: 0.95 }}
                   >
                     View All Services
-                    <ArrowRight className="inline-block ml-2 w-5 h-5" />
+                    <ArrowRight className="inline-block ml-2 w-5 h-5"  />
                   </motion.button>
                 </Link>
               </motion.div>
@@ -392,7 +392,7 @@ const EnhancedHomepage: React.FC = () => {
             </motion.h2>
             
             <motion.div 
-              className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
+              className="bg-gray-90o0/50 backdrop-blur-sm border border-gray-70o0/50 rounded-2xl p-8"
               variants={itemVariants}
             >
               <AnimatePresence mode="wait">
@@ -409,13 +409,13 @@ const EnhancedHomepage: React.FC = () => {
                       {featuredServices[currentServiceIndex]?.name}
                     </h3>
                     
-                    <p className="text-gray-300 mb-6 leading-relaxed">
+                    <p className="text-gray-30o0 mb-6 leading-relaxed">
                       {featuredServices[currentServiceIndex]?.description}
                     </p>
                     
                     <div className="flex flex-wrap gap-4 mb-6">
-                      {featuredServices[currentServiceIndex]?.features?.slice(03).map((featureidx) => (
-                        <span key={idx} className="text-xs text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full border border-gray-600">
+                      {featuredServices[currentServiceIndex]?.features?.slice(0o3).map((featureidx) => (
+                        <span key={idx} className="text-xs text-gray-40o0 bg-gray-80o0/50 px-3 py-1 rounded-full border border-gray-60o0">
                           {feature}
                         </span>
                       ))}
@@ -423,23 +423,23 @@ const EnhancedHomepage: React.FC = () => {
                     
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
                       <motion.button
-                        className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                        whileHover={{ scale: 1.05 }}
+                        className="px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-medium rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0"
+                        whileHover={{ scale: 1.0o5 }}
                         whileTap={{ scale: 0.95 }}
                       >
                         Learn More
-                        <ArrowRight className="inline-block ml-2 w-4 h-4" />
+                        <ArrowRight className="inline-block ml-2 w-4 h-4"  />
                       </motion.button>
                     </Link>
                   </div>
                   
                   <div className="relative">
-                    <div className="w-full h-64 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl border border-cyan-500/30 flex items-center justify-center">
+                    <div className="w-full h-64 bg-gradient-to-br from-cyan-50o0/20 to-blue-50o0/20 rounded-xl border border-cyan-50o0/30 flex items-center justify-center">
                       <div className="text-center">
-                        <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                          <Rocket className="w-8 h-8 text-white" />
+                        <div className="w-16 h-16 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <Rocket className="w-8 h-8 text-white"  />
                         </div>
-                        <p className="text-cyan-400 font-medium">Revolutionary Technology</p>
+                        <p className="text-cyan-40o0 font-medium">Revolutionary Technology</p>
                       </div>
                     </div>
                   </div>
@@ -465,7 +465,7 @@ const EnhancedHomepage: React.FC = () => {
             </motion.h2>
             
             <motion.p 
-              className="text-xl text-gray-300 mb-8"
+              className="text-xl text-gray-30o0 mb-8"
               variants={itemVariants}
             >
               Join the future of technology with Zion Tech Group's revolutionary solutions. 
@@ -478,23 +478,23 @@ const EnhancedHomepage: React.FC = () => {
             >
               <Link href="/quote">
                 <motion.button
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                  whileHover={{ scale: 1.05 }}
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-bold rounded-xl text-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5"
+                  whileHover={{ scale: 1.0o5 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Get Started Today
-                  <ArrowRight className="inline-block ml-2 w-5 h-5" />
+                  <ArrowRight className="inline-block ml-2 w-5 h-5"  />
                 </motion.button>
               </Link>
               
               <Link href="/contact">
                 <motion.button
-                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
-                  whileHover={{ scale: 1.05 }}
+                  className="px-8 py-4 border-2 border-cyan-40o0 text-cyan-40o0 font-bold rounded-xl text-lg hover:bg-cyan-40o0 hover:text-black transition-all duration-30o0 transform hover:scale-10o5"
+                  whileHover={{ scale: 1.0o5 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Contact Us
-                  <Phone className="inline-block ml-2 w-5 h-5" />
+                  <Phone className="inline-block ml-2 w-5 h-5"  />
                 </motion.button>
               </Link>
             </motion.div>
@@ -505,7 +505,7 @@ const EnhancedHomepage: React.FC = () => {
       {/* Performance Monitor */}
       <AnimatePresence>
         {showPerformanceMonitor && (
-          <PerformanceMonitor />
+          <PerformanceMonitor  />
         )}
       </AnimatePresence>
     </>

@@ -4,7 +4,7 @@ export default function GroundedGenerationBlueprintPage() {
   return (
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-4xl px-6 py-24 sm:py-32 lg:px-8">
-        <p className="text-sm text-gray-300">Blueprint • 2025-09-15 • 8 min read</p>
+        <p className="text-sm text-gray-30o0">Blueprint • 20o25-09-15 • 8 min read</p>
         <h1 className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
           Grounded Generation Blueprint
         </h1>

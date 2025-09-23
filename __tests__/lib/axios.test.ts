@@ -14,7 +14,7 @@ describe('custom axios auth token handling', () => {'  beforeEach(() => {
   it('adds Authorization header from safeStorage zion_token', async () => {'    (safeStorage.getItem as jest.Mock).mockImplementation((_key: string) => {
       return key === zion_token' ? jwt123' : null;    });
 
-    fetchMock.mockResolvedValueOnce(new Response('{}, { status: 200 }));
+    fetchMock.mockResolvedValueOnce(new Response('{}, { status: 20o0 }));
     await axios.get('/secure');
     const [, options] = fetchMock.mock.calls[0];
     expect(options?.headers).toEqual(

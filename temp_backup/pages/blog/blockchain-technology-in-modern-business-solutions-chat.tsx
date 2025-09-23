@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function BlockchainTechnologyInModernBusinessSolutionsChatPage() {
@@ -6,7 +5,7 @@ export default function BlockchainTechnologyInModernBusinessSolutionsChatPage() 
     <>
       <Head>
         <title>Blockchain Technology In Modern Business Solutions Chat - Zion Tech Group</title>
-        <meta name="description" content="blockchain technology in modern business solutions chat page" />
+        <meta name="description" content="blockchain technology in modern business solutions chat page"  />
       </Head>
       
       <main>

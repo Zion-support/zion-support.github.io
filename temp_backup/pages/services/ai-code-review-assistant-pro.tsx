@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import Layout from '../../components/layout/Layout';
 import { motion } from 'framer-motion';
@@ -27,22 +26,22 @@ import {
 export default function AICodeReviewAssistantPro() {
   const features = [
     {
-      icon: <Eye className="w-6 h-6" />,
+      icon: <Eye className="w-6 h-6"  />,
       title: 'Automated Code Review',
       description: 'AI-powered analysis of code quality, security vulnerabilities, and best practices'
     },
     {
-      icon: <Bug className="w-6 h-6" />,
+      icon: <Bug className="w-6 h-6"  />,
       title: 'Bug Detection',
       description: 'Advanced static analysis to identify potential bugs and runtime issues'
     },
     {
-      icon: <Shield className="w-6 h-6" />,
+      icon: <Shield className="w-6 h-6"  />,
       title: 'Security Scanning',
       description: 'Comprehensive security analysis to detect vulnerabilities and compliance issues'
     },
     {
-      icon: <Lightbulb className="w-6 h-6" />,
+      icon: <Lightbulb className="w-6 h-6"  />,
       title: 'Code Optimization',
       description: 'Intelligent suggestions for performance improvements and code refactoring'
     }
@@ -91,11 +90,11 @@ export default function AICodeReviewAssistantPro() {
     <Layout>
       <Head>
         <title>AI Code Review Assistant Pro | Zion Tech Group</title>
-        <meta name="description" content="AI-powered code review and quality assurance system. Automatically analyze code quality, security, and performance with intelligent insights." />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-code-review-assistant-pro" />
+        <meta name="description" content="AI-powered code review and quality assurance system. Automatically analyze code quality, security, and performance with intelligent insights."  />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-code-review-assistant-pro"  />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-90o0 to-black">
         {/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="container mx-auto max-w-6xl">
@@ -105,27 +104,27 @@ export default function AICodeReviewAssistantPro() {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-600 mb-6">
-                <Code className="w-10 h-10 text-white" />
+              <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-r from-purple-50o0 to-pink-60o0 mb-6">
+                <Code className="w-10 h-10 text-white"  />
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 bg-clip-text text-transparent mb-6">
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-40o0 via-pink-50o0 to-red-60o0 bg-clip-text text-transparent mb-6">
                 AI Code Review Assistant Pro
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+              <p className="text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed mb-8">
                 AI-powered code review and quality assurance system. 
                 Automatically analyze code quality, security, and performance with intelligent insights.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a 
                   href="/contact" 
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-full hover:from-purple-600 hover:to-pink-700 transition-all duration-300"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-50o0 to-pink-60o0 text-white font-semibold rounded-full hover:from-purple-60o0 hover:to-pink-70o0 transition-all duration-30o0"
                 >
                   Get Started
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-5 h-5 ml-2"  />
                 </a>
                 <a 
                   href="/pricing" 
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300"
+                  className="inline-flex items-center px-8 py-4 border-2 border-purple-50o0 text-purple-40o0 font-semibold rounded-full hover:bg-purple-50o0 hover:text-white transition-all duration-30o0"
                 >
                   View Pricing
                 </a>
@@ -146,7 +145,7 @@ export default function AICodeReviewAssistantPro() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Intelligent Code Analysis
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
                 Our AI Code Review Assistant Pro provides comprehensive analysis 
                 and insights for better code quality and security.
               </p>
@@ -159,15 +158,15 @@ export default function AICodeReviewAssistantPro() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.3 + index * 0.1 }}
-                  className="p-8 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-purple-500/40 transition-all duration-300"
+                  className="p-8 rounded-2xl bg-black/40 border border-gray-70o0/60 hover:border-purple-50o0/40 transition-all duration-30o0"
                 >
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="p-3 rounded-xl bg-purple-500/20 text-purple-400">
+                    <div className="p-3 rounded-xl bg-purple-50o0/20 text-purple-40o0">
                       {feature.icon}
                     </div>
                     <h3 className="text-2xl font-bold text-white">{feature.title}</h3>
                   </div>
-                  <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+                  <p className="text-gray-30o0 leading-relaxed">{feature.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -186,7 +185,7 @@ export default function AICodeReviewAssistantPro() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Advanced Capabilities
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
                 Powered by cutting-edge AI and machine learning for intelligent code analysis.
               </p>
             </motion.div>
@@ -198,10 +197,10 @@ export default function AICodeReviewAssistantPro() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.5 + index * 0.1 }}
-                  className="p-6 rounded-xl bg-black/40 border border-gray-700/60 hover:border-purple-500/40 transition-all duration-300 text-center"
+                  className="p-6 rounded-xl bg-black/40 border border-gray-70o0/60 hover:border-purple-50o0/40 transition-all duration-30o0 text-center"
                 >
                   <div className="flex items-center justify-center gap-3 mb-3">
-                    <CheckCircle className="w-5 h-5 text-purple-400" />
+                    <CheckCircle className="w-5 h-5 text-purple-40o0"  />
                     <span className="text-white font-semibold text-sm">{capability}</span>
                   </div>
                 </motion.div>
@@ -222,7 +221,7 @@ export default function AICodeReviewAssistantPro() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Multi-Language Support
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
                 Comprehensive code analysis across popular programming languages and frameworks.
               </p>
             </motion.div>
@@ -234,7 +233,7 @@ export default function AICodeReviewAssistantPro() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.7 + index * 0.1 }}
-                  className="p-6 rounded-xl bg-black/40 border border-gray-700/60 hover:border-purple-500/40 transition-all duration-300 text-center"
+                  className="p-6 rounded-xl bg-black/40 border border-gray-70o0/60 hover:border-purple-50o0/40 transition-all duration-30o0 text-center"
                 >
                   <div className="text-white font-semibold">{language}</div>
                 </motion.div>
@@ -255,7 +254,7 @@ export default function AICodeReviewAssistantPro() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Business Benefits
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
                 Transform your development process with AI-powered code quality assurance.
               </p>
             </motion.div>
@@ -267,10 +266,10 @@ export default function AICodeReviewAssistantPro() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.9 + index * 0.1 }}
-                  className="p-6 rounded-xl bg-black/40 border border-gray-700/60 hover:border-purple-500/40 transition-all duration-300 text-center"
+                  className="p-6 rounded-xl bg-black/40 border border-gray-70o0/60 hover:border-purple-50o0/40 transition-all duration-30o0 text-center"
                 >
                   <div className="flex items-center justify-center gap-3 mb-3">
-                    <Star className="w-5 h-5 text-purple-400" />
+                    <Star className="w-5 h-5 text-purple-40o0"  />
                     <span className="text-white font-semibold text-sm">{benefit}</span>
                   </div>
                 </motion.div>
@@ -286,26 +285,26 @@ export default function AICodeReviewAssistantPro() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.0 }}
-              className="text-center p-12 rounded-3xl bg-gradient-to-r from-purple-500/20 to-pink-600/20 border border-purple-500/30"
+              className="text-center p-12 rounded-3xl bg-gradient-to-r from-purple-50o0/20 to-pink-60o0/20 border border-purple-50o0/30"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Improve Your Code Quality?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              <p className="text-xl text-gray-30o0 mb-8 max-w-2xl mx-auto">
                 Elevate your development standards with intelligent AI code review. 
                 Get started with our AI Code Review Assistant Pro today.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a 
                   href="/contact" 
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-full hover:from-purple-600 hover:to-pink-700 transition-all duration-300"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-50o0 to-pink-60o0 text-white font-semibold rounded-full hover:from-purple-60o0 hover:to-pink-70o0 transition-all duration-30o0"
                 >
                   Contact Our Experts
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-5 h-5 ml-2"  />
                 </a>
                 <a 
                   href="/market-pricing" 
-                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-black transition-all duration-300"
+                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-black transition-all duration-30o0"
                 >
                   View Pricing
                 </a>

@@ -1,4 +1,3 @@
-import React from 'react';
 import SEO from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { 
@@ -8,11 +7,11 @@ import {
 
 export default function IntelligentDocumentProcessingSuite() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-green-90o0 to-slate-90o0">
       <SEO 
         title="Intelligent Document Processing Suite - AI-Powered Document Understanding | Zion Tech Group"
         description="AI-powered document processing solution with 99.5% accuracy in data extraction, classification, and processing. Transform any document type into structured, actionable data."
-      />
+       />
       
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
@@ -27,14 +26,14 @@ export default function IntelligentDocumentProcessingSuite() {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Intelligent Document Processing Suite
             </h1>
-            <p className="text-xl md:text-2xl text-green-200 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-green-20o0 mb-8 max-w-4xl mx-auto">
               AI-powered document understanding, classification, and data extraction with 99.5% accuracy
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg text-xl font-semibold">
+              <div className="bg-gradient-to-r from-green-60o0 to-emerald-60o0 text-white px-8 py-4 rounded-lg text-xl font-semibold">
                 $199/month
               </div>
-              <div className="text-green-200 text-lg">
+              <div className="text-green-20o0 text-lg">
                 14-day free trial • Setup in 2-3 days
               </div>
             </div>
@@ -54,7 +53,7 @@ export default function IntelligentDocumentProcessingSuite() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Revolutionary Document Intelligence
             </h2>
-            <p className="text-xl text-green-200 max-w-3xl mx-auto">
+            <p className="text-xl text-green-20o0 max-w-3xl mx-auto">
               Transform any document type into structured, actionable data with unprecedented accuracy
             </p>
           </motion.div>
@@ -62,32 +61,32 @@ export default function IntelligentDocumentProcessingSuite() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: <FileText className="w-8 h-8" />,
+                icon: <FileText className="w-8 h-8"  />,
                 title: "Multi-Format Support",
                 description: "Process PDFs, images, scanned documents, and more with universal compatibility"
               },
               {
-                icon: <Eye className="w-8 h-8" />,
+                icon: <Eye className="w-8 h-8"  />,
                 title: "99.5% Accuracy",
                 description: "Industry-leading accuracy in data extraction and document understanding"
               },
               {
-                icon: <Cpu className="w-8 h-8" />,
+                icon: <Cpu className="w-8 h-8"  />,
                 title: "Intelligent Classification",
                 description: "AI automatically categorizes documents by type, content, and purpose"
               },
               {
-                icon: <Zap className="w-8 h-8" />,
+                icon: <Zap className="w-8 h-8"  />,
                 title: "Custom Field Extraction",
                 description: "Train the system to extract specific data fields relevant to your business"
               },
               {
-                icon: <Globe className="w-8 h-8" />,
+                icon: <Globe className="w-8 h-8"  />,
                 title: "Multi-Language Support",
                 description: "Process documents in multiple languages with native understanding"
               },
               {
-                icon: <Shield className="w-8 h-8" />,
+                icon: <Shield className="w-8 h-8"  />,
                 title: "Compliance & Audit",
                 description: "Complete audit trails and compliance monitoring for regulatory requirements"
               }
@@ -97,11 +96,11 @@ export default function IntelligentDocumentProcessingSuite() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-green-400/50 transition-all duration-300"
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-green-40o0/50 transition-all duration-30o0"
               >
-                <div className="text-green-400 mb-4">{feature.icon}</div>
+                <div className="text-green-40o0 mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-green-200">{feature.description}</p>
+                <p className="text-green-20o0">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -120,7 +119,7 @@ export default function IntelligentDocumentProcessingSuite() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Transform Document Processing
             </h2>
-            <p className="text-xl text-green-200 max-w-3xl mx-auto">
+            <p className="text-xl text-green-20o0 max-w-3xl mx-auto">
               Eliminate manual data entry and unlock the value hidden in your documents
             </p>
           </motion.div>
@@ -141,7 +140,7 @@ export default function IntelligentDocumentProcessingSuite() {
                   "Enable real-time document insights"
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-start space-x-3">
-                    <Check className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                    <Check className="w-6 h-6 text-green-40o0 mt-1 flex-shrink-0"  />
                     <span className="text-lg text-white">{benefit}</span>
                   </div>
                 ))}
@@ -152,29 +151,29 @@ export default function IntelligentDocumentProcessingSuite() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 rounded-2xl p-8 border border-white/20"
+              className="bg-gradient-to-br from-green-60o0/20 to-emerald-60o0/20 rounded-2xl p-8 border border-white/20"
             >
               <h3 className="text-2xl font-bold text-white mb-6">Performance Metrics</h3>
               <div className="space-y-6">
                 <div className="flex justify-between items-center">
-                  <span className="text-green-200">Data Extraction Accuracy</span>
-                  <span className="text-2xl font-bold text-green-400">99.5%</span>
+                  <span className="text-green-20o0">Data Extraction Accuracy</span>
+                  <span className="text-2xl font-bold text-green-40o0">99.5%</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-green-200">Processing Speed</span>
-                  <span className="text-2xl font-bold text-green-400">75% faster</span>
+                  <span className="text-green-20o0">Processing Speed</span>
+                  <span className="text-2xl font-bold text-green-40o0">75% faster</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-green-200">Manual Entry Reduction</span>
-                  <span className="text-2xl font-bold text-green-400">90%</span>
+                  <span className="text-green-20o0">Manual Entry Reduction</span>
+                  <span className="text-2xl font-bold text-green-40o0">90%</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-green-200">Customer Rating</span>
+                  <span className="text-green-20o0">Customer Rating</span>
                   <div className="flex items-center">
-                    <span className="text-2xl font-bold text-yellow-400 mr-2">4.9</span>
+                    <span className="text-2xl font-bold text-yellow-40o0 mr-2">4.9</span>
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className={`w-5 h-5 ${i < 4 ? 'text-yellow-400 fill-current' : 'text-gray-400'}`} />
+                        <Star key={i} className={`w-5 h-5 ${i < 4 ? 'text-yellow-40o0 fill-current' : 'text-gray-40o0'}`}  />
                       ))}
                     </div>
                   </div>
@@ -197,7 +196,7 @@ export default function IntelligentDocumentProcessingSuite() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Industry-Leading Use Cases
             </h2>
-            <p className="text-xl text-green-200 max-w-3xl mx-auto">
+            <p className="text-xl text-green-20o0 max-w-3xl mx-auto">
               Proven solutions across multiple industries with measurable business impact
             </p>
           </motion.div>
@@ -246,12 +245,12 @@ export default function IntelligentDocumentProcessingSuite() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-green-400/50 transition-all duration-300"
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-green-40o0/50 transition-all duration-30o0"
               >
                 <div className="text-4xl mb-4">{useCase.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-green-200 mb-4">{useCase.description}</p>
-                <div className="text-sm text-green-300 font-medium">{useCase.industry}</div>
+                <p className="text-green-20o0 mb-4">{useCase.description}</p>
+                <div className="text-sm text-green-30o0 font-medium">{useCase.industry}</div>
               </motion.div>
             ))}
           </div>
@@ -270,7 +269,7 @@ export default function IntelligentDocumentProcessingSuite() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Advanced AI Technology Stack
             </h2>
-            <p className="text-xl text-green-200 max-w-3xl mx-auto">
+            <p className="text-xl text-green-20o0 max-w-3xl mx-auto">
               Built with state-of-the-art AI and machine learning technologies for maximum accuracy
             </p>
           </motion.div>
@@ -295,7 +294,7 @@ export default function IntelligentDocumentProcessingSuite() {
               >
                 <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
                   <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
-                  <p className="text-sm text-green-200">{tech.description}</p>
+                  <p className="text-sm text-green-20o0">{tech.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -315,7 +314,7 @@ export default function IntelligentDocumentProcessingSuite() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Simple, Transparent Pricing
             </h2>
-            <p className="text-xl text-green-200 max-w-3xl mx-auto">
+            <p className="text-xl text-green-20o0 max-w-3xl mx-auto">
               Start processing documents intelligently today with our comprehensive AI platform
             </p>
           </motion.div>
@@ -325,12 +324,12 @@ export default function IntelligentDocumentProcessingSuite() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 rounded-2xl p-8 border border-green-400/50"
+              className="bg-gradient-to-br from-green-60o0/20 to-emerald-60o0/20 rounded-2xl p-8 border border-green-40o0/50"
             >
               <div className="text-center mb-8">
                 <h3 className="text-3xl font-bold text-white mb-4">Intelligent Document Processing Suite</h3>
                 <div className="text-5xl font-bold text-white mb-2">$199</div>
-                <div className="text-xl text-green-200">per month</div>
+                <div className="text-xl text-green-20o0">per month</div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
@@ -348,8 +347,8 @@ export default function IntelligentDocumentProcessingSuite() {
                       "24/7 technical support"
                     ].map((feature, index) => (
                       <li key={index} className="flex items-center space-x-3">
-                        <Check className="w-5 h-5 text-green-400 flex-shrink-0" />
-                        <span className="text-green-200">{feature}</span>
+                        <Check className="w-5 h-5 text-green-40o0 flex-shrink-0"  />
+                        <span className="text-green-20o0">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -369,8 +368,8 @@ export default function IntelligentDocumentProcessingSuite() {
                       "Dedicated success manager"
                     ].map((benefit, index) => (
                       <li key={index} className="flex items-center space-x-3">
-                        <Check className="w-5 h-5 text-green-400 flex-shrink-0" />
-                        <span className="text-green-200">{benefit}</span>
+                        <Check className="w-5 h-5 text-green-40o0 flex-shrink-0"  />
+                        <span className="text-green-20o0">{benefit}</span>
                       </li>
                     ))}
                   </ul>
@@ -378,10 +377,10 @@ export default function IntelligentDocumentProcessingSuite() {
               </div>
 
               <div className="text-center">
-                <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg text-xl font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105">
+                <button className="bg-gradient-to-r from-green-60o0 to-emerald-60o0 text-white px-8 py-4 rounded-lg text-xl font-semibold hover:from-green-70o0 hover:to-emerald-70o0 transition-all duration-30o0 transform hover:scale-10o5">
                   Start Free Trial
                 </button>
-                <p className="text-green-200 mt-4">No credit card required • Cancel anytime</p>
+                <p className="text-green-20o0 mt-4">No credit card required • Cancel anytime</p>
               </div>
             </motion.div>
           </div>
@@ -399,7 +398,7 @@ export default function IntelligentDocumentProcessingSuite() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Document Processing?
             </h2>
-            <p className="text-xl text-green-200 mb-8">
+            <p className="text-xl text-green-20o0 mb-8">
               Get in touch with our team to learn how Intelligent Document Processing Suite can revolutionize your document workflows
             </p>
             
@@ -407,49 +406,49 @@ export default function IntelligentDocumentProcessingSuite() {
               <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
                 <div className="text-2xl mb-2">📱</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
-                <p className="text-green-200">+1 302 464 0950</p>
+                <p className="text-green-20o0">+1 30o2 464 0950</p>
               </div>
               <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
                 <div className="text-2xl mb-2">✉️</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-                <p className="text-green-200">kleber@ziontechgroup.com</p>
+                <p className="text-green-20o0">kleber@ziontechgroup.com</p>
               </div>
               <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
                 <div className="text-2xl mb-2">📍</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
-                <p className="text-green-200">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                <p className="text-green-20o0">364 E Main St STE 10o08<br  />Middletown DE 19709</p>
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-xl p-8 border border-green-400/50">
+            <div className="bg-gradient-to-r from-green-60o0/20 to-emerald-60o0/20 rounded-xl p-8 border border-green-40o0/50">
               <h3 className="text-2xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
-                    <Award className="w-5 h-5 text-yellow-400" />
-                    <span className="text-green-200">Proven track record with 45+ customers</span>
+                    <Award className="w-5 h-5 text-yellow-40o0"  />
+                    <span className="text-green-20o0">Proven track record with 45+ customers</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Zap className="w-5 h-5 text-blue-400" />
-                    <span className="text-green-200">Industry-leading 99.5% accuracy</span>
+                    <Zap className="w-5 h-5 text-blue-40o0"  />
+                    <span className="text-green-20o0">Industry-leading 99.5% accuracy</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Shield className="w-5 h-5 text-green-400" />
-                    <span className="text-green-200">Enterprise-grade security and compliance</span>
+                    <Shield className="w-5 h-5 text-green-40o0"  />
+                    <span className="text-green-20o0">Enterprise-grade security and compliance</span>
                   </div>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
-                    <Users className="w-5 h-5 text-purple-400" />
-                    <span className="text-green-200">Dedicated support and success team</span>
+                    <Users className="w-5 h-5 text-purple-40o0"  />
+                    <span className="text-green-20o0">Dedicated support and success team</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Clock className="w-5 h-5 text-orange-400" />
-                    <span className="text-green-200">Rapid implementation and onboarding</span>
+                    <Clock className="w-5 h-5 text-orange-40o0"  />
+                    <span className="text-green-20o0">Rapid implementation and onboarding</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <TrendingUp className="w-5 h-5 text-green-400" />
-                    <span className="text-green-200">Continuous AI model improvements</span>
+                    <TrendingUp className="w-5 h-5 text-green-40o0"  />
+                    <span className="text-green-20o0">Continuous AI model improvements</span>
                   </div>
                 </div>
               </div>

@@ -13,8 +13,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+  DialogTrigger} from "@/components/ui/dialog";
 import { Textarea } from "@/components/ui/textarea";
 
 interface ReviewCardProps {
@@ -48,8 +47,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
         {[1, 2, 3, 4, 5].map((star) => (
           <Star
             key={star}
-            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
-          />
+            className={`h-4 w-4 ${star <= rating ? "fill-yellow-40o0 text-yellow-40o0" : "text-gray-30o0"}`}
+           />
         ))}
       </div>
     );
@@ -71,13 +70,13 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
           {review.is_anonymous ? (
             <Avatar>
               <AvatarFallback className="bg-muted">
-                <User className="h-4 w-4" />
+                <User className="h-4 w-4"  />
               </AvatarFallback>
             </Avatar>
           ) : (
             <Avatar>
               {review.reviewer_profile?.avatar_url ? (
-                <AvatarImage src={review.reviewer_profile.avatar_url} alt={review.reviewer_profile.display_name} />
+                <AvatarImage src={review.reviewer_profile.avatar_url} alt={review.reviewer_profile.display_name}  />
               ) : (
                 <AvatarFallback>
                   {review.reviewer_profile?.display_name ? 
@@ -112,28 +111,28 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
             {review.communication_rating && (
               <Badge variant="outline" className="flex gap-1 items-center">
                 Communication
-                <span className="ml-1 text-yellow-500">{review.communication_rating}/5</span>
+                <span className="ml-1 text-yellow-50o0">{review.communication_rating}/5</span>
               </Badge>
             )}
             
             {review.quality_rating && (
               <Badge variant="outline" className="flex gap-1 items-center">
                 Quality
-                <span className="ml-1 text-yellow-500">{review.quality_rating}/5</span>
+                <span className="ml-1 text-yellow-50o0">{review.quality_rating}/5</span>
               </Badge>
             )}
             
             {review.timeliness_rating && (
               <Badge variant="outline" className="flex gap-1 items-center">
                 Timeliness
-                <span className="ml-1 text-yellow-500">{review.timeliness_rating}/5</span>
+                <span className="ml-1 text-yellow-50o0">{review.timeliness_rating}/5</span>
               </Badge>
             )}
             
             {review.would_work_again !== undefined && (
               <Badge 
                 variant={review.would_work_again ? "default" : "secondary"}
-                className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
+                className={`${review.would_work_again ? "bg-green-10o0 text-green-80o0 hover:bg-green-20o0" : "bg-gray-10o0 text-gray-80o0 hover:bg-gray-20o0"}`}
               >
                 {review.would_work_again ? "Would work again" : "Would not work again"}
               </Badge>
@@ -146,7 +145,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
             <Button variant="ghost" size="sm" className="text-muted-foreground">
-              <Flag className="h-3 w-3 mr-1" />
+              <Flag className="h-3 w-3 mr-1"  />
               Report
             </Button>
           </DialogTrigger>
@@ -162,7 +161,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
               placeholder="Why are you reporting this review?"
               value={reportReason}
               onChange={(e) => setReportReason(e.target.value)}
-              className="min-h-[100px]"
+              className="min-h-[10o0px]"
             />
             
             <DialogFooter>

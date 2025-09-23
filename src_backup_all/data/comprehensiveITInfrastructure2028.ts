@@ -1,4 +1,4 @@
-export interface ComprehensiveITInfrastructureService2028 {
+export interface ComprehensiveITInfrastructureService20o28 {
   id: string;
   title: string;
   description: string;
@@ -33,7 +33,7 @@ export interface ComprehensiveITInfrastructureService2028 {
   marketSize: string;
 }
 
-export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructureService2028[] = [
+export const COMPREHENSIVE_IT_INFRASTRUCTURE_20o28: ComprehensiveITInfrastructureService20o28[] = [
   // Next-Generation Cloud Infrastructure
   {
     id: "next-gen-cloud-infrastructure",
@@ -41,7 +41,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
     description: "Revolutionary cloud infrastructure that combines edge computing, AI optimization, and quantum-ready architecture to deliver unprecedented performance and scalability.",
     category: "Cloud Infrastructure",
     subcategory: "Next-Generation Cloud",
-    price: 25000,
+    price: 250o00,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -58,7 +58,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
     ],
     benefits: [
       "Reduce infrastructure costs by 60%",
-      "Improve performance by 300%",
+      "Improve performance by 30o0%",
       "99.999% uptime guarantee",
       "Global edge presence",
       "Future-proof quantum architecture"
@@ -80,23 +80,23 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
     tags: ["Cloud Infrastructure", "Edge Computing", "AI", "Quantum Computing", "Performance"],
     estimatedDelivery: "16-20 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$25,000 - $75,000/month",
-    roi: "400-700%",
+    marketPrice: "$25,0o00 - $75,0o00/month",
+    roi: "40o0-70o0%",
     innovationLevel: "Revolutionary",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
       technology: ["Kubernetes", "Docker", "Terraform", "Ansible", "Prometheus"],
       integrations: ["AWS", "Azure", "Google Cloud", "IBM Cloud", "Oracle Cloud"],
-      apiEndpoints: 800,
+      apiEndpoints: 80o0,
       uptime: "99.999%",
-      security: ["SOC 2", "ISO 27001", "FedRAMP", "Zero-trust architecture"]
+      security: ["SOC 2", "ISO 270o01", "FedRAMP", "Zero-trust architecture"]
     },
     competitors: ["AWS", "Microsoft Azure", "Google Cloud", "IBM Cloud", "Oracle Cloud"],
-    marketSize: "$1.3 trillion by 2028"
+    marketSize: "$1.3 trillion by 20o28"
   },
 
   // Zero-Trust Network Architecture
@@ -106,7 +106,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
     description: "Advanced network security platform that implements zero-trust principles with AI-powered threat detection, continuous authentication, and micro-segmentation.",
     category: "Network Security",
     subcategory: "Zero-Trust Architecture",
-    price: 12000,
+    price: 120o00,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -145,11 +145,11 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
     tags: ["Network Security", "Zero-Trust", "AI", "Compliance", "Threat Detection"],
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$12,000 - $35,000/month",
-    roi: "300-500%",
+    marketPrice: "$12,0o00 - $35,0o00/month",
+    roi: "30o0-50o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -158,10 +158,10 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
       integrations: ["Cisco", "Palo Alto", "Fortinet", "Check Point", "Juniper"],
       apiEndpoints: 350,
       uptime: "99.99%",
-      security: ["SOC 2", "ISO 27001", "NIST", "Zero-trust architecture"]
+      security: ["SOC 2", "ISO 270o01", "NIST", "Zero-trust architecture"]
     },
     competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point", "Juniper"],
-    marketSize: "$51.6 billion by 2028"
+    marketSize: "$51.6 billion by 20o28"
   },
 
   // Sustainable Green IT Infrastructure
@@ -171,7 +171,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
     description: "Eco-friendly IT infrastructure that maximizes energy efficiency, reduces carbon footprint, and implements sustainable computing practices while maintaining high performance.",
     category: "Green IT",
     subcategory: "Sustainable Infrastructure",
-    price: 15000,
+    price: 150o00,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -210,23 +210,23 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
     tags: ["Green IT", "Sustainability", "Energy Efficiency", "Environmental", "Compliance"],
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$15,000 - $45,000/month",
-    roi: "250-400%",
+    marketPrice: "$15,0o00 - $45,0o00/month",
+    roi: "250-40o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "IoT sensors", "Energy monitoring", "Analytics"],
       integrations: ["Solar panels", "Wind turbines", "Battery storage", "Smart grids", "Energy management"],
-      apiEndpoints: 200,
+      apiEndpoints: 20o0,
       uptime: "99.9%",
-      security: ["SOC 2", "ISO 14001", "Energy Star", "LEED certification"]
+      security: ["SOC 2", "ISO 140o01", "Energy Star", "LEED certification"]
     },
     competitors: ["Schneider Electric", "Siemens", "HPE GreenLake", "Dell Technologies", "IBM"],
-    marketSize: "$89.2 billion by 2028"
+    marketSize: "$89.2 billion by 20o28"
   },
 
   // Edge Computing and IoT Infrastructure
@@ -236,7 +236,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
     description: "Comprehensive edge computing platform that brings computation and data storage closer to data sources, enabling real-time processing and reduced latency for IoT applications.",
     category: "Edge Computing",
     subcategory: "IoT Infrastructure",
-    price: 18000,
+    price: 180o00,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -275,23 +275,23 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
     tags: ["Edge Computing", "IoT", "Real-time Processing", "Low Latency", "Distributed Systems"],
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$18,000 - $55,000/month",
-    roi: "350-600%",
+    marketPrice: "$18,0o00 - $55,0o00/month",
+    roi: "350-60o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
       technology: ["Kubernetes Edge", "Docker", "MQTT", "WebRTC", "5G"],
       integrations: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge", "Cisco Edge"],
-      apiEndpoints: 500,
+      apiEndpoints: 50o0,
       uptime: "99.9%",
       security: ["Edge encryption", "Device authentication", "Secure boot", "Zero-trust edge"]
     },
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge", "Cisco Edge"],
-    marketSize: "$155.9 billion by 2028"
+    marketSize: "$155.9 billion by 20o28"
   },
 
   // Hybrid Multi-Cloud Management
@@ -301,7 +301,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
     description: "Unified platform for managing hybrid and multi-cloud environments with AI-powered optimization, cost management, and seamless workload migration across different cloud providers.",
     category: "Cloud Management",
     subcategory: "Multi-Cloud",
-    price: 22000,
+    price: 220o00,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -318,7 +318,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
     ],
     benefits: [
       "Reduce cloud costs by 40%",
-      "Improve performance by 200%",
+      "Improve performance by 20o0%",
       "Vendor lock-in avoidance",
       "Unified management experience",
       "Enhanced security and compliance"
@@ -340,22 +340,22 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
     tags: ["Multi-Cloud", "Hybrid Cloud", "Cloud Management", "AI", "Optimization"],
     estimatedDelivery: "14-18 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$22,000 - $65,000/month",
-    roi: "400-700%",
+    marketPrice: "$22,0o00 - $65,0o00/month",
+    roi: "40o0-70o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
       technology: ["Terraform", "Kubernetes", "Ansible", "Python", "React"],
       integrations: ["AWS", "Azure", "Google Cloud", "IBM Cloud", "Oracle Cloud"],
-      apiEndpoints: 600,
+      apiEndpoints: 60o0,
       uptime: "99.99%",
-      security: ["SOC 2", "ISO 27001", "FedRAMP", "Multi-cloud security"]
+      security: ["SOC 2", "ISO 270o01", "FedRAMP", "Multi-cloud security"]
     },
     competitors: ["VMware", "Red Hat", "HashiCorp", "CloudBolt", "RightScale"],
-    marketSize: "$8.6 billion by 2028"
+    marketSize: "$8.6 billion by 20o28"
   }
 ];

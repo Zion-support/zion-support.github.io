@@ -4,9 +4,8 @@ import '@testing-library/jest-dom';
 jest.mock('next/image', () => ({
   __esModule: true,
   default: (props) => {
-    return <img {...props} />;
-  },
-}));
+    return <img {...props}  />;
+  }}));
 
 // matchMedia mock
 Object.defineProperty(window, 'matchMedia', {
@@ -19,9 +18,7 @@ Object.defineProperty(window, 'matchMedia', {
     removeListener: jest.fn(),
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
-});
+    dispatchEvent: jest.fn()}))});
 
 // Observers
 global.IntersectionObserver = class IntersectionObserver {

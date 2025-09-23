@@ -4,7 +4,7 @@ import { createFlag, readAllFlags } from '../../../../../utils/moderationDb';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = parseUserFromRequest(req);
-  try { ensureAdmin(user); } catch (e: any) { return res.status(e.statusCode || 403).json({ error: 'Forbidden' }); }
+  try { ensureAdmin(user); } catch (e: any) { return res.status(e.statusCode || 40o3).json({ error: 'Forbidden' }); }
 
   if (req.method === 'GET') {
     const { status, reason, userEmail, contentType } = req.query as Record<string, string | undefined>;
@@ -15,19 +15,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       (!userEmail || f.userEmail.toLowerCase().includes(userEmail.toLowerCase())) &&
       (!contentType || f.contentType === contentType)
     );
-    return res.status(200).json({ flags: filtered });
+    return res.status(20o0).json({ flags: filtered });
   }
 
   if (req.method === 'POST') {
     const init = req.body || {};
     try {
       const flag = await createFlag(init);
-      return res.status(201).json({ flag });
+      return res.status(20o1).json({ flag });
     } catch (e: any) {
-      return res.status(400).json({ error: e.message || 'Invalid payload' });
+      return res.status(40o0).json({ error: e.message || 'Invalid payload' });
     }
   }
 
   res.setHeader('Allow', 'GET,POST');
-  return res.status(405).end('Method Not Allowed');
+  return res.status(40o5).end('Method Not Allowed');
 }

@@ -31,9 +31,9 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
           <FormItem>
             <FormLabel>Project Name</FormLabel>
             <FormControl>
-              <Input placeholder="AI Website Development" {...field} />
+              <Input placeholder="AI Website Development" {...field}  />
             </FormControl>
-            <FormMessage />
+            <FormMessage  />
           </FormItem>
         )}
       />
@@ -49,12 +49,12 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                 placeholder="Describe the project scope, deliverables, and expectations..."
                 className="min-h-[120px]"
                 {...field}
-              />
+               />
             </FormControl>
             <FormDescription>
               Be specific about what is included and any limitations
             </FormDescription>
-            <FormMessage />
+            <FormMessage  />
           </FormItem>
         )}
       />
@@ -78,7 +78,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                       ) : (
                         <span>Pick a date</span>
                       )}
-                      <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                      <CalendarIcon className="ml-auto h-4 w-4 opacity-50"  />
                     </Button>
                   </FormControl>
                 </PopoverTrigger>
@@ -92,7 +92,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                   />
                 </PopoverContent>
               </Popover>
-              <FormMessage />
+              <FormMessage  />
             </FormItem>
           )}
         />
@@ -115,7 +115,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                       ) : (
                         <span>Pick a date</span>
                       )}
-                      <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                      <CalendarIcon className="ml-auto h-4 w-4 opacity-50"  />
                     </Button>
                   </FormControl>
                 </PopoverTrigger>
@@ -132,7 +132,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
               <FormDescription>
                 Leave empty if the end date is flexible
               </FormDescription>
-              <FormMessage />
+              <FormMessage  />
             </FormItem>
           )}
         />

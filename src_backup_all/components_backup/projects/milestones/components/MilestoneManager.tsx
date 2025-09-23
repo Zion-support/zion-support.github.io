@@ -1,5 +1,4 @@
 
-import React from 'react';
 import { MilestonesList } from '../MilestonesList';
 import { PaymentSummary } from '../PaymentSummary';
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones';
@@ -74,13 +73,13 @@ export function MilestoneManager({
           isSubmitting={isSubmitting}
           onApprove={isClient ? handleMilestoneApproved : undefined}
           onReject={isClient ? handleMilestoneRejected : undefined}
-        />
+         />
       </div>
       <div>
         <PaymentSummary 
           milestones={milestones} 
           paymentTerms={paymentTerms ?? null}
-        />
+         />
       </div>
     </div>
   );

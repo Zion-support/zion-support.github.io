@@ -37,179 +37,179 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Services',
     href: '/services',
-    icon: <Rocket className="w-5 h-5" />,
+    icon: <Rocket className="w-5 h-5"  />,
     description: 'Comprehensive technology solutions',
     category: 'services',
-    color: 'from-emerald-500 to-cyan-500',
+    color: 'from-emerald-50o0 to-cyan-50o0',
     children: [
       { 
         name: 'All Services', 
         href: '/services', 
         description: 'Complete services overview',
-        icon: <Grid className="w-4 h-4" />,
+        icon: <Grid className="w-4 h-4"  />,
         featured: true
       },
       { 
         name: 'AI & Machine Learning', 
         href: '/ai-services', 
         description: 'AI-powered solutions and platforms',
-        icon: <Brain className="w-4 h-4" />,
-        color: 'from-purple-500 to-pink-500',
+        icon: <Brain className="w-4 h-4"  />,
+        color: 'from-purple-50o0 to-pink-50o0',
         featured: true
       },
       { 
         name: 'Quantum Computing', 
         href: '/quantum-services', 
         description: 'Quantum-powered solutions',
-        icon: <Atom className="w-4 h-4" />,
-        color: 'from-blue-500 to-cyan-500',
+        icon: <Atom className="w-4 h-4"  />,
+        color: 'from-blue-50o0 to-cyan-50o0',
         featured: true
       },
       { 
         name: 'Cybersecurity', 
         href: '/cybersecurity', 
         description: 'Advanced security solutions',
-        icon: <Shield className="w-4 h-4" />,
-        color: 'from-red-500 to-orange-500'
+        icon: <Shield className="w-4 h-4"  />,
+        color: 'from-red-50o0 to-orange-50o0'
       },
       { 
         name: 'Space Technology', 
         href: '/space-technology', 
         description: 'Space exploration solutions',
-        icon: <Rocket className="w-4 h-4" />,
-        color: 'from-indigo-500 to-purple-500'
+        icon: <Rocket className="w-4 h-4"  />,
+        color: 'from-indigo-50o0 to-purple-50o0'
       },
       { 
         name: 'Cloud & Infrastructure', 
         href: '/cloud-infrastructure', 
         description: 'Cloud and infrastructure services',
-        icon: <Cloud className="w-4 h-4" />,
-        color: 'from-green-500 to-emerald-500'
+        icon: <Cloud className="w-4 h-4"  />,
+        color: 'from-green-50o0 to-emerald-50o0'
       }
     ]
   },
   {
     name: 'Solutions',
     href: '/solutions',
-    icon: <Target className="w-5 h-5" />,
+    icon: <Target className="w-5 h-5"  />,
     description: 'Industry-specific solutions',
     category: 'solutions',
-    color: 'from-blue-500 to-indigo-500',
+    color: 'from-blue-50o0 to-indigo-50o0',
     children: [
       { 
         name: 'Enterprise Solutions', 
         href: '/enterprise-solutions', 
         description: 'Large enterprise technology solutions',
-        icon: <Building className="w-4 h-4" />,
+        icon: <Building className="w-4 h-4"  />,
         featured: true
       },
       { 
         name: 'Startup Solutions', 
         href: '/startup-solutions', 
         description: 'Technology solutions for startups',
-        icon: <Zap className="w-4 h-4" />,
-        color: 'from-yellow-500 to-orange-500'
+        icon: <Zap className="w-4 h-4"  />,
+        color: 'from-yellow-50o0 to-orange-50o0'
       },
       { 
         name: 'Government Solutions', 
         href: '/government-solutions', 
         description: 'Government and public sector solutions',
-        icon: <Shield className="w-4 h-4" />,
-        color: 'from-blue-500 to-cyan-500'
+        icon: <Shield className="w-4 h-4"  />,
+        color: 'from-blue-50o0 to-cyan-50o0'
       }
     ]
   },
   {
     name: 'Company',
     href: '/about',
-    icon: <Users className="w-5 h-5" />,
+    icon: <Users className="w-5 h-5"  />,
     description: 'About Zion Tech Group',
     category: 'company',
-    color: 'from-purple-500 to-pink-500',
+    color: 'from-purple-50o0 to-pink-50o0',
     children: [
       { 
         name: 'About Us', 
         href: '/about', 
         description: 'Learn about our company',
-        icon: <Target className="w-4 h-4" />,
+        icon: <Target className="w-4 h-4"  />,
         featured: true
       },
       { 
         name: 'Careers', 
         href: '/careers', 
         description: 'Join our team',
-        icon: <Users className="w-4 h-4" />,
-        color: 'from-green-500 to-emerald-500'
+        icon: <Users className="w-4 h-4"  />,
+        color: 'from-green-50o0 to-emerald-50o0'
       },
       { 
         name: 'News', 
         href: '/news', 
         description: 'Latest company news',
-        icon: <Globe className="w-4 h-4" />,
-        color: 'from-blue-500 to-cyan-500'
+        icon: <Globe className="w-4 h-4"  />,
+        color: 'from-blue-50o0 to-cyan-50o0'
       },
       { 
         name: 'Case Studies', 
         href: '/case-studies', 
         description: 'Success stories',
-        icon: <BarChart3 className="w-4 h-4" />,
-        color: 'from-orange-500 to-red-500'
+        icon: <BarChart3 className="w-4 h-4"  />,
+        color: 'from-orange-50o0 to-red-50o0'
       }
     ]
   },
   {
     name: 'Resources',
     href: '/resources',
-    icon: <BookOpen className="w-5 h-5" />,
+    icon: <BookOpen className="w-5 h-5"  />,
     description: 'Knowledge and resources',
     category: 'resources',
-    color: 'from-green-500 to-emerald-500',
+    color: 'from-green-50o0 to-emerald-50o0',
     children: [
       { 
         name: 'Blog', 
         href: '/blog', 
         description: 'Technology insights and updates',
-        icon: <FileText className="w-4 h-4" />,
+        icon: <FileText className="w-4 h-4"  />,
         featured: true
       },
       { 
         name: 'Documentation', 
         href: '/docs', 
         description: 'Technical documentation',
-        icon: <BookOpen className="w-4 h-4" />,
-        color: 'from-blue-500 to-cyan-500'
+        icon: <BookOpen className="w-4 h-4"  />,
+        color: 'from-blue-50o0 to-cyan-50o0'
       },
       { 
         name: 'Webinars', 
         href: '/webinars', 
         description: 'Educational webinars',
-        icon: <Video className="w-4 h-4" />,
-        color: 'from-purple-500 to-pink-500'
+        icon: <Video className="w-4 h-4"  />,
+        color: 'from-purple-50o0 to-pink-50o0'
       }
     ]
   },
   {
     name: 'Pricing',
     href: '/pricing',
-    icon: <DollarSign className="w-5 h-5" />,
+    icon: <DollarSign className="w-5 h-5"  />,
     description: 'Transparent pricing plans',
     category: 'pricing',
-    color: 'from-green-500 to-emerald-500'
+    color: 'from-green-50o0 to-emerald-50o0'
   },
   {
     name: 'Contact',
     href: '/contact',
-    icon: <Mail className="w-5 h-5" />,
+    icon: <Mail className="w-5 h-5"  />,
     description: 'Get in touch with us',
     category: 'contact',
-    color: 'from-cyan-500 to-blue-500'
+    color: 'from-cyan-50o0 to-blue-50o0'
   }
 ];
 
-const contactInfo = {
-  phone: '+1 302 464 0950',
+const contactInfo ={
+  phone: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709'
+  address: '364 E Main St STE 10o08 Middletown DE 19709'
 };
 
 const ImprovedNavigation: React.FC = () => {
@@ -282,7 +282,7 @@ const ImprovedNavigation: React.FC = () => {
     <>
       {/* Enhanced Navigation Bar */}
       <nav 
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
           isScrolled 
             ? 'bg-black/95 backdrop-blur-xl border-b border-white/10 shadow-2xl' 
             : 'bg-transparent'
@@ -299,10 +299,10 @@ const ImprovedNavigation: React.FC = () => {
               transition={{ duration: 0.5 }}
             >
               <Link href="/" className="flex items-center space-x-2 group">
-                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Zap className="w-6 h-6 text-white" />
+                <div className="w-10 h-10 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-30o0">
+                  <Zap className="w-6 h-6 text-white"  />
                 </div>
-                <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                <span className="text-2xl font-bold bg-gradient-to-r from-cyan-40o0 to-blue-50o0 bg-clip-text text-transparent">
                   Zion Tech Group
                 </span>
               </Link>
@@ -321,30 +321,30 @@ const ImprovedNavigation: React.FC = () => {
                   {item.children ? (
                     <button
                       onClick={() => handleDropdownToggle(item.name)}
-                      className="flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400"
+                      className="flex items-center space-x-2 px-4 py-2 text-gray-30o0 hover:text-white transition-colors duration-20o0 group-hover:text-cyan-40o0"
                       aria-expanded={activeDropdown === item.name}
                       aria-haspopup="true"
                     >
                       {item.icon}
                       <span className="font-medium">{item.name}</span>
                       {item.badge && (
-                        <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full">
+                        <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white rounded-full">
                           {item.badge}
                         </span>
                       )}
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
                         activeDropdown === item.name ? 'rotate-180' : ''
-                      }`} />
+                      }`}  />
                     </button>
                   ) : (
                     <Link
                       href={normalizeHref(item.href)}
-                      className="flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400"
+                      className="flex items-center space-x-2 px-4 py-2 text-gray-30o0 hover:text-white transition-colors duration-20o0 group-hover:text-cyan-40o0"
                     >
                       {item.icon}
                       <span className="font-medium">{item.name}</span>
                       {item.badge && (
-                        <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full">
+                        <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white rounded-full">
                           {item.badge}
                         </span>
                       )}
@@ -363,7 +363,7 @@ const ImprovedNavigation: React.FC = () => {
                       <div className="p-6">
                         <div className="mb-4">
                           <h3 className="text-lg font-semibold text-white mb-2">{item.name}</h3>
-                          <p className="text-sm text-gray-400">{item.description}</p>
+                          <p className="text-sm text-gray-40o0">{item.description}</p>
                         </div>
                         
                         <div className="space-y-3">
@@ -371,31 +371,31 @@ const ImprovedNavigation: React.FC = () => {
                             <Link
                               key={child.name}
                               href={normalizeHref(child.href)}
-                              className={`flex items-start space-x-3 p-3 rounded-xl transition-all duration-200 group ${
+                              className={`flex items-start space-x-3 p-3 rounded-xl transition-all duration-20o0 group ${
                                 child.featured 
-                                  ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20' 
+                                  ? 'bg-gradient-to-r from-cyan-50o0/10 to-blue-50o0/10 border border-cyan-50o0/20' 
                                   : 'hover:bg-white/5'
                               }`}
                             >
                               <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${
-                                child.color || 'from-gray-500 to-gray-600'
+                                child.color || 'from-gray-50o0 to-gray-60o0'
                               } p-2 flex-shrink-0`}>
                                 {child.icon}
                               </div>
                               <div className="flex-1 min-w-0">
                                 <div className="flex items-center gap-2 mb-1">
-                                  <span className="font-medium text-white group-hover:text-cyan-400 transition-colors">
+                                  <span className="font-medium text-white group-hover:text-cyan-40o0 transition-colors">
                                     {child.name}
                                   </span>
                                   {child.featured && (
-                                    <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full">
+                                    <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white rounded-full">
                                       Featured
                                     </span>
                                   )}
                                 </div>
-                                <p className="text-sm text-gray-400 line-clamp-2">{child.description}</p>
+                                <p className="text-sm text-gray-40o0 line-clamp-2">{child.description}</p>
                               </div>
-                              <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors flex-shrink-0" />
+                              <ArrowRight className="w-4 h-4 text-gray-50o0 group-hover:text-cyan-40o0 transition-colors flex-shrink-0"  />
                             </Link>
                           ))}
                         </div>
@@ -414,10 +414,10 @@ const ImprovedNavigation: React.FC = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
                 onClick={() => setIsSearchOpen(!isSearchOpen)}
-                className="p-2 text-gray-400 hover:text-white transition-colors duration-200 hover:bg-white/10 rounded-lg"
+                className="p-2 text-gray-40o0 hover:text-white transition-colors duration-20o0 hover:bg-white/10 rounded-lg"
                 aria-label="Search"
               >
-                <Search className="w-5 h-5" />
+                <Search className="w-5 h-5"  />
               </motion.button>
 
               {/* Contact Button */}
@@ -426,7 +426,7 @@ const ImprovedNavigation: React.FC = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.7 }}
                 onClick={() => window.location.href = '/contact'}
-                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
+                className="px-6 py-2 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-medium rounded-xl hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg shadow-cyan-50o0/25 focus:outline-none focus:ring-4 focus:ring-cyan-50o0/50"
               >
                 Get Started
               </motion.button>
@@ -438,10 +438,10 @@ const ImprovedNavigation: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.8 }}
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 text-gray-400 hover:text-white transition-colors duration-200 hover:bg-white/10 rounded-lg"
+              className="lg:hidden p-2 text-gray-40o0 hover:text-white transition-colors duration-20o0 hover:bg-white/10 rounded-lg"
               aria-label="Toggle mobile menu"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
             </motion.button>
           </div>
         </div>
@@ -459,21 +459,21 @@ const ImprovedNavigation: React.FC = () => {
             >
               <div className="max-w-4xl mx-auto px-4 py-4">
                 <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-40o0"  />
                   <input
                     type="text"
                     placeholder="Search services, solutions, and resources..."
                     value={searchQuery}
                     onChange={(e) => handleSearch(e.target.value)}
                     onKeyPress={handleKeyPress}
-                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50 transition-all duration-20o0"
                   />
                   {searchQuery && (
                     <button
                       onClick={() => setSearchQuery('')}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 hover:text-white transition-colors"
                     >
-                      <X className="w-5 h-5" />
+                      <X className="w-5 h-5"  />
                     </button>
                   )}
                 </div>
@@ -487,9 +487,9 @@ const ImprovedNavigation: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, x: '100%' }}
+            initial={{ opacity: 0, x: '10o0%' }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
+            exit={{ opacity: 0, x: '10o0%' }}
             transition={{ duration: 0.3, type: 'tween' }}
             className="fixed inset-0 z-40 lg:hidden"
           >
@@ -504,9 +504,9 @@ const ImprovedNavigation: React.FC = () => {
 
             {/* Mobile Menu Panel */}
             <motion.div
-              initial={{ x: '100%' }}
+              initial={{ x: '10o0%' }}
               animate={{ x: 0 }}
-              exit={{ x: '100%' }}
+              exit={{ x: '10o0%' }}
               transition={{ duration: 0.3, type: 'tween' }}
               className="absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-black/95 backdrop-blur-xl border-l border-white/20 shadow-2xl overflow-y-auto"
             >
@@ -514,30 +514,30 @@ const ImprovedNavigation: React.FC = () => {
                 {/* Mobile Menu Header */}
                 <div className="flex items-center justify-between mb-8">
                   <div className="flex items-center space-x-2">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                      <Zap className="w-5 h-5 text-white" />
+                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-lg flex items-center justify-center">
+                      <Zap className="w-5 h-5 text-white"  />
                     </div>
-                    <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                    <span className="text-xl font-bold bg-gradient-to-r from-cyan-40o0 to-blue-50o0 bg-clip-text text-transparent">
                       Zion
                     </span>
                   </div>
                   <button
                     onClick={() => setIsOpen(false)}
-                    className="p-2 text-gray-400 hover:text-white transition-colors duration-200 hover:bg-white/10 rounded-lg"
+                    className="p-2 text-gray-40o0 hover:text-white transition-colors duration-20o0 hover:bg-white/10 rounded-lg"
                   >
-                    <X className="w-6 h-6" />
+                    <X className="w-6 h-6"  />
                   </button>
                 </div>
 
                 {/* Mobile Search */}
                 <div className="mb-6">
                   <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-40o0"  />
                     <input
                       type="text"
                       placeholder="Search services..."
-                      className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
-                    />
+                      className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50 transition-all duration-20o0"
+                     />
                   </div>
                 </div>
 
@@ -549,20 +549,20 @@ const ImprovedNavigation: React.FC = () => {
                         <div>
                           <button
                             onClick={() => handleDropdownToggle(item.name)}
-                            className="w-full flex items-center justify-between p-4 text-left text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-all duration-200"
+                            className="w-full flex items-center justify-between p-4 text-left text-gray-30o0 hover:text-white hover:bg-white/5 rounded-xl transition-all duration-20o0"
                           >
                             <div className="flex items-center space-x-3">
                               {item.icon}
                               <span className="font-medium">{item.name}</span>
                               {item.badge && (
-                                <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full">
+                                <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white rounded-full">
                                   {item.badge}
                                 </span>
                               )}
                             </div>
-                            <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                            <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
                               activeDropdown === item.name ? 'rotate-180' : ''
-                            }`} />
+                            }`}  />
                           </button>
                           
                           {activeDropdown === item.name && (
@@ -578,11 +578,11 @@ const ImprovedNavigation: React.FC = () => {
                                   key={child.name}
                                   href={normalizeHref(child.href)}
                                   onClick={() => setIsOpen(false)}
-                                  className="block p-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200"
+                                  className="block p-3 text-gray-40o0 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-20o0"
                                 >
                                   <div className="flex items-center space-x-3">
                                     <div className={`w-6 h-6 rounded-lg bg-gradient-to-r ${
-                                      child.color || 'from-gray-500 to-gray-600'
+                                      child.color || 'from-gray-50o0 to-gray-60o0'
                                     } p-1`}>
                                       {child.icon}
                                     </div>
@@ -597,13 +597,13 @@ const ImprovedNavigation: React.FC = () => {
                         <Link
                           href={normalizeHref(item.href)}
                           onClick={() => setIsOpen(false)}
-                          className="block p-4 text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-all duration-200"
+                          className="block p-4 text-gray-30o0 hover:text-white hover:bg-white/5 rounded-xl transition-all duration-20o0"
                         >
                           <div className="flex items-center space-x-3">
                             {item.icon}
                             <span className="font-medium">{item.name}</span>
                             {item.badge && (
-                              <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full">
+                              <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white rounded-full">
                                 {item.badge}
                               </span>
                             )}
@@ -617,12 +617,12 @@ const ImprovedNavigation: React.FC = () => {
                 {/* Mobile Contact Info */}
                 <div className="mt-8 pt-6 border-t border-white/20">
                   <div className="space-y-3">
-                    <div className="flex items-center space-x-3 text-gray-400">
-                      <Phone className="w-4 h-4" />
+                    <div className="flex items-center space-x-3 text-gray-40o0">
+                      <Phone className="w-4 h-4"  />
                       <span className="text-sm">{contactInfo.phone}</span>
                     </div>
-                    <div className="flex items-center space-x-3 text-gray-400">
-                      <Mail className="w-4 h-4" />
+                    <div className="flex items-center space-x-3 text-gray-40o0">
+                      <Mail className="w-4 h-4"  />
                       <span className="text-sm">{contactInfo.email}</span>
                     </div>
                   </div>
@@ -632,7 +632,7 @@ const ImprovedNavigation: React.FC = () => {
                       setIsOpen(false);
                       window.location.href = '/contact';
                     }}
-                    className="w-full mt-4 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
+                    className="w-full mt-4 px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-medium rounded-xl hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg shadow-cyan-50o0/25 focus:outline-none focus:ring-4 focus:ring-cyan-50o0/50"
                   >
                     Get Started
                   </button>

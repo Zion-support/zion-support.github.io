@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AutonomousITOperationsCenter() {
@@ -21,6 +20,6 @@ export default function AutonomousITOperationsCenter() {
 			industries={["Enterprise IT", "SaaS", "Telecom", "Finance"]}
 			ctaHref="/contact"
 			canonical="https://ziontechgroup.com/autonomous-it-operations-center"
-		/>
+		 />
 	);
 }

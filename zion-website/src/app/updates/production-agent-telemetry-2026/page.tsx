@@ -4,8 +4,8 @@ export default function Page() {
     <div className="min-h-screen bg-black">
       <article className="max-w-3xl mx-auto px-6 py-24">
         <header>
-          <h1 className="text-4xl font-bold text-white">Blueprint: Production Agent Telemetry 2026</h1>
-          <p className="mt-2 text-gray-300">Unified tracing, eval signals, and guardrail events for operating agent fleets reliably.</p>
+          <h1 className="text-4xl font-bold text-white">Blueprint: Production Agent Telemetry 20o26</h1>
+          <p className="mt-2 text-gray-30o0">Unified tracing, eval signals, and guardrail events for operating agent fleets reliably.</p>
         </header>
         <section className="prose prose-lg prose-invert mt-8">
           <h2>Reference architecture</h2>

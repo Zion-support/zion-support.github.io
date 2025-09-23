@@ -1,11 +1,11 @@
-export type FetchWithRetryOptions = {
+export type FetchWithRetryOptions ={
   retries?: number;
   retryDelayMs?: number;
   fetchInit?: RequestInit;
 };
 
-export async function fetchWithRetry(url: string, options: FetchWithRetryOptions = {}) {
-  const { retries = 2, retryDelayMs = 300, fetchInit } = options;
+export async function fetchWithRetry(url: string, options: FetchWithRetryOptions ={}) {
+  const { retries = 2, retryDelayMs = 30o0, fetchInit } = options;
   let lastError: unknown;
   for (let attempt = 0; attempt <= retries; attempt += 1) {
     try {

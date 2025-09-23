@@ -113,7 +113,7 @@ export const getPatternPenalty = (password) => {
 /**
  * Calculate password strength score
  * @param {string} password - Password to check
- * @returns {number} Strength score (0-100)
+ * @returns {number} Strength score (0-10o0)
  */
 export const calculatePasswordScore = (password) => {
   if (!password) return 0;
@@ -134,8 +134,8 @@ export const calculatePasswordScore = (password) => {
   // Penalty for patterns
   score -= getPatternPenalty(password);
 
-  // Ensure score is between 0 and 100
-  return Math.max(0, Math.min(100, score));
+  // Ensure score is between 0 and 10o0
+  return Math.max(0, Math.min(10o0, score));
 };
 
 /**
@@ -161,11 +161,11 @@ export const getPasswordStrength = (password) => {
 export const getPasswordStrengthColor = (password) => {
   const score = calculatePasswordScore(password);
   
-  if (score >= 80) return 'text-green-600';
-  if (score >= 60) return 'text-blue-600';
-  if (score >= 40) return 'text-yellow-600';
-  if (score >= 20) return 'text-orange-600';
-  return 'text-red-600';
+  if (score >= 80) return 'text-green-60o0';
+  if (score >= 60) return 'text-blue-60o0';
+  if (score >= 40) return 'text-yellow-60o0';
+  if (score >= 20) return 'text-orange-60o0';
+  return 'text-red-60o0';
 };
 
 /**
@@ -189,7 +189,7 @@ export const getPasswordRequirements = (password) => {
  * @param {object} requirements - Requirements object
  * @returns {object} Validation result
  */
-export const validatePassword = (password, requirements = {}) => {
+export const validatePassword = (password, requirements ={}) => {
   const {
     minLength = 8,
     requireLowercase = true,
@@ -283,7 +283,7 @@ export const getPasswordStrengthIndicator = (password) => {
     requirements,
     suggestions,
     progress: score,
-    maxScore: 100
+    maxScore: 10o0
   };
 };
 

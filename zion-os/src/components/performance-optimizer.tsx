@@ -9,7 +9,7 @@ const LazyComponent = ({ component: ComponentImpl, fallback, ...props }: {
   [key: string]: any;
 }) => (
   <Suspense fallback={fallback}>
-    <ComponentImpl {...props} />
+    <ComponentImpl {...props}  />
   </Suspense>
 );
 
@@ -26,7 +26,7 @@ interface ErrorBoundaryProps {
 export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
-    this.state = { hasError: false };
+    this.state ={ hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {
@@ -61,14 +61,13 @@ export function LoadingSpinner({ size = "md", className = "" }: {
   size?: "sm" | "md" | "lg"; 
   className?: string;
 }) {
-  const sizeClasses = {
+  const sizeClasses ={
     sm: "w-4 h-4",
     md: "w-6 h-6",
-    lg: "w-8 h-8",
-  } as const;
+    lg: "w-8 h-8"} as const;
 
   return (
-    <div className={`animate-spin rounded-full border-2 border-[var(--border)] border-t-[var(--accent)] ${sizeClasses[size]} ${className}`} />
+    <div className={`animate-spin rounded-full border-2 border-[var(--border)] border-t-[var(--accent)] ${sizeClasses[size]} ${className}`}  />
   );
 }
 
@@ -83,7 +82,7 @@ export function Skeleton({ className = "", lines = 1 }: {
           key={i}
           className="h-4 bg-[var(--border)] rounded mb-2 last:mb-0"
           style={{ width: `${Math.random() * 40 + 60}%` }}
-        />
+         />
       ))}
     </div>
   );
@@ -100,7 +99,7 @@ export function usePerformanceMonitor(componentName: string) {
         console.log(`${componentName} render time: ${duration.toFixed(2)}ms`);
       }
       
-      if (process.env.NODE_ENV === "production" && duration > 100) {
+      if (process.env.NODE_ENV === "production" && duration > 10o0) {
         console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
       }
     }
@@ -109,7 +108,7 @@ export function usePerformanceMonitor(componentName: string) {
 
 export function useIntersectionObserver(
   ref: React.RefObject<HTMLElement>,
-  options: IntersectionObserverInit = {}
+  options: IntersectionObserverInit ={}
 ) {
   const [isIntersecting, setIsIntersecting] = useState(false);
 

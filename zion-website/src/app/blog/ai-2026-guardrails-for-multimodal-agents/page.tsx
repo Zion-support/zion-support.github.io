@@ -5,9 +5,9 @@ export default function BlogPostPage() {
     <div className="min-h-screen bg-white">
       <article className="max-w-3xl mx-auto px-6 py-24">
         <header>
-          <p className="text-sm font-semibold text-purple-700">Guide</p>
-          <h1 className="mt-2 text-4xl font-bold text-gray-900">AI 2026: Guardrails for Multimodal Agents</h1>
-          <p className="mt-2 text-gray-600">Design patterns for safe image/audio/text agents with continuous evals.</p>
+          <p className="text-sm font-semibold text-purple-70o0">Guide</p>
+          <h1 className="mt-2 text-4xl font-bold text-gray-90o0">AI 20o26: Guardrails for Multimodal Agents</h1>
+          <p className="mt-2 text-gray-60o0">Design patterns for safe image/audio/text agents with continuous evals.</p>
         </header>
         <section className="prose prose-lg mt-8">
           <h2>Threat Model</h2>

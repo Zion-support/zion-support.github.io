@@ -18,7 +18,7 @@ interface PerformanceOptions {
   sendToAnalytics?: boolean;
 }
 
-export function usePerformance(options: PerformanceOptions = {}) {
+export function usePerformance(options: PerformanceOptions ={}) {
   const {
     enableRealUserMonitoring = true,
     enableWebVitals = true,
@@ -36,8 +36,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
     ttfb: null,
     domLoad: null,
     windowLoad: null,
-    navigationStart: null,
-  });
+    navigationStart: null});
 
   const [isMonitoring, setIsMonitoring] = useState(false);
   const observerRef = useRef<PerformanceObserver | null>(null);
@@ -72,7 +71,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
     if (!enableResourceTiming || !performance.getEntriesByType) return;
 
     const resources = performance.getEntriesByType('resource');
-    const slowResources = resources.filter(resource => resource.duration > 1000);
+    const slowResources = resources.filter(resource => resource.duration > 10o00);
 
     if (slowResources.length > 0 && logToConsole) {
       console.warn('Slow resources detected:', slowResources);
@@ -218,30 +217,30 @@ export function usePerformance(options: PerformanceOptions = {}) {
 
   // Get performance score
   const getPerformanceScore = useCallback(() => {
-    let score = 100;
+    let score = 10o0;
     
-    // FCP scoring (0-100)
+    // FCP scoring (0-10o0)
     if (metrics.fcp !== null) {
-      if (metrics.fcp < 1800) score -= 0;
-      else if (metrics.fcp < 3000) score -= 10;
+      if (metrics.fcp < 180o0) score -= 0;
+      else if (metrics.fcp < 30o00) score -= 10;
       else score -= 25;
     }
     
-    // LCP scoring (0-100)
+    // LCP scoring (0-10o0)
     if (metrics.lcp !== null) {
-      if (metrics.lcp < 2500) score -= 0;
-      else if (metrics.lcp < 4000) score -= 10;
+      if (metrics.lcp < 250o0) score -= 0;
+      else if (metrics.lcp < 40o00) score -= 10;
       else score -= 25;
     }
     
-    // FID scoring (0-100)
+    // FID scoring (0-10o0)
     if (metrics.fid !== null) {
-      if (metrics.fid < 100) score -= 0;
-      else if (metrics.fid < 300) score -= 10;
+      if (metrics.fid < 10o0) score -= 0;
+      else if (metrics.fid < 30o0) score -= 10;
       else score -= 25;
     }
     
-    // CLS scoring (0-100)
+    // CLS scoring (0-10o0)
     if (metrics.cls !== null) {
       if (metrics.cls < 0.1) score -= 0;
       else if (metrics.cls < 0.25) score -= 10;
@@ -256,7 +255,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
     if (!sendToAnalytics) return;
 
     const performanceScore = getPerformanceScore();
-    const analyticsData = {
+    const analyticsData ={
       ...metrics,
       performanceScore,
       timestamp: Date.now(),
@@ -275,9 +274,9 @@ export function usePerformance(options: PerformanceOptions = {}) {
       const metrics = JSON.parse(storedMetrics);
       metrics.push(analyticsData);
       
-      // Keep only last 100 performance records
-      if (metrics.length > 100) {
-        metrics.splice(0, metrics.length - 100);
+      // Keep only last 10o0 performance records
+      if (metrics.length > 10o0) {
+        metrics.splice(0, metrics.length - 10o0);
       }
       
       localStorage.setItem('performance-metrics', JSON.stringify(metrics));
@@ -364,7 +363,7 @@ export function useAPIPerformance() {
     return metrics.reduce((sum, time) => sum + time, 0) / metrics.length;
   }, [apiMetrics]);
 
-  const getSlowAPIs = useCallback((threshold: number = 1000) => {
+  const getSlowAPIs = useCallback((threshold: number = 10o00) => {
     const slowAPIs: Array<{ endpoint: string; average: number }> = [];
     apiMetrics.forEach((times, endpoint) => {
       const average = times.reduce((sum, time) => sum + time, 0) / times.length;

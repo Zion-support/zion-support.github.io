@@ -20,33 +20,26 @@ jest.mock("next/router", () => ({
         emit: jest.fn()
       },
 
-
-
 // Mock Next.js Image component
 jest.mock('next/image', () => ({
   __esModule: true,
   default: (props) => {
     // eslint-disable-next-line @next/next/no-img-element
-    return <img {...props} />
+    return <img {...props}  />
   }
 }));
 
 :backup-problematic-files/jest.setup.js
 
-
-
     };
-  },
-}));
+  }}));
 
 // Mock Next.js Image component
 jest.mock("next/image", () => {
   return function MockedImage({ src, alt, ...props }) {
-    return <img src={src} alt={alt} {...props} />;
+    return <img src={src} alt={alt} {...props}  />;
   };
 });
-
-
 
 // Mock Next.js Link component
 jest.mock('next/link', () => ({
@@ -59,9 +52,6 @@ jest.mock('next/link', () => ({
   },
 main:jest.setup.js
 }));
-
-
-
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -94,5 +84,4 @@ global.ResizeObserver = class ResizeObserver {
   unobserve() {}
 
 };
-
 

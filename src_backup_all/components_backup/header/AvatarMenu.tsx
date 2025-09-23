@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { useAuth } from '@/hooks/useAuth';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -8,8 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
   DropdownMenuSeparator,
-  DropdownMenuLabel,
-} from '@/components/ui/dropdown-menu';
+  DropdownMenuLabel} from '@/components/ui/dropdown-menu';
 import { User as UserIcon, Package } from 'lucide-react'
 import { LogOut } from 'lucide-react'; // Assuming lucide-react is used
 
@@ -29,7 +27,7 @@ export const AvatarMenu: React.FC = () => {
         >
           <Avatar className="h-8 w-8">
             {avatarUrl ? (
-              <AvatarImage src={avatarUrl} alt={user.displayName || user.name || 'User avatar'} />
+              <AvatarImage src={avatarUrl} alt={user.displayName || user.name || 'User avatar'}  />
             ) : (
               <AvatarFallback>{initials}</AvatarFallback>
             )}
@@ -49,22 +47,22 @@ export const AvatarMenu: React.FC = () => {
             )}
           </div>
         </DropdownMenuLabel>
-        <DropdownMenuSeparator />
+        <DropdownMenuSeparator  />
         <DropdownMenuItem asChild>
           <Link href="/profile" className="flex items-center">
-            <UserIcon className="mr-2 h-4 w-4" />
+            <UserIcon className="mr-2 h-4 w-4"  />
             <span>Profile</span>
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
           <Link href="/orders" className="flex items-center">
-            <Package className="mr-2 h-4 w-4" />
+            <Package className="mr-2 h-4 w-4"  />
             <span>Orders</span>
           </Link>
         </DropdownMenuItem>
-        <DropdownMenuSeparator />
+        <DropdownMenuSeparator  />
         <DropdownMenuItem onClick={logout} className="flex items-center cursor-pointer">
-          <LogOut className="mr-2 h-4 w-4" />
+          <LogOut className="mr-2 h-4 w-4"  />
           <span>Logout</span>
         </DropdownMenuItem>
       </DropdownMenuContent>

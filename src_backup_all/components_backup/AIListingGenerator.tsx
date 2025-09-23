@@ -10,7 +10,6 @@ import { Sparkles, ArrowRight } from 'lucide-react'
 import Badge from "../../components/ui/Badge";
 // import {logErrorToProduction} from '../../utils/productionLogger';
 
-
 interface GeneratedContent {
   description: string;
   tags: string[];
@@ -31,7 +30,7 @@ interface AIListingGeneratorProps {
   };
 }
 
-export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
+export function AIListingGenerator({ onApplyGenerated, initialValues ={} }: AIListingGeneratorProps) {
   const { toast } = useToast();
   const [title, setTitle] = useState(initialValues.title || "");
   const [category, setCategory] = useState(initialValues.category || "");
@@ -75,7 +74,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       // });
 
       // Mock data for now
-      const data = {
+      const data ={
         generated: {
           description: "Generated description for " + title,
           tags: ["AI", "Technology", category]
@@ -125,7 +124,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       <Card className="border border-zion-blue-light bg-zion-blue-dark">
         <CardHeader>
           <CardTitle className="flex items-center text-white">
-            <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
+            <Sparkles className="h-5 w-5 mr-2 text-zion-cyan"  />
             AI Listing Optimizer
           </CardTitle>
           <p className="text-sm text-zion-slate-light">
@@ -186,7 +185,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
               <>Generating Optimized Content...</>
             ) : (
               <>
-                <Sparkles className="h-4 w-4 mr-2" />
+                <Sparkles className="h-4 w-4 mr-2"  />
                 Generate Optimized Content
               </>
             )}
@@ -197,19 +196,19 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       {isLoading && (
         <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">
           <CardHeader>
-            <Skeleton className="h-8 w-3/4 bg-zion-blue-light/20" />
+            <Skeleton className="h-8 w-3/4 bg-zion-blue-light/20"  />
           </CardHeader>
           <CardContent className="space-y-4">
-            <Skeleton className="h-32 w-full bg-zion-blue-light/20" />
+            <Skeleton className="h-32 w-full bg-zion-blue-light/20"  />
             <div className="flex flex-wrap gap-2">
               {[...Array(5)].map((_, i) => (
-                <Skeleton key={i} className="h-6 w-16 bg-zion-blue-light/20" />
+                <Skeleton key={i} className="h-6 w-16 bg-zion-blue-light/20"  />
               ))}
             </div>
-            <Skeleton className="h-8 w-1/3 bg-zion-blue-light/20" />
+            <Skeleton className="h-8 w-1/3 bg-zion-blue-light/20"  />
             <div className="space-y-2">
               {[...Array(3)].map((_, i) => (
-                <Skeleton key={i} className="h-6 w-full bg-zion-blue-light/20" />
+                <Skeleton key={i} className="h-6 w-full bg-zion-blue-light/20"  />
               ))}
             </div>
           </CardContent>
@@ -256,7 +255,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
               className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
             >
               Apply to My Listing
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <ArrowRight className="ml-2 h-4 w-4"  />
             </Button>
           </CardFooter>
         </Card>

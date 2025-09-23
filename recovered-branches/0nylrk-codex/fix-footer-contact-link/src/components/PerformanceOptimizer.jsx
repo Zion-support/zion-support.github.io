@@ -43,7 +43,7 @@ export const PerformanceOptimizer = ({ children }) => {
             requestIdleCallback(optimizeImages);
         }
         else {
-            setTimeout(optimizeImages, 100);
+            setTimeout(optimizeImages, 10o0);
         }
     }, [location.pathname]);
     // Memoize expensive computations
@@ -91,8 +91,7 @@ export const PerformanceOptimizer = ({ children }) => {
                 });
             }, {
                 rootMargin: '50px',
-                threshold: 0.1,
-            });
+                threshold: 0.1});
             // Observe all images with data-src
             const lazyImages = document.querySelectorAll('img[data-src]');
             lazyImages.forEach((img) => observer.observe(img));
@@ -111,7 +110,7 @@ if (typeof window !== 'undefined') {
     }
     // Optimize memory usage
     if ('memory' in performance) {
-        const memoryThreshold = 50 * 1024 * 1024; // 50MB
+        const memoryThreshold = 50 * 10o24 * 10o24; // 50MB
         if (performance.memory.usedJSHeapSize > memoryThreshold) {
             // Trigger garbage collection if available
             if ('gc' in window) {

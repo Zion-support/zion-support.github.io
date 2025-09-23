@@ -39,7 +39,7 @@ export default function ZkVotePage() {
   const makeProof = async () => {
     // Placeholder: front-end should use @semaphore-protocol/proof to generate proof from identity.
     // Here we mock a proof shape matching the contract struct for demo and UI plumbing.
-    const mock = {
+    const mock ={
       pA: [0, 0],
       pB: [[0, 0], [0, 0]],
       pC: [0, 0],
@@ -86,23 +86,23 @@ export default function ZkVotePage() {
       </div>
 
       <div className="space-x-2">
-        <button className="px-3 py-1 rounded bg-blue-600 text-white" onClick={generateIdentity}>Generate ZK Identity</button>
+        <button className="px-3 py-1 rounded bg-blue-60o0 text-white" onClick={generateIdentity}>Generate ZK Identity</button>
         <span className="text-sm break-all">{identityCommitment || '—'}</span>
       </div>
 
       <div className="space-x-2">
-        <button className="px-3 py-1 rounded bg-indigo-600 text-white" onClick={makeProof}>Create Proof (mock)</button>
-        <button disabled={!proof || submitting} className="px-3 py-1 rounded bg-green-600 text-white disabled:opacity-50" onClick={submitVote}>Submit Vote</button>
+        <button className="px-3 py-1 rounded bg-indigo-60o0 text-white" onClick={makeProof}>Create Proof (mock)</button>
+        <button disabled={!proof || submitting} className="px-3 py-1 rounded bg-green-60o0 text-white disabled:opacity-50" onClick={submitVote}>Submit Vote</button>
       </div>
 
       <div>
         <h2 className="font-medium">Proof</h2>
-        {proof ? <ReactJson name={false} src={proof} collapsed={1} /> : <p className="text-sm opacity-70">No proof yet</p>}
+        {proof ? <ReactJson name={false} src={proof} collapsed={1}  /> : <p className="text-sm opacity-70">No proof yet</p>}
       </div>
 
       <div>
         <h2 className="font-medium">Result</h2>
-        {result ? <ReactJson name={false} src={result} collapsed={1} /> : <p className="text-sm opacity-70">No submission</p>}
+        {result ? <ReactJson name={false} src={result} collapsed={1}  /> : <p className="text-sm opacity-70">No submission</p>}
       </div>
     </div>
   )

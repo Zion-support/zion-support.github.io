@@ -47,7 +47,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         <DropdownMenuTrigger asChild>
           <Button variant="outline" size="sm" className="gap-2">
             {currentResume?.basic_info?.title || 'My Resume'}
-            <ChevronDown className="h-4 w-4" />
+            <ChevronDown className="h-4 w-4"  />
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
@@ -60,12 +60,12 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
               {resume.basic_info.title}
             </DropdownMenuItem>
           ))}
-          <DropdownMenuSeparator />
+          <DropdownMenuSeparator  />
           <DropdownMenuItem 
             onClick={() => setSaveDialogOpen(true)}
             className="cursor-pointer"
           >
-            <Plus className="h-4 w-4 mr-2" />
+            <Plus className="h-4 w-4 mr-2"  />
             Save as new version
           </DropdownMenuItem>
         </DropdownMenuContent>
@@ -95,8 +95,8 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
               disabled={!newResumeTitle.trim() || isLoading}
               className="gap-2"
             >
-              {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
-              <Save className="h-4 w-4" />
+              {isLoading && <Loader2 className="h-4 w-4 animate-spin"  />}
+              <Save className="h-4 w-4"  />
               Save
             </Button>
           </DialogFooter>

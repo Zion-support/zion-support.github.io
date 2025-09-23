@@ -32,7 +32,7 @@ interface ContactPublisherModalProps {;
   productId?:string;
 }
 ;
-type FormValues = {;
+type FormValues ={;
   subject:string,;
   message:string;
 },;
@@ -105,11 +105,11 @@ export function ContactPublisherModal({;
         >;
           <DialogHeader>;
             <DialogTitle id="contact-publisher-title" className="text-xl font-bold text-white flex items-center gap-2">;
-              <Mail className="h-5 w-5 text-zion-cyan" />;
+              <Mail className="h-5 w-5 text-zion-cyan"  />;
               Contact Publisher;
             </DialogTitle>;
           </DialogHeader>;
-          {error && <p className="text-red-500 mb-2">{error}</p>}
+          {error && <p className="text-red-50o0 mb-2">{error}</p>}
           {publisherEmail && (;
             <div className="mb-4 text-zion-slate-light">;
             <span className="block">Email:</span>;
@@ -131,9 +131,9 @@ export function ContactPublisherModal({;
                       placeholder="Subject";
                       className="bg-zion-blue border-zion-blue-light text-white";
                       {...field}
-                    />;
+                     />;
                   </FormControl>;
-                  <FormMessage className="text-red-500" />;
+                  <FormMessage className="text-red-50o0"  />;
                 </FormItem>;              )}
             />;
             <FormField;
@@ -147,9 +147,9 @@ export function ContactPublisherModal({;
                       placeholder={`Message to ${publisherName}...`}
                       className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]";
                       {...field}
-                    />;
+                     />;
                   </FormControl>;
-                  <FormMessage className="text-red-500" />;
+                  <FormMessage className="text-red-50o0"  />;
                 </FormItem>;              )}
             />;
             <Button;
@@ -157,7 +157,7 @@ export function ContactPublisherModal({;
               className="w-full";
               disabled={!form.formState.isValid || isSubmitting}
             >;
-              <SendIcon className="mr-2" />;
+              <SendIcon className="mr-2"  />;
               {isSubmitting ? 'Sending...' :'Send Message'}
             </Button>;
           </form>;
@@ -165,22 +165,21 @@ export function ContactPublisherModal({;
         </DialogContent>;
       </FocusLock>;
     </Dialog>;
-    <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
+    <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen}  />;
     </>;
   ),;}
  const schema: yup.ObjectSchema<FormValues> = yup .object ({;
   subject: yup .string () .min (5, 'Subject must be at least 5 characters') .required ('Subject is required'),  message: yup .string () .min (20, 'Message must be at least 20 characters') .required ('Message is required') ;
 }) .required ();
-return (<> <Dialog open= {;
+return (<> <Dialog open={;
   isOpen ;
-}onOpenChange= {;
+}onOpenChange={;
   onClose ;
-}> <FocusLock disabled= {;
+}> <FocusLock disabled={;
   !isOpen ;
-}returnFocus> <DialogContent > <DialogHeader> <DialogTitle id="contact-publisher-title" className="text-xl font-bold text-white flex items-center gap-2" > <Mail className="h-5 w-5 text-zion-cyan" /> Contact Publisher </DialogTitle> </DialogHeader> <FormItem> <FormLabel>Subject</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage className="text-red-500" /> </FormItem>) ";"}/> <FormField <FormItem> <FormLabel>Message</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage className="text-red-500" /> </FormItem>) ;
-}/> <Button </Button> </form> </Form> </DialogContent> </FocusLock> </Dialog> <LoginModal isOpen= {;
+}returnFocus> <DialogContent > <DialogHeader> <DialogTitle id="contact-publisher-title" className="text-xl font-bold text-white flex items-center gap-2" > <Mail className="h-5 w-5 text-zion-cyan"  /> Contact Publisher </DialogTitle> </DialogHeader> <FormItem> <FormLabel>Subject</FormLabel> <FormControl> <Input  /> </FormControl> <FormMessage className="text-red-50o0"  /> </FormItem>) ";"}/> <FormField <FormItem> <FormLabel>Message</FormLabel> <FormControl> <Textarea  /> </FormControl> <FormMessage className="text-red-50o0"  /> </FormItem>) ;
+}/> <Button </Button> </form> </Form> </DialogContent> </FocusLock> </Dialog> <LoginModal isOpen={;
   loginOpen ;
 }onOpenChange= {;
   setLoginOpen ;
-
 

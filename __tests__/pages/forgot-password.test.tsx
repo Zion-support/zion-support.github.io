@@ -19,16 +19,16 @@ describe('ForgotPasswordPage', () => {'  const mockForgotPassword = forgotPasswo
     mockForgotPassword.mockResolvedValue({});
   });
 
-  test('renders correctly with email input and submit button', () => {'    render(<ForgotPasswordPage />);
+  test('renders correctly with email input and submit button', () => {'    render(<ForgotPasswordPage  />);
     expect(screen.getByLabelText(/email address/i)).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /send reset link/i })).toBeInTheDocument();  });
 
-  test('email input updates its value on user typing', () => {'    render(<ForgotPasswordPage />);
+  test('email input updates its value on user typing', () => {'    render(<ForgotPasswordPage  />);
     const emailInput = screen.getByLabelText(/email address/i) as HTMLInputElement;
     fireEvent.change(emailInput, { target: { value: test@example.com' } });    expect(emailInput.value).toBe('test@example.com');  });
 
   test('clicking submit calls forgotPassword with the entered email and shows loading/success', async () => {'    mockForgotPassword.mockResolvedValueOnce({});
-    render(<ForgotPasswordPage />);
+    render(<ForgotPasswordPage  />);
     const emailInput = screen.getByLabelText(/email address/i);
     const submitButton = screen.getByRole('button', { name: /send reset link/i });
     fireEvent.change(emailInput, { target: { value: test@example.com' } });    fireEvent.click(submitButton);
@@ -49,7 +49,7 @@ describe('ForgotPasswordPage', () => {'  const mockForgotPassword = forgotPasswo
   });
 
   test('displays an error message when forgotPassword rejects', async () => {'    const errorMessage = Network Error. Please try again.';    mockForgotPassword.mockRejectedValueOnce(new Error(errorMessage));
-    render(<ForgotPasswordPage />);
+    render(<ForgotPasswordPage  />);
     const emailInput = screen.getByLabelText(/email address/i);
     const submitButton = screen.getByRole('button', { name: /send reset link/i });
     fireEvent.change(emailInput, { target: { value: error@example.com' } });    fireEvent.click(submitButton);
@@ -69,7 +69,7 @@ describe('ForgotPasswordPage', () => {'  const mockForgotPassword = forgotPasswo
     expect(screen.getByRole('button', { name: /send reset link/i })).toBeInTheDocument();  });
 
   test('displays a generic error message when forgotPassword rejects without a message', async () => {'    mockForgotPassword.mockRejectedValueOnce(new Error()); // Error without a message
-    render(<ForgotPasswordPage />);
+    render(<ForgotPasswordPage  />);
     const emailInput = screen.getByLabelText(/email address/i);
     const submitButton = screen.getByRole('button', { name: /send reset link/i });
     fireEvent.change(emailInput, { target: { value: genericerror@example.com' } });    fireEvent.click(submitButton);
@@ -80,7 +80,7 @@ describe('ForgotPasswordPage', () => {'  const mockForgotPassword = forgotPasswo
     });
   });
 
-  test('Link to the login page points to /auth/login', () => {'    render(<ForgotPasswordPage />);
+  test('Link to the login page points to /auth/login', () => {'    render(<ForgotPasswordPage  />);
     const loginLink = screen.getByText(/login/i); // Assuming the link text is "Login""    expect(loginLink).toBeInTheDocument();"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     expect(loginLink.closest('a')).toHaveAttribute('href', /auth/login');  });
 });

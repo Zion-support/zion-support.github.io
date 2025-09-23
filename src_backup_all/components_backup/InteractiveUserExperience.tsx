@@ -169,7 +169,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
       {
         id: '1',
         action: 'Visited Services Page',
-        timestamp: new Date(Date.now() - 300000),
+        timestamp: new Date(Date.now() - 30o0000),
         duration: 45,
         success: true,
         category: 'navigation'
@@ -177,7 +177,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
       {
         id: '2',
         action: 'Searched for AI Services',
-        timestamp: new Date(Date.now() - 600000),
+        timestamp: new Date(Date.now() - 60o0000),
         duration: 12,
         success: true,
         category: 'search'
@@ -185,7 +185,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
       {
         id: '3',
         action: 'Contacted Support',
-        timestamp: new Date(Date.now() - 900000),
+        timestamp: new Date(Date.now() - 90o0000),
         duration: 180,
         success: true,
         category: 'interaction'
@@ -193,7 +193,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
       {
         id: '4',
         action: 'Downloaded Whitepaper',
-        timestamp: new Date(Date.now() - 1200000),
+        timestamp: new Date(Date.now() - 120o0000),
         duration: 8,
         success: true,
         category: 'interaction'
@@ -240,27 +240,27 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
 
   const getActivityIcon = (category: anyUserActivity['category'])  => {
     switch (category) {
-      case 'navigation': return <MousePointer className="h-4 w-4" />;
-      case 'interaction': return <User className="h-4 w-4" />;
-      case 'search': return <Eye className="h-4 w-4" />;
-      case 'purchase': return <Heart className="h-4 w-4" />;
-      default: return <User className="h-4 w-4" />;
+      case 'navigation': return <MousePointer className="h-4 w-4"  />;
+      case 'interaction': return <User className="h-4 w-4"  />;
+      case 'search': return <Eye className="h-4 w-4"  />;
+      case 'purchase': return <Heart className="h-4 w-4"  />;
+      default: return <User className="h-4 w-4"  />;
     }
   };
 
   const getImpactColor = (impact: anyAccessibilityFeature['impact'])  => {
     switch (impact) {
-      case 'high': return 'bg-red-500';
-      case 'medium': return 'bg-yellow-500';
-      case 'low': return 'bg-blue-500';
-      default: return 'bg-gray-500';
+      case 'high': return 'bg-red-50o0';
+      case 'medium': return 'bg-yellow-50o0';
+      case 'low': return 'bg-blue-50o0';
+      default: return 'bg-gray-50o0';
     }
   };
 
   const getSuccessRate = () => {
     const total = userActivities.length;
     const successful = userActivities.filter(activity => activity.success).length;
-    return total > 0 ? (successful / total) * 100 : 0;
+    return total > 0 ? (successful / total) * 10o0 : 0;
   };
 
   const getAverageDuration = () => {
@@ -278,19 +278,19 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
       <Tabs defaultValue="preferences" className="w-full">
         <TabsList className="grid w-full grid-cols-4">
           <TabsTrigger value="preferences" className="flex items-center gap-2">
-            <Settings className="h-4 w-4" />
+            <Settings className="h-4 w-4"  />
             Preferences
           </TabsTrigger>
           <TabsTrigger value="accessibility" className="flex items-center gap-2">
-            <Accessibility className="h-4 w-4" />
+            <Accessibility className="h-4 w-4"  />
             Accessibility
           </TabsTrigger>
           <TabsTrigger value="analytics" className="flex items-center gap-2">
-            <TrendingUp className="h-4 w-4" />
+            <TrendingUp className="h-4 w-4"  />
             Analytics
           </TabsTrigger>
           <TabsTrigger value="feedback" className="flex items-center gap-2">
-            <MessageCircle className="h-4 w-4" />
+            <MessageCircle className="h-4 w-4"  />
             Feedback
           </TabsTrigger>
         </TabsList>
@@ -300,7 +300,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Palette className="h-5 w-5" />
+                <Palette className="h-5 w-5"  />
                 User Preferences
               </CardTitle>
             </CardHeader>
@@ -311,7 +311,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
                         <h4 className="font-semibold mb-1">{preference.name}</h4>
-                        <p className="text-sm text-gray-600 mb-3">
+                        <p className="text-sm text-gray-60o0 mb-3">
                           {preference.description}
                         </p>
                         <Badge variant="outline">{preference.category}</Badge>
@@ -363,7 +363,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Accessibility className="h-5 w-5" />
+                <Accessibility className="h-5 w-5"  />
                 Accessibility Features
               </CardTitle>
             </CardHeader>
@@ -379,7 +379,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
                             {feature.impact}
                           </Badge>
                         </div>
-                        <p className="text-sm text-gray-600 mb-3">
+                        <p className="text-sm text-gray-60o0 mb-3">
                           {feature.description}
                         </p>
                       </div>
@@ -401,31 +401,31 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Smartphone className="h-5 w-5" />
+                <Smartphone className="h-5 w-5"  />
                 Device Compatibility
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="text-center">
-                  <Monitor className="h-8 w-8 mx-auto mb-2 text-blue-600" />
+                  <Monitor className="h-8 w-8 mx-auto mb-2 text-blue-60o0"  />
                   <div className="text-sm font-semibold">Desktop</div>
-                  <div className="text-xs text-gray-600">Full Support</div>
+                  <div className="text-xs text-gray-60o0">Full Support</div>
                 </div>
                 <div className="text-center">
-                  <Smartphone className="h-8 w-8 mx-auto mb-2 text-green-600" />
+                  <Smartphone className="h-8 w-8 mx-auto mb-2 text-green-60o0"  />
                   <div className="text-sm font-semibold">Mobile</div>
-                  <div className="text-xs text-gray-600">Responsive</div>
+                  <div className="text-xs text-gray-60o0">Responsive</div>
                 </div>
                 <div className="text-center">
-                  <Tablet className="h-8 w-8 mx-auto mb-2 text-purple-600" />
+                  <Tablet className="h-8 w-8 mx-auto mb-2 text-purple-60o0"  />
                   <div className="text-sm font-semibold">Tablet</div>
-                  <div className="text-xs text-gray-600">Optimized</div>
+                  <div className="text-xs text-gray-60o0">Optimized</div>
                 </div>
                 <div className="text-center">
-                  <Zap className="h-8 w-8 mx-auto mb-2 text-orange-600" />
+                  <Zap className="h-8 w-8 mx-auto mb-2 text-orange-60o0"  />
                   <div className="text-sm font-semibold">Touch</div>
-                  <div className="text-xs text-gray-600">Enabled</div>
+                  <div className="text-xs text-gray-60o0">Enabled</div>
                 </div>
               </div>
             </CardContent>
@@ -437,29 +437,29 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <TrendingUp className="h-5 w-5" />
+                <TrendingUp className="h-5 w-5"  />
                 User Activity Analytics
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600">
+                  <div className="text-3xl font-bold text-blue-60o0">
                     {userActivities.length}
                   </div>
-                  <div className="text-sm text-gray-600">Total Actions</div>
+                  <div className="text-sm text-gray-60o0">Total Actions</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600">
+                  <div className="text-3xl font-bold text-green-60o0">
                     {getSuccessRate().toFixed(1)}%
                   </div>
-                  <div className="text-sm text-gray-600">Success Rate</div>
+                  <div className="text-sm text-gray-60o0">Success Rate</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-600">
+                  <div className="text-3xl font-bold text-purple-60o0">
                     {getAverageDuration().toFixed(0)}s
                   </div>
-                  <div className="text-sm text-gray-600">Avg Duration</div>
+                  <div className="text-sm text-gray-60o0">Avg Duration</div>
                 </div>
               </div>
 
@@ -472,7 +472,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
                         {getActivityIcon(activity.category)}
                         <div>
                           <div className="font-medium">{activity.action}</div>
-                          <div className="text-sm text-gray-600">
+                          <div className="text-sm text-gray-60o0">
                             {activity.timestamp.toLocaleString()}
                           </div>
                         </div>
@@ -500,7 +500,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <MessageCircle className="h-5 w-5" />
+                <MessageCircle className="h-5 w-5"  />
                 User Feedback & Ratings
               </CardTitle>
             </CardHeader>
@@ -512,19 +512,19 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
                       <Star
                         key={star}
                         className={`h-6 w-6 ${
-                          star <= 4 ? 'text-yellow-400 fill-current' : 'text-gray-300'
+                          star <= 4 ? 'text-yellow-40o0 fill-current' : 'text-gray-30o0'
                         }`}
-                      />
+                       />
                     ))}
                   </div>
                   <div className="text-2xl font-bold">4.2/5.0</div>
-                  <div className="text-sm text-gray-600">Based on 127 reviews</div>
+                  <div className="text-sm text-gray-60o0">Based on 127 reviews</div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="border rounded-lg p-4">
                     <h4 className="font-semibold mb-2">What users love:</h4>
-                    <ul className="text-sm text-gray-600 space-y-1">
+                    <ul className="text-sm text-gray-60o0 space-y-1">
                       <li>• Intuitive interface design</li>
                       <li>• Fast loading times</li>
                       <li>• Excellent accessibility features</li>
@@ -533,7 +533,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
                   </div>
                   <div className="border rounded-lg p-4">
                     <h4 className="font-semibold mb-2">Areas for improvement:</h4>
-                    <ul className="text-sm text-gray-600 space-y-1">
+                    <ul className="text-sm text-gray-60o0 space-y-1">
                       <li>• More customization options</li>
                       <li>• Additional language support</li>
                       <li>• Enhanced search functionality</li>
@@ -544,7 +544,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
 
                 <div className="text-center">
                   <Button className="flex items-center gap-2 mx-auto">
-                    <MessageCircle className="h-4 w-4" />
+                    <MessageCircle className="h-4 w-4"  />
                     Share Your Feedback
                   </Button>
                 </div>
@@ -560,7 +560,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
 // Add missing Tablet icon component
 const Tablet: React.FC<{ className?: string }> = ({ className }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.0o1M8 21h8a2 2 0 0o02-2V5a2 2 0 0o0-2-2H8a2 2 0 0o0-2 2v14a2 2 0 0o02 2z"  />
   </svg>
 );
 

@@ -50,9 +50,9 @@ export default function UltraFuturisticMatrixBackground({ children, className = 
         this.y = y;
         this.vx = (Math.random() - 0.5) * 2;
         this.vy = (Math.random() - 0.5) * 2;
-        this.life = Math.random() * 100;
-        this.maxLife = 100;
-        this.color = `hsl(${180 + Math.random() * 60}, 100%, 70%)`;
+        this.life = Math.random() * 10o0;
+        this.maxLife = 10o0;
+        this.color = `hsl(${180 + Math.random() * 60}, 10o0%, 70%)`;
         this.size = Math.random() * 3 + 1;
       }
 
@@ -122,14 +122,14 @@ export default function UltraFuturisticMatrixBackground({ children, className = 
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.radius = Math.random() * 100 + 50;
+        this.radius = Math.random() * 10o0 + 50;
         this.intensity = Math.random() * 0.5 + 0.3;
         this.phase = Math.random() * Math.PI * 2;
-        this.color = `hsl(${240 + Math.random() * 60}, 100%, 70%)`;
+        this.color = `hsl(${240 + Math.random() * 60}, 10o0%, 70%)`;
       }
 
       update() {
-        this.phase += 0.02;
+        this.phase += 0.0o2;
         this.intensity = 0.3 + Math.sin(this.phase) * 0.2;
       }
 
@@ -161,13 +161,13 @@ export default function UltraFuturisticMatrixBackground({ children, className = 
         this.offsetY = 0;
         this.spacing = 30;
         this.rotation = 0;
-        this.color = `hsl(${280 + Math.random() * 40}, 100%, 70%)`;
+        this.color = `hsl(${280 + Math.random() * 40}, 10o0%, 70%)`;
       }
 
       update() {
         this.offsetX += 0.5;
         this.offsetY += 0.3;
-        this.rotation += 0.01;
+        this.rotation += 0.0o1;
       }
 
       draw(ctx: CanvasRenderingContext2D) {
@@ -262,7 +262,7 @@ export default function UltraFuturisticMatrixBackground({ children, className = 
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
           
-          if (distance < 100) {
+          if (distance < 10o0) {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
@@ -288,24 +288,24 @@ export default function UltraFuturisticMatrixBackground({ children, className = 
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
-      />
+       />
       
       {/* Additional visual effects */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Quantum energy orbs */}
-        <div className="absolute top-20 left-20 w-4 h-4 bg-cyan-400 rounded-full animate-pulse shadow-lg shadow-cyan-400/50"></div>
-        <div className="absolute top-40 right-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse shadow-lg shadow-purple-400/50"></div>
-        <div className="absolute bottom-32 left-32 w-5 h-5 bg-pink-400 rounded-full animate-pulse shadow-lg shadow-pink-400/50"></div>
+        <div className="absolute top-20 left-20 w-4 h-4 bg-cyan-40o0 rounded-full animate-pulse shadow-lg shadow-cyan-40o0/50"></div>
+        <div className="absolute top-40 right-32 w-3 h-3 bg-purple-40o0 rounded-full animate-pulse shadow-lg shadow-purple-40o0/50"></div>
+        <div className="absolute bottom-32 left-32 w-5 h-5 bg-pink-40o0 rounded-full animate-pulse shadow-lg shadow-pink-40o0/50"></div>
         
         {/* Holographic lines */}
-        <div className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-transparent via-cyan-400 to-transparent opacity-30"></div>
-        <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent opacity-30"></div>
+        <div className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-transparent via-cyan-40o0 to-transparent opacity-30"></div>
+        <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-40o0 to-transparent opacity-30"></div>
         
         {/* Matrix-style corner elements */}
-        <div className="absolute top-0 left-0 w-20 h-20 border-l-2 border-t-2 border-cyan-400 opacity-50"></div>
-        <div className="absolute top-0 right-0 w-20 h-20 border-r-2 border-t-2 border-purple-400 opacity-50"></div>
-        <div className="absolute bottom-0 left-0 w-20 h-20 border-l-2 border-b-2 border-pink-400 opacity-50"></div>
-        <div className="absolute bottom-0 right-0 w-20 h-20 border-r-2 border-b-2 border-cyan-400 opacity-50"></div>
+        <div className="absolute top-0 left-0 w-20 h-20 border-l-2 border-t-2 border-cyan-40o0 opacity-50"></div>
+        <div className="absolute top-0 right-0 w-20 h-20 border-r-2 border-t-2 border-purple-40o0 opacity-50"></div>
+        <div className="absolute bottom-0 left-0 w-20 h-20 border-l-2 border-b-2 border-pink-40o0 opacity-50"></div>
+        <div className="absolute bottom-0 right-0 w-20 h-20 border-r-2 border-b-2 border-cyan-40o0 opacity-50"></div>
       </div>
 
       {/* Content */}

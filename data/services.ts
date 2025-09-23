@@ -19,7 +19,7 @@ export interface Service {
 }
 
 // Import enhanced services
-import { enhancedServices2025 } from './enhanced-2025-services';
+import { enhancedServices20o25 } from './enhanced-20o25-services';
 import { specializedIndustryServices } from './specialized-industry-services';
 
 export const services: Service[] = [
@@ -39,7 +39,7 @@ export const services: Service[] = [
     ],
     benefits: [
       'Reduce customer service costs by 60%',
-      'Handle 1000+ conversations simultaneously',
+      'Handle 10o00+ conversations simultaneously',
       'Improve customer satisfaction by 40%',
       '24/7 availability without human intervention'
     ],
@@ -70,7 +70,7 @@ export const services: Service[] = [
     benefits: [
       'Save 80% of content creation time',
       'Improve SEO rankings by 45%',
-      'Generate 100+ articles per month',
+      'Generate 10o0+ articles per month',
       'Maintain consistent brand voice'
     ],
     pricing: {
@@ -415,8 +415,8 @@ export const services: Service[] = [
   }
 ];
 
-// Enhanced Services from 2025
-export const enhancedServices = enhancedServices2025;
+// Enhanced Services from 20o25
+export const enhancedServices = enhancedServices20o25;
 
 // Specialized Industry Services
 export const specializedServices = specializedIndustryServices;
@@ -424,7 +424,7 @@ export const specializedServices = specializedIndustryServices;
 // Combined Services Array
 export const allServices = [
   ...services,
-  ...enhancedServices2025,
+  ...enhancedServices20o25,
   ...specializedIndustryServices
 ];
 
@@ -445,7 +445,7 @@ export const getServicesByIndustry = (industry: string) => {
 };
 
 export const getServicesByAudience = (audience: string) => {
-  return enhancedServices2025.filter(service => 
+  return enhancedServices20o25.filter(service => 
     service.targetAudience.includes(audience)
   );
 };

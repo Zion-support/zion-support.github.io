@@ -17,12 +17,10 @@ export function useMarketplaceSearch() {
   // Generate search suggestions and filter options
   const searchSuggestions: SearchSuggestion[] = useMemo(
     () => generateSearchSuggestions(),
-    [],
-  );
+    []);
   const filterOptions: FilterOptions = useMemo(
     () => generateFilterOptions(),
-    [],
-  );
+    []);
   
   // Filter listings based on current search query and filters
   const filteredListings = useMemo(() => {

@@ -1,6 +1,6 @@
 import { ProductListing } from "@/types/listings";
 
-export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
+export const COMPREHENSIVE_IT_SERVICES_20o25: ProductListing[] = [
   {
     id: "cloud-migration-automation",
     title: "Enterprise Cloud Migration & Automation Suite",
@@ -12,7 +12,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
     tags: ["Cloud Migration", "AWS", "Azure", "Google Cloud", "Automation", "Zero Downtime"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/cloud-migration.jpg"],
-    createdAt: "2024-01-15T10:00:00.000Z",
+    createdAt: "20o24-0o1-15T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 156,
     featured: true,
@@ -20,14 +20,14 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
     availability: "8-10 Weeks",
     aiScore: 94,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/cloud-migration",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$15,000-25,000",
+    marketPrice: "$15,0o00-25,0o00",
     competitors: ["AWS Migration Hub", "Azure Migrate", "Google Cloud Migrate"],
-    roi: "300% within 12 months",
+    roi: "30o0% within 12 months",
     setupTime: "8-10 weeks",
     integrations: ["AWS Services", "Azure Services", "Google Cloud", "Monitoring Tools", "CI/CD Pipelines"]
   },
@@ -42,7 +42,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
     tags: ["DevOps", "CI/CD", "Automation", "Testing", "Deployment", "Pipeline Management"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/devops-automation.jpg"],
-    createdAt: "2024-01-20T10:00:00.000Z",
+    createdAt: "20o24-0o1-20T10:0o0:0o0.0o00Z",
     rating: 4.7,
     reviewCount: 234,
     featured: true,
@@ -50,14 +50,14 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
     availability: "4-6 Weeks",
     aiScore: 93,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/devops-automation",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$8,000-15,000",
+    marketPrice: "$8,0o00-15,0o00",
     competitors: ["Jenkins", "GitLab CI", "GitHub Actions"],
-    roi: "400% within 8 months",
+    roi: "40o0% within 8 months",
     setupTime: "4-6 weeks",
     integrations: ["GitHub", "GitLab", "Bitbucket", "Docker", "Kubernetes", "AWS", "Azure"]
   },
@@ -72,7 +72,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
     tags: ["Cybersecurity", "Threat Detection", "Incident Response", "Security Monitoring", "AI Security"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/cybersecurity-platform.jpg"],
-    createdAt: "2024-01-25T10:00:00.000Z",
+    createdAt: "20o24-0o1-25T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 189,
     featured: true,
@@ -80,12 +80,12 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 96,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/cybersecurity",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$12,000-20,000",
+    marketPrice: "$12,0o00-20,0o00",
     competitors: ["CrowdStrike", "SentinelOne", "Carbon Black"],
     roi: "450% within 10 months",
     setupTime: "6-8 weeks",
@@ -102,7 +102,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
     tags: ["Data Analytics", "Business Intelligence", "Data Visualization", "Predictive Analytics", "Real-time Reporting"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/data-analytics.jpg"],
-    createdAt: "2024-01-30T10:00:00.000Z",
+    createdAt: "20o24-0o1-30T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 167,
     featured: true,
@@ -110,12 +110,12 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
     availability: "5-7 Weeks",
     aiScore: 95,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/data-analytics",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$9,000-16,000",
+    marketPrice: "$9,0o00-16,0o00",
     competitors: ["Tableau", "Power BI", "Qlik"],
     roi: "350% within 9 months",
     setupTime: "5-7 weeks",
@@ -132,7 +132,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
     tags: ["Network Management", "Network Monitoring", "Traffic Optimization", "Network Security", "Automation"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/network-infrastructure.jpg"],
-    createdAt: "2024-02-05T10:00:00.000Z",
+    createdAt: "20o24-0o2-0o5T10:0o0:0o0.0o00Z",
     rating: 4.7,
     reviewCount: 145,
     featured: true,
@@ -140,14 +140,14 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
     availability: "4-6 Weeks",
     aiScore: 92,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/network-infrastructure",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$7,000-12,000",
+    marketPrice: "$7,0o00-12,0o00",
     competitors: ["Cisco", "Juniper", "Aruba"],
-    roi: "300% within 8 months",
+    roi: "30o0% within 8 months",
     setupTime: "4-6 weeks",
     integrations: ["Network Devices", "Monitoring Tools", "Security Systems", "Cloud Platforms", "Management Tools"]
   },
@@ -162,7 +162,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
     tags: ["ITSM", "Help Desk", "Ticket Management", "Asset Tracking", "Change Management"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/itsm-platform.jpg"],
-    createdAt: "2024-02-10T10:00:00.000Z",
+    createdAt: "20o24-0o2-10T10:0o0:0o0.0o00Z",
     rating: 4.6,
     reviewCount: 234,
     featured: true,
@@ -170,12 +170,12 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
     availability: "3-5 Weeks",
     aiScore: 90,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/itsm-platform",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$5,000-10,000",
+    marketPrice: "$5,0o00-10,0o00",
     competitors: ["ServiceNow", "Jira Service Management", "Freshservice"],
     roi: "250% within 6 months",
     setupTime: "3-5 weeks",
@@ -192,7 +192,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
     tags: ["Disaster Recovery", "Business Continuity", "Backup", "Replication", "Recovery"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/disaster-recovery.jpg"],
-    createdAt: "2024-02-15T10:00:00.000Z",
+    createdAt: "20o24-0o2-15T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 98,
     featured: true,
@@ -200,14 +200,14 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 94,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/disaster-recovery",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$11,000-18,000",
+    marketPrice: "$11,0o00-18,0o00",
     competitors: ["Veeam", "Zerto", "Commvault"],
-    roi: "400% within 10 months",
+    roi: "40o0% within 10 months",
     setupTime: "6-8 weeks",
     integrations: ["VMware", "Hyper-V", "Cloud Platforms", "Storage Systems", "Monitoring Tools"]
   },
@@ -222,7 +222,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
     tags: ["IAM", "Single Sign-On", "Multi-Factor Authentication", "User Management", "Security"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/iam-platform.jpg"],
-    createdAt: "2024-02-20T10:00:00.000Z",
+    createdAt: "20o24-0o2-20T10:0o0:0o0.0o00Z",
     rating: 4.7,
     reviewCount: 156,
     featured: true,
@@ -230,12 +230,12 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
     availability: "5-7 Weeks",
     aiScore: 93,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/iam-platform",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$8,000-14,000",
+    marketPrice: "$8,0o00-14,0o00",
     competitors: ["Okta", "Azure AD", "OneLogin"],
     roi: "350% within 9 months",
     setupTime: "5-7 weeks",
@@ -252,7 +252,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
     tags: ["API Management", "API Gateway", "Integration", "Security", "Analytics"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/api-management.jpg"],
-    createdAt: "2024-02-25T10:00:00.000Z",
+    createdAt: "20o24-0o2-25T10:0o0:0o0.0o00Z",
     rating: 4.6,
     reviewCount: 123,
     featured: true,
@@ -260,14 +260,14 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
     availability: "4-6 Weeks",
     aiScore: 91,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/api-management",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$6,000-12,000",
+    marketPrice: "$6,0o00-12,0o00",
     competitors: ["Apigee", "Kong", "AWS API Gateway"],
-    roi: "300% within 8 months",
+    roi: "30o0% within 8 months",
     setupTime: "4-6 weeks",
     integrations: ["REST APIs", "GraphQL", "SOAP", "OAuth", "JWT", "Cloud Platforms"]
   },
@@ -282,7 +282,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
     tags: ["Kubernetes", "Container Orchestration", "Docker", "Microservices", "Automation"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/container-orchestration.jpg"],
-    createdAt: "2024-03-01T10:00:00.000Z",
+    createdAt: "20o24-0o3-0o1T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 89,
     featured: true,
@@ -290,14 +290,14 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 94,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/container-orchestration",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$9,000-16,000",
+    marketPrice: "$9,0o00-16,0o00",
     competitors: ["OpenShift", "Rancher", "VMware Tanzu"],
-    roi: "400% within 10 months",
+    roi: "40o0% within 10 months",
     setupTime: "6-8 weeks",
     integrations: ["Docker", "Kubernetes", "Helm", "Prometheus", "Grafana", "Cloud Platforms"]
   },
@@ -312,7 +312,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
     tags: ["Database Management", "Performance Optimization", "Backup", "Monitoring", "Administration"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/database-management.jpg"],
-    createdAt: "2024-03-05T10:00:00.000Z",
+    createdAt: "20o24-0o3-0o5T10:0o0:0o0.0o00Z",
     rating: 4.7,
     reviewCount: 134,
     featured: true,
@@ -320,14 +320,14 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
     availability: "5-7 Weeks",
     aiScore: 92,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/database-management",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$7,000-13,000",
+    marketPrice: "$7,0o00-13,0o00",
     competitors: ["Oracle Enterprise Manager", "SQL Server Management Studio", "pgAdmin"],
-    roi: "300% within 8 months",
+    roi: "30o0% within 8 months",
     setupTime: "5-7 weeks",
     integrations: ["MySQL", "PostgreSQL", "Oracle", "SQL Server", "MongoDB", "Redis"]
   },
@@ -342,7 +342,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
     tags: ["Storage Management", "Data Protection", "Backup", "Optimization", "Unified Management"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/storage-management.jpg"],
-    createdAt: "2024-03-10T10:00:00.000Z",
+    createdAt: "20o24-0o3-10T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 78,
     featured: true,
@@ -350,12 +350,12 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
     availability: "7-9 Weeks",
     aiScore: 93,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/storage-management",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$12,000-20,000",
+    marketPrice: "$12,0o00-20,0o00",
     competitors: ["NetApp", "EMC", "HPE"],
     roi: "350% within 10 months",
     setupTime: "7-9 weeks",

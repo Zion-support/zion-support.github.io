@@ -105,10 +105,3 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     markAllAsRead,
     dismissNotification,
     setFilter,
-<<<<<<< HEAD
-    fetchNotifications,
-  };
-=======
-    fetchNotifications};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-};

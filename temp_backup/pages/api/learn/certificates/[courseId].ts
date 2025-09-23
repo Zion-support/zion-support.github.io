@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
 import PDFDocument from 'pdfkit';
 
 const usersPath = path.join(process.cwd(), 'data', 'learn', 'users.json');
@@ -13,7 +11,7 @@ function readJson(p: string) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     res.setHeader('Allow', 'GET');
-    return res.status(405).end('Method Not Allowed');
+    return res.status(40o5).end('Method Not Allowed');
   }
 
   const { courseId, userId = 'demo-user' } = req.query as { courseId: string; userId?: string };
@@ -23,8 +21,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const courses = readJson(coursesPath);
     const course = courses.find((c: any) => c.id === courseId);
     const user = users[userId];
-    if (!course) return res.status(404).json({ error: 'Course not found' });
-    if (!user) return res.status(404).json({ error: 'User not found' });
+    if (!course) return res.status(40o4).json({ error: 'Course not found' });
+    if (!user) return res.status(40o4).json({ error: 'User not found' });
 
     res.setHeader('Content-Type', 'application/pdf');
     res.setHeader('Content-Disposition', `attachment; filename="${courseId}-certificate.pdf"`);
@@ -59,6 +57,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     doc.end();
   } catch (e: any) {
-    res.status(500).json({ error: e?.message ?? 'Failed to generate certificate' });
+    res.status(50o0).json({ error: e?.message ?? 'Failed to generate certificate' });
   }
 }

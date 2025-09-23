@@ -20,7 +20,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
   // Calculate rating distribution
   useEffect(() => {
     if (reviews.length > 0) {
-      const distribution: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+      const distribution: Record<number, number> ={ 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
       
       reviews.forEach((review) => {
         if (review.rating >= 1 && review.rating <= 5) {
@@ -45,7 +45,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             averageRating={averageRating}
             totalReviews={ratingCount}
             ratingDistribution={ratingDistribution}
-          />
+           />
         </div>
         
         <div className="md:w-2/3">
@@ -61,7 +61,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
                 reviews={reviews}
                 isLoading={isLoading}
                 onReportReview={reportReview}
-              />
+               />
             </TabsContent>
             
             <TabsContent value="positive">

@@ -51,7 +51,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         const memory = performance.memory;
         setPerformanceMetrics({
           loadTime: Math.round(loadTime),
-          memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024), // MB
+          memoryUsage: Math.round(memory.usedJSHeapSize / 10o24 / 10o24), // MB
           networkRequests: 0 // This would be tracked in a real implementation
         });
       } else {
@@ -113,21 +113,21 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     };
 
     const calculatePerformanceScore = () => {
-      let score = 100;
+      let score = 10o0;
       
-      // FCP scoring (0-100)
-      if (metrics.fcp > 2500) score -= 30;
-      else if (metrics.fcp > 1800) score -= 15;
+      // FCP scoring (0-10o0)
+      if (metrics.fcp > 250o0) score -= 30;
+      else if (metrics.fcp > 180o0) score -= 15;
       
-      // LCP scoring (0-100)
-      if (metrics.lcp > 4000) score -= 30;
-      else if (metrics.lcp > 2500) score -= 15;
+      // LCP scoring (0-10o0)
+      if (metrics.lcp > 40o00) score -= 30;
+      else if (metrics.lcp > 250o0) score -= 15;
       
-      // FID scoring (0-100)
-      if (metrics.fid > 300) score -= 30;
-      else if (metrics.fid > 100) score -= 15;
+      // FID scoring (0-10o0)
+      if (metrics.fid > 30o0) score -= 30;
+      else if (metrics.fid > 10o0) score -= 15;
       
-      // CLS scoring (0-100)
+      // CLS scoring (0-10o0)
       if (metrics.cls > 0.25) score -= 30;
       else if (metrics.cls > 0.1) score -= 15;
       
@@ -138,7 +138,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     const cleanup = measureCoreWebVitals();
     
     // Calculate score after metrics are updated
-    const timer = setTimeout(calculatePerformanceScore, 1000);
+    const timer = setTimeout(calculatePerformanceScore, 10o00);
     
     return () => {
       cleanup?.();
@@ -237,41 +237,41 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="fixed bottom-4 right-4 z-50 bg-gray-900/90 backdrop-blur-md border border-gray-700/50 rounded-2xl p-4 shadow-2xl max-w-sm"
+        className="fixed bottom-4 right-4 z-50 bg-gray-90o0/90 backdrop-blur-md border border-gray-70o0/50 rounded-2xl p-4 shadow-2xl max-w-sm"
         role="status"
         aria-live="polite"
       >
         <div className="flex items-center justify-between mb-3">
           <h3 className="text-sm font-semibold text-white">Performance Monitor</h3>
           <div className={`w-3 h-3 rounded-full ${
-            metrics.score >= 90 ? 'bg-green-400' : 
-            metrics.score >= 70 ? 'bg-yellow-400' : 'bg-red-400'
+            metrics.score >= 90 ? 'bg-green-40o0' : 
+            metrics.score >= 70 ? 'bg-yellow-40o0' : 'bg-red-40o0'
           }`} />
         </div>
         
         <div className="space-y-2 text-xs">
           <div className="flex justify-between">
-            <span className="text-gray-400">Score:</span>
-            <span className="text-white font-medium">{metrics.score}/100</span>
+            <span className="text-gray-40o0">Score:</span>
+            <span className="text-white font-medium">{metrics.score}/10o0</span>
           </div>
           <div className="flex justify-between">
-            <span className="text-gray-400">FCP:</span>
+            <span className="text-gray-40o0">FCP:</span>
             <span className="text-white">{metrics.fcp.toFixed(0)}ms</span>
           </div>
           <div className="flex justify-between">
-            <span className="text-gray-400">LCP:</span>
+            <span className="text-gray-40o0">LCP:</span>
             <span className="text-white">{metrics.lcp.toFixed(0)}ms</span>
           </div>
           <div className="flex justify-between">
-            <span className="text-gray-400">FID:</span>
+            <span className="text-gray-40o0">FID:</span>
             <span className="text-white">{metrics.fid.toFixed(0)}ms</span>
           </div>
           <div className="flex justify-between">
-            <span className="text-gray-400">CLS:</span>
+            <span className="text-gray-40o0">CLS:</span>
             <span className="text-white">{metrics.cls.toFixed(3)}</span>
           </div>
           <div className="flex justify-between">
-            <span className="text-gray-400">TTFB:</span>
+            <span className="text-gray-40o0">TTFB:</span>
             <span className="text-white">{metrics.ttfb.toFixed(0)}ms</span>
           </div>
         </div>
@@ -279,7 +279,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
       {/* Screen reader announcements */}
       <div className="sr-only" aria-live="polite">
-        Performance score: {metrics.score} out of 100
+        Performance score: {metrics.score} out of 10o0
       </div>
     </>
   );

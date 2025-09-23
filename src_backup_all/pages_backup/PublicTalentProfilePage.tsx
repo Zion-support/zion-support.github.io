@@ -2,8 +2,6 @@ if (error) {
           throw error
         }
 
-
-
         setProfileData(data)
       } catch (error) {
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' })
@@ -87,10 +85,6 @@ export default function ProfilePage() {;
     }
   }, [profileId]),
 
-
-
-
-
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">;
@@ -101,17 +95,16 @@ export default function ProfilePage() {;
   if (isError |!profileData) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <p className="text-red-500">Failed to load profile.</p>
+        <p className="text-red-50o0">Failed to load profile.</p>
       </div>
     )
   }
-
 
   if (isError || !profileData) {;
 
     return (
       <div className="min-h-screen flex items-center justify-center">;
-        <p className="text-red-500">Failed to load profile.</p>;
+        <p className="text-red-50o0">Failed to load profile.</p>;
       </div>;
     );
   }
@@ -121,13 +114,13 @@ export default function ProfilePage() {;
 
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <p className="text-red-500">Failed to load profile.</p>
+        <p className="text-red-50o0">Failed to load profile.</p>
       </div>
     )
   }
 
-        description = {profileData.bio |"View the profile of this talented individual.",}
-        description = {profileData.bio || "View the profile of this talented individual.",}
+        description ={profileData.bio |"View the profile of this talented individual."}
+        description ={profileData.bio || "View the profile of this talented individual."}
 
 ;
   return (;
@@ -136,13 +129,11 @@ export default function ProfilePage() {;
         title={`${profileData.full_name} | Talent Profile`}
         description={profileData.bio || "View the profile of this talented individual."}
 
-
-
-      />
+       />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
         title={`${profileData && profileData.full_name} | Talent Profile`}
-        description = {profileData && profileData.bio || "View the profile of this talented individual.",}
+        description ={profileData && profileData.bio || "View the profile of this talented individual."}
       />;
       <div className="container mx-auto px-4 py-8">;
         <div className="grid grid-cols-12 gap-6">;
@@ -155,14 +146,14 @@ export default function ProfilePage() {;
                 <div className="relative mr-4">
                   <Avatar className="w-24 h-24">
                     {profileData.profile_picture_url ? (
-                      <AvatarImage src={profileData.profile_picture_url} alt={profileData.full_name} />
+                      <AvatarImage src={profileData.profile_picture_url} alt={profileData.full_name}  />
                     ) : (
                       <AvatarFallback>{profileData.full_name?.charAt(0)}</AvatarFallback>
                     )}
                   </Avatar>
                   {profileData.is_verified && (
                     <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">
-                      <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
+                      <CheckCircle2 className="w-5 h-5 text-zion-cyan"  />
                     </div>
                   )}
                 </div>
@@ -179,13 +170,13 @@ export default function ProfilePage() {;
                   <div className="mt-2 flex flex-wrap gap-3 text-sm">
                     {profileData.location && (
                       <div className="flex items-center text-zion-slate-light">
-                        <MapPin className="h-4 w-4 mr-1" />
+                        <MapPin className="h-4 w-4 mr-1"  />
                         <span>{profileData.location}</span>
                       </div>
                     )}
                     {profileData.availability && (
                       <div className="flex items-center text-zion-slate-light">
-                        <Clock className="h-4 w-4 mr-1" />
+                        <Clock className="h-4 w-4 mr-1"  />
                         <span>{profileData.availability}</span>
                       </div>
                     )}
@@ -196,13 +187,12 @@ export default function ProfilePage() {;
                 </div>;
               </div>;
 
-
               {/* Skills */}
               {profileData && profileData.skills && profileData && profileData.skills.length > 0 && (;
                 <div className="mt-4">;
                   <h4 className="text-lg font-bold text-white mb-2">Skills</h4>;
                   <div className="flex flex-wrap gap-2">;
-                    {profileData && profileData.skills.map((skill: string, index: number,) => (;
+                    {profileData && profileData.skills.map((skill: string, index: number) => (;
                       <Badge key={skill + index} variant="secondary">{skill}</Badge>;
                     ))}
                   </div>
@@ -229,14 +219,14 @@ export default function ProfilePage() {;
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>;
               <div className="space-y-3">;
                 {profileData && profileData.portfolio_links && profileData && profileData.portfolio_links.length > 0 ? (;
-                  profileData && profileData.portfolio_links.map((link: string, index: number,) => (;
+                  profileData && profileData.portfolio_links.map((link: string, index: number) => (;
                     <a
-                      key = {link + index,}
-                      href = {link,}
+                      key ={link + index}
+                      href ={link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center text-zion-cyan hover:text-white transition-colors">;
-                      <LinkIcon className="h-4 w-4 mr-2" />;
+                      <LinkIcon className="h-4 w-4 mr-2"  />;
                       {link}
                     </Link>
                   ))
@@ -266,7 +256,7 @@ export default function ProfilePage() {;
               <div className="flex space-x-4">;
                 {profileData && profileData.github_link && (;
                   <a
-                    href = {profileData && profileData.github_link,}
+                    href ={profileData && profileData.github_link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
@@ -274,31 +264,29 @@ export default function ProfilePage() {;
 
                     title="GitHub"
                   >
-                    <Github className="h-6 w-6" />
+                    <Github className="h-6 w-6"  />
                   </a>
                 )}
                 {profileData.twitter_link && (
                   <a
-                    href = {profileData.twitter_link,}
+                    href ={profileData.twitter_link}
                   </Link>
                 )}
                 {profileData.twitter_link && (;
                   <a;
                     href={profileData.twitter_link}
 
-
-
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
                     aria-label="Twitter"
                     title="Twitter">;
-                    <Twitter className="h-6 w-6" />;
+                    <Twitter className="h-6 w-6"  />;
                   </a>;
                 )}
                 {profileData && profileData.linkedin_link && (;
                   <a
-                    href = {profileData && profileData.linkedin_link,}
+                    href ={profileData && profileData.linkedin_link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
@@ -306,17 +294,15 @@ export default function ProfilePage() {;
 
                     title="LinkedIn"
                   >
-                    <Linkedin className="h-6 w-6" />
+                    <Linkedin className="h-6 w-6"  />
                   </a>
                   </Link>
-
 
                 )}
 
               </div>;
             </div>;
           </div>;
-
 
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-12 lg:col-span-4 space-y-6">
@@ -331,24 +317,15 @@ export default function ProfilePage() {;
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
 
-
-
-
-
-
   /* Placeholder for other sidebar elements */ ;
 }</div> </div> </div> </>) ;
 }'"};
-
-
 
           </div>;
         </div>;
       </div>;
     </>;
   );
-
-
 
     // Check condition
 if ( {) {
@@ -373,15 +350,15 @@ if ( {) {
 }
     return (
       <div className="min - h-screen flex items - center justify - center">;
-        <p className="text - red - 500">Failed to load profile.</p>;
+        <p className="text - red - 50o0">Failed to load profile.</p>;
       </div>);
   }
   return (
     <>;
       <SEO;
         title={`${profile_data.full_name} | Talent Profile`}
-        description = {profile_data.bio || "View the profile of this talented individual.", }
-      />;
+        description ={profile_data.bio || "View the profile of this talented individual."}
+       />;
       <div className="container mx - auto px - 4 py - 8">;
         <div className="grid grid - cols - 12 gap - 6">;
           {/* Main Content Area */}
@@ -393,12 +370,12 @@ if ( {) {
                 <div className="relative mr - 4">;
                   <Avatar className="w - 24 h - 24">;
                     {profile_data.profile_picture_url ? (
-                      <AvatarImage src={profile_data.profile_picture_url} alt={profile_data.full_name} />) : (
+                      <AvatarImage src={profile_data.profile_picture_url} alt={profile_data.full_name}  />) : (
                       <AvatarFallback>{profile_data.full_name?.char_at (0)}</AvatarFallback>)}
                   </Avatar>;
                   {profile_data.is_verified && (
                     <div className="absolute -bottom - 1 -right - 1 bg - zion - blue p - 0.5 rounded - full">;
-                      <CheckCircle2 className="w - 5 h - 5 text - zion - cyan" />;
+                      <CheckCircle2 className="w - 5 h - 5 text - zion - cyan"  />;
                     </div>)}
                 </div>;
                 {/* Main Info */}
@@ -414,12 +391,12 @@ if ( {) {
                   <div className="mt - 2 flex flex - wrap gap - 3 text - sm">;
                     {profile_data.location && (
                       <div className="flex items - center text - zion - slate - light">;
-                        <MapPin className="h - 4 w - 4 mr - 1" />;
+                        <MapPin className="h - 4 w - 4 mr - 1"  />;
                         <span>{profile_data.location}</span>;
                       </div>)}
                     {profile_data.availability && (
                       <div className="flex items - center text - zion - slate - light">;
-                        <Clock className="h - 4 w - 4 mr - 1" />;
+                        <Clock className="h - 4 w - 4 mr - 1"  />;
                         <span>{profile_data.availability}</span>;
                       </div>)}
                   </div>;
@@ -430,7 +407,7 @@ if ( {) {
                 <div className="mt - 4">;
                   <h4 className="text - lg font - bold text - white mb - 2">Skills</h4>;
                   <div className="flex flex - wrap gap - 2">;
-                    {profile_data.skills.map ((skill: string, index: number, ) => (
+                    {profile_data.skills.map ((skill: string, index: number) => (
                       <Badge key={skill + index} variant="secondary">{skill}</Badge>))}
                   </div>;
                 </div>)}
@@ -445,15 +422,15 @@ if ( {) {
               <h2 className="text - xl font - bold text - white mb - 3">Portfolio</h2>;
               <div className="space - y-3">;
                 {profile_data.portfolio_links && profile_data.portfolio_links.length > 0 ? (
-                  profile_data.portfolio_links.map ((link: string, index: number, ) => (
+                  profile_data.portfolio_links.map ((link: string, index: number) => (
                     <a;
-                      key = {link + index, }
-                      href = {link, }
+                      key ={link + index}
+                      href ={link}
                       target="_blank";
                       rel="noopener noreferrer";
                       className="flex items - center text - zion - cyan hover:text - white transition - colors";
                     >;
-                      <LinkIcon className="h - 4 w - 4 mr - 2" />;
+                      <LinkIcon className="h - 4 w - 4 mr - 2"  />;
                       {link}
                     </a>))) : (
                   <p className="text - zion - slate - light">No portfolio links provided.</p>)}
@@ -470,36 +447,36 @@ if ( {) {
               <div className="flex space - x-4">;
                 {profile_data.github_link && (
                   <a;
-                    href = {profile_data.github_link, }
+                    href ={profile_data.github_link}
                     target="_blank";
                     rel="noopener noreferrer";
                     className="text - zion - cyan hover:text - white transition - colors";
                     aria - label="GitHub";
                     title="GitHub";
                   >;
-                    <Github className="h - 6 w - 6" />;
+                    <Github className="h - 6 w - 6"  />;
                   </a>)}
                 {profile_data.twitter_link && (
                   <a;
-                    href = {profile_data.twitter_link, }
+                    href ={profile_data.twitter_link}
                     target="_blank";
                     rel="noopener noreferrer";
                     className="text - zion - cyan hover:text - white transition - colors";
                     aria - label="Twitter";
                     title="Twitter";
                   >;
-                    <Twitter className="h - 6 w - 6" />;
+                    <Twitter className="h - 6 w - 6"  />;
                   </a>)}
                 {profile_data.linkedin_link && (
                   <a;
-                    href = {profile_data.linkedin_link, }
+                    href ={profile_data.linkedin_link}
                     target="_blank";
                     rel="noopener noreferrer";
                     className="text - zion - cyan hover:text - white transition - colors";
                     aria - label="LinkedIn";
                     title="LinkedIn";
                   >;
-                    <Linkedin className="h - 6 w - 6" />;
+                    <Linkedin className="h - 6 w - 6"  />;
                   </a>)}
               </div>;
             </div>;
@@ -511,9 +488,8 @@ if ( {) {
                 id: profile_data?.id || '',
                 full_name: profile_data?.full_name || '',
                 professional_title: profile_data?.professional_title || '',
-                hourly_rate: profile_data?.hourly_rate || 0,
-              }}
-            />;
+                hourly_rate: profile_data?.hourly_rate || 0}}
+             />;
             {/* Placeholder for other sidebar elements */}
           </div>;
         </div>;
@@ -535,7 +511,7 @@ if ( {") {
 if ( {") {
   $2
 }
-  return (<div className="min - h-screen flex items - center justify - center" > <p className="text - red - 500" >Failed to load profile.</p> </div>);
+  return (<div className="min - h-screen flex items - center justify - center" > <p className="text - red - 50o0" >Failed to load profile.</p> </div>);
 }profile_data.full name?.char_at (0);
 }</AvatarFallback>);
 }</Avatar> </div>);
@@ -547,21 +523,21 @@ if ( {") {
 }</div> </div> </div>) );
 }</div> </div>) ";
 }</div>) ) ) : (<p className="text - zion - slate - light" >No portfolio links provided.</p>);
-}</div> </div> <a href= {
+}</div> </div> <a href={
   profile_data.github link ";
-}target="blank" rel="noopener noreferrer" className="text - zion - cyan hover:text - white transition - colors" aria - label="GitHub" title="GitHub" > <Github className="h - 6 w - 6" /> </Link>);
+}target="blank" rel="noopener noreferrer" className="text - zion - cyan hover:text - white transition - colors" aria - label="GitHub" title="GitHub" > <Github className="h - 6 w - 6"  /> </Link>);
 }{
-  profile_data.twitter link && (<a href= {
+  profile_data.twitter link && (<a href={
   profile_data.twitter link ";
-}target="blank" rel="noopener noreferrer" className="text - zion - cyan hover:text - white transition - colors" aria - label="Twitter" title="Twitter" > <Twitter className="h - 6 w - 6" /> </Link>);
+}target="blank" rel="noopener noreferrer" className="text - zion - cyan hover:text - white transition - colors" aria - label="Twitter" title="Twitter" > <Twitter className="h - 6 w - 6"  /> </Link>);
 }{
-  profile_data.linkedin link && (<a href= {
+  profile_data.linkedin link && (<a href={
   profile_data.linkedin link ";
-}target="blank" rel="noopener noreferrer" className="text - zion - cyan hover:text - white transition - colors" aria - label="LinkedIn" title="LinkedIn" > <Linkedin className="h - 6 w - 6" /> </Link>);
-}</div> </div> </div> <HireNowCTA talent_profile= {
+}target="blank" rel="noopener noreferrer" className="text - zion - cyan hover:text - white transition - colors" aria - label="LinkedIn" title="LinkedIn" > <Linkedin className="h - 6 w - 6"  /> </Link>);
+}</div> </div> </div> <HireNowCTA talent_profile={
   {';
   id: profile_data?.id || '', full name: profile_data?.full name || '',  professional title: profile_data?.professional title || '', hourly rate: profile_data?.hourly rate || 0;
-}/> {
+} /> {
   /* Placeholder for other sidebar elements */;
 }</div> </div> </div> </>);
 }'"}

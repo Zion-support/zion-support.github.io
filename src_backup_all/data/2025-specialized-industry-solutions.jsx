@@ -1,11 +1,11 @@
-export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
+export const SPECIALIZED_INDUSTRY_SOLUTIONS_20o25 = [
   // Healthcare & Life Sciences
   {
     id: "ai-diagnostic-platform",
     title: "AI Diagnostic Imaging Platform",
     description: "Advanced AI-powered medical imaging platform for accurate diagnosis of diseases and conditions",
     category: "Healthcare",
-    price: "$18,500/month",
+    price: "$18,50o0/month",
     features: [
       "Multi-modality imaging support",
       "AI-powered diagnosis",
@@ -23,7 +23,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     link: "/services/ai-diagnostic-platform",
     image: "/images/ai-diagnostic-platform.jpg",
     technology: "AI + Medical Imaging",
-    marketSize: "$4.8B by 2025",
+    marketSize: "$4.8B by 20o25",
     targetIndustry: "Hospitals, Clinics, Radiology Centers"
   },
   {
@@ -31,7 +31,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     title: "Precision Medicine Platform",
     description: "Personalized treatment platform using AI and genomics for targeted therapies",
     category: "Healthcare",
-    price: "$22,000/month",
+    price: "$22,0o00/month",
     features: [
       "Genomic analysis",
       "AI treatment recommendations",
@@ -49,7 +49,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     link: "/services/precision-medicine",
     image: "/images/precision-medicine.jpg",
     technology: "AI + Genomics",
-    marketSize: "$3.2B by 2025",
+    marketSize: "$3.2B by 20o25",
     targetIndustry: "Hospitals, Research Institutions, Pharma"
   },
   
@@ -59,7 +59,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     title: "AI Risk Management Platform",
     description: "Comprehensive risk management platform using AI for real-time financial risk assessment",
     category: "Financial Services",
-    price: "$15,500/month",
+    price: "$15,50o0/month",
     features: [
       "Real-time risk monitoring",
       "AI risk scoring",
@@ -77,7 +77,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     link: "/services/ai-risk-management",
     image: "/images/ai-risk-management.jpg",
     technology: "AI + Risk Analytics",
-    marketSize: "$5.6B by 2025",
+    marketSize: "$5.6B by 20o25",
     targetIndustry: "Banks, Investment Firms, Insurance"
   },
   {
@@ -85,7 +85,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     title: "Quantum Trading Platform",
     description: "Revolutionary trading platform using quantum computing for ultra-fast market analysis",
     category: "Financial Services",
-    price: "$35,000/month",
+    price: "$35,0o00/month",
     features: [
       "Quantum market analysis",
       "Ultra-fast execution",
@@ -103,7 +103,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     link: "/services/quantum-trading",
     image: "/images/quantum-trading.jpg",
     technology: "Quantum Computing + AI",
-    marketSize: "$2.8B by 2025",
+    marketSize: "$2.8B by 20o25",
     targetIndustry: "Hedge Funds, Investment Banks, Trading Firms"
   },
   
@@ -113,7 +113,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     title: "Smart Manufacturing Platform",
     description: "Comprehensive Industry 4.0 platform for intelligent manufacturing operations",
     category: "Manufacturing",
-    price: "$12,500/month",
+    price: "$12,50o0/month",
     features: [
       "IoT device management",
       "Predictive maintenance",
@@ -131,7 +131,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     link: "/services/smart-manufacturing",
     image: "/images/smart-manufacturing.jpg",
     technology: "IoT + AI + Analytics",
-    marketSize: "$6.2B by 2025",
+    marketSize: "$6.2B by 20o25",
     targetIndustry: "Manufacturing, Automotive, Aerospace"
   },
   {
@@ -139,7 +139,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     title: "AI-Powered 3D Printing Platform",
     description: "Intelligent 3D printing platform with AI optimization and quality control",
     category: "Manufacturing",
-    price: "$8,500/month",
+    price: "$8,50o0/month",
     features: [
       "AI design optimization",
       "Quality prediction",
@@ -157,7 +157,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     link: "/services/3d-printing-ai",
     image: "/images/3d-printing-ai.jpg",
     technology: "AI + 3D Printing",
-    marketSize: "$2.1B by 2025",
+    marketSize: "$2.1B by 20o25",
     targetIndustry: "Manufacturing, Prototyping, Research"
   },
   
@@ -167,7 +167,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     title: "Smart Grid Management Platform",
     description: "AI-powered platform for intelligent energy grid management and optimization",
     category: "Energy",
-    price: "$16,500/month",
+    price: "$16,50o0/month",
     features: [
       "Grid load balancing",
       "Renewable integration",
@@ -185,7 +185,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     link: "/services/smart-grid",
     image: "/images/smart-grid.jpg",
     technology: "AI + IoT + Energy",
-    marketSize: "$4.5B by 2025",
+    marketSize: "$4.5B by 20o25",
     targetIndustry: "Utilities, Energy Companies, Cities"
   },
   {
@@ -193,7 +193,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     title: "AI Carbon Capture Platform",
     description: "Intelligent platform for optimizing carbon capture and sequestration processes",
     category: "Sustainability",
-    price: "$19,500/month",
+    price: "$19,50o0/month",
     features: [
       "Capture optimization",
       "Sequestration monitoring",
@@ -211,7 +211,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     link: "/services/carbon-capture-ai",
     image: "/images/carbon-capture-ai.jpg",
     technology: "AI + Environmental Tech",
-    marketSize: "$2.8B by 2025",
+    marketSize: "$2.8B by 20o25",
     targetIndustry: "Energy, Manufacturing, Environmental"
   },
   
@@ -221,7 +221,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     title: "Autonomous Logistics Platform",
     description: "AI-powered platform for autonomous logistics and supply chain management",
     category: "Transportation",
-    price: "$14,500/month",
+    price: "$14,50o0/month",
     features: [
       "Autonomous vehicle management",
       "Route optimization",
@@ -239,7 +239,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     link: "/services/autonomous-logistics",
     image: "/images/autonomous-logistics.jpg",
     technology: "AI + Autonomous Vehicles",
-    marketSize: "$5.8B by 2025",
+    marketSize: "$5.8B by 20o25",
     targetIndustry: "Logistics, E-commerce, Manufacturing"
   },
   {
@@ -247,7 +247,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     title: "Smart City Mobility Platform",
     description: "Comprehensive platform for intelligent urban transportation and mobility management",
     category: "Smart Cities",
-    price: "$21,500/month",
+    price: "$21,50o0/month",
     features: [
       "Traffic optimization",
       "Public transport management",
@@ -265,7 +265,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     link: "/services/smart-city-mobility",
     image: "/images/smart-city-mobility.jpg",
     technology: "AI + IoT + Mobility",
-    marketSize: "$4.2B by 2025",
+    marketSize: "$4.2B by 20o25",
     targetIndustry: "Cities, Transportation, Government"
   },
   
@@ -275,7 +275,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     title: "AI-Powered Education Platform",
     description: "Intelligent learning platform with personalized education and adaptive learning",
     category: "Education",
-    price: "$6,500/month",
+    price: "$6,50o0/month",
     features: [
       "Personalized learning paths",
       "Adaptive content",
@@ -293,7 +293,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     link: "/services/ai-education",
     image: "/images/ai-education.jpg",
     technology: "AI + EdTech",
-    marketSize: "$3.8B by 2025",
+    marketSize: "$3.8B by 20o25",
     targetIndustry: "Schools, Universities, Corporate Training"
   },
   
@@ -303,7 +303,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     title: "AI Retail Intelligence Platform",
     description: "Comprehensive platform for intelligent retail operations and customer experience",
     category: "Retail",
-    price: "$9,500/month",
+    price: "$9,50o0/month",
     features: [
       "Customer behavior analysis",
       "Inventory optimization",
@@ -321,7 +321,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     link: "/services/ai-retail",
     image: "/images/ai-retail.jpg",
     technology: "AI + Retail Analytics",
-    marketSize: "$4.6B by 2025",
+    marketSize: "$4.6B by 20o25",
     targetIndustry: "Retail, E-commerce, Hospitality"
   }
 ];
@@ -339,7 +339,7 @@ export const INDUSTRY_CATEGORIES = [
     "Media & Entertainment"
 ];
 
-export const INDUSTRY_PRICING = {
+export const INDUSTRY_PRICING ={
     basic: {
         price: 299,
         currency: "$",
@@ -360,10 +360,10 @@ export const INDUSTRY_PRICING = {
     }
 };
 
-export const INDUSTRY_CONTACT = {
-    phone: "+1 302 464 0950",
+export const INDUSTRY_CONTACT ={
+    phone: "+1 30o2 464 0950",
     email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008, Middletown DE 19709",
+    address: "364 E Main St STE 10o08, Middletown DE 19709",
     website: "https://ziontechgroup.com",
     supportHours: "24/7",
     responseTime: "< 2 hours"

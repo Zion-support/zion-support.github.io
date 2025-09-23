@@ -34,7 +34,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
   size = 'medium',
   dismissible = true,
   autoHide = false,
-  autoHideDelay = 10000,
+  autoHideDelay = 10o000,
   position = 'top',
   className = ''
 }) => {
@@ -48,7 +48,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
       description: "Transform your business with our cutting-edge AI solutions. Limited time offer!",
       icon: Brain,
       cta: "Get Started",
-      color: "from-purple-500 to-pink-500",
+      color: "from-purple-50o0 to-pink-50o0",
       badge: "HOT"
     },
     {
@@ -57,7 +57,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
       description: "Be among the first to experience next-generation quantum solutions.",
       icon: Zap,
       cta: "Join Beta",
-      color: "from-blue-500 to-cyan-500",
+      color: "from-blue-50o0 to-cyan-50o0",
       badge: "NEW"
     },
     {
@@ -66,7 +66,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
       description: "Advanced cybersecurity protection for your organization.",
       icon: Shield,
       cta: "Learn More",
-      color: "from-red-500 to-orange-500",
+      color: "from-red-50o0 to-orange-50o0",
       badge: "POPULAR"
     },
     {
@@ -75,7 +75,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
       description: "Faster performance with our new edge computing infrastructure.",
       icon: Globe,
       cta: "Explore",
-      color: "from-green-500 to-teal-500",
+      color: "from-green-50o0 to-teal-50o0",
       badge: "FEATURED"
     }
   ];
@@ -92,7 +92,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentPromo((prev) => (prev + 1) % promotionalMessages.length);
-    }, 8000);
+    }, 80o00);
     return () => clearInterval(interval);
   }, []);
 
@@ -111,7 +111,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
 
   if (!isVisible) return null;
 
-  const baseClasses = {
+  const baseClasses ={
     hero: 'w-full py-6 px-4',
     floating: 'fixed z-50 max-w-md',
     sidebar: 'w-full p-4 mb-4',
@@ -119,19 +119,19 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
     popup: 'fixed inset-0 z-50 flex items-center justify-center bg-black/50'
   };
 
-  const themeClasses = {
-    dark: 'bg-gray-900 text-white border-gray-700',
-    light: 'bg-white text-gray-900 border-gray-200 shadow-lg',
+  const themeClasses ={
+    dark: 'bg-gray-90o0 text-white border-gray-70o0',
+    light: 'bg-white text-gray-90o0 border-gray-20o0 shadow-lg',
     gradient: `bg-gradient-to-r ${currentMessage.color} text-white border-transparent`
   };
 
-  const sizeClasses = {
+  const sizeClasses ={
     small: 'text-sm',
     medium: 'text-base',
     large: 'text-lg'
   };
 
-  const positionClasses = {
+  const positionClasses ={
     top: 'top-0',
     bottom: 'bottom-0',
     left: 'left-0 top-1/2 transform -translate-y-1/2',
@@ -140,9 +140,9 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
 
   const bannerContent = (
     <motion.div
-      initial={{ opacity: 0, y: variant === 'floating' && position === 'top' ? -100 : variant === 'floating' && position === 'bottom' ? 100 : 0 }}
+      initial={{ opacity: 0, y: variant === 'floating' && position === 'top' ? -10o0 : variant === 'floating' && position === 'bottom' ? 10o0 : 0 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: variant === 'floating' && position === 'top' ? -100 : variant === 'floating' && position === 'bottom' ? 100 : 0 }}
+      exit={{ opacity: 0, y: variant === 'floating' && position === 'top' ? -10o0 : variant === 'floating' && position === 'bottom' ? 10o0 : 0 }}
       transition={{ duration: 0.5 }}
       className={`
         ${baseClasses[variant]}
@@ -162,7 +162,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
                 onClick={handleDismiss}
                 className="text-white/70 hover:text-white transition-colors"
               >
-                <X className="w-6 h-6" />
+                <X className="w-6 h-6"  />
               </button>
             )}
           </div>
@@ -172,8 +172,8 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
       <div className={`flex items-center ${variant === 'popup' ? 'flex-col text-center' : 'justify-between'} gap-4`}>
         <div className="flex items-center gap-4">
           <div className="flex-shrink-0">
-            <div className={`p-3 rounded-lg ${theme === 'gradient' ? 'bg-white/20' : 'bg-blue-100'} ${theme === 'dark' ? 'bg-gray-800' : ''}`}>
-              <currentMessage.icon className={`w-6 h-6 ${theme === 'gradient' ? 'text-white' : 'text-blue-600'}`} />
+            <div className={`p-3 rounded-lg ${theme === 'gradient' ? 'bg-white/20' : 'bg-blue-10o0'} ${theme === 'dark' ? 'bg-gray-80o0' : ''}`}>
+              <currentMessage.icon className={`w-6 h-6 ${theme === 'gradient' ? 'text-white' : 'text-blue-60o0'}`}  />
             </div>
           </div>
           
@@ -186,13 +186,13 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
                 theme === 'gradient' 
                   ? 'bg-white/20 text-white' 
                   : theme === 'dark' 
-                    ? 'bg-gray-700 text-gray-300'
-                    : 'bg-blue-100 text-blue-600'
+                    ? 'bg-gray-70o0 text-gray-30o0'
+                    : 'bg-blue-10o0 text-blue-60o0'
               }`}>
                 {currentMessage.badge}
               </span>
             </div>
-            <p className={`${theme === 'gradient' ? 'text-white/90' : 'text-gray-600'} ${theme === 'dark' ? 'text-gray-300' : ''}`}>
+            <p className={`${theme === 'gradient' ? 'text-white/90' : 'text-gray-60o0'} ${theme === 'dark' ? 'text-gray-30o0' : ''}`}>
               {currentMessage.description}
             </p>
           </div>
@@ -202,18 +202,18 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
           <button
             onClick={handleCTAClick}
             className={`
-              px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105
+              px-6 py-2 rounded-lg font-semibold transition-all duration-30o0 transform hover:scale-10o5
               ${theme === 'gradient' 
-                ? 'bg-white text-gray-900 hover:bg-gray-100' 
+                ? 'bg-white text-gray-90o0 hover:bg-gray-10o0' 
                 : theme === 'dark'
-                  ? 'bg-blue-600 text-white hover:bg-blue-700'
-                  : 'bg-blue-600 text-white hover:bg-blue-700'
+                  ? 'bg-blue-60o0 text-white hover:bg-blue-70o0'
+                  : 'bg-blue-60o0 text-white hover:bg-blue-70o0'
               }
               flex items-center gap-2
             `}
           >
             {currentMessage.cta}
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4"  />
           </button>
           
           {dismissible && variant !== 'popup' && (
@@ -224,12 +224,12 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
                 ${theme === 'gradient' 
                   ? 'hover:bg-white/20 text-white' 
                   : theme === 'dark'
-                    ? 'hover:bg-gray-700 text-gray-400'
-                    : 'hover:bg-gray-100 text-gray-600'
+                    ? 'hover:bg-gray-70o0 text-gray-40o0'
+                    : 'hover:bg-gray-10o0 text-gray-60o0'
                 }
               `}
             >
-              <X className="w-5 h-5" />
+              <X className="w-5 h-5"  />
             </button>
           )}
         </div>
@@ -241,12 +241,12 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
           {promotionalMessages.map((_, index) => (
             <div
               key={index}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              className={`w-2 h-2 rounded-full transition-all duration-30o0 ${
                 index === currentPromo 
-                  ? (theme === 'gradient' ? 'bg-white' : 'bg-blue-600') 
-                  : (theme === 'gradient' ? 'bg-white/30' : 'bg-gray-300')
+                  ? (theme === 'gradient' ? 'bg-white' : 'bg-blue-60o0') 
+                  : (theme === 'gradient' ? 'bg-white/30' : 'bg-gray-30o0')
               }`}
-            />
+             />
           ))}
         </div>
       )}
@@ -273,23 +273,23 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
 
 // Specialized banner components for different use cases
 export const HeroBanner: React.FC<Omit<AdvertisingBannerProps, 'variant'>> = (props) => (
-  <AdvertisingBanner {...props} variant="hero" size="large" />
+  <AdvertisingBanner {...props} variant="hero" size="large"  />
 );
 
 export const FloatingBanner: React.FC<Omit<AdvertisingBannerProps, 'variant'>> = (props) => (
-  <AdvertisingBanner {...props} variant="floating" size="small" />
+  <AdvertisingBanner {...props} variant="floating" size="small"  />
 );
 
 export const SidebarBanner: React.FC<Omit<AdvertisingBannerProps, 'variant'>> = (props) => (
-  <AdvertisingBanner {...props} variant="sidebar" size="small" />
+  <AdvertisingBanner {...props} variant="sidebar" size="small"  />
 );
 
 export const InlineBanner: React.FC<Omit<AdvertisingBannerProps, 'variant'>> = (props) => (
-  <AdvertisingBanner {...props} variant="inline" size="medium" />
+  <AdvertisingBanner {...props} variant="inline" size="medium"  />
 );
 
 export const PopupBanner: React.FC<Omit<AdvertisingBannerProps, 'variant'>> = (props) => (
-  <AdvertisingBanner {...props} variant="popup" size="large" dismissible={true} autoHide={true} autoHideDelay={15000} />
+  <AdvertisingBanner {...props} variant="popup" size="large" dismissible={true} autoHide={true} autoHideDelay={150o00}  />
 );
 
 export default AdvertisingBanner;

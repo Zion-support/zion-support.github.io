@@ -4,7 +4,7 @@ export default function AIAutonomousResearchAssistantPage() {
       <section className="py-20">
         <div className="max-w-5xl mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">AI Autonomous Research Assistant</h1>
-          <p className="text-lg text-gray-700">Accelerate research with agents for discovery, synthesis, and reporting.</p>
+          <p className="text-lg text-gray-70o0">Accelerate research with agents for discovery, synthesis, and reporting.</p>
         </div>
       </section>
     </div>

@@ -1,5 +1,4 @@
 
-import React from "react";
 import { Clock } from 'lucide-react'
 
 interface TalentCardAvailabilityProps {
@@ -11,13 +10,13 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
   const getAvailabilityColor = (status: string) => {
     switch (status) {
       case 'full-time':
-        return 'bg-green-500/20 text-green-400';
+        return 'bg-green-50o0/20 text-green-40o0';
       case 'part-time':
-        return 'bg-yellow-500/20 text-yellow-400';
+        return 'bg-yellow-50o0/20 text-yellow-40o0';
       case 'project-based':
-        return 'bg-blue-500/20 text-blue-400';
+        return 'bg-blue-50o0/20 text-blue-40o0';
       default:
-        return 'bg-gray-500/20 text-gray-400';
+        return 'bg-gray-50o0/20 text-gray-40o0';
     }
   };
   
@@ -37,7 +36,7 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
 
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
-      <Clock className="h-3 w-3" />
+      <Clock className="h-3 w-3"  />
       <span>{getAvailabilityLabel(availabilityType)}</span>
     </div>
   );

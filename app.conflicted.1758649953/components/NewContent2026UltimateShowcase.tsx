@@ -1,6 +1,5 @@
 "use client";
 
-
-export default function NewContent2026UltimateShowcase() {
+export default function NewContent20o26UltimateShowcase() {
   return null;
 }

@@ -7,55 +7,55 @@ import {
   Phone, Mail, X
 } from 'lucide-react';
 
-const UltraAdvancedFuturisticHero2025: React.FC = () => {
+const UltraAdvancedFuturisticHero20o25: React.FC = () => {
   const [currentFeature, setCurrentFeature] = useState(0);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   const features = [
     {
-      icon: <Brain className="w-8 h-8" />,
+      icon: <Brain className="w-8 h-8"  />,
       title: 'Revolutionary AI',
       description: 'Consciousness-level artificial intelligence',
-      color: 'from-cyan-400 to-blue-500'
+      color: 'from-cyan-40o0 to-blue-50o0'
     },
     {
-      icon: <Atom className="w-8 h-8" />,
+      icon: <Atom className="w-8 h-8"  />,
       title: 'Quantum Computing',
       description: 'Breakthrough quantum technologies',
-      color: 'from-purple-400 to-pink-500'
+      color: 'from-purple-40o0 to-pink-50o0'
     },
     {
-      icon: <Cpu className="w-8 h-8" />,
+      icon: <Cpu className="w-8 h-8"  />,
       title: 'Advanced IT',
       description: 'Next-generation infrastructure',
-      color: 'from-green-400 to-emerald-500'
+      color: 'from-green-40o0 to-emerald-50o0'
     },
     {
-      icon: <Rocket className="w-8 h-8" />,
+      icon: <Rocket className="w-8 h-8"  />,
       title: 'Micro SAAS',
       description: 'Innovative business solutions',
-      color: 'from-orange-400 to-red-500'
+      color: 'from-orange-40o0 to-red-50o0'
     }
   ];
 
   const stats = [
-    { value: '500+', label: 'Services Delivered', icon: <Star className="w-5 h-5" /> },
-    { value: '1000+', label: 'Happy Clients', icon: <Users className="w-5 h-5" /> },
-    { value: '99.9%', label: 'Success Rate', icon: <Award className="w-5 h-5" /> },
-    { value: '300%', label: 'Average ROI', icon: <Zap className="w-5 h-5" /> }
+    { value: '50o0+', label: 'Services Delivered', icon: <Star className="w-5 h-5"  /> },
+    { value: '10o00+', label: 'Happy Clients', icon: <Users className="w-5 h-5"  /> },
+    { value: '99.9%', label: 'Success Rate', icon: <Award className="w-5 h-5"  /> },
+    { value: '30o0%', label: 'Average ROI', icon: <Zap className="w-5 h-5"  /> }
   ];
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 3000);
+    }, 30o00);
     return () => clearInterval(interval);
   }, [features.length]);
 
@@ -64,9 +64,9 @@ const UltraAdvancedFuturisticHero2025: React.FC = () => {
       {/* Advanced futuristic background */}
       <div className="absolute inset-0">
         {/* Gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
-        <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/20 via-transparent to-purple-900/20" />
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-transparent to-pink-500/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-90o0 to-black"  />
+        <div className="absolute inset-0 bg-gradient-to-t from-cyan-90o0/20 via-transparent to-purple-90o0/20"  />
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-50o0/10 via-transparent to-pink-50o0/10"  />
         
         {/* Animated grid pattern */}
         <div className="absolute inset-0 opacity-10">
@@ -77,14 +77,14 @@ const UltraAdvancedFuturisticHero2025: React.FC = () => {
                 linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(0, 255, 255, 0.3) 1px, transparent 1px)
               `,
-              backgroundSize: '100px 100px'
+              backgroundSize: '10o0px 10o0px'
             }}
-          />
+           />
         </div>
 
         {/* Floating geometric shapes */}
         <motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-full"
+          className="absolute top-20 left-20 w-32 h-32 border border-cyan-40o0/20 rounded-full"
           animate={{
             rotate: 360,
             scale: [1, 1.2, 1],
@@ -95,12 +95,12 @@ const UltraAdvancedFuturisticHero2025: React.FC = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
 
         <motion.div
-          className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 transform rotate-45"
+          className="absolute top-40 right-32 w-24 h-24 border border-purple-40o0/20 transform rotate-45"
           animate={{
-            rotate: [45, 405],
+            rotate: [45, 40o5],
             scale: [1, 1.3, 1],
             opacity: [0.1, 0.4, 0.1]
           }}
@@ -109,10 +109,10 @@ const UltraAdvancedFuturisticHero2025: React.FC = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
 
         <motion.div
-          className="absolute bottom-40 left-1/3 w-20 h-20 border border-pink-400/20 rounded-lg"
+          className="absolute bottom-40 left-1/3 w-20 h-20 border border-pink-40o0/20 rounded-lg"
           animate={{
             rotate: [0, 360],
             scale: [1, 1.1, 1],
@@ -123,20 +123,20 @@ const UltraAdvancedFuturisticHero2025: React.FC = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
 
         {/* Particle effects */}
         <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-1 h-1 bg-cyan-400 rounded-full"
+              className="absolute w-1 h-1 bg-cyan-40o0 rounded-full"
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`
+                left: `${Math.random() * 10o0}%`,
+                top: `${Math.random() * 10o0}%`
               }}
               animate={{
-                y: [0, -100, 0],
+                y: [0, -10o0, 0],
                 opacity: [0, 1, 0],
                 scale: [0, 1, 0]
               }}
@@ -146,7 +146,7 @@ const UltraAdvancedFuturisticHero2025: React.FC = () => {
                 delay: Math.random() * 2,
                 ease: "easeInOut"
               }}
-            />
+             />
           ))}
         </div>
       </div>
@@ -165,10 +165,10 @@ const UltraAdvancedFuturisticHero2025: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full px-4 py-2 text-sm"
+              className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 border border-cyan-40o0/30 rounded-full px-4 py-2 text-sm"
             >
-              <Sparkles className="w-4 h-4 text-cyan-400" />
-              <span className="text-cyan-300">Leading the Future of Technology</span>
+              <Sparkles className="w-4 h-4 text-cyan-40o0"  />
+              <span className="text-cyan-30o0">Leading the Future of Technology</span>
             </motion.div>
 
             {/* Main Headline */}
@@ -178,13 +178,13 @@ const UltraAdvancedFuturisticHero2025: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
             >
-              <span className="bg-gradient-to-r from-cyan-400 via-white to-purple-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-40o0 via-white to-purple-40o0 bg-clip-text text-transparent">
                 Revolutionary
               </span>
-              <br />
+              <br  />
               <span className="text-white">Technology</span>
-              <br />
-              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent">
+              <br  />
+              <span className="bg-gradient-to-r from-purple-40o0 via-pink-40o0 to-orange-40o0 bg-clip-text text-transparent">
                 Solutions
               </span>
             </motion.h1>
@@ -194,7 +194,7 @@ const UltraAdvancedFuturisticHero2025: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-2xl"
+              className="text-xl md:text-2xl text-gray-30o0 leading-relaxed max-w-2xl"
             >
               Transform your business with cutting-edge AI, quantum computing, and innovative micro SAAS solutions. 
               Experience the future of technology with Zion Tech Group.
@@ -221,7 +221,7 @@ const UltraAdvancedFuturisticHero2025: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white">{features[currentFeature].title}</h3>
-                    <p className="text-gray-400">{features[currentFeature].description}</p>
+                    <p className="text-gray-40o0">{features[currentFeature].description}</p>
                   </div>
                 </motion.div>
               </AnimatePresence>
@@ -235,21 +235,21 @@ const UltraAdvancedFuturisticHero2025: React.FC = () => {
               className="flex flex-col sm:flex-row gap-4"
             >
               <motion.button
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 group shadow-2xl shadow-cyan-500/25"
-                whileHover={{ scale: 1.05 }}
+                className="px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-semibold rounded-xl hover:from-cyan-60o0 hover:to-purple-70o0 transition-all duration-30o0 flex items-center justify-center space-x-2 group shadow-2xl shadow-cyan-50o0/25"
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <span>Explore Services</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-20o0"  />
               </motion.button>
 
               <motion.button
-                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2 group"
-                whileHover={{ scale: 1.05 }}
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-30o0 flex items-center justify-center space-x-2 group"
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsVideoPlaying(true)}
               >
-                <Play className="w-5 h-5" />
+                <Play className="w-5 h-5"  />
                 <span>Watch Demo</span>
               </motion.button>
             </motion.div>
@@ -261,16 +261,16 @@ const UltraAdvancedFuturisticHero2025: React.FC = () => {
               transition={{ duration: 0.8, delay: 1.2 }}
               className="pt-6 border-t border-white/10"
             >
-              <div className="flex items-center space-x-6 text-sm text-gray-400">
+              <div className="flex items-center space-x-6 text-sm text-gray-40o0">
                 <div className="flex items-center space-x-2">
-                  <Phone className="w-4 h-4 text-cyan-400" />
-                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-300 transition-colors">
+                  <Phone className="w-4 h-4 text-cyan-40o0"  />
+                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-30o0 transition-colors">
                     {contactInfo.mobile}
                   </a>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Mail className="w-4 h-4 text-purple-400" />
-                  <a href={`mailto:${contactInfo.email}`} className="hover:text-purple-300 transition-colors">
+                  <Mail className="w-4 h-4 text-purple-40o0"  />
+                  <a href={`mailto:${contactInfo.email}`} className="hover:text-purple-30o0 transition-colors">
                     {contactInfo.email}
                   </a>
                 </div>
@@ -293,13 +293,13 @@ const UltraAdvancedFuturisticHero2025: React.FC = () => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
-                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300 group"
+                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-30o0 group"
                 >
-                  <div className="w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <div className="text-cyan-400">{stat.icon}</div>
+                  <div className="w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-cyan-50o0/20 to-purple-50o0/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-30o0">
+                    <div className="text-cyan-40o0">{stat.icon}</div>
                   </div>
                   <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                  <div className="text-sm text-gray-400">{stat.label}</div>
+                  <div className="text-sm text-gray-40o0">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -326,9 +326,9 @@ const UltraAdvancedFuturisticHero2025: React.FC = () => {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.4, delay: 1.2 + index * 0.1 }}
-                    className="flex items-center space-x-3 text-gray-300"
+                    className="flex items-center space-x-3 text-gray-30o0"
                   >
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-green-40o0 flex-shrink-0"  />
                     <span>{benefit}</span>
                   </motion.div>
                 ))}
@@ -342,17 +342,17 @@ const UltraAdvancedFuturisticHero2025: React.FC = () => {
               transition={{ duration: 0.8, delay: 1.4 }}
               className="text-center space-y-4"
             >
-              <div className="flex items-center justify-center space-x-6 text-sm text-gray-400">
+              <div className="flex items-center justify-center space-x-6 text-sm text-gray-40o0">
                 <div className="flex items-center space-x-2">
-                  <Shield className="w-4 h-4 text-green-400" />
+                  <Shield className="w-4 h-4 text-green-40o0"  />
                   <span>Enterprise Security</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Clock className="w-4 h-4 text-blue-400" />
+                  <Clock className="w-4 h-4 text-blue-40o0"  />
                   <span>24/7 Support</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Globe className="w-4 h-4 text-purple-400" />
+                  <Globe className="w-4 h-4 text-purple-40o0"  />
                   <span>Global Reach</span>
                 </div>
               </div>
@@ -370,10 +370,10 @@ const UltraAdvancedFuturisticHero2025: React.FC = () => {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="flex flex-col items-center space-y-2 text-gray-400"
+            className="flex flex-col items-center space-y-2 text-gray-40o0"
           >
             <span className="text-sm">Scroll to explore</span>
-            <ChevronDown className="w-6 h-6" />
+            <ChevronDown className="w-6 h-6"  />
           </motion.div>
         </motion.div>
       </div>
@@ -399,16 +399,16 @@ const UltraAdvancedFuturisticHero2025: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white">Zion Tech Group Demo</h3>
                 <button
                   onClick={() => setIsVideoPlaying(false)}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-40o0 hover:text-white transition-colors"
                 >
-                  <X className="w-6 h-6" />
+                  <X className="w-6 h-6"  />
                 </button>
               </div>
-              <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-500/20 border border-white/20 rounded-xl flex items-center justify-center">
+              <div className="aspect-video bg-gradient-to-br from-cyan-50o0/20 to-purple-50o0/20 border border-white/20 rounded-xl flex items-center justify-center">
                 <div className="text-center space-y-4">
-                  <Play className="w-16 h-16 text-white mx-auto" />
+                  <Play className="w-16 h-16 text-white mx-auto"  />
                   <p className="text-white text-lg">Demo video coming soon</p>
-                  <p className="text-gray-400">Contact us for a personalized demo</p>
+                  <p className="text-gray-40o0">Contact us for a personalized demo</p>
                 </div>
               </div>
             </motion.div>
@@ -419,4 +419,4 @@ const UltraAdvancedFuturisticHero2025: React.FC = () => {
   );
 };
 
-export default UltraAdvancedFuturisticHero2025;
+export default UltraAdvancedFuturisticHero20o25;

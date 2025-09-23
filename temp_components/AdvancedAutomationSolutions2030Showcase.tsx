@@ -28,7 +28,7 @@ import {
   Layers
 } from 'lucide-react';
 
-const AdvancedAutomationSolutions2030Showcase = () => {
+const AdvancedAutomationSolutions20o30Showcase = () => {
   const [activeTabsetActiveTab] = useState('overview');
   const [currentSolutionsetCurrentSolution] = useState(0);
 
@@ -43,10 +43,10 @@ const AdvancedAutomationSolutions2030Showcase = () => {
         'Autonomous decision making',
         'Real-time optimization'
       ],
-      impact: 'Reduce operational costs by 80% while increasing efficiency by 300%',
+      impact: 'Reduce operational costs by 80% while increasing efficiency by 30o0%',
       icon: Bot,
-      color: 'from-blue-500 to-cyan-500',
-      roi: '500% ROI'
+      color: 'from-blue-50o0 to-cyan-50o0',
+      roi: '50o0% ROI'
     },
     {
       id: 'intelligent-workflows',
@@ -60,8 +60,8 @@ const AdvancedAutomationSolutions2030Showcase = () => {
       ],
       impact: 'Streamline operations and eliminate bottlenecks automatically',
       icon: Workflow,
-      color: 'from-green-500 to-emerald-500',
-      roi: '400% ROI'
+      color: 'from-green-50o0 to-emerald-50o0',
+      roi: '40o0% ROI'
     },
     {
       id: 'predictive-analytics',
@@ -75,8 +75,8 @@ const AdvancedAutomationSolutions2030Showcase = () => {
       ],
       impact: 'Make data-driven decisions with 95% accuracy',
       icon: BarChart3,
-      color: 'from-purple-500 to-pink-500',
-      roi: '600% ROI'
+      color: 'from-purple-50o0 to-pink-50o0',
+      roi: '60o0% ROI'
     },
     {
       id: 'cognitive-automation',
@@ -90,8 +90,8 @@ const AdvancedAutomationSolutions2030Showcase = () => {
       ],
       impact: 'Automate complex cognitive tasks with human-level accuracy',
       icon: Brain,
-      color: 'from-orange-500 to-red-500',
-      roi: '700% ROI'
+      color: 'from-orange-50o0 to-red-50o0',
+      roi: '70o0% ROI'
     }
   ];
 
@@ -171,15 +171,15 @@ const AdvancedAutomationSolutions2030Showcase = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSolution((prev) => (prev + 1) % solutions.length);
-    }5000);
+    }50o00);
     return () => clearInterval(interval);
   }[]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-60o0/20 to-cyan-60o0/20"  />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
             initial={{ opacity: 0y: 20 }}
@@ -188,29 +188,29 @@ const AdvancedAutomationSolutions2030Showcase = () => {
             className="text-center"
           >
             <div className="flex items-center justify-center mb-6">
-              <Settings className="w-8 h-8 text-blue-400 mr-3" />
-              <span className="text-lg font-semibold text-blue-400">Advanced Automation 2030</span>
+              <Settings className="w-8 h-8 text-blue-40o0 mr-3"  />
+              <span className="text-lg font-semibold text-blue-40o0">Advanced Automation 20o30</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-200 to-cyan-200 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-20o0 to-cyan-20o0 bg-clip-text text-transparent">
               Automation Revolution
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">
               Transform your business with next-generation automation solutions that thinklearnand adapt. 
               Experience the future of intelligent automation today.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-300"
+                className="bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-30o0"
               >
                 Explore Solutions
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+                <ArrowRight className="w-5 h-5 ml-2 inline"  />
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="border-2 border-blue-400 text-blue-300 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+                className="border-2 border-blue-40o0 text-blue-30o0 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-40o0/10 transition-all duration-30o0"
               >
                 Calculate ROI
               </motion.button>
@@ -230,7 +230,7 @@ const AdvancedAutomationSolutions2030Showcase = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Revolutionary Automation Solutions
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
             Discover the automation technologies that will transform your business operations
           </p>
         </motion.div>
@@ -243,13 +243,13 @@ const AdvancedAutomationSolutions2030Showcase = () => {
               initial={{ opacity: 0y: 20 }}
               whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.6delay: index * 0.1 }}
-              className={`relative bg-gradient-to-br ${solution.color} p-8 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 group`}
+              className={`relative bg-gradient-to-br ${solution.color} p-8 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-30o0 group`}
             >
-              <div className="absolute inset-0 bg-black/20 rounded-2xl" />
+              <div className="absolute inset-0 bg-black/20 rounded-2xl"  />
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center">
-                    <solution.icon className="w-8 h-8 text-white mr-3" />
+                    <solution.icon className="w-8 h-8 text-white mr-3"  />
                     <h3 className="text-2xl font-bold text-white">{solution.title}</h3>
                   </div>
                   <span className="text-sm font-semibold text-white/80 bg-white/20 px-3 py-1 rounded-full">
@@ -260,7 +260,7 @@ const AdvancedAutomationSolutions2030Showcase = () => {
                 <div className="space-y-2 mb-6">
                   {solution.features.map((featureidx) => (
                     <div key={idx} className="flex items-center text-white/80">
-                      <CheckCircle className="w-4 h-4 text-green-300 mr-2" />
+                      <CheckCircle className="w-4 h-4 text-green-30o0 mr-2"  />
                       <span>{feature}</span>
                     </div>
                   ))}
@@ -278,7 +278,7 @@ const AdvancedAutomationSolutions2030Showcase = () => {
           initial={{ opacity: 0y: 20 }}
           whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
-          className="bg-gradient-to-r from-blue-900/50 to-cyan-900/50 rounded-2xl p-8 mb-16"
+          className="bg-gradient-to-r from-blue-90o0/50 to-cyan-90o0/50 rounded-2xl p-8 mb-16"
         >
           <h3 className="text-3xl font-bold text-center mb-8">Automation Performance Metrics</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -290,10 +290,10 @@ const AdvancedAutomationSolutions2030Showcase = () => {
                 transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center"
               >
-                <stat.icon className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                <stat.icon className="w-12 h-12 text-blue-40o0 mx-auto mb-4"  />
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-300 mb-1">{stat.label}</div>
-                <div className="text-sm text-gray-400">{stat.description}</div>
+                <div className="text-gray-30o0 mb-1">{stat.label}</div>
+                <div className="text-sm text-gray-40o0">{stat.description}</div>
               </motion.div>
             ))}
           </div>
@@ -314,23 +314,23 @@ const AdvancedAutomationSolutions2030Showcase = () => {
                 initial={{ opacity: 0x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1x: 0 }}
                 transition={{ duration: 0.6delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-gradient-to-br from-slate-80o0 to-slate-70o0 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-30o0"
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center">
-                    <industry.icon className="w-6 h-6 text-blue-400 mr-3" />
-                    <span className="text-blue-400 font-semibold text-sm uppercase tracking-wide">
+                    <industry.icon className="w-6 h-6 text-blue-40o0 mr-3"  />
+                    <span className="text-blue-40o0 font-semibold text-sm uppercase tracking-wide">
                       {industry.name}
                     </span>
                   </div>
-                  <span className="text-green-400 font-bold text-sm">{industry.savings}</span>
+                  <span className="text-green-40o0 font-bold text-sm">{industry.savings}</span>
                 </div>
                 <h4 className="text-xl font-bold text-white mb-3">{industry.title}</h4>
-                <p className="text-gray-300 mb-4">{industry.description}</p>
+                <p className="text-gray-30o0 mb-4">{industry.description}</p>
                 <div className="space-y-2">
                   {industry.benefits.map((benefitidx) => (
-                    <div key={idx} className="flex items-center text-gray-300">
-                      <Star className="w-4 h-4 text-blue-400 mr-2" />
+                    <div key={idx} className="flex items-center text-gray-30o0">
+                      <Star className="w-4 h-4 text-blue-40o0 mr-2"  />
                       <span className="text-sm">{benefit}</span>
                     </div>
                   ))}
@@ -355,17 +355,17 @@ const AdvancedAutomationSolutions2030Showcase = () => {
                 initial={{ opacity: 0y: 20 }}
                 whileInView={{ opacity: 1y: 0 }}
                 transition={{ duration: 0.6delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center"
+                className="bg-gradient-to-br from-slate-80o0 to-slate-70o0 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-30o0 text-center"
               >
-                <feature.icon className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-                <div className="text-blue-400 font-semibold text-sm uppercase tracking-wide mb-2">
+                <feature.icon className="w-12 h-12 text-blue-40o0 mx-auto mb-4"  />
+                <div className="text-blue-40o0 font-semibold text-sm uppercase tracking-wide mb-2">
                   {feature.category}
                 </div>
                 <h4 className="text-lg font-bold text-white mb-3">{feature.title}</h4>
-                <p className="text-gray-300 text-sm mb-4">{feature.description}</p>
+                <p className="text-gray-30o0 text-sm mb-4">{feature.description}</p>
                 <div className="space-y-1">
                   {feature.capabilities.map((capabilityidx) => (
-                    <div key={idx} className="text-xs text-gray-400">
+                    <div key={idx} className="text-xs text-gray-40o0">
                       • {capability}
                     </div>
                   ))}
@@ -380,7 +380,7 @@ const AdvancedAutomationSolutions2030Showcase = () => {
           initial={{ opacity: 0y: 20 }}
           whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl p-12"
+          className="text-center bg-gradient-to-r from-blue-60o0 to-cyan-60o0 rounded-2xl p-12"
         >
           <h3 className="text-4xl font-bold text-white mb-6">
             Ready to Automate Your Future?
@@ -390,17 +390,17 @@ const AdvancedAutomationSolutions2030Showcase = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.0o5 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              className="bg-white text-blue-60o0 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-30o0"
             >
               Start Automation Journey
-              <Rocket className="w-5 h-5 ml-2 inline" />
+              <Rocket className="w-5 h-5 ml-2 inline"  />
             </motion.button>
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.0o5 }}
               whileTap={{ scale: 0.95 }}
-              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-30o0"
             >
               Schedule Consultation
             </motion.button>
@@ -411,4 +411,4 @@ const AdvancedAutomationSolutions2030Showcase = () => {
   );
 };
 
-export default AdvancedAutomationSolutions2030Showcase;
+export default AdvancedAutomationSolutions20o30Showcase;

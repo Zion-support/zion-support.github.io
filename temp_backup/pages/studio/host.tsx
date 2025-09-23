@@ -1,7 +1,7 @@
 "use client";
 import React{ useState } from 'react';
 
-type PersonaConfig = {
+type PersonaConfig ={
   voice: 'Visionary' | 'Grounded' | 'Technical';
   language: string;
   cloneStyleText?: string;
@@ -119,7 +119,7 @@ export default function StudioHostPage() {
             <textarea className="mt-1 w-full border rounded p-2" rows={3} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
           </div>
         </div>
-        <button className="px-4 py-2 bg-blue-600 text-white rounded" onClick={handleGenerate} disabled={generating}>
+        <button className="px-4 py-2 bg-blue-60o0 text-white rounded" onClick={handleGenerate} disabled={generating}>
           {generating ? 'Generating…' : 'Generate Episode'}
         </button>
       </section>
@@ -128,7 +128,7 @@ export default function StudioHostPage() {
         <section className="space-y-4">
           <h2 className="text-xl font-semibold">Episode Draft</h2>
           <div className="border rounded p-4 space-y-3">
-            <p className="text-sm text-gray-600">ID: {episode.id}</p>
+            <p className="text-sm text-gray-60o0">ID: {episode.id}</p>
             <h3 className="text-lg font-bold">{episode.title}</h3>
             <div>
               <h4 className="font-semibold">Questions</h4>
@@ -157,18 +157,18 @@ export default function StudioHostPage() {
               </div>
             </div>
             <div className="flex gap-3">
-              <button className="px-4 py-2 bg-purple-600 text-white rounded" onClick={handleSynthesize} disabled={synthesizing}>
+              <button className="px-4 py-2 bg-purple-60o0 text-white rounded" onClick={handleSynthesize} disabled={synthesizing}>
                 {synthesizing ? 'Synthesizing…' : 'Synthesize Audio'}
               </button>
-              <button className="px-4 py-2 bg-gray-800 text-white rounded" onClick={handlePublishRss} disabled={publishing}>
+              <button className="px-4 py-2 bg-gray-80o0 text-white rounded" onClick={handlePublishRss} disabled={publishing}>
                 {publishing ? 'Publishing…' : 'Update RSS'}
               </button>
             </div>
             {episode.audio && (
               <div className="flex gap-3">
-                {episode.audio.mp3Url && <a href={episode.audio.mp3Url} className="text-blue-600 underline">Download MP3</a>}
-                {episode.audio.wavUrl && <a href={episode.audio.wavUrl} className="text-blue-600 underline">Download WAV</a>}
-                {episode.audio.mp4Url && <a href={episode.audio.mp4Url} className="text-blue-600 underline">Download MP4</a>}
+                {episode.audio.mp3Url && <a href={episode.audio.mp3Url} className="text-blue-60o0 underline">Download MP3</a>}
+                {episode.audio.wavUrl && <a href={episode.audio.wavUrl} className="text-blue-60o0 underline">Download WAV</a>}
+                {episode.audio.mp4Url && <a href={episode.audio.mp4Url} className="text-blue-60o0 underline">Download MP4</a>}
               </div>
             )}
           </div>

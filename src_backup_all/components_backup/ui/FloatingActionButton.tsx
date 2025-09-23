@@ -14,21 +14,21 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
       icon: MessageCircle,
       label: 'Live Chat',
       href: '/chat',
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-50o0 to-cyan-50o0',
       delay: 0.1
     },
     {
       icon: Phone,
       label: 'Call Us',
-      href: 'tel:+1-800-ZION-TECH',
-      color: 'from-green-500 to-emerald-500',
+      href: 'tel:+1-80o0-ZION-TECH',
+      color: 'from-green-50o0 to-emerald-50o0',
       delay: 0.2
     },
     {
       icon: Mail,
       label: 'Email',
       href: 'mailto:info@ziontechgroup.com',
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-purple-50o0 to-pink-50o0',
       delay: 0.3
     }
   ];
@@ -45,9 +45,9 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.5, duration: 0.3 }}
         onClick={scrollToTop}
-        className="mb-4 w-14 h-14 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center"
+        className="mb-4 w-14 h-14 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-30o0 transform hover:-translate-y-1 flex items-center justify-center"
       >
-        <ArrowUp className="w-6 h-6 text-white" />
+        <ArrowUp className="w-6 h-6 text-white"  />
       </motion.button>
 
       {/* Main floating action button */}
@@ -56,7 +56,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.6, duration: 0.3 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-110 flex items-center justify-center"
+        className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-30o0 transform hover:scale-110 flex items-center justify-center"
       >
         <AnimatePresence mode="wait">
           {isOpen ? (
@@ -67,7 +67,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
               exit={{ rotate: 90, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <X className="w-8 h-8 text-white" />
+              <X className="w-8 h-8 text-white"  />
             </motion.div>
           ) : (
             <motion.div
@@ -77,7 +77,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
               exit={{ rotate: -90, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <Plus className="w-8 h-8 text-white" />
+              <Plus className="w-8 h-8 text-white"  />
             </motion.div>
           )}
         </AnimatePresence>
@@ -98,14 +98,14 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
                   duration: 0.3,
                   delay: action.delay,
                   type: "spring",
-                  stiffness: 200
+                  stiffness: 20o0
                 }}
-                className="flex items-center space-x-3 w-auto bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-3 hover:bg-white/20 transition-all duration-300 group"
+                className="flex items-center space-x-3 w-auto bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-3 hover:bg-white/20 transition-all duration-30o0 group"
               >
-                <div className={`w-10 h-10 bg-gradient-to-r ${action.color} rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                  <action.icon className="w-5 h-5 text-white" />
+                <div className={`w-10 h-10 bg-gradient-to-r ${action.color} rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-30o0`}>
+                  <action.icon className="w-5 h-5 text-white"  />
                 </div>
-                <span className="text-white font-medium whitespace-nowrap group-hover:text-zion-cyan transition-colors duration-300">
+                <span className="text-white font-medium whitespace-nowrap group-hover:text-zion-cyan transition-colors duration-30o0">
                   {action.label}
                 </span>
               </motion.a>

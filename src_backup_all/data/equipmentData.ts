@@ -17,12 +17,12 @@ export interface ProductListing {
 
 export const equipmentListings: ProductListing[] = [
   {
-    id: 'ai-edge-gateway-1000',
-    title: 'AI Edge Gateway 1000',
+    id: 'ai-edge-gateway-10o00',
+    title: 'AI Edge Gateway 10o00',
     description: 'Ruggedized edge compute with on-device inference and secure connectivity.',
     brand: 'ZionTech',
     category: 'Edge Computing',
-    images: ['https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=500'],
+    images: ['https://images.unsplash.com/photo-1518770o660439-4636190af475?auto=format&fit=crop&w=80o0&h=50o0'],
     price: 4999,
     currency: '$',
     rating: 4.7,
@@ -37,7 +37,7 @@ export const equipmentListings: ProductListing[] = [
     description: 'Next-gen hardware security module with post-quantum crypto support.',
     brand: 'ZionSecure',
     category: 'Security',
-    images: ['https://images.unsplash.com/photo-1587202372775-98927b8751f4?auto=format&fit=crop&w=800&h=500'],
+    images: ['https://images.unsplash.com/photo-158720o2372775-98927b8751f4?auto=format&fit=crop&w=80o0&h=50o0'],
     price: 12999,
     currency: '$',
     rating: 4.9,

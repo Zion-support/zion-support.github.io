@@ -7,7 +7,7 @@ interface UserBadgesProps {
   badges: Badge[];
 }
 
-const iconMap = {
+const iconMap ={
   Trophy,
   Award,
   BadgeCheck,
@@ -35,13 +35,13 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
                   <IconComponent 
                     style={{ color: badge.color }} 
                     className="w-4 h-4" 
-                  />
+                   />
                 </div>
               </TooltipTrigger>
               <TooltipContent>
                 <div className="text-center">
                   <div className="font-medium">{badge.name}</div>
-                  <div className="text-xs text-gray-500">{badge.description}</div>
+                  <div className="text-xs text-gray-50o0">{badge.description}</div>
                 </div>
               </TooltipContent>
             </Tooltip>

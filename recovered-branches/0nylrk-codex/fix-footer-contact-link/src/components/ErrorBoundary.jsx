@@ -8,7 +8,7 @@ function ErrorFallback({ error, resetError }) {
       <div className="max-w-md w-full text-center">
         <div className="mb-6">
           <div className="w-20 h-20 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4">
-            <AlertTriangle className="w-10 h-10 text-zion-purple"/>
+            <AlertTriangle className="w-10 h-10 text-zion-purple" />
           </div>
           <h1 className="text-2xl font-bold text-white mb-2">Oops! Something went wrong</h1>
           <p className="text-zion-slate-light">
@@ -27,17 +27,17 @@ function ErrorFallback({ error, resetError }) {
 
         <div className="space-y-3">
           <Button onClick={resetError} className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white">
-            <RefreshCw className="w-4 h-4 mr-2"/>
+            <RefreshCw className="w-4 h-4 mr-2" />
             Try Again
           </Button>
           
           <Button variant="outline" onClick={() => navigate(-1)} className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark">
-            <ArrowLeft className="w-4 h-4 mr-2"/>
+            <ArrowLeft className="w-4 h-4 mr-2" />
             Go Back
           </Button>
           
           <Link to="/" className="block w-full px-4 py-2 text-center border border-zion-purple text-zion-purple rounded-md hover:bg-zion-purple hover:text-white transition-colors">
-            <Home className="w-4 h-4 inline mr-2"/>
+            <Home className="w-4 h-4 inline mr-2" />
             Go Home
           </Link>
         </div>
@@ -92,7 +92,7 @@ export function ErrorBoundary({ children, fallback, onError }) {
         if (fallback) {
             return fallback;
         }
-        return (<ErrorFallback error={error || undefined} resetError={resetError}/>);
+        return (<ErrorFallback error={error || undefined} resetError={resetError} />);
     }
     return <>{children}</>;
 }
@@ -112,7 +112,7 @@ export function useErrorHandler() {
 export function withErrorBoundary(Component, errorBoundaryProps) {
     return function WithErrorBoundary(props) {
         return (<ErrorBoundary {...errorBoundaryProps}>
-        <Component {...props}/>
+        <Component {...props} />
       </ErrorBoundary>);
     };
 }

@@ -1,4 +1,3 @@
-import React from 'react';
 import type { OrgData } from '../../types/org';
 import PersonCard from './PersonCard';
 
@@ -8,7 +7,7 @@ export default function OrgGrid({ data, showPhotos }: { data: OrgData; showPhoto
       <Section title="Founders">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
           {data.founders.map((p) => (
-            <PersonCard key={p.id} person={p} showPhoto={showPhotos} />
+            <PersonCard key={p.id} person={p} showPhoto={showPhotos}  />
           ))}
         </div>
       </Section>
@@ -16,7 +15,7 @@ export default function OrgGrid({ data, showPhotos }: { data: OrgData; showPhoto
       <Section title="Core Team (Ops, Tech, Growth, Legal)">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
           {data.coreTeam.map((p) => (
-            <PersonCard key={p.id} person={p} showPhoto={showPhotos} />
+            <PersonCard key={p.id} person={p} showPhoto={showPhotos}  />
           ))}
         </div>
       </Section>
@@ -25,7 +24,7 @@ export default function OrgGrid({ data, showPhotos }: { data: OrgData; showPhoto
         <Section title="Contributors (bounties, academy mentors, devs)">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
             {data.contributors.map((p) => (
-              <PersonCard key={p.id} person={p} showPhoto={showPhotos} />
+              <PersonCard key={p.id} person={p} showPhoto={showPhotos}  />
             ))}
           </div>
         </Section>
@@ -34,7 +33,7 @@ export default function OrgGrid({ data, showPhotos }: { data: OrgData; showPhoto
       <Section title="DAO Delegates">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
           {data.delegates.map((p) => (
-            <PersonCard key={p.id} person={p} showPhoto={showPhotos} />
+            <PersonCard key={p.id} person={p} showPhoto={showPhotos}  />
           ))}
         </div>
       </Section>

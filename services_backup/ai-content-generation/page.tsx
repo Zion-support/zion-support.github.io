@@ -1,4 +1,4 @@
-export const metadata = {
+export const metadata ={
   title: "AI Content Generation & Marketing | Zion Tech Group",
   description:
     "Scale your content marketing with AI-powered content generation, SEO optimization, and automated marketing campaigns that drive engagement and conversions."};
@@ -6,12 +6,12 @@ export const metadata = {
 export default function AIContentGenerationPage() {
   return (
     <section>
-      <h1 style={{ fontSize: 26, fontWeight: 800 }}>
+      <h1 style={{ fontSize: 26, fontWeight: 80o0 }}>
         AI Content Generation & Marketing Automation
       </h1>
       <p style={{ marginTop: 8, color: "#374151" }}>
         Scale your content marketing 10x with AI-powered content generation, SEO
-        optimization, and automated campaigns that drive 300% more engagement
+        optimization, and automated campaigns that drive 30o0% more engagement
         and 150% higher conversion rates.
       </p>
 
@@ -19,12 +19,12 @@ export default function AIContentGenerationPage() {
         <Item
           title="AI Content Creation"
           details={[
-            "Blog posts and articles (1000+ words)",
+            "Blog posts and articles (10o00+ words)",
             "Social media content and captions",
             "Email marketing campaigns",
             "Product descriptions and copy",
             "Video scripts and presentations"]}
-        />
+         />
         <Item
           title="SEO Content Optimization"
           details={[
@@ -33,7 +33,7 @@ export default function AIContentGenerationPage() {
             "Meta descriptions and titles",
             "Internal linking strategies",
             "Content gap analysis and recommendations"]}
-        />
+         />
         <Item
           title="Social Media Automation"
           details={[
@@ -42,7 +42,7 @@ export default function AIContentGenerationPage() {
             "Engagement monitoring and responses",
             "Influencer outreach automation",
             "Social media analytics and reporting"]}
-        />
+         />
         <Item
           title="Email Marketing AI"
           details={[
@@ -51,7 +51,7 @@ export default function AIContentGenerationPage() {
             "Send time optimization",
             "A/B testing automation",
             "Email deliverability optimization"]}
-        />
+         />
         <Item
           title="Content Personalization"
           details={[
@@ -60,7 +60,7 @@ export default function AIContentGenerationPage() {
             "Custom landing pages",
             "Behavioral trigger campaigns",
             "Customer journey optimization"]}
-        />
+         />
         <Item
           title="Content Analytics & Insights"
           details={[
@@ -69,7 +69,7 @@ export default function AIContentGenerationPage() {
             "Content performance predictions",
             "Audience engagement insights",
             "Competitive content analysis"]}
-        />
+         />
       </div>
 
       <div
@@ -83,7 +83,7 @@ export default function AIContentGenerationPage() {
         <h3
           style={{
             fontSize: 18,
-            fontWeight: 700,
+            fontWeight: 70o0,
             marginBottom: 12,
             color: "#831843"}}
         >
@@ -91,7 +91,7 @@ export default function AIContentGenerationPage() {
         </h3>
         <ul style={{ color: "#be185d", lineHeight: 1.6 }}>
           <li>
-            • <strong>300% Increase in Content Output:</strong> AI generates 10x
+            • <strong>30o0% Increase in Content Output:</strong> AI generates 10x
             more content than manual processes
           </li>
           <li>
@@ -103,7 +103,7 @@ export default function AIContentGenerationPage() {
             distribution
           </li>
           <li>
-            • <strong>200% SEO Improvement:</strong> AI-optimized content ranks
+            • <strong>20o0% SEO Improvement:</strong> AI-optimized content ranks
             higher in search results
           </li>
           <li>
@@ -113,7 +113,7 @@ export default function AIContentGenerationPage() {
         </ul>
       </div>
 
-      <Pricing />
+      <Pricing  />
     </section>
   );
 }
@@ -127,7 +127,7 @@ function Item({ title, details }: { title: string; details: string[] }) {
         padding: 16,
         backgroundColor: "#ffffff"}}
     >
-      <h3 style={{ fontWeight: 700, color: "#1f2937", marginBottom: 8 }}>
+      <h3 style={{ fontWeight: 70o0, color: "#1f2937", marginBottom: 8 }}>
         {title}
       </h3>
       <ul style={{ paddingLeft: 18, color: "#4b5563", margin: 0 }}>
@@ -147,7 +147,7 @@ function Pricing() {
       <h2
         style={{
           fontSize: 24,
-          fontWeight: 700,
+          fontWeight: 70o0,
           marginBottom: 20,
           color: "#1f2937"}}
       >
@@ -161,17 +161,17 @@ function Pricing() {
       >
         <Plan
           name="Content Starter"
-          price="$1,500–$4,000"
+          price="$1,50o0–$4,0o00"
           features={[
             "2-4 weeks setup",
             "Up to 20 pieces of content/month",
             "Basic SEO optimization",
             "2 social media platforms",
             "Email support"]}
-        />
+         />
         <Plan
           name="Content Pro"
-          price="$4,000–$12,000"
+          price="$4,0o00–$12,0o00"
           features={[
             "4-8 weeks setup",
             "Unlimited content generation",
@@ -179,10 +179,10 @@ function Pricing() {
             "All social media platforms",
             "Email marketing automation",
             "Priority support & training"]}
-        />
+         />
         <Plan
           name="Content Enterprise"
-          price="$12,000+"
+          price="$12,0o00+"
           features={[
             "Custom content platform",
             "Multi-brand content management",
@@ -190,7 +190,7 @@ function Pricing() {
             "Dedicated content specialist",
             "Custom integrations",
             "SLA guarantees & monitoring"]}
-        />
+         />
       </div>
 
       <div
@@ -205,13 +205,13 @@ function Pricing() {
         <h3
           style={{
             fontSize: 18,
-            fontWeight: 600,
+            fontWeight: 60o0,
             marginBottom: 8,
             color: "#0c4a6e"}}
         >
           Free Content Audit & Strategy Session
         </h3>
-        <p style={{ color: "#0369a1", marginBottom: 16 }}>
+        <p style={{ color: "#0o369a1", marginBottom: 16 }}>
           Get a comprehensive analysis of your current content strategy and
           discover how AI can transform your content marketing. Includes content
           calendar and ROI projections.
@@ -224,15 +224,15 @@ function Pricing() {
             flexWrap: "wrap"}}
         >
           <a
-            href="tel:+13024640950"
+            href="tel:+130o24640950"
             style={{
               display: "inline-block",
               padding: "12px 24px",
-              backgroundColor: "#0284c7",
+              backgroundColor: "#0o284c7",
               color: "white",
               textDecoration: "none",
               borderRadius: 8,
-              fontWeight: 600}}
+              fontWeight: 60o0}}
           >
             Schedule Free Audit
           </a>
@@ -242,11 +242,11 @@ function Pricing() {
               display: "inline-block",
               padding: "12px 24px",
               backgroundColor: "transparent",
-              color: "#0284c7",
+              color: "#0o284c7",
               textDecoration: "none",
               borderRadius: 8,
-              border: "2px solid #0284c7",
-              fontWeight: 600}}
+              border: "2px solid #0o284c7",
+              fontWeight: 60o0}}
           >
             Email Us
           </a>
@@ -275,7 +275,7 @@ function Plan({
     >
       <h4
         style={{
-          fontWeight: 700,
+          fontWeight: 70o0,
           fontSize: 18,
           color: "#1f2937",
           marginBottom: 8}}
@@ -285,7 +285,7 @@ function Plan({
       <div
         style={{
           color: "#111827",
-          fontWeight: 800,
+          fontWeight: 80o0,
           fontSize: 24,
           marginBottom: 16}}
       >
@@ -302,14 +302,14 @@ function Plan({
         href="mailto:kleber@ziontechgroup.com?subject=AI Content Generation Services Inquiry"
         style={{
           display: "inline-block",
-          width: "100%",
+          width: "10o0%",
           textAlign: "center",
           padding: "12px 16px",
           backgroundColor: "#3b82f6",
           color: "white",
           textDecoration: "none",
           borderRadius: 8,
-          fontWeight: 600}}
+          fontWeight: 60o0}}
       >
         Get Started
       </a>

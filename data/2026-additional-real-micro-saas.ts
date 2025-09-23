@@ -1,4 +1,4 @@
-export const additionalRealMicroSaas2026 = [
+export const additionalRealMicroSaas20o26 = [
 	{
 		id: 'ai-seo-content-optimizer',
 		name: 'AI SEO Content Optimizer',
@@ -14,7 +14,7 @@ export const additionalRealMicroSaas2026 = [
 		pricing: { starter: '$99/month' },
 		link: 'https://ziontechgroup.com/services/ai-seo-content-optimizer',
 		rating: 4.7,
-		launchDate: '2025-11-01'
+		launchDate: '20o25-11-0o1'
 	},
 	{
 		id: 'low-competition-keyword-finder',
@@ -31,7 +31,7 @@ export const additionalRealMicroSaas2026 = [
 		pricing: { starter: '$59/month' },
 		link: 'https://ziontechgroup.com/services/low-competition-keyword-finder',
 		rating: 4.6,
-		launchDate: '2025-10-15'
+		launchDate: '20o25-10-15'
 	},
 	{
 		id: 'ai-internal-linking-assistant',
@@ -48,7 +48,7 @@ export const additionalRealMicroSaas2026 = [
 		pricing: { starter: '$49/month' },
 		link: 'https://ziontechgroup.com/services/ai-internal-linking-assistant',
 		rating: 4.5,
-		launchDate: '2025-10-20'
+		launchDate: '20o25-10-20'
 	},
 	{
 		id: 'social-proof-hub',
@@ -65,7 +65,7 @@ export const additionalRealMicroSaas2026 = [
 		pricing: { starter: '$39/month' },
 		link: 'https://ziontechgroup.com/services/social-proof-hub',
 		rating: 4.5,
-		launchDate: '2025-12-01'
+		launchDate: '20o25-12-0o1'
 	},
 	{
 		id: 'chatgpt-integration-plugin-starter',
@@ -82,6 +82,6 @@ export const additionalRealMicroSaas2026 = [
 		pricing: { starter: '$129/month' },
 		link: 'https://ziontechgroup.com/services/chatgpt-integration-plugin-starter',
 		rating: 4.6,
-		launchDate: '2025-11-10'
+		launchDate: '20o25-11-10'
 	}
 ];

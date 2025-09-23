@@ -1,5 +1,4 @@
 
-import React from 'react';
 import { GradientHeading } from "./GradientHeading";
 import { Check, Handshake, Search, Send } from 'lucide-react'
 import { cn } from "@/lib/utils";
@@ -14,23 +13,19 @@ const getSteps = (t: any) => [
   {
     title: t('how_it_works.post'),
     description: t('how_it_works.post_desc'),
-    icon: Send,
-  },
+    icon: Send},
   {
     title: t('how_it_works.match'),
     description: t('how_it_works.match_desc'),
-    icon: Search,
-  },
+    icon: Search},
   {
     title: t('how_it_works.hire_buy'),
     description: t('how_it_works.hire_buy_desc'),
-    icon: Handshake,
-  },
+    icon: Handshake},
   {
     title: t('how_it_works.done'),
     description: t('how_it_works.done_desc'),
-    icon: Check,
-  },
+    icon: Check},
 ];
 
 export function HowItWorksSection({ className, style }: HowItWorksSectionProps) {
@@ -69,7 +64,7 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
                 </div>
                 
                 <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0">
-                  <step.icon className="w-6 h-6 text-zion-cyan" />
+                  <step.icon className="w-6 h-6 text-zion-cyan"  />
                 </div>
 
                 <div className="md:w-1/2 md:px-12 text-center md:text-left">

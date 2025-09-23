@@ -1,67 +1,24 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+import { fileURLToPath } from 'url';
 
-function fixMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Remove all merge conflict markers and keep HEAD version
-    content = content.replace(/
-    
-    // Remove any remaining conflict markers
-    content = content.replace(/
-    
-    fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`Fixed merge conflicts in ${filePath}`);
-    
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
-}
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// Fix the specific file
-fixMergeConflicts('src/components/EnhancedSearch.tsx');
-const fs = require('fs');
-const path = require('path');
-
-function fixMergeConflicts(directory) {
-  const files = fs.readdirSync(directory, { withFileTypes: true });
+// Function to recursively find all files with merge conflict markers
+function findFilesWithMergeConflicts(dir, files = []) {
+  const items = fs.readdirSync(dir);
   
-  for (const file of files) {
-    const fullPath = path.join(directory, file.name);
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
     
-    if (file.isDirectory()) {
-      // Skip node_modules, .git, and other directories that shouldn't be processed
-      if (['node_modules', '.git', 'backups', 'logs'].includes(file.name)) {
-        continue;
+    if (stat.isDirectory()) {
+      // Skip node_modules, .next, and other build directories
+      if (!['node_modules', '.next', 'out', 'dist', 'build', '.git'].includes(item)) {
+        findFilesWithMergeConflicts(fullPath, files);
       }
-      fixMergeConflicts(fullPath);
-    } else if (file.isFile()) {
-      // Only process text files
-      const ext = path.extname(file.name).toLowerCase();
-      if (['.js', '.ts', '.tsx', '.jsx', '.json', '.md', '.txt', '.yml', '.yaml', '.toml', '.config.js'].includes(ext)) {
-        try {
-          let content = fs.readFileSync(fullPath, 'utf8');
-          let originalContent = content;
-          
-          // Remove merge conflict markers
-          content = content
-            .replace(/            .replace(/          
-          // If content changed, write it back
-          if (content !== originalContent) {
-            fs.writeFileSync(fullPath, content, 'utf8');
-            console.log(`✅ Fixed merge conflicts in: ${fullPath}`);
-          }
-        } catch (error) {
-          console.log(`⚠️  Could not process ${fullPath}: ${error.message}`);
-        }
-      }
-    }
-  }
-}
-
-console.log('🔧 Fixing merge conflicts throughout the project...');
-fixMergeConflicts('.');
-console.log('✅ Merge conflict fixing completed!'); 
+    } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
+      try {
+        const content = fs.readFileSync(fullPath, 'utf8');
+        if (content.includes('

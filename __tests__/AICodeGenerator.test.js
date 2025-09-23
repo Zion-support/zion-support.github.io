@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
@@ -11,7 +10,7 @@ const AICodeGeneratorTest = () => (
 
 describe('AICodeGenerator', () => {
   it('renders without crashing', () => {
-    render(<AICodeGeneratorTest />);
+    render(<AICodeGeneratorTest  />);
     expect(screen.getByTestId('aicodegenerator-test')).toBeInTheDocument();
   });
 });

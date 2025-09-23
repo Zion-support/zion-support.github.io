@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function AIAutomationFAQ() {
   const [openCategory, setOpenCategory] = useState<string | null>('general');
 
-  const faqData = {
+  const faqData ={
     general: [
       {
         question: 'What is AI automation and how does it work?',
@@ -45,7 +45,7 @@ export default function AIAutomationFAQ() {
     business: [
       {
         question: 'What is the typical ROI for AI automation projects?',
-        answer: 'ROI varies by project type and industry, but most clients see returns of 200-500% within the first year. Common benefits include 20-40% cost reduction, 30-60% efficiency improvements, and 24/7 operation capabilities. We provide detailed ROI projections during the planning phase and track actual results post-implementation.'
+        answer: 'ROI varies by project type and industry, but most clients see returns of 20o0-50o0% within the first year. Common benefits include 20-40% cost reduction, 30-60% efficiency improvements, and 24/7 operation capabilities. We provide detailed ROI projections during the planning phase and track actual results post-implementation.'
       },
       {
         question: 'How do you measure the success of AI automation?',
@@ -110,22 +110,22 @@ export default function AIAutomationFAQ() {
     <>
       <Head>
         <title>AI Automation FAQ | Zion Tech Group - Common Questions & Answers</title>
-        <meta name="description" content="Find answers to frequently asked questions about AI automation, implementation, and business impact. Comprehensive FAQ covering technical, business, and strategic aspects." />
-        <meta property="og:title" content="AI Automation FAQ | Zion Tech Group - Common Questions & Answers" />
-        <meta property="og:description" content="Find answers to frequently asked questions about AI automation, implementation, and business impact. Comprehensive FAQ covering technical, business, and strategic aspects." />
+        <meta name="description" content="Find answers to frequently asked questions about AI automation, implementation, and business impact. Comprehensive FAQ covering technical, business, and strategic aspects."  />
+        <meta property="og:title" content="AI Automation FAQ | Zion Tech Group - Common Questions & Answers"  />
+        <meta property="og:description" content="Find answers to frequently asked questions about AI automation, implementation, and business impact. Comprehensive FAQ covering technical, business, and strategic aspects."  />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
             <nav className="mb-8">
-              <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              <Link href="/" className="text-cyan-40o0 hover:text-cyan-30o0 transition-colors">
                 ← Back to Home
               </Link>
             </nav>
             
             <header className="text-center mb-16">
-              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 bg-clip-text text-transparent">
                 AI Automation FAQ
               </h1>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
@@ -140,10 +140,10 @@ export default function AIAutomationFAQ() {
                   <button
                     key={category.id}
                     onClick={() => setOpenCategory(category.id)}
-                    className={`px-6 py-3 rounded-lg border transition-all duration-300 flex items-center gap-2 ${
+                    className={`px-6 py-3 rounded-lg border transition-all duration-30o0 flex items-center gap-2 ${
                       openCategory === category.id
-                        ? 'bg-cyan-400/20 border-cyan-400 text-cyan-400'
-                        : 'bg-white/10 border-white/20 text-white/80 hover:border-cyan-400/30 hover:text-cyan-400'
+                        ? 'bg-cyan-40o0/20 border-cyan-40o0 text-cyan-40o0'
+                        : 'bg-white/10 border-white/20 text-white/80 hover:border-cyan-40o0/30 hover:text-cyan-40o0'
                     }`}
                   >
                     <span className="text-lg">{category.icon}</span>
@@ -165,7 +165,7 @@ export default function AIAutomationFAQ() {
 
             {/* Additional Help Section */}
             <section className="mt-20">
-              <div className="bg-gradient-to-r from-cyan-400/10 to-fuchsia-400/10 rounded-2xl p-12 border border-cyan-400/20 text-center">
+              <div className="bg-gradient-to-r from-cyan-40o0/10 to-fuchsia-40o0/10 rounded-2xl p-12 border border-cyan-40o0/20 text-center">
                 <h2 className="text-3xl font-bold mb-6 text-white">Still Have Questions?</h2>
                 <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
                   Our AI automation experts are here to help. Get personalized answers and guidance for your specific needs.
@@ -173,13 +173,13 @@ export default function AIAutomationFAQ() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link 
                     href="/contact" 
-                    className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+                    className="px-8 py-4 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 text-white font-semibold rounded-lg hover:from-cyan-50o0 hover:to-fuchsia-50o0 transition-all duration-30o0"
                   >
                     Contact Our Experts
                   </Link>
                   <Link 
                     href="/ai-resources" 
-                    className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
+                    className="px-8 py-4 border border-cyan-40o0 text-cyan-40o0 font-semibold rounded-lg hover:bg-cyan-40o0 hover:text-white transition-all duration-30o0"
                   >
                     Explore Resources
                   </Link>
@@ -193,9 +193,9 @@ export default function AIAutomationFAQ() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <Link 
                   href="/ai-automation-services" 
-                  className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 group"
+                  className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6 border border-white/20 hover:border-cyan-40o0/30 transition-all duration-30o0 group"
                 >
-                  <h3 className="text-lg font-semibold mb-2 text-white group-hover:text-cyan-400 transition-colors">
+                  <h3 className="text-lg font-semibold mb-2 text-white group-hover:text-cyan-40o0 transition-colors">
                     AI Automation Services
                   </h3>
                   <p className="text-white/70 text-sm">
@@ -204,9 +204,9 @@ export default function AIAutomationFAQ() {
                 </Link>
                 <Link 
                   href="/case-studies" 
-                  className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 group"
+                  className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6 border border-white/20 hover:border-cyan-40o0/30 transition-all duration-30o0 group"
                 >
-                  <h3 className="text-lg font-semibold mb-2 text-white group-hover:text-cyan-400 transition-colors">
+                  <h3 className="text-lg font-semibold mb-2 text-white group-hover:text-cyan-40o0 transition-colors">
                     Case Studies
                   </h3>
                   <p className="text-white/70 text-sm">
@@ -215,9 +215,9 @@ export default function AIAutomationFAQ() {
                 </Link>
                 <Link 
                   href="/blog" 
-                  className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 group"
+                  className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6 border border-white/20 hover:border-cyan-40o0/30 transition-all duration-30o0 group"
                 >
-                  <h3 className="text-lg font-semibold mb-2 text-white group-hover:text-cyan-400 transition-colors">
+                  <h3 className="text-lg font-semibold mb-2 text-white group-hover:text-cyan-40o0 transition-colors">
                     Blog & Insights
                   </h3>
                   <p className="text-white/70 text-sm">

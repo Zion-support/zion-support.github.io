@@ -7,8 +7,7 @@ function fixTestFile(filePath) {
     const fileName = path.basename(filePath, '.test.js');
     const componentName = fileName.replace('.test', '').replace('.dynamic', '');
     
-    const content = `import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+    const content = `import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ${componentName} from '../components/${componentName}';
 

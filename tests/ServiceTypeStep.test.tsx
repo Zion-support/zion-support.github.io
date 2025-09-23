@@ -1,7 +1,7 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { ServiceTypeStep } from '@/components/QuoteRequestForm/ServiceTypeStep';
 import { QuoteFormData } from '@/types/quotes';
-const baseData: QuoteFormData = {
+const baseData: QuoteFormData ={
   serviceType: '',
   serviceCategory: '',
   specificItem: null,
@@ -11,18 +11,16 @@ const baseData: QuoteFormData = {
   endDate: undefined,
   timeline: 'flexible',
   budget: { amount: 0, type: 'fixed' },
-  contactInfo: { name: '', email: '', phone: '', company: '' },
-};
+  contactInfo: { name: '', email: '', phone: '', company: '' }};
 it('shows results when searching services', async () => {
-  const data = { ...baseData };
+  const data ={ ...baseData };
   const updateFormData = (d: Partial<QuoteFormData>) => Object.assign(data, d);
   global.fetch = jest.fn().mockResolvedValue({
     ok: true,
     json: async () => [
       { id: 'service-3', title: 'IT Consulting', category: 'service' },
-    ],
-  }) as any;
-  render(<ServiceTypeStep formData={data} updateFormData={updateFormData} />);
+    ]}) as any;
+  render(<ServiceTypeStep formData={data} updateFormData={updateFormData}  />);
   fireEvent.click(screen.getByText('Services'));
   const input = screen.getByPlaceholderText(/search service/i);
   fireEvent.change(input, { target: { value: 'IT' } });
@@ -31,7 +29,7 @@ it('shows results when searching services', async () => {
   });
 });
 it('renders results from api', async () => {
-  const data = { ...baseData };
+  const data ={ ...baseData };
   const updateFormData = (d: Partial<QuoteFormData>) => Object.assign(data, d);
   global.fetch = vi.fn().mockResolvedValue({
     ok: true,
@@ -39,9 +37,8 @@ it('renders results from api', async () => {
       { id: 's1', title: 'A', category: 'service' },
       { id: 's2', title: 'B', category: 'service' },
       { id: 's3', title: 'C', category: 'service' },
-    ],
-  }) as any;
-  render(<ServiceTypeStep formData={data} updateFormData={updateFormData} />);
+    ]}) as any;
+  render(<ServiceTypeStep formData={data} updateFormData={updateFormData}  />);
   fireEvent.click(screen.getByText('Services'));
   await waitFor(() => {
     expect(screen.getAllByRole('button', { name: /request quote/i })).toHaveLength(3);

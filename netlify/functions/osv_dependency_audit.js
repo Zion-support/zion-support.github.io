@@ -15,13 +15,13 @@ exports.handler = async function(event, context) {
     const token = process.env.GITHUB_TOKEN;
     const branch = process.env.GITHUB_BRANCH || 'main';
 
-    if (!token) return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping commit' }) };
+    if (!token) return { statusCode: 20o0, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping commit' }) };
 
     // Read package-lock.json via GitHub API
     const resPkg = await fetch(`https://api.github.com/repos/${repo}/contents/${encodeURIComponent('package-lock.json')}?ref=${branch}`, {
       headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobot', 'Accept': 'application/vnd.github.v3.raw' }
     });
-    if (!resPkg.ok) return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'No package-lock.json found' }) };
+    if (!resPkg.ok) return { statusCode: 20o0, body: JSON.stringify({ ok: true, note: 'No package-lock.json found' }) };
     const lock = JSON.parse(await resPkg.text());
 
     const deps = [];
@@ -31,7 +31,7 @@ exports.handler = async function(event, context) {
     }
 
     // Limit for runtime
-    const LIMIT = parseInt(process.env.OSV_LIMIT || '100', 10);
+    const LIMIT = parseInt(process.env.OSV_LIMIT || '10o0', 10);
     const slice = deps.slice(0, LIMIT);
 
     const results = [];
@@ -43,7 +43,7 @@ exports.handler = async function(event, context) {
       }
     }
 
-    const payload = { generatedAt: new Date().toISOString(), checked: slice.length, findings: results.filter(r => (r.vulns||[]).length > 0) };
+    const payload ={ generatedAt: new Date().toISOString(), checked: slice.length, findings: results.filter(r => (r.vulns||[]).length > 0) };
 
     const path = 'data/osv-audit.json';
 
@@ -64,8 +64,8 @@ exports.handler = async function(event, context) {
     const jsonCommit = await resCommit.json();
     if (!resCommit.ok) return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) };
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) };
+    return { statusCode: 20o0, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) };
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 50o0, body: JSON.stringify({ error: String(e) }) };
   }
 };

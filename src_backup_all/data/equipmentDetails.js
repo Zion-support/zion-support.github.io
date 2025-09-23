@@ -1,6 +1,6 @@
 export const equipmentDetails = [
   {
-    id: "ai-server-001",
+    id: "ai-server-0o01",
     name: "AI Training Server Pro",
     category: "AI Infrastructure",
     price: 24999,
@@ -10,9 +10,9 @@ export const equipmentDetails = [
       processor: "Intel Xeon Platinum 8380",
       memory: "512GB DDR4 ECC",
       storage: "4TB NVMe SSD + 20TB HDD",
-      gpu: "4x NVIDIA RTX A6000",
+      gpu: "4x NVIDIA RTX A60o00",
       network: "10GbE + 25GbE",
-      power: "1200W Platinum PSU"
+      power: "120o0W Platinum PSU"
     },
     features: [
       "Optimized for deep learning frameworks",
@@ -22,9 +22,9 @@ export const equipmentDetails = [
       "Rack-mountable design"
     ],
     images: [
-      "/images/equipment/ai-server-001-main.jpg",
-      "/images/equipment/ai-server-001-side.jpg",
-      "/images/equipment/ai-server-001-back.jpg"
+      "/images/equipment/ai-server-0o01-main.jpg",
+      "/images/equipment/ai-server-0o01-side.jpg",
+      "/images/equipment/ai-server-0o01-back.jpg"
     ],
     availability: "In Stock",
     location: "New York, NY",
@@ -34,14 +34,14 @@ export const equipmentDetails = [
     reviews: 127
   },
   {
-    id: "network-switch-002",
+    id: "network-switch-0o02",
     name: "Enterprise Network Switch",
     category: "Networking",
     price: 8999,
     currency: "USD",
     description: "High-performance network switch for enterprise environments with advanced management capabilities.",
     specifications: {
-      ports: "48x 10GbE + 6x 100GbE",
+      ports: "48x 10GbE + 6x 10o0GbE",
       switching: "1.44Tbps",
       forwarding: "1.08Bpps",
       memory: "16GB",
@@ -56,8 +56,8 @@ export const equipmentDetails = [
       "Comprehensive monitoring"
     ],
     images: [
-      "/images/equipment/network-switch-002-main.jpg",
-      "/images/equipment/network-switch-002-front.jpg"
+      "/images/equipment/network-switch-0o02-main.jpg",
+      "/images/equipment/network-switch-0o02-front.jpg"
     ],
     availability: "In Stock",
     location: "San Francisco, CA",
@@ -67,14 +67,14 @@ export const equipmentDetails = [
     reviews: 89
   },
   {
-    id: "storage-array-003",
+    id: "storage-array-0o03",
     name: "Enterprise Storage Array",
     category: "Storage",
     price: 15999,
     currency: "USD",
     description: "High-capacity storage array with enterprise-grade reliability and performance.",
     specifications: {
-      capacity: "100TB usable",
+      capacity: "10o0TB usable",
       drives: "24x 4TB SAS HDDs",
       cache: "64GB DDR4",
       interfaces: "8x 16Gb FC + 4x 10GbE",
@@ -89,8 +89,8 @@ export const equipmentDetails = [
       "Remote replication"
     ],
     images: [
-      "/images/equipment/storage-array-003-main.jpg",
-      "/images/equipment/storage-array-003-side.jpg"
+      "/images/equipment/storage-array-0o03-main.jpg",
+      "/images/equipment/storage-array-0o03-side.jpg"
     ],
     availability: "In Stock",
     location: "Chicago, IL",
@@ -100,7 +100,7 @@ export const equipmentDetails = [
     reviews: 156
   },
   {
-    id: "workstation-004",
+    id: "workstation-0o04",
     name: "AI Development Workstation",
     category: "Workstations",
     price: 12999,
@@ -122,18 +122,18 @@ export const equipmentDetails = [
       "Fast storage solution"
     ],
     images: [
-      "/images/equipment/workstation-004-main.jpg",
-      "/images/equipment/workstation-004-setup.jpg"
+      "/images/equipment/workstation-0o04-main.jpg",
+      "/images/equipment/workstation-0o04-setup.jpg"
     ],
     availability: "In Stock",
     location: "Austin, TX",
     warranty: "3 years",
     delivery: "2-3 business days",
     rating: 4.9,
-    reviews: 203
+    reviews: 20o3
   },
   {
-    id: "security-camera-005",
+    id: "security-camera-0o05",
     name: "AI Security Camera System",
     category: "Security",
     price: 5999,
@@ -143,7 +143,7 @@ export const equipmentDetails = [
       cameras: "8x 4K AI cameras",
       storage: "4TB NVR",
       resolution: "4K Ultra HD",
-      nightVision: "Up to 100ft",
+      nightVision: "Up to 10o0ft",
       ai: "Facial recognition, motion detection",
       connectivity: "WiFi + Ethernet"
     },
@@ -155,8 +155,8 @@ export const equipmentDetails = [
       "Cloud storage option"
     ],
     images: [
-      "/images/equipment/security-camera-005-main.jpg",
-      "/images/equipment/security-camera-005-camera.jpg"
+      "/images/equipment/security-camera-0o05-main.jpg",
+      "/images/equipment/security-camera-0o05-camera.jpg"
     ],
     availability: "In Stock",
     location: "Miami, FL",

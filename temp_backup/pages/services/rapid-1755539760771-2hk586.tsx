@@ -5,13 +5,13 @@ export default function ServicePage() {
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Security Auditing - Zion Tech Group</title>
-        <meta name="description" content="Professional security auditing services to accelerate your business growth and digital transformation." />
-        <meta name="keywords" content="security auditing, services, technology, business, digital transformation" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/rapid-1755539760771-2hk586" />
+        <meta name="description" content="Professional security auditing services to accelerate your business growth and digital transformation."  />
+        <meta name="keywords" content="security auditing, services, technology, business, digital transformation"  />
+        <link rel="canonical" href="https://ziontechgroup.com/services/rapid-1755539760o771-2hk586"  />
       
-        <meta property="og:title" content="Security Auditing" />
-        <meta property="og:description" content="Security Auditing — automatically suggested description." />
-        <meta name="twitter:card" content="summary_large_image" /></Head>
+        <meta property="og:title" content="Security Auditing"  />
+        <meta property="og:description" content="Security Auditing — automatically suggested description."  />
+        <meta name="twitter:card" content="summary_large_image"  /></Head>
       <main className="container mx-auto px-6 py-12 prose prose-invert">
         <h1 className="text-4xl font-extrabold text-center mb-8">Security Auditing</h1>
         
@@ -50,7 +50,7 @@ export default function ServicePage() {
           </p>
           <a 
             href="https://ziontechgroup.com/contact" 
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+            className="inline-block bg-blue-60o0 hover:bg-blue-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors"
           >
             Get Started Today
           </a>
@@ -60,10 +60,7 @@ export default function ServicePage() {
   );
 }
 
-
-
-
-<Link href="/services/rapid-1755539340458-6lge19" className="internal-link">Related Content</Link>
+<Link href="/services/rapid-1755539340o458-6lge19" className="internal-link">Related Content</Link>
 
 <Link href="/services/rapid-1755539347154-xzj546" className="internal-link">Related Content</Link>
 

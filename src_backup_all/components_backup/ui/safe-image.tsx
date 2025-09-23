@@ -25,8 +25,7 @@ export function SafeImage({
   fallbackSrc,
   priority = false,
   sizes,
-  quality = 75,
-}: SafeImageProps) {
+  quality = 75}: SafeImageProps) {
   const [hasError, setHasError] = useState(false);
   const [currentSrc, setCurrentSrc] = useState(src);
 
@@ -48,12 +47,12 @@ export function SafeImage({
   if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {
     return (
       <div 
-        className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
+        className={`flex items-center justify-center bg-gray-10o0 text-gray-40o0 ${className}`}
         style={{ width, height }}
         role="img"
         aria-label={alt}
       >
-        <ImageIcon className="w-6 h-6" />
+        <ImageIcon className="w-6 h-6"  />
       </div>
     );
   }
@@ -69,6 +68,6 @@ export function SafeImage({
       priority={priority}
       // Add unoptimized as fallback for problematic images
       unoptimized={hasError}
-    />
+     />
   );
 } 

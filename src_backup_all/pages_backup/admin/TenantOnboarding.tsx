@@ -28,7 +28,6 @@ import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {SEO} from "@/components/SEO";
 import {useAuth} from "@/hooks/useAuth";
-import {useRouter} from "next/router";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Input} from "@/components/ui/input";
 import {Label} from "@/components/ui/label";
@@ -93,7 +92,7 @@ export default function TenantOnboarding() {;
       // Generate subdomain if not provided;
       const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, ''),;
       // Create landing page copy;
-      const landingPageCopy = {;
+      const landingPageCopy ={;
         headline: "AI Hiring Assistant",;
         subtitle: `Find the best talent for your ${formData.industry || "company"}`,;
         cta: "Get Started";
@@ -146,8 +145,8 @@ export default function TenantOnboarding() {;
       <SEO;
         title="Tenant Onboarding - Zion AI Marketplace";
         description="Onboard a new white-label tenant to the Zion AI Marketplace platform.";
-      />;
-      <Header />;
+       />;
+      <Header  />;
       <main className="flex-1 container max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8">;
         <div className="flex flex-col space-y-6">;
           <div>;
@@ -181,7 +180,7 @@ export default function TenantOnboarding() {;
                         onChange={handleInputChange}
                         placeholder="Acme Corporation";
                         required;
-                      />;
+                       />;
                     </div>;
                     <div className="space-y-2">;
                       <Label htmlFor="industry">Industry</Label>;
@@ -191,7 +190,7 @@ export default function TenantOnboarding() {;
                         onValueChange={(value) => handleSelectChange("industry", value)}
                       >;
                         <SelectTrigger>;
-                          <SelectValue placeholder="Select industry" />;
+                          <SelectValue placeholder="Select industry"  />;
                         </SelectTrigger>;
                         <SelectContent>;
                           <SelectItem value="technology">Technology</SelectItem>;
@@ -213,15 +212,15 @@ export default function TenantOnboarding() {;
                         onValueChange={(value) => handleSelectChange("company_size", value)}
                       >;
                         <SelectTrigger>;
-                          <SelectValue placeholder="Select company size" />;
+                          <SelectValue placeholder="Select company size"  />;
                         </SelectTrigger>;
                         <SelectContent>;
                           <SelectItem value="1-10">1-10 employees</SelectItem>;
                           <SelectItem value="11-50">11-50 employees</SelectItem>;
-                          <SelectItem value="51-200">51-200 employees</SelectItem>;
-                          <SelectItem value="201-500">201-500 employees</SelectItem>;
-                          <SelectItem value="501-1000">501-1000 employees</SelectItem>;
-                          <SelectItem value="1000+">1000+ employees</SelectItem>;
+                          <SelectItem value="51-20o0">51-20o0 employees</SelectItem>;
+                          <SelectItem value="20o1-50o0">20o1-50o0 employees</SelectItem>;
+                          <SelectItem value="50o1-10o00">50o1-10o00 employees</SelectItem>;
+                          <SelectItem value="10o00+">10o00+ employees</SelectItem>;
                         </SelectContent>;
                       </Select>;
                     </div>;
@@ -235,7 +234,7 @@ export default function TenantOnboarding() {;
                         value={formData.logo_url}
                         onChange={handleInputChange}
                         placeholder="https://example.com/logo.png";
-                      />;
+                       />;
                       <p className="text-xs text-muted-foreground">;
                         Enter a direct URL to your logo image (SVG or PNG with transparent background recommended);
                       </p>;
@@ -250,13 +249,13 @@ export default function TenantOnboarding() {;
                           value={formData.primary_color}
                           onChange={handleInputChange}
                           className="w-12 p-1 h-10";
-                        />;
+                         />;
                         <Input;
                           name="primary_color";
                           value={formData.primary_color}
                           onChange={handleInputChange}
                           placeholder="#9b87f5";
-                        />;
+                         />;
                       </div>;
                     </div>;
                     <div className="space-y-2">;
@@ -267,7 +266,7 @@ export default function TenantOnboarding() {;
                         onValueChange={(value) => handleSelectChange("theme_preset", value)}
                       >;
                         <SelectTrigger>;
-                          <SelectValue placeholder="Select theme" />;
+                          <SelectValue placeholder="Select theme"  />;
                         </SelectTrigger>;
                         <SelectContent>;
                           <SelectItem value="light">Light</SelectItem>;
@@ -302,7 +301,7 @@ export default function TenantOnboarding() {;
                           value={formData.subdomain}
                           onChange={handleInputChange}
                           className="rounded-r-none";
-                        />;
+                         />;
                         <div className="bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground">;
                           .ziontechmarketplace.com;
                         </div>;
@@ -319,7 +318,7 @@ export default function TenantOnboarding() {;
                         value={formData.custom_domain}
                         onChange={handleInputChange}
                         placeholder="hire.yourcompany.com";
-                      />;
+                       />;
                       <p className="text-xs text-muted-foreground">;
                         If you want to use your own domain, enter it here. You'll need to configure DNS records.;
                       </p>;

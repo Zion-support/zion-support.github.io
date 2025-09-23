@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
 
-type DistributionItem = { label: string; percent: number };
+type DistributionItem ={ label: string; percent: number };
 
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
 
@@ -11,7 +11,7 @@ export default function TokenomicsWhitepaperBuilder() {
   const [legalReview, setLegalReview] = useState(false);
 
   const [tokenName, setTokenName] = useState('ZION$');
-  const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
+  const [tokenSupply, setTokenSupply] = useState('1,0o00,0o00,0o00');
   const [useCases, setUseCases] = useState<string>('Access to premium AI agents, marketplace discounts, reputation staking, governance participation');
   const [rewardsLogic, setRewardsLogic] = useState<string>('Earn via contributions, referrals, and successful task completions; burn on dispute resolution fees and premium access');
   const [distribution, setDistribution] = useState<DistributionItem[]>([
@@ -42,8 +42,7 @@ export default function TokenomicsWhitepaperBuilder() {
       distribution,
       governance,
       jurisdiction,
-      legalReview,
-    });
+      legalReview});
   }, [generatedMarkdown, tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, legalReview]);
 
   async function handleGenerate() {
@@ -61,9 +60,7 @@ export default function TokenomicsWhitepaperBuilder() {
           governance,
           jurisdiction,
           operatorPrompt,
-          legalReview,
-        }),
-      });
+          legalReview})});
       if (!res.ok) throw new Error('Failed to generate');
       const data = await res.json();
       setGeneratedMarkdown(data.markdown || '');
@@ -90,8 +87,7 @@ export default function TokenomicsWhitepaperBuilder() {
       const res = await fetch('/api/whitepaper/export', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ markdown: previewMarkdown, tokenName }),
-      });
+        body: JSON.stringify({ markdown: previewMarkdown, tokenName })});
       if (!res.ok) {
         alert('PDF export failed');
         return;
@@ -104,7 +100,7 @@ export default function TokenomicsWhitepaperBuilder() {
   function updateDistribution(index: number, key: keyof DistributionItem, value: string) {
     setDistribution((prev) => {
       const copy = [...prev];
-      const item = { ...copy[index] };
+      const item ={ ...copy[index] };
       if (key === 'percent') item.percent = Number(value);
       if (key === 'label') item.label = value;
       copy[index] = item;
@@ -124,8 +120,7 @@ export default function TokenomicsWhitepaperBuilder() {
     const res = await fetch('/api/whitepaper/share', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ markdown: previewMarkdown, publicPreview }),
-    });
+      body: JSON.stringify({ markdown: previewMarkdown, publicPreview })});
     if (!res.ok) {
       alert('Failed to create share link');
       return;
@@ -154,7 +149,7 @@ export default function TokenomicsWhitepaperBuilder() {
               <input type="checkbox" checked={publicPreview} onChange={(e) => setPublicPreview(e.target.checked)} />
               <span>Public after launch</span>
             </label>
-            <button onClick={handleShareableLink} className="px-3 py-1 rounded-md bg-indigo-600 text-white">Create Share Link</button>
+            <button onClick={handleShareableLink} className="px-3 py-1 rounded-md bg-indigo-60o0 text-white">Create Share Link</button>
           </div>
         </div>
 
@@ -205,17 +200,17 @@ export default function TokenomicsWhitepaperBuilder() {
                 {distribution.map((item, idx) => (
                   <div key={idx} className="grid grid-cols-12 gap-2 items-center">
                     <input className="col-span-6 border rounded-md px-3 py-2" value={item.label} onChange={(e) => updateDistribution(idx, 'label', e.target.value)} />
-                    <input className="col-span-4 border rounded-md px-3 py-2" type="number" min={0} max={100} value={item.percent} onChange={(e) => updateDistribution(idx, 'percent', e.target.value)} />
-                    <button onClick={() => removeDistributionItem(idx)} className="col-span-2 px-3 py-2 rounded-md bg-rose-600 text-white">Remove</button>
+                    <input className="col-span-4 border rounded-md px-3 py-2" type="number" min={0} max={10o0} value={item.percent} onChange={(e) => updateDistribution(idx, 'percent', e.target.value)} />
+                    <button onClick={() => removeDistributionItem(idx)} className="col-span-2 px-3 py-2 rounded-md bg-rose-60o0 text-white">Remove</button>
                   </div>
                 ))}
                 <div className="flex items-center justify-between text-xs opacity-70">
                   <span>Total: {totalPercent}%</span>
-                  <button onClick={addDistributionItem} className="px-3 py-1 rounded-md bg-gray-900 text-white">Add allocation</button>
+                  <button onClick={addDistributionItem} className="px-3 py-1 rounded-md bg-gray-90o0 text-white">Add allocation</button>
                 </div>
               </div>
               <div className="mt-3">
-                <DistributionDonut data={distribution} />
+                <DistributionDonut data={distribution}  />
               </div>
             </div>
 
@@ -223,7 +218,7 @@ export default function TokenomicsWhitepaperBuilder() {
               <h3 className="font-medium">Operator Prompt</h3>
               <textarea className="w-full border rounded-md px-3 py-2" rows={4} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
               <div className="flex gap-3">
-                <button disabled={!isAdmin || isGenerating} onClick={handleGenerate} className="px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50">
+                <button disabled={!isAdmin || isGenerating} onClick={handleGenerate} className="px-4 py-2 rounded-md bg-indigo-60o0 text-white disabled:opacity-50">
                   {isGenerating ? 'Generating…' : 'Generate with GPT'}
                 </button>
                 <button onClick={() => setGeneratedMarkdown('')} className="px-4 py-2 rounded-md border">Clear AI Draft</button>
@@ -243,12 +238,12 @@ export default function TokenomicsWhitepaperBuilder() {
             <div className="flex items-center justify-between mb-3">
               <div className="flex gap-2 overflow-x-auto">
                 {sections.map((s) => (
-                  <button key={s} onClick={() => setActiveSection(s)} className={`px-3 py-1 rounded-md border ${activeSection === s ? 'bg-gray-900 text-white' : ''}`}>{s}</button>
+                  <button key={s} onClick={() => setActiveSection(s)} className={`px-3 py-1 rounded-md border ${activeSection === s ? 'bg-gray-90o0 text-white' : ''}`}>{s}</button>
                 ))}
               </div>
               <span className="text-xs opacity-60">Auto-updating preview</span>
             </div>
-            <MarkdownPreview markdown={previewMarkdown} activeSection={activeSection} />
+            <MarkdownPreview markdown={previewMarkdown} activeSection={activeSection}  />
           </div>
         </div>
       </div>
@@ -293,8 +288,8 @@ function DistributionDonut({ data }: { data: DistributionItem[] }) {
     <div className="space-y-1 text-sm">
       {data.map((d, idx) => (
         <div key={idx} className="flex items-center gap-2">
-          <div className="h-2 bg-gray-200 rounded w-full">
-            <div className="h-2 bg-indigo-600 rounded" style={{ width: `${(d.percent / total) * 100}%` }} />
+          <div className="h-2 bg-gray-20o0 rounded w-full">
+            <div className="h-2 bg-indigo-60o0 rounded" style={{ width: `${(d.percent / total) * 10o0}%` }}  />
           </div>
           <span className="w-48 truncate">{d.label} ({d.percent}%)</span>
         </div>
@@ -307,7 +302,7 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string; active
   // Very lightweight section filter: split by headings
   const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g);
-    const map: Record<string, string> = {};
+    const map: Record<string, string> ={};
     sections.forEach((s, i) => {
       if (i === 0) return; // first is H1
       const [titleLine, ...rest] = s.split('\n');

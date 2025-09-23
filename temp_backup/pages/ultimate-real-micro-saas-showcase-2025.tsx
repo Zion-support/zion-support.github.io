@@ -10,12 +10,12 @@ import {
   ChevronDown, ChevronUp, ExternalLink, Play, Pause, Volume2, VolumeX
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { ultimateRealMicroSaasServices2025 } from '../data/2025-ultimate-real-micro-saas-services';
+import { ultimateRealMicroSaasServices20o25 } from '../data/20o25-ultimate-real-micro-saas-services';
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
@@ -33,7 +33,7 @@ const categories = [
   'Education'
 ];
 
-export default function UltimateRealMicroSaasShowcase2025() {
+export default function UltimateRealMicroSaasShowcase20o25() {
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('popular');
@@ -41,7 +41,7 @@ export default function UltimateRealMicroSaasShowcase2025() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
 
-  const filteredServices = ultimateRealMicroSaasServices2025.filter(service => {
+  const filteredServices = ultimateRealMicroSaasServices20o25.filter(service => {
     const matchesCategory = selectedCategory === 'All Services' || service.category.includes(selectedCategory);
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -72,23 +72,23 @@ export default function UltimateRealMicroSaasShowcase2025() {
   return (
     <Layout>
       <Head>
-        <title>Ultimate Real Micro SAAS Services 2025 | Zion Tech Group</title>
-        <meta name="description" content="Discover our comprehensive collection of real, innovative micro SAAS services for 2025. AI-powered solutions for business growth and digital transformation." />
-        <meta name="keywords" content="micro SAAS, AI services, business solutions, digital transformation, Zion Tech Group" />
-        <meta property="og:title" content="Ultimate Real Micro SAAS Services 2025 | Zion Tech Group" />
-        <meta property="og:description" content="Discover our comprehensive collection of real, innovative micro SAAS services for 2025." />
-        <meta property="og:url" content="https://ziontechgroup.com/ultimate-real-micro-saas-showcase-2025" />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com/ultimate-real-micro-saas-showcase-2025" />
+        <title>Ultimate Real Micro SAAS Services 20o25 | Zion Tech Group</title>
+        <meta name="description" content="Discover our comprehensive collection of real, innovative micro SAAS services for 20o25. AI-powered solutions for business growth and digital transformation."  />
+        <meta name="keywords" content="micro SAAS, AI services, business solutions, digital transformation, Zion Tech Group"  />
+        <meta property="og:title" content="Ultimate Real Micro SAAS Services 20o25 | Zion Tech Group"  />
+        <meta property="og:description" content="Discover our comprehensive collection of real, innovative micro SAAS services for 20o25."  />
+        <meta property="og:url" content="https://ziontechgroup.com/ultimate-real-micro-saas-showcase-20o25"  />
+        <meta property="og:type" content="website"  />
+        <link rel="canonical" href="https://ziontechgroup.com/ultimate-real-micro-saas-showcase-20o25"  />
       </Head>
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.1),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(236,72,153,0.1),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,212,255,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-90o0/20 to-black">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.1),transparent_50%)]"  />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(236,72,153,0.1),transparent_50%)]"  />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,212,255,0.1),transparent_50%)]"  />
         </div>
 
         {/* Floating Elements */}
@@ -96,10 +96,10 @@ export default function UltimateRealMicroSaasShowcase2025() {
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-20"
+              className="absolute w-2 h-2 bg-gradient-to-r from-cyan-40o0 to-purple-50o0 rounded-full opacity-20"
               animate={{
-                x: [0, Math.random() * 1000 - 500],
-                y: [0, Math.random() * 1000 - 500],
+                x: [0, Math.random() * 10o00 - 50o0],
+                y: [0, Math.random() * 10o00 - 50o0],
                 scale: [0, 1, 0],
                 opacity: [0, 0.5, 0]
               }}
@@ -109,10 +109,10 @@ export default function UltimateRealMicroSaasShowcase2025() {
                 ease: "linear"
               }}
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`
+                left: `${Math.random() * 10o0}%`,
+                top: `${Math.random() * 10o0}%`
               }}
-            />
+             />
           ))}
         </div>
 
@@ -123,13 +123,13 @@ export default function UltimateRealMicroSaasShowcase2025() {
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 via-purple-50o0 to-pink-50o0 bg-clip-text text-transparent">
               Ultimate Real Micro SAAS
             </h1>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Services 2025
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">
+              Services 20o25
             </h2>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed">
               Discover our comprehensive collection of real, innovative micro SAAS services that are transforming businesses worldwide. 
               AI-powered solutions designed for growth, efficiency, and competitive advantage.
             </p>
@@ -143,22 +143,22 @@ export default function UltimateRealMicroSaasShowcase2025() {
             className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
           >
             {[
-              { number: '10+', label: 'Real Services', icon: Star, color: 'text-cyan-400' },
-              { number: '500+', label: 'Happy Customers', icon: Users, color: 'text-purple-400' },
-              { number: '99.9%', label: 'Uptime', icon: Shield, color: 'text-green-400' },
-              { number: '24/7', label: 'Support', icon: Zap, color: 'text-pink-400' }
+              { number: '10+', label: 'Real Services', icon: Star, color: 'text-cyan-40o0' },
+              { number: '50o0+', label: 'Happy Customers', icon: Users, color: 'text-purple-40o0' },
+              { number: '99.9%', label: 'Uptime', icon: Shield, color: 'text-green-40o0' },
+              { number: '24/7', label: 'Support', icon: Zap, color: 'text-pink-40o0' }
             ].map((stat, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                className="text-center p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105"
+                className="text-center p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-30o0 hover:scale-10o5"
               >
                 <div className={`text-3xl md:text-4xl font-bold mb-2 ${stat.color}`}>
                   {stat.number}
                 </div>
-                <div className="text-gray-300 text-sm md:text-base">{stat.label}</div>
+                <div className="text-gray-30o0 text-sm md:text-base">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -171,14 +171,14 @@ export default function UltimateRealMicroSaasShowcase2025() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <Link href="#services">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center gap-2">
-                <Rocket className="w-5 h-5" />
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-semibold rounded-full hover:from-cyan-60o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl hover:shadow-cyan-50o0/25 flex items-center gap-2">
+                <Rocket className="w-5 h-5"  />
                 Explore Services
               </button>
             </Link>
             <Link href="/contact">
-              <button className="px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
-                <Phone className="w-5 h-5" />
+              <button className="px-8 py-4 border-2 border-purple-50o0 text-purple-40o0 font-semibold rounded-full hover:bg-purple-50o0 hover:text-white transition-all duration-30o0 transform hover:scale-10o5 flex items-center gap-2">
+                <Phone className="w-5 h-5"  />
                 Get Started
               </button>
             </Link>
@@ -197,10 +197,10 @@ export default function UltimateRealMicroSaasShowcase2025() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 to-purple-50o0 bg-clip-text text-transparent">
               Real Micro SAAS Services
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
               Discover our collection of real, market-ready micro SAAS services that are already helping businesses grow and succeed.
             </p>
           </motion.div>
@@ -217,22 +217,22 @@ export default function UltimateRealMicroSaasShowcase2025() {
             <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
               <div className="flex flex-col sm:flex-row gap-4 flex-1 max-w-2xl">
                 <div className="relative flex-1">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />
                   <input
                     type="text"
                     placeholder="Search services..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
+                    className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:border-purple-50o0 focus:ring-2 focus:ring-purple-50o0/20 transition-all duration-30o0"
                   />
                 </div>
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
+                  className="px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-purple-50o0 focus:ring-2 focus:ring-purple-50o0/20 transition-all duration-30o0"
                 >
                   {categories.map(category => (
-                    <option key={category} value={category} className="bg-gray-800 text-white">
+                    <option key={category} value={category} className="bg-gray-80o0 text-white">
                       {category}
                     </option>
                   ))}
@@ -244,21 +244,21 @@ export default function UltimateRealMicroSaasShowcase2025() {
                 <div className="flex items-center bg-white/5 rounded-lg p-1 border border-white/10">
                   <button
                     onClick={() => setViewMode('grid')}
-                    className={`p-2 rounded ${viewMode === 'grid' ? 'bg-purple-500 text-white' : 'text-gray-400 hover:text-white'}`}
+                    className={`p-2 rounded ${viewMode === 'grid' ? 'bg-purple-50o0 text-white' : 'text-gray-40o0 hover:text-white'}`}
                   >
-                    <Grid className="w-5 h-5" />
+                    <Grid className="w-5 h-5"  />
                   </button>
                   <button
                     onClick={() => setViewMode('list')}
-                    className={`p-2 rounded ${viewMode === 'list' ? 'bg-purple-500 text-white' : 'text-gray-400 hover:text-white'}`}
+                    className={`p-2 rounded ${viewMode === 'list' ? 'bg-purple-50o0 text-white' : 'text-gray-40o0 hover:text-white'}`}
                   >
-                    <List className="w-5 h-5" />
+                    <List className="w-5 h-5"  />
                   </button>
                 </div>
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
+                  className="px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-purple-50o0 focus:ring-2 focus:ring-purple-50o0/20 transition-all duration-30o0"
                 >
                   <option value="popular">Most Popular</option>
                   <option value="price-low">Price: Low to High</option>
@@ -270,8 +270,8 @@ export default function UltimateRealMicroSaasShowcase2025() {
             </div>
 
             {/* Results Count */}
-            <div className="text-center text-gray-400">
-              Showing {sortedServices.length} of {ultimateRealMicroSaasServices2025.length} services
+            <div className="text-center text-gray-40o0">
+              Showing {sortedServices.length} of {ultimateRealMicroSaasServices20o25.length} services
             </div>
           </motion.div>
 
@@ -296,13 +296,13 @@ export default function UltimateRealMicroSaasShowcase2025() {
                 viewport={{ once: true }}
                 className={`group relative ${
                   viewMode === 'grid' 
-                    ? 'bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-purple-500/50 hover:bg-white/10 transition-all duration-300 hover:scale-105' 
-                    : 'bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-purple-500/50 hover:bg-white/10 transition-all duration-300'
+                    ? 'bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-purple-50o0/50 hover:bg-white/10 transition-all duration-30o0 hover:scale-10o5' 
+                    : 'bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-purple-50o0/50 hover:bg-white/10 transition-all duration-30o0'
                 }`}
               >
                 {/* Popular Badge */}
                 {service.popular && (
-                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
+                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black text-xs font-bold px-3 py-1 rounded-full">
                     POPULAR
                   </div>
                 )}
@@ -313,38 +313,38 @@ export default function UltimateRealMicroSaasShowcase2025() {
                     <div className="text-4xl">{service.icon}</div>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-white">{service.price}</div>
-                      <div className="text-sm text-gray-400">{service.period}</div>
+                      <div className="text-sm text-gray-40o0">{service.period}</div>
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-40o0 transition-colors duration-30o0">
                     {service.name}
                   </h3>
-                  <p className="text-gray-300 text-sm leading-relaxed">
+                  <p className="text-gray-30o0 text-sm leading-relaxed">
                     {service.tagline}
                   </p>
                 </div>
 
                 {/* Service Details */}
                 <div className="space-y-4">
-                  <p className="text-gray-300 text-sm leading-relaxed">
+                  <p className="text-gray-30o0 text-sm leading-relaxed">
                     {service.description}
                   </p>
 
                   {/* Key Features */}
                   <div>
                     <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-purple-400" />
+                      <Sparkles className="w-4 h-4 text-purple-40o0"  />
                       Key Features
                     </h4>
                     <ul className="space-y-1">
                       {service.features.slice(0, 3).map((feature, idx) => (
-                        <li key={idx} className="text-sm text-gray-400 flex items-center gap-2">
-                          <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
+                        <li key={idx} className="text-sm text-gray-40o0 flex items-center gap-2">
+                          <CheckCircle className="w-3 h-3 text-green-40o0 flex-shrink-0"  />
                           {feature}
                         </li>
                       ))}
                       {service.features.length > 3 && (
-                        <li className="text-sm text-purple-400">
+                        <li className="text-sm text-purple-40o0">
                           +{service.features.length - 3} more features
                         </li>
                       )}
@@ -354,10 +354,10 @@ export default function UltimateRealMicroSaasShowcase2025() {
                   {/* Market Position */}
                   <div className="bg-white/5 rounded-lg p-4">
                     <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
-                      <Target className="w-4 h-4 text-cyan-400" />
+                      <Target className="w-4 h-4 text-cyan-40o0"  />
                       Market Position
                     </h4>
-                    <p className="text-sm text-gray-300 leading-relaxed">
+                    <p className="text-sm text-gray-30o0 leading-relaxed">
                       {service.marketPosition}
                     </p>
                   </div>
@@ -365,12 +365,12 @@ export default function UltimateRealMicroSaasShowcase2025() {
                   {/* ROI and Stats */}
                   <div className="grid grid-cols-2 gap-4">
                     <div className="text-center p-3 bg-white/5 rounded-lg">
-                      <div className="text-lg font-bold text-green-400">{service.roi.split(' ')[0]}</div>
-                      <div className="text-xs text-gray-400">ROI</div>
+                      <div className="text-lg font-bold text-green-40o0">{service.roi.split(' ')[0]}</div>
+                      <div className="text-xs text-gray-40o0">ROI</div>
                     </div>
                     <div className="text-center p-3 bg-white/5 rounded-lg">
-                      <div className="text-lg font-bold text-purple-400">{service.customers}+</div>
-                      <div className="text-xs text-gray-400">Customers</div>
+                      <div className="text-lg font-bold text-purple-40o0">{service.customers}+</div>
+                      <div className="text-xs text-gray-40o0">Customers</div>
                     </div>
                   </div>
 
@@ -381,24 +381,24 @@ export default function UltimateRealMicroSaasShowcase2025() {
                         <Star
                           key={i}
                           className={`w-4 h-4 ${
-                            i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-600'
+                            i < Math.floor(service.rating) ? 'text-yellow-40o0 fill-current' : 'text-gray-60o0'
                           }`}
-                        />
+                         />
                       ))}
                     </div>
-                    <span className="text-sm text-gray-400">
+                    <span className="text-sm text-gray-40o0">
                       {service.rating} ({service.reviews} reviews)
                     </span>
                   </div>
 
                   {/* Pricing Tiers */}
-                  <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg p-4 border border-purple-500/20">
+                  <div className="bg-gradient-to-r from-purple-50o0/10 to-pink-50o0/10 rounded-lg p-4 border border-purple-50o0/20">
                     <h4 className="text-white font-semibold mb-3 text-center">Pricing Tiers</h4>
                     <div className="space-y-2">
                       {Object.entries(service.pricingTiers).map(([tier, details]) => (
                         <div key={tier} className="flex justify-between items-center text-sm">
-                          <span className="text-gray-300 capitalize">{tier}</span>
-                          <span className="text-purple-400 font-semibold">{details.price}</span>
+                          <span className="text-gray-30o0 capitalize">{tier}</span>
+                          <span className="text-purple-40o0 font-semibold">{details.price}</span>
                         </div>
                       ))}
                     </div>
@@ -406,14 +406,14 @@ export default function UltimateRealMicroSaasShowcase2025() {
 
                   {/* CTA Button */}
                   <Link href={service.link}>
-                    <button className="w-full mt-6 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center justify-center gap-2">
+                    <button className="w-full mt-6 px-6 py-3 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white font-semibold rounded-lg hover:from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-lg hover:shadow-purple-50o0/25 flex items-center justify-center gap-2">
                       Get Started
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="w-4 h-4"  />
                     </button>
                   </Link>
 
                   {/* Contact Info */}
-                  <div className="mt-4 text-center text-xs text-gray-400">
+                  <div className="mt-4 text-center text-xs text-gray-40o0">
                     <p>Contact: {contactInfo.mobile}</p>
                     <p>{contactInfo.email}</p>
                   </div>
@@ -431,7 +431,7 @@ export default function UltimateRealMicroSaasShowcase2025() {
             >
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-              <p className="text-gray-400">Try adjusting your search criteria or browse all services.</p>
+              <p className="text-gray-40o0">Try adjusting your search criteria or browse all services.</p>
             </motion.div>
           )}
         </div>
@@ -445,24 +445,24 @@ export default function UltimateRealMicroSaasShowcase2025() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-3xl p-12 border border-purple-500/20"
+            className="bg-gradient-to-r from-purple-50o0/10 to-pink-50o0/10 rounded-3xl p-12 border border-purple-50o0/20"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 to-purple-50o0 bg-clip-text text-transparent">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-30o0 mb-8 max-w-2xl mx-auto">
               Join hundreds of businesses already using our AI-powered micro SAAS services to drive growth, efficiency, and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/contact">
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center gap-2">
-                  <Phone className="w-5 h-5" />
+                <button className="px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-semibold rounded-full hover:from-cyan-60o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl hover:shadow-cyan-50o0/25 flex items-center gap-2">
+                  <Phone className="w-5 h-5"  />
                   Contact Us Today
                 </button>
               </Link>
-              <Link href="/comprehensive-services-showcase-2025">
-                <button className="px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
-                  <Globe className="w-5 h-5" />
+              <Link href="/comprehensive-services-showcase-20o25">
+                <button className="px-8 py-4 border-2 border-purple-50o0 text-purple-40o0 font-semibold rounded-full hover:bg-purple-50o0 hover:text-white transition-all duration-30o0 transform hover:scale-10o5 flex items-center gap-2">
+                  <Globe className="w-5 h-5"  />
                   View All Services
                 </button>
               </Link>

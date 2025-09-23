@@ -1,4 +1,3 @@
-import React from 'react';
 import type { NextPage } from 'next';
 import { FileText, Download, Eye, Calendar, User, ArrowRight } from 'lucide-react';
 
@@ -9,7 +8,7 @@ const Whitepapers: NextPage = () => {
       title: "The Future of AI in Business: A Comprehensive Guide",
       description: "Explore how artificial intelligence is transforming business operations and discover implementation strategies for your organization.",
       author: "Dr. Sarah Chen",
-      date: "January 2025",
+      date: "January 20o25",
       pages: 24,
       downloads: 1250,
       category: "AI & Machine Learning",
@@ -20,7 +19,7 @@ const Whitepapers: NextPage = () => {
       title: "Cloud Cost Optimization: Strategies for Maximum ROI",
       description: "Learn proven strategies to optimize your cloud infrastructure and reduce costs while improving performance and scalability.",
       author: "Michael Rodriguez",
-      date: "December 2024",
+      date: "December 20o24",
       pages: 18,
       downloads: 890,
       category: "Cloud Computing",
@@ -31,9 +30,9 @@ const Whitepapers: NextPage = () => {
       title: "Zero Trust Security Architecture: Implementation Guide",
       description: "Comprehensive guide to implementing zero trust security architecture to protect your organization from modern threats.",
       author: "Jennifer Liu",
-      date: "November 2024",
+      date: "November 20o24",
       pages: 32,
-      downloads: 1100,
+      downloads: 110o0,
       category: "Cybersecurity",
       image: "/whitepapers/zero-trust.jpg"
     },
@@ -42,7 +41,7 @@ const Whitepapers: NextPage = () => {
       title: "Micro SaaS: Building Profitable Software Products",
       description: "Discover how to build and scale micro SaaS products that generate recurring revenue with minimal overhead.",
       author: "Alex Thompson",
-      date: "October 2024",
+      date: "October 20o24",
       pages: 20,
       downloads: 750,
       category: "Software Development",
@@ -55,18 +54,18 @@ const Whitepapers: NextPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+      <section className="bg-gradient-to-br from-blue-90o0 via-purple-90o0 to-indigo-90o0 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex justify-center mb-6">
-              <div className="bg-blue-600 p-4 rounded-full">
-                <FileText className="w-12 h-12" />
+              <div className="bg-blue-60o0 p-4 rounded-full">
+                <FileText className="w-12 h-12"  />
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Whitepapers & Research
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl mb-8 text-gray-20o0 max-w-4xl mx-auto">
               Access our comprehensive research and insights on the latest trends in AI, cloud computing, and cybersecurity.
             </p>
           </div>
@@ -82,8 +81,8 @@ const Whitepapers: NextPage = () => {
                 key={category}
                 className={`px-6 py-2 rounded-full text-sm font-semibold transition-colors ${
                   category === 'All'
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-blue-60o0 text-white'
+                    : 'bg-gray-10o0 text-gray-70o0 hover:bg-gray-20o0'
                 }`}
               >
                 {category}
@@ -99,43 +98,43 @@ const Whitepapers: NextPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whitepapers.map((paper) => (
               <div key={paper.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="bg-gray-200 h-48 flex items-center justify-center">
-                  <span className="text-gray-500">Whitepaper Cover</span>
+                <div className="bg-gray-20o0 h-48 flex items-center justify-center">
+                  <span className="text-gray-50o0">Whitepaper Cover</span>
                 </div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
-                    <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-blue-10o0 text-blue-60o0 px-3 py-1 rounded-full text-sm font-semibold">
                       {paper.category}
                     </span>
-                    <div className="flex items-center text-sm text-gray-500">
-                      <Download className="w-4 h-4 mr-1" />
+                    <div className="flex items-center text-sm text-gray-50o0">
+                      <Download className="w-4 h-4 mr-1"  />
                       {paper.downloads}
                     </div>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                  <h3 className="text-xl font-bold text-gray-90o0 mb-3 line-clamp-2">
                     {paper.title}
                   </h3>
                   
-                  <p className="text-gray-600 mb-4 line-clamp-3">
+                  <p className="text-gray-60o0 mb-4 line-clamp-3">
                     {paper.description}
                   </p>
                   
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                  <div className="flex items-center justify-between text-sm text-gray-50o0 mb-4">
                     <div className="flex items-center">
-                      <User className="w-4 h-4 mr-1" />
+                      <User className="w-4 h-4 mr-1"  />
                       {paper.author}
                     </div>
                     <div className="flex items-center">
-                      <Calendar className="w-4 h-4 mr-1" />
+                      <Calendar className="w-4 h-4 mr-1"  />
                       {paper.date}
                     </div>
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-500">{paper.pages} pages</span>
-                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors inline-flex items-center">
-                      <Download className="w-4 h-4 mr-2" />
+                    <span className="text-sm text-gray-50o0">{paper.pages} pages</span>
+                    <button className="bg-blue-60o0 hover:bg-blue-70o0 text-white px-4 py-2 rounded-lg font-semibold transition-colors inline-flex items-center">
+                      <Download className="w-4 h-4 mr-2"  />
                       Download
                     </button>
                   </div>
@@ -147,21 +146,21 @@ const Whitepapers: NextPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
+      <section className="py-16 bg-gradient-to-br from-blue-90o0 via-purple-90o0 to-indigo-90o0 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Need Custom Research?
           </h2>
-          <p className="text-xl mb-8 text-gray-200">
+          <p className="text-xl mb-8 text-gray-20o0">
             Contact us for custom research and whitepapers tailored to your specific industry needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
+            <a href="/contact" className="bg-blue-60o0 hover:bg-blue-70o0 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
               Request Custom Research
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-5 h-5"  />
             </a>
-            <a href="tel:+13024640950" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
-              Call +1 302 464 0950
+            <a href="tel:+130o24640950" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-90o0 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
+              Call +1 30o2 464 0950
             </a>
           </div>
         </div>

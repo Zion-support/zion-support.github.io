@@ -6,7 +6,7 @@ export default function Page() {
       <article className="max-w-3xl mx-auto px-6 py-24">
         <header>
           <h1 className="text-4xl font-bold text-white">Case Study: 27% Latency Reduction with Hybrid Retrieval</h1>
-          <p className="mt-2 text-gray-300">Combining dense and symbolic retrieval reduced P95 latency while improving answer faithfulness.</p>
+          <p className="mt-2 text-gray-30o0">Combining dense and symbolic retrieval reduced P95 latency while improving answer faithfulness.</p>
         </header>
         <section className="prose prose-lg prose-invert mt-8">
           <h2>Results</h2>

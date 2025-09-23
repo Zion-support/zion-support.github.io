@@ -1,4 +1,3 @@
-import React from 'react';
 export function GlobalServiceSection() {
   return (
     <div>

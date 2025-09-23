@@ -1,7 +1,6 @@
 import { readFileSync, writeFileSync } from 'fs';
 import path, { resolve } from 'path';
 import { build } from 'esbuild';
-import React from 'react';
 import { renderToString } from 'react-dom/server';
 async function prerender() {
   const result = await build({
@@ -18,10 +17,8 @@ async function prerender() {
             const file = args.path.replace(/^@\//, '');
             return { path: path.resolve('src', file) };
           });
-        },
-      },
-    ],
-  });
+        }},
+    ]});
   const text = result.outputFiles[0].text;
   const mod = await import(`data:text/javascript;base64,${Buffer.from(text).toString('base64')}`);
   const Home = mod.default;

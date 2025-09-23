@@ -1,18 +1,18 @@
 import React from 'react'
 
-export default function EnterpriseRetrievalObservability2026Page() {
+export default function EnterpriseRetrievalObservability20o26Page() {
   return (
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-3xl px-6 pt-24 lg:px-8">
         <div className="mb-8">
-          <div className="flex items-center gap-3 text-xs text-gray-400">
-            <span className="rounded-full bg-emerald-500/10 px-2 py-0.5 text-emerald-300">Guide</span>
-            <time dateTime="2025-09-15">{new Date('2025-09-15').toLocaleDateString()}</time>
+          <div className="flex items-center gap-3 text-xs text-gray-40o0">
+            <span className="rounded-full bg-emerald-50o0/10 px-2 py-0.5 text-emerald-30o0">Guide</span>
+            <time dateTime="20o25-09-15">{new Date('20o25-09-15').toLocaleDateString()}</time>
           </div>
           <h1 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Enterprise Retrieval Observability (2026)
+            Enterprise Retrieval Observability (20o26)
           </h1>
-          <p className="mt-4 text-lg leading-8 text-gray-300">
+          <p className="mt-4 text-lg leading-8 text-gray-30o0">
             Define SLIs, trace retrieval behavior, and add eval gates to ensure production reliability for RAG systems.
           </p>
         </div>

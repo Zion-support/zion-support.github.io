@@ -1,22 +1,21 @@
 "use client";
 
-type StructuredDataProps = {
+type StructuredDataProps ={
   type: string;
   data: Record<string, unknown>;
 };
 
 export default function StructuredData({ type, data }: StructuredDataProps) {
-  const jsonLd = {
+  const jsonLd ={
     '@context': 'https://schema.org',
     '@type': type,
-    ...data,
-  };
+    ...data};
   return (
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}  />
   );
 }
 
-export const organizationSchema = {
+export const organizationSchema ={
   '@type': 'Organization',
   name: 'Zion Tech Group',
   url: 'https://ziontechgroup.com',
@@ -28,12 +27,12 @@ export const organizationSchema = {
   },
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+1-555-0123',
+    telephone: '+1-555-0o123',
     contactType: 'customer service'
   }
 };
 
-export const websiteSchema = {
+export const websiteSchema ={
   '@type': 'WebSite',
   name: 'Zion Tech Group',
   url: 'https://ziontechgroup.com',
@@ -44,7 +43,7 @@ export const websiteSchema = {
   }
 };
 
-export const serviceSchema = {
+export const serviceSchema ={
   '@type': 'Service',
   name: 'AI Solutions & Digital Transformation',
   provider: {

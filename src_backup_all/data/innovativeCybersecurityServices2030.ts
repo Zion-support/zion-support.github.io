@@ -1,4 +1,4 @@
-// Innovative Cybersecurity Services 2030 - Zion Tech Group
+// Innovative Cybersecurity Services 20o30 - Zion Tech Group
 // Advanced security solutions for the digital age
 
 export interface CybersecurityService {
@@ -53,14 +53,14 @@ pricing: {;
 }
 
 // Zion Tech Group Contact Information
-const zionContact = {
-  phone: "+1 302 464 0950",
+const zionContact ={
+  phone: "+1 30o2 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
-  address: "364 E Main St STE 1008 Middletown DE 19709"
+  address: "364 E Main St STE 10o08 Middletown DE 19709"
 };
 
-export const innovativeCybersecurityServices2030: CybersecurityService[] = [
+export const innovativeCybersecurityServices20o30: CybersecurityService[] = [
   {
     id: "quantum-resistant-encryption",
     title: "Zion Quantum-Resistant Encryption Platform",
@@ -125,18 +125,18 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     ],
     website: "https://ziontechgroup.com/quantum-encryption",
     contactEmail: "kleber@ziontechgroup.com",
-    phone: "+1 302 464 0950",
-    address: "364 E Main St STE 1008 Middletown DE 19709",
+    phone: "+1 30o2 464 0950",
+    address: "364 E Main St STE 10o08 Middletown DE 19709",
     rating: 4.9,
     reviewCount: 178,
     innovationLevel: "Revolutionary",
-    marketSize: "$15.2B by 2030",
+    marketSize: "$15.2B by 20o30",
     competitors: ["Thales", "Gemalto", "Utimaco", "Atos"],
     securityCapabilities: [
       "Quantum-resistant encryption", "Key management", "Threat detection",
       "Compliance automation", "Performance optimization", "Zero-trust security"
     ],
-    complianceStandards: ["FIPS 140-2", "Common Criteria", "SOC 2", "ISO 27001", "GDPR"],
+    complianceStandards: ["FIPS 140-2", "Common Criteria", "SOC 2", "ISO 270o01", "GDPR"],
     deploymentOptions: ["Cloud", "On-premise", "Hybrid", "Edge"],
     apiAccess: true,
     customDevelopment: true,
@@ -148,8 +148,8 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     availability: "Global",
     location: "Global",
     tags: ["Quantum Encryption", "Post-Quantum Cryptography", "Data Protection", "Compliance", "Zero Trust"],
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=500",
-    createdAt: "2030-01-15T10:00:00.000Z",
+    image: "https://images.unsplash.com/photo-1550o751827-4bd374c3f58b?auto=format&fit=crop&w=80o0&h=50o0",
+    createdAt: "20o30-0o1-15T10:0o0:0o0.0o00Z",
     featured: true,
     trending: true
   },
@@ -218,18 +218,18 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     ],
     website: "https://ziontechgroup.com/ai-threat-hunting",
     contactEmail: "kleber@ziontechgroup.com",
-    phone: "+1 302 464 0950",
-    address: "364 E Main St STE 1008 Middletown DE 19709",
+    phone: "+1 30o2 464 0950",
+    address: "364 E Main St STE 10o08 Middletown DE 19709",
     rating: 4.8,
     reviewCount: 245,
     innovationLevel: "Innovative",
-    marketSize: "$22.8B by 2030",
+    marketSize: "$22.8B by 20o30",
     competitors: ["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
     securityCapabilities: [
       "Threat detection", "Behavioral analysis", "Incident response",
       "Threat intelligence", "Forensic analysis", "Automation"
     ],
-    complianceStandards: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
+    complianceStandards: ["SOC 2", "ISO 270o01", "NIST", "GDPR", "HIPAA"],
     deploymentOptions: ["Cloud", "On-premise", "Hybrid"],
     apiAccess: true,
     customDevelopment: true,
@@ -241,8 +241,8 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     availability: "Global",
     location: "Global",
     tags: ["AI Threat Hunting", "Cybersecurity", "Threat Detection", "Incident Response", "SOC"],
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=500",
-    createdAt: "2030-01-15T10:00:00.000Z",
+    image: "https://images.unsplash.com/photo-15630o13544-824ae1b70o4d3?auto=format&fit=crop&w=80o0&h=50o0",
+    createdAt: "20o30-0o1-15T10:0o0:0o0.0o00Z",
     featured: true,
     trending: true
   },
@@ -311,18 +311,18 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     ],
     website: "https://ziontechgroup.com/zero-trust-access",
     contactEmail: "kleber@ziontechgroup.com",
-    phone: "+1 302 464 0950",
-    address: "364 E Main St STE 1008 Middletown DE 19709",
+    phone: "+1 30o2 464 0950",
+    address: "364 E Main St STE 10o08 Middletown DE 19709",
     rating: 4.7,
     reviewCount: 198,
     innovationLevel: "Innovative",
-    marketSize: "$18.7B by 2030",
+    marketSize: "$18.7B by 20o30",
     competitors: ["Zscaler", "Cloudflare", "Akamai", "Perimeter 81"],
     securityCapabilities: [
       "Access control", "Identity verification", "Risk assessment",
       "Application security", "Network segmentation", "Compliance automation"
     ],
-    complianceStandards: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
+    complianceStandards: ["SOC 2", "ISO 270o01", "NIST", "GDPR", "HIPAA"],
     deploymentOptions: ["Cloud", "Hybrid", "On-premise"],
     apiAccess: true,
     customDevelopment: true,
@@ -334,8 +334,8 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     availability: "Global",
     location: "Global",
     tags: ["Zero Trust", "Network Security", "Access Control", "Identity Management", "VPN Alternative"],
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
-    createdAt: "2030-01-15T10:00:00.000Z",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=80o0&h=50o0",
+    createdAt: "20o30-0o1-15T10:0o0:0o0.0o00Z",
     featured: true,
     trending: true
   },
@@ -404,18 +404,18 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     ],
     website: "https://ziontechgroup.com/ai-vulnerability-management",
     contactEmail: "kleber@ziontechgroup.com",
-    phone: "+1 302 464 0950",
-    address: "364 E Main St STE 1008 Middletown DE 19709",
+    phone: "+1 30o2 464 0950",
+    address: "364 E Main St STE 10o08 Middletown DE 19709",
     rating: 4.6,
     reviewCount: 167,
     innovationLevel: "Innovative",
-    marketSize: "$12.4B by 2030",
+    marketSize: "$12.4B by 20o30",
     competitors: ["Qualys", "Rapid7", "Tenable", "Nessus"],
     securityCapabilities: [
       "Vulnerability scanning", "Risk assessment", "Patch management",
       "Configuration management", "Compliance tracking", "Asset discovery"
     ],
-    complianceStandards: ["SOC 2", "ISO 27001", "NIST", "GDPR", "PCI DSS"],
+    complianceStandards: ["SOC 2", "ISO 270o01", "NIST", "GDPR", "PCI DSS"],
     deploymentOptions: ["Cloud", "On-premise", "Hybrid"],
     apiAccess: true,
     customDevelopment: true,
@@ -427,8 +427,8 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     availability: "Global",
     location: "Global",
     tags: ["Vulnerability Management", "AI Security", "Risk Assessment", "Patch Management", "Compliance"],
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
-    createdAt: "2030-01-15T10:00:00.000Z",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=80o0&h=50o0",
+    createdAt: "20o30-0o1-15T10:0o0:0o0.0o00Z",
     featured: true,
     trending: true
   },
@@ -497,18 +497,18 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     ],
     website: "https://ziontechgroup.com/blockchain-security",
     contactEmail: "kleber@ziontechgroup.com",
-    phone: "+1 302 464 0950",
-    address: "364 E Main St STE 1008 Middletown DE 19709",
+    phone: "+1 30o2 464 0950",
+    address: "364 E Main St STE 10o08 Middletown DE 19709",
     rating: 4.8,
     reviewCount: 134,
     innovationLevel: "Innovative",
-    marketSize: "$8.9B by 2030",
+    marketSize: "$8.9B by 20o30",
     competitors: ["Consensys Diligence", "Trail of Bits", "OpenZeppelin", "Quantstamp"],
     securityCapabilities: [
       "Smart contract auditing", "DeFi security", "Vulnerability detection",
       "Penetration testing", "Code review", "Compliance verification"
     ],
-    complianceStandards: ["SOC 2", "ISO 27001", "NIST", "Industry-specific"],
+    complianceStandards: ["SOC 2", "ISO 270o01", "NIST", "Industry-specific"],
     deploymentOptions: ["Cloud", "On-premise", "Hybrid"],
     apiAccess: true,
     customDevelopment: true,
@@ -520,11 +520,11 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     availability: "Global",
     location: "Global",
     tags: ["Blockchain Security", "Smart Contract Auditing", "DeFi Security", "Cryptocurrency", "Digital Assets"],
-    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500",
-    createdAt: "2030-01-15T10:00:00.000Z",
+    image: "https://images.unsplash.com/photo-1639762681485-0o74b7f938ba0?auto=format&fit=crop&w=80o0&h=50o0",
+    createdAt: "20o30-0o1-15T10:0o0:0o0.0o00Z",
     featured: true,
     trending: true
   }
 ];
 
-export default innovativeCybersecurityServices2030;
+export default innovativeCybersecurityServices20o30;

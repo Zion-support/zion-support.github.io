@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface FormProps extends React.PropsWithChildren<{}> {
   children: React.ReactNode;
   onSubmit?: (e: React.FormEvent) => void;
@@ -41,7 +39,7 @@ interface FormFieldProps {
 }
 
 export function FormField({ name, render }: FormFieldProps): JSX.Element {
-  const field = { name, value: '', onChange: (_v: unknown) => {} };
+  const field ={ name, value: '', onChange: (_v: unknown) => {} };
   return <>{render({ field })}</>;
 }
 

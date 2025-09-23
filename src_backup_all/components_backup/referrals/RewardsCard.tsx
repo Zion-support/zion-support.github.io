@@ -15,14 +15,14 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <BadgeDollarSign className="h-5 w-5" />
+            <BadgeDollarSign className="h-5 w-5"  />
             Your Rewards
           </CardTitle>
           <CardDescription>Rewards earned from successful referrals</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="flex items-center justify-center p-4">
-            <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
+            <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent"  />
           </div>
         </CardContent>
       </Card>
@@ -34,7 +34,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <BadgeDollarSign className="h-5 w-5" />
+            <BadgeDollarSign className="h-5 w-5"  />
             Your Rewards
           </CardTitle>
           <CardDescription>Rewards earned from successful referrals</CardDescription>
@@ -55,7 +55,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <BadgeDollarSign className="h-5 w-5" />
+          <BadgeDollarSign className="h-5 w-5"  />
           Your Rewards
         </CardTitle>
         <CardDescription>Rewards earned from successful referrals</CardDescription>
@@ -72,9 +72,9 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
               <div>
                 <div className="flex items-center gap-2">
                   {reward.reward_type === 'credit' ? (
-                    <BadgeDollarSign className="h-4 w-4 text-green-600" />
+                    <BadgeDollarSign className="h-4 w-4 text-green-60o0"  />
                   ) : (
-                    <Badge className="h-4 w-4 text-blue-600" />
+                    <Badge className="h-4 w-4 text-blue-60o0"  />
                   )}
                   <p className="font-medium">
                     {reward.reward_type === 'credit'

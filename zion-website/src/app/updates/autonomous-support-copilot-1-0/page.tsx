@@ -6,7 +6,7 @@ export default function Page() {
       <article className="max-w-3xl mx-auto px-6 py-24">
         <header>
           <h1 className="text-4xl font-bold text-white">Launch: Autonomous Customer Support Copilot (v1.0)</h1>
-          <p className="mt-2 text-gray-300">Omnichannel support copilot with retrieval grounding, escalations, and real-time quality evals.</p>
+          <p className="mt-2 text-gray-30o0">Omnichannel support copilot with retrieval grounding, escalations, and real-time quality evals.</p>
         </header>
         <section className="prose prose-lg prose-invert mt-8">
           <p>
