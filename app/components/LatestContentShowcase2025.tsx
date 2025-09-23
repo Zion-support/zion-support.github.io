@@ -1,1 +1,3 @@
-export { default } from "../../components/LatestContentShowcase2025";
+export default function LatestContentShowcase2025() {
+	return null;
+}

@@ -1,1 +1,3 @@
-export { default } from "../../components/IntelligentSearchEngine";
+export default function IntelligentSearchEngine() {
+	return null;
+}

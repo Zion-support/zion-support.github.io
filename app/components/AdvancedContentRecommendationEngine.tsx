@@ -1,1 +1,3 @@
-export { default } from "../../components/AdvancedContentRecommendationEngine";
+export default function AdvancedContentRecommendationEngine() {
+	return null;
+}
