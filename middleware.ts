@@ -15,7 +15,7 @@ const publicRoutes = [
   "/guides",
   "/case-studies",
   "/cookies",
-  "/industries"
+  "/industries",
   "/blog",
   "/services",
   "/solutions",
@@ -35,6 +35,7 @@ const publicRoutes = [
   "/auth/forgot-password",
   "/auth/reset-password",
   "/auth/verify",
+];
 const publicPaths = [
   '/',
   '/about',
@@ -58,6 +59,7 @@ const publicPaths = [
   '/auth/forgot-password',
   '/auth/reset-password',
   '/auth/verify'
+];
 const protectedRoutes = [
   "/",
   "/about",
@@ -98,7 +100,7 @@ const protectedRoutes = [
   "/industries/government"
 ];
 
-const publicRoutes = [
+const publicRoutes2 = [
   "/login",
   "/register",
   "/forgot-password",
@@ -134,9 +136,6 @@ export function middleware(request: NextRequest) {
   
   // For all other routes, continue normally
   return NextResponse.next();
-  if (publicRoutes.includes(pathname)) {
-    return NextResponse.next();
-  }
   
   const authCookie = request.cookies.get("auth-token");
   if (!authCookie) {

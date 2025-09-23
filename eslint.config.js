@@ -1,4 +1,5 @@
 import js from '@eslint/js';
+import tseslint from 'typescript-eslint';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
@@ -6,30 +7,16 @@ import globals from 'globals';
 
 export default [
   js.configs.recommended,
+  ...tseslint.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ['app/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
       sourceType: 'module',
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-        process: 'readonly',
-        console: 'readonly',
-        module: 'readonly',
-        exports: 'readonly',
-        require: 'readonly',
-        __dirname: 'readonly',
-        setTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearTimeout: 'readonly',
-        clearInterval: 'readonly'
-      },
       parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
-      }
+        ecmaFeatures: { jsx: true }
+      },
+      globals: { ...globals.browser, ...globals.node }
     },
     plugins: {
       react,
@@ -51,17 +38,23 @@ export default [
       'out/**',
       'dist/**',
       'build/**',
-      '*.config.js',
-      '*.config.ts',
-      'scripts/**',
-      'automation/**',
+      'coverage/**',
       'public/**',
       'netlify/**',
-      'ecosystem*.cjs',
-      '**/*.cjs',
-      'zion-os.disabled/**',
-      'zion-website/.next/**',
-      'zion-os/.next/**',
+      '**/*.config.*',
+      'scripts/**',
+      'automation/**',
+      'apps/**',
+      'apps.backup/**',
+      'backup/**',
+      'backups/**',
+      'backup-merge-conflicts/**',
+      'backup-problematic-files/**',
+      'corrupted*/**',
+      'recovered-branches/**',
+      'ts_files_backup/**',
+      'zion-os/**',
+      'zion-website/**',
       'zion.app/**',
       'zion_academy/**',
       '**/static/**',
