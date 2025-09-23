@@ -6,6 +6,9 @@
 import js from '@eslint/js';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import globals from 'globals';
+import tseslint from 'typescript-eslint';
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0efa
 export default [
@@ -69,10 +72,16 @@ export default [
       'public/**',
       'automation/**',
       'apps.backup/**',
+<<<<<<< HEAD
+=======
+      'app/components/**',
+      'app/**/*.disabled/**',
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
       'backup/**',
       'backups/**',
       'backup-merge-conflicts/**',
       'backup-problematic-files/**',
+<<<<<<< HEAD
 <<<<<<< HEAD
       'api/**',
       'server/**',
@@ -90,11 +99,17 @@ export default [
       'pages.broken/**',
       'pages.corrupted*',
       'recovered-branches/**',
+=======
+      'recovered-branches/**',
+      'server/**',
+      'temp_*/**',
+      'temp-*/**',
+      'temp/**',
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
       'temp_backup/**',
-      'temp_exclude/**',
-      'tests.disabled/**',
       'ts_files_backup/**',
       'zion-os/**',
+<<<<<<< HEAD
       'zion-os.*',
       'zion-website/**',
       'zion-ai-assistant/**',
@@ -235,6 +250,34 @@ export default [
     },
     settings: { react: { version: 'detect' } }
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0efa
+=======
+      'zion-website/**'
+    ]
+  },
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
+  {
+    files: ['app/**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2020,
+      sourceType: 'module',
+      parserOptions: { ecmaFeatures: { jsx: true } },
+      globals: { ...globals.browser, ...globals.node }
+    },
+    plugins: {
+      react,
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh
+    },
+    settings: { react: { version: 'detect' } },
+    rules: {
+      'no-unused-vars': 'off',
+      'no-empty': 'off',
+      'no-console': 'warn',
+      'react/jsx-uses-react': 'off',
+      'react/react-in-jsx-scope': 'off'
+    }
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
   }
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2af7
 ];

@@ -2,6 +2,7 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
+<<<<<<< HEAD
 // Public paths that don't require authentication
 const publicPaths: string[] = [
   '/',
@@ -28,10 +29,19 @@ const protectedPaths: string[] = [
   '/dashboard',
   '/profile',
   '/settings',
+=======
+const PUBLIC_ROUTES: string[] = [
+  '/', '/about', '/services', '/contact', '/ai-services', '/it-services', '/micro-saas',
+  '/api', '/api-docs', '/careers', '/guides', '/case-studies', '/cookies', '/industries',
+  '/blog', '/solutions', '/resources', '/talent', '/team', '/partners', '/news',
+  '/privacy', '/terms', '/sitemap', '/login', '/register', '/auth/login', '/auth/register',
+  '/auth/forgot-password', '/auth/reset-password', '/auth/verify'
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
 ];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+<<<<<<< HEAD
 
   // Allow public paths
   if (publicPaths.some(path => pathname === path || pathname.startsWith(path + '/'))) {
@@ -51,10 +61,24 @@ export function middleware(request: NextRequest) {
   }
 
   // Default: allow the request
+=======
+
+  if (
+    PUBLIC_ROUTES.includes(pathname) ||
+    pathname.startsWith('/_next/') ||
+    pathname.startsWith('/api/') ||
+    pathname.startsWith('/static/') ||
+    pathname.includes('.')
+  ) {
+    return NextResponse.next();
+  }
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
   return NextResponse.next();
 }
 
 export const config = {
+<<<<<<< HEAD
   matcher: [
     /*
      * Match all request paths except for the ones starting with:
@@ -78,3 +102,7 @@ export const config = {
   matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
 }
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-e382
+=======
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)']
+};
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1

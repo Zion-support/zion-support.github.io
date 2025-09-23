@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { lazy, Suspense } from 'react'
 import Link from 'next/link'
 import { ArrowRight, Brain, Cloud, Shield, Zap, Users, Globe, Target } from 'lucide-react'
@@ -210,3 +211,18 @@ export default function HomePage() {
 }
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-e382
+=======
+export const metadata = {
+  title: 'Zion Tech Group - AI & Technology Solutions',
+  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.'
+};
+
+export default function HomePage() {
+  return (
+    <main className="min-h-screen flex items-center justify-center">
+      <h1 className="text-3xl font-bold">Welcome to Zion Tech Group</h1>
+    </main>
+  );
+}
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
