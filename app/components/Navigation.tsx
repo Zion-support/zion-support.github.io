@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 import { Menu, X, Zap, ChevronDown } from 'lucide-react'
 import ThemeToggle from './ThemeToggle'
+import { usePerformanceOptimization } from '../hooks/usePerformanceOptimization'
 
 interface NavigationItem {
   name: string
@@ -21,9 +22,24 @@ export default function Navigation() {
   const menuRef = useRef<HTMLDivElement>(null)
   const dropdownTimeoutRef = useRef<NodeJS.Timeout>()
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
+  // Optimized scroll handler
+  const handleScroll = useCallback(() => {
+    const scrollY = window.scrollY
+    setIsScrolled(scrollY > 10)
+    
+    // Update active section based on scroll position
+    const sections = ['home', 'services', 'portfolio', 'about', 'contact']
+    const currentSection = sections.find(section => {
+      const element = document.getElementById(section)
+      if (element) {
+        const rect = element.getBoundingClientRect()
+        return rect.top <= 100 && rect.bottom >= 100
+      }
+      return false
+    })
+    
+    if (currentSection) {
+      setActiveSection(currentSection)
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
@@ -218,7 +234,18 @@ export default function Navigation() {
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            <div className="relative w-6 h-6">
+              <Menu 
+                className={`absolute inset-0 transition-all duration-300 ${
+                  isMenuOpen ? 'opacity-0 rotate-180' : 'opacity-100 rotate-0'
+                }`} 
+              />
+              <X 
+                className={`absolute inset-0 transition-all duration-300 ${
+                  isMenuOpen ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-180'
+                }`} 
+              />
+            </div>
           </button>
         </div>
 
@@ -296,7 +323,7 @@ export default function Navigation() {
               </div>
             </div>
           </div>
-        )}
+        </div>
       </div>
 
       {/* Search Overlay */}

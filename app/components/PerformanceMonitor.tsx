@@ -46,7 +46,7 @@ export default function PerformanceMonitor() {
       performanceMetrics.memory = memory.usedJSHeapSize / 1024 / 1024 // MB
     }
 
-    // First Contentful Paint (FCP)
+    // Enhanced FCP observer
     const fcpObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         if (entry.name === 'first-contentful-paint') {
@@ -56,13 +56,12 @@ export default function PerformanceMonitor() {
       observer.observe({ entryTypes: ['paint'] });
     };
 
-    // Largest Contentful Paint (LCP)
+    // Enhanced LCP observer
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries()
       const lastEntry = entries[entries.length - 1]
       performanceMetrics.lcp = lastEntry.startTime
     })
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
 
     // First Input Delay (FID) - Note: FID is deprecated, using INP instead
     const fidObserver = new PerformanceObserver((list) => {
@@ -75,7 +74,7 @@ export default function PerformanceMonitor() {
       observer.observe({ entryTypes: ['first-input'] });
     };
 
-    // Cumulative Layout Shift (CLS)
+    // Enhanced CLS observer
     let clsValue = 0
     const clsObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {

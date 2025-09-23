@@ -9,6 +9,7 @@ interface Props {
   fallback?: ReactNode
   onError?: (error: Error, errorInfo: React.ErrorInfo) => void
   showErrorDetails?: boolean
+  enableErrorReporting?: boolean
 }
 
 interface State {
