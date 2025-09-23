@@ -1,20 +1,18 @@
 import { GetServerSideProps } from 'next';
 
-  };      permanent: true}}
-
-export default function ApiDocsRedirect() { return null; }
-}'
-      destination: '/developers / docs',
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
+      destination: '/developers/docs',
+<<<<<<< HEAD
+      permanent: true}};
+=======
       permanent: true,
     },
-  }      permanent: true}}
-}
-;
-export default /**;
- * ApiDocsRedirect - Function description;
- */
-function ApiDocsRedirect() {}
-}
-;
+  };
+>>>>>>> origin/auto/autonomy-17186719616
+};
 
-export const getServerSideProps: GetServerSideProps;
+export default function ApiDocsRedirect() {
+  return null;
+}

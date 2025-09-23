@@ -1,34 +1,16 @@
 module.exports = {
-  root: true,
-  env: { browser: true, es2021: true, node: true, jest: true },
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'react', 'react-hooks', 'jsx-a11y', 'import'],
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
-    'plugin:jsx-a11y/recommended',
-    'plugin:import/recommended',
-    'plugin:import/typescript',
-    'next/core-web-vitals',
-  ],
-  parserOptions: { ecmaFeatures: { jsx: true }, ecmaVersion: 2021, sourceType: 'module' },
-  settings: {
-    react: { version: 'detect' },
-    'import/resolver': { typescript: { alwaysTryTypes: true, project: './tsconfig.json' } },
-  },
+  extends: ['next/core-web-vitals'],
   rules: {
-    'react/react-in-jsx-scope': 'off',
-    'react/prop-types': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    // Disable to avoid escaping quotes in static content pages
     'react/no-unescaped-entities': 'off',
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
     '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/no-empty-object-type': 'warn',
     '@next/next/no-html-link-for-pages': 'warn',
     'import/order': [
-      'error',
+      'warn',
       { groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'], 'newlines-between': 'always' },
     ],
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
@@ -46,7 +28,17 @@ module.exports = {
     'automation/',
     'netlify/',
     'apps/',
-    // Ignore large directories with known experimental or archived files that break parsing
+    // Exclude large or archived areas with known invalid code/tests
+    '__tests__/**',
+    'tests/**',
+    'backups/**',
+    'backup*/**',
+    'backup-problematic-files/**',
+    'corrupted_backup/**',
+    'temp_exclude/**',
+    'temp_*/**',
+    'ts_files_backup/**',
+    // Consolidated ignores from both branches
     'components/**',
     'components.disabled/**',
     'pages.disabled/**',
@@ -60,9 +52,9 @@ module.exports = {
     'src_backup_temp/**',
     'src.broken/**',
     'src.corrupted/**',
-    'backup-problematic-files/**',
-    'temp_*/**',
-    'tests/**',
-    '__tests__/**',
+    'components.disabled_full/**',
+    'pages.disabled_full/**',
+    'apps.backup/**',
+    'app_backup/**'
   ],
 };

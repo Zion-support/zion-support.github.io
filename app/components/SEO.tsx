@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 
 interface SEOProps {
-  title: string
-  description: string
+  title?: string
+  description?: string
   keywords?: string
   canonical?: string
   url?: string

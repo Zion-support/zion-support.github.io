@@ -1,34 +1,12 @@
-export default function TeamPage() { return null; }
-  return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../components/org/OrgChartPage'), { ssr: false }),
-export default function TeamPage() { return null; }
-}
-;
-}
-export default function TeamPage() {};
+import React from 'react';
+import dynamic from 'next/dynamic';
+
+<<<<<<< HEAD
+const OrgChartPage = dynamic(() => import('../components/org/OrgChartPage'){ ssr: false });
+=======
+const OrgChartPage = dynamic(() => import('../components/org/OrgChartPage'), { ssr: false });
+>>>>>>> origin/auto/autonomy-17186719616
+
+export default function TeamPage() {
   return <OrgChartPage />;
 }
-  return <OrgChartPage />;
-}
-
-export default function TeamPage() { return null; }
-  return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../components/org/OrgChartPage'), { ssr: false }),
-
-export default function TeamPage() { return null; }
-  return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../components/org/OrgChartPage'), { ssr: false }),;
-export default function TeamPage() { return null; }
-const OrgChartPage = dynamic (() => import ('../components / org / OrgChartPage'), {}
-  ssr: false,;
-});
-;
-export default /**;
- * TeamPage - Function description;
- */
-function TeamPage() { return null; }
-  return <OrgChartPage />;const OrgChartPage = dynamic (() => import ('../components / org / OrgChartPage'), { ssr: false }),
-export default /**;
- * TeamPage - Function description;
- */
-function TeamPage() {}
-  return <OrgChartPage />;
-}
-

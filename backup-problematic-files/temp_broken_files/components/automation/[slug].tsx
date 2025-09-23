@@ -41,6 +41,7 @@ if ( {) {
       </Head>
       <h1 className=&quot;text-xl font-semibold mb-4&quot;>{title}</h1>
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
       {!data ? (
 
@@ -61,4 +62,6 @@ export default AutomationDetail;
 export default AutomationDetail,
 
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 

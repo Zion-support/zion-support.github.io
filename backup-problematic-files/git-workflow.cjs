@@ -249,9 +249,6 @@ echo "✅ Git workflow completed successfully"`;
     this.createPackageJsonScripts();
     this.generateGitCommands();
     this.generateReport();
-<<<<<<< HEAD
-this.log('✅ Git Workflow Automation Completed', 'SUCCESS')}
-=======
     this.log('✅ Git Workflow Automation Completed', 'SUCCESS')}
 
 
@@ -264,7 +261,6 @@ const { execSync } = require('child_process')
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 function run(cmd) {
   return execSync(cmd, { stdio: 'inherit' })
 }
@@ -318,10 +314,6 @@ if (require.main === module) {
       console.log('Usage: git-workflow.cjs <commit-push|merge-into-main> [arg]')
   }
 }
-<<<<<<< HEAD
-      break;
-
-=======
 
 
 
@@ -330,4 +322,3 @@ if (require.main === module) {
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

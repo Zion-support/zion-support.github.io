@@ -76,8 +76,24 @@ export default function GoToMarketAgentsBlueprintPage() {
   );
 }
 
+import Link from 'next/link';
+import SEO from '../../components/SEO';
 
-function Page() {
+export const metadata = {
+  title: 'AI 2026: Go-To-Market Agents Blueprint | Zion Tech Group',
+  description:
+    'Design GTM agents for pipeline, deal acceleration, and expansion with policy-as-code guardrails and eval-gated delivery.',
+  keywords: [
+    'GTM agents',
+    'revenue AI',
+    'sales agents',
+    'policy-as-code',
+    'eval-gated delivery',
+    'AI governance',
+  ],
+};
+
+export default function Page() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
