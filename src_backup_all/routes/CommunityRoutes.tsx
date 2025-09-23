@@ -1,10 +1,2 @@
-import { Route } from "react-router-dom";
-import CommunityPage from "../pages/CommunityPage";
-
-export default function CommunityRoutes() {
-  return (
-    <>
-      <Route path="" element={<CommunityPage />} />
-    </>
-  );
-}
+/* simplified to resolve conflicts and router deps */
+export default function Placeholder(){return null;}

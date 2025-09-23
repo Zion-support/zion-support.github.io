@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-<<<<<<< HEAD
     <div class="container mx-auto px-4 py-10">
         <div class="bg-white rounded-xl shadow p-8 mb-10">
             <h1 class="text-4xl font-extrabold text-gray-900 mb-3">Welcome to Zion Academy</h1>
@@ -17,17 +16,7 @@
                 <a href="{{ url_for('updates_list') }}" class="inline-flex items-center px-4 py-2 text-sm font-medium text-blue-700 bg-white border border-blue-200 rounded-lg hover:bg-blue-50">View all</a>
             </div>
 
-            {% set latest = [] %}
-            {% if updates is defined %}
-                {% set latest = updates[:3] %}
-            {% else %}
-                {# Fallback: show a simple CTA if updates not provided #}
-                <div class="flex items-center justify-between">
-                    <p class="text-blue-900">Check what’s new: course launches, features, events, and more.</p>
-                    <a href="{{ url_for('updates_list') }}" class="text-blue-700 hover:underline">See updates →</a>
-                </div>
-            {% endif %}
-
+            {% set latest = latest_updates if latest_updates is defined else [] %}
             {% if latest %}
             <ul class="divide-y divide-blue-100 bg-white rounded-lg border border-blue-100">
                 {% for u in latest %}
@@ -42,31 +31,12 @@
                 </li>
                 {% endfor %}
             </ul>
+            {% else %}
+            <div class="flex items-center justify-between">
+                <p class="text-blue-900">Check what’s new: course launches, features, events, and more.</p>
+                <a href="{{ url_for('updates_list') }}" class="text-blue-700 hover:underline">See updates →</a>
+            </div>
             {% endif %}
         </section>
     </div>
-=======
-    <h1>Welcome to Zion Academy</h1>
-    <p>Your journey to upskilling starts here!</p>
-    <a href="{{ url_for("course_list") }}">Browse Courses</a>
-
-    {% if latest_updates %}
-    <hr>
-    <section>
-        <h2>Latest Updates</h2>
-        <ul>
-            {% for u in latest_updates %}
-            <li>
-                <a href="{{ url_for('update_detail', update_id=u.id) }}">{{ u.title }}</a>
-                <span> · {{ u.created_at.strftime('%b %d, %Y') }}</span>
-                {% if u.summary %}
-                    <div>{{ u.summary }}</div>
-                {% endif %}
-            </li>
-            {% endfor %}
-        </ul>
-        <p><a href="{{ url_for('updates_list') }}">See all updates</a></p>
-    </section>
-    {% endif %}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 {% endblock %}
