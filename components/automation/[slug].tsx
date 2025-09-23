@@ -12,11 +12,11 @@ const AutomationDetail: NextPage = () => {
 
   try {
     if (slug === 'marketplace-insights') {
-      // eslint-disable-next-line @typescript-eslint/no-var-requires
+       
       data = require('@/data/reports/marketplace-insights.json');
       title = 'Marketplace Insights';
     } else if (slug === 'content-health') {
-      // eslint-disable-next-line @typescript-eslint/no-var-requires
+       
       data = require('@/data/reports/content-health.json');
       title = 'Content Health';
     }

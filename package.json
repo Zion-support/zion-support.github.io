@@ -10,7 +10,9 @@
     "dev": "next dev",
     "build": "NODE_OPTIONS='--max-old-space-size=4096 --openssl-legacy-provider' next build --no-lint",
     "start": "next start",
-    "lint": "eslint . --no-error-on-unmatched-pattern",
+    "lint": "eslint app components lib --no-error-on-unmatched-pattern",
+    "lint:fix": "eslint app components lib --fix",
+    "type-check": "tsc --noEmit",
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "rm -rf .next && npm run build",
     "dev:clean": "rm -rf .next && npm run dev",
@@ -18,10 +20,11 @@
     "test:watch": "jest --watch --runInBand",
     "preview": "npm run build && npm run start",
     "test:coverage": "jest --coverage",
-    "clean": "rm -rf .next node_modules/.cache",
+    "clean": "rm -rf .next out dist build",
     "export": "npm run build && next export",
     "deploy": "npm run build && npm run export",
-    "postinstall": "echo 'Type-check skipped (non-blocking)'"
+    "postinstall": "echo 'Type-check skipped (non-blocking)'",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -161,6 +164,5 @@
       "<rootDir>/e2e/"
     ]
   },
-  "packageManager": "npm@11.6.0",
   "type": "module"
 }
