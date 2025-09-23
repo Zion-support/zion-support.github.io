@@ -1,96 +1,116 @@
-# Ignore generated, disabled, backups, and non-source directories
+# Ignore backup, disabled, and non-source directories to keep linting on active code
+.next/
+node_modules/
+
+# Mirrors Jest modulePathIgnorePatterns and testPathIgnorePatterns from package.json
+automation/
+.temp_backup_components/
+recovered-branches/
+apps.backup/
+components/apps/
+backup-problematic-files/
+server/
+__tests__/
+tests/
+test/
+src.broken/
+src-corrupted/
+temp_backup/
+pages_backup/
+dao/
+tests.disabled/
+src.disabled/
+src_backup_temp/
+src_backup/
+zion-os/
+zion-os.broken/
+zion-os.disabled/
+zion-os.corrupted/
+pages-disabled/
+pages.bak/
+components.disabled/
+components.disabled_full/
+pages.disabled/
+pages.disabled_auto/
+pages.disabled_full/
+pages_backup_before_cleanup/
+pages.broken/
+pages.corrupted/
+pages.corrupted.*
+recovered-branches/
+ts_files_backup/
+temp_exclude/
+corrupted_backup/
+plugins/wallet-connector/cypress/
+components/api/docs/
+data/api-docs/
+e2e/
+
+# Additional obviously non-active or experimental dirs/files
+pages_backup_conflict/
+pages_backup_conflicts/
+pages.old/
+solutions.disabled/
+types.disabled/
+utils.disabled/
+tests.disabled/
+workflow_backups/
+token/
+universe/
+vision/
+zion_academy/
+zion-ai-assistant/
+zion-film/
+zion-website/
+zion-app-performance-improvements-summary.md
+*.backup.*
+*cleanup-backup*
+*
+!zion-website
+!zion-website/**
+
+# Always ignore dependencies and build outputs
+node_modules/
 .next/
 node_modules/
 coverage/
 dist/
 build/
-.out/
+coverage/
 
-# Tests and mocks
-__tests__/
-tests/
-test/
-__mocks__/
+# Ignore backups and temp artifacts
+**/backup*/
+**/backups/**
+**/*.backup.*
+**/*.cleanup-backup.*
+**/.temp_backup_components/**
+**/temp_backup/**
+**/temp_exclude/**
+**/recovered-branches/**
+**/apps.backup/**
+**/components.disabled*/**
+**/pages.disabled*/**
+**/pages.bak/**
+**/pages_backup*/**
+**/src_backup*/**
+**/src.disabled/**
+**/tests.disabled/**
+**/test_build/**
 
-# Disabled/broken/backup variants
-*.disabled/
-*.broken/
-*backup*/
-src.broken/
-src.disabled/
-src_backup/
-src_backup_temp/
-pages-disabled/
-pages.broken/
-pages_backup/
-pages_backup_before_cleanup/
-components.disabled/
-components.disabled_full/
-
-# Automation and scripts not relevant to app lint
-automation/
-scripts/
-.scripts/
-*.sh
-*.cjs
-*.mjs
-*.py
-*.bat
-
-# Root maintenance and helper scripts
-fix-*.js
-merge-*.js
-resolve-*.js
-*merge*.js
-*conflict*.js
-*automation*.js
-
-# Misc large content and markdown
-public/
-*.md
-*.json
-*.xml
-*.txt
-
-# Misc
-recovered-branches/
-backup*/
-corrupted_backup/
-zion-os/
+# Ignore non-app workspaces and archives
+zion-os*/
 zion-website/
+workflow_backups/
+workflow_templates/
+automation/**
+backup-problematic-files/**
+server/**
 
-# Broadly exclude most of src; re-include core clean directories
-src/**
-!src/app/**
-!src/components/**
-!src/lib/**
-!src/hooks/**
-!src/styles/**
+# Ignore misc scripts and experimental roots
+__tests__/**
+tests/**
+test/**
+**/*.test.*
 
-# Explicitly ignore noisy/problematic subtrees
-src/pages_backup/
-src/data/
-src/expandedServices.ts
-src/enhancedServices.ts
-src/utils/**
-src/types/**
-zion-ai-assistant/
-
-# Misc backups
-lib_backup/
-lib.broken/
-lib.disabled/
-
-# Catch-all patterns for backups/disabled variants
-**/*.backup*
-**/*.backups*/
-**/*.corrupted*/
-**/*.disabled*/
-
-# Additional exclusions to avoid linting corrupted or out-of-scope code
-utils/
-types/
-ts_files_backup/
-zion-os/
-zion-ai-assistant/
-zion-website/
+# Generated locks and artifacts
+*.tsbuildinfo

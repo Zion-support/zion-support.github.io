@@ -1,10 +1,12 @@
-export default function MicroSaaSServicesPage() {
-  return (
-    <main className="container mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold mb-4">Micro-SaaS Services</h1>
-      <p className="text-gray-600">Build and scale micro-SaaS products.</p>
-    </main>
-  );
+export default function MicroSaaSPage() {
+	return (
+		<div className="min-h-screen py-20 px-4">
+			<div className="max-w-5xl mx-auto">
+				<h1 className="text-3xl font-bold mb-4">Micro SaaS</h1>
+				<p className="text-zinc-500">Launch lightweight SaaS products quickly.</p>
+			</div>
+		</div>
+	);
 }
 
 

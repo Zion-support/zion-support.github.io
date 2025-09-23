@@ -1,7 +1,9 @@
 export const metadata = {
-  title: 'Careers - Zion Tech Group',
-  description: 'Join our team of innovators and build the future of technology with Zion Tech Group.',
-  keywords: 'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs',
+	title: 'Careers - Zion Tech Group',
+	description:
+		'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.',
+	keywords:
+		'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs',
 };
 
 export default function CareersPage() {
@@ -27,40 +29,43 @@ export default function CareersPage() {
 		{ title: 'Cutting-Edge Technology', description: 'Work with the latest AI and quantum technologies.', icon: '🚀' },
 		{ title: 'Flexible Hours', description: "Work when you're most productive with flexible scheduling.", icon: '⏰' },
 	];
-  return (
-    <div className="space-y-16">
-      {/* Hero Section */}
-      <section className="text-center py-16">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">Join Our Team</h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Build the future of technology with innovative minds at Zion Tech Group
-        </p>
-      </section>
 
-      {/* Open Positions */}
-      <section className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">Open Positions</h2>
-        <div className="space-y-6">
-          {openPositions.map((position, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-lg border">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                <div>
-                  <h3 className="text-xl font-bold">{position.title}</h3>
-                  <p className="text-gray-600">{position.department}</p>
-                </div>
-                <div className="flex flex-col md:items-end mt-2 md:mt-0">
-                  <span className="text-sm text-gray-500">{position.location}</span>
-                  <span className="text-sm font-medium text-blue-600">{position.type}</span>
-                </div>
-              </div>
-              <p className="text-gray-700 mb-4">{position.description}</p>
-              <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                Apply Now
-              </button>
-            </div>
-          ))}
-        </div>
-      </section>
-    </div>
-  );
+	return (
+		<div className="space-y-16 p-8">
+			<section className="text-center">
+				<h1 className="text-4xl font-bold mb-4">Join Our Team</h1>
+				<p className="text-lg opacity-80 mb-2">Help us build the future of AI-powered digital economies.</p>
+			</section>
+			<section>
+				<h2 className="text-2xl font-semibold mb-4">Open Positions</h2>
+				<div className="space-y-4">
+					{openPositions.map((position, index) => (
+						<div key={index} className="p-4 rounded-lg border border-white/10">
+							<h3 className="text-xl font-semibold mb-1">{position.title}</h3>
+							<p className="opacity-70 mb-2">{position.department} • {position.location} • {position.type}</p>
+							<p className="opacity-80 mb-2">{position.description}</p>
+							<ul className="list-disc list-inside opacity-80">
+								{position.requirements.map((req, i) => (
+									<li key={i}>{req}</li>
+								))}
+							</ul>
+						</div>
+					))}
+				</div>
+			</section>
+			<section>
+				<h2 className="text-2xl font-semibold mb-4">Why Work With Us</h2>
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+					{benefits.map((b, i) => (
+						<div key={i} className="text-center p-6 border border-white/10 rounded-lg">
+							<div className="text-4xl mb-2">{b.icon}</div>
+							<h3 className="text-lg font-semibold mb-1">{b.title}</h3>
+							<p className="opacity-80 text-sm">{b.description}</p>
+						</div>
+					))}
+				</div>
+			</section>
+		</div>
+	);
 }
+
