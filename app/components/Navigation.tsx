@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X, Brain, Cloud, Shield, Zap } from 'lucide-react';
 
-const Navigation: React.FC = () => {
+const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 

@@ -1,71 +1,56 @@
-import React from 'react';
+"use client";
 
-const StructuredData: React.FC = () => {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://ziontechgroup.com/#organization",
-        "name": "Zion Tech Group",
-        "url": "https://ziontechgroup.com",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://ziontechgroup.com/logo.png",
-          "width": "200",
-          "height": "60"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+1-302-464-0950",
-          "contactType": "customer service"
-        },
-        "sameAs": [
-          "https://x.com/ziontechgroup",
-          "https://www.linkedin.com/company/zion-tech-group",
-          "https://github.com/Zion-Holdings/zion.app"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://ziontechgroup.com/#website",
-        "url": "https://ziontechgroup.com",
-        "name": "Zion Tech Group - AI & Technology Solutions",
-        "description": "Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.",
-        "publisher": {
-          "@id": "https://ziontechgroup.com/#organization"
-        },
-        "inLanguage": "en-US"
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://ziontechgroup.com/#webpage",
-        "url": "https://ziontechgroup.com",
-        "name": "Zion Tech Group - AI & Technology Solutions",
-        "isPartOf": {
-          "@id": "https://ziontechgroup.com/#website"
-        },
-        "about": {
-          "@id": "https://ziontechgroup.com/#organization"
-        },
-        "description": "Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.",
-        "inLanguage": "en-US",
-        "potentialAction": [
-          {
-            "@type": "ReadAction",
-            "target": ["https://ziontechgroup.com"]
-          }
-        ]
-      }
-    ]
-  };
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-    />
-  );
+type StructuredDataProps = {
+  type: string;
+  data: Record<string, unknown>;
 };
 
-export default StructuredData;
+export default function StructuredData({ type, data }: StructuredDataProps) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': type,
+    ...data,
+  };
+  return (
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+  );
+}
+
+export const organizationSchema = {
+  '@type': 'Organization',
+  name: 'Zion Tech Group',
+  url: 'https://ziontechgroup.com',
+  logo: 'https://ziontechgroup.com/images/logo.png',
+  description: 'Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services.',
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'US'
+  },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+1-555-0123',
+    contactType: 'customer service'
+  }
+};
+
+export const websiteSchema = {
+  '@type': 'WebSite',
+  name: 'Zion Tech Group',
+  url: 'https://ziontechgroup.com',
+  description: 'Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services.',
+  publisher: {
+    '@type': 'Organization',
+    name: 'Zion Tech Group'
+  }
+};
+
+export const serviceSchema = {
+  '@type': 'Service',
+  name: 'AI Solutions & Digital Transformation',
+  provider: {
+    '@type': 'Organization',
+    name: 'Zion Tech Group'
+  },
+  description: 'Comprehensive AI solutions, cloud computing, and digital transformation services to transform your business.',
+  serviceType: 'Technology Services'
+};
