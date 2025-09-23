@@ -17,11 +17,7 @@
     "jsonwebtoken": "9.0.2",
     "lucide-react": "^0.263.1",
     "next": "14.2.5",
-<<<<<<< HEAD
-    "next-auth": "^4.24.7",
-=======
     "next-auth": "^4.24.11",
->>>>>>> 45bde326a2e7 (fix(zion-os): repair corrupted pages, add path alias, implement minimal onboarding route; fix signin/signup/dashboard pages; clean homepage duplicates; build zion-website and zion-ai-assistant)
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "uuid": "9.0.1",
