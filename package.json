@@ -11,6 +11,7 @@
     "build": "NODE_OPTIONS='--max-old-space-size=4096 --openssl-legacy-provider' next build --no-lint",
     "start": "next start",
     "lint": "eslint zion-website",
+    "build:netlify": "npm run build && next export && rm -rf dist && mv out dist",
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "rm -rf .next && npm run build",
     "dev:clean": "rm -rf .next && npm run dev",
@@ -28,7 +29,6 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@netlify/plugin-nextjs": "^5.13.3",
-    "@types/react": "^18.3.24",
     "@types/react-dom": "^18.3.7",
     "autoprefixer": "^10.4.21",
     "axios": "^1.11.0",
@@ -62,8 +62,8 @@
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "12.1.5",
     "@types/jest": "^29.0.0",
-    "@types/node": "^16.18.126",
-    "@types/react": "^19.1.13",
+    "@types/node": "16.18.126",
+    "@types/react": "19.1.13",
     "@types/react-dom": "^19.1.9",
     "@typescript-eslint/eslint-plugin": "^8.44.1",
     "@typescript-eslint/parser": "^8.44.1",
@@ -79,7 +79,7 @@
     "jest-environment-jsdom": "^29.0.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.0",
-    "typescript": "^5.0.0"
+    "typescript": "5.9.2"
   },
   "jest": {
     "testEnvironment": "jest-environment-jsdom",
