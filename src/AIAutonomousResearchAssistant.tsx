@@ -8,5 +8,5 @@ export default function AIAutonomousResearchAssistant() {
         <p className="text-gray-600">Coming soon.</p>
       </div>
     </div>
-  )
+  );
 }

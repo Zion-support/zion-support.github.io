@@ -14,7 +14,7 @@ export default function HomePage() {
           Advanced AI and
           <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Technology Solutions</span>
         </h1>
-        <p className="text-lg text-gray-300 mb-8">Transform your business with cutting-edge AI, cloud, and cybersecurity solutions.</p>
+        <p className="text-lg text-gray-300 mb-8">Advanced AI, cloud, and cybersecurity solutions.</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/services" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center">
             Explore Solutions
