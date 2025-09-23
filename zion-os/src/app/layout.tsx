@@ -1,10 +1,7 @@
 import "./globals.css";
 import type { ReactNode } from "react";
 import { AuthProvider } from "@/contexts/AuthContext";
-<<<<<<< HEAD
-=======
 import { Metadata } from "next";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047
 
 export const metadata = {
   title: "Zion OS - Launch Sovereign AI-Powered Digital Economies",
@@ -16,11 +13,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className="min-h-screen bg-[var(--bg)] text-[var(--fg)]">
-<<<<<<< HEAD
-        <AuthProvider>
-          <main className="min-h-screen">{children}</main>
-        </AuthProvider>
-=======
         <nav className="border-b border-white/10 sticky top-0 z-50 bg-zinc-900/80 backdrop-blur-md">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
@@ -35,18 +27,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-8">
-                  <a href="/" className="text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                    Home
-                  </a>
-                  <a href="/multiverse/launch" className="text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                    Launch
-                  </a>
-                  <a href="/admin/instances" className="text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                    Instances
-                  </a>
-                  <a href="/admin/os-deploy" className="text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                    Admin
-                  </a>
+                  <a href="/" className="text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                  <a href="/multiverse/launch" className="text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Launch</a>
+                  <a href="/admin/instances" className="text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Instances</a>
+                  <a href="/admin/os-deploy" className="text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Admin</a>
                 </div>
               </div>
 
@@ -78,8 +62,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   <span className="font-bold text-xl gradient-text">Zion OS</span>
                 </div>
                 <p className="text-white/70 max-w-md">
-                  Launch sovereign AI-powered digital economies with one click. 
-                  Unified deployment protocol for the future of decentralized business.
+                  Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for the future of decentralized business.
                 </p>
               </div>
               
@@ -107,7 +90,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </div>
           </div>
         </footer>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047
       </body>
     </html>
   );
