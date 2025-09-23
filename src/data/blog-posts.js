@@ -151,7 +151,7 @@ export const blogPosts = [
   },
   // New content - 2025 posts
   {
-    id: 7,
+    id: 9,
     title: "AI-Powered IT Operations: From Reactive to Predictive in 2025",
     excerpt: "How AIOps is enabling proactive incident prevention, automated remediation, and smarter capacity planning.",
     content: "In 2025, AIOps platforms leverage telemetry, logs, and traces with advanced ML to predict incidents before they happen, auto-remediate common failures, and right-size infrastructure in real-time. This shift reduces MTTR, improves reliability, and lowers cloud spend...",
@@ -166,7 +166,7 @@ export const blogPosts = [
     slug: "ai-powered-it-operations-2025"
   },
   {
-    id: 8,
+    id: 10,
     title: "Sustainable Cloud: Practical Steps to Cut Your Carbon Footprint",
     excerpt: "Actionable tactics to measure, report, and reduce emissions from cloud workloads using modern tooling.",
     content: "Sustainable cloud practices combine workload efficiency, renewable-powered regions, and carbon-aware scheduling. Teams can adopt efficient instance types, autoscaling, and green-region placement while leveraging provider emissions reports and open-source tooling to track progress...",

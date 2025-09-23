@@ -34,7 +34,7 @@ export default function SEO({
     };
     
     updateMetaTag('description', description);
-    updateMetaTag('keywords', keywords);
+    updateMetaTag('keywords', Array.isArray(keywords) ? keywords.join(', ') : keywords);
     updatePropertyMetaTag('og:title', title);
     updatePropertyMetaTag('og:description', description);
     updatePropertyMetaTag('og:image', image);
