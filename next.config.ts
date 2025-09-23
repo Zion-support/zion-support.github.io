@@ -20,11 +20,17 @@ const nextConfig: NextConfig ={
   assetPrefix: undefined,
   generateEtags: true,
 
-<<<<<<< HEAD
-  // Modern experimental features for Next.js 15
-  turbopack: {},
   experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion']
+    appDir: false,
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
   },
 
   async redirects() {
@@ -82,5 +88,3 @@ const nextConfig: NextConfig ={
 };
 
 export default nextConfig;
-=======
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
