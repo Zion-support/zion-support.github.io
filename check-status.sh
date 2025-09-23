@@ -1,43 +1,62 @@
 #!/bin/bash
 
-<<<<<<< HEAD
+set -e
+
 echo "=== Checking Git Status ==="
 git status --porcelain
 
-echo -e "\n=== Checking Current Branch ==="
+echo -e "\n=== Current Branch ==="
 git branch --show-current
 
-echo -e "\n=== Checking Remote Branches ==="
-git branch -r
+echo -e "\n=== Remote Branches (summary) ==="
+git branch -r | head -20
 
-echo -e "\n=== Attempting to Build Project ==="
-npm run build
+echo -e "\n=== Detected Packages ==="
+mapfile -t PACKAGE_JSONS < <(find . -maxdepth 3 -name package.json -not -path "*/node_modules/*")
+for pkg in "${PACKAGE_JSONS[@]}"; do
+  pkg_dir=$(dirname "$pkg")
+  echo "- $pkg_dir"
+done
 
-echo -e "\n=== Build Complete ==="
-=======
-echo "🔍 AI Service Factory Status Check"
-echo "⏰ Time: $(date)"
-echo ""
+echo -e "\n=== Running Checks Per Package ==="
+for pkg in "${PACKAGE_JSONS[@]}"; do
+  pkg_dir=$(dirname "$pkg")
+  echo -e "\n--- Package: $pkg_dir ---"
+  pushd "$pkg_dir" >/dev/null
 
-echo "📊 PM2 Process Status:"
-pm2 status
-echo ""
+  if [ -f yarn.lock ]; then
+    pkg_mgr="yarn"
+    if command -v yarn >/dev/null 2>&1; then
+      yarn install --frozen-lockfile --ignore-engines --non-interactive || yarn install --ignore-engines --non-interactive
+    else
+      pkg_mgr="npm"
+      npm ci || npm install
+    fi
+  else
+    if [ -f package-lock.json ]; then
+      npm ci || npm install
+    else
+      npm install || true
+    fi
+    pkg_mgr="npm"
+  fi
 
-echo "🔄 Background Process Status:"
-ps aux | grep start-ai-service-factory | grep -v grep
-echo ""
+  if npm run | grep -q "lint"; then
+    echo "Running lint..."
+    npm run lint || true
+  fi
 
-echo "📈 Recent Log Activity:"
-tail -20 ai-service-factory.log
-echo ""
+  if npm run | grep -q "typecheck"; then
+    echo "Running typecheck..."
+    npm run typecheck || true
+  fi
 
-echo "🌐 Web Interface Status:"
-curl -s -o /dev/null -w "HTTP Status: %{http_code}\n" http://localhost:3000/ || echo "Web interface not accessible"
-echo ""
+  if npm run | grep -q "build"; then
+    echo "Running build..."
+    npm run build || true
+  fi
 
-echo "📁 Generated Reports:"
-ls -la public/automation/ | head -10
-echo ""
+  popd >/dev/null
+done
 
-echo "✅ Status check complete!"
->>>>>>> origin/auto/autonomy-17186719616
+echo -e "\n=== Checks Complete ==="
