@@ -218,12 +218,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
     }
   }, []);
 
-<<<<<<< HEAD
-  useEffect(() => {
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [handleKeyDown]);
-=======
     const results: NavigationItem[] = [];
     const searchInItems = (items: NavigationItem[]) => {
       items.forEach(item => {
@@ -240,7 +234,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
     searchInItems(navigationItems);
     setSearchResults(results.slice(0, 8)); // Limit results
   };
->>>>>>> cd4748dc562b148d65a1b4346338fa475b702844
 
   return (
     <>

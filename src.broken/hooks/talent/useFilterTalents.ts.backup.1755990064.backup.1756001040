@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 import { useState, useMemo } from 'react';
 import { TalentProfile } from '@/types/talent';
@@ -143,13 +141,9 @@ export function useFilterTalents(talents: TalentProfile[] = []) {
   };
 }
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 // Hook for useFilterTalents;
 export const useUseFilterTalents: unknown = () => {
   // TODO: Implement hook logic;
   return {};
 };
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

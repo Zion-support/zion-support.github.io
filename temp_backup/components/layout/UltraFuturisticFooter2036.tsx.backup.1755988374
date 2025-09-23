@@ -36,14 +36,6 @@ const UltraFuturisticFooter2036: React.FC = () => {
     {
       title: 'Services',
       links: [
-<<<<<<< HEAD
-        { name: 'AI & Machine Learning', href: '/ai-services' },
-        { name: 'Quantum Computing', href: '/quantum-services' },
-        { name: 'Space Technology', href: '/space-technology' },
-        { name: 'Enterprise IT', href: '/it-services' },
-        { name: 'Process Automation', href: '/automation-services' },
-        { name: 'Cybersecurity', href: '/security' }
-=======
         { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform', featured: true },
         { name: 'Quantum Cybersecurity Sentinel', href: '/quantum-cybersecurity-sentinel', featured: true },
         { name: 'AI Business Intelligence', href: '/ai-business-intelligence', featured: true },
@@ -54,7 +46,6 @@ const UltraFuturisticFooter2036: React.FC = () => {
         { name: 'AI Autonomous Customer Service', href: '/ai-autonomous-customer-service' },
         { name: 'AI Autonomous Research Assistant', href: '/ai-autonomous-research-assistant' },
         { name: 'AI Autonomous Decision Engine', href: '/ai-autonomous-decision-engine' }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f821
       ]
     },
     {

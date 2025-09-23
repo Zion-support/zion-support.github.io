@@ -6,12 +6,7 @@ import Link from 'next/link';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { 
   ArrowRight, Star, 
-<<<<<<< HEAD
-  Brain, Atom, Shield, Zap, TrendingUp, Globe,
-  Rocket, Target, Users, Cpu, ChevronDown, Play, Pause, CheckCircle
-=======
   Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin, Phone, Mail
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8640
 } from 'lucide-react';
 
 // Import new service data
@@ -214,21 +209,10 @@ const Homepage2025: React.FC = () => {
               </p>
               
               {/* Enhanced CTA Section */}
-<<<<<<< HEAD
-              <div className="flex flex-col sm:flex-row gap-6 justify-center mb-10">
-                <Link href="/get-started">
-                  <motion.button 
-                    className="group px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 backdrop-blur-sm"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <span className="flex items-center gap-3 text-lg">
-=======
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <Link href="/contact">
                   <button className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                     <span className="flex items-center gap-2">
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8640
                       Get Started
                       <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                     </span>
@@ -243,21 +227,10 @@ const Homepage2025: React.FC = () => {
                     <span className="text-lg">Explore Services</span>
                   </motion.button>
                 </Link>
-<<<<<<< HEAD
-                <Link href="/comprehensive-2025-services-showcase">
-                  <motion.button 
-                    className="px-10 py-5 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <span className="text-lg">2025 Showcase</span>
-                  </motion.button>
-=======
                 <Link href="/comprehensive-2025-innovative-services-showcase">
                   <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105">
                     2025 Innovative Services
                   </button>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8640
                 </Link>
               </div>
               

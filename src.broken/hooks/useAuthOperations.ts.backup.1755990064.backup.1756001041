@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import type { UserDetails } from "@/types/auth";
 import { mutate } from 'swr';
@@ -12,7 +10,6 @@ import { showApiError } from "@/utils/apiErrorHandler";
 import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils";
 import { cleanupAuthState } from "@/utils/authUtils";
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
-
 
 // Helper function to get the auth token from cookies
 function getAuthToken() {
@@ -82,7 +79,6 @@ export function useAuthOperations(
     }
   };
   
-
 
   const signUp = async ({ email, password, display_name }: SignupParams) => {
     setIsLoading(true);
@@ -415,13 +411,9 @@ export function useAuthOperations(
   };
 }
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 // Hook for useAuthOperations;
 export const useUseAuthOperations: unknown = () => {
   // TODO: Implement hook logic;
   return {};
 };
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

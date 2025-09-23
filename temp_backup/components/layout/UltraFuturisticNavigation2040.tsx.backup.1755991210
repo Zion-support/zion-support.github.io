@@ -2,11 +2,6 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  Menu, X, Search, ChevronDown, Zap, Globe, Lock, 
-  Phone, Mail, MapPin, ArrowRight, Star, Users, Award,
-  Sun, Moon, Bell, User
-=======
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight,
   Brain, Rocket, Target, Atom, Shield,
   DollarSign, BarChart3, Globe, Star, Sparkles, 
@@ -15,7 +10,6 @@ import {
   Cpu, Cloud, Settings, Monitor, Palette, Network, Layers, Code, Heart, ShoppingCart, Clock, MessageCircle, HelpCircle, Building,
   Zap, Infinity, Eye, Heart as HeartIcon, Code as CodeIcon, Palette as PaletteIcon,
   BookOpen, User
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
 } from 'lucide-react';
 
 interface NavigationItem {
@@ -36,11 +30,6 @@ const navigationItems: NavigationItem[] = [
   {
     label: 'Services',
     children: [
-<<<<<<< HEAD
-      {
-        label: 'AI & Machine Learning',
-        href: '/ai-services',
-=======
       { 
         name: 'All Services', 
         href: '/services', 
@@ -52,25 +41,10 @@ const navigationItems: NavigationItem[] = [
         name: '2025 Innovative Services Showcase', 
         href: '/comprehensive-2025-innovative-services-showcase', 
         description: 'Comprehensive showcase of our latest innovations',
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
         icon: <Star className="w-4 h-4" />,
         color: 'from-purple-500 to-pink-500',
         featured: true
       },
-<<<<<<< HEAD
-      {
-        label: 'Quantum Computing',
-        href: '/quantum-services',
-        icon: <Zap className="w-4 h-4" />,
-        description: 'Next-generation quantum solutions',
-        badge: 'Hot'
-      },
-      {
-        label: 'Space Technology',
-        href: '/space-tech',
-        icon: <Star className="w-4 h-4" />,
-        description: 'Innovative space solutions'
-=======
       { 
         name: 'AI Consciousness Evolution', 
         href: '/ai-consciousness-evolution-2040', 
@@ -83,7 +57,6 @@ const navigationItems: NavigationItem[] = [
         href: '/quantum-computing',
         icon: <Atom className="w-4 h-4" />,
         description: 'Next-generation quantum solutions'
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
       },
       {
         label: 'Cybersecurity',
@@ -92,18 +65,6 @@ const navigationItems: NavigationItem[] = [
         description: 'Enterprise security solutions'
       },
       {
-<<<<<<< HEAD
-        label: 'Cloud Solutions',
-        href: '/cloud-platform',
-        icon: <Globe className="w-4 h-4" />,
-        description: 'Scalable cloud infrastructure'
-      },
-      {
-        label: 'Micro SaaS',
-        href: '/micro-saas',
-        icon: <Star className="w-4 h-4" />,
-        description: 'Rapid deployment SaaS solutions'
-=======
         label: 'Cloud Platform',
         href: '/cloud-platform',
         icon: <Globe className="w-4 h-4" />,
@@ -120,15 +81,10 @@ const navigationItems: NavigationItem[] = [
         href: '/innovative-2040-futuristic-services-showcase',
         icon: <Star className="w-4 h-4" />,
         description: 'Cutting-edge futuristic technology solutions'
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
       },
       {
         label: 'View All Services',
         href: '/services',
-<<<<<<< HEAD
-        icon: <ArrowRight className="w-4 h-4" />,
-        description: 'Complete service portfolio'
-=======
         icon: <Briefcase className="w-4 h-4" />,
         description: 'Explore our comprehensive technology solutions',
         badge: 'New',
@@ -248,83 +204,17 @@ const navigationItems: NavigationItem[] = [
         description: 'Consciousness-based empathy',
         icon: <Heart className="w-4 h-4" />,
         color: 'from-red-500 to-pink-500'
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
       }
     ]
   },
   {
-<<<<<<< HEAD
-    label: 'Solutions',
-    children: [
-      {
-        label: 'Enterprise IT',
-        href: '/enterprise-solutions-showcase',
-        icon: <Globe className="w-4 h-4" />,
-        description: 'Complete enterprise IT solutions'
-      },
-      {
-        label: 'Healthcare',
-        href: '/healthcare-solutions',
-        icon: <Star className="w-4 h-4" />,
-        description: 'Healthcare technology solutions'
-      },
-      {
-        label: 'Financial Services',
-        href: '/financial-solutions',
-        icon: <Star className="w-4 h-4" />,
-        description: 'Fintech and banking solutions'
-      },
-      {
-        label: 'Manufacturing',
-        href: '/manufacturing-ai-solutions',
-        icon: <Star className="w-4 h-4" />,
-        description: 'Smart manufacturing solutions'
-      }
-    ]
-  },
-  {
-=======
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
     label: 'Company',
     children: [
       {
         label: 'About Us',
         href: '/about',
         icon: <Users className="w-4 h-4" />,
-<<<<<<< HEAD
-        description: 'Learn about our mission and team'
-      },
-      {
-        label: 'Careers',
-        href: '/careers',
-        icon: <Star className="w-4 h-4" />,
-        description: 'Join our innovative team'
-      },
-      {
-        label: 'News & Updates',
-        href: '/news',
-        icon: <Globe className="w-4 h-4" />,
-        description: 'Latest company news and updates'
-      }
-    ]
-  },
-  {
-    label: 'Resources',
-    children: [
-      {
-        label: 'Documentation',
-        href: '/docs',
-        icon: <Globe className="w-4 h-4" />,
-        description: 'Technical documentation and guides'
-      },
-      {
-        label: 'Blog',
-        href: '/blog',
-        icon: <Star className="w-4 h-4" />,
-        description: 'Insights and industry trends'
-=======
         description: 'Our mission and team'
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
       },
       {
         label: 'Case Studies',
@@ -345,11 +235,6 @@ const navigationItems: NavigationItem[] = [
         description: 'Latest company news'
       }
     ]
-<<<<<<< HEAD
-  }
-];
-
-=======
   },
   {
     label: 'Resources',
@@ -859,7 +744,6 @@ const contactInfo = {
   address: '364 E Main St STE 1008, Middletown DE 19709'
 };
 
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
 const UltraFuturisticNavigation2040: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -907,13 +791,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
       setIsSearchOpen(false);
       setSearchQuery('');
     }
-<<<<<<< HEAD
-  }, []);
-
-  const toggleMobileMenu = useCallback(() => {
-    setIsMobileMenuOpen(prev => !prev);
-  }, []);
-=======
   };
 
   const handleSearchResultClick = (url: string) => {
@@ -922,7 +799,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
     setSearchQuery('');
     setSearchResults([]);
   };
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
 
   return (
     <nav 
@@ -931,8 +807,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
       role="navigation"
       aria-label="Main navigation"
     >
-<<<<<<< HEAD
-=======
       {/* Top Contact Bar */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -969,7 +843,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
         </div>
       </div>
 
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
@@ -1034,118 +907,15 @@ const UltraFuturisticNavigation2040: React.FC = () => {
                               </Link>
                             ))}
                           </div>
-<<<<<<< HEAD
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                ) : (
-                  <Link
-                    href={item.href || '#'}
-                    className="px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-800/50 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-black"
-                  >
-                    {item.icon}
-                    <span>{item.label}</span>
-                  </Link>
-=======
                         </div>
                       </motion.div>
                     )}
                   </AnimatePresence>
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
                 )}
               </div>
             ))}
           </div>
 
-<<<<<<< HEAD
-          {/* Right side actions */}
-          <div className="hidden lg:flex lg:items-center lg:space-x-4">
-            {/* Search */}
-            <button
-              onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className="p-2 text-gray-400 hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-800/50 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-black"
-              aria-label="Open search"
-            >
-              <Search className="w-5 h-5" />
-            </button>
-
-            {/* Notifications */}
-            <button className="p-2 text-gray-400 hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-800/50 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-black">
-              <Bell className="w-5 h-5" />
-              <span className="sr-only">Notifications</span>
-            </button>
-
-            {/* Theme Toggle */}
-            <button
-              onClick={toggleTheme}
-              className="p-2 text-gray-400 hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-800/50 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-black"
-              aria-label={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
-            >
-              {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </button>
-
-            {/* User Menu */}
-            <button className="p-2 text-gray-400 hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-800/50 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-black">
-              <User className="w-5 h-5" />
-              <span className="sr-only">User menu</span>
-            </button>
-
-            {/* CTA Button */}
-            <Link href="/get-started">
-              <button className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black">
-                Get Started
-              </button>
-            </Link>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="lg:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-gray-400 hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-800/50 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-black"
-              aria-expanded={isOpen}
-              aria-label="Toggle mobile menu"
-              aria-expanded={isMobileMenuOpen}
-              aria-controls="mobile-menu"
-            >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-        </div>
-
-      {/* Search Overlay */}
-      <AnimatePresence>
-        {isSearchOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-md border-b border-gray-700/50 p-4"
-          >
-            <form onSubmit={handleSearch} className="max-w-2xl mx-auto">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search for services, solutions, or resources..."
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  autoFocus
-                />
-                <button
-                  type="submit"
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 px-4 py-1 bg-cyan-500 text-white rounded-md hover:bg-cyan-600 transition-colors duration-200"
-                >
-                  Search
-                </button>
-              </div>
-            </form>
-          </motion.div>
-        )}
-      </AnimatePresence>
-=======
           {/* Right Side Actions */}
           <div className="flex items-center space-x-4">
             {/* Search */}
@@ -1208,7 +978,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
 
       {/* Mobile Menu */}
       <AnimatePresence>
@@ -1217,65 +986,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
-            className="lg:hidden bg-gray-900/95 backdrop-blur-md border-b border-gray-700/50"
-          >
-            <div className="px-4 py-6 space-y-4">
-              {/* Mobile Search */}
-              <form onSubmit={handleSearch} className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search..."
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
-              </form>
-
-              {/* Mobile Menu Items */}
-              <div className="space-y-2">
-                {navigationItems.map((item) => (
-                  <div key={item.label}>
-                    {item.children ? (
-                      <div>
-                        <button
-                          onClick={() => toggleDropdown(item.label)}
-                          className="w-full flex items-center justify-between px-3 py-2 text-left text-gray-300 hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-800/50"
-                        >
-                          <span>{item.label}</span>
-                          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.label ? 'rotate-180' : ''}`} />
-                        </button>
-                        {activeDropdown === item.label && (
-                          <div className="ml-4 mt-2 space-y-1">
-                            {item.children.map((child) => (
-                              <Link
-                                key={child.label}
-                                href={child.href || '#'}
-                                className="block px-3 py-2 text-gray-400 hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-800/50"
-                              >
-                                {child.label}
-                              </Link>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    ) : (
-                      <Link
-                        href={item.href || '#'}
-                        className="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-800/50"
-                      >
-                        {item.label}
-                      </Link>
-                    )}
-                  </div>
-                ))}
-              </div>
-
-              {/* Mobile CTA */}
-              <div className="pt-4 border-t border-gray-700/50">
-                <Link href="/get-started" className="block w-full text-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
-=======
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-gray-900/95 backdrop-blur-md border-t border-gray-800/50"
             ref={mobileMenuRef}
@@ -1333,18 +1043,10 @@ const UltraFuturisticNavigation2040: React.FC = () => {
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
                   Get Started
                   <ArrowRight className="w-4 h-4 ml-2 inline" />
                 </Link>
               </div>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
-=======
             </div>
           </motion.div>
         )}
@@ -1493,6 +1195,5 @@ const UltraFuturisticNavigation2040: React.FC = () => {
         </AnimatePresence>
       </nav>
     </>
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
   );
 }

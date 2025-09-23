@@ -9,63 +9,6 @@ interface SEOProps {
   image?: string;
   url?: string;
   type?: string;
-<<<<<<< HEAD
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  noindex?: boolean;
-  nofollow?: boolean;
-  canonical?: string;
-}
-
-const defaultSEO = {
-  title: 'Zion Tech Group - Pioneering Future Technology Solutions',
-  description: 'Leading technology company specializing in AI, Quantum Computing, Space Technology, and innovative business solutions. Transform your business with cutting-edge technology.',
-  keywords: 'AI, Machine Learning, Quantum Computing, Space Technology, Business Automation, IT Solutions, Technology Consulting, Innovation',
-  image: '/images/zion-tech-group-og.jpg',
-  url: 'https://ziontechgroup.com',
-  type: 'website',
-  author: 'Zion Tech Group',
-  section: 'Technology',
-  tags: ['Technology', 'AI', 'Innovation', 'Business Solutions']
-};
-
-const SEO: React.FC<SEOProps> = ({
-  title,
-  description,
-  keywords,
-  image,
-  url,
-  type,
-  author,
-  publishedTime,
-  modifiedTime,
-  section,
-  tags,
-  noindex = false,
-  nofollow = false,
-  canonical
-}) => {
-  const router = useRouter();
-  const currentUrl = canonical || `${defaultSEO.url}${router.asPath}`;
-  
-  const seo = {
-    title: title ? `${title} | Zion Tech Group` : defaultSEO.title,
-    description: description || defaultSEO.description,
-    keywords: keywords || defaultSEO.keywords,
-    image: image || defaultSEO.image,
-    url: url || defaultSEO.url,
-    type: type || defaultSEO.type,
-    author: author || defaultSEO.author,
-    section: section || defaultSEO.section,
-    tags: tags || defaultSEO.tags
-  };
-
-  // Structured Data for Organization
-  const organizationSchema = {
-=======
   publishedAt?: string;
   modifiedAt?: string;
   author?: string;
@@ -89,19 +32,13 @@ const SEO: React.FC<SEOProps> = ({
   structuredData
 }) => {
   const defaultStructuredData = {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-47ff
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
-<<<<<<< HEAD
-    "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
-    "description": "Pioneering the future of technology with innovative solutions that drive business transformation",
-=======
     "logo": "https://ziontechgroup.com/logo.png",
     "description": "Revolutionary Technology Solutions for 2045 and Beyond",
     "foundingDate": "2025",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-47ff
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
@@ -117,57 +54,6 @@ const SEO: React.FC<SEOProps> = ({
       "email": "kleber@ziontechgroup.com"
     },
     "sameAs": [
-<<<<<<< HEAD
-      "https://www.linkedin.com/company/zion-tech-group",
-      "https://github.com/Zion-Holdings",
-      "https://twitter.com/ziontechgroup"
-    ],
-    "foundingDate": "2020",
-    "numberOfEmployees": "50-100",
-    "industry": "Technology",
-    "serviceType": [
-      "Artificial Intelligence",
-      "Quantum Computing",
-      "Space Technology",
-      "Business Automation",
-      "IT Solutions"
-    ]
-  };
-
-  // Structured Data for WebSite
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "description": "Leading technology company specializing in AI, Quantum Computing, and innovative business solutions",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://ziontechgroup.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  };
-
-  // Structured Data for BreadcrumbList
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://ziontechgroup.com"
-      },
-      ...(router.asPath !== '/' ? [{
-        "@type": "ListItem",
-        "position": 2,
-        "name": router.asPath.split('/').pop()?.replace(/-/g, ' ') || 'Page',
-        "item": currentUrl
-      }] : [])
-    ]
-  };
-=======
       "https://facebook.com/ziontechgroup",
       "https://twitter.com/ziontechgroup",
       "https://linkedin.com/company/ziontechgroup",
@@ -208,28 +94,10 @@ const SEO: React.FC<SEOProps> = ({
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-47ff
 
   return (
     <Head>
       {/* Basic Meta Tags */}
-<<<<<<< HEAD
-      <title>{seo.title}</title>
-      <meta name="description" content={seo.description} />
-      <meta name="keywords" content={seo.keywords} />
-      <meta name="author" content={seo.author} />
-      <meta name="robots" content={noindex ? 'noindex' : nofollow ? 'nofollow' : 'index, follow'} />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={currentUrl} />
-      
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={seo.title} />
-      <meta property="og:description" content={seo.description} />
-      <meta property="og:image" content={seo.image} />
-      <meta property="og:url" content={currentUrl} />
-      <meta property="og:type" content={seo.type} />
-=======
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -244,21 +112,14 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:image" content={image} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-47ff
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
-<<<<<<< HEAD
-      <meta name="twitter:title" content={seo.title} />
-      <meta name="twitter:description" content={seo.description} />
-      <meta name="twitter:image" content={seo.image} />
-=======
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-47ff
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
       
@@ -268,19 +129,6 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="msapplication-TileColor" content="#06b6d4" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-<<<<<<< HEAD
-      
-      {/* Article Meta Tags (if applicable) */}
-      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-      {section && <meta property="article:section" content={section} />}
-      {tags && tags.map((tag, index) => (
-        <meta key={index} property="article:tag" content={tag} />
-      ))}
-      
-      {/* Favicon and App Icons */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-=======
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       
       {/* Canonical URL */}
@@ -288,7 +136,6 @@ const SEO: React.FC<SEOProps> = ({
       
       {/* Favicon and App Icons */}
       <link rel="icon" href="/favicon.ico" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-47ff
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -325,35 +172,15 @@ const SEO: React.FC<SEOProps> = ({
       />
       
       {/* Additional SEO Meta Tags */}
-<<<<<<< HEAD
-      <meta name="application-name" content="Zion Tech Group" />
-      <meta name="msapplication-config" content="/browserconfig.xml" />
-      <meta name="format-detection" content="telephone=no" />
-=======
       {publishedAt && <meta property="article:published_time" content={publishedAt} />}
       {modifiedAt && <meta property="article:modified_time" content={modifiedAt} />}
       {section && <meta property="article:section" content={section} />}
       {tags && tags.map((tag, index) => (
         <meta key={index} property="article:tag" content={tag} />
       ))}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-47ff
       
       {/* Performance and Security Headers */}
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-<<<<<<< HEAD
-      <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-      
-      {/* Performance Optimization */}
-      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      
-      {/* Custom Meta Tags for Zion Tech Group */}
-      <meta name="company" content="Zion Tech Group" />
-      <meta name="industry" content="Technology, AI, Quantum Computing, Space Technology" />
-      <meta name="services" content="AI Solutions, Quantum Computing, Business Automation, IT Services, Space Technology" />
-      <meta name="location" content="Middletown, Delaware, United States" />
-      <meta name="contact" content="+1 302 464 0950" />
-      <meta name="email" content="kleber@ziontechgroup.com" />
-=======
       <meta name="format-detection" content="telephone=no" />
       
       {/* Social Media Verification */}
@@ -368,7 +195,6 @@ const SEO: React.FC<SEOProps> = ({
           <meta property="article:publisher" content="https://ziontechgroup.com" />
         </>
       )}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-47ff
     </Head>
   );
 };

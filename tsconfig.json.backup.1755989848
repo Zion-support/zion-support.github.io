@@ -7,12 +7,6 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-<<<<<<< HEAD
-    "strict": false,
-    "noEmit": true,
-    "incremental": true,
-    "module": "esnext",
-=======
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
@@ -26,7 +20,6 @@
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
->>>>>>> origin/3ycx6d-codex/implement-global-error-boundary-with-toasts
     "esModuleInterop": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,

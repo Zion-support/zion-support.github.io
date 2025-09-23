@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import axios from 'axios';
 import { safeStorage } from '@/utils/safeStorage';
 import { store } from '@/store';
@@ -25,7 +23,6 @@ export async function loginUser(email: string, password: string) {
     throw error;
   }
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import apiClient, { setAuthToken } from './apiClient';
 
 const API_URL = import.meta.env.VITE_API_URL || '';
@@ -68,8 +65,5 @@ export async function registerUser(name: string, email: string, password: string
     console.warn('Token missing in signup response', data);
   }
   return { res, data };
-<<<<<<< HEAD
-=======
->>>>>>> origin/5usi8s-codex/debug-persistent-login-failure
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 }

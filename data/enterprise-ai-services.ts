@@ -38,10 +38,7 @@ export interface EnterpriseAIService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 export const enterpriseAIServices: EnterpriseAIService[] = [
   // Enterprise AI Solutions
   {
@@ -95,10 +92,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     rating: 4.9,
     reviews: 12
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Supply Chain Optimization
   {
     id: 'ai-supply-chain-optimizer',
@@ -151,10 +145,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     rating: 4.7,
     reviews: 35
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Customer Experience Platform
   {
     id: 'ai-customer-experience-platform',
@@ -207,10 +198,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     rating: 4.8,
     reviews: 38
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Financial Risk Management
   {
     id: 'ai-financial-risk-management',
@@ -263,10 +251,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     rating: 4.9,
     reviews: 22
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Healthcare Analytics
   {
     id: 'ai-healthcare-analytics',
@@ -319,10 +304,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     rating: 4.8,
     reviews: 28
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Manufacturing Intelligence
   {
     id: 'ai-manufacturing-intelligence',
@@ -375,10 +357,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     rating: 4.7,
     reviews: 31
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Energy Management
   {
     id: 'ai-energy-management',
@@ -431,10 +410,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     rating: 4.6,
     reviews: 42
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Education Platform
   {
     id: 'ai-education-platform',
@@ -487,10 +463,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     rating: 4.7,
     reviews: 48
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Real Estate Platform
   {
     id: 'ai-real-estate-platform',

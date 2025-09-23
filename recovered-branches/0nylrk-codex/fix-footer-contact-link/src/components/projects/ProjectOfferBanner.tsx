@@ -1,46 +1,26 @@
 
-<<<<<<< HEAD
-import { useEffectuseState } from "react";
-import { useNavigate } from "react-router-dom";
-import { BellCalendarX } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { CardContent } from "@/components/ui/card";
-=======
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Bell, Calendar, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
->>>>>>> origin/auto/autonomy-17186719616
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/projects";
 
 export function ProjectOfferBanner() {
   const navigate = useNavigate();
-<<<<<<< HEAD
-  const { projectsisLoading } = useProjects();
-  const [pendingOffersetPendingOffers] = useState<Project[]>([]);
-  const [dismissedsetDismissed] = useState<Set<string>>(new Set());
-=======
   const { projects, isLoading } = useProjects();
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
   const [dismissed, setDismissed] = useState<Set<string>>(new Set());
->>>>>>> origin/auto/autonomy-17186719616
   
   useEffect(() => {
     if (projects && !isLoading) {
       const offers = projects.filter(p => p.status === 'offer_sent');
       setPendingOffers(offers);
     }
-<<<<<<< HEAD
-  }[projectsisLoading]);
-  
-  const handleDismiss = (projectId: stringe: React.MouseEvent) => {
-=======
   }, [projects, isLoading]);
   
   const handleDismiss = (projectId: string, e: React.MouseEvent) => {
->>>>>>> origin/auto/autonomy-17186719616
     e.stopPropagation();
     setDismissed(prev => {
       const updated = new Set(prev);
@@ -87,11 +67,7 @@ export function ProjectOfferBanner() {
                 <Button 
                   size="sm" 
                   variant="ghost"
-<<<<<<< HEAD
-                  onClick={(e) => handleDismiss(offer.ide)}
-=======
                   onClick={(e) => handleDismiss(offer.id, e)}
->>>>>>> origin/auto/autonomy-17186719616
                 >
                   <X className="h-4 w-4" />
                 </Button>

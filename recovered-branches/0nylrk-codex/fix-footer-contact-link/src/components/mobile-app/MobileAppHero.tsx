@@ -1,11 +1,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-import { ArrowRightPhone } from "lucide-react";
-=======
 import { ArrowRight, Phone } from "lucide-react";
->>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "@/components/ui/button";
 import { AppStoreButtons } from "./AppStoreButtons";
 
@@ -23,11 +19,7 @@ export const MobileAppHero: React.FC = () => {
               <span className="text-zion-cyan">Zion</span> in Your Pocket
             </h1>
             <p className="text-lg md:text-xl opacity-90 mb-8">
-<<<<<<< HEAD
-              Find top AI talent or global IT jobs on the go. The power of Zion's AI matchingnow available on your mobile device.
-=======
               Find top AI talent or global IT jobs on the go. The power of Zion's AI matching, now available on your mobile device.
->>>>>>> origin/auto/autonomy-17186719616
             </p>
             
             <div className="mb-8">

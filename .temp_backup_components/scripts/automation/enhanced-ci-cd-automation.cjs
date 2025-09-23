@@ -285,8 +285,4 @@ ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResul
   console.error(" Pipeline "failed": ")
   console.error(" ""CI/CD"" automation "failed": ")
 // Start the ""CI/CD""
-<<<<<<< HEAD
 // Start the "
-=======
-// Start the "
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

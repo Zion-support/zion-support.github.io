@@ -1,17 +1,4 @@
 {
-<<<<<<< HEAD
-          "postautomation": "npm run automation:git-sync",
-      "lint:staged": "lint-staged",
-      "performance:audit": "node automation/performance-audit.cjs",
-      "nextgen:factory": "node automation/nextgen-autonomous-factory.cjs scan",
-      "nextgen:orchestrator": "node automation/nextgen-orchestrator.cjs start",
-      "nextgen:scan": "node automation/nextgen-autonomous-factory.cjs scan",
-      "nextgen:cron:start": "bash automation/nextgen-cron.sh start",
-      "nextgen:cron:stop": "bash automation/nextgen-cron.sh stop",
-      "nextgen:cron:status": "bash automation/nextgen-cron.sh status",
-      "nextgen:scheduler": "node automation/nextgen-scheduler.cjs"
-    },
-=======
   "name": "bolt.new.zion.app",
   "version": "0.1.0",
   "private": true,
@@ -230,7 +217,6 @@
     "conflicts:cron:stop": "bash automation/merge-conflict-cron.sh stop",
     "conflicts:cron:status": "bash automation/merge-conflict-cron.sh status"
   },
->>>>>>> origin/cursor/build-zion-protocol-whitepaper-document-a8e0
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
@@ -263,11 +249,7 @@
     "node-cron": "^4.2.1",
     "openai": "^5.12.2",
     "path": "^0.12.7",
-<<<<<<< HEAD
-    "pdfkit": "^0.17.1",
-=======
     "pdfkit": "^0.13.0",
->>>>>>> origin/cursor/build-zion-protocol-whitepaper-document-a8e0
     "postcss": "^8.4.32",
     "react": "^17.0.2",
     "react-datepicker": "^8.4.0",

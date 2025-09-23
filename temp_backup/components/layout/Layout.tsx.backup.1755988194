@@ -1,15 +1,8 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import UltraFuturisticNavigation2045 from './UltraFuturisticNavigation2045';
-import UltraFuturisticFooter2025 from './UltraFuturisticFooter2025';
-import EnhancedSidebar2025 from './EnhancedSidebar2025';
-import UltraFuturisticBackground2046 from '../backgrounds/UltraFuturisticBackground2046';
-=======
 import UltraAdvancedFuturisticNavigation2041 from './UltraAdvancedFuturisticNavigation2041';
 import UltraAdvancedFuturisticFooter2041 from './UltraAdvancedFuturisticFooter2041';
 import EnhancedSidebar2025 from './EnhancedSidebar2025';
 import UltraAdvancedFuturisticBackground2040 from '../backgrounds/UltraAdvancedFuturisticBackground2040';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-21a7
 import TopContactBar from './TopContactBar';
 import UltraFuturisticBackground2036 from '../backgrounds/UltraFuturisticBackground2036';
 import EnhancedPerformanceMonitor from '../EnhancedPerformanceMonitor';
@@ -27,14 +20,12 @@ export default function Layout({ children }: LayoutProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
 
-
   useEffect(() => {
     // Check for saved theme preference
     const savedTheme = localStorage.getItem('theme') as 'dark' | 'light';
     if (savedTheme) {
       setTheme(savedTheme);
     }
-
 
     // Simulate loading time for better UX
     const timer = setTimeout(() => setIsLoading(false), 1000);
@@ -70,13 +61,6 @@ export default function Layout({ children }: LayoutProps) {
     }
   }, [sidebarOpen]);
 
-<<<<<<< HEAD
-  useEffect(() => {
-    // Apply theme to document
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-=======
   return (
     <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
       {/* Skip to content link for accessibility */}
@@ -147,7 +131,6 @@ export default function Layout({ children }: LayoutProps) {
         {/* Footer */}
         <UltraAdvancedFuturisticFooter2041 />
       </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-21a7
 
   const handleThemeToggle = () => {
     setTheme(prev => prev === 'dark' ? 'light' : 'dark');

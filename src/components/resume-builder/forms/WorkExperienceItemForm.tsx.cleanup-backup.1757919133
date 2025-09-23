@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import { useState } from 'react',
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm } from "react-hook-form",
-import { z } from "zod",
-import { WorkExperience } from "@/types/resume",
-import { Button } from "@/components/ui/button",
-import { Calendar } from "@/components/ui/calendar",
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { Textarea } from "@/components/ui/textarea",
-import { cn } from "@/lib/utils",
-import { Switch } from "@/components/ui/switch",
-import { format } from "date-fns",
-import { CalendarIcon, Loader2 } from 'lucide-react'
-import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
-import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
-=======
 import { useState } from 'react';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -34,27 +15,12 @@ import { format } from "date-fns";
 import { CalendarIcon, Loader2 } from 'lucide-react'
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
->>>>>>> origin/auto/autonomy-17186719616
 
 // Define form schema
 const formSchema = z.object({
   company_name: z.string().min(1, "Company name is required"),
   role_title: z.string().min(1, "Role title is required"),
   start_date: z.date({
-<<<<<<< HEAD
-    required_error: "Start date is required"}),
-  end_date: z.date().optional(),
-  is_current: z.boolean().default(false),
-  description: z.string().optional(),
-  location: z.string().optional()}),
-
-type FormValues = z.infer<typeof formSchema>,
-
-interface WorkExperienceItemFormProps {
-  initialData?: WorkExperience,
-  onSubmit: (data: WorkExperience) => Promise<void>,
-  onCancel: () => void
-=======
     required_error: "Start date is required",
   }),
   end_date: z.date().optional(),
@@ -69,20 +35,14 @@ interface WorkExperienceItemFormProps {
   initialData?: WorkExperience;
   onSubmit: (data: WorkExperience) => Promise<void>;
   onCancel: () => void;
->>>>>>> origin/auto/autonomy-17186719616
 }
 
 export function WorkExperienceItemForm({
   initialData,
   onSubmit,
-<<<<<<< HEAD
-  onCancel}: WorkExperienceItemFormProps) {
-  const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),
-=======
   onCancel,
 }: WorkExperienceItemFormProps) {
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
->>>>>>> origin/auto/autonomy-17186719616
 
   // Set up form
   const form = useForm<FormValues>({
@@ -94,14 +54,6 @@ export function WorkExperienceItemForm({
       end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
       is_current: initialData?.is_current || false,
       description: initialData?.description || "",
-<<<<<<< HEAD
-      location: initialData?.location || ""}}),
-  
-  const { isSubmitting } = form.formState,
-  const watchIsCurrent = form.watch("is_current"),
-  const watchRoleTitle = form.watch("role_title"),
-  const watchCompanyName = form.watch("company_name"),
-=======
       location: initialData?.location || "",
     },
   });
@@ -110,7 +62,6 @@ export function WorkExperienceItemForm({
   const watchIsCurrent = form.watch("is_current");
   const watchRoleTitle = form.watch("role_title");
   const watchCompanyName = form.watch("company_name");
->>>>>>> origin/auto/autonomy-17186719616
 
   const handleFormSubmit = async (values: FormValues) => {
     // Create a properly typed WorkExperience object with all required fields
@@ -123,17 +74,6 @@ export function WorkExperienceItemForm({
       is_current: values.is_current,      // Required
       description: values.description,    // Optional
       location: values.location,          // Optional
-<<<<<<< HEAD
-    },
-    
-    await onSubmit(workExperience),
-  },
-
-  const handleAIEnhancement = (content: string) => {
-    form.setValue("description", content, { shouldDirty: true }),
-    setIsEnhancementDialogOpen(false),
-  },
-=======
     };
     
     await onSubmit(workExperience);
@@ -143,7 +83,6 @@ export function WorkExperienceItemForm({
     form.setValue("description", content, { shouldDirty: true });
     setIsEnhancementDialogOpen(false);
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <>
@@ -152,11 +91,6 @@ export function WorkExperienceItemForm({
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
               control={form.control}
-<<<<<<< HEAD
-              name='company_name'
-              render={({ field }: { field: any }) => (                <FormItem>
-=======
->>>>>>> origin/auto/autonomy-17186719616
               name="company_name"
               render={({ field }: { field: any }) => (
                 <FormItem>
@@ -209,10 +143,6 @@ export function WorkExperienceItemForm({
                     <Switch
                       aria-label="Current position"
                       checked={field.value}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
                       onCheckedChange={field.onChange}
                       id="current-position"
                     />
@@ -226,11 +156,8 @@ export function WorkExperienceItemForm({
             />
           </div>
 
-<<<<<<< HEAD
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
->>>>>>> origin/auto/autonomy-17186719616
               control={form.control}
               name="start_date"
               render={({ field }: { field: any }) => (
@@ -257,28 +184,6 @@ export function WorkExperienceItemForm({
                     </PopoverTrigger>
                     <PopoverContent className="w-auto p-0" align="start">
                       <Calendar
-<<<<<<< HEAD
-                        mode='single'
-                        selected={field && field.value}
-                        onSelect={field && field.onChange}
-                        initialFocus
-                        captionLayout='dropdown-buttons'
-                        fromYear={1990}
-                        toYear={new Date().getFullYear()}                      />
-                    </PopoverContent>
-                  </Popover>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            {!watchIsCurrent && (
-              <FormField
-                control={form.control}
-                name='end_date'
-                render={({ field }: { field: any }) => (
-                  <FormItem className='flex flex-col'>                    <FormLabel>End Date</FormLabel>
-=======
->>>>>>> origin/auto/autonomy-17186719616
                         mode="single"
                         selected={field.value}
                         onSelect={field.onChange}
@@ -382,10 +287,6 @@ export function WorkExperienceItemForm({
           
           <div className="flex justify-end gap-2">
             <Button type="button" variant="outline" onClick={onCancel}>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
               Cancel
             </Button>
             <Button type="submit" disabled={isSubmitting}>
@@ -401,45 +302,8 @@ export function WorkExperienceItemForm({
           </div>
         </form>
       </Form>
-<<<<<<< HEAD
-          />;
-
-          <div className='flex justify-end gap-2'>;
-            <Button type='button' variant='outline' onClick={onCancel}>;
-              Cancel;
-            </Button>;
-            <Button type='submit' disabled={isSubmitting}>;
-              {isSubmitting ? (;
-                <>;
-                  <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
-                  Saving...;
-                </>;
-              ) : (;
-                <>Save</>;
-              )}
-              </FormItem>)}
-          />;
-          <div className='flex justify - end gap - 2'>;
-            <Button type='button' variant='outline' on_click={on_cancel}>;
-              Cancel;
-            </Button>;
-            <Button type='submit' disabled={is_submitting}>;
-              {is_submitting ? (
-                <>;
-                  <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />;
-                  Saving...;
-                </>) : (
-                <>Save</>)}
-            </Button>;
-          </div>;
-        </form>;
-      </Form>;
-
-
-=======
 
       <AIEnhancementDialog
->>>>>>> origin/auto/autonomy-17186719616
         title="Enhance Work Experience Description"
         isOpen={isEnhancementDialogOpen}
         onClose={() => setIsEnhancementDialogOpen(false)}
@@ -447,18 +311,10 @@ export function WorkExperienceItemForm({
         defaultOptions={{
           enhancementType: "work-description",
           content: form.getValues("description") || "",
-<<<<<<< HEAD
-          context: `${watchRoleTitle} at ${watchCompanyName}`}}
-        initialContent={form.getValues("description") || ""}
-      />
-    </>
-  ),
-=======
           context: `${watchRoleTitle} at ${watchCompanyName}`,
         }}
         initialContent={form.getValues("description") || ""}
       />
     </>
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

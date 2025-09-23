@@ -12,10 +12,6 @@
   "categories": ["business", "productivity", "technology"],
   "icons": [
     {
-<<<<<<< HEAD
-      "src": "/icons/icon-72x72.png",
-      "sizes": "72x72",
-=======
       "src": "/logos/zion-logo.png",
       "sizes": "192x192",
       "type": "image/png",
@@ -24,7 +20,6 @@
     {
       "src": "/logos/zion-logo.png",
       "sizes": "512x512",
->>>>>>> 5e27e402e0b68b9c85b868b0fd8919518fd31198
       "type": "image/png",
       "purpose": "maskable any"
     },
@@ -79,9 +74,6 @@
       "url": "/services",
       "icons": [
         {
-<<<<<<< HEAD
-          "src": "/icons/services-icon.png",
-=======
           "src": "/icon-96x96.png",
           "sizes": "96x96"
         }
@@ -95,7 +87,6 @@
       "icons": [
         {
           "src": "/icon-96x96.png",
->>>>>>> 5e27e402e0b68b9c85b868b0fd8919518fd31198
           "sizes": "96x96"
         }
       ]
@@ -107,14 +98,9 @@
       "url": "/contact",
       "icons": [
         {
-<<<<<<< HEAD
-          "src": "/icons/contact-icon.png",
-          "sizes": "96x96"
-=======
           "src": "/icons/dashboard-shortcut.png",
           "sizes": "96x96",
           "type": "image/png"
->>>>>>> 5e27e402e0b68b9c85b868b0fd8919518fd31198
         }
       ]
     }
@@ -124,12 +110,7 @@
       "src": "/screenshots/desktop-home.png",
       "sizes": "1280x720",
       "type": "image/png",
-<<<<<<< HEAD
-      "form_factor": "wide",
-      "label": "Homepage - Revolutionary Technology Solutions"
-=======
       "form_factor": "wide"
->>>>>>> 5e27e402e0b68b9c85b868b0fd8919518fd31198
     },
     {
       "src": "/screenshots/mobile-home.png",

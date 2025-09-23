@@ -41,10 +41,6 @@ export interface InnovativeMicroSaasSolution {
   reviews: number;
 }
 
-<<<<<<< HEAD
-export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
-  // AI-Powered Social Media Scheduler
-=======
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -53,7 +49,6 @@ const contact = {
 };
 
 export const innovativeMicroSaasSolutions: InnovativeMicroSaasSolution[] = [
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
   {
     id: 'ai-social-media-scheduler',
     name: 'AI-Powered Social Media Scheduler',
@@ -243,81 +238,6 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaasSolution[] = [
     setupTime: '10 minutes',
     category: 'Financial Management',
     realService: true,
-<<<<<<< HEAD
-    technology: ['React, Node.js, Python, PostgreSQL, Redis, AWS, Payment APIs'],
-    integrations: ['Stripe, PayPal, QuickBooks, Xero, FreshBooks, Slack'],
-    useCases: ['Invoice generation, Payment tracking, Financial reporting, Client management, Tax preparation'],
-    roi: 'Users see 250% ROI through time savings and improved cash flow management.',
-    competitors: ['FreshBooks, QuickBooks, Wave, Xero, Zoho Invoice'],
-    marketSize: '$12B invoicing software market',
-    growthRate: '18% annual growth',
-    variant: 'invoice-generator',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Full-featured invoicing platform with AI automation, comprehensive analytics, and payment integration. Includes training and customization services.',
-    launchDate: '2024-06-15',
-    customers: 756,
-    rating: 4.7,
-    reviews: 189
-  },
-
-  // AI-Powered Project Management
-  {
-    id: 'ai-project-management',
-    name: 'AI-Powered Project Management',
-    tagline: 'Intelligent project planning and execution',
-    price: '$78',
-    period: '/month',
-    description: 'Advanced project management platform that uses AI to optimize task allocation, predict project timelines, and improve team collaboration through intelligent automation.',
-    features: [
-      'AI task optimization',
-      'Project timeline prediction',
-      'Team collaboration tools',
-      'Resource allocation',
-      'Progress tracking',
-      'Risk assessment',
-      'Integration marketplace',
-      'Mobile app support',
-      'API access',
-      'White-label options'
-    ],
-    popular: true,
-    icon: '📋',
-    color: 'from-orange-600 to-amber-700',
-    textColor: 'text-orange-400',
-    link: 'https://ziontechgroup.com/ai-project-management',
-    marketPosition: 'Competes with Asana ($10.99-24.99/month), Monday.com ($8-16/month), Trello ($5-17.50/month). Our advantage: AI optimization, better analytics, and predictive capabilities.',
-    targetAudience: 'Project managers, Development teams, Marketing teams, Creative agencies, Small businesses',
-    trialDays: 14,
-    setupTime: '15 minutes',
-    category: 'Project Management',
-    realService: true,
-    technology: ['React, Node.js, Python, TensorFlow, PostgreSQL, Redis, AWS'],
-    integrations: ['Slack, Microsoft Teams, Google Workspace, Office 365, Jira, GitHub'],
-    useCases: ['Project planning, Task management, Team collaboration, Resource allocation, Progress tracking'],
-    roi: 'Teams achieve 300% ROI through improved productivity and project success rates.',
-    competitors: ['Asana, Monday.com, Trello, ClickUp, Notion'],
-    marketSize: '$15B project management market',
-    growthRate: '25% annual growth',
-    variant: 'project-management',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Production-ready project management platform with AI capabilities, comprehensive collaboration tools, and analytics. Includes training and customization services.',
-    launchDate: '2024-08-01',
-    customers: 1234,
-    rating: 4.8,
-    reviews: 412
-=======
     technology: ['Business automation, Mobile development, Customer management, Marketing automation'],
     integrations: ['Square, QuickBooks, Google My Business, Facebook Business, Yelp'],
     useCases: ['Appointment scheduling, Customer management, Marketing automation, Operational efficiency'],
@@ -423,6 +343,5 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaasSolution[] = [
     customers: 567,
     rating: 4.7,
     reviews: 345
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
   }
 ];

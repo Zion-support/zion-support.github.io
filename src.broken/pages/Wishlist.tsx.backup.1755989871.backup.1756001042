@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useFavorites } from '@/hooks/useFavorites';
 import { X } from 'lucide-react';
 
@@ -127,7 +125,6 @@ export default function WishlistPage() {
           })}
         </div>
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import { loadWishlistFromDB, removeFromWishlist, getApiUrl } from '@/store/wishlistSlice';
@@ -189,9 +186,6 @@ export default function Wishlist() {
             </li>
           ))}
         </ul>
-<<<<<<< HEAD
-=======
->>>>>>> origin/5yaxyc-codex/implement-wishlist-functionality
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       )}
     </div>

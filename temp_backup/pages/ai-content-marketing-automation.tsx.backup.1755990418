@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import Head from 'next/head';
 import { PenTool, Target, Users, TrendingUp, Zap, Globe, BarChart3, Smartphone } from 'lucide-react';
 
@@ -752,4 +750,3 @@ export default function AIContentMarketingAutomation() {
     </div>
   );
 }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f29f

@@ -328,8 +328,4 @@ if ( {})
      {}
     const scanner = new SecurityScanner}(;);
     scanner.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = SecurityScanner;
-=======
-module.exports = SecurityScanner;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

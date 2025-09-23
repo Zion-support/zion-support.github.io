@@ -25,16 +25,6 @@ interface SidebarItem {
 
 const sidebarItems: SidebarItem[] = [
   {
-<<<<<<< HEAD
-    name: 'Home',
-    href: '/',
-    icon: <Home className="w-5 h-5" />,
-    description: 'Welcome to Zion Tech Group'
-  },
-  {
-    name: 'Services',
-    href: '/services',
-=======
     title: 'AI & Consciousness',
     icon: <Brain className="w-5 h-5" />,
     color: 'text-violet-400',
@@ -98,7 +88,6 @@ const sidebarItems: SidebarItem[] = [
   },
   {
     title: 'Micro SAAS',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f821
     icon: <Rocket className="w-5 h-5" />,
     description: 'Our comprehensive technology solutions',
     badge: 'Featured',

@@ -21,14 +21,6 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
-<<<<<<< HEAD
-[functions.environment]
-  SENTRY_LOG_LEVEL = "debug"
-
-[functions.healthCheckCron]
-=======
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -275,8 +267,6 @@
   to = "/"
   status = 301
 
-<<<<<<< HEAD
-=======
 [[scheduled.functions]]
   name = "component-coupling-graph-runner"
   schedule = "29 */6 * * *"
@@ -321,6 +311,5 @@
 # Newly added intelligent meta orchestrator
 [[scheduled.functions]]
   name = "intelligent-meta-orchestrator"
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
   schedule = "*/3 * * * *"
 >>>>>>> 2b8bbbb18a09713bdeef09b7c3a1ee123e0bd7d0

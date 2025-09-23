@@ -1,11 +1,3 @@
-<<<<<<< HEAD:src.disabled/src/data/cuttingEdgeITInfrastructureServices2030.ts
-import { ProductListing } from "@/types/listings"; ;;,"});"})"""@/types/listings";&apos,"
-";";"
-const { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"""""";";"""
-import { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"",
-""";,
-";";"
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -14,7 +6,6 @@ import { ProductListing } from "@/types/listings"; ;"","});"})"""""""@/types/lis
 ""
 =======
 import { ProductListing } from "@/types/listings"; ;;,"});"})"""@/types/listings";&apos,"
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 ";";"
 =======
 const { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"""""";";"""
@@ -22,10 +13,4 @@ const { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listin
 import { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"",
 """;,
 ";";"
-<<<<<<< HEAD:backup-merge-conflicts/specializedHealthcareBiotechServices2025.ts.backup
->>>>>>> main
->>>>>>> main
->>>>>>> main
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/data/cuttingEdgeITInfrastructureServices2030.ts
 >>>>>>> pr-11914:backup-merge-conflicts/specializedHealthcareBiotechServices2025.ts.backup

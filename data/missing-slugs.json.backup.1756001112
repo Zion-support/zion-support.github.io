@@ -1,8 +1,4 @@
 [
-<<<<<<< HEAD
-  "advanced-solutions",
-  "docs/api-rest",
-=======
   "ai-autonomous-business-intelligence",
 =======
   "advanced-solutions",
@@ -74,7 +70,6 @@
   "quantum-supply-chain-optimizer",
   "quantum-threat-detection",
   "real-estate-technology-solutions",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
   "services/ai-consciousness-collaboration-platform",
   "services/ai-consciousness-evolution-platform",
   "services/ai-consciousness-monitoring-system",
@@ -94,12 +89,7 @@
   "services/quantum-emotional-intelligence-engine",
   "services/quantum-memory-consolidation-ai",
   "services/quantum-predictive-analytics-engine",
-<<<<<<< HEAD
-  "services/rag-evaluation-lab",
-  "services/secrets-rotation-automation"
-=======
   "services/quantum-storage-solutions",
   "space-colonization-services",
   "space-mining-platform"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
 ]

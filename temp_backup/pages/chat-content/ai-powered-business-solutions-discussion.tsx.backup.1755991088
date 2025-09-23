@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export default function Page() { return <div className="py-10">AI-powered business solutions</div> }
-=======
 import Head from 'next/head';
 
 export default function AIPoweredBusinessSolutionsDiscussionPage() {
@@ -11,4 +8,3 @@ export default function AIPoweredBusinessSolutionsDiscussionPage() {
     </>
   );
 }
->>>>>>> origin/cursor/build-client-quote-request-form-74ea

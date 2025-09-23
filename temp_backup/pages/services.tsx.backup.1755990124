@@ -85,7 +85,6 @@ import { ultimateInnovativeServices2025 } from '../data/2025-ultimate-innovative
 import { cuttingEdgeEnterpriseSolutions2025 } from '../data/2025-cutting-edge-enterprise-solutions';
 import { innovativeMicroSaasSolutionsV2 } from '../data/2025-innovative-micro-saas-solutions-v2';
 
-
 // Import our new innovative 2040 services
 import { innovative2040ITServices } from '../data/innovative-2040-it-services';
 import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
@@ -239,18 +238,10 @@ const allServices = [
   ...cuttingEdgeInnovativeServices2025,
   ...advancedITInfrastructureSolutions2025,
   ...advancedAIAutomationSolutions2025,
-<<<<<<< HEAD
-  
-  // Our new 2025 V3 innovative services
-  ...innovativeMicroSaasServices2025V3,
-  ...innovativeITInfrastructureServices2025V3,
-  ...innovativeAIServices2025V3
-=======
   // Our new revolutionary 2046 services
   ...revolutionary2046AdvancedRealMicroSaas,
   ...revolutionary2046AdvancedITServices,
   ...revolutionary2046AdvancedAIServices
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9f53
 ];
 
 const categories = [

@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-StarQuoteUsersAwardTrendingUpCheckCircle
-=======
 import { Star, Quote, Users, Award, TrendingUp, CheckCircle } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 
 interface Testimonial {
   id: string;
@@ -73,11 +69,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
       name: 'Robert Kim',
       title: 'Head of Digital Transformation',
       company: 'Global Innovations Corp',
-<<<<<<< HEAD
-      content: 'Implementing Zion Tech Group\'s AI business intelligence suite revolutionized our decision-making process. We now have real-time insights across all departmentsleading to 35% faster market response and 28% cost optimization.',
-=======
       content: 'Implementing Zion Tech Group\'s AI business intelligence suite revolutionized our decision-making process. We now have real-time insights across all departments, leading to 35% faster market response and 28% cost optimization.',
->>>>>>> origin/auto/autonomy-17186719616
       rating: 5,
       avatar: 'RK',
       category: 'AI & Analytics'
@@ -85,16 +77,6 @@ const EnhancedTestimonialsSection: React.FC = () => {
   ];
 
   const stats = [
-<<<<<<< HEAD
-    { number: '500+'label: 'Projects 'Delivered', 'icon: CheckCircle },
-    { number: '50+'label: 'Enterprise 'Clients', 'icon: Users },
-    { number: '99.9%'label: 'Client 'Satisfaction', 'icon: Award },
-    { number: '4.9/5'label: 'Average 'Rating', 'icon: Star }
-  ];
-
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }(_i) => (
-=======
     { number: '500+', label: 'Projects Delivered', icon: CheckCircle },
     { number: '50+', label: 'Enterprise Clients', icon: Users },
     { number: '99.9%', label: 'Client Satisfaction', icon: Award },
@@ -103,7 +85,6 @@ const EnhancedTestimonialsSection: React.FC = () => {
 
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
->>>>>>> origin/auto/autonomy-17186719616
       <Star
         key={i}
         className={`w-4 h-4 ${
@@ -136,11 +117,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
 
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-<<<<<<< HEAD
-          {stats.map((statindex) => (
-=======
           {stats.map((stat, index) => (
->>>>>>> origin/auto/autonomy-17186719616
             <div key={index} className="text-center group">
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <stat.icon className="w-10 h-10 text-blue-400" />
@@ -201,15 +178,6 @@ const EnhancedTestimonialsSection: React.FC = () => {
           ))}
         </div>
 
-<<<<<<< HEAD
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
         {/* CTA Section */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20">
@@ -218,11 +186,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
             </h3>
             <p className="text-white/70 mb-6 max-w-2xl mx-auto">
               Experience the same transformative results that our clients have achieved. 
-<<<<<<< HEAD
-              'Let', 's discuss how Zion Tech Group can accelerate your innovation journey.
-=======
               Let's discuss how Zion Tech Group can accelerate your innovation journey.
->>>>>>> origin/auto/autonomy-17186719616
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -256,17 +220,6 @@ const EnhancedTestimonialsSection: React.FC = () => {
               <Users className="w-4 h-4 text-purple-400" />
               <span>Global support</span>
             </div>
-<<<<<<< HEAD
-
-            <button
-              onClick={nextTestimonial}
-              onMouseEnter={() => setIsAutoPlaying(false)}
-              className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all duration-300"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
-=======
->>>>>>> origin/auto/autonomy-17186719616
           </div>
         </div>
       </div>

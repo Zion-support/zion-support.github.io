@@ -2,14 +2,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  Menu, X, ChevronDown, ChevronRight, Search, User, ShoppingCart, 
-  Brain, Atom, Shield, Rocket, Cpu, Database, Target, Sparkles,
-  Home, Briefcase, Users, FileText, Phone, Mail, MapPin, Globe,
-  Zap, Star, TrendingUp, Award, Clock, CheckCircle, ExternalLink,
-  Building, GraduationCap, Heart, Palette, BarChart3, Cloud, Lock,
-  Handshake, Video, BookOpen
-=======
   Menu, 
   X, 
   Search, 
@@ -35,7 +27,6 @@ import {
   Code,
   Cpu,
   Star
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-c804
 } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';

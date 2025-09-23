@@ -1,8 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 export interface EmergingTech2026ServiceV2 {
   id: string;
   name: string;
@@ -43,10 +40,7 @@ export interface EmergingTech2026ServiceV2 {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
   // Photonic Computing Platform
   {
@@ -100,10 +94,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     rating: 4.9,
     reviews: 50
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // Holographic Display Platform
   {
     id: 'holographic-display-platform-2026',
@@ -156,10 +147,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     rating: 4.8,
     reviews: 180
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum Internet Security Platform
   {
     id: 'quantum-internet-security-platform-2026',
@@ -212,10 +200,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     rating: 4.9,
     reviews: 150
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // AI Autonomous Business Platform
   {
     id: 'ai-autonomous-business-platform-2026',
@@ -268,10 +253,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     rating: 4.9,
     reviews: 30
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // Biotech AI Research Platform
   {
     id: 'biotech-ai-research-platform-2026',
@@ -324,10 +306,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     rating: 4.9,
     reviews: 80
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // Edge Computing Orchestration
   {
     id: 'edge-computing-orchestration-2026',
@@ -380,10 +359,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     rating: 4.8,
     reviews: 120
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // 5G Private Network Solutions
   {
     id: '5g-private-network-solutions-2026',

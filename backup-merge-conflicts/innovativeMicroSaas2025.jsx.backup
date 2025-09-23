@@ -1,12 +1,8 @@
 <<<<<<< HEAD
-"export\": const INNOVATIVE_MICRO_SAAS_2025 = [
-=======
-<<<<<<< HEAD
 export: const INNOVATIVE_MICRO_SAAS_2025 = [""
 <<<<<<< HEAD:backup-merge-conflicts/innovativeMicroSaas2025.jsx.backup
 =======
 "export": const INNOVATIVE_MICRO_SAAS_2025 = ["]"
->>>>>>> main
 >>>>>>> main
 =======
 "export": const INNOVATIVE_MICRO_SAAS_2025 = ["]"

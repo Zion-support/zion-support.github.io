@@ -1,10 +1,5 @@
 import React from 'react';
 import Homepage2045 from '../components/Homepage2045';
-<<<<<<< HEAD
-
-const HomePage: React.FC = () => {
-  return <Homepage2045 />;
-=======
 import SEOOptimizer from '../components/SEOOptimizer';
 import Analytics from '../components/Analytics';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -23,7 +18,6 @@ const HomePage: React.FC = () => {
       </AccessibilityEnhancer>
     </ErrorBoundary>
   );
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-38e7
 };
 
       {/* Hero Section */}

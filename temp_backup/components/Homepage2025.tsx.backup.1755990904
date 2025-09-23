@@ -372,61 +372,8 @@ const Homepage2025: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Testimonials Section */}
-        <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                What Our Clients Say
-              </h2>
-              <p className="text-xl text-gray-300">
-                Trusted by industry leaders worldwide
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative"
-            >
-              <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 md:p-12">
-                <div className="text-center mb-8">
-                  <div className="flex justify-center mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className={`w-6 h-6 ${
-                          i < testimonials[currentTestimonial].rating
-                            ? 'text-yellow-400 fill-current'
-                            : 'text-gray-600'
-                        }`}
-                        aria-hidden="true"
-                      />
-                    ))}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{feature.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-=======
         {/* Enhanced CTA Section */}
         <section className="py-20 px-4" aria-labelledby="cta-heading">
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}

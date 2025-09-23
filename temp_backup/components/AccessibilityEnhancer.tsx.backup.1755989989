@@ -8,13 +8,6 @@ interface AccessibilityEnhancerProps {
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   const [isVisible, setIsVisible] = useState(false);
-<<<<<<< HEAD
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [isReducedMotion, setIsReducedMotion] = useState(false);
-  const [isLargeText, setIsLargeText] = useState(false);
-  const [isSpacing, setIsSpacing] = useState(false);
-  const [isFocusVisible, setIsFocusVisible] = useState(false);
-=======
   const [isExpanded, setIsExpanded] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
@@ -26,7 +19,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     focusIndicator: true,
     screenReader: false
   });
->>>>>>> cd4748dc562b148d65a1b4346338fa475b702844
 
   const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
   const [focusHistory, setFocusHistory] = useState<HTMLElement[]>([]);
@@ -41,29 +33,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       } catch {
         // Silently handle parsing errors
       }
-<<<<<<< HEAD
-    }
-  }, []);
-
-  // Save settings to localStorage
-  useEffect(() => {
-    localStorage.setItem('accessibility-settings', JSON.stringify(settings));
-  }, [settings]);
-
-  // Apply accessibility settings
-  useEffect(() => {
-    const root = document.documentElement;
-    
-    setIsReducedMotion(prefersReducedMotion);
-    setIsHighContrast(prefersHighContrast);
-
-    // Listen for preference changes
-    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const contrastQuery = window.matchMedia('(prefers-contrast: high)');
-
-    const handleMotionChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
-    const handleContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
-=======
     ];
     
     // High contrast
@@ -98,7 +67,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     } else {
       root.style.removeProperty('--reduced-motion');
     }
->>>>>>> cd4748dc562b148d65a1b4346338fa475b702844
 
     // Focus indicator
     if (settings.focusIndicator) {

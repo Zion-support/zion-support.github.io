@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-import type { AppProps } from 'next/app';
-import React, { useRef } from 'react';
-import '../styles/globals.css';
-import '../styles/accessibility.css';
-import { SEOContext } from '../components/SEOContext';
-import DefaultSEO from '../components/DefaultSEO';
-import Analytics from '../components/Analytics';
-import { Layout } from '../components/layout/Layout';
-
-export default function App({ Component, pageProps }: AppProps) {
-	const renderedRef = useRef(false);
-	return (
-		<SEOContext.Provider value={{ renderedRef }}>
-			<Analytics />
-			<div className={inter.className}>
-				<Layout>
-					<Component {...pageProps} />
-					<DefaultSEO />
-				</Layout>
-			</div>
-		</SEOContext.Provider>
-	);
-}
-=======
 // CRITICAL: Runtime check - polyfills should be loaded from document script and webpack banner
 if (process.env.NODE_ENV === 'development') {
   console.log('🚨 APP.TSX RUNTIME CHECK - Polyfills should be active');
@@ -329,4 +304,3 @@ function MyApp({ Component, pageProps }: AppProps) {
 }
 
 export default MyApp;
->>>>>>> origin/306l03-codex/fix-blank-screen-issue

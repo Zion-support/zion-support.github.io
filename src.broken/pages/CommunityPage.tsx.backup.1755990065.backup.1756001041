@@ -1,8 +1,4 @@
 <<<<<<< HEAD
-import React from 'react';
-export function CommunityPage() {
-=======
-<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import CreatePostButton from "@/components/community/CreatePostButton";
@@ -13,7 +9,6 @@ import ForumCategories from "@/components/community/ForumCategories";
 import PostCard from "@/components/community/PostCard";
 import { useAuth } from "@/hooks/useAuth";
 import { useCommunity } from "@/context";
-
 
 export default function CommunityPage() {
   const { user } = useAuth();
@@ -114,7 +109,6 @@ export default function CommunityPage() {
 =======
 import React from 'react';
 export function CommunityPage() {
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   return (
     <div>

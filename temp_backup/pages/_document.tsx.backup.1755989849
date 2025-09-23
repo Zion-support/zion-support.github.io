@@ -138,14 +138,7 @@ export default class MyDocument extends Document {
   return (
     <Html lang="en">
       <Head>
-<<<<<<< HEAD
-        <meta
-          httpEquiv="Content-Security-Policy"
-          content="default-src 'self'; script-src 'self' https://js.stripe.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://res.cloudinary.com; connect-src *; frame-src https://js.stripe.com"
-        />
-=======
         <meta httpEquiv="Content-Security-Policy" content={cspContent} />
->>>>>>> origin/42l7l1-codex/check-logs-and-fix-errors
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         {/* <script dangerouslySetInnerHTML={{ __html: loaderTimeoutScript }} /> */}
       </Head>

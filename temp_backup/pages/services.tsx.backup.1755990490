@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-=======
 import SEO from '../components/SEO';
 import { motion, AnimatePresence } from 'framer-motion';
 import UltraFuturisticNavigation2046 from '../components/layout/UltraFuturisticNavigation2046';
@@ -59,7 +57,6 @@ import { ultimate2025AIServicesExpansion } from '../data/2025-ultimate-ai-servic
 
 // Import our new 2025 Q4 innovative services
 import { innovative2025Q4NewServices } from '../data/innovative-2025-q4-new-services';
-
 
 // Import our new innovative 2040 services
 import { innovative2040ITServices } from '../data/innovative-2040-it-services';
@@ -420,7 +417,6 @@ const ServicesPage: React.FC = () => {
     >
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
 =======
->>>>>>> 5e27e402e0b68b9c85b868b0fd8919518fd31198
         {/* Hero Section */}
         <AnimatePresence>
           {isVisible && (

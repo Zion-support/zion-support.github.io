@@ -14,13 +14,13 @@ export function Tabs({ children, defaultValue, value, onValueChange, className =
       </div>
     </TabsContext.Provider>);
 }
-;
+
 export function TabsList({ children, className = '' }) {
     return (<div className={`flex border-b border-gray-200 ${className}`}>
       {children}
     </div>);
 }
-;
+
 export function TabsTrigger({ children, value, className = '' }) {
     const context = useContext(TabsContext);
     if (!context)

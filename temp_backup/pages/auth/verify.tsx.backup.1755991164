@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export default function Verify() { return <div className="p-6">Verify Account</div>; }
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -13,4 +10,3 @@ const VerifyEmailPage: NextPage = () => (
 );
 
 export default VerifyEmailPage;
->>>>>>> origin/cursor/build-digital-nation-creation-module-4d41

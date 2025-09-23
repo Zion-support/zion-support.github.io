@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
@@ -21,7 +19,6 @@ import { useAuth } from "@/hooks/useAuth";
 import { getStripe } from "@/utils/getStripe";
 import { EQUIPMENT_DETAILS, EquipmentDetails } from "@/data/equipmentDetails";
 
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
 =======
 import { motion } from 'framer-motion';
 import { ArrowLeft, Star, Clock, DollarSign, Users, MapPin, Phone, Mail } from 'lucide-react';
@@ -357,9 +354,5 @@ export default function EquipmentDetail() {
       <Footer />
     </>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 >>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

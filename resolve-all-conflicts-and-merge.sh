@@ -57,48 +57,6 @@ fetch_latest() {
 get_open_prs() {
     print_status "Getting open PRs..."
     
-<<<<<<< HEAD
-    # Try to get PRs using GitHub CLI if available
-    if command -v gh &> /dev/null; then
-        OPEN_PRS=$(gh pr list --state open --json number,headRefName,title --jq '.[].number')
-        if [ -n "$OPEN_PRS" ]; then
-            print_status "Found open PRs: $OPEN_PRS"
-            echo "$OPEN_PRS"
-        else
-            print_warning "No open PRs found via GitHub CLI"
-        fi
-    else
-        print_warning "GitHub CLI not available, trying alternative method..."
-        # Alternative: check for branches that might be PRs
-        PR_BRANCHES=$(git branch -r | grep -E "(pr|feature|fix|hotfix)" | sed 's/origin\///' | head -10)
-        if [ -n "$PR_BRANCHES" ]; then
-            print_status "Found potential PR branches: $PR_BRANCHES"
-            echo "$PR_BRANCHES"
-        else
-            print_warning "No potential PR branches found"
-        fi
-    fi
-}
-
-# Function to switch to main branch
-switch_to_main() {
-    print_status "Switching to main branch..."
-    git checkout main
-    print_success "Switched to main branch"
-}
-
-# Function to pull latest main
-pull_latest_main() {
-    print_status "Pulling latest main branch..."
-    git pull origin main
-    print_success "Latest main branch pulled"
-}
-
-# Function to resolve merge conflicts for a specific branch
-resolve_conflicts_for_branch() {
-    local branch=$1
-    print_status "Resolving conflicts for branch: $branch"
-=======
     echo "🔧 Resolving conflicts in $file..."
     
     # Create backup
@@ -144,7 +102,6 @@ echo "🔍 Finding files with merge conflicts..."
 CONFLICTED_FILES=$(find /workspace -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" -o -name "*.json" -o -name "*.md" | xargs grep -l "
 if [ -n "$CONFLICTED_FILES" ]; then
     echo "📋 Found conflicted files: $CONFLICTED_FILES"
->>>>>>> 1d3831578ae98329b18f0b6376f6b8ab172a1dfd
     
     # Try to merge the branch
     if git merge "origin/$branch" --no-commit; then

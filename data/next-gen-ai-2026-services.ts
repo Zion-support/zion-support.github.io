@@ -14,10 +14,7 @@ export interface NextGenAi2026Service {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 export const nextGenAI2026Services: NextGenAi2026Service[] = [
   {
     id: "2026-next-gen-ai",

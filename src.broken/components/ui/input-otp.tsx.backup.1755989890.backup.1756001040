@@ -2,7 +2,6 @@ import * as React from "react"
 import { OTPInput, OTPInputContext } from "input-otp"
 import { Dot } from 'lucide-react';
 
-
 import { cn } from "@/lib/utils"
 
 const InputOTP = React.forwardRef<
@@ -34,10 +33,6 @@ const InputOTPSlot = React.forwardRef<
   React.ComponentPropsWithoutRef<"div"> & { index: number }
 >(({ index, className, ...props }, ref) => {
 <<<<<<< HEAD
-  const inputOTPContext = React.useContext(OTPInputContext)
-  const { char, hasFakeCaret, isActive } = (inputOTPContext as any).slots[index]
-=======
-<<<<<<< HEAD
   const inputOTPContext = React.useContext(OTPInputContext) as unknown;
   let char: string | undefined = undefined, hasFakeCaret: boolean = false, isActive: boolean = false;
   if (
@@ -57,7 +52,6 @@ const InputOTPSlot = React.forwardRef<
 =======
   const inputOTPContext = React.useContext(OTPInputContext)
   const { char, hasFakeCaret, isActive } = (inputOTPContext as any).slots[index]
->>>>>>> origin/8h6b38-codex/fix-typescript-module-and-type-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
   return (

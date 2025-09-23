@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from "react",
-import { useForm, ControllerRenderProps } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import z from "zod",
-import { supabase } from "@/integrations/supabase/client",
-import { useAuth } from "@/hooks/useAuth",
-import { useToast } from "@/hooks/use-toast",
-import { useRouter } from "next/router",
-import Image from 'next/image', // Import next/image
-import {logErrorToProduction} from '@/utils/productionLogger',
-=======
 import React from "react";
 import { useForm, ControllerRenderProps } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -20,7 +8,6 @@ import { useToast } from "@/hooks/use-toast";
 import { useRouter } from "next/router";
 import Image from 'next/image'; // Import next/image
 import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> origin/auto/autonomy-17186719616
 
 import {
   Form,
@@ -29,19 +16,6 @@ import {
   FormField,
   FormItem,
   FormLabel,
-<<<<<<< HEAD
-  FormMessage} from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import { AspectRatio } from "@/components/ui/aspect-ratio",
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
-import { AIListingGenerator } from "@/components/listing/AIListingGenerator",
-import { Sparkles } from 'lucide-react'
-
-const isBrowser = typeof window !== 'undefined';
-
-=======
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -52,7 +26,6 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
 import { Sparkles } from 'lucide-react'
 
->>>>>>> origin/auto/autonomy-17186719616
 // Define the form schema with zod
 const productSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
@@ -60,34 +33,12 @@ const productSchema = z.object({
   price: z
     .string()
     .refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
-<<<<<<< HEAD
-      message: "Price must be a valid number"}),
-=======
       message: "Price must be a valid number",
     }),
->>>>>>> origin/auto/autonomy-17186719616
   category: z.string().min(1, "Please select a category"),
   image: typeof window === 'undefined' ? z.any().optional() : z.instanceof(File).optional(),
   video: typeof window === 'undefined' ? z.any().optional() : z.instanceof(File).optional(),
   model: typeof window === 'undefined' ? z.any().optional() : z.instanceof(File).optional(),
-<<<<<<< HEAD
-  tags: z.string().optional()}),
-
-// Type for our form values
-type ProductFormValues = z.infer<typeof productSchema>,
-
-export function ProductSubmissionForm() {
-  const { user } = useAuth(),
-  const { toast } = useToast(),
-  const router = useRouter(),
-  const [isSubmitting, setIsSubmitting] = React.useState(false),
-  const [imagePreview, setImagePreview] = React.useState(null as string | null),
-  const [activeTab, setActiveTab] = React.useState("manual"),
-  
-  // Initialize the form
-  const form = useForm<ProductFormValues>({
-    resolver: zodResolver(productSchema)
-=======
   tags: z.string().optional(),
 });
 
@@ -105,7 +56,6 @@ export function ProductSubmissionForm() {
   // Initialize the form
   const form = useForm<ProductFormValues>({
     resolver: zodResolver(productSchema),
->>>>>>> origin/auto/autonomy-17186719616
     defaultValues: {
       title: "",
       description: "",
@@ -113,49 +63,6 @@ export function ProductSubmissionForm() {
       category: "",
       video: undefined,
       model: undefined,
-<<<<<<< HEAD
-      tags: ""}}),
-  
-  // Handle image upload preview
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0],
-    if (file) {
-      form.setValue("image", file),
-      const reader = new FileReader(),
-      reader.onloadend = () => {
-        setImagePreview(reader.result as string),
-      },
-      reader.readAsDataURL(file),
-    }
-  },
-
-  const handleVideoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0],
-    if (file) {
-      form.setValue("video", file),
-    }
-  },
-
-  const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0],
-    if (file) {
-      form.setValue("model", file),
-    }
-  },
-
-  // Apply AI-generated content to the form
-  const handleApplyGenerated = (content: any) => {
-    form.setValue("description", content.description),
-    form.setValue("tags", content.tags.join(", ")),
-    
-    // Set a default price as the middle of the suggested range
-    const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2),
-    form.setValue("price", averagePrice),
-    
-    // Switch to the manual tab to show applied content
-    setActiveTab("manual"),
-  },
-=======
       tags: "",
     },
   });
@@ -199,7 +106,6 @@ export function ProductSubmissionForm() {
     // Switch to the manual tab to show applied content
     setActiveTab("manual");
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   // Handle form submission
   const onSubmit = async (values: ProductFormValues) => {
@@ -207,41 +113,16 @@ export function ProductSubmissionForm() {
       toast({
         title: "Authentication Required",
         description: "You must be logged in to publish products",
-<<<<<<< HEAD
-        variant: "destructive"}),
-      return,
-    }
-
-    setIsSubmitting(true),
-=======
         variant: "destructive",
       });
       return;
     }
 
     setIsSubmitting(true);
->>>>>>> origin/auto/autonomy-17186719616
     
     try {
       // Create the product listing
       const productData = {
-<<<<<<< HEAD
-
-
-
-
-
-        title: values.title,
-        description: values.description,
-        price: parse_float (values.price),
-        category: values.category,
-        currency: 'USD', // Default currency;
-        tags: values.tags ? values.tags.split (', ').map (tag => tag.trim ()) : [],
-        author: {
-          name: user.displayName || "Anonymous Creator",
-          id: user.id},
-        createdAt: new Date().toISOString()},
-=======
         title: values.title,
         description: values.description,
         price: parseFloat(values.price),
@@ -254,120 +135,11 @@ export function ProductSubmissionForm() {
         },
         createdAt: new Date().toISOString(),
       };
->>>>>>> origin/auto/autonomy-17186719616
       
       const { data: productRecord, error: productError } = await supabase
         .from('product_listings')
         .insert([productData])
         .select('id')
-<<<<<<< HEAD
-        .single()
-      if (productError) {
-        throw new Error(productError.message)
-      }
-      let imagePublicUrl: string | undefined
-      // If we have an image, upload it
-      if (values.image) {
-        const imagePath = `product_images/${productRecord.id}/${values.image.name}`
-        const { error: uploadError } = await supabase.storage
-          .from('products')
-          .upload(imagePath, values.image)
-        if (uploadError) {
-          throw new Error(uploadError.message)
-        }
-        // Get the public URL for the image
-        const { data: publicUrlData } = supabase.storage
-          .from('products')
-          .getPublicUrl(imagePath)
-        imagePublicUrl = publicUrlData.publicUrl
-        // Update the product with the image URL
-        const { error: updateError } = await supabase
-          .from('product_listings')
-          .update({
-            images: [imagePublicUrl]
-          })
-          .eq('id', productRecord.id)
-        if (updateError) {
-          throw new Error(updateError.message)
-        }
-      }
-      // Upload video if provided
-      if (values.video) {
-        const videoPath = `product_videos/${productRecord.id}/${values.video.name}`
-        const { error: uploadError } = await supabase.storage
-          .from('products')
-          .upload(videoPath, values.video)
-        if (uploadError) {
-          throw new Error(uploadError.message)
-        }
-        const { data: publicUrlData } = supabase.storage
-          .from('products')
-          .getPublicUrl(videoPath)
-        const { error: updateError } = await supabase
-          .from('product_listings')
-          .update({ video_url: publicUrlData.publicUrl })
-          .eq('id', productRecord.id)
-        if (updateError) {
-          throw new Error(updateError.message)
-        }
-      }
-      // Upload model if provided
-      if (values.model) {
-        const modelPath = `product_models/${productRecord.id}/${values.model.name}`
-        const { error: uploadError } = await supabase.storage
-          .from('products')
-          .upload(modelPath, values.model)
-        if (uploadError) {
-          throw new Error(uploadError.message)
-        }
-        const { data: publicUrlData } = supabase.storage
-          .from('products')
-          .getPublicUrl(modelPath)
-        const { error: updateError } = await supabase
-          .from('product_listings')
-          .update({ model_url: publicUrlData.publicUrl })
-          .eq('id', productRecord.id)
-        if (updateError) {
-          throw new Error(updateError.message)
-        }
-      }
-      // Send listing to moderation service
-      try {
-        await supabase.functions.invoke('moderate-listing', {
-          body: {
-            listingId: productRecord.id
-            listingType: 'product'
-            description: values.description
-            images: imagePublicUrl ? [imagePublicUrl] : []
-            sellerId: user.id
-          }
-        })
-      } catch (err) {
-        logErrorToProduction('Error invoking moderation:', { data: err })
-      }
-      // Show success message
-      toast({
-        title: 'Product Published!'
-        description: 'Your product has been successfully published on Zion.'
-      })
-        .single(),
-        
-      if (productError) {
-        throw new Error(productError.message),
-      }
-
-      let imagePublicUrl: string | undefined,
-
-      // If we have an image, upload it
-      if (values.image) {
-        const imagePath = `product_images/${productRecord.id}/${values.image.name}`,
-        const { error: uploadError } = await supabase.storage
-          .from('products')
-          .upload(imagePath, values.image),
-          
-        if (uploadError) {
-          throw new Error(uploadError.message),
-=======
         .single();
         
       if (productError) {
@@ -385,19 +157,13 @@ export function ProductSubmissionForm() {
           
         if (uploadError) {
           throw new Error(uploadError.message);
->>>>>>> origin/auto/autonomy-17186719616
         }
         
         // Get the public URL for the image
         const { data: publicUrlData } = supabase.storage
           .from('products')
-<<<<<<< HEAD
-          .getPublicUrl(imagePath),
-        imagePublicUrl = publicUrlData.publicUrl,
-=======
           .getPublicUrl(imagePath);
         imagePublicUrl = publicUrlData.publicUrl;
->>>>>>> origin/auto/autonomy-17186719616
           
         // Update the product with the image URL
         const { error: updateError } = await supabase
@@ -405,31 +171,15 @@ export function ProductSubmissionForm() {
           .update({
             images: [imagePublicUrl]
           })
-<<<<<<< HEAD
-          .eq('id', productRecord.id),
-          
-      if (updateError) {
-        throw new Error(updateError.message),
-=======
           .eq('id', productRecord.id);
           
       if (updateError) {
         throw new Error(updateError.message);
->>>>>>> origin/auto/autonomy-17186719616
       }
     }
 
       // Upload video if provided
       if (values.video) {
-<<<<<<< HEAD
-        const videoPath = `product_videos/${productRecord.id}/${values.video.name}`,
-        const { error: uploadError } = await supabase.storage
-          .from('products')
-          .upload(videoPath, values.video),
-
-        if (uploadError) {
-          throw new Error(uploadError.message),
-=======
         const videoPath = `product_videos/${productRecord.id}/${values.video.name}`;
         const { error: uploadError } = await supabase.storage
           .from('products')
@@ -437,45 +187,24 @@ export function ProductSubmissionForm() {
 
         if (uploadError) {
           throw new Error(uploadError.message);
->>>>>>> origin/auto/autonomy-17186719616
         }
 
         const { data: publicUrlData } = supabase.storage
           .from('products')
-<<<<<<< HEAD
-          .getPublicUrl(videoPath),
-=======
           .getPublicUrl(videoPath);
->>>>>>> origin/auto/autonomy-17186719616
 
         const { error: updateError } = await supabase
           .from('product_listings')
           .update({ video_url: publicUrlData.publicUrl })
-<<<<<<< HEAD
-          .eq('id', productRecord.id),
-
-        if (updateError) {
-          throw new Error(updateError.message),
-=======
           .eq('id', productRecord.id);
 
         if (updateError) {
           throw new Error(updateError.message);
->>>>>>> origin/auto/autonomy-17186719616
         }
       }
 
       // Upload model if provided
       if (values.model) {
-<<<<<<< HEAD
-        const modelPath = `product_models/${productRecord.id}/${values.model.name}`,
-        const { error: uploadError } = await supabase.storage
-          .from('products')
-          .upload(modelPath, values.model),
-
-        if (uploadError) {
-          throw new Error(uploadError.message),
-=======
         const modelPath = `product_models/${productRecord.id}/${values.model.name}`;
         const { error: uploadError } = await supabase.storage
           .from('products')
@@ -483,31 +212,19 @@ export function ProductSubmissionForm() {
 
         if (uploadError) {
           throw new Error(uploadError.message);
->>>>>>> origin/auto/autonomy-17186719616
         }
 
         const { data: publicUrlData } = supabase.storage
           .from('products')
-<<<<<<< HEAD
-          .getPublicUrl(modelPath),
-=======
           .getPublicUrl(modelPath);
->>>>>>> origin/auto/autonomy-17186719616
 
         const { error: updateError } = await supabase
           .from('product_listings')
           .update({ model_url: publicUrlData.publicUrl })
-<<<<<<< HEAD
-          .eq('id', productRecord.id),
-
-        if (updateError) {
-          throw new Error(updateError.message),
-=======
           .eq('id', productRecord.id);
 
         if (updateError) {
           throw new Error(updateError.message);
->>>>>>> origin/auto/autonomy-17186719616
         }
       }
 
@@ -519,53 +236,31 @@ export function ProductSubmissionForm() {
             listingType: 'product',
             description: values.description,
             images: imagePublicUrl ? [imagePublicUrl] : [],
-<<<<<<< HEAD
-            sellerId: user.id}
-        }),
-      } catch (err) {
-        logErrorToProduction('Error invoking moderation:', { data: err }),
-=======
             sellerId: user.id,
           }
         });
       } catch (err) {
         logErrorToProduction('Error invoking moderation:', { data: err });
->>>>>>> origin/auto/autonomy-17186719616
       }
       
       // Show success message
       toast({
         title: "Product Published!",
-<<<<<<< HEAD
-        description: "Your product has been successfully published on Zion."}),
-      
-      // Redirect to product page
-      router.push(`/marketplace/listing/${productRecord.id}`),
-=======
         description: "Your product has been successfully published on Zion.",
       });
       
       // Redirect to product page
       router.push(`/marketplace/listing/${productRecord.id}`);
->>>>>>> origin/auto/autonomy-17186719616
     } catch (error) {
       toast({
         title: "Publication Failed",
         description: error instanceof Error ? error.message : "An unknown error occurred",
-<<<<<<< HEAD
-        variant: "destructive"}),
-    } finally {
-      setIsSubmitting(false),
-    }
-  },
-=======
         variant: "destructive",
       });
     } finally {
       setIsSubmitting(false);
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -578,75 +273,6 @@ export function ProductSubmissionForm() {
           AI-Powered Creation
         </TabsTrigger>
       </TabsList>
-<<<<<<< HEAD
-      <TabsContent value='manual'>
-      
-      <TabsContent value="manual">
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
-          className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'>;
-          <Sparkles className='h-4 w-4 mr-2' />;
-          AI-Powered Creation;
-        </TabsTrigger>;
-      </TabsList>;
-
-      <TabsContent value='manual'>;
-        <Form {...form}>;
-          <form onSubmit={form && form.handleSubmit(onSubmit)} className='space-y-6'>;
-            <FormField
-
-      // Show success message;
-      toast ({
-        title: 'Product Published!',
-        description: 'Your product has been successfully published on Zion.',
-      });
-      // Redirect to product page;
-      router.push (`/marketplace / listing/${product_record.id}`);
-    } catch (error) {
-      toast ({
-        title: 'Publication Failed',
-        description:;
-          error instanceof Error ? error.message : 'An unknown error occurred',
-        variant: 'destructive',
-      });
-    } finally {
-      setIsSubmitting (false);
-    }
-  }
-  return (
-    <Tabs value={active_tab} onValueChange={setActiveTab} className='w - full'>;
-      <TabsList className='grid grid - cols - 2 mb - 6'>;
-        <TabsTrigger;
-          value='manual';
-          className='data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple';
-        >;
-          Manual Creation;
-        </TabsTrigger>;
-        <TabsTrigger;
-          value='ai';
-          className='data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple';
-        >;
-          <Sparkles className='h - 4 w - 4 mr - 2' />;
-          AI - Powered Creation;
-        </TabsTrigger>;
-      </TabsList>;
-      <TabsContent value='manual'>;
-        <Form {...form}>;
-          <form on_submit={form.handle_submit (on_submit)} className='space - y-6'>;
-            <FormField;
-              control={form.control}
-
-              name='title'
-              render={({
-                field
-              }: {
-                field: ControllerRenderProps<ProductFormValues, 'title'>
-              }) => {
-                const { onChange, onBlur, value, ref } = field; return (
-              name="title"
-              render={({ field }: { field: ControllerRenderProps<ProductFormValues "title"> }) => {
-                const { onChange, onBlur, value, ref } = field,
-=======
       
       <TabsContent value="manual">
         <Form {...form}>
@@ -656,7 +282,6 @@ export function ProductSubmissionForm() {
               name="title"
               render={({ field }: { field: ControllerRenderProps<ProductFormValues, "title"> }) => {
                 const { onChange, onBlur, value, ref } = field;
->>>>>>> origin/auto/autonomy-17186719616
                 return (
                   <FormItem>
                     <FormLabel>Product Title</FormLabel>
@@ -674,22 +299,14 @@ export function ProductSubmissionForm() {
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
-<<<<<<< HEAD
-                ),
-=======
                 );
->>>>>>> origin/auto/autonomy-17186719616
               }}
             />
 
             <FormField
               control={form.control}
               name="description"
-<<<<<<< HEAD
-              render={({ field }: { field: ControllerRenderProps<ProductFormValues "description"> }) => (
-=======
               render={({ field }: { field: ControllerRenderProps<ProductFormValues, "description"> }) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <FormItem>
                   <FormLabel>Description</FormLabel>
                   <FormControl>
@@ -711,22 +328,14 @@ export function ProductSubmissionForm() {
               <FormField
                 control={form.control}
                 name="price"
-<<<<<<< HEAD
-                render={({ field }: { field: ControllerRenderProps<ProductFormValues "price"> }) => (
-=======
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues, "price"> }) => (
->>>>>>> origin/auto/autonomy-17186719616
                   <FormItem>
                     <FormLabel>Price (USD)</FormLabel>
                     <FormControl>
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />
                     </FormControl>
                     <FormDescription>
-<<<<<<< HEAD
-                      Create a compelling title that describes your product
-=======
                       Set your price in USD
->>>>>>> origin/auto/autonomy-17186719616
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
@@ -736,11 +345,7 @@ export function ProductSubmissionForm() {
               <FormField
                 control={form.control}
                 name="category"
-<<<<<<< HEAD
-                render={({ field }: { field: ControllerRenderProps<ProductFormValues "category"> }) => (
-=======
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues, "category"> }) => (
->>>>>>> origin/auto/autonomy-17186719616
                   <FormItem>
                     <FormLabel>Category</FormLabel>
                     <FormControl>
@@ -766,11 +371,7 @@ export function ProductSubmissionForm() {
             <FormField
               control={form.control}
               name="tags"
-<<<<<<< HEAD
-              render={({ field }: { field: ControllerRenderProps<ProductFormValues "tags"> }) => (
-=======
               render={({ field }: { field: ControllerRenderProps<ProductFormValues, "tags"> }) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <FormItem>
                   <FormLabel>Tags</FormLabel>
                   <FormControl>
@@ -881,10 +482,5 @@ export function ProductSubmissionForm() {
         />
       </TabsContent>
     </Tabs>
-<<<<<<< HEAD
-  ),
-}
-=======
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

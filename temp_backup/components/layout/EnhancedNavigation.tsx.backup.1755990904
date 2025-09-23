@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import Link from 'next/link';
-
-export default function EnhancedNavigation() {
-  return (
-    <nav className="p-4 border-b flex gap-4">
-      <Link href="/">Home</Link>
-      <Link href="/blog">Blog</Link>
-    </nav>
-=======
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Menu, X, ChevronDown, Rocket, Star } from 'lucide-react';
@@ -430,6 +419,5 @@ const EnhancedNavigation: React.FC = () => {
         )}
       </AnimatePresence>
     </>
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
   );
 }

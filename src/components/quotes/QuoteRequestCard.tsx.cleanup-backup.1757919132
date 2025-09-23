@@ -1,33 +1,12 @@
 
-<<<<<<< HEAD
-import React from "react",
-import { format } from "date-fns",
-import { 
-  Card,
-=======
 import React from "react";
 import { format } from "date-fns";
 import { 
   Card, 
->>>>>>> origin/auto/autonomy-17186719616
   CardContent, 
   CardHeader, 
   CardTitle, 
   CardDescription
-<<<<<<< HEAD
-} from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
-import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from 'lucide-react'
-import type { QuoteRequest } from "@/types/quotes",
-
-type QuoteRequestCardProps = {
-  quote: QuoteRequest,
-  onViewDetails: (quote: QuoteRequest) => void,
-  onMarkAsResponded?: (id: string) => void,
-  onToggleArchive: (id: string, isArchived: boolean) => void
-},
-=======
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
@@ -40,7 +19,6 @@ type QuoteRequestCardProps = {
   onMarkAsResponded?: (id: string) => void;
   onToggleArchive: (id: string, isArchived: boolean) => void;
 };
->>>>>>> origin/auto/autonomy-17186719616
 
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   quote,
@@ -51,20 +29,11 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   // Format date for display
   const formatDate = (dateString: string) => {
     try {
-<<<<<<< HEAD
-      return format(new Date(dateString), 'PP'),
-    } catch (e) {
-      return dateString,
-    }
-  }
-  },
-=======
       return format(new Date(dateString), 'PP');
     } catch (e) {
       return dateString;
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
@@ -84,10 +53,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
           <span className="text-white font-medium">From: </span>
           {quote.requester_name}
         </div>
-<<<<<<< HEAD
-        <p className="text-white line-clamp-3 mb-4">{quote.project_summary}</p>
-=======
->>>>>>> origin/auto/autonomy-17186719616
         
         <p className="text-white line-clamp-3 mb-4">{quote.project_summary}</p>
         
@@ -95,12 +60,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
           <CalendarIcon className="h-4 w-4" />
           <span>Timeline: {quote.timeline}</span>
         </div>
-<<<<<<< HEAD
-
-    <Card key={quote && quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
         
         <div className="flex justify-between items-center mt-4">
           <Button
@@ -142,10 +101,5 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD
-  ),
-},
-=======
   );
 };
->>>>>>> origin/auto/autonomy-17186719616

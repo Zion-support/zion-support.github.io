@@ -178,11 +178,6 @@ export default function Leadership() {
                             rel="noopener noreferrer"
                             className="flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors"
                           >
-<<<<<<< HEAD
-                            {skill}
-                          </span>
-                        ))}
-=======
                             <Linkedin className="w-4 h-4" />
                             <span className="text-sm">LinkedIn</span>
                           </a>
@@ -199,7 +194,6 @@ export default function Leadership() {
                             <span className="text-sm">GitHub</span>
                           </a>
                         )}
->>>>>>> cd4748dc562b148d65a1b4346338fa475b702844
                       </div>
                     </div>
                   </div>

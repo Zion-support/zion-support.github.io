@@ -1,57 +1,3 @@
-<<<<<<< HEAD
-
-const faqs = [;
-  {}
-    category: "General","
-    questions: [;
-      {}
-        question: "What services does Zion Tech Group offer?","
-        answer: "We offer comprehensive AI solutions, IT services, cloud computing, cybersecurity, and micro SaaS solutions. Our services include machine learning, natural language processing, cloud infrastructure, and custom software development.""
-      },
-      {}
-        question: "How can I get started with your services?","
-        answer: "Getting started is easy! Simply contact us through our contact form, schedule a consultation, or call us directly. We'll assess your needs and provide a customized solution plan.""
-      },
-      {}
-        question: "Do you offer 24/7 support?","
-        answer: "Yes, we provide 24/7 support for all our clients. Our dedicated support team is always available to help with any technical issues or questions you may have.""
-      }
-    ];
-  },
-  {}
-    category: "AI Services","
-    questions: [;
-      {}
-        question: "What AI technologies do you specialize in?","
-        answer: "We specialize in machine learning, natural language processing, computer vision, predictive analytics, and AI automation. Our team has extensive experience with various AI frameworks and platforms.""
-      },
-      {}
-        question: "How long does it take to implement an AI solution?","
-        answer: "Implementation time varies depending on the complexity of the project. Simple AI solutions can be deployed in 2-4 weeks, while more complex enterprise solutions may take 3-6 months.""
-      },
-      {}
-        question: "Do you provide AI training for our team?","
-        answer: "Yes, we offer comprehensive AI training programs for your team, including hands-on workshops, documentation, and ongoing support to ensure successful adoption.""
-import MainLayout from '../components/layout/MainLayout';
-import { motion, AnimatePresence } from 'framer-motion';
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  ChevronDown, 
-  ChevronUp, 
-  HelpCircle, 
-  Search, 
-  ArrowRight,
-  Phone,
-  Mail,
-  MessageSquare
-} from 'lucide-react';
-
-const faqCategories = [
-  {
-    name: "General",
-    icon: HelpCircle,
-=======
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import Head from 'next/head';
@@ -60,7 +6,6 @@ import { Plus, Minus, HelpCircle, Search } from 'lucide-react';
 const faqs = [
   {
     category: "General",
->>>>>>> main
     questions: [
       {
         question: "What services does Zion Tech Group offer?",
@@ -105,17 +50,6 @@ const faqs = [
         answer: "Yes, we work with all major cloud providers including AWS, Azure, Google Cloud, and can help you choose the best platform for your needs."
       },
       {
-<<<<<<< HEAD
-        question: "What cybersecurity measures do you implement?",
-        answer: "We implement comprehensive cybersecurity measures including firewalls, intrusion detection systems, encryption, access controls, security monitoring, and compliance management. We also provide security audits, penetration testing, and ongoing security monitoring services."
-      },
-      {
-        question: "Do you provide ongoing IT support?",
-        answer: "Yes, we offer various levels of ongoing IT support including basic support, managed services, and dedicated IT teams. Our support services cover monitoring, maintenance, updates, troubleshooting, and proactive problem prevention."
-      }
-    ];
-  },
-=======
         question: "How do you ensure data security?",
         answer: "We implement comprehensive security measures including encryption, access controls, regular security audits, and compliance with industry standards like SOC 2, GDPR, and HIPAA."
       }
@@ -193,17 +127,10 @@ export default function FAQPage() {
                   className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
->>>>>>> main
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
-              </div>
-            </div>
-          </div>
-        </section>
-=======
         {/* FAQ Sections */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
@@ -297,6 +224,5 @@ export default function FAQPage() {
         </section>
       </div>
     </>
->>>>>>> main
   );
 }

@@ -4,11 +4,7 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 
 export default function HealthcareSolutionsLanding() {
 	return (
-<<<<<<< HEAD
-		<UltraFuturisticBackground variant="holographic" intensity="high">
-=======
 		<UltraFuturisticBackground variant="healthcare" intensity="high">
->>>>>>> origin/cursor/website-audit-and-enhancement-fc60
 			<Head>
 				<title>Healthcare Solutions | Zion Tech Group</title>
 				<meta name="description" content="Revolutionary AI-powered healthcare technology solutions for medical diagnosis, patient care, and healthcare operations optimization." />

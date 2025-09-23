@@ -6,7 +6,6 @@ import {
   CpuChipIcon,
   ShieldCheckIcon,
   GlobeAltIcon,
-  UserGroupIcon,
   ArrowRightIcon
 } from '@heroicons/react/24/outline'
 

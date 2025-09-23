@@ -2,22 +2,8 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight,
-<<<<<<< HEAD
-  Brain, Rocket, Shield, Zap, Target, Atom, BookOpen,
-  Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles, 
-  Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb,
-  Search, Grid, List, TrendingUp, Shield as ShieldIcon, Globe as GlobeIcon,
-  User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones, 
-  Code, Database, Network, Server, Monitor, Smartphone,
-  Camera, Gamepad2, Palette, Music, Film, BookOpenCheck,
-  Building, MessageCircle, Sparkles as SparklesIcon, Zap as ZapIcon,
-  Target as TargetIcon, Atom as AtomIcon, Brain as BrainIcon,
-  Cpu as Quantum, Brain as AI, Code as MicroSaas, Server as ITServices, 
-  Globe as Metaverse, Shield as Cybersecurity, Leaf, Mountain, Plane
-=======
   Rocket, BookOpen, DollarSign, BarChart3, Globe, Star, 
   Cpu, Grid, Building, MessageCircle, Brain, Atom, Target, Users, Search
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-4109
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -339,73 +325,6 @@ const navigationItems: NavigationItem[] = [
         description: 'Partnership opportunities',
         icon: <Play className="w-4 h-4" />
       },
-<<<<<<< HEAD
-      {
-        name: 'Predictive Analytics',
-        href: '/predictive-analytics',
-        description: 'AI-powered forecasting',
-        icon: <BarChart3 className="w-4 h-4" />
-      }
-    ]
-  },
-  {
-    name: 'Cybersecurity',
-    href: '/cybersecurity',
-    icon: <Shield className="w-5 h-5" />,
-    description: 'Advanced security solutions',
-    badge: 'Secure',
-    category: 'cybersecurity',
-    children: [
-      {
-        name: 'All Security',
-        href: '/cybersecurity',
-        description: 'Complete security overview',
-        icon: <Grid className="w-4 h-4" />,
-        featured: true
-      },
-      {
-        name: 'Threat Detection',
-        href: '/threat-detection',
-        description: 'AI-powered threat hunting',
-        icon: <Eye className="w-4 h-4" />
-      },
-      {
-        name: 'Zero Trust',
-        href: '/zero-trust',
-        description: 'Zero trust architecture',
-        icon: <Lock className="w-4 h-4" />
-      },
-      {
-        name: 'Quantum Security',
-        href: '/quantum-security',
-        description: 'Post-quantum cryptography',
-        icon: <Atom className="w-4 h-4" />
-      },
-      {
-        name: 'Compliance',
-        href: '/compliance',
-        description: 'Security compliance tools',
-        icon: <FileText className="w-4 h-4" />
-      }
-    ]
-  },
-  {
-    name: 'IT Services',
-    href: '/it-services',
-    icon: <ITServices className="w-5 h-5" />,
-    description: 'Information technology solutions',
-    badge: 'Core',
-    category: 'it-services',
-    children: [
-      {
-        name: 'All IT Services',
-        href: '/it-services',
-        description: 'Complete IT services overview',
-        icon: <Grid className="w-4 h-4" />,
-        featured: true
-      },
-=======
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-4109
       { 
         name: 'Careers', 
         href: '/careers', 

@@ -33,11 +33,7 @@ exports.handler = async () => {
 
   // Commit and push
   logStep('git:sync', () => runNode('automation/git-sync.cjs'));
-<<<<<<< HEAD
-  // Run the automation guardian
-=======
 =  // Run the automation guardian
->>>>>>> origin/backup-main-final-20250913-063409
   logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'));
 
   // Attempt to push any changes

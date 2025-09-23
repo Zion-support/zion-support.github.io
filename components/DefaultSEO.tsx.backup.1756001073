@@ -1,16 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-import { useRouter } from 'next/router';
-
-interface DefaultSEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-=======
 
 const SITE_NAME = 'Zion Tech Group';
 const SITE_URL = 'https://ziontechgroup.com';
@@ -74,7 +63,6 @@ export default function DefaultSEO() {
       />
     </Head>
   );
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
 }
 
 const DefaultSEO: React.FC<DefaultSEOProps> = ({

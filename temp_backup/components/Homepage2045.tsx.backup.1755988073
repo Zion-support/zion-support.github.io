@@ -1,19 +1,11 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-=======
 import React, { useEffect, useState, useCallback, Suspense, lazy } from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-421e
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon,
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity,
   ChevronRight, ChevronLeft, ExternalLink, Users, Award, Clock, CheckCircle, Zap as ZapIcon,
-<<<<<<< HEAD
-  Sparkles, Layers, Grid, Hexagon, Octagon, Pentagon, Triangle, Square, Circle
-=======
   Sun, Moon, Search, Menu, X
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-421e
 } from 'lucide-react';
 import Head from 'next/head';
 
@@ -28,9 +20,6 @@ const LazyTestimonialSection = lazy(() => import('./TestimonialSection'));
 
 const Homepage2045: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-<<<<<<< HEAD
-  const [activeSection, setActiveSection] = useState('hero');
-=======
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -39,7 +28,6 @@ const Homepage2045: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-421e
   
   useEffect(() => {
     // Check for saved theme preference
@@ -49,14 +37,6 @@ const Homepage2045: React.FC = () => {
     }
     
     setIsVisible(true);
-<<<<<<< HEAD
-  }, []);
-
-  // Extract services data
-  const services = ultimateFuturisticServices2025 || [];
-  const aiServices = innovativeAIServices2025 || [];
-  const infrastructureServices = innovativeITInfrastructureServices2025 || [];
-=======
     setIsLoading(false);
     
     // Auto-rotate featured services
@@ -158,102 +138,11 @@ const Homepage2045: React.FC = () => {
   const handleServiceClick = useCallback((service: any) => {
     window.location.href = service.slug;
   }, []);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-421e
 
   const handleCategoryChange = useCallback((categoryId: string) => {
     setSelectedCategory(categoryId);
   }, []);
 
-<<<<<<< HEAD
-  // Futuristic geometric shapes for background
-  const GeometricShapes = () => (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {/* Floating geometric shapes */}
-      <motion.div
-        animate={{ 
-          x: [0, 100, 0],
-          y: [0, -100, 0],
-          rotate: [0, 360, 0]
-        }}
-        transition={{ 
-          duration: 20,
-          repeat: -1,
-          ease: "linear"
-        }}
-        className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg"
-      />
-      <motion.div
-        animate={{ 
-          x: [0, -100, 0],
-          y: [0, 100, 0],
-          rotate: [0, -360, 0]
-        }}
-        transition={{ 
-          duration: 25,
-          repeat: -1,
-          ease: "linear"
-        }}
-        className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full"
-      />
-      <motion.div
-        animate={{ 
-          x: [0, 150, 0],
-          y: [0, -150, 0],
-          rotate: [0, 720, 0]
-        }}
-        transition={{ 
-          duration: 30,
-          repeat: -1,
-          ease: "linear"
-        }}
-        className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
-      />
-      
-      {/* Additional geometric shapes */}
-      <motion.div
-        animate={{ 
-          x: [0, -80, 0],
-          y: [0, 80, 0],
-          rotate: [0, 180, 0]
-        }}
-        transition={{ 
-          duration: 18,
-          repeat: -1,
-          ease: "linear"
-        }}
-        className="absolute top-60 left-1/4 w-20 h-20 border border-blue-400/20 transform rotate-45"
-      />
-      <motion.div
-        animate={{ 
-          x: [0, 120, 0],
-          y: [0, -120, 0],
-          rotate: [0, -180, 0]
-        }}
-        transition={{ 
-          duration: 22,
-          repeat: -1,
-          ease: "linear"
-        }}
-        className="absolute bottom-20 right-1/4 w-28 h-28 border border-green-400/20 rounded-full"
-      />
-      
-      {/* Hexagon pattern */}
-      <motion.div
-        animate={{ 
-          rotate: [0, 360]
-        }}
-        transition={{ 
-          duration: 40,
-          repeat: -1,
-          ease: "linear"
-        }}
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-cyan-400/10"
-        style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
-      />
-    </div>
-  );
-
-=======
   // Loading skeleton component
   const LoadingSkeleton = () => (
     <div className="animate-pulse">
@@ -276,7 +165,6 @@ const Homepage2045: React.FC = () => {
     );
   }
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-421e
   return (
     <Layout>
       {/* Enhanced Header with Search and Theme Toggle */}
@@ -391,25 +279,6 @@ const Homepage2045: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Services Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Revolutionary Services
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the future of technology with our cutting-edge solutions
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.slice(0, 6).map((service, index) => (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 transform hover:scale-105">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                    <Brain className="w-6 h-6 text-white" />
-=======
               {/* CTA Buttons */}
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
@@ -450,7 +319,6 @@ const Homepage2045: React.FC = () => {
                   <div key={index} className="text-center">
                     <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.number}</div>
                     <div className="text-gray-400 text-sm">{stat.label}</div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-421e
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-white">{service.name}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
@@ -531,17 +399,6 @@ const Homepage2045: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We're not just a technology company - we're your innovation partner
               </p>
-<<<<<<< HEAD
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Rocket className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-white">Innovation First</h3>
-                <p className="text-gray-300">Cutting-edge solutions that keep you ahead of the competition</p>
-=======
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -750,7 +607,6 @@ const Homepage2045: React.FC = () => {
                 >
                   View All Services
                 </button>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-421e
               </div>
               
               <div className="text-center">

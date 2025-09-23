@@ -1,27 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-
-export default function MockPage() {
-  return (
-    <>
-      <Head>
-        <title>Mock - Zion Tech Group</title>
-        <meta name="description" content="mock page" />
-      </Head>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">Mock</h1>
-        <p className="text-lg mb-4">This page is under construction.</p>
-        <div className="mt-4">
-          <a href="/" className="text-blue-600 hover:underline">
-            ← Back to Home
-          </a>
-        </div>
-      </div>
-    </>
-  );
-}
-=======
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -94,4 +71,3 @@ export default function MockCheckoutPage() {
     </div>
   );
 } 
->>>>>>> origin/auto/autonomy-17186719616

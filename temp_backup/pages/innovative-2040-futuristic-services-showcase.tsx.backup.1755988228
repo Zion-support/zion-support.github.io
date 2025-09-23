@@ -52,45 +52,6 @@ interface Service {
   reviews: number;
 }
 
-<<<<<<< HEAD
-// Utility function to get service properties with defaults
-function getServiceProperty<T>(service: any, property: string, defaultValue: T): T {
-  return service && service[property] !== undefined ? service[property] : defaultValue;
-}
-
-// Default icon mapping based on category
-function getDefaultIcon(category: string): string {
-  const iconMap: { [key: string]: string } = {
-    'AI & Consciousness': '🧠',
-    'Quantum & Emerging Tech': '⚛️',
-    'AI & Machine Learning': '🤖',
-    'Cybersecurity': '🛡️',
-    'Space Technology': '🚀',
-    'Business Solutions': '💼',
-    'IT Services': '💻',
-    'Content Marketing & AI': '📝',
-    'Cybersecurity & Communication': '🔐',
-    'default': '✨'
-  };
-  return iconMap[category] || iconMap.default;
-}
-
-// Default color mapping based on category
-function getDefaultColor(category: string): string {
-  const colorMap: { [key: string]: string } = {
-    'AI & Consciousness': 'from-purple-500 to-pink-500',
-    'Quantum & Emerging Tech': 'from-blue-500 to-cyan-500',
-    'AI & Machine Learning': 'from-emerald-500 to-teal-500',
-    'Cybersecurity': 'from-red-500 to-orange-500',
-    'Space Technology': 'from-indigo-500 to-purple-500',
-    'Business Solutions': 'from-yellow-500 to-orange-500',
-    'IT Services': 'from-gray-500 to-blue-500',
-    'Content Marketing & AI': 'from-green-500 to-blue-500',
-    'Cybersecurity & Communication': 'from-red-500 to-purple-500',
-    'default': 'from-cyan-500 to-blue-600'
-  };
-  return colorMap[category] || colorMap.default;
-=======
 // Type guard to check if service has color property
 function hasColor(service: any): service is Service & { color: string } {
   return 'color' in service && typeof service.color === 'string';
@@ -132,7 +93,6 @@ function getServiceTagline(service: any): string {
     return service.description.substring(0, 100) + (service.description.length > 100 ? '...' : '');
   }
   return 'Revolutionary service';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-85e9
 }
 
 const Innovative2040FuturisticServicesShowcase: React.FC = () => {
@@ -382,13 +342,8 @@ const Innovative2040FuturisticServicesShowcase: React.FC = () => {
                     )}
 
                     {/* Service Icon */}
-<<<<<<< HEAD
-                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color || 'from-blue-600 to-purple-700'} rounded-2xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                      {service.icon}
-=======
                     <div className={`w-16 h-16 bg-gradient-to-r ${hasColor(service) ? service.color : 'from-cyan-500 to-blue-600'} rounded-2xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
                       {getServiceIcon(service)}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-85e9
                     </div>
 
                     {/* Service Info */}
@@ -396,11 +351,7 @@ const Innovative2040FuturisticServicesShowcase: React.FC = () => {
                       {service.name}
                     </h3>
                     <p className="text-gray-300 mb-4 line-clamp-2">
-<<<<<<< HEAD
-                      {getServiceProperty(service, 'tagline', service.description.substring(0, 100) + '...')}
-=======
                       {getServiceTagline(service)}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-85e9
                     </p>
 
                     {/* Price */}
@@ -408,11 +359,7 @@ const Innovative2040FuturisticServicesShowcase: React.FC = () => {
                       <div className="text-2xl font-bold text-cyan-400">
                         {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/${service.price.currency}`}
                         <span className="text-sm text-gray-400">
-<<<<<<< HEAD
-                          {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
-=======
                           {typeof service.price === 'string' ? getServicePeriod(service) : '/month'}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-85e9
                         </span>
                       </div>
                       <div className="flex items-center space-x-1 text-yellow-400">
@@ -485,13 +432,8 @@ const Innovative2040FuturisticServicesShowcase: React.FC = () => {
                   >
                     <div className="flex items-start space-x-6">
                       {/* Service Icon */}
-<<<<<<< HEAD
-                      <div className={`w-20 h-20 bg-gradient-to-r ${service.color || 'from-blue-600 to-purple-700'} rounded-2xl flex items-center justify-center text-4xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
-                        {service.icon}
-=======
                       <div className={`w-20 h-20 bg-gradient-to-r ${hasColor(service) ? service.color : 'from-cyan-500 to-blue-600'} rounded-2xl flex items-center justify-center text-4xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
                         {getServiceIcon(service)}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-85e9
                       </div>
 
                       {/* Service Details */}
@@ -508,11 +450,7 @@ const Innovative2040FuturisticServicesShowcase: React.FC = () => {
                               <span className="inline-block px-3 py-1 bg-gray-700 text-cyan-400 text-sm font-medium rounded-full">
                                 {service.category}
                               </span>
-<<<<<<< HEAD
-                              {getServiceProperty(service, 'popular', false) && (
-=======
                               {('popular' in service && service.popular) && (
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-85e9
                                 <span className="inline-block px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-sm font-bold rounded-full">
                                   Popular
                                 </span>
@@ -523,11 +461,7 @@ const Innovative2040FuturisticServicesShowcase: React.FC = () => {
                                                        <div className="text-3xl font-bold text-cyan-400 mb-1">
                              {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/${service.price.currency}`}
                                                            <span className="text-lg text-gray-400">
-<<<<<<< HEAD
-                                {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
-=======
                                 {typeof service.price === 'string' ? getServicePeriod(service) : '/month'}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-85e9
                               </span>
                            </div>
                             <div className="flex items-center justify-end space-x-1 text-yellow-400 mb-2">

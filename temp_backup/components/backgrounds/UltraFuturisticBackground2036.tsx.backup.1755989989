@@ -100,10 +100,6 @@ export default function UltraFuturisticBackground2036({
     }
   }, [intensity, getThemeColors]);
 
-<<<<<<< HEAD
-  // Enhanced animation loop with better performance
-  const animate = useCallback((canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) => {
-=======
   // Enhanced animation loop with quantum effects and neon pulses
   const animate = useCallback(() => {
     if (!canvasRef.current) return;
@@ -125,7 +121,6 @@ export default function UltraFuturisticBackground2036({
       canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2
     );
     
->>>>>>> cd4748dc562b148d65a1b4346338fa475b702844
     const colors = getThemeColors();
     const time = Date.now() * 0.001;
     

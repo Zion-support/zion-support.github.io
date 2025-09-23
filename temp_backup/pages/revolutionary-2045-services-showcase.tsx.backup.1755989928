@@ -22,11 +22,6 @@ const Revolutionary2045ServicesShowcase: React.FC = () => {
 
   // Combine all services
   const allServices = [
-<<<<<<< HEAD
-    ...revolutionary2045AIConsciousnessServices,
-    ...revolutionary2045ITInfrastructureServices,
-    ...revolutionary2045MicroSaasServices
-=======
     // AI & Machine Learning Services
     {
       name: "AI Consciousness Evolution 2045",
@@ -205,7 +200,6 @@ const Revolutionary2045ServicesShowcase: React.FC = () => {
       rating: 4.7,
       reviews: 89
     }
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
   ];
 
   // Get unique categories and types

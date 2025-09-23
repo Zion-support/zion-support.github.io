@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-const { i18n } = require('./next-i18next.config');
-=======
 import path from 'path';
 import { fileURLToPath } from 'url';
 import os from 'os';
@@ -710,8 +707,6 @@ const nextConfig = {
       /memory.*cache/i,
     ];
 
-
-
     // PHASE 2: Enhanced Bundle Splitting for Performance Optimization
     if (!isServer) {
       config.optimization = {
@@ -1039,8 +1034,6 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-
->>>>>>> origin/5xrg7t-codex/fix-app-loading-blank-screen
 
 module.exports = {
   i18n,

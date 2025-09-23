@@ -55,13 +55,9 @@ import WishlistPage from './pages/Wishlist';
 import CartPage from './pages/Cart';
 import Checkout from './pages/Checkout';
 <<<<<<< HEAD
-import { SupportChatbot } from './components/SupportChatbot';
-=======
-<<<<<<< HEAD
 import PrivacySettings from './pages/PrivacySettings';
 =======
 import { SupportChatbot } from './components/SupportChatbot';
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 const baseRoutes = [
@@ -69,15 +65,10 @@ const baseRoutes = [
   { path: '/match', element: <AIMatcherPage /> },
   { path: '/login', element: <Login /> },
 <<<<<<< HEAD
-  { path: '/register', element: <Signup /> },
-  { path: '/signup', element: <SimpleSignup /> },
-=======
-<<<<<<< HEAD
   { path: '/signup', element: <Signup /> },
 =======
   { path: '/register', element: <Signup /> },
   { path: '/signup', element: <SimpleSignup /> },
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   { path: '/talent', element: <TalentDirectory /> },
   { path: '/talents', element: <TalentsPage /> },
@@ -143,11 +134,6 @@ const App = () => {
         <Toaster />
         <SonnerToaster position="top-right" />
 <<<<<<< HEAD
-        <SupportChatbot />
-        <PwaInstallButton />
-      </ThemeProvider>
-=======
-<<<<<<< HEAD
           <CookieBanner />
           <PwaInstallButton />
         </ThemeProvider>
@@ -156,7 +142,6 @@ const App = () => {
         <SupportChatbot />
         <PwaInstallButton />
       </ThemeProvider>
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     </WhitelabelProvider>
   );

@@ -152,8 +152,4 @@ ${report.nextSteps.map(item => `- ${item}`).join("\n"`)
         "Monitor application performance"
     const reportPath = path.join(this.reportsDir, "comprehensive-automation-report.json")
     this.log(" Starting Comprehensive Automation Orchestrator")
-<<<<<<< HEAD
       this.log(")
-=======
-      this.log(")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

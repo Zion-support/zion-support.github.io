@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export default function AuthIndex() { return <div className="p-6">Auth</div>; }
-=======
 import React from 'react';
 export default function AuthIndex() {
   return (
@@ -10,4 +7,3 @@ export default function AuthIndex() {
     </div>
   );
 }
->>>>>>> origin/cursor/build-dao-proposal-drafting-system-with-templates-9858

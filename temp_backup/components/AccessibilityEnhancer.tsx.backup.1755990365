@@ -138,11 +138,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   }, [applySettings]);
 
   // Focus management
-<<<<<<< HEAD
-  const handleFocusChange = useCallback((e: FocusEvent) => {
-=======
   const handleFocusChange = useCallback((e: any) => {
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-d91d
     const target = e.target as HTMLElement;
     if (target) {
       setCurrentFocus(target);
@@ -151,15 +147,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   }, []);
 
   // Keyboard navigation enhancements
-<<<<<<< HEAD
-  const handleKeyDown = useCallback((e: KeyboardEvent) => {
-    if (e.key === 'Tab') {
-      setIsKeyboardNavigation(true);
-    }
-=======
   const handleKeyDown = useCallback((_e: any) => {
     // Tab navigation detected
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-d91d
   }, []);
 
   // Announce to screen reader

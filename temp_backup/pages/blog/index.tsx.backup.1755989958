@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-import BlogPage from '../../src/pages/Blog';
-import type { BlogProps } from '../../src/pages/Blog';
-import { BLOG_POSTS } from '@/data/blog-posts';
-import type { GetServerSideProps } from 'next';
-=======
 import Head from 'next/head';
 import Link from 'next/link';
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 
 export default function BlogIndexPage() {
   const blogPosts = [
@@ -74,14 +67,6 @@ export default function BlogIndexPage() {
 
   const categories = ['All', 'AI & Automation', 'Cloud Computing', 'Innovation', 'Performance', 'Security', 'Data Engineering'];
 
-<<<<<<< HEAD
-    return { props: { posts: BLOG_POSTS } };
-  } catch (error) {
-    // Sentry.captureException(error); // This line was removed as per the edit hint.
-    throw error; // Re-throw the error so Next.js can handle it
-  }
-};
-=======
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
@@ -121,7 +106,6 @@ export default function BlogIndexPage() {
             autonomous systems, and the future of technology.
           </p>
         </section>
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 
         {/* Featured Post */}
         <section className="mb-16">

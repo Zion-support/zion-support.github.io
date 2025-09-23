@@ -9,14 +9,8 @@ export interface Innovative2040FuturisticService {
   features: string[];
   benefits: string[];
   link: string;
-<<<<<<< HEAD
-  icon?: string;
-  color?: string;
-  textColor?: string;
-=======
   color?: string;
   icon?: string;
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-58a2
   popular?: boolean;
   contactInfo: {
     mobile: string;
@@ -69,14 +63,8 @@ export const innovative2040FuturisticServices: RealMarketService[] = [
     category: 'AI & Consciousness',
     price: '$15,000',
     period: '/month',
-<<<<<<< HEAD
-    icon: '🧠',
-    color: 'from-purple-600 to-indigo-700',
-    textColor: 'text-purple-400',
-=======
     color: 'from-purple-500 to-pink-500',
     icon: '🧠',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-58a2
     popular: true,
     features: [
       'Quantum-enhanced neural signal processing',
@@ -117,16 +105,9 @@ export const innovative2040FuturisticServices: RealMarketService[] = [
     tagline: 'Instant global communication network using quantum entanglement for unbreakable security',
     price: '$2,499',
     period: '/month',
-<<<<<<< HEAD
-    icon: '🌐',
-    color: 'from-cyan-600 to-blue-700',
-    textColor: 'text-cyan-400',
-    popular: false,
-=======
     color: 'from-blue-500 to-cyan-500',
     icon: '🌐',
     popular: true,
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-58a2
     features: [
       'Quantum entanglement-based communication',
       'Instant data transmission across any distance',

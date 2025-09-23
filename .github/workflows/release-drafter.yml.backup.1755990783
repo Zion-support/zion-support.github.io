@@ -3,17 +3,6 @@ name: Release Drafter
 on:
   push:
     branches: [ main ]
-<<<<<<< HEAD
-  pull_request:
-    types: [closed]
-
-permissions:
-  contents: write
-
-jobs:
-  update_release_draft:
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
-=======
   workflow_dispatch:
 
 permissions:
@@ -22,15 +11,10 @@ permissions:
 
 jobs:
   update_release_draft:
->>>>>>> origin/cursor/automate-project-enhancement-and-merge-cac0
     runs-on: ubuntu-latest
     steps:
       - uses: release-drafter/release-drafter@v6
         with:
           config-name: release-drafter.yml
         env:
-<<<<<<< HEAD
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-=======
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
->>>>>>> origin/cursor/automate-project-enhancement-and-merge-cac0

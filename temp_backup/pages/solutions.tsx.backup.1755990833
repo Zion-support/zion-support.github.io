@@ -181,11 +181,6 @@ const SolutionsPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <UltraFuturisticBackground variant="quantum">
-      <div className="min-h-screen">
-        <SEO title="Solutions - Zion Tech Group | Revolutionary AI, Quantum Computing & Emerging Technology Solutions" description="Discover Zion Tech Group's comprehensive solutions portfolio including Micro SaaS platforms, AI-powered tools, Business Intelligence, Process Automation, and Cloud platforms." url="https://ziontechgroup.com/solutions/" />
-=======
     <Layout>
       {/* Hero Section */}
       <section className="relative py-20 px-4 bg-gradient-to-b from-black to-gray-900">
@@ -222,7 +217,6 @@ const SolutionsPage: React.FC = () => {
           </motion.div>
         </div>
       </section>
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
 
       {/* Solutions Grid */}
       <section className="py-20 px-4 bg-black">

@@ -7,13 +7,7 @@ import {
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, MessageCircle,
   X, Menu, Linkedin, Twitter, Github, Search, TrendingUp, Users, Award
 } from 'lucide-react';
-<<<<<<< HEAD
-import EnhancedSEO from './EnhancedSEO';
-import PerformanceOptimizer from './PerformanceOptimizer';
-import EnhancedAccessibilityEnhancer from './EnhancedAccessibilityEnhancer';
-=======
 import Head from 'next/head';
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 >>>>>>> 5e27e402e0b68b9c85b868b0fd8919518fd31198
 
 // Import our new revolutionary services
@@ -154,15 +148,6 @@ const EnhancedHomepage2045: React.FC = () => {
   }
 
   return (
-<<<<<<< HEAD
-    <Layout>
-      <EnhancedSEO />
-      <EnhancedAccessibilityEnhancer />
-      
-      <div className="min-h-screen relative overflow-hidden" onMouseMove={handleMouseMove}>
-        {/* Hero Section */}
-        <section className="relative pt-32 pb-20 overflow-hidden">
-=======
     <AccessibilityEnhancer>
       <>
         <Head>
@@ -222,7 +207,6 @@ const EnhancedHomepage2045: React.FC = () => {
             }}
           />
         </Head>
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 
         <div className="min-h-screen bg-black text-white overflow-hidden">
 >>>>>>> 5e27e402e0b68b9c85b868b0fd8919518fd31198

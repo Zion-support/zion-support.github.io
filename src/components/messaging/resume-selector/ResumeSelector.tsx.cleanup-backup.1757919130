@@ -1,29 +1,4 @@
 
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
-import { Button } from "@/components/ui/button",
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
-import { Label } from "@/components/ui/label",
-import { Plus, Loader2 } from 'lucide-react'
-import { useResume } from "@/hooks/useResume",
-import { exportResumeToPDF } from "@/utils/pdfExport",
-import { toast } from "@/components/ui/use-toast",
-import { ResumePreviewCard } from './ResumePreviewCard',
-import { UploadSection } from './UploadSection',
-import { SelectResumeSection } from './SelectResumeSection',
-import { ResumeOption, ResumeSelectorProps } from './types',
-import {logErrorToProduction} from '@/utils/productionLogger',
-
-export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
-
-  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent'),
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),
-  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]),
-  const [customFile, setCustomFile] = useState<File | null>(null),
-  const [isLoading, setIsLoading] = useState(false),
-  
-  const { resume, fetchResume } = useResume(),
-=======
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -47,25 +22,10 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   const [isLoading, setIsLoading] = useState(false);
   
   const { resume, fetchResume } = useResume();
->>>>>>> origin/auto/autonomy-17186719616
   
   // Fetch resume data when component mounts
   useEffect(() => {
     const loadResumes = async () => {
-<<<<<<< HEAD
-      setIsLoading(true),
-      try {
-        await fetchResume(),
-      } catch (error) {
-        logErrorToProduction('Error loading resumes:', { data: error }),
-      } finally {
-        setIsLoading(false),
-      }
-    },
-    
-    loadResumes(),
-  }, [fetchResume]),
-=======
       setIsLoading(true);
       try {
         await fetchResume();
@@ -78,7 +38,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
     
     loadResumes();
   }, [fetchResume]);
->>>>>>> origin/auto/autonomy-17186719616
   
   // Update resume options when resume data changes
   useEffect(() => {
@@ -88,43 +47,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         title: resume.basic_info.title,
         type: 'ai_resume',
         resume: resume
-<<<<<<< HEAD
-      }],
-      
-      setResumeOptions(options),
-      
-      // Pre-select the most recent resume
-      if (options.length > 0 && selectedOption === 'recent' && options[0]) {
-        setSelectedResume(options[0]),
-        onResumeSelected(options[0]),
-      }
-    }
-  }, [resume, selectedOption, onResumeSelected]),
-  
-  // Handle radio option change
-  const handleOptionChange = (value: 'recent' | 'select' | 'upload') => {
-    setSelectedOption(value),
-    
-    if (value === 'recent' && resumeOptions.length > 0 && resumeOptions[0]) {
-      setSelectedResume(resumeOptions[0]),
-      onResumeSelected(resumeOptions[0])
-    } else if (value === 'select') {
-      // Reset selection until user chooses
-      setSelectedResume(null),
-    } else if (value === 'upload') {
-      setSelectedResume(null),
-    }
-  },
-  
-  // Handle resume selection change
-  const handleResumeSelect = (resumeId: string) => {
-    const selected = resumeOptions.find(opt => opt.id === resumeId),
-    if (selected) {
-      setSelectedResume(selected),
-      onResumeSelected(selected)
-    }
-  },
-=======
       }];
       
       setResumeOptions(options);
@@ -160,16 +82,11 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       onResumeSelected(selected);
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
   
   // Handle custom file upload
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
-<<<<<<< HEAD
-      const file = e.target.files[0],
-=======
       const file = e.target.files[0];
->>>>>>> origin/auto/autonomy-17186719616
       
       // Check if it's a PDF file
       if (file.type !== 'application/pdf') {
@@ -177,13 +94,8 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
           title: "Invalid file type",
           description: "Please upload a PDF file",
           variant: "destructive"
-<<<<<<< HEAD
-        }),
-        return,
-=======
         });
         return;
->>>>>>> origin/auto/autonomy-17186719616
       }
       
       // Create a custom resume option
@@ -192,15 +104,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         title: file.name,
         type: 'custom_upload',
         file: file
-<<<<<<< HEAD
-      },
-      
-      setCustomFile(file),
-      setSelectedResume(customOption),
-      onResumeSelected(customOption),
-    }
-  },
-=======
       };
       
       setCustomFile(file);
@@ -208,26 +111,10 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       onResumeSelected(customOption);
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
   
   // Handle resume download
   const handleDownloadResume = async () => {
     if (!selectedResume || selectedResume.type !== 'ai_resume' || !selectedResume.resume) {
-<<<<<<< HEAD
-      return,
-    }
-  };
-
-  const handleExport = async () => {
-    if (!selectedResume) return;
-    
-    try {
-      await exportResumeToPDF(selectedResume);
-      toast({
-        title: "Success!",
-        description: "Your resume has been downloaded."}),
-    } catch (error) {
-=======
       return;
     }
     
@@ -253,76 +140,10 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       });
     } catch (error) {
       logErrorToProduction('Error downloading PDF:', { data: error });
->>>>>>> origin/auto/autonomy-17186719616
       toast({
         title: "Download failed",
         description: "There was an error downloading your resume.",
         variant: "destructive"
-<<<<<<< HEAD
-      }),
-    } finally {
-      setIsLoading(false),
-    }
-  },
-  
-  // Handle "Generate Resume Now" button
-  const handleGenerateResume = () => {
-    window.open('/dashboard/talent/portfolio_blank'),
-  },
-  
-  return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <h2 className="text-xl font-semibold">Select Resume</h2>
-        <div className="space-x-2">
-          <Button
-            variant="outline"
-            onClick={() => document.getElementById('file-upload')?.click()}
-            disabled={uploading}
-          >
-            <Plus className="h-4 w-4 mr-2" />
-            {uploading ? 'Uploading...' : 'Upload New'}
-          </Button>
-          {selectedResume && (
-            <Button onClick={handleExport}>
-              Export PDF
-            </Button>
-          )}
-        </div>
-      </div>
-
-      <input
-        id="file-upload"
-        type="file"
-        accept=".pdf,.doc,.docx"
-        onChange={handleFileUpload}
-        className="hidden"
-      />
-
-      <RadioGroup
-        value={selectedResume?.id || ''}
-        onValueChange={(value) => {
-          const resume = resumes.find(r => r.id === value);
-          onResumeSelect(resume || null);
-        }}
-      >
-        <div className="space-y-3">
-          {resumes.map((resume) => (
-            <div key={resume.id} className="flex items-center space-x-3">
-              <RadioGroupItem value={resume.id} id={resume.id} />
-              <Label htmlFor={resume.id} className="flex-1 cursor-pointer">
-                <div className="p-3 border rounded-lg hover:bg-gray-50">
-                  <h3 className="font-medium">{resume.title}</h3>
-                  <p className="text-sm text-gray-500">{resume.description}</p>
-                  <div className="flex items-center space-x-4 mt-1 text-xs text-gray-400">
-                    <span>Modified: {resume.lastModified}</span>
-                    <span>{resume.fileSize}</span>
-                  </div>
-                </div>
-              </Label>
-            </div>
-          ))}
-=======
       });
     } finally {
       setIsLoading(false);
@@ -356,7 +177,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="upload" id="upload" />
           <Label htmlFor="upload" className="text-white">Upload a custom resume (PDF)</Label>
->>>>>>> origin/auto/autonomy-17186719616
         </div>
       </RadioGroup>
       
@@ -398,9 +218,5 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         </Button>
       </div>
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

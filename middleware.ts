@@ -15,49 +15,24 @@ const publicRoutes = [
   "/guides",
   "/case-studies",
   "/cookies",
-  "/industries"
-  "/blog",
-  "/services",
-  "/solutions",
   "/industries",
+  "/blog",
+  "/solutions",
   "/resources",
   "/talent",
   "/team",
   "/partners",
   "/news",
-  "/careers",
   "/privacy",
   "/terms",
-  "/cookies",
   "/sitemap",
   "/auth/login",
   "/auth/register",
   "/auth/forgot-password",
   "/auth/reset-password",
   "/auth/verify",
-const publicPaths = [
-  '/',
-  '/about',
-  '/services',
-  '/contact',
-  '/ai-services',
-  '/it-services',
-  '/micro-saas',
-  '/api-docs',
-  '/api',
-  '/careers',
-  '/case-studies',
-  '/blog',
-  '/docs',
-  '/privacy',
-  '/terms',
-  '/login',
-  '/register',
-  '/auth/login',
-  '/auth/register',
-  '/auth/forgot-password',
-  '/auth/reset-password',
-  '/auth/verify'
+];
+
 const protectedRoutes = [
   "/",
   "/about",
@@ -96,22 +71,6 @@ const protectedRoutes = [
   "/industries/finance",
   "/industries/healthcare",
   "/industries/government"
-];
-
-const publicRoutes = [
-  "/login",
-  "/register",
-  "/forgot-password",
-  "/reset-password",
-  "/verify-email",
-  "/api/auth",
-  "/api/health",
-  "/api/status",
-  "/_next",
-  "/favicon.ico",
-  "/robots.txt",
-  "/sitemap.xml",
-  "/manifest.json"
 ];
 
 const adminRoutes = [

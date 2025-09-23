@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -15,7 +13,6 @@ import { formatDistanceToNow } from "date-fns";
 import { safeStorage } from "@/utils/safeStorage";
 import { useCurrency } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
-
 
 interface Transaction {
   id: string;
@@ -379,16 +376,12 @@ export function TransactionHistory() {
         )}
       </div>
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React from 'react';
 export function TransactionHistory() {
   return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     </div>
   );

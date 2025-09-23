@@ -24,8 +24,6 @@ import {
   SellerRoutes
 } from './routes';
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import Home from './pages/Home';
 import AIMatcherPage from './pages/AIMatcher';
 import TalentDirectory from './pages/TalentDirectory';
@@ -57,7 +55,6 @@ import CartPage from './pages/Cart';
 import Checkout from './pages/Checkout';
 import PrivacySettings from './pages/PrivacySettings';
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 const Home = React.lazy(() => import('./pages/Home'));
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
@@ -80,9 +77,6 @@ const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 const WishlistPage = React.lazy(() => import('./pages/Wishlist'));
-<<<<<<< HEAD
-=======
->>>>>>> origin/85f672-codex/implement-wishlist-functionality
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 const baseRoutes = [

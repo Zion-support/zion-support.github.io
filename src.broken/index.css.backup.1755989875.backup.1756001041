@@ -607,11 +607,8 @@ button,
     background: hsl(var(--background));
   }
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 }
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
   /* Improved placeholder contrast */
   input::placeholder,
@@ -628,7 +625,4 @@ button,
   .animate-slide-up {
     animation: slide-up 0.3s ease-out;
   }
-<<<<<<< HEAD
-=======
->>>>>>> origin/74tfm8-codex/implement-instant-messaging-for-negotiations
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

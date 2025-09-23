@@ -24,8 +24,6 @@ export function ChatWidget({ roomId, recipientId, isOpen, onClose }: ChatWidgetP
     if (!isOpen) return;
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
     if ("Notification" in window && Notification.permission === "default") {
       Notification.requestPermission();
     }
@@ -40,16 +38,12 @@ export function ChatWidget({ roomId, recipientId, isOpen, onClose }: ChatWidgetP
       });
     }
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     socketRef.current = io({ path: '/api/socket', transports: ['websocket'] });
     socketRef.current.emit('join-room', roomId);
     socketRef.current.on('receive-message', (msg: Message) => {
       setMessages(prev => [...prev, msg]);
       triggerNotification('New message', msg.content);
     });
-<<<<<<< HEAD
-=======
->>>>>>> origin/87zh7m-codex/fix-netlify-build-failures-due-to-typescript-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
     return () => {

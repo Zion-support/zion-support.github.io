@@ -2,37 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
-/* Global styles */
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/* Custom utility classes */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .container {
-    padding: 0 0.5rem;
-=======
 /* Import accessibility enhancements */
 @import './accessibility.css';
 
@@ -1068,6 +1037,5 @@ body {
   
   .border-neon {
     border: 2px solid var(--primary-cyan);
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   }
 }

@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-"use client";
-import React{ useState } from 'react';
-=======
 import React, { useState } from 'react';
->>>>>>> origin/auto/autonomy-17186719616
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -11,27 +6,10 @@ import EmailValidatorDemo from '../components/demos/EmailValidatorDemo';
 import PasswordStrengthDemo from '../components/demos/PasswordStrengthDemo';
 import UrlShortenerDemo from '../components/demos/UrlShortenerDemo';
 import TextAnalyzerDemo from '../components/demos/TextAnalyzerDemo';
-<<<<<<< HEAD
-MailLockLinkFileTextCheckCircleZapBarChart3CodePlay
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-export default function DemosPage() {
-  const [activeDemosetActiveDemo] = useState<string>('email-validator');
-=======
 import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
 
 export default function DemosPage() {
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
->>>>>>> origin/auto/autonomy-17186719616
 
   const demos = [
     {
@@ -74,11 +52,7 @@ export default function DemosPage() {
     <>
       <Head>
         <title>Interactive Demos | Zion Tech Group - Test Our Micro SaaS Services</title>
-<<<<<<< HEAD
-        <meta name="description" content="Try our professional micro SaaS services with interactive demos. Test email validationpassword strengthURL shorteningand text analysis in real-time." />
-=======
         <meta name="description" content="Try our professional micro SaaS services with interactive demos. Test email validation, password strength, URL shortening, and text analysis in real-time." />
->>>>>>> origin/auto/autonomy-17186719616
         <meta property="og:title" content="Interactive Demos | Zion Tech Group" />
         <meta property="og:description" content="Test our micro SaaS services with interactive demos." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -111,11 +85,7 @@ export default function DemosPage() {
             </h1>
             <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light">
               Experience our professional-grade micro SaaS services firsthand with interactive demos. 
-<<<<<<< HEAD
-              Testexploreand see the power of our APIs in action.
-=======
               Test, explore, and see the power of our APIs in action.
->>>>>>> origin/auto/autonomy-17186719616
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
@@ -272,11 +242,7 @@ export default function DemosPage() {
                 Full Functionality
               </h3>
               <p className="text-gray-400 leading-relaxed">
-<<<<<<< HEAD
-                Experience complete service capabilitiesnot just mock responses
-=======
                 Experience complete service capabilities, not just mock responses
->>>>>>> origin/auto/autonomy-17186719616
               </p>
             </Card>
 
@@ -339,11 +305,7 @@ export default function DemosPage() {
             Ready to Integrate?
           </h2>
           <p className="text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-            After testing our demosintegrate these professional services into your applications 
-=======
             After testing our demos, integrate these professional services into your applications 
->>>>>>> origin/auto/autonomy-17186719616
             with our comprehensive APIs and documentation.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">

@@ -9,18 +9,10 @@ import {
   Phone, Mail, MapPin, Globe, Clock, Zap
 } from 'lucide-react';
 
-<<<<<<< HEAD
-// Import our new advanced service data
-import { advancedFinancialTechServices2025 } from '../data/2025-advanced-financial-tech-services';
-import { advancedHealthcareTechServices2025 } from '../data/2025-advanced-healthcare-tech-services';
-import { advancedLogisticsSupplyChainServices2025 } from '../data/2025-advanced-logistics-supply-chain-services';
-import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
-=======
 // Import our new service data
 import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion';
 import { innovativeMicroSaasExpansion2025 } from '../data/2025-innovative-micro-saas-expansion';
 import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-9481
 
 // Combine all services
 const allAdvancedServices = [
@@ -38,9 +30,6 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 };
 
-<<<<<<< HEAD
-export default function AdvancedServicesShowcase2025() {
-=======
 const allServices = [
   ...advancedEnterpriseServices2025,
       ...innovativeMicroSaasExpansion2025,
@@ -110,11 +99,8 @@ const getServiceFeatures = (service: any) => {
   return [];
 };
 
-
-
 export default function AdvancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
->>>>>>> origin/cursor/expand-services-and-deploy-updates-9481
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -171,9 +157,6 @@ export default function AdvancedServicesShowcase() {
         duration: 0.5
       }
     }
-<<<<<<< HEAD
-  };
-=======
 
     setFilteredServices(filtered);
   }, [selectedCategory, searchTerm]);
@@ -399,7 +382,6 @@ export default function AdvancedServicesShowcase() {
       </div>
     </motion.div>
   );
->>>>>>> origin/cursor/expand-services-and-deploy-updates-9481
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">

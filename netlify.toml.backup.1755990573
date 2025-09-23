@@ -11,7 +11,6 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
-
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -280,14 +279,6 @@
   name = "adaptive-orchestrator"
   schedule = "*/5 * * * *"
 
-<<<<<<< HEAD
-# New: automatic merge conflict resolver and sync
-[[scheduled.functions]]
-  name = "merge-conflict-auto-resolver"
-  schedule = "*/1 * * * *"
-
-# Encourage invention orchestrator to run periodically
-=======
 # Newly added autonomous innovations
 [[scheduled.functions]]
   name = "autonomous-content-curator"
@@ -297,7 +288,6 @@
   name = "revenue-ideas-lab"
   schedule = "*/15 * * * *"
 
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-8155
 [[scheduled.functions]]
   name = "autonomous-invention-orchestrator"
   schedule = "*/10 * * * *"

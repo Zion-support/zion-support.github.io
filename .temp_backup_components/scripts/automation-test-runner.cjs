@@ -13,8 +13,4 @@ const { execSync } = require('child_process')
     const testScripts = [{ "path": 'scripts/health-check.cjs', "desc"}]
       { "path": 'scripts/simple-performance-monitor.cjs', "desc"}
       { "path": 'scripts/simple-code-quality.cjs', "desc"}
-<<<<<<< HEAD
           "status"
-=======
-          "status"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -23,8 +23,6 @@ interface NavigationItem {
   icon: React.ReactNode;
   description?: string;
   badge?: string;
-<<<<<<< HEAD
-=======
   title?: string;
   featured?: boolean;
   category?: string;
@@ -45,7 +43,6 @@ function normalizeHref(href: string): string {
   const hasQueryOrHash = href.includes('?') || href.includes('#');
   if (hasQueryOrHash) return href;
   return href.endsWith('/') ? href : href + '/';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-71be
 }
 
 // Memoized navigation items for better performance
@@ -417,9 +414,6 @@ const navigationItems: NavigationItem[] = [
   }
 ];
 
-<<<<<<< HEAD
-const UltraFuturisticNavigation2040: React.FC = () => {
-=======
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -427,7 +421,6 @@ const contactInfo = {
 };
 
 const UltraFuturisticNavigation2040: React.FC<UltraFuturisticNavigation2040Props> = ({ onMenuToggle, isSidebarOpen }) => {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-71be
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -624,29 +617,6 @@ const UltraFuturisticNavigation2040: React.FC<UltraFuturisticNavigation2040Props
               <Search className="w-5 h-5" />
             </button>
 
-<<<<<<< HEAD
-            {/* Contact Button */}
-            <Link
-              href="/contact"
-              className="hidden sm:inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium rounded-xl hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 transform hover:scale-105"
-            >
-              <Phone className="w-4 h-4" />
-              <span>Contact</span>
-            </Link>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={toggleMobileMenu}
-              className="lg:hidden p-2 text-gray-400 hover:text-white transition-colors duration-200"
-              aria-label="Toggle mobile menu"
-              aria-expanded={isMobileMenuOpen}
-            >
-              {isMobileMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
-=======
           {/* Mobile Menu Button */}
           <div className="lg:hidden flex items-center space-x-2">
             {/* Sidebar Toggle Button */}
@@ -671,7 +641,6 @@ const UltraFuturisticNavigation2040: React.FC<UltraFuturisticNavigation2040Props
               aria-controls="mobile-navigation"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-71be
             </button>
           </div>
         </div>
@@ -712,22 +681,14 @@ const UltraFuturisticNavigation2040: React.FC<UltraFuturisticNavigation2040Props
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-<<<<<<< HEAD
-            ref={mobileMenuRef}
-=======
             id="mobile-navigation"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-71be
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-<<<<<<< HEAD
-            className="lg:hidden bg-gray-900/95 backdrop-blur-md border-t border-gray-700/50"
-=======
             className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-white/10 overflow-hidden"
             role="navigation"
             aria-label="Mobile navigation menu"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-71be
           >
             <div className="px-4 py-6 space-y-4">
               {navigationItems.map((item) => (

@@ -1,22 +1,7 @@
-<<<<<<< HEAD
-{
-    name: 'Sarah Williams'
-    role: 'Tech Recruiter'
-    text: 'As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.'
-    rating: 5
-    avatar: '/placeholder.svg'
-  }
-  {
-
-import React from "react",
-import { Star } from 'lucide-react'
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
-=======
 
 import React from "react";
 import { Star } from 'lucide-react'
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
->>>>>>> origin/auto/autonomy-17186719616
 
 const testimonials = [
   {
@@ -39,35 +24,7 @@ const testimonials = [
     text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.",
     rating: 4,
     avatar: "/placeholder.svg"
-<<<<<<< HEAD
-
   }
-],
-
-export const AppTestimonials: React.FC = () => {;
-  return (
-    <section className='py-16 bg-zion-blue'>;
-      <div className='container mx-auto px-4'>;
-        <div className='text-center mb-12'>;
-          <h2 className='text-3xl md:text-4xl font-bold mb-4'>;
-            What Our Users Say;
-          </h2>;
-          <p className='text-lg text-gray-300 max-w-2xl mx-auto'>;
-    <section className='py - 16 bg - zion - blue'>;
-      <div className='container mx - auto px - 4'>;
-        <div className='text - center mb - 12'>;
-          <h2 className='text - 3xl md:text - 4xl font - bold mb - 4'>;
-            What Our Users Say;
-          </h2>;
-          <p className='text - lg text - gray - 300 max - w-2xl mx - auto'>;
-            Join thousands of satisfied users who have transformed their tech;
-            careers with the Zion mobile app.;
-          </p>;
-        </div>;
-
-=======
-  }
->>>>>>> origin/auto/autonomy-17186719616
 ];
 
 export const AppTestimonials: React.FC = () => {
@@ -78,55 +35,20 @@ export const AppTestimonials: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Users Say</h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             Join thousands of satisfied users who have transformed their tech careers with the Zion mobile app.
-<<<<<<< HEAD
-
-          </p>
-        </div>
-=======
           </p>
         </div>
         
->>>>>>> origin/auto/autonomy-17186719616
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-purple/30">
               <CardContent className="pt-6">
                 <div className="flex mb-4">
                   {Array.from({ length: 5 }).map((_, i) => (
-<<<<<<< HEAD
-                    />;
-                  </div>;
-                  <div>;
-                    <p className='font-semibold text-white'>;
-                      {testimonial && testimonial.name}
-                    </p>;
-                    <p className='text-sm text-gray-400'>{testimonial && testimonial.role}</p>                  </div>;
-                    <p className="font-semibold text-white">{testimonial && testimonial.name}</p>;
-                    <p className="text-sm text-gray-400">{testimonial && testimonial.role}</p>;
-          </p>;
-        </div>;
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-          {testimonials && testimonials.map((testimonial, index) => (;
-            <Card key={index} className="bg-zion-blue-dark border-zion-purple/30">;
-              <CardContent className="pt-6">;
-                <div className="flex mb-4">;
-                  {Array && Array.from({ length: 5 }).map((_, i) => (;
-                    <Star
-
-                      key={i}
-                      className={`h-5 w-5 ${i < testimonial && testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
-                    />;
-                  ))}
-
-
-=======
                     <Star 
                       key={i}
                       className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
                     />
                   ))}
->>>>>>> origin/auto/autonomy-17186719616
                 </div>
                 <p className="text-gray-200 mb-6">"{testimonial.text}"</p>
               </CardContent>
@@ -136,13 +58,6 @@ export const AppTestimonials: React.FC = () => {
                     <img src={testimonial.avatar} alt={testimonial.name} className="h-full w-full object-cover" loading="lazy" />
                   </div>
                   <div>
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
                     <p className="font-semibold text-white">{testimonial.name}</p>
                     <p className="text-sm text-gray-400">{testimonial.role}</p>
                   </div>
@@ -153,10 +68,5 @@ export const AppTestimonials: React.FC = () => {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  ),
-},
-=======
   );
 };
->>>>>>> origin/auto/autonomy-17186719616

@@ -58,102 +58,12 @@ const AccessibilityEnhancer: React.FC<{
     fontSize: 'medium',
     theme: 'auto'
   });
-<<<<<<< HEAD
-
-  const [settings, setSettings] = useState<AccessibilitySettings>(settingsRef.current);
-
-  // Accessibility features configuration
-  const accessibilityFeatures: AccessibilityFeature[] = [
-    {
-      id: 'high-contrast',
-      name: 'High Contrast',
-      description: 'Increase contrast for better visibility',
-      icon: <Contrast className="w-5 h-5" />,
-      enabled: settings.highContrast,
-      toggle: () => toggleSetting('highContrast'),
-      category: 'visual'
-    },
-    {
-      id: 'large-text',
-      name: 'Large Text',
-      description: 'Increase text size for better readability',
-      icon: <FontSize className="w-5 h-5" />,
-      enabled: settings.largeText,
-      toggle: () => toggleSetting('largeText'),
-      category: 'visual'
-    },
-    {
-      id: 'reduced-motion',
-      name: 'Reduced Motion',
-      description: 'Reduce animations for motion sensitivity',
-      icon: <RotateCcw className="w-5 h-5" />,
-      enabled: settings.reducedMotion,
-      toggle: () => toggleSetting('reducedMotion'),
-      category: 'visual'
-    },
-    {
-      id: 'high-saturation',
-      name: 'High Saturation',
-      description: 'Increase color saturation for color blindness',
-      icon: <Highlighter className="w-5 h-5" />,
-      enabled: settings.highSaturation,
-      toggle: () => toggleSetting('highSaturation'),
-      category: 'visual'
-    },
-    {
-      id: 'focus-indicator',
-      name: 'Focus Indicator',
-      description: 'Enhanced focus indicators for keyboard navigation',
-      icon: <MousePointer className="w-5 h-5" />,
-      enabled: settings.focusIndicator,
-      toggle: () => toggleSetting('focusIndicator'),
-      category: 'navigation'
-    },
-    {
-      id: 'screen-reader',
-      name: 'Screen Reader',
-      description: 'Enhanced screen reader support',
-      icon: <Volume2 className="w-5 h-5" />,
-      enabled: settings.screenReader,
-      toggle: () => toggleSetting('screenReader'),
-      category: 'audio'
-    },
-    {
-      id: 'keyboard-navigation',
-      name: 'Keyboard Navigation',
-      description: 'Enhanced keyboard navigation support',
-      icon: <Keyboard className="w-5 h-5" />,
-      enabled: settings.keyboardNavigation,
-      toggle: () => toggleSetting('keyboardNavigation'),
-      category: 'navigation'
-    }
-  ];
-
-  // Toggle accessibility setting
-  const toggleSetting = useCallback((setting: keyof AccessibilitySettings) => {
-    setSettings(prev => {
-      const newSettings = { ...prev, [setting]: !prev[setting] };
-      settingsRef.current = newSettings;
-      
-      // Apply settings immediately
-      applyAccessibilitySettings(newSettings);
-      
-      // Notify parent component
-      if (onSettingsChange) {
-        onSettingsChange(newSettings);
-      }
-      
-      return newSettings;
-    });
-  }, [onSettingsChange]);
-=======
   const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
   const [isPanelOpen, setIsPanelOpen] = useState(false);
   const [isKeyboardNavigation, setIsKeyboardNavigation] = useState(false);
   
   const focusRef = useRef<HTMLDivElement>(null);
   const announcementRef = useRef<HTMLDivElement>(null);
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a3c7
 
   // Apply accessibility settings to the document
   const applyAccessibilitySettings = useCallback((newSettings: AccessibilitySettings) => {

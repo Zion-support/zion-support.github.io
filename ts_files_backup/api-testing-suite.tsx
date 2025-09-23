@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import React{ useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-CodeZapShieldBarChart3CheckCircleArrowRightPlayAlertTriangleClockDatabase
-
-export default function APITestingSuitePage() {
-  const [isTestingsetIsTesting] = useState(false);
-  const [testResultsetTestResults] = useState(null);
-  const [apiEndpointsetApiEndpoint] = useState('');
-  const [apiKeysetApiKey] = useState('');
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
@@ -23,35 +9,11 @@ export default function APITestingSuitePage() {
   const [testResults, setTestResults] = useState(null);
   const [apiEndpoint, setApiEndpoint] = useState('');
   const [apiKey, setApiKey] = useState('');
->>>>>>> origin/auto/autonomy-17186719616
 
   const features = [
     {
       icon: <Code className="w-8 h-8 text-white" />,
       title: 'Comprehensive API Testing',
-<<<<<<< HEAD
-      description: 'Test RESTGraphQLand SOAP APIs with automated test suites and real-time monitoring.',
-      color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
-      gradient: 'from-indigo-400 to-purple-500'},
-    {
-      icon: <Zap className="w-8 h-8 text-white" />,
-      title: 'Performance Testing',
-      description: 'Load testingstress testingand performance benchmarking for your APIs.',
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      gradient: 'from-orange-400 to-red-500'},
-    {
-      icon: <Shield className="w-8 h-8 text-white" />,
-      title: 'Security Testing',
-      description: 'Automated security testing including authenticationauthorizationand vulnerability scanning.',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      gradient: 'from-green-400 to-emerald-500'},
-    {
-      icon: <BarChart3 className="w-8 h-8 text-white" />,
-      title: 'Real-Time Monitoring',
-      description: '24/7 API monitoring with instant alerts for downtimerrorsand performance issues.',
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-      gradient: 'from-blue-400 to-cyan-500'}];
-=======
       description: 'Test REST, GraphQL, and SOAP APIs with automated test suites and real-time monitoring.',
       color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
       gradient: 'from-indigo-400 to-purple-500',
@@ -78,44 +40,27 @@ export default function APITestingSuitePage() {
       gradient: 'from-blue-400 to-cyan-500',
     },
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const testTypes = [
     {
       name: 'Functional Testing',
       description: 'Verify that your API endpoints work correctly and return expected responses.',
-<<<<<<< HEAD
-      tests: ['Request/response 'validation', 'Status code 'verification', 'Data format 'checking', 'Error handling']
-=======
       tests: ['Request/response validation', 'Status code verification', 'Data format checking', 'Error handling']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       name: 'Performance Testing',
       description: 'Ensure your APIs can handle expected load and perform under pressure.',
-<<<<<<< HEAD
-      tests: ['Load 'testing', 'Stress 'testing', 'Response time 'analysis', 'Throughput measurement']
-=======
       tests: ['Load testing', 'Stress testing', 'Response time analysis', 'Throughput measurement']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       name: 'Security Testing',
       description: 'Identify security vulnerabilities and ensure proper authentication and authorization.',
-<<<<<<< HEAD
-      tests: ['Authentication 'testing', 'Authorization 'checks', 'Input 'validation', 'SQL injection testing']
-=======
       tests: ['Authentication testing', 'Authorization checks', 'Input validation', 'SQL injection testing']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       name: 'Integration Testing',
       description: 'Test how your APIs integrate with other systems and services.',
-<<<<<<< HEAD
-      tests: ['End-to-end 'workflows', 'Third-party 'integrations', 'Data flow 'validation', 'Error propagation']
-=======
       tests: ['End-to-end workflows', 'Third-party integrations', 'Data flow validation', 'Error propagation']
->>>>>>> origin/auto/autonomy-17186719616
     }
   ];
 
@@ -183,19 +128,11 @@ export default function APITestingSuitePage() {
         responseTime: '245ms',
         statusCode: 200,
         tests: [
-<<<<<<< HEAD
-          { name: 'Response 'Time', 'status: ''pass', 'value: '245'ms', 'threshold: '<500ms' },
-          { name: 'Status 'Code', 'status: ''pass', 'value: '200'threshold: '200' },
-          { name: 'Response 'Format', 'status: ''pass', 'value: ''JSON', 'threshold: 'Valid JSON' },
-          { name: ''Authentication', 'status: ''pass', 'value: ''Valid', 'threshold: 'Authenticated' },
-          { name: 'Rate 'Limiting', 'status: ''pass', 'value: 'Within 'limits', 'threshold: 'No throttling' }
-=======
           { name: 'Response Time', status: 'pass', value: '245ms', threshold: '<500ms' },
           { name: 'Status Code', status: 'pass', value: '200', threshold: '200' },
           { name: 'Response Format', status: 'pass', value: 'JSON', threshold: 'Valid JSON' },
           { name: 'Authentication', status: 'pass', value: 'Valid', threshold: 'Authenticated' },
           { name: 'Rate Limiting', status: 'pass', value: 'Within limits', threshold: 'No throttling' }
->>>>>>> origin/auto/autonomy-17186719616
         ],
         recommendations: [
           'Consider implementing response caching for better performance',
@@ -204,26 +141,16 @@ export default function APITestingSuitePage() {
         ]
       });
       setIsTesting(false);
-<<<<<<< HEAD
-    }3000);
-=======
     }, 3000);
->>>>>>> origin/auto/autonomy-17186719616
   };
 
   return (
     <>
       <Head>
         <title>API Testing Suite - Zion Tech Group | Comprehensive API Testing & Monitoring Tool</title>
-<<<<<<< HEAD
-        <meta name="description" content="Testmonitorand optimize your APIs with our comprehensive testing suite. Functionalperformanceand security testing for RESTGraphQLand SOAP APIs." />
-        <meta property="og:title" content="API Testing Suite - Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive API testing tool with functionalperformanceand security testing capabilities." />
-=======
         <meta name="description" content="Test, monitor, and optimize your APIs with our comprehensive testing suite. Functional, performance, and security testing for REST, GraphQL, and SOAP APIs." />
         <meta property="og:title" content="API Testing Suite - Zion Tech Group" />
         <meta property="og:description" content="Comprehensive API testing tool with functional, performance, and security testing capabilities." />
->>>>>>> origin/auto/autonomy-17186719616
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -242,13 +169,8 @@ export default function APITestingSuitePage() {
             API Testing Suite
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
-<<<<<<< HEAD
-            Testmonitorand optimize your APIs with our comprehensive testing suite. Functionalperformance
-            and security testing for RESTGraphQLand SOAP APIs. Ensure your APIs are reliablefastand secure.
-=======
             Test, monitor, and optimize your APIs with our comprehensive testing suite. Functional, performance, 
             and security testing for REST, GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and secure.
->>>>>>> origin/auto/autonomy-17186719616
           </p>
           
           {/* API Testing Form */}
@@ -256,11 +178,7 @@ export default function APITestingSuitePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               <input
                 type="url"
-<<<<<<< HEAD
-                placeholder="API Endpoint (e.g.https://api.example.com/users)"
-=======
                 placeholder="API Endpoint (e.g., https://api.example.com/users)"
->>>>>>> origin/auto/autonomy-17186719616
                 value={apiEndpoint}
                 onChange={(e) => setApiEndpoint(e.target.value)}
                 className="px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
@@ -293,12 +211,6 @@ export default function APITestingSuitePage() {
             </Button>
           </div>
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
               href="#pricing"
@@ -328,20 +240,12 @@ export default function APITestingSuitePage() {
               Powerful Testing Features
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-              Our API testing suite provides everything you need to ensure your APIs are reliableperformantand secure.
-=======
               Our API testing suite provides everything you need to ensure your APIs are reliable, performant, and secure.
->>>>>>> origin/auto/autonomy-17186719616
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-<<<<<<< HEAD
-            {features.map((featureindex) => (
-=======
             {features.map((feature, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className="card-hover group border-gradient-indigo"
@@ -382,11 +286,7 @@ export default function APITestingSuitePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-<<<<<<< HEAD
-            {testTypes.map((typeindex) => (
-=======
             {testTypes.map((type, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className="card-hover border-gradient-indigo"
@@ -395,11 +295,7 @@ export default function APITestingSuitePage() {
                 <h3 className="text-xl font-bold mb-4 text-white">{type.name}</h3>
                 <p className="text-gray-400 mb-6">{type.description}</p>
                 <ul className="space-y-2">
-<<<<<<< HEAD
-                  {type.tests.map((testIndex) => (
-=======
                   {type.tests.map((test, testIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
                     <li key={testIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-4 h-4 text-indigo-400 mr-3 flex-shrink-0" />
                       {test}
@@ -421,11 +317,7 @@ export default function APITestingSuitePage() {
                 API Test Results
               </h2>
               <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-                'Here', 's a sample API test result. Get comprehensive insights for your own API endpoints.
-=======
                 Here's a sample API test result. Get comprehensive insights for your own API endpoints.
->>>>>>> origin/auto/autonomy-17186719616
               </p>
             </div>
             
@@ -453,11 +345,7 @@ export default function APITestingSuitePage() {
               <Card className="border-gradient-indigo">
                 <h3 className="text-2xl font-bold mb-6 text-white">Test Results</h3>
                 <div className="space-y-3">
-<<<<<<< HEAD
-                  {testResults.tests.map((testindex) => (
-=======
                   {testResults.tests.map((test, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                     <div key={index} className="flex items-center justify-between">
                       <span className="text-gray-300 text-sm">{test.name}</span>
                       <div className="flex items-center space-x-2">
@@ -498,18 +386,10 @@ export default function APITestingSuitePage() {
             </div>
 
             {/* Recommendations */}
-<<<<<<< HEAD
-
-            <Card className="border-gradient-indigo">
-              <h3 className="text-2xl font-bold mb-6 text-white">Optimization Recommendations</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {testResults.recommendations.map((recindex) => (
-=======
             <Card className="border-gradient-indigo">
               <h3 className="text-2xl font-bold mb-6 text-white">Optimization Recommendations</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {testResults.recommendations.map((rec, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-indigo-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300">{rec}</span>
@@ -534,11 +414,7 @@ export default function APITestingSuitePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-<<<<<<< HEAD
-            {pricing.map((planindex) => (
-=======
             {pricing.map((plan, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className={`card-hover border-gradient-indigo ${plan.popular ? 'ring-2 ring-indigo-500 scale-105' : ''}`}
@@ -562,11 +438,7 @@ export default function APITestingSuitePage() {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-<<<<<<< HEAD
-                  {plan.features.map((featureIndex) => (
-=======
                   {plan.features.map((feature, featureIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-indigo-400 mr-3 flex-shrink-0" />
                       {feature}

@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-'use client',
-
-import Image from 'next/image',
-import { useState } from 'react',
-import { ImageIcon } from 'lucide-react'
-
-interface SafeImageProps {
-  src: string,
-  alt: string,
-  width?: number,
-  height?: number,
-  className?: string,
-  fallbackSrc?: string,
-  priority?: boolean,
-  sizes?: string,
-  quality?: number
-=======
 'use client';
 
 import Image from 'next/image';
@@ -32,7 +14,6 @@ interface SafeImageProps {
   priority?: boolean;
   sizes?: string;
   quality?: number;
->>>>>>> origin/auto/autonomy-17186719616
 }
 
 export function SafeImage({
@@ -44,25 +25,6 @@ export function SafeImage({
   fallbackSrc,
   priority = false,
   sizes,
-<<<<<<< HEAD
-  quality = 75}: SafeImageProps) {
-  const [hasError, setHasError] = useState(false),
-  const [currentSrc, setCurrentSrc] = useState(src),
-
-  const handleError = () => {
-    if (!hasError && fallbackSrc && currentSrc !== fallbackSrc) {
-      setCurrentSrc(fallbackSrc),
-      setHasError(true),
-    } else if (!hasError && src.startsWith('/')) {
-      // Try serving the image directly through our custom API route
-      const fallbackUrl = `/api/image${src}`,
-      setCurrentSrc(fallbackUrl),
-      setHasError(true),
-    } else if (!hasError) {
-      setHasError(true),
-    }
-  },
-=======
   quality = 75,
 }: SafeImageProps) {
   const [hasError, setHasError] = useState(false);
@@ -81,7 +43,6 @@ export function SafeImage({
       setHasError(true);
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   // If we have an error and no fallback, show a placeholder
   if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {
@@ -94,11 +55,7 @@ export function SafeImage({
       >
         <ImageIcon className="w-6 h-6" />
       </div>
-<<<<<<< HEAD
-    ),
-=======
     );
->>>>>>> origin/auto/autonomy-17186719616
   }
 
   return (
@@ -113,10 +70,5 @@ export function SafeImage({
       // Add unoptimized as fallback for problematic images
       unoptimized={hasError}
     />
-<<<<<<< HEAD
-  ),
-} 
-=======
   );
 } 
->>>>>>> origin/auto/autonomy-17186719616

@@ -11,7 +11,6 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
-
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -228,10 +227,6 @@
   name = "auto-scheduler"
   schedule = "*/15 * * * *"
 
-<<<<<<< HEAD
-# New innovative automations
-=======
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-1585
 [[scheduled.functions]]
   name = "a11y-alt-text-runner"
   schedule = "*/10 * * * *"
@@ -275,11 +270,7 @@
 
 [[scheduled.functions]]
   name = "pagespeed-insights-runner"
-<<<<<<< HEAD
-  schedule = "11 */6 * * *"
-=======
   schedule = "11 */6 * * *" # every 6 hours, offset
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-1585
 
 # Content freshness auditor
 [[scheduled.functions]]
@@ -291,20 +282,6 @@
   name = "adaptive-orchestrator"
   schedule = "*/5 * * * *"
 
-<<<<<<< HEAD
-# Newly added autonomous innovations
-[[scheduled.functions]]
-  name = "autonomous-content-curator"
-  schedule = "*/7 * * * *"
-
-[[scheduled.functions]]
-  name = "revenue-ideas-lab"
-  schedule = "*/15 * * * *"
-
-[[scheduled.functions]]
-  name = "autonomous-invention-orchestrator"
-  schedule = "*/10 * * * *"
-=======
 # Additional autonomous reports
 [[scheduled.functions]]
   name = "code-hotspots-radar"
@@ -321,4 +298,3 @@
 [[scheduled.functions]]
   name = "auto-roadmap-runner"
   schedule = "0 */2 * * *"
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-1585
