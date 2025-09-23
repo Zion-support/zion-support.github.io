@@ -1,5 +1,5 @@
+import React, { lazy, Suspense } from 'react'
 import Link from 'next/link'
-import dynamic from 'next/dynamic'
 import { ArrowRight, Brain, Cloud, Shield, Zap, Users, Globe, Target, Sparkles, TrendingUp } from 'lucide-react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
@@ -41,7 +41,6 @@ import UltimateContentShowcase2025 from './components/UltimateContentShowcase202
 
 // Import new promotional components
 import LatestContentShowcase2025 from './components/LatestContentShowcase2025';
-import NewContent2025UltimateBanner from './components/NewContent2025UltimateBanner';
 import NewContent2025UltimateShowcaseBanner from './components/NewContent2025UltimateShowcaseBanner';
 import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
 import UltimatePromotionBanner2026 from './components/UltimatePromotionBanner2026';
@@ -53,9 +52,9 @@ import RevolutionaryAIContentBanner from './components/RevolutionaryAIContentBan
 
 // Import new AI 2026 promotional components
 import AI2026AutonomousSystemsBanner from './components/AI2026AutonomousSystemsBanner';
-import AI2026QuantumRevolutionBanner from './components/AI2026QuantumRevolutionBanner';
-import AI2026UltimateShowcaseBanner from './components/AI2026UltimateShowcaseBanner';
-import QuantumAI2026BreakthroughBanner from './components/QuantumAI2026BreakthroughBanner';
+import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
+import AI2026UltimateShowcaseBanner from '../components/AI2026UltimateShowcaseBanner';
+import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
 import QuantumAIContentShowcase2026 from './components/QuantumAIContentShowcase2026';
 
 // Import new promotional components
@@ -65,8 +64,8 @@ import WhatsNewStrip from './components/WhatsNewStrip';
 // Import new 2025 quantum AI promotional components
 
 // Import new 2026 ultimate promotional components
-import AI2026QuantumRevolutionUltimateBanner from './components/AI2026QuantumRevolutionUltimateBanner';
-import RevolutionaryAIContent2026Banner from './components/RevolutionaryAIContent2026Banner';
+import AI2026QuantumRevolutionUltimateBanner from '../components/AI2026QuantumRevolutionUltimateBanner';
+import RevolutionaryAIContent2026Banner from '../components/RevolutionaryAIContent2026Banner';
 
 // Import new 2025 advanced automation promotional components
 import AdvancedAutomationContentShowcase2025 from './components/AdvancedAutomationContentShowcase2025';
@@ -248,7 +247,7 @@ export default function HomePage() {
 
         {/* Testimonials Section */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
-          <LazyTestimonials />
+          <Testimonials />
         </div>
       </main>
       
@@ -707,8 +706,7 @@ export default function HomePage() {
         {/* Revolutionary Content 2025 Banner - NEW CONTENT */}
         <RevolutionaryContent2025Banner />
         
-        {/* New Content 2025 Ultimate Banner - FEATURED */}
-        <NewContent2025UltimateBanner />
+        {/* New Content 2025 Ultimate Banner - temporarily disabled due to syntax errors */}
         
         {/* AI 2025 Breakthrough Banner */}
         <AI2025BreakthroughBanner />
