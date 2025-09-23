@@ -417,6 +417,7 @@ export default function AI2026QuantumNeuralFusionBreakthrough() {
           </div>
         </footer>
       </div>
-    </article>
+      </article>
+    </div>
   );
 }
