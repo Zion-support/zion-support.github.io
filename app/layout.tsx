@@ -1,5 +1,6 @@
 import './globals.css'
 import type { ReactNode } from 'react'
+import ErrorBoundary from './components/ErrorBoundary'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
@@ -62,11 +63,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name="theme-color" content="#6366f1" />
       </head>
       <body className="antialiased">
-        <Header />
-        <main className="min-h-screen">
-          {children}
-        </main>
-        <Footer />
+        <ErrorBoundary>
+          <Header />
+          <main className="min-h-screen">
+            {children}
+          </main>
+          <Footer />
+        </ErrorBoundary>
       </body>
     </html>
   )
