@@ -64,10 +64,6 @@ export default {
     '<rootDir>/__safe_tests__/',
     '<rootDir>/App.test.ts',
   ],
-  testMatch: [
-    '<rootDir>/zion-website/**/*.test.(ts|tsx|js|jsx)',
-    '<rootDir>/src/**/*.test.(ts|tsx|js|jsx)'
-  ],
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
