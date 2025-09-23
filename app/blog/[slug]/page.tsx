@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import React from 'react';
 import { blogPosts } from '../../../src/data/blog-posts.js';
 
-export default async function BlogPostPage({ params }: { params: { slug: string } | Promise<{ slug: string }> }) {
+export default async function BlogPostPage({ params }: { params?: Promise<any> }) {
   // Support Next 15 PageProps where params may be a Promise
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const awaitedParams: any = (typeof (params as any)?.then === 'function') ? await (params as Promise<{ slug: string }>) : params;
