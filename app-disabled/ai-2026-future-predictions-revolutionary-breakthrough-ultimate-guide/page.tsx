@@ -181,8 +181,8 @@ export default function AI2026FuturePredictionsPage() {
             {relatedPosts.map((post, index) => (
               <div key={index} className="border rounded-lg p-4 hover:shadow-lg transition-shadow">
                 <h4 className="font-semibold mb-2">{post.title}</h4>
-                <p className="text-gray-600 text-sm">{post.description}</p>
-                <Link href={post.url} className="text-blue-600 hover:underline mt-2 inline-block">
+                <p className="text-gray-600 text-sm">{post.excerpt}</p>
+                <Link href={post.slug} className="text-blue-600 hover:underline mt-2 inline-block">
                   Read more →
                 </Link>
               </div>
