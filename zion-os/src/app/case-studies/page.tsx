@@ -1,23 +1,5 @@
-<<<<<<< HEAD
-
-export default function CaseStudiesPage() {return (;
-export default function CaseStudiesPage() {;
-  return (;
-    <div className="min-h-screen py-20">;
-
-export default /**
- * CaseStudiesPage - Function description
- */
-function CaseStudiesPage() {
-  return (
-    <div className="min - h-screen py - 20">;
-
-export default function CaseStudiesPage() {;
-  return (;
-=======
 
 
-=======
 export default function CaseStudiesPage() {;
   return (;
 
@@ -357,7 +339,6 @@ export default function CaseStudiesPage() {;
       </section>;
     </div>);
 }
-=======
 export default function CaseStudiesPage() {
   return (
     <div className="min-h-screen py-20">
@@ -708,4 +689,3 @@ export default function CaseStudiesPage() {
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616
