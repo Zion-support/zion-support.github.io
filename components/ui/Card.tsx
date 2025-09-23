@@ -8,6 +8,7 @@ type CardProps = {
   hover?: boolean;
 };
 
+<<<<<<< HEAD
 export default function Card({ children, className = '', style, onClick, hover = true }: CardProps) {
   const base = 'bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 transition-all duration-300 relative overflow-hidden';
   const hoverClasses = hover ? 'hover:border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1 hover:bg-gray-900/80 focus-within:border-blue-500/50 focus-within:shadow-lg focus-within:shadow-blue-500/20' : '';
@@ -24,3 +25,24 @@ export default function Card({ children, className = '', style, onClick, hover =
     </div>
   );
 }
+=======
+const Card: React.FC<CardProps> = ({
+  children,
+  className = '',
+  style,
+  onClick,
+  hover = true,
+}) => {
+  const baseClasses = 'bg-white border border-gray-200 rounded-xl p-6 transition-all duration-300 relative overflow-hidden';
+  const hoverClasses = hover ? 'hover:shadow-2xl hover:-translate-y-1' : '';
+  const clickableClasses = onClick ? 'cursor-pointer focus:outline-none' : '';
+  const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`;
+  return (
+    <div className={classes} style={style} onClick={onClick}>
+      <div className="relative z-10">{children}</div>
+    </div>
+  );
+};
+
+export default Card;
+>>>>>>> 2f91f519a862b7cb51772274fd4f684c7acb589a
