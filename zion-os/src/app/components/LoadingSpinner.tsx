@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
       <svg 
         className={`animate-spin ${sizeClasses[size]} text-current`} 
         viewBox="0 0 24 24"
@@ -42,4 +19,3 @@
       </svg>
       {text && <span className="text-sm">{text}</span>}
     </div>
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4

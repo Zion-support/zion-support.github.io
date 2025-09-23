@@ -1,16 +1,6 @@
 import Link from "next/link";
 
 export default function CommunityPage() {
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen py-20 px-4">
-      <div className="max-w-4xl mx-auto space-y-6">
-        <h1 className="text-3xl font-bold">Community</h1>
-        <p className="text-gray-300">Join the Zion OS community to connect, share, and learn.</p>
-      </div>
-    </div>
-  );
-=======
 	return (
 		<div className="min-h-screen py-20 px-4">
 			<div className="max-w-6xl mx-auto">
@@ -24,5 +14,4 @@ export default function CommunityPage() {
 			</div>
 		</div>
 	);
->>>>>>> 45bde326a2e7 (fix(zion-os): repair corrupted pages, add path alias, implement minimal onboarding route; fix signin/signup/dashboard pages; clean homepage duplicates; build zion-website and zion-ai-assistant)
 }
