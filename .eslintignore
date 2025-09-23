@@ -1,3 +1,50 @@
+node_modules/
+.next/
+dist/
+out/
+coverage/
+
+# Backups, archives, and generated folders
+automation/
+apps.backup/
+backups/
+backup/
+backup-merge-conflicts/
+backup-problematic-files/
+recovered-branches/
+ts_files_backup/
+temp_backup/
+temp_exclude/
+temp_*/
+
+# Disabled or quarantined content
+components.disabled/
+components.disabled_full/
+pages-disabled/
+pages.disabled/
+pages.bak/
+pages._archive_corrupted/
+pages._quarantine/
+pages.blog.disabled/
+pages_backup/
+pages_backup_before_cleanup/
+pages.broken/
+pages.corrupted*
+
+# Other large or external subprojects
+zion-os/
+zion-os.*
+zion-ai-assistant/**
+zion-website/**
+
+# Server and e2e not part of lint scope
+server/**
+e2e/
+
+# File patterns
+**/*.backup.*
+**/*.cleanup-backup.*
+**/*.bak/**
 *
 !zion-website
 !zion-website/**
