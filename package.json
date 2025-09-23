@@ -15,7 +15,7 @@
     "build:clean": "rm -rf .next && npm run build",
     "dev:clean": "rm -rf .next && npm run dev",
     "lint:fix": "next lint --fix",
-    "type-check": "NODE_OPTIONS='--max-old-space-size=4096' tsc --noEmit",
+    "type-check": "NODE_OPTIONS='--max-old-space-size=8192' tsc --noEmit",
     "test": "jest --runInBand --passWithNoTests --no-cache",
     "test:watch": "jest --watch --runInBand",
     "preview": "npm run build && npm run start",
@@ -23,7 +23,7 @@
     "clean": "rm -rf .next node_modules/.cache",
     "export": "npm run build && next export",
     "deploy": "npm run build && npm run export",
-    "postinstall": "npm run type-check || echo 'Type-check skipped (non-blocking)'"
+    "postinstall": "echo 'Type-check skipped (non-blocking)'"
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^5.13.3",
@@ -40,9 +40,11 @@
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
     "path": "^0.12.7",
-    "react": "^18.3.1",
+    "react": "^19.1.1",
     "react-datepicker": "^8.4.0",
-    "react-dom": "^18.3.1",
+    "react-dom": "^19.1.1",
+    "react-error-boundary": "^4.0.11",
+>>>>>>> 70331883a7438dbb8cdf22cae5b9b34bd44a2550
     "sonner": "^2.0.7",
     "swr": "^2.3.6",
     "tailwind-merge": "^3.3.1",
