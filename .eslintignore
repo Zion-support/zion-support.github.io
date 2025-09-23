@@ -64,6 +64,24 @@ lib_backup/
 lib.broken/
 lib.disabled/
 
+# Additional large or experimental areas to ignore for lint
+zion-os/
+zion-os/**
+zion-website/
+zion-website/**
+zion-ai-assistant/
+zion-ai-assistant/**
+server/
+server/**
+utils/
+utils/**
+types/
+types/**
+ts_files_backup/
+services_backup/
+services_backup/**
+.types/**
+
 # Catch-all patterns for backups/disabled variants
 **/*.backup*
 **/*.backups*/

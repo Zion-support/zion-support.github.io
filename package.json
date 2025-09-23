@@ -28,8 +28,6 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@netlify/plugin-nextjs": "^5.13.3",
-    "@types/react": "^18.3.24",
-    "@types/react-dom": "^18.3.7",
     "autoprefixer": "^10.4.21",
     "axios": "^1.11.0",
     "class-variance-authority": "0.7.0",
@@ -58,10 +56,7 @@
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
     "@next/bundle-analyzer": "^14.2.0",
-<<<<<<< HEAD
-=======
     "@next/swc-linux-x64-gnu": "^15.5.3",
->>>>>>> cursor/check-fix-push-and-merge-to-main-7e10
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "12.1.5",
     "@types/jest": "^29.0.0",

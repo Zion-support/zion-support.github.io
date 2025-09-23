@@ -1,5 +1,5 @@
+import React, { lazy, Suspense } from 'react'
 import Link from 'next/link'
-import dynamic from 'next/dynamic'
 import { ArrowRight, Brain, Cloud, Shield, Zap, Users, Globe, Target, Sparkles, TrendingUp } from 'lucide-react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
@@ -62,8 +62,6 @@ import QuantumAIContentShowcase2026 from './components/QuantumAIContentShowcase2
 import NewContent2026UltimateShowcase from './components/NewContent2026UltimateShowcase';
 import WhatsNewStrip from './components/WhatsNewStrip';
 
-// Import new 2025 quantum AI promotional components
-
 // Import new 2026 ultimate promotional components
 import AI2026QuantumRevolutionUltimateBanner from './components/AI2026QuantumRevolutionUltimateBanner';
 import RevolutionaryAIContent2026Banner from './components/RevolutionaryAIContent2026Banner';
@@ -79,16 +77,17 @@ import NewContent2025AnalyticsRevolutionBanner from './components/NewContent2025
 import NewMultimodalAgents2025Banner from './components/NewMultimodalAgents2025Banner';
 import WhatsNew from './components/WhatsNew';
 
-// Import new 2026 promotional components
-import LatestBlogContent2026 from '../src/components/LatestBlogContent2026';
-import LatestServicesShowcase2026 from '../src/components/LatestServicesShowcase2026';
-import NewContent2026UltimateBanner from '../src/components/NewContent2026UltimateBanner';
-import SuccessStoriesShowcase2026 from '../src/components/SuccessStoriesShowcase2026';
-import UltimateContentPromotion2026 from '../src/components/UltimateContentPromotion2026';
+// Import new 2026 promotional content moved into app/components
+import LatestBlogContent2026 from './components/LatestBlogContent2026';
+import LatestServicesShowcase2026 from './components/LatestServicesShowcase2026';
+import NewContent2026UltimateBanner from './components/NewContent2026UltimateBanner';
+import SuccessStoriesShowcase2026 from './components/SuccessStoriesShowcase2026';
+import UltimateContentPromotion2026 from './components/UltimateContentPromotion2026';
 
 // Import new content showcase components
 import NewContentShowcase2026 from './components/NewContentShowcase2026';
 import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBanner2026';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -248,7 +247,7 @@ export default function HomePage() {
 
         {/* Testimonials Section */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
-          <LazyTestimonials />
+          <Testimonials />
         </div>
       </main>
       
@@ -429,7 +428,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* What's New dynamic section */}
-      <WhatsNew highlightOnly limit={8} />
+      <WhatsNewStrip />
       {/* Quick new content spotlight */}
       <section className="py-6 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

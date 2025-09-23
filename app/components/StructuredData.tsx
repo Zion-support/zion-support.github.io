@@ -1,24 +1,22 @@
+"use client";
+
 import React from 'react';
 
-interface StructuredDataProps {
-  type: string;
-  data: any;
-}
-
-const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': type,
-    ...data
-  };
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-    />
-  );
+type StructuredDataProps = {
+	type: string;
+	data: Record<string, unknown>;
 };
+
+export default function StructuredData({ type, data }: StructuredDataProps) {
+	const jsonLd = {
+		"@context": "https://schema.org",
+		"@type": type,
+		...data,
+	};
+	return (
+		<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+	);
+}
 
 export const organizationSchema = {
   '@type': 'Organization',
@@ -58,5 +56,3 @@ export const serviceSchema = {
   description: 'Comprehensive AI solutions, cloud computing, and digital transformation services to transform your business.',
   serviceType: 'Technology Services'
 };
-
-export default StructuredData;

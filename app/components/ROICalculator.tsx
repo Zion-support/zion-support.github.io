@@ -2,6 +2,6 @@
 
 import React from 'react';
 
-export default function TechnologyStack() {
+export default function ROICalculator() {
 	return null;
 }

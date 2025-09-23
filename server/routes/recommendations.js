@@ -1,4 +1,4 @@
-const express = require('express');;
+const express = require('express');
 const cache = require('../utils/cache');const router = express.Router();
 
 router.get('/', cache, (_req, res) =>  res.json([

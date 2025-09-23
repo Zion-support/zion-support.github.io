@@ -127,7 +127,7 @@ export default function Signup() {
             }
         }
         finally { }
-        ;
+        
         const onInvalid = (errors) => {
             const firstError = Object.keys(errors)[0];
             if (firstError) {
