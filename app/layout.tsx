@@ -1,5 +1,7 @@
-// import './globals.css'
+import './globals.css'
 import type { ReactNode } from 'react'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 export const metadata = {
   title: {
@@ -60,7 +62,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name="theme-color" content="#6366f1" />
       </head>
       <body className="antialiased">
-        {children}
+        <Header />
+        <main className="min-h-screen">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   )
