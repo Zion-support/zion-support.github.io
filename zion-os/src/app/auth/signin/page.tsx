@@ -52,10 +52,6 @@ export default function SignInPage() {
                 placeholder="Enter your email"
               />
             </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> 45bde326a2e7 (fix(zion-os): repair corrupted pages, add path alias, implement minimal onboarding route; fix signin/signup/dashboard pages; clean homepage duplicates; build zion-website and zion-ai-assistant)
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-zinc-300 mb-2">
                 Password
@@ -70,10 +66,6 @@ export default function SignInPage() {
                 placeholder="Enter your password"
               />
             </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> 45bde326a2e7 (fix(zion-os): repair corrupted pages, add path alias, implement minimal onboarding route; fix signin/signup/dashboard pages; clean homepage duplicates; build zion-website and zion-ai-assistant)
             <button
               type="submit"
               disabled={isLoading}
