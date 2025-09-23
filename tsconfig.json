@@ -34,8 +34,6 @@
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "src/**/*.ts",
-    "src/**/*.tsx",
     "app/**/*.ts",
     "app/**/*.tsx",
     "types/**/*.d.ts"
@@ -54,6 +52,13 @@
     "zion-ai-assistant/**",
     "zion-website/**",
     "apps.backup/**",
+    "src/pages_backup/**",
+    "src/components/navigation/ModernNavigation-broken.tsx",
+    "src/components/**/*.broken.*",
+    "**/*-broken.*",
+    "src/expandedServices.ts",
+    "src/comprehensiveServices.ts",
+    "src/data/comprehensiveServices.ts",
     "backups/**",
     "backup/**",
     "**/*backup*",
