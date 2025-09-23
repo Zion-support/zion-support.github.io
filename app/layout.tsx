@@ -1,5 +1,6 @@
-// import './globals.css'
+import './globals.css'
 import type { ReactNode } from 'react'
+import ErrorBoundary from './components/ErrorBoundary'
 
 export const metadata = {
   title: {
@@ -59,9 +60,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#6366f1" />
       </head>
-      <body className="antialiased">
-        {children}
-      </body>
+          <body className="antialiased">
+            <ErrorBoundary>
+              {children}
+            </ErrorBoundary>
+          </body>
     </html>
   )
 }

@@ -47,11 +47,11 @@ export default [
     },
     plugins: { react, 'react-hooks': reactHooks },
     settings: { react: { version: 'detect' } },
-    rules: {
-      'react/react-in-jsx-scope': 'off',
-      'no-console': 'warn',
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' }]
-    }
+        rules: {
+          'react/react-in-jsx-scope': 'off',
+          'no-console': ['warn', { allow: ['warn', 'error'] }],
+          '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' }]
+        }
   }
 ];
 
