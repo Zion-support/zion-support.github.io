@@ -7,9 +7,14 @@ import tsParser from '@typescript-eslint/parser';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
 
 export default [
-  js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: [
+      'app/**/*.{js,jsx,ts,tsx}',
+      'pages/**/*.{js,jsx,ts,tsx}',
+      'components/**/*.{js,jsx,ts,tsx}',
+      'providers/**/*.{js,jsx,ts,tsx}',
+      'lib/**/*.{js,jsx,ts,tsx}'
+    ],
     languageOptions: {
       ecmaVersion: 2020,
       sourceType: 'module',
@@ -77,6 +82,7 @@ export default [
       '*.config.ts',
       'scripts/**',
       'automation/**',
+      '__mocks__/**',
       'public/**',
       'netlify/**',
       'ecosystem*.cjs',
@@ -86,6 +92,8 @@ export default [
       'zion-os/.next/**',
       'zion.app/**',
       'zion_academy/**',
+      'app_backup/**',
+      'app-disabled/**',
       // Additional ignores to avoid linting backups/alt projects
       'pages.broken/**',
       'pages.corrupted*/**',
