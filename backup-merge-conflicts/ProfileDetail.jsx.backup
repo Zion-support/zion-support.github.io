@@ -1,0 +1,1 @@
+<<<<<<< "HEAD": src.pages.disabled/ProfileDetail.jsx import _React from 'react'; export default function ProfileDetail () { import _React from 'react'; export default function ProfileDetail () {'';

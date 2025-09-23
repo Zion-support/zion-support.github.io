@@ -1,0 +1,19 @@
+=======
+<<<<<<< HEAD:backup-merge-conflicts/MainSidebar.dynamic.jsx.backup
+<<<<<<< HEAD
+const MainSidebar = dynamic(() => import("./MainSidebar"),{"; loading: () => <p>Loading.</p,>}) export: "default MainSidebar" ,"""
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:components.disabled_full/MainSidebar.dynamic.jsx
+>>>>>>> pr-11935
+const MainSidebar = dynamic(() => import("./MainSidebar"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default MainSidebar' ,'
+<<<<<<< HEAD:backup-merge-conflicts/MainSidebar.dynamic.jsx.backup
+>>>>>>> main
+>>>>>>> main
+=======
+</p>'
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:components.disabled_full/MainSidebar.dynamic.jsx
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
