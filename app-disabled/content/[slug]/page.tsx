@@ -5,7 +5,7 @@ import React from 'react';
 import { blogPosts } from '../../../src/data/blog-posts.js';
 
 export default async function ContentPage({ params }: { params?: Promise<any> }) {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+   
   const awaitedParams: any = (typeof (params as any)?.then === 'function') ? await (params as Promise<{ slug: string }>) : params;
   const post = blogPosts.find(p => p.slug === awaitedParams.slug);
   if (!post) {
