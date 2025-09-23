@@ -15,7 +15,7 @@
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "rm -rf .next && npm run build",
     "dev:clean": "rm -rf .next && npm run dev",
-    "lint:fix": "eslint src pages app lib hooks --fix",
+    "lint:fix": "eslint app src providers lib hooks --fix",
     "type-check": "tsc --noEmit",
     "test": "jest --runInBand --passWithNoTests --no-cache",
     "test:watch": "jest --watch --runInBand",
