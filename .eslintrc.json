@@ -5,7 +5,7 @@
   "parserOptions": {
     "ecmaVersion": 2021,
     "sourceType": "module",
-    "project": "./tsconfig.json",
+    "project": "./tsconfig.eslint.json",
     "ecmaFeatures": { "jsx": true }
   },
   "plugins": ["@typescript-eslint", "testing-library", "jest-dom"],
@@ -25,6 +25,8 @@
     "automation/",
     "scripts/",
     "apps/",
+    "zion-os/**",
+    "src/**",
     "components.disabled/**",
     "pages.disabled/**",
     "pages-disabled/**",

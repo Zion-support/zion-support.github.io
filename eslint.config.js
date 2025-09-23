@@ -3,6 +3,8 @@ import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import globals from 'globals';
+import tsParser from '@typescript-eslint/parser';
+import tsPlugin from '@typescript-eslint/eslint-plugin';
 
 export default [
   js.configs.recommended,
@@ -34,13 +36,31 @@ export default [
     plugins: {
       react,
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh
+      'react-refresh': reactRefresh,
+      '@typescript-eslint': tsPlugin
     },
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'react/jsx-uses-react': 'off',
       'react/react-in-jsx-scope': 'off'
+    }
+  },
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      parser: tsParser,
+      parserOptions: {
+        sourceType: 'module',
+        ecmaVersion: 2020,
+        ecmaFeatures: { jsx: true }
+      }
+    },
+    plugins: {
+      '@typescript-eslint': tsPlugin
+    },
+    rules: {
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }]
     }
   },
   {
