@@ -65,7 +65,6 @@ const "AIChatAssistant": React.FC = (props) => {
         id: (Date.now() + 1).toString(),
         "text": `I understand: "${userMessage.text}". How can I help?`,
         "sender": 'ai'
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/AIChatAssistant.tsx
       };

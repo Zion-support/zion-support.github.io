@@ -162,4 +162,3 @@ const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https: export class Api
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
->>>>>>> main

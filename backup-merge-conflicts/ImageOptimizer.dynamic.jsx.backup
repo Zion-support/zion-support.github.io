@@ -1,9 +1,5 @@
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD:backup-merge-conflicts/ImageOptimizer.dynamic.jsx.backup
-<<<<<<< HEAD
-const ImageOptimizer = dynamic(() => import("./ImageOptimizer"),{"; loading: () => <p>Loading.</p,>}) export: "default ImageOptimizer" ,"""
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:components.disabled/ImageOptimizer.dynamic.jsx
@@ -11,7 +7,6 @@ const ImageOptimizer = dynamic(() => import(\"./ImageOptimizer\"),{\'; \"loading
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 =======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:components.disabled/ImageOptimizer.dynamic.jsx
 >>>>>>> pr-11935
 const ImageOptimizer = dynamic(() => import("./ImageOptimizer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ImageOptimizer' ,'
 <<<<<<< HEAD

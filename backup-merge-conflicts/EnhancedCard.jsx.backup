@@ -82,8 +82,6 @@ export function EnhancedCardFooter("props": "any) {;
 =======
 // Enhanced Card Header component
 
->>>>>>> pr-11935
-;
 ;
 <<<<<<< HEAD:backup-merge-conflicts/EnhancedCard.jsx.backup
 =======

@@ -159,7 +159,6 @@ class ErrorDetectionService {
       this.startContinuousMonitoring();
       
       // Start file watching for real-time detection;
->>>>>>> main
       this.startFileWatching();
       
       this.log('info', 'Error Detection Service started successfully');

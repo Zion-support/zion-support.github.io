@@ -30,11 +30,6 @@ class AdvancedAppOptimizer {}
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
-        }
-
-    optimizeNextConfig() {
-=======
         console.log(message)};
     optimizeNextConfig() {}
 =======
@@ -541,4 +536,3 @@ if ( {})
     const optimizer = new AdvancedAppOptimizer}(;);
     optimizer.run().catch(console.error)};
 module.exports = AdvancedAppOptimizer;
->>>>>>> main

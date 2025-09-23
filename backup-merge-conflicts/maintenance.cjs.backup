@@ -4,18 +4,6 @@ const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "maintenance-reports")
-<<<<<<< HEAD
-    this.ensureDirectories()}
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { "recursive": true })}
-  }
-  log(message, level = "info") {
-    const timestamp = new Date().toISOString()
-    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`
-    }
-  async cleanCache() {
-=======
       fs.mkdirSync(this.reportsDir, { "recursive"})
   log(message, level = "info")
 =======

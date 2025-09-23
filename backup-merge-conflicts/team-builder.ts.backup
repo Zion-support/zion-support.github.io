@@ -9,15 +9,12 @@ export interface ProjectBrief {
 		regions?: string[]}}
 <<<<<<< HEAD
 export interface ProjectBrief { projectName: string; goals: string; timeline: string; budget: string; techStack?: string[]; talentFilters?: { verifiedOnly?: boolean; regions?: string[]} }}
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:backup-merge-conflicts/team-builder.ts.backup
 =======
 <<<<<<< HEAD
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface ProjectBrief { projectName: string; goals: string; timeline: string; budget: string; techStack?: string[]; talentFilters?: { verifiedOnly?: boolean; regions?: string[]}}
->>>>>>> main
 >>>>>>> main
 =======
 export interface ProjectBrief { projectName: string; goals: string; timeline: string; budget: string; techStack?: string[]; talentFilters?: { verifiedOnly?: boolean; regions?: string[]}}

@@ -6,7 +6,6 @@ require('@testing-library/jest-dom');
 
 =======
 // Mock IntersectionObserver
->>>>>>> main
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}

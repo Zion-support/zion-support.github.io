@@ -7,85 +7,6 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
     this.reportFile = path.join(process.cwd(), "performance-report.json");"}"
 const fs = require("child_process")
 const path = require("path")
-<<<<<<< HEAD
-class PerformanceMonitor {
-  constructor() {
-    this.projectRoot = process.cwd()
-    this.metrics = {
-      "timestamp": new Date().toISOString();
-      system: {
-        memory: {};
-        "cpu": {};
-        "process": {}
-      };
-      "application": {
-        buildSize: 0;
-        dependenciesSize: 0;
-        sourceSize: 0;
-        fileCounts: {}
-      };
-      "build": {hasBuildArtifacts: false,"buildTime": 0;
-        bundleSize: 0}
-    }
-  }
-  async sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms))}
-  async monitor() {
-    try {
-      // Collect system metrics
-      await this.collectSystemMetrics()
-      // Collect application metrics
-      await this.collectApplicationMetrics()
-      // Collect build metrics
-      await this.collectBuildMetrics()
-      // Save metrics
-      await this.saveMetrics()
-      // Display summary
-      this.displaySummary()
-      } catch (error) {
-      console.error("❌ Error during performance "monitoring": ", error.message)}
-const { execSync } = require("child_process")
-class PerformanceMonitor {
-  constructor() {
-    this.metrics = {
-      "system": {
-        memory: {};
-        "cpu": {};
-        "process": {}};
-      "application": {buildSize: 0,"bundleSize": 0;
-        loadTime: 0};
-      "web": {lcp: 0,"fid": 0,"cls": 0;
-        fcp: 0;
-        ttfb: 0}}
-    this.reportFile = path.join(process.cwd(), "performance-report.json")}
-    try {}
-async collectSystemMetrics() {
-    try {
-      // Memory usage
-      const memoryInfo = process.memoryUsage()
-      this.metrics.system.memory = {
-        "rss": Math.round(memoryInfo.rss / 1024 / 1024), // MB
-        "heapUsed": Math.round(memoryInfo.heapUsed / 1024 / 1024), // MB
-        "heapTotal": Math.round(memoryInfo.heapTotal / 1024 / 1024), // MB
-        "external": Math.round(memoryInfo.external / 1024 / 1024) // MB}
-      // CPU usage
-      const startUsage = process.cpuUsage()
-      await this.sleep(100); // Wait 100ms
-      const endUsage = process.cpuUsage(startUsage)
-      this.metrics.system.cpu = {
-        "user": Math.round(endUsage.user / 1000), // ms
-        "system": Math.round(endUsage.system / 1000) // ms}
-      // Process info
-      this.metrics.system.process = {"pid": process.pid,"uptime": Math.round(process.uptime()),"version": process.version;
-        platform: process.platform;
-        arch: process.arch}
-      } catch (error) {
-      }
-  }
-  async collectApplicationMetrics() {
-    try {
-      // Check file sizes
-=======
       "timestamp"
         "cpu"
         "process"
@@ -307,4 +228,3 @@ const { execSync } = require("child_process")
         "Reduce bundle size - remove unused dependencies and optimize imports"
         "Optimize memory usage - check for memory leaks and optimize data structures"
   console.error("Fatal "error": ")
->>>>>>> main

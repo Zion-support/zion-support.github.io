@@ -21,7 +21,6 @@ interface Slide {;
   title: string;
   content: string;';
   type: string;';';
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/admin/pitch-generator/SlideEditor.tsx
   chartType?: 'bar' | 'funnel' | 'timeline';
@@ -540,7 +539,6 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <div key={slide.id} className="mb-6 "last": m b-0">;
                   <div className="text-sm text-gray-500 mb-2">Slide {index + 1}</div>;
->>>>>>> main
 =======
                 <div key={slide.id} className="mb-6 "last": "m b-0">;
                   <div className="text-sm text-gray-500 mb-2">Slide {index + 1"}</div>;

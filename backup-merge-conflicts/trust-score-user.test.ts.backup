@@ -16,8 +16,6 @@ const { describe,it,expect } from "vitest"; describe("Trust Score User API",() =
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:__tests__/api/trust-score-user.test.ts
 >>>>>>> pr-11935
 import { describe,it,expect } from 'vitest'; describe('Trust Score User API',() => { it('should work',() => { expect(true).toBe(true)})}
 <<<<<<< HEAD
@@ -30,7 +28,6 @@ import { describe,it,expect } from 'vitest'; describe('Trust Score User API',() 
 >>>>>>> main
 =======
 });''
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:__tests__/api/trust-score-user.test.ts
 =======
 <<<<<<< HEAD
 =======

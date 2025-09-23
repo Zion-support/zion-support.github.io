@@ -130,7 +130,6 @@ export function AccessibilityMenu(props: any) {
 >>>>>>> main
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
->>>>>>> pr-11935
               {/* Font Size */"}
               <div className="mb-6">;
                 <label className="flex items-center gap-3 text-white mb-3">;
@@ -202,13 +201,10 @@ export function AccessibilityMenu(props: any) {
 <<<<<<< HEAD:backup-merge-conflicts/accessibility-menu.js.jsx.backup
 =======
 
->>>>>>> pr-11935
 </motion>
 
 </motion>
 </motion>
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:backup-merge-conflicts/accessibility-menu.js.jsx.backup
 </motion>
 =======

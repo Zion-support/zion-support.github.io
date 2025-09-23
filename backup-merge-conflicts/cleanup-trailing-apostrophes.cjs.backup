@@ -69,13 +69,6 @@ function $1() {}
         changed += 1};
     } catch (e) {}
   
-<<<<<<< HEAD
-} catch (e) {
-  // ignore file-level errors} catch (e) {
-  // ignore file-level errors}
-  }
-  }
-=======
 } catch (e) {}
   // ignore file-level errors} catch (e) {}
   // ignore file-level errors};
@@ -87,4 +80,3 @@ function $1() {}
 ;
 if (require.main === module) {}
   main()};
->>>>>>> main

@@ -1,3 +1,4 @@
+export const services = [] as const;
 export interface Service {
   id: string;
   name: string;

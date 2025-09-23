@@ -1,20 +1,11 @@
-<<<<<<< HEAD
-export default function EnterpriseItPage() {
-	return (
-		<div className="min-h-screen py-20 px-4">
-			<div className="max-w-5xl mx-auto">
-				<h1 className="text-3xl font-bold mb-4">Enterprise IT</h1>
-				<p className="text-zinc-500">Enterprise IT services overview.</p>
-			</div>
-		</div>
-	);
-=======
 import Link from "next/link";
 
 export const metadata = {
   title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services",
-  description: "Transform your enterprise with Zion Tech Group's comprehensive IT solutions. From cloud migration to DevOps automation, we help organizations modernize their technology infrastructure.",
-  keywords: "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions",
+  description:
+    "Transform your enterprise with Zion Tech Group's comprehensive IT solutions. From cloud migration to DevOps automation, we help organizations modernize their technology infrastructure.",
+  keywords:
+    "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions",
 };
 
 export default function EnterpriseITPage() {
@@ -27,9 +18,7 @@ export default function EnterpriseITPage() {
             <span className="gradient-text">Enterprise IT Solutions</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your enterprise with modern, scalable, and secure IT infrastructure. 
-            From cloud migration to DevOps automation, we help organizations achieve 
-            digital transformation excellence.
+            Transform your enterprise with modern, scalable, and secure IT infrastructure. From cloud migration to DevOps automation, we help organizations achieve digital transformation excellence.
           </p>
         </div>
       </section>
@@ -40,14 +29,9 @@ export default function EnterpriseITPage() {
           <div className="card bg-gradient-to-r from-blue-600/20 to-indigo-600/20 border-blue-500/30">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                  Modernize Your Enterprise Infrastructure
-                </h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">Modernize Your Enterprise Infrastructure</h2>
                 <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-                  In today's digital-first world, enterprises need agile, scalable, 
-                  and secure IT infrastructure to compete and thrive. Our comprehensive 
-                  solutions help organizations modernize their technology stack while 
-                  maintaining operational excellence.
+                  In today's digital-first world, enterprises need agile, scalable, and secure IT infrastructure to compete and thrive. Our comprehensive solutions help organizations modernize their technology stack while maintaining operational excellence.
                 </p>
                 <div className="space-y-4 mb-6">
                   <div className="flex items-center">
@@ -87,14 +71,10 @@ export default function EnterpriseITPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Core Enterprise Services
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Comprehensive IT solutions designed for enterprise-scale operations
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Core Enterprise Services</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">Comprehensive IT solutions designed for enterprise-scale operations</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Cloud Migration & Strategy */}
             <div className="card group hover:bg-blue-500/10 transition-colors">
@@ -104,10 +84,7 @@ export default function EnterpriseITPage() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3">Cloud Migration & Strategy</h3>
-              <p className="text-gray-400 mb-4">
-                Seamless migration to cloud platforms with strategic planning, 
-                cost optimization, and performance tuning.
-              </p>
+              <p className="text-gray-400 mb-4">Seamless migration to cloud platforms with strategic planning, cost optimization, and performance tuning.</p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">
                 <li>• Cloud readiness assessment</li>
                 <li>• Migration planning & execution</li>
@@ -118,7 +95,7 @@ export default function EnterpriseITPage() {
                 Learn More →
               </Link>
             </div>
-            
+
             {/* DevOps & Automation */}
             <div className="card group hover:bg-green-500/10 transition-colors">
               <div className="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-500/30">
@@ -128,10 +105,7 @@ export default function EnterpriseITPage() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3">DevOps & Automation</h3>
-              <p className="text-gray-400 mb-4">
-                Streamline development and operations with automated CI/CD pipelines, 
-                infrastructure as code, and monitoring solutions.
-              </p>
+              <p className="text-gray-400 mb-4">Streamline development and operations with automated CI/CD pipelines, infrastructure as code, and monitoring solutions.</p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">
                 <li>• CI/CD pipeline automation</li>
                 <li>• Infrastructure as Code (IaC)</li>
@@ -142,7 +116,7 @@ export default function EnterpriseITPage() {
                 Learn More →
               </Link>
             </div>
-            
+
             {/* Infrastructure Management */}
             <div className="card group hover:bg-purple-500/10 transition-colors">
               <div className="w-16 h-16 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-500/30">
@@ -151,10 +125,7 @@ export default function EnterpriseITPage() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3">Infrastructure Management</h3>
-              <p className="text-gray-400 mb-4">
-                Comprehensive infrastructure management including server provisioning, 
-                network configuration, and performance optimization.
-              </p>
+              <p className="text-gray-400 mb-4">Comprehensive infrastructure management including server provisioning, network configuration, and performance optimization.</p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">
                 <li>• Server provisioning</li>
                 <li>• Network configuration</li>
@@ -165,7 +136,7 @@ export default function EnterpriseITPage() {
                 Learn More →
               </Link>
             </div>
-            
+
             {/* Data Management */}
             <div className="card group hover:bg-indigo-500/10 transition-colors">
               <div className="w-16 h-16 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-500/30">
@@ -174,10 +145,7 @@ export default function EnterpriseITPage() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3">Data Management</h3>
-              <p className="text-gray-400 mb-4">
-                Enterprise data solutions including warehousing, analytics, 
-                and business intelligence platforms.
-              </p>
+              <p className="text-gray-400 mb-4">Enterprise data solutions including warehousing, analytics, and business intelligence platforms.</p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">
                 <li>• Data warehousing</li>
                 <li>• Business intelligence</li>
@@ -188,7 +156,7 @@ export default function EnterpriseITPage() {
                 Learn More →
               </Link>
             </div>
-            
+
             {/* Security & Compliance */}
             <div className="card group hover:bg-red-500/10 transition-colors">
               <div className="w-16 h-16 bg-red-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red-500/30">
@@ -197,10 +165,7 @@ export default function EnterpriseITPage() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3">Security & Compliance</h3>
-              <p className="text-gray-400 mb-4">
-                Enterprise-grade security solutions with compliance frameworks 
-                for SOC2, ISO 27001, and industry-specific regulations.
-              </p>
+              <p className="text-gray-400 mb-4">Enterprise-grade security solutions with compliance frameworks for SOC2, ISO 27001, and industry-specific regulations.</p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">
                 <li>• Security framework implementation</li>
                 <li>• Compliance management</li>
@@ -211,19 +176,16 @@ export default function EnterpriseITPage() {
                 Learn More →
               </Link>
             </div>
-            
+
             {/* Managed Services */}
             <div className="card group hover:bg-yellow-500/10 transition-colors">
               <div className="w-16 h-16 bg-yellow-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-yellow-500/30">
                 <svg className="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 004 0z" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3">Managed Services</h3>
-              <p className="text-gray-400 mb-4">
-                24/7 managed IT services including monitoring, maintenance, 
-                and support for enterprise infrastructure.
-              </p>
+              <p className="text-gray-400 mb-4">24/7 managed IT services including monitoring, maintenance, and support for enterprise infrastructure.</p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">
                 <li>• 24/7 monitoring</li>
                 <li>• Proactive maintenance</li>
@@ -242,14 +204,10 @@ export default function EnterpriseITPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-indigo-600/10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Enterprise Technology Stack
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Industry-leading technologies and platforms for enterprise solutions
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Technology Stack</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">Industry-leading technologies and platforms for enterprise solutions</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="card text-center">
               <h3 className="text-lg font-semibold mb-4">Cloud Platforms</h3>
@@ -260,7 +218,7 @@ export default function EnterpriseITPage() {
                 <div>IBM Cloud</div>
               </div>
             </div>
-            
+
             <div className="card text-center">
               <h3 className="text-lg font-semibold mb-4">DevOps Tools</h3>
               <div className="space-y-2 text-sm text-gray-400">
@@ -270,7 +228,7 @@ export default function EnterpriseITPage() {
                 <div>Prometheus & Grafana</div>
               </div>
             </div>
-            
+
             <div className="card text-center">
               <h3 className="text-lg font-semibold mb-4">Databases</h3>
               <div className="space-y-2 text-sm text-gray-400">
@@ -280,7 +238,7 @@ export default function EnterpriseITPage() {
                 <div>Snowflake</div>
               </div>
             </div>
-            
+
             <div className="card text-center">
               <h3 className="text-lg font-semibold mb-4">Security</h3>
               <div className="space-y-2 text-sm text-gray-400">
@@ -298,57 +256,41 @@ export default function EnterpriseITPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Digital Transformation Process
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our proven methodology for successful enterprise transformation
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Digital Transformation Process</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">Our proven methodology for successful enterprise transformation</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-20 h-20 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-blue-400">1</span>
               </div>
               <h3 className="text-xl font-semibold mb-3">Assessment</h3>
-              <p className="text-gray-400">
-                Comprehensive evaluation of current infrastructure, 
-                identifying opportunities and challenges.
-              </p>
+              <p className="text-gray-400">Comprehensive evaluation of current infrastructure, identifying opportunities and challenges.</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-green-400">2</span>
               </div>
               <h3 className="text-xl font-semibold mb-3">Strategy</h3>
-              <p className="text-gray-400">
-                Develop transformation roadmap with clear milestones, 
-                timelines, and success metrics.
-              </p>
+              <p className="text-gray-400">Develop transformation roadmap with clear milestones, timelines, and success metrics.</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-20 h-20 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-purple-400">3</span>
               </div>
               <h3 className="text-xl font-semibold mb-3">Implementation</h3>
-              <p className="text-gray-400">
-                Execute transformation plan with agile methodology, 
-                ensuring minimal disruption to operations.
-              </p>
+              <p className="text-gray-400">Execute transformation plan with agile methodology, ensuring minimal disruption to operations.</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-red-400">4</span>
               </div>
               <h3 className="text-xl font-semibold mb-3">Optimization</h3>
-              <p className="text-gray-400">
-                Continuous monitoring, performance tuning, and 
-                ongoing optimization for sustained success.
-              </p>
+              <p className="text-gray-400">Continuous monitoring, performance tuning, and ongoing optimization for sustained success.</p>
             </div>
           </div>
         </div>
@@ -358,14 +300,10 @@ export default function EnterpriseITPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-800/20 to-gray-900/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Transformation Success Metrics
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Measurable improvements our enterprise clients achieve
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Transformation Success Metrics</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">Measurable improvements our enterprise clients achieve</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold gradient-text mb-2">60%</div>
@@ -391,25 +329,17 @@ export default function EnterpriseITPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="card bg-gradient-to-r from-blue-600/20 to-indigo-600/20 border-blue-500/30">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Transform Your Enterprise?
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Enterprise?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how Zion Tech Group can help modernize your IT infrastructure 
-              and accelerate your digital transformation journey.
+              Let's discuss how Zion Tech Group can help modernize your IT infrastructure and accelerate your digital transformation journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn-primary text-lg px-8 py-4">
-                Start Transformation
-              </Link>
-              <Link href="/case-studies" className="btn-secondary text-lg px-8 py-4">
-                View Case Studies
-              </Link>
+              <Link href="/contact" className="btn-primary text-lg px-8 py-4">Start Transformation</Link>
+              <Link href="/case-studies" className="btn-secondary text-lg px-8 py-4">View Case Studies</Link>
             </div>
           </div>
         </div>
       </section>
     </div>
   );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047
 }

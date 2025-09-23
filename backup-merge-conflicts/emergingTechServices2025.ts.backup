@@ -1,9 +1,5 @@
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from';react' export: interface EmergingTechService {';
-=======
 =======
 <<<<<<< HEAD
 =======
@@ -12,7 +8,6 @@ import React from';react' export: interface EmergingTechService {';
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 =======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/data/emergingTechServices2025.ts
 >>>>>>> pr-11935
 import React from';react' "export": interface EmergingTechService {';
 >>>>>>> main
@@ -66,5 +61,4 @@ import React from';react' export: interface EmergingTechService {'; id: string; 
 import React from';react' export: interface EmergingTechService {'; id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string} website: 'strin',g} technicalSpecs?: { technology: 'string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]'} competitors?: string[] marketSize?: string}export: const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [''';,;
    website: strin,g} technicalSpecs?: { "technology": string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string}"export": const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [''',
 import React from';react' export: interface EmergingTechService {'; id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: strin,g} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string}export: const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [''',
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/data/emergingTechServices2025.ts
 >>>>>>> pr-11935

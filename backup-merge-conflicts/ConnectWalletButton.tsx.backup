@@ -12,7 +12,6 @@ interface ConnectWalletButtonProps {;
 <<<<<<< HEAD:src/components/ConnectWalletButton.tsx
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   onConnect?: ("walletType": string) => void;
->>>>>>> main
 =======
   onConnect?: "("walletType": string) => void;
 >>>>>>> pr-11913:src_backup_temp/components/ConnectWalletButton.tsx

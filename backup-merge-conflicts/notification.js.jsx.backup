@@ -88,10 +88,6 @@ function NotificationContainer("props": "any) {;
         return null;
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD:backup-merge-conflicts/notification.js.jsx.backup
-<<<<<<< HEAD
-    return (<div className={`fixed z-50 ${getPositionClasses(position)} max-w-sm w-full`}>;
-=======
 =======
 =======
 <<<<<<< HEAD

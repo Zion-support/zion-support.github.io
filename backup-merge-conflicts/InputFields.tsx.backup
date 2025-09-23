@@ -55,7 +55,6 @@ const "InputFields": React.FC<InputFieldsProps> = ({ inputData, setInputData, on
       ...inputData,;
       [field]: value;
     });
->>>>>>> main
 >>>>>>> main:src_backup_temp/components/admin/pitch-generator/InputFields.tsx
 =======
 >>>>>>> pr-11913:src_backup_temp/components/admin/pitch-generator/InputFields.tsx
@@ -180,7 +179,6 @@ const "InputFields": React.FC<InputFieldsProps> = ({ inputData, setInputData, on
             onChange={(e) => handleInputChange('description', e.target.value)}
             className="w-full p-3 border border-gray-300 rounded-lg "focus": "rin g-2 "focus": rin g-blue-500 "focus": borde r-transparent";
             rows={4"}
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/admin/pitch-generator/InputFields.tsx
             placeholder="Brief description of your company";
@@ -260,7 +258,6 @@ const "InputFields": React.FC<InputFieldsProps> = ({ inputData, setInputData, on
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             className="w-full p-3 border border-gray-300 rounded-lg "focus": rin g-2 focus: rin g-blue-500 focus: borde r-transparent";
             placeholder="e.g., Small businesses, Enterprise clients";
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/admin/pitch-generator/InputFields.tsx
           />;

@@ -10,25 +10,6 @@ class ErrorPreventionOrchestrator {}
     this.ensureLogDirectory()};
   ensureLogDirectory() {}
     const logDir = path.dirname(this.logFile;);
-<<<<<<< HEAD
-    if () {
-      fs.mkdirSync(logDir, { "recursive": true })}
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString() {
-    ) {
-      fs.mkdirSync(logDir, { "recursive": true })}
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString(});
-    const logMessage = `[${timestamp}] ${message}\;n;`;
-    );
-    fs.appendFileSync(this.logFile, logMessage)}
-
-  async start() {
-=======
     if () {}
       fs.mkdirSync(logDir, { "recursive": true })};
   };

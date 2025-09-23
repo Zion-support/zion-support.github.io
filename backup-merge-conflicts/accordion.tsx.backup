@@ -148,7 +148,6 @@ interface AccordionItemProps extends React.PropsWithChildren<{}> {
   children: React.ReactNode;
 =======
   "children": Reac t.ReactNode;
->>>>>>> main
 >>>>>>> main:src_backup_temp/components/ui/accordion.tsx
 =======
 >>>>>>> pr-11913:src_backup_temp/components/ui/accordion.tsx
@@ -199,7 +198,6 @@ interface AccordionTriggerProps extends React.PropsWithChildren<{}> {
 =======
 =======
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/accordion.tsx
 =======
 
   children: React.ReactNode;
@@ -295,7 +293,6 @@ interface AccordionContentProps extends React.PropsWithChildren<{}> {;`;
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/accordion.tsx
 =======
 >>>>>>> pr-11913:src_backup_temp/components/ui/accordion.tsx
         }`} ;      />;
@@ -314,7 +311,6 @@ interface AccordionContentProps extends React.PropsWithChildren<{}> {;`;
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 ;
   "children": React.ReactNode;
->>>>>>> main
 >>>>>>> main
 >>>>>>> main:src_backup_temp/components/ui/accordion.tsx
   className?: string;

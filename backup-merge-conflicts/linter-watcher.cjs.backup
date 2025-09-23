@@ -7,13 +7,6 @@ class LinterWatcher {}
   constructor() {}
     this.isRunning = false;
     this.watchPaths = ['components', 'pages', 'scripts'];
-<<<<<<< HEAD
-    this.interval = 30000; // 30 seconds
-  }
-
-  async start() {
-    
-=======
     this.interval = 30000; // 30 seconds;
   };
   async start() {}
@@ -173,4 +166,3 @@ if ( {
   
   watcher.start().catch(console.error)};
 module.exports = LinterWatcher;
->>>>>>> main

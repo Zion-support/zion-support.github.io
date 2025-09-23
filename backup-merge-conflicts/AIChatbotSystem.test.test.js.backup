@@ -26,7 +26,6 @@ import AIChatbotSystemtest from '../components/AIChatbotSystem.test';
 >>>>>>> main
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 describe('AIChatbotSystemtest', () => {
->>>>>>> pr-11914:backup-merge-conflicts/AIChatbotSystem.test.test.js.backup
   test('renders without crashing', () => {
     render(<AIChatbotSystemtest />);
     expect(screen.getByTestId('aichatbotsystem.test')).toBeInTheDocument();
@@ -50,7 +49,6 @@ describe('AIChatbotSystemtest', () => {
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   test('displays correct content', () => {
->>>>>>> pr-11914:backup-merge-conflicts/AIChatbotSystem.test.test.js.backup
     render(<AIChatbotSystemtest />);
   });
   test('handles user interactions', () => {

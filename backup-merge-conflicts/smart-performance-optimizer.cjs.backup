@@ -1145,4 +1145,3 @@ if ( {})
     optimizer.run().catch(console.error)};
 module.exports = SmartPerformanceOptimizer;
 >>>>>>> main
->>>>>>> main

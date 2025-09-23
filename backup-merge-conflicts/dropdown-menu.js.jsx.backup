@@ -9,7 +9,6 @@ import React,{useState} from &apos;react&apos;; const DropdownMenu({children}) {
 =======
 }}>
       <div className="relative">
->>>>>>> main
 =======
 
 =======
@@ -71,10 +70,6 @@ export function DropdownMenuContent("props": "any) {;
 
 };
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD:backup-merge-conflicts/dropdown-menu.js.jsx.backup
-<<<<<<< HEAD
-    return (<div className={`absolute z-50 mt-2 w-48 bg-white rounded-md shadow-lg py-1 border border-gray-200 ${alignClasses[align]} ${className}`}>;
 =======
 =======
 =======

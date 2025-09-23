@@ -1,7 +1,5 @@
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD:backup-merge-conflicts/ListingCard.jsx.backup
-=======
 <<<<<<< HEAD
 "export: function ListingCard ({" id,title,description,images,category,tags,author,className,profileType = "service"}) {""""";";'"'"
 <<<<<<< HEAD:backup-merge-conflicts/ListingCard.jsx.backup

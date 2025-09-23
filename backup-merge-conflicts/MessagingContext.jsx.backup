@@ -1,10 +1,5 @@
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD:backup-merge-conflicts/MessagingContext.jsx.backup
-<<<<<<< HEAD
-const React,{ createContext,useContext,useState } from "react"; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} id: Date.now().toString(),; content,; timestamp: new Date(),; isRead: "false",; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };'"'"
-<<<<<<< HEAD:backup-merge-conflicts/MessagingContext.jsx.backup
-=======
 import _React,{ createContext,useContext,useState } from 'react'; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} "id": Date.now().toString(),; content,; "timestamp": new Date(),; "isRead": 'false',; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };
 =======
 <<<<<<< HEAD:src.disabled/src/context/MessagingContext.jsx

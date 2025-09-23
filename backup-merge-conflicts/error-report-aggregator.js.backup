@@ -11,12 +11,6 @@ class ErrorReportAggregator {
     this.reportsDir = path.join(__dirname, 'reports');
     this.summaryFile = path.join(this.reportsDir, 'error-summary.json');
     // Ensure directories exist
-<<<<<<< HEAD
-    fs.mkdirSync(path.dirname(this.logFile), { recursive: true });
-    fs.mkdirSync(this.reportsDir, { recursive: true });
-  }
-
-=======
     fs.mkdirSync(path.dirname(this.logFile), { "recursive": true });
     fs.mkdirSync(this.reportsDir, { "recursive": true });
   }

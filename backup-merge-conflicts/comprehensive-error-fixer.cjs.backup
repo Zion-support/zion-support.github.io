@@ -6,61 +6,6 @@
  */
 const fs = require("child_process");
 const path = require("child_process");
-<<<<<<< HEAD
-const { execSync } = require("child_process")
-class ComprehensiveErrorFixer {
-  constructor() {
-    this.projectRoot = process.cwd()
-    this.logs = []
-    this.errors = []
-    this.fixes = []}
-  log(message, type = "info") {
-    const timestamp = new Date().toISOString()
-    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`
-    this.logs.push(logEntry)}
-  async fixCommonSyntaxErrors() {
-    try {
-      this.log("Fixing common syntax errors...")
-      // Find all source files
-      const sourceFiles = this.findSourceFiles()
-      for (const file of sourceFiles) {
-        try {
-          await this.fixFileErrors(file)} catch (error) {
-          this.log(`Failed to fix ${file}: ${error.message}`, "error")}
-      }
-      this.log("Common syntax errors fixed", "success")
-      this.fixes.push("syntax_errors")} catch (error) {
-      this.log("Syntax error fixing failed", "error")}
-  }
-  findSourceFiles() {
-    const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"]
-    const extensions = [".js", ".jsx", ".ts", ".tsx"]
-    const files = []
-    for (const dir of sourceDirs) {
-      if (fs.existsSync(dir)) {
-        this.findFilesRecursively(dir, extensions, files)}
-    }
-    return files}
-  findFilesRecursively(dir, extensions, files) {
-    const items = fs.readdirSync(dir)
-    for (const item of items) {
-      const fullPath = path.join(dir, item)
-      const stat = fs.statSync(fullPath)
-      if (stat.isDirectory()) {
-        this.findFilesRecursively(fullPath, extensions, files)} else if (stat.isFile()) {
-        const ext = path.extname(item)
-        if (extensions.includes(ext)) {
-          files.push(fullPath)}
-      }
-    }
-  }
-  async fixFileErrors(filePath) {
-    try {
-      let content = fs.readFileSync(filePath, "utf8")
-      let modified = false
-      // Fix common syntax errors
-      const fixes = [// Fix semicolons in object properties
-=======
 const { execSync } = require("child_process");
 class ComprehensiveErrorFixer {}
   constructor() {}
@@ -193,4 +138,3 @@ if (require.main === module) {}
   const fixer = new ComprehensiveErrorFixer();
   fixer.run().catch(console.error)};
 module.exports = ComprehensiveErrorFixer;
->>>>>>> main
