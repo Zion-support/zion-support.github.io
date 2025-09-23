@@ -36,6 +36,10 @@
     ".next/types/**/*.ts",
     "zion-website/src/**/*.ts",
     "zion-website/src/**/*.tsx",
+    "src-clean/**/*.ts",
+    "src-clean/**/*.tsx",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
     "types/**/*.d.ts"
   ],
   "exclude": [
@@ -57,6 +61,15 @@
     "**/*backup*",
     "**/*conflict*",
     "**/*temp*",
+    "zion-os/**",
+    "server",
+    "server/**",
+    ".temp_backup_components",
+    ".temp_backup_components/**",
+    "automation",
+    "automation/**",
+    "src",
+    "src/**",
     "src",
     "src.*",
     "src_*",
@@ -80,6 +93,9 @@
     "test/**",
     "test-results/**",
     "test-reports/**",
-    "types/**"
+    "zion-ai-assistant",
+    "zion-ai-assistant/**",
+    "zion-os.disabled",
+    "zion-os.disabled/**"
   ]
 }

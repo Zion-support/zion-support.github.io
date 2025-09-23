@@ -31,41 +31,6 @@ export default function APIPage() {
             </p>
           </div>
         </div>
-
-        {/* Endpoints */}
-        <div className="space-y-8">
-          <h2 className="text-3xl font-bold text-center mb-8">API Endpoints</h2>
-          
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-bold mb-4">GET /api/v1/services</h3>
-            <p className="text-gray-600 mb-4">Retrieve all available services</p>
-            <pre className="bg-gray-100 p-4 rounded text-sm overflow-x-auto">
-{`{
-  "services": [
-    {
-      "id": "ai-automation",
-      "name": "AI Automation",
-      "description": "Intelligent process automation"
-    }
-  ]
-}`}
-            </pre>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-bold mb-4">POST /api/v1/onboarding</h3>
-            <p className="text-gray-600 mb-4">Complete user onboarding process</p>
-            <pre className="bg-gray-100 p-4 rounded text-sm overflow-x-auto">
-{`{
-  "userId": "user123",
-  "preferences": {
-    "theme": "dark",
-    "notifications": true
-  }
-}`}
-            </pre>
-          </div>
-        </div>
       </div>
     </div>
   );
