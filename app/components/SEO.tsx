@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import { Metadata } from 'next'
 
 interface SEOProps {
   title: string
@@ -9,24 +9,30 @@ interface SEOProps {
 }
 
 export default function SEO({ title, description, keywords, canonical, url }: SEOProps) {
-  return (
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      {canonical && <link rel="canonical" href={canonical} />}
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content="article" />
-      {url && <meta property="og:url" content={url} />}
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-    </Head>
-  )
+  // This component is deprecated in Next.js 13+ app directory
+  // Use the metadata API in page.tsx files instead
+  console.warn('SEO component is deprecated. Use the metadata API in page.tsx files instead.')
+  
+  return null
+}
+
+// Helper function to generate metadata for pages
+export function generateMetadata({ title, description, keywords, canonical, url }: SEOProps): Metadata {
+  return {
+    title,
+    description,
+    keywords: keywords ? keywords.split(',').map(k => k.trim()) : undefined,
+    alternates: canonical ? { canonical } : undefined,
+    openGraph: {
+      title,
+      description,
+      type: 'article',
+      url,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+  }
 }

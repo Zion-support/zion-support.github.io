@@ -8,15 +8,15 @@ interface ApiState<T> {
   error: string | null
 }
 
-interface UseApiOptions {
+interface UseApiOptions<T = unknown> {
   immediate?: boolean
-  onSuccess?: (data: any) => void
+  onSuccess?: (data: T) => void
   onError?: (error: string) => void
 }
 
-export function useApi<T = any>(
+export function useApi<T = unknown>(
   apiFunction: () => Promise<T>,
-  options: UseApiOptions = {}
+  options: UseApiOptions<T> = {}
 ) {
   const [state, setState] = useState<ApiState<T>>({
     data: null,
@@ -57,9 +57,9 @@ export function useApi<T = any>(
   }
 }
 
-export function useMutation<T = any, P = any>(
+export function useMutation<T = unknown, P = unknown>(
   mutationFunction: (params: P) => Promise<T>,
-  options: UseApiOptions = {}
+  options: UseApiOptions<T> = {}
 ) {
   const [state, setState] = useState<ApiState<T>>({
     data: null,

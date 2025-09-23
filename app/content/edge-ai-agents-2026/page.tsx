@@ -1,7 +1,5 @@
 import Link from 'next/link';
-import React from 'react';
 import ErrorBoundary from '../../components/ErrorBoundary';
-import SEO from '../../components/SEO';
 
 export const metadata = {
   title: 'Edge AI Agents 2026 - Real-Time Autonomy Guide',
