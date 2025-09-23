@@ -1,38 +1,14 @@
 "use client";
-import React, { createContext, useContext } from "react";
-
-<<<<<<< HEAD
-type AuthContextValue = {
-  signIn: (email: string, password: string) => Promise<void>;
-  signUp: (name: string, email: string, password: string) => Promise<void>;
-};
-=======
 import { createContext, useContext, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047
 
-const AuthContext = createContext<AuthContextValue | undefined>(undefined);
-
-export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const signIn = async () => Promise.resolve();
-  const signUp = async () => Promise.resolve();
-
-  return (
-    <AuthContext.Provider value={{ signIn, signUp }}>
-      {children}
-    </AuthContext.Provider>
-  );
+type User = {
+  id: string;
+  name: string;
+  email: string;
+  role: string;
+  onboardingCompleted: boolean;
 };
-
-export function useAuth(): AuthContextValue {
-  const ctx = useContext(AuthContext);
-  if (!ctx) {
-    throw new Error("useAuth must be used within an AuthProvider");
-  }
-  return ctx;
-}
-<<<<<<< HEAD
-=======
 
 interface AuthContextType {
   user: User | null;
@@ -42,6 +18,9 @@ interface AuthContextType {
   logout: () => Promise<void>;
   register: (name: string, email: string, password: string) => Promise<void>;
   completeOnboarding: () => Promise<void>;
+  // Aliases for compatibility
+  signIn: (email: string, password: string) => Promise<void>;
+  signUp: (name: string, email: string, password: string) => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -52,18 +31,16 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const router = useRouter();
 
   useEffect(() => {
-    // Initialize from localStorage if present
     try {
       const stored = typeof window !== "undefined" ? window.localStorage.getItem("zion-os:user") : null;
       if (stored) {
-        setUser(JSON.parse(stored));
+        setUser(JSON.parse(stored) as User);
       }
     } catch {}
     setIsLoading(false);
   }, []);
 
   const login = async (email: string, password: string) => {
-    // Mock login
     const mockUser: User = {
       id: "local-user",
       name: email.split("@")[0],
@@ -82,8 +59,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     router.push("/");
   };
 
-  const register = async (name: string, email: string, password: string) => {
-    // Mock register
+  const register = async (_name: string, email: string, password: string) => {
     await login(email, password);
   };
 
@@ -103,6 +79,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     logout,
     register,
     completeOnboarding,
+    signIn: login,
+    signUp: register,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
@@ -113,8 +91,3 @@ export function useAuth() {
   if (context === undefined) throw new Error("useAuth must be used within an AuthProvider");
   return context;
 }
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850
