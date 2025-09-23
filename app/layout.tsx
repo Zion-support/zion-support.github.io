@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import './globals.css'
-=======
-// global styles are optional; keeping layout minimal
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
 
 export const metadata = {
   metadataBase: new URL('https://ziontechgroup.com'),
@@ -18,14 +14,7 @@ export const metadata = {
     siteName: 'Zion Tech Group',
     title: 'Zion Tech Group - AI & Technology Solutions',
     description: 'Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions.',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Zion Tech Group - AI & Technology Solutions',
-      },
-    ],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Zion Tech Group - AI & Technology Solutions' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -36,13 +25,7 @@ export const metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
+    googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
 }
 

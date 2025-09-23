@@ -21,34 +21,14 @@ const nextConfig: NextConfig = {
   assetPrefix: undefined,
   generateEtags: true,
 
-<<<<<<< HEAD:next.config.ts
-<<<<<<< HEAD:next.config.ts
-=======
-  // Modern experimental features for Next.js
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3530:next.config.js
-  experimental: {
-    appDir: false,
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
-=======
   // Modern experimental features for Next.js 15
   turbopack: {},
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion']
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125:next.config.js
   },
 
   async redirects() {
-    return [
-      { source: '/home', destination: '/', permanent: true },
-    ];
+    return [{ source: '/home', destination: '/', permanent: true }];
   },
 
   async headers() {
@@ -60,20 +40,16 @@ const nextConfig: NextConfig = {
           { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'X-XSS-Protection', value: '1; mode=block' },
           { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
-          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' }
         ],
       },
       {
         source: '/_next/static/(.*)',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-        ],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
       {
         source: '/:path*{png|jpg|jpeg|gif|webp|avif|svg|ico|css|js}',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=604800, s-maxage=604800, stale-while-revalidate=86400' },
-        ],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=604800, s-maxage=604800, stale-while-revalidate=86400' }],
       },
     ];
   },
