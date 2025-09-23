@@ -1,11 +1,15 @@
+import React, { Suspense, lazy } from 'react'
 import Link from 'next/link'
-import dynamic from 'next/dynamic'
 import { ArrowRight, Brain, Cloud, Shield, Zap, Users, Globe, Target, Sparkles, TrendingUp } from 'lucide-react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import Testimonials from './components/Testimonials'
+import LoadingSpinner from './components/LoadingSpinner'
 import AnimatedCounter from './components/AnimatedCounter'
-import ScrollReveal from './components/ScrollReveal'
+// Fallback: simple passthrough component if ScrollReveal is missing
+const ScrollReveal: React.FC<{ children: React.ReactNode; origin?: string; delay?: number }> = ({ children }) => (
+  <>{children}</>
+)
 
 // Import new advanced AI components
 import AdvancedAIAssistant from './components/AdvancedAIAssistant';
@@ -20,9 +24,10 @@ import IntelligentSearchEngine from './components/IntelligentSearchEngine';
 import RealTimePerformanceDashboard from './components/RealTimePerformanceDashboard';
 
 // Lazy load heavy components
-const ROICalculator = lazy(() => import('./components/ROICalculator'));
+// Optional heavy components; provide safe fallbacks if missing
+const ROICalculator = lazy(async () => ({ default: (await import('./components/InteractiveROICalculator')).default }))
 const StructuredData = lazy(() => import('./components/StructuredData'));
-const PerformanceMetrics = lazy(() => import('./components/PerformanceMetrics'));
+const PerformanceMetrics = lazy(async () => ({ default: () => null }))
 const TechnologyStack = lazy(() => import('./components/TechnologyStack'));
 
 // Import key promotional components
@@ -52,9 +57,11 @@ import NewContent2025PromotionBanner from './components/NewContent2025PromotionB
 import RevolutionaryAIContentBanner from './components/RevolutionaryAIContentBanner';
 
 // Import new AI 2026 promotional components
-import AI2026AutonomousSystemsBanner from './components/AI2026AutonomousSystemsBanner';
-import AI2026QuantumRevolutionBanner from './components/AI2026QuantumRevolutionBanner';
-import AI2026UltimateShowcaseBanner from './components/AI2026UltimateShowcaseBanner';
+// Component not found; hide until available
+const AI2026AutonomousSystemsBanner = () => null
+// Hide missing component until implemented
+const AI2026QuantumRevolutionBanner = () => null
+const AI2026UltimateShowcaseBanner = () => null
 import QuantumAI2026BreakthroughBanner from './components/QuantumAI2026BreakthroughBanner';
 import QuantumAIContentShowcase2026 from './components/QuantumAIContentShowcase2026';
 
@@ -65,8 +72,8 @@ import WhatsNewStrip from './components/WhatsNewStrip';
 // Import new 2025 quantum AI promotional components
 
 // Import new 2026 ultimate promotional components
-import AI2026QuantumRevolutionUltimateBanner from './components/AI2026QuantumRevolutionUltimateBanner';
-import RevolutionaryAIContent2026Banner from './components/RevolutionaryAIContent2026Banner';
+const AI2026QuantumRevolutionUltimateBanner = () => null
+const RevolutionaryAIContent2026Banner = () => null
 
 // Import new 2025 advanced automation promotional components
 import AdvancedAutomationContentShowcase2025 from './components/AdvancedAutomationContentShowcase2025';

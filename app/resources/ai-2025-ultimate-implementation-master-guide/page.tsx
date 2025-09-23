@@ -5,7 +5,7 @@ import { ArrowLeft, Calendar, User, Download, BookOpen, CheckCircle, Star, Zap, 
 
 export default function AI2025UltimateImplementationMasterGuide() {
   return (
-    <div className="min-h-screen bg-white">
+  <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
         <div className="max-w-4xl mx-auto px-4">
@@ -38,6 +38,7 @@ export default function AI2025UltimateImplementationMasterGuide() {
             </div>
           </div>
         </div>
+      </div>
 
       {/* Navigation */}
       <div className="bg-gray-50 border-b">
@@ -198,7 +199,7 @@ export default function AI2025UltimateImplementationMasterGuide() {
               </div>
             </div>
           </div>
-        </section>
+        </div>
 
           {/* Implementation Phases */}
           <section className="mb-12">
@@ -447,7 +448,7 @@ export default function AI2025UltimateImplementationMasterGuide() {
             </Link>
           </div>
         </div>
-      </article>
+      </div>
     </div>
   );
 }
