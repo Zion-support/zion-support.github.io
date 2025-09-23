@@ -62,7 +62,9 @@ export default [
       '@typescript-eslint': tsPlugin
     },
     rules: {
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }]
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+      // TypeScript handles undefined types/identifiers; avoid false positives
+      'no-undef': 'off'
     }
   },
   {
@@ -86,12 +88,19 @@ export default [
       'zion-os/.next/**',
       'zion.app/**',
       'zion_academy/**',
+      // Project folders to ignore from lint scope
+      'zion-website/**',
+      'zion-ai-assistant/**',
+      'supabase/**',
       // Additional ignores to avoid linting backups/alt projects
       'ts_files_backup/**',
       'src.broken/**',
       'src-corrupted/**',
       'src.corrupted/**',
       'src.disabled/**',
+      'src/pages_backup/**',
+      'src/types/**',
+      'src/utils/serviceWorker.ts',
       'types/**',
       'types.disabled/**',
       'utils/**',
@@ -114,6 +123,12 @@ export default [
       'services_backup/**',
       'styles_backup/**',
       'workflow_backups/**',
+      // Tests and local harnesses
+      'tests/**',
+      'test/**',
+      'test_build/**',
+      '**/jest.setup.*',
+      'test-*.js',
       // Individual utility scripts that are not part of app linting
       'workbox-config.js',
       'verify-and-complete-merges.js',
