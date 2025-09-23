@@ -20,21 +20,24 @@ interface ButtonProps {
   rounded?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
 }
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>({
-  children,
-  variant = 'primary',
-  size = 'md',
-  href,
-  onClick,
-  disabled = false,
-  loading = false,
-  icon,
-  iconPosition = 'right',
-  className = '',
-  type = 'button',
-  fullWidth = false,
-  rounded = 'lg'
-}, ref) => {
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
+  {
+    children,
+    variant = 'primary',
+    size = 'md',
+    href,
+    onClick,
+    disabled = false,
+    loading = false,
+    icon,
+    iconPosition = 'right',
+    className = '',
+    type = 'button',
+    fullWidth = false,
+    rounded = 'lg',
+  },
+  ref
+) {
   const baseClasses = 'inline-flex items-center justify-center font-semibold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-purple-500 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none';
   
   const variantClasses = {
@@ -74,6 +77,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>({
   
   if (href) {
     return (
+      // eslint-disable-next-line jsx-a11y/anchor-is-valid
       <Link href={href} className={classes}>
         {content}
       </Link>
