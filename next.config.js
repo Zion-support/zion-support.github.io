@@ -12,11 +12,11 @@ const nextConfig = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   pageExtensions: ['jsx', 'js', 'tsx', 'ts'],
-const path = require('path');
-
-module.exports = {
+  
+  // Image optimization
   images: {
     domains: ["localhost"],
+    unoptimized: true, // Required for static export
   },
 
   // Keep default dist directory for Netlify plugin
@@ -65,14 +65,22 @@ module.exports = {
         ]
       },
       // Cache Next.js build assets for 1 year (immutable)
+      {
         source: '/_next/static/(.*)',
+        headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }
+        ]
+      },
       // Cache common static assets for 7 days
+      {
         source: '/:path*{png|jpg|jpeg|gif|webp|avif|svg|ico|css|js}',
+        headers: [
           { key: 'Cache-Control', value: 'public, max-age=604800, s-maxage=604800, stale-while-revalidate=86400' }
+        ]
       }
     ];
   },
+
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback = {
@@ -91,11 +99,12 @@ module.exports = {
         path: false
       };
     }
-  webpack: (config) => {
+    
     // Support TS path alias '@/...' by mapping it to the project root
     config.resolve = config.resolve || {};
     config.resolve.alias = config.resolve.alias || {};
-    config.resolve.alias['@'] = path.resolve(__dirname);
+    config.resolve.alias['@'] = require('path').resolve(__dirname);
+    
     return config;
   },
 };
