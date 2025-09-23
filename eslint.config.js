@@ -5,6 +5,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
 import tsParser from '@typescript-eslint/parser';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
+import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
 	// Global ignores for this monorepo-like workspace
@@ -68,9 +69,8 @@ export default [
 			'**/*.min.js'
 		],
 	},
-	js.configs.recommended,
 	{
-		files: ['**/*.{js,jsx,ts,tsx}'],
+        files: ['app/**/*.{js,jsx,ts,tsx}'],
 		languageOptions: {
 			ecmaVersion: 'latest',
 			sourceType: 'module',
