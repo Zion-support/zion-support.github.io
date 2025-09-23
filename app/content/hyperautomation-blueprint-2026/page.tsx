@@ -4,22 +4,6 @@ import ErrorBoundary from '../../components/ErrorBoundary';
 import SEO from '../../components/SEO';
 import ErrorBoundary from '../../components/ErrorBoundary';
 
-export const metadata = {
-  title: 'Hyperautomation Blueprint 2026 - Enterprise Guide',
-  description: 'Hands-on blueprint for scaling AI-driven automation across the enterprise with measurable ROI.',
-  keywords: ['hyperautomation', 'edge ai', 'enterprise automation', 'ai operating model'],
-};
-
-export default function HyperautomationBlueprint2026() {
-  return (
-    <ErrorBoundary>
-      <SEO
-        title="Hyperautomation Blueprint 2026 - Enterprise Guide"
-        description="Hands-on blueprint for scaling AI-driven automation across the enterprise with measurable ROI."
-        keywords="hyperautomation, edge ai, enterprise automation, ai operating model"
-        url="/content/hyperautomation-blueprint-2026"
-      />
-
       <div className="min-h-screen bg-white">
         <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -3,41 +3,6 @@ import React from 'react';
 import ErrorBoundary from '../../components/ErrorBoundary';
 import SEO from '../../components/SEO';
 
-export const metadata = {
-  title: 'Edge AI Agents 2026 - Real-Time Autonomy Guide',
-  description: 'Unlock ultra-low-latency decisioning and control with edge-native agents for real-time autonomy.',
-  keywords: ['edge ai', 'ai agents', 'real-time autonomy', 'on-device ai'],
-};
-
-export default function EdgeAIAgents2026() {
-  return (
-    <ErrorBoundary>
-      <SEO
-        title="Edge AI Agents 2026 - Real-Time Autonomy Guide"
-        description="Unlock ultra-low-latency decisioning and control with edge-native agents for real-time autonomy."
-        keywords="edge ai, ai agents, real-time autonomy, on-device ai"
-        url="/content/edge-ai-agents-2026"
-      />
-
-      <div className="min-h-screen bg-white">
-        <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-                <span className="text-sm font-medium">⚡ REAL-TIME AUTONOMY</span>
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Edge AI Agents 2026</h1>
-              <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Architect and deploy on-device agents for millisecond-latency perception, planning, and control.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/services/ai-automation" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Start a Pilot</Link>
-                <Link href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">Contact Us</Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="prose prose-lg max-w-none">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Capabilities</h2>
