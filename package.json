@@ -164,6 +164,15 @@
       "<rootDir>/components/api/docs/",
       "<rootDir>/data/api-docs/",
       "<rootDir>/e2e/"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/automation/",
+      "<rootDir>/.temp_backup_components/",
+      "<rootDir>/recovered-branches/",
+      "<rootDir>/apps.backup/",
+      "<rootDir>/components/apps/",
+      "<rootDir>/backup-problematic-files/",
+      "<rootDir>/server/"
     ]
   },
   "packageManager": "npm@11.6.0"
