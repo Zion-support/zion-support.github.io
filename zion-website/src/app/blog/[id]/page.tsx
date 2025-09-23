@@ -90,7 +90,7 @@ const blogPosts: Record<string, any> = {
   }
 }
 
-export default function BlogPostPage({ params }: { params: { id: string } }) {
+export default function BlogPostPage({ params }: any) {
   const { id } = params
   const post = blogPosts[id]
   
@@ -206,4 +206,8 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
       </div>
     </div>
   )
+}
+
+export function generateStaticParams() {
+  return Object.keys(blogPosts).map((id) => ({ id: String(id) }))
 }

@@ -41,11 +41,11 @@ export default [
       '@typescript-eslint': tsPlugin
     },
     rules: {
-      'no-unused-vars': 'warn',
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
       'no-console': 'warn',
       'react/jsx-uses-react': 'off',
-      'react/react-in-jsx-scope': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn'
+      'react/react-in-jsx-scope': 'off'
     }
   },
   {
@@ -80,7 +80,8 @@ export default [
       'utils/**',
       'utils.disabled/**',
       'zion-os/**',
-      'zion-website/**',
+      // Allow linting the Next.js app
+      // 'zion-website/**',
       'temp_*/**',
       'temp-*/**',
       'temp/**',

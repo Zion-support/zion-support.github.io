@@ -1,4 +1,5 @@
 *
+!zion-website
 !zion-website/**
 
 # Always ignore dependencies and build outputs
