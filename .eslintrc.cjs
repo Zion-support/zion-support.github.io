@@ -7,15 +7,14 @@ module.exports = {
     'react/no-unescaped-entities': 'off',
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
     '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/no-empty-object-type': 'warn',
     '@next/next/no-html-link-for-pages': 'warn',
-    'react/no-unescaped-entities': 'off',
     'import/order': [
       'warn',
       { groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'], 'newlines-between': 'always' },
     ],
-    '@typescript-eslint/no-explicit-any': 'warn',
-    '@typescript-eslint/no-empty-object-type': 'warn',
-    '@next/next/no-html-link-for-pages': 'warn'
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
   },
   ignorePatterns: [
     'node_modules/',
@@ -29,6 +28,16 @@ module.exports = {
     'automation/',
     'netlify/',
     'apps/',
+    // Exclude large or archived areas with known invalid code/tests
+    '__tests__/**',
+    'tests/**',
+    'backups/**',
+    'backup*/**',
+    'backup-problematic-files/**',
+    'corrupted_backup/**',
+    'temp_exclude/**',
+    'temp_*/**',
+    'ts_files_backup/**',
     // Consolidated ignores from both branches
     'components/**',
     'components.disabled/**',
@@ -43,9 +52,9 @@ module.exports = {
     'src_backup_temp/**',
     'src.broken/**',
     'src.corrupted/**',
-    'backup-problematic-files/**',
-    'temp_*/**',
-    'tests/**',
-    '__tests__/**',
+    'components.disabled_full/**',
+    'pages.disabled_full/**',
+    'apps.backup/**',
+    'app_backup/**'
   ],
 };
