@@ -1,10 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+import type { MetadataRoute } from "next";
 
-=======
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
-=======
-export default function sitemap() {
-  return [];
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    { url: "https://zion.example.com/", priority: 1 },
+  ];
 }
->>>>>>> cursor/check-fix-push-and-merge-to-main-330c
+

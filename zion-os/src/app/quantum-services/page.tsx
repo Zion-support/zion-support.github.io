@@ -1,9 +1,8 @@
-export default function Page() {
+export default function QuantumServicesPage() {
   return (
-    <main className="container mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold mb-4">quantum-services</h1>
-      <p className="text-gray-600">Content coming soon.</p>
+    <main style={{ padding: "2rem" }}>
+      <h1>Quantum Services</h1>
+      <p>Advanced quantum services for cutting-edge applications.</p>
     </main>
   );
 }
-

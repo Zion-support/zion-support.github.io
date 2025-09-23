@@ -1,9 +1,16 @@
-export default function Page() {
+export default function PrivacyPage() {
   return (
-    <main className="container mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold mb-4">privacy</h1>
-      <p className="text-gray-600">Content coming soon.</p>
+    <main style={{ padding: "2rem" }}>
+      <h1>Privacy Policy</h1>
+      <p>Your privacy matters. Learn how we handle your data.</p>
     </main>
   );
 }
+
+
+
+
+
+
+
 

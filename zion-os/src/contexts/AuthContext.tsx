@@ -1,51 +1,43 @@
 "use client";
 
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
-
-type AuthUser = { id: string; email: string } | null;
+import { createContext, useContext, useState, ReactNode } from "react";
 
 type AuthContextValue = {
-  user: AuthUser;
-  signIn: (email: string, password: string) => Promise<void>;
-  signOut: () => Promise<void>;
+  isAuthenticated: boolean;
+  signIn: (email: string, password: string) => Promise<void> | void;
+  signOut: () => void;
 };
 
 const AuthContext = createContext<AuthContextValue | undefined>(undefined);
 
-export function AuthProvider({ children }: { children: React.ReactNode }) {
-  const [user, setUser] = useState<AuthUser>(null);
+export function AuthProvider({ children }: { children: ReactNode }) {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const stored = window.localStorage.getItem("auth:user");
-    if (stored) setUser(JSON.parse(stored));
-  }, []);
+  function signOut() {
+    setIsAuthenticated(false);
+  }
 
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    if (user) window.localStorage.setItem("auth:user", JSON.stringify(user));
-    else window.localStorage.removeItem("auth:user");
-  }, [user]);
+  async function signIn(_email: string, _password: string) {
+    setIsAuthenticated(true);
+  }
 
-  const signIn = async (email: string, _password: string) => {
-    setUser({ id: "demo", email });
-  };
-
-  const signOut = async () => {
-    setUser(null);
-  };
-
-  const value = useMemo<AuthContextValue>(() => ({ user, signIn, signOut }), [user]);
-
+  const value: AuthContextValue = { isAuthenticated, signIn, signOut };
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
 
-export function useAuth() {
+export function useAuth(): AuthContextValue {
   const ctx = useContext(AuthContext);
-  if (!ctx) throw new Error("useAuth must be used within AuthProvider");
+  if (!ctx) {
+    return {
+      isAuthenticated: false,
+      signIn: async () => {},
+      signOut: () => {},
+    };
+  }
   return ctx;
 }
 
+export default AuthContext;
 
 
 
@@ -55,34 +47,19 @@ export function useAuth() {
 
 
 
-<<<<<<< HEAD
 
 
-=======
-  const login = async (email: string, password: string) => {
-  };
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
 
 
-<<<<<<< HEAD
 
 
 
 
 
-=======
-  const register = async (name: string, email: string, password: string) => {
-    }
-    await login(email, password);
-  };
 
-  const completeOnboarding = async () => {
-  };
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
 
 
 
-<<<<<<< HEAD
 
 
 
@@ -148,11 +125,3 @@ export function useAuth() {
 
 
 
-
-=======
-export function useAuth() {
-  const context = useContext(AuthContext);
-  if (context === undefined) throw new Error("useAuth must be used within an AuthProvider");
-  return context;
-}
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
