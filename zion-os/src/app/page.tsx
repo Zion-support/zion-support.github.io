@@ -214,5 +214,3 @@ export default function HomePage() {
     </div>
   );
 }
-import FeatureCard from './components/FeatureCard';
-
