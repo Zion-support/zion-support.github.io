@@ -30,6 +30,8 @@ export default [
       'zion-os/**',
       'zion-website/**',
       'zion-ai-assistant/**',
+      'zion_academy/**',
+      'zion.app/**',
       'ts_files_backup/**',
       'src_backup/**',
       'src_backup_temp/**',
@@ -52,6 +54,10 @@ export default [
       'dao/**',
       'tests.disabled/**',
       'src.disabled/**',
+      '__tests__/**',
+      'tests/**',
+      '__mocks__/**',
+      'test/**',
       'plugins/wallet-connector/cypress/**',
       'components/api/docs/**',
       'data/api-docs/**',
@@ -61,12 +67,7 @@ export default [
   js.configs.recommended,
   {
     files: [
-      'app/**/*.{js,jsx,ts,tsx}',
-      'components/**/*.{js,jsx,ts,tsx}',
-      'pages/**/*.{js,jsx,ts,tsx}',
-      'src/**/*.{js,jsx,ts,tsx}',
-      'styles/**/*.{js,jsx,ts,tsx}',
-      'providers/**/*.{js,jsx,ts,tsx}'
+      'app/**/*.{js,jsx,ts,tsx}'
     ],
     languageOptions: {
       ecmaVersion: 2020,
