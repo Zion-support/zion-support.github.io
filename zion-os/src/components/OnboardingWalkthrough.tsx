@@ -1,3 +1,6 @@
+export default function OnboardingWalkthrough() {
+  return null;
+}
 <<<<<<< HEAD
 export default function OnboardingWalkthrough() {
 	return null;
