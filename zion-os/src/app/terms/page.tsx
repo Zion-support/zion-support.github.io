@@ -1,0 +1,19 @@
+import React from 'react';
+
+export default function TermsPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>Terms and Conditions</h1>
+			<p>Please review our terms of service.</p>
+		</main>
+	);
+}
+
+
+
+
+
+
+
+
+

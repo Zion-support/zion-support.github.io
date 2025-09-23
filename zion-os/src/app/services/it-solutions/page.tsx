@@ -1,12 +1,23 @@
-  name: string;
-  description: string;
-  deliverables: string[];
-  timeline: string;
-  pricing: string;
-  startingPrice: number;
-  contactLink: string;
-  icon: string;
-  features: string[];
-  technologies: string[];
-  industries: string[];
+import React from 'react';
+
+export default function ItSolutionsPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>IT Solutions</h1>
+			<p>Bespoke IT solution packages.</p>
+		</main>
+	);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

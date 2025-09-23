@@ -1,13 +1,7 @@
-<<<<<<< HEAD
+import React from 'react';
 
+export function StructuredData(): React.ReactElement | null {
+  return null;
+}
 
-
-
-
-=======
-    },
-    "provider": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com",
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
+export default StructuredData;

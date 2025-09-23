@@ -1,14 +1,43 @@
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular?: boolean;
-  cta: string;
-  ctaLink: string;
+import React from 'react';
+
+export default function PricingPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>Pricing</h1>
+			<p>Choose the plan that fits your needs.</p>
+		</main>
+	);
 }
-  category: string;
-  description: string;
-  tiers: PricingTier[];
-  features: string[];
-  benefits: string[];
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

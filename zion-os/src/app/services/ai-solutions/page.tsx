@@ -1,11 +1,22 @@
-  name: string;
-  description: string;
-  technicalSpecs: string[];
-  useCases: string[];
-  pricing: string;
-  startingPrice: number;
-  contactLink: string;
-  icon: string;
-  features: string[];
-  integration: string[];
+import React from 'react';
+
+export default function AiSolutionsPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>AI Solutions</h1>
+			<p>End-to-end AI solution offerings.</p>
+		</main>
+	);
 }
+
+
+
+
+
+
+
+
+
+
+
+
