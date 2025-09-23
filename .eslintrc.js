@@ -48,6 +48,8 @@ module.exports = {
     'prefer-spread': 'error',
     'template-curly-spacing': 'error',
     'yield-star-spacing': 'error',
+    // Reduce noisy rule firing for static content pages
+    'react/no-unescaped-entities': 'off',
     'import/order': [
       'error',
       {
