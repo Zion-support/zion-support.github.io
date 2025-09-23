@@ -15,7 +15,7 @@ const publicRoutes = [
   "/guides",
   "/case-studies",
   "/cookies",
-  "/industries"
+  "/industries",
   "/blog",
   "/services",
   "/solutions",

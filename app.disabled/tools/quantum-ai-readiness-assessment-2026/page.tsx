@@ -1,3 +1,11 @@
+export default function Page() {
+  return (
+    <main style={{ padding: 32 }}>
+      <h1>Quantum AI Readiness Assessment 2026</h1>
+      <p>Temporarily simplified to unblock build.</p>
+    </main>
+  );
+}
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';

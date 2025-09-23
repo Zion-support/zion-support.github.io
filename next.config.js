@@ -30,8 +30,9 @@ const nextConfig = {
   assetPrefix: undefined,
   generateEtags: true,
 
-  // Modern experimental features for Next.js 14
+  // Modern experimental features for Next.js
   experimental: {
+    appDir: false,
     optimizePackageImports: ['lucide-react', 'framer-motion'],
     turbo: {
       rules: {

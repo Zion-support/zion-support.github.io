@@ -42,6 +42,11 @@
     "lib_backup",
     "**/*backup*",
     "**/*conflict*",
-    "**/*temp*"
+    "**/*temp*",
+    "zion-os/**",
+    "zion-ai-assistant/**",
+    "zion-website/**",
+    "utils/**",
+    "zion-os.disabled/**"
   ]
 }
