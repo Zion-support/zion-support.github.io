@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
 
 export const metadata = {
   title: 'AI 2026: LLM Evals Maturity Model',
@@ -59,6 +58,14 @@ export default function EvalsMaturityModelPage() {
   );
 }
 
+import React from 'react';
+import Link from 'next/link';
+import SEO from '../../components/SEO';
+
+export const metadata = {
+  title: 'AI 2026: LLM Evals Maturity Model | Zion Tech Group',
+  description: 'An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI systems.'
+};
 
 const LlmEvalsMaturityModel2026 = () => {
   return (
@@ -108,4 +115,5 @@ const LlmEvalsMaturityModel2026 = () => {
   );
 };
 
+export default LlmEvalsMaturityModel2026;
 

@@ -23,7 +23,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import { useState, useEffect } from 'react
 import { useState,useEffect } from 'react', export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value), useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay), return () => { clearTimeout(handler)}},[value,delay]), return debouncedValue}
@@ -56,6 +58,7 @@ export default useDebounce;
 import { useState,useEffect } from 'react'; export const useDebounce = <T>(value: 'T',delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value); useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay); return () => { clearTimeout(handler)}},[value,delay]); return debouncedValue}; export default useDebounce;
 
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       clearTimeout(handler);
     };
@@ -66,6 +69,7 @@ export default useDebounce;
 
 
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 
 import { useState,useEffect } from 'react'; export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value); useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay); return () => { clearTimeout(handler)}},[value,delay]); return debouncedValue}; export default useDebounce;
@@ -74,4 +78,6 @@ origin/automation-improvements-final
 import { useState,useEffect } from 'react'; export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value); useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay); return () => { clearTimeout(handler)}},[value,delay]); return debouncedValue}; export default useDebounce;
 
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/hooks/useDebounce.ts
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

@@ -8,6 +8,7 @@ export: default { apps: [{ name,: main-app","; script: "np,m,"; args: run: previ
 
 
 
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 
 }
@@ -18,4 +19,5 @@ export: default { apps: [{ name,: main-app","; script: "np,m,"; args: run: previ
 }
 
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

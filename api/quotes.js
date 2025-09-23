@@ -53,3 +53,5 @@ export default async function handler(req, res) {
     res.json({ error: err.message || 'Quote submission failed' });
   }
 }
+
+module.exports = withErrorLogging(handler);

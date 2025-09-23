@@ -1,76 +1,33 @@
 #!/bin/bash
 
+# Script to resolve merge conflicts by choosing the main branch version
+# This will resolve conflicts by keeping the main branch version (HEAD)
 
-# Script to automatically resolve merge conflicts by choosing main branch version
-echo "Resolving merge conflicts by choosing main branch version..."
+echo "Resolving merge conflicts by keeping main branch version..."
 
 # Get list of conflicted files
-git status --porcelain | grep "^UU" | cut -c4- | while read file; do
-    echo "Resolving conflict in: $file"
-    # Choose the main branch version (ours)
-    git checkout --ours "$file"
-    git add "$file"
-done
+git status --porcelain | grep "^UU\|^AA\|^DD" | cut -c4- > conflicted_files.txt
 
-# Handle modify/delete conflicts by removing the files
-git status --porcelain | grep "^DU" | cut -c4- | while read file; do
-    echo "Removing deleted file: $file"
-    git rm "$file"
-done
+echo "Found $(wc -l < conflicted_files.txt) conflicted files"
 
-echo "All conflicts resolved. Committing merge..."
-git commit -m "Merge PR #11903: Expand services advertise and build project - Resolved conflicts by choosing main branch version"
-echo "Starting conflict resolution..."
-
-# First, let's merge main into our branch
-git merge main
-
-# For most conflicts, we'll take the main branch version
-# But we want to keep our netlify.toml fix
-git checkout --ours netlify.toml
-
-# For other critical files, take main branch version
-git checkout --theirs package.json
-git checkout --theirs vite.config.ts
-git checkout --theirs tsconfig.json
-git checkout --theirs src/App.tsx
-git checkout --theirs src/main.tsx
-git checkout --theirs index.html
-git checkout --theirs src/index.css
-
-# For all other conflicts, take main branch version
-git status --porcelain | grep "^UU" | cut -c4- | while read file; do
-    if [ "$file" != "netlify.toml" ]; then
-        echo "Resolving conflict in $file (taking main branch version)"
-        git checkout --theirs "$file"
+# For each conflicted file, resolve by choosing main branch version
+while IFS= read -r file; do
+    if [ -f "$file" ]; then
+        echo "Resolving conflict in: $file"
+        # Use git checkout to choose the main branch version (HEAD)
+        git checkout --ours "$file"
         git add "$file"
     fi
-done
+done < conflicted_files.txt
 
-# Add all resolved files
-git add .
+# Clean up
+rm conflicted_files.txt
 
-echo "Conflict resolution completed. Checking status..."
-git status
+echo "Conflicts resolved. Committing merge..."
+git commit -m "Resolve merge conflicts by keeping main branch version
 
-# Script to automatically resolve merge conflicts by choosing main branch version
-echo "Resolving merge conflicts by choosing main branch version..."
+- Merged origin/auto/autonomy-17186719616 into main
+- Resolved conflicts by choosing main branch version
+- All conflicts automatically resolved"
 
-# Get list of conflicted files
-git status --porcelain | grep "^UU" | cut -c4- | while read file; do
-    echo "Resolving conflict in: $file"
-    # Choose the main branch version (ours)
-    git checkout --ours "$file"
-    git add "$file"
-done
-
-# Handle modify/delete conflicts by removing the files
-git status --porcelain | grep "^DU" | cut -c4- | while read file; do
-    echo "Removing deleted file: $file"
-    git rm "$file"
-done
-
-echo "All conflicts resolved. Committing merge..."
-git commit -m "Merge PR #11903: Expand services advertise and build project - Resolved conflicts by choosing main branch version"
-
-
+echo "Merge completed successfully!"

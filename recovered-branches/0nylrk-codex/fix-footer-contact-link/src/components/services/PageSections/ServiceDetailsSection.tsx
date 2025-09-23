@@ -1,15 +1,20 @@
 
+<<<<<<< HEAD
+
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { CountryServiceSelector } from "../CountryServiceSelector";
 import { CountryPricing } from "@/data/onsiteServicePricing",
 import { CountryServiceSelector } from "../CountryServiceSelector",
+
 import {CountryPricing} from "@/data/onsiteServicePricing";
 import {CountryServiceSelector} from "../CountryServiceSelector";
-import { CountryPricing } from "@/data/onsiteServicePricing",
-import { CountryServiceSelector } from "../CountryServiceSelector",
 
 import { CountryPricing } from "@/data/onsiteServicePricing",
 import { CountryServiceSelector } from "../CountryServiceSelector",
+
+
+
+
 interface ServiceDetailsSectionProps {
   selectedCountry: CountryPricing | null;
   setSelectedCountry: (country: CountryPricing | null) => void
@@ -18,59 +23,65 @@ export function ServiceDetailsSection({
   selectedCountry
   setSelectedCountry
 }: ServiceDetailsSectionProps) {
+  return (
+    <div id="service - details" className="mt - 12">;
+      {selected_country ? (
+        <CountryServiceSelector;
+          selected_country={selected_country}
+=======
 import { CountryPricing } from "@/data/onsiteServicePricing";
-import { CountryPricing } from "@/data/onsiteServicePricing";"
 import { CountryServiceSelector } from "../CountryServiceSelector";
-interface ServiceDetailsSectionProps {}
-  selectedCountry: CountryPricing | null;
 
 interface ServiceDetailsSectionProps {
   selectedCountry: CountryPricing | null;
-
-import { CountryPricing } from "@/data/onsiteServicePricing";""
-import { CountryServiceSelector } from "../CountryServiceSelector";"
-interface ServiceDetailsSectionProps {
-  // TODO: Implement
-}
-  selectedCountry: CountryPricing | null;,
   setSelectedCountry: (country: CountryPricing | null) => void;
 }
 
-export function ServiceDetailsSection({}
-  selectedCountry,
-  setSelectedCountry,
-}: ServiceDetailsSectionProps) {}
-  return ("
+export function ServiceDetailsSection({ selectedCountry, setSelectedCountry }: ServiceDetailsSectionProps) {
+  return (
     <div id="service-details" className="mt-12">
-      {selectedCountry ? (;
-        <CountryServiceSelector;
+      {selectedCountry ? (
+        <CountryServiceSelector 
           selectedCountry={selectedCountry}
+>>>>>>> origin/auto/autonomy-17186719616
           onCountryChange={setSelectedCountry}
         />
-      ) : ("
-        <div className="text-center">"
+      ) : (
+        <div className="text-center">
+<<<<<<< HEAD
           <h2 className="text-2xl font-bold text-white mb-4">
-            Select a Country for Details;
-          </h2>"
+            Select a Country for Details
+          </h2>
           <p className="text-zion-slate-light mb-6">
-            Choose a country from the options above to see service details and;
-            pricing;
+            Choose a country from the options above to see service details and
+            pricing
           </p>
         </div>
+
+
+
+import { CountryPricing } from "@/data/onsiteServicePricing",;
+import { CountryServiceSelector } from "../CountryServiceSelector",;
+interface ServiceDetailsSectionProps {;
+  selectedCountry: CountryPricing | null;
+  setSelectedCountry: (country: CountryPricing | null) => void;
+}
+export /**
+ * ServiceDetailsSection - Function description
+ */
+function ServiceDetailsSection() {
   return (
     <div id="service - details" className="mt - 12">;
-  return (
-    <div id="service - details" className="mt-12">;
-  return (
-    <div id="service - details" className="mt-12">;
-  return (
-    <div id="service - details" className="mt-12">;
       {selected_country ? (
         <CountryServiceSelector;
           selected_country={selected_country}
           onCountryChange={setSelectedCountry}
+
 import {CountryPricing} from "@/data/onsiteServicePricing";
 import {CountryServiceSelector} from "../CountryServiceSelector";
+
+
+
 
 import { CountryPricing } from "@/data/onsiteServicePricing",;
 import { CountryServiceSelector } from "../CountryServiceSelector",;
@@ -89,7 +100,6 @@ export function ServiceDetailsSection(): any ({ selectedCountry, setSelectedCoun
           onCountryChange={setSelectedCountry}
         />;
       ) : (;
-
         <div className="text-center">;
           <h2 className="text-2xl font-bold text-white mb-4">Select a Country for Details</h2>;
           <p className="text-zion-slate-light mb-6">;
@@ -97,58 +107,31 @@ export function ServiceDetailsSection(): any ({ selectedCountry, setSelectedCoun
           </p>;
         </div>;
 
-      )}
-    </div>
-  );
-}
 
         />) : (
-        <div className="text-center">;
-          <h2 className="text - 2xl font - bold text - white mb-4">;
+        <div className="text - center">;
+          <h2 className="text - 2xl font - bold text - white mb - 4">;
             Select a Country for Details;
           </h2>;
-<p className="text - zion - slate - light mb - 6">;
-          <p className="text - zion - slate - light mb-6">;
+          <p className="text - zion - slate - light mb - 6">;
             Choose a country from the options above to see service details and;
             pricing;
           </p>;
         </div>)}
     </div>);
 
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
+
+=======
+          <h2 className="text-2xl font-bold text-white mb-4">Select a Country for Details</h2>
+          <p className="text-zion-slate-light mb-6">
+            Choose a country from the options above to see service details and pricing
+          </p>
+        </div>
       )}
     </div>
   );
 }
-  )
-
-}
-;
-
-
-"
-;
-  selectedCountry: CountryPricing | null;,
-  setSelectedCountry: (country: CountryPricing | null) => void;
-
-export function ServiceDetailsSection({
-  selectedCountry,
-  setSelectedCountry,)
-}: ServiceDetailsSectionProps) {
-  return ("
-    <div id="service-details" className="mt-12">"
-</div>
-        <CountryServiceSelector;
-          selectedCountry={selectedCountry}
-          onCountryChange={setSelectedCountry}
-        />
-"
-        <div className="text-center">"
-</div>"
-          <h2 className="text-2xl font-bold text-white mb-4">"
-</h2>
-          </h2>"
-          <p className="text-zion-slate-light mb-6">"
-</p>
-    </div>)"
-pr-12325
-
+>>>>>>> origin/auto/autonomy-17186719616

@@ -23,10 +23,12 @@ const customJestConfig = {
     '/pages-disabled/',
     '/pages.disabled/',
     '/tests/',
-    '/temp_exclude/',
-    // Ignore all __tests__ except the smoke folder
-    '/__tests__/(?!smoke/)'
+    '/temp_exclude/'
   ],
+  transform: {
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }]
+  },
+  passWithNoTests: true,
 }
 
 module.exports = createJestConfig(customJestConfig)

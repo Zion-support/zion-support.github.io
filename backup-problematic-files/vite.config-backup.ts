@@ -207,4 +207,5 @@ import { defineConfig } from 'vite'; import react from '@vitejs/plugin-react'; i
 }
 
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

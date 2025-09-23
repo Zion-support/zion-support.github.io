@@ -52,45 +52,6 @@ class FileWatcher {
       }
 
 
-      // Check for React usage without import
-      if (content.includes('React.') && !content.includes('import React')) {
-        issues.push('React used without import');
-      }
-
-      return issues;
-    } catch (error) {
-      return [`File read error: ${error.message}`];
-    }
-  }
-
-  async quickTypeCheck(filePath) {
-    if (!filePath.endsWith('.ts') && !filePath.endsWith('.tsx')) {
-      return [];
-    }
-
-    try {
-      execSync(`npx tsc --noEmit --skipLibCheck ${filePath}`, { 
-        stdio: 'pipe',
-        cwd: process.cwd()
-      });
-      return [];
-    } catch (error) {
-      const output = error.stdout || error.message;
-      return output.split('\n').filter(line => line.includes('error TS'));
-    }
-  }
-
-  async autoFixFile(filePath) {
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      let modified = false;
-
-      // Auto-fix common issues
-      const fixes = [
-        {
-          pattern: /return\(\)/g,
-          replacement: 'return (',
-          description: 'Fixed return statement syntax'
         issues.push('Invalid return statement syntax')}
           "replacement": '',
           "description": 'Removed merge conflict markers'
