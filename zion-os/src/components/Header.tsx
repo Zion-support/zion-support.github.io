@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Button } from './Button';
+import Button from './Button';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
