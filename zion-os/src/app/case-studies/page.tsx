@@ -1,4 +1,5 @@
 export default function CaseStudiesPage() {
+<<<<<<< HEAD
   return (
     <div className="min-h-screen py-20">
       {/* Hero Section */}
@@ -80,6 +81,17 @@ export default function CaseStudiesPage() {
           </div>
         </div>
       </section>
+=======
+	return (
+		<div className="min-h-screen py-20 px-4">
+			<div className="max-w-5xl mx-auto">
+				<h1 className="text-3xl font-bold mb-4">Case Studies</h1>
+				<p className="text-zinc-500">Explore success stories and real-world implementations.</p>
+			</div>
+		</div>
+	);
+}
+>>>>>>> 45bde326a2e7 (fix(zion-os): repair corrupted pages, add path alias, implement minimal onboarding route; fix signin/signup/dashboard pages; clean homepage duplicates; build zion-website and zion-ai-assistant)
 
       {/* Case Studies Grid */}
       <section className="mb-20">
