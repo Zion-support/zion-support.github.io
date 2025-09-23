@@ -22,6 +22,7 @@ const nextConfig: NextConfig = {
   generateEtags: true,
 
 <<<<<<< HEAD:next.config.ts
+<<<<<<< HEAD:next.config.ts
 =======
   // Modern experimental features for Next.js
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3530:next.config.js
@@ -36,6 +37,12 @@ const nextConfig: NextConfig = {
         },
       },
     },
+=======
+  // Modern experimental features for Next.js 15
+  turbopack: {},
+  experimental: {
+    optimizePackageImports: ['lucide-react', 'framer-motion']
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125:next.config.js
   },
 
   async redirects() {

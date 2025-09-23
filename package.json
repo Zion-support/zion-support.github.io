@@ -104,6 +104,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "@next/swc-linux-x64-gnu": "^15.5.3",
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-bd83
@@ -124,6 +125,8 @@
 =======
     "@next/swc-linux-x64-gnu": "^15.5.3",
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "12.1.5",
     "@types/jest": "^29.0.0",
@@ -136,11 +139,14 @@
     "@types/react-dom": "^19.1.9",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-bd83
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6fc7
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3530
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125
     "babel-jest": "^29.7.0",
     "critters": "^0.0.23",
     "eslint": "^9.36.0",
@@ -156,13 +162,28 @@
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "typescript": "^5.9.2"
 =======
     "typescript": "^5.0.0",
     "typescript-eslint": "^8.44.1"
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-bd83
+=======
+    "typescript": "^5.0.0",
+    "@next/swc-linux-x64-gnu": "15.5.3"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125
   },
   "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "testMatch": [
+      "**/?(*.)+(spec|test).+(ts|tsx|js|jsx)"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
     "testEnvironment": "jest-environment-jsdom",
     "setupFilesAfterEnv": [
       "<rootDir>/jest.setup.js"
@@ -170,6 +191,7 @@
     "moduleNameMapper": {
       "^@/(.*)$": "<rootDir>/$1"
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
     "modulePathIgnorePatterns": [
 <<<<<<< HEAD
@@ -205,6 +227,10 @@
     ],
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
+=======
+    "modulePathIgnorePatterns": ["<rootDir>/automation/", "<rootDir>/apps.backup/", "<rootDir>/components.apps/", "<rootDir>/components.disabled/", "<rootDir>/zion-os/", "<rootDir>/zion-os.disabled/", "<rootDir>/zion-ai-assistant/", "<rootDir>/server/", "<rootDir>/recovered-branches/", "<rootDir>/automation/backups/", "<rootDir>/.temp_backup_components/", "<rootDir>/backup-problematic-files/"],
+    "watchPathIgnorePatterns": ["<rootDir>/automation/", "<rootDir>/apps.backup/", "<rootDir>/components.apps/", "<rootDir>/components.disabled/", "<rootDir>/zion-os/", "<rootDir>/zion-os.disabled/", "<rootDir>/zion-ai-assistant/", "<rootDir>/server/", "<rootDir>/recovered-branches/", "<rootDir>/automation/backups/", "<rootDir>/.temp_backup_components/", "<rootDir>/backup-problematic-files/"],
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125
     "transform": {
       "^.+\\.(js|jsx|ts|tsx)$": [
         "babel-jest",
@@ -215,6 +241,7 @@
         }
       ]
     },
+<<<<<<< HEAD
     "testPathIgnorePatterns": [
       "<rootDir>/.next/",
       "<rootDir>/node_modules/",
@@ -262,6 +289,9 @@
       "<rootDir>/components/apps/",
       "<rootDir>/server/"
     ]
+=======
+    "testPathIgnorePatterns": ["/node_modules/", "/.next/"]
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125
   },
   "packageManager": "npm@11.6.0+sha512.77f3fb0dbbd881835d7bd1217deabdf7ed77fc4ec4f363df64fc3cb986404abf6c437661041080f5c5d225103508e7c9ea30cb2742b7e942675d05a10af2d7b9"
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467

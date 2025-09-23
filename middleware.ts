@@ -5,6 +5,7 @@ import type { NextRequest } from 'next/server';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Public, protected, and admin paths (deduplicated)
 const publicPaths: string[] = [
 	'/',
@@ -89,6 +90,8 @@ const publicRoutes = [
   "/auth/reset-password",
   "/auth/verify",
 ];
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125
 const publicPaths = [
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
@@ -121,6 +124,7 @@ const publicPaths = [
   '/auth/reset-password',
 <<<<<<< HEAD
   '/auth/verify'
+<<<<<<< HEAD
 ];
 const protectedRoutes = [
   "/",
@@ -203,6 +207,8 @@ const protectedRoutes = [
   '/sitemap.xml',
   '/manifest.json',
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125
 ];
 
 export function middleware(request: NextRequest) {
@@ -210,6 +216,7 @@ export function middleware(request: NextRequest) {
 	const { pathname } = request.nextUrl;
 =======
   const { pathname } = request.nextUrl;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   
@@ -235,6 +242,9 @@ export function middleware(request: NextRequest) {
 =======
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850
+=======
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125
   // Skip middleware for static files and API routes
 =======
 
@@ -245,14 +255,18 @@ export function middleware(request: NextRequest) {
     pathname.startsWith('/api/') ||
 <<<<<<< HEAD
     pathname.startsWith('/static/') ||
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125
     pathname.includes('.')
   ) {
     return NextResponse.next();
   }
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-bd83
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 	// Skip for static assets and API routes
@@ -332,10 +346,14 @@ export const config = {
 		'/((?!api|_next/static|_next/image|favicon.ico).*)',
 	],
 =======
+=======
+  // Allow public paths
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125
   if (publicPaths.includes(pathname)) {
     return NextResponse.next();
   }
 
+<<<<<<< HEAD
   const isProtectedRoute = protectedRoutes.some(route => pathname === route || pathname.startsWith(route + '/'));
   if (isProtectedRoute) {
     const token = request.cookies.get('auth-token')?.value;
@@ -351,6 +369,9 @@ export const config = {
   response.headers.set('X-Content-Type-Options', 'nosniff');
   response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
   return response;
+=======
+  return NextResponse.next();
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125
 }
 
 export const config = {

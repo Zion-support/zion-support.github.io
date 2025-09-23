@@ -1603,6 +1603,7 @@
     glob "10.3.10"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@next/swc-darwin-arm64@15.5.3":
   version "15.5.3"
   resolved "https://registry.yarnpkg.com/@next/swc-darwin-arm64/-/swc-darwin-arm64-15.5.3.tgz#f1bd728baf9b0ed0b6261a2fbc6436906cf9472e"
@@ -1648,6 +1649,12 @@
   resolved "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-15.5.3.tgz"
   integrity sha512-lDtOOScYDZxI2BENN9m0pfVPJDSuUkAD1YXSvlJF0DKwZt0WlA7T7o3wrcEr4Q+iHYGzEaVuZcsIbCps4K27sA==
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3530
+=======
+"@next/swc-linux-x64-gnu@15.5.3":
+  version "15.5.3"
+  resolved "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-15.5.3.tgz"
+  integrity sha512-lDtOOScYDZxI2BENN9m0pfVPJDSuUkAD1YXSvlJF0DKwZt0WlA7T7o3wrcEr4Q+iHYGzEaVuZcsIbCps4K27sA==
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"

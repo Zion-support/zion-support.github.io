@@ -5,6 +5,7 @@ import Head from 'next/head'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 type SEOProps = {
   title?: string;
   description?: string;
@@ -36,6 +37,18 @@ interface SEOHeadProps {
 	twitterCard?: string;
 	noIndex?: boolean;
 	structuredData?: object;
+=======
+type SEOHeadProps = {
+  title?: string
+  description?: string
+  keywords?: string[]
+  canonical?: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
+  noIndex?: boolean
+  structuredData?: object
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125
 }
 
 export default function SEOHead({
@@ -70,12 +83,15 @@ export default function SEOHead({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       {keywordsContent && <meta name="keywords" content={keywordsContent} />}
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/favicon.ico" />
 =======
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125
       <meta name="keywords" content={keywords.join(', ')} />
       <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
       <link rel="canonical" href={canonicalUrl} />
@@ -104,6 +120,7 @@ export default function SEOHead({
       <meta property="og:image" content={ogImage} />
       {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
       <meta property="og:site_name" content="Zion Tech Group" />
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -112,11 +129,16 @@ export default function SEOHead({
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
+=======
+      
+      {/* Twitter Card Meta Tags */}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -125,14 +147,26 @@ export default function SEOHead({
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
       {structuredData && (
+=======
+      {/* Additional Meta Tags */}
+      <meta name="author" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
+
+      {/* Structured Data */}
+      {structuredData ? (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+<<<<<<< HEAD
       )}
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+      ) : null}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125
 
       {/* Preconnect (perf) */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -140,6 +174,7 @@ export default function SEOHead({
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850
     </Head>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 	title = 'Zion Tech Group - Advanced AI and Technology Solutions',
@@ -248,4 +283,6 @@ export default function SEOHead({
     </Head>
   )
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6125
 }
