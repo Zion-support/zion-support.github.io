@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
+// import './globals.css'
 import PerformanceMonitor from './components/PerformanceMonitor'
 import ScrollToTop from './components/ScrollToTop'
 import { ThemeProvider } from './components/ThemeProvider'

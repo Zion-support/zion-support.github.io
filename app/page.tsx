@@ -1,3 +1,4 @@
+import React, { lazy, Suspense } from 'react'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import { ArrowRight, Brain, Cloud, Shield, Zap, Users, Globe, Target, Sparkles, TrendingUp } from 'lucide-react'
@@ -248,7 +249,7 @@ export default function HomePage() {
 
         {/* Testimonials Section */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
-          <LazyTestimonials />
+          <Testimonials />
         </div>
       </main>
       
@@ -974,7 +975,7 @@ export default function HomePage() {
         <APIManagementSystem />
 
         {/* Structured Data */}
-        <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." />}>
+        <Suspense fallback={null}>
           <StructuredData 
             type="Organization" 
             data={{
