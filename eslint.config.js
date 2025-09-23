@@ -1,6 +1,8 @@
-import js from '@eslint/js';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
+import eslintJs from '@eslint/js';
+import eslintReact from 'eslint-plugin-react';
+import eslintReactHooks from 'eslint-plugin-react-hooks';
+import tsEslintPlugin from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
 import tseslint from 'typescript-eslint';
 
 export default [
@@ -12,8 +14,6 @@ export default [
       'dist/**',
       'build/**',
       'public/**',
-      'components/**',
-      'lib/**',
       'automation/**',
       'apps.backup/**',
       'backup/**',
@@ -32,35 +32,29 @@ export default [
       'components/20o25-comprehensive-services-showcase-v2.tsx',
       'components/AI20o25AdvancedAutomationShowcase.tsx',
       'components/AI20o25AdvancedAnalyticsDashboard.tsx',
-      '**/*.min.js',
-    ],
+      '**/*.min.js'
+    ]
   },
-  js.configs.recommended,
+  eslintJs.configs.recommended,
   ...tseslint.configs.recommended,
   {
     files: [
       'app/**/*.{js,jsx,ts,tsx}',
       'pages/**/*.{js,jsx,ts,tsx}',
-      'src/**/*.{js,jsx,ts,tsx}',
+      'src/**/*.{js,jsx,ts,tsx}'
     ],
     languageOptions: {
-      parser: tseslint.parser,
+      parser: tsParser,
       ecmaVersion: 2021,
-      sourceType: 'module',
+      sourceType: 'module'
     },
-    plugins: {
-      react,
-      'react-hooks': reactHooks,
-      '@typescript-eslint': tseslint.plugin,
-    },
+    plugins: { react: eslintReact, 'react-hooks': eslintReactHooks, '@typescript-eslint': tsEslintPlugin },
     settings: { react: { version: 'detect' } },
     rules: {
       'react/react-in-jsx-scope': 'off',
-      'no-console': ['warn', { allow: ['warn', 'error'] }],
-      '@typescript-eslint/no-unused-vars': [
-        'warn',
-        { argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' },
-      ],
-    },
-  },
+      'no-console': 'warn',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' }]
+    }
+  }
 ];
+
