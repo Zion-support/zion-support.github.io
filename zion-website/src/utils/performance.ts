@@ -25,7 +25,7 @@ export class PerformanceMonitor {
     }
   }
 
-  static measureComponentRender(componentName, renderFunction) {
+  static measureComponentRender(componentName: string, renderFunction: () => any) {
     const start = performance.now();
     const result = renderFunction();
     const end = performance.now();
@@ -34,7 +34,7 @@ export class PerformanceMonitor {
     return result;
   }
 
-  static measureAsyncOperation(operationName, operation) {
+  static measureAsyncOperation(operationName: string, operation: () => Promise<any>) {
     const start = performance.now();
     return operation().finally(() => {
       const end = performance.now();
