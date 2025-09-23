@@ -5,8 +5,8 @@ import Link from 'next/link'
 import { Calendar, Clock, ArrowRight, Search, Filter, Mail, CheckCircle, AlertCircle } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import Card from '../components/Card'
-import Button from '../components/Button'
+import { Card } from '../components/Card'
+import { Button } from '../components/Button'
 
 export default function BlogPage() {
   const [searchTerm, setSearchTerm] = useState('')
