@@ -1,7 +1,6 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState } from "react";
-import { useSession, signIn, signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
 interface User {
@@ -25,63 +24,52 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-  const { data: session, status } = useSession();
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
 
   useEffect(() => {
-    if (status === "loading") {
-      setIsLoading(true);
-      return;
-    }
-
-    if (session?.user) {
-      setUser({
-        id: (session.user as any).id,
-        name: session.user.name || undefined,
-        email: session.user.email!,
-        role: (session.user as any).role || "user",
-        onboardingCompleted: false,
-      });
-    } else {
-      setUser(null);
-    }
-
+    // Initialize from localStorage if present
+    try {
+      const stored = typeof window !== "undefined" ? window.localStorage.getItem("zion-os:user") : null;
+      if (stored) {
+        setUser(JSON.parse(stored));
+      }
+    } catch {}
     setIsLoading(false);
-  }, [session, status]);
+  }, []);
 
   const login = async (email: string, password: string) => {
-    const result = await signIn("credentials", { email, password, redirect: false });
-    if ((result as any)?.error) throw new Error((result as any).error);
+    // Mock login
+    const mockUser: User = {
+      id: "local-user",
+      name: email.split("@")[0],
+      email,
+      role: "user",
+      onboardingCompleted: false,
+    };
+    setUser(mockUser);
+    try { window.localStorage.setItem("zion-os:user", JSON.stringify(mockUser)); } catch {}
     router.push("/dashboard");
   };
 
   const logout = async () => {
-    await signOut({ redirect: false });
+    setUser(null);
+    try { window.localStorage.removeItem("zion-os:user"); } catch {}
     router.push("/");
   };
 
   const register = async (name: string, email: string, password: string) => {
-    const response = await fetch("/api/auth/register", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, password }),
-    });
-    if (!response.ok) {
-      const error = await response.json();
-      throw new Error(error.message);
-    }
+    // Mock register
     await login(email, password);
   };
 
   const completeOnboarding = async () => {
-    const response = await fetch("/api/user/onboarding", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-    });
-    if (!response.ok) throw new Error("Failed to complete onboarding");
-    if (user) setUser({ ...user, onboardingCompleted: true });
+    if (user) {
+      const updated = { ...user, onboardingCompleted: true };
+      setUser(updated);
+      try { window.localStorage.setItem("zion-os:user", JSON.stringify(updated)); } catch {}
+    }
   };
 
   const value: AuthContextType = {
