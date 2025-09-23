@@ -1,3 +1,7 @@
+/*
+  Build Verification Script
+  Ensures core runtime dependencies can be imported without syntax/runtime errors.
+*/
 
 "use strict";
 
