@@ -50,52 +50,46 @@ const contact = {
 };
 
 export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
+<<<<<<< HEAD
+=======
+  // Minimal seed items kept for build correctness
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f
   {
     id: 'ai-social-media-manager',
     name: 'AI Social Media Manager',
-    tagline: 'Automated social media management that increases engagement by 300%',
+    tagline: 'Automated social media management',
     price: '$299',
     period: '/month',
-    description: 'Revolutionary AI-powered social media management platform that automatically creates, schedules, and optimizes content. Increases engagement by 300% and saves 20+ hours per week.',
-    features: [
-      'AI content creation',
-      'Automated scheduling',
-      'Engagement optimization',
-      'Multi-platform management',
-      'Performance analytics',
-      'Trend prediction',
-      'Hashtag optimization',
-      'Audience insights',
-      'Content calendar',
-      '24/7 AI management'
-    ],
+    description: 'AI platform that creates, schedules, and optimizes content.',
+    features: ['AI content creation', 'Automated scheduling', 'Analytics'],
     popular: true,
     icon: '📱🤖',
     color: 'from-blue-600 to-purple-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-social-media-manager',
-    marketPosition: 'Leading AI social media platform. 2-year advantage in automated content creation.',
-    targetAudience: 'Small businesses, Marketing agencies, Influencers, Content creators, Startups',
+    marketPosition: 'Leading AI social media platform.',
+    targetAudience: 'SMBs, Agencies, Creators',
     trialDays: 14,
     setupTime: '1 day',
     category: 'Social Media AI',
     realService: true,
-    technology: ['AI/ML', 'Natural Language Processing', 'Content Generation', 'React', 'Node.js', 'Social APIs'],
-    integrations: ['Facebook', 'Instagram', 'Twitter', 'LinkedIn', 'TikTok', 'Analytics platforms'],
-    useCases: ['Content creation', 'Social media management', 'Engagement optimization', 'Marketing automation', 'Brand building'],
-    roi: 'Increase engagement by 300% and save 20+ hours per week',
-    competitors: ['Hootsuite ($99/month)', 'Buffer ($15/month)', 'None for AI content creation'],
-    marketSize: '$15B social media management market',
-    growthRate: '200% annual growth',
+    technology: ['AI/ML', 'React', 'Node.js'],
+    integrations: ['Facebook', 'Instagram'],
+    useCases: ['Content creation', 'Engagement optimization'],
+    roi: 'Increase engagement significantly',
+    competitors: ['Hootsuite', 'Buffer'],
+    marketSize: '$15B',
+    growthRate: '200% YoY',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Fully operational AI social media platform with automated content creation, scheduling, and optimization.',
+    implementationDetails: 'Operational platform.',
     launchDate: '2025-01-10',
     customers: 125,
     rating: 4.8,
     reviews: 234,
     innovationLevel: 'Breakthrough',
     patentStatus: 'Trade Secret',
+<<<<<<< HEAD
     aiCapabilities: ['AI Content Creation', 'Engagement Optimization', 'Trend Prediction', 'Automated Scheduling'],
     marketDisruption: 'Revolutionizes social media management with AI automation'
 <<<<<<< HEAD
@@ -206,8 +200,15 @@ export default innovativeMicroSaasSolutions2025;
     patentStatus: 'Trade Secret',
     aiCapabilities: ['AI Demand Prediction', 'Stock Level Optimization', 'Automated Reordering', 'Cost Optimization'],
     marketDisruption: 'Revolutionizes inventory management with AI prediction'
+=======
+    aiCapabilities: ['Content Creation', 'Optimization'],
+    marketDisruption: 'Automation at scale'
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f
   }
 ];
 
 export default innovativeMicroSaasSolutions2025;
+<<<<<<< HEAD
 >>>>>>> cursor/check-fix-push-and-merge-to-main-8f81
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f

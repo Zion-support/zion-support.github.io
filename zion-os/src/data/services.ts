@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-export const services = [] as const;
-export const getCategories = () => [] as const;
-=======
 export interface Service {
   id: string;
   name: string;
@@ -530,4 +526,3 @@ export const getServiceById = (id: string) => {
 export const getCategories = () => {
   return Array.from(new Set(services.map(service => service.category)));
 };
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047

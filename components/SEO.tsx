@@ -1,6 +1,7 @@
-<<<<<<< HEAD
 import Head from 'next/head'
+import type { ReactNode } from 'react'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 type SEOProps = {
   title?: string
@@ -83,10 +84,20 @@ export default function SEOHead({
 	const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
 	const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
 
+=======
+type Props = {
+	title?: string
+	description?: string
+	children?: ReactNode
+}
+
+export default function SEO({ title = 'Zion Tech Group', description = 'AI & Technology Solutions', children }: Props) {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f
 	return (
 		<Head>
-			<title>{fullTitle}</title>
+			<title>{title}</title>
 			<meta name="description" content={description} />
+<<<<<<< HEAD
 			<meta name="keywords" content={keywords.join(', ')} />
 			<meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
 			{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
@@ -115,6 +126,11 @@ export default function SEOHead({
 <<<<<<< HEAD
 	)
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-e382
+=======
+			{children}
+		</Head>
+	)
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f
 }
 
 export default SEO
