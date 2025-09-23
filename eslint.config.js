@@ -48,6 +48,14 @@ export default [
       'react/react-in-jsx-scope': 'off'
     }
   },
+  // Relax certain rules only for TypeScript files
+  {
+    files: ['**/*.{ts,tsx}'],
+    rules: {
+      // Prevent false positives on TS types like RequestInit, DOM globals, etc.
+      'no-undef': 'off'
+    }
+  },
   {
     ignores: [
       'node_modules/**',
@@ -75,9 +83,15 @@ export default [
       'src-corrupted/**',
       'src.corrupted/**',
       'src.disabled/**',
+      'src/pages_backup/**',
+      'pages_backup/**',
+      'tests/**',
+      '__tests__/**',
+      'test/**',
+      'tests.disabled/**',
+      'test_build/**',
       'types/**',
       'types.disabled/**',
-      'utils/**',
       'utils.disabled/**',
       'zion-os/**',
       'zion-website/**',
