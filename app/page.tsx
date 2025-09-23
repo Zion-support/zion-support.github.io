@@ -1,21 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react'
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2af7
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0efa
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 
 export const metadata = {
-<<<<<<< HEAD
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.'
-=======
-  title: 'Zion Tech Group',
-  description: 'Transform your business with cutting-edge AI solutions.'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0efa
 }
 
 export default function HomePage() {
@@ -23,12 +11,8 @@ export default function HomePage() {
     <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-6">
       <div className="max-w-3xl text-center">
         <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-<<<<<<< HEAD
           Advanced AI and
           <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Technology Solutions</span>
-=======
-          Zion Tech Group
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0efa
         </h1>
         <p className="text-lg text-gray-300 mb-8">Advanced AI, cloud, and cybersecurity solutions.</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -44,10 +28,3 @@ export default function HomePage() {
     </main>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2af7
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0efa
