@@ -1,37 +1,3 @@
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
   price: string;
   period: string;
   description: string;
@@ -46,4 +12,3 @@
   features: string[];
   benefits: string[];
 }
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4

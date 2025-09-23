@@ -1,55 +1,3 @@
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
   Activity,
   Play,
   Eye,
@@ -100,4 +48,3 @@
       type: "instance_ready",
       title: "Instance Ready",
       message: "EduDAO Academy has been successfully deployed and is now live",
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4

@@ -7,19 +7,6 @@
 
 
 
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-=======
 export const getCategories = () => {
   return Array.from(new Set(services.map((service) => service.category)));
 };
@@ -293,7 +280,6 @@ export const services: Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   },
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
 
 
 

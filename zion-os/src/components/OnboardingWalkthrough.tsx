@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
   title: string;
   description: string;
   target?: string;
@@ -38,4 +17,3 @@
     id: "complete",
     title: "You're All Set! 🎉",
     description: "You now know the basics. Start building your digital economy or explore more features.",
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4

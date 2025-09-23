@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg' | 'xl';
   href?: string;
@@ -26,4 +11,3 @@
   fullWidth?: boolean;
   rounded?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
 }
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
