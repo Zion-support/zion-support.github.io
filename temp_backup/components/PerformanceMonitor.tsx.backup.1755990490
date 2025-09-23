@@ -44,15 +44,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   showUI = false 
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-<<<<<<< HEAD
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    fmp: null
-=======
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
     lcp: 0,
     fid: 0,
     cls: 0,
@@ -76,16 +67,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       }
     };
 
-<<<<<<< HEAD
-    // Measure First Contentful Paint
-    const measureFCP = () => {
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
-          if (fcpEntry) {
-            setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
-=======
   const getOverallScore = () => {
     const validScores = Object.values(scores).filter(score => score.score > 0);
     if (validScores.length === 0) return { score: 0, grade: 'F', color: 'text-gray-500' };
@@ -94,7 +75,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     
     let grade: 'A' | 'B' | 'C' | 'D' | 'F';
     let color: string;
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 
     if (averageScore >= 90) {
       grade = 'A';
@@ -400,15 +380,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               )}
             </ul>
           </div>
-<<<<<<< HEAD
-        )}
-      </div>
-    </div>
-=======
         </motion.div>
       )}
     </AnimatePresence>
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 >>>>>>> 5e27e402e0b68b9c85b868b0fd8919518fd31198
   );
 };

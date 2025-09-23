@@ -2,19 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  Zap, Globe, Phone, Mail, MapPin, ArrowRight, 
-  Brain, Atom, Shield, Rocket, Target, BookOpen, Users,
-  Star, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb,
-  Twitter, Linkedin, Facebook, Instagram, Youtube, Github, MessageCircle, MessageSquare,
-  ArrowUp, ExternalLink, Building, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2,
-  Palette, Music, Film, BookOpenCheck, HelpCircle, FileText, Video, Headphones
-=======
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Sparkles,
   Brain, Rocket, Shield, Zap, Target, Atom, BookOpen,
   Building, Cpu, Database, Cloud, Lock, Users, Heart,
   Twitter, Linkedin, Facebook, Instagram, Youtube, Github
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 } from 'lucide-react';
 
 const contactInfo = {
@@ -36,15 +27,11 @@ const footerSections = [
       { name: 'HR Analytics Platform', href: '/ai-hr-analytics-platform' },
       { name: 'AI Decision Engine', href: '/ai-powered-decision-engine' },
       { name: 'Content Automation', href: '/intelligent-content-automation-platform' },
-<<<<<<< HEAD
-      { name: 'CRM Intelligence Suite', href: '/smart-crm-intelligence-suite' }
-=======
       { name: 'CRM Intelligence Suite', href: '/smart-crm-intelligence-suite' },
       { name: 'AI Evaluation Orchestrator', href: '/services/ai-evaluation-orchestrator', featured: true },
              { name: 'SEO Automation Suite', href: '/seo-automation-suite' },
                { name: 'IT Asset Discovery Agent', href: '/it-asset-discovery-agent' },
         { name: 'Managed Postgres HA', href: '/managed-postgres-ha' }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
     ]
   },
   {
@@ -125,12 +112,7 @@ const footerSections = [
     description: 'Documentation, support, and learning',
     icon: <BookOpen className="w-5 h-5 text-cyan-400" />,
     links: [
-<<<<<<< HEAD
-      { name: 'Documentation', href: '/docs' },
-      { name: 'API Reference', href: '/api-documentation' },
-=======
       { name: 'Blog', href: '/blog' },
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
       { name: 'Case Studies', href: '/case-studies' },
       { name: 'Blog & News', href: '/blog' },
       { name: 'Support Center', href: '/support' },
@@ -138,9 +120,6 @@ const footerSections = [
       { name: 'Training & Certification', href: '/training' },
       { name: 'Community Forum', href: '/community' },
       { name: 'Market Pricing', href: '/market-pricing' },
-<<<<<<< HEAD
-      { name: 'Services Advertising', href: '/services-advertising' }
-=======
       { name: 'Services Advertising', href: '/services-advertising' },
       { name: 'RAG Evaluation Lab', href: '/rag-evaluation-lab' },
       { name: 'SOC 2 Compliance Automation', href: '/soc2-compliance-automation' },
@@ -149,20 +128,14 @@ const footerSections = [
       { name: 'API Performance Testing', href: '/api-performance-testing' },
       { name: 'Events', href: '/events' },
       { name: 'Webinars', href: '/webinars' }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
     ]
   }
 ];
 
 const socialLinks = [
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
-<<<<<<< HEAD
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
-  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5" /> },
-=======
   { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: <Linkedin className="w-5 h-5" /> },
   { name: 'Facebook', href: 'https://www.facebook.com/ziontechgroup/', icon: <Facebook className="w-5 h-5" /> },
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" /> },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" /> },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" /> }
@@ -192,32 +165,9 @@ export default function UltraFuturisticFooter2035() {
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
                   <span className="text-white font-bold text-xl">Z</span>
                 </div>
-<<<<<<< HEAD
-                
-                <p className="text-gray-300 leading-relaxed max-w-md">
-                  Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. 
-                  Transform your business with our revolutionary technology.
-                </p>
-
-                {/* Contact Info */}
-                <div className="space-y-3">
-                  <a href={`tel:${contactInfo.mobile}`} className="flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200">
-                    <Phone className="w-4 h-4" />
-                    <span>{contactInfo.mobile}</span>
-                  </a>
-                  <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors duration-200">
-                    <Mail className="w-4 h-4" />
-                    <span>{contactInfo.email}</span>
-                  </a>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <MapPin className="w-4 h-4" />
-                    <span className="text-sm">{contactInfo.address}</span>
-                  </div>
-=======
                 <div>
                   <h3 className="text-white font-bold text-xl">ZionTech Group</h3>
                   <p className="text-cyan-400 text-sm">Future of Technology</p>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
                 </div>
               </div>
               <p className="text-gray-300 text-sm leading-relaxed mb-6">

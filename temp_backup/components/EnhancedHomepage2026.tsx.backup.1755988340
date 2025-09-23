@@ -1,29 +1,16 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, Suspense, lazy } from 'react';
-import { motion } from 'framer-motion';
-=======
 import React, { useState, useEffect, useCallback, Suspense } from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9a74
 import Layout from './layout/Layout';
 import { 
   ArrowRight, Play, Star, Brain, Shield, Zap, Globe, Cpu, Eye, Loader2
 } from 'lucide-react';
 
-<<<<<<< HEAD
-// Lazy load components for better performance
-const ServiceCard = lazy(() => import('./ServiceCard'));
-const TestimonialSection = lazy(() => import('./TestimonialSection'));
-=======
 // Lazy load heavy components
 const LazyServiceCard = React.lazy(() => import('./ServiceCard'));
 const LazyTestimonialSection = React.lazy(() => import('./TestimonialSection'));
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9a74
 
 const EnhancedHomepage2026: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
-<<<<<<< HEAD
-=======
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [isIntersecting, setIsIntersecting] = useState(false);
 
@@ -31,21 +18,9 @@ const EnhancedHomepage2026: React.FC = () => {
   const rotateServices = useCallback(() => {
     setCurrentServiceIndex((prev) => (prev + 1) % 6);
   }, []);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9a74
 
   // Optimized loading effect with reduced timeout
   useEffect(() => {
-<<<<<<< HEAD
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-      setIsVisible(true);
-    }, 300); // Reduced from 500ms for better UX
-
-    // Auto-rotate featured services with better performance
-    const serviceTimer = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % 6);
-    }, 5000); // Increased from 4000ms for better readability
-=======
     // Simulate content loading with better performance
     const timer = setTimeout(() => {
       setIsLoading(false);
@@ -63,7 +38,6 @@ const EnhancedHomepage2026: React.FC = () => {
 
     const heroSection = document.getElementById('hero-section');
     if (heroSection) observer.observe(heroSection);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9a74
 
     return () => {
       clearTimeout(timer);
@@ -72,94 +46,33 @@ const EnhancedHomepage2026: React.FC = () => {
     };
   }, [rotateServices]);
 
-<<<<<<< HEAD
-  // Memoized animation variants for better performance
-  const fadeInUp = {
-    initial: { opacity: 0, y: 40 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.5, ease: "easeOut" as const }
-=======
   // Optimized animation variants
   const fadeInUp = {
     initial: { opacity: 0, y: 40 }, // Reduced from 60 for smoother animation
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.5, ease: "easeOut" } // Reduced from 0.6
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9a74
   };
 
   const staggerContainer = {
     animate: {
       transition: {
-<<<<<<< HEAD
-        staggerChildren: 0.08,
-        delayChildren: 0.1
-=======
         staggerChildren: 0.08, // Reduced from 0.1 for faster loading
         delayChildren: 0.1 // Reduced from 0.2
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9a74
       }
     }
   };
 
   const backgroundVariants = {
-<<<<<<< HEAD
-    initial: { opacity: 0, scale: 0.9 },
-    animate: { 
-      opacity: 1, 
-      scale: 1,
-      transition: { duration: 1.2, ease: "easeOut" as const }
-=======
     initial: { opacity: 0, scale: 0.9 }, // Increased from 0.8 for better visual
     animate: { 
       opacity: 1, 
       scale: 1,
       transition: { duration: 1.2, ease: "easeOut" as const } // Reduced from 1.5
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9a74
     }
   };
 
   const featuredServices = [
     {
-<<<<<<< HEAD
-      title: "AI Consciousness Orchestrator",
-      description: "Revolutionary AI consciousness management with ethical frameworks and human-AI collaboration",
-      icon: Brain,
-      color: "from-cyan-600 to-blue-700",
-      price: "$2,999/month",
-      features: ["Consciousness monitoring", "Ethical AI frameworks", "Human-AI collaboration"]
-    },
-    {
-      title: "Quantum Neural Interface Platform",
-      description: "Quantum-powered brain-computer interface for next-generation human-AI interaction",
-      icon: Atom,
-      color: "from-purple-600 to-pink-700",
-      price: "$4,999/month",
-      features: ["Quantum neural processing", "Brain-AI sync", "Real-time monitoring"]
-    },
-    {
-      title: "Autonomous Space Mining AI",
-      description: "AI-powered autonomous space resource extraction and management system",
-      icon: Rocket,
-      color: "from-orange-600 to-red-700",
-      price: "$8,999/month",
-      features: ["Autonomous mining", "Resource optimization", "Mission control"]
-    },
-    {
-      title: "Quantum Financial Prediction Engine",
-      description: "Quantum-powered financial prediction with 99.9% accuracy for institutional trading",
-      icon: Zap,
-      color: "from-green-600 to-emerald-700",
-      price: "$15,999/month",
-      features: ["Quantum analysis", "99.9% accuracy", "Real-time predictions"]
-    },
-    {
-      title: "Quantum Cybersecurity Fortress",
-      description: "Quantum-resistant cybersecurity with AI-powered threat detection and autonomous response",
-      icon: Shield,
-      color: "from-red-600 to-pink-700",
-      price: "$3,999/month",
-      features: ["Quantum encryption", "AI threat detection", "Autonomous response"]
-=======
       id: 'quantum-ai-orchestration',
       title: "Quantum AI Orchestration Platform",
       description: "Revolutionary AI orchestration leveraging quantum computing for unprecedented performance",
@@ -198,22 +111,12 @@ const EnhancedHomepage2026: React.FC = () => {
       price: "$799/month",
       features: ["3D storefronts", "NFT management", "Virtual currency"],
       ariaLabel: "Learn more about Metaverse Commerce Platform"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9a74
     },
     {
       id: 'autonomous-devops',
       title: "Autonomous DevOps Orchestrator",
       description: "AI-powered autonomous DevOps with self-healing infrastructure and predictive optimization",
       icon: Cpu,
-<<<<<<< HEAD
-      color: "from-emerald-600 to-teal-700",
-      price: "$2,499/month",
-      features: ["Self-healing systems", "Predictive optimization", "Autonomous management"]
-    }
-  ];
-
-  // Enhanced loading state with better UX
-=======
       color: "from-green-600 to-emerald-700",
       price: "$1,199/month",
       features: ["Autonomous CI/CD", "Self-healing infrastructure", "Predictive optimization"],
@@ -232,7 +135,6 @@ const EnhancedHomepage2026: React.FC = () => {
   ];
 
   // Loading state with better accessibility
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9a74
   if (isLoading) {
     return (
       <Layout>
@@ -248,16 +150,11 @@ const EnhancedHomepage2026: React.FC = () => {
             className="text-center"
           >
             <div className="relative">
-<<<<<<< HEAD
-              <Loader2 className="w-16 h-16 text-cyan-400 animate-spin mx-auto mb-4" />
-              <div className="absolute inset-0 w-16 h-16 bg-cyan-400/20 rounded-full blur-xl animate-pulse"></div>
-=======
               <Loader2 
                 className="w-20 h-20 text-cyan-400 animate-spin mx-auto mb-6" 
                 aria-hidden="true"
               />
               <div className="absolute inset-0 w-20 h-20 bg-cyan-400/20 rounded-full blur-xl animate-pulse"></div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9a74
             </div>
             <p className="text-xl text-gray-300 font-light">Loading Zion Tech Group...</p>
             <p className="text-sm text-cyan-400 mt-2">Preparing the future of technology</p>
@@ -350,15 +247,9 @@ const EnhancedHomepage2026: React.FC = () => {
                   variants={fadeInUp}
                 >
                   <button 
-<<<<<<< HEAD
-                    className="group px-12 py-6 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-xl rounded-2xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center gap-3 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 relative overflow-hidden"
-                    aria-label="Explore our revolutionary 2040 services"
-                    onClick={() => window.location.href = '/comprehensive-2040-services-showcase'}
-=======
                     className="group px-12 py-6 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-xl rounded-2xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center gap-3 focus:outline-none focus:ring-4 focus:ring-cyan-500 relative overflow-hidden"
                     aria-label="Get started with Zion Tech Group services"
                     onClick={() => window.location.href = '/get-started'}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9a74
                   >
                     <span className="relative z-10">Explore 2040 Services</span>
                     <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform relative z-10" />
@@ -370,37 +261,13 @@ const EnhancedHomepage2026: React.FC = () => {
                     aria-label="View 2040 technology pricing"
                     onClick={() => window.location.href = '/pricing-2040'}
                   >
-<<<<<<< HEAD
-                    <span>View Pricing</span>
-=======
                     <span>Learn More</span>
                     <Play className="w-6 h-6 group-hover:scale-110 transition-transform" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9a74
                   </button>
                 </motion.div>
 
                 {/* Enhanced Stats Section */}
                 <motion.div 
-<<<<<<< HEAD
-                  className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16"
-                  variants={fadeInUp}
-                >
-                  <div className="text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">500+</div>
-                    <div className="text-sm text-gray-400">AI Solutions</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">200+</div>
-                    <div className="text-sm text-gray-400">Quantum Services</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">1000+</div>
-                    <div className="text-sm text-gray-400">Happy Clients</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2">99.9%</div>
-                    <div className="text-sm text-gray-400">Uptime</div>
-=======
                   className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
                   variants={fadeInUp}
                 >
@@ -439,7 +306,6 @@ const EnhancedHomepage2026: React.FC = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6" aria-hidden="true">
                       <path d="m6 9 6 6 6-6"></path>
                     </svg>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9a74
                   </div>
                 </motion.div>
               </motion.div>
@@ -447,15 +313,9 @@ const EnhancedHomepage2026: React.FC = () => {
           </AnimatePresence>
         </section>
 
-<<<<<<< HEAD
-        {/* Enhanced Featured Services Section */}
-        <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
-          <div className="max-w-7xl mx-auto">
-=======
         {/* Featured Services Section with Lazy Loading */}
         <section className="py-20 bg-gradient-to-b from-gray-900 to-black" aria-labelledby="services-heading">
           <div className="container mx-auto px-4">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9a74
             <motion.div 
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
@@ -463,85 +323,6 @@ const EnhancedHomepage2026: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-<<<<<<< HEAD
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Featured <span className="text-cyan-400">Services</span>
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Discover our most innovative and transformative technology solutions
-              </p>
-            </motion.div>
-
-            {/* Enhanced Service Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {featuredServices.map((service, index) => (
-                <motion.div
-                  key={service.title}
-                  className={`relative group cursor-pointer transform transition-all duration-500 hover:scale-105 ${
-                    index === currentServiceIndex ? 'ring-2 ring-cyan-400 ring-opacity-50' : ''
-                  }`}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <div className={`bg-gradient-to-br ${service.color} p-8 rounded-2xl h-full relative overflow-hidden`}>
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
-                    <div className="relative z-10">
-                      <div className="flex items-center justify-between mb-4">
-                        <service.icon className="w-12 h-12 text-white" />
-                        <span className="text-white/80 text-sm font-medium">{service.price}</span>
-                      </div>
-                      <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                      <p className="text-white/90 text-sm mb-4 leading-relaxed">{service.description}</p>
-                      <ul className="space-y-2">
-                        {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center text-white/80 text-sm">
-                            <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="text-2xl font-bold text-white mb-1">{stat.count}</div>
-                  <div className="text-gray-400 text-sm">{stat.name}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Enhanced CTA Section */}
-        <section className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join the future of technology with Zion Tech Group's cutting-edge solutions
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button 
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-black"
-                  onClick={() => window.location.href = '/contact'}
-                >
-                  Start Your Journey
-                </button>
-                <button 
-                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black"
-                  onClick={() => window.location.href = '/demo'}
-                >
-                  Book a Demo
-                </button>
-              </div>
-=======
               <h2 id="services-heading" className="text-4xl lg:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Featured Services
@@ -550,7 +331,6 @@ const EnhancedHomepage2026: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Discover our most popular and innovative solutions that are transforming businesses worldwide
               </p>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9a74
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -576,8 +356,6 @@ const EnhancedHomepage2026: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
         {/* Lazy Loaded Testimonials */}
         <Suspense fallback={
@@ -592,7 +370,6 @@ const EnhancedHomepage2026: React.FC = () => {
         }>
           <LazyTestimonialSection />
         </Suspense>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9a74
       </main>
 
       {/* Enhanced Floating Action Buttons */}

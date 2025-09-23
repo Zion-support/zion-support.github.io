@@ -8,127 +8,6 @@ import {
   BarChart3, Code, Smartphone, Server, Users, Award, 
   TrendingUp, BookOpen, FileText, GraduationCap, Headphones,
   Zap, Globe, Lock, Phone, Mail, MapPin, Star, MessageCircle,
-<<<<<<< HEAD
-  ExternalLink, Home, Briefcase, Info, HelpCircle, Shield as ShieldIcon, Play, Building,
-  Heart, Palette, Target, Sparkles, Download
-} from 'lucide-react';
-
-interface SidebarItem {
-  name: string;
-  href: string;
-  icon: React.ReactNode;
-  description?: string;
-  children?: SidebarItem[];
-  badge?: string;
-  featured?: boolean;
-  category?: string;
-}
-
-const sidebarItems: SidebarItem[] = [
-  {
-    name: 'Home',
-    href: '/',
-    icon: <Home className="w-5 h-5" />,
-    description: 'Welcome to Zion Tech Group'
-  },
-  {
-    name: 'Services',
-    href: '/services',
-    icon: <Rocket className="w-5 h-5" />,
-    description: 'Our comprehensive technology solutions',
-    badge: 'Featured',
-    children: [
-      { name: 'All Services', href: '/services', icon: <Rocket className="w-4 h-4" />, featured: true },
-      { name: 'AI & Machine Learning', href: '/ai-services', icon: <Brain className="w-4 h-4" /> },
-      { name: 'Quantum Technology', href: '/quantum-services', icon: <Atom className="w-4 h-4" /> },
-      { name: 'Cybersecurity', href: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },
-      { name: 'Cloud & Infrastructure', href: '/it-services', icon: <Cloud className="w-4 h-4" /> },
-      { name: 'Business Intelligence', href: '/data-analytics', icon: <BarChart className="w-4 h-4" /> },
-      { name: 'DevOps & Automation', href: '/devops-automation', icon: <Code className="w-4 h-4" /> },
-      { name: 'Space Technology', href: '/space-tech', icon: <RocketIcon className="w-4 h-4" /> }
-    ]
-  },
-  {
-    name: 'Solutions',
-    href: '/solutions',
-    icon: <Target className="w-5 h-5" />,
-    description: 'Industry-specific solutions',
-    children: [
-      { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: <Building className="w-4 h-4" /> },
-      { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: <Heart className="w-4 h-4" /> },
-      { name: 'Financial Solutions', href: '/solutions/financial', icon: <DollarSign className="w-4 h-4" /> },
-      { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', icon: <Cog className="w-4 h-4" /> },
-      { name: 'Retail Solutions', href: '/retail-technology-solutions', icon: <Target className="w-4 h-4" /> },
-      { name: 'Government Solutions', href: '/government-technology-solutions', icon: <Shield className="w-4 h-4" /> }
-    ]
-  },
-  {
-    name: 'Company',
-    href: '/about',
-    icon: <Building className="w-5 h-5" />,
-    description: 'About Zion Tech Group',
-    children: [
-      { name: 'About Us', href: '/about', icon: <Info className="w-4 h-4" /> },
-      { name: 'Our Mission', href: '/mission', icon: <Target className="w-4 h-4" /> },
-      { name: 'Leadership Team', href: '/leadership', icon: <Users className="w-4 h-4" /> },
-      { name: 'Company Culture', href: '/culture', icon: <Heart className="w-4 h-4" /> },
-      { name: 'Our Values', href: '/values', icon: <Star className="w-4 h-4" /> },
-      { name: 'Careers', href: '/careers', icon: <Briefcase className="w-4 h-4" /> },
-      { name: 'News & Press', href: '/press', icon: <FileText className="w-4 h-4" /> }
-    ]
-  },
-  {
-    name: 'Resources',
-    href: '/resources',
-    icon: <BookOpen className="w-5 h-5" />,
-    description: 'Knowledge and resources',
-    children: [
-      { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },
-      { name: 'Blog & Articles', href: '/blog', icon: <BookOpen className="w-4 h-4" /> },
-      { name: 'Case Studies', href: '/case-studies', icon: <BarChart className="w-4 h-4" /> },
-      { name: 'White Papers', href: '/white-papers', icon: <FileText className="w-4 h-4" /> },
-      { name: 'Webinars', href: '/webinars', icon: <Calendar className="w-4 h-4" /> },
-      { name: 'Events', href: '/events-webinars', icon: <Calendar className="w-4 h-4" /> },
-      { name: 'Training', href: '/training', icon: <Lightbulb className="w-4 h-4" /> }
-    ]
-  },
-  {
-    name: 'Support',
-    href: '/support',
-    icon: <MessageCircle className="w-5 h-5" />,
-    description: 'Get help and support',
-    children: [
-      { name: 'Contact Us', href: '/contact', icon: <MessageCircle className="w-4 h-4" /> },
-      { name: 'Get Started', href: '/get-started', icon: <Zap className="w-4 h-4" /> },
-      { name: 'Support Center', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },
-      { name: 'Status Page', href: '/status', icon: <Monitor className="w-4 h-4" /> },
-      { name: 'Developer Resources', href: '/developer-resources', icon: <Code className="w-4 h-4" /> }
-    ]
-  },
-  {
-    name: 'Compliance & Accessibility',
-    href: '/compliance',
-    icon: <Shield className="w-5 h-5" />,
-    description: 'Enterprise compliance and accessibility solutions',
-    children: [
-      { name: 'SOC 2 Compliance', href: '/soc2-compliance-automation', icon: <Shield className="w-4 h-4" /> },
-      { name: 'GDPR Compliance', href: '/privacy-compliance-automation', icon: <Lock className="w-4 h-4" /> },
-      { name: 'Accessibility Tools', href: '/accessibility', icon: <Accessibility className="w-4 h-4" /> },
-      { name: 'Compliance Monitoring', href: '/compliance', icon: <Monitor className="w-4 h-4" /> },
-      { name: 'Privacy Portal', href: '/privacy-request-portal', icon: <Users className="w-4 h-4" /> }
-    ]
-  }
-];
-
-interface EnhancedSidebar2025Props {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClose }) => {
-  const router = useRouter();
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
-=======
   ExternalLink, Home, Briefcase, Info, HelpCircle, Shield as ShieldIcon, Play,
   Sparkles, Target, Palette, Camera, Mic, Speaker, Wifi, Bluetooth, Satellite,
   Telescope, Plane, Moon, Sun, Heart, Handshake, Car, Building, Music, Trees, Leaf, DollarSign, Factory, Battery, Newspaper
@@ -139,7 +18,6 @@ const EnhancedSidebar2025: React.FC<{ isOpen: boolean; onClose: () => void }> = 
   onClose 
 }) => {
   const [expandedSections, setExpandedSections] = useState<string[]>(['revolutionary-2045', 'ai-services']);
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-93a0
   const [searchQuery, setSearchQuery] = useState('');
 
   // Auto-expand current section
@@ -201,9 +79,6 @@ const EnhancedSidebar2025: React.FC<{ isOpen: boolean; onClose: () => void }> = 
         { label: 'AI Manufacturing Optimization', href: '/ai-manufacturing-optimization' },
         { label: 'AI Market Research', href: '/ai-market-research' },
         { label: 'AI Sustainability Platform', href: '/ai-sustainability-platform' },
-<<<<<<< HEAD
-        { label: 'AI Autonomous Vehicle', href: '/ai-autonomous-vehicle-platform' }
-=======
         { label: 'AI Autonomous Vehicle', href: '/ai-autonomous-vehicle' },
         { label: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics' },
         { label: 'AI HR Analytics Platform', href: '/ai-hr-analytics-platform' },
@@ -211,7 +86,6 @@ const EnhancedSidebar2025: React.FC<{ isOpen: boolean; onClose: () => void }> = 
         { label: 'AI Multimodal Fusion', href: '/ai-multimodal-fusion-platform' },
         { label: 'AI Phone Agent', href: '/ai-phone-agent' },
         { label: 'AI Voice Agent Platform', href: '/ai-voice-agent-platform' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-93a0
       ]
     },
     {
@@ -230,10 +104,6 @@ const EnhancedSidebar2025: React.FC<{ isOpen: boolean; onClose: () => void }> = 
         { label: 'Quantum Supply Chain Optimizer', href: '/quantum-logistics-optimization' },
         { label: 'Quantum Financial Trading', href: '/quantum-financial-trading' },
         { label: 'Quantum Internet Security Platform', href: '/quantum-internet-security-platform' },
-<<<<<<< HEAD
-        { label: 'Quantum Storage Solutions', href: '/quantum-storage-solutions-2044' },
-        { label: 'Quantum Workload Orchestration', href: '/quantum-workload-orchestration' }
-=======
         { label: 'Quantum Storage Solutions', href: '/quantum-storage-solutions' },
         { label: 'Quantum Workload Orchestration', href: '/quantum-workload-orchestration' },
         { label: 'Quantum AI Brain Computer Interface', href: '/quantum-ai-brain-computer-interface' },
@@ -265,7 +135,6 @@ const EnhancedSidebar2025: React.FC<{ isOpen: boolean; onClose: () => void }> = 
         { label: 'Space Data Analytics', href: '/space-data-analytics' },
         { label: 'Space Mining Automation Platform', href: '/space-mining-automation-platform' },
         { label: 'Space Resource Intelligence Platform', href: '/space-resource-intelligence-platform' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-93a0
       ]
     },
     {
@@ -296,62 +165,6 @@ const EnhancedSidebar2025: React.FC<{ isOpen: boolean; onClose: () => void }> = 
         { label: 'Data Analytics', href: '/data-analytics', badge: 'Insights' },
         { label: 'DevOps Automation', href: '/automation', badge: 'Efficient' },
         { label: 'Mobile & Web Solutions', href: '/mobile-web-solutions', badge: 'Modern' },
-<<<<<<< HEAD
-        { label: 'Zero Trust Security', href: '/zero-trust-security-platform' },
-        { label: 'Network Management', href: '/autonomous-network-management-2044' },
-        { label: 'Asset Management', href: '/it-asset-discovery-agent' },
-        { label: 'Performance Monitoring', href: '/browser-performance-monitor' }
-      ]
-    },
-    {
-      id: 'business-solutions',
-      title: 'Business Solutions',
-      icon: Target,
-      color: 'from-emerald-500 to-teal-500',
-      items: [
-        { label: 'Business Intelligence', href: '/ai-autonomous-business-intelligence-2044', badge: 'AI-Powered', featured: true },
-        { label: 'Customer Success', href: '/autonomous-customer-success-2044', badge: 'Automated' },
-        { label: 'Sales Automation', href: '/ai-autonomous-sales-platform', badge: 'Intelligent' },
-        { label: 'HR Management', href: '/ai-autonomous-hr-platform', badge: 'Smart' },
-        { label: 'Marketing Automation', href: '/ai-autonomous-marketing-platform', badge: 'AI-Driven' },
-        { label: 'Financial Planning', href: '/ai-financial-planning-platform', badge: 'Predictive' },
-        { label: 'Supply Chain', href: '/ai-supply-chain-optimization', badge: 'Optimized' },
-        { label: 'Content Factory', href: '/ai-autonomous-content-factory', badge: 'Automated' },
-        { label: 'Research Assistant', href: '/ai-autonomous-research-assistant', badge: 'AI-Powered' },
-        { label: 'Robotics Platform', href: '/ai-autonomous-robotics-platform', badge: 'Future' }
-      ]
-    },
-    {
-      id: 'industry-solutions',
-      title: 'Industry Solutions',
-      icon: Building,
-      color: 'from-orange-500 to-red-500',
-      items: [
-        { label: 'Healthcare & Biotech', href: '/solutions/healthcare', badge: 'Life Sciences', featured: true },
-        { label: 'Financial Services', href: '/solutions/financial', badge: 'Fintech' },
-        { label: 'Manufacturing', href: '/solutions/manufacturing', badge: 'Smart Factory' },
-        { label: 'Retail & E-commerce', href: '/solutions/retail', badge: 'Digital Commerce' },
-        { label: 'Education', href: '/solutions/education', badge: 'Edtech' },
-        { label: 'Government', href: '/solutions/government', badge: 'Public Sector' },
-        { label: 'Entertainment & Media', href: '/entertainment-media-solutions', badge: 'Creative Tech' },
-        { label: 'Energy & Utilities', href: '/energy-utilities-solutions', badge: 'Smart Energy' }
-      ]
-    },
-    {
-      id: 'resources',
-      title: 'Resources & Support',
-      icon: BookOpen,
-      color: 'from-yellow-500 to-orange-500',
-      items: [
-        { label: 'Documentation', href: '/docs', badge: 'Guides' },
-        { label: 'API Reference', href: '/api-docs', badge: 'Developer' },
-        { label: 'Blog & Insights', href: '/blog', badge: 'Latest' },
-        { label: 'Webinars', href: '/webinars', badge: 'Learning' },
-        { label: 'Case Studies', href: '/case-studies', badge: 'Success Stories' },
-        { label: 'Training Programs', href: '/training', badge: 'Skill Development' },
-        { label: 'Support Center', href: '/support', badge: 'Help' },
-        { label: 'Status Page', href: '/status', badge: 'System Health' }
-=======
         { label: 'Zero Trust Security', href: '/zero-trust-security' },
         { label: 'Edge Computing', href: '/edge-computing' },
         { label: 'Blockchain Infrastructure', href: '/blockchain-infrastructure' },
@@ -558,28 +371,10 @@ const EnhancedSidebar2025: React.FC<{ isOpen: boolean; onClose: () => void }> = 
         { label: 'Zero Downtime Migration', href: '/zero-downtime-migration' },
         { label: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture' },
         { label: 'Zero Trust Security Platform', href: '/zero-trust-security-platform' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-93a0
       ]
     }
   ];
 
-<<<<<<< HEAD
-  const quickActions = [
-    { label: 'Get Started', href: '/contact', icon: Play, color: 'from-cyan-500 to-purple-500' },
-    { label: 'View Pricing', href: '/pricing', icon: TrendingUp, color: 'from-green-500 to-emerald-500' },
-    { label: 'Schedule Demo', href: '/demo', icon: MessageCircle, color: 'from-blue-500 to-indigo-500' },
-    { label: 'Download Resources', href: '/resources', icon: Download, color: 'from-purple-500 to-pink-500' }
-  ];
-
-  const filteredSections = searchQuery 
-    ? sidebarSections.map(section => ({
-        ...section,
-        items: section.items.filter(item => 
-          item.label.toLowerCase().includes(searchQuery.toLowerCase())
-        )
-      })).filter(section => section.items.length > 0)
-    : sidebarSections;
-=======
   // Filter sections based on search query
   const filteredSections = sidebarSections.filter(section =>
     section.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -587,7 +382,6 @@ const EnhancedSidebar2025: React.FC<{ isOpen: boolean; onClose: () => void }> = 
       item.label.toLowerCase().includes(searchQuery.toLowerCase())
     )
   );
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-93a0
 
   return (
     <AnimatePresence>
@@ -608,22 +402,6 @@ const EnhancedSidebar2025: React.FC<{ isOpen: boolean; onClose: () => void }> = 
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-<<<<<<< HEAD
-            className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-white/10 z-50 overflow-y-auto"
-          >
-            {/* Header */}
-            <div className="sticky top-0 bg-black/80 backdrop-blur-xl border-b border-white/10 p-4">
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center">
-                    <Brain className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="text-lg font-bold text-white">Zion Tech</span>
-                </div>
-                <button
-                  onClick={onClose}
-                  className="p-2 text-white/70 hover:text-white transition-colors duration-300"
-=======
             className="fixed left-0 top-0 h-full w-80 bg-gradient-to-b from-gray-900 via-black to-gray-900 border-r border-cyan-400/20 shadow-2xl z-50 overflow-y-auto"
           >
             {/* Header */}
@@ -641,7 +419,6 @@ const EnhancedSidebar2025: React.FC<{ isOpen: boolean; onClose: () => void }> = 
                   onClick={onClose}
                   className="p-2 text-gray-400 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200"
                   aria-label="Close sidebar"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-93a0
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -655,66 +432,11 @@ const EnhancedSidebar2025: React.FC<{ isOpen: boolean; onClose: () => void }> = 
                   placeholder="Search navigation..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-<<<<<<< HEAD
-                  className="w-full px-4 py-2 pl-10 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-sm"
-=======
                   className="w-full pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-300"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-93a0
                 />
               </div>
             </div>
 
-<<<<<<< HEAD
-            {/* Content */}
-            <div className="p-4 space-y-6">
-              {/* Quick Actions */}
-              <div>
-                <h3 className="text-sm font-semibold text-white/60 uppercase tracking-wider mb-3">
-                  Quick Actions
-                </h3>
-                <div className="grid grid-cols-2 gap-2">
-                  {quickActions.map((action) => (
-                    <Link
-                      key={action.label}
-                      href={action.href}
-                      className="p-3 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-all duration-300 group"
-                      onClick={onClose}
-                    >
-                      <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${action.color} flex items-center justify-center mb-2 group-hover:scale-110 transition-transform duration-300`}>
-                        <action.icon className="w-4 h-4 text-white" />
-                      </div>
-                      <span className="text-xs text-white font-medium">{action.label}</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* Navigation Sections */}
-              <div className="space-y-4">
-                <h3 className="text-sm font-semibold text-white/60 uppercase tracking-wider">
-                  Services & Solutions
-                </h3>
-                
-                {filteredSections.map((section) => (
-                  <div key={section.id} className="bg-white/5 border border-white/10 rounded-lg overflow-hidden">
-                    <button
-                      onClick={() => toggleSection(section.id)}
-                      className="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-white/5 transition-colors duration-300"
-                    >
-                      <div className="flex items-center space-x-3">
-                        <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${section.color} flex items-center justify-center`}>
-                          <section.icon className="w-4 h-4 text-white" />
-                        </div>
-                        <span className="text-white font-medium">{section.title}</span>
-                      </div>
-                      <ChevronDown 
-                        className={`w-4 h-4 text-white/60 transition-transform duration-300 ${
-                          expandedSections.includes(section.id) ? 'rotate-180' : ''
-                        }`}
-                      />
-                    </button>
-
-=======
             {/* Navigation Sections */}
             <div className="p-4 space-y-2">
               {filteredSections.map((section) => (
@@ -746,65 +468,11 @@ const EnhancedSidebar2025: React.FC<{ isOpen: boolean; onClose: () => void }> = 
 
                   {/* Section Items */}
                   <AnimatePresence>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-93a0
                     {expandedSections.includes(section.id) && (
                       <motion.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-<<<<<<< HEAD
-                        transition={{ duration: 0.3 }}
-                        className="border-t border-white/10"
-                      >
-                        <div className="p-2 space-y-1">
-                          {section.items.map((item) => (
-                            <Link
-                              key={item.href}
-                              href={item.href}
-                              className="flex items-center justify-between px-3 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 rounded-md transition-all duration-300 group"
-                              onClick={onClose}
-                            >
-                              <span className="truncate">{item.label}</span>
-                              <div className="flex items-center space-x-2">
-                                {item.featured && (
-                                  <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-full">
-                                    Hot
-                                  </span>
-                                )}
-                                {item.badge && !item.featured && (
-                                  <span className="px-2 py-1 text-xs font-medium bg-white/10 text-white/60 rounded-full">
-                                    {item.badge}
-                                  </span>
-                                )}
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
-                      </motion.div>
-                    )}
-                  </div>
-                ))}
-              </div>
-
-              {/* Contact Info */}
-              <div className="pt-4 border-t border-white/10">
-                <h3 className="text-sm font-semibold text-white/60 uppercase tracking-wider mb-3">
-                  Contact Us
-                </h3>
-                <div className="space-y-2 text-sm text-white/70">
-                  <div className="flex items-center space-x-2">
-                    <Phone className="w-4 h-4 text-cyan-400" />
-                    <span>+1 302 464 0950</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Mail className="w-4 h-4 text-cyan-400" />
-                    <span>kleber@ziontechgroup.com</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <MapPin className="w-4 h-4 text-cyan-400" />
-                    <span className="text-xs">Middletown, DE 19709</span>
-                  </div>
-=======
                         transition={{ duration: 0.2 }}
                         className="ml-11 space-y-1 overflow-hidden"
                       >
@@ -849,7 +517,6 @@ const EnhancedSidebar2025: React.FC<{ isOpen: boolean; onClose: () => void }> = 
                   <Link href="/support" onClick={onClose} className="text-cyan-400 hover:text-cyan-300 text-sm">
                     Support
                   </Link>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-93a0
                 </div>
               </div>
             </div>

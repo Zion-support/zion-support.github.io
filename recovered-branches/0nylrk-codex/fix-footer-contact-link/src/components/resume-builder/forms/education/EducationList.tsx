@@ -8,11 +8,7 @@ interface EducationListProps {
   onDelete: (id: string) => void;
 }
 
-<<<<<<< HEAD
-export function EducationList({ educationEntriesonEditonDelete }: EducationListProps) {
-=======
 export function EducationList({ educationEntries, onEdit, onDelete }: EducationListProps) {
->>>>>>> origin/auto/autonomy-17186719616
   if (!educationEntries || educationEntries.length === 0) {
     return null;
   }

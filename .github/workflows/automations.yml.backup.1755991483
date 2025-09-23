@@ -1,21 +1,12 @@
-<<<<<<< HEAD
-name: Autonomous Automations
-=======
 name: Cloud Automations
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
 
 on:
   workflow_dispatch:
   schedule:
-<<<<<<< HEAD
-    - cron: '0 */6 * * *'
-  workflow_dispatch: {}
-=======
     - cron: '*/30 * * * *' # every 30 minutes
 
 permissions:
   contents: write
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
 
 permissions:
   contents: write
@@ -32,18 +23,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-<<<<<<< HEAD
-      - name: Install dependencies
-        run: npm ci
-      - name: Run automations
-        run: node automation/run-all.cjs
-      - name: Commit and push changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          if git diff --cached --quiet; then
-=======
           cache: 'npm'
       - name: Install deps
         run: npm ci
@@ -62,7 +41,6 @@ jobs:
             git commit -m "chore(automation): update AI trends and talent summaries [skip ci]"
             git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
           else
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
             echo "No changes to commit"
           else
             git commit -m "chore(automation): update reports [skip ci]"

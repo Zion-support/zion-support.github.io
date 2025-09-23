@@ -1,17 +1,5 @@
 #!/usr/bin/env node
 
-<<<<<<< HEAD
-/**
- * Site Link Orchestrator
- * Placeholder script to prevent workflow failures
- */
-
-console.log('Site link orchestrator placeholder - no actual link processing implemented');
-console.log('This script is a placeholder to prevent workflow failures');
-
-// Exit successfully
-process.exit(0);
-=======
 const { spawnSync } = require('child_process');
 const path = require('path');
 
@@ -37,4 +25,3 @@ function main() {
 }
 
 if (require.main === module) main();
->>>>>>> origin/auto/autonomy-17186719616

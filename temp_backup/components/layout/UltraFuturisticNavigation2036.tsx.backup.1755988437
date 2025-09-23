@@ -13,15 +13,8 @@ import {
   MessageCircle,
   Calculator,
   Play,
-<<<<<<< HEAD
-  Users,
-  Brain,
-  Atom,
-  Rocket,
-=======
   DollarSign,
   Shield,
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4035
   Zap
 } from 'lucide-react';
 import Link from 'next/link';
@@ -450,11 +443,6 @@ const navigationItems: NavigationItem[] = [
   }
 ];
 
-<<<<<<< HEAD
-export default function UltraFuturisticNavigation2036({ onMenuToggle, isMenuOpen }: UltraFuturisticNavigation2036Props) {
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-=======
 interface UltraFuturisticNavigation2036Props {
   onMenuToggle: () => void;
   'aria-expanded': boolean;
@@ -462,7 +450,6 @@ interface UltraFuturisticNavigation2036Props {
 
 export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expanded': ariaExpanded }: UltraFuturisticNavigation2036Props) {
   const [isOpen, setIsOpen] = useState(false);
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4035
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -749,12 +736,6 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
 
               {/* Mobile Menu Button */}
               <button
-<<<<<<< HEAD
-                className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 rounded-lg"
-                onClick={handleMobileMenuToggle}
-                aria-label="Toggle mobile menu"
-                aria-expanded={mobileMenuOpen}
-=======
                 className="lg:hidden p-2 text-white hover:text-cyan-400 transition-colors"
                 onClick={() => {
                   setIsOpen(!isOpen);
@@ -762,7 +743,6 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
                 }}
                 aria-label="Toggle mobile menu"
                 aria-expanded={ariaExpanded}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4035
               >
                 {mobileMenuOpen ? (
                   <X className="w-6 h-6" />

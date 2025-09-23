@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-
-export default function ContactPage() {
-  const [formData, setFormData] = useState({
-=======
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import { Phone, Mail, MapPin, Clock, MessageSquare, Send, Star, Award, Zap, Users } from 'lucide-react';
@@ -754,22 +746,10 @@ const ContactPage: React.FC = () => {
                     </div>
                   </div>
 
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-f6bf
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                       Name *
                     </label>
-<<<<<<< HEAD
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 bg-cursor-light border border-cursor-lighter rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cursor-blue focus:border-transparent transition-all duration-200"
-                      placeholder="Your full name"
-=======
                     <select
                       id="service"
                       name="service"
@@ -799,7 +779,6 @@ const ContactPage: React.FC = () => {
                       rows={5}
                       className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
                       placeholder="Tell us about your project or inquiry..."
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-f6bf
                     />
                   </div>
                   <div>
@@ -857,83 +836,6 @@ const ContactPage: React.FC = () => {
               </form>
             </div>
 
-<<<<<<< HEAD
-            {/* Office Locations */}
-            <div>
-              <div className="mb-8">
-                <h2 className="text-responsive-lg font-bold mb-6 gradient-text text-shadow">
-                  Our Offices
-                </h2>
-                <p className="text-gray-400 leading-relaxed">
-                  Visit us at one of our global locations or schedule a virtual meeting.
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                {officeLocations.map((location, index) => (
-                  <Card
-                    key={index}
-                    className="card-hover group border-gradient-blue"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <div className="flex items-start space-x-4">
-                      <div className="relative">
-                        <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-xl bg-gradient-to-br ${location.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                          {location.icon}
-                        </div>
-                        <div className={`absolute -inset-1 bg-gradient-to-r from-transparent via-${location.gradient} to-transparent rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-lg font-semibold text-white mb-1">
-                          {location.city}
-                        </h3>
-                        <p className="text-gray-400 text-sm mb-2">
-                          {location.country}
-                        </p>
-                        <p className="text-gray-300 text-sm leading-relaxed">
-                          {location.address}
-                        </p>
-                      </div>
-                    </div>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden">
-        <div className="absolute inset-0 bg-dots opacity-10" />
-        <div className="container-cursor text-center relative z-10">
-          <h2 className="text-responsive-lg font-bold text-white mb-8 text-shadow-lg">
-            Ready to Start Your Project?
-          </h2>
-          <p className="text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Let&apos;s discuss how we can help bring your vision to life with cutting-edge technology solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button
-              href="/services"
-              size="lg"
-              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow"
-            >
-              Explore Services
-            </Button>
-            <Button
-              href="/case-studies"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl"
-            >
-              View Case Studies
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-=======
                   <motion.button
                     type="submit"
                     disabled={isSubmitting}
@@ -1005,6 +907,5 @@ const ContactPage: React.FC = () => {
         </section>
       </div>
     </Layout>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-f6bf
   );
 }

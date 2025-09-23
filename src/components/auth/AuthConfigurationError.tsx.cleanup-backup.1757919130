@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',
-import Link from 'next/link',
-import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import { Alert, AlertDescription } from '@/components/ui/alert',
-
-interface AuthConfigurationErrorProps {
-  onRetry?: () => void,
-  showSetupButton?: boolean,
-=======
 import React from 'react';
 import Link from 'next/link';
 import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
@@ -18,25 +7,16 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 interface AuthConfigurationErrorProps {
   onRetry?: () => void;
   showSetupButton?: boolean;
->>>>>>> origin/auto/autonomy-17186719616
 }
 
 export function AuthConfigurationError({ onRetry, showSetupButton = true }: AuthConfigurationErrorProps) {
   const handleRefresh = () => {
     if (onRetry) {
-<<<<<<< HEAD
-      onRetry(),
-    } else {
-      window.location.reload(),
-    }
-  },
-=======
       onRetry();
     } else {
       window.location.reload();
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4">
@@ -59,24 +39,11 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
             <AlertTriangle className="h-4 w-4" />
             <AlertDescription>
               <strong>Critical Issue #1:</strong> Auth0 environment variables are not configured. 
-<<<<<<< HEAD
-
-              New users cannot sign up until this is resolved.
-            </AlertDescription>
-          </Alert>
-          {/* Technical Details */}
-          <div className='bg-gray-50 rounded-lg p-4 mb-6'>
-            <h3 className='font-semibold text-gray-900 mb-2'>
-              Missing Configuration:
-            </h3>
-            <ul className='text-sm text-gray-700 space-y-1'>              <li>• AUTH0_SECRET</li>          <div className="bg-gray-50 rounded-lg p-4 mb-6">
-=======
               New users cannot sign up until this is resolved.
             </AlertDescription>
           </Alert>
 
           {/* Technical Details */}
->>>>>>> origin/auto/autonomy-17186719616
           <div className="bg-gray-50 rounded-lg p-4 mb-6">
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>
             <ul className="text-sm text-gray-700 space-y-1">
@@ -92,11 +59,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
             {showSetupButton && (
               <Button 
-<<<<<<< HEAD
-                onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
-=======
                 onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md', '_blank')}
->>>>>>> origin/auto/autonomy-17186719616
                 className="bg-blue-600 hover:bg-blue-700 text-white flex-1"
               >
                 <Settings className="w-4 h-4 mr-2" />
@@ -151,10 +114,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
                   Copy credentials to <code className="bg-gray-100 px-1 rounded">.env.local</code> file
                 </div>
               </li>
-<<<<<<< HEAD
-=======
               
->>>>>>> origin/auto/autonomy-17186719616
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">4</span>
                 <div>
@@ -167,11 +127,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
           </div>
         </div>
 
-<<<<<<< HEAD
-
-=======
         {/* Alternative Actions Card */}
->>>>>>> origin/auto/autonomy-17186719616
         <div className="bg-blue-50 rounded-xl border border-blue-200 p-6">
           <h3 className="font-semibold text-blue-900 mb-3">Alternative Actions:</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -179,20 +135,12 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               href="/marketplace" 
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
             >
-<<<<<<< HEAD
-              <span>Browse Marketplace</span>            >
-=======
->>>>>>> origin/auto/autonomy-17186719616
               <span>Browse Marketplace</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
             
             <Link 
               href="/talent" 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
             >
               <span>View Talent Pool</span>
@@ -219,15 +167,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
 
         {/* Setup Script Info */}
         {showSetupButton && (
-<<<<<<< HEAD
-
-          <div className='mt-6 text-center'>
-            <div className='bg-green-50 rounded-lg border border-green-200 p-4'>
-              <div className='flex items-center justify-center gap-2 text-green-700 mb-2'>
-                <CheckCircle className='w-5 h-5' />
-                <span className='font-semibold'>Automated Setup Available</span>
-=======
->>>>>>> origin/auto/autonomy-17186719616
           <div className="mt-6 text-center">
             <div className="bg-green-50 rounded-lg border border-green-200 p-4">
               <div className="flex items-center justify-center gap-2 text-green-700 mb-2">
@@ -245,28 +184,12 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
         )}
 
         {/* Footer */}
-<<<<<<< HEAD
-
-
-
-
-        <div className="mt-6 text-center text-sm text-gray-500">
-          <p>
-            For detailed instructions, see{' '}
-
-            >
-
-            <button 
-              onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
-              className="text-blue-600 hover: underline"
-=======
         <div className="mt-6 text-center text-sm text-gray-500">
           <p>
             For detailed instructions, see{' '}
             <button 
               onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md', '_blank')}
               className="text-blue-600 hover:underline"
->>>>>>> origin/auto/autonomy-17186719616
             >
               AUTH0_SETUP_GUIDE_ISSUE_1.md
             </button>
@@ -274,14 +197,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  )
-}
-
-export default AuthConfigurationError, 
-=======
   );
 }
 
 export default AuthConfigurationError; 
->>>>>>> origin/auto/autonomy-17186719616

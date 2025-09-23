@@ -4,13 +4,9 @@ import { checkSignupPatterns } from '@/services/fraud/signupCheck';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
 <<<<<<< HEAD
-import { apiClient } from '@/utils/apiClient';
-=======
-<<<<<<< HEAD
 import api from '@/lib/api';
 =======
 import { apiClient } from '@/utils/apiClient';
->>>>>>> origin/8arrdw-codex/centralize-fetch-error-handling
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 export function useFraudPreventionSignup() {
@@ -21,18 +17,12 @@ export function useFraudPreventionSignup() {
   const getIP = async (): Promise<string | undefined> => {
     try {
 <<<<<<< HEAD
-      const response = await apiClient('https://api.ipify.org?format=json');
-      const data = await response.json();
-      return data.ip;
-=======
-<<<<<<< HEAD
       const response = await api.get('https://api.ipify.org?format=json');
       return response.data.ip;
 =======
       const response = await apiClient('https://api.ipify.org?format=json');
       const data = await response.json();
       return data.ip;
->>>>>>> origin/8arrdw-codex/centralize-fetch-error-handling
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     } catch (error) {
       logErrorToProduction('Error getting IP:', { data: error });

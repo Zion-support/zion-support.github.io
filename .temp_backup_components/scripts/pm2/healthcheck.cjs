@@ -175,12 +175,8 @@ class HealthChecker {
 
   calculateOverallHealth(diskUsage, memoryUsage, pm2Status, buildStatus) {
     let score = 100;
-<<<<<<< HEAD
-
-=======
     const issues = [];
     
->>>>>>> cursor/automate-test-improve-and-merge-code-85f4
     // Check disk space
     if (diskUsage.percentage) {
       const diskPercent = parseInt(diskUsage.percentage);

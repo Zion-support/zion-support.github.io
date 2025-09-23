@@ -1,17 +1,11 @@
 import React from "react";
 <<<<<<< HEAD
-import { Link, useLocation } from "react-router-dom";
-import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle, ShoppingCart } from "lucide-react";
-import { useCart } from "@/context/CartContext";
-=======
-<<<<<<< HEAD
 import { useRouter } from "next/router";
 import Link from "next/link";
 =======
 import { Link, useLocation } from "react-router-dom";
 import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle, ShoppingCart } from "lucide-react";
 import { useCart } from "@/context/CartContext";
->>>>>>> origin/8aozst-codex/implement-cart-functionality-with-react-context
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
@@ -19,13 +13,6 @@ import { useWishlist } from "@/hooks/useWishlist";
 import { useCart } from '@/context/CartContext';
 import { logWarn } from '@/utils/productionLogger';
 import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react';
-
-
-
-
-
-
-
 
 interface MobileBottomNavProps {
   unreadCount?: number;
@@ -35,10 +22,6 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const router = useRouter();
   const { user } = useAuth();
   const isAuthenticated = !!user;
-<<<<<<< HEAD
-  const { items } = useCart();
-  const cartCount = items.reduce((sum, i) => sum + i.quantity, 0);
-=======
 <<<<<<< HEAD
   const { items: wishlistItems } = useWishlist(); // Renamed to avoid conflict
   const favoritesCount = wishlistItems.length;
@@ -53,7 +36,6 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 =======
   const { items } = useCart();
   const cartCount = items.reduce((sum, i) => sum + i.quantity, 0);
->>>>>>> origin/8aozst-codex/implement-cart-functionality-with-react-context
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
   const navItems = [

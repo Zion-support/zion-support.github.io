@@ -88,13 +88,9 @@ body {
     --radius: 0.5rem;
 
 <<<<<<< HEAD
-    --sidebar-background: 0 0% 12%;
-=======
-<<<<<<< HEAD
     --sidebar-background: 0 0% 10%;
 =======
     --sidebar-background: 0 0% 12%;
->>>>>>> origin/a7jyue-codex/disable-theme-toggle-and-set-default-dark-theme
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
     --sidebar-foreground: 0 0% 100%;
@@ -141,8 +137,6 @@ body {
     --input: 0 0% 68%;
     --ring: 146 70% 40%;
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
     --sidebar-background: 0 0% 10%;
     --sidebar-foreground: 0 0% 100%;
     --sidebar-primary: 146 70% 40%;
@@ -151,7 +145,6 @@ body {
     --sidebar-accent-foreground: 0 0% 7%;
     --sidebar-border: 0 0% 68%;
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     --sidebar-background: 0 0% 12%;
     --sidebar-foreground: 0 0% 100%;
     --sidebar-primary: 146 70% 40%;
@@ -159,9 +152,6 @@ body {
     --sidebar-accent: 0 0% 20%;
     --sidebar-accent-foreground: 0 0% 100%;
     --sidebar-border: 0 0% 20%;
-<<<<<<< HEAD
-=======
->>>>>>> origin/a7jyue-codex/disable-theme-toggle-and-set-default-dark-theme
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     --sidebar-ring: 146 70% 40%;
   }
@@ -595,13 +585,9 @@ button,
 
   ::-webkit-scrollbar-thumb:hover {
 <<<<<<< HEAD
-    background: theme('colors.green.600');
-=======
-<<<<<<< HEAD
     background: theme('colors.green.500');
 =======
     background: theme('colors.green.600');
->>>>>>> origin/a7jyue-codex/disable-theme-toggle-and-set-default-dark-theme
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   }
 
@@ -655,10 +641,6 @@ button,
     animation: slide-up 0.3s ease-out;
   }
 <<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
 =======
 }
->>>>>>> origin/a7jyue-codex/disable-theme-toggle-and-set-default-dark-theme
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

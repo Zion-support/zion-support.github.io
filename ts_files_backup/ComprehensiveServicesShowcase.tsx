@@ -1,53 +1,14 @@
-<<<<<<< HEAD
-"use client";
-import React{ useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  StarClockUsersTrendingUpCheckCircleExternalLink
-  ChevronRightShieldZapGlobeRocketBrainAtom,
-  SearchFilterGridListArrowRightAwardTarget
-=======
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, 
   ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom,
   Search, Filter, Grid, List, ArrowRight, Award, Target
->>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
 
 export default function ComprehensiveServicesShowcase() {
-<<<<<<< HEAD
-  const [selectedCategorysetSelectedCategory] = useState('all');
-  const [selectedServicesetSelectedService] = useState<string | null>(null);
-  const [searchTermsetSearchTerm] = useState('');
-  const [viewModesetViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBysetSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity');
-
-  // Combine all services
-  const allServices = [...comprehensiveMicroSaasServices...specializedEmergingTechServices];
-
-  const categories = [
-    { id: ''all', 'name: 'All 'Services', 'icon: '🚀'count: allServices.length },
-    { id: 'AI & Machine 'Learning', 'name: 'AI & 'ML', 'icon: '🧠'count: allServices.filter(s => s.category === 'AI & Machine Learning').length },
-    { id: 'Healthcare 'AI', 'name: ''Healthcare', 'icon: '🏥'count: allServices.filter(s => s.category === 'Healthcare AI').length },
-    { id: 'Fintech 'AI', 'name: ''Fintech', 'icon: '💰'count: allServices.filter(s => s.category === 'Fintech AI').length },
-    { id: ''Cybersecurity', 'name: ''Security', 'icon: '🛡️'count: allServices.filter(s => s.category === 'Cybersecurity').length },
-    { id: 'IoT & Smart 'Cities', 'name: 'Smart 'Cities', 'icon: '🏙️'count: allServices.filter(s => s.category === 'IoT & Smart Cities').length },
-    { id: 'Blockchain & 'DeFi', 'name: ''Blockchain', 'icon: '🔗'count: allServices.filter(s => s.category === 'Blockchain & DeFi').length },
-    { id: 'Quantum 'Computing', 'name: ''Quantum', 'icon: '⚛️'count: allServices.filter(s => s.category === 'Quantum Computing').length },
-    { id: 'Space 'Technology', 'name: 'Space 'Tech', 'icon: '🚀'count: allServices.filter(s => s.category === 'Space Technology').length },
-    { id: 'Autonomous 'Systems', 'name: ''Autonomous', 'icon: '🤖'count: allServices.filter(s => s.category === 'Autonomous Systems').length },
-    { id: 'AR/VR & 'Metaverse', 'name: 'AR/'VR', 'icon: '🥽'count: allServices.filter(s => s.category === 'AR/VR & Metaverse').length },
-    { id: '5G/6G 'Networks', 'name: '5G/6'G', 'icon: '📡'count: allServices.filter(s => s.category === '5G/6G Networks').length },
-    { id: 'Biotechnology 'AI', 'name: ''Biotech', 'icon: '🧬'count: allServices.filter(s => s.category === 'Biotechnology AI').length },
-    { id: 'Renewable 'Energy', 'name: ''Energy', 'icon: '⚡'count: allServices.filter(s => s.category === 'Renewable Energy').length },
-    { id: 'Edge 'Computing', 'name: ''Edge', 'icon: '🌐'count: allServices.filter(s => s.category === 'Edge Computing').length },
-    { id: 'Quantum 'Internet', 'name: 'Q-'Internet', 'icon: '🌍'count: allServices.filter(s => s.category === 'Quantum Internet').length },
-    { id: 'Neuromorphic 'Computing', 'name: ''Neuro', 'icon: '🧠'count: allServices.filter(s => s.category === 'Neuromorphic Computing').length }
-=======
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
@@ -75,7 +36,6 @@ export default function ComprehensiveServicesShowcase() {
     { id: 'Edge Computing', name: 'Edge', icon: '🌐', count: allServices.filter(s => s.category === 'Edge Computing').length },
     { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍', count: allServices.filter(s => s.category === 'Quantum Internet').length },
     { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠', count: allServices.filter(s => s.category === 'Neuromorphic Computing').length }
->>>>>>> origin/auto/autonomy-17186719616
   ];
 
   // Filter and sort services
@@ -87,20 +47,12 @@ export default function ComprehensiveServicesShowcase() {
                            service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
       return matchesCategory && matchesSearch;
     })
-<<<<<<< HEAD
-    .sort((ab) => {
-=======
     .sort((a, b) => {
->>>>>>> origin/auto/autonomy-17186719616
       switch (sortBy) {
         case 'popularity':
           return b.popular ? 1 : -1;
         case 'price':
-<<<<<<< HEAD
-          return parseFloat(a.price.replace('$', ').replace(',', ')) - parseFloat(b.price.replace('$', ').replace(',', '));
-=======
           return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
->>>>>>> origin/auto/autonomy-17186719616
         case 'rating':
           return b.rating - a.rating;
         case 'newest':
@@ -116,11 +68,7 @@ export default function ComprehensiveServicesShowcase() {
   };
 
   const formatPrice = (price: string) => {
-<<<<<<< HEAD
-    return price.replace('$', ').replace(',', ');
-=======
     return price.replace('$', '').replace(',', '');
->>>>>>> origin/auto/autonomy-17186719616
   };
 
   return (
@@ -263,21 +211,13 @@ export default function ComprehensiveServicesShowcase() {
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <AnimatePresence>
-<<<<<<< HEAD
-              {filteredServices.map((serviceindex) => (
-=======
               {filteredServices.map((service, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.6delay: index * 0.1 }}
-=======
                   transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                   className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                 >
                   {/* Popular Badge */}
@@ -303,11 +243,7 @@ export default function ComprehensiveServicesShowcase() {
 
                     {/* Features */}
                     <div className="space-y-2 mb-6">
-<<<<<<< HEAD
-                      {service.features.slice(03).map((featureidx) => (
-=======
                       {service.features.slice(0, 3).map((feature, idx) => (
->>>>>>> origin/auto/autonomy-17186719616
                         <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
                           <CheckCircle className="w-4 h-4 text-green-400" />
                           {feature}
@@ -349,15 +285,6 @@ export default function ComprehensiveServicesShowcase() {
         ) : (
           <div className="space-y-6">
             <AnimatePresence>
-<<<<<<< HEAD
-              {filteredServices.map((serviceindex) => (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0x: -30 }}
-                  animate={{ opacity: 1x: 0 }}
-                  exit={{ opacity: 0x: 30 }}
-                  transition={{ duration: 0.6delay: index * 0.1 }}
-=======
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
@@ -365,7 +292,6 @@ export default function ComprehensiveServicesShowcase() {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 30 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                   className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6"
                 >
                   <div className="flex flex-col lg:flex-row gap-6">
@@ -395,11 +321,7 @@ export default function ComprehensiveServicesShowcase() {
 
                       {/* Features Grid */}
                       <div className="grid grid-cols-2 gap-2 mb-4">
-<<<<<<< HEAD
-                        {service.features.slice(06).map((featureidx) => (
-=======
                         {service.features.slice(0, 6).map((feature, idx) => (
->>>>>>> origin/auto/autonomy-17186719616
                           <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
                             <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                             <span className="truncate">{feature}</span>
@@ -407,12 +329,6 @@ export default function ComprehensiveServicesShowcase() {
                         ))}
                       </div>
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
                       {/* Stats Row */}
                       <div className="flex items-center gap-6 text-sm text-white/60">
                         <div className="flex items-center gap-2">
@@ -457,10 +373,6 @@ export default function ComprehensiveServicesShowcase() {
           </div>
         )}
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
         {/* No Results */}
         {filteredServices.length === 0 && (
           <motion.div

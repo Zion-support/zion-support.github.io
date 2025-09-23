@@ -458,8 +458,6 @@ const Homepage2025: React.FC = () => {
               <MessageCircle className="w-8 h-8" />
             </Link>
           </motion.div>
-<<<<<<< HEAD
-=======
 
           {/* Quick Stats */}
           <motion.div
@@ -737,7 +735,6 @@ const Homepage2025: React.FC = () => {
               </a>
             </motion.div>
           </>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-50a7
         )}
       </AnimatePresence>
     </Layout>

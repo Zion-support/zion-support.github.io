@@ -494,41 +494,6 @@ const navigationItems: NavigationItem[] = [
   }
 ];
 
-<<<<<<< HEAD
-// Quick action buttons
-const quickActions = [
-  {
-    label: 'Get Started',
-    href: '/get-started',
-    icon: <Zap className="w-4 h-4" />,
-    variant: 'primary' as const
-  },
-  {
-    label: 'Demo',
-    href: '/demo',
-    icon: <Play className="w-4 h-4" />,
-    variant: 'secondary' as const
-  },
-  {
-    label: 'Pricing',
-    href: '/pricing',
-    icon: <DollarSign className="w-4 h-4" />,
-    variant: 'outline' as const
-  }
-];
-
-interface UltraFuturisticNavigation2045Props {
-  className?: string;
-}
-
-const UltraFuturisticNavigation2045: React.FC<UltraFuturisticNavigation2045Props> = ({ 
-  className = '' 
-}) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-=======
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 =======
@@ -546,7 +511,6 @@ const UltraFuturisticNavigation2045: React.FC<UltraFuturisticNavigation2045Props
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const isMobileMenuOpen = sidebarOpen;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e49e
   const router = useRouter();
   const navRef = useRef<HTMLElement>(null);
   const searchRef = useRef<HTMLDivElement>(null);
@@ -572,10 +536,6 @@ const UltraFuturisticNavigation2045: React.FC<UltraFuturisticNavigation2045Props
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-<<<<<<< HEAD
-  // Handle search
-  const handleSearch = useCallback((e: React.FormEvent) => {
-=======
   // Handle click outside mobile menu
   React.useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -609,7 +569,6 @@ const UltraFuturisticNavigation2045: React.FC<UltraFuturisticNavigation2045Props
   }, [isSearchOpen]);
 
   const handleSearchSubmit = useCallback((e: React.FormEvent) => {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e49e
     e.preventDefault();
     if (searchQuery.trim()) {
       router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
@@ -618,20 +577,9 @@ const UltraFuturisticNavigation2045: React.FC<UltraFuturisticNavigation2045Props
     }
   }, [searchQuery, router]);
 
-<<<<<<< HEAD
-  // Handle navigation
-  const handleNavigation = useCallback((href: string) => {
-    router.push(href);
-    setIsOpen(false);
-    setActiveDropdown(null);
-  const toggleMobileMenu = useCallback(() => {
-    setIsMobileMenuOpen(prev => !prev);
-  }, []);
-=======
   const handleMobileMenuToggle = useCallback(() => {
     setSidebarOpen(!sidebarOpen);
   }, [sidebarOpen, setSidebarOpen]);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e49e
 
   const toggleDropdown = useCallback((dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);

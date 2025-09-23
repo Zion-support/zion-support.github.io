@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import * as React from "react"
 import { PanelLeft } from 'lucide-react'
 import { Button } from "@/components/ui/button"
@@ -14,7 +12,6 @@ export const SidebarTrigger = React.forwardRef<
   const { toggleSidebar } = useSidebar()
 
   return (
->>>>>>> origin/auto/autonomy-17186719616
     <Button
       ref={ref}
       data-sidebar="trigger"

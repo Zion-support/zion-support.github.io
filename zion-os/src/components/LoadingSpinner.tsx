@@ -1,112 +1,66 @@
-<<<<<<< HEAD
+'use client';
 
-"use client";
-interface LoadingSpinnerProps {size?: "small" | "medium" | "large";
-  className?: string;
-}
-export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinnerProps) {const sizeClasses = {;
-    small: "w-4 h-4";
-    medium: "w-8 h-8";
-    large: "w-12 h-12";
-  }
-"use client",;
-interface LoadingSpinnerProps {;
-  size?: "small" | "medium" | "large",;
-  className?: string;
-}
-;
-export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinnerProps) {;
-  const sizeClasses = {;
-    small: "w-4 h-4",;
-    medium: "w-8 h-8",;
-    large: "w-12 h-12";
-  };
-  return (;
-    <div className={`${sizeClasses[size]} ${className}`} role="status" aria-label="Loading">;
-
-"use client",
-interface LoadingSpinnerProps {
-  size?: "small" | "medium" | "large",
-  class_name?: string;
-"use client",;
-interface LoadingSpinnerProps {;
-  size?: "small" | "medium" | "large",;
-  className?: string;
-}
-;
-export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinnerProps) {;
-  const sizeClasses = {;
-    small: "w-4 h-4",;
-    medium: "w-8 h-8",;
-    large: "w-12 h-12";
-  };
-
-  return (;
-    <div className={`${sizeClasses[size]} ${className}`} role="status" aria-label="Loading">;
-      <svg;
-        className="animate - spin text - blue - 500";
-        xmlns="http: //www.w3.org / 2000 / svg";
-        fill="none";
-        view_box="0 0 24 24";
-        aria - hidden="true";
-      >;
-        <circle;
-          className="opacity - 25";
-          cx="12";
-          cy="12";
-          r="10";
-          stroke="current_color";
-          stroke_width="4";
-        />;
-        <path;
-          className="opacity - 75";
-          fill="current_color";
-          d="M4 12a8 8 0 018 - 8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3 - 2.647z";
-        />;
-      </svg>;
-      <span className="sr - only">Loading...</span>;
-    </div>);
-}
-=======
-"use client";
+import React from 'react';
 
 interface LoadingSpinnerProps {
-  size?: "small" | "medium" | "large";
-  className?: string;
+  size?: 'sm' | 'md' | 'lg';
+  color?: 'primary' | 'secondary' | 'white';
+  text?: string;
 }
 
-export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinnerProps) {
+export function LoadingSpinner({ size = "md", color = "primary", text }: LoadingSpinnerProps) {
   const sizeClasses = {
-    small: "w-4 h-4",
-    medium: "w-8 h-8",
-    large: "w-12 h-12"
+    sm: "w-4 h-4",
+    md: "w-8 h-8",
+    lg: "w-12 h-12"
+  };
+
+  const colorClasses = {
+    primary: "text-blue-600",
+    secondary: "text-gray-600",
+    white: "text-white"
   };
 
   return (
-    <div className={`${sizeClasses[size]} ${className}`} role="status" aria-label="Loading">
-      <svg
-        className="animate-spin text-blue-500"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-      >
-        <circle
-          className="opacity-25"
-          cx="12"
-          cy="12"
-          r="10"
-          stroke="currentColor"
-          strokeWidth="4"
-        />
-        <path
-          className="opacity-75"
-          fill="currentColor"
-          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-        />
-      </svg>
-      <span className="sr-only">Loading...</span>
+    <div className="flex items-center justify-center">
+      <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-current ${sizeClasses[size]} ${colorClasses[color]}`} />
+      {text && <span className="ml-2 text-sm">{text}</span>}
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616
+
+export function LoadingDots({ text }: { text?: string }) {
+  return (
+    <div className="flex flex-col items-center justify-center space-y-4">
+      <div className="flex space-x-2">
+        <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
+        <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce animation-delay-100"></div>
+        <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce animation-delay-200"></div>
+      </div>
+      {text && (
+        <p className="text-sm text-gray-400">{text}</p>
+      )}
+    </div>
+  );
+}
+
+export function LoadingBar({ progress = 0, text }: { progress?: number; text?: string }) {
+  return (
+    <div className="w-full max-w-md space-y-4">
+      {text && (
+        <p className="text-sm text-gray-400 text-center">{text}</p>
+      )}
+      <div className="w-full bg-gray-700 rounded-full h-2">
+        <div 
+          className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-500 ease-out"
+          style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
+        ></div>
+      </div>
+      <div className="text-center text-sm text-gray-400">
+        {Math.round(progress)}%
+      </div>
+    </div>
+  );
+}
+
+export default LoadingSpinner;

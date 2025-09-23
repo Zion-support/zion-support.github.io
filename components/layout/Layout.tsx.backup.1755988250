@@ -11,15 +11,6 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-900 text-white">
-      <ServiceWorkerRegistration />
-      <UltraFuturisticNavigation2040 />
-      <main className="relative z-10">
-        {children}
-      </main>
-      <EnhancedFooter2025 />
-=======
     <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
       {/* Skip to content link for accessibility */}
       <a href="#main" className="skip-link">Skip to main content</a>
@@ -57,7 +48,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       
       {/* Cookie Consent Banner */}
       <CookieConsentBanner />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fcb2
     </div>
   );
 };

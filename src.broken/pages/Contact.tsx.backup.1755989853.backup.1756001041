@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -17,7 +15,6 @@ import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
 import { AppLayout } from "@/layout/AppLayout";
 import api from '@/lib/api';
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import { useState } from 'react';
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
@@ -37,14 +34,8 @@ import {
 import z from 'zod';
 import { ChatAssistant } from '@/components/ChatAssistant';
 
-
-
-
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-=======
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 export default function Contact() {

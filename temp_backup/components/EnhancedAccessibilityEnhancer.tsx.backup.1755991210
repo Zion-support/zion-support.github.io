@@ -40,14 +40,8 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
   const [isScanning, setIsScanning] = useState(false);
   const [scanProgress, setScanProgress] = useState(0);
 
-<<<<<<< HEAD
-  // Toggle accessibility panel
-  const togglePanel = () => setIsVisible(!isVisible);
-  const toggleExpanded = () => setIsExpanded(!isExpanded);
-=======
   const [isVisible, setIsVisible] = useState(false);
   const [announcements, setAnnouncements] = useState<string[]>([]);
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
 
   // Apply accessibility settings
   const applySettings = useCallback((newSettings: Partial<AccessibilitySettings>) => {
@@ -190,34 +184,6 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
-<<<<<<< HEAD
-  if (!isVisible) {
-    return (
-      <button
-        onClick={togglePanel}
-        className="fixed bottom-20 right-20 z-50 w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full shadow-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-        aria-label="Open accessibility panel"
-      >
-        <Accessibility className="w-6 h-6 text-white" />
-      </button>
-    );
-  }
-
-  return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, y: 20, scale: 0.95 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
-        exit={{ opacity: 0, y: 20, scale: 0.95 }}
-        className="accessibility-panel"
-      >
-        <div className="bg-gray-900/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl shadow-2xl max-w-md">
-          {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-gray-700/50">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
-                <Accessibility className="w-5 h-5 text-white" />
-=======
   // Enhanced screen reader announcements
   const announceToScreenReader = useCallback((message: string) => {
     if (settings.screenReader) {
@@ -424,7 +390,6 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
                     <span className="text-gray-700 dark:text-gray-300">{action.label}</span>
                   </button>
                 ))}
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
               </div>
               <div>
                 <h3 className="font-semibold text-white">Accessibility</h3>
@@ -456,23 +421,6 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
             </div>
           </div>
 
-<<<<<<< HEAD
-          {/* Quick Settings */}
-          <div className="p-4 border-b border-gray-700/50">
-            <h4 className="text-sm font-medium text-gray-300 mb-3">Quick Settings</h4>
-            <div className="grid grid-cols-2 gap-3">
-              <button
-                onClick={() => applySettings({ highContrast: !settings.highContrast })}
-                className={`p-3 rounded-lg border transition-all duration-300 ${
-                  settings.highContrast
-                    ? 'bg-cyan-500/20 border-cyan-500/40 text-cyan-300'
-                    : 'bg-gray-800/50 border-gray-600/50 text-gray-300 hover:border-gray-500/50'
-                }`}
-              >
-                <Contrast className="w-5 h-5 mx-auto mb-2" />
-                <span className="text-xs">High Contrast</span>
-              </button>
-=======
             {/* Settings */}
             <div className="p-4 space-y-4 max-h-96 overflow-y-auto">
               {/* Font Size */}
@@ -492,7 +440,6 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
                   aria-valuenow={settings.fontSize}
                 />
               </div>
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
 
               {/* Contrast */}
               <div>
@@ -532,67 +479,6 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
                 ))}
               </div>
 
-<<<<<<< HEAD
-          {/* Advanced Settings */}
-          {isExpanded && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="p-4"
-            >
-              <h4 className="text-sm font-medium text-gray-300 mb-3">Advanced Settings</h4>
-              <div className="space-y-3">
-                <label className="flex items-center gap-3">
-                  <input
-                    type="checkbox"
-                    checked={settings.screenReader}
-                    onChange={(e) => applySettings({ screenReader: e.target.checked })}
-                    className="w-4 h-4 text-cyan-500 bg-gray-800 border-gray-600 rounded focus:ring-cyan-500 focus:ring-2"
-                  />
-                  <span className="text-sm text-gray-300">Screen Reader Optimized</span>
-                </label>
-
-                <label className="flex items-center gap-3">
-                  <input
-                    type="checkbox"
-                    checked={settings.keyboardNavigation}
-                    onChange={(e) => applySettings({ keyboardNavigation: e.target.checked })}
-                    className="w-4 h-4 text-cyan-500 bg-gray-800 border-gray-600 rounded focus:ring-cyan-500 focus:ring-2"
-                  />
-                  <span className="text-sm text-gray-300">Enhanced Keyboard Navigation</span>
-                </label>
-
-                <label className="flex items-center gap-3">
-                  <input
-                    type="checkbox"
-                    checked={settings.colorBlindMode}
-                    onChange={(e) => applySettings({ colorBlindMode: e.target.checked })}
-                    className="w-4 h-4 text-cyan-500 bg-gray-800 border-gray-600 rounded focus:ring-cyan-500 focus:ring-2"
-                  />
-                  <span className="text-sm text-gray-300">Color Blind Friendly</span>
-                </label>
-              </div>
-            </motion.div>
-          )}
-
-          {/* Footer */}
-          <div className="p-4 bg-gray-800/30 rounded-b-2xl">
-            <div className="text-center">
-              <p className="text-xs text-gray-400 mb-2">Accessibility Features</p>
-              <div className="flex items-center justify-center gap-4 text-xs text-gray-500">
-                <span>WCAG 2.1 AA</span>
-                <span>•</span>
-                <span>Screen Reader</span>
-                <span>•</span>
-                <span>Keyboard Nav</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-    </AnimatePresence>
-=======
               {/* Spacing */}
               <div>
                 <label className="block text-sm font-medium text-gray-900 dark:text-white mb-2">
@@ -637,7 +523,6 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
         </div>
       )}
     </>
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
   );
 };
 

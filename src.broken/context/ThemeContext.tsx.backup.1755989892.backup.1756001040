@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { createContext, useContext, useEffect } from 'react'
 import type { ReactNode } from 'react'
 import { useLocalStorage } from '@/hooks'
@@ -80,7 +78,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, [themePreset, setTheme]);
 
-
   const toggleTheme = () => {
     setThemePresetState((prev) => {
       if (prev === 'light') return 'dark';
@@ -115,7 +112,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
 export const useThemePreset = () => useContext(ThemeContext)
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React, {
   createContext,
   useContext,
@@ -179,7 +175,4 @@ export function useTheme(): ThemeContextState {
   }
   return ctx;
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/8z9e37-codex/implement-light/dark-theme-with-persistence
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

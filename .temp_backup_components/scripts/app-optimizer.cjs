@@ -18,8 +18,4 @@ console.log('\n App Optimization "Summary")
 // console.log(`   - Bundle "size"`)
 console.log(`   - Total "images"`)
 // console.log('\n "Improvements")
-<<<<<<< HEAD
   console.log('\n "Recommendations")
-=======
-  console.log('\n "Recommendations")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

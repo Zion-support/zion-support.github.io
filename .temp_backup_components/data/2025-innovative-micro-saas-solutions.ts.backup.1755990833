@@ -41,19 +41,7 @@ export interface InnovativeMicroSaasSolution2025 {
   reviews: number;
 }
 
-<<<<<<< HEAD
-const contact = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
-
-export const innovativeMicroSaasSolutions: InnovativeMicroSaasSolution[] = [
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
 export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution2025[] = [
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   {
     id: 'ai-powered-email-automation',
     name: 'AI-Powered Email Automation',
@@ -307,11 +295,6 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution2025[]
     launchDate: '2025-02-05',
     customers: 345,
     rating: 4.7,
-<<<<<<< HEAD
-    reviews: 345
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
     reviews: 234
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   }
 ];

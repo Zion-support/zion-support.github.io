@@ -1,12 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-<<<<<<< HEAD
-# Merge All PRs Script
-# This script will resolve all merge conflicts and merge all open PRs into main
-=======
 echo "🚀 Starting comprehensive PR merge automation..."
->>>>>>> origin/backup-main-final-20250913-063409
 
 # Colors for output
 RED='\033[0;31m'
@@ -15,125 +10,6 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-<<<<<<< HEAD
-echo "🚀 Starting merge process for all PRs..."
-
-# Function to log with timestamp
-log() {
-    echo "[$(date '+%H:%M:%S')] $1"
-}
-
-# Function to check git status
-check_status() {
-    log "Checking git status..."
-    git status --porcelain
-    git branch -a
-}
-
-# Function to fetch and update
-fetch_update() {
-    log "Fetching latest changes..."
-    git fetch origin --all
-    
-    log "Updating main branch..."
-    git checkout main
-    git pull origin main
-}
-
-# Function to resolve conflicts
-resolve_conflicts() {
-    local branch=$1
-    log "Resolving conflicts for $branch"
-    
-    # Checkout branch
-    git checkout "$branch"
-    
-    # Try merge
-    if git merge main --no-commit 2>/dev/null; then
-        log "No conflicts for $branch"
-        git commit -m "Merge main into $branch"
-    else
-        log "Conflicts detected, auto-resolving..."
-        
-        # Auto-resolve conflicts
-        git checkout --ours package.json 2>/dev/null || true
-        git checkout --ours package-lock.json 2>/dev/null || true
-        git rm "*.backup*" 2>/dev/null || true
-        git checkout --ours app/page.tsx 2>/dev/null || true
-        git checkout --ours app/layout.tsx 2>/dev/null || true
-        git checkout --ours components/ 2>/dev/null || true
-        git add .
-        git commit -m "Auto-resolve conflicts in $branch"
-    fi
-}
-
-# Function to merge PR
-merge_pr() {
-    local branch=$1
-    log "Merging $branch into main"
-    
-    git checkout main
-    if git merge "$branch" --no-ff -m "Merge $branch into main"; then
-        log "Successfully merged $branch"
-        git push origin main
-        git branch -d "$branch" 2>/dev/null || true
-        git push origin --delete "$branch" 2>/dev/null || true
-    else
-        log "Failed to merge $branch"
-    fi
-}
-
-# Function to clean up
-cleanup() {
-    log "Cleaning up..."
-    find . -name "*.backup*" -type f -delete 2>/dev/null || true
-    find . -name "*.bak" -type f -delete 2>/dev/null || true
-    find . -name "*~" -type f -delete 2>/dev/null || true
-}
-
-# Function to update dependencies
-update_deps() {
-    log "Updating dependencies..."
-    if [ -f "package.json" ]; then
-        npm install --silent 2>/dev/null || true
-    fi
-}
-
-# Main execution
-main() {
-    log "Starting merge process..."
-    
-    # Check status
-    check_status
-    
-    # Fetch and update
-    fetch_update
-    
-    # Get PR branches
-    pr_branches=$(git branch -r | grep -E "(pull|pr|feature|bugfix|cursor)" | sed 's/origin\///' | tr -d ' ')
-    
-    if [ -z "$pr_branches" ]; then
-        log "No PR branches found"
-        exit 0
-    fi
-    
-    log "Found PR branches: $pr_branches"
-    
-    # Process each PR
-    for branch in $pr_branches; do
-        log "Processing $branch"
-        resolve_conflicts "$branch"
-        merge_pr "$branch"
-    done
-    
-    # Clean up
-    cleanup
-    update_deps
-    
-    log "Merge process completed!"
-}
-
-=======
 # Function to log with colors
 log() {
     echo -e "${BLUE}[$(date +'%Y-%m-%d %H:%M:%S')]${NC} $1"
@@ -443,6 +319,5 @@ main() {
     log "Total processed: $total_count PRs"
 }
 
->>>>>>> origin/backup-main-final-20250913-063409
 # Run main function
 main "$@"

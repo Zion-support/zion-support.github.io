@@ -1,8 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { SEO } from '@/components/SEO';
 import { Header } from '@/components/Header';
 import { Button } from '@/components/ui/button';
@@ -91,7 +89,6 @@ export default function Home() {
         description={t('home.meta.description', 'The world\'s first free marketplace dedicated to high-tech and artificial intelligence')}
         keywords={t('home.meta.keywords', 'AI marketplace, tech services, artificial intelligence')}
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
@@ -113,9 +110,6 @@ export default function Home() {
         description={t('home.seo_description')}
         keywords="AI, technology, marketplace, services, talent"
         canonical="https://app.ziontechgroup.com/"
-<<<<<<< HEAD
-=======
->>>>>>> origin/5i6q3p-codex/add-i18n-support-with-next-i18next
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       />
       

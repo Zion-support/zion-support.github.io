@@ -1,11 +1,7 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 import React from "react";
 import { Handshake, MessageSquare, Star } from 'lucide-react';
-
-
 
 import { Button } from "@/components/ui/button";
 
@@ -143,16 +139,12 @@ export function TalentProfile({
         </div>
       </div>
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React from 'react';
 export function TalentProfile() {
   return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     </div>
   );

@@ -436,14 +436,10 @@
     "npm": ">=10.0.0"
   },
   "scripts": {
-<<<<<<< HEAD
-    "automations": "node scripts/run-automations.mjs",
-=======
     "test:jest": "jest --runInBand --passWithNoTests",
     "test:mocha": "mocha",
     "codex:capture": "node scripts/codex-capture-log.mjs",
     "codex:run": "node scripts/codex-test-loop.mjs",
->>>>>>> origin/cursor/build-zion-ai-api-developer-documentation-hub-2aa3
     "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
     "deps:cron:start": "bash automation/dependency-maintenance-cron.sh",
     "sitemap": "node scripts/generate-sitemap.mjs",
@@ -737,13 +733,6 @@
     "@commitlint/config-conventional": "^19.8.1",
     "@eslint/js": "^9.32.0",
     "@testing-library/jest-dom": "^6.6.4",
-<<<<<<< HEAD
-    "@testing-library/react": "^14.3.1",
-    "@types/node": "24.2.1",
-    "@types/node-cron": "^3.0.11",
-    "@types/react": "18.3.23",
-    "@types/react-dom": "^18.3.0",
-=======
     "@testing-library/react": "^12.1.5",
     "@types/chai": "^5.2.2",
     "@types/jest": "^30.0.0",
@@ -753,7 +742,6 @@
     "@types/react": "17.0.34",
     "@types/react-dom": "17.0.11",
     "@types/supertest": "^6.0.3",
->>>>>>> origin/cursor/build-zion-ai-api-developer-documentation-hub-2aa3
     "@typescript-eslint/eslint-plugin": "^8.39.0",
     "@typescript-eslint/parser": "^8.39.0",
     "autoprefixer": "^10.4.16",

@@ -1,10 +1,7 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import { useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from useNavigate
 import { useFormik } from 'formik';
@@ -14,7 +11,6 @@ import { toast } from '@/hooks/use-toast';
 import { signupUser } from '@/services/signupApi';
 import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter';
 import {logErrorToProduction} from '@/utils/productionLogger';
-
 
 const SignupSchema = Yup.object({
   email: Yup.string().email('Invalid email').required('Email is required'),
@@ -26,17 +22,12 @@ const SignupSchema = Yup.object({
     .required('Password is required'),
 });
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/5smo5s-codex/check-logs-and-fix-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 export default function SimpleSignup() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -49,7 +40,6 @@ export default function SimpleSignup() {
     navigate('/marketplace');
   };
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   const formik = useFormik({
     initialValues: { email: '', password: '' },
     validationSchema: SignupSchema,
@@ -90,9 +80,6 @@ export default function SimpleSignup() {
       }
     }
   }, [formik.errors, formik.submitCount]);
-<<<<<<< HEAD
-=======
->>>>>>> origin/5smo5s-codex/check-logs-and-fix-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
   return (

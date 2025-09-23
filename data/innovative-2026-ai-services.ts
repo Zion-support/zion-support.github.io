@@ -1,8 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 export interface Innovative2026AIService {
   id: string;
   name: string;
@@ -43,10 +40,7 @@ export interface Innovative2026AIService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 export const innovative2026AIServices: Innovative2026AIService[] = [
   // AI-Powered Business Intelligence
   {
@@ -100,10 +94,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     rating: 4.9,
     reviews: 950
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Customer Experience Platform
   {
     id: 'ai-customer-experience-platform',
@@ -156,10 +147,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     rating: 4.8,
     reviews: 1100
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Cybersecurity Suite
   {
     id: 'ai-cybersecurity-suite',
@@ -212,10 +200,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     rating: 4.9,
     reviews: 800
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Marketing Automation
   {
     id: 'ai-marketing-automation-suite',
@@ -268,10 +253,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     rating: 4.7,
     reviews: 1400
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Sales Intelligence
   {
     id: 'ai-sales-intelligence-platform',
@@ -324,22 +306,4 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     rating: 4.8,
     reviews: 950
   }
-<<<<<<< HEAD
 ];
-export const getPopularAIServices = () => {
-  return innovative2026AIServices.filter(service => service.popular);
-};
-export const getAIServicesByCategory = (category: string) => {
-  return innovative2026AIServices.filter(service => 
-    service.category.toLowerCase().includes(category.toLowerCase())
-  );
-};
-export const getAIServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-  return innovative2026AIServices.filter(service => {
-    const price = parseInt(service.price.replace('$', '').replace(',', ''));
-    return price >= minPrice && price <= maxPrice;
-  });
-};
-=======
-];
->>>>>>> origin/auto/autonomy-17186719616

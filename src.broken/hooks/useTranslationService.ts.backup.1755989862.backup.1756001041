@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import {logErrorToProduction} from '@/utils/productionLogger';
 
-
 // Only use the public client-side OpenAI key - never reference server-side secrets
 const openAiKey = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
 import { useLanguage } from '@/context/LanguageContext';
@@ -23,16 +22,11 @@ export function useTranslationService() {
     content: string,
     contentType: ContentType = 'general',
 <<<<<<< HEAD
-    sourceLanguage: SupportedLanguage = 'en-US',
-    targetLanguages: SupportedLanguage[] = ['en-US', 'es-ES']
-=======
-<<<<<<< HEAD
     sourceLanguage: SupportedLanguage = 'en',
     targetLanguages: SupportedLanguage[] = ['en', 'es', 'fr', 'pt', 'ar']
 =======
     sourceLanguage: SupportedLanguage = 'en-US',
     targetLanguages: SupportedLanguage[] = ['en-US', 'es-ES']
->>>>>>> origin/5i6q3p-codex/add-i18n-support-with-next-i18next
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   ): Promise<TranslationResponse> => {
     setIsTranslating(true);
@@ -102,10 +96,6 @@ export function useTranslationService() {
         logErrorToProduction('Translation error:', { data: error });
         const initialTranslations: Record<SupportedLanguage, string> = {
 <<<<<<< HEAD
-          'en-US': content,
-          'es-ES': ''
-=======
-<<<<<<< HEAD
           en: content,
           es: '',
           fr: '',
@@ -114,7 +104,6 @@ export function useTranslationService() {
 =======
           'en-US': content,
           'es-ES': ''
->>>>>>> origin/5i6q3p-codex/add-i18n-support-with-next-i18next
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
         };
         initialTranslations[sourceLanguage] = content;
@@ -161,10 +150,6 @@ export function useTranslationService() {
       
       const initialTranslations: Record<SupportedLanguage, string> = {
 <<<<<<< HEAD
-        'en-US': content,
-        'es-ES': ''
-=======
-<<<<<<< HEAD
         en: content,
         es: '',
         fr: '',
@@ -173,7 +158,6 @@ export function useTranslationService() {
 =======
         'en-US': content,
         'es-ES': ''
->>>>>>> origin/5i6q3p-codex/add-i18n-support-with-next-i18next
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       };
       initialTranslations[sourceLanguage] = content;

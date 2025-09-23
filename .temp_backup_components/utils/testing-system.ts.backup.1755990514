@@ -1,12 +1,5 @@
 export class TestingSystem {
-<<<<<<< HEAD
-  static async testUserInteraction(
-    element: HTMLElement,
-    action: 'click' | 'type' | 'hover'
-  ): Promise<void> {
-=======
   static async testUserInteraction(element: HTMLElement, action: 'click' | 'type' | 'hover'): Promise<void> {
->>>>>>> origin/cursor/automate-and-stabilize-husky-processes-for-main-branch-b783
     switch (action) {
       case 'click':
         element.click();

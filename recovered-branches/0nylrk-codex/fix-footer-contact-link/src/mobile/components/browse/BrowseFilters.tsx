@@ -1,21 +1,11 @@
-<<<<<<< HEAD
-import React{ useState } from "react";
-=======
 import React, { useState } from "react";
->>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
 import { Input } from "@/components/ui/input";
-<<<<<<< HEAD
-import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
-import { XFilter } from "lucide-react";
-import { SheetContentSheetHeaderSheetTitleSheetFooterSheetTrigger } from "@/components/ui/sheet";
-=======
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { X, Filter } from "lucide-react";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet";
->>>>>>> origin/auto/autonomy-17186719616
 import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
 
@@ -24,19 +14,11 @@ interface BrowseFiltersProps {
 }
 
 export function BrowseFilters({ type }: BrowseFiltersProps) {
-<<<<<<< HEAD
-  const [activeFiltersetActiveFilters] = useState<string[]>([]);
-  
-  const addFilter = (filter: string) => {
-    if (!activeFilters.includes(filter)) {
-      setActiveFilters([...activeFiltersfilter]);
-=======
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
   
   const addFilter = (filter: string) => {
     if (!activeFilters.includes(filter)) {
       setActiveFilters([...activeFilters, filter]);
->>>>>>> origin/auto/autonomy-17186719616
     }
   };
   
@@ -97,16 +79,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                     <div className="space-y-2">
                       <Label>Experience (years)</Label>
                       <Slider 
-<<<<<<< HEAD
-                        defaultValue={[010]} 
-                        max={20} 
-                        step={1} 
-
-=======
                         defaultValue={[0, 10]} 
                         max={20} 
                         step={1} 
->>>>>>> origin/auto/autonomy-17186719616
                         className="my-4"
                       />
                       <div className="flex justify-between text-xs text-muted-foreground">
@@ -195,7 +170,3 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
     </div>
   );
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616

@@ -8,7 +8,6 @@ import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link'; // For a back button, changed from react-router-dom
 import {logErrorToProduction} from '@/utils/productionLogger';
 
-
 // Placeholder for user context/role checking
 // In a real app, this would come from an auth context
 const useAuth = () => {
@@ -31,15 +30,11 @@ interface SharedWhitepaper {
 
 const WhitepaperViewPage: React.FC = () => {
 <<<<<<< HEAD
-  const { id } = useParams() as { id?: string };
-=======
-<<<<<<< HEAD
   const router = useRouter();
   const { id: rawId } = router.query;
   const id = typeof rawId === 'string' ? rawId : undefined;
 =======
   const { id } = useParams() as { id?: string };
->>>>>>> origin/87zh7m-codex/fix-netlify-build-failures-due-to-typescript-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   const [sharedData, setSharedData] = useState<SharedWhitepaper | null>(null);
   const [loading, setLoading] = useState(true);

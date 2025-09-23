@@ -1,11 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Rocket, Star } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import { Button } from '../components/ui/Button';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-=======
 import Layout from '../components/layout/Layout';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -14,7 +7,6 @@ import {
   Database, Shield, ArrowRight, Star, CheckCircle,
   Cpu, HardDrive, Network, BarChart3
 } from 'lucide-react';
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-05bf
 
 const SpaceTechnologyPage: React.FC = () => {
   const spaceServices = [
@@ -216,20 +208,8 @@ const SpaceTechnologyPage: React.FC = () => {
                     </motion.div>
                   ))}
                 </div>
-<<<<<<< HEAD
-                <div className="flex items-center text-yellow-400"><Star className="w-4 h-4 mr-1" />{service.rating.toFixed(1)}</div>
-              </div>
-              <Link href="/contact" variant="quantum" size="lg" className="w-full">Schedule a Mission Demo<ArrowRight className="w-5 h-5 ml-2" /></Button>
-              <div className="mt-6 space-y-3 text-sm text-slate-300">
-                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
-                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
-                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
-              </div>
-            </div>
-=======
               </motion.div>
             ))}
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-05bf
           </div>
         </div>
       </section>

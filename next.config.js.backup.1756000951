@@ -1,20 +1,8 @@
 const path = require('path');
-<<<<<<< HEAD
-
-let withSentryConfig = (cfg) => cfg;
-try {
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
-  const sentry = require('@sentry/nextjs');
-  withSentryConfig = (cfg) => sentry.withSentryConfig(cfg, { silent: true });
-} catch {}
-
-const baseConfig = {
-=======
 const os = require('os');
 
 const nextConfig = {
   assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
   poweredByHeader: false,
   trailingSlash: false,
   reactStrictMode: true,

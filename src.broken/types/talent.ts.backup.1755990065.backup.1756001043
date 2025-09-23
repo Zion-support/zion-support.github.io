@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 export interface TalentProfile {
   id: string;
@@ -65,12 +63,8 @@ export interface HireRequest {
   createdAt: string;
 }
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 // Type definitions for talent;
 interface talent {;
   // TODO: Add proper type definitions;
 };
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

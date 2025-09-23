@@ -768,11 +768,6 @@ const HomePage: React.FC = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-        </main>
-      </div>
-    </>
-=======
         </section>
 
         {/* Features */}
@@ -1122,7 +1117,6 @@ const HomePage: React.FC = () => {
         </section>
 </main>
     </div>
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-ecd8
   );
 };
 

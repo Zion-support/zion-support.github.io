@@ -1,26 +1,10 @@
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-=======
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
 import { 
   Search, Grid, List, Star, CheckCircle, Shield, 
   Brain, Cloud, Zap, Users, TrendingUp, Lock,
   ArrowRight, Check, Palette, Heart, Truck, GraduationCap,
-<<<<<<< HEAD
-  Building, Cpu, Database, Globe, Rocket, Target, Phone, Mail, MapPin
-} from 'lucide-react';
-
-// Import our new service data
-import { real2025AdvancedAIServices } from '../data/real-2025-advanced-ai-services';
-import { real2025ITInfrastructureServices } from '../data/real-2025-it-infrastructure-services';
-import { real2025InnovativeMicroSaas } from '../data/real-2025-innovative-micro-saas';
-
-// Contact information
-const contactInfo = {
-=======
   Building, Star, Users, TrendingUp, Zap, Globe, Eye, Phone, Mail, MapPin
 } from 'lucide-react';
 
@@ -31,15 +15,12 @@ import { real2025AdvancedAIServices } from '../data/real-2025-advanced-ai-servic
 import { real2025EmergingTechServices } from '../data/real-2025-emerging-tech-services';
 
 const contact = {
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
-<<<<<<< HEAD
-=======
 export default function AdvancedServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -120,7 +101,6 @@ export default function AdvancedServicesShowcase2025() {
                 <div className="text-sm">Expert Support</div>
               </div>
             </div>
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
 const categories = [
   {
     id: 'all',
@@ -275,17 +255,6 @@ const AdvancedServicesShowcase: React.FC = () => {
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700">
             <div className="flex flex-col lg:flex-row gap-6">
               {/* Search */}
-<<<<<<< HEAD
-              <div className="relative flex-1 max-w-md">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search services..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
-=======
               <div className="flex-1">
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -297,7 +266,6 @@ const AdvancedServicesShowcase: React.FC = () => {
                     className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   />
                 </div>
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
               </div>
 
               {/* Category Filter */}
@@ -315,33 +283,6 @@ const AdvancedServicesShowcase: React.FC = () => {
                 </select>
               </div>
 
-<<<<<<< HEAD
-              {/* View Mode Toggle */}
-              <div className="flex gap-2">
-                <button
-                  onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded-lg transition-all duration-300 ${
-                    viewMode === 'grid'
-                      ? 'bg-cyan-500 text-white'
-                      : 'bg-slate-800 text-gray-400 hover:bg-slate-700'
-                  }`}
-                >
-                  <Grid className="w-5 h-5" />
-                </button>
-                <button
-                  onClick={() => setViewMode('list')}
-                  className={`p-2 rounded-lg transition-all duration-300 ${
-                    viewMode === 'list'
-                      ? 'bg-cyan-500 text-white'
-                      : 'bg-slate-800 text-gray-400 hover:bg-slate-700'
-                  }`}
-                >
-                  <List className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
-          </div>
-=======
               {/* Sort */}
               <div className="flex-shrink-0">
                 <select
@@ -381,7 +322,6 @@ const AdvancedServicesShowcase: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
 
       {/* Services Grid/List */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">

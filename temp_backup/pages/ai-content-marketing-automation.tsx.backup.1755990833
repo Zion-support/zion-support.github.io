@@ -351,9 +351,6 @@ const AIContentMarketingAutomationPage: React.FC = () => {
 };
 
 export default AIContentMarketingAutomationPage;
-<<<<<<< HEAD
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
 =======
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -754,4 +751,3 @@ export default function AIContentMarketingAutomation() {
     </div>
   );
 }
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84

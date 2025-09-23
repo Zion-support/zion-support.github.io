@@ -1,12 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-import { 
-  Brain, Rocket, Mail, Phone, MapPin, 
-  ArrowRight, Github, Linkedin, Twitter, 
-  Youtube, Instagram, Facebook, Atom, Building, Calendar
-} from 'lucide-react';
-=======
 import { AnimatePresence } from 'framer-motion';
 
 interface FooterLink {
@@ -78,7 +71,6 @@ const contactInfo = {
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   website: 'https://ziontechgroup.com'
 };
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-c99e
 
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   const currentYear = new Date().getFullYear();

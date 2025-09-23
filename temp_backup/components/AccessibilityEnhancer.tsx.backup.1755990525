@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-=======
 import React, { useState, useEffect, useCallback } from 'react';
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Settings, X, Eye, EyeOff, Volume2, VolumeX, Type, Contrast, 
@@ -454,9 +450,6 @@ const AccessibilityEnhancer: React.FC = () => {
           {isVisible ? '−' : '+'}
         </button>
       </div>
-<<<<<<< HEAD
-    </>
-=======
       
       {isVisible && (
         <div className="space-y-4">
@@ -548,7 +541,6 @@ const AccessibilityEnhancer: React.FC = () => {
         </div>
       )}
     </div>
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
   );
 };
 

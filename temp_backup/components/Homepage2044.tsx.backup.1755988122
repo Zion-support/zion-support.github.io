@@ -12,21 +12,6 @@ import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-a
 import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services';
 import { revolutionary2044AIServices } from '../data/revolutionary-2044-ai-services';
 
-<<<<<<< HEAD
-// Lazy load components for better performance
-const TestimonialSection = React.lazy(() => import('./TestimonialSection'));
-
-// Enhanced loading component
-const LoadingSpinner = () => (
-  <div className="flex items-center justify-center p-8">
-    <div className="relative">
-      <div className="w-12 h-12 border-4 border-blue-200 rounded-full animate-spin"></div>
-      <div className="absolute top-0 left-0 w-12 h-12 border-4 border-blue-600 rounded-full animate-ping opacity-75"></div>
-    </div>
-    <span className="ml-3 text-lg font-medium text-gray-700">Loading revolutionary technology...</span>
-  </div>
-);
-=======
 // Import our new 2025 real enterprise AI services
 import { realEnterpriseAIServices2025 } from '../data/2025-real-enterprise-ai-services';
 import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services';
@@ -37,7 +22,6 @@ const ServiceCard = lazy(() => import('./ServiceCard'));
 const PerformanceMetrics = lazy(() => import('./PerformanceMetrics'));
 const InteractiveDemo = lazy(() => import('./InteractiveDemo'));
 const PerformanceOptimizer = lazy(() => import('./PerformanceOptimizer'));
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4385
 
 const Homepage2044: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

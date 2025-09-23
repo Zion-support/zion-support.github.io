@@ -1,25 +1,15 @@
 
-<<<<<<< HEAD
-import { useStateuseEffect } from "react";
-=======
 import { useState, useEffect } from "react";
->>>>>>> origin/auto/autonomy-17186719616
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-<<<<<<< HEAD
-  DialogTrigger} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
-=======
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
->>>>>>> origin/auto/autonomy-17186719616
 import { ReviewForm } from "./ReviewForm";
 import { useReviews } from "@/hooks/useReviews";
 
@@ -36,15 +26,6 @@ export function LeaveReviewModal({
   revieweeId,
   revieweeName,
   isOpen,
-<<<<<<< HEAD
-  onClose}: LeaveReviewModalProps) {
-  const { userReviewsubmitReviewupdateReviewisSubmitting } = useReviews(projectId);
-  const [opensetOpen] = useState(isOpen);
-  
-  useEffect(() => {
-    setOpen(isOpen);
-  }[isOpen]);
-=======
   onClose,
 }: LeaveReviewModalProps) {
   const { userReview, submitReview, updateReview, isSubmitting } = useReviews(projectId);
@@ -53,7 +34,6 @@ export function LeaveReviewModal({
   useEffect(() => {
     setOpen(isOpen);
   }, [isOpen]);
->>>>>>> origin/auto/autonomy-17186719616
   
   const handleOpenChange = (open: boolean) => {
     setOpen(open);
@@ -65,13 +45,8 @@ export function LeaveReviewModal({
   const handleSubmit = async (formValues: any) => {
     if (userReview) {
       // Update existing review
-<<<<<<< HEAD
-      const { project_idreviewee_id...updates } = formValues;
-      const success = await updateReview(userReview.idupdates);
-=======
       const { project_id, reviewee_id, ...updates } = formValues;
       const success = await updateReview(userReview.id, updates);
->>>>>>> origin/auto/autonomy-17186719616
       if (success) {
         handleOpenChange(false);
       }

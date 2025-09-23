@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "generatedAt": "2025-08-15T15:47:28.566Z",
-=======
   "generatedAt": "2025-08-19T03:44:13.291Z",
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
   "functions": [
     "a11y-alt-text-runner",
     "accelerated-sync-orchestrator",
@@ -51,13 +47,8 @@
     "front-maximizer",
     "front-visionary-expander",
     "frontpage-enhancer",
-<<<<<<< HEAD
-    "frontpage-scheduler",
-    "function-health-monitor",
-=======
     "github-actions-redundancy",
     "headers-enforcer",
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
     "home-visionary-expander",
     "homepage-advertiser-scheduler",
     "homepage-enhancer",
@@ -110,11 +101,7 @@
     "topic-cluster-builder-runner",
     "topics-map-runner",
     "trigger-all-and-commit",
-<<<<<<< HEAD
-    "ui-enhancer",
-=======
     "ultra-fast-automation-orchestrator",
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
     "ultrafast-front-orchestrator",
     "ultrafast-orchestrator",
     "unused-media-scanner"

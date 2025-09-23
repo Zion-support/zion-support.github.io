@@ -1,21 +1,10 @@
 const fs = require('fs');
-<<<<<<< HEAD
-const { exec, execSync } = require('child_process');
-const { promisify } = require('util');
-
-const execAsync = promisify(exec);
-=======
 const { exec } = require('child_process');
 const path = require('path');
->>>>>>> cursor/automate-test-improve-and-merge-code-85f4
 
 class CompleteImprovementSuite {
   constructor() {
     this.reportsDir = './automation-reports';
-<<<<<<< HEAD
-    this.projectRoot = process.cwd();
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-85f4
     this.stats = {
       "mergeConflicts": { resolved: 0, "failed": 0 },
       "syntaxErrors": { fixed: 0, "failed": 0 },
@@ -118,15 +107,7 @@ class CompleteImprovementSuite {
   hasMergeConflicts(filePath) {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
-      return (
-        content.includes('<<<<<<< HEAD') ||
-        content.includes('=======') ||
-        content.includes('>>>>>>> ')
-      );
-=======
       return content.includes('>>>>>>> ');
->>>>>>> cursor/automate-test-improve-and-merge-code-85f4
     } catch (error) {
       return false;
     }
@@ -139,11 +120,7 @@ class CompleteImprovementSuite {
 
       // Remove merge conflict markers and keep HEAD version
       content = content.replace(
-<<<<<<< HEAD
-        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [a-f0-9]+/gs,
-=======
         /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n/g,
->>>>>>> cursor/automate-test-improve-and-merge-code-85f4
         '$1'
       );
 
@@ -252,31 +229,6 @@ class CompleteImprovementSuite {
       }
     };
 
-<<<<<<< HEAD
-    fs.writeFileSync(
-      path.join(this.reportsDir, 'complete-improvement-report.json'),
-      JSON.stringify(finalReport, null, 2)
-    );
-
-    this.log('🎉 Complete Improvement Suite Finished');
-    this.log("📊 Summary:");
-    this.log(
-      `   - Merge conflicts resolved: ${finalReport.summary.totalMergeConflictsResolved}`
-    );
-    this.log(
-      `   - Syntax errors "fixed": ${finalReport.summary.totalSyntaxErrorsFixed}`
-    );
-    this.log(
-      `   - Improvements "applied": ${finalReport.summary.totalImprovementsApplied}`
-    );
-    this.log(`   - Push "successful": ${finalReport.summary.pushSuccessful}`);
-  }
-}
-
-// Run the complete improvement suite
-const suite = new CompleteImprovementSuite();
-suite.run().catch(console.error);
-=======
     const reportPath = path.join(this.reportsDir, 'complete-improvement-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
@@ -291,4 +243,3 @@ if (require.main === module) {
 }
 
 module.exports = CompleteImprovementSuite;
->>>>>>> cursor/automate-test-improve-and-merge-code-85f4

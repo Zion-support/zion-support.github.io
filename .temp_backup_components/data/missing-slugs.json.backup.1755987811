@@ -1,10 +1,7 @@
 [
-<<<<<<< HEAD
-=======
 =======
   "accessibility",
   "ai-autonomous-vehicle-ai-platform",
->>>>>>> 7d0a781e658cc5d79dae76ad53c5e567dc7e5315
   "ai-consciousness-evolution",
   "ai-content-marketing-automation",
   "ai-creativity-orchestrator",
@@ -78,10 +75,5 @@
   "services/zero-trust-sso-mesh",
   "space-colonization-services",
   "space-data-analytics",
-<<<<<<< HEAD
-  "space-mining-automation-platform",
-  "space-mining-platform"
-=======
   "space-mining-automation-platform"
->>>>>>> 7d0a781e658cc5d79dae76ad53c5e567dc7e5315
 ]

@@ -1,47 +1,4 @@
 
-<<<<<<< HEAD
-
-import React from 'react';
-import { useForm  } from 'react-hook-form';
-import { z  } from 'zod';
-import { zodResolver  } from '@hookform/resolvers/zod';
-import { Input  } from '@/components/ui/input';
-import { Button  } from '@/components/ui/button';
-import { Textarea  } from '@/components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage  } from '@/components/ui/form';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
-import { toast  } from '@/hooks/use-toast';
-import { supabase } from '@/integrations/supabase/client';
-// Form schema
-
-
-const formSchema = z.object({
-  brand_name: z.string().min(2, { message: 'Brand name must be at least 2 characters' })
-  subdomain: z.string()
-    .min(3, { message: 'Subdomain must be at least 3 characters' })
-    .max(20, { message: 'Subdomain must be at most 20 characters' })
-    .regex(/^[a-z0-9-]+$/, { message: 'Subdomain can only contain lowercase letters, numbers, and hyphens' });
-  custom_domain: z.string().optional()
-  primary_color: z.string().regex(/^#([0-9A-F]{6})$/i, { message: 'Must be a valid hex color' })
-  theme_preset: z.enum(['lightdarkneoncorporatestartup'])
-  headline: z.string().min(5, { message: 'Headline must be at least 5 characters' })
-  subtitle: z.string().min(5, { message: 'Subtitle must be at least 5 characters' })
-  cta: z.string().min(2, { message: 'CTA text must be at least 2 characters' })})
-type FormValues = z.infer<typeof formSchema>;
-export function WhitelabelRequestForm() {
-  const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema)
-    defaultValues: {
-      brand_name: ''
-      subdomain: ''
-      custom_domain: ''
-      primary_color: '#9b87f5'
-      theme_preset: 'light'
-      headline: 'AI Marketplace'
-      subtitle: 'Find the best AI talent'
-      cta: 'Get Started'}})
-=======
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -87,38 +44,10 @@ export function WhitelabelRequestForm() {
     },
   });
   
->>>>>>> origin/auto/autonomy-17186719616
   const onSubmit = async (values: FormValues) => {
     try {
       // Prepare the data
       const tenantData = {
-<<<<<<< HEAD
-        brand_name: values.brand_name
-        subdomain: values.subdomain
-        custom_domain: values.custom_domain |null
-        primary_color: values.primary_color
-        theme_preset: values.theme_preset
-        landing_page_copy: {
-          headline: values.headline
-          subtitle: values.subtitle
-          cta: values.cta}
-      }
-
-          headline: values.headline,
-          subtitle: values.subtitle,
-          cta: values.cta};
-      };
-      
-
-
-
-
-
-
-
-
-
-=======
         brand_name: values.brand_name,
         subdomain: values.subdomain,
         custom_domain: values.custom_domain || null,
@@ -131,125 +60,12 @@ export function WhitelabelRequestForm() {
         }
       };
       
->>>>>>> origin/auto/autonomy-17186719616
       // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')
         .insert(tenantData)
         .select()
         .single();
-<<<<<<< HEAD
-      if (error) throw error;
-      toast({
-        title: 'White-label tenant created!'
-        description: `${values.brand_name} has been set up with subdomain ${values.subdomain}`})
-      // Reset form
-      form.reset()
-    } catch (error: any) {
-      toast({
-        variant: 'destructive'
-        title: 'Error creating tenant'
-        description: error.message |'Something went wrong'})
-
-    }
-  }
-  };
-
-import React from 'react',;
-import { useForm } from 'react-hook-form',;
-import { z } from 'zod',;
-import { zodResolver } from '@hookform/resolvers/zod',;
-import { Input } from '@/components/ui/input',;
-import { Button } from '@/components/ui/button',;
-import { Textarea } from '@/components/ui/textarea',;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select',;
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form',;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',;
-import { toast } from '@/hooks/use-toast',;
-import { supabase } from '@/integrations/supabase/client',;
-
-// Form schema;
-const formSchema = z && z.object({;
-  brand_name: z && z.string().min(2, { message: 'Brand name must be at least 2 characters' }),;
-  subdomain: z && z.string();
-    .min(3, { message: 'Subdomain must be at least 3 characters' });
-    .max(20, { message: 'Subdomain must be at most 20 characters' });
-    .regex(/^[a-z0-9-]+$/, { message: 'Subdomain can only contain lowercase letters, numbers, and hyphens' });
-  custom_domain: z && z.string().optional(),;
-  primary_color: z && z.string().regex(/^#([0-9A-F]{6})$/i, { message: 'Must be a valid hex color' }),;
-  theme_preset: z && z.enum(['lightdarkneoncorporatestartup']),;
-  headline: z && z.string().min(5, { message: 'Headline must be at least 5 characters' }),;
-  subtitle: z && z.string().min(5, { message: 'Subtitle must be at least 5 characters' }),;
-  cta: z && z.string().min(2, { message: 'CTA text must be at least 2 characters' })}),;
-
-type FormValues = z && z.infer<typeof formSchema>;
-
-export function WhitelabelRequestForm() {;
-  const form = useForm<FormValues>({;
-    resolver: zodResolver(formSchema),;
-    defaultValues: {;
-      brand_name: '',;
-      subdomain: '',;
-      custom_domain: '',;
-      primary_color: '#9b87f5',;
-      theme_preset: 'light',;
-      headline: 'AI Marketplace',;
-      subtitle: 'Find the best AI talent',;
-      cta: 'Get Started'}}),;
-
-  const onSubmit = async (values: FormValues) => {;
-    try {;
-      // Prepare the data;
-      const tenantData = {;
-        brand_name: values && values.brand_name,;
-        subdomain: values && values.subdomain,;
-        custom_domain: values && values.custom_domain || null,;
-        primary_color: values && values.primary_color,;
-        theme_preset: values && values.theme_preset,;
-        landing_page_copy: {;
-          headline: values && values.headline,;
-          subtitle: values && values.subtitle,;
-          cta: values && values.cta}
-      };
-
-      // Submit to Supabase;
-      const { data, error } = await supabase;
-        .from('whitelabel_tenants');
-        .insert(tenantData);
-        .select();
-        .single();
-
-      if (error) throw error;
-
-      toast({;
-        title: 'White-label tenant created!',;
-        description: `${values && values.brand_name} has been set up with subdomain ${values && values.subdomain}`}),;
-
-      // Reset form;
-      form && form.reset();
-    } catch (error: any) {;
-      toast({;
-        variant: 'destructive',;
-        title: 'Error creating tenant',;
-        description: error && error.message || 'Something went wrong'});
-    }
-
-  },
-
-
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
-=======
       
       if (error) throw error;
       
@@ -269,7 +85,6 @@ export function WhitelabelRequestForm() {;
     }
   };
 
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <Card className="w-full max-w-2xl">
       <CardHeader>
@@ -295,10 +110,7 @@ export function WhitelabelRequestForm() {;
                   </FormItem>
                 )}
               />
-<<<<<<< HEAD
-=======
               
->>>>>>> origin/auto/autonomy-17186719616
               <FormField
                 control={form.control}
                 name="subdomain"
@@ -315,10 +127,7 @@ export function WhitelabelRequestForm() {;
                   </FormItem>
                 )}
               />
-<<<<<<< HEAD
-=======
               
->>>>>>> origin/auto/autonomy-17186719616
               <FormField
                 control={form.control}
                 name="custom_domain"
@@ -332,10 +141,7 @@ export function WhitelabelRequestForm() {;
                   </FormItem>
                 )}
               />
-<<<<<<< HEAD
-=======
               
->>>>>>> origin/auto/autonomy-17186719616
               <FormField
                 control={form.control}
                 name="primary_color"
@@ -352,18 +158,11 @@ export function WhitelabelRequestForm() {;
                   </FormItem>
                 )}
               />
-<<<<<<< HEAD
-=======
               
->>>>>>> origin/auto/autonomy-17186719616
               <FormField
                 control={form.control}
                 name="theme_preset"
                 render={({ field }) => (
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
                   <FormItem>
                     <FormLabel>Theme Preset</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
@@ -384,23 +183,6 @@ export function WhitelabelRequestForm() {;
                   </FormItem>
                 )}
               />
-<<<<<<< HEAD
-              <div className="border rounded-md p-4 space-y-4">
-                <h3 className="text-sm font-medium">Landing Page Copy</h3>
-                <FormField
-                  control={form && form.control}
-                  name="headline"
-                  render={({ field }) => (;
-                    <FormItem>;
-                      <FormLabel>Headline</FormLabel>;
-                  </FormItem>)}
-              />;
-              <div className="border rounded - md p - 4 space - y-4">;
-                <h3 className="text - sm font - medium">Landing Page Copy</h3>;
-                <FormField;
-                  control={form.control}
-                  name="headline";
-=======
               
               <div className="border rounded-md p-4 space-y-4">
                 <h3 className="text-sm font-medium">Landing Page Copy</h3>
@@ -408,7 +190,6 @@ export function WhitelabelRequestForm() {;
                 <FormField
                   control={form.control}
                   name="headline"
->>>>>>> origin/auto/autonomy-17186719616
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Headline</FormLabel>
@@ -419,10 +200,7 @@ export function WhitelabelRequestForm() {;
                     </FormItem>
                   )}
                 />
-<<<<<<< HEAD
-=======
                 
->>>>>>> origin/auto/autonomy-17186719616
                 <FormField
                   control={form.control}
                   name="subtitle"
@@ -436,24 +214,10 @@ export function WhitelabelRequestForm() {;
                     </FormItem>
                   )}
                 />
-<<<<<<< HEAD
-                <FormField
-                  control={form && form.control}
-                  name="cta"
-                  render={({ field }) => (;
-                    <FormItem>;
-                      <FormLabel>CTA Button Text</FormLabel>;
-                    </FormItem>)}
-                />;
-                <FormField;
-                  control={form.control}
-                  name="cta";
-=======
                 
                 <FormField
                   control={form.control}
                   name="cta"
->>>>>>> origin/auto/autonomy-17186719616
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>CTA Button Text</FormLabel>
@@ -466,10 +230,7 @@ export function WhitelabelRequestForm() {;
                 />
               </div>
             </div>
-<<<<<<< HEAD
-=======
             
->>>>>>> origin/auto/autonomy-17186719616
             <Button type="submit" className="w-full" size="lg">
               Create White-Label Instance
             </Button>
@@ -483,14 +244,5 @@ export function WhitelabelRequestForm() {;
         </p>
       </CardFooter>
     </Card>
-<<<<<<< HEAD
-  )
-
-}
-}
-;
-
-=======
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

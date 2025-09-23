@@ -31,33 +31,16 @@ const Footer: React.FC = () => {
     { name: 'Space Technology', href: '/space-technology' },
     { name: 'IT Solutions', href: '/it-services' },
     { name: 'Cybersecurity', href: '/cybersecurity' },
-<<<<<<< HEAD
-    { name: 'Cloud Platform', href: '/cloud-platform' },
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-e9b6
     { name: 'View All Services', href: '/services' }
   ];
 
   const solutions = [
-<<<<<<< HEAD
-    { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-    { name: 'Healthcare Solutions', href: '/solutions/healthcare' },
-    { name: 'Financial Solutions', href: '/solutions/financial' },
-    { name: 'Government Solutions', href: '/solutions/government' },
-    { name: 'Manufacturing Solutions', href: '/solutions/manufacturing' },
-    { name: 'Retail Solutions', href: '/solutions/retail' },
-    { name: 'Education Solutions', href: '/solutions/education' },
-    { name: 'Energy Solutions', href: '/solutions/energy' },
-    { name: 'Transportation Solutions', href: '/solutions/transportation' },
-    { name: 'Case Studies', href: '/case-studies' }
-=======
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Industry Solutions', href: '/solutions' },
     { name: 'Digital Transformation', href: '/digital-transformation' },
     { name: 'Cloud Platform', href: '/cloud-platform' },
     { name: 'Support', href: '/support' },
     { name: 'Documentation', href: '/docs' }
->>>>>>> origin/cursor/website-audit-and-enhancement-e9b6
   ];
 
   const company = [
@@ -93,15 +76,9 @@ const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-<<<<<<< HEAD
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin },
-    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-=======
     { name: 'X', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
->>>>>>> origin/cursor/website-audit-and-enhancement-e9b6
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
     { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube }
@@ -130,9 +107,6 @@ const Footer: React.FC = () => {
               intelligent automation systems, and the future of cloud-native AI infrastructure.
             </p>
             <div className="flex space-x-4">
-<<<<<<< HEAD
-              {social.map((social) => (
-=======
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
@@ -237,7 +211,6 @@ const Footer: React.FC = () => {
             <div className="flex items-center space-x-4 mb-6 lg:mb-0">
               <span className="text-gray-400 text-sm mr-4">Follow Us:</span>
               {socialLinks.map((social) => (
->>>>>>> origin/cursor/website-audit-and-enhancement-e9b6
                 <a
                   key={social.name}
                   href={social.href}

@@ -108,20 +108,6 @@ const SearchPage: React.FC = () => {
 
     setIsSearching(true);
     
-<<<<<<< HEAD
-    // Simulate search delay
-    setTimeout(() => {
-      const filtered = mockResults.filter(result => {
-        const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           result.description.toLowerCase().includes(searchQuery.toLowerCase());
-        const matchesCategory = selectedCategory === 'all' || result.category === selectedCategory;
-        return matchesQuery && matchesCategory;
-      });
-      
-      setSearchResults(filtered);
-      setIsSearching(false);
-    }, 500);
-=======
     // Add products
     products.forEach(item => {
       results.push({
@@ -256,7 +242,6 @@ const SearchPage: React.FC = () => {
   const handleSearch = (term: string) => {
     setSearchTerm(term);
     router.push(`/search?q=${encodeURIComponent(term)}`, undefined, { shallow: true });
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors
   };
 
   const clearSearch = () => {
@@ -287,24 +272,6 @@ const SearchPage: React.FC = () => {
               </p>
             </motion.div>
 
-<<<<<<< HEAD
-            {/* Search Form */}
-            <motion.form
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              onSubmit={handleSearch}
-              className="relative max-w-2xl mx-auto"
-            >
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-6 h-6" />
-                <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search for services, solutions, or technologies..."
-                  className="w-full pl-12 pr-20 py-4 bg-white/10 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent backdrop-blur-sm"
-=======
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold">Search Results</h1>
@@ -405,7 +372,6 @@ const SearchPage: React.FC = () => {
                   result={result}
                   searchTerm={searchTerm}
                   viewMode={viewMode}
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors
                 />
                 <button
                   type="submit"

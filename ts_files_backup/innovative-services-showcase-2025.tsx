@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import React{ useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  SearchFilterStarCheckCircleArrowRight
-  BrainAtomShieldRocketTargetMicroscope,
-  PhoneMailMapPinTrendingUpUsersAward,
-  ZapGlobeCpuDatabaseLockCloud,
-  StethoscopeGraduationCapLeafTruck
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -19,7 +7,6 @@ import {
   Phone, Mail, MapPin, TrendingUp, Users, Award,
   Zap, Globe, Cpu, Database, Lock, Cloud,
   Stethoscope, GraduationCap, Leaf, Truck
->>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
@@ -44,18 +31,10 @@ const contactInfo = {
 };
 
 const serviceCategories = [
-<<<<<<< HEAD
-
-  {
-    id: 'financial-technology',
-    title: '💰 Financial Technology',
-    description: 'Innovative fintechDeFiand financial services',
-=======
   {
     id: 'financial-technology',
     title: '💰 Financial Technology',
     description: 'Innovative fintech, DeFi, and financial services',
->>>>>>> origin/auto/autonomy-17186719616
     icon: TrendingUp,
     color: 'from-green-500 to-emerald-500',
     services: [...innovativeFinancialServices2025],
@@ -115,11 +94,7 @@ const serviceCategories = [
   {
     id: 'quantum-emerging',
     title: '⚛️ Quantum & Emerging Tech',
-<<<<<<< HEAD
-    description: 'Quantum computingDNA computingand beyond',
-=======
     description: 'Quantum computing, DNA computing, and beyond',
->>>>>>> origin/auto/autonomy-17186719616
     icon: Atom,
     color: 'from-indigo-500 to-blue-500',
     services: [...emergingTechServices2025],
@@ -149,35 +124,21 @@ const serviceCategories = [
 ];
 
 export default function InnovativeServicesShowcase2025() {
-<<<<<<< HEAD
-  const [searchTermsetSearchTerm] = useState('');
-  const [selectedCategorysetSelectedCategory] = useState('all');
-  const [sortBysetSortBy] = useState('name');
-=======
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('name');
->>>>>>> origin/auto/autonomy-17186719616
 
   const filteredServices = serviceCategories.flatMap(category => 
     category.services.filter(service =>
       (selectedCategory === 'all' || category.id === selectedCategory) &&
-<<<<<<< HEAD
-      (searchTerm === ', ' || 
-=======
       (searchTerm === '' || 
->>>>>>> origin/auto/autonomy-17186719616
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase()))
     )
   );
 
-<<<<<<< HEAD
-  const sortedServices = [...filteredServices].sort((ab) => {
-=======
   const sortedServices = [...filteredServices].sort((a, b) => {
->>>>>>> origin/auto/autonomy-17186719616
     switch (sortBy) {
       case 'name':
         return a.name.localeCompare(b.name);
@@ -194,13 +155,8 @@ export default function InnovativeServicesShowcase2025() {
     <Layout>
       <Head>
         <title>Innovative Services Showcase 2025 | Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Discover our comprehensive collection of innovative micro SAASAIhealthcarefintechand emerging technology services for 2025 and beyond." />
-        <meta name="keywords" content="innovative servicesmicro SAASAI serviceshealthcare technologyfintechZion Tech Group" />
-=======
         <meta name="description" content="Discover our comprehensive collection of innovative micro SAAS, AI, healthcare, fintech, and emerging technology services for 2025 and beyond." />
         <meta name="keywords" content="innovative services, micro SAAS, AI services, healthcare technology, fintech, Zion Tech Group" />
->>>>>>> origin/auto/autonomy-17186719616
         <meta property="og:title" content="Innovative Services Showcase 2025 - Zion Tech Group" />
         <meta property="og:description" content="Comprehensive collection of innovative technology services." />
         <meta property="og:url" content="https://ziontechgroup.com/innovative-services-showcase-2025" />
@@ -236,11 +192,7 @@ export default function InnovativeServicesShowcase2025() {
               <span className="text-white">Showcase</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-<<<<<<< HEAD
-              Discover our comprehensive collection of revolutionary micro SAASAIhealthcarefintechand emerging technology services that are transforming industries worldwide.
-=======
               Discover our comprehensive collection of revolutionary micro SAAS, AI, healthcare, fintech, and emerging technology services that are transforming industries worldwide.
->>>>>>> origin/auto/autonomy-17186719616
             </p>
           </motion.div>
 
@@ -248,11 +200,7 @@ export default function InnovativeServicesShowcase2025() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.8delay: 0.2 }}
-=======
             transition={{ duration: 0.8, delay: 0.2 }}
->>>>>>> origin/auto/autonomy-17186719616
             className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
           >
             <div className="text-center">
@@ -333,28 +281,16 @@ export default function InnovativeServicesShowcase2025() {
         </div>
       </section>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
       {/* Services Grid */}
       <section className="py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-            {sortedServices.map((serviceindex) => (
-=======
             {sortedServices.map((service, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8delay: index * 0.1 }}
-=======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
                 className="group bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/30 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
@@ -382,11 +318,7 @@ export default function InnovativeServicesShowcase2025() {
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wide">Key Features</h4>
                   <ul className="space-y-2">
-<<<<<<< HEAD
-                    {service.features.slice(03).map((featureIndex) => (
-=======
                     {service.features.slice(0, 3).map((feature, featureIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {feature}
@@ -412,10 +344,6 @@ export default function InnovativeServicesShowcase2025() {
                   </div>
                 </div>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
                 {/* CTA */}
                 <div className="flex gap-3">
                   <a
@@ -470,11 +398,7 @@ export default function InnovativeServicesShowcase2025() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8delay: 0.1 }}
-=======
               transition={{ duration: 0.8, delay: 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
               viewport={{ once: true }}
               className="text-center"
             >
@@ -488,11 +412,7 @@ export default function InnovativeServicesShowcase2025() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8delay: 0.2 }}
-=======
               transition={{ duration: 0.8, delay: 0.2 }}
->>>>>>> origin/auto/autonomy-17186719616
               viewport={{ once: true }}
               className="text-center"
             >
@@ -506,11 +426,7 @@ export default function InnovativeServicesShowcase2025() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8delay: 0.3 }}
-=======
               transition={{ duration: 0.8, delay: 0.3 }}
->>>>>>> origin/auto/autonomy-17186719616
               viewport={{ once: true }}
               className="text-center"
             >

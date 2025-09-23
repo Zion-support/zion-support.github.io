@@ -1,15 +1,9 @@
 
 import { useState } from "react";
 import { formatDistanceToNow } from "date-fns";
-<<<<<<< HEAD
-import { StarFlagUser } from "lucide-react";
-import { Review } from "@/types/reviews";
-import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
-=======
 import { Star, Flag, User } from "lucide-react";
 import { Review } from "@/types/reviews";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
->>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -19,25 +13,12 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-<<<<<<< HEAD
-  DialogTrigger} from "@/components/ui/dialog";
-=======
   DialogTrigger,
 } from "@/components/ui/dialog";
->>>>>>> origin/auto/autonomy-17186719616
 import { Textarea } from "@/components/ui/textarea";
 
 interface ReviewCardProps {
   review: Review;
-<<<<<<< HEAD
-  onReport: (reviewId: stringreason: string) => Promise<boolean>;
-}
-
-export function ReviewCard({ reviewonReport }: ReviewCardProps) {
-  const [reportReasonsetReportReason] = useState("");
-  const [isReportingsetIsReporting] = useState(false);
-  const [isReportDialogOpensetIsReportDialogOpen] = useState(false);
-=======
   onReport: (reviewId: string, reason: string) => Promise<boolean>;
 }
 
@@ -45,17 +26,12 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
   const [reportReason, setReportReason] = useState("");
   const [isReporting, setIsReporting] = useState(false);
   const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
->>>>>>> origin/auto/autonomy-17186719616
   
   const handleReport = async () => {
     if (!reportReason.trim()) return;
     
     setIsReporting(true);
-<<<<<<< HEAD
-    const success = await onReport(review.idreportReason);
-=======
     const success = await onReport(review.id, reportReason);
->>>>>>> origin/auto/autonomy-17186719616
     setIsReporting(false);
     
     if (success) {
@@ -69,11 +45,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
     
     return (
       <div className="flex">
-<<<<<<< HEAD
-        {[12345].map((star) => (
-=======
         {[1, 2, 3, 4, 5].map((star) => (
->>>>>>> origin/auto/autonomy-17186719616
           <Star
             key={star}
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
@@ -89,11 +61,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
       .map((n) => n[0])
       .join("")
       .toUpperCase()
-<<<<<<< HEAD
-      .substring(02);
-=======
       .substring(0, 2);
->>>>>>> origin/auto/autonomy-17186719616
   };
   
   return (
@@ -124,11 +92,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
               {review.is_anonymous ? "Anonymous" : review.reviewer_profile?.display_name || "User"}
             </div>
             <div className="text-sm text-muted-foreground">
-<<<<<<< HEAD
-              {formatDistanceToNow(new Date(review.created_at){ addSuffix: true })}
-=======
               {formatDistanceToNow(new Date(review.created_at), { addSuffix: true })}
->>>>>>> origin/auto/autonomy-17186719616
             </div>
           </div>
         </div>
@@ -190,11 +154,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
             <DialogHeader>
               <DialogTitle>Report Review</DialogTitle>
               <DialogDescription>
-<<<<<<< HEAD
-                If you believe this review violates our community guidelinesplease provide details below.
-=======
                 If you believe this review violates our community guidelines, please provide details below.
->>>>>>> origin/auto/autonomy-17186719616
               </DialogDescription>
             </DialogHeader>
             

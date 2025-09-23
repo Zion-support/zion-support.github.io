@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-name: "CodeQL"
-=======
 name: CodeQL
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 
 on:
   push:
@@ -48,10 +44,4 @@ jobs:
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
         with:
-<<<<<<< HEAD
-          category: "/language:${{matrix.language}}"
- 
-
-=======
           category: '/language:javascript'
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3

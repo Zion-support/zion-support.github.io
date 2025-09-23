@@ -18,19 +18,6 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Separator } from "@/components/ui/separator";
 import { toast } from "@/components/ui/use-toast";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 import { useAuth } from "@/hooks/useAuth";
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
 import { supabase } from "@/integrations/supabase/client";
@@ -174,15 +161,10 @@ export function TalentOnboardingForm() {
   // Rest of the file remains unchanged...
   // [Previous implementation continues...]
 <<<<<<< HEAD
-  return <div>Talent onboarding form coming soon.</div>
-}
-=======
-<<<<<<< HEAD
 
   return null;
 }
 =======
   return <div>Talent onboarding form coming soon.</div>
 }
->>>>>>> origin/8h6b38-codex/fix-typescript-module-and-type-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

@@ -2,11 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { safeStorage } from '@/utils/safeStorage';
 import { Button } from '@/components/ui/button';
 <<<<<<< HEAD
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from '@/hooks/useAuth';
-import { toast } from '@/hooks/use-toast';
-=======
-<<<<<<< HEAD
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
@@ -31,7 +26,6 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 interface CartItem {
@@ -43,8 +37,6 @@ interface CartItem {
 
 export default function CartPage() {
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
   const { t: _t } = useTranslation();
   const items = useSelector((s: RootState) => s.cart.items);
   const dispatch = useDispatch<AppDispatch>();
@@ -53,7 +45,6 @@ export default function CartPage() {
   const [guestOpen, setGuestOpen] = useState(false);
   const { toggle: toggleWishlist, isWishlisted } = useWishlist();
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   const navigate = useNavigate();
   const { user } = useAuth();
   const [items, setItems] = useState<CartItem[]>([]);
@@ -77,9 +68,6 @@ export default function CartPage() {
       }
     }
   }, []);
-<<<<<<< HEAD
-=======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
   const updateQuantity = (id: string, qty: number) => {

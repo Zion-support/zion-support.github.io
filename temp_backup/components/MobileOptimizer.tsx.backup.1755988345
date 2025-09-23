@@ -1,27 +1,9 @@
-<<<<<<< HEAD
-import React, { useEffect, useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Smartphone, 
-  Tablet, 
-  Monitor, 
-  Zap, 
-  MousePointer, 
-  Wifi, 
-  Battery, 
-  WifiOff,
-  BatteryCharging,
-  Signal,
-  SignalHigh,
-  SignalLow
-=======
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Smartphone, Tablet, Monitor, RotateCcw, 
   Wifi, WifiOff, Signal, SignalHigh, 
   Mouse, Hand
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-5426
 } from 'lucide-react';
 
 interface MobileOptimizerProps {
@@ -57,24 +39,6 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
       }
     };
 
-<<<<<<< HEAD
-    const checkBattery = async () => {
-      if ('getBattery' in navigator) {
-        try {
-          const battery = await (navigator as any).getBattery();
-          setBatteryLevel(battery.level * 100);
-          setIsCharging(battery.charging);
-          
-          battery.addEventListener('levelchange', () => {
-            setBatteryLevel(battery.level * 100);
-          });
-          
-          battery.addEventListener('chargingchange', () => {
-            setIsCharging(battery.charging);
-          });
-        } catch (error) {
-          console.log('Battery API not supported');
-=======
     // Initial detection
     detectDevice();
     
@@ -163,15 +127,10 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
         
         if (deltaY > deltaX && deltaY > 10) {
           isScrolling = true;
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-5426
         }
       }
     };
 
-<<<<<<< HEAD
-    const handleResize = () => {
-      setIsLandscape(window.innerWidth > window.innerHeight);
-=======
     const handleTouchEnd = (e: TouchEvent) => {
       if (!isScrolling) {
         const deltaY = e.changedTouches[0].clientY - startY;
@@ -189,7 +148,6 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
           document.dispatchEvent(new Event('swipeDown'));
         }
       }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-5426
     };
 
     const handleOrientationChange = () => {
@@ -269,12 +227,6 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
             exit={{ opacity: 0, y: -50 }}
             className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-black/80 backdrop-blur-sm border border-white/20 rounded-2xl px-4 py-2 text-white text-sm"
           >
-<<<<<<< HEAD
-            <div className="flex items-center gap-2">
-              {isMobile ? <Smartphone className="w-4 h-4" /> : <Tablet className="w-4 h-4" />}
-              <span>Mobile Optimized</span>
-              {touchSupported && <MousePointer className="w-4 h-4 text-cyan-400" />}
-=======
             {/* Header */}
             <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 p-4 border-b border-blue-400/30">
               <div className="flex items-center justify-between">
@@ -404,7 +356,6 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
                   Live
                 </span>
               </div>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-5426
             </div>
           </motion.div>
         )}

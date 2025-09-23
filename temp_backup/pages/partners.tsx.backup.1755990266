@@ -1,17 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-  return (
-    <>
-      <Head><title>partners - Zion App</title><meta name="description" content="partners page" /></Head><div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-6">partners</h1><p className="text-lg mb-4">This page is under construction.</p><div className="mt-4"><a href="/" className="text-blue-600 hover:underline">;
-            ← Back to Home</a></div></div></>;
-=======
 import { motion } from 'framer-motion';
 import { 
   Handshake, Users, Globe, Zap, Brain, Atom, 
   ArrowRight, CheckCircle, Star, Building, Shield,
   Award, Rocket
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 } from 'lucide-react';
 import Link from 'next/link';
 

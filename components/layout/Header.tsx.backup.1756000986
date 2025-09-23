@@ -3,23 +3,16 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Menu, X, ChevronDown, Zap, Globe, Shield } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function Header() {
-=======
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);
   const [isSolutionsDropdownOpen, setIsSolutionsDropdownOpen] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
-<<<<<<< HEAD
-=======
     if (typeof window === 'undefined') return;
     
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
@@ -27,8 +20,6 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-<<<<<<< HEAD
-=======
 
   // Close mobile menu when route changes
   useEffect(() => {
@@ -47,7 +38,6 @@ const Header = () => {
     document.addEventListener('click', handleClickOutside);
     return () => document.removeEventListener('click', handleClickOutside);
   }, [isProductDropdownOpen]);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 
   const navigation = [
     { name: 'Product', href: '#', hasDropdown: true },
@@ -212,19 +202,6 @@ const Header = () => {
             ))}
           </nav>
 
-<<<<<<< HEAD
-          {/* Contact Button */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link
-              href="/contact"
-              className="px-6 py-2 bg-gradient-to-r from-neon-blue to-neon-cyan text-black font-semibold rounded-lg hover:from-neon-cyan hover:to-neon-blue transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-neon-blue/25"
-            >
-              Contact Us
-            </Link>
-          </div>
-
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-3">
             <Link

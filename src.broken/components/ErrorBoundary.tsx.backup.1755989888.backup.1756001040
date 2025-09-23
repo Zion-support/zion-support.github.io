@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import type { ReactNode } from "react";
 
@@ -25,7 +23,6 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
   componentDidCatch(error: unknown) {
     console.error("ErrorBoundary caught an error", error);
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React from 'react';
 import type { ReactNode, ErrorInfo } from 'react';
 import { toast } from 'react-hot-toast';
@@ -47,16 +44,11 @@ export class ErrorBoundary extends React.Component<Props, State> {
 
   componentDidCatch(error: Error, _errorInfo: ErrorInfo) {
     toast.error(error.message || 'An unexpected error occurred');
-<<<<<<< HEAD
-=======
->>>>>>> origin/8arrdw-codex/centralize-fetch-error-handling
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   }
 
   render() {
     if (this.state.hasError) {
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
       return this.props.fallback;
     }
@@ -66,14 +58,10 @@ export class ErrorBoundary extends React.Component<Props, State> {
 
 export default ErrorBoundary;
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       return null;
     }
 
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/8arrdw-codex/centralize-fetch-error-handling
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

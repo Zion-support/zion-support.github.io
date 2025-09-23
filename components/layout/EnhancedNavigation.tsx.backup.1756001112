@@ -28,33 +28,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
     {
       name: 'Services',
       href: '/services',
-<<<<<<< HEAD
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">Z</span>
-            </div>
-            <span className="text-xl font-bold text-gray-800">Zion Tech Group</span>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <motion.div variants={itemVariants} className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <div key={item.name} className="relative group">
-                {item.dropdown ? (
-                  <button
-                    onMouseEnter={() => setActiveDropdown(item.name)}
-                    onMouseLeave={() => setActiveDropdown(null)}
-                    className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-300 py-2"
-                  >
-                    <span>{item.name}</span>
-                    <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
-                  </button>
-                ) : (
-                  <Link
-                    href={item.href}
-                    className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-300 py-2"
-=======
       icon: <Brain className="w-4 h-4" />,
       dropdown: [
         { name: 'AI & Machine Learning', href: '/services?category=ai-ml', icon: <Brain className="w-4 h-4" /> },
@@ -81,7 +54,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
         { name: 'Edge Computing', href: '/services?category=edge' },
         { name: 'Blockchain', href: '/services?category=blockchain' },
         { name: 'View All Services', href: '/services' }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
       ]
     },
     {

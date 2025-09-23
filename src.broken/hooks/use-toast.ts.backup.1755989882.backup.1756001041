@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { toast as hotToast, type ToastOptions as HotToastOptions } from 'react-hot-toast';
 
 export type ToastOptions = HotToastOptions & {
@@ -29,7 +27,6 @@ toast.success = (message: string) => hotToast.success(message);
 
 export { toast };
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React from 'react';
 import { useSnackbar, VariantType, OptionsObject } from 'notistack';
 
@@ -61,7 +58,4 @@ export const toast = {
   error: (msg: string) => globalEnqueue?.(msg, { variant: 'error' }),
   success: (msg: string) => globalEnqueue?.(msg, { variant: 'success' }),
 };
-<<<<<<< HEAD
-=======
->>>>>>> origin/7yfp2f-codex/implement-global-error-boundary-with-toasts
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

@@ -148,15 +148,6 @@
     "prebuild": "npm run build:health-check && npm run netlify:manifest",
     "export": "rm -rf .next out tsconfig.tsbuildinfo && mkdir -p .temp && mv pages/reports .temp/ 2>/dev/null || true && NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" next build --no-lint && mv .temp/reports pages/ 2>/dev/null || true && rm -rf .temp",
     "start": "next start",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "postbuild": "node automation/footer-injector.cjs || true",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "type-check": "tsc --noEmit",
-    "prepare": "git config core.hooksPath .husky || true",
-    "fix:all": "npm run lint -- --fix || true",
-    "build:heal": "npm run build || (npm run fix:all && npm run search:index || true && npm run build)",
-=======
     "postbuild": "next export",
           "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
       "type-check": "tsc --noEmit",
@@ -165,7 +156,6 @@
       "prepare": "husky install",
     "fix:all": "npm run lint -- --fix || true && node fix_typescript_syntax_errors.cjs || true && node fix_all_typescript_errors.cjs || true && node final_fix.cjs || true",
     "build:heal": "npm run build || (npm run fix:all && npm run build)",
->>>>>>> origin/cursor/automate-continuous-development-processes-4d04
     "ci:heal": "npm run fix:all && (npm run type-check || true) && npm run build:heal",
     "build:health-check": "node automation/pre-build-health-check.cjs",
     "build:validate": "node automation/nextjs-page-validator.cjs",
@@ -226,11 +216,7 @@
     "ai:cron:stop": "bash automation/ai-trends-cron.sh stop",
     "ai:cron:status": "bash automation/ai-trends-cron.sh status",
     "automation:all": "node automation/launch-all-automation.cjs start",
-<<<<<<< HEAD
-    "automation:status": "node automation/launch-all-automation.cjs status",
-=======
     "automation:status": "node automation/launch-all-automation.cjs start",
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
     "automation:report": "node automation/launch-all-automation.cjs report",
     "intelligence:start": "node automation/app-intelligence-enhancer.cjs",
     "intelligence:watch": "node automation/app-intelligence-enhancer.cjs continuous",
@@ -280,21 +266,6 @@
     "automation:guardian": "node automation/automation-guardian-10min.cjs",
     "automation:cloud": "node automation/cloud-autonomous-orchestrator.cjs",
     "automation:discover": "node automation/auto-discovery-runner.cjs",
-<<<<<<< HEAD
-    "redundancy:start": "./automation/start-redundancy-system.sh start",
-    "redundancy:stop": "./automation/start-redundancy-system.sh stop",
-    "redundancy:restart": "./automation/start-redundancy-system.sh restart",
-    "redundancy:status": "./automation/start-redundancy-system.sh status",
-    "redundancy:logs": "./automation/start-redundancy-system.sh logs",
-    "redundancy:system": "node automation/redundancy-automation-system.cjs",
-    "redundancy:health": "./automation/start-redundancy-system.sh health",
-    "redundancy:git-sync": "node automation/redundancy-git-sync.cjs",
-    "redundancy:build": "node automation/redundancy-build-monitor.cjs",
-    "redundancy:pm2": "node automation/pm2-redundancy-monitor.cjs check",
-    "redundancy:pm2:stop": "pm2 stop ecosystem.redundancy.cjs",
-    "redundancy:pm2:restart": "pm2 restart ecosystem.redundancy.cjs",
-    "redundancy:pm2:status": "pm2 status",
-=======
     "redundancy:start": "node automation/redundancy/master-redundancy-orchestrator.cjs start",
     "redundancy:stop": "node automation/redundancy/master-redundancy-orchestrator.cjs stop",
     "redundancy:status": "node automation/redundancy/master-redundancy-orchestrator.cjs status",
@@ -319,7 +290,6 @@
     "redundancy:pm2:legacy:stop": "pm2 stop ecosystem.redundancy.cjs",
     "redundancy:pm2:legacy:restart": "pm2 restart ecosystem.redundancy.cjs",
     "redundancy:pm2:legacy:status": "pm2 status",
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
     "automation:improvement:dev": "nodemon automation/continuous-automation-improvement-system.js",
     "automation:coordinator": "node automation/master-automation-coordinator.js",
     "automation:coordinator:dev": "nodemon automation/master-automation-coordinator.js",
@@ -449,8 +419,6 @@
     "postautomation": "npm run automation:git-sync",
     "lint:staged": "lint-staged",
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
     "performance:audit": "node automation/performance-audit.cjs",
     "supervisor:start": "bash automation/supervisor/supervisor-cron.sh start",
     "supervisor:stop": "bash automation/supervisor/supervisor-cron.sh stop",
@@ -459,7 +427,6 @@
     "supervisor:discover": "node automation/supervisor-agents-factory.cjs"
   },
 =======
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
     "ui-evolution:start": "node automation/ui-evolution-launcher.js start",
     "ui-evolution:once": "node automation/ui-evolution-launcher.js once",
     "ui-evolution:analyze": "node automation/ui-evolution-launcher.js analyze",
@@ -475,53 +442,6 @@
     "venture:cron:start": "bash automation/venture-cron.sh start",
     "venture:cron:stop": "bash automation/venture-cron.sh stop",
     "venture:cron:status": "bash automation/venture-cron.sh status",
-<<<<<<< HEAD
-    "venture:report": "node automation/venture-orchestrator.cjs report",
-    "frontend-sync:autonomous:start": "node automation/launch-frontend-sync-autonomous.js",
-    "frontend-sync:autonomous:once": "node automation/frontend-sync-autonomous-orchestrator.cjs once 0",
-    "frontend-sync:autonomous:cron": "bash automation/frontend-sync-autonomous-cron.sh",
-    "git:pull": "node automation/git-pull-rebase.cjs",
-    "git:cron:start": "bash automation/git-sync-cron.sh start",
-    "git:cron:stop": "bash automation/git-sync-cron.sh stop",
-    "git:cron:status": "bash automation/git-sync-cron.sh status",
-    "homepage:update": "node automation/homepage-updater.cjs",
-    "front:futurize": "node automation/front-futurizer.cjs",
-    "front:futurize:cron": "node -e \"const cp=require('child_process'); setInterval(()=>cp.exec('node automation/front-futurizer.cjs',()=>{}), 1000*60*60*6)\"",
-    "front:directory": "node automation/front-index-directory-builder.cjs",
-    "front:continuous": "node automation/continuous-front-runner.cjs",
-    "front:continuous:fast": "node -e \"const cp=require('child_process'); const run=()=>cp.exec('node automation/continuous-front-runner.cjs',()=>{}); run(); setInterval(run, 1000*60*5);\"",
-    "ads:fast": "node automation/fast-advertising-orchestrator.cjs",
-    "cloud:agents": "node automation/cloud-autonomous-agents-factory.cjs",
-    "cloud:crawl": "node automation/cloud-site-crawler.cjs",
-    "cloud:factory": "node automation/cloud-content-factory.cjs",
-    "cloud:advertise": "node automation/cloud-content-advertiser.cjs",
-    "cloud:continuous": "node scripts/continuous-cloud-agents.cjs",
-    "gh:trigger": "node scripts/trigger-workflows.cjs",
-    "gh:auto-heal": "node scripts/workflows-auto-healer.cjs && git add .github/workflows && git commit -m 'ci(auto-heal): normalize workflows [skip ci]' || true && git push origin HEAD",
-    "redundancy:check": "node automation/redundancy-automation-system.cjs check",
-    "redundancy:monitor": "node automation/redundancy-automation-system.cjs monitor",
-    "redundancy:github": "node automation/github-actions-redundancy.cjs check",
-    "redundancy:netlify": "node automation/netlify-functions-redundancy.cjs check",
-    "redundancy:comprehensive:start": "./automation/start-comprehensive-redundancy.sh",
-    "redundancy:comprehensive:status": "./automation/comprehensive-redundancy-status.sh",
-    "redundancy:comprehensive:restart": "./automation/comprehensive-redundancy-restart.sh",
-    "redundancy:comprehensive:stop": "./automation/comprehensive-redundancy-stop.sh",
-    "redundancy:comprehensive:pm2": "node automation/comprehensive-pm2-redundancy.cjs",
-    "redundancy:comprehensive:github": "node automation/comprehensive-github-actions-redundancy.cjs",
-    "redundancy:comprehensive:netlify": "node automation/comprehensive-netlify-functions-redundancy.cjs",
-    "redundancy:ultimate:start": "bash automation/start-ultimate-redundancy.sh start",
-    "redundancy:ultimate:stop": "bash automation/start-ultimate-redundancy.sh stop",
-    "redundancy:ultimate:restart": "bash automation/start-ultimate-redundancy.sh restart",
-    "redundancy:ultimate:status": "bash automation/start-ultimate-redundancy.sh status",
-    "redundancy:ultimate:logs": "bash automation/start-ultimate-redundancy.sh logs",
-    "redundancy:ultimate:health": "bash automation/start-ultimate-redundancy.sh health",
-    "redundancy:ultimate:recover": "bash automation/start-ultimate-redundancy.sh recover",
-    "redundancy:ultimate:pm2": "bash automation/start-ultimate-redundancy.sh pm2",
-    "redundancy:ultimate:github": "bash automation/start-ultimate-redundancy.sh github",
-    "redundancy:ultimate:netlify": "bash automation/start-ultimate-redundancy.sh netlify",
-    "redundancy:ultimate:npm": "bash automation/start-ultimate-redundancy.sh npm"
-  },
-=======
           "venture:report": "node automation/venture-orchestrator.cjs report",
       "frontend-sync:autonomous:start": "node automation/launch-frontend-sync-autonomous.js",
       "frontend-sync:autonomous:once": "node automation/frontend-sync-autonomous-orchestrator.cjs once 0",
@@ -532,7 +452,6 @@
       "cron:remove": "bash automation/install-cron.sh remove",
       "cron:status": "bash automation/install-cron.sh status"
     },
->>>>>>> origin/cursor/automate-error-fixing-and-deploy-to-main-8fed
 >>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
@@ -590,18 +509,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "husky": "^9.1.7",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "lint-staged": "^16.1.5",
-    "postcss": "^8.4.32",
-    "sharp": "^0.34.3",
-    "tailwindcss": "^4.1.12",
-    "ts-node": "^10.9.2",
-    "typescript": "5.9.2"
-  },
 =======
-=======
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
     "lint-staged": "^16.1.4",
           "postcss": "^8.4.32",
       "sharp": "^0.33.4",
@@ -613,10 +521,6 @@
       "jest-environment-jsdom": "^29.7.0",
       "identity-obj-proxy": "^3.0.0"
     },
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-continuous-development-processes-4d04
-=======
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"

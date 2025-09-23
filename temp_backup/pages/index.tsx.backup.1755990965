@@ -66,12 +66,6 @@ const Home: NextPage<Props> = ({ auto, trends }) => {
               )}
             </div>
 
-<<<<<<< HEAD
-            <div>
-              <h3 className="text-xl font-semibold">Repository Pulse</h3>
-              <p className="mb-2">24h summary of issues and PRs.</p>
-              <Link className="text-blue-600 underline" href="/github-pulse.json">View GitHub Pulse</Link>
-=======
           {/* Revolutionary Platform Capabilities */}
           <section className="mx-auto max-w-7xl px-6 pb-16">
             <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🚀 Revolutionary Platform Capabilities</h2>
@@ -184,7 +178,6 @@ const Home: NextPage<Props> = ({ auto, trends }) => {
                   View Deployment Guide →
                 </Link>
               </div>
->>>>>>> origin/cursor/bc-37e0a79f-43c4-4216-bd12-ddf1b3362bec-8633
             </div>
 
             <div>
@@ -200,12 +193,6 @@ const Home: NextPage<Props> = ({ auto, trends }) => {
             </div>
           </div>
 
-<<<<<<< HEAD
-          <div className="mt-6">
-            <Link className="text-blue-600 underline" href="/automation">See all automation outputs</Link>
-          </div>
-        </section>
-=======
           {/* Comprehensive Platform Navigation */}
           <section className="mx-auto max-w-7xl px-6 pb-16">
             <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🔗 Explore Our Revolutionary Platform</h2>
@@ -636,7 +623,6 @@ const Home: NextPage<Props> = ({ auto, trends }) => {
             </div>
           </section>
         </main>
->>>>>>> origin/cursor/bc-37e0a79f-43c4-4216-bd12-ddf1b3362bec-8633
       </div>
     </>
   );

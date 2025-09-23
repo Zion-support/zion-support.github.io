@@ -1,19 +1,10 @@
 
-<<<<<<< HEAD
-import React from "react",
-import { Card, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react'
-import Link from "next/link",
-=======
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react'
 import Link from "next/link";
->>>>>>> origin/auto/autonomy-17186719616
 
 export function ClientDashboard() {
   return (
@@ -23,13 +14,6 @@ export function ClientDashboard() {
           <Plus className="mr-2 h-5 w-5" /> Post a New Job
         </Button>
       </section>
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
       
       <section>
         <div className="flex items-center justify-between mb-4">
@@ -61,21 +45,11 @@ export function ClientDashboard() {
                   <div className="h-full bg-primary rounded-full" style={{width: '60%'}}></div>
                 </div>
               </div>
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
               
               <div className="flex justify-between items-center">
                 <div className="flex -space-x-2">
                   <div className="w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center">
                     <UserCheck className="h-4 w-4" />
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
                   </div>
                   <div className="w-7 h-7 rounded-full bg-secondary/20 border-2 border-background flex items-center justify-center">
                     <UserCheck className="h-4 w-4" />
@@ -89,17 +63,6 @@ export function ClientDashboard() {
       </section>
       
       <section>
-<<<<<<< HEAD
-        <div className='flex items-center justify-between mb-4'>
-          <h2 className='text-lg font-medium'>Suggested Talents</h2>
-          <Link href='/mobile/marketplace'>
-            <Button variant='ghost' size='sm' className='h-8 gap-1'>
-              View all <ChevronRight className='h-4 w-4' />
-            </Button>
-          </Link>
-        </div>
-        <div className='space-y-3'>
-=======
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Suggested Talents</h2>
           <Link href="/mobile/marketplace">
@@ -108,7 +71,6 @@ export function ClientDashboard() {
             </Button>
           </Link>
         </div>
->>>>>>> origin/auto/autonomy-17186719616
         
         <div className="space-y-3">
           <Card>
@@ -155,20 +117,6 @@ export function ClientDashboard() {
                   89% match
                 </div>
               </div>
-<<<<<<< HEAD
-
-              <div className='mt-3 flex gap-1 flex-wrap'>
-                <Badge variant='outline' className='text-xs'>
-                  React
-                </Badge>
-                <Badge variant='outline' className='text-xs'>
-                  Node.js
-                </Badge>
-                <Badge variant='outline' className='text-xs'>
-                  AWS
-                </Badge>              <div className="mt-3 flex gap-1 flex-wrap">
-=======
->>>>>>> origin/auto/autonomy-17186719616
               <div className="mt-3 flex gap-1 flex-wrap">
                 <Badge variant="outline" className="text-xs">React</Badge>
                 <Badge variant="outline" className="text-xs">Node.js</Badge>
@@ -196,21 +144,11 @@ export function ClientDashboard() {
               </div>
               <div>
                 <p className="text-sm">
-<<<<<<< HEAD
-                  <strong>Website Redesign: </strong> Sarah submitted Milestone 2 for review
-=======
                   <strong>Website Redesign:</strong> Sarah submitted Milestone 2 for review
->>>>>>> origin/auto/autonomy-17186719616
                 </p>
                 <p className="text-xs text-muted-foreground">2 hours ago</p>
               </div>
             </div>
-<<<<<<< HEAD
-            <div className='flex gap-3 items-start'>
-              <div className='bg-primary/10 p-2 rounded-full'>
-                <FileText className='h-5 w-5 text-primary' />
-=======
->>>>>>> origin/auto/autonomy-17186719616
             
             <div className="flex gap-3 items-start">
               <div className="bg-primary/10 p-2 rounded-full">
@@ -223,19 +161,11 @@ export function ClientDashboard() {
                 <p className="text-xs text-muted-foreground">1 day ago</p>
               </div>
             </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
             
             <Button variant="outline" className="w-full">View All Notifications</Button>
           </CardContent>
         </Card>
       </section>
     </div>
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

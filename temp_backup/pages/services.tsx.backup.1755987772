@@ -102,9 +102,6 @@ const allServices = [
   ...marketValidatedServices,
   ...industryRealServices,
   ...real2025Q4AugmentedBatch,
-<<<<<<< HEAD
-  ...real2029Q3Additions
-=======
   ...real2029Q3Additions,
   ...validatedServices2025Q4,
   ...real2035Q2Additions,
@@ -142,7 +139,6 @@ const allServices = [
   // Our new comprehensive services expansion
   ...comprehensiveServicesExpansion,
   ...advancedInnovativeServices
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-a421
 ];
 
 const categories = [

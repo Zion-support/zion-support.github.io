@@ -1,11 +1,5 @@
 [build]
-<<<<<<< HEAD
-<<<<<<< HEAD
-  # Build command
-  command = "npm run build:netlify"
 =======
-=======
->>>>>>> 0898e5119e1743cc34bc24d7b78e613422d39ff1
   # Pre-build command to handle dependencies
   command = "bash scripts/netlify-pre-build.sh && npm run build"
 >>>>>>> origin/main
@@ -27,11 +21,6 @@
   NODE_OPTIONS = "--max-old-space-size=6144"
   NODE_ENV = "production"
   
-<<<<<<< HEAD
-  # Yarn configuration
-  YARN_CACHE_FOLDER = "/opt/buildhome/.yarn_cache"
-  YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
-=======
   # Yarn configuration - optimized for reliable builds
   YARN_CACHE_FOLDER = "/opt/buildhome/.yarn_cache"
   YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
@@ -39,7 +28,6 @@
   YARN_PREFER_OFFLINE = "true"
   YARN_IGNORE_ENGINES = "true"
   YARN_IGNORE_PLATFORM = "true"
->>>>>>> origin/main
   
   # Install devDependencies for build tools
   YARN_INSTALL_DEV = "true"
@@ -52,13 +40,6 @@
   
   # Ensure Vite is available and handle peer dependencies
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
-<<<<<<< HEAD
-  
-  # Disable Next.js auto-detection
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
-  # Force Vite build mode
-  NETLIFY_USE_NEXT_PLUGIN = "false"
-=======
   NPM_CONFIG_AUDIT = "false"
   NPM_CONFIG_FUND = "false"
   NPM_CONFIG_FORCE = "true"
@@ -71,7 +52,6 @@
   # Additional build optimizations
   CI = "true"
   GENERATE_SOURCEMAP = "false"
->>>>>>> origin/main
 
 # Cache configuration to prevent dependency issues
 [build.cache]

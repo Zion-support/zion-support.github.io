@@ -35,29 +35,12 @@ const sidebarItems: SidebarItem[] = [
       { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-training', badge: 'Popular' },
       { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance-platform', badge: 'New' },
       { name: 'AI Content Personalization', href: '/ai-content-personalization-engine', badge: 'New' },
-<<<<<<< HEAD
-      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem-manager' },
-      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance-framework' },
-      { name: 'AI Evaluation Orchestrator', href: '/services/ai-evaluation-orchestrator', badge: 'New' },
-      { name: 'AI Support Triage Router', href: '/services/ai-support-triage-router', badge: 'New' },
-      { name: 'AI Code Review Assistant Pro', href: '/services/ai-code-review-assistant-pro', badge: 'New' },
-      { name: 'AI Revenue Forecasting Copilot', href: '/services/ai-revenue-forecasting-copilot', badge: 'New' },
-      { name: 'RAG Evaluation Lab', href: '/rag-evaluation-lab/', badge: 'New' },
-      { name: 'API Performance Testing', href: '/api-performance-testing/' },
-      { name: 'AI Creativity Studio', href: '/ai-creativity-studio' },
-      { name: 'AI Education Platform', href: '/ai-education-platform' },
-=======
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-b7a7
       { name: 'AI Healthcare Diagnostics', href: '/healthcare-solutions' },
       { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' },
       { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer' }
     ]
   },
   {
-<<<<<<< HEAD
-    name: 'Services',
-    href: '/services',
-=======
     title: 'Quantum & Emerging Tech',
     icon: <Atom className="w-5 h-5" />,
     color: 'text-indigo-400',
@@ -118,7 +101,6 @@ const sidebarItems: SidebarItem[] = [
   },
   {
     title: 'Micro SAAS',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-b7a7
     icon: <Rocket className="w-5 h-5" />,
     color: 'text-emerald-400',
     items: [

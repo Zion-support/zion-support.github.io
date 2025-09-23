@@ -7,8 +7,4 @@ console.log(' Starting Real-time Monitoring...')
     'tsconfig.json'
         "status"
       "directory"
-<<<<<<< HEAD
       "status"
-=======
-      "status"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

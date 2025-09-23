@@ -1,78 +1,3 @@
-<<<<<<< HEAD
-export interface CustomerInquiry {
-  id: string;
-  customerId: string;
-  customerName: string;
-  email: string;
-  phone?: string;
-  subject: string;
-  message: string;
-  category: 'technical' | 'billing' | 'general' | 'feature-request' | 'bug-report';
-  priority: 'low' | 'medium' | 'high' | 'urgent';
-  status: 'open' | 'in-progress' | 'resolved' | 'closed';
-  assignedTo?: string;
-  createdAt: Date;
-  updatedAt: Date;
-  tags: string[];
-  sentiment: 'positive' | 'negative' | 'neutral';
-  estimatedResolutionTime: number; // in hours
-}
-
-export interface SupportTicket {
-  id: string;
-  inquiryId: string;
-  ticketNumber: string;
-  title: string;
-  description: string;
-  customer: {
-    id: string;
-    name: string;
-    email: string;
-    tier: 'basic' | 'premium' | 'enterprise';
-  };
-  category: string;
-  priority: string;
-  status: string;
-  assignedAgent?: string;
-  createdAt: Date;
-  updatedAt: Date;
-  resolvedAt?: Date;
-  resolutionTime: number; // in hours
-  customerSatisfaction?: number; // 1-5 rating
-  followUpRequired: boolean;
-  tags: string[];
-}
-
-export interface KnowledgeBaseArticle {
-  id: string;
-  title: string;
-  content: string;
-  category: string;
-  tags: string[];
-  author: string;
-  createdAt: Date;
-  updatedAt: Date;
-  views: number;
-  helpful: number;
-  notHelpful: number;
-  lastReviewed: Date;
-  status: 'draft' | 'published' | 'archived';
-}
-
-export interface CustomerServiceMetrics {
-  totalInquiries: number;
-  resolvedInquiries: number;
-  averageResolutionTime: number;
-  customerSatisfaction: number;
-  firstResponseTime: number;
-  ticketVolume: {
-    daily: number;
-    weekly: number;
-    monthly: number;
-  };
-  categoryDistribution: Record<string, number>;
-  priorityDistribution: Record<string, number>;
-=======
 export interface CustomerTicket {
   id: string;
   customerId: string;
@@ -143,7 +68,6 @@ export interface CustomerServiceMetrics {
   customerSatisfaction: number;
   firstResponseTime: number;
   ticketVolumeByCategory: Record<string, number>;
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1c42
   agentPerformance: Record<string, {
     ticketsResolved: number;
     averageResolutionTime: number;
@@ -151,8 +75,6 @@ export interface CustomerServiceMetrics {
   }>;
 }
 
-<<<<<<< HEAD
-=======
 export interface CustomerServiceRequest {
   customerId: string;
   subject: string;
@@ -172,7 +94,6 @@ export interface CustomerServiceResponse {
   assignedAgent?: string;
 }
 
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1c42
 export class AICustomerServiceService {
   private apiKey: string;
   private baseUrl: string;
@@ -182,134 +103,14 @@ export class AICustomerServiceService {
     this.baseUrl = baseUrl;
   }
 
-<<<<<<< HEAD
-  async createCustomerInquiry(inquiry: Omit<CustomerInquiry, 'id' | 'createdAt' | 'updatedAt' | 'status' | 'sentiment' | 'estimatedResolutionTime'>): Promise<CustomerInquiry> {
-    try {
-      if (typeof fetch === 'undefined') {
-        throw new Error('Fetch API not available');
-      }
-      
-      const response = await fetch(`${this.baseUrl}/api/customer-service/inquiries`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${this.apiKey}`,
-        },
-        body: JSON.stringify(inquiry),
-      });
-
-      if (!response.ok) {
-        throw new Error(`Failed to create customer inquiry: ${response.statusText}`);
-      }
-
-      const data = await response.json();
-      return {
-        ...data,
-        createdAt: new Date(data.createdAt),
-        updatedAt: new Date(data.updatedAt),
-      };
-    } catch (error) {
-      console.error('Error creating customer inquiry:', error);
-      throw error;
-    }
-  }
-
-  async getCustomerInquiries(filters?: {
-    status?: string;
-    category?: string;
-    priority?: string;
-    customerId?: string;
-  }): Promise<CustomerInquiry[]> {
-    try {
-      if (typeof fetch === 'undefined') {
-        throw new Error('Fetch API not available');
-      }
-      
-      let queryString = '';
-      if (filters) {
-        const params = Object.entries(filters)
-          .filter(([_, value]) => value)
-          .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
-          .join('&');
-        queryString = params ? `?${params}` : '';
-      }
-
-      const response = await fetch(`${this.baseUrl}/api/customer-service/inquiries${queryString}`, {
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-        },
-      });
-
-      if (!response.ok) {
-        throw new Error(`Failed to fetch customer inquiries: ${response.statusText}`);
-      }
-
-      const data = await response.json();
-      return data.inquiries.map((inquiry: any) => ({
-        ...inquiry,
-        createdAt: new Date(inquiry.createdAt),
-        updatedAt: new Date(inquiry.updatedAt),
-      }));
-    } catch (error) {
-      console.error('Error fetching customer inquiries:', error);
-      throw error;
-    }
-  }
-
-  async updateInquiryStatus(inquiryId: string, status: string, assignedTo?: string): Promise<CustomerInquiry> {
-    try {
-      if (typeof fetch === 'undefined') {
-        throw new Error('Fetch API not available');
-      }
-      
-      const response = await fetch(`${this.baseUrl}/api/customer-service/inquiries/${inquiryId}`, {
-        method: 'PATCH',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${this.apiKey}`,
-        },
-        body: JSON.stringify({ status, assignedTo }),
-      });
-
-      if (!response.ok) {
-        throw new Error(`Failed to update inquiry status: ${response.statusText}`);
-      }
-
-      const data = await response.json();
-      return {
-        ...data,
-        createdAt: new Date(data.createdAt),
-        updatedAt: new Date(data.updatedAt),
-      };
-    } catch (error) {
-      console.error('Error updating inquiry status:', error);
-      throw error;
-    }
-  }
-
-  async createSupportTicket(inquiryId: string, ticketData: Omit<SupportTicket, 'id' | 'inquiryId' | 'ticketNumber' | 'createdAt' | 'updatedAt' | 'resolutionTime'>): Promise<SupportTicket> {
-    try {
-      if (typeof fetch === 'undefined') {
-        throw new Error('Fetch API not available');
-      }
-      
-=======
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
     try {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1c42
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${this.apiKey}`,
         },
-<<<<<<< HEAD
-        body: JSON.stringify({ inquiryId, ...ticketData }),
-      });
-
-      if (!response.ok) {
-        throw new Error(`Failed to create support ticket: ${response.statusText}`);
-=======
         body: JSON.stringify(request),
       });
 
@@ -335,7 +136,6 @@ export class AICustomerServiceService {
 
       if (!response.ok) {
         throw new Error(`Get ticket API error: ${response.statusText}`);
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1c42
       }
 
       const data = await response.json();
@@ -344,11 +144,6 @@ export class AICustomerServiceService {
         createdAt: new Date(data.createdAt),
         updatedAt: new Date(data.updatedAt),
         resolvedAt: data.resolvedAt ? new Date(data.resolvedAt) : undefined,
-<<<<<<< HEAD
-      };
-    } catch (error) {
-      console.error('Error creating support ticket:', error);
-=======
         conversationHistory: data.conversationHistory.map((msg: any) => ({
           ...msg,
           timestamp: new Date(msg.timestamp),
@@ -356,43 +151,23 @@ export class AICustomerServiceService {
       };
     } catch (error) {
       console.error('Error getting ticket:', error);
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1c42
       throw error;
     }
   }
 
-<<<<<<< HEAD
-  async resolveTicket(ticketId: string, resolution: string, customerSatisfaction?: number): Promise<SupportTicket> {
-    try {
-      if (typeof fetch === 'undefined') {
-        throw new Error('Fetch API not available');
-      }
-      
-      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}/resolve`, {
-        method: 'POST',
-=======
   async updateTicket(ticketId: string, updates: Partial<CustomerTicket>): Promise<CustomerTicket> {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
         method: 'PATCH',
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1c42
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${this.apiKey}`,
         },
-<<<<<<< HEAD
-        body: JSON.stringify({ resolution, customerSatisfaction }),
-      });
-
-      if (!response.ok) {
-        throw new Error(`Failed to resolve ticket: ${response.statusText}`);
-=======
         body: JSON.stringify(updates),
       });
 
       if (!response.ok) {
         throw new Error(`Update ticket API error: ${response.statusText}`);
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1c42
       }
 
       const data = await response.json();
@@ -401,11 +176,6 @@ export class AICustomerServiceService {
         createdAt: new Date(data.createdAt),
         updatedAt: new Date(data.updatedAt),
         resolvedAt: data.resolvedAt ? new Date(data.resolvedAt) : undefined,
-<<<<<<< HEAD
-      };
-    } catch (error) {
-      console.error('Error resolving ticket:', error);
-=======
         conversationHistory: data.conversationHistory.map((msg: any) => ({
           ...msg,
           timestamp: new Date(msg.timestamp),
@@ -413,101 +183,46 @@ export class AICustomerServiceService {
       };
     } catch (error) {
       console.error('Error updating ticket:', error);
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1c42
       throw error;
     }
   }
 
-<<<<<<< HEAD
-  async createKnowledgeBaseArticle(article: Omit<KnowledgeBaseArticle, 'id' | 'createdAt' | 'updatedAt' | 'views' | 'helpful' | 'notHelpful' | 'lastReviewed'>): Promise<KnowledgeBaseArticle> {
-    try {
-      if (typeof fetch === 'undefined') {
-        throw new Error('Fetch API not available');
-      }
-      
-      const response = await fetch(`${this.baseUrl}/api/customer-service/knowledge-base`, {
-=======
   async addMessage(ticketId: string, message: Omit<CustomerMessage, 'id' | 'timestamp'>): Promise<CustomerMessage> {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}/messages`, {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1c42
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${this.apiKey}`,
         },
-<<<<<<< HEAD
-        body: JSON.stringify(article),
-      });
-
-      if (!response.ok) {
-        throw new Error(`Failed to create knowledge base article: ${response.statusText}`);
-=======
         body: JSON.stringify(message),
       });
 
       if (!response.ok) {
         throw new Error(`Add message API error: ${response.statusText}`);
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1c42
       }
 
       const data = await response.json();
       return {
         ...data,
-<<<<<<< HEAD
-        createdAt: new Date(data.createdAt),
-        updatedAt: new Date(data.updatedAt),
-        lastReviewed: new Date(data.lastReviewed),
-      };
-    } catch (error) {
-      console.error('Error creating knowledge base article:', error);
-=======
         timestamp: new Date(data.timestamp),
       };
     } catch (error) {
       console.error('Error adding message:', error);
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1c42
       throw error;
     }
   }
 
-<<<<<<< HEAD
-  async searchKnowledgeBase(query: string, category?: string): Promise<KnowledgeBaseArticle[]> {
-    try {
-      if (typeof fetch === 'undefined') {
-        throw new Error('Fetch API not available');
-      }
-      
-      let queryString = `query=${encodeURIComponent(query)}`;
-      if (category) queryString += `&category=${encodeURIComponent(category)}`;
-
-      const response = await fetch(`${this.baseUrl}/api/customer-service/knowledge-base/search?${queryString}`, {
-=======
   async generateAIResponse(ticketId: string): Promise<AIResponse> {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}/ai-response`, {
         method: 'POST',
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1c42
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
         },
       });
 
       if (!response.ok) {
-<<<<<<< HEAD
-        throw new Error(`Failed to search knowledge base: ${response.statusText}`);
-      }
-
-      const data = await response.json();
-      return data.articles.map((article: any) => ({
-        ...article,
-        createdAt: new Date(article.createdAt),
-        updatedAt: new Date(article.updatedAt),
-        lastReviewed: new Date(article.lastReviewed),
-      }));
-    } catch (error) {
-      console.error('Error searching knowledge base:', error);
-=======
         throw new Error(`AI response API error: ${response.statusText}`);
       }
 
@@ -518,33 +233,19 @@ export class AICustomerServiceService {
       };
     } catch (error) {
       console.error('Error generating AI response:', error);
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1c42
       throw error;
     }
   }
 
-<<<<<<< HEAD
-  async getCustomerServiceMetrics(timeRange: 'day' | 'week' | 'month' = 'month'): Promise<CustomerServiceMetrics> {
-    try {
-      if (typeof fetch === 'undefined') {
-        throw new Error('Fetch API not available');
-      }
-      
-      const response = await fetch(`${this.baseUrl}/api/customer-service/metrics?timeRange=${timeRange}`, {
-=======
   async getCustomerProfile(customerId: string): Promise<CustomerProfile> {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/customers/${customerId}`, {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1c42
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
         },
       });
 
       if (!response.ok) {
-<<<<<<< HEAD
-        throw new Error(`Failed to fetch customer service metrics: ${response.statusText}`);
-=======
         throw new Error(`Get customer profile API error: ${response.statusText}`);
       }
 
@@ -569,29 +270,15 @@ export class AICustomerServiceService {
 
       if (!response.ok) {
         throw new Error(`Get metrics API error: ${response.statusText}`);
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1c42
       }
 
       return await response.json();
     } catch (error) {
-<<<<<<< HEAD
-      console.error('Error fetching customer service metrics:', error);
-=======
       console.error('Error getting metrics:', error);
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1c42
       throw error;
     }
   }
 
-<<<<<<< HEAD
-  async autoAssignInquiries(): Promise<void> {
-    try {
-      if (typeof fetch === 'undefined') {
-        throw new Error('Fetch API not available');
-      }
-      
-      const response = await fetch(`${this.baseUrl}/api/customer-service/auto-assign`, {
-=======
   async searchTickets(query: string, filters?: Record<string, any>): Promise<CustomerTicket[]> {
     try {
       const params = new URLSearchParams({ query, ...filters });
@@ -625,7 +312,6 @@ export class AICustomerServiceService {
   async autoAssignTickets(): Promise<{ assigned: number; failed: number }> {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/auto-assign`, {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1c42
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
@@ -633,82 +319,16 @@ export class AICustomerServiceService {
       });
 
       if (!response.ok) {
-<<<<<<< HEAD
-        throw new Error(`Failed to auto-assign inquiries: ${response.statusText}`);
-      }
-    } catch (error) {
-      console.error('Error auto-assigning inquiries:', error);
-=======
         throw new Error(`Auto assign tickets API error: ${response.statusText}`);
       }
 
       return await response.json();
     } catch (error) {
       console.error('Error auto-assigning tickets:', error);
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1c42
       throw error;
     }
   }
 
-<<<<<<< HEAD
-  async generateCustomerServiceReport(timeRange: 'day' | 'week' | 'month' = 'month'): Promise<{
-    metrics: CustomerServiceMetrics;
-    insights: string[];
-    recommendations: string[];
-  }> {
-    try {
-      const metrics = await this.getCustomerServiceMetrics(timeRange);
-      
-      const insights = this.generateInsights(metrics);
-      const recommendations = this.generateRecommendations(metrics);
-
-      return {
-        metrics,
-        insights,
-        recommendations,
-      };
-    } catch (error) {
-      console.error('Error generating customer service report:', error);
-      throw error;
-    }
-  }
-
-  private generateInsights(metrics: CustomerServiceMetrics): string[] {
-    const insights: string[] = [];
-
-    if (metrics.averageResolutionTime > 24) {
-      insights.push('Resolution time is above industry average. Consider adding more support agents or improving processes.');
-    }
-
-    if (metrics.customerSatisfaction < 4.0) {
-      insights.push('Customer satisfaction is below target. Review recent resolutions and agent training.');
-    }
-
-    if (metrics.firstResponseTime > 4) {
-      insights.push('First response time is slow. Implement auto-responders or increase agent availability.');
-    }
-
-    return insights;
-  }
-
-  private generateRecommendations(metrics: CustomerServiceMetrics): string[] {
-    const recommendations: string[] = [];
-
-    if (metrics.averageResolutionTime > 24) {
-      recommendations.push('Implement automated ticket routing based on agent expertise');
-      recommendations.push('Create more comprehensive knowledge base articles');
-      recommendations.push('Provide additional training for support agents');
-    }
-
-    if (metrics.customerSatisfaction < 4.0) {
-      recommendations.push('Implement customer feedback surveys after ticket resolution');
-      recommendations.push('Review and improve resolution processes');
-      recommendations.push('Consider implementing customer success managers');
-    }
-
-    return recommendations;
-  }
-=======
   async generateCustomerServiceReport(timeframe: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/reports`, {
@@ -731,7 +351,6 @@ export class AICustomerServiceService {
       throw error;
     }
   }
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1c42
 }
 
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');

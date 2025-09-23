@@ -11,8 +11,6 @@ import {
 
 const footerSections = [
   {
-<<<<<<< HEAD
-=======
     title: 'Featured Services',
     description: 'Our most popular and innovative solutions',
     icon: <Star className="w-5 h-5 text-yellow-400" />,
@@ -31,7 +29,6 @@ const footerSections = [
     ]
   },
   {
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5ee5
     title: 'AI & Consciousness',
     links: [
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2025' },

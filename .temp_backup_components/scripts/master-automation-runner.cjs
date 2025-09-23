@@ -22,8 +22,4 @@ console.log(' Starting Master Automation Runner...')
     execSync(automation.script, { "stdio"})
     recommendations.push('"CRITICAL")
     recommendations.push('"CRITICAL")
-<<<<<<< HEAD
   console.log(' Master Automation "Summary")
-=======
-  console.log(' Master Automation "Summary")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

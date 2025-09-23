@@ -1,33 +1,15 @@
 
 import { Star } from 'lucide-react'
-<<<<<<< HEAD
-import { Progress } from "@/components/ui/progress",
-
-interface ReviewStatsProps {
-  averageRating: number,
-  totalReviews: number,
-  ratingDistribution?: Record<number number>
-=======
 import { Progress } from "@/components/ui/progress";
 
 interface ReviewStatsProps {
   averageRating: number;
   totalReviews: number;
   ratingDistribution?: Record<number, number>;
->>>>>>> origin/auto/autonomy-17186719616
 }
 
 export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {
   // Format the average rating to one decimal place
-<<<<<<< HEAD
-  const formattedRating = averageRating.toFixed(1),
-  
-  // Calculate percentages for distribution if available
-  const getPercentage = (count: number) => {
-    if (totalReviews === 0) return 0,
-    return (count / totalReviews) * 100
-  },
-=======
   const formattedRating = averageRating.toFixed(1);
   
   // Calculate percentages for distribution if available
@@ -35,7 +17,6 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
     if (totalReviews === 0) return 0;
     return (count / totalReviews) * 100;
   };
->>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <div className="bg-card border rounded-lg p-4">
@@ -78,9 +59,5 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
         </div>
       )}
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

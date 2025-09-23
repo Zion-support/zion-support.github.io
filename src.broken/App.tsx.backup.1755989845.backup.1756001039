@@ -21,8 +21,6 @@ import {
   SellerRoutes
 } from './routes';
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const Home = React.lazy(() => import('./pages/Home'));
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
@@ -39,7 +37,6 @@ const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPa
 const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import Home from './pages/Home';
 import AIMatcherPage from './pages/AIMatcher';
 import TalentDirectory from './pages/TalentDirectory';
@@ -65,9 +62,6 @@ import OpenAppRedirect from './pages/OpenAppRedirect';
 import ContactPage from './pages/Contact';
 import ZionHireAI from './pages/ZionHireAI';
 import RequestQuotePage from './pages/RequestQuote';
-<<<<<<< HEAD
-=======
->>>>>>> origin/306ipd-codex/add-new-products-page-with-10-items
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 const baseRoutes = [
@@ -82,16 +76,10 @@ const baseRoutes = [
   { path: '/categories', element: <Categories /> },
   { path: '/equipment', element: <EquipmentPage /> },
 <<<<<<< HEAD
-  { path: '/equipment/:id', element: <EquipmentDetail /> },
-  { path: '/new-products', element: <NewProductsPage /> },
-  { path: '/more-products', element: <MoreProductsPage /> },
-=======
-<<<<<<< HEAD
 =======
   { path: '/equipment/:id', element: <EquipmentDetail /> },
   { path: '/new-products', element: <NewProductsPage /> },
   { path: '/more-products', element: <MoreProductsPage /> },
->>>>>>> origin/306ipd-codex/add-new-products-page-with-10-items
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   { path: '/analytics', element: <Analytics /> },
   { path: '/mobile-launch', element: <MobileLaunchPage /> },

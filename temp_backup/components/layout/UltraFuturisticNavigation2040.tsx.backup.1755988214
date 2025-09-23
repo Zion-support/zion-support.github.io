@@ -93,13 +93,6 @@ const navigationItems: NavigationItem[] = [
         neonColor: 'shadow-red-400/50'
       },
       {
-<<<<<<< HEAD
-        label: 'Cloud Infrastructure',
-        href: '/services?category=cloud',
-        icon: <Cloud className="w-4 h-4" />,
-        description: 'Scalable cloud solutions',
-        neonColor: 'shadow-indigo-400/50'
-=======
         label: 'Cloud Solutions',
         href: '/cloud-platform',
         icon: <Globe className="w-4 h-4" />,
@@ -122,7 +115,6 @@ const navigationItems: NavigationItem[] = [
         href: '/services',
         icon: <ArrowRight className="w-4 h-4" />,
         description: 'Complete service portfolio'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-f6bf
       }
     ]
   },

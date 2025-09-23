@@ -22,11 +22,6 @@ export function useTalentDirectory(
   const {
     talents,
 <<<<<<< HEAD
-    isLoading,
-    error,
-  } = useTalentData();
-=======
-<<<<<<< HEAD
     total,
     isLoading,
     error,
@@ -35,7 +30,6 @@ export function useTalentDirectory(
     isLoading,
     error,
   } = useTalentData();
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
   // Apply filters and sorting

@@ -3,29 +3,17 @@ import { format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
 import { UseFormReturn } from "react-hook-form";
 import { 
-<<<<<<< HEAD
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormDescription
-=======
   FormField, 
   FormItem, 
   FormLabel, 
   FormControl, 
   FormDescription, 
->>>>>>> origin/auto/autonomy-17186719616
   FormMessage 
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { PopoverContentPopoverTrigger } from "@/components/ui/popover";
-=======
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
->>>>>>> origin/auto/autonomy-17186719616
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 
@@ -58,11 +46,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
             <FormLabel>Scope Summary</FormLabel>
             <FormControl>
               <Textarea
-<<<<<<< HEAD
-                placeholder="Describe the project scopedeliverablesand expectations..."
-=======
                 placeholder="Describe the project scope, deliverables, and expectations..."
->>>>>>> origin/auto/autonomy-17186719616
                 className="min-h-[120px]"
                 {...field}
               />
@@ -90,11 +74,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
                       {field.value ? (
-<<<<<<< HEAD
-                        format(field.value"PPP")
-=======
                         format(field.value, "PPP")
->>>>>>> origin/auto/autonomy-17186719616
                       ) : (
                         <span>Pick a date</span>
                       )}
@@ -131,11 +111,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
                       {field.value ? (
-<<<<<<< HEAD
-                        format(field.value"PPP")
-=======
                         format(field.value, "PPP")
->>>>>>> origin/auto/autonomy-17186719616
                       ) : (
                         <span>Pick a date</span>
                       )}

@@ -8,15 +8,6 @@
     "packages/*"
   ],
   "scripts": {
-<<<<<<< HEAD
-    "dev": "concurrently -n api,slack -c auto \"pnpm --filter @zion/api dev\" \"pnpm --filter @zion/slack-bot dev\"",
-    "dev:api": "pnpm --filter @zion/api dev",
-    "dev:slack": "pnpm --filter @zion/slack-bot dev",
-    "build": "pnpm -r --parallel build",
-    "lint": "eslint .",
-    "typecheck": "tsc -b",
-    "generate:icons": "pnpm --filter @zion/extension generate:icons"
-=======
     "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
     "deps:cron:start": "bash automation/dependency-maintenance-cron.sh",
     "sitemap": "node scripts/generate-sitemap.mjs",
@@ -254,7 +245,6 @@
     "react-datepicker": "^8.4.0",
     "react-dom": "^17.0.2",
     "uuid": "^11.1.0"
->>>>>>> origin/cursor/build-dao-proposal-drafting-system-with-templates-9858
   },
   "devDependencies": {
     "@types/node": "^20.14.10",

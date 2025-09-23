@@ -8,14 +8,6 @@
   "theme_color": "#0ea5e9",
   "orientation": "portrait-primary",
   "scope": "/",
-<<<<<<< HEAD
-  "lang": "en",
-  "categories": ["business", "productivity", "technology"],
-  "icons": [
-    {
-      "src": "/icon-72x72.png",
-      "sizes": "72x72",
-=======
   "categories": ["business", "technology", "productivity"],
   "screenshots": [
     {
@@ -43,7 +35,6 @@
     {
       "src": "/logos/zion-logo.png",
       "sizes": "512x512",
->>>>>>> origin/automation-error-fixes
       "type": "image/png",
       "purpose": "any"
     },
@@ -112,17 +103,10 @@
       ]
     },
     {
-<<<<<<< HEAD
-      "name": "Pricing",
-      "short_name": "Pricing",
-      "description": "View service pricing",
-      "url": "/pricing",
-=======
       "name": "Find Talent",
       "short_name": "Talent",
       "description": "Browse technical talent",
       "url": "/talent",
->>>>>>> origin/automation-error-fixes
       "icons": [
         {
           "src": "/icon-96x96.png",
@@ -137,14 +121,9 @@
       "url": "/contact",
       "icons": [
         {
-<<<<<<< HEAD
-          "src": "/icon-96x96.png",
-          "sizes": "96x96"
-=======
           "src": "/icons/dashboard-shortcut.png",
           "sizes": "96x96",
           "type": "image/png"
->>>>>>> origin/automation-error-fixes
         }
       ]
     }

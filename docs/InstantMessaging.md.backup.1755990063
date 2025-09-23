@@ -5,21 +5,14 @@ initialises a Socket.IO server and bridges to Django Channels. Rooms are keyed b
 the related order or service identifier so participants only receive messages for
 their transaction.
 
-<<<<<<< HEAD
-Install the Socket.IO packages:
-=======
 Install dependencies:
->>>>>>> origin/automation-error-fixes
 
 ```bash
 npm install socket.io socket.io-client
 ```
 
-<<<<<<< HEAD
-=======
 Minimal API route:
 
->>>>>>> origin/automation-error-fixes
 ```ts
 // pages/api/socket.ts
 // Next.js style API route creating a Socket.IO server

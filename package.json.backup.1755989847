@@ -2,8 +2,6 @@
   "name": "bolt.new.zion.app",
   "version": "0.1.0",
   "private": true,
-<<<<<<< HEAD
-=======
   "version": "0.0.0",
   "type": "module",
   "bin": {
@@ -420,7 +418,6 @@
     "doc": "docs",
     "test": "tests"
   },
->>>>>>> origin/306l03-codex/fix-blank-screen-issue
   "repository": {
     "type": "git",
     "url": "https://github.com/Zion-Holdings/zion.app.git"

@@ -271,11 +271,6 @@
     "url": "https://github.com/Zion-Holdings/zion.app/issues"
   },
   "homepage": "https://github.com/Zion-Holdings/zion.app#readme",
-<<<<<<< HEAD
-  "resolutions": {
-    "postcss": "8.5.6"
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
   "engines": {
     "node": ">=20.18.1",
     "npm": ">=10.0.0"
@@ -717,6 +712,5 @@
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a25d
   }
 }

@@ -5,12 +5,7 @@ import {
   Menu, X, ChevronDown, ChevronRight, Search, User, ShoppingCart, 
   Brain, Atom, Shield, Rocket, Cpu, Database, Target, Sparkles,
   Home, Briefcase, Users, FileText, Phone, Mail, MapPin, Globe,
-<<<<<<< HEAD
-  Zap, Star, TrendingUp, Award, Clock, CheckCircle, ExternalLink,
-  GraduationCap, Building, Truck, Zap as ZapIcon, Heart, DollarSign
-=======
   Zap, Star, TrendingUp, Award, Clock, CheckCircle, ExternalLink, Code
->>>>>>> origin/cursor/website-audit-and-enhancement-9311
 } from 'lucide-react';
 
 const UltraFuturisticNavigation2040: React.FC = () => {

@@ -1,7 +1,5 @@
 import React from 'react';
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { captureException } from '@/lib/sentry';
 
 interface Props {
@@ -32,7 +30,6 @@ export class ErrorBoundary extends React.Component<Props, State> {
     return this.props.children;
   }
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 export function ErrorBoundary() {
   return (
     <div>
@@ -40,8 +37,5 @@ export function ErrorBoundary() {
       <p>Component placeholder - needs implementation</p>;
     </div>
   );
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 }

@@ -43,8 +43,6 @@ const queryClient = new QueryClient({
 });
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 // Render the app with proper provider structure
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -52,7 +50,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <QueryClientProvider client={queryClient}>
         <Provider store={store}>
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 const rootElement = document.getElementById('root');
 
 function renderApp() {
@@ -60,9 +57,6 @@ function renderApp() {
     <React.StrictMode>
       <HelmetProvider>
         <QueryClientProvider client={queryClient}>
-<<<<<<< HEAD
-=======
->>>>>>> origin/9kvoyx-codex/fix-client-side-rendering-and-javascript-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
           <WhitelabelProvider>
             <Router>
@@ -85,15 +79,12 @@ function renderApp() {
             </Router>
           </WhitelabelProvider>
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
         </Provider>
       </QueryClientProvider>
     </HelmetProvider>
   </React.StrictMode>,
 );
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
         </QueryClientProvider>
       </HelmetProvider>
     </React.StrictMode>
@@ -135,7 +126,4 @@ window.addEventListener('unhandledrejection', (e) => {
 });
 
 registerServiceWorker();
-<<<<<<< HEAD
-=======
->>>>>>> origin/9kvoyx-codex/fix-client-side-rendering-and-javascript-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

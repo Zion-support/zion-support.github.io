@@ -1,10 +1,6 @@
 
 import React from "react";
-<<<<<<< HEAD
-import { ShieldLockAwardCheckCircle } from "lucide-react";
-=======
 import { Shield, Lock, Award, CheckCircle } from "lucide-react";
->>>>>>> origin/auto/autonomy-17186719616
 
 export function EnterpriseTrustBadges() {
   return (

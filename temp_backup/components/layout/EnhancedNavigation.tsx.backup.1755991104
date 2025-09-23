@@ -183,12 +183,8 @@ const EnhancedNavigation: React.FC = () => {
           <Link href="/blog"><a>Blog</a></Link>
           <Link href="/talent"><a>Talent</a></Link>
           <Link href="/contact"><a>Contact</a></Link>
-<<<<<<< HEAD
-          <Link href="/governance"><a>Governance</a></Link>
-=======
           <Link href="/nation-builder"><a>Nation Builder</a></Link>
           <Link href="/nations"><a>Nations</a></Link>
->>>>>>> origin/cursor/build-digital-nation-creation-module-4d41
         </div>
       </nav>
 

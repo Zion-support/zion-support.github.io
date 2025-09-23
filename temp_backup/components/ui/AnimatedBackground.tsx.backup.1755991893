@@ -186,8 +186,4 @@ if (typeof document !== 'undefined') {
   const style = document.createElement('style');
   style.textContent = gridStyles;
   document.head.appendChild(style);
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-f757

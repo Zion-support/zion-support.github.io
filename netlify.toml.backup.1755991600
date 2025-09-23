@@ -11,7 +11,6 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
-
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -37,124 +36,6 @@
   name = "front-enhancer"
   schedule = "*/5 * * * *" # every 5 minutes
 
-<<<<<<< HEAD
-[[scheduled.functions]]
-  name = "front-index-orchestrator"
-  schedule = "*/5 * * * *" # every 5 minutes
-
-[[redirects]]
-  from = "/ai-autonomous-ecosystem"
-  to = "/ai-autonomous-ecosystem-manager"
-  status = 301
-
-[[redirects]]
-  from = "/ai-consciousness-evolution"
-  to = "/ai-consciousness-evolution-2029"
-  status = 301
-
-[[redirects]]
-  from = "/autonomous-it-operations"
-  to = "/autonomous-it-operations-center"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-internet-security"
-  to = "/quantum-internet-security-platform"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-materials-discovery"
-  to = "/quantum-materials-discovery-platform"
-  status = 301
-
-[[redirects]]
-  from = "/autonomous-vehicle-ai"
-  to = "/autonomous-vehicle-ai-platform"
-  status = 301
-
-[[redirects]]
-  from = "/ai-content-marketing-automation"
-  to = "/ai-content-generator"
-  status = 301
-
-[[redirects]]
-  from = "/ai-customer-success-automation"
-  to = "/ai-customer-success-platform"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-networking"
-  to = "/quantum-services"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-data-center"
-  to = "/quantum-services"
-  status = 301
-
-[[redirects]]
-  from = "/ai-content-marketing-automation"
-  to = "/intelligent-content-automation-platform"
-  status = 301
-
-[[redirects]]
-  from = "/ai-autonomous-ecosystem"
-  to = "/ai-autonomous-ecosystem-manager"
-  status = 301
-
-[[redirects]]
-  from = "/ai-ethics-governance"
-  to = "/ai-ethics-governance-framework"
-  status = 301
-
-[[redirects]]
-  from = "/autonomous-it-operations"
-  to = "/autonomous-it-operations-center"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-network-security"
-  to = "/quantum-internet-security-platform"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-compliance-automation"
-  to = "/quantum-cybersecurity-platform"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-threat-detection"
-  to = "/quantum-cybersecurity-platform"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-encryption-gateway"
-  to = "/quantum-secure-cloud-infrastructure"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-identity-verification"
-  to = "/quantum-cybersecurity-platform"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-internet-security"
-  to = "/quantum-internet-security-platform"
-  status = 301
-
-[[redirects]]
-  from = "/autonomous-vehicle-ai"
-  to = "/autonomous-vehicle-ai-platform"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-materials-discovery"
-  to = "/quantum-materials-discovery-platform"
-  status = 301
-
-# Section placeholders to existing hubs
-[[redirects]]
-=======
 [[headers]]
   for = "/*"
   [headers.values]
@@ -192,81 +73,11 @@
   status = 301
 
 [[redirects]]
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-7272
   from = "/team"
   to = "/about"
   status = 301
 
 [[redirects]]
-<<<<<<< HEAD
-  from = "/ai-autonomous-ecosystem"
-  to = "/ai-autonomous-ecosystem-manager"
-  status = 301
-
-[[redirects]]
-  from = "/ai-financial-fraud-detection"
-  to = "/ai-financial-risk"
-  status = 301
-
-[[redirects]]
-  from = "/autonomous-vehicle-ai"
-  to = "/autonomous-vehicle-ai-platform"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-internet-security"
-  to = "/quantum-internet-security-platform"
-  status = 301
-
-[[redirects]]
-  from = "/ai-ethics-governance"
-  to = "/ai-ethics-governance-framework"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-threat-detection"
-  to = "/quantum-cybersecurity-platform"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-identity-verification"
-  to = "/quantum-cybersecurity-platform"
-  status = 301
-
-[[redirects]]
-  from = "/blockchain-enterprise-platform"
-  to = "/blockchain-infrastructure-platform"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-networking"
-  to = "/quantum-internet-security-platform"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-data-center"
-  to = "/quantum-cloud-infrastructure-platform"
-  status = 301
-
-[[redirects]]
-  from = "/autonomous-it-operations"
-  to = "/autonomous-it-operations-center"
-  status = 301
-
-[[redirects]]
-  from = "/ai-content-marketing-automation"
-  to = "/intelligent-content-automation-platform"
-  status = 301
-
-[[redirects]]
-  from = "/ai-autonomous-business-process-automation"
-  to = "/ai-autonomous-business-operations"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-encryption-gateway"
-  to = "/quantum-internet-security-platform"
-=======
   from = "/press"
   to = "/news"
   status = 301
@@ -274,5 +85,4 @@
 [[redirects]]
   from = "/legal"
   to = "/terms"
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-7272
   status = 301

@@ -425,10 +425,5 @@ declare global {
   type AnimationEventHandler<T extends Element = Element> = (event: AnimationEvent<T>) => void;
 }
 
-<<<<<<< HEAD
-// Export to make this a module
-export {}; 
-=======
 // Export to make this a module;
 {}; 
->>>>>>> origin/automation-error-fixes

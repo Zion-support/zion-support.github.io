@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import React{ useEffectuseState } from 'react';
-import { RadioGroupItem } from '@/components/ui/radio-group';
-=======
 import React, { useEffect, useState } from 'react';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
->>>>>>> origin/auto/autonomy-17186719616
 
 interface Address {
   name: string;
@@ -34,16 +29,6 @@ const fromAddress = {
   city: 'San Francisco',
   state: 'CA',
   zip: '94103',
-<<<<<<< HEAD
-  country: 'US'};
-
-const parcel = { weight: 1length: 10width: 10height: 10 };
-
-export function CheckoutShippingOptions({ toAddressonSelect }: Props) {
-  const [ratesetRates] = useState<ShippingRate[]>([]);
-  const [loadingsetLoading] = useState(false);
-  const [selectedsetSelected] = useState<string>('');
-=======
   country: 'US',
 };
 
@@ -53,7 +38,6 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
   const [rates, setRates] = useState<ShippingRate[]>([]);
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string>('');
->>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     if (
@@ -66,43 +50,25 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
     const fetchRates = async () => {
       setLoading(true);
       try {
-<<<<<<< HEAD
-        const res = await fetch('/api/shipping-rates'{
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ fromAddresstoAddressparcel })});
-=======
         const res = await fetch('/api/shipping-rates', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ fromAddress, toAddress, parcel }),
         });
->>>>>>> origin/auto/autonomy-17186719616
         const data = await res.json();
         if (res.ok) {
           setRates(data.rates || []);
         } else {
-<<<<<<< HEAD
-          console.error('Rates error'data);
-        }
-      } catch (err) {
-        console.error('Rates error'err);
-=======
           console.error('Rates error', data);
         }
       } catch (err) {
         console.error('Rates error', err);
->>>>>>> origin/auto/autonomy-17186719616
       } finally {
         setLoading(false);
       }
     };
     fetchRates();
-<<<<<<< HEAD
-  }[toAddress]);
-=======
   }, [toAddress]);
->>>>>>> origin/auto/autonomy-17186719616
 
   const handleChange = (value: string) => {
     setSelected(value);

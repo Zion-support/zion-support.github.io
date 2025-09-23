@@ -80,8 +80,6 @@ const Homepage2044: React.FC = () => {
     ...advancedAIServices
   ];
 
-
-
   const categories = [
     { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500' },
     { id: 'ai', name: 'AI & Consciousness', icon: BrainIcon, color: 'from-cyan-500 to-blue-500' },
@@ -125,18 +123,6 @@ const Homepage2044: React.FC = () => {
     window.location.href = service.slug;
   }, []);
 
-<<<<<<< HEAD
-  const toggleTheme = useCallback(() => {
-    setIsDarkMode(prev => !prev);
-    // Apply theme change to document
-    document.documentElement.classList.toggle('dark');
-  }, []);
-
-  const handleSearch = useCallback((e: React.FormEvent) => {
-    e.preventDefault();
-    // Search functionality is already implemented in getFilteredServices
-  }, []);
-=======
   if (error) {
     return (
       <Layout>
@@ -190,7 +176,6 @@ const Homepage2044: React.FC = () => {
                 />
               ))}
             </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5d49
 
   const filteredServices = getFilteredServices();
 

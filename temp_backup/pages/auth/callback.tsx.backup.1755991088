@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export default function AuthCallback() { return <div className="py-10">Auth Callback</div> }
-=======
 import Head from 'next/head';
 
 export default function AuthCallbackPage() {
@@ -14,4 +11,3 @@ export default function AuthCallbackPage() {
     </>
   );
 }
->>>>>>> origin/cursor/build-client-quote-request-form-74ea

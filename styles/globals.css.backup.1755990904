@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
-/* Global styles */
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-=======
 /* Import accessibility enhancements */
 @import './accessibility.css';
 
@@ -60,7 +51,6 @@ body {
   line-height: 1.6;
   color: var(--text-primary);
   background: var(--bg-primary);
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
 }
 
 /* Custom Scrollbar */
@@ -68,25 +58,6 @@ body {
   width: 8px;
 }
 
-<<<<<<< HEAD
-* {
-  box-sizing: border-box;
-}
-
-/* Custom utility classes */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .container {
-    padding: 0 0.5rem;
-  }
-}
-=======
 ::-webkit-scrollbar-track {
   background: rgba(17, 24, 39, 0.8);
 }
@@ -1068,4 +1039,3 @@ body {
     border: 2px solid var(--primary-cyan);
   }
 }
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001

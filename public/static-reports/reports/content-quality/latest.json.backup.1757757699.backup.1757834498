@@ -1,8 +1,4 @@
 {
-<<<<<<< HEAD
-  "generatedAt": "2025-08-17T21:21:01.441Z",
-  "files": [
-=======
   "generatedAt": "2025-08-17T21:29:01.521Z",
   "files": [
     "update-2025-08-17-1829.tsx",
@@ -14,7 +10,6 @@
     "update-2025-08-17-1823.tsx",
     "update-2025-08-17-1822.tsx",
     "update-2025-08-17T21-21.tsx",
->>>>>>> origin/backup/sync-2025-08-17T21-29-07-249Z
     "update-2025-08-17-1821.tsx",
     "update-2025-08-17-2120.tsx",
     "update-2025-08-17-1819.tsx",
@@ -105,20 +100,7 @@
     "update-2025-08-17-1702.tsx",
     "update-2025-08-17-1701.tsx",
     "update-2025-08-17T20-01.tsx",
-<<<<<<< HEAD
-    "update-2025-08-17-2000.tsx",
-    "update-2025-08-17-1659.tsx",
-    "update-2025-08-17-1658.tsx",
-    "update-2025-08-17-1657.tsx",
-    "update-2025-08-17-1656.tsx",
-    "update-2025-08-17-1655.tsx",
-    "update-2025-08-17-1654.tsx",
-    "update-2025-08-17-1653.tsx",
-    "update-2025-08-17-1652.tsx",
-    "update-2025-08-17T19-51.tsx"
-=======
     "update-2025-08-17-2000.tsx"
->>>>>>> origin/backup/sync-2025-08-17T21-29-07-249Z
   ],
   "metrics": {
     "diversityScore": 100,

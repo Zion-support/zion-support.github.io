@@ -1,11 +1,7 @@
 import React from 'react';
 import EnhancedNavigation from './EnhancedNavigation';
 import EnhancedFooter from './EnhancedFooter';
-<<<<<<< HEAD
-import AnimatedBackground from '../ui/AnimatedBackground';
-=======
 import dynamic from 'next/dynamic';
->>>>>>> origin/cursor/build-zion-ai-marketplace-chat-assistant-9918
 
 interface EnhancedLayoutProps {
   children: ReactNode;

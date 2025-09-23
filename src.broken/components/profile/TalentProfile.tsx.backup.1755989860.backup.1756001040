@@ -2,8 +2,6 @@
 import React from "react";
 import { Handshake, MessageSquare, Star } from 'lucide-react';
 
-
-
 import { Button } from "@/components/ui/button";
 
 import { HireNowCTA } from "./HireNowCTA";
@@ -15,15 +13,10 @@ import { ProfileAvailability } from "./ProfileAvailability";
 import { ProfileContact } from "./ProfileContact";
 import { ProfileRatings } from "./ProfileRatings";
 <<<<<<< HEAD
-import { TalentProfile as TalentProfileType } from "@/types/talent";
-import { Markdown } from "@/components/ui/markdown";
-=======
-<<<<<<< HEAD
 import type { TalentProfile as TalentProfileType } from "@/types/talent";
 =======
 import { TalentProfile as TalentProfileType } from "@/types/talent";
 import { Markdown } from "@/components/ui/markdown";
->>>>>>> origin/591ea5-codex/fix-talent-profile-rendering-issues
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import { useAuth } from "@/hooks/useAuth";
 import type { Availability } from "@/types/profile";

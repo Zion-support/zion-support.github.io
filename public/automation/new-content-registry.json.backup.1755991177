@@ -2,10 +2,6 @@
   "generatedAt": "2025-08-14T13:43:33.451Z",
   "items": [
     {
-<<<<<<< HEAD
-      "title": "Case Study — Autonomous Reports",
-      "href": "/reports/cases/case-2025-08-14-134333",
-=======
       "title": "Checklist: RAG Platforms",
       "subtitle": "Patterns to improve reliability.",
       "path": "/reports/innovations/insight-2025-08-19-0344",
@@ -43,7 +39,6 @@
     {
       "title": "Innovation Insight — 2025-08-18 18-46",
       "href": "/reports/innovations/insight-2025-08-18T18-46",
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
       "desc": "New autonomous content",
       "createdAt": "2025-08-14T13:43:33.413Z",
       "source": "cloud-deep-research-factory"

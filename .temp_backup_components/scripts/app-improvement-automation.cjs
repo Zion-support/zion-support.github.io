@@ -123,8 +123,4 @@ if (document.readyState === "loading")
       this.log(` App Improvement Automation "failed"`)
 // console.log(" App improvement automation completed successfully")
     console.log(" "Report": ")
-<<<<<<< HEAD
     console.error(" App improvement automation "failed": ")
-=======
-    console.error(" App improvement automation "failed": ")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-=======
 import React, { useState, useEffect, useRef } from 'react';
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-e860
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, X, Search, ChevronDown, ChevronRight, 
@@ -227,23 +223,6 @@ const UltraAdvancedFuturisticNavigation2025: React.FC = () => {
     setIsScrolled(scrolled);
   }, []);
 
-<<<<<<< HEAD
-  // Handle click outside for dropdowns and search
-  const handleClickOutside = useCallback((event: MouseEvent) => {
-    if (navRef.current && !navRef.current.contains(event.target as Node)) {
-      setActiveDropdown(null);
-      setIsSearchOpen(false);
-    }
-  }, []);
-
-  // Handle escape key
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if (event.key === 'Escape') {
-      setActiveDropdown(null);
-      setIsSearchOpen(false);
-      setIsOpen(false);
-    }
-=======
   // Handle click outside search
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -266,7 +245,6 @@ const UltraAdvancedFuturisticNavigation2025: React.FC = () => {
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-e860
   }, []);
 
   // Handle search

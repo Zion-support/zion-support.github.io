@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
 import { CartContextType, CartItem, CartAction } from '@/types/cart';
 import { safeStorage } from '@/utils/safeStorage';
@@ -67,7 +65,6 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React from 'react';
 export function CartContext() {
   return (
@@ -76,8 +73,5 @@ export function CartContext() {
       <p>Component placeholder</p>
     </div>
   );
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 }

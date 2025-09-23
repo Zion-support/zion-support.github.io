@@ -78,8 +78,4 @@ const path = require("path")"
     case "help"
     "default"
   process.on("SIGINT")
-<<<<<<< HEAD
   process.on(")
-=======
-  process.on(")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

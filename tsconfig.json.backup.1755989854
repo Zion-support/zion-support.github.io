@@ -1,11 +1,5 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-=======
     "target": "ES2024",
     "useDefineForClassFields": true,
     "lib": [
@@ -14,7 +8,6 @@
       "DOM.Iterable",
       "WebWorker",
       "WebWorker.Iterable"
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -36,9 +29,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-<<<<<<< HEAD
-    "target": "ES2017"
-=======
     "allowImportingTsExtensions": true,
     "noEmit": true,
     "plugins": [
@@ -68,7 +58,6 @@
     "forceConsistentCasingInFileNames": true,
     "preserveConstEnums": true,
     "verbatimModuleSyntax": true
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors
   },
   "include": ["src", "src/types/offline-shims.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]

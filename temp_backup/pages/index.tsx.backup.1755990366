@@ -1,12 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-import EnhancedHomepage2045 from '../components/EnhancedHomepage2045';
-import PerformanceOptimizer from '../components/PerformanceOptimizer';
-import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-=======
 import SEO from '../components/SEO';
 import Homepage2044 from '../components/Homepage2044';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a25d
 import ErrorBoundary from '../components/ErrorBoundary';
 
 const HomePage: React.FC = () => {
@@ -28,15 +22,6 @@ const HomePage: React.FC = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <ErrorBoundary>
-      <PerformanceOptimizer onMetricsUpdate={handlePerformanceMetrics}>
-        <AccessibilityEnhancer>
-          <EnhancedHomepage2045 />
-        </AccessibilityEnhancer>
-      </PerformanceOptimizer>
-    </ErrorBoundary>
-=======
     <>
       <SEO 
         title="Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions"
@@ -49,7 +34,6 @@ const HomePage: React.FC = () => {
         <Homepage2044 />
       </ErrorBoundary>
     </>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a25d
   );
 };
 
