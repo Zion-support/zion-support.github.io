@@ -10,7 +10,7 @@ import { ArrowRightIcon, SparklesIcon, ShieldCheckIcon, CloudIcon } from '@heroi
 
 export default function HomePage() {
   return (
-    <div className="px-6 py-12">
+    <main className="min-h-screen px-6 py-12">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
@@ -69,7 +69,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 

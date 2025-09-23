@@ -8,7 +8,7 @@ import ScrollToTop from './components/ScrollToTop'
 export const metadata = {
   title: {
     default: 'Zion Tech Group - AI & Technology Solutions',
-    template: '%s | Zion Tech Group'
+    template: '%s | Zion Tech Group',
   },
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
   keywords: ['AI', 'Technology', 'Cloud', 'Cybersecurity', 'Micro SaaS', 'Consulting', 'Digital Transformation'],
