@@ -7,6 +7,7 @@
   --fg: #ffffff;
   --primary: #3b82f6;
   --primary-dark: #1d4ed8;
+
   --accent: #8b5cf6;
   --accent-dark: #7c3aed;
   --success: #10b981;
@@ -28,6 +29,7 @@ body {
   line-height: 1.6;
 }
 
+
 .gradient-bg {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
@@ -38,6 +40,7 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
 
 .glass-effect {
   background: rgba(255, 255, 255, 0.05);
