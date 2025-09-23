@@ -14,11 +14,16 @@ export const metadata = {
 
 import PerformanceMetrics from './components/PerformanceMetrics';
 import ROICalculator from './components/ROICalculator';
+import ServiceCard from './components/ServiceCard';
+import StatsSection from './components/StatsSection';
+import TestimonialsSection from './components/TestimonialsSection';
 import {
-  ArrowRightIcon,
   SparklesIcon,
   ShieldCheckIcon,
   CloudIcon,
+  CpuChipIcon,
+  ServerIcon,
+  ChartBarIcon,
 } from '@heroicons/react/24/outline';
 
 export default function HomePage() {
@@ -61,55 +66,80 @@ export default function HomePage() {
           <h2 id="services-heading" className='text-3xl font-bold mb-8 text-gray-900 dark:text-white'>
             Our Services
           </h2>
-          <div className='grid md:grid-cols-3 gap-6'>
-            <article className='bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2'>
-              <div className='flex items-center mb-4'>
-                <SparklesIcon className='h-8 w-8 text-blue-600 mr-3' aria-hidden="true" />
-                <h3 className='text-xl font-semibold text-gray-900 dark:text-white'>
-                  AI Solutions
-                </h3>
-              </div>
-              <p className='text-gray-600 dark:text-gray-300 mb-4'>
-                Custom AI implementations, machine learning models, and
-                intelligent automation systems that drive business transformation.
-              </p>
-              <button className='flex items-center text-blue-600 group-hover:text-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded'>
-                <span className='text-sm font-medium'>Learn more</span>
-                <ArrowRightIcon className='h-4 w-4 ml-1' aria-hidden="true" />
-              </button>
-            </article>
-            <article className='bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 focus-within:ring-2 focus-within:ring-green-500 focus-within:ring-offset-2'>
-              <div className='flex items-center mb-4'>
-                <CloudIcon className='h-8 w-8 text-green-600 mr-3' aria-hidden="true" />
-                <h3 className='text-xl font-semibold text-gray-900 dark:text-white'>
-                  Cloud Infrastructure
-                </h3>
-              </div>
-              <p className='text-gray-600 dark:text-gray-300 mb-4'>
-                Scalable cloud solutions, DevOps automation, and infrastructure
-                optimization for modern businesses.
-              </p>
-              <button className='flex items-center text-green-600 group-hover:text-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded'>
-                <span className='text-sm font-medium'>Learn more</span>
-                <ArrowRightIcon className='h-4 w-4 ml-1' aria-hidden="true" />
-              </button>
-            </article>
-            <article className='bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 focus-within:ring-2 focus-within:ring-purple-500 focus-within:ring-offset-2'>
-              <div className='flex items-center mb-4'>
-                <ShieldCheckIcon className='h-8 w-8 text-purple-600 mr-3' aria-hidden="true" />
-                <h3 className='text-xl font-semibold text-gray-900 dark:text-white'>
-                  Cybersecurity
-                </h3>
-              </div>
-              <p className='text-gray-600 dark:text-gray-300 mb-4'>
-                Advanced security frameworks, threat detection, and compliance
-                solutions to protect your digital assets.
-              </p>
-              <button className='flex items-center text-purple-600 group-hover:text-purple-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 rounded'>
-                <span className='text-sm font-medium'>Learn more</span>
-                <ArrowRightIcon className='h-4 w-4 ml-1' aria-hidden="true" />
-              </button>
-            </article>
+          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            <ServiceCard
+              icon={<SparklesIcon className='h-8 w-8 text-white' />}
+              title='AI Solutions'
+              description='Custom AI implementations, machine learning models, and intelligent automation systems that transform your business operations.'
+              color='bg-gradient-to-r from-blue-500 to-blue-600'
+              features={[
+                'Machine Learning Models',
+                'Natural Language Processing',
+                'Computer Vision',
+                'Predictive Analytics',
+              ]}
+            />
+            <ServiceCard
+              icon={<CloudIcon className='h-8 w-8 text-white' />}
+              title='Cloud Infrastructure'
+              description='Scalable cloud solutions, DevOps automation, and infrastructure optimization for maximum performance and reliability.'
+              color='bg-gradient-to-r from-green-500 to-green-600'
+              features={[
+                'AWS/Azure/GCP Migration',
+                'Container Orchestration',
+                'Auto-scaling Solutions',
+                '24/7 Monitoring',
+              ]}
+            />
+            <ServiceCard
+              icon={<ShieldCheckIcon className='h-8 w-8 text-white' />}
+              title='Cybersecurity'
+              description='Advanced security frameworks, threat detection, and compliance solutions to protect your digital assets.'
+              color='bg-gradient-to-r from-purple-500 to-purple-600'
+              features={[
+                'Zero Trust Architecture',
+                'Threat Detection & Response',
+                'Compliance Auditing',
+                'Security Training',
+              ]}
+            />
+            <ServiceCard
+              icon={<CpuChipIcon className='h-8 w-8 text-white' />}
+              title='Quantum Computing'
+              description='Next-generation quantum computing solutions for complex optimization and cryptographic applications.'
+              color='bg-gradient-to-r from-indigo-500 to-indigo-600'
+              features={[
+                'Quantum Algorithms',
+                'Quantum Cryptography',
+                'Optimization Problems',
+                'Research & Development',
+              ]}
+            />
+            <ServiceCard
+              icon={<ServerIcon className='h-8 w-8 text-white' />}
+              title='Micro SaaS Solutions'
+              description='Custom micro SaaS applications and platforms designed to solve specific business challenges efficiently.'
+              color='bg-gradient-to-r from-orange-500 to-orange-600'
+              features={[
+                'Rapid Development',
+                'Scalable Architecture',
+                'API Integration',
+                'User Management',
+              ]}
+            />
+            <ServiceCard
+              icon={<ChartBarIcon className='h-8 w-8 text-white' />}
+              title='Data Analytics'
+              description='Advanced data analytics and business intelligence solutions to drive informed decision-making.'
+              color='bg-gradient-to-r from-teal-500 to-teal-600'
+              features={[
+                'Real-time Dashboards',
+                'Predictive Modeling',
+                'Data Visualization',
+                'Business Intelligence',
+              ]}
+            />
+>>>>>>> beb9ba4c3beb62ae70d14f97568f0482920fc042
           </div>
         </section>
 
@@ -132,6 +162,12 @@ export default function HomePage() {
           </div>
         </section>
       </div>
+
+      {/* Stats Section */}
+      <StatsSection />
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
     </main>
   );
 }

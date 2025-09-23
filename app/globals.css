@@ -6,6 +6,7 @@
 :root {
   --foreground-rgb: 17, 24, 39;
   --background-rgb: 255, 255, 255;
+  --background-start-rgb: 255, 255, 255;
   --primary-50: 239, 246, 255;
   --primary-100: 219, 234, 254;
   --primary-500: 59, 130, 246;
@@ -18,12 +19,20 @@
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-rgb: 17, 24, 39;
+    --background-start-rgb: 17, 24, 39;
   }
 }
 
 /* Base Styles */
 html {
   scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -155,12 +164,70 @@ body {
   }
 }
 
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  53%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40%,
+  43% {
+    transform: translateY(-10px);
+  }
+  70% {
+    transform: translateY(-5px);
+  }
+  90% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
 .animate-fade-in {
   animation: fadeIn 0.6s ease-out;
 }
 
 .animate-slide-in {
   animation: slideIn 0.6s ease-out;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce 2s infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  background-size: 200px 100%;
+  animation: shimmer 2s infinite;
 }
 
 /* Focus Styles */

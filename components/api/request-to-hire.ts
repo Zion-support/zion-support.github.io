@@ -2,130 +2,52 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-
 export default async function handler(
-  req: NextApiRequest
+  req: NextApiRequest,
   res: NextApiResponse
-) {  if (req.method !== 'POST') {;
+) {
+  if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
+
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
-    req.body |{};  if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+    req.body || {};
 
-
-  }
-  const { talentSlug, requesterName, requesterEmail, projectInfo } =
-
-
-    req && req.body || {};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req && req.body || {};
   if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
-
-
-
-
-
-
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
   try {
-
     const timestamp = new Date().toISOString();
-
-
-    });
-    // Persist to data/requests as a simple CMS-like log
-
-    const dir = path && path.join(process && process.cwd(), 'data', 'requests');
-    if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
-;
-export default async /**
- * handler - Function description
- */
-function handler() {  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (405).json ({ error: 'Method not allowed' });
-  }
-  const { talent_slug, requester_name, requester_email, project_info } =;
-    req.body || {}  // Check condition
-if ( {export default async /**
- * handler - Function description
- */
-function handler() {) {
-  $2
-}
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (405).json ({ error: 'Method not allowed' });
-  }
-  const { talent_slug, requester_name, requester_email, project_info } =;
-    req.body || {}  const { talent_slug, requester_name, requester_email, project_info } = req.body || {}
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (400).json ({ error: 'Missing required fields' });
-  }
-  try {
-    const timestamp = new Date ().toISOString ();
-    console.log ('[Operator] New request to hire:', {
+    const requestData = {
+      id: `req_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      talentSlug,
+      requesterName,
+      requesterEmail,
+      projectInfo,
       timestamp,
-      talent_slug,
-      requester_name,
-      requester_email,
-      project_info,
-    });
-;
-    // Persist to data / requests as a simple CMS - like log;
-    const dir = path.join (process.cwd (), 'data', 'requests');
-    if () fs.mkdir_sync (dir, { recursive: true })) {
-  $2
-}
-    const payload = {
-
-      timestamp,
+      status: 'pending',
+    };
 
     // Persist to data/requests as a simple CMS-like log
-    const dir = path && path.join(process && process.cwd(), 'datarequests');
-    if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
-    const payload = { timestamp, talentSlug, requesterName, requesterEmail, projectInfo };
+    const dir = path.join(process.cwd(), 'data', 'requests');
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
 
+    const filePath = path.join(dir, `${requestData.id}.json`);
+    fs.writeFileSync(filePath, JSON.stringify(requestData, null, 2));
 
+    // TODO: Send notification email to talent
+    // TODO: Send confirmation email to requester
 
-    // Email hooks could be integrated here (e && e.g., Resend, SendGrid, Nodemailer)
-    return res && res.status(200).json({ ok: true });
-  } catch (err) {
-
-
-  };
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-
-    console.error('Request-to-hire failed', err);
-    return res.status(500).json({ error: 'Internal error' });
+    return res.status(201).json({
+      success: true,
+      requestId: requestData.id,
+      message: 'Request submitted successfully',
+    });
+  } catch (error) {
+    console.error('Error processing hire request:', error);
+    return res.status(500).json({ error: 'Failed to process request' });
   }
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))
+}

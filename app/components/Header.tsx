@@ -38,9 +38,9 @@ export default function Header() {
           </nav>
 
           {/* Theme Toggle and CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className='hidden md:flex items-center space-x-4'>
             <ThemeToggle />
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200">
+            <button className='bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200'>
               Get Started
             </button>
           </div>
@@ -74,11 +74,11 @@ export default function Header() {
                   {item.name}
                 </a>
               ))}
-              <div className="pt-4 space-y-3">
-                <div className="flex justify-center">
+              <div className='pt-4 space-y-3'>
+                <div className='flex justify-center'>
                   <ThemeToggle />
                 </div>
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200">
+                <button className='w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200'>
                   Get Started
                 </button>
               </div>

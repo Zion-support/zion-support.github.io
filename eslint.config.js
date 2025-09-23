@@ -12,6 +12,8 @@ export default [
       'dist/**',
       'build/**',
       'public/**',
+      'components/**',
+      'lib/**',
       'automation/**',
       'apps.backup/**',
       'backup/**',
@@ -42,10 +44,15 @@ export default [
       'src/**/*.{js,jsx,ts,tsx}',
     ],
     languageOptions: {
+      parser: tseslint.parser,
       ecmaVersion: 2021,
       sourceType: 'module',
     },
-    plugins: { react, 'react-hooks': reactHooks },
+    plugins: {
+      react,
+      'react-hooks': reactHooks,
+      '@typescript-eslint': tseslint.plugin,
+    },
     settings: { react: { version: 'detect' } },
     rules: {
       'react/react-in-jsx-scope': 'off',
