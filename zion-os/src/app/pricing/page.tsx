@@ -1,49 +1,43 @@
-<<<<<<< HEAD
+import React from 'react';
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular?: boolean;
-  cta: string;
-  ctaLink: string;
+export default function PricingPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>Pricing</h1>
+			<p>Choose the plan that fits your needs.</p>
+		</main>
+	);
 }
-  category: string;
-  description: string;
-  tiers: PricingTier[];
-  features: string[];
-  benefits: string[];
-}
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

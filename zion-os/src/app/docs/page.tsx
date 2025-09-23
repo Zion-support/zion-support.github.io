@@ -1,4 +1,13 @@
-<<<<<<< HEAD
+import React from 'react';
+
+export default function DocsPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>Documentation</h1>
+			<p>Browse product and API documentation.</p>
+		</main>
+	);
+}
 
 
 
@@ -38,5 +47,4 @@
 
 
 
-=======
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
+

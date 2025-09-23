@@ -1,27 +1,23 @@
-<<<<<<< HEAD
+import React from 'react';
 
-
-
-
-
-
-
-
-
-
-
-
-=======
-  name: string;
-  description: string;
-  deliverables: string[];
-  timeline: string;
-  pricing: string;
-  startingPrice: number;
-  contactLink: string;
-  icon: string;
-  features: string[];
-  technologies: string[];
-  industries: string[];
+export default function ItSolutionsPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>IT Solutions</h1>
+			<p>Bespoke IT solution packages.</p>
+		</main>
+	);
 }
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
+
+
+
+
+
+
+
+
+
+
+
+
+

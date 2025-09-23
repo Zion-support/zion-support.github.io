@@ -1,4 +1,13 @@
-<<<<<<< HEAD
+import React from 'react';
+
+export default function SpaceTechPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>Space Tech</h1>
+			<p>Innovations at the intersection of space and AI.</p>
+		</main>
+	);
+}
 
 
 
@@ -14,5 +23,4 @@
 
 
 
-=======
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
+

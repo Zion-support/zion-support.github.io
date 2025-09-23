@@ -1,4 +1,13 @@
-<<<<<<< HEAD
+import React from 'react';
+
+export default function EventsPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>Events</h1>
+			<p>Upcoming events and webinars.</p>
+		</main>
+	);
+}
 
 
 
@@ -9,5 +18,4 @@
 
 
 
-=======
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
+
