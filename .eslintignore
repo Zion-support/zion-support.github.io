@@ -1,0 +1,65 @@
+# Ignore backups, temp, disabled, and non-source directories
+node_modules/
+.next/
+dist/
+build/
+out/
+coverage/
+public/build/
+
+# Backups and temp
+.backup*/
+**/*backup*/
+backup*/
+backups*/
+backup-problematic-files/
+.temp_backup_components/
+src_backup*/
+*.disabled/
+*/.disabled/
+*disabled*/
+recovered-branches/
+automation/backups/
+
+# Monorepo extra apps and large content
+zion-os/
+zion-os.disabled/
+zion-ai-assistant/
+zion-website/
+zion_academy/
+zion.app/
+
+# Temp and generated content
+temp*/
+temp_components/
+temp_disabled/
+temp_working/
+__tests__/
+tests/
+__mocks__/
+
+test*/
+
+# Broad utility and types folders that are not part of lint scope
+utils/
+types/
+
+# Specific noisy folders
+server/
+services_backup/
+src.disabled/
+apps.backup/
+components.apps/
+components.disabled/
+components.disabled_full/
+pages.disabled*/
+pages.broken/
+pages.bak/
+
+# Static assets and HTML dumps
+site.html
+sitemap.xml
+
+# Scripts and experiment sandboxes
+simulator/
+workflow_templates/
