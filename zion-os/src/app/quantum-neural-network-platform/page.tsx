@@ -1,10 +1,12 @@
-export default function QuantumNeuralNetworkPlatformPage() {
-  return (
-    <main style={{ padding: "2rem" }}>
-      <h1>Quantum Neural Network Platform</h1>
-      <p>Overview of our QNN platform.</p>
-    </main>
-  );
+import React from 'react';
+
+export default function QuantumNeuralNetworkPlatformPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>Quantum Neural Network Platform</h1>
+			<p>Explore our QNN platform capabilities.</p>
+		</main>
+	);
 }
 
 
