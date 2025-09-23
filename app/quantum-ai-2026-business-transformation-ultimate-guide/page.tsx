@@ -2,8 +2,8 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-import RelatedContentWidget from '../../components/RelatedContentWidget';
-import SocialShareButtons from '../../components/SocialShareButtons';
+import RelatedContentWidget from '../../ts_files_backup/RelatedContentWidget';
+import SocialShareButtons from '../components/SocialShareButtons';
 
 export const metadata: Metadata = {
   title: 'Quantum AI 2026: Business Transformation Ultimate Guide | Zion Tech Group',

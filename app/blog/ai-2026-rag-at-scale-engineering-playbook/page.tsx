@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export const metadata = {
   title: 'AI 2026: RAG at Scale - Engineering Playbook',
@@ -11,7 +10,7 @@ export const metadata = {
 
 export default function AI2026RAGAtScalePlaybook() {
   return (
-    <ErrorBoundary>
+    <>
       <SEO
         title="AI 2026: RAG at Scale - Engineering Playbook"
         description="A practical, engineering-first playbook to design, operate, and scale Retrieval-Augmented Generation (RAG) systems with reliability, observability, and ROI."
@@ -90,7 +89,7 @@ export default function AI2026RAGAtScalePlaybook() {
           </div>
         </article>
       </div>
-    </ErrorBoundary>
+    </>
   );
 }
 

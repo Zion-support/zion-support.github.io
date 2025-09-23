@@ -1,56 +1,27 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-const publicRoutes = [
-  "/",
-  "/about",
-  "/contact",
-  "/services",
-  "/ai-services",
-  "/it-services",
-  "/micro-saas",
-  "/api",
-  "/api-docs",
-  "/careers",
-  "/guides",
-  "/case-studies",
-  "/cookies",
-  "/industries"
-  "/blog",
-  "/services",
-  "/solutions",
-  "/industries",
-  "/resources",
-  "/talent",
-  "/team",
-  "/partners",
-  "/news",
-  "/careers",
-  "/privacy",
-  "/terms",
-  "/cookies",
-  "/sitemap",
-  "/auth/login",
-  "/auth/register",
-  "/auth/forgot-password",
-  "/auth/reset-password",
-  "/auth/verify",
+// Simplified, de-duplicated route lists
 const publicPaths = [
   '/',
   '/about',
-  '/services',
   '/contact',
+  '/blog',
+  '/services',
+  '/solutions',
   '/ai-services',
   '/it-services',
   '/micro-saas',
-  '/api-docs',
   '/api',
+  '/api-docs',
   '/careers',
   '/case-studies',
-  '/blog',
-  '/docs',
+  '/resources',
   '/privacy',
   '/terms',
+  '/cookies',
+  '/sitemap',
+  '/docs',
   '/login',
   '/register',
   '/auth/login',
@@ -58,6 +29,8 @@ const publicPaths = [
   '/auth/forgot-password',
   '/auth/reset-password',
   '/auth/verify'
+];
+
 const protectedRoutes = [
   "/",
   "/about",
@@ -127,25 +100,8 @@ const adminRoutes = [
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
-  // Allow public routes
-  if (publicRoutes.includes(pathname)) {
-    return NextResponse.next();
-  }
-  
-  // For all other routes, continue normally
-  return NextResponse.next();
-  if (publicRoutes.includes(pathname)) {
-    return NextResponse.next();
-  }
-  
-  const authCookie = request.cookies.get("auth-token");
-  if (!authCookie) {
-    return NextResponse.redirect(new URL("/auth/login", request.url));
-  }
-  
-  return NextResponse.next();
-  // Allow public paths
-  if (publicPaths.includes(pathname)) {
+  // Allow public routes and paths
+  if (publicRoutes.includes(pathname) || publicPaths.includes(pathname)) {
     return NextResponse.next();
   }
   
@@ -190,9 +146,6 @@ export function middleware(request: NextRequest) {
   response.headers.set('X-Frame-Options', 'DENY');
   response.headers.set('X-Content-Type-Options', 'nosniff');
   response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
-  
-  return response;
-  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
   response.headers.set('X-XSS-Protection', '1; mode=block');
   
   // Content Security Policy

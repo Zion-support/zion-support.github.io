@@ -1,5 +1,5 @@
 import React from 'react';
-import SEO from '../../components/SEO';
+// SEO is deprecated in Next 15; relying on metadata export
 import Link from 'next/link';
 
 export const metadata = {
@@ -11,12 +11,7 @@ export const metadata = {
 export default function AI2025AdvancedAutomationPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
-      <SEO
-        title="AI 2025 Advanced Automation - Revolutionary Business Transformation"
-        description="Discover the future of AI automation in 2025. Advanced neural networks, autonomous systems, and intelligent business processes that deliver 1000% ROI."
-        keywords="AI automation 2025, advanced neural networks, autonomous business systems, AI transformation, intelligent automation"
-        url="/ai-2025-advanced-automation"
-      />
+      {/* SEO handled by metadata API */}
       
       {/* Hero Section */}
       <section className="py-20 px-4">

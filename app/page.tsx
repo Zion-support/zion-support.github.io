@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
+import React, { Suspense, lazy } from 'react'
 import { ArrowRight, Brain, Cloud, Shield, Zap, Users, Globe, Target, Sparkles, TrendingUp } from 'lucide-react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
@@ -20,9 +21,9 @@ import IntelligentSearchEngine from './components/IntelligentSearchEngine';
 import RealTimePerformanceDashboard from './components/RealTimePerformanceDashboard';
 
 // Lazy load heavy components
-const ROICalculator = lazy(() => import('./components/ROICalculator'));
+const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('./components/StructuredData'));
-const PerformanceMetrics = lazy(() => import('./components/PerformanceMetrics'));
+const PerformanceMetrics = lazy(() => import('../components/PerformanceMetrics'));
 const TechnologyStack = lazy(() => import('./components/TechnologyStack'));
 
 // Import key promotional components
@@ -52,9 +53,9 @@ import NewContent2025PromotionBanner from './components/NewContent2025PromotionB
 import RevolutionaryAIContentBanner from './components/RevolutionaryAIContentBanner';
 
 // Import new AI 2026 promotional components
-import AI2026AutonomousSystemsBanner from './components/AI2026AutonomousSystemsBanner';
-import AI2026QuantumRevolutionBanner from './components/AI2026QuantumRevolutionBanner';
-import AI2026UltimateShowcaseBanner from './components/AI2026UltimateShowcaseBanner';
+import AI2026AutonomousSystemsBanner from '../components/AI2026AutonomousSystemsBanner';
+import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
+import AI2026UltimateShowcaseBanner from '../components/AI2026UltimateShowcaseBanner';
 import QuantumAI2026BreakthroughBanner from './components/QuantumAI2026BreakthroughBanner';
 import QuantumAIContentShowcase2026 from './components/QuantumAIContentShowcase2026';
 
@@ -65,8 +66,8 @@ import WhatsNewStrip from './components/WhatsNewStrip';
 // Import new 2025 quantum AI promotional components
 
 // Import new 2026 ultimate promotional components
-import AI2026QuantumRevolutionUltimateBanner from './components/AI2026QuantumRevolutionUltimateBanner';
-import RevolutionaryAIContent2026Banner from './components/RevolutionaryAIContent2026Banner';
+import AI2026QuantumRevolutionUltimateBanner from '../components/AI2026QuantumRevolutionUltimateBanner';
+import RevolutionaryAIContent2026Banner from '../components/RevolutionaryAIContent2026Banner';
 
 // Import new 2025 advanced automation promotional components
 import AdvancedAutomationContentShowcase2025 from './components/AdvancedAutomationContentShowcase2025';
@@ -248,7 +249,7 @@ export default function HomePage() {
 
         {/* Testimonials Section */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
-          <LazyTestimonials />
+          <Testimonials />
         </div>
       </main>
       

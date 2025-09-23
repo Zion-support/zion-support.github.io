@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
+// SEO handled by metadata API; removing deprecated component
 
 export const metadata = {
   title: 'Quantum AI 2026: The Business Breakthrough - $100B Market Transformation',
@@ -11,12 +11,7 @@ export const metadata = {
 export default function QuantumAI2026BusinessBreakthrough() {
   return (
     <div>
-      <SEO
-        title="Quantum AI 2026: The Business Breakthrough - $100B Market Transformation"
-        description="Discover how Quantum AI 2026 is revolutionizing business operations with 400-600% ROI, 1,200% speed improvements, and 99.97% accuracy."
-        keywords="quantum AI, quantum computing, business transformation, AI 2026, quantum revolution, enterprise AI"
-        url="/quantum-ai-2026-business-breakthrough"
-      />
+      {/* SEO via metadata */}
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
         {/* Hero Section */}
