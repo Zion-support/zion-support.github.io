@@ -1,25 +1,9 @@
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-=======
-  name: string;
-  description: string;
-  technicalSpecs: string[];
-  useCases: string[];
-  pricing: string;
-  startingPrice: number;
-  contactLink: string;
-  icon: string;
-  features: string[];
-  integration: string[];
+export default function Page() {
+  return (
+    <main className="container mx-auto px-4 py-12">
+      <h1 className="text-3xl font-bold mb-4">ai-solutions</h1>
+      <p className="text-gray-600">Content coming soon.</p>
+    </main>
+  );
 }
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
+

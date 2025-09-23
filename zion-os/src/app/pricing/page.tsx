@@ -1,49 +1,9 @@
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular?: boolean;
-  cta: string;
-  ctaLink: string;
+export default function Page() {
+  return (
+    <main className="container mx-auto px-4 py-12">
+      <h1 className="text-3xl font-bold mb-4">pricing</h1>
+      <p className="text-gray-600">Content coming soon.</p>
+    </main>
+  );
 }
-  category: string;
-  description: string;
-  tiers: PricingTier[];
-  features: string[];
-  benefits: string[];
-}
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
+

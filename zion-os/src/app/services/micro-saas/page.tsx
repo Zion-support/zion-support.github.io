@@ -1,27 +1,9 @@
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-
-=======
-  name: string;
-  description: string;
-  targetMarket: string[];
-  features: string[];
-  pricing: string;
-  startingPrice: number;
-  contactLink: string;
-  icon: string;
-  benefits: string[];
-  integrations: string[];
-  deployment: string;
+export default function Page() {
+  return (
+    <main className="container mx-auto px-4 py-12">
+      <h1 className="text-3xl font-bold mb-4">micro-saas</h1>
+      <p className="text-gray-600">Content coming soon.</p>
+    </main>
+  );
 }
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
+
