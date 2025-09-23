@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, TrendingUp, Users, Zap } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
 
 const NewContent2025UltimateBanner = () => {
   return (
@@ -51,6 +51,7 @@ const NewContent2025UltimateBanner = () => {
                 <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
                 <span>Predictive Intelligence</span>
               </div>
+            </div>
             <div className="flex items-center text-sm text-green-400 mb-4">
               <TrendingUp className="w-4 h-4 mr-2" />
               <span>400% Average ROI Achieved</span>
@@ -145,6 +146,10 @@ const NewContent2025UltimateBanner = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
         {/* Case Studies Section */}
         <div className="bg-gradient-to-r from-emerald-800 to-cyan-800 rounded-2xl p-8 mb-16">
           <div className="text-center mb-8">
@@ -187,6 +192,10 @@ const NewContent2025UltimateBanner = () => {
                   Read Full Case Study →
                 </Link>
               </div>
+            </div>
+          </div>
+        </div>
+
         {/* Implementation Checklist */}
         <div className="bg-white bg-opacity-15 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
           <div className="flex items-center justify-between mb-6">
@@ -231,8 +240,11 @@ const NewContent2025UltimateBanner = () => {
             >
               Explore Services
             </Link>
+          </div>
+        </div>
+
         {/* Resources Section */}
-        <div className="text-center">
+        <div className="text-center mt-12">
           <h3 className="text-3xl font-bold mb-8">Free Implementation Resources</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-gradient-to-r from-emerald-700 to-teal-700 rounded-xl p-6">
@@ -256,6 +268,9 @@ const NewContent2025UltimateBanner = () => {
                 Schedule Consultation →
               </Link>
             </div>
+          </div>
+        </div>
+
         {/* Trust Indicators */}
         <div className="mt-12 text-center">
           <p className="text-gray-300 mb-4">Trusted by leading organizations worldwide</p>
@@ -269,4 +284,6 @@ const NewContent2025UltimateBanner = () => {
       </div>
     </section>
   );
-}
+};
+
+export default NewContent2025UltimateBanner;

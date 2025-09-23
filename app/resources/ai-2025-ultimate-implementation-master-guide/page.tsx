@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, User, Download, BookOpen, CheckCircle, Star, Zap, Brain, Target, Shield, TrendingUp } from 'lucide-react';
+import { ArrowLeft, Calendar, User, Download, BookOpen, CheckCircle, Star, Target, TrendingUp } from 'lucide-react';
 
 export default function AI2025UltimateImplementationMasterGuide() {
   return (
@@ -38,6 +38,7 @@ export default function AI2025UltimateImplementationMasterGuide() {
             </div>
           </div>
         </div>
+      </div>
 
       {/* Navigation */}
       <div className="bg-gray-50 border-b">
@@ -58,7 +59,7 @@ export default function AI2025UltimateImplementationMasterGuide() {
           {/* Overview */}
           <div className="bg-gradient-to-r from-indigo-50 to-purple-50 border-l-4 border-indigo-500 p-6 rounded-r-lg mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-              <Brain className="w-6 h-6 text-indigo-600" />
+              <BookOpen className="w-6 h-6 text-indigo-600" />
               Guide Overview
             </h2>
             <p className="text-gray-700 leading-relaxed">
@@ -198,7 +199,6 @@ export default function AI2025UltimateImplementationMasterGuide() {
               </div>
             </div>
           </div>
-        </section>
 
           {/* Implementation Phases */}
           <section className="mb-12">
@@ -447,7 +447,7 @@ export default function AI2025UltimateImplementationMasterGuide() {
             </Link>
           </div>
         </div>
-      </article>
+      </div>
     </div>
   );
 }

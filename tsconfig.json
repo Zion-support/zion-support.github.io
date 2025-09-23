@@ -42,6 +42,7 @@
     "lib_backup",
     "**/*backup*",
     "**/*conflict*",
-    "**/*temp*"
+    "**/*temp*",
+    "zion-os/**"
   ]
 }
