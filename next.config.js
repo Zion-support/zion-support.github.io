@@ -2,7 +2,6 @@
 const nextConfig = {
   // Optimized for modern Next.js 14 deployment
   reactStrictMode: true,
-  swcMinify: true,
   compress: true,
   poweredByHeader: false,
   
