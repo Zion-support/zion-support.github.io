@@ -95,6 +95,8 @@ export default [
       'pages_backup_conflict/**',
       'pages.old/**',
       'pages_api.disabled/**',
+      // Archived backups with intentionally broken snapshots
+      'pages.__backup/**',
       'solutions.disabled/**',
       'solutions/**',
       'server/**',
@@ -237,6 +239,20 @@ export default [
       'structural-fix.js',
       'syntax-fixer.js',
       'test-*.js',
+      // Broad patterns for maintenance/merge scripts and temporary utilities
+      '*merge*.js',
+      '*conflict*.js',
+      '*resolve*.js',
+      '*optimization*.js',
+      '*optimizations*.js',
+      'run-*.js',
+      'restore-*.js',
+      'simple-*.js',
+      'security-config.js',
+      'seed.js',
+      'script.js',
+      'server.mjs',
+      'test-utils.jsx',
       '**/static/**',
       '**/*.min.js'
     ]
