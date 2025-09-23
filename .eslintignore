@@ -1,96 +1,45 @@
-# Ignore generated, disabled, backups, and non-source directories
+# Ignore build and vendor
+node_modules/
 .next/
 node_modules/
 coverage/
 dist/
 build/
-.out/
+coverage/
 
-# Tests and mocks
-__tests__/
-tests/
-test/
-__mocks__/
+# Ignore backups and temp artifacts
+**/backup*/
+**/backups/**
+**/*.backup.*
+**/*.cleanup-backup.*
+**/.temp_backup_components/**
+**/temp_backup/**
+**/temp_exclude/**
+**/recovered-branches/**
+**/apps.backup/**
+**/components.disabled*/**
+**/pages.disabled*/**
+**/pages.bak/**
+**/pages_backup*/**
+**/src_backup*/**
+**/src.disabled/**
+**/tests.disabled/**
+**/test_build/**
 
-# Disabled/broken/backup variants
-*.disabled/
-*.broken/
-*backup*/
-src.broken/
-src.disabled/
-src_backup/
-src_backup_temp/
-pages-disabled/
-pages.broken/
-pages_backup/
-pages_backup_before_cleanup/
-components.disabled/
-components.disabled_full/
-
-# Automation and scripts not relevant to app lint
-automation/
-scripts/
-.scripts/
-*.sh
-*.cjs
-*.mjs
-*.py
-*.bat
-
-# Root maintenance and helper scripts
-fix-*.js
-merge-*.js
-resolve-*.js
-*merge*.js
-*conflict*.js
-*automation*.js
-
-# Misc large content and markdown
-public/
-*.md
-*.json
-*.xml
-*.txt
-
-# Misc
-recovered-branches/
-backup*/
-corrupted_backup/
-zion-os/
+# Ignore non-app workspaces and archives
+zion-os*/
 zion-website/
+workflow_backups/
+workflow_templates/
+automation/**
+backup-problematic-files/**
+server/**
 
-# Broadly exclude most of src; re-include core clean directories
-src/**
-!src/app/**
-!src/components/**
-!src/lib/**
-!src/hooks/**
-!src/styles/**
+# Ignore misc scripts and experimental roots
+__tests__/**
+tests/**
+test/**
+**/*.test.*
 
-# Explicitly ignore noisy/problematic subtrees
-src/pages_backup/
-src/data/
-src/expandedServices.ts
-src/enhancedServices.ts
-src/utils/**
-src/types/**
-zion-ai-assistant/
-
-# Misc backups
-lib_backup/
-lib.broken/
-lib.disabled/
-
-# Catch-all patterns for backups/disabled variants
-**/*.backup*
-**/*.backups*/
-**/*.corrupted*/
-**/*.disabled*/
-
-# Additional exclusions to avoid linting corrupted or out-of-scope code
-utils/
-types/
-ts_files_backup/
-zion-os/
-zion-ai-assistant/
-zion-website/
+# Generated locks and artifacts
+*.tsbuildinfo
