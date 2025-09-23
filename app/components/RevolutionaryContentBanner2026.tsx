@@ -1,1 +1,3 @@
-export { default } from "../../components/RevolutionaryContentBanner2026";
+export default function RevolutionaryContentBanner2026() {
+	return null;
+}

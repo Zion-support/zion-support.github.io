@@ -1,1 +1,3 @@
-export { default } from "../../components/RealTimePerformanceDashboard";
+export default function RealTimePerformanceDashboard() {
+	return null;
+}
