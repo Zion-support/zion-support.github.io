@@ -6,9 +6,7 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true
   },
-  experimental: {
-    outputFileTracingRoot: __dirname
-  }
+  outputFileTracingRoot: __dirname
 }
 
 module.exports = nextConfig
