@@ -106,6 +106,12 @@
       "<rootDir>/src_backup_temp/",
       "<rootDir>/src_backup/",
       "<rootDir>/backup-problematic-files/",
+      "<rootDir>/zion-os/",
+      "<rootDir>/zion-os.broken/",
+      "<rootDir>/zion-os.disabled/",
+      "<rootDir>/zion-os.corrupted/",
+      "<rootDir>/server/",
+      "<rootDir>/automation/",
       "<rootDir>/pages-disabled/",
       "<rootDir>/pages.bak/",
       "<rootDir>/components.disabled/",
@@ -122,6 +128,15 @@
       "<rootDir>/temp_exclude/",
       "<rootDir>/corrupted_backup/",
       "<rootDir>/e2e/"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/automation/",
+      "<rootDir>/.temp_backup_components/",
+      "<rootDir>/recovered-branches/",
+      "<rootDir>/apps.backup/",
+      "<rootDir>/components/apps/",
+      "<rootDir>/backup-problematic-files/",
+      "<rootDir>/server/"
     ]
   },
   "packageManager": "npm@11.6.0+sha512.77f3fb0dbbd881835d7bd1217deabdf7ed77fc4ec4f363df64fc3cb986404abf6c437661041080f5c5d225103508e7c9ea30cb2742b7e942675d05a10af2d7b9"
