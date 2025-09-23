@@ -16,6 +16,7 @@ export default function ROICalculator() {
   });
 
   const [isVisible, setIsVisible] = useState(false);
+  const [errors, setErrors] = useState<Partial<Record<keyof ROIData, string>>>({});
 
   useEffect(() => {
     setIsVisible(true);
@@ -26,7 +27,17 @@ export default function ROICalculator() {
   const roiPercentage = ((netROI / data.investment) * 100).toFixed(1);
   const paybackPeriod = Math.ceil(data.investment / data.monthlySavings);
 
+  const validateInput = (field: keyof ROIData, value: number): string | null => {
+    if (value < 0) return 'Value cannot be negative';
+    if (field === 'investment' && value === 0) return 'Investment must be greater than 0';
+    if (field === 'monthlySavings' && value === 0) return 'Monthly savings must be greater than 0';
+    if (field === 'timeframe' && (value < 1 || value > 60)) return 'Timeframe must be between 1 and 60 months';
+    return null;
+  };
+
   const handleInputChange = (field: keyof ROIData, value: number) => {
+    const error = validateInput(field, value);
+    setErrors(prev => ({ ...prev, [field]: error || '' }));
     setData(prev => ({ ...prev, [field]: value }));
   };
 
@@ -44,10 +55,19 @@ export default function ROICalculator() {
             onChange={e =>
               handleInputChange('investment', Number(e.target.value))
             }
-            className='w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white'
+            className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white ${
+              errors.investment ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
+            }`}
             min='0'
             step='1000'
+            aria-invalid={!!errors.investment}
+            aria-describedby={errors.investment ? 'investment-error' : undefined}
           />
+          {errors.investment && (
+            <p id="investment-error" className="mt-1 text-sm text-red-600 dark:text-red-400">
+              {errors.investment}
+            </p>
+          )}
         </div>
 
         <div>
@@ -60,10 +80,19 @@ export default function ROICalculator() {
             onChange={e =>
               handleInputChange('monthlySavings', Number(e.target.value))
             }
-            className='w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white'
+            className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white ${
+              errors.monthlySavings ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
+            }`}
             min='0'
             step='1000'
+            aria-invalid={!!errors.monthlySavings}
+            aria-describedby={errors.monthlySavings ? 'monthlySavings-error' : undefined}
           />
+          {errors.monthlySavings && (
+            <p id="monthlySavings-error" className="mt-1 text-sm text-red-600 dark:text-red-400">
+              {errors.monthlySavings}
+            </p>
+          )}
         </div>
 
         <div>
@@ -76,10 +105,19 @@ export default function ROICalculator() {
             onChange={e =>
               handleInputChange('timeframe', Number(e.target.value))
             }
-            className='w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white'
+            className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white ${
+              errors.timeframe ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
+            }`}
             min='1'
             max='60'
+            aria-invalid={!!errors.timeframe}
+            aria-describedby={errors.timeframe ? 'timeframe-error' : undefined}
           />
+          {errors.timeframe && (
+            <p id="timeframe-error" className="mt-1 text-sm text-red-600 dark:text-red-400">
+              {errors.timeframe}
+            </p>
+          )}
         </div>
       </div>
 

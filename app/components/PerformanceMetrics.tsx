@@ -18,9 +18,14 @@ export default function PerformanceMetrics() {
   ]);
 
   const [isVisible, setIsVisible] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setIsVisible(true);
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+      setIsLoading(false);
+    }, 100);
+    return () => clearTimeout(timer);
   }, []);
 
   const getTrendIcon = (trend: string) => {
@@ -41,13 +46,34 @@ export default function PerformanceMetrics() {
     return 'text-gray-600';
   };
 
+  if (isLoading) {
+    return (
+      <div className="space-y-4" role="status" aria-label="Loading performance metrics">
+        {[...Array(4)].map((_, index) => (
+          <div
+            key={index}
+            className="flex items-center justify-between p-3 bg-white dark:bg-gray-700 rounded-lg shadow-sm border border-gray-200 dark:border-gray-600 animate-pulse"
+          >
+            <div className="flex-1">
+              <div className="h-4 bg-gray-300 dark:bg-gray-600 rounded w-24 mb-2"></div>
+              <div className="h-6 bg-gray-300 dark:bg-gray-600 rounded w-16"></div>
+            </div>
+            <div className="h-6 bg-gray-300 dark:bg-gray-600 rounded w-12"></div>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
   return (
-    <div className={`space-y-4 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
+    <div className={`space-y-4 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} role="region" aria-label="Performance metrics">
       {metrics.map((metric, index) => (
         <div
           key={metric.label}
-          className='flex items-center justify-between p-3 bg-white dark:bg-gray-700 rounded-lg shadow-sm border border-gray-200 dark:border-gray-600'
+          className='flex items-center justify-between p-3 bg-white dark:bg-gray-700 rounded-lg shadow-sm border border-gray-200 dark:border-gray-600 hover:shadow-md transition-shadow duration-200'
           style={{ animationDelay: `${index * 0.1}s` }}
+          role="article"
+          aria-label={`${metric.label}: ${metric.value}`}
         >
           <div className='flex-1'>
             <p className='text-sm font-medium text-gray-600 dark:text-gray-300'>
