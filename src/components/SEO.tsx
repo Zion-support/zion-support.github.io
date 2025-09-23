@@ -340,7 +340,7 @@ export function SEO({
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="keywords" content={Array.isArray(keywords) ? keywords.join(', ') : keywords} />
       <meta name="author" content={author} />
       <meta name="robots" content={noindex ? 'noindex' : robots} />
       {nofollow && <meta name="robots" content="nofollow" />}
