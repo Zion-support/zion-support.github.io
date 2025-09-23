@@ -1,49 +1,120 @@
 "use client";
-import React, { createContext, useContext, useMemo, useState } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from "react";
 
-export interface AuthUser {
-  id: string;
-  name: string;
-  email: string;
-}
-
-export interface AuthContextValue {
-  user: AuthUser | null;
-  login: (email: string, password: string) => Promise<void>;
-  register: (name: string, email: string, password: string) => Promise<void>;
-  logout: () => Promise<void>;
-  completeOnboarding: () => Promise<void>;
+interface AuthContextValue {
+  isAuthenticated: boolean;
+  signIn: (email: string, password: string) => Promise<void>;
+  signOut: () => void;
 }
 
 const AuthContext = createContext<AuthContextValue | undefined>(undefined);
 
-export function AuthProvider({ children }: { children: React.ReactNode }) {
-  const [user, setUser] = useState<AuthUser | null>(null);
+export function AuthProvider({ children }: { children: ReactNode }) {
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
 
-  const login = async (email: string, password: string) => {
-    setUser({ id: 'demo', name: email.split('@')[0], email });
-  };
+  async function signIn(_email: string, _password: string) {
+    setIsAuthenticated(true);
+  }
 
-  const register = async (name: string, email: string, password: string) => {
-    setUser({ id: 'demo', name, email });
-    await login(email, password);
-  };
+  function signOut() {
+    setIsAuthenticated(false);
+  }
 
-  const logout = async () => {
-    setUser(null);
-  };
-
-  const completeOnboarding = async () => {
-    // no-op demo
-  };
-
-  const value = useMemo<AuthContextValue>(() => ({ user, login, register, logout, completeOnboarding }), [user]);
-
+  const value: AuthContextValue = { isAuthenticated, signIn, signOut };
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
 
-export function useAuth() {
-  const context = useContext(AuthContext);
-  if (context === undefined) throw new Error('useAuth must be used within an AuthProvider');
-  return context;
+export function useAuth(): AuthContextValue {
+  const ctx = useContext(AuthContext);
+  if (!ctx) {
+    throw new Error("useAuth must be used within an AuthProvider");
+  }
+  return ctx;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

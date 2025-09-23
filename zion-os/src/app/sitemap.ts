@@ -1,9 +1,12 @@
-import type { MetadataRoute } from 'next';
+import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-	return [
-		{ url: 'https://ziontechgroup.com/' },
-		{ url: 'https://ziontechgroup.com/solutions' },
-		{ url: 'https://ziontechgroup.com/services' }
-	];
+  return [
+    {
+      url: "https://zion.example.com/",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 1,
+    },
+  ];
 }

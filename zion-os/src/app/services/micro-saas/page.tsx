@@ -1,23 +1,20 @@
-export interface MicroSaasOffering {
-  name: string;
-  description: string;
-  targetMarket: string[];
-  features: string[];
-  pricing: string;
-  startingPrice: number;
-  contactLink: string;
-  icon: string;
-  benefits: string[];
-  integrations: string[];
-  deployment: string;
-}
-
-export default function MicroSaasPage() {
-  const offerings: MicroSaasOffering[] = [];
+export default function MicroSaaSPage() {
   return (
-    <div className="max-w-4xl mx-auto p-8">
+    <main className="container mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold mb-4">Micro SaaS</h1>
-      <p className="text-white/70">Catalog of micro SaaS offerings coming soon.</p>
-    </div>
+      <p className="text-gray-600">Build and scale micro SaaS products.</p>
+    </main>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+

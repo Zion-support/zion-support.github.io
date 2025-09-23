@@ -1,22 +1,19 @@
-export interface AiSolution {
-  name: string;
-  description: string;
-  technicalSpecs: string[];
-  useCases: string[];
-  pricing: string;
-  startingPrice: number;
-  contactLink: string;
-  icon: string;
-  features: string[];
-  integration: string[];
-}
-
-export default function AiSolutionsPage() {
-  const solutions: AiSolution[] = [];
+export default function AISolutionsPage() {
   return (
-    <div className="max-w-4xl mx-auto p-8">
+    <main className="container mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold mb-4">AI Solutions</h1>
-      <p className="text-white/70">Explore our AI offerings. Content coming soon.</p>
-    </div>
+      <p className="text-gray-600">End-to-end AI solution offerings.</p>
+    </main>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
