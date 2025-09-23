@@ -33,7 +33,10 @@
   },
   "include": [
     "next-env.d.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "zion-website/src/**/*.ts",
+    "zion-website/src/**/*.tsx",
+    "types/**/*.d.ts"
   ],
   "exclude": [
     "node_modules",
@@ -63,10 +66,10 @@
     "src.corrupted/**",
     "src.disabled/**",
     "src.pages.disabled/**",
-    "zion-os/**",
-    "utils/**",
     "components/**",
     "lib/**",
+    "zion-os/**",
+    "utils/**",
     "hooks/**",
     "types/**",
     "utils.disabled/**",
