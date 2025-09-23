@@ -6,7 +6,6 @@ from sqlalchemy import desc, func
 
 # Import db instance from models.py FIRST
 from models import db, AnalyticsEvent, FeedbackSubmission, ContentAnalytics
-from seed_db import seed_data # Assuming seed_db.py is in the same directory
 
 app = Flask(__name__)
 
@@ -71,9 +70,14 @@ def course_list():
 @app.cli.command('seed-db')
 def seed_db_command():
     """Seeds the database with initial sample data."""
-    seed_data()
-    # No need to print here, seed_data() already prints messages.
-    print('Database seeding process initiated from CLI command.')
+    # Lazy import to avoid circular dependency during module import
+    try:
+        from seed_db import seed_data  # Assuming seed_db.py is in the same directory
+        seed_data()
+        # No need to print here, seed_data() already prints messages.
+        print('Database seeding process initiated from CLI command.')
+    except Exception as e:
+        print(f'Error seeding database: {e}')
 
 @app.cli.command('seed-updates')
 def seed_updates_command():
@@ -161,6 +165,7 @@ def api_complete_lesson():
             enrollment_course_id=course_id,
         ).count()
         enrollment.progress = int((completed / total_lessons) * 100) if total_lessons else 0
+        progress_value = enrollment.progress
 
         if enrollment.progress == 100:
             existing = Certificate.query.filter_by(user_id=user_id, course_id=course_id).first()
@@ -174,7 +179,7 @@ def api_complete_lesson():
 
         db.session.commit()
 
-    return jsonify({'progress': enrollment.progress})
+    return jsonify({'progress': progress_value})
 
 @app.route('/api/progress/<int:user_id>')
 def api_user_progress(user_id):

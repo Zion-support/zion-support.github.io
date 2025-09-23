@@ -1,4 +1,5 @@
 "use client";
+
 import React, { createContext, useContext, useMemo, useState } from "react";
 
 type AuthUser = { id: string; email: string } | null;
