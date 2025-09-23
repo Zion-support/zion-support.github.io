@@ -33,7 +33,7 @@ export default function PerformanceMonitor() {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({})
 
   useEffect(() => {
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return;
 
     const performanceMetrics: PerformanceMetrics = {
       userAgent: navigator.userAgent,
@@ -52,9 +52,9 @@ export default function PerformanceMonitor() {
         if (entry.name === 'first-contentful-paint') {
           performanceMetrics.fcp = entry.startTime
         }
-      }
-    })
-    fcpObserver.observe({ entryTypes: ['paint'] })
+      });
+      observer.observe({ entryTypes: ['paint'] });
+    };
 
     // Largest Contentful Paint (LCP)
     const lcpObserver = new PerformanceObserver((list) => {
@@ -71,9 +71,9 @@ export default function PerformanceMonitor() {
         if (fidEntry.processingStart) {
           performanceMetrics.fid = fidEntry.processingStart - fidEntry.startTime
         }
-      }
-    })
-    fidObserver.observe({ entryTypes: ['first-input'] })
+      });
+      observer.observe({ entryTypes: ['first-input'] });
+    };
 
     // Cumulative Layout Shift (CLS)
     let clsValue = 0
@@ -83,9 +83,25 @@ export default function PerformanceMonitor() {
           clsValue += (entry as any).value
           performanceMetrics.cls = clsValue
         }
+        setMetrics(prev => ({
+          ...prev,
+          cls: clsValue
+        }));
+      });
+      observer.observe({ entryTypes: ['layout-shift'] });
+    };
+
+    // Measure Time to First Byte (TTFB)
+    const measureTTFB = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        const ttfb = navigation.responseStart - navigation.requestStart;
+        setMetrics(prev => ({
+          ...prev,
+          ttfb
+        }));
       }
-    })
-    clsObserver.observe({ entryTypes: ['layout-shift'] })
+    };
 
     // Time to First Byte (TTFB)
     const ttfbEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
@@ -158,16 +174,36 @@ export default function PerformanceMonitor() {
         //   body: JSON.stringify(analyticsData)
         // }).catch(console.error)
       }
-    }
+    };
 
-    // Log metrics when page is fully loaded
-    if (document.readyState === 'complete') {
-      setTimeout(logMetrics, 1000)
-    } else {
-      window.addEventListener('load', () => {
-        setTimeout(logMetrics, 1000)
-      })
-    }
+    // Initialize measurements
+    measureFCP();
+    measureLCP();
+    measureFID();
+    measureCLS();
+    measureTTFB();
+    measureTTI();
+
+    // Send metrics to analytics
+    const sendMetrics = () => {
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as any).gtag('event', 'performance_metrics', {
+          event_category: 'Performance',
+          event_label: 'Core Web Vitals',
+          custom_map: {
+            fcp: Math.round(metrics.fcp),
+            lcp: Math.round(metrics.lcp),
+            fid: Math.round(metrics.fid),
+            cls: Math.round(metrics.cls * 1000) / 1000,
+            ttfb: Math.round(metrics.ttfb),
+            tti: Math.round(metrics.tti),
+          }
+        });
+      }
+    };
+
+    // Send metrics after 5 seconds
+    const timer = setTimeout(sendMetrics, 5000);
 
     // Monitor for performance regressions
     const monitorPerformance = () => {
@@ -182,12 +218,77 @@ export default function PerformanceMonitor() {
     setTimeout(monitorPerformance, 2000)
 
     return () => {
-      fcpObserver.disconnect()
-      lcpObserver.disconnect()
-      fidObserver.disconnect()
-      clsObserver.disconnect()
-    }
-  }, [])
+      clearTimeout(timer);
+    };
+  }, [metrics]);
 
-  return null
-}
+  if (!isVisible) return null;
+
+  const getScoreColor = (value: number, thresholds: { good: number; needsImprovement: number }) => {
+    if (value <= thresholds.good) return 'text-green-600';
+    if (value <= thresholds.needsImprovement) return 'text-yellow-600';
+    return 'text-red-600';
+  };
+
+  const getScoreText = (value: number, thresholds: { good: number; needsImprovement: number }) => {
+    if (value <= thresholds.good) return 'Good';
+    if (value <= thresholds.needsImprovement) return 'Needs Improvement';
+    return 'Poor';
+  };
+
+  return (
+    <div className="fixed bottom-4 left-4 bg-black bg-opacity-90 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-sm">
+      <div className="font-bold mb-2 text-yellow-400">Performance Monitor</div>
+      
+      <div className="space-y-1">
+        <div className="flex justify-between">
+          <span>FCP:</span>
+          <span className={getScoreColor(metrics.fcp, { good: 1800, needsImprovement: 3000 })}>
+            {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, needsImprovement: 3000 })})
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>LCP:</span>
+          <span className={getScoreColor(metrics.lcp, { good: 2500, needsImprovement: 4000 })}>
+            {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500, needsImprovement: 4000 })})
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>FID:</span>
+          <span className={getScoreColor(metrics.fid, { good: 100, needsImprovement: 300 })}>
+            {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100, needsImprovement: 300 })})
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>CLS:</span>
+          <span className={getScoreColor(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}>
+            {(metrics.cls * 1000 / 1000).toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1, needsImprovement: 0.25 })})
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>TTFB:</span>
+          <span className={getScoreColor(metrics.ttfb, { good: 800, needsImprovement: 1800 })}>
+            {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, needsImprovement: 1800 })})
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>TTI:</span>
+          <span className={getScoreColor(metrics.tti, { good: 3800, needsImprovement: 7300 })}>
+            {Math.round(metrics.tti)}ms ({getScoreText(metrics.tti, { good: 3800, needsImprovement: 7300 })})
+          </span>
+        </div>
+      </div>
+      
+      <div className="mt-2 pt-2 border-t border-gray-600 text-xs text-gray-400">
+        Core Web Vitals monitoring
+      </div>
+    </div>
+  );
+};
+
+export default PerformanceMonitor;

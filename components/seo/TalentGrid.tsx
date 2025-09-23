@@ -41,6 +41,27 @@ export default function TalentGrid({ region, service }: Props) {
         No matching talent found. Try broadening filters.
       </div>
     );
+  if (!region) return true;
+  const r = region.toLowerCase();
+  return profile.location.toLowerCase().includes(r);
+}
+
+function matchesService(profile: TalentProfileservice?: string) {
+  if (!service) return true;
+  const s = service.toLowerCase();
+  return profile.title.toLowerCase().includes(s) || profile.skills.some((sk) => sk.toLowerCase().includes(s));
+}
+
+export default function TalentGrid({ regionservice }: Props) {
+  const items = React.useMemo(
+    () => TALENT_PROFILES.filter((p) => matchesRegion(pregion) && matchesService(pservice)),
+    [regionservice]
+  );
+
+
+
+  if (items.length === 0) {
+    return <div className="text-sm text-gray-400">No matching talent found. Try broadening filters.</div>;
   }
 
   return (
@@ -77,6 +98,10 @@ export default function TalentGrid({ region, service }: Props) {
           <div className="mt-3 text-sm">
             ${p.hourlyRateUsd}/hr • {p.availability}
           </div>
+              <span key={sk} className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">{sk}</span>
+            ))}
+          </div>
+          <div className="mt-3 text-sm">${p.hourlyRateUsd}/hr • {p.availability}</div>
         </div>
       ))}
     </div>

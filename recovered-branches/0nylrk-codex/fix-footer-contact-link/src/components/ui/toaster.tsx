@@ -1,165 +1,27 @@
 
 import * as React from "react";
 import { Toaster as SonnerToaster } from "sonner";
-import * as React from "react",
-import { Toaster as SonnerToaster } from "sonner",
-import {Toaster, as, SonnerToaster} from "sonner";
-import * as React from "react",
-import { Toaster as SonnerToaster } from "sonner",
-import { Toaster as SonnerToaster } from "sonner";
-import * as React from "react",
-import { Toaster as SonnerToaster } from "sonner",
-import {Toaster, as, SonnerToaster} from "sonner";
-import * as React from "react",
-import { Toaster as SonnerToaster } from "sonner",
-import * as React from "react",
-import { Toaster as SonnerToaster } from "sonner",
-
-import {Toaster, as, SonnerToaster} from "sonner";
-import * as React from "react",
-import { Toaster as SonnerToaster } from "sonner",
 
 export function Toaster() {
   return (
-
-import {Toaster, as, SonnerToaster} from "sonner";
-export function Toaster() {;
-  return (    <SonnerToaster
-import * as React from "react";"
-import { Toaster, as, SonnerToaster } from "sonner";
-export function Toaster() {}
-  return (
-    <SonnerToaster"
-import * as React from "react";
-import { Toaster, as, SonnerToaster } from "sonner";
-export function Toaster() {
-  return (
-    <SonnerToaster
-
-export function Toaster() {
-  return (
-
-import {Toaster, as, SonnerToaster} from "sonner";
-export function Toaster() {;
-  return (    <SonnerToaster
+    <SonnerToaster 
       position="top-right"
-      toastOptions={{}
-        className:"
-          "bg-zion-blue-dark text-white border border-zion-blue-light shadow-lg shadow-zion-purple/10",
-style: {
-          background: '#0a1429'
-          color: '#fff'
-          border: '1px solid #1e3a6f'}
-        duration: 4000
-
-        descriptionClassName: "text-zion-slate-light"}}
-    />
-  )
-
-}
-;
-
-
-import * as React from "react",;
-import { Toaster as SonnerToaster } from "sonner",;
-export function Toaster() {;
-  return (;
-    <SonnerToaster;
-      position="top-right";
-      toastOptions={{;
-        className: "bg-zion-blue-dark text-white border border-zion-blue-light shadow-lg shadow-zion-purple/10",;
-        style: {;
-          background: '#0a1429',;
-          color: '#fff',;
-          border: '1px solid #1e3a6f'};
-        duration: 4000;
-        descriptionClassName: "text-zion-slate-light"}}
-
-    />;
-  );
-}
-
-import * as React from './react';
-import { Toaster, as, SonnerToaster } from './sonner';
-export /**
- * Toaster - Function description
- */
-function Toaster() {
-  return (
-    <SonnerToaster;
-      position="top - right";
-      toast_options={{
-        class_name: "bg - zion - blue - dark text - white border border - zion - blue - light shadow - lg shadow - zion - purple / 10",
+      toastOptions={{
+        className: "bg-zion-blue-dark text-white border border-zion-blue-light shadow-lg shadow-zion-purple/10",
         style: {
           background: '#0a1429',
           color: '#fff',
+<<<<<<< HEAD
           border: '1px solid #1e3a6f'},
-          background: "#0a1429",
-          color: "#fff",
-          border: "1px solid #1e3a6f",
-        },
         duration: 4000,
-        descriptionClassName: "text - zion - slate - light"}}
-    />);
-}}
-        style: {"
-          background: "#0a1429","
-          color: "#fff","
-          border: "1px solid #1e3a6f",
+        descriptionClassName: "text-zion-slate-light"}}
+=======
+          border: '1px solid #1e3a6f',
         },
-        duration: 4000,"
-        descriptionClassName: "text-zion-slate-light",
-      }}
-    />;
-  );
-}
-
-;
-
-}
         duration: 4000,
         descriptionClassName: "text-zion-slate-light",
       }}
+>>>>>>> origin/auto/autonomy-17186719616
     />
   );
 }
-
-;
-
-}
-        descriptionClassName: "text - zion - slate - light"}}
-    />);
-}}
-
-;
-
-    />;
-  );
-}
-;
-}
-}
-"
-
-import * as React from "react";""
-import { Toaster, as, SonnerToaster } from "sonner";"
-export function Toaster() {
-  return (
-    <SonnerToaster;"
-      position="top-right""
-      toastOptions={{
-        className:"
-          "bg-zion-blue-dark text-white border border-zion-blue-light shadow-lg shadow-zion-purple/10","
-        style: {,"
-  background: "#0a1429",""
-          color: "#fff",""
-          border: "1px solid #1e3a6f","
-        },
-        duration: 4000,"
-        descriptionClassName: "text-zion-slate-light","
-      }}
-    />
-)"
-pr-12325
-</SonnerToaster>)"
-

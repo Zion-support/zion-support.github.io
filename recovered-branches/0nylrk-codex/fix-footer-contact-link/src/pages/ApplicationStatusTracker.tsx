@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
 import {ApplicationsTracker} from "@/components/jobs/applications";
@@ -6,14 +8,14 @@ import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Briefcase, Inbox} from "lucide-react";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {useIsMobile} from "@/hooks/use-mobile";
+
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
 import { ApplicationsTracker } from "@/components/jobs/applications",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Briefcase, Inbox } from "lucide-react",
-import { useIsMobile } from "@/hooks/use-mobile";
-function ApplicationStatusTrackerContent() {
-  const isMobile = useIsMobile();
+
+
 
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { useIsMobile } from "@/hooks/use-mobile",
@@ -21,80 +23,44 @@ import { useIsMobile } from "@/hooks/use-mobile",
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
 
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { Briefcase, Inbox } from "lucide-react",import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { AppLayout } from "@/layout/AppLayout";"
-import { SEO } from "@/components/SEO";"
-import { ApplicationsTracker } from "@/components/jobs/applications";"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";"
-import { Briefcase, Inbox } from "lucide-react";"
-import { ProtectedRoute } from "@/components/ProtectedRoute";"
-import { useIsMobile } from "@/hooks/use-mobile";
-function ApplicationStatusTrackerContent() {}
-  const isMobile = useIsMobile();
 
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { useIsMobile } from "@/hooks/use-mobile",
-
-function ApplicationStatusTrackerContent() {
-  const isMobile = useIsMobile(),
-
-  return (
-    <>
-      <SEO"
-        title="Application Status Tracker | Zion AI Marketplace""
-        description="Track the status of your job applications in the Zion AI marketplace."
-      />
-"
-      <div className="container mx-auto px-4 py-8">"
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
-          <div>"
-            <h1 className={`text-${isMobile ? "2xl" : "3xl"} font-bold`}>
-              Application Status Tracker;
-            </h1>"
-            <p className="text-muted-foreground mt-1">
-              Track where you stand in the hiring process;
-            </p>
-          </div>
-        </div>"
-        <div className="grid grid-cols-1 gap-6">
-          <Card>"
-            <CardHeader className="border-b bg-muted/50">"
-              <CardTitle className="flex items-center text-lg">"
-                <Inbox className="mr-2 h-5 w-5" /> Your Applications;
-              </CardTitle>
-            </CardHeader>"`
-            <CardContent className={`p-${isMobile ? "3" : "6"}`}>
-              <ApplicationsTracker />
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    </>
-)
-}
-  }
   return (
     <>
       <SEO
         title="Application Status Tracker | Zion AI Marketplace"
         description="Track the status of your job applications in the Zion AI marketplace."
       />
+=======
+import { AppLayout } from "@/layout/AppLayout";
+import { SEO } from "@/components/SEO";
+import { ApplicationsTracker } from "@/components/jobs/applications";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Briefcase, Inbox } from "lucide-react";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { useIsMobile } from "@/hooks/use-mobile";
 
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
-import { useIsMobile } from "@/hooks/use-mobile",;
-
+function ApplicationStatusTrackerContent() {
+  const isMobile = useIsMobile();
+  
+  return (
+    <>
+      <SEO 
+        title="Application Status Tracker | Zion AI Marketplace" 
+        description="Track the status of your job applications in the Zion AI marketplace." 
+      />
+      
+>>>>>>> origin/auto/autonomy-17186719616
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
           <div>
-            <h1 className={`text-${isMobile ? "2xl" : "3xl"} font-bold`}>
-              Application Status Tracker
-            </h1>
-            <p className="text-muted-foreground mt-1">
-              Track where you stand in the hiring process
-            </p>
+            <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>Application Status Tracker</h1>
+            <p className="text-muted-foreground mt-1">Track where you stand in the hiring process</p>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
         <div className="grid grid-cols-1 gap-6">
           <Card>
             <CardHeader className="border-b bg-muted/50">
@@ -102,44 +68,33 @@ import { useIsMobile } from "@/hooks/use-mobile",;
                 <Inbox className="mr-2 h-5 w-5" /> Your Applications
               </CardTitle>
             </CardHeader>
-            <CardContent className={`p-${isMobile ? "3" : "6"}`}>
+            <CardContent className={`p-${isMobile ? '3' : '6'}`}>
               <ApplicationsTracker />
             </CardContent>
           </Card>
         </div>
       </div>
     </>
+<<<<<<< HEAD
+  )
+
+}
+=======
   );
 }
 
-import {AppLayout} from "@/layout/AppLayout";
-import {SEO} from "@/components/SEO";
-import {ApplicationsTracker} from "@/components/jobs/applications";
-import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
-import {Briefcase, Inbox} from "lucide-react";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {useIsMobile} from "@/hooks/use-mobile";
-
-}
+>>>>>>> origin/auto/autonomy-17186719616
 export default function ApplicationStatusTracker() {
-}
-export default function ApplicationStatusTracker() {}
   return (
     <ProtectedRoute>
       <AppLayout>
         <ApplicationStatusTrackerContent />
       </AppLayout>
     </ProtectedRoute>
+<<<<<<< HEAD
   )
 }
 
-import {AppLayout} from "@/layout/AppLayout";
-import {SEO} from "@/components/SEO";
-import {ApplicationsTracker} from "@/components/jobs/applications";
-import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
-import {Briefcase, Inbox} from "lucide-react";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {useIsMobile} from "@/hooks/use-mobile";
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
 import { ApplicationsTracker } from "@/components/jobs/applications",;
@@ -150,36 +105,14 @@ import { useIsMobile } from "@/hooks/use-mobile",;
 
 function ApplicationStatusTrackerContent() {;
   const isMobile = useIsMobile();
-      <div className="container mx-auto px-4 py-8">;
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">;
-          <div>;
-            <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>Application Status Tracker</h1>;
-            <p className="text-muted-foreground mt-1">Track where you stand in the hiring process</p>;
-          </div>;
-        </div>;
 
-        <div className="grid grid-cols-1 gap-6">;
-          <Card>;
-            <CardHeader className="border-b bg-muted/50">;
-              <CardTitle className="flex items-center text-lg">;
-                <Inbox className="mr-2 h-5 w-5" /> Your Applications;
-              </CardTitle>;
-            </CardHeader>;
-            <CardContent className={`p-${isMobile ? '3' :'6'}`}>;
-            <CardContent className={`p-${isMobile ? '3' : '6'}`}>;
-              <ApplicationsTracker />;
-            </CardContent>;
-          </Card>;
-        </div>;
-      </div>;
-    </>;
-;
   return (
     <>;
       <SEO
         title="Application Status Tracker | Zion AI Marketplace" 
-        description="Track the status of your job applications in the Zion AI marketplace."
+        description="Track the status of your job applications in the Zion AI marketplace." 
       />;
+
       <div className="container mx-auto px-4 py-8">;
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">;
           <div>;
@@ -195,7 +128,6 @@ function ApplicationStatusTrackerContent() {;
                 <Inbox className="mr-2 h-5 w-5" /> Your Applications;
               </CardTitle>;
             </CardHeader>;
-
             <CardContent className={`p-${isMobile ? '3' : '6'}`}>;
               <ApplicationsTracker />;
             </CardContent>;
@@ -203,8 +135,12 @@ function ApplicationStatusTrackerContent() {;
         </div>;
       </div>;
     </>;
-);
-}
+  );
+
+
+
+
+
 import { AppLayout } from '@/layout / AppLayout';
 import { SEO } from '@/components / SEO';
 import { ApplicationsTracker } from '@/components / jobs / applications';
@@ -217,6 +153,10 @@ import { useIsMobile } from '@/hooks / use - mobile';
  */
 function ApplicationStatusTrackerContent() {
   const is_mobile = useIsMobile ();
+
+
+
+
 ;
   return (
     <>;
@@ -228,26 +168,14 @@ function ApplicationStatusTrackerContent() {
         <div className="flex flex - col md:flex - row justify - between items - start md:items - center gap - 4 mb - 8">;
           <div>;
             <h1 className={`text-${is_mobile ? '2xl' : '3xl'} font - bold`}>Application Status Tracker</h1>;
-            <p className="text - muted - foreground mt-1">Track where you stand in the hiring process</p>;
+            <p className="text - muted - foreground mt - 1">Track where you stand in the hiring process</p>;
           </div>;
         </div>;
-        <div className="grid grid - cols - 1 gap-6">;
+        <div className="grid grid - cols - 1 gap - 6">;
           <Card>;
-<CardHeader className="border - b bg - muted / 50">;
+            <CardHeader className="border - b bg - muted / 50">;
               <CardTitle className="flex items - center text - lg">;
                 <Inbox className="mr - 2 h - 5 w - 5" /> Your Applications;
-      <div className="container mx - auto px - 4 py-8">;
-        <div className="flex flex - col md:flex - row justify - between items - start md:items - center gap - 4 mb-8">;
-          <div>;
-            <h1 className={`text-${is_mobile ? '2xl' : '3xl'} font - bold`}>Application Status Tracker</h1>;
-            <p className="text - muted - foreground mt-1">Track where you stand in the hiring process</p>;
-          </div>;
-        </div>;
-        <div className="grid grid - cols - 1 gap-6">;
-          <Card>;
-            <CardHeader className="border - b bg-muted / 50">;
-              <CardTitle className="flex items - center text-lg">;
-                <Inbox className="mr - 2 h - 5 w-5" /> Your Applications;
               </CardTitle>;
             </CardHeader>;
             <CardContent className={`p-${is_mobile ? '3' : '6'}`}>;
@@ -257,194 +185,43 @@ function ApplicationStatusTrackerContent() {
         </div>;
       </div>;
     </>);
-    <ProtectedRoute>
-      <AppLayout>
-        <ApplicationStatusTrackerContent />
-      </AppLayout>
-    </ProtectedRoute>
-  );
 }
-}
-    </>);}
 export default /**
  * ApplicationStatusTracker - Function description
  */
 function ApplicationStatusTracker() {
   return (
 
-),;
-  );
-}
-;
-export default function ApplicationStatusTracker() {;
-  return (;
-    <ProtectedRoute>;
-      <AppLayout>;
-  return (;      <AppLayout>;
-  return (;      <AppLayout>;
-  return (;
+
+
+
     <ProtectedRoute>;
       <AppLayout>;
         <ApplicationStatusTrackerContent />;
       </AppLayout>;
 
-    </ProtectedRoute>);
-}
-}
-</ProtectedRoute>;
-  ),;
-} function ApplicationStatusTrackerContent () {
-  const isMobile = useIsMobile ();
-Application Status Tracker | Zion AI Marketplace"description=" Track the status of your job applications in the Zion AI marketplace."/> <div className=" container mx-auto px-4 py-8"> <div className=" flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8"> <div> <h1 className= {
-  `text-$ {
-  isMobile ? '2xl' : '3xl' 
-}font-bold` 
-}>Application Status Tracker</h1> <p className=" text-muted-foreground mt-1">Track where you stand in the hiring process</p> </div> </div> <div className=" grid grid-cols-1 gap-6"> <Card> <CardHeader className=" border-b bg-muted/50"> <CardTitle className=" flex items-center text-lg"> <Inbox className=" mr-2 h-5 w-5" /> Your Applications </CardTitle> </CardHeader> <CardContent className= {
-  `p-$ {
-  isMobile ? '3' : '6' 
-}` 
-}> <ApplicationsTracker /> </CardContent> </Card> </div> </div> </>) 
-}export default function ApplicationStatusTracker () {
-  return (<ProtectedRoute> <AppLayout> <ApplicationStatusTrackerContent /> </AppLayout> </ProtectedRoute> 
     </ProtectedRoute>;
-}
-;
-export default function ApplicationStatusTracker() {;
-  return (;      <AppLayout>;
-        <ApplicationStatusTrackerContent />;
-      </AppLayout>;
-    </ProtectedRoute>);
-}
-
-}
-}
-
-import { AppLayout } from "@/layout/AppLayout";""
-import { SEO } from "@/components/SEO";""
-import { ApplicationsTracker } from "@/components/jobs/applications";""
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";""
-import { Briefcase, Inbox } from "lucide-react";""
-import { ProtectedRoute } from "@/components/ProtectedRoute";""
-import { useIsMobile } from "@/hooks/use-mobile";"
-function ApplicationStatusTrackerContent() {
-  const isMobile = useIsMobile();
-
-  return (
-    <>
-      <SEO;"
-        title="Application Status Tracker | Zion AI Marketplace"""
-        description="Track the status of your job applications in the Zion AI marketplace.""
-      />
-
-"
-      <div className="container mx-auto px-4 py-8">"
-</div>"
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">"
-</div>
-          <div>
-            <h1 className={`text-${isMobile ? "2xl" : "3xl"} font-bold`}>"
-</h1>
-            </h1>"
-            <p className="text-muted-foreground mt-1">"
-</p>
-        <div className="grid grid-cols-1 gap-6">"
-          <Card>
-            <CardHeader className="border-b bg-muted/50">"
-              <CardTitle className="flex items-center text-lg">"
-                <Inbox className="mr-2 h-5 w-5" /> Your Applications;"
-
-            "`;
-            <CardContent className={`p-${isMobile ? "3" : "6"}`}>"
-
-              <ApplicationsTracker />
-
-    </>)
   );
 }
-import {AppLayout} from "@/layout/AppLayout";""
-import {SEO} from "@/components/SEO";""
-import {ApplicationsTracker} from "@/components/jobs/applications";""
-import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";""
-import {Briefcase, Inbox} from "lucide-react";""
-import {ProtectedRoute} from "@/components/ProtectedRoute";""
-import {useIsMobile} from "@/hooks/use-mobile";"
-export default function ApplicationStatusTracker() {
-    <ProtectedRoute>
-
-      <AppLayout>
-
-        <ApplicationStatusTrackerContent />
-
-</AppLayout>
-
-        <ApplicationStatusTrackerContent />
-</ApplicationStatusTrackerContent>
-      </AppLayout>
-
-    </ProtectedRoute>
-    <ProtectedRoute>
-</ProtectedRoute>
-      <AppLayout>
-</AppLayout>
-        <ApplicationStatusTrackerContent />
-</ApplicationStatusTrackerContent>
-      </AppLayout>
-    </ProtectedRoute>
-  )
-}
 ;
-    </ProtectedRoute>);
-}
-";
-import { AppLayout } from "@/layout/AppLayout",;"
-import { SEO } from "@/components/SEO",;"
-import { ApplicationsTracker } from "@/components/jobs/applications",;"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;"
-import { Briefcase, Inbox } from "lucide-react",;"
-import { ProtectedRoute } from "@/components/ProtectedRoute",;"
-import { useIsMobile } from "@/hooks/use-mobile",;
 
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }
-;
-export default function ApplicationStatusTracker() { return null; }
-}
+
 
     </ProtectedRoute>);
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+=======
+  );
 }
-
-"`
-    <ProtectedRoute>;
-
-      <AppLayout>;
-
-        <ApplicationStatusTrackerContent />;
-
-      ;)
-    ;"
-Application Status Tracker | Zion AI Marketplace"description=" Track the status of your job applications in the Zion AI marketplace."/> <div className=" container mx-auto px-4 py-8"> <div className=" flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8"> <div> <h1 className= {"
-}>Application Status Tracker</h1> <p className=" text-muted-foreground mt-1">Track where you stand in the hiring process</p> </div> </div> <div className=" grid grid-cols-1 gap-6"> <Card> <CardHeader className=" border-b bg-muted/50"> <CardTitle className=" flex items-center text-lg"> <Inbox className=" mr-2 h-5 w-5" /> Your Applications   <CardContent className= {"`;
-  `p-$ {"
-  isMobile ? '3' : '6`;
-}` 
-}> <ApplicationsTracker />   </div> </div> </>) 
-
-  return (<ProtectedRoute> <AppLayout> <ApplicationStatusTrackerContent />   
-    ;
-
-    )
-    );`;
-pr-12325
-}> <ApplicationsTracker /> </CardContent> </Card> </div> </div> </>) 
-</ApplicationsTracker>
-  return (<ProtectedRoute> <AppLayout> <ApplicationStatusTrackerContent /> </AppLayout> </ProtectedRoute> 
-    </ProtectedRoute>;
-    <ProtectedRoute>
-</ProtectedRoute>
-      <AppLayout>
-</AppLayout>
-        <ApplicationStatusTrackerContent />
-</ApplicationStatusTrackerContent>
-      </AppLayout>
-    </ProtectedRoute>)
-    </ProtectedRoute>);'
-
+>>>>>>> origin/auto/autonomy-17186719616

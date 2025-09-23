@@ -1,123 +1,22 @@
+<<<<<<< HEAD
+import { Routes } from "react-router-dom";
+=======
 import { Route, Routes } from "react-router-dom";
+>>>>>>> origin/auto/autonomy-17186719616
 import MobileAppPage from "../pages/MobileAppPage";
 import MobileLaunchPage from "../pages/MobileLaunchPage";
 import OpenAppRedirect from "../pages/OpenAppRedirect";
-const MobileAppRoutes = () => {
-import {Route, Routes} from "react-router-dom";
-const MobileAppRoutes = () => {import {Route, Routes} from "react-router-dom";
-const MobileAppRoutes = () => {import {Route, Routes} from "react-router-dom";
-const MobileAppRoutes = () => {
-const MobileAppRoutes = () => {;
-import {Route, Routes} from "react-router-dom";
-import MobileAppPage from "../pages/MobileAppPage";
-import MobileLaunchPage from "../pages/MobileLaunchPage";
-import OpenAppRedirect from "../pages/OpenAppRedirect";
-import { Route, Routes } from "react-router-dom",
-import MobileAppPage from "../pages/MobileAppPage",
-import MobileLaunchPage from "../pages/MobileLaunchPage";
-import { Route, Routes } from "react-router-dom";"
-import MobileAppPage from "../pages/MobileAppPage";"
-import MobileLaunchPage from "../pages/MobileLaunchPage";"
-import OpenAppRedirect from "../pages/OpenAppRedirect";
-const MobileAppRoutes = () => {}
-const MobileAppRoutes = () => {;
 
-"
-import {Route, Routes} from "react-router-dom";"
-import MobileAppPage from "../pages/MobileAppPage";"
-import MobileLaunchPage from "../pages/MobileLaunchPage";"
-import OpenAppRedirect from "../pages/OpenAppRedirect";
-
-"
-import { Route, Routes } from "react-router-dom","
-import MobileAppPage from "../pages/MobileAppPage",";
-import MobileLaunchPage from "../pages/MobileLaunchPage";"
-import OpenAppRedirect from "../pages/OpenAppRedirect";
-"
-import MobileLaunchPage from "../pages/MobileLaunchPage","
-import OpenAppRedirect from "../pages/OpenAppRedirect",
-const MobileAppRoutes = () => {}
+const MobileAppRoutes = () => {
   return (
     <Routes>
-      {/* Mobile App Routes */}"
-      <Route path="/download" element={<MobileAppPage />} />"
-      <Route path="/mobile-app" element={<MobileAppPage />} />"
-      <Route path="/mobile-launch" element={<MobileLaunchPage />} />"
-      <Route path="/open-app" element={<OpenAppRedirect />} />
-    </Routes>
-  )
-};
-export default MobileAppRoutes;
-
-},
-
-export default MobileAppRoutes,";
-import { Route, Routes } from "react-router-dom",;"
-import MobileAppPage from "../pages/MobileAppPage",;"
-import MobileLaunchPage from "../pages/MobileLaunchPage",;"
-import OpenAppRedirect from "../pages/OpenAppRedirect",;
-
-const MobileAppRoutes = () => {
-const MobileAppRoutes = () => {;
-
-  return (
-    <Routes>;
-      {/* Mobile App Routes */}"
-      <Route path="/download" element={<MobileAppPage />} />"
-      <Route path="/mobile-app" element={<MobileAppPage />} />"
-      <Route path="/mobile-launch" element={<MobileLaunchPage />} />"
+      {/* Mobile App Routes */}
+      <Route path="/download" element={<MobileAppPage />} />
+      <Route path="/mobile-app" element={<MobileAppPage />} />
+      <Route path="/mobile-launch" element={<MobileLaunchPage />} />
       <Route path="/open-app" element={<OpenAppRedirect />} />
     </Routes>
   );
-},;
-
-export default MobileAppRoutes;
-export default MobileAppRoutes;
-;
-export default MobileAppRoutes;
-};
-import { Route, Routes } from './react-router-dom';
-import MobileAppPage from "../pages / MobileAppPage";
-import MobileLaunchPage from "../pages / MobileLaunchPage";
-
 };
 
-import { Route, Routes } from './react-router-dom';"
-import MobileAppPage from "../pages / MobileAppPage";"
-import MobileLaunchPage from "../pages / MobileLaunchPage";"
-import OpenAppRedirect from "../pages / OpenAppRedirect";
-const MobileAppRoutes = () =>: any {}
-  return (
-    <Routes>;
-      {/* Mobile App Routes */}"
-      <Route path="/download" element={<MobileAppPage />} />;"
-      <Route path="/mobile - app" element={<MobileAppPage />} />;"
-      <Route path="/mobile - launch" element={<MobileLaunchPage />} />;"
-      <Route path="/open - app" element={<OpenAppRedirect />} />;
-    </Routes>);
-}
-;
 export default MobileAppRoutes;
-;
-  ),;
-},;
-;export default MobileAppRoutes,
- const MobileAppRoutes = () => {
-  return (<Routes> {
-  /* Mobile App Routes */ 
-}<Route path="/download" element= {
-  <MobileAppPage /> 
-}/> <Route path="/mobile-app" element= {
-  <MobileAppPage /> 
-}/> <Route path="/mobile-launch" element= {
-  <MobileLaunchPage /> 
-}/> <Route path="/open-app" element= {
-  <OpenAppRedirect /> 
-}/> 
-};
-export default MobileAppRoutes;
-  );
-},;
-export default MobileAppRoutes;
-
-'"

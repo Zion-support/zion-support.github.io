@@ -35,6 +35,7 @@ exports.handler = async () => {;
 :backup-problematic-files/netlify/functions/front-enhancer.js
 
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const path = require('path');
 const { spawnSync } = require('child_process');
@@ -136,4 +137,5 @@ main:netlify/functions/front-enhancer.js
 :backup-problematic-files/netlify/functions/front-enhancer.js
 
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

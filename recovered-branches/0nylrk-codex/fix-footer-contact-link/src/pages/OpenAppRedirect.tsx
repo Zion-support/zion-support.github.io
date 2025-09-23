@@ -1,14 +1,11 @@
 
-// This component handles deep linking to the mobile app
-
-const OpenAppRedirect: React.FC = () => {
+<<<<<<< HEAD
 
 import React, { useEffect, useState } from "react";
 import {useNavigate} from "react-router-dom";
 import {SEO} from "@/components/SEO";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
-
 import React, { useEffect, useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
@@ -16,44 +13,45 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
+
 // This component handles deep linking to the mobile app
 
 const OpenAppRedirect: React.FC = () => {
-// This component handles deep linking to the mobile app;
-const OpenAppRedirect: React.FC = () => {}
-import React, { useEffect, useState } from "react","
-import { useNavigate } from "react-router-dom","
-import { SEO } from "@/components/SEO",";
-import { Button } from "@/components/ui/button";"
-import { Link } from "react-router-dom";"
-import { Button } from "@/components/ui/button","
-import { Link } from "react-router-dom",;
-// This component handles deep linking to the mobile app;
-const OpenAppRedirect: React.FC = () => {}
+
   const navigate = useNavigate()
   const [status, setStatus] = useState<'redirecting' | 'failed' | 'timeout'>('redirecting');
-  useEffect(() => {}
-    const attemptAppOpen = async () => {}
+  useEffect(() => {
+    const attemptAppOpen = async () => {
       const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-const isAndroid = /Android/.test(navigator.userAgent);
+      const isAndroid = /Android/.test(navigator.userAgent);
       // App scheme URLs (these would be your actual app's URL schemes)
       const appScheme = "zion: //"
       const androidAppUrl = "market: //details?id=app.zion.marketplace";
       const iosAppUrl = "https://apps.apple.com/app/zion-ai-marketplace/id0000000000"
   const navigate = useNavigate(),
   const [status, setStatus] = useState<'redirecting' | 'failed' | 'timeout'>('redirecting'),
+=======
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { SEO } from "@/components/SEO";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
+// This component handles deep linking to the mobile app
+const OpenAppRedirect: React.FC = () => {
+  const navigate = useNavigate();
+  const [status, setStatus] = useState<'redirecting' | 'failed' | 'timeout'>('redirecting');
+>>>>>>> origin/auto/autonomy-17186719616
+  
   useEffect(() => {
     const attemptAppOpen = async () => {
-
-      const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
-      const isAndroid = /Android/.test(navigator.userAgent),
-
+      const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+      const isAndroid = /Android/.test(navigator.userAgent);
+<<<<<<< HEAD
       // App scheme URLs (these would be your actual app's URL schemes)
       const appScheme = "zion: //",
       const androidAppUrl = "market://details?id=app.zion.marketplace",
       const iosAppUrl = "https://apps.apple.com/app/zion-ai-marketplace/id0000000000",
-
 
       const fallbackUrl = "/mobile-launch", // Fallback to mobile launch page
       let timeout: number | undefined
@@ -62,36 +60,26 @@ const isAndroid = /Android/.test(navigator.userAgent);
         // Set a timeout to redirect to app store if the app doesn't open
         timeout = window.setTimeout(() => {
 
-"
-      const fallbackUrl = "/mobile-launch", // Fallback to mobile launch page;
-      let timeout: number | undefined;
-      // Try to open the app;
-      if (isAndroid |isiOS) {'
-        // Set a timeout to redirect to app store if the app doesn't open;
-        timeout = window.setTimeout(() => {}
-'
-          setStatus('timeout');
-      // App scheme URLs (these would be your actual app's URL schemes)          setStatus('timeout');
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-
+    
     return this.props.children;
   }
 }
@@ -101,6 +89,7 @@ import {useNavigate} from "react-router-dom";
 import {SEO} from "@/components/SEO";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
+
 // This component handles deep linking to the mobile app;
 const OpenAppRedirect: React.FC = () => {;
   const navigate = useNavigate(),;
@@ -131,23 +120,55 @@ const OpenAppRedirect: React.FC = () => {;
             window && window.location.href = iosAppUrl;
           }
 
-'
-          setStatus('timeout'),
-          if (isAndroid) {}
-            window.location.href = androidAppUrl;
-          } else if (isiOS) {}
-            window.location.href = iosAppUrl;
-      }
+        }, 2500), // Wait 2 && 2.5 seconds before redirecting to store;
 
+
+          setStatus('timeout'),
+          if (isAndroid) {
+            window.location.href = androidAppUrl
+          } else if (isiOS) {
+            window.location.href = iosAppUrl
+          }
+        }, 2500), // Wait 2.5 seconds before redirecting to store
+        // Try to open the app
+        window.location.href = appScheme
+=======
+      
+      // App scheme URLs (these would be your actual app's URL schemes)
+      const appScheme = "zion://";
+      const androidAppUrl = "market://details?id=app.zion.marketplace";
+      const iosAppUrl = "https://apps.apple.com/app/zion-ai-marketplace/id0000000000";
+      const fallbackUrl = "/mobile-launch"; // Fallback to mobile launch page
+      
+      let timeout: number | undefined;
+      
+      // Try to open the app
+      if (isAndroid || isiOS) {
+        // Set a timeout to redirect to app store if the app doesn't open
+        timeout = window.setTimeout(() => {
+          setStatus('timeout');
+          if (isAndroid) {
+            window.location.href = androidAppUrl;
+          } else if (isiOS) {
+            window.location.href = iosAppUrl;
+          }
+        }, 2500); // Wait 2.5 seconds before redirecting to store
+        
+        // Try to open the app
+        window.location.href = appScheme;
+>>>>>>> origin/auto/autonomy-17186719616
+      } else {
+        // Not on mobile, redirect to mobile launch page
+        setStatus('failed');
+        setTimeout(() => {
+<<<<<<< HEAD
+          navigate(fallbackUrl)
+        }, 1500)
+      }
 import React, { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { SEO } from "@/components/SEO",;
 import { Button } from "@/components/ui/button",;
-
-import { Link } from "react-router-dom",;
-// This component handles deep linking to the mobile app;
-const OpenAppRedirect: React.FC = () => {;
-  const navigate = useNavigate(),;'
 import { Link } from "react-router-dom",;
 // This component handles deep linking to the mobile app;
 const OpenAppRedirect: React.FC = () => {;
@@ -156,17 +177,17 @@ const OpenAppRedirect: React.FC = () => {;
   useEffect(() => {;
     const attemptAppOpen = async () => {;
       const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent),;
-const isAndroid = /Android/.test(navigator.userAgent),;'
-      // App scheme URLs (these would be your actual app's URL schemes);"
-      const appScheme = "zion: //",;"
-      const androidAppUrl = "market://details?id=app.zion.marketplace",;"
-      const iosAppUrl = "https://apps.apple.com/app/zion-ai-marketplace/id0000000000",;"
+      const isAndroid = /Android/.test(navigator.userAgent),;
+      // App scheme URLs (these would be your actual app's URL schemes);
+      const appScheme = "zion: //",;
+      const androidAppUrl = "market://details?id=app.zion.marketplace",;
+      const iosAppUrl = "https://apps.apple.com/app/zion-ai-marketplace/id0000000000",;
       const fallbackUrl = "/mobile-launch", // Fallback to mobile launch page;
       let timeout: number | undefined,;
       // Try to open the app;
-      if (isAndroid || isiOS) {;'
+      if (isAndroid || isiOS) {;
         // Set a timeout to redirect to app store if the app doesn't open;
-        timeout = window.setTimeout(() => {;'
+        timeout = window.setTimeout(() => {;
           setStatus('timeout'),;
           if (isAndroid) {;
             window.location.href = androidAppUrl;
@@ -175,117 +196,85 @@ const isAndroid = /Android/.test(navigator.userAgent),;'
           }
         }, 2500), // Wait 2.5 seconds before redirecting to store;
 
-// Try to open the app;
-        window && window.location.href = appScheme;
-      } else {;
-        // Not on mobile, redirect to mobile launch page;
         // Try to open the app;
         window && window.location.href = appScheme;
       } else {;
         // Not on mobile, redirect to mobile launch page;
+
         setStatus('failed');
         setTimeout(() => {;
           navigate(fallbackUrl);
         }, 1500);
 
-      }
 
-// Clear timeout if page visibility changes (meaning app opened successfully)"
-      document.addEventListener("visibilitychange", () => {}
-        if (document.hidden && timeout) {}
+
+
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+      }
+      
+
+      // Clear timeout if page visibility changes (meaning app opened successfully)
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden && timeout) {
           clearTimeout(timeout)
         }
       })
+
     }
     attemptAppOpen()
   }, [navigate]);
-},
-
-    attemptAppOpen()
-  }, [navigate]),
-
-
-
-export default OpenAppRedirect;
-
-  return ("
-    <div className="min-h-screen flex items-center justify-center bg-zion-blue">
-      <SEO"
-        title="Opening Zion App""
-        description="Redirecting to the Zion AI Marketplace mobile app"
-        noindex={true}
-      />"
-      <div className="text-center p-8">"
-        <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>'
-        {status === 'redirecting' && (
-          <>"
-            <h1 className="text-2xl font-bold mb-2">Opening Zion App...</h1>"
-            <p className="text-gray-300">
-              If nothing happens, download the app first.
-            </p>
-          </>
-        )}'
-        {status === 'timeout' && (
-          <>"
-            <h1 className="text-2xl font-bold mb-2">App Not Installed</h1>"
-            <p className="text-gray-300 mb-6">'
-              We're redirecting you to download the Zion app.
-            </p>
-          </>
-        )}'
-        {status === 'failed' && (
-          <>"
-            <h1 className="text-2xl font-bold mb-2">Opening App Failed</h1>"
-            <p className="text-gray-300 mb-6">'
-              We're taking you to our mobile app page where you can download the app.
-            </p>"
-            <Link to="/mobile-launch">"
-              <Button className="bg-zion-cyan hover:bg-zion-cyan/80">
-                Go to Mobile App Page;
-              </Button>
-            </Link>
-          </>
-        )}
-
-      // Clear timeout if page visibility changes (meaning app opened successfully);"
-      document && document.addEventListener("visibilitychange", () => {;
-        if (document && document.hidden && timeout) {;
-          clearTimeout(timeout);
-        }
-      });
-    };
-
-    attemptAppOpen();
-  }, [navigate]);
-
-  return ("
-    <div className="min-h-screen flex items-center justify-center bg-zion-blue">;
-      <SEO"
-        title="Opening Zion App" "
-        description="Redirecting to the Zion AI Marketplace mobile app"
-
-        noindex={true}
-      />;
-      <div className="text-center p-8">;
-        <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>;
-      />;"
-      <div className="text-center p-8">;"
-        <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>;
-'
     },
-
+    
     attemptAppOpen()
   }, [navigate]),
+  
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-zion-blue">
       <SEO
         title="Opening Zion App"
+=======
+          navigate(fallbackUrl);
+        }, 1500);
+      }
+      
+      // Clear timeout if page visibility changes (meaning app opened successfully)
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden && timeout) {
+          clearTimeout(timeout);
+        }
+      });
+    };
+    
+    attemptAppOpen();
+  }, [navigate]);
+  
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-zion-blue">
+      <SEO 
+        title="Opening Zion App" 
+>>>>>>> origin/auto/autonomy-17186719616
         description="Redirecting to the Zion AI Marketplace mobile app"
         noindex={true}
       />
       <div className="text-center p-8">
         <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/auto/autonomy-17186719616
         {status === 'redirecting' && (
           <>
             <h1 className="text-2xl font-bold mb-2">Opening Zion App...</h1>
@@ -294,6 +283,10 @@ export default OpenAppRedirect;
             </p>
           </>
         )}
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/auto/autonomy-17186719616
         {status === 'timeout' && (
           <>
             <h1 className="text-2xl font-bold mb-2">App Not Installed</h1>
@@ -302,6 +295,10 @@ export default OpenAppRedirect;
             </p>
           </>
         )}
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/auto/autonomy-17186719616
         {status === 'failed' && (
           <>
             <h1 className="text-2xl font-bold mb-2">Opening App Failed</h1>
@@ -315,144 +312,37 @@ export default OpenAppRedirect;
             </Link>
           </>
         )}
+<<<<<<< HEAD
 
-      // Clear timeout if page visibility changes (meaning app opened successfully);
-      document && document.addEventListener("visibilitychange", () => {;
-        if (document && document.hidden && timeout) {;
-          clearTimeout(timeout);
-        }
-      });
-    };
+      </div>
+    </div>
+  )
+}
+export default OpenAppRedirect;
 
-    attemptAppOpen();
-  }, [navigate]);
-
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-zion-blue">;
-      <SEO
-        title="Opening Zion App" 
-        description="Redirecting to the Zion AI Marketplace mobile app"
-        noindex={true}
-      />;
-      <div className="text-center p-8">;
-        <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>;
-
-        {status === 'redirecting' && (;
-          <>;"
-            <h1 className="text-2xl font-bold mb-2">Opening Zion App...</h1>;"
-            <p className="text-gray-300">;
-              If nothing happens, download the app first.;
-            </p>;
-          </>;
-        )}
-
-        {status === 'timeout' && (;
-          <>;"
-            <h1 className="text-2xl font-bold mb-2">App Not Installed</h1>;"
-            <p className="text-gray-300 mb-6">;'
-              We're redirecting you to download the Zion app.;
-            </p>;
-          </>;
-        )}
-
-        {status === 'failed' && (;
-          <>;"
-            <h1 className="text-2xl font-bold mb-2">Opening App Failed</h1>;"
-            <p className="text-gray-300 mb-6">;'
-              We're taking you to our mobile app page where you can download the app.;
-            </p>;"
-            <Link to="/mobile-launch">;"
-              <Button className="bg-zion-cyan hover:bg-zion-cyan/80">;
-                Go to Mobile App Page;
-              </Button>;
-            </Link>;
-          </>;
-        )}
       </div>;
-    </div>;
-)
-};      </div>;
     </div>;
   );
 },;
 
-}
-export default OpenAppRedirect;export default OpenAppRedirect;
-      }
+
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
 export default OpenAppRedirect;
-;
-  ),;
-},;
-;
-export default OpenAppRedirect,;   //Set a timeout to redirect to app store if the app doesn't open attemptAppOpen () 
-}, [navigate]);
-return (<div className="min-h-screen flex items-center justify-center bg-zion-blue" > <SEO /> <div className="text-center p-8" > <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-6" ></div> {
-  status === 'redirecting'&& (<> </p> </>) 
-}{
-  status === 'timeout'&& (<> <h1 className="text-2xl font-bold mb-2" >App Not Installed</h1> <p className="text-gray-300 mb-6" > We're redirecting you to download the Zion app. </p> </>) 
-}{
-  status === 'failed' && (<> <h1 className="text-2xl font-bold mb-2" >Opening App Failed</h1> <p className="text-gray-300 mb-6" > We're taking you to our mobile app page where you can download the app. </p> <Link to="/mobile-launch" > <Button className="bg-zion-cyan hover:bg-zion-cyan/80" > Go to Mobile App Page </Button> </Link> </>) 
-}</div> </div>) 
+
+=======
+      </div>
+    </div>
+  );
 };
-export default OpenAppRedirect;
-export default OpenAppRedirect;
-export default OpenAppRedirect;
-export default OpenAppRedirect;
 
-'
-import React, { useEffect, useState } from './react';'
-import { use_navigate } from './react-router-dom';'
-import { SEO } from '@/components / SEO';'
-import { Button } from '@/components / ui / button';'
-import { Link } from './react-router-dom';
-// This component handles deep linking to the mobile app;
-const OpenAppRedirect: React.FC = () => {}
-  const navigate = use_navigate (),'
-  const [status, set_status] = useState<'redirecting' | 'failed' | 'timeout'>('redirecting');
-;
-  useEffect (() => {}
-    const attemptAppOpen = async () => {}
-      const isiOS = /i_pad | i_phone | i_pod/.test (navigator.user_agent);
-      const is_android = /Android/.test (navigator.user_agent);
-;'
-      // App scheme URLs (these would be your actual app's URL schemes);"
-      const app_scheme = "zion: //","
-      const androidAppUrl = "market: //details?id = app.zion.marketplace";"
-      const iosAppUrl = "https://apps.apple.com / app / zion - ai - marketplace / id0000000000","
-      const fallback_url = "/mobile - launch", // Fallback to mobile launch page;
-      let timeout: number | undefined,
-      // Try to open the app;
-      // Check condition;
-if ( {) {}
-  $2;
-}'
-        // Set a timeout to redirect to app store if the app doesn't open;
-        timeout = window.set_timeout (() => {'
-          set_status ('timeout');
-          // Check condition;
-if ( {) {}
-  $2;
-}
-            window.location.href = androidAppUrl;
-          } else // Check condition;
-if ( {) {}
-  $2;
-}
-            window.location.href = iosAppUrl;
-          }
-        }, 2500), // Wait 2.5 seconds before redirecting to store;
-        // Try to open the app;
-        window.location.href = app_scheme;
-      } else {}
-        // Not on mobile, redirect to mobile launch page;'
-        set_status ('failed');
-        set_timeout (() => {}
-          navigate (fallback_url);
-        }, 1500);
-
-      }
 export default OpenAppRedirect;
-
-'"
-// This component handles deep linking to the mobile app
-
+>>>>>>> origin/auto/autonomy-17186719616

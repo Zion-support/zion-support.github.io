@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { Component, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home, Bug, Copy } from 'lucide-react'
@@ -18,10 +18,10 @@ interface State {
   errorId?: string
 }
 
-export default class ErrorBoundary extends Component<Props, State> {
+class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props)
-    this.state = { hasError: false }
+    super(props);
+    this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -196,6 +196,15 @@ export default class ErrorBoundary extends Component<Props, State> {
                 variant="outline"
                 leftIcon={<Home className="w-4 h-4" />}
               >
+                <RefreshCw className="w-5 h-5" />
+                Try Again
+              </button>
+              
+              <button
+                onClick={this.handleGoHome}
+                className="px-6 py-3 border border-white/20 hover:border-white/40 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 flex items-center justify-center gap-2"
+              >
+                <Home className="w-5 h-5" />
                 Go Home
               </Button>
 
@@ -222,9 +231,11 @@ export default class ErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      )
+      );
     }
 
-    return this.props.children
+    return this.props.children;
   }
 }
+
+export default ErrorBoundary;

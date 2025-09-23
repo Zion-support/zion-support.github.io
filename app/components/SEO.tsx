@@ -1,32 +1,47 @@
-import Head from 'next/head'
+import React from 'react';
+import Head from 'next/head';
 
 interface SEOProps {
-  title: string
-  description: string
-  keywords?: string
-  canonical?: string
-  url?: string
+  title?: string;
+  description?: string;
+  keywords?: string;
+  url?: string;
+  image?: string;
+  type?: string;
 }
 
-export default function SEO({ title, description, keywords, canonical, url }: SEOProps) {
+const SEO: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - AI & Technology Solutions',
+  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
+  keywords = 'AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation',
+  url = '',
+  image = '/images/og-image.jpg',
+  type = 'website'
+}) => {
   return (
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      {canonical && <link rel="canonical" href={canonical} />}
+      <meta name="keywords" content={keywords} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       
       {/* Open Graph */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content="article" />
-      {url && <meta property="og:url" content={url} />}
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={url} />
+      <meta property="og:image" content={image} />
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+      
+      {/* Canonical URL */}
+      {url && <link rel="canonical" href={url} />}
     </Head>
-  )
-}
+  );
+};
+
+export default SEO;
