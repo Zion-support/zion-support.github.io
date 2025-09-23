@@ -2,6 +2,21 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 
+interface RecommendationItem {
+  id: number;
+  title: string;
+  type: string;
+  matchScore: number;
+  reason: string;
+}
+
+interface ChatMessageItem {
+  id: number;
+  text: string;
+  sender: 'user' | 'ai';
+  timestamp: Date;
+}
+
 interface InteractiveFeaturesProps {
   enableROICalculator?: boolean;
   enableContentRecommendations?: boolean;
@@ -17,9 +32,9 @@ const InteractiveFeatures: React.FC<InteractiveFeaturesProps> = ({
 }) => {
   const [isROICalculatorOpen, setIsROICalculatorOpen] = useState(false);
   const [isLiveChatOpen, setIsLiveChatOpen] = useState(false);
-  const [recommendations, setRecommendations] = useState<any[]>([]);
+  const [recommendations, setRecommendations] = useState<RecommendationItem[]>([]);
   const [progress, setProgress] = useState(0);
-  const [chatMessages, setChatMessages] = useState<any[]>([]);
+  const [chatMessages, setChatMessages] = useState<ChatMessageItem[]>([]);
   const [chatInput, setChatInput] = useState('');
   const chatEndRef = useRef<HTMLDivElement>(null);
 
@@ -91,11 +106,11 @@ const InteractiveFeatures: React.FC<InteractiveFeaturesProps> = ({
   const LiveChat = () => {
     const sendMessage = () => {
       if (!chatInput.trim()) return;
-      const newMessage = { id: Date.now(), text: chatInput, sender: 'user', timestamp: new Date() };
+      const newMessage: ChatMessageItem = { id: Date.now(), text: chatInput, sender: 'user', timestamp: new Date() };
       setChatMessages(prev => [...prev, newMessage]);
       setChatInput('');
       setTimeout(() => {
-        const aiResponse = { id: Date.now() + 1, text: 'Thanks! We will get back to you with recommendations.', sender: 'ai', timestamp: new Date() };
+        const aiResponse: ChatMessageItem = { id: Date.now() + 1, text: 'Thanks! We will get back to you with recommendations.', sender: 'ai', timestamp: new Date() };
         setChatMessages(prev => [...prev, aiResponse]);
       }, 1000);
     };
