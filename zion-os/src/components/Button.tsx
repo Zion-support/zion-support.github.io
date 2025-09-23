@@ -103,58 +103,5 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
       {content}
     </button>
   );
-});
-
-Button.displayName = 'Button';
-
-export default Button;
-
-// Specialized button variants
-export function PrimaryButton(props: Omit<ButtonProps, 'variant'>) {
-  return <Button {...props} variant="primary" />;
-}
-
-export function SecondaryButton(props: Omit<ButtonProps, 'variant'>) {
-  return <Button {...props} variant="secondary" />;
-}
-
-export function OutlineButton(props: Omit<ButtonProps, 'variant'>) {
-  return <Button {...props} variant="outline" />;
-}
-
-export function GhostButton(props: Omit<ButtonProps, 'variant'>) {
-  return <Button {...props} variant="ghost" />;
-}
-
-// Icon button variant
-export function IconButton({
-  icon,
-  children,
-  ...props
-}: ButtonProps & { icon: React.ReactNode }) {
-  return (
-    <Button {...props} icon={icon} iconPosition="left" size="sm">
-      {children}
-    </Button>
-  );
-}
-
-// Floating action button
-export function FloatingActionButton({
-  icon,
-  onClick,
-  className = '',
-  ...props
-}: ButtonProps & { icon: React.ReactNode }) {
-  return (
-    <Button
-      {...props}
-      icon={icon}
-      onClick={onClick}
-      className={`fixed bottom-8 right-8 w-16 h-16 rounded-full shadow-2xl hover:shadow-3xl z-50 ${className}`}
-      size="lg"
-      rounded="full"
-    />
-  );
 }
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047

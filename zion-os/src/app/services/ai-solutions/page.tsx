@@ -89,30 +89,6 @@ interface AIService {
           Let's discuss how our AI solutions can transform your business operations and drive innovation. 
           Get in touch for a personalized AI strategy consultation.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="mailto:kleber@ziontechgroup.com?subject=AI%20Solutions%20Consultation"
-            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-semibold text-lg"
-          >
-            Schedule AI Consultation
-          </a>
-          <a
-            href="tel:+13024640950"
-            className="border border-white/20 text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-all font-semibold text-lg"
-          >
-            Call: +1 302 464 0950
-          </a>
-        </div>
-      </div>
-
-      {/* Back to Services */}
-      <div className="text-center">
-        <a
-          href="/services"
-          className="inline-block px-6 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10 transition-all font-semibold"
-        >
-          ← Back to All Services
-        </a>
       </div>
     </div>
   );
