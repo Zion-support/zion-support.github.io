@@ -1,6 +1,5 @@
 #!/bin/bash
 
-<<<<<<< HEAD
 # Test script to merge a small batch of branches first
 set -e
 
@@ -185,7 +184,6 @@ echo "   1. Review the merged changes: git log --oneline -10"
 echo "   2. Test the application"
 echo "   3. Delete the test backup branch when satisfied: git push origin --delete $BACKUP_BRANCH"
 echo "   3. Delete the test backup branch when satisfied: git push origin --delete $BACKUP_BRANCH"
-=======
 # Test script to merge a small batch of PRs
 # This will help us test the conflict resolution and merging process
 
@@ -349,4 +347,3 @@ trap 'log "Script interrupted. Cleaning up..."; git checkout main 2>/dev/null ||
 
 # Run main function
 main "$@"
->>>>>>> origin/cursor/automated-project-verification-and-merge-af4c

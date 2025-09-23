@@ -10,11 +10,15 @@ exports.loginUser = async function (req, res) {
     const email = req.body.email.toLowerCase().trim();
     const user = await User.findOne({ email }).select('+passwordHash');
     if (!user) {
-      return res.status(401).json({ code: 'EMAIL_NOT_FOUND', message: 'Invalid credentials' });
+      return res
+        .status(401)
+        .json({ code: 'EMAIL_NOT_FOUND', message: 'Invalid credentials' });
     }
     const isMatch = await bcrypt.compare(req.body.password, user.passwordHash);
     if (!isMatch) {
-      return res.status(401).json({ code: 'WRONG_PASSWORD', message: 'Invalid credentials' });
+      return res
+        .status(401)
+        .json({ code: 'WRONG_PASSWORD', message: 'Invalid credentials' });
     }
     const token = jwt.sign({ id: user._id }, jwtSecret, { expiresIn: '7d' });
     return res.json({

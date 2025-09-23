@@ -96,7 +96,7 @@ export function Announcement({
 	useEffect(() => {
 		if (!message) return;
 		setAnnouncements(prev => [...prev, message]);
-		const timer = setTimeout(() => setAnnouncements(prev => prev.slice(1)), 10o00);
+		const timer = setTimeout(() => setAnnouncements(prev => prev.slice(1)), 1000);
 		return () => clearTimeout(timer);
 	}, [message]);
 	return (
@@ -116,7 +116,7 @@ export function ProgressIndicator({
 	max: number;
 	label: string;
 }) {
-	const percentage = Math.round((value / max) * 10o0);
+	const percentage = Math.round((value / max) * 100);
 	return (
 		<div className="space-y-2">
 			<div className="flex justify-between text-sm">

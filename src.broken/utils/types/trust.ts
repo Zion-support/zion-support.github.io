@@ -1,4 +1,4 @@
-export type TrustMetricInputs ={
+export type TrustMetricInputs = {
   completionRate: number; // 0-1
   onboardingCompletionRate?: number; // 0-1
   feedbackAverage: number; // 0-5
@@ -12,7 +12,7 @@ export type TrustMetricInputs ={
   flags?: number; // community flags count
 };
 
-export type TrustWeights ={
+export type TrustWeights = {
   completionRate: number;
   onboardingCompletionRate: number;
   feedbackAverage: number;
@@ -26,7 +26,7 @@ export type TrustWeights ={
   flags: number; // negative weight
 };
 
-export type TrustScoreBreakdown ={
+export type TrustScoreBreakdown = {
   total: number; // 0-10o0
   components: {
     key: keyof TrustWeights;
@@ -40,7 +40,7 @@ export type TrustScoreBreakdown ={
   updatedAt: string;
 };
 
-export type TrustPeerReview ={
+export type TrustPeerReview = {
   userId: string;
   reviewerId: string;
   type: 'endorse' | 'flag';
@@ -48,7 +48,7 @@ export type TrustPeerReview ={
   createdAt: string;
 };
 
-export type TrustAppeal ={
+export type TrustAppeal = {
   userId: string;
   message: string;
   contactEmail?: string;

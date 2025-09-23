@@ -18,7 +18,7 @@ type DeckSectionKey =
   | 'useOfFunds'
   | 'growthModel';
 
-type Deck ={
+type Deck = {
   id: string;
   title: string;
   stage: FundingStage;
@@ -26,7 +26,7 @@ type Deck ={
   sections: Record<DeckSectionKey, string>;
 };
 
-const defaultSections: Record<DeckSectionKey, string> ={
+const defaultSections: Record<DeckSectionKey, string> = {
   vision: '',
   market: '',
   product: '',
@@ -36,53 +36,67 @@ const defaultSections: Record<DeckSectionKey, string> ={
   timeline: '',
   ask: '',
   useOfFunds: '',
-  growthModel: ''};
+  growthModel: '',
+};
 
-const stageLabels: Record<FundingStage, string> ={
+const stageLabels: Record<FundingStage, string> = {
   'pre-seed': 'Pre-Seed / Friends & Family',
   seed: 'Seed / Strategic Angels',
   'series-a': 'Series A / Institutional',
-  'public-token': 'Public Token Round (Fair launch, IDO, Airdrop)'};
+  'public-token': 'Public Token Round (Fair launch, IDO, Airdrop)',
+};
 
 export default function FundraisingHub() {
   const [stage, setStage] = useState<FundingStage>('series-a');
-  const [style, setStyle] = useState<'Minimal' | 'Gradient' | 'Web3' | 'Corporate'>('Minimal');
+  const [style, setStyle] = useState<
+    'Minimal' | 'Gradient' | 'Web3' | 'Corporate'
+  >('Minimal');
   const [decks, setDecks] = useState<Deck[]>([]);
   const [activeDeckId, setActiveDeckId] = useState<string | null>(null);
   const [operatorPrompt, setOperatorPrompt] = useState(
     'Create a fundraising deck for an AI talent protocol raising a $5M Series A. Include: vision, traction, use of funds, token utility, and multiverse growth model.'
   );
-  const activeDeck = useMemo(() => decks.find(d => d.id === activeDeckId) || null, [decks, activeDeckId]);
+  const activeDeck = useMemo(
+    () => decks.find(d => d.id === activeDeckId) || null,
+    [decks, activeDeckId]
+  );
 
   async function handleGenerateDeck() {
-    const payload ={ stage, style, operatorPrompt };
+    const payload = { stage, style, operatorPrompt };
     try {
       const res = await fetch('/api/fundraising/generate-deck', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)});
+        body: JSON.stringify(payload),
+      });
       const data = await res.json();
-      const newDeck: Deck ={
+      const newDeck: Deck = {
         id: uuidv4(),
         title: data?.title || `Deck - ${stageLabels[stage]}`,
         stage,
         style,
-        sections: { ...defaultSections, ...(data?.sections || {}) }};
+        sections: { ...defaultSections, ...(data?.sections || {}) },
+      };
       setDecks(prev => [newDeck, ...prev]);
       setActiveDeckId(newDeck.id);
     } catch (e) {
-      const fallback: Deck ={
+      const fallback: Deck = {
         id: uuidv4(),
         title: `Deck - ${stageLabels[stage]}`,
         stage,
         style,
         sections: {
           ...defaultSections,
-          vision: 'Our vision is to build the canonical AI-native talent protocol.',
+          vision:
+            'Our vision is to build the canonical AI-native talent protocol.',
           traction: '10k waitlist, 50 design partners, $250k GMV in beta.',
           useOfFunds: '$5M to scale engineering, growth, and partnerships.',
-          tokenomics: 'Utility token for staking credentials, access, and governance.',
-          growthModel: 'Multiverse growth: network effects across talent, companies, and tools.'}};
+          tokenomics:
+            'Utility token for staking credentials, access, and governance.',
+          growthModel:
+            'Multiverse growth: network effects across talent, companies, and tools.',
+        },
+      };
       setDecks(prev => [fallback, ...prev]);
       setActiveDeckId(fallback.id);
     }
@@ -90,7 +104,13 @@ export default function FundraisingHub() {
 
   function handleSectionEdit(key: DeckSectionKey, value: string) {
     if (!activeDeck) return;
-    setDecks(prev => prev.map(d => (d.id === activeDeck.id ? { ...d, sections: { ...d.sections, [key]: value } } : d)));
+    setDecks(prev =>
+      prev.map(d =>
+        d.id === activeDeck.id
+          ? { ...d, sections: { ...d.sections, [key]: value } }
+          : d
+      )
+    );
   }
 
   async function handleExport(format: 'pdf' | 'notion') {
@@ -98,7 +118,8 @@ export default function FundraisingHub() {
     await fetch('/api/fundraising/export', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ deck: activeDeck, format })});
+      body: JSON.stringify({ deck: activeDeck, format }),
+    });
     alert(`Export requested: ${format.toUpperCase()}`);
   }
 
@@ -120,32 +141,38 @@ export default function FundraisingHub() {
       <Head>
         <title>Fundraising | Zion</title>
       </Head>
-      <div className="space-y-8">
-        <header className="flex items-center justify-between">
+      <div className='space-y-8'>
+        <header className='flex items-center justify-between'>
           <div>
-            <h1 className="text-2xl font-semibold">Fundraising</h1>
-            <p className="text-sm text-gray-50o0">Generate decks, manage investor pipeline, and share updates</p>
+            <h1 className='text-2xl font-semibold'>Fundraising</h1>
+            <p className='text-sm text-gray-50o0'>
+              Generate decks, manage investor pipeline, and share updates
+            </p>
           </div>
-          <Link href="/capital"><a className="text-sm underline">Alias: /capital</a></Link>
+          <Link href='/capital'>
+            <a className='text-sm underline'>Alias: /capital</a>
+          </Link>
         </header>
 
-        <section className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="p-4 rounded-lg border border-gray-20o0 dark:border-gray-80o0 bg-white/50 dark:bg-black/30">
-            <h2 className="font-medium mb-3">Funding Stage & Template</h2>
+        <section className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
+          <div className='p-4 rounded-lg border border-gray-20o0 dark:border-gray-80o0 bg-white/50 dark:bg-black/30'>
+            <h2 className='font-medium mb-3'>Funding Stage & Template</h2>
             <select
-              className="w-full rounded border bg-transparent p-2"
+              className='w-full rounded border bg-transparent p-2'
               value={stage}
               onChange={e => setStage(e.target.value as FundingStage)}
             >
-              <option value="pre-seed">{stageLabels['pre-seed']}</option>
-              <option value="seed">{stageLabels['seed']}</option>
-              <option value="series-a">{stageLabels['series-a']}</option>
-              <option value="public-token">{stageLabels['public-token']}</option>
+              <option value='pre-seed'>{stageLabels['pre-seed']}</option>
+              <option value='seed'>{stageLabels['seed']}</option>
+              <option value='series-a'>{stageLabels['series-a']}</option>
+              <option value='public-token'>
+                {stageLabels['public-token']}
+              </option>
             </select>
 
-            <label className="block text-sm mt-4 mb-1">Slide style</label>
+            <label className='block text-sm mt-4 mb-1'>Slide style</label>
             <select
-              className="w-full rounded border bg-transparent p-2"
+              className='w-full rounded border bg-transparent p-2'
               value={style}
               onChange={e => setStyle(e.target.value as any)}
             >
@@ -156,51 +183,72 @@ export default function FundraisingHub() {
             </select>
           </div>
 
-          <div className="p-4 rounded-lg border border-gray-20o0 dark:border-gray-80o0 bg-white/50 dark:bg-black/30 lg:col-span-2">
-            <h2 className="font-medium mb-3">Deck Generator (ZionGPT-enabled)</h2>
-            <label className="block text-sm mb-1">Operator Prompt</label>
+          <div className='p-4 rounded-lg border border-gray-20o0 dark:border-gray-80o0 bg-white/50 dark:bg-black/30 lg:col-span-2'>
+            <h2 className='font-medium mb-3'>
+              Deck Generator (ZionGPT-enabled)
+            </h2>
+            <label className='block text-sm mb-1'>Operator Prompt</label>
             <textarea
-              className="w-full rounded border bg-transparent p-2 h-24"
+              className='w-full rounded border bg-transparent p-2 h-24'
               value={operatorPrompt}
               onChange={e => setOperatorPrompt(e.target.value)}
             />
-            <div className="mt-3">
-              <button className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black" onClick={handleGenerateDeck}>
+            <div className='mt-3'>
+              <button
+                className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'
+                onClick={handleGenerateDeck}
+              >
                 Generate Deck
               </button>
             </div>
           </div>
         </section>
 
-        <section className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="p-4 rounded-lg border border-gray-20o0 dark:border-gray-80o0 bg-white/50 dark:bg-black/30">
-            <h2 className="font-medium mb-3">Decks</h2>
-            <ul className="space-y-2">
+        <section className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
+          <div className='p-4 rounded-lg border border-gray-20o0 dark:border-gray-80o0 bg-white/50 dark:bg-black/30'>
+            <h2 className='font-medium mb-3'>Decks</h2>
+            <ul className='space-y-2'>
               {decks.map(deck => (
                 <li key={deck.id}>
                   <button
                     className={`w-full text-left p-2 rounded border ${activeDeckId === deck.id ? 'border-black dark:border-white' : 'border-transparent'}`}
                     onClick={() => setActiveDeckId(deck.id)}
                   >
-                    <div className="flex items-center justify-between">
-                      <span className="font-medium">{deck.title}</span>
-                      <span className="text-xs text-gray-50o0">{stageLabels[deck.stage]}</span>
+                    <div className='flex items-center justify-between'>
+                      <span className='font-medium'>{deck.title}</span>
+                      <span className='text-xs text-gray-50o0'>
+                        {stageLabels[deck.stage]}
+                      </span>
                     </div>
-                    <div className="text-xs text-gray-50o0">Style: {deck.style}</div>
+                    <div className='text-xs text-gray-50o0'>
+                      Style: {deck.style}
+                    </div>
                   </button>
                 </li>
               ))}
             </ul>
-            <div className="mt-4 flex gap-2">
-              <button className="px-3 py-1.5 rounded border" onClick={() => handleExport('pdf')} disabled={!activeDeck}>Export PDF</button>
-              <button className="px-3 py-1.5 rounded border" onClick={() => handleExport('notion')} disabled={!activeDeck}>Share to Notion</button>
+            <div className='mt-4 flex gap-2'>
+              <button
+                className='px-3 py-1.5 rounded border'
+                onClick={() => handleExport('pdf')}
+                disabled={!activeDeck}
+              >
+                Export PDF
+              </button>
+              <button
+                className='px-3 py-1.5 rounded border'
+                onClick={() => handleExport('notion')}
+                disabled={!activeDeck}
+              >
+                Share to Notion
+              </button>
             </div>
           </div>
 
-          <div className="p-4 rounded-lg border border-gray-20o0 dark:border-gray-80o0 bg-white/50 dark:bg-black/30 lg:col-span-2">
-            <h2 className="font-medium mb-3">Editable Sections</h2>
+          <div className='p-4 rounded-lg border border-gray-20o0 dark:border-gray-80o0 bg-white/50 dark:bg-black/30 lg:col-span-2'>
+            <h2 className='font-medium mb-3'>Editable Sections</h2>
             {activeDeck ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                 {(
                   [
                     ['vision', 'Vision'],
@@ -216,9 +264,11 @@ export default function FundraisingHub() {
                   ] as [DeckSectionKey, string][]
                 ).map(([key, label]) => (
                   <div key={key}>
-                    <label className="block text-xs mb-1 text-gray-50o0">{label}</label>
+                    <label className='block text-xs mb-1 text-gray-50o0'>
+                      {label}
+                    </label>
                     <textarea
-                      className="w-full rounded border bg-transparent p-2 h-28"
+                      className='w-full rounded border bg-transparent p-2 h-28'
                       value={activeDeck.sections[key]}
                       onChange={e => handleSectionEdit(key, e.target.value)}
                     />
@@ -226,34 +276,51 @@ export default function FundraisingHub() {
                 ))}
               </div>
             ) : (
-              <p className="text-sm text-gray-50o0">Generate or select a deck to edit sections.</p>
+              <p className='text-sm text-gray-50o0'>
+                Generate or select a deck to edit sections.
+              </p>
             )}
           </div>
         </section>
 
-        <section className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="p-4 rounded-lg border border-gray-20o0 dark:border-gray-80o0 bg-white/50 dark:bg-black/30">
-            <h2 className="font-medium mb-3">Deal Room Uploads</h2>
-            <p className="text-xs text-gray-50o0 mb-2">Docs: SAFE, Pitch Deck, Metrics, Token Flow</p>
-            <input type="file" multiple onChange={e => handleUpload(e.target.files)} />
+        <section className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
+          <div className='p-4 rounded-lg border border-gray-20o0 dark:border-gray-80o0 bg-white/50 dark:bg-black/30'>
+            <h2 className='font-medium mb-3'>Deal Room Uploads</h2>
+            <p className='text-xs text-gray-50o0 mb-2'>
+              Docs: SAFE, Pitch Deck, Metrics, Token Flow
+            </p>
+            <input
+              type='file'
+              multiple
+              onChange={e => handleUpload(e.target.files)}
+            />
           </div>
 
-          <div className="p-4 rounded-lg border border-gray-20o0 dark:border-gray-80o0 bg-white/50 dark:bg-black/30">
-            <h2 className="font-medium mb-3">Investor CRM</h2>
-            <p className="text-xs text-gray-50o0">Pipeline by stage (placeholder)</p>
-            <ul className="text-sm list-disc pl-5 mt-2 space-y-1">
+          <div className='p-4 rounded-lg border border-gray-20o0 dark:border-gray-80o0 bg-white/50 dark:bg-black/30'>
+            <h2 className='font-medium mb-3'>Investor CRM</h2>
+            <p className='text-xs text-gray-50o0'>
+              Pipeline by stage (placeholder)
+            </p>
+            <ul className='text-sm list-disc pl-5 mt-2 space-y-1'>
               <li>New: 8</li>
               <li>Contacted: 12</li>
               <li>Meetings: 5</li>
               <li>DD: 3</li>
               <li>Committed: 2</li>
             </ul>
-            <button className="mt-3 px-3 py-1.5 rounded border" onClick={handleCloseRound}>Close round → send updates</button>
+            <button
+              className='mt-3 px-3 py-1.5 rounded border'
+              onClick={handleCloseRound}
+            >
+              Close round → send updates
+            </button>
           </div>
 
-          <div className="p-4 rounded-lg border border-gray-20o0 dark:border-gray-80o0 bg-white/50 dark:bg-black/30">
-            <h2 className="font-medium mb-3">Permissions</h2>
-            <p className="text-sm">Core team only. Invite collaborators per round (placeholder).</p>
+          <div className='p-4 rounded-lg border border-gray-20o0 dark:border-gray-80o0 bg-white/50 dark:bg-black/30'>
+            <h2 className='font-medium mb-3'>Permissions</h2>
+            <p className='text-sm'>
+              Core team only. Invite collaborators per round (placeholder).
+            </p>
           </div>
         </section>
       </div>

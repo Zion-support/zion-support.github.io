@@ -1,12 +1,9 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
 =======
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> pr-11913:src_backup_temp/components/AIChatbotSystem.tsx
 import { 
   MessageCircle, 
   X, 

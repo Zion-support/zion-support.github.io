@@ -5,7 +5,8 @@ import { vi } from 'vitest';
 it('checkOnline returns false when navigator is offline', async () => {
   Object.defineProperty(window, 'navigator', {
     value: { onLine: false },
-    writable: true});
+    writable: true,
+  });
   const result = await checkOnline();
   expect(result).toBe(false);
 });
@@ -14,7 +15,10 @@ it('checkOnline returns false when navigator is offline', async () => {
 it('safeFetch throws when fetch rejects', async () => {
   Object.defineProperty(window, 'navigator', {
     value: { onLine: true },
-    writable: true});
+    writable: true,
+  });
   vi.spyOn(global, 'fetch').mockRejectedValue(new Error('Network error'));
-  await expect(safeFetch('https://example.com')).rejects.toThrow('Failed to connect to Supabase');
+  await expect(safeFetch('https://example.com')).rejects.toThrow(
+    'Failed to connect to Supabase'
+  );
 });

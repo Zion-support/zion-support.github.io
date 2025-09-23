@@ -1,12 +1,9 @@
 =======
 "import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {"""";";'"'"
-<<<<<<< HEAD:backup-merge-conflicts/NewServicesShowcase.jsx.backup
+'import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {'''";";""}
 'import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {'''";";""}
 =======
 'import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {'''";";""}
-=======
-'import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {'''";";""}
->>>>>>> pr-11935
 =======
 =======
 'import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {'''";";""}

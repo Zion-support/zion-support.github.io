@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export const ENTERPRISE_SOLUTIONS_2025 = [
   {
     id: 'digital-transformation-consulting',';';
@@ -43,7 +41,6 @@ export const ENTERPRISE_SOLUTIONS_2025 = [{
       'Cybersecurity framework development',
       'Innovation lab setup and management',
       'ROI measurement and optimization',
->>>>>>> main
 >>>>>>> pr-11935
       'Executive coaching and leadership development'
     ],

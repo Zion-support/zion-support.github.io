@@ -117,7 +117,9 @@
 .focus-visible *:focus {
   outline: 3px solid var(--accent-primary, #ffff00) !important;
   outline-offset: 2px !important;
-  box-shadow: 0 0 0 3px var(--bg-primary, #000000), 0 0 0 6px var(--accent-primary, #ffff00) !important;
+  box-shadow:
+    0 0 0 3px var(--bg-primary, #000000),
+    0 0 0 6px var(--accent-primary, #ffff00) !important;
 }
 
 .focus-visible button:focus,
@@ -127,7 +129,9 @@
 .focus-visible textarea:focus {
   outline: 3px solid var(--accent-primary, #ffff00) !important;
   outline-offset: 2px !important;
-  box-shadow: 0 0 0 3px var(--bg-primary, #000000), 0 0 0 6px var(--accent-primary, #ffff00) !important;
+  box-shadow:
+    0 0 0 3px var(--bg-primary, #000000),
+    0 0 0 6px var(--accent-primary, #ffff00) !important;
 }
 
 /* Reduced Motion Mode */
@@ -198,25 +202,33 @@
 .focus-ring:focus {
   outline: 2px solid transparent !important;
   outline-offset: 2px !important;
-  box-shadow: 0 0 0 2px var(--bg-primary, #000000), 0 0 0 4px var(--accent-primary, #ffff00) !important;
+  box-shadow:
+    0 0 0 2px var(--bg-primary, #000000),
+    0 0 0 4px var(--accent-primary, #ffff00) !important;
 }
 
 .focus-ring-cyan:focus {
   outline: 2px solid transparent !important;
   outline-offset: 2px !important;
-  box-shadow: 0 0 0 2px var(--bg-primary, #000000), 0 0 0 4px var(--accent-secondary, #00ffff) !important;
+  box-shadow:
+    0 0 0 2px var(--bg-primary, #000000),
+    0 0 0 4px var(--accent-secondary, #00ffff) !important;
 }
 
 .focus-ring-blue:focus {
   outline: 2px solid transparent !important;
   outline-offset: 2px !important;
-  box-shadow: 0 0 0 2px var(--bg-primary, #000000), 0 0 0 4px #3b82f6 !important;
+  box-shadow:
+    0 0 0 2px var(--bg-primary, #000000),
+    0 0 0 4px #3b82f6 !important;
 }
 
 .focus-ring-purple:focus {
   outline: 2px solid transparent !important;
   outline-offset: 2px !important;
-  box-shadow: 0 0 0 2px var(--bg-primary, #000000), 0 0 0 4px #a855f7 !important;
+  box-shadow:
+    0 0 0 2px var(--bg-primary, #000000),
+    0 0 0 4px #a855f7 !important;
 }
 
 /* Enhanced Button States */
@@ -230,13 +242,13 @@ textarea:focus-visible {
 }
 
 /* Enhanced Form Controls */
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="url"]:focus,
-input[type="number"]:focus,
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='password']:focus,
+input[type='search']:focus,
+input[type='tel']:focus,
+input[type='url']:focus,
+input[type='number']:focus,
 textarea:focus,
 select:focus {
   outline: 3px solid var(--accent-primary, #ffff00) !important;
@@ -252,7 +264,7 @@ a:focus {
 }
 
 /* Enhanced Image Alt Text */
-img[alt=""] {
+img[alt=''] {
   border: 2px dashed var(--accent-primary, #ffff00) !important;
 }
 
@@ -310,10 +322,10 @@ a,
 input,
 select,
 textarea,
-[role="button"],
-[role="link"],
-[role="menuitem"],
-[role="tab"] {
+[role='button'],
+[role='link'],
+[role='menuitem'],
+[role='tab'] {
   cursor: pointer !important;
 }
 
@@ -332,16 +344,16 @@ textarea:disabled {
 }
 
 /* Enhanced ARIA Support */
-[aria-hidden="true"] {
+[aria-hidden='true'] {
   display: none !important;
 }
 
-[aria-expanded="true"]::after {
-  content: " (expanded)" !important;
+[aria-expanded='true']::after {
+  content: ' (expanded)' !important;
 }
 
-[aria-expanded="false"]::after {
-  content: " (collapsed)" !important;
+[aria-expanded='false']::after {
+  content: ' (collapsed)' !important;
 }
 
 /* Enhanced Error States */
@@ -396,19 +408,19 @@ textarea:disabled {
   .no-print {
     display: none !important;
   }
-  
+
   * {
     background: white !important;
     color: black !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
-  
+
   a {
     text-decoration: underline !important;
   }
-  
+
   a[href]:after {
-    content: " (" attr(href) ")" !important;
+    content: ' (' attr(href) ')' !important;
   }
 }

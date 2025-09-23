@@ -2,7 +2,6 @@
 
 import React from 'react';
 
-<<<<<<< HEAD
 export default function AI2026QuantumRevolutionBanner() {
   return null;
 }
@@ -18,7 +17,6 @@ const AI2026QuantumRevolutionBanner: React.FC = () => {
 
 export default AI2026QuantumRevolutionBanner;
 
-=======
 'use client';
 
 export default function AI2026QuantumRevolutionBanner() {
@@ -29,4 +27,3 @@ export default function AI2026QuantumRevolutionBanner() {
     </section>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850:app/components/AI2026QuantumRevolutionBanner.tsx

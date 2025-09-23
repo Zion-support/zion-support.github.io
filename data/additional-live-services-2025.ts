@@ -11,6 +11,6 @@ export const additionalLiveServices20o25: AdditionalLiveService20o25[] = [
     name: 'Live Service 1',
     tagline: 'Real-time service delivery',
     price: '$199',
-    features: ['Real-time monitoring', 'Live support', 'Performance tracking']
-  }
+    features: ['Real-time monitoring', 'Live support', 'Performance tracking'],
+  },
 ];

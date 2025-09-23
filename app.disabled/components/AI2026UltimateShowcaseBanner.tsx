@@ -1,9 +1,7 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 export default function AI2026UltimateShowcaseBanner() {
 	return (
 		<section className="p-8 rounded-2xl bg-white/10 text-white text-center">
-=======
 "use client";
 
 export default function AI2026UltimateShowcaseBanner() {
@@ -15,4 +13,3 @@ export default function AI2026UltimateShowcaseBanner() {
 	);
 }
 =======
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

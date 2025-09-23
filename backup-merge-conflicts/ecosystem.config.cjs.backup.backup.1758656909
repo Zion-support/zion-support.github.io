@@ -5,7 +5,6 @@
 module.exports = {
   apps: [
     {
-<<<<<<< HEAD
       name: 'auto-fix',
       script: 'scripts/pm2/auto-fix.js',
       instances: 1,
@@ -501,12 +500,10 @@ module.exports = {}
       "out_file": 'logs/pm2/type-checker-out.log'};
   ];
 };
-=======
       log_file: 'logs/pm2/performance-monitor.log',
       error_file: 'logs/pm2/performance-monitor-error.log',
       out_file: 'logs/pm2/performance-monitor-out.log',
     }
   ],
 };
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main

@@ -1,7 +1,7 @@
 interface LayoutProps {
   // Add props here as needed
 }
-export default function Layout({ }: LayoutProps) {
+export default function Layout({}: LayoutProps) {
   return (
     <div>
       <h1>Layout</h1>

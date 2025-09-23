@@ -1,1 +1,1 @@
-export { default } from "../../components/NewContentPromotionBanner";
+export { default } from '../../components/NewContentPromotionBanner';

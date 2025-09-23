@@ -5,20 +5,22 @@ export const real20o29ServiceAdditions = [
     tagline: 'Auto-triage and respond to routine emails with guardrails',
     price: '$69',
     period: '/month',
-    description: 'Autonomously drafts and sends replies for common inquiries, routes high-priority items, and summarizes threads. Integrates with Gmail, Outlook, and helpdesks with policy guardrails.',
+    description:
+      'Autonomously drafts and sends replies for common inquiries, routes high-priority items, and summarizes threads. Integrates with Gmail, Outlook, and helpdesks with policy guardrails.',
     features: [
       'Intent detection and auto-reply templates',
       'Priority triage and SLA routing',
       'PII redaction and safety guardrails',
       'CRM/helpdesk sync (HubSpot, Zendesk)',
-      'Weekly insights and KPI dashboard'
+      'Weekly insights and KPI dashboard',
     ],
     popular: true,
     icon: '📧',
     color: 'from-cyan-50o0 to-blue-60o0',
     textColor: 'text-cyan-40o0',
     link: 'https://ziontechgroup.com/services/ai-email-responder-pro',
-    marketPosition: 'Comparable to Superhuman AI and Gmail add-ons; adds policy guardrails and SLA routing.',
+    marketPosition:
+      'Comparable to Superhuman AI and Gmail add-ons; adds policy guardrails and SLA routing.',
     targetAudience: 'SMBs, agencies, support teams',
     trialDays: 14,
     setupTime: '20 minutes',
@@ -36,14 +38,15 @@ export const real20o29ServiceAdditions = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'OAuth connectors, reply template engine, safety filters, and analytics.',
+    implementationDetails:
+      'OAuth connectors, reply template engine, safety filters, and analytics.',
     launchDate: '20o29-0o1-10',
     customers: 120,
     rating: 4.7,
-    reviews: 64
+    reviews: 64,
   },
   {
     id: 'mobile-first-surveys',
@@ -51,20 +54,22 @@ export const real20o29ServiceAdditions = [
     tagline: 'Beautiful surveys with real-time analytics',
     price: '$39',
     period: '/month',
-    description: 'Create responsive surveys optimized for phones. Conditional logic, NPS/CSAT templates, and export to sheets/warehouse.',
+    description:
+      'Create responsive surveys optimized for phones. Conditional logic, NPS/CSAT templates, and export to sheets/warehouse.',
     features: [
       'Responsive builder and themes',
       'Conditional logic and branching',
       'NPS/CSAT library',
       'Webhook and Zapier integrations',
-      'Real-time analytics and CSV/BigQuery export'
+      'Real-time analytics and CSV/BigQuery export',
     ],
     popular: false,
     icon: '📱',
     color: 'from-purple-50o0 to-pink-60o0',
     textColor: 'text-purple-30o0',
     link: 'https://ziontechgroup.com/services/mobile-first-surveys',
-    marketPosition: 'Comparable to Typeform/Tally; simpler pricing and better mobile UX.',
+    marketPosition:
+      'Comparable to Typeform/Tally; simpler pricing and better mobile UX.',
     targetAudience: 'Product and marketing teams',
     trialDays: 14,
     setupTime: '10 minutes',
@@ -82,14 +87,15 @@ export const real20o29ServiceAdditions = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Schema-driven form renderer, analytics, and exports.',
+    implementationDetails:
+      'Schema-driven form renderer, analytics, and exports.',
     launchDate: '20o29-0o1-22',
     customers: 80,
     rating: 4.6,
-    reviews: 41
+    reviews: 41,
   },
   {
     id: 'affiliate-tracking-hub',
@@ -97,20 +103,22 @@ export const real20o29ServiceAdditions = [
     tagline: 'Cross-device attribution and automated payouts',
     price: '$129',
     period: '/month',
-    description: 'Create referral links, track multi-touch attribution, and automate payouts via Stripe/PayPal. Anti-fraud heuristics included.',
+    description:
+      'Create referral links, track multi-touch attribution, and automate payouts via Stripe/PayPal. Anti-fraud heuristics included.',
     features: [
       'Custom referral links and coupons',
       'Attribution across devices',
       'Stripe/PayPal payouts',
       'Fraud detection heuristics',
-      'Partner portal and reports'
+      'Partner portal and reports',
     ],
     popular: true,
     icon: '🔗',
     color: 'from-emerald-50o0 to-teal-60o0',
     textColor: 'text-emerald-30o0',
     link: 'https://ziontechgroup.com/services/affiliate-tracking-hub',
-    marketPosition: 'Comparable to PartnerStack/Impact; focuses on SMB simplicity and compliance.',
+    marketPosition:
+      'Comparable to PartnerStack/Impact; focuses on SMB simplicity and compliance.',
     targetAudience: 'E-commerce, SaaS, marketplaces',
     trialDays: 14,
     setupTime: '45 minutes',
@@ -128,14 +136,15 @@ export const real20o29ServiceAdditions = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Visitor identity stitching, cookie/UTM tracking, payouts.',
+    implementationDetails:
+      'Visitor identity stitching, cookie/UTM tracking, payouts.',
     launchDate: '20o29-0o2-0o4',
     customers: 60,
     rating: 4.6,
-    reviews: 38
+    reviews: 38,
   },
   {
     id: 'smb-website-analytics',
@@ -143,20 +152,22 @@ export const real20o29ServiceAdditions = [
     tagline: 'Privacy-first analytics for non-technical teams',
     price: '$19',
     period: '/month',
-    description: 'Track traffic, top pages, conversions, and sources with simple dashboards. Cookie-less, GDPR-friendly.',
+    description:
+      'Track traffic, top pages, conversions, and sources with simple dashboards. Cookie-less, GDPR-friendly.',
     features: [
       'Pageviews and conversions',
       'Top sources and campaigns',
       'Goals and funnels',
       'Email/Slack weekly report',
-      'CSV export'
+      'CSV export',
     ],
     popular: false,
     icon: '📈',
     color: 'from-blue-50o0 to-indigo-60o0',
     textColor: 'text-blue-30o0',
     link: 'https://ziontechgroup.com/services/smb-website-analytics',
-    marketPosition: 'Comparable to Plausible/Simple Analytics; adds non-technical UX and goal templates.',
+    marketPosition:
+      'Comparable to Plausible/Simple Analytics; adds non-technical UX and goal templates.',
     targetAudience: 'SMBs, agencies',
     trialDays: 14,
     setupTime: '10 minutes',
@@ -174,14 +185,14 @@ export const real20o29ServiceAdditions = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Client-side tracker, ingestion API, and dashboard.',
     launchDate: '20o29-0o2-12',
     customers: 95,
     rating: 4.5,
-    reviews: 52
+    reviews: 52,
   },
   {
     id: 'it-helpdesk-saas',
@@ -189,20 +200,22 @@ export const real20o29ServiceAdditions = [
     tagline: 'Ticketing, routing, and knowledge base for MSPs',
     price: '$59',
     period: '/agent/month',
-    description: 'Modern ITSM with email ingestion, SLA routing, asset links, and a client portal. Lightweight and fast.',
+    description:
+      'Modern ITSM with email ingestion, SLA routing, asset links, and a client portal. Lightweight and fast.',
     features: [
       'Email-to-ticket and auto-assign',
       'SLA policies and escalations',
       'Knowledge base and portal',
       'Asset links and comments',
-      'Reports and exports'
+      'Reports and exports',
     ],
     popular: true,
     icon: '🛠️',
     color: 'from-slate-50o0 to-gray-60o0',
     textColor: 'text-slate-30o0',
     link: 'https://ziontechgroup.com/services/it-helpdesk-saas',
-    marketPosition: 'Simpler alternative to Freshservice/Jira Service Management for MSPs.',
+    marketPosition:
+      'Simpler alternative to Freshservice/Jira Service Management for MSPs.',
     targetAudience: 'IT service providers, MSPs',
     trialDays: 14,
     setupTime: '1 hour',
@@ -220,14 +233,14 @@ export const real20o29ServiceAdditions = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Email ingestion, SLA engine, and KB modules.',
     launchDate: '20o29-0o2-20',
     customers: 44,
     rating: 4.6,
-    reviews: 29
+    reviews: 29,
   },
   {
     id: 'returns-manager',
@@ -235,13 +248,14 @@ export const real20o29ServiceAdditions = [
     tagline: 'Self-serve returns, labels, and status tracking',
     price: '$79',
     period: '/month',
-    description: 'Automate return requests, print labels, and track statuses. Rules for conditions and refunds with store sync.',
+    description:
+      'Automate return requests, print labels, and track statuses. Rules for conditions and refunds with store sync.',
     features: [
       'Return portal and labels',
       'Status emails and webhooks',
       'Rules and approvals',
       'Inventory sync',
-      'Analytics and exports'
+      'Analytics and exports',
     ],
     popular: false,
     icon: '📦',
@@ -266,13 +280,13 @@ export const real20o29ServiceAdditions = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Return rules engine, label API, and store sync.',
     launchDate: '20o29-0o3-0o3',
     customers: 27,
     rating: 4.5,
-    reviews: 21
-  }
+    reviews: 21,
+  },
 ];

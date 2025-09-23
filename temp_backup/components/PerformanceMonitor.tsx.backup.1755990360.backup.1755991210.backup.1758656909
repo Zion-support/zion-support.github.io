@@ -47,7 +47,6 @@ interface LayoutShiftEntry extends PerformanceEntry {
   hadRecentInput: boolean;
 }
 
-<<<<<<< HEAD
 interface PerformanceResourceTiming extends PerformanceEntry {
   initiatorType: string;
   duration: number;
@@ -689,7 +688,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDetails = f
                    performanceScore >= 70 ? 'Performance needs improvement' :
                    'Performance requires significant optimization'}
                 </p>
-=======
   autoHide?: boolean;
 }
 
@@ -955,7 +953,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         )}
       </AnimatePresence>
     </>
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
   );
 };
 

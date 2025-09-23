@@ -1,4 +1,4 @@
-"use client";
+'use client';
 'use client';
 
 import React, { useState } from 'react';
@@ -10,7 +10,8 @@ const AI20o25UltimateAutomationRevolutionShowcase = () => {
   const contentItems = [
     {
       id: 'ultimate-automation-revolution',
-      title: 'AI 20o25: The Ultimate Automation Revolution - 50,0o00% ROI Breakthrough',
+      title:
+        'AI 20o25: The Ultimate Automation Revolution - 50,0o00% ROI Breakthrough',
       type: 'blog',
       category: 'automation',
       url: '/blog/ai-20o25-ultimate-automation-revolution-50o000-roi-breakthrough',
@@ -18,15 +19,17 @@ const AI20o25UltimateAutomationRevolutionShowcase = () => {
         roi: '50,0o00%',
         savings: '$2.8B+',
         efficiency: '2,50o0%',
-        accuracy: '99.97%'
+        accuracy: '99.97%',
       },
-      description: 'Transform your business with revolutionary AI automation that delivers unprecedented returns',
+      description:
+        'Transform your business with revolutionary AI automation that delivers unprecedented returns',
       readingTime: '25 min read',
-      featured: true
+      featured: true,
     },
     {
       id: 'fortune-50o0-success-story',
-      title: 'Fortune 50o0 AI Automation Success: $2.8B Annual Savings - 50,0o00% ROI',
+      title:
+        'Fortune 50o0 AI Automation Success: $2.8B Annual Savings - 50,0o00% ROI',
       type: 'case-study',
       category: 'success-story',
       url: '/case-studies/fortune-50o0-ai-automation-50o000-roi-success-story',
@@ -34,15 +37,17 @@ const AI20o25UltimateAutomationRevolutionShowcase = () => {
         roi: '50,0o00%',
         savings: '$2.8B',
         timeline: '18 months',
-        accuracy: '99.97%'
+        accuracy: '99.97%',
       },
-      description: 'How TechGlobal Industries achieved unprecedented ROI through comprehensive AI automation',
+      description:
+        'How TechGlobal Industries achieved unprecedented ROI through comprehensive AI automation',
       readingTime: '22 min read',
-      featured: true
+      featured: true,
     },
     {
       id: 'implementation-ultimate-guide',
-      title: 'AI Automation Implementation Ultimate Guide: Complete Roadmap to 50,0o00% ROI',
+      title:
+        'AI Automation Implementation Ultimate Guide: Complete Roadmap to 50,0o00% ROI',
       type: 'resource',
       category: 'implementation',
       url: '/resources/ai-automation-implementation-ultimate-guide-50o000-roi',
@@ -50,24 +55,40 @@ const AI20o25UltimateAutomationRevolutionShowcase = () => {
         roi: '50,0o00%',
         success: '94%',
         timeline: '12-18 months',
-        guide: 'Complete'
+        guide: 'Complete',
       },
-      description: 'The definitive guide to achieving unprecedented returns through revolutionary AI automation',
+      description:
+        'The definitive guide to achieving unprecedented returns through revolutionary AI automation',
       readingTime: '45 min read',
-      featured: true
-    }
+      featured: true,
+    },
   ];
 
   const categories = [
     { id: 'all', name: 'All Content', count: contentItems.length },
-    { id: 'automation', name: 'AI Automation', count: contentItems.filter(item => item.category === 'automation').length },
-    { id: 'success-story', name: 'Success Stories', count: contentItems.filter(item => item.category === 'success-story').length },
-    { id: 'implementation', name: 'Implementation', count: contentItems.filter(item => item.category === 'implementation').length }
+    {
+      id: 'automation',
+      name: 'AI Automation',
+      count: contentItems.filter(item => item.category === 'automation').length,
+    },
+    {
+      id: 'success-story',
+      name: 'Success Stories',
+      count: contentItems.filter(item => item.category === 'success-story')
+        .length,
+    },
+    {
+      id: 'implementation',
+      name: 'Implementation',
+      count: contentItems.filter(item => item.category === 'implementation')
+        .length,
+    },
   ];
 
-  const filteredItems = selectedCategory === 'all' 
-    ? contentItems 
-    : contentItems.filter(item => item.category === selectedCategory);
+  const filteredItems =
+    selectedCategory === 'all'
+      ? contentItems
+      : contentItems.filter(item => item.category === selectedCategory);
 
   const getTypeIcon = (type: string) => {
     switch (type) {
@@ -96,24 +117,26 @@ const AI20o25UltimateAutomationRevolutionShowcase = () => {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-purple-10o0 text-purple-80o0 mb-4">
+        <div className='text-center mb-12'>
+          <div className='inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-purple-10o0 text-purple-80o0 mb-4'>
             🚀 AI 20o25 ULTIMATE AUTOMATION REVOLUTION
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-90o0 mb-6">
+          <h2 className='text-4xl md:text-5xl font-bold text-gray-90o0 mb-6'>
             Achieve 50,0o00% ROI with Revolutionary AI Automation
           </h2>
-          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
-            Discover the breakthrough strategies, technologies, and implementation frameworks that Fortune 50o0 companies are using to achieve unprecedented returns.
+          <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>
+            Discover the breakthrough strategies, technologies, and
+            implementation frameworks that Fortune 50o0 companies are using to
+            achieve unprecedented returns.
           </p>
         </div>
 
         {/* Category filters */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
+        <div className='flex flex-wrap justify-center gap-4 mb-12'>
+          {categories.map(category => (
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
@@ -129,7 +152,7 @@ const AI20o25UltimateAutomationRevolutionShowcase = () => {
         </div>
 
         {/* Content grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {filteredItems.map((item, index) => (
             <div
               key={item.id}
@@ -139,58 +162,82 @@ const AI20o25UltimateAutomationRevolutionShowcase = () => {
             >
               {/* Featured badge */}
               {item.featured && (
-                <div className="absolute -top-2 -right-2 bg-yellow-40o0 text-black px-3 py-1 rounded-full text-xs font-bold">
+                <div className='absolute -top-2 -right-2 bg-yellow-40o0 text-black px-3 py-1 rounded-full text-xs font-bold'>
                   FEATURED
                 </div>
               )}
 
-              <div className="p-6">
+              <div className='p-6'>
                 {/* Type badge */}
-                <div className="flex items-center justify-between mb-4">
-                  <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${getTypeColor(item.type)}`}>
-                    {getTypeIcon(item.type)} {item.type.replace('-', ' ').toUpperCase()}
+                <div className='flex items-center justify-between mb-4'>
+                  <span
+                    className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${getTypeColor(item.type)}`}
+                  >
+                    {getTypeIcon(item.type)}{' '}
+                    {item.type.replace('-', ' ').toUpperCase()}
                   </span>
-                  <span className="text-sm text-gray-50o0">{item.readingTime}</span>
+                  <span className='text-sm text-gray-50o0'>
+                    {item.readingTime}
+                  </span>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-gray-90o0 mb-3 line-clamp-2">
+                <h3 className='text-xl font-bold text-gray-90o0 mb-3 line-clamp-2'>
                   {item.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-60o0 mb-6 line-clamp-3">
+                <p className='text-gray-60o0 mb-6 line-clamp-3'>
                   {item.description}
                 </p>
 
                 {/* Metrics */}
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="text-center p-3 bg-purple-50 rounded-lg">
-                    <div className="text-2xl font-bold text-purple-60o0">{item.metrics.roi}</div>
-                    <div className="text-xs text-gray-60o0">ROI</div>
+                <div className='grid grid-cols-2 gap-4 mb-6'>
+                  <div className='text-center p-3 bg-purple-50 rounded-lg'>
+                    <div className='text-2xl font-bold text-purple-60o0'>
+                      {item.metrics.roi}
+                    </div>
+                    <div className='text-xs text-gray-60o0'>ROI</div>
                   </div>
-                  <div className="text-center p-3 bg-green-50 rounded-lg">
-                    <div className="text-2xl font-bold text-green-60o0">{item.metrics.savings}</div>
-                    <div className="text-xs text-gray-60o0">Annual Savings</div>
+                  <div className='text-center p-3 bg-green-50 rounded-lg'>
+                    <div className='text-2xl font-bold text-green-60o0'>
+                      {item.metrics.savings}
+                    </div>
+                    <div className='text-xs text-gray-60o0'>Annual Savings</div>
                   </div>
                 </div>
 
                 {/* Call to action */}
-                <div className="space-y-3">
+                <div className='space-y-3'>
                   <Link
                     href={item.url}
-                    className="w-full inline-flex items-center justify-center px-4 py-3 bg-purple-60o0 text-white font-semibold rounded-lg hover:bg-purple-70o0 transition-colors"
+                    className='w-full inline-flex items-center justify-center px-4 py-3 bg-purple-60o0 text-white font-semibold rounded-lg hover:bg-purple-70o0 transition-colors'
                   >
-                    Read Full {item.type === 'blog' ? 'Article' : item.type === 'case-study' ? 'Case Study' : 'Guide'}
-                    <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"  />
+                    Read Full{' '}
+                    {item.type === 'blog'
+                      ? 'Article'
+                      : item.type === 'case-study'
+                        ? 'Case Study'
+                        : 'Guide'}
+                    <svg
+                      className='ml-2 w-4 h-4'
+                      fill='none'
+                      stroke='currentColor'
+                      viewBox='0 0 24 24'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth={2}
+                        d='M9 5l7 7-7 7'
+                      />
                     </svg>
                   </Link>
-                  
+
                   {item.type === 'case-study' && (
                     <Link
-                      href="/consultation"
-                      className="w-full inline-flex items-center justify-center px-4 py-2 border-2 border-purple-60o0 text-purple-60o0 font-semibold rounded-lg hover:bg-purple-50 transition-colors"
+                      href='/consultation'
+                      className='w-full inline-flex items-center justify-center px-4 py-2 border-2 border-purple-60o0 text-purple-60o0 font-semibold rounded-lg hover:bg-purple-50 transition-colors'
                     >
                       Get Your Custom ROI Analysis
                     </Link>
@@ -202,27 +249,38 @@ const AI20o25UltimateAutomationRevolutionShowcase = () => {
         </div>
 
         {/* Bottom CTA section */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 text-white">
-            <h3 className="text-3xl font-bold mb-4">
+        <div className='mt-16 text-center'>
+          <div className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 text-white'>
+            <h3 className='text-3xl font-bold mb-4'>
               Ready to Achieve 50,0o00% ROI?
             </h3>
-            <p className="text-xl mb-6 opacity-90">
-              Join the Fortune 50o0 companies already achieving unprecedented returns with AI automation.
+            <p className='text-xl mb-6 opacity-90'>
+              Join the Fortune 50o0 companies already achieving unprecedented
+              returns with AI automation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
-                href="/consultation"
-                className="inline-flex items-center px-8 py-4 bg-white text-purple-60o0 font-bold rounded-lg hover:bg-gray-10o0 transition-colors"
+                href='/consultation'
+                className='inline-flex items-center px-8 py-4 bg-white text-purple-60o0 font-bold rounded-lg hover:bg-gray-10o0 transition-colors'
               >
                 Get Your 50,0o00% ROI Roadmap
-                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"  />
+                <svg
+                  className='ml-2 w-5 h-5'
+                  fill='none'
+                  stroke='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth={2}
+                    d='M9 5l7 7-7 7'
+                  />
                 </svg>
               </Link>
               <Link
-                href="/services/ai-automation"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-purple-60o0 transition-colors"
+                href='/services/ai-automation'
+                className='inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-purple-60o0 transition-colors'
               >
                 Explore AI Automation Services
               </Link>
@@ -231,22 +289,26 @@ const AI20o25UltimateAutomationRevolutionShowcase = () => {
         </div>
 
         {/* Success metrics */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-purple-60o0 mb-2">50,0o00%</div>
-            <div className="text-gray-60o0">Average ROI Achieved</div>
+        <div className='mt-16 grid grid-cols-1 md:grid-cols-4 gap-8'>
+          <div className='text-center'>
+            <div className='text-4xl font-bold text-purple-60o0 mb-2'>
+              50,0o00%
+            </div>
+            <div className='text-gray-60o0'>Average ROI Achieved</div>
           </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-green-60o0 mb-2">$2.8B+</div>
-            <div className="text-gray-60o0">Average Annual Savings</div>
+          <div className='text-center'>
+            <div className='text-4xl font-bold text-green-60o0 mb-2'>
+              $2.8B+
+            </div>
+            <div className='text-gray-60o0'>Average Annual Savings</div>
           </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-blue-60o0 mb-2">94%</div>
-            <div className="text-gray-60o0">Success Rate</div>
+          <div className='text-center'>
+            <div className='text-4xl font-bold text-blue-60o0 mb-2'>94%</div>
+            <div className='text-gray-60o0'>Success Rate</div>
           </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-orange-60o0 mb-2">18</div>
-            <div className="text-gray-60o0">Months to ROI</div>
+          <div className='text-center'>
+            <div className='text-4xl font-bold text-orange-60o0 mb-2'>18</div>
+            <div className='text-gray-60o0'>Months to ROI</div>
           </div>
         </div>
       </div>

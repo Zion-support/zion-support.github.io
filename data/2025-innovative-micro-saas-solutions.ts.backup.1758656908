@@ -88,7 +88,6 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     patentStatus: 'Trade Secret',
     aiCapabilities: ['AI Content Creation', 'Engagement Optimization', 'Trend Prediction', 'Automated Scheduling'],
     marketDisruption: 'Revolutionizes social media management with AI automation'
-<<<<<<< HEAD
   }
 ];
 
@@ -195,11 +194,9 @@ export default innovativeMicroSaasSolutions2025;
     patentStatus: 'Trade Secret',
     aiCapabilities: ['AI Demand Prediction', 'Stock Level Optimization', 'Automated Reordering', 'Cost Optimization'],
     marketDisruption: 'Revolutionizes inventory management with AI prediction'
-=======
     aiCapabilities: ['Content Creation', 'Optimization'],
     marketDisruption: 'Automation at scale'
   }
 ];
 
 export default innovativeMicroSaasSolutions2025;
->>>>>>> cursor/check-fix-push-and-merge-to-main-8f81

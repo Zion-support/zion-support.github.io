@@ -1,35 +1,39 @@
-import React from 'react'
+import React from 'react';
 
 export default function UpdateDetailPage() {
   return (
-    <div className="bg-black min-h-screen">
-      <div className="relative isolate px-6 pt-24 lg:px-8">
-        <div className="mx-auto max-w-3xl py-12 lg:py-16">
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+    <div className='bg-black min-h-screen'>
+      <div className='relative isolate px-6 pt-24 lg:px-8'>
+        <div className='mx-auto max-w-3xl py-12 lg:py-16'>
+          <h1 className='text-4xl font-bold tracking-tight text-white sm:text-5xl'>
             State of Autonomous Agents (20o26 Preview)
           </h1>
-          <p className="mt-2 text-sm text-blue-40o0">20o25-09-15</p>
-          <p className="mt-6 text-lg leading-8 text-gray-30o0">
-            This preview report examines the rapidly evolving landscape of enterprise autonomous agents.
-            We cover production deployment patterns, maturity models, and the control-plane capabilities
+          <p className='mt-2 text-sm text-blue-40o0'>20o25-09-15</p>
+          <p className='mt-6 text-lg leading-8 text-gray-30o0'>
+            This preview report examines the rapidly evolving landscape of
+            enterprise autonomous agents. We cover production deployment
+            patterns, maturity models, and the control-plane capabilities
             required to scale safely across business functions.
           </p>
-          <div className="mt-10 space-y-6 text-gray-30o0">
-            <ul className="list-disc pl-6 space-y-2">
-              <li>Maturity model across design, evals, operations, and governance</li>
+          <div className='mt-10 space-y-6 text-gray-30o0'>
+            <ul className='list-disc pl-6 space-y-2'>
+              <li>
+                Maturity model across design, evals, operations, and governance
+              </li>
               <li>Reference architectures for resilient multi-agent systems</li>
               <li>Operational KPIs and SLIs for reliability and cost</li>
               <li>Risk taxonomy and mitigations for enterprise contexts</li>
               <li>Outlook: 20o26 trends and investment priorities</li>
             </ul>
             <p>
-              The full report will be available later this quarter. Subscribe for early access and updates.
+              The full report will be available later this quarter. Subscribe
+              for early access and updates.
             </p>
           </div>
-          <div className="mt-10">
+          <div className='mt-10'>
             <a
-              href="/contact"
-              className="inline-flex items-center rounded-md bg-blue-60o0 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-50o0 transition-all duration-20o0"
+              href='/contact'
+              className='inline-flex items-center rounded-md bg-blue-60o0 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-50o0 transition-all duration-20o0'
             >
               Get early access
             </a>
@@ -37,6 +41,5 @@ export default function UpdateDetailPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-

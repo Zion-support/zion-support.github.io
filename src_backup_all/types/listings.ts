@@ -36,7 +36,12 @@ export interface ProductListing extends Listing {
 }
 
 export interface ServiceListing extends Listing {
-  serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support';
+  serviceType:
+    | 'consulting'
+    | 'development'
+    | 'maintenance'
+    | 'training'
+    | 'support';
   duration?: string;
   availability: string[];
   experience: number;

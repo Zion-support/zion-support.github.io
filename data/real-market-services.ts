@@ -16,49 +16,51 @@ export interface RealMarketService {
 }
 export const realMarketServices: RealMarketService[] = [
   {
-    id: "market-analysis-platform",
-    name: "Market Analysis Platform",
-    tagline: "Comprehensive market research and analysis",
-    price: "$69/month",
-    description: "Advanced market analysis platform providing insights and trends for business decision making.",
+    id: 'market-analysis-platform',
+    name: 'Market Analysis Platform',
+    tagline: 'Comprehensive market research and analysis',
+    price: '$69/month',
+    description:
+      'Advanced market analysis platform providing insights and trends for business decision making.',
     features: [
-      "Market research tools",
-      "Trend analysis",
-      "Competitor tracking",
-      "Data visualization",
-      "Report generation"
+      'Market research tools',
+      'Trend analysis',
+      'Competitor tracking',
+      'Data visualization',
+      'Report generation',
     ],
-    link: "/services/market-analysis-platform",
-    category: "Market Services",
+    link: '/services/market-analysis-platform',
+    category: 'Market Services',
     realImplementation: true,
     contactInfo: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-  ,
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },
   {
     id: 'ecommerce-returns-manager',
     name: 'E‑commerce Returns Manager',
     tagline: 'Automate RMAs, labels, and refund workflows for Shopify/Woo',
     price: '$149',
     period: '/month',
-    description: 'End‑to‑end returns and exchanges portal with automated label generation, status tracking, disposition rules, and reasons analytics across Shopify and WooCommerce.',
+    description:
+      'End‑to‑end returns and exchanges portal with automated label generation, status tracking, disposition rules, and reasons analytics across Shopify and WooCommerce.',
     features: [
       'Self‑serve returns portal',
       'Label generation and tracking',
       'Exchange/repair workflows',
       'Return reasons and defect analytics',
       'Email/SMS notifications',
-      'Warehouse and RMA integrations'
+      'Warehouse and RMA integrations',
     ],
     popular: true,
     icon: '📦',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/ecommerce-returns-manager',
-    marketPosition: 'Streamlined alternative to Loop/Returnly with clearer analytics and flexible policies.',
+    marketPosition:
+      'Streamlined alternative to Loop/Returnly with clearer analytics and flexible policies.',
     targetAudience: 'DTC brands and marketplaces',
     trialDays: 14,
     setupTime: '1–3 days',
@@ -76,14 +78,15 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Embedded portal, label API wiring, policy engine and analytics.',
+    implementationDetails:
+      'Embedded portal, label API wiring, policy engine and analytics.',
     launchDate: '2025-02-08',
     customers: 52,
     rating: 4.6,
-    reviews: 24
+    reviews: 24,
   },
   {
     id: 'automated-email-followups',
@@ -91,21 +94,23 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Sequenced follow‑ups with inbox rotation and reply detection',
     price: '$79',
     period: '/month',
-    description: 'Create multi‑step follow‑up sequences for leads and customers with reply/booking detection, throttling, and deliverability insights.',
+    description:
+      'Create multi‑step follow‑up sequences for leads and customers with reply/booking detection, throttling, and deliverability insights.',
     features: [
       'Sequence builder and templates',
       'Reply/booking detection and stops',
       'Inbox rotation and throttling',
       'A/B testing for subject lines',
       'Warmup and reputation checks',
-      'CRM sync and webhooks'
+      'CRM sync and webhooks',
     ],
     popular: true,
     icon: '📨',
     color: 'from-sky-600 to-indigo-700',
     textColor: 'text-sky-300',
     link: 'https://ziontechgroup.com/automated-email-followups',
-    marketPosition: 'Simpler and more compliant than heavy sales engagement suites for SMBs.',
+    marketPosition:
+      'Simpler and more compliant than heavy sales engagement suites for SMBs.',
     targetAudience: 'SMB sales and success teams',
     trialDays: 7,
     setupTime: '1 day',
@@ -123,14 +128,15 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Sequence engine, deliverability checks, reply webhooks.',
+    implementationDetails:
+      'Sequence engine, deliverability checks, reply webhooks.',
     launchDate: '2025-02-06',
     customers: 78,
     rating: 4.5,
-    reviews: 33
+    reviews: 33,
   },
   {
     id: 'podcast-transcribe-chapters',
@@ -138,21 +144,23 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Accurate transcripts, speakers, summaries, chapters and clips',
     price: '$49',
     period: '/month',
-    description: 'Upload episodes to get fast transcripts with speaker diarization, show notes, highlights, SEO chapters, and short social clips.',
+    description:
+      'Upload episodes to get fast transcripts with speaker diarization, show notes, highlights, SEO chapters, and short social clips.',
     features: [
       'High‑accuracy transcription',
       'Speaker diarization',
       'Summaries and chaptering',
       'Topic and keyword extraction',
       'Clip generator for social',
-      'Embeds and RSS sync'
+      'Embeds and RSS sync',
     ],
     popular: true,
     icon: '🎙️',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/podcast-transcribe-chapters',
-    marketPosition: 'Affordable alternative to Descript/Castmagic focused on speed and SEO.',
+    marketPosition:
+      'Affordable alternative to Descript/Castmagic focused on speed and SEO.',
     targetAudience: 'Podcasters and media teams',
     trialDays: 7,
     setupTime: 'Same day',
@@ -170,14 +178,15 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Batch ASR, diarization, topic modeling, clip renderers.',
+    implementationDetails:
+      'Batch ASR, diarization, topic modeling, clip renderers.',
     launchDate: '2025-02-02',
     customers: 140,
     rating: 4.7,
-    reviews: 58
+    reviews: 58,
   },
   {
     id: 'freelancer-portfolio-studio',
@@ -185,21 +194,23 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Stunning portfolios and case studies with leads tracking',
     price: '$19',
     period: '/month',
-    description: 'No‑code portfolio builder with industry templates, project pages, lead capture forms, and simple SEO for freelancers and agencies.',
+    description:
+      'No‑code portfolio builder with industry templates, project pages, lead capture forms, and simple SEO for freelancers and agencies.',
     features: [
       'Drag‑and‑drop templates',
       'Case study generator',
       'Contact and booking forms',
       'Testimonials and logos',
       'Basic SEO and analytics',
-      'Custom domains'
+      'Custom domains',
     ],
     popular: false,
     icon: '🖼️',
     color: 'from-pink-600 to-fuchsia-700',
     textColor: 'text-pink-200',
     link: 'https://ziontechgroup.com/freelancer-portfolio-studio',
-    marketPosition: 'Purpose‑built, simpler than generic site builders for portfolios.',
+    marketPosition:
+      'Purpose‑built, simpler than generic site builders for portfolios.',
     targetAudience: 'Freelancers and micro‑agencies',
     trialDays: 14,
     setupTime: '15 minutes',
@@ -217,14 +228,15 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Template presets, CMS‑like editing, lead capture widgets.',
+    implementationDetails:
+      'Template presets, CMS‑like editing, lead capture widgets.',
     launchDate: '2025-02-04',
     customers: 210,
     rating: 4.6,
-    reviews: 64
+    reviews: 64,
   },
   {
     id: 'local-micro-crm',
@@ -232,21 +244,23 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Simple contacts, reminders, and pipeline for small shops',
     price: '$15',
     period: '/month',
-    description: 'Lightweight CRM for local businesses: contacts, notes, tasks, reminders, pipeline stages, and SMS/email nudges.',
+    description:
+      'Lightweight CRM for local businesses: contacts, notes, tasks, reminders, pipeline stages, and SMS/email nudges.',
     features: [
       'Contacts and notes',
       'Reminders and tasks',
       'Simple pipeline stages',
       'Email/SMS nudges',
       'Import/export and tags',
-      'Mobile‑friendly UI'
+      'Mobile‑friendly UI',
     ],
     popular: true,
     icon: '📇',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/local-micro-crm',
-    marketPosition: 'Tooled for simplicity; avoids enterprise CRM bloat and costs.',
+    marketPosition:
+      'Tooled for simplicity; avoids enterprise CRM bloat and costs.',
     targetAudience: 'Local service businesses',
     trialDays: 14,
     setupTime: 'Same day',
@@ -264,14 +278,15 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Minimal CRM with reminders and basic pipeline views.',
+    implementationDetails:
+      'Minimal CRM with reminders and basic pipeline views.',
     launchDate: '2025-02-03',
     customers: 320,
     rating: 4.5,
-    reviews: 77
+    reviews: 77,
   },
   {
     id: 'subjectline-optimizer-ai',
@@ -279,21 +294,23 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Generate and score email subjects with live benchmarks',
     price: '$29',
     period: '/month',
-    description: 'Create and score subject lines using language models and historical performance data; export to ESPs and run quick A/B tests.',
+    description:
+      'Create and score subject lines using language models and historical performance data; export to ESPs and run quick A/B tests.',
     features: [
       'AI suggestions and variants',
       'Tone and length tuning',
       'Performance benchmarks',
       'ESP export and A/B tests',
       'Spam words and preview',
-      'Team review workflow'
+      'Team review workflow',
     ],
     popular: false,
     icon: '🧪',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/subjectline-optimizer-ai',
-    marketPosition: 'Focused assistant vs. general copy tools; fast iteration for marketers.',
+    marketPosition:
+      'Focused assistant vs. general copy tools; fast iteration for marketers.',
     targetAudience: 'Growth and lifecycle marketers',
     trialDays: 7,
     setupTime: 'Same day',
@@ -311,14 +328,15 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Prompting templates, scoring heuristics, and ESP exports.',
+    implementationDetails:
+      'Prompting templates, scoring heuristics, and ESP exports.',
     launchDate: '2025-02-07',
     customers: 95,
     rating: 4.4,
-    reviews: 28
+    reviews: 28,
   },
   {
     id: 'dev-workflow-analytics',
@@ -326,21 +344,23 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Visualize reviews, velocity, and bottlenecks across repos',
     price: '$199',
     period: '/month',
-    description: 'Ingest PRs, reviews, and CI to map cycle time, review quality, flaky tests, and hotspots with actionable recommendations.',
+    description:
+      'Ingest PRs, reviews, and CI to map cycle time, review quality, flaky tests, and hotspots with actionable recommendations.',
     features: [
       'Cycle time and WIP analysis',
       'Review depth and latency',
       'Flaky test detection',
       'Repo hotspots and ownership',
       'Team scorecards and alerts',
-      'Jira/Linear linkage'
+      'Jira/Linear linkage',
     ],
     popular: true,
     icon: '🧩',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/dev-workflow-analytics',
-    marketPosition: 'Actionable insights without surveillance; focused on flow metrics.',
+    marketPosition:
+      'Actionable insights without surveillance; focused on flow metrics.',
     targetAudience: 'Engineering teams and platform leads',
     trialDays: 14,
     setupTime: '3 days',
@@ -358,14 +378,15 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Quota enforcer, advisor engine, and GitOps PR flow with alerts.',
+    implementationDetails:
+      'Quota enforcer, advisor engine, and GitOps PR flow with alerts.',
     launchDate: '2025-08-22',
     customers: 13,
     rating: 4.5,
-    reviews: 7
+    reviews: 7,
   },
   {
     id: 'mdm-intune-starter',
@@ -373,19 +394,21 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Zero‑touch enrollment, app protection, device compliance',
     price: '$4',
     period: '/device/month',
-    description: 'Baseline mobile device and app management with policy templates, compliance rules, and reporting integrated with Microsoft 365.',
+    description:
+      'Baseline mobile device and app management with policy templates, compliance rules, and reporting integrated with Microsoft 365.',
     features: [
       'Zero‑touch enrollment (ABM/DEP, Android Enterprise)',
       'Compliance and conditional access',
       'App protection policies',
-      'Baseline reports and alerts'
+      'Baseline reports and alerts',
     ],
     popular: false,
     icon: '📱',
     color: 'from-sky-600 to-indigo-700',
     textColor: 'text-sky-300',
     link: 'https://ziontechgroup.com/mobile-device-management',
-    marketPosition: 'SMB-focused MDM starter; complements Intune and Apple Business Manager.',
+    marketPosition:
+      'SMB-focused MDM starter; complements Intune and Apple Business Manager.',
     targetAudience: 'IT, MSPs, security teams',
     trialDays: 7,
     setupTime: '1–2 days',
@@ -403,14 +426,15 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Policy baselines, enrollment automation, reporting dashboards.',
+    implementationDetails:
+      'Policy baselines, enrollment automation, reporting dashboards.',
     launchDate: '2025-02-20',
     customers: 19,
     rating: 4.5,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'ai-meeting-to-ticket',
@@ -418,12 +442,13 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Turn meetings into tracked tickets, actions, and follow‑ups',
     price: '$25',
     period: '/user/month',
-    description: 'Multi‑speaker transcription, action item extraction, and automatic creation of Jira/GitHub issues with summaries and owners.',
+    description:
+      'Multi‑speaker transcription, action item extraction, and automatic creation of Jira/GitHub issues with summaries and owners.',
     features: [
       'Speaker‑aware transcription',
       'Action extraction and owners',
       'Jira/GitHub ticket creation',
-      'Meeting recap emails'
+      'Meeting recap emails',
     ],
     popular: false,
     icon: '📝',
@@ -438,7 +463,9 @@ export const realMarketServices: RealMarketService[] = [
     realService: true,
     technology: ['OpenAI STT, Embeddings, Jira/GitHub APIs'],
     integrations: ['Google Meet, Zoom, Jira, GitHub'],
-    useCases: ['Reduce manual note‑taking, Faster follow‑ups, Better accountability'],
+    useCases: [
+      'Reduce manual note‑taking, Faster follow‑ups, Better accountability',
+    ],
     roi: 'Save hours/week per team; fewer missed actions.',
     competitors: ['Supernormal, Tactiq + custom flows'],
     marketSize: '$3B productivity AI',
@@ -448,14 +475,15 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Speech‑to‑text pipeline, action classifiers, and ticket APIs.',
+    implementationDetails:
+      'Speech‑to‑text pipeline, action classifiers, and ticket APIs.',
     launchDate: '2025-02-22',
     customers: 23,
     rating: 4.6,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'feature-flag-auditor',
@@ -463,12 +491,13 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Catch stale flags, drift, and experiment hygiene issues',
     price: '$29',
     period: '/month',
-    description: 'Continuously scans your flags for stale keys, dead code, missing cleanups, and risky rollout patterns. Auto‑opens PRs with fixes.',
+    description:
+      'Continuously scans your flags for stale keys, dead code, missing cleanups, and risky rollout patterns. Auto‑opens PRs with fixes.',
     features: [
       'Stale and orphan flag detection',
       'Env parity and drift checks',
       'Experiment hygiene scoring',
-      'Auto‑PR cleanup scripts'
+      'Auto‑PR cleanup scripts',
     ],
     popular: false,
     icon: '🚩',
@@ -493,13 +522,13 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Repo scanner, config parser, pull‑request bot.',
     launchDate: '2025-02-22',
     customers: 14,
     rating: 4.5,
-    reviews: 7
-  }
+    reviews: 7,
+  },
 ];

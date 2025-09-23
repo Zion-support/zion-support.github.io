@@ -2,8 +2,6 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -23,7 +21,6 @@ export interface MilestoneSuggestionInput {
   scopeOfWork: string,
 =======
 =======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -32,8 +29,6 @@ export interface MilestoneSuggestionInput {
   endDateIso: string,   // ISO 8601;
   project_type: ProjectType;
 }
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -50,7 +45,6 @@ export interface SuggestedMilestoneItem {;
   title: string,;
   description: string,;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
   suggestedDueDateIso: string;
@@ -80,7 +74,6 @@ export interface MilestoneSuggestionResponse {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 export interface MilestoneSuggestionResponse {
   milestones: SuggestedMilestoneItem[];
@@ -98,8 +91,6 @@ export interface MilestoneSuggestionResponse {;
 }
 <<<<<<< HEAD
 =======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

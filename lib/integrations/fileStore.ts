@@ -1,4 +1,3 @@
-
 import type { IntegrationsState } from './types';
 
 const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');
@@ -9,11 +8,12 @@ function ensureDataDir(): void {
     fs.mkdirSync(DATA_DIR, { recursive: true });
   }
   if (!fs.existsSync(STATE_FILE)) {
-    const initial: IntegrationsState ={
+    const initial: IntegrationsState = {
       connections: [],
       logs: [],
       overrides: [],
-      events: []};
+      events: [],
+    };
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
   }
 }
@@ -28,11 +28,12 @@ export function readState(): IntegrationsState {
   }
 }
 
-export function writeState(mutator: (state: IntegrationsState) => void): IntegrationsState {
+export function writeState(
+  mutator: (state: IntegrationsState) => void
+): IntegrationsState {
   ensureDataDir();
   const current = readState();
   mutator(current);
   fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
   return current;
 }
-

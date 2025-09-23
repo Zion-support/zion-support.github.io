@@ -1,12 +1,9 @@
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
 export: interface EnhancedServiceItem {
-=======
 <<<<<<< HEAD
 =======
 =======
->>>>>>> pr-11935
 "export": interface EnhancedServiceItem {
 >>>>>>> main
    id: string;

@@ -1,10 +1,7 @@
-<<<<<<< HEAD:components.disabled_full/AccessibilityManager.dynamic.jsx
 const AccessibilityManager = dynamic(() => import(\"./AccessibilityManager\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default AccessibilityManager\' ,
-=======
 =======
 const AccessibilityManager = dynamic(() => import("./AccessibilityManager"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default AccessibilityManager' ,'
 </p>'
->>>>>>> main
 >>>>>>> main
 </p>'
 =======

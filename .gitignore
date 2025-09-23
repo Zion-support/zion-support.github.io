@@ -94,3 +94,8 @@ zion-os/.next
 
 # Ignore local npm cache
 .npm-cache/
+
+.nyc_output/
+# Cache
+.cache/
+.parcel-cache/

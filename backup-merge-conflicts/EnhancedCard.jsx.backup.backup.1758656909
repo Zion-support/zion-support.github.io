@@ -1,7 +1,5 @@
-<<<<<<< HEAD:backup-merge-conflicts/EnhancedCard.jsx.backup
 <<<<<<< HEAD
 
-=======
 import {cn} from '@/lib/utils';
 <<<<<<< HEAD
 =======
@@ -31,7 +29,6 @@ export function EnhancedCard("props": "any) {;
     const classes = cn(baseClasses", variantClasses[variant], hoverClasses, interactiveClasses, className);
     if (href) {;
         return (<a href={href} className={classes} onClick={onClick}>;
->>>>>>> pr-11935
 export function EnhancedCard($1) {
     const baseClasses = 'rounded-xl transition-all duration-300';
     const variantClasses = {
@@ -51,7 +48,6 @@ export function EnhancedCard($1) {
     return (<Component className={classes} onClick={onClick}>;
       {children}
     </Component>)}
-<<<<<<< HEAD:backup-merge-conflicts/EnhancedCard.jsx.backup
 // Enhanced Card Header component
 <<<<<<< HEAD
 export function EnhancedCardFooter(props: any) {
@@ -71,7 +67,6 @@ export function EnhancedCardFooter("props": "any) {;
 ;
 
 <<<<<<< HEAD
-=======
 // Enhanced Card Header component
 
 ;
@@ -79,7 +74,6 @@ export function EnhancedCardFooter("props": "any) {;
 =======
 ;
 ;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/EnhancedCard.jsx
 ;
 }>;
@@ -104,12 +98,9 @@ export function EnhancedCardFooter($1) {
   );
 }
 export default EnhancedCard;';';
-<<<<<<< HEAD:backup-merge-conflicts/EnhancedCard.jsx.backup
 import {cn} from '@/lib/utils'; export function EnhancedCard($1) { const baseClasses = 'rounded-xl transition-all duration-300'; const variantClasses = { default: 'bg-zion-blue-dark border border-zion-blue-light',elevated: 'bg-zion-blue-dark shadow-lg shadow-zion-purple/10',outlined: 'bg-transparent border-2 border-zion-cyan/30',gradient: 'bg-gradient-to-br from-zion-blue-dark to-zion-blue border border-zion-blue-light' };;';'; const hoverClasses = hover ? 'hover:shadow-xl hover:shadow-zion-purple/20 hover:transform hover:scale-[1.02]' : ' const interactiveClasses = onClick || href ? 'cursor-pointer' : ' const classes = cn(baseClasses,variantClasses[variant],hoverClasses,interactiveClasses,className); if (href) { return (<a href={href} className={classes} onClick={onClick}> {children} </a>)} return (<Component className={classes} onClick={onClick}> {children} </Component>)} export function EnhancedCardFooter($1) { return ( <div className="min-h-screen bg-white"> {children} </div> )} export default EnhancedCard;';';
 import {cn} from '@/lib/utils'; export function EnhancedCard($1) { const baseClasses = 'rounded-xl transition-all duration-300'; const variantClasses = { default: 'bg-zion-blue-dark border border-zion-blue-light',elevated: 'bg-zion-blue-dark shadow-lg shadow-zion-purple/10',outlined: 'bg-transparent border-2 border-zion-cyan/30',gradient: 'bg-gradient-to-br from-zion-blue-dark to-zion-blue border border-zion-blue-light' };;';'; const hoverClasses = hover ? 'hover:shadow-xl hover:shadow-zion-purple/20 hover:transform hover:scale-[1.02]' : ' const interactiveClasses = onClick || href ? 'cursor-pointer' : ' const classes = cn(baseClasses,variantClasses[variant],hoverClasses,interactiveClasses,className); if (href) { return (<a href={href} className={classes} onClick={onClick}> {children} </a>)} return (<Component className={classes} onClick={onClick}> {children} </Component>)} export function EnhancedCardFooter($1) { return ( <div className="min-h-screen bg-white"> {children} </div> )} export default EnhancedCard;';';
-=======
 import {cn} from '@/lib/utils'; export function EnhancedCard($1) { const baseClasses = 'rounded-xl transition-all duration-300'; const variantClasses = { default: 'bg-zion-blue-dark border border-zion-blue-light',elevated: 'bg-zion-blue-dark shadow-lg shadow-zion-purple/10',outlined: 'bg-transparent border-2 border-zion-cyan/30',gradient: 'bg-gradient-to-br from-zion-blue-dark to-zion-blue border border-zion-blue-light' };;';'; const hoverClasses = hover ? 'hover:shadow-xl hover:shadow-zion-purple/20 hover:transform hover:scale-[1.02]' : ' const interactiveClasses = onClick || href ? 'cursor-pointer' : ' const classes = cn(baseClasses,variantClasses[variant],hoverClasses,interactiveClasses,className); if (href) { return (<a href={href} className={classes} onClick={onClick}> {children} </a>)} return (<Component className={classes} onClick={onClick}> {children} </Component>)} export function EnhancedCardFooter($1) { return ( <div className="min-h-screen bg-white"> {children} </div> )} export default EnhancedCard;';';
->>>>>>> main
 >>>>>>> main
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935

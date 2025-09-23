@@ -39,43 +39,43 @@ function createFileIfNotExists(filePath, content) {
 // Function to update package.json with enhanced improvements
 function updatePackageJson() {
   const packageJsonPath = 'package.json';
-  
+
   try {
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-    
+
     // Add enhanced scripts
-    const newScripts ={
+    const newScripts = {
       ...packageJson.scripts,
       'build:analyze': 'ANALYZE=true npm run build',
       'build:clean': 'rm -rf .next && npm run build',
       'dev:clean': 'rm -rf .next && npm run dev',
       'lint:fix': 'next lint --fix',
       'type-check': 'tsc --noEmit',
-      'test': 'jest',
+      test: 'jest',
       'test:watch': 'jest --watch',
       'test:coverage': 'jest --coverage',
-      'preview': 'npm run build && npm run start',
-      'clean': 'rm -rf .next node_modules/.cache',
-      'postinstall': 'npm run type-check'
+      preview: 'npm run build && npm run start',
+      clean: 'rm -rf .next node_modules/.cache',
+      postinstall: 'npm run type-check',
     };
-    
+
     packageJson.scripts = newScripts;
-    
+
     // Add development dependencies for improvements
-    const newDevDeps ={
+    const newDevDeps = {
       ...packageJson.devDependencies,
       '@next/bundle-analyzer': '^14.2.0',
-      'jest': '^29.0.0',
+      jest: '^29.0.0',
       '@types/jest': '^29.0.0',
       'jest-environment-jsdom': '^29.0.0',
       '@testing-library/react': '^14.0.0',
       '@testing-library/jest-dom': '^6.0.0',
       'eslint-plugin-testing-library': '^6.0.0',
-      'eslint-plugin-jest-dom': '^4.0.0'
+      'eslint-plugin-jest-dom': '^4.0.0',
     };
-    
+
     packageJson.devDependencies = newDevDeps;
-    
+
     fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
     console.log('✅ Updated package.json with enhanced improvements');
     return true;
@@ -244,7 +244,10 @@ const DefaultErrorFallback: React.FC<{ error?: Error; retry: () => void }> = ({ 
 export default ErrorBoundary;
 `;
 
-  return createFileIfNotExists('components/ErrorBoundary.tsx', errorBoundaryScript);
+  return createFileIfNotExists(
+    'components/ErrorBoundary.tsx',
+    errorBoundaryScript
+  );
 }
 
 // Function to create enhanced SEO component
@@ -584,14 +587,14 @@ Object.defineProperty(window, 'matchMedia', {
 
   createFileIfNotExists('jest.config.js', jestConfig);
   createFileIfNotExists('jest.setup.js', jestSetup);
-  
+
   return true;
 }
 
 // Function to create enhanced GitHub Actions workflow
 function createEnhancedGitHubActions() {
   const workflowDir = '.github/workflows';
-  
+
   if (!fs.existsSync(workflowDir)) {
     fs.mkdirSync(workflowDir, { recursive: true });
   }
@@ -719,7 +722,10 @@ jobs:
         NETLIFY_SITE_ID: \${{ secrets.NETLIFY_SITE_ID }}
 `;
 
-  return createFileIfNotExists(`${workflowDir}/enhanced-ci-cd.yml`, workflowContent);
+  return createFileIfNotExists(
+    `${workflowDir}/enhanced-ci-cd.yml`,
+    workflowContent
+  );
 }
 
 // Function to create enhanced ESLint configuration
@@ -784,54 +790,54 @@ function createEnhancedESLintConfig() {
 // Main function
 async function main() {
   console.log('🎯 Starting enhanced improvement implementation...');
-  
+
   let improvementsCount = 0;
-  
+
   // Update package.json
   if (updatePackageJson()) improvementsCount++;
-  
+
   // Create enhanced performance monitoring
   if (createEnhancedPerformanceMonitoring()) improvementsCount++;
-  
+
   // Create enhanced error boundary
   if (createEnhancedErrorBoundary()) improvementsCount++;
-  
+
   // Create enhanced SEO improvements
   if (createEnhancedSEO()) improvementsCount++;
-  
+
   // Create enhanced utility functions
   if (createEnhancedUtils()) improvementsCount++;
-  
+
   // Create enhanced Jest configuration
   if (createEnhancedJestConfig()) improvementsCount++;
-  
+
   // Create enhanced GitHub Actions
   if (createEnhancedGitHubActions()) improvementsCount++;
-  
+
   // Create enhanced ESLint configuration
   if (createEnhancedESLintConfig()) improvementsCount++;
-  
+
   console.log(`\\n🎉 Enhanced improvement implementation completed!`);
   console.log(`✅ Implemented ${improvementsCount} improvements`);
-  
+
   // Install new dependencies
   console.log('\\n📦 Installing new dependencies...');
   if (safeExecute('npm install', 'Installing dependencies')) {
     console.log('✅ Dependencies installed successfully');
   }
-  
+
   // Run type check
   console.log('\\n🔍 Running type check...');
   if (safeExecute('npm run type-check', 'Type checking')) {
     console.log('✅ Type check passed');
   }
-  
+
   // Run linter
   console.log('\\n🔍 Running linter...');
   if (safeExecute('npm run lint', 'Linting')) {
     console.log('✅ Linting passed');
   }
-  
+
   console.log('\\n📋 Next steps:');
   console.log('1. Review the new enhanced files and configurations');
   console.log('2. Update your components to use the new utilities');

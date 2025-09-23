@@ -42,7 +42,6 @@ import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = ("props": 
             </button>;
           ))}
         </div>;
-<<<<<<< HEAD:backup-merge-conflicts/CountryTabs.jsx.backup
 
 >>>>>>> pr-11935
 import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = (props) => {
@@ -82,7 +81,6 @@ import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = (props) =>
         {currentCountry && (;
           <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">;
             {/* Country Header */}
-=======
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 text-white">;
               <div className="flex items-center justify-between">;
                 <div className="flex items-center space-x-4">;
@@ -136,7 +134,6 @@ import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = (props) =>
                 {currentCountry.regions.map((region, index) => (
                   <div key={index} className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
                     <h4 className="text-xl font-bold text-gray-900 mb-4">{region.name}</h4>
->>>>>>> main
                     {/* Cities */}
                     <div className="mb-6">;
                       <h5 className="text-sm font-semibold text-gray-600 mb-2 uppercase tracking-wide">;

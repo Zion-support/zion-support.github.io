@@ -118,7 +118,6 @@ export const AdvancedServiceComparison = (props: any) => {
     };
 =======
 =======
-<<<<<<< HEAD
     return (<div className="max-w-7xl mx-auto p-6">;
     return (
         <div className="max-w-7xl mx-auto p-6">
@@ -345,7 +344,6 @@ export const AdvancedServiceComparison = (props: any) => {
             <div className="text-center p-4 bg-zion-purple/10 rounded-lg">;
               <div className="text-2xl font-bold text-zion-purple">;
 
-=======
 }} transition={{ delay: 0.3 }} className="mt-8 bg-white rounded-lg shadow-lg p-6">
           <h3 className="text-2xl font-bold text-zion-blue-dark mb-4">
             Comparison Summary ({selectedServices.length} services selected)
@@ -359,7 +357,6 @@ export const AdvancedServiceComparison = (props: any) => {
             </div>
             <div className="text-center p-4 bg-zion-purple/10 rounded-lg">
               <div className="text-2xl font-bold text-zion-purple">
->>>>>>> main
                 {Math.max(...filteredServices.filter(s => selectedServices.includes(s.id)).map(s => s.rating))}
               </div>;
               <div className="text-zion-slate-light">Highest Rating</div>;

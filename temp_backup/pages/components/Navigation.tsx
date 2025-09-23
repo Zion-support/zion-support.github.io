@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Brain, 
-  Network, 
-  Cloud, 
-  Phone, 
-  Mail, 
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Brain,
+  Network,
+  Cloud,
+  Phone,
+  Mail,
   MapPin,
   ArrowRight,
   CheckCircle,
@@ -76,7 +76,7 @@ import {
   Target as Goal,
   TrendingUp as Growth,
   Clock as Time,
-  DollarSign as Money
+  DollarSign as Money,
 } from 'lucide-react';
 
 const navigationItems = [
@@ -90,58 +90,58 @@ const navigationItems = [
         href: '/ai-services',
         icon: Brain,
         description: '10o0+ cutting-edge AI solutions',
-        popular: true
+        popular: true,
       },
       {
         title: 'IT Services',
         href: '/it-services',
         icon: Network,
         description: '85+ comprehensive IT services',
-        popular: true
+        popular: true,
       },
       {
         title: 'Micro SaaS',
         href: '/micro-saas',
         icon: Cloud,
         description: '120+ innovative micro SaaS solutions',
-        popular: true
+        popular: true,
       },
       {
         title: 'Quantum Computing',
         href: '/quantum-computing',
         icon: Cpu,
         description: 'Quantum solutions & infrastructure',
-        popular: false
+        popular: false,
       },
       {
         title: 'Blockchain',
         href: '/blockchain',
         icon: Lock,
         description: 'Blockchain & DeFi solutions',
-        popular: false
+        popular: false,
       },
       {
         title: 'IoT Solutions',
         href: '/iot',
         icon: Wifi,
         description: 'Internet of Things platforms',
-        popular: false
+        popular: false,
       },
       {
         title: 'AR/VR Solutions',
         href: '/ar-vr',
         icon: Eye,
         description: 'Augmented & Virtual Reality',
-        popular: false
+        popular: false,
       },
       {
         title: 'Space Technology',
         href: '/space-tech',
         icon: Rocket,
         description: 'Space & satellite solutions',
-        popular: false
-      }
-    ]
+        popular: false,
+      },
+    ],
   },
   {
     title: 'Solutions',
@@ -153,58 +153,58 @@ const navigationItems = [
         href: '/enterprise',
         icon: Building,
         description: 'Large-scale business solutions',
-        popular: true
+        popular: true,
       },
       {
         title: 'Startup Solutions',
         href: '/startup',
         icon: Rocket,
         description: 'Scalable startup platforms',
-        popular: true
+        popular: true,
       },
       {
         title: 'Cloud Solutions',
         href: '/cloud-solutions',
         icon: Cloud,
         description: 'Scalable cloud infrastructure',
-        popular: true
+        popular: true,
       },
       {
         title: 'Cybersecurity',
         href: '/cybersecurity',
         icon: Shield,
         description: 'Enterprise security solutions',
-        popular: true
+        popular: true,
       },
       {
         title: 'Data Analytics',
         href: '/data-analytics',
         icon: BarChart3,
         description: 'Advanced analytics platform',
-        popular: false
+        popular: false,
       },
       {
         title: 'Automation',
         href: '/automation',
         icon: Zap,
         description: 'Intelligent process automation',
-        popular: false
+        popular: false,
       },
       {
         title: 'Digital Transformation',
         href: '/digital-transformation',
         icon: TrendingUp,
         description: 'Complete digital overhaul',
-        popular: false
+        popular: false,
       },
       {
         title: 'Custom Development',
         href: '/custom-development',
         icon: Code,
         description: 'Tailored software solutions',
-        popular: false
-      }
-    ]
+        popular: false,
+      },
+    ],
   },
   {
     title: 'Industries',
@@ -216,72 +216,72 @@ const navigationItems = [
         href: '/industries/healthcare',
         icon: Heart,
         description: 'Medical AI and health tech',
-        popular: true
+        popular: true,
       },
       {
         title: 'Finance',
         href: '/industries/finance',
         icon: DollarSign,
         description: 'Fintech and financial services',
-        popular: true
+        popular: true,
       },
       {
         title: 'Manufacturing',
         href: '/industries/manufacturing',
         icon: Settings,
         description: 'Industrial automation',
-        popular: true
+        popular: true,
       },
       {
         title: 'Retail',
         href: '/industries/retail',
         icon: ShoppingCart,
         description: 'E-commerce and retail tech',
-        popular: true
+        popular: true,
       },
       {
         title: 'Education',
         href: '/industries/education',
         icon: BookOpen,
         description: 'EdTech solutions',
-        popular: false
+        popular: false,
       },
       {
         title: 'Real Estate',
         href: '/industries/real-estate',
         icon: Home,
         description: 'PropTech innovations',
-        popular: false
+        popular: false,
       },
       {
         title: 'Agriculture',
         href: '/industries/agriculture',
         icon: Sprout,
         description: 'AgTech and smart farming',
-        popular: false
+        popular: false,
       },
       {
         title: 'Energy',
         href: '/industries/energy',
         icon: Zap,
         description: 'Energy and utilities tech',
-        popular: false
+        popular: false,
       },
       {
         title: 'Transportation',
         href: '/industries/transportation',
         icon: Car,
         description: 'Logistics and mobility',
-        popular: false
+        popular: false,
       },
       {
         title: 'Government',
         href: '/industries/government',
         icon: Building,
         description: 'Public sector solutions',
-        popular: false
-      }
-    ]
+        popular: false,
+      },
+    ],
   },
   {
     title: 'Resources',
@@ -293,58 +293,58 @@ const navigationItems = [
         href: '/blog',
         icon: FileText,
         description: 'Latest insights and trends',
-        popular: true
+        popular: true,
       },
       {
         title: 'Case Studies',
         href: '/case-studies',
         icon: BarChart3,
         description: 'Success stories and results',
-        popular: true
+        popular: true,
       },
       {
         title: 'White Papers',
         href: '/white-papers',
         icon: Document,
         description: 'In-depth research reports',
-        popular: false
+        popular: false,
       },
       {
         title: 'Webinars',
         href: '/webinars',
         icon: Calendar,
         description: 'Educational sessions',
-        popular: false
+        popular: false,
       },
       {
         title: 'Tutorials',
         href: '/tutorials',
         icon: BookOpen,
         description: 'Step-by-step guides',
-        popular: false
+        popular: false,
       },
       {
         title: 'API Documentation',
         href: '/api-docs',
         icon: Code,
         description: 'Developer resources',
-        popular: false
+        popular: false,
       },
       {
         title: 'Training',
         href: '/training',
         icon: GraduationCap,
         description: 'Professional development',
-        popular: false
+        popular: false,
       },
       {
         title: 'FAQ',
         href: '/faq',
         icon: MessageSquare,
         description: 'Frequently asked questions',
-        popular: false
-      }
-    ]
+        popular: false,
+      },
+    ],
   },
   {
     title: 'Company',
@@ -356,59 +356,59 @@ const navigationItems = [
         href: '/about',
         icon: Building,
         description: 'Our story and mission',
-        popular: true
+        popular: true,
       },
       {
         title: 'Team',
         href: '/team',
         icon: Users,
         description: 'Meet our experts',
-        popular: true
+        popular: true,
       },
       {
         title: 'Careers',
         href: '/careers',
         icon: Users,
         description: 'Join our team',
-        popular: true
+        popular: true,
       },
       {
         title: 'Partners',
         href: '/partners',
         icon: Globe,
         description: 'Our partnerships',
-        popular: false
+        popular: false,
       },
       {
         title: 'News',
         href: '/news',
         icon: FileText,
         description: 'Company updates',
-        popular: false
+        popular: false,
       },
       {
         title: 'Contact',
         href: '/contact',
         icon: Phone,
         description: 'Get in touch with us',
-        popular: true
+        popular: true,
       },
       {
         title: 'Privacy Policy',
         href: '/privacy',
         icon: Lock,
         description: 'Privacy and data protection',
-        popular: false
+        popular: false,
       },
       {
         title: 'Terms of Service',
         href: '/terms',
         icon: FileText,
         description: 'Terms and conditions',
-        popular: false
-      }
-    ]
-  }
+        popular: false,
+      },
+    ],
+  },
 ];
 
 const quickLinks = [
@@ -417,7 +417,7 @@ const quickLinks = [
   { title: 'Support', href: '/support', icon: MessageSquare },
   { title: 'Status', href: '/status', icon: BarChart3 },
   { title: 'Free Consultation', href: '/consultation', icon: Calendar },
-  { title: 'Get Quote', href: '/quote', icon: FileText }
+  { title: 'Get Quote', href: '/quote', icon: FileText },
 ];
 
 export default function Navigation() {
@@ -425,26 +425,32 @@ export default function Navigation() {
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
+    <nav className='bg-white shadow-lg sticky top-0 z-50'>
       {/* Top Bar */}
-      <div className="bg-blue-60o0 text-white py-2">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center text-sm">
-            <div className="flex items-center space-x-6">
-              <div className="flex items-center">
-                <Phone className="w-4 h-4 mr-2"  />
+      <div className='bg-blue-60o0 text-white py-2'>
+        <div className='container mx-auto px-4'>
+          <div className='flex justify-between items-center text-sm'>
+            <div className='flex items-center space-x-6'>
+              <div className='flex items-center'>
+                <Phone className='w-4 h-4 mr-2' />
                 <span>+1 30o2 464 0950</span>
               </div>
-              <div className="flex items-center">
-                <Mail className="w-4 h-4 mr-2"  />
+              <div className='flex items-center'>
+                <Mail className='w-4 h-4 mr-2' />
                 <span>kleber@ziontechgroup.com</span>
               </div>
             </div>
-            <div className="flex items-center space-x-4">
-              <Link href="/contact" className="hover:text-blue-20o0 transition-colors">
+            <div className='flex items-center space-x-4'>
+              <Link
+                href='/contact'
+                className='hover:text-blue-20o0 transition-colors'
+              >
                 Get Free Consultation
               </Link>
-              <Link href="/pricing" className="hover:text-blue-20o0 transition-colors">
+              <Link
+                href='/pricing'
+                className='hover:text-blue-20o0 transition-colors'
+              >
                 View Pricing
               </Link>
             </div>
@@ -453,35 +459,39 @@ export default function Navigation() {
       </div>
 
       {/* Main Navigation */}
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
+      <div className='container mx-auto px-4'>
+        <div className='flex justify-between items-center py-4'>
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-blue-60o0 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">Z</span>
+          <Link href='/' className='flex items-center space-x-2'>
+            <div className='w-10 h-10 bg-blue-60o0 rounded-lg flex items-center justify-center'>
+              <span className='text-white font-bold text-xl'>Z</span>
             </div>
             <div>
-              <div className="text-xl font-bold text-gray-90o0">Zion Tech Group</div>
-              <div className="text-sm text-gray-50o0">AI & Technology Solutions</div>
+              <div className='text-xl font-bold text-gray-90o0'>
+                Zion Tech Group
+              </div>
+              <div className='text-sm text-gray-50o0'>
+                AI & Technology Solutions
+              </div>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item) => (
+          <div className='hidden lg:flex items-center space-x-8'>
+            {navigationItems.map(item => (
               <div
                 key={item.title}
-                className="relative group"
+                className='relative group'
                 onMouseEnter={() => setActiveSubmenu(item.title)}
                 onMouseLeave={() => setActiveSubmenu(null)}
               >
                 <Link
                   href={item.href}
-                  className="flex items-center space-x-1 text-gray-70o0 hover:text-blue-60o0 transition-colors py-2"
+                  className='flex items-center space-x-1 text-gray-70o0 hover:text-blue-60o0 transition-colors py-2'
                 >
-                  <item.icon className="w-5 h-5"  />
+                  <item.icon className='w-5 h-5' />
                   <span>{item.title}</span>
-                  <ChevronDown className="w-4 h-4"  />
+                  <ChevronDown className='w-4 h-4' />
                 </Link>
 
                 {/* Submenu */}
@@ -490,28 +500,32 @@ export default function Navigation() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-20o0 py-4 z-50"
+                    className='absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-20o0 py-4 z-50'
                   >
-                    <div className="grid grid-cols-1 gap-2">
-                      {item.submenu.map((subItem) => (
+                    <div className='grid grid-cols-1 gap-2'>
+                      {item.submenu.map(subItem => (
                         <Link
                           key={subItem.title}
                           href={subItem.href}
-                          className="flex items-start space-x-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
+                          className='flex items-start space-x-3 p-3 hover:bg-gray-50 rounded-lg transition-colors'
                         >
-                          <subItem.icon className="w-5 h-5 text-blue-60o0 mt-0.5"  />
-                          <div className="flex-1">
-                            <div className="flex items-center space-x-2">
-                              <span className="font-medium text-gray-90o0">{subItem.title}</span>
+                          <subItem.icon className='w-5 h-5 text-blue-60o0 mt-0.5' />
+                          <div className='flex-1'>
+                            <div className='flex items-center space-x-2'>
+                              <span className='font-medium text-gray-90o0'>
+                                {subItem.title}
+                              </span>
                               {subItem.popular && (
-                                <span className="bg-blue-10o0 text-blue-80o0 text-xs font-medium px-2 py-0.5 rounded-full">
+                                <span className='bg-blue-10o0 text-blue-80o0 text-xs font-medium px-2 py-0.5 rounded-full'>
                                   Popular
                                 </span>
                               )}
                             </div>
-                            <p className="text-sm text-gray-50o0 mt-1">{subItem.description}</p>
+                            <p className='text-sm text-gray-50o0 mt-1'>
+                              {subItem.description}
+                            </p>
                           </div>
-                          <ArrowRight className="w-4 h-4 text-gray-40o0"  />
+                          <ArrowRight className='w-4 h-4 text-gray-40o0' />
                         </Link>
                       ))}
                     </div>
@@ -521,14 +535,14 @@ export default function Navigation() {
             ))}
 
             {/* Quick Links */}
-            <div className="flex items-center space-x-4 ml-8 pl-8 border-l border-gray-20o0">
-              {quickLinks.map((link) => (
+            <div className='flex items-center space-x-4 ml-8 pl-8 border-l border-gray-20o0'>
+              {quickLinks.map(link => (
                 <Link
                   key={link.title}
                   href={link.href}
-                  className="flex items-center space-x-1 text-gray-70o0 hover:text-blue-60o0 transition-colors"
+                  className='flex items-center space-x-1 text-gray-70o0 hover:text-blue-60o0 transition-colors'
                 >
-                  <link.icon className="w-4 h-4"  />
+                  <link.icon className='w-4 h-4' />
                   <span>{link.title}</span>
                 </Link>
               ))}
@@ -538,9 +552,9 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-gray-10o0 transition-colors"
+            className='lg:hidden p-2 rounded-lg hover:bg-gray-10o0 transition-colors'
           >
-            {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
+            {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
           </button>
         </div>
 
@@ -550,31 +564,31 @@ export default function Navigation() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden border-t border-gray-20o0 py-4"
+            className='lg:hidden border-t border-gray-20o0 py-4'
           >
-            <div className="space-y-4">
-              {navigationItems.map((item) => (
+            <div className='space-y-4'>
+              {navigationItems.map(item => (
                 <div key={item.title}>
                   <Link
                     href={item.href}
-                    className="flex items-center space-x-2 text-gray-70o0 hover:text-blue-60o0 transition-colors py-2"
+                    className='flex items-center space-x-2 text-gray-70o0 hover:text-blue-60o0 transition-colors py-2'
                     onClick={() => setIsOpen(false)}
                   >
-                    <item.icon className="w-5 h-5"  />
-                    <span className="font-medium">{item.title}</span>
+                    <item.icon className='w-5 h-5' />
+                    <span className='font-medium'>{item.title}</span>
                   </Link>
-                  <div className="ml-7 space-y-2 mt-2">
-                    {item.submenu.map((subItem) => (
+                  <div className='ml-7 space-y-2 mt-2'>
+                    {item.submenu.map(subItem => (
                       <Link
                         key={subItem.title}
                         href={subItem.href}
-                        className="flex items-center space-x-2 text-sm text-gray-60o0 hover:text-blue-60o0 transition-colors py-1"
+                        className='flex items-center space-x-2 text-sm text-gray-60o0 hover:text-blue-60o0 transition-colors py-1'
                         onClick={() => setIsOpen(false)}
                       >
-                        <subItem.icon className="w-4 h-4"  />
+                        <subItem.icon className='w-4 h-4' />
                         <span>{subItem.title}</span>
                         {subItem.popular && (
-                          <span className="bg-blue-10o0 text-blue-80o0 text-xs font-medium px-2 py-0.5 rounded-full">
+                          <span className='bg-blue-10o0 text-blue-80o0 text-xs font-medium px-2 py-0.5 rounded-full'>
                             Popular
                           </span>
                         )}
@@ -583,18 +597,18 @@ export default function Navigation() {
                   </div>
                 </div>
               ))}
-              
+
               {/* Mobile Quick Links */}
-              <div className="pt-4 border-t border-gray-20o0">
-                <div className="grid grid-cols-2 gap-2">
-                  {quickLinks.map((link) => (
+              <div className='pt-4 border-t border-gray-20o0'>
+                <div className='grid grid-cols-2 gap-2'>
+                  {quickLinks.map(link => (
                     <Link
                       key={link.title}
                       href={link.href}
-                      className="flex items-center space-x-2 text-gray-70o0 hover:text-blue-60o0 transition-colors py-2"
+                      className='flex items-center space-x-2 text-gray-70o0 hover:text-blue-60o0 transition-colors py-2'
                       onClick={() => setIsOpen(false)}
                     >
-                      <link.icon className="w-4 h-4"  />
+                      <link.icon className='w-4 h-4' />
                       <span>{link.title}</span>
                     </Link>
                   ))}

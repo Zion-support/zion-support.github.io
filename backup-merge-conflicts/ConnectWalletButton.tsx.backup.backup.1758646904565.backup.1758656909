@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
 interface ConnectWalletButtonProps {;
-<<<<<<< HEAD:backup-merge-conflicts/ConnectWalletButton.tsx.backup
 <<<<<<< HEAD
   onConnect?: "("walletType": string) => void;
-=======
 =======
   onConnect?: ("walletType": string) => void;
 =======
   onConnect?: "("walletType": string) => void;
->>>>>>> pr-11913:src_backup_temp/components/ConnectWalletButton.tsx
   onDisconnect?: () => void;
   isConnected?: boolean;
   walletAddress?: string;

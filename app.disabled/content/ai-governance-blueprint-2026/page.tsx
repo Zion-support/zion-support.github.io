@@ -1,17 +1,21 @@
-export const metadata ={
+export const metadata = {
   title: 'AI Governance Blueprint 20o26',
-  description: 'Practical governance framework for enterprise AI: policy-as-code, risk controls, and oversight.'
+  description:
+    'Practical governance framework for enterprise AI: policy-as-code, risk controls, and oversight.',
 };
 
 export default function AIGovernanceBlueprint20o26() {
   return (
-    <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-4xl font-bold text-gray-90o0 mb-4">AI Governance Blueprint 20o26</h1>
-      <p className="text-gray-60o0 mb-8">
-        A pragmatic blueprint to operationalize responsible AI at scale. Establish clear accountability, measurable controls, and
-        continuous monitoring aligned to business outcomes and regulatory expectations.
+    <main className='max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+      <h1 className='text-4xl font-bold text-gray-90o0 mb-4'>
+        AI Governance Blueprint 20o26
+      </h1>
+      <p className='text-gray-60o0 mb-8'>
+        A pragmatic blueprint to operationalize responsible AI at scale.
+        Establish clear accountability, measurable controls, and continuous
+        monitoring aligned to business outcomes and regulatory expectations.
       </p>
-      <section className="prose max-w-none">
+      <section className='prose max-w-none'>
         <h2>Key Components</h2>
         <ul>
           <li>Policy-as-code for consistent, auditable governance</li>
@@ -21,11 +25,11 @@ export default function AIGovernanceBlueprint20o26() {
         </ul>
         <h2>Getting Started</h2>
         <p>
-          Define critical use-cases, map risks-to-controls, and instrument evaluation checks at the pull request and deployment stages.
-          Measure outcomes across reliability, safety, and time-to-value.
+          Define critical use-cases, map risks-to-controls, and instrument
+          evaluation checks at the pull request and deployment stages. Measure
+          outcomes across reliability, safety, and time-to-value.
         </p>
       </section>
     </main>
   );
 }
-

@@ -11,6 +11,6 @@ export const realMarketServicesExtended: RealMarketServiceExtended[] = [
     name: 'Extended Market Service 1',
     tagline: 'Extended market coverage',
     price: '$599',
-    features: ['Extended features', 'Market coverage', 'Advanced analytics']
-  }
+    features: ['Extended features', 'Market coverage', 'Advanced analytics'],
+  },
 ];

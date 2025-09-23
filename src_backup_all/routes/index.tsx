@@ -1,4 +1,3 @@
-
 // Placeholder route components
 export const AuthRoutes = () => <></>;
 export const DashboardRoutes = () => <></>;

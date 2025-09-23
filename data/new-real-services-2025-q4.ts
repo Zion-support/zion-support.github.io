@@ -1,10 +1,10 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 
-const contact ={
+const contact = {
   mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 10o08 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
@@ -14,13 +14,14 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     tagline: 'Auto-score calls, surface coaching moments, and draft follow-ups',
     price: '$249',
     period: '/month',
-    description: 'Lifts CSAT by analyzing calls, flagging policy breaches, and suggesting coaching notes. Exports insights to CRM and LMS.',
+    description:
+      'Lifts CSAT by analyzing calls, flagging policy breaches, and suggesting coaching notes. Exports insights to CRM and LMS.',
     features: [
       'Call auto-scoring with rubrics',
       'Jailbreak/PII detection and redaction',
       'Agent coaching suggestions',
       'Topic and sentiment tracking',
-      'CRM and ticketing sync'
+      'CRM and ticketing sync',
     ],
     popular: true,
     icon: '🎧',
@@ -43,11 +44,12 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Batch + streaming transcription with evals and redaction.',
+    implementationDetails:
+      'Batch + streaming transcription with evals and redaction.',
     launchDate: '20o25-10-0o1',
     customers: 9,
     rating: 4.7,
-    reviews: 4
+    reviews: 4,
   },
   {
     id: 'finops-commitment-planner',
@@ -55,20 +57,22 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     tagline: 'RI/SP/Committed-use planner with scenario modeling',
     price: '$199',
     period: '/month',
-    description: 'Models compute/storage/network commitments versus historical usage to propose optimized purchase schedules and hedge risk.',
+    description:
+      'Models compute/storage/network commitments versus historical usage to propose optimized purchase schedules and hedge risk.',
     features: [
       'Historical usage modeling',
       'Scenario simulation',
       'Purchase schedule generator',
       'Anomaly guardrails',
-      'Slack summaries'
+      'Slack summaries',
     ],
     popular: false,
     icon: '📊',
     color: 'from-emerald-60o0 to-teal-70o0',
     textColor: 'text-emerald-30o0',
     link: 'https://ziontechgroup.com/services/finops-commitment-planner',
-    marketPosition: 'Bridges spreadsheets and vendor tools; fast time-to-value.',
+    marketPosition:
+      'Bridges spreadsheets and vendor tools; fast time-to-value.',
     targetAudience: 'FinOps, platform, CFO office',
     trialDays: 7,
     setupTime: '1 day',
@@ -84,11 +88,12 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     variant: 'analytics-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Ingest billing exports, model curve fit, suggest plans.',
+    implementationDetails:
+      'Ingest billing exports, model curve fit, suggest plans.',
     launchDate: '20o25-10-15',
     customers: 6,
     rating: 4.6,
-    reviews: 3
+    reviews: 3,
   },
   {
     id: 'ai-soc2-evidence-binder',
@@ -96,13 +101,14 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     tagline: 'Continuously collect control evidence and map to auditors',
     price: '$149',
     period: '/month',
-    description: 'Automatically gathers system evidence, normalizes it, and maps to SOC 2 controls with auditor-ready exports.',
+    description:
+      'Automatically gathers system evidence, normalizes it, and maps to SOC 2 controls with auditor-ready exports.',
     features: [
       'Control library mapping',
       'Automated evidence pulls',
       'Gap detection and tasks',
       'Auditor export pack',
-      'Change tracking'
+      'Change tracking',
     ],
     popular: true,
     icon: '📚',
@@ -125,11 +131,12 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     variant: 'security-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Schedule evidence pulls and store normalized artifacts.',
+    implementationDetails:
+      'Schedule evidence pulls and store normalized artifacts.',
     launchDate: '20o25-10-20',
     customers: 11,
     rating: 4.8,
-    reviews: 5
+    reviews: 5,
   },
   {
     id: 'ai-partner-portal-co-pilot',
@@ -137,13 +144,14 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     tagline: 'Enable and score partners; propose MDF plans and content',
     price: '$179',
     period: '/month',
-    description: 'Scores partners by fit and performance, recommends MDF plans, content, and next steps with automated enablement journeys.',
+    description:
+      'Scores partners by fit and performance, recommends MDF plans, content, and next steps with automated enablement journeys.',
     features: [
       'Partner scoring and tiers',
       'Enablement content plans',
       'MDF proposal generator',
       'Playbooks and SLAs',
-      'HubSpot/Salesforce sync'
+      'HubSpot/Salesforce sync',
     ],
     popular: false,
     icon: '🤝',
@@ -170,7 +178,7 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     launchDate: '20o25-10-25',
     customers: 4,
     rating: 4.6,
-    reviews: 2
+    reviews: 2,
   },
   {
     id: 'governed-feature-flag-catalog',
@@ -178,13 +186,14 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     tagline: 'Centralize flags with approvals, audits, and SLO guardrails',
     price: '$129',
     period: '/month',
-    description: 'Prevent flag sprawl with ownership, approvals, and automated cleanup. Track blast radius and incident links.',
+    description:
+      'Prevent flag sprawl with ownership, approvals, and automated cleanup. Track blast radius and incident links.',
     features: [
       'Owner and lifecycle metadata',
       'Approval workflows',
       'Automated cleanup tasks',
       'SLO guardrails',
-      'Incident linking'
+      'Incident linking',
     ],
     popular: true,
     icon: '🚩',
@@ -211,7 +220,7 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     launchDate: '20o25-10-0o5',
     customers: 7,
     rating: 4.5,
-    reviews: 3
+    reviews: 3,
   },
   {
     id: 'ai-contract-deviation-watcher',
@@ -219,13 +228,14 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     tagline: 'Flag non-standard clauses and propose remediations',
     price: '$129',
     period: '/month',
-    description: 'Monitors inbound contracts for deviations from playbooks and suggests remediations with tracked approvals.',
+    description:
+      'Monitors inbound contracts for deviations from playbooks and suggests remediations with tracked approvals.',
     features: [
       'Clause library and playbooks',
       'Deviation detection',
       'Remediation suggestions',
       'Approval routing',
-      'Export to CLM'
+      'Export to CLM',
     ],
     popular: false,
     icon: '🧾',
@@ -252,7 +262,7 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     launchDate: '20o25-10-12',
     customers: 8,
     rating: 4.6,
-    reviews: 4
+    reviews: 4,
   },
   {
     id: 'ai-mdm-policy-orchestrator',
@@ -260,13 +270,14 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     tagline: 'Auto-generate and validate device policies across platforms',
     price: '$179',
     period: '/month',
-    description: 'Generates baseline policies for macOS/Windows/Linux/iOS/Android, validates compliance, and opens remediation tasks.',
+    description:
+      'Generates baseline policies for macOS/Windows/Linux/iOS/Android, validates compliance, and opens remediation tasks.',
     features: [
       'Baseline templates per OS',
       'Compliance validation',
       'Remediation tickets',
       'Drift detection',
-      'Audit reports'
+      'Audit reports',
     ],
     popular: false,
     icon: '🛡️',
@@ -293,7 +304,7 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     launchDate: '20o25-10-08',
     customers: 5,
     rating: 4.5,
-    reviews: 2
+    reviews: 2,
   },
   {
     id: 'ai-seo-brief-orchestrator',
@@ -301,13 +312,14 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     tagline: 'Generate briefs, outlines, and internal links at scale',
     price: '$119',
     period: '/month',
-    description: 'Creates SEO briefs with SERP analysis, outlines, schema, and internal link suggestions with exports to CMS.',
+    description:
+      'Creates SEO briefs with SERP analysis, outlines, schema, and internal link suggestions with exports to CMS.',
     features: [
       'SERP analysis',
       'Outline and brief generator',
       'Schema and internal links',
       'Competitor gaps',
-      'CMS export'
+      'CMS export',
     ],
     popular: true,
     icon: '🧭',
@@ -334,7 +346,7 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     launchDate: '20o25-10-0o2',
     customers: 14,
     rating: 4.6,
-    reviews: 7
+    reviews: 7,
   },
   {
     id: 'ai-bug-repro-copilot',
@@ -342,13 +354,14 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     tagline: 'Reproduce bugs from logs and traces; propose failing tests',
     price: '$159',
     period: '/month',
-    description: 'Parses logs and traces, reproduces bugs locally via scripts and proposes unit/e2e failing tests for PRs.',
+    description:
+      'Parses logs and traces, reproduces bugs locally via scripts and proposes unit/e2e failing tests for PRs.',
     features: [
       'Log/trace parsing',
       'Repro scripts generator',
       'Failing test suggestions',
       'CI integration',
-      'Slack summaries'
+      'Slack summaries',
     ],
     popular: false,
     icon: '🧪',
@@ -375,7 +388,7 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     launchDate: '20o25-10-18',
     customers: 3,
     rating: 4.4,
-    reviews: 2
+    reviews: 2,
   },
   {
     id: 'ai-customer-churn-forecaster',
@@ -383,13 +396,14 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     tagline: 'Predict churn and suggest save plays across segments',
     price: '$139',
     period: '/month',
-    description: 'Scores accounts/users at risk and proposes messaging and offers; integrates with CRM and ticketing.',
+    description:
+      'Scores accounts/users at risk and proposes messaging and offers; integrates with CRM and ticketing.',
     features: [
       'Churn scoring',
       'Save playbooks',
       'Segment analysis',
       'A/B test suggestions',
-      'CRM sync'
+      'CRM sync',
     ],
     popular: true,
     icon: '📉',
@@ -416,7 +430,7 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     launchDate: '20o25-10-09',
     customers: 10,
     rating: 4.7,
-    reviews: 5
+    reviews: 5,
   },
   {
     id: 'ai-sre-incident-reviewer',
@@ -424,13 +438,14 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     tagline: 'Draft postmortems, classify actions, and track learnings',
     price: '$129',
     period: '/month',
-    description: 'Generates incident timelines from alerts and PRs, drafts postmortems, and assigns remediations with DRI tracking.',
+    description:
+      'Generates incident timelines from alerts and PRs, drafts postmortems, and assigns remediations with DRI tracking.',
     features: [
       'Incident timeline generator',
       'Action items extraction',
       'SLO regression detection',
       'DRI assignments',
-      'Templates and exports'
+      'Templates and exports',
     ],
     popular: false,
     icon: '🚒',
@@ -453,11 +468,12 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     variant: 'monitoring-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Stream alerts and PR data, generate docs and tasks.',
+    implementationDetails:
+      'Stream alerts and PR data, generate docs and tasks.',
     launchDate: '20o25-10-0o4',
     customers: 6,
     rating: 4.5,
-    reviews: 2
+    reviews: 2,
   },
   {
     id: 'ai-sales-sequence-optimizer',
@@ -465,13 +481,14 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     tagline: 'Optimize outreach sequences with persona-aware variants',
     price: '$129',
     period: '/month',
-    description: 'Analyzes sequence performance, generates variants by persona/industry, and syncs winners back to the sales tool.',
+    description:
+      'Analyzes sequence performance, generates variants by persona/industry, and syncs winners back to the sales tool.',
     features: [
       'Sequence analysis',
       'Variant generator',
       'Persona and industry targeting',
       'Auto-sync winners',
-      'Compliance checks'
+      'Compliance checks',
     ],
     popular: true,
     icon: '📨',
@@ -498,7 +515,7 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     launchDate: '20o25-10-16',
     customers: 8,
     rating: 4.6,
-    reviews: 3
+    reviews: 3,
   },
   {
     id: 'ai-brand-style-enforcer',
@@ -506,13 +523,14 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     tagline: 'Check tone, style, and legal across all public content',
     price: '$109',
     period: '/month',
-    description: 'Crawls web/app content, checks brand voice, style, and legal compliance, and proposes edits via PRs.',
+    description:
+      'Crawls web/app content, checks brand voice, style, and legal compliance, and proposes edits via PRs.',
     features: [
       'Crawl and detect violations',
       'Style/voice rules',
       'Legal checks (PII, claims)',
       'PR proposals',
-      'Weekly reports'
+      'Weekly reports',
     ],
     popular: false,
     icon: '✍️',
@@ -539,7 +557,7 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     launchDate: '20o25-10-22',
     customers: 2,
     rating: 4.4,
-    reviews: 1
+    reviews: 1,
   },
   {
     id: 'ai-legal-brief-coach',
@@ -547,13 +565,14 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     tagline: 'Improve briefs with citations and counter-arguments',
     price: '$179',
     period: '/month',
-    description: 'Suggests improvements to legal briefs, adds citation candidates, and drafts counter-arguments with confidence levels.',
+    description:
+      'Suggests improvements to legal briefs, adds citation candidates, and drafts counter-arguments with confidence levels.',
     features: [
       'Citation suggestions',
       'Counter-argument drafts',
       'Confidence levels',
       'Style adherence',
-      'Export to Word/PDF'
+      'Export to Word/PDF',
     ],
     popular: false,
     icon: '⚖️',
@@ -580,7 +599,7 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     launchDate: '20o25-10-0o6',
     customers: 3,
     rating: 4.3,
-    reviews: 1
+    reviews: 1,
   },
   {
     id: 'ai-ux-heuristic-auditor',
@@ -588,13 +607,14 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     tagline: 'Score UX flows, flag friction, suggest A/B tests',
     price: '$139',
     period: '/month',
-    description: 'Evaluates key flows for heuristic violations, suggests fixes and AB test ideas, and tracks impact.',
+    description:
+      'Evaluates key flows for heuristic violations, suggests fixes and AB test ideas, and tracks impact.',
     features: [
       'Heuristic scoring',
       'Friction heatmaps',
       'A/B test ideas',
       'Impact tracking',
-      'Reports and alerts'
+      'Reports and alerts',
     ],
     popular: false,
     icon: '🧭',
@@ -621,7 +641,7 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     launchDate: '20o25-10-0o3',
     customers: 5,
     rating: 4.5,
-    reviews: 2
+    reviews: 2,
   },
   {
     id: 'ai-data-contract-guardian',
@@ -629,13 +649,14 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     tagline: 'Generate and validate data contracts across pipelines',
     price: '$149',
     period: '/month',
-    description: 'Creates table/stream contracts, validates schema and quality, and opens PRs or tickets for drift.',
+    description:
+      'Creates table/stream contracts, validates schema and quality, and opens PRs or tickets for drift.',
     features: [
       'Contract templates',
       'Schema and quality checks',
       'Drift alerts',
       'PR/ticket automation',
-      'Data lineage links'
+      'Data lineage links',
     ],
     popular: true,
     icon: '🧾',
@@ -662,7 +683,7 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     launchDate: '20o25-10-14',
     customers: 7,
     rating: 4.6,
-    reviews: 3
+    reviews: 3,
   },
   {
     id: 'ai-ml-feature-store-starter',
@@ -670,13 +691,14 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     tagline: 'Spin up feature store with governance and drift alerts',
     price: '$199',
     period: '/month',
-    description: 'Templates and automation to launch a feature store with cataloging, access control, and drift monitoring.',
+    description:
+      'Templates and automation to launch a feature store with cataloging, access control, and drift monitoring.',
     features: [
       'Feature schemas and catalog',
       'Access control and PII tagging',
       'Drift monitoring',
       'Lineage and usage stats',
-      'SDK and CI hooks'
+      'SDK and CI hooks',
     ],
     popular: false,
     icon: '🧬',
@@ -703,7 +725,7 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     launchDate: '20o25-10-28',
     customers: 2,
     rating: 4.3,
-    reviews: 1
+    reviews: 1,
   },
   {
     id: 'ai-hr-attrition-predictor',
@@ -711,13 +733,14 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     tagline: 'Predict attrition and recommend retention actions',
     price: '$129',
     period: '/month',
-    description: 'Scores attrition risk by team and role, explains drivers, and proposes retention actions with HRIS sync.',
+    description:
+      'Scores attrition risk by team and role, explains drivers, and proposes retention actions with HRIS sync.',
     features: [
       'Attrition scoring',
       'Driver explanations',
       'Retention playbooks',
       'HRIS sync',
-      'Dashboards'
+      'Dashboards',
     ],
     popular: false,
     icon: '👥',
@@ -744,6 +767,6 @@ export const newRealServices20o25Q4: EnhancedRealMicroSaasService[] = [
     launchDate: '20o25-10-11',
     customers: 4,
     rating: 4.5,
-    reviews: 2
-  }
+    reviews: 2,
+  },
 ];

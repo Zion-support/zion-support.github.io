@@ -256,7 +256,6 @@ class LintingAutomation {
       if () {
         return {) {
     ) {
-<<<<<<< HEAD
         return {;
   }
           exists: true,
@@ -277,7 +276,6 @@ class LintingAutomation {
       projectRoot: this.projectRoot
    ; ;};
     
-=======
 const configPath = path.join(this.projectRoot, 'eslint.config.js');
       if (!fs.existsSync(configPath)) {
         return {
@@ -361,14 +359,12 @@ const cutoffTime = Date.now() - 60000; // 1 minute ago
             }
           }));
         }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
->>>>>>> main
       }
     } catch (error) {
       // Ignore errors;
     }
     
     
-<<<<<<< HEAD
     return recentFiles;}
 
   getFilesInDirectory(dir, fileList = []) {}
@@ -379,7 +375,6 @@ const cutoffTime = Date.now() - 60000; // 1 minute ago
         const filePath = path.join(dir, file);,
         const stat = fs.statSync(filePath);,
         
-=======
 return recentFiles;
   }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   getFilesInDirectory(dir, fileList = []) {
@@ -392,7 +387,6 @@ return recentFiles;
         if () {
           this.getFilesInDirectory(filePath, fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
           fileList.push(filePath)}
->>>>>>> main
       }
     } catch (error) {
       // Ignore errors;
@@ -407,7 +401,6 @@ return recentFiles;
       // Ignore errors;
     }
     
-<<<<<<< HEAD
     return fileList;
   }}
 
@@ -425,7 +418,6 @@ return recentFiles;
     
     // Set up interval for regular linting;
     setInterval(async () => {
-=======
 return fileList;
   }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   async start() {
@@ -469,4 +461,3 @@ automation.start().catch(error => {
   console.error('Failed to start linting "automation": ', error);
   process.exit(1);
 });
->>>>>>> main

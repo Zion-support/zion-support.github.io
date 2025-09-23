@@ -1,6 +1,5 @@
 import React from 'react';
 interface DataSyncProps {;
-<<<<<<< HEAD
   "syncedData": "an y;
   "onNext": () => void;
   "onBack": () => void;
@@ -103,7 +102,6 @@ const DataSync: Reac t.FC<DataSyncProps> = ({ syncedData, onNext, onBack }) => {
       <div className="flex justify-between">
         <button
 =======
-=======
 "}
 =======
 ;
@@ -164,7 +162,6 @@ const "DataSync": "React.FC<DataSyncProps> = ({ syncedData", onNext, onBack }) =
 }
 =======
 const "DataSync": Reac t.FC<DataSyncProps> = ({ syncedData, onNext, onBack };) => {
->>>>>>> main
 >>>>>>> main:src_backup_temp/components/admin/pitch-generator/DataSync.tsx
 =======
 

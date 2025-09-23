@@ -6,13 +6,15 @@
     "passed": 2,
     "failed": 4,
     "skipped": 0
-  },  "results": {
+  },
+  "results": {
     "dependencies": {
       "status": "success",
       "result": {
         "duration": "1681ms",
         "output": "Dependencies installed successfully"
-      }    },
+      }
+    },
     "linting": {
       "status": "failure",
       "result": {
@@ -22,7 +24,8 @@
           "total": 0,
           "errors": 0,
           "warnings": 0
-        }      }
+        }
+      }
     },
     "typeCheck": {
       "status": "failure",
@@ -33,7 +36,8 @@
           "total": 12037,
           "errors": 12037,
           "warnings": 0
-        }      }
+        }
+      }
     },
     "build": {
       "status": "success",
@@ -41,13 +45,15 @@
         "duration": "2009ms",
         "output": "Build completed successfully",
         "buildSize": "343.98 KB"
-      }    },
+      }
+    },
     "testing": {
       "status": "failure",
       "result": {
         "error": "Command failed: npm test\nError: Cannot find module 'msw/node'\nRequire stack:\n- /workspace/jest.config.cjs\n- /workspace/node_modules/jest-util/build/requireOrImportModule.js\n- /workspace/node_modules/jest-util/build/index.js\n- /workspace/node_modules/@jest/core/build/FailedTestsInteractiveMode.js\n- /workspace/node_modules/@jest/core/build/plugins/FailedTestsInteractive.js\n- /workspace/node_modules/@jest/core/build/watch.js\n- /workspace/node_modules/@jest/core/build/cli/index.js\n- /workspace/node_modules/@jest/core/build/index.js\n- /workspace/node_modules/jest-cli/build/run.js\n- /workspace/node_modules/jest-cli/build/index.js\n- /workspace/node_modules/jest-cli/bin/jest.js\n- /workspace/node_modules/jest/bin/jest.js\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at Function.resolve (node:internal/modules/helpers:145:19)\n    at Object.<anonymous> (/workspace/jest.config.cjs:44:27)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.require (node:internal/modules/cjs/loader:1487:12)\n",
         "output": "\n> zion-tech-group@0.1.0 test\n> jest\n\n"
-      }    },
+      }
+    },
     "quality": {
       "status": "failure",
       "result": {
@@ -59,7 +65,8 @@
           "lintingPassed": false,
           "typeCheckPassed": false,
           "testsPassed": false,
-          "dependenciesInstalled": true}
+          "dependenciesInstalled": true
+        }
       }
     }
   },
@@ -72,6 +79,7 @@
       "lintingPassed": false,
       "typeCheckPassed": false,
       "testsPassed": false,
-      "dependenciesInstalled": true}
+      "dependenciesInstalled": true
+    }
   }
 }

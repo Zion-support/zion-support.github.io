@@ -7,7 +7,7 @@ import TimelineStep from '../components/quote/steps/TimelineStep';
 import BudgetStep from '../components/quote/steps/BudgetStep';
 import SummaryStep from '../components/quote/steps/SummaryStep';
 
-export type QuoteFormData ={
+export type QuoteFormData = {
   serviceTypes: string[];
   talentRoles: string[];
   equipmentNeeds: string[];
@@ -23,7 +23,7 @@ export type QuoteFormData ={
   company?: string;
 };
 
-const initialData: QuoteFormData ={
+const initialData: QuoteFormData = {
   serviceTypes: [],
   talentRoles: [],
   equipmentNeeds: [],
@@ -36,20 +36,30 @@ const initialData: QuoteFormData ={
   budgetRange: '',
   contactName: '',
   contactEmail: '',
-  company: ''};
+  company: '',
+};
 
 export default function RequestQuotePage() {
   const steps = useMemo(
-    () => ['Select Services', 'Project Details', 'Timeline', 'Budget', 'Summary'],
+    () => [
+      'Select Services',
+      'Project Details',
+      'Timeline',
+      'Budget',
+      'Summary',
+    ],
     []
   );
   const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState<QuoteFormData>(initialData);
   const [submitting, setSubmitting] = useState(false);
-  const [submitResult, setSubmitResult] = useState<{ ok: boolean; message: string } | null>(null);
+  const [submitResult, setSubmitResult] = useState<{
+    ok: boolean;
+    message: string;
+  } | null>(null);
 
-  const goNext = () => setCurrentStep((s) => Math.min(s + 1, steps.length - 1));
-  const goBack = () => setCurrentStep((s) => Math.max(s - 1, 0));
+  const goNext = () => setCurrentStep(s => Math.min(s + 1, steps.length - 1));
+  const goBack = () => setCurrentStep(s => Math.max(s - 1, 0));
 
   const handleSubmit = async () => {
     setSubmitting(true);
@@ -58,12 +68,16 @@ export default function RequestQuotePage() {
       const res = await fetch('/api/quote-request', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)});
+        body: JSON.stringify(formData),
+      });
       const data = await res.json();
       if (!res.ok) throw new Error(data?.message || 'Submission failed');
       setSubmitResult({ ok: true, message: 'Request submitted successfully.' });
     } catch (err: any) {
-      setSubmitResult({ ok: false, message: err?.message || 'Submission failed' });
+      setSubmitResult({
+        ok: false,
+        message: err?.message || 'Submission failed',
+      });
     } finally {
       setSubmitting(false);
     }
@@ -74,17 +88,17 @@ export default function RequestQuotePage() {
       <Head>
         <title>Request a Quote</title>
       </Head>
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-semibold mb-6">Request a Quote</h1>
-        <StepIndicator steps={steps} currentStep={currentStep}  />
+      <div className='max-w-4xl mx-auto'>
+        <h1 className='text-3xl font-semibold mb-6'>Request a Quote</h1>
+        <StepIndicator steps={steps} currentStep={currentStep} />
 
-        <div className="mt-6 bg-white dark:bg-gray-90o0 border border-gray-20o0 dark:border-gray-80o0 rounded-xl p-6 shadow-sm">
+        <div className='mt-6 bg-white dark:bg-gray-90o0 border border-gray-20o0 dark:border-gray-80o0 rounded-xl p-6 shadow-sm'>
           {currentStep === 0 && (
             <ServiceSelectionStep
               value={formData}
               onChange={setFormData}
               onNext={goNext}
-             />
+            />
           )}
           {currentStep === 1 && (
             <ProjectDetailsStep
@@ -92,7 +106,7 @@ export default function RequestQuotePage() {
               onChange={setFormData}
               onBack={goBack}
               onNext={goNext}
-             />
+            />
           )}
           {currentStep === 2 && (
             <TimelineStep
@@ -100,7 +114,7 @@ export default function RequestQuotePage() {
               onChange={setFormData}
               onBack={goBack}
               onNext={goNext}
-             />
+            />
           )}
           {currentStep === 3 && (
             <BudgetStep
@@ -108,7 +122,7 @@ export default function RequestQuotePage() {
               onChange={setFormData}
               onBack={goBack}
               onNext={goNext}
-             />
+            />
           )}
           {currentStep === 4 && (
             <SummaryStep
@@ -117,7 +131,7 @@ export default function RequestQuotePage() {
               onSubmit={handleSubmit}
               submitting={submitting}
               result={submitResult}
-             />
+            />
           )}
         </div>
       </div>

@@ -1,14 +1,11 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 
   website: "https://ziontechgroup.com",
-=======
 =======
 
   website: "https://ziontechgroup.com",
 =======
   "website": "https://ziontechgroup.com",
->>>>>>> main
   ;
   ;
   "domain": "ziontechgroup.com"};

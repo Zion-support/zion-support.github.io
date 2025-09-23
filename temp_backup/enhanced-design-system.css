@@ -1,4 +1,3 @@
-
 /* Enhanced Design System */
 :root {
   --primary-color: #3b82f6;
@@ -12,7 +11,11 @@
 
 /* Enhanced Typography */
 .enhanced-text {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
   line-height: 1.6;
   color: var(--text-color);
 }

@@ -42,7 +42,6 @@ class AppEnhancementSuite {}
 
   createMonitoringScripts() {
     this.log('📊 Creating Monitoring Scripts');
-<<<<<<< HEAD
     
     const monitoringScript = `#!/usr/bin/env node
 
@@ -202,7 +201,6 @@ monitor.monitorAppHealth().catch(console.error);
     this.createMonitoringScripts();
 
     const report = {
-=======
     const securityHeaders = {}
       'X-Content-Type-Options': 'nosniff',
       'X-Frame-Options': 'DENY',
@@ -240,4 +238,3 @@ monitor.monitorAppHealth().catch(console.error);
   };
 };
 module.exports = AppEnhancementSuite;
->>>>>>> main

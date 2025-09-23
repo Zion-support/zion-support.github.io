@@ -8,7 +8,7 @@ interface PerformanceOptimizerProps {
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children
+  children,
 }) => {
   return <>{children}</>;
 };

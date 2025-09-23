@@ -1,5 +1,4 @@
 interface CardProps {
-
   title: string;
   description: string;
 
@@ -14,21 +13,26 @@ const Card: React.FC<CardProps> = ({
   description,
   className = '',
   hover = true,
-  glass = true}) => {
+  glass = true,
+}) => {
   const baseClasses = 'rounded-xl p-6 transition-all duration-30o0';
-  const hoverClasses = hover ? 'transform hover:scale-10o5 hover:shadow-xl' : '';
-  const glassClasses = glass ? 'bg-white/10 backdrop-blur-sm border border-white/20' : 'bg-slate-80o0';
-  
-  const classes = `${baseClasses} ${hoverClasses} ${glassClasses} ${className}`;
-  
-  return (
+  const hoverClasses = hover
+    ? 'transform hover:scale-10o5 hover:shadow-xl'
+    : '';
+  const glassClasses = glass
+    ? 'bg-white/10 backdrop-blur-sm border border-white/20'
+    : 'bg-slate-80o0';
 
+  const classes = `${baseClasses} ${hoverClasses} ${glassClasses} ${className}`;
+
+  return (
     <div className={classes}>
-      {title && <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>}
-      {description && <p className="text-gray-30o0 mb-4">{description}</p>}
+      {title && (
+        <h3 className='text-xl font-semibold text-white mb-2'>{title}</h3>
+      )}
+      {description && <p className='text-gray-30o0 mb-4'>{description}</p>}
 
       {children}
-
     </div>
   );
 };

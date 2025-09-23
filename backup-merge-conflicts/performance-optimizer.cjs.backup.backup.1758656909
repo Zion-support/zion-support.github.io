@@ -94,7 +94,6 @@ const path = require('path');
 
 class PerformanceOptimizer {
   constructor() {
-<<<<<<< HEAD
     this.metrics = {};
   }
 
@@ -163,11 +162,9 @@ const path = require('path')
     const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx')]
         const content = fs.readFileSync(file, 'utf8')
     optimized = optimized.replace(/imports+{s*([^}]+)s*}s+froms+['"]([^'')]
-=======
   optimizer.analyzeBundle();
   optimizer.generateReport();
 }
 
 module.exports = PerformanceOptimizer;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main

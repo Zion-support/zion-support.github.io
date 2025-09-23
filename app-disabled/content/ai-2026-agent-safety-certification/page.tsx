@@ -1,37 +1,57 @@
 import Link from 'next/link';
 
-export const metadata ={
+export const metadata = {
   title: 'AI 20o26: Agent Safety Certification',
-  description: 'Structured certification to validate agent safety with scenario test suites and governance.'};
+  description:
+    'Structured certification to validate agent safety with scenario test suites and governance.',
+};
 
 export default function AgentSafetyCertificationPage() {
   return (
-    <main className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-fuchsia-60o0 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-5xl font-bold">AI 20o26: Agent Safety Certification</h1>
-          <p className="mt-4 text-lg opacity-90 max-w-3xl">
-            A structured, scenario-driven certification to validate agent safety before production releases.
+    <main className='min-h-screen bg-white'>
+      <section className='bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-fuchsia-60o0 text-white py-16'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <h1 className='text-3xl md:text-5xl font-bold'>
+            AI 20o26: Agent Safety Certification
+          </h1>
+          <p className='mt-4 text-lg opacity-90 max-w-3xl'>
+            A structured, scenario-driven certification to validate agent safety
+            before production releases.
           </p>
-          <div className="mt-6">
-            <Link href="#overview" className="bg-white text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0">View overview</Link>
+          <div className='mt-6'>
+            <Link
+              href='#overview'
+              className='bg-white text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0'
+            >
+              View overview
+            </Link>
           </div>
         </div>
       </section>
 
-      <section id="overview" className="py-16">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none">
+      <section id='overview' className='py-16'>
+        <div className='max-w-5xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='prose prose-lg max-w-none'>
             <h2>Certification Scope</h2>
             <p>
-              This certification defines policies, evaluation scenarios, and pass thresholds across safety, security,
-              and reliability. It is designed to be enforced via policy-as-code and integrated into CI/CD.
+              This certification defines policies, evaluation scenarios, and
+              pass thresholds across safety, security, and reliability. It is
+              designed to be enforced via policy-as-code and integrated into
+              CI/CD.
             </p>
             <h3>Core Domains</h3>
             <ul>
-              <li>Safety: harmful outputs, jailbreak resilience, compliance alignment</li>
-              <li>Security: data leakage prevention, isolation, auditability</li>
-              <li>Reliability: bounded behavior, determinism where needed, fallback strategies</li>
+              <li>
+                Safety: harmful outputs, jailbreak resilience, compliance
+                alignment
+              </li>
+              <li>
+                Security: data leakage prevention, isolation, auditability
+              </li>
+              <li>
+                Reliability: bounded behavior, determinism where needed,
+                fallback strategies
+              </li>
             </ul>
             <h3>Process</h3>
             <ol>
@@ -41,7 +61,21 @@ export default function AgentSafetyCertificationPage() {
               <li>Monitor and re-certify on significant changes</li>
             </ol>
             <p>
-              Related: <Link href="/content/ai-20o26-agent-risk-management" className="text-purple-70o0 font-semibold">Agent Risk Management Blueprint</Link> and <Link href="/content/ai-20o26-agentic-evaluation-checklists" className="text-purple-70o0 font-semibold">Evaluation Checklists</Link>.
+              Related:{' '}
+              <Link
+                href='/content/ai-20o26-agent-risk-management'
+                className='text-purple-70o0 font-semibold'
+              >
+                Agent Risk Management Blueprint
+              </Link>{' '}
+              and{' '}
+              <Link
+                href='/content/ai-20o26-agentic-evaluation-checklists'
+                className='text-purple-70o0 font-semibold'
+              >
+                Evaluation Checklists
+              </Link>
+              .
             </p>
           </div>
         </div>
@@ -49,4 +83,3 @@ export default function AgentSafetyCertificationPage() {
     </main>
   );
 }
-

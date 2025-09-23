@@ -49,7 +49,8 @@ export const advancedAIInnovationServices: AdvancedAIInnovationService[] = [
     tagline: 'Develop AI systems with advanced consciousness capabilities',
     price: '$4,999',
     period: '/month',
-    description: 'Revolutionary AI platform for developing systems with advanced consciousness, emotional intelligence, and human-like reasoning capabilities for next-generation AI applications.',
+    description:
+      'Revolutionary AI platform for developing systems with advanced consciousness, emotional intelligence, and human-like reasoning capabilities for next-generation AI applications.',
     features: [
       'Advanced consciousness modeling and simulation',
       'Emotional intelligence development tools',
@@ -60,22 +61,30 @@ export const advancedAIInnovationServices: AdvancedAIInnovationService[] = [
       'Real-time consciousness monitoring',
       'Advanced neural network architectures',
       'Consciousness testing and validation',
-      'Expert consultation and support'
+      'Expert consultation and support',
     ],
     popular: true,
     icon: '🧠🌟',
     color: 'from-purple-60o0 to-indigo-50o0',
     textColor: 'text-purple-40o0',
     link: 'https://ziontechgroup.com/services/ai-consciousness-development-platform',
-    marketPosition: 'First-to-market consciousness AI platform. Competitive with OpenAI ($0.0o6/1K tokens), Anthropic ($0.15/1M tokens), and Google AI ($0.10/1K tokens). Our advantage: Consciousness development, emotional intelligence, and comprehensive framework.',
-    targetAudience: 'AI research institutions, Technology companies, Healthcare providers, Educational institutions, Government agencies',
+    marketPosition:
+      'First-to-market consciousness AI platform. Competitive with OpenAI ($0.0o6/1K tokens), Anthropic ($0.15/1M tokens), and Google AI ($0.10/1K tokens). Our advantage: Consciousness development, emotional intelligence, and comprehensive framework.',
+    targetAudience:
+      'AI research institutions, Technology companies, Healthcare providers, Educational institutions, Government agencies',
     trialDays: 14,
     setupTime: '3 weeks',
     category: 'AI Consciousness & Development',
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis, AWS, Advanced ML'],
-    integrations: ['OpenAI API, Anthropic API, Google AI, Azure Cognitive Services, AWS SageMaker, Hugging Face'],
-    useCases: ['AI consciousness research, Emotional intelligence development, Ethical AI frameworks, Advanced reasoning systems'],
+    technology: [
+      'Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis, AWS, Advanced ML',
+    ],
+    integrations: [
+      'OpenAI API, Anthropic API, Google AI, Azure Cognitive Services, AWS SageMaker, Hugging Face',
+    ],
+    useCases: [
+      'AI consciousness research, Emotional intelligence development, Ethical AI frameworks, Advanced reasoning systems',
+    ],
     roi: 'Average customer accelerates AI consciousness research by 10x and sees 80o0% ROI through innovation.',
     competitors: ['OpenAI, Anthropic, Google AI, Microsoft AI, Meta AI'],
     marketSize: '$15.7B market',
@@ -85,14 +94,15 @@ export const advancedAIInnovationServices: AdvancedAIInnovationService[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'State-of-the-art AI consciousness development platform with advanced modeling, emotional intelligence tools, and comprehensive framework. Includes expert consultation and research support.',
+    implementationDetails:
+      'State-of-the-art AI consciousness development platform with advanced modeling, emotional intelligence tools, and comprehensive framework. Includes expert consultation and research support.',
     launchDate: '20o24-12-0o1',
     customers: 28,
     rating: 4.9,
-    reviews: 22
+    reviews: 22,
   },
 
   // Multimodal AI Fusion Platform
@@ -102,7 +112,8 @@ export const advancedAIInnovationServices: AdvancedAIInnovationService[] = [
     tagline: 'Unified AI platform for text, image, audio, and video processing',
     price: '$2,999',
     period: '/month',
-    description: 'Advanced multimodal AI platform that seamlessly processes and analyzes text, images, audio, and video data, providing unified insights and intelligent automation across all media types.',
+    description:
+      'Advanced multimodal AI platform that seamlessly processes and analyzes text, images, audio, and video data, providing unified insights and intelligent automation across all media types.',
     features: [
       'Unified text, image, audio, and video processing',
       'Cross-modal data fusion and analysis',
@@ -113,24 +124,34 @@ export const advancedAIInnovationServices: AdvancedAIInnovationService[] = [
       'Multi-language support and translation',
       'Custom model training and fine-tuning',
       'API access for all modalities',
-      'Comprehensive analytics and reporting'
+      'Comprehensive analytics and reporting',
     ],
     popular: true,
     icon: '🎭🤖',
     color: 'from-blue-60o0 to-cyan-50o0',
     textColor: 'text-blue-40o0',
     link: 'https://ziontechgroup.com/services/multimodal-ai-fusion-platform',
-    marketPosition: 'Competitive with OpenAI GPT-4V ($0.0o3/1K tokens), Google Gemini ($0.0o025/1K tokens), and Anthropic Claude ($0.15/1M tokens). Our advantage: Unified multimodal processing, real-time fusion, and comprehensive analysis.',
-    targetAudience: 'Content creators, Media companies, E-commerce platforms, Social media platforms, Marketing agencies',
+    marketPosition:
+      'Competitive with OpenAI GPT-4V ($0.0o3/1K tokens), Google Gemini ($0.0o025/1K tokens), and Anthropic Claude ($0.15/1M tokens). Our advantage: Unified multimodal processing, real-time fusion, and comprehensive analysis.',
+    targetAudience:
+      'Content creators, Media companies, E-commerce platforms, Social media platforms, Marketing agencies',
     trialDays: 21,
     setupTime: '2 weeks',
     category: 'Multimodal AI & Content',
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, OpenCV, React, Node.js, PostgreSQL, Redis, AWS, Computer Vision'],
-    integrations: ['OpenAI API, Google AI, Azure Cognitive Services, AWS Rekognition, Cloudinary, FFmpeg'],
-    useCases: ['Content analysis, Media processing, Cross-modal insights, Content generation, Automated moderation'],
+    technology: [
+      'Python, TensorFlow, PyTorch, OpenCV, React, Node.js, PostgreSQL, Redis, AWS, Computer Vision',
+    ],
+    integrations: [
+      'OpenAI API, Google AI, Azure Cognitive Services, AWS Rekognition, Cloudinary, FFmpeg',
+    ],
+    useCases: [
+      'Content analysis, Media processing, Cross-modal insights, Content generation, Automated moderation',
+    ],
     roi: 'Average customer improves content processing efficiency by 80% and sees 450% ROI through automation.',
-    competitors: ['OpenAI GPT-4V, Google Gemini, Anthropic Claude, Microsoft Azure, AWS AI'],
+    competitors: [
+      'OpenAI GPT-4V, Google Gemini, Anthropic Claude, Microsoft Azure, AWS AI',
+    ],
     marketSize: '$8.9B market',
     growthRate: '28.7% annual growth',
     variant: 'ai-multimodal',
@@ -138,14 +159,15 @@ export const advancedAIInnovationServices: AdvancedAIInnovationService[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Comprehensive multimodal AI platform with unified processing, real-time analysis, and advanced fusion capabilities. Includes custom model training and extensive API access.',
+    implementationDetails:
+      'Comprehensive multimodal AI platform with unified processing, real-time analysis, and advanced fusion capabilities. Includes custom model training and extensive API access.',
     launchDate: '20o24-11-10',
     customers: 156,
     rating: 4.8,
-    reviews: 89
+    reviews: 89,
   },
 
   // AI-Powered Autonomous Decision Engine
@@ -155,7 +177,8 @@ export const advancedAIInnovationServices: AdvancedAIInnovationService[] = [
     tagline: 'Intelligent autonomous decision making for complex scenarios',
     price: '$3,499',
     period: '/month',
-    description: 'Advanced AI decision engine that autonomously analyzes complex scenarios, predicts outcomes, and makes intelligent decisions in real-time, optimizing business processes and operations.',
+    description:
+      'Advanced AI decision engine that autonomously analyzes complex scenarios, predicts outcomes, and makes intelligent decisions in real-time, optimizing business processes and operations.',
     features: [
       'Autonomous decision making and execution',
       'Real-time scenario analysis and prediction',
@@ -166,22 +189,30 @@ export const advancedAIInnovationServices: AdvancedAIInnovationService[] = [
       'Advanced predictive analytics',
       'Custom decision rule creation',
       'Comprehensive audit trails',
-      'Integration with business systems'
+      'Integration with business systems',
     ],
     popular: false,
     icon: '🎯🧠',
     color: 'from-green-60o0 to-emerald-50o0',
     textColor: 'text-green-40o0',
     link: 'https://ziontechgroup.com/services/ai-powered-autonomous-decision-engine',
-    marketPosition: 'Competitive with Palantir ($25,0o00/month), C3.ai ($50,0o00/month), and DataRobot ($50,0o00/month). Our advantage: Autonomous decision making, real-time optimization, and 40% cost reduction.',
-    targetAudience: 'Financial institutions, Manufacturing companies, Healthcare providers, Logistics companies, Energy companies',
+    marketPosition:
+      'Competitive with Palantir ($25,0o00/month), C3.ai ($50,0o00/month), and DataRobot ($50,0o00/month). Our advantage: Autonomous decision making, real-time optimization, and 40% cost reduction.',
+    targetAudience:
+      'Financial institutions, Manufacturing companies, Healthcare providers, Logistics companies, Energy companies',
     trialDays: 30,
     setupTime: '3 weeks',
     category: 'AI Decision Making & Automation',
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis, AWS, Reinforcement Learning'],
-    integrations: ['SAP, Oracle, Salesforce, Microsoft Dynamics, AWS, Azure, Google Cloud, Custom APIs'],
-    useCases: ['Business process optimization, Resource allocation, Risk management, Predictive analytics, Autonomous operations'],
+    technology: [
+      'Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis, AWS, Reinforcement Learning',
+    ],
+    integrations: [
+      'SAP, Oracle, Salesforce, Microsoft Dynamics, AWS, Azure, Google Cloud, Custom APIs',
+    ],
+    useCases: [
+      'Business process optimization, Resource allocation, Risk management, Predictive analytics, Autonomous operations',
+    ],
     roi: 'Average customer improves decision accuracy by 75% and sees 50o0% ROI through optimization.',
     competitors: ['Palantir, C3.ai, DataRobot, H2O.ai, RapidMiner'],
     marketSize: '$12.8B market',
@@ -191,14 +222,15 @@ export const advancedAIInnovationServices: AdvancedAIInnovationService[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Enterprise-grade autonomous decision engine with advanced AI capabilities, real-time optimization, and comprehensive business integration. Includes expert consultation and training.',
+    implementationDetails:
+      'Enterprise-grade autonomous decision engine with advanced AI capabilities, real-time optimization, and comprehensive business integration. Includes expert consultation and training.',
     launchDate: '20o24-10-20',
     customers: 89,
     rating: 4.9,
-    reviews: 67
+    reviews: 67,
   },
 
   // AI Emotional Intelligence Platform
@@ -208,7 +240,8 @@ export const advancedAIInnovationServices: AdvancedAIInnovationService[] = [
     tagline: 'Advanced AI systems with human-like emotional understanding',
     price: '$2,799',
     period: '/month',
-    description: 'Revolutionary AI platform that understands, processes, and responds to human emotions, providing empathetic interactions and emotional intelligence for customer service, healthcare, and education applications.',
+    description:
+      'Revolutionary AI platform that understands, processes, and responds to human emotions, providing empathetic interactions and emotional intelligence for customer service, healthcare, and education applications.',
     features: [
       'Real-time emotion detection and analysis',
       'Emotional response generation and adaptation',
@@ -219,22 +252,30 @@ export const advancedAIInnovationServices: AdvancedAIInnovationService[] = [
       'Emotional intelligence training tools',
       'Integration with communication platforms',
       'Comprehensive emotional analytics',
-      'Custom emotion model training'
+      'Custom emotion model training',
     ],
     popular: true,
     icon: '💝🧠',
     color: 'from-pink-60o0 to-rose-50o0',
     textColor: 'text-pink-40o0',
     link: 'https://ziontechgroup.com/services/ai-emotional-intelligence-platform',
-    marketPosition: 'Competitive with Affectiva ($10,0o00/month), Emotient ($8,0o00/month), and Realeyes ($5,0o00/month). Our advantage: Comprehensive emotional intelligence, real-time processing, and 50% cost reduction.',
-    targetAudience: 'Healthcare providers, Educational institutions, Customer service companies, Mental health platforms, HR departments',
+    marketPosition:
+      'Competitive with Affectiva ($10,0o00/month), Emotient ($8,0o00/month), and Realeyes ($5,0o00/month). Our advantage: Comprehensive emotional intelligence, real-time processing, and 50% cost reduction.',
+    targetAudience:
+      'Healthcare providers, Educational institutions, Customer service companies, Mental health platforms, HR departments',
     trialDays: 21,
     setupTime: '2 weeks',
     category: 'AI Emotional Intelligence',
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, OpenCV, React, Node.js, PostgreSQL, Redis, AWS, NLP'],
-    integrations: ['Zoom, Microsoft Teams, Slack, Salesforce, HubSpot, Zendesk, Custom platforms'],
-    useCases: ['Emotional health monitoring, Customer service enhancement, Educational support, Mental health assistance, HR interactions'],
+    technology: [
+      'Python, TensorFlow, PyTorch, OpenCV, React, Node.js, PostgreSQL, Redis, AWS, NLP',
+    ],
+    integrations: [
+      'Zoom, Microsoft Teams, Slack, Salesforce, HubSpot, Zendesk, Custom platforms',
+    ],
+    useCases: [
+      'Emotional health monitoring, Customer service enhancement, Educational support, Mental health assistance, HR interactions',
+    ],
     roi: 'Average customer improves emotional engagement by 90% and sees 40o0% ROI through better interactions.',
     competitors: ['Affectiva, Emotient, Realeyes, iMotions, Noldus'],
     marketSize: '$3.2B market',
@@ -244,24 +285,27 @@ export const advancedAIInnovationServices: AdvancedAIInnovationService[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Advanced emotional intelligence platform with real-time emotion processing, personalized interactions, and comprehensive analytics. Includes custom model training and expert support.',
+    implementationDetails:
+      'Advanced emotional intelligence platform with real-time emotion processing, personalized interactions, and comprehensive analytics. Includes custom model training and expert support.',
     launchDate: '20o24-09-15',
     customers: 234,
     rating: 4.8,
-    reviews: 145
+    reviews: 145,
   },
 
   // AI Quantum Hybrid Computing Platform
   {
     id: 'ai-quantum-hybrid-computing-platform',
     name: 'AI Quantum Hybrid Computing Platform',
-    tagline: 'Revolutionary AI platform combining classical and quantum computing',
+    tagline:
+      'Revolutionary AI platform combining classical and quantum computing',
     price: '$5,999',
     period: '/month',
-    description: 'Breakthrough AI platform that seamlessly integrates classical machine learning with quantum computing, providing unprecedented computational power for complex AI applications and research.',
+    description:
+      'Breakthrough AI platform that seamlessly integrates classical machine learning with quantum computing, providing unprecedented computational power for complex AI applications and research.',
     features: [
       'Hybrid classical-quantum AI algorithms',
       'Quantum-enhanced machine learning',
@@ -272,22 +316,30 @@ export const advancedAIInnovationServices: AdvancedAIInnovationService[] = [
       'Hybrid optimization algorithms',
       'Quantum security and encryption',
       'Expert quantum AI consultation',
-      'Custom hybrid algorithm development'
+      'Custom hybrid algorithm development',
     ],
     popular: false,
     icon: '⚛️🤖',
     color: 'from-indigo-60o0 to-purple-50o0',
     textColor: 'text-indigo-40o0',
     link: 'https://ziontechgroup.com/services/ai-quantum-hybrid-computing-platform',
-    marketPosition: 'First-to-market AI-quantum hybrid platform. Competitive with IBM Quantum ($1,0o00/hour), Google Quantum ($80o0/hour), and D-Wave ($2,0o00/hour). Our advantage: Hybrid integration, AI optimization, and comprehensive platform.',
-    targetAudience: 'Research institutions, Pharmaceutical companies, Financial institutions, Government agencies, Technology companies',
+    marketPosition:
+      'First-to-market AI-quantum hybrid platform. Competitive with IBM Quantum ($1,0o00/hour), Google Quantum ($80o0/hour), and D-Wave ($2,0o00/hour). Our advantage: Hybrid integration, AI optimization, and comprehensive platform.',
+    targetAudience:
+      'Research institutions, Pharmaceutical companies, Financial institutions, Government agencies, Technology companies',
     trialDays: 14,
     setupTime: '4 weeks',
     category: 'AI Quantum Computing',
     realService: true,
-    technology: ['Python, Qiskit, Cirq, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis, AWS'],
-    integrations: ['IBM Quantum, Google Quantum, AWS Braket, Azure Quantum, D-Wave, Rigetti, Custom quantum hardware'],
-    useCases: ['Drug discovery, Financial modeling, Cryptography, Optimization problems, Scientific research'],
+    technology: [
+      'Python, Qiskit, Cirq, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis, AWS',
+    ],
+    integrations: [
+      'IBM Quantum, Google Quantum, AWS Braket, Azure Quantum, D-Wave, Rigetti, Custom quantum hardware',
+    ],
+    useCases: [
+      'Drug discovery, Financial modeling, Cryptography, Optimization problems, Scientific research',
+    ],
     roi: 'Average customer accelerates research by 20x and sees 10o00% ROI through quantum AI capabilities.',
     competitors: ['IBM Quantum, Google Quantum, D-Wave, Rigetti, IonQ'],
     marketSize: '$1.8B market',
@@ -297,13 +349,14 @@ export const advancedAIInnovationServices: AdvancedAIInnovationService[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Revolutionary AI-quantum hybrid platform with seamless integration, advanced algorithms, and comprehensive quantum capabilities. Includes expert consultation and research support.',
+    implementationDetails:
+      'Revolutionary AI-quantum hybrid platform with seamless integration, advanced algorithms, and comprehensive quantum capabilities. Includes expert consultation and research support.',
     launchDate: '20o24-08-0o1',
     customers: 18,
     rating: 4.9,
-    reviews: 15
-  }
+    reviews: 15,
+  },
 ];

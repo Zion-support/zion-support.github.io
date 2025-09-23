@@ -1,10 +1,7 @@
 =======
-<<<<<<< HEAD
 const AccessibilityManager = dynamic(() => import("./AccessibilityManager"),{"; loading: () => <p>Loading.</p,>}) export: "default AccessibilityManager" ,"""
 <<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11935
 const AccessibilityManager = dynamic(() => import("./AccessibilityManager"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default AccessibilityManager' ,'
 >>>>>>> main
 >>>>>>> main

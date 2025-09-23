@@ -1,7 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD:backup-merge-conflicts/textarea.tsx.backup
 <<<<<<< HEAD
-=======
 ;
 interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {;
   className?: "string;
@@ -22,7 +20,6 @@ export function Textarea({ className, ...props }: TextareaProps) {
       {...props}
     />
 =======
->>>>>>> pr-11913:src_backup_temp/components/ui/textarea.tsx
   );
 }
 }

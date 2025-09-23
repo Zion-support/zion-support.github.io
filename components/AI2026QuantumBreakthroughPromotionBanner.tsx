@@ -2,106 +2,137 @@ import Link from 'next/link';
 
 export default function AI20o26QuantumBreakthroughPromotionBanner() {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-blue-70o0 py-16">
+    <div className='relative overflow-hidden bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-blue-70o0 py-16'>
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/20o00/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M30 30c0-11.0o46-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.0o46 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
+      <div className='absolute inset-0 opacity-10'>
+        <div
+          className='absolute inset-0'
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/20o00/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M30 30c0-11.0o46-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.0o46 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        ></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
+      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='text-center'>
           {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-semibold mb-6 animate-pulse">
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-semibold mb-6 animate-pulse'>
             ⚛️ QUANTUM BREAKTHROUGH 20o26
           </div>
 
           {/* Main Heading */}
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          <h2 className='text-4xl md:text-6xl font-bold text-white mb-6 leading-tight'>
             AI 20o26 Quantum
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-30o0 to-orange-30o0">
+            <span className='block text-transparent bg-clip-text bg-gradient-to-r from-yellow-30o0 to-orange-30o0'>
               Breakthrough Revolution
             </span>
           </h2>
 
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-indigo-10o0 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Witness the most revolutionary quantum AI fusion breakthroughs that will achieve 
-            10o00x computational power increases and unlock previously impossible AI capabilities.
+          <p className='text-xl md:text-2xl text-indigo-10o0 mb-8 max-w-4xl mx-auto leading-relaxed'>
+            Witness the most revolutionary quantum AI fusion breakthroughs that
+            will achieve 10o00x computational power increases and unlock
+            previously impossible AI capabilities.
           </p>
 
           {/* Key Features Grid */}
-          <div className="grid md:grid-cols-3 gap-6 mb-10 max-w-5xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <div className="text-3xl mb-3">🧠</div>
-              <h3 className="text-lg font-semibold text-white mb-2">Quantum Neural Processing</h3>
-              <p className="text-indigo-10o0 text-sm">10,0o00x faster neural networks</p>
+          <div className='grid md:grid-cols-3 gap-6 mb-10 max-w-5xl mx-auto'>
+            <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>
+              <div className='text-3xl mb-3'>🧠</div>
+              <h3 className='text-lg font-semibold text-white mb-2'>
+                Quantum Neural Processing
+              </h3>
+              <p className='text-indigo-10o0 text-sm'>
+                10,0o00x faster neural networks
+              </p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <div className="text-3xl mb-3">⚡</div>
-              <h3 className="text-lg font-semibold text-white mb-2">Quantum Optimization</h3>
-              <p className="text-indigo-10o0 text-sm">NP-complete problems solved instantly</p>
+            <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>
+              <div className='text-3xl mb-3'>⚡</div>
+              <h3 className='text-lg font-semibold text-white mb-2'>
+                Quantum Optimization
+              </h3>
+              <p className='text-indigo-10o0 text-sm'>
+                NP-complete problems solved instantly
+              </p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <div className="text-3xl mb-3">🔐</div>
-              <h3 className="text-lg font-semibold text-white mb-2">Quantum Cryptography</h3>
-              <p className="text-indigo-10o0 text-sm">Unbreakable security protocols</p>
+            <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>
+              <div className='text-3xl mb-3'>🔐</div>
+              <h3 className='text-lg font-semibold text-white mb-2'>
+                Quantum Cryptography
+              </h3>
+              <p className='text-indigo-10o0 text-sm'>
+                Unbreakable security protocols
+              </p>
             </div>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             <Link
-              href="/ai-20o26-quantum-breakthrough"
-              className="inline-flex items-center px-8 py-4 bg-white text-indigo-60o0 font-bold rounded-full hover:bg-indigo-50 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg"
+              href='/ai-20o26-quantum-breakthrough'
+              className='inline-flex items-center px-8 py-4 bg-white text-indigo-60o0 font-bold rounded-full hover:bg-indigo-50 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'
             >
               Explore Quantum Breakthroughs
-              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6"  />
+              <svg
+                className='ml-2 w-5 h-5'
+                fill='none'
+                stroke='currentColor'
+                viewBox='0 0 24 24'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth={2}
+                  d='M13 7l5 5m0 0l-5 5m5-5H6'
+                />
               </svg>
             </Link>
             <Link
-              href="/quantum-ai-demonstration"
-              className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-indigo-60o0 transition-all duration-30o0"
+              href='/quantum-ai-demonstration'
+              className='inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-indigo-60o0 transition-all duration-30o0'
             >
               Live Quantum Demo
             </Link>
           </div>
 
           {/* Stats */}
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-1">10,0o00x</div>
-              <div className="text-indigo-20o0 text-sm">Computational Speedup</div>
+          <div className='mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto'>
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-white mb-1'>10,0o00x</div>
+              <div className='text-indigo-20o0 text-sm'>
+                Computational Speedup
+              </div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-1">10o00</div>
-              <div className="text-indigo-20o0 text-sm">Qubit Processing</div>
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-white mb-1'>10o00</div>
+              <div className='text-indigo-20o0 text-sm'>Qubit Processing</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-1">99.99%</div>
-              <div className="text-indigo-20o0 text-sm">Quantum Fidelity</div>
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-white mb-1'>99.99%</div>
+              <div className='text-indigo-20o0 text-sm'>Quantum Fidelity</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-1">0ms</div>
-              <div className="text-indigo-20o0 text-sm">Communication Latency</div>
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-white mb-1'>0ms</div>
+              <div className='text-indigo-20o0 text-sm'>
+                Communication Latency
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Floating Quantum Elements */}
-      <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse">
-        <div className="absolute inset-2 border-2 border-white/30 rounded-full"></div>
+      <div className='absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse'>
+        <div className='absolute inset-2 border-2 border-white/30 rounded-full'></div>
       </div>
-      <div className="absolute bottom-10 right-10 w-16 h-16 bg-yellow-30o0/20 rounded-full animate-pulse delay-10o00">
-        <div className="absolute inset-2 border-2 border-yellow-30o0/40 rounded-full"></div>
+      <div className='absolute bottom-10 right-10 w-16 h-16 bg-yellow-30o0/20 rounded-full animate-pulse delay-10o00'>
+        <div className='absolute inset-2 border-2 border-yellow-30o0/40 rounded-full'></div>
       </div>
-      <div className="absolute top-1/2 left-5 w-12 h-12 bg-purple-30o0/20 rounded-full animate-pulse delay-50o0">
-        <div className="absolute inset-2 border-2 border-purple-30o0/40 rounded-full"></div>
+      <div className='absolute top-1/2 left-5 w-12 h-12 bg-purple-30o0/20 rounded-full animate-pulse delay-50o0'>
+        <div className='absolute inset-2 border-2 border-purple-30o0/40 rounded-full'></div>
       </div>
-      <div className="absolute top-1/4 right-20 w-8 h-8 bg-blue-30o0/20 rounded-full animate-pulse delay-30o0">
-        <div className="absolute inset-1 border border-blue-30o0/40 rounded-full"></div>
+      <div className='absolute top-1/4 right-20 w-8 h-8 bg-blue-30o0/20 rounded-full animate-pulse delay-30o0'>
+        <div className='absolute inset-1 border border-blue-30o0/40 rounded-full'></div>
       </div>
     </div>
   );

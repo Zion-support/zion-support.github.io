@@ -1,5 +1,4 @@
 legacy-peer-deps=true
-<<<<<<< HEAD
 strict-peer-dependencies=false
 auto-install-peers=true
 
@@ -9,7 +8,6 @@ react-dom@18.2.0
 
 # Use npm's legacy peer dependency resolution
 legacy-peer-deps=true
-=======
 # Fix for Rollup module issues on Linux build environments
 optional=false
 legacy-peer-deps=true
@@ -18,4 +16,3 @@ prefer-offline=true
 
 # Build optimization
 ignore-scripts=false
->>>>>>> origin/auto/autonomy-17186719616

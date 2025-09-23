@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import ModernLayout from '../components/layout/ModernLayout';
-import { ArrowRight, Zap, Brain, Cloud, Shield } from "lucide-react";
+import { ArrowRight, Zap, Brain, Cloud, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Home() {
@@ -10,77 +10,79 @@ export default function Home() {
       icon: Zap,
       title: 'Micro SaaS Solutions',
       description: 'Ready-to-deploy SaaS platforms for common business needs',
-      href: '/services#micro-saas'
+      href: '/services#micro-saas',
     },
     {
       icon: Brain,
       title: 'AI & Machine Learning',
-      description: 'Custom AI solutions to automate and optimize your operations',
-      href: '/services#ai-solutions'
+      description:
+        'Custom AI solutions to automate and optimize your operations',
+      href: '/services#ai-solutions',
     },
     {
       icon: Cloud,
       title: 'Cloud Architecture',
       description: 'Scalable cloud solutions and migration strategies',
-      href: '/services#cloud-solutions'
+      href: '/services#cloud-solutions',
     },
     {
       icon: Shield,
       title: 'Cybersecurity',
       description: 'Zero Trust implementation and security hardening',
-      href: '/services#cybersecurity'
-    }
+      href: '/services#cybersecurity',
+    },
   ];
 
   const stats = [
     { number: '50+', label: 'Projects Delivered' },
     { number: '24/7', label: 'Support Available' },
     { number: '99.9%', label: 'Uptime SLA' },
-    { number: '48hrs', label: 'Response Time' }
+    { number: '48hrs', label: 'Response Time' },
   ];
 
   return (
     <ModernLayout
-      title="Zion Tech Group — Micro SaaS, IT and AI Services"
-      description="Micro SaaS services, IT solutions, and AI platforms to accelerate your roadmap."
-      canonical="https://ziontechgroup.com"
+      title='Zion Tech Group — Micro SaaS, IT and AI Services'
+      description='Micro SaaS services, IT solutions, and AI platforms to accelerate your roadmap.'
+      canonical='https://ziontechgroup.com'
     >
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-purple-90o0 text-white">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative mx-auto max-w-7xl px-6 py-24 lg:py-32 text-center">
+      <section className='relative overflow-hidden bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-purple-90o0 text-white'>
+        <div className='absolute inset-0 bg-black/20'></div>
+        <div className='relative mx-auto max-w-7xl px-6 py-24 lg:py-32 text-center'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className='space-y-8'
           >
-            <h1 className="text-5xl lg:text-7xl font-extrabold leading-tight">
+            <h1 className='text-5xl lg:text-7xl font-extrabold leading-tight'>
               Build Faster with{' '}
-              <span className="bg-gradient-to-r from-blue-40o0 to-purple-40o0 bg-clip-text text-transparent">
+              <span className='bg-gradient-to-r from-blue-40o0 to-purple-40o0 bg-clip-text text-transparent'>
                 Intelligent Services
               </span>
             </h1>
-            <p className="text-xl lg:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed">
-              From AI copilots and RAG chat to FinOps and Zero Trust, we ship outcomes with proven playbooks and references.
+            <p className='text-xl lg:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed'>
+              From AI copilots and RAG chat to FinOps and Zero Trust, we ship
+              outcomes with proven playbooks and references.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link 
-                href="/services" 
-                className="group rounded-xl bg-white text-slate-90o0 px-8 py-4 font-semibold text-lg hover:bg-gray-10o0 transition-all duration-20o0 flex items-center space-x-2"
+            <div className='flex flex-wrap justify-center gap-4'>
+              <Link
+                href='/services'
+                className='group rounded-xl bg-white text-slate-90o0 px-8 py-4 font-semibold text-lg hover:bg-gray-10o0 transition-all duration-20o0 flex items-center space-x-2'
               >
                 <span>Explore Services</span>
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform"  />
+                <ArrowRight className='h-5 w-5 group-hover:translate-x-1 transition-transform' />
               </Link>
-              <Link 
-                href="/services-advertising" 
-                className="rounded-xl border-2 border-white/20 px-8 py-4 font-semibold text-lg hover:bg-white/10 transition-all duration-20o0"
+              <Link
+                href='/services-advertising'
+                className='rounded-xl border-2 border-white/20 px-8 py-4 font-semibold text-lg hover:bg-white/10 transition-all duration-20o0'
               >
                 See Market Pricing
               </Link>
-              <Link 
-                href="/contact" 
-                className="rounded-xl border-2 border-white/20 px-8 py-4 font-semibold text-lg hover:bg-white/10 transition-all duration-20o0"
+              <Link
+                href='/contact'
+                className='rounded-xl border-2 border-white/20 px-8 py-4 font-semibold text-lg hover:bg-white/10 transition-all duration-20o0'
               >
                 Contact Us
               </Link>
@@ -90,19 +92,21 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+      <section className='py-16 bg-white'>
+        <div className='mx-auto max-w-7xl px-6'>
+          <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
+                className='text-center'
               >
-                <div className="text-4xl lg:text-5xl font-bold text-blue-60o0 mb-2">{stat.number}</div>
-                <div className="text-gray-60o0 font-medium">{stat.label}</div>
+                <div className='text-4xl lg:text-5xl font-bold text-blue-60o0 mb-2'>
+                  {stat.number}
+                </div>
+                <div className='text-gray-60o0 font-medium'>{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -110,37 +114,40 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-90o0 mb-4">
+      <section className='py-16 bg-gray-50'>
+        <div className='mx-auto max-w-7xl px-6'>
+          <div className='text-center mb-16'>
+            <h2 className='text-4xl font-bold text-gray-90o0 mb-4'>
               Comprehensive Technology Solutions
             </h2>
-            <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
-              We provide end-to-end technology solutions that help businesses innovate, scale, and succeed in the digital age.
+            <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>
+              We provide end-to-end technology solutions that help businesses
+              innovate, scale, and succeed in the digital age.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-20o0 group"
+                className='bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-20o0 group'
               >
-                <div className="h-12 w-12 bg-blue-10o0 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-20o0 transition-colors">
-                  <feature.icon className="h-6 w-6 text-blue-60o0"  />
+                <div className='h-12 w-12 bg-blue-10o0 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-20o0 transition-colors'>
+                  <feature.icon className='h-6 w-6 text-blue-60o0' />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-90o0 mb-2">{feature.title}</h3>
-                <p className="text-gray-60o0 mb-4">{feature.description}</p>
-                <Link 
+                <h3 className='text-xl font-semibold text-gray-90o0 mb-2'>
+                  {feature.title}
+                </h3>
+                <p className='text-gray-60o0 mb-4'>{feature.description}</p>
+                <Link
                   href={feature.href}
-                  className="text-blue-60o0 font-medium hover:text-blue-70o0 transition-colors inline-flex items-center space-x-1"
+                  className='text-blue-60o0 font-medium hover:text-blue-70o0 transition-colors inline-flex items-center space-x-1'
                 >
                   <span>Learn more</span>
-                  <ArrowRight className="h-4 w-4"  />
+                  <ArrowRight className='h-4 w-4' />
                 </Link>
               </motion.div>
             ))}
@@ -149,22 +156,25 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-blue-60o0 text-white">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
-          <p className="text-xl text-blue-10o0 mb-8">
-            Let's discuss how our technology solutions can accelerate your roadmap and drive innovation.
+      <section className='py-16 bg-blue-60o0 text-white'>
+        <div className='mx-auto max-w-4xl px-6 text-center'>
+          <h2 className='text-4xl font-bold mb-4'>
+            Ready to Transform Your Business?
+          </h2>
+          <p className='text-xl text-blue-10o0 mb-8'>
+            Let's discuss how our technology solutions can accelerate your
+            roadmap and drive innovation.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link 
-              href="/contact" 
-              className="bg-white text-blue-60o0 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-10o0 transition-all duration-20o0"
+          <div className='flex flex-wrap justify-center gap-4'>
+            <Link
+              href='/contact'
+              className='bg-white text-blue-60o0 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-10o0 transition-all duration-20o0'
             >
               Get Started Today
             </Link>
-            <Link 
-              href="/services" 
-              className="border-2 border-white/20 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-20o0"
+            <Link
+              href='/services'
+              className='border-2 border-white/20 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-20o0'
             >
               View All Services
             </Link>
@@ -174,4 +184,3 @@ export default function Home() {
     </ModernLayout>
   );
 }
-

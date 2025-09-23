@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD:app-disabled/tools/tools/quantum-ai-readiness-assessment-2026/page.tsx
 // Metadata moved to parent component
 interface AssessmentResults {
   overallScore: number;
@@ -645,7 +644,6 @@ export default function QuantumAIReadinessAssessment() {
       </div>
     </div>
   );
-=======
 
 export default function Page() {
 	return (
@@ -654,5 +652,4 @@ export default function Page() {
 			<p className="mt-4 text-gray-600">Temporarily simplified while we resolve merge conflicts.</p>
 		</div>
 	);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1:app/tools/quantum-ai-readiness-assessment-2026/page.tsx
 }

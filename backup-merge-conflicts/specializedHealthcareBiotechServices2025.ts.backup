@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 import { ProductListing } from "@/types/listings"; ;"","});"})"""""""@/types/listings";&apos,"
 ""
 import { ProductListing } from "@/types/listings"; ;;,"});"})"""@/types/listings";&apos,"
-=======
 import { ProductListing } from "@/types/listings"; ;;,"});"})"""@/types/listings";&apos,"
 ";";"
 const { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"""""";";"""
@@ -16,6 +14,5 @@ const { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listin
 import { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"",
 """;,
 ";";"
->>>>>>> main
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11914:backup-merge-conflicts/specializedHealthcareBiotechServices2025.ts.backup

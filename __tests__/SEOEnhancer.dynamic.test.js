@@ -4,19 +4,19 @@ import SEOEnhancer from '../components/SEOEnhancer';
 
 describe('SEOEnhancer', () => {
   test('renders without crashing', () => {
-    render(<SEOEnhancer  />);
+    render(<SEOEnhancer />);
     expect(screen.getByTestId('seoenhancer')).toBeInTheDocument();
   });
-  
+
   test('displays correct content', () => {
-    render(<SEOEnhancer  />);
+    render(<SEOEnhancer />);
   });
-  
+
   test('handles user interactions', () => {
-    render(<SEOEnhancer  />);
+    render(<SEOEnhancer />);
   });
-  
+
   test('applies correct styling', () => {
-    render(<SEOEnhancer  />);
+    render(<SEOEnhancer />);
   });
 });

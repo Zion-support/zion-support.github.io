@@ -14,7 +14,13 @@ const uniqueImports = [...new Set(imports)];
 const lines = content.split('\n');
 let importEndIndex = 0;
 for (let i = 0; i < lines.length; i++) {
-  if (lines[i].trim() && !lines[i].trim().startsWith('import') && !lines[i].trim().startsWith('//') && !lines[i].trim().startsWith('const') && !lines[i].trim().startsWith('lazy')) {
+  if (
+    lines[i].trim() &&
+    !lines[i].trim().startsWith('import') &&
+    !lines[i].trim().startsWith('//') &&
+    !lines[i].trim().startsWith('const') &&
+    !lines[i].trim().startsWith('lazy')
+  ) {
     importEndIndex = i;
     break;
   }
@@ -32,7 +38,7 @@ const essentialImports = [
   "import SEOOptimizer from '../components/SEOOptimizer';",
   "import { LazyStructuredData } from '../components/LazyComponent';",
   "import AnalyticsMonitor from '../components/AnalyticsMonitor';",
-  "import { ArrowRight, Brain, Zap, Target } from 'lucide-react';"
+  "import { ArrowRight, Brain, Zap, Target } from 'lucide-react';",
 ];
 
 // Rebuild the file
@@ -68,7 +74,7 @@ const newContent = [
   "import AI20o25RevolutionaryContentShowcaseBanner from '../components/AI20o25RevolutionaryContentShowcaseBanner';",
   "import StructuredData20o25 from '../components/StructuredData20o25';",
   '',
-  ...afterImports
+  ...afterImports,
 ].join('\n');
 
 // Write the cleaned file

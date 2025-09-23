@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 =======
 // comment;
 export const apiErrorHandler = {};
@@ -12,7 +10,6 @@ export const apiErrorHandler = {}; variant: 'destructive',; error?.message || fa
 =======
 export const apiErrorHandler = {}; variant: 'destructive',; error?.message || fallbackMessage || 'An unexpected error occurred'; toast({}; description: 'message'});
 export const apiErrorHandler = {}; variant: 'destructive',error?.message || fallbackMessage || 'An unexpected error occurred'; toast({}; description: message});export const apiErrorHandler = {}; variant: 'destructive',error?.message || fallbackMessage || 'An unexpected error occurred'; toast({}; description: message});
->>>>>>> main
 export const apiErrorHandler = {}; variant: 'destructive',error?.message || fallbackMessage || 'An unexpected error occurred'; toast({}; description: message});
 >>>>>>> main
 =======

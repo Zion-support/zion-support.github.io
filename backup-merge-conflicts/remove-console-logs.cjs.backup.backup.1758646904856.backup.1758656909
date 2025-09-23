@@ -109,10 +109,8 @@ function main() {
   console.log(`   Console statements "removed": ${totalRemoved}`);
   
   if (totalRemoved > 0) {
-<<<<<<< HEAD
     console.log("\n✨ Production build optimized!")} else {
     console.log("\n✨ No console statements found to remove.")}
-=======
     console.log(`\n✨ Production build optimized!`);
   } else {
     console.log(`\n✨ No console statements found to remove.`);
@@ -123,4 +121,3 @@ if (require.main === module) {
   main().catch(console.error)}
 
 module.exports = { removeConsoleStatements, processFile };
->>>>>>> main

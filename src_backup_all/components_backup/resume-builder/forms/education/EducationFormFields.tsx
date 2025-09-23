@@ -1,9 +1,8 @@
-
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { format } from 'date-fns';
-import { Loader2 } from 'lucide-react'
+import { Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
@@ -15,7 +14,8 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from '@/components/ui/form';
+  FormMessage,
+} from '@/components/ui/form';
 import { useState } from 'react';
 import { EducationFormFieldsProps } from './types';
 import { Education } from '@/types/resume';
@@ -29,14 +29,15 @@ const educationSchema = z.object({
   end_date: z.string().optional(),
   is_current: z.boolean().default(false),
   description: z.string().optional(),
-  location: z.string().optional()});
+  location: z.string().optional(),
+});
 
 type EducationFormValues = z.infer<typeof educationSchema>;
 
-export function EducationFormFields({ 
-  isEditing, 
-  onSubmit, 
-  onCancel 
+export function EducationFormFields({
+  isEditing,
+  onSubmit,
+  onCancel,
 }: EducationFormFieldsProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -50,7 +51,9 @@ export function EducationFormFields({
       start_date: format(new Date(), 'yyyy-MM-dd'),
       is_current: false,
       description: '',
-      location: ''}});
+      location: '',
+    },
+  });
 
   const handleSubmit = async (data: EducationFormValues) => {
     setIsLoading(true);
@@ -66,32 +69,38 @@ export function EducationFormFields({
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <form onSubmit={form.handleSubmit(handleSubmit)} className='space-y-4'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <FormField
             control={form.control}
-            name="institution"
+            name='institution'
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel>Institution</FormLabel>
                 <FormControl>
-                  <Input placeholder="University of California, MIT, etc." {...field}  />
+                  <Input
+                    placeholder='University of California, MIT, etc.'
+                    {...field}
+                  />
                 </FormControl>
-                <FormMessage  />
+                <FormMessage />
               </FormItem>
             )}
           />
 
           <FormField
             control={form.control}
-            name="degree"
+            name='degree'
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel>Degree</FormLabel>
                 <FormControl>
-                  <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field}  />
+                  <Input
+                    placeholder="Bachelor's, Master's, Ph.D, etc."
+                    {...field}
+                  />
                 </FormControl>
-                <FormMessage  />
+                <FormMessage />
               </FormItem>
             )}
           />
@@ -99,50 +108,49 @@ export function EducationFormFields({
 
         <FormField
           control={form.control}
-          name="field_of_study"
+          name='field_of_study'
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Field of Study</FormLabel>
               <FormControl>
-                <Input placeholder="Computer Science, Engineering, etc." {...field}  />
+                <Input
+                  placeholder='Computer Science, Engineering, etc.'
+                  {...field}
+                />
               </FormControl>
-              <FormMessage  />
+              <FormMessage />
             </FormItem>
           )}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <FormField
             control={form.control}
-            name="start_date"
+            name='start_date'
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel>Start Date</FormLabel>
                 <FormControl>
-                  <Input 
-                    type="date" 
-                    {...field}
-                    value={field.value || ''} 
-                   />
+                  <Input type='date' {...field} value={field.value || ''} />
                 </FormControl>
-                <FormMessage  />
+                <FormMessage />
               </FormItem>
             )}
           />
 
-          <div className="space-y-4">
+          <div className='space-y-4'>
             <FormField
               control={form.control}
-              name="is_current"
+              name='is_current'
               render={({ field }: { field: any }) => (
-                <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
+                <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>
                   <FormControl>
                     <Checkbox
                       checked={field.value}
                       onCheckedChange={field.onChange}
-                     />
+                    />
                   </FormControl>
-                  <div className="space-y-1 leading-none">
+                  <div className='space-y-1 leading-none'>
                     <FormLabel>I am currently studying here</FormLabel>
                   </div>
                 </FormItem>
@@ -152,18 +160,14 @@ export function EducationFormFields({
             {!form.watch('is_current') && (
               <FormField
                 control={form.control}
-                name="end_date"
+                name='end_date'
                 render={({ field }: { field: any }) => (
                   <FormItem>
                     <FormLabel>End Date</FormLabel>
                     <FormControl>
-                      <Input 
-                        type="date" 
-                        {...field} 
-                        value={field.value || ''} 
-                       />
+                      <Input type='date' {...field} value={field.value || ''} />
                     </FormControl>
-                    <FormMessage  />
+                    <FormMessage />
                   </FormItem>
                 )}
               />
@@ -173,49 +177,49 @@ export function EducationFormFields({
 
         <FormField
           control={form.control}
-          name="location"
+          name='location'
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Location (Optional)</FormLabel>
               <FormControl>
-                <Input placeholder="Cambridge, MA" {...field}  />
+                <Input placeholder='Cambridge, MA' {...field} />
               </FormControl>
-              <FormMessage  />
+              <FormMessage />
             </FormItem>
           )}
         />
 
         <FormField
           control={form.control}
-          name="description"
+          name='description'
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Description (Optional)</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Notable achievements, courses, activities..."
-                  className="min-h-[10o0px]"
+                  placeholder='Notable achievements, courses, activities...'
+                  className='min-h-[10o0px]'
                   {...field}
-                 />
+                />
               </FormControl>
-              <FormMessage  />
+              <FormMessage />
             </FormItem>
           )}
         />
 
-        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+        {error && (
+          <Alert variant='destructive'>
+            <AlertDescription>{error}</AlertDescription>
+          </Alert>
+        )}
 
-        <div className="flex justify-between pt-2">
-          <Button
-            type="button"
-            variant="outline"
-            onClick={onCancel}
-          >
+        <div className='flex justify-between pt-2'>
+          <Button type='button' variant='outline' onClick={onCancel}>
             {isEditing ? 'Cancel' : 'Back'}
           </Button>
 
-          <Button type="submit" disabled={isLoading}>
-            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin"  />}
+          <Button type='submit' disabled={isLoading}>
+            {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
             {isEditing ? 'Update' : 'Add'} Education
           </Button>
         </div>

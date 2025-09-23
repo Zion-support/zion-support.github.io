@@ -32,7 +32,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     'space technology',
     'cybersecurity',
     'business intelligence',
-    'cloud infrastructure'
+    'cloud infrastructure',
   ],
   image = '/og-image.jpg',
   url = 'https://ziontechgroup.com',
@@ -45,49 +45,50 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   structuredData,
   canonicalUrl,
   noIndex = false,
-  noFollow = false
+  noFollow = false,
 }) => {
   // Default structured data if none provided
-  const defaultStructuredData ={
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "description": description,
-    "foundingDate": "20o24",
-    "sameAs": [
-      "https://linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup",
-      "https://github.com/Zion-Holdings"
+  const defaultStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/logo.png',
+    description: description,
+    foundingDate: '20o24',
+    sameAs: [
+      'https://linkedin.com/company/zion-tech-group',
+      'https://twitter.com/ziontechgroup',
+      'https://github.com/Zion-Holdings',
     ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "customer service",
-      "availableLanguage": "English"
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer service',
+      availableLanguage: 'English',
     },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Technology Services",
-      "itemListElement": [
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Technology Services',
+      itemListElement: [
         {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "AI Consciousness Evolution 20o44",
-            "description": "Next-generation AI consciousness with emotional intelligence"
-          }
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'AI Consciousness Evolution 20o44',
+            description:
+              'Next-generation AI consciousness with emotional intelligence',
+          },
         },
         {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Quantum Neural Networks 20o44",
-            "description": "Quantum-powered AI with consciousness integration"
-          }
-        }
-      ]
-    }
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Quantum Neural Networks 20o44',
+            description: 'Quantum-powered AI with consciousness integration',
+          },
+        },
+      ],
+    },
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;
@@ -140,7 +141,9 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     }
 
     // Add structured data to document
-    let structuredDataScript = document.querySelector('script[type="application/ld+json"]');
+    let structuredDataScript = document.querySelector(
+      'script[type="application/ld+json"]'
+    );
     if (!structuredDataScript) {
       structuredDataScript = document.createElement('script');
       structuredDataScript.setAttribute('type', 'application/ld+json');
@@ -156,7 +159,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       { property: 'og:url', content: url },
       { property: 'og:image', content: image },
       { property: 'og:site_name', content: 'Zion Tech Group' },
-      { property: 'og:locale', content: 'en_US' }
+      { property: 'og:locale', content: 'en_US' },
     ];
 
     ogTags.forEach(({ property, content }) => {
@@ -175,7 +178,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       { name: 'twitter:title', content: title },
       { name: 'twitter:description', content: description },
       { name: 'twitter:image', content: image },
-      { name: 'twitter:site', content: '@ziontechgroup' }
+      { name: 'twitter:site', content: '@ziontechgroup' },
     ];
 
     twitterTags.forEach(({ name, content }) => {
@@ -192,11 +195,14 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     if (type === 'article' && publishedTime) {
       const articleTags = [
         { property: 'article:published_time', content: publishedTime },
-        { property: 'article:author', content: author }
+        { property: 'article:author', content: author },
       ];
 
       if (modifiedTime) {
-        articleTags.push({ property: 'article:modified_time', content: modifiedTime });
+        articleTags.push({
+          property: 'article:modified_time',
+          content: modifiedTime,
+        });
       }
 
       if (section) {
@@ -217,92 +223,139 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         articleTag.setAttribute('content', content);
       });
     }
-
-  }, [title, description, keywordsString, canonicalUrl, finalStructuredData, type, url, image, publishedTime, author, modifiedTime, section, allTags]);
+  }, [
+    title,
+    description,
+    keywordsString,
+    canonicalUrl,
+    finalStructuredData,
+    type,
+    url,
+    image,
+    publishedTime,
+    author,
+    modifiedTime,
+    section,
+    allTags,
+  ]);
 
   return (
     <Head>
       {/* Basic Meta Tags */}
       <title>{title}</title>
-      <meta name="description" content={description}  />
-      <meta name="keywords" content={keywordsString}  />
-      <meta name="author" content={author}  />
-      <meta name="robots" content={robotsContent.join(', ')}  />
-      
+      <meta name='description' content={description} />
+      <meta name='keywords' content={keywordsString} />
+      <meta name='author' content={author} />
+      <meta name='robots' content={robotsContent.join(', ')} />
+
       {/* Viewport and Mobile Optimization */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"  />
-      <meta name="mobile-web-app-capable" content="yes"  />
-      <meta name="apple-mobile-web-app-capable" content="yes"  />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"  />
-      
+      <meta
+        name='viewport'
+        content='width=device-width, initial-scale=1.0, maximum-scale=5.0'
+      />
+      <meta name='mobile-web-app-capable' content='yes' />
+      <meta name='apple-mobile-web-app-capable' content='yes' />
+      <meta
+        name='apple-mobile-web-app-status-bar-style'
+        content='black-translucent'
+      />
+
       {/* Theme and Color */}
-      <meta name="theme-color" content="#0o00000"  />
-      <meta name="msapplication-TileColor" content="#0o00000"  />
-      
+      <meta name='theme-color' content='#0o00000' />
+      <meta name='msapplication-TileColor' content='#0o00000' />
+
       {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl}  />}
-      
+      {canonicalUrl && <link rel='canonical' href={canonicalUrl} />}
+
       {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com"  />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"  />
-      <link rel="preconnect" href="https://cdn.jsdelivr.net"  />
-      
+      <link rel='preconnect' href='https://fonts.googleapis.com' />
+      <link
+        rel='preconnect'
+        href='https://fonts.gstatic.com'
+        crossOrigin='anonymous'
+      />
+      <link rel='preconnect' href='https://cdn.jsdelivr.net' />
+
       {/* DNS Prefetch for performance */}
-      <link rel="dns-prefetch" href="//www.google-analytics.com"  />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com"  />
-      
+      <link rel='dns-prefetch' href='//www.google-analytics.com' />
+      <link rel='dns-prefetch' href='//www.googletagmanager.com' />
+
       {/* Structured Data */}
       <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(finalStructuredData) }}
-       />
-      
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(finalStructuredData),
+        }}
+      />
+
       {/* Additional SEO Meta Tags */}
-      <meta name="application-name" content="Zion Tech Group"  />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group"  />
-      <meta name="msapplication-config" content="/browserconfig.xml"  />
-      
+      <meta name='application-name' content='Zion Tech Group' />
+      <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />
+      <meta name='msapplication-config' content='/browserconfig.xml' />
+
       {/* Security Headers */}
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge"  />
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff"  />
-      <meta httpEquiv="X-Frame-Options" content="DENY"  />
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block"  />
-      
+      <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
+      <meta httpEquiv='X-Content-Type-Options' content='nosniff' />
+      <meta httpEquiv='X-Frame-Options' content='DENY' />
+      <meta httpEquiv='X-XSS-Protection' content='1; mode=block' />
+
       {/* Performance Hints */}
-      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous"  />
-      
+      <link
+        rel='preload'
+        href='/fonts/inter-var.woff2'
+        as='font'
+        type='font/woff2'
+        crossOrigin='anonymous'
+      />
+
       {/* Favicon and App Icons */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico"  />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"  />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"  />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"  />
-      <link rel="manifest" href="/site.webmanifest"  />
-      
+      <link rel='icon' type='image/x-icon' href='/favicon.ico' />
+      <link
+        rel='icon'
+        type='image/png'
+        sizes='32x32'
+        href='/favicon-32x32.png'
+      />
+      <link
+        rel='icon'
+        type='image/png'
+        sizes='16x16'
+        href='/favicon-16x16.png'
+      />
+      <link
+        rel='apple-touch-icon'
+        sizes='180x180'
+        href='/apple-touch-icon.png'
+      />
+      <link rel='manifest' href='/site.webmanifest' />
+
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={title}  />
-      <meta property="og:description" content={description}  />
-      <meta property="og:type" content={type}  />
-      <meta property="og:url" content={url}  />
-      <meta property="og:image" content={image}  />
-      <meta property="og:site_name" content="Zion Tech Group"  />
-      <meta property="og:locale" content="en_US"  />
-      
+      <meta property='og:title' content={title} />
+      <meta property='og:description' content={description} />
+      <meta property='og:type' content={type} />
+      <meta property='og:url' content={url} />
+      <meta property='og:image' content={image} />
+      <meta property='og:site_name' content='Zion Tech Group' />
+      <meta property='og:locale' content='en_US' />
+
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image"  />
-      <meta name="twitter:title" content={title}  />
-      <meta name="twitter:description" content={description}  />
-      <meta name="twitter:image" content={image}  />
-      <meta name="twitter:site" content="@ziontechgroup"  />
-      
+      <meta name='twitter:card' content='summary_large_image' />
+      <meta name='twitter:title' content={title} />
+      <meta name='twitter:description' content={description} />
+      <meta name='twitter:image' content={image} />
+      <meta name='twitter:site' content='@ziontechgroup' />
+
       {/* Article-specific meta tags */}
       {type === 'article' && publishedTime && (
         <>
-          <meta property="article:published_time" content={publishedTime}  />
-          <meta property="article:author" content={author}  />
-          {modifiedTime && <meta property="article:modified_time" content={modifiedTime}  />}
-          {section && <meta property="article:section" content={section}  />}
+          <meta property='article:published_time' content={publishedTime} />
+          <meta property='article:author' content={author} />
+          {modifiedTime && (
+            <meta property='article:modified_time' content={modifiedTime} />
+          )}
+          {section && <meta property='article:section' content={section} />}
           {allTags.map((tag, index) => (
-            <meta key={index} property="article:tag" content={tag}  />
+            <meta key={index} property='article:tag' content={tag} />
           ))}
         </>
       )}

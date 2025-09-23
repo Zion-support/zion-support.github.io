@@ -3,41 +3,67 @@ import SEO from '../../components/SEO';
 
 const AgenticRiskAndSafetyPlaybook20o26 = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className='min-h-screen bg-white'>
       <SEO
-        title="AI 20o26: Agentic Risk and Safety Playbook"
-        description="Safeguards, monitoring, and governance patterns for production agent systems."
-        keywords="AI agent safety, risk management, governance, evaluations, 20o26"
-        url="/blog/ai-20o26-agentic-risk-and-safety-playbook"
-       />
+        title='AI 20o26: Agentic Risk and Safety Playbook'
+        description='Safeguards, monitoring, and governance patterns for production agent systems.'
+        keywords='AI agent safety, risk management, governance, evaluations, 20o26'
+        url='/blog/ai-20o26-agentic-risk-and-safety-playbook'
+      />
 
-      <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <header className="mb-10">
-          <p className="text-sm text-gray-50o0">Published: 20o25-09-15 · Category: Safety</p>
-          <h1 className="text-4xl font-bold text-gray-90o0 mt-2">AI 20o26: Agentic Risk and Safety Playbook</h1>
-          <p className="text-lg text-gray-60o0 mt-4">Safeguards, monitoring, and governance patterns for production agent systems.</p>
+      <article className='max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+        <header className='mb-10'>
+          <p className='text-sm text-gray-50o0'>
+            Published: 20o25-09-15 · Category: Safety
+          </p>
+          <h1 className='text-4xl font-bold text-gray-90o0 mt-2'>
+            AI 20o26: Agentic Risk and Safety Playbook
+          </h1>
+          <p className='text-lg text-gray-60o0 mt-4'>
+            Safeguards, monitoring, and governance patterns for production agent
+            systems.
+          </p>
         </header>
 
-        <div className="prose prose-lg max-w-none">
+        <div className='prose prose-lg max-w-none'>
           <h2>Overview</h2>
-          <p>Enterprise agent systems require layered defenses across design-time, pre-deployment, and runtime. This playbook provides a practical approach to ship safer agents without slowing teams down.</p>
+          <p>
+            Enterprise agent systems require layered defenses across
+            design-time, pre-deployment, and runtime. This playbook provides a
+            practical approach to ship safer agents without slowing teams down.
+          </p>
 
           <h2>Key Controls</h2>
           <ul>
             <li>Threat modeling for agent behaviors and tool usage</li>
             <li>Policy-as-code guardrails for high-impact actions</li>
             <li>Safety evaluation suites integrated in CI/CD</li>
-            <li>Runtime protections: rate limits, isolation domains, approvals</li>
+            <li>
+              Runtime protections: rate limits, isolation domains, approvals
+            </li>
             <li>Post-incident analysis with structured remediation plans</li>
           </ul>
 
           <h2>Getting Started</h2>
-          <p>Establish risk tiers, define a minimal set of mandatory controls per tier, and automate enforcement in your delivery pipelines.</p>
+          <p>
+            Establish risk tiers, define a minimal set of mandatory controls per
+            tier, and automate enforcement in your delivery pipelines.
+          </p>
         </div>
 
-        <footer className="mt-12 flex items-center justify-between">
-          <Link href="/blog" className="text-purple-60o0 font-semibold hover:text-purple-80o0">← Back to Blog</Link>
-          <Link href="/contact" className="text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0">Request a Safety Review</Link>
+        <footer className='mt-12 flex items-center justify-between'>
+          <Link
+            href='/blog'
+            className='text-purple-60o0 font-semibold hover:text-purple-80o0'
+          >
+            ← Back to Blog
+          </Link>
+          <Link
+            href='/contact'
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'
+          >
+            Request a Safety Review
+          </Link>
         </footer>
       </article>
     </div>
@@ -45,4 +71,3 @@ const AgenticRiskAndSafetyPlaybook20o26 = () => {
 };
 
 export default AgenticRiskAndSafetyPlaybook20o26;
-

@@ -1,10 +1,7 @@
-<<<<<<< HEAD:components.disabled/MainLayout.dynamic.jsx
 const MainLayout = dynamic(() => import(\"./MainLayout\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default MainLayout\' ,
-=======
 =======
 const MainLayout = dynamic(() => import("./MainLayout"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default MainLayout' ,'
 </p>'
->>>>>>> main
 >>>>>>> main
 </p>'
 =======

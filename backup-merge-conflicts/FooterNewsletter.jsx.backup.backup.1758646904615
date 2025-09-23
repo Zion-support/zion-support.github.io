@@ -1,12 +1,9 @@
 =======
 "export: function FooterNewsletter () {" const [email,setEmail] = useState (") " const [isSubscribed,setIsSubscribed] = useState (false) " const handleSubmit = e => { e.preventDefault () "";"";"""
-<<<<<<< HEAD:backup-merge-conflicts/FooterNewsletter.jsx.backup
+'"export": function FooterNewsletter () {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = e => { e.preventDefault () '';"";""}
 '"export": function FooterNewsletter () {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = e => { e.preventDefault () '';"";""}
 =======
 '"export": function FooterNewsletter () {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = e => { e.preventDefault () '';"";""}
-=======
-'"export": function FooterNewsletter () {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = e => { e.preventDefault () '';"";""}
->>>>>>> pr-11935
 =======
 =======
 '"export": function FooterNewsletter () {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = e => { e.preventDefault () '';"";""}

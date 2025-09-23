@@ -6,29 +6,37 @@ interface WishlistState {
   itemCount: number;
 }
 
-const initialState: WishlistState ={
+const initialState: WishlistState = {
   items: [],
-  itemCount: 0};
+  itemCount: 0,
+};
 
 const wishlistSlice = createSlice({
   name: 'wishlist',
   initialState,
   reducers: {
     addToWishlist: (state, action: PayloadAction<WishlistItem>) => {
-      const existingItem = state.items.find(item => item.listingId === action.payload.listingId);
+      const existingItem = state.items.find(
+        item => item.listingId === action.payload.listingId
+      );
       if (!existingItem) {
         state.items.push(action.payload);
         state.itemCount = state.items.length;
       }
     },
     removeFromWishlist: (state, action: PayloadAction<string>) => {
-      state.items = state.items.filter(item => item.listingId !== action.payload);
+      state.items = state.items.filter(
+        item => item.listingId !== action.payload
+      );
       state.itemCount = state.items.length;
     },
-    clearWishlist: (state) => {
+    clearWishlist: state => {
       state.items = [];
       state.itemCount = 0;
-    }}});
+    },
+  },
+});
 
-export const { addToWishlist, removeFromWishlist, clearWishlist } = wishlistSlice.actions;
+export const { addToWishlist, removeFromWishlist, clearWishlist } =
+  wishlistSlice.actions;
 export default wishlistSlice.reducer;

@@ -47,7 +47,8 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     tagline: 'Fully autonomous DevOps operations',
     price: '$8,999',
     period: '/month',
-    description: 'Revolutionary 2030 platform for fully autonomous DevOps operations, enabling self-optimizing, self-healing, and self-improving development and operations.',
+    description:
+      'Revolutionary 2030 platform for fully autonomous DevOps operations, enabling self-optimizing, self-healing, and self-improving development and operations.',
     features: [
       'Autonomous CI/CD',
       'Self-optimizing deployments',
@@ -58,22 +59,30 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
       'Self-optimizing performance',
       'Autonomous scaling',
       'Self-healing systems',
-      'Autonomous innovation'
+      'Autonomous innovation',
     ],
     popular: true,
     icon: '🚀',
     color: 'from-blue-600 via-cyan-600 to-teal-600',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/autonomous-devops-platform-2030',
-    marketPosition: 'Most advanced autonomous DevOps platform for 2030. Revolutionary DevOps technology.',
-    targetAudience: 'Large enterprises, Tech companies, DevOps teams, Cloud companies, IT departments',
+    marketPosition:
+      'Most advanced autonomous DevOps platform for 2030. Revolutionary DevOps technology.',
+    targetAudience:
+      'Large enterprises, Tech companies, DevOps teams, Cloud companies, IT departments',
     trialDays: 60,
     setupTime: '2-4 weeks',
     category: 'Autonomous DevOps Platform 2030',
     realService: true,
-    technology: ['Advanced AI, DevOps Automation, Machine Learning, Infrastructure as Code'],
-    integrations: ['Cloud platforms, CI/CD tools, Monitoring systems, Security tools'],
-    useCases: ['DevOps automation, Infrastructure automation, Deployment optimization, Performance optimization'],
+    technology: [
+      'Advanced AI, DevOps Automation, Machine Learning, Infrastructure as Code',
+    ],
+    integrations: [
+      'Cloud platforms, CI/CD tools, Monitoring systems, Security tools',
+    ],
+    useCases: [
+      'DevOps automation, Infrastructure automation, Deployment optimization, Performance optimization',
+    ],
     roi: 'Revolutionary DevOps technology with potential for massive efficiency gains and operational excellence.',
     competitors: ['Limited competition in autonomous DevOps'],
     marketSize: 'Growing market - $250B+ potential',
@@ -83,14 +92,15 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Advanced autonomous DevOps platform with self-optimizing, self-healing, and self-improving operations.',
+    implementationDetails:
+      'Advanced autonomous DevOps platform with self-optimizing, self-healing, and self-improving operations.',
     launchDate: '2030-01-01',
     customers: 23,
     rating: 4.9,
-    reviews: 15
+    reviews: 15,
   },
   // Zero Trust Network Architecture 2030
   {
@@ -99,7 +109,8 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     tagline: 'Never trust, always verify',
     price: '$6,999',
     period: '/month',
-    description: 'Revolutionary 2030 platform for zero trust network architecture, providing comprehensive security with continuous verification and authentication.',
+    description:
+      'Revolutionary 2030 platform for zero trust network architecture, providing comprehensive security with continuous verification and authentication.',
     features: [
       'Continuous verification',
       'Identity-based access',
@@ -110,22 +121,30 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
       'Zero trust APIs',
       'Security automation',
       'Threat intelligence',
-      'Advanced security protocols'
+      'Advanced security protocols',
     ],
     popular: true,
     icon: '🔒',
     color: 'from-indigo-600 via-blue-600 to-cyan-600',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/zero-trust-network-architecture-2030',
-    marketPosition: 'Most advanced zero trust network architecture platform for 2030. Revolutionary security technology.',
-    targetAudience: 'Government agencies, Financial institutions, Healthcare companies, Tech companies, Security firms',
+    marketPosition:
+      'Most advanced zero trust network architecture platform for 2030. Revolutionary security technology.',
+    targetAudience:
+      'Government agencies, Financial institutions, Healthcare companies, Tech companies, Security firms',
     trialDays: 45,
     setupTime: '3-6 weeks',
     category: 'Zero Trust Network Architecture 2030',
     realService: true,
-    technology: ['Zero Trust Security, Network Security, Identity Management, Threat Detection'],
-    integrations: ['Security platforms, Identity systems, Network tools, Monitoring systems'],
-    useCases: ['Network security, Identity verification, Threat detection, Security automation'],
+    technology: [
+      'Zero Trust Security, Network Security, Identity Management, Threat Detection',
+    ],
+    integrations: [
+      'Security platforms, Identity systems, Network tools, Monitoring systems',
+    ],
+    useCases: [
+      'Network security, Identity verification, Threat detection, Security automation',
+    ],
     roi: 'Revolutionary security technology with potential for complete network protection.',
     competitors: ['Limited competition in zero trust security'],
     marketSize: 'Growing market - $180B+ potential',
@@ -135,14 +154,15 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Advanced zero trust network architecture platform with continuous verification and comprehensive security.',
+    implementationDetails:
+      'Advanced zero trust network architecture platform with continuous verification and comprehensive security.',
     launchDate: '2030-01-15',
     customers: 18,
     rating: 5.0,
-    reviews: 12
+    reviews: 12,
   },
   // Edge Computing Orchestration 2030
   {
@@ -151,7 +171,8 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     tagline: 'Distributed edge computing intelligence',
     price: '$5,999',
     period: '/month',
-    description: 'Revolutionary 2030 platform for edge computing orchestration, enabling intelligent distributed computing and real-time processing at the edge.',
+    description:
+      'Revolutionary 2030 platform for edge computing orchestration, enabling intelligent distributed computing and real-time processing at the edge.',
     features: [
       'Edge intelligence',
       'Distributed computing',
@@ -162,22 +183,30 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
       'Edge automation',
       'Edge scaling',
       'Edge networking',
-      'Advanced edge computing'
+      'Advanced edge computing',
     ],
     popular: true,
     icon: '🌐',
     color: 'from-teal-600 via-emerald-600 to-green-600',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/edge-computing-orchestration-2030',
-    marketPosition: 'Most advanced edge computing orchestration platform for 2030. Revolutionary edge technology.',
-    targetAudience: 'IoT companies, Edge computing companies, Cloud companies, Tech companies, Manufacturing companies',
+    marketPosition:
+      'Most advanced edge computing orchestration platform for 2030. Revolutionary edge technology.',
+    targetAudience:
+      'IoT companies, Edge computing companies, Cloud companies, Tech companies, Manufacturing companies',
     trialDays: 30,
     setupTime: '2-4 weeks',
     category: 'Edge Computing Orchestration 2030',
     realService: true,
-    technology: ['Edge Computing, Distributed Systems, IoT, Real-time Processing'],
-    integrations: ['IoT platforms, Edge devices, Cloud systems, Monitoring tools'],
-    useCases: ['Edge computing, IoT processing, Real-time analytics, Distributed computing'],
+    technology: [
+      'Edge Computing, Distributed Systems, IoT, Real-time Processing',
+    ],
+    integrations: [
+      'IoT platforms, Edge devices, Cloud systems, Monitoring tools',
+    ],
+    useCases: [
+      'Edge computing, IoT processing, Real-time analytics, Distributed computing',
+    ],
     roi: 'Revolutionary edge computing technology with potential for massive performance improvements.',
     competitors: ['Limited competition in edge orchestration'],
     marketSize: 'Growing market - $150B+ potential',
@@ -187,14 +216,15 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Advanced edge computing orchestration platform with intelligent distributed computing and real-time processing.',
+    implementationDetails:
+      'Advanced edge computing orchestration platform with intelligent distributed computing and real-time processing.',
     launchDate: '2030-02-01',
     customers: 31,
     rating: 4.8,
-    reviews: 20
+    reviews: 20,
   },
   // AI-Powered IT Operations Center 2030
   {
@@ -203,7 +233,8 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     tagline: 'Intelligent IT operations',
     price: '$7,999',
     period: '/month',
-    description: 'Revolutionary 2030 platform for AI-powered IT operations, enabling intelligent monitoring, automation, and optimization of IT infrastructure.',
+    description:
+      'Revolutionary 2030 platform for AI-powered IT operations, enabling intelligent monitoring, automation, and optimization of IT infrastructure.',
     features: [
       'AI-powered monitoring',
       'Intelligent automation',
@@ -214,22 +245,30 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
       'AI operations APIs',
       'Real-time intelligence',
       'Autonomous decision making',
-      'Advanced IT intelligence'
+      'Advanced IT intelligence',
     ],
     popular: true,
     icon: '🤖',
     color: 'from-purple-600 via-pink-600 to-rose-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-it-operations-center-2030',
-    marketPosition: 'Most advanced AI-powered IT operations platform for 2030. Revolutionary IT technology.',
-    targetAudience: 'Large enterprises, Tech companies, IT departments, Cloud companies, Managed service providers',
+    marketPosition:
+      'Most advanced AI-powered IT operations platform for 2030. Revolutionary IT technology.',
+    targetAudience:
+      'Large enterprises, Tech companies, IT departments, Cloud companies, Managed service providers',
     trialDays: 45,
     setupTime: '3-6 weeks',
     category: 'AI-Powered IT Operations Center 2030',
     realService: true,
-    technology: ['Advanced AI, IT Operations, Machine Learning, Predictive Analytics'],
-    integrations: ['IT platforms, Monitoring systems, Automation tools, Analytics platforms'],
-    useCases: ['IT operations, Infrastructure monitoring, Predictive maintenance, Operations optimization'],
+    technology: [
+      'Advanced AI, IT Operations, Machine Learning, Predictive Analytics',
+    ],
+    integrations: [
+      'IT platforms, Monitoring systems, Automation tools, Analytics platforms',
+    ],
+    useCases: [
+      'IT operations, Infrastructure monitoring, Predictive maintenance, Operations optimization',
+    ],
     roi: 'Revolutionary IT technology with potential for massive efficiency gains and operational excellence.',
     competitors: ['Limited competition in AI IT operations'],
     marketSize: 'Growing market - $200B+ potential',
@@ -239,14 +278,15 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Advanced AI-powered IT operations platform with intelligent monitoring, automation, and optimization.',
+    implementationDetails:
+      'Advanced AI-powered IT operations platform with intelligent monitoring, automation, and optimization.',
     launchDate: '2030-02-15',
     customers: 27,
     rating: 4.9,
-    reviews: 18
+    reviews: 18,
   },
   // Quantum-Secure Infrastructure 2030
   {
@@ -255,7 +295,8 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     tagline: 'Quantum-proof infrastructure security',
     price: '$12,999',
     period: '/month',
-    description: 'Revolutionary 2030 platform for quantum-secure infrastructure, providing quantum-proof security for critical infrastructure and systems.',
+    description:
+      'Revolutionary 2030 platform for quantum-secure infrastructure, providing quantum-proof security for critical infrastructure and systems.',
     features: [
       'Quantum-proof security',
       'Quantum encryption',
@@ -266,22 +307,30 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
       'Quantum security validation',
       'Quantum infrastructure networks',
       'Quantum security protocols',
-      'Advanced quantum security'
+      'Advanced quantum security',
     ],
     popular: true,
     icon: '⚛️',
     color: 'from-indigo-600 via-blue-600 to-cyan-600',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-secure-infrastructure-2030',
-    marketPosition: 'Most advanced quantum-secure infrastructure platform for 2030. Revolutionary quantum security technology.',
-    targetAudience: 'Government agencies, Financial institutions, Critical infrastructure, Tech companies, Security firms',
+    marketPosition:
+      'Most advanced quantum-secure infrastructure platform for 2030. Revolutionary quantum security technology.',
+    targetAudience:
+      'Government agencies, Financial institutions, Critical infrastructure, Tech companies, Security firms',
     trialDays: 90,
     setupTime: '2-3 months',
     category: 'Quantum-Secure Infrastructure 2030',
     realService: true,
-    technology: ['Quantum Computing, Quantum Security, Infrastructure Security, Quantum Encryption'],
-    integrations: ['Infrastructure platforms, Security systems, Quantum computers, Encryption tools'],
-    useCases: ['Infrastructure security, Quantum encryption, Critical systems protection, Security validation'],
+    technology: [
+      'Quantum Computing, Quantum Security, Infrastructure Security, Quantum Encryption',
+    ],
+    integrations: [
+      'Infrastructure platforms, Security systems, Quantum computers, Encryption tools',
+    ],
+    useCases: [
+      'Infrastructure security, Quantum encryption, Critical systems protection, Security validation',
+    ],
     roi: 'Revolutionary quantum security technology with potential for complete infrastructure protection.',
     competitors: ['None - First to market'],
     marketSize: 'Emerging market - $300B+ potential',
@@ -291,13 +340,14 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Advanced quantum-secure infrastructure platform with quantum-proof security and comprehensive protection.',
+    implementationDetails:
+      'Advanced quantum-secure infrastructure platform with quantum-proof security and comprehensive protection.',
     launchDate: '2030-01-10',
     customers: 12,
     rating: 5.0,
-    reviews: 8
-  }
+    reviews: 8,
+  },
 ];

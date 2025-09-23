@@ -11,14 +11,20 @@ export default function SocialShareButtons({ url, title, description }: Props) {
   const shareText = encodeURIComponent(title ?? '');
   const shareUrl = encodeURIComponent(url ?? '');
   return (
-    <div className="flex gap-3">
+    <div className='flex gap-3'>
       {networks.map(n => (
         <a
           key={n}
-          className="rounded bg-white/10 px-3 py-2 hover:bg-white/20"
+          className='rounded bg-white/10 px-3 py-2 hover:bg-white/20'
           aria-label={`Share on ${n}`}
-          href={shareUrl ? `#share-${n.toLowerCase()}?text=${shareText}&url=${shareUrl}` : '#'}
-          onClick={(e) => { if (!shareUrl) e.preventDefault(); }}
+          href={
+            shareUrl
+              ? `#share-${n.toLowerCase()}?text=${shareText}&url=${shareUrl}`
+              : '#'
+          }
+          onClick={e => {
+            if (!shareUrl) e.preventDefault();
+          }}
         >
           {n}
         </a>
