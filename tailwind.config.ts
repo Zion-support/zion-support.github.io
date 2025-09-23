@@ -1,7 +1,7 @@
 import type { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
 
-const config: Config = {
+const config: Config ={
   darkMode: 'class',
   content: [
     './pages/**/*.{ts,tsx}',
@@ -12,11 +12,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
-      },
-    },
-  },
-  plugins: [],
-};
+        sans: ['Inter', ...defaultTheme.fontFamily.sans]}}},
+  plugins: []};
 
 export default config;

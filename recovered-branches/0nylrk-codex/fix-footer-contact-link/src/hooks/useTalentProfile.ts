@@ -45,7 +45,7 @@ export function useTalentProfile(id: string | undefined) {
             }
           }
           setIsLoading(false);
-        }, 800);
+        }, 80o0);
       } catch (err) {
         console.error("Error fetching profile:", err);
         setError("Failed to load profile data");

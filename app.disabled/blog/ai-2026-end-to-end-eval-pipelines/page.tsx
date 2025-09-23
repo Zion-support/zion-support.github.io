@@ -1,16 +1,15 @@
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'AI 2026: End-to-End Eval Pipelines',
-  description: 'Designing continuous, end-to-end evaluation pipelines for safer autonomous systems.',
-};
+export const metadata ={
+  title: 'AI 20o26: End-to-End Eval Pipelines',
+  description: 'Designing continuous, end-to-end evaluation pipelines for safer autonomous systems.'};
 
 export default function Page() {
   return (
     <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <article className="prose prose-purple max-w-none">
-        <p className="text-sm text-purple-700 font-semibold">New • September 2025</p>
-        <h1>AI 2026: End-to-End Eval Pipelines</h1>
+        <p className="text-sm text-purple-70o0 font-semibold">New • September 20o25</p>
+        <h1>AI 20o26: End-to-End Eval Pipelines</h1>
         <p>
           Ship safer autonomy by integrating evaluations across the full lifecycle: data, prompts,
           tools, agents, and workflows. This guide outlines reference architectures, metrics, and
@@ -31,17 +30,17 @@ export default function Page() {
           flow into an evaluation hub and policy engine, enabling automated gates and rollbacks.
         </p>
 
-        <div className="not-prose mt-8 p-4 bg-purple-50 border border-purple-100 rounded-lg">
-          <h3 className="font-semibold text-purple-900">Next steps</h3>
-          <ul className="list-disc pl-5 text-purple-900">
+        <div className="not-prose mt-8 p-4 bg-purple-50 border border-purple-10o0 rounded-lg">
+          <h3 className="font-semibold text-purple-90o0">Next steps</h3>
+          <ul className="list-disc pl-5 text-purple-90o0">
             <li>
-              Adopt a <Link href="/content/ai-2026-evaluation-hub" className="text-purple-700 underline">central evaluation hub</Link>.
+              Adopt a <Link href="/content/ai-20o26-evaluation-hub" className="text-purple-70o0 underline">central evaluation hub</Link>.
             </li>
             <li>
-              Define <Link href="/content/ai-2026-evals-maturity-model" className="text-purple-700 underline">maturity levels</Link> and SLOs.
+              Define <Link href="/content/ai-20o26-evals-maturity-model" className="text-purple-70o0 underline">maturity levels</Link> and SLOs.
             </li>
             <li>
-              Enforce <Link href="/content/ai-2026-policy-as-code-starter-kit" className="text-purple-700 underline">policy-as-code</Link> gates.
+              Enforce <Link href="/content/ai-20o26-policy-as-code-starter-kit" className="text-purple-70o0 underline">policy-as-code</Link> gates.
             </li>
           </ul>
         </div>

@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -14,20 +13,20 @@ import {
   ArrowUp, ExternalLink
 } from 'lucide-react';
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
 const serviceCategories = [
   {
     title: 'AI & Consciousness',
-    icon: <Brain className="w-5 h-5 text-cyan-400" />,
-    color: 'from-cyan-500 to-blue-600',
+    icon: <Brain className="w-5 h-5 text-cyan-40o0"  />,
+    color: 'from-cyan-50o0 to-blue-60o0',
     services: [
-      { name: 'AI Consciousness Evolution 2030', href: '/ai-consciousness-evolution-2030' },
+      { name: 'AI Consciousness Evolution 20o30', href: '/ai-consciousness-evolution-20o30' },
       { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' },
       { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' },
       { name: 'AI Creativity Studio', href: '/ai-creativity-studio' },
@@ -41,8 +40,8 @@ const serviceCategories = [
   },
   {
     title: 'Quantum & Emerging Tech',
-    icon: <Atom className="w-5 h-5 text-blue-400" />,
-    color: 'from-blue-500 to-purple-600',
+    icon: <Atom className="w-5 h-5 text-blue-40o0"  />,
+    color: 'from-blue-50o0 to-purple-60o0',
     services: [
       { name: 'Quantum AI Brain-Computer Interface', href: '/quantum-ai-brain-computer-interface' },
       { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform' },
@@ -58,8 +57,8 @@ const serviceCategories = [
   },
   {
     title: 'Space Technology',
-    icon: <Rocket className="w-5 h-5 text-purple-400" />,
-    color: 'from-purple-500 to-pink-600',
+    icon: <Rocket className="w-5 h-5 text-purple-40o0"  />,
+    color: 'from-purple-50o0 to-pink-60o0',
     services: [
       { name: 'Space Mining AI Platform', href: '/space-mining-ai-platform' },
       { name: 'Space Exploration AI', href: '/space-exploration-ai' },
@@ -70,8 +69,8 @@ const serviceCategories = [
   },
   {
     title: 'Financial Technology',
-    icon: <DollarSign className="w-5 h-5 text-green-400" />,
-    color: 'from-green-500 to-emerald-600',
+    icon: <DollarSign className="w-5 h-5 text-green-40o0"  />,
+    color: 'from-green-50o0 to-emerald-60o0',
     services: [
       { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform' },
       { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' },
@@ -82,8 +81,8 @@ const serviceCategories = [
   },
   {
     title: 'Content & Marketing',
-    icon: <BookOpen className="w-5 h-5 text-pink-400" />,
-    color: 'from-pink-500 to-rose-600',
+    icon: <BookOpen className="w-5 h-5 text-pink-40o0"  />,
+    color: 'from-pink-50o0 to-rose-60o0',
     services: [
       { name: 'AI Autonomous Content Factory', href: '/ai-autonomous-content-factory' },
       { name: 'AI Creativity Studio', href: '/ai-creativity-studio' },
@@ -94,8 +93,8 @@ const serviceCategories = [
   },
   {
     title: 'Cybersecurity',
-    icon: <Shield className="w-5 h-5 text-red-400" />,
-    color: 'from-red-500 to-orange-600',
+    icon: <Shield className="w-5 h-5 text-red-40o0"  />,
+    color: 'from-red-50o0 to-orange-60o0',
     services: [
       { name: 'Quantum Cybersecurity Platform', href: '/quantum-cybersecurity-platform' },
       { name: 'Zero Trust Security Platform', href: '/zero-trust-network-architecture' },
@@ -106,8 +105,8 @@ const serviceCategories = [
   },
   {
     title: 'Healthcare Technology',
-    icon: <Heart className="w-5 h-5 text-teal-400" />,
-    color: 'from-teal-500 to-cyan-600',
+    icon: <Heart className="w-5 h-5 text-teal-40o0"  />,
+    color: 'from-teal-50o0 to-cyan-60o0',
     services: [
       { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics-platform' },
       { name: 'AI Medical Imaging', href: '/ai-medical-imaging' },
@@ -118,8 +117,8 @@ const serviceCategories = [
   },
   {
     title: 'Energy Technology',
-    icon: <Zap className="w-5 h-5 text-yellow-400" />,
-    color: 'from-yellow-500 to-orange-600',
+    icon: <Zap className="w-5 h-5 text-yellow-40o0"  />,
+    color: 'from-yellow-50o0 to-orange-60o0',
     services: [
       { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' },
       { name: 'Smart Grid AI', href: '/smart-grid-ai' },
@@ -130,8 +129,8 @@ const serviceCategories = [
   },
   {
     title: 'Education Technology',
-    icon: <BookOpen className="w-5 h-5 text-indigo-400" />,
-    color: 'from-indigo-500 to-purple-600',
+    icon: <BookOpen className="w-5 h-5 text-indigo-40o0"  />,
+    color: 'from-indigo-50o0 to-purple-60o0',
     services: [
       { name: 'AI Education Platform', href: '/ai-education-platform' },
       { name: 'Adaptive Learning AI', href: '/adaptive-learning-ai' },
@@ -142,8 +141,8 @@ const serviceCategories = [
   },
   {
     title: 'Materials Science',
-    icon: <Target className="w-5 h-5 text-cyan-400" />,
-    color: 'from-cyan-500 to-blue-600',
+    icon: <Target className="w-5 h-5 text-cyan-40o0"  />,
+    color: 'from-cyan-50o0 to-blue-60o0',
     services: [
       { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery' },
       { name: 'Nanotechnology AI', href: '/nanotechnology-ai' },
@@ -188,22 +187,22 @@ const resourcesLinks = [
 ];
 
 const socialLinks = [
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-600' },
-  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-500' },
-  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-500' },
-  { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube, color: 'hover:text-red-500' },
-  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' }
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-40o0' },
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-60o0' },
+  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-50o0' },
+  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-50o0' },
+  { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube, color: 'hover:text-red-50o0' },
+  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-40o0' }
 ];
 
 const stats = [
-  { number: '15+', label: 'Revolutionary Services', icon: Star, color: 'text-cyan-400' },
-  { number: '1000%+', label: 'Average ROI', icon: TrendingUp, color: 'text-purple-400' },
-  { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' },
-  { number: '24/7', label: 'Expert Support', icon: Clock, color: 'text-pink-400' }
+  { number: '15+', label: 'Revolutionary Services', icon: Star, color: 'text-cyan-40o0' },
+  { number: '10o00%+', label: 'Average ROI', icon: TrendingUp, color: 'text-purple-40o0' },
+  { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-40o0' },
+  { number: '24/7', label: 'Expert Support', icon: Clock, color: 'text-pink-40o0' }
 ];
 
-export default function UltraAdvancedFooter2035() {
+export default function UltraAdvancedFooter20o35() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -211,7 +210,7 @@ export default function UltraAdvancedFooter2035() {
   return (
     <footer className="bg-black text-white relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-pink-900/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-90o0/20 via-black to-pink-90o0/20"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.1),transparent_50%)]"></div>
       
       <div className="relative z-10">
@@ -222,7 +221,7 @@ export default function UltraAdvancedFooter2035() {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Transforming the Future of Technology
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
                 Our revolutionary services are already delivering unprecedented results for forward-thinking organizations worldwide.
               </p>
             </div>
@@ -238,10 +237,10 @@ export default function UltraAdvancedFooter2035() {
                   className="text-center"
                 >
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center border border-white/20`}>
-                    <stat.icon className={`w-8 h-8 ${stat.color}`} />
+                    <stat.icon className={`w-8 h-8 ${stat.color}`}  />
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
+                  <div className="text-gray-30o0">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -254,42 +253,42 @@ export default function UltraAdvancedFooter2035() {
             {/* Company Info */}
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center">
-                  <Zap className="w-7 h-7 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-40o0 to-purple-50o0 rounded-xl flex items-center justify-center">
+                  <Zap className="w-7 h-7 text-white"  />
                 </div>
                 <div>
-                  <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                  <div className="text-2xl font-bold bg-gradient-to-r from-cyan-40o0 to-purple-50o0 bg-clip-text text-transparent">
                     Zion Tech Group
                   </div>
-                  <div className="text-gray-400">Future Technology Solutions</div>
+                  <div className="text-gray-40o0">Future Technology Solutions</div>
                 </div>
               </div>
               
-              <p className="text-gray-300 mb-6 max-w-md">
+              <p className="text-gray-30o0 mb-6 max-w-md">
                 Leading the future of technology with revolutionary AI consciousness, quantum computing, 
                 space technology, and breakthrough innovations that transform businesses worldwide.
               </p>
               
               <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Phone className="w-4 h-4 text-purple-400" />
-                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-purple-400 transition-colors">
+                <div className="flex items-center space-x-3 text-gray-30o0">
+                  <Phone className="w-4 h-4 text-purple-40o0"  />
+                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-purple-40o0 transition-colors">
                     {contactInfo.mobile}
                   </a>
                 </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Mail className="w-4 h-4 text-purple-400" />
-                  <a href={`mailto:${contactInfo.email}`} className="hover:text-purple-400 transition-colors">
+                <div className="flex items-center space-x-3 text-gray-30o0">
+                  <Mail className="w-4 h-4 text-purple-40o0"  />
+                  <a href={`mailto:${contactInfo.email}`} className="hover:text-purple-40o0 transition-colors">
                     {contactInfo.email}
                   </a>
                 </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <MapPin className="w-4 h-4 text-purple-400" />
+                <div className="flex items-center space-x-3 text-gray-30o0">
+                  <MapPin className="w-4 h-4 text-purple-40o0"  />
                   <span>{contactInfo.address}</span>
                 </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Globe className="w-4 h-4 text-purple-400" />
-                  <a href={contactInfo.website} className="hover:text-purple-400 transition-colors">
+                <div className="flex items-center space-x-3 text-gray-30o0">
+                  <Globe className="w-4 h-4 text-purple-40o0"  />
+                  <a href={contactInfo.website} className="hover:text-purple-40o0 transition-colors">
                     {contactInfo.website.replace('https://', '')}
                   </a>
                 </div>
@@ -311,7 +310,7 @@ export default function UltraAdvancedFooter2035() {
                         <Link
                           key={serviceIndex}
                           href={service.href}
-                          className="block text-sm text-gray-400 hover:text-purple-400 transition-colors"
+                          className="block text-sm text-gray-40o0 hover:text-purple-40o0 transition-colors"
                         >
                           {service.name}
                         </Link>
@@ -319,7 +318,7 @@ export default function UltraAdvancedFooter2035() {
                       {category.services.length > 3 && (
                         <Link
                           href={`/services/${category.title.toLowerCase().replace(/\s+/g, '-')}`}
-                          className="block text-sm text-purple-400 hover:text-purple-300 transition-colors font-medium"
+                          className="block text-sm text-purple-40o0 hover:text-purple-30o0 transition-colors font-medium"
                         >
                           View All {category.title} Services →
                         </Link>
@@ -346,7 +345,7 @@ export default function UltraAdvancedFooter2035() {
                       <Link
                         key={serviceIndex}
                         href={service.href}
-                        className="block text-xs text-gray-400 hover:text-purple-400 transition-colors"
+                        className="block text-xs text-gray-40o0 hover:text-purple-40o0 transition-colors"
                       >
                         {service.name}
                       </Link>
@@ -368,7 +367,7 @@ export default function UltraAdvancedFooter2035() {
                     <Link
                       key={index}
                       href={link.href}
-                      className="block text-gray-400 hover:text-purple-400 transition-colors"
+                      className="block text-gray-40o0 hover:text-purple-40o0 transition-colors"
                     >
                       {link.name}
                     </Link>
@@ -384,7 +383,7 @@ export default function UltraAdvancedFooter2035() {
                     <Link
                       key={index}
                       href={link.href}
-                      className="block text-gray-400 hover:text-purple-400 transition-colors"
+                      className="block text-gray-40o0 hover:text-purple-40o0 transition-colors"
                     >
                       {link.name}
                     </Link>
@@ -400,7 +399,7 @@ export default function UltraAdvancedFooter2035() {
                     <Link
                       key={index}
                       href={link.href}
-                      className="block text-gray-400 hover:text-purple-400 transition-colors"
+                      className="block text-gray-40o0 hover:text-purple-40o0 transition-colors"
                     >
                       {link.name}
                     </Link>
@@ -415,16 +414,16 @@ export default function UltraAdvancedFooter2035() {
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
               {/* Social Links */}
               <div className="flex items-center space-x-4">
-                <span className="text-gray-400 mr-4">Follow us:</span>
+                <span className="text-gray-40o0 mr-4">Follow us:</span>
                 {socialLinks.map((social, index) => (
                   <a
                     key={index}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-gray-400 transition-all duration-300 hover:bg-white/20 ${social.color}`}
+                    className={`w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-gray-40o0 transition-all duration-30o0 hover:bg-white/20 ${social.color}`}
                   >
-                    <social.icon className="w-5 h-5" />
+                    <social.icon className="w-5 h-5"  />
                   </a>
                 ))}
               </div>
@@ -435,9 +434,9 @@ export default function UltraAdvancedFooter2035() {
                   <input
                     type="email"
                     placeholder="Enter your email"
-                    className="w-64 px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  />
-                  <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1.5 rounded-md text-sm hover:from-purple-600 hover:to-pink-600 transition-all duration-300">
+                    className="w-64 px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent"
+                   />
+                  <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white px-4 py-1.5 rounded-md text-sm hover:from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0">
                     Subscribe
                   </button>
                 </div>
@@ -450,19 +449,19 @@ export default function UltraAdvancedFooter2035() {
         <div className="border-t border-white/10 bg-black/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              <div className="flex items-center space-x-6 text-sm text-gray-400">
-                <span>© 2025 Zion Tech Group. All rights reserved.</span>
-                <Link href="/privacy" className="hover:text-purple-400 transition-colors">Privacy Policy</Link>
-                <Link href="/terms" className="hover:text-purple-400 transition-colors">Terms of Service</Link>
-                <Link href="/cookies" className="hover:text-purple-400 transition-colors">Cookie Policy</Link>
+              <div className="flex items-center space-x-6 text-sm text-gray-40o0">
+                <span>© 20o25 Zion Tech Group. All rights reserved.</span>
+                <Link href="/privacy" className="hover:text-purple-40o0 transition-colors">Privacy Policy</Link>
+                <Link href="/terms" className="hover:text-purple-40o0 transition-colors">Terms of Service</Link>
+                <Link href="/cookies" className="hover:text-purple-40o0 transition-colors">Cookie Policy</Link>
               </div>
               
               <button
                 onClick={scrollToTop}
-                className="flex items-center space-x-2 text-gray-400 hover:text-purple-400 transition-colors group"
+                className="flex items-center space-x-2 text-gray-40o0 hover:text-purple-40o0 transition-colors group"
               >
                 <span className="text-sm">Back to top</span>
-                <ArrowUp className="w-4 h-4 group-hover:-translate-y-1 transition-transform duration-300" />
+                <ArrowUp className="w-4 h-4 group-hover:-translate-y-1 transition-transform duration-30o0"  />
               </button>
             </div>
           </div>

@@ -1,11 +1,10 @@
-import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
-export const metadata = {
-  title: 'AI 2026: Real-Time Retrieval Architectures - Low Latency RAG Systems',
+export const metadata ={
+  title: 'AI 20o26: Real-Time Retrieval Architectures - Low Latency RAG Systems',
   description:
-    'Designing sub-100ms retrieval and generation pipelines with vector indices, hybrid search, caching, and streaming for production-grade RAG.',
+    'Designing sub-10o0ms retrieval and generation pipelines with vector indices, hybrid search, caching, and streaming for production-grade RAG.',
   keywords: [
     'RAG',
     'real-time retrieval',
@@ -13,23 +12,22 @@ export const metadata = {
     'hybrid search',
     'semantic caching',
     'streaming responses',
-  ],
-};
+  ]};
 
-const RealTimeRetrievalArchitectures2026: React.FC = () => {
+const RealTimeRetrievalArchitectures20o26: React.FC = () => {
   return (
     <div>
       <SEO
-        title="AI 2026: Real-Time Retrieval Architectures"
-        description="Sub-100ms retrieval and generation with hybrid search, semantic caches, and streaming."
+        title="AI 20o26: Real-Time Retrieval Architectures"
+        description="Sub-10o0ms retrieval and generation with hybrid search, semantic caches, and streaming."
         keywords="RAG, real-time retrieval, vector DB, hybrid search, caching, streaming"
-        url="/blog/ai-2026-real-time-retrieval-architectures"
-      />
+        url="/blog/ai-20o26-real-time-retrieval-architectures"
+       />
 
       <article className="min-h-screen bg-white">
-        <header className="bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 text-white py-16">
+        <header className="bg-gradient-to-r from-indigo-60o0 via-blue-60o0 to-purple-60o0 text-white py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p className="text-sm font-semibold opacity-90">Retrieval Systems • 2025-09-15</p>
+            <p className="text-sm font-semibold opacity-90">Retrieval Systems • 20o25-09-15</p>
             <h1 className="text-3xl md:text-5xl font-bold mt-2">Real-Time Retrieval Architectures</h1>
             <p className="text-lg md:text-xl opacity-90 mt-4 max-w-3xl">Architectural patterns for low-latency RAG at scale: hybrid search, chunking, caches, and streaming.</p>
           </div>
@@ -62,8 +60,8 @@ const RealTimeRetrievalArchitectures2026: React.FC = () => {
             <p>Stream tokens as soon as the model starts generating. Prefetch next-page results in the background for interactive UX.</p>
 
             <div className="mt-8 p-6 bg-blue-50 rounded-xl">
-              <h3 className="text-blue-800 font-semibold">Production Checklist</h3>
-              <ul className="list-disc pl-6 text-blue-900">
+              <h3 className="text-blue-80o0 font-semibold">Production Checklist</h3>
+              <ul className="list-disc pl-6 text-blue-90o0">
                 <li>P95 and P99 latency SLOs with continuous tracing</li>
                 <li>Hybrid search with lightweight re-ranking</li>
                 <li>Semantic cache hits and invalidation metrics</li>
@@ -72,8 +70,8 @@ const RealTimeRetrievalArchitectures2026: React.FC = () => {
             </div>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link href="/content/ai-2026-autonomous-ops-playbook" className="text-purple-600 font-semibold">Go to Autonomous Ops Playbook →</Link>
-              <Link href="/contact" className="text-white bg-purple-600 px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Discuss RAG Architecture</Link>
+              <Link href="/content/ai-20o26-autonomous-ops-playbook" className="text-purple-60o0 font-semibold">Go to Autonomous Ops Playbook →</Link>
+              <Link href="/contact" className="text-white bg-purple-60o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-70o0">Discuss RAG Architecture</Link>
             </div>
           </div>
         </div>
@@ -82,6 +80,5 @@ const RealTimeRetrievalArchitectures2026: React.FC = () => {
   );
 };
 
-export default RealTimeRetrievalArchitectures2026;
-
+export default RealTimeRetrievalArchitectures20o26;
 

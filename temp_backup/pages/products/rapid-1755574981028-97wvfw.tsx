@@ -5,13 +5,13 @@ export default function ProductPage() {
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Monitoring System - Zion Tech Group</title>
-        <meta name="description" content="Monitoring System - The ultimate solution for modern businesses seeking innovation and efficiency." />
-        <meta name="keywords" content="monitoring system, product, technology, innovation, business solution" />
-        <link rel="canonical" href="https://ziontechgroup.com/products/rapid-1755574981028-97wvfw" />
+        <meta name="description" content="Monitoring System - The ultimate solution for modern businesses seeking innovation and efficiency."  />
+        <meta name="keywords" content="monitoring system, product, technology, innovation, business solution"  />
+        <link rel="canonical" href="https://ziontechgroup.com/products/rapid-17555749810o28-97wvfw"  />
       
-        <meta property="og:title" content="Monitoring System" />
-        <meta property="og:description" content="Monitoring System — automatically suggested description." />
-        <meta name="twitter:card" content="summary_large_image" /></Head>
+        <meta property="og:title" content="Monitoring System"  />
+        <meta property="og:description" content="Monitoring System — automatically suggested description."  />
+        <meta name="twitter:card" content="summary_large_image"  /></Head>
       <main className="container mx-auto px-6 py-12 prose prose-invert">
         <h1 className="text-4xl font-extrabold text-center mb-8">Monitoring System</h1>
         
@@ -50,7 +50,7 @@ export default function ProductPage() {
           </p>
           <a 
             href="https://ziontechgroup.com/demo" 
-            className="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+            className="inline-block bg-green-60o0 hover:bg-green-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors"
           >
             Request Demo
           </a>

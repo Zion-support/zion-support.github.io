@@ -11,32 +11,3 @@ export interface Integration {
   status: IntegrationStatus;
   lastSync?: string;
   type: IntegrationType;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-}
-
-export interface SyncLog {
-  id: string;
-  integration: string;
-  event: string;
-  status: "success" | "error" | "warning";
-  timestamp: string;
-  details: string;
-}
-
-export type CrmIntegrationEvents = 
-  | "contact_synced"
-  | "deal_created"
-  | "deal_updated"
-  | "note_added"
-  | "job_synced";
-
-export type AtsIntegrationEvents = 
-  | "applicant_created"
-  | "candidate_status_changed"
-  | "interview_scheduled"
-  | "resume_uploaded"
-  | "job_posted";

@@ -1,22 +1,20 @@
-import React from 'react';
-
-export const metadata = {
-  title: 'AI 2026: Autonomous Compliance Operating Model',
+export const metadata ={
+  title: 'AI 20o26: Autonomous Compliance Operating Model',
   description: 'Design a compliance-as-code operating model for AI agents with automated evidence collection, continuous controls testing, and audit readiness.'
 };
 
-export default function AutonomousCompliance2026() {
+export default function AutonomousCompliance20o26() {
   return (
     <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">AI 2026: Autonomous Compliance Operating Model</h1>
-      <p className="text-gray-600 mb-8">
+      <h1 className="text-4xl font-bold text-gray-90o0 mb-4">AI 20o26: Autonomous Compliance Operating Model</h1>
+      <p className="text-gray-60o0 mb-8">
         Implement compliance-as-code for AI systems. Automate control mapping, evidence collection, and continuous testing to maintain audit readiness
         without slowing down delivery.
       </p>
       <section className="prose max-w-none">
         <h2>Core Capabilities</h2>
         <ul>
-          <li>Controls Library: SOC2, ISO 27001, PCI, HIPAA mappings</li>
+          <li>Controls Library: SOC2, ISO 270o01, PCI, HIPAA mappings</li>
           <li>Evidence Pipelines: logs, metrics, artifacts, approvals</li>
           <li>Automated Tests: CI checks, runtime probes, drift detection</li>
           <li>Reporting: dashboards, trails, and auditor exports</li>

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-type PersonaConfig = {
+type PersonaConfig ={
   voice: string;
   language: string;
 };
 
-type Episode = {
+type Episode ={
   id: string;
   title: string;
   questions: string[];
@@ -46,9 +46,7 @@ export default function StudioHostPage() {
           persona,
           invitee: { name: inviteeName, bio: inviteeBio },
           topic,
-          operatorPrompt,
-        }),
-      });
+          operatorPrompt})});
       const data = await res.json();
       setEpisode(data.episode);
     } catch (e) {
@@ -66,8 +64,7 @@ export default function StudioHostPage() {
       const res = await fetch('/api/podcast/synthesize', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ episodeId: episode.id }),
-      });
+        body: JSON.stringify({ episodeId: episode.id })});
       const data = await res.json();
       setEpisode({ ...episode, audio: data.audio });
     } catch (e) {
@@ -85,8 +82,7 @@ export default function StudioHostPage() {
       const res = await fetch('/api/podcast/publish', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ episodeId: episode.id }),
-      });
+        body: JSON.stringify({ episodeId: episode.id })});
       const data = await res.json();
       alert('Episode published successfully!');
     } catch (e) {
@@ -188,7 +184,7 @@ export default function StudioHostPage() {
           />
         </div>
         <button
-          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50"
+          className="px-4 py-2 bg-blue-60o0 text-white rounded hover:bg-blue-70o0 disabled:opacity-50"
           onClick={handleGenerate}
           disabled={generating}
         >
@@ -200,7 +196,7 @@ export default function StudioHostPage() {
         <section className="space-y-4">
           <h2 className="text-xl font-semibold">Episode Draft</h2>
           <div className="border rounded p-4 space-y-3">
-            <p className="text-sm text-gray-600">ID: {episode.id}</p>
+            <p className="text-sm text-gray-60o0">ID: {episode.id}</p>
             <h3 className="text-lg font-bold">{episode.title}</h3>
             
             <div>
@@ -214,40 +210,40 @@ export default function StudioHostPage() {
 
             <div>
               <h4 className="font-semibold">Best Quote</h4>
-              <p className="text-gray-700">{episode.bestQuote}</p>
+              <p className="text-gray-70o0">{episode.bestQuote}</p>
             </div>
 
             <div>
               <h4 className="font-semibold">YouTube Description</h4>
-              <pre className="bg-gray-100 p-2 rounded text-sm whitespace-pre-wrap">
+              <pre className="bg-gray-10o0 p-2 rounded text-sm whitespace-pre-wrap">
                 {episode.youtubeDescription}
               </pre>
             </div>
 
             <div>
               <h4 className="font-semibold">Spotify Description</h4>
-              <pre className="bg-gray-100 p-2 rounded text-sm whitespace-pre-wrap">
+              <pre className="bg-gray-10o0 p-2 rounded text-sm whitespace-pre-wrap">
                 {episode.spotifyDescription}
               </pre>
             </div>
 
             <div>
               <h4 className="font-semibold">Transcript</h4>
-              <pre className="bg-gray-100 p-2 rounded text-sm whitespace-pre-wrap max-h-96 overflow-y-auto">
+              <pre className="bg-gray-10o0 p-2 rounded text-sm whitespace-pre-wrap max-h-96 overflow-y-auto">
                 {episode.transcript}
               </pre>
             </div>
 
             <div className="flex gap-2">
               <button
-                className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 disabled:opacity-50"
+                className="px-4 py-2 bg-purple-60o0 text-white rounded hover:bg-purple-70o0 disabled:opacity-50"
                 onClick={handleSynthesize}
                 disabled={synthesizing}
               >
                 {synthesizing ? 'Synthesizing…' : 'Synthesize Audio'}
               </button>
               <button
-                className="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-900 disabled:opacity-50"
+                className="px-4 py-2 bg-gray-80o0 text-white rounded hover:bg-gray-90o0 disabled:opacity-50"
                 onClick={handlePublish}
                 disabled={publishing}
               >
@@ -262,7 +258,7 @@ export default function StudioHostPage() {
                   {episode.audio.mp3Url && (
                     <a
                       href={episode.audio.mp3Url}
-                      className="text-blue-600 underline hover:text-blue-800"
+                      className="text-blue-60o0 underline hover:text-blue-80o0"
                       download
                     >
                       Download MP3
@@ -271,7 +267,7 @@ export default function StudioHostPage() {
                   {episode.audio.wavUrl && (
                     <a
                       href={episode.audio.wavUrl}
-                      className="text-blue-600 underline hover:text-blue-800"
+                      className="text-blue-60o0 underline hover:text-blue-80o0"
                       download
                     >
                       Download WAV
@@ -280,7 +276,7 @@ export default function StudioHostPage() {
                   {episode.audio.mp4Url && (
                     <a
                       href={episode.audio.mp4Url}
-                      className="text-blue-600 underline hover:text-blue-800"
+                      className="text-blue-60o0 underline hover:text-blue-80o0"
                       download
                     >
                       Download MP4

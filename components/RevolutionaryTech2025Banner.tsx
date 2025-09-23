@@ -1,15 +1,14 @@
-import React from 'react';
 import Link from 'next/link';
 
-const RevolutionaryTech2025Banner = () => {
+const RevolutionaryTech20o25Banner = () => {
   return (
-    <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
+    <section className="bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-black rounded-full px-8 py-3 mb-8">
-            <span className="text-lg font-bold">🚀 REVOLUTIONARY 2025 CONTENT</span>
+          <div className="inline-flex items-center bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-black rounded-full px-8 py-3 mb-8">
+            <span className="text-lg font-bold">🚀 REVOLUTIONARY 20o25 CONTENT</span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-yellow-40o0 via-pink-40o0 to-purple-40o0 bg-clip-text text-transparent">
             The Future of Technology is Here
           </h2>
           <p className="text-2xl md:text-3xl opacity-90 mb-12 max-w-5xl mx-auto leading-relaxed">
@@ -22,7 +21,7 @@ const RevolutionaryTech2025Banner = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           {/* Left Column - AI Automation */}
           <div className="space-y-8">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 border border-white border-opacity-20">
+            <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-2xl p-8 border border-white border-opacity-20">
               <div className="flex items-center mb-6">
                 <div className="text-5xl mr-4">🤖</div>
                 <div>
@@ -36,31 +35,31 @@ const RevolutionaryTech2025Banner = () => {
               </p>
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-yellow-400">340%</div>
+                  <div className="text-3xl font-bold text-yellow-40o0">340%</div>
                   <div className="text-sm opacity-80">Average ROI</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400">45%</div>
+                  <div className="text-3xl font-bold text-green-40o0">45%</div>
                   <div className="text-sm opacity-80">Efficiency Gain</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400">98%</div>
+                  <div className="text-3xl font-bold text-blue-40o0">98%</div>
                   <div className="text-sm opacity-80">Success Rate</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400">500+</div>
+                  <div className="text-3xl font-bold text-purple-40o0">50o0+</div>
                   <div className="text-sm opacity-80">Projects</div>
                 </div>
               </div>
               <Link 
-                href="/blog/ai-2025-enterprise-automation-revolution-complete-implementation-guide"
-                className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors"
+                href="/blog/ai-20o25-enterprise-automation-revolution-complete-implementation-guide"
+                className="inline-flex items-center bg-white text-blue-60o0 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-10o0 transition-colors"
               >
                 Read Complete Guide →
               </Link>
             </div>
 
-            <div className="bg-gradient-to-r from-red-600 to-pink-600 rounded-2xl p-8 border border-white border-opacity-20">
+            <div className="bg-gradient-to-r from-red-60o0 to-pink-60o0 rounded-2xl p-8 border border-white border-opacity-20">
               <div className="flex items-center mb-6">
                 <div className="text-5xl mr-4">🔒</div>
                 <div>
@@ -74,25 +73,25 @@ const RevolutionaryTech2025Banner = () => {
               </p>
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-yellow-400">95%</div>
+                  <div className="text-3xl font-bold text-yellow-40o0">95%</div>
                   <div className="text-sm opacity-80">Faster Response</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400">98%</div>
+                  <div className="text-3xl font-bold text-green-40o0">98%</div>
                   <div className="text-sm opacity-80">False Positive Reduction</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400">99.9%</div>
+                  <div className="text-3xl font-bold text-blue-40o0">99.9%</div>
                   <div className="text-sm opacity-80">Threat Prevention</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400">60%</div>
+                  <div className="text-3xl font-bold text-purple-40o0">60%</div>
                   <div className="text-sm opacity-80">Cost Reduction</div>
                 </div>
               </div>
               <Link 
-                href="/blog/ai-2025-cybersecurity-revolution-next-generation-threat-protection"
-                className="inline-flex items-center bg-white text-red-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors"
+                href="/blog/ai-20o25-cybersecurity-revolution-next-generation-threat-protection"
+                className="inline-flex items-center bg-white text-red-60o0 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-10o0 transition-colors"
               >
                 Learn Security Solutions →
               </Link>
@@ -101,7 +100,7 @@ const RevolutionaryTech2025Banner = () => {
 
           {/* Right Column - Quantum Computing */}
           <div className="space-y-8">
-            <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 border border-white border-opacity-20">
+            <div className="bg-gradient-to-r from-purple-60o0 to-indigo-60o0 rounded-2xl p-8 border border-white border-opacity-20">
               <div className="flex items-center mb-6">
                 <div className="text-5xl mr-4">⚛️</div>
                 <div>
@@ -115,32 +114,32 @@ const RevolutionaryTech2025Banner = () => {
               </p>
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-yellow-400">$65.5B</div>
-                  <div className="text-sm opacity-80">Market by 2030</div>
+                  <div className="text-3xl font-bold text-yellow-40o0">$65.5B</div>
+                  <div className="text-sm opacity-80">Market by 20o30</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400">1000x</div>
+                  <div className="text-3xl font-bold text-green-40o0">10o00x</div>
                   <div className="text-sm opacity-80">Speed Improvement</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400">45%</div>
-                  <div className="text-sm opacity-80">Fortune 500 Adoption</div>
+                  <div className="text-3xl font-bold text-blue-40o0">45%</div>
+                  <div className="text-sm opacity-80">Fortune 50o0 Adoption</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400">340%</div>
+                  <div className="text-3xl font-bold text-purple-40o0">340%</div>
                   <div className="text-sm opacity-80">Investment Growth</div>
                 </div>
               </div>
               <Link 
-                href="/blog/quantum-computing-business-applications-2025-ultimate-guide"
-                className="inline-flex items-center bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors"
+                href="/blog/quantum-computing-business-applications-20o25-ultimate-guide"
+                className="inline-flex items-center bg-white text-purple-60o0 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-10o0 transition-colors"
               >
                 Explore Quantum Guide →
               </Link>
             </div>
 
             {/* Additional Content Preview */}
-            <div className="bg-gradient-to-r from-green-600 to-teal-600 rounded-2xl p-8 border border-white border-opacity-20">
+            <div className="bg-gradient-to-r from-green-60o0 to-teal-60o0 rounded-2xl p-8 border border-white border-opacity-20">
               <div className="flex items-center mb-6">
                 <div className="text-5xl mr-4">🚀</div>
                 <div>
@@ -154,21 +153,21 @@ const RevolutionaryTech2025Banner = () => {
               </p>
               <div className="space-y-3 mb-6">
                 <div className="flex items-center text-sm">
-                  <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
-                  <span>AI 2026 Future Predictions</span>
+                  <span className="w-2 h-2 bg-yellow-40o0 rounded-full mr-3"></span>
+                  <span>AI 20o26 Future Predictions</span>
                 </div>
                 <div className="flex items-center text-sm">
-                  <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 bg-yellow-40o0 rounded-full mr-3"></span>
                   <span>Neural Interface Revolution</span>
                 </div>
                 <div className="flex items-center text-sm">
-                  <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 bg-yellow-40o0 rounded-full mr-3"></span>
                   <span>Autonomous Business Systems</span>
                 </div>
               </div>
               <Link 
                 href="/blog"
-                className="inline-flex items-center bg-white text-green-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors"
+                className="inline-flex items-center bg-white text-green-60o0 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-10o0 transition-colors"
               >
                 Explore All Content →
               </Link>
@@ -178,7 +177,7 @@ const RevolutionaryTech2025Banner = () => {
 
         {/* Bottom CTA Section */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black rounded-2xl p-12">
+          <div className="bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-black rounded-2xl p-12">
             <h3 className="text-4xl font-bold mb-6">Ready to Lead the Technology Revolution?</h3>
             <p className="text-xl mb-8 opacity-90">
               Join the organizations already transforming their business with cutting-edge AI
@@ -187,7 +186,7 @@ const RevolutionaryTech2025Banner = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
                 href="/contact"
-                className="bg-black text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-800 transition-colors"
+                className="bg-black text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-80o0 transition-colors"
               >
                 Get Expert Consultation
               </Link>
@@ -205,4 +204,4 @@ const RevolutionaryTech2025Banner = () => {
   );
 };
 
-export default RevolutionaryTech2025Banner;
+export default RevolutionaryTech20o25Banner;

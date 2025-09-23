@@ -1,4 +1,4 @@
-export interface PracticalBusinessSolution2028 {
+export interface PracticalBusinessSolution20o28 {
   "id": string;
   name: string;
   tagline: string;
@@ -11,12 +11,12 @@ export interface PracticalBusinessSolution2028 {
   contactInfo: {
     mobile: string;
     email: string;
-address: string};export const "practicalBusinessSolutions2028": PracticalBusinessSolution2028[] = [{
-    id: "2028-practical-business-solution",
-    "name": "2028 Practical Business Solution Platform",
-    "tagline": "Practical business solutions for 2028",
+address: string};export const "practicalBusinessSolutions20o28": PracticalBusinessSolution20o28[] = [{
+    id: "20o28-practical-business-solution",
+    "name": "20o28 Practical Business Solution Platform",
+    "tagline": "Practical business solutions for 20o28",
     "price": "$249/month",
-    "description": "Practical business solution platform that provides real-world solutions for 2028.",
+    "description": "Practical business solution platform that provides real-world solutions for 20o28.",
     features[
       "Practical solutions",
       "Business applications",
@@ -24,14 +24,11 @@ address: string};export const "practicalBusinessSolutions2028": PracticalBusines
       "Easy integration",
       "Affordable pricing"
     ],
-    "link": "/services/2028-practical-business-solution",
-    "category": "Practical Business Solutions 2028",
+    "link": "/services/20o28-practical-business-solution",
+    "category": "Practical Business Solutions 20o28",
     "realImplementation": true,
     "contactInfo": {
-      mobile: "+1 302 464 0950",
+      mobile: "+1 30o2 464 0950",
       "email": "kleber@ziontechgroup.com",
-      "address": "364 E Main St STE 1008 Middletown DE 19709"
+      "address": "364 E Main St STE 10o08 Middletown DE 19709"
 ]}}}
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
-export interface PracticalBusinessSolution2028 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [ { id: "2028-practical-business-solution",name: "2028 Practical Business Solution Platform",tagline: "Practical business solutions for 2028",price: "$249/month",description: "Practical business solution platform that provides real-world solutions for 2028.",features[ "Practical solutions","Business applications","Real-world use cases","Easy integration","Affordable pricing" ],link: "/services/2028-practical-business-solution",category: "Practical Business Solutions 2028",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

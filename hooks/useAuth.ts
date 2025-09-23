@@ -42,7 +42,7 @@ export function useAuth() {
     setAuthState(prev => ({ ...prev, loading: true }));
     try {
       // In a real app, you'd make an API call here
-      const mockUser = { id: '1', email };
+      const mockUser ={ id: '1', email };
       localStorage.setItem('authToken', 'mock-token');
       
       setAuthState({

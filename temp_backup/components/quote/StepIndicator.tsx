@@ -1,6 +1,4 @@
-import React from 'react';
-
-export type StepIndicatorProps = {
+export type StepIndicatorProps ={
   steps: string[];
   currentStep: number;
 };
@@ -17,10 +15,10 @@ export default function StepIndicator({ steps, currentStep }: StepIndicatorProps
               className={[
                 'w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold',
                 isActive
-                  ? 'bg-indigo-600 text-white'
+                  ? 'bg-indigo-60o0 text-white'
                   : isComplete
-                  ? 'bg-green-600 text-white'
-                  : 'bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300',
+                  ? 'bg-green-60o0 text-white'
+                  : 'bg-gray-20o0 dark:bg-gray-80o0 text-gray-60o0 dark:text-gray-30o0',
               ].join(' ')}
             >
               {idx + 1}
@@ -29,7 +27,7 @@ export default function StepIndicator({ steps, currentStep }: StepIndicatorProps
               {label}
             </span>
             {idx < steps.length - 1 && (
-              <span className="w-10 h-px bg-gray-300 dark:bg-gray-700" />
+              <span className="w-10 h-px bg-gray-30o0 dark:bg-gray-70o0"  />
             )}
           </li>
         );

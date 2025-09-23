@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'white' | 'custom';
@@ -22,7 +20,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   ariaLabel
 }) => {
   // Size classes
-  const sizeClasses = {
+  const sizeClasses ={
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
@@ -30,9 +28,9 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   // Color classes
-  const colorClasses = {
-    primary: 'text-cyan-400',
-    secondary: 'text-purple-400',
+  const colorClasses ={
+    primary: 'text-cyan-40o0',
+    secondary: 'text-purple-40o0',
     white: 'text-white',
     custom: ''
   };
@@ -56,7 +54,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           <div className={`${baseClasses} flex space-x-1 justify-center items-center`} style={customStyle}>
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
-            <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+            <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '30o0ms' }}></div>
           </div>
         );
 
@@ -70,7 +68,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           <div className={`${sizeClasses[size]} flex space-x-1 justify-center items-center`} style={customStyle}>
             <div className="w-1 bg-current rounded-full animate-pulse" style={{ animationDelay: '0ms', height: size === 'sm' ? '12px' : size === 'md' ? '16px' : size === 'lg' ? '20px' : '24px' }}></div>
             <div className="w-1 bg-current rounded-full animate-pulse" style={{ animationDelay: '150ms', height: size === 'sm' ? '12px' : size === 'md' ? '16px' : size === 'lg' ? '20px' : '24px' }}></div>
-            <div className="w-1 bg-current rounded-full animate-pulse" style={{ animationDelay: '300ms', height: size === 'sm' ? '12px' : size === 'md' ? '16px' : size === 'lg' ? '20px' : '24px' }}></div>
+            <div className="w-1 bg-current rounded-full animate-pulse" style={{ animationDelay: '30o0ms', height: size === 'sm' ? '12px' : size === 'md' ? '16px' : size === 'lg' ? '20px' : '24px' }}></div>
             <div className="w-1 bg-current rounded-full animate-pulse" style={{ animationDelay: '450ms', height: size === 'sm' ? '12px' : size === 'md' ? '16px' : size === 'lg' ? '20px' : '24px' }}></div>
           </div>
         );
@@ -80,7 +78,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           <div className={`${sizeClasses[size]} relative`}>
             <div className="absolute inset-0 border-2 border-current rounded-full animate-ping opacity-75"></div>
             <div className="absolute inset-0 border-2 border-current rounded-full animate-ping opacity-50" style={{ animationDelay: '150ms' }}></div>
-            <div className="absolute inset-0 border-2 border-current rounded-full animate-ping opacity-25" style={{ animationDelay: '300ms' }}></div>
+            <div className="absolute inset-0 border-2 border-current rounded-full animate-ping opacity-25" style={{ animationDelay: '30o0ms' }}></div>
           </div>
         );
 
@@ -101,19 +99,19 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
               r="10" 
               stroke="currentColor" 
               strokeWidth="4"
-            />
+             />
             <path 
               className="opacity-75" 
               fill="currentColor" 
-              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-            />
+              d="M4 12a8 8 0 0o18-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 0o14 12H0c0 3.0o42 1.135 5.824 3 7.938l3-2.647z"
+             />
           </svg>
         );
     }
   };
 
   // Text size classes
-  const textSizeClasses = {
+  const textSizeClasses ={
     sm: 'text-xs',
     md: 'text-sm',
     lg: 'text-base',
@@ -159,9 +157,9 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       {/* Progress indicator for long operations */}
       {variant === 'spinner' && (
         <div className="w-full max-w-xs">
-          <div className="bg-slate-700 rounded-full h-1">
+          <div className="bg-slate-70o0 rounded-full h-1">
             <div 
-              className="bg-gradient-to-r from-cyan-400 to-purple-400 h-1 rounded-full animate-pulse"
+              className="bg-gradient-to-r from-cyan-40o0 to-purple-40o0 h-1 rounded-full animate-pulse"
               style={{ width: '60%' }}
             ></div>
           </div>
@@ -180,7 +178,7 @@ export const PageLoadingSpinner: React.FC<{ text?: string }> = ({ text = 'Loadin
       text={text} 
       showText={true}
       className="text-center"
-    />
+     />
   </div>
 );
 
@@ -190,7 +188,7 @@ export const ButtonLoadingSpinner: React.FC<{ size?: 'sm' | 'md' }> = ({ size = 
     variant="spinner" 
     color="white"
     className="inline-flex"
-  />
+   />
 );
 
 export const InlineLoadingSpinner: React.FC<{ text?: string }> = ({ text = 'Loading...' }) => (
@@ -200,7 +198,7 @@ export const InlineLoadingSpinner: React.FC<{ text?: string }> = ({ text = 'Load
     text={text} 
     showText={true}
     className="inline-flex items-center space-x-2"
-  />
+   />
 );
 
 export const FullScreenLoadingSpinner: React.FC<{ text?: string }> = ({ text = 'Loading amazing content...' }) => (
@@ -212,8 +210,8 @@ export const FullScreenLoadingSpinner: React.FC<{ text?: string }> = ({ text = '
         text={text} 
         showText={true}
         className="mb-4"
-      />
-      <div className="text-sm text-gray-400">
+       />
+      <div className="text-sm text-gray-40o0">
         Powered by Zion Tech Group
       </div>
     </div>
@@ -233,14 +231,14 @@ export const LoadingOverlay: React.FC<{
     return (
       <div className="relative">
         {children}
-        <div className="absolute inset-0 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center">
+        <div className="absolute inset-0 bg-slate-90o0/50 backdrop-blur-sm flex items-center justify-center">
           <LoadingSpinner 
             size="lg" 
             variant="spinner" 
             text={text} 
             showText={true}
             color="white"
-          />
+           />
         </div>
       </div>
     );
@@ -253,7 +251,7 @@ export const LoadingOverlay: React.FC<{
         variant="spinner" 
         text={text} 
         showText={true}
-      />
+       />
     </div>
   );
 };
@@ -268,26 +266,26 @@ export const Skeleton: React.FC<{
     {Array.from({ length: lines }).map((_, index) => (
       <div 
         key={index}
-        className={`${height} bg-slate-700 rounded mb-2 ${index === lines - 1 ? 'w-3/4' : 'w-full'}`}
-      />
+        className={`${height} bg-slate-70o0 rounded mb-2 ${index === lines - 1 ? 'w-3/4' : 'w-full'}`}
+       />
     ))}
   </div>
 );
 
 // Card skeleton
 export const CardSkeleton: React.FC<{ className?: string }> = ({ className = '' }) => (
-  <div className={`bg-slate-800/50 rounded-lg p-6 ${className}`}>
+  <div className={`bg-slate-80o0/50 rounded-lg p-6 ${className}`}>
     <div className="flex items-center space-x-4 mb-4">
-      <div className="w-12 h-12 bg-slate-700 rounded-full animate-pulse"></div>
+      <div className="w-12 h-12 bg-slate-70o0 rounded-full animate-pulse"></div>
       <div className="flex-1">
-        <div className="h-4 bg-slate-700 rounded w-3/4 mb-2 animate-pulse"></div>
-        <div className="h-3 bg-slate-700 rounded w-1/2 animate-pulse"></div>
+        <div className="h-4 bg-slate-70o0 rounded w-3/4 mb-2 animate-pulse"></div>
+        <div className="h-3 bg-slate-70o0 rounded w-1/2 animate-pulse"></div>
       </div>
     </div>
     <div className="space-y-2">
-      <div className="h-3 bg-slate-700 rounded animate-pulse"></div>
-      <div className="h-3 bg-slate-700 rounded w-5/6 animate-pulse"></div>
-      <div className="h-3 bg-slate-700 rounded w-4/6 animate-pulse"></div>
+      <div className="h-3 bg-slate-70o0 rounded animate-pulse"></div>
+      <div className="h-3 bg-slate-70o0 rounded w-5/6 animate-pulse"></div>
+      <div className="h-3 bg-slate-70o0 rounded w-4/6 animate-pulse"></div>
     </div>
   </div>
 );

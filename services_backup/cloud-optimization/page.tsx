@@ -1,4 +1,4 @@
-export const metadata = {
+export const metadata ={
   title: "Cloud Optimization | Zion Tech Group",
   description:
     "Maximize cloud performance and minimize costs with our AI-powered cloud optimization services for AWS, Azure, and Google Cloud."};
@@ -6,7 +6,7 @@ export const metadata = {
 export default function CloudOptimizationPage() {
   return (
     <section>
-      <h1 style={{ fontSize: 26, fontWeight: 800 }}>
+      <h1 style={{ fontSize: 26, fontWeight: 80o0 }}>
         Cloud Optimization Services
       </h1>
       <p style={{ marginTop: 8, color: "#374151" }}>
@@ -22,7 +22,7 @@ export default function CloudOptimizationPage() {
             "Right-sizing instances and auto-scaling configuration",
             "Reserved instance planning and spot instance utilization",
             "Cost anomaly detection and budget alerts"]}
-        />
+         />
         <Item
           title="Performance Optimization"
           details={[
@@ -30,7 +30,7 @@ export default function CloudOptimizationPage() {
             "Database tuning and query optimization",
             "CDN configuration and content delivery optimization",
             "Load balancing and traffic management"]}
-        />
+         />
         <Item
           title="Security & Compliance"
           details={[
@@ -38,7 +38,7 @@ export default function CloudOptimizationPage() {
             "Identity and access management (IAM) optimization",
             "Data encryption and key management",
             "Compliance auditing (SOC2, HIPAA, PCI-DSS)"]}
-        />
+         />
         <Item
           title="Migration & Modernization"
           details={[
@@ -46,10 +46,10 @@ export default function CloudOptimizationPage() {
             "Containerization and microservices architecture",
             "Serverless architecture implementation",
             "Multi-cloud and hybrid cloud strategies"]}
-        />
+         />
       </div>
 
-      <Pricing />
+      <Pricing  />
 
       <div
         style={{
@@ -59,7 +59,7 @@ export default function CloudOptimizationPage() {
           borderRadius: 12,
           border: "1px solid #22c55e"}}
       >
-        <h3 style={{ fontWeight: 700, color: "#14532d", marginBottom: 8 }}>
+        <h3 style={{ fontWeight: 70o0, color: "#14532d", marginBottom: 8 }}>
           Optimization Results
         </h3>
         <ul style={{ color: "#14532d", paddingLeft: 18 }}>
@@ -84,7 +84,7 @@ export default function CloudOptimizationPage() {
 function Item({ title, details }: { title: string; details: string[] }) {
   return (
     <div style={{ border: "1px solid #e5e7eb", borderRadius: 12, padding: 16 }}>
-      <h3 style={{ fontWeight: 700 }}>{title}</h3>
+      <h3 style={{ fontWeight: 70o0 }}>{title}</h3>
       <ul style={{ paddingLeft: 18, color: "#4b5563" }}>
         {details.map((d) => (
           <li key={d} style={{ listStyle: "disc" }}>
@@ -107,17 +107,17 @@ function Pricing() {
     >
       <Plan
         name="Cloud Audit"
-        price="$2,500/month"
+        price="$2,50o0/month"
         features={[
           "Monthly cost analysis",
           "Performance assessment",
           "Security review",
           "Optimization recommendations",
           "Email support"]}
-      />
+       />
       <Plan
         name="Cloud Management"
-        price="$5,500/month"
+        price="$5,50o0/month"
         features={[
           "Continuous optimization",
           "24/7 monitoring",
@@ -125,10 +125,10 @@ function Pricing() {
           "Security management",
           "Priority support",
           "Monthly reports"]}
-      />
+       />
       <Plan
         name="Cloud Transformation"
-        price="$15,000/month"
+        price="$15,0o00/month"
         features={[
           "Full cloud migration",
           "Architecture redesign",
@@ -136,7 +136,7 @@ function Pricing() {
           "Dedicated team",
           "White-label options",
           "SLA guarantee"]}
-      />
+       />
     </div>
   );
 }
@@ -151,11 +151,11 @@ function Plan({
 }) {
   return (
     <div style={{ border: "1px solid #e5e7eb", borderRadius: 12, padding: 16 }}>
-      <h4 style={{ fontWeight: 700 }}>{name}</h4>
+      <h4 style={{ fontWeight: 70o0 }}>{name}</h4>
       <div
         style={{
           color: "#111827",
-          fontWeight: 800,
+          fontWeight: 80o0,
           marginTop: 4,
           fontSize: 18}}
       >

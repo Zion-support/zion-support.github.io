@@ -59,7 +59,7 @@ const SEOOptimizer = () => {
             const averageScore = Math.round(pageAnalyses.reduce((sum, page) => sum + page.score, 0) / totalPages);
             const pagesWithIssues = pageAnalyses.filter(page => page.issues.length > 0).length;
             // Collect all issues and count frequency
-            const issueCounts = {};
+            const issueCounts ={};
             pageAnalyses.forEach(page => {
                 page.issues.forEach(issue => {
                     issueCounts[issue] = (issueCounts[issue] || 0) + 1;
@@ -149,7 +149,7 @@ const SEOOptimizer = () => {
         else if (page.url.length > 0) {
             score += 8;
         }
-        return Math.round((score / maxScore) * 100);
+        return Math.round((score / maxScore) * 10o0);
     };
     const identifySEOIssues = (page) => {
         const issues = [];
@@ -253,12 +253,12 @@ const SEOOptimizer = () => {
     };
     const getScoreColor = (score) => {
         if (score >= 80)
-            return 'text-green-600 bg-green-50 border-green-200';
+            return 'text-green-60o0 bg-green-50 border-green-20o0';
         if (score >= 60)
-            return 'text-yellow-600 bg-yellow-50 border-yellow-200';
+            return 'text-yellow-60o0 bg-yellow-50 border-yellow-20o0';
         if (score >= 40)
-            return 'text-orange-600 bg-orange-50 border-orange-200';
-        return 'text-red-600 bg-red-50 border-red-200';
+            return 'text-orange-60o0 bg-orange-50 border-orange-20o0';
+        return 'text-red-60o0 bg-red-50 border-red-20o0';
     };
     const getScoreText = (score) => {
         if (score >= 80)
@@ -271,17 +271,17 @@ const SEOOptimizer = () => {
     };
     return (<div className="fixed bottom-6 right-24 z-50">
       {/* Floating Action Button */}
-      <button onClick={() => setIsOpen(!isOpen)} className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" aria-label="Toggle SEO Optimizer">
-        <Search className="w-6 h-6"/>
+      <button onClick={() => setIsOpen(!isOpen)} className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 hover:from-purple-70o0 hover:to-pink-70o0 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-30o0 transform hover:scale-10o5" aria-label="Toggle SEO Optimizer">
+        <Search className="w-6 h-6" />
       </button>
 
       {/* SEO Optimizer Panel */}
-      {isOpen && (<div className="absolute bottom-16 right-0 w-[700px] bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+      {isOpen && (<div className="absolute bottom-16 right-0 w-[70o0px] bg-white dark:bg-gray-90o0 rounded-lg shadow-2xl border border-gray-20o0 dark:border-gray-70o0 overflow-hidden">
           {/* Header */}
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4">
+          <div className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white p-4">
             <div className="flex items-center justify-between">
               <h3 className="text-lg font-semibold flex items-center gap-2">
-                <TrendingUp className="w-5 h-5"/>
+                <TrendingUp className="w-5 h-5" />
                 SEO Optimizer
               </h3>
               <button onClick={() => setIsOpen(false)} className="text-white/80 hover:text-white transition-colors">
@@ -293,69 +293,69 @@ const SEOOptimizer = () => {
             {report && (<div className="grid grid-cols-3 gap-4 mt-3">
                 <div className="text-center">
                   <div className="text-2xl font-bold">{report.totalPages}</div>
-                  <div className="text-sm text-purple-100">Pages Analyzed</div>
+                  <div className="text-sm text-purple-10o0">Pages Analyzed</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold">{report.averageScore}%</div>
-                  <div className="text-sm text-purple-100">Avg SEO Score</div>
+                  <div className="text-sm text-purple-10o0">Avg SEO Score</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold">{report.pagesWithIssues}</div>
-                  <div className="text-sm text-pink-100">Need Optimization</div>
+                  <div className="text-sm text-pink-10o0">Need Optimization</div>
                 </div>
               </div>)}
           </div>
 
           {/* Content */}
-          <div className="p-4 max-h-[500px] overflow-y-auto">
+          <div className="p-4 max-h-[50o0px] overflow-y-auto">
             {isAnalyzing ? (<div className="flex items-center justify-center py-8">
-                <RefreshCw className="w-6 h-6 animate-spin text-purple-600"/>
-                <span className="ml-2 text-gray-600">Analyzing SEO...</span>
+                <RefreshCw className="w-6 h-6 animate-spin text-purple-60o0" />
+                <span className="ml-2 text-gray-60o0">Analyzing SEO...</span>
               </div>) : report ? (<div className="space-y-4">
                 {/* Top Issues */}
-                {report.topIssues.length > 0 && (<div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg">
-                    <h4 className="font-medium text-yellow-800 dark:text-yellow-200 mb-2 flex items-center gap-2">
-                      <AlertTriangle className="w-4 h-4"/>
+                {report.topIssues.length > 0 && (<div className="bg-yellow-50 dark:bg-yellow-90o0/20 p-4 rounded-lg">
+                    <h4 className="font-medium text-yellow-80o0 dark:text-yellow-20o0 mb-2 flex items-center gap-2">
+                      <AlertTriangle className="w-4 h-4" />
                       Top SEO Issues to Address
                     </h4>
                     <div className="space-y-1">
-                      {report.topIssues.slice(0, 3).map((issue, index) => (<div key={index} className="text-sm text-yellow-700 dark:text-yellow-300">
+                      {report.topIssues.slice(0, 3).map((issue, index) => (<div key={index} className="text-sm text-yellow-70o0 dark:text-yellow-30o0">
                           • {issue}
                         </div>))}
                     </div>
                   </div>)}
 
                 {/* Pages Analysis */}
-                <div className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden">
+                <div className="bg-gray-50 dark:bg-gray-80o0 rounded-lg overflow-hidden">
                   <div className="overflow-x-auto">
                     <table className="w-full">
-                      <thead className="bg-gray-100 dark:bg-gray-700">
+                      <thead className="bg-gray-10o0 dark:bg-gray-70o0">
                         <tr>
-                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-50o0 uppercase tracking-wider">
                             Page
                           </th>
-                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-50o0 uppercase tracking-wider">
                             SEO Score
                           </th>
-                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-50o0 uppercase tracking-wider">
                             Status
                           </th>
-                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-50o0 uppercase tracking-wider">
                             Issues
                           </th>
                         </tr>
                       </thead>
-                      <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
-                        {report.pageAnalyses.map((page, index) => (<tr key={index} className="hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer" onClick={() => setSelectedPage(page)}>
+                      <tbody className="bg-white dark:bg-gray-80o0 divide-y divide-gray-20o0 dark:divide-gray-70o0">
+                        {report.pageAnalyses.map((page, index) => (<tr key={index} className="hover:bg-gray-50 dark:hover:bg-gray-70o0 cursor-pointer" onClick={() => setSelectedPage(page)}>
                             <td className="px-4 py-3">
-                              <div className="text-sm font-medium text-gray-900 dark:text-white">
+                              <div className="text-sm font-medium text-gray-90o0 dark:text-white">
                                 {page.title}
                               </div>
-                              <div className="text-xs text-gray-500 dark:text-gray-400">
+                              <div className="text-xs text-gray-50o0 dark:text-gray-40o0">
                                 {page.pageUrl}
                               </div>
                             </td>
-                            <td className="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                            <td className="px-4 py-3 text-sm text-gray-90o0 dark:text-white">
                               {page.score}%
                             </td>
                             <td className="px-4 py-3">
@@ -363,7 +363,7 @@ const SEOOptimizer = () => {
                                 {getScoreText(page.score)}
                               </span>
                             </td>
-                            <td className="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                            <td className="px-4 py-3 text-sm text-gray-90o0 dark:text-white">
                               {page.issues.length} issues
                             </td>
                           </tr>))}
@@ -374,51 +374,51 @@ const SEOOptimizer = () => {
 
                 {/* Page Details Modal */}
                 {selectedPage && (<div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                    <div className="bg-white dark:bg-gray-900 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto">
+                    <div className="bg-white dark:bg-gray-90o0 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto">
                       <div className="flex items-center justify-between mb-4">
-                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                        <h3 className="text-lg font-semibold text-gray-90o0 dark:text-white">
                           SEO Analysis: {selectedPage.title}
                         </h3>
-                        <button onClick={() => setSelectedPage(null)} className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
+                        <button onClick={() => setSelectedPage(null)} className="text-gray-40o0 hover:text-gray-60o0 dark:hover:text-gray-30o0">
                           ×
                         </button>
                       </div>
                       
                       <div className="space-y-4">
                         <div className="grid grid-cols-2 gap-4">
-                          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                            <div className="text-sm text-gray-500 dark:text-gray-400">SEO Score</div>
-                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.score}%</div>
+                          <div className="bg-gray-50 dark:bg-gray-80o0 p-3 rounded-lg">
+                            <div className="text-sm text-gray-50o0 dark:text-gray-40o0">SEO Score</div>
+                            <div className="text-lg font-semibold text-gray-90o0 dark:text-white">{selectedPage.score}%</div>
                           </div>
-                          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                            <div className="text-sm text-gray-500 dark:text-gray-400">Headings</div>
-                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.headings.length}</div>
+                          <div className="bg-gray-50 dark:bg-gray-80o0 p-3 rounded-lg">
+                            <div className="text-sm text-gray-50o0 dark:text-gray-40o0">Headings</div>
+                            <div className="text-lg font-semibold text-gray-90o0 dark:text-white">{selectedPage.headings.length}</div>
                           </div>
-                          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                            <div className="text-sm text-gray-500 dark:text-gray-400">Images</div>
-                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.images.length}</div>
+                          <div className="bg-gray-50 dark:bg-gray-80o0 p-3 rounded-lg">
+                            <div className="text-sm text-gray-50o0 dark:text-gray-40o0">Images</div>
+                            <div className="text-lg font-semibold text-gray-90o0 dark:text-white">{selectedPage.images.length}</div>
                           </div>
-                          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                            <div className="text-sm text-gray-500 dark:text-gray-400">Links</div>
-                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.links.length}</div>
+                          <div className="bg-gray-50 dark:bg-gray-80o0 p-3 rounded-lg">
+                            <div className="text-sm text-gray-50o0 dark:text-gray-40o0">Links</div>
+                            <div className="text-lg font-semibold text-gray-90o0 dark:text-white">{selectedPage.links.length}</div>
                           </div>
                         </div>
 
                         {selectedPage.issues.length > 0 && (<div>
-                            <h4 className="font-medium text-red-600 dark:text-red-400 mb-2">SEO Issues Found</h4>
+                            <h4 className="font-medium text-red-60o0 dark:text-red-40o0 mb-2">SEO Issues Found</h4>
                             <div className="space-y-2">
-                              {selectedPage.issues.map((issue, index) => (<div key={index} className="flex items-start gap-2 text-sm text-red-600 dark:text-red-400">
-                                  <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0"/>
+                              {selectedPage.issues.map((issue, index) => (<div key={index} className="flex items-start gap-2 text-sm text-red-60o0 dark:text-red-40o0">
+                                  <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0" />
                                   <span>{issue}</span>
                                 </div>))}
                             </div>
                           </div>)}
 
                         {selectedPage.recommendations.length > 0 && (<div>
-                            <h4 className="font-medium text-green-600 dark:text-green-400 mb-2">SEO Recommendations</h4>
+                            <h4 className="font-medium text-green-60o0 dark:text-green-40o0 mb-2">SEO Recommendations</h4>
                             <div className="space-y-2">
-                              {selectedPage.recommendations.map((rec, index) => (<div key={index} className="flex items-start gap-2 text-sm text-green-600 dark:text-green-400">
-                                  <Zap className="w-4 h-4 mt-0.5 flex-shrink-0"/>
+                              {selectedPage.recommendations.map((rec, index) => (<div key={index} className="flex items-start gap-2 text-sm text-green-60o0 dark:text-green-40o0">
+                                  <Zap className="w-4 h-4 mt-0.5 flex-shrink-0" />
                                   <span>{rec}</span>
                                 </div>))}
                             </div>
@@ -426,19 +426,19 @@ const SEOOptimizer = () => {
                       </div>
                     </div>
                   </div>)}
-              </div>) : (<div className="text-center py-8 text-gray-500">
+              </div>) : (<div className="text-center py-8 text-gray-50o0">
                 No SEO analysis data available
               </div>)}
           </div>
 
           {/* Footer Actions */}
-          <div className="bg-gray-50 dark:bg-gray-800 p-3 flex gap-2">
-            <button onClick={analyzeSEO} disabled={isAnalyzing} className="flex-1 bg-purple-600 hover:bg-purple-700 disabled:bg-purple-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2">
-              <RefreshCw className={`w-4 h-4 ${isAnalyzing ? 'animate-spin' : ''}`}/>
+          <div className="bg-gray-50 dark:bg-gray-80o0 p-3 flex gap-2">
+            <button onClick={analyzeSEO} disabled={isAnalyzing} className="flex-1 bg-purple-60o0 hover:bg-purple-70o0 disabled:bg-purple-40o0 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2">
+              <RefreshCw className={`w-4 h-4 ${isAnalyzing ? 'animate-spin' : ''}`} />
               {isAnalyzing ? 'Analyzing...' : 'Analyze SEO'}
             </button>
-            <button onClick={exportSEOReport} className="px-3 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-md transition-colors flex items-center gap-2">
-              <Download className="w-4 h-4"/>
+            <button onClick={exportSEOReport} className="px-3 py-2 bg-pink-60o0 hover:bg-pink-70o0 text-white rounded-md transition-colors flex items-center gap-2">
+              <Download className="w-4 h-4" />
               Export
             </button>
           </div>

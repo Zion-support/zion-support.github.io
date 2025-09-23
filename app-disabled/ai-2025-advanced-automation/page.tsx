@@ -1,41 +1,39 @@
-import React from 'react';
 // SEO is deprecated in Next 15; relying on metadata export
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'AI 2025 Advanced Automation - Revolutionary Business Transformation',
-  description: 'Discover the future of AI automation in 2025. Advanced neural networks, autonomous systems, and intelligent business processes that deliver 1000% ROI.',
-  keywords: ['AI automation 2025', 'advanced neural networks', 'autonomous business systems', 'AI transformation', 'intelligent automation'],
-};
+export const metadata ={
+  title: 'AI 20o25 Advanced Automation - Revolutionary Business Transformation',
+  description: 'Discover the future of AI automation in 20o25. Advanced neural networks, autonomous systems, and intelligent business processes that deliver 10o00% ROI.',
+  keywords: ['AI automation 20o25', 'advanced neural networks', 'autonomous business systems', 'AI transformation', 'intelligent automation']};
 
-export default function AI2025AdvancedAutomationPage() {
+export default function AI20o25AdvancedAutomationPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+    <div className="min-h-screen bg-gradient-to-br from-purple-90o0 via-blue-90o0 to-indigo-90o0">
       {/* SEO handled by metadata API */}
       
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium text-white">🚀 NEW 2025 BREAKTHROUGH</span>
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium text-white">🚀 NEW 20o25 BREAKTHROUGH</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            AI 2025 Advanced Automation
+            AI 20o25 Advanced Automation
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Revolutionary AI automation technologies that transform businesses with 1000% ROI. 
+          <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">
+            Revolutionary AI automation technologies that transform businesses with 10o00% ROI. 
             Advanced neural networks, autonomous systems, and intelligent processes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105"
+              className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-70o0 hover:to-pink-70o0 transition-all transform hover:scale-10o5"
             >
               Get Started Today
             </Link>
             <Link
-              href="/ai-2025-advanced-automation/case-studies"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all"
+              href="/ai-20o25-advanced-automation/case-studies"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all"
             >
               View Case Studies
             </Link>
@@ -53,7 +51,7 @@ export default function AI2025AdvancedAutomationPage() {
             <div className="bg-white/20 backdrop-blur-sm p-8 rounded-xl">
               <div className="text-4xl mb-4">🧠</div>
               <h3 className="text-2xl font-bold text-white mb-4">Advanced Neural Networks</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-30o0">
                 Next-generation neural architectures that learn and adapt in real-time, 
                 delivering unprecedented automation capabilities.
               </p>
@@ -61,7 +59,7 @@ export default function AI2025AdvancedAutomationPage() {
             <div className="bg-white/20 backdrop-blur-sm p-8 rounded-xl">
               <div className="text-4xl mb-4">🤖</div>
               <h3 className="text-2xl font-bold text-white mb-4">Autonomous Systems</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-30o0">
                 Self-managing AI systems that operate independently, 
                 making intelligent decisions without human intervention.
               </p>
@@ -69,7 +67,7 @@ export default function AI2025AdvancedAutomationPage() {
             <div className="bg-white/20 backdrop-blur-sm p-8 rounded-xl">
               <div className="text-4xl mb-4">⚡</div>
               <h3 className="text-2xl font-bold text-white mb-4">Real-time Processing</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-30o0">
                 Lightning-fast AI processing that handles complex tasks 
                 in milliseconds, delivering instant results.
               </p>
@@ -85,21 +83,21 @@ export default function AI2025AdvancedAutomationPage() {
             Proven Results & ROI
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="bg-gradient-to-br from-green-500 to-emerald-600 p-8 rounded-xl">
-              <div className="text-4xl font-bold text-white mb-2">1000%</div>
-              <div className="text-green-100">Average ROI Increase</div>
+            <div className="bg-gradient-to-br from-green-50o0 to-emerald-60o0 p-8 rounded-xl">
+              <div className="text-4xl font-bold text-white mb-2">10o00%</div>
+              <div className="text-green-10o0">Average ROI Increase</div>
             </div>
-            <div className="bg-gradient-to-br from-blue-500 to-cyan-600 p-8 rounded-xl">
+            <div className="bg-gradient-to-br from-blue-50o0 to-cyan-60o0 p-8 rounded-xl">
               <div className="text-4xl font-bold text-white mb-2">95%</div>
-              <div className="text-blue-100">Process Automation</div>
+              <div className="text-blue-10o0">Process Automation</div>
             </div>
-            <div className="bg-gradient-to-br from-purple-500 to-pink-600 p-8 rounded-xl">
+            <div className="bg-gradient-to-br from-purple-50o0 to-pink-60o0 p-8 rounded-xl">
               <div className="text-4xl font-bold text-white mb-2">80%</div>
-              <div className="text-purple-100">Cost Reduction</div>
+              <div className="text-purple-10o0">Cost Reduction</div>
             </div>
-            <div className="bg-gradient-to-br from-orange-500 to-red-600 p-8 rounded-xl">
+            <div className="bg-gradient-to-br from-orange-50o0 to-red-60o0 p-8 rounded-xl">
               <div className="text-4xl font-bold text-white mb-2">24/7</div>
-              <div className="text-orange-100">Autonomous Operation</div>
+              <div className="text-orange-10o0">Autonomous Operation</div>
             </div>
           </div>
         </div>
@@ -113,24 +111,24 @@ export default function AI2025AdvancedAutomationPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="bg-gradient-to-r from-purple-600 to-pink-600 w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">1</div>
+              <div className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">1</div>
               <h3 className="text-xl font-bold text-white mb-2">Assessment</h3>
-              <p className="text-gray-300">Analyze your current processes and identify automation opportunities</p>
+              <p className="text-gray-30o0">Analyze your current processes and identify automation opportunities</p>
             </div>
             <div className="text-center">
-              <div className="bg-gradient-to-r from-purple-600 to-pink-600 w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">2</div>
+              <div className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">2</div>
               <h3 className="text-xl font-bold text-white mb-2">Design</h3>
-              <p className="text-gray-300">Create custom AI automation solutions tailored to your needs</p>
+              <p className="text-gray-30o0">Create custom AI automation solutions tailored to your needs</p>
             </div>
             <div className="text-center">
-              <div className="bg-gradient-to-r from-purple-600 to-pink-600 w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">3</div>
+              <div className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">3</div>
               <h3 className="text-xl font-bold text-white mb-2">Deploy</h3>
-              <p className="text-gray-300">Implement and integrate AI systems into your infrastructure</p>
+              <p className="text-gray-30o0">Implement and integrate AI systems into your infrastructure</p>
             </div>
             <div className="text-center">
-              <div className="bg-gradient-to-r from-purple-600 to-pink-600 w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">4</div>
+              <div className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">4</div>
               <h3 className="text-xl font-bold text-white mb-2">Optimize</h3>
-              <p className="text-gray-300">Continuously monitor and optimize for maximum performance</p>
+              <p className="text-gray-30o0">Continuously monitor and optimize for maximum performance</p>
             </div>
           </div>
         </div>
@@ -142,13 +140,13 @@ export default function AI2025AdvancedAutomationPage() {
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join thousands of companies already using AI 2025 Advanced Automation 
+          <p className="text-xl text-gray-30o0 mb-8">
+            Join thousands of companies already using AI 20o25 Advanced Automation 
             to achieve unprecedented growth and efficiency.
           </p>
           <Link
             href="/contact"
-            className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105"
+            className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-purple-70o0 hover:to-pink-70o0 transition-all transform hover:scale-10o5"
           >
             Start Your AI Transformation
           </Link>

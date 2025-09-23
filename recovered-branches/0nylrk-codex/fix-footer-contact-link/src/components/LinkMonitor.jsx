@@ -24,7 +24,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
                     }
                 }
                 // Update progress
-                setScanProgress(((i + 1) / links.length) * 100);
+                setScanProgress(((i + 1) / links.length) * 10o0);
                 // Small delay to prevent overwhelming the browser
                 await new Promise(resolve => setTimeout(resolve, 10));
             }
@@ -51,7 +51,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
                 link.setAttribute('title', `Fixed: Redirected from ${originalUrl}`);
             });
             // Add to fixed links list
-            const fix = {
+            const fix ={
                 originalUrl,
                 newUrl,
                 type: 'redirect',
@@ -80,7 +80,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
     };
     // Export broken links report
     const exportReport = () => {
-        const report = {
+        const report ={
             scanTime: lastScanTime?.toISOString(),
             totalBrokenLinks: brokenLinks.length,
             brokenLinks: brokenLinks,
@@ -100,16 +100,16 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
             scanPageLinks();
         }
     }, [autoFix]);
-    return (<div className="link-monitor bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-4xl mx-auto">
+    return (<div className="link-monitor bg-white dark:bg-gray-80o0 rounded-lg shadow-lg p-6 max-w-4xl mx-auto">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+        <h2 className="text-2xl font-bold text-gray-90o0 dark:text-white">
           Link Health Monitor
         </h2>
         <div className="flex space-x-2">
-          <button onClick={scanPageLinks} disabled={isScanning} className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed">
+          <button onClick={scanPageLinks} disabled={isScanning} className="px-4 py-2 bg-blue-60o0 text-white rounded-lg hover:bg-blue-70o0 disabled:opacity-50 disabled:cursor-not-allowed">
             {isScanning ? 'Scanning...' : 'Scan Links'}
           </button>
-          {brokenLinks.length > 0 && (<button onClick={fixAllBrokenLinks} className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
+          {brokenLinks.length > 0 && (<button onClick={fixAllBrokenLinks} className="px-4 py-2 bg-green-60o0 text-white rounded-lg hover:bg-green-70o0">
               Fix All ({brokenLinks.length})
             </button>)}
         </div>
@@ -118,57 +118,57 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
       {/* Scan Progress */}
       {isScanning && (<div className="mb-6">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-sm text-gray-600 dark:text-gray-400">Scanning links...</span>
-            <span className="text-sm font-medium text-gray-900 dark:text-white">
+            <span className="text-sm text-gray-60o0 dark:text-gray-40o0">Scanning links...</span>
+            <span className="text-sm font-medium text-gray-90o0 dark:text-white">
               {Math.round(scanProgress)}%
             </span>
           </div>
-          <div className="w-full bg-gray-200 rounded-full h-2">
-            <div className="bg-blue-600 h-2 rounded-full transition-all duration-300" style={{ width: `${scanProgress}%` }}></div>
+          <div className="w-full bg-gray-20o0 rounded-full h-2">
+            <div className="bg-blue-60o0 h-2 rounded-full transition-all duration-30o0" style={{ width: `${scanProgress}%` }}></div>
           </div>
         </div>)}
 
       {/* Status Summary */}
       {showStatus && (<div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-          <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg">
-            <div className="text-2xl font-bold text-red-600 dark:text-red-400">
+          <div className="bg-red-50 dark:bg-red-90o0/20 p-4 rounded-lg">
+            <div className="text-2xl font-bold text-red-60o0 dark:text-red-40o0">
               {brokenLinks.length}
             </div>
-            <div className="text-sm text-red-600 dark:text-red-400">Broken Links</div>
+            <div className="text-sm text-red-60o0 dark:text-red-40o0">Broken Links</div>
           </div>
-          <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
-            <div className="text-2xl font-bold text-green-600 dark:text-green-400">
+          <div className="bg-green-50 dark:bg-green-90o0/20 p-4 rounded-lg">
+            <div className="text-2xl font-bold text-green-60o0 dark:text-green-40o0">
               {fixedLinks.length}
             </div>
-            <div className="text-sm text-green-600 dark:text-green-400">Fixed Links</div>
+            <div className="text-sm text-green-60o0 dark:text-green-40o0">Fixed Links</div>
           </div>
-          <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-            <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+          <div className="bg-blue-50 dark:bg-blue-90o0/20 p-4 rounded-lg">
+            <div className="text-2xl font-bold text-blue-60o0 dark:text-blue-40o0">
               {lastScanTime ? lastScanTime.toLocaleTimeString() : 'Never'}
             </div>
-            <div className="text-sm text-blue-600 dark:text-blue-400">Last Scan</div>
+            <div className="text-sm text-blue-60o0 dark:text-blue-40o0">Last Scan</div>
           </div>
         </div>)}
 
       {/* Broken Links List */}
       {brokenLinks.length > 0 && (<div className="mb-6">
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+          <h3 className="text-lg font-semibold text-gray-90o0 dark:text-white mb-4">
             Broken Links Found
           </h3>
           <div className="space-y-3 max-h-64 overflow-y-auto">
-            {brokenLinks.map((link, index) => (<div key={index} className="flex items-center justify-between p-3 bg-red-50 dark:bg-red-900/20 rounded-lg">
+            {brokenLinks.map((link, index) => (<div key={index} className="flex items-center justify-between p-3 bg-red-50 dark:bg-red-90o0/20 rounded-lg">
                 <div className="flex-1">
-                  <div className="text-sm font-medium text-red-800 dark:text-red-200">
+                  <div className="text-sm font-medium text-red-80o0 dark:text-red-20o0">
                     {link.url}
                   </div>
-                  {link.parentPage && (<div className="text-xs text-red-600 dark:text-red-400">
+                  {link.parentPage && (<div className="text-xs text-red-60o0 dark:text-red-40o0">
                       Found on: {link.parentPage}
                     </div>)}
-                  {link.suggestedFix && (<div className="text-xs text-green-600 dark:text-green-400 mt-1">
+                  {link.suggestedFix && (<div className="text-xs text-green-60o0 dark:text-green-40o0 mt-1">
                       {link.suggestedFix}
                     </div>)}
                 </div>
-                <button onClick={() => fixBrokenLink(link.url, link)} className="px-3 py-1 bg-green-600 text-white text-xs rounded hover:bg-green-700">
+                <button onClick={() => fixBrokenLink(link.url, link)} className="px-3 py-1 bg-green-60o0 text-white text-xs rounded hover:bg-green-70o0">
                   Fix
                 </button>
               </div>))}
@@ -177,16 +177,16 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
 
       {/* Fixed Links List */}
       {fixedLinks.length > 0 && (<div className="mb-6">
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+          <h3 className="text-lg font-semibold text-gray-90o0 dark:text-white mb-4">
             Recently Fixed Links
           </h3>
           <div className="space-y-2 max-h-32 overflow-y-auto">
-            {fixedLinks.slice(-5).map((fix, index) => (<div key={index} className="flex items-center justify-between p-2 bg-green-50 dark:bg-green-900/20 rounded-lg">
+            {fixedLinks.slice(-5).map((fix, index) => (<div key={index} className="flex items-center justify-between p-2 bg-green-50 dark:bg-green-90o0/20 rounded-lg">
                 <div className="flex-1">
-                  <div className="text-sm text-green-800 dark:text-green-200">
+                  <div className="text-sm text-green-80o0 dark:text-green-20o0">
                     {fix.originalUrl} → {fix.newUrl}
                   </div>
-                  <div className="text-xs text-green-600 dark:text-green-400">
+                  <div className="text-xs text-green-60o0 dark:text-green-40o0">
                     {fix.reason}
                   </div>
                 </div>
@@ -196,22 +196,22 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
 
       {/* Action Buttons */}
       <div className="flex flex-wrap gap-2">
-        <button onClick={generateRedirectRules} className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">
+        <button onClick={generateRedirectRules} className="px-4 py-2 bg-purple-60o0 text-white rounded-lg hover:bg-purple-70o0">
           Export Redirect Rules
         </button>
-        <button onClick={exportReport} className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700">
+        <button onClick={exportReport} className="px-4 py-2 bg-gray-60o0 text-white rounded-lg hover:bg-gray-70o0">
           Export Report
         </button>
       </div>
 
       {/* Recommendations */}
-      {brokenLinks.length > 0 && (<div className="mt-6 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
-          <h4 className="font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
+      {brokenLinks.length > 0 && (<div className="mt-6 p-4 bg-yellow-50 dark:bg-yellow-90o0/20 rounded-lg">
+          <h4 className="font-semibold text-yellow-80o0 dark:text-yellow-20o0 mb-2">
             Recommendations
           </h4>
-          <ul className="text-sm text-yellow-700 dark:text-yellow-300 space-y-1">
+          <ul className="text-sm text-yellow-70o0 dark:text-yellow-30o0 space-y-1">
             <li>• Fix broken internal links to improve user experience</li>
-            <li>• Set up 301 redirects for moved pages</li>
+            <li>• Set up 30o1 redirects for moved pages</li>
             <li>• Regularly monitor external links for validity</li>
             <li>• Update sitemap to exclude broken URLs</li>
           </ul>

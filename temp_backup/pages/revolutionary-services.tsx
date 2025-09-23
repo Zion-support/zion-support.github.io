@@ -18,10 +18,10 @@ export default function RevolutionaryServicesPage() {
 
   const priceRanges = [
     { value: 'All', label: 'All Prices' },
-    { value: '0-1000', label: '$0 - $1,000' },
-    { value: '1001-2500', label: '$1,001 - $2,500' },
-    { value: '2501-5000', label: '$2,501 - $5,000' },
-    { value: '5001+', label: '$5,001+' }
+    { value: '0-10o00', label: '$0 - $1,0o00' },
+    { value: '10o01-250o0', label: '$1,0o01 - $2,50o0' },
+    { value: '250o1-50o00', label: '$2,50o1 - $5,0o00' },
+    { value: '50o01+', label: '$5,0o01+' }
   ],
 
   const sortOptions = [
@@ -37,14 +37,12 @@ export default function RevolutionaryServicesPage() {
 
   // Category filter
   if (selectedCategory !== 'All') {
-    filteredServices = getRevolutionaryServicesByCategory(selectedCategory),
-  }
+    filteredServices = getRevolutionaryServicesByCategory(selectedCategory)}
 
   // Price range filter
   if (priceRange !== 'All') {
     const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p)),
-    filteredServices = getRevolutionaryServicesByPriceRange(min, max),
-  }
+    filteredServices = getRevolutionaryServicesByPriceRange(min, max)}
 
   // Search filter
   if (searchQuery) {
@@ -53,8 +51,7 @@ export default function RevolutionaryServicesPage() {
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
-    ),
-  }
+    )}
 
   // Sort services
   filteredServices.sort((a, b) => {
@@ -73,10 +70,10 @@ export default function RevolutionaryServicesPage() {
     }
   }),
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   },
 
@@ -87,76 +84,76 @@ export default function RevolutionaryServicesPage() {
     {
       name: 'Quantum AI & Cognitive Computing',
       description: 'Revolutionary quantum AI solutions with human-level reasoning capabilities',
-      icon: <Brain className="w-6 h-6" />,
+      icon: <Brain className="w-6 h-6"  />,
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum AI & Cognitive Computing').length,
-      color: 'from-purple-500 to-indigo-600'
+      color: 'from-purple-50o0 to-indigo-60o0'
     },
     {
       name: 'Autonomous Manufacturing & Industry 4.0',
       description: 'Next-generation autonomous manufacturing with zero human intervention',
-      icon: <Factory className="w-6 h-6" />,
+      icon: <Factory className="w-6 h-6"  />,
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Autonomous Manufacturing & Industry 4.0').length,
-      color: 'from-orange-500 to-red-600'
+      color: 'from-orange-50o0 to-red-60o0'
     },
     {
       name: 'Quantum Blockchain & DeFi',
       description: 'Quantum-secured blockchain platforms with infinite scalability',
-      icon: <Globe className="w-6 h-6" />,
+      icon: <Globe className="w-6 h-6"  />,
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Blockchain & DeFi').length,
-      color: 'from-green-500 to-emerald-600'
+      color: 'from-green-50o0 to-emerald-60o0'
     },
     {
       name: 'AI Biomedical Research & Drug Discovery',
       description: 'AI-powered platforms for accelerated drug discovery and medical research',
-      icon: <FlaskIcon className="w-6 h-6" />,
+      icon: <FlaskIcon className="w-6 h-6"  />,
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'AI Biomedical Research & Drug Discovery').length,
-      color: 'from-blue-500 to-indigo-600'
+      color: 'from-blue-50o0 to-indigo-60o0'
     },
     {
       name: 'Quantum Cybersecurity & Threat Detection',
       description: 'Quantum-resistant cybersecurity with AI-powered threat detection',
-      icon: <ShieldCheck className="w-6 h-6" />,
+      icon: <ShieldCheck className="w-6 h-6"  />,
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Cybersecurity & Threat Detection').length,
-      color: 'from-red-500 to-pink-600'
+      color: 'from-red-50o0 to-pink-60o0'
     },
     {
       name: 'Space Technology & Satellite Optimization',
       description: 'Revolutionary platforms for space exploration and satellite optimization',
-      icon: <Rocket className="w-6 h-6" />,
+      icon: <Rocket className="w-6 h-6"  />,
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Space Technology & Satellite Optimization').length,
-      color: 'from-indigo-500 to-purple-600'
+      color: 'from-indigo-50o0 to-purple-60o0'
     },
     {
       name: 'AI Content Creation & Marketing',
       description: 'Quantum-powered content creation at infinite scale',
-      icon: <FileText className="w-6 h-6" />,
+      icon: <FileText className="w-6 h-6"  />,
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'AI Content Creation & Marketing').length,
-      color: 'from-teal-500 to-cyan-600'
+      color: 'from-teal-50o0 to-cyan-60o0'
     },
     {
       name: 'Quantum Computing as a Service',
       description: 'Enterprise quantum computing with real quantum processors',
-      icon: <Cpu className="w-6 h-6" />,
+      icon: <Cpu className="w-6 h-6"  />,
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Computing as a Service').length,
-      color: 'from-violet-500 to-purple-600'
+      color: 'from-violet-50o0 to-purple-60o0'
     },
     {
       name: 'Autonomous Vehicles & Smart Transportation',
       description: 'AI platforms for autonomous vehicles and smart transportation',
-      icon: <CarIcon className="w-6 h-6" />,
+      icon: <CarIcon className="w-6 h-6"  />,
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Autonomous Vehicles & Smart Transportation').length,
-      color: 'from-emerald-500 to-green-600'
+      color: 'from-emerald-50o0 to-green-60o0'
     },
     {
       name: 'Smart Energy & Renewable Energy',
       description: 'AI platforms for smart energy grids and renewable energy optimization',
-      icon: <LeafIcon className="w-6 h-6" />,
+      icon: <LeafIcon className="w-6 h-6"  />,
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Smart Energy & Renewable Energy').length,
-      color: 'from-yellow-500 to-orange-600'
+      color: 'from-yellow-50o0 to-orange-60o0'
     }
   ],
 
-  const containerVariants = {
+  const containerVariants ={
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -166,7 +163,7 @@ export default function RevolutionaryServicesPage() {
     }
   },
 
-  const itemVariants = {
+  const itemVariants ={
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
@@ -182,14 +179,14 @@ export default function RevolutionaryServicesPage() {
       <div className="min-h-screen">
         <Head>
           <title>Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AI, Autonomous Systems, Space Technology</title>
-          <meta name="description" content="Discover revolutionary micro SaaS services from Zion Tech Group. Quantum AI, autonomous manufacturing, space technology, biomedical research, and cutting-edge solutions. Start your free trial today." />
-          <meta name="keywords" content="revolutionary micro SaaS, quantum AI, autonomous manufacturing, space technology, biomedical research, quantum cybersecurity, blockchain, autonomous vehicles, smart energy" />
-          <meta name="author" content="Zion Tech Group" />
-          <meta property="og:title" content="Revolutionary Micro SaaS Services | Zion Tech Group" />
-          <meta property="og:description" content="Cutting-edge micro SaaS platform with quantum AI, autonomous systems, and revolutionary technology solutions." />
-          <meta property="og:url" content="https://ziontechgroup.com/revolutionary-services" />
-          <meta property="og:type" content="website" />
-          <link rel="canonical" href="https://ziontechgroup.com/revolutionary-services" />
+          <meta name="description" content="Discover revolutionary micro SaaS services from Zion Tech Group. Quantum AI, autonomous manufacturing, space technology, biomedical research, and cutting-edge solutions. Start your free trial today."  />
+          <meta name="keywords" content="revolutionary micro SaaS, quantum AI, autonomous manufacturing, space technology, biomedical research, quantum cybersecurity, blockchain, autonomous vehicles, smart energy"  />
+          <meta name="author" content="Zion Tech Group"  />
+          <meta property="og:title" content="Revolutionary Micro SaaS Services | Zion Tech Group"  />
+          <meta property="og:description" content="Cutting-edge micro SaaS platform with quantum AI, autonomous systems, and revolutionary technology solutions."  />
+          <meta property="og:url" content="https://ziontechgroup.com/revolutionary-services"  />
+          <meta property="og:type" content="website"  />
+          <link rel="canonical" href="https://ziontechgroup.com/revolutionary-services"  />
         </Head>
 
         {/* Hero Section */}
@@ -202,14 +199,14 @@ export default function RevolutionaryServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-cyan-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">
                   Revolutionary
                 </span>
-                <br />
+                <br  />
                 <span className="text-white">Micro SaaS Services</span>
               </motion.h1>
               <motion.p 
-                className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
+                className="text-xl md:text-2xl text-gray-30o0 mb-12 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -226,20 +223,20 @@ export default function RevolutionaryServicesPage() {
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{revolutionaryMicroSaasServices.length}+</div>
-                  <div className="text-gray-400">Revolutionary Services</div>
+                  <div className="text-3xl font-bold text-cyan-40o0 mb-2">{revolutionaryMicroSaasServices.length}+</div>
+                  <div className="text-gray-40o0">Revolutionary Services</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">99.99%</div>
-                  <div className="text-gray-400">Accuracy Rate</div>
+                  <div className="text-3xl font-bold text-purple-40o0 mb-2">99.99%</div>
+                  <div className="text-gray-40o0">Accuracy Rate</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-2">21</div>
-                  <div className="text-gray-400">Day Free Trial</div>
+                  <div className="text-3xl font-bold text-green-40o0 mb-2">21</div>
+                  <div className="text-gray-40o0">Day Free Trial</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">2000%+</div>
-                  <div className="text-gray-400">Average ROI</div>
+                  <div className="text-3xl font-bold text-pink-40o0 mb-2">20o00%+</div>
+                  <div className="text-gray-40o0">Average ROI</div>
                 </div>
               </motion.div>
 
@@ -256,7 +253,7 @@ export default function RevolutionaryServicesPage() {
                   onClick={() => document.getElementById('services-grid')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Explore Services
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 w-5 h-5"  />
                 </Button>
                 <Button 
                   variant="futuristic" 
@@ -264,7 +261,7 @@ export default function RevolutionaryServicesPage() {
                   onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
                 >
                   Get Started
-                  <Rocket className="ml-2 w-5 h-5" />
+                  <Rocket className="ml-2 w-5 h-5"  />
                 </Button>
               </motion.div>
             </div>
@@ -272,19 +269,19 @@ export default function RevolutionaryServicesPage() {
         </section>
 
         {/* Contact Information Banner */}
-        <section className="py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-cyan-400/20">
+        <section className="py-8 bg-gradient-to-r from-slate-90o0/80 to-slate-80o0/80 backdrop-blur-sm border-t border-b border-cyan-40o0/20">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <div className="flex items-center gap-4">
-                <Phone className="w-5 h-5 text-cyan-400" />
+                <Phone className="w-5 h-5 text-cyan-40o0"  />
                 <span className="text-white">{contactInfo.mobile}</span>
-                <Mail className="w-5 h-5 text-purple-400" />
+                <Mail className="w-5 h-5 text-purple-40o0"  />
                 <span className="text-white">{contactInfo.email}</span>
               </div>
               <div className="flex items-center gap-4">
-                <MapPin className="w-5 h-5 text-green-400" />
+                <MapPin className="w-5 h-5 text-green-40o0"  />
                 <span className="text-white">{contactInfo.address}</span>
-                <Globe className="w-5 h-5 text-blue-400" />
+                <Globe className="w-5 h-5 text-blue-40o0"  />
                 <span className="text-white">{contactInfo.website}</span>
               </div>
             </div>
@@ -305,7 +302,7 @@ export default function RevolutionaryServicesPage() {
                 <motion.div
                   key={category.name}
                   variants={itemVariants}
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.0o5 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <UltraFuturisticCard
@@ -318,9 +315,9 @@ export default function RevolutionaryServicesPage() {
                       {category.icon}
                     </div>
                     <h3 className="text-lg font-semibold text-white mb-2">{category.name}</h3>
-                    <p className="text-sm text-gray-400 mb-3">{category.description}</p>
-                    <div className="text-2xl font-bold text-cyan-400">{category.count}</div>
-                    <div className="text-xs text-gray-500">Services</div>
+                    <p className="text-sm text-gray-40o0 mb-3">{category.description}</p>
+                    <div className="text-2xl font-bold text-cyan-40o0">{category.count}</div>
+                    <div className="text-xs text-gray-50o0">Services</div>
                   </UltraFuturisticCard>
                 </motion.div>
               ))}
@@ -339,13 +336,13 @@ export default function RevolutionaryServicesPage() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-cyan-40o0 to-purple-40o0 bg-clip-text text-transparent">
                   Most Popular
                 </span>
-                <br />
+                <br  />
                 <span className="text-white">Revolutionary Services</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
                 Discover our most sought-after revolutionary micro SaaS services that are transforming industries worldwide.
               </p>
             </motion.div>
@@ -372,16 +369,16 @@ export default function RevolutionaryServicesPage() {
                     <div className="text-center mb-6">
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
-                      <p className="text-gray-300 mb-4">{service.tagline}</p>
-                      <div className="text-3xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                      <div className="text-sm text-gray-400">{service.period}</div>
+                      <p className="text-gray-30o0 mb-4">{service.tagline}</p>
+                      <div className="text-3xl font-bold text-cyan-40o0 mb-2">{service.price}</div>
+                      <div className="text-sm text-gray-40o0">{service.period}</div>
                     </div>
                     
                     <div className="space-y-3 mb-6">
                       {service.features.slice(0, 4).map((feature, idx) => (
                         <div key={idx} className="flex items-center gap-2">
-                          <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
-                          <span className="text-sm text-gray-300">{feature}</span>
+                          <Check className="w-4 h-4 text-green-40o0 flex-shrink-0"  />
+                          <span className="text-sm text-gray-30o0">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -394,7 +391,7 @@ export default function RevolutionaryServicesPage() {
                              className="w-full"
                            >
                              Learn More
-                             <ExternalLink className="ml-2 w-4 h-4" />
+                             <ExternalLink className="ml-2 w-4 h-4"  />
                            </Button>
                     </div>
                   </UltraFuturisticCard>
@@ -420,7 +417,7 @@ export default function RevolutionaryServicesPage() {
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="px-4 py-2 bg-slate-800 border border-cyan-400/30 rounded-lg text-white focus:outline-none focus:border-cyan-400"
+                    className="px-4 py-2 bg-slate-80o0 border border-cyan-40o0/30 rounded-lg text-white focus:outline-none focus:border-cyan-40o0"
                   >
                     <option value="All">All Categories</option>
                     {revolutionaryServiceCategories.map(category => (
@@ -431,7 +428,7 @@ export default function RevolutionaryServicesPage() {
                   <select
                     value={priceRange}
                     onChange={(e) => setPriceRange(e.target.value)}
-                    className="px-4 py-2 bg-slate-800 border border-purple-400/30 rounded-lg text-white focus:outline-none focus:border-purple-400"
+                    className="px-4 py-2 bg-slate-80o0 border border-purple-40o0/30 rounded-lg text-white focus:outline-none focus:border-purple-40o0"
                   >
                     {priceRanges.map(range => (
                       <option key={range.value} value={range.value}>{range.label}</option>
@@ -441,7 +438,7 @@ export default function RevolutionaryServicesPage() {
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className="px-4 py-2 bg-slate-800 border border-green-400/30 rounded-lg text-white focus:outline-none focus:border-green-400"
+                    className="px-4 py-2 bg-slate-80o0 border border-green-40o0/30 rounded-lg text-white focus:outline-none focus:border-green-40o0"
                   >
                     {sortOptions.map(option => (
                       <option key={option.value} value={option.value}>{option.label}</option>
@@ -451,28 +448,28 @@ export default function RevolutionaryServicesPage() {
                 
                 <div className="flex items-center gap-4">
                   <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-40o0"  />
                     <input
                       type="text"
                       placeholder="Search services..."
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
-                      className="pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64"
+                      className="pl-10 pr-4 py-2 bg-slate-80o0 border border-gray-60o0 rounded-lg text-white focus:outline-none focus:border-cyan-40o0 w-64"
                     />
                   </div>
                   
-                  <div className="flex border border-gray-600 rounded-lg overflow-hidden">
+                  <div className="flex border border-gray-60o0 rounded-lg overflow-hidden">
                     <button
                       onClick={() => setViewMode('grid')}
-                      className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
+                      className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-50o0 text-white' : 'bg-slate-80o0 text-gray-40o0'}`}
                     >
-                      <Grid className="w-4 h-4" />
+                      <Grid className="w-4 h-4"  />
                     </button>
                     <button
                       onClick={() => setViewMode('list')}
-                      className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
+                      className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-50o0 text-white' : 'bg-slate-80o0 text-gray-40o0'}`}
                     >
-                      <List className="w-4 h-4" />
+                      <List className="w-4 h-4"  />
                     </button>
                   </div>
                 </div>
@@ -507,15 +504,15 @@ export default function RevolutionaryServicesPage() {
                       <div className="text-center">
                         <div className="text-4xl mb-4">{service.icon}</div>
                         <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                        <p className="text-gray-300 mb-4 text-sm">{service.tagline}</p>
-                        <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                        <div className="text-sm text-gray-400 mb-4">{service.period}</div>
+                        <p className="text-gray-30o0 mb-4 text-sm">{service.tagline}</p>
+                        <div className="text-2xl font-bold text-cyan-40o0 mb-2">{service.price}</div>
+                        <div className="text-sm text-gray-40o0 mb-4">{service.period}</div>
                         
                         <div className="space-y-2 mb-6">
                           {service.features.slice(0, 3).map((feature, idx) => (
                             <div key={idx} className="flex items-center gap-2 text-sm">
-                              <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
-                              <span className="text-gray-300">{feature}</span>
+                              <Check className="w-3 h-3 text-green-40o0 flex-shrink-0"  />
+                              <span className="text-gray-30o0">{feature}</span>
                             </div>
                           ))}
                         </div>
@@ -528,7 +525,7 @@ export default function RevolutionaryServicesPage() {
                             className="w-full"
                           >
                             Learn More
-                            <ExternalLink className="ml-2 w-4 h-4" />
+                            <ExternalLink className="ml-2 w-4 h-4"  />
                           </Button>
                         </div>
                       </div>
@@ -540,32 +537,32 @@ export default function RevolutionaryServicesPage() {
                           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                             <div>
                               <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                              <p className="text-gray-300 text-sm">{service.tagline}</p>
+                              <p className="text-gray-30o0 text-sm">{service.tagline}</p>
                             </div>
                             <div className="text-right mt-2 md:mt-0">
-                              <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
-                              <div className="text-sm text-gray-400">{service.period}</div>
+                              <div className="text-2xl font-bold text-cyan-40o0">{service.price}</div>
+                              <div className="text-sm text-gray-40o0">{service.period}</div>
                             </div>
                           </div>
                           
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                             <div>
-                              <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features</h4>
+                              <h4 className="text-sm font-semibold text-cyan-40o0 mb-2">Key Features</h4>
                               <div className="space-y-1">
                                 {service.features.slice(0, 4).map((feature, idx) => (
                                   <div key={idx} className="flex items-center gap-2 text-sm">
-                                    <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
-                                    <span className="text-gray-300">{feature}</span>
+                                    <Check className="w-3 h-3 text-green-40o0 flex-shrink-0"  />
+                                    <span className="text-gray-30o0">{feature}</span>
                                   </div>
                                 ))}
                               </div>
                             </div>
                             <div>
-                              <h4 className="text-sm font-semibold text-purple-400 mb-2">Market Info</h4>
-                              <div className="space-y-1 text-sm text-gray-300">
-                                <div><span className="text-gray-400">ROI:</span> {service.roi}</div>
-                                <div><span className="text-gray-400">Market:</span> {service.marketSize}</div>
-                                <div><span className="text-gray-400">Growth:</span> {service.growthRate}</div>
+                              <h4 className="text-sm font-semibold text-purple-40o0 mb-2">Market Info</h4>
+                              <div className="space-y-1 text-sm text-gray-30o0">
+                                <div><span className="text-gray-40o0">ROI:</span> {service.roi}</div>
+                                <div><span className="text-gray-40o0">Market:</span> {service.marketSize}</div>
+                                <div><span className="text-gray-40o0">Growth:</span> {service.growthRate}</div>
                               </div>
                             </div>
                           </div>
@@ -577,7 +574,7 @@ export default function RevolutionaryServicesPage() {
                                onClick={() => window.open(service.link, '_blank')}
                              >
                                Learn More
-                               <ExternalLink className="ml-2 w-4 h-4" />
+                               <ExternalLink className="ml-2 w-4 h-4"  />
                              </Button>
                              <Button 
                                variant="futuristic" 
@@ -585,7 +582,7 @@ export default function RevolutionaryServicesPage() {
                                onClick={() => setSelectedService(service)}
                              >
                                View Details
-                               <Eye className="ml-2 w-4 h-4" />
+                               <Eye className="ml-2 w-4 h-4"  />
                              </Button>
                           </div>
                         </div>
@@ -605,14 +602,13 @@ export default function RevolutionaryServicesPage() {
               >
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>
-                <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>
+                <p className="text-gray-40o0 mb-6">Try adjusting your search criteria or filters.</p>
                                          <Button 
                            variant="primary"
                            onClick={() => {
                              setSearchQuery(''),
                              setSelectedCategory('All'),
-                             setPriceRange('All'),
-                           }}
+                             setPriceRange('All')}}
                          >
                            Clear Filters
                          </Button>
@@ -632,7 +628,7 @@ export default function RevolutionaryServicesPage() {
               onClick={() => setSelectedService(null)}
             >
               <motion.div
-                className="bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+                className="bg-slate-90o0 rounded-2xl border border-cyan-40o0/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
@@ -644,12 +640,12 @@ export default function RevolutionaryServicesPage() {
                       <div className="text-5xl">{selectedService.icon}</div>
                       <div>
                         <h2 className="text-3xl font-bold text-white mb-2">{selectedService.name}</h2>
-                        <p className="text-xl text-gray-300">{selectedService.tagline}</p>
+                        <p className="text-xl text-gray-30o0">{selectedService.tagline}</p>
                       </div>
                     </div>
                     <button
                       onClick={() => setSelectedService(null)}
-                      className="text-gray-400 hover:text-white text-2xl"
+                      className="text-gray-40o0 hover:text-white text-2xl"
                     >
                       ×
                     </button>
@@ -657,62 +653,62 @@ export default function RevolutionaryServicesPage() {
 
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div>
-                      <h3 className="text-xl font-semibold text-cyan-400 mb-4">Service Details</h3>
-                      <p className="text-gray-300 mb-6">{selectedService.description}</p>
+                      <h3 className="text-xl font-semibold text-cyan-40o0 mb-4">Service Details</h3>
+                      <p className="text-gray-30o0 mb-6">{selectedService.description}</p>
                       
                       <div className="space-y-4">
                         <div>
-                          <h4 className="text-sm font-semibold text-purple-400 mb-2">Pricing</h4>
+                          <h4 className="text-sm font-semibold text-purple-40o0 mb-2">Pricing</h4>
                           <div className="text-2xl font-bold text-white">{selectedService.price}{selectedService.period}</div>
-                          <div className="text-sm text-gray-400">{selectedService.marketPrice}</div>
+                          <div className="text-sm text-gray-40o0">{selectedService.marketPrice}</div>
                         </div>
                         
                         <div>
-                          <h4 className="text-sm font-semibold text-green-400 mb-2">ROI & Market</h4>
-                          <div className="text-sm text-gray-300 space-y-1">
-                            <div><span className="text-gray-400">ROI:</span> {selectedService.roi}</div>
-                            <div><span className="text-gray-400">Market Size:</span> {selectedService.marketSize}</div>
-                            <div><span className="text-gray-400">Growth Rate:</span> {selectedService.growthRate}</div>
+                          <h4 className="text-sm font-semibold text-green-40o0 mb-2">ROI & Market</h4>
+                          <div className="text-sm text-gray-30o0 space-y-1">
+                            <div><span className="text-gray-40o0">ROI:</span> {selectedService.roi}</div>
+                            <div><span className="text-gray-40o0">Market Size:</span> {selectedService.marketSize}</div>
+                            <div><span className="text-gray-40o0">Growth Rate:</span> {selectedService.growthRate}</div>
                           </div>
                         </div>
                       </div>
                     </div>
 
                     <div>
-                      <h3 className="text-xl font-semibold text-cyan-400 mb-4">Features & Capabilities</h3>
+                      <h3 className="text-xl font-semibold text-cyan-40o0 mb-4">Features & Capabilities</h3>
                       
                       <div className="space-y-4">
                         <div>
-                          <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features</h4>
+                          <h4 className="text-sm font-semibold text-purple-40o0 mb-2">Key Features</h4>
                           <div className="space-y-2">
                             {selectedService.features.map((feature, idx) => (
                               <div key={idx} className="flex items-center gap-2 text-sm">
-                                <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
-                                <span className="text-gray-300">{feature}</span>
+                                <Check className="w-3 h-3 text-green-40o0 flex-shrink-0"  />
+                                <span className="text-gray-30o0">{feature}</span>
                               </div>
                             ))}
                           </div>
                         </div>
                         
                         <div>
-                          <h4 className="text-sm font-semibold text-green-400 mb-2">Benefits</h4>
+                          <h4 className="text-sm font-semibold text-green-40o0 mb-2">Benefits</h4>
                           <div className="space-y-2">
                             {selectedService.benefits.map((benefit, idx) => (
                               <div key={idx} className="flex items-center gap-2 text-sm">
-                                <Star className="w-3 h-3 text-yellow-400 flex-shrink-0" />
-                                <span className="text-gray-300">{benefit}</span>
+                                <Star className="w-3 h-3 text-yellow-40o0 flex-shrink-0"  />
+                                <span className="text-gray-30o0">{benefit}</span>
                               </div>
                             ))}
                           </div>
                         </div>
                         
                         <div>
-                          <h4 className="text-sm font-semibold text-blue-400 mb-2">Capabilities</h4>
+                          <h4 className="text-sm font-semibold text-blue-40o0 mb-2">Capabilities</h4>
                           <div className="space-y-2">
                             {selectedService.capabilities.map((capability, idx) => (
                               <div key={idx} className="flex items-center gap-2 text-sm">
-                                <Zap className="w-3 h-3 text-cyan-400 flex-shrink-0" />
-                                <span className="text-gray-300">{capability}</span>
+                                <Zap className="w-3 h-3 text-cyan-40o0 flex-shrink-0"  />
+                                <span className="text-gray-30o0">{capability}</span>
                               </div>
                             ))}
                           </div>
@@ -721,9 +717,9 @@ export default function RevolutionaryServicesPage() {
                     </div>
                   </div>
 
-                  <div className="mt-8 pt-6 border-t border-gray-700">
+                  <div className="mt-8 pt-6 border-t border-gray-70o0">
                     <div className="flex flex-col sm:flex-row gap-4 justify-between items-center">
-                      <div className="text-sm text-gray-400">
+                      <div className="text-sm text-gray-40o0">
                         <div>Setup Time: {selectedService.setupTime}</div>
                         <div>Trial: {selectedService.trialDays} days</div>
                       </div>
@@ -734,14 +730,14 @@ export default function RevolutionaryServicesPage() {
                            onClick={() => window.open(selectedService.link, '_blank')}
                          >
                            Visit Service
-                           <ExternalLink className="ml-2 w-4 h-4" />
+                           <ExternalLink className="ml-2 w-4 h-4"  />
                          </Button>
                          <Button 
                            variant="futuristic"
                            onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
                          >
                            Contact Sales
-                           <Mail className="ml-2 w-4 h-4" />
+                           <Mail className="ml-2 w-4 h-4"  />
                          </Button>
                       </div>
                     </div>
@@ -765,7 +761,7 @@ export default function RevolutionaryServicesPage() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Experience the Future?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-30o0 mb-8">
                 Join thousands of companies already transforming their business with our revolutionary micro SaaS services.
               </p>
               
@@ -776,7 +772,7 @@ export default function RevolutionaryServicesPage() {
                    onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
                  >
                    Start Free Trial
-                   <Rocket className="ml-2 w-5 h-5" />
+                   <Rocket className="ml-2 w-5 h-5"  />
                  </Button>
                  <Button 
                    variant="futuristic" 
@@ -784,25 +780,25 @@ export default function RevolutionaryServicesPage() {
                    onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
                  >
                    Schedule Demo
-                   <Calendar className="ml-2 w-5 h-5" />
+                   <Calendar className="ml-2 w-5 h-5"  />
                  </Button>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                 <div>
-                  <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
+                  <Phone className="w-8 h-8 text-cyan-40o0 mx-auto mb-2"  />
                   <div className="text-white font-semibold">{contactInfo.mobile}</div>
-                  <div className="text-gray-400 text-sm">Call us anytime</div>
+                  <div className="text-gray-40o0 text-sm">Call us anytime</div>
                 </div>
                 <div>
-                  <Mail className="w-8 h-8 text-purple-400 mx-auto mb-2" />
+                  <Mail className="w-8 h-8 text-purple-40o0 mx-auto mb-2"  />
                   <div className="text-white font-semibold">{contactInfo.email}</div>
-                  <div className="text-gray-400 text-sm">Email us 24/7</div>
+                  <div className="text-gray-40o0 text-sm">Email us 24/7</div>
                 </div>
                 <div>
-                  <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />
+                  <MapPin className="w-8 h-8 text-green-40o0 mx-auto mb-2"  />
                   <div className="text-white font-semibold">{contactInfo.address}</div>
-                  <div className="text-gray-400 text-sm">Visit our office</div>
+                  <div className="text-gray-40o0 text-sm">Visit our office</div>
                 </div>
               </div>
             </motion.div>
@@ -810,5 +806,4 @@ export default function RevolutionaryServicesPage() {
         </section>
       </div>
     </UltraFuturisticBackground>
-  ),
-}
+  )}

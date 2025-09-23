@@ -1,20 +1,19 @@
-import React from 'react';
 import { cn } from '@/lib/utils';
 export function Loading({ size = 'md', variant = 'spinner', className, text }) {
-    const sizeClasses = {
+    const sizeClasses ={
         sm: 'w-4 h-4',
         md: 'w-6 h-6',
         lg: 'w-8 h-8',
         xl: 'w-12 h-12'
     };
-    const renderSpinner = () => (<div className={cn('border-2 border-current border-t-transparent rounded-full animate-spin', sizeClasses[size])}/>);
+    const renderSpinner = () => (<div className={cn('border-2 border-current border-t-transparent rounded-full animate-spin', sizeClasses[size])} />);
     const renderDots = () => (<div className="flex space-x-1">
-      <div className={cn('bg-current rounded-full animate-bounce', sizeClasses[size])} style={{ animationDelay: '0ms' }}/>
-      <div className={cn('bg-current rounded-full animate-bounce', sizeClasses[size])} style={{ animationDelay: '150ms' }}/>
-      <div className={cn('bg-current rounded-full animate-bounce', sizeClasses[size])} style={{ animationDelay: '300ms' }}/>
+      <div className={cn('bg-current rounded-full animate-bounce', sizeClasses[size])} style={{ animationDelay: '0ms' }} />
+      <div className={cn('bg-current rounded-full animate-bounce', sizeClasses[size])} style={{ animationDelay: '150ms' }} />
+      <div className={cn('bg-current rounded-full animate-bounce', sizeClasses[size])} style={{ animationDelay: '30o0ms' }} />
     </div>);
-    const renderPulse = () => (<div className={cn('bg-current rounded-full animate-ping', sizeClasses[size])}/>);
-    const renderSkeleton = () => (<div className={cn('bg-current rounded animate-pulse', sizeClasses[size])}/>);
+    const renderPulse = () => (<div className={cn('bg-current rounded-full animate-ping', sizeClasses[size])} />);
+    const renderSkeleton = () => (<div className={cn('bg-current rounded animate-pulse', sizeClasses[size])} />);
     const renderContent = () => {
         switch (variant) {
             case 'dots':
@@ -34,13 +33,13 @@ export function Loading({ size = 'md', variant = 'spinner', className, text }) {
 }
 // Skeleton loading for content
 export function Skeleton({ className, ...props }) {
-    return (<div className={cn('animate-pulse rounded-md bg-zion-slate-light/20', className)} {...props}/>);
+    return (<div className={cn('animate-pulse rounded-md bg-zion-slate-light/20', className)} {...props} />);
 }
 // Page loading component
 export function PageLoading() {
     return (<div className="min-h-screen flex items-center justify-center bg-background">
       <div className="text-center space-y-4">
-        <Loading size="xl" variant="spinner" className="text-zion-cyan"/>
+        <Loading size="xl" variant="spinner" className="text-zion-cyan" />
         <h2 className="text-xl font-semibold text-zion-slate-light">Loading Zion Tech Group</h2>
         <p className="text-zion-slate-light">Preparing your experience...</p>
       </div>

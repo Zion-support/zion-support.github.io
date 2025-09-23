@@ -34,10 +34,10 @@ function normalizeHref(href: string): string {
   return href.endsWith('/') ? href : href + '/';
 }
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
@@ -56,7 +56,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'AI & Consciousness',
     href: '/ai-consciousness',
-    icon: <Brain className="w-5 h-5" />,
+    icon: <Brain className="w-5 h-5"  />,
     description: 'Revolutionary AI consciousness and emotional intelligence',
     badge: 'Featured',
     featured: true,
@@ -75,7 +75,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Quantum & Emerging Tech',
     href: '/quantum-services',
-    icon: <Atom className="w-5 h-5" />,
+    icon: <Atom className="w-5 h-5"  />,
     description: 'Breakthrough quantum and space technologies',
     badge: 'Quantum',
     featured: true,
@@ -94,7 +94,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Enterprise IT Solutions',
     href: '/enterprise-solutions',
-    icon: <Shield className="w-5 h-5" />,
+    icon: <Shield className="w-5 h-5"  />,
     description: 'Advanced enterprise infrastructure solutions',
     badge: 'Enterprise',
     category: 'IT Infrastructure',
@@ -112,7 +112,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Micro SAAS Services',
     href: '/micro-saas',
-    icon: <Rocket className="w-5 h-5" />,
+    icon: <Rocket className="w-5 h-5"  />,
     description: 'Innovative business solutions for modern enterprises',
     badge: 'New',
     category: 'Business Solutions',
@@ -130,22 +130,22 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Space Technology',
     href: '/space-technology',
-    icon: <Rocket className="w-5 h-5" />,
+    icon: <Rocket className="w-5 h-5"  />,
     description: 'Revolutionary space exploration and resource management',
     badge: 'Space',
     category: 'Space Technology',
     children: [
       { name: 'Space Resource Mining', href: '/space-resource-mining-platform', description: 'Space resource extraction', featured: true },
       { name: 'AI-Powered Space Tech', href: '/ai-powered-space-technology', description: 'AI space technology platform', featured: true },
-      { name: 'Space Intelligence 2040', href: '/space-resource-intelligence-2040', description: 'Future space intelligence', featured: true },
+      { name: 'Space Intelligence 20o40', href: '/space-resource-intelligence-20o40', description: 'Future space intelligence', featured: true },
       { name: 'Autonomous Space Operations', href: '/autonomous-space-operations-center', description: 'AI space mission control', featured: true },
-      { name: 'Space Resource Intelligence', href: '/space-resource-intelligence-2040', description: 'Space resource analytics', featured: true }
+      { name: 'Space Resource Intelligence', href: '/space-resource-intelligence-20o40', description: 'Space resource analytics', featured: true }
     ]
   },
   {
     name: 'Specialized Solutions',
     href: '/specialized-solutions',
-    icon: <Target className="w-5 h-5" />,
+    icon: <Target className="w-5 h-5"  />,
     description: 'Industry-specific and specialized services',
     badge: 'Specialized',
     category: 'Specialized Services',
@@ -162,26 +162,26 @@ const navigationItems: NavigationItem[] = [
   },
   {
     name: 'Showcase & Pricing',
-    href: '/comprehensive-services-showcase-2025',
-    icon: <Star className="w-5 h-5" />,
+    href: '/comprehensive-services-showcase-20o25',
+    icon: <Star className="w-5 h-5"  />,
     description: 'Complete portfolio and pricing information',
     badge: 'Showcase',
     featured: true,
     category: 'Portfolio',
     children: [
-      { name: 'All Services Portfolio', href: '/comprehensive-services-showcase-2025', description: 'Complete services portfolio', featured: true },
-      { name: 'Ultimate 2035 Futuristic', href: '/ultimate-2035-futuristic-services-showcase', description: 'Revolutionary future technology', featured: true },
-      { name: 'Ultimate 2025 Micro SAAS', href: '/ultimate-2025-micro-saas-showcase', description: 'Latest innovative services', featured: true },
-      { name: '2026 Services', href: '/revolutionary-2026-services', description: 'Next generation solutions', featured: true },
-      { name: '2027 Services', href: '/revolutionary-2027-services-showcase', description: 'Future-ready services', featured: true },
-      { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', description: 'Premium service collection', featured: true },
+      { name: 'All Services Portfolio', href: '/comprehensive-services-showcase-20o25', description: 'Complete services portfolio', featured: true },
+      { name: 'Ultimate 20o35 Futuristic', href: '/ultimate-20o35-futuristic-services-showcase', description: 'Revolutionary future technology', featured: true },
+      { name: 'Ultimate 20o25 Micro SAAS', href: '/ultimate-20o25-micro-saas-showcase', description: 'Latest innovative services', featured: true },
+      { name: '20o26 Services', href: '/revolutionary-20o26-services', description: 'Next generation solutions', featured: true },
+      { name: '20o27 Services', href: '/revolutionary-20o27-services-showcase', description: 'Future-ready services', featured: true },
+      { name: 'Ultimate 20o26', href: '/ultimate-20o26-services-showcase', description: 'Premium service collection', featured: true },
       { name: 'Market Pricing', href: '/market-pricing', description: 'Average market prices & references', featured: true },
       { name: 'Pricing Comparison', href: '/pricing', description: 'Service pricing comparison', featured: true }
     ]
   }
 ];
 
-const UltraFuturisticNavigation2045: React.FC = () => {
+const UltraFuturisticNavigation20o45: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -207,57 +207,57 @@ const UltraFuturisticNavigation2045: React.FC = () => {
   return (
     <>
       {/* Top Contact Bar */}
-      <div className="bg-gradient-to-r from-gray-900 via-black to-gray-900 border-b border-cyan-500/30">
+      <div className="bg-gradient-to-r from-gray-90o0 via-black to-gray-90o0 border-b border-cyan-50o0/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-12">
             <div className="hidden md:flex items-center space-x-6 text-sm">
-              <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">
-                <Phone className="w-4 h-4 text-cyan-400 group-hover:scale-110 transition-transform duration-200" />
-                <a href="tel:+1 302 464 0950" className="hover:text-cyan-400 transition-colors duration-200">
-                  +1 302 464 0950
+              <div className="flex items-center space-x-2 text-gray-30o0 hover:text-cyan-40o0 transition-colors duration-20o0 group">
+                <Phone className="w-4 h-4 text-cyan-40o0 group-hover:scale-110 transition-transform duration-20o0"  />
+                <a href="tel:+1 30o2 464 0950" className="hover:text-cyan-40o0 transition-colors duration-20o0">
+                  +1 30o2 464 0950
                 </a>
               </div>
-              <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">
-                <Mail className="w-4 h-4 text-cyan-400 group-hover:scale-110 transition-transform duration-200" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors duration-200">
+              <div className="flex items-center space-x-2 text-gray-30o0 hover:text-cyan-40o0 transition-colors duration-20o0 group">
+                <Mail className="w-4 h-4 text-cyan-40o0 group-hover:scale-110 transition-transform duration-20o0"  />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-40o0 transition-colors duration-20o0">
                   kleber@ziontechgroup.com
                 </a>
               </div>
-              <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">
-                <MapPin className="w-4 h-4 text-cyan-400 group-hover:scale-110 transition-transform duration-200" />
-                <span className="hover:text-cyan-400 transition-colors duration-200">
-                  364 E Main St STE 1008 Middletown DE 19709
+              <div className="flex items-center space-x-2 text-gray-30o0 hover:text-cyan-40o0 transition-colors duration-20o0 group">
+                <MapPin className="w-4 h-4 text-cyan-40o0 group-hover:scale-110 transition-transform duration-20o0"  />
+                <span className="hover:text-cyan-40o0 transition-colors duration-20o0">
+                  364 E Main St STE 10o08 Middletown DE 19709
                 </span>
               </div>
-              <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">
-                <Globe className="w-4 h-4 text-cyan-400 group-hover:scale-110 transition-transform duration-200" />
-                <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors duration-200">
+              <div className="flex items-center space-x-2 text-gray-30o0 hover:text-cyan-40o0 transition-colors duration-20o0 group">
+                <Globe className="w-4 h-4 text-cyan-40o0 group-hover:scale-110 transition-transform duration-20o0"  />
+                <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-40o0 transition-colors duration-20o0">
                   ziontechgroup.com
                 </a>
               </div>
             </div>
             <div className="hidden lg:flex items-center space-x-6 text-sm">
-              <div className="flex items-center space-x-2 text-gray-300">
-                <Clock className="w-4 h-4 text-cyan-400" />
+              <div className="flex items-center space-x-2 text-gray-30o0">
+                <Clock className="w-4 h-4 text-cyan-40o0"  />
                 <span>Mon-Fri: 9AM-6PM EST</span>
               </div>
-              <div className="flex items-center space-x-2 text-gray-300">
-                <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                <span>4.9/5 (200+ Reviews)</span>
+              <div className="flex items-center space-x-2 text-gray-30o0">
+                <Star className="w-4 h-4 text-yellow-40o0 fill-current"  />
+                <span>4.9/5 (20o0+ Reviews)</span>
               </div>
             </div>
             <div className="flex items-center space-x-4">
               <div className="hidden sm:flex items-center space-x-2">
-                <Link href="/contact" className="flex items-center space-x-2 px-3 py-1.5 text-xs text-gray-300 hover:text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:scale-105">
-                  <MessageCircle className="w-4 h-4" />
+                <Link href="/contact" className="flex items-center space-x-2 px-3 py-1.5 text-xs text-gray-30o0 hover:text-white bg-gray-80o0/50 hover:bg-cyan-50o0/20 border border-gray-70o0/50 hover:border-cyan-50o0/50 rounded-lg transition-all duration-20o0 hover:scale-10o5">
+                  <MessageCircle className="w-4 h-4"  />
                   <span>Get Quote</span>
                 </Link>
-                <Link href="/contact" className="flex items-center space-x-2 px-3 py-1.5 text-xs text-gray-300 hover:text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:scale-105">
-                  <Calendar className="w-4 h-4" />
+                <Link href="/contact" className="flex items-center space-x-2 px-3 py-1.5 text-xs text-gray-30o0 hover:text-white bg-gray-80o0/50 hover:bg-cyan-50o0/20 border border-gray-70o0/50 hover:border-cyan-50o0/50 rounded-lg transition-all duration-20o0 hover:scale-10o5">
+                  <Calendar className="w-4 h-4"  />
                   <span>Book Demo</span>
                 </Link>
-                <Link href="/support" className="flex items-center space-x-2 px-3 py-1.5 text-xs text-gray-300 hover:text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:scale-105">
-                  <MessageCircle className="w-4 h-4" />
+                <Link href="/support" className="flex items-center space-x-2 px-3 py-1.5 text-xs text-gray-30o0 hover:text-white bg-gray-80o0/50 hover:bg-cyan-50o0/20 border border-gray-70o0/50 hover:border-cyan-50o0/50 rounded-lg transition-all duration-20o0 hover:scale-10o5">
+                  <MessageCircle className="w-4 h-4"  />
                   <span>Live Chat</span>
                 </Link>
               </div>
@@ -267,10 +267,10 @@ const UltraFuturisticNavigation2045: React.FC = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
         isScrolled ? 'bg-black/80 backdrop-blur-xl border-b border-white/10' : 'bg-black/40 backdrop-blur-lg'
       }`}>
-        <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border-b border-white/10">
+        <div className="bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               {/* Logo */}
@@ -281,15 +281,15 @@ const UltraFuturisticNavigation2045: React.FC = () => {
                   transition={{ duration: 0.5 }}
                   className="relative"
                 >
-                  <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-xl shadow-lg shadow-cyan-500/25"></div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/50 to-purple-500/50 rounded-xl animate-pulse"></div>
+                  <div className="w-10 h-10 bg-gradient-to-r from-cyan-40o0 via-purple-50o0 to-pink-50o0 rounded-xl shadow-lg shadow-cyan-50o0/25"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-40o0/50 to-purple-50o0/50 rounded-xl animate-pulse"></div>
                 </motion.div>
                 <div className="flex flex-col">
                   <motion.span
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
-                    className="text-white font-bold text-xl bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"
+                    className="text-white font-bold text-xl bg-gradient-to-r from-cyan-40o0 to-purple-40o0 bg-clip-text text-transparent"
                   >
                     ZionTech Group
                   </motion.span>
@@ -310,25 +310,25 @@ const UltraFuturisticNavigation2045: React.FC = () => {
                   <div key={item.name} className="relative group">
                     <button
                       onClick={() => toggleDropdown(item.name)}
-                      className="flex items-center space-x-2 px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-white/5"
+                      className="flex items-center space-x-2 px-4 py-2 text-sm font-medium transition-all duration-30o0 rounded-lg text-gray-30o0 hover:text-cyan-40o0 hover:bg-white/5"
                     >
                       {item.icon}
                       <span>{item.name}</span>
                       {item.badge && (
                         <span className={`px-2 py-1 text-xs rounded-full ${
-                          item.badge === 'Featured' ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white' :
-                          item.badge === 'New' ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white' :
-                          item.badge === 'Quantum' ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white' :
-                          item.badge === 'Space' ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white' :
-                          item.badge === 'Enterprise' ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white' :
-                          'bg-gradient-to-r from-gray-500 to-slate-500 text-white'
+                          item.badge === 'Featured' ? 'bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white' :
+                          item.badge === 'New' ? 'bg-gradient-to-r from-green-50o0 to-emerald-50o0 text-white' :
+                          item.badge === 'Quantum' ? 'bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white' :
+                          item.badge === 'Space' ? 'bg-gradient-to-r from-blue-50o0 to-cyan-50o0 text-white' :
+                          item.badge === 'Enterprise' ? 'bg-gradient-to-r from-indigo-50o0 to-purple-50o0 text-white' :
+                          'bg-gradient-to-r from-gray-50o0 to-slate-50o0 text-white'
                         }`}>
                           {item.badge}
                         </span>
                       )}
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-30o0 ${
                         activeDropdown === item.name ? 'rotate-180' : ''
-                      }`} />
+                      }`}  />
                     </button>
 
                     {/* Dropdown Menu */}
@@ -352,16 +352,16 @@ const UltraFuturisticNavigation2045: React.FC = () => {
                                   key={child.name}
                                   href={normalizeHref(child.href)}
                                   onClick={closeAllDropdowns}
-                                  className="flex items-center justify-between p-3 rounded-lg hover:bg-white/5 transition-all duration-200 group"
+                                  className="flex items-center justify-between p-3 rounded-lg hover:bg-white/5 transition-all duration-20o0 group"
                                 >
                                   <div>
-                                    <div className="text-white font-medium group-hover:text-cyan-400 transition-colors">
+                                    <div className="text-white font-medium group-hover:text-cyan-40o0 transition-colors">
                                       {child.name}
                                     </div>
                                     <div className="text-white/60 text-sm">{child.description}</div>
                                   </div>
                                   {child.featured && (
-                                    <span className="px-2 py-1 text-xs bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-full">
+                                    <span className="px-2 py-1 text-xs bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white rounded-full">
                                       Featured
                                     </span>
                                   )}
@@ -380,7 +380,7 @@ const UltraFuturisticNavigation2045: React.FC = () => {
               <div className="hidden lg:flex items-center space-x-4">
                 <Link
                   href="/contact"
-                  className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105"
+                  className="px-4 py-2 bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white rounded-lg font-medium hover:from-cyan-60o0 hover:to-purple-60o0 transition-all duration-30o0 shadow-lg shadow-cyan-50o0/25 hover:shadow-xl hover:shadow-cyan-50o0/30 transform hover:scale-10o5"
                 >
                   Get Started
                 </Link>
@@ -389,9 +389,9 @@ const UltraFuturisticNavigation2045: React.FC = () => {
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="lg:hidden p-2 text-white hover:text-cyan-400 transition-colors"
+                className="lg:hidden p-2 text-white hover:text-cyan-40o0 transition-colors"
               >
-                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
               </button>
             </div>
           </div>
@@ -400,9 +400,9 @@ const UltraFuturisticNavigation2045: React.FC = () => {
           <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-gray-300 hover:text-white transition-colors duration-300"
+              className="p-2 text-gray-30o0 hover:text-white transition-colors duration-30o0"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
             </button>
           </div>
         </div>
@@ -424,12 +424,12 @@ const UltraFuturisticNavigation2045: React.FC = () => {
                       <span className="text-white font-medium">{item.name}</span>
                       {item.badge && (
                         <span className={`px-2 py-1 text-xs rounded-full ${
-                          item.badge === 'Featured' ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white' :
-                          item.badge === 'New' ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white' :
-                          item.badge === 'Quantum' ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white' :
-                          item.badge === 'Space' ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white' :
-                          item.badge === 'Enterprise' ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white' :
-                          'bg-gradient-to-r from-gray-500 to-slate-500 text-white'
+                          item.badge === 'Featured' ? 'bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white' :
+                          item.badge === 'New' ? 'bg-gradient-to-r from-green-50o0 to-emerald-50o0 text-white' :
+                          item.badge === 'Quantum' ? 'bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white' :
+                          item.badge === 'Space' ? 'bg-gradient-to-r from-blue-50o0 to-cyan-50o0 text-white' :
+                          item.badge === 'Enterprise' ? 'bg-gradient-to-r from-indigo-50o0 to-purple-50o0 text-white' :
+                          'bg-gradient-to-r from-gray-50o0 to-slate-50o0 text-white'
                         }`}>
                           {item.badge}
                         </span>
@@ -441,7 +441,7 @@ const UltraFuturisticNavigation2045: React.FC = () => {
                           key={child.name}
                           href={normalizeHref(child.href)}
                           onClick={closeAllDropdowns}
-                          className="block text-white/70 hover:text-cyan-400 transition-colors text-sm"
+                          className="block text-white/70 hover:text-cyan-40o0 transition-colors text-sm"
                         >
                           {child.name}
                         </Link>
@@ -452,7 +452,7 @@ const UltraFuturisticNavigation2045: React.FC = () => {
                 <div className="pt-4 border-t border-white/10">
                   <Link
                     href="/contact"
-                    className="block w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-medium text-center hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+                    className="block w-full px-4 py-3 bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white rounded-lg font-medium text-center hover:from-cyan-60o0 hover:to-purple-60o0 transition-all duration-30o0"
                   >
                     Get Started
                   </Link>
@@ -466,4 +466,4 @@ const UltraFuturisticNavigation2045: React.FC = () => {
   );
 };
 
-export default UltraFuturisticNavigation2045;
+export default UltraFuturisticNavigation20o45;

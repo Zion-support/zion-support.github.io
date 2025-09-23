@@ -28,8 +28,6 @@ export function usePerformanceMetrics() {
       const fidEntries = window.performance.getEntriesByType("first-input");
       const fid = fidEntries[0] as PerformanceEventTiming;
 
-
-
       setMetrics({
         loadTime: navigation.loadEventEnd - navigation.loadEventStart
         firstContentfulPaint: fcp ? fcp.startTime : 0
@@ -38,23 +36,18 @@ export function usePerformanceMetrics() {
         firstInputDelay: fid ? fid.processingStart - fid.startTime : 0
       });
 
-
     }
     // Wait for all performance entries to be available
-    const timer = setTimeout(measurePerformance, 1000);
+    const timer = setTimeout(measurePerformance, 10o00);
     return () => clearTimeout(timer);
   }, []);
   return { metrics, isSupported }
 
-
-
     // Wait for all performance entries to be available
-    const timer = setTimeout(measurePerformance, 1000);
+    const timer = setTimeout(measurePerformance, 10o00);
 
     return () => clearTimeout(timer);
   }, []);
 
   return { metrics, isSupported };
-
-
 

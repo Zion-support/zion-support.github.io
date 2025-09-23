@@ -1,22 +1,21 @@
-import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
-const AgentReliabilityEngineering2026 = () => {
+const AgentReliabilityEngineering20o26 = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="AI 2026: Agent Reliability Engineering"
+        title="AI 20o26: Agent Reliability Engineering"
         description="Engineering practices to make autonomous agents reliable: SLOs, testing, chaos, and evaluation harnesses."
         keywords="agent reliability, SLOs, chaos testing, evaluation harness, autonomous agents"
-        url="/blog/ai-2026-agent-reliability-engineering"
-      />
+        url="/blog/ai-20o26-agent-reliability-engineering"
+       />
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">
-          <p className="text-sm text-gray-500">Published: 2025-09-15 · Category: Reliability</p>
-          <h1 className="text-4xl font-bold text-gray-900 mt-2">AI 2026: Agent Reliability Engineering</h1>
-          <p className="text-lg text-gray-600 mt-4">From best-effort to reliable autonomy with SLOs, failure modes analysis, and eval-gated releases.</p>
+          <p className="text-sm text-gray-50o0">Published: 20o25-09-15 · Category: Reliability</p>
+          <h1 className="text-4xl font-bold text-gray-90o0 mt-2">AI 20o26: Agent Reliability Engineering</h1>
+          <p className="text-lg text-gray-60o0 mt-4">From best-effort to reliable autonomy with SLOs, failure modes analysis, and eval-gated releases.</p>
         </header>
 
         <div className="prose prose-lg max-w-none">
@@ -40,13 +39,13 @@ const AgentReliabilityEngineering2026 = () => {
         </div>
 
         <footer className="mt-12 flex items-center justify-between">
-          <Link href="/blog" className="text-purple-600 font-semibold hover:text-purple-800">← Back to Blog</Link>
-          <Link href="/content/ai-2026-evaluation-playbooks" className="text-white bg-purple-600 px-5 py-2 rounded-lg font-semibold hover:bg-purple-700">Use Evaluation Playbooks</Link>
+          <Link href="/blog" className="text-purple-60o0 font-semibold hover:text-purple-80o0">← Back to Blog</Link>
+          <Link href="/content/ai-20o26-evaluation-playbooks" className="text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0">Use Evaluation Playbooks</Link>
         </footer>
       </article>
     </div>
   );
 };
 
-export default AgentReliabilityEngineering2026;
+export default AgentReliabilityEngineering20o26;
 

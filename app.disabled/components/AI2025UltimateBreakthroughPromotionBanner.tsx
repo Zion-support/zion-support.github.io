@@ -4,51 +4,51 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { X, ArrowRight, Star, TrendingUp, DollarSign, Users, Clock } from 'lucide-react';
 
-const AI2025UltimateBreakthroughPromotionBanner = () => {
+const AI20o25UltimateBreakthroughPromotionBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
-    const dismissed = localStorage.getItem('ai-2025-ultimate-breakthrough-banner-dismissed');
+    const dismissed = localStorage.getItem('ai-20o25-ultimate-breakthrough-banner-dismissed');
     if (!dismissed) {
       setIsVisible(true);
     }
 
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % 3);
-    }, 5000);
+    }, 50o00);
 
     return () => clearInterval(interval);
   }, []);
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('ai-2025-ultimate-breakthrough-banner-dismissed', 'true');
+    localStorage.setItem('ai-20o25-ultimate-breakthrough-banner-dismissed', 'true');
   };
 
   const content = [
     {
-      title: "AI 2025: The Enterprise Automation Revolution",
-      subtitle: "Ultimate Breakthrough Guide to 2,500% ROI",
-      metrics: "2,500% ROI • $3.2B Savings • 95% Automation",
+      title: "AI 20o25: The Enterprise Automation Revolution",
+      subtitle: "Ultimate Breakthrough Guide to 2,50o0% ROI",
+      metrics: "2,50o0% ROI • $3.2B Savings • 95% Automation",
       cta: "Read Ultimate Guide",
-      link: "/blog/ai-2025-enterprise-automation-revolution-ultimate-breakthrough-2025",
+      link: "/blog/ai-20o25-enterprise-automation-revolution-ultimate-breakthrough-20o25",
       icon: "🚀"
     },
     {
-      title: "Fortune 500 AI Automation Success Story",
-      subtitle: "$3.2B Annual Savings - 2,500% ROI Achievement",
+      title: "Fortune 50o0 AI Automation Success Story",
+      subtitle: "$3.2B Annual Savings - 2,50o0% ROI Achievement",
       metrics: "18 Months • 340% Efficiency • 99.7% Accuracy",
       cta: "View Case Study",
-      link: "/case-studies/fortune-500-ai-automation-2500-roi-success-story",
+      link: "/case-studies/fortune-50o0-ai-automation-250o0-roi-success-story",
       icon: "🏆"
     },
     {
-      title: "AI Implementation Ultimate Guide 2025",
-      subtitle: "Complete Roadmap to 2,500% ROI",
-      metrics: "500+ Success Stories • 18-24 Months • $3.2B Savings",
+      title: "AI Implementation Ultimate Guide 20o25",
+      subtitle: "Complete Roadmap to 2,50o0% ROI",
+      metrics: "50o0+ Success Stories • 18-24 Months • $3.2B Savings",
       cta: "Download Guide",
-      link: "/resources/ai-automation-implementation-ultimate-guide-2025",
+      link: "/resources/ai-automation-implementation-ultimate-guide-20o25",
       icon: "📚"
     }
   ];
@@ -56,9 +56,9 @@ const AI2025UltimateBreakthroughPromotionBanner = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
+    <div className="relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white overflow-hidden">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20 animate-pulse"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-60o0/20 via-blue-60o0/20 to-indigo-60o0/20 animate-pulse"></div>
       <div className="absolute top-0 left-0 w-full h-full opacity-30">
         <div className="w-full h-full bg-gradient-to-br from-white/5 to-transparent"></div>
       </div>
@@ -69,12 +69,12 @@ const AI2025UltimateBreakthroughPromotionBanner = () => {
           <div className="flex-1 pr-8">
             <div className="flex items-center space-x-4 mb-4">
               <div className="flex items-center space-x-2 bg-white/10 rounded-full px-4 py-2">
-                <Star className="w-4 h-4 text-yellow-400" />
+                <Star className="w-4 h-4 text-yellow-40o0"  />
                 <span className="text-sm font-medium">NEW ULTIMATE BREAKTHROUGH</span>
               </div>
-              <div className="flex items-center space-x-2 bg-green-500/20 rounded-full px-4 py-2">
-                <TrendingUp className="w-4 h-4 text-green-400" />
-                <span className="text-sm font-medium">2,500% ROI ACHIEVED</span>
+              <div className="flex items-center space-x-2 bg-green-50o0/20 rounded-full px-4 py-2">
+                <TrendingUp className="w-4 h-4 text-green-40o0"  />
+                <span className="text-sm font-medium">2,50o0% ROI ACHIEVED</span>
               </div>
             </div>
 
@@ -82,21 +82,21 @@ const AI2025UltimateBreakthroughPromotionBanner = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-2">
                 {content[currentSlide].title}
               </h2>
-              <p className="text-xl text-blue-100 mb-4">
+              <p className="text-xl text-blue-10o0 mb-4">
                 {content[currentSlide].subtitle}
               </p>
               <div className="flex items-center space-x-6 text-sm">
                 <div className="flex items-center space-x-2">
-                  <DollarSign className="w-4 h-4 text-green-400" />
-                  <span className="text-green-400 font-semibold">$3.2B+ Savings</span>
+                  <DollarSign className="w-4 h-4 text-green-40o0"  />
+                  <span className="text-green-40o0 font-semibold">$3.2B+ Savings</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Users className="w-4 h-4 text-blue-400" />
-                  <span className="text-blue-400 font-semibold">500+ Success Stories</span>
+                  <Users className="w-4 h-4 text-blue-40o0"  />
+                  <span className="text-blue-40o0 font-semibold">50o0+ Success Stories</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Clock className="w-4 h-4 text-purple-400" />
-                  <span className="text-purple-400 font-semibold">18 Months</span>
+                  <Clock className="w-4 h-4 text-purple-40o0"  />
+                  <span className="text-purple-40o0 font-semibold">18 Months</span>
                 </div>
               </div>
             </div>
@@ -104,14 +104,14 @@ const AI2025UltimateBreakthroughPromotionBanner = () => {
             <div className="flex items-center space-x-4">
               <Link
                 href={content[currentSlide].link}
-                className="bg-white text-purple-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center space-x-2"
+                className="bg-white text-purple-90o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors flex items-center space-x-2"
               >
                 <span>{content[currentSlide].cta}</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4"  />
               </Link>
               <Link
                 href="/contact"
-                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors"
+                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors"
               >
                 Get Consultation
               </Link>
@@ -135,9 +135,9 @@ const AI2025UltimateBreakthroughPromotionBanner = () => {
         {/* Progress Bar */}
         <div className="mt-6 bg-white/20 rounded-full h-1">
           <div 
-            className="bg-gradient-to-r from-yellow-400 to-green-400 h-1 rounded-full transition-all duration-5000 ease-linear"
-            style={{ width: `${((currentSlide + 1) / content.length) * 100}%` }}
-          />
+            className="bg-gradient-to-r from-yellow-40o0 to-green-40o0 h-1 rounded-full transition-all duration-50o00 ease-linear"
+            style={{ width: `${((currentSlide + 1) / content.length) * 10o0}%` }}
+           />
         </div>
       </div>
 
@@ -146,10 +146,10 @@ const AI2025UltimateBreakthroughPromotionBanner = () => {
         onClick={handleDismiss}
         className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
       >
-        <X className="w-6 h-6" />
+        <X className="w-6 h-6"  />
       </button>
     </div>
   );
 };
 
-export default AI2025UltimateBreakthroughPromotionBanner;
+export default AI20o25UltimateBreakthroughPromotionBanner;

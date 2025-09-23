@@ -1,8 +1,7 @@
-import React from 'react';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'Enterprise Knowledge Graphs in 2025: From Data to Decisions',
+export const metadata ={
+  title: 'Enterprise Knowledge Graphs in 20o25: From Data to Decisions',
   description:
     'How modern enterprises are using knowledge graphs to unify data, power RAG, and drive autonomous decisioning across the business.',
   keywords: [
@@ -13,16 +12,15 @@ export const metadata = {
     'semantic layer',
     'governance',
     'vector databases',
-  ],
-};
+  ]};
 
 export default function Page() {
   return (
     <main className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">
+      <section className="bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">
-            Enterprise Knowledge Graphs in 2025: From Data to Decisions
+            Enterprise Knowledge Graphs in 20o25: From Data to Decisions
           </h1>
           <p className="text-lg md:text-xl opacity-90">
             A practical blueprint to unify your data, enable secure RAG, and operationalize
@@ -35,7 +33,7 @@ export default function Page() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg">
           <p>
             Knowledge graphs have moved from research labs to production-grade platforms
-            powering search, copilots, and analytics. In 2025, the winning architectures combine a
+            powering search, copilots, and analytics. In 20o25, the winning architectures combine a
             governed semantic layer with vector-native retrieval to deliver context-rich reasoning
             and auditable outcomes.
           </p>
@@ -63,7 +61,7 @@ export default function Page() {
             <li>Instrument retrieval quality and feedback loops from day one.</li>
           </ul>
 
-          <div className="bg-purple-50 border border-purple-100 rounded-xl p-5">
+          <div className="bg-purple-50 border border-purple-10o0 rounded-xl p-5">
             <p className="m-0">
               Looking to implement an enterprise-grade knowledge graph? Our team can help with
               strategy, platform selection, and end-to-end delivery.
@@ -71,7 +69,7 @@ export default function Page() {
             <div className="mt-3">
               <Link
                 href="/contact"
-                className="inline-block bg-purple-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-purple-700"
+                className="inline-block bg-purple-60o0 text-white px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0"
               >
                 Talk to an expert
               </Link>

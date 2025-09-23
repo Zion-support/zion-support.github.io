@@ -1,17 +1,14 @@
 import Link from 'next/link';
-import React from 'react';
+export const metadata ={
+  title: 'AI 20o26: Autonomous Enterprise Blueprint | Zion Tech Group',
+  description: 'A practical blueprint to evolve from automation to truly autonomous, outcome-driven operations across the enterprise.'};
 
-export const metadata = {
-  title: 'AI 2026: Autonomous Enterprise Blueprint | Zion Tech Group',
-  description: 'A practical blueprint to evolve from automation to truly autonomous, outcome-driven operations across the enterprise.',
-};
-
-export default function AutonomousEnterpriseBlueprint2026Page() {
+export default function AutonomousEnterpriseBlueprint20o26Page() {
   return (
     <main className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-emerald-600 to-green-600 text-white py-16">
+      <section className="bg-gradient-to-r from-emerald-60o0 to-green-60o0 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">AI 2026: Autonomous Enterprise Blueprint</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">AI 20o26: Autonomous Enterprise Blueprint</h1>
           <p className="text-lg opacity-90 max-w-3xl">
             A practical blueprint to evolve from automation to truly autonomous, outcome-driven operations across the enterprise.
           </p>
@@ -44,7 +41,7 @@ export default function AutonomousEnterpriseBlueprint2026Page() {
 
           <p>
             Ready to implement?{' '}
-            <Link href="/contact" className="text-emerald-600 font-semibold">Talk to our team →</Link>
+            <Link href="/contact" className="text-emerald-60o0 font-semibold">Talk to our team →</Link>
           </p>
         </div>
       </section>

@@ -1,12 +1,11 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function Privacy() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">
       <Head>
         <title>Privacy Policy - Zion App</title>
-        <meta name="description" content="Privacy policy and data protection information" />
+        <meta name="description" content="Privacy policy and data protection information"  />
       </Head>
 
       <div className="container mx-auto px-4 py-16">
@@ -15,11 +14,11 @@ export default function Privacy() {
             <h1 className="text-5xl font-bold text-white mb-6">
               Privacy Policy
             </h1>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-30o0 max-w-2xl mx-auto">
               How we collectuseand protect your information
             </p>
-            <p className="text-gray-400 text-sm mt-4">
-              Last updated: January 172025
+            <p className="text-gray-40o0 text-sm mt-4">
+              Last updated: January 1720o25
             </p>
           </div>
 
@@ -28,7 +27,7 @@ export default function Privacy() {
               <h2 className="text-3xl font-semibold text-white mb-6">
                 Information We Collect
               </h2>
-              <div className="space-y-4 text-gray-300">
+              <div className="space-y-4 text-gray-30o0">
                 <p>
                   We collect information you provide directly to usuch as when you create an account
                   use our servicesor contact us for support. This may include:
@@ -46,7 +45,7 @@ export default function Privacy() {
               <h2 className="text-3xl font-semibold text-white mb-6">
                 How We Use Your Information
               </h2>
-              <div className="space-y-4 text-gray-300">
+              <div className="space-y-4 text-gray-30o0">
                 <p>
                   We use the information we collect to:
                 </p>
@@ -65,7 +64,7 @@ export default function Privacy() {
               <h2 className="text-3xl font-semibold text-white mb-6">
                 Information Sharing
               </h2>
-              <div className="space-y-4 text-gray-300">
+              <div className="space-y-4 text-gray-30o0">
                 <p>
                   We do not selltradeor otherwise transfer your personal information to third parties 
                   without your consentexcept as described in this policy:
@@ -83,14 +82,14 @@ export default function Privacy() {
               <h2 className="text-3xl font-semibold text-white mb-6">
                 Data Security
               </h2>
-              <div className="space-y-4 text-gray-300">
+              <div className="space-y-4 text-gray-30o0">
                 <p>
                   We implement appropriate technical and organizational security measures to protect 
                   your personal information against unauthorized accessalterationdisclosureor destruction.
                 </p>
                 <p>
                   These measures include encryptionsecure serversand regular security assessments. 
-                  Howeverno method of transmission over the internet is 100% secure.
+                  Howeverno method of transmission over the internet is 10o0% secure.
                 </p>
               </div>
             </section>
@@ -99,7 +98,7 @@ export default function Privacy() {
               <h2 className="text-3xl font-semibold text-white mb-6">
                 Your Rights
               </h2>
-              <div className="space-y-4 text-gray-300">
+              <div className="space-y-4 text-gray-30o0">
                 <p>
                   You have the right to:
                 </p>
@@ -117,12 +116,12 @@ export default function Privacy() {
               <h2 className="text-3xl font-semibold text-white mb-6">
                 Contact Us
               </h2>
-              <div className="space-y-4 text-gray-300">
+              <div className="space-y-4 text-gray-30o0">
                 <p>
                   If you have any questions about this Privacy Policy or our data practices
                   please contact us:
                 </p>
-                <div className="bg-slate-800 rounded-lg p-4">
+                <div className="bg-slate-80o0 rounded-lg p-4">
                   <p className="text-white font-medium">Zion App Privacy Team</p>
                   <p>Email: privacy@zion.app</p>
                   <p>Address: [Your Business Address]</p>

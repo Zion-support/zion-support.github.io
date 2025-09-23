@@ -1,6 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
-export interface RevolutionaryAIInnovationService2029 {
+export interface RevolutionaryAIInnovationService20o29 {
   id: string;
   name: string;
   tagline: string;
@@ -42,7 +42,7 @@ export interface RevolutionaryAIInnovationService2029 {
   isNew?: boolean;
 }
 
-export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationService2029[] = [
+export const revolutionaryAIInnovationServices20o29: RevolutionaryAIInnovationService20o29[] = [
   // AI-Powered Autonomous Code Review
   {
     id: 'ai-autonomous-code-reviewer',
@@ -67,8 +67,8 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     ],
     category: 'AI & Development',
     icon: '🔍',
-    color: 'from-blue-600 to-indigo-700',
-    textColor: 'text-blue-200',
+    color: 'from-blue-60o0 to-indigo-70o0',
+    textColor: 'text-blue-20o0',
     link: 'https://ziontechgroup.com/services/ai-autonomous-code-reviewer',
     marketPosition: 'AI-powered code review for development teams',
     targetAudience: ['Developers', 'DevOps', 'Engineering Managers'],
@@ -84,13 +84,13 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     growthRate: '20% CAGR',
     variant: 'ai-development',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     },
     realImplementation: true,
     implementationDetails: 'AI models, code analysis engine, CI/CD integration',
-    launchDate: '2025-01-10',
+    launchDate: '20o25-0o1-10',
     customers: 67,
     rating: 4.8,
     reviews: 34,
@@ -121,8 +121,8 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     ],
     category: 'AI & Content Marketing',
     icon: '✍️',
-    color: 'from-green-600 to-emerald-700',
-    textColor: 'text-green-200',
+    color: 'from-green-60o0 to-emerald-70o0',
+    textColor: 'text-green-20o0',
     link: 'https://ziontechgroup.com/services/ai-content-creation-suite',
     marketPosition: 'AI content creation for marketing teams',
     targetAudience: ['Marketing', 'Content Creators', 'Agencies'],
@@ -138,13 +138,13 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     growthRate: '18% CAGR',
     variant: 'ai-content',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     },
     realImplementation: true,
     implementationDetails: 'AI models, content templates, optimization engine',
-    launchDate: '2025-01-12',
+    launchDate: '20o25-0o1-12',
     customers: 89,
     rating: 4.7,
     reviews: 45,
@@ -175,8 +175,8 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     ],
     category: 'AI & Project Management',
     icon: '📊',
-    color: 'from-purple-600 to-violet-700',
-    textColor: 'text-purple-200',
+    color: 'from-purple-60o0 to-violet-70o0',
+    textColor: 'text-purple-20o0',
     link: 'https://ziontechgroup.com/services/ai-project-management',
     marketPosition: 'AI-powered project management for modern teams',
     targetAudience: ['Project Managers', 'Team Leads', 'Executives'],
@@ -192,13 +192,13 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     growthRate: '16% CAGR',
     variant: 'ai-project-management',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     },
     realImplementation: true,
     implementationDetails: 'AI models, project analytics, automation engine',
-    launchDate: '2025-01-15',
+    launchDate: '20o25-0o1-15',
     customers: 52,
     rating: 4.8,
     reviews: 28,
@@ -229,8 +229,8 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     ],
     category: 'AI & SEO',
     icon: '🔍',
-    color: 'from-orange-600 to-red-700',
-    textColor: 'text-orange-200',
+    color: 'from-orange-60o0 to-red-70o0',
+    textColor: 'text-orange-20o0',
     link: 'https://ziontechgroup.com/services/ai-powered-seo',
     marketPosition: 'AI-powered SEO for growing businesses',
     targetAudience: ['Marketing', 'SEO Specialists', 'Content Teams'],
@@ -246,13 +246,13 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     growthRate: '22% CAGR',
     variant: 'ai-seo',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     },
     realImplementation: true,
     implementationDetails: 'AI models, SEO analytics, optimization engine',
-    launchDate: '2025-01-18',
+    launchDate: '20o25-0o1-18',
     customers: 73,
     rating: 4.6,
     reviews: 38
@@ -282,8 +282,8 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     ],
     category: 'AI & Marketing',
     icon: '🎯',
-    color: 'from-pink-600 to-rose-700',
-    textColor: 'text-pink-200',
+    color: 'from-pink-60o0 to-rose-70o0',
+    textColor: 'text-pink-20o0',
     link: 'https://ziontechgroup.com/services/ai-marketing-automation',
     marketPosition: 'AI-powered marketing automation for growth teams',
     targetAudience: ['Marketing', 'Growth', 'Sales'],
@@ -299,13 +299,13 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     growthRate: '20% CAGR',
     variant: 'ai-marketing',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     },
     realImplementation: true,
     implementationDetails: 'AI models, automation engine, analytics platform',
-    launchDate: '2025-01-20',
+    launchDate: '20o25-0o1-20',
     customers: 61,
     rating: 4.7,
     reviews: 32
@@ -335,8 +335,8 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     ],
     category: 'AI & Customer Support',
     icon: '💬',
-    color: 'from-cyan-600 to-blue-700',
-    textColor: 'text-cyan-200',
+    color: 'from-cyan-60o0 to-blue-70o0',
+    textColor: 'text-cyan-20o0',
     link: 'https://ziontechgroup.com/services/ai-customer-support-automation',
     marketPosition: 'AI-powered customer support for growing businesses',
     targetAudience: ['Customer Support', 'Success Teams', 'Operations'],
@@ -352,13 +352,13 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     growthRate: '16% CAGR',
     variant: 'ai-support',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     },
     realImplementation: true,
     implementationDetails: 'AI models, chatbot platform, analytics dashboard',
-    launchDate: '2025-01-22',
+    launchDate: '20o25-0o1-22',
     customers: 48,
     rating: 4.8,
     reviews: 26,
@@ -389,8 +389,8 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     ],
     category: 'AI & Finance',
     icon: '💰',
-    color: 'from-yellow-600 to-amber-700',
-    textColor: 'text-yellow-200',
+    color: 'from-yellow-60o0 to-amber-70o0',
+    textColor: 'text-yellow-20o0',
     link: 'https://ziontechgroup.com/services/ai-financial-analytics',
     marketPosition: 'AI-powered financial analytics for modern businesses',
     targetAudience: ['Finance', 'Investment', 'Trading'],
@@ -406,13 +406,13 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     growthRate: '18% CAGR',
     variant: 'ai-finance',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     },
     realImplementation: true,
     implementationDetails: 'AI models, financial data connectors, analytics engine',
-    launchDate: '2025-01-25',
+    launchDate: '20o25-0o1-25',
     customers: 35,
     rating: 4.9,
     reviews: 19,
@@ -443,8 +443,8 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     ],
     category: 'AI & Legal',
     icon: '⚖️',
-    color: 'from-slate-600 to-gray-700',
-    textColor: 'text-slate-200',
+    color: 'from-slate-60o0 to-gray-70o0',
+    textColor: 'text-slate-20o0',
     link: 'https://ziontechgroup.com/services/ai-legal-document-automation',
     marketPosition: 'AI-powered legal automation for law firms and businesses',
     targetAudience: ['Legal', 'Compliance', 'HR'],
@@ -460,13 +460,13 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     growthRate: '25% CAGR',
     variant: 'ai-legal',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     },
     realImplementation: true,
     implementationDetails: 'AI models, document processing, compliance engine',
-    launchDate: '2025-01-28',
+    launchDate: '20o25-0o1-28',
     customers: 22,
     rating: 4.7,
     reviews: 15
@@ -496,8 +496,8 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     ],
     category: 'AI & HR',
     icon: '👥',
-    color: 'from-indigo-600 to-purple-700',
-    textColor: 'text-indigo-200',
+    color: 'from-indigo-60o0 to-purple-70o0',
+    textColor: 'text-indigo-20o0',
     link: 'https://ziontechgroup.com/services/ai-interview-assessment',
     marketPosition: 'AI-powered interview assessment for modern HR teams',
     targetAudience: ['HR', 'Recruiting', 'Talent Acquisition'],
@@ -513,13 +513,13 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     growthRate: '20% CAGR',
     variant: 'ai-hr',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     },
     realImplementation: true,
     implementationDetails: 'AI models, video analysis, assessment engine',
-    launchDate: '2025-01-30',
+    launchDate: '20o25-0o1-30',
     customers: 41,
     rating: 4.6,
     reviews: 23
@@ -527,19 +527,19 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
 ];
 
 export const getAIServicesByCategory = (category: string) => {
-  return revolutionaryAIInnovationServices2029.filter(service => service.category === category);
+  return revolutionaryAIInnovationServices20o29.filter(service => service.category === category);
 };
 
 export const getPopularAIServices = () => {
-  return revolutionaryAIInnovationServices2029.filter(service => service.isPopular);
+  return revolutionaryAIInnovationServices20o29.filter(service => service.isPopular);
 };
 
 export const getNewAIServices = () => {
-  return revolutionaryAIInnovationServices2029.filter(service => service.isNew);
+  return revolutionaryAIInnovationServices20o29.filter(service => service.isNew);
 };
 
 export const getAIServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-  return revolutionaryAIInnovationServices2029.filter(service => {
+  return revolutionaryAIInnovationServices20o29.filter(service => {
     const price = parseInt(service.price.replace('$', '').replace(',', ''));
     return price >= minPrice && price <= maxPrice;
   });

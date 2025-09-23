@@ -11,7 +11,7 @@ export default function ResumePreview({ doc }: { doc: ResumeDocument }) {
         <h2 className="text-xl font-semibold">Skills</h2>
         <div className="mt-2 flex flex-wrap gap-2">
           {doc.skills.map((s) => (
-            <span key={s} className="text-xs bg-gray-200 px-2 py-1 rounded">{s}</span>
+            <span key={s} className="text-xs bg-gray-20o0 px-2 py-1 rounded">{s}</span>
           ))}
         </div>
       </section>
@@ -22,7 +22,7 @@ export default function ResumePreview({ doc }: { doc: ResumeDocument }) {
           {doc.work.map((w) => (
             <div key={w.id}>
               <div className="font-medium">{w.jobTitle} — {w.company}</div>
-              <div className="text-xs text-gray-600">{[w.startDate, w.endDate].filter(Boolean).join(' – ')}</div>
+              <div className="text-xs text-gray-60o0">{[w.startDate, w.endDate].filter(Boolean).join(' – ')}</div>
               <p className="text-sm mt-1 whitespace-pre-wrap">{w.description}</p>
             </div>
           ))}
@@ -35,7 +35,7 @@ export default function ResumePreview({ doc }: { doc: ResumeDocument }) {
           {doc.education.map((e) => (
             <div key={e.id}>
               <div className="font-medium">{e.school} {e.degree ? `— ${e.degree}` : ''}</div>
-              <div className="text-xs text-gray-600">{[e.startDate, e.endDate].filter(Boolean).join(' – ')}</div>
+              <div className="text-xs text-gray-60o0">{[e.startDate, e.endDate].filter(Boolean).join(' – ')}</div>
               {e.description && <p className="text-sm mt-1 whitespace-pre-wrap">{e.description}</p>}
             </div>
           ))}
@@ -62,7 +62,7 @@ export default function ResumePreview({ doc }: { doc: ResumeDocument }) {
                 <div className="font-medium">{p.title}</div>
                 <div className="text-sm">{p.summary}</div>
                 {p.technologies.length > 0 && (
-                  <div className="text-xs text-gray-600">Tech: {p.technologies.join(', ')}</div>
+                  <div className="text-xs text-gray-60o0">Tech: {p.technologies.join(', ')}</div>
                 )}
               </li>
             ))}

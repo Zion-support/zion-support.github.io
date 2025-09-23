@@ -10,16 +10,14 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+  FormMessage} from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+  SelectValue} from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { disputeReasonLabels } from "@/types/disputes";
 import { useDisputes } from "@/hooks/useDisputes";
@@ -31,10 +29,9 @@ const formSchema = z.object({
     .min(1, { message: "Please select a reason for the dispute" }),
   description: z.string()
     .min(20, { message: "Description must be at least 20 characters" }),
-  attachments: z.array(z.any()).optional(),
-});
+  attachments: z.array(z.any()).optional()});
 
-type DisputeFormProps = {
+type DisputeFormProps ={
   projectId: string;
   milestoneId?: string;
   onDisputeCreated?: (disputeId: string) => void;
@@ -56,9 +53,7 @@ export function DisputeForm({
     defaultValues: {
       reason_code: "",
       description: "",
-      attachments: [],
-    },
-  });
+      attachments: []}});
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
@@ -83,8 +78,7 @@ export function DisputeForm({
         project_id: projectId,
         milestone_id: milestoneId,
         reason_code: values.reason_code,
-        description: values.description,
-      });
+        description: values.description});
       
       if (dispute && dispute.id) {
         // Future enhancement: Upload attachments
@@ -110,7 +104,7 @@ export function DisputeForm({
   return (
     <div className="space-y-6">
       <div className="flex items-center space-x-2">
-        <FileText className="h-5 w-5 text-primary" />
+        <FileText className="h-5 w-5 text-primary"  />
         <h2 className="text-xl font-semibold">Report an Issue</h2>
       </div>
       
@@ -125,7 +119,7 @@ export function DisputeForm({
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select a reason" />
+                      <SelectValue placeholder="Select a reason"  />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
@@ -134,7 +128,7 @@ export function DisputeForm({
                     ))}
                   </SelectContent>
                 </Select>
-                <FormMessage />
+                <FormMessage  />
               </FormItem>
             )}
           />
@@ -150,9 +144,9 @@ export function DisputeForm({
                     placeholder="Please provide specific details about the issue..."
                     className="min-h-[150px]"
                     {...field}
-                  />
+                   />
                 </FormControl>
-                <FormMessage />
+                <FormMessage  />
               </FormItem>
             )}
           />
@@ -166,7 +160,7 @@ export function DisputeForm({
                   multiple 
                   onChange={handleFileChange}
                   className="cursor-pointer"
-                />
+                 />
                 
                 {files.length > 0 && (
                   <div className="space-y-2">
@@ -174,7 +168,7 @@ export function DisputeForm({
                     <ul className="space-y-1">
                       {files.map((file, index) => (
                         <li key={index} className="flex items-center justify-between text-sm bg-muted/30 p-2 rounded">
-                          <span>{file.name} ({(file.size / 1024).toFixed(1)} KB)</span>
+                          <span>{file.name} ({(file.size / 10o24).toFixed(1)} KB)</span>
                           <Button 
                             type="button" 
                             variant="ghost" 
@@ -190,7 +184,7 @@ export function DisputeForm({
                 )}
               </div>
             </FormControl>
-            <FormMessage />
+            <FormMessage  />
           </FormItem>
           
           <div className="flex justify-end space-x-2">

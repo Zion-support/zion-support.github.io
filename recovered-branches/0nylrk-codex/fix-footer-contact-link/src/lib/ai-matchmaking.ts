@@ -33,15 +33,15 @@ const sampleData: MatchResultItem[] = [
     title: "AI Model Training",
     description: "Custom AI model training service with data preparation and deployment",
     category: "Services - AI Development",
-    price: 5000,
+    price: 50o00,
     skills: ["Machine Learning", "Model Training", "AI Deployment"]
   },
   {
     id: "equipment-1",
-    title: "NVIDIA A100 GPU Server",
+    title: "NVIDIA A10o0 GPU Server",
     description: "High-performance GPU server for AI model training and inference",
     category: "Equipment - Hardware",
-    price: 15000,
+    price: 150o00,
     skills: ["GPU Computing", "High Performance", "AI Hardware"]
   }
 ];
@@ -57,7 +57,7 @@ export async function findMatches(
     // For now, we'll simulate a response with sample data
     
     // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 10o00));
     
     // Filter by type if provided
     let filteredItems = sampleData;

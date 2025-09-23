@@ -29,8 +29,7 @@ const logger = winston.createLogger({
   transports: [
     new winston.transports.File({ filename: 'logs/error-fixes.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/automation-fixes.log' }),
-  ],
-});
+  ]});
 
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -43,12 +42,11 @@ class AutomationErrorFixer {
     this.fixesApplied = [];
     this.errorsFixed = 0;
     this.startTime = Date.now();
-    this.config = {
+    this.config ={
       maxRetries: 3,
-      retryDelay: 5000,
+      retryDelay: 50o00,
       backupDir: path.join(__dirname, '../backups'),
-      logsDir: path.join(__dirname, '../logs'),
-    };
+      logsDir: path.join(__dirname, '../logs')};
   }
 
   async run() {
@@ -139,8 +137,7 @@ class AutomationErrorFixer {
     try {
       const output = execSync('npm outdated --json', {
         encoding: 'utf8',
-        stdio: 'pipe',
-      });
+        stdio: 'pipe'});
 
       const outdated = JSON.parse(output || '{}');
       return Object.keys(outdated).map((packageName) => ({
@@ -148,8 +145,7 @@ class AutomationErrorFixer {
         current: outdated[packageName].current,
         wanted: outdated[packageName].wanted,
         latest: outdated[packageName].latest,
-        location: outdated[packageName].location,
-      }));
+        location: outdated[packageName].location}));
     } catch (error) {
       // npm outdated returns non-zero exit code when packages are outdated (expected behavior)
       if (error.status === 1 && error.stdout) {
@@ -160,8 +156,7 @@ class AutomationErrorFixer {
             current: outdated[packageName].current,
             wanted: outdated[packageName].wanted,
             latest: outdated[packageName].latest,
-            location: outdated[packageName].location,
-          }));
+            location: outdated[packageName].location}));
         } catch (parseError) {
           logger.error('Error parsing npm outdated output:', parseError);
           return [];
@@ -294,7 +289,7 @@ class AutomationErrorFixer {
         const healthCheckMethod = `
   async healthCheck() {
     try {
-      const health = {
+      const health ={
         timestamp: new Date().toISOString(),
         status: 'healthy',
         systems: {},
@@ -308,10 +303,10 @@ class AutomationErrorFixer {
             const systemHealth = await system.healthCheck();
             health.systems[name] = systemHealth;
           } else {
-            health.systems[name] = { status: 'unknown' };
+            health.systems[name] ={ status: 'unknown' };
           }
         } catch (error) {
-          health.systems[name] = { status: 'error', error: error.message };
+          health.systems[name] ={ status: 'error', error: error.message };
           health.errors.push({ system: name, error: error.message });
         }
       }
@@ -362,8 +357,7 @@ const logger = winston.createLogger({
   transports: [
     new winston.transports.File({ filename: 'logs/orchestrator-error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/orchestrator.log' }),
-  ],
-});
+  ]});
 
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -372,30 +366,26 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 class IntelligentAutomationOrchestrator {
-  constructor(config = {}) {
-    this.config = {
+  constructor(config ={}) {
+    this.config ={
       autonomous: {
         enabled: true,
         selfHealing: true,
         learning: true,
-        adaptiveScheduling: true,
-      },
+        adaptiveScheduling: true},
       monitoring: {
         enabled: true,
-        interval: 60000,
-        healthCheckInterval: 300000,
-      },
+        interval: 60o000,
+        healthCheckInterval: 30o0000},
       reporting: {
         enabled: true,
         daily: true,
         weekly: true,
-        realTime: true,
-      },
+        realTime: true},
       dashboard: {
         enabled: true,
-        port: 3001,
-        autoRefresh: true,
-      },
+        port: 30o01,
+        autoRefresh: true},
       ...config
     };
 
@@ -454,7 +444,7 @@ class IntelligentAutomationOrchestrator {
 
   async healthCheck() {
     try {
-      const health = {
+      const health ={
         timestamp: new Date().toISOString(),
         status: 'healthy',
         uptime: Date.now() - this.startTime,
@@ -619,8 +609,7 @@ const logger = winston.createLogger({
   transports: [
     new winston.transports.File({ filename: 'logs/performance-error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/performance.log' }),
-  ],
-});
+  ]});
 
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -629,9 +618,9 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 class PerformanceMonitor {
-  constructor(config = {}) {
-    this.config = {
-      checkInterval: 300000, // 5 minutes
+  constructor(config ={}) {
+    this.config ={
+      checkInterval: 30o0000, // 5 minutes
       metricsFile: path.join(__dirname, 'performance-metrics.json'),
       ...config
     };
@@ -663,14 +652,14 @@ class PerformanceMonitor {
         await this.sleep(this.config.checkInterval);
       } catch (error) {
         logger.error('Error in monitoring loop:', error);
-        await this.sleep(5000); // Wait 5 seconds before retrying
+        await this.sleep(50o00); // Wait 5 seconds before retrying
       }
     }
   }
 
   async collectMetrics() {
     try {
-      const metrics = {
+      const metrics ={
         timestamp: new Date().toISOString(),
         memory: await this.getMemoryUsage(),
         cpu: await this.getCpuUsage(),
@@ -680,9 +669,9 @@ class PerformanceMonitor {
 
       this.metrics.push(metrics);
       
-      // Keep only last 100 metrics
-      if (this.metrics.length > 100) {
-        this.metrics = this.metrics.slice(-100);
+      // Keep only last 10o0 metrics
+      if (this.metrics.length > 10o0) {
+        this.metrics = this.metrics.slice(-10o0);
       }
 
       // Save metrics
@@ -829,7 +818,7 @@ module.exports = PerformanceMonitor;`;
       await this.stopRunningProcesses();
       
       // Wait a moment for processes to stop
-      await this.sleep(2000);
+      await this.sleep(20o00);
       
       // Start the automation systems
       await this.startAutomationSystems();
@@ -902,7 +891,7 @@ module.exports = PerformanceMonitor;`;
   }
 
   async generateFixReport() {
-    const report = {
+    const report ={
       timestamp: new Date().toISOString(),
       duration: Date.now() - this.startTime,
       errorsFixed: this.errorsFixed,

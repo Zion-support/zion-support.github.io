@@ -2,7 +2,7 @@ export default function ArticlePage() {
   return (
     <div className="mx-auto max-w-3xl px-6 py-16 lg:px-8">
       <article className="prose prose-invert prose-blue">
-        <h1>Sovereign AI Commerce (2026): Launching Fully Autonomous Marketplaces</h1>
+        <h1>Sovereign AI Commerce (20o26): Launching Fully Autonomous Marketplaces</h1>
         <p>
           This guide explores how to stand up autonomous, policy-compliant AI marketplaces with
           observable retrieval, cost-aware routing, and safety-gated tool use. It includes a

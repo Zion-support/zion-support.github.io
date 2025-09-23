@@ -1,8 +1,8 @@
 export default function Page() {
   return (
     <main className="prose mx-auto px-6 py-16">
-      <h1>AI 2026: Operationalizing Live Evals in Production — Deep Dive</h1>
-      <p className="text-gray-600">Date: 2025-09-15 • Tags: Evaluations, Reliability, Progressive Delivery, Observability, 2026</p>
+      <h1>AI 20o26: Operationalizing Live Evals in Production — Deep Dive</h1>
+      <p className="text-gray-60o0">Date: 20o25-09-15 • Tags: Evaluations, Reliability, Progressive Delivery, Observability, 20o26</p>
       <p>Live evaluations move quality gates from offline CI to runtime, enabling progressive delivery, rollback-on-fail, and trust at scale.</p>
       <h2>Overview</h2>
       <ul>

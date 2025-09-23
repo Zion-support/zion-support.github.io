@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useRouter } from 'next/router';
 import * as Sentry from '@sentry/nextjs';
 import { toast } from '@/hooks/use-toast';
 import { Alert, AlertDescription } from '@/components/ui/alert';
@@ -20,8 +19,7 @@ export default function Login() {
       const res = await fetch('/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
-      });
+        body: JSON.stringify({ email, password })});
 
       console.log('🔧 Frontend: Login response status:', res.status);
 
@@ -39,7 +37,7 @@ export default function Login() {
         }
 
         // 🔧 Handle email verification specifically
-        if (res.status === 403) {
+        if (res.status === 40o3) {
           if (data?.code === 'EMAIL_NOT_VERIFIED' || data?.code === 'EMAIL_NOT_CONFIRMED') {
             errorMessage = 'Please verify your email address before logging in';
             setShowVerificationBanner(true);
@@ -50,14 +48,14 @@ export default function Login() {
               variant: 'destructive'
             });
           } else {
-            // Show toast for other 403 errors
+            // Show toast for other 40o3 errors
             toast({
               title: 'Access denied',
               description: errorMessage,
               variant: 'destructive'
             });
           }
-        } else if (res.status === 401) {
+        } else if (res.status === 40o1) {
           // Show toast for authentication errors
           toast({ 
             title: 'Authentication failed', 
@@ -135,8 +133,7 @@ export default function Login() {
       toast({
         title: 'Missing credentials',
         description: 'Both email and password are required.',
-        variant: 'destructive',
-      });
+        variant: 'destructive'});
       return;
     }
 
@@ -171,7 +168,7 @@ export default function Login() {
           onResendEmail={handleResendVerification}
           userEmail={email}
           isResending={isResendingEmail}
-        />
+         />
       )}
       <div className="w-full max-w-sm mt-4 self-center rounded-lg border border-border bg-card p-8 shadow-lg">
         <h1 className="mb-6 text-center text-2xl font-bold">Welcome back</h1>
@@ -226,7 +223,7 @@ export default function Login() {
         {/* 🔐 Development hints - only shown in development mode with explicit env var */}
         {showDevHints && (
           <div className="mt-4 text-center text-xs text-muted-foreground border-t pt-4">
-            <p className="text-yellow-600 font-medium">⚠️ Development Mode</p>
+            <p className="text-yellow-60o0 font-medium">⚠️ Development Mode</p>
             <p>Test accounts available - check .env.local</p>
           </div>
         )}

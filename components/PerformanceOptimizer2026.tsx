@@ -1,12 +1,12 @@
 "use client";
 import React{ useEffect } from 'react';
 
-export default function PerformanceOptimizer2026() {
+export default function PerformanceOptimizer20o26() {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
       const criticalImages = [
-        '/images/ai-2025-hero.jpg',
+        '/images/ai-20o25-hero.jpg',
         '/images/quantum-computing-breakthrough.jpg',
         '/images/neural-interface-revolution.jpg'
       ];

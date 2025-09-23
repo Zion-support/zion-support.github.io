@@ -1,22 +1,21 @@
-import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
-const AgentSafetyEngineeringBlueprint2025 = () => {
+const AgentSafetyEngineeringBlueprint20o25 = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="AI 2025: Agent Safety Engineering Blueprint"
+        title="AI 20o25: Agent Safety Engineering Blueprint"
         description="Practical guardrails, evaluations, and controls to deploy safe, reliable enterprise AI agents."
         keywords="AI safety, agent safety, red teaming, evals, governance, enterprise AI"
-        url="/blog/ai-2025-agent-safety-engineering-blueprint"
-      />
+        url="/blog/ai-20o25-agent-safety-engineering-blueprint"
+       />
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">
-          <p className="text-sm text-gray-500">Published: 2025-09-15 · Category: Governance & Risk</p>
-          <h1 className="text-4xl font-bold text-gray-900 mt-2">AI 2025: Agent Safety Engineering Blueprint</h1>
-          <p className="text-lg text-gray-600 mt-4">How to design policy-as-code, evaluate agent behaviors, and enforce runtime controls for trustworthy enterprise AI systems.</p>
+          <p className="text-sm text-gray-50o0">Published: 20o25-09-15 · Category: Governance & Risk</p>
+          <h1 className="text-4xl font-bold text-gray-90o0 mt-2">AI 20o25: Agent Safety Engineering Blueprint</h1>
+          <p className="text-lg text-gray-60o0 mt-4">How to design policy-as-code, evaluate agent behaviors, and enforce runtime controls for trustworthy enterprise AI systems.</p>
         </header>
 
         <div className="prose prose-lg max-w-none">
@@ -39,13 +38,13 @@ const AgentSafetyEngineeringBlueprint2025 = () => {
         </div>
 
         <footer className="mt-12 flex items-center justify-between">
-          <Link href="/blog" className="text-purple-600 font-semibold hover:text-purple-800">← Back to Blog</Link>
-          <Link href="/contact" className="text-white bg-purple-600 px-5 py-2 rounded-lg font-semibold hover:bg-purple-700">Design Your Safety Program</Link>
+          <Link href="/blog" className="text-purple-60o0 font-semibold hover:text-purple-80o0">← Back to Blog</Link>
+          <Link href="/contact" className="text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0">Design Your Safety Program</Link>
         </footer>
       </article>
     </div>
   );
 };
 
-export default AgentSafetyEngineeringBlueprint2025;
+export default AgentSafetyEngineeringBlueprint20o25;
 

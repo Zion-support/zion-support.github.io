@@ -4,40 +4,40 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const NewContentShowcase2025 = () => {
+const NewContentShowcase20o25 = () => {
   const [activeTab, setActiveTab] = useState('case-studies');
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 500);
+    const timer = setTimeout(() => setIsVisible(true), 50o0);
     return () => clearTimeout(timer);
   }, []);
 
-  const contentSections = {
+  const contentSections ={
     'case-studies': {
       title: 'Success Stories & Case Studies',
       description: 'Real-world transformations with measurable ROI',
       items: [
         {
-          title: 'Fortune 500 Manufacturing: 2,500% ROI',
+          title: 'Fortune 50o0 Manufacturing: 2,50o0% ROI',
           description: 'Complete autonomous transformation of production lines',
-          roi: '2,500%',
+          roi: '2,50o0%',
           industry: 'Manufacturing',
-          link: '/case-studies/fortune-500-manufacturing-2500-roi'
+          link: '/case-studies/fortune-50o0-manufacturing-250o0-roi'
         },
         {
-          title: 'Healthcare Revolution: 1,200% ROI',
+          title: 'Healthcare Revolution: 1,20o0% ROI',
           description: 'AI-powered diagnostic platform implementation',
-          roi: '1,200%',
+          roi: '1,20o0%',
           industry: 'Healthcare',
-          link: '/case-studies/healthcare-revolution-1200-roi'
+          link: '/case-studies/healthcare-revolution-120o0-roi'
         },
         {
-          title: 'Financial Services: 1,500% ROI',
+          title: 'Financial Services: 1,50o0% ROI',
           description: 'Advanced analytics and fraud detection systems',
-          roi: '1,500%',
+          roi: '1,50o0%',
           industry: 'Finance',
-          link: '/case-studies/financial-services-1500-roi'
+          link: '/case-studies/financial-services-150o0-roi'
         }
       ]
     },
@@ -46,11 +46,11 @@ const NewContentShowcase2025 = () => {
       description: 'Cutting-edge research and industry analysis',
       items: [
         {
-          title: 'AI 2025: The Ultimate Automation Revolution',
+          title: 'AI 20o25: The Ultimate Automation Revolution',
           description: 'Comprehensive guide to next-generation AI automation',
           readTime: '8 min read',
           category: 'Automation',
-          link: '/blog/ai-2025-ultimate-automation-revolution'
+          link: '/blog/ai-20o25-ultimate-automation-revolution'
         },
         {
           title: 'Quantum Computing Business Applications',
@@ -60,11 +60,11 @@ const NewContentShowcase2025 = () => {
           link: '/blog/quantum-computing-business-applications'
         },
         {
-          title: 'Neural Interface Revolution 2025',
+          title: 'Neural Interface Revolution 20o25',
           description: 'The future of human-AI interaction in business',
           readTime: '10 min read',
           category: 'Neural Interfaces',
-          link: '/blog/neural-interface-revolution-2025'
+          link: '/blog/neural-interface-revolution-20o25'
         }
       ]
     },
@@ -95,17 +95,17 @@ const NewContentShowcase2025 = () => {
   };
 
   return (
-    <div className={`py-16 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+    <div className={`py-16 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 transition-all duration-10o00 ${isVisible ? 'opacity-10o0 translate-y-0' : 'opacity-0 translate-y-8'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full px-6 py-2 mb-4">
-            <span className="text-sm font-semibold">✨ NEW CONTENT 2025</span>
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white rounded-full px-6 py-2 mb-4">
+            <span className="text-sm font-semibold">✨ NEW CONTENT 20o25</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-90o0 mb-4">
             Explore Our Latest Content
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
             Discover success stories, insights, and tools that are transforming businesses worldwide
           </p>
         </div>
@@ -116,10 +116,10 @@ const NewContentShowcase2025 = () => {
             <button
               key={key}
               onClick={() => setActiveTab(key)}
-              className={`px-6 py-3 m-2 rounded-lg font-semibold transition-all duration-300 ${
+              className={`px-6 py-3 m-2 rounded-lg font-semibold transition-all duration-30o0 ${
                 activeTab === key
-                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg transform scale-105'
-                  : 'bg-white text-gray-700 hover:bg-gray-50 shadow-md'
+                  ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg transform scale-10o5'
+                  : 'bg-white text-gray-70o0 hover:bg-gray-50 shadow-md'
               }`}
             >
               {section.title}
@@ -130,10 +130,10 @@ const NewContentShowcase2025 = () => {
         {/* Content Display */}
         <div className="bg-white rounded-2xl shadow-xl p-8">
           <div className="mb-6">
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">
+            <h3 className="text-2xl font-bold text-gray-90o0 mb-2">
               {contentSections[activeTab as keyof typeof contentSections].title}
             </h3>
-            <p className="text-gray-600">
+            <p className="text-gray-60o0">
               {contentSections[activeTab as keyof typeof contentSections].description}
             </p>
           </div>
@@ -142,19 +142,19 @@ const NewContentShowcase2025 = () => {
             {contentSections[activeTab as keyof typeof contentSections].items.map((item, index) => (
               <div
                 key={index}
-                className="group bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-300 hover:border-purple-300"
+                className="group bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border border-gray-20o0 hover:shadow-lg transition-all duration-30o0 hover:border-purple-30o0"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
+                    <h4 className="text-lg font-semibold text-gray-90o0 mb-2 group-hover:text-purple-60o0 transition-colors">
                       {item.title}
                     </h4>
-                    <p className="text-gray-600 text-sm mb-3">
+                    <p className="text-gray-60o0 text-sm mb-3">
                       {item.description}
                     </p>
                   </div>
                   {item.roi && (
-                    <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold ml-2">
+                    <div className="bg-green-10o0 text-green-80o0 px-3 py-1 rounded-full text-sm font-semibold ml-2">
                       {item.roi} ROI
                     </div>
                   )}
@@ -163,29 +163,29 @@ const NewContentShowcase2025 = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
                     {item.industry && (
-                      <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium">
+                      <span className="bg-blue-10o0 text-blue-80o0 px-2 py-1 rounded text-xs font-medium">
                         {item.industry}
                       </span>
                     )}
                     {item.category && (
-                      <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs font-medium">
+                      <span className="bg-purple-10o0 text-purple-80o0 px-2 py-1 rounded text-xs font-medium">
                         {item.category}
                       </span>
                     )}
                     {item.type && (
-                      <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs font-medium">
+                      <span className="bg-orange-10o0 text-orange-80o0 px-2 py-1 rounded text-xs font-medium">
                         {item.type}
                       </span>
                     )}
                     {item.readTime && (
-                      <span className="text-gray-500 text-xs">
+                      <span className="text-gray-50o0 text-xs">
                         {item.readTime}
                       </span>
                     )}
                   </div>
                   <Link
                     href={item.link}
-                    className="text-purple-600 hover:text-purple-800 font-semibold text-sm group-hover:underline"
+                    className="text-purple-60o0 hover:text-purple-80o0 font-semibold text-sm group-hover:underline"
                   >
                     Explore →
                   </Link>
@@ -197,7 +197,7 @@ const NewContentShowcase2025 = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-12">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
+          <div className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
               Ready to Transform Your Business?
             </h3>
@@ -207,13 +207,13 @@ const NewContentShowcase2025 = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
               >
                 Get Started Today
               </Link>
               <Link
                 href="/services"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors"
               >
                 View All Services
               </Link>
@@ -225,4 +225,4 @@ const NewContentShowcase2025 = () => {
   );
 };
 
-export default NewContentShowcase2025;
+export default NewContentShowcase20o25;

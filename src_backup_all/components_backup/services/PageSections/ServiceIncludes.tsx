@@ -10,7 +10,7 @@ export function ServiceIncludes() {
         <div className="space-y-4">
           <div className="flex items-start">
             <div className="mt-1 mr-4">
-              <Check className="h-5 w-5 text-zion-cyan" />
+              <Check className="h-5 w-5 text-zion-cyan"  />
             </div>
             <div>
               <h3 className="text-white font-medium">Transportation to Site</h3>
@@ -20,7 +20,7 @@ export function ServiceIncludes() {
           
           <div className="flex items-start">
             <div className="mt-1 mr-4">
-              <Check className="h-5 w-5 text-zion-cyan" />
+              <Check className="h-5 w-5 text-zion-cyan"  />
             </div>
             <div>
               <h3 className="text-white font-medium">First Hour of Service</h3>
@@ -30,7 +30,7 @@ export function ServiceIncludes() {
           
           <div className="flex items-start">
             <div className="mt-1 mr-4">
-              <Check className="h-5 w-5 text-zion-cyan" />
+              <Check className="h-5 w-5 text-zion-cyan"  />
             </div>
             <div>
               <h3 className="text-white font-medium">Technical Assessment</h3>
@@ -42,7 +42,7 @@ export function ServiceIncludes() {
         <div className="space-y-4">
           <div className="flex items-start">
             <div className="mt-1 mr-4">
-              <Check className="h-5 w-5 text-zion-cyan" />
+              <Check className="h-5 w-5 text-zion-cyan"  />
             </div>
             <div>
               <h3 className="text-white font-medium">Basic Hardware Diagnostics</h3>
@@ -52,7 +52,7 @@ export function ServiceIncludes() {
           
           <div className="flex items-start">
             <div className="mt-1 mr-4">
-              <Check className="h-5 w-5 text-zion-cyan" />
+              <Check className="h-5 w-5 text-zion-cyan"  />
             </div>
             <div>
               <h3 className="text-white font-medium">Network Connectivity</h3>
@@ -62,7 +62,7 @@ export function ServiceIncludes() {
           
           <div className="flex items-start">
             <div className="mt-1 mr-4">
-              <Check className="h-5 w-5 text-zion-cyan" />
+              <Check className="h-5 w-5 text-zion-cyan"  />
             </div>
             <div>
               <h3 className="text-white font-medium">Service Documentation</h3>

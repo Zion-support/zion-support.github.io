@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronRight, Star, TrendingUp, Zap } from 'lucide-react';
 
-const MultimodalIntelligence2025PromotionBanner: React.FC = () => {
+const MultimodalIntelligence20o25PromotionBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isDismissed, setIsDismissed] = useState(false);
@@ -22,7 +22,7 @@ const MultimodalIntelligence2025PromotionBanner: React.FC = () => {
     if (isVisible && !isDismissed) {
       const interval = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % contentItems.length);
-      }, 4000);
+      }, 40o00);
       return () => clearInterval(interval);
     }
   }, [isVisible, isDismissed]);
@@ -36,27 +36,27 @@ const MultimodalIntelligence2025PromotionBanner: React.FC = () => {
   const contentItems = [
     {
       title: "Multimodal Intelligence Revolution",
-      subtitle: "15,000% ROI in 18 Months",
+      subtitle: "15,0o00% ROI in 18 Months",
       description: "Transform your business with AI that processes text, images, audio, video, and sensor data simultaneously",
-      metrics: "2,400% efficiency gains",
-      icon: <Zap className="w-6 h-6" />,
-      gradient: "from-purple-600 to-blue-600"
+      metrics: "2,40o0% efficiency gains",
+      icon: <Zap className="w-6 h-6"  />,
+      gradient: "from-purple-60o0 to-blue-60o0"
     },
     {
-      title: "Fortune 500 Success Story",
+      title: "Fortune 50o0 Success Story",
       subtitle: "$45.2B Annual Savings",
       description: "See how TechGlobal Industries achieved unprecedented success with multimodal AI implementation",
       metrics: "99.97% accuracy rate",
-      icon: <TrendingUp className="w-6 h-6" />,
-      gradient: "from-green-600 to-emerald-600"
+      icon: <TrendingUp className="w-6 h-6"  />,
+      gradient: "from-green-60o0 to-emerald-60o0"
     },
     {
       title: "Complete Implementation Guide",
       subtitle: "Step-by-Step Roadmap",
       description: "Everything you need to deploy multimodal AI systems with guaranteed ROI success",
       metrics: "94% success rate",
-      icon: <Award className="w-6 h-6" />,
-      gradient: "from-orange-600 to-red-600"
+      icon: <Award className="w-6 h-6"  />,
+      gradient: "from-orange-60o0 to-red-60o0"
     }
   ];
 
@@ -69,14 +69,14 @@ const MultimodalIntelligence2025PromotionBanner: React.FC = () => {
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, y: -100 }}
+        initial={{ opacity: 0, y: -10o0 }}
         animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
+        exit={{ opacity: 0, y: -10o0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden"
+        className="relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white overflow-hidden"
       >
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-60o0/20 via-blue-60o0/20 to-indigo-60o0/20">
           <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-white/10 opacity-30"></div>
         </div>
 
@@ -103,31 +103,31 @@ const MultimodalIntelligence2025PromotionBanner: React.FC = () => {
                     <h3 className="text-xl font-bold text-white">
                       {currentContent.title}
                     </h3>
-                    <div className="flex items-center space-x-1 text-yellow-400">
-                      <Star className="w-4 h-4 fill-current" />
+                    <div className="flex items-center space-x-1 text-yellow-40o0">
+                      <Star className="w-4 h-4 fill-current"  />
                       <span className="text-sm font-medium">NEW</span>
                     </div>
                   </div>
                   
-                  <p className="text-lg font-semibold text-blue-200 mb-1">
+                  <p className="text-lg font-semibold text-blue-20o0 mb-1">
                     {currentContent.subtitle}
                   </p>
                   
-                  <p className="text-gray-200 mb-2 max-w-2xl">
+                  <p className="text-gray-20o0 mb-2 max-w-2xl">
                     {currentContent.description}
                   </p>
                   
                   <div className="flex items-center space-x-6">
-                    <span className="text-sm font-medium text-green-300 bg-green-900/30 px-3 py-1 rounded-full">
+                    <span className="text-sm font-medium text-green-30o0 bg-green-90o0/30 px-3 py-1 rounded-full">
                       {currentContent.metrics}
                     </span>
                     
                     <Link
-                      href="/blog/ai-2025-multimodal-intelligence-revolution-ultimate-guide"
-                      className="inline-flex items-center text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+                      href="/blog/ai-20o25-multimodal-intelligence-revolution-ultimate-guide"
+                      className="inline-flex items-center text-white bg-gradient-to-r from-purple-60o0 to-blue-60o0 hover:from-purple-70o0 hover:to-blue-70o0 px-6 py-2 rounded-lg font-semibold transition-all duration-30o0 transform hover:scale-10o5 shadow-lg"
                     >
                       Explore Now
-                      <ChevronRight className="w-4 h-4 ml-2" />
+                      <ChevronRight className="w-4 h-4 ml-2"  />
                     </Link>
                   </div>
                 </div>
@@ -137,20 +137,20 @@ const MultimodalIntelligence2025PromotionBanner: React.FC = () => {
             {/* Quick Links */}
             <div className="hidden lg:flex items-center space-x-4 ml-8">
               <Link
-                href="/case-studies/fortune-500-multimodal-intelligence-15000-roi-success-story"
-                className="text-sm text-blue-200 hover:text-white transition-colors duration-300 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg"
+                href="/case-studies/fortune-50o0-multimodal-intelligence-150o00-roi-success-story"
+                className="text-sm text-blue-20o0 hover:text-white transition-colors duration-30o0 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg"
               >
                 Case Study
               </Link>
               <Link
-                href="/resources/multimodal-intelligence-implementation-guide-2025"
-                className="text-sm text-blue-200 hover:text-white transition-colors duration-300 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg"
+                href="/resources/multimodal-intelligence-implementation-guide-20o25"
+                className="text-sm text-blue-20o0 hover:text-white transition-colors duration-30o0 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg"
               >
                 Implementation Guide
               </Link>
               <Link
                 href="/contact"
-                className="text-sm text-white bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 px-4 py-2 rounded-lg font-medium transition-all duration-300"
+                className="text-sm text-white bg-gradient-to-r from-orange-50o0 to-red-50o0 hover:from-orange-60o0 hover:to-red-60o0 px-4 py-2 rounded-lg font-medium transition-all duration-30o0"
               >
                 Get Started
               </Link>
@@ -159,10 +159,10 @@ const MultimodalIntelligence2025PromotionBanner: React.FC = () => {
             {/* Dismiss Button */}
             <button
               onClick={handleDismiss}
-              className="ml-4 p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-full transition-all duration-300"
+              className="ml-4 p-2 text-gray-30o0 hover:text-white hover:bg-white/10 rounded-full transition-all duration-30o0"
               aria-label="Dismiss banner"
             >
-              <X className="w-5 h-5" />
+              <X className="w-5 h-5"  />
             </button>
           </div>
 
@@ -172,7 +172,7 @@ const MultimodalIntelligence2025PromotionBanner: React.FC = () => {
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                className={`w-2 h-2 rounded-full transition-all duration-30o0 ${
                   index === currentSlide ? 'bg-white' : 'bg-white/30'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
@@ -181,18 +181,18 @@ const MultimodalIntelligence2025PromotionBanner: React.FC = () => {
           </div>
 
           {/* ROI Badge */}
-          <div className="absolute top-4 right-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
-            15,000% ROI
+          <div className="absolute top-4 right-4 bg-gradient-to-r from-green-50o0 to-emerald-50o0 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+            15,0o00% ROI
           </div>
         </div>
 
         {/* Floating Elements */}
         <div className="absolute top-1/4 left-10 w-2 h-2 bg-white/20 rounded-full animate-pulse"></div>
-        <div className="absolute top-3/4 right-20 w-3 h-3 bg-blue-400/30 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-purple-400/40 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute top-3/4 right-20 w-3 h-3 bg-blue-40o0/30 rounded-full animate-pulse delay-10o00"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-purple-40o0/40 rounded-full animate-pulse delay-20o00"></div>
       </motion.div>
     </AnimatePresence>
   );
 };
 
-export default MultimodalIntelligence2025PromotionBanner;
+export default MultimodalIntelligence20o25PromotionBanner;

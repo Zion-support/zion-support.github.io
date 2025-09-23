@@ -1,4 +1,3 @@
-import React from 'react';
 import { cn } from '@/lib/utils';
 
 interface SwitchProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>'type'> {
@@ -30,7 +29,7 @@ const Switch = React.forwardRef<HTMLInputElementSwitchProps>(
               'inline-block h-4 w-4 transform rounded-full bg-background transition-transform',
               checked ? 'translate-x-6' : 'translate-x-1'
             )}
-          />
+           />
         </div>
       </label>
     );

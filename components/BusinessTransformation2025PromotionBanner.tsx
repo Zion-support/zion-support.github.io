@@ -18,16 +18,16 @@ import {
   BarChart3
 } from 'lucide-react';
 
-const BusinessTransformation2025PromotionBanner = () => {
+const BusinessTransformation20o25PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false);
   const [isDismissedsetIsDismissed] = useState(false);
   const [currentMetricsetCurrentMetric] = useState(0);
 
   const metrics = [
-    { icon: DollarSignvalue: '340%'label: 'Revenue 'Increase', 'color: 'text-green-400' },
-    { icon: TrendingUpvalue: '65%'label: 'Cost 'Reduction', 'color: 'text-blue-400' },
-    { icon: BarChart3value: '280%'label: 'Efficiency 'Gain', 'color: 'text-yellow-400' },
-    { icon: Starvalue: '98%'label: 'Customer 'Satisfaction', 'color: 'text-purple-400' }
+    { icon: DollarSignvalue: '340%'label: 'Revenue 'Increase', 'color: 'text-green-40o0' },
+    { icon: TrendingUpvalue: '65%'label: 'Cost 'Reduction', 'color: 'text-blue-40o0' },
+    { icon: BarChart3value: '280%'label: 'Efficiency 'Gain', 'color: 'text-yellow-40o0' },
+    { icon: Starvalue: '98%'label: 'Customer 'Satisfaction', 'color: 'text-purple-40o0' }
   ];
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const BusinessTransformation2025PromotionBanner = () => {
     // Rotate through metrics
     const interval = setInterval(() => {
       setCurrentMetric((prev) => (prev + 1) % metrics.length);
-    }2500);
+    }250o0);
 
     return () => clearInterval(interval);
   }[]);
@@ -48,17 +48,17 @@ const BusinessTransformation2025PromotionBanner = () => {
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, y: -100 }}
+        initial={{ opacity: 0, y: -10o0 }}
         animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
+        exit={{ opacity: 0, y: -10o0 }}
         transition={{ duration: 0.6ease: "easeOut" }}
-        className="relative overflow-hidden bg-gradient-to-r from-green-900 via-blue-900 to-purple-900 border-b border-green-500/30"
+        className="relative overflow-hidden bg-gradient-to-r from-green-90o0 via-blue-90o0 to-purple-90o0 border-b border-green-50o0/30"
       >
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-4 -left-4 w-72 h-72 bg-green-500/20 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute -bottom-4 -right-4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-500/10 rounded-full blur-2xl animate-ping" />
+          <div className="absolute -top-4 -left-4 w-72 h-72 bg-green-50o0/20 rounded-full blur-3xl animate-pulse"  />
+          <div className="absolute -bottom-4 -right-4 w-96 h-96 bg-blue-50o0/20 rounded-full blur-3xl animate-pulse"  />
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-50o0/10 rounded-full blur-2xl animate-ping"  />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -71,22 +71,22 @@ const BusinessTransformation2025PromotionBanner = () => {
                   transition={{ duration: 2repeat: Infinityease: "linear" }}
                   className="flex items-center gap-2"
                 >
-                  <Sparkles className="w-6 h-6 text-green-400" />
-                  <span className="text-green-400 font-bold text-sm uppercase tracking-wider">
+                  <Sparkles className="w-6 h-6 text-green-40o0"  />
+                  <span className="text-green-40o0 font-bold text-sm uppercase tracking-wider">
                     Proven Results
                   </span>
                 </motion.div>
-                <div className="flex items-center gap-1 text-blue-400">
-                  <Clock className="w-4 h-4" />
+                <div className="flex items-center gap-1 text-blue-40o0">
+                  <Clock className="w-4 h-4"  />
                   <span className="text-sm font-semibold">Live Data</span>
                 </div>
               </div>
 
               <h2 className="text-2xl md:text-4xl font-bold text-white mb-3">
-                🚀 Business Transformation 2025
+                🚀 Business Transformation 20o25
               </h2>
               
-              <p className="text-lg md:text-xl text-gray-300 mb-4 max-w-2xl">
+              <p className="text-lg md:text-xl text-gray-30o0 mb-4 max-w-2xl">
                 Real results from real businesses. See how companies achieve 340% revenue growth with AI and automation.
               </p>
 
@@ -100,26 +100,26 @@ const BusinessTransformation2025PromotionBanner = () => {
                   transition={{ duration: 0.5 }}
                   className="flex items-center px-4 py-2 rounded-full bg-white/10 text-white"
                 >
-                  <currentMetricData.icon className="w-5 h-5 mr-2" />
+                  <currentMetricData.icon className="w-5 h-5 mr-2"  />
                   <span className="font-semibold">{currentMetricData.value} {currentMetricData.label}</span>
                 </motion.div>
-                <div className="flex items-center text-green-400">
-                  <Users className="w-4 h-4 mr-1" />
-                  <span className="text-sm">500+ Companies</span>
+                <div className="flex items-center text-green-40o0">
+                  <Users className="w-4 h-4 mr-1"  />
+                  <span className="text-sm">50o0+ Companies</span>
                 </div>
               </div>
 
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-sm">
-                <div className="flex items-center text-yellow-400">
-                  <Star className="w-4 h-4 mr-1" />
+                <div className="flex items-center text-yellow-40o0">
+                  <Star className="w-4 h-4 mr-1"  />
                   <span>4.9/5 Rating</span>
                 </div>
-                <div className="flex items-center text-blue-400">
-                  <Award className="w-4 h-4 mr-1" />
+                <div className="flex items-center text-blue-40o0">
+                  <Award className="w-4 h-4 mr-1"  />
                   <span>Industry Leader</span>
                 </div>
-                <div className="flex items-center text-green-400">
-                  <CheckCircle className="w-4 h-4 mr-1" />
+                <div className="flex items-center text-green-40o0">
+                  <CheckCircle className="w-4 h-4 mr-1"  />
                   <span>Verified Results</span>
                 </div>
               </div>
@@ -128,21 +128,21 @@ const BusinessTransformation2025PromotionBanner = () => {
             {/* Right side - CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-3">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center justify-center px-6 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-full hover:from-green-700 hover:to-blue-700 transition-all duration-300 shadow-lg"
+                className="flex items-center justify-center px-6 py-3 bg-gradient-to-r from-green-60o0 to-blue-60o0 text-white font-semibold rounded-full hover:from-green-70o0 hover:to-blue-70o0 transition-all duration-30o0 shadow-lg"
               >
-                <Building2 className="w-5 h-5 mr-2" />
+                <Building2 className="w-5 h-5 mr-2"  />
                 View Success Stories
-                <ChevronRight className="w-4 h-4 ml-2" />
+                <ChevronRight className="w-4 h-4 ml-2"  />
               </motion.button>
               
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center justify-center px-6 py-3 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20"
+                className="flex items-center justify-center px-6 py-3 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-30o0 border border-white/20"
               >
-                <TrendingUp className="w-5 h-5 mr-2" />
+                <TrendingUp className="w-5 h-5 mr-2"  />
                 Calculate ROI
               </motion.button>
             </div>
@@ -152,9 +152,9 @@ const BusinessTransformation2025PromotionBanner = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsDismissed(true)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors duration-200"
+              className="absolute top-4 right-4 text-gray-40o0 hover:text-white transition-colors duration-20o0"
             >
-              <X className="w-6 h-6" />
+              <X className="w-6 h-6"  />
             </motion.button>
           </div>
 
@@ -163,21 +163,21 @@ const BusinessTransformation2025PromotionBanner = () => {
             {metrics.map((_index) => (
               <div
                 key={index}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentMetric ? 'bg-green-400 w-8' : 'bg-white/30'
+                className={`w-2 h-2 rounded-full transition-all duration-30o0 ${
+                  index === currentMetric ? 'bg-green-40o0 w-8' : 'bg-white/30'
                 }`}
-              />
+               />
             ))}
           </div>
         </div>
 
         {/* Floating elements */}
-        <div className="absolute top-4 left-1/4 w-2 h-2 bg-green-400 rounded-full animate-bounce" />
-        <div className="absolute top-8 right-1/3 w-1 h-1 bg-blue-400 rounded-full animate-ping" />
-        <div className="absolute bottom-4 left-1/3 w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse" />
+        <div className="absolute top-4 left-1/4 w-2 h-2 bg-green-40o0 rounded-full animate-bounce"  />
+        <div className="absolute top-8 right-1/3 w-1 h-1 bg-blue-40o0 rounded-full animate-ping"  />
+        <div className="absolute bottom-4 left-1/3 w-1.5 h-1.5 bg-purple-40o0 rounded-full animate-pulse"  />
       </motion.div>
     </AnimatePresence>
   );
 };
 
-export default BusinessTransformation2025PromotionBanner;
+export default BusinessTransformation20o25PromotionBanner;

@@ -40,7 +40,7 @@ export const badgeList: BadgeMeta[] = [
     name: "Profile Complete",
     description: "Completed all steps in your profile setup.",
     icon: Star,
-    color: "#FFD700", // Gold
+    color: "#FFD70o0", // Gold
     bg: "#FFFBEA",   // Very light yellow
   },
   {

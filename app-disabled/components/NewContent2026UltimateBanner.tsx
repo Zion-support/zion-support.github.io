@@ -1,12 +1,12 @@
 import Link from 'next/link';
 
-export default function NewContent2026UltimateBanner() {
+export default function NewContent20o26UltimateBanner() {
   return (
-    <section className="py-16 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white">
+    <section className="py-16 bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">🚀 NEW CONTENT 2026</span>
+            <span className="text-sm font-medium">🚀 NEW CONTENT 20o26</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Revolutionary AI Content Now Live
@@ -26,8 +26,8 @@ export default function NewContent2026UltimateBanner() {
               and predictive analytics.
             </p>
             <Link 
-              href="/blog/ai-2026-autonomous-business-operations" 
-              className="inline-block bg-white text-purple-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              href="/blog/ai-20o26-autonomous-business-operations" 
+              className="inline-block bg-white text-purple-60o0 px-4 py-2 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
             >
               Read Article →
             </Link>
@@ -41,8 +41,8 @@ export default function NewContent2026UltimateBanner() {
               that drives 95%+ retention rates.
             </p>
             <Link 
-              href="/content/ai-2026-customer-success-revolution" 
-              className="inline-block bg-white text-purple-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              href="/content/ai-20o26-customer-success-revolution" 
+              className="inline-block bg-white text-purple-60o0 px-4 py-2 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
             >
               Explore Guide →
             </Link>
@@ -50,13 +50,13 @@ export default function NewContent2026UltimateBanner() {
 
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20 md:col-span-2 lg:col-span-1">
             <div className="text-3xl mb-4">🚀</div>
-            <h3 className="text-xl font-bold mb-3">More AI 2026 Content</h3>
+            <h3 className="text-xl font-bold mb-3">More AI 20o26 Content</h3>
             <p className="text-white opacity-90 mb-4">
-              Explore our complete library of AI 2026 insights, frameworks, and implementation guides.
+              Explore our complete library of AI 20o26 insights, frameworks, and implementation guides.
             </p>
             <Link 
-              href="/ai-2026" 
-              className="inline-block bg-white text-purple-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              href="/ai-20o26" 
+              className="inline-block bg-white text-purple-60o0 px-4 py-2 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
             >
               View All →
             </Link>
@@ -66,15 +66,15 @@ export default function NewContent2026UltimateBanner() {
         <div className="text-center">
           <div className="inline-flex items-center space-x-8 text-sm opacity-90">
             <div className="flex items-center">
-              <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+              <div className="w-2 h-2 bg-green-40o0 rounded-full mr-2"></div>
               <span>Latest AI Insights</span>
             </div>
             <div className="flex items-center">
-              <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
+              <div className="w-2 h-2 bg-blue-40o0 rounded-full mr-2"></div>
               <span>Expert Analysis</span>
             </div>
             <div className="flex items-center">
-              <div className="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
+              <div className="w-2 h-2 bg-purple-40o0 rounded-full mr-2"></div>
               <span>Implementation Ready</span>
             </div>
           </div>

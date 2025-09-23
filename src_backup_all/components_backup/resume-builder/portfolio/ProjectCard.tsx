@@ -33,10 +33,10 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             alt={project.title}
             className="object-cover"
             loading="lazy"
-          />
+           />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-muted">
-            <FileText className="h-12 w-12 text-muted-foreground/50" />
+            <FileText className="h-12 w-12 text-muted-foreground/50"  />
           </div>
         )}
       </div>
@@ -72,7 +72,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
               title="GitHub"
             >
               <Button variant="ghost" size="icon" aria-label="GitHub link">
-                <Github className="h-4 w-4" />
+                <Github className="h-4 w-4"  />
               </Button>
             </a>
           )}
@@ -86,7 +86,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
               title="Live demo"
             >
               <Button variant="ghost" size="icon" aria-label="Live demo link">
-                <Link className="h-4 w-4" />
+                <Link className="h-4 w-4"  />
               </Button>
             </a>
           )}
@@ -94,10 +94,10 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
         
         <div className="flex gap-2">
           <Button variant="ghost" size="icon" onClick={() => onEdit(project)} aria-label="Edit project">
-            <Edit className="h-4 w-4" />
+            <Edit className="h-4 w-4"  />
           </Button>
           <Button variant="ghost" size="icon" onClick={() => setDeleteDialogOpen(true)} aria-label="Delete project">
-            <Trash2 className="h-4 w-4" />
+            <Trash2 className="h-4 w-4"  />
           </Button>
         </div>
       </CardFooter>

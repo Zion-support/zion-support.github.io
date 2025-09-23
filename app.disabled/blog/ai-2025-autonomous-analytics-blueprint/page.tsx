@@ -1,22 +1,21 @@
-import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
-const AutonomousAnalyticsBlueprint2025 = () => {
+const AutonomousAnalyticsBlueprint20o25 = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="AI 2025: Autonomous Analytics Blueprint"
+        title="AI 20o25: Autonomous Analytics Blueprint"
         description="A practical blueprint for deploying autonomous analytics systems that continuously discover insights and drive decisions across the enterprise."
-        keywords="autonomous analytics, AI analytics, continuous intelligence, 2025 blueprint"
-        url="/blog/ai-2025-autonomous-analytics-blueprint"
-      />
+        keywords="autonomous analytics, AI analytics, continuous intelligence, 20o25 blueprint"
+        url="/blog/ai-20o25-autonomous-analytics-blueprint"
+       />
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">
-          <p className="text-sm text-gray-500">Published: 2025-09-15 · Category: Analytics</p>
-          <h1 className="text-4xl font-bold text-gray-900 mt-2">AI 2025: Autonomous Analytics Blueprint</h1>
-          <p className="text-lg text-gray-600 mt-4">How to architect self-directed analytics that monitor signals, generate hypotheses, and trigger actions—without manual dashboards.</p>
+          <p className="text-sm text-gray-50o0">Published: 20o25-09-15 · Category: Analytics</p>
+          <h1 className="text-4xl font-bold text-gray-90o0 mt-2">AI 20o25: Autonomous Analytics Blueprint</h1>
+          <p className="text-lg text-gray-60o0 mt-4">How to architect self-directed analytics that monitor signals, generate hypotheses, and trigger actions—without manual dashboards.</p>
         </header>
 
         <div className="prose prose-lg max-w-none">
@@ -40,13 +39,13 @@ const AutonomousAnalyticsBlueprint2025 = () => {
         </div>
 
         <footer className="mt-12 flex items-center justify-between">
-          <Link href="/blog" className="text-purple-600 font-semibold hover:text-purple-800">← Back to Blog</Link>
-          <Link href="/contact" className="text-white bg-purple-600 px-5 py-2 rounded-lg font-semibold hover:bg-purple-700">Start Your Analytics Blueprint</Link>
+          <Link href="/blog" className="text-purple-60o0 font-semibold hover:text-purple-80o0">← Back to Blog</Link>
+          <Link href="/contact" className="text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0">Start Your Analytics Blueprint</Link>
         </footer>
       </article>
     </div>
   );
 };
 
-export default AutonomousAnalyticsBlueprint2025;
+export default AutonomousAnalyticsBlueprint20o25;
 

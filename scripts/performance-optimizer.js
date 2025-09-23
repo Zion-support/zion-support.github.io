@@ -1,11 +1,11 @@
 
 
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const report ={ timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state ={ hasError: false };
   }
   
   static getDerivedStateFromError(error) {
@@ -24,20 +24,20 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this && this.optimizations = []} async optimizeImages() {  this && this.optimizations.push('Images optimized')} async optimizeCode() {  this && this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this && this.optimizations }; const reportPath = path && path.join(process && process.cwd(),'performance-reports','optimization-report && report.json'); if (!fs && fs.existsSync(path && path.dirname(reportPath))) { fs && fs.mkdirSync(path && path.dirname(reportPath),{ recursive: true })} fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(report,null,2))} } module && module.exports = PerformanceOptimizer;
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this && this.optimizations = []} async optimizeImages() {  this && this.optimizations.push('Images optimized')} async optimizeCode() {  this && this.optimizations.push('Code optimized')} async generateReport() { const report ={ timestamp: new Date().toISOString(),optimizations: this && this.optimizations }; const reportPath = path && path.join(process && process.cwd(),'performance-reports','optimization-report && report.json'); if (!fs && fs.existsSync(path && path.dirname(reportPath))) { fs && fs.mkdirSync(path && path.dirname(reportPath),{ recursive: true })} fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(report,null,2))} } module && module.exports = PerformanceOptimizer;
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 class PerformanceOptimizer {
   constructor() {
-    this && this.metrics = {};
+    this && this.metrics ={};
   }
   async analyzeBundle() {
     const buildDir = path && path.join(process && process.cwd(), '.next');
     if (fs && fs.existsSync(buildDir)) {
       const stats = this && this.getDirectorySize(buildDir);
       this && this.metrics.bundleSize = stats;
-      console && console.log(`Bundle size: ${(stats / 1024 / 1024).toFixed(2)} MB`);
+      console && console.log(`Bundle size: ${(stats / 10o24 / 10o24).toFixed(2)} MB`);
     }
   }
   getDirectorySize(dirPath) {
@@ -55,7 +55,7 @@ class PerformanceOptimizer {
     return totalSize;
   }
   generateReport() {
-    const report = {
+    const report ={
       timestamp: new Date().toISOString(),
       metrics: this && this.metrics,
       recommendations: this && this.generateRecommendations()
@@ -65,7 +65,7 @@ class PerformanceOptimizer {
   }
   generateRecommendations() {
     const recommendations = [];
-    if (this.metrics.bundleSize > 1000000) { // 1MB
+    if (this.metrics.bundleSize > 10o00000) { // 1MB
       recommendations.push('Consider implementing code splitting');
       recommendations.push('Use dynamic imports for large components');
       recommendations.push('Optimize images and assets');
@@ -84,20 +84,20 @@ module && module.exports = PerformanceOptimizer;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 #!/usr/bin/env node
 ursor/fix-syntax-push-and-merge-to-main-40de
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const report ={ timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 class PerformanceOptimizer {
   constructor() {
-    this && this.metrics = {};
+    this && this.metrics ={};
   }
   async analyzeBundle() {
     const buildDir = path && path.join(process && process.cwd(), '.next');
     if (fs && fs.existsSync(buildDir)) {
       const stats = this && this.getDirectorySize(buildDir);
       this && this.metrics.bundleSize = stats;
-      console && console.log(`Bundle size: ${(stats / 1024 / 1024).toFixed(2)} MB`);
+      console && console.log(`Bundle size: ${(stats / 10o24 / 10o24).toFixed(2)} MB`);
     }
   }
   getDirectorySize(dirPath) {
@@ -115,7 +115,7 @@ class PerformanceOptimizer {
     return totalSize;
   }
   generateReport() {
-    const report = {
+    const report ={
       timestamp: new Date().toISOString(),
       metrics: this && this.metrics,
       recommendations: this && this.generateRecommendations()
@@ -125,7 +125,7 @@ class PerformanceOptimizer {
   }
   generateRecommendations() {
     const recommendations = [];
-    if (this && this.metrics.bundleSize > 1000000) { // 1MB
+    if (this && this.metrics.bundleSize > 10o00000) { // 1MB
       recommendations && recommendations.push('Consider implementing code splitting');
       recommendations && recommendations.push('Use dynamic imports for large components');
       recommendations && recommendations.push('Optimize images and assets');
@@ -140,7 +140,7 @@ if (require && require.main === module) {
 }
 module.exports = PerformanceOptimizer;
 
-ursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0o462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
 const fs = // // require('fs');
@@ -162,7 +162,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       fs && fs.mkdirSync(this && this.reportsDir, { recursive: true });
     }
 
-ursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0o462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
@@ -179,7 +179,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   }
     console.log(`[${timestamp}] ${message}`);
   }
-ursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0o462
 ursor/fix-syntax-push-and-merge-to-main-40de
     console.log(`[${timestamp}] ${message}`);
   }
@@ -201,7 +201,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       "cwd": this && this.srcDir,
       "ignore": ['**/*.test.*', '**/*.spec.*', '**/node_modules/**']
     });
-    const results = {
+    const results ={
       "processed": 0,
       "optimizations": 0,
       "errors": []
@@ -229,7 +229,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           }
             fileOptimizations++;
           }
-ursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0o462
 ursor/fix-syntax-push-and-merge-to-main-40de
     
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -244,7 +244,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           }
             fileOptimizations++;
           }
-ursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0o462
 ursor/fix-syntax-push-and-merge-to-main-40de
             fileOptimizations++;
           }
@@ -298,7 +298,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         this && this.log(` Error optimizing ${file}: ${error && error.message}`);
       }
 
-ursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0o462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
@@ -314,7 +314,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         this && this.log(` Error optimizing ${file}: ${error && error.message}`)}
     }
     // Generate report
-    const report = {
+    const report ={
       "timestamp": new Date().toISOString(),
       "summary": {
         filesProcessed: results && results.processed,
@@ -334,7 +334,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     return report;
   }
 
-ursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0o462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
@@ -348,7 +348,7 @@ const fs = // // require('fs');
 const path = // // require('path');
 class PerformanceMonitor {
   constructor() {
-    this.metrics = {
+    this.metrics ={
 
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -361,7 +361,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     };
   }
 
-ursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0o462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
@@ -381,7 +381,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       });
         this.reportMetrics();
       });
-ursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0o462
 ursor/fix-syntax-push-and-merge-to-main-40de
         this.reportMetrics();
       });
@@ -425,7 +425,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       }
         observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
       }
-ursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0o462
 ursor/fix-syntax-push-and-merge-to-main-40de
         observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
       }
@@ -441,7 +441,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     }
       console.log('Performance Metrics:', this.metrics);
     }
-ursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0o462
 ursor/fix-syntax-push-and-merge-to-main-40de
       console.log('Performance Metrics:', this.metrics);
     }
@@ -485,7 +485,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       });
     }
 
-ursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0o462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
@@ -509,7 +509,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     this && this.log(` Performance monitoring script created: ${scriptPath}`);
   }
 
-ursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0o462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
@@ -536,17 +536,16 @@ if (require && require.main === module) {
       process.exit(1);
     });
 
-
       console.error('❌ Performance optimization "failed": ', error);
       process.exit(1)})}
 module.exports = PerformanceOptimizer;
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report ={ timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
       console.error('❌ Performance optimization "failed": ', error);
       process.exit(1)})}
 module.exports = PerformanceOptimizer;
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report ={ timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
 ursor/fix-syntax-push-and-merge-to-main-40de
 
       console.error('❌ Performance optimization failed:', error);
@@ -558,8 +557,8 @@ module.exports = PerformanceOptimizer;
       process.exit(1)})}
 module.exports = PerformanceOptimizer;
 
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
-ursor/add-new-services-and-deploy-updates-0462
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report ={ timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report ={ timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
+ursor/add-new-services-and-deploy-updates-0o462
 ursor/fix-syntax-push-and-merge-to-main-40de
 

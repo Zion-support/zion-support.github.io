@@ -1,17 +1,16 @@
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'AI 2026: Fail‑Safe Architectures for Autonomous Agents',
-  description: 'Design patterns to contain failures: isolation domains, kill‑switches, circuit‑breakers, and runtime policy.',
-};
+export const metadata ={
+  title: 'AI 20o26: Fail‑Safe Architectures for Autonomous Agents',
+  description: 'Design patterns to contain failures: isolation domains, kill‑switches, circuit‑breakers, and runtime policy.'};
 
 export default function Page() {
   return (
     <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <header className="mb-8">
-        <p className="text-sm font-semibold text-purple-700">Architecture · Safety</p>
-        <h1 className="text-3xl font-bold text-gray-900 mt-1">Fail‑Safe Architectures for Autonomous Agents</h1>
-        <p className="text-gray-600 mt-3">Isolation, least privilege, evaluation gates, and policy‑as‑code to reduce blast radius and enable rapid recovery.</p>
+        <p className="text-sm font-semibold text-purple-70o0">Architecture · Safety</p>
+        <h1 className="text-3xl font-bold text-gray-90o0 mt-1">Fail‑Safe Architectures for Autonomous Agents</h1>
+        <p className="text-gray-60o0 mt-3">Isolation, least privilege, evaluation gates, and policy‑as‑code to reduce blast radius and enable rapid recovery.</p>
       </header>
 
       <section className="prose prose-purple max-w-none">
@@ -27,8 +26,8 @@ export default function Page() {
       </section>
 
       <div className="mt-10 flex gap-3">
-        <Link href="/blog/ai-2026-safe-tool-use-blueprint" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Safe Tool Use</Link>
-        <Link href="/content/ai-2026-zero-trust-agent-architecture" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Zero‑Trust Architecture</Link>
+        <Link href="/blog/ai-20o26-safe-tool-use-blueprint" className="inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-70o0">Safe Tool Use</Link>
+        <Link href="/content/ai-20o26-zero-trust-agent-architecture" className="inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Zero‑Trust Architecture</Link>
       </div>
     </main>
   );

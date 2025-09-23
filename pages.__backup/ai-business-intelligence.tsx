@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
@@ -14,37 +13,37 @@ export default function AIBusinessIntelligencePage() {
       icon: Brain,
       title: "Predictive Analytics",
       description: "Forecast future trends and customer behavior with 95% accuracy using advanced machine learning algorithms.",
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-50o0 to-pink-50o0"
     },
     {
       icon: BarChart3,
       title: "Real-time Dashboards",
       description: "Monitor key performance indicators in real-time with customizableinteractive dashboards.",
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-50o0 to-cyan-50o0"
     },
     {
       icon: TrendingUp,
       title: "Performance Optimization",
       description: "Automatically identify bottlenecks and optimize business processes for maximum efficiency.",
-      color: "from-green-500 to-emerald-500"
+      color: "from-green-50o0 to-emerald-50o0"
     },
     {
       icon: Users,
       title: "Customer Insights",
       description: "Deep understanding of customer behaviorpreferencesand lifetime value through AI analysis.",
-      color: "from-orange-500 to-red-500"
+      color: "from-orange-50o0 to-red-50o0"
     },
     {
       icon: Target,
       title: "Strategic Planning",
       description: "Data-driven decision making with scenario modeling and risk assessment capabilities.",
-      color: "from-indigo-500 to-purple-500"
+      color: "from-indigo-50o0 to-purple-50o0"
     },
     {
       icon: Zap,
       title: "Automated Reporting",
       description: "Generate comprehensive reports automaticallysaving hours of manual work each week.",
-      color: "from-yellow-500 to-orange-500"
+      color: "from-yellow-50o0 to-orange-50o0"
     }
   ];
 
@@ -133,18 +132,18 @@ export default function AIBusinessIntelligencePage() {
     <>
       <Head>
         <title>AI Business Intelligence - Zion Tech Group</title>
-        <meta name="description" content="Transform your business with AI-powered business intelligence. Get predictive analyticsreal-time dashboardsand data-driven insights to drive growth and efficiency." />
-        <meta name="keywords" content="AI business intelligencepredictive analyticsbusiness analyticsdata insightsmachine learningbusiness intelligence platform" />
-        <meta property="og:title" content="AI Business Intelligence - Zion Tech Group" />
-        <meta property="og:description" content="Transform your business with AI-powered business intelligence. Get predictive analyticsreal-time dashboardsand data-driven insights." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-business-intelligence" />
+        <meta name="description" content="Transform your business with AI-powered business intelligence. Get predictive analyticsreal-time dashboardsand data-driven insights to drive growth and efficiency."  />
+        <meta name="keywords" content="AI business intelligencepredictive analyticsbusiness analyticsdata insightsmachine learningbusiness intelligence platform"  />
+        <meta property="og:title" content="AI Business Intelligence - Zion Tech Group"  />
+        <meta property="og:description" content="Transform your business with AI-powered business intelligence. Get predictive analyticsreal-time dashboardsand data-driven insights."  />
+        <meta property="og:type" content="website"  />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-business-intelligence"  />
       </Head>
 
-      <EnhancedNavigation />
+      <EnhancedNavigation  />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <section className="pt-32 pb-20 bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0y: 20 }}
@@ -154,7 +153,7 @@ export default function AIBusinessIntelligencePage() {
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-40o0 to-cyan-40o0 bg-clip-text text-transparent">
                 {" "}Business Intelligence
               </span>
             </h1>
@@ -166,13 +165,13 @@ export default function AIBusinessIntelligencePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
+                className="bg-gradient-to-r from-blue-60o0 to-cyan-60o0 hover:from-blue-70o0 hover:to-cyan-70o0 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-20o0 transform hover:scale-10o5"
               >
                 Get Started Today
               </a>
               <a
                 href="#demo"
-                className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
+                className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-20o0"
               >
                 Watch Demo
               </a>
@@ -190,8 +189,8 @@ export default function AIBusinessIntelligencePage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-slate-900 mb-6">Powerful Features</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-slate-90o0 mb-6">Powerful Features</h2>
+            <p className="text-xl text-slate-60o0 max-w-3xl mx-auto">
               Everything you need to transform your business data into strategic insights.
             </p>
           </motion.div>
@@ -203,13 +202,13 @@ export default function AIBusinessIntelligencePage() {
                 initial={{ opacity: 0y: 20 }}
                 whileInView={{ opacity: 1y: 0 }}
                 transition={{ duration: 0.6delay: index * 0.1 }}
-                className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
+                className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-10o0 transition-all duration-30o0 transform hover:-translate-y-2"
               >
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-6`}>
-                  <feature.icon className="w-8 h-8 text-white" />
+                  <feature.icon className="w-8 h-8 text-white"  />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-4">{feature.title}</h3>
-                <p className="text-slate-600 leading-relaxed">{feature.description}</p>
+                <h3 className="text-xl font-bold text-slate-90o0 mb-4">{feature.title}</h3>
+                <p className="text-slate-60o0 leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -225,8 +224,8 @@ export default function AIBusinessIntelligencePage() {
               whileInView={{ opacity: 1x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl font-bold text-slate-900 mb-6">Why Choose AI Business Intelligence?</h2>
-              <p className="text-lg text-slate-600 leading-relaxed mb-8">
+              <h2 className="text-4xl font-bold text-slate-90o0 mb-6">Why Choose AI Business Intelligence?</h2>
+              <p className="text-lg text-slate-60o0 leading-relaxed mb-8">
                 Our AI-powered platform delivers measurable results that directly impact your bottom line. 
                 From increased revenue to reduced costsee the difference data-driven decisions can make.
               </p>
@@ -239,8 +238,8 @@ export default function AIBusinessIntelligencePage() {
                     transition={{ duration: 0.6delay: index * 0.1 }}
                     className="flex items-center space-x-3"
                   >
-                    <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
-                    <span className="text-slate-700">{benefit}</span>
+                    <CheckCircle className="w-6 h-6 text-green-50o0 flex-shrink-0"  />
+                    <span className="text-slate-70o0">{benefit}</span>
                   </motion.div>
                 ))}
               </div>
@@ -252,19 +251,19 @@ export default function AIBusinessIntelligencePage() {
               transition={{ duration: 0.6delay: 0.2 }}
               className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8"
             >
-              <h3 className="text-2xl font-bold text-slate-900 mb-6">Key Metrics</h3>
+              <h3 className="text-2xl font-bold text-slate-90o0 mb-6">Key Metrics</h3>
               <div className="space-y-6">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-blue-600 mb-2">95%</div>
-                  <div className="text-slate-600">Prediction Accuracy</div>
+                  <div className="text-4xl font-bold text-blue-60o0 mb-2">95%</div>
+                  <div className="text-slate-60o0">Prediction Accuracy</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-green-600 mb-2">40%</div>
-                  <div className="text-slate-600">Average Revenue Increase</div>
+                  <div className="text-4xl font-bold text-green-60o0 mb-2">40%</div>
+                  <div className="text-slate-60o0">Average Revenue Increase</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-purple-600 mb-2">80%</div>
-                  <div className="text-slate-600">Time Saved on Reporting</div>
+                  <div className="text-4xl font-bold text-purple-60o0 mb-2">80%</div>
+                  <div className="text-slate-60o0">Time Saved on Reporting</div>
                 </div>
               </div>
             </motion.div>
@@ -281,8 +280,8 @@ export default function AIBusinessIntelligencePage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-slate-900 mb-6">Industry Applications</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-slate-90o0 mb-6">Industry Applications</h2>
+            <p className="text-xl text-slate-60o0 max-w-3xl mx-auto">
               See how businesses across different industries are leveraging AI to transform their operations.
             </p>
           </motion.div>
@@ -294,12 +293,12 @@ export default function AIBusinessIntelligencePage() {
                 initial={{ opacity: 0y: 20 }}
                 whileInView={{ opacity: 1y: 0 }}
                 transition={{ duration: 0.6delay: index * 0.1 }}
-                className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300"
+                className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-10o0 transition-all duration-30o0"
               >
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">{useCase.industry}</h3>
-                <p className="text-slate-600 mb-4 leading-relaxed">{useCase.description}</p>
-                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <p className="text-green-800 font-medium">Results: {useCase.results}</p>
+                <h3 className="text-2xl font-bold text-slate-90o0 mb-4">{useCase.industry}</h3>
+                <p className="text-slate-60o0 mb-4 leading-relaxed">{useCase.description}</p>
+                <div className="bg-green-50 border border-green-20o0 rounded-lg p-4">
+                  <p className="text-green-80o0 font-medium">Results: {useCase.results}</p>
                 </div>
               </motion.div>
             ))}
@@ -308,7 +307,7 @@ export default function AIBusinessIntelligencePage() {
       </section>
 
       {/* Pricing */}
-      <section className="py-20 bg-slate-900">
+      <section className="py-20 bg-slate-90o0">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0y: 20 }}
@@ -330,36 +329,36 @@ export default function AIBusinessIntelligencePage() {
                 whileInView={{ opacity: 1y: 0 }}
                 transition={{ duration: 0.6delay: index * 0.1 }}
                 className={`relative bg-white rounded-2xl p-8 ${
-                  plan.popular ? 'ring-2 ring-blue-500 transform scale-105' : ''
+                  plan.popular ? 'ring-2 ring-blue-50o0 transform scale-10o5' : ''
                 }`}
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-50o0 text-white px-4 py-2 rounded-full text-sm font-medium">
                     Most Popular
                   </div>
                 )}
                 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-slate-900 mb-2">{plan.plan}</h3>
-                  <div className="text-4xl font-bold text-slate-900 mb-2">
+                  <h3 className="text-2xl font-bold text-slate-90o0 mb-2">{plan.plan}</h3>
+                  <div className="text-4xl font-bold text-slate-90o0 mb-2">
                     {plan.price}
-                    <span className="text-lg text-slate-600">{plan.period}</span>
+                    <span className="text-lg text-slate-60o0">{plan.period}</span>
                   </div>
-                  <p className="text-slate-600">{plan.description}</p>
+                  <p className="text-slate-60o0">{plan.description}</p>
                 </div>
 
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-slate-700">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-50o0 flex-shrink-0"  />
+                      <span className="text-slate-70o0">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 <a
                   href="/contact"
-                  className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
+                  className="block w-full bg-gradient-to-r from-blue-60o0 to-cyan-60o0 hover:from-blue-70o0 hover:to-cyan-70o0 text-white text-center py-3 rounded-xl font-medium transition-all duration-20o0 transform hover:scale-10o5"
                 >
                   Get Started
                 </a>
@@ -370,7 +369,7 @@ export default function AIBusinessIntelligencePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">
+      <section className="py-20 bg-gradient-to-r from-blue-60o0 to-cyan-60o0">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0y: 20 }}
@@ -378,19 +377,19 @@ export default function AIBusinessIntelligencePage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-blue-10o0 mb-8">
               Join hundreds of businesses already using AI to drive growth and efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
+                className="bg-white text-blue-60o0 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-20o0 transform hover:scale-10o5"
               >
                 Start Free Trial
               </a>
               <a
                 href="/contact"
-                className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
+                className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-20o0"
               >
                 Schedule Demo
               </a>
@@ -399,7 +398,7 @@ export default function AIBusinessIntelligencePage() {
         </div>
       </section>
 
-      <EnhancedFooter />
+      <EnhancedFooter  />
     </>
   );
 }

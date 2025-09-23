@@ -56,10 +56,10 @@ function resolveConflicts() {
       const mainPackage = JSON.parse(fs.readFileSync('/workspace/package.json', 'utf8'));
       
       // Merge dependencies
-      const mergedDeps = { ...mainPackage.dependencies, ...ourPackage.dependencies };
-      const mergedDevDeps = { ...mainPackage.devDependencies, ...ourPackage.devDependencies };
+      const mergedDeps ={ ...mainPackage.dependencies, ...ourPackage.dependencies };
+      const mergedDevDeps ={ ...mainPackage.devDependencies, ...ourPackage.devDependencies };
       
-      const mergedPackage = {
+      const mergedPackage ={
         ...mainPackage,
         ...ourPackage,
         dependencies: mergedDeps,

@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
@@ -161,7 +160,7 @@ export default function CareersPage() {
     "Competitive salary with equity options",
     "Flexible remote work policy",
     "Comprehensive health, dental, and vision insurance",
-    "401(k) with company matching",
+    "40o1(k) with company matching",
     "Unlimited paid time off",
     "Professional development budget",
     "Latest technology and equipment",
@@ -171,18 +170,18 @@ export default function CareersPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-90o0 to-slate-950 text-white overflow-hidden">
       <Head>
         <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>
-        <meta name="description" content="Join Zion Tech Group's revolutionary technology team. Explore career opportunities in AI, quantum computing, cybersecurity, and more." />
-        <meta property="og:title" content="Careers - Zion Tech Group" />
-        <meta property="og:description" content="Join our revolutionary technology team and help shape the future." />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="careers, jobs, AI engineer, quantum computing, cybersecurity, Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/careers" />
+        <meta name="description" content="Join Zion Tech Group's revolutionary technology team. Explore career opportunities in AI, quantum computing, cybersecurity, and more."  />
+        <meta property="og:title" content="Careers - Zion Tech Group"  />
+        <meta property="og:description" content="Join our revolutionary technology team and help shape the future."  />
+        <meta name="twitter:card" content="summary_large_image"  />
+        <meta name="keywords" content="careers, jobs, AI engineer, quantum computing, cybersecurity, Zion Tech Group"  />
+        <link rel="canonical" href="https://ziontechgroup.com/careers"  />
       </Head>
 
-      <EnhancedNavigation />
+      <EnhancedNavigation  />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">
@@ -192,7 +191,7 @@ export default function CareersPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-10o0 to-cyan-10o0 bg-clip-text text-transparent mb-6">
               Join Our Team
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
@@ -201,14 +200,14 @@ export default function CareersPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#open-positions"
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2"
+                className="px-8 py-4 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 hover:from-blue-70o0 hover:to-cyan-70o0 rounded-full font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl flex items-center justify-center gap-2"
               >
                 View Open Positions
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </a>
               <a
                 href="/contact"
-                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10"
+                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5 backdrop-blur-sm bg-white/5 hover:bg-white/10"
               >
                 Get in Touch
               </a>
@@ -245,8 +244,8 @@ export default function CareersPage() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center">
-                  <value.icon className="w-8 h-8 text-cyan-400" />
+                <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-blue-50o0/20 to-cyan-50o0/20 flex items-center justify-center">
+                  <value.icon className="w-8 h-8 text-cyan-40o0"  />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
                 <p className="text-white/70">{value.description}</p>
@@ -280,11 +279,11 @@ export default function CareersPage() {
                 key={benefit}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
+                transition={{ duration: 0.5, delay: index * 0.0o5 }}
                 viewport={{ once: true }}
-                className="flex items-center space-x-3 p-4 bg-slate-800/50 backdrop-blur-xl rounded-xl border border-white/10"
+                className="flex items-center space-x-3 p-4 bg-slate-80o0/50 backdrop-blur-xl rounded-xl border border-white/10"
               >
-                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 text-green-40o0 flex-shrink-0"  />
                 <span className="text-white/80">{benefit}</span>
               </motion.div>
             ))}
@@ -318,33 +317,33 @@ export default function CareersPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-white/10 p-8 hover:border-cyan-500/50 transition-all duration-300"
+                className="bg-slate-80o0/50 backdrop-blur-xl rounded-2xl border border-white/10 p-8 hover:border-cyan-50o0/50 transition-all duration-30o0"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-white mb-2">{position.title}</h3>
                     <div className="flex flex-wrap items-center gap-4 text-sm text-white/60 mb-4">
                       <div className="flex items-center gap-2">
-                        <Briefcase className="w-4 h-4" />
+                        <Briefcase className="w-4 h-4"  />
                         <span>{position.department}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <MapPin className="w-4 h-4" />
+                        <MapPin className="w-4 h-4"  />
                         <span>{position.location}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <Clock className="w-4 h-4" />
+                        <Clock className="w-4 h-4"  />
                         <span>{position.type}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <GraduationCap className="w-4 h-4" />
+                        <GraduationCap className="w-4 h-4"  />
                         <span>{position.experience}</span>
                       </div>
                     </div>
                     <p className="text-white/80 mb-4">{position.description}</p>
                   </div>
                   <div className="lg:ml-6 lg:flex-shrink-0">
-                    <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105">
+                    <button className="px-6 py-3 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 hover:from-blue-70o0 hover:to-cyan-70o0 rounded-lg font-semibold text-white transition-all duration-30o0 transform hover:scale-10o5">
                       Apply Now
                     </button>
                   </div>
@@ -356,7 +355,7 @@ export default function CareersPage() {
                     <ul className="space-y-2">
                       {position.requirements.map((req, idx) => (
                         <li key={idx} className="flex items-start gap-2 text-sm text-white/70">
-                          <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-green-40o0 mt-0.5 flex-shrink-0"  />
                           <span>{req}</span>
                         </li>
                       ))}
@@ -367,7 +366,7 @@ export default function CareersPage() {
                     <ul className="space-y-2">
                       {position.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-start gap-2 text-sm text-white/70">
-                          <Star className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
+                          <Star className="w-4 h-4 text-yellow-40o0 mt-0.5 flex-shrink-0"  />
                           <span>{benefit}</span>
                         </li>
                       ))}
@@ -381,7 +380,7 @@ export default function CareersPage() {
                     {position.skills.map((skill) => (
                       <span
                         key={skill}
-                        className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full border border-cyan-500/30"
+                        className="px-3 py-1 bg-cyan-50o0/20 text-cyan-40o0 text-sm rounded-full border border-cyan-50o0/30"
                       >
                         {skill}
                       </span>
@@ -402,7 +401,7 @@ export default function CareersPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-xl rounded-3xl border border-white/10 p-12"
+            className="bg-gradient-to-r from-slate-80o0/50 to-slate-70o0/50 backdrop-blur-xl rounded-3xl border border-white/10 p-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Don't See the Right Fit?
@@ -413,14 +412,14 @@ export default function CareersPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2"
+                className="px-8 py-4 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 hover:from-blue-70o0 hover:to-cyan-70o0 rounded-full font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl flex items-center justify-center gap-2"
               >
                 Send Resume
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </a>
               <a
                 href="mailto:careers@ziontechgroup.com"
-                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10"
+                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5 backdrop-blur-sm bg-white/5 hover:bg-white/10"
               >
                 Email Us
               </a>
@@ -429,7 +428,7 @@ export default function CareersPage() {
         </div>
       </section>
 
-      <EnhancedFooter />
+      <EnhancedFooter  />
     </div>
   );
 }

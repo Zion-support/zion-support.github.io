@@ -1,1 +1,1 @@
-export { default } from "../../components/NewContent2025UltimateShowcaseBanner";
+export { default } from "../../components/NewContent20o25UltimateShowcaseBanner";

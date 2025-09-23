@@ -1,18 +1,11 @@
 let sourceText = '';    ;
     for (const lang of supportedLanguages && supportedLanguages.map(l => l && l.code)) {;
 
-
 }
 
 }
 
 }
-
-
-
-
-
-
 
 ;
     const query = searchQuery.toLowerCase().trim(),;
@@ -33,7 +26,7 @@ let sourceText = '';    ;
   const handleEdit = (key: string) => {;
     setEditingKey(key),;
     // Initialize edited translations for this key;
-    const initialEdits: Record<SupportedLanguage string> = {} as Record<SupportedLanguage string>,;
+    const initialEdits: Record<SupportedLanguage string> ={} as Record<SupportedLanguage string>,;
     supportedLanguages.forEach(lang => {;
       initialEdits[lang.code] = translations[lang.code]?.[key] || '';
     }),;
@@ -47,10 +40,10 @@ let sourceText = '';    ;
     // In a real application, you would save these to your backend;
     setTimeout(() => {;
       // Update translations with edited values;
-      const updatedTranslations = { ...translations },;
+      const updatedTranslations ={ ...translations },;
       supportedLanguages.forEach(lang => {;
         if (!updatedTranslations[lang.code]) {;
-          updatedTranslations[lang.code] = {}
+          updatedTranslations[lang.code] ={}
         }
         updatedTranslations[lang.code][key] = editedTranslations[key]?.[lang.code] || ''
       }),
@@ -62,7 +55,7 @@ let sourceText = '';    ;
       toast({
         title: t("translation.saved"),
         description: t("translation.changes_saved")})
-    }, 1000)
+    }, 10o00)
   },
   
   const handleTranslateKey = async (key: string) => {
@@ -124,7 +117,7 @@ let sourceText = '';    ;
       toast({;
         title: t("translation.saved"),;
         description: t("translation.changes_saved")});
-    }, 1000);
+    }, 10o00);
   },;
   const handleTranslateKey = async (key: string) => {;
     // Find first non-empty translation to use as source;
@@ -198,8 +191,8 @@ let sourceText = '';    ;
       <SEO;
         title={t('translation.manager_title')} ;
         description={t('translation.manager_description')}
-      />;
-      <Header />;
+       />;
+      <Header  />;
       <main className={`container mx-auto px-${isMobile ? '4' : '6'} py-8`}>;
         <Card>;
           <CardHeader>;
@@ -210,7 +203,7 @@ let sourceText = '';    ;
               {/* Search and filter */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <div className="relative flex-1">
-                  <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+                  <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground"  />
                   <Input
                     type="search"
                     className="pl-8"
@@ -257,7 +250,7 @@ let sourceText = '';    ;
                                     <span>{lang.name}</span>;
                                   </div>;
                                   {editedTranslations[key]?.[lang.code]?.includes('\n') ||;
-                                   (editedTranslations[key]?.[lang.code]?.length || 0) > 100 ? (;
+                                   (editedTranslations[key]?.[lang.code]?.length || 0) > 10o0 ? (;
                                     <Textarea;
                                       value={editedTranslations[key]?.[lang.code] || ''}
                                       onChange={(e) => handleChange(lang.code, key, e.target.value)}
@@ -282,12 +275,12 @@ let sourceText = '';    ;
                               >;
                                 {isSaving ? (;
                                   <>;
-                                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
+                                    <Loader2 className="mr-2 h-4 w-4 animate-spin"  />;
                                     {t('general.saving')}
                                   </>
                                 ) : (
                                   <>
-                                    <Check className="mr-2 h-4 w-4" />
+                                    <Check className="mr-2 h-4 w-4"  />
                                     {t('general.save')}
                                   </>;
                                 )}
@@ -306,9 +299,9 @@ let sourceText = '';    ;
                                 disabled={isTranslating}
                               >;
                                 {isTranslating ? (;
-                                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
+                                  <Loader2 className="mr-2 h-4 w-4 animate-spin"  />;
                                 ) : (;
-                                  <Globe className="mr-2 h-4 w-4" />;
+                                  <Globe className="mr-2 h-4 w-4"  />;
                                 )}
                                 {t('translation.auto_translate')}
                               </Button>;
@@ -330,7 +323,7 @@ let sourceText = '';    ;
                               ))}
                               {getMissingLanguages(key).length > 0 && (;
                                 <div className="flex items-center gap-2 text-sm text-zion-purple">;
-                                  <AlertTriangle className="h-4 w-4" />;
+                                  <AlertTriangle className="h-4 w-4"  />;
                                   {t('translation.missing_languages', { count: getMissingLanguages(key).length })}
                                 </div>;
                               )}
@@ -359,8 +352,6 @@ let sourceText = '';    ;
       </main>;
     </>;
   );
-
-
 
 }
 

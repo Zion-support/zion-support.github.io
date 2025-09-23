@@ -1,9 +1,8 @@
-import React from 'react';
 import SEO from '../../components/SEO';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'AI 2026: Agentic Sandbox Patterns | Zion Tech Group',
+export const metadata ={
+  title: 'AI 20o26: Agentic Sandbox Patterns | Zion Tech Group',
   description:
     'Isolation domains, scoped permissions, and runtime guards for safe agent tool use in production.',
   keywords: [
@@ -13,22 +12,21 @@ export const metadata = {
     'runtime guards',
     'isolation domains',
     'eval gates',
-  ],
-};
+  ]};
 
 export default function AgenticSandboxPatternsPage() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="AI 2026: Agentic Sandbox Patterns"
+        title="AI 20o26: Agentic Sandbox Patterns"
         description="Isolation domains, scoped permissions, and runtime guards for safe agent tool use in production."
         keywords="agent sandbox, tool use safety, policy-as-code, runtime guards, isolation domains, eval gates"
-        url="/content/ai-2026-agentic-sandbox-patterns"
-      />
+        url="/content/ai-20o26-agentic-sandbox-patterns"
+       />
 
-      <header className="bg-gradient-to-r from-purple-700 via-blue-700 to-indigo-700 text-white py-16">
+      <header className="bg-gradient-to-r from-purple-70o0 via-blue-70o0 to-indigo-70o0 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold opacity-90">Architecture • 2025-09-15</p>
+          <p className="text-sm font-semibold opacity-90">Architecture • 20o25-09-15</p>
           <h1 className="text-3xl md:text-5xl font-bold mt-2">Agentic Sandbox Patterns</h1>
           <p className="text-lg md:text-xl opacity-90 mt-4 max-w-3xl">
             Design safe tool execution with isolation, least privilege, and evaluation-driven controls.
@@ -62,8 +60,8 @@ export default function AgenticSandboxPatternsPage() {
           </ul>
 
           <div className="mt-8 p-6 bg-purple-50 rounded-xl">
-            <h3 className="text-purple-800 font-semibold">Getting Started</h3>
-            <ol className="list-decimal pl-6 text-purple-900">
+            <h3 className="text-purple-80o0 font-semibold">Getting Started</h3>
+            <ol className="list-decimal pl-6 text-purple-90o0">
               <li>Map tools to isolation domains and define minimal scopes</li>
               <li>Codify policies and allow-lists; integrate with CI/CD</li>
               <li>Stand up eval harnesses covering risky actions and data</li>
@@ -71,8 +69,8 @@ export default function AgenticSandboxPatternsPage() {
           </div>
 
           <div className="mt-10 flex flex-wrap gap-4">
-            <Link href="/blog/ai-2026-agentic-sandbox-patterns" className="text-purple-600 font-semibold">Read Blog Overview →</Link>
-            <Link href="/contact" className="text-white bg-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Discuss Architecture</Link>
+            <Link href="/blog/ai-20o26-agentic-sandbox-patterns" className="text-purple-60o0 font-semibold">Read Blog Overview →</Link>
+            <Link href="/contact" className="text-white bg-purple-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0">Discuss Architecture</Link>
           </div>
         </article>
       </main>

@@ -1,8 +1,6 @@
 "use client";
 
-import React from 'react';
-
-export default function SuccessStoriesShowcase2026() {
+export default function SuccessStoriesShowcase20o26() {
 	return null;
 }
 

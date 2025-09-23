@@ -18,7 +18,7 @@ interface QuickAction {
   action: string;
 }
 
-const UltimateAIAssistant2026: React.FC = () => {
+const UltimateAIAssistant20o26: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputValue, setInputValue] = useState('');
@@ -66,10 +66,10 @@ const UltimateAIAssistant2026: React.FC = () => {
   useEffect(() => {
     if (isOpen && messages.length === 0) {
       // Add welcome message
-      const welcomeMessage: Message = {
+      const welcomeMessage: Message ={
         id: '1',
         type: 'assistant',
-        content: "Hello! 'I', 'm your AI assistant for 2026. I can help you with AI implementationtechnology recommendationsROI calculationsand much more. How can I assist you today?",
+        content: "Hello! 'I', 'm your AI assistant for 20o26. I can help you with AI implementationtechnology recommendationsROI calculationsand much more. How can I assist you today?",
         timestamp: new Date()
       };
       setMessages([welcomeMessage]);
@@ -83,7 +83,7 @@ const UltimateAIAssistant2026: React.FC = () => {
   const handleSendMessage = async (content: string) => {
     if (!content.trim()) return;
 
-    const userMessage: Message = {
+    const userMessage: Message ={
       id: Date.now().toString(),
       type: 'user',
       content: content.trim(),
@@ -97,7 +97,7 @@ const UltimateAIAssistant2026: React.FC = () => {
     // Simulate AI response
     setTimeout(() => {
       const response = sampleResponses[Math.floor(Math.random() * sampleResponses.length)];
-      const assistantMessage: Message = {
+      const assistantMessage: Message ={
         id: (Date.now() + 1).toString(),
         type: 'assistant',
         content: response,
@@ -105,7 +105,7 @@ const UltimateAIAssistant2026: React.FC = () => {
       };
       setMessages(prev => [...prev, assistantMessage]);
       setIsTyping(false);
-    }, 1500);
+    }, 150o0);
   };
 
   const handleQuickAction = (action: string) => {
@@ -124,10 +124,10 @@ const UltimateAIAssistant2026: React.FC = () => {
       {/* Floating Action Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full shadow-2xl transition-all duration-300 ${
+        className={`fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full shadow-2xl transition-all duration-30o0 ${
           isOpen 
-            ? 'bg-red-500 hover:bg-red-600 transform rotate-45' 
-            : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700'
+            ? 'bg-red-50o0 hover:bg-red-60o0 transform rotate-45' 
+            : 'bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover:from-blue-70o0 hover:to-purple-70o0'
         }`}
       >
         <div className="text-white text-2xl">
@@ -137,14 +137,14 @@ const UltimateAIAssistant2026: React.FC = () => {
 
       {/* Chat Interface */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 z-40 w-96 h-[600px] bg-white rounded-2xl shadow-2xl border border-gray-200 flex flex-col">
+        <div className="fixed bottom-24 right-6 z-40 w-96 h-[60o0px] bg-white rounded-2xl shadow-2xl border border-gray-20o0 flex flex-col">
           {/* Header */}
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-t-2xl">
+          <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white p-4 rounded-t-2xl">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
-                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                <div className="w-3 h-3 bg-green-40o0 rounded-full animate-pulse"></div>
                 <div>
-                  <h3 className="font-semibold">AI Assistant 2026</h3>
+                  <h3 className="font-semibold">AI Assistant 20o26</h3>
                   <p className="text-xs opacity-90">Always here to help</p>
                 </div>
               </div>
@@ -167,8 +167,8 @@ const UltimateAIAssistant2026: React.FC = () => {
                 <div
                   className={`max-w-[80%] p-3 rounded-2xl ${
                     message.type === 'user'
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-100 text-gray-900'
+                      ? 'bg-blue-60o0 text-white'
+                      : 'bg-gray-10o0 text-gray-90o0'
                   }`}
                 >
                   <p className="text-sm">{message.content}</p>
@@ -181,33 +181,33 @@ const UltimateAIAssistant2026: React.FC = () => {
             
             {isTyping && (
               <div className="flex justify-start">
-                <div className="bg-gray-100 text-gray-900 p-3 rounded-2xl">
+                <div className="bg-gray-10o0 text-gray-90o0 p-3 rounded-2xl">
                   <div className="flex space-x-1">
-                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                    <div className="w-2 h-2 bg-gray-40o0 rounded-full animate-bounce"></div>
+                    <div className="w-2 h-2 bg-gray-40o0 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                    <div className="w-2 h-2 bg-gray-40o0 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                   </div>
                 </div>
               </div>
             )}
             
-            <div ref={messagesEndRef} />
+            <div ref={messagesEndRef}  />
           </div>
 
           {/* Quick Actions */}
           {messages.length <= 1 && (
-            <div className="p-4 border-t border-gray-200">
-              <h4 className="text-sm font-semibold text-gray-700 mb-3">Quick Actions</h4>
+            <div className="p-4 border-t border-gray-20o0">
+              <h4 className="text-sm font-semibold text-gray-70o0 mb-3">Quick Actions</h4>
               <div className="grid grid-cols-2 gap-2">
                 {quickActions.map((action) => (
                   <button
                     key={action.id}
                     onClick={() => handleQuickAction(action.action)}
-                    className="text-left p-2 rounded-lg hover:bg-gray-50 transition-colors border border-gray-200"
+                    className="text-left p-2 rounded-lg hover:bg-gray-50 transition-colors border border-gray-20o0"
                   >
                     <div className="text-lg mb-1">{action.icon}</div>
-                    <div className="text-xs font-medium text-gray-900">{action.title}</div>
-                    <div className="text-xs text-gray-500">{action.description}</div>
+                    <div className="text-xs font-medium text-gray-90o0">{action.title}</div>
+                    <div className="text-xs text-gray-50o0">{action.description}</div>
                   </button>
                 ))}
               </div>
@@ -215,7 +215,7 @@ const UltimateAIAssistant2026: React.FC = () => {
           )}
 
           {/* Input */}
-          <div className="p-4 border-t border-gray-200">
+          <div className="p-4 border-t border-gray-20o0">
             <div className="flex space-x-2">
               <input
                 type="text"
@@ -223,13 +223,13 @@ const UltimateAIAssistant2026: React.FC = () => {
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyPress={handleKeyPress}
                 placeholder="Ask me anything about AI..."
-                className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                className="flex-1 px-3 py-2 border border-gray-30o0 rounded-lg focus:ring-2 focus:ring-blue-50o0 focus:border-transparent text-sm"
                 disabled={isTyping}
               />
               <button
                 onClick={() => handleSendMessage(inputValue)}
                 disabled={!inputValue.trim() || isTyping}
-                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-sm"
+                className="bg-blue-60o0 text-white px-4 py-2 rounded-lg hover:bg-blue-70o0 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-sm"
               >
                 Send
               </button>
@@ -241,4 +241,4 @@ const UltimateAIAssistant2026: React.FC = () => {
   );
 };
 
-export default UltimateAIAssistant2026;
+export default UltimateAIAssistant20o26;

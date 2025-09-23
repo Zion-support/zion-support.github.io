@@ -2,7 +2,7 @@ import React, { createContext, useContext, useReducer, useEffect } from 'react';
 import { safeStorage } from '@/utils/safeStorage';
 import { useAuth } from '@/hooks/useAuth';
 import { getCartKey, mergeCartItems } from '@/utils/cartUtils';
-const initialState = { items: [] };
+const initialState ={ items: [] };
 function cartReducer(state, action) {
     switch (action.type) {
         case 'ADD_ITEM': {
@@ -67,9 +67,8 @@ export function CartProvider({ children }) {
     useEffect(() => {
         safeStorage.setItem(cartKey, JSON.stringify(state.items));
     }, [state.items, cartKey]);
-    const value = {
+    const value ={
         items: state.items,
-        dispatch,
-    };
+        dispatch};
     return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }

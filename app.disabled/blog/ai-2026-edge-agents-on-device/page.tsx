@@ -1,9 +1,8 @@
-import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
-export const metadata = {
-  title: 'AI 2026: Edge Agents On-Device',
+export const metadata ={
+  title: 'AI 20o26: Edge Agents On-Device',
   description:
     'Private, low-latency agents with hybrid on-device/offload compute, secure updates, and telemetry for enterprises.',
   keywords: ['edge agents', 'on-device AI', 'privacy', 'low latency', 'hybrid compute']
@@ -13,15 +12,15 @@ export default function EdgeAgentsOnDevicePage() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="AI 2026: Edge Agents On-Device"
+        title="AI 20o26: Edge Agents On-Device"
         description="Private, low-latency agents with hybrid offload, secure updates, and telemetry."
         keywords="edge agents, on-device ai, privacy, low latency, hybrid compute"
-        url="/blog/ai-2026-edge-agents-on-device"
-      />
+        url="/blog/ai-20o26-edge-agents-on-device"
+       />
 
-      <header className="bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 text-white py-16">
+      <header className="bg-gradient-to-r from-indigo-60o0 via-blue-60o0 to-purple-60o0 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold opacity-90">Edge • 2025-09-15</p>
+          <p className="text-sm font-semibold opacity-90">Edge • 20o25-09-15</p>
           <h1 className="text-3xl md:text-5xl font-bold mt-2">Edge Agents On-Device</h1>
           <p className="text-lg md:text-xl opacity-90 mt-4 max-w-3xl">Architectures for private, low-latency agentic workflows on enterprise devices.</p>
         </div>
@@ -44,8 +43,8 @@ export default function EdgeAgentsOnDevicePage() {
         </article>
 
         <div className="mt-10 flex flex-wrap gap-4">
-          <Link href="/blog/ai-2026-real-time-retrieval-architectures" className="text-purple-600 font-semibold hover:text-purple-800">Real-Time RAG →</Link>
-          <Link href="/content/edge-ai-agents-2026" className="text-purple-600 font-semibold hover:text-purple-800">Edge AI Agents Guide →</Link>
+          <Link href="/blog/ai-20o26-real-time-retrieval-architectures" className="text-purple-60o0 font-semibold hover:text-purple-80o0">Real-Time RAG →</Link>
+          <Link href="/content/edge-ai-agents-20o26" className="text-purple-60o0 font-semibold hover:text-purple-80o0">Edge AI Agents Guide →</Link>
         </div>
       </main>
     </div>

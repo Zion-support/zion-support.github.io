@@ -15,7 +15,7 @@ interface ErrorBoundaryProps {
 class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props)
-    this.state = { hasError: false }
+    this.state ={ hasError: false }
   }
 
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {
@@ -43,26 +43,26 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 
 function DefaultErrorFallback({ error, reset }: { error?: Error; reset: () => void }) {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-900">
+    <div className="min-h-screen flex items-center justify-center bg-gray-90o0">
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
         <div className="flex items-center mb-4">
-          <div className="text-red-500 text-2xl mr-3">⚠️</div>
-          <h1 className="text-xl font-semibold text-gray-900">Something went wrong</h1>
+          <div className="text-red-50o0 text-2xl mr-3">⚠️</div>
+          <h1 className="text-xl font-semibold text-gray-90o0">Something went wrong</h1>
         </div>
-        <p className="text-gray-600 mb-4">
+        <p className="text-gray-60o0 mb-4">
           We're sorry, but something unexpected happened. Please try again.
         </p>
         {error && (
           <details className="mb-4">
-            <summary className="cursor-pointer text-sm text-gray-500">Error details</summary>
-            <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
+            <summary className="cursor-pointer text-sm text-gray-50o0">Error details</summary>
+            <pre className="mt-2 text-xs text-red-60o0 bg-red-50 p-2 rounded overflow-auto">
               {error.message}
             </pre>
           </details>
         )}
         <button
           onClick={reset}
-          className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors"
+          className="w-full bg-blue-50o0 text-white py-2 px-4 rounded hover:bg-blue-60o0 transition-colors"
         >
           Try again
         </button>

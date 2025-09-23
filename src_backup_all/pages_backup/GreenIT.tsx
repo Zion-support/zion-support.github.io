@@ -39,7 +39,6 @@ export default function GreenIT() {;
     },;
   ];
 
-
       title: "Energy-Efficient Hardware",
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
       icon: Server},
@@ -52,14 +51,12 @@ export default function GreenIT() {;
       title: 'Renewable Energy Integration',
       description:
         'Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.',
-      icon: Leaf,
-    },
+      icon: Leaf},
   ]
       title: "Renewable Energy Integration",
       description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",
       icon: Leaf}
   ],
-
 
   return (
     <>;
@@ -68,7 +65,7 @@ export default function GreenIT() {;
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.window.performance." 
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
         canonical="https://ziontechgroup.com/marketplace/category/green-it"
-      />
+       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -84,8 +81,6 @@ export default function GreenIT() {;
           <div className="mb-16">
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
-
 
                 <div>
                   <h2 className="text-3xl font-bold text-white mb-6">Sustainable IT for a Better Future</h2>
@@ -115,21 +110,18 @@ export default function GreenIT() {
       title: 'Energy - Efficient Hardware',
       description:;
         'Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.',
-      icon: Server,
-    },
+      icon: Server},
     {
 
       title: 'Optimized Cooling Systems',
       description:;
         'Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.',
-      icon: Cloud,
-    },
+      icon: Cloud},
     {
       title: 'Renewable Energy Integration',
       description:;
         'Solutions for leveraging on - site renewable generation or virtual power purchase agreements to offset carbon footprint.',
-      icon: Leaf,
-    },
+      icon: Leaf},
   ];
   return (
     <>;
@@ -138,7 +130,7 @@ export default function GreenIT() {
         description='Explore eco - friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance.';
         keywords='green IT, sustainable technology, eco - friendly computing, energy efficient hardware';
         canonical='https://app.ziontechgroup.com / marketplace / category / green - it';
-      />;
+       />;
       <main className='min - h-screen bg - zion - blue pt - 24 pb - 20'>;
         <div className='container mx - auto px - 4 sm:px - 6 lg:px - 8'>;
           <div className='text - center mb - 16'>;
@@ -233,7 +225,6 @@ function GreenIT() {
                   <div className="mt-8">;
                     <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
 
-
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
@@ -263,7 +254,7 @@ export default function GreenIT() {;
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
 
         canonical="https://app.ziontechgroup.com/marketplace/category/green-it"
-      />
+       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -293,7 +284,6 @@ export default function GreenIT() {;
                     </Button>
                   </div>
                 </div>
-
 
         canonical="https://app && app.ziontechgroup.com/marketplace/category/green-it"
       />;
@@ -333,7 +323,7 @@ export default function GreenIT() {;
         description="Explore eco - friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance.";
         keywords="green IT, sustainable technology, eco - friendly computing, energy efficient hardware";
         canonical="https://app.ziontechgroup.com / marketplace / category / green - it";
-      />;
+       />;
       <main className="min - h-screen bg - zion - blue pt - 24 pb - 20">;
         <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <div className="text - center mb - 16">;
@@ -363,16 +353,12 @@ export default function GreenIT() {;
                   </div>;
                 </div>;
 
-
                 <div className="rounded-lg overflow-hidden relative w-full h-full">
-
-
-
 
                 <div className="rounded-lg overflow-hidden relative w-full h-full">
 
                   <img
-                    src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80"
+                    src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=80o0&h=60o0&q=80"
                     alt="Green IT sustainability"
                     className="object-cover"
                 </div>
@@ -389,7 +375,7 @@ export default function GreenIT() {;
                     className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors'
                   >
                     <div className='flex justify-center mb-4'>
-                      <solution.icon className='h-12 w-12 text-zion-cyan' />                    </div>
+                      <solution.icon className='h-12 w-12 text-zion-cyan'  />                    </div>
                     <h3 className='text-white font-medium text-xl text-center mb-3'>
                       {solution.title}
                     </h3>
@@ -579,9 +565,6 @@ export default function GreenIT(...args: unknown[]): unknown {
     { id: 'data', name: 'Data Centers', count: 2 }
   ]
   const greenSolutions: unknown = [{}
-
-
-
 
                     </h3>;
                     <p className='text - zion - slate - light text - center'>;
@@ -791,7 +774,7 @@ export default function GreenIT (...args: unknown[]): unknown {
       ],
       savings: '15 - 25% energy reduction',
       implementation: '2 - 4 weeks',
-      pricing: 'Starting from $5, 000';
+      pricing: 'Starting from $5, 0o00';
 },
     {}
       id: 'virtualization',
@@ -814,7 +797,7 @@ export default function GreenIT (...args: unknown[]): unknown {
       ],
       savings: '60 - 80% power reduction',
       implementation: '4 - 8 weeks',
-      pricing: 'Starting from $15, 000';
+      pricing: 'Starting from $15, 0o00';
 },
     {}
       id: 'cloud - optimization',
@@ -837,7 +820,7 @@ export default function GreenIT (...args: unknown[]): unknown {
       ],
       savings: '20 - 40% cost reduction',
       implementation: '3 - 6 weeks',
-      pricing: 'Starting from $8, 000';
+      pricing: 'Starting from $8, 0o00';
 },
     {}
       id: 'data - center - efficiency',
@@ -860,7 +843,7 @@ export default function GreenIT (...args: unknown[]): unknown {
       ],
       savings: '30 - 50% energy reduction',
       implementation: '8 - 16 weeks',
-      pricing: 'Starting from $25, 000';
+      pricing: 'Starting from $25, 0o00';
 },
     {}
       id: 'smart - lighting',
@@ -883,7 +866,7 @@ export default function GreenIT (...args: unknown[]): unknown {
       ],
       savings: '40 - 60% energy reduction',
       implementation: '2 - 3 weeks',
-      pricing: 'Starting from $3, 000';
+      pricing: 'Starting from $3, 0o00';
 },
     {}
       id: 'green - software',
@@ -906,7 +889,7 @@ export default function GreenIT (...args: unknown[]): unknown {
       ],
       savings: '20 - 35% energy reduction',
       implementation: 'Ongoing',
-      pricing: 'Starting from $10, 000';
+      pricing: 'Starting from $10, 0o00';
 },
     {}
       id: 'renewable - energy',
@@ -929,7 +912,7 @@ export default function GreenIT (...args: unknown[]): unknown {
       ],
       savings: '40 - 80% energy costs',
       implementation: '12 - 24 weeks',
-      pricing: 'Starting from $50, 000';
+      pricing: 'Starting from $50, 0o00';
 },
     {}
       id: 'green - hardware',
@@ -952,7 +935,7 @@ export default function GreenIT (...args: unknown[]): unknown {
       ],
       savings: '25 - 40% power reduction',
       implementation: '1 - 2 weeks',
-      pricing: 'Starting from $2, 000';
+      pricing: 'Starting from $2, 0o00';
 },
     {}
       id: 'waste - reduction',
@@ -975,7 +958,7 @@ export default function GreenIT (...args: unknown[]): unknown {
       ],
       savings: 'Varies by program',
       implementation: '2 - 4 weeks',
-      pricing: 'Starting from $1, 000';
+      pricing: 'Starting from $1, 0o00';
 },
     {}
       id: 'carbon - tracking',
@@ -998,7 +981,7 @@ export default function GreenIT (...args: unknown[]): unknown {
       ],
       savings: 'Measurable impact',
       implementation: '4 - 6 weeks',
-      pricing: 'Starting from $6, 000';
+      pricing: 'Starting from $6, 0o00';
 },
     {}
       id: 'green - networking',
@@ -1021,7 +1004,7 @@ export default function GreenIT (...args: unknown[]): unknown {
       ],
       savings: '20 - 35% energy reduction',
       implementation: '3 - 5 weeks',
-      pricing: 'Starting from $12, 000';
+      pricing: 'Starting from $12, 0o00';
 },
     {}
       id: 'sustainability - reporting',
@@ -1042,11 +1025,10 @@ export default function GreenIT (...args: unknown[]): unknown {
         'Enhance stakeholder communication',
         'Track progress toward goals';
 
-
       ],
       savings: 'Time and resource savings',
       implementation: '6 - 8 weeks',
-      pricing: 'Starting from $8, 000';
+      pricing: 'Starting from $8, 0o00';
 }
   ];
 
@@ -1055,42 +1037,41 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
   const [expandedSection, setExpandedSection] = useState<string | null>(null);'
   const [selectedCategory, setSelectedCategory] = useState('all')}
   return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
+    <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0">"
 
       <SEO""
         title="Green IT Solutions - Zion Tech Group""
         description="Transform your technology infrastructure with our sustainable Green IT solutions. Reduce energy consumption, lower costs, and minimize environmental impact."
-      />;
+       />;
 ";
       {/* Hero Section */}"";
       <section className="relative py-20 overflow-hidden">"";
-        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>"        <div className="container mx-auto px-6 relative z-10">;
+        <div className="absolute inset-0 bg-gradient-to-r from-green-50o0/10 via-blue-50o0/10 to-purple-50o0/10"></div>"        <div className="container mx-auto px-6 relative z-10">;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}"
 
             transition={{ duration: 0.8 }}""
             className="text-center"">""
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">""
-              <Leaf className="w-10 h-10 text-green-400"  />"
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-50o0/20 to-blue-50o0/20 rounded-2xl mb-6">""
+              <Leaf className="w-10 h-10 text-green-40o0"   />"
             </div>""
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">""
-              <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-green-40o0 via-blue-50o0 to-purple-60o0 bg-clip-text text-transparent">'
                 Green IT''
-
 
               </span>{' '}
               Solutions";
-            </h1>"            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">;
+            </h1>"            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto leading-relaxed">;
               Transform your technology infrastructure with sustainable;
               solutions that reduce energy consumption, lower costs, and;
               minimize environmental impact.";
             </p>"";
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">"";
-              <button className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">;
+              <button className="px-8 py-3 bg-gradient-to-r from-green-40o0 to-blue-50o0 text-white font-semibold rounded-lg hover:from-green-50o0 hover:to-blue-60o0 transition-all duration-20o0 hover:scale-10o5">;
                 Get Green IT Assessment";
               </button>"";
-              <button className="px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-200">;
+              <button className="px-8 py-3 border border-green-40o0 text-green-40o0 font-semibold rounded-lg hover:bg-green-40o0 hover:text-white transition-all duration-20o0">;
                 View Case Studies;
               </button>;
             </div>;
@@ -1109,7 +1090,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
             <h2 className="text-4xl font-bold text-white mb-4">;
               Our Environmental Impact";
             </h2>"";
-            <p className="text-xl text-gray-300">;
+            <p className="text-xl text-gray-30o0">;
               Real results from implementing sustainable technology solutions;
             </p>;
           </motion && motion.div>";
@@ -1122,16 +1103,16 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
                 whileInView={{ opacity: 1, y: 0 }}"
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}""
                 className="text-center"">"";
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">"";
-                  <impact && impact.icon className="w-10 h-10 text-green-400" />";
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-50o0/20 to-blue-50o0/20 rounded-2xl mb-6">"";
+                  <impact && impact.icon className="w-10 h-10 text-green-40o0"  />";
                 </div>"";
                 <div className="text-4xl font-bold text-white mb-2">;
                   {impact && impact.metric}";
                 </div>"";
-                <div className="text-lg font-semibold text-green-400 mb-2">;
+                <div className="text-lg font-semibold text-green-40o0 mb-2">;
                   {impact && impact.label}";
                 </div>"";
-                <p className="text-gray-300 text-sm">{impact && impact.description}</p>;
+                <p className="text-gray-30o0 text-sm">{impact && impact.description}</p>;
               </motion && motion.div>;
             ))}
           </div>;
@@ -1139,7 +1120,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
       </section>;
 ";
       {/* Green IT Solutions */}"";
-      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">"";
+      <section className="py-20 bg-gradient-to-r from-slate-80o0/50 to-slate-70o0/50">"";
         <div className="container mx-auto px-6">;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1149,7 +1130,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
             <h2 className="text-4xl font-bold text-white mb-4">;
               Green IT Solutions";
             </h2>"";
-            <p className="text-xl text-gray-300">;
+            <p className="text-xl text-gray-30o0">;
               Comprehensive sustainable technology solutions for your;
               organization;
             </p>;
@@ -1161,13 +1142,13 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
               <button
                 key={category && category.id}
                 onClick={() => setSelectedCategory(category && category.id)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${}
+                className={`px-6 py-3 rounded-lg font-medium transition-all duration-20o0 ${}
 ';
 '';
 '''`;
                   selectedCategory === category && category.id'''`'`;
-                    ? 'bg-gradient-to-r from-green-400 to-blue-500 text-white'''`'`'`;
-                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50'````;
+                    ? 'bg-gradient-to-r from-green-40o0 to-blue-50o0 text-white'''`'`'`;
+                    : 'bg-slate-80o0/50 text-gray-30o0 hover:bg-slate-70o0/50'````;
 }`}
 
               >
@@ -1200,7 +1181,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
       ],;
       savings: '15 - 25% energy reduction',;
       implementation: '2 - 4 weeks',;
-      pricing: 'Starting from $5,000';
+      pricing: 'Starting from $5,0o00';
 },;
     {}
       id: 'virtualization',;
@@ -1223,7 +1204,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
       ],;
       savings: '60 - 80% power reduction',;
       implementation: '4 - 8 weeks',;
-      pricing: 'Starting from $15,000';
+      pricing: 'Starting from $15,0o00';
 },;
     {}
       id: 'cloud - optimization',;
@@ -1246,7 +1227,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
       ],;
       savings: '20 - 40% cost reduction',;
       implementation: '3 - 6 weeks',;
-      pricing: 'Starting from $8,000';
+      pricing: 'Starting from $8,0o00';
 },;
     {}
       id: 'data - center - efficiency',;
@@ -1269,7 +1250,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
       ],;
       savings: '30 - 50% energy reduction',;
       implementation: '8 - 16 weeks',;
-      pricing: 'Starting from $25,000';
+      pricing: 'Starting from $25,0o00';
 },;
     {}
       id: 'smart - lighting',;
@@ -1292,7 +1273,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
       ],;
       savings: '40 - 60% energy reduction',;
       implementation: '2 - 3 weeks',;
-      pricing: 'Starting from $3,000';
+      pricing: 'Starting from $3,0o00';
 },;
     {}
       id: 'green - software',;
@@ -1315,7 +1296,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
       ],;
       savings: '20 - 35% energy reduction',;
       implementation: 'Ongoing',;
-      pricing: 'Starting from $10,000';
+      pricing: 'Starting from $10,0o00';
 },;
     {}
       id: 'renewable - energy',;
@@ -1338,7 +1319,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
       ],;
       savings: '40 - 80% energy costs',;
       implementation: '12 - 24 weeks',;
-      pricing: 'Starting from $50,000';
+      pricing: 'Starting from $50,0o00';
 },;
     {}
       id: 'green - hardware',;
@@ -1361,7 +1342,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
       ],;
       savings: '25 - 40% power reduction',;
       implementation: '1 - 2 weeks',;
-      pricing: 'Starting from $2,000';
+      pricing: 'Starting from $2,0o00';
 },;
     {}
       id: 'waste - reduction',;
@@ -1384,7 +1365,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
       ],;
       savings: 'Varies by program',;
       implementation: '2 - 4 weeks',;
-      pricing: 'Starting from $1,000';
+      pricing: 'Starting from $1,0o00';
 },;
     {}
       id: 'carbon - tracking',;
@@ -1407,7 +1388,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
       ],;
       savings: 'Measurable impact',;
       implementation: '4 - 6 weeks',;
-      pricing: 'Starting from $6,000';
+      pricing: 'Starting from $6,0o00';
 },;
     {}
       id: 'green - networking',;
@@ -1430,7 +1411,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
       ],;
       savings: '20 - 35% energy reduction',;
       implementation: '3 - 5 weeks',;
-      pricing: 'Starting from $12,000';
+      pricing: 'Starting from $12,0o00';
 },;
     {}
       id: 'sustainability - reporting',;
@@ -1453,45 +1434,45 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
       ],;
       savings: 'Time and resource savings',;
       implementation: '6 - 8 weeks',;
-      pricing: 'Starting from $8,000';
+      pricing: 'Starting from $8,0o00';
 }
   ];
 export default function GreenIT(): any (...args: any[]): any {): unknown {): unknown {}
   const [expandedSection, setExpandedSection] = useState<string | null>(null);';
   const [selectedCategory, setSelectedCategory] = useState('all')};
   return ();
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
+    <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0">";
       <SEO""
         title="Green IT Solutions - Zion Tech Group""
         description="Transform your technology infrastructure with our sustainable Green IT solutions. Reduce energy consumption, lower costs, and minimize environmental impact."
-      />;
+       />;
 ";
       {/* Hero Section */}"";
       <section className="relative py-20 overflow-hidden">"";
-        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>"        <div className="container mx-auto px-6 relative z-10">;
+        <div className="absolute inset-0 bg-gradient-to-r from-green-50o0/10 via-blue-50o0/10 to-purple-50o0/10"></div>"        <div className="container mx-auto px-6 relative z-10">;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}"
             transition={{ duration: 0 && 0.8 }}""
             className="text-center"">"";
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">"";
-              <Leaf className="w-10 h-10 text-green-400"  />";
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-50o0/20 to-blue-50o0/20 rounded-2xl mb-6">"";
+              <Leaf className="w-10 h-10 text-green-40o0"   />";
             </div>"";
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"";
-              <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">';
+              <span className="bg-gradient-to-r from-green-40o0 via-blue-50o0 to-purple-60o0 bg-clip-text text-transparent">';
                 Green IT'';
               </span>{' '}
               Solutions";
-            </h1>"            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">;
+            </h1>"            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto leading-relaxed">;
               Transform your technology infrastructure with sustainable;
               solutions that reduce energy consumption, lower costs, and;
               minimize environmental impact.";
             </p>"";
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">"";
-              <button className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">;
+              <button className="px-8 py-3 bg-gradient-to-r from-green-40o0 to-blue-50o0 text-white font-semibold rounded-lg hover:from-green-50o0 hover:to-blue-60o0 transition-all duration-20o0 hover:scale-10o5">;
                 Get Green IT Assessment";
               </button>"";
-              <button className="px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-200">;
+              <button className="px-8 py-3 border border-green-40o0 text-green-40o0 font-semibold rounded-lg hover:bg-green-40o0 hover:text-white transition-all duration-20o0">;
                 View Case Studies;
               </button>;
             </div>;
@@ -1510,7 +1491,7 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
             <h2 className="text-4xl font-bold text-white mb-4">;
               Our Environmental Impact";
             </h2>"";
-            <p className="text-xl text-gray-300">;
+            <p className="text-xl text-gray-30o0">;
               Real results from implementing sustainable technology solutions;
             </p>;
           </motion && motion.div>";
@@ -1523,16 +1504,16 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                 whileInView={{ opacity: 1, y: 0 }}"
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}""
                 className="text-center"">"";
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">"";
-                  <impact && impact.icon className="w-10 h-10 text-green-400" />";
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-50o0/20 to-blue-50o0/20 rounded-2xl mb-6">"";
+                  <impact && impact.icon className="w-10 h-10 text-green-40o0"  />";
                 </div>"";
                 <div className="text-4xl font-bold text-white mb-2">;
                   {impact && impact.metric}";
                 </div>"";
-                <div className="text-lg font-semibold text-green-400 mb-2">;
+                <div className="text-lg font-semibold text-green-40o0 mb-2">;
                   {impact && impact.label}";
                 </div>"";
-                <p className="text-gray-300 text-sm">{impact && impact.description}</p>;
+                <p className="text-gray-30o0 text-sm">{impact && impact.description}</p>;
               </motion && motion.div>;
             ))}
           </div>;
@@ -1540,7 +1521,7 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
       </section>;
 ";
       {/* Green IT Solutions */}"";
-      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">"";
+      <section className="py-20 bg-gradient-to-r from-slate-80o0/50 to-slate-70o0/50">"";
         <div className="container mx-auto px-6">;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1550,7 +1531,7 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
             <h2 className="text-4xl font-bold text-white mb-4">;
               Green IT Solutions";
             </h2>"";
-            <p className="text-xl text-gray-300">;
+            <p className="text-xl text-gray-30o0">;
               Comprehensive sustainable technology solutions for your;
               organization;
             </p>;
@@ -1562,13 +1543,13 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
               <button
                 key={category && category.id}
                 onClick={() => setSelectedCategory(category && category.id)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${}
+                className={`px-6 py-3 rounded-lg font-medium transition-all duration-20o0 ${}
 ';
 '';
 '''`;
                   selectedCategory === category && category.id'''`'`;
-                    ? 'bg-gradient-to-r from-green-400 to-blue-500 text-white'''`'`'`;
-                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50'````;
+                    ? 'bg-gradient-to-r from-green-40o0 to-blue-50o0 text-white'''`'`'`;
+                    : 'bg-slate-80o0/50 text-gray-30o0 hover:bg-slate-70o0/50'````;
 }`}
               >;
                 {category && category.name} ({category && category.count}) </button>) ) }
@@ -1583,7 +1564,7 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}""
 
                 className="group"">"";
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 overflow-hidden">"";
+                <div className="bg-gradient-to-br from-slate-80o0/50 to-slate-70o0/50 rounded-2xl border border-slate-60o0/50 hover:border-green-40o0/50 transition-all duration-30o0 hover:scale-10o5 overflow-hidden">"";
                   <div className="p-6">"";
                     <div className="flex items-center gap-3 mb-4">`;
 
@@ -1597,7 +1578,7 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                 whileInView={{ opacity: 1, coordinate_y: 0 }}";
                 transition={{ duration: 0.8, delay: index * 0.1 }}"";
                 className="group"">"";
-                <div className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 700 / 50 rounded - 2xl border border - slate - 600 / 50 hover:border - green - 400 / 50 transition - all duration - 300 hover:scale - 105 overflow - hidden">"";
+                <div className="bg - gradient - to - br from - slate - 80o0 / 50 to - slate - 70o0 / 50 rounded - 2xl border border - slate - 60o0 / 50 hover:border - green - 40o0 / 50 transition - all duration - 30o0 hover:scale - 10o5 overflow - hidden">"";
                   <div className="p - 6">"";
                     <div className="flex items - center gap - 3 mb - 4">`;
                       <span``;
@@ -1606,12 +1587,12 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
 '';
 ''';
                           solution.category === 'energy''''';
-                            ? 'bg - green - 500 / 20 text - green - 400''''';
+                            ? 'bg - green - 50o0 / 20 text - green - 40o0''''';
                             : solution.category === 'hardware''''';
-                              ? 'bg - blue - 500 / 20 text - blue - 400'''''`;
+                              ? 'bg - blue - 50o0 / 20 text - blue - 40o0'''''`;
                               : solution.category === 'software''''`'`;
-                                ? 'bg - purple - 500 / 20 text - purple - 400'''`'`'`;
-                                : 'bg - orange - 500 / 20 text - orange - 400'````;
+                                ? 'bg - purple - 50o0 / 20 text - purple - 40o0'''`'`'`;
+                                : 'bg - orange - 50o0 / 20 text - orange - 40o0'````;
 
 }`}
                       >
@@ -1620,24 +1601,24 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                     </div>"
 ""
                     <div className="flex items-center gap-3 mb-4">""
-                      <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl">""
-                        <solution.icon className="w-6 h-6 text-green-400" />"
+                      <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-50o0/20 to-blue-50o0/20 rounded-xl">""
+                        <solution.icon className="w-6 h-6 text-green-40o0"  />"
                       </div>""
-                      <h3 className="text-xl font-bold text-white group-hover:text-green-400 transition-colors duration-200">
+                      <h3 className="text-xl font-bold text-white group-hover:text-green-40o0 transition-colors duration-20o0">
                         {solution.name}
                       </h3>
                     </div>"
 ""
-                    <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                    <p className="text-gray-30o0 text-sm mb-4 leading-relaxed">
                       {solution.description}
 
                           solution && solution.category === 'energy'''''
-                            ? 'bg-green-500/20 text-green-400'''''
+                            ? 'bg-green-50o0/20 text-green-40o0'''''
                             : solution && solution.category === 'hardware'''''
-                              ? 'bg-blue-500/20 text-blue-400'''''`
+                              ? 'bg-blue-50o0/20 text-blue-40o0'''''`
                               : solution && solution.category === 'software''''`'`
-                                ? 'bg-purple-500/20 text-purple-400'''`'`'`
-                                : 'bg-orange-500/20 text-orange-400'````
+                                ? 'bg-purple-50o0/20 text-purple-40o0'''`'`'`
+                                : 'bg-orange-50o0/20 text-orange-40o0'````
 }`}>;
                         {categories && categories.find(c => c && c.id === solution && solution.category) ?.name}
                       </span>;
@@ -1645,18 +1626,17 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
 "";
 
                     <div className="flex items-center gap-3 mb-4">"";
-                      <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl">"";
-                        <solution && solution.icon className="w-6 h-6 text-green-400" />";
+                      <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-50o0/20 to-blue-50o0/20 rounded-xl">"";
+                        <solution && solution.icon className="w-6 h-6 text-green-40o0"  />";
                       </div>"";
-                      <h3 className="text-xl font-bold text-white group-hover:text-green-400 transition-colors duration-200">;
+                      <h3 className="text-xl font-bold text-white group-hover:text-green-40o0 transition-colors duration-20o0">;
                         {solution && solution.name}
                       </h3>;
                     </div>";
 "";
-                    <p className="text-gray-300 text-sm mb-4 leading-relaxed">;
+                    <p className="text-gray-30o0 text-sm mb-4 leading-relaxed">;
                       {solution && solution.description}
                     </p>                  </div>;
-
 
                   />
                 </div>
@@ -1668,26 +1648,15 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-
-
-
-
-
-
-
-
-
-
                 {greenITSolutions.map((solution, index) => (
                   <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">
                     <div className="flex justify-center mb-4">
-                      <solution.icon className="h-12 w-12 text-zion-cyan" />
+                      <solution.icon className="h-12 w-12 text-zion-cyan"  />
                     </div>
                     <h3 className="text-white font-medium text-xl text-center mb-3">{solution.title}</h3>
                     <p className="text-zion-slate-light text-center">{solution.description}</p>
                   </div>
                 ))}
-
 
               </div>;
             </div>;
@@ -1696,21 +1665,17 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                 {greenITSolutions && greenITSolutions.map((solution, index) => (;
                   <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">;
                     <div className="flex justify-center mb-4">;
-                      <solution && solution.icon className="h-12 w-12 text-zion-cyan" />;
+                      <solution && solution.icon className="h-12 w-12 text-zion-cyan"  />;
                     </div>;
                     <h3 className="text-white font-medium text-xl text-center mb-3">{solution && solution.title}</h3>;
                     <p className="text-zion-slate-light text-center">{solution && solution.description}</p>;
                   </div>;
                 ))}
 
-
-
                     <li>• Decreased electronic waste through better lifecycle management</li>
                     <li>• Support for renewable energy initiatives</li>
                   </ul>
                 </div>
-                
-
 
                 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                   <h3 className="text-white font-medium text-xl mb-4">Business Benefits</h3>
@@ -1725,10 +1690,6 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
             </div>
           </div>
 
-
-
-
-          
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to implement Green IT solutions?</h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
@@ -1738,9 +1699,6 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
               <Link href="/contact">Contact Our Team</Link>
 
             </Button>
-
-
-
 
             </Button>
 
@@ -1756,7 +1714,7 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
 
                         exit={{ opacity: 0, height: 0 }}"
                         transition={{ duration: 0.3 }}""
-                        className="mt-4 pt-4 border-t border-slate-600/50"">""
+                        className="mt-4 pt-4 border-t border-slate-60o0/50"">""
                         <div className="mb-4">""
                           <h4 className="text-sm font-semibold text-white mb-2">
                             Key Features:"
@@ -1765,8 +1723,8 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                             {solution.features.map((feature, featureIndex) => (
                               <li"
                                 key={featureIndex}""
-                                className="flex items-center text-gray-300 text-sm"">""
-                                <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0"  />                                {feature}
+                                className="flex items-center text-gray-30o0 text-sm"">""
+                                <CheckCircle className="w-3 h-3 text-green-40o0 mr-2 flex-shrink-0"   />                                {feature}
                               </li>) ) }
                           </ul>
                         </div>"
@@ -1779,8 +1737,8 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                             {solution.benefits.map((benefit, benefitIndex) => (
                               <li"
                                 key={benefitIndex}""
-                                className="flex items-center text-gray-300 text-sm"">""
-                                <Star className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0"  />                                {benefit}
+                                className="flex items-center text-gray-30o0 text-sm"">""
+                                <Star className="w-3 h-3 text-blue-40o0 mr-2 flex-shrink-0"   />                                {benefit}
                               </li>) ) }
                           </ul>
                         </div>
@@ -1803,7 +1761,7 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
             <h2 className="text-4xl font-bold text-white mb-4">
               Our Certifications"
             </h2>""
-            <p className="text-xl text-gray-300">
+            <p className="text-xl text-gray-30o0">
               Recognized for our commitment to environmental sustainability
             </p>
           </motion.div>"
@@ -1818,19 +1776,19 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                 className="text - center">`;
                 <div``;
                   className={`inline - flex items - center justify - center w - 20 h - 20 bg - gradient - to - r ${cert.color} rounded - 2xl mb - 6`}">"";
-                  <cert.icon className="w - 10 h - 10 text - white" />";
+                  <cert.icon className="w - 10 h - 10 text - white"  />";
                 </div>"";
                 <h3 className="text - lg font - bold text - white mb - 2">;
                   {cert.name}";
                 </h3>"";
-                <p className="text - gray - 300 text - sm">{cert.description}</p>;
+                <p className="text - gray - 30o0 text - sm">{cert.description}</p>;
               </motion.div>))}
           </div>;
         </div>;
       </section>;
 ";
       {/* Case Studies */}"";
-      <section className="py - 20 bg - gradient - to - r from - slate - 800 / 50 to - slate - 700 / 50">"";
+      <section className="py - 20 bg - gradient - to - r from - slate - 80o0 / 50 to - slate - 70o0 / 50">"";
         <div className="container mx - auto px - 6">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 20 }}
@@ -1840,7 +1798,7 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
             <h2 className="text - 4xl font - bold text - white mb - 4">;
               Success Stories";
             </h2>"";
-            <p className="text - xl text - gray - 300">;
+            <p className="text - xl text - gray - 30o0">;
               Real results from organizations implementing our Green IT;
               solutions;
             </p>;
@@ -1854,14 +1812,14 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                 whileInView={{ opacity: 1, coordinate_y: 0 }}";
                 transition={{ duration: 0.8, delay: index * 0.1 }}"";
                 className="group"">"";
-                <div className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 700 / 50 rounded - 2xl border border - slate - 600 / 50 hover:border - green - 400 / 50 transition - all duration - 300 hover:scale - 105 p - 6">"";
+                <div className="bg - gradient - to - br from - slate - 80o0 / 50 to - slate - 70o0 / 50 rounded - 2xl border border - slate - 60o0 / 50 hover:border - green - 40o0 / 50 transition - all duration - 30o0 hover:scale - 10o5 p - 6">"";
                   <div className="flex items - center gap - 3 mb - 4">"";
-                    <span className="px - 3 py - 1 rounded - full text - xs font - medium bg - blue - 500 / 20 text - blue - 400">;
+                    <span className="px - 3 py - 1 rounded - full text - xs font - medium bg - blue - 50o0 / 20 text - blue - 40o0">;
                       {study.industry}
                     </span>;
                   </div>";
 "";
-                  <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - green - 400 transition - colors duration - 200">;
+                  <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - green - 40o0 transition - colors duration - 20o0">;
                     {study.title}
                   </h3>";
 "";
@@ -1869,14 +1827,14 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                     <h4 className="text - sm font - semibold text - white mb - 2">;
                       Challenge:";
                     </h4>"";
-                    <p className="text - gray - 300 text - sm">{study.challenge}</p>;
+                    <p className="text - gray - 30o0 text - sm">{study.challenge}</p>;
                   </div>";
 "";
                   <div className="mb - 4">"";
                     <h4 className="text - sm font - semibold text - white mb - 2">;
                       Solution:";
                     </h4>"";
-                    <p className="text - gray - 300 text - sm">{study.solution}</p>;
+                    <p className="text - gray - 30o0 text - sm">{study.solution}</p>;
                   </div>";
 "";
                   <div className="mb - 4">"";
@@ -1887,22 +1845,22 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                       {study.results.map ((result, result_index) => (
                         <li";
                           key={result_index}"";
-                          className="flex items - center text - gray - 300 text - sm"">"";
-                          <CheckCircle className="w - 3 h - 3 text - green - 400 mr - 2 flex - shrink - 0"  />                          {result}
+                          className="flex items - center text - gray - 30o0 text - sm"">"";
+                          <CheckCircle className="w - 3 h - 3 text - green - 40o0 mr - 2 flex - shrink - 0"   />                          {result}
                         </li>) ) }
                     </ul>;
                   </div>";
 "";
                   <div className="grid grid - cols - 2 gap - 4 text - sm">";
                     <div>"";
-                      <div className="text - gray - 400">Annual Savings</div>"";
-                      <div className="text - green - 400 font - medium">;
+                      <div className="text - gray - 40o0">Annual Savings</div>"";
+                      <div className="text - green - 40o0 font - medium">;
                         {study.savings}
                       </div>;
                     </div>";
                     <div>"";
-                      <div className="text - gray - 400">Implementation</div>"";
-                      <div className="text - blue - 400 font - medium">;
+                      <div className="text - gray - 40o0">Implementation</div>"";
+                      <div className="text - blue - 40o0 font - medium">;
                         {study.timeline}
                       </div>;
                     </div>;
@@ -1911,8 +1869,6 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
               </motion.div>) ) }
 
   )
-
-
 
 export { GreenIT, GreenIT };
 };
@@ -1944,7 +1900,7 @@ export default function GreenIT() {;
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.window.performance.";
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware";
         canonical="https://app.ziontechgroup.com/marketplace/category/green-it";
-      />;
+       />;
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="text-center mb-16">;
@@ -1975,10 +1931,10 @@ export default function GreenIT() {;
                 </div>;
                 <div className="rounded-lg overflow-hidden relative w-full h-full">;
                   <img;
-                    src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80";
+                    src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=80o0&h=60o0&q=80";
                     alt="Green IT sustainability";
                     className="object-cover";
-                  />;
+                   />;
                 </div>;
 
               </div>;
@@ -1989,7 +1945,7 @@ export default function GreenIT() {;
                 {greenITSolutions.map((solution, index) => (;
                   <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">;
                     <div className="flex justify-center mb-4">;
-                      <solution.icon className="h-12 w-12 text-zion-cyan" />;
+                      <solution.icon className="h-12 w-12 text-zion-cyan"  />;
                     </div>;
                     <h3 className="text-white font-medium text-xl text-center mb-3">{solution.title}</h3>;
                     <p className="text-zion-slate-light text-center">{solution.description}</p>;
@@ -2036,7 +1992,6 @@ export default function GreenIT() {;
 
   );
 
-
           </div>;
         </div>;
       </section>;
@@ -2052,7 +2007,7 @@ export default function GreenIT() {;
             <h2 className="text - 4xl font - bold text - white mb - 6">;
               Ready to Go Green?";
             </h2>"";
-            <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto">;
+            <p className="text - xl text - gray - 30o0 mb - 8 max - w-2xl mx - auto">;
 
               Start your sustainability journey today. Our Green IT experts will;
               assess your current infrastructure and provide a customized plan;
@@ -2061,12 +2016,12 @@ export default function GreenIT() {;
 "";
 
             <div className="flex flex - col sm:flex - row gap - 4 justify - center">"";
-              <button className="px - 8 py - 3 bg - gradient - to - r from - green - 400 to - blue - 500 text - white font - semibold rounded - lg hover:from - green - 500 hover:to - blue - 600 transition - all duration - 200 hover:scale - 105">;
+              <button className="px - 8 py - 3 bg - gradient - to - r from - green - 40o0 to - blue - 50o0 text - white font - semibold rounded - lg hover:from - green - 50o0 hover:to - blue - 60o0 transition - all duration - 20o0 hover:scale - 10o5">;
                 Schedule Green IT Assessment;
               </button>";
               <a"";
                 href="mailto:greenit@ziontechgroup.com"";
-                className="px - 8 py - 3 border border - green - 400 text - green - 400 font - semibold rounded - lg hover:bg - green - 400 hover:text - white transition - all duration - 200">;
+                className="px - 8 py - 3 border border - green - 40o0 text - green - 40o0 font - semibold rounded - lg hover:bg - green - 40o0 hover:text - white transition - all duration - 20o0">;
 
                 Contact Green IT Team;
               </a>;
@@ -2074,13 +2029,12 @@ export default function GreenIT() {;
 "";
 
             <div className="mt - 8 text - center">"";
-              <p className="text - gray - 400 text - sm">;
+              <p className="text - gray - 40o0 text - sm">;
 
                 Get a free sustainability assessment and customized Green IT;
                 roadmap;
               </p>;
             </div>;
-
 
 }
 
@@ -2097,10 +2051,6 @@ export { GreenIT }
 export { GreenIT, GreenIT }
 }
 
-
-
 export { GreenIT, GreenIT };
 };
-
-
 

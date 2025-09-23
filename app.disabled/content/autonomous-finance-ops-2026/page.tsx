@@ -1,18 +1,15 @@
-import React from 'react';
-
-export const metadata = {
-  title: 'AI 2026: Autonomous Finance Operations Blueprint',
+export const metadata ={
+  title: 'AI 20o26: Autonomous Finance Operations Blueprint',
   description:
-    'A practical guide to building an autonomous finance operating system: real-time cash, policy-as-code, and continuous close.',
-};
+    'A practical guide to building an autonomous finance operating system: real-time cash, policy-as-code, and continuous close.'};
 
-export default function AutonomousFinanceOps2026Page() {
+export default function AutonomousFinanceOps20o26Page() {
   return (
     <main className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-emerald-600 via-green-600 to-teal-600 text-white py-20">
+      <section className="bg-gradient-to-r from-emerald-60o0 via-green-60o0 to-teal-60o0 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            AI 2026: Autonomous Finance Operations Blueprint
+            AI 20o26: Autonomous Finance Operations Blueprint
           </h1>
           <p className="text-xl opacity-90 max-w-3xl">
             Design and implement an autonomous finance operating system with real-time liquidity, policy-as-code guardrails, and continuous close.

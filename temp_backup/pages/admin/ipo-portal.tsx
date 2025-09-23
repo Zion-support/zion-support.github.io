@@ -7,9 +7,9 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   return requireSuperadminSSR(ctx as any)
 },
 
-type Props = { user: SessionUser },
+type Props ={ user: SessionUser },
 
-type Metric = { label: string, value: string | number, trend?: number },
+type Metric ={ label: string, value: string | number, trend?: number },
 
 type DataRoomSection = 'Financials' | 'Cap Table' | 'Legal Docs' | 'Strategic Partnerships' | 'Press Coverage / PR kit',
 
@@ -33,39 +33,37 @@ export default function IpoPortal({ user }: Props) {
         <button onClick={() => setActiveTab('dealroom')} className={`px-3 py-2 rounded border ${activeTab==='dealroom' ? 'bg-black text-white dark:bg-white dark:text-black' : ''}`}>Deal Room</button>
       </div>
 
-      {activeTab === 'dashboard' && <Dashboard />}
-      {activeTab === 'dataroom' && <DataRoom />}
-      {activeTab === 'updates' && <InvestorUpdates />}
-      {activeTab === 'dealroom' && <DealRoom />}
+      {activeTab === 'dashboard' && <Dashboard  />}
+      {activeTab === 'dataroom' && <DataRoom  />}
+      {activeTab === 'updates' && <InvestorUpdates  />}
+      {activeTab === 'dealroom' && <DealRoom  />}
     </EnhancedLayout>
-  ),
-}
+  )}
 
 function Dashboard() {
   const [metrics, setMetrics] = useState<Metric[]>([]),
   useEffect(() => {
-    fetch('/api/ipo/metrics').then((r) => r.json()).then(setMetrics).catch(() => setMetrics([])),
-  }, []),
+    fetch('/api/ipo/metrics').then((r) => r.json()).then(setMetrics).catch(() => setMetrics([]))}, []),
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       {metrics.map((m) => (
         <div key={m.label} className="border rounded p-4">
-          <div className="text-sm text-gray-500">{m.label}</div>
+          <div className="text-sm text-gray-50o0">{m.label}</div>
           <div className="text-2xl font-semibold">{m.value}</div>
           {typeof m.trend === 'number' && (
-            <div className={`text-sm ${m.trend >= 0 ? 'text-green-600' : 'text-red-600'}`}>{m.trend >= 0 ? '+' : ''}{m.trend}%</div>
+            <div className={`text-sm ${m.trend >= 0 ? 'text-green-60o0' : 'text-red-60o0'}`}>{m.trend >= 0 ? '+' : ''}{m.trend}%</div>
           )}
         </div>
       ))}
       <div className="md: col-span-3 grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Retention cohorts</div>
-          <img src="/api/ipo/cohort-chart" alt="Retention cohorts" className="w-full h-64 object-cover bg-gray-100" />
+          <img src="/api/ipo/cohort-chart" alt="Retention cohorts" className="w-full h-64 object-cover bg-gray-10o0"  />
         </div>
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Global user breakdown</div>
-          <img src="/api/ipo/geo-chart" alt="Global user breakdown" className="w-full h-64 object-cover bg-gray-100" />
+          <img src="/api/ipo/geo-chart" alt="Global user breakdown" className="w-full h-64 object-cover bg-gray-10o0"  />
         </div>
       </div>
     </div>
@@ -84,8 +82,7 @@ function DataRoom() {
   const [files, setFiles] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch(`/api/ipo/dataroom/list?section=${encodeURIComponent(active)}`).then((r) => r.json()).then(setFiles).catch(() => setFiles([])),
-  }, [active]),
+    fetch(`/api/ipo/dataroom/list?section=${encodeURIComponent(active)}`).then((r) => r.json()).then(setFiles).catch(() => setFiles([]))}, [active]),
 
   async function onUpload(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0],
@@ -95,12 +92,10 @@ function DataRoom() {
     form.set('file', file),
     await fetch('/api/ipo/dataroom/upload', { method: 'POST', body: form }),
     const next = await fetch(`/api/ipo/dataroom/list?section=${encodeURIComponent(active)}`).then((r) => r.json()).catch(() => []),
-    setFiles(next),
-  }
+    setFiles(next)}
 
   function onOpen(fileName: string) {
-    window.open(`/api/ipo/dataroom/file?section=${encodeURIComponent(active)}&file=${encodeURIComponent(fileName)}`, '_blank'),
-  }
+    window.open(`/api/ipo/dataroom/file?section=${encodeURIComponent(active)}&file=${encodeURIComponent(fileName)}`, '_blank')}
 
   return (
     <div>
@@ -110,7 +105,7 @@ function DataRoom() {
         ))}
       </div>
       <div className="mb-4">
-        <input type="file" onChange={onUpload} />
+        <input type="file" onChange={onUpload}  />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
         {files.map((f) => (
@@ -124,8 +119,7 @@ function DataRoom() {
         ))}
       </div>
     </div>
-  ),
-}
+  )}
 
 function InvestorUpdates() {
   const [updates, setUpdates] = useState<any[]>([]),
@@ -137,10 +131,9 @@ function InvestorUpdates() {
 
   async function refresh() {
     const list = await fetch('/api/ipo/updates/list').then((r) => r.json()).catch(() => []),
-    setUpdates(list),
-  }
+    setUpdates(list)}
 
-  useEffect(() => { refresh(), }, []),
+  useEffect(() => { refresh()}, []),
 
   async function save() {
     await fetch('/api/ipo/updates/create', {
@@ -150,8 +143,7 @@ function InvestorUpdates() {
     }),
     setShowModal(false),
     setTitle(''), setDate(''), setSummary(''), setKpis(''),
-    refresh(),
-  }
+    refresh()}
 
   return (
     <div>
@@ -163,7 +155,7 @@ function InvestorUpdates() {
           <div key={u.id} className="border rounded p-3 flex items-center justify-between">
             <div>
               <div className="font-medium">{u.title}</div>
-              <div className="text-sm text-gray-500">{u.date}</div>
+              <div className="text-sm text-gray-50o0">{u.date}</div>
             </div>
             <div className="flex gap-2">
               <a className="px-2 py-1 border rounded" href={`/api/ipo/updates/export?id=${encodeURIComponent(u.id)}`}>Email PDF</a>
@@ -175,7 +167,7 @@ function InvestorUpdates() {
 
       {showModal && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4">
-          <div className="w-full max-w-lg bg-white dark:bg-gray-900 rounded p-4 space-y-3">
+          <div className="w-full max-w-lg bg-white dark:bg-gray-90o0 rounded p-4 space-y-3">
             <div className="text-lg font-semibold">Create Update</div>
             <input className="w-full border px-3 py-2 rounded" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} />
             <input className="w-full border px-3 py-2 rounded" placeholder="Date" value={date} onChange={(e) => setDate(e.target.value)} />
@@ -189,8 +181,7 @@ function InvestorUpdates() {
         </div>
       )}
     </div>
-  ),
-}
+  )}
 
 function DealRoom() {
   const [terms, setTerms] = useState<any>({}),
@@ -199,17 +190,14 @@ function DealRoom() {
 
   useEffect(() => {
     fetch('/api/ipo/deal/terms').then((r) => r.json()).then(setTerms).catch(() => setTerms({})),
-    fetch('/api/ipo/deal/offerings').then((r) => r.json()).then(setOfferings).catch(() => {}),
-  }, []),
+    fetch('/api/ipo/deal/offerings').then((r) => r.json()).then(setOfferings).catch(() => {})}, []),
 
   async function saveOfferings() {
-    await fetch('/api/ipo/deal/offerings', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(offerings) }),
-  }
+    await fetch('/api/ipo/deal/offerings', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(offerings) })}
 
   async function submitSoftCommit() {
     await fetch('/api/ipo/deal/commit', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ amount: softCommit }) }),
-    setSoftCommit(''),
-  }
+    setSoftCommit('')}
 
   return (
     <div className="space-y-4">
@@ -236,5 +224,4 @@ function DealRoom() {
         </div>
       </div>
     </div>
-  ),
-}
+  )}

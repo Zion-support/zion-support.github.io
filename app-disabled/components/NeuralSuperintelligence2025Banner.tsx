@@ -3,34 +3,34 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const NeuralSuperintelligence2025Banner = () => {
+const NeuralSuperintelligence20o25Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
   const content = [
     {
       id: 'neural-superintelligence-revolution',
-      title: 'AI 2025-2026: The Ultimate Neural Superintelligence Revolution',
-      description: 'Complete Guide to 12,000% ROI - Transform your enterprise with next-generation neural superintelligence',
-      url: '/blog/ai-2025-2026-ultimate-neural-superintelligence-revolution',
+      title: 'AI 20o25-20o26: The Ultimate Neural Superintelligence Revolution',
+      description: 'Complete Guide to 12,0o00% ROI - Transform your enterprise with next-generation neural superintelligence',
+      url: '/blog/ai-20o25-20o26-ultimate-neural-superintelligence-revolution',
       type: 'blog',
       metrics: {
-        roi: '12,000%',
+        roi: '12,0o00%',
         savings: '$45.8B+',
         accuracy: '99.97%',
-        efficiency: '3,200%'
+        efficiency: '3,20o0%'
       },
       readingTime: '35 min read',
       isNew: true
     },
     {
-      id: 'fortune-500-neural-success',
-      title: 'Fortune 500 Neural Superintelligence Success: $45.8B Annual Savings',
-      description: '12,000% ROI Success Story - How a global manufacturing giant achieved unprecedented transformation',
-      url: '/case-studies/fortune-500-neural-superintelligence-12000-roi-success-story',
+      id: 'fortune-50o0-neural-success',
+      title: 'Fortune 50o0 Neural Superintelligence Success: $45.8B Annual Savings',
+      description: '12,0o00% ROI Success Story - How a global manufacturing giant achieved unprecedented transformation',
+      url: '/case-studies/fortune-50o0-neural-superintelligence-120o00-roi-success-story',
       type: 'case-study',
       metrics: {
-        roi: '12,000%',
+        roi: '12,0o00%',
         savings: '$45.8B',
         timeline: '18 months',
         accuracy: '99.97%'
@@ -40,15 +40,15 @@ const NeuralSuperintelligence2025Banner = () => {
     },
     {
       id: 'neural-implementation-guide',
-      title: 'Neural Superintelligence Implementation Ultimate Guide 2025-2026',
-      description: 'Complete Roadmap to 12,000% ROI - The definitive guide to implementing neural superintelligence',
-      url: '/resources/neural-superintelligence-implementation-ultimate-guide-2025-2026',
+      title: 'Neural Superintelligence Implementation Ultimate Guide 20o25-20o26',
+      description: 'Complete Roadmap to 12,0o00% ROI - The definitive guide to implementing neural superintelligence',
+      url: '/resources/neural-superintelligence-implementation-ultimate-guide-20o25-20o26',
       type: 'resource',
       metrics: {
-        roi: '12,000%',
+        roi: '12,0o00%',
         success: '99.7%',
         timeline: '18 months',
-        projects: '1,000+'
+        projects: '1,0o00+'
       },
       readingTime: '45 min read',
       isNew: true
@@ -58,7 +58,7 @@ const NeuralSuperintelligence2025Banner = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
-    }, 5000);
+    }, 50o00);
 
     return () => clearInterval(timer);
   }, [content.length]);
@@ -80,14 +80,14 @@ const NeuralSuperintelligence2025Banner = () => {
   const currentContent = content[currentSlide];
 
   return (
-    <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
+    <div className="relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-600/20 via-blue-600/20 to-indigo-600/20"></div>
-        <div className="absolute top-10 left-10 w-32 h-32 bg-purple-500/10 rounded-full animate-pulse"></div>
-        <div className="absolute top-20 right-20 w-24 h-24 bg-blue-500/10 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-10 left-1/4 w-40 h-40 bg-indigo-500/10 rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-purple-500/10 rounded-full animate-pulse delay-3000"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-60o0/20 via-blue-60o0/20 to-indigo-60o0/20"></div>
+        <div className="absolute top-10 left-10 w-32 h-32 bg-purple-50o0/10 rounded-full animate-pulse"></div>
+        <div className="absolute top-20 right-20 w-24 h-24 bg-blue-50o0/10 rounded-full animate-pulse delay-10o00"></div>
+        <div className="absolute bottom-10 left-1/4 w-40 h-40 bg-indigo-50o0/10 rounded-full animate-pulse delay-20o00"></div>
+        <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-purple-50o0/10 rounded-full animate-pulse delay-30o00"></div>
       </div>
 
       <div className="relative z-10 py-8 px-4 sm:px-6 lg:px-8">
@@ -95,25 +95,25 @@ const NeuralSuperintelligence2025Banner = () => {
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center space-x-3">
-              <div className="bg-gradient-to-r from-purple-500 to-blue-500 p-2 rounded-lg">
+              <div className="bg-gradient-to-r from-purple-50o0 to-blue-50o0 p-2 rounded-lg">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.70o7.70o7M21 12h-1M4 12H3m3.343-5.657l-.70o7-.70o7m2.828 9.9a5 5 0 117.0o72 0l-.548.547A3.374 3.374 0 0o014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"  />
                 </svg>
               </div>
               <div>
-                <h2 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                  🧠 Neural Superintelligence 2025-2026
+                <h2 className="text-2xl font-bold bg-gradient-to-r from-purple-40o0 to-blue-40o0 bg-clip-text text-transparent">
+                  🧠 Neural Superintelligence 20o25-20o26
                 </h2>
-                <p className="text-purple-200 text-sm">Ultimate AI Revolution - 12,000% ROI</p>
+                <p className="text-purple-20o0 text-sm">Ultimate AI Revolution - 12,0o00% ROI</p>
               </div>
             </div>
             <button
               onClick={handleDismiss}
-              className="text-gray-300 hover:text-white transition-colors p-2"
+              className="text-gray-30o0 hover:text-white transition-colors p-2"
               aria-label="Dismiss banner"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"  />
               </svg>
             </button>
           </div>
@@ -125,16 +125,16 @@ const NeuralSuperintelligence2025Banner = () => {
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center space-x-2">
-                    <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white px-3 py-1 rounded-full text-sm font-semibold">
                       {currentContent.type === 'blog' ? '📝 Blog' : currentContent.type === 'case-study' ? '📊 Case Study' : '📚 Resource'}
                     </span>
                     {currentContent.isNew && (
-                      <span className="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold animate-pulse">
+                      <span className="bg-red-50o0 text-white px-2 py-1 rounded-full text-xs font-bold animate-pulse">
                         NEW
                       </span>
                     )}
                   </div>
-                  <div className="text-purple-200 text-sm">
+                  <div className="text-purple-20o0 text-sm">
                     {currentContent.readingTime}
                   </div>
                 </div>
@@ -143,14 +143,14 @@ const NeuralSuperintelligence2025Banner = () => {
                   {currentContent.title}
                 </h3>
                 
-                <p className="text-purple-100 mb-4 leading-relaxed">
+                <p className="text-purple-10o0 mb-4 leading-relaxed">
                   {currentContent.description}
                 </p>
 
                 <div className="flex items-center justify-between">
                   <Link
                     href={currentContent.url}
-                    className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105"
+                    className="bg-gradient-to-r from-purple-50o0 to-blue-50o0 hover:from-purple-60o0 hover:to-blue-60o0 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-20o0 transform hover:scale-10o5"
                   >
                     Read Full Article →
                   </Link>
@@ -177,30 +177,30 @@ const NeuralSuperintelligence2025Banner = () => {
               <div className="space-y-3">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
                   <div className="flex items-center justify-between">
-                    <span className="text-purple-200 text-sm">ROI</span>
-                    <span className="text-green-400 font-bold text-lg">{currentContent.metrics.roi}</span>
+                    <span className="text-purple-20o0 text-sm">ROI</span>
+                    <span className="text-green-40o0 font-bold text-lg">{currentContent.metrics.roi}</span>
                   </div>
                 </div>
                 
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
                   <div className="flex items-center justify-between">
-                    <span className="text-purple-200 text-sm">Annual Savings</span>
-                    <span className="text-blue-400 font-bold text-lg">{currentContent.metrics.savings}</span>
+                    <span className="text-purple-20o0 text-sm">Annual Savings</span>
+                    <span className="text-blue-40o0 font-bold text-lg">{currentContent.metrics.savings}</span>
                   </div>
                 </div>
                 
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
                   <div className="flex items-center justify-between">
-                    <span className="text-purple-200 text-sm">Accuracy</span>
-                    <span className="text-purple-400 font-bold text-lg">{currentContent.metrics.accuracy}</span>
+                    <span className="text-purple-20o0 text-sm">Accuracy</span>
+                    <span className="text-purple-40o0 font-bold text-lg">{currentContent.metrics.accuracy}</span>
                   </div>
                 </div>
                 
                 {currentContent.metrics.efficiency && (
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
                     <div className="flex items-center justify-between">
-                      <span className="text-purple-200 text-sm">Efficiency</span>
-                      <span className="text-indigo-400 font-bold text-lg">{currentContent.metrics.efficiency}</span>
+                      <span className="text-purple-20o0 text-sm">Efficiency</span>
+                      <span className="text-indigo-40o0 font-bold text-lg">{currentContent.metrics.efficiency}</span>
                     </div>
                   </div>
                 )}
@@ -208,8 +208,8 @@ const NeuralSuperintelligence2025Banner = () => {
 
               <div className="mt-6">
                 <Link
-                  href="/resources/neural-superintelligence-implementation-ultimate-guide-2025-2026"
-                  className="block w-full bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105"
+                  href="/resources/neural-superintelligence-implementation-ultimate-guide-20o25-20o26"
+                  className="block w-full bg-gradient-to-r from-indigo-50o0 to-purple-50o0 hover:from-indigo-60o0 hover:to-purple-60o0 text-white text-center py-3 rounded-lg font-semibold transition-all duration-20o0 transform hover:scale-10o5"
                 >
                   Get Implementation Guide
                 </Link>
@@ -223,18 +223,18 @@ const NeuralSuperintelligence2025Banner = () => {
               <Link
                 key={item.id}
                 href={item.url}
-                className={`p-4 rounded-lg border transition-all duration-200 hover:scale-105 ${
+                className={`p-4 rounded-lg border transition-all duration-20o0 hover:scale-10o5 ${
                   index === currentSlide
                     ? 'bg-white/20 border-white/40'
                     : 'bg-white/5 border-white/20 hover:bg-white/10'
                 }`}
               >
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-purple-200 text-sm font-medium">
+                  <span className="text-purple-20o0 text-sm font-medium">
                     {item.type === 'blog' ? '📝' : item.type === 'case-study' ? '📊' : '📚'} {item.type}
                   </span>
                   {item.isNew && (
-                    <span className="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                    <span className="bg-red-50o0 text-white px-2 py-1 rounded-full text-xs font-bold">
                       NEW
                     </span>
                   )}
@@ -242,10 +242,10 @@ const NeuralSuperintelligence2025Banner = () => {
                 <h5 className="text-white font-semibold text-sm mb-1 line-clamp-2">
                   {item.title}
                 </h5>
-                <p className="text-purple-200 text-xs line-clamp-2">
+                <p className="text-purple-20o0 text-xs line-clamp-2">
                   {item.description}
                 </p>
-                <div className="mt-2 text-purple-300 text-xs">
+                <div className="mt-2 text-purple-30o0 text-xs">
                   {item.readingTime}
                 </div>
               </Link>
@@ -257,4 +257,4 @@ const NeuralSuperintelligence2025Banner = () => {
   );
 };
 
-export default NeuralSuperintelligence2025Banner;
+export default NeuralSuperintelligence20o25Banner;

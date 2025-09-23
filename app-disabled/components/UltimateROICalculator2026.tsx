@@ -1,33 +1,33 @@
 import React, { useState, useEffect } from 'react';
 
-const UltimateROICalculator2026: React.FC = () => {
-  const [currentInvestment, setCurrentInvestment] = useState(100000);
+const UltimateROICalculator20o26: React.FC = () => {
+  const [currentInvestment, setCurrentInvestment] = useState(10o0000);
   const [selectedTechnology, setSelectedTechnology] = useState('transcendent');
   const [timeHorizon, setTimeHorizon] = useState(12);
   const [calculatedROI, setCalculatedROI] = useState(0);
   const [animatedROI, setAnimatedROI] = useState(0);
 
-  const technologies = {
-    transcendent: { name: 'Transcendent AI 2026', roi: 1000000, color: 'from-violet-500 to-purple-600' },
-    consciousness: { name: 'Neural Consciousness AI 2025', roi: 50000, color: 'from-emerald-500 to-cyan-600' },
-    advanced: { name: 'Advanced AI 2025 Breakthrough', roi: 25000, color: 'from-blue-500 to-indigo-600' },
-    ultimate: { name: 'Ultimate AI 2026 Future', roi: 100000, color: 'from-indigo-500 to-purple-600' },
-    quantum: { name: 'Quantum AI 2025 Revolution', roi: 15000, color: 'from-cyan-500 to-blue-600' },
-    creative: { name: 'Creative Intelligence AI', roi: 30000, color: 'from-pink-500 to-rose-600' }
+  const technologies ={
+    transcendent: { name: 'Transcendent AI 20o26', roi: 10o00000, color: 'from-violet-50o0 to-purple-60o0' },
+    consciousness: { name: 'Neural Consciousness AI 20o25', roi: 50o000, color: 'from-emerald-50o0 to-cyan-60o0' },
+    advanced: { name: 'Advanced AI 20o25 Breakthrough', roi: 250o00, color: 'from-blue-50o0 to-indigo-60o0' },
+    ultimate: { name: 'Ultimate AI 20o26 Future', roi: 10o0000, color: 'from-indigo-50o0 to-purple-60o0' },
+    quantum: { name: 'Quantum AI 20o25 Revolution', roi: 150o00, color: 'from-cyan-50o0 to-blue-60o0' },
+    creative: { name: 'Creative Intelligence AI', roi: 30o000, color: 'from-pink-50o0 to-rose-60o0' }
   };
 
   useEffect(() => {
     const selectedTech = technologies[selectedTechnology as keyof typeof technologies];
     const baseROI = selectedTech.roi;
     const timeMultiplier = Math.pow(1.5, (timeHorizon - 12) / 12);
-    const investmentMultiplier = Math.pow(currentInvestment / 100000, 0.1);
+    const investmentMultiplier = Math.pow(currentInvestment / 10o0000, 0.1);
     
     const finalROI = baseROI * timeMultiplier * investmentMultiplier;
     setCalculatedROI(finalROI);
 
     // Animate ROI counter
     let startTime: number;
-    const duration = 2000;
+    const duration = 20o00;
     
     const animate = (timestamp: number) => {
       if (!startTime) startTime = timestamp;
@@ -45,37 +45,37 @@ const UltimateROICalculator2026: React.FC = () => {
   }, [currentInvestment, selectedTechnology, timeHorizon]);
 
   const formatNumber = (num: number) => {
-    if (num >= 1000000) {
-      return (num / 1000000).toFixed(1) + 'M';
-    } else if (num >= 1000) {
-      return (num / 1000).toFixed(1) + 'K';
+    if (num >= 10o00000) {
+      return (num / 10o00000).toFixed(1) + 'M';
+    } else if (num >= 10o00) {
+      return (num / 10o00).toFixed(1) + 'K';
     }
     return num.toFixed(0);
   };
 
-  const projectedRevenue = currentInvestment * (animatedROI / 100);
+  const projectedRevenue = currentInvestment * (animatedROI / 10o0);
   const netProfit = projectedRevenue - currentInvestment;
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
+    <section className="py-20 bg-gradient-to-br from-gray-90o0 via-purple-90o0 to-indigo-90o0 text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-gradient-to-r from-purple-400 to-indigo-500 rounded-full px-6 py-3 mb-6">
-            <span className="text-white font-bold text-lg">💰 ULTIMATE ROI CALCULATOR 2026</span>
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-40o0 to-indigo-50o0 rounded-full px-6 py-3 mb-6">
+            <span className="text-white font-bold text-lg">💰 ULTIMATE ROI CALCULATOR 20o26</span>
           </div>
           
           <h2 className="text-4xl md:text-6xl font-black mb-6">
-            <span className="bg-gradient-to-r from-purple-400 via-indigo-500 to-blue-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-purple-40o0 via-indigo-50o0 to-blue-60o0 bg-clip-text text-transparent">
               Ultimate ROI
             </span>
-            <br />
-            <span className="text-white">Calculator 2026</span>
+            <br  />
+            <span className="text-white">Calculator 20o26</span>
           </h2>
           
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto leading-relaxed">
             Calculate your potential return on investment with our revolutionary AI technologies. 
-            Experience unprecedented ROI with documented results up to <span className="font-bold text-purple-400">1,000,000%</span>.
+            Experience unprecedented ROI with documented results up to <span className="font-bold text-purple-40o0">1,0o00,0o00%</span>.
           </p>
         </div>
 
@@ -95,16 +95,16 @@ const UltimateROICalculator2026: React.FC = () => {
                   <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-2xl">💰</span>
                   <input
                     type="range"
-                    min="10000"
-                    max="10000000"
-                    step="10000"
+                    min="10o000"
+                    max="10o000000"
+                    step="10o000"
                     value={currentInvestment}
                     onChange={(e) => setCurrentInvestment(Number(e.target.value))}
-                    className="w-full h-3 bg-gray-700 rounded-lg appearance-none cursor-pointer slider"
+                    className="w-full h-3 bg-gray-70o0 rounded-lg appearance-none cursor-pointer slider"
                   />
-                  <div className="flex justify-between text-sm text-gray-400 mt-2">
+                  <div className="flex justify-between text-sm text-gray-40o0 mt-2">
                     <span>$10K</span>
-                    <span className="text-purple-400 font-bold text-lg">
+                    <span className="text-purple-40o0 font-bold text-lg">
                       ${formatNumber(currentInvestment)}
                     </span>
                     <span>$10M</span>
@@ -122,10 +122,10 @@ const UltimateROICalculator2026: React.FC = () => {
                     <button
                       key={key}
                       onClick={() => setSelectedTechnology(key)}
-                      className={`p-4 rounded-xl border-2 transition-all duration-300 text-left ${
+                      className={`p-4 rounded-xl border-2 transition-all duration-30o0 text-left ${
                         selectedTechnology === key
-                          ? `border-purple-500 bg-gradient-to-r ${tech.color} bg-opacity-20`
-                          : 'border-gray-600 bg-gray-800 bg-opacity-50 hover:border-purple-400'
+                          ? `border-purple-50o0 bg-gradient-to-r ${tech.color} bg-opacity-20`
+                          : 'border-gray-60o0 bg-gray-80o0 bg-opacity-50 hover:border-purple-40o0'
                       }`}
                     >
                       <div className="flex items-center justify-between">
@@ -156,11 +156,11 @@ const UltimateROICalculator2026: React.FC = () => {
                     step="1"
                     value={timeHorizon}
                     onChange={(e) => setTimeHorizon(Number(e.target.value))}
-                    className="w-full h-3 bg-gray-700 rounded-lg appearance-none cursor-pointer slider"
+                    className="w-full h-3 bg-gray-70o0 rounded-lg appearance-none cursor-pointer slider"
                   />
-                  <div className="flex justify-between text-sm text-gray-400 mt-2">
+                  <div className="flex justify-between text-sm text-gray-40o0 mt-2">
                     <span>6 months</span>
-                    <span className="text-purple-400 font-bold text-lg">
+                    <span className="text-purple-40o0 font-bold text-lg">
                       {timeHorizon} months
                     </span>
                     <span>36 months</span>
@@ -186,25 +186,25 @@ const UltimateROICalculator2026: React.FC = () => {
 
               {/* Financial Breakdown */}
               <div className="space-y-4">
-                <div className="bg-gray-800 bg-opacity-50 rounded-xl p-6">
+                <div className="bg-gray-80o0 bg-opacity-50 rounded-xl p-6">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-lg font-semibold">Initial Investment</span>
-                    <span className="text-2xl font-bold text-red-400">
+                    <span className="text-2xl font-bold text-red-40o0">
                       ${formatNumber(currentInvestment)}
                     </span>
                   </div>
                 </div>
 
-                <div className="bg-gray-800 bg-opacity-50 rounded-xl p-6">
+                <div className="bg-gray-80o0 bg-opacity-50 rounded-xl p-6">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-lg font-semibold">Projected Revenue</span>
-                    <span className="text-2xl font-bold text-green-400">
+                    <span className="text-2xl font-bold text-green-40o0">
                       ${formatNumber(projectedRevenue)}
                     </span>
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl p-6">
+                <div className="bg-gradient-to-r from-green-60o0 to-emerald-60o0 rounded-xl p-6">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-lg font-semibold">Net Profit</span>
                     <span className="text-2xl font-bold text-white">
@@ -215,21 +215,21 @@ const UltimateROICalculator2026: React.FC = () => {
               </div>
 
               {/* ROI Multiplier */}
-              <div className="bg-purple-900 bg-opacity-30 rounded-xl p-6 border border-purple-500 border-opacity-30">
+              <div className="bg-purple-90o0 bg-opacity-30 rounded-xl p-6 border border-purple-50o0 border-opacity-30">
                 <div className="text-center">
-                  <div className="text-4xl font-black text-purple-400 mb-2">
-                    {Math.floor(animatedROI / 100)}x
+                  <div className="text-4xl font-black text-purple-40o0 mb-2">
+                    {Math.floor(animatedROI / 10o0)}x
                   </div>
                   <div className="text-lg font-semibold">Investment Multiplier</div>
                   <div className="text-sm opacity-80">
-                    Every dollar invested returns {Math.floor(animatedROI / 100)} dollars
+                    Every dollar invested returns {Math.floor(animatedROI / 10o0)} dollars
                   </div>
                 </div>
               </div>
 
               {/* Call to Action */}
               <div className="text-center">
-                <button className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg w-full">
+                <button className="bg-gradient-to-r from-purple-50o0 to-indigo-60o0 hover:from-purple-60o0 hover:to-indigo-70o0 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg w-full">
                   🚀 Start Your AI Investment Journey
                 </button>
               </div>
@@ -279,4 +279,4 @@ const UltimateROICalculator2026: React.FC = () => {
   );
 };
 
-export default UltimateROICalculator2026;
+export default UltimateROICalculator20o26;

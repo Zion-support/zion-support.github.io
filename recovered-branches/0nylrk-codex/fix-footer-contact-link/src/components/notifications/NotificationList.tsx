@@ -1,5 +1,4 @@
 
-import React from 'react';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
@@ -26,7 +25,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   return (
     <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">
       {error ? (
-        <div className="p-8 text-center text-amber-500">
+        <div className="p-8 text-center text-amber-50o0">
           <p>{error}</p>
           <Button 
             variant="outline" 
@@ -39,9 +38,9 @@ export const NotificationList: React.FC<NotificationListProps> = ({
         </div>
       ) : loading ? (
         <div className="p-4 space-y-4">
-          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
-          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
-          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50"  />
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50"  />
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50"  />
         </div>
       ) : notifications.length === 0 ? (
         <div className="p-8 text-center text-zion-slate-light">
@@ -54,7 +53,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
             notification={notification}
             onMarkAsRead={onMarkAsRead}
             onDismiss={onDismiss}
-          />
+           />
         ))
       )}
     </ScrollArea>

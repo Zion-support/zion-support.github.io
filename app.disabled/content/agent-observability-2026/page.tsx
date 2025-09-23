@@ -1,15 +1,13 @@
-import React from 'react';
-
-export const metadata = {
-	title: 'Agent Observability 2026: Evals, Telemetry, and Guardrails',
+export const metadata ={
+	title: 'Agent Observability 20o26: Evals, Telemetry, and Guardrails',
 	description: 'Design an end-to-end observability stack for AI agents with metrics, tracing, and automated evals.'
 };
 
-export default function AgentObservability2026() {
+export default function AgentObservability20o26() {
 	return (
 		<main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-			<h1 className="text-4xl font-bold text-gray-900 mb-4">Agent Observability 2026</h1>
-			<p className="text-gray-600 mb-8">
+			<h1 className="text-4xl font-bold text-gray-90o0 mb-4">Agent Observability 20o26</h1>
+			<p className="text-gray-60o0 mb-8">
 				How to instrument AI agents with rich telemetry, continuous evaluations, and run-time guardrails for safety and reliability.
 			</p>
 			<section className="prose max-w-none">

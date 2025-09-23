@@ -26,19 +26,19 @@ import {
   Handshake, Linkedin, Github, Twitter, Youtube, Instagram
 } from 'lucide-react';
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home, description: 'Welcome to Zion Tech Group' },
   { name: 'Services', href: '/services', icon: Briefcase, description: 'Explore our comprehensive service offerings' },
-  { name: '2024 Services', href: '/services-2024', icon: Sparkles, description: 'Latest revolutionary services for 2024' },
+  { name: '20o24 Services', href: '/services-20o24', icon: Sparkles, description: 'Latest revolutionary services for 20o24' },
   { name: 'Solutions', href: '/solutions', icon: Target, description: 'Industry-specific solutions and use cases' },
-  { name: 'Pricing', href: '/pricing-2033', icon: DollarSign, description: 'Transparent pricing for all our services' },
+  { name: 'Pricing', href: '/pricing-20o33', icon: DollarSign, description: 'Transparent pricing for all our services' },
   { name: 'Resources', href: '/resources', icon: BookOpen, description: 'Documentation, guides, and learning materials' },
   { name: 'Case Studies', href: '/case-studies', icon: FileText, description: 'Success stories from our customers' },
   { name: 'Blog', href: '/blog', icon: MessageCircle, description: 'Latest insights and industry trends' },
@@ -51,7 +51,7 @@ const serviceCategories = [
   {
     title: '🧠 Revolutionary AI Services',
     icon: BrainIcon,
-    color: 'from-violet-600 via-purple-600 to-indigo-600',
+    color: 'from-violet-60o0 via-purple-60o0 to-indigo-60o0',
     description: 'Next-generation AI consciousness and creativity',
     services: [
       { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro', description: 'Transform data into actionable insights', price: '$299/month' },
@@ -63,7 +63,7 @@ const serviceCategories = [
   {
     title: '⚛️ Quantum & Emerging Tech',
     icon: AtomIcon,
-    color: 'from-indigo-600 via-blue-600 to-cyan-600',
+    color: 'from-indigo-60o0 via-blue-60o0 to-cyan-60o0',
     description: 'Quantum computing and beyond',
     services: [
       { name: 'Quantum-Secure Communication', href: '/quantum-secure-communication', description: 'Future-proof encryption', price: '$599/month' },
@@ -74,7 +74,7 @@ const serviceCategories = [
   {
     title: '🏙️ Enterprise IT Solutions',
     icon: CpuIcon,
-    color: 'from-blue-600 via-cyan-600 to-teal-600',
+    color: 'from-blue-60o0 via-cyan-60o0 to-teal-60o0',
     description: 'Autonomous enterprise infrastructure',
     services: [
       { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Self-healing infrastructure', price: '$799/month' },
@@ -86,7 +86,7 @@ const serviceCategories = [
   {
     title: '🔌 API & Development Tools',
     icon: Code,
-    color: 'from-teal-600 via-emerald-600 to-green-600',
+    color: 'from-teal-60o0 via-emerald-60o0 to-green-60o0',
     description: 'Developer experience and API management',
     services: [
       { name: 'AI-Powered API Management', href: '/ai-powered-api-management', description: 'Intelligent API lifecycle management', price: '$349/month' },
@@ -97,7 +97,7 @@ const serviceCategories = [
   {
     title: '💰 Business & Analytics',
     icon: BarChart,
-    color: 'from-green-600 via-yellow-600 to-orange-600',
+    color: 'from-green-60o0 via-yellow-60o0 to-orange-60o0',
     description: 'Business intelligence and optimization',
     services: [
       { name: 'AI-Powered SEO Automation Pro', href: '/ai-seo-automation-pro', description: 'Automate SEO with AI', price: '$149/month' },
@@ -107,7 +107,7 @@ const serviceCategories = [
   {
     title: '🔒 Security & Compliance',
     icon: ShieldIcon,
-    color: 'from-orange-600 via-red-600 to-pink-600',
+    color: 'from-orange-60o0 via-red-60o0 to-pink-60o0',
     description: 'Advanced security and compliance solutions',
     services: [
       { name: 'AI-Powered Network Security', href: '/ai-powered-network-security', description: 'Intelligent threat detection', price: '$549/month' }
@@ -134,7 +134,7 @@ const socialLinks = [
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
 ];
 
-const UltraFuturisticNavigation2034: React.FC = () => {
+const UltraFuturisticNavigation20o34: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -153,23 +153,23 @@ const UltraFuturisticNavigation2034: React.FC = () => {
   };
 
   return (
-    <nav className="relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20">
+    <nav className="relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-50o0/20">
       {/* Top contact bar */}
-      <div className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 border-b border-cyan-500/20">
+      <div className="bg-gradient-to-r from-cyan-90o0/50 via-purple-90o0/50 to-pink-90o0/50 border-b border-cyan-50o0/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-10 text-xs">
-            <div className="flex items-center space-x-6 text-cyan-300">
-              <a href={`tel:${contactInfo.mobile}`} className="flex items-center hover:text-cyan-200 transition-colors">
-                <Phone className="w-3 h-3 mr-2" />
+            <div className="flex items-center space-x-6 text-cyan-30o0">
+              <a href={`tel:${contactInfo.mobile}`} className="flex items-center hover:text-cyan-20o0 transition-colors">
+                <Phone className="w-3 h-3 mr-2"  />
                 {contactInfo.mobile}
               </a>
-              <a href={`mailto:${contactInfo.email}`} className="flex items-center hover:text-cyan-200 transition-colors">
-                <Mail className="w-3 h-3 mr-2" />
+              <a href={`mailto:${contactInfo.email}`} className="flex items-center hover:text-cyan-20o0 transition-colors">
+                <Mail className="w-3 h-3 mr-2"  />
                 {contactInfo.email}
               </a>
             </div>
             <div className="flex items-center space-x-4">
-              <span className="text-cyan-300">📍 {contactInfo.address}</span>
+              <span className="text-cyan-30o0">📍 {contactInfo.address}</span>
               <div className="flex items-center space-x-2">
                 {socialLinks.map((social) => (
                   <a
@@ -177,9 +177,9 @@ const UltraFuturisticNavigation2034: React.FC = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-cyan-300 hover:text-cyan-200 transition-colors"
+                    className="text-cyan-30o0 hover:text-cyan-20o0 transition-colors"
                   >
-                    <social.icon className="w-3 h-3" />
+                    <social.icon className="w-3 h-3"  />
                   </a>
                 ))}
               </div>
@@ -200,16 +200,16 @@ const UltraFuturisticNavigation2034: React.FC = () => {
           >
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/25 group-hover:shadow-cyan-500/40 transition-all duration-300 group-hover:scale-110">
-                  <Zap className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-40o0 via-purple-50o0 to-pink-50o0 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-50o0/25 group-hover:shadow-cyan-50o0/40 transition-all duration-30o0 group-hover:scale-110">
+                  <Zap className="w-6 h-6 text-white"  />
                 </div>
-                <div className="absolute -inset-1 bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 rounded-xl blur opacity-25 group-hover:opacity-40 transition-opacity duration-300"></div>
+                <div className="absolute -inset-1 bg-gradient-to-br from-cyan-40o0 via-purple-50o0 to-pink-50o0 rounded-xl blur opacity-25 group-hover:opacity-40 transition-opacity duration-30o0"></div>
               </div>
               <div className="flex flex-col">
-                <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <span className="text-2xl font-bold bg-gradient-to-r from-cyan-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">
                   Zion Tech Group
                 </span>
-                <span className="text-xs text-cyan-300 font-medium">Innovation • Intelligence • Impact</span>
+                <span className="text-xs text-cyan-30o0 font-medium">Innovation • Intelligence • Impact</span>
               </div>
             </Link>
           </motion.div>
@@ -222,10 +222,10 @@ const UltraFuturisticNavigation2034: React.FC = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-300 hover:text-cyan-300 transition-colors duration-200 font-medium relative group"
+                  className="text-gray-30o0 hover:text-cyan-30o0 transition-colors duration-20o0 font-medium relative group"
                 >
                   {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-40o0 to-purple-40o0 group-hover:w-full transition-all duration-30o0"></span>
                 </Link>
               ))}
             </div>
@@ -234,11 +234,11 @@ const UltraFuturisticNavigation2034: React.FC = () => {
             <div className="relative">
               <button
                 onClick={() => handleDropdownToggle('services')}
-                className="flex items-center space-x-2 text-gray-300 hover:text-cyan-300 transition-colors duration-200 font-medium group"
+                className="flex items-center space-x-2 text-gray-30o0 hover:text-cyan-30o0 transition-colors duration-20o0 font-medium group"
               >
                 <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${activeDropdown === 'services' ? 'rotate-180' : ''}`}  />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-40o0 to-purple-40o0 group-hover:w-full transition-all duration-30o0"></span>
               </button>
 
               <AnimatePresence>
@@ -248,33 +248,33 @@ const UltraFuturisticNavigation2034: React.FC = () => {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 10, scale: 0.95 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-96 bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-xl shadow-2xl shadow-cyan-500/10 p-4 z-50"
+                    className="absolute top-full left-0 mt-2 w-96 bg-black/95 backdrop-blur-xl border border-cyan-50o0/20 rounded-xl shadow-2xl shadow-cyan-50o0/10 p-4 z-50"
                   >
                     <div className="grid grid-cols-1 gap-4">
                       {serviceCategories.map((category) => (
                         <div key={category.title} className="group">
-                          <div className={`p-3 rounded-lg bg-gradient-to-r ${category.color} bg-opacity-10 border border-cyan-500/20 group-hover:bg-opacity-20 transition-all duration-200`}>
+                          <div className={`p-3 rounded-lg bg-gradient-to-r ${category.color} bg-opacity-10 border border-cyan-50o0/20 group-hover:bg-opacity-20 transition-all duration-20o0`}>
                             <div className="flex items-center space-x-3 mb-2">
-                              <category.icon className="w-5 h-5 text-cyan-300" />
+                              <category.icon className="w-5 h-5 text-cyan-30o0"  />
                               <h3 className="font-semibold text-white text-sm">{category.title}</h3>
                             </div>
-                            <p className="text-xs text-gray-400 mb-3">{category.description}</p>
+                            <p className="text-xs text-gray-40o0 mb-3">{category.description}</p>
                             <div className="space-y-2">
                               {category.services.map((service) => (
                                 <Link
                                   key={service.name}
                                   href={service.href}
-                                  className="block p-2 rounded bg-black/30 hover:bg-cyan-500/10 transition-all duration-200 group"
+                                  className="block p-2 rounded bg-black/30 hover:bg-cyan-50o0/10 transition-all duration-20o0 group"
                                   onClick={closeMenu}
                                 >
                                   <div className="flex items-center justify-between">
                                     <div>
-                                      <div className="text-sm font-medium text-white group-hover:text-cyan-300 transition-colors">
+                                      <div className="text-sm font-medium text-white group-hover:text-cyan-30o0 transition-colors">
                                         {service.name}
                                       </div>
-                                      <div className="text-xs text-gray-400">{service.description}</div>
+                                      <div className="text-xs text-gray-40o0">{service.description}</div>
                                     </div>
-                                    <div className="text-xs font-bold text-cyan-400">{service.price}</div>
+                                    <div className="text-xs font-bold text-cyan-40o0">{service.price}</div>
                                   </div>
                                 </Link>
                               ))}
@@ -294,10 +294,10 @@ const UltraFuturisticNavigation2034: React.FC = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-300 hover:text-cyan-300 transition-colors duration-200 font-medium relative group"
+                  className="text-gray-30o0 hover:text-cyan-30o0 transition-colors duration-20o0 font-medium relative group"
                 >
                   {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-40o0 to-purple-40o0 group-hover:w-full transition-all duration-30o0"></span>
                 </Link>
               ))}
             </div>
@@ -308,13 +308,13 @@ const UltraFuturisticNavigation2034: React.FC = () => {
             {/* Search */}
             <form onSubmit={handleSearch} className="relative">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-40o0"  />
                 <input
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-64 pl-10 pr-4 py-2 bg-black/50 border border-cyan-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
+                  className="w-64 pl-10 pr-4 py-2 bg-black/50 border border-cyan-50o0/20 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50 transition-all duration-20o0"
                 />
               </div>
             </form>
@@ -322,7 +322,7 @@ const UltraFuturisticNavigation2034: React.FC = () => {
             {/* CTA Button */}
             <Link
               href="/contact"
-              className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold rounded-lg shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all duration-300 transform hover:scale-105"
+              className="px-6 py-2 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 hover:from-cyan-40o0 hover:to-purple-50o0 text-white font-semibold rounded-lg shadow-lg shadow-cyan-50o0/25 hover:shadow-cyan-50o0/40 transition-all duration-30o0 transform hover:scale-10o5"
             >
               Get Started
             </Link>
@@ -332,9 +332,9 @@ const UltraFuturisticNavigation2034: React.FC = () => {
           <div className="lg:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-300 hover:text-cyan-300 transition-colors duration-200"
+              className="text-gray-30o0 hover:text-cyan-30o0 transition-colors duration-20o0"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
             </button>
           </div>
         </div>
@@ -348,18 +348,18 @@ const UltraFuturisticNavigation2034: React.FC = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20"
+            className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-50o0/20"
           >
             <div className="px-4 py-6 space-y-6">
               {/* Mobile search */}
               <form onSubmit={handleSearch} className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-40o0"  />
                 <input
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-black/50 border border-cyan-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
+                  className="w-full pl-10 pr-4 py-3 bg-black/50 border border-cyan-50o0/20 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50"
                 />
               </form>
 
@@ -370,25 +370,25 @@ const UltraFuturisticNavigation2034: React.FC = () => {
                     key={item.name}
                     href={item.href}
                     onClick={closeMenu}
-                    className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 group"
+                    className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-50o0/10 transition-all duration-20o0 group"
                   >
-                    <item.icon className="w-5 h-5 text-cyan-400" />
+                    <item.icon className="w-5 h-5 text-cyan-40o0"  />
                     <div>
-                      <div className="text-white font-medium group-hover:text-cyan-300 transition-colors">
+                      <div className="text-white font-medium group-hover:text-cyan-30o0 transition-colors">
                         {item.name}
                       </div>
-                      <div className="text-sm text-gray-400">{item.description}</div>
+                      <div className="text-sm text-gray-40o0">{item.description}</div>
                     </div>
                   </Link>
                 ))}
               </div>
 
               {/* Mobile CTA */}
-              <div className="pt-4 border-t border-cyan-500/20">
+              <div className="pt-4 border-t border-cyan-50o0/20">
                 <Link
                   href="/contact"
                   onClick={closeMenu}
-                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg shadow-lg shadow-cyan-500/25"
+                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-semibold rounded-lg shadow-lg shadow-cyan-50o0/25"
                 >
                   Get Started
                 </Link>
@@ -401,4 +401,4 @@ const UltraFuturisticNavigation2034: React.FC = () => {
   );
 };
 
-export default UltraFuturisticNavigation2034;
+export default UltraFuturisticNavigation20o34;

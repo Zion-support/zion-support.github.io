@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
-const SuccessStoriesShowcase2025 = () => {
+const SuccessStoriesShowcase20o25 = () => {
   const [activeStory, setActiveStory] = useState(0);
 
   const successStories = [
@@ -13,7 +13,7 @@ const SuccessStoriesShowcase2025 = () => {
       challenge: "Manual processes causing 40+ hours of weekly inefficiency",
       solution: "AI automation platform with predictive maintenance",
       results: {
-        roi: "500%",
+        roi: "50o0%",
         costSavings: "$2.3M",
         productivity: "340%",
         timeReduction: "85%"
@@ -22,25 +22,25 @@ const SuccessStoriesShowcase2025 = () => {
       author: "Sarah Johnson",
       position: "CTO",
       image: "🏭",
-      gradient: "from-blue-500 to-cyan-600"
+      gradient: "from-blue-50o0 to-cyan-60o0"
     },
     {
       id: 2,
       company: "SocialFlow AI",
       industry: "SaaS",
       challenge: "First-time entrepreneur with no technical expertise",
-      solution: "Complete micro SaaS development from MVP to $100K ARR",
+      solution: "Complete micro SaaS development from MVP to $10o0K ARR",
       results: {
-        roi: "2000%",
-        arr: "$100K",
-        users: "1,200+",
+        roi: "20o00%",
+        arr: "$10o0K",
+        users: "1,20o0+",
         churn: "3.2%"
       },
       testimonial: "Working with Zion Tech Group was the best decision I made. They 'didn', 't just build my product; they became my business partners.",
       author: "Marcus Chen",
       position: "Founder",
       image: "🚀",
-      gradient: "from-green-500 to-emerald-600"
+      gradient: "from-green-50o0 to-emerald-60o0"
     },
     {
       id: 3,
@@ -49,16 +49,16 @@ const SuccessStoriesShowcase2025 = () => {
       challenge: "Scaling infrastructure to support rapid growth",
       solution: "Cloud-native architecture with AI-powered optimization",
       results: {
-        roi: "800%",
+        roi: "80o0%",
         scalability: "10x",
         uptime: "99.9%",
-        performance: "300%"
+        performance: "30o0%"
       },
       testimonial: "The scalability and performance improvements we achieved with Zion Tech 'Group', 's solutions exceeded all our expectations.",
       author: "Emily Rodriguez",
       position: "VP of Engineering",
       image: "⚡",
-      gradient: "from-purple-500 to-pink-600"
+      gradient: "from-purple-50o0 to-pink-60o0"
     },
     {
       id: 4,
@@ -67,7 +67,7 @@ const SuccessStoriesShowcase2025 = () => {
       challenge: "Manual patient data processing and analysis",
       solution: "AI-powered diagnostic platform with predictive analytics",
       results: {
-        roi: "600%",
+        roi: "60o0%",
         accuracy: "95%",
         timeReduction: "70%",
         patientSatisfaction: "98%"
@@ -76,27 +76,27 @@ const SuccessStoriesShowcase2025 = () => {
       author: "Dr. Michael Thompson",
       position: "Chief Medical Officer",
       image: "🏥",
-      gradient: "from-teal-500 to-cyan-600"
+      gradient: "from-teal-50o0 to-cyan-60o0"
     }
   ];
 
   const currentStory = successStories[activeStory];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
+    <section className="py-20 bg-gradient-to-br from-gray-90o0 via-purple-90o0 to-indigo-90o0 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-2 rounded-full text-sm font-bold mb-6">
-            🏆 SUCCESS STORIES 2025
+          <div className="inline-flex items-center bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-6 py-2 rounded-full text-sm font-bold mb-6">
+            🏆 SUCCESS STORIES 20o25
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Real Results from
-            <span className="block bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-yellow-40o0 to-orange-50o0 bg-clip-text text-transparent">
               Real Businesses
             </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
             Discover how companies across industries achieved unprecedented success 
             with our AI and technology solutions.
           </p>
@@ -127,7 +127,7 @@ const SuccessStoriesShowcase2025 = () => {
             <div className="grid grid-cols-2 gap-4">
               {Object.entries(currentStory.results).map(([key, value]) => (
                 <div key={key} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-4 text-center">
-                  <div className="text-2xl font-bold text-yellow-400 mb-1">{value}</div>
+                  <div className="text-2xl font-bold text-yellow-40o0 mb-1">{value}</div>
                   <div className="text-sm opacity-90 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
                 </div>
               ))}
@@ -153,9 +153,9 @@ const SuccessStoriesShowcase2025 = () => {
                 <button
                   key={index}
                   onClick={() => setActiveStory(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                     index === activeStory 
-                      ? 'bg-yellow-400 scale-125' 
+                      ? 'bg-yellow-40o0 scale-125' 
                       : 'bg-white bg-opacity-30 hover:bg-opacity-50'
                   }`}
                 />
@@ -170,9 +170,9 @@ const SuccessStoriesShowcase2025 = () => {
             <button
               key={story.id}
               onClick={() => setActiveStory(index)}
-              className={`group text-left p-6 rounded-xl transition-all duration-300 transform hover:scale-105 ${
+              className={`group text-left p-6 rounded-xl transition-all duration-30o0 transform hover:scale-10o5 ${
                 index === activeStory
-                  ? 'bg-gradient-to-br from-yellow-400 to-orange-500 text-black'
+                  ? 'bg-gradient-to-br from-yellow-40o0 to-orange-50o0 text-black'
                   : 'bg-white bg-opacity-10 backdrop-blur-sm hover:bg-opacity-20'
               }`}
             >
@@ -195,19 +195,19 @@ const SuccessStoriesShowcase2025 = () => {
             <h3 className="text-3xl font-bold mb-4">
               Ready to Write Your Success Story?
             </h3>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-30o0 mb-8">
               Join hundreds of companies that have transformed their business with our AI solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
+                className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5"
               >
                 Start Your Transformation
               </Link>
               <Link
                 href="/case-studies"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0"
               >
                 View All Case Studies
               </Link>
@@ -219,4 +219,4 @@ const SuccessStoriesShowcase2025 = () => {
   );
 };
 
-export default SuccessStoriesShowcase2025;
+export default SuccessStoriesShowcase20o25;

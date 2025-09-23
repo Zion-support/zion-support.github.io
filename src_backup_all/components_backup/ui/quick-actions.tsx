@@ -45,29 +45,27 @@ export function QuickActions() {
       id: 'enable-performance-monitor',
       label: 'Enable Performance Monitor',
       description: 'Show real-time performance metrics',
-      icon: <Activity className="w-4 h-4" />,
+      icon: <Activity className="w-4 h-4"  />,
       category: 'performance',
       action: () => {
         localStorage.setItem('performance-monitoring', 'true');
         window.location.reload();
-      },
-    },
+      }},
     {
       id: 'enable-bundle-analyzer',
       label: 'Enable Bundle Analyzer',
       description: 'Monitor bundle size and chunks',
-      icon: <Package className="w-4 h-4" />,
+      icon: <Package className="w-4 h-4"  />,
       category: 'performance',
       action: () => {
         localStorage.setItem('bundle-analyzer', 'true');
         window.location.reload();
-      },
-    },
+      }},
     {
       id: 'clear-cache',
       label: 'Clear Cache',
       description: 'Clear browser cache and storage',
-      icon: <Trash2 className="w-4 h-4" />,
+      icon: <Trash2 className="w-4 h-4"  />,
       category: 'maintenance',
       dangerous: true,
       action: () => {
@@ -79,13 +77,12 @@ export function QuickActions() {
         localStorage.clear();
         sessionStorage.clear();
         window.location.reload();
-      },
-    },
+      }},
     {
       id: 'preload-critical-resources',
       label: 'Preload Critical Resources',
       description: 'Preload fonts, images, and critical assets',
-      icon: <Zap className="w-4 h-4" />,
+      icon: <Zap className="w-4 h-4"  />,
       category: 'performance',
       action: () => {
         // Preload critical fonts
@@ -117,16 +114,15 @@ export function QuickActions() {
           link.href = img;
           document.head.appendChild(link);
         });
-      },
-    },
+      }},
     {
       id: 'download-performance-report',
       label: 'Download Performance Report',
       description: 'Export current performance metrics',
-      icon: <Download className="w-4 h-4" />,
+      icon: <Download className="w-4 h-4"  />,
       category: 'development',
       action: () => {
-        const metrics = {
+        const metrics ={
           timestamp: new Date().toISOString(),
           performance: performance.getEntriesByType('navigation')[0],
           resources: performance.getEntriesByType('resource').slice(0, 20),
@@ -151,42 +147,37 @@ export function QuickActions() {
         a.click();
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
-      },
-    },
+      }},
     {
       id: 'test-error-boundary',
       label: 'Test Error Boundary',
       description: 'Trigger an error to test Sentry integration',
-      icon: <Monitor className="w-4 h-4" />,
+      icon: <Monitor className="w-4 h-4"  />,
       category: 'development',
       dangerous: true,
       action: () => {
         throw new Error('Test error for Sentry integration - this is intentional!');
-      },
-    },
+      }},
     {
       id: 'refresh-app',
       label: 'Hard Refresh',
       description: 'Force reload with cache bypass',
-      icon: <RefreshCw className="w-4 h-4" />,
+      icon: <RefreshCw className="w-4 h-4"  />,
       category: 'maintenance',
       action: () => {
         window.location.reload();
-      },
-    },
+      }},
   ];
 
-  const categorizedActions = {
+  const categorizedActions ={
     performance: actions.filter(a => a.category === 'performance'),
     development: actions.filter(a => a.category === 'development'),
-    maintenance: actions.filter(a => a.category === 'maintenance'),
-  };
+    maintenance: actions.filter(a => a.category === 'maintenance')};
 
-  const categoryColors = {
-    performance: 'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',
-    development: 'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',
-    maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200',
-  };
+  const categoryColors ={
+    performance: 'bg-green-10o0 dark:bg-green-90o0/20 text-green-80o0 dark:text-green-20o0',
+    development: 'bg-blue-10o0 dark:bg-blue-90o0/20 text-blue-80o0 dark:text-blue-20o0',
+    maintenance: 'bg-orange-10o0 dark:bg-orange-90o0/20 text-orange-80o0 dark:text-orange-20o0'};
 
   if (!isVisible) {
     return (
@@ -197,7 +188,7 @@ export function QuickActions() {
           onClick={() => setIsVisible(true)}
           className="bg-background/80 backdrop-blur-sm"
         >
-          <Settings className="w-4 h-4 mr-2" />
+          <Settings className="w-4 h-4 mr-2"  />
           Quick Actions
         </Button>
       </div>
@@ -210,7 +201,7 @@ export function QuickActions() {
         <CardHeader className="pb-2">
           <div className="flex items-center justify-between">
             <CardTitle className="text-sm flex items-center">
-              <Settings className="w-4 h-4 mr-2" />
+              <Settings className="w-4 h-4 mr-2"  />
               Quick Actions
             </CardTitle>
             <Button
@@ -244,7 +235,7 @@ export function QuickActions() {
                       <div className="flex items-start gap-3 w-full">
                         <div className="mt-0.5">
                           {isProcessing === action.id ? (
-                            <RefreshCw className="w-4 h-4 animate-spin" />
+                            <RefreshCw className="w-4 h-4 animate-spin"  />
                           ) : (
                             action.icon
                           )}

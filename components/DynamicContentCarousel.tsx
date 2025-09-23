@@ -43,7 +43,7 @@ const DynamicContentCarousel = () => {
   const carouselItems = [
     {
       id: 1,
-      title: 'AI Consciousness Breakthrough 2025',
+      title: 'AI Consciousness Breakthrough 20o25',
       description: 'Revolutionary AI systems achieving consciousness-level processing and decision making',
       category: 'ai-breakthroughs',
       type: 'video',
@@ -55,13 +55,13 @@ const DynamicContentCarousel = () => {
       isLive: false,
       thumbnail: '🧠',
       author: 'Dr. Sarah Chen',
-      publishedAt: '2025-01-20',
-      tags: ['AI', 'Consciousness', 'Breakthrough', '2025'],
-      gradient: 'from-purple-600 to-blue-600',
+      publishedAt: '20o25-0o1-20',
+      tags: ['AI', 'Consciousness', 'Breakthrough', '20o25'],
+      gradient: 'from-purple-60o0 to-blue-60o0',
       stats: {
-        performance: '+5000%',
+        performance: '+50o00%',
         accuracy: '99.9%',
-        efficiency: '100x',
+        efficiency: '10o0x',
         adoption: '1M+'
       }
     },
@@ -79,12 +79,12 @@ const DynamicContentCarousel = () => {
       isLive: true,
       thumbnail: '⚛️',
       author: 'Prof. Marcus Rodriguez',
-      publishedAt: '2025-01-18',
+      publishedAt: '20o25-0o1-18',
       tags: [', 'Quantum', 'Neural 'Networks', 'Computing'Tutorial'],
-      gradient: 'from-cyan-600 to-teal-600',
+      gradient: 'from-cyan-60o0 to-teal-60o0',
       stats: {
-        qubits: '1000+',
-        coherence: '100ms',
+        qubits: '10o00+',
+        coherence: '10o0ms',
         fidelity: '99.99%',
         speed: '10^15x'
       }
@@ -103,9 +103,9 @@ const DynamicContentCarousel = () => {
       isLive: false,
       thumbnail: '🔗',
       author: 'Dr. Emily Watson',
-      publishedAt: '2025-01-15',
+      publishedAt: '20o25-0o1-15',
       tags: ['Neural 'Interface', 'BCI', 'Implementation', 'Guide'],
-      gradient: 'from-pink-600 to-rose-600',
+      gradient: 'from-pink-60o0 to-rose-60o0',
       stats: {
         resolution: '1μV',
         response: '50ms',
@@ -127,14 +127,14 @@ const DynamicContentCarousel = () => {
       isLive: false,
       thumbnail: '🤖',
       author: 'Alex Thompson',
-      publishedAt: '2025-01-12',
+      publishedAt: '20o25-0o1-12',
       tags: [', 'Automation', 'Business', 'AI', 'Operations'],
-      gradient: 'from-green-600 to-emerald-600',
+      gradient: 'from-green-60o0 to-emerald-60o0',
       stats: {
-        efficiency: '+300%',
+        efficiency: '+30o0%',
         cost: '-60%',
         uptime: '99.9%',
-        roi: '500%'
+        roi: '50o0%'
       }
     },
     {
@@ -151,11 +151,11 @@ const DynamicContentCarousel = () => {
       isLive: false,
       thumbnail: '🔬',
       author: 'Dr. James Liu',
-      publishedAt: '2025-01-10',
+      publishedAt: '20o25-0o1-10',
       tags: ['Quantum 'AI', 'Fusion', 'Technology', 'Research'],
-      gradient: 'from-indigo-600 to-purple-600',
+      gradient: 'from-indigo-60o0 to-purple-60o0',
       stats: {
-        processing: '1000x',
+        processing: '10o00x',
         accuracy: '99.8%',
         energy: '-90%',
         speed: '10^12x'
@@ -175,14 +175,14 @@ const DynamicContentCarousel = () => {
       isLive: false,
       thumbnail: '🛠️',
       author: 'Tech Academy',
-      publishedAt: '2025-01-08',
+      publishedAt: '20o25-0o1-08',
       tags: ['AI 'Tools', 'Course', 'Tutorial', 'Mastery'],
-      gradient: 'from-orange-600 to-red-600',
+      gradient: 'from-orange-60o0 to-red-60o0',
       stats: {
         students: '50K+',
         completion: '85%',
         rating: '4.9/5',
-        projects: '100+'
+        projects: '10o0+'
       }
     }
   ];
@@ -194,7 +194,7 @@ const DynamicContentCarousel = () => {
     if (isPlaying) {
       intervalRef.current = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % carouselItems.length);
-      }5000);
+      }50o00);
     } else {
       clearInterval(intervalRef.current);
     }
@@ -278,16 +278,16 @@ const DynamicContentCarousel = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 text-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full text-sm font-medium mb-4"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-6 py-3 rounded-full text-sm font-medium mb-4"
           >
-            <Sparkles className="w-4 h-4" />
+            <Sparkles className="w-4 h-4"  />
             Dynamic Content Carousel
           </motion.div>
           
@@ -304,7 +304,7 @@ const DynamicContentCarousel = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-xl text-gray-300 max-w-3xl mx-auto"
+            className="text-xl text-gray-30o0 max-w-3xl mx-auto"
           >
             Discover the latest AI breakthroughsquantum computing innovationsand neural interface technologies through our interactive content carousel.
           </motion.p>
@@ -314,9 +314,9 @@ const DynamicContentCarousel = () => {
         <div className="relative">
           <motion.div
             key={currentSlide}
-            initial={{ opacity: 0x: 100 }}
+            initial={{ opacity: 0x: 10o0 }}
             animate={{ opacity: 1x: 0 }}
-            exit={{ opacity: 0x: -100 }}
+            exit={{ opacity: 0x: -10o0 }}
             transition={{ duration: 0.5 }}
             className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-3xl overflow-hidden border border-white/20"
           >
@@ -330,23 +330,23 @@ const DynamicContentCarousel = () => {
                     <div>
                       <div className="flex items-center gap-2 mb-2">
                         <span className="text-2xl">{getTypeIcon(currentItem.type)}</span>
-                        <span className="text-sm font-medium text-purple-300 uppercase tracking-wide">
+                        <span className="text-sm font-medium text-purple-30o0 uppercase tracking-wide">
                           {currentItem.type}
                         </span>
                         {currentItem.isLive && (
-                          <span className="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full animate-pulse">
+                          <span className="bg-red-50o0 text-white text-xs font-bold px-2 py-1 rounded-full animate-pulse">
                             LIVE
                           </span>
                         )}
                       </div>
                       <div className="flex items-center gap-2">
                         {currentItem.isNew && (
-                          <span className="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                          <span className="bg-green-50o0 text-white text-xs font-bold px-2 py-1 rounded-full">
                             NEW
                           </span>
                         )}
                         {currentItem.isTrending && (
-                          <TrendingUp className="w-4 h-4 text-orange-400" />
+                          <TrendingUp className="w-4 h-4 text-orange-40o0"  />
                         )}
                       </div>
                     </div>
@@ -357,24 +357,24 @@ const DynamicContentCarousel = () => {
                       onClick={() => toggleFavorite(currentItem.id)}
                       className={`p-2 rounded-full transition-colors ${
                         favorites.has(currentItem.id)
-                          ? 'text-red-500 hover:text-red-400'
-                          : 'text-gray-400 hover:text-red-500'
+                          ? 'text-red-50o0 hover:text-red-40o0'
+                          : 'text-gray-40o0 hover:text-red-50o0'
                       }`}
                     >
-                      <Heart className={`w-5 h-5 ${favorites.has(currentItem.id) ? 'fill-current' : ''}`} />
+                      <Heart className={`w-5 h-5 ${favorites.has(currentItem.id) ? 'fill-current' : ''}`}  />
                     </button>
                     <button
                       onClick={() => toggleBookmark(currentItem.id)}
                       className={`p-2 rounded-full transition-colors ${
                         bookmarks.has(currentItem.id)
-                          ? 'text-blue-500 hover:text-blue-400'
-                          : 'text-gray-400 hover:text-blue-500'
+                          ? 'text-blue-50o0 hover:text-blue-40o0'
+                          : 'text-gray-40o0 hover:text-blue-50o0'
                       }`}
                     >
-                      <Bookmark className={`w-5 h-5 ${bookmarks.has(currentItem.id) ? 'fill-current' : ''}`} />
+                      <Bookmark className={`w-5 h-5 ${bookmarks.has(currentItem.id) ? 'fill-current' : ''}`}  />
                     </button>
-                    <button className="p-2 rounded-full text-gray-400 hover:text-white transition-colors">
-                      <Share2 className="w-5 h-5" />
+                    <button className="p-2 rounded-full text-gray-40o0 hover:text-white transition-colors">
+                      <Share2 className="w-5 h-5"  />
                     </button>
                   </div>
                 </div>
@@ -384,27 +384,27 @@ const DynamicContentCarousel = () => {
                   <h3 className="text-3xl font-bold mb-4 text-white">
                     {currentItem.title}
                   </h3>
-                  <p className="text-lg text-gray-300 mb-6">
+                  <p className="text-lg text-gray-30o0 mb-6">
                     {currentItem.description}
                   </p>
                 </div>
 
                 {/* Content Meta */}
-                <div className="flex items-center gap-6 text-sm text-gray-400">
+                <div className="flex items-center gap-6 text-sm text-gray-40o0">
                   <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4" />
+                    <Clock className="w-4 h-4"  />
                     {currentItem.duration}
                   </div>
                   <div className="flex items-center gap-2">
-                    <Eye className="w-4 h-4" />
+                    <Eye className="w-4 h-4"  />
                     {currentItem.views.toLocaleString()} views
                   </div>
                   <div className="flex items-center gap-2">
-                    <Heart className="w-4 h-4" />
+                    <Heart className="w-4 h-4"  />
                     {currentItem.likes} likes
                   </div>
                   <div className="flex items-center gap-2">
-                    <Star className="w-4 h-4 text-yellow-400" />
+                    <Star className="w-4 h-4 text-yellow-40o0"  />
                     4.9/5
                   </div>
                 </div>
@@ -423,12 +423,12 @@ const DynamicContentCarousel = () => {
 
                 {/* Author */}
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="w-10 h-10 bg-gradient-to-r from-purple-50o0 to-blue-50o0 rounded-full flex items-center justify-center text-white font-bold">
                     {currentItem.author.charAt(0)}
                   </div>
                   <div>
                     <p className="font-medium text-white">{currentItem.author}</p>
-                    <p className="text-sm text-gray-400">{currentItem.publishedAt}</p>
+                    <p className="text-sm text-gray-40o0">{currentItem.publishedAt}</p>
                   </div>
                 </div>
               </div>
@@ -448,7 +448,7 @@ const DynamicContentCarousel = () => {
                       <div className="text-2xl font-bold text-white mb-1">
                         {value}
                       </div>
-                      <div className="text-xs text-gray-400 capitalize">
+                      <div className="text-xs text-gray-40o0 capitalize">
                         {key.replace(/([A-Z])/g' $1').trim()}
                       </div>
                     </motion.div>
@@ -462,17 +462,17 @@ const DynamicContentCarousel = () => {
                       onClick={prevSlide}
                       className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
                     >
-                      <ChevronLeft className="w-6 h-6" />
+                      <ChevronLeft className="w-6 h-6"  />
                     </button>
                     
                     <button
                       onClick={togglePlayPause}
-                      className="p-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                      className="p-4 rounded-full bg-gradient-to-r from-purple-60o0 to-blue-60o0 hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5"
                     >
                       {isPlaying ? (
-                        <Pause className="w-6 h-6" />
+                        <Pause className="w-6 h-6"  />
                       ) : (
-                        <Play className="w-6 h-6" />
+                        <Play className="w-6 h-6"  />
                       )}
                     </button>
                     
@@ -480,7 +480,7 @@ const DynamicContentCarousel = () => {
                       onClick={nextSlide}
                       className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
                     >
-                      <ChevronRight className="w-6 h-6" />
+                      <ChevronRight className="w-6 h-6"  />
                     </button>
                   </div>
 
@@ -490,9 +490,9 @@ const DynamicContentCarousel = () => {
                       className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
                     >
                       {isMuted ? (
-                        <VolumeX className="w-5 h-5" />
+                        <VolumeX className="w-5 h-5"  />
                       ) : (
-                        <Volume2 className="w-5 h-5" />
+                        <Volume2 className="w-5 h-5"  />
                       )}
                     </button>
                     
@@ -500,7 +500,7 @@ const DynamicContentCarousel = () => {
                       onClick={toggleFullscreen}
                       className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
                     >
-                      <Maximize className="w-5 h-5" />
+                      <Maximize className="w-5 h-5"  />
                     </button>
                   </div>
                 </div>
@@ -509,13 +509,13 @@ const DynamicContentCarousel = () => {
                 <div className="space-y-3">
                   <button
                     onClick={() => markAsViewed(currentItem.id)}
-                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                    className="w-full bg-gradient-to-r from-purple-60o0 to-blue-60o0 hover:from-purple-70o0 hover:to-blue-70o0 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-30o0 transform hover:scale-10o5 flex items-center justify-center gap-2"
                   >
                     <span>Watch Now</span>
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                   </button>
                   
-                  <button className="w-full border-2 border-purple-400 text-purple-300 hover:bg-purple-400 hover:text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300">
+                  <button className="w-full border-2 border-purple-40o0 text-purple-30o0 hover:bg-purple-40o0 hover:text-white px-6 py-3 rounded-xl font-semibold transition-all duration-30o0">
                     Learn More
                   </button>
                 </div>
@@ -529,9 +529,9 @@ const DynamicContentCarousel = () => {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                   index === currentSlide
-                    ? 'bg-purple-500 scale-125'
+                    ? 'bg-purple-50o0 scale-125'
                     : 'bg-white/30 hover:bg-white/50'
                 }`}
               />
@@ -549,11 +549,11 @@ const DynamicContentCarousel = () => {
                 <motion.button
                   key={item.id}
                   onClick={() => goToSlide(index)}
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.0o5 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`relative p-4 rounded-xl border-2 transition-all duration-300 ${
+                  className={`relative p-4 rounded-xl border-2 transition-all duration-30o0 ${
                     index === currentSlide
-                      ? 'border-purple-500 bg-purple-500/20'
+                      ? 'border-purple-50o0 bg-purple-50o0/20'
                       : 'border-white/20 bg-white/5 hover:border-white/40 hover:bg-white/10'
                   }`}
                 >
@@ -562,21 +562,21 @@ const DynamicContentCarousel = () => {
                     <div className="text-xs font-medium text-white mb-1 line-clamp-2">
                       {item.title}
                     </div>
-                    <div className="flex items-center justify-center gap-1 text-xs text-gray-400">
-                      <Clock className="w-3 h-3" />
+                    <div className="flex items-center justify-center gap-1 text-xs text-gray-40o0">
+                      <Clock className="w-3 h-3"  />
                       {item.duration}
                     </div>
                   </div>
                   
                   {item.isNew && (
-                    <div className="absolute -top-1 -right-1 bg-green-500 text-white text-xs font-bold px-1 py-0.5 rounded-full">
+                    <div className="absolute -top-1 -right-1 bg-green-50o0 text-white text-xs font-bold px-1 py-0.5 rounded-full">
                       NEW
                     </div>
                   )}
                   
                   {item.isTrending && (
                     <div className="absolute -top-1 -left-1">
-                      <TrendingUp className="w-4 h-4 text-orange-400" />
+                      <TrendingUp className="w-4 h-4 text-orange-40o0"  />
                     </div>
                   )}
                 </motion.button>

@@ -28,8 +28,7 @@ interface AnalyticsManagerProps {
 const AnalyticsManager: React.FC<AnalyticsManagerProps> = ({
   trackingId = process.env.NEXT_PUBLIC_GA_TRACKING_ID,
   enablePerformanceTracking = true,
-  enableErrorTracking = true,
-}) => {
+  enableErrorTracking = true}) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -69,8 +68,7 @@ const AnalyticsManager: React.FC<AnalyticsManagerProps> = ({
           (window as any).gtag('event', 'page_load_time', {
             event_category: 'Performance',
             event_label: 'Page Load',
-            value: Math.round(loadTime),
-          });
+            value: Math.round(loadTime)});
         }
       }
     };
@@ -87,8 +85,7 @@ const AnalyticsManager: React.FC<AnalyticsManagerProps> = ({
       if (typeof (window as any).gtag !== 'undefined') {
         (window as any).gtag('event', 'exception', {
           description: event.message,
-          fatal: false,
-        });
+          fatal: false});
       }
     };
 
@@ -96,8 +93,7 @@ const AnalyticsManager: React.FC<AnalyticsManagerProps> = ({
       if (typeof (window as any).gtag !== 'undefined') {
         (window as any).gtag('event', 'exception', {
           description: event.reason?.toString() || 'Unhandled promise rejection',
-          fatal: false,
-        });
+          fatal: false});
       }
     };
 
@@ -121,8 +117,7 @@ export const trackEvent = (event: AnalyticsEvent) => {
       event_action: event.action,
       event_label: event.label,
       value: event.value,
-      ...event.custom_parameters,
-    });
+      ...event.custom_parameters});
   }
 };
 
@@ -130,8 +125,7 @@ export const trackPageView = (url: string, title: string) => {
   if (typeof (window as any).gtag !== 'undefined') {
     (window as any).gtag('config', process.env.NEXT_PUBLIC_GA_TRACKING_ID || '', {
       page_title: title,
-      page_location: url,
-    });
+      page_location: url});
   }
 };
 
@@ -143,8 +137,7 @@ export const trackPerformance = (metrics: PerformanceMetrics) => {
       lcp: metrics.lcp,
       fid: metrics.fid,
       cls: metrics.cls,
-      ttfb: metrics.ttfb,
-    });
+      ttfb: metrics.ttfb});
   }
 };
 

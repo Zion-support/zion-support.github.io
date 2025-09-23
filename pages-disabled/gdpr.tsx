@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ModernHeader } from '../src/components/header/ModernHeader';
@@ -70,25 +69,25 @@ export default function GDPR() {
     <>
       <Head>
         <title>GDPR Compliance - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's GDPR compliance, data protection measures, and your privacy rights under the General Data Protection Regulation." />
-        <meta name="keywords" content="GDPR, data protection, privacy, compliance, Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/gdpr" />
+        <meta name="description" content="Learn about Zion Tech Group's GDPR compliance, data protection measures, and your privacy rights under the General Data Protection Regulation."  />
+        <meta name="keywords" content="GDPR, data protection, privacy, compliance, Zion Tech Group"  />
+        <link rel="canonical" href="https://ziontechgroup.com/gdpr"  />
       </Head>
 
-      <ModernHeader />
+      <ModernHeader  />
       
       <main className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+        <section className="bg-gradient-to-r from-blue-60o0 to-purple-70o0 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="flex justify-center mb-6">
-                <Shield className="h-16 w-16 text-blue-200" />
+                <Shield className="h-16 w-16 text-blue-20o0"  />
               </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 GDPR Compliance
               </h1>
-              <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl text-blue-10o0 max-w-3xl mx-auto">
                 Your privacy and data protection rights are our priority. Learn about our comprehensive GDPR compliance measures.
               </p>
             </div>
@@ -99,19 +98,19 @@ export default function GDPR() {
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Commitment to Data Protection</h2>
-              <p className="text-lg text-gray-600 max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-gray-90o0 mb-6">Our Commitment to Data Protection</h2>
+              <p className="text-lg text-gray-60o0 max-w-4xl mx-auto">
                 At Zion Tech Group, we are fully committed to complying with the General Data Protection Regulation (GDPR) 
                 and ensuring the highest standards of data protection for all our users, clients, and partners.
               </p>
             </div>
 
-            <div className="bg-blue-50 border border-blue-200 rounded-xl p-8 mb-12">
+            <div className="bg-blue-50 border border-blue-20o0 rounded-xl p-8 mb-12">
               <div className="flex items-start">
-                <AlertTriangle className="h-6 w-6 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+                <AlertTriangle className="h-6 w-6 text-blue-60o0 mr-3 mt-1 flex-shrink-0"  />
                 <div>
-                  <h3 className="text-lg font-semibold text-blue-900 mb-2">Important Notice</h3>
-                  <p className="text-blue-800">
+                  <h3 className="text-lg font-semibold text-blue-90o0 mb-2">Important Notice</h3>
+                  <p className="text-blue-80o0">
                     This GDPR compliance page outlines how we collect, use, and protect your personal data. 
                     By using our services, you acknowledge that you have read and understood our data protection practices.
                   </p>
@@ -124,16 +123,16 @@ export default function GDPR() {
         {/* GDPR Principles */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">GDPR Principles We Follow</h2>
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-90o0">GDPR Principles We Follow</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {gdprPrinciples.map((principle, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg border border-gray-20o0">
                   <div className="flex items-center mb-4">
-                    <principle.icon className="h-8 w-8 text-blue-600 mr-3" />
-                    <h3 className="text-xl font-semibold text-gray-900">{principle.title}</h3>
+                    <principle.icon className="h-8 w-8 text-blue-60o0 mr-3"  />
+                    <h3 className="text-xl font-semibold text-gray-90o0">{principle.title}</h3>
                   </div>
-                  <p className="text-gray-600">{principle.description}</p>
+                  <p className="text-gray-60o0">{principle.description}</p>
                 </div>
               ))}
             </div>
@@ -143,13 +142,13 @@ export default function GDPR() {
         {/* Data Rights */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Your Data Protection Rights</h2>
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-90o0">Your Data Protection Rights</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {dataRights.map((right, index) => (
-                <div key={index} className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-xl border border-gray-200">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{right.title}</h3>
-                  <p className="text-gray-600">{right.description}</p>
+                <div key={index} className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-xl border border-gray-20o0">
+                  <h3 className="text-xl font-semibold text-gray-90o0 mb-3">{right.title}</h3>
+                  <p className="text-gray-60o0">{right.description}</p>
                 </div>
               ))}
             </div>
@@ -159,32 +158,32 @@ export default function GDPR() {
         {/* Data Processing Information */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">How We Process Your Data</h2>
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-90o0">How We Process Your Data</h2>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div className="bg-white p-8 rounded-xl shadow-lg">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-6">Data We Collect</h3>
+                <h3 className="text-2xl font-semibold text-gray-90o0 mb-6">Data We Collect</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-green-50o0 mr-3 mt-1 flex-shrink-0"  />
                     <div>
                       <strong>Contact Information:</strong> Name, email address, phone number
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-green-50o0 mr-3 mt-1 flex-shrink-0"  />
                     <div>
                       <strong>Business Information:</strong> Company name, job title, industry
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-green-50o0 mr-3 mt-1 flex-shrink-0"  />
                     <div>
                       <strong>Usage Data:</strong> Website interactions, service usage patterns
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-green-50o0 mr-3 mt-1 flex-shrink-0"  />
                     <div>
                       <strong>Technical Data:</strong> IP address, browser type, device information
                     </div>
@@ -193,28 +192,28 @@ export default function GDPR() {
               </div>
 
               <div className="bg-white p-8 rounded-xl shadow-lg">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-6">Legal Basis for Processing</h3>
+                <h3 className="text-2xl font-semibold text-gray-90o0 mb-6">Legal Basis for Processing</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-green-50o0 mr-3 mt-1 flex-shrink-0"  />
                     <div>
                       <strong>Consent:</strong> When you explicitly agree to data processing
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-green-50o0 mr-3 mt-1 flex-shrink-0"  />
                     <div>
                       <strong>Contract Performance:</strong> To fulfill our service agreements
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-green-50o0 mr-3 mt-1 flex-shrink-0"  />
                     <div>
                       <strong>Legitimate Interest:</strong> For business operations and improvements
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-green-50o0 mr-3 mt-1 flex-shrink-0"  />
                     <div>
                       <strong>Legal Obligation:</strong> To comply with applicable laws
                     </div>
@@ -226,26 +225,26 @@ export default function GDPR() {
         </section>
 
         {/* Contact Information */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+        <section className="py-16 bg-gradient-to-r from-blue-60o0 to-purple-70o0 text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-6">Questions About Your Data?</h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-blue-10o0 mb-8">
               If you have any questions about our GDPR compliance or want to exercise your data protection rights, 
               please don't hesitate to contact us.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="inline-flex items-center bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
               >
-                <FileText className="h-5 w-5 mr-2" />
+                <FileText className="h-5 w-5 mr-2"  />
                 Contact Our DPO
               </Link>
               <Link
                 href="/privacy"
-                className="inline-flex items-center bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                className="inline-flex items-center bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors"
               >
-                <Shield className="h-5 w-5 mr-2" />
+                <Shield className="h-5 w-5 mr-2"  />
                 Privacy Policy
               </Link>
             </div>
@@ -253,7 +252,7 @@ export default function GDPR() {
         </section>
       </main>
 
-      <SimpleFooter />
+      <SimpleFooter  />
     </>
   );
 }

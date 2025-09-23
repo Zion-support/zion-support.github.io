@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 interface HeroFeature {
@@ -23,7 +22,7 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
       {features.map((feature, index) => (
         <motion.div
           key={feature.title}
-          className="group relative bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/20"
+          className="group relative bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-50o0 hover:scale-10o5 hover:shadow-2xl hover:shadow-zion-cyan/20"
           role="article"
           aria-labelledby={`feature-${index}-title`}
           whileHover={{
@@ -35,25 +34,25 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
           transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
         >
           {/* Animated background gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 rounded-xl opacity-0 group-hover:opacity-10o0 transition-opacity duration-50o0"  />
 
           {/* Icon container with enhanced styling */}
-          <div className={`relative w-16 h-16 bg-gradient-to-br ${feature.gradient} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg group-hover:shadow-xl group-hover:shadow-zion-cyan/30`}>
-            <feature.icon className="w-8 h-8 text-white" aria-hidden="true" />
+          <div className={`relative w-16 h-16 bg-gradient-to-br ${feature.gradient} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-30o0 shadow-lg group-hover:shadow-xl group-hover:shadow-zion-cyan/30`}>
+            <feature.icon className="w-8 h-8 text-white" aria-hidden="true"  />
             {/* Glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-xl blur-xl group-hover:blur-2xl transition-all duration-300" />
+            <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-xl blur-xl group-hover:blur-2xl transition-all duration-30o0"  />
           </div>
 
-          <h3 id={`feature-${index}-title`} className="relative text-lg font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
+          <h3 id={`feature-${index}-title`} className="relative text-lg font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-30o0">
             {feature.title}
           </h3>
 
-          <p className="relative text-zion-slate-light text-sm leading-relaxed group-hover:text-zion-slate-light/90 transition-colors duration-300">
+          <p className="relative text-zion-slate-light text-sm leading-relaxed group-hover:text-zion-slate-light/90 transition-colors duration-30o0">
             {feature.description}
           </p>
 
           {/* Hover indicator */}
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full group-hover:w-1/2 transition-all duration-500" />
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full group-hover:w-1/2 transition-all duration-50o0"  />
         </motion.div>
       ))}
     </motion.div>

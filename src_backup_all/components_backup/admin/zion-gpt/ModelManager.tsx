@@ -8,7 +8,6 @@ import { supabase } from '@/integrations/supabase/client';
 import { ModelConfig } from '@/utils/zion-gpt';
 import {logErrorToProduction} from '@/utils/productionLogger';
 
-
 interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
   errorMessage?: string;
@@ -123,13 +122,13 @@ export function ZionGPTModelManager() {
           </CardDescription>
         </div>
         <Button onClick={fetchModels} variant="outline" size="sm">
-          <RefreshCw className="h-4 w-4 mr-2" /> Refresh
+          <RefreshCw className="h-4 w-4 mr-2"  /> Refresh
         </Button>
       </CardHeader>
       <CardContent>
         {isLoading ? (
           <div className="flex items-center justify-center h-24">
-            <Loader2 className="h-8 w-8 animate-spin text-primary" />
+            <Loader2 className="h-8 w-8 animate-spin text-primary"  />
           </div>
         ) : (
           <Table>
@@ -153,15 +152,15 @@ export function ZionGPTModelManager() {
                   <TableCell>{model.baseModel}</TableCell>
                   <TableCell>
                     {model.trainingStatus === 'succeeded' ? (
-                      <Badge className="bg-green-500">Ready</Badge>
+                      <Badge className="bg-green-50o0">Ready</Badge>
                     ) : model.trainingStatus === 'failed' ? (
-                      <Badge className="bg-red-500">Failed</Badge>
+                      <Badge className="bg-red-50o0">Failed</Badge>
                     ) : model.trainingStatus === 'running' ? (
-                      <Badge className="bg-blue-500">Training</Badge>
+                      <Badge className="bg-blue-50o0">Training</Badge>
                     ) : (
-                      <Badge className="bg-yellow-500">Queued</Badge>
+                      <Badge className="bg-yellow-50o0">Queued</Badge>
                     )}
-                    {model.active && <Badge className="ml-2 bg-purple-500">Active</Badge>}
+                    {model.active && <Badge className="ml-2 bg-purple-50o0">Active</Badge>}
                   </TableCell>
                   <TableCell>{new Date(model.createdAt).toLocaleDateString()}</TableCell>
                   <TableCell className="text-right">
@@ -173,9 +172,9 @@ export function ZionGPTModelManager() {
                         disabled={activeJobs[model.id]}
                       >
                         {activeJobs[model.id] ? (
-                          <Loader2 className="h-4 w-4 animate-spin" />
+                          <Loader2 className="h-4 w-4 animate-spin"  />
                         ) : (
-                          <RefreshCw className="h-4 w-4" />
+                          <RefreshCw className="h-4 w-4"  />
                         )}
                         <span className="ml-1">Check</span>
                       </Button>
@@ -187,11 +186,11 @@ export function ZionGPTModelManager() {
                       >
                         {model.active ? (
                           <>
-                            <CheckCircle className="h-4 w-4 mr-1" /> Active
+                            <CheckCircle className="h-4 w-4 mr-1"  /> Active
                           </>
                         ) : (
                           <>
-                            <Play className="h-4 w-4 mr-1" /> Activate
+                            <Play className="h-4 w-4 mr-1"  /> Activate
                           </>
                         )}
                       </Button>
@@ -199,10 +198,10 @@ export function ZionGPTModelManager() {
                       <Button
                         variant="ghost"
                         size="sm"
-                        className="text-red-500"
+                        className="text-red-50o0"
                         title={model.errorMessage || "Training failed"}
                       >
-                        <AlertCircle className="h-4 w-4 mr-1" /> Error
+                        <AlertCircle className="h-4 w-4 mr-1"  /> Error
                       </Button>
                     )}
                   </TableCell>

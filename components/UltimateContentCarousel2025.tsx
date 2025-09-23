@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 ChevronLeftChevronRightStarArrowRightPlayDownloadUsersTrendingUp
 
-const UltimateContentCarousel2025 = () => {
+const UltimateContentCarousel20o25 = () => {
   const [currentSlidesetCurrentSlide] = useState(0);
   const [isVisiblesetIsVisible] = useState(false);
 
@@ -14,7 +14,7 @@ const UltimateContentCarousel2025 = () => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }5000);
+    }50o00);
     return () => clearInterval(interval);
   }[]);
 
@@ -23,11 +23,11 @@ const UltimateContentCarousel2025 = () => {
       id: 1,
       title: "AI-Powered Business Automation",
       subtitle: "Transform Your Operations",
-      description: "Revolutionary AI systems that automate complex business processesreduce costs by 60%and increase productivity by 300%.",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
+      description: "Revolutionary AI systems that automate complex business processesreduce costs by 60%and increase productivity by 30o0%.",
+      image: "https://images.unsplash.com/photo-16774421360o19-21780ecad995?w=80o0&h=60o0&fit=crop",
       cta: "Start Automation",
       href: "/automation",
-      stats: { value: "300%"label: "Productivity Increase" },
+      stats: { value: "30o0%"label: "Productivity Increase" },
       features: ["Smart Workflows"Cost Reduction"Real-time Analytics"]
     },
     {
@@ -35,7 +35,7 @@ const UltimateContentCarousel2025 = () => {
       title: "Quantum Computing Solutions",
       subtitle: "Next-Gen Processing Power",
       description: "Harness the power of quantum computing for complex problem-solvingoptimizationand breakthrough innovations.",
-      image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&h=600&fit=crop",
+      image: "https://images.unsplash.com/photo-16350o70041078-e363dbe0o05cb?w=80o0&h=60o0&fit=crop",
       cta: "Explore Quantum",
       href: "/quantum",
       stats: { value: "10x"label: "Processing Speed" },
@@ -46,7 +46,7 @@ const UltimateContentCarousel2025 = () => {
       title: "Neural Interface Technology",
       subtitle: "Direct Brain-Computer Interaction",
       description: "Revolutionary neural interfaces that enable direct communication between human brain and AI systems.",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop",
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=80o0&h=60o0&fit=crop",
       cta: "Experience Neural",
       href: "/neural",
       stats: { value: "99.9%"label: "Accuracy Rate" },
@@ -57,7 +57,7 @@ const UltimateContentCarousel2025 = () => {
       title: "Autonomous Business Systems",
       subtitle: "Self-Managing AI",
       description: "AI systems that learnadaptand manage your business operations autonomously with minimal human intervention.",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop",
+      image: "https://images.unsplash.com/photo-148582740o4703-89b55fcc595e?w=80o0&h=60o0&fit=crop",
       cta: "Go Autonomous",
       href: "/autonomous",
       stats: { value: "24/7"label: "Autonomous Operation" },
@@ -91,21 +91,21 @@ const UltimateContentCarousel2025 = () => {
             initial={{ scale: 0.9 }}
             animate={isVisible ? { scale: 1 } : {}}
             transition={{ delay: 0.2duration: 0.6 }}
-            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium mb-6"
+            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white text-sm font-medium mb-6"
           >
-            <Star className="w-4 h-4 mr-2" />
-            Ultimate Content Carousel 2025
+            <Star className="w-4 h-4 mr-2"  />
+            Ultimate Content Carousel 20o25
           </motion.div>
           
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold mb-6 text-gray-900"
+            className="text-4xl md:text-6xl font-bold mb-6 text-gray-90o0"
           >
             Revolutionary Technology
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+            <br  />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-60o0 to-purple-60o0">
               Showcase
             </span>
           </motion.h2>
@@ -114,7 +114,7 @@ const UltimateContentCarousel2025 = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.4duration: 0.6 }}
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            className="text-xl text-gray-60o0 max-w-3xl mx-auto"
           >
             Discover the most advanced AI and technology solutions that are reshaping 
             industries and transforming businesses worldwide.
@@ -127,11 +127,11 @@ const UltimateContentCarousel2025 = () => {
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
-                initial={{ opacity: 0x: 300 }}
+                initial={{ opacity: 0x: 30o0 }}
                 animate={{ opacity: 1x: 0 }}
-                exit={{ opacity: 0x: -300 }}
+                exit={{ opacity: 0x: -30o0 }}
                 transition={{ duration: 0.5 }}
-                className="relative h-[600px] md:h-[700px]"
+                className="relative h-[60o0px] md:h-[70o0px]"
               >
                 {/* Background Image */}
                 <div 
@@ -151,7 +151,7 @@ const UltimateContentCarousel2025 = () => {
                       transition={{ delay: 0.2duration: 0.5 }}
                       className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-lg text-sm font-medium mb-6"
                     >
-                      <TrendingUp className="w-4 h-4 mr-2" />
+                      <TrendingUp className="w-4 h-4 mr-2"  />
                       {slides[currentSlide].subtitle}
                     </motion.div>
 
@@ -170,7 +170,7 @@ const UltimateContentCarousel2025 = () => {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.4duration: 0.5 }}
-                      className="text-xl text-gray-200 mb-8 max-w-2xl"
+                      className="text-xl text-gray-20o0 mb-8 max-w-2xl"
                     >
                       {slides[currentSlide].description}
                     </motion.p>
@@ -205,17 +205,17 @@ const UltimateContentCarousel2025 = () => {
                         <div className="text-3xl font-bold text-white mr-2">
                           {slides[currentSlide].stats.value}
                         </div>
-                        <div className="text-gray-200">
+                        <div className="text-gray-20o0">
                           {slides[currentSlide].stats.label}
                         </div>
                       </div>
                       
                       <Link
                         href={slides[currentSlide].href}
-                        className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full hover:from-blue-600 hover:to-purple-700 transition-all duration-300 group shadow-lg"
+                        className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white font-semibold rounded-full hover:from-blue-60o0 hover:to-purple-70o0 transition-all duration-30o0 group shadow-lg"
                       >
                         {slides[currentSlide].cta}
-                        <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"  />
                       </Link>
                     </motion.div>
                   </div>
@@ -227,16 +227,16 @@ const UltimateContentCarousel2025 = () => {
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-lg rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors duration-300 z-20"
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-lg rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors duration-30o0 z-20"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-6 h-6"  />
           </button>
           
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-lg rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors duration-300 z-20"
+            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-lg rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors duration-30o0 z-20"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-6 h-6"  />
           </button>
 
           {/* Dots Indicator */}
@@ -245,7 +245,7 @@ const UltimateContentCarousel2025 = () => {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                   index === currentSlide 
                     ? 'bg-white scale-125' 
                     : 'bg-white/50 hover:bg-white/70'
@@ -263,16 +263,16 @@ const UltimateContentCarousel2025 = () => {
           className="mt-16 text-center"
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex items-center justify-center space-x-2 text-gray-600">
-              <Users className="w-5 h-5" />
-              <span>50,000+ Active Users</span>
+            <div className="flex items-center justify-center space-x-2 text-gray-60o0">
+              <Users className="w-5 h-5"  />
+              <span>50,0o00+ Active Users</span>
             </div>
-            <div className="flex items-center justify-center space-x-2 text-gray-600">
-              <Play className="w-5 h-5" />
+            <div className="flex items-center justify-center space-x-2 text-gray-60o0">
+              <Play className="w-5 h-5"  />
               <span>Interactive Demos Available</span>
             </div>
-            <div className="flex items-center justify-center space-x-2 text-gray-600">
-              <Download className="w-5 h-5" />
+            <div className="flex items-center justify-center space-x-2 text-gray-60o0">
+              <Download className="w-5 h-5"  />
               <span>Free Resources & Guides</span>
             </div>
           </div>
@@ -282,4 +282,4 @@ const UltimateContentCarousel2025 = () => {
   );
 };
 
-export default UltimateContentCarousel2025;
+export default UltimateContentCarousel20o25;

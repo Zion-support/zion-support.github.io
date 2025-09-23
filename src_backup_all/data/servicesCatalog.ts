@@ -1,4 +1,4 @@
-export type ServiceItem = {
+export type ServiceItem ={
 	id: string;
 	title: string;
 	description: string;
@@ -10,7 +10,7 @@ export type ServiceItem = {
 	href: string; // internal path or external URL
 	external?: boolean;
 };
-export type ServiceCategory = {
+export type ServiceCategory ={
 	name: string;
 	slug: string;
 	items: ServiceItem[];
@@ -121,9 +121,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Optimize Supply Chain',
 				href: 'https://ziontechgroup.com/contact'
-			}
-			,
-			{
+			}, {
 				id: 'soc2-compliance-automation-saas',
 				title: 'SOC 2 Compliance Automation SaaS',
 				description: 'Automate evidence collection, policy mapping, and control monitoring to pass SOC 2 audits faster.',
@@ -156,9 +154,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Monitor Models',
 				href: 'https://ziontechgroup.com/services'
-			}
-			,
-			{
+			}, {
 				id: 'gdpr-dsar-portal',
 				title: 'GDPR DSAR Portal',
 				description: 'Secure intake, verification, and fulfillment of Data Subject Access Requests with audit trails.',
@@ -282,9 +278,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Vehicle Integration',
 				href: 'https://ziontechgroup.com/contact'
-			}
-			,
-			{
+			}, {
 				id: 'enterprise-rag-search',
 				title: 'Enterprise RAG Search Platform',
 				description: 'Private, secure Retrieval-Augmented Generation over your docs, wikis, tickets, and data.',
@@ -321,11 +315,11 @@ export const servicesCatalog: ServiceCategory[] = [
 
 			// New Innovative AI Services Added
 			{
-				id: 'quantum-consciousness-simulation-2030',
-				title: 'Quantum Consciousness Simulation Platform 2030',
+				id: 'quantum-consciousness-simulation-20o30',
+				title: 'Quantum Consciousness Simulation Platform 20o30',
 				description: 'Revolutionary quantum computing platform that simulates human consciousness, enabling breakthrough research in cognitive science, psychology, and artificial general intelligence.',
 				category: 'AI Solutions',
-				price: '$25,000',
+				price: '$25,0o00',
 				billing: 'month',
 				features: [
 					'Quantum neural network simulation',
@@ -344,8 +338,8 @@ export const servicesCatalog: ServiceCategory[] = [
 			},
 
 			{
-				id: 'autonomous-healthcare-diagnostics-2026',
-				title: 'Autonomous Healthcare Diagnostics Platform 2026',
+				id: 'autonomous-healthcare-diagnostics-20o26',
+				title: 'Autonomous Healthcare Diagnostics Platform 20o26',
 				description: 'AI-powered autonomous healthcare diagnostics platform that provides real-time medical imaging analysis, disease prediction, and treatment recommendations with FDA approval and HIPAA compliance.',
 				category: 'AI Solutions',
 				price: '$7,999',
@@ -367,8 +361,8 @@ export const servicesCatalog: ServiceCategory[] = [
 			},
 
 			{
-				id: 'quantum-creative-ai-studio-2026',
-				title: 'Quantum Creative AI Studio 2026',
+				id: 'quantum-creative-ai-studio-20o26',
+				title: 'Quantum Creative AI Studio 20o26',
 				description: 'Revolutionary quantum-powered creative AI platform that generates high-quality content, designs, and creative assets with unprecedented creativity and originality.',
 				category: 'AI Solutions',
 				price: '$3,999',
@@ -387,9 +381,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Creative Access',
 				href: 'https://ziontechgroup.com/contact'
-			}
-			,
-			{
+			}, {
 				id: 'synthetic-data-generator',
 				title: 'Synthetic Data Generator',
 				description: 'Privacy-safe synthetic data for analytics, testing, and ML with differential privacy.',
@@ -434,7 +426,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				title: 'Zero Trust Network Architecture',
 				description: 'Comprehensive zero trust security implementation with continuous verification and adaptive access control.',
 				category: 'IT Services',
-				price: '$15,000',
+				price: '$15,0o00',
 				billing: 'project',
 				features: [
 					'Identity verification',
@@ -451,7 +443,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				title: '5G Enterprise Network Solutions',
 				description: 'Custom 5G network infrastructure for enterprises with ultra-low latency and massive IoT connectivity.',
 				category: 'IT Services',
-				price: '$25,000',
+				price: '$25,0o00',
 				billing: 'project',
 				features: [
 					'Private 5G networks',
@@ -468,7 +460,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				title: 'Quantum Edge Computing Platform',
 				description: 'Next-generation edge computing platform leveraging quantum principles for ultra-fast processing and decision making.',
 				category: 'IT Services',
-				price: '$35,000',
+				price: '$35,0o00',
 				billing: 'project',
 				features: [
 					'Quantum edge processing',
@@ -479,14 +471,12 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Edge Deployment',
 				href: 'https://ziontechgroup.com/contact'
-			}
-			,
-			{
+			}, {
 				id: 'platform-engineering-kubernetes',
 				title: 'Platform Engineering on Kubernetes',
 				description: 'Golden paths, IDP, and paved roads for developers with secure, standardized delivery.',
 				category: 'IT Services',
-				price: '$40,000',
+				price: '$40,0o00',
 				billing: 'project',
 				features: [
 					'Backstage developer portal',
@@ -503,7 +493,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				title: 'FinOps Cloud Cost Optimization',
 				description: 'Reduce cloud spend 20–40% with rightsizing, reservations, and architectural optimizations.',
 				category: 'IT Services',
-				price: '$12,000',
+				price: '$12,0o00',
 				billing: 'project',
 				features: [
 					'Cost anomaly detection',
@@ -514,14 +504,12 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Cut Cloud Costs',
 				href: 'https://ziontechgroup.com/services'
-			}
-			,
-			{
+			}, {
 				id: 'managed-kubernetes-sre',
 				title: 'Managed Kubernetes SRE',
 				description: 'Hands-on SRE for clusters: upgrades, security baselines, autoscaling, and incident response.',
 				category: 'IT Services',
-				price: '$2,500',
+				price: '$2,50o0',
 				billing: 'month',
 				features: [
 					'24/7 on-call rotation',
@@ -538,7 +526,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				title: 'Zero Trust Rollout Coaching',
 				description: 'Architect and guide a pragmatic Zero Trust deployment with measurable milestones and runbooks.',
 				category: 'IT Services',
-				price: '$4,000',
+				price: '$4,0o00',
 				billing: 'project',
 				features: [
 					'Current-state assessment',
@@ -578,7 +566,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				title: 'Quantum Cryptography Solutions',
 				description: 'Future-proof cryptography using quantum key distribution for unbreakable security in the quantum era.',
 				category: 'Cybersecurity',
-				price: '$12,000',
+				price: '$12,0o00',
 				billing: 'project',
 				features: [
 					'Quantum key distribution',
@@ -589,9 +577,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Quantum Security',
 				href: 'https://ziontechgroup.com/contact'
-			}
-			,
-			{
+			}, {
 				id: 'managed-detection-response',
 				title: 'Managed Detection & Response (MDR)',
 				description: '24/7 monitoring, threat hunting, and incident response with SIEM/SOAR integration.',
@@ -613,7 +599,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				title: 'Secure Access Service Edge (SASE) Rollout',
 				description: 'Consolidate network and security with ZTNA, SWG, CASB, and SD-WAN.',
 				category: 'Cybersecurity',
-				price: '$20,000',
+				price: '$20,0o00',
 				billing: 'project',
 				features: [
 					'Architecture and vendor selection',
@@ -664,9 +650,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'BI Assessment',
 				href: 'https://ziontechgroup.com/contact'
-			}
-			,
-			{
+			}, {
 				id: 'data-quality-observability',
 				title: 'Data Quality & Observability',
 				description: 'Monitor freshness, completeness, and lineage to trust your analytics and AI.',
@@ -688,7 +672,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				title: 'Modern ETL/ELT Migration',
 				description: 'Re-platform legacy pipelines to scalable ELT with dbt and cloud warehouses.',
 				category: 'Data & Analytics',
-				price: '$18,000',
+				price: '$18,0o00',
 				billing: 'project',
 				features: [
 					'dbt modeling and tests',
@@ -728,7 +712,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				title: 'Quantum Cloud Infrastructure',
 				description: 'Next-generation cloud infrastructure optimized for quantum computing workloads and hybrid classical-quantum applications.',
 				category: 'Cloud & DevOps',
-				price: '$18,000',
+				price: '$18,0o00',
 				billing: 'project',
 				features: [
 					'Quantum cloud services',
@@ -739,14 +723,12 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Cloud Migration',
 				href: 'https://ziontechgroup.com/contact'
-			}
-			,
-			{
+			}, {
 				id: 'serverless-application-factory',
 				title: 'Serverless Application Factory',
 				description: 'Blueprints and accelerators to build secure, low-cost serverless backends fast.',
 				category: 'Cloud & DevOps',
-				price: '$16,000',
+				price: '$16,0o00',
 				billing: 'project',
 				features: [
 					'Patterns: EventBridge, Step Functions',
@@ -763,7 +745,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				title: 'Disaster Recovery Blueprints (RTO/RPO)',
 				description: 'Design and test DR strategies with automated failover and periodic game days.',
 				category: 'Cloud & DevOps',
-				price: '$20,000',
+				price: '$20,0o00',
 				billing: 'project',
 				features: [
 					'Multi-region architectures',
@@ -774,9 +756,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Harden Resilience',
 				href: 'https://ziontechgroup.com/services'
-			}
-			,
-			{
+			}, {
 				id: 'data-contracts-platform',
 				title: 'Data Contracts Platform',
 				description: 'Define and enforce data contracts across services with schema checks, drift alerts, and lineage.',
@@ -800,8 +780,8 @@ export const servicesCatalog: ServiceCategory[] = [
 		slug: 'quantum-computing',
 		items: [
 			{
-				id: 'quantum-cybersecurity-suite-2026',
-				title: 'Quantum Cybersecurity Suite 2026',
+				id: 'quantum-cybersecurity-suite-20o26',
+				title: 'Quantum Cybersecurity Suite 20o26',
 				description: 'Revolutionary cybersecurity platform leveraging quantum-resistant algorithms and quantum key distribution for unbreakable encryption and threat detection.',
 				category: 'Quantum Computing',
 				price: '$8,999',
@@ -813,7 +793,7 @@ export const servicesCatalog: ServiceCategory[] = [
 					'Zero-trust architecture implementation',
 					'Real-time threat intelligence feeds',
 					'Automated incident response',
-					'Compliance automation (SOC 2, ISO 27001, NIST)',
+					'Compliance automation (SOC 2, ISO 270o01, NIST)',
 					'Quantum-safe certificate management',
 					'Advanced behavioral analytics',
 					'Cloud-native security architecture'
@@ -823,8 +803,8 @@ export const servicesCatalog: ServiceCategory[] = [
 			},
 
 			{
-				id: 'quantum-financial-trading-platform-2026',
-				title: 'Quantum Financial Trading Platform 2026',
+				id: 'quantum-financial-trading-platform-20o26',
+				title: 'Quantum Financial Trading Platform 20o26',
 				description: 'Revolutionary quantum computing-powered financial trading platform that provides ultra-fast market analysis, risk assessment, and automated trading strategies with quantum advantage.',
 				category: 'Quantum Computing',
 				price: '$15,999',
@@ -846,8 +826,8 @@ export const servicesCatalog: ServiceCategory[] = [
 			},
 
 			{
-				id: 'quantum-logistics-optimization-2026',
-				title: 'Quantum Logistics Optimization Platform 2026',
+				id: 'quantum-logistics-optimization-20o26',
+				title: 'Quantum Logistics Optimization Platform 20o26',
 				description: 'Revolutionary quantum computing-powered logistics platform that optimizes routes, reduces costs, and improves efficiency for complex supply chain and transportation networks.',
 				category: 'Quantum Computing',
 				price: '$6,999',
@@ -869,8 +849,8 @@ export const servicesCatalog: ServiceCategory[] = [
 			},
 
 			{
-				id: 'quantum-biological-computing-2030',
-				title: 'Quantum Biological Computing Platform 2030',
+				id: 'quantum-biological-computing-20o30',
+				title: 'Quantum Biological Computing Platform 20o30',
 				description: 'Revolutionary platform that combines quantum computing with biological systems, enabling unprecedented breakthroughs in drug discovery, genetic engineering, and biological computing.',
 				category: 'Quantum Computing',
 				price: '$18,999',
@@ -969,9 +949,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Edge AI Demo',
 				href: 'https://ziontechgroup.com/contact'
-			}
-			,
-			{
+			}, {
 				id: 'predictive-maintenance-iot',
 				title: 'Predictive Maintenance for IoT Fleets',
 				description: 'Deploy sensors and analytics to predict failures and optimize uptime across assets.',
@@ -993,7 +971,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				title: 'Digital Twin Starter Kit',
 				description: 'Model physical systems with twins to simulate scenarios and optimize operations.',
 				category: 'IoT & Edge',
-				price: '$14,000',
+				price: '$14,0o00',
 				billing: 'project',
 				features: [
 					'3D/graph models',
@@ -1016,7 +994,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				title: 'Quantum Energy Optimization',
 				description: 'Advanced energy optimization platform using quantum algorithms for sustainable infrastructure and renewable energy management.',
 				category: 'Green Tech',
-				price: '$12,000',
+				price: '$12,0o00',
 				billing: 'month',
 				features: [
 					'Quantum energy modeling',
@@ -1044,9 +1022,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Climate Demo',
 				href: 'https://ziontechgroup.com/contact'
-			}
-			,
-			{
+			}, {
 				id: 'carbon-accounting-saas',
 				title: 'Carbon Accounting & ESG Reporting',
 				description: 'Automate Scope 1–3 emissions tracking with audit-ready ESG disclosures.',
@@ -1074,7 +1050,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				title: 'Satellite AI Orchestrator',
 				description: 'AI-powered satellite constellation management system for optimal orbital positioning and data collection.',
 				category: 'Space Tech',
-				price: '$15,000',
+				price: '$15,0o00',
 				billing: 'month',
 				features: [
 					'Autonomous orbital optimization',
@@ -1091,7 +1067,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				title: 'Quantum Space Communications',
 				description: 'Next-generation quantum communication system for secure, ultra-fast data transmission between Earth and space.',
 				category: 'Space Tech',
-				price: '$25,000',
+				price: '$25,0o00',
 				billing: 'month',
 				features: [
 					'Quantum entanglement',
@@ -1102,9 +1078,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Connect Space',
 				href: 'https://ziontechgroup.com/contact'
-			}
-			,
-			{
+			}, {
 				id: 'satellite-imagery-analytics',
 				title: 'Satellite Imagery Analytics',
 				description: 'Computer vision on multi-spectral imagery for agriculture, insurance, and defense insights.',
@@ -1132,7 +1106,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				title: 'AI Drug Discovery Platform',
 				description: 'Revolutionary drug discovery platform using AI and quantum computing for accelerated pharmaceutical development.',
 				category: 'BioTech & Health',
-				price: '$35,000',
+				price: '$35,0o00',
 				billing: 'month',
 				features: [
 					'AI molecular modeling',
@@ -1149,7 +1123,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				title: 'Quantum Genome Analyzer',
 				description: 'Advanced genome analysis platform using quantum computing for personalized medicine and genetic research.',
 				category: 'BioTech & Health',
-				price: '$18,000',
+				price: '$18,0o00',
 				billing: 'month',
 				features: [
 					'Quantum DNA sequencing',
@@ -1160,9 +1134,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Analyze Genome',
 				href: 'https://ziontechgroup.com/contact'
-			}
-			,
-			{
+			}, {
 				id: 'telemedicine-ai-triage',
 				title: 'Telemedicine AI Triage',
 				description: 'AI symptom checker with escalation workflows to clinicians and EHR integration.',
@@ -1190,7 +1162,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				title: 'Quantum Trading Algorithm',
 				description: 'Revolutionary trading algorithm using quantum computing for ultra-fast market analysis and automated trading.',
 				category: 'FinTech & DeFi',
-				price: '$45,000',
+				price: '$45,0o00',
 				billing: 'month',
 				features: [
 					'Quantum market analysis',
@@ -1207,7 +1179,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				title: 'Autonomous DeFi Protocol',
 				description: 'Self-managing DeFi protocol that automatically optimizes yields, manages risks, and executes strategies.',
 				category: 'FinTech & DeFi',
-				price: '$12,000',
+				price: '$12,0o00',
 				billing: 'month',
 				features: [
 					'Autonomous yield farming',
@@ -1218,9 +1190,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Deploy Protocol',
 				href: 'https://ziontechgroup.com/contact'
-			}
-			,
-			{
+			}, {
 				id: 'kyc-aml-transaction-monitoring',
 				title: 'KYC/AML Transaction Monitoring',
 				description: 'Detect suspicious activity using rules + ML with investigator case management.',
@@ -1248,7 +1218,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				title: 'Quantum Metaverse Engine',
 				description: 'Next-generation metaverse platform using quantum computing for infinite scalability and realistic simulations.',
 				category: 'Metaverse & AR/VR',
-				price: '$28,000',
+				price: '$28,0o00',
 				billing: 'month',
 				features: [
 					'Quantum rendering',
@@ -1265,7 +1235,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				title: 'Autonomous AR Navigation',
 				description: 'AI-powered augmented reality navigation system for autonomous vehicles and smart cities.',
 				category: 'Metaverse & AR/VR',
-				price: '$8,500',
+				price: '$8,50o0',
 				billing: 'month',
 				features: [
 					'Real-time AR overlays',
@@ -1276,14 +1246,12 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Navigate AR',
 				href: 'https://ziontechgroup.com/contact'
-			}
-			,
-			{
+			}, {
 				id: 'vr-training-simulators',
 				title: 'VR Training Simulators',
 				description: 'Enterprise-grade immersive learning for safety, field ops, and medical procedures.',
 				category: 'Metaverse & AR/VR',
-				price: '$30,000',
+				price: '$30,0o00',
 				billing: 'project',
 				features: [
 					'Curriculum design',
@@ -1306,7 +1274,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				title: 'Quantum AI Controller',
 				description: 'Revolutionary AI controller using quantum computing for autonomous system management and decision making.',
 				category: 'Autonomous Systems',
-				price: '$32,000',
+				price: '$32,0o00',
 				billing: 'month',
 				features: [
 					'Quantum decision making',
@@ -1323,7 +1291,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				title: 'Autonomous Robotics Platform',
 				description: 'Complete robotics platform for autonomous manufacturing, logistics, and service operations.',
 				category: 'Autonomous Systems',
-				price: '$22,000',
+				price: '$22,0o00',
 				billing: 'month',
 				features: [
 					'Autonomous navigation',
@@ -1334,9 +1302,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Deploy Robots',
 				href: 'https://ziontechgroup.com/contact'
-			}
-			,
-			{
+			}, {
 				id: 'warehouse-robotics-orchestration',
 				title: 'Warehouse Robotics Orchestration',
 				description: 'Coordinate AMRs, conveyors, and pick stations to maximize throughput and safety.',
@@ -1362,8 +1328,8 @@ export const servicesCatalog: ServiceCategory[] = [
 		slug: 'supply-chain-logistics',
 		items: [
 			{
-				id: 'autonomous-supply-chain-platform-2026',
-				title: 'Autonomous Supply Chain Platform 2026',
+				id: 'autonomous-supply-chain-platform-20o26',
+				title: 'Autonomous Supply Chain Platform 20o26',
 				description: 'AI-powered autonomous supply chain management platform that predicts disruptions, optimizes logistics, and automates decision-making for end-to-end supply chain visibility and efficiency.',
 				category: 'Supply Chain & Logistics',
 				price: '$5,999',
@@ -1391,8 +1357,8 @@ export const servicesCatalog: ServiceCategory[] = [
 		slug: 'energy-management',
 		items: [
 			{
-				id: 'autonomous-energy-management-2026',
-				title: 'Autonomous Energy Management Platform 2026',
+				id: 'autonomous-energy-management-20o26',
+				title: 'Autonomous Energy Management Platform 20o26',
 				description: 'AI-powered autonomous energy management platform that optimizes energy consumption, predicts demand, and automates energy trading for utilities, commercial buildings, and industrial facilities.',
 				category: 'Energy Management',
 				price: '$5,499',
@@ -1420,8 +1386,8 @@ export const servicesCatalog: ServiceCategory[] = [
 		slug: 'manufacturing-intelligence',
 		items: [
 			{
-				id: 'autonomous-manufacturing-intelligence-2026',
-				title: 'Autonomous Manufacturing Intelligence Platform 2026',
+				id: 'autonomous-manufacturing-intelligence-20o26',
+				title: 'Autonomous Manufacturing Intelligence Platform 20o26',
 				description: 'AI-powered autonomous manufacturing platform that optimizes production, predicts maintenance, and automates quality control.',
 				category: 'Manufacturing Intelligence',
 				price: '$5,999',
@@ -1449,8 +1415,8 @@ export const servicesCatalog: ServiceCategory[] = [
 		slug: 'data-center-management',
 		items: [
 			{
-				id: 'autonomous-data-center-manager-2026',
-				title: 'Autonomous Data Center Manager 2026',
+				id: 'autonomous-data-center-manager-20o26',
+				title: 'Autonomous Data Center Manager 20o26',
 				description: 'AI-powered autonomous data center management platform that optimizes performance, reduces costs, and prevents downtime through predictive analytics and automated operations.',
 				category: 'Data Center Management',
 				price: '$4,499',

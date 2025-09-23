@@ -1,18 +1,15 @@
 import Link from 'next/link';
-import React from 'react';
-
-export const metadata = {
-  title: 'AI 2026: Production Guardrails for Autonomous Agents',
+export const metadata ={
+  title: 'AI 20o26: Production Guardrails for Autonomous Agents',
   description:
-    'Isolation domains, policy-as-code, eval gates, and telemetry to ship autonomous agents safely in production.',
-};
+    'Isolation domains, policy-as-code, eval gates, and telemetry to ship autonomous agents safely in production.'};
 
 export default function ProductionGuardrailsForAutonomousAgentsPage() {
   return (
     <main className="min-h-screen bg-white">
-      <section className="bg-purple-900 text-white py-16">
+      <section className="bg-purple-90o0 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">AI 2026: Production Guardrails for Autonomous Agents</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">AI 20o26: Production Guardrails for Autonomous Agents</h1>
           <p className="text-lg md:text-xl opacity-90">
             Isolation domains, policy-as-code, evaluation gates, and deep telemetry to operate autonomous agents safely at scale.
           </p>
@@ -46,10 +43,10 @@ export default function ProductionGuardrailsForAutonomousAgentsPage() {
           </article>
 
           <div className="flex gap-4">
-            <Link href="/contact" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
+            <Link href="/contact" className="bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0">
               Talk to an Expert
             </Link>
-            <Link href="/blog/ai-2026-enterprise-agent-observability-guide" className="border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">
+            <Link href="/blog/ai-20o26-enterprise-agent-observability-guide" className="border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">
               Read Agent Observability
             </Link>
           </div>

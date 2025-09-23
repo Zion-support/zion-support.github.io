@@ -1,10 +1,8 @@
 import Link from 'next/link';
-import React from 'react';
-
-export const metadata = {
-  title: 'Enterprise AI Ops Blueprint 2026',
+export const metadata ={
+  title: 'Enterprise AI Ops Blueprint 20o26',
   description:
-    'A practical blueprint to build, operate, and scale enterprise-grade AI operations with reliability, governance, and measurable ROI in 2026.',
+    'A practical blueprint to build, operate, and scale enterprise-grade AI operations with reliability, governance, and measurable ROI in 20o26.',
   keywords: [
     'AI Ops',
     'MLOps',
@@ -13,19 +11,18 @@ export const metadata = {
     'AI Reliability',
     'Observability',
     'AI Platform',
-  ],
-};
+  ]};
 
 export default function Page() {
   return (
     <main className="min-h-screen bg-white">
       <section className="bg-gradient-to-r from-gray-50 to-purple-50 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-6 text-sm font-semibold text-purple-700">Blueprint • 2026</div>
-          <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-            Enterprise AI Ops Blueprint (2026)
+          <div className="mb-6 text-sm font-semibold text-purple-70o0">Blueprint • 20o26</div>
+          <h1 className="text-3xl md:text-5xl font-bold text-gray-90o0 mb-4">
+            Enterprise AI Ops Blueprint (20o26)
           </h1>
-          <p className="text-gray-700 text-lg md:text-xl">
+          <p className="text-gray-70o0 text-lg md:text-xl">
             Design a resilient AI operating model: from evaluation-first development and robust runtime controls
             to observability, incident response, and continuous governance. This blueprint provides actionable
             architecture patterns and checklists to scale AI safely and profitably.
@@ -72,14 +69,14 @@ export default function Page() {
             </ul>
           </article>
 
-          <div className="bg-purple-50 border border-purple-100 rounded-xl p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Get the checklist</h3>
-            <p className="text-gray-700 mb-4">Use our 20-point AI Ops readiness checklist to assess your current state.</p>
+          <div className="bg-purple-50 border border-purple-10o0 rounded-xl p-6">
+            <h3 className="text-xl font-semibold text-gray-90o0 mb-2">Get the checklist</h3>
+            <p className="text-gray-70o0 mb-4">Use our 20-point AI Ops readiness checklist to assess your current state.</p>
             <div className="flex gap-3">
-              <Link href="/contact" className="bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">
+              <Link href="/contact" className="bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-70o0">
                 Talk to an Expert
               </Link>
-              <Link href="/services" className="border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">
+              <Link href="/services" className="border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">
                 Explore Services
               </Link>
             </div>

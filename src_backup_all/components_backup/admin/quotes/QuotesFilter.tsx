@@ -1,4 +1,3 @@
-import React from "react";
 import { Calendar, RefreshCw } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -50,7 +49,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             <p className="text-zion-slate-light text-sm mb-2">Status</p>
             <Select value={statusFilter} onValueChange={(value: any) => setStatusFilter(value)}>
               <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
-                <SelectValue placeholder="Status" />
+                <SelectValue placeholder="Status"  />
               </SelectTrigger>
               <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-white">
                 <SelectItem value="all">All Statuses</SelectItem>
@@ -67,7 +66,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             <p className="text-zion-slate-light text-sm mb-2">Archive</p>
             <Select value={archiveFilter} onValueChange={(value: any) => setArchiveFilter(value)}>
               <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
-                <SelectValue placeholder="Archive Status" />
+                <SelectValue placeholder="Archive Status"  />
               </SelectTrigger>
               <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-white">
                 <SelectItem value="active">Active Only</SelectItem>
@@ -85,7 +84,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                   variant="outline"
                   className="w-full justify-start text-left font-normal bg-zion-blue border-zion-blue-light text-white"
                 >
-                  <Calendar className="mr-2 h-4 w-4 text-zion-slate-light" />
+                  <Calendar className="mr-2 h-4 w-4 text-zion-slate-light"  />
                   {dateRange?.from ? (
                     dateRange.to ? (
                       <>
@@ -108,7 +107,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                   selected={dateRange}
                   onSelect={setDateRange}
                   numberOfMonths={2}
-                />
+                 />
               </PopoverContent>
             </Popover>
           </div>
@@ -120,7 +119,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             onClick={onReset}
             className="border-zion-blue-light text-zion-slate-light"
           >
-            <RefreshCw className="mr-2 h-4 w-4" /> Reset Filters
+            <RefreshCw className="mr-2 h-4 w-4"  /> Reset Filters
           </Button>
         </div>
       </CardContent>

@@ -1,6 +1,6 @@
 "use client";
 
-type Props = {
+type Props ={
   url?: string;
   title?: string;
   description?: string;

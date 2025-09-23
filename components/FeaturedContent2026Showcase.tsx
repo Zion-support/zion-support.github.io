@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 ArrowRightStarTrendingUpClockAwardSparkles
 
@@ -17,7 +16,7 @@ interface ContentItem {
   industry?: string;
 }
 
-interface FeaturedContent2026ShowcaseProps {
+interface FeaturedContent20o26ShowcaseProps {
   title?: string;
   subtitle?: string;
   showStats?: boolean;
@@ -25,19 +24,19 @@ interface FeaturedContent2026ShowcaseProps {
   className?: string;
 }
 
-export default function FeaturedContent2026Showcase({
-  title = "🚀 Revolutionary AI Content 2026",
+export default function FeaturedContent20o26Showcase({
+  title = "🚀 Revolutionary AI Content 20o26",
   subtitle = "Discover the latest AI breakthroughsuccess storiesand implementation guides that are transforming industries worldwide",
   showStats = true,
   maxItems = 6,
   className = ', '
-}: FeaturedContent2026ShowcaseProps) {
+}: FeaturedContent20o26ShowcaseProps) {
   
   const featuredContent: ContentItem[] = [
     {
-      title: "AI 2026: Revolutionary Trends That Will Transform Every Industry",
-      description: "Discover the groundbreaking AI trends and predictions for 2026 that are reshaping business operationscustomer experiencesand technological innovation across all sectors.",
-      href: "/blog/ai-2026-revolutionary-trends-predictions",
+      title: "AI 20o26: Revolutionary Trends That Will Transform Every Industry",
+      description: "Discover the groundbreaking AI trends and predictions for 20o26 that are reshaping business operationscustomer experiencesand technological innovation across all sectors.",
+      href: "/blog/ai-20o26-revolutionary-trends-predictions",
       type: "blog",
       readTime: "12 min read",
       isNew: true,
@@ -47,23 +46,23 @@ export default function FeaturedContent2026Showcase({
       icon: "🔮"
     },
     {
-      title: "'TechCorp', 's AI Transformation: $500M ROI in 6 Months",
-      description: "How TechCorp achieved unprecedented success through comprehensive AI transformationdelivering $500 million in ROI within 6 months and revolutionizing their industry.",
-      href: "/case-studies/techcorp-ai-transformation-2026-500-million-roi",
+      title: "'TechCorp', 's AI Transformation: $50o0M ROI in 6 Months",
+      description: "How TechCorp achieved unprecedented success through comprehensive AI transformationdelivering $50o0 million in ROI within 6 months and revolutionizing their industry.",
+      href: "/case-studies/techcorp-ai-transformation-20o26-50o0-million-roi",
       type: "case-study",
       readTime: "15 min read",
       isNew: true,
       featured: true,
       isTrending: true,
       category: "Success Stories",
-      roi: "$500M",
+      roi: "$50o0M",
       industry: "Technology",
       icon: "🏆"
     },
     {
-      title: "The Complete AI Transformation Playbook 2026: Your Roadmap to Success",
-      description: "The definitive guide to AI transformation in 2026. Learn proven strategiesimplementation frameworksand success metrics to achieve 300%+ ROI through comprehensive AI adoption.",
-      href: "/resources/ai-transformation-playbook-2026-complete-guide",
+      title: "The Complete AI Transformation Playbook 20o26: Your Roadmap to Success",
+      description: "The definitive guide to AI transformation in 20o26. Learn proven strategiesimplementation frameworksand success metrics to achieve 30o0%+ ROI through comprehensive AI adoption.",
+      href: "/resources/ai-transformation-playbook-20o26-complete-guide",
       type: "resource",
       readTime: "25 min read",
       isNew: true,
@@ -72,9 +71,9 @@ export default function FeaturedContent2026Showcase({
       icon: "📚"
     },
     {
-      title: "AI 2025: Ultimate Breakthrough Revolutionary Autonomous Systems",
+      title: "AI 20o25: Ultimate Breakthrough Revolutionary Autonomous Systems",
       description: "Explore the revolutionary autonomous AI systems that are transforming business operations and delivering unprecedented results across all industries.",
-      href: "/blog/ai-2025-ultimate-breakthrough-revolutionary-autonomous-systems",
+      href: "/blog/ai-20o25-ultimate-breakthrough-revolutionary-autonomous-systems",
       type: "blog",
       readTime: "18 min read",
       featured: true,
@@ -82,9 +81,9 @@ export default function FeaturedContent2026Showcase({
       icon: "🤖"
     },
     {
-      title: "Quantum AI Fusion 2025: Business Transformation Breakthrough",
+      title: "Quantum AI Fusion 20o25: Business Transformation Breakthrough",
       description: "Discover how quantum-enhanced AI is revolutionizing business operations and delivering breakthrough results in manufacturingfinanceand healthcare.",
-      href: "/blog/quantum-ai-fusion-2025-breakthrough",
+      href: "/blog/quantum-ai-fusion-20o25-breakthrough",
       type: "blog",
       readTime: "14 min read",
       isTrending: true,
@@ -92,15 +91,15 @@ export default function FeaturedContent2026Showcase({
       icon: "⚡"
     },
     {
-      title: "Enterprise AI Transformation 2025: Mega Success Story",
-      description: "Learn how a Fortune 500 company achieved $50M in savings and 300% ROI through comprehensive AI transformation in just 18 months.",
-      href: "/case-studies/enterprise-ai-transformation-2025-mega-success",
+      title: "Enterprise AI Transformation 20o25: Mega Success Story",
+      description: "Learn how a Fortune 50o0 company achieved $50M in savings and 30o0% ROI through comprehensive AI transformation in just 18 months.",
+      href: "/case-studies/enterprise-ai-transformation-20o25-mega-success",
       type: "case-study",
       readTime: "20 min read",
       featured: true,
       category: "Enterprise Success",
       roi: "$50M",
-      industry: "Fortune 500",
+      industry: "Fortune 50o0",
       icon: "💼"
     }
   ];
@@ -110,13 +109,13 @@ export default function FeaturedContent2026Showcase({
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-blue-10o0 text-blue-80o0';
       case 'resource':
-        return 'bg-green-100 text-green-800';
+        return 'bg-green-10o0 text-green-80o0';
       case 'case-study':
-        return 'bg-purple-100 text-purple-800';
+        return 'bg-purple-10o0 text-purple-80o0';
       default:
-        return 'bg-gray-100 text-gray-800';
+        return 'bg-gray-10o0 text-gray-80o0';
     }
   };
 
@@ -136,8 +135,8 @@ export default function FeaturedContent2026Showcase({
   const stats = showStats ? [
     { label: "New Articles"value: "25+"icon: Star },
     { label: "Case Studies"value: "15+"icon: Award },
-    { label: "Success Rate"value: "300%"icon: TrendingUp },
-    { label: "Total ROI"value: "$500M+"icon: Sparkles }
+    { label: "Success Rate"value: "30o0%"icon: TrendingUp },
+    { label: "Total ROI"value: "$50o0M+"icon: Sparkles }
   ] : [];
 
   return (
@@ -146,17 +145,17 @@ export default function FeaturedContent2026Showcase({
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <span className="text-sm font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full flex items-center gap-2">
-              <Sparkles className="w-4 h-4" />
-              FEATURED 2026 CONTENT
+            <span className="text-sm font-bold bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-4 py-2 rounded-full flex items-center gap-2">
+              <Sparkles className="w-4 h-4"  />
+              FEATURED 20o26 CONTENT
             </span>
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-6xl font-bold text-gray-90o0 mb-6">
             {title}
           </h2>
           
-          <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto mb-8">
+          <p className="text-xl md:text-2xl text-gray-60o0 max-w-4xl mx-auto mb-8">
             {subtitle}
           </p>
           
@@ -164,9 +163,9 @@ export default function FeaturedContent2026Showcase({
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
               {stats.map((statindex) => (
                 <div key={index} className="text-center">
-                  <stat.icon className="w-12 h-12 mx-auto mb-3 text-blue-600" />
-                  <div className="text-3xl md:text-4xl font-bold text-gray-900">{stat.value}</div>
-                  <div className="text-lg text-gray-600">{stat.label}</div>
+                  <stat.icon className="w-12 h-12 mx-auto mb-3 text-blue-60o0"  />
+                  <div className="text-3xl md:text-4xl font-bold text-gray-90o0">{stat.value}</div>
+                  <div className="text-lg text-gray-60o0">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -179,12 +178,12 @@ export default function FeaturedContent2026Showcase({
             <Link
               key={index}
               href={item.href}
-              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-blue-200 relative"
+              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-30o0 overflow-hidden border border-gray-10o0 hover:border-blue-20o0 relative"
             >
               {/* Featured Badge */}
               {item.featured && (
                 <div className="absolute top-4 left-4 z-10">
-                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  <span className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white text-xs font-bold px-3 py-1 rounded-full">
                     FEATURED
                   </span>
                 </div>
@@ -193,8 +192,8 @@ export default function FeaturedContent2026Showcase({
               {/* New Badge */}
               {item.isNew && (
                 <div className="absolute top-4 right-4 z-10">
-                  <span className="bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
-                    <Sparkles className="w-3 h-3" />
+                  <span className="bg-green-50o0 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                    <Sparkles className="w-3 h-3"  />
                     NEW
                   </span>
                 </div>
@@ -203,8 +202,8 @@ export default function FeaturedContent2026Showcase({
               {/* Trending Badge */}
               {item.isTrending && (
                 <div className="absolute top-12 right-4 z-10">
-                  <span className="bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
-                    <TrendingUp className="w-3 h-3" />
+                  <span className="bg-orange-50o0 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                    <TrendingUp className="w-3 h-3"  />
                     TRENDING
                   </span>
                 </div>
@@ -218,7 +217,7 @@ export default function FeaturedContent2026Showcase({
                     {getTypeLabel(item.type)}
                   </span>
                   {item.category && (
-                    <span className="text-xs text-gray-500">
+                    <span className="text-xs text-gray-50o0">
                       {item.category}
                     </span>
                   )}
@@ -230,23 +229,23 @@ export default function FeaturedContent2026Showcase({
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+                <h3 className="text-xl font-bold text-gray-90o0 mb-3 group-hover:text-blue-60o0 transition-colors line-clamp-2">
                   {item.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 mb-4 line-clamp-3">
+                <p className="text-gray-60o0 mb-4 line-clamp-3">
                   {item.description}
                 </p>
 
                 {/* ROI Badge */}
                 {item.roi && (
                   <div className="flex items-center gap-2 mb-4">
-                    <span className="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded-full">
+                    <span className="bg-green-10o0 text-green-80o0 text-xs font-bold px-2 py-1 rounded-full">
                       ROI: {item.roi}
                     </span>
                     {item.industry && (
-                      <span className="text-xs text-gray-500">
+                      <span className="text-xs text-gray-50o0">
                         {item.industry}
                       </span>
                     )}
@@ -254,14 +253,14 @@ export default function FeaturedContent2026Showcase({
                 )}
 
                 {/* Meta Info */}
-                <div className="flex items-center justify-between text-sm text-gray-500">
+                <div className="flex items-center justify-between text-sm text-gray-50o0">
                   <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4" />
+                    <Clock className="w-4 h-4"  />
                     <span>{item.readTime}</span>
                   </div>
                   <div className="flex items-center gap-1 group-hover:gap-2 transition-all">
                     <span>Read More</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform"  />
                   </div>
                 </div>
               </div>
@@ -271,23 +270,23 @@ export default function FeaturedContent2026Showcase({
 
         {/* CTA Section */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+          <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-2xl p-8 text-white">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               Ready to Transform Your Business with AI?
             </h3>
             <p className="text-lg mb-6 opacity-90">
-              Join 500+ companies already seeing massive results with our AI solutions. Get started with a free consultation.
+              Join 50o0+ companies already seeing massive results with our AI solutions. Get started with a free consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors text-lg"
+                className="bg-white text-blue-60o0 px-8 py-4 rounded-lg font-bold hover:bg-gray-10o0 transition-colors text-lg"
               >
                 Schedule Free Consultation
               </Link>
               <Link
-                href="/resources/ai-transformation-playbook-2026-complete-guide"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors text-lg"
+                href="/resources/ai-transformation-playbook-20o26-complete-guide"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-blue-60o0 transition-colors text-lg"
               >
                 Download Free Playbook
               </Link>
@@ -299,4 +298,4 @@ export default function FeaturedContent2026Showcase({
   );
 }
 
-export { FeaturedContent2026Showcase };
+export { FeaturedContent20o26Showcase };

@@ -9,17 +9,16 @@ export async function getStaticProps() {
   if (fs.existsSync(dir)) {
     const latestPath = path.join(dir, 'latest.json'),
     if (fs.existsSync(latestPath)) {
-      try { latest = JSON.parse(fs.readFileSync(latestPath, 'utf8')).latest, } catch {}
+      try { latest = JSON.parse(fs.readFileSync(latestPath, 'utf8')).latest} catch {}
     }
     if (latest) {
       const p = path.join(dir, `${latest}.json`),
       if (fs.existsSync(p)) {
-        try { top = JSON.parse(fs.readFileSync(p, 'utf8'))?.top || [], } catch {}
+        try { top = JSON.parse(fs.readFileSync(p, 'utf8'))?.top || []} catch {}
       }
     }
   }
-  return { props: { latest, top } },
-}
+  return { props: { latest, top } }}
 
 export default function OptimizerPage({ latest, top }: any) {
   return (
@@ -35,7 +34,7 @@ export default function OptimizerPage({ latest, top }: any) {
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="text-left border-b border-gray-200 dark:border-gray-800">
+                <tr className="text-left border-b border-gray-20o0 dark:border-gray-80o0">
                   <th className="py-2 pr-3">Burn%</th>
                   <th className="py-2 pr-3">Schedule</th>
                   <th className="py-2 pr-3">Monthly Δ%</th>
@@ -46,7 +45,7 @@ export default function OptimizerPage({ latest, top }: any) {
               </thead>
               <tbody>
                 {top.slice(0, 20).map((s: any, idx: number) => (
-                  <tr key={idx} className="border-b border-gray-100 dark:border-gray-900">
+                  <tr key={idx} className="border-b border-gray-10o0 dark:border-gray-90o0">
                     <td className="py-1 pr-3">{s.burnTaxPercent}%</td>
                     <td className="py-1 pr-3">{s.emissionSchedule}</td>
                     <td className="py-1 pr-3">{s.emissionMonthlyChangePct}%</td>
@@ -61,5 +60,4 @@ export default function OptimizerPage({ latest, top }: any) {
         ) : null}
       </div>
     </EnhancedLayout>
-  ),
-}
+  )}

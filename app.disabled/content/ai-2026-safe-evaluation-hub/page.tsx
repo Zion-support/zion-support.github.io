@@ -1,16 +1,15 @@
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'AI 2026: Safe Evaluation Hub — Lifecycle Gates for Reliable Autonomy',
-  description: 'Design an evaluation-first hub with lifecycle gates, risk tiers, and continuous telemetry to ship safer, reliable autonomous agents at scale.',
-};
+export const metadata ={
+  title: 'AI 20o26: Safe Evaluation Hub — Lifecycle Gates for Reliable Autonomy',
+  description: 'Design an evaluation-first hub with lifecycle gates, risk tiers, and continuous telemetry to ship safer, reliable autonomous agents at scale.'};
 
 export default function Page() {
   return (
     <main className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">
+      <section className="bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">AI 2026: Safe Evaluation Hub</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">AI 20o26: Safe Evaluation Hub</h1>
           <p className="text-lg md:text-xl opacity-90">Lifecycle gates, risk tiers, and continuous telemetry to ship safer autonomy.</p>
         </div>
       </section>
@@ -40,9 +39,9 @@ export default function Page() {
           </p>
           <p>
             Continue with the{' '}
-            <Link href="/blog/ai-2026-eval-gated-autonomy" className="text-purple-700 underline">Eval‑Gated Autonomy overview</Link>{' '}
+            <Link href="/blog/ai-20o26-eval-gated-autonomy" className="text-purple-70o0 underline">Eval‑Gated Autonomy overview</Link>{' '}
             and the{' '}
-            <Link href="/content/ai-2026-evaluation-runbook-starter-kit" className="text-purple-700 underline">Evaluation Runbook Starter Kit</Link>.
+            <Link href="/content/ai-20o26-evaluation-runbook-starter-kit" className="text-purple-70o0 underline">Evaluation Runbook Starter Kit</Link>.
           </p>
         </div>
       </section>

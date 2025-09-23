@@ -14,14 +14,14 @@ import {
   Briefcase, BookOpen, MessageCircle, Star, TrendingUp
 } from 'lucide-react';
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
-const EnhancedNavigation2031: React.FC = () => {
+const EnhancedNavigation20o31: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,7 +37,7 @@ const EnhancedNavigation2031: React.FC = () => {
   const mainNavItems = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'Services', href: '/services', icon: Briefcase },
-    { name: '2029 Innovation Hub', href: '/comprehensive-2029-services', icon: Sparkles },
+    { name: '20o29 Innovation Hub', href: '/comprehensive-20o29-services', icon: Sparkles },
     { name: 'Pricing', href: '/pricing', icon: DollarSign },
     { name: 'Resources', href: '/resources', icon: BookOpen },
     { name: 'About', href: '/about', icon: Users },
@@ -48,7 +48,7 @@ const EnhancedNavigation2031: React.FC = () => {
     {
       title: '🚀 Revolutionary AI Services',
       icon: Brain,
-      color: 'from-violet-600 via-purple-600 to-indigo-600',
+      color: 'from-violet-60o0 via-purple-60o0 to-indigo-60o0',
       description: 'Next-generation AI consciousness and creativity',
       services: [
         { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', description: 'Develop genuine AI consciousness', price: '$19,999/month' },
@@ -60,7 +60,7 @@ const EnhancedNavigation2031: React.FC = () => {
     {
       title: '⚛️ Quantum & Emerging Tech',
       icon: Atom,
-      color: 'from-indigo-600 via-blue-600 to-cyan-600',
+      color: 'from-indigo-60o0 via-blue-60o0 to-cyan-60o0',
       description: 'Quantum computing and beyond',
       services: [
         { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway', description: 'Unbreakable quantum encryption', price: '$15,999/month' },
@@ -72,7 +72,7 @@ const EnhancedNavigation2031: React.FC = () => {
     {
       title: '🏙️ Enterprise IT Solutions',
       icon: Cpu,
-      color: 'from-blue-600 via-cyan-600 to-teal-600',
+      color: 'from-blue-60o0 via-cyan-60o0 to-teal-60o0',
       description: 'Autonomous enterprise infrastructure',
       services: [
         { name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Never trust, always verify', price: '$599/month' },
@@ -84,7 +84,7 @@ const EnhancedNavigation2031: React.FC = () => {
     {
       title: '🌌 Space & Metaverse Tech',
       icon: Rocket,
-      color: 'from-teal-600 via-emerald-600 to-green-600',
+      color: 'from-teal-60o0 via-emerald-60o0 to-green-60o0',
       description: 'Space exploration and digital reality',
       services: [
         { name: 'Space Mining Automation Platform', href: '/space-mining-automation-platform', description: 'Automated asteroid mining', price: '$45,999/month' },
@@ -95,7 +95,7 @@ const EnhancedNavigation2031: React.FC = () => {
     {
       title: '🧬 Biotech & DNA Computing',
       icon: Heart,
-      color: 'from-green-600 via-yellow-600 to-orange-600',
+      color: 'from-green-60o0 via-yellow-60o0 to-orange-60o0',
       description: 'Biological computing and biotechnology',
       services: [
         { name: 'Biotech DNA Computing Platform', href: '/biotech-dna-computing-platform', description: 'DNA-based computation', price: '$25,999/month' }
@@ -104,7 +104,7 @@ const EnhancedNavigation2031: React.FC = () => {
     {
       title: '🔗 Blockchain & Supply Chain',
       icon: Link,
-      color: 'from-orange-600 via-red-600 to-pink-600',
+      color: 'from-orange-60o0 via-red-60o0 to-pink-60o0',
       description: 'Transparent and secure supply chains',
       services: [
         { name: 'Blockchain Supply Chain Transparency', href: '/blockchain-supply-chain-transparency', description: 'End-to-end traceability', price: '$399/month' }
@@ -114,11 +114,11 @@ const EnhancedNavigation2031: React.FC = () => {
 
   const quickLinks = [
     { name: 'Market Pricing', href: '/market-pricing', icon: DollarSign },
-    { name: 'Enhanced Services', href: '/enhanced-services-showcase-2025', icon: Sparkles },
-    { name: 'Revolutionary 2026', href: '/revolutionary-2026-services', icon: Rocket },
-    { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', icon: Star },
-    { name: 'Cutting Edge 2027', href: '/revolutionary-2027-services-showcase', icon: TrendingUp },
-    { name: 'Innovative 2028', href: '/cutting-edge-2028-micro-saas', icon: Zap }
+    { name: 'Enhanced Services', href: '/enhanced-services-showcase-20o25', icon: Sparkles },
+    { name: 'Revolutionary 20o26', href: '/revolutionary-20o26-services', icon: Rocket },
+    { name: 'Ultimate 20o26', href: '/ultimate-20o26-services-showcase', icon: Star },
+    { name: 'Cutting Edge 20o27', href: '/revolutionary-20o27-services-showcase', icon: TrendingUp },
+    { name: 'Innovative 20o28', href: '/cutting-edge-20o28-micro-saas', icon: Zap }
   ];
 
   const toggleDropdown = (category: string) => {
@@ -131,28 +131,28 @@ const EnhancedNavigation2031: React.FC = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-50o0 ${
       isScrolled 
-        ? 'bg-black/90 backdrop-blur-xl border-b border-gray-800/50' 
+        ? 'bg-black/90 backdrop-blur-xl border-b border-gray-80o0/50' 
         : 'bg-transparent'
     }`}>
       {/* Top Contact Bar */}
-      <div className="bg-gradient-to-r from-gray-900 to-black border-b border-gray-800/50">
+      <div className="bg-gradient-to-r from-gray-90o0 to-black border-b border-gray-80o0/50">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-between items-center py-2 text-sm">
-            <div className="flex items-center gap-6 text-gray-300">
+            <div className="flex items-center gap-6 text-gray-30o0">
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-cyan-400" />
+                <Phone className="w-4 h-4 text-cyan-40o0"  />
                 <span>{contactInfo.mobile}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-purple-400" />
+                <Mail className="w-4 h-4 text-purple-40o0"  />
                 <span>{contactInfo.email}</span>
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-green-400" />
-              <span className="text-gray-300">{contactInfo.address}</span>
+              <MapPin className="w-4 h-4 text-green-40o0"  />
+              <span className="text-gray-30o0">{contactInfo.address}</span>
             </div>
           </div>
         </div>
@@ -164,16 +164,16 @@ const EnhancedNavigation2031: React.FC = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group" onClick={closeAllDropdowns}>
             <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-xl flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-30o0">
                 Z
               </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-30o0"  />
             </div>
             <div className="hidden md:block">
-              <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              <div className="text-2xl font-bold bg-gradient-to-r from-cyan-40o0 to-blue-50o0 bg-clip-text text-transparent">
                 Zion Tech Group
               </div>
-              <div className="text-xs text-gray-400">2029 Innovation Hub</div>
+              <div className="text-xs text-gray-40o0">20o29 Innovation Hub</div>
             </div>
           </Link>
 
@@ -183,35 +183,35 @@ const EnhancedNavigation2031: React.FC = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors duration-300 group"
+                className="flex items-center gap-2 text-gray-30o0 hover:text-white transition-colors duration-30o0 group"
                 onClick={closeAllDropdowns}
               >
-                <item.icon className="w-4 h-4 group-hover:text-cyan-400 transition-colors duration-300" />
+                <item.icon className="w-4 h-4 group-hover:text-cyan-40o0 transition-colors duration-30o0"  />
                 {item.name}
               </Link>
             ))}
 
             {/* Services Dropdown */}
             <div className="relative group">
-              <button className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors duration-300">
-                <Briefcase className="w-4 h-4" />
+              <button className="flex items-center gap-2 text-gray-30o0 hover:text-white transition-colors duration-30o0">
+                <Briefcase className="w-4 h-4"  />
                 All Services
-                <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
+                <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-30o0"  />
               </button>
               
               {/* Mega Menu */}
-              <div className="absolute top-full left-0 w-screen max-w-7xl bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
+              <div className="absolute top-full left-0 w-screen max-w-7xl bg-gray-90o0/95 backdrop-blur-xl border border-gray-70o0/50 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-10o0 group-hover:visible transition-all duration-30o0 transform translate-y-4 group-hover:translate-y-0">
                 <div className="p-8">
                   <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                     {serviceCategories.map((category) => (
                       <div key={category.title} className="space-y-4">
                         <div className="flex items-center gap-3">
                           <div className={`w-10 h-10 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center text-white`}>
-                            <category.icon className="w-5 h-5" />
+                            <category.icon className="w-5 h-5"  />
                           </div>
                           <div>
                             <h3 className="font-semibold text-white">{category.title}</h3>
-                            <p className="text-sm text-gray-400">{category.description}</p>
+                            <p className="text-sm text-gray-40o0">{category.description}</p>
                           </div>
                         </div>
                         <div className="space-y-2">
@@ -219,17 +219,17 @@ const EnhancedNavigation2031: React.FC = () => {
                             <Link
                               key={service.name}
                               href={service.href}
-                              className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-300 group"
+                              className="block p-3 rounded-lg hover:bg-gray-80o0/50 transition-colors duration-30o0 group"
                               onClick={closeAllDropdowns}
                             >
                               <div className="flex items-center justify-between">
                                 <div>
-                                  <div className="font-medium text-white group-hover:text-cyan-400 transition-colors duration-300">
+                                  <div className="font-medium text-white group-hover:text-cyan-40o0 transition-colors duration-30o0">
                                     {service.name}
                                   </div>
-                                  <div className="text-sm text-gray-400">{service.description}</div>
+                                  <div className="text-sm text-gray-40o0">{service.description}</div>
                                 </div>
-                                <div className="text-sm font-semibold text-cyan-400">{service.price}</div>
+                                <div className="text-sm font-semibold text-cyan-40o0">{service.price}</div>
                               </div>
                             </Link>
                           ))}
@@ -239,18 +239,18 @@ const EnhancedNavigation2031: React.FC = () => {
                   </div>
                   
                   {/* Quick Links */}
-                  <div className="mt-8 pt-8 border-t border-gray-700/50">
+                  <div className="mt-8 pt-8 border-t border-gray-70o0/50">
                     <h3 className="text-lg font-semibold text-white mb-4">Quick Access</h3>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                       {quickLinks.map((link) => (
                         <Link
                           key={link.name}
                           href={link.href}
-                          className="flex items-center gap-2 p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-300 group"
+                          className="flex items-center gap-2 p-3 rounded-lg hover:bg-gray-80o0/50 transition-colors duration-30o0 group"
                           onClick={closeAllDropdowns}
                         >
-                          <link.icon className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors duration-300" />
-                          <span className="text-sm text-gray-300 group-hover:text-white transition-colors duration-300">
+                          <link.icon className="w-4 h-4 text-gray-40o0 group-hover:text-cyan-40o0 transition-colors duration-30o0"  />
+                          <span className="text-sm text-gray-30o0 group-hover:text-white transition-colors duration-30o0">
                             {link.name}
                           </span>
                         </Link>
@@ -266,9 +266,9 @@ const EnhancedNavigation2031: React.FC = () => {
           <div className="hidden lg:flex items-center gap-4">
             <Link
               href={`tel:${contactInfo.mobile}`}
-              className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+              className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-60o0 hover:to-blue-70o0 text-white font-semibold rounded-xl transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-lg hover:shadow-cyan-50o0/25"
             >
-              <Phone className="w-4 h-4" />
+              <Phone className="w-4 h-4"  />
               Get Started
             </Link>
           </div>
@@ -276,9 +276,9 @@ const EnhancedNavigation2031: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-300"
+            className="lg:hidden p-2 text-gray-30o0 hover:text-white transition-colors duration-30o0"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
           </button>
         </div>
       </div>
@@ -290,7 +290,7 @@ const EnhancedNavigation2031: React.FC = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50"
+            className="lg:hidden bg-gray-90o0/95 backdrop-blur-xl border-t border-gray-80o0/50"
           >
             <div className="container mx-auto px-4 py-6">
               <div className="space-y-4">
@@ -298,32 +298,32 @@ const EnhancedNavigation2031: React.FC = () => {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="flex items-center gap-3 p-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-colors duration-300"
+                    className="flex items-center gap-3 p-3 text-gray-30o0 hover:text-white hover:bg-gray-80o0/50 rounded-lg transition-colors duration-30o0"
                     onClick={closeAllDropdowns}
                   >
-                    <item.icon className="w-5 h-5" />
+                    <item.icon className="w-5 h-5"  />
                     {item.name}
                   </Link>
                 ))}
                 
                 {/* Mobile Services */}
-                <div className="pt-4 border-t border-gray-700/50">
+                <div className="pt-4 border-t border-gray-70o0/50">
                   <div className="text-lg font-semibold text-white mb-4">Our Services</div>
                   <div className="space-y-2">
                     {serviceCategories.slice(0, 3).map((category) => (
-                      <div key={category.title} className="p-3 bg-gray-800/50 rounded-lg">
+                      <div key={category.title} className="p-3 bg-gray-80o0/50 rounded-lg">
                         <div className="flex items-center gap-3 mb-2">
                           <div className={`w-8 h-8 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center text-white`}>
-                            <category.icon className="w-4 h-4" />
+                            <category.icon className="w-4 h-4"  />
                           </div>
                           <span className="font-medium text-white">{category.title}</span>
                         </div>
-                        <div className="text-sm text-gray-400 ml-11">{category.description}</div>
+                        <div className="text-sm text-gray-40o0 ml-11">{category.description}</div>
                       </div>
                     ))}
                     <Link
-                      href="/comprehensive-2029-services"
-                      className="block p-3 text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                      href="/comprehensive-20o29-services"
+                      className="block p-3 text-center bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0"
                       onClick={closeAllDropdowns}
                     >
                       View All Services
@@ -332,13 +332,13 @@ const EnhancedNavigation2031: React.FC = () => {
                 </div>
 
                 {/* Mobile CTA */}
-                <div className="pt-4 border-t border-gray-700/50">
+                <div className="pt-4 border-t border-gray-70o0/50">
                   <Link
                     href={`tel:${contactInfo.mobile}`}
-                    className="flex items-center justify-center gap-2 w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300"
+                    className="flex items-center justify-center gap-2 w-full py-3 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-60o0 hover:to-blue-70o0 text-white font-semibold rounded-xl transition-all duration-30o0"
                     onClick={closeAllDropdowns}
                   >
-                    <Phone className="w-5 h-5" />
+                    <Phone className="w-5 h-5"  />
                     Call {contactInfo.mobile}
                   </Link>
                 </div>
@@ -351,4 +351,4 @@ const EnhancedNavigation2031: React.FC = () => {
   );
 };
 
-export default EnhancedNavigation2031;
+export default EnhancedNavigation20o31;

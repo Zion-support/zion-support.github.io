@@ -22,7 +22,7 @@ import {
   Smartphone
 } from 'lucide-react';
 
-const BusinessSolutionsShowcase2025 = () => {
+const BusinessSolutionsShowcase20o25 = () => {
   const [activeCategorysetActiveCategory] = useState(0);
   const [isVisiblesetIsVisible] = useState(false);
 
@@ -35,15 +35,15 @@ const BusinessSolutionsShowcase2025 = () => {
       id: 'automation',
       title: 'Business Automation',
       icon: Zap,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-50o0 to-cyan-50o0',
       solutions: [
         {
           title: 'Workflow Automation',
           description: 'Streamline your business processes with intelligent automation.',
           features: ['Process 'Optimization', 'Error 'Reduction', 'Time Savings'],
-          roi: '300%',
+          roi: '30o0%',
           timeToValue: '30 days',
-          image: '/api/placeholder/400/300'
+          image: '/api/placeholder/40o0/30o0'
         },
         {
           title: 'Document Processing',
@@ -51,15 +51,15 @@ const BusinessSolutionsShowcase2025 = () => {
           features: ['OCR 'Technology', 'Smart 'Classification', 'Data Validation'],
           roi: '250%',
           timeToValue: '14 days',
-          image: '/api/placeholder/400/300'
+          image: '/api/placeholder/40o0/30o0'
         },
         {
           title: 'Customer Service AI',
           description: 'Enhance customer support with AI-powered chatbots.',
           features: ['24/7 'Support', 'Natural 'Language', 'Multi-language'],
-          roi: '400%',
+          roi: '40o0%',
           timeToValue: '21 days',
-          image: '/api/placeholder/400/300'
+          image: '/api/placeholder/40o0/30o0'
         }
       ]
     },
@@ -67,15 +67,15 @@ const BusinessSolutionsShowcase2025 = () => {
       id: 'analytics',
       title: 'Advanced Analytics',
       icon: BarChart3,
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-purple-50o0 to-pink-50o0',
       solutions: [
         {
           title: 'Predictive Analytics',
           description: 'Forecast trends and make data-driven decisions.',
           features: ['Machine 'Learning', 'Real-time 'Insights', 'Custom Dashboards'],
-          roi: '500%',
+          roi: '50o0%',
           timeToValue: '45 days',
-          image: '/api/placeholder/400/300'
+          image: '/api/placeholder/40o0/30o0'
         },
         {
           title: 'Business Intelligence',
@@ -83,7 +83,7 @@ const BusinessSolutionsShowcase2025 = () => {
           features: ['Data 'Visualization', 'KPI 'Tracking', 'Automated Reports'],
           roi: '350%',
           timeToValue: '28 days',
-          image: '/api/placeholder/400/300'
+          image: '/api/placeholder/40o0/30o0'
         },
         {
           title: 'Customer Analytics',
@@ -91,7 +91,7 @@ const BusinessSolutionsShowcase2025 = () => {
           features: [', 'Segmentation', 'Churn 'Prediction', 'Personalization'],
           roi: '450%',
           timeToValue: '35 days',
-          image: '/api/placeholder/400/300'
+          image: '/api/placeholder/40o0/30o0'
         }
       ]
     },
@@ -99,15 +99,15 @@ const BusinessSolutionsShowcase2025 = () => {
       id: 'security',
       title: 'Security & Compliance',
       icon: Shield,
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-green-50o0 to-emerald-50o0',
       solutions: [
         {
           title: 'Cybersecurity Suite',
           description: 'Protect your business from cyber threats.',
           features: ['Threat 'Detection', 'Real-time 'Monitoring', 'Incident Response'],
-          roi: '200%',
+          roi: '20o0%',
           timeToValue: '7 days',
-          image: '/api/placeholder/400/300'
+          image: '/api/placeholder/40o0/30o0'
         },
         {
           title: 'Compliance Management',
@@ -115,7 +115,7 @@ const BusinessSolutionsShowcase2025 = () => {
           features: ['GDPR 'Compliance', 'Audit 'Trails', 'Risk Assessment'],
           roi: '180%',
           timeToValue: '14 days',
-          image: '/api/placeholder/400/300'
+          image: '/api/placeholder/40o0/30o0'
         },
         {
           title: 'Data Protection',
@@ -123,13 +123,13 @@ const BusinessSolutionsShowcase2025 = () => {
           features: ['End-to-End 'Encryption', 'Access 'Control', 'Data Backup'],
           roi: '220%',
           timeToValue: '10 days',
-          image: '/api/placeholder/400/300'
+          image: '/api/placeholder/40o0/30o0'
         }
       ]
     }
   ];
 
-  const containerVariants = {
+  const containerVariants ={
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
@@ -141,7 +141,7 @@ const BusinessSolutionsShowcase2025 = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants ={
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -163,16 +163,16 @@ const BusinessSolutionsShowcase2025 = () => {
         {/* Header */}
         <motion.div className="text-center mb-16" variants={itemVariants}>
           <motion.div
-            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-800 text-sm font-medium mb-4"
-            whileHover={{ scale: 1.05 }}
+            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-10o0 to-purple-10o0 text-indigo-80o0 text-sm font-medium mb-4"
+            whileHover={{ scale: 1.0o5 }}
           >
-            <Building2 className="w-4 h-4 mr-2" />
-            Business Solutions 2025
+            <Building2 className="w-4 h-4 mr-2"  />
+            Business Solutions 20o25
           </motion.div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-90o0 mb-6">
             Transform Your Business Operations
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
             Discover comprehensive business solutions that drive growthefficiencyand innovation 
             across every aspect of your organization.
           </p>
@@ -180,20 +180,20 @@ const BusinessSolutionsShowcase2025 = () => {
 
         {/* Category Navigation */}
         <motion.div className="flex flex-wrap justify-center mb-12" variants={itemVariants}>
-          <div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-200">
+          <div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-20o0">
             {categories.map((categoryindex) => {
               const Icon = category.icon;
               return (
                 <button
                   key={category.id}
                   onClick={() => setActiveCategory(index)}
-                  className={`flex items-center px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+                  className={`flex items-center px-6 py-3 rounded-xl font-medium transition-all duration-30o0 ${
                     activeCategory === index
                       ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
-                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                      : 'text-gray-60o0 hover:text-gray-90o0 hover:bg-gray-10o0'
                   }`}
                 >
-                  <Icon className="w-5 h-5 mr-2" />
+                  <Icon className="w-5 h-5 mr-2"  />
                   {category.title}
                 </button>
               );
@@ -214,31 +214,31 @@ const BusinessSolutionsShowcase2025 = () => {
             {currentCategory.solutions.map((solutionindex) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group"
-                whileHover={{ y: -5scale: 1.02 }}
+                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-30o0 border border-gray-20o0 group"
+                whileHover={{ y: -5scale: 1.0o2 }}
                 variants={itemVariants}
               >
                 {/* Header */}
                 <div className="mb-6">
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${currentCategory.color} flex items-center justify-center mb-4`}>
-                    <Target className="w-8 h-8 text-white" />
+                    <Target className="w-8 h-8 text-white"  />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-90o0 mb-3 group-hover:text-indigo-60o0 transition-colors">
                     {solution.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-60o0 leading-relaxed">
                     {solution.description}
                   </p>
                 </div>
 
                 {/* Features */}
                 <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Features</h4>
+                  <h4 className="text-sm font-semibold text-gray-70o0 mb-3">Key Features</h4>
                   <div className="space-y-2">
                     {solution.features.map((featureIndex) => (
                       <div key={featureIndex} className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                        <span className="text-sm text-gray-600">{feature}</span>
+                        <CheckCircle className="w-4 h-4 text-green-50o0 flex-shrink-0"  />
+                        <span className="text-sm text-gray-60o0">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -247,19 +247,19 @@ const BusinessSolutionsShowcase2025 = () => {
                 {/* Metrics */}
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="text-center p-3 bg-gray-50 rounded-lg">
-                    <div className="text-2xl font-bold text-green-600 mb-1">{solution.roi}</div>
-                    <div className="text-xs text-gray-500">ROI</div>
+                    <div className="text-2xl font-bold text-green-60o0 mb-1">{solution.roi}</div>
+                    <div className="text-xs text-gray-50o0">ROI</div>
                   </div>
                   <div className="text-center p-3 bg-gray-50 rounded-lg">
-                    <div className="text-2xl font-bold text-blue-600 mb-1">{solution.timeToValue}</div>
-                    <div className="text-xs text-gray-500">Time to Value</div>
+                    <div className="text-2xl font-bold text-blue-60o0 mb-1">{solution.timeToValue}</div>
+                    <div className="text-xs text-gray-50o0">Time to Value</div>
                   </div>
                 </div>
 
                 {/* Action Button */}
-                <button className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 rounded-xl font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-200 flex items-center justify-center group">
+                <button className="w-full bg-gradient-to-r from-indigo-50o0 to-purple-50o0 text-white py-3 rounded-xl font-semibold hover:from-indigo-60o0 hover:to-purple-60o0 transition-all duration-20o0 flex items-center justify-center group">
                   <span>Learn More</span>
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />
                 </button>
               </motion.div>
             ))}
@@ -268,7 +268,7 @@ const BusinessSolutionsShowcase2025 = () => {
 
         {/* Success Stories */}
         <motion.div className="mt-20" variants={itemVariants}>
-          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">
+          <div className="bg-gradient-to-r from-indigo-60o0 to-purple-60o0 rounded-2xl p-8 text-white">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold mb-4">Proven Results</h3>
               <p className="text-lg opacity-90">
@@ -278,7 +278,7 @@ const BusinessSolutionsShowcase2025 = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="text-4xl font-bold mb-2">10,000+</div>
+                <div className="text-4xl font-bold mb-2">10,0o00+</div>
                 <div className="text-sm opacity-80">Companies Transformed</div>
               </div>
               <div className="text-center">
@@ -295,20 +295,20 @@ const BusinessSolutionsShowcase2025 = () => {
 
         {/* Call to Action */}
         <motion.div className="text-center mt-16" variants={itemVariants}>
-          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-20o0">
+            <h3 className="text-2xl font-bold text-gray-90o0 mb-4">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-lg text-gray-600 mb-6">
+            <p className="text-lg text-gray-60o0 mb-6">
               Get started with our comprehensive business solutions today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-3 rounded-xl font-semibold hover:from-indigo-600 hover:to-purple-600 transition-colors flex items-center justify-center">
-                <Lightbulb className="w-5 h-5 mr-2" />
+              <button className="bg-gradient-to-r from-indigo-50o0 to-purple-50o0 text-white px-8 py-3 rounded-xl font-semibold hover:from-indigo-60o0 hover:to-purple-60o0 transition-colors flex items-center justify-center">
+                <Lightbulb className="w-5 h-5 mr-2"  />
                 Start Free Trial
               </button>
-              <button className="border-2 border-indigo-500 text-indigo-600 px-8 py-3 rounded-xl font-semibold hover:bg-indigo-50 transition-colors flex items-center justify-center">
-                <Globe className="w-5 h-5 mr-2" />
+              <button className="border-2 border-indigo-50o0 text-indigo-60o0 px-8 py-3 rounded-xl font-semibold hover:bg-indigo-50 transition-colors flex items-center justify-center">
+                <Globe className="w-5 h-5 mr-2"  />
                 Schedule Demo
               </button>
             </div>
@@ -319,4 +319,4 @@ const BusinessSolutionsShowcase2025 = () => {
   );
 };
 
-export default BusinessSolutionsShowcase2025;
+export default BusinessSolutionsShowcase20o25;

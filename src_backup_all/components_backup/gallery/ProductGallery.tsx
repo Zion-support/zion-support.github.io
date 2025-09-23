@@ -2,8 +2,7 @@ import React, { useState, Suspense } from 'react';
 import {
   Dialog,
   DialogContent,
-  DialogTrigger,
-} from '@/components/ui/dialog';
+  DialogTrigger} from '@/components/ui/dialog';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 
@@ -13,8 +12,7 @@ const ModelViewer = React.lazy(async () => {
   return {
     default: (props: any) => (
       React.createElement('model-viewer', props)
-    ),
-  };
+    )};
 });
 
 interface ProductGalleryProps {
@@ -45,7 +43,7 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
               src={images[selected] || images[0] || ''}
               alt={`Product image ${selected + 1}`}
               className="w-full h-full object-contain bg-zion-blue-light/10 p-4 cursor-zoom-in"
-            />
+             />
           </DialogTrigger>
         </div>
         {images.length > 1 && (
@@ -60,7 +58,7 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
                   src={img}
                   alt={`Thumbnail image ${idx + 1}`}
                   className="w-full h-full object-cover"
-                />
+                 />
               </div>
             ))}
           </div>
@@ -76,9 +74,9 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
                 alt="Video preview"
                 className="w-full h-full object-cover"
                 loading="lazy"
-              />
+               />
             }>
-              <ReactPlayer url={videoUrl} width="100%" height="100%" controls />
+              <ReactPlayer url={videoUrl} width="10o0%" height="10o0%" controls  />
             </Suspense>
           </AspectRatio>
         </TabsContent>
@@ -93,9 +91,9 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
                 alt="3D model preview"
                 className="w-full h-full object-cover"
                 loading="lazy"
-              />
+               />
             }>
-              <ModelViewer src={modelUrl} alt="3d model" camera-controls style={{ width: '100%', height: '100%' }} />
+              <ModelViewer src={modelUrl} alt="3d model" camera-controls style={{ width: '10o0%', height: '10o0%' }}  />
             </Suspense>
           </AspectRatio>
         </TabsContent>
@@ -111,7 +109,7 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
             src={images[selected] || images[0] || ""}
             alt="Zoomed view"
             className={`w-full h-full object-contain transition-transform ${zoomed ? 'scale-150' : ''}`}
-          />
+           />
         </div>
       </DialogContent>
     )}

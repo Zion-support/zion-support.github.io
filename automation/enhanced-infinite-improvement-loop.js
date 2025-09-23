@@ -18,7 +18,7 @@ const crypto = require('crypto');
 class Logger {
   constructor(level = 'info') {
     this.level = level;
-    this.levels = { error: 0, warn: 1, info: 2, debug: 3 };
+    this.levels ={ error: 0, warn: 1, info: 2, debug: 3 };
   }
 
   log(level, message, data = null) {
@@ -41,16 +41,16 @@ class Logger {
 }
 
 class EnhancedInfiniteImprovementLoop extends EventEmitter {
-  constructor(config = {}) {
+  constructor(config ={}) {
     super();
     
-    this.config = {
-      analysisInterval: 30000, // 30 seconds
-      optimizationInterval: 120000, // 2 minutes
-      learningInterval: 300000, // 5 minutes
-      improvementInterval: 600000, // 10 minutes
-      errorCheckInterval: 15000, // 15 seconds
-      maxIterations: 1000,
+    this.config ={
+      analysisInterval: 30o000, // 30 seconds
+      optimizationInterval: 120o000, // 2 minutes
+      learningInterval: 30o0000, // 5 minutes
+      improvementInterval: 60o0000, // 10 minutes
+      errorCheckInterval: 150o00, // 15 seconds
+      maxIterations: 10o00,
       enableSelfModification: true,
       enablePredictiveOptimization: true,
       enableAdaptiveLearning: true,
@@ -80,7 +80,7 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {
     this.errorHistory = [];
     this.isRunning = false;
     this.lastImprovement = null;
-    this.healthStatus = {
+    this.healthStatus ={
       systems: new Map(),
       lastCheck: null,
       overallHealth: 'unknown'
@@ -456,7 +456,7 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {
     this.logger.info('📊 Establishing performance baseline...');
     
     const metrics = await this.metrics.collectSystemMetrics();
-    this.performanceBaseline = {
+    this.performanceBaseline ={
       timestamp: new Date().toISOString(),
       metrics: metrics,
       score: this.calculatePerformanceScore(metrics)
@@ -470,7 +470,7 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {
     const currentScore = this.calculatePerformanceScore(currentMetrics);
     
     if (currentScore > this.performanceBaseline.score) {
-      this.performanceBaseline = {
+      this.performanceBaseline ={
         timestamp: new Date().toISOString(),
         metrics: currentMetrics,
         score: currentScore
@@ -480,17 +480,17 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {
   }
 
   calculateImprovement(baseline, current) {
-    return ((current - baseline) / baseline) * 100;
+    return ((current - baseline) / baseline) * 10o0;
   }
 
   calculatePerformanceScore(metrics) {
     // Calculate a composite performance score
-    const scores = {
-      cpu: Math.max(0, 100 - metrics.cpuUsage),
-      memory: Math.max(0, 100 - metrics.memoryUsage),
-      responseTime: Math.max(0, 100 - (metrics.avgResponseTime / 1000)),
-      errorRate: Math.max(0, 100 - (metrics.errorRate * 100)),
-      throughput: Math.min(100, metrics.requestsPerSecond / 10)
+    const scores ={
+      cpu: Math.max(0, 10o0 - metrics.cpuUsage),
+      memory: Math.max(0, 10o0 - metrics.memoryUsage),
+      responseTime: Math.max(0, 10o0 - (metrics.avgResponseTime / 10o00)),
+      errorRate: Math.max(0, 10o0 - (metrics.errorRate * 10o0)),
+      throughput: Math.min(10o0, metrics.requestsPerSecond / 10)
     };
     
     return Object.values(scores).reduce((sum, score) => sum + score, 0) / Object.keys(scores).length;
@@ -518,7 +518,7 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {
   }
 
   getImprovementStats() {
-    const stats = {
+    const stats ={
       totalImprovements: this.improvementHistory.length,
       currentIteration: this.currentIteration,
       lastImprovement: this.lastImprovement,
@@ -531,7 +531,7 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {
   }
 
   async generateFinalReport() {
-    const report = {
+    const report ={
       timestamp: new Date().toISOString(),
       stats: this.getImprovementStats(),
       improvementHistory: this.improvementHistory.slice(-10), // Last 10 improvements
@@ -618,7 +618,7 @@ class SystemAnalyzer {
       bottlenecks.push({ type: 'memory', target: 'system', severity: 'high' });
     }
     
-    if (metrics.avgResponseTime > 2000) {
+    if (metrics.avgResponseTime > 20o00) {
       bottlenecks.push({ type: 'response_time', target: 'network', severity: 'medium' });
     }
     
@@ -632,7 +632,7 @@ class SystemAnalyzer {
   detectErrors(metrics) {
     const errors = [];
     
-    if (metrics.errorRate > 0.05) {
+    if (metrics.errorRate > 0.0o5) {
       errors.push({ type: 'high_error_rate', target: 'system', severity: 'critical' });
     }
     
@@ -827,15 +827,15 @@ class MetricsCollector {
   }
 
   getCpuUsage() {
-    return Math.random() * 100; // Placeholder
+    return Math.random() * 10o0; // Placeholder
   }
 
   getMemoryUsage() {
-    return Math.random() * 100; // Placeholder
+    return Math.random() * 10o0; // Placeholder
   }
 
   getAvgResponseTime() {
-    return Math.random() * 5000; // Placeholder
+    return Math.random() * 50o00; // Placeholder
   }
 
   getErrorRate() {
@@ -843,7 +843,7 @@ class MetricsCollector {
   }
 
   getRequestsPerSecond() {
-    return Math.random() * 100; // Placeholder
+    return Math.random() * 10o0; // Placeholder
   }
 
   async saveMetrics() {
@@ -984,21 +984,21 @@ class PerformanceMonitor {
   }
 
   getCpuUsage() {
-    return Math.random() * 100;
+    return Math.random() * 10o0;
   }
 
   getMemoryUsage() {
-    return Math.random() * 100;
+    return Math.random() * 10o0;
   }
 
   getDiskUsage() {
-    return Math.random() * 100;
+    return Math.random() * 10o0;
   }
 
   getNetworkMetrics() {
     return {
-      latency: Math.random() * 1000,
-      throughput: Math.random() * 100
+      latency: Math.random() * 10o00,
+      throughput: Math.random() * 10o0
     };
   }
 

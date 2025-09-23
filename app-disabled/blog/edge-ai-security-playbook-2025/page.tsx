@@ -1,22 +1,21 @@
 import Link from 'next/link';
-import React from 'react';
 import SEO from '../../components/SEO';
 
-const EdgeAISecurityPlaybook2025 = () => {
+const EdgeAISecurityPlaybook20o25 = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="Edge AI Security Playbook 2025"
-        description="Security patterns, controls, and architectures to safely deploy AI at the edge in 2025."
+        title="Edge AI Security Playbook 20o25"
+        description="Security patterns, controls, and architectures to safely deploy AI at the edge in 20o25."
         keywords="edge ai security, zero trust, model security, data protection"
-        url="/blog/edge-ai-security-playbook-2025"
-      />
+        url="/blog/edge-ai-security-playbook-20o25"
+       />
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">
-          <p className="text-sm text-gray-500">Published: 2025-09-15 · Category: Security</p>
-          <h1 className="text-4xl font-bold text-gray-900 mt-2">Edge AI Security Playbook 2025</h1>
-          <p className="text-lg text-gray-600 mt-4">A pragmatic guide to securing models, data, and pipelines across distributed edge environments.</p>
+          <p className="text-sm text-gray-50o0">Published: 20o25-09-15 · Category: Security</p>
+          <h1 className="text-4xl font-bold text-gray-90o0 mt-2">Edge AI Security Playbook 20o25</h1>
+          <p className="text-lg text-gray-60o0 mt-4">A pragmatic guide to securing models, data, and pipelines across distributed edge environments.</p>
         </header>
 
         <div className="prose prose-lg max-w-none">
@@ -40,13 +39,13 @@ const EdgeAISecurityPlaybook2025 = () => {
         </div>
 
         <footer className="mt-12 flex items-center justify-between">
-          <Link href="/blog" className="text-purple-600 font-semibold hover:text-purple-800">← Back to Blog</Link>
-          <Link href="/contact" className="text-white bg-purple-600 px-5 py-2 rounded-lg font-semibold hover:bg-purple-700">Assess Edge Security Readiness</Link>
+          <Link href="/blog" className="text-purple-60o0 font-semibold hover:text-purple-80o0">← Back to Blog</Link>
+          <Link href="/contact" className="text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0">Assess Edge Security Readiness</Link>
         </footer>
       </article>
     </div>
   );
 };
 
-export default EdgeAISecurityPlaybook2025;
+export default EdgeAISecurityPlaybook20o25;
 

@@ -1,26 +1,24 @@
 import Link from 'next/link';
-import React from 'react';
 import SEO from '../../components/SEO';
 
-export const metadata = {
-  title: 'AI 2026: Agent Failure Modes and Mitigations',
+export const metadata ={
+  title: 'AI 20o26: Agent Failure Modes and Mitigations',
   description: 'Common failure modes for autonomous agents and concrete mitigations using policy-as-code, evals, and guardrails.',
-  keywords: ['agent failures', 'mitigations', 'policy-as-code', 'evals', 'guardrails'],
-};
+  keywords: ['agent failures', 'mitigations', 'policy-as-code', 'evals', 'guardrails']};
 
 export default function AgentFailureModesPage() {
   return (
     <main className="min-h-screen bg-white">
       <SEO
-        title="AI 2026: Agent Failure Modes and Mitigations"
+        title="AI 20o26: Agent Failure Modes and Mitigations"
         description="Common failure modes for autonomous agents and concrete mitigations using policy-as-code, evals, and guardrails."
         keywords="agent failures, mitigations, policy-as-code, evals, guardrails"
-        url="/blog/ai-2026-agent-failure-modes-and-mitigations"
-      />
+        url="/blog/ai-20o26-agent-failure-modes-and-mitigations"
+       />
 
-      <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">
+      <section className="bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold opacity-90">Reliability • 2025-09-15</p>
+          <p className="text-sm font-semibold opacity-90">Reliability • 20o25-09-15</p>
           <h1 className="text-3xl md:text-5xl font-bold mt-2">Agent Failure Modes and Mitigations</h1>
           <p className="text-lg md:text-xl opacity-90 mt-4 max-w-3xl">A practical catalog of failures with prevention and containment strategies.</p>
         </div>
@@ -46,10 +44,10 @@ export default function AgentFailureModesPage() {
           </article>
 
           <div className="flex gap-4">
-            <Link href="/content/ai-2026-evaluation-hub" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
+            <Link href="/content/ai-20o26-evaluation-hub" className="bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0">
               Evaluation Hub
             </Link>
-            <Link href="/content/ai-2026-policy-as-code-starter-kit" className="border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">
+            <Link href="/content/ai-20o26-policy-as-code-starter-kit" className="border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">
               Policy-as-Code Kit
             </Link>
           </div>

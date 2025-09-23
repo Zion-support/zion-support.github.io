@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -7,17 +6,17 @@ export default function AICustomerExperienceAutomation() {
     <>
       <Head>
         <title>AI-Powered Customer Experience: The Future of Customer Service Automation | Zion Tech Group</title>
-        <meta name="description" content="Discover how AI is revolutionizing customer experience through intelligent automation, personalized interactions, and predictive customer service solutions." />
-        <meta property="og:title" content="AI-Powered Customer Experience: The Future of Customer Service Automation" />
-        <meta property="og:description" content="Discover how AI is revolutionizing customer experience through intelligent automation, personalized interactions, and predictive customer service solutions." />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="description" content="Discover how AI is revolutionizing customer experience through intelligent automation, personalized interactions, and predictive customer service solutions."  />
+        <meta property="og:title" content="AI-Powered Customer Experience: The Future of Customer Service Automation"  />
+        <meta property="og:description" content="Discover how AI is revolutionizing customer experience through intelligent automation, personalized interactions, and predictive customer service solutions."  />
+        <meta name="twitter:card" content="summary_large_image"  />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
             <nav className="mb-8">
-              <Link href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              <Link href="/blog" className="text-cyan-40o0 hover:text-cyan-30o0 transition-colors">
                 ← Back to Blog
               </Link>
             </nav>
@@ -25,14 +24,14 @@ export default function AICustomerExperienceAutomation() {
             <article className="prose prose-invert prose-lg max-w-none">
               <header className="mb-12 text-center">
                 <div className="flex items-center gap-3 justify-center mb-4">
-                  <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
+                  <span className="px-3 py-1 bg-cyan-40o0/20 text-cyan-40o0 text-sm rounded-full border border-cyan-40o0/30">
                     Customer Experience
                   </span>
-                  <span className="text-white/60 text-sm">January 20, 2025</span>
+                  <span className="text-white/60 text-sm">January 20, 20o25</span>
                   <span className="text-white/60 text-sm">•</span>
                   <span className="text-white/60 text-sm">9 min read</span>
                 </div>
-                <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+                <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 bg-clip-text text-transparent">
                   AI-Powered Customer Experience: The Future of Customer Service Automation
                 </h1>
                 <p className="text-xl text-white/80 max-w-3xl mx-auto">
@@ -43,7 +42,7 @@ export default function AICustomerExperienceAutomation() {
               </header>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-cyan-400">The Customer Experience Revolution</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-cyan-40o0">The Customer Experience Revolution</h2>
                 <p className="text-white/90 mb-4">
                   In today's digital-first world, customers expect instant, personalized, and seamless 
                   interactions across all touchpoints. Traditional customer service approaches can no longer 
@@ -59,7 +58,7 @@ export default function AICustomerExperienceAutomation() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Intelligent Chatbots and Virtual Assistants</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-fuchsia-40o0">Intelligent Chatbots and Virtual Assistants</h2>
                 <p className="text-white/90 mb-4">
                   Modern AI chatbots have evolved far beyond simple rule-based responses. Today's intelligent 
                   virtual assistants can:
@@ -78,7 +77,7 @@ export default function AICustomerExperienceAutomation() {
                   from product recommendations to order processing to issue resolution, without human intervention.
                 </p>
                 <div className="bg-white/10 rounded-lg p-4 border border-white/20 mb-6">
-                  <h4 className="font-semibold text-fuchsia-400 mb-2">Success Story</h4>
+                  <h4 className="font-semibold text-fuchsia-40o0 mb-2">Success Story</h4>
                   <p className="text-white/80 text-sm">
                     A leading e-commerce company implemented AI chatbots and saw a 40% reduction in customer 
                     service tickets, with 85% of customers reporting satisfaction with automated support.
@@ -87,7 +86,7 @@ export default function AICustomerExperienceAutomation() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-green-400">Predictive Customer Service</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-green-40o0">Predictive Customer Service</h2>
                 <p className="text-white/90 mb-4">
                   One of the most powerful applications of AI in customer experience is predictive analytics. 
                   These systems can anticipate customer needs and issues before they arise:
@@ -109,7 +108,7 @@ export default function AICustomerExperienceAutomation() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-blue-400">Omnichannel Experience Automation</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-blue-40o0">Omnichannel Experience Automation</h2>
                 <p className="text-white/90 mb-4">
                   Today's customers interact with brands across multiple channels—websites, mobile apps, 
                   social media, email, and phone calls. AI-powered automation ensures consistent experiences 
@@ -131,14 +130,14 @@ export default function AICustomerExperienceAutomation() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-purple-400">Personalization at Scale</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-purple-40o0">Personalization at Scale</h2>
                 <p className="text-white/90 mb-4">
                   AI enables organizations to deliver truly personalized experiences to every customer, 
                   regardless of scale:
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <h4 className="font-semibold text-purple-400 mb-2">Dynamic Content</h4>
+                    <h4 className="font-semibold text-purple-40o0 mb-2">Dynamic Content</h4>
                     <p className="text-white/80 text-sm">
                       Website content, product recommendations, and marketing messages automatically 
                       adapt based on individual customer preferences and behavior.
@@ -146,7 +145,7 @@ export default function AICustomerExperienceAutomation() {
                   </div>
                   
                   <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <h4 className="font-semibold text-purple-400 mb-2">Behavioral Targeting</h4>
+                    <h4 className="font-semibold text-purple-40o0 mb-2">Behavioral Targeting</h4>
                     <p className="text-white/80 text-sm">
                       AI analyzes customer behavior patterns to predict future needs and deliver 
                       relevant offers and information at the optimal time.
@@ -160,7 +159,7 @@ export default function AICustomerExperienceAutomation() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Sentiment Analysis and Emotional Intelligence</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-yellow-40o0">Sentiment Analysis and Emotional Intelligence</h2>
                 <p className="text-white/90 mb-4">
                   Understanding customer emotions and sentiment is crucial for delivering exceptional experiences. 
                   AI-powered sentiment analysis provides:
@@ -178,7 +177,7 @@ export default function AICustomerExperienceAutomation() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-cyan-400">Implementation Strategies</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-cyan-40o0">Implementation Strategies</h2>
                 <p className="text-white/90 mb-4">
                   Successfully implementing AI-powered customer experience automation requires careful planning:
                 </p>
@@ -195,14 +194,14 @@ export default function AICustomerExperienceAutomation() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-green-400">The Future of AI-Powered CX</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-green-40o0">The Future of AI-Powered CX</h2>
                 <p className="text-white/90 mb-4">
                   As AI technology continues to advance, we can expect even more sophisticated customer 
                   experience automation:
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <h4 className="font-semibold text-green-400 mb-2">Voice and Visual AI</h4>
+                    <h4 className="font-semibold text-green-40o0 mb-2">Voice and Visual AI</h4>
                     <p className="text-white/80 text-sm">
                       Advanced voice recognition and computer vision will enable more natural, 
                       multimodal customer interactions.
@@ -210,7 +209,7 @@ export default function AICustomerExperienceAutomation() {
                   </div>
                   
                   <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <h4 className="font-semibold text-green-400 mb-2">Predictive Personalization</h4>
+                    <h4 className="font-semibold text-green-40o0 mb-2">Predictive Personalization</h4>
                     <p className="text-white/80 text-sm">
                       AI will anticipate customer needs before they express them, creating 
                       truly proactive experiences.
@@ -224,7 +223,7 @@ export default function AICustomerExperienceAutomation() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-purple-400">Conclusion</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-purple-40o0">Conclusion</h2>
                 <p className="text-white/90 mb-4">
                   AI-powered customer experience automation is not just a trend—it's the future of 
                   customer service. Organizations that embrace these technologies will gain significant 
@@ -243,13 +242,13 @@ export default function AICustomerExperienceAutomation() {
             <div className="mt-16 pt-8 border-t border-white/20">
               <h3 className="text-xl font-semibold mb-4 text-white">Share this article</h3>
               <div className="flex gap-4">
-                <a href="#" className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white transition-colors">
+                <a href="#" className="px-4 py-2 bg-blue-60o0 hover:bg-blue-70o0 rounded-lg text-white transition-colors">
                   Twitter
                 </a>
-                <a href="#" className="px-4 py-2 bg-blue-800 hover:bg-blue-900 rounded-lg text-white transition-colors">
+                <a href="#" className="px-4 py-2 bg-blue-80o0 hover:bg-blue-90o0 rounded-lg text-white transition-colors">
                   LinkedIn
                 </a>
-                <a href="#" className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg text-white transition-colors">
+                <a href="#" className="px-4 py-2 bg-green-60o0 hover:bg-green-70o0 rounded-lg text-white transition-colors">
                   Email
                 </a>
               </div>

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import type { ServiceItem } from './EnhancedMarketplaceCard';
 
-export type QuoteFormValues = {
+export type QuoteFormValues ={
   serviceTitle: string;
   projectDescription: string;
   timelineStart?: string;
@@ -12,7 +12,7 @@ export type QuoteFormValues = {
   email: string;
 };
 
-type Props = {
+type Props ={
   open: boolean;
   onClose: () => void;
   service?: ServiceItem | null;
@@ -20,12 +20,12 @@ type Props = {
 };
 
 const budgetOptions = [
-  'Under $1,000',
-  '$1,000 - $5,000',
-  '$5,000 - $10,000',
-  '$10,000 - $25,000',
-  '$25,000 - $50,000',
-  '$50,000+',
+  'Under $1,0o00',
+  '$1,0o00 - $5,0o00',
+  '$5,0o00 - $10,0o00',
+  '$10,0o00 - $25,0o00',
+  '$25,0o00 - $50,0o00',
+  '$50,0o00+',
 ];
 
 export default function QuoteRequestModal({ open, onClose, service, onSubmit }: Props) {
@@ -35,8 +35,7 @@ export default function QuoteRequestModal({ open, onClose, service, onSubmit }: 
     timelineStart: '',
     timelineEnd: '',
     budgetRange: budgetOptions[0],
-    email: '',
-  });
+    email: ''});
   const [submitting, setSubmitting] = useState(false);
   const [confirmed, setConfirmed] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -74,7 +73,7 @@ export default function QuoteRequestModal({ open, onClose, service, onSubmit }: 
         <input
           value={values.serviceTitle}
           onChange={(e) => setValues({ ...values, serviceTitle: e.target.value })}
-          className="w-full rounded-lg bg-white/10 text-white border border-white/20 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400/60"
+          className="w-full rounded-lg bg-white/10 text-white border border-white/20 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-40o0/60"
           placeholder="Select a service"
           required
         />
@@ -84,7 +83,7 @@ export default function QuoteRequestModal({ open, onClose, service, onSubmit }: 
         <textarea
           value={values.projectDescription}
           onChange={(e) => setValues({ ...values, projectDescription: e.target.value })}
-          className="w-full min-h-[120px] rounded-lg bg-white/10 text-white border border-white/20 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400/60"
+          className="w-full min-h-[120px] rounded-lg bg-white/10 text-white border border-white/20 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-40o0/60"
           placeholder="Tell us about your goals, scope, and constraints"
           required
         />
@@ -96,7 +95,7 @@ export default function QuoteRequestModal({ open, onClose, service, onSubmit }: 
             type="date"
             value={values.timelineStart}
             onChange={(e) => setValues({ ...values, timelineStart: e.target.value })}
-            className="w-full rounded-lg bg-white/10 text-white border border-white/20 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400/60"
+            className="w-full rounded-lg bg-white/10 text-white border border-white/20 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-40o0/60"
           />
         </div>
         <div>
@@ -105,7 +104,7 @@ export default function QuoteRequestModal({ open, onClose, service, onSubmit }: 
             type="date"
             value={values.timelineEnd}
             onChange={(e) => setValues({ ...values, timelineEnd: e.target.value })}
-            className="w-full rounded-lg bg-white/10 text-white border border-white/20 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400/60"
+            className="w-full rounded-lg bg-white/10 text-white border border-white/20 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-40o0/60"
           />
         </div>
       </div>
@@ -115,7 +114,7 @@ export default function QuoteRequestModal({ open, onClose, service, onSubmit }: 
           <select
             value={values.budgetRange}
             onChange={(e) => setValues({ ...values, budgetRange: e.target.value })}
-            className="w-full rounded-lg bg-white/10 text-white border border-white/20 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400/60"
+            className="w-full rounded-lg bg-white/10 text-white border border-white/20 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-40o0/60"
           >
             {budgetOptions.map((opt) => (
               <option key={opt} value={opt}>{opt}</option>
@@ -128,20 +127,20 @@ export default function QuoteRequestModal({ open, onClose, service, onSubmit }: 
             type="email"
             value={values.email}
             onChange={(e) => setValues({ ...values, email: e.target.value })}
-            className="w-full rounded-lg bg-white/10 text-white border border-white/20 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400/60"
+            className="w-full rounded-lg bg-white/10 text-white border border-white/20 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-40o0/60"
             placeholder="you@company.com"
             required
           />
         </div>
       </div>
 
-      {error && <div className="text-sm text-red-300">{error}</div>}
+      {error && <div className="text-sm text-red-30o0">{error}</div>}
 
       <div className="pt-2">
         <button
           type="submit"
           disabled={submitting}
-          className="w-full rounded-xl px-5 py-2.5 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 text-white font-medium shadow hover:shadow-lg disabled:opacity-60"
+          className="w-full rounded-xl px-5 py-2.5 bg-gradient-to-r from-cyan-50o0 via-blue-50o0 to-purple-50o0 text-white font-medium shadow hover:shadow-lg disabled:opacity-60"
         >
           {submitting ? 'Submitting...' : 'Submit Request'}
         </button>
@@ -158,7 +157,7 @@ export default function QuoteRequestModal({ open, onClose, service, onSubmit }: 
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-          <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" onClick={onClose} />
+          <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" onClick={onClose}  />
           <motion.div
             role="dialog"
             aria-modal="true"
@@ -167,13 +166,13 @@ export default function QuoteRequestModal({ open, onClose, service, onSubmit }: 
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 10, opacity: 0 }}
           >
-            <div className="absolute -top-24 -left-24 w-72 h-72 rounded-full blur-3xl opacity-30 bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-500" />
+            <div className="absolute -top-24 -left-24 w-72 h-72 rounded-full blur-3xl opacity-30 bg-gradient-to-tr from-cyan-40o0 via-blue-50o0 to-purple-50o0"  />
             <button
               onClick={onClose}
               className="absolute top-3 right-3 p-2 rounded-full bg-white/10 hover:bg-white/15 border border-white/10"
               aria-label="Close"
             >
-              <X size={18} />
+              <X size={18}  />
             </button>
             <h2 className="text-xl font-semibold">Request a Quote</h2>
             <p className="text-sm text-white/80">{service?.title}</p>

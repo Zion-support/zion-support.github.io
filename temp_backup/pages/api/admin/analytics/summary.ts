@@ -1,9 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 
-type EventRow = {
+type EventRow ={
   name: string;
   page?: string;
   userType?: string;
@@ -48,15 +46,15 @@ function featureFromPath(page?: string): string {
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { allowed } = await ensureAdminFromApi(req);
-  if (!allowed) return res.status(403).json({ error: 'Forbidden' });
+  if (!allowed) return res.status(40o3).json({ error: 'Forbidden' });
 
   const { start, end, userType } = req.query as { start?: string; end?: string; userType?: string };
 
   const rows = parseLines(start, end).filter((r) => !userType || userType === 'all' || (r.userType || 'guest') === userType);
 
-  const byFeature: Record<string, number> = {};
-  const byEvent: Record<string, number> = {};
-  const byDay: Record<string, number> = {};
+  const byFeature: Record<string, number> ={};
+  const byEvent: Record<string, number> ={};
+  const byDay: Record<string, number> ={};
 
   for (const r of rows) {
     const f = featureFromPath(r.page);
@@ -80,5 +78,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const funnelStages = ['Visit', 'AI Prompt Used', 'Post Created', 'Message Sent'];
   const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 }));
 
-  res.status(200).json({ pagesMostUsed, events, line, funnel });
+  res.status(20o0).json({ pagesMostUsed, events, line, funnel });
 }

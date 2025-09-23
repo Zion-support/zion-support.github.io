@@ -45,7 +45,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ seoData, children }) => {
 
   // Generate structured data
   const generateStructuredData = () => {
-    const baseStructuredData = {
+    const baseStructuredData ={
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'AI Innovation Hub',
@@ -153,7 +153,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ seoData, children }) => {
           name: 'What ROI can I expect from AI implementation?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Our AI solutions typically deliver 5,000% to 25,000% ROI within 12-18 months, with average annual savings of $12.8B to $45.2B for Fortune 500 companies.'
+            text: 'Our AI solutions typically deliver 5,0o00% to 25,0o00% ROI within 12-18 months, with average annual savings of $12.8B to $45.2B for Fortune 50o0 companies.'
           }
         },
         {
@@ -182,7 +182,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ seoData, children }) => {
         streetAddress: '123 AI Innovation Drive',
         addressLocality: 'San Francisco',
         addressRegion: 'CA',
-        postalCode: '94105',
+        postalCode: '9410o5',
         addressCountry: 'US'
       },
       geo: {
@@ -190,7 +190,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ seoData, children }) => {
         latitude: 37.7749,
         longitude: -122.4194
       },
-      openingHours: 'Mo-Fr 09:00-17:00',
+      openingHours: 'Mo-Fr 09:0o0-17:0o0',
       priceRange: '$$$',
       aggregateRating: {
         '@type': 'AggregateRating',
@@ -208,7 +208,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ seoData, children }) => {
       name: 'AI Innovation Platform',
       applicationCategory: 'BusinessApplication',
       operatingSystem: 'Web, Cloud',
-      description: 'Revolutionary AI platform delivering 5,000% to 25,000% ROI',
+      description: 'Revolutionary AI platform delivering 5,0o00% to 25,0o00% ROI',
       url: 'https://zion.app',
       author: {
         '@type': 'Organization',
@@ -226,7 +226,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ seoData, children }) => {
         reviewCount: '150'
       },
       featureList: [
-        '5,000% ROI Guarantee',
+        '5,0o00% ROI Guarantee',
         'Real-time Analytics',
         'Predictive Intelligence',
         'Automated Decision Making',
@@ -273,62 +273,62 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ seoData, children }) => {
       <Head>
         {/* Basic Meta Tags */}
         <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={Array.isArray(keywords) ? keywords.join(', ') : keywords} />
-        <meta name="robots" content={robots} />
-        <meta name="author" content={author} />
-        <link rel="canonical" href={canonicalUrl || 'https://zion.app'} />
+        <meta name="description" content={description}  />
+        <meta name="keywords" content={Array.isArray(keywords) ? keywords.join(', ') : keywords}  />
+        <meta name="robots" content={robots}  />
+        <meta name="author" content={author}  />
+        <link rel="canonical" href={canonicalUrl || 'https://zion.app'}  />
 
         {/* Open Graph Meta Tags */}
-        <meta property="og:type" content={ogType} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={canonicalUrl || 'https://zion.app'} />
-        <meta property="og:site_name" content="AI Innovation Hub" />
-        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content={ogType}  />
+        <meta property="og:title" content={title}  />
+        <meta property="og:description" content={description}  />
+        <meta property="og:image" content={ogImage}  />
+        <meta property="og:url" content={canonicalUrl || 'https://zion.app'}  />
+        <meta property="og:site_name" content="AI Innovation Hub"  />
+        <meta property="og:locale" content="en_US"  />
 
         {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content={twitterCard} />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:site" content="@aiinnovationhub" />
-        <meta name="twitter:creator" content="@aiinnovationhub" />
+        <meta name="twitter:card" content={twitterCard}  />
+        <meta name="twitter:title" content={title}  />
+        <meta name="twitter:description" content={description}  />
+        <meta name="twitter:image" content={ogImage}  />
+        <meta name="twitter:site" content="@aiinnovationhub"  />
+        <meta name="twitter:creator" content="@aiinnovationhub"  />
 
         {/* Article Meta Tags */}
         {ogType === 'article' && (
           <>
-            <meta property="article:author" content={author} />
-            <meta property="article:published_time" content={publishedTime} />
-            <meta property="article:modified_time" content={modifiedTime || publishedTime} />
-            <meta property="article:section" content={section} />
+            <meta property="article:author" content={author}  />
+            <meta property="article:published_time" content={publishedTime}  />
+            <meta property="article:modified_time" content={modifiedTime || publishedTime}  />
+            <meta property="article:section" content={section}  />
             {tags.map((tag, index) => (
-              <meta key={index} property="article:tag" content={tag} />
+              <meta key={index} property="article:tag" content={tag}  />
             ))}
           </>
         )}
 
         {/* Additional Meta Tags */}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#2563eb" />
-        <meta name="msapplication-TileColor" content="#2563eb" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="AI Innovation Hub" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"  />
+        <meta name="theme-color" content="#2563eb"  />
+        <meta name="msapplication-TileColor" content="#2563eb"  />
+        <meta name="apple-mobile-web-app-capable" content="yes"  />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default"  />
+        <meta name="apple-mobile-web-app-title" content="AI Innovation Hub"  />
 
         {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com"  />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"  />
+        <link rel="preconnect" href="https://www.google-analytics.com"  />
 
         {/* Preload critical resources */}
-        <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        <link rel="preload" href="/images/hero-bg.jpg" as="image" />
+        <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous"  />
+        <link rel="preload" href="/images/hero-bg.jpg" as="image"  />
 
         {/* DNS Prefetch */}
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com"  />
+        <link rel="dns-prefetch" href="//www.google-analytics.com"  />
 
         {/* Structured Data */}
         <script
@@ -336,39 +336,39 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ seoData, children }) => {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateStructuredData())
           }}
-        />
+         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateBreadcrumbStructuredData())
           }}
-        />
+         />
         {generateArticleStructuredData() && (
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(generateArticleStructuredData())
             }}
-          />
+           />
         )}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateFAQStructuredData())
           }}
-        />
+         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateLocalBusinessStructuredData())
           }}
-        />
+         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateSoftwareApplicationStructuredData())
           }}
-        />
+         />
       </Head>
 
       {/* Content */}

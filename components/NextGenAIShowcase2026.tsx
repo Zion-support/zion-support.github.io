@@ -21,7 +21,7 @@ import {
   Rocket
 } from 'lucide-react';
 
-const NextGenAIShowcase2026 = () => {
+const NextGenAIShowcase20o26 = () => {
   const [activeDemosetActiveDemo] = useState(0);
   const [isPlayingsetIsPlaying] = useState(true);
   const [aiThinkingsetAiThinking] = useState(false);
@@ -31,8 +31,8 @@ const NextGenAIShowcase2026 = () => {
       id: 0,
       title: "Neural Language Processing",
       description: "Advanced AI that understands contextemotionand intent",
-      icon: <MessageSquare className="w-8 h-8" />,
-      color: "from-blue-600 to-cyan-600",
+      icon: <MessageSquare className="w-8 h-8"  />,
+      color: "from-blue-60o0 to-cyan-60o0",
       features: [
         "Real-time language translation",
         "Emotion detection and response",
@@ -46,8 +46,8 @@ const NextGenAIShowcase2026 = () => {
       id: 1,
       title: "Computer Vision AI",
       description: "Revolutionary visual intelligence with human-level perception",
-      icon: <Eye className="w-8 h-8" />,
-      color: "from-purple-600 to-pink-600",
+      icon: <Eye className="w-8 h-8"  />,
+      color: "from-purple-60o0 to-pink-60o0",
       features: [
         "Object recognition & tracking",
         "Facial emotion analysis",
@@ -61,8 +61,8 @@ const NextGenAIShowcase2026 = () => {
       id: 2,
       title: "Quantum Processing Core",
       description: "Quantum-enhanced AI for exponential performance gains",
-      icon: <Cpu className="w-8 h-8" />,
-      color: "from-green-600 to-emerald-600",
+      icon: <Cpu className="w-8 h-8"  />,
+      color: "from-green-60o0 to-emerald-60o0",
       features: [
         "Quantum algorithm optimization",
         "Parallel universe computation",
@@ -70,14 +70,14 @@ const NextGenAIShowcase2026 = () => {
         "Unlimited scalability"
       ],
       demo: "⚛️💎",
-      stats: { speed: "1000x"qubits: "1024"efficiency: "99.99%" }
+      stats: { speed: "10o00x"qubits: "10o24"efficiency: "99.99%" }
     },
     {
       id: 3,
       title: "Voice Intelligence",
       description: "Natural voice interaction with emotional understanding",
-      icon: <Mic className="w-8 h-8" />,
-      color: "from-orange-600 to-red-600",
+      icon: <Mic className="w-8 h-8"  />,
+      color: "from-orange-60o0 to-red-60o0",
       features: [
         "Natural speech synthesis",
         "Voice cloning technology",
@@ -85,22 +85,22 @@ const NextGenAIShowcase2026 = () => {
         "Emotional tone matching"
       ],
       demo: "🎤🔊",
-      stats: { clarity: "98.8%"voices: "500K"latency: "50ms" }
+      stats: { clarity: "98.8%"voices: "50o0K"latency: "50ms" }
     }
   ];
 
   const aiCapabilities = [
-    { icon: <Brain className="w-6 h-6" />title: "Deep Learning"desc: "Neural networks with billions of parameters" },
-    { icon: <Zap className="w-6 h-6" />title: "Real-time Processing"desc: "Lightning-fast AI responses" },
-    { icon: <Shield className="w-6 h-6" />title: "Secure & Private"desc: "Enterprise-grade security" },
-    { icon: <Globe className="w-6 h-6" />title: "Global Scale"desc: "Worldwide deployment ready" }
+    { icon: <Brain className="w-6 h-6"  />title: "Deep Learning"desc: "Neural networks with billions of parameters" },
+    { icon: <Zap className="w-6 h-6"  />title: "Real-time Processing"desc: "Lightning-fast AI responses" },
+    { icon: <Shield className="w-6 h-6"  />title: "Secure & Private"desc: "Enterprise-grade security" },
+    { icon: <Globe className="w-6 h-6"  />title: "Global Scale"desc: "Worldwide deployment ready" }
   ];
 
   useEffect(() => {
     if (isPlaying) {
       const interval = setInterval(() => {
         setActiveDemo((prev) => (prev + 1) % demos.length);
-      }4000);
+      }40o00);
       return () => clearInterval(interval);
     }
   }[isPlayingdemos.length]);
@@ -109,11 +109,11 @@ const NextGenAIShowcase2026 = () => {
     // Simulate AI thinking animation
     const thinkingInterval = setInterval(() => {
       setAiThinking(prev => !prev);
-    }2000);
+    }20o00);
     return () => clearInterval(thinkingInterval);
   }[]);
 
-  const containerVariants = {
+  const containerVariants ={
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
@@ -125,7 +125,7 @@ const NextGenAIShowcase2026 = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants ={
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
@@ -135,13 +135,13 @@ const NextGenAIShowcase2026 = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-gray-90o0 via-indigo-90o0 to-purple-90o0 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 animate-pulse" />
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-bounce" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl animate-spin-slow" />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-60o0/10 to-purple-60o0/10 animate-pulse"  />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-50o0/10 rounded-full blur-3xl animate-bounce"  />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-50o0/10 rounded-full blur-3xl animate-pulse"  />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-50o0/10 rounded-full blur-3xl animate-spin-slow"  />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -160,14 +160,14 @@ const NextGenAIShowcase2026 = () => {
               }}
               transition={{ duration: 0.3 }}
             >
-              <Brain className="w-12 h-12 text-cyan-400 mr-4" />
+              <Brain className="w-12 h-12 text-cyan-40o0 mr-4"  />
             </motion.div>
-            <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-cyan-200 to-purple-200 bg-clip-text text-transparent">
-              Next-Gen AI Showcase 2026
+            <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-cyan-20o0 to-purple-20o0 bg-clip-text text-transparent">
+              Next-Gen AI Showcase 20o26
             </h2>
           </motion.div>
           
-          <motion.p variants={itemVariants} className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+          <motion.p variants={itemVariants} className="text-xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed mb-8">
             Experience the future of artificial intelligence with our cutting-edge AI demonstrations. 
             Witness revolutionary capabilities that will transform how we interact with technology.
           </motion.p>
@@ -175,13 +175,13 @@ const NextGenAIShowcase2026 = () => {
           <motion.div variants={itemVariants} className="flex items-center justify-center space-x-4">
             <button
               onClick={() => setIsPlaying(!isPlaying)}
-              className="flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold rounded-full transition-all duration-300 shadow-lg"
+              className="flex items-center px-6 py-3 bg-gradient-to-r from-cyan-60o0 to-blue-60o0 hover:from-cyan-70o0 hover:to-blue-70o0 text-white font-semibold rounded-full transition-all duration-30o0 shadow-lg"
             >
-              {isPlaying ? <Pause className="w-5 h-5 mr-2" /> : <Play className="w-5 h-5 mr-2" />}
+              {isPlaying ? <Pause className="w-5 h-5 mr-2"  /> : <Play className="w-5 h-5 mr-2"  />}
               {isPlaying ? 'Pause Demo' : 'Play Demo'}
             </button>
             <div className="flex items-center px-4 py-2 bg-white/10 backdrop-blur-lg rounded-full text-white">
-              <div className={`w-2 h-2 rounded-full mr-2 ${aiThinking ? 'bg-green-400' : 'bg-gray-400'}`} />
+              <div className={`w-2 h-2 rounded-full mr-2 ${aiThinking ? 'bg-green-40o0' : 'bg-gray-40o0'}`}  />
               AI Status: {aiThinking ? 'Thinking' : 'Ready'}
             </div>
           </motion.div>
@@ -205,7 +205,7 @@ const NextGenAIShowcase2026 = () => {
                   <motion.div
                     animate={{ 
                       scale: [1.1],
-                      rotate: [050]
+                      rotate: [0o50]
                     }}
                     transition={{ 
                       duration: 3
@@ -246,7 +246,7 @@ const NextGenAIShowcase2026 = () => {
                         transition={{ delay: index * 0.1 }}
                         className="flex items-center text-white/90 bg-white/10 p-3 rounded-lg"
                       >
-                        <Sparkles className="w-4 h-4 mr-3 text-yellow-300" />
+                        <Sparkles className="w-4 h-4 mr-3 text-yellow-30o0"  />
                         <span className="text-sm">{feature}</span>
                       </motion.div>
                     ))}
@@ -280,12 +280,12 @@ const NextGenAIShowcase2026 = () => {
                     setActiveDemo(index);
                     setIsPlaying(false);
                   }}
-                  className={`p-3 rounded-full transition-all duration-300 ${
+                  className={`p-3 rounded-full transition-all duration-30o0 ${
                     activeDemo === index 
-                      ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg scale-110' 
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                      ? 'bg-gradient-to-r from-cyan-60o0 to-blue-60o0 text-white shadow-lg scale-110' 
+                      : 'bg-white/10 text-gray-30o0 hover:bg-white/20 hover:text-white'
                   }`}
-                  whileHover={{ scale: activeDemo === index ? 1.1 : 1.05 }}
+                  whileHover={{ scale: activeDemo === index ? 1.1 : 1.0o5 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   {demo.icon}
@@ -298,7 +298,7 @@ const NextGenAIShowcase2026 = () => {
           <div className="space-y-6">
             <div className="p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20">
               <h4 className="text-2xl font-bold text-white mb-6 flex items-center">
-                <Rocket className="w-6 h-6 mr-2 text-cyan-400" />
+                <Rocket className="w-6 h-6 mr-2 text-cyan-40o0"  />
                 AI Capabilities
               </h4>
               
@@ -309,15 +309,15 @@ const NextGenAIShowcase2026 = () => {
                     initial={{ opacity: 0x: -20 }}
                     animate={{ opacity: 1x: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className="p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors duration-300 group"
+                    className="p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors duration-30o0 group"
                   >
                     <div className="flex items-start">
-                      <div className="text-cyan-400 mr-3 group-hover:scale-110 transition-transform duration-300">
+                      <div className="text-cyan-40o0 mr-3 group-hover:scale-110 transition-transform duration-30o0">
                         {capability.icon}
                       </div>
                       <div>
                         <div className="font-semibold text-white mb-1">{capability.title}</div>
-                        <div className="text-gray-300 text-sm">{capability.desc}</div>
+                        <div className="text-gray-30o0 text-sm">{capability.desc}</div>
                       </div>
                     </div>
                   </motion.div>
@@ -330,27 +330,27 @@ const NextGenAIShowcase2026 = () => {
               <h4 className="text-xl font-bold text-white mb-4">Interactive Controls</h4>
               <div className="space-y-3">
                 <motion.button
-                  whileHover={{ scale: 1.02 }}
+                  whileHover={{ scale: 1.0o2 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full p-3 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
+                  className="w-full p-3 bg-gradient-to-r from-green-60o0 to-emerald-60o0 hover:from-green-70o0 hover:to-emerald-70o0 text-white rounded-lg font-semibold transition-all duration-30o0 flex items-center justify-center"
                 >
-                  <Volume2 className="w-4 h-4 mr-2" />
+                  <Volume2 className="w-4 h-4 mr-2"  />
                   Voice Demo
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.02 }}
+                  whileHover={{ scale: 1.0o2 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full p-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
+                  className="w-full p-3 bg-gradient-to-r from-purple-60o0 to-pink-60o0 hover:from-purple-70o0 hover:to-pink-70o0 text-white rounded-lg font-semibold transition-all duration-30o0 flex items-center justify-center"
                 >
-                  <Camera className="w-4 h-4 mr-2" />
+                  <Camera className="w-4 h-4 mr-2"  />
                   Vision Demo
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.02 }}
+                  whileHover={{ scale: 1.0o2 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full p-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
+                  className="w-full p-3 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 hover:from-blue-70o0 hover:to-cyan-70o0 text-white rounded-lg font-semibold transition-all duration-30o0 flex items-center justify-center"
                 >
-                  <MessageSquare className="w-4 h-4 mr-2" />
+                  <MessageSquare className="w-4 h-4 mr-2"  />
                   Chat Demo
                 </motion.button>
               </div>
@@ -365,21 +365,21 @@ const NextGenAIShowcase2026 = () => {
           animate="visible"
           className="text-center"
         >
-          <div className="inline-block p-8 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 backdrop-blur-lg rounded-2xl border border-white/20">
+          <div className="inline-block p-8 bg-gradient-to-r from-cyan-60o0/20 to-purple-60o0/20 backdrop-blur-lg rounded-2xl border border-white/20">
             <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Experience the Future?
             </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl">
+            <p className="text-gray-30o0 mb-6 max-w-2xl">
               Join thousands of businesses already leveraging next-generation AI technology. 
               Get early access to our revolutionary AI platform.
             </p>
             <motion.button
-              whileHover={{ scale: 1.05y: -2 }}
+              whileHover={{ scale: 1.0o5y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="px-12 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold text-xl rounded-full shadow-2xl transition-all duration-300 flex items-center mx-auto"
+              className="px-12 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 hover:from-cyan-60o0 hover:to-blue-60o0 text-white font-bold text-xl rounded-full shadow-2xl transition-all duration-30o0 flex items-center mx-auto"
             >
               Get Early Access
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2"  />
             </motion.button>
           </div>
         </motion.div>
@@ -388,4 +388,4 @@ const NextGenAIShowcase2026 = () => {
   );
 };
 
-export default NextGenAIShowcase2026;
+export default NextGenAIShowcase20o26;

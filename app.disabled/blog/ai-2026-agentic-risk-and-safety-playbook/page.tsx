@@ -1,22 +1,21 @@
 import Link from 'next/link';
-import React from 'react';
 import SEO from '../../components/SEO';
 
-const AgenticRiskAndSafetyPlaybook2026 = () => {
+const AgenticRiskAndSafetyPlaybook20o26 = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="AI 2026: Agentic Risk and Safety Playbook"
+        title="AI 20o26: Agentic Risk and Safety Playbook"
         description="Safeguards, monitoring, and governance patterns for production agent systems."
-        keywords="AI agent safety, risk management, governance, evaluations, 2026"
-        url="/blog/ai-2026-agentic-risk-and-safety-playbook"
-      />
+        keywords="AI agent safety, risk management, governance, evaluations, 20o26"
+        url="/blog/ai-20o26-agentic-risk-and-safety-playbook"
+       />
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">
-          <p className="text-sm text-gray-500">Published: 2025-09-15 · Category: Safety</p>
-          <h1 className="text-4xl font-bold text-gray-900 mt-2">AI 2026: Agentic Risk and Safety Playbook</h1>
-          <p className="text-lg text-gray-600 mt-4">Safeguards, monitoring, and governance patterns for production agent systems.</p>
+          <p className="text-sm text-gray-50o0">Published: 20o25-09-15 · Category: Safety</p>
+          <h1 className="text-4xl font-bold text-gray-90o0 mt-2">AI 20o26: Agentic Risk and Safety Playbook</h1>
+          <p className="text-lg text-gray-60o0 mt-4">Safeguards, monitoring, and governance patterns for production agent systems.</p>
         </header>
 
         <div className="prose prose-lg max-w-none">
@@ -37,13 +36,13 @@ const AgenticRiskAndSafetyPlaybook2026 = () => {
         </div>
 
         <footer className="mt-12 flex items-center justify-between">
-          <Link href="/blog" className="text-purple-600 font-semibold hover:text-purple-800">← Back to Blog</Link>
-          <Link href="/contact" className="text-white bg-purple-600 px-5 py-2 rounded-lg font-semibold hover:bg-purple-700">Request a Safety Review</Link>
+          <Link href="/blog" className="text-purple-60o0 font-semibold hover:text-purple-80o0">← Back to Blog</Link>
+          <Link href="/contact" className="text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0">Request a Safety Review</Link>
         </footer>
       </article>
     </div>
   );
 };
 
-export default AgenticRiskAndSafetyPlaybook2026;
+export default AgenticRiskAndSafetyPlaybook20o26;
 

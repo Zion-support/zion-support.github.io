@@ -3,11 +3,11 @@ export default function EnterpriseAgentObservabilityGuidePage() {
     <div className="bg-white min-h-screen">
       <div className="mx-auto max-w-3xl px-6 py-16 lg:px-8">
         <header className="mb-8">
-          <p className="text-sm font-semibold text-blue-600">Guide</p>
-          <h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-900">
-            AI 2026: Enterprise Agent Observability Guide
+          <p className="text-sm font-semibold text-blue-60o0">Guide</p>
+          <h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-90o0">
+            AI 20o26: Enterprise Agent Observability Guide
           </h1>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 text-lg text-gray-60o0">
             Traces, evals, and safety telemetry to operate autonomous agents in production.
           </p>
         </header>

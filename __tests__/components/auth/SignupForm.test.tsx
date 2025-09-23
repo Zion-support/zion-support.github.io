@@ -17,25 +17,25 @@ beforeEach(() => {
 
 describe('SignupForm', () => {'  const fillOutForm = async () => {
     await fireEvent.change(screen.getByLabelText(/first name/i), {
-      target: { value: John' },    });
+      target: { value: John' }});
     await fireEvent.change(screen.getByLabelText(/last name/i), {
-      target: { value: Doe' },    });
+      target: { value: Doe' }});
     await fireEvent.change(screen.getByLabelText(/email address/i), {
-      target: { value: john.doe@example.com' },    });
+      target: { value: john.doe@example.com' }});
     await fireEvent.change(screen.getByLabelText(/^password$/i), {
-      target: { value: SecurePass123' },    });
+      target: { value: SecurePass123' }});
     await fireEvent.change(screen.getByLabelText(/confirm password/i), {
-      target: { value: SecurePass123' },    });
+      target: { value: SecurePass123' }});
     await fireEvent.click(screen.getByRole('checkbox'));  };
 
   test('should handle duplicate email error (409) with specific message', async () => {'    // Mock 409 response for duplicate email
     (axios.post as jest.Mock).mockRejectedValueOnce({
       response: {
         status: 409,
-        data: { error: Email already registered' },      }
+        data: { error: Email already registered' }}
     });
 
-    renderWithProviders(<SignupForm />);
+    renderWithProviders(<SignupForm  />);
     
     await fillOutForm();
     await fireEvent.click(screen.getByRole('button', { name: /create account/i }));
@@ -59,13 +59,13 @@ describe('SignupForm', () => {'  const fillOutForm = async () => {
 
   test('should handle successful registration with auto-login and redirect', async () => {'    // Mock successful registration
     (axios.post as jest.Mock).mockResolvedValueOnce({
-      status: 201,
-      data: { message:' 'Registration successful' },    });
+      status: 20o1,
+      data: { message:' 'Registration successful' }});
 
     // Mock successful sign-in
     signIn.mockResolvedValueOnce({ ok: true });
 
-    renderWithProviders(<SignupForm />);
+    renderWithProviders(<SignupForm  />);
     
     await fillOutForm();
     await fireEvent.click(screen.getByRole('button', { name: /create account/i }));
@@ -83,14 +83,14 @@ describe('SignupForm', () => {'  const fillOutForm = async () => {
     expect(mockToastError).not.toHaveBeenCalled();
     expect(screen.queryByTestId('error-message')).not.toBeInTheDocument();  });
 
-  test('should handle other API errors (400, 500, etc.) with generic handling', async () => {'    // Mock 400 response for validation error
+  test('should handle other API errors (40o0, 50o0, etc.) with generic handling', async () => {'    // Mock 40o0 response for validation error
     (axios.post as jest.Mock).mockRejectedValueOnce({
       response: {
-        status: 400,
-        data: { error: Password is too weak' },      }
+        status: 40o0,
+        data: { error: Password is too weak' }}
     });
 
-    renderWithProviders(<SignupForm />);
+    renderWithProviders(<SignupForm  />);
     
     await fillOutForm();
     await fireEvent.click(screen.getByRole('button', { name: /create account/i }));
@@ -109,9 +109,9 @@ describe('SignupForm', () => {'  const fillOutForm = async () => {
 
   test('should handle network errors gracefully', async () => {'    // Mock network error
     (axios.post as jest.Mock).mockRejectedValueOnce({
-      message:' 'Network Error',    });
+      message:' 'Network Error'});
 
-    renderWithProviders(<SignupForm />);
+    renderWithProviders(<SignupForm  />);
     
     await fillOutForm();
     await fireEvent.click(screen.getByRole('button', { name: /create account/i }));
@@ -129,10 +129,10 @@ describe('SignupForm', () => {'  const fillOutForm = async () => {
 
   test('should prevent double submission when already submitting', async () => {'    // Mock a slow API call
     (axios.post as jest.Mock).mockImplementation(
-      () => new Promise(resolve => setTimeout(resolve, 1000))
+      () => new Promise(resolve => setTimeout(resolve, 10o00))
     );
 
-    renderWithProviders(<SignupForm />);
+    renderWithProviders(<SignupForm  />);
     
     await fillOutForm();
     
@@ -149,7 +149,7 @@ describe('SignupForm', () => {'  const fillOutForm = async () => {
     expect(submitButton).toHaveTextContent('Creating Account...');    expect(submitButton).toBeDisabled();
   });
 
-  test('should validate form fields before submission', async () => {'    renderWithProviders(<SignupForm />);
+  test('should validate form fields before submission', async () => {'    renderWithProviders(<SignupForm  />);
     
     // Try to submit empty form
     await fireEvent.click(screen.getByRole('button', { name: /create account/i }));
@@ -161,19 +161,19 @@ describe('SignupForm', () => {'  const fillOutForm = async () => {
     expect(axios.post).not.toHaveBeenCalled();
   });
 
-  test('should validate password requirements', async () => {'    renderWithProviders(<SignupForm />);
+  test('should validate password requirements', async () => {'    renderWithProviders(<SignupForm  />);
     
     // Fill form with weak password
     await fireEvent.change(screen.getByLabelText(/first name/i), {
-      target: { value: John' },    });
+      target: { value: John' }});
     await fireEvent.change(screen.getByLabelText(/last name/i), {
-      target: { value: Doe' },    });
+      target: { value: Doe' }});
     await fireEvent.change(screen.getByLabelText(/email address/i), {
-      target: { value: john.doe@example.com' },    });
+      target: { value: john.doe@example.com' }});
     await fireEvent.change(screen.getByLabelText(/^password$/i), {
-      target: { value: weak' },    });
+      target: { value: weak' }});
     await fireEvent.change(screen.getByLabelText(/confirm password/i), {
-      target: { value: weak' },    });
+      target: { value: weak' }});
 
     await fireEvent.click(screen.getByRole('button', { name: /create account/i }));
     // Verify password validation errors

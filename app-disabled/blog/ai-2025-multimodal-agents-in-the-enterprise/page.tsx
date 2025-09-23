@@ -1,17 +1,15 @@
 import Link from 'next/link';
-import React from 'react';
-
-export const metadata = {
-  title: 'Multimodal Agents in the Enterprise (2025) | Zion Tech Group',
+export const metadata ={
+  title: 'Multimodal Agents in the Enterprise (20o25) | Zion Tech Group',
   description: 'Design and deploy agents that see, hear, and act to deliver measurable outcomes across the enterprise.'
 };
 
-export default function MultimodalAgentsEnterprise2025Page() {
+export default function MultimodalAgentsEnterprise20o25Page() {
   return (
     <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div className="mb-6 text-sm text-purple-700 font-semibold">Enterprise AI</div>
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">Multimodal Agents in the Enterprise (2025)</h1>
-      <p className="text-gray-600 mb-8">
+      <div className="mb-6 text-sm text-purple-70o0 font-semibold">Enterprise AI</div>
+      <h1 className="text-4xl font-bold text-gray-90o0 mb-4">Multimodal Agents in the Enterprise (20o25)</h1>
+      <p className="text-gray-60o0 mb-8">
         A practical blueprint for building agents that process text, vision, and audio, integrated with tools and
         workflows to deliver real business outcomes.
       </p>
@@ -38,11 +36,10 @@ export default function MultimodalAgentsEnterprise2025Page() {
       </div>
 
       <div className="mt-10 flex gap-4">
-        <Link href="/contact" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Start a Pilot</Link>
-        <Link href="/blog/ai-2026-multimodal-agents-enterprise-blueprint" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Read the 2026 Blueprint</Link>
+        <Link href="/contact" className="inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-70o0">Start a Pilot</Link>
+        <Link href="/blog/ai-20o26-multimodal-agents-enterprise-blueprint" className="inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Read the 20o26 Blueprint</Link>
       </div>
     </main>
   );
 }
-
 

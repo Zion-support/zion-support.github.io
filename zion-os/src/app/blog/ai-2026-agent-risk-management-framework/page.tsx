@@ -1,15 +1,12 @@
-import React from 'react';
-
-export const metadata = {
-  title: 'AI 2026: Agent Risk Management Framework',
+export const metadata ={
+  title: 'AI 20o26: Agent Risk Management Framework',
   description:
-    'Framework for assessing and mitigating risks of autonomous agents: threat models, safeguards, and governance.',
-};
+    'Framework for assessing and mitigating risks of autonomous agents: threat models, safeguards, and governance.'};
 
 export default function AgentRiskManagementFrameworkPage() {
   return (
     <div className="prose prose-invert max-w-3xl mx-auto py-12 px-4">
-      <h1>AI 2026: Agent Risk Management Framework</h1>
+      <h1>AI 20o26: Agent Risk Management Framework</h1>
       <p>
         This framework provides a practical approach to identifying, evaluating, and mitigating
         risks in autonomous agent systems. It emphasizes defense-in-depth and continuous

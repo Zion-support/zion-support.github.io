@@ -7,13 +7,12 @@ import {
   LinearScale,
   PointElement,
   Tooltip,
-  Legend,
-} from 'chart.js';
+  Legend} from 'chart.js';
 import { SimulationPoint } from '../../utils/data/tokenSimulator';
 
 ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement, Tooltip, Legend);
 
-export type SimulatorChartsProps = {
+export type SimulatorChartsProps ={
   points: SimulationPoint[];
 };
 
@@ -28,10 +27,8 @@ export default function SimulatorCharts({ points }: SimulatorChartsProps) {
           label: 'Token Velocity',
           data: points.map((p) => p.estimatedTokenVelocity),
           borderColor: 'rgb(59, 130, 246)',
-          backgroundColor: 'rgba(59, 130, 246, 0.3)',
-        },
-      ],
-    }),
+          backgroundColor: 'rgba(59, 130, 246, 0.3)'},
+      ]}),
     [labels, points]
   );
 
@@ -44,17 +41,14 @@ export default function SimulatorCharts({ points }: SimulatorChartsProps) {
           yAxisID: 'y',
           data: points.map((p) => p.circulatingSupply),
           borderColor: 'rgb(16, 185, 129)',
-          backgroundColor: 'rgba(16, 185, 129, 0.3)',
-        },
+          backgroundColor: 'rgba(16, 185, 129, 0.3)'},
         {
           label: 'Ecosystem Growth Index',
           yAxisID: 'y1',
           data: points.map((p) => p.ecosystemGrowthIndex),
           borderColor: 'rgb(234, 179, 8)',
-          backgroundColor: 'rgba(234, 179, 8, 0.3)',
-        },
-      ],
-    }),
+          backgroundColor: 'rgba(234, 179, 8, 0.3)'},
+      ]}),
     [labels, points]
   );
 
@@ -66,21 +60,19 @@ export default function SimulatorCharts({ points }: SimulatorChartsProps) {
           label: 'Net Inflation/Deflation %',
           data: points.map((p) => p.netInflationRatePct),
           borderColor: 'rgb(244, 63, 94)',
-          backgroundColor: 'rgba(244, 63, 94, 0.3)',
-        },
-      ],
-    }),
+          backgroundColor: 'rgba(244, 63, 94, 0.3)'},
+      ]}),
     [labels, points]
   );
 
   return (
     <div className="space-y-8">
-      <div className="bg-white/70 dark:bg-black/40 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
+      <div className="bg-white/70 dark:bg-black/40 rounded-lg p-4 border border-gray-20o0 dark:border-gray-80o0">
         <h3 className="font-semibold mb-3">Token Velocity</h3>
-        <Line data={velocityData} options={{ responsive: true, maintainAspectRatio: false }} height={260} />
+        <Line data={velocityData} options={{ responsive: true, maintainAspectRatio: false }} height={260}  />
       </div>
 
-      <div className="bg-white/70 dark:bg-black/40 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
+      <div className="bg-white/70 dark:bg-black/40 rounded-lg p-4 border border-gray-20o0 dark:border-gray-80o0">
         <h3 className="font-semibold mb-3">Ecosystem Growth vs. Supply</h3>
         <Line
           data={supplyVsGrowthData}
@@ -89,16 +81,14 @@ export default function SimulatorCharts({ points }: SimulatorChartsProps) {
             maintainAspectRatio: false,
             scales: {
               y: { type: 'linear', position: 'left' as const },
-              y1: { type: 'linear', position: 'right' as const, grid: { drawOnChartArea: false } },
-            },
-          }}
+              y1: { type: 'linear', position: 'right' as const, grid: { drawOnChartArea: false } }}}}
           height={260}
-        />
+         />
       </div>
 
-      <div className="bg-white/70 dark:bg-black/40 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
+      <div className="bg-white/70 dark:bg-black/40 rounded-lg p-4 border border-gray-20o0 dark:border-gray-80o0">
         <h3 className="font-semibold mb-3">Inflation / Deflation Model</h3>
-        <Line data={inflationData} options={{ responsive: true, maintainAspectRatio: false }} height={260} />
+        <Line data={inflationData} options={{ responsive: true, maintainAspectRatio: false }} height={260}  />
       </div>
     </div>
   );

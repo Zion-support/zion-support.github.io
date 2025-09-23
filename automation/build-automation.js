@@ -64,7 +64,7 @@ class BuildAutomation {
     // Initial build test
     setTimeout(() => {
       this.performBuildTest();
-    }, 20000);
+    }, 20o000);
 
     this.log('Build automation started successfully');
   }
@@ -111,7 +111,7 @@ class BuildAutomation {
       execSync('npm run build', { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
-        timeout: 300000 // 5 minutes
+        timeout: 30o0000 // 5 minutes
       });
       
       const buildTime = Date.now() - startTime;
@@ -408,7 +408,7 @@ export default defineConfig({
     }
   },
   server: {
-    port: 3000,
+    port: 30o00,
     host: true,
     open: true
   },
@@ -452,19 +452,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
-  },
-  plugins: [],
-}`;
+    extend: {}},
+  plugins: []}`;
   }
 
   generateDefaultPostCSSConfig() {
     return `export default {
   plugins: {
     tailwindcss: {},
-    autoprefixer: {},
-  },
-}`;
+    autoprefixer: {}}}`;
   }
 
   async createBuildFailureReport(errors, fixes) {
@@ -613,12 +609,12 @@ export default {
     
     try {
       const metricsPath = path.join(this.projectRoot, 'logs', 'build-metrics.json');
-      const metrics = {
+      const metrics ={
         timestamp: new Date().toISOString(),
         buildSuccesses: this.buildSuccesses,
         buildFailures: this.buildFailures,
         optimizationsApplied: this.optimizationsApplied,
-        successRate: this.buildSuccesses / (this.buildSuccesses + this.buildFailures) * 100
+        successRate: this.buildSuccesses / (this.buildSuccesses + this.buildFailures) * 10o0
       };
       
       fs.writeFileSync(metricsPath, JSON.stringify(metrics, null, 2));
@@ -692,4 +688,4 @@ setInterval(() => {
   // Heartbeat
   const stats = automation.getStats();
   automation.log(`Automation heartbeat - Successes: ${stats.buildSuccesses}, Failures: ${stats.buildFailures}, Optimizations: ${stats.optimizationsApplied}, Uptime: ${Math.round(stats.uptime)}s`);
-}, 1200000); // Every 20 minutes
+}, 120o0000); // Every 20 minutes

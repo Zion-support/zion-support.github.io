@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 const QuantumNeuralFusionShowcase: React.FC = () => {
@@ -42,16 +41,16 @@ const QuantumNeuralFusionShowcase: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+    <section className="py-24 bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-purple-90o0 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full px-6 py-2 mb-8">
+          <div className="inline-flex items-center bg-gradient-to-r from-cyan-50o0 to-blue-50o0 rounded-full px-6 py-2 mb-8">
             <span className="text-sm font-bold">⚛️ QUANTUM-NEURAL FUSION SHOWCASE</span>
           </div>
           
           <h2 className="text-5xl md:text-6xl font-bold mb-8">
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-40o0 to-purple-40o0 bg-clip-text text-transparent">
               Revolutionary Technology
             </span>
           </h2>
@@ -67,16 +66,16 @@ const QuantumNeuralFusionShowcase: React.FC = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-300/20 hover:border-cyan-300/40 transition-all duration-300 hover:transform hover:scale-105"
+              className="bg-gradient-to-br from-blue-50o0/10 to-purple-50o0/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-30o0/20 hover:border-cyan-30o0/40 transition-all duration-30o0 hover:transform hover:scale-10o5"
             >
               <div className="text-5xl mb-6">{feature.icon}</div>
-              <h3 className="text-2xl font-bold mb-4 text-cyan-300">{feature.title}</h3>
+              <h3 className="text-2xl font-bold mb-4 text-cyan-30o0">{feature.title}</h3>
               <p className="text-lg mb-6 opacity-90">{feature.description}</p>
               
               <ul className="space-y-2">
                 {feature.benefits.map((benefit, benefitIndex) => (
                   <li key={benefitIndex} className="flex items-center text-sm opacity-80">
-                    <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-cyan-40o0 rounded-full mr-3"></span>
                     {benefit}
                   </li>
                 ))}
@@ -86,14 +85,14 @@ const QuantumNeuralFusionShowcase: React.FC = () => {
         </div>
 
         {/* Performance Metrics */}
-        <div className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-2xl p-12 mb-20 border border-purple-300/30">
-          <h3 className="text-3xl font-bold text-center mb-12 text-cyan-300">
+        <div className="bg-gradient-to-r from-indigo-50o0/20 to-purple-50o0/20 rounded-2xl p-12 mb-20 border border-purple-30o0/30">
+          <h3 className="text-3xl font-bold text-center mb-12 text-cyan-30o0">
             Quantum-Neural Performance Metrics
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">
+              <div className="text-5xl font-bold bg-gradient-to-r from-cyan-40o0 to-blue-40o0 bg-clip-text text-transparent mb-2">
                 10^15
               </div>
               <div className="text-lg font-semibold mb-2">Quantum Operations</div>
@@ -101,7 +100,7 @@ const QuantumNeuralFusionShowcase: React.FC = () => {
             </div>
             
             <div className="text-center">
-              <div className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">
+              <div className="text-5xl font-bold bg-gradient-to-r from-blue-40o0 to-purple-40o0 bg-clip-text text-transparent mb-2">
                 99.99%
               </div>
               <div className="text-lg font-semibold mb-2">Accuracy Rate</div>
@@ -109,7 +108,7 @@ const QuantumNeuralFusionShowcase: React.FC = () => {
             </div>
             
             <div className="text-center">
-              <div className="text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
+              <div className="text-5xl font-bold bg-gradient-to-r from-purple-40o0 to-pink-40o0 bg-clip-text text-transparent mb-2">
                 ∞
               </div>
               <div className="text-lg font-semibold mb-2">Learning Capacity</div>
@@ -117,7 +116,7 @@ const QuantumNeuralFusionShowcase: React.FC = () => {
             </div>
             
             <div className="text-center">
-              <div className="text-5xl font-bold bg-gradient-to-r from-pink-400 to-red-400 bg-clip-text text-transparent mb-2">
+              <div className="text-5xl font-bold bg-gradient-to-r from-pink-40o0 to-red-40o0 bg-clip-text text-transparent mb-2">
                 0ms
               </div>
               <div className="text-lg font-semibold mb-2">Response Time</div>
@@ -128,7 +127,7 @@ const QuantumNeuralFusionShowcase: React.FC = () => {
 
         {/* Use Cases */}
         <div className="mb-20">
-          <h3 className="text-3xl font-bold text-center mb-12 text-cyan-300">
+          <h3 className="text-3xl font-bold text-center mb-12 text-cyan-30o0">
             Revolutionary Applications
           </h3>
           
@@ -141,9 +140,9 @@ const QuantumNeuralFusionShowcase: React.FC = () => {
             ].map((useCase, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-xl p-6 border border-purple-300/20 text-center"
+                className="bg-gradient-to-br from-purple-50o0/10 to-pink-50o0/10 rounded-xl p-6 border border-purple-30o0/20 text-center"
               >
-                <h4 className="text-xl font-bold mb-3 text-purple-300">{useCase.title}</h4>
+                <h4 className="text-xl font-bold mb-3 text-purple-30o0">{useCase.title}</h4>
                 <p className="text-sm opacity-80">{useCase.description}</p>
               </div>
             ))}
@@ -152,7 +151,7 @@ const QuantumNeuralFusionShowcase: React.FC = () => {
 
         {/* CTA Section */}
         <div className="text-center">
-          <h3 className="text-4xl font-bold mb-8 text-cyan-300">
+          <h3 className="text-4xl font-bold mb-8 text-cyan-30o0">
             Ready to Experience the Future?
           </h3>
           
@@ -163,14 +162,14 @@ const QuantumNeuralFusionShowcase: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
               href="/quantum-neural-demo"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-10 py-5 rounded-xl font-bold text-xl hover:from-cyan-600 hover:to-blue-700 transition-all transform hover:scale-105 shadow-2xl"
+              className="bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white px-10 py-5 rounded-xl font-bold text-xl hover:from-cyan-60o0 hover:to-blue-70o0 transition-all transform hover:scale-10o5 shadow-2xl"
             >
               Request Demo Access
             </Link>
             
             <Link
               href="/quantum-whitepaper"
-              className="border-2 border-cyan-400 text-cyan-400 px-10 py-5 rounded-xl font-bold text-xl hover:bg-cyan-400 hover:text-black transition-all"
+              className="border-2 border-cyan-40o0 text-cyan-40o0 px-10 py-5 rounded-xl font-bold text-xl hover:bg-cyan-40o0 hover:text-black transition-all"
             >
               Download Whitepaper
             </Link>

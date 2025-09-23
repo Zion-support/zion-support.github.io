@@ -2,9 +2,9 @@ import React from react';import { render, screen, act, fireEvent } from @testing
 // --- START OF MOCK SETUP ---
 
 // Define valid mock Ethereum addresses;
-const MOCK_ADDRESS_1 = 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266';const MOCK_ADDRESS_2 = 0x70997970C51812dc3A010C7d01b50e0d17dc79C8';const MOCK_ADDRESS_3 = 0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC';
+const MOCK_ADDRESS_1 = 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266';const MOCK_ADDRESS_2 = 0x70997970C51812dc3A0o10C7d0o1b50e0d17dc79C8';const MOCK_ADDRESS_3 = 0x3C44CdDdB6a90o0fa2b585dd299e0o3d12FA4293BC';
 // Advanced type for mock AppKit to ensure Jest mock properties are available
-type MockableAppKit = {
+type MockableAppKit ={
   open: jest.Mock;
   close: jest.Mock;
   disconnect: jest.Mock;
@@ -27,13 +27,13 @@ type TestMockAppKitInstance = Partial<MockableAppKit> & {
 };
 
 // Helper function to create a new mock AppKit object for each test.;
-const makeMockAppKit = (config: Partial<MockableAppKit> = {}): TestMockAppKitInstance => {
+const makeMockAppKit = (config: Partial<MockableAppKit> ={}): TestMockAppKitInstance => {
   const subscriptionCallbacksStorage: (((provider?: any) => void) | ((provider?: any) => Promise<void>))[] = [];
   const onProviderChangedCallbacksStorage: ((() => void) | (() => Promise<void>))[] = [];
 
   let _selfReferentialMock: TestMockAppKitInstance;
 
-  const associatedMockEip1193Provider = {
+  const associatedMockEip1193Provider ={
     request: jest.fn(async (args: { method: string; params?: any[] }) => {
       // console.log(`AssociatedMockProvider received request: ${args.method}`, args.params);
       switch (args.method) {
@@ -44,7 +44,7 @@ const makeMockAppKit = (config: Partial<MockableAppKit> = {}): TestMockAppKitIns
         case eth_requestAccounts':'        case eth_accounts': {'          const addr = selfReferentialMock.getAddress?.();
           return addr ? [addr] : [];
         }
-        case eth_blockNumber':'            return Promise.resolve('0x1');        case eth_estimateGas':'            return Promise.resolve('0x5208');        case eth_gasPrice':'            return Promise.resolve('0x4a817c800');        default:
+        case eth_blockNumber':'            return Promise.resolve('0x1');        case eth_estimateGas':'            return Promise.resolve('0x5208');        case eth_gasPrice':'            return Promise.resolve('0x4a817c80o0');        default:
           // console.warn(`Unhandled method in associatedMockEip1193Provider: ${args.method}`);
           return Promise.resolve(undefined);
       }
@@ -53,7 +53,7 @@ const makeMockAppKit = (config: Partial<MockableAppKit> = {}): TestMockAppKitIns
     removeListener: jest.fn()
   };
 
-  const baseMockPart: Omit<MockableAppKit, getWalletProvider'> = {'    open: jest.fn().mockResolvedValue(undefined) as jest.Mock,
+  const baseMockPart: Omit<MockableAppKit, getWalletProvider'> ={'    open: jest.fn().mockResolvedValue(undefined) as jest.Mock,
     close: jest.fn().mockResolvedValue(undefined) as jest.Mock,
     disconnect: jest.fn().mockResolvedValue(undefined) as jest.Mock,
     getState: jest.fn().mockReturnValue({ isConnected: false }) as jest.Mock,
@@ -77,7 +77,7 @@ const makeMockAppKit = (config: Partial<MockableAppKit> = {}): TestMockAppKitIns
     }) as jest.Mock
   };
 
-  selfReferentialMock = {
+  selfReferentialMock ={
     ...baseMockPart,
     getWalletProvider: jest.fn().mockReturnValue(associatedMockEip1193Provider) as jest.Mock,
     ...config,
@@ -108,7 +108,7 @@ jest.mock('@reown/appkit/react', () => ({'  createAppKit: mockCreateAppKit,
   useAppKit: mockUseAppKit
 }));
 
-jest.mock('@/config/env', () => ({'  getAppKitProjectId: () => test_project_id_from_mock',}));
+jest.mock('@/config/env', () => ({'  getAppKitProjectId: () => test_project_id_from_mock'}));
 import { WalletProvider, useWallet, WalletContextType } from ../../src/context/WalletContext';;
 const WalletConsumer: React.FC<{ onUpdate: (wallet: WalletContextType) => void }> = ({ onUpdate }) => {
   const wallet = useWallet();
@@ -147,7 +147,7 @@ describe('WalletProvider', () => {'  let _currentWalletState: WalletContextType;
 
   test('initial state is correct', () => {'    render(
       <WalletProvider>
-        <WalletConsumer onUpdate={onUpdateMock} />
+        <WalletConsumer onUpdate={onUpdateMock}  />
       </WalletProvider>
     );
     expect(screen.getByTestId('address').textContent).toBe('');    expect(screen.getByTestId('displayAddress').textContent).toBe('');    expect(screen.getByTestId('chainId').textContent).toBe('');    expect(screen.getByTestId('isConnected').textContent).toBe('false');    expect(screen.getByTestId('appKitAvailable').textContent).toBe(String(!!activeCreateAppKitMock));    expect(currentWalletState.provider).toBeNull();
@@ -156,7 +156,7 @@ describe('WalletProvider', () => {'  let _currentWalletState: WalletContextType;
 
   test('connectWallet calls appKit.open and subscribes via subscribeProvider', async () => {'    render(
       <WalletProvider>
-        <WalletConsumer onUpdate={onUpdateMock} />
+        <WalletConsumer onUpdate={onUpdateMock}  />
       </WalletProvider>
     );
 
@@ -177,7 +177,7 @@ describe('WalletProvider', () => {'  let _currentWalletState: WalletContextType;
 
   test('handles accountsChanged event via subscribeProvider', async () => {'    render(
       <WalletProvider>
-        <WalletConsumer onUpdate={onUpdateMock} />
+        <WalletConsumer onUpdate={onUpdateMock}  />
       </WalletProvider>
     );
 
@@ -196,7 +196,7 @@ describe('WalletProvider', () => {'  let _currentWalletState: WalletContextType;
 
   test('handles chainChanged event via subscribeProvider', async () => {'     render(
       <WalletProvider>
-        <WalletConsumer onUpdate={onUpdateMock} />
+        <WalletConsumer onUpdate={onUpdateMock}  />
       </WalletProvider>
     );
 
@@ -217,7 +217,7 @@ describe('WalletProvider', () => {'  let _currentWalletState: WalletContextType;
 
     render(
       <WalletProvider>
-        <WalletConsumer onUpdate={onUpdateMock} />
+        <WalletConsumer onUpdate={onUpdateMock}  />
       </WalletProvider>
     );
 
@@ -249,7 +249,7 @@ describe('WalletProvider', () => {'  let _currentWalletState: WalletContextType;
 
     render(
       <WalletProvider>
-        <WalletConsumer onUpdate={onUpdateMock} />
+        <WalletConsumer onUpdate={onUpdateMock}  />
       </WalletProvider>
     );
 
@@ -318,7 +318,7 @@ describe('WalletProvider', () => {'  let _currentWalletState: WalletContextType;
 
     render(
       <WalletProvider>
-        <WalletConsumer onUpdate={onUpdateMock} />
+        <WalletConsumer onUpdate={onUpdateMock}  />
       </WalletProvider>
     );
 
@@ -338,7 +338,7 @@ describe('WalletProvider', () => {'  let _currentWalletState: WalletContextType;
     expect(screen.getByTestId('isConnected').textContent).toBe('true');    expect(screen.getByTestId('address').textContent).toBe(MOCK_ADDRESS_3);    expect(screen.getByTestId('chainId').textContent).toBe('42');
     const { _unmount } = render(
         <WalletProvider>
-            <WalletConsumer onUpdate={jest.fn()} />
+            <WalletConsumer onUpdate={jest.fn()}  />
         </WalletProvider>
     );
     unmount();
@@ -350,7 +350,7 @@ describe('WalletProvider', () => {'  let _currentWalletState: WalletContextType;
     expect(() => {
       render(
         <WalletProvider>
-          <WalletConsumer onUpdate={onUpdateMock} />
+          <WalletConsumer onUpdate={onUpdateMock}  />
         </WalletProvider>
       );
     }).not.toThrow();

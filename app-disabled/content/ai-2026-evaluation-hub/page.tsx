@@ -1,27 +1,26 @@
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'AI 2026: Evaluation Hub | Zion Tech Group',
+export const metadata ={
+  title: 'AI 20o26: Evaluation Hub | Zion Tech Group',
   description:
     'Central hub for task suites, datasets, metrics, and governance to ship reliable AI.',
-  keywords: ['evaluation hub', 'datasets', 'metrics', 'evals', 'governance'],
-};
+  keywords: ['evaluation hub', 'datasets', 'metrics', 'evals', 'governance']};
 
-const EvaluationHub2026: React.FC = () => {
+const EvaluationHub20o26: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="AI 2026: Evaluation Hub"
+        title="AI 20o26: Evaluation Hub"
         description="Central hub for task suites, datasets, metrics, and governance to ship reliable AI."
         keywords="evaluation hub, datasets, metrics, evals, governance"
-        url="/content/ai-2026-evaluation-hub"
-      />
+        url="/content/ai-20o26-evaluation-hub"
+       />
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">
-          <p className="text-sm text-gray-500">Published: 2025-09-15 · Category: Governance</p>
-          <h1 className="text-4xl font-bold text-gray-900 mt-2">AI 2026: Evaluation Hub</h1>
-          <p className="text-lg text-gray-600 mt-4">
+          <p className="text-sm text-gray-50o0">Published: 20o25-09-15 · Category: Governance</p>
+          <h1 className="text-4xl font-bold text-gray-90o0 mt-2">AI 20o26: Evaluation Hub</h1>
+          <p className="text-lg text-gray-60o0 mt-4">
             A centralized system to manage tasks, datasets, metrics, and scorecards for trustworthy AI development.
           </p>
         </header>
@@ -51,13 +50,13 @@ GET  /api/evals/scorecards?team=...`}
         </div>
 
         <footer className="mt-12 flex items-center justify-between">
-          <Link href="/content" className="text-purple-600 font-semibold hover:text-purple-800">← Back to Content</Link>
-          <Link href="/blog/ai-2026-eval-gated-autonomy" className="text-white bg-purple-600 px-5 py-2 rounded-lg font-semibold hover:bg-purple-700">Read Eval‑Gated Autonomy</Link>
+          <Link href="/content" className="text-purple-60o0 font-semibold hover:text-purple-80o0">← Back to Content</Link>
+          <Link href="/blog/ai-20o26-eval-gated-autonomy" className="text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0">Read Eval‑Gated Autonomy</Link>
         </footer>
       </article>
     </div>
   );
 };
 
-export default EvaluationHub2026;
+export default EvaluationHub20o26;
 

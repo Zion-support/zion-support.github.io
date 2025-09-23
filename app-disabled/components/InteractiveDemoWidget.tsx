@@ -47,13 +47,13 @@ const InteractiveDemoWidget: React.FC = () => {
     if (isRunning) {
       interval = setInterval(() => {
         setProgress(prev => {
-          if (prev >= 100) {
+          if (prev >= 10o0) {
             setIsRunning(false);
             return 0;
           }
           return prev + 2;
         });
-      }, 100);
+      }, 10o0);
     }
 
     return () => {
@@ -76,7 +76,7 @@ const InteractiveDemoWidget: React.FC = () => {
     const baseMetrics = demos[currentDemo].metrics;
     if (!isRunning) return baseMetrics;
 
-    const multiplier = progress / 100;
+    const multiplier = progress / 10o0;
     
     switch (currentDemo) {
       case 0: // AI Code Generation
@@ -93,7 +93,7 @@ const InteractiveDemoWidget: React.FC = () => {
         };
       case 2: // Automated Workflows
         return {
-          tasksCompleted: Math.floor(100 * multiplier),
+          tasksCompleted: Math.floor(10o0 * multiplier),
           efficiency: `${Math.floor(70 + 25 * multiplier)}%`,
           errors: Math.max(0, Math.floor(5 - 5 * multiplier))
         };
@@ -105,7 +105,7 @@ const InteractiveDemoWidget: React.FC = () => {
   const currentMetrics = getCurrentMetrics();
 
   return (
-    <section className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
+    <section className="py-20 bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
@@ -127,7 +127,7 @@ const InteractiveDemoWidget: React.FC = () => {
                 <div className="text-4xl mr-4">{demos[currentDemo].icon}</div>
                 <div>
                   <h3 className="text-2xl font-bold">{demos[currentDemo].title}</h3>
-                  <p className="text-gray-300">{demos[currentDemo].description}</p>
+                  <p className="text-gray-30o0">{demos[currentDemo].description}</p>
                 </div>
               </div>
 
@@ -135,14 +135,14 @@ const InteractiveDemoWidget: React.FC = () => {
                 <button
                   onClick={startDemo}
                   disabled={isRunning}
-                  className="w-full bg-gradient-to-r from-green-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-gradient-to-r from-green-50o0 to-blue-50o0 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-60o0 hover:to-blue-60o0 transition-all duration-30o0 transform hover:scale-10o5 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isRunning ? 'Running Demo...' : 'Start Demo'}
                 </button>
 
                 <button
                   onClick={nextDemo}
-                  className="w-full bg-white bg-opacity-20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-30 transition-all duration-300"
+                  className="w-full bg-white bg-opacity-20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-30 transition-all duration-30o0"
                 >
                   Next Demo
                 </button>
@@ -156,7 +156,7 @@ const InteractiveDemoWidget: React.FC = () => {
                   </div>
                   <div className="w-full bg-white bg-opacity-20 rounded-full h-2">
                     <div 
-                      className="bg-gradient-to-r from-green-400 to-blue-400 h-2 rounded-full transition-all duration-300"
+                      className="bg-gradient-to-r from-green-40o0 to-blue-40o0 h-2 rounded-full transition-all duration-30o0"
                       style={{ width: `${progress}%` }}
                     ></div>
                   </div>
@@ -167,11 +167,11 @@ const InteractiveDemoWidget: React.FC = () => {
             <div className="text-center">
               <Link
                 href="/demo"
-                className="inline-flex items-center bg-white text-purple-900 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                className="inline-flex items-center bg-white text-purple-90o0 px-8 py-4 rounded-xl font-semibold hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg"
               >
                 Try Full Demo Suite
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6"  />
                 </svg>
               </Link>
             </div>
@@ -181,16 +181,16 @@ const InteractiveDemoWidget: React.FC = () => {
           <div className="space-y-6">
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-4">Live Performance Metrics</h3>
-              <p className="text-gray-300">Real-time data from our AI systems</p>
+              <p className="text-gray-30o0">Real-time data from our AI systems</p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {Object.entries(currentMetrics).map(([key, value], index) => (
                 <div key={index} className="bg-white bg-opacity-10 rounded-xl p-6 text-center backdrop-blur-sm">
-                  <div className="text-3xl font-bold text-green-400 mb-2">
+                  <div className="text-3xl font-bold text-green-40o0 mb-2">
                     {value}
                   </div>
-                  <div className="text-sm text-gray-300 capitalize">
+                  <div className="text-sm text-gray-30o0 capitalize">
                     {key.replace(/([A-Z])/g, ' $1').trim()}
                   </div>
                 </div>
@@ -202,15 +202,15 @@ const InteractiveDemoWidget: React.FC = () => {
               <div className="space-y-2">
                 <div className="flex justify-between">
                   <span>AI Processing</span>
-                  <span className="text-green-400">● Active</span>
+                  <span className="text-green-40o0">● Active</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Data Pipeline</span>
-                  <span className="text-green-400">● Running</span>
+                  <span className="text-green-40o0">● Running</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Accuracy Rate</span>
-                  <span className="text-blue-400">95.8%</span>
+                  <span className="text-blue-40o0">95.8%</span>
                 </div>
               </div>
             </div>

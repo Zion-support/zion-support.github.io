@@ -1,5 +1,5 @@
 // LinkedIn automation placeholder - implement actual functionality
-export const linkedinAutomation = {
+export const linkedinAutomation ={
   run: () => {
     console.log("LinkedIn automation placeholder - implement actual functionality");
   }

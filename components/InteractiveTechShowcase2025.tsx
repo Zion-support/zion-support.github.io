@@ -36,7 +36,7 @@ import {
   Award
 } from 'lucide-react';
 
-const InteractiveTechShowcase2025 = () => {
+const InteractiveTechShowcase20o25 = () => {
   const [activeDemosetActiveDemo] = useState(0);
   const [isPlayingsetIsPlaying] = useState(false);
   const [isVisiblesetIsVisible] = useState(false);
@@ -51,7 +51,7 @@ const InteractiveTechShowcase2025 = () => {
       title: 'AI Process Automation',
       description: 'Watch our AI automatically optimize business processes in real-time',
       icon: Brain,
-      color: 'from-blue-600 to-purple-600',
+      color: 'from-blue-60o0 to-purple-60o0',
       features: [
         'Real-time Process Analysis',
         'Automated Decision Making',
@@ -83,7 +83,7 @@ const InteractiveTechShowcase2025 = () => {
       title: 'Advanced Threat Detection',
       description: 'Experience our AI-powered security system detecting and neutralizing threats',
       icon: Shield,
-      color: 'from-red-600 to-orange-600',
+      color: 'from-red-60o0 to-orange-60o0',
       features: [
         'Real-time Threat Scanning',
         'Behavioral Analysis',
@@ -115,7 +115,7 @@ const InteractiveTechShowcase2025 = () => {
       title: 'Cloud Performance Optimization',
       description: 'See how our system automatically scales and optimizes cloud resources',
       icon: Cloud,
-      color: 'from-green-600 to-teal-600',
+      color: 'from-green-60o0 to-teal-60o0',
       features: [
         'Auto-scaling Infrastructure',
         'Load Balancing',
@@ -125,7 +125,7 @@ const InteractiveTechShowcase2025 = () => {
         'Disaster Recovery'
       ],
       metrics: [
-        { label: 'Performance 'Gain', 'value: '8'x', 'trend: '+700%' },
+        { label: 'Performance 'Gain', 'value: '8'x', 'trend: '+70o0%' },
         { label: 'Cost 'Reduction', 'value: '45%'trend: '+60%' },
         { label: 'Response 'Time', 'value: '50'ms', 'trend: '-85%' },
         { label: ''Availability', 'value: '99.99%'trend: '+18%' }
@@ -147,7 +147,7 @@ const InteractiveTechShowcase2025 = () => {
       title: 'Real-time Data Analytics',
       description: 'Watch our AI process millions of data points and generate insights instantly',
       icon: BarChart3,
-      color: 'from-purple-600 to-pink-600',
+      color: 'from-purple-60o0 to-pink-60o0',
       features: [
         'Real-time Processing',
         'Predictive Analytics',
@@ -157,7 +157,7 @@ const InteractiveTechShowcase2025 = () => {
         'Business Intelligence'
       ],
       metrics: [
-        { label: 'Data 'Processed', 'value: '1.2M/'sec', 'trend: '+500%' },
+        { label: 'Data 'Processed', 'value: '1.2M/'sec', 'trend: '+50o0%' },
         { label: 'Insight 'Accuracy', 'value: '98.5%'trend: '+22%' },
         { label: 'Query 'Speed', 'value: '0.3's', 'trend: '-95%' },
         { label: 'Storage 'Efficiency', 'value: '85%'trend: '+40%' }
@@ -182,12 +182,12 @@ const InteractiveTechShowcase2025 = () => {
     if (isPlaying) {
       const interval = setInterval(() => {
         setCurrentStep(prev => (prev + 1) % demos[activeDemo].simulation.steps.length);
-      }2000);
+      }20o00);
       return () => clearInterval(interval);
     }
   }[isPlayingactiveDemodemos]);
 
-  const containerVariants = {
+  const containerVariants ={
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
@@ -199,7 +199,7 @@ const InteractiveTechShowcase2025 = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants ={
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -211,9 +211,9 @@ const InteractiveTechShowcase2025 = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20 overflow-hidden">
+    <div className="relative bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 py-20 overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -222,9 +222,9 @@ const InteractiveTechShowcase2025 = () => {
           animate="visible"
           className="text-center mb-16"
         >
-          <motion.div variants={itemVariants} className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Play className="w-4 h-4" />
-            Interactive Technology Demo 2025
+          <motion.div variants={itemVariants} className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <Play className="w-4 h-4"  />
+            Interactive Technology Demo 20o25
           </motion.div>
           
           <motion.h2 
@@ -232,14 +232,14 @@ const InteractiveTechShowcase2025 = () => {
             className="text-4xl md:text-6xl font-bold text-white mb-6"
           >
             Experience Our Technology
-            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-blue-40o0 to-purple-40o0 bg-clip-text text-transparent">
               In Real-Time
             </span>
           </motion.h2>
           
           <motion.p 
             variants={itemVariants}
-            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl text-gray-30o0 max-w-3xl mx-auto leading-relaxed"
           >
             Watch our AI systems work in real-time. See how our revolutionary technology 
             transforms dataoptimizes processesand delivers unprecedented results.
@@ -259,13 +259,13 @@ const InteractiveTechShowcase2025 = () => {
                     setCurrentStep(0);
                     setIsPlaying(false);
                   }}
-                  className={`flex items-center gap-3 px-6 py-4 rounded-xl font-medium transition-all duration-300 ${
+                  className={`flex items-center gap-3 px-6 py-4 rounded-xl font-medium transition-all duration-30o0 ${
                     activeDemo === index
-                      ? `bg-gradient-to-r ${demo.color} text-white shadow-lg transform scale-105`
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                      ? `bg-gradient-to-r ${demo.color} text-white shadow-lg transform scale-10o5`
+                      : 'bg-white/10 text-gray-30o0 hover:bg-white/20 hover:text-white'
                   }`}
                 >
-                  <Icon className="w-5 h-5" />
+                  <Icon className="w-5 h-5"  />
                   {demo.title}
                 </button>
               );
@@ -276,9 +276,9 @@ const InteractiveTechShowcase2025 = () => {
           <div className="flex justify-center gap-4 mb-8">
             <button
               onClick={() => setIsPlaying(!isPlaying)}
-              className="flex items-center gap-2 bg-gradient-to-r from-green-600 to-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300"
+              className="flex items-center gap-2 bg-gradient-to-r from-green-60o0 to-blue-60o0 text-white px-6 py-3 rounded-xl font-semibold hover:from-green-70o0 hover:to-blue-70o0 transition-all duration-30o0"
             >
-              {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+              {isPlaying ? <Pause className="w-5 h-5"  /> : <Play className="w-5 h-5"  />}
               {isPlaying ? 'Pause' : 'Play'} Demo
             </button>
             <button
@@ -286,9 +286,9 @@ const InteractiveTechShowcase2025 = () => {
                 setCurrentStep(0);
                 setIsPlaying(false);
               }}
-              className="flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300"
+              className="flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-xl font-semibold hover:bg-white/20 transition-all duration-30o0"
             >
-              <RotateCcw className="w-5 h-5" />
+              <RotateCcw className="w-5 h-5"  />
               Reset
             </button>
           </div>
@@ -306,20 +306,20 @@ const InteractiveTechShowcase2025 = () => {
               <div className="grid lg:grid-cols-2 gap-12">
                 {/* Demo Visualization */}
                 <div className="space-y-6">
-                  <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl p-6 border border-white/10">
+                  <div className="bg-gradient-to-br from-slate-80o0 to-slate-90o0 rounded-xl p-6 border border-white/10">
                     <div className="flex items-center justify-between mb-4">
                       <h3 className="text-xl font-semibold text-white">Live Demo</h3>
                       <div className="flex items-center gap-2">
-                        <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                        <span className="text-sm text-gray-400">Live</span>
+                        <div className="w-3 h-3 bg-green-50o0 rounded-full animate-pulse"></div>
+                        <span className="text-sm text-gray-40o0">Live</span>
                       </div>
                     </div>
                     
                     {/* Simulation Display */}
                     <div className="bg-black/50 rounded-lg p-4 mb-4">
-                      <div className="text-green-400 font-mono text-sm">
+                      <div className="text-green-40o0 font-mono text-sm">
                         <div className="flex items-center gap-2 mb-2">
-                          <Cpu className="w-4 h-4" />
+                          <Cpu className="w-4 h-4"  />
                           <span>System Status: {isPlaying ? 'Running' : 'Paused'}</span>
                         </div>
                         <div className="space-y-1">
@@ -327,16 +327,16 @@ const InteractiveTechShowcase2025 = () => {
                             <div
                               key={index}
                               className={`flex items-center gap-2 ${
-                                index === currentStep ? 'text-yellow-400' : 
-                                index < currentStep ? 'text-green-400' : 'text-gray-500'
+                                index === currentStep ? 'text-yellow-40o0' : 
+                                index < currentStep ? 'text-green-40o0' : 'text-gray-50o0'
                               }`}
                             >
                               {index < currentStep ? (
-                                <CheckCircle className="w-4 h-4" />
+                                <CheckCircle className="w-4 h-4"  />
                               ) : index === currentStep ? (
-                                <div className="w-4 h-4 border-2 border-yellow-400 rounded-full animate-pulse"></div>
+                                <div className="w-4 h-4 border-2 border-yellow-40o0 rounded-full animate-pulse"></div>
                               ) : (
-                                <div className="w-4 h-4 border border-gray-500 rounded-full"></div>
+                                <div className="w-4 h-4 border border-gray-50o0 rounded-full"></div>
                               )}
                               <span>{step}</span>
                             </div>
@@ -350,9 +350,9 @@ const InteractiveTechShowcase2025 = () => {
                       {demos[activeDemo].metrics.map((metricindex) => (
                         <div key={index} className="bg-white/5 rounded-lg p-3">
                           <div className="text-2xl font-bold text-white">{metric.value}</div>
-                          <div className="text-sm text-gray-400">{metric.label}</div>
-                          <div className="text-xs text-green-400 flex items-center gap-1">
-                            <TrendingUp className="w-3 h-3" />
+                          <div className="text-sm text-gray-40o0">{metric.label}</div>
+                          <div className="text-xs text-green-40o0 flex items-center gap-1">
+                            <TrendingUp className="w-3 h-3"  />
                             {metric.trend}
                           </div>
                         </div>
@@ -371,7 +371,7 @@ const InteractiveTechShowcase2025 = () => {
                       <h3 className="text-3xl font-bold text-white mb-2">
                         {demos[activeDemo].title}
                       </h3>
-                      <p className="text-gray-300 text-lg">
+                      <p className="text-gray-30o0 text-lg">
                         {demos[activeDemo].description}
                       </p>
                     </div>
@@ -382,22 +382,22 @@ const InteractiveTechShowcase2025 = () => {
                     <div className="grid grid-cols-1 gap-3">
                       {demos[activeDemo].features.map((featureindex) => (
                         <div key={index} className="flex items-center gap-3">
-                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                          <span className="text-gray-300">{feature}</span>
+                          <CheckCircle className="w-5 h-5 text-green-40o0 flex-shrink-0"  />
+                          <span className="text-gray-30o0">{feature}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-xl p-6 border border-purple-500/20">
+                  <div className="bg-gradient-to-r from-purple-60o0/20 to-pink-60o0/20 rounded-xl p-6 border border-purple-50o0/20">
                     <h4 className="text-lg font-semibold text-white mb-4">Real-Time Performance</h4>
                     <div className="space-y-3">
                       {demos[activeDemo].metrics.map((metricindex) => (
                         <div key={index} className="flex justify-between items-center">
-                          <span className="text-gray-300">{metric.label}</span>
+                          <span className="text-gray-30o0">{metric.label}</span>
                           <div className="flex items-center gap-2">
                             <span className="text-white font-semibold">{metric.value}</span>
-                            <span className="text-green-400 text-sm">{metric.trend}</span>
+                            <span className="text-green-40o0 text-sm">{metric.trend}</span>
                           </div>
                         </div>
                       ))}
@@ -412,23 +412,23 @@ const InteractiveTechShowcase2025 = () => {
         {/* Call to Action */}
         <motion.div 
           variants={itemVariants}
-          className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8"
+          className="text-center bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-2xl p-8"
         >
           <h3 className="text-3xl font-bold text-white mb-4">
             Ready to See This in Action?
           </h3>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-blue-10o0 mb-8 max-w-2xl mx-auto">
             Schedule a personalized demo and see how our technology can transform 
             your business operations in real-time.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center gap-2 group">
+            <button className="bg-white text-blue-60o0 px-8 py-4 rounded-xl font-semibold hover:bg-gray-10o0 transition-all duration-30o0 flex items-center gap-2 group">
               Schedule Live Demo
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"  />
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center gap-2 group">
+            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-60o0 transition-all duration-30o0 flex items-center gap-2 group">
               Download Case Study
-              <Rocket className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <Rocket className="w-5 h-5 group-hover:translate-x-1 transition-transform"  />
             </button>
           </div>
         </motion.div>
@@ -437,4 +437,4 @@ const InteractiveTechShowcase2025 = () => {
   );
 };
 
-export default InteractiveTechShowcase2025;
+export default InteractiveTechShowcase20o25;

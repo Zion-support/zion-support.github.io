@@ -31,8 +31,7 @@ export function SocialShareSection() {
       .then(() => {
         toast({
           title: "Link Copied!",
-          description: "The link has been copied to your clipboard",
-        });
+          description: "The link has been copied to your clipboard"});
       })
       .catch(() => {
         toast({
@@ -46,25 +45,25 @@ export function SocialShareSection() {
   const shareLinks = [
     {
       name: "Twitter",
-      icon: <Twitter className="h-5 w-5" aria-hidden="true" />, 
+      icon: <Twitter className="h-5 w-5" aria-hidden="true"  />, 
       color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80",
       onClick: shareToTwitter
     },
     {
       name: "Facebook",
-      icon: <Facebook className="h-5 w-5" aria-hidden="true" />,
+      icon: <Facebook className="h-5 w-5" aria-hidden="true"  />,
       color: "bg-[#4267B2] hover:bg-[#4267B2]/80",
       onClick: shareToFacebook
     },
     {
       name: "LinkedIn",
-      icon: <Linkedin className="h-5 w-5" aria-hidden="true" />,
-      color: "bg-[#0077B5] hover:bg-[#0077B5]/80",
+      icon: <Linkedin className="h-5 w-5" aria-hidden="true"  />,
+      color: "bg-[#0o077B5] hover:bg-[#0o077B5]/80",
       onClick: shareToLinkedIn
     },
     {
       name: "Copy Link",
-      icon: <Link className="h-5 w-5" aria-hidden="true" />,
+      icon: <Link className="h-5 w-5" aria-hidden="true"  />,
       color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80",
       onClick: copyLinkToClipboard
     },

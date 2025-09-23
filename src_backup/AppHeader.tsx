@@ -4,19 +4,18 @@ const showTagline = router.pathname === '/'
   const isMobile = useIsMobile()
   const { t } = useTranslation()
   const { user } = useAuth()
-  const isLoggedIn = useSelector((state: RootState,) => state.auth.isLoggedIn)
+  const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn)
   const router = useRouter()
   const showTagline = router.pathname === '/'
   // Messaging context (unread message count)
   const { unreadCount } = useMessaging()
-  const openLoginModal = (returnToPath?: string,) => {
+  const openLoginModal = (returnToPath?: string) => {
     // The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)
     // using router.push with shallow:true before this function is called.
     // This function's main job is just to open the modal.
     // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.
     setLoginOpen(true)
   }
-import React from 'react';
   const showTagline = router && router.pathname === '/';
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),;
@@ -24,14 +23,14 @@ import React from 'react';
   const isMobile = useIsMobile(),;
   const { t } = useTranslation(),;
   const { user } = useAuth(),;
-  const isLoggedIn = useSelector((state: RootState,) => state && state.auth.isLoggedIn),;
+  const isLoggedIn = useSelector((state: RootState) => state && state.auth.isLoggedIn),;
   const router = useRouter(),;
   const showTagline = router && router.pathname === '/',;
 
   // Messaging context (unread message count);
   const { unreadCount } = useMessaging(),;
 
-  const openLoginModal = (returnToPath?: string,) => {;
+  const openLoginModal = (returnToPath?: string) => {;
     // The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu);
     // using router && router.push with shallow:true before this function is called.;
     // This function's main job is just to open the modal.;
@@ -43,22 +42,17 @@ import React from 'react';
     <>;
       <header
         style={{ "--nav-height": "64px" } as React.CSSProperties}
-        className = {cn(
+        className ={cn(
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground"
-          { "bg-red-500": mobileMenuOpen ,}
+          { "bg-red-50o0": mobileMenuOpen }
         className={cn(
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
-          { "bg-red-500": mobileMenuOpen }
-
-
-
-
-
+          { "bg-red-50o0": mobileMenuOpen }
 
         )}
       >
         <div className="container flex h-16 items-center px-4 sm:px-6">
-          <Logo />
+          <Logo  />
           {showTagline && (
             <span className="ml-4 hidden text-sm text-muted-foreground md:inline">
               {t('home.header_tagline')}
@@ -67,40 +61,34 @@ import React from 'react';
 
           <div className="ml-6 flex-1 hidden md:block">;
             <nav role="navigation" aria-label="Main navigation">;
-              <ResponsiveNavigation openLoginModal={openLoginModal} />;
+              <ResponsiveNavigation openLoginModal={openLoginModal}  />;
             </nav>;
           </div>;
-
 
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">;
             <button
-              onClick = {() => setMobileMenuOpen(!mobileMenuOpen),}
+              onClick ={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-              aria-expanded = {mobileMenuOpen,}
-              aria-label = {t('general.toggle_mobile_menu'),}
+              aria-expanded ={mobileMenuOpen}
+              aria-label ={t('general.toggle_mobile_menu')}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-expanded={mobileMenuOpen}
               aria-label={t('general.toggle_mobile_menu')}
 
-
-
-
-
-
             >
               <span className="sr-only">{t('general.open_main_menu')}</span>
               {mobileMenuOpen ? (
-                <X className="block h-6 w-6" aria-hidden="true" />
+                <X className="block h-6 w-6" aria-hidden="true"  />
               ) : (
-                <Menu className="block h-6 w-6" aria-hidden="true" />
+                <Menu className="block h-6 w-6" aria-hidden="true"  />
               )}
 
             </button>;
           </div>;
 
-          <PointsBadge />;
+          <PointsBadge  />;
           {!isLoggedIn && (;
             <div className="ml-4 relative z-10 flex items-center">;
 
@@ -108,18 +96,9 @@ import React from 'react';
                 href="/auth/login"
                 className="text-sm font-medium text-foreground/70 hover:text-foreground"
 
-
-
-
-
-
                 aria-label={t('auth.login')}
                 data-testid="login-link"
                 onClick={(e) => {
-
-
-
-
 
                   e.preventDefault(),
                   // For the main login link, we might not have a specific returnTo beyond current page,
@@ -129,7 +108,7 @@ import React from 'react';
 
                   openLoginModal(router.asPath)
 
-                onClick={(e,) => {;
+                onClick={(e) => {;
                   e && e.preventDefault(),;
                   // For the main login link, we might not have a specific returnTo beyond current page,;
                   // or we could default to dashboard.;
@@ -143,13 +122,8 @@ import React from 'react';
               <Link
                 href="/signup"
                 className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground"
-                aria-label = {t('auth.signup'),}
+                aria-label ={t('auth.signup')}
                 aria-label={t('auth.signup')}
-
-
-
-
-
 
                 data-testid="signup-nav-link"
               >
@@ -160,7 +134,7 @@ import React from 'react';
           {/* User avatar menu */}
           {isLoggedIn && (;
             <div className="ml-4">;
-              <UserMenu />;
+              <UserMenu  />;
             </div>;
           )}
 
@@ -173,24 +147,18 @@ import React from 'react';
           <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
 
-
-
-
-
-            onClick = {(,) => setMobileMenuOpen(false),}
+            onClick ={() => setMobileMenuOpen(false)}
             aria-hidden="true";
           />;
-          <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">;
+          <div className="relative bg-background border-t border-border h-auto max-h-[calc(10o0vh-4rem)] overflow-y-auto">;
 
             <MobileMenu
 
-
             onClick={() => setMobileMenuOpen(false)}
-
 
             aria-hidden="true"
           />
-          <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
+          <div className="relative bg-background border-t border-border h-auto max-h-[calc(10o0vh-4rem)] overflow-y-auto">
             <MobileMenu 
 
               unreadCount={unreadCount} 
@@ -200,10 +168,9 @@ import React from 'react';
           </div>;
         </div>;
 
-
-              unreadCount = {unreadCount,}
-              onClose = {() => setMobileMenuOpen(false),}
-              openLoginModal = {openLoginModal,}
+              unreadCount ={unreadCount}
+              onClose ={() => setMobileMenuOpen(false)}
+              openLoginModal ={openLoginModal}
             />
           </div>
         </div>
@@ -215,24 +182,17 @@ import React from 'react';
           </div>;
         </div>;
 
-
-
-
-
-              unreadCount = {unreadCount,}
-              onClose = {() => setMobileMenuOpen(false),}
-              openLoginModal = {openLoginModal,}
+              unreadCount ={unreadCount}
+              onClose ={() => setMobileMenuOpen(false)}
+              openLoginModal ={openLoginModal}
             />;
           </div>;
         </div>;
 
-
-
-
       )}
       {/* Mobile Bottom Navigation */}
-      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
-      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+      {isMobile && <MobileBottomNav unreadCount={unreadCount}  />}
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen}  />
     </>
       setActiveNav(null)
       setServicesDropdownOpen(false)
@@ -247,9 +207,9 @@ import React from 'react';
     setActiveNav (null)}
   return ();
     <>`;
-      <header className={`sticky top - 0 z - 50 w - full transition - all duration - 300 ${        scrolled;
-          ? 'bg - slate - 900 / 95 backdrop - blur - xl border - b border - cyan - 400 / 20 shadow - 2xl shadow - cyan - 400 / 10';
-          : 'bg - slate - 900 / 80 backdrop - blur - md border - b border - slate - 700 / 20'      }`}>;
+      <header className={`sticky top - 0 z - 50 w - full transition - all duration - 30o0 ${        scrolled;
+          ? 'bg - slate - 90o0 / 95 backdrop - blur - xl border - b border - cyan - 40o0 / 20 shadow - 2xl shadow - cyan - 40o0 / 10';
+          : 'bg - slate - 90o0 / 80 backdrop - blur - md border - b border - slate - 70o0 / 20'      }`}>;
         <div className="container - responsive">";
           <div className="flex h - 20 items - center justify - between">;
             {/* Logo */}";
@@ -257,15 +217,15 @@ import React from 'react';
               <Link to="/" className="flex - shrink - 0 group">";
                 <div className="flex items - center space - x-3">";
                   <div className="relative">";
-                    <div className="w - 10 h - 10 bg - gradient - to - br from - cyan - 400 via - blue - 500 to - purple - 600 rounded - lg flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300">";
-                      <Zap className="w - 6 h - 6 text - white"  />;
-                    </div>"                    <div className="absolute inset - 0 bg - gradient - to - br from - cyan - 400 via - blue - 500 to - purple - 600 rounded - lg blur - lg opacity - 50 group - hover:opacity - 75 transition - opacity duration - 300"></div>;
+                    <div className="w - 10 h - 10 bg - gradient - to - br from - cyan - 40o0 via - blue - 50o0 to - purple - 60o0 rounded - lg flex items - center justify - center group - hover:scale - 110 transition - transform duration - 30o0">";
+                      <Zap className="w - 6 h - 6 text - white"   />;
+                    </div>"                    <div className="absolute inset - 0 bg - gradient - to - br from - cyan - 40o0 via - blue - 50o0 to - purple - 60o0 rounded - lg blur - lg opacity - 50 group - hover:opacity - 75 transition - opacity duration - 30o0"></div>;
                   </div>";
-                  <h1 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent group - hover:scale - 105 transition - transform duration - 300">;
+                  <h1 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 40o0 via - blue - 50o0 to - purple - 60o0 bg - clip - text text - transparent group - hover:scale - 10o5 transition - transform duration - 30o0">;
                     Zion Tech Group;
                   </h1>;
                 </div>;
-                <span className="text - xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent">;
+                <span className="text - xl font - bold bg - gradient - to - r from - cyan - 40o0 to - blue - 50o0 bg - clip - text text - transparent">;
                   Zion Tech Group;
                 </span>;
               </Link>;
@@ -294,7 +254,7 @@ import React from 'react';
                             on_click={() => setActiveDropdown (null)}
                             className="flex items - center p - 3 rounded - lg hover:bg - zion - slate / 50 transition - colors group">;
                             <div className={`w - 10 h - 10 bg - gradient - to - r ${service.color} rounded - lg flex items - center justify - center mr - 3 group - hover:scale - 110 transition - transform`}>;
-                              <service.icon className="w - 5 h - 5 text - white" />;
+                              <service.icon className="w - 5 h - 5 text - white"  />;
                             </div>;
                             <div>;
                               <div className="font - medium text - white group - hover:text - zion - cyan transition - colors">;
@@ -303,7 +263,7 @@ import React from 'react';
                               <div className="text - sm text - zion - slate - light">;
                                 {service.description}
 
-      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen}  />;
     </>;
       setActiveNav(null);
       setServicesDropdownOpen(false);
@@ -318,9 +278,9 @@ import React from 'react';
     setActiveNav(null)};
   return ();
     <>`;
-      <headerclassName={`sticky top-0 z-50 w-full transition-all duration-300 ${        scrolled
-          ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10'
-          : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'      }`}>;
+      <headerclassName={`sticky top-0 z-50 w-full transition-all duration-30o0 ${        scrolled
+          ? 'bg-slate-90o0/95 backdrop-blur-xl border-b border-cyan-40o0/20 shadow-2xl shadow-cyan-40o0/10'
+          : 'bg-slate-90o0/80 backdrop-blur-md border-b border-slate-70o0/20'      }`}>;
         <div className="container-responsive">";
           <div className="flex h-20 items-center justify-between">;
             {/* Logo */}";
@@ -328,15 +288,15 @@ import React from 'react';
               <Link to="/" className="flex-shrink-0 group">";
                 <div className="flex items-center space-x-3">";
                   <div className="relative">";
-                    <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">";
-                      <Zap className="w-6 h-6 text-white"  />;
-                    </div>"                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>;
+                    <div className="w-10 h-10 bg-gradient-to-br from-cyan-40o0 via-blue-50o0 to-purple-60o0 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-30o0">";
+                      <Zap className="w-6 h-6 text-white"   />;
+                    </div>"                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-40o0 via-blue-50o0 to-purple-60o0 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-30o0"></div>;
                   </div>";
-                  <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">;
+                  <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-40o0 via-blue-50o0 to-purple-60o0 bg-clip-text text-transparent group-hover:scale-10o5 transition-transform duration-30o0">;
                     Zion Tech Group;
                   </h1>;
                 </div>;
-                <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
+                <span className="text-xl font-bold bg-gradient-to-r from-cyan-40o0 to-blue-50o0 bg-clip-text text-transparent">;
                   Zion Tech Group;
                 </span>;
               </Link>;
@@ -368,7 +328,7 @@ import React from 'react';
 
                             className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group">
                             <div className={`w-10 h-10 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform`}>
-                              <service.icon className="w-5 h-5 text-white" />
+                              <service.icon className="w-5 h-5 text-white"  />
                             </div>
                             <div>
                               <div className="font-medium text-white group-hover:text-zion-cyan transition-colors">
@@ -377,7 +337,7 @@ import React from 'react';
                               <div className="text-sm text-zion-slate-light">
                                 {service.description}
 
-      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen}  />;
     </>;
       setActiveNav(null);
       setServicesDropdownOpen(false);
@@ -392,9 +352,9 @@ import React from 'react';
     setActiveNav(null)};
   return ();
     <>`;
-      <headerclassName={`sticky top-0 z-50 w-full transition-all duration-300 ${        scrolled
-          ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10'
-          : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'      }`}>;
+      <headerclassName={`sticky top-0 z-50 w-full transition-all duration-30o0 ${        scrolled
+          ? 'bg-slate-90o0/95 backdrop-blur-xl border-b border-cyan-40o0/20 shadow-2xl shadow-cyan-40o0/10'
+          : 'bg-slate-90o0/80 backdrop-blur-md border-b border-slate-70o0/20'      }`}>;
         <div className="container-responsive">";
           <div className="flex h-20 items-center justify-between">;
             {/* Logo */}";
@@ -402,15 +362,15 @@ import React from 'react';
               <Link to="/" className="flex-shrink-0 group">";
                 <div className="flex items-center space-x-3">";
                   <div className="relative">";
-                    <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">";
-                      <Zap className="w-6 h-6 text-white"  />;
-                    </div>"                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>;
+                    <div className="w-10 h-10 bg-gradient-to-br from-cyan-40o0 via-blue-50o0 to-purple-60o0 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-30o0">";
+                      <Zap className="w-6 h-6 text-white"   />;
+                    </div>"                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-40o0 via-blue-50o0 to-purple-60o0 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-30o0"></div>;
                   </div>";
-                  <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">;
+                  <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-40o0 via-blue-50o0 to-purple-60o0 bg-clip-text text-transparent group-hover:scale-10o5 transition-transform duration-30o0">;
                     Zion Tech Group;
                   </h1>;
                 </div>;
-                <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
+                <span className="text-xl font-bold bg-gradient-to-r from-cyan-40o0 to-blue-50o0 bg-clip-text text-transparent">;
                   Zion Tech Group;
                 </span>;
               </Link>;
@@ -442,7 +402,7 @@ import React from 'react';
 
                             className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group">;
                             <div className={`w-10 h-10 bg-gradient-to-r ${service && service.color} rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform`}>;
-                              <service && service.icon className="w-5 h-5 text-white" />;
+                              <service && service.icon className="w-5 h-5 text-white"  />;
                             </div>;
                             <div>;
                               <div className="font-medium text-white group-hover:text-zion-cyan transition-colors">;
@@ -486,7 +446,7 @@ import React from 'react';
                 aria - expanded={active_dropdown === 'solutions'}
                 aria - haspopup="true">;
                 Solutions;
-                <ChevronDown className={`ml - 1 h - 4 w - 4 transition - transform ${active_dropdown === 'solutions' ? 'rotate - 180' : ''}`} />;
+                <ChevronDown className={`ml - 1 h - 4 w - 4 transition - transform ${active_dropdown === 'solutions' ? 'rotate - 180' : ''}`}  />;
               </button>;
               <AnimatePresence>;
                 {active_dropdown === 'solutions' && (
@@ -507,7 +467,7 @@ import React from 'react';
                             on_click={() => setActiveDropdown (null)}
                             className="flex items - center p - 3 rounded - lg hover:bg - zion - slate / 50 transition - colors group">;
                             <div className={`w - 10 h - 10 bg - gradient - to - r ${solution.color} rounded - lg flex items - center justify - center mr - 3 group - hover:scale - 110 transition - transform`}>;
-                              <solution.icon className="w - 5 h - 5 text - white" />;
+                              <solution.icon className="w - 5 h - 5 text - white"  />;
                             </div>;
                             <div>;
                               <div className="font - medium text - white group - hover:text - zion - cyan transition - colors">;
@@ -518,7 +478,7 @@ import React from 'react';
 
                 aria-haspopup="true">;
                 Solutions;
-                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`} />;
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`}  />;
               </button>;
 
               <AnimatePresence>;
@@ -540,7 +500,7 @@ import React from 'react';
 
                             className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group">
                             <div className={`w-10 h-10 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform`}>
-                              <solution.icon className="w-5 h-5 text-white" />
+                              <solution.icon className="w-5 h-5 text-white"  />
                             </div>
                             <div>
                               <div className="font-medium text-white group-hover:text-zion-cyan transition-colors">
@@ -551,7 +511,7 @@ import React from 'react';
 
                 aria-haspopup="true">;
                 Solutions;
-                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`} />;
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`}  />;
               </button>;
 
               <AnimatePresence>;
@@ -572,7 +532,7 @@ import React from 'react';
 
                             className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group">;
                             <div className={`w-10 h-10 bg-gradient-to-r ${solution && solution.color} rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform`}>;
-                              <solution && solution.icon className="w-5 h-5 text-white" />;
+                              <solution && solution.icon className="w-5 h-5 text-white"  />;
                             </div>;
                             <div>;
                               <div className="font-medium text-white group-hover:text-zion-cyan transition-colors">;
@@ -616,7 +576,7 @@ import React from 'react';
                 aria - expanded={active_dropdown === 'resources'}
                 aria - haspopup="true">;
                 Resources;
-                <ChevronDown className={`ml - 1 h - 4 w - 4 transition - transform ${active_dropdown === 'resources' ? 'rotate - 180' : ''}`} />;
+                <ChevronDown className={`ml - 1 h - 4 w - 4 transition - transform ${active_dropdown === 'resources' ? 'rotate - 180' : ''}`}  />;
               </button>;
               <AnimatePresence>;
                 {active_dropdown === 'resources' && (
@@ -636,13 +596,13 @@ import React from 'react';
                             to={resource.href}
                             on_click={() => setActiveDropdown (null)}
                             className="flex items - center p - 3 rounded - lg hover:bg - zion - slate / 50 transition - colors group">;
-                            <resource.icon className="w - 5 h - 5 text - zion - cyan mr - 3 group - hover:scale - 110 transition - transform" />;
+                            <resource.icon className="w - 5 h - 5 text - zion - cyan mr - 3 group - hover:scale - 110 transition - transform"  />;
                             <span className="text - white group - hover:text - zion - cyan transition - colors">;
                               {resource.name}
 
                 aria-haspopup="true">;
                 Resources;
-                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'resources' ? 'rotate-180' : ''}`} />;
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'resources' ? 'rotate-180' : ''}`}  />;
               </button>;
 
               <AnimatePresence>;
@@ -663,13 +623,13 @@ import React from 'react';
                             onClick={() => setActiveDropdown(null)}
 
                             className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group">
-                            <resource.icon className="w-5 h-5 text-zion-cyan mr-3 group-hover:scale-110 transition-transform" />
+                            <resource.icon className="w-5 h-5 text-zion-cyan mr-3 group-hover:scale-110 transition-transform"  />
                             <span className="text-white group-hover:text-zion-cyan transition-colors">
                               {resource.name}
 
                 aria-haspopup="true">;
                 Resources;
-                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'resources' ? 'rotate-180' : ''}`} />;
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'resources' ? 'rotate-180' : ''}`}  />;
               </button>;
 
               <AnimatePresence>;
@@ -689,7 +649,7 @@ import React from 'react';
                             onClick={() => setActiveDropdown(null)}
 
                             className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group">;
-                            <resource && resource.icon className="w-5 h-5 text-zion-cyan mr-3 group-hover:scale-110 transition-transform" />;
+                            <resource && resource.icon className="w-5 h-5 text-zion-cyan mr-3 group-hover:scale-110 transition-transform"  />;
                             <span className="text-white group-hover:text-zion-cyan transition-colors">;
                               {resource && resource.name}
                             </span>;
@@ -726,7 +686,7 @@ import React from 'react';
                 aria - expanded={active_dropdown === 'company'}
                 aria - haspopup="true">;
                 Company;
-                <ChevronDown className={`ml - 1 h - 4 w - 4 transition - transform ${active_dropdown === 'company' ? 'rotate - 180' : ''}`} />;
+                <ChevronDown className={`ml - 1 h - 4 w - 4 transition - transform ${active_dropdown === 'company' ? 'rotate - 180' : ''}`}  />;
               </button>;
               <AnimatePresence>;
                 {active_dropdown === 'company' && (
@@ -746,13 +706,13 @@ import React from 'react';
                             to={item.href}
                             on_click={() => setActiveDropdown (null)}
                             className="flex items - center p - 3 rounded - lg hover:bg - zion - slate / 50 transition - colors group">;
-                            <item.icon className="w - 5 h - 5 text - zion - cyan mr - 3 group - hover:scale - 110 transition - transform" />;
+                            <item.icon className="w - 5 h - 5 text - zion - cyan mr - 3 group - hover:scale - 110 transition - transform"  />;
                             <span className="text - white group - hover:text - zion - cyan transition - colors">;
                               {item.name}
 
                 aria-haspopup="true">;
                 Company;
-                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />;
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`}  />;
               </button>;
 
               <AnimatePresence>;
@@ -773,13 +733,13 @@ import React from 'react';
                             onClick={() => setActiveDropdown(null)}
 
                             className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group">
-                            <item.icon className="w-5 h-5 text-zion-cyan mr-3 group-hover:scale-110 transition-transform" />
+                            <item.icon className="w-5 h-5 text-zion-cyan mr-3 group-hover:scale-110 transition-transform"  />
                             <span className="text-white group-hover:text-zion-cyan transition-colors">
                               {item.name}
 
                 aria-haspopup="true">;
                 Company;
-                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />;
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`}  />;
               </button>;
 
               <AnimatePresence>;
@@ -799,7 +759,7 @@ import React from 'react';
                             onClick={() => setActiveDropdown(null)}
 
                             className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group">;
-                            <item && item.icon className="w-5 h-5 text-zion-cyan mr-3 group-hover:scale-110 transition-transform" />;
+                            <item && item.icon className="w-5 h-5 text-zion-cyan mr-3 group-hover:scale-110 transition-transform"  />;
                             <span className="text-white group-hover:text-zion-cyan transition-colors">;
                               {item && item.name}
                             </span>;
@@ -835,7 +795,7 @@ import React from 'react';
                   onChange={(e) => setSearchQuery(e && e.target.value)}
                   onFocus={() => setSearchFocused(true)}
                   onBlur={() => setSearchFocused(false)}
-                  className={`w-64 px-4 py-2 pl-10 bg-zion-slate/20 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan transition-all duration-200 ${
+                  className={`w-64 px-4 py-2 pl-10 bg-zion-slate/20 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan transition-all duration-20o0 ${
                     searchFocused ? 'w-80' : ''
             <div className="relative hidden md:block">;
               <form on_submit={handle_search} className="relative">;
@@ -846,11 +806,11 @@ import React from 'react';
                   on_change={(e) => setSearchQuery (e.target.value)}
                   on_focus={() => setSearchFocused (true)}
                   on_blur={() => setSearchFocused (false)}
-                  className={`w - 64 px - 4 py - 2 pl - 10 bg - zion - slate / 20 border border - zion - cyan / 20 rounded - lg text - white placeholder - zion - slate - light focus:outline - none focus:ring - 2 focus:ring - zion - cyan / 50 focus:border - zion - cyan transition - all duration - 200 ${
+                  className={`w - 64 px - 4 py - 2 pl - 10 bg - zion - slate / 20 border border - zion - cyan / 20 rounded - lg text - white placeholder - zion - slate - light focus:outline - none focus:ring - 2 focus:ring - zion - cyan / 50 focus:border - zion - cyan transition - all duration - 20o0 ${
                     search_focused ? 'w - 80' : '';
 }`}
                 />;
-                <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 w - 4 h - 4 text - zion - slate - light" />;
+                <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 w - 4 h - 4 text - zion - slate - light"  />;
               </form>;
             </div>;
             {/* User Menu */}
@@ -870,10 +830,10 @@ import React from 'react';
                   aria - expanded={active_dropdown === 'user'}
                   aria - haspopup="true">;
                   <div className="w - 8 h - 8 bg - gradient - to - r from - zion - cyan to - zion - blue rounded - full flex items - center justify - center">;
-                    <User className="w - 4 h - 4 text - white" />;
+                    <User className="w - 4 h - 4 text - white"  />;
                   </div>;
                   <span className="text - white text - sm hidden lg:block">{user.name}</span>;
-                  <ChevronDown className="w - 4 h - 4 text - zion - slate - light" />;
+                  <ChevronDown className="w - 4 h - 4 text - zion - slate - light"  />;
                 </button>;
                 <AnimatePresence>;
                   {active_dropdown === 'user' && (
@@ -890,24 +850,24 @@ import React from 'react';
                           to="/dashboard";
                           on_click={() => setActiveDropdown (null)}
                           className="flex items - center w - full p - 3 rounded - lg hover:bg - zion - slate / 50 transition - colors text - white hover:text - zion - cyan">;
-                          <PanelLeft className="w - 4 h - 4 mr - 3" />;
+                          <PanelLeft className="w - 4 h - 4 mr - 3"  />;
                           Dashboard;
                         </Link>;
                         <Link;
                           to="/profile";
                           on_click={() => setActiveDropdown (null)}
                           className="flex items - center w - full p - 3 rounded - lg hover:bg - zion - slate / 50 transition - colors text - white hover:text - zion - cyan">;
-                          <User className="w - 4 h - 4 mr - 3" />;
+                          <User className="w - 4 h - 4 mr - 3"  />;
                           Profile;
                         </Link>;
                         <Link;
                           to="/settings";
                           on_click={() => setActiveDropdown (null)}
                           className="flex items - center w - full p - 3 rounded - lg hover:bg - zion - slate / 50 transition - colors text - white hover:text - zion - cyan">;
-                          <Settings className="w - 4 h - 4 mr - 3" />;
+                          <Settings className="w - 4 h - 4 mr - 3"  />;
                           Settings;
                         </Link>;
-                        <hr className="border - zion - slate / 20 my - 2" />;
+                        <hr className="border - zion - slate / 20 my - 2"  />;
                         <button;
                           on_click={() => {
                             logout ();
@@ -916,10 +876,10 @@ import React from 'react';
 
                   aria-haspopup="true">;
                   <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">;
-                    <User className="w-4 h-4 text-white" />;
+                    <User className="w-4 h-4 text-white"  />;
                   </div>;
                   <span className="text-white text-sm hidden lg:block">{user && user.name}</span>;
-                  <ChevronDown className="w-4 h-4 text-zion-slate-light" />;
+                  <ChevronDown className="w-4 h-4 text-zion-slate-light"  />;
                 </button>;
 
                 <AnimatePresence>;
@@ -936,37 +896,36 @@ import React from 'react';
                           to="/dashboard"
                           onClick={() => setActiveDropdown(null)}
                           className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">;
-                          <PanelLeft className="w-4 h-4 mr-3" />;
+                          <PanelLeft className="w-4 h-4 mr-3"  />;
                           Dashboard;
                         </Link>;
                         <Link
                           to="/profile"
                           onClick={() => setActiveDropdown(null)}
                           className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">;
-                          <User className="w-4 h-4 mr-3" />;
+                          <User className="w-4 h-4 mr-3"  />;
                           Profile;
                         </Link>;
                         <Link
                           to="/settings"
                           onClick={() => setActiveDropdown(null)}
                           className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">;
-                          <Settings className="w-4 h-4 mr-3" />;
+                          <Settings className="w-4 h-4 mr-3"  />;
                           Settings;
                         </Link>;
-                        <hr className="border-zion-slate/20 my-2" />;
+                        <hr className="border-zion-slate/20 my-2"  />;
                         <button
                           onClick={() => {;
                             logout();
                             setActiveDropdown(null);
 }}
-
 
                   aria-haspopup="true">;
                   <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">;
-                    <User className="w-4 h-4 text-white" />;
+                    <User className="w-4 h-4 text-white"  />;
                   </div>;
                   <span className="text-white text-sm hidden lg:block">{user && user.name}</span>;
-                  <ChevronDown className="w-4 h-4 text-zion-slate-light" />;
+                  <ChevronDown className="w-4 h-4 text-zion-slate-light"  />;
                 </button>;
 
                 <AnimatePresence>;
@@ -982,24 +941,24 @@ import React from 'react';
                           to="/dashboard"
                           onClick={() => setActiveDropdown(null)}
                           className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">;
-                          <PanelLeft className="w-4 h-4 mr-3" />;
+                          <PanelLeft className="w-4 h-4 mr-3"  />;
                           Dashboard;
                         </Link>;
                         <Link
                           to="/profile"
                           onClick={() => setActiveDropdown(null)}
                           className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">;
-                          <User className="w-4 h-4 mr-3" />;
+                          <User className="w-4 h-4 mr-3"  />;
                           Profile;
                         </Link>;
                         <Link
                           to="/settings"
                           onClick={() => setActiveDropdown(null)}
                           className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">;
-                          <Settings className="w-4 h-4 mr-3" />;
+                          <Settings className="w-4 h-4 mr-3"  />;
                           Settings;
                         </Link>;
-                        <hr className="border-zion-slate/20 my-2" />;
+                        <hr className="border-zion-slate/20 my-2"  />;
                         <button
                           onClick={() => {;
                             logout();
@@ -1007,7 +966,7 @@ import React from 'react';
 }}
 
                           className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">;
-                          <LogOut className="w-4 h-4 mr-3" />;
+                          <LogOut className="w-4 h-4 mr-3"  />;
                           Logout;
                         </button>;
                       </div>;
@@ -1019,7 +978,7 @@ import React from 'react';
             ))}
           </nav>
                           className="flex items - center w - full p - 3 rounded - lg hover:bg - zion - slate / 50 transition - colors text - white hover:text - zion - cyan">;
-                          <LogOut className="w - 4 h - 4 mr - 3" />;
+                          <LogOut className="w - 4 h - 4 mr - 3"  />;
                           Logout;
                         </button>;
                       </div>;
@@ -1047,7 +1006,7 @@ import React from 'react';
 
   return (
     <>;
-      <header className="sticky top - 0 z - 50 w - full border - b border - slate - 700 / 20 bg - slate - 900 / 95 backdrop - blur - md">;
+      <header className="sticky top - 0 z - 50 w - full border - b border - slate - 70o0 / 20 bg - slate - 90o0 / 95 backdrop - blur - md">;
         <div className="container flex h - 16 items - center px - 4 sm:px - 6">;
           {/* Logo */}
 
@@ -1066,15 +1025,15 @@ import React from 'react';
   ];
   return (
     <>;
-      <header className="sticky top-0 z-50 w-full border-b border-slate-700/20 bg-slate-900/95 backdrop-blur-md">;
+      <header className="sticky top-0 z-50 w-full border-b border-slate-70o0/20 bg-slate-90o0/95 backdrop-blur-md">;
         <div className="container flex h-16 items-center px-4 sm:px-6">;
           {/* Logo */}
           <div className="flex items-center">;
             <Link to="/" className="flex-shrink-0">;
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">;
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-40o0 via-blue-50o0 to-purple-60o0 bg-clip-text text-transparent">;
           <div className="flex items - center">;
             <Link to="/" className="flex - shrink - 0">;
-              <h1 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent">;
+              <h1 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 40o0 via - blue - 50o0 to - purple - 60o0 bg - clip - text text - transparent">;
 
                 Zion Tech Group;
               </h1>;
@@ -1087,7 +1046,7 @@ import React from 'react';
               <Link
                 key={item && item.name}
                 to={item && item.href}
-                className="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200">;
+                className="text-slate-30o0 hover:text-cyan-40o0 px-3 py-2 text-sm font-medium transition-colors duration-20o0">;
                 {item && item.name}
               </Link>;
             ))}
@@ -1106,19 +1065,19 @@ import React from 'react';
                 onMouseEnter={() => setServicesDropdownOpen(true)}
                 onMouseLeave={() => setServicesDropdownOpen(false)}
 
-                className="flex items-center text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200">;
+                className="flex items-center text-slate-30o0 hover:text-cyan-40o0 px-3 py-2 text-sm font-medium transition-colors duration-20o0">;
                 Services;
-                <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-200 ${servicesDropdownOpen ? 'rotate-180' : ''}`} />;
+                <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-20o0 ${servicesDropdownOpen ? 'rotate-180' : ''}`}  />;
               </button>;
               {servicesDropdownOpen && (;
 
                 <div
-                  className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 border border-slate-700/50 rounded-lg shadow-xl backdrop-blur-md"
+                  className="absolute top-full left-0 mt-2 w-80 bg-slate-80o0/95 border border-slate-70o0/50 rounded-lg shadow-xl backdrop-blur-md"
                   onMouseEnter={() => setServicesDropdownOpen(true)}
                   onMouseLeave={() => setServicesDropdownOpen(false)}
 
                 to={item.href}
-                className="text - slate - 300 hover:text - cyan - 400 px - 3 py - 2 text - sm font - medium transition - colors duration - 200">;
+                className="text - slate - 30o0 hover:text - cyan - 40o0 px - 3 py - 2 text - sm font - medium transition - colors duration - 20o0">;
                 {item.name}
               </Link>))}
             {/* Services Dropdown */}
@@ -1127,13 +1086,13 @@ import React from 'react';
                 on_click={() => setServicesDropdownOpen (!servicesDropdownOpen)}
                 onMouseEnter={() => setServicesDropdownOpen (true)}
                 onMouseLeave={() => setServicesDropdownOpen (false)}
-                className="flex items - center text - slate - 300 hover:text - cyan - 400 px - 3 py - 2 text - sm font - medium transition - colors duration - 200">;
+                className="flex items - center text - slate - 30o0 hover:text - cyan - 40o0 px - 3 py - 2 text - sm font - medium transition - colors duration - 20o0">;
                 Services;
-                <ChevronDown className={`w - 4 h - 4 ml - 1 transition - transform duration - 200 ${servicesDropdownOpen ? 'rotate - 180' : ''}`} />;
+                <ChevronDown className={`w - 4 h - 4 ml - 1 transition - transform duration - 20o0 ${servicesDropdownOpen ? 'rotate - 180' : ''}`}  />;
               </button>;
               {servicesDropdownOpen && (
                 <div;
-                  className="absolute top - full left - 0 mt - 2 w - 80 bg - slate - 800 / 95 border border - slate - 700 / 50 rounded - lg shadow - xl backdrop - blur - md";
+                  className="absolute top - full left - 0 mt - 2 w - 80 bg - slate - 80o0 / 95 border border - slate - 70o0 / 50 rounded - lg shadow - xl backdrop - blur - md";
                   onMouseEnter={() => setServicesDropdownOpen (true)}
                   onMouseLeave={() => setServicesDropdownOpen (false)}
                 >;
@@ -1143,13 +1102,13 @@ import React from 'react';
                         <Link;
                           key={service.name}
                           to={service.href}
-                          className="flex items - center p - 3 rounded - lg hover:bg - slate - 700 / 50 transition - colors duration - 200 group">;
+                          className="flex items - center p - 3 rounded - lg hover:bg - slate - 70o0 / 50 transition - colors duration - 20o0 group">;
                           <div className="flex - 1">;
-                            <div className="text - white font - medium group - hover:text - cyan - 400 transition - colors">;
+                            <div className="text - white font - medium group - hover:text - cyan - 40o0 transition - colors">;
 
                               {service.name}
                             </div>;
-                            <div className="text - sm text - gray - 400">;
+                            <div className="text - sm text - gray - 40o0">;
                               {service.description}
 
                 >;
@@ -1159,30 +1118,30 @@ import React from 'react';
                         <Link
                           key={service && service.name}
                           to={service && service.href}
-                          className="flex items-center p-3 rounded-lg hover:bg-slate-700/50 transition-colors duration-200 group">;
+                          className="flex items-center p-3 rounded-lg hover:bg-slate-70o0/50 transition-colors duration-20o0 group">;
                           <div className="flex-1">;
-                            <div className="text-white font-medium group-hover:text-cyan-400 transition-colors">;
+                            <div className="text-white font-medium group-hover:text-cyan-40o0 transition-colors">;
                               {service && service.name}
                             </div>;
-                            <div className="text-sm text-gray-400">;
+                            <div className="text-sm text-gray-40o0">;
                               {service && service.description}
                             </div>;
                           </div>;
                         </Link>;
                       ))}
                     </div>;
-                    <div className="mt-4 pt-4 border-t border-slate-700/50">;
+                    <div className="mt-4 pt-4 border-t border-slate-70o0/50">;
                       <Link
                         to="/services"
-                        className="block text-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors">;
+                        className="block text-center text-cyan-40o0 hover:text-cyan-30o0 text-sm font-medium transition-colors">;
                             </div>;
                           </div>;
                         </Link>))}
                     </div>;
-                    <div className="mt - 4 pt - 4 border - t border - slate - 700 / 50">;
+                    <div className="mt - 4 pt - 4 border - t border - slate - 70o0 / 50">;
                       <Link;
                         to="/services";
-                        className="block text - center text - cyan - 400 hover:text - cyan - 300 text - sm font - medium transition - colors">;
+                        className="block text - center text - cyan - 40o0 hover:text - cyan - 30o0 text - sm font - medium transition - colors">;
 
                         View All Services →;
                       </Link>;
@@ -1202,13 +1161,13 @@ import React from 'react';
                 placeholder="Search..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-2 pl-10 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400"
+                className="w-full px-4 py-2 pl-10 bg-slate-80o0/50 border border-slate-70o0/50 rounded-lg text-white placeholder-slate-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-40o0/50 focus:border-cyan-40o0"
               />
 
               <button
                 type="submit"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-cyan-400 transition-colors">;
-                <Search className="h-4 h-4" />;
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-slate-40o0 hover:text-cyan-40o0 transition-colors">;
+                <Search className="h-4 h-4"  />;
               <div className="hidden md:flex items-center space-x-3">;
                 <Link
                   to="/login"
@@ -1232,8 +1191,8 @@ import React from 'react';
               />;
               <button;
                 type="submit";
-                className="absolute right - 2 top - 1/2 transform -translate - y-1 / 2 text - slate - 400 hover:text - cyan - 400 transition - colors">;
-                <Search className="h - 4 h - 4" />;
+                className="absolute right - 2 top - 1/2 transform -translate - y-1 / 2 text - slate - 40o0 hover:text - cyan - 40o0 transition - colors">;
+                <Search className="h - 4 h - 4"  />;
               <div className="hidden md:flex items - center space - x-3">;
                 <Link;
                   to="/login";
@@ -1249,21 +1208,21 @@ import React from 'react';
           {/* Right side actions */}
           <div className="ml - 6 flex items - center space - x-4">;
             {/* Notifications */}
-            <button className="p - 2 text - slate - 400 hover:text - cyan - 400 transition - colors">;
-              <Bell className="h - 5 w - 5" />;
+            <button className="p - 2 text - slate - 40o0 hover:text - cyan - 40o0 transition - colors">;
+              <Bell className="h - 5 w - 5"  />;
             </button>;
             {/* User menu */}
 
-            <button className="p - 2 text - slate - 400 hover:text - cyan - 400 transition - colors">;
-              <User className="h - 5 w - 5" />;
+            <button className="p - 2 text - slate - 40o0 hover:text - cyan - 40o0 transition - colors">;
+              <User className="h - 5 w - 5"  />;
             </button>;
               {mobileMenuOpen ? (
-                <X className="w - 6 h - 6 text - white" />) : (
-                <Menu className="w - 6 h - 6 text - zinc - 400" />              className="md:hidden p - 2 text - slate - 400 hover:text - cyan - 400 transition - colors">;
+                <X className="w - 6 h - 6 text - white"  />) : (
+                <Menu className="w - 6 h - 6 text - zinc - 40o0"  />              className="md:hidden p - 2 text - slate - 40o0 hover:text - cyan - 40o0 transition - colors">;
               {mobileMenuOpen ? (
-                <X className="h - 5 w - 5" />) : (
-                <Menu className="h - 5 w - 5" />;
-                <Menu className="w - 6 h - 6 text - white" />)}
+                <X className="h - 5 w - 5"  />) : (
+                <Menu className="h - 5 w - 5"  />;
+                <Menu className="w - 6 h - 6 text - white"  />)}
             </button>;
           </div>;
         </div>;
@@ -1286,7 +1245,7 @@ import React from 'react';
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full px-4 py-2 pl-10 bg-zion-slate/20 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan"
                 />
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light"  />
               </form>
               {/* Mobile Navigation Links */}
               <div className="space-y-2">
@@ -1306,7 +1265,7 @@ import React from 'react';
                 ))}
               </nav>
               {/* Mobile Quick Actions */}
-              <div className="mt-6 pt-6 border-t border-zinc-800/50">
+              <div className="mt-6 pt-6 border-t border-zinc-80o0/50">
                 <div className="grid grid-cols-1 gap-3">
                   {quickActions.map((action) => (
                     <Link
@@ -1317,7 +1276,7 @@ import React from 'react';
 
         {mobileMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 border-t border-slate-700/20">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-80o0/95 border-t border-slate-70o0/20">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
@@ -1340,7 +1299,7 @@ import React from 'react';
                   onChange={(e) => setSearchQuery(e && e.target.value)}
                   className="w-full px-4 py-2 pl-10 bg-zion-slate/20 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan";
                 />;
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />;
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light"  />;
               </form>;
 
               {/* Mobile Navigation Links */}
@@ -1361,7 +1320,7 @@ import React from 'react';
               </nav>;
 
               {/* Mobile Quick Actions */}
-              <div className="mt-6 pt-6 border-t border-zinc-800/50">;
+              <div className="mt-6 pt-6 border-t border-zinc-80o0/50">;
                 <div className="grid grid-cols-1 gap-3">;
                   {quickActions && quickActions.map((action) => (;
                     <Link
@@ -1371,12 +1330,12 @@ import React from 'react';
                       {action && action.name}        {/* Mobile Navigation */}
         {mobileMenuOpen && (;
           <div className="md:hidden">;
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 border-t border-slate-700/20">;
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-80o0/95 border-t border-slate-70o0/20">;
               {navigation && navigation.map((item) => (;
                 <Link
                   key={item && item.name}
                   to={item && item.href}
-                  className="text-slate-300 hover:text-cyan-400 block px-3 py-2 text-base font-medium transition-colors duration-200"
+                  className="text-slate-30o0 hover:text-cyan-40o0 block px-3 py-2 text-base font-medium transition-colors duration-20o0"
                   onClick={() => setMobileMenuOpen(false)}
                 >;
                   {item && item.name}
@@ -1386,13 +1345,13 @@ import React from 'react';
               {/* Mobile Services */}
 
               <div className="px-3 py-2">;
-                <div className="text-slate-400 text-sm font-medium mb-2">Services</div>;
+                <div className="text-slate-40o0 text-sm font-medium mb-2">Services</div>;
                 <div className="space-y-1">;
                   {services && services.map((service) => (;
                     <Link
                       key={service && service.name}
                       to={service && service.href}
-                      className="block text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm transition-colors duration-200"
+                      className="block text-slate-30o0 hover:text-cyan-40o0 px-3 py-2 text-sm transition-colors duration-20o0"
                       onClick={() => setMobileMenuOpen(false)}
                     >;
                       {service && service.name}
@@ -1507,7 +1466,4 @@ import React from 'react';
 
       </AnimatePresence>
     </header>  )
-
-
-
 

@@ -32,9 +32,9 @@ const futuristicServices: ServiceShowcase[] = [
 		title: 'Quantum AI Controller',
 		description: 'Revolutionary AI controller using quantum computing for autonomous system management.',
 		icon: Brain,
-		color: 'from-purple-500 to-cyan-500',
+		color: 'from-purple-50o0 to-cyan-50o0',
 		features: ['Quantum decision making', 'Autonomous learning', 'System optimization'],
-		price: '$32,000/month',
+		price: '$32,0o00/month',
 		status: 'new'
 	},
 	{
@@ -42,9 +42,9 @@ const futuristicServices: ServiceShowcase[] = [
 		title: 'Satellite AI Orchestrator',
 		description: 'AI-powered satellite constellation management for optimal orbital positioning.',
 		icon: Rocket,
-		color: 'from-blue-500 to-indigo-600',
+		color: 'from-blue-50o0 to-indigo-60o0',
 		features: ['Autonomous orbital optimization', 'Real-time monitoring', 'Global coverage'],
-		price: '$15,000/month',
+		price: '$15,0o00/month',
 		status: 'beta'
 	},
 	{
@@ -52,9 +52,9 @@ const futuristicServices: ServiceShowcase[] = [
 		title: 'Quantum Metaverse Engine',
 		description: 'Next-generation metaverse platform using quantum computing for infinite scalability.',
 		icon: Eye,
-		color: 'from-green-500 to-emerald-600',
+		color: 'from-green-50o0 to-emerald-60o0',
 		features: ['Quantum rendering', 'Infinite scalability', 'AI-powered NPCs'],
-		price: '$28,000/month',
+		price: '$28,0o00/month',
 		status: 'active'
 	},
 	{
@@ -62,9 +62,9 @@ const futuristicServices: ServiceShowcase[] = [
 		title: 'Autonomous DeFi Protocol',
 		description: 'Self-managing DeFi protocol that automatically optimizes yields and manages risks.',
 		icon: DollarSign,
-		color: 'from-yellow-500 to-orange-500',
+		color: 'from-yellow-50o0 to-orange-50o0',
 		features: ['Autonomous yield farming', 'Risk management', 'Strategy optimization'],
-		price: '$12,000/month',
+		price: '$12,0o00/month',
 		status: 'beta'
 	},
 	{
@@ -72,9 +72,9 @@ const futuristicServices: ServiceShowcase[] = [
 		title: 'Quantum Genome Analyzer',
 		description: 'Advanced genome analysis platform using quantum computing for personalized medicine.',
 		icon: Heart,
-		color: 'from-pink-500 to-rose-600',
+		color: 'from-pink-50o0 to-rose-60o0',
 		features: ['Quantum DNA sequencing', 'Personalized medicine', 'Disease prediction'],
-		price: '$18,000/month',
+		price: '$18,0o00/month',
 		status: 'new'
 	},
 	{
@@ -82,9 +82,9 @@ const futuristicServices: ServiceShowcase[] = [
 		title: 'Autonomous Robotics Platform',
 		description: 'Complete robotics platform for autonomous manufacturing and logistics operations.',
 		icon: Bot,
-		color: 'from-gray-500 to-slate-600',
+		color: 'from-gray-50o0 to-slate-60o0',
 		features: ['Autonomous navigation', 'Task learning', 'Multi-robot coordination'],
-		price: '$22,000/month',
+		price: '$22,0o00/month',
 		status: 'active'
 	}
 ];
@@ -95,15 +95,15 @@ export default function FuturisticServicesShowcase() {
 		if (!isPlaying) return;
 		const interval = setInterval(() => {
 			setCurrentService((prev) => (prev + 1) % futuristicServices.length);
-		}, 5000);
+		}, 50o00);
 		return () => clearInterval(interval);
 	}, [isPlaying]);
 	const getStatusColor = (status: string) => {
 		switch (status) {
-			case 'new': return 'bg-green-500';
-			case 'beta': return 'bg-yellow-500';
-			case 'active': return 'bg-blue-500';
-			default: return 'bg-gray-500';
+			case 'new': return 'bg-green-50o0';
+			case 'beta': return 'bg-yellow-50o0';
+			case 'active': return 'bg-blue-50o0';
+			default: return 'bg-gray-50o0';
 		}
 	};
 	const getStatusText = (status: string) => {
@@ -148,7 +148,7 @@ export default function FuturisticServicesShowcase() {
 								onClick={() => setIsPlaying(!isPlaying)}
 								className="p-3 bg-white/20 hover:bg-white/30 rounded-full transition-colors"
 							>
-								{isPlaying ? <Pause className="w-5 h-5 text-white" /> : <Play className="w-5 h-5 text-white" />}
+								{isPlaying ? <Pause className="w-5 h-5 text-white"  /> : <Play className="w-5 h-5 text-white"  />}
 							</button>
 							<div className="flex gap-2">
 								{futuristicServices.map((_, index) => (
@@ -169,9 +169,9 @@ export default function FuturisticServicesShowcase() {
 					<AnimatePresence mode="wait">
 						<motion.div
 							key={currentService}
-							initial={{ opacity: 0, x: 100 }}
+							initial={{ opacity: 0, x: 10o0 }}
 							animate={{ opacity: 1, x: 0 }}
-							exit={{ opacity: 0, x: -100 }}
+							exit={{ opacity: 0, x: -10o0 }}
 							transition={{ duration: 0.5 }}
 							className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/10"
 						>
@@ -205,7 +205,7 @@ export default function FuturisticServicesShowcase() {
 													transition={{ delay: index * 0.1 }}
 													className="flex items-center text-zion-slate-light"
 												>
-													<Star className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+													<Star className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0"  />
 													{feature}
 												</motion.li>
 											))}
@@ -215,10 +215,10 @@ export default function FuturisticServicesShowcase() {
 										href="https://ziontechgroup.com/contact"
 										target="_blank"
 										rel="noopener noreferrer"
-										className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-purple hover:to-zion-cyan text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+										className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-purple hover:to-zion-cyan text-white font-semibold rounded-full transition-all duration-30o0 transform hover:scale-10o5 shadow-lg"
 									>
 										Get Started
-										<ArrowRight className="ml-2 w-5 h-5" />
+										<ArrowRight className="ml-2 w-5 h-5"  />
 									</a>
 								</div>
 								{/* Right Side - Visual Element */}
@@ -263,7 +263,7 @@ export default function FuturisticServicesShowcase() {
 								initial={{ opacity: 0, y: 20 }}
 								whileInView={{ opacity: 1, y: 0 }}
 								transition={{ duration: 0.5, delay: index * 0.1 }}
-								className="bg-white/5 hover:bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 transition-all duration-300 hover:border-zion-cyan/50 cursor-pointer group"
+								className="bg-white/5 hover:bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 transition-all duration-30o0 hover:border-zion-cyan/50 cursor-pointer group"
 								onClick={() => setCurrentService(index)}
 							>
 								<div className="flex items-center justify-between mb-4">

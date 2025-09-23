@@ -1,18 +1,15 @@
 import Link from 'next/link';
-import React from 'react';
-
-export const metadata = {
-  title: 'AI 2026: Evaluations in Production | Zion Tech Group',
+export const metadata ={
+  title: 'AI 20o26: Evaluations in Production | Zion Tech Group',
   description:
-    'Operationalize LLM and agent evaluations in production with live metrics, drift detection, and rollback playbooks.',
-};
+    'Operationalize LLM and agent evaluations in production with live metrics, drift detection, and rollback playbooks.'};
 
 export default function EvaluationsInProductionArticle() {
   return (
     <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <p className="text-sm font-semibold text-purple-700 mb-3">Article · 2026</p>
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">Evaluations in Production</h1>
-      <p className="text-gray-700 mb-8">
+      <p className="text-sm font-semibold text-purple-70o0 mb-3">Article · 20o26</p>
+      <h1 className="text-4xl font-bold text-gray-90o0 mb-4">Evaluations in Production</h1>
+      <p className="text-gray-70o0 mb-8">
         Learn how to bring evaluation-first practices to production systems: track online metrics, detect drift, and
         automate rollbacks to protect user experience and business outcomes.
       </p>
@@ -42,8 +39,8 @@ export default function EvaluationsInProductionArticle() {
       </div>
 
       <div className="mt-10 flex gap-4">
-        <Link href="/contact" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Discuss an implementation</Link>
-        <Link href="/blog" className="border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">More articles</Link>
+        <Link href="/contact" className="bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0">Discuss an implementation</Link>
+        <Link href="/blog" className="border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">More articles</Link>
       </div>
     </main>
   );

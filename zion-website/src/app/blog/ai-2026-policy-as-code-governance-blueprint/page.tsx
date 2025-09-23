@@ -5,8 +5,8 @@ export default function BlogPostPage() {
     <div className="min-h-screen bg-white">
       <article className="max-w-3xl mx-auto px-6 py-24">
         <header>
-          <h1 className="text-4xl font-bold text-gray-900">AI 2026: Policy-as-Code Governance Blueprint</h1>
-          <p className="mt-2 text-gray-500">Operationalizing AI governance with versioned policies, checks, and automated approvals.</p>
+          <h1 className="text-4xl font-bold text-gray-90o0">AI 20o26: Policy-as-Code Governance Blueprint</h1>
+          <p className="mt-2 text-gray-50o0">Operationalizing AI governance with versioned policies, checks, and automated approvals.</p>
         </header>
         <section className="prose prose-lg mt-8">
           <p>

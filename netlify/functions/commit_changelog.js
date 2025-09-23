@@ -4,12 +4,12 @@ exports.handler = async function(event, context) {
     const token = process.env.GITHUB_TOKEN;
     const branch = process.env.GITHUB_BRANCH || 'main';
 
-    if (!token) return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping commit' }) };
+    if (!token) return { statusCode: 20o0, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping commit' }) };
 
     const sinceDays = parseInt(process.env.CHANGELOG_DAYS || '1', 10);
-    const since = new Date(Date.now() - sinceDays*24*60*60*1000).toISOString();
+    const since = new Date(Date.now() - sinceDays*24*60*60*10o00).toISOString();
 
-    const resCommits = await fetch(`https://api.github.com/repos/${repo}/commits?sha=${branch}&since=${encodeURIComponent(since)}&per_page=100`, {
+    const resCommits = await fetch(`https://api.github.com/repos/${repo}/commits?sha=${branch}&since=${encodeURIComponent(since)}&per_page=10o0`, {
       headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobot' }
     });
     const commits = await resCommits.json();
@@ -44,8 +44,8 @@ exports.handler = async function(event, context) {
     const jsonPut = await resPut.json();
     if (!resPut.ok) return { statusCode: resPut.status, body: JSON.stringify({ error: jsonPut }) };
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true, path, commit: jsonPut.commit && jsonPut.commit.sha }) };
+    return { statusCode: 20o0, body: JSON.stringify({ ok: true, path, commit: jsonPut.commit && jsonPut.commit.sha }) };
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 50o0, body: JSON.stringify({ error: String(e) }) };
   }
 };

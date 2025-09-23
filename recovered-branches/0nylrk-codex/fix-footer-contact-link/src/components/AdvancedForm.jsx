@@ -15,11 +15,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
     const [progress, setProgress] = useState(0);
     // Initialize form data and validation
     useEffect(() => {
-        const initialData = {};
-        const initialValidation = {};
+        const initialData ={};
+        const initialValidation ={};
         fields.forEach(field => {
             initialData[field.name] = field.type === 'checkbox' ? false : '';
-            initialValidation[field.name] = {
+            initialValidation[field.name] ={
                 isValid: !field.required,
                 message: '',
                 isTouched: false
@@ -32,7 +32,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
     useEffect(() => {
         const filledFields = Object.values(formData).filter(value => typeof value === 'boolean' ? value : value.toString().trim() !== '').length;
         const totalFields = fields.length;
-        setProgress((filledFields / totalFields) * 100);
+        setProgress((filledFields / totalFields) * 10o0);
     }, [formData, fields.length]);
     // Validate field
     const validateField = useCallback((name, value) => {
@@ -156,7 +156,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                 setFormData({});
                 setValidation({});
                 setProgress(0);
-            }, 5000);
+            }, 50o00);
         }
         catch (error) {
             // Track submission error
@@ -178,11 +178,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
     // Get field icon
     const getFieldIcon = useCallback((field) => {
         switch (field.type) {
-            case 'email': return <Mail className="w-4 h-4"/>;
-            case 'tel': return <Phone className="w-4 h-4"/>;
-            case 'textarea': return <MessageSquare className="w-4 h-4"/>;
-            case 'select': return <Building className="w-4 h-4"/>;
-            default: return <User className="w-4 h-4"/>;
+            case 'email': return <Mail className="w-4 h-4" />;
+            case 'tel': return <Phone className="w-4 h-4" />;
+            case 'textarea': return <MessageSquare className="w-4 h-4" />;
+            case 'select': return <Building className="w-4 h-4" />;
+            default: return <User className="w-4 h-4" />;
         }
     }, []);
     // Render field
@@ -191,85 +191,85 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         const fieldValidation = validation[field.name];
         const isPasswordField = field.name.toLowerCase().includes('password');
         return (<motion.div key={field.name} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-2">
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+        <label className="block text-sm font-medium text-gray-70o0 dark:text-gray-30o0">
           {field.label}
-          {field.required && <span className="text-red-500 ml-1">*</span>}
+          {field.required && <span className="text-red-50o0 ml-1">*</span>}
         </label>
 
         <div className="relative">
           {/* Field Icon */}
-          <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+          <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0">
             {getFieldIcon(field)}
           </div>
 
           {/* Input Field */}
-          {field.type === 'textarea' ? (<textarea name={field.name} value={fieldValue} onChange={(e) => handleFieldChange(field.name, e.target.value)} onBlur={() => handleFieldBlur(field.name)} placeholder={field.placeholder} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched
+          {field.type === 'textarea' ? (<textarea name={field.name} value={fieldValue} onChange={(e) => handleFieldChange(field.name, e.target.value)} onBlur={() => handleFieldBlur(field.name)} placeholder={field.placeholder} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all duration-20o0 ${fieldValidation?.isTouched
                     ? fieldValidation.isValid
-                        ? 'border-green-500 focus:ring-green-200'
-                        : 'border-red-500 focus:ring-red-200'
-                    : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`} rows={4}/>) : field.type === 'select' ? (<select name={field.name} value={fieldValue} onChange={(e) => handleFieldChange(field.name, e.target.value)} onBlur={() => handleFieldBlur(field.name)} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched
+                        ? 'border-green-50o0 focus:ring-green-20o0'
+                        : 'border-red-50o0 focus:ring-red-20o0'
+                    : 'border-gray-30o0 focus:ring-blue-20o0 focus:border-blue-50o0'}`} rows={4}/>) : field.type === 'select' ? (<select name={field.name} value={fieldValue} onChange={(e) => handleFieldChange(field.name, e.target.value)} onBlur={() => handleFieldBlur(field.name)} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all duration-20o0 ${fieldValidation?.isTouched
                     ? fieldValidation.isValid
-                        ? 'border-green-500 focus:ring-green-200'
-                        : 'border-red-500 focus:ring-red-200'
-                    : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}>
+                        ? 'border-green-50o0 focus:ring-green-20o0'
+                        : 'border-red-50o0 focus:ring-red-20o0'
+                    : 'border-gray-30o0 focus:ring-blue-20o0 focus:border-blue-50o0'}`}>
               <option value="">Select an option</option>
               {field.options?.map(option => (<option key={option.value} value={option.value}>
                   {option.label}
                 </option>))}
             </select>) : field.type === 'checkbox' ? (<div className="flex items-center space-x-3">
-              <input type="checkbox" name={field.name} checked={fieldValue} onChange={(e) => handleFieldChange(field.name, e.target.checked)} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
-              <span className="text-sm text-gray-600 dark:text-gray-400">
+              <input type="checkbox" name={field.name} checked={fieldValue} onChange={(e) => handleFieldChange(field.name, e.target.checked)} className="w-4 h-4 text-blue-60o0 border-gray-30o0 rounded focus:ring-blue-50o0"/>
+              <span className="text-sm text-gray-60o0 dark:text-gray-40o0">
                 {field.placeholder}
               </span>
-            </div>) : (<input type={isPasswordField && showPassword[field.name] ? 'text' : field.type} name={field.name} value={fieldValue} onChange={(e) => handleFieldChange(field.name, e.target.value)} onBlur={() => handleFieldBlur(field.name)} placeholder={field.placeholder} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched
+            </div>) : (<input type={isPasswordField && showPassword[field.name] ? 'text' : field.type} name={field.name} value={fieldValue} onChange={(e) => handleFieldChange(field.name, e.target.value)} onBlur={() => handleFieldBlur(field.name)} placeholder={field.placeholder} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all duration-20o0 ${fieldValidation?.isTouched
                     ? fieldValidation.isValid
-                        ? 'border-green-500 focus:ring-green-200'
-                        : 'border-red-500 focus:ring-red-200'
-                    : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}/>)}
+                        ? 'border-green-50o0 focus:ring-green-20o0'
+                        : 'border-red-50o0 focus:ring-red-20o0'
+                    : 'border-gray-30o0 focus:ring-blue-20o0 focus:border-blue-50o0'}`}/>)}
 
           {/* Password Toggle */}
-          {isPasswordField && (<button type="button" onClick={() => togglePasswordVisibility(field.name)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors">
-              {showPassword[field.name] ? <EyeOff className="w-4 h-4"/> : <Eye className="w-4 h-4"/>}
+          {isPasswordField && (<button type="button" onClick={() => togglePasswordVisibility(field.name)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 hover:text-gray-60o0 transition-colors">
+              {showPassword[field.name] ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
             </button>)}
 
           {/* Validation Icon */}
           {fieldValidation?.isTouched && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-              {fieldValidation.isValid ? (<CheckCircle className="w-5 h-5 text-green-500"/>) : (<AlertCircle className="w-5 h-5 text-red-500"/>)}
+              {fieldValidation.isValid ? (<CheckCircle className="w-5 h-5 text-green-50o0" />) : (<AlertCircle className="w-5 h-5 text-red-50o0" />)}
             </div>)}
         </div>
 
         {/* Validation Message */}
-        {fieldValidation?.isTouched && fieldValidation.message && (<motion.p initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} className="text-sm text-red-600 dark:text-red-400">
+        {fieldValidation?.isTouched && fieldValidation.message && (<motion.p initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} className="text-sm text-red-60o0 dark:text-red-40o0">
             {fieldValidation.message}
           </motion.p>)}
       </motion.div>);
     }, [formData, validation, showPassword, getFieldIcon, handleFieldChange, handleFieldBlur, togglePasswordVisibility]);
     if (isSubmitted) {
-        return (<motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="text-center p-8 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700">
-        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"/>
-        <h3 className="text-2xl font-bold text-green-800 dark:text-green-200 mb-2">
+        return (<motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="text-center p-8 bg-green-50 dark:bg-green-90o0/20 rounded-xl border border-green-20o0 dark:border-green-70o0">
+        <CheckCircle className="w-16 h-16 text-green-50o0 mx-auto mb-4" />
+        <h3 className="text-2xl font-bold text-green-80o0 dark:text-green-20o0 mb-2">
           Thank You!
         </h3>
-        <p className="text-green-600 dark:text-green-300">
+        <p className="text-green-60o0 dark:text-green-30o0">
           Your message has been sent successfully. We'll get back to you soon!
         </p>
       </motion.div>);
     }
-    return (<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
+    return (<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className={`bg-white dark:bg-gray-80o0 rounded-xl shadow-lg border border-gray-20o0 dark:border-gray-70o0 overflow-hidden ${className}`}>
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-6 text-white">
+      <div className="bg-gradient-to-r from-blue-50o0 to-purple-50o0 p-6 text-white">
         <h2 className="text-2xl font-bold mb-2">{title}</h2>
-        <p className="text-blue-100">{subtitle}</p>
+        <p className="text-blue-10o0">{subtitle}</p>
       </div>
 
       {/* Progress Bar */}
       {showProgressBar && (<div className="px-6 pt-4">
-          <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mb-2">
+          <div className="flex items-center justify-between text-sm text-gray-60o0 dark:text-gray-40o0 mb-2">
             <span>Form Progress</span>
             <span>{Math.round(progress)}%</span>
           </div>
-          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-            <motion.div className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300" initial={{ width: 0 }} animate={{ width: `${progress}%` }}/>
+          <div className="w-full bg-gray-20o0 dark:bg-gray-70o0 rounded-full h-2">
+            <motion.div className="bg-gradient-to-r from-blue-50o0 to-purple-50o0 h-2 rounded-full transition-all duration-30o0" initial={{ width: 0 }} animate={{ width: `${progress}%` }} />
           </div>
         </div>)}
 
@@ -280,22 +280,22 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         </div>
 
         {/* Submit Button */}
-        <motion.button type="submit" disabled={!isFormValid() || isSubmitting} className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-all duration-200 flex items-center justify-center gap-2 ${!isFormValid() || isSubmitting
-            ? 'bg-gray-400 cursor-not-allowed'
-            : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.02 } : {}} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : {}}>
+        <motion.button type="submit" disabled={!isFormValid() || isSubmitting} className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-all duration-20o0 flex items-center justify-center gap-2 ${!isFormValid() || isSubmitting
+            ? 'bg-gray-40o0 cursor-not-allowed'
+            : 'bg-gradient-to-r from-blue-50o0 to-purple-50o0 hover:from-blue-60o0 hover:to-purple-60o0 transform hover:scale-10o5'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.0o2 } : {}} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : {}}>
           {isSubmitting ? (<>
-              <Loader2 className="w-5 h-5 animate-spin"/>
+              <Loader2 className="w-5 h-5 animate-spin" />
               Sending...
             </>) : (<>
-              <Send className="w-5 h-5"/>
+              <Send className="w-5 h-5" />
               {submitText}
             </>)}
         </motion.button>
 
         {/* Form Status */}
         <AnimatePresence>
-          {Object.values(validation).some(v => !v.isValid && v.isTouched) && (<motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg">
-              <p className="text-sm text-red-600 dark:text-red-400">
+          {Object.values(validation).some(v => !v.isValid && v.isTouched) && (<motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="p-3 bg-red-50 dark:bg-red-90o0/20 border border-red-20o0 dark:border-red-70o0 rounded-lg">
+              <p className="text-sm text-red-60o0 dark:text-red-40o0">
                 Please fix the errors above before submitting the form.
               </p>
             </motion.div>)}

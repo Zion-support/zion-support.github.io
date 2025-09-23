@@ -2,7 +2,6 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import PostForm from "./PostForm";
 import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";
-import { useRouter } from "next/router";
 import type { ForumCategory } from "@/types/community";
 
 interface NewPostDialogProps {
@@ -34,7 +33,7 @@ export function NewPostDialog({ open, onOpenChange, initialCategory }: NewPostDi
     }
   };
 
-  const initialValues = {
+  const initialValues ={
     categoryId: initialCategory || "project-help"
   };
 
@@ -44,7 +43,7 @@ export function NewPostDialog({ open, onOpenChange, initialCategory }: NewPostDi
         <DialogHeader>
           <DialogTitle>Create New Post</DialogTitle>
         </DialogHeader>
-        <PostForm initialValues={initialValues} onSubmit={handleSubmit} />
+        <PostForm initialValues={initialValues} onSubmit={handleSubmit}  />
       </DialogContent>
     </Dialog>
   );

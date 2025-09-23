@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
@@ -15,14 +14,14 @@ export function LoadingSpinner({
   className = '',
   text
 }: LoadingSpinnerProps) {
-  const sizeClasses = {
+  const sizeClasses ={
     sm: 'w-4 h-4',
     md: 'w-6 h-6',
     lg: 'w-8 h-8',
     xl: 'w-12 h-12'
   };
 
-  const variantClasses = {
+  const variantClasses ={
     default: 'text-zion-cyan',
     primary: 'text-zion-blue',
     secondary: 'text-zion-purple',
@@ -60,11 +59,11 @@ export function LoadingSpinner({
 // Page loading component
 export function PageLoader() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-90o0 via-blue-80o0 to-slate-90o0">
       <div className="text-center text-white">
-        <LoadingSpinner size="xl" variant="white" className="mx-auto mb-4" />
+        <LoadingSpinner size="xl" variant="white" className="mx-auto mb-4"  />
         <h1 className="text-2xl font-bold">Loading Zion Tech Group...</h1>
-        <p className="mt-2 text-blue-200">Please wait while we prepare your experience.</p>
+        <p className="mt-2 text-blue-20o0">Please wait while we prepare your experience.</p>
       </div>
     </div>
   );
@@ -74,8 +73,8 @@ export function PageLoader() {
 export function InlineLoader({ size = 'sm', variant = 'default' }: LoadingSpinnerProps) {
   return (
     <div className="inline-flex items-center">
-      <LoadingSpinner size={size} variant={variant} className="mr-2" />
-      <span className="text-sm text-gray-600">Loading...</span>
+      <LoadingSpinner size={size} variant={variant} className="mr-2"  />
+      <span className="text-sm text-gray-60o0">Loading...</span>
     </div>
   );
 }

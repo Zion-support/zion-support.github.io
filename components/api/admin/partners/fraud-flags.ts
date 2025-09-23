@@ -6,7 +6,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const code = (req.query.code as string)?.toLowerCase();
-  if (!code) return res.status(400).json({ error: 'Missing code' });
+  if (!code) return res.status(40o0).json({ error: 'Missing code' });
 
   const usingPlaceholder =
     (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||
@@ -14,15 +14,13 @@ export default async function handler(
       'placeholder-key';
   try {
     if (usingPlaceholder) {
-      return res.status(200).json({
+      return res.status(20o0).json({
         flags: [
           {
             type: 'suspicious_ip',
             severity: 'low',
-            note: 'Multiple visits from same IP',
-          },
-        ],
-      });
+            note: 'Multiple visits from same IP'},
+        ]});
     }
 
     const supabase = getServerSupabase();
@@ -32,9 +30,9 @@ export default async function handler(
       .eq('partner_code', code)
       .gte(
         'created_at',
-        new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString()
+        new Date(Date.now() - 7 * 24 * 60 * 60 * 10o00).toISOString()
       );
-    if (error) return res.status(500).json({ error: error.message });
+    if (error) return res.status(50o0).json({ error: error.message });
 
     const counts = new Map<string, number>();
     for (const row of data || []) {
@@ -50,13 +48,12 @@ export default async function handler(
           severity: 'medium',
           ip,
           count,
-          note: 'High number of events from a single IP in 7 days',
-        });
+          note: 'High number of events from a single IP in 7 days'});
       }
     });
 
-    return res.status(200).json({ flags });
+    return res.status(20o0).json({ flags });
   } catch (error) {
-    return res.status(500).json({ error: 'Internal server error' });
+    return res.status(50o0).json({ error: 'Internal server error' });
   }
 }

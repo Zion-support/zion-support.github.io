@@ -1,42 +1,41 @@
-import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
-import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
-import UltraFuturistic2029ServiceShowcase from '../components/sections/UltraFuturistic2029ServiceShowcase';
-import { cuttingEdge2029Services } from '../data/2029-cutting-edge-innovations';
+import UltraFuturisticBackground20o29 from '../components/backgrounds/UltraFuturisticBackground20o29';
+import UltraFuturisticNavigation20o29 from '../components/layout/UltraFuturisticNavigation20o29';
+import UltraFuturisticFooter20o29 from '../components/layout/UltraFuturisticFooter20o29';
+import UltraFuturistic20o29ServiceShowcase from '../components/sections/UltraFuturistic20o29ServiceShowcase';
+import { cuttingEdge20o29Services } from '../data/20o29-cutting-edge-innovations';
 import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services';
 
-export default function UltraFuturistic2029InnovationsPage() {
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+export default function UltraFuturistic20o29InnovationsPage() {
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
 
-  const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services];
+  const all20o29Services = [...cuttingEdgeInnovations20o29, ...spaceColonization20o29Services];
 
   return (
     <>
       <Head>
-        <title>2029 Ultra-Futuristic Innovations | Zion Tech Group</title>
-        <meta name="description" content="Experience the future of technology with our revolutionary 2029 innovations including AI consciousness simulation, quantum brain-computer interfaces, Mars colonization automation, and space mining platforms." />
-        <meta name="keywords" content="2029 innovations, AI consciousness, quantum computing, space colonization, Mars automation, space mining, futuristic technology, Zion Tech Group" />
-        <meta property="og:title" content="2029 Ultra-Futuristic Innovations | Zion Tech Group" />
-        <meta property="og:description" content="Experience the future of technology with our revolutionary 2029 innovations." />
-        <meta property="og:url" content="https://ziontechgroup.com/2029-ultra-futuristic-innovations" />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com/2029-ultra-futuristic-innovations" />
+        <title>20o29 Ultra-Futuristic Innovations | Zion Tech Group</title>
+        <meta name="description" content="Experience the future of technology with our revolutionary 20o29 innovations including AI consciousness simulation, quantum brain-computer interfaces, Mars colonization automation, and space mining platforms."  />
+        <meta name="keywords" content="20o29 innovations, AI consciousness, quantum computing, space colonization, Mars automation, space mining, futuristic technology, Zion Tech Group"  />
+        <meta property="og:title" content="20o29 Ultra-Futuristic Innovations | Zion Tech Group"  />
+        <meta property="og:description" content="Experience the future of technology with our revolutionary 20o29 innovations."  />
+        <meta property="og:url" content="https://ziontechgroup.com/20o29-ultra-futuristic-innovations"  />
+        <meta property="og:type" content="website"  />
+        <link rel="canonical" href="https://ziontechgroup.com/20o29-ultra-futuristic-innovations"  />
       </Head>
 
       {/* Background */}
-      <UltraFuturisticBackground2029 />
+      <UltraFuturisticBackground20o29  />
       
       {/* Navigation */}
-      <UltraFuturisticNavigation2029 />
+      <UltraFuturisticNavigation20o29  />
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -47,9 +46,9 @@ export default function UltraFuturistic2029InnovationsPage() {
               transition={{ duration: 0.8 }}
               className="mb-8"
             >
-              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-500/30 rounded-full px-6 py-3 mb-8">
-                <Rocket className="w-5 h-5 text-purple-400" />
-                <span className="text-purple-400 font-medium">2029 Technology Preview</span>
+              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-90o0/30 to-pink-90o0/30 border border-purple-50o0/30 rounded-full px-6 py-3 mb-8">
+                <Rocket className="w-5 h-5 text-purple-40o0"  />
+                <span className="text-purple-40o0 font-medium">20o29 Technology Preview</span>
               </div>
             </motion.div>
 
@@ -57,10 +56,10 @@ export default function UltraFuturistic2029InnovationsPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8 leading-tight"
+              className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-purple-40o0 via-pink-40o0 to-blue-40o0 bg-clip-text text-transparent mb-8 leading-tight"
             >
-              2029 Ultra-Futuristic
-              <br />
+              20o29 Ultra-Futuristic
+              <br  />
               <span className="text-white">Innovations</span>
             </motion.h1>
 
@@ -68,7 +67,7 @@ export default function UltraFuturistic2029InnovationsPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
+              className="text-2xl text-gray-30o0 max-w-4xl mx-auto mb-12 leading-relaxed"
             >
               Experience the future of technology with our revolutionary services that push the boundaries 
               of what's possible. From AI consciousness simulation to Mars colonization automation.
@@ -82,13 +81,13 @@ export default function UltraFuturistic2029InnovationsPage() {
             >
               <a
                 href="#services"
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25"
+                className="px-8 py-4 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white rounded-xl hover:from-purple-70o0 hover:to-pink-70o0 transition-all duration-20o0 text-lg font-semibold shadow-lg hover:shadow-purple-50o0/25"
               >
                 Explore Innovations
               </a>
               <a
                 href="/contact"
-                className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold"
+                className="px-8 py-4 bg-gray-90o0/50 text-white rounded-xl hover:bg-purple-90o0/30 border border-gray-70o0 hover:border-purple-50o0/50 transition-all duration-20o0 text-lg font-semibold"
               >
                 Get Started
               </a>
@@ -108,8 +107,8 @@ export default function UltraFuturistic2029InnovationsPage() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Innovation Categories
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our 2029 innovations span across multiple cutting-edge technology domains
+              <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
+                Our 20o29 innovations span across multiple cutting-edge technology domains
               </p>
             </motion.div>
 
@@ -119,43 +118,43 @@ export default function UltraFuturistic2029InnovationsPage() {
                   title: '🧠 AI Consciousness & Innovation',
                   description: 'Revolutionary AI systems with human-like consciousness and reasoning capabilities',
                   icon: Brain,
-                  color: 'from-purple-600 to-pink-600',
-                  services: cuttingEdge2029Services.filter(s => s.category.includes('Consciousness') || s.category.includes('Business'))
+                  color: 'from-purple-60o0 to-pink-60o0',
+                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Consciousness') || s.category.includes('Business'))
                 },
                 {
                   title: '⚛️ Quantum & Neuroscience',
                   description: 'Quantum computing meets brain-computer interfaces for unprecedented capabilities',
                   icon: Atom,
-                  color: 'from-indigo-600 to-purple-600',
-                  services: cuttingEdge2029Services.filter(s => s.category.includes('Neuroscience') || s.category.includes('Time'))
+                  color: 'from-indigo-60o0 to-purple-60o0',
+                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Neuroscience') || s.category.includes('Time'))
                 },
                 {
                   title: '🚀 Space Colonization & Mining',
                   description: 'Automated space exploration, colonization, and resource extraction systems',
                   icon: Rocket,
-                  color: 'from-red-600 to-orange-600',
-                  services: cuttingEdge2029Services.filter(s => s.category.includes('Space') || s.category.includes('Time'))
+                  color: 'from-red-60o0 to-orange-60o0',
+                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Space') || s.category.includes('Time'))
                 },
                 {
                   title: '🏠 Space Architecture & Energy',
                   description: 'Advanced habitat design and space-based energy harvesting platforms',
                   icon: Globe,
-                  color: 'from-green-600 to-teal-600',
-                  services: cuttingEdge2029Services.filter(s => s.category.includes('Architecture') || s.category.includes('Energy'))
+                  color: 'from-green-60o0 to-teal-60o0',
+                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Architecture') || s.category.includes('Energy'))
                 },
                 {
                   title: '👁️ AI Reality Augmentation',
                   description: 'Real-time AI-powered reality enhancement and content generation',
                   icon: Eye,
-                  color: 'from-orange-600 to-red-600',
-                  services: cuttingEdge2029Services.filter(s => s.category.includes('Augmented Reality'))
+                  color: 'from-orange-60o0 to-red-60o0',
+                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Augmented Reality'))
                 },
                 {
                   title: '⏰ Quantum Time Manipulation',
                   description: 'Quantum-based time perception manipulation and optimization',
                   icon: Timer,
-                  color: 'from-green-600 to-emerald-600',
-                  services: cuttingEdge2029Services.filter(s => s.category.includes('Time'))
+                  color: 'from-green-60o0 to-emerald-60o0',
+                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Time'))
                 }
               ].map((category, index) => (
                 <motion.div
@@ -163,23 +162,23 @@ export default function UltraFuturistic2029InnovationsPage() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300 group"
+                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-sm border border-gray-70o0/50 rounded-2xl p-8 hover:border-purple-50o0/50 transition-all duration-30o0 group"
                 >
-                  <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <category.icon className="w-8 h-8 text-white" />
+                  <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-30o0`}>
+                    <category.icon className="w-8 h-8 text-white"  />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">{category.title}</h3>
-                  <p className="text-gray-300 mb-6">{category.description}</p>
+                  <p className="text-gray-30o0 mb-6">{category.description}</p>
                   <div className="space-y-2">
                     {category.services.slice(0, 3).map((service, serviceIndex) => (
                       <div key={serviceIndex} className="flex items-center justify-between text-sm">
-                        <span className="text-gray-400">{service.name}</span>
-                        <span className="text-purple-400 font-semibold">{service.price}</span>
+                        <span className="text-gray-40o0">{service.name}</span>
+                        <span className="text-purple-40o0 font-semibold">{service.price}</span>
                       </div>
                     ))}
                   </div>
-                  <div className="mt-4 pt-4 border-t border-gray-700/50">
-                    <span className="text-xs text-gray-500">
+                  <div className="mt-4 pt-4 border-t border-gray-70o0/50">
+                    <span className="text-xs text-gray-50o0">
                       {category.services.length} innovation{category.services.length !== 1 ? 's' : ''} available
                     </span>
                   </div>
@@ -191,12 +190,12 @@ export default function UltraFuturistic2029InnovationsPage() {
 
         {/* Services Showcase */}
         <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 relative">
-          <UltraFuturistic2029ServiceShowcase 
-            services={all2029Services}
-            title="2029 Ultra-Futuristic Services"
-            subtitle="Explore our complete portfolio of revolutionary 2029 technology solutions"
+          <UltraFuturistic20o29ServiceShowcase 
+            services={all20o29Services}
+            title="20o29 Ultra-Futuristic Services"
+            subtitle="Explore our complete portfolio of revolutionary 20o29 technology solutions"
             maxServices={20}
-          />
+           />
         </section>
 
         {/* Innovation Stats */}
@@ -211,17 +210,17 @@ export default function UltraFuturistic2029InnovationsPage() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Innovation Impact
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our 2029 innovations are already transforming industries and creating new possibilities
+              <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
+                Our 20o29 innovations are already transforming industries and creating new possibilities
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               {[
-                { label: 'Revolutionary Services', value: all2029Services.filter(s => (s as any).innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },
-                { label: 'Patent Pending', value: all2029Services.filter(s => (s as any).patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },
-                { label: 'Total Customers', value: all2029Services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },
-                { label: 'Average Rating', value: (all2029Services.reduce((sum, s) => sum + s.rating, 0) / all2029Services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
+                { label: 'Revolutionary Services', value: all20o29Services.filter(s => (s as any).innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-50o0 to-pink-50o0' },
+                { label: 'Patent Pending', value: all20o29Services.filter(s => (s as any).patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-50o0 to-cyan-50o0' },
+                { label: 'Total Customers', value: all20o29Services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-50o0 to-orange-50o0' },
+                { label: 'Average Rating', value: (all20o29Services.reduce((sum, s) => sum + s.rating, 0) / all20o29Services.length).toFixed(1), icon: TrendingUp, color: 'from-green-50o0 to-teal-50o0' }
               ].map((stat, index) => (
                 <motion.div
                   key={index}
@@ -231,10 +230,10 @@ export default function UltraFuturistic2029InnovationsPage() {
                   className="text-center"
                 >
                   <div className={`w-20 h-20 bg-gradient-to-br ${stat.color} rounded-3xl flex items-center justify-center mx-auto mb-6`}>
-                    <stat.icon className="w-10 h-10 text-white" />
+                    <stat.icon className="w-10 h-10 text-white"  />
                   </div>
                   <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
-                  <div className="text-gray-400">{stat.label}</div>
+                  <div className="text-gray-40o0">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -248,25 +247,25 @@ export default function UltraFuturistic2029InnovationsPage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-500/30 rounded-3xl p-12 backdrop-blur-sm"
+              className="bg-gradient-to-r from-purple-90o0/30 to-pink-90o0/30 border border-purple-50o0/30 rounded-3xl p-12 backdrop-blur-sm"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Experience 2029?
+                Ready to Experience 20o29?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join the future of technology with our revolutionary 2029 innovations. 
+              <p className="text-xl text-gray-30o0 mb-8 max-w-2xl mx-auto">
+                Join the future of technology with our revolutionary 20o29 innovations. 
                 Contact us today to discover how we can transform your business.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
                   href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25"
+                  className="px-8 py-4 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white rounded-xl hover:from-purple-70o0 hover:to-pink-70o0 transition-all duration-20o0 text-lg font-semibold shadow-lg hover:shadow-purple-50o0/25"
                 >
                   Get Started Today
                 </a>
                 <a
                   href={`tel:${contactInfo.mobile}`}
-                  className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold"
+                  className="px-8 py-4 bg-gray-90o0/50 text-white rounded-xl hover:bg-purple-90o0/30 border border-gray-70o0 hover:border-purple-50o0/50 transition-all duration-20o0 text-lg font-semibold"
                 >
                   Call Now
                 </a>
@@ -276,7 +275,7 @@ export default function UltraFuturistic2029InnovationsPage() {
         </section>
 
         {/* Footer */}
-        <UltraFuturisticFooter2029 />
+        <UltraFuturisticFooter20o29  />
     </>
   );
 }

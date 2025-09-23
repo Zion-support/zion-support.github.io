@@ -5,15 +5,15 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Brain, Award, BookOpen, Zap, TrendingUp, Clock, Users, Brain } from 'lucide-react';
 
-const NeuralNetworksContentShowcase2025 = () => {
+const NeuralNetworksContentShowcase20o25 = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
   const content = [
     {
       id: 'neural-networks-breakthrough',
-      title: 'AI 2025: Advanced Neural Networks Enterprise Breakthrough',
+      title: 'AI 20o25: Advanced Neural Networks Enterprise Breakthrough',
       description: 'Achieve 450% ROI with cutting-edge neural network architectures. Transform your enterprise with quantum-enhanced AI systems.',
-      url: '/blog/ai-2025-advanced-neural-networks-enterprise-breakthrough',
+      url: '/blog/ai-20o25-advanced-neural-networks-enterprise-breakthrough',
       type: 'blog',
       category: 'technology',
       metrics: {
@@ -23,15 +23,15 @@ const NeuralNetworksContentShowcase2025 = () => {
         speed: '340%'
       },
       icon: Brain,
-      gradient: 'from-purple-600 to-indigo-600',
+      gradient: 'from-purple-60o0 to-indigo-60o0',
       readingTime: '15 min read',
       featured: true
     },
     {
-      id: 'fortune-500-success',
-      title: 'Fortune 500 Success: $2.8B Annual Savings with Neural Networks',
-      description: 'Discover how a Fortune 500 company achieved 567% ROI and $2.8B in annual savings through advanced neural network implementation.',
-      url: '/case-studies/ai-2025-advanced-neural-networks-fortune-500-success-story',
+      id: 'fortune-50o0-success',
+      title: 'Fortune 50o0 Success: $2.8B Annual Savings with Neural Networks',
+      description: 'Discover how a Fortune 50o0 company achieved 567% ROI and $2.8B in annual savings through advanced neural network implementation.',
+      url: '/case-studies/ai-20o25-advanced-neural-networks-fortune-50o0-success-story',
       type: 'case-study',
       category: 'success-story',
       metrics: {
@@ -41,33 +41,33 @@ const NeuralNetworksContentShowcase2025 = () => {
         satisfaction: '99.2%'
       },
       icon: Award,
-      gradient: 'from-green-600 to-emerald-600',
+      gradient: 'from-green-60o0 to-emerald-60o0',
       readingTime: '12 min read',
       featured: true
     },
     {
       id: 'implementation-guide',
-      title: 'Complete Implementation Guide: Advanced Neural Networks 2025',
+      title: 'Complete Implementation Guide: Advanced Neural Networks 20o25',
       description: 'Master the complete roadmap to neural network success. From strategy to 450% ROI in 18 months.',
-      url: '/resources/ai-2025-advanced-neural-networks-implementation-guide',
+      url: '/resources/ai-20o25-advanced-neural-networks-implementation-guide',
       type: 'resource',
       category: 'guide',
       metrics: {
         roi: '450%',
         timeline: '18 months',
         success: '98%',
-        projects: '500+'
+        projects: '50o0+'
       },
       icon: BookOpen,
-      gradient: 'from-orange-600 to-red-600',
+      gradient: 'from-orange-60o0 to-red-60o0',
       readingTime: '25 min read',
       featured: true
     },
     {
       id: 'edge-computing-revolution',
-      title: 'AI 2025 Edge Computing Revolution: Enterprise Breakthrough',
+      title: 'AI 20o25 Edge Computing Revolution: Enterprise Breakthrough',
       description: 'Achieve 340% faster processing with edge AI solutions. 99.9% uptime and $1.8B in cumulative savings.',
-      url: '/blog/ai-2025-edge-computing-revolution-enterprise-breakthrough',
+      url: '/blog/ai-20o25-edge-computing-revolution-enterprise-breakthrough',
       type: 'blog',
       category: 'technology',
       metrics: {
@@ -77,7 +77,7 @@ const NeuralNetworksContentShowcase2025 = () => {
         efficiency: '67%'
       },
       icon: Zap,
-      gradient: 'from-cyan-600 to-blue-600',
+      gradient: 'from-cyan-60o0 to-blue-60o0',
       readingTime: '14 min read',
       featured: false
     }
@@ -101,36 +101,36 @@ const NeuralNetworksContentShowcase2025 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <Brain className="h-4 w-4 mr-2" />
-            NEW: Advanced Neural Networks 2025 Collection
+          <div className="inline-flex items-center bg-purple-10o0 text-purple-80o0 px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <Brain className="h-4 w-4 mr-2"  />
+            NEW: Advanced Neural Networks 20o25 Collection
           </div>
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-90o0 mb-4">
             Transform Your Enterprise with Advanced Neural Networks
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
             Discover cutting-edge neural network technologies delivering 450% average ROI, 
-            99.7% accuracy rates, and $2.8B in cumulative savings across Fortune 500 implementations.
+            99.7% accuracy rates, and $2.8B in cumulative savings across Fortune 50o0 implementations.
           </p>
         </div>
 
         {/* Success Metrics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
           <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="text-3xl font-bold text-purple-600 mb-2">450%</div>
-            <div className="text-gray-600">Average ROI</div>
+            <div className="text-3xl font-bold text-purple-60o0 mb-2">450%</div>
+            <div className="text-gray-60o0">Average ROI</div>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="text-3xl font-bold text-green-600 mb-2">99.7%</div>
-            <div className="text-gray-600">Accuracy Rate</div>
+            <div className="text-3xl font-bold text-green-60o0 mb-2">99.7%</div>
+            <div className="text-gray-60o0">Accuracy Rate</div>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="text-3xl font-bold text-blue-600 mb-2">$2.8B</div>
-            <div className="text-gray-600">Cumulative Savings</div>
+            <div className="text-3xl font-bold text-blue-60o0 mb-2">$2.8B</div>
+            <div className="text-gray-60o0">Cumulative Savings</div>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="text-3xl font-bold text-orange-600 mb-2">500+</div>
-            <div className="text-gray-600">Success Stories</div>
+            <div className="text-3xl font-bold text-orange-60o0 mb-2">50o0+</div>
+            <div className="text-gray-60o0">Success Stories</div>
           </div>
         </div>
 
@@ -142,8 +142,8 @@ const NeuralNetworksContentShowcase2025 = () => {
               onClick={() => setActiveCategory(category.id)}
               className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                 activeCategory === category.id
-                  ? 'bg-purple-600 text-white'
-                  : 'bg-white text-gray-700 hover:bg-gray-100'
+                  ? 'bg-purple-60o0 text-white'
+                  : 'bg-white text-gray-70o0 hover:bg-gray-10o0'
               }`}
             >
               {category.name} ({category.count})
@@ -154,7 +154,7 @@ const NeuralNetworksContentShowcase2025 = () => {
         {/* Featured Content */}
         {activeCategory === 'all' && (
           <div className="mb-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Featured Content</h3>
+            <h3 className="text-2xl font-bold text-gray-90o0 mb-6 text-center">Featured Content</h3>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {featuredContent.map((item, index) => (
                 <motion.div
@@ -167,7 +167,7 @@ const NeuralNetworksContentShowcase2025 = () => {
                   <div className={`bg-gradient-to-r ${item.gradient} p-6 text-white`}>
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center space-x-3">
-                        <item.icon className="h-8 w-8" />
+                        <item.icon className="h-8 w-8"  />
                         <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">
                           {item.type === 'blog' ? 'Blog Post' : item.type === 'case-study' ? 'Case Study' : 'Implementation Guide'}
                         </span>
@@ -193,10 +193,10 @@ const NeuralNetworksContentShowcase2025 = () => {
                   <div className="p-6">
                     <Link
                       href={item.url}
-                      className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors"
+                      className="inline-flex items-center text-purple-60o0 font-semibold hover:text-purple-80o0 transition-colors"
                     >
                       Read Full {item.type === 'blog' ? 'Article' : item.type === 'case-study' ? 'Case Study' : 'Guide'}
-                      <TrendingUp className="ml-2 h-4 w-4" />
+                      <TrendingUp className="ml-2 h-4 w-4"  />
                     </Link>
                   </div>
                 </motion.div>
@@ -217,7 +217,7 @@ const NeuralNetworksContentShowcase2025 = () => {
             >
               <div className={`bg-gradient-to-r ${item.gradient} p-6 text-white`}>
                 <div className="flex items-center justify-between mb-4">
-                  <item.icon className="h-8 w-8" />
+                  <item.icon className="h-8 w-8"  />
                   <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">
                     {item.type === 'blog' ? 'Blog' : item.type === 'case-study' ? 'Case Study' : 'Guide'}
                   </span>
@@ -242,16 +242,16 @@ const NeuralNetworksContentShowcase2025 = () => {
               
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm text-gray-500">{item.readingTime}</span>
-                  <span className="text-sm text-gray-500 capitalize">{item.category}</span>
+                  <span className="text-sm text-gray-50o0">{item.readingTime}</span>
+                  <span className="text-sm text-gray-50o0 capitalize">{item.category}</span>
                 </div>
                 
                 <Link
                   href={item.url}
-                  className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors group-hover:underline"
+                  className="inline-flex items-center text-purple-60o0 font-semibold hover:text-purple-80o0 transition-colors group-hover:underline"
                 >
                   Read More
-                  <TrendingUp className="ml-2 h-4 w-4" />
+                  <TrendingUp className="ml-2 h-4 w-4"  />
                 </Link>
               </div>
             </motion.div>
@@ -260,22 +260,22 @@ const NeuralNetworksContentShowcase2025 = () => {
 
         {/* Call to Action */}
         <div className="mt-12 text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white">
+          <div className="bg-gradient-to-r from-purple-60o0 to-indigo-60o0 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Enterprise?</h3>
             <p className="text-lg text-white/90 mb-6 max-w-2xl mx-auto">
-              Join 89% of Fortune 500 companies already achieving breakthrough results with advanced neural networks. 
+              Join 89% of Fortune 50o0 companies already achieving breakthrough results with advanced neural networks. 
               Get your personalized implementation strategy today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
               >
                 Get Implementation Strategy
               </Link>
               <Link
                 href="/resources"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors"
               >
                 Explore All Resources
               </Link>
@@ -287,4 +287,4 @@ const NeuralNetworksContentShowcase2025 = () => {
   );
 };
 
-export default NeuralNetworksContentShowcase2025;
+export default NeuralNetworksContentShowcase20o25;

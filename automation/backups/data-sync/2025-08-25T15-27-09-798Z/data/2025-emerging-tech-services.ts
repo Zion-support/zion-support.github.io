@@ -1,11 +1,11 @@
 import { MicroSaasService } from './enhanced-real-micro-saas-services';
-const contact = {
-  mobile: '+1 302 464 0950',
+const contact ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-export const emergingTechServices2025: MicroSaasService[] = [
+export const emergingTechServices20o25: MicroSaasService[] = [
   // Quantum Computing Services
   {
     id: 'quantum-computing-as-a-service',
@@ -28,8 +28,8 @@ export const emergingTechServices2025: MicroSaasService[] = [
     ],
     popular: true,
     icon: '⚛️',
-    color: 'from-purple-600 to-pink-700',
-    textColor: 'text-purple-300',
+    color: 'from-purple-60o0 to-pink-70o0',
+    textColor: 'text-purple-30o0',
     link: 'https://ziontechgroup.com/services/quantum-computing-as-a-service',
     marketPosition: 'Leading quantum computing platform competing with IBM Quantum and Amazon Braket.',
     targetAudience: 'Research institutions, pharmaceutical companies, financial services, government agencies',
@@ -40,7 +40,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
     technology: ['Qiskit, Cirq, PennyLane, Python, React, Node.js'],
     integrations: ['IBM Quantum, Google Quantum, AWS Braket, Azure Quantum'],
     useCases: ['Drug discovery, Financial modeling, Logistics optimization, Cryptography'],
-    roi: 'Solve previously intractable problems 1000x faster than classical computers',
+    roi: 'Solve previously intractable problems 10o00x faster than classical computers',
     competitors: ['IBM Quantum, Amazon Braket, Google Quantum, Microsoft Azure Quantum'],
     marketSize: '$1.5B Quantum Computing market',
     growthRate: '45% CAGR',
@@ -48,7 +48,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Cloud-based platform with quantum hardware access, custom algorithm development, and dedicated support.',
-    launchDate: '2025-01-10',
+    launchDate: '20o25-0o1-10',
     customers: 8,
     rating: 4.9,
     reviews: 6
@@ -75,8 +75,8 @@ export const emergingTechServices2025: MicroSaasService[] = [
     ],
     popular: true,
     icon: '🔗',
-    color: 'from-blue-600 to-cyan-700',
-    textColor: 'text-blue-300',
+    color: 'from-blue-60o0 to-cyan-70o0',
+    textColor: 'text-blue-30o0',
     link: 'https://ziontechgroup.com/services/enterprise-blockchain-platform',
     marketPosition: 'Enterprise blockchain solution competing with Hyperledger and Corda.',
     targetAudience: 'Financial institutions, supply chain companies, healthcare organizations, government agencies',
@@ -87,7 +87,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
     technology: ['Ethereum, Solana, Polkadot, Rust, Go, React, Node.js'],
     integrations: ['AWS, Azure, GCP, Oracle, SAP, Salesforce'],
     useCases: ['Supply chain tracking, Digital identity, Asset tokenization, DeFi protocols'],
-    roi: 'Reduce transaction costs by 80% and increase transparency by 100%',
+    roi: 'Reduce transaction costs by 80% and increase transparency by 10o0%',
     competitors: ['Hyperledger Fabric, R3 Corda, Ethereum Enterprise, Polygon'],
     marketSize: '$19B Blockchain market',
     growthRate: '87% CAGR',
@@ -95,7 +95,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'On-premise or cloud deployment with custom smart contracts, integration services, and dedicated support.',
-    launchDate: '2025-01-15',
+    launchDate: '20o25-0o1-15',
     customers: 15,
     rating: 4.8,
     reviews: 12
@@ -122,8 +122,8 @@ export const emergingTechServices2025: MicroSaasService[] = [
     ],
     popular: true,
     icon: '🛰️',
-    color: 'from-indigo-600 to-purple-700',
-    textColor: 'text-indigo-300',
+    color: 'from-indigo-60o0 to-purple-70o0',
+    textColor: 'text-indigo-30o0',
     link: 'https://ziontechgroup.com/services/space-data-analytics-platform',
     marketPosition: 'Leading space data analytics platform competing with Planet Labs and Maxar.',
     targetAudience: 'Agriculture companies, environmental organizations, urban planners, space agencies',
@@ -142,7 +142,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Cloud-based platform with satellite data access, custom analytics, and dedicated space technology experts.',
-    launchDate: '2025-01-20',
+    launchDate: '20o25-0o1-20',
     customers: 12,
     rating: 4.9,
     reviews: 9
@@ -169,8 +169,8 @@ export const emergingTechServices2025: MicroSaasService[] = [
     ],
     popular: true,
     icon: '🌐',
-    color: 'from-green-600 to-blue-700',
-    textColor: 'text-green-300',
+    color: 'from-green-60o0 to-blue-70o0',
+    textColor: 'text-green-30o0',
     link: 'https://ziontechgroup.com/services/enterprise-iot-platform',
     marketPosition: 'Enterprise IoT platform competing with AWS IoT and Azure IoT Hub.',
     targetAudience: 'Manufacturing companies, utilities, smart city operators, logistics providers',
@@ -189,7 +189,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Cloud-hosted platform with custom device integrations, edge computing deployment, and dedicated support.',
-    launchDate: '2025-01-25',
+    launchDate: '20o25-0o1-25',
     customers: 28,
     rating: 4.7,
     reviews: 22
@@ -216,8 +216,8 @@ export const emergingTechServices2025: MicroSaasService[] = [
     ],
     popular: true,
     icon: '🥽',
-    color: 'from-pink-600 to-purple-700',
-    textColor: 'text-pink-300',
+    color: 'from-pink-60o0 to-purple-70o0',
+    textColor: 'text-pink-30o0',
     link: 'https://ziontechgroup.com/services/enterprise-ar-vr-platform',
     marketPosition: 'Enterprise AR/VR platform competing with Unity and Unreal Engine.',
     targetAudience: 'Manufacturing companies, training organizations, design firms, retail companies',
@@ -236,7 +236,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Cloud-based platform with custom content development, device support, and dedicated AR/VR experts.',
-    launchDate: '2025-02-01',
+    launchDate: '20o25-0o2-0o1',
     customers: 19,
     rating: 4.8,
     reviews: 15
@@ -263,8 +263,8 @@ export const emergingTechServices2025: MicroSaasService[] = [
     ],
     popular: true,
     icon: '🤖',
-    color: 'from-gray-600 to-blue-700',
-    textColor: 'text-gray-300',
+    color: 'from-gray-60o0 to-blue-70o0',
+    textColor: 'text-gray-30o0',
     link: 'https://ziontechgroup.com/services/autonomous-systems-platform',
     marketPosition: 'Leading autonomous systems platform competing with NVIDIA DRIVE and ROS.',
     targetAudience: 'Manufacturing companies, logistics providers, agriculture companies, research institutions',
@@ -275,7 +275,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
     technology: ['Python, TensorFlow, PyTorch, ROS, React, Node.js'],
     integrations: ['Industrial robots, drones, autonomous vehicles, IoT sensors'],
     useCases: ['Industrial automation, Autonomous logistics, Precision agriculture, Research and development'],
-    roi: 'Increase operational efficiency by 200% and reduce human error by 90%',
+    roi: 'Increase operational efficiency by 20o0% and reduce human error by 90%',
     competitors: ['NVIDIA DRIVE, ROS, ABB Robotics, KUKA Robotics'],
     marketSize: '$65B Autonomous Systems market',
     growthRate: '40% CAGR',
@@ -283,7 +283,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Custom autonomous system development, integration services, and dedicated robotics experts.',
-    launchDate: '2025-02-05',
+    launchDate: '20o25-0o2-0o5',
     customers: 11,
     rating: 4.9,
     reviews: 8
@@ -310,8 +310,8 @@ export const emergingTechServices2025: MicroSaasService[] = [
     ],
     popular: true,
     icon: '🧬',
-    color: 'from-green-600 to-blue-700',
-    textColor: 'text-green-300',
+    color: 'from-green-60o0 to-blue-70o0',
+    textColor: 'text-green-30o0',
     link: 'https://ziontechgroup.com/services/synthetic-biology-platform',
     marketPosition: 'Leading synthetic biology platform competing with Ginkgo Bioworks and Twist Bioscience.',
     targetAudience: 'Pharmaceutical companies, biotechnology startups, research institutions, agricultural companies',
@@ -330,7 +330,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Custom laboratory integration, AI model training, and dedicated biotechnology experts.',
-    launchDate: '2025-02-10',
+    launchDate: '20o25-0o2-10',
     customers: 7,
     rating: 4.9,
     reviews: 5
@@ -357,8 +357,8 @@ export const emergingTechServices2025: MicroSaasService[] = [
     ],
     popular: true,
     icon: '⚡',
-    color: 'from-yellow-600 to-green-700',
-    textColor: 'text-yellow-300',
+    color: 'from-yellow-60o0 to-green-70o0',
+    textColor: 'text-yellow-30o0',
     link: 'https://ziontechgroup.com/services/smart-energy-management-platform',
     marketPosition: 'Smart energy platform competing with Schneider Electric and Siemens.',
     targetAudience: 'Utility companies, renewable energy providers, industrial facilities, smart cities',
@@ -377,7 +377,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Custom energy system integration, AI model training, and dedicated energy experts.',
-    launchDate: '2025-02-15',
+    launchDate: '20o25-0o2-15',
     customers: 16,
     rating: 4.8,
     reviews: 13
@@ -404,8 +404,8 @@ export const emergingTechServices2025: MicroSaasService[] = [
     ],
     popular: true,
     icon: '🚗',
-    color: 'from-blue-600 to-green-700',
-    textColor: 'text-blue-300',
+    color: 'from-blue-60o0 to-green-70o0',
+    textColor: 'text-blue-30o0',
     link: 'https://ziontechgroup.com/services/intelligent-transportation-platform',
     marketPosition: 'Smart transportation platform competing with Siemens Mobility and Cubic Corporation.',
     targetAudience: 'City governments, transportation agencies, logistics companies, automotive manufacturers',
@@ -424,7 +424,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Custom transportation system integration, AI model training, and dedicated mobility experts.',
-    launchDate: '2025-02-20',
+    launchDate: '20o25-0o2-20',
     customers: 14,
     rating: 4.8,
     reviews: 11
@@ -451,8 +451,8 @@ export const emergingTechServices2025: MicroSaasService[] = [
     ],
     popular: true,
     icon: '🔐',
-    color: 'from-red-600 to-purple-700',
-    textColor: 'text-red-300',
+    color: 'from-red-60o0 to-purple-70o0',
+    textColor: 'text-red-30o0',
     link: 'https://ziontechgroup.com/services/quantum-cybersecurity-platform',
     marketPosition: 'Leading quantum cybersecurity platform competing with ISARA and PQShield.',
     targetAudience: 'Financial institutions, government agencies, healthcare organizations, critical infrastructure',
@@ -471,20 +471,20 @@ export const emergingTechServices2025: MicroSaasService[] = [
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Custom security integration, post-quantum cryptography implementation, and dedicated cybersecurity experts.',
-    launchDate: '2025-02-25',
+    launchDate: '20o25-0o2-25',
     customers: 9,
     rating: 4.9,
     reviews: 7
   }
 ];
 export const getPopularEmergingTechServices = () => {
-  return emergingTechServices2025.filter(service => service.popular);
+  return emergingTechServices20o25.filter(service => service.popular);
 };
 export const getEmergingTechServicesByCategory = (category: string) => {
-  return emergingTechServices2025.filter(service => service.category === category);
+  return emergingTechServices20o25.filter(service => service.category === category);
 };
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-  return emergingTechServices2025.filter(service => {
+  return emergingTechServices20o25.filter(service => {
     const price = parseInt(service.price.replace(/[^0-9]/g, '')) || 0;
     return price >= minPrice && price <= maxPrice;
   });

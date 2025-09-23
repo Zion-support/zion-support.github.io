@@ -1,18 +1,16 @@
-import React from 'react';
 import SEO from '../../components/SEO';
 
-export const metadata = {
-  title: 'AI 2026: Evaluation Harness Blueprint - Zion Tech Group',
+export const metadata ={
+  title: 'AI 20o26: Evaluation Harness Blueprint - Zion Tech Group',
   description:
-    'Build an evaluation harness for autonomous agents with scenario suites, metrics, and governance to ship reliable AI.',
-};
+    'Build an evaluation harness for autonomous agents with scenario suites, metrics, and governance to ship reliable AI.'};
 
 export default function Page() {
   return (
     <main className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-16">
+      <section className="bg-gradient-to-r from-indigo-60o0 to-purple-60o0 text-white py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">AI 2026: Evaluation Harness Blueprint</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">AI 20o26: Evaluation Harness Blueprint</h1>
           <p className="text-lg md:text-xl opacity-90 max-w-3xl">
             Design an evaluation-first pipeline with scenario generation, golden sets, and automatic policy gates for agent releases.
           </p>
@@ -41,8 +39,8 @@ export default function Page() {
             See also the LLM Evals Maturity Model and Agent Safety Certification.
           </p>
           <p className="flex gap-3">
-            <Link href="/blog/ai-2026-llm-evals-maturity-model" className="inline-block border border-purple-600 text-purple-700 px-4 py-2 rounded-lg font-semibold hover:bg-purple-50">LLM Evals Model</Link>
-            <Link href="/content/ai-2026-agent-safety-certification" className="inline-block border border-purple-600 text-purple-700 px-4 py-2 rounded-lg font-semibold hover:bg-purple-50">Safety Certification</Link>
+            <Link href="/blog/ai-20o26-llm-evals-maturity-model" className="inline-block border border-purple-60o0 text-purple-70o0 px-4 py-2 rounded-lg font-semibold hover:bg-purple-50">LLM Evals Model</Link>
+            <Link href="/content/ai-20o26-agent-safety-certification" className="inline-block border border-purple-60o0 text-purple-70o0 px-4 py-2 rounded-lg font-semibold hover:bg-purple-50">Safety Certification</Link>
           </p>
         </div>
       </section>

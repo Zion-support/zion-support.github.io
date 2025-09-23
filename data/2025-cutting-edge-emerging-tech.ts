@@ -1,4 +1,4 @@
-export const cuttingEdgeEmergingTechServices2025 = [
+export const cuttingEdgeEmergingTechServices20o25 = [
   {
     id: 'space-mining-platform',
     name: 'Space Mining Platform',
@@ -36,7 +36,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
     tags: ['Space Mining', 'Asteroid Mining', 'Space Resources', 'Mining Technology', 'Space Logistics'],
     website: 'https://ziontechgroup.com/space-mining-platform',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$3.8B',
@@ -89,7 +89,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
     tags: ['Quantum Computing', 'Biology', 'Drug Discovery', 'Protein Folding', 'Bioinformatics'],
     website: 'https://ziontechgroup.com/quantum-bio-computing-platform',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$7.2B',
@@ -142,7 +142,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
     tags: ['Brain-Computer Interface', 'Neural Technology', 'Medical Devices', 'Research', 'Neuroscience'],
     website: 'https://ziontechgroup.com/brain-computer-interface-platform',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$2.1B',
@@ -195,7 +195,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
     tags: ['Quantum Computing', 'Energy', 'Fusion Power', 'Renewable Energy', 'Grid Optimization'],
     website: 'https://ziontechgroup.com/quantum-energy-platform',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$12.8B',
@@ -248,7 +248,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
     tags: ['Autonomous Vehicles', 'AI', 'Computer Vision', 'Robotics', 'Self-Driving'],
     website: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$54.2B',

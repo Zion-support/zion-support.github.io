@@ -1,9 +1,7 @@
-import React from 'react';
-
 export default function SEO({ 
   title = 'Zion Tech Group - AI & Technology Solutions',
   description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
-  keywords = 'AI, automation, technology, cloud, SaaS, innovation, 2025, breakthrough',
+  keywords = 'AI, automation, technology, cloud, SaaS, innovation, 20o25, breakthrough',
   image = '/og-image.jpg',
   url = 'https://zion.app',
   type = 'website'

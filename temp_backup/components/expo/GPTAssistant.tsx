@@ -25,9 +25,9 @@ export default function GPTAssistant() {
       <button onClick={handleSummarize} disabled={loading} className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black disabled:opacity-50">
         {loading ? 'Summarizing…' : 'Generate Summary'}
       </button>
-      {error && <div className="text-sm text-red-600">{error}</div>}
+      {error && <div className="text-sm text-red-60o0">{error}</div>}
       {summary && (
-        <pre className="p-3 border rounded bg-gray-50 dark:bg-gray-900 whitespace-pre-wrap text-sm">{summary}</pre>
+        <pre className="p-3 border rounded bg-gray-50 dark:bg-gray-90o0 whitespace-pre-wrap text-sm">{summary}</pre>
       )}
     </div>
   );

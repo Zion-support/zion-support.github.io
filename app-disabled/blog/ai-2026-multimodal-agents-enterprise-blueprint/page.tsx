@@ -1,9 +1,8 @@
-import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
-export const metadata = {
-  title: 'AI 2026: Multimodal Agents Enterprise Blueprint | Zion Tech Group',
+export const metadata ={
+  title: 'AI 20o26: Multimodal Agents Enterprise Blueprint | Zion Tech Group',
   description:
     'A practical blueprint to design, deploy, and scale multimodal agents across your enterprise with measurable ROI and governance.',
   keywords: [
@@ -12,22 +11,21 @@ export const metadata = {
     'ai agents',
     'governance',
     'roi',
-  ],
-};
+  ]};
 
 const MultimodalAgentsBlueprintPage = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="AI 2026: Multimodal Agents Enterprise Blueprint"
+        title="AI 20o26: Multimodal Agents Enterprise Blueprint"
         description="Blueprint to design and scale multimodal agents with measurable ROI and strong governance."
         keywords="multimodal agents, enterprise ai, ai agents, governance, roi"
-        url="/blog/ai-2026-multimodal-agents-enterprise-blueprint"
-      />
+        url="/blog/ai-20o26-multimodal-agents-enterprise-blueprint"
+       />
 
-      <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
+      <section className="bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">AI 2026: Multimodal Agents Enterprise Blueprint</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">AI 20o26: Multimodal Agents Enterprise Blueprint</h1>
           <p className="text-xl opacity-90">Design patterns, reference architectures, and adoption roadmap.</p>
         </div>
       </section>
@@ -50,8 +48,8 @@ const MultimodalAgentsBlueprintPage = () => {
           </div>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
-            <Link href="/resources/ai-2026-enterprise-multimodal-agents-blueprint" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Download Full Blueprint</Link>
-            <Link href="/blog/ai-2026-agent-observability-blueprint" className="border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">Agent Observability</Link>
+            <Link href="/resources/ai-20o26-enterprise-multimodal-agents-blueprint" className="bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0">Download Full Blueprint</Link>
+            <Link href="/blog/ai-20o26-agent-observability-blueprint" className="border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">Agent Observability</Link>
           </div>
         </div>
       </section>

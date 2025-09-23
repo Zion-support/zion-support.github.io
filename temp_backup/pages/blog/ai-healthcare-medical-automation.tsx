@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -7,17 +6,17 @@ export default function AIHealthcareMedicalAutomation() {
     <>
       <Head>
         <title>AI in Healthcare: Transforming Medical Care Through Intelligent Automation | Zion Tech Group</title>
-        <meta name="description" content="Discover how AI is revolutionizing healthcare through intelligent automation, diagnostic assistance, personalized medicine, and improved patient outcomes." />
-        <meta property="og:title" content="AI in Healthcare: Transforming Medical Care Through Intelligent Automation" />
-        <meta property="og:description" content="Discover how AI is revolutionizing healthcare through intelligent automation, diagnostic assistance, personalized medicine, and improved patient outcomes." />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="description" content="Discover how AI is revolutionizing healthcare through intelligent automation, diagnostic assistance, personalized medicine, and improved patient outcomes."  />
+        <meta property="og:title" content="AI in Healthcare: Transforming Medical Care Through Intelligent Automation"  />
+        <meta property="og:description" content="Discover how AI is revolutionizing healthcare through intelligent automation, diagnostic assistance, personalized medicine, and improved patient outcomes."  />
+        <meta name="twitter:card" content="summary_large_image"  />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
             <nav className="mb-8">
-              <Link href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              <Link href="/blog" className="text-cyan-40o0 hover:text-cyan-30o0 transition-colors">
                 ← Back to Blog
               </Link>
             </nav>
@@ -25,14 +24,14 @@ export default function AIHealthcareMedicalAutomation() {
             <article className="prose prose-invert prose-lg max-w-none">
               <header className="mb-12 text-center">
                 <div className="flex items-center gap-3 justify-center mb-4">
-                  <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
+                  <span className="px-3 py-1 bg-cyan-40o0/20 text-cyan-40o0 text-sm rounded-full border border-cyan-40o0/30">
                     Healthcare & AI
                   </span>
-                  <span className="text-white/60 text-sm">January 22, 2025</span>
+                  <span className="text-white/60 text-sm">January 22, 20o25</span>
                   <span className="text-white/60 text-sm">•</span>
                   <span className="text-white/60 text-sm">13 min read</span>
                 </div>
-                <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+                <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 bg-clip-text text-transparent">
                   AI in Healthcare: Transforming Medical Care Through Intelligent Automation
                 </h1>
                 <p className="text-xl text-white/80 max-w-3xl mx-auto">
@@ -43,7 +42,7 @@ export default function AIHealthcareMedicalAutomation() {
               </header>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-cyan-400">The Healthcare Transformation</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-cyan-40o0">The Healthcare Transformation</h2>
                 <p className="text-white/90 mb-4">
                   Healthcare is experiencing unprecedented challenges: rising costs, physician shortages, 
                   increasing patient complexity, and the need for more personalized care. AI is emerging 
@@ -64,7 +63,7 @@ export default function AIHealthcareMedicalAutomation() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">AI-Powered Diagnostic Assistance</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-fuchsia-40o0">AI-Powered Diagnostic Assistance</h2>
                 <p className="text-white/90 mb-4">
                   One of the most promising applications of AI in healthcare is diagnostic assistance. 
                   AI systems can analyze medical images, lab results, and patient data to help physicians 
@@ -88,7 +87,7 @@ export default function AIHealthcareMedicalAutomation() {
                   unnecessary emergency room visits while ensuring serious conditions are addressed promptly.
                 </p>
                 <div className="bg-white/10 rounded-lg p-4 border border-white/20 mb-6">
-                  <h4 className="font-semibold text-fuchsia-400 mb-2">Clinical Impact</h4>
+                  <h4 className="font-semibold text-fuchsia-40o0 mb-2">Clinical Impact</h4>
                   <p className="text-white/80 text-sm">
                     A study at a major medical center showed that AI-assisted diagnosis reduced 
                     diagnostic errors by 23% and improved detection rates for early-stage cancers by 31%.
@@ -97,7 +96,7 @@ export default function AIHealthcareMedicalAutomation() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-green-400">Personalized Medicine and Treatment Planning</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-green-40o0">Personalized Medicine and Treatment Planning</h2>
                 <p className="text-white/90 mb-4">
                   AI is enabling a shift from one-size-fits-all medicine to truly personalized care:
                 </p>
@@ -121,7 +120,7 @@ export default function AIHealthcareMedicalAutomation() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-blue-400">Predictive Analytics and Preventive Care</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-blue-40o0">Predictive Analytics and Preventive Care</h2>
                 <p className="text-white/90 mb-4">
                   AI's ability to analyze vast amounts of data makes it ideal for predictive healthcare:
                 </p>
@@ -142,7 +141,7 @@ export default function AIHealthcareMedicalAutomation() {
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <h4 className="font-semibold text-blue-400 mb-2">Chronic Disease Management</h4>
+                    <h4 className="font-semibold text-blue-40o0 mb-2">Chronic Disease Management</h4>
                     <p className="text-white/80 text-sm">
                       AI monitors patients with chronic conditions, predicting exacerbations and 
                       adjusting treatment plans proactively.
@@ -150,7 +149,7 @@ export default function AIHealthcareMedicalAutomation() {
                   </div>
                   
                   <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <h4 className="font-semibold text-blue-400 mb-2">Epidemiological Modeling</h4>
+                    <h4 className="font-semibold text-blue-40o0 mb-2">Epidemiological Modeling</h4>
                     <p className="text-white/80 text-sm">
                       AI models predict disease outbreaks and spread patterns, helping public health 
                       officials prepare and respond effectively.
@@ -160,7 +159,7 @@ export default function AIHealthcareMedicalAutomation() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-purple-400">Administrative Automation and Workflow Optimization</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-purple-40o0">Administrative Automation and Workflow Optimization</h2>
                 <p className="text-white/90 mb-4">
                   Healthcare providers spend significant time on administrative tasks that could be 
                   automated with AI:
@@ -188,7 +187,7 @@ export default function AIHealthcareMedicalAutomation() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Remote Monitoring and Telemedicine</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-yellow-40o0">Remote Monitoring and Telemedicine</h2>
                 <p className="text-white/90 mb-4">
                   The COVID-19 pandemic accelerated the adoption of telemedicine, and AI is making 
                   these remote care solutions more effective:
@@ -212,7 +211,7 @@ export default function AIHealthcareMedicalAutomation() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-cyan-400">Drug Discovery and Development</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-cyan-40o0">Drug Discovery and Development</h2>
                 <p className="text-white/90 mb-4">
                   AI is accelerating the drug discovery process, which traditionally takes years and 
                   costs billions of dollars:
@@ -239,14 +238,14 @@ export default function AIHealthcareMedicalAutomation() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-green-400">Implementation Challenges and Ethical Considerations</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-green-40o0">Implementation Challenges and Ethical Considerations</h2>
                 <p className="text-white/90 mb-4">
                   While AI offers tremendous potential in healthcare, implementation comes with unique 
                   challenges:
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <h4 className="font-semibold text-green-400 mb-2">Data Privacy and Security</h4>
+                    <h4 className="font-semibold text-green-40o0 mb-2">Data Privacy and Security</h4>
                     <p className="text-white/80 text-sm">
                       Healthcare data is highly sensitive and subject to strict regulations. AI systems 
                       must comply with HIPAA and other privacy requirements.
@@ -254,7 +253,7 @@ export default function AIHealthcareMedicalAutomation() {
                   </div>
                   
                   <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <h4 className="font-semibold text-green-400 mb-2">Regulatory Approval</h4>
+                    <h4 className="font-semibold text-green-40o0 mb-2">Regulatory Approval</h4>
                     <p className="text-white/80 text-sm">
                       AI-based medical devices and software require regulatory approval, which can be 
                       complex and time-consuming.
@@ -277,7 +276,7 @@ export default function AIHealthcareMedicalAutomation() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-purple-400">The Future of AI in Healthcare</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-purple-40o0">The Future of AI in Healthcare</h2>
                 <p className="text-white/90 mb-4">
                   As AI technology continues to advance, we can expect even more transformative applications:
                 </p>
@@ -299,7 +298,7 @@ export default function AIHealthcareMedicalAutomation() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Conclusion</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-yellow-40o0">Conclusion</h2>
                 <p className="text-white/90 mb-4">
                   AI is fundamentally transforming healthcare, offering solutions to some of the industry's 
                   most pressing challenges. From improved diagnostics to personalized treatments to 
@@ -318,13 +317,13 @@ export default function AIHealthcareMedicalAutomation() {
             <div className="mt-16 pt-8 border-t border-white/20">
               <h3 className="text-xl font-semibold mb-4 text-white">Share this article</h3>
               <div className="flex gap-4">
-                <a href="#" className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white transition-colors">
+                <a href="#" className="px-4 py-2 bg-blue-60o0 hover:bg-blue-70o0 rounded-lg text-white transition-colors">
                   Twitter
                 </a>
-                <a href="#" className="px-4 py-2 bg-blue-800 hover:bg-blue-900 rounded-lg text-white transition-colors">
+                <a href="#" className="px-4 py-2 bg-blue-80o0 hover:bg-blue-90o0 rounded-lg text-white transition-colors">
                   LinkedIn
                 </a>
-                <a href="#" className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg text-white transition-colors">
+                <a href="#" className="px-4 py-2 bg-green-60o0 hover:bg-green-70o0 rounded-lg text-white transition-colors">
                   Email
                 </a>
               </div>

@@ -42,7 +42,7 @@ import {
   Monitor
 } from 'lucide-react';
 
-const InteractiveTechDemo2025PromotionBanner = () => {
+const InteractiveTechDemo20o25PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false);
   const [isDismissedsetIsDismissed] = useState(false);
   const [isPlayingsetIsPlaying] = useState(false);
@@ -54,7 +54,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
     // Auto-advance demos
     const interval = setInterval(() => {
       setCurrentDemo((prev) => (prev + 1) % 4);
-    }3000);
+    }30o00);
 
     return () => clearInterval(interval);
   }[]);
@@ -65,31 +65,31 @@ const InteractiveTechDemo2025PromotionBanner = () => {
       subtitle: "Experience Synthetic Intelligence",
       description: "Interact with breakthrough AI systems achieving 99.7% consciousness accuracy in real-time neural pattern analysis.",
       icon: Brain,
-      color: "from-purple-500 to-pink-500",
+      color: "from-purple-50o0 to-pink-50o0",
       metrics: "99.7% Accuracy • 8.9/10 Consciousness Index"
     },
     {
       title: "Quantum Neural Fusion",
       subtitle: "Witness Quantum Computing Power",
-      description: "See the first successful integration of quantum computing with neural networksachieving 1000x processing speed.",
+      description: "See the first successful integration of quantum computing with neural networksachieving 10o00x processing speed.",
       icon: Atom,
-      color: "from-indigo-500 to-purple-500",
-      metrics: "1000x Speed • 99.8% Qubit Coherence"
+      color: "from-indigo-50o0 to-purple-50o0",
+      metrics: "10o00x Speed • 99.8% Qubit Coherence"
     },
     {
       title: "Brain-Computer Interface",
       subtitle: "Direct Neural Communication",
       description: "Control computing systems with your thoughts through our advanced BCI technology with 99.9% accuracy.",
       icon: Cpu,
-      color: "from-green-500 to-teal-500",
+      color: "from-green-50o0 to-teal-50o0",
       metrics: "99.9% Accuracy • 12ms Response Time"
     },
     {
       title: "Edge AI Processing",
       subtitle: "Real-Time Distributed Intelligence",
-      description: "Experience ultra-low latency AI processing at the edge with 95% latency reduction and 10,000+ processing nodes.",
+      description: "Experience ultra-low latency AI processing at the edge with 95% latency reduction and 10,0o00+ processing nodes.",
       icon: Network,
-      color: "from-blue-500 to-cyan-500",
+      color: "from-blue-50o0 to-cyan-50o0",
       metrics: "95% Latency Reduction • 10K+ Nodes"
     }
   ];
@@ -109,16 +109,16 @@ const InteractiveTechDemo2025PromotionBanner = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
+          initial={{ opacity: 0, y: -10o0 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
+          exit={{ opacity: 0, y: -10o0 }}
           transition={{ duration: 0.6ease: "easeOut" }}
-          className="relative bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 border-b border-indigo-500/20 overflow-hidden"
+          className="relative bg-gradient-to-r from-slate-90o0 via-indigo-90o0 to-slate-90o0 border-b border-indigo-50o0/20 overflow-hidden"
         >
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-10">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.1),transparent_50%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(168,85,247,0.1),transparent_50%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.1),transparent_50%)]"  />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(168,85,247,0.1),transparent_50%)]"  />
           </div>
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -133,8 +133,8 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                   className="space-y-4"
                 >
                   {/* Badge */}
-                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30">
-                    <Play className="w-4 h-4 text-blue-400 mr-2" />
+                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-indigo-50o0/20 to-purple-50o0/20 border border-indigo-50o0/30">
+                    <Play className="w-4 h-4 text-blue-40o0 mr-2"  />
                     <span className="text-sm font-medium text-white">Interactive Demo Available</span>
                   </div>
 
@@ -144,18 +144,18 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                   </h2>
 
                   {/* Subtitle */}
-                  <p className="text-lg text-indigo-200 font-medium">
+                  <p className="text-lg text-indigo-20o0 font-medium">
                     {demos[currentDemo].subtitle}
                   </p>
 
                   {/* Description */}
-                  <p className="text-gray-300 text-base max-w-2xl">
+                  <p className="text-gray-30o0 text-base max-w-2xl">
                     {demos[currentDemo].description}
                   </p>
 
                   {/* Metrics */}
-                  <div className="flex items-center text-sm text-gray-400">
-                    <TrendingUp className="w-4 h-4 mr-2" />
+                  <div className="flex items-center text-sm text-gray-40o0">
+                    <TrendingUp className="w-4 h-4 mr-2"  />
                     <span>{demos[currentDemo].metrics}</span>
                   </div>
 
@@ -165,7 +165,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                       const Icon = feature.icon;
                       return (
                         <div key={index} className="flex items-center px-3 py-1 rounded-full bg-white/10 text-white text-sm">
-                          <Icon className="w-4 h-4 mr-2" />
+                          <Icon className="w-4 h-4 mr-2"  />
                           {feature.text}
                         </div>
                       );
@@ -176,14 +176,14 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                   <div className="flex flex-col sm:flex-row gap-3 mt-6">
                     <button 
                       onClick={() => setIsPlaying(!isPlaying)}
-                      className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-3 rounded-lg font-medium hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group"
+                      className="bg-gradient-to-r from-indigo-50o0 to-purple-50o0 text-white px-6 py-3 rounded-lg font-medium hover:from-indigo-60o0 hover:to-purple-60o0 transition-all duration-30o0 flex items-center justify-center group"
                     >
-                      {isPlaying ? <Pause className="w-5 h-5 mr-2" /> : <Play className="w-5 h-5 mr-2" />}
+                      {isPlaying ? <Pause className="w-5 h-5 mr-2"  /> : <Play className="w-5 h-5 mr-2"  />}
                       {isPlaying ? 'Pause Demo' : 'Start Demo'}
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />
                     </button>
-                    <button className="border border-white/20 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/10 transition-all duration-300 flex items-center justify-center">
-                      <Download className="w-5 h-5 mr-2" />
+                    <button className="border border-white/20 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/10 transition-all duration-30o0 flex items-center justify-center">
+                      <Download className="w-5 h-5 mr-2"  />
                       Download SDK
                     </button>
                   </div>
@@ -207,12 +207,12 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                       </div>
                       <div className="ml-4">
                         <h3 className="text-white font-bold text-lg">Live Demo</h3>
-                        <p className="text-gray-300 text-sm">Interactive Experience</p>
+                        <p className="text-gray-30o0 text-sm">Interactive Experience</p>
                       </div>
                     </div>
                     
                     {/* Demo Visualization */}
-                    <div className="relative h-24 bg-gradient-to-br from-slate-800 to-slate-900 rounded-lg overflow-hidden border border-white/10 mb-4">
+                    <div className="relative h-24 bg-gradient-to-br from-slate-80o0 to-slate-90o0 rounded-lg overflow-hidden border border-white/10 mb-4">
                       {/* Animated Elements */}
                       <div className="absolute inset-0 flex items-center justify-center">
                         {demos[currentDemo].title.includes('AI Consciousness') && (
@@ -229,8 +229,8 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                                   repeat: isPlaying ? Infinity : 0,
                                   delay: i * 0.1
                                 }}
-                                className="w-3 h-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500"
-                              />
+                                className="w-3 h-3 rounded-full bg-gradient-to-r from-purple-50o0 to-pink-50o0"
+                               />
                             ))}
                           </div>
                         )}
@@ -249,12 +249,12 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                                   repeat: isPlaying ? Infinity : 0,
                                   delay: i * 0.2
                                 }}
-                                className="absolute w-8 h-8 border-2 border-indigo-400 rounded-full"
+                                className="absolute w-8 h-8 border-2 border-indigo-40o0 rounded-full"
                                 style={{
                                   left: `${Math.cos(i * Math.PI / 2) * 20}px`,
                                   top: `${Math.sin(i * Math.PI / 2) * 20}px`
                                 }}
-                              />
+                               />
                             ))}
                           </div>
                         )}
@@ -273,12 +273,12 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                                   repeat: isPlaying ? Infinity : 0,
                                   delay: i * 0.2
                                 }}
-                                className="absolute w-1 bg-gradient-to-t from-green-500 to-teal-500 rounded-full"
+                                className="absolute w-1 bg-gradient-to-t from-green-50o0 to-teal-50o0 rounded-full"
                                 style={{
                                   left: `${30 + i * 20}%`,
-                                  height: '100%'
+                                  height: '10o0%'
                                 }}
-                              />
+                               />
                             ))}
                           </div>
                         )}
@@ -297,8 +297,8 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                                   repeat: isPlaying ? Infinity : 0,
                                   delay: i * 0.1
                                 }}
-                                className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500"
-                              />
+                                className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-50o0 to-cyan-50o0"
+                               />
                             ))}
                           </div>
                         )}
@@ -309,15 +309,15 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                     <div className="flex items-center justify-center space-x-2">
                       <button 
                         onClick={() => setIsPlaying(!isPlaying)}
-                        className="w-8 h-8 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center hover:from-indigo-600 hover:to-purple-600 transition-all duration-300"
+                        className="w-8 h-8 rounded-full bg-gradient-to-r from-indigo-50o0 to-purple-50o0 flex items-center justify-center hover:from-indigo-60o0 hover:to-purple-60o0 transition-all duration-30o0"
                       >
-                        {isPlaying ? <Pause className="w-4 h-4 text-white" /> : <Play className="w-4 h-4 text-white ml-0.5" />}
+                        {isPlaying ? <Pause className="w-4 h-4 text-white"  /> : <Play className="w-4 h-4 text-white ml-0.5"  />}
                       </button>
                       <button className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
-                        <RotateCcw className="w-4 h-4 text-white" />
+                        <RotateCcw className="w-4 h-4 text-white"  />
                       </button>
                       <button className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
-                        <Settings className="w-4 h-4 text-white" />
+                        <Settings className="w-4 h-4 text-white"  />
                       </button>
                     </div>
                   </div>
@@ -326,17 +326,17 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                   <motion.div
                     animate={{ y: [0-10] }}
                     transition={{ duration: 2repeat: Infinityease: "easeInOut" }}
-                    className="absolute -top-2 -right-2 w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center"
+                    className="absolute -top-2 -right-2 w-12 h-12 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 rounded-full flex items-center justify-center"
                   >
-                    <Eye className="w-6 h-6 text-white" />
+                    <Eye className="w-6 h-6 text-white"  />
                   </motion.div>
 
                   <motion.div
-                    animate={{ y: [010] }}
+                    animate={{ y: [0o10] }}
                     transition={{ duration: 2.5repeat: Infinityease: "easeInOut" }}
-                    className="absolute -bottom-2 -left-2 w-10 h-10 bg-gradient-to-r from-green-400 to-teal-500 rounded-full flex items-center justify-center"
+                    className="absolute -bottom-2 -left-2 w-10 h-10 bg-gradient-to-r from-green-40o0 to-teal-50o0 rounded-full flex items-center justify-center"
                   >
-                    <MousePointer className="w-5 h-5 text-white" />
+                    <MousePointer className="w-5 h-5 text-white"  />
                   </motion.div>
                 </motion.div>
               </div>
@@ -348,7 +348,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentDemo(index)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  className={`w-2 h-2 rounded-full transition-all duration-30o0 ${
                     index === currentDemo 
                       ? 'bg-white w-8' 
                       : 'bg-white/30 hover:bg-white/50'
@@ -361,9 +361,9 @@ const InteractiveTechDemo2025PromotionBanner = () => {
           {/* Dismiss Button */}
           <button
             onClick={() => setIsDismissed(true)}
-            className="absolute top-4 right-4 p-2 text-gray-400 hover:text-white transition-colors"
+            className="absolute top-4 right-4 p-2 text-gray-40o0 hover:text-white transition-colors"
           >
-            <X className="w-5 h-5" />
+            <X className="w-5 h-5"  />
           </button>
         </motion.div>
       )}
@@ -371,4 +371,4 @@ const InteractiveTechDemo2025PromotionBanner = () => {
   );
 };
 
-export default InteractiveTechDemo2025PromotionBanner;
+export default InteractiveTechDemo20o25PromotionBanner;

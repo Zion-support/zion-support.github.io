@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { X, ArrowRight, ShoppingBag, Heart, Users, BarChart3, ArrowRight } from 'lucide-react';
 
-const NewContent2025RetailBanner = () => {
+const NewContent20o25RetailBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
 
@@ -25,14 +25,14 @@ const NewContent2025RetailBanner = () => {
   if (!isVisible || isDismissed) return null;
 
   return (
-    <div className="relative bg-gradient-to-r from-pink-600 via-rose-600 to-red-600 text-white overflow-hidden">
+    <div className="relative bg-gradient-to-r from-pink-60o0 via-rose-60o0 to-red-60o0 text-white overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-pink-600/20 via-rose-600/20 to-red-600/20"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-pink-60o0/20 via-rose-60o0/20 to-red-60o0/20"></div>
         <div className="absolute top-4 left-4 w-2 h-2 bg-white/30 rounded-full animate-pulse"></div>
-        <div className="absolute top-8 right-8 w-3 h-3 bg-white/20 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-4 left-1/4 w-1 h-1 bg-white/40 rounded-full animate-pulse delay-500"></div>
-        <div className="absolute bottom-8 right-1/4 w-2 h-2 bg-white/25 rounded-full animate-pulse delay-1500"></div>
+        <div className="absolute top-8 right-8 w-3 h-3 bg-white/20 rounded-full animate-pulse delay-10o00"></div>
+        <div className="absolute bottom-4 left-1/4 w-1 h-1 bg-white/40 rounded-full animate-pulse delay-50o0"></div>
+        <div className="absolute bottom-8 right-1/4 w-2 h-2 bg-white/25 rounded-full animate-pulse delay-150o0"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -40,54 +40,54 @@ const NewContent2025RetailBanner = () => {
           <div className="flex-1">
             <div className="flex items-center space-x-3 mb-4">
               <div className="flex items-center space-x-2 bg-white/20 rounded-full px-4 py-2">
-                <ShoppingBag className="w-5 h-5" />
+                <ShoppingBag className="w-5 h-5"  />
                 <span className="text-sm font-medium">NEW: RETAIL AI TRANSFORMATION</span>
               </div>
-              <div className="hidden sm:flex items-center space-x-2 bg-green-500/20 rounded-full px-3 py-1">
-                <BarChart3 className="w-4 h-4" />
-                <span className="text-xs font-medium">400% ROI</span>
+              <div className="hidden sm:flex items-center space-x-2 bg-green-50o0/20 rounded-full px-3 py-1">
+                <BarChart3 className="w-4 h-4"  />
+                <span className="text-xs font-medium">40o0% ROI</span>
               </div>
             </div>
 
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 leading-tight">
-              AI 2025: The Retail Revolution
-              <span className="block text-yellow-300">Smart Retail Achieving 400% ROI</span>
+              AI 20o25: The Retail Revolution
+              <span className="block text-yellow-30o0">Smart Retail Achieving 40o0% ROI</span>
             </h2>
 
-            <p className="text-lg sm:text-xl mb-6 text-pink-100 max-w-4xl">
-              Discover how Fortune 500 retailers are transforming customer experiences with AI, 
+            <p className="text-lg sm:text-xl mb-6 text-pink-10o0 max-w-4xl">
+              Discover how Fortune 50o0 retailers are transforming customer experiences with AI, 
               achieving unprecedented revenue growth and customer satisfaction.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-6">
               <div className="flex items-center space-x-2 bg-white/10 rounded-lg px-4 py-2">
-                <Heart className="w-5 h-5 text-pink-300" />
+                <Heart className="w-5 h-5 text-pink-30o0"  />
                 <span className="text-sm font-medium">98% Customer Satisfaction</span>
               </div>
               <div className="flex items-center space-x-2 bg-white/10 rounded-lg px-4 py-2">
-                <Users className="w-5 h-5 text-blue-300" />
+                <Users className="w-5 h-5 text-blue-30o0"  />
                 <span className="text-sm font-medium">89% Personalization Accuracy</span>
               </div>
               <div className="flex items-center space-x-2 bg-white/10 rounded-lg px-4 py-2">
-                <BarChart3 className="w-5 h-5 text-green-300" />
+                <BarChart3 className="w-5 h-5 text-green-30o0"  />
                 <span className="text-sm font-medium">$75M Revenue Increase</span>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/blog/ai-2025-retail-transformation-ultimate-guide"
-                className="inline-flex items-center space-x-2 bg-white text-pink-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                href="/blog/ai-20o25-retail-transformation-ultimate-guide"
+                className="inline-flex items-center space-x-2 bg-white text-pink-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
               >
                 <span>Read Full Guide</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4"  />
               </Link>
               <Link
-                href="/case-studies/fortune-500-retail-ai-transformation-2025"
-                className="inline-flex items-center space-x-2 border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-pink-600 transition-colors"
+                href="/case-studies/fortune-50o0-retail-ai-transformation-20o25"
+                className="inline-flex items-center space-x-2 border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-pink-60o0 transition-colors"
               >
                 <span>View Case Study</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4"  />
               </Link>
             </div>
           </div>
@@ -98,19 +98,19 @@ const NewContent2025RetailBanner = () => {
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-sm">ROI Achievement</span>
-                  <span className="text-yellow-300 font-bold">400%</span>
+                  <span className="text-yellow-30o0 font-bold">40o0%</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-sm">Customer Satisfaction</span>
-                  <span className="text-pink-300 font-bold">98%</span>
+                  <span className="text-pink-30o0 font-bold">98%</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-sm">Revenue Growth</span>
-                  <span className="text-green-300 font-bold">$75M</span>
+                  <span className="text-green-30o0 font-bold">$75M</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-sm">Personalization</span>
-                  <span className="text-blue-300 font-bold">89%</span>
+                  <span className="text-blue-30o0 font-bold">89%</span>
                 </div>
               </div>
             </div>
@@ -124,10 +124,10 @@ const NewContent2025RetailBanner = () => {
         className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
         aria-label="Dismiss banner"
       >
-        <X className="w-6 h-6" />
+        <X className="w-6 h-6"  />
       </button>
     </div>
   );
 };
 
-export default NewContent2025RetailBanner;
+export default NewContent20o25RetailBanner;

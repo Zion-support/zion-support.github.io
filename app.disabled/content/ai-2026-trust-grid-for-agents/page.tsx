@@ -1,8 +1,6 @@
 import Link from 'next/link';
-import React from 'react';
-
-export const metadata = {
-  title: 'AI 2026: Trust Grid for Autonomous Agents',
+export const metadata ={
+  title: 'AI 20o26: Trust Grid for Autonomous Agents',
   description:
     'Define, measure, and enforce multi-dimensional trust for autonomous agents across safety, security, reliability, and compliance.'
 };
@@ -10,8 +8,8 @@ export const metadata = {
 export default function TrustGridForAgentsPage() {
   return (
     <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">AI 2026: Trust Grid for Autonomous Agents</h1>
-      <p className="text-gray-600 mb-8">
+      <h1 className="text-4xl font-bold text-gray-90o0 mb-4">AI 20o26: Trust Grid for Autonomous Agents</h1>
+      <p className="text-gray-60o0 mb-8">
         An operational model to quantify and enforce trust across agent behaviors with layered
         controls, evaluation gates, and auditable evidence.
       </p>
@@ -40,8 +38,8 @@ export default function TrustGridForAgentsPage() {
       </section>
 
       <div className="mt-10 flex gap-3">
-        <Link href="/content/ai-2026-evidence-driven-ai-governance" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Next: Evidence-Driven Governance</Link>
-        <Link href="/blog" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">More Articles</Link>
+        <Link href="/content/ai-20o26-evidence-driven-ai-governance" className="inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-70o0">Next: Evidence-Driven Governance</Link>
+        <Link href="/blog" className="inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">More Articles</Link>
       </div>
     </main>
   );

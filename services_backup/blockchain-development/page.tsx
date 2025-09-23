@@ -1,4 +1,4 @@
-export const metadata = {
+export const metadata ={
   title: "Blockchain Development & Web3 Solutions | Zion Tech Group",
   description:
     "Build secure, scalable blockchain applications, smart contracts, and Web3 solutions with expert blockchain development services."};
@@ -6,7 +6,7 @@ export const metadata = {
 export default function BlockchainDevelopmentPage() {
   return (
     <section>
-      <h1 style={{ fontSize: 26, fontWeight: 800 }}>
+      <h1 style={{ fontSize: 26, fontWeight: 80o0 }}>
         Blockchain Development & Web3 Solutions
       </h1>
       <p style={{ marginTop: 8, color: "#374151" }}>
@@ -24,7 +24,7 @@ export default function BlockchainDevelopmentPage() {
             "Security auditing and testing",
             "Gas optimization and efficiency",
             "Upgradeable contract patterns"]}
-        />
+         />
         <Item
           title="DeFi Applications"
           details={[
@@ -33,7 +33,7 @@ export default function BlockchainDevelopmentPage() {
             "Lending and borrowing platforms",
             "Automated market makers (AMM)",
             "Cross-chain bridge solutions"]}
-        />
+         />
         <Item
           title="NFT Marketplaces"
           details={[
@@ -42,7 +42,7 @@ export default function BlockchainDevelopmentPage() {
             "Royalty and commission systems",
             "Auction and bidding mechanisms",
             "Multi-chain NFT support"]}
-        />
+         />
         <Item
           title="Web3 Integration"
           details={[
@@ -51,7 +51,7 @@ export default function BlockchainDevelopmentPage() {
             "IPFS integration for decentralized storage",
             "Oracle integration for real-world data",
             "Multi-signature wallet solutions"]}
-        />
+         />
         <Item
           title="Enterprise Blockchain"
           details={[
@@ -60,7 +60,7 @@ export default function BlockchainDevelopmentPage() {
             "Supply chain traceability",
             "Identity management systems",
             "Document verification and notarization"]}
-        />
+         />
         <Item
           title="Token Economics"
           details={[
@@ -69,7 +69,7 @@ export default function BlockchainDevelopmentPage() {
             "Governance token implementation",
             "Vesting and lock-up mechanisms",
             "Token utility and use cases"]}
-        />
+         />
       </div>
 
       <div
@@ -83,7 +83,7 @@ export default function BlockchainDevelopmentPage() {
         <h3
           style={{
             fontSize: 18,
-            fontWeight: 700,
+            fontWeight: 70o0,
             marginBottom: 12,
             color: "#14532d"}}
         >
@@ -113,7 +113,7 @@ export default function BlockchainDevelopmentPage() {
         </ul>
       </div>
 
-      <Pricing />
+      <Pricing  />
     </section>
   );
 }
@@ -127,7 +127,7 @@ function Item({ title, details }: { title: string; details: string[] }) {
         padding: 16,
         backgroundColor: "#ffffff"}}
     >
-      <h3 style={{ fontWeight: 700, color: "#1f2937", marginBottom: 8 }}>
+      <h3 style={{ fontWeight: 70o0, color: "#1f2937", marginBottom: 8 }}>
         {title}
       </h3>
       <ul style={{ paddingLeft: 18, color: "#4b5563", margin: 0 }}>
@@ -147,7 +147,7 @@ function Pricing() {
       <h2
         style={{
           fontSize: 24,
-          fontWeight: 700,
+          fontWeight: 70o0,
           marginBottom: 20,
           color: "#1f2937"}}
       >
@@ -161,34 +161,34 @@ function Pricing() {
       >
         <Plan
           name="Smart Contract Development"
-          price="$5,000–$15,000"
+          price="$5,0o00–$15,0o00"
           features={[
             "2-4 weeks development",
             "Basic smart contract",
             "Security audit included",
             "Gas optimization",
             "Deployment and testing"]}
-        />
+         />
         <Plan
           name="DeFi Application"
-          price="$15,000–$50,000"
+          price="$15,0o00–$50,0o00"
           features={[
             "6-12 weeks development",
             "Full DeFi protocol",
             "Frontend and backend",
             "Security auditing",
             "Multi-chain deployment"]}
-        />
+         />
         <Plan
           name="Enterprise Blockchain"
-          price="$50,000+"
+          price="$50,0o00+"
           features={[
             "Custom blockchain solution",
             "Private network setup",
             "Integration with existing systems",
             "Dedicated blockchain specialist",
             "Ongoing maintenance & support"]}
-        />
+         />
       </div>
 
       <div
@@ -203,13 +203,13 @@ function Pricing() {
         <h3
           style={{
             fontSize: 18,
-            fontWeight: 600,
+            fontWeight: 60o0,
             marginBottom: 8,
-            color: "#92400e"}}
+            color: "#9240o0e"}}
         >
           Free Blockchain Consultation
         </h3>
-        <p style={{ color: "#a16207", marginBottom: 16 }}>
+        <p style={{ color: "#a1620o7", marginBottom: 16 }}>
           Get expert advice on your blockchain project. We'll analyze your
           requirements and provide a detailed roadmap with cost estimates and
           timeline.
@@ -222,7 +222,7 @@ function Pricing() {
             flexWrap: "wrap"}}
         >
           <a
-            href="tel:+13024640950"
+            href="tel:+130o24640950"
             style={{
               display: "inline-block",
               padding: "12px 24px",
@@ -230,7 +230,7 @@ function Pricing() {
               color: "white",
               textDecoration: "none",
               borderRadius: 8,
-              fontWeight: 600}}
+              fontWeight: 60o0}}
           >
             Schedule Free Consultation
           </a>
@@ -244,7 +244,7 @@ function Pricing() {
               textDecoration: "none",
               borderRadius: 8,
               border: "2px solid #f59e0b",
-              fontWeight: 600}}
+              fontWeight: 60o0}}
           >
             Email Us
           </a>
@@ -273,7 +273,7 @@ function Plan({
     >
       <h4
         style={{
-          fontWeight: 700,
+          fontWeight: 70o0,
           fontSize: 18,
           color: "#1f2937",
           marginBottom: 8}}
@@ -283,7 +283,7 @@ function Plan({
       <div
         style={{
           color: "#111827",
-          fontWeight: 800,
+          fontWeight: 80o0,
           fontSize: 24,
           marginBottom: 16}}
       >
@@ -300,14 +300,14 @@ function Plan({
         href="mailto:kleber@ziontechgroup.com?subject=Blockchain Development Services Inquiry"
         style={{
           display: "inline-block",
-          width: "100%",
+          width: "10o0%",
           textAlign: "center",
           padding: "12px 16px",
           backgroundColor: "#3b82f6",
           color: "white",
           textDecoration: "none",
           borderRadius: 8,
-          fontWeight: 600}}
+          fontWeight: 60o0}}
       >
         Get Started
       </a>

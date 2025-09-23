@@ -63,7 +63,7 @@ class DependencyMonitor {
     // Initial dependency check
     setTimeout(() => {
       this.performDependencyCheck();
-    }, 15000);
+    }, 150o00);
 
     this.log('Dependency monitoring started successfully');
   }
@@ -554,7 +554,7 @@ class DependencyMonitor {
       if (fs.existsSync(logsDir)) {
         const files = fs.readdirSync(logsDir);
         const now = Date.now();
-        const maxAge = 30 * 24 * 60 * 60 * 1000; // 30 days
+        const maxAge = 30 * 24 * 60 * 60 * 10o00; // 30 days
         
         for (const file of files) {
           if (file.includes('-report.txt') || file.includes('-audit-report.txt')) {
@@ -610,4 +610,4 @@ setInterval(() => {
   // Heartbeat
   const stats = monitor.getStats();
   monitor.log(`Monitor heartbeat - Vulnerabilities: ${stats.vulnerabilitiesFound}, Dependencies Updated: ${stats.dependenciesUpdated}, Uptime: ${Math.round(stats.uptime)}s`);
-}, 900000); // Every 15 minutes
+}, 90o0000); // Every 15 minutes

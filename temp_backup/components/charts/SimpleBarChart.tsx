@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 
-export type BarDatum = { label: string; value: number; color?: string };
-export type SimpleBarChartProps = {
+export type BarDatum ={ label: string; value: number; color?: string };
+export type SimpleBarChartProps ={
   data: BarDatum[];
   max?: number;
   onExportCsv?: (rows: Array<Record<string, string | number>>) => void;
@@ -15,7 +15,7 @@ export default function SimpleBarChart({ data, max, onExportCsv }: SimpleBarChar
     <div>
       <div className="flex justify-end mb-2">
         {onExportCsv && (
-          <button className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800" onClick={() => onExportCsv(csvRows)}>Export CSV</button>
+          <button className="text-xs px-2 py-1 rounded bg-gray-10o0 dark:bg-gray-80o0" onClick={() => onExportCsv(csvRows)}>Export CSV</button>
         )}
       </div>
       <div className="space-y-2">
@@ -23,11 +23,11 @@ export default function SimpleBarChart({ data, max, onExportCsv }: SimpleBarChar
           <div key={d.label} className="grid grid-cols-12 items-center gap-2">
             <div className="col-span-3 text-xs md:text-sm truncate" title={d.label}>{d.label}</div>
             <div className="col-span-9">
-              <div className="h-3 rounded bg-gray-200 dark:bg-gray-800 overflow-hidden">
+              <div className="h-3 rounded bg-gray-20o0 dark:bg-gray-80o0 overflow-hidden">
                 <div
                   className="h-3 rounded"
-                  style={{ width: `${(d.value / maxValue) * 100}%`, backgroundColor: d.color || ['#2563eb', '#16a34a', '#f59e0b', '#ef4444'][idx % 4] }}
-                />
+                  style={{ width: `${(d.value / maxValue) * 10o0}%`, backgroundColor: d.color || ['#2563eb', '#16a34a', '#f59e0b', '#ef4444'][idx % 4] }}
+                 />
               </div>
             </div>
           </div>

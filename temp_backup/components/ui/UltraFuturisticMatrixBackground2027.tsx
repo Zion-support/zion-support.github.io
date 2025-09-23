@@ -1,15 +1,15 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
-interface UltraFuturisticMatrixBackground2027Props {
+interface UltraFuturisticMatrixBackground20o27Props {
   children: React.ReactNode;
   className?: string;
 }
 
-export default function UltraFuturisticMatrixBackground2027({ 
+export default function UltraFuturisticMatrixBackground20o27({ 
   children, 
   className = '' 
-}: UltraFuturisticMatrixBackground2027Props) {
+}: UltraFuturisticMatrixBackground20o27Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
 
@@ -30,12 +30,12 @@ export default function UltraFuturisticMatrixBackground2027({
     window.addEventListener('resize', resizeCanvas);
 
     // Matrix rain effect
-    const matrix = {
-      chars: '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン',
+    const matrix ={
+      chars: '0o1アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン',
       fontSize: 14,
       columns: 0,
       drops: [] as number[],
-      colors: ['#00ffff', '#8b5cf6', '#ec4899', '#10b981', '#3b82f6', '#f59e0b']
+      colors: ['#0o0ffff', '#8b5cf6', '#ec4899', '#10b981', '#3b82f6', '#f59e0b']
     };
 
     // Initialize drops
@@ -100,12 +100,12 @@ export default function UltraFuturisticMatrixBackground2027({
       for (let i = 0; i < 20; i++) {
         const x1 = Math.random() * canvas.width;
         const y1 = Math.random() * canvas.height;
-        const x2 = x1 + (Math.random() - 0.5) * 200;
-        const y2 = y1 + (Math.random() - 0.5) * 200;
+        const x2 = x1 + (Math.random() - 0.5) * 20o0;
+        const y2 = y1 + (Math.random() - 0.5) * 20o0;
         
         ctx.strokeStyle = 'rgba(0, 255, 255, 0.3)';
         ctx.lineWidth = 1;
-        ctx.shadowColor = '#00ffff';
+        ctx.shadowColor = '#0o0ffff';
         ctx.shadowBlur = 5;
         ctx.beginPath();
         ctx.moveTo(x1, y1);
@@ -132,39 +132,39 @@ export default function UltraFuturisticMatrixBackground2027({
       <canvas
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
-      />
+       />
       
       {/* Overlay Grid */}
       <div className="absolute inset-0 z-10 pointer-events-none">
-        <div className="w-full h-full bg-gradient-to-br from-transparent via-cyan-500/5 to-purple-500/5" />
+        <div className="w-full h-full bg-gradient-to-br from-transparent via-cyan-50o0/5 to-purple-50o0/5"  />
         
         {/* Animated Grid Lines */}
         <div className="absolute inset-0">
           {Array.from({ length: 20 }).map((_, i) => (
             <motion.div
               key={i}
-              className="absolute border-l border-cyan-500/10"
-              style={{ left: `${(i * 100) / 20}%` }}
+              className="absolute border-l border-cyan-50o0/10"
+              style={{ left: `${(i * 10o0) / 20}%` }}
               initial={{ opacity: 0, scaleY: 0 }}
               animate={{ opacity: 1, scaleY: 1 }}
               transition={{ delay: i * 0.1, duration: 1 }}
-            />
+             />
           ))}
           {Array.from({ length: 15 }).map((_, i) => (
             <motion.div
               key={i}
-              className="absolute border-t border-purple-500/10"
-              style={{ top: `${(i * 100) / 15}%` }}
+              className="absolute border-t border-purple-50o0/10"
+              style={{ top: `${(i * 10o0) / 15}%` }}
               initial={{ opacity: 0, scaleX: 0 }}
               animate={{ opacity: 1, scaleX: 1 }}
               transition={{ delay: i * 0.1, duration: 1 }}
-            />
+             />
           ))}
         </div>
 
         {/* Floating Geometric Shapes */}
         <motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-500/30 rounded-full"
+          className="absolute top-20 left-20 w-32 h-32 border border-cyan-50o0/30 rounded-full"
           animate={{
             rotate: 360,
             scale: [1, 1.2, 1],
@@ -175,10 +175,10 @@ export default function UltraFuturisticMatrixBackground2027({
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
         
         <motion.div
-          className="absolute top-40 right-32 w-24 h-24 border border-purple-500/30 transform rotate-45"
+          className="absolute top-40 right-32 w-24 h-24 border border-purple-50o0/30 transform rotate-45"
           animate={{
             rotate: -360,
             scale: [1, 1.3, 1],
@@ -189,10 +189,10 @@ export default function UltraFuturisticMatrixBackground2027({
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
 
         <motion.div
-          className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-500/30 rounded-full"
+          className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-50o0/30 rounded-full"
           animate={{
             y: [-10, 10, -10],
             scale: [1, 1.1, 1],
@@ -203,19 +203,19 @@ export default function UltraFuturisticMatrixBackground2027({
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
 
         {/* Quantum Particles */}
         {Array.from({ length: 30 }).map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-cyan-400 rounded-full"
+            className="absolute w-1 h-1 bg-cyan-40o0 rounded-full"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`
+              left: `${Math.random() * 10o0}%`,
+              top: `${Math.random() * 10o0}%`
             }}
             animate={{
-              y: [0, -100, 0],
+              y: [0, -10o0, 0],
               opacity: [0, 1, 0],
               scale: [0, 1, 0]
             }}
@@ -225,12 +225,12 @@ export default function UltraFuturisticMatrixBackground2027({
               delay: Math.random() * 5,
               ease: "easeInOut"
             }}
-          />
+           />
         ))}
 
         {/* Holographic Rings */}
         <motion.div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-cyan-500/20 rounded-full"
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-cyan-50o0/20 rounded-full"
           animate={{
             rotate: 360,
             scale: [1, 1.1, 1],
@@ -241,10 +241,10 @@ export default function UltraFuturisticMatrixBackground2027({
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
         
         <motion.div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-purple-500/20 rounded-full"
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-purple-50o0/20 rounded-full"
           animate={{
             rotate: -360,
             scale: [1, 1.2, 1],
@@ -255,10 +255,10 @@ export default function UltraFuturisticMatrixBackground2027({
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
 
         <motion.div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 border border-pink-500/20 rounded-full"
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 border border-pink-50o0/20 rounded-full"
           animate={{
             rotate: 360,
             scale: [1, 1.3, 1],
@@ -269,7 +269,7 @@ export default function UltraFuturisticMatrixBackground2027({
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
       </div>
 
       {/* Content */}
@@ -278,10 +278,10 @@ export default function UltraFuturisticMatrixBackground2027({
       </div>
 
       {/* Bottom Glow Effect */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-50o0/20 via-transparent to-transparent pointer-events-none"  />
       
       {/* Top Glow Effect */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-500/20 via-transparent to-transparent pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-50o0/20 via-transparent to-transparent pointer-events-none"  />
     </div>
   );
 }

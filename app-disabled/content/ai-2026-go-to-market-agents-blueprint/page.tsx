@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'AI 2026: Go-To-Market Agents Blueprint | Zion Tech Group',
+export const metadata ={
+  title: 'AI 20o26: Go-To-Market Agents Blueprint | Zion Tech Group',
   description:
     'Blueprint for GTM agents: pipeline generation, deal acceleration, and expansion with policy-as-code guardrails.',
   keywords: [
@@ -12,22 +12,21 @@ export const metadata = {
     'policy-as-code',
     'evals',
     'governance',
-  ],
-};
+  ]};
 
 export default function GoToMarketAgentsBlueprintPage() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="AI 2026: Go-To-Market Agents Blueprint"
+        title="AI 20o26: Go-To-Market Agents Blueprint"
         description="Pipeline generation, deal acceleration, and expansion with policy-as-code guardrails."
         keywords="GTM agents, go-to-market, sales automation, marketing automation, policy-as-code, evals"
-        url="/content/ai-2026-go-to-market-agents-blueprint"
-      />
+        url="/content/ai-20o26-go-to-market-agents-blueprint"
+       />
 
-      <header className="bg-gradient-to-r from-purple-700 via-blue-700 to-indigo-700 text-white py-16">
+      <header className="bg-gradient-to-r from-purple-70o0 via-blue-70o0 to-indigo-70o0 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold opacity-90">Blueprint • 2025-09-15</p>
+          <p className="text-sm font-semibold opacity-90">Blueprint • 20o25-09-15</p>
           <h1 className="text-3xl md:text-5xl font-bold mt-2">Go-To-Market Agents Blueprint</h1>
           <p className="text-lg md:text-xl opacity-90 mt-4 max-w-3xl">Design production-grade GTM agents with eval-gated delivery and brand-safe controls.</p>
         </div>
@@ -58,8 +57,8 @@ export default function GoToMarketAgentsBlueprintPage() {
           </ul>
 
           <div className="mt-8 p-6 bg-purple-50 rounded-xl">
-            <h3 className="text-purple-800 font-semibold">Getting Started</h3>
-            <ol className="list-decimal pl-6 text-purple-900">
+            <h3 className="text-purple-80o0 font-semibold">Getting Started</h3>
+            <ol className="list-decimal pl-6 text-purple-90o0">
               <li>Define policy bundles for tone, claims, and data boundaries</li>
               <li>Stand up eval harness with representative scenarios</li>
               <li>Pilot in a constrained segment; expand via progressive gates</li>
@@ -67,8 +66,8 @@ export default function GoToMarketAgentsBlueprintPage() {
           </div>
 
           <div className="mt-10 flex flex-wrap gap-4">
-            <Link href="/blog/ai-2026-go-to-market-agents-blueprint" className="text-purple-600 font-semibold">Read Blog Overview →</Link>
-            <Link href="/contact" className="text-white bg-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Discuss GTM Agents</Link>
+            <Link href="/blog/ai-20o26-go-to-market-agents-blueprint" className="text-purple-60o0 font-semibold">Read Blog Overview →</Link>
+            <Link href="/contact" className="text-white bg-purple-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0">Discuss GTM Agents</Link>
           </div>
         </article>
       </main>

@@ -1,7 +1,6 @@
-import React from 'react';
 import Link from 'next/link';
 
-type Feature = {
+type Feature ={
   title: string;
   description: string;
   cta?: { label: string; href: string };
@@ -20,8 +19,7 @@ function loadFeatures(): Feature[] {
       description:
         'This site continually improves itself via orchestrators, factories, and CI workflows without human intervention.',
       cta: { label: 'See automations', href: 'https://github.com/Zion-Holdings/zion.app/tree/main/automation' },
-      tags: ['CI', 'Self-healing', 'Auto-discovery'],
-    },
+      tags: ['CI', 'Self-healing', 'Auto-discovery']},
   ];
 }
 
@@ -50,7 +48,7 @@ export default function AutoFeatures(): JSX.Element {
             ) : null}
             {f.cta ? (
               <Link href={f.cta.href}>
-                <span className="inline-block text-cyan-300 hover:text-cyan-200 underline">{f.cta.label}</span>
+                <span className="inline-block text-cyan-30o0 hover:text-cyan-20o0 underline">{f.cta.label}</span>
               </Link>
             ) : null}
           </div>

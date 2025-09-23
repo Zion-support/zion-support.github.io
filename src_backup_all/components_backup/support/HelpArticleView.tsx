@@ -35,8 +35,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
       title: "Thank you for your feedback!",
       description: type === "helpful" 
         ? "We're glad this article was helpful." 
-        : "We'll work on improving this article.",
-    });
+        : "We'll work on improving this article."});
   };
   
   return (
@@ -54,7 +53,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
           ))}
         </div>
         
-        <div className="border-t border-gray-200 dark:border-gray-700 pt-6 mt-6">
+        <div className="border-t border-gray-20o0 dark:border-gray-70o0 pt-6 mt-6">
           <div className="flex flex-col sm:flex-row items-center justify-between">
             <div className="text-sm text-zion-slate-light mb-4 sm:mb-0">
               Was this article helpful?
@@ -64,22 +63,22 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
               <Button
                 variant="outline"
                 size="sm"
-                className={feedbackGiven === "helpful" ? "bg-green-100 dark:bg-green-900/30" : ""}
+                className={feedbackGiven === "helpful" ? "bg-green-10o0 dark:bg-green-90o0/30" : ""}
                 onClick={() => handleFeedback("helpful")}
                 disabled={feedbackGiven !== null}
               >
-                <ThumbsUp className="h-4 w-4 mr-2" />
+                <ThumbsUp className="h-4 w-4 mr-2"  />
                 Yes
               </Button>
               
               <Button
                 variant="outline"
                 size="sm"
-                className={feedbackGiven === "not-helpful" ? "bg-red-100 dark:bg-red-900/30" : ""}
+                className={feedbackGiven === "not-helpful" ? "bg-red-10o0 dark:bg-red-90o0/30" : ""}
                 onClick={() => handleFeedback("not-helpful")}
                 disabled={feedbackGiven !== null}
               >
-                <ThumbsDown className="h-4 w-4 mr-2" />
+                <ThumbsDown className="h-4 w-4 mr-2"  />
                 No
               </Button>
             </div>

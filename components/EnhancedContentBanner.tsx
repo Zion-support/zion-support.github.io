@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 ArrowRightClockTagStarSparkles
 
@@ -37,51 +36,51 @@ const EnhancedContentBanner: React.FC<EnhancedContentBannerProps> = ({
     switch (scheme) {
       case 'blue':
         return {
-          gradient: 'from-blue-600 to-purple-600',
-          solid: 'bg-blue-600',
-          outline: 'border-blue-600 text-blue-600',
-          accent: 'text-blue-100',
-          hover: 'hover:from-blue-700 hover:to-purple-700'
+          gradient: 'from-blue-60o0 to-purple-60o0',
+          solid: 'bg-blue-60o0',
+          outline: 'border-blue-60o0 text-blue-60o0',
+          accent: 'text-blue-10o0',
+          hover: 'hover:from-blue-70o0 hover:to-purple-70o0'
         };
       case 'green':
         return {
-          gradient: 'from-green-600 to-emerald-600',
-          solid: 'bg-green-600',
-          outline: 'border-green-600 text-green-600',
-          accent: 'text-green-100',
-          hover: 'hover:from-green-700 hover:to-emerald-700'
+          gradient: 'from-green-60o0 to-emerald-60o0',
+          solid: 'bg-green-60o0',
+          outline: 'border-green-60o0 text-green-60o0',
+          accent: 'text-green-10o0',
+          hover: 'hover:from-green-70o0 hover:to-emerald-70o0'
         };
       case 'purple':
         return {
-          gradient: 'from-purple-600 to-pink-600',
-          solid: 'bg-purple-600',
-          outline: 'border-purple-600 text-purple-600',
-          accent: 'text-purple-100',
-          hover: 'hover:from-purple-700 hover:to-pink-700'
+          gradient: 'from-purple-60o0 to-pink-60o0',
+          solid: 'bg-purple-60o0',
+          outline: 'border-purple-60o0 text-purple-60o0',
+          accent: 'text-purple-10o0',
+          hover: 'hover:from-purple-70o0 hover:to-pink-70o0'
         };
       case 'orange':
         return {
-          gradient: 'from-orange-600 to-red-600',
-          solid: 'bg-orange-600',
-          outline: 'border-orange-600 text-orange-600',
-          accent: 'text-orange-100',
-          hover: 'hover:from-orange-700 hover:to-red-700'
+          gradient: 'from-orange-60o0 to-red-60o0',
+          solid: 'bg-orange-60o0',
+          outline: 'border-orange-60o0 text-orange-60o0',
+          accent: 'text-orange-10o0',
+          hover: 'hover:from-orange-70o0 hover:to-red-70o0'
         };
       case 'red':
         return {
-          gradient: 'from-red-600 to-pink-600',
-          solid: 'bg-red-600',
-          outline: 'border-red-600 text-red-600',
-          accent: 'text-red-100',
-          hover: 'hover:from-red-700 hover:to-pink-700'
+          gradient: 'from-red-60o0 to-pink-60o0',
+          solid: 'bg-red-60o0',
+          outline: 'border-red-60o0 text-red-60o0',
+          accent: 'text-red-10o0',
+          hover: 'hover:from-red-70o0 hover:to-pink-70o0'
         };
       default:
         return {
-          gradient: 'from-blue-600 to-purple-600',
-          solid: 'bg-blue-600',
-          outline: 'border-blue-600 text-blue-600',
-          accent: 'text-blue-100',
-          hover: 'hover:from-blue-700 hover:to-purple-700'
+          gradient: 'from-blue-60o0 to-purple-60o0',
+          solid: 'bg-blue-60o0',
+          outline: 'border-blue-60o0 text-blue-60o0',
+          accent: 'text-blue-10o0',
+          hover: 'hover:from-blue-70o0 hover:to-purple-70o0'
         };
     }
   };
@@ -108,7 +107,7 @@ const EnhancedContentBanner: React.FC<EnhancedContentBannerProps> = ({
           {/* Header */}
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-2 mb-4">
-              <Sparkles className="w-6 h-6" />
+              <Sparkles className="w-6 h-6"  />
               <span className={`text-sm font-semibold ${colors.accent} opacity-90`}>
                 Fresh Content
               </span>
@@ -127,12 +126,12 @@ const EnhancedContentBanner: React.FC<EnhancedContentBannerProps> = ({
               <Link
                 key={index}
                 href={item.href}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40"
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-30o0 border border-white/20 hover:border-white/40"
               >
                 {/* New Badge */}
                 {item.isNew && (
                   <div className="inline-flex items-center gap-1 px-3 py-1 bg-white/20 text-white text-sm font-semibold rounded-full mb-4">
-                    <Star className="w-3 h-3" />
+                    <Star className="w-3 h-3"  />
                     New
                   </div>
                 )}
@@ -147,7 +146,7 @@ const EnhancedContentBanner: React.FC<EnhancedContentBannerProps> = ({
                 {/* Category */}
                 {item.category && (
                   <div className="flex items-center gap-1 mb-3">
-                    <Tag className="w-4 h-4 opacity-70" />
+                    <Tag className="w-4 h-4 opacity-70"  />
                     <span className="text-sm opacity-70">{item.category}</span>
                   </div>
                 )}
@@ -166,13 +165,13 @@ const EnhancedContentBanner: React.FC<EnhancedContentBannerProps> = ({
                 <div className="flex items-center justify-between text-sm opacity-70">
                   {item.readTime && (
                     <div className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
+                      <Clock className="w-4 h-4"  />
                       <span>{item.readTime}</span>
                     </div>
                   )}
-                  <div className="flex items-center gap-1 group-hover:opacity-100 transition-opacity">
+                  <div className="flex items-center gap-1 group-hover:opacity-10o0 transition-opacity">
                     <span>Read more</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform"  />
                   </div>
                 </div>
               </Link>
@@ -183,14 +182,14 @@ const EnhancedContentBanner: React.FC<EnhancedContentBannerProps> = ({
           <div className="text-center">
             <Link
               href={ctaHref}
-              className={`inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl ${
+              className={`inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold transition-all duration-30o0 shadow-lg hover:shadow-xl ${
                 variant === 'outline'
-                  ? 'bg-white text-gray-900 hover:bg-gray-100'
+                  ? 'bg-white text-gray-90o0 hover:bg-gray-10o0'
                   : 'bg-white/20 backdrop-blur-sm text-white hover:bg-white/30'
               }`}
             >
               {ctaText}
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-5 h-5"  />
             </Link>
           </div>
         </div>

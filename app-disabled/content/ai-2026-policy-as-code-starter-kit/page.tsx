@@ -1,29 +1,27 @@
-import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
-export const metadata = {
-  title: 'AI 2026: Policy-as-Code Starter Kit | Zion Tech Group',
+export const metadata ={
+  title: 'AI 20o26: Policy-as-Code Starter Kit | Zion Tech Group',
   description:
     'A practical starter kit to implement policy-as-code for AI agents: controls, exceptions, and evaluation gates.',
-  keywords: ['policy-as-code', 'governance', 'ai agents', 'controls', 'evals'],
-};
+  keywords: ['policy-as-code', 'governance', 'ai agents', 'controls', 'evals']};
 
-const PolicyAsCodeStarterKit2026: React.FC = () => {
+const PolicyAsCodeStarterKit20o26: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="AI 2026: Policy-as-Code Starter Kit"
+        title="AI 20o26: Policy-as-Code Starter Kit"
         description="Implement policy-as-code for AI agents: versioned controls, exceptions, and evaluation gates."
         keywords="policy-as-code, governance, ai agents, controls, evals"
-        url="/content/ai-2026-policy-as-code-starter-kit"
-      />
+        url="/content/ai-20o26-policy-as-code-starter-kit"
+       />
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">
-          <p className="text-sm text-gray-500">Published: 2025-09-15 · Category: Governance</p>
-          <h1 className="text-4xl font-bold text-gray-900 mt-2">AI 2026: Policy-as-Code Starter Kit</h1>
-          <p className="text-lg text-gray-600 mt-4">
+          <p className="text-sm text-gray-50o0">Published: 20o25-09-15 · Category: Governance</p>
+          <h1 className="text-4xl font-bold text-gray-90o0 mt-2">AI 20o26: Policy-as-Code Starter Kit</h1>
+          <p className="text-lg text-gray-60o0 mt-4">
             A pragmatic blueprint to define, validate, and enforce controls for autonomous agents using policy-as-code.
           </p>
         </header>
@@ -62,13 +60,13 @@ const PolicyAsCodeStarterKit2026: React.FC = () => {
         </div>
 
         <footer className="mt-12 flex items-center justify-between">
-          <Link href="/content" className="text-purple-600 font-semibold hover:text-purple-800">← Back to Content</Link>
-          <Link href="/contact" className="text-white bg-purple-600 px-5 py-2 rounded-lg font-semibold hover:bg-purple-700">Request Advisory</Link>
+          <Link href="/content" className="text-purple-60o0 font-semibold hover:text-purple-80o0">← Back to Content</Link>
+          <Link href="/contact" className="text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0">Request Advisory</Link>
         </footer>
       </article>
     </div>
   );
 };
 
-export default PolicyAsCodeStarterKit2026;
+export default PolicyAsCodeStarterKit20o26;
 

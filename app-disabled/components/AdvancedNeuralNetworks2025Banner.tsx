@@ -5,16 +5,16 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight, Brain, Zap, TrendingUp, Award } from 'lucide-react';
 
-const AdvancedNeuralNetworks2025Banner = () => {
+const AdvancedNeuralNetworks20o25Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
   const content = [
     {
       id: 'neural-networks-breakthrough',
-      title: 'AI 2025: Advanced Neural Networks Enterprise Breakthrough',
+      title: 'AI 20o25: Advanced Neural Networks Enterprise Breakthrough',
       description: 'Achieve 450% ROI with cutting-edge neural network architectures. Transform your enterprise with quantum-enhanced AI systems.',
-      url: '/blog/ai-2025-advanced-neural-networks-enterprise-breakthrough',
+      url: '/blog/ai-20o25-advanced-neural-networks-enterprise-breakthrough',
       type: 'blog',
       metrics: {
         roi: '450%',
@@ -23,13 +23,13 @@ const AdvancedNeuralNetworks2025Banner = () => {
         speed: '340%'
       },
       icon: Brain,
-      gradient: 'from-purple-600 via-blue-600 to-indigo-600'
+      gradient: 'from-purple-60o0 via-blue-60o0 to-indigo-60o0'
     },
     {
-      id: 'fortune-500-success',
-      title: 'Fortune 500 Success: $2.8B Annual Savings with Neural Networks',
-      description: 'Discover how a Fortune 500 company achieved 567% ROI and $2.8B in annual savings through advanced neural network implementation.',
-      url: '/case-studies/ai-2025-advanced-neural-networks-fortune-500-success-story',
+      id: 'fortune-50o0-success',
+      title: 'Fortune 50o0 Success: $2.8B Annual Savings with Neural Networks',
+      description: 'Discover how a Fortune 50o0 company achieved 567% ROI and $2.8B in annual savings through advanced neural network implementation.',
+      url: '/case-studies/ai-20o25-advanced-neural-networks-fortune-50o0-success-story',
       type: 'case-study',
       metrics: {
         savings: '$2.8B',
@@ -38,28 +38,28 @@ const AdvancedNeuralNetworks2025Banner = () => {
         satisfaction: '99.2%'
       },
       icon: Award,
-      gradient: 'from-green-600 via-emerald-600 to-teal-600'
+      gradient: 'from-green-60o0 via-emerald-60o0 to-teal-60o0'
     },
     {
       id: 'implementation-guide',
-      title: 'Complete Implementation Guide: Advanced Neural Networks 2025',
+      title: 'Complete Implementation Guide: Advanced Neural Networks 20o25',
       description: 'Master the complete roadmap to neural network success. From strategy to 450% ROI in 18 months.',
-      url: '/resources/ai-2025-advanced-neural-networks-implementation-guide',
+      url: '/resources/ai-20o25-advanced-neural-networks-implementation-guide',
       type: 'resource',
       metrics: {
         roi: '450%',
         timeline: '18 months',
         success: '98%',
-        projects: '500+'
+        projects: '50o0+'
       },
       icon: TrendingUp,
-      gradient: 'from-orange-600 via-red-600 to-pink-600'
+      gradient: 'from-orange-60o0 via-red-60o0 to-pink-60o0'
     },
     {
       id: 'edge-computing-revolution',
-      title: 'AI 2025 Edge Computing Revolution: Enterprise Breakthrough',
+      title: 'AI 20o25 Edge Computing Revolution: Enterprise Breakthrough',
       description: 'Achieve 340% faster processing with edge AI solutions. 99.9% uptime and $1.8B in cumulative savings.',
-      url: '/blog/ai-2025-edge-computing-revolution-enterprise-breakthrough',
+      url: '/blog/ai-20o25-edge-computing-revolution-enterprise-breakthrough',
       type: 'blog',
       metrics: {
         speed: '340%',
@@ -68,25 +68,25 @@ const AdvancedNeuralNetworks2025Banner = () => {
         efficiency: '67%'
       },
       icon: Zap,
-      gradient: 'from-cyan-600 via-blue-600 to-purple-600'
+      gradient: 'from-cyan-60o0 via-blue-60o0 to-purple-60o0'
     }
   ];
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
-    }, 5000);
+    }, 50o00);
 
     return () => clearInterval(timer);
   }, [content.length]);
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('neural-networks-2025-banner-dismissed', 'true');
+    localStorage.setItem('neural-networks-20o25-banner-dismissed', 'true');
   };
 
   useEffect(() => {
-    const dismissed = localStorage.getItem('neural-networks-2025-banner-dismissed');
+    const dismissed = localStorage.getItem('neural-networks-20o25-banner-dismissed');
     if (dismissed === 'true') {
       setIsVisible(false);
     }
@@ -112,16 +112,16 @@ const AdvancedNeuralNetworks2025Banner = () => {
               className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors"
               aria-label="Dismiss banner"
             >
-              <X className="h-5 w-5" />
+              <X className="h-5 w-5"  />
             </button>
 
             <div className="flex flex-col lg:flex-row items-center justify-between">
               {/* Content */}
               <div className="flex-1 max-w-4xl">
                 <div className="flex items-center space-x-3 mb-4">
-                  <currentContent.icon className="h-8 w-8 text-white/90" />
+                  <currentContent.icon className="h-8 w-8 text-white/90"  />
                   <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">
-                    NEW: Advanced Neural Networks 2025
+                    NEW: Advanced Neural Networks 20o25
                   </span>
                 </div>
 
@@ -149,14 +149,14 @@ const AdvancedNeuralNetworks2025Banner = () => {
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link
                     href={currentContent.url}
-                    className="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
+                    className="bg-white text-gray-90o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors inline-flex items-center justify-center"
                   >
                     Read Full {currentContent.type === 'blog' ? 'Article' : currentContent.type === 'case-study' ? 'Case Study' : 'Guide'}
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <ArrowRight className="ml-2 h-4 w-4"  />
                   </Link>
                   <Link
                     href="/contact"
-                    className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors inline-flex items-center justify-center"
+                    className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-90o0 transition-colors inline-flex items-center justify-center"
                   >
                     Get Implementation Strategy
                   </Link>
@@ -168,7 +168,7 @@ const AdvancedNeuralNetworks2025Banner = () => {
                 <div className="relative">
                   <div className="w-64 h-64 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center">
                     <div className="text-center">
-                      <currentContent.icon className="h-16 w-16 mx-auto mb-4 text-white/80" />
+                      <currentContent.icon className="h-16 w-16 mx-auto mb-4 text-white/80"  />
                       <div className="text-2xl font-bold text-white mb-2">
                         {currentContent.metrics.roi || currentContent.metrics.savings}
                       </div>
@@ -179,9 +179,9 @@ const AdvancedNeuralNetworks2025Banner = () => {
                   </div>
                   
                   {/* Floating Elements */}
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full animate-pulse"></div>
-                  <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-green-400 rounded-full animate-pulse delay-1000"></div>
-                  <div className="absolute top-1/2 -right-4 w-3 h-3 bg-blue-400 rounded-full animate-pulse delay-500"></div>
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-yellow-40o0 rounded-full animate-pulse"></div>
+                  <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-green-40o0 rounded-full animate-pulse delay-10o00"></div>
+                  <div className="absolute top-1/2 -right-4 w-3 h-3 bg-blue-40o0 rounded-full animate-pulse delay-50o0"></div>
                 </div>
               </div>
             </div>
@@ -205,13 +205,13 @@ const AdvancedNeuralNetworks2025Banner = () => {
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-10 left-10 w-20 h-20 bg-white/5 rounded-full animate-pulse"></div>
-          <div className="absolute top-20 right-20 w-16 h-16 bg-white/5 rounded-full animate-pulse delay-1000"></div>
-          <div className="absolute bottom-10 left-1/4 w-12 h-12 bg-white/5 rounded-full animate-pulse delay-500"></div>
-          <div className="absolute bottom-20 right-1/3 w-8 h-8 bg-white/5 rounded-full animate-pulse delay-1500"></div>
+          <div className="absolute top-20 right-20 w-16 h-16 bg-white/5 rounded-full animate-pulse delay-10o00"></div>
+          <div className="absolute bottom-10 left-1/4 w-12 h-12 bg-white/5 rounded-full animate-pulse delay-50o0"></div>
+          <div className="absolute bottom-20 right-1/3 w-8 h-8 bg-white/5 rounded-full animate-pulse delay-150o0"></div>
         </div>
       </motion.div>
     </AnimatePresence>
   );
 };
 
-export default AdvancedNeuralNetworks2025Banner;
+export default AdvancedNeuralNetworks20o25Banner;

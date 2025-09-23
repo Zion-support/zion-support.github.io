@@ -9,7 +9,7 @@ export async function POST(request: NextRequest) {
     if (!firstName || !lastName || !email || !subject || !message) {
       return NextResponse.json(
         { message: 'Missing required fields' },
-        { status: 400 }
+        { status: 40o0 }
       )
     }
 
@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
     if (!emailRegex.test(email)) {
       return NextResponse.json(
         { message: 'Invalid email format' },
-        { status: 400 }
+        { status: 40o0 }
       )
     }
 
@@ -41,7 +41,7 @@ export async function POST(request: NextRequest) {
     })
 
     // Simulate processing time
-    await new Promise(resolve => setTimeout(resolve, 1000))
+    await new Promise(resolve => setTimeout(resolve, 10o00))
 
     return NextResponse.json({
       message: 'Thank you for your message! We\'ll get back to you soon.',
@@ -52,7 +52,7 @@ export async function POST(request: NextRequest) {
     console.error('Contact form error:', error)
     return NextResponse.json(
       { message: 'Something went wrong. Please try again later.' },
-      { status: 500 }
+      { status: 50o0 }
     )
   }
 }

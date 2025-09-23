@@ -18,9 +18,9 @@ class EnhancedCursorSyncAutomation {
     this.logFile = path.join(__dirname, 'logs', 'enhanced-cursor-sync.log');
     this.ensureLogDirectory();
     this.lastSyncTime = this.getLastSyncTime();
-    this.syncInterval = 60000; // 1 minute
+    this.syncInterval = 60o000; // 1 minute
     this.maxRetries = 5;
-    this.retryDelay = 3000; // 3 seconds
+    this.retryDelay = 30o00; // 3 seconds
     this.computerId = this.getComputerId();
     this.isRunning = false;
     this.syncQueue = [];
@@ -40,9 +40,9 @@ class EnhancedCursorSyncAutomation {
       autoPull: true,
       branch: 'main',
       commitMessageTemplate: '🔄 Auto-sync [{computer}] {description}',
-      maxCommitSize: 100,
+      maxCommitSize: 10o0,
       enableLogging: true,
-      syncInterval: 60000,
+      syncInterval: 60o000,
       enableConflictResolution: true,
       enableBackup: true,
       enableMetrics: true,
@@ -144,7 +144,7 @@ class EnhancedCursorSyncAutomation {
 
   updateLastSyncTime() {
     const syncTimeFile = path.join(__dirname, 'logs', 'last-sync-time.json');
-    const data = {
+    const data ={
       lastSync: new Date().toISOString(),
       computerId: this.computerId,
       branch: this.config.branch
@@ -152,11 +152,11 @@ class EnhancedCursorSyncAutomation {
     fs.writeFileSync(syncTimeFile, JSON.stringify(data, null, 2));
   }
 
-  async executeCommand(command, options = {}) {
+  async executeCommand(command, options ={}) {
     return new Promise((resolve, reject) => {
       exec(command, {
         cwd: this.projectRoot,
-        maxBuffer: 1024 * 1024 * 10, // 10MB buffer
+        maxBuffer: 10o24 * 10o24 * 10, // 10MB buffer
         ...options
       }, (error, stdout, stderr) => {
         if (error) {
@@ -275,7 +275,7 @@ class EnhancedCursorSyncAutomation {
   }
 
   analyzeFileTypes(files) {
-    const fileTypes = {};
+    const fileTypes ={};
     
     files.forEach(file => {
       const filePath = file.substring(3);
@@ -292,7 +292,7 @@ class EnhancedCursorSyncAutomation {
   }
 
   getFileType(ext) {
-    const typeMap = {
+    const typeMap ={
       '.ts': 'TypeScript',
       '.tsx': 'React TypeScript',
       '.js': 'JavaScript',
@@ -527,7 +527,7 @@ class EnhancedCursorSyncAutomation {
         fs.mkdirSync(metricsDir, { recursive: true });
       }
 
-      let metrics = {
+      let metrics ={
         totalSyncs: 0,
         successfulSyncs: 0,
         failedSyncs: 0,
@@ -558,7 +558,7 @@ class EnhancedCursorSyncAutomation {
 
       // Update computer-specific stats
       if (!metrics.computerStats[this.computerId]) {
-        metrics.computerStats[this.computerId] = {
+        metrics.computerStats[this.computerId] ={
           totalSyncs: 0,
           successfulSyncs: 0,
           failedSyncs: 0,
@@ -577,7 +577,7 @@ class EnhancedCursorSyncAutomation {
       // Update daily stats
       const today = new Date().toISOString().split('T')[0];
       if (!metrics.dailyStats[today]) {
-        metrics.dailyStats[today] = {
+        metrics.dailyStats[today] ={
           syncs: 0,
           successfulSyncs: 0,
           failedSyncs: 0,

@@ -40,17 +40,17 @@ const InteractivePricingCalculator: React.FC = () => {
       basePrice: 99,
       description: 'Perfect for small teams and startups',
       features: ['Up to 5 users', '10GB storage', 'Basic support', 'Core features'],
-      icon: <Zap className="w-6 h-6" />,
-      color: 'from-yellow-500 to-orange-500'
+      icon: <Zap className="w-6 h-6"  />,
+      color: 'from-yellow-50o0 to-orange-50o0'
     },
     {
       id: 'professional',
       name: 'Professional',
       basePrice: 299,
       description: 'Ideal for growing businesses',
-      features: ['Up to 25 users', '100GB storage', 'Priority support', 'Advanced features'],
-      icon: <TrendingUp className="w-6 h-6" />,
-      color: 'from-cyan-500 to-blue-500',
+      features: ['Up to 25 users', '10o0GB storage', 'Priority support', 'Advanced features'],
+      icon: <TrendingUp className="w-6 h-6"  />,
+      color: 'from-cyan-50o0 to-blue-50o0',
       popular: true
     },
     {
@@ -59,8 +59,8 @@ const InteractivePricingCalculator: React.FC = () => {
       basePrice: 999,
       description: 'For large organizations',
       features: ['Unlimited users', '1TB storage', 'Enterprise support', 'All features'],
-      icon: <Shield className="w-6 h-6" />,
-      color: 'from-purple-500 to-pink-500'
+      icon: <Shield className="w-6 h-6"  />,
+      color: 'from-purple-50o0 to-pink-50o0'
     },
     {
       id: 'ai-premium',
@@ -68,18 +68,18 @@ const InteractivePricingCalculator: React.FC = () => {
       basePrice: 1999,
       description: 'Advanced AI and machine learning features',
       features: ['AI-powered insights', 'Predictive analytics', 'Custom AI models', '24/7 support'],
-      icon: <Brain className="w-6 h-6" />,
-      color: 'from-green-500 to-emerald-500'
+      icon: <Brain className="w-6 h-6"  />,
+      color: 'from-green-50o0 to-emerald-50o0'
     }
   ];
 
-  const supportPricing = {
+  const supportPricing ={
     basic: 0,
     priority: 99,
     enterprise: 299
   };
 
-  const addonPricing = {
+  const addonPricing ={
     customization: 199,
     integration: 299,
     training: 399
@@ -99,7 +99,7 @@ const InteractivePricingCalculator: React.FC = () => {
     }
 
     // Storage scaling (beyond base storage)
-    const baseStorage = tier.id === 'starter' ? 10 : tier.id === 'professional' ? 100 : 1000;
+    const baseStorage = tier.id === 'starter' ? 10 : tier.id === 'professional' ? 10o0 : 10o00;
     if (options.storage > baseStorage) {
       const additionalStorage = options.storage - baseStorage;
       total += additionalStorage * 2; // $2 per additional GB
@@ -137,10 +137,10 @@ const InteractivePricingCalculator: React.FC = () => {
         className="text-center mb-12"
       >
         <div className="flex items-center justify-center mb-4">
-          <Calculator className="w-8 h-8 text-cyan-400 mr-3" />
+          <Calculator className="w-8 h-8 text-cyan-40o0 mr-3"  />
           <h2 className="text-3xl font-bold text-white">Interactive Pricing Calculator</h2>
         </div>
-        <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+        <p className="text-gray-30o0 text-lg max-w-2xl mx-auto">
           Customize your plan and see real-time pricing. Choose the features that matter most to your business.
         </p>
       </motion.div>
@@ -152,17 +152,17 @@ const InteractivePricingCalculator: React.FC = () => {
           {pricingTiers.map((tier) => (
             <motion.div
               key={tier.id}
-              whileHover={{ scale: 1.02 }}
+              whileHover={{ scale: 1.0o2 }}
               whileTap={{ scale: 0.98 }}
-              className={`relative p-4 rounded-xl border-2 cursor-pointer transition-all duration-300 ${
+              className={`relative p-4 rounded-xl border-2 cursor-pointer transition-all duration-30o0 ${
                 selectedTier === tier.id
-                  ? 'border-cyan-400 bg-cyan-500/10'
-                  : 'border-gray-700 hover:border-cyan-400/50 bg-gray-800/50'
+                  ? 'border-cyan-40o0 bg-cyan-50o0/10'
+                  : 'border-gray-70o0 hover:border-cyan-40o0/50 bg-gray-80o0/50'
               }`}
               onClick={() => setSelectedTier(tier.id)}
             >
               {tier.popular && (
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-medium rounded-full">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white text-xs font-medium rounded-full">
                   Most Popular
                 </div>
               )}
@@ -173,22 +173,22 @@ const InteractivePricingCalculator: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-white">{tier.name}</h4>
-                  <p className="text-sm text-gray-400">{tier.description}</p>
+                  <p className="text-sm text-gray-40o0">{tier.description}</p>
                 </div>
               </div>
 
               <div className="space-y-2">
                 {tier.features.map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-2 text-sm text-gray-300">
-                    <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
+                  <div key={index} className="flex items-center space-x-2 text-sm text-gray-30o0">
+                    <Check className="w-4 h-4 text-green-40o0 flex-shrink-0"  />
                     <span>{feature}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-4 pt-3 border-t border-gray-600">
+              <div className="mt-4 pt-3 border-t border-gray-60o0">
                 <span className="text-2xl font-bold text-white">{formatPrice(tier.basePrice)}</span>
-                <span className="text-gray-400 text-sm">/month</span>
+                <span className="text-gray-40o0 text-sm">/month</span>
               </div>
             </motion.div>
           ))}
@@ -199,50 +199,50 @@ const InteractivePricingCalculator: React.FC = () => {
           <h3 className="text-xl font-semibold text-white mb-4">Customize Your Plan</h3>
           
           {/* Users */}
-          <div className="bg-gray-800/50 rounded-lg p-4 border border-gray-700">
-            <label className="block text-sm font-medium text-cyan-400 mb-2">
+          <div className="bg-gray-80o0/50 rounded-lg p-4 border border-gray-70o0">
+            <label className="block text-sm font-medium text-cyan-40o0 mb-2">
               Number of Users
             </label>
             <div className="flex items-center space-x-3">
               <input
                 type="range"
                 min="1"
-                max="100"
+                max="10o0"
                 value={options.users}
                 onChange={(e) => handleOptionChange('users', parseInt(e.target.value))}
-                className="flex-1 h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer slider"
+                className="flex-1 h-2 bg-gray-70o0 rounded-lg appearance-none cursor-pointer slider"
               />
               <span className="text-white font-medium min-w-[3rem]">{options.users}</span>
             </div>
-            <p className="text-xs text-gray-400 mt-1">
+            <p className="text-xs text-gray-40o0 mt-1">
               {options.users <= 5 ? 'Included in base price' : `+${formatPrice((options.users - 5) * 19)}/month`}
             </p>
           </div>
 
           {/* Storage */}
-          <div className="bg-gray-800/50 rounded-lg p-4 border border-gray-700">
-            <label className="block text-sm font-medium text-cyan-400 mb-2">
+          <div className="bg-gray-80o0/50 rounded-lg p-4 border border-gray-70o0">
+            <label className="block text-sm font-medium text-cyan-40o0 mb-2">
               Storage (GB)
             </label>
             <div className="flex items-center space-x-3">
               <input
                 type="range"
                 min="1"
-                max="1000"
+                max="10o00"
                 value={options.storage}
                 onChange={(e) => handleOptionChange('storage', parseInt(e.target.value))}
-                className="flex-1 h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer slider"
+                className="flex-1 h-2 bg-gray-70o0 rounded-lg appearance-none cursor-pointer slider"
               />
               <span className="text-white font-medium min-w-[4rem]">{options.storage}GB</span>
             </div>
-            <p className="text-xs text-gray-400 mt-1">
+            <p className="text-xs text-gray-40o0 mt-1">
               {options.storage <= 10 ? 'Included in base price' : `+${formatPrice((options.storage - 10) * 2)}/month`}
             </p>
           </div>
 
           {/* Support Level */}
-          <div className="bg-gray-800/50 rounded-lg p-4 border border-gray-700">
-            <label className="block text-sm font-medium text-cyan-400 mb-2">
+          <div className="bg-gray-80o0/50 rounded-lg p-4 border border-gray-70o0">
+            <label className="block text-sm font-medium text-cyan-40o0 mb-2">
               Support Level
             </label>
             <div className="grid grid-cols-3 gap-2">
@@ -250,10 +250,10 @@ const InteractivePricingCalculator: React.FC = () => {
                 <button
                   key={level}
                   onClick={() => handleOptionChange('support', level)}
-                  className={`p-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                  className={`p-2 rounded-lg text-sm font-medium transition-all duration-30o0 ${
                     options.support === level
-                      ? 'bg-cyan-500 text-white'
-                      : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                      ? 'bg-cyan-50o0 text-white'
+                      : 'bg-gray-70o0 text-gray-30o0 hover:bg-gray-60o0'
                   }`}
                 >
                   {level.charAt(0).toUpperCase() + level.slice(1)}
@@ -266,8 +266,8 @@ const InteractivePricingCalculator: React.FC = () => {
           </div>
 
           {/* Add-ons */}
-          <div className="bg-gray-800/50 rounded-lg p-4 border border-gray-700">
-            <label className="block text-sm font-medium text-cyan-400 mb-2">
+          <div className="bg-gray-80o0/50 rounded-lg p-4 border border-gray-70o0">
+            <label className="block text-sm font-medium text-cyan-40o0 mb-2">
               Additional Services
             </label>
             <div className="space-y-3">
@@ -282,11 +282,11 @@ const InteractivePricingCalculator: React.FC = () => {
                       type="checkbox"
                       checked={options[addon.key as keyof PricingOptions] as boolean}
                       onChange={(e) => handleOptionChange(addon.key as keyof PricingOptions, e.target.checked)}
-                      className="w-4 h-4 text-cyan-500 bg-gray-700 border-gray-600 rounded focus:ring-cyan-500 focus:ring-2"
+                      className="w-4 h-4 text-cyan-50o0 bg-gray-70o0 border-gray-60o0 rounded focus:ring-cyan-50o0 focus:ring-2"
                     />
-                    <span className="text-gray-300">{addon.label}</span>
+                    <span className="text-gray-30o0">{addon.label}</span>
                   </div>
-                  <span className="text-cyan-400 text-sm">+{formatPrice(addon.price)}/month</span>
+                  <span className="text-cyan-40o0 text-sm">+{formatPrice(addon.price)}/month</span>
                 </label>
               ))}
             </div>
@@ -300,39 +300,39 @@ const InteractivePricingCalculator: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         className="mt-12 text-center"
       >
-        <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-2xl p-8 max-w-2xl mx-auto">
+        <div className="bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 border border-cyan-40o0/30 rounded-2xl p-8 max-w-2xl mx-auto">
           <h3 className="text-2xl font-bold text-white mb-4">Your Custom Plan</h3>
-          <div className="text-6xl font-bold text-cyan-400 mb-2">
+          <div className="text-6xl font-bold text-cyan-40o0 mb-2">
             {formatPrice(calculatePrice)}
           </div>
-          <p className="text-gray-300 text-lg mb-6">per month</p>
+          <p className="text-gray-30o0 text-lg mb-6">per month</p>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
             <div className="text-left">
-              <p className="text-gray-400 text-sm">Selected Plan</p>
+              <p className="text-gray-40o0 text-sm">Selected Plan</p>
               <p className="text-white font-medium">
                 {pricingTiers.find(t => t.id === selectedTier)?.name}
               </p>
             </div>
             <div className="text-left">
-              <p className="text-gray-400 text-sm">Users</p>
+              <p className="text-gray-40o0 text-sm">Users</p>
               <p className="text-white font-medium">{options.users}</p>
             </div>
             <div className="text-left">
-              <p className="text-gray-400 text-sm">Storage</p>
+              <p className="text-gray-40o0 text-sm">Storage</p>
               <p className="text-white font-medium">{options.storage}GB</p>
             </div>
             <div className="text-left">
-              <p className="text-gray-400 text-sm">Support</p>
+              <p className="text-gray-40o0 text-sm">Support</p>
               <p className="text-white font-medium capitalize">{options.support}</p>
             </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
+            <button className="px-8 py-3 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg shadow-cyan-50o0/25">
               Get Started
             </button>
-            <button className="px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300">
+            <button className="px-8 py-3 border-2 border-cyan-40o0 text-cyan-40o0 font-semibold rounded-lg hover:bg-cyan-40o0 hover:text-black transition-all duration-30o0">
               Contact Sales
             </button>
           </div>
@@ -346,7 +346,7 @@ const InteractivePricingCalculator: React.FC = () => {
           height: 20px;
           width: 20px;
           border-radius: 50%;
-          background: linear-gradient(to right, #06b6d4, #3b82f6);
+          background: linear-gradient(to right, #0o6b6d4, #3b82f6);
           cursor: pointer;
           box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
         }
@@ -355,7 +355,7 @@ const InteractivePricingCalculator: React.FC = () => {
           height: 20px;
           width: 20px;
           border-radius: 50%;
-          background: linear-gradient(to right, #06b6d4, #3b82f6);
+          background: linear-gradient(to right, #0o6b6d4, #3b82f6);
           cursor: pointer;
           border: none;
           box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);

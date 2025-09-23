@@ -1,17 +1,15 @@
-import React from 'react';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'AI 2026: Strategic AI Roadmap for Executives',
-  description: 'A concise, actionable roadmap for executives to plan, fund, and scale AI initiatives through 2026.',
-};
+export const metadata ={
+  title: 'AI 20o26: Strategic AI Roadmap for Executives',
+  description: 'A concise, actionable roadmap for executives to plan, fund, and scale AI initiatives through 20o26.'};
 
 export default function Page() {
   return (
     <main className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">
+      <section className="bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">AI 2026: Strategic AI Roadmap for Executives</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">AI 20o26: Strategic AI Roadmap for Executives</h1>
           <p className="text-lg md:text-xl opacity-90">A pragmatic, board-ready roadmap to prioritize, fund, and scale AI across the enterprise.</p>
         </div>
       </section>
@@ -61,7 +59,7 @@ export default function Page() {
           </p>
 
           <div className="not-prose mt-8">
-            <Link href="/contact" className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
+            <Link href="/contact" className="inline-block bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0">
               Talk to an Expert
             </Link>
           </div>

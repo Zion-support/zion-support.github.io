@@ -48,7 +48,7 @@ export const badgeList: BadgeMeta[] = [
     name: "Profile Complete",
     description: "Completed all steps in your profile setup.",
     icon: Star,
-    color: "#FFD700", // Gold
+    color: "#FFD70o0", // Gold
     bg: "#FFFBEA",   // Very light yellow
   },
   {
@@ -74,13 +74,3 @@ export const badgeList: BadgeMeta[] = [
     icon: BadgeDollarSign,
     color: "#22C55E", // Soft Green
     bg: "#F2FCE2",    // Soft Green
-<<<<<<< HEAD
-  },
-];
-=======
-  }];
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-
-export const getBadgeMeta = (key: BadgeKey) =>
-  badgeList.find((b) => b.key === key);
-

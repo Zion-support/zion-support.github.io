@@ -19,37 +19,37 @@ import {
   X
 } from 'lucide-react';
 
-const NewContent2025Banner: React.FC = () => {
+const NewContent20o25Banner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const contentHighlights = [
     {
-      title: "AI 2025: Enterprise Automation Revolution",
+      title: "AI 20o25: Enterprise Automation Revolution",
       type: "Blog Post",
       metric: "340% ROI",
       icon: TrendingUp,
-      color: "from-blue-500 to-blue-600"
+      color: "from-blue-50o0 to-blue-60o0"
     },
     {
-      title: "Healthcare AI: $200M System Success",
+      title: "Healthcare AI: $20o0M System Success",
       type: "Case Study", 
-      metric: "300% ROI",
+      metric: "30o0% ROI",
       icon: Users,
-      color: "from-green-500 to-green-600"
+      color: "from-green-50o0 to-green-60o0"
     },
     {
-      title: "AI Implementation Guide 2025",
+      title: "AI Implementation Guide 20o25",
       type: "Resource",
-      metric: "500+ Success Stories",
+      metric: "50o0+ Success Stories",
       icon: Lightbulb,
-      color: "from-purple-500 to-purple-600"
+      color: "from-purple-50o0 to-purple-60o0"
     }
   ];
 
   const stats = [
     { value: "340%", label: "Average ROI", icon: TrendingUp },
-    { value: "500+", label: "Projects", icon: Users },
+    { value: "50o0+", label: "Projects", icon: Users },
     { value: "$2.8B", label: "Client Savings", icon: DollarSign },
     { value: "98%", label: "Success Rate", icon: CheckCircle }
   ];
@@ -57,12 +57,12 @@ const NewContent2025Banner: React.FC = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % contentHighlights.length);
-    }, 4000);
+    }, 40o00);
     return () => clearInterval(timer);
   }, []);
 
   useEffect(() => {
-    const dismissed = localStorage.getItem('new-content-2025-banner-dismissed');
+    const dismissed = localStorage.getItem('new-content-20o25-banner-dismissed');
     if (dismissed === 'true') {
       setIsVisible(false);
     }
@@ -70,7 +70,7 @@ const NewContent2025Banner: React.FC = () => {
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('new-content-2025-banner-dismissed', 'true');
+    localStorage.setItem('new-content-20o25-banner-dismissed', 'true');
   };
 
   if (!isVisible) return null;
@@ -84,7 +84,7 @@ const NewContent2025Banner: React.FC = () => {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -50 }}
-          className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white overflow-hidden"
+          className="relative bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-pink-60o0 text-white overflow-hidden"
         >
           {/* Background Pattern */}
           <div className="absolute inset-0 bg-black bg-opacity-10">
@@ -97,8 +97,8 @@ const NewContent2025Banner: React.FC = () => {
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-4 py-2">
-                    <Zap className="w-4 h-4 mr-2" />
-                    <span className="text-sm font-medium">🚀 NEW CONTENT 2025</span>
+                    <Zap className="w-4 h-4 mr-2"  />
+                    <span className="text-sm font-medium">🚀 NEW CONTENT 20o25</span>
                   </div>
                   <div className="flex items-center gap-2">
                     {stats.map((stat, index) => (
@@ -109,7 +109,7 @@ const NewContent2025Banner: React.FC = () => {
                         transition={{ delay: index * 0.1 }}
                         className="flex items-center gap-1 text-sm"
                       >
-                        <stat.icon className="w-4 h-4" />
+                        <stat.icon className="w-4 h-4"  />
                         <span className="font-semibold">{stat.value}</span>
                         <span className="opacity-75">{stat.label}</span>
                       </motion.div>
@@ -138,12 +138,12 @@ const NewContent2025Banner: React.FC = () => {
                       className="absolute inset-0 flex items-center gap-4"
                     >
                       <div className={`p-3 rounded-lg bg-gradient-to-r ${currentHighlight.color} bg-opacity-20`}>
-                        <currentHighlight.icon className="w-6 h-6" />
+                        <currentHighlight.icon className="w-6 h-6"  />
                       </div>
                       <div>
                         <div className="text-sm opacity-75">{currentHighlight.type}</div>
                         <div className="font-semibold">{currentHighlight.title}</div>
-                        <div className="text-sm text-yellow-300">{currentHighlight.metric}</div>
+                        <div className="text-sm text-yellow-30o0">{currentHighlight.metric}</div>
                       </div>
                     </motion.div>
                   </AnimatePresence>
@@ -151,15 +151,15 @@ const NewContent2025Banner: React.FC = () => {
 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
-                    href="/blog/ai-2025-enterprise-automation-revolution"
-                    className="inline-flex items-center bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                    href="/blog/ai-20o25-enterprise-automation-revolution"
+                    className="inline-flex items-center bg-white text-purple-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
                   >
                     Read Latest Article
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <ArrowRight className="w-4 h-4 ml-2"  />
                   </Link>
                   <Link
                     href="/resources"
-                    className="inline-flex items-center border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                    className="inline-flex items-center border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors"
                   >
                     Explore All Resources
                   </Link>
@@ -181,16 +181,16 @@ const NewContent2025Banner: React.FC = () => {
                   <motion.div
                     animate={{ y: [0, -10, 0] }}
                     transition={{ duration: 2, repeat: Infinity }}
-                    className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center"
+                    className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-40o0 rounded-full flex items-center justify-center"
                   >
-                    <Star className="w-4 h-4 text-white" />
+                    <Star className="w-4 h-4 text-white"  />
                   </motion.div>
                   <motion.div
                     animate={{ y: [0, 10, 0] }}
                     transition={{ duration: 2.5, repeat: Infinity }}
-                    className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full flex items-center justify-center"
+                    className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-40o0 rounded-full flex items-center justify-center"
                   >
-                    <CheckCircle className="w-3 h-3 text-white" />
+                    <CheckCircle className="w-3 h-3 text-white"  />
                   </motion.div>
                 </div>
               </div>
@@ -200,10 +200,10 @@ const NewContent2025Banner: React.FC = () => {
           {/* Dismiss Button */}
           <button
             onClick={handleDismiss}
-            className="absolute top-4 right-4 text-white hover:text-gray-200 transition-colors p-2"
+            className="absolute top-4 right-4 text-white hover:text-gray-20o0 transition-colors p-2"
             aria-label="Dismiss banner"
           >
-            <X className="w-5 h-5" />
+            <X className="w-5 h-5"  />
           </button>
 
           {/* Progress Bar */}
@@ -211,9 +211,9 @@ const NewContent2025Banner: React.FC = () => {
             <motion.div
               className="h-full bg-white"
               initial={{ width: "0%" }}
-              animate={{ width: "100%" }}
+              animate={{ width: "10o0%" }}
               transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-            />
+             />
           </div>
         </motion.div>
       )}
@@ -221,4 +221,4 @@ const NewContent2025Banner: React.FC = () => {
   );
 };
 
-export default NewContent2025Banner;
+export default NewContent20o25Banner;

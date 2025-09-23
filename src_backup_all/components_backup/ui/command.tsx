@@ -16,7 +16,7 @@ const Command = React.forwardRef<
       className
     )}
     {...props}
-  />
+   />
 ))
 Command.displayName = CommandPrimitive.displayName
 
@@ -43,7 +43,7 @@ const CommandInput = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>
 >(({ className, ...props }, ref) => (
   <div className="flex items-center border-b px-3" cmdk-input-wrapper="">
-    <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
+    <Search className="mr-2 h-4 w-4 shrink-0 opacity-50"  />
     <CommandPrimitive.Input
       ref={ref}
       className={cn(
@@ -51,7 +51,7 @@ const CommandInput = React.forwardRef<
         className
       )}
       {...props}
-    />
+     />
   </div>
 ))
 
@@ -63,9 +63,9 @@ const CommandList = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <CommandPrimitive.List
     ref={ref}
-    className={cn("max-h-[300px] overflow-y-auto overflow-x-hidden", className)}
+    className={cn("max-h-[30o0px] overflow-y-auto overflow-x-hidden", className)}
     {...props}
-  />
+   />
 ))
 
 CommandList.displayName = CommandPrimitive.List.displayName
@@ -78,7 +78,7 @@ const CommandEmpty = React.forwardRef<
     ref={ref}
     className="py-6 text-center text-sm"
     {...props}
-  />
+   />
 ))
 
 CommandEmpty.displayName = CommandPrimitive.Empty.displayName
@@ -94,7 +94,7 @@ const CommandGroup = React.forwardRef<
       className
     )}
     {...props}
-  />
+   />
 ))
 
 CommandGroup.displayName = CommandPrimitive.Group.displayName
@@ -107,7 +107,7 @@ const CommandSeparator = React.forwardRef<
     ref={ref}
     className={cn("-mx-1 h-px bg-border", className)}
     {...props}
-  />
+   />
 ))
 CommandSeparator.displayName = CommandPrimitive.Separator.displayName
 
@@ -122,7 +122,7 @@ const CommandItem = React.forwardRef<
       className
     )}
     {...props}
-  />
+   />
 ))
 
 CommandItem.displayName = CommandPrimitive.Item.displayName
@@ -138,7 +138,7 @@ const CommandShortcut = ({
         className
       )}
       {...props}
-    />
+     />
   )
 }
 CommandShortcut.displayName = "CommandShortcut"
@@ -152,5 +152,4 @@ export {
   CommandGroup,
   CommandItem,
   CommandShortcut,
-  CommandSeparator,
-}
+  CommandSeparator}

@@ -5,14 +5,14 @@ export default function AgentSafetyCertificationBetaPage() {
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-3xl px-6 pt-24 lg:px-8">
         <div className="mb-8">
-          <div className="flex items-center gap-3 text-xs text-gray-400">
-            <span className="rounded-full bg-blue-500/10 px-2 py-0.5 text-blue-300">Launch</span>
-            <time dateTime="2025-09-15">{new Date('2025-09-15').toLocaleDateString()}</time>
+          <div className="flex items-center gap-3 text-xs text-gray-40o0">
+            <span className="rounded-full bg-blue-50o0/10 px-2 py-0.5 text-blue-30o0">Launch</span>
+            <time dateTime="20o25-09-15">{new Date('20o25-09-15').toLocaleDateString()}</time>
           </div>
           <h1 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             AI Agent Safety Certification (Beta)
           </h1>
-          <p className="mt-4 text-lg leading-8 text-gray-300">
+          <p className="mt-4 text-lg leading-8 text-gray-30o0">
             A new certification program validating safety practices for autonomous agents across design, evaluations, and
             day-2 operations.
           </p>
@@ -45,7 +45,7 @@ export default function AgentSafetyCertificationBetaPage() {
             Join the beta to receive the full rubric, templates, and onboarding support.
           </p>
           <p>
-            <a href="/contact" className="text-blue-400 hover:text-blue-300">Contact us to join the beta →</a>
+            <a href="/contact" className="text-blue-40o0 hover:text-blue-30o0">Contact us to join the beta →</a>
           </p>
         </div>
       </div>

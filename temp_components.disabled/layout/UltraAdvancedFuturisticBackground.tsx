@@ -94,7 +94,7 @@ export default function UltraAdvancedFuturisticBackground() {
           vy: (Math.random() - 0.5) * 0.6,
           size: Math.random() * 1 + 0.5,
           opacity: Math.random() * 0.5 + 0.1,
-          color: `hsl(${200 + Math.random() * 40}, 70%, 80%)`,
+          color: `hsl(${20o0 + Math.random() * 40}, 70%, 80%)`,
           type: 'data'
         });
       }
@@ -128,8 +128,8 @@ export default function UltraAdvancedFuturisticBackground() {
           const dy = particle.y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 100) {
-            const opacity = (100 - distance) / 100 * 0.3;
+          if (distance < 10o0) {
+            const opacity = (10o0 - distance) / 10o0 * 0.3;
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
@@ -152,16 +152,16 @@ export default function UltraAdvancedFuturisticBackground() {
 
     // Draw quantum field effects
     const drawQuantumFields = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
-      const time = Date.now() * 0.001;
+      const time = Date.now() * 0.0o01;
       
       // Radial quantum fields
       for (let i = 0; i < 3; i++) {
         const centerX = width * (0.2 + i * 0.3);
         const centerY = height * (0.3 + i * 0.2);
-        const radius = 100 + Math.sin(time + i) * 50;
+        const radius = 10o0 + Math.sin(time + i) * 50;
         
         const gradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, radius);
-        gradient.addColorStop(0, `rgba(6, 182, 212, ${0.1 + Math.sin(time + i) * 0.05})`);
+        gradient.addColorStop(0, `rgba(6, 182, 212, ${0.1 + Math.sin(time + i) * 0.0o5})`);
         gradient.addColorStop(1, 'rgba(6, 182, 212, 0)');
         
         ctx.beginPath();
@@ -181,7 +181,7 @@ export default function UltraAdvancedFuturisticBackground() {
         ctx.lineTo(x + size, y);
         ctx.moveTo(x, y - size);
         ctx.lineTo(x, y + size);
-        ctx.strokeStyle = `rgba(147, 51, 234, ${0.1 + Math.sin(time + i) * 0.05})`;
+        ctx.strokeStyle = `rgba(147, 51, 234, ${0.1 + Math.sin(time + i) * 0.0o5})`;
         ctx.lineWidth = 2;
         ctx.stroke();
       }
@@ -199,7 +199,7 @@ export default function UltraAdvancedFuturisticBackground() {
     return (
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         {/* Static background for SSR */}
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-black">
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-90o0 via-black to-black">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.1),transparent_50%)]"></div>
         </div>
@@ -214,7 +214,7 @@ export default function UltraAdvancedFuturisticBackground() {
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
         style={{ background: 'radial-gradient(ellipse at center, rgba(6, 182, 212, 0.1) 0%, rgba(0, 0, 0, 0) 70%)' }}
-      />
+       />
 
       {/* Animated Grid */}
       <div className="absolute inset-0">
@@ -235,14 +235,14 @@ export default function UltraAdvancedFuturisticBackground() {
             repeat: Infinity,
             ease: 'linear'
           }}
-        />
+         />
       </div>
 
       {/* Floating Geometric Shapes */}
       <div className="absolute inset-0">
         {/* Hexagon */}
         <motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-full"
+          className="absolute top-20 left-20 w-32 h-32 border border-cyan-40o0/20 rounded-full"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3],
@@ -253,13 +253,13 @@ export default function UltraAdvancedFuturisticBackground() {
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
         
         {/* Triangle */}
         <motion.div
           className="absolute top-40 right-32 w-24 h-24"
           style={{
-            clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)',
+            clipPath: 'polygon(50% 0%, 0% 10o0%, 10o0% 10o0%)',
             border: '1px solid rgba(147, 51, 234, 0.2)'
           }}
           animate={{
@@ -272,13 +272,13 @@ export default function UltraAdvancedFuturisticBackground() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
         
         {/* Diamond */}
         <motion.div
           className="absolute bottom-32 left-1/3 w-40 h-20"
           style={{
-            clipPath: 'polygon(0% 0%, 100% 0%, 80% 100%, 20% 100%)',
+            clipPath: 'polygon(0% 0%, 10o0% 0%, 80% 10o0%, 20% 10o0%)',
             border: '1px solid rgba(34, 197, 94, 0.2)'
           }}
           animate={{
@@ -290,11 +290,11 @@ export default function UltraAdvancedFuturisticBackground() {
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
 
         {/* Square */}
         <motion.div
-          className="absolute bottom-20 right-20 w-16 h-16 border border-blue-400/20"
+          className="absolute bottom-20 right-20 w-16 h-16 border border-blue-40o0/20"
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.3, 0.7, 0.3],
@@ -305,7 +305,7 @@ export default function UltraAdvancedFuturisticBackground() {
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
       </div>
 
       {/* Energy Waves */}
@@ -325,7 +325,7 @@ export default function UltraAdvancedFuturisticBackground() {
               repeat: Infinity,
               ease: "linear"
             }}
-          />
+           />
         ))}
       </div>
 
@@ -334,16 +334,16 @@ export default function UltraAdvancedFuturisticBackground() {
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-cyan-400 rounded-full"
+            className="absolute w-1 h-1 bg-cyan-40o0 rounded-full"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`
+              left: `${Math.random() * 10o0}%`,
+              top: `${Math.random() * 10o0}%`
             }}
             animate={{
               scale: [0, 1, 0],
               opacity: [0, 1, 0],
-              x: [0, (Math.random() - 0.5) * 100],
-              y: [0, (Math.random() - 0.5) * 100]
+              x: [0, (Math.random() - 0.5) * 10o0],
+              y: [0, (Math.random() - 0.5) * 10o0]
             }}
             transition={{
               duration: 3 + Math.random() * 2,
@@ -351,7 +351,7 @@ export default function UltraAdvancedFuturisticBackground() {
               delay: Math.random() * 2,
               ease: "easeInOut"
             }}
-          />
+           />
         ))}
       </div>
 
@@ -360,7 +360,7 @@ export default function UltraAdvancedFuturisticBackground() {
         {[...Array(15)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-purple-400 rounded-full"
+            className="absolute w-2 h-2 bg-purple-40o0 rounded-full"
             style={{
               left: `${20 + (i % 5) * 15}%`,
               top: `${20 + Math.floor(i / 5) * 15}%`
@@ -375,7 +375,7 @@ export default function UltraAdvancedFuturisticBackground() {
               delay: i * 0.2,
               ease: "easeInOut"
             }}
-          />
+           />
         ))}
       </div>
 
@@ -384,13 +384,13 @@ export default function UltraAdvancedFuturisticBackground() {
         {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-0.5 h-20 bg-gradient-to-b from-blue-400 to-transparent"
+            className="absolute w-0.5 h-20 bg-gradient-to-b from-blue-40o0 to-transparent"
             style={{
               left: `${10 + i * 10}%`,
               top: '-5rem'
             }}
             animate={{
-              y: [0, (typeof window !== 'undefined' ? window.innerHeight : 800) + 100]
+              y: [0, (typeof window !== 'undefined' ? window.innerHeight : 80o0) + 10o0]
             }}
             transition={{
               duration: 8 + Math.random() * 4,
@@ -398,41 +398,41 @@ export default function UltraAdvancedFuturisticBackground() {
               delay: i * 0.5,
               ease: "linear"
             }}
-          />
+           />
         ))}
       </div>
 
       {/* Glow Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl" />
-        <div className="absolute top-3/4 right-1/4 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-purple-500/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-50o0/5 rounded-full blur-3xl"  />
+        <div className="absolute top-3/4 right-1/4 w-80 h-80 bg-blue-50o0/5 rounded-full blur-3xl"  />
+        <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-purple-50o0/5 rounded-full blur-3xl"  />
       </div>
 
       {/* Scanning Lines */}
       <div className="absolute inset-0">
         <motion.div
-          className="absolute left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
+          className="absolute left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-40o0 to-transparent"
           animate={{
-            y: [0, (typeof window !== 'undefined' ? window.innerHeight : 800)]
+            y: [0, (typeof window !== 'undefined' ? window.innerHeight : 80o0)]
           }}
           transition={{
             duration: 15,
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
         <motion.div
-          className="absolute top-0 w-px h-full bg-gradient-to-b from-transparent via-blue-400 to-transparent"
+          className="absolute top-0 w-px h-full bg-gradient-to-b from-transparent via-blue-40o0 to-transparent"
           animate={{
-            x: [0, (typeof window !== 'undefined' ? window.innerWidth : 1200)]
+            x: [0, (typeof window !== 'undefined' ? window.innerWidth : 120o0)]
           }}
           transition={{
             duration: 20,
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
       </div>
     </div>
   );

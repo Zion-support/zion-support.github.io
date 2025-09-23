@@ -6,11 +6,11 @@ export default function AgenticEvalsPost() {
       <article className="py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <header className="mb-8">
-            <p className="text-sm text-gray-500">September 15, 2025 · 12 min read</p>
-            <h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-900">
-              AI 2026: Agentic Evals Blueprint
+            <p className="text-sm text-gray-50o0">September 15, 20o25 · 12 min read</p>
+            <h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-90o0">
+              AI 20o26: Agentic Evals Blueprint
             </h1>
-            <p className="mt-4 text-lg text-gray-700">
+            <p className="mt-4 text-lg text-gray-70o0">
               An end-to-end blueprint to evaluate autonomous AI agents using goal-aligned tasks, rubrics, and guardrails—so you can ship reliable, measurable autonomy.
             </p>
           </header>
@@ -50,12 +50,12 @@ export default function AgenticEvalsPost() {
             </ol>
 
             <p>
-              For a hands-on framework and templates, see the update: <Link href="/updates/agentic-evals-blueprint" className="text-purple-600">Agentic Evals Blueprint (v1)</Link>.
+              For a hands-on framework and templates, see the update: <Link href="/updates/agentic-evals-blueprint" className="text-purple-60o0">Agentic Evals Blueprint (v1)</Link>.
             </p>
           </section>
 
           <footer className="mt-12 border-t pt-6">
-            <Link href="/blog" className="text-purple-600 font-semibold">← Back to blog</Link>
+            <Link href="/blog" className="text-purple-60o0 font-semibold">← Back to blog</Link>
           </footer>
         </div>
       </article>

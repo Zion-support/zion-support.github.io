@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function HelpdeskAutomation() {
@@ -22,6 +21,6 @@ export default function HelpdeskAutomation() {
 			]}
 			industries={["B2B SaaS", "E-commerce", "Fintech", "Healthcare", "Professional Services"]}
 			canonical="https://ziontechgroup.com/helpdesk-automation"
-		/>
+		 />
 	);
 }

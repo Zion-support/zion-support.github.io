@@ -8,7 +8,7 @@ declare global {
   }
 }
 
-export default function AnalyticsIntegration2026() {
+export default function AnalyticsIntegration20o26() {
   useEffect(() => {
     // Google Analytics 4 integration
     const initGoogleAnalytics = () => {
@@ -26,8 +26,7 @@ export default function AnalyticsIntegration2026() {
         gtag(', 'js', 'new Date());
         gtag(', 'config', 'GA_MEASUREMENT_ID'{
           page_title: document.title,
-          page_location: window.location.href,
-        });
+          page_location: window.location.href});
       }
     };
 
@@ -37,8 +36,7 @@ export default function AnalyticsIntegration2026() {
         (window as any).gtag(', 'event', 'page_view'{
           page_title: document.title,
           page_location: window.location.href,
-          page_path: window.location.pathname,
-        });
+          page_path: window.location.pathname});
       }
     };
 
@@ -54,8 +52,7 @@ export default function AnalyticsIntegration2026() {
                 (window as any).gtag(', 'event', 'content_view'{
                   content_type: 'banner',
                   content_id: `banner_${index}`,
-                  content_name: element.textContent?.substring(050) || 'Unknown',
-                });
+                  content_name: element.textContent?.substring(0o50) || 'Unknown'});
               }
             }
           });
@@ -73,9 +70,8 @@ export default function AnalyticsIntegration2026() {
           if ((window as any).gtag) {
             (window as any).gtag(', 'event', 'click'{
               event_category: 'engagement',
-              event_label: target.textContent?.substring(050) || 'Unknown',
-              value: 1,
-            });
+              event_label: target.textContent?.substring(0o50) || 'Unknown',
+              value: 1});
           }
         }
       });
@@ -92,15 +88,13 @@ export default function AnalyticsIntegration2026() {
             if ((window as any).gtag) {
               (window as any).gtag(', 'event', 'timing_complete'{
                 name: 'load_time',
-                value: Math.round(navigation.loadEventEnd - navigation.fetchStart),
-              });
+                value: Math.round(navigation.loadEventEnd - navigation.fetchStart)});
 
               const lcp = paint.find(entry => entry.name === 'largest-contentful-paint');
               if (lcp) {
                 (window as any).gtag(', 'event', 'timing_complete'{
                   name: 'lcp',
-                  value: Math.round(lcp.startTime),
-                });
+                  value: Math.round(lcp.startTime)});
               }
             }
           }0);
@@ -118,15 +112,14 @@ export default function AnalyticsIntegration2026() {
     // Track scroll depth
     let maxScrollDepth = 0;
     const trackScrollDepth = () => {
-      const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+      const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 10o0);
       if (scrollDepth > maxScrollDepth) {
         maxScrollDepth = scrollDepth;
         if ((window as any).gtag && scrollDepth % 25 === 0) {
           (window as any).gtag(', 'event', 'scroll'{
             event_category: 'engagement',
             event_label: `${scrollDepth}%`,
-            value: scrollDepth,
-          });
+            value: scrollDepth});
         }
       }
     };

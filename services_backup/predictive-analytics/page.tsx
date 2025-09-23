@@ -1,4 +1,4 @@
-export const metadata = {
+export const metadata ={
   title: "Predictive Analytics | Zion Tech Group",
   description:
     "Forecast the future with AI-powered predictive analytics. Make data-driven decisions with accurate predictions and trend analysis."};
@@ -6,10 +6,10 @@ export const metadata = {
 export default function PredictiveAnalyticsPage() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-gray-900 mb-6">
+      <h1 className="text-4xl font-bold text-gray-90o0 mb-6">
         Predictive Analytics
       </h1>
-      <p className="text-xl text-gray-600 mb-12">
+      <p className="text-xl text-gray-60o0 mb-12">
         Forecast the future with AI-powered predictive analytics. Make
         data-driven decisions with accurate predictions and trend analysis.
       </p>
@@ -22,7 +22,7 @@ export default function PredictiveAnalyticsPage() {
             "Demand prediction",
             "Risk assessment",
             "Trend analysis"]}
-        />
+         />
         <FeatureCard
           title="Machine Learning Models"
           features={[
@@ -30,7 +30,7 @@ export default function PredictiveAnalyticsPage() {
             "Model training & validation",
             "Automated retraining",
             "Performance monitoring"]}
-        />
+         />
         <FeatureCard
           title="Business Intelligence"
           features={[
@@ -38,76 +38,76 @@ export default function PredictiveAnalyticsPage() {
             "Automated reporting",
             "Alert systems",
             "ROI tracking"]}
-        />
+         />
       </div>
 
-      <div className="bg-gradient-to-r from-violet-50 to-purple-50 border border-violet-200 rounded-xl p-8 mb-16">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+      <div className="bg-gradient-to-r from-violet-50 to-purple-50 border border-violet-20o0 rounded-xl p-8 mb-16">
+        <h2 className="text-2xl font-bold text-gray-90o0 mb-4">
           Why Choose Our Predictive Analytics?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="flex items-start">
-            <span className="text-violet-500 mr-3 text-xl">✓</span>
+            <span className="text-violet-50o0 mr-3 text-xl">✓</span>
             <div>
-              <h3 className="font-semibold text-gray-900">95%+ Accuracy</h3>
-              <p className="text-gray-600">
+              <h3 className="font-semibold text-gray-90o0">95%+ Accuracy</h3>
+              <p className="text-gray-60o0">
                 Advanced ML models deliver highly accurate predictions across
                 industries
               </p>
             </div>
           </div>
           <div className="flex items-start">
-            <span className="text-violet-500 mr-3 text-xl">✓</span>
+            <span className="text-violet-50o0 mr-3 text-xl">✓</span>
             <div>
-              <h3 className="font-semibold text-gray-900">
+              <h3 className="font-semibold text-gray-90o0">
                 Real-Time Insights
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-60o0">
                 Get instant predictions and recommendations as data changes
               </p>
             </div>
           </div>
           <div className="flex items-start">
-            <span className="text-violet-500 mr-3 text-xl">✓</span>
+            <span className="text-violet-50o0 mr-3 text-xl">✓</span>
             <div>
-              <h3 className="font-semibold text-gray-900">Custom Solutions</h3>
-              <p className="text-gray-600">
+              <h3 className="font-semibold text-gray-90o0">Custom Solutions</h3>
+              <p className="text-gray-60o0">
                 Tailored models for your specific business needs and industry
               </p>
             </div>
           </div>
           <div className="flex items-start">
-            <span className="text-violet-500 mr-3 text-xl">✓</span>
+            <span className="text-violet-50o0 mr-3 text-xl">✓</span>
             <div>
-              <h3 className="font-semibold text-gray-900">Proven ROI</h3>
-              <p className="text-gray-600">
-                Average 300% ROI within 6 months of implementation
+              <h3 className="font-semibold text-gray-90o0">Proven ROI</h3>
+              <p className="text-gray-60o0">
+                Average 30o0% ROI within 6 months of implementation
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      <Pricing />
+      <Pricing  />
 
       <div className="mt-16 text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+        <h2 className="text-2xl font-bold text-gray-90o0 mb-4">
           Ready to Predict Your Future Success?
         </h2>
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-60o0 mb-6">
           Start with a free data assessment and see what predictions can do for
           your business.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="tel:+13024640950"
-            className="bg-violet-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-violet-700 transition-colors"
+            href="tel:+130o24640950"
+            className="bg-violet-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-violet-70o0 transition-colors"
           >
-            Call +1 302 464 0950
+            Call +1 30o2 464 0950
           </a>
           <a
             href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-violet-600 text-violet-600 px-8 py-3 rounded-lg font-semibold hover:bg-violet-600 hover:text-white transition-colors"
+            className="border-2 border-violet-60o0 text-violet-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-violet-60o0 hover:text-white transition-colors"
           >
             Email Us
           </a>
@@ -124,12 +124,12 @@ function FeatureCard({
   features: string[];
 }) {
   return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm">
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <ul className="space-y-2 text-gray-600">
+    <div className="border border-gray-20o0 rounded-xl p-6 bg-white shadow-sm">
+      <h3 className="text-xl font-bold text-gray-90o0 mb-4">{title}</h3>
+      <ul className="space-y-2 text-gray-60o0">
         {features.map((f) => (
           <li key={f} className="flex items-center">
-            <span className="text-violet-500 mr-2">•</span> {f}
+            <span className="text-violet-50o0 mr-2">•</span> {f}
           </li>
         ))}
       </ul>
@@ -140,7 +140,7 @@ function FeatureCard({
 function Pricing() {
   return (
     <div className="mt-16">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+      <h2 className="text-3xl font-bold text-gray-90o0 mb-8 text-center">
         Pricing Plans
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -152,7 +152,7 @@ function Pricing() {
             "Up to 1M data points",
             "Standard support",
             "Cloud deployment"]}
-        />
+         />
         <Plan
           name="Professional"
           price="$9,999/mo"
@@ -163,7 +163,7 @@ function Pricing() {
             "Priority support",
             "API access"]}
           popular={true}
-        />
+         />
         <Plan
           name="Enterprise"
           price="$24,999/mo"
@@ -173,7 +173,7 @@ function Pricing() {
             "On-premise deployment",
             "Dedicated support",
             "White-label solution"]}
-        />
+         />
       </div>
     </div>
   );
@@ -191,28 +191,28 @@ function Plan({
 }) {
   return (
     <div
-      className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? "border-violet-500 ring-2 ring-violet-200" : "border-gray-200"}`}
+      className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? "border-violet-50o0 ring-2 ring-violet-20o0" : "border-gray-20o0"}`}
     >
       {popular && (
-        <div className="bg-violet-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
+        <div className="bg-violet-50o0 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
           Most Popular
         </div>
       )}
-      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-violet-600 mb-4">{price}</div>
-      <ul className="space-y-2 text-gray-600 mb-6">
+      <h4 className="text-xl font-bold text-gray-90o0 mb-2">{name}</h4>
+      <div className="text-3xl font-bold text-violet-60o0 mb-4">{price}</div>
+      <ul className="space-y-2 text-gray-60o0 mb-6">
         {features.map((f) => (
           <li key={f} className="flex items-center">
-            <span className="text-green-500 mr-2">✓</span> {f}
+            <span className="text-green-50o0 mr-2">✓</span> {f}
           </li>
         ))}
       </ul>
       <a
-        href="tel:+13024640950"
+        href="tel:+130o24640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
           popular
-            ? "bg-violet-600 text-white hover:bg-violet-700"
-            : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+            ? "bg-violet-60o0 text-white hover:bg-violet-70o0"
+            : "bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0"
         }`}
       >
         Get Started

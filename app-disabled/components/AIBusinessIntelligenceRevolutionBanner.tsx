@@ -10,49 +10,49 @@ const AIBusinessIntelligenceRevolutionBanner = () => {
   const content = [
     {
       id: 'ultimate-business-intelligence',
-      title: 'AI 2025: The Ultimate Business Intelligence Revolution',
-      subtitle: '5,000% ROI • $18.7B Annual Savings • 99.8% Accuracy',
+      title: 'AI 20o25: The Ultimate Business Intelligence Revolution',
+      subtitle: '5,0o00% ROI • $18.7B Annual Savings • 99.8% Accuracy',
       description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented results.',
       metrics: {
-        roi: '5,000%',
+        roi: '5,0o00%',
         savings: '$18.7B',
         accuracy: '99.8%',
         speed: '450%'
       },
       cta: 'Discover the Ultimate Guide',
-      url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
+      url: '/blog/ai-20o25-ultimate-business-intelligence-revolution-ultimate-breakthrough',
       type: 'blog',
       featured: true
     },
     {
-      id: 'fortune-500-success',
-      title: 'Fortune 500 AI Business Intelligence Success Story',
-      subtitle: '$18.7B Annual Savings • 5,000% ROI • 12 Months',
+      id: 'fortune-50o0-success',
+      title: 'Fortune 50o0 AI Business Intelligence Success Story',
+      subtitle: '$18.7B Annual Savings • 5,0o00% ROI • 12 Months',
       description: 'How a global manufacturing leader achieved extraordinary results with AI business intelligence transformation.',
       metrics: {
-        roi: '5,000%',
+        roi: '5,0o00%',
         savings: '$18.7B',
         timeframe: '12 months',
         accuracy: '99.8%'
       },
       cta: 'Read Success Story',
-      url: '/case-studies/fortune-500-ai-business-intelligence-5000-roi-success-story',
+      url: '/case-studies/fortune-50o0-ai-business-intelligence-50o00-roi-success-story',
       type: 'case-study',
       featured: true
     },
     {
       id: 'implementation-guide',
       title: 'AI Business Intelligence Implementation Ultimate Guide',
-      subtitle: 'Complete Roadmap • 5,000% ROI • Proven Methodology',
+      subtitle: 'Complete Roadmap • 5,0o00% ROI • Proven Methodology',
       description: 'The definitive guide to implementing AI-powered business intelligence that delivers unprecedented results.',
       metrics: {
-        roi: '5,000%',
+        roi: '5,0o00%',
         guide: 'Complete',
         success: '99.7%',
         timeline: '12 months'
       },
       cta: 'Get Implementation Guide',
-      url: '/resources/ai-business-intelligence-implementation-ultimate-guide-2025',
+      url: '/resources/ai-business-intelligence-implementation-ultimate-guide-20o25',
       type: 'resource',
       featured: true
     }
@@ -61,7 +61,7 @@ const AIBusinessIntelligenceRevolutionBanner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
-    }, 5000);
+    }, 50o00);
 
     return () => clearInterval(interval);
   }, [content.length]);
@@ -83,14 +83,14 @@ const AIBusinessIntelligenceRevolutionBanner = () => {
   const currentContent = content[currentSlide];
 
   return (
-    <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
+    <div className="relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-600/20 to-blue-600/20"></div>
-        <div className="absolute top-10 left-10 w-32 h-32 bg-purple-500/10 rounded-full animate-pulse"></div>
-        <div className="absolute top-20 right-20 w-24 h-24 bg-blue-500/10 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-10 left-1/4 w-16 h-16 bg-indigo-500/10 rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute bottom-20 right-1/3 w-20 h-20 bg-purple-500/10 rounded-full animate-pulse delay-3000"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-60o0/20 to-blue-60o0/20"></div>
+        <div className="absolute top-10 left-10 w-32 h-32 bg-purple-50o0/10 rounded-full animate-pulse"></div>
+        <div className="absolute top-20 right-20 w-24 h-24 bg-blue-50o0/10 rounded-full animate-pulse delay-10o00"></div>
+        <div className="absolute bottom-10 left-1/4 w-16 h-16 bg-indigo-50o0/10 rounded-full animate-pulse delay-20o00"></div>
+        <div className="absolute bottom-20 right-1/3 w-20 h-20 bg-purple-50o0/10 rounded-full animate-pulse delay-30o00"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -102,7 +102,7 @@ const AIBusinessIntelligenceRevolutionBanner = () => {
             aria-label="Dismiss banner"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"  />
             </svg>
           </button>
 
@@ -112,10 +112,10 @@ const AIBusinessIntelligenceRevolutionBanner = () => {
               {content.map((_, index) => (
                 <div
                   key={index}
-                  className={`h-1 w-8 rounded-full transition-all duration-300 ${
+                  className={`h-1 w-8 rounded-full transition-all duration-30o0 ${
                     index === currentSlide ? 'bg-white' : 'bg-white/30'
                   }`}
-                />
+                 />
               ))}
             </div>
 
@@ -131,11 +131,11 @@ const AIBusinessIntelligenceRevolutionBanner = () => {
                   {currentContent.title}
                 </h2>
                 
-                <p className="text-xl text-blue-100 mb-4 font-semibold">
+                <p className="text-xl text-blue-10o0 mb-4 font-semibold">
                   {currentContent.subtitle}
                 </p>
                 
-                <p className="text-lg text-gray-200 mb-6 max-w-3xl">
+                <p className="text-lg text-gray-20o0 mb-6 max-w-3xl">
                   {currentContent.description}
                 </p>
 
@@ -143,8 +143,8 @@ const AIBusinessIntelligenceRevolutionBanner = () => {
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
                   {Object.entries(currentContent.metrics).map(([key, value]) => (
                     <div key={key} className="bg-white/10 rounded-lg p-3 text-center">
-                      <div className="text-2xl font-bold text-yellow-300">{value}</div>
-                      <div className="text-sm text-gray-300 capitalize">
+                      <div className="text-2xl font-bold text-yellow-30o0">{value}</div>
+                      <div className="text-sm text-gray-30o0 capitalize">
                         {key.replace(/([A-Z])/g, ' $1').trim()}
                       </div>
                     </div>
@@ -155,13 +155,13 @@ const AIBusinessIntelligenceRevolutionBanner = () => {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href={currentContent.url}
-                    className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-3 rounded-lg font-bold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                    className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-3 rounded-lg font-bold hover:from-yellow-30o0 hover:to-orange-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg"
                   >
                     {currentContent.cta}
                   </Link>
                   <Link
                     href="/services/ai-business-intelligence"
-                    className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300"
+                    className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all duration-30o0"
                   >
                     Learn More
                   </Link>
@@ -182,7 +182,7 @@ const AIBusinessIntelligenceRevolutionBanner = () => {
                     {currentContent.type === 'resource' && 'Implementation Guide'}
                   </div>
                   {currentContent.featured && (
-                    <div className="mt-2 text-xs bg-yellow-400 text-black px-2 py-1 rounded-full font-bold">
+                    <div className="mt-2 text-xs bg-yellow-40o0 text-black px-2 py-1 rounded-full font-bold">
                       FEATURED
                     </div>
                   )}
@@ -198,7 +198,7 @@ const AIBusinessIntelligenceRevolutionBanner = () => {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                 index === currentSlide ? 'bg-white' : 'bg-white/30 hover:bg-white/50'
               }`}
               aria-label={`Go to slide ${index + 1}`}
@@ -208,7 +208,7 @@ const AIBusinessIntelligenceRevolutionBanner = () => {
       </div>
 
       {/* Bottom Gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 via-blue-500 to-indigo-500"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-50o0 via-blue-50o0 to-indigo-50o0"></div>
     </div>
   );
 };

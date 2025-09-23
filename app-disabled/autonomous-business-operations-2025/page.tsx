@@ -1,16 +1,14 @@
-import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Autonomous Business Operations 2025: The Future of Self-Managing Enterprises',
+export const metadata: Metadata ={
+  title: 'Autonomous Business Operations 20o25: The Future of Self-Managing Enterprises',
   description: 'Discover how autonomous business operations are revolutionizing enterprises with self-managing systems, intelligent decision-making, and 24/7 optimization.',
-  keywords: ['autonomous operations', 'business automation', 'self-managing systems', 'AI operations', 'enterprise automation', 'autonomous business'],
-};
+  keywords: ['autonomous operations', 'business automation', 'self-managing systems', 'AI operations', 'enterprise automation', 'autonomous business']};
 
-export default function AutonomousBusinessOperations2025() {
+export default function AutonomousBusinessOperations20o25() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-90o0 via-teal-90o0 to-cyan-90o0">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
@@ -18,22 +16,22 @@ export default function AutonomousBusinessOperations2025() {
             <span className="text-sm font-medium text-white">🤖 AUTONOMOUS FUTURE</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Autonomous Business Operations 2025
+            Autonomous Business Operations 20o25
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-20o0 mb-8 max-w-4xl mx-auto leading-relaxed">
             Experience the next evolution of business operations with fully autonomous systems 
             that manage, optimize, and scale your enterprise without human intervention.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-teal-600 transition-all transform hover:scale-105"
+              className="bg-gradient-to-r from-emerald-50o0 to-teal-50o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-60o0 hover:to-teal-60o0 transition-all transform hover:scale-10o5"
             >
               Go Autonomous Now
             </Link>
             <Link
               href="/services/autonomous-operations"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-900 transition-all"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-90o0 transition-all"
             >
               Learn More
             </Link>
@@ -48,7 +46,7 @@ export default function AutonomousBusinessOperations2025() {
             Autonomous Business Capabilities
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-br from-emerald-60o0 to-teal-60o0 rounded-2xl p-8 text-white">
               <div className="text-4xl mb-4">🧠</div>
               <h3 className="text-2xl font-bold mb-4">Intelligent Decision Making</h3>
               <p className="text-lg opacity-90 mb-4">
@@ -60,7 +58,7 @@ export default function AutonomousBusinessOperations2025() {
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-cyan-600 to-blue-600 rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-br from-cyan-60o0 to-blue-60o0 rounded-2xl p-8 text-white">
               <div className="text-4xl mb-4">⚡</div>
               <h3 className="text-2xl font-bold mb-4">Self-Healing Systems</h3>
               <p className="text-lg opacity-90 mb-4">
@@ -72,7 +70,7 @@ export default function AutonomousBusinessOperations2025() {
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-br from-purple-60o0 to-pink-60o0 rounded-2xl p-8 text-white">
               <div className="text-4xl mb-4">📊</div>
               <h3 className="text-2xl font-bold mb-4">Predictive Optimization</h3>
               <p className="text-lg opacity-90 mb-4">
@@ -84,7 +82,7 @@ export default function AutonomousBusinessOperations2025() {
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-orange-600 to-red-600 rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-br from-orange-60o0 to-red-60o0 rounded-2xl p-8 text-white">
               <div className="text-4xl mb-4">🔄</div>
               <h3 className="text-2xl font-bold mb-4">Auto-Scaling</h3>
               <p className="text-lg opacity-90 mb-4">
@@ -96,7 +94,7 @@ export default function AutonomousBusinessOperations2025() {
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-br from-indigo-60o0 to-purple-60o0 rounded-2xl p-8 text-white">
               <div className="text-4xl mb-4">🛡️</div>
               <h3 className="text-2xl font-bold mb-4">Autonomous Security</h3>
               <p className="text-lg opacity-90 mb-4">
@@ -108,7 +106,7 @@ export default function AutonomousBusinessOperations2025() {
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-pink-600 to-rose-600 rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-br from-pink-60o0 to-rose-60o0 rounded-2xl p-8 text-white">
               <div className="text-4xl mb-4">🎯</div>
               <h3 className="text-2xl font-bold mb-4">Process Automation</h3>
               <p className="text-lg opacity-90 mb-4">
@@ -116,7 +114,7 @@ export default function AutonomousBusinessOperations2025() {
                 and business processes without human oversight.
               </p>
               <div className="bg-white bg-opacity-20 px-4 py-2 rounded-lg text-sm font-semibold">
-                100% Automated
+                10o0% Automated
               </div>
             </div>
           </div>
@@ -131,36 +129,36 @@ export default function AutonomousBusinessOperations2025() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-30">
-              <div className="text-6xl font-bold text-emerald-400 mb-4">75%</div>
+              <div className="text-6xl font-bold text-emerald-40o0 mb-4">75%</div>
               <h3 className="text-2xl font-bold text-white mb-4">Cost Reduction</h3>
-              <p className="text-gray-200 text-lg">
+              <p className="text-gray-20o0 text-lg">
                 Autonomous operations reduce operational costs by 75% through 
                 intelligent resource management and process optimization.
               </p>
             </div>
             
             <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-30">
-              <div className="text-6xl font-bold text-cyan-400 mb-4">500%</div>
+              <div className="text-6xl font-bold text-cyan-40o0 mb-4">50o0%</div>
               <h3 className="text-2xl font-bold text-white mb-4">Efficiency Increase</h3>
-              <p className="text-gray-200 text-lg">
-                Self-managing systems increase operational efficiency by 500% 
+              <p className="text-gray-20o0 text-lg">
+                Self-managing systems increase operational efficiency by 50o0% 
                 through continuous optimization and automation.
               </p>
             </div>
             
             <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-30">
-              <div className="text-6xl font-bold text-purple-400 mb-4">24/7</div>
+              <div className="text-6xl font-bold text-purple-40o0 mb-4">24/7</div>
               <h3 className="text-2xl font-bold text-white mb-4">Continuous Operation</h3>
-              <p className="text-gray-200 text-lg">
+              <p className="text-gray-20o0 text-lg">
                 Autonomous systems operate continuously, providing 
                 round-the-clock monitoring and optimization.
               </p>
             </div>
             
             <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-30">
-              <div className="text-6xl font-bold text-orange-400 mb-4">99.9%</div>
+              <div className="text-6xl font-bold text-orange-40o0 mb-4">99.9%</div>
               <h3 className="text-2xl font-bold text-white mb-4">Reliability</h3>
-              <p className="text-gray-200 text-lg">
+              <p className="text-gray-20o0 text-lg">
                 Self-healing systems achieve 99.9% reliability through 
                 autonomous error detection and resolution.
               </p>
@@ -177,34 +175,34 @@ export default function AutonomousBusinessOperations2025() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
-              <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-xl p-6 text-white">
+              <div className="bg-gradient-to-r from-emerald-60o0 to-teal-60o0 rounded-xl p-6 text-white">
                 <h3 className="text-xl font-bold mb-2">IT Infrastructure</h3>
                 <p className="opacity-90">Self-managing servers, networks, and cloud resources with autonomous scaling and optimization.</p>
               </div>
               
-              <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-xl p-6 text-white">
+              <div className="bg-gradient-to-r from-cyan-60o0 to-blue-60o0 rounded-xl p-6 text-white">
                 <h3 className="text-xl font-bold mb-2">Customer Service</h3>
                 <p className="opacity-90">AI-powered customer support that handles inquiries and resolves issues autonomously.</p>
               </div>
               
-              <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl p-6 text-white">
+              <div className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 rounded-xl p-6 text-white">
                 <h3 className="text-xl font-bold mb-2">Supply Chain</h3>
                 <p className="opacity-90">Autonomous inventory management, demand forecasting, and logistics optimization.</p>
               </div>
             </div>
             
             <div className="space-y-6">
-              <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-xl p-6 text-white">
+              <div className="bg-gradient-to-r from-orange-60o0 to-red-60o0 rounded-xl p-6 text-white">
                 <h3 className="text-xl font-bold mb-2">Financial Operations</h3>
                 <p className="opacity-90">Automated financial reporting, risk assessment, and investment decision-making.</p>
               </div>
               
-              <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-6 text-white">
+              <div className="bg-gradient-to-r from-indigo-60o0 to-purple-60o0 rounded-xl p-6 text-white">
                 <h3 className="text-xl font-bold mb-2">Human Resources</h3>
                 <p className="opacity-90">Autonomous recruitment, performance monitoring, and workforce optimization.</p>
               </div>
               
-              <div className="bg-gradient-to-r from-pink-600 to-rose-600 rounded-xl p-6 text-white">
+              <div className="bg-gradient-to-r from-pink-60o0 to-rose-60o0 rounded-xl p-6 text-white">
                 <h3 className="text-xl font-bold mb-2">Marketing Operations</h3>
                 <p className="opacity-90">Self-managing marketing campaigns, content creation, and customer engagement.</p>
               </div>
@@ -220,19 +218,19 @@ export default function AutonomousBusinessOperations2025() {
             Autonomous Operations Success Stories
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl p-8 text-white">
-              <div className="text-4xl font-bold mb-2">Fortune 500</div>
+            <div className="bg-gradient-to-br from-emerald-60o0 to-teal-60o0 rounded-2xl p-8 text-white">
+              <div className="text-4xl font-bold mb-2">Fortune 50o0</div>
               <h3 className="text-xl font-bold mb-4">Global Manufacturing</h3>
               <p className="opacity-90 mb-4">
                 Implemented autonomous production systems that reduced downtime by 90% 
-                and increased efficiency by 400%.
+                and increased efficiency by 40o0%.
               </p>
               <div className="bg-white bg-opacity-20 px-4 py-2 rounded-lg text-sm font-semibold">
                 90% Downtime Reduction
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-cyan-600 to-blue-600 rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-br from-cyan-60o0 to-blue-60o0 rounded-2xl p-8 text-white">
               <div className="text-4xl font-bold mb-2">E-commerce</div>
               <h3 className="text-xl font-bold mb-4">Retail Giant</h3>
               <p className="opacity-90 mb-4">
@@ -244,7 +242,7 @@ export default function AutonomousBusinessOperations2025() {
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-br from-purple-60o0 to-pink-60o0 rounded-2xl p-8 text-white">
               <div className="text-4xl font-bold mb-2">Financial</div>
               <h3 className="text-xl font-bold mb-4">Banking Institution</h3>
               <p className="opacity-90 mb-4">
@@ -265,20 +263,20 @@ export default function AutonomousBusinessOperations2025() {
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business with Autonomous Operations?
           </h2>
-          <p className="text-xl text-gray-200 mb-8">
+          <p className="text-xl text-gray-20o0 mb-8">
             Join the autonomous revolution and experience unprecedented efficiency, 
             reliability, and cost savings. The future of business is autonomous.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-10 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-teal-600 transition-all transform hover:scale-105"
+              className="bg-gradient-to-r from-emerald-50o0 to-teal-50o0 text-white px-10 py-4 rounded-lg font-semibold hover:from-emerald-60o0 hover:to-teal-60o0 transition-all transform hover:scale-10o5"
             >
               Start Autonomous Journey
             </Link>
             <Link
               href="/case-studies"
-              className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-900 transition-all"
+              className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-90o0 transition-all"
             >
               View Success Stories
             </Link>

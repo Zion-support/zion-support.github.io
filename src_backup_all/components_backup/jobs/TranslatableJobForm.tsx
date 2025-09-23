@@ -12,7 +12,6 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 import { toast } from "@/components/ui/use-toast";
 import {logErrorToProduction} from '@/utils/productionLogger';
 
-
 interface TranslatableJobFormProps {
   onSubmit: (formData: any) => void;
   isSubmitting?: boolean;
@@ -31,24 +30,21 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     es: "",
     fr: "",
     pt: "",
-    ar: "",
-  });
+    ar: ""});
   
   const [description, setDescription] = useState<Record<SupportedLanguage, string>>({
     en: "",
     es: "",
     fr: "",
     pt: "",
-    ar: "",
-  });
+    ar: ""});
   
   const [requirements, setRequirements] = useState<Record<SupportedLanguage, string>>({
     en: "",
     es: "",
     fr: "",
     pt: "",
-    ar: "",
-  });
+    ar: ""});
   
   const [budget, setBudget] = useState("");
   const [deadline, setDeadline] = useState("");
@@ -78,8 +74,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       description,
       requirements,
       budget,
-      deadline,
-    });
+      deadline});
   };
   
   // Auto translate content when language tab changes
@@ -116,8 +111,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       toast({
         title: t('translation.no_content'),
         description: t('translation.add_content_first'),
-        variant: "destructive",
-      });
+        variant: "destructive"});
       return;
     }
     
@@ -128,8 +122,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         toast({
           title: t('translation.translation_failed'),
           description: error,
-          variant: "destructive",
-        });
+          variant: "destructive"});
         return;
       }
       
@@ -143,15 +136,13 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       
       toast({
         title: t('translation.translation_success'),
-        description: t('translation.content_translated'),
-      });
+        description: t('translation.content_translated')});
     } catch (error) {
       logErrorToProduction('Error translating ${field}:', { data: error });
       toast({
         title: t('translation.translation_failed'),
         description: error instanceof Error ? error.message : t('translation.unknown_error'),
-        variant: "destructive",
-      });
+        variant: "destructive"});
     }
   };
   
@@ -206,9 +197,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
               className="flex items-center gap-1"
             >
               {isTranslating ? (
-                <Loader2 className="h-4 w-4 animate-spin" />
+                <Loader2 className="h-4 w-4 animate-spin"  />
               ) : (
-                <Globe className="h-4 w-4" />
+                <Globe className="h-4 w-4"  />
               )}
               {t('translation.auto_translate')}
             </Button>
@@ -253,9 +244,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
               className="flex items-center gap-1"
             >
               {isTranslating ? (
-                <Loader2 className="h-4 w-4 animate-spin" />
+                <Loader2 className="h-4 w-4 animate-spin"  />
               ) : (
-                <Globe className="h-4 w-4" />
+                <Globe className="h-4 w-4"  />
               )}
               {t('translation.auto_translate')}
             </Button>
@@ -298,9 +289,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
               className="flex items-center gap-1"
             >
               {isTranslating ? (
-                <Loader2 className="h-4 w-4 animate-spin" />
+                <Loader2 className="h-4 w-4 animate-spin"  />
               ) : (
-                <Globe className="h-4 w-4" />
+                <Globe className="h-4 w-4"  />
               )}
               {t('translation.auto_translate')}
             </Button>
@@ -338,7 +329,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
               id="budget"
               value={budget}
               onChange={(e) => setBudget(e.target.value)}
-              placeholder="$1000 - $2000"
+              placeholder="$10o00 - $20o00"
               className="w-full"
             />
           </div>
@@ -365,7 +356,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         >
           {isSubmitting ? (
             <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              <Loader2 className="mr-2 h-4 w-4 animate-spin"  />
               {t('jobs.submitting')}
             </>
           ) : (

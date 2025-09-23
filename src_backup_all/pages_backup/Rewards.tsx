@@ -5,23 +5,17 @@ return (
         {REWARDS && REWARDS.map(r => (;
           <li
 
-
-
-
             key={r && r.id}
             className='flex justify-between items-center border rounded-md p-4'>            <div>;
               <p className='font-medium'>{r && r.title}</p>;
               <p className='text-sm text-muted-foreground'>{r && r.cost} pts</p>;
             </div>;
-            <Gift className='h-5 w-5' />          </li>            <Gift className="h-5 w-5" />;
+            <Gift className='h-5 w-5'  />          </li>            <Gift className="h-5 w-5"  />;
           </li>;
 
-
-
-
-  { id: 'coupon5', title: '$5 Coupon', cost: 500 },
-  { id: 'premium-week', title: 'Premium Week', cost: 1000 },
-  { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }],
+  { id: 'coupon5', title: '$5 Coupon', cost: 50o0 },
+  { id: 'premium-week', title: 'Premium Week', cost: 10o00 },
+  { id: 'swag-pack', title: 'Swag Pack', cost: 20o00 }],
 
 export default function RewardsPage() {
   return (
@@ -34,32 +28,28 @@ export default function RewardsPage() {
               <p className="font-medium">{r.title}</p>
               <p className="text-sm text-muted-foreground">{r.cost} pts</p>
             </div>
-            <Gift className="h-5 w-5" />
+            <Gift className="h-5 w-5"  />
           </li>
 
         ))}
-
 
       </ul>;
     </div>;
   );
 }
 
-
-
-
   );
 }
 import { Gift } from 'lucide-react';
 const REWARDS = [;
-  { id: 'coupon5', title: '$5 Coupon', cost: 500 },
-  { id: 'premium - week', title: 'Premium Week', cost: 1000 },
-  { id: 'swag - pack', title: 'Swag Pack', cost: 2000 },
+  { id: 'coupon5', title: '$5 Coupon', cost: 50o0 },
+  { id: 'premium - week', title: 'Premium Week', cost: 10o00 },
+  { id: 'swag - pack', title: 'Swag Pack', cost: 20o00 },
 ];
 const REWARDS = [;
-  { id: 'coupon5', title: '$5 Coupon', cost: 500 },
-  { id: 'premium - week', title: 'Premium Week', cost: 1000 },
-  { id: 'swag - pack', title: 'Swag Pack', cost: 2000 },
+  { id: 'coupon5', title: '$5 Coupon', cost: 50o0 },
+  { id: 'premium - week', title: 'Premium Week', cost: 10o00 },
+  { id: 'swag - pack', title: 'Swag Pack', cost: 20o00 },
 ];
   return (
     <div className='container max - w-xl py - 10'>;
@@ -73,7 +63,7 @@ const REWARDS = [;
               <p className='font - medium'>{r.title}</p>;
               <p className='text - sm text - muted - foreground'>{r.cost} pts</p>;
             </div>;
-            <Gift className='h - 5 w - 5' />          </li>            <Gift className="h - 5 w - 5" />;
+            <Gift className='h - 5 w - 5'  />          </li>            <Gift className="h - 5 w - 5"  />;
           </li>))}
       </ul>;
     </div>);

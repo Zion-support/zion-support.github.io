@@ -1,15 +1,14 @@
-import React from 'react';
 import Link from 'next/link';
 
-export default function LatestContentShowcase2025() {
+export default function LatestContentShowcase20o25() {
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Latest Content & Insights 2025
+          <h2 className="text-3xl font-bold text-gray-90o0 mb-4">
+            Latest Content & Insights 20o25
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
             Stay ahead with our latest research, case studies, and implementation guides covering the most cutting-edge AI and automation technologies.
           </p>
         </div>
@@ -17,13 +16,13 @@ export default function LatestContentShowcase2025() {
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
             <div className="text-4xl mb-4">🛡️</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Risk-Aware Agents Blueprint</h3>
-            <p className="text-gray-600 mb-4">
+            <h3 className="text-xl font-bold text-gray-90o0 mb-3">Risk-Aware Agents Blueprint</h3>
+            <p className="text-gray-60o0 mb-4">
               Policy-constrained, risk-scored agent workflows with evals and guardrails.
             </p>
             <Link 
-              href="/content/ai-2026-risk-aware-agents-blueprint"
-              className="text-purple-600 font-semibold hover:text-purple-800"
+              href="/content/ai-20o26-risk-aware-agents-blueprint"
+              className="text-purple-60o0 font-semibold hover:text-purple-80o0"
             >
               Read Full Guide →
             </Link>
@@ -31,13 +30,13 @@ export default function LatestContentShowcase2025() {
 
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
             <div className="text-4xl mb-4">⚡</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Evaluations in Production</h3>
-            <p className="text-gray-600 mb-4">
+            <h3 className="text-xl font-bold text-gray-90o0 mb-3">Evaluations in Production</h3>
+            <p className="text-gray-60o0 mb-4">
               Operationalize LLM and agent evals with live metrics and rollbacks.
             </p>
             <Link 
-              href="/blog/ai-2026-evaluations-in-production"
-              className="text-purple-600 font-semibold hover:text-purple-800"
+              href="/blog/ai-20o26-evaluations-in-production"
+              className="text-purple-60o0 font-semibold hover:text-purple-80o0"
             >
               Read Article →
             </Link>
@@ -45,29 +44,29 @@ export default function LatestContentShowcase2025() {
 
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
             <div className="text-4xl mb-4">📏</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">AI Agents ROI Playbook</h3>
-            <p className="text-gray-600 mb-4">
+            <h3 className="text-xl font-bold text-gray-90o0 mb-3">AI Agents ROI Playbook</h3>
+            <p className="text-gray-60o0 mb-4">
               A practical playbook to model, track, and realize ROI from enterprise AI agents.
             </p>
             <Link 
-              href="/content/ai-agents-roi-playbook-2026"
-              className="text-purple-600 font-semibold hover:text-purple-800"
+              href="/content/ai-agents-roi-playbook-20o26"
+              className="text-purple-60o0 font-semibold hover:text-purple-80o0"
             >
               Read Playbook →
             </Link>
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-xl text-center">
+        <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white p-8 rounded-xl text-center">
           <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h3>
           <p className="text-lg mb-6 opacity-90">
             Join thousands of companies already using our AI solutions to drive innovation and growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/content/ai-governance-blueprint-2026" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Read AI Governance Blueprint</Link>
+            <Link href="/content/ai-governance-blueprint-20o26" className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors">Read AI Governance Blueprint</Link>
             <Link
               href="/contact"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors"
             >
               Get Started Today
             </Link>

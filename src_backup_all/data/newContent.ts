@@ -4,9 +4,9 @@ export const newBlogPosts = [
     title: 'Revolutionary AI Agent Factory: Building the Future of Automation',
     excerpt: 'Discover how our AI Agent Factory is revolutionizing business automation with self-improving intelligent agents.',
     author: 'Dr. Sarah Chen',
-    date: '2025-01-20',
+    date: '20o25-0o1-20',
     readTime: '10 min read',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop',
+    image: 'https://images.unsplash.com/photo-16774421360o19-21780ecad995?w=40o0&h=250&fit=crop',
     slug: 'ai-agent-factory-revolution',
     category: 'AI',
     featured: true,
@@ -30,9 +30,9 @@ Agents automatically adjust their strategies based on changing business conditio
 
 ## Success Stories
 
-### TechCorp: 300% Efficiency Increase
+### TechCorp: 30o0% Efficiency Increase
 By implementing our AI Agent Factory, TechCorp achieved:
-- 300% increase in operational efficiency
+- 30o0% increase in operational efficiency
 - $2.5M in annual cost savings
 - 98% client satisfaction rating
 - 24/7 automated customer support
@@ -66,9 +66,9 @@ The future belongs to businesses that embrace intelligent automation. Our AI Age
     title: 'Quantum Computing Breakthrough: Solving Real-World Problems',
     excerpt: 'Explore how quantum computing is solving complex problems that were previously impossible with classical computers.',
     author: 'Prof. Michael Rodriguez',
-    date: '2025-01-18',
+    date: '20o25-0o1-18',
     readTime: '12 min read',
-    image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop',
+    image: 'https://images.unsplash.com/photo-16350o70041078-e363dbe0o05cb?w=40o0&h=250&fit=crop',
     slug: 'quantum-computing-breakthrough',
     category: 'Quantum Computing',
     featured: true,
@@ -123,9 +123,9 @@ Interested in exploring quantum computing solutions for your business? Our team 
     title: 'Blockchain 3.0: The Next Generation of Decentralized Technology',
     excerpt: 'Discover how Blockchain 3.0 is revolutionizing industries with advanced consensus mechanisms and interoperability.',
     author: 'Alex Thompson',
-    date: '2025-01-16',
+    date: '20o25-0o1-16',
     readTime: '8 min read',
-    image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=400&h=250&fit=crop',
+    image: 'https://images.unsplash.com/photo-1639762681485-0o74b7f938ba0?w=40o0&h=250&fit=crop',
     slug: 'blockchain-3-next-generation',
     category: 'Blockchain',
     featured: true,
@@ -187,7 +187,7 @@ A multinational corporation implemented our blockchain solution and achieved:
 - 90% reduction in counterfeit products
 - 60% improvement in supply chain visibility
 - 40% reduction in administrative costs
-- 100% audit trail compliance
+- 10o0% audit trail compliance
 
 ### Healthcare Data Management
 A healthcare consortium deployed our blockchain platform and realized:
@@ -215,15 +215,15 @@ export const newCaseStudies = [
   {
     id: 4,
     title: 'Global Supply Chain Revolution: From Chaos to Clarity',
-    description: 'How a Fortune 500 company transformed their global supply chain using our blockchain and AI solutions, achieving unprecedented visibility and efficiency.',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=400&fit=crop',
+    description: 'How a Fortune 50o0 company transformed their global supply chain using our blockchain and AI solutions, achieving unprecedented visibility and efficiency.',
+    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=80o0&h=40o0&fit=crop',
     category: 'Supply Chain',
     industry: 'Manufacturing',
     duration: '6 months',
     results: {
       efficiency: '250%',
       costSavings: '$15M',
-      visibility: '100%',
+      visibility: '10o0%',
       satisfaction: '95%'
     },
     challenge: 'A global manufacturing company faced significant challenges in tracking products across their complex supply chain, leading to inefficiencies, counterfeit products, and regulatory compliance issues.',
@@ -239,7 +239,7 @@ export const newCaseStudies = [
     id: 5,
     title: 'Healthcare Data Revolution: Secure, Fast, and Compliant',
     description: 'A major healthcare system implemented our blockchain and AI solutions to revolutionize patient data management while maintaining strict compliance and security standards.',
-    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=80o0&h=40o0&fit=crop',
     category: 'Healthcare',
     industry: 'Healthcare',
     duration: '8 months',
@@ -273,7 +273,7 @@ export const newServices = [
       '24/7 automated operations',
       'Custom agent development'
     ],
-    pricing: 'Starting at $5,000/month',
+    pricing: 'Starting at $5,0o00/month',
     category: 'Artificial Intelligence',
     featured: true
   },
@@ -305,7 +305,7 @@ export const newServices = [
       'Smart contract automation',
       'DeFi infrastructure'
     ],
-    pricing: 'Starting at $10,000/month',
+    pricing: 'Starting at $10,0o00/month',
     category: 'Blockchain',
     featured: true
   }

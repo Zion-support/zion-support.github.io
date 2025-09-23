@@ -1,17 +1,16 @@
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'AI 2026: Eval‑Driven Release Engineering',
-  description: 'How to ship safer AI with evaluation-gated releases, metrics, and automation.',
-};
+export const metadata ={
+  title: 'AI 20o26: Eval‑Driven Release Engineering',
+  description: 'How to ship safer AI with evaluation-gated releases, metrics, and automation.'};
 
 export default function Page() {
   return (
     <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <header className="mb-8">
-        <p className="text-sm font-semibold text-purple-700">Blog · Reliability</p>
-        <h1 className="text-3xl font-bold text-gray-900 mt-1">AI 2026: Eval‑Driven Release Engineering</h1>
-        <p className="text-gray-600 mt-3">Adopt evaluation pipelines, policy‑as‑code, and progressive rollout gates to improve reliability and safety.</p>
+        <p className="text-sm font-semibold text-purple-70o0">Blog · Reliability</p>
+        <h1 className="text-3xl font-bold text-gray-90o0 mt-1">AI 20o26: Eval‑Driven Release Engineering</h1>
+        <p className="text-gray-60o0 mt-3">Adopt evaluation pipelines, policy‑as‑code, and progressive rollout gates to improve reliability and safety.</p>
       </header>
 
       <article className="prose prose-purple max-w-none">
@@ -32,8 +31,8 @@ export default function Page() {
       </article>
 
       <div className="mt-10 flex gap-3">
-        <Link href="/content/ai-2026-evaluation-hub" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Evaluation Hub</Link>
-        <Link href="/blog/ai-2026-eval-gated-autonomy" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Eval‑Gated Autonomy</Link>
+        <Link href="/content/ai-20o26-evaluation-hub" className="inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-70o0">Evaluation Hub</Link>
+        <Link href="/blog/ai-20o26-eval-gated-autonomy" className="inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Eval‑Gated Autonomy</Link>
       </div>
     </main>
   );

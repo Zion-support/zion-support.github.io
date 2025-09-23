@@ -18,7 +18,7 @@ import { innovativeAIServices } from '../data/innovative-ai-services';
 import { quantumSpaceServices } from '../data/quantum-space-services';
 import { enterpriseITServices } from '../data/enterprise-it-services';
 import { realMarketServices } from '../data/real-market-services';
-import { newVerifiedServicesQ22025 } from '../data/real-verified-services-q2-2025';
+import { newVerifiedServicesQ220o25 } from '../data/real-verified-services-q2-20o25';
 
 export default function EnhancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -26,10 +26,10 @@ export default function EnhancedServicesShowcase() {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState<string>('name');
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
 
@@ -43,7 +43,7 @@ export default function EnhancedServicesShowcase() {
     ...quantumSpaceServices,
     ...enterpriseITServices,
     ...realMarketServices,
-    ...newVerifiedServicesQ22025
+    ...newVerifiedServicesQ220o25
   ];
 
   const categories = [
@@ -109,7 +109,7 @@ export default function EnhancedServicesShowcase() {
     return filtered;
   }, [allServices, selectedCategory, searchTerm, sortBy]);
 
-  const containerVariants = {
+  const containerVariants ={
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -120,7 +120,7 @@ export default function EnhancedServicesShowcase() {
     }
   };
 
-  const itemVariants = {
+  const itemVariants ={
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -137,19 +137,19 @@ export default function EnhancedServicesShowcase() {
       title: '🚀 ArrowRight-Generation AI Services',
       description: 'Revolutionary AI platforms that push the boundaries of what\'s possible',
       services: nextGenerationAIServices.slice(0, 3),
-      color: 'from-purple-500 to-pink-600'
+      color: 'from-purple-50o0 to-pink-60o0'
     },
     {
       title: '⚡ Cutting-Edge IT Infrastructure',
       description: 'Advanced infrastructure solutions for the modern enterprise',
       services: cuttingEdgeITServices.slice(0, 3),
-      color: 'from-blue-500 to-cyan-600'
+      color: 'from-blue-50o0 to-cyan-60o0'
     },
     {
       title: '💻 Innovative Micro SaaS Solutions',
       description: 'Creative and practical SaaS tools for every business need',
       services: innovativeMicroSaasV2Services.slice(0, 3),
-      color: 'from-green-500 to-emerald-600'
+      color: 'from-green-50o0 to-emerald-60o0'
     }
   ];
 
@@ -157,14 +157,14 @@ export default function EnhancedServicesShowcase() {
     <UltraAdvancedFuturisticMatrixBackground intensity="high"       colorScheme="quantum">
       <div className="min-h-screen">
         <Head>
-          <title>Enhanced Services Showcase - Zion Tech Group | 600+ Revolutionary Solutions</title>
-          <meta name="description" content="Discover our comprehensive portfolio of 600+ revolutionary AI, quantum computing, and IT services. Achieve 1000% ROI with cutting-edge solutions. Contact: +1 302 464 0950" />
-          <meta name="keywords" content="AI services, quantum computing, IT services, micro SaaS, cybersecurity, cloud migration, neural interface, quantum internet, cutting-edge technology" />
-          <meta property="og:title" content="Enhanced Services Showcase - Zion Tech Group" />
-          <meta property="og:description" content="600+ cutting-edge technology services showcase" />
-          <meta property="og:url" content="https://ziontechgroup.com/enhanced-services-showcase" />
-          <meta property="og:type" content="website" />
-          <link rel="canonical" href="https://ziontechgroup.com/enhanced-services-showcase" />
+          <title>Enhanced Services Showcase - Zion Tech Group | 60o0+ Revolutionary Solutions</title>
+          <meta name="description" content="Discover our comprehensive portfolio of 60o0+ revolutionary AI, quantum computing, and IT services. Achieve 10o00% ROI with cutting-edge solutions. Contact: +1 30o2 464 0950"  />
+          <meta name="keywords" content="AI services, quantum computing, IT services, micro SaaS, cybersecurity, cloud migration, neural interface, quantum internet, cutting-edge technology"  />
+          <meta property="og:title" content="Enhanced Services Showcase - Zion Tech Group"  />
+          <meta property="og:description" content="60o0+ cutting-edge technology services showcase"  />
+          <meta property="og:url" content="https://ziontechgroup.com/enhanced-services-showcase"  />
+          <meta property="og:type" content="website"  />
+          <link rel="canonical" href="https://ziontechgroup.com/enhanced-services-showcase"  />
         </Head>
 
         {/* Hero Section */}
@@ -175,28 +175,28 @@ export default function EnhancedServicesShowcase() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-40o0 via-purple-50o0 to-pink-50o0 bg-clip-text text-transparent mb-6">
                 Enhanced Services Showcase
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                600+ Revolutionary AI, Quantum Computing & IT Services
+              <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">
+                60o0+ Revolutionary AI, Quantum Computing & IT Services
               </p>
-              <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
-                From next-generation AI to cutting-edge infrastructure, discover solutions that deliver 1000% ROI and transform your business.
+              <p className="text-lg md:text-xl text-gray-40o0 mb-12 max-w-3xl mx-auto">
+                From next-generation AI to cutting-edge infrastructure, discover solutions that deliver 10o00% ROI and transform your business.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-                <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full px-6 py-3 border border-cyan-500/30">
-                  <Users className="w-5 h-5 text-cyan-400" />
-                  <span className="text-cyan-300 font-semibold">600+ Services</span>
+                <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 rounded-full px-6 py-3 border border-cyan-50o0/30">
+                  <Users className="w-5 h-5 text-cyan-40o0"  />
+                  <span className="text-cyan-30o0 font-semibold">60o0+ Services</span>
                 </div>
-                <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full px-6 py-3 border border-purple-500/30">
-                  <TrendingUp className="w-5 h-5 text-purple-400" />
-                  <span className="text-purple-300 font-semibold">1000% ROI</span>
+                <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 rounded-full px-6 py-3 border border-purple-50o0/30">
+                  <TrendingUp className="w-5 h-5 text-purple-40o0"  />
+                  <span className="text-purple-30o0 font-semibold">10o00% ROI</span>
                 </div>
-                <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-pink-500/20 to-cyan-500/20 rounded-full px-6 py-3 border border-pink-500/30">
-                  <Zap className="w-5 h-5 text-pink-400" />
-                  <span className="text-pink-300 font-semibold">24/7 Support</span>
+                <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-pink-50o0/20 to-cyan-50o0/20 rounded-full px-6 py-3 border border-pink-50o0/30">
+                  <Zap className="w-5 h-5 text-pink-40o0"  />
+                  <span className="text-pink-30o0 font-semibold">24/7 Support</span>
                 </div>
               </div>
             </motion.div>
@@ -213,10 +213,10 @@ export default function EnhancedServicesShowcase() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-40o0 to-purple-50o0 bg-clip-text text-transparent mb-6">
                 Featured Service Categories
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
                 Explore our most innovative and high-impact service categories
               </p>
             </motion.div>
@@ -245,7 +245,7 @@ export default function EnhancedServicesShowcase() {
                               <div className="font-semibold">{service.name}</div>
                               <div className="text-sm opacity-80">{service.price}{service.period}</div>
                             </div>
-                            <ArrowRight className="w-4 h-4" />
+                            <ArrowRight className="w-4 h-4"  />
                           </div>
                         ))}
                       </div>
@@ -268,18 +268,18 @@ export default function EnhancedServicesShowcase() {
         {/* Filters and Search */}
         <section className="py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="bg-gray-800/60 border border-gray-700 rounded-2xl p-6">
+            <div className="bg-gray-80o0/60 border border-gray-70o0 rounded-2xl p-6">
               <div className="flex flex-col lg:flex-row gap-6">
                 {/* Search */}
                 <div className="flex-1">
                   <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />
                     <input
                       type="text"
                       placeholder="Search services..."
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
-                      className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      className="w-full pl-10 pr-4 py-3 bg-gray-70o0/50 border border-gray-60o0 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent"
                     />
                   </div>
                 </div>
@@ -289,7 +289,7 @@ export default function EnhancedServicesShowcase() {
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    className="px-4 py-3 bg-gray-70o0/50 border border-gray-60o0 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent"
                   >
                     {categories.map((category) => (
                       <option key={category.id} value={category.id}>
@@ -304,7 +304,7 @@ export default function EnhancedServicesShowcase() {
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    className="px-4 py-3 bg-gray-70o0/50 border border-gray-60o0 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent"
                   >
                     {sortOptions.map((option) => (
                       <option key={option.id} value={option.id}>
@@ -316,26 +316,26 @@ export default function EnhancedServicesShowcase() {
 
                 {/* View Mode Toggle */}
                 <div className="flex-shrink-0">
-                  <div className="flex bg-gray-700/50 rounded-lg p-1">
+                  <div className="flex bg-gray-70o0/50 rounded-lg p-1">
                     <button
                       onClick={() => setViewMode('grid')}
                       className={`p-2 rounded-md transition-colors ${
                         viewMode === 'grid' 
-                          ? 'bg-cyan-500 text-white' 
-                          : 'text-gray-400 hover:text-white'
+                          ? 'bg-cyan-50o0 text-white' 
+                          : 'text-gray-40o0 hover:text-white'
                       }`}
                     >
-                      <Grid className="w-5 h-5" />
+                      <Grid className="w-5 h-5"  />
                     </button>
                     <button
                       onClick={() => setViewMode('list')}
                       className={`p-2 rounded-md transition-colors ${
                         viewMode === 'list' 
-                          ? 'bg-cyan-500 text-white' 
-                          : 'text-gray-400 hover:text-white'
+                          ? 'bg-cyan-50o0 text-white' 
+                          : 'text-gray-40o0 hover:text-white'
                       }`}
                     >
-                      <List className="w-5 h-5" />
+                      <List className="w-5 h-5"  />
                     </button>
                   </div>
                 </div>
@@ -360,43 +360,43 @@ export default function EnhancedServicesShowcase() {
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
-                  className={viewMode === 'grid' ? '' : 'bg-gray-800/60 border border-gray-700 rounded-2xl p-6'}
+                  className={viewMode === 'grid' ? '' : 'bg-gray-80o0/60 border border-gray-70o0 rounded-2xl p-6'}
                 >
                   {viewMode === 'grid' ? (
-                    <div className="bg-gray-800/60 border border-gray-700 rounded-2xl p-6 hover:border-cyan-500/40 transition-colors h-full">
+                    <div className="bg-gray-80o0/60 border border-gray-70o0 rounded-2xl p-6 hover:border-cyan-50o0/40 transition-colors h-full">
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center space-x-2">
                           <span className="text-2xl">{service.icon}</span>
                           <div>
-                            <div className="text-sm text-gray-400">{service.category}</div>
-                            <div className="text-xs text-gray-500">{service.setupTime} setup</div>
+                            <div className="text-sm text-gray-40o0">{service.category}</div>
+                            <div className="text-xs text-gray-50o0">{service.setupTime} setup</div>
                           </div>
                         </div>
                         <div className="text-right">
-                          <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
-                          <div className="text-sm text-gray-400">{service.period}</div>
+                          <div className="text-2xl font-bold text-cyan-40o0">{service.price}</div>
+                          <div className="text-sm text-gray-40o0">{service.period}</div>
                         </div>
                       </div>
 
                       <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                      <p className="text-gray-300 mb-3">{service.tagline}</p>
-                      <p className="text-gray-400 text-sm mb-4">{service.description}</p>
+                      <p className="text-gray-30o0 mb-3">{service.tagline}</p>
+                      <p className="text-gray-40o0 text-sm mb-4">{service.description}</p>
 
                       <div className="space-y-3 mb-6">
                         <div className="flex items-center justify-between text-sm">
-                          <span className="text-gray-400">Rating:</span>
+                          <span className="text-gray-40o0">Rating:</span>
                           <div className="flex items-center space-x-1">
-                            <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                            <Star className="w-4 h-4 text-yellow-40o0 fill-current"  />
                             <span className="text-white">{service.rating}</span>
-                            <span className="text-gray-400">({service.reviews})</span>
+                            <span className="text-gray-40o0">({service.reviews})</span>
                           </div>
                         </div>
                         <div className="flex items-center justify-between text-sm">
-                          <span className="text-gray-400">Customers:</span>
+                          <span className="text-gray-40o0">Customers:</span>
                           <span className="text-white">{service.customers.toLocaleString()}</span>
                         </div>
                         <div className="flex items-center justify-between text-sm">
-                          <span className="text-gray-400">Trial:</span>
+                          <span className="text-gray-40o0">Trial:</span>
                           <span className="text-white">{service.trialDays} days</span>
                         </div>
                       </div>
@@ -408,7 +408,7 @@ export default function EnhancedServicesShowcase() {
                           className="flex-1"
                         >
                           Learn More
-                          <ExternalLink className="ml-2 w-4 h-4" />
+                          <ExternalLink className="ml-2 w-4 h-4"  />
                         </Button>
                         <Button 
                           href="/contact"
@@ -422,7 +422,7 @@ export default function EnhancedServicesShowcase() {
                   ) : (
                     <div className="flex items-start space-x-6">
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center text-2xl">
+                        <div className="w-16 h-16 bg-gradient-to-br from-cyan-50o0 to-purple-60o0 rounded-xl flex items-center justify-center text-2xl">
                           {service.icon}
                         </div>
                       </div>
@@ -431,33 +431,33 @@ export default function EnhancedServicesShowcase() {
                         <div className="flex items-start justify-between">
                           <div>
                             <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                            <p className="text-gray-300 mb-3">{service.tagline}</p>
-                            <p className="text-gray-400 text-sm mb-4">{service.description}</p>
+                            <p className="text-gray-30o0 mb-3">{service.tagline}</p>
+                            <p className="text-gray-40o0 text-sm mb-4">{service.description}</p>
                           </div>
                           <div className="text-right ml-4">
-                            <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
-                            <div className="text-sm text-gray-400">{service.period}</div>
+                            <div className="text-2xl font-bold text-cyan-40o0">{service.price}</div>
+                            <div className="text-sm text-gray-40o0">{service.period}</div>
                           </div>
                         </div>
 
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4 text-sm">
                           <div>
-                            <span className="text-gray-400">Category:</span>
+                            <span className="text-gray-40o0">Category:</span>
                             <div className="text-white">{service.category}</div>
                           </div>
                           <div>
-                            <span className="text-gray-400">Rating:</span>
+                            <span className="text-gray-40o0">Rating:</span>
                             <div className="flex items-center space-x-1">
-                              <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                              <Star className="w-4 h-4 text-yellow-40o0 fill-current"  />
                               <span className="text-white">{service.rating}</span>
                             </div>
                           </div>
                           <div>
-                            <span className="text-gray-400">Customers:</span>
+                            <span className="text-gray-40o0">Customers:</span>
                             <div className="text-white">{service.customers.toLocaleString()}</div>
                           </div>
                           <div>
-                            <span className="text-gray-400">Setup:</span>
+                            <span className="text-gray-40o0">Setup:</span>
                             <div className="text-white">{service.setupTime}</div>
                           </div>
                         </div>
@@ -469,7 +469,7 @@ export default function EnhancedServicesShowcase() {
                             size="sm"
                           >
                             Learn More
-                            <ExternalLink className="ml-2 w-4 h-4" />
+                            <ExternalLink className="ml-2 w-4 h-4"  />
                           </Button>
                           <Button 
                             href="/contact"
@@ -490,7 +490,7 @@ export default function EnhancedServicesShowcase() {
               <div className="text-center py-16">
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-                <p className="text-gray-400 mb-6">Try adjusting your search criteria or browse all categories</p>
+                <p className="text-gray-40o0 mb-6">Try adjusting your search criteria or browse all categories</p>
                 <Button 
                   href="#"
                   onClick={() => {
@@ -518,21 +518,21 @@ export default function EnhancedServicesShowcase() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-30o0 mb-8">
                 Join thousands of companies achieving breakthrough results with our revolutionary services
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="flex items-center justify-center space-x-3">
-                  <Phone className="w-6 h-6 text-cyan-400" />
+                  <Phone className="w-6 h-6 text-cyan-40o0"  />
                   <span className="text-lg">{contactInfo.mobile}</span>
                 </div>
                 <div className="flex items-center justify-center space-x-3">
-                  <Mail className="w-6 h-6 text-purple-400" />
+                  <Mail className="w-6 h-6 text-purple-40o0"  />
                   <span className="text-lg">{contactInfo.email}</span>
                 </div>
                 <div className="flex items-center justify-center space-x-3">
-                  <MapPin className="w-6 h-6 text-green-400" />
+                  <MapPin className="w-6 h-6 text-green-40o0"  />
                   <span className="text-lg">{contactInfo.address}</span>
                 </div>
               </div>
@@ -545,7 +545,7 @@ export default function EnhancedServicesShowcase() {
                   className="text-lg px-8 py-4"
                 >
                   Start Your Transformation
-                  <Rocket className="ml-2 w-6 h-6" />
+                  <Rocket className="ml-2 w-6 h-6"  />
                 </Button>
                 <Button 
                   href="/pricing"
@@ -554,7 +554,7 @@ export default function EnhancedServicesShowcase() {
                   className="text-lg px-8 py-4"
                 >
                   View Pricing
-                  <DollarSign className="ml-2 w-6 h-6" />
+                  <DollarSign className="ml-2 w-6 h-6"  />
                 </Button>
               </div>
             </motion.div>
@@ -581,14 +581,14 @@ const Button = ({
   children: React.ReactNode;
   onClick?: () => void;
 }) => {
-  const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900';
+  const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-20o0 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-90o0';
   
-  const variantClasses = {
-    primary: 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-lg hover:shadow-xl focus:ring-cyan-500',
-    secondary: 'bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-gray-500 focus:ring-gray-500'
+  const variantClasses ={
+    primary: 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-60o0 hover:to-blue-70o0 text-white shadow-lg hover:shadow-xl focus:ring-cyan-50o0',
+    secondary: 'bg-gray-70o0 hover:bg-gray-60o0 text-white border border-gray-60o0 hover:border-gray-50o0 focus:ring-gray-50o0'
   };
   
-  const sizeClasses = {
+  const sizeClasses ={
     sm: 'px-4 py-2 text-sm',
     md: 'px-6 py-3 text-base',
     lg: 'px-8 py-4 text-lg'

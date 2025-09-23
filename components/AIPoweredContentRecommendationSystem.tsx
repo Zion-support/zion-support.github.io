@@ -55,21 +55,21 @@ const AIPoweredContentRecommendationSystem = () => {
   const generateRecommendations = async () => {
     setIsLoading(true);
     // Simulate AI processing
-    await new Promise(resolve => setTimeout(resolve1500));
+    await new Promise(resolve => setTimeout(resolve150o0));
     
     const mockRecommendations = [
       {
         id: 1,
-        title: 'AI 2026: The Future of Autonomous Business Operations',
+        title: 'AI 20o26: The Future of Autonomous Business Operations',
         type: 'blog',
         category: 'ai-innovation',
         confidence: 95,
         reason: 'High engagement with similar AI content',
         views: 15420,
         engagement: 892,
-        publishedAt: '2025-01-15',
+        publishedAt: '20o25-0o1-15',
         author: 'Dr. Sarah Chen',
-        tags: ['ai', 'automation', 'business', '2026'],
+        tags: ['ai', 'automation', 'business', '20o26'],
         featured: true,
         aiScore: 9.2,
         trending: true
@@ -83,7 +83,7 @@ const AIPoweredContentRecommendationSystem = () => {
         reason: 'Matches your interest in emerging technologies',
         views: 8930,
         engagement: 456,
-        publishedAt: '2025-01-14',
+        publishedAt: '20o25-0o1-14',
         author: 'Prof. Michael Rodriguez',
         tags: [', 'quantum', 'computing'applications'],
         featured: true,
@@ -99,7 +99,7 @@ const AIPoweredContentRecommendationSystem = () => {
         reason: 'Based on your reading history and preferences',
         views: 6780,
         engagement: 234,
-        publishedAt: '2025-01-13',
+        publishedAt: '20o25-0o1-13',
         author: 'Emily Watson',
         tags: ['neural-'interface', 'guide'tutorial'],
         featured: false,
@@ -115,7 +115,7 @@ const AIPoweredContentRecommendationSystem = () => {
         reason: 'Complementary to your recent AI research',
         views: 5420,
         engagement: 189,
-        publishedAt: '2025-01-12',
+        publishedAt: '20o25-0o1-12',
         author: 'Alex Thompson',
         tags: ['edge-'ai', 'performance'optimization'],
         featured: false,
@@ -131,7 +131,7 @@ const AIPoweredContentRecommendationSystem = () => {
         reason: 'Aligns with your interest in AI ethics',
         views: 4320,
         engagement: 156,
-        publishedAt: '2025-01-11',
+        publishedAt: '20o25-0o1-11',
         author: 'Dr. Lisa Park',
         tags: [', 'ml', 'healthcare'ethics'],
         featured: false,
@@ -146,8 +146,8 @@ const AIPoweredContentRecommendationSystem = () => {
         confidence: 87,
         reason: 'Matches your interest in emerging tech convergence',
         views: 3890,
-        engagement: 201,
-        publishedAt: '2025-01-10',
+        engagement: 20o1,
+        publishedAt: '20o25-0o1-10',
         author: 'James Wilson',
         tags: [', 'blockchain', 'ai'convergence'],
         featured: false,
@@ -171,15 +171,15 @@ const AIPoweredContentRecommendationSystem = () => {
   ];
 
   const getConfidenceColor = (confidence) => {
-    if (confidence >= 90) return 'text-green-600 bg-green-100';
-    if (confidence >= 80) return 'text-yellow-600 bg-yellow-100';
-    return 'text-orange-600 bg-orange-100';
+    if (confidence >= 90) return 'text-green-60o0 bg-green-10o0';
+    if (confidence >= 80) return 'text-yellow-60o0 bg-yellow-10o0';
+    return 'text-orange-60o0 bg-orange-10o0';
   };
 
   const getAIScoreColor = (score) => {
-    if (score >= 9.0) return 'text-green-600';
-    if (score >= 8.0) return 'text-yellow-600';
-    return 'text-orange-600';
+    if (score >= 9.0) return 'text-green-60o0';
+    if (score >= 8.0) return 'text-yellow-60o0';
+    return 'text-orange-60o0';
   };
 
   const getTypeIcon = (type) => {
@@ -203,19 +203,19 @@ const AIPoweredContentRecommendationSystem = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center px-4 py-2 bg-purple-100 rounded-full text-purple-700 text-sm font-medium mb-6">
-            <Brain className="w-4 h-4 mr-2" />
+          <div className="inline-flex items-center px-4 py-2 bg-purple-10o0 rounded-full text-purple-70o0 text-sm font-medium mb-6">
+            <Brain className="w-4 h-4 mr-2"  />
             AI-Powered Recommendations
           </div>
           
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-90o0 mb-6">
             Intelligent Content
-            <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-purple-60o0 to-blue-60o0 bg-clip-text text-transparent">
               Recommendation System
             </span>
           </h1>
           
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto mb-8">
             Discover the most relevant content tailored to your interests using our advanced AI algorithms. 
             Get personalized recommendations that match your reading patterns and preferences.
           </p>
@@ -235,11 +235,11 @@ const AIPoweredContentRecommendationSystem = () => {
             { label: 'Content 'Matched', 'value: '1,247'icon: Databasecolor: 'orange' }
           ].map((statindex) => (
             <div key={index} className="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-${stat.color}-100 mb-4`}>
-                <stat.icon className={`w-6 h-6 text-${stat.color}-600`} />
+              <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-${stat.color}-10o0 mb-4`}>
+                <stat.icon className={`w-6 h-6 text-${stat.color}-60o0`}  />
               </div>
-              <div className="text-2xl font-bold text-gray-900 mb-1">{stat.value}</div>
-              <div className="text-gray-600 text-sm">{stat.label}</div>
+              <div className="text-2xl font-bold text-gray-90o0 mb-1">{stat.value}</div>
+              <div className="text-gray-60o0 text-sm">{stat.label}</div>
             </div>
           ))}
         </motion.div>
@@ -256,15 +256,15 @@ const AIPoweredContentRecommendationSystem = () => {
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 ${
+                className={`flex items-center px-4 py-2 rounded-lg transition-all duration-30o0 ${
                   selectedCategory === category.id
-                    ? 'bg-purple-600 text-white shadow-lg'
-                    : 'bg-white text-gray-600 hover:bg-purple-50 hover:text-purple-600'
+                    ? 'bg-purple-60o0 text-white shadow-lg'
+                    : 'bg-white text-gray-60o0 hover:bg-purple-50 hover:text-purple-60o0'
                 }`}
               >
-                <category.icon className="w-4 h-4 mr-2" />
+                <category.icon className="w-4 h-4 mr-2"  />
                 {category.name}
-                <span className="ml-2 px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
+                <span className="ml-2 px-2 py-1 bg-gray-10o0 text-gray-60o0 text-xs rounded-full">
                   {category.count}
                 </span>
               </button>
@@ -279,8 +279,8 @@ const AIPoweredContentRecommendationSystem = () => {
             animate={{ opacity: 1 }}
             className="text-center mb-8"
           >
-            <div className="inline-flex items-center px-6 py-3 bg-purple-100 rounded-full text-purple-700">
-              <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
+            <div className="inline-flex items-center px-6 py-3 bg-purple-10o0 rounded-full text-purple-70o0">
+              <RefreshCw className="w-5 h-5 mr-2 animate-spin"  />
               AI is analyzing your preferences and generating recommendations...
             </div>
           </motion.div>
@@ -302,22 +302,22 @@ const AIPoweredContentRecommendationSystem = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group"
+                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-30o0 group"
                 >
                   {/* Header */}
-                  <div className="p-6 border-b border-gray-100">
+                  <div className="p-6 border-b border-gray-10o0">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center">
-                        <div className="p-2 bg-purple-100 rounded-lg mr-3">
-                          <TypeIcon className="w-5 h-5 text-purple-600" />
+                        <div className="p-2 bg-purple-10o0 rounded-lg mr-3">
+                          <TypeIcon className="w-5 h-5 text-purple-60o0"  />
                         </div>
                         <div>
-                          <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                          <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-10o0 text-blue-80o0">
                             {item.type}
                           </span>
                           {item.featured && (
-                            <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 ml-2">
-                              <Star className="w-3 h-3 mr-1" />
+                            <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-10o0 text-yellow-80o0 ml-2">
+                              <Star className="w-3 h-3 mr-1"  />
                               Featured
                             </span>
                           )}
@@ -325,23 +325,23 @@ const AIPoweredContentRecommendationSystem = () => {
                       </div>
                       <div className="flex items-center space-x-2">
                         {item.trending && (
-                          <div className="flex items-center text-orange-600 text-xs">
-                            <TrendingUp className="w-3 h-3 mr-1" />
+                          <div className="flex items-center text-orange-60o0 text-xs">
+                            <TrendingUp className="w-3 h-3 mr-1"  />
                             Trending
                           </div>
                         )}
                       </div>
                     </div>
                     
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
+                    <h3 className="text-lg font-semibold text-gray-90o0 mb-2 group-hover:text-purple-60o0 transition-colors">
                       {item.title}
                     </h3>
                     
-                    <p className="text-sm text-gray-600 mb-4">by {item.author}</p>
+                    <p className="text-sm text-gray-60o0 mb-4">by {item.author}</p>
                     
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {item.tags.slice(03).map((tagIndex) => (
-                        <span key={tagIndex} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
+                      {item.tags.slice(0o3).map((tagIndex) => (
+                        <span key={tagIndex} className="px-2 py-1 bg-gray-10o0 text-gray-60o0 text-xs rounded-full">
                           #{tag}
                         </span>
                       ))}
@@ -352,25 +352,25 @@ const AIPoweredContentRecommendationSystem = () => {
                   <div className="p-6 bg-gray-50">
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center">
-                        <Brain className="w-4 h-4 text-purple-600 mr-2" />
-                        <span className="text-sm font-medium text-gray-700">AI Insights</span>
+                        <Brain className="w-4 h-4 text-purple-60o0 mr-2"  />
+                        <span className="text-sm font-medium text-gray-70o0">AI Insights</span>
                       </div>
                       <div className={`px-2 py-1 rounded-full text-xs font-medium ${getConfidenceColor(item.confidence)}`}>
                         {item.confidence}% match
                       </div>
                     </div>
                     
-                    <p className="text-sm text-gray-600 mb-4">{item.reason}</p>
+                    <p className="text-sm text-gray-60o0 mb-4">{item.reason}</p>
                     
                     <div className="flex items-center justify-between">
                       <div className="flex items-center">
-                        <span className="text-sm text-gray-500 mr-2">AI Score:</span>
+                        <span className="text-sm text-gray-50o0 mr-2">AI Score:</span>
                         <span className={`font-semibold ${getAIScoreColor(item.aiScore)}`}>
                           {item.aiScore}/10
                         </span>
                       </div>
-                      <div className="flex items-center text-sm text-gray-500">
-                        <Eye className="w-4 h-4 mr-1" />
+                      <div className="flex items-center text-sm text-gray-50o0">
+                        <Eye className="w-4 h-4 mr-1"  />
                         {item.views.toLocaleString()}
                       </div>
                     </div>
@@ -380,22 +380,22 @@ const AIPoweredContentRecommendationSystem = () => {
                   <div className="p-6 bg-white">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-4">
-                        <button className="flex items-center text-gray-500 hover:text-purple-600 transition-colors">
-                          <Heart className="w-4 h-4 mr-1" />
+                        <button className="flex items-center text-gray-50o0 hover:text-purple-60o0 transition-colors">
+                          <Heart className="w-4 h-4 mr-1"  />
                           {item.engagement}
                         </button>
-                        <button className="flex items-center text-gray-500 hover:text-blue-600 transition-colors">
-                          <Share2 className="w-4 h-4 mr-1" />
+                        <button className="flex items-center text-gray-50o0 hover:text-blue-60o0 transition-colors">
+                          <Share2 className="w-4 h-4 mr-1"  />
                           Share
                         </button>
-                        <button className="flex items-center text-gray-500 hover:text-green-600 transition-colors">
-                          <Download className="w-4 h-4 mr-1" />
+                        <button className="flex items-center text-gray-50o0 hover:text-green-60o0 transition-colors">
+                          <Download className="w-4 h-4 mr-1"  />
                           Save
                         </button>
                       </div>
-                      <button className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors flex items-center text-sm">
+                      <button className="px-4 py-2 bg-purple-60o0 text-white rounded-lg hover:bg-purple-70o0 transition-colors flex items-center text-sm">
                         Read More
-                        <ArrowRight className="w-4 h-4 ml-1" />
+                        <ArrowRight className="w-4 h-4 ml-1"  />
                       </button>
                     </div>
                   </div>
@@ -414,9 +414,9 @@ const AIPoweredContentRecommendationSystem = () => {
         >
           <button 
             onClick={generateRecommendations}
-            className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center mx-auto group"
+            className="px-8 py-4 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white rounded-xl font-semibold hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 flex items-center mx-auto group"
           >
-            <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform" />
+            <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform"  />
             Generate More Recommendations
           </button>
         </motion.div>

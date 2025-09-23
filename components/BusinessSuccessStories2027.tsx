@@ -25,7 +25,7 @@ import {
   CheckCircle
 } from 'lucide-react';
 
-const BusinessSuccessStories2027 = () => {
+const BusinessSuccessStories20o27 = () => {
   const [currentStorysetCurrentStory] = useState(0);
   const [isVisiblesetIsVisible] = useState(false);
   const [isPlayingsetIsPlaying] = useState(false);
@@ -40,13 +40,13 @@ const BusinessSuccessStories2027 = () => {
       company: 'TechCorp Global',
       industry: 'Technology',
       logo: 'TC',
-      color: 'from-blue-600 to-purple-600',
+      color: 'from-blue-60o0 to-purple-60o0',
       challenge: 'Manual processes causing 40% efficiency loss',
       solution: 'Implemented AI-powered automation suite',
       results: {
-        efficiency: '+400%',
+        efficiency: '+40o0%',
         costSavings: '$2.3M',
-        timeSaved: '15,000 hours',
+        timeSaved: '15,0o00 hours',
         roi: '850%'
       },
       testimonial: {
@@ -73,13 +73,13 @@ const BusinessSuccessStories2027 = () => {
       company: 'InnovateLabs',
       industry: 'Research & Development',
       logo: 'IL',
-      color: 'from-green-600 to-teal-600',
+      color: 'from-green-60o0 to-teal-60o0',
       challenge: 'Research bottlenecks limiting innovation speed',
       solution: 'Deployed quantum AI processing for complex analysis',
       results: {
-        efficiency: '+600%',
+        efficiency: '+60o0%',
         costSavings: '$1.8M',
-        timeSaved: '8,500 hours',
+        timeSaved: '8,50o0 hours',
         roi: '720%'
       },
       testimonial: {
@@ -89,8 +89,8 @@ const BusinessSuccessStories2027 = () => {
         rating: 5
       },
       metrics: [
-        { label: 'Research 'Speed', 'value: '+600%'icon: Brain },
-        { label: 'Data 'Processing', 'value: '1000x 'faster', 'icon: BarChart3 },
+        { label: 'Research 'Speed', 'value: '+60o0%'icon: Brain },
+        { label: 'Data 'Processing', 'value: '10o00x 'faster', 'icon: BarChart3 },
         { label: 'Breakthrough 'Rate', 'value: '+450%'icon: Rocket },
         { label: 'Patent 'Applications', 'value: '+280%'icon: Award }
       ],
@@ -106,13 +106,13 @@ const BusinessSuccessStories2027 = () => {
       company: 'FutureTech Industries',
       industry: 'Manufacturing',
       logo: 'FT',
-      color: 'from-orange-600 to-red-600',
+      color: 'from-orange-60o0 to-red-60o0',
       challenge: 'Production delays and quality control issues',
       solution: 'Neural interface system for predictive maintenance',
       results: {
         efficiency: '+350%',
         costSavings: '$3.1M',
-        timeSaved: '22,000 hours',
+        timeSaved: '22,0o00 hours',
         roi: '920%'
       },
       testimonial: {
@@ -148,32 +148,32 @@ const BusinessSuccessStories2027 = () => {
 
   useEffect(() => {
     if (isPlaying) {
-      const interval = setInterval(nextStory5000);
+      const interval = setInterval(nextStory50o00);
       return () => clearInterval(interval);
     }
   }[isPlaying]);
 
   const getStatusIcon = (status) => {
-    return <CheckCircle className="w-4 h-4 text-green-400" />;
+    return <CheckCircle className="w-4 h-4 text-green-40o0"  />;
   };
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+    <div className="relative min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"  />
         <motion.div
           className="absolute top-0 left-0 w-full h-full"
           animate={{
             background: [
-              'radial-gradient(circle at 20% 50%rgba(12011980.2) 0%transparent 50%)',
+              'radial-gradient(circle at 20% 50%rgba(120o11980.2) 0%transparent 50%)',
               'radial-gradient(circle at 80% 20%rgba(25511980.2) 0%transparent 50%)',
-              'radial-gradient(circle at 40% 80%rgba(1202192550.2) 0%transparent 50%)',
-              'radial-gradient(circle at 20% 50%rgba(12011980.2) 0%transparent 50%)',
+              'radial-gradient(circle at 40% 80%rgba(120o2192550.2) 0%transparent 50%)',
+              'radial-gradient(circle at 20% 50%rgba(120o11980.2) 0%transparent 50%)',
             ]
           }}
           transition={{ duration: 20repeat: Infinity }}
-        />
+         />
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-16">
@@ -184,22 +184,22 @@ const BusinessSuccessStories2027 = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 mb-6">
-            <Award className="w-5 h-5 text-purple-400" />
-            <span className="text-purple-300 font-medium">Success Stories 2027</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-60o0/20 to-blue-60o0/20 border border-purple-50o0/30 mb-6">
+            <Award className="w-5 h-5 text-purple-40o0"  />
+            <span className="text-purple-30o0 font-medium">Success Stories 20o27</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-white via-purple-20o0 to-blue-20o0 bg-clip-text text-transparent">
               Business Success
             </span>
-            <br />
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">
-              Stories 2027
+            <br  />
+            <span className="bg-gradient-to-r from-purple-40o0 via-pink-40o0 to-red-40o0 bg-clip-text text-transparent">
+              Stories 20o27
             </span>
           </h1>
           
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto leading-relaxed">
             Discover how leading companies achieved extraordinary results using our 
             revolutionary AI and automation solutions. Real storiesreal resultsreal transformation.
           </p>
@@ -215,9 +215,9 @@ const BusinessSuccessStories2027 = () => {
           <div className="flex items-center gap-4">
             <button
               onClick={prevStory}
-              className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
+              className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-30o0"
             >
-              <ChevronLeft className="w-6 h-6 text-white" />
+              <ChevronLeft className="w-6 h-6 text-white"  />
             </button>
             
             <div className="flex gap-2">
@@ -225,8 +225,8 @@ const BusinessSuccessStories2027 = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentStory(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentStory ? 'bg-purple-400' : 'bg-white/30'
+                  className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
+                    index === currentStory ? 'bg-purple-40o0' : 'bg-white/30'
                   }`}
                 />
               ))}
@@ -234,18 +234,18 @@ const BusinessSuccessStories2027 = () => {
             
             <button
               onClick={nextStory}
-              className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
+              className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-30o0"
             >
-              <ChevronRight className="w-6 h-6 text-white" />
+              <ChevronRight className="w-6 h-6 text-white"  />
             </button>
             
             <button
               onClick={() => setIsPlaying(!isPlaying)}
-              className={`p-3 rounded-full transition-all duration-300 ${
-                isPlaying ? 'bg-purple-600' : 'bg-white/10'
+              className={`p-3 rounded-full transition-all duration-30o0 ${
+                isPlaying ? 'bg-purple-60o0' : 'bg-white/10'
               }`}
             >
-              <Play className={`w-6 h-6 text-white ${isPlaying ? 'animate-pulse' : ''}`} />
+              <Play className={`w-6 h-6 text-white ${isPlaying ? 'animate-pulse' : ''}`}  />
             </button>
           </div>
         </motion.div>
@@ -267,7 +267,7 @@ const BusinessSuccessStories2027 = () => {
               </div>
               <div>
                 <h3 className="text-3xl font-bold text-white">{currentStoryData.company}</h3>
-                <p className="text-gray-300 text-lg">{currentStoryData.industry}</p>
+                <p className="text-gray-30o0 text-lg">{currentStoryData.industry}</p>
               </div>
             </div>
 
@@ -276,32 +276,32 @@ const BusinessSuccessStories2027 = () => {
               <div>
                 <div className="mb-6">
                   <h4 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
-                    <Target className="w-5 h-5 text-red-400" />
+                    <Target className="w-5 h-5 text-red-40o0"  />
                     Challenge
                   </h4>
-                  <p className="text-gray-300 leading-relaxed">{currentStoryData.challenge}</p>
+                  <p className="text-gray-30o0 leading-relaxed">{currentStoryData.challenge}</p>
                 </div>
                 
                 <div className="mb-6">
                   <h4 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
-                    <Brain className="w-5 h-5 text-green-400" />
+                    <Brain className="w-5 h-5 text-green-40o0"  />
                     Solution
                   </h4>
-                  <p className="text-gray-300 leading-relaxed">{currentStoryData.solution}</p>
+                  <p className="text-gray-30o0 leading-relaxed">{currentStoryData.solution}</p>
                 </div>
 
                 {/* Testimonial */}
-                <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-xl p-6 border border-purple-500/30">
-                  <Quote className="w-8 h-8 text-purple-400 mb-4" />
-                  <p className="text-gray-300 italic mb-4">"{currentStoryData.testimonial.content}"</p>
+                <div className="bg-gradient-to-r from-purple-60o0/20 to-blue-60o0/20 rounded-xl p-6 border border-purple-50o0/30">
+                  <Quote className="w-8 h-8 text-purple-40o0 mb-4"  />
+                  <p className="text-gray-30o0 italic mb-4">"{currentStoryData.testimonial.content}"</p>
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="font-semibold text-white">{currentStoryData.testimonial.name}</div>
-                      <div className="text-sm text-gray-400">{currentStoryData.testimonial.role}</div>
+                      <div className="text-sm text-gray-40o0">{currentStoryData.testimonial.role}</div>
                     </div>
                     <div className="flex items-center gap-1">
                       {[...Array(currentStoryData.testimonial.rating)].map((_i) => (
-                        <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                        <Star key={i} className="w-4 h-4 text-yellow-40o0 fill-current"  />
                       ))}
                     </div>
                   </div>
@@ -311,26 +311,26 @@ const BusinessSuccessStories2027 = () => {
               {/* Results & Metrics */}
               <div>
                 <h4 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
-                  <TrendingUp className="w-5 h-5 text-green-400" />
+                  <TrendingUp className="w-5 h-5 text-green-40o0"  />
                   Results
                 </h4>
                 
                 <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="p-4 rounded-lg bg-green-500/20 border border-green-500/30">
-                    <div className="text-2xl font-bold text-green-400 mb-1">{currentStoryData.results.efficiency}</div>
-                    <div className="text-sm text-gray-300">Efficiency Increase</div>
+                  <div className="p-4 rounded-lg bg-green-50o0/20 border border-green-50o0/30">
+                    <div className="text-2xl font-bold text-green-40o0 mb-1">{currentStoryData.results.efficiency}</div>
+                    <div className="text-sm text-gray-30o0">Efficiency Increase</div>
                   </div>
-                  <div className="p-4 rounded-lg bg-blue-500/20 border border-blue-500/30">
-                    <div className="text-2xl font-bold text-blue-400 mb-1">{currentStoryData.results.costSavings}</div>
-                    <div className="text-sm text-gray-300">Cost Savings</div>
+                  <div className="p-4 rounded-lg bg-blue-50o0/20 border border-blue-50o0/30">
+                    <div className="text-2xl font-bold text-blue-40o0 mb-1">{currentStoryData.results.costSavings}</div>
+                    <div className="text-sm text-gray-30o0">Cost Savings</div>
                   </div>
-                  <div className="p-4 rounded-lg bg-purple-500/20 border border-purple-500/30">
-                    <div className="text-2xl font-bold text-purple-400 mb-1">{currentStoryData.results.timeSaved}</div>
-                    <div className="text-sm text-gray-300">Time Saved</div>
+                  <div className="p-4 rounded-lg bg-purple-50o0/20 border border-purple-50o0/30">
+                    <div className="text-2xl font-bold text-purple-40o0 mb-1">{currentStoryData.results.timeSaved}</div>
+                    <div className="text-sm text-gray-30o0">Time Saved</div>
                   </div>
-                  <div className="p-4 rounded-lg bg-yellow-500/20 border border-yellow-500/30">
-                    <div className="text-2xl font-bold text-yellow-400 mb-1">{currentStoryData.results.roi}</div>
-                    <div className="text-sm text-gray-300">ROI</div>
+                  <div className="p-4 rounded-lg bg-yellow-50o0/20 border border-yellow-50o0/30">
+                    <div className="text-2xl font-bold text-yellow-40o0 mb-1">{currentStoryData.results.roi}</div>
+                    <div className="text-sm text-gray-30o0">ROI</div>
                   </div>
                 </div>
 
@@ -339,8 +339,8 @@ const BusinessSuccessStories2027 = () => {
                   {currentStoryData.metrics.map((metricindex) => (
                     <div key={index} className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/10">
                       <div className="flex items-center gap-3">
-                        <metric.icon className="w-5 h-5 text-purple-400" />
-                        <span className="text-gray-300">{metric.label}</span>
+                        <metric.icon className="w-5 h-5 text-purple-40o0"  />
+                        <span className="text-gray-30o0">{metric.label}</span>
                       </div>
                       <span className="text-white font-semibold">{metric.value}</span>
                     </div>
@@ -352,7 +352,7 @@ const BusinessSuccessStories2027 = () => {
             {/* Timeline */}
             <div className="mt-8">
               <h4 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
-                <Clock className="w-5 h-5 text-blue-400" />
+                <Clock className="w-5 h-5 text-blue-40o0"  />
                 Implementation Timeline
               </h4>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -362,7 +362,7 @@ const BusinessSuccessStories2027 = () => {
                       {getStatusIcon(item.status)}
                       <span className="text-sm font-semibold text-white">{item.month}</span>
                     </div>
-                    <div className="text-sm text-gray-300">{item.milestone}</div>
+                    <div className="text-sm text-gray-30o0">{item.milestone}</div>
                   </div>
                 ))}
               </div>
@@ -377,19 +377,19 @@ const BusinessSuccessStories2027 = () => {
           transition={{ duration: 0.8delay: 0.6 }}
           className="text-center"
         >
-          <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-8 border border-purple-500/30">
+          <div className="bg-gradient-to-r from-purple-60o0/20 to-blue-60o0/20 rounded-2xl p-8 border border-purple-50o0/30">
             <h3 className="text-3xl font-bold text-white mb-4">Ready to Write Your Success Story?</h3>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-gray-30o0 mb-8 max-w-2xl mx-auto">
               Join thousands of companies already achieving extraordinary results with our 
               revolutionary AI and automation solutions. Your transformation starts today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
-                <Rocket className="w-5 h-5" />
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white font-semibold rounded-xl hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 flex items-center gap-2">
+                <Rocket className="w-5 h-5"  />
                 Start Your Journey
               </button>
-              <button className="px-8 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20 flex items-center gap-2">
-                <BarChart3 className="w-5 h-5" />
+              <button className="px-8 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-30o0 border border-white/20 flex items-center gap-2">
+                <BarChart3 className="w-5 h-5"  />
                 View Case Studies
               </button>
             </div>
@@ -400,4 +400,4 @@ const BusinessSuccessStories2027 = () => {
   );
 };
 
-export default BusinessSuccessStories2027;
+export default BusinessSuccessStories20o27;

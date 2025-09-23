@@ -1,22 +1,20 @@
-import React from 'react';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'AI 2026: Agent Safety Certification',
-  description: 'Structured certification to validate agent safety with scenario test suites and governance.',
-};
+export const metadata ={
+  title: 'AI 20o26: Agent Safety Certification',
+  description: 'Structured certification to validate agent safety with scenario test suites and governance.'};
 
 export default function AgentSafetyCertificationPage() {
   return (
     <main className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-600 text-white py-16">
+      <section className="bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-fuchsia-60o0 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-5xl font-bold">AI 2026: Agent Safety Certification</h1>
+          <h1 className="text-3xl md:text-5xl font-bold">AI 20o26: Agent Safety Certification</h1>
           <p className="mt-4 text-lg opacity-90 max-w-3xl">
             A structured, scenario-driven certification to validate agent safety before production releases.
           </p>
           <div className="mt-6">
-            <Link href="#overview" className="bg-white text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">View overview</Link>
+            <Link href="#overview" className="bg-white text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0">View overview</Link>
           </div>
         </div>
       </section>
@@ -43,7 +41,7 @@ export default function AgentSafetyCertificationPage() {
               <li>Monitor and re-certify on significant changes</li>
             </ol>
             <p>
-              Related: <Link href="/content/ai-2026-agent-risk-management" className="text-purple-700 font-semibold">Agent Risk Management Blueprint</Link> and <Link href="/content/ai-2026-agentic-evaluation-checklists" className="text-purple-700 font-semibold">Evaluation Checklists</Link>.
+              Related: <Link href="/content/ai-20o26-agent-risk-management" className="text-purple-70o0 font-semibold">Agent Risk Management Blueprint</Link> and <Link href="/content/ai-20o26-agentic-evaluation-checklists" className="text-purple-70o0 font-semibold">Evaluation Checklists</Link>.
             </p>
           </div>
         </div>

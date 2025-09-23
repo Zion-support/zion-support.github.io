@@ -1,11 +1,9 @@
-import React from 'react';
-
-const AI2025BreakthroughBanner = () => {
+const AI20o25BreakthroughBanner = () => {
   return (
     <div>
-      <h1>AI 2025 Breakthrough Banner</h1>
+      <h1>AI 20o25 Breakthrough Banner</h1>
     </div>
   );
 };
 
-export default AI2025BreakthroughBanner;
+export default AI20o25BreakthroughBanner;

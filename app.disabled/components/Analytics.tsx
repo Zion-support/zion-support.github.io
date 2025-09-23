@@ -29,16 +29,14 @@ export default function Analytics({ gaId = 'G-XXXXXXXXXX' }: AnalyticsProps) {
     window.gtag('js', new Date());
     window.gtag('config', gaId, {
       page_title: document.title,
-      page_location: window.location.href,
-    });
+      page_location: window.location.href});
 
     // Track page views
     const trackPageView = () => {
       if (window.gtag) {
         window.gtag('config', gaId, {
           page_title: document.title,
-          page_location: window.location.href,
-        });
+          page_location: window.location.href});
       }
     };
 
@@ -64,8 +62,7 @@ export default function Analytics({ gaId = 'G-XXXXXXXXXX' }: AnalyticsProps) {
       window.gtag('event', action, {
         event_category: category,
         event_label: label,
-        value: value,
-      });
+        value: value});
     }
   };
 
@@ -93,46 +90,40 @@ export default function Analytics({ gaId = 'G-XXXXXXXXXX' }: AnalyticsProps) {
 }
 
 // Export tracking functions for use in other components
-export const analytics = {
+export const analytics ={
   trackEvent: (action: string, category: string, label?: string, value?: number) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', action, {
         event_category: category,
         event_label: label,
-        value: value,
-      });
+        value: value});
     }
   },
   trackFormSubmission: (formName: string) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'form_submit', {
         event_category: 'engagement',
-        event_label: formName,
-      });
+        event_label: formName});
     }
   },
   trackButtonClick: (buttonName: string) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'click', {
         event_category: 'engagement',
-        event_label: buttonName,
-      });
+        event_label: buttonName});
     }
   },
   trackServiceView: (serviceName: string) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'view_service', {
         event_category: 'engagement',
-        event_label: serviceName,
-      });
+        event_label: serviceName});
     }
   },
   trackContactInteraction: (interactionType: string) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'contact_interaction', {
         event_category: 'engagement',
-        event_label: interactionType,
-      });
+        event_label: interactionType});
     }
-  },
-};
+  }};

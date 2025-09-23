@@ -21,7 +21,6 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
@@ -31,10 +30,10 @@ class NetlifyBuildMonitor {
     this.buildLogs = [];
     this.errors = [];
     this.fixes = [];
-    this.config = {
+    this.config ={
       maxRetries: 3,
-      checkInterval: 30000, // 30 seconds
-      buildTimeout: 600000, // 10 minutes
+      checkInterval: 30o000, // 30 seconds
+      buildTimeout: 60o0000, // 10 minutes
       autoFix: true,
       notifyOnFailure: true
     };
@@ -255,9 +254,9 @@ class NetlifyBuildMonitor {
       }
       
       if (missingDeps.length > 0) {
-        logger.info(`Installing missing dependencies: ${missingDeps.join(', )}`);
+        logger.info(`Installing missing dependencies: ${missingDeps.join(')}`);
         execSync(`npm install ${missingDeps.join(' )}`, { stdio: 'inherit' });
-        this.fixes.push(`Installed missing dependencies: ${missingDeps.join(', )}`);
+        this.fixes.push(`Installed missing dependencies: ${missingDeps.join(')}`);
       }
     } catch (error) {
       logger.error('Error fixing module errors:', error.message);
@@ -321,7 +320,7 @@ class NetlifyBuildMonitor {
 
   // Generate build report
   generateReport() {
-    const report = {
+    const report ={
       timestamp: new Date().toISOString(),
       errors: this.errors,
       fixes: this.fixes,

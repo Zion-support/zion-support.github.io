@@ -1,4 +1,3 @@
-import React from 'react';
 import TestimonialCard from './TestimonialCard';
 
 const testimonials = [
@@ -30,10 +29,10 @@ export default function Testimonials() {
     <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-gray-90o0 mb-4">
             What Our Clients Say
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
             Don't just take our word for it. Here's what our clients have achieved with our AI solutions.
           </p>
         </div>
@@ -47,7 +46,7 @@ export default function Testimonials() {
               position={testimonial.position}
               company={testimonial.company}
               rating={testimonial.rating}
-            />
+             />
           ))}
         </div>
       </div>

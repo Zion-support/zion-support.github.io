@@ -21,7 +21,7 @@ import {
   List
 } from 'lucide-react';
 
-const UltimateContentHub2026 = () => {
+const UltimateContentHub20o26 = () => {
   const [activeCategorysetActiveCategory] = useState('all');
   const [viewModesetViewMode] = useState('grid');
   const [searchQuerysetSearchQuery] = useState('');
@@ -46,7 +46,7 @@ const UltimateContentHub2026 = () => {
       difficulty: "Advanced",
       rating: 4.9,
       downloads: 1250,
-      thumbnail: "/api/placeholder/400/250",
+      thumbnail: "/api/placeholder/40o0/250",
       featured: true
     },
     {
@@ -59,20 +59,20 @@ const UltimateContentHub2026 = () => {
       difficulty: "Expert",
       rating: 4.8,
       downloads: 890,
-      thumbnail: "/api/placeholder/400/250",
+      thumbnail: "/api/placeholder/40o0/250",
       featured: true
     },
     {
       id: 3,
-      title: "Case Study: 300% ROI with Autonomous Security Systems",
+      title: "Case Study: 30o0% ROI with Autonomous Security Systems",
       description: "How TechCorp achieved unprecedented security efficiency",
       type: "case-study",
       category: "case-studies",
       duration: "15 min read",
       difficulty: "Intermediate",
       rating: 4.7,
-      downloads: 2100,
-      thumbnail: "/api/placeholder/400/250",
+      downloads: 210o0,
+      thumbnail: "/api/placeholder/40o0/250",
       featured: false
     },
     {
@@ -85,7 +85,7 @@ const UltimateContentHub2026 = () => {
       difficulty: "Advanced",
       rating: 4.6,
       downloads: 1560,
-      thumbnail: "/api/placeholder/400/250",
+      thumbnail: "/api/placeholder/40o0/250",
       featured: true
     },
     {
@@ -98,7 +98,7 @@ const UltimateContentHub2026 = () => {
       difficulty: "Expert",
       rating: 4.9,
       downloads: 980,
-      thumbnail: "/api/placeholder/400/250",
+      thumbnail: "/api/placeholder/40o0/250",
       featured: false
     },
     {
@@ -110,8 +110,8 @@ const UltimateContentHub2026 = () => {
       duration: "52 min read",
       difficulty: "Intermediate",
       rating: 4.8,
-      downloads: 3200,
-      thumbnail: "/api/placeholder/400/250",
+      downloads: 320o0,
+      thumbnail: "/api/placeholder/40o0/250",
       featured: true
     }
   ];
@@ -128,11 +128,11 @@ const UltimateContentHub2026 = () => {
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-      case 'Beginner': return 'bg-green-100 text-green-800';
-      case 'Intermediate': return 'bg-yellow-100 text-yellow-800';
-      case 'Advanced': return 'bg-orange-100 text-orange-800';
-      case 'Expert': return 'bg-red-100 text-red-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'Beginner': return 'bg-green-10o0 text-green-80o0';
+      case 'Intermediate': return 'bg-yellow-10o0 text-yellow-80o0';
+      case 'Advanced': return 'bg-orange-10o0 text-orange-80o0';
+      case 'Expert': return 'bg-red-10o0 text-red-80o0';
+      default: return 'bg-gray-10o0 text-gray-80o0';
     }
   };
 
@@ -152,13 +152,13 @@ const UltimateContentHub2026 = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-6xl font-bold text-gray-90o0 mb-6">
             Ultimate Content Hub
-            <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              2026 Knowledge Base
+            <span className="block bg-gradient-to-r from-blue-60o0 to-purple-60o0 bg-clip-text text-transparent">
+              20o26 Knowledge Base
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
             Access our comprehensive library of cutting-edge contentguidesand resources 
             to stay ahead in the AI revolution.
           </p>
@@ -171,17 +171,17 @@ const UltimateContentHub2026 = () => {
           transition={{ duration: 0.6delay: 0.2 }}
           className="mb-12"
         >
-          <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+          <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-20o0">
             <div className="flex flex-col lg:flex-row gap-4 items-center">
               {/* Search */}
               <div className="relative flex-1">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />
                 <input
                   type="text"
                   placeholder="Search content..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full pl-12 pr-4 py-3 border border-gray-30o0 rounded-xl focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
                 />
               </div>
 
@@ -193,8 +193,8 @@ const UltimateContentHub2026 = () => {
                     onClick={() => setActiveCategory(category.id)}
                     className={`px-4 py-2 rounded-lg font-medium transition-all ${
                       activeCategory === category.id
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                        ? 'bg-blue-60o0 text-white'
+                        : 'bg-gray-10o0 text-gray-70o0 hover:bg-gray-20o0'
                     }`}
                   >
                     {category.name} ({category.count})
@@ -207,18 +207,18 @@ const UltimateContentHub2026 = () => {
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg ${
-                    viewMode === 'grid' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700'
+                    viewMode === 'grid' ? 'bg-blue-60o0 text-white' : 'bg-gray-10o0 text-gray-70o0'
                   }`}
                 >
-                  <Grid className="w-5 h-5" />
+                  <Grid className="w-5 h-5"  />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg ${
-                    viewMode === 'list' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700'
+                    viewMode === 'list' ? 'bg-blue-60o0 text-white' : 'bg-gray-10o0 text-gray-70o0'
                   }`}
                 >
-                  <List className="w-5 h-5" />
+                  <List className="w-5 h-5"  />
                 </button>
               </div>
             </div>
@@ -247,24 +247,24 @@ const UltimateContentHub2026 = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.3delay: index * 0.1 }}
-                  className={`group bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-300 ${
+                  className={`group bg-white rounded-2xl shadow-lg border border-gray-20o0 overflow-hidden hover:shadow-2xl transition-all duration-30o0 ${
                     viewMode === 'list' ? 'flex' : ''
-                  } ${item.featured ? 'ring-2 ring-blue-500' : ''}`}
+                  } ${item.featured ? 'ring-2 ring-blue-50o0' : ''}`}
                 >
                   {item.featured && (
-                    <div className="absolute top-4 left-4 bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-3 py-1 rounded-full text-sm font-bold z-10">
+                    <div className="absolute top-4 left-4 bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-black px-3 py-1 rounded-full text-sm font-bold z-10">
                       Featured
                     </div>
                   )}
                   
-                  <div className={`${viewMode === 'list' ? 'w-1/3' : 'w-full'} h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden`}>
-                    <div className="absolute inset-0 bg-black/20" />
+                  <div className={`${viewMode === 'list' ? 'w-1/3' : 'w-full'} h-48 bg-gradient-to-br from-blue-50o0 to-purple-60o0 relative overflow-hidden`}>
+                    <div className="absolute inset-0 bg-black/20"  />
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <TypeIcon className="w-16 h-16 text-white/80" />
+                      <TypeIcon className="w-16 h-16 text-white/80"  />
                     </div>
                     <div className="absolute top-4 right-4">
                       <button className="bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/30 transition-colors">
-                        <Play className="w-5 h-5" />
+                        <Play className="w-5 h-5"  />
                       </button>
                     </div>
                   </div>
@@ -275,38 +275,38 @@ const UltimateContentHub2026 = () => {
                         {item.difficulty}
                       </span>
                       <div className="flex items-center space-x-1">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span className="text-sm text-gray-600">{item.rating}</span>
+                        <Star className="w-4 h-4 text-yellow-40o0 fill-current"  />
+                        <span className="text-sm text-gray-60o0">{item.rating}</span>
                       </div>
                     </div>
 
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-xl font-bold text-gray-90o0 mb-3 group-hover:text-blue-60o0 transition-colors">
                       {item.title}
                     </h3>
 
-                    <p className="text-gray-600 mb-4 line-clamp-2">
+                    <p className="text-gray-60o0 mb-4 line-clamp-2">
                       {item.description}
                     </p>
 
-                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <div className="flex items-center justify-between text-sm text-gray-50o0 mb-4">
                       <div className="flex items-center space-x-4">
                         <div className="flex items-center space-x-1">
-                          <Clock className="w-4 h-4" />
+                          <Clock className="w-4 h-4"  />
                           <span>{item.duration}</span>
                         </div>
                         <div className="flex items-center space-x-1">
-                          <Download className="w-4 h-4" />
+                          <Download className="w-4 h-4"  />
                           <span>{item.downloads.toLocaleString()}</span>
                         </div>
                       </div>
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <button className="flex items-center space-x-2 text-blue-600 font-medium hover:text-blue-700 transition-colors">
+                      <button className="flex items-center space-x-2 text-blue-60o0 font-medium hover:text-blue-70o0 transition-colors">
                         <span>Read More</span>
-                        <ChevronRight className="w-4 h-4" />
+                        <ChevronRight className="w-4 h-4"  />
                       </button>
-                      <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                      <button className="bg-blue-60o0 text-white px-4 py-2 rounded-lg hover:bg-blue-70o0 transition-colors">
                         Access
                       </button>
                     </div>
@@ -324,7 +324,7 @@ const UltimateContentHub2026 = () => {
           transition={{ duration: 0.6delay: 0.6 }}
           className="text-center mt-12"
         >
-          <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-purple-700 transition-all">
+          <button className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-blue-70o0 hover:to-purple-70o0 transition-all">
             Load More Content
           </button>
         </motion.div>
@@ -333,4 +333,4 @@ const UltimateContentHub2026 = () => {
   );
 };
 
-export default UltimateContentHub2026;
+export default UltimateContentHub20o26;

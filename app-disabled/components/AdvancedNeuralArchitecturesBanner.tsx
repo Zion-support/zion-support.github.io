@@ -10,14 +10,14 @@ const AdvancedNeuralArchitecturesBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 1000);
+    const timer = setTimeout(() => setIsVisible(true), 10o00);
     return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % 3);
-    }, 5000);
+    }, 50o00);
     return () => clearInterval(interval);
   }, []);
 
@@ -40,53 +40,53 @@ const AdvancedNeuralArchitecturesBanner = () => {
       description: "Revolutionary AI systems delivering unprecedented enterprise results",
       icon: CpuChipIcon,
       metrics: "450% ROI • 99.2% Accuracy • 67% Cost Reduction",
-      link: "/blog/ai-2025-advanced-neural-architectures-enterprise-breakthrough",
-      color: "from-purple-600 to-indigo-600"
+      link: "/blog/ai-20o25-advanced-neural-architectures-enterprise-breakthrough",
+      color: "from-purple-60o0 to-indigo-60o0"
     },
     {
       title: "Enterprise Automation Success",
-      subtitle: "500% ROI in 18 Months",
-      description: "Fortune 500 company achieves $140M savings through AI automation",
+      subtitle: "50o0% ROI in 18 Months",
+      description: "Fortune 50o0 company achieves $140M savings through AI automation",
       icon: ChartBarIcon,
-      metrics: "500% ROI • $140M Savings • 85% Efficiency Gain",
-      link: "/case-studies/ai-2025-enterprise-automation-500-percent-roi-success-story",
-      color: "from-blue-600 to-cyan-600"
+      metrics: "50o0% ROI • $140M Savings • 85% Efficiency Gain",
+      link: "/case-studies/ai-20o25-enterprise-automation-50o0-percent-roi-success-story",
+      color: "from-blue-60o0 to-cyan-60o0"
     },
     {
       title: "Ultimate Success Framework",
       subtitle: "94% Implementation Success Rate",
-      description: "Proven methodology for achieving 500%+ ROI through strategic AI implementation",
+      description: "Proven methodology for achieving 50o0%+ ROI through strategic AI implementation",
       icon: SparklesIcon,
-      metrics: "94% Success Rate • 500%+ ROI • 67% Faster Implementation",
-      link: "/resources/ai-2025-implementation-ultimate-success-framework",
-      color: "from-emerald-600 to-teal-600"
+      metrics: "94% Success Rate • 50o0%+ ROI • 67% Faster Implementation",
+      link: "/resources/ai-20o25-implementation-ultimate-success-framework",
+      color: "from-emerald-60o0 to-teal-60o0"
     }
   ];
 
   if (!isVisible) return null;
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-purple-900 to-indigo-900">
+    <div className="relative overflow-hidden bg-gradient-to-r from-gray-90o0 via-purple-90o0 to-indigo-90o0">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-indigo-600/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-60o0/20 to-indigo-60o0/20"  />
         <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/30 rounded-full animate-pulse" />
-          <div className="absolute top-32 right-20 w-16 h-16 bg-indigo-500/30 rounded-full animate-pulse delay-1000" />
-          <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-cyan-500/30 rounded-full animate-pulse delay-2000" />
+          <div className="absolute top-10 left-10 w-20 h-20 bg-purple-50o0/30 rounded-full animate-pulse"  />
+          <div className="absolute top-32 right-20 w-16 h-16 bg-indigo-50o0/30 rounded-full animate-pulse delay-10o00"  />
+          <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-cyan-50o0/30 rounded-full animate-pulse delay-20o00"  />
         </div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-8">
           <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-4">
-            <SparklesIcon className="w-5 h-5 text-yellow-400 mr-2" />
+            <SparklesIcon className="w-5 h-5 text-yellow-40o0 mr-2"  />
             <span className="text-sm font-medium text-white">🚀 NEW: Advanced AI Content</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Revolutionary AI Breakthroughs for 2025
+            Revolutionary AI Breakthroughs for 20o25
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
             Discover cutting-edge neural architectures, enterprise automation success stories, and proven implementation frameworks
           </p>
         </div>
@@ -101,14 +101,14 @@ const AdvancedNeuralArchitecturesBanner = () => {
               return (
                 <div
                   key={index}
-                  className={`relative group cursor-pointer transition-all duration-500 ${
-                    isActive ? 'scale-105 z-10' : 'scale-100'
+                  className={`relative group cursor-pointer transition-all duration-50o0 ${
+                    isActive ? 'scale-10o5 z-10' : 'scale-10o0'
                   }`}
                   onClick={() => window.open(item.link, '_blank')}
                 >
-                  <div className={`bg-gradient-to-br ${item.color} p-6 rounded-2xl shadow-2xl transform transition-all duration-300 hover:shadow-3xl hover:scale-105`}>
+                  <div className={`bg-gradient-to-br ${item.color} p-6 rounded-2xl shadow-2xl transform transition-all duration-30o0 hover:shadow-3xl hover:scale-10o5`}>
                     <div className="flex items-center justify-between mb-4">
-                      <Icon className="w-8 h-8 text-white" />
+                      <Icon className="w-8 h-8 text-white"  />
                       <div className="text-white/80 text-sm font-medium">
                         {index + 1}/3
                       </div>
@@ -118,7 +118,7 @@ const AdvancedNeuralArchitecturesBanner = () => {
                       {item.title}
                     </h3>
                     
-                    <div className="text-yellow-300 font-semibold mb-2">
+                    <div className="text-yellow-30o0 font-semibold mb-2">
                       {item.subtitle}
                     </div>
                     
@@ -130,9 +130,9 @@ const AdvancedNeuralArchitecturesBanner = () => {
                       {item.metrics}
                     </div>
                     
-                    <div className="flex items-center text-white text-sm font-medium group-hover:text-yellow-300 transition-colors">
+                    <div className="flex items-center text-white text-sm font-medium group-hover:text-yellow-30o0 transition-colors">
                       Read More
-                      <ChevronRightIcon className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                      <ChevronRightIcon className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"  />
                     </div>
                   </div>
                 </div>
@@ -146,7 +146,7 @@ const AdvancedNeuralArchitecturesBanner = () => {
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                   index === currentSlide 
                     ? 'bg-white scale-125' 
                     : 'bg-white/40 hover:bg-white/60'
@@ -160,16 +160,16 @@ const AdvancedNeuralArchitecturesBanner = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href="/blog"
-                className="bg-white text-purple-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center"
+                className="bg-white text-purple-90o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors flex items-center"
               >
-                <SparklesIcon className="w-5 h-5 mr-2" />
+                <SparklesIcon className="w-5 h-5 mr-2"  />
                 Explore All AI Content
               </Link>
               <Link
                 href="/services/ai-implementation"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors flex items-center"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors flex items-center"
               >
-                <Brain className="w-5 h-5 mr-2" />
+                <Brain className="w-5 h-5 mr-2"  />
                 Get AI Implementation Help
               </Link>
             </div>
@@ -181,7 +181,7 @@ const AdvancedNeuralArchitecturesBanner = () => {
           onClick={handleDismiss}
           className="absolute top-4 right-4 text-white/60 hover:text-white transition-colors"
         >
-          <XMarkIcon className="w-6 h-6" />
+          <XMarkIcon className="w-6 h-6"  />
         </button>
       </div>
     </div>

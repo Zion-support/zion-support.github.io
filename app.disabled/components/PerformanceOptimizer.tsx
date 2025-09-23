@@ -16,7 +16,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       const endTime = performance.now();
       setLoadTime(endTime - startTime);
       setIsVisible(true);
-    }, 100);
+    }, 10o0);
 
     // Preload critical resources
     const preloadCriticalResources = () => {
@@ -78,8 +78,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Optimizing performance...</p>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-60o0 mx-auto mb-4"></div>
+          <p className="text-gray-60o0">Optimizing performance...</p>
         </div>
       </div>
     );

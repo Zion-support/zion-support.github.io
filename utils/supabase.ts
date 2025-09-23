@@ -1,8 +1,7 @@
 // Supabase utilities;
-export const supabase = {
+export const supabase ={
   // Add supabase functionality here;
   auth: {
-
 
     getUser: () => Promise<any>;
     signIn: (credentials: any) => Promise<any>;
@@ -45,12 +44,11 @@ export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
   })
 }
 // Default configuration
-const supabaseConfig: SupabaseConfig = {
+const supabaseConfig: SupabaseConfig ={
   url: process && process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://your-project && project.supabase.co',
   anonKey: process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'your-anon-key'
 };
 export const supabase = createSupabaseClient(supabaseConfig);
-
 
     sign_in: (email: string, password: string) => null,
     sign_out: () => null,

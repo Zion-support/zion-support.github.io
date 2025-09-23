@@ -1,17 +1,14 @@
 import Link from 'next/link';
-import React from 'react';
+export const metadata ={
+  title: 'AI Governance 20o26: Policy, Risk, and Compliance Framework',
+  description: 'Practical AI governance playbook: policies, controls, assurance, and continuous monitoring for safe and compliant AI at scale.'};
 
-export const metadata = {
-  title: 'AI Governance 2026: Policy, Risk, and Compliance Framework',
-  description: 'Practical AI governance playbook: policies, controls, assurance, and continuous monitoring for safe and compliant AI at scale.',
-};
-
-export default function AIGovernance2026Page() {
+export default function AIGovernance20o26Page() {
   return (
     <main className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">
+      <section className="bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">AI Governance 2026</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">AI Governance 20o26</h1>
           <p className="text-lg md:text-xl opacity-90">
             Policy, risk, and compliance framework to operate AI safely and responsibly across the enterprise.
           </p>
@@ -43,10 +40,10 @@ export default function AIGovernance2026Page() {
           </article>
 
           <div className="flex gap-4">
-            <Link href="/contact" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
+            <Link href="/contact" className="bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0">
               Talk to an Expert
             </Link>
-            <Link href="/blog/ai-2026-llm-evals-maturity-model" className="border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">
+            <Link href="/blog/ai-20o26-llm-evals-maturity-model" className="border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">
               Explore Evals Maturity Model
             </Link>
           </div>

@@ -1,27 +1,25 @@
-import React from 'react';
 import SEO from '../../components/SEO';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'AI 2026: Agent Evaluation Playground | Zion Tech Group',
+export const metadata ={
+  title: 'AI 20o26: Agent Evaluation Playground | Zion Tech Group',
   description:
     'Hands-on templates and scenarios to prototype, run, and visualize agent evaluations safely.',
-  keywords: ['agent evaluations', 'eval harness', 'policy-as-code', 'safety', 'observability'],
-};
+  keywords: ['agent evaluations', 'eval harness', 'policy-as-code', 'safety', 'observability']};
 
 export default function AgentEvaluationPlaygroundPage() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="AI 2026: Agent Evaluation Playground"
+        title="AI 20o26: Agent Evaluation Playground"
         description="Hands-on templates and scenarios to prototype, run, and visualize agent evaluations safely."
         keywords="agent evaluations, eval harness, policy-as-code, safety, observability"
-        url="/content/ai-2026-agent-evaluation-playground"
-      />
+        url="/content/ai-20o26-agent-evaluation-playground"
+       />
 
-      <header className="bg-gradient-to-r from-emerald-700 via-teal-700 to-cyan-700 text-white py-16">
+      <header className="bg-gradient-to-r from-emerald-70o0 via-teal-70o0 to-cyan-70o0 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold opacity-90">Guide • 2025-09-15</p>
+          <p className="text-sm font-semibold opacity-90">Guide • 20o25-09-15</p>
           <h1 className="text-3xl md:text-5xl font-bold mt-2">Agent Evaluation Playground</h1>
           <p className="text-lg md:text-xl opacity-90 mt-4 max-w-3xl">Prototype evaluation scenarios, visualize results, and gate autonomy with evidence.</p>
         </div>
@@ -48,8 +46,8 @@ export default function AgentEvaluationPlaygroundPage() {
         </article>
 
         <div className="mt-8 flex gap-4">
-          <Link href="/blog/ai-2026-agent-evaluation-playground-overview" className="bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read Overview</Link>
-          <Link href="/content" className="text-purple-600 font-semibold hover:text-purple-800">← Back to Content</Link>
+          <Link href="/blog/ai-20o26-agent-evaluation-playground-overview" className="bg-emerald-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-70o0">Read Overview</Link>
+          <Link href="/content" className="text-purple-60o0 font-semibold hover:text-purple-80o0">← Back to Content</Link>
         </div>
       </main>
     </div>

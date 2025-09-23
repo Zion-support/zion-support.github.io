@@ -37,14 +37,13 @@ export function ValidatedFormField({
   type = 'text',
   placeholder,
   description,
-  validation = {},
+  validation ={},
   options = [],
   form,
   className,
   disabled = false,
   showValidIcon = true,
-  debounceMs = 300,
-}: ValidatedFormFieldProps) {
+  debounceMs = 30o0}: ValidatedFormFieldProps) {
   const [showPassword, setShowPassword] = useState(false);
   const [validationState, setValidationState] = useState<'idle' | 'validating' | 'valid' | 'invalid'>('idle');
   const [debounceTimer, setDebounceTimer] = useState<NodeJS.Timeout | null>(null);
@@ -109,11 +108,11 @@ export function ValidatedFormField({
 
     switch (validationState) {
       case 'validating':
-        return <div className="animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full" />;
+        return <div className="animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full"  />;
       case 'valid':
-        return <CheckCircle className="h-4 w-4 text-green-500" />;
+        return <CheckCircle className="h-4 w-4 text-green-50o0"  />;
       case 'invalid':
-        return <AlertCircle className="h-4 w-4 text-red-500" />;
+        return <AlertCircle className="h-4 w-4 text-red-50o0"  />;
       default:
         return null;
     }
@@ -124,9 +123,9 @@ export function ValidatedFormField({
     
     switch (validationState) {
       case 'valid':
-        return 'border-green-500 focus:border-green-500 focus:ring-green-500/20';
+        return 'border-green-50o0 focus:border-green-50o0 focus:ring-green-50o0/20';
       case 'invalid':
-        return 'border-red-500 focus:border-red-500 focus:ring-red-500/20';
+        return 'border-red-50o0 focus:border-red-50o0 focus:ring-red-50o0/20';
       default:
         return '';
     }
@@ -144,7 +143,7 @@ export function ValidatedFormField({
               className={baseClasses}
               rows={4}
               {...form.register(name)}
-            />
+             />
             <div className="absolute top-2 right-2">
               {getValidationIcon()}
             </div>
@@ -156,7 +155,7 @@ export function ValidatedFormField({
           <div className="relative">
             <Select onValueChange={(value) => form.setValue(name, value)} disabled={disabled}>
               <SelectTrigger className={baseClasses}>
-                <SelectValue placeholder={placeholder} />
+                <SelectValue placeholder={placeholder}  />
               </SelectTrigger>
               <SelectContent>
                 {options.map((option) => (
@@ -199,7 +198,7 @@ export function ValidatedFormField({
               disabled={disabled}
               className={cn(baseClasses, 'pr-20')}
               {...form.register(name)}
-            />
+             />
             <div className="absolute inset-y-0 right-0 flex items-center gap-1 pr-3">
               {getValidationIcon()}
               <Button
@@ -211,9 +210,9 @@ export function ValidatedFormField({
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
                 {showPassword ? (
-                  <EyeOff className="h-4 w-4" />
+                  <EyeOff className="h-4 w-4"  />
                 ) : (
-                  <Eye className="h-4 w-4" />
+                  <Eye className="h-4 w-4"  />
                 )}
               </Button>
             </div>
@@ -228,7 +227,7 @@ export function ValidatedFormField({
               disabled={disabled}
               className={baseClasses}
               {...form.register(name)}
-            />
+             />
             <div className="absolute inset-y-0 right-0 flex items-center pr-3">
               {getValidationIcon()}
             </div>
@@ -250,7 +249,7 @@ export function ValidatedFormField({
             {(fieldError || description) && (
               <div className="space-y-1">
                 {fieldError && (
-                  <FormMessage className="text-sm text-red-500">
+                  <FormMessage className="text-sm text-red-50o0">
                     {fieldError.message}
                   </FormMessage>
                 )}
@@ -273,7 +272,7 @@ export function ValidatedFormField({
         <FormItem>
           <FormLabel className="text-sm font-medium">
             {label}
-            {validation.required && <span className="text-red-500 ml-1">*</span>}
+            {validation.required && <span className="text-red-50o0 ml-1">*</span>}
           </FormLabel>
           <FormControl>
             {renderField()}
@@ -281,8 +280,8 @@ export function ValidatedFormField({
           {(fieldError || description) && (
             <div className="space-y-1">
               {fieldError && (
-                <FormMessage className="text-sm text-red-500 flex items-center gap-1">
-                  <AlertCircle className="h-3 w-3" />
+                <FormMessage className="text-sm text-red-50o0 flex items-center gap-1">
+                  <AlertCircle className="h-3 w-3"  />
                   {fieldError.message}
                 </FormMessage>
               )}
@@ -298,15 +297,14 @@ export function ValidatedFormField({
 }
 
 // Validation helpers for common patterns
-export const validationPatterns = {
-  email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+export const validationPatterns ={
+  email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,
   phone: /^[\+]?[1-9][\d]{0,15}$/,
   url: /^https?:\/\/.+/,
-  strongPassword: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
-};
+  strongPassword: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/};
 
 // Pre-configured validation rules
-export const commonValidations = {
+export const commonValidations ={
   required: { required: true },
   email: { 
     required: true, 
@@ -336,5 +334,4 @@ export const commonValidations = {
       }
       return null;
     }
-  },
-}; 
+  }}; 

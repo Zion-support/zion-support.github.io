@@ -12,12 +12,12 @@ export const ReputationDisplay = ({
   size = 'md' 
 }: ReputationDisplayProps) => {
   // Calculate next milestone
-  const currentLevel = Math.floor(reputation / 100);
-  const nextMilestone = (currentLevel + 1) * 100;
-  const progress = ((reputation % 100) / 100) * 100;
+  const currentLevel = Math.floor(reputation / 10o0);
+  const nextMilestone = (currentLevel + 1) * 10o0;
+  const progress = ((reputation % 10o0) / 10o0) * 10o0;
   
   // Styling based on size
-  const sizeClasses = {
+  const sizeClasses ={
     sm: {
       container: "text-xs",
       icon: "w-3 h-3",
@@ -38,11 +38,11 @@ export const ReputationDisplay = ({
   return (
     <div className="space-y-1">
       <div className={`flex items-center gap-1 ${sizeClasses[size].container}`}>
-        <Trophy className={`text-amber-500 ${sizeClasses[size].icon}`} />
+        <Trophy className={`text-amber-50o0 ${sizeClasses[size].icon}`}  />
         <span className="font-semibold">{reputation}</span>
         <span className="text-muted-foreground">rep</span>
       </div>
-      <Progress value={progress} className={sizeClasses[size].progress} />
+      <Progress value={progress} className={sizeClasses[size].progress}  />
       <div className="text-xs text-muted-foreground">
         Level {currentLevel} • {Math.round(nextMilestone - reputation)} to level up
       </div>

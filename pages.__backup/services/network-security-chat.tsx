@@ -7,7 +7,7 @@ const NetworkSecurityChat: NextPage = () => {
     <div>
       <Head>
         <title>NetworkSecurityChat - Zion Tech Solutions</title>
-        <meta name="description" content="NetworkSecurityChat service" />
+        <meta name="description" content="NetworkSecurityChat service"  />
       </Head>
       
       <main>

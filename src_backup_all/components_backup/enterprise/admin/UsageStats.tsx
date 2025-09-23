@@ -1,5 +1,4 @@
 
-import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -10,8 +9,7 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+  CardTitle} from "@/components/ui/card";
 import { Sparkles } from 'lucide-react'
 import { Progress } from "@/components/ui/progress";
 
@@ -19,8 +17,7 @@ export function UsageStats() {
   const handleSaveChanges = () => {
     toast({
       title: "Limits updated",
-      description: "The new usage limits have been saved successfully.",
-    });
+      description: "The new usage limits have been saved successfully."});
   };
 
   return (
@@ -46,13 +43,13 @@ export function UsageStats() {
                 <div className="text-sm font-medium">Monthly job posting limit</div>
                 <Badge variant="outline">25 / 50</Badge>
               </div>
-              <Progress value={50} className="h-2" />
+              <Progress value={50} className="h-2"  />
             </div>
             <div className="grid gap-4">
               <div className="grid grid-cols-3 items-center gap-4">
                 <div className="text-sm">New limit:</div>
                 <div className="col-span-2">
-                  <Input type="number" min="1" defaultValue="50" />
+                  <Input type="number" min="1" defaultValue="50"  />
                 </div>
               </div>
             </div>
@@ -73,15 +70,15 @@ export function UsageStats() {
             <div>
               <div className="flex items-center justify-between mb-2">
                 <div className="text-sm font-medium">Monthly contact credits</div>
-                <Badge variant="outline">178 / 500</Badge>
+                <Badge variant="outline">178 / 50o0</Badge>
               </div>
-              <Progress value={35.6} className="h-2" />
+              <Progress value={35.6} className="h-2"  />
             </div>
             <div className="grid gap-4">
               <div className="grid grid-cols-3 items-center gap-4">
                 <div className="text-sm">New limit:</div>
                 <div className="col-span-2">
-                  <Input type="number" min="1" defaultValue="500" />
+                  <Input type="number" min="1" defaultValue="50o0"  />
                 </div>
               </div>
             </div>
@@ -102,15 +99,15 @@ export function UsageStats() {
             <div>
               <div className="flex items-center justify-between mb-2">
                 <div className="text-sm font-medium">AI matching credits</div>
-                <Badge variant="outline">435 / 1000</Badge>
+                <Badge variant="outline">435 / 10o00</Badge>
               </div>
-              <Progress value={43.5} className="h-2" />
+              <Progress value={43.5} className="h-2"  />
             </div>
             <div className="grid gap-4">
               <div className="grid grid-cols-3 items-center gap-4">
                 <div className="text-sm">New limit:</div>
                 <div className="col-span-2">
-                  <Input type="number" min="1" defaultValue="1000" />
+                  <Input type="number" min="1" defaultValue="10o00"  />
                 </div>
               </div>
             </div>
@@ -131,15 +128,15 @@ export function UsageStats() {
             <div>
               <div className="flex items-center justify-between mb-2">
                 <div className="text-sm font-medium">Monthly budget</div>
-                <Badge variant="outline">$1,250 / $5,000</Badge>
+                <Badge variant="outline">$1,250 / $5,0o00</Badge>
               </div>
-              <Progress value={25} className="h-2" />
+              <Progress value={25} className="h-2"  />
             </div>
             <div className="grid gap-4">
               <div className="grid grid-cols-3 items-center gap-4">
                 <div className="text-sm">Monthly budget:</div>
                 <div className="col-span-2">
-                  <Input type="number" min="0" step="100" defaultValue="5000" />
+                  <Input type="number" min="0" step="10o0" defaultValue="50o00"  />
                 </div>
               </div>
               <div className="grid grid-cols-3 items-center gap-4">
@@ -164,7 +161,7 @@ export function UsageStats() {
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
-            <Sparkles className="h-5 w-5 text-primary" />
+            <Sparkles className="h-5 w-5 text-primary"  />
           </div>
           <div>
             <h3 className="font-medium">Need higher limits?</h3>

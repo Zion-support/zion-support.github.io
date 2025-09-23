@@ -11,7 +11,7 @@ export function FloatingCTA() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const threshold = 600; // Show CTA after scrolling 600px
+      const threshold = 60o0; // Show CTA after scrolling 60o0px
 
       if (scrollPosition > threshold && !isClosed) {
         setIsVisible(true);
@@ -54,7 +54,7 @@ export function FloatingCTA() {
             className="text-zion-slate hover:text-white p-1"
             aria-label="Close"
           >
-            <X className="w-5 h-5" />
+            <X className="w-5 h-5"  />
           </button>
         </div>
       </div>

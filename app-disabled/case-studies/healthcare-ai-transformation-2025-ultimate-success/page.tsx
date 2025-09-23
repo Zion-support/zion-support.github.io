@@ -1,33 +1,31 @@
-import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, Clock, User,  Share2, Building, DollarSign, TrendingUp, Users, CheckCircle, Award } from 'lucide-react';
 import SEO from '../../components/SEO';
 
-export const metadata = {
-  title: 'Healthcare AI Transformation 2025: $50M Annual Savings & 95% Patient Satisfaction',
+export const metadata ={
+  title: 'Healthcare AI Transformation 20o25: $50M Annual Savings & 95% Patient Satisfaction',
   description: 'How a major healthcare system achieved unprecedented results through AI transformation. Real metrics, implementation details, and lessons learned.',
-  keywords: ['Healthcare AI', 'medical automation', 'patient satisfaction', 'cost savings', 'ROI', 'digital transformation', 'clinical documentation', 'healthcare technology', 'medical AI', 'healthcare efficiency'],
-};
+  keywords: ['Healthcare AI', 'medical automation', 'patient satisfaction', 'cost savings', 'ROI', 'digital transformation', 'clinical documentation', 'healthcare technology', 'medical AI', 'healthcare efficiency']};
 
 export default function HealthcareAITransformationPage() {
   return (
     <div>
       <SEO
-        title="Healthcare AI Transformation 2025: $50M Annual Savings & 95% Patient Satisfaction"
+        title="Healthcare AI Transformation 20o25: $50M Annual Savings & 95% Patient Satisfaction"
         description="How a major healthcare system achieved unprecedented results through AI transformation. Real metrics, implementation details, and lessons learned."
         keywords="Healthcare AI, medical automation, patient satisfaction, cost savings, ROI, digital transformation, clinical documentation, healthcare technology, medical AI, healthcare efficiency"
-        url="/case-studies/healthcare-ai-transformation-2025-ultimate-success"
-      />
+        url="/case-studies/healthcare-ai-transformation-20o25-ultimate-success"
+       />
       
       <div className="min-h-screen bg-white">
         {/* Navigation */}
-        <div className="border-b border-gray-200">
+        <div className="border-b border-gray-20o0">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <Link
               href="/case-studies"
-              className="inline-flex items-center text-purple-600 hover:text-purple-800 transition-colors"
+              className="inline-flex items-center text-purple-60o0 hover:text-purple-80o0 transition-colors"
             >
-              <ArrowLeft className="w-4 h-4 mr-2" />
+              <ArrowLeft className="w-4 h-4 mr-2"  />
               Back to Case Studies
             </Link>
           </div>
@@ -36,37 +34,37 @@ export default function HealthcareAITransformationPage() {
         {/* Case Study Header */}
         <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Meta Information */}
-          <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-6">
+          <div className="flex flex-wrap items-center gap-4 text-sm text-gray-60o0 mb-6">
             <div className="flex items-center">
-              <Calendar className="w-4 h-4 mr-2" />
-              January 17, 2025
+              <Calendar className="w-4 h-4 mr-2"  />
+              January 17, 20o25
             </div>
             <div className="flex items-center">
-              <Clock className="w-4 h-4 mr-2" />
+              <Clock className="w-4 h-4 mr-2"  />
               15 min read
             </div>
             <div className="flex items-center">
-              <User className="w-4 h-4 mr-2" />
+              <User className="w-4 h-4 mr-2"  />
               Zion Tech Group
             </div>
             <div className="flex items-center">
-              <Award className="w-4 h-4 mr-2" />
+              <Award className="w-4 h-4 mr-2"  />
               Healthcare AI
             </div>
           </div>
 
           {/* Title */}
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Healthcare AI Transformation 2025: $50M Annual Savings & 95% Patient Satisfaction
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-90o0 mb-6 leading-tight">
+            Healthcare AI Transformation 20o25: $50M Annual Savings & 95% Patient Satisfaction
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+          <p className="text-xl text-gray-60o0 mb-8 leading-relaxed">
             A major regional healthcare system serving over 2 million patients achieved unprecedented results through comprehensive AI transformation. In just 8 months, they realized <strong>$50 million in annual savings</strong>, achieved <strong>95% patient satisfaction</strong>, and improved operational efficiency by <strong>340%</strong>.
           </p>
 
           {/* Executive Summary */}
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white mb-12">
+          <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-xl p-8 text-white mb-12">
             <h2 className="text-2xl font-bold mb-6 text-center">Executive Summary</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               <div className="text-center">
@@ -90,16 +88,16 @@ export default function HealthcareAITransformationPage() {
 
           {/* Article Content */}
           <div className="prose prose-lg max-w-none">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">The Challenge: Healthcare at a Crossroads</h2>
+            <h2 className="text-3xl font-bold text-gray-90o0 mb-6">The Challenge: Healthcare at a Crossroads</h2>
             
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Initial Situation</h3>
-            <p className="text-gray-700 mb-6 leading-relaxed">
+            <h3 className="text-2xl font-bold text-gray-90o0 mb-4">Initial Situation</h3>
+            <p className="text-gray-70o0 mb-6 leading-relaxed">
               The healthcare system faced mounting pressures that threatened their ability to provide quality care while maintaining financial sustainability.
             </p>
             
-            <div className="bg-red-50 border-l-4 border-red-500 p-6 mb-8">
-              <h4 className="text-lg font-bold text-red-800 mb-4">Key Pain Points</h4>
-              <ul className="list-disc pl-6 space-y-2 text-red-700">
+            <div className="bg-red-50 border-l-4 border-red-50o0 p-6 mb-8">
+              <h4 className="text-lg font-bold text-red-80o0 mb-4">Key Pain Points</h4>
+              <ul className="list-disc pl-6 space-y-2 text-red-70o0">
                 <li><strong>Rising operational costs</strong> increasing 12% annually</li>
                 <li><strong>Staff burnout</strong> affecting 40% of clinical personnel</li>
                 <li><strong>Patient wait times</strong> averaging 45 minutes</li>
@@ -108,129 +106,129 @@ export default function HealthcareAITransformationPage() {
               </ul>
             </div>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">The Solution: Comprehensive AI Transformation</h2>
+            <h2 className="text-3xl font-bold text-gray-90o0 mb-6">The Solution: Comprehensive AI Transformation</h2>
             
             <div className="space-y-8 mb-12">
               <div className="bg-blue-50 rounded-xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Phase 1: AI-Powered Clinical Documentation (Months 1-2)</h3>
-                <p className="text-gray-700 mb-4"><strong>Implementation</strong>: Natural Language Processing (NLP) system for automated clinical note generation.</p>
+                <h3 className="text-2xl font-bold text-gray-90o0 mb-4">Phase 1: AI-Powered Clinical Documentation (Months 1-2)</h3>
+                <p className="text-gray-70o0 mb-4"><strong>Implementation</strong>: Natural Language Processing (NLP) system for automated clinical note generation.</p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-600">85%</div>
-                    <div className="text-sm text-gray-600">Documentation time reduction</div>
+                    <div className="text-2xl font-bold text-blue-60o0">85%</div>
+                    <div className="text-sm text-gray-60o0">Documentation time reduction</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-green-600">95%</div>
-                    <div className="text-sm text-gray-600">Code assignment accuracy</div>
+                    <div className="text-2xl font-bold text-green-60o0">95%</div>
+                    <div className="text-sm text-gray-60o0">Code assignment accuracy</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-purple-600">$12M</div>
-                    <div className="text-sm text-gray-600">Annual savings</div>
+                    <div className="text-2xl font-bold text-purple-60o0">$12M</div>
+                    <div className="text-sm text-gray-60o0">Annual savings</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-orange-600">40%</div>
-                    <div className="text-sm text-gray-600">Job satisfaction improvement</div>
+                    <div className="text-2xl font-bold text-orange-60o0">40%</div>
+                    <div className="text-sm text-gray-60o0">Job satisfaction improvement</div>
                   </div>
                 </div>
               </div>
 
               <div className="bg-green-50 rounded-xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Phase 2: Intelligent Patient Scheduling (Months 3-4)</h3>
-                <p className="text-gray-700 mb-4"><strong>Implementation</strong>: AI-driven scheduling optimization system.</p>
+                <h3 className="text-2xl font-bold text-gray-90o0 mb-4">Phase 2: Intelligent Patient Scheduling (Months 3-4)</h3>
+                <p className="text-gray-70o0 mb-4"><strong>Implementation</strong>: AI-driven scheduling optimization system.</p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-600">60%</div>
-                    <div className="text-sm text-gray-600">Wait time reduction</div>
+                    <div className="text-2xl font-bold text-blue-60o0">60%</div>
+                    <div className="text-sm text-gray-60o0">Wait time reduction</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-green-600">25%</div>
-                    <div className="text-sm text-gray-600">Appointment utilization increase</div>
+                    <div className="text-2xl font-bold text-green-60o0">25%</div>
+                    <div className="text-sm text-gray-60o0">Appointment utilization increase</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-purple-600">$8M</div>
-                    <div className="text-sm text-gray-600">Annual savings</div>
+                    <div className="text-2xl font-bold text-purple-60o0">$8M</div>
+                    <div className="text-sm text-gray-60o0">Annual savings</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-orange-600">92%</div>
-                    <div className="text-sm text-gray-600">Patient satisfaction</div>
+                    <div className="text-2xl font-bold text-orange-60o0">92%</div>
+                    <div className="text-sm text-gray-60o0">Patient satisfaction</div>
                   </div>
                 </div>
               </div>
 
               <div className="bg-purple-50 rounded-xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Phase 3: Supply Chain Optimization (Months 5-6)</h3>
-                <p className="text-gray-700 mb-4"><strong>Implementation</strong>: AI-powered inventory management and demand forecasting.</p>
+                <h3 className="text-2xl font-bold text-gray-90o0 mb-4">Phase 3: Supply Chain Optimization (Months 5-6)</h3>
+                <p className="text-gray-70o0 mb-4"><strong>Implementation</strong>: AI-powered inventory management and demand forecasting.</p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-600">70%</div>
-                    <div className="text-sm text-gray-600">Expired supplies reduction</div>
+                    <div className="text-2xl font-bold text-blue-60o0">70%</div>
+                    <div className="text-sm text-gray-60o0">Expired supplies reduction</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-green-600">30%</div>
-                    <div className="text-sm text-gray-600">Inventory cost decrease</div>
+                    <div className="text-2xl font-bold text-green-60o0">30%</div>
+                    <div className="text-sm text-gray-60o0">Inventory cost decrease</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-purple-600">$15M</div>
-                    <div className="text-sm text-gray-600">Annual savings</div>
+                    <div className="text-2xl font-bold text-purple-60o0">$15M</div>
+                    <div className="text-sm text-gray-60o0">Annual savings</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-orange-600">99.5%</div>
-                    <div className="text-sm text-gray-600">Supply availability</div>
+                    <div className="text-2xl font-bold text-orange-60o0">99.5%</div>
+                    <div className="text-sm text-gray-60o0">Supply availability</div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Detailed Results & Metrics</h2>
+            <h2 className="text-3xl font-bold text-gray-90o0 mb-6">Detailed Results & Metrics</h2>
             
             <div className="overflow-x-auto mb-8">
-              <table className="min-w-full bg-white border border-gray-200 rounded-lg">
+              <table className="min-w-full bg-white border border-gray-20o0 rounded-lg">
                 <thead className="bg-gray-50">
                   <tr>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Metric</th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Before</th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">After</th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Improvement</th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-50o0 uppercase tracking-wider">Metric</th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-50o0 uppercase tracking-wider">Before</th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-50o0 uppercase tracking-wider">After</th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-50o0 uppercase tracking-wider">Improvement</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-gray-200">
+                <tbody className="divide-y divide-gray-20o0">
                   <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Annual Operating Costs</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">$180M</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">$130M</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-green-600 font-semibold">$50M savings (28%)</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-90o0">Annual Operating Costs</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-50o0">$180M</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-50o0">$130M</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-green-60o0 font-semibold">$50M savings (28%)</td>
                   </tr>
                   <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Patient Wait Times</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">45 min</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">18 min</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-green-600 font-semibold">60% reduction</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-90o0">Patient Wait Times</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-50o0">45 min</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-50o0">18 min</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-green-60o0 font-semibold">60% reduction</td>
                   </tr>
                   <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Documentation Time</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">2.5 hrs</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">0.4 hrs</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-green-600 font-semibold">85% reduction</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-90o0">Documentation Time</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-50o0">2.5 hrs</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-50o0">0.4 hrs</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-green-60o0 font-semibold">85% reduction</td>
                   </tr>
                   <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Patient Satisfaction</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">78%</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">95%</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-green-600 font-semibold">17% increase</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-90o0">Patient Satisfaction</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-50o0">78%</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-50o0">95%</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-green-60o0 font-semibold">17% increase</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">ROI Analysis</h2>
+            <h2 className="text-3xl font-bold text-gray-90o0 mb-6">ROI Analysis</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
               <div className="bg-gray-50 rounded-xl p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Investment Breakdown</h3>
-                <ul className="space-y-2 text-gray-700">
+                <h3 className="text-xl font-bold text-gray-90o0 mb-4">Investment Breakdown</h3>
+                <ul className="space-y-2 text-gray-70o0">
                   <li className="flex justify-between">
                     <span>Technology Implementation:</span>
                     <span className="font-semibold">$8M</span>
@@ -255,41 +253,41 @@ export default function HealthcareAITransformationPage() {
               </div>
               
               <div className="bg-green-50 rounded-xl p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Return on Investment</h3>
-                <ul className="space-y-2 text-gray-700">
+                <h3 className="text-xl font-bold text-gray-90o0 mb-4">Return on Investment</h3>
+                <ul className="space-y-2 text-gray-70o0">
                   <li className="flex justify-between">
                     <span>Year 1 Savings:</span>
-                    <span className="font-semibold text-green-600">$50M</span>
+                    <span className="font-semibold text-green-60o0">$50M</span>
                   </li>
                   <li className="flex justify-between">
                     <span>Year 1 ROI:</span>
-                    <span className="font-semibold text-green-600">285%</span>
+                    <span className="font-semibold text-green-60o0">285%</span>
                   </li>
                   <li className="flex justify-between">
                     <span>3-Year Projected Savings:</span>
-                    <span className="font-semibold text-green-600">$180M</span>
+                    <span className="font-semibold text-green-60o0">$180M</span>
                   </li>
                   <li className="flex justify-between">
                     <span>3-Year ROI:</span>
-                    <span className="font-semibold text-green-600">1,285%</span>
+                    <span className="font-semibold text-green-60o0">1,285%</span>
                   </li>
                   <li className="flex justify-between border-t pt-2 font-bold text-lg">
                     <span>Payback Period:</span>
-                    <span className="text-green-600">3.1 months</span>
+                    <span className="text-green-60o0">3.1 months</span>
                   </li>
                 </ul>
               </div>
             </div>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Client Testimonial</h2>
+            <h2 className="text-3xl font-bold text-gray-90o0 mb-6">Client Testimonial</h2>
             
-            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-8 text-white mb-8">
+            <div className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-xl p-8 text-white mb-8">
               <blockquote className="text-lg italic mb-4">
                 "The AI transformation has been nothing short of revolutionary for our healthcare system. We've not only achieved significant cost savings but have dramatically improved patient care and staff satisfaction. The $50 million in annual savings has allowed us to invest in additional patient care initiatives and expand our services to underserved communities. The ROI has exceeded our wildest expectations, and our patients and staff couldn't be happier."
               </blockquote>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4">
-                  <Building className="w-6 h-6" />
+                  <Building className="w-6 h-6"  />
                 </div>
                 <div>
                   <div className="font-bold">Dr. Sarah Johnson</div>
@@ -298,74 +296,74 @@ export default function HealthcareAITransformationPage() {
               </div>
             </div>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Success Factors</h2>
+            <h2 className="text-3xl font-bold text-gray-90o0 mb-6">Key Success Factors</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <Award className="w-6 h-6 text-purple-600 mr-3 mt-1" />
+                  <Award className="w-6 h-6 text-purple-60o0 mr-3 mt-1"  />
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">Executive Leadership</h3>
-                    <p className="text-gray-700">Strong commitment from C-suite, dedicated project sponsorship, clear communication of vision, and resource allocation.</p>
+                    <h3 className="text-lg font-bold text-gray-90o0 mb-2">Executive Leadership</h3>
+                    <p className="text-gray-70o0">Strong commitment from C-suite, dedicated project sponsorship, clear communication of vision, and resource allocation.</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <Users className="w-6 h-6 text-blue-600 mr-3 mt-1" />
+                  <Users className="w-6 h-6 text-blue-60o0 mr-3 mt-1"  />
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">Clinical Engagement</h3>
-                    <p className="text-gray-700">Early involvement of clinical staff, physician champions, continuous feedback, and recognition of clinical expertise.</p>
+                    <h3 className="text-lg font-bold text-gray-90o0 mb-2">Clinical Engagement</h3>
+                    <p className="text-gray-70o0">Early involvement of clinical staff, physician champions, continuous feedback, and recognition of clinical expertise.</p>
                   </div>
                 </div>
               </div>
               
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <TrendingUp className="w-6 h-6 text-green-600 mr-3 mt-1" />
+                  <TrendingUp className="w-6 h-6 text-green-60o0 mr-3 mt-1"  />
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">Technology Excellence</h3>
-                    <p className="text-gray-700">Proven AI platforms, robust integration capabilities, scalable architecture, and continuous monitoring.</p>
+                    <h3 className="text-lg font-bold text-gray-90o0 mb-2">Technology Excellence</h3>
+                    <p className="text-gray-70o0">Proven AI platforms, robust integration capabilities, scalable architecture, and continuous monitoring.</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-orange-600 mr-3 mt-1" />
+                  <CheckCircle className="w-6 h-6 text-orange-60o0 mr-3 mt-1"  />
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">Change Management</h3>
-                    <p className="text-gray-700">Comprehensive training programs, clear communication strategies, gradual rollout, and ongoing support.</p>
+                    <h3 className="text-lg font-bold text-gray-90o0 mb-2">Change Management</h3>
+                    <p className="text-gray-70o0">Comprehensive training programs, clear communication strategies, gradual rollout, and ongoing support.</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Transform Your Healthcare Organization?</h2>
-            <p className="text-gray-700 mb-8 leading-relaxed">
+            <h2 className="text-3xl font-bold text-gray-90o0 mb-6">Ready to Transform Your Healthcare Organization?</h2>
+            <p className="text-gray-70o0 mb-8 leading-relaxed">
               This healthcare AI transformation represents a paradigm shift in how healthcare systems can leverage technology to improve patient care while reducing costs. The $50 million in annual savings, combined with 95% patient satisfaction and 340% operational efficiency improvement, demonstrates the transformative power of AI in healthcare.
             </p>
 
-            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-8 text-white mb-8">
+            <div className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-xl p-8 text-white mb-8">
               <h3 className="text-2xl font-bold mb-4">Contact Information</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <p className="mb-2"><strong>Phone:</strong> +1 302 464 0950</p>
+                  <p className="mb-2"><strong>Phone:</strong> +1 30o2 464 0950</p>
                   <p className="mb-2"><strong>Email:</strong> kleber@ziontechgroup.com</p>
                   <p className="mb-2"><strong>Website:</strong> https://ziontechgroup.com</p>
                 </div>
                 <div>
-                  <p className="mb-2"><strong>Address:</strong> 364 E Main St STE 1008</p>
+                  <p className="mb-2"><strong>Address:</strong> 364 E Main St STE 10o08</p>
                   <p className="mb-2">Middletown DE 19709</p>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 mt-6">
                 <Link
                   href="/contact"
-                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
+                  className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center"
                 >
                   Get Free Assessment
                 </Link>
                 <Link
                   href="/services"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-center"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-center"
                 >
                   Explore Healthcare AI Services
                 </Link>
@@ -374,21 +372,21 @@ export default function HealthcareAITransformationPage() {
           </div>
 
           {/* Share Section */}
-          <div className="border-t border-gray-200 pt-8 mt-12">
+          <div className="border-t border-gray-20o0 pt-8 mt-12">
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Share this case study</h3>
-                <p className="text-gray-600">Help other healthcare organizations discover the power of AI</p>
+                <h3 className="text-lg font-semibold text-gray-90o0 mb-2">Share this case study</h3>
+                <p className="text-gray-60o0">Help other healthcare organizations discover the power of AI</p>
               </div>
               <div className="flex space-x-4">
-                <button className="p-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                  <Share2 className="w-5 h-5" />
+                <button className="p-2 bg-blue-60o0 text-white rounded-lg hover:bg-blue-70o0 transition-colors">
+                  <Share2 className="w-5 h-5"  />
                 </button>
-                <button className="p-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
-                  <Share2 className="w-5 h-5" />
+                <button className="p-2 bg-green-60o0 text-white rounded-lg hover:bg-green-70o0 transition-colors">
+                  <Share2 className="w-5 h-5"  />
                 </button>
-                <button className="p-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
-                  <Share2 className="w-5 h-5" />
+                <button className="p-2 bg-purple-60o0 text-white rounded-lg hover:bg-purple-70o0 transition-colors">
+                  <Share2 className="w-5 h-5"  />
                 </button>
               </div>
             </div>

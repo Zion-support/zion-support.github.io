@@ -1,4 +1,4 @@
-export interface InnovativeMicroSaasService2028Part2 {
+export interface InnovativeMicroSaasService20o28Part2 {
   id: string;
   title: string;
   description: string;
@@ -41,7 +41,7 @@ export interface InnovativeMicroSaasService2028Part2 {
   moneyBackGuarantee: boolean;
 }
 
-export const INNOVATIVE_MICRO_SAAS_SERVICES_2028_PART2: InnovativeMicroSaasService2028Part2[] = [
+export const INNOVATIVE_MICRO_SAAS_SERVICES_20o28_PART2: InnovativeMicroSaasService20o28Part2[] = [
   // AI-Powered Space Technology Platform
   {
     id: "ai-space-technology-platform",
@@ -85,11 +85,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2028_PART2: InnovativeMicroSaasServi
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1446776811953-b23d0bd843e7?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2028-01-15T10:00:00.000Z",
+    images: ["https://images.unsplash.com/photo-1446776811953-b23d0bd843e7?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o28-0o1-15T10:0o0:0o0.0o00Z",
     useCases: ["Satellite optimization", "Mission planning", "Space debris tracking", "Communication optimization"],
     integrationOptions: ["Satellite systems", "Ground stations", "Mission control", "Communication networks"],
     complianceStandards: ["Space regulations", "International treaties", "Safety standards"],
@@ -146,11 +146,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2028_PART2: InnovativeMicroSaasServi
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2028-01-15T10:00:00.000Z",
+    images: ["https://images.unsplash.com/photo-144198630o0917-64674bd60o0d8?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o28-0o1-15T10:0o0:0o0.0o00Z",
     useCases: ["Inventory optimization", "Customer analytics", "Dynamic pricing", "Merchandising"],
     integrationOptions: ["POS systems", "E-commerce platforms", "CRM systems", "Inventory systems"],
     complianceStandards: ["PCI DSS", "Data privacy", "Industry regulations"],
@@ -207,11 +207,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2028_PART2: InnovativeMicroSaasServi
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2028-01-15T10:00:00.000Z",
+    images: ["https://images.unsplash.com/photo-152220o2176988-66273c2fd55f?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o28-0o1-15T10:0o0:0o0.0o00Z",
     useCases: ["Personalized learning", "Assessment automation", "Progress tracking", "Content recommendation"],
     integrationOptions: ["LMS systems", "Student information systems", "Content platforms", "Assessment tools"],
     complianceStandards: ["FERPA", "COPPA", "Data privacy", "Educational standards"],
@@ -268,11 +268,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2028_PART2: InnovativeMicroSaasServi
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2028-01-15T10:00:00.000Z",
+    images: ["https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o28-0o1-15T10:0o0:0o0.0o00Z",
     useCases: ["Route optimization", "Fleet management", "Fuel optimization", "Performance tracking"],
     integrationOptions: ["Fleet management systems", "GPS devices", "Fuel systems", "Maintenance systems"],
     complianceStandards: ["DOT regulations", "Safety standards", "Industry regulations"],
@@ -329,11 +329,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2028_PART2: InnovativeMicroSaasServi
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2028-01-15T10:00:00.000Z",
+    images: ["https://images.unsplash.com/photo-1560o518883-ce090o59eeffa?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o28-0o1-15T10:0o0:0o0.0o00Z",
     useCases: ["Market analysis", "Property valuation", "Investment analysis", "Property management"],
     integrationOptions: ["Property management systems", "MLS databases", "Financial platforms", "Maintenance systems"],
     complianceStandards: ["Real estate regulations", "Data privacy", "Financial regulations"],
@@ -390,11 +390,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2028_PART2: InnovativeMicroSaasServi
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2028-01-15T10:00:00.000Z",
+    images: ["https://images.unsplash.com/photo-150o0937386664-56d1dfef3854?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o28-0o1-15T10:0o0:0o0.0o00Z",
     useCases: ["Crop monitoring", "Yield prediction", "Resource optimization", "Sustainability tracking"],
     integrationOptions: ["IoT sensors", "Weather stations", "Irrigation systems", "Harvesting equipment"],
     complianceStandards: ["Organic standards", "Food safety", "Environmental regulations"],
@@ -451,11 +451,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2028_PART2: InnovativeMicroSaasServi
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2028-01-15T10:00:00.000Z",
+    images: ["https://images.unsplash.com/photo-15660o73771259-6a850o6099945?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o28-0o1-15T10:0o0:0o0.0o00Z",
     useCases: ["Guest experience optimization", "Revenue management", "Service automation", "Performance tracking"],
     integrationOptions: ["PMS systems", "Booking platforms", "Guest apps", "Service systems"],
     complianceStandards: ["Hospitality standards", "Data privacy", "Industry regulations"],
@@ -512,11 +512,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2028_PART2: InnovativeMicroSaasServi
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2028-01-15T10:00:00.000Z",
+    images: ["https://images.unsplash.com/photo-151870926880o5-4e90o42af2176?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o28-0o1-15T10:0o0:0o0.0o00Z",
     useCases: ["Content generation", "Audience analytics", "Content optimization", "Distribution automation"],
     integrationOptions: ["CMS platforms", "Social media", "Analytics tools", "Monetization platforms"],
     complianceStandards: ["Content guidelines", "Copyright compliance", "Data privacy"],
@@ -531,4 +531,4 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2028_PART2: InnovativeMicroSaasServi
   }
 ];
 
-export default INNOVATIVE_MICRO_SAAS_SERVICES_2028_PART2;
+export default INNOVATIVE_MICRO_SAAS_SERVICES_20o28_PART2;

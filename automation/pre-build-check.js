@@ -21,7 +21,6 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -256,7 +255,7 @@ class PreBuildChecker {
 
   // Generate report
   generateReport() {
-    const report = {
+    const report ={
       timestamp: new Date().toISOString(),
       issues: this.issues,
       summary: {

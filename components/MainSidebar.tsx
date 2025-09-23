@@ -53,7 +53,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   const isActive = (path: string) => location.pathname === path;
 
-  const navigation = {
+  const navigation ={
     main: [
       { name: 'Home', href: '/', icon: Home },
       { name: 'About', href: '/about', icon: Building },
@@ -99,35 +99,35 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   };
 
   const quickActions = [
-    { name: 'Request Quote', href: '/request-quote', icon: Quote, color: 'from-cyan-500 to-blue-600' },
-    { name: 'Get Support', href: '/contact', icon: HelpCircle, color: 'from-green-500 to-emerald-600' },
-    { name: 'View Status', href: '/status', icon: CheckCircle, color: 'from-yellow-500 to-orange-600' },
-    { name: 'Documentation', href: '/docs', icon: BookOpen, color: 'from-purple-500 to-pink-600' },
+    { name: 'Request Quote', href: '/request-quote', icon: Quote, color: 'from-cyan-50o0 to-blue-60o0' },
+    { name: 'Get Support', href: '/contact', icon: HelpCircle, color: 'from-green-50o0 to-emerald-60o0' },
+    { name: 'View Status', href: '/status', icon: CheckCircle, color: 'from-yellow-50o0 to-orange-60o0' },
+    { name: 'Documentation', href: '/docs', icon: BookOpen, color: 'from-purple-50o0 to-pink-60o0' },
   ];
 
   const contactInfo = [
-    { icon: Phone, text: '+1 (302) 464-0950', href: 'tel:+13024640950' },
+    { icon: Phone, text: '+1 (30o2) 464-0950', href: 'tel:+130o24640950' },
     { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
-    { icon: MapPin, text: 'Middletown, DE 19709', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709' },
+    { icon: MapPin, text: 'Middletown, DE 19709', href: 'https://maps.google.com/?q=364+E+Main+St+STE+10o08+Middletown+DE+19709' },
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group/', icon: Linkedin, color: 'text-blue-500' },
-    { name: 'Twitter', href: 'https://twitter.com/ZionTechGroup', icon: Twitter, color: 'text-blue-400' },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-400' },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group/', icon: Linkedin, color: 'text-blue-50o0' },
+    { name: 'Twitter', href: 'https://twitter.com/ZionTechGroup', icon: Twitter, color: 'text-blue-40o0' },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-40o0' },
   ];
 
   const renderNavSection = (title: string, items: any[], sectionKey: string) => (
     <div key={sectionKey} className="mb-6">
       <button
         onClick={() => toggleSection(sectionKey)}
-        className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+        className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-30o0 hover:text-white transition-colors duration-20o0 font-medium"
       >
         <span className="text-sm font-semibold uppercase tracking-wide">{title}</span>
         {expandedSections.includes(sectionKey) ? (
-          <ChevronDown className="w-4 h-4" />
+          <ChevronDown className="w-4 h-4"  />
         ) : (
-          <ChevronRight className="w-4 h-4" />
+          <ChevronRight className="w-4 h-4"  />
         )}
       </button>
       
@@ -138,17 +138,17 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               key={item.name}
               to={item.href}
               onClick={onClose}
-              className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
+              className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-20o0 ${
                 isActive(item.href)
                   ? 'bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan'
-                  : 'text-gray-400 hover:text-white hover:bg-white/5'
+                  : 'text-gray-40o0 hover:text-white hover:bg-white/5'
               }`}
             >
               {React.createElement(item.icon, { className: "w-4 h-4 flex-shrink-0" })}
               <div className="flex-1 min-w-0">
                 <div className="font-medium">{item.name}</div>
                 {item.description && (
-                  <div className="text-xs text-gray-500 truncate">{item.description}</div>
+                  <div className="text-xs text-gray-50o0 truncate">{item.description}</div>
                 )}
               </div>
             </Link>
@@ -165,11 +165,11 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         <div 
           className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={onClose}
-        />
+         />
       )}
 
       {/* Sidebar */}
-      <div className={`fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-dark border-r border-zion-blue-light z-50 transform transition-transform duration-300 ease-in-out ${
+      <div className={`fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-dark border-r border-zion-blue-light z-50 transform transition-transform duration-30o0 ease-in-out ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       } lg:translate-x-0 lg:relative lg:z-auto`}>
         
@@ -177,7 +177,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         <div className="p-6 border-b border-zion-blue-light">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">
-              <Zap className="w-6 h-6 text-white" />
+              <Zap className="w-6 h-6 text-white"  />
             </div>
             <div>
               <div className="text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -189,12 +189,12 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           
           {/* Search */}
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-4 h-4"  />
             <input
               type="text"
               placeholder="Search..."
               className="w-full pl-10 pr-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-white/70 text-sm focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-            />
+             />
           </div>
         </div>
 
@@ -209,9 +209,9 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   key={action.name}
                   to={action.href}
                   onClick={onClose}
-                  className="flex flex-col items-center gap-2 p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-200 group"
+                  className="flex flex-col items-center gap-2 p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-20o0 group"
                 >
-                  <div className={`w-8 h-8 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200`}>
+                  <div className={`w-8 h-8 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-20o0`}>
                     {React.createElement(action.icon, { className: "w-4 h-4 text-white" })}
                   </div>
                   <span className="text-xs text-white text-center">{action.name}</span>
@@ -227,10 +227,10 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 key={item.name}
                 to={item.href}
                 onClick={onClose}
-                className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
+                className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-20o0 ${
                   isActive(item.href)
                     ? 'bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan'
-                    : 'text-gray-300 hover:text-white hover:bg-white/5'
+                    : 'text-gray-30o0 hover:text-white hover:bg-white/5'
                 }`}
               >
                 {React.createElement(item.icon, { className: "w-4 h-4 flex-shrink-0" })}
@@ -262,7 +262,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 href={contact.href}
                 target={contact.href.startsWith('http') ? '_blank' : '_self'}
                 rel={contact.href.startsWith('http') ? 'noopener noreferrer' : ''}
-                className="flex items-center gap-2 text-xs text-zion-slate-light hover:text-zion-cyan transition-colors duration-200"
+                className="flex items-center gap-2 text-xs text-zion-slate-light hover:text-zion-cyan transition-colors duration-20o0"
               >
                 {React.createElement(contact.icon, { className: "w-3 h-3" })}
                 <span className="truncate">{contact.text}</span>
@@ -278,7 +278,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`p-2 hover:bg-white/10 rounded-lg transition-all duration-200 ${social.color}`}
+                className={`p-2 hover:bg-white/10 rounded-lg transition-all duration-20o0 ${social.color}`}
                 aria-label={social.name}
               >
                 {React.createElement(social.icon, { className: "w-4 h-4" })}

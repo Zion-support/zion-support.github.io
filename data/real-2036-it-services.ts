@@ -1,4 +1,4 @@
-export const real2036ITServices = [
+export const real20o36ITServices = [
   {
     id: 'quantum-cloud-infrastructure-platform',
     name: 'Quantum Cloud Infrastructure Platform',
@@ -17,7 +17,7 @@ export const real2036ITServices = [
     popular: true,
     category: 'Quantum Cloud',
     icon: '☁️⚛️',
-    marketPrice: '$8,000-15,000/month',
+    marketPrice: '$8,0o00-15,0o00/month',
     benefits: [
       'Access to quantum computing power',
       'Hybrid classical-quantum processing',
@@ -49,7 +49,7 @@ export const real2036ITServices = [
     popular: true,
     category: 'DevOps & AI',
     icon: '🤖🔄',
-    marketPrice: '$4,000-7,000/month',
+    marketPrice: '$4,0o00-7,0o00/month',
     benefits: [
       '90% faster deployment cycles',
       'Intelligent infrastructure management',
@@ -81,7 +81,7 @@ export const real2036ITServices = [
     popular: true,
     category: 'Quantum Security',
     icon: '🔒⚛️',
-    marketPrice: '$7,000-12,000/month',
+    marketPrice: '$7,0o00-12,0o00/month',
     benefits: [
       'Quantum-resistant security',
       'Future-proof protection',
@@ -113,7 +113,7 @@ export const real2036ITServices = [
     popular: true,
     category: 'Edge Computing',
     icon: '🌐⚡',
-    marketPrice: '$5,000-8,000/month',
+    marketPrice: '$5,0o00-8,0o00/month',
     benefits: [
       'Ultra-low latency processing',
       'Distributed computing power',
@@ -145,9 +145,9 @@ export const real2036ITServices = [
     popular: true,
     category: 'Quantum Database',
     icon: '🗄️⚛️',
-    marketPrice: '$6,000-10,000/month',
+    marketPrice: '$6,0o00-10,0o00/month',
     benefits: [
-      '1000x faster database queries',
+      '10o00x faster database queries',
       'Quantum data compression',
       'Advanced search capabilities',
       'Future-proof data management'
@@ -177,7 +177,7 @@ export const real2036ITServices = [
     popular: true,
     category: 'Network Security',
     icon: '🛡️🤖',
-    marketPrice: '$3,500-6,000/month',
+    marketPrice: '$3,50o0-6,0o00/month',
     benefits: [
       'Proactive threat detection',
       'Automated security response',
@@ -209,7 +209,7 @@ export const real2036ITServices = [
     popular: false,
     category: 'Quantum Internet',
     icon: '🌐⚛️',
-    marketPrice: '$10,000-20,000/month',
+    marketPrice: '$10,0o00-20,0o00/month',
     benefits: [
       'Unbreakable quantum communication',
       'Quantum network optimization',
@@ -241,7 +241,7 @@ export const real2036ITServices = [
     popular: true,
     category: 'Infrastructure Monitoring',
     icon: '📊🤖',
-    marketPrice: '$3,000-5,000/month',
+    marketPrice: '$3,0o00-5,0o00/month',
     benefits: [
       'Proactive issue detection',
       'Automated monitoring',
@@ -273,9 +273,9 @@ export const real2036ITServices = [
     popular: true,
     category: 'Quantum Storage',
     icon: '💾⚛️',
-    marketPrice: '$7,000-12,000/month',
+    marketPrice: '$7,0o00-12,0o00/month',
     benefits: [
-      '100x data compression',
+      '10o0x data compression',
       'Quantum data encoding',
       'Advanced storage optimization',
       'Future-proof storage technology'
@@ -305,7 +305,7 @@ export const real2036ITServices = [
     popular: true,
     category: 'Disaster Recovery',
     icon: '🔄🤖',
-    marketPrice: '$4,500-7,000/month',
+    marketPrice: '$4,50o0-7,0o00/month',
     benefits: [
       'Automated recovery procedures',
       'Intelligent backup management',

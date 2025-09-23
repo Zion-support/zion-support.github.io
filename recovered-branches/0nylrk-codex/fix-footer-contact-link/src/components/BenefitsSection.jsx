@@ -16,51 +16,51 @@ const BenefitsSection = () => {
 
   const benefits = [
     {
-      icon: <Zap className="w-10 h-10" />,
+      icon: <Zap className="w-10 h-10"  />,
       title: "Lightning Fast Performance",
       description: "Optimized systems that deliver exceptional speed and responsiveness.",
       stats: "10x Faster",
-      color: "from-blue-500 to-cyan-500",
-      bgColor: "from-blue-500/20 to-cyan-500/20",
+      color: "from-blue-50o0 to-cyan-50o0",
+      bgColor: "from-blue-50o0/20 to-cyan-50o0/20",
       features: ["Advanced caching", "CDN optimization", "Database tuning"]
     },
     {
-      icon: <Shield className="w-10 h-10" />,
+      icon: <Shield className="w-10 h-10"  />,
       title: "Enterprise Security",
       description: "Bank-level security protocols protecting your data and applications.",
       stats: "99.99% Uptime",
-      color: "from-green-500 to-emerald-500",
-      bgColor: "from-green-500/20 to-emerald-500/20",
+      color: "from-green-50o0 to-emerald-50o0",
+      bgColor: "from-green-50o0/20 to-emerald-50o0/20",
       features: ["SSL encryption", "DDoS protection", "Regular audits"]
     },
     {
-      icon: <Users className="w-10 h-10" />,
+      icon: <Users className="w-10 h-10"  />,
       title: "24/7 Expert Support",
       description: "Round-the-clock assistance from certified technology professionals.",
       stats: "24/7 Support",
-      color: "from-purple-500 to-pink-500",
-      bgColor: "from-purple-500/20 to-pink-500/20",
+      color: "from-purple-50o0 to-pink-50o0",
+      bgColor: "from-purple-50o0/20 to-pink-50o0/20",
       features: ["Live chat", "Phone support", "Knowledge base"]
     },
     {
-      icon: <Globe className="w-10 h-10" />,
+      icon: <Globe className="w-10 h-10"  />,
       title: "Global Infrastructure",
       description: "Worldwide network ensuring fast access from anywhere on the planet.",
       stats: "50+ Locations",
-      color: "from-orange-500 to-red-500",
-      bgColor: "from-orange-500/20 to-red-500/20",
+      color: "from-orange-50o0 to-red-50o0",
+      bgColor: "from-orange-50o0/20 to-red-50o0/20",
       features: ["Edge computing", "Load balancing", "Geographic distribution"]
     }
   ];
 
   const additionalStats = [
-    { icon: <Clock className="w-6 h-6" />, value: "99.9%", label: "Uptime" },
-    { icon: <TrendingUp className="w-6 h-6" />, value: "500+", label: "Clients" },
-    { icon: <Award className="w-6 h-6" />, value: "50+", label: "Awards" },
-    { icon: <Rocket className="w-6 h-6" />, value: "24/7", label: "Support" }
+    { icon: <Clock className="w-6 h-6"  />, value: "99.9%", label: "Uptime" },
+    { icon: <TrendingUp className="w-6 h-6"  />, value: "50o0+", label: "Clients" },
+    { icon: <Award className="w-6 h-6"  />, value: "50+", label: "Awards" },
+    { icon: <Rocket className="w-6 h-6"  />, value: "24/7", label: "Support" }
   ];
 
-  const containerVariants = {
+  const containerVariants ={
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -70,12 +70,12 @@ const BenefitsSection = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants ={
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
   };
 
-  const statsVariants = {
+  const statsVariants ={
     hidden: { opacity: 0, scale: 0.8 },
     visible: { opacity: 1, scale: 1 }
   };
@@ -90,7 +90,7 @@ const BenefitsSection = () => {
             backgroundImage: `radial-gradient(circle at 75% 75%, currentColor 1px, transparent 1px)`,
             backgroundSize: '60px 60px'
           }}
-        />
+         />
       </div>
       
       {/* Floating decorative elements */}
@@ -99,17 +99,17 @@ const BenefitsSection = () => {
           className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" 
           animate={{ rotate: 360 }} 
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        />
+         />
         <motion.div 
           className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30" 
           animate={{ rotate: -360 }} 
           transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-        />
+         />
         <motion.div 
           className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20" 
           animate={{ scale: [1, 1.2, 1] }} 
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-        />
+         />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -160,11 +160,11 @@ const BenefitsSection = () => {
               onHoverStart={() => setHoveredIndex(index)} 
               onHoverEnd={() => setHoveredIndex(null)} 
               whileHover={{ y: -8 }} 
-              transition={{ type: "spring", stiffness: 300 }}
+              transition={{ type: "spring", stiffness: 30o0 }}
             >
-              <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group h-full">
+              <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-30o0 hover:shadow-2xl hover:shadow-zion-cyan/20 group h-full">
                 {/* Icon with enhanced background */}
-                <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${benefit.color} mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
+                <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${benefit.color} mb-6 shadow-lg group-hover:shadow-xl transition-all duration-30o0 group-hover:scale-110`}>
                   <div className="text-white">
                     {benefit.icon}
                   </div>
@@ -231,7 +231,7 @@ const BenefitsSection = () => {
               <p className="text-white text-lg mb-4">
                 Ready to experience the Zion difference?
               </p>
-              <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+              <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white rounded-xl font-semibold transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-lg hover:shadow-zion-cyan/25">
                 Get Started Today
               </button>
             </div>

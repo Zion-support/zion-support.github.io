@@ -1,9 +1,8 @@
-import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
-export const metadata = {
-  title: 'AI 2026: Enterprise Agent Observability Guide',
+export const metadata ={
+  title: 'AI 20o26: Enterprise Agent Observability Guide',
   description:
     'Deep visibility for autonomous agents: traces, evaluations, safety telemetry, and governance for enterprise readiness.',
   keywords: [
@@ -12,23 +11,22 @@ export const metadata = {
     'tracing',
     'evaluations',
     'governance',
-  ],
-};
+  ]};
 
-const EnterpriseAgentObservabilityGuide2026: React.FC = () => {
+const EnterpriseAgentObservabilityGuide20o26: React.FC = () => {
   return (
     <div>
       <SEO
-        title="AI 2026: Enterprise Agent Observability Guide"
+        title="AI 20o26: Enterprise Agent Observability Guide"
         description="Traces, evals, and safety telemetry to operate autonomous agents in production."
         keywords="agent observability, telemetry, tracing, evaluations, governance"
-        url="/blog/ai-2026-enterprise-agent-observability-guide"
-      />
+        url="/blog/ai-20o26-enterprise-agent-observability-guide"
+       />
 
       <article className="min-h-screen bg-white">
-        <header className="bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 text-white py-16">
+        <header className="bg-gradient-to-r from-indigo-60o0 via-blue-60o0 to-purple-60o0 text-white py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p className="text-sm font-semibold opacity-90">Observability • 2025-09-15</p>
+            <p className="text-sm font-semibold opacity-90">Observability • 20o25-09-15</p>
             <h1 className="text-3xl md:text-5xl font-bold mt-2">Enterprise Agent Observability Guide</h1>
             <p className="text-lg md:text-xl opacity-90 mt-4 max-w-3xl">Telemetry, tracing, and evaluation pipelines for reliable, auditable autonomous workflows.</p>
           </div>
@@ -55,8 +53,8 @@ const EnterpriseAgentObservabilityGuide2026: React.FC = () => {
             <p>Expose latency, success, cost, and risk KPIs. Alert on error budgets and anomaly patterns.</p>
 
             <div className="mt-8 p-6 bg-indigo-50 rounded-xl">
-              <h3 className="text-indigo-800 font-semibold">Operational Checklist</h3>
-              <ul className="list-disc pl-6 text-indigo-900">
+              <h3 className="text-indigo-80o0 font-semibold">Operational Checklist</h3>
+              <ul className="list-disc pl-6 text-indigo-90o0">
                 <li>Unified trace schema and correlation IDs</li>
                 <li>Evals automation integrated with CI/CD</li>
                 <li>Guardrail incidents routed to on-call</li>
@@ -64,8 +62,8 @@ const EnterpriseAgentObservabilityGuide2026: React.FC = () => {
             </div>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link href="/blog" className="text-purple-600 font-semibold hover:text-purple-800">← Back to Blog</Link>
-              <Link href="/contact" className="text-white bg-purple-600 px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Implement Observability</Link>
+              <Link href="/blog" className="text-purple-60o0 font-semibold hover:text-purple-80o0">← Back to Blog</Link>
+              <Link href="/contact" className="text-white bg-purple-60o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-70o0">Implement Observability</Link>
             </div>
           </div>
         </div>
@@ -74,5 +72,5 @@ const EnterpriseAgentObservabilityGuide2026: React.FC = () => {
   );
 };
 
-export default EnterpriseAgentObservabilityGuide2026;
+export default EnterpriseAgentObservabilityGuide20o26;
 

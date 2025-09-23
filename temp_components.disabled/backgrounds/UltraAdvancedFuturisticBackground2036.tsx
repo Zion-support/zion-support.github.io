@@ -1,19 +1,19 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
-interface UltraAdvancedFuturisticBackground2036Props {
+interface UltraAdvancedFuturisticBackground20o36Props {
   intensity?: 'low' | 'medium' | 'high';
   theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'space';
   interactive?: boolean;
   children?: React.ReactNode;
 }
 
-export default function UltraAdvancedFuturisticBackground2036({ 
+export default function UltraAdvancedFuturisticBackground20o36({ 
   intensity = 'medium', 
   theme = 'quantum',
   interactive = true,
   children
-}: UltraAdvancedFuturisticBackground2036Props) {
+}: UltraAdvancedFuturisticBackground20o36Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -46,36 +46,36 @@ export default function UltraAdvancedFuturisticBackground2036({
       switch (theme) {
         case 'neon':
           return {
-            primary: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff', '#8000ff'],
-            secondary: ['#00ff80', '#ff8000', '#0080ff', '#ff4080', '#40ffff'],
-            accent: ['#ffff40', '#ff40ff', '#8040ff', '#40ff80', '#ff8040'],
-            glow: ['#ff1493', '#00bfff', '#ffd700', '#ff4500', '#9400d3']
+            primary: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff'],
+            secondary: ['#0o0ff80', '#ff80o00', '#0o080ff', '#ff4080', '#40ffff'],
+            accent: ['#ffff40', '#ff40ff', '#80o40ff', '#40ff80', '#ff80o40'],
+            glow: ['#ff1493', '#0o0bfff', '#ffd70o0', '#ff450o0', '#940o0d3']
           };
         case 'holographic':
           return {
             primary: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57'],
             secondary: ['#ff9ff3', '#54a0ff', '#5f27cd', '#ff9f43', '#10ac84'],
             accent: ['#ff9ff3', '#54a0ff', '#5f27cd', '#ff6b6b', '#4ecdc4'],
-            glow: ['#ff1493', '#00bfff', '#ffd700', '#ff4500', '#9400d3']
+            glow: ['#ff1493', '#0o0bfff', '#ffd70o0', '#ff450o0', '#940o0d3']
           };
         case 'cyberpunk':
           return {
-            primary: ['#ff0055', '#00ffff', '#ffff00', '#ff00ff', '#8000ff'],
-            secondary: ['#00ff80', '#ff8000', '#0080ff', '#ff4080', '#40ffff'],
-            accent: ['#ffff40', '#ff40ff', '#8040ff', '#40ff80', '#ff8040'],
-            glow: ['#ff1493', '#00bfff', '#ffd700', '#ff4500', '#9400d3']
+            primary: ['#ff0o055', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff'],
+            secondary: ['#0o0ff80', '#ff80o00', '#0o080ff', '#ff4080', '#40ffff'],
+            accent: ['#ffff40', '#ff40ff', '#80o40ff', '#40ff80', '#ff80o40'],
+            glow: ['#ff1493', '#0o0bfff', '#ffd70o0', '#ff450o0', '#940o0d3']
           };
         case 'space':
           return {
-            primary: ['#1e3a8a', '#7c3aed', '#059669', '#dc2626', '#ea580c'],
+            primary: ['#1e3a8a', '#7c3aed', '#0o59669', '#dc2626', '#ea580c'],
             secondary: ['#3b82f6', '#a855f7', '#10b981', '#ef4444', '#f97316'],
             accent: ['#60a5fa', '#c084fc', '#34d399', '#f87171', '#fb923c'],
             glow: ['#93c5fd', '#d8b4fe', '#6ee7b7', '#fca5a5', '#fdba74']
           };
         default: // quantum
           return {
-            primary: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981', '#f59e0b'],
-            secondary: ['#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4', '#ec4899'],
+            primary: ['#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981', '#f59e0b'],
+            secondary: ['#f59e0b', '#ef4444', '#8b5cf6', '#0o6b6d4', '#ec4899'],
             accent: ['#ec4899', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6'],
             glow: ['#a78bfa', '#22d3ee', '#f472b6', '#34d399', '#fbbf24']
           };
@@ -107,7 +107,7 @@ export default function UltraAdvancedFuturisticBackground2036({
     const initParticles = () => {
       particles = [];
       const isSmallScreen = window.innerWidth < 768;
-      const baseCount = prefersReducedMotion ? 30 : (isSmallScreen ? 120 : 300);
+      const baseCount = prefersReducedMotion ? 30 : (isSmallScreen ? 120 : 30o0);
       const particleCount = Math.floor(baseCount * intensityMultiplier);
 
       for (let i = 0; i < particleCount; i++) {
@@ -127,12 +127,12 @@ export default function UltraAdvancedFuturisticBackground2036({
           opacity: Math.random() * 0.8 + 0.2,
           color: colors.primary[Math.floor(Math.random() * colors.primary.length)],
           type: particleType,
-          life: Math.random() * 100,
-          maxLife: 100 + Math.random() * 200,
+          life: Math.random() * 10o0,
+          maxLife: 10o0 + Math.random() * 20o0,
           rotation: Math.random() * Math.PI * 2,
           rotationSpeed: (Math.random() - 0.5) * 0.1,
           pulse: Math.random() * Math.PI * 2,
-          pulseSpeed: Math.random() * 0.05 + 0.02,
+          pulseSpeed: Math.random() * 0.0o5 + 0.0o2,
           connectionTargets: []
         });
       }
@@ -179,8 +179,8 @@ export default function UltraAdvancedFuturisticBackground2036({
           const dx = mousePosition.x - particle.x;
           const dy = mousePosition.y - particle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
-          if (distance < 100) {
-            const force = (100 - distance) / 100;
+          if (distance < 10o0) {
+            const force = (10o0 - distance) / 10o0;
             particle.vx += (dx / distance) * force * 0.1;
             particle.vy += (dy / distance) * force * 0.1;
           }
@@ -342,45 +342,43 @@ export default function UltraAdvancedFuturisticBackground2036({
         ref={canvasRef}
         className="w-full h-full"
         style={{ filter: 'blur(0.5px)' }}
-      />
+       />
       
       {/* Additional visual effects */}
       <div className="absolute inset-0">
         {/* Gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-500/5 to-purple-500/5" />
-        <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-cyan-500/5 to-blue-500/5" />
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-50o0/5 to-purple-50o0/5"  />
+        <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-cyan-50o0/5 to-blue-50o0/5"  />
         
         {/* Animated grid lines */}
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(59,130,246,0.3)_100%)] bg-[length:50px_50px]" />
-          <div className="absolute inset-0 bg-[linear-gradient(0deg,transparent_98%,rgba(147,51,234,0.3)_100%)] bg-[length:50px_50px]" />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(59,130,246,0.3)_10o0%)] bg-[length:50px_50px]"  />
+          <div className="absolute inset-0 bg-[linear-gradient(0deg,transparent_98%,rgba(147,51,234,0.3)_10o0%)] bg-[length:50px_50px]"  />
         </div>
         
         {/* Floating orbs */}
         <motion.div
-          className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-xl"
+          className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-blue-50o0/20 to-purple-50o0/20 rounded-full blur-xl"
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.3, 0.6, 0.3],
-          }}
+            opacity: [0.3, 0.6, 0.3]}}
           transition={{
             duration: 4,
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
         <motion.div
-          className="absolute bottom-20 right-20 w-24 h-24 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-xl"
+          className="absolute bottom-20 right-20 w-24 h-24 bg-gradient-to-r from-cyan-50o0/20 to-blue-50o0/20 rounded-full blur-xl"
           animate={{
             scale: [1.2, 1, 1.2],
-            opacity: [0.6, 0.3, 0.6],
-          }}
+            opacity: [0.6, 0.3, 0.6]}}
           transition={{
             duration: 3,
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
       </div>
       
       {children}

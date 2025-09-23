@@ -13,62 +13,62 @@ const footerSections = [
   {
     title: 'Featured Revolutionary Services',
     description: 'Our most innovative and cutting-edge solutions',
-    icon: <Star className="w-5 h-5 text-yellow-400" />,
-    color: 'from-yellow-500 to-orange-500',
+    icon: <Star className="w-5 h-5 text-yellow-40o0"  />,
+    color: 'from-yellow-50o0 to-orange-50o0',
     links: [
-      { name: 'AI Consciousness Evolution 2040', href: '/ai-consciousness-evolution-2040', featured: true },
-      { name: 'Quantum Neural Ecosystem 2040', href: '/quantum-neural-ecosystem-2040', featured: true },
-      { name: 'Space Resource Intelligence 2040', href: '/space-resource-intelligence-2040', featured: true },
-      { name: 'Autonomous Business Intelligence 2040', href: '/autonomous-business-intelligence-2040', featured: true },
-      { name: 'Quantum Cybersecurity Future 2040', href: '/quantum-cybersecurity-future-2040', featured: true },
-      { name: 'Brain-Computer Interface 2040', href: '/brain-computer-interface-2040', featured: true },
-      { name: 'AI Autonomous Research 2041', href: '/ai-autonomous-research-2041', featured: true },
-      { name: 'Quantum Internet Security 2041', href: '/quantum-internet-security-2041', featured: true },
-      { name: 'AI Customer Success 2041', href: '/ai-customer-success-2041' },
-      { name: 'AI Sales Intelligence 2041', href: '/ai-sales-intelligence-2041' }
+      { name: 'AI Consciousness Evolution 20o40', href: '/ai-consciousness-evolution-20o40', featured: true },
+      { name: 'Quantum Neural Ecosystem 20o40', href: '/quantum-neural-ecosystem-20o40', featured: true },
+      { name: 'Space Resource Intelligence 20o40', href: '/space-resource-intelligence-20o40', featured: true },
+      { name: 'Autonomous Business Intelligence 20o40', href: '/autonomous-business-intelligence-20o40', featured: true },
+      { name: 'Quantum Cybersecurity Future 20o40', href: '/quantum-cybersecurity-future-20o40', featured: true },
+      { name: 'Brain-Computer Interface 20o40', href: '/brain-computer-interface-20o40', featured: true },
+      { name: 'AI Autonomous Research 20o41', href: '/ai-autonomous-research-20o41', featured: true },
+      { name: 'Quantum Internet Security 20o41', href: '/quantum-internet-security-20o41', featured: true },
+      { name: 'AI Customer Success 20o41', href: '/ai-customer-success-20o41' },
+      { name: 'AI Sales Intelligence 20o41', href: '/ai-sales-intelligence-20o41' }
     ]
   },
   {
     title: 'AI & Consciousness',
     description: 'Revolutionary AI consciousness platforms',
-    icon: <Brain className="w-5 h-5 text-cyan-400" />,
-    color: 'from-purple-500 to-pink-500',
+    icon: <Brain className="w-5 h-5 text-cyan-40o0"  />,
+    color: 'from-purple-50o0 to-pink-50o0',
     links: [
-      { name: 'AI Consciousness Evolution 2040', href: '/ai-consciousness-evolution-2040' },
-      { name: 'AI Emotional Intelligence 2040', href: '/ai-emotional-intelligence-2040', featured: true },
-      { name: 'AI Autonomous Research 2041', href: '/ai-autonomous-research-2041' },
-      { name: 'AI Content Personalization 2041', href: '/ai-content-personalization-2041', featured: true },
-      { name: 'AI Ethics & Governance 2041', href: '/ai-ethics-governance-2041' },
-      { name: 'AI Autonomous Ecosystem 2041', href: '/ai-autonomous-ecosystem-2041' },
-      { name: 'AI Predictive Maintenance 2041', href: '/ai-predictive-maintenance-2041' },
-      { name: 'AI Customer Success 2041', href: '/ai-customer-success-2041' },
-      { name: 'AI Sales Intelligence 2041', href: '/ai-sales-intelligence-2041' },
-      { name: 'Autonomous Business Intelligence 2040', href: '/autonomous-business-intelligence-2040' }
+      { name: 'AI Consciousness Evolution 20o40', href: '/ai-consciousness-evolution-20o40' },
+      { name: 'AI Emotional Intelligence 20o40', href: '/ai-emotional-intelligence-20o40', featured: true },
+      { name: 'AI Autonomous Research 20o41', href: '/ai-autonomous-research-20o41' },
+      { name: 'AI Content Personalization 20o41', href: '/ai-content-personalization-20o41', featured: true },
+      { name: 'AI Ethics & Governance 20o41', href: '/ai-ethics-governance-20o41' },
+      { name: 'AI Autonomous Ecosystem 20o41', href: '/ai-autonomous-ecosystem-20o41' },
+      { name: 'AI Predictive Maintenance 20o41', href: '/ai-predictive-maintenance-20o41' },
+      { name: 'AI Customer Success 20o41', href: '/ai-customer-success-20o41' },
+      { name: 'AI Sales Intelligence 20o41', href: '/ai-sales-intelligence-20o41' },
+      { name: 'Autonomous Business Intelligence 20o40', href: '/autonomous-business-intelligence-20o40' }
     ]
   },
   {
     title: 'Quantum & Emerging Tech',
     description: 'Breakthrough quantum and space technologies',
-    icon: <Atom className="w-5 h-5 text-blue-400" />,
-    color: 'from-blue-500 to-cyan-500',
+    icon: <Atom className="w-5 h-5 text-blue-40o0"  />,
+    color: 'from-blue-50o0 to-cyan-50o0',
     links: [
-      { name: 'Quantum Neural Ecosystem 2040', href: '/quantum-neural-ecosystem-2040', featured: true },
-      { name: 'Quantum Cybersecurity Future 2040', href: '/quantum-cybersecurity-future-2040', featured: true },
-      { name: 'Quantum Internet Security 2041', href: '/quantum-internet-security-2041', featured: true },
-      { name: 'Quantum Cloud Infrastructure 2041', href: '/quantum-cloud-infrastructure-2041' },
-      { name: 'Quantum Bio-Computing 2041', href: '/quantum-bio-computing-2041' },
-      { name: 'Space Resource Intelligence 2040', href: '/space-resource-intelligence-2040' },
-      { name: 'Brain-Computer Interface 2040', href: '/brain-computer-interface-2040' },
-      { name: 'Autonomous Vehicle AI 2040', href: '/autonomous-vehicle-ai-2040' },
-      { name: 'Quantum Materials Discovery 2040', href: '/quantum-materials-discovery-2040' },
-      { name: 'Quantum Financial Intelligence 2040', href: '/quantum-financial-intelligence-2040' }
+      { name: 'Quantum Neural Ecosystem 20o40', href: '/quantum-neural-ecosystem-20o40', featured: true },
+      { name: 'Quantum Cybersecurity Future 20o40', href: '/quantum-cybersecurity-future-20o40', featured: true },
+      { name: 'Quantum Internet Security 20o41', href: '/quantum-internet-security-20o41', featured: true },
+      { name: 'Quantum Cloud Infrastructure 20o41', href: '/quantum-cloud-infrastructure-20o41' },
+      { name: 'Quantum Bio-Computing 20o41', href: '/quantum-bio-computing-20o41' },
+      { name: 'Space Resource Intelligence 20o40', href: '/space-resource-intelligence-20o40' },
+      { name: 'Brain-Computer Interface 20o40', href: '/brain-computer-interface-20o40' },
+      { name: 'Autonomous Vehicle AI 20o40', href: '/autonomous-vehicle-ai-20o40' },
+      { name: 'Quantum Materials Discovery 20o40', href: '/quantum-materials-discovery-20o40' },
+      { name: 'Quantum Financial Intelligence 20o40', href: '/quantum-financial-intelligence-20o40' }
     ]
   },
   {
     title: 'Company & Resources',
     description: 'About Zion Tech Group and resources',
-    icon: <Target className="w-5 h-5 text-purple-400" />,
-    color: 'from-orange-500 to-red-500',
+    icon: <Target className="w-5 h-5 text-purple-40o0"  />,
+    color: 'from-orange-50o0 to-red-50o0',
     links: [
       { name: 'About Us', href: '/about' },
       { name: 'Careers', href: '/careers' },
@@ -84,19 +84,19 @@ const footerSections = [
   }
 ];
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
 const socialLinks = [
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" /> }
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5"  /> },
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5"  /> }
 ];
 
-const UltraFuturisticFooter2040: React.FC = () => {
+const UltraFuturisticFooter20o40: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
@@ -153,13 +153,13 @@ const UltraFuturisticFooter2040: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-gradient-to-br from-black via-gray-900 to-black border-t border-cyan-500/20">
+    <footer className="relative bg-gradient-to-br from-black via-gray-90o0 to-black border-t border-cyan-50o0/20">
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5"></div>
-        <div className="absolute top-0 left-1/4 w-32 h-32 border border-cyan-400/10 rounded-lg animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-24 h-24 border border-purple-400/10 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-0 w-16 h-16 border border-blue-400/10 transform rotate-12 animate-pulse delay-500"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-50o0/5 via-transparent to-purple-50o0/5"></div>
+        <div className="absolute top-0 left-1/4 w-32 h-32 border border-cyan-40o0/10 rounded-lg animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-24 h-24 border border-purple-40o0/10 rounded-full animate-pulse delay-10o00"></div>
+        <div className="absolute top-1/2 left-0 w-16 h-16 border border-blue-40o0/10 transform rotate-12 animate-pulse delay-50o0"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -174,34 +174,34 @@ const UltraFuturisticFooter2040: React.FC = () => {
               viewport={{ once: true }}
             >
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
-                  <Rocket className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-xl flex items-center justify-center">
+                  <Rocket className="w-6 h-6 text-white"  />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                  <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-40o0 to-blue-50o0 bg-clip-text text-transparent">
                     Zion Tech Group
                   </h3>
-                  <p className="text-sm text-gray-400">Innovation Leader 2025</p>
+                  <p className="text-sm text-gray-40o0">Innovation Leader 20o25</p>
                 </div>
               </div>
               
-              <p className="text-gray-300 mb-6 leading-relaxed max-w-md">
+              <p className="text-gray-30o0 mb-6 leading-relaxed max-w-md">
                 Pioneering the future of technology with revolutionary AI, quantum computing, and autonomous solutions that transform businesses and drive innovation.
               </p>
               
               {/* Contact Information */}
               <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors">
-                  <Phone className="w-4 h-4" />
-                  <a href="tel:+1 302 464 0950" className="hover:underline">+1 302 464 0950</a>
+                <div className="flex items-center space-x-3 text-gray-30o0 hover:text-cyan-40o0 transition-colors">
+                  <Phone className="w-4 h-4"  />
+                  <a href="tel:+1 30o2 464 0950" className="hover:underline">+1 30o2 464 0950</a>
                 </div>
-                <div className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors">
-                  <Mail className="w-4 h-4" />
+                <div className="flex items-center space-x-3 text-gray-30o0 hover:text-cyan-40o0 transition-colors">
+                  <Mail className="w-4 h-4"  />
                   <a href="mailto:kleber@ziontechgroup.com" className="hover:underline">kleber@ziontechgroup.com</a>
                 </div>
-                <div className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors">
-                  <MapPin className="w-4 h-4" />
-                  <span>364 E Main St STE 1008 Middletown DE 19709</span>
+                <div className="flex items-center space-x-3 text-gray-30o0 hover:text-cyan-40o0 transition-colors">
+                  <MapPin className="w-4 h-4"  />
+                  <span>364 E Main St STE 10o08 Middletown DE 19709</span>
                 </div>
               </div>
             </motion.div>
@@ -217,7 +217,7 @@ const UltraFuturisticFooter2040: React.FC = () => {
               viewport={{ once: true }}
             >
               <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
-                <span className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full"></span>
+                <span className="w-2 h-2 bg-gradient-to-r from-cyan-40o0 to-purple-50o0 rounded-full"></span>
                 {section.title}
               </h4>
               <ul className="space-y-3">
@@ -225,7 +225,7 @@ const UltraFuturisticFooter2040: React.FC = () => {
                   <li key={link.name}>
                     <Link 
                       href={link.href}
-                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 hover:translate-x-1 transform inline-block"
+                      className="text-gray-40o0 hover:text-cyan-40o0 transition-colors duration-20o0 hover:translate-x-1 transform inline-block"
                     >
                       {link.name}
                     </Link>
@@ -239,12 +239,12 @@ const UltraFuturisticFooter2040: React.FC = () => {
         {/* Enhanced Divider */}
         <div className="relative py-8">
           <div className="absolute inset-0 flex items-center">
-            <div className="w-full border-t border-gradient-to-r from-transparent via-cyan-500/20 to-transparent"></div>
+            <div className="w-full border-t border-gradient-to-r from-transparent via-cyan-50o0/20 to-transparent"></div>
           </div>
           <div className="relative flex justify-center">
             <div className="px-4 bg-black">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full flex items-center justify-center">
-                <Sparkles className="w-6 h-6 text-cyan-400" />
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 border border-cyan-40o0/30 rounded-full flex items-center justify-center">
+                <Sparkles className="w-6 h-6 text-cyan-40o0"  />
               </div>
             </div>
           </div>
@@ -258,7 +258,7 @@ const UltraFuturisticFooter2040: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-gray-400 text-sm"
+            className="text-gray-40o0 text-sm"
           >
             <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
             <p className="mt-1">Pioneering the future of technology.</p>
@@ -278,7 +278,7 @@ const UltraFuturisticFooter2040: React.FC = () => {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-lg flex items-center justify-center text-lg hover:border-cyan-400/60 hover:scale-110 transition-all duration-300"
+                className="w-10 h-10 bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 border border-cyan-40o0/30 rounded-lg flex items-center justify-center text-lg hover:border-cyan-40o0/60 hover:scale-110 transition-all duration-30o0"
                 title={social.name}
               >
                 {social.icon}
@@ -295,13 +295,13 @@ const UltraFuturisticFooter2040: React.FC = () => {
             className="flex flex-col space-y-3 lg:items-end"
           >
             <Link href="/contact">
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center space-x-2">
+              <button className="px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 flex items-center space-x-2">
                 <span>Get Started</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4"  />
               </button>
             </Link>
             <Link href="/support">
-              <button className="px-6 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300">
+              <button className="px-6 py-3 border border-cyan-40o0 text-cyan-40o0 font-semibold rounded-lg hover:bg-cyan-40o0 hover:text-black transition-all duration-30o0">
                 Get Support
               </button>
             </Link>
@@ -314,19 +314,19 @@ const UltraFuturisticFooter2040: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           viewport={{ once: true }}
-          className="mt-12 pt-8 border-t border-gray-800"
+          className="mt-12 pt-8 border-t border-gray-80o0"
         >
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex flex-wrap justify-center space-x-6 text-sm text-gray-400">
-              <Link href="/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link>
-              <Link href="/terms" className="hover:text-cyan-400 transition-colors">Terms of Service</Link>
-              <Link href="/security" className="hover:text-cyan-400 transition-colors">Security</Link>
-              <Link href="/compliance" className="hover:text-cyan-400 transition-colors">Compliance</Link>
-              <Link href="/accessibility" className="hover:text-cyan-400 transition-colors">Accessibility</Link>
+            <div className="flex flex-wrap justify-center space-x-6 text-sm text-gray-40o0">
+              <Link href="/privacy" className="hover:text-cyan-40o0 transition-colors">Privacy Policy</Link>
+              <Link href="/terms" className="hover:text-cyan-40o0 transition-colors">Terms of Service</Link>
+              <Link href="/security" className="hover:text-cyan-40o0 transition-colors">Security</Link>
+              <Link href="/compliance" className="hover:text-cyan-40o0 transition-colors">Compliance</Link>
+              <Link href="/accessibility" className="hover:text-cyan-40o0 transition-colors">Accessibility</Link>
             </div>
             
-            <div className="flex items-center space-x-2 text-gray-400 text-sm">
-              <Heart className="w-4 h-4 text-red-400" />
+            <div className="flex items-center space-x-2 text-gray-40o0 text-sm">
+              <Heart className="w-4 h-4 text-red-40o0"  />
               <span>Built with innovation and care</span>
             </div>
           </div>
@@ -334,8 +334,8 @@ const UltraFuturisticFooter2040: React.FC = () => {
       </div>
 
       {/* Floating Elements */}
-      <div className="absolute bottom-4 left-4 w-8 h-8 border border-cyan-400/20 rounded-full animate-pulse"></div>
-      <div className="absolute bottom-8 right-8 w-6 h-6 border border-purple-400/20 rounded-lg animate-pulse delay-1000"></div>
+      <div className="absolute bottom-4 left-4 w-8 h-8 border border-cyan-40o0/20 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-8 right-8 w-6 h-6 border border-purple-40o0/20 rounded-lg animate-pulse delay-10o00"></div>
     </footer>
   );
 }

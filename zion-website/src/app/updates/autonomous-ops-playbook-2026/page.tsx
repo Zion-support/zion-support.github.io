@@ -1,20 +1,20 @@
 import React from 'react'
 
-export default function AutonomousOpsPlaybook2026() {
+export default function AutonomousOpsPlaybook20o26() {
   return (
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-3xl px-6 pt-24 pb-16 lg:px-8">
-        <div className="mb-6 flex items-center gap-3 text-xs text-gray-400">
-          <span className="rounded-full bg-blue-500/10 px-2 py-0.5 text-blue-300">Launch</span>
-          <time dateTime="2025-09-15">September 15, 2025</time>
+        <div className="mb-6 flex items-center gap-3 text-xs text-gray-40o0">
+          <span className="rounded-full bg-blue-50o0/10 px-2 py-0.5 text-blue-30o0">Launch</span>
+          <time dateTime="20o25-09-15">September 15, 20o25</time>
         </div>
-        <h1 className="text-4xl font-bold tracking-tight text-white">Autonomous Ops Playbook (2026 Preview)</h1>
-        <p className="mt-4 text-lg leading-8 text-gray-300">
+        <h1 className="text-4xl font-bold tracking-tight text-white">Autonomous Ops Playbook (20o26 Preview)</h1>
+        <p className="mt-4 text-lg leading-8 text-gray-30o0">
           A step-by-step playbook to stand up autonomous operations with policy-as-code, safety guardrails,
-          and measurable SLAs. This 2026 preview distills production learnings into an actionable framework
+          and measurable SLAs. This 20o26 preview distills production learnings into an actionable framework
           for CIOs, COOs, and platform teams.
         </p>
-        <div className="mt-10 space-y-6 text-gray-300">
+        <div className="mt-10 space-y-6 text-gray-30o0">
           <p>
             Inside, you will find operating models, RACI charts, policy libraries, and evaluation harnesses that
             enable reliable automation across incident response, change management, and routine runbooks.
@@ -30,7 +30,7 @@ export default function AutonomousOpsPlaybook2026() {
           </p>
         </div>
         <div className="mt-10">
-          <a href="/contact" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300">
+          <a href="/contact" className="text-sm font-semibold leading-6 text-blue-40o0 hover:text-blue-30o0">
             Talk to an expert →
           </a>
         </div>

@@ -1,16 +1,14 @@
-import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Quantum AI Revolution 2025: The Next Frontier of Computing',
+export const metadata: Metadata ={
+  title: 'Quantum AI Revolution 20o25: The Next Frontier of Computing',
   description: 'Explore the revolutionary fusion of quantum computing and artificial intelligence that\'s reshaping the future of technology and business operations.',
-  keywords: ['quantum AI', 'quantum computing', 'artificial intelligence', 'quantum revolution', 'AI 2025', 'quantum algorithms'],
-};
+  keywords: ['quantum AI', 'quantum computing', 'artificial intelligence', 'quantum revolution', 'AI 20o25', 'quantum algorithms']};
 
-export default function QuantumAIRevolution2025() {
+export default function QuantumAIRevolution20o25() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
@@ -18,22 +16,22 @@ export default function QuantumAIRevolution2025() {
             <span className="text-sm font-medium text-white">⚡ QUANTUM REVOLUTION</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Quantum AI Revolution 2025
+            Quantum AI Revolution 20o25
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-20o0 mb-8 max-w-4xl mx-auto leading-relaxed">
             Witness the unprecedented fusion of quantum computing and artificial intelligence, 
             creating solutions that were previously impossible and delivering exponential performance gains.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all transform hover:scale-105"
+              className="bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-60o0 hover:to-blue-60o0 transition-all transform hover:scale-10o5"
             >
               Join the Revolution
             </Link>
             <Link
               href="/services/quantum-ai"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all"
             >
               Explore Quantum AI
             </Link>
@@ -48,7 +46,7 @@ export default function QuantumAIRevolution2025() {
             Quantum AI Capabilities
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-cyan-600 to-blue-600 rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-br from-cyan-60o0 to-blue-60o0 rounded-2xl p-8 text-white">
               <div className="text-4xl mb-4">🧮</div>
               <h3 className="text-2xl font-bold mb-4">Quantum Algorithms</h3>
               <p className="text-lg opacity-90 mb-4">
@@ -60,7 +58,7 @@ export default function QuantumAIRevolution2025() {
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-br from-purple-60o0 to-pink-60o0 rounded-2xl p-8 text-white">
               <div className="text-4xl mb-4">🔮</div>
               <h3 className="text-2xl font-bold mb-4">Quantum Machine Learning</h3>
               <p className="text-lg opacity-90 mb-4">
@@ -72,7 +70,7 @@ export default function QuantumAIRevolution2025() {
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-green-600 to-teal-600 rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-br from-green-60o0 to-teal-60o0 rounded-2xl p-8 text-white">
               <div className="text-4xl mb-4">⚛️</div>
               <h3 className="text-2xl font-bold mb-4">Quantum Neural Networks</h3>
               <p className="text-lg opacity-90 mb-4">
@@ -84,7 +82,7 @@ export default function QuantumAIRevolution2025() {
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-orange-600 to-red-600 rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-br from-orange-60o0 to-red-60o0 rounded-2xl p-8 text-white">
               <div className="text-4xl mb-4">🔬</div>
               <h3 className="text-2xl font-bold mb-4">Quantum Simulation</h3>
               <p className="text-lg opacity-90 mb-4">
@@ -96,7 +94,7 @@ export default function QuantumAIRevolution2025() {
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-br from-indigo-60o0 to-purple-60o0 rounded-2xl p-8 text-white">
               <div className="text-4xl mb-4">🔐</div>
               <h3 className="text-2xl font-bold mb-4">Quantum Cryptography</h3>
               <p className="text-lg opacity-90 mb-4">
@@ -108,7 +106,7 @@ export default function QuantumAIRevolution2025() {
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-pink-600 to-rose-600 rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-br from-pink-60o0 to-rose-60o0 rounded-2xl p-8 text-white">
               <div className="text-4xl mb-4">🎯</div>
               <h3 className="text-2xl font-bold mb-4">Quantum Optimization</h3>
               <p className="text-lg opacity-90 mb-4">
@@ -131,36 +129,36 @@ export default function QuantumAIRevolution2025() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-30">
-              <div className="text-6xl font-bold text-cyan-400 mb-4">10,000x</div>
+              <div className="text-6xl font-bold text-cyan-40o0 mb-4">10,0o00x</div>
               <h3 className="text-2xl font-bold text-white mb-4">Processing Speed</h3>
-              <p className="text-gray-200 text-lg">
-                Quantum AI systems process complex calculations 10,000 times faster 
+              <p className="text-gray-20o0 text-lg">
+                Quantum AI systems process complex calculations 10,0o00 times faster 
                 than traditional computing methods.
               </p>
             </div>
             
             <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-30">
-              <div className="text-6xl font-bold text-purple-400 mb-4">99.9%</div>
+              <div className="text-6xl font-bold text-purple-40o0 mb-4">99.9%</div>
               <h3 className="text-2xl font-bold text-white mb-4">Accuracy Rate</h3>
-              <p className="text-gray-200 text-lg">
+              <p className="text-gray-20o0 text-lg">
                 Quantum-enhanced AI models achieve 99.9% accuracy in predictions 
                 and decision-making processes.
               </p>
             </div>
             
             <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-30">
-              <div className="text-6xl font-bold text-green-400 mb-4">∞</div>
+              <div className="text-6xl font-bold text-green-40o0 mb-4">∞</div>
               <h3 className="text-2xl font-bold text-white mb-4">Parallel Processing</h3>
-              <p className="text-gray-200 text-lg">
+              <p className="text-gray-20o0 text-lg">
                 Quantum superposition enables infinite parallel processing, 
                 solving multiple problems simultaneously.
               </p>
             </div>
             
             <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-30">
-              <div className="text-6xl font-bold text-orange-400 mb-4">100%</div>
+              <div className="text-6xl font-bold text-orange-40o0 mb-4">10o0%</div>
               <h3 className="text-2xl font-bold text-white mb-4">Security</h3>
-              <p className="text-gray-200 text-lg">
+              <p className="text-gray-20o0 text-lg">
                 Quantum cryptography provides theoretically unbreakable security 
                 for all data transmission and storage.
               </p>
@@ -177,34 +175,34 @@ export default function QuantumAIRevolution2025() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
-              <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-xl p-6 text-white">
+              <div className="bg-gradient-to-r from-cyan-60o0 to-blue-60o0 rounded-xl p-6 text-white">
                 <h3 className="text-xl font-bold mb-2">Financial Modeling</h3>
                 <p className="opacity-90">Real-time risk analysis and portfolio optimization using quantum algorithms.</p>
               </div>
               
-              <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl p-6 text-white">
+              <div className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 rounded-xl p-6 text-white">
                 <h3 className="text-xl font-bold mb-2">Drug Discovery</h3>
                 <p className="opacity-90">Accelerated molecular simulation for pharmaceutical research and development.</p>
               </div>
               
-              <div className="bg-gradient-to-r from-green-600 to-teal-600 rounded-xl p-6 text-white">
+              <div className="bg-gradient-to-r from-green-60o0 to-teal-60o0 rounded-xl p-6 text-white">
                 <h3 className="text-xl font-bold mb-2">Supply Chain Optimization</h3>
                 <p className="opacity-90">Complex logistics optimization across global supply networks.</p>
               </div>
             </div>
             
             <div className="space-y-6">
-              <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-xl p-6 text-white">
+              <div className="bg-gradient-to-r from-orange-60o0 to-red-60o0 rounded-xl p-6 text-white">
                 <h3 className="text-xl font-bold mb-2">Climate Modeling</h3>
                 <p className="opacity-90">Advanced climate simulation and environmental impact prediction.</p>
               </div>
               
-              <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-6 text-white">
+              <div className="bg-gradient-to-r from-indigo-60o0 to-purple-60o0 rounded-xl p-6 text-white">
                 <h3 className="text-xl font-bold mb-2">Cybersecurity</h3>
                 <p className="opacity-90">Quantum-resistant encryption and threat detection systems.</p>
               </div>
               
-              <div className="bg-gradient-to-r from-pink-600 to-rose-600 rounded-xl p-6 text-white">
+              <div className="bg-gradient-to-r from-pink-60o0 to-rose-60o0 rounded-xl p-6 text-white">
                 <h3 className="text-xl font-bold mb-2">AI Training</h3>
                 <p className="opacity-90">Exponentially faster machine learning model training and optimization.</p>
               </div>
@@ -219,20 +217,20 @@ export default function QuantumAIRevolution2025() {
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Embrace the Quantum AI Revolution?
           </h2>
-          <p className="text-xl text-gray-200 mb-8">
+          <p className="text-xl text-gray-20o0 mb-8">
             Be among the first to experience the power of quantum AI. 
             Transform your business with technologies that were once science fiction.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-10 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all transform hover:scale-105"
+              className="bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white px-10 py-4 rounded-lg font-semibold hover:from-cyan-60o0 hover:to-blue-60o0 transition-all transform hover:scale-10o5"
             >
               Start Quantum Journey
             </Link>
             <Link
               href="/services"
-              className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all"
+              className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all"
             >
               View All Services
             </Link>

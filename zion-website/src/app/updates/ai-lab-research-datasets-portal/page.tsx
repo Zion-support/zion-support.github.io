@@ -5,14 +5,14 @@ export default function AILabResearchDatasetsPortalPage() {
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-4xl px-6 py-24 sm:py-32 lg:px-8">
         <header className="mb-10">
-          <div className="flex items-center gap-3 text-xs text-gray-400">
-            <span className="rounded-full bg-cyan-500/10 px-2 py-0.5 text-cyan-300">Report</span>
-            <time dateTime="2025-09-15">September 15, 2025</time>
+          <div className="flex items-center gap-3 text-xs text-gray-40o0">
+            <span className="rounded-full bg-cyan-50o0/10 px-2 py-0.5 text-cyan-30o0">Report</span>
+            <time dateTime="20o25-09-15">September 15, 20o25</time>
           </div>
           <h1 className="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl">
             AI Lab Research Datasets Portal
           </h1>
-          <p className="mt-4 text-lg leading-8 text-gray-300 max-w-2xl">
+          <p className="mt-4 text-lg leading-8 text-gray-30o0 max-w-2xl">
             Curated, enterprise-ready datasets with licenses, schemas, and quality metrics for rapid prototyping.
           </p>
         </header>
@@ -34,7 +34,6 @@ export default function AILabResearchDatasetsPortalPage() {
     </div>
   )
 }
-
 
 // duplicate default export removed
 

@@ -29,10 +29,10 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-purple-50o0 to-blue-50o0 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">Z</span>
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              <span className="text-xl font-bold bg-gradient-to-r from-purple-40o0 to-blue-40o0 bg-clip-text text-transparent">
                 Zion Tech Group
               </span>
             </Link>
@@ -43,7 +43,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+                className="text-gray-30o0 hover:text-white transition-colors duration-20o0 font-medium"
               >
                 {item.name}
               </Link>
@@ -51,19 +51,19 @@ export default function Header() {
             
             {/* Services Dropdown */}
             <div className="relative group">
-              <button className="text-gray-300 hover:text-white transition-colors duration-200 font-medium flex items-center">
+              <button className="text-gray-30o0 hover:text-white transition-colors duration-20o0 font-medium flex items-center">
                 Services
                 <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />
                 </svg>
               </button>
-              <div className="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-md border border-white/10 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-md border border-white/10 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-10o0 group-hover:visible transition-all duration-20o0">
                 <div className="p-4 grid grid-cols-1 gap-2">
                   {services.map((service) => (
                     <Link
                       key={service.name}
                       href={service.href}
-                      className="text-gray-300 hover:text-white p-2 rounded hover:bg-white/5 transition-colors duration-200"
+                      className="text-gray-30o0 hover:text-white p-2 rounded hover:bg-white/5 transition-colors duration-20o0"
                     >
                       {service.name}
                     </Link>
@@ -76,7 +76,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105"
+              className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 hover:from-purple-70o0 hover:to-blue-70o0 text-white px-6 py-2 rounded-lg font-medium transition-all duration-20o0 transform hover:scale-10o5"
             >
               Get Started
             </Link>
@@ -84,13 +84,13 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10"
+            className="lg:hidden p-2 rounded-md text-gray-40o0 hover:text-white hover:bg-white/10"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"  />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16"  />
               )}
             </svg>
           </button>
@@ -103,19 +103,19 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded-md transition-colors duration-200"
+                  className="block px-3 py-2 text-gray-30o0 hover:text-white hover:bg-white/5 rounded-md transition-colors duration-20o0"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <div className="text-gray-400 text-sm font-medium mb-2">Services</div>
+                <div className="text-gray-40o0 text-sm font-medium mb-2">Services</div>
                 {services.map((service) => (
                   <Link
                     key={service.name}
                     href={service.href}
-                    className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded-md transition-colors duration-200"
+                    className="block px-3 py-2 text-gray-30o0 hover:text-white hover:bg-white/5 rounded-md transition-colors duration-20o0"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {service.name}
@@ -125,7 +125,7 @@ export default function Header() {
               <div className="pt-4">
                 <Link
                   href="/contact"
-                  className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-medium"
+                  className="block w-full text-center bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-6 py-3 rounded-lg font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Get Started

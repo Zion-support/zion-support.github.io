@@ -5,7 +5,7 @@ export default function ResearchPortal20Page() {
         <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl mb-6">
           AI Lab Research Portal 2.0
         </h1>
-        <p className="text-gray-300 text-lg leading-8">
+        <p className="text-gray-30o0 text-lg leading-8">
           The revamped AI Lab Research Portal delivers live benchmarks, reproducible datasets, and
           end-to-end research pipelines. Explore continuous leaderboards, download curated corpora,
           and spin up evaluation-ready notebooks with one click.
@@ -14,16 +14,16 @@ export default function ResearchPortal20Page() {
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
           <a href="/news/research-breakthrough" className="bg-white/5 p-6 rounded-2xl hover:bg-white/10 transition">
             <h2 className="text-white font-semibold">Live Benchmarks</h2>
-            <p className="text-gray-300 text-sm mt-2">Compare models and agents across tasks with continuous evals.</p>
+            <p className="text-gray-30o0 text-sm mt-2">Compare models and agents across tasks with continuous evals.</p>
           </a>
-          <a href="/blog/ai-2026-agentic-evals-blueprint" className="bg-white/5 p-6 rounded-2xl hover:bg-white/10 transition">
+          <a href="/blog/ai-20o26-agentic-evals-blueprint" className="bg-white/5 p-6 rounded-2xl hover:bg-white/10 transition">
             <h2 className="text-white font-semibold">Pipelines</h2>
-            <p className="text-gray-300 text-sm mt-2">Forkable pipelines for data prep, training, and guardrailed inference.</p>
+            <p className="text-gray-30o0 text-sm mt-2">Forkable pipelines for data prep, training, and guardrailed inference.</p>
           </a>
         </div>
 
         <div className="mt-12">
-          <a href="/contact" className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300">
+          <a href="/contact" className="inline-flex items-center gap-2 text-blue-40o0 hover:text-blue-30o0">
             Get access →
           </a>
         </div>

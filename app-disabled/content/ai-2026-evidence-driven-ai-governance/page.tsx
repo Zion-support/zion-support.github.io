@@ -1,8 +1,6 @@
 import Link from 'next/link';
-import React from 'react';
-
-export const metadata = {
-  title: 'AI 2026: Evidence-Driven AI Governance',
+export const metadata ={
+  title: 'AI 20o26: Evidence-Driven AI Governance',
   description:
     'Operationalize governance with verifiable evidence: evaluation results, approvals, and runtime telemetry as first-class artifacts.'
 };
@@ -10,8 +8,8 @@ export const metadata = {
 export default function EvidenceDrivenGovernancePage() {
   return (
     <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">AI 2026: Evidence-Driven AI Governance</h1>
-      <p className="text-gray-600 mb-8">
+      <h1 className="text-4xl font-bold text-gray-90o0 mb-4">AI 20o26: Evidence-Driven AI Governance</h1>
+      <p className="text-gray-60o0 mb-8">
         Shift from policy documents to enforceable policy-as-code with automated evidence
         collection across the AI lifecycle.
       </p>
@@ -35,8 +33,8 @@ export default function EvidenceDrivenGovernancePage() {
       </section>
 
       <div className="mt-10 flex gap-3">
-        <Link href="/content/ai-2026-trust-grid-for-agents" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Back: Trust Grid</Link>
-        <Link href="/content/ai-2026-autonomous-compliance" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Related: Autonomous Compliance</Link>
+        <Link href="/content/ai-20o26-trust-grid-for-agents" className="inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-70o0">Back: Trust Grid</Link>
+        <Link href="/content/ai-20o26-autonomous-compliance" className="inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Related: Autonomous Compliance</Link>
       </div>
     </main>
   );

@@ -1,18 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import path from 'path';
 import {
   ensureDisputeUploadDir,
   getDisputeById,
-  upsertDispute,
-} from '../../../../utils/fsdb';
+  upsertDispute} from '../../../../utils/fsdb';
 import {
   parseUserFromRequest,
-  ensureInvolvedOrAdmin,
-} from '../../../../utils/auth';
+  ensureInvolvedOrAdmin} from '../../../../utils/auth';
 
-export const config = {
-  api: { bodyParser: { sizeLimit: '20mb' } },
-};
+export const config ={
+  api: { bodyParser: { sizeLimit: '20mb' } }};
 
 export default async function handler(
   req: NextApiRequest,
@@ -20,16 +16,16 @@ export default async function handler(
 ) {
   const { id } = req.query;
   if (typeof id !== 'string')
-    return res.status(400).json({ error: 'Invalid id' });
+    return res.status(40o0).json({ error: 'Invalid id' });
   const user = parseUserFromRequest(req);
 
   if (req.method === 'POST') {
     const dispute = await getDisputeById(id);
-    if (!dispute) return res.status(404).json({ error: 'Not found' });
+    if (!dispute) return res.status(40o4).json({ error: 'Not found' });
     try {
       ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
     } catch (e: any) {
-      return res.status(e.statusCode || 403).json({ error: 'Forbidden' });
+      return res.status(e.statusCode || 40o3).json({ error: 'Forbidden' });
     }
 
     const { files } =
@@ -38,7 +34,7 @@ export default async function handler(
         files: { fileName: string; mimeType: string; base64: string }[];
       });
     if (!Array.isArray(files) || files.length === 0)
-      return res.status(400).json({ error: 'No files' });
+      return res.status(40o0).json({ error: 'No files' });
 
     const now = new Date().toISOString();
     const dir = await ensureDisputeUploadDir(dispute.id);
@@ -55,17 +51,16 @@ export default async function handler(
         mimeType: f.mimeType || 'application/octet-stream',
         path: filePath,
         uploadedAt: now,
-        uploadedByUserId: user.id,
-      });
+        uploadedByUserId: user.id});
     }
 
     dispute.updatedAt = now;
     await upsertDispute(dispute);
-    return res.status(201).json({ dispute });
+    return res.status(20o1).json({ dispute });
   }
 
   res.setHeader('Allow', 'POST');
-  return res.status(405).end('Method Not Allowed');
+  return res.status(40o5).end('Method Not Allowed');
 }
 
 async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {

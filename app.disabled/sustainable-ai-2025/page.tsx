@@ -1,48 +1,46 @@
-import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
-export const metadata = {
-  title: 'Sustainable AI 2025 - Zion Tech Group',
-  description: 'Green AI solutions achieving 85% carbon reduction and 300% ROI through sustainable technology. Achieve carbon neutrality with AI.',
-  keywords: ['sustainable AI', 'green technology', 'carbon neutral', 'environmental AI', 'climate solutions'],
-};
+export const metadata ={
+  title: 'Sustainable AI 20o25 - Zion Tech Group',
+  description: 'Green AI solutions achieving 85% carbon reduction and 30o0% ROI through sustainable technology. Achieve carbon neutrality with AI.',
+  keywords: ['sustainable AI', 'green technology', 'carbon neutral', 'environmental AI', 'climate solutions']};
 
-export default function SustainableAI2025Page() {
+export default function SustainableAI20o25Page() {
   return (
     <div>
       <SEO
-        title="Sustainable AI 2025 - Zion Tech Group"
-        description="Green AI solutions achieving 85% carbon reduction and 300% ROI through sustainable technology. Achieve carbon neutrality with AI."
+        title="Sustainable AI 20o25 - Zion Tech Group"
+        description="Green AI solutions achieving 85% carbon reduction and 30o0% ROI through sustainable technology. Achieve carbon neutrality with AI."
         keywords="sustainable AI, green technology, carbon neutral, environmental AI, climate solutions"
-        url="/sustainable-ai-2025"
-      />
+        url="/sustainable-ai-20o25"
+       />
       
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-green-900 via-emerald-900 to-teal-900 text-white py-20">
+        <section className="bg-gradient-to-r from-green-90o0 via-emerald-90o0 to-teal-90o0 text-white py-20">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-                <span className="text-sm font-medium">🌱 SUSTAINABLE AI 2025</span>
+                <span className="text-sm font-medium">🌱 SUSTAINABLE AI 20o25</span>
               </div>
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
                 Green AI Revolution
               </h1>
               <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Transform your business with sustainable AI solutions that reduce carbon footprint by 85% 
-                while achieving 300% ROI. Join the green technology revolution and achieve carbon neutrality.
+                while achieving 30o0% ROI. Join the green technology revolution and achieve carbon neutrality.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  className="bg-white text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
                 >
                   Start Your Journey
                 </Link>
                 <Link
-                  href="/blog/ai-2025-sustainable-technology-revolution-complete-guide"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+                  href="/blog/ai-20o25-sustainable-technology-revolution-complete-guide"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors"
                 >
                   Read Complete Guide
                 </Link>
@@ -54,26 +52,26 @@ export default function SustainableAI2025Page() {
         {/* Environmental Impact */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Environmental Impact</h2>
+            <h2 className="text-3xl font-bold text-gray-90o0 mb-12 text-center">Environmental Impact</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-xl shadow-lg text-center">
                 <div className="text-4xl mb-4">🌍</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">85% Carbon Reduction</h3>
-                <p className="text-gray-600">
+                <h3 className="text-2xl font-bold text-gray-90o0 mb-4">85% Carbon Reduction</h3>
+                <p className="text-gray-60o0">
                   Achieve dramatic carbon footprint reduction through energy-efficient AI systems and renewable energy integration.
                 </p>
               </div>
               <div className="bg-white p-8 rounded-xl shadow-lg text-center">
                 <div className="text-4xl mb-4">⚡</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">70% Energy Savings</h3>
-                <p className="text-gray-600">
+                <h3 className="text-2xl font-bold text-gray-90o0 mb-4">70% Energy Savings</h3>
+                <p className="text-gray-60o0">
                   Quantum-inspired optimization algorithms and edge computing reduce energy consumption significantly.
                 </p>
               </div>
               <div className="bg-white p-8 rounded-xl shadow-lg text-center">
                 <div className="text-4xl mb-4">♻️</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">75% Waste Reduction</h3>
-                <p className="text-gray-600">
+                <h3 className="text-2xl font-bold text-gray-90o0 mb-4">75% Waste Reduction</h3>
+                <p className="text-gray-60o0">
                   AI-powered waste management and circular economy integration minimize environmental impact.
                 </p>
               </div>
@@ -84,40 +82,40 @@ export default function SustainableAI2025Page() {
         {/* Solutions */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Sustainable AI Solutions</h2>
+            <h2 className="text-3xl font-bold text-gray-90o0 mb-12 text-center">Sustainable AI Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div className="space-y-8">
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                  <div className="flex-shrink-0 w-12 h-12 bg-green-10o0 rounded-lg flex items-center justify-center">
                     <span className="text-2xl">🔋</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Energy Management AI</h3>
-                    <p className="text-gray-600">
+                    <h3 className="text-xl font-bold text-gray-90o0 mb-2">Energy Management AI</h3>
+                    <p className="text-gray-60o0">
                       Smart grid optimization, predictive energy consumption modeling, and renewable energy integration.
                     </p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-10o0 rounded-lg flex items-center justify-center">
                     <span className="text-2xl">🏭</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Manufacturing Optimization</h3>
-                    <p className="text-gray-600">
+                    <h3 className="text-xl font-bold text-gray-90o0 mb-2">Manufacturing Optimization</h3>
+                    <p className="text-gray-60o0">
                       AI-driven production optimization reducing energy consumption by 60% and material waste by 45%.
                     </p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center">
+                  <div className="flex-shrink-0 w-12 h-12 bg-emerald-10o0 rounded-lg flex items-center justify-center">
                     <span className="text-2xl">🚚</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Supply Chain Sustainability</h3>
-                    <p className="text-gray-600">
+                    <h3 className="text-xl font-bold text-gray-90o0 mb-2">Supply Chain Sustainability</h3>
+                    <p className="text-gray-60o0">
                       Logistics optimization reducing transportation emissions by 55% and carbon-neutral packaging solutions.
                     </p>
                   </div>
@@ -125,23 +123,23 @@ export default function SustainableAI2025Page() {
               </div>
               
               <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Implementation Phases</h3>
+                <h3 className="text-2xl font-bold text-gray-90o0 mb-6">Implementation Phases</h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
-                    <span className="text-gray-700">Sustainability Assessment</span>
+                    <div className="w-8 h-8 bg-green-60o0 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
+                    <span className="text-gray-70o0">Sustainability Assessment</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
-                    <span className="text-gray-700">Green AI Integration</span>
+                    <div className="w-8 h-8 bg-green-60o0 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
+                    <span className="text-gray-70o0">Green AI Integration</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
-                    <span className="text-gray-700">Advanced Sustainability</span>
+                    <div className="w-8 h-8 bg-green-60o0 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
+                    <span className="text-gray-70o0">Advanced Sustainability</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
-                    <span className="text-gray-700">Carbon Neutrality</span>
+                    <div className="w-8 h-8 bg-green-60o0 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
+                    <span className="text-gray-70o0">Carbon Neutrality</span>
                   </div>
                 </div>
               </div>
@@ -155,45 +153,45 @@ export default function SustainableAI2025Page() {
             <div className="bg-white rounded-2xl shadow-lg p-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Fortune 500 Success Story</h2>
-                  <p className="text-gray-600 mb-6">
-                    Global Manufacturing Corporation achieved 85% carbon footprint reduction and 300% ROI 
+                  <h2 className="text-3xl font-bold text-gray-90o0 mb-6">Fortune 50o0 Success Story</h2>
+                  <p className="text-gray-60o0 mb-6">
+                    Global Manufacturing Corporation achieved 85% carbon footprint reduction and 30o0% ROI 
                     through comprehensive sustainable AI transformation.
                   </p>
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div>
-                      <div className="text-2xl font-bold text-green-600">85%</div>
-                      <div className="text-sm text-gray-600">Carbon Reduction</div>
+                      <div className="text-2xl font-bold text-green-60o0">85%</div>
+                      <div className="text-sm text-gray-60o0">Carbon Reduction</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-blue-600">300%</div>
-                      <div className="text-sm text-gray-600">ROI Achievement</div>
+                      <div className="text-2xl font-bold text-blue-60o0">30o0%</div>
+                      <div className="text-sm text-gray-60o0">ROI Achievement</div>
                     </div>
                   </div>
                   <Link
-                    href="/case-studies/fortune-500-sustainable-ai-transformation-2025-ultimate-success"
-                    className="inline-flex items-center text-green-600 font-semibold hover:text-green-700"
+                    href="/case-studies/fortune-50o0-sustainable-ai-transformation-20o25-ultimate-success"
+                    className="inline-flex items-center text-green-60o0 font-semibold hover:text-green-70o0"
                   >
                     Read Full Case Study →
                   </Link>
                 </div>
-                <div className="bg-gradient-to-r from-green-100 to-emerald-100 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Key Achievements</h3>
-                  <ul className="space-y-2 text-gray-700">
+                <div className="bg-gradient-to-r from-green-10o0 to-emerald-10o0 rounded-xl p-6">
+                  <h3 className="text-xl font-bold text-gray-90o0 mb-4">Key Achievements</h3>
+                  <ul className="space-y-2 text-gray-70o0">
                     <li className="flex items-center space-x-2">
-                      <span className="text-green-500">✓</span>
-                      <span>100% Carbon Neutrality</span>
+                      <span className="text-green-50o0">✓</span>
+                      <span>10o0% Carbon Neutrality</span>
                     </li>
                     <li className="flex items-center space-x-2">
-                      <span className="text-green-500">✓</span>
+                      <span className="text-green-50o0">✓</span>
                       <span>$28M Annual Energy Savings</span>
                     </li>
                     <li className="flex items-center space-x-2">
-                      <span className="text-green-500">✓</span>
+                      <span className="text-green-50o0">✓</span>
                       <span>Industry Leadership Recognition</span>
                     </li>
                     <li className="flex items-center space-x-2">
-                      <span className="text-green-500">✓</span>
+                      <span className="text-green-50o0">✓</span>
                       <span>95% Employee Satisfaction</span>
                     </li>
                   </ul>
@@ -206,30 +204,30 @@ export default function SustainableAI2025Page() {
         {/* ROI Metrics */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Business Benefits</h2>
+            <h2 className="text-3xl font-bold text-gray-90o0 mb-12 text-center">Business Benefits</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-                <div className="text-3xl font-bold text-green-600 mb-2">40%</div>
-                <div className="text-gray-600">Energy Cost Reduction</div>
+                <div className="text-3xl font-bold text-green-60o0 mb-2">40%</div>
+                <div className="text-gray-60o0">Energy Cost Reduction</div>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">25%</div>
-                <div className="text-gray-600">Operational Cost Savings</div>
+                <div className="text-3xl font-bold text-blue-60o0 mb-2">25%</div>
+                <div className="text-gray-60o0">Operational Cost Savings</div>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-                <div className="text-3xl font-bold text-purple-600 mb-2">90%</div>
-                <div className="text-gray-600">Brand Perception Improvement</div>
+                <div className="text-3xl font-bold text-purple-60o0 mb-2">90%</div>
+                <div className="text-gray-60o0">Brand Perception Improvement</div>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-                <div className="text-3xl font-bold text-orange-600 mb-2">60%</div>
-                <div className="text-gray-600">Investor ESG Rating</div>
+                <div className="text-3xl font-bold text-orange-60o0 mb-2">60%</div>
+                <div className="text-gray-60o0">Investor ESG Rating</div>
               </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+        <section className="py-16 bg-gradient-to-r from-green-60o0 to-emerald-60o0 text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to Achieve Carbon Neutrality?</h2>
             <p className="text-xl mb-8 opacity-90">
@@ -239,13 +237,13 @@ export default function SustainableAI2025Page() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="bg-white text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
               >
                 Start Transformation
               </Link>
               <Link
                 href="/services"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors"
               >
                 View All Services
               </Link>

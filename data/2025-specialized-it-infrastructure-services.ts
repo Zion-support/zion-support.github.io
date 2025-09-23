@@ -37,13 +37,13 @@ export interface SpecializedITInfrastructureService {
   rating: number;
   reviews: number;
 }
-const contact = {
-  mobile: '+1 302 464 0950',
+const contact ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-export const specializedITInfrastructureServices2025: SpecializedITInfrastructureService[] = [
+export const specializedITInfrastructureServices20o25: SpecializedITInfrastructureService[] = [
   {
     id: 'edge-computing-optimization-platform',
     name: 'Edge Computing Optimization Platform',
@@ -65,10 +65,10 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     ],
     popular: true,
     icon: '🌐',
-    color: 'from-blue-600 to-indigo-600',
-    textColor: 'text-blue-400',
+    color: 'from-blue-60o0 to-indigo-60o0',
+    textColor: 'text-blue-40o0',
     link: 'https://ziontechgroup.com/edge-computing-optimization',
-    marketPosition: 'Competes with AWS Outposts ($1,000/month), Azure Stack Edge ($500/month). Our advantage: 40% cost reduction with 60% performance improvement.',
+    marketPosition: 'Competes with AWS Outposts ($1,0o00/month), Azure Stack Edge ($50o0/month). Our advantage: 40% cost reduction with 60% performance improvement.',
     targetAudience: 'Cloud providers, IoT companies, Manufacturing, Healthcare, Financial services',
     trialDays: 30,
     setupTime: '3-4 weeks',
@@ -80,11 +80,11 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     roi: 'Reduce edge computing costs by 40% and improve performance by 60%',
     competitors: ['AWS Outposts, Azure Stack Edge, Google Anthos, VMware Edge'],
     marketSize: '$8.5B edge computing market',
-    growthRate: '105% annual growth',
+    growthRate: '10o5% annual growth',
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Edge computing optimization platform with intelligent workload distribution and resource management',
-    launchDate: '2025-02-25',
+    launchDate: '20o25-0o2-25',
     customers: 78,
     rating: 4.7,
     reviews: 56
@@ -110,8 +110,8 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     ],
     popular: false,
     icon: '🔮',
-    color: 'from-purple-600 to-pink-600',
-    textColor: 'text-purple-400',
+    color: 'from-purple-60o0 to-pink-60o0',
+    textColor: 'text-purple-40o0',
     link: 'https://ziontechgroup.com/quantum-ready-network',
     marketPosition: 'First-to-market quantum-ready network infrastructure. No direct competitors yet in quantum-ready networking.',
     targetAudience: 'Government agencies, Financial institutions, Healthcare, Defense contractors, Research institutions',
@@ -125,11 +125,11 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     roi: 'Critical infrastructure organizations report priceless value for future security',
     competitors: ['No direct competitors yet', 'Traditional network vendors'],
     marketSize: '$2.1B quantum networking market',
-    growthRate: '200% annual growth',
+    growthRate: '20o0% annual growth',
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Quantum-ready network infrastructure with quantum-resistant encryption and advanced routing',
-    launchDate: '2025-03-01',
+    launchDate: '20o25-0o3-0o1',
     customers: 23,
     rating: 4.9,
     reviews: 18
@@ -155,8 +155,8 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     ],
     popular: true,
     icon: '⚡',
-    color: 'from-green-600 to-emerald-600',
-    textColor: 'text-green-400',
+    color: 'from-green-60o0 to-emerald-60o0',
+    textColor: 'text-green-40o0',
     link: 'https://ziontechgroup.com/autonomous-devops',
     marketPosition: 'Competes with GitLab ($99/user/month), Jenkins (free), CircleCI ($50/month). Our advantage: 90% automation with 70% faster deployments.',
     targetAudience: 'DevOps teams, Software companies, IT departments, Cloud providers, Startups',
@@ -174,7 +174,7 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Autonomous DevOps automation platform with AI-powered workflow management and optimization',
-    launchDate: '2025-02-28',
+    launchDate: '20o25-0o2-28',
     customers: 134,
     rating: 4.8,
     reviews: 89
@@ -200,8 +200,8 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     ],
     popular: true,
     icon: '🛡️',
-    color: 'from-red-600 to-orange-600',
-    textColor: 'text-red-400',
+    color: 'from-red-60o0 to-orange-60o0',
+    textColor: 'text-red-40o0',
     link: 'https://ziontechgroup.com/zero-trust-security',
     marketPosition: 'Competes with Okta ($2/month/user), Palo Alto ($50/month), CrowdStrike ($8/month). Our advantage: 99.9% threat detection with zero false positives.',
     targetAudience: 'Enterprise companies, Government agencies, Financial institutions, Healthcare, Educational institutions',
@@ -219,7 +219,7 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Zero trust security framework with continuous verification and adaptive access control',
-    launchDate: '2025-03-05',
+    launchDate: '20o25-0o3-0o5',
     customers: 89,
     rating: 4.9,
     reviews: 67
@@ -245,10 +245,10 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     ],
     popular: false,
     icon: '🏢',
-    color: 'from-gray-600 to-slate-600',
-    textColor: 'text-gray-400',
+    color: 'from-gray-60o0 to-slate-60o0',
+    textColor: 'text-gray-40o0',
     link: 'https://ziontechgroup.com/intelligent-data-center',
-    marketPosition: 'Competes with Schneider Electric ($1,000/month), Eaton ($800/month), Vertiv ($1,200/month). Our advantage: 35% energy cost reduction with AI optimization.',
+    marketPosition: 'Competes with Schneider Electric ($1,0o00/month), Eaton ($80o0/month), Vertiv ($1,20o0/month). Our advantage: 35% energy cost reduction with AI optimization.',
     targetAudience: 'Data center operators, Cloud providers, Enterprise companies, Colocation providers, Hosting companies',
     trialDays: 30,
     setupTime: '5-7 weeks',
@@ -264,7 +264,7 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'AI-powered data center management platform with energy optimization and performance monitoring',
-    launchDate: '2025-03-10',
+    launchDate: '20o25-0o3-10',
     customers: 56,
     rating: 4.6,
     reviews: 34

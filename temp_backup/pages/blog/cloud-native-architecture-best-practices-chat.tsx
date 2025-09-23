@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function CloudNativeArchitectureBestPracticesChatPage() {
@@ -6,7 +5,7 @@ export default function CloudNativeArchitectureBestPracticesChatPage() {
     <>
       <Head>
         <title>Cloud Native Architecture Best Practices Chat - Zion Tech Group</title>
-        <meta name="description" content="cloud native architecture best practices chat page" />
+        <meta name="description" content="cloud native architecture best practices chat page"  />
       </Head>
       
       <main>

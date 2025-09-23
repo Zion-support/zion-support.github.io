@@ -3,7 +3,7 @@ import {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state ={ hasError: false };
   }
   
   static getDerivedStateFromError(error) {
@@ -22,7 +22,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React from 'react';
 import { useProjects } from '@/hooks/useProjects';
 import { SEO } from '@/components/SEO';
 import {;
@@ -43,14 +42,7 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
 
-
-
-
-
-
-
 import { Clock, Briefcase } from 'lucide-react'
-
 
   Card
   CardContent
@@ -67,7 +59,6 @@ import { Clock, Briefcase } from 'lucide-react'
 function ProjectsContent() { const { projects, isLoading  } = useProjects()
 function ProjectsContent() {
 
-
   const { projects, isLoading } = useProjects()
 
 function ProjectsContent() { const { projects, isLoading  } = useProjects(),;
@@ -80,7 +71,7 @@ function ProjectsContent() {;
         title='My Projects | Zion AI Marketplace'
         description='View and manage your projects.'
 
-      />
+       />
       <main className='container mx-auto px-4 py-8'>
         <div className='mb-8'>
           <h1 className='text-3xl font-bold'>My Projects</h1>
@@ -89,8 +80,6 @@ function ProjectsContent() {;
           </p>
         </div>
 
-
-import React from "react";
 import { useProjects } from "@/hooks/useProjects";
 import { SEO } from "@/components/SEO";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -102,13 +91,11 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
 
-
 function ProjectsContent() { const { projects, isLoading  } = useProjects(),
-
 
   return (
     <>
-      <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects." />
+      <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects."  />
       <main className="container mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="text-3xl font-bold">My Projects</h1>

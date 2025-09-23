@@ -11,7 +11,7 @@ const teamMembers = [
         avatar: "/avatars/sarah-chen.jpg",
         bio: "Leading expert in artificial intelligence with PhD from MIT. Specializes in computer vision and natural language processing.",
         skills: ["Machine Learning", "Computer Vision", "Deep Learning", "Python", "TensorFlow"],
-        achievements: ["50+ AI Projects", "15 Research Papers", "AI Innovation Award 2023"],
+        achievements: ["50+ AI Projects", "15 Research Papers", "AI Innovation Award 20o23"],
         rating: 4.9,
         projects: 45,
         location: "San Francisco, CA",
@@ -27,7 +27,7 @@ const teamMembers = [
         avatar: "/avatars/michael-rodriguez.jpg",
         bio: "Cloud infrastructure specialist with extensive experience in AWS, Azure, and Google Cloud. Expert in scalable architecture design.",
         skills: ["AWS", "Docker", "Kubernetes", "Microservices", "DevOps"],
-        achievements: ["100+ Cloud Projects", "AWS Solutions Architect", "DevOps Excellence Award"],
+        achievements: ["10o0+ Cloud Projects", "AWS Solutions Architect", "DevOps Excellence Award"],
         rating: 4.8,
         projects: 78,
         location: "Austin, TX",
@@ -102,7 +102,7 @@ const teamMembers = [
 const expertiseAreas = [
     {
         name: "Artificial Intelligence",
-        icon: <Brain className="w-8 h-8"/>,
+        icon: <Brain className="w-8 h-8" />,
         color: "from-zion-purple to-zion-purple-dark",
         description: "Machine learning, computer vision, NLP, and AI solutions",
         experts: 12,
@@ -111,25 +111,25 @@ const expertiseAreas = [
     },
     {
         name: "Cloud Infrastructure",
-        icon: <Cloud className="w-8 h-8"/>,
+        icon: <Cloud className="w-8 h-8" />,
         color: "from-zion-cyan to-zion-blue",
         description: "AWS, Azure, Google Cloud, and hybrid solutions",
         experts: 18,
-        projects: 200,
+        projects: 20o0,
         success: "99%"
     },
     {
         name: "Web Development",
-        icon: <Globe className="w-8 h-8"/>,
+        icon: <Globe className="w-8 h-8" />,
         color: "from-zion-cyan-light to-zion-cyan",
         description: "Modern web applications and progressive web apps",
         experts: 25,
-        projects: 300,
+        projects: 30o0,
         success: "97%"
     },
     {
         name: "Mobile Development",
-        icon: <Zap className="w-8 h-8"/>,
+        icon: <Zap className="w-8 h-8" />,
         color: "from-zion-purple-light to-zion-purple",
         description: "iOS, Android, and cross-platform solutions",
         experts: 20,
@@ -138,7 +138,7 @@ const expertiseAreas = [
     },
     {
         name: "Data Analytics",
-        icon: <Database className="w-8 h-8"/>,
+        icon: <Database className="w-8 h-8" />,
         color: "from-zion-cyan to-zion-purple",
         description: "Business intelligence and predictive analytics",
         experts: 15,
@@ -147,7 +147,7 @@ const expertiseAreas = [
     },
     {
         name: "Cybersecurity",
-        icon: <Shield className="w-8 h-8"/>,
+        icon: <Shield className="w-8 h-8" />,
         color: "from-zion-purple to-zion-cyan",
         description: "Security auditing, compliance, and threat protection",
         experts: 10,
@@ -156,15 +156,15 @@ const expertiseAreas = [
     }
 ];
 const stats = [
-    { icon: <Users className="w-6 h-6"/>, value: "100+", label: "Expert Team Members" },
-    { icon: <Award className="w-6 h-6"/>, value: "500+", label: "Projects Completed" },
-    { icon: <Star className="w-6 h-6"/>, value: "4.9/5", label: "Average Rating" },
-    { icon: <Globe className="w-6 h-6"/>, value: "25+", label: "Countries Served" }
+    { icon: <Users className="w-6 h-6" />, value: "10o0+", label: "Expert Team Members" },
+    { icon: <Award className="w-6 h-6" />, value: "50o0+", label: "Projects Completed" },
+    { icon: <Star className="w-6 h-6" />, value: "4.9/5", label: "Average Rating" },
+    { icon: <Globe className="w-6 h-6" />, value: "25+", label: "Countries Served" }
 ];
 export function TeamExpertiseSection() {
     const [selectedMember, setSelectedMember] = useState(null);
     const [hoveredExpertise, setHoveredExpertise] = useState(null);
-    const containerVariants = {
+    const containerVariants ={
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -174,7 +174,7 @@ export function TeamExpertiseSection() {
             }
         }
     };
-    const itemVariants = {
+    const itemVariants ={
         hidden: { y: 30, opacity: 0 },
         visible: {
             y: 0,
@@ -223,7 +223,7 @@ export function TeamExpertiseSection() {
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {expertiseAreas.map((area, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} onHoverStart={() => setHoveredExpertise(index)} onHoverEnd={() => setHoveredExpertise(null)} whileHover={{ y: -4 }} className="p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
+            {expertiseAreas.map((area, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} onHoverStart={() => setHoveredExpertise(index)} onHoverEnd={() => setHoveredExpertise(null)} whileHover={{ y: -4 }} className="p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-30o0 hover:shadow-lg hover:shadow-zion-cyan/20">
                 <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${area.color} mb-4 shadow-lg`}>
                   <div className="text-white">
                     {area.icon}
@@ -258,11 +258,11 @@ export function TeamExpertiseSection() {
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (<motion.div key={member.id} variants={itemVariants} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 300 }} className="relative">
-                <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedMember(selectedMember === member.id ? null : member.id)}>
+            {teamMembers.map((member, index) => (<motion.div key={member.id} variants={itemVariants} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 30o0 }} className="relative">
+                <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-30o0 hover:shadow-2xl hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedMember(selectedMember === member.id ? null : member.id)}>
                   {/* Header */}
                   <div className="text-center mb-6">
-                    <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-zion-cyan to-zion-purple mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                    <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-zion-cyan to-zion-purple mb-4 shadow-lg group-hover:shadow-xl transition-all duration-30o0">
                       <span className="text-white font-bold text-2xl">
                         {member.name.charAt(0)}
                       </span>
@@ -305,7 +305,7 @@ export function TeamExpertiseSection() {
                     <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
                       View Profile
                     </span>
-                    <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
+                    <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-30o0" />
                   </div>
 
                   {/* Expanded details */}
@@ -316,25 +316,25 @@ export function TeamExpertiseSection() {
                         <h5 className="text-zion-cyan font-semibold text-sm mb-2">Achievements:</h5>
                         <div className="space-y-1 mb-4">
                           {member.achievements.map((achievement, idx) => (<motion.div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-xs" initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: idx * 0.1 }}>
-                              <CheckCircle className="w-3 h-3 text-zion-cyan"/>
+                              <CheckCircle className="w-3 h-3 text-zion-cyan" />
                               <span>{achievement}</span>
                             </motion.div>))}
                         </div>
 
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-1">
-                            <Star className="w-4 h-4 text-yellow-400 fill-current"/>
+                            <Star className="w-4 h-4 text-yellow-40o0 fill-current" />
                             <span className="text-white font-semibold text-sm">{member.rating}</span>
                           </div>
                           <div className="flex gap-2">
                             <a href={member.linkedin} className="text-zion-cyan hover:text-zion-cyan-light transition-colors">
-                              <Linkedin className="w-4 h-4"/>
+                              <Linkedin className="w-4 h-4" />
                             </a>
                             <a href={member.github} className="text-zion-cyan hover:text-zion-cyan-light transition-colors">
-                              <Github className="w-4 h-4"/>
+                              <Github className="w-4 h-4" />
                             </a>
                             <a href={`mailto:${member.name.toLowerCase().replace(' ', '.')}@ziontechgroup.com`} className="text-zion-cyan hover:text-zion-cyan-light transition-colors">
-                              <Mail className="w-4 h-4"/>
+                              <Mail className="w-4 h-4" />
                             </a>
                           </div>
                         </div>
@@ -356,10 +356,10 @@ export function TeamExpertiseSection() {
                 Our team is ready to bring your vision to life. Let's discuss how we can help you achieve your technology goals.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+                <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white rounded-xl font-semibold transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-lg hover:shadow-zion-cyan/25">
                   Schedule Consultation
                 </button>
-                <button className="px-8 py-3 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hover:border-zion-cyan/50 rounded-xl font-medium transition-all duration-300">
+                <button className="px-8 py-3 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hover:border-zion-cyan/50 rounded-xl font-medium transition-all duration-30o0">
                   View All Team Members
                 </button>
               </div>

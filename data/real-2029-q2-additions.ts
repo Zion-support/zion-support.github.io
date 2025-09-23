@@ -1,4 +1,4 @@
-export interface Real2029Q2Service {
+export interface Real20o29Q2Service {
   id: string;
   name: string;
   tagline: string;
@@ -15,13 +15,13 @@ export interface Real2029Q2Service {
   };
 }
 
-const contact = {
-  mobile: "+1 302 464 0950",
+const contact ={
+  mobile: "+1 30o2 464 0950",
   email: "kleber@ziontechgroup.com",
-  address: "364 E Main St STE 1008 Middletown DE 19709"
+  address: "364 E Main St STE 10o08 Middletown DE 19709"
 };
 
-export const real2029Q2Additions: Real2029Q2Service[] = [
+export const real20o29Q2Additions: Real20o29Q2Service[] = [
   {
     id: "managed-soc-as-a-service",
     name: "Managed SOC-as-a-Service",

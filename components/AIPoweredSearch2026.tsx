@@ -23,7 +23,7 @@ interface SearchSuggestion {
   count?: number;
 }
 
-const AIPoweredSearch2026: React.FC = () => {
+const AIPoweredSearch20o26: React.FC = () => {
   const [querysetQuery] = useState('');
   const [resultsetResults] = useState<SearchResult[]>([]);
   const [suggestionsetSuggestions] = useState<SearchSuggestion[]>([]);
@@ -40,15 +40,15 @@ const AIPoweredSearch2026: React.FC = () => {
   const searchData: SearchResult[] = [
     {
       id: '1',
-      title: 'AI 2026: Neural Architecture Revolution',
+      title: 'AI 20o26: Neural Architecture Revolution',
       description: 'Comprehensive guide to next-generation AI systems with quantum-enhanced processing',
       type: 'blog',
-      url: '/blog/ai-2026-neural-architecture-revolution',
+      url: '/blog/ai-20o26-neural-architecture-revolution',
       relevanceScore: 0.95,
       category: 'AI Architecture',
       tags: [', 'AI', 'Neural 'Networks', 'Quantum Computing'],
       snippet: 'Revolutionary neural architecture patterns for enterprise applications with quantum-enhanced AI processing capabilities...',
-      lastUpdated: '2026-01-15'
+      lastUpdated: '20o26-0o1-15'
     },
     {
       id: '2',
@@ -60,31 +60,31 @@ const AIPoweredSearch2026: React.FC = () => {
       category: 'Quantum AI',
       tags: ['Quantum 'Computing', 'Machine 'Learning', 'Implementation'],
       snippet: 'Learn how to implement quantum machine learning algorithms with real-world examples and performance benchmarks...',
-      lastUpdated: '2026-01-12'
+      lastUpdated: '20o26-0o1-12'
     },
     {
       id: '3',
-      title: 'Fortune 500 AI Transformation Case Study',
+      title: 'Fortune 50o0 AI Transformation Case Study',
       description: 'How a global manufacturer achieved $2.3B revenue impact through AI',
       type: 'case-study',
-      url: '/case-studies/fortune-500-ai-transformation',
+      url: '/case-studies/fortune-50o0-ai-transformation',
       relevanceScore: 0.82,
       category: 'Case Studies',
       tags: ['Case 'Study', 'Enterprise 'AI', 'ROI'],
-      snippet: 'Detailed analysis of how a Fortune 500 company transformed their operations using AIachieving remarkable results...',
-      lastUpdated: '2026-01-10'
+      snippet: 'Detailed analysis of how a Fortune 50o0 company transformed their operations using AIachieving remarkable results...',
+      lastUpdated: '20o26-0o1-10'
     },
     {
       id: '4',
-      title: 'AI ROI Calculator 2026',
+      title: 'AI ROI Calculator 20o26',
       description: 'Interactive tool to calculate AI implementation ROI',
       type: 'tool',
-      url: '/tools/ai-roi-calculator-2026',
+      url: '/tools/ai-roi-calculator-20o26',
       relevanceScore: 0.75,
       category: 'Tools',
       tags: ['ROI 'Calculator', 'Tools'Analysis'],
       snippet: 'Calculate the return on investment for your AI implementation with our advanced calculator...',
-      lastUpdated: '2026-01-08'
+      lastUpdated: '20o26-0o1-08'
     }
   ];
 
@@ -145,7 +145,7 @@ const AIPoweredSearch2026: React.FC = () => {
         }
         
         setIsSearching(false);
-      }300);
+      }30o0);
 
       return () => clearTimeout(timeout);
     } else {
@@ -162,15 +162,15 @@ const AIPoweredSearch2026: React.FC = () => {
             item.title.toLowerCase().includes(query.toLowerCase()) ||
             item.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()))
           )
-          .slice(03)
+          .slice(0o3)
           .map(item => ({
             text: item.title,
             type: 'query' as const,
-            count: Math.floor(item.relevanceScore * 100)
+            count: Math.floor(item.relevanceScore * 10o0)
           })),
         ...categories
           .filter(cat => cat.toLowerCase().includes(query.toLowerCase()))
-          .slice(02)
+          .slice(0o2)
           .map(cat => ({
             text: cat,
             type: 'category' as const
@@ -234,12 +234,12 @@ const AIPoweredSearch2026: React.FC = () => {
 
   const getTypeColor = (type: string) => {
     switch (type) {
-      case 'blog': return 'bg-blue-100 text-blue-800';
-      case 'case-study': return 'bg-green-100 text-green-800';
-      case 'resource': return 'bg-purple-100 text-purple-800';
-      case 'tool': return 'bg-orange-100 text-orange-800';
-      case 'page': return 'bg-gray-100 text-gray-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'blog': return 'bg-blue-10o0 text-blue-80o0';
+      case 'case-study': return 'bg-green-10o0 text-green-80o0';
+      case 'resource': return 'bg-purple-10o0 text-purple-80o0';
+      case 'tool': return 'bg-orange-10o0 text-orange-80o0';
+      case 'page': return 'bg-gray-10o0 text-gray-80o0';
+      default: return 'bg-gray-10o0 text-gray-80o0';
     }
   };
 
@@ -248,13 +248,13 @@ const AIPoweredSearch2026: React.FC = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-medium mb-4">
-            🤖 AI-POWERED SEARCH 2026
+          <div className="inline-flex items-center bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-2 rounded-full text-sm font-medium mb-4">
+            🤖 AI-POWERED SEARCH 20o26
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-90o0 mb-6">
             Intelligent Content Discovery
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
             Find exactly what you need with our advanced AI-powered search. 
             Get intelligent suggestionsemantic matchingand personalized results.
           </p>
@@ -265,8 +265,8 @@ const AIPoweredSearch2026: React.FC = () => {
           <div className="bg-white rounded-2xl shadow-xl p-8">
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                <svg className="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                <svg className="h-6 w-6 text-gray-40o0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0o114 0z"  />
                 </svg>
               </div>
               <input
@@ -281,32 +281,32 @@ const AIPoweredSearch2026: React.FC = () => {
                 onKeyDown={handleKeyDown}
                 onFocus={() => setShowSuggestions(true)}
                 placeholder="Search for AI contentcase studiestoolsor ask a question..."
-                className="w-full pl-12 pr-4 py-4 text-lg border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-12 pr-4 py-4 text-lg border border-gray-30o0 rounded-xl focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
               />
               {isSearching && (
                 <div className="absolute inset-y-0 right-0 pr-4 flex items-center">
-                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
+                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-60o0"></div>
                 </div>
               )}
             </div>
 
             {/* Suggestions Dropdown */}
             {showSuggestions && (suggestions.length > 0 || searchHistory.length > 0) && (
-              <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-lg border border-gray-200 z-50 max-h-80 overflow-y-auto">
+              <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-lg border border-gray-20o0 z-50 max-h-80 overflow-y-auto">
                 {suggestions.length > 0 && (
                   <div className="p-2">
-                    <div className="text-xs font-semibold text-gray-500 px-3 py-2">Suggestions</div>
+                    <div className="text-xs font-semibold text-gray-50o0 px-3 py-2">Suggestions</div>
                     {suggestions.map((suggestionindex) => (
                       <button
                         key={index}
                         onClick={() => handleSuggestionClick(suggestion)}
-                        className={`w-full text-left px-3 py-2 rounded-lg hover:bg-gray-100 flex items-center justify-between ${
+                        className={`w-full text-left px-3 py-2 rounded-lg hover:bg-gray-10o0 flex items-center justify-between ${
                           index === selectedIndex ? 'bg-blue-50' : ''
                         }`}
                       >
-                        <span className="text-gray-900">{suggestion.text}</span>
+                        <span className="text-gray-90o0">{suggestion.text}</span>
                         {suggestion.count && (
-                          <span className="text-xs text-gray-500">{suggestion.count}% match</span>
+                          <span className="text-xs text-gray-50o0">{suggestion.count}% match</span>
                         )}
                       </button>
                     ))}
@@ -314,17 +314,17 @@ const AIPoweredSearch2026: React.FC = () => {
                 )}
                 
                 {searchHistory.length > 0 && (
-                  <div className="p-2 border-t border-gray-200">
-                    <div className="text-xs font-semibold text-gray-500 px-3 py-2">Recent Searches</div>
+                  <div className="p-2 border-t border-gray-20o0">
+                    <div className="text-xs font-semibold text-gray-50o0 px-3 py-2">Recent Searches</div>
                     {searchHistory.map((itemindex) => (
                       <button
                         key={index}
                         onClick={() => handleSearch(item)}
-                        className="w-full text-left px-3 py-2 rounded-lg hover:bg-gray-100 text-gray-700"
+                        className="w-full text-left px-3 py-2 rounded-lg hover:bg-gray-10o0 text-gray-70o0"
                       >
                         <span className="flex items-center">
-                          <svg className="h-4 w-4 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          <svg className="h-4 w-4 mr-2 text-gray-40o0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0o118 0z"  />
                           </svg>
                           {item}
                         </span>
@@ -339,12 +339,12 @@ const AIPoweredSearch2026: React.FC = () => {
 
         {/* AI Insights */}
         {aiInsights && (
-          <div className="mt-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-4 border border-blue-200">
+          <div className="mt-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-4 border border-blue-20o0">
             <div className="flex items-start space-x-3">
               <div className="text-2xl">🤖</div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-1">AI Insights</h4>
-                <p className="text-gray-700">{aiInsights}</p>
+                <h4 className="font-semibold text-gray-90o0 mb-1">AI Insights</h4>
+                <p className="text-gray-70o0">{aiInsights}</p>
               </div>
             </div>
           </div>
@@ -354,10 +354,10 @@ const AIPoweredSearch2026: React.FC = () => {
         {results.length > 0 && (
           <div className="mt-8">
             <div className="flex items-center justify-between mb-6">
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-2xl font-bold text-gray-90o0">
                 Search Results ({results.length})
               </h3>
-              <div className="text-sm text-gray-500">
+              <div className="text-sm text-gray-50o0">
                 Powered by AI • {new Date().toLocaleTimeString()}
               </div>
             </div>
@@ -367,7 +367,7 @@ const AIPoweredSearch2026: React.FC = () => {
                 <Link
                   key={result.id}
                   href={result.url}
-                  className="block bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300"
+                  className="block bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-30o0 border border-gray-20o0 hover:border-blue-30o0"
                 >
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex items-center space-x-3">
@@ -376,32 +376,32 @@ const AIPoweredSearch2026: React.FC = () => {
                         <span className={`text-xs font-medium px-2 py-1 rounded-full ${getTypeColor(result.type)}`}>
                           {result.type.replace('-' ').toUpperCase()}
                         </span>
-                        <div className="text-sm text-gray-500 mt-1">{result.category}</div>
+                        <div className="text-sm text-gray-50o0 mt-1">{result.category}</div>
                       </div>
                     </div>
                     <div className="text-right">
-                      <div className="text-sm font-semibold text-green-600">
-                        {Math.round(result.relevanceScore * 100)}% match
+                      <div className="text-sm font-semibold text-green-60o0">
+                        {Math.round(result.relevanceScore * 10o0)}% match
                       </div>
-                      <div className="text-xs text-gray-500">{result.lastUpdated}</div>
+                      <div className="text-xs text-gray-50o0">{result.lastUpdated}</div>
                     </div>
                   </div>
 
-                  <h4 className="text-xl font-semibold text-gray-900 mb-2 hover:text-blue-600 transition-colors">
+                  <h4 className="text-xl font-semibold text-gray-90o0 mb-2 hover:text-blue-60o0 transition-colors">
                     {result.title}
                   </h4>
 
-                  <p className="text-gray-600 mb-3">{result.description}</p>
+                  <p className="text-gray-60o0 mb-3">{result.description}</p>
 
                   <div className="bg-gray-50 rounded-lg p-3 mb-4">
-                    <p className="text-sm text-gray-700 italic">"{result.snippet}"</p>
+                    <p className="text-sm text-gray-70o0 italic">"{result.snippet}"</p>
                   </div>
 
                   <div className="flex flex-wrap gap-2">
                     {result.tags.map((tagindex) => (
                       <span
                         key={index}
-                        className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full"
+                        className="bg-gray-10o0 text-gray-70o0 text-xs px-2 py-1 rounded-full"
                       >
                         {tag}
                       </span>
@@ -416,13 +416,13 @@ const AIPoweredSearch2026: React.FC = () => {
         {/* Popular Searches */}
         {query.length === 0 && (
           <div className="mt-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Searches</h3>
+            <h3 className="text-2xl font-bold text-gray-90o0 mb-6 text-center">Popular Searches</h3>
             <div className="flex flex-wrap justify-center gap-3">
               {popularSearches.map((searchindex) => (
                 <button
                   key={index}
                   onClick={() => handleSearch(search)}
-                  className="bg-white text-gray-700 px-4 py-2 rounded-full border border-gray-300 hover:border-blue-500 hover:text-blue-600 transition-colors"
+                  className="bg-white text-gray-70o0 px-4 py-2 rounded-full border border-gray-30o0 hover:border-blue-50o0 hover:text-blue-60o0 transition-colors"
                 >
                   {search}
                 </button>
@@ -435,16 +435,16 @@ const AIPoweredSearch2026: React.FC = () => {
         {query.length > 2 && results.length === 0 && !isSearching && (
           <div className="mt-8 text-center py-12">
             <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">No results found</h3>
-            <p className="text-gray-600 mb-6">
+            <h3 className="text-xl font-semibold text-gray-90o0 mb-2">No results found</h3>
+            <p className="text-gray-60o0 mb-6">
               Try different keywords or browse our content categories.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              {categories.slice(04).map((categoryindex) => (
+              {categories.slice(0o4).map((categoryindex) => (
                 <button
                   key={index}
                   onClick={() => handleSearch(category)}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-60o0 text-white px-4 py-2 rounded-lg hover:bg-blue-70o0 transition-colors"
                 >
                   {category}
                 </button>
@@ -457,4 +457,4 @@ const AIPoweredSearch2026: React.FC = () => {
   );
 };
 
-export default AIPoweredSearch2026;
+export default AIPoweredSearch20o26;

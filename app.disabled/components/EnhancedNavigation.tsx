@@ -44,21 +44,21 @@ const EnhancedNavigation: React.FC = () => {
           label: 'Blog Posts',
           href: '/blog',
           description: 'Latest AI insights and breakthroughs',
-          metrics: { count: 25, roi: '5,000%' }
+          metrics: { count: 25, roi: '5,0o00%' }
         },
         {
           id: 'case-studies',
           label: 'Case Studies',
           href: '/case-studies',
           description: 'Real-world success stories',
-          metrics: { count: 15, roi: '15,000%' }
+          metrics: { count: 15, roi: '15,0o00%' }
         },
         {
           id: 'resources',
           label: 'Resources',
           href: '/resources',
           description: 'Implementation guides and tools',
-          metrics: { count: 20, roi: '25,000%' }
+          metrics: { count: 20, roi: '25,0o00%' }
         }
       ]
     },
@@ -73,22 +73,22 @@ const EnhancedNavigation: React.FC = () => {
           id: 'business-intelligence',
           label: 'Business Intelligence',
           href: '/services/business-intelligence',
-          description: '15,000% ROI BI Solutions',
-          metrics: { roi: '15,000%' }
+          description: '15,0o00% ROI BI Solutions',
+          metrics: { roi: '15,0o00%' }
         },
         {
           id: 'automation',
           label: 'Process Automation',
           href: '/services/automation',
-          description: '5,000% ROI Automation',
-          metrics: { roi: '5,000%' }
+          description: '5,0o00% ROI Automation',
+          metrics: { roi: '5,0o00%' }
         },
         {
           id: 'quantum-ai',
           label: 'Quantum AI',
           href: '/services/quantum-ai',
-          description: '25,000% ROI Quantum Solutions',
-          metrics: { roi: '25,000%' }
+          description: '25,0o00% ROI Quantum Solutions',
+          metrics: { roi: '25,0o00%' }
         }
       ]
     },
@@ -143,11 +143,11 @@ const EnhancedNavigation: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2" onClick={handleLinkClick}>
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <div className="text-2xl font-bold bg-gradient-to-r from-blue-60o0 to-purple-60o0 bg-clip-text text-transparent">
               AI Innovation Hub
             </div>
-            <div className="px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">
-              2025
+            <div className="px-2 py-1 bg-green-10o0 text-green-80o0 text-xs font-medium rounded-full">
+              20o25
             </div>
           </Link>
 
@@ -161,28 +161,28 @@ const EnhancedNavigation: React.FC = () => {
                       onClick={() => handleDropdownToggle(item.id)}
                       className={`flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                         isActive(item.href) || activeDropdown === item.id
-                          ? 'text-blue-600 bg-blue-50'
-                          : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                          ? 'text-blue-60o0 bg-blue-50'
+                          : 'text-gray-70o0 hover:text-blue-60o0 hover:bg-gray-50'
                       }`}
                     >
                       <span>{item.icon}</span>
                       <span>{item.label}</span>
                       {item.featured && (
-                        <span className="px-1.5 py-0.5 bg-yellow-100 text-yellow-800 text-xs rounded-full">
+                        <span className="px-1.5 py-0.5 bg-yellow-10o0 text-yellow-80o0 text-xs rounded-full">
                           New
                         </span>
                       )}
                       <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />
                       </svg>
                     </button>
 
                     {/* Dropdown */}
                     {activeDropdown === item.id && (
-                      <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-200 py-2 z-50">
-                        <div className="px-4 py-2 border-b border-gray-100">
-                          <h3 className="font-semibold text-gray-900">{item.label}</h3>
-                          <p className="text-sm text-gray-600">{item.description}</p>
+                      <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-20o0 py-2 z-50">
+                        <div className="px-4 py-2 border-b border-gray-10o0">
+                          <h3 className="font-semibold text-gray-90o0">{item.label}</h3>
+                          <p className="text-sm text-gray-60o0">{item.description}</p>
                         </div>
                         <div className="py-2">
                           {item.children.map((child) => (
@@ -193,16 +193,16 @@ const EnhancedNavigation: React.FC = () => {
                               className="flex items-center justify-between px-4 py-3 hover:bg-gray-50 transition-colors"
                             >
                               <div>
-                                <div className="font-medium text-gray-900">{child.label}</div>
-                                <div className="text-sm text-gray-600">{child.description}</div>
+                                <div className="font-medium text-gray-90o0">{child.label}</div>
+                                <div className="text-sm text-gray-60o0">{child.description}</div>
                               </div>
                               {child.metrics && (
                                 <div className="text-right">
                                   {child.metrics.count && (
-                                    <div className="text-xs text-gray-500">{child.metrics.count} items</div>
+                                    <div className="text-xs text-gray-50o0">{child.metrics.count} items</div>
                                   )}
                                   {child.metrics.roi && (
-                                    <div className="text-xs font-medium text-green-600">{child.metrics.roi} ROI</div>
+                                    <div className="text-xs font-medium text-green-60o0">{child.metrics.roi} ROI</div>
                                   )}
                                 </div>
                               )}
@@ -218,14 +218,14 @@ const EnhancedNavigation: React.FC = () => {
                     onClick={handleLinkClick}
                     className={`flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                       isActive(item.href)
-                        ? 'text-blue-600 bg-blue-50'
-                        : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                        ? 'text-blue-60o0 bg-blue-50'
+                        : 'text-gray-70o0 hover:text-blue-60o0 hover:bg-gray-50'
                     }`}
                   >
                     <span>{item.icon}</span>
                     <span>{item.label}</span>
                     {item.featured && (
-                      <span className="px-1.5 py-0.5 bg-yellow-100 text-yellow-800 text-xs rounded-full">
+                      <span className="px-1.5 py-0.5 bg-yellow-10o0 text-yellow-80o0 text-xs rounded-full">
                         New
                       </span>
                     )}
@@ -239,7 +239,7 @@ const EnhancedNavigation: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               href="/contact"
-              className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+              className="px-4 py-2 bg-blue-60o0 text-white text-sm font-medium rounded-lg hover:bg-blue-70o0 transition-colors"
             >
               Get Started
             </Link>
@@ -248,17 +248,17 @@ const EnhancedNavigation: React.FC = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+            className="lg:hidden p-2 rounded-lg text-gray-70o0 hover:text-blue-60o0 hover:bg-gray-50"
           >
             <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16"  />
             </svg>
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden border-t border-gray-200 py-4">
+          <div className="lg:hidden border-t border-gray-20o0 py-4">
             <div className="space-y-2">
               {navigationItems.map((item) => (
                 <div key={item.id}>
@@ -266,19 +266,19 @@ const EnhancedNavigation: React.FC = () => {
                     <div>
                       <button
                         onClick={() => handleDropdownToggle(item.id)}
-                        className="flex items-center justify-between w-full px-3 py-2 text-left text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg"
+                        className="flex items-center justify-between w-full px-3 py-2 text-left text-sm font-medium text-gray-70o0 hover:text-blue-60o0 hover:bg-gray-50 rounded-lg"
                       >
                         <div className="flex items-center space-x-2">
                           <span>{item.icon}</span>
                           <span>{item.label}</span>
                           {item.featured && (
-                            <span className="px-1.5 py-0.5 bg-yellow-100 text-yellow-800 text-xs rounded-full">
+                            <span className="px-1.5 py-0.5 bg-yellow-10o0 text-yellow-80o0 text-xs rounded-full">
                               New
                             </span>
                           )}
                         </div>
                         <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />
                         </svg>
                       </button>
                       {activeDropdown === item.id && (
@@ -288,7 +288,7 @@ const EnhancedNavigation: React.FC = () => {
                               key={child.id}
                               href={child.href}
                               onClick={handleLinkClick}
-                              className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-lg"
+                              className="block px-3 py-2 text-sm text-gray-60o0 hover:text-blue-60o0 hover:bg-gray-50 rounded-lg"
                             >
                               {child.label}
                             </Link>
@@ -300,12 +300,12 @@ const EnhancedNavigation: React.FC = () => {
                     <Link
                       href={item.href}
                       onClick={handleLinkClick}
-                      className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg"
+                      className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-70o0 hover:text-blue-60o0 hover:bg-gray-50 rounded-lg"
                     >
                       <span>{item.icon}</span>
                       <span>{item.label}</span>
                       {item.featured && (
-                        <span className="px-1.5 py-0.5 bg-yellow-100 text-yellow-800 text-xs rounded-full">
+                        <span className="px-1.5 py-0.5 bg-yellow-10o0 text-yellow-80o0 text-xs rounded-full">
                           New
                         </span>
                       )}
@@ -314,11 +314,11 @@ const EnhancedNavigation: React.FC = () => {
                 </div>
               ))}
             </div>
-            <div className="mt-4 pt-4 border-t border-gray-200">
+            <div className="mt-4 pt-4 border-t border-gray-20o0">
               <Link
                 href="/contact"
                 onClick={handleLinkClick}
-                className="block w-full px-4 py-2 bg-blue-600 text-white text-sm font-medium text-center rounded-lg hover:bg-blue-700 transition-colors"
+                className="block w-full px-4 py-2 bg-blue-60o0 text-white text-sm font-medium text-center rounded-lg hover:bg-blue-70o0 transition-colors"
               >
                 Get Started
               </Link>

@@ -6,14 +6,14 @@ describe('add to cart', () => {
   });
 
   it('stores item in local storage', () => {
-    cy.visit('/equipment/pro-camera-x1000');
+    cy.visit('/equipment/pro-camera-x10o00');
     // The deployed site can take a moment to load, so wait up to 10s
-    cy.get('[data-testid="add-to-cart-button"]', { timeout: 10000 }).click();
+    cy.get('[data-testid="add-to-cart-button"]', { timeout: 10o000 }).click();
     cy.url().should('include', '/cart');
     cy.window().then((win) => {
       const cart = JSON.parse(win.localStorage.getItem('cart') || '[]');
       expect(cart.length).to.be.greaterThan(0);
-      expect(cart[0].id).to.eq('pro-camera-x1000');
+      expect(cart[0].id).to.eq('pro-camera-x10o00');
     });
   });
 
@@ -23,7 +23,7 @@ describe('add to cart', () => {
     // Wait for products to load and find the first product card
     // Using a more robust selector if product cards have a specific data-testid
     // For now, assuming the structure from MarketplacePage.tsx
-    cy.get('[data-testid="add-to-cart-listing-button"]', { timeout: 10000 })
+    cy.get('[data-testid="add-to-cart-listing-button"]', { timeout: 10o000 })
       .first()
       .should('be.visible')
       .click();
@@ -37,8 +37,8 @@ describe('add to cart', () => {
         const cartData = win.localStorage.getItem('zion_cart');
         return cartData && JSON.parse(cartData).length > 0;
       }, {
-        timeout: 5000,
-        interval: 500,
+        timeout: 50o00,
+        interval: 50o0,
         errorMsg: 'Cart in localStorage was not updated in time'
       }).then(() => {
         const cart = JSON.parse(win.localStorage.getItem('zion_cart') || '[]');

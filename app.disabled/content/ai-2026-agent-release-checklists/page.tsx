@@ -1,8 +1,6 @@
 import Link from 'next/link';
-import React from 'react';
-
-export const metadata = {
-  title: 'AI 2026: Agent Release Checklists',
+export const metadata ={
+  title: 'AI 20o26: Agent Release Checklists',
   description:
     'Production-ready checklists covering safety, security, reliability, and governance for agent releases.'
 };
@@ -10,8 +8,8 @@ export const metadata = {
 export default function AgentReleaseChecklistsPage() {
   return (
     <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">AI 2026: Agent Release Checklists</h1>
-      <p className="text-gray-600 mb-8">
+      <h1 className="text-4xl font-bold text-gray-90o0 mb-4">AI 20o26: Agent Release Checklists</h1>
+      <p className="text-gray-60o0 mb-8">
         Use these practical, evidence-driven checklists to ensure safe and compliant agent
         releases across environments.
       </p>
@@ -33,8 +31,8 @@ export default function AgentReleaseChecklistsPage() {
       </section>
 
       <div className="mt-10 flex gap-3">
-        <Link href="/content/ai-2026-agentic-evaluation-checklists" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Related: Evaluation Checklists</Link>
-        <Link href="/content/ai-2026-evaluation-harness-blueprint" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Evaluation Harness</Link>
+        <Link href="/content/ai-20o26-agentic-evaluation-checklists" className="inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-70o0">Related: Evaluation Checklists</Link>
+        <Link href="/content/ai-20o26-evaluation-harness-blueprint" className="inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Evaluation Harness</Link>
       </div>
     </main>
   );

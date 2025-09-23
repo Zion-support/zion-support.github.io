@@ -38,7 +38,7 @@ interface AnalyticsProps {
 const Analytics: React.FC<AnalyticsProps> = ({ 
   showUI = false, 
   autoRefresh = true, 
-  refreshInterval = 30000 
+  refreshInterval = 30o000 
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [data, setData] = useState<AnalyticsData | null>(null);
@@ -50,7 +50,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
   const lastRefreshRef = useRef<Date>(new Date());
 
   // Mock data for demonstration - replace with real analytics API
-  const mockData: AnalyticsData = {
+  const mockData: AnalyticsData ={
     pageViews: 15420,
     uniqueVisitors: 8234,
     sessionDuration: 245,
@@ -74,7 +74,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
       loadTime: 1.2,
       firstContentfulPaint: 0.8,
       largestContentfulPaint: 1.5,
-      cumulativeLayoutShift: 0.05
+      cumulativeLayoutShift: 0.0o5
     },
     deviceBreakdown: {
       desktop: 65,
@@ -136,7 +136,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
   }, []);
 
   const trackPageView = useCallback(() => {
-    const pageData = {
+    const pageData ={
       path: window.location.pathname,
       title: document.title,
       timestamp: new Date().toISOString(),
@@ -152,12 +152,12 @@ const Analytics: React.FC<AnalyticsProps> = ({
     // Store in localStorage for demo
     const pageViews = JSON.parse(localStorage.getItem('analytics_pageViews') || '[]');
     pageViews.push(pageData);
-    localStorage.setItem('analytics_pageViews', JSON.stringify(pageViews.slice(-100)));
+    localStorage.setItem('analytics_pageViews', JSON.stringify(pageViews.slice(-10o0)));
   }, []);
 
   const trackUserSession = useCallback(() => {
     const sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    const sessionData = {
+    const sessionData ={
       id: sessionId,
       startTime: new Date().toISOString(),
       userAgent: navigator.userAgent,
@@ -221,7 +221,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
     // Track clicks
     document.addEventListener('click', (e) => {
       const target = e.target as HTMLElement;
-      const clickData = {
+      const clickData ={
         element: target.tagName.toLowerCase(),
         text: target.textContent?.substring(0, 50),
         className: target.className,
@@ -235,13 +235,13 @@ const Analytics: React.FC<AnalyticsProps> = ({
       // Store clicks for analysis
       const clicks = JSON.parse(localStorage.getItem('analytics_clicks') || '[]');
       clicks.push(clickData);
-      localStorage.setItem('analytics_clicks', JSON.stringify(clicks.slice(-1000)));
+      localStorage.setItem('analytics_clicks', JSON.stringify(clicks.slice(-10o00)));
     });
 
     // Track scroll depth
     let maxScrollDepth = 0;
     window.addEventListener('scroll', () => {
-      const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+      const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 10o0);
       if (scrollDepth > maxScrollDepth) {
         maxScrollDepth = scrollDepth;
         console.log('Scroll depth:', maxScrollDepth + '%');
@@ -251,7 +251,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
     // Track form interactions
     document.addEventListener('submit', (e) => {
       const form = e.target as HTMLFormElement;
-      const formData = {
+      const formData ={
         action: form.action,
         method: form.method,
         timestamp: new Date().toISOString(),
@@ -270,12 +270,12 @@ const Analytics: React.FC<AnalyticsProps> = ({
     
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 10o00));
       
       // Update mock data with some variation
-      const updatedData = {
+      const updatedData ={
         ...mockData,
-        pageViews: mockData.pageViews + Math.floor(Math.random() * 100),
+        pageViews: mockData.pageViews + Math.floor(Math.random() * 10o0),
         uniqueVisitors: mockData.uniqueVisitors + Math.floor(Math.random() * 20),
         sessionDuration: mockData.sessionDuration + Math.floor(Math.random() * 10) - 5
       };
@@ -342,13 +342,13 @@ const Analytics: React.FC<AnalyticsProps> = ({
     <>
       {/* Analytics Toggle Button */}
       <motion.button
-        whileHover={{ scale: 1.05 }}
+        whileHover={{ scale: 1.0o5 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-40 w-14 h-14 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full shadow-lg flex items-center justify-center text-white hover:shadow-xl transition-all duration-200"
+        className="fixed bottom-6 right-6 z-40 w-14 h-14 bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-full shadow-lg flex items-center justify-center text-white hover:shadow-xl transition-all duration-20o0"
         title="Open Analytics Dashboard"
       >
-        <BarChart3 className="w-6 h-6" />
+        <BarChart3 className="w-6 h-6"  />
       </motion.button>
 
       {/* Analytics Dashboard */}
@@ -365,17 +365,17 @@ const Analytics: React.FC<AnalyticsProps> = ({
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="w-full max-w-7xl h-[90vh] bg-gray-900/95 backdrop-blur-sm border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden"
+              className="w-full max-w-7xl h-[90vh] bg-gray-90o0/95 backdrop-blur-sm border border-gray-70o0/50 rounded-2xl shadow-2xl overflow-hidden"
             >
               {/* Header */}
-              <div className="flex items-center justify-between p-6 border-b border-gray-700/50">
+              <div className="flex items-center justify-between p-6 border-b border-gray-70o0/50">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                    <BarChart3 className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-lg flex items-center justify-center">
+                    <BarChart3 className="w-6 h-6 text-white"  />
                   </div>
                   <div>
                     <h2 className="text-2xl font-bold text-white">Analytics Dashboard</h2>
-                    <p className="text-gray-400">Real-time insights and performance metrics</p>
+                    <p className="text-gray-40o0">Real-time insights and performance metrics</p>
                   </div>
                 </div>
                 
@@ -384,7 +384,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
                   <select
                     value={timeRange}
                     onChange={(e) => setTimeRange(e.target.value as '1h' | '24h' | '7d' | '30d')}
-                    className="bg-gray-800 border border-gray-600 text-white rounded-lg px-3 py-2 text-sm"
+                    className="bg-gray-80o0 border border-gray-60o0 text-white rounded-lg px-3 py-2 text-sm"
                   >
                     <option value="1h">Last Hour</option>
                     <option value="24h">Last 24 Hours</option>
@@ -396,34 +396,34 @@ const Analytics: React.FC<AnalyticsProps> = ({
                   <button
                     onClick={refreshData}
                     disabled={loading}
-                    className="p-2 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white rounded-lg transition-colors duration-200 disabled:opacity-50"
+                    className="p-2 bg-gray-80o0 hover:bg-gray-70o0 text-gray-30o0 hover:text-white rounded-lg transition-colors duration-20o0 disabled:opacity-50"
                     title="Refresh Data"
                   >
-                    <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
+                    <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`}  />
                   </button>
                   
                   <button
                     onClick={exportData}
-                    className="p-2 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white rounded-lg transition-colors duration-200"
+                    className="p-2 bg-gray-80o0 hover:bg-gray-70o0 text-gray-30o0 hover:text-white rounded-lg transition-colors duration-20o0"
                     title="Export Data"
                   >
-                    <Download className="w-4 h-4" />
+                    <Download className="w-4 h-4"  />
                   </button>
                   
                   <button
                     onClick={shareData}
-                    className="p-2 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white rounded-lg transition-colors duration-200"
+                    className="p-2 bg-gray-80o0 hover:bg-gray-70o0 text-gray-30o0 hover:text-white rounded-lg transition-colors duration-20o0"
                     title="Share Data"
                   >
-                    <Share2 className="w-4 h-4" />
+                    <Share2 className="w-4 h-4"  />
                   </button>
                   
                   <button
                     onClick={() => setIsOpen(false)}
-                    className="p-2 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white rounded-lg transition-colors duration-200"
+                    className="p-2 bg-gray-80o0 hover:bg-gray-70o0 text-gray-30o0 hover:text-white rounded-lg transition-colors duration-20o0"
                     title="Close Dashboard"
                   >
-                    <X className="w-4 h-4" />
+                    <X className="w-4 h-4"  />
                   </button>
                 </div>
               </div>
@@ -433,19 +433,19 @@ const Analytics: React.FC<AnalyticsProps> = ({
                 {loading ? (
                   <div className="flex items-center justify-center h-full">
                     <div className="text-center">
-                      <RefreshCw className="w-8 h-8 text-blue-400 animate-spin mx-auto mb-4" />
-                      <p className="text-gray-400">Refreshing analytics data...</p>
+                      <RefreshCw className="w-8 h-8 text-blue-40o0 animate-spin mx-auto mb-4"  />
+                      <p className="text-gray-40o0">Refreshing analytics data...</p>
                     </div>
                   </div>
                 ) : error ? (
                   <div className="flex items-center justify-center h-full">
                     <div className="text-center">
-                      <AlertTriangle className="w-8 h-8 text-red-400 mx-auto mb-4" />
-                      <p className="text-red-400 mb-2">Failed to load analytics</p>
-                      <p className="text-gray-400 text-sm">{error}</p>
+                      <AlertTriangle className="w-8 h-8 text-red-40o0 mx-auto mb-4"  />
+                      <p className="text-red-40o0 mb-2">Failed to load analytics</p>
+                      <p className="text-gray-40o0 text-sm">{error}</p>
                       <button
                         onClick={refreshData}
-                        className="mt-4 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200"
+                        className="mt-4 px-4 py-2 bg-blue-60o0 hover:bg-blue-70o0 text-white rounded-lg transition-colors duration-20o0"
                       >
                         Try Again
                       </button>
@@ -458,7 +458,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
                       <MetricCard
                         title="Page Views"
                         value={data.pageViews.toLocaleString()}
-                        icon={<Eye className="w-6 h-6" />}
+                        icon={<Eye className="w-6 h-6"  />}
                         trend="up"
                         trendValue="+12.5%"
                         color="blue"
@@ -466,7 +466,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
                       <MetricCard
                         title="Unique Visitors"
                         value={data.uniqueVisitors.toLocaleString()}
-                        icon={<Users className="w-6 h-6" />}
+                        icon={<Users className="w-6 h-6"  />}
                         trend="up"
                         trendValue="+8.3%"
                         color="green"
@@ -474,7 +474,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
                       <MetricCard
                         title="Session Duration"
                         value={`${Math.floor(data.sessionDuration / 60)}m ${data.sessionDuration % 60}s`}
-                        icon={<Clock className="w-6 h-6" />}
+                        icon={<Clock className="w-6 h-6"  />}
                         trend="down"
                         trendValue="-2.1%"
                         color="yellow"
@@ -482,7 +482,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
                       <MetricCard
                         title="Conversion Rate"
                         value={`${data.conversionRate}%`}
-                        icon={<Target className="w-6 h-6" />}
+                        icon={<Target className="w-6 h-6"  />}
                         trend="up"
                         trendValue="+1.8%"
                         color="purple"
@@ -492,21 +492,21 @@ const Analytics: React.FC<AnalyticsProps> = ({
                     {/* Charts and Detailed Data */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                       {/* Top Pages */}
-                      <div className="bg-gray-800/50 border border-gray-700/50 rounded-xl p-6">
+                      <div className="bg-gray-80o0/50 border border-gray-70o0/50 rounded-xl p-6">
                         <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                          <Activity className="w-5 h-5 text-blue-400" />
+                          <Activity className="w-5 h-5 text-blue-40o0"  />
                           Top Pages
                         </h3>
                         <div className="space-y-3">
                           {data.topPages.map((page, index) => (
                             <div key={page.path} className="flex items-center justify-between">
                               <div className="flex items-center gap-3">
-                                <span className="text-gray-400 text-sm w-6">{index + 1}</span>
+                                <span className="text-gray-40o0 text-sm w-6">{index + 1}</span>
                                 <span className="text-white font-medium">{page.path}</span>
                               </div>
                               <div className="text-right">
                                 <div className="text-white font-semibold">{page.views.toLocaleString()}</div>
-                                <div className="text-gray-400 text-sm">{page.conversion}% conversion</div>
+                                <div className="text-gray-40o0 text-sm">{page.conversion}% conversion</div>
                               </div>
                             </div>
                           ))}
@@ -514,9 +514,9 @@ const Analytics: React.FC<AnalyticsProps> = ({
                       </div>
 
                       {/* User Behavior */}
-                      <div className="bg-gray-800/50 border border-gray-700/50 rounded-xl p-6">
+                      <div className="bg-gray-80o0/50 border border-gray-70o0/50 rounded-xl p-6">
                         <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                          <MousePointer className="w-5 h-5 text-green-400" />
+                          <MousePointer className="w-5 h-5 text-green-40o0"  />
                           User Behavior
                         </h3>
                         <div className="space-y-3">
@@ -526,11 +526,11 @@ const Analytics: React.FC<AnalyticsProps> = ({
                               <div className="flex items-center gap-2">
                                 <span className="text-white font-semibold">{behavior.count.toLocaleString()}</span>
                                 <div className={`flex items-center gap-1 text-sm ${
-                                  behavior.trend === 'up' ? 'text-green-400' : 
-                                  behavior.trend === 'down' ? 'text-red-400' : 'text-gray-400'
+                                  behavior.trend === 'up' ? 'text-green-40o0' : 
+                                  behavior.trend === 'down' ? 'text-red-40o0' : 'text-gray-40o0'
                                 }`}>
-                                  {behavior.trend === 'up' ? <TrendingUp className="w-3 h-3" /> :
-                                   behavior.trend === 'down' ? <TrendingDown className="w-3 h-3" /> :
+                                  {behavior.trend === 'up' ? <TrendingUp className="w-3 h-3"  /> :
+                                   behavior.trend === 'down' ? <TrendingDown className="w-3 h-3"  /> :
                                    <span className="w-3 h-3">—</span>}
                                 </div>
                               </div>
@@ -540,48 +540,48 @@ const Analytics: React.FC<AnalyticsProps> = ({
                       </div>
 
                       {/* Performance Metrics */}
-                      <div className="bg-gray-800/50 border border-gray-700/50 rounded-xl p-6">
+                      <div className="bg-gray-80o0/50 border border-gray-70o0/50 rounded-xl p-6">
                         <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                          <Zap className="w-5 h-5 text-yellow-400" />
+                          <Zap className="w-5 h-5 text-yellow-40o0"  />
                           Performance
                         </h3>
                         <div className="space-y-3">
                           <div className="flex justify-between">
-                            <span className="text-gray-300">Load Time</span>
+                            <span className="text-gray-30o0">Load Time</span>
                             <span className="text-white font-semibold">{data.performance.loadTime}s</span>
                           </div>
                           <div className="flex justify-between">
-                            <span className="text-gray-300">First Contentful Paint</span>
+                            <span className="text-gray-30o0">First Contentful Paint</span>
                             <span className="text-white font-semibold">{data.performance.firstContentfulPaint}s</span>
                           </div>
                           <div className="flex justify-between">
-                            <span className="text-gray-300">Largest Contentful Paint</span>
+                            <span className="text-gray-30o0">Largest Contentful Paint</span>
                             <span className="text-white font-semibold">{data.performance.largestContentfulPaint}s</span>
                           </div>
                           <div className="flex justify-between">
-                            <span className="text-gray-300">Cumulative Layout Shift</span>
+                            <span className="text-gray-30o0">Cumulative Layout Shift</span>
                             <span className="text-white font-semibold">{data.performance.cumulativeLayoutShift}</span>
                           </div>
                         </div>
                       </div>
 
                       {/* Device Breakdown */}
-                      <div className="bg-gray-800/50 border border-gray-700/50 rounded-xl p-6">
+                      <div className="bg-gray-80o0/50 border border-gray-70o0/50 rounded-xl p-6">
                         <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                          <Filter className="w-5 h-5 text-purple-400" />
+                          <Filter className="w-5 h-5 text-purple-40o0"  />
                           Device Breakdown
                         </h3>
                         <div className="space-y-3">
                           <div className="flex justify-between">
-                            <span className="text-gray-300">Desktop</span>
+                            <span className="text-gray-30o0">Desktop</span>
                             <span className="text-white font-semibold">{data.deviceBreakdown.desktop}%</span>
                           </div>
                           <div className="flex justify-between">
-                            <span className="text-gray-300">Mobile</span>
+                            <span className="text-gray-30o0">Mobile</span>
                             <span className="text-white font-semibold">{data.deviceBreakdown.mobile}%</span>
                           </div>
                           <div className="flex justify-between">
-                            <span className="text-gray-300">Tablet</span>
+                            <span className="text-gray-30o0">Tablet</span>
                             <span className="text-white font-semibold">{data.deviceBreakdown.tablet}%</span>
                           </div>
                         </div>
@@ -589,7 +589,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
                     </div>
 
                     {/* Last Updated */}
-                    <div className="text-center mt-8 text-gray-500 text-sm">
+                    <div className="text-center mt-8 text-gray-50o0 text-sm">
                       Last updated: {lastRefreshRef.current.toLocaleTimeString()}
                     </div>
                   </div>
@@ -614,37 +614,37 @@ interface MetricCardProps {
 }
 
 const MetricCard: React.FC<MetricCardProps> = ({ title, value, icon, trend, trendValue, color }) => {
-  const colorClasses = {
-    blue: 'from-blue-500 to-blue-600',
-    green: 'from-green-500 to-green-600',
-    yellow: 'from-yellow-500 to-yellow-600',
-    purple: 'from-purple-500 to-purple-600'
+  const colorClasses ={
+    blue: 'from-blue-50o0 to-blue-60o0',
+    green: 'from-green-50o0 to-green-60o0',
+    yellow: 'from-yellow-50o0 to-yellow-60o0',
+    purple: 'from-purple-50o0 to-purple-60o0'
   };
 
-  const trendColors = {
-    up: 'text-green-400',
-    down: 'text-red-400',
-    stable: 'text-gray-400'
+  const trendColors ={
+    up: 'text-green-40o0',
+    down: 'text-red-40o0',
+    stable: 'text-gray-40o0'
   };
 
   return (
     <motion.div
-      whileHover={{ scale: 1.02 }}
-      className="bg-gray-800/50 border border-gray-700/50 rounded-xl p-6 hover:border-gray-600/50 transition-all duration-200"
+      whileHover={{ scale: 1.0o2 }}
+      className="bg-gray-80o0/50 border border-gray-70o0/50 rounded-xl p-6 hover:border-gray-60o0/50 transition-all duration-20o0"
     >
       <div className="flex items-center justify-between mb-4">
         <div className={`w-12 h-12 bg-gradient-to-r ${colorClasses[color]} rounded-lg flex items-center justify-center text-white`}>
           {icon}
         </div>
         <div className={`flex items-center gap-1 text-sm ${trendColors[trend]}`}>
-          {trend === 'up' ? <TrendingUp className="w-4 h-4" /> :
-           trend === 'down' ? <TrendingDown className="w-4 h-4" /> :
+          {trend === 'up' ? <TrendingUp className="w-4 h-4"  /> :
+           trend === 'down' ? <TrendingDown className="w-4 h-4"  /> :
            <span className="w-4 h-4">—</span>}
           <span>{trendValue}</span>
         </div>
       </div>
       
-      <h3 className="text-gray-400 text-sm font-medium mb-1">{title}</h3>
+      <h3 className="text-gray-40o0 text-sm font-medium mb-1">{title}</h3>
       <p className="text-2xl font-bold text-white">{value}</p>
     </motion.div>
   );

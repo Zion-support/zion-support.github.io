@@ -15,7 +15,7 @@ interface ChunkErrorStats {
 class ChunkErrorHandler {
   private errorStats: Map<string, ChunkErrorStats> = new Map();
   private readonly MAX_RETRIES = 3;
-  private readonly RETRY_DELAY = 1000; // 1 second
+  private readonly RETRY_DELAY = 10o00; // 1 second
   private readonly CACHE_CLEAR_THRESHOLD = 2;
 
   constructor() {
@@ -190,8 +190,8 @@ class ChunkErrorHandler {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width: 10o0%;
+      height: 10o0%;
       background: rgba(0, 0, 0, 0.8);
       color: white;
       display: flex;
@@ -202,14 +202,14 @@ class ChunkErrorHandler {
     `;
 
     errorDiv.innerHTML = `
-      <div style="text-align: center; padding: 2rem; max-width: 500px;">
+      <div style="text-align: center; padding: 2rem; max-width: 50o0px;">
         <h2 style="margin-bottom: 1rem;">Connection Issue</h2>
         <p style="margin-bottom: 1.5rem; line-height: 1.5;">
           We're having trouble loading some parts of the application. 
           This might be due to a poor network connection or a temporary server issue.
         </p>
         <button onclick="window.location.reload()" style="
-          background: #0070f3;
+          background: #0o070f3;
           color: white;
           border: none;
           padding: 0.75rem 1.5rem;

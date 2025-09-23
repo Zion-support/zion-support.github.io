@@ -39,265 +39,265 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Micro SAAS Services',
     href: '/services',
-    icon: <Rocket className="w-5 h-5" />,
+    icon: <Rocket className="w-5 h-5"  />,
     description: 'Innovative business solutions',
     badge: 'New',
     category: 'services',
-    color: 'from-emerald-500 to-cyan-500',
+    color: 'from-emerald-50o0 to-cyan-50o0',
     children: [
       { 
         name: 'All Services', 
         href: '/services', 
         description: 'Complete services overview',
-        icon: <Grid className="w-4 h-4" />,
+        icon: <Grid className="w-4 h-4"  />,
         featured: true
       },
       { 
         name: 'AI & Consciousness', 
         href: '/ai-services', 
         description: 'Advanced AI solutions',
-        icon: <Brain className="w-4 h-4" />,
-        color: 'from-purple-500 to-pink-500'
+        icon: <Brain className="w-4 h-4"  />,
+        color: 'from-purple-50o0 to-pink-50o0'
       },
       { 
         name: 'Quantum Technology', 
         href: '/quantum-services', 
         description: 'Quantum computing solutions',
-        icon: <Atom className="w-4 h-4" />,
-        color: 'from-blue-500 to-cyan-500'
+        icon: <Atom className="w-4 h-4"  />,
+        color: 'from-blue-50o0 to-cyan-50o0'
       },
       { 
         name: 'Space Technology', 
         href: '/space-technology', 
         description: 'Space exploration solutions',
-        icon: <Rocket className="w-4 h-4" />,
-        color: 'from-indigo-500 to-purple-500'
+        icon: <Rocket className="w-4 h-4"  />,
+        color: 'from-indigo-50o0 to-purple-50o0'
       },
       { 
         name: 'IT Solutions', 
         href: '/it-services', 
         description: 'Enterprise IT infrastructure',
-        icon: <Cpu className="w-4 h-4" />,
-        color: 'from-orange-500 to-red-500'
+        icon: <Cpu className="w-4 h-4"  />,
+        color: 'from-orange-50o0 to-red-50o0'
       },
       { 
         name: 'Specialized Solutions', 
         href: '/solutions', 
         description: 'Industry-specific solutions',
-        icon: <Target className="w-4 h-4" />,
-        color: 'from-green-500 to-emerald-500'
+        icon: <Target className="w-4 h-4"  />,
+        color: 'from-green-50o0 to-emerald-50o0'
       }
     ]
   },
   {
     name: 'AI Services',
     href: '/ai-services',
-    icon: <Brain className="w-5 h-5" />,
+    icon: <Brain className="w-5 h-5"  />,
     description: 'Revolutionary AI platforms',
     badge: 'Featured',
     category: 'ai',
-    color: 'from-purple-500 to-pink-500',
+    color: 'from-purple-50o0 to-pink-50o0',
     children: [
       {
         name: 'AI Consciousness Evolution',
-        href: '/ai-consciousness-evolution-2037',
+        href: '/ai-consciousness-evolution-20o37',
         description: 'Next-generation AI consciousness',
-        icon: <Brain className="w-4 h-4" />,
+        icon: <Brain className="w-4 h-4"  />,
         featured: true
       },
       {
         name: 'AI Emotional Intelligence',
         href: '/ai-emotional-intelligence-coach',
         description: 'Personalized EI coaching',
-        icon: <Heart className="w-4 h-4" />
+        icon: <Heart className="w-4 h-4"  />
       },
       {
         name: 'AI Autonomous Research',
         href: '/ai-autonomous-research-assistant',
         description: 'Fully autonomous research',
-        icon: <Search className="w-4 h-4" />
+        icon: <Search className="w-4 h-4"  />
       },
       {
         name: 'AI Predictive Maintenance',
         href: '/ai-predictive-maintenance-platform',
         description: 'Intelligent asset management',
-        icon: <Monitor className="w-4 h-4" />
+        icon: <Monitor className="w-4 h-4"  />
       },
       {
         name: 'AI Content Personalization',
         href: '/ai-content-personalization-engine',
         description: 'Dynamic content optimization',
-        icon: <Palette className="w-4 h-4" />
+        icon: <Palette className="w-4 h-4"  />
       },
       {
         name: 'AI Autonomous Ecosystem',
         href: '/ai-autonomous-ecosystem-manager',
         description: 'Complex ecosystem management',
-        icon: <Globe className="w-4 h-4" />
+        icon: <Globe className="w-4 h-4"  />
       }
     ]
   },
   {
     name: 'IT Solutions',
     href: '/it-services',
-    icon: <Cpu className="w-5 h-5" />,
+    icon: <Cpu className="w-5 h-5"  />,
     description: 'Enterprise infrastructure',
     badge: 'Enterprise',
     category: 'it',
-    color: 'from-orange-500 to-red-500',
+    color: 'from-orange-50o0 to-red-50o0',
     children: [
       {
         name: 'Quantum-Secure Cloud',
         href: '/quantum-secure-cloud-infrastructure',
         description: 'Future-proof cloud security',
-        icon: <Cloud className="w-4 h-4" />,
+        icon: <Cloud className="w-4 h-4"  />,
         featured: true
       },
       {
         name: 'Autonomous IT Operations',
         href: '/autonomous-it-operations-center',
         description: 'Self-managing infrastructure',
-        icon: <Settings className="w-4 h-4" />
+        icon: <Settings className="w-4 h-4"  />
       },
       {
         name: 'Edge Computing Platform',
         href: '/edge-computing-orchestration-platform',
         description: 'Distributed edge management',
-        icon: <Network className="w-4 h-4" />
+        icon: <Network className="w-4 h-4"  />
       },
       {
         name: 'Blockchain Infrastructure',
         href: '/blockchain-infrastructure-platform',
         description: 'Enterprise blockchain solutions',
-        icon: <Layers className="w-4 h-4" />
+        icon: <Layers className="w-4 h-4"  />
       },
       {
         name: 'AI-Powered DevOps',
         href: '/ai-powered-devops-platform',
         description: 'Intelligent development operations',
-        icon: <Code className="w-4 h-4" />
+        icon: <Code className="w-4 h-4"  />
       }
     ]
   },
   {
     name: 'Quantum Services',
     href: '/quantum-services',
-    icon: <Atom className="w-5 h-5" />,
+    icon: <Atom className="w-5 h-5"  />,
     description: 'Quantum computing solutions',
     badge: 'Quantum',
     category: 'quantum',
-    color: 'from-blue-500 to-cyan-500',
+    color: 'from-blue-50o0 to-cyan-50o0',
     children: [
       {
         name: 'Quantum Neural Networks',
         href: '/quantum-neural-network-platform',
         description: 'Quantum-powered AI systems',
-        icon: <Brain className="w-4 h-4" />,
+        icon: <Brain className="w-4 h-4"  />,
         featured: true
       },
       {
         name: 'Quantum Financial Trading',
         href: '/quantum-financial-trading-platform',
         description: 'Quantum-powered trading',
-        icon: <TrendingUp className="w-4 h-4" />
+        icon: <TrendingUp className="w-4 h-4"  />
       },
       {
         name: 'Quantum Materials Discovery',
         href: '/quantum-materials-discovery-platform',
         description: 'Advanced materials research',
-        icon: <Atom className="w-4 h-4" />
+        icon: <Atom className="w-4 h-4"  />
       },
       {
         name: 'Quantum Bio-Computing',
         href: '/quantum-bio-computing-platform',
         description: 'Biological quantum computing',
-        icon: <Heart className="w-4 h-4" />
+        icon: <Heart className="w-4 h-4"  />
       },
       {
         name: 'Quantum Internet Security',
         href: '/quantum-internet-security-platform',
         description: 'Future-proof internet security',
-        icon: <Shield className="w-4 h-4" />
+        icon: <Shield className="w-4 h-4"  />
       }
     ]
   },
   {
     name: 'Space Technology',
     href: '/space-technology',
-    icon: <Rocket className="w-5 h-5" />,
+    icon: <Rocket className="w-5 h-5"  />,
     description: 'Space exploration solutions',
     badge: 'Space',
     category: 'space',
-    color: 'from-indigo-500 to-purple-500',
+    color: 'from-indigo-50o0 to-purple-50o0',
     children: [
       {
         name: 'Space Resource Mining',
         href: '/space-resource-mining-platform',
         description: 'Asteroid mining technology',
-        icon: <Rocket className="w-4 h-4" />,
+        icon: <Rocket className="w-4 h-4"  />,
         featured: true
       },
       {
         name: 'AI-Powered Space Tech',
         href: '/ai-powered-space-technology',
         description: 'Intelligent space systems',
-        icon: <Brain className="w-4 h-4" />
+        icon: <Brain className="w-4 h-4"  />
       },
       {
         name: 'Space Colony Management',
         href: '/space-colony-management-platform',
         description: 'Off-world settlement systems',
-        icon: <Building className="w-4 h-4" />
+        icon: <Building className="w-4 h-4"  />
       }
     ]
   },
   {
     name: 'Enterprise Solutions',
     href: '/solutions',
-    icon: <Building className="w-5 h-5" />,
+    icon: <Building className="w-5 h-5"  />,
     description: 'Industry-specific solutions',
     badge: 'Enterprise',
     category: 'enterprise',
-    color: 'from-green-500 to-emerald-500',
+    color: 'from-green-50o0 to-emerald-50o0',
     children: [
       {
         name: 'Financial Services',
         href: '/financial-services-solutions',
         description: 'Banking and fintech solutions',
-        icon: <DollarSign className="w-4 h-4" />,
+        icon: <DollarSign className="w-4 h-4"  />,
         featured: true
       },
       {
         name: 'Healthcare Technology',
         href: '/healthcare-technology-solutions',
         description: 'Medical and health tech',
-        icon: <Heart className="w-4 h-4" />
+        icon: <Heart className="w-4 h-4"  />
       },
       {
         name: 'Manufacturing AI',
         href: '/manufacturing-ai-solutions',
         description: 'Smart manufacturing',
-        icon: <Cog className="w-4 h-4" />
+        icon: <Cog className="w-4 h-4"  />
       },
       {
         name: 'Retail Technology',
         href: '/retail-technology-solutions',
         description: 'E-commerce and retail',
-        icon: <ShoppingCart className="w-4 h-4" />
+        icon: <ShoppingCart className="w-4 h-4"  />
       }
     ]
   }
 ];
 
 const quickLinks = [
-  { name: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> },
-  { name: 'Contact', href: '/contact', icon: <MessageCircle className="w-4 h-4" /> },
-  { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },
-  { name: 'Documentation', href: '/api-documentation', icon: <FileText className="w-4 h-4" /> },
-  { name: 'Status', href: '/status', icon: <Monitor className="w-4 h-4" /> }
+  { name: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4"  /> },
+  { name: 'Contact', href: '/contact', icon: <MessageCircle className="w-4 h-4"  /> },
+  { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4"  /> },
+  { name: 'Documentation', href: '/api-documentation', icon: <FileText className="w-4 h-4"  /> },
+  { name: 'Status', href: '/status', icon: <Monitor className="w-4 h-4"  /> }
 ];
 
-export default function UltraFuturisticNavigation2038() {
+export default function UltraFuturisticNavigation20o38() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -321,28 +321,28 @@ export default function UltraFuturisticNavigation2038() {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
       isScrolled 
         ? 'bg-black/80 backdrop-blur-xl border-b border-white/10' 
         : 'bg-transparent'
     }`}>
       {/* Top Contact Bar */}
-      <div className="bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 border-b border-white/10">
+      <div className="bg-gradient-to-r from-blue-60o0/20 via-purple-60o0/20 to-pink-60o0/20 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 py-2">
           <div className="flex items-center justify-between text-sm">
             <div className="flex items-center space-x-6">
               <a 
-                href="tel:+13024640950" 
+                href="tel:+130o24640950" 
                 className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors"
               >
-                <Phone className="w-3 h-3" />
-                <span>+1 302 464 0950</span>
+                <Phone className="w-3 h-3"  />
+                <span>+1 30o2 464 0950</span>
               </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com" 
                 className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors"
               >
-                <Mail className="w-3 h-3" />
+                <Mail className="w-3 h-3"  />
                 <span>kleber@ziontechgroup.com</span>
               </a>
             </div>
@@ -354,8 +354,8 @@ export default function UltraFuturisticNavigation2038() {
                 ziontechgroup.com
               </a>
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                <span className="text-green-400 text-xs">Live</span>
+                <div className="w-2 h-2 bg-green-40o0 rounded-full animate-pulse"></div>
+                <span className="text-green-40o0 text-xs">Live</span>
               </div>
             </div>
           </div>
@@ -368,13 +368,13 @@ export default function UltraFuturisticNavigation2038() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="relative">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Zap className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-50o0 to-purple-60o0 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-30o0">
+                <Zap className="w-6 h-6 text-white"  />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-50o0 to-purple-60o0 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-30o0"></div>
             </div>
             <div>
-              <h1 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <h1 className="text-xl font-bold bg-gradient-to-r from-blue-40o0 to-purple-40o0 bg-clip-text text-transparent">
                 Zion Tech Group
               </h1>
               <p className="text-xs text-white/60">Future Technology Today</p>
@@ -392,13 +392,13 @@ export default function UltraFuturisticNavigation2038() {
                   {item.icon}
                   <span>{item.name}</span>
                   {item.badge && (
-                    <span className="px-2 py-1 text-xs bg-gradient-to-r from-emerald-500 to-cyan-500 text-white rounded-full">
+                    <span className="px-2 py-1 text-xs bg-gradient-to-r from-emerald-50o0 to-cyan-50o0 text-white rounded-full">
                       {item.badge}
                     </span>
                   )}
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
                     activeDropdown === item.name ? 'rotate-180' : ''
-                  }`} />
+                  }`}  />
                 </button>
 
                 {/* Dropdown Menu */}
@@ -423,9 +423,9 @@ export default function UltraFuturisticNavigation2038() {
                               key={child.name}
                               href={normalizeHref(child.href)}
                               onClick={closeAllDropdowns}
-                              className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-200 group ${
+                              className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-20o0 group ${
                                 child.featured 
-                                  ? 'bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-white/20' 
+                                  ? 'bg-gradient-to-r from-blue-50o0/20 to-purple-50o0/20 border border-white/20' 
                                   : 'hover:bg-white/5'
                               }`}
                             >
@@ -438,14 +438,14 @@ export default function UltraFuturisticNavigation2038() {
                                 <div className="flex items-center space-x-2">
                                   <span className="text-white font-medium">{child.name}</span>
                                   {child.featured && (
-                                    <span className="px-2 py-1 text-xs bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-full">
+                                    <span className="px-2 py-1 text-xs bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-white rounded-full">
                                       Featured
                                     </span>
                                   )}
                                 </div>
                                 <p className="text-sm text-white/60">{child.description}</p>
                               </div>
-                              <ArrowRight className="w-4 h-4 text-white/40 group-hover:text-white transition-colors" />
+                              <ArrowRight className="w-4 h-4 text-white/40 group-hover:text-white transition-colors"  />
                             </Link>
                           ))}
                         </div>
@@ -465,7 +465,7 @@ export default function UltraFuturisticNavigation2038() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="p-2 text-white/60 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200"
+                  className="p-2 text-white/60 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-20o0"
                   title={link.name}
                 >
                   {link.icon}
@@ -483,7 +483,7 @@ export default function UltraFuturisticNavigation2038() {
               </Link>
               <Link
                 href="/contact"
-                className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                className="px-6 py-2 bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover:from-blue-70o0 hover:to-purple-70o0 text-white rounded-lg transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-lg"
               >
                 Get Started
               </Link>
@@ -495,7 +495,7 @@ export default function UltraFuturisticNavigation2038() {
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
           </button>
         </div>
       </div>
@@ -521,14 +521,14 @@ export default function UltraFuturisticNavigation2038() {
                       {item.icon}
                       <span>{item.name}</span>
                       {item.badge && (
-                        <span className="px-2 py-1 text-xs bg-gradient-to-r from-emerald-500 to-cyan-500 text-white rounded-full">
+                        <span className="px-2 py-1 text-xs bg-gradient-to-r from-emerald-50o0 to-cyan-50o0 text-white rounded-full">
                           {item.badge}
                         </span>
                       )}
                     </div>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
                       activeDropdown === item.name ? 'rotate-180' : ''
-                    }`} />
+                    }`}  />
                   </button>
 
                   {activeDropdown === item.name && (
@@ -571,7 +571,7 @@ export default function UltraFuturisticNavigation2038() {
                 <Link
                   href="/contact"
                   onClick={closeAllDropdowns}
-                  className="block w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-center rounded-lg transition-all duration-300 transform hover:scale-105"
+                  className="block w-full px-6 py-3 bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover:from-blue-70o0 hover:to-purple-70o0 text-white text-center rounded-lg transition-all duration-30o0 transform hover:scale-10o5"
                 >
                   Get Started Today
                 </Link>

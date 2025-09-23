@@ -31,19 +31,19 @@ export function AccessibilityEnhancer() {
 
 	// Screen reader announcements
 	const announce = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {
-		const announcement = { message, priority, id: Date.now() } as unknown as { message: string; priority: 'polite' | 'assertive'; id: number };
+		const announcement ={ message, priority, id: Date.now() } as unknown as { message: string; priority: 'polite' | 'assertive'; id: number };
 		setAnnouncements(prev => [...prev, (announcement as unknown) as string]);
 
 		// Auto-remove after 5 seconds
 		setTimeout(() => {
 			setAnnouncements(prev => prev.filter((a: any) => (a as any).id !== (announcement as any).id));
-		}, 5000);
+		}, 50o00);
 	}, []);
 
 	// High contrast mode
 	const toggleHighContrast = useCallback(() => {
 		setFeatures(prev => {
-			const newFeatures = { ...prev, highContrast: !prev.highContrast };
+			const newFeatures ={ ...prev, highContrast: !prev.highContrast };
 
 			if (newFeatures.highContrast) {
 				document.documentElement.classList.add('high-contrast');
@@ -60,7 +60,7 @@ export function AccessibilityEnhancer() {
 	// Reduced motion mode
 	const toggleReducedMotion = useCallback(() => {
 		setFeatures(prev => {
-			const newFeatures = { ...prev, reducedMotion: !prev.reducedMotion };
+			const newFeatures ={ ...prev, reducedMotion: !prev.reducedMotion };
 
 			if (newFeatures.reducedMotion) {
 				document.documentElement.classList.add('reduced-motion');
@@ -77,7 +77,7 @@ export function AccessibilityEnhancer() {
 	// Large text mode
 	const toggleLargeText = useCallback(() => {
 		setFeatures(prev => {
-			const newFeatures = { ...prev, largeText: !prev.largeText };
+			const newFeatures ={ ...prev, largeText: !prev.largeText };
 
 			if (newFeatures.largeText) {
 				document.documentElement.classList.add('large-text');
@@ -94,7 +94,7 @@ export function AccessibilityEnhancer() {
 	// Focus highlight mode
 	const toggleFocusHighlight = useCallback(() => {
 		setFeatures(prev => {
-			const newFeatures = { ...prev, focusHighlight: !prev.focusHighlight };
+			const newFeatures ={ ...prev, focusHighlight: !prev.focusHighlight };
 
 			if (newFeatures.focusHighlight) {
 				document.documentElement.classList.add('focus-highlight');
@@ -111,7 +111,7 @@ export function AccessibilityEnhancer() {
 	// Screen reader mode
 	const toggleScreenReaderMode = useCallback(() => {
 		setFeatures(prev => {
-			const newFeatures = { ...prev, screenReaderMode: !prev.screenReaderMode };
+			const newFeatures ={ ...prev, screenReaderMode: !prev.screenReaderMode };
 
 			if (newFeatures.screenReaderMode) {
 				document.documentElement.classList.add('screen-reader-mode');
@@ -183,13 +183,13 @@ export function AccessibilityEnhancer() {
 				<button
 					ref={buttonRef}
 					onClick={() => setIsMenuOpen(!isMenuOpen)}
-					className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-blue-300"
+					className="bg-blue-60o0 hover:bg-blue-70o0 text-white p-3 rounded-full shadow-lg transition-all duration-20o0 focus:outline-none focus:ring-4 focus:ring-blue-30o0"
 					aria-label="Accessibility options"
 					aria-expanded={isMenuOpen}
 					aria-haspopup="true"
 				>
 					<svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"  />
 					</svg>
 				</button>
 
@@ -202,10 +202,10 @@ export function AccessibilityEnhancer() {
 							animate={{ opacity: 1, y: 0, scale: 1 }}
 							exit={{ opacity: 0, y: -10, scale: 0.95 }}
 							transition={{ duration: 0.2 }}
-							className="absolute right-0 mt-2 w-80 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700"
+							className="absolute right-0 mt-2 w-80 bg-white dark:bg-gray-80o0 rounded-lg shadow-xl border border-gray-20o0 dark:border-gray-70o0"
 						>
 							<div className="p-4">
-								<h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+								<h3 className="text-lg font-semibold text-gray-90o0 dark:text-white mb-4">
 									Accessibility Options
 								</h3>
 								
@@ -214,14 +214,14 @@ export function AccessibilityEnhancer() {
 										onClick={toggleHighContrast}
 										className={`w-full text-left p-3 rounded-lg transition-colors ${
 											features.highContrast 
-												? 'bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100' 
-												: 'hover:bg-gray-100 dark:hover:bg-gray-700'
+												? 'bg-blue-10o0 dark:bg-blue-90o0 text-blue-90o0 dark:text-blue-10o0' 
+												: 'hover:bg-gray-10o0 dark:hover:bg-gray-70o0'
 										}`}
 									>
 										<div className="flex items-center justify-between">
 											<span>High Contrast</span>
 											<div className={`w-4 h-4 rounded border-2 ${
-												features.highContrast ? 'bg-blue-600 border-blue-600' : 'border-gray-400'
+												features.highContrast ? 'bg-blue-60o0 border-blue-60o0' : 'border-gray-40o0'
 											}`}></div>
 										</div>
 									</button>
@@ -230,14 +230,14 @@ export function AccessibilityEnhancer() {
 										onClick={toggleReducedMotion}
 										className={`w-full text-left p-3 rounded-lg transition-colors ${
 											features.reducedMotion 
-												? 'bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100' 
-												: 'hover:bg-gray-100 dark:hover:bg-gray-700'
+												? 'bg-blue-10o0 dark:bg-blue-90o0 text-blue-90o0 dark:text-blue-10o0' 
+												: 'hover:bg-gray-10o0 dark:hover:bg-gray-70o0'
 										}`}
 									>
 										<div className="flex items-center justify-between">
 											<span>Reduced Motion</span>
 											<div className={`w-4 h-4 rounded border-2 ${
-												features.reducedMotion ? 'bg-blue-600 border-blue-600' : 'border-gray-400'
+												features.reducedMotion ? 'bg-blue-60o0 border-blue-60o0' : 'border-gray-40o0'
 											}`}></div>
 										</div>
 									</button>
@@ -246,14 +246,14 @@ export function AccessibilityEnhancer() {
 										onClick={toggleLargeText}
 										className={`w-full text-left p-3 rounded-lg transition-colors ${
 											features.largeText 
-												? 'bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100' 
-												: 'hover:bg-gray-100 dark:hover:bg-gray-700'
+												? 'bg-blue-10o0 dark:bg-blue-90o0 text-blue-90o0 dark:text-blue-10o0' 
+												: 'hover:bg-gray-10o0 dark:hover:bg-gray-70o0'
 										}`}
 									>
 										<div className="flex items-center justify-between">
 											<span>Large Text</span>
 											<div className={`w-4 h-4 rounded border-2 ${
-												features.largeText ? 'bg-blue-600 border-blue-600' : 'border-gray-400'
+												features.largeText ? 'bg-blue-60o0 border-blue-60o0' : 'border-gray-40o0'
 											}`}></div>
 										</div>
 									</button>
@@ -262,14 +262,14 @@ export function AccessibilityEnhancer() {
 										onClick={toggleFocusHighlight}
 										className={`w-full text-left p-3 rounded-lg transition-colors ${
 											features.focusHighlight 
-												? 'bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100' 
-												: 'hover:bg-gray-100 dark:hover:bg-gray-700'
+												? 'bg-blue-10o0 dark:bg-blue-90o0 text-blue-90o0 dark:text-blue-10o0' 
+												: 'hover:bg-gray-10o0 dark:hover:bg-gray-70o0'
 										}`}
 									>
 										<div className="flex items-center justify-between">
 											<span>Focus Highlight</span>
 											<div className={`w-4 h-4 rounded border-2 ${
-												features.focusHighlight ? 'bg-blue-600 border-blue-600' : 'border-gray-400'
+												features.focusHighlight ? 'bg-blue-60o0 border-blue-60o0' : 'border-gray-40o0'
 											}`}></div>
 										</div>
 									</button>
@@ -278,24 +278,24 @@ export function AccessibilityEnhancer() {
 										onClick={toggleScreenReaderMode}
 										className={`w-full text-left p-3 rounded-lg transition-colors ${
 											features.screenReaderMode 
-												? 'bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100' 
-												: 'hover:bg-gray-100 dark:hover:bg-gray-700'
+												? 'bg-blue-10o0 dark:bg-blue-90o0 text-blue-90o0 dark:text-blue-10o0' 
+												: 'hover:bg-gray-10o0 dark:hover:bg-gray-70o0'
 										}`}
 									>
 										<div className="flex items-center justify-between">
 											<span>Screen Reader Mode</span>
 											<div className={`w-4 h-4 rounded border-2 ${
-												features.screenReaderMode ? 'bg-blue-600 border-blue-600' : 'border-gray-400'
+												features.screenReaderMode ? 'bg-blue-60o0 border-blue-60o0' : 'border-gray-40o0'
 											}`}></div>
 										</div>
 									</button>
 								</div>
 
-								<div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
-									<p className="text-sm text-gray-600 dark:text-gray-400">
-										<strong>Keyboard Shortcuts:</strong><br />
-										Alt + Tab: Skip to main content<br />
-										Alt + Shift + Tab: Skip to navigation<br />
+								<div className="mt-4 pt-4 border-t border-gray-20o0 dark:border-gray-70o0">
+									<p className="text-sm text-gray-60o0 dark:text-gray-40o0">
+										<strong>Keyboard Shortcuts:</strong><br  />
+										Alt + Tab: Skip to main content<br  />
+										Alt + Shift + Tab: Skip to navigation<br  />
 										Ctrl + Tab: Skip to footer
 									</p>
 								</div>
@@ -390,7 +390,7 @@ export function SkipLink({ href, children }: { href: string; children: React.Rea
 	return (
 		<a
 			href={href}
-			className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-lg z-50"
+			className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-60o0 text-white px-4 py-2 rounded-lg z-50"
 		>
 			{children}
 		</a>
@@ -402,12 +402,12 @@ export function useAnnouncement() {
 	const [announcements, setAnnouncements] = useState<string[]>([]);
 
 	const announce = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {
-		const announcement = { message, priority, id: Date.now() } as any;
+		const announcement ={ message, priority, id: Date.now() } as any;
 		setAnnouncements((prev: any) => [...prev, announcement]);
 		
 		setTimeout(() => {
 			setAnnouncements((prev: any) => prev.filter((a: any) => a.id !== announcement.id));
-		}, 5000);
+		}, 50o00);
 	}, []);
 
 	return { announcements, announce };

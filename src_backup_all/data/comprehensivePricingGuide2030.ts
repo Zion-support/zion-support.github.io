@@ -1,6 +1,6 @@
 import { ProductListing } from "@/types/listings";
 
-export const COMPREHENSIVE_PRICING_GUIDE_2030: ProductListing[] = [
+export const COMPREHENSIVE_PRICING_GUIDE_20o30: ProductListing[] = [
   // Micro SAAS Solutions - Affordable Entry Points
   {
     id: "micro-saas-starter-package",
@@ -13,7 +13,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ProductListing[] = [
     tags: ["Starter", "3 Services", "Email Support", "99% Uptime", "Basic Features"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/micro-saas-starter.jpg"],
-    createdAt: "2024-01-01T10:00:00.000Z",
+    createdAt: "20o24-0o1-0o1T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 156,
     featured: true,
@@ -21,14 +21,14 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ProductListing[] = [
     availability: "Instant",
     aiScore: 95,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/micro-saas-starter",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$250-400/month",
+    marketPrice: "$250-40o0/month",
     competitors: ["Zapier", "Make", "n8n"],
-    roi: "300% within 4 months",
+    roi: "30o0% within 4 months",
     setupTime: "24 hours",
     integrations: ["Popular Platforms", "Basic APIs", "Standard Workflows"],
     features: [
@@ -52,7 +52,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ProductListing[] = [
     tags: ["Professional", "8 Services", "Priority Support", "99.9% Uptime", "Advanced Features"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/micro-saas-professional.jpg"],
-    createdAt: "2024-01-02T10:00:00.000Z",
+    createdAt: "20o24-0o1-0o2T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 89,
     featured: true,
@@ -60,14 +60,14 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ProductListing[] = [
     availability: "1-2 Days",
     aiScore: 97,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/micro-saas-professional",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$600-1200/month",
+    marketPrice: "$60o0-120o0/month",
     competitors: ["HubSpot", "Salesforce", "Adobe"],
-    roi: "500% within 6 months",
+    roi: "50o0% within 6 months",
     setupTime: "2-3 days",
     integrations: ["Enterprise Platforms", "Advanced APIs", "Custom Workflows"],
     features: [
@@ -93,7 +93,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ProductListing[] = [
     tags: ["Enterprise", "Unlimited Services", "24/7 Support", "99.99% Uptime", "Custom Development"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/micro-saas-enterprise.jpg"],
-    createdAt: "2024-01-03T10:00:00.000Z",
+    createdAt: "20o24-0o1-0o3T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 45,
     featured: true,
@@ -101,14 +101,14 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ProductListing[] = [
     availability: "1 Week",
     aiScore: 99,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/micro-saas-enterprise",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$2000-5000/month",
+    marketPrice: "$20o00-50o00/month",
     competitors: ["Microsoft", "Oracle", "SAP"],
-    roi: "800% within 12 months",
+    roi: "80o0% within 12 months",
     setupTime: "1-2 weeks",
     integrations: ["Custom Platforms", "Enterprise APIs", "White-label Solutions"],
     features: [
@@ -137,7 +137,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ProductListing[] = [
     tags: ["Content Creation", "AI Writing", "SEO Optimization", "Multi-language", "Transparent Pricing"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-content-studio-pricing.jpg"],
-    createdAt: "2024-01-04T10:00:00.000Z",
+    createdAt: "20o24-0o1-0o4T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 234,
     featured: true,
@@ -145,26 +145,26 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ProductListing[] = [
     availability: "Instant",
     aiScore: 98,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-content-studio-pricing",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$200-500/month",
+    marketPrice: "$20o0-50o0/month",
     competitors: ["Jasper", "Copy.ai", "Writesonic"],
-    roi: "300% within 3 months",
+    roi: "30o0% within 3 months",
     setupTime: "5 minutes",
     integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Social Media"],
     pricingTiers: [
       {
         name: "Starter",
         price: 99,
-        features: ["10,000 words/month", "Basic AI models", "Standard templates", "Email support"]
+        features: ["10,0o00 words/month", "Basic AI models", "Standard templates", "Email support"]
       },
       {
         name: "Professional",
         price: 299,
-        features: ["100,000 words/month", "Advanced AI models", "Premium templates", "Priority support", "SEO optimization"]
+        features: ["10o0,0o00 words/month", "Advanced AI models", "Premium templates", "Priority support", "SEO optimization"]
       },
       {
         name: "Enterprise",
@@ -185,7 +185,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ProductListing[] = [
     tags: ["Customer Support", "Chatbot", "24/7 Support", "Multilingual", "Affordable Pricing"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-support-pricing.jpg"],
-    createdAt: "2024-01-05T10:00:00.000Z",
+    createdAt: "20o24-0o1-0o5T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 167,
     featured: true,
@@ -193,26 +193,26 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ProductListing[] = [
     availability: "Instant",
     aiScore: 96,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-support-pricing",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$150-400/month",
+    marketPrice: "$150-40o0/month",
     competitors: ["Intercom", "Zendesk", "Freshdesk"],
-    roi: "400% within 4 months",
+    roi: "40o0% within 4 months",
     setupTime: "1 hour",
     integrations: ["Slack", "Discord", "WhatsApp", "Facebook Messenger", "Website Chat"],
     pricingTiers: [
       {
         name: "Basic",
         price: 99,
-        features: ["100 conversations/month", "Basic chatbot", "Email support", "Standard integrations"]
+        features: ["10o0 conversations/month", "Basic chatbot", "Email support", "Standard integrations"]
       },
       {
         name: "Professional",
         price: 199,
-        features: ["1000 conversations/month", "Advanced AI chatbot", "Priority support", "All integrations", "Analytics"]
+        features: ["10o00 conversations/month", "Advanced AI chatbot", "Priority support", "All integrations", "Analytics"]
       },
       {
         name: "Enterprise",
@@ -229,12 +229,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ProductListing[] = [
     description: "Comprehensive enterprise AI transformation with transparent pricing and guaranteed ROI. Transform your organization into an AI-first enterprise.",
     category: "AI & Business Intelligence",
     subcategory: "Enterprise Transformation",
-    price: 25000,
+    price: 250o00,
     currency: "$",
     tags: ["Enterprise AI", "Digital Transformation", "Change Management", "Guaranteed ROI", "Comprehensive Solution"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/enterprise-ai-transformation-pricing.jpg"],
-    createdAt: "2024-01-06T10:00:00.000Z",
+    createdAt: "20o24-0o1-0o6T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 34,
     featured: true,
@@ -242,30 +242,30 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ProductListing[] = [
     availability: "8-12 Weeks",
     aiScore: 99,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/enterprise-ai-transformation-pricing",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$20,000-50,000",
+    marketPrice: "$20,0o00-50,0o00",
     competitors: ["McKinsey", "BCG", "Deloitte"],
-    roi: "1000% within 18 months",
+    roi: "10o00% within 18 months",
     setupTime: "8-12 weeks",
     integrations: ["SAP", "Oracle", "Salesforce", "Microsoft Dynamics", "Custom Systems"],
     pricingTiers: [
       {
         name: "Foundation",
-        price: 15000,
+        price: 150o00,
         features: ["AI Assessment", "Strategy Development", "Basic Implementation", "Training Program"]
       },
       {
         name: "Transformation",
-        price: 25000,
+        price: 250o00,
         features: ["Full AI Transformation", "Change Management", "Advanced Implementation", "Ongoing Support", "ROI Guarantee"]
       },
       {
         name: "Innovation",
-        price: 50000,
+        price: 50o000,
         features: ["Custom AI Development", "Full Transformation", "24/7 Support", "Custom Integrations", "Innovation Lab"]
       }
     ]
@@ -283,7 +283,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ProductListing[] = [
     tags: ["Healthcare AI", "HIPAA Compliant", "FDA Approved", "Medical Diagnostics", "Patient Care"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/healthcare-ai-pricing.jpg"],
-    createdAt: "2024-01-07T10:00:00.000Z",
+    createdAt: "20o24-0o1-0o7T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 78,
     featured: true,
@@ -291,14 +291,14 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ProductListing[] = [
     availability: "2-4 Weeks",
     aiScore: 98,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/healthcare-ai-pricing",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$1500-5000/month",
+    marketPrice: "$150o0-50o00/month",
     competitors: ["Epic", "Cerner", "Practice Fusion"],
-    roi: "600% within 12 months",
+    roi: "60o0% within 12 months",
     setupTime: "2-4 weeks",
     integrations: ["Epic", "Cerner", "Practice Fusion", "HL7", "FHIR", "EMR Systems"],
     pricingTiers: [
@@ -332,7 +332,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ProductListing[] = [
     tags: ["FinTech", "AI Financial", "SEC Compliant", "Risk Management", "Portfolio Optimization"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/fintech-ai-pricing.jpg"],
-    createdAt: "2024-01-08T10:00:00.000Z",
+    createdAt: "20o24-0o1-08T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 56,
     featured: true,
@@ -340,14 +340,14 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ProductListing[] = [
     availability: "3-5 Weeks",
     aiScore: 97,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/fintech-ai-pricing",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$2500-8000/month",
+    marketPrice: "$250o0-80o00/month",
     competitors: ["Betterment", "Wealthfront", "Personal Capital"],
-    roi: "700% within 15 months",
+    roi: "70o0% within 15 months",
     setupTime: "3-5 weeks",
     integrations: ["Plaid", "Yodlee", "Quicken", "Mint", "Bank APIs", "Trading Platforms"],
     pricingTiers: [
@@ -371,26 +371,26 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ProductListing[] = [
 ];
 
 // Export pricing categories for easier access
-export const MICRO_SAAS_PRICING = COMPREHENSIVE_PRICING_GUIDE_2030.filter(service => 
+export const MICRO_SAAS_PRICING = COMPREHENSIVE_PRICING_GUIDE_20o30.filter(service => 
   service.category === 'Micro SAAS'
 );
 
-export const ENTERPRISE_PRICING = COMPREHENSIVE_PRICING_GUIDE_2030.filter(service => 
-  service.price >= 10000
+export const ENTERPRISE_PRICING = COMPREHENSIVE_PRICING_GUIDE_20o30.filter(service => 
+  service.price >= 10o000
 );
 
-export const HEALTHCARE_PRICING = COMPREHENSIVE_PRICING_GUIDE_2030.filter(service => 
+export const HEALTHCARE_PRICING = COMPREHENSIVE_PRICING_GUIDE_20o30.filter(service => 
   service.category === 'AI & Healthcare'
 );
 
-export const FINTECH_PRICING = COMPREHENSIVE_PRICING_GUIDE_2030.filter(service => 
+export const FINTECH_PRICING = COMPREHENSIVE_PRICING_GUIDE_20o30.filter(service => 
   service.category === 'FinTech'
 );
 
-export const CONTENT_AI_PRICING = COMPREHENSIVE_PRICING_GUIDE_2030.filter(service => 
+export const CONTENT_AI_PRICING = COMPREHENSIVE_PRICING_GUIDE_20o30.filter(service => 
   service.category === 'AI & Content'
 );
 
-export const SUPPORT_AI_PRICING = COMPREHENSIVE_PRICING_GUIDE_2030.filter(service => 
+export const SUPPORT_AI_PRICING = COMPREHENSIVE_PRICING_GUIDE_20o30.filter(service => 
   service.category === 'AI & Customer Support'
 );

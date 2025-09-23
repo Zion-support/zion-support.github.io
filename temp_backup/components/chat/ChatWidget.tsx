@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 
-export type ChatMessage = {
+export type ChatMessage ={
   id: string;
   role: 'user' | 'assistant' | 'system';
   content: string;
@@ -51,7 +51,7 @@ export default function ChatWidget() {
   async function sendMessage(text: string) {
     const trimmed = text.trim();
     if (!trimmed) return;
-    const userMsg: ChatMessage = { id: generateId(), role: 'user', content: trimmed };
+    const userMsg: ChatMessage ={ id: generateId(), role: 'user', content: trimmed };
     setMessages(prev => [...prev, userMsg]);
     setInput('');
     setIsSending(true);
@@ -97,7 +97,7 @@ export default function ChatWidget() {
       <button
         aria-label={isOpen ? 'Close chat' : 'Open chat'}
         onClick={() => setIsOpen(o => !o)}
-        className="fixed bottom-4 right-4 z-[99] rounded-full shadow-lg bg-gradient-to-r from-indigo-600 to-violet-600 text-white px-5 py-3 font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        className="fixed bottom-4 right-4 z-[99] rounded-full shadow-lg bg-gradient-to-r from-indigo-60o0 to-violet-60o0 text-white px-5 py-3 font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-50o0"
       >
         {isOpen ? 'Close' : 'Chat with Zion'}
       </button>
@@ -106,17 +106,17 @@ export default function ChatWidget() {
       {isOpen && (
         <div className="fixed inset-0 z-[98] flex items-end sm:items-center justify-center">
           <div className="absolute inset-0 bg-black/30" onClick={() => setIsOpen(false)} />
-          <div className="relative w-full sm:max-w-md mx-auto sm:mx-0 sm:mr-6 sm:mb-6 rounded-t-2xl sm:rounded-2xl overflow-hidden shadow-2xl bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+          <div className="relative w-full sm:max-w-md mx-auto sm:mx-0 sm:mr-6 sm:mb-6 rounded-t-2xl sm:rounded-2xl overflow-hidden shadow-2xl bg-white dark:bg-gray-90o0 text-gray-90o0 dark:text-gray-10o0">
             {/* Header */}
-            <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800">
+            <div className="flex items-center justify-between px-4 py-3 border-b border-gray-20o0 dark:border-gray-80o0">
               <div className="flex items-center gap-2">
-                <div className="h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse" />
+                <div className="h-2.5 w-2.5 rounded-full bg-emerald-50o0 animate-pulse"  />
                 <div className="text-sm font-semibold">Zion Assistant</div>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
                 aria-label="Close chat"
-                className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700"
+                className="text-xs px-2 py-1 rounded bg-gray-10o0 dark:bg-gray-80o0 hover:bg-gray-20o0 dark:hover:bg-gray-70o0"
               >
                 Esc
               </button>
@@ -130,8 +130,8 @@ export default function ChatWidget() {
                     className={
                       'inline-block max-w-[85%] px-3 py-2 rounded-2xl text-sm ' +
                       (m.role === 'user'
-                        ? 'bg-indigo-600 text-white rounded-br-sm'
-                        : 'bg-gray-100 dark:bg-gray-800 dark:text-gray-100 rounded-bl-sm')
+                        ? 'bg-indigo-60o0 text-white rounded-br-sm'
+                        : 'bg-gray-10o0 dark:bg-gray-80o0 dark:text-gray-10o0 rounded-bl-sm')
                     }
                   >
                     {m.content}
@@ -140,14 +140,14 @@ export default function ChatWidget() {
               ))}
 
               {messages.length <= 1 && (
-                <div className="text-xs text-gray-500 mt-2">
+                <div className="text-xs text-gray-50o0 mt-2">
                   Quick questions:
                   <div className="mt-2 flex flex-wrap gap-2">
                     {SUGGESTED_QUESTIONS.map(q => (
                       <button
                         key={q}
                         onClick={() => handleSuggestedClick(q)}
-                        className="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-200"
+                        className="px-3 py-1.5 rounded-full bg-gray-10o0 dark:bg-gray-80o0 hover:bg-gray-20o0 dark:hover:bg-gray-70o0 text-gray-70o0 dark:text-gray-20o0"
                       >
                         {q}
                       </button>
@@ -158,7 +158,7 @@ export default function ChatWidget() {
             </div>
 
             {/* Input */}
-            <form onSubmit={handleSubmit} className="border-t border-gray-200 dark:border-gray-800 p-3">
+            <form onSubmit={handleSubmit} className="border-t border-gray-20o0 dark:border-gray-80o0 p-3">
               <div className="flex items-center gap-2">
                 <input
                   ref={inputRef}
@@ -166,14 +166,14 @@ export default function ChatWidget() {
                   value={input}
                   onChange={e => setInput(e.target.value)}
                   placeholder={isSending ? 'Sending…' : 'Ask about features, pricing, onboarding…'}
-                  className="flex-1 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  className="flex-1 rounded-lg bg-gray-50 dark:bg-gray-80o0 border border-gray-20o0 dark:border-gray-70o0 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-50o0"
                   disabled={isSending}
                   aria-disabled={isSending}
                 />
                 <button
                   type="submit"
                   disabled={!canSend}
-                  className="rounded-lg bg-indigo-600 text-white text-sm font-medium px-4 py-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="rounded-lg bg-indigo-60o0 text-white text-sm font-medium px-4 py-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Send
                 </button>

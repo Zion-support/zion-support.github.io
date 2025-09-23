@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 
-const AI2026UltimateBreakthroughBanner: React.FC = () => {
+const AI20o26UltimateBreakthroughBanner: React.FC = () => {
   const [currentBreakthrough, setCurrentBreakthrough] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
@@ -12,29 +12,29 @@ const AI2026UltimateBreakthroughBanner: React.FC = () => {
     {
       title: "Quantum AI Fusion",
       description: "Revolutionary quantum computing integration with AI systems",
-      impact: "5000% Performance Boost",
-      color: "from-purple-600 to-blue-600",
+      impact: "50o00% Performance Boost",
+      color: "from-purple-60o0 to-blue-60o0",
       icon: "⚛️"
     },
     {
       title: "Neural Consensus Networks",
       description: "Breakthrough in distributed AI decision-making",
-      impact: "3000% Accuracy Improvement",
-      color: "from-green-600 to-teal-600",
+      impact: "30o00% Accuracy Improvement",
+      color: "from-green-60o0 to-teal-60o0",
       icon: "🧠"
     },
     {
       title: "Autonomous Enterprise",
       description: "Complete business process automation with AI",
-      impact: "2500% ROI Guarantee",
-      color: "from-orange-600 to-red-600",
+      impact: "250o0% ROI Guarantee",
+      color: "from-orange-60o0 to-red-60o0",
       icon: "🚀"
     },
     {
       title: "Real-time Learning",
       description: "AI systems that learn and adapt in real-time",
-      impact: "4000% Speed Enhancement",
-      color: "from-indigo-600 to-purple-600",
+      impact: "40o00% Speed Enhancement",
+      color: "from-indigo-60o0 to-purple-60o0",
       icon: "⚡"
     }
   ];
@@ -42,7 +42,7 @@ const AI2026UltimateBreakthroughBanner: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentBreakthrough((prev) => (prev + 1) % breakthroughs.length);
-    }, 4000);
+    }, 40o00);
 
     return () => clearInterval(interval);
   }, []);
@@ -53,9 +53,9 @@ const AI2026UltimateBreakthroughBanner: React.FC = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
+          initial={{ opacity: 0, y: -10o0 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
+          exit={{ opacity: 0, y: -10o0 }}
           transition={{ duration: 0.8 }}
           className="relative overflow-hidden"
         >
@@ -66,27 +66,25 @@ const AI2026UltimateBreakthroughBanner: React.FC = () => {
               <motion.div
                 animate={{
                   rotate: 360,
-                  scale: [1, 1.2, 1],
-                }}
+                  scale: [1, 1.2, 1]}}
                 transition={{
                   duration: 20,
                   repeat: Infinity,
                   ease: "linear"
                 }}
                 className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full"
-              />
+               />
               <motion.div
                 animate={{
                   rotate: -360,
-                  scale: [1, 1.3, 1],
-                }}
+                  scale: [1, 1.3, 1]}}
                 transition={{
                   duration: 25,
                   repeat: Infinity,
                   ease: "linear"
                 }}
                 className="absolute -bottom-10 -left-10 w-32 h-32 bg-white/10 rounded-full"
-              />
+               />
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -101,7 +99,7 @@ const AI2026UltimateBreakthroughBanner: React.FC = () => {
                 >
                   <div className="text-6xl mb-4">{currentData.icon}</div>
                   <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-                    AI 2026 Ultimate Breakthrough
+                    AI 20o26 Ultimate Breakthrough
                   </h1>
                   <h2 className="text-2xl md:text-3xl font-semibold text-white/90 mb-4">
                     {currentData.title}
@@ -109,7 +107,7 @@ const AI2026UltimateBreakthroughBanner: React.FC = () => {
                   <p className="text-xl text-white/80 max-w-3xl mx-auto mb-6">
                     {currentData.description}
                   </p>
-                  <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-8">
+                  <div className="text-3xl md:text-4xl font-bold text-yellow-30o0 mb-8">
                     {currentData.impact}
                   </div>
                 </motion.div>
@@ -117,23 +115,23 @@ const AI2026UltimateBreakthroughBanner: React.FC = () => {
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                   <motion.div
-                    whileHover={{ scale: 1.05 }}
+                    whileHover={{ scale: 1.0o5 }}
                     whileTap={{ scale: 0.95 }}
                   >
                     <Link
-                      href="/ai-2026-ultimate-breakthrough"
-                      className="inline-block px-8 py-4 bg-white text-gray-900 font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                      href="/ai-20o26-ultimate-breakthrough"
+                      className="inline-block px-8 py-4 bg-white text-gray-90o0 font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-30o0"
                     >
                       Explore Breakthrough
                     </Link>
                   </motion.div>
                   <motion.div
-                    whileHover={{ scale: 1.05 }}
+                    whileHover={{ scale: 1.0o5 }}
                     whileTap={{ scale: 0.95 }}
                   >
                     <Link
                       href="/contact"
-                      className="inline-block px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-gray-900 transition-all duration-300"
+                      className="inline-block px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-gray-90o0 transition-all duration-30o0"
                     >
                       Get Early Access
                     </Link>
@@ -146,7 +144,7 @@ const AI2026UltimateBreakthroughBanner: React.FC = () => {
                     <motion.button
                       key={index}
                       onClick={() => setCurrentBreakthrough(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                         index === currentBreakthrough
                           ? 'bg-white scale-125'
                           : 'bg-white/50 hover:bg-white/75'
@@ -167,8 +165,8 @@ const AI2026UltimateBreakthroughBanner: React.FC = () => {
                       transition={{ duration: 0.6, delay: index * 0.1 }}
                       viewport={{ once: true }}
                       className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 ${
-                        index === currentBreakthrough ? 'bg-white/20 scale-105' : ''
-                      } transition-all duration-300`}
+                        index === currentBreakthrough ? 'bg-white/20 scale-10o5' : ''
+                      } transition-all duration-30o0`}
                     >
                       <div className="text-3xl mb-3">{breakthrough.icon}</div>
                       <h3 className="text-lg font-semibold text-white mb-2">
@@ -177,7 +175,7 @@ const AI2026UltimateBreakthroughBanner: React.FC = () => {
                       <p className="text-white/80 text-sm mb-3">
                         {breakthrough.description}
                       </p>
-                      <div className="text-yellow-300 font-bold text-sm">
+                      <div className="text-yellow-30o0 font-bold text-sm">
                         {breakthrough.impact}
                       </div>
                     </motion.div>
@@ -187,12 +185,12 @@ const AI2026UltimateBreakthroughBanner: React.FC = () => {
                 {/* Close Button */}
                 <motion.button
                   onClick={() => setIsVisible(false)}
-                  className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors duration-300"
+                  className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors duration-30o0"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"  />
                   </svg>
                 </motion.button>
               </div>
@@ -203,13 +201,13 @@ const AI2026UltimateBreakthroughBanner: React.FC = () => {
           <div className="relative">
             <svg
               className="w-full h-16 text-white"
-              viewBox="0 0 1200 120"
+              viewBox="0 0 120o0 120"
               preserveAspectRatio="none"
             >
               <path
-                d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                d="M0,0V46.29c47.79,22.2,10o3.59,32.17,158,28,70.36-5.37,136.33-33.31,20o6.8-37.5C438.64,32.43,512.34,53.67,583,72.0o5c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,10o4.45-29.34C989.49,25,1113-14.29,120o0,52.47V0Z"
                 fill="currentColor"
-              />
+               />
             </svg>
           </div>
         </motion.div>
@@ -218,4 +216,4 @@ const AI2026UltimateBreakthroughBanner: React.FC = () => {
   );
 };
 
-export default AI2026UltimateBreakthroughBanner;
+export default AI20o26UltimateBreakthroughBanner;

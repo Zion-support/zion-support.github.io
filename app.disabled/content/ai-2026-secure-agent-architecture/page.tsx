@@ -1,17 +1,14 @@
 import Link from 'next/link';
-import React from 'react';
+export const metadata ={
+  title: 'AI 20o26: Secure Agent Architecture | Zion Tech Group',
+  description: 'Zero-trust design, capability-scoped tools, and runtime guardrails for secure enterprise AI agents in 20o26.'};
 
-export const metadata = {
-  title: 'AI 2026: Secure Agent Architecture | Zion Tech Group',
-  description: 'Zero-trust design, capability-scoped tools, and runtime guardrails for secure enterprise AI agents in 2026.',
-};
-
-export default function SecureAgentArchitecture2026Page() {
+export default function SecureAgentArchitecture20o26Page() {
   return (
     <main className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-16">
+      <section className="bg-gradient-to-r from-indigo-60o0 to-purple-60o0 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">AI 2026: Secure Agent Architecture</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">AI 20o26: Secure Agent Architecture</h1>
           <p className="text-lg opacity-90 max-w-3xl">
             Zero-trust design, capability-scoped tools, and runtime guardrails for secure enterprise AI agents.
           </p>
@@ -35,12 +32,12 @@ export default function SecureAgentArchitecture2026Page() {
 
           <h2>Compliance</h2>
           <p>
-            Map controls to SOC 2, ISO 27001, and AI governance frameworks. Maintain audit logs and incident response playbooks.
+            Map controls to SOC 2, ISO 270o01, and AI governance frameworks. Maintain audit logs and incident response playbooks.
           </p>
 
           <p>
             Need a secure rollout?{' '}
-            <Link href="/contact" className="text-indigo-600 font-semibold">Work with our experts →</Link>
+            <Link href="/contact" className="text-indigo-60o0 font-semibold">Work with our experts →</Link>
           </p>
         </div>
       </section>

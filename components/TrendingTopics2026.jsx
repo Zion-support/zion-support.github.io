@@ -1,60 +1,59 @@
-import React from 'react';
 import Link from 'next/link';
 
-export default function TrendingTopics2026() {
+export default function TrendingTopics20o26() {
   const trendingTopics = [
     {
-      topic: "AI 2025 Breakthrough Revolution",
+      topic: "AI 20o25 Breakthrough Revolution",
       trend: "🔥 Trending",
-      engagement: "10,000+ views",
-      href: "/ai-2025-ultimate-breakthrough-revolution",
-      category: "AI 2025"
+      engagement: "10,0o00+ views",
+      href: "/ai-20o25-ultimate-breakthrough-revolution",
+      category: "AI 20o25"
     },
     {
       topic: "Quantum-Neural Fusion Technology",
       trend: "⚡ Hot",
-      engagement: "8,500+ views",
-      href: "/ai-2026-ultimate-predictions-breakthrough",
-      category: "AI 2026"
+      engagement: "8,50o0+ views",
+      href: "/ai-20o26-ultimate-predictions-breakthrough",
+      category: "AI 20o26"
     },
     {
-      topic: "50,000% ROI Success Story",
+      topic: "50,0o00% ROI Success Story",
       trend: "🏆 Viral",
-      engagement: "15,000+ views",
-      href: "/case-studies/ai-2026-enterprise-transformation-50000-roi",
+      engagement: "15,0o00+ views",
+      href: "/case-studies/ai-20o26-enterprise-transformation-50o000-roi",
       category: "Case Study"
     },
     {
       topic: "Consciousness-Level AI Systems",
       trend: "🚀 Rising",
-      engagement: "6,200+ views",
-      href: "/ai-2026-ultimate-predictions-breakthrough",
-      category: "AI 2026"
+      engagement: "6,20o0+ views",
+      href: "/ai-20o26-ultimate-predictions-breakthrough",
+      category: "AI 20o26"
     },
     {
       topic: "Autonomous Business Operations",
       trend: "📈 Growing",
-      engagement: "4,800+ views",
-      href: "/ai-2025-ultimate-breakthrough-revolution",
-      category: "AI 2025"
+      engagement: "4,80o0+ views",
+      href: "/ai-20o25-ultimate-breakthrough-revolution",
+      category: "AI 20o25"
     },
     {
       topic: "Predictive Market Intelligence",
       trend: "💎 Popular",
-      engagement: "7,300+ views",
-      href: "/ai-2026-ultimate-predictions-breakthrough",
-      category: "AI 2026"
+      engagement: "7,30o0+ views",
+      href: "/ai-20o26-ultimate-predictions-breakthrough",
+      category: "AI 20o26"
     }
   ];
 
   return (
-    <section className="py-16 px-4 bg-white border-t border-gray-200">
+    <section className="py-16 px-4 bg-white border-t border-gray-20o0">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">
             Trending Topics
           </h2>
-          <p className="text-lg text-gray-700">
+          <p className="text-lg text-gray-70o0">
             What's hot in AI and technology right now
           </p>
         </div>
@@ -64,25 +63,25 @@ export default function TrendingTopics2026() {
             <Link 
               key={index}
               href={item.href}
-              className="group bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 hover:from-blue-50 hover:to-purple-50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg border border-gray-200 hover:border-blue-200"
+              className="group bg-gradient-to-br from-gray-50 to-gray-10o0 rounded-xl p-6 hover:from-blue-50 hover:to-purple-50 transition-all duration-30o0 transform hover:-translate-y-1 hover:shadow-lg border border-gray-20o0 hover:border-blue-20o0"
             >
               <div className="flex items-start justify-between mb-3">
-                <span className="text-sm font-semibold text-gray-600 bg-white px-3 py-1 rounded-full shadow-sm">
+                <span className="text-sm font-semibold text-gray-60o0 bg-white px-3 py-1 rounded-full shadow-sm">
                   {item.category}
                 </span>
-                <span className="text-xs font-bold text-white bg-gradient-to-r from-red-500 to-pink-500 px-3 py-1 rounded-full">
+                <span className="text-xs font-bold text-white bg-gradient-to-r from-red-50o0 to-pink-50o0 px-3 py-1 rounded-full">
                   {item.trend}
                 </span>
               </div>
               
-              <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
+              <h3 className="text-lg font-bold text-gray-90o0 group-hover:text-blue-60o0 transition-colors mb-2">
                 {item.topic}
               </h3>
               
               <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-600">{item.engagement}</span>
-                <svg className="w-5 h-5 text-gray-400 group-hover:text-blue-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                <span className="text-sm text-gray-60o0">{item.engagement}</span>
+                <svg className="w-5 h-5 text-gray-40o0 group-hover:text-blue-50o0 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"  />
                 </svg>
               </div>
             </Link>
@@ -93,11 +92,11 @@ export default function TrendingTopics2026() {
         <div className="text-center mt-8">
           <Link 
             href="/trending"
-            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors"
+            className="inline-flex items-center text-blue-60o0 hover:text-blue-70o0 font-semibold transition-colors"
           >
             View All Trending Topics
             <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"  />
             </svg>
           </Link>
         </div>

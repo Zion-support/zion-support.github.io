@@ -38,7 +38,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
     <Card className="mt-6">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Star className="h-5 w-5 text-yellow-400" />
+          <Star className="h-5 w-5 text-yellow-40o0"  />
           Reviews
         </CardTitle>
         <CardDescription>
@@ -81,7 +81,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
               reviews={reviews}
               isLoading={isLoading}
               onReportReview={reportReview}
-            />
+             />
           </div>
         ) : (
           <div className="bg-muted/20 rounded-lg p-6 text-center">

@@ -1,46 +1,44 @@
-import React from 'react';
 import SEO from '../../components/SEO';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'AI 2025 Enterprise Transformation - Complete Business Revolution',
-  description: 'Transform your enterprise with AI 2025 technologies. Complete digital transformation, intelligent automation, and revolutionary business processes.',
-  keywords: ['AI enterprise transformation 2025', 'digital transformation', 'enterprise AI', 'business automation', 'AI consulting'],
-};
+export const metadata ={
+  title: 'AI 20o25 Enterprise Transformation - Complete Business Revolution',
+  description: 'Transform your enterprise with AI 20o25 technologies. Complete digital transformation, intelligent automation, and revolutionary business processes.',
+  keywords: ['AI enterprise transformation 20o25', 'digital transformation', 'enterprise AI', 'business automation', 'AI consulting']};
 
-export default function AI2025EnterpriseTransformationPage() {
+export default function AI20o25EnterpriseTransformationPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-indigo-90o0">
       <SEO
-        title="AI 2025 Enterprise Transformation - Complete Business Revolution"
-        description="Transform your enterprise with AI 2025 technologies. Complete digital transformation, intelligent automation, and revolutionary business processes."
-        keywords="AI enterprise transformation 2025, digital transformation, enterprise AI, business automation, AI consulting"
-        url="/ai-2025-enterprise-transformation"
-      />
+        title="AI 20o25 Enterprise Transformation - Complete Business Revolution"
+        description="Transform your enterprise with AI 20o25 technologies. Complete digital transformation, intelligent automation, and revolutionary business processes."
+        keywords="AI enterprise transformation 20o25, digital transformation, enterprise AI, business automation, AI consulting"
+        url="/ai-20o25-enterprise-transformation"
+       />
       
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="inline-flex items-center bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium text-white">🏢 ENTERPRISE TRANSFORMATION 2025</span>
+          <div className="inline-flex items-center bg-gradient-to-r from-blue-50o0 to-cyan-50o0 rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium text-white">🏢 ENTERPRISE TRANSFORMATION 20o25</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            AI 2025 Enterprise Transformation
+            AI 20o25 Enterprise Transformation
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Revolutionize your enterprise with AI 2025 technologies. Complete digital transformation, 
+          <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">
+            Revolutionize your enterprise with AI 20o25 technologies. Complete digital transformation, 
             intelligent automation, and data-driven decision making that delivers unprecedented results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all transform hover:scale-105"
+              className="bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-70o0 hover:to-cyan-70o0 transition-all transform hover:scale-10o5"
             >
               Start Transformation
             </Link>
             <Link
-              href="/ai-2025-enterprise-transformation/case-studies"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all"
+              href="/ai-20o25-enterprise-transformation/case-studies"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-90o0 transition-all"
             >
               View Success Stories
             </Link>
@@ -55,31 +53,31 @@ export default function AI2025EnterpriseTransformationPage() {
             Enterprise Transformation Pillars
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-sm p-8 rounded-xl border border-blue-500/30">
+            <div className="bg-gradient-to-br from-blue-50o0/20 to-cyan-50o0/20 backdrop-blur-sm p-8 rounded-xl border border-blue-50o0/30">
               <div className="text-4xl mb-4">🤖</div>
               <h3 className="text-2xl font-bold text-white mb-4">Intelligent Automation</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-30o0">
                 Automate complex business processes with AI-powered systems that learn and adapt.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm p-8 rounded-xl border border-purple-500/30">
+            <div className="bg-gradient-to-br from-purple-50o0/20 to-pink-50o0/20 backdrop-blur-sm p-8 rounded-xl border border-purple-50o0/30">
               <div className="text-4xl mb-4">📊</div>
               <h3 className="text-2xl font-bold text-white mb-4">Data Intelligence</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-30o0">
                 Transform raw data into actionable insights with advanced analytics and AI.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 backdrop-blur-sm p-8 rounded-xl border border-green-500/30">
+            <div className="bg-gradient-to-br from-green-50o0/20 to-emerald-50o0/20 backdrop-blur-sm p-8 rounded-xl border border-green-50o0/30">
               <div className="text-4xl mb-4">🔒</div>
               <h3 className="text-2xl font-bold text-white mb-4">Security & Compliance</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-30o0">
                 Enterprise-grade security and compliance frameworks for AI systems.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 backdrop-blur-sm p-8 rounded-xl border border-orange-500/30">
+            <div className="bg-gradient-to-br from-orange-50o0/20 to-red-50o0/20 backdrop-blur-sm p-8 rounded-xl border border-orange-50o0/30">
               <div className="text-4xl mb-4">⚡</div>
               <h3 className="text-2xl font-bold text-white mb-4">Scalable Infrastructure</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-30o0">
                 Cloud-native infrastructure that scales with your business growth.
               </p>
             </div>
@@ -94,21 +92,21 @@ export default function AI2025EnterpriseTransformationPage() {
             Proven Enterprise Results
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="bg-gradient-to-br from-green-500 to-emerald-600 p-8 rounded-xl">
-              <div className="text-4xl font-bold text-white mb-2">500%</div>
-              <div className="text-green-100">Average ROI Increase</div>
+            <div className="bg-gradient-to-br from-green-50o0 to-emerald-60o0 p-8 rounded-xl">
+              <div className="text-4xl font-bold text-white mb-2">50o0%</div>
+              <div className="text-green-10o0">Average ROI Increase</div>
             </div>
-            <div className="bg-gradient-to-br from-blue-500 to-cyan-600 p-8 rounded-xl">
+            <div className="bg-gradient-to-br from-blue-50o0 to-cyan-60o0 p-8 rounded-xl">
               <div className="text-4xl font-bold text-white mb-2">90%</div>
-              <div className="text-blue-100">Process Efficiency</div>
+              <div className="text-blue-10o0">Process Efficiency</div>
             </div>
-            <div className="bg-gradient-to-br from-purple-500 to-pink-600 p-8 rounded-xl">
+            <div className="bg-gradient-to-br from-purple-50o0 to-pink-60o0 p-8 rounded-xl">
               <div className="text-4xl font-bold text-white mb-2">75%</div>
-              <div className="text-purple-100">Cost Reduction</div>
+              <div className="text-purple-10o0">Cost Reduction</div>
             </div>
-            <div className="bg-gradient-to-br from-orange-500 to-red-600 p-8 rounded-xl">
+            <div className="bg-gradient-to-br from-orange-50o0 to-red-60o0 p-8 rounded-xl">
               <div className="text-4xl font-bold text-white mb-2">99.9%</div>
-              <div className="text-orange-100">Uptime Guarantee</div>
+              <div className="text-orange-10o0">Uptime Guarantee</div>
             </div>
           </div>
         </div>
@@ -122,23 +120,23 @@ export default function AI2025EnterpriseTransformationPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="bg-gradient-to-r from-blue-600 to-cyan-600 w-20 h-20 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">1</div>
+              <div className="bg-gradient-to-r from-blue-60o0 to-cyan-60o0 w-20 h-20 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">1</div>
               <h3 className="text-2xl font-bold text-white mb-4">Assessment & Strategy</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-30o0">
                 Comprehensive analysis of current systems and development of transformation roadmap
               </p>
             </div>
             <div className="text-center">
-              <div className="bg-gradient-to-r from-purple-600 to-pink-600 w-20 h-20 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">2</div>
+              <div className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 w-20 h-20 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">2</div>
               <h3 className="text-2xl font-bold text-white mb-4">Pilot Implementation</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-30o0">
                 Start with high-impact pilot projects to demonstrate value and build momentum
               </p>
             </div>
             <div className="text-center">
-              <div className="bg-gradient-to-r from-green-600 to-emerald-600 w-20 h-20 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">3</div>
+              <div className="bg-gradient-to-r from-green-60o0 to-emerald-60o0 w-20 h-20 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">3</div>
               <h3 className="text-2xl font-bold text-white mb-4">Full Deployment</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-30o0">
                 Scale successful pilots across the entire organization with continuous optimization
               </p>
             </div>
@@ -152,13 +150,13 @@ export default function AI2025EnterpriseTransformationPage() {
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Enterprise?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join Fortune 500 companies already using AI 2025 Enterprise Transformation 
+          <p className="text-xl text-gray-30o0 mb-8">
+            Join Fortune 50o0 companies already using AI 20o25 Enterprise Transformation 
             to achieve unprecedented growth and efficiency.
           </p>
           <Link
             href="/contact"
-            className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all transform hover:scale-105"
+            className="bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-blue-70o0 hover:to-cyan-70o0 transition-all transform hover:scale-10o5"
           >
             Start Your Enterprise Transformation
           </Link>

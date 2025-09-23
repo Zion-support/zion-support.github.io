@@ -13,9 +13,9 @@ export default function LoadingPage({
 }: LoadingPageProps) {
   if (fullScreen) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">
         <div className="text-center">
-          <LoadingSpinner size="xl" color="white" />
+          <LoadingSpinner size="xl" color="white"  />
           <p className="mt-4 text-white text-lg font-medium">{message}</p>
         </div>
       </div>
@@ -24,7 +24,7 @@ export default function LoadingPage({
 
   return (
     <div className="flex items-center justify-center p-8">
-      <LoadingSpinner text={message} />
+      <LoadingSpinner text={message}  />
     </div>
   )
 }

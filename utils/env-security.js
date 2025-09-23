@@ -1,6 +1,6 @@
 
 // Environment security configuration
-export const securityConfig = {
+export const securityConfig ={
   // Ensure sensitive environment variables are not exposed
   validateEnvVars: () => {
     const requiredVars = ['NEXT_PUBLIC_API_URL'];
@@ -15,7 +15,7 @@ export const securityConfig = {
   
   // Sanitize environment variables for client-side use
   getClientEnvVars: () => {
-    const clientVars = {};
+    const clientVars ={};
     const allowedClientVars = ['NEXT_PUBLIC_API_URL', 'NEXT_PUBLIC_APP_NAME'];
     
     allowedClientVars.forEach(varName => {

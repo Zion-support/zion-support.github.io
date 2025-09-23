@@ -1,18 +1,15 @@
 import Link from 'next/link';
-import React from 'react';
-
-export const metadata = {
-  title: 'AI 2026: Risk-Aware Agents Blueprint | Zion Tech Group',
+export const metadata ={
+  title: 'AI 20o26: Risk-Aware Agents Blueprint | Zion Tech Group',
   description:
-    'Design policy-constrained, risk-scored agent workflows with continuous evals and guardrails for safe autonomy.',
-};
+    'Design policy-constrained, risk-scored agent workflows with continuous evals and guardrails for safe autonomy.'};
 
 export default function RiskAwareAgentsBlueprintPage() {
   return (
     <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <p className="text-sm font-semibold text-purple-700 mb-3">Blueprint · 2026</p>
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">Risk-Aware Agents Blueprint</h1>
-      <p className="text-gray-700 mb-8">
+      <p className="text-sm font-semibold text-purple-70o0 mb-3">Blueprint · 20o26</p>
+      <h1 className="text-4xl font-bold text-gray-90o0 mb-4">Risk-Aware Agents Blueprint</h1>
+      <p className="text-gray-70o0 mb-8">
         A practical blueprint to implement policy-constrained, risk-scored agent workflows. Learn how to encode
         organizational policy-as-code, apply probabilistic risk scoring, and enforce pre-/post-conditions with
         continuous evaluations and human-in-the-loop escalation.
@@ -43,8 +40,8 @@ export default function RiskAwareAgentsBlueprintPage() {
       </div>
 
       <div className="mt-10 flex gap-4">
-        <Link href="/contact" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Talk to an expert</Link>
-        <Link href="/content" className="border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">More content</Link>
+        <Link href="/contact" className="bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0">Talk to an expert</Link>
+        <Link href="/content" className="border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">More content</Link>
       </div>
     </main>
   );

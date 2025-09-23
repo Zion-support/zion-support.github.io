@@ -9,19 +9,19 @@ const UltimateContentPromotionBanner = () => {
   const featuredContent = [
     {
       id: 1,
-      title: "AI 2025: The Ultimate Business Transformation Guide",
-      description: "Discover how AI is revolutionizing business operations in 2025. Complete implementation strategies, case studies, and ROI calculations.",
+      title: "AI 20o25: The Ultimate Business Transformation Guide",
+      description: "Discover how AI is revolutionizing business operations in 20o25. Complete implementation strategies, case studies, and ROI calculations.",
       type: "Ultimate Guide",
       readTime: "15 min read",
       category: "AI Strategy",
-      image: "/images/content/ai-2025-guide.jpg",
+      image: "/images/content/ai-20o25-guide.jpg",
       stats: {
         views: "50K+",
         downloads: "12K+",
         rating: "4.9/5"
       },
       cta: "Read Now",
-      color: "from-purple-600 to-blue-600"
+      color: "from-purple-60o0 to-blue-60o0"
     },
     {
       id: 2,
@@ -37,7 +37,7 @@ const UltimateContentPromotionBanner = () => {
         rating: "4.8/5"
       },
       cta: "Explore",
-      color: "from-cyan-500 to-teal-600"
+      color: "from-cyan-50o0 to-teal-60o0"
     },
     {
       id: 3,
@@ -53,7 +53,7 @@ const UltimateContentPromotionBanner = () => {
         rating: "4.9/5"
       },
       cta: "Discover",
-      color: "from-green-500 to-emerald-600"
+      color: "from-green-50o0 to-emerald-60o0"
     },
     {
       id: 4,
@@ -69,7 +69,7 @@ const UltimateContentPromotionBanner = () => {
         rating: "4.9/5"
       },
       cta: "Get Framework",
-      color: "from-orange-500 to-red-600"
+      color: "from-orange-50o0 to-red-60o0"
     },
     {
       id: 5,
@@ -85,17 +85,17 @@ const UltimateContentPromotionBanner = () => {
         rating: "4.8/5"
       },
       cta: "Read Research",
-      color: "from-indigo-500 to-purple-600"
+      color: "from-indigo-50o0 to-purple-60o0"
     }
   ];
 
   const trendingTopics = [
-    { name: "AI Automation", count: "2.3K articles", color: "bg-blue-100 text-blue-800" },
-    { name: "Quantum Computing", count: "1.8K articles", color: "bg-cyan-100 text-cyan-800" },
-    { name: "Neural Networks", count: "1.5K articles", color: "bg-green-100 text-green-800" },
-    { name: "Enterprise AI", count: "2.1K articles", color: "bg-purple-100 text-purple-800" },
-    { name: "Machine Learning", count: "3.2K articles", color: "bg-orange-100 text-orange-800" },
-    { name: "AI Ethics", count: "1.2K articles", color: "bg-pink-100 text-pink-800" }
+    { name: "AI Automation", count: "2.3K articles", color: "bg-blue-10o0 text-blue-80o0" },
+    { name: "Quantum Computing", count: "1.8K articles", color: "bg-cyan-10o0 text-cyan-80o0" },
+    { name: "Neural Networks", count: "1.5K articles", color: "bg-green-10o0 text-green-80o0" },
+    { name: "Enterprise AI", count: "2.1K articles", color: "bg-purple-10o0 text-purple-80o0" },
+    { name: "Machine Learning", count: "3.2K articles", color: "bg-orange-10o0 text-orange-80o0" },
+    { name: "AI Ethics", count: "1.2K articles", color: "bg-pink-10o0 text-pink-80o0" }
   ];
 
   const contentTypes = [
@@ -111,7 +111,7 @@ const UltimateContentPromotionBanner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentContent((prev) => (prev + 1) % featuredContent.length);
-    }, 5000);
+    }, 50o00);
     return () => clearInterval(interval);
   }, []);
 
@@ -135,7 +135,7 @@ const UltimateContentPromotionBanner = () => {
   }, []);
 
   return (
-    <section id="content-promotion-banner" className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+    <section id="content-promotion-banner" className="py-20 bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-purple-90o0 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -145,7 +145,7 @@ const UltimateContentPromotionBanner = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Discover Cutting-Edge AI Content
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto leading-relaxed">
             Access our comprehensive library of AI insights, guides, and resources. 
             From beginner tutorials to advanced research papers - everything you need 
             to stay ahead in the AI revolution.
@@ -162,7 +162,7 @@ const UltimateContentPromotionBanner = () => {
                   <button
                     key={index}
                     onClick={() => setCurrentContent(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                       index === currentContent ? 'bg-white' : 'bg-white bg-opacity-30'
                     }`}
                   />
@@ -172,19 +172,19 @@ const UltimateContentPromotionBanner = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               {/* Content Info */}
-              <div className={`transition-all duration-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
+              <div className={`transition-all duration-50o0 ${isVisible ? 'opacity-10o0 translate-x-0' : 'opacity-0 translate-x-8'}`}>
                 <div className="flex items-center mb-4">
                   <span className={`px-3 py-1 rounded-full text-sm font-semibold bg-gradient-to-r ${featuredContent[currentContent].color} text-white`}>
                     {featuredContent[currentContent].type}
                   </span>
-                  <span className="ml-3 text-sm text-gray-300">{featuredContent[currentContent].readTime}</span>
+                  <span className="ml-3 text-sm text-gray-30o0">{featuredContent[currentContent].readTime}</span>
                 </div>
 
                 <h4 className="text-2xl font-bold text-white mb-4 leading-tight">
                   {featuredContent[currentContent].title}
                 </h4>
 
-                <p className="text-gray-300 mb-6 leading-relaxed">
+                <p className="text-gray-30o0 mb-6 leading-relaxed">
                   {featuredContent[currentContent].description}
                 </p>
 
@@ -192,28 +192,28 @@ const UltimateContentPromotionBanner = () => {
                 <div className="flex items-center space-x-6 mb-6">
                   <div className="text-center">
                     <div className="text-lg font-bold text-white">{featuredContent[currentContent].stats.views}</div>
-                    <div className="text-sm text-gray-300">Views</div>
+                    <div className="text-sm text-gray-30o0">Views</div>
                   </div>
                   <div className="text-center">
                     <div className="text-lg font-bold text-white">{featuredContent[currentContent].stats.downloads}</div>
-                    <div className="text-sm text-gray-300">Downloads</div>
+                    <div className="text-sm text-gray-30o0">Downloads</div>
                   </div>
                   <div className="text-center">
                     <div className="text-lg font-bold text-white">{featuredContent[currentContent].stats.rating}</div>
-                    <div className="text-sm text-gray-300">Rating</div>
+                    <div className="text-sm text-gray-30o0">Rating</div>
                   </div>
                 </div>
 
                 <div className="flex gap-4">
                   <Link
                     href={`/content/${featuredContent[currentContent].id}`}
-                    className={`px-6 py-3 rounded-lg font-semibold bg-gradient-to-r ${featuredContent[currentContent].color} text-white hover:shadow-lg transition-all duration-300`}
+                    className={`px-6 py-3 rounded-lg font-semibold bg-gradient-to-r ${featuredContent[currentContent].color} text-white hover:shadow-lg transition-all duration-30o0`}
                   >
                     {featuredContent[currentContent].cta}
                   </Link>
                   <Link
                     href="/content"
-                    className="px-6 py-3 rounded-lg font-semibold border border-white text-white hover:bg-white hover:text-gray-900 transition-all duration-300"
+                    className="px-6 py-3 rounded-lg font-semibold border border-white text-white hover:bg-white hover:text-gray-90o0 transition-all duration-30o0"
                   >
                     Browse All
                   </Link>
@@ -221,7 +221,7 @@ const UltimateContentPromotionBanner = () => {
               </div>
 
               {/* Content Image */}
-              <div className={`transition-all duration-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
+              <div className={`transition-all duration-50o0 ${isVisible ? 'opacity-10o0 translate-x-0' : 'opacity-0 translate-x-8'}`}>
                 <div className={`h-64 rounded-xl bg-gradient-to-br ${featuredContent[currentContent].color} flex items-center justify-center text-6xl`}>
                   📖
                 </div>
@@ -235,12 +235,12 @@ const UltimateContentPromotionBanner = () => {
           <h3 className="text-2xl font-bold text-center mb-8">Content Categories</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {contentTypes.map((type, index) => (
-              <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-opacity-20 transition-all duration-300 group">
-                <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">
+              <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-opacity-20 transition-all duration-30o0 group">
+                <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-30o0">
                   {type.icon}
                 </div>
                 <h4 className="text-lg font-semibold text-white mb-2">{type.name}</h4>
-                <div className="text-sm text-gray-300">{type.count}</div>
+                <div className="text-sm text-gray-30o0">{type.count}</div>
               </div>
             ))}
           </div>
@@ -251,7 +251,7 @@ const UltimateContentPromotionBanner = () => {
           <h3 className="text-2xl font-bold text-center mb-8">Trending Topics</h3>
           <div className="flex flex-wrap justify-center gap-4">
             {trendingTopics.map((topic, index) => (
-              <div key={index} className={`px-4 py-2 rounded-full ${topic.color} hover:shadow-lg transition-all duration-300 cursor-pointer`}>
+              <div key={index} className={`px-4 py-2 rounded-full ${topic.color} hover:shadow-lg transition-all duration-30o0 cursor-pointer`}>
                 <span className="font-semibold">{topic.name}</span>
                 <span className="ml-2 text-sm opacity-75">{topic.count}</span>
               </div>
@@ -264,20 +264,20 @@ const UltimateContentPromotionBanner = () => {
           <h3 className="text-3xl font-bold text-white mb-4">
             Ready to Dive Deeper?
           </h3>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-30o0 mb-8 max-w-2xl mx-auto">
             Join thousands of professionals who rely on our content to stay ahead 
             in the rapidly evolving world of AI and technology.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/content"
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-lg"
+              className="bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-60o0 hover:to-blue-60o0 transition-all duration-30o0 text-lg"
             >
               Explore Content Library
             </Link>
             <Link
               href="/newsletter"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 text-lg"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-90o0 transition-all duration-30o0 text-lg"
             >
               Subscribe to Updates
             </Link>

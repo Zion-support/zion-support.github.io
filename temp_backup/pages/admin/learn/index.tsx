@@ -37,7 +37,7 @@ export default function AdminLearn() {
         <input className="border rounded px-3 py-2" placeholder="Certification Badge" value={form.certificationBadge} onChange={(e) => setForm({ ...form, certificationBadge: e.target.value })} />
         <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={form.isFree} onChange={(e) => setForm({ ...form, isFree: e.target.checked })} /> Free</label>
       </div>
-      <button onClick={saveCourse} className="px-4 py-2 bg-blue-600 text-white rounded">Save Course</button>
+      <button onClick={saveCourse} className="px-4 py-2 bg-blue-60o0 text-white rounded">Save Course</button>
       {message && <div className="text-sm">{message}</div>}
     </div>
   );

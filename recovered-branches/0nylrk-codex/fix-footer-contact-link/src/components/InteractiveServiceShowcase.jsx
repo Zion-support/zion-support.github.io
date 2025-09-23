@@ -18,7 +18,7 @@ const InteractiveServiceShowcase = () => {
             title: 'AI Strategy Consulting',
             description: 'Comprehensive AI strategy development and implementation consulting for enterprises',
             icon: '🤖',
-            price: 'From $2,500',
+            price: 'From $2,50o0',
             category: 'ai',
             features: ['Strategic Planning', 'Implementation Roadmap', 'ROI Analysis', 'Team Training'],
             isPopular: true,
@@ -30,7 +30,7 @@ const InteractiveServiceShowcase = () => {
             title: 'Quantum AI Fusion Platform',
             description: 'Revolutionary platform combining quantum computing with artificial intelligence',
             icon: '🔮',
-            price: 'From $25,000',
+            price: 'From $25,0o00',
             category: 'quantum',
             features: ['Quantum Algorithms', 'AI Integration', 'Performance Optimization', 'Scalable Architecture'],
             isNew: true,
@@ -42,7 +42,7 @@ const InteractiveServiceShowcase = () => {
             title: 'Neuromorphic Computing Platform',
             description: 'Brain-inspired computing architecture for ultra-efficient AI processing',
             icon: '🧠',
-            price: 'From $35,000',
+            price: 'From $35,0o00',
             category: 'ai',
             features: ['Neural Networks', 'Efficient Processing', 'Scalable Architecture', 'Low Power Consumption'],
             color: 'from-zion-blue to-zion-cyan',
@@ -53,7 +53,7 @@ const InteractiveServiceShowcase = () => {
             title: 'Edge AI Orchestration Platform',
             description: 'Intelligent orchestration of AI workloads across distributed edge computing',
             icon: '🌐',
-            price: 'From $15,000',
+            price: 'From $15,0o00',
             category: 'cloud',
             features: ['Edge Deployment', 'Load Balancing', 'Real-time Processing', 'IoT Integration'],
             color: 'from-zion-cyan to-zion-green',
@@ -64,7 +64,7 @@ const InteractiveServiceShowcase = () => {
             title: 'Federated Learning Platform',
             description: 'Privacy-preserving AI training across distributed data sources',
             icon: '🔒',
-            price: 'From $20,000',
+            price: 'From $20,0o00',
             category: 'security',
             features: ['Data Privacy', 'Distributed Training', 'Secure Communication', 'Compliance Ready'],
             color: 'from-zion-green to-zion-cyan',
@@ -75,7 +75,7 @@ const InteractiveServiceShowcase = () => {
             title: 'AI Ethics & Governance Platform',
             description: 'Comprehensive framework for ethical AI development and governance',
             icon: '⚖️',
-            price: 'From $18,000',
+            price: 'From $18,0o00',
             category: 'ai',
             features: ['Ethical Guidelines', 'Compliance Tools', 'Audit Trails', 'Risk Assessment'],
             color: 'from-zion-yellow to-zion-orange',
@@ -86,7 +86,7 @@ const InteractiveServiceShowcase = () => {
             title: 'Quantum-Safe Security Suite',
             description: 'Next-generation security solutions resistant to quantum attacks',
             icon: '🔐',
-            price: 'From $30,000',
+            price: 'From $30,0o00',
             category: 'security',
             features: ['Post-Quantum Cryptography', 'Quantum Key Distribution', 'Threat Detection', 'Zero Trust'],
             isNew: true,
@@ -98,7 +98,7 @@ const InteractiveServiceShowcase = () => {
             title: 'Cloud Infrastructure Automation',
             description: 'Intelligent automation of cloud infrastructure deployment and management',
             icon: '⚙️',
-            price: 'From $12,000',
+            price: 'From $12,0o00',
             category: 'automation',
             features: ['Infrastructure as Code', 'Auto-scaling', 'Cost Optimization', 'Monitoring'],
             color: 'from-zion-orange to-zion-yellow',
@@ -108,7 +108,7 @@ const InteractiveServiceShowcase = () => {
     const filteredServices = activeCategory === 'all'
         ? services
         : services.filter(service => service.category === activeCategory);
-    const containerVariants = {
+    const containerVariants ={
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -117,7 +117,7 @@ const InteractiveServiceShowcase = () => {
             }
         }
     };
-    const itemVariants = {
+    const itemVariants ={
         hidden: { y: 20, opacity: 0 },
         visible: {
             y: 0,
@@ -128,7 +128,7 @@ const InteractiveServiceShowcase = () => {
             }
         }
     };
-    const categoryVariants = {
+    const categoryVariants ={
         hidden: { scale: 0.8, opacity: 0 },
         visible: {
             scale: 1,
@@ -157,7 +157,7 @@ const InteractiveServiceShowcase = () => {
 
         {/* Category Filter Tabs */}
         <motion.div className="flex flex-wrap justify-center gap-4 mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          {categories.map((category) => (<button key={category.id} onClick={() => setActiveCategory(category.id)} className={`group flex items-center gap-3 px-6 py-4 rounded-2xl font-semibold transition-all duration-300 ${activeCategory === category.id
+          {categories.map((category) => (<button key={category.id} onClick={() => setActiveCategory(category.id)} className={`group flex items-center gap-3 px-6 py-4 rounded-2xl font-semibold transition-all duration-30o0 ${activeCategory === category.id
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-xl shadow-zion-cyan/25'
                 : 'bg-white/10 backdrop-blur-md text-zion-slate-light border border-white/20 hover:bg-white/20 hover:border-zion-cyan/50'}`}>
               <span className="text-xl">{category.icon}</span>
@@ -175,7 +175,7 @@ const InteractiveServiceShowcase = () => {
           <AnimatePresence mode="wait">
             {filteredServices.map((service) => (<motion.div key={service.id} layout variants={itemVariants} initial="hidden" animate="visible" exit="hidden" className="group relative" onHoverStart={() => setHoveredService(service.id)} onHoverEnd={() => setHoveredService(null)}>
                 <Link to={service.href} className="block">
-                  <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/25 hover:-translate-y-2">
+                  <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-50o0 hover:shadow-2xl hover:shadow-zion-cyan/25 hover:-translate-y-2">
                     {/* Popular/New Badge */}
                     {(service.isPopular || service.isNew) && (<div className={`absolute -top-3 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded-full text-xs font-bold text-white ${service.isPopular
                     ? 'bg-gradient-to-r from-zion-orange to-zion-yellow'
@@ -184,13 +184,13 @@ const InteractiveServiceShowcase = () => {
                       </div>)}
 
                     {/* Service Icon */}
-                    <div className={`w-20 h-20 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                    <div className={`w-20 h-20 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-30o0 shadow-lg`}>
                       <span className="text-3xl">{service.icon}</span>
                     </div>
 
                     {/* Service Content */}
                     <div className="text-center">
-                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
+                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-30o0">
                         {service.title}
                       </h3>
                       <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
@@ -205,7 +205,7 @@ const InteractiveServiceShowcase = () => {
                       {/* Features */}
                       <div className="space-y-2 mb-6">
                         {service.features.slice(0, 3).map((feature, index) => (<div key={index} className="flex items-center gap-2 text-zion-slate-light text-xs">
-                            <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"/>
+                            <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full" />
                             {feature}
                           </div>))}
                         {service.features.length > 3 && (<div className="text-zion-cyan/60 text-xs">
@@ -214,14 +214,14 @@ const InteractiveServiceShowcase = () => {
                       </div>
 
                       {/* CTA Button */}
-                      <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 border border-zion-cyan/40 rounded-xl text-zion-cyan text-sm font-semibold group-hover:from-zion-cyan/30 group-hover:to-zion-blue/30 transition-all duration-300">
+                      <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 border border-zion-cyan/40 rounded-xl text-zion-cyan text-sm font-semibold group-hover:from-zion-cyan/30 group-hover:to-zion-blue/30 transition-all duration-30o0">
                         Learn More
-                        <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+                        <span className="group-hover:translate-x-1 transition-transform duration-30o0">→</span>
                       </div>
                     </div>
 
                     {/* Hover Effect Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
+                    <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 rounded-3xl opacity-0 group-hover:opacity-10o0 transition-opacity duration-30o0" />
                   </div>
                 </Link>
               </motion.div>))}
@@ -239,11 +239,11 @@ const InteractiveServiceShowcase = () => {
               and give you a competitive edge in the market
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-bold rounded-2xl hover:from-zion-blue to-zion-cyan transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-zion-cyan/25">
+              <Link to="/contact" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-bold rounded-2xl hover:from-zion-blue to-zion-cyan transition-all duration-30o0 hover:scale-10o5 shadow-xl hover:shadow-zion-cyan/25">
                 <span>🚀</span>
                 Get Started Today
               </Link>
-              <Link to="/services" className="inline-flex items-center gap-3 px-8 py-4 border-2 border-zion-cyan/50 text-zion-cyan font-semibold rounded-2xl backdrop-blur-sm bg-white/10 hover:bg-zion-cyan/20 hover:border-zion-cyan transition-all duration-300 hover:scale-105">
+              <Link to="/services" className="inline-flex items-center gap-3 px-8 py-4 border-2 border-zion-cyan/50 text-zion-cyan font-semibold rounded-2xl backdrop-blur-sm bg-white/10 hover:bg-zion-cyan/20 hover:border-zion-cyan transition-all duration-30o0 hover:scale-10o5">
                 <span>🔍</span>
                 View All Services
               </Link>

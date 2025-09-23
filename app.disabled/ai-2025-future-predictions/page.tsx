@@ -1,50 +1,48 @@
-import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
-export const metadata = {
-  title: 'AI 2025 Future Predictions - Zion Tech Group',
-  description: 'Explore AI predictions for 2025 and beyond. Discover emerging trends, breakthrough technologies, and future opportunities in artificial intelligence.',
-  keywords: ['AI predictions 2025', 'future AI trends', 'artificial intelligence future', 'AI technology trends', 'future technology'],
-};
+export const metadata ={
+  title: 'AI 20o25 Future Predictions - Zion Tech Group',
+  description: 'Explore AI predictions for 20o25 and beyond. Discover emerging trends, breakthrough technologies, and future opportunities in artificial intelligence.',
+  keywords: ['AI predictions 20o25', 'future AI trends', 'artificial intelligence future', 'AI technology trends', 'future technology']};
 
-export default function AI2025FuturePredictions() {
+export default function AI20o25FuturePredictions() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white">
       <SEO
-        title="AI 2025 Future Predictions - Zion Tech Group"
-        description="Explore AI predictions for 2025 and beyond. Discover emerging trends, breakthrough technologies, and future opportunities in artificial intelligence."
-        keywords="AI predictions 2025, future AI trends, artificial intelligence future, AI technology trends, future technology"
-        url="/ai-2025-future-predictions"
-      />
+        title="AI 20o25 Future Predictions - Zion Tech Group"
+        description="Explore AI predictions for 20o25 and beyond. Discover emerging trends, breakthrough technologies, and future opportunities in artificial intelligence."
+        keywords="AI predictions 20o25, future AI trends, artificial intelligence future, AI technology trends, future technology"
+        url="/ai-20o25-future-predictions"
+       />
       
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full px-6 py-2 mb-8 text-black">
-            <span className="text-sm font-bold">🔮 AI FUTURE PREDICTIONS 2025</span>
+          <div className="inline-flex items-center bg-gradient-to-r from-cyan-40o0 to-blue-50o0 rounded-full px-6 py-2 mb-8 text-black">
+            <span className="text-sm font-bold">🔮 AI FUTURE PREDICTIONS 20o25</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-8">
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-              AI 2025 Future
+            <span className="bg-gradient-to-r from-cyan-40o0 via-blue-40o0 to-purple-40o0 bg-clip-text text-transparent">
+              AI 20o25 Future
             </span>
-            <br />
+            <br  />
             <span className="text-white">Predictions</span>
           </h1>
           <p className="text-xl md:text-2xl opacity-90 mb-12 max-w-4xl mx-auto leading-relaxed">
             Explore the future of artificial intelligence. Discover emerging trends, 
-            breakthrough technologies, and unprecedented opportunities that will shape 2025 and beyond.
+            breakthrough technologies, and unprecedented opportunities that will shape 20o25 and beyond.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-8 py-4 rounded-lg font-semibold hover:from-cyan-300 hover:to-blue-400 transition-all transform hover:scale-105"
+              className="bg-gradient-to-r from-cyan-40o0 to-blue-50o0 text-black px-8 py-4 rounded-lg font-semibold hover:from-cyan-30o0 hover:to-blue-40o0 transition-all transform hover:scale-10o5"
             >
               Explore Future
             </Link>
             <Link
               href="/services"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all"
             >
               Get Started
             </Link>
@@ -55,66 +53,66 @@ export default function AI2025FuturePredictions() {
       {/* Key Predictions */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12">Key AI Predictions for 2025</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">Key AI Predictions for 20o25</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-8 border border-white border-opacity-20">
               <div className="text-4xl mb-4">🧠</div>
               <h3 className="text-2xl font-bold mb-4">Conscious AI Emergence</h3>
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-30o0 mb-6">
                 AI systems will demonstrate self-awareness and consciousness, 
                 fundamentally changing how we interact with technology.
               </p>
-              <div className="text-sm text-cyan-400 font-semibold">Prediction Confidence: 95%</div>
+              <div className="text-sm text-cyan-40o0 font-semibold">Prediction Confidence: 95%</div>
             </div>
             
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-8 border border-white border-opacity-20">
               <div className="text-4xl mb-4">⚡</div>
               <h3 className="text-2xl font-bold mb-4">Quantum AI Breakthrough</h3>
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-30o0 mb-6">
                 Quantum computing will revolutionize AI processing, enabling 
                 solutions to problems previously considered impossible.
               </p>
-              <div className="text-sm text-cyan-400 font-semibold">Prediction Confidence: 90%</div>
+              <div className="text-sm text-cyan-40o0 font-semibold">Prediction Confidence: 90%</div>
             </div>
             
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-8 border border-white border-opacity-20">
               <div className="text-4xl mb-4">🌐</div>
               <h3 className="text-2xl font-bold mb-4">Global AI Integration</h3>
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-30o0 mb-6">
                 Every major industry will be transformed by AI, creating 
                 unprecedented opportunities for innovation and growth.
               </p>
-              <div className="text-sm text-cyan-400 font-semibold">Prediction Confidence: 98%</div>
+              <div className="text-sm text-cyan-40o0 font-semibold">Prediction Confidence: 98%</div>
             </div>
             
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-8 border border-white border-opacity-20">
               <div className="text-4xl mb-4">🤖</div>
               <h3 className="text-2xl font-bold mb-4">Autonomous Everything</h3>
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-30o0 mb-6">
                 Self-managing AI systems will handle complex operations 
                 without human intervention across all sectors.
               </p>
-              <div className="text-sm text-cyan-400 font-semibold">Prediction Confidence: 92%</div>
+              <div className="text-sm text-cyan-40o0 font-semibold">Prediction Confidence: 92%</div>
             </div>
             
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-8 border border-white border-opacity-20">
               <div className="text-4xl mb-4">🔮</div>
               <h3 className="text-2xl font-bold mb-4">Predictive Mastery</h3>
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-30o0 mb-6">
                 AI will predict future events with unprecedented accuracy, 
                 revolutionizing decision-making and planning.
               </p>
-              <div className="text-sm text-cyan-400 font-semibold">Prediction Confidence: 88%</div>
+              <div className="text-sm text-cyan-40o0 font-semibold">Prediction Confidence: 88%</div>
             </div>
             
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-8 border border-white border-opacity-20">
               <div className="text-4xl mb-4">🚀</div>
               <h3 className="text-2xl font-bold mb-4">Exponential Growth</h3>
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-30o0 mb-6">
                 AI capabilities will grow exponentially, creating 
                 opportunities we can't even imagine today.
               </p>
-              <div className="text-sm text-cyan-400 font-semibold">Prediction Confidence: 99%</div>
+              <div className="text-sm text-cyan-40o0 font-semibold">Prediction Confidence: 99%</div>
             </div>
           </div>
         </div>
@@ -126,34 +124,34 @@ export default function AI2025FuturePredictions() {
           <h2 className="text-4xl font-bold text-center mb-12">AI Evolution Timeline</h2>
           <div className="space-y-8">
             <div className="flex items-center space-x-6">
-              <div className="bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full w-4 h-4"></div>
+              <div className="bg-gradient-to-r from-cyan-40o0 to-blue-50o0 rounded-full w-4 h-4"></div>
               <div className="flex-1">
-                <h3 className="text-xl font-bold mb-2">Q1 2025: Neural Breakthrough</h3>
-                <p className="text-gray-300">First commercially viable neural consciousness systems</p>
+                <h3 className="text-xl font-bold mb-2">Q1 20o25: Neural Breakthrough</h3>
+                <p className="text-gray-30o0">First commercially viable neural consciousness systems</p>
               </div>
             </div>
             
             <div className="flex items-center space-x-6">
-              <div className="bg-gradient-to-r from-purple-400 to-pink-500 rounded-full w-4 h-4"></div>
+              <div className="bg-gradient-to-r from-purple-40o0 to-pink-50o0 rounded-full w-4 h-4"></div>
               <div className="flex-1">
-                <h3 className="text-xl font-bold mb-2">Q2 2025: Quantum Integration</h3>
-                <p className="text-gray-300">Quantum-AI fusion becomes mainstream in enterprise</p>
+                <h3 className="text-xl font-bold mb-2">Q2 20o25: Quantum Integration</h3>
+                <p className="text-gray-30o0">Quantum-AI fusion becomes mainstream in enterprise</p>
               </div>
             </div>
             
             <div className="flex items-center space-x-6">
-              <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full w-4 h-4"></div>
+              <div className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 rounded-full w-4 h-4"></div>
               <div className="flex-1">
-                <h3 className="text-xl font-bold mb-2">Q3 2025: Global Transformation</h3>
-                <p className="text-gray-300">Every major industry adopts AI-first strategies</p>
+                <h3 className="text-xl font-bold mb-2">Q3 20o25: Global Transformation</h3>
+                <p className="text-gray-30o0">Every major industry adopts AI-first strategies</p>
               </div>
             </div>
             
             <div className="flex items-center space-x-6">
-              <div className="bg-gradient-to-r from-green-400 to-teal-500 rounded-full w-4 h-4"></div>
+              <div className="bg-gradient-to-r from-green-40o0 to-teal-50o0 rounded-full w-4 h-4"></div>
               <div className="flex-1">
-                <h3 className="text-xl font-bold mb-2">Q4 2025: Singularity Approach</h3>
-                <p className="text-gray-300">AI capabilities approach human-level general intelligence</p>
+                <h3 className="text-xl font-bold mb-2">Q4 20o25: Singularity Approach</h3>
+                <p className="text-gray-30o0">AI capabilities approach human-level general intelligence</p>
               </div>
             </div>
           </div>
@@ -165,7 +163,7 @@ export default function AI2025FuturePredictions() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12">Future Opportunities</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-cyan-600 to-blue-600 rounded-xl p-8">
+            <div className="bg-gradient-to-br from-cyan-60o0 to-blue-60o0 rounded-xl p-8">
               <h3 className="text-2xl font-bold mb-4">Business Transformation</h3>
               <ul className="space-y-3 text-lg">
                 <li>• Complete process automation</li>
@@ -176,7 +174,7 @@ export default function AI2025FuturePredictions() {
               </ul>
             </div>
             
-            <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl p-8">
+            <div className="bg-gradient-to-br from-purple-60o0 to-pink-60o0 rounded-xl p-8">
               <h3 className="text-2xl font-bold mb-4">Technology Innovation</h3>
               <ul className="space-y-3 text-lg">
                 <li>• Quantum-AI hybrid systems</li>
@@ -201,13 +199,13 @@ export default function AI2025FuturePredictions() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-12 py-4 rounded-lg font-semibold text-lg hover:from-cyan-300 hover:to-blue-400 transition-all transform hover:scale-105"
+              className="bg-gradient-to-r from-cyan-40o0 to-blue-50o0 text-black px-12 py-4 rounded-lg font-semibold text-lg hover:from-cyan-30o0 hover:to-blue-40o0 transition-all transform hover:scale-10o5"
             >
               Start Your AI Journey
             </Link>
             <Link
               href="/services"
-              className="border-2 border-white text-white px-12 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-900 transition-all"
+              className="border-2 border-white text-white px-12 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-90o0 transition-all"
             >
               Explore Solutions
             </Link>

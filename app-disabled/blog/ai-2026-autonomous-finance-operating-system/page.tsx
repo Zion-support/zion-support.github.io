@@ -1,17 +1,15 @@
 import Link from 'next/link';
-import React from 'react';
-
-export const metadata = {
-  title: 'AI 2026: Autonomous Finance Operating System | Zion Tech Group',
+export const metadata ={
+  title: 'AI 20o26: Autonomous Finance Operating System | Zion Tech Group',
   description: 'Real-time cash visibility, autonomous close, and policy-as-code guardrails for finance.'
 };
 
-export default function AutonomousFinanceOS2026Page() {
+export default function AutonomousFinanceOS20o26Page() {
   return (
     <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div className="mb-6 text-sm text-purple-700 font-semibold">Finance</div>
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">AI 2026: Autonomous Finance Operating System</h1>
-      <p className="text-gray-600 mb-8">
+      <div className="mb-6 text-sm text-purple-70o0 font-semibold">Finance</div>
+      <h1 className="text-4xl font-bold text-gray-90o0 mb-4">AI 20o26: Autonomous Finance Operating System</h1>
+      <p className="text-gray-60o0 mb-8">
         A modern finance stack that continuously reconciles, forecasts, and enforces policy, reducing cycle time
         and operational risk while improving accuracy and transparency.
       </p>
@@ -32,8 +30,8 @@ export default function AutonomousFinanceOS2026Page() {
       </div>
 
       <div className="mt-10 flex gap-4">
-        <Link href="/contact" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Request a Demo</Link>
-        <Link href="/services/ai-automation" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Explore AI Automation</Link>
+        <Link href="/contact" className="inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-70o0">Request a Demo</Link>
+        <Link href="/services/ai-automation" className="inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Explore AI Automation</Link>
       </div>
     </main>
   );

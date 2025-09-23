@@ -14,7 +14,7 @@ export default function SolutionsPage() {
         'Drug Discovery Platform'
       ],
       icon: '🏥',
-      color: 'from-green-500 to-emerald-600'
+      color: 'from-green-50o0 to-emerald-60o0'
     },
     {
       industry: 'Finance',
@@ -27,7 +27,7 @@ export default function SolutionsPage() {
         'Portfolio Optimization'
       ],
       icon: '💼',
-      color: 'from-blue-500 to-cyan-600'
+      color: 'from-blue-50o0 to-cyan-60o0'
     },
     {
       industry: 'Manufacturing',
@@ -40,7 +40,7 @@ export default function SolutionsPage() {
         'Production Planning'
       ],
       icon: '🏭',
-      color: 'from-orange-500 to-red-600'
+      color: 'from-orange-50o0 to-red-60o0'
     },
     {
       industry: 'Retail & E-commerce',
@@ -53,7 +53,7 @@ export default function SolutionsPage() {
         'Customer Service AI'
       ],
       icon: '🛍️',
-      color: 'from-purple-500 to-pink-600'
+      color: 'from-purple-50o0 to-pink-60o0'
     },
     {
       industry: 'Education',
@@ -66,7 +66,7 @@ export default function SolutionsPage() {
         'Assessment Automation'
       ],
       icon: '🎓',
-      color: 'from-indigo-500 to-blue-600'
+      color: 'from-indigo-50o0 to-blue-60o0'
     },
     {
       industry: 'Transportation & Logistics',
@@ -79,7 +79,7 @@ export default function SolutionsPage() {
         'Supply Chain Visibility'
       ],
       icon: '🚚',
-      color: 'from-yellow-500 to-orange-600'
+      color: 'from-yellow-50o0 to-orange-60o0'
     }
   ];
 
@@ -180,19 +180,19 @@ export default function SolutionsPage() {
     <>
       <Head>
         <title>Solutions - Zion Tech Group</title>
-        <meta name="description" content="Discover industry-specific solutions and use cases powered by Zion Tech Group's cutting-edge AIquantum computingand cybersecurity technologies." />
-        <meta name="viewport" content="width=device-widthinitial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Discover industry-specific solutions and use cases powered by Zion Tech Group's cutting-edge AIquantum computingand cybersecurity technologies."  />
+        <meta name="viewport" content="width=device-widthinitial-scale=1"  />
+        <link rel="icon" href="/favicon.ico"  />
       </Head>
 
-      <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
+      <main className="min-h-screen bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-gray-90o0 text-white">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 via-blue-40o0 to-purple-40o0 bg-clip-text text-transparent">
               Industry Solutions
             </h1>
-            <p className="text-xl sm:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto">
+            <p className="text-xl sm:text-2xl mb-8 text-gray-30o0 max-w-4xl mx-auto">
               Transform your business with industry-specific solutions powered by cutting-edge AIquantum computingand cybersecurity technologies.
             </p>
           </div>
@@ -203,7 +203,7 @@ export default function SolutionsPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">Industry-Specific Solutions</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
                 Tailored solutions designed to address the unique challenges and opportunities in your industry
               </p>
             </div>
@@ -213,11 +213,11 @@ export default function SolutionsPage() {
                 <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10 hover:bg-opacity-20 transition-all">
                   <div className="text-4xl mb-4">{industry.icon}</div>
                   <h3 className="text-xl font-semibold mb-3">{industry.industry}</h3>
-                  <p className="text-gray-300 mb-4">{industry.description}</p>
+                  <p className="text-gray-30o0 mb-4">{industry.description}</p>
                   
                   <div className="space-y-2 mb-6">
                     {industry.solutions.map((solutionIndex) => (
-                      <div key={solutionIndex} className="text-sm text-gray-400 bg-white bg-opacity-5 rounded px-2 py-1">
+                      <div key={solutionIndex} className="text-sm text-gray-40o0 bg-white bg-opacity-5 rounded px-2 py-1">
                         {solution}
                       </div>
                     ))}
@@ -225,7 +225,7 @@ export default function SolutionsPage() {
                   
                   <Link 
                     href="/contact"
-                    className="text-blue-400 hover:text-blue-300 font-medium text-sm"
+                    className="text-blue-40o0 hover:text-blue-30o0 font-medium text-sm"
                   >
                     Learn More →
                   </Link>
@@ -240,7 +240,7 @@ export default function SolutionsPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">Technology Solutions</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
                 Core technology platforms that power our industry solutions
               </p>
             </div>
@@ -249,20 +249,20 @@ export default function SolutionsPage() {
               <div key={categoryIndex} className="mb-16">
                 <div className="text-center mb-12">
                   <h3 className="text-2xl sm:text-3xl font-bold mb-4">{category.category}</h3>
-                  <p className="text-lg text-gray-300 max-w-3xl mx-auto">{category.description}</p>
+                  <p className="text-lg text-gray-30o0 max-w-3xl mx-auto">{category.description}</p>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {category.solutions.map((solutionIndex) => (
                     <div key={solutionIndex} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10">
                       <h4 className="text-lg font-semibold mb-3">{solution.name}</h4>
-                      <p className="text-gray-300 mb-4">{solution.description}</p>
+                      <p className="text-gray-30o0 mb-4">{solution.description}</p>
                       
                       <ul className="space-y-2 mb-4">
                         {solution.features.map((featureIndex) => (
-                          <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
-                            <svg className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          <li key={featureIndex} className="text-sm text-gray-40o0 flex items-center">
+                            <svg className="w-4 h-4 text-green-40o0 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"  />
                             </svg>
                             {feature}
                           </li>
@@ -281,7 +281,7 @@ export default function SolutionsPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">Common Use Cases</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
                 Real-world applications of our technology solutions across industries
               </p>
             </div>
@@ -290,15 +290,15 @@ export default function SolutionsPage() {
               {useCases.map((useCaseindex) => (
                 <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10">
                   <h3 className="text-xl font-semibold mb-3">{useCase.title}</h3>
-                  <p className="text-gray-300 mb-4">{useCase.description}</p>
+                  <p className="text-gray-30o0 mb-4">{useCase.description}</p>
                   
                   <div className="mb-4">
-                    <h4 className="font-semibold mb-2 text-blue-400">Key Benefits:</h4>
+                    <h4 className="font-semibold mb-2 text-blue-40o0">Key Benefits:</h4>
                     <ul className="space-y-1">
                       {useCase.benefits.map((benefitIndex) => (
-                        <li key={benefitIndex} className="text-sm text-gray-300 flex items-center">
-                          <svg className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        <li key={benefitIndex} className="text-sm text-gray-30o0 flex items-center">
+                          <svg className="w-4 h-4 text-green-40o0 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"  />
                           </svg>
                           {benefit}
                         </li>
@@ -307,10 +307,10 @@ export default function SolutionsPage() {
                   </div>
                   
                   <div>
-                    <h4 className="font-semibold mb-2 text-blue-400">Applicable Industries:</h4>
+                    <h4 className="font-semibold mb-2 text-blue-40o0">Applicable Industries:</h4>
                     <div className="flex flex-wrap gap-2">
                       {useCase.industries.map((industryIndex) => (
-                        <span key={industryIndex} className="text-xs bg-blue-600 bg-opacity-20 text-blue-300 px-2 py-1 rounded">
+                        <span key={industryIndex} className="text-xs bg-blue-60o0 bg-opacity-20 text-blue-30o0 px-2 py-1 rounded">
                           {industry}
                         </span>
                       ))}
@@ -323,24 +323,24 @@ export default function SolutionsPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-60o0">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl mb-8 text-blue-100">
+            <p className="text-xl mb-8 text-blue-10o0">
               Let's discuss how our solutions can address your specific challenges and drive growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact" 
-                className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
+                className="bg-white text-blue-60o0 hover:bg-gray-10o0 px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Get Started
               </Link>
               <Link 
                 href="/services" 
-                className="border border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors"
+                className="border border-white text-white hover:bg-white hover:text-blue-60o0 px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Explore Services
               </Link>

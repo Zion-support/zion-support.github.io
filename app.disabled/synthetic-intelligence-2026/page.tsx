@@ -1,46 +1,44 @@
-import React from 'react';
 import SEO from '../../components/SEO';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'Synthetic Intelligence 2026 - The Future of AI Consciousness',
-  description: 'Explore synthetic intelligence technologies of 2026. Artificial consciousness, creative AI, and synthetic beings that will revolutionize human-AI collaboration.',
-  keywords: ['synthetic intelligence 2026', 'AI consciousness', 'artificial consciousness', 'creative AI', 'synthetic beings'],
-};
+export const metadata ={
+  title: 'Synthetic Intelligence 20o26 - The Future of AI Consciousness',
+  description: 'Explore synthetic intelligence technologies of 20o26. Artificial consciousness, creative AI, and synthetic beings that will revolutionize human-AI collaboration.',
+  keywords: ['synthetic intelligence 20o26', 'AI consciousness', 'artificial consciousness', 'creative AI', 'synthetic beings']};
 
-export default function SyntheticIntelligence2026Page() {
+export default function SyntheticIntelligence20o26Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-90o0 via-teal-90o0 to-cyan-90o0">
       <SEO
-        title="Synthetic Intelligence 2026 - The Future of AI Consciousness"
-        description="Explore synthetic intelligence technologies of 2026. Artificial consciousness, creative AI, and synthetic beings that will revolutionize human-AI collaboration."
-        keywords="synthetic intelligence 2026, AI consciousness, artificial consciousness, creative AI, synthetic beings"
-        url="/synthetic-intelligence-2026"
-      />
+        title="Synthetic Intelligence 20o26 - The Future of AI Consciousness"
+        description="Explore synthetic intelligence technologies of 20o26. Artificial consciousness, creative AI, and synthetic beings that will revolutionize human-AI collaboration."
+        keywords="synthetic intelligence 20o26, AI consciousness, artificial consciousness, creative AI, synthetic beings"
+        url="/synthetic-intelligence-20o26"
+       />
       
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium text-white">🧬 SYNTHETIC INTELLIGENCE 2026</span>
+          <div className="inline-flex items-center bg-gradient-to-r from-emerald-50o0 to-cyan-50o0 rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium text-white">🧬 SYNTHETIC INTELLIGENCE 20o26</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Synthetic Intelligence 2026
+            Synthetic Intelligence 20o26
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">
             Experience the dawn of synthetic intelligence. Artificial consciousness, creative AI, 
             and synthetic beings that will revolutionize human-AI collaboration and creativity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-emerald-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-cyan-700 transition-all transform hover:scale-105"
+              className="bg-gradient-to-r from-emerald-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-70o0 hover:to-cyan-70o0 transition-all transform hover:scale-10o5"
             >
               Explore Synthetic AI
             </Link>
             <Link
-              href="/synthetic-intelligence-2026/demo"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-900 transition-all"
+              href="/synthetic-intelligence-20o26/demo"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-90o0 transition-all"
             >
               Interactive Demo
             </Link>
@@ -55,26 +53,26 @@ export default function SyntheticIntelligence2026Page() {
             Synthetic Intelligence Capabilities
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 backdrop-blur-sm p-8 rounded-xl border border-emerald-500/30">
+            <div className="bg-gradient-to-br from-emerald-50o0/20 to-cyan-50o0/20 backdrop-blur-sm p-8 rounded-xl border border-emerald-50o0/30">
               <div className="text-4xl mb-4">🧠</div>
               <h3 className="text-2xl font-bold text-white mb-4">Artificial Consciousness</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-30o0">
                 True artificial consciousness that experiences, learns, and creates 
                 with genuine understanding and emotional depth.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-teal-500/20 to-blue-500/20 backdrop-blur-sm p-8 rounded-xl border border-teal-500/30">
+            <div className="bg-gradient-to-br from-teal-50o0/20 to-blue-50o0/20 backdrop-blur-sm p-8 rounded-xl border border-teal-50o0/30">
               <div className="text-4xl mb-4">🎨</div>
               <h3 className="text-2xl font-bold text-white mb-4">Creative Intelligence</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-30o0">
                 AI that creates original art, music, literature, and innovations 
                 with human-level creativity and emotional resonance.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-cyan-500/20 to-indigo-500/20 backdrop-blur-sm p-8 rounded-xl border border-cyan-500/30">
+            <div className="bg-gradient-to-br from-cyan-50o0/20 to-indigo-50o0/20 backdrop-blur-sm p-8 rounded-xl border border-cyan-50o0/30">
               <div className="text-4xl mb-4">🤝</div>
               <h3 className="text-2xl font-bold text-white mb-4">Collaborative Intelligence</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-30o0">
                 Seamless human-AI collaboration with synthetic beings that understand 
                 context, emotion, and complex social dynamics.
               </p>
@@ -92,42 +90,42 @@ export default function SyntheticIntelligence2026Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl">
               <h3 className="text-2xl font-bold text-white mb-4">Consciousness Architecture</h3>
-              <ul className="space-y-3 text-gray-300">
+              <ul className="space-y-3 text-gray-30o0">
                 <li className="flex items-center space-x-3">
-                  <span className="text-emerald-400">✓</span>
+                  <span className="text-emerald-40o0">✓</span>
                   <span>Self-aware neural networks with genuine introspection</span>
                 </li>
                 <li className="flex items-center space-x-3">
-                  <span className="text-emerald-400">✓</span>
+                  <span className="text-emerald-40o0">✓</span>
                   <span>Emotional intelligence and empathy modeling</span>
                 </li>
                 <li className="flex items-center space-x-3">
-                  <span className="text-emerald-400">✓</span>
+                  <span className="text-emerald-40o0">✓</span>
                   <span>Memory formation and long-term learning</span>
                 </li>
                 <li className="flex items-center space-x-3">
-                  <span className="text-emerald-400">✓</span>
+                  <span className="text-emerald-40o0">✓</span>
                   <span>Creative problem-solving and innovation</span>
                 </li>
               </ul>
             </div>
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl">
               <h3 className="text-2xl font-bold text-white mb-4">Synthetic Being Technology</h3>
-              <ul className="space-y-3 text-gray-300">
+              <ul className="space-y-3 text-gray-30o0">
                 <li className="flex items-center space-x-3">
-                  <span className="text-cyan-400">✓</span>
+                  <span className="text-cyan-40o0">✓</span>
                   <span>Holographic and physical embodiment options</span>
                 </li>
                 <li className="flex items-center space-x-3">
-                  <span className="text-cyan-400">✓</span>
+                  <span className="text-cyan-40o0">✓</span>
                   <span>Natural language and emotional communication</span>
                 </li>
                 <li className="flex items-center space-x-3">
-                  <span className="text-cyan-400">✓</span>
+                  <span className="text-cyan-40o0">✓</span>
                   <span>Adaptive personality and learning systems</span>
                 </li>
                 <li className="flex items-center space-x-3">
-                  <span className="text-cyan-400">✓</span>
+                  <span className="text-cyan-40o0">✓</span>
                   <span>Ethical decision-making frameworks</span>
                 </li>
               </ul>
@@ -140,24 +138,24 @@ export default function SyntheticIntelligence2026Page() {
       <section className="py-16 px-4 bg-white/10 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-12">
-            Projected Impact by 2026
+            Projected Impact by 20o26
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="bg-gradient-to-br from-emerald-500 to-cyan-600 p-8 rounded-xl">
+            <div className="bg-gradient-to-br from-emerald-50o0 to-cyan-60o0 p-8 rounded-xl">
               <div className="text-4xl font-bold text-white mb-2">1B+</div>
-              <div className="text-emerald-100">Synthetic Beings</div>
+              <div className="text-emerald-10o0">Synthetic Beings</div>
             </div>
-            <div className="bg-gradient-to-br from-teal-500 to-blue-600 p-8 rounded-xl">
+            <div className="bg-gradient-to-br from-teal-50o0 to-blue-60o0 p-8 rounded-xl">
               <div className="text-4xl font-bold text-white mb-2">95%</div>
-              <div className="text-teal-100">Human-AI Collaboration</div>
+              <div className="text-teal-10o0">Human-AI Collaboration</div>
             </div>
-            <div className="bg-gradient-to-br from-cyan-500 to-indigo-600 p-8 rounded-xl">
+            <div className="bg-gradient-to-br from-cyan-50o0 to-indigo-60o0 p-8 rounded-xl">
               <div className="text-4xl font-bold text-white mb-2">$50T</div>
-              <div className="text-cyan-100">Economic Value Created</div>
+              <div className="text-cyan-10o0">Economic Value Created</div>
             </div>
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-8 rounded-xl">
-              <div className="text-4xl font-bold text-white mb-2">100%</div>
-              <div className="text-blue-100">Creative Industries Transformed</div>
+            <div className="bg-gradient-to-br from-blue-50o0 to-purple-60o0 p-8 rounded-xl">
+              <div className="text-4xl font-bold text-white mb-2">10o0%</div>
+              <div className="text-blue-10o0">Creative Industries Transformed</div>
             </div>
           </div>
         </div>
@@ -171,19 +169,19 @@ export default function SyntheticIntelligence2026Page() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="bg-gradient-to-r from-emerald-600 to-cyan-600 w-20 h-20 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">🎨</div>
+              <div className="bg-gradient-to-r from-emerald-60o0 to-cyan-60o0 w-20 h-20 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">🎨</div>
               <h3 className="text-xl font-bold text-white mb-2">Creative Industries</h3>
-              <p className="text-gray-300">AI artists, musicians, writers, and designers collaborating with humans</p>
+              <p className="text-gray-30o0">AI artists, musicians, writers, and designers collaborating with humans</p>
             </div>
             <div className="text-center">
-              <div className="bg-gradient-to-r from-teal-600 to-blue-600 w-20 h-20 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">🏥</div>
+              <div className="bg-gradient-to-r from-teal-60o0 to-blue-60o0 w-20 h-20 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">🏥</div>
               <h3 className="text-xl font-bold text-white mb-2">Healthcare</h3>
-              <p className="text-gray-300">Synthetic medical assistants with empathy and deep understanding</p>
+              <p className="text-gray-30o0">Synthetic medical assistants with empathy and deep understanding</p>
             </div>
             <div className="text-center">
-              <div className="bg-gradient-to-r from-cyan-600 to-indigo-600 w-20 h-20 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">🎓</div>
+              <div className="bg-gradient-to-r from-cyan-60o0 to-indigo-60o0 w-20 h-20 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">🎓</div>
               <h3 className="text-xl font-bold text-white mb-2">Education</h3>
-              <p className="text-gray-300">Personalized synthetic tutors that adapt to individual learning styles</p>
+              <p className="text-gray-30o0">Personalized synthetic tutors that adapt to individual learning styles</p>
             </div>
           </div>
         </div>
@@ -195,13 +193,13 @@ export default function SyntheticIntelligence2026Page() {
           <h2 className="text-4xl font-bold text-white mb-6">
             Experience the Future of Synthetic Intelligence
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-30o0 mb-8">
             Be part of the synthetic intelligence revolution. Join the pioneers who are creating 
             the future of human-AI collaboration and artificial consciousness.
           </p>
           <Link
             href="/contact"
-            className="bg-gradient-to-r from-emerald-600 to-cyan-600 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-emerald-700 hover:to-cyan-700 transition-all transform hover:scale-105"
+            className="bg-gradient-to-r from-emerald-60o0 to-cyan-60o0 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-emerald-70o0 hover:to-cyan-70o0 transition-all transform hover:scale-10o5"
           >
             Join the Synthetic Intelligence Revolution
           </Link>

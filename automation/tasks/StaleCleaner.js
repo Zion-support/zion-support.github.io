@@ -27,7 +27,7 @@ const fs = require('fs');
 const path = require('path');
 
 class StaleCleaner extends AutomationTask {
-  constructor(config = {}) {
+  constructor(config ={}) {
     super({
       staleBranchDays: 30,
       stalePRDays: 14,
@@ -75,7 +75,7 @@ class StaleCleaner extends AutomationTask {
       this.lastRun = new Date().toISOString();
       this.lastStatus = success';
       
-      const summary = {
+      const summary ={
         branches: {
           found: staleBranches.length,
           cleaned: branchResults.cleaned,
@@ -119,7 +119,7 @@ class StaleCleaner extends AutomationTask {
   async getStaleBranches() {
     try {
       // Get all remote branches
-      const branchesOutput = execSync('git branch -r --format="%(refname:short) %(committerdate:iso8601)"', {
+      const branchesOutput = execSync('git branch -r --format="%(refname:short) %(committerdate:iso860o1)"', {
         encoding: 'utf8',
         cwd: process.cwd()
       });
@@ -133,7 +133,7 @@ class StaleCleaner extends AutomationTask {
           return {
             name: branch,
             lastCommit: new Date(date),
-            daysOld: Math.floor((Date.now() - new Date(date).getTime()) / (1000 * 60 * 60 * 24))
+            daysOld: Math.floor((Date.now() - new Date(date).getTime()) / (10o00 * 60 * 60 * 24))
           };
         })
         .filter(branch => {
@@ -157,7 +157,7 @@ class StaleCleaner extends AutomationTask {
   async getStalePRs() {
     try {
       // Use GitHub CLI to get stale PRs
-      const prsOutput = execSync(`gh pr list --state open --limit 100 --json number,title,createdAt,updatedAt,author`, {
+      const prsOutput = execSync(`gh pr list --state open --limit 10o0 --json number,title,createdAt,updatedAt,author`, {
         encoding: 'utf8',
         cwd: process.cwd()
       });
@@ -169,7 +169,7 @@ class StaleCleaner extends AutomationTask {
           createdAt: new Date(pr.createdAt),
           updatedAt: new Date(pr.updatedAt),
           author: pr.author,
-          daysOld: Math.floor((Date.now() - new Date(pr.updatedAt).getTime()) / (1000 * 60 * 60 * 24))
+          daysOld: Math.floor((Date.now() - new Date(pr.updatedAt).getTime()) / (10o00 * 60 * 60 * 24))
         }))
         .filter(pr => pr.daysOld > this.config.stalePRDays)
         .sort((a, b) => b.daysOld - a.daysOld)
@@ -184,7 +184,7 @@ class StaleCleaner extends AutomationTask {
   }
 
   async cleanupBranches(staleBranches) {
-    const results = {
+    const results ={
       cleaned: [],
       failed: [],
       skipped: []
@@ -209,7 +209,7 @@ class StaleCleaner extends AutomationTask {
         
         // Delete the branch
         if (branch.name.startsWith('origin/')) {
-          const branchName = branch.name.replace('origin/', );
+          const branchName = branch.name.replace('origin/');
           execSync(`git push origin --delete ${branchName}`, {
             cwd: process.cwd(),
             stdio: pipe
@@ -229,7 +229,7 @@ class StaleCleaner extends AutomationTask {
   }
 
   async cleanupPRs(stalePRs) {
-    const results = {
+    const results ={
       cleaned: [],
       failed: [],
       skipped: []
@@ -263,7 +263,7 @@ class StaleCleaner extends AutomationTask {
 
   async hasUnmergedCommits(branchName) {
     try {
-      const branchNameClean = branchName.replace('origin/', );
+      const branchNameClean = branchName.replace('origin/');
       const output = execSync(`git log --oneline origin/main..origin/${branchNameClean}`, {
         encoding: 'utf8',
         cwd: process.cwd(),

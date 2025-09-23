@@ -1,4 +1,3 @@
-import React from 'react';
 interface LayoutProps {
   // Add props here as needed
 }

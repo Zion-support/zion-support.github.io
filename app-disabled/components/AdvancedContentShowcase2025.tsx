@@ -4,16 +4,16 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { Brain, Zap, TrendingUp, ArrowRight, Star, Clock, Users, Award } from 'lucide-react';
 
-const AdvancedContentShowcase2025 = () => {
+const AdvancedContentShowcase20o25 = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
   const content = [
     {
       id: 'neural-interface',
       title: 'Neural Interface Revolution',
-      description: 'Fortune 500 companies achieve 750% ROI through revolutionary brain-computer interface technology.',
+      description: 'Fortune 50o0 companies achieve 750% ROI through revolutionary brain-computer interface technology.',
       type: 'blog',
-      url: '/blog/ai-2025-neural-interface-revolution-enterprise-breakthrough',
+      url: '/blog/ai-20o25-neural-interface-revolution-enterprise-breakthrough',
       metrics: {
         roi: '750%',
         savings: '$4.2B',
@@ -24,16 +24,16 @@ const AdvancedContentShowcase2025 = () => {
       featured: true,
       category: 'breakthrough',
       icon: Brain,
-      color: 'from-purple-600 to-indigo-600'
+      color: 'from-purple-60o0 to-indigo-60o0'
     },
     {
       id: 'autonomous-agents',
       title: 'Autonomous AI Agents Revolution',
-      description: 'Revolutionary autonomous AI agents achieving 900% ROI through self-managing systems.',
+      description: 'Revolutionary autonomous AI agents achieving 90o0% ROI through self-managing systems.',
       type: 'blog',
-      url: '/blog/ai-2025-autonomous-ai-agents-enterprise-revolution',
+      url: '/blog/ai-20o25-autonomous-ai-agents-enterprise-revolution',
       metrics: {
-        roi: '900%',
+        roi: '90o0%',
         savings: '$5.8B',
         automation: '95%',
         satisfaction: '99.9%'
@@ -42,14 +42,14 @@ const AdvancedContentShowcase2025 = () => {
       featured: true,
       category: 'breakthrough',
       icon: Zap,
-      color: 'from-blue-600 to-cyan-600'
+      color: 'from-blue-60o0 to-cyan-60o0'
     },
     {
       id: 'predictive-analytics',
       title: 'Advanced Predictive Analytics Revolution',
       description: 'AI-powered forecasting and intelligent insights delivering 650% ROI.',
       type: 'blog',
-      url: '/blog/ai-2025-advanced-predictive-analytics-revolution',
+      url: '/blog/ai-20o25-advanced-predictive-analytics-revolution',
       metrics: {
         roi: '650%',
         savings: '$3.6B',
@@ -60,14 +60,14 @@ const AdvancedContentShowcase2025 = () => {
       featured: true,
       category: 'intelligence',
       icon: TrendingUp,
-      color: 'from-green-600 to-emerald-600'
+      color: 'from-green-60o0 to-emerald-60o0'
     },
     {
       id: 'neural-interface-case-study',
-      title: 'Neural Interface Fortune 500 Success',
-      description: 'How a Fortune 500 company achieved 850% ROI with brain-computer integration.',
+      title: 'Neural Interface Fortune 50o0 Success',
+      description: 'How a Fortune 50o0 company achieved 850% ROI with brain-computer integration.',
       type: 'case-study',
-      url: '/case-studies/ai-2025-neural-interface-fortune-500-success-story',
+      url: '/case-studies/ai-20o25-neural-interface-fortune-50o0-success-story',
       metrics: {
         roi: '850%',
         savings: '$3.2B',
@@ -78,16 +78,16 @@ const AdvancedContentShowcase2025 = () => {
       featured: true,
       category: 'success',
       icon: Award,
-      color: 'from-orange-600 to-red-600'
+      color: 'from-orange-60o0 to-red-60o0'
     },
     {
       id: 'autonomous-systems-case-study',
       title: 'Autonomous Systems Enterprise Success',
-      description: '$2.8B company achieves 1,200% ROI with self-managing operations.',
+      description: '$2.8B company achieves 1,20o0% ROI with self-managing operations.',
       type: 'case-study',
-      url: '/case-studies/ai-2025-autonomous-systems-enterprise-transformation-success',
+      url: '/case-studies/ai-20o25-autonomous-systems-enterprise-transformation-success',
       metrics: {
-        roi: '1,200%',
+        roi: '1,20o0%',
         savings: '$4.2B',
         automation: '98%',
         satisfaction: '99.9%'
@@ -96,7 +96,7 @@ const AdvancedContentShowcase2025 = () => {
       featured: true,
       category: 'success',
       icon: Users,
-      color: 'from-teal-600 to-blue-600'
+      color: 'from-teal-60o0 to-blue-60o0'
     }
   ];
 
@@ -116,14 +116,14 @@ const AdvancedContentShowcase2025 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full px-6 py-2 mb-4">
-            <Star className="w-5 h-5 mr-2" />
-            <span className="font-medium">🚀 ADVANCED CONTENT 2025</span>
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white rounded-full px-6 py-2 mb-4">
+            <Star className="w-5 h-5 mr-2"  />
+            <span className="font-medium">🚀 ADVANCED CONTENT 20o25</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-90o0 mb-4">
             Revolutionary AI Content
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
             Discover breakthrough AI technologies and success stories achieving unprecedented ROI through cutting-edge implementations.
           </p>
         </div>
@@ -134,10 +134,10 @@ const AdvancedContentShowcase2025 = () => {
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-20o0 ${
                 activeCategory === category.id
-                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md'
+                  ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg'
+                  : 'bg-white text-gray-70o0 hover:bg-gray-10o0 shadow-md'
               }`}
             >
               {category.name}
@@ -153,7 +153,7 @@ const AdvancedContentShowcase2025 = () => {
             return (
               <div
                 key={item.id}
-                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100"
+                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-30o0 overflow-hidden border border-gray-10o0"
               >
                 {/* Header */}
                 <div className={`bg-gradient-to-r ${item.color} p-6 text-white relative overflow-hidden`}>
@@ -161,13 +161,13 @@ const AdvancedContentShowcase2025 = () => {
                   <div className="relative z-10">
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center space-x-2">
-                        <IconComponent className="w-6 h-6" />
+                        <IconComponent className="w-6 h-6"  />
                         <span className="text-sm font-medium uppercase tracking-wide">
                           {item.type === 'blog' ? 'Blog Post' : 'Case Study'}
                         </span>
                       </div>
                       {item.featured && (
-                        <div className="bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-bold">
+                        <div className="bg-yellow-40o0 text-yellow-90o0 px-2 py-1 rounded-full text-xs font-bold">
                           FEATURED
                         </div>
                       )}
@@ -186,31 +186,31 @@ const AdvancedContentShowcase2025 = () => {
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     {Object.entries(item.metrics).map(([key, value]) => (
                       <div key={key} className="text-center">
-                        <div className="text-2xl font-bold text-gray-900">{value}</div>
-                        <div className="text-xs text-gray-500 uppercase tracking-wide">
+                        <div className="text-2xl font-bold text-gray-90o0">{value}</div>
+                        <div className="text-xs text-gray-50o0 uppercase tracking-wide">
                           {key.replace('_', ' ')}
                         </div>
                       </div>
                     ))}
                   </div>
 
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                  <div className="flex items-center justify-between text-sm text-gray-50o0 mb-4">
                     <div className="flex items-center space-x-1">
-                      <Clock className="w-4 h-4" />
+                      <Clock className="w-4 h-4"  />
                       <span>{item.readingTime}</span>
                     </div>
                     <div className="flex items-center space-x-1">
-                      <Star className="w-4 h-4 text-yellow-500" />
+                      <Star className="w-4 h-4 text-yellow-50o0"  />
                       <span>5.0</span>
                     </div>
                   </div>
 
                   <Link
                     href={item.url}
-                    className="group/btn w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-200 flex items-center justify-center space-x-2"
+                    className="group/btn w-full bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white py-3 px-4 rounded-lg font-semibold hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-20o0 flex items-center justify-center space-x-2"
                   >
                     <span>Read More</span>
-                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"  />
                   </Link>
                 </div>
               </div>
@@ -219,7 +219,7 @@ const AdvancedContentShowcase2025 = () => {
         </div>
 
         {/* Success Metrics Summary */}
-        <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
+        <div className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 text-white">
           <div className="text-center mb-8">
             <h3 className="text-2xl sm:text-3xl font-bold mb-2">
               Proven Success Metrics
@@ -231,7 +231,7 @@ const AdvancedContentShowcase2025 = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold mb-2">1,200%</div>
+              <div className="text-3xl sm:text-4xl font-bold mb-2">1,20o0%</div>
               <div className="text-sm text-white/80">Maximum ROI Achieved</div>
             </div>
             <div className="text-center">
@@ -243,7 +243,7 @@ const AdvancedContentShowcase2025 = () => {
               <div className="text-sm text-white/80">Accuracy Rate</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold mb-2">500+</div>
+              <div className="text-3xl sm:text-4xl font-bold mb-2">50o0+</div>
               <div className="text-sm text-white/80">Success Stories</div>
             </div>
           </div>
@@ -253,10 +253,10 @@ const AdvancedContentShowcase2025 = () => {
         <div className="text-center mt-12">
           <Link
             href="/contact"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-20o0 shadow-lg hover:shadow-xl"
           >
             <span>Start Your AI Transformation</span>
-            <ArrowRight className="ml-2 w-5 h-5" />
+            <ArrowRight className="ml-2 w-5 h-5"  />
           </Link>
         </div>
       </div>
@@ -264,4 +264,4 @@ const AdvancedContentShowcase2025 = () => {
   );
 };
 
-export default AdvancedContentShowcase2025;
+export default AdvancedContentShowcase20o25;

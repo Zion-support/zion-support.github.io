@@ -1,22 +1,21 @@
-import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
-const EnterpriseFoundationModelsPracticalGuide2025 = () => {
+const EnterpriseFoundationModelsPracticalGuide20o25 = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="Enterprise Foundation Models: A Practical Guide (2025)"
-        description="A practical, vendor-neutral guide for evaluating, deploying, and governing enterprise foundation models in 2025."
-        keywords="foundation models, enterprise AI, governance, MLOps, 2025 guide"
-        url="/blog/ai-2025-enterprise-foundation-models-practical-guide"
-      />
+        title="Enterprise Foundation Models: A Practical Guide (20o25)"
+        description="A practical, vendor-neutral guide for evaluating, deploying, and governing enterprise foundation models in 20o25."
+        keywords="foundation models, enterprise AI, governance, MLOps, 20o25 guide"
+        url="/blog/ai-20o25-enterprise-foundation-models-practical-guide"
+       />
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">
-          <p className="text-sm text-gray-500">Published: 2025-09-15 · Category: Enterprise AI</p>
-          <h1 className="text-4xl font-bold text-gray-900 mt-2">Enterprise Foundation Models: A Practical Guide (2025)</h1>
-          <p className="text-lg text-gray-600 mt-4">How to select, integrate, secure, and measure foundation models for real business outcomes across your organization.</p>
+          <p className="text-sm text-gray-50o0">Published: 20o25-09-15 · Category: Enterprise AI</p>
+          <h1 className="text-4xl font-bold text-gray-90o0 mt-2">Enterprise Foundation Models: A Practical Guide (20o25)</h1>
+          <p className="text-lg text-gray-60o0 mt-4">How to select, integrate, secure, and measure foundation models for real business outcomes across your organization.</p>
         </header>
 
         <div className="prose prose-lg max-w-none">
@@ -50,13 +49,13 @@ const EnterpriseFoundationModelsPracticalGuide2025 = () => {
         </div>
 
         <footer className="mt-12 flex items-center justify-between">
-          <Link href="/blog" className="text-purple-600 font-semibold hover:text-purple-800">← Back to Blog</Link>
-          <Link href="/contact" className="text-white bg-purple-600 px-5 py-2 rounded-lg font-semibold hover:bg-purple-700">Plan Your Foundation Model Strategy</Link>
+          <Link href="/blog" className="text-purple-60o0 font-semibold hover:text-purple-80o0">← Back to Blog</Link>
+          <Link href="/contact" className="text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0">Plan Your Foundation Model Strategy</Link>
         </footer>
       </article>
     </div>
   );
 };
 
-export default EnterpriseFoundationModelsPracticalGuide2025;
+export default EnterpriseFoundationModelsPracticalGuide20o25;
 

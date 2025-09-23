@@ -1,21 +1,20 @@
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'AI 2026: LLM Evals Maturity Model',
-  description: 'Evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.',
-};
+export const metadata ={
+  title: 'AI 20o26: LLM Evals Maturity Model',
+  description: 'Evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.'};
 
 export default function EvalsMaturityModelPage() {
   return (
     <main className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">
+      <section className="bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-5xl font-bold">AI 2026: LLM Evals Maturity Model</h1>
+          <h1 className="text-3xl md:text-5xl font-bold">AI 20o26: LLM Evals Maturity Model</h1>
           <p className="mt-4 text-lg opacity-90 max-w-3xl">
             An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI across the enterprise.
           </p>
           <div className="mt-6">
-            <Link href="#framework" className="bg-white text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">Explore framework</Link>
+            <Link href="#framework" className="bg-white text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0">Explore framework</Link>
           </div>
         </div>
       </section>
@@ -48,7 +47,7 @@ export default function EvalsMaturityModelPage() {
               define pass/fail thresholds aligned to business impact and risk appetite.
             </p>
             <p>
-              See also: <Link href="/content/ai-2026-evaluation-harness-blueprint" className="text-purple-700 font-semibold">Evaluation Harness Blueprint</Link>.
+              See also: <Link href="/content/ai-20o26-evaluation-harness-blueprint" className="text-purple-70o0 font-semibold">Evaluation Harness Blueprint</Link>.
             </p>
           </div>
         </div>

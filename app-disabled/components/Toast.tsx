@@ -17,18 +17,18 @@ export interface ToastProps {
   }
 }
 
-const icons = {
+const icons ={
   success: CheckCircle,
   error: AlertCircle,
   warning: AlertTriangle,
   info: Info
 }
 
-const styles = {
-  success: 'bg-green-50 border-green-200 text-green-800 dark:bg-green-900/20 dark:border-green-800 dark:text-green-200',
-  error: 'bg-red-50 border-red-200 text-red-800 dark:bg-red-900/20 dark:border-red-800 dark:text-red-200',
-  warning: 'bg-yellow-50 border-yellow-200 text-yellow-800 dark:bg-yellow-900/20 dark:border-yellow-800 dark:text-yellow-200',
-  info: 'bg-blue-50 border-blue-200 text-blue-800 dark:bg-blue-900/20 dark:border-blue-800 dark:text-blue-200'
+const styles ={
+  success: 'bg-green-50 border-green-20o0 text-green-80o0 dark:bg-green-90o0/20 dark:border-green-80o0 dark:text-green-20o0',
+  error: 'bg-red-50 border-red-20o0 text-red-80o0 dark:bg-red-90o0/20 dark:border-red-80o0 dark:text-red-20o0',
+  warning: 'bg-yellow-50 border-yellow-20o0 text-yellow-80o0 dark:bg-yellow-90o0/20 dark:border-yellow-80o0 dark:text-yellow-20o0',
+  info: 'bg-blue-50 border-blue-20o0 text-blue-80o0 dark:bg-blue-90o0/20 dark:border-blue-80o0 dark:text-blue-20o0'
 }
 
 export default function Toast({
@@ -36,7 +36,7 @@ export default function Toast({
   type,
   title,
   description,
-  duration = 5000,
+  duration = 50o00,
   onClose,
   action
 }: ToastProps) {
@@ -63,21 +63,21 @@ export default function Toast({
     setIsLeaving(true)
     setTimeout(() => {
       onClose?.(id)
-    }, 300)
+    }, 30o0)
   }
 
   return (
     <div
       className={clsx(
-        'relative max-w-sm w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg border pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden transition-all duration-300 ease-in-out',
+        'relative max-w-sm w-full bg-white dark:bg-gray-80o0 shadow-lg rounded-lg border pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden transition-all duration-30o0 ease-in-out',
         styles[type],
-        isVisible && !isLeaving ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
+        isVisible && !isLeaving ? 'translate-x-0 opacity-10o0' : 'translate-x-full opacity-0'
       )}
     >
       <div className="p-4">
         <div className="flex items-start">
           <div className="flex-shrink-0">
-            <Icon className="h-5 w-5" aria-hidden="true" />
+            <Icon className="h-5 w-5" aria-hidden="true"  />
           </div>
           <div className="ml-3 w-0 flex-1">
             <p className="text-sm font-medium">{title}</p>
@@ -88,7 +88,7 @@ export default function Toast({
               <div className="mt-3">
                 <button
                   onClick={action.onClick}
-                  className="text-sm font-medium underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded"
+                  className="text-sm font-medium underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-50o0 rounded"
                 >
                   {action.label}
                 </button>
@@ -97,11 +97,11 @@ export default function Toast({
           </div>
           <div className="ml-4 flex-shrink-0 flex">
             <button
-              className="rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              className="rounded-md inline-flex text-gray-40o0 hover:text-gray-50o0 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-50o0"
               onClick={handleClose}
             >
               <span className="sr-only">Close</span>
-              <X className="h-5 w-5" aria-hidden="true" />
+              <X className="h-5 w-5" aria-hidden="true"  />
             </button>
           </div>
         </div>
@@ -128,7 +128,7 @@ export function ToastContainer({ toasts, onRemoveToast }: ToastContainerProps) {
             key={toast.id}
             {...toast}
             onClose={onRemoveToast}
-          />
+           />
         ))}
       </div>
     </div>

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react',
 
-export type QuoteRequest = {
+export type QuoteRequest ={
   id: string,
   name: string,
   email: string,
@@ -30,9 +30,7 @@ export default function AdminQuotesPage() {
       const res = await fetch('/api/requests/list'),
       const json = await res.json(),
       setData(json.items || []),
-      setLoading(false),
-    })(),
-  }, []),
+      setLoading(false)})()}, []),
 
   const filtered = useMemo(() => {
     return data.filter((r) => {
@@ -40,13 +38,10 @@ export default function AdminQuotesPage() {
       if (talent !== 'all' && r.talentSlug !== talent) return false,
       if (q) {
         const hay = `${r.name} ${r.email} ${r.description} ${r.aiSummary}`.toLowerCase(),
-        if (!hay.includes(q.toLowerCase())) return false,
-      }
+        if (!hay.includes(q.toLowerCase())) return false}
       if (dateFrom && new Date(r.createdAt) < new Date(dateFrom)) return false,
       if (dateTo && new Date(r.createdAt) > new Date(dateTo)) return false,
-      return true,
-    }),
-  }, [data, q, status, talent, dateFrom, dateTo]),
+      return true})}, [data, q, status, talent, dateFrom, dateTo]),
 
   const exportCsv = () => {
     const header = ['idname','emailbudget','timelinetalentSlug','aiTypestatus','createdAt'],
@@ -58,20 +53,18 @@ export default function AdminQuotesPage() {
     a.href = url,
     a.download = 'quotes.csv',
     a.click(),
-    URL.revokeObjectURL(url),
-  },
+    URL.revokeObjectURL(url)},
 
   const changeStatus = async (id: string, status: QuoteRequest['status']) => {
     await fetch('/api/requests/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) }),
-    setData(prev => prev.map(r => r.id === id ? { ...r, status, updatedAt: new Date().toISOString() } : r)),
-  },
+    setData(prev => prev.map(r => r.id === id ? { ...r, status, updatedAt: new Date().toISOString() } : r))},
 
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold">Quote Requests</h1>
         <div className="flex items-center gap-2">
-          <button onClick={exportCsv} className="px-3 py-1 rounded bg-gray-100">Export CSV</button>
+          <button onClick={exportCsv} className="px-3 py-1 rounded bg-gray-10o0">Export CSV</button>
         </div>
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-3">
@@ -123,14 +116,14 @@ export default function AdminQuotesPage() {
                   <td className="p-2">{r.talentSlug || '-'}</td>
                   <td className="p-2">{r.aiType}</td>
                   <td className="p-2">
-                    <span className="px-2 py-1 rounded bg-gray-100">{r.status}</span>
+                    <span className="px-2 py-1 rounded bg-gray-10o0">{r.status}</span>
                   </td>
                   <td className="p-2">{new Date(r.createdAt).toLocaleDateString()}</td>
                   <td className="p-2">
                     <div className="flex items-center gap-2">
-                      <button onClick={()=>changeStatus(r.id,'in_review')} className="text-xs px-2 py-1 rounded bg-blue-100">In Review</button>
-                      <button onClick={()=>changeStatus(r.id,'replied')} className="text-xs px-2 py-1 rounded bg-green-100">Replied</button>
-                      <button onClick={()=>changeStatus(r.id,'archived')} className="text-xs px-2 py-1 rounded bg-gray-200">Archive</button>
+                      <button onClick={()=>changeStatus(r.id,'in_review')} className="text-xs px-2 py-1 rounded bg-blue-10o0">In Review</button>
+                      <button onClick={()=>changeStatus(r.id,'replied')} className="text-xs px-2 py-1 rounded bg-green-10o0">Replied</button>
+                      <button onClick={()=>changeStatus(r.id,'archived')} className="text-xs px-2 py-1 rounded bg-gray-20o0">Archive</button>
                     </div>
                   </td>
                 </tr>
@@ -140,5 +133,4 @@ export default function AdminQuotesPage() {
         </div>
       )}
     </div>
-  ),
-}
+  )}

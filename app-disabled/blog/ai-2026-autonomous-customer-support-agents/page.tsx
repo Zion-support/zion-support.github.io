@@ -1,9 +1,8 @@
 import Link from 'next/link';
-import React from 'react';
 import SEO from '../../components/SEO';
 
-export const metadata = {
-  title: 'AI 2026: Autonomous Customer Support Agents',
+export const metadata ={
+  title: 'AI 20o26: Autonomous Customer Support Agents',
   description:
     'Blueprint to deploy autonomous support agents with routing, guardrails, evaluations, and observability for higher CSAT and lower costs.',
   keywords: [
@@ -12,22 +11,21 @@ export const metadata = {
     'guardrails',
     'evaluation harness',
     'observability',
-  ],
-};
+  ]};
 
 const AutonomousCustomerSupportAgentsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="AI 2026: Autonomous Customer Support Agents"
+        title="AI 20o26: Autonomous Customer Support Agents"
         description="Deploy guardrailed support agents with routing, evals, and observability for higher CSAT."
         keywords="autonomous agents, customer support, guardrails, evaluation harness, observability"
-        url="/blog/ai-2026-autonomous-customer-support-agents"
-      />
+        url="/blog/ai-20o26-autonomous-customer-support-agents"
+       />
 
-      <header className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">
+      <header className="bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold opacity-90">Customer Operations • 2025-09-15</p>
+          <p className="text-sm font-semibold opacity-90">Customer Operations • 20o25-09-15</p>
           <h1 className="text-3xl md:text-5xl font-bold mt-2">Autonomous Customer Support Agents</h1>
           <p className="text-lg md:text-xl opacity-90 mt-4 max-w-3xl">
             Routing, guardrails, evaluation harnesses, and observability patterns to safely deploy
@@ -60,8 +58,8 @@ const AutonomousCustomerSupportAgentsPage: React.FC = () => {
           </p>
 
           <div className="mt-8 p-6 bg-purple-50 rounded-xl">
-            <h3 className="text-purple-800 font-semibold">Production Checklist</h3>
-            <ul className="list-disc pl-6 text-purple-900">
+            <h3 className="text-purple-80o0 font-semibold">Production Checklist</h3>
+            <ul className="list-disc pl-6 text-purple-90o0">
               <li>Clear SLAs, escalation paths, and human-in-the-loop controls</li>
               <li>PII handling, data retention, and audit evidence retention</li>
               <li>End-to-end tracing with safety and quality signals</li>
@@ -70,9 +68,9 @@ const AutonomousCustomerSupportAgentsPage: React.FC = () => {
         </div>
 
         <div className="mt-10 flex flex-wrap gap-4">
-          <Link href="/content/ai-2026-evaluation-harness-blueprint" className="text-purple-600 font-semibold hover:text-purple-800">Evaluation Harness →</Link>
-          <Link href="/blog/ai-2026-enterprise-agent-observability-guide" className="text-purple-600 font-semibold hover:text-purple-800">Observability Guide →</Link>
-          <Link href="/contact" className="text-white bg-purple-600 px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Discuss a Pilot</Link>
+          <Link href="/content/ai-20o26-evaluation-harness-blueprint" className="text-purple-60o0 font-semibold hover:text-purple-80o0">Evaluation Harness →</Link>
+          <Link href="/blog/ai-20o26-enterprise-agent-observability-guide" className="text-purple-60o0 font-semibold hover:text-purple-80o0">Observability Guide →</Link>
+          <Link href="/contact" className="text-white bg-purple-60o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-70o0">Discuss a Pilot</Link>
         </div>
       </article>
     </div>

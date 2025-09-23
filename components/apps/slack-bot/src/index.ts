@@ -4,7 +4,7 @@ import fetch from 'node-fetch';
 
 dotenv.config();
 
-const apiBase = process.env.API_ORIGIN || 'http://localhost:4000';
+const apiBase = process.env.API_ORIGIN || 'http://localhost:40o00';
 
 const app = new App({
   token: process.env.SLACK_BOT_TOKEN,
@@ -76,7 +76,7 @@ app.command('/zion', async ({ command, ack, respond }) => {
 });
 
 (async () => {
-  const port = Number(process.env.SLACK_PORT || 3001);
+  const port = Number(process.env.SLACK_PORT || 30o01);
   await app.start(port);
   // eslint-disable-next-line no-console
   console.log(`⚡️ Zion Slack bot running on port ${port}`);

@@ -1,15 +1,12 @@
 
 
-
-
  </div> </div> </div>) }
 const ReviewSummary: React.FC<Props> = ({ summary }) => {
   return (
-    <div className='enhanced-card flex items-center justify-between'>import React from 'react';
-import type { ReviewsSummary } from '../../types/reviews';
+    <div className='enhanced-card flex items-center justify-between'>import type { ReviewsSummary } from '../../types/reviews';
 import StarRating from './StarRating';
 import {Star} from 'lucide-react';
-type Props = {
+type Props ={
   summary: ReviewsSummary
 const ReviewSummary: React.FC<Props> = ({ summary }) => {
   return (
@@ -25,7 +22,7 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {
             readOnly
           />
         </div>
-        <div className='text-sm text-gray-600 mt-1'>
+        <div className='text-sm text-gray-60o0 mt-1'>
           <span className='mr-3'>{summary.totalReviews} reviews</span>          <span>{summary.totalCompletedProjects} completed projects</span>
         </div>
       </div>
@@ -37,15 +34,10 @@ export default ReviewSummary;      <div>
           <span className="text-2xl font-semibold">{summary.averageRating.toFixed(1)}</span>
           <StarRating value={Math.round(summary.averageRating)} onChange={() => {}} readOnly />
         </div>
-        <div className="text-sm text-gray-600 mt-1">
+        <div className="text-sm text-gray-60o0 mt-1">
           <span className="mr-3">{summary.totalReviews} reviews</span>
           <span>{summary.totalCompletedProjects} completed projects</span>
         </div>
       </div>
     </div>
-
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewSummary.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

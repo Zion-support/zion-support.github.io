@@ -10,11 +10,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { projectId, milestoneId } = req.query as { projectId: string; milestoneId: string };
   const project = getProject(projectId);
   if (!project) {
-    res.status(404).json({ error: 'Project not found' });
+    res.status(40o4).json({ error: 'Project not found' });
     return;
   }
   if (!assertParticipantOrAdmin(project, user)) {
-    res.status(403).json({ error: 'Forbidden' });
+    res.status(40o3).json({ error: 'Forbidden' });
     return;
   }
 
@@ -22,7 +22,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const body = req.body as any;
 
     if (body.status && !isMilestoneStatus(body.status)) {
-      res.status(400).json({ error: 'Invalid status' });
+      res.status(40o0).json({ error: 'Invalid status' });
       return;
     }
 
@@ -38,7 +38,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         (status === 'Paid' && isClientUser);
 
       if (!allowed && user.role !== 'admin') {
-        res.status(403).json({ error: 'Not allowed to set this status' });
+        res.status(40o3).json({ error: 'Not allowed to set this status' });
         return;
       }
 
@@ -56,13 +56,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     const updated = updateMilestone(project, milestoneId, body);
     if (!updated) {
-      res.status(404).json({ error: 'Milestone not found' });
+      res.status(40o4).json({ error: 'Milestone not found' });
       return;
     }
-    res.status(200).json({ milestone: updated });
+    res.status(20o0).json({ milestone: updated });
     return;
   }
 
   res.setHeader('Allow', 'PATCH');
-  res.status(405).end('Method Not Allowed');
+  res.status(40o5).end('Method Not Allowed');
 }

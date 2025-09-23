@@ -21,8 +21,7 @@ export default function AutomationStatusPage() {
           <div className="mt-2"><a className="underline" href="/metrics/latest.json">View latest metrics JSON</a></div>
         </div>
       ) : (
-        <div className="text-sm text-gray-500">No status available yet.</div>
+        <div className="text-sm text-gray-50o0">No status available yet.</div>
       )}
     </div>
-  ),
-}
+  )}

@@ -7,7 +7,7 @@ const FiveGTechnologyAndItsImpactOnIotChat: NextPage = () => {
     <div>
       <Head>
         <title>5G Technology and its Impact on IoT - Zion Tech Solutions</title>
-        <meta name="description" content="5G Technology and its Impact on IoT blog post" />
+        <meta name="description" content="5G Technology and its Impact on IoT blog post"  />
       </Head>
       
       <main>

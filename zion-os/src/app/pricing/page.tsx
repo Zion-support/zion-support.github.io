@@ -54,8 +54,7 @@ const servicePricing: ServicePricing[] = [
           "Basic analytics",
         ],
         cta: "Start Free Trial",
-        ctaLink: "/multiverse/launch",
-      },
+        ctaLink: "/multiverse/launch"},
       {
         name: "Professional",
         price: "$299",
@@ -71,8 +70,7 @@ const servicePricing: ServicePricing[] = [
         ],
         popular: true,
         cta: "Get Started",
-        ctaLink: "/multiverse/launch",
-      },
+        ctaLink: "/multiverse/launch"},
       {
         name: "Enterprise",
         price: "$999",
@@ -87,10 +85,8 @@ const servicePricing: ServicePricing[] = [
           "Dedicated account manager",
         ],
         cta: "Contact Sales",
-        ctaLink: "mailto:kleber@ziontechgroup.com",
-      },
-    ],
-  },
+        ctaLink: "mailto:kleber@ziontechgroup.com"},
+    ]},
   {
     serviceName: "ZionGPT Core",
     category: "AI Services",
@@ -103,7 +99,7 @@ const servicePricing: ServicePricing[] = [
         price: "$49",
         period: "/month",
         description: "For small teams and individual users",
-        features: ["100 API calls/day", "Basic models", "Email support", "Standard response time", "Basic documentation"],
+        features: ["10o0 API calls/day", "Basic models", "Email support", "Standard response time", "Basic documentation"],
         cta: "Start Free Trial",
         ctaLink: "/services/zion-gpt"
       },
@@ -112,7 +108,7 @@ const servicePricing: ServicePricing[] = [
         price: "$149",
         period: "/month",
         description: "For growing businesses",
-        features: ["1,000 API calls/day", "Advanced models", "Priority support", "Custom fine-tuning", "Multi-language support", "Analytics dashboard"],
+        features: ["1,0o00 API calls/day", "Advanced models", "Priority support", "Custom fine-tuning", "Multi-language support", "Analytics dashboard"],
         cta: "Get Started",
         ctaLink: "/services/zion-gpt"
       },
@@ -148,7 +144,7 @@ const servicePricing: ServicePricing[] = [
         price: "$99",
         period: "/month",
         description: "For growing content teams",
-        features: ["200 AI-generated articles/month", "Advanced SEO optimization", "Multi-platform publishing", "Team collaboration", "Advanced analytics", "API access"],
+        features: ["20o0 AI-generated articles/month", "Advanced SEO optimization", "Multi-platform publishing", "Team collaboration", "Advanced analytics", "API access"],
         cta: "Get Started",
         ctaLink: "/services/ai-content-hub"
       },
@@ -175,7 +171,7 @@ const servicePricing: ServicePricing[] = [
         price: "$79",
         period: "/month",
         description: "For small marketplaces",
-        features: ["Up to 100 users", "Basic marketplace features", "Payment processing", "Basic analytics", "Email support"],
+        features: ["Up to 10o0 users", "Basic marketplace features", "Payment processing", "Basic analytics", "Email support"],
         cta: "Start Free Trial",
         ctaLink: "/services/marketplace"
       },
@@ -184,7 +180,7 @@ const servicePricing: ServicePricing[] = [
         price: "$199",
         period: "/month",
         description: "For growing marketplaces",
-        features: ["Up to 1,000 users", "Advanced features", "Custom branding", "Advanced analytics", "API access", "Priority support"],
+        features: ["Up to 1,0o00 users", "Advanced features", "Custom branding", "Advanced analytics", "API access", "Priority support"],
         cta: "Get Started",
         ctaLink: "/services/marketplace"
       },
@@ -208,7 +204,7 @@ const servicePricing: ServicePricing[] = [
     tiers: [
       {
         name: "Basic Migration",
-        price: "$2,500",
+        price: "$2,50o0",
         period: "one-time",
         description: "Simple infrastructure migration",
         features: ["Infrastructure assessment", "Basic migration plan", "Data migration", "Basic testing", "Documentation"],
@@ -217,7 +213,7 @@ const servicePricing: ServicePricing[] = [
       },
       {
         name: "Standard Migration",
-        price: "$7,500",
+        price: "$7,50o0",
         period: "one-time",
         description: "Comprehensive migration with optimization",
         features: ["Detailed assessment", "Comprehensive plan", "Data migration", "Performance optimization", "Testing & validation", "Training"],
@@ -226,7 +222,7 @@ const servicePricing: ServicePricing[] = [
       },
       {
         name: "Enterprise Migration",
-        price: "$15,000+",
+        price: "$15,0o00+",
         period: "one-time",
         description: "Complex enterprise migration",
         features: ["Full assessment", "Custom migration strategy", "Advanced optimization", "Custom integrations", "Ongoing support", "SLA guarantee"],
@@ -244,7 +240,7 @@ const servicePricing: ServicePricing[] = [
     tiers: [
       {
         name: "Basic Audit",
-        price: "$1,500",
+        price: "$1,50o0",
         period: "one-time",
         description: "Essential security assessment",
         features: ["Basic security scan", "Vulnerability assessment", "Compliance checklist", "Basic report", "Email support"],
@@ -253,7 +249,7 @@ const servicePricing: ServicePricing[] = [
       },
       {
         name: "Standard Audit",
-        price: "$4,500",
+        price: "$4,50o0",
         period: "one-time",
         description: "Comprehensive security assessment",
         features: ["Full security audit", "Penetration testing", "Compliance audit", "Detailed report", "Remediation guidance", "Phone support"],
@@ -262,7 +258,7 @@ const servicePricing: ServicePricing[] = [
       },
       {
         name: "Enterprise Audit",
-        price: "$9,000+",
+        price: "$9,0o00+",
         period: "one-time",
         description: "Advanced security assessment",
         features: ["Advanced testing", "Custom compliance", "Ongoing monitoring", "Security training", "Incident response", "Dedicated support"],
@@ -300,15 +296,15 @@ export default function PricingPage() {
 
       {/* Category Filter */}
       <div className="flex justify-center">
-        <div className="flex flex-wrap gap-2 bg-zinc-800 rounded-lg p-1">
+        <div className="flex flex-wrap gap-2 bg-zinc-80o0 rounded-lg p-1">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
               className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                 selectedCategory === category
-                  ? "bg-blue-600 text-white"
-                  : "text-gray-300 hover:text-white hover:bg-zinc-700"
+                  ? "bg-blue-60o0 text-white"
+                  : "text-gray-30o0 hover:text-white hover:bg-zinc-70o0"
               }`}
             >
               {category}
@@ -333,7 +329,7 @@ export default function PricingPage() {
                 <ul className="space-y-2">
                   {service.features.map((feature, index) => (
                     <li key={index} className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                      <span className="w-2 h-2 bg-blue-50o0 rounded-full"></span>
                       {feature}
                     </li>
                   ))}
@@ -344,7 +340,7 @@ export default function PricingPage() {
                 <ul className="space-y-2">
                   {service.benefits.map((benefit, index) => (
                     <li key={index} className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                      <span className="w-2 h-2 bg-green-50o0 rounded-full"></span>
                       {benefit}
                     </li>
                   ))}
@@ -358,12 +354,12 @@ export default function PricingPage() {
                 <div
                   key={tierIndex}
                   className={`relative border rounded-lg p-6 ${
-                    tier.popular ? "border-blue-500 bg-blue-500/10" : "border-white/10"
+                    tier.popular ? "border-blue-50o0 bg-blue-50o0/10" : "border-white/10"
                   }`}
                 >
                   {tier.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                      <span className="bg-blue-50o0 text-white px-3 py-1 rounded-full text-xs font-medium">
                         Most Popular
                       </span>
                     </div>
@@ -381,7 +377,7 @@ export default function PricingPage() {
                   <ul className="space-y-3 mt-6">
                     {tier.features.map((feature, index) => (
                       <li key={index} className="flex items-center gap-2 text-sm">
-                        <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                        <span className="w-2 h-2 bg-green-50o0 rounded-full"></span>
                         {feature}
                       </li>
                     ))}
@@ -392,8 +388,8 @@ export default function PricingPage() {
                       href={tier.ctaLink}
                       className={`block w-full text-center py-3 px-4 rounded-lg font-medium transition-colors ${
                         tier.popular
-                          ? "bg-blue-600 hover:bg-blue-700 text-white"
-                          : "bg-zinc-700 hover:bg-zinc-600 text-white"
+                          ? "bg-blue-60o0 hover:bg-blue-70o0 text-white"
+                          : "bg-zinc-70o0 hover:bg-zinc-60o0 text-white"
                       }`}
                     >
                       {tier.cta}
@@ -407,7 +403,7 @@ export default function PricingPage() {
       </div>
 
       {/* Additional Services */}
-      <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8 text-white">
+      <div className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-lg p-8 text-white">
         <div className="text-center space-y-4">
           <h2 className="text-2xl font-bold">Need Custom Solutions?</h2>
           <p className="opacity-90">
@@ -416,7 +412,7 @@ export default function PricingPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
             <div>
               <h3 className="font-semibold">Custom Development</h3>
-              <p className="text-sm opacity-90">Tailored solutions from $5,000+</p>
+              <p className="text-sm opacity-90">Tailored solutions from $5,0o00+</p>
             </div>
             <div>
               <h3 className="font-semibold">Enterprise Solutions</h3>
@@ -429,7 +425,7 @@ export default function PricingPage() {
           </div>
           <a
             href="mailto:kleber@ziontechgroup.com"
-            className="inline-block px-6 py-3 bg-white text-purple-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            className="inline-block px-6 py-3 bg-white text-purple-60o0 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
           >
             Get Custom Quote
           </a>
@@ -443,7 +439,7 @@ export default function PricingPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <h3 className="font-semibold">Phone</h3>
-            <p className="opacity-80">+1 302 464 0950</p>
+            <p className="opacity-80">+1 30o2 464 0950</p>
           </div>
           <div>
             <h3 className="font-semibold">Email</h3>
@@ -451,7 +447,7 @@ export default function PricingPage() {
           </div>
           <div>
             <h3 className="font-semibold">Address</h3>
-            <p className="opacity-80">364 E Main St STE 1008<br />Middletown DE 19709</p>
+            <p className="opacity-80">364 E Main St STE 10o08<br  />Middletown DE 19709</p>
           </div>
         </div>
       </div>

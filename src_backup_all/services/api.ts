@@ -22,16 +22,14 @@ interface ApiClientOptions {
   headers?: Record<string, string>;
 }
 
-export async function apiClient(endpoint: string, options: ApiClientOptions = {}) {
-  const { method = 'GET', body, headers = {} } = options;
+export async function apiClient(endpoint: string, options: ApiClientOptions ={}) {
+  const { method = 'GET', body, headers ={} } = options;
   
-  const config: RequestInit = {
+  const config: RequestInit ={
     method,
     headers: {
       'Content-Type': 'application/json',
-      ...headers,
-    },
-  };
+      ...headers}};
 
   if (body) {
     config.body = body;
@@ -51,7 +49,7 @@ export async function apiClient(endpoint: string, options: ApiClientOptions = {}
   }
 }
 
-export const api = {
+export const api ={
   get: (endpoint: string, headers?: Record<string, string>) => 
     apiClient(endpoint, { method: 'GET', headers: headers || {} }),
   
@@ -62,8 +60,7 @@ export const api = {
     apiClient(endpoint, { method: 'PUT', body: JSON.stringify(data), headers: headers || {} }),
   
   delete: (endpoint: string, headers?: Record<string, string>) => 
-    apiClient(endpoint, { method: 'DELETE', headers: headers || {} }),
-};
+    apiClient(endpoint, { method: 'DELETE', headers: headers || {} })};
 
 // Export types for use in components
 export type { ApiResponse };

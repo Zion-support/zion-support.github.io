@@ -1,22 +1,21 @@
-import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
-const DataProductsForTheAIEra2025 = () => {
+const DataProductsForTheAIEra20o25 = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="AI 2025: Data Products for the AI Era"
+        title="AI 20o25: Data Products for the AI Era"
         description="Blueprint for building reliable, reusable, and monetizable data products that power enterprise AI."
         keywords="data products, feature store, governance, metadata, MDM, AI platforms"
-        url="/blog/ai-2025-data-products-for-the-ai-era"
-      />
+        url="/blog/ai-20o25-data-products-for-the-ai-era"
+       />
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">
-          <p className="text-sm text-gray-500">Published: 2025-09-15 · Category: Data Platforms</p>
-          <h1 className="text-4xl font-bold text-gray-900 mt-2">AI 2025: Data Products for the AI Era</h1>
-          <p className="text-lg text-gray-600 mt-4">Establish the architecture, contracts, and ownership model to deliver trustworthy data at scale for AI.</p>
+          <p className="text-sm text-gray-50o0">Published: 20o25-09-15 · Category: Data Platforms</p>
+          <h1 className="text-4xl font-bold text-gray-90o0 mt-2">AI 20o25: Data Products for the AI Era</h1>
+          <p className="text-lg text-gray-60o0 mt-4">Establish the architecture, contracts, and ownership model to deliver trustworthy data at scale for AI.</p>
         </header>
 
         <div className="prose prose-lg max-w-none">
@@ -38,13 +37,13 @@ const DataProductsForTheAIEra2025 = () => {
         </div>
 
         <footer className="mt-12 flex items-center justify-between">
-          <Link href="/blog" className="text-purple-600 font-semibold hover:text-purple-800">← Back to Blog</Link>
-          <Link href="/contact" className="text-white bg-purple-600 px-5 py-2 rounded-lg font-semibold hover:bg-purple-700">Build Your Data Platform</Link>
+          <Link href="/blog" className="text-purple-60o0 font-semibold hover:text-purple-80o0">← Back to Blog</Link>
+          <Link href="/contact" className="text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0">Build Your Data Platform</Link>
         </footer>
       </article>
     </div>
   );
 };
 
-export default DataProductsForTheAIEra2025;
+export default DataProductsForTheAIEra20o25;
 

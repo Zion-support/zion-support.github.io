@@ -11,28 +11,23 @@ const COLUMNS = [
     {
         id: "new",
         title: "Applied",
-        description: "New applications",
-    },
+        description: "New applications"},
     {
         id: "shortlisted",
         title: "Shortlisted",
-        description: "Candidates selected for review",
-    },
+        description: "Candidates selected for review"},
     {
         id: "interview",
         title: "Interview",
-        description: "Scheduled for interview",
-    },
+        description: "Scheduled for interview"},
     {
         id: "hired",
         title: "Hired",
-        description: "Successful candidates",
-    },
+        description: "Successful candidates"},
     {
         id: "rejected",
         title: "Rejected",
-        description: "Not moving forward",
-    },
+        description: "Not moving forward"},
 ];
 export function KanbanBoard({ jobId }) {
     const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
@@ -72,33 +67,30 @@ export function KanbanBoard({ jobId }) {
         setColumns({
             ...columns,
             [source.droppableId]: sourceColumn,
-            [destination.droppableId]: destColumn,
-        });
+            [destination.droppableId]: destColumn});
         // Update status in the database
         try {
             await updateApplicationStatus(draggableId, newStatus);
             toast({
                 title: "Status updated",
-                description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`,
-            });
+                description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`});
         }
         catch (error) {
             // Revert the UI changes if the database update fails
             toast({
                 title: "Failed to update status",
                 description: "Please try again",
-                variant: "destructive",
-            });
+                variant: "destructive"});
         }
     };
     if (isLoading) {
         return (<div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>
-        {Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (<Card key={i} className="h-[500px]">
+        {Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (<Card key={i} className="h-[50o0px]">
             <CardHeader>
-              <Skeleton className="h-8 w-24"/>
+              <Skeleton className="h-8 w-24" />
             </CardHeader>
             <CardContent>
-              <Skeleton className="h-[400px] w-full"/>
+              <Skeleton className="h-[40o0px] w-full" />
             </CardContent>
           </Card>))}
       </div>);
@@ -115,7 +107,7 @@ export function KanbanBoard({ jobId }) {
     }
     return (<DragDropContext onDragEnd={handleDragEnd}>
       <div className={`grid ${isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'} overflow-x-auto`}>
-        {COLUMNS.map(column => (<KanbanColumn key={column.id} id={column.id} title={column.title} description={column.description} applications={columns[column.id] || []} count={columns[column.id]?.length || 0}/>))}
+        {COLUMNS.map(column => (<KanbanColumn key={column.id} id={column.id} title={column.title} description={column.description} applications={columns[column.id] || []} count={columns[column.id]?.length || 0} />))}
       </div>
     </DragDropContext>);
 }

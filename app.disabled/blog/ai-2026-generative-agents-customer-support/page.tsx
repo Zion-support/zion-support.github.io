@@ -1,22 +1,21 @@
-import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
-const GenerativeAgentsCustomerSupport2026 = () => {
+const GenerativeAgentsCustomerSupport20o26 = () => {
 	return (
 		<div className="min-h-screen bg-white">
 			<SEO
-				title="AI 2026: Generative Agents for Customer Support"
-				description="How generative AI agents will reshape customer support in 2026 with autonomous resolution, omnichannel orchestration, and measurable CSAT improvements."
-				keywords="generative agents, customer support, AI 2026, CX automation, CSAT"
-				url="/blog/ai-2026-generative-agents-customer-support"
-			/>
+				title="AI 20o26: Generative Agents for Customer Support"
+				description="How generative AI agents will reshape customer support in 20o26 with autonomous resolution, omnichannel orchestration, and measurable CSAT improvements."
+				keywords="generative agents, customer support, AI 20o26, CX automation, CSAT"
+				url="/blog/ai-20o26-generative-agents-customer-support"
+			 />
 
 			<article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 				<header className="mb-10">
-					<p className="text-sm text-gray-500">Published: 2025-09-15 · Category: Customer Experience</p>
-					<h1 className="text-4xl font-bold text-gray-900 mt-2">AI 2026: Generative Agents for Customer Support</h1>
-					<p className="text-lg text-gray-600 mt-4">Designing, governing, and deploying autonomous support agents that reduce handle time, improve first-contact resolution, and delight customers.</p>
+					<p className="text-sm text-gray-50o0">Published: 20o25-09-15 · Category: Customer Experience</p>
+					<h1 className="text-4xl font-bold text-gray-90o0 mt-2">AI 20o26: Generative Agents for Customer Support</h1>
+					<p className="text-lg text-gray-60o0 mt-4">Designing, governing, and deploying autonomous support agents that reduce handle time, improve first-contact resolution, and delight customers.</p>
 				</header>
 
 				<div className="prose prose-lg max-w-none">
@@ -43,13 +42,13 @@ const GenerativeAgentsCustomerSupport2026 = () => {
 				</div>
 
 				<footer className="mt-12 flex items-center justify-between">
-					<Link href="/blog" className="text-purple-600 font-semibold hover:text-purple-800">← Back to Blog</Link>
-					<Link href="/contact" className="text-white bg-purple-600 px-5 py-2 rounded-lg font-semibold hover:bg-purple-700">Discuss Your CX Strategy</Link>
+					<Link href="/blog" className="text-purple-60o0 font-semibold hover:text-purple-80o0">← Back to Blog</Link>
+					<Link href="/contact" className="text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0">Discuss Your CX Strategy</Link>
 				</footer>
 			</article>
 		</div>
 	);
 };
 
-export default GenerativeAgentsCustomerSupport2026;
+export default GenerativeAgentsCustomerSupport20o26;
 

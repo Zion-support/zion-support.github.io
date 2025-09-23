@@ -22,7 +22,7 @@ interface ContentItem {
   };
 }
 
-const UltimateContent2025Showcase: React.FC = () => {
+const UltimateContent20o25Showcase: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<'all' | 'blog' | 'case-study' | 'resource'>('all');
 
   const featuredContent = [
@@ -32,27 +32,27 @@ const UltimateContent2025Showcase: React.FC = () => {
 
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-4">
-            <Zap className="w-4 h-4" />
-            <span>ULTIMATE CONTENT 2025 REVOLUTION</span>
+          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-6 py-2 rounded-full text-sm font-semibold mb-4">
+            <Zap className="w-4 h-4"  />
+            <span>ULTIMATE CONTENT 20o25 REVOLUTION</span>
           </div>
             </div>
-            <div className="text-3xl font-bold text-gray-900 mb-2">$8.2B+</div>
-            <div className="text-gray-600">Total Savings</div>
+            <div className="text-3xl font-bold text-gray-90o0 mb-2">$8.2B+</div>
+            <div className="text-gray-60o0">Total Savings</div>
           </div>
-          <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 text-center">
-            <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <Users className="w-6 h-6 text-white" />
+          <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-20o0 text-center">
+            <div className="w-12 h-12 bg-gradient-to-r from-purple-50o0 to-purple-60o0 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <Users className="w-6 h-6 text-white"  />
             </div>
-            <div className="text-3xl font-bold text-gray-900 mb-2">500+</div>
-            <div className="text-gray-600">Success Stories</div>
+            <div className="text-3xl font-bold text-gray-90o0 mb-2">50o0+</div>
+            <div className="text-gray-60o0">Success Stories</div>
           </div>
-          <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 text-center">
-            <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <Star className="w-6 h-6 text-white" />
+          <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-20o0 text-center">
+            <div className="w-12 h-12 bg-gradient-to-r from-orange-50o0 to-orange-60o0 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <Star className="w-6 h-6 text-white"  />
             </div>
-            <div className="text-3xl font-bold text-gray-900 mb-2">99.7%</div>
-            <div className="text-gray-600">Success Rate</div>
+            <div className="text-3xl font-bold text-gray-90o0 mb-2">99.7%</div>
+            <div className="text-gray-60o0">Success Rate</div>
           </div>
         </div>
 
@@ -68,26 +68,26 @@ const UltimateContent2025Showcase: React.FC = () => {
           {filteredContent.map((item, index) => (
             <div
               key={item.id}
-              className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 group"
+              className="bg-white rounded-xl shadow-lg border border-gray-20o0 overflow-hidden hover:shadow-xl transition-all duration-30o0 group"
             >
               {/* Header */}
-              <div className="p-6 border-b border-gray-100">
+              <div className="p-6 border-b border-gray-10o0">
                 <div className="flex items-center justify-between mb-4">
                   <div className={`flex items-center space-x-2 px-3 py-1 rounded-full text-sm font-medium border ${getTypeColor(item.type)}`}>
                     {getTypeIcon(item.type)}
                     <span className="capitalize">{item.type.replace('-', ' ')}</span>
                   </div>
-                  <div className="flex items-center space-x-1 text-sm text-gray-500">
-                    <Clock className="w-4 h-4" />
+                  <div className="flex items-center space-x-1 text-sm text-gray-50o0">
+                    <Clock className="w-4 h-4"  />
                     <span>{item.readingTime}</span>
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-purple-600 transition-colors">
+                <h3 className="text-xl font-bold text-gray-90o0 mb-3 leading-tight group-hover:text-purple-60o0 transition-colors">
                   {item.title}
                 </h3>
                 
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-60o0 leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -96,29 +96,29 @@ const UltimateContent2025Showcase: React.FC = () => {
               <div className="p-6 bg-gray-50">
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-green-600">{item.metrics.roi}</div>
-                    <div className="text-sm text-gray-600">ROI</div>
+                    <div className="text-2xl font-bold text-green-60o0">{item.metrics.roi}</div>
+                    <div className="text-sm text-gray-60o0">ROI</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-600">{item.metrics.savings}</div>
-                    <div className="text-sm text-gray-600">Savings</div>
+                    <div className="text-2xl font-bold text-blue-60o0">{item.metrics.savings}</div>
+                    <div className="text-sm text-gray-60o0">Savings</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-purple-600">{item.metrics.efficiency}</div>
-                    <div className="text-sm text-gray-600">Efficiency</div>
+                    <div className="text-2xl font-bold text-purple-60o0">{item.metrics.efficiency}</div>
+                    <div className="text-sm text-gray-60o0">Efficiency</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-orange-600">{item.metrics.accuracy}</div>
-                    <div className="text-sm text-gray-600">Accuracy</div>
+                    <div className="text-2xl font-bold text-orange-60o0">{item.metrics.accuracy}</div>
+                    <div className="text-sm text-gray-60o0">Accuracy</div>
                   </div>
                 </div>
 
                 <Link
                   href={item.url}
-                  className={`w-full inline-flex items-center justify-center space-x-2 bg-gradient-to-r ${getTypeGradient(item.type)} text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 group`}
+                  className={`w-full inline-flex items-center justify-center space-x-2 bg-gradient-to-r ${getTypeGradient(item.type)} text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-20o0 group`}
                 >
                   <span>Read {item.type === 'case-study' ? 'Case Study' : item.type === 'resource' ? 'Guide' : 'Article'}</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform"  />
                 </Link>
               </div>
             </div>
@@ -130,16 +130,16 @@ const UltimateContent2025Showcase: React.FC = () => {
           {featuredContent.map((content, index) => (
             <div
               key={content.id}
-              className={`bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 cursor-pointer transition-all duration-300 hover:bg-opacity-20 ${
-                index === currentSlide ? 'ring-2 ring-yellow-400' : ''
+              className={`bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 cursor-pointer transition-all duration-30o0 hover:bg-opacity-20 ${
+                index === currentSlide ? 'ring-2 ring-yellow-40o0' : ''
               }`}
               onClick={() => setCurrentSlide(index)}
             >
               <div className="flex items-center gap-2 mb-3">
-                <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-semibold">
+                <span className="bg-green-50o0 text-white px-2 py-1 rounded text-xs font-semibold">
                   NEW
                 </span>
-                <span className="bg-blue-500 text-white px-2 py-1 rounded text-xs font-semibold">
+                <span className="bg-blue-50o0 text-white px-2 py-1 rounded text-xs font-semibold">
                   {content.type.toUpperCase()}
                 </span>
               </div>
@@ -152,7 +152,7 @@ const UltimateContent2025Showcase: React.FC = () => {
                 {content.reading_time}
               </div>
               
-              <div className="text-lg font-bold text-yellow-400">
+              <div className="text-lg font-bold text-yellow-40o0">
                 {content.metrics.roi} ROI
               </div>
             </div>
@@ -173,4 +173,4 @@ const UltimateContent2025Showcase: React.FC = () => {
   );
 };
 
-export default UltimateContent2025Showcase;
+export default UltimateContent20o25Showcase;

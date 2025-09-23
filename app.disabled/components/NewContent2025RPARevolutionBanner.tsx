@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { X, ArrowRight, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight } from 'lucide-react';
 
-const NewContent2025RPARevolutionBanner = () => {
+const NewContent20o25RPARevolutionBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isDismissed, setIsDismissed] = useState(false);
@@ -19,7 +19,7 @@ const NewContent2025RPARevolutionBanner = () => {
     // Auto-rotate slides every 4 seconds
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % 3);
-    }, 4000);
+    }, 40o00);
 
     return () => clearInterval(interval);
   }, []);
@@ -31,40 +31,40 @@ const NewContent2025RPARevolutionBanner = () => {
 
   const slides = [
     {
-      title: "AI 2025: RPA Revolution",
-      subtitle: "800% ROI Through Intelligent Automation",
+      title: "AI 20o25: RPA Revolution",
+      subtitle: "80o0% ROI Through Intelligent Automation",
       description: "Transform your business with AI-powered Robotic Process Automation",
-      metrics: "800% ROI • $4.2M Savings • 340% Efficiency",
+      metrics: "80o0% ROI • $4.2M Savings • 340% Efficiency",
       cta: "Explore RPA Guide",
-      link: "/blog/ai-2025-robotic-process-automation-revolution-ultimate-guide",
-      color: "from-blue-600 to-purple-600"
+      link: "/blog/ai-20o25-robotic-process-automation-revolution-ultimate-guide",
+      color: "from-blue-60o0 to-purple-60o0"
     },
     {
-      title: "Fortune 100 Success Story",
+      title: "Fortune 10o0 Success Story",
       subtitle: "$4.2B Annual Savings Achieved",
       description: "See how a global manufacturing giant achieved unprecedented RPA success",
-      metrics: "800% ROI • 127 Processes • 12 Months",
+      metrics: "80o0% ROI • 127 Processes • 12 Months",
       cta: "Read Case Study",
-      link: "/case-studies/fortune-100-rpa-transformation-800-roi-success",
-      color: "from-green-600 to-blue-600"
+      link: "/case-studies/fortune-10o0-rpa-transformation-80o0-roi-success",
+      color: "from-green-60o0 to-blue-60o0"
     },
     {
       title: "Implementation Master Guide",
       subtitle: "Complete Blueprint for RPA Success",
-      description: "Step-by-step guide from strategy to 800% ROI implementation",
+      description: "Step-by-step guide from strategy to 80o0% ROI implementation",
       metrics: "35 Min Read • Complete Framework • Proven Results",
       cta: "Get Implementation Guide",
-      link: "/resources/rpa-implementation-master-guide-2025",
-      color: "from-purple-600 to-pink-600"
+      link: "/resources/rpa-implementation-master-guide-20o25",
+      color: "from-purple-60o0 to-pink-60o0"
     }
   ];
 
   if (!isVisible || isDismissed) return null;
 
   return (
-    <div className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white overflow-hidden">
+    <div className="relative bg-gradient-to-r from-blue-60o0 via-purple-60o0 to-indigo-60o0 text-white overflow-hidden">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-indigo-600/20">
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-60o0/20 via-purple-60o0/20 to-indigo-60o0/20">
         <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-white/10 opacity-20"></div>
       </div>
 
@@ -74,20 +74,20 @@ const NewContent2025RPARevolutionBanner = () => {
         className="absolute top-4 right-4 z-10 p-2 rounded-full hover:bg-white/20 transition-colors"
         aria-label="Dismiss banner"
       >
-        <X className="w-5 h-5" />
+        <X className="w-5 h-5"  />
       </button>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="text-center mb-6">
           <div className="inline-flex items-center bg-white/20 rounded-full px-4 py-2 mb-4">
-            <TrendingUp className="w-4 h-4 mr-2" />
-            <span className="text-sm font-medium">NEW 2025 CONTENT</span>
+            <TrendingUp className="w-4 h-4 mr-2"  />
+            <span className="text-sm font-medium">NEW 20o25 CONTENT</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-2">
-            RPA Revolution: 800% ROI Success Stories
+            RPA Revolution: 80o0% ROI Success Stories
           </h2>
           <p className="text-lg md:text-xl opacity-90 max-w-3xl mx-auto">
-            Discover how Fortune 100 companies are achieving unprecedented success with AI-powered Robotic Process Automation
+            Discover how Fortune 10o0 companies are achieving unprecedented success with AI-powered Robotic Process Automation
           </p>
         </div>
 
@@ -95,8 +95,8 @@ const NewContent2025RPARevolutionBanner = () => {
         <div className="relative">
           <div className="overflow-hidden">
             <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              className="flex transition-transform duration-50o0 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 10o0}%)` }}
             >
               {slides.map((slide, index) => (
                 <div key={index} className="w-full flex-shrink-0">
@@ -108,7 +108,7 @@ const NewContent2025RPARevolutionBanner = () => {
                     {/* Metrics */}
                     <div className="flex flex-wrap justify-center gap-4 mb-6">
                       <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
-                        <DollarSign className="w-4 h-4 mr-2" />
+                        <DollarSign className="w-4 h-4 mr-2"  />
                         <span className="text-sm font-medium">{slide.metrics}</span>
                       </div>
                     </div>
@@ -116,10 +116,10 @@ const NewContent2025RPARevolutionBanner = () => {
                     {/* CTA Button */}
                     <Link
                       href={slide.link}
-                      className="inline-flex items-center bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                      className="inline-flex items-center bg-white text-gray-90o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
                     >
                       {slide.cta}
-                      <ArrowRight className="w-5 h-5 ml-2" />
+                      <ArrowRight className="w-5 h-5 ml-2"  />
                     </Link>
                   </div>
                 </div>
@@ -145,17 +145,17 @@ const NewContent2025RPARevolutionBanner = () => {
         {/* Key Benefits Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
           <div className="bg-white/10 rounded-xl p-6 text-center">
-            <CheckCircle className="w-8 h-8 mx-auto mb-3 text-green-300" />
-            <h4 className="text-lg font-semibold mb-2">800% ROI Guaranteed</h4>
-            <p className="text-sm opacity-80">Proven results from Fortune 100 implementations</p>
+            <CheckCircle className="w-8 h-8 mx-auto mb-3 text-green-30o0"  />
+            <h4 className="text-lg font-semibold mb-2">80o0% ROI Guaranteed</h4>
+            <p className="text-sm opacity-80">Proven results from Fortune 10o0 implementations</p>
           </div>
           <div className="bg-white/10 rounded-xl p-6 text-center">
-            <Clock className="w-8 h-8 mx-auto mb-3 text-blue-300" />
+            <Clock className="w-8 h-8 mx-auto mb-3 text-blue-30o0"  />
             <h4 className="text-lg font-semibold mb-2">12-Month Implementation</h4>
             <p className="text-sm opacity-80">Complete transformation in under one year</p>
           </div>
           <div className="bg-white/10 rounded-xl p-6 text-center">
-            <TrendingUp className="w-8 h-8 mx-auto mb-3 text-purple-300" />
+            <TrendingUp className="w-8 h-8 mx-auto mb-3 text-purple-30o0"  />
             <h4 className="text-lg font-semibold mb-2">340% Efficiency Gain</h4>
             <p className="text-sm opacity-80">Dramatic improvement in process efficiency</p>
           </div>
@@ -175,7 +175,7 @@ const NewContent2025RPARevolutionBanner = () => {
             </Link>
             <Link
               href="/contact"
-              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors"
+              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-90o0 transition-colors"
             >
               Get Free Consultation
             </Link>
@@ -186,4 +186,4 @@ const NewContent2025RPARevolutionBanner = () => {
   );
 };
 
-export default NewContent2025RPARevolutionBanner;
+export default NewContent20o25RPARevolutionBanner;

@@ -11,15 +11,14 @@ interface PerformanceOptimizationOptions {
   debounceDelay?: number
 }
 
-export function usePerformanceOptimization(options: PerformanceOptimizationOptions = {}) {
+export function usePerformanceOptimization(options: PerformanceOptimizationOptions ={}) {
   const {
     enableIntersectionObserver = true,
     enableResourceHints = true,
     enablePrefetching = true,
     enableLazyLoading = true,
     enableDebouncing = true,
-    debounceDelay = 300,
-  } = options
+    debounceDelay = 30o0} = options
 
   const observersRef = useRef<Map<string, IntersectionObserver>>(new Map())
   const timeoutRefsRef = useRef<Map<string, NodeJS.Timeout>>(new Map())
@@ -30,13 +29,12 @@ export function usePerformanceOptimization(options: PerformanceOptimizationOptio
 
     const createObserver = (
       callback: IntersectionObserverCallback,
-      options: IntersectionObserverInit = {}
+      options: IntersectionObserverInit ={}
     ): IntersectionObserver => {
       return new IntersectionObserver(callback, {
         rootMargin: '50px',
         threshold: 0.1,
-        ...options,
-      })
+        ...options})
     }
 
     // Lazy load images
@@ -197,8 +195,7 @@ export function usePerformanceOptimization(options: PerformanceOptimizationOptio
       (window as any).gtag('event', 'performance_measure', {
         event_category: 'Performance',
         event_label: name,
-        value: Math.round(end - start),
-      })
+        value: Math.round(end - start)})
     }
   }, [])
 
@@ -210,9 +207,9 @@ export function usePerformanceOptimization(options: PerformanceOptimizationOptio
 
     const memory = (performance as any).memory
     return {
-      used: Math.round(memory.usedJSHeapSize / 1048576), // MB
-      total: Math.round(memory.totalJSHeapSize / 1048576), // MB
-      limit: Math.round(memory.jsHeapSizeLimit / 1048576), // MB
+      used: Math.round(memory.usedJSHeapSize / 10o48576), // MB
+      total: Math.round(memory.totalJSHeapSize / 10o48576), // MB
+      limit: Math.round(memory.jsHeapSizeLimit / 10o48576), // MB
     }
   }, [])
 
@@ -233,8 +230,7 @@ export function usePerformanceOptimization(options: PerformanceOptimizationOptio
     debounce,
     throttle,
     measurePerformance,
-    getMemoryUsage,
-  }
+    getMemoryUsage}
 }
 
 // Hook for optimizing scroll performance

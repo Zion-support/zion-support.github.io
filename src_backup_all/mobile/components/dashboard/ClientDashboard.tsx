@@ -1,5 +1,4 @@
 
-import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -11,7 +10,7 @@ export function ClientDashboard() {
     <div className="space-y-6 px-4 pb-24">
       <section className="mt-4">
         <Button className="w-full py-6" size="lg">
-          <Plus className="mr-2 h-5 w-5" /> Post a New Job
+          <Plus className="mr-2 h-5 w-5"  /> Post a New Job
         </Button>
       </section>
       
@@ -20,7 +19,7 @@ export function ClientDashboard() {
           <h2 className="text-lg font-medium">Active Projects</h2>
           <Link href="/mobile/projects">
             <Button variant="ghost" size="sm" className="h-8 gap-1">
-              View all <ChevronRight className="h-4 w-4" />
+              View all <ChevronRight className="h-4 w-4"  />
             </Button>
           </Link>
         </div>
@@ -49,10 +48,10 @@ export function ClientDashboard() {
               <div className="flex justify-between items-center">
                 <div className="flex -space-x-2">
                   <div className="w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center">
-                    <UserCheck className="h-4 w-4" />
+                    <UserCheck className="h-4 w-4"  />
                   </div>
                   <div className="w-7 h-7 rounded-full bg-secondary/20 border-2 border-background flex items-center justify-center">
-                    <UserCheck className="h-4 w-4" />
+                    <UserCheck className="h-4 w-4"  />
                   </div>
                 </div>
                 <Button size="sm" variant="outline">View Details</Button>
@@ -67,7 +66,7 @@ export function ClientDashboard() {
           <h2 className="text-lg font-medium">Suggested Talents</h2>
           <Link href="/mobile/marketplace">
             <Button variant="ghost" size="sm" className="h-8 gap-1">
-              View all <ChevronRight className="h-4 w-4" />
+              View all <ChevronRight className="h-4 w-4"  />
             </Button>
           </Link>
         </div>
@@ -78,7 +77,7 @@ export function ClientDashboard() {
               <div className="flex justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <UserCheck className="h-6 w-6 text-primary" />
+                    <UserCheck className="h-6 w-6 text-primary"  />
                   </div>
                   <div>
                     <h3 className="font-medium">Sarah Johnson</h3>
@@ -106,7 +105,7 @@ export function ClientDashboard() {
               <div className="flex justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <UserCheck className="h-6 w-6 text-primary" />
+                    <UserCheck className="h-6 w-6 text-primary"  />
                   </div>
                   <div>
                     <h3 className="font-medium">Michael Chen</h3>
@@ -140,7 +139,7 @@ export function ClientDashboard() {
           <CardContent className="p-4 space-y-4">
             <div className="flex gap-3 items-start">
               <div className="bg-primary/10 p-2 rounded-full">
-                <Bell className="h-5 w-5 text-primary" />
+                <Bell className="h-5 w-5 text-primary"  />
               </div>
               <div>
                 <p className="text-sm">
@@ -152,7 +151,7 @@ export function ClientDashboard() {
             
             <div className="flex gap-3 items-start">
               <div className="bg-primary/10 p-2 rounded-full">
-                <FileText className="h-5 w-5 text-primary" />
+                <FileText className="h-5 w-5 text-primary"  />
               </div>
               <div>
                 <p className="text-sm">

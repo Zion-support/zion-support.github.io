@@ -5,36 +5,36 @@ import EnhancedLoadingSpinner from '../components/EnhancedLoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 
 // Lazy load all components for better performance
-const AI2026RevolutionaryBreakthroughUltimatePromotionBanner = lazy(() => 
-  import('../components/AI2026RevolutionaryBreakthroughUltimatePromotionBanner')
+const AI20o26RevolutionaryBreakthroughUltimatePromotionBanner = lazy(() => 
+  import('../components/AI20o26RevolutionaryBreakthroughUltimatePromotionBanner')
 );
 
-const AI2026GlobalTransformation800ROISuccessBanner = lazy(() => 
-  import('../components/AI2026GlobalTransformation800ROISuccessBanner')
+const AI20o26GlobalTransformation80o0ROISuccessBanner = lazy(() => 
+  import('../components/AI20o26GlobalTransformation80o0ROISuccessBanner')
 );
 
-const AI2026ImplementationFrameworkUltimatePromotionBanner = lazy(() => 
-  import('../components/AI2026ImplementationFrameworkUltimatePromotionBanner')
+const AI20o26ImplementationFrameworkUltimatePromotionBanner = lazy(() => 
+  import('../components/AI20o26ImplementationFrameworkUltimatePromotionBanner')
 );
 
-const RevolutionaryContent2026Banner = lazy(() => 
-  import('../components/RevolutionaryContent2026Banner')
+const RevolutionaryContent20o26Banner = lazy(() => 
+  import('../components/RevolutionaryContent20o26Banner')
 );
 
-const FeaturedContentShowcase2026 = lazy(() => 
-  import('../components/FeaturedContentShowcase2026')
+const FeaturedContentShowcase20o26 = lazy(() => 
+  import('../components/FeaturedContentShowcase20o26')
 );
 
-const NewContent2025UltimateShowcaseBanner = lazy(() => 
-  import('../components/NewContent2025UltimateShowcaseBanner')
+const NewContent20o25UltimateShowcaseBanner = lazy(() => 
+  import('../components/NewContent20o25UltimateShowcaseBanner')
 );
 
-const RevolutionaryContent2025Showcase = lazy(() => 
-  import('../components/RevolutionaryContent2025Showcase')
+const RevolutionaryContent20o25Showcase = lazy(() => 
+  import('../components/RevolutionaryContent20o25Showcase')
 );
 
-const UltimateContentDiscoveryWidget2025 = lazy(() => 
-  import('../components/UltimateContentDiscoveryWidget2025')
+const UltimateContentDiscoveryWidget20o25 = lazy(() => 
+  import('../components/UltimateContentDiscoveryWidget20o25')
 );
 
 const InteractiveAICalculator = lazy(() => 
@@ -60,7 +60,7 @@ const TechnologyStack = lazy(() =>
 // Component wrapper for lazy loading with error boundary
 const LazyComponentWrapper: React.FC<{ children: React.ReactNode; fallback?: React.ReactNode }> = ({ 
   children, 
-  fallback = <EnhancedLoadingSpinner variant="skeleton" message="Loading component..." /> 
+  fallback = <EnhancedLoadingSpinner variant="skeleton" message="Loading component..."  /> 
 }) => (
   <ErrorBoundary>
     <Suspense fallback={fallback}>
@@ -73,92 +73,92 @@ export default function EnhancedHomePage() {
   return (
     <ErrorBoundary>
       <EnhancedSEO
-        title="AI 2026 Revolutionary Breakthrough Technologies | Zion Tech Group"
-        description="Discover cutting-edge AI technologies including Quantum-Neural Fusion AI, Synthetic Intelligence, and Consciousness-Level AI systems. Get 10,000% ROI with our AI 2026 Implementation Master Framework."
-        keywords="AI 2026, artificial intelligence, quantum computing, neural networks, synthetic intelligence, consciousness AI, business automation, ROI calculator, AI implementation, breakthrough technologies"
+        title="AI 20o26 Revolutionary Breakthrough Technologies | Zion Tech Group"
+        description="Discover cutting-edge AI technologies including Quantum-Neural Fusion AI, Synthetic Intelligence, and Consciousness-Level AI systems. Get 10,0o00% ROI with our AI 20o26 Implementation Master Framework."
+        keywords="AI 20o26, artificial intelligence, quantum computing, neural networks, synthetic intelligence, consciousness AI, business automation, ROI calculator, AI implementation, breakthrough technologies"
         type="website"
         tags={["AI", "Artificial Intelligence", "Quantum Computing", "Business Automation", "ROI Calculator"]}
-      />
+       />
       
-      <div className="min-h-screen bg-white dark:bg-gray-900">
+      <div className="min-h-screen bg-white dark:bg-gray-90o0">
         {/* Performance Monitor - only show in development */}
         {process.env.NODE_ENV === 'development' && (
-          <PerformanceMonitor showMetrics={true} />
+          <PerformanceMonitor showMetrics={true}  />
         )}
 
-        {/* AI 2026 Revolutionary Breakthrough Ultimate Promotion Banner */}
+        {/* AI 20o26 Revolutionary Breakthrough Ultimate Promotion Banner */}
         <LazyComponentWrapper>
-          <AI2026RevolutionaryBreakthroughUltimatePromotionBanner />
+          <AI20o26RevolutionaryBreakthroughUltimatePromotionBanner  />
         </LazyComponentWrapper>
 
-        {/* AI 2026 Global Transformation 800% ROI Success Banner */}
+        {/* AI 20o26 Global Transformation 80o0% ROI Success Banner */}
         <LazyComponentWrapper>
-          <AI2026GlobalTransformation800ROISuccessBanner />
+          <AI20o26GlobalTransformation80o0ROISuccessBanner  />
         </LazyComponentWrapper>
 
-        {/* AI 2026 Implementation Framework Ultimate Promotion Banner */}
+        {/* AI 20o26 Implementation Framework Ultimate Promotion Banner */}
         <LazyComponentWrapper>
-          <AI2026ImplementationFrameworkUltimatePromotionBanner />
+          <AI20o26ImplementationFrameworkUltimatePromotionBanner  />
         </LazyComponentWrapper>
 
         {/* Interactive AI ROI Calculator */}
-        <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900">
-          <LazyComponentWrapper fallback={<EnhancedLoadingSpinner variant="dots" message="Loading AI Calculator..." size="lg" />}>
-            <InteractiveAICalculator />
+        <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-10o0 dark:from-gray-80o0 dark:to-gray-90o0">
+          <LazyComponentWrapper fallback={<EnhancedLoadingSpinner variant="dots" message="Loading AI Calculator..." size="lg"  />}>
+            <InteractiveAICalculator  />
           </LazyComponentWrapper>
         </section>
 
-        {/* Revolutionary Content 2026 Banner */}
+        {/* Revolutionary Content 20o26 Banner */}
         <LazyComponentWrapper>
-          <RevolutionaryContent2026Banner />
+          <RevolutionaryContent20o26Banner  />
         </LazyComponentWrapper>
 
-        {/* Featured Content Showcase 2026 */}
+        {/* Featured Content Showcase 20o26 */}
         <LazyComponentWrapper>
-          <FeaturedContentShowcase2026 />
+          <FeaturedContentShowcase20o26  />
         </LazyComponentWrapper>
 
-        {/* New Content 2025 Ultimate Showcase Banner */}
+        {/* New Content 20o25 Ultimate Showcase Banner */}
         <LazyComponentWrapper>
-          <NewContent2025UltimateShowcaseBanner />
+          <NewContent20o25UltimateShowcaseBanner  />
         </LazyComponentWrapper>
 
-        {/* Revolutionary Content 2025 Showcase */}
+        {/* Revolutionary Content 20o25 Showcase */}
         <LazyComponentWrapper>
-          <RevolutionaryContent2025Showcase />
+          <RevolutionaryContent20o25Showcase  />
         </LazyComponentWrapper>
 
-        {/* Ultimate Content Discovery Widget 2025 */}
+        {/* Ultimate Content Discovery Widget 20o25 */}
         <LazyComponentWrapper>
-          <UltimateContentDiscoveryWidget2025 />
+          <UltimateContentDiscoveryWidget20o25  />
         </LazyComponentWrapper>
 
         {/* Additional Performance Components - Lazy loaded */}
-        <section className="py-16 bg-gray-50 dark:bg-gray-800">
+        <section className="py-16 bg-gray-50 dark:bg-gray-80o0">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
+            <h2 className="text-3xl font-bold text-center text-gray-90o0 dark:text-white mb-12">
               Performance & Analytics
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <LazyComponentWrapper fallback={<EnhancedLoadingSpinner variant="pulse" message="Loading ROI Calculator..." />}>
-                <ROICalculator />
+              <LazyComponentWrapper fallback={<EnhancedLoadingSpinner variant="pulse" message="Loading ROI Calculator..."  />}>
+                <ROICalculator  />
               </LazyComponentWrapper>
               
-              <LazyComponentWrapper fallback={<EnhancedLoadingSpinner variant="pulse" message="Loading Performance Metrics..." />}>
-                <PerformanceMetrics />
+              <LazyComponentWrapper fallback={<EnhancedLoadingSpinner variant="pulse" message="Loading Performance Metrics..."  />}>
+                <PerformanceMetrics  />
               </LazyComponentWrapper>
             </div>
           </div>
         </section>
 
         {/* Technology Stack - Lazy loaded */}
-        <LazyComponentWrapper fallback={<EnhancedLoadingSpinner variant="skeleton" message="Loading Technology Stack..." />}>
-          <TechnologyStack />
+        <LazyComponentWrapper fallback={<EnhancedLoadingSpinner variant="skeleton" message="Loading Technology Stack..."  />}>
+          <TechnologyStack  />
         </LazyComponentWrapper>
 
         {/* Structured Data - Lazy loaded */}
         <LazyComponentWrapper>
-          <StructuredData />
+          <StructuredData  />
         </LazyComponentWrapper>
       </div>
     </ErrorBoundary>

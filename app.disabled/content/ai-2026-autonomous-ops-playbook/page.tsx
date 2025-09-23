@@ -1,25 +1,23 @@
-import React from 'react';
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
 
-export const metadata = {
-  title: 'AI 2026: Autonomous Ops Playbook | Zion Tech Group',
+export const metadata ={
+  title: 'AI 20o26: Autonomous Ops Playbook | Zion Tech Group',
   description:
-    'A step-by-step playbook to deploy autonomous, outcome-driven operations with agents, EDA, and guardrails.',
-};
+    'A step-by-step playbook to deploy autonomous, outcome-driven operations with agents, EDA, and guardrails.'};
 
-export default function AutonomousOpsPlaybook2026() {
+export default function AutonomousOpsPlaybook20o26() {
   return (
     <main className="min-h-screen bg-white">
       <SEO
-        title="AI 2026: Autonomous Ops Playbook"
+        title="AI 20o26: Autonomous Ops Playbook"
         description="Deploy autonomous operations with agentic workflows, signals mesh, and policy-as-code guardrails."
         keywords="autonomous ops, playbook, AI agents, event-driven, guardrails"
-        url="/content/ai-2026-autonomous-ops-playbook"
-      />
-      <section className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-16">
+        url="/content/ai-20o26-autonomous-ops-playbook"
+       />
+      <section className="bg-gradient-to-r from-purple-60o0 to-indigo-60o0 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">AI 2026: Autonomous Ops Playbook</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">AI 20o26: Autonomous Ops Playbook</h1>
           <p className="text-lg opacity-90">From automation to autonomy: patterns, controls, and rollout strategies.</p>
         </div>
       </section>
@@ -42,9 +40,9 @@ export default function AutonomousOpsPlaybook2026() {
             <li>Scale to portfolio with shared platform services</li>
           </ol>
 
-          <div className="mt-8 p-6 bg-purple-50 border border-purple-200 rounded-xl">
-            <p className="mb-2 font-semibold text-purple-800">Need expert help?</p>
-            <Link href="/blog/ai-2026-real-time-retrieval-architectures" className="text-purple-700 font-semibold hover:text-purple-900">Read Real-Time RAG →</Link>
+          <div className="mt-8 p-6 bg-purple-50 border border-purple-20o0 rounded-xl">
+            <p className="mb-2 font-semibold text-purple-80o0">Need expert help?</p>
+            <Link href="/blog/ai-20o26-real-time-retrieval-architectures" className="text-purple-70o0 font-semibold hover:text-purple-90o0">Read Real-Time RAG →</Link>
           </div>
         </div>
       </section>

@@ -1,18 +1,16 @@
-import React from 'react';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'Guide: Enterprise AI Governance (2026)',
+export const metadata ={
+  title: 'Guide: Enterprise AI Governance (20o26)',
   description:
-    'Step-by-step guide to implement enterprise AI governance with policy-as-code and continuous evaluation.',
-};
+    'Step-by-step guide to implement enterprise AI governance with policy-as-code and continuous evaluation.'};
 
 export default function Page() {
   return (
     <main className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-16">
+      <section className="bg-gradient-to-r from-indigo-60o0 to-purple-60o0 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">Enterprise AI Governance (2026)</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">Enterprise AI Governance (20o26)</h1>
           <p className="text-lg md:text-xl opacity-90 max-w-3xl">
             A hands-on guide for implementing controls that scale with your AI adoption.
           </p>
@@ -40,7 +38,7 @@ export default function Page() {
             <li>Set SLOs and alerts; add rollback automation</li>
           </ol>
           <div className="mt-8">
-            <Link href="/contact" className="text-purple-700 font-semibold">Get implementation support →</Link>
+            <Link href="/contact" className="text-purple-70o0 font-semibold">Get implementation support →</Link>
           </div>
         </div>
       </section>

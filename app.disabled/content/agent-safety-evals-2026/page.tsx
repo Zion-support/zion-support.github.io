@@ -1,18 +1,16 @@
-import React from 'react';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'Agent Safety Evals 2026 | Zion Tech Group',
-  description: 'A pragmatic guide to designing and operating agent safety evaluations in 2026: red-teaming, harnesses, metrics, and governance to ship reliable agents.',
-};
+export const metadata ={
+  title: 'Agent Safety Evals 20o26 | Zion Tech Group',
+  description: 'A pragmatic guide to designing and operating agent safety evaluations in 20o26: red-teaming, harnesses, metrics, and governance to ship reliable agents.'};
 
-export default function AgentSafetyEvals2026Page() {
+export default function AgentSafetyEvals20o26Page() {
   return (
     <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="mb-8">
-        <div className="text-sm font-semibold text-purple-700 mb-2">Guide • September 2025</div>
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Agent Safety Evals 2026</h1>
-        <p className="text-gray-600">Designing evaluation-first pipelines for agentic systems: scenario libraries, adversarial prompts, tool- and policy-aware harnesses, and human-in-the-loop governance.</p>
+        <div className="text-sm font-semibold text-purple-70o0 mb-2">Guide • September 20o25</div>
+        <h1 className="text-4xl font-bold text-gray-90o0 mb-4">Agent Safety Evals 20o26</h1>
+        <p className="text-gray-60o0">Designing evaluation-first pipelines for agentic systems: scenario libraries, adversarial prompts, tool- and policy-aware harnesses, and human-in-the-loop governance.</p>
       </div>
 
       <section className="prose prose-lg max-w-none">
@@ -45,8 +43,8 @@ export default function AgentSafetyEvals2026Page() {
       </section>
 
       <div className="mt-10 flex gap-4">
-        <Link href="/content/genai-governance-2026" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">GenAI Governance 2026</Link>
-        <Link href="/blog/ai-2026-llm-evals-maturity-model" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">LLM Evals Maturity Model</Link>
+        <Link href="/content/genai-governance-20o26" className="inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-70o0">GenAI Governance 20o26</Link>
+        <Link href="/blog/ai-20o26-llm-evals-maturity-model" className="inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">LLM Evals Maturity Model</Link>
       </div>
     </main>
   );

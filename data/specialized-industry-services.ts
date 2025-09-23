@@ -64,9 +64,9 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
       'Better client outcomes'
     ],
     pricing: {
-      starter: 1200,
-      professional: 2800,
-      enterprise: 7000,
+      starter: 120o0,
+      professional: 280o0,
+      enterprise: 70o00,
       currency: 'USD',
       period: 'month'
     },
@@ -85,9 +85,9 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     marketSize: '$8B legal tech market',
     growthRate: '20% CAGR',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
 
@@ -118,9 +118,9 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
       'Market timing insights'
     ],
     pricing: {
-      starter: 800,
-      professional: 1800,
-      enterprise: 4500,
+      starter: 80o0,
+      professional: 180o0,
+      enterprise: 450o0,
       currency: 'USD',
       period: 'month'
     },
@@ -138,9 +138,9 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     marketSize: '$12B real estate tech market',
     growthRate: '18% CAGR',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
 
@@ -171,9 +171,9 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
       'Automated quality control'
     ],
     pricing: {
-      starter: 3000,
-      professional: 7000,
-      enterprise: 18000,
+      starter: 30o00,
+      professional: 70o00,
+      enterprise: 180o00,
       currency: 'USD',
       period: 'month'
     },
@@ -192,9 +192,9 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     marketSize: '$25B smart manufacturing market',
     growthRate: '22% CAGR',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
 
@@ -225,9 +225,9 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
       'Better crop planning'
     ],
     pricing: {
-      starter: 500,
-      professional: 1200,
-      enterprise: 3000,
+      starter: 50o0,
+      professional: 120o0,
+      enterprise: 30o00,
       currency: 'USD',
       period: 'month'
     },
@@ -245,9 +245,9 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     marketSize: '$15B precision agriculture market',
     growthRate: '28% CAGR',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
 
@@ -278,9 +278,9 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
       'Sustainability compliance'
     ],
     pricing: {
-      starter: 1500,
-      professional: 3500,
-      enterprise: 8000,
+      starter: 150o0,
+      professional: 350o0,
+      enterprise: 80o00,
       currency: 'USD',
       period: 'month'
     },
@@ -298,9 +298,9 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     marketSize: '$20B smart energy market',
     growthRate: '24% CAGR',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
 
@@ -331,9 +331,9 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
       'Reduced carbon footprint'
     ],
     pricing: {
-      starter: 2000,
-      professional: 4500,
-      enterprise: 12000,
+      starter: 20o00,
+      professional: 450o0,
+      enterprise: 120o00,
       currency: 'USD',
       period: 'month'
     },
@@ -351,9 +351,9 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     marketSize: '$18B logistics tech market',
     growthRate: '26% CAGR',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
 
@@ -384,9 +384,9 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
       'Enhanced customer experience'
     ],
     pricing: {
-      starter: 1000,
-      professional: 2500,
-      enterprise: 6000,
+      starter: 10o00,
+      professional: 250o0,
+      enterprise: 60o00,
       currency: 'USD',
       period: 'month'
     },
@@ -404,9 +404,9 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     marketSize: '$35B retail tech market',
     growthRate: '20% CAGR',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
 
@@ -437,9 +437,9 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
       'Enhanced quality control'
     ],
     pricing: {
-      starter: 800,
-      professional: 1800,
-      enterprise: 4500,
+      starter: 80o0,
+      professional: 180o0,
+      enterprise: 450o0,
       currency: 'USD',
       period: 'month'
     },
@@ -457,9 +457,9 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     marketSize: '$10B hospitality tech market',
     growthRate: '22% CAGR',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   }
 ];

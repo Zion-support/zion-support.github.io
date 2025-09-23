@@ -20,7 +20,7 @@ import type { ParsedFilters } from './parser',;
 import { TALENT_PROFILES } from '../../data/talent',;
 import type { TalentProfile } from '../../data/talent',;
 export type AccessLevel = 'public' | 'member' | 'admin',;
-export type SearchResult = {;
+export type SearchResult ={;
   type: 'talent' | 'job' | 'project',;
   id: string,;
   slug?: string,;
@@ -139,6 +139,4 @@ export function suggestDidYouMean(query: string): string[] {
   }
   
   return suggestions.slice(0, 3); // Return max 3 suggestions
-
-
 

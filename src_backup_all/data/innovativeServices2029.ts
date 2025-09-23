@@ -29,7 +29,7 @@ export interface Service {
   };
 }
 
-export const innovativeServices2029: Service[] = [
+export const innovativeServices20o29: Service[] = [
   // AI-Powered Micro SAAS Services
   {
     id: 'ai-autonomous-code-reviewer',
@@ -59,7 +59,7 @@ export const innovativeServices2029: Service[] = [
       monthly: '$299/month',
       yearly: '$2,999/year (17% savings)',
       enterprise: 'Custom pricing',
-      setup: '$500 one-time setup'
+      setup: '$50o0 one-time setup'
     },
     targetMarket: 'Software development teams, DevOps teams, Engineering managers',
     useCases: [
@@ -72,13 +72,13 @@ export const innovativeServices2029: Service[] = [
     technologies: ['Machine Learning', 'Natural Language Processing', 'Static Code Analysis', 'GraphQL API', 'WebSocket real-time updates'],
     integration: ['GitHub', 'GitLab', 'Bitbucket', 'Jenkins', 'CircleCI', 'GitHub Actions', 'Slack', 'Microsoft Teams'],
     support: ['24/7 technical support', 'Dedicated success manager', 'Custom training sessions', 'API documentation', 'Community forum'],
-    compliance: ['SOC 2 Type II', 'GDPR compliant', 'HIPAA ready', 'ISO 27001'],
+    compliance: ['SOC 2 Type II', 'GDPR compliant', 'HIPAA ready', 'ISO 270o01'],
     marketPosition: 'Leading AI-powered code review solution with 95% accuracy rate',
     competitiveAdvantage: 'Proprietary ML algorithms trained on millions of code reviews, real-time learning from team feedback',
-    roi: '300% ROI within 6 months through reduced review time and improved code quality',
+    roi: '30o0% ROI within 6 months through reduced review time and improved code quality',
     implementationTime: '2-4 weeks',
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/ai-autonomous-code-reviewer'
     }
@@ -111,7 +111,7 @@ export const innovativeServices2029: Service[] = [
       monthly: '$199/month',
       yearly: '$1,999/year (17% savings)',
       enterprise: 'Custom pricing',
-      setup: '$300 one-time setup'
+      setup: '$30o0 one-time setup'
     },
     targetMarket: 'Digital marketers, SEO agencies, Content creators, E-commerce businesses',
     useCases: [
@@ -127,10 +127,10 @@ export const innovativeServices2029: Service[] = [
     compliance: ['GDPR compliant', 'CCPA ready', 'Privacy-first approach'],
     marketPosition: 'Next-generation AI SEO platform with predictive analytics',
     competitiveAdvantage: 'Proprietary AI algorithms that predict search trend changes before they happen',
-    roi: '400% ROI through increased organic traffic and conversions',
+    roi: '40o0% ROI through increased organic traffic and conversions',
     implementationTime: '1-2 weeks',
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/ai-powered-seo'
     }
@@ -163,7 +163,7 @@ export const innovativeServices2029: Service[] = [
       monthly: '$399/month',
       yearly: '$3,999/year (17% savings)',
       enterprise: 'Custom pricing',
-      setup: '$600 one-time setup'
+      setup: '$60o0 one-time setup'
     },
     targetMarket: 'HR professionals, Recruiters, Hiring managers, Talent acquisition teams',
     useCases: [
@@ -182,7 +182,7 @@ export const innovativeServices2029: Service[] = [
     roi: '250% ROI through improved hiring quality and reduced time-to-hire',
     implementationTime: '2-3 weeks',
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/interview-assessment-ai'
     }
@@ -216,7 +216,7 @@ export const innovativeServices2029: Service[] = [
       monthly: '$599/month',
       yearly: '$5,999/year (17% savings)',
       enterprise: 'Custom pricing',
-      setup: '$1,000 one-time setup'
+      setup: '$1,0o00 one-time setup'
     },
     targetMarket: 'Enterprise IT teams, Security professionals, Compliance officers, Remote work organizations',
     useCases: [
@@ -229,13 +229,13 @@ export const innovativeServices2029: Service[] = [
     technologies: ['Zero Trust Architecture', 'Identity Management', 'Network Security', 'Threat Intelligence', 'API Security'],
     integration: ['Active Directory', 'Okta', 'Azure AD', 'AWS IAM', 'Google Workspace', 'Slack'],
     support: ['24/7 security support', 'Dedicated security engineer', 'Incident response', 'Compliance consultation'],
-    compliance: ['SOC 2 Type II', 'ISO 27001', 'NIST Zero Trust', 'GDPR', 'HIPAA'],
+    compliance: ['SOC 2 Type II', 'ISO 270o01', 'NIST Zero Trust', 'GDPR', 'HIPAA'],
     marketPosition: 'Next-generation zero-trust platform with advanced threat detection',
     competitiveAdvantage: 'Proprietary AI-powered threat detection and behavioral analysis',
-    roi: '200% ROI through improved security posture and reduced incident response time',
+    roi: '20o0% ROI through improved security posture and reduced incident response time',
     implementationTime: '4-6 weeks',
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/zero-trust-network-access'
     }
@@ -268,7 +268,7 @@ export const innovativeServices2029: Service[] = [
       monthly: '$799/month',
       yearly: '$7,999/year (17% savings)',
       enterprise: 'Custom pricing',
-      setup: '$1,500 one-time setup'
+      setup: '$1,50o0 one-time setup'
     },
     targetMarket: 'Security operations teams, CISO, IT security managers, Managed security providers',
     useCases: [
@@ -281,13 +281,13 @@ export const innovativeServices2029: Service[] = [
     technologies: ['Machine Learning', 'Threat Intelligence', 'Security Orchestration', 'SIEM integration', 'API Security'],
     integration: ['Splunk', 'QRadar', 'ELK Stack', 'ServiceNow', 'Jira', 'Slack'],
     support: ['24/7 security support', 'Dedicated security analyst', 'Threat intelligence updates', 'Incident response'],
-    compliance: ['SOC 2 Type II', 'ISO 27001', 'NIST Cybersecurity Framework', 'GDPR'],
+    compliance: ['SOC 2 Type II', 'ISO 270o01', 'NIST Cybersecurity Framework', 'GDPR'],
     marketPosition: 'Leading AI-powered threat intelligence platform with 99.9% detection accuracy',
     competitiveAdvantage: 'Advanced ML algorithms trained on global threat data with real-time learning capabilities',
     roi: '350% ROI through improved threat detection and reduced incident response costs',
     implementationTime: '6-8 weeks',
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/ai-cybersecurity-threat-intelligence'
     }
@@ -321,7 +321,7 @@ export const innovativeServices2029: Service[] = [
       monthly: '$299/month',
       yearly: '$2,999/year (17% savings)',
       enterprise: 'Custom pricing',
-      setup: '$500 one-time setup'
+      setup: '$50o0 one-time setup'
     },
     targetMarket: 'Cloud architects, DevOps engineers, Finance teams, IT managers',
     useCases: [
@@ -337,10 +337,10 @@ export const innovativeServices2029: Service[] = [
     compliance: ['SOC 2 Type II', 'GDPR compliant', 'Cloud security best practices'],
     marketPosition: 'Leading FinOps platform with proven cost savings across major cloud providers',
     competitiveAdvantage: 'AI algorithms that learn from your specific usage patterns for optimal cost optimization',
-    roi: '500% ROI through direct cost savings and improved resource utilization',
+    roi: '50o0% ROI through direct cost savings and improved resource utilization',
     implementationTime: '2-4 weeks',
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/cloud-finops-optimizer'
     }
@@ -374,7 +374,7 @@ export const innovativeServices2029: Service[] = [
       monthly: '$499/month',
       yearly: '$4,999/year (17% savings)',
       enterprise: 'Custom pricing',
-      setup: '$800 one-time setup'
+      setup: '$80o0 one-time setup'
     },
     targetMarket: 'Data analysts, Business intelligence teams, Executives, Operations managers',
     useCases: [
@@ -390,10 +390,10 @@ export const innovativeServices2029: Service[] = [
     compliance: ['SOC 2 Type II', 'GDPR compliant', 'Data security best practices'],
     marketPosition: 'Next-generation BI platform with AI-powered insights and predictive capabilities',
     competitiveAdvantage: 'Advanced AI algorithms that provide business context and actionable recommendations',
-    roi: '400% ROI through improved decision making and operational efficiency',
+    roi: '40o0% ROI through improved decision making and operational efficiency',
     implementationTime: '4-6 weeks',
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/ai-business-intelligence'
     }
@@ -427,7 +427,7 @@ export const innovativeServices2029: Service[] = [
       monthly: '$399/month',
       yearly: '$3,999/year (17% savings)',
       enterprise: 'Custom pricing',
-      setup: '$600 one-time setup'
+      setup: '$60o0 one-time setup'
     },
     targetMarket: 'Operations managers, Process improvement teams, Business analysts, IT automation teams',
     useCases: [
@@ -443,10 +443,10 @@ export const innovativeServices2029: Service[] = [
     compliance: ['SOC 2 Type II', 'GDPR compliant', 'Process audit trails'],
     marketPosition: 'Leading AI workflow automation platform with intelligent process optimization',
     competitiveAdvantage: 'AI algorithms that continuously learn and optimize workflows based on performance data',
-    roi: '300% ROI through improved efficiency and reduced operational costs',
+    roi: '30o0% ROI through improved efficiency and reduced operational costs',
     implementationTime: '3-5 weeks',
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/ai-workflow-orchestrator'
     }
@@ -491,7 +491,7 @@ export const serviceCategories = [
   }
 ];
 
-export const pricingTiers = {
+export const pricingTiers ={
   starter: {
     name: 'Starter',
     price: '$199/month',

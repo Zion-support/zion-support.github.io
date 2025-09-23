@@ -4,21 +4,20 @@ import { createContext, useContext, useEffect, useState } from 'react'
 
 type Theme = 'dark' | 'light' | 'system'
 
-type ThemeProviderProps = {
+type ThemeProviderProps ={
   children: React.ReactNode
   defaultTheme?: Theme
   storageKey?: string
 }
 
-type ThemeProviderState = {
+type ThemeProviderState ={
   theme: Theme
   setTheme: (theme: Theme) => void
 }
 
-const initialState: ThemeProviderState = {
+const initialState: ThemeProviderState ={
   theme: 'system',
-  setTheme: () => null,
-}
+  setTheme: () => null}
 
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
 
@@ -54,13 +53,12 @@ export function ThemeProvider({
     root.classList.add(theme)
   }, [theme, storageKey])
 
-  const value = {
+  const value ={
     theme,
     setTheme: (theme: Theme) => {
       localStorage?.setItem(storageKey, theme)
       setTheme(theme)
-    },
-  }
+    }}
 
   return (
     <ThemeProviderContext.Provider {...props} value={value}>

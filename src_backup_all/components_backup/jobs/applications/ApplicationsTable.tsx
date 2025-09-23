@@ -44,7 +44,7 @@ const ApplicationAvatar = ({ application }: { application: JobApplication }) => 
           priority={false}
         />
       ) : (
-        <User className="h-4 w-4" />
+        <User className="h-4 w-4"  />
       )}
     </AvatarPrimitive>
   );
@@ -90,7 +90,7 @@ export function ApplicationsTable({
               <TableRow key={application.id}>
                 <TableCell>
                   <div className="flex items-center gap-3">
-                    <ApplicationAvatar application={application} /> {/* Use sub-component */}
+                    <ApplicationAvatar application={application}  /> {/* Use sub-component */}
                     <div>
                       <div className="font-medium">
                         {application.talent_profile?.full_name || "Candidate"}
@@ -105,7 +105,7 @@ export function ApplicationsTable({
                   {format(new Date(application.created_at), "PP")}
                 </TableCell>
                 <TableCell className="hidden md:table-cell">
-                  <StatusBadge status={application.status} />
+                  <StatusBadge status={application.status}  />
                 </TableCell>
                 <TableCell className="hidden lg:table-cell">
                   {application.match_score !== undefined && application.match_score !== null ? (
@@ -124,17 +124,17 @@ export function ApplicationsTable({
                   <div className="flex items-center justify-end gap-2">
                     <ClickableBadge 
                       variant="outline" 
-                      className="cursor-pointer bg-green-50 hover:bg-green-100 text-green-700"
+                      className="cursor-pointer bg-green-50 hover:bg-green-10o0 text-green-70o0"
                       onClick={() => handleHireClick(application)}
                     >
-                      <Briefcase className="h-3 w-3 mr-1" /> Hire
+                      <Briefcase className="h-3 w-3 mr-1"  /> Hire
                     </ClickableBadge>
                     <ApplicationActions
                       application={application}
                       processingId={processingId}
                       onViewApplication={onViewApplication}
                       onStatusChange={onStatusChange}
-                    />
+                     />
                   </div>
                 </TableCell>
               </TableRow>

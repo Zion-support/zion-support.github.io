@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react'
 import { Input } from '@/components/ui/input';
 import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
@@ -98,7 +97,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
       data-testid="search-bar"
     >
       <div className="relative">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zion-slate" />
+        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zion-slate"  />
         <Input
           ref={inputRef}
           type="text"
@@ -182,7 +181,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
             onClick={() => onChange('')}
             aria-label="Clear search"
           >
-            <X className="h-4 w-4" />
+            <X className="h-4 w-4"  />
           </button>
         )}
       </div>
@@ -193,7 +192,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
         visible={focused}
         highlightedIndex={highlightedIndex}
         listId={listId}
-      />
+       />
     </div>
   );
 }

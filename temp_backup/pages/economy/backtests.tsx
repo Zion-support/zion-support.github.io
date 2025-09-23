@@ -8,8 +8,7 @@ export async function getStaticProps() {
   if (fs.existsSync(dir)) {
     runs = fs.readdirSync(dir).filter((f) => f.startsWith('backtest-') && f.endsWith('.csv')).sort().reverse()
   }
-  return { props: { runs } },
-}
+  return { props: { runs } }}
 
 export default function BacktestsPage({ runs }: { runs: string[] }) {
   return (
@@ -27,5 +26,4 @@ export default function BacktestsPage({ runs }: { runs: string[] }) {
         )}
       </div>
     </EnhancedLayout>
-  ),
-}
+  )}

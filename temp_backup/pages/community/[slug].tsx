@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import { MessageSquare } from 'lucide-react';
 import PostCard from '@/components/community/PostCard';
 import { EmptyState } from '@/components/ui/empty-state';
 import type { ForumPost } from '@/types/community';
 import { fetchPostsByCategory } from '@/services/forumPostService';
 import {logErrorToProduction} from '@/utils/productionLogger';
-
 
 const POSTS_PER_PAGE = 20; // Or any other limit you prefer
 
@@ -44,8 +42,7 @@ export default function CategoryPage() {
     const res = await fetch('/api/graphql', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query: POSTS_QUERY, variables: { slug, cursor: after } }),
-    });
+      body: JSON.stringify({ query: POSTS_QUERY, variables: { slug, cursor: after } })});
     const json = await res.json();
     const result = json.data?.Posts;
     if (result) {
@@ -74,7 +71,7 @@ export default function CategoryPage() {
         {posts.length > 0 ? (
           <div className="space-y-4">
             {posts.map((post) => (
-              <PostCard key={post.id} post={post} />
+              <PostCard key={post.id} post={post}  />
             ))}
             {hasMore && (
               <div className="text-center mt-6">
@@ -90,7 +87,7 @@ export default function CategoryPage() {
           </div>
         ) : !loading ? (
           <EmptyState
-            icon={<MessageSquare className="h-10 w-10 text-zion-purple" />}
+            icon={<MessageSquare className="h-10 w-10 text-zion-purple"  />}
             title="No posts yet"
             description="Be the first to post"
           />

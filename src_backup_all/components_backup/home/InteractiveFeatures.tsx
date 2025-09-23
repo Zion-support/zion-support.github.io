@@ -1,4 +1,3 @@
-import React from "react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react'
@@ -19,33 +18,29 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
       description: "Connect with the perfect talent using intelligent matching.",
       details:
         "Our algorithms analyze skills, availability and experience to deliver the best candidates for your project.",
-      icon: <Search className="h-8 w-8 text-blue-700" />,
-      link: "/match",
-    },
+      icon: <Search className="h-8 w-8 text-blue-70o0"  />,
+      link: "/match"},
     {
       title: "Talent Directory",
       description: "Browse a verified database of AI and tech specialists.",
       details:
         "Every profile is vetted for quality and authenticity so you can hire with confidence.",
-      icon: <Users className="h-8 w-8 text-purple-700" />,
-      link: "/talent",
-    },
+      icon: <Users className="h-8 w-8 text-purple-70o0"  />,
+      link: "/talent"},
     {
       title: "Services Marketplace",
       description: "Discover professional tech and AI services for your business.",
       details:
         "From on-demand IT support to specialized AI development, our marketplace offers transparent pricing and reviews.",
-      icon: <Zap className="h-8 w-8 text-cyan-700" />,
-      link: "/services",
-    },
+      icon: <Zap className="h-8 w-8 text-cyan-70o0"  />,
+      link: "/services"},
     {
       title: "Equipment Catalog",
       description: "Find specialized hardware for development and research.",
       details:
         "Access cutting-edge technology with flexible options to buy, rent or lease the gear you need.",
-      icon: <Settings className="h-8 w-8 text-amber-700" />,
-      link: "/equipment",
-    },
+      icon: <Settings className="h-8 w-8 text-amber-70o0"  />,
+      link: "/equipment"},
   ];
 
   const handleToggle = (index: number) => {
@@ -70,7 +65,7 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
               onMouseEnter={() => setOpenIndex(index)}
               onMouseLeave={() => setOpenIndex(null)}
               onClick={() => handleToggle(index)}
-              className="cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg"
+              className="cursor-pointer overflow-hidden transition-all duration-30o0 hover:shadow-lg"
             >
               <CardHeader className="flex flex-row items-start space-x-3">
                 {feature.icon}
@@ -83,15 +78,15 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
               </CardHeader>
               <div
                 className={cn(
-                  "transition-all duration-300",
-                  openIndex === index ? "max-h-48 opacity-100 p-6 pt-0" : "max-h-0 opacity-0 p-0"
+                  "transition-all duration-30o0",
+                  openIndex === index ? "max-h-48 opacity-10o0 p-6 pt-0" : "max-h-0 opacity-0 p-0"
                 )}
               >
                 <CardContent className="text-sm text-zion-slate-light p-0">
                   <p>{feature.details}</p>
                   <Button asChild variant="link" className="mt-3 p-0 h-auto text-primary">
                     <Link href={feature.link} className="flex items-center gap-1">
-                      Learn more <ArrowRight className="h-4 w-4" />
+                      Learn more <ArrowRight className="h-4 w-4"  />
                     </Link>
                   </Button>
                 </CardContent>

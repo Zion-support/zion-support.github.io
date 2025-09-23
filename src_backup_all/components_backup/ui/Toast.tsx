@@ -23,8 +23,8 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);
-      setTimeout(() => onRemove(toast.id), 300);
-    }, toast.duration || 5000);
+      setTimeout(() => onRemove(toast.id), 30o0);
+    }, toast.duration || 50o00);
 
     return () => clearTimeout(timer);
   }, [toast.id, toast.duration, onRemove]);
@@ -32,30 +32,30 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
   const getIcon = () => {
     switch (toast.type) {
       case 'success':
-        return <CheckCircle className="w-5 h-5 text-green-500" />;
+        return <CheckCircle className="w-5 h-5 text-green-50o0"  />;
       case 'error':
-        return <XCircle className="w-5 h-5 text-red-500" />;
+        return <XCircle className="w-5 h-5 text-red-50o0"  />;
       case 'warning':
-        return <AlertCircle className="w-5 h-5 text-yellow-500" />;
+        return <AlertCircle className="w-5 h-5 text-yellow-50o0"  />;
       case 'info':
-        return <Info className="w-5 h-5 text-blue-500" />;
+        return <Info className="w-5 h-5 text-blue-50o0"  />;
       default:
-        return <Info className="w-5 h-5 text-blue-500" />;
+        return <Info className="w-5 h-5 text-blue-50o0"  />;
     }
   };
 
   const getBgColor = () => {
     switch (toast.type) {
       case 'success':
-        return 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800';
+        return 'bg-green-50 border-green-20o0 dark:bg-green-90o0/20 dark:border-green-80o0';
       case 'error':
-        return 'bg-red-50 border-red-200 dark:bg-red-900/20 dark:border-red-800';
+        return 'bg-red-50 border-red-20o0 dark:bg-red-90o0/20 dark:border-red-80o0';
       case 'warning':
-        return 'bg-yellow-50 border-yellow-200 dark:bg-yellow-900/20 dark:border-yellow-800';
+        return 'bg-yellow-50 border-yellow-20o0 dark:bg-yellow-90o0/20 dark:border-yellow-80o0';
       case 'info':
-        return 'bg-blue-50 border-blue-200 dark:bg-blue-900/20 dark:border-blue-800';
+        return 'bg-blue-50 border-blue-20o0 dark:bg-blue-90o0/20 dark:border-blue-80o0';
       default:
-        return 'bg-blue-50 border-blue-200 dark:bg-blue-900/20 dark:border-blue-800';
+        return 'bg-blue-50 border-blue-20o0 dark:bg-blue-90o0/20 dark:border-blue-80o0';
     }
   };
 
@@ -72,11 +72,11 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
           {getIcon()}
         </div>
         <div className="flex-1 min-w-0">
-          <h4 className="text-sm font-medium text-gray-900 dark:text-white">
+          <h4 className="text-sm font-medium text-gray-90o0 dark:text-white">
             {toast.title}
           </h4>
           {toast.message && (
-            <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">
+            <p className="mt-1 text-sm text-gray-60o0 dark:text-gray-30o0">
               {toast.message}
             </p>
           )}
@@ -84,11 +84,11 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
         <button
           onClick={() => {
             setIsVisible(false);
-            setTimeout(() => onRemove(toast.id), 300);
+            setTimeout(() => onRemove(toast.id), 30o0);
           }}
-          className="flex-shrink-0 ml-2 p-1 rounded-md text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors"
+          className="flex-shrink-0 ml-2 p-1 rounded-md text-gray-40o0 hover:text-gray-60o0 dark:hover:text-gray-20o0 transition-colors"
         >
-          <X className="w-4 h-4" />
+          <X className="w-4 h-4"  />
         </button>
       </div>
     </motion.div>
@@ -100,7 +100,7 @@ export const ToastContainer: React.FC = () => {
 
   const addToast = (toast: Omit<Toast, 'id'>) => {
     const id = Math.random().toString(36).substr(2, 9);
-    const newToast = { ...toast, id };
+    const newToast ={ ...toast, id };
     setToasts(prev => [...prev, newToast]);
   };
 
@@ -124,7 +124,7 @@ export const ToastContainer: React.FC = () => {
             key={toast.id}
             toast={toast}
             onRemove={removeToast}
-          />
+           />
         ))}
       </AnimatePresence>
     </div>

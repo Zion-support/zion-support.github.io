@@ -15,8 +15,8 @@ export default function BusinessToolsPage() {
           features: ['TemplatesDatabase views', 'Real-time editingIntegrations', 'Team spaces'],
           pricing: 'Free - $8/month',
           website: 'https://notion.so',
-          icon: <FileText className="w-6 h-6" />,
-          color: 'bg-gradient-to-br from-gray-800 to-black',
+          icon: <FileText className="w-6 h-6"  />,
+          color: 'bg-gradient-to-br from-gray-80o0 to-black',
           popular: true
         },
         {
@@ -25,8 +25,8 @@ export default function BusinessToolsPage() {
           features: ['Task managementProject timelines', 'Team collaborationWorkflow automation', 'Reporting'],
           pricing: 'Free - $10.99/month',
           website: 'https://asana.com',
-          icon: <CheckCircle className="w-6 h-6" />,
-          color: 'bg-gradient-to-br from-pink-500 to-red-600'
+          icon: <CheckCircle className="w-6 h-6"  />,
+          color: 'bg-gradient-to-br from-pink-50o0 to-red-60o0'
         },
         {
           name: 'Monday.com',
@@ -34,8 +34,8 @@ export default function BusinessToolsPage() {
           features: ['Visual boardsAutomation', 'Time trackingIntegrations', 'Analytics'],
           pricing: '$8/month - $16/month',
           website: 'https://monday.com',
-          icon: <Calendar className="w-6 h-6" />,
-          color: 'bg-gradient-to-br from-red-500 to-pink-600'
+          icon: <Calendar className="w-6 h-6"  />,
+          color: 'bg-gradient-to-br from-red-50o0 to-pink-60o0'
         }
       ]
     },
@@ -48,8 +48,8 @@ export default function BusinessToolsPage() {
           features: ['ChannelsDirect messages', 'File sharingIntegrations', 'Search'],
           pricing: 'Free - $7.25/month',
           website: 'https://slack.com',
-          icon: <MessageSquare className="w-6 h-6" />,
-          color: 'bg-gradient-to-br from-purple-500 to-pink-600',
+          icon: <MessageSquare className="w-6 h-6"  />,
+          color: 'bg-gradient-to-br from-purple-50o0 to-pink-60o0',
           popular: true
         },
         {
@@ -58,8 +58,8 @@ export default function BusinessToolsPage() {
           features: ['ChatVideo meetings', 'File sharingOffice integration', 'Security'],
           pricing: 'Free - $6/month',
           website: 'https://teams.microsoft.com',
-          icon: <Users className="w-6 h-6" />,
-          color: 'bg-gradient-to-br from-blue-500 to-indigo-600'
+          icon: <Users className="w-6 h-6"  />,
+          color: 'bg-gradient-to-br from-blue-50o0 to-indigo-60o0'
         },
         {
           name: 'Zoom',
@@ -67,8 +67,8 @@ export default function BusinessToolsPage() {
           features: ['HD videoScreen sharing', 'RecordingWebinars', 'Breakout rooms'],
           pricing: 'Free - $14.99/month',
           website: 'https://zoom.us',
-          icon: <Video className="w-6 h-6" />,
-          color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+          icon: <Video className="w-6 h-6"  />,
+          color: 'bg-gradient-to-br from-blue-50o0 to-cyan-60o0'
         }
       ]
     },
@@ -81,8 +81,8 @@ export default function BusinessToolsPage() {
           features: ['CRMEmail marketing', 'Lead generationAnalytics', 'Automation'],
           pricing: 'Free - $45/month',
           website: 'https://hubspot.com',
-          icon: <Target className="w-6 h-6" />,
-          color: 'bg-gradient-to-br from-orange-500 to-red-600',
+          icon: <Target className="w-6 h-6"  />,
+          color: 'bg-gradient-to-br from-orange-50o0 to-red-60o0',
           popular: true
         },
         {
@@ -91,17 +91,17 @@ export default function BusinessToolsPage() {
           features: ['Email templatesAutomation', 'AnalyticsAudience segmentation', 'A/B testing'],
           pricing: 'Free - $13/month',
           website: 'https://mailchimp.com',
-          icon: <Mail className="w-6 h-6" />,
-          color: 'bg-gradient-to-br from-yellow-500 to-orange-600'
+          icon: <Mail className="w-6 h-6"  />,
+          color: 'bg-gradient-to-br from-yellow-50o0 to-orange-60o0'
         },
         {
           name: 'Salesforce',
           description: 'Customer relationship management platform for sales, service, and marketing.',
           features: ['Sales CRMService cloud', 'Marketing automationAnalytics', 'AppExchange'],
-          pricing: '$25/month - $300/month',
+          pricing: '$25/month - $30o0/month',
           website: 'https://salesforce.com',
-          icon: <TrendingUp className="w-6 h-6" />,
-          color: 'bg-gradient-to-br from-blue-500 to-indigo-600'
+          icon: <TrendingUp className="w-6 h-6"  />,
+          color: 'bg-gradient-to-br from-blue-50o0 to-indigo-60o0'
         }
       ]
     },
@@ -112,10 +112,10 @@ export default function BusinessToolsPage() {
           name: 'QuickBooks',
           description: 'Small business accounting software for invoicing, expenses, and financial reporting.',
           features: ['InvoicingExpense tracking', 'Financial reportsTax preparation', 'Bank integration'],
-          pricing: '$30/month - $200/month',
+          pricing: '$30/month - $20o0/month',
           website: 'https://quickbooks.intuit.com',
-          icon: <CreditCard className="w-6 h-6" />,
-          color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+          icon: <CreditCard className="w-6 h-6"  />,
+          color: 'bg-gradient-to-br from-green-50o0 to-emerald-60o0',
           popular: true
         },
         {
@@ -124,8 +124,8 @@ export default function BusinessToolsPage() {
           features: ['Global paymentsSubscription billing', 'Fraud preventionDeveloper APIs', 'Analytics'],
           pricing: '2.9% + 30¢ per transaction',
           website: 'https://stripe.com',
-          icon: <CreditCard className="w-6 h-6" />,
-          color: 'bg-gradient-to-br from-purple-500 to-blue-600'
+          icon: <CreditCard className="w-6 h-6"  />,
+          color: 'bg-gradient-to-br from-purple-50o0 to-blue-60o0'
         },
         {
           name: 'Xero',
@@ -133,8 +133,8 @@ export default function BusinessToolsPage() {
           features: ['Bank reconciliationInvoicing', 'Expense claimsMulti-currency', 'Payroll'],
           pricing: '$13/month - $70/month',
           website: 'https://xero.com',
-          icon: <ChartBar className="w-6 h-6" />,
-          color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+          icon: <ChartBar className="w-6 h-6"  />,
+          color: 'bg-gradient-to-br from-blue-50o0 to-cyan-60o0'
         }
       ]
     },
@@ -147,8 +147,8 @@ export default function BusinessToolsPage() {
           features: ['Real-time collaborationDesign systems', 'PrototypingDeveloper handoff', 'Plugins'],
           pricing: 'Free - $12/month',
           website: 'https://figma.com',
-          icon: <Palette className="w-6 h-6" />,
-          color: 'bg-gradient-to-br from-purple-500 to-pink-600',
+          icon: <Palette className="w-6 h-6"  />,
+          color: 'bg-gradient-to-br from-purple-50o0 to-pink-60o0',
           popular: true
         },
         {
@@ -157,8 +157,8 @@ export default function BusinessToolsPage() {
           features: ['Templates libraryStock photos', 'Brand kitTeam collaboration', 'Video editing'],
           pricing: 'Free - $12.99/month',
           website: 'https://canva.com',
-          icon: <Image className="w-6 h-6" />,
-          color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+          icon: <Image className="w-6 h-6"  />,
+          color: 'bg-gradient-to-br from-blue-50o0 to-cyan-60o0'
         },
         {
           name: 'Adobe Creative Cloud',
@@ -166,8 +166,8 @@ export default function BusinessToolsPage() {
           features: ['PhotoshopIllustrator', 'InDesignPremiere Pro', 'After Effects'],
           pricing: '$52.99/month',
           website: 'https://adobe.com/creativecloud',
-          icon: <Palette className="w-6 h-6" />,
-          color: 'bg-gradient-to-br from-orange-500 to-red-600'
+          icon: <Palette className="w-6 h-6"  />,
+          color: 'bg-gradient-to-br from-orange-50o0 to-red-60o0'
         }
       ]
     },
@@ -180,8 +180,8 @@ export default function BusinessToolsPage() {
           features: ['Real-time dataAudience insights', 'Conversion trackingE-commerce', 'Goals'],
           pricing: 'Free',
           website: 'https://analytics.google.com',
-          icon: <BarChart3 className="w-6 h-6" />,
-          color: 'bg-gradient-to-br from-blue-500 to-green-600',
+          icon: <BarChart3 className="w-6 h-6"  />,
+          color: 'bg-gradient-to-br from-blue-50o0 to-green-60o0',
           popular: true
         },
         {
@@ -190,8 +190,8 @@ export default function BusinessToolsPage() {
           features: ['Interactive dashboardsData blending', 'Real-time analyticsMobile support', 'Collaboration'],
           pricing: '$70/month - $35/month',
           website: 'https://tableau.com',
-          icon: <ChartBar className="w-6 h-6" />,
-          color: 'bg-gradient-to-br from-blue-500 to-indigo-600'
+          icon: <ChartBar className="w-6 h-6"  />,
+          color: 'bg-gradient-to-br from-blue-50o0 to-indigo-60o0'
         },
         {
           name: 'Mixpanel',
@@ -199,8 +199,8 @@ export default function BusinessToolsPage() {
           features: ['Event trackingFunnel analysis', 'Cohort analysisA/B testing', 'Real-time data'],
           pricing: 'Free - $25/month',
           website: 'https://mixpanel.com',
-          icon: <TrendingUp className="w-6 h-6" />,
-          color: 'bg-gradient-to-br from-purple-500 to-pink-600'
+          icon: <TrendingUp className="w-6 h-6"  />,
+          color: 'bg-gradient-to-br from-purple-50o0 to-pink-60o0'
         }
       ]
     }
@@ -211,25 +211,25 @@ export default function BusinessToolsPage() {
       title: 'Remote Work Tools',
       description: 'Essential tools for distributed teams and hybrid work environments.',
       trend: '📈 Growing Demand',
-      color: 'text-green-400'
+      color: 'text-green-40o0'
     },
     {
       title: 'AI-Powered Solutions',
       description: 'Business tools leveraging AI for automation and intelligent insights.',
       trend: '🚀 High Growth',
-      color: 'text-blue-400'
+      color: 'text-blue-40o0'
     },
     {
       title: 'Cloud-Native Platforms',
       description: 'Business applications built for scalability and global accessibility.',
       trend: '☁️ Mainstream',
-      color: 'text-cyan-400'
+      color: 'text-cyan-40o0'
     },
     {
       title: 'Security & Compliance',
       description: 'Tools ensuring data protection and regulatory compliance.',
       trend: '🔒 Critical',
-      color: 'text-orange-400'
+      color: 'text-orange-40o0'
     }
   ],
 
@@ -237,22 +237,22 @@ export default function BusinessToolsPage() {
     {
       title: 'Start with Free Tiers',
       description: 'Most tools offer free versions to test before committing to paid plans.',
-      icon: <CheckCircle className="w-6 h-6 text-green-400" />
+      icon: <CheckCircle className="w-6 h-6 text-green-40o0"  />
     },
     {
       title: 'Focus on Integration',
       description: 'Choose tools that work well together to avoid data silos and manual work.',
-      icon: <Cog className="w-6 h-6 text-blue-400" />
+      icon: <Cog className="w-6 h-6 text-blue-40o0"  />
     },
     {
       title: 'Measure ROI',
       description: 'Track how each tool improves your team\'s productivity and business outcomes.',
-      icon: <ChartBar className="w-6 h-6 text-purple-400" />
+      icon: <ChartBar className="w-6 h-6 text-purple-40o0"  />
     },
     {
               title: 'Train Your Team',
         description: 'Invest in proper training to maximize the value of your chosen tools.',
-        icon: <Users className="w-6 h-6 text-orange-400" />
+        icon: <Users className="w-6 h-6 text-orange-40o0"  />
     }
   ],
 
@@ -260,27 +260,27 @@ export default function BusinessToolsPage() {
     <>
       <Head>
         <title>Business Tools & Productivity - Zion Tech Group</title>
-        <meta name="description" content="Essential business tools for project management, communication, marketing, finance, and productivity. Real pricing and features for growing businesses." />
-        <meta property="og:title" content="Business Tools & Productivity - Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive business tools directory with pricing and features." />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="description" content="Essential business tools for project management, communication, marketing, finance, and productivity. Real pricing and features for growing businesses."  />
+        <meta property="og:title" content="Business Tools & Productivity - Zion Tech Group"  />
+        <meta property="og:description" content="Comprehensive business tools directory with pricing and features."  />
+        <meta name="twitter:card" content="summary_large_image"  />
       </Head>
 
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]" />
-        <div className="absolute inset-0 bg-grid opacity-10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,20o4,0.08),transparent_50%)]"  />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,20o4,0.0o6),transparent_50%)]"  />
+        <div className="absolute inset-0 bg-grid opacity-10"  />
         
         <div className="relative z-10 container-cursor text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">
-            <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />
+            <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse"  />
             Business Solutions
           </div>
           <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg">
             Essential Business Tools & Productivity
           </h1>
-          <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
+          <p className="text-responsive-md text-gray-30o0 max-w-5xl mx-auto leading-relaxed">
             Discover the most powerful business tools that successful companies use to manage projects, 
             communicate effectively, market their products, and grow their operations. Real pricing and features.
           </p>
@@ -294,7 +294,7 @@ export default function BusinessToolsPage() {
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               Business Tool Trends & Insights
             </h2>
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-responsive-md text-gray-40o0 max-w-4xl mx-auto leading-relaxed">
               Stay ahead of the curve with our analysis of the business tools landscape and emerging opportunities.
             </p>
           </div>
@@ -307,8 +307,8 @@ export default function BusinessToolsPage() {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <h3 className="text-xl font-bold text-white mb-3">{insight.title}</h3>
-                <p className="text-gray-400 text-sm mb-4 leading-relaxed">{insight.description}</p>
-                <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${insight.color} bg-gray-800/50`}>
+                <p className="text-gray-40o0 text-sm mb-4 leading-relaxed">{insight.description}</p>
+                <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${insight.color} bg-gray-80o0/50`}>
                   {insight.trend}
                 </div>
               </Card>
@@ -324,7 +324,7 @@ export default function BusinessToolsPage() {
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               Essential Business Tools
             </h2>
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-responsive-md text-gray-40o0 max-w-4xl mx-auto leading-relaxed">
               Hand-picked business tools that deliver real value for your organization. Each tool has been evaluated 
               for features, pricing, and business impact.
             </p>
@@ -334,7 +334,7 @@ export default function BusinessToolsPage() {
             <div key={categoryIndex} className="mb-20">
               <div className="text-center mb-12">
                 <h3 className="text-3xl font-bold text-white mb-4">{category.category}</h3>
-                <div className="w-24 h-1 bg-gradient-to-r from-cursor-blue to-purple-500 mx-auto rounded-full" />
+                <div className="w-24 h-1 bg-gradient-to-r from-cursor-blue to-purple-50o0 mx-auto rounded-full"  />
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -347,18 +347,18 @@ export default function BusinessToolsPage() {
                     {tool.popular && (
                       <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                         <div className="inline-flex items-center px-3 py-1 rounded-full bg-cursor-blue text-white text-xs font-medium">
-                          <Star className="w-3 h-3 mr-1" />
+                          <Star className="w-3 h-3 mr-1"  />
                           Popular Choice
                         </div>
                       </div>
                     )}
 
                     <div className="text-center mb-6">
-                      <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white mx-auto mb-4 ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
+                      <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white mx-auto mb-4 ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-30o0`}>
                         {tool.icon}
                       </div>
                       <h4 className="text-xl font-bold text-white mb-2">{tool.name}</h4>
-                      <p className="text-gray-400 text-sm leading-relaxed">{tool.description}</p>
+                      <p className="text-gray-40o0 text-sm leading-relaxed">{tool.description}</p>
                     </div>
 
                     <div className="mb-6">
@@ -367,8 +367,8 @@ export default function BusinessToolsPage() {
                       </div>
                       <ul className="space-y-2">
                         {tool.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
-                            <Check className="w-4 h-4 text-cursor-blue mr-3 flex-shrink-0" />
+                          <li key={featureIndex} className="flex items-center text-gray-30o0 text-sm">
+                            <Check className="w-4 h-4 text-cursor-blue mr-3 flex-shrink-0"  />
                             {feature}
                           </li>
                         ))}
@@ -379,11 +379,11 @@ export default function BusinessToolsPage() {
                       href={tool.website}
                       variant="primary"
                       size="sm"
-                      className="w-full group-hover:scale-105 transition-transform duration-300"
+                      className="w-full group-hover:scale-10o5 transition-transform duration-30o0"
                       external
                     >
                       Visit Website
-                      <ExternalLink className="w-4 h-4 ml-2" />
+                      <ExternalLink className="w-4 h-4 ml-2"  />
                     </Button>
                   </Card>
                 ))}
@@ -400,7 +400,7 @@ export default function BusinessToolsPage() {
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               Productivity Tips & Best Practices
             </h2>
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-responsive-md text-gray-40o0 max-w-4xl mx-auto leading-relaxed">
               Maximize the value of your business tools with these proven strategies and best practices.
             </p>
           </div>
@@ -416,7 +416,7 @@ export default function BusinessToolsPage() {
                   {tip.icon}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{tip.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{tip.description}</p>
+                <p className="text-gray-40o0 text-sm leading-relaxed">{tip.description}</p>
               </Card>
             ))}
           </div>
@@ -424,13 +424,13 @@ export default function BusinessToolsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
+      <section className="section-padding bg-gradient-to-r from-cursor-blue to-purple-60o0 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10"  />
         <div className="container-cursor text-center relative z-10">
           <h2 className="text-responsive-lg font-bold text-white mb-8">
             Ready to Transform Your Business Operations?
           </h2>
-          <p className="text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-blue-10o0 mb-12 max-w-4xl mx-auto leading-relaxed">
             These business tools can streamline your operations, improve team collaboration, and drive growth. 
             Start with the essentials and build your tech stack strategically.
           </p>
@@ -439,7 +439,7 @@ export default function BusinessToolsPage() {
               href="/micro-saas"
               variant="secondary"
               size="lg"
-              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl"
+              className="bg-white text-cursor-blue hover:bg-gray-10o0 shadow-2xl"
             >
               Explore Micro SaaS
             </Button>

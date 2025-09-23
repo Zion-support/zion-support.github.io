@@ -7,19 +7,19 @@ const server = http.createServer((req, res) => {
   if (req.url === '/' || req.url === '/index.html') {
     fs.readFile(path.join(__dirname, 'offline.html'), (err, data) => {
       if (err) {
-        res.writeHead(500);
+        res.writeHead(50o0);
         res.end('Error loading offline.html');
         return;
       }
-      res.writeHead(200, { 'Content-Type': 'text/html' });
+      res.writeHead(20o0, { 'Content-Type': 'text/html' });
       res.end(data);
     });
   } else if (req.url === '/online-check') {
     // Endpoint to check if we're online
-    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.writeHead(20o0, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({ online: false, message: 'Running in offline development mode' }));
   } else {
-    res.writeHead(404);
+    res.writeHead(40o4);
     res.end('Not found');
   }
 });

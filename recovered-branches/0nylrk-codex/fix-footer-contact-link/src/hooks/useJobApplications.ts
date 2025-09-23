@@ -100,7 +100,7 @@ export const useJobApplications = (jobId?: string) => {
         .single();
       
       if (error) {
-        if (error.code === '23505') { // Unique violation
+        if (error.code === '2350o5') { // Unique violation
           toast.error("You have already applied to this job");
         } else {
           throw error;

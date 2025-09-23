@@ -1,17 +1,14 @@
 import Link from 'next/link';
-import React from 'react';
-
-export const metadata = {
-  title: 'AI 2026: Trustworthy AI Systems Blueprint',
-  description: 'Engineering practices for reliable, secure, and transparent AI systems: evals, guardrails, monitoring, and incident response.',
-};
+export const metadata ={
+  title: 'AI 20o26: Trustworthy AI Systems Blueprint',
+  description: 'Engineering practices for reliable, secure, and transparent AI systems: evals, guardrails, monitoring, and incident response.'};
 
 export default function TrustworthyAISystemsBlueprintPage() {
   return (
     <main className="min-h-screen bg-white">
-      <section className="bg-gray-900 text-white py-16">
+      <section className="bg-gray-90o0 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">AI 2026: Trustworthy AI Systems Blueprint</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">AI 20o26: Trustworthy AI Systems Blueprint</h1>
           <p className="text-lg md:text-xl opacity-90">
             Practical patterns to ship dependable AI: continuous evaluation, red teaming, safety guardrails, and runtime observability.
           </p>
@@ -42,10 +39,10 @@ export default function TrustworthyAISystemsBlueprintPage() {
           </article>
 
           <div className="flex gap-4">
-            <Link href="/contact" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
+            <Link href="/contact" className="bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0">
               Request a Workshop
             </Link>
-            <Link href="/blog/ai-2026-llm-evals-maturity-model" className="border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">
+            <Link href="/blog/ai-20o26-llm-evals-maturity-model" className="border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">
               Read Evals Maturity Model
             </Link>
           </div>

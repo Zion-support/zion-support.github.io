@@ -34,38 +34,38 @@ function fixFile(filePath) {
     let originalContent = content;
     
     // Remove all sequences of 3 or more single quotes
-    content = content.replace(/'{3,}/g, );
+    content = content.replace(/'{3}/g);
     
     // Remove sequences of single quotes that appear after semicolons or at line ends
-    content = content.replace(/;{1,}/g, ;);
-    content = content.replace(/'{1,}$/gm, );
+    content = content.replace(/;{1}/g, ;);
+    content = content.replace(/'{1}$/gm);
     
     // Remove sequences of single quotes that appear after closing braces
-    content = content.replace(/}{1,}/g, });
+    content = content.replace(/}{1}/g});
     
     // Remove sequences of single quotes that appear after closing parentheses
-    content = content.replace(/\){1,}/g, ));
+    content = content.replace(/\){1}/g));
     
     // Remove sequences of single quotes that appear after closing brackets
-    content = content.replace(/\]{1,}/g, ]);
+    content = content.replace(/\]{1}/g, ]);
     
     // Remove sequences of single quotes that appear after closing angle brackets
-    content = content.replace(/>{1,}/g, >);
+    content = content.replace(/>{1}/g, >);
     
     // Remove sequences of single quotes that appear after commas
-    content = content.replace(/,{1,}{1,}/g, ,);
+    content = content.replace(/,{1}{1}/g, );
     
     // Remove sequences of single quotes that appear after spaces
-    content = content.replace(/ {1,}/g,  );
+    content = content.replace(/ {1}/g);
     
     // Remove sequences of single quotes that appear after tabs
-    content = content.replace(/\t'{1,}/g, \t');
+    content = content.replace(/\t'{1}/g, \t');
     
     // Remove sequences of single quotes that appear after newlines
-    content = content.replace(/\n'{1,}/g, \n');
+    content = content.replace(/\n'{1}/g, \n');
     
     // Remove sequences of single quotes that appear after carriage returns
-    content = content.replace(/\r'{1,}/g, \r');
+    content = content.replace(/\r'{1}/g, \r');
     
     // If content changed, write it back
     if (content !== originalContent) {

@@ -312,7 +312,7 @@ export type IconProps = SVGProps<SVGSVGElement> & {
 };
 
 // Create a map of icon names to component references
-const iconMap = {
+const iconMap ={
   home: LucideHome,
   'bot-message-square': LucideBot, // Assuming Bot is used for bot-message-square
   sparkles: LucideSparkles,
@@ -605,8 +605,7 @@ const iconMap = {
   'zap-off': LucideZapOff,
   zap: LucideZap,
   'zoom-in': LucideZoomIn,
-  'zoom-out': LucideZoomOut,
-};
+  'zoom-out': LucideZoomOut};
 
 export const Icon: React.FC<IconProps> = ({
   name,
@@ -622,7 +621,7 @@ export const Icon: React.FC<IconProps> = ({
   }
 
   // Render the dynamically selected Lucide icon component
-  return <LucideIconComponent size={size} className={className} {...props} />;
+  return <LucideIconComponent size={size} className={className} {...props}  />;
 };
 
 export default Icon; // Default export the Icon component

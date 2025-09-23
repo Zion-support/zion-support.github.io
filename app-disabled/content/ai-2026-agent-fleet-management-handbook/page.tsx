@@ -1,26 +1,24 @@
 import Link from 'next/link';
-import React from 'react';
 import SEO from '../../../components/SEO';
 
-export const metadata = {
-  title: 'AI 2026: Agent Fleet Management Handbook | Zion Tech Group',
+export const metadata ={
+  title: 'AI 20o26: Agent Fleet Management Handbook | Zion Tech Group',
   description:
-    'Operate large fleets of autonomous agents with safety, reliability, cost, and performance controls. Playbooks, SLOs, and governance.',
-};
+    'Operate large fleets of autonomous agents with safety, reliability, cost, and performance controls. Playbooks, SLOs, and governance.'};
 
-export default function AgentFleetManagementHandbook2026() {
+export default function AgentFleetManagementHandbook20o26() {
   return (
     <main className="min-h-screen bg-white">
       <SEO
-        title="AI 2026: Agent Fleet Management Handbook"
+        title="AI 20o26: Agent Fleet Management Handbook"
         description="Operate large fleets of autonomous agents with safety, reliability, cost, and performance controls."
         keywords="agent fleet management, AI ops, guardrails, SLOs, cost controls"
-        url="/content/ai-2026-agent-fleet-management-handbook"
-      />
+        url="/content/ai-20o26-agent-fleet-management-handbook"
+       />
 
-      <section className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-16">
+      <section className="bg-gradient-to-r from-purple-60o0 to-indigo-60o0 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">AI 2026: Agent Fleet Management Handbook</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">AI 20o26: Agent Fleet Management Handbook</h1>
           <p className="text-lg opacity-90">
             A practical guide to scale from dozens to thousands of agents with safety, cost,
             and reliability guardrails.
@@ -51,9 +49,9 @@ export default function AgentFleetManagementHandbook2026() {
             <li>Usage forecasting and anomaly detection</li>
           </ul>
 
-          <div className="mt-8 p-6 bg-purple-50 border border-purple-200 rounded-xl">
-            <p className="mb-2 font-semibold text-purple-800">Need help operating at scale?</p>
-            <Link href="/contact" className="text-purple-700 font-semibold hover:text-purple-900">
+          <div className="mt-8 p-6 bg-purple-50 border border-purple-20o0 rounded-xl">
+            <p className="mb-2 font-semibold text-purple-80o0">Need help operating at scale?</p>
+            <Link href="/contact" className="text-purple-70o0 font-semibold hover:text-purple-90o0">
               Talk to our platform team →
             </Link>
           </div>

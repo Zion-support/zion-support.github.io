@@ -1,15 +1,13 @@
-import React from 'react';
-
-export const metadata = {
-  title: 'AI Governance Blueprint 2026',
+export const metadata ={
+  title: 'AI Governance Blueprint 20o26',
   description: 'Practical governance framework for enterprise AI: policy-as-code, risk controls, and oversight.'
 };
 
-export default function AIGovernanceBlueprint2026() {
+export default function AIGovernanceBlueprint20o26() {
   return (
     <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Governance Blueprint 2026</h1>
-      <p className="text-gray-600 mb-8">
+      <h1 className="text-4xl font-bold text-gray-90o0 mb-4">AI Governance Blueprint 20o26</h1>
+      <p className="text-gray-60o0 mb-8">
         A pragmatic blueprint to operationalize responsible AI at scale. Establish clear accountability, measurable controls, and
         continuous monitoring aligned to business outcomes and regulatory expectations.
       </p>

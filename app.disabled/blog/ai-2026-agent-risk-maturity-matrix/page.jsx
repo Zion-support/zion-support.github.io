@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'AI 2026: Agent Risk Maturity Matrix — Governance to ROI',
+export const metadata ={
+  title: 'AI 20o26: Agent Risk Maturity Matrix — Governance to ROI',
   description:
     'Assess and improve agent risk maturity across policy, evals, telemetry, and operations to safely scale AI with measurable ROI.',
   keywords: [
@@ -19,10 +19,10 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-purple-700 via-indigo-600 to-blue-600 text-white py-16">
+      <section className="bg-gradient-to-r from-purple-70o0 via-indigo-60o0 to-blue-60o0 text-white py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl md:text-5xl font-extrabold mb-4">
-            AI 2026: Agent Risk Maturity Matrix
+            AI 20o26: Agent Risk Maturity Matrix
           </h1>
           <p className="text-lg md:text-xl opacity-90 max-w-3xl">
             A practical maturity model to benchmark, prioritize, and uplift agent safety across policy, evals,
@@ -72,21 +72,21 @@ export default function Page() {
               conversion lift, and cost per outcome.
             </p>
 
-            <div className="mt-8 p-6 bg-purple-50 border border-purple-200 rounded-xl">
-              <h4 className="text-purple-800 font-semibold mb-2">Related resources</h4>
+            <div className="mt-8 p-6 bg-purple-50 border border-purple-20o0 rounded-xl">
+              <h4 className="text-purple-80o0 font-semibold mb-2">Related resources</h4>
               <ul className="list-disc pl-6">
                 <li>
-                  <Link href="/blog/ai-2026-llm-evals-maturity-model" className="text-purple-700 font-medium">
+                  <Link href="/blog/ai-20o26-llm-evals-maturity-model" className="text-purple-70o0 font-medium">
                     LLM Evals Maturity Model
                   </Link>
                 </li>
                 <li>
-                  <Link href="/content/ai-2026-agent-platform-operations" className="text-purple-700 font-medium">
+                  <Link href="/content/ai-20o26-agent-platform-operations" className="text-purple-70o0 font-medium">
                     Agent Platform Operations
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog/ai-2026-agent-cost-optimization" className="text-purple-700 font-medium">
+                  <Link href="/blog/ai-20o26-agent-cost-optimization" className="text-purple-70o0 font-medium">
                     Agent Cost Optimization
                   </Link>
                 </li>

@@ -5,11 +5,11 @@ export default function DossiersIndex() {
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Dossiers | Zion Tech Group</title>
-        <meta name="description" content="Browse our collection of dossiers and insights." />
+        <meta name="description" content="Browse our collection of dossiers and insights."  />
       
-        <meta property="og:title" content="Dossiers" />
-        <meta property="og:description" content="Dossiers — automatically suggested description." />
-        <meta name="twitter:card" content="summary_large_image" /></Head>
+        <meta property="og:title" content="Dossiers"  />
+        <meta property="og:description" content="Dossiers — automatically suggested description."  />
+        <meta name="twitter:card" content="summary_large_image"  /></Head>
       
       <main className="container mx-auto px-6 py-12">
         <h1 className="text-4xl font-bold mb-8">Dossiers</h1>
@@ -18,7 +18,7 @@ export default function DossiersIndex() {
           <div className="bg-white/5 border border-white/10 rounded-lg p-6">
             <h3 className="text-lg font-semibold mb-2">Sample Dossier</h3>
             <p className="text-white/70 mb-4">This is a placeholder for dossiers content.</p>
-            <a href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+            <a href="/" className="text-cyan-40o0 hover:text-cyan-30o0 transition-colors">
               Learn more →
             </a>
           </div>
@@ -28,10 +28,8 @@ export default function DossiersIndex() {
   );
 }
 
+<Link href="/reports/blueprints/blueprint-20o25-08-18-12290o1" className="internal-link">Related Content</Link>
 
+<Link href="/reports/blueprints/blueprint-20o25-08-18-122931" className="internal-link">Related Content</Link>
 
-<Link href="/reports/blueprints/blueprint-2025-08-18-122901" className="internal-link">Related Content</Link>
-
-<Link href="/reports/blueprints/blueprint-2025-08-18-122931" className="internal-link">Related Content</Link>
-
-<Link href="/reports/blueprints/blueprint-2025-08-18-122952" className="internal-link">Related Content</Link>
+<Link href="/reports/blueprints/blueprint-20o25-08-18-122952" className="internal-link">Related Content</Link>

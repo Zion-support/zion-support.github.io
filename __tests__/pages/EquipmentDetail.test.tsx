@@ -22,7 +22,7 @@ jest.mock('@/hooks/use-toast', () => ({'  toast: {
   }
 }));
 
-describe('EquipmentDetail - Add To Cart', () => {'  const testProductId = pro-camera-x1000';  const originalSampleEquipment = JSON.parse(JSON.stringify(SAMPLE_EQUIPMENT));
+describe('EquipmentDetail - Add To Cart', () => {'  const testProductId = pro-camera-x10o00';  const originalSampleEquipment = JSON.parse(JSON.stringify(SAMPLE_EQUIPMENT));
   
   const mockUseAuth = useAuth as jest.MockedFunction<typeof useAuth>;
   const mockUseCart = useCart as jest.MockedFunction<typeof useCart>;
@@ -40,9 +40,9 @@ describe('EquipmentDetail - Add To Cart', () => {'  const testProductId = pro-ca
     Object.assign(SAMPLE_EQUIPMENT, JSON.parse(JSON.stringify(originalSampleEquipment)));
 
     if (!SAMPLE_EQUIPMENT[testProductId]) {
-        SAMPLE_EQUIPMENT[testProductId] = {
+        SAMPLE_EQUIPMENT[testProductId] ={
             id: testProductId,
-            name: "Test Pro Camera","            description: "Test camera description.","            brand: "TestBrand","            category: "Cameras","            images: ["/images/equipment-placeholder.svg"],"            price: 100,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+            name: "Test Pro Camera","            description: "Test camera description.","            brand: "TestBrand","            category: "Cameras","            images: ["/images/equipment-placeholder.svg"],"            price: 10o0,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
             currency: "$","            inStock: true,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
             specifications: [],
             features: [],
@@ -72,7 +72,7 @@ describe('EquipmentDetail - Add To Cart', () => {'  const testProductId = pro-ca
 
     render(
       <MemoryRouterProvider url={`/equipment/${testProductId}` }>
-        <EquipmentDetail />
+        <EquipmentDetail  />
       </MemoryRouterProvider>
     );
 
@@ -103,7 +103,7 @@ describe('EquipmentDetail - Add To Cart', () => {'  const testProductId = pro-ca
 
     render(
       <MemoryRouterProvider url={`/equipment/${testProductId}` }>
-        <EquipmentDetail />
+        <EquipmentDetail  />
       </MemoryRouterProvider>
     );
 

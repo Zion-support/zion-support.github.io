@@ -33,7 +33,7 @@ export function ToastProvider({ children, maxToasts = 5 }: ToastProviderProps) {
 
   const addToast = useCallback((toast: Omit<ToastProps, 'id'>) => {
     const id = Math.random().toString(36).substr(2, 9)
-    const newToast: ToastProps = { ...toast, id }
+    const newToast: ToastProps ={ ...toast, id }
 
     setToasts(prev => {
       const updated = [...prev, newToast]
@@ -64,7 +64,7 @@ export function ToastProvider({ children, maxToasts = 5 }: ToastProviderProps) {
     return addToast({ type: 'info', title, description, ...options })
   }, [addToast])
 
-  const value: ToastContextType = {
+  const value: ToastContextType ={
     toasts,
     addToast,
     removeToast,
@@ -77,7 +77,7 @@ export function ToastProvider({ children, maxToasts = 5 }: ToastProviderProps) {
   return (
     <ToastContext.Provider value={value}>
       {children}
-      <ToastContainer toasts={toasts} onRemoveToast={removeToast} />
+      <ToastContainer toasts={toasts} onRemoveToast={removeToast}  />
     </ToastContext.Provider>
   )
 }

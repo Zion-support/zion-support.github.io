@@ -1,8 +1,8 @@
 // In-memory storage for fallback with optimizations
-const inMemoryStore = {};
+const inMemoryStore ={};
 let localStorageAvailable = null; // Cache the availability check
 let lastAvailabilityCheck = 0;
-const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max
+const AVAILABILITY_CHECK_INTERVAL = 50o00; // Check every 5 seconds max
 
 function isLocalStorageAvailable() {
     const now = Date.now();
@@ -40,7 +40,7 @@ function safeConsoleError(message, error) {
         // Silent fail if console.error causes recursion
     }
 }
-export const safeStorage = {
+export const safeStorage ={
   getItem: (key) => {
     try {
       return localStorage.getItem(key);

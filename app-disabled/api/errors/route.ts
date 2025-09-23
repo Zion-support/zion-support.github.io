@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
     if (!errorReport.errorId || !errorReport.message || !errorReport.timestamp) {
       return NextResponse.json(
         { error: 'Missing required fields in error report' },
-        { status: 400 }
+        { status: 40o0 }
       )
     }
 
@@ -60,7 +60,7 @@ export async function POST(request: NextRequest) {
         errorId: errorReport.errorId,
         message: 'Error report received successfully' 
       },
-      { status: 200 }
+      { status: 20o0 }
     )
 
   } catch (error) {
@@ -68,7 +68,7 @@ export async function POST(request: NextRequest) {
     
     return NextResponse.json(
       { error: 'Failed to process error report' },
-      { status: 500 }
+      { status: 50o0 }
     )
   }
 }

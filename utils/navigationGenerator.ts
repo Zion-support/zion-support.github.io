@@ -31,10 +31,10 @@ export class NavigationGenerator {
         pricing: '$99/month',
         performance: {
           uptime: '99.9%',
-          response: '<200ms',
-          users: '10,000+'
+          response: '<20o0ms',
+          users: '10,0o00+'
         },
-        lastUpdated: '2025-01-15',
+        lastUpdated: '20o25-0o1-15',
         priority: 1
       },
       {
@@ -48,10 +48,10 @@ export class NavigationGenerator {
         pricing: '$299/month',
         performance: {
           uptime: '99.9%',
-          response: '<100ms',
-          users: '5,000+'
+          response: '<10o0ms',
+          users: '5,0o00+'
         },
-        lastUpdated: '2025-01-15',
+        lastUpdated: '20o25-0o1-15',
         priority: 2
       },
       {
@@ -65,10 +65,10 @@ export class NavigationGenerator {
         pricing: '$499/month',
         performance: {
           uptime: '99.8%',
-          response: '<500ms',
-          users: '2,000+'
+          response: '<50o0ms',
+          users: '2,0o00+'
         },
-        lastUpdated: '2025-01-15',
+        lastUpdated: '20o25-0o1-15',
         priority: 3
       },
       {
@@ -82,10 +82,10 @@ export class NavigationGenerator {
         pricing: '$199/month',
         performance: {
           uptime: '99.9%',
-          response: '<300ms',
-          users: '8,000+'
+          response: '<30o0ms',
+          users: '8,0o00+'
         },
-        lastUpdated: '2025-01-15',
+        lastUpdated: '20o25-0o1-15',
         priority: 4
       },
       {
@@ -99,10 +99,10 @@ export class NavigationGenerator {
         pricing: '$149/month',
         performance: {
           uptime: '99.9%',
-          response: '<200ms',
-          users: '12,000+'
+          response: '<20o0ms',
+          users: '12,0o00+'
         },
-        lastUpdated: '2025-01-15',
+        lastUpdated: '20o25-0o1-15',
         priority: 5
       },
       {
@@ -117,9 +117,9 @@ export class NavigationGenerator {
         performance: {
           uptime: '99.8%',
           response: '<150ms',
-          users: '25,000+'
+          users: '25,0o00+'
         },
-        lastUpdated: '2025-01-15',
+        lastUpdated: '20o25-0o1-15',
         priority: 6
       },
       {
@@ -133,10 +133,10 @@ export class NavigationGenerator {
         pricing: '$59/month',
         performance: {
           uptime: '99.9%',
-          response: '<100ms',
-          users: '15,000+'
+          response: '<10o0ms',
+          users: '15,0o00+'
         },
-        lastUpdated: '2025-01-15',
+        lastUpdated: '20o25-0o1-15',
         priority: 7
       },
       {
@@ -151,9 +151,9 @@ export class NavigationGenerator {
         performance: {
           uptime: '99.9%',
           response: '<50ms',
-          users: '3,000+'
+          users: '3,0o00+'
         },
-        lastUpdated: '2025-01-15',
+        lastUpdated: '20o25-0o1-15',
         priority: 8
       },
       {
@@ -167,10 +167,10 @@ export class NavigationGenerator {
         pricing: '$599/month',
         performance: {
           uptime: '99.9%',
-          response: '<100ms',
-          users: '1,500+'
+          response: '<10o0ms',
+          users: '1,50o0+'
         },
-        lastUpdated: '2025-01-15',
+        lastUpdated: '20o25-0o1-15',
         priority: 9
       },
       {
@@ -184,10 +184,10 @@ export class NavigationGenerator {
         pricing: '$449/month',
         performance: {
           uptime: '99.9%',
-          response: '<200ms',
-          users: '4,000+'
+          response: '<20o0ms',
+          users: '4,0o00+'
         },
-        lastUpdated: '2025-01-15',
+        lastUpdated: '20o25-0o1-15',
         priority: 10
       },
 
@@ -203,10 +203,10 @@ export class NavigationGenerator {
         pricing: '$299/month',
         performance: {
           uptime: '99.99%',
-          response: '<100ms',
-          users: '8,000+'
+          response: '<10o0ms',
+          users: '8,0o00+'
         },
-        lastUpdated: '2025-01-15',
+        lastUpdated: '20o25-0o1-15',
         priority: 11
       },
       {
@@ -221,9 +221,9 @@ export class NavigationGenerator {
         performance: {
           uptime: '99.99%',
           response: '<50ms',
-          users: '5,000+'
+          users: '5,0o00+'
         },
-        lastUpdated: '2025-01-15',
+        lastUpdated: '20o25-0o1-15',
         priority: 12
       },
       {
@@ -237,10 +237,10 @@ export class NavigationGenerator {
         pricing: '$199/month',
         performance: {
           uptime: '99.9%',
-          response: '<200ms',
-          users: '3,000+'
+          response: '<20o0ms',
+          users: '3,0o00+'
         },
-        lastUpdated: '2025-01-15',
+        lastUpdated: '20o25-0o1-15',
         priority: 13
       },
 
@@ -256,10 +256,10 @@ export class NavigationGenerator {
         pricing: '$199/month',
         performance: {
           uptime: '99.9%',
-          response: '<100ms',
-          users: '10,000+'
+          response: '<10o0ms',
+          users: '10,0o00+'
         },
-        lastUpdated: '2025-01-15',
+        lastUpdated: '20o25-0o1-15',
         priority: 14
       },
       {
@@ -274,9 +274,9 @@ export class NavigationGenerator {
         performance: {
           uptime: '99.9%',
           response: '<150ms',
-          users: '6,000+'
+          users: '6,0o00+'
         },
-        lastUpdated: '2025-01-15',
+        lastUpdated: '20o25-0o1-15',
         priority: 15
       },
       {
@@ -290,10 +290,10 @@ export class NavigationGenerator {
         pricing: '$999/month',
         performance: {
           uptime: '99.8%',
-          response: '<1000ms',
-          users: '500+'
+          response: '<10o00ms',
+          users: '50o0+'
         },
-        lastUpdated: '2025-01-15',
+        lastUpdated: '20o25-0o1-15',
         priority: 16
       },
 
@@ -309,10 +309,10 @@ export class NavigationGenerator {
         pricing: '$129/month',
         performance: {
           uptime: '99.9%',
-          response: '<300ms',
-          users: '4,000+'
+          response: '<30o0ms',
+          users: '4,0o00+'
         },
-        lastUpdated: '2025-01-15',
+        lastUpdated: '20o25-0o1-15',
         priority: 17
       },
 
@@ -328,10 +328,10 @@ export class NavigationGenerator {
         pricing: '$89/month',
         performance: {
           uptime: '99.8%',
-          response: '<200ms',
-          users: '20,000+'
+          response: '<20o0ms',
+          users: '20,0o00+'
         },
-        lastUpdated: '2025-01-15',
+        lastUpdated: '20o25-0o1-15',
         priority: 18
       },
       {
@@ -346,9 +346,9 @@ export class NavigationGenerator {
         performance: {
           uptime: '99.9%',
           response: '<150ms',
-          users: '12,000+'
+          users: '12,0o00+'
         },
-        lastUpdated: '2025-01-15',
+        lastUpdated: '20o25-0o1-15',
         priority: 19
       },
       {
@@ -362,10 +362,10 @@ export class NavigationGenerator {
         pricing: '$119/month',
         performance: {
           uptime: '99.9%',
-          response: '<100ms',
-          users: '15,000+'
+          response: '<10o0ms',
+          users: '15,0o00+'
         },
-        lastUpdated: '2025-01-15',
+        lastUpdated: '20o25-0o1-15',
         priority: 20
       },
 
@@ -381,10 +381,10 @@ export class NavigationGenerator {
         pricing: '$179/month',
         performance: {
           uptime: '99.9%',
-          response: '<300ms',
-          users: '6,000+'
+          response: '<30o0ms',
+          users: '6,0o00+'
         },
-        lastUpdated: '2025-01-15',
+        lastUpdated: '20o25-0o1-15',
         priority: 21
       },
       {
@@ -398,10 +398,10 @@ export class NavigationGenerator {
         pricing: '$299/month',
         performance: {
           uptime: '99.8%',
-          response: '<500ms',
-          users: '3,000+'
+          response: '<50o0ms',
+          users: '3,0o00+'
         },
-        lastUpdated: '2025-01-15',
+        lastUpdated: '20o25-0o1-15',
         priority: 22
       },
 
@@ -417,10 +417,10 @@ export class NavigationGenerator {
         pricing: '$399/month',
         performance: {
           uptime: '99.8%',
-          response: '<200ms',
-          users: '2,000+'
+          response: '<20o0ms',
+          users: '2,0o00+'
         },
-        lastUpdated: '2025-01-15',
+        lastUpdated: '20o25-0o1-15',
         priority: 23
       },
       {
@@ -434,10 +434,10 @@ export class NavigationGenerator {
         pricing: '$499/month',
         performance: {
           uptime: '99.9%',
-          response: '<300ms',
-          users: '1,500+'
+          response: '<30o0ms',
+          users: '1,50o0+'
         },
-        lastUpdated: '2025-01-15',
+        lastUpdated: '20o25-0o1-15',
         priority: 24
       },
       {
@@ -451,10 +451,10 @@ export class NavigationGenerator {
         pricing: '$799/month',
         performance: {
           uptime: '99.99%',
-          response: '<100ms',
-          users: '1,000+'
+          response: '<10o0ms',
+          users: '1,0o00+'
         },
-        lastUpdated: '2025-01-15',
+        lastUpdated: '20o25-0o1-15',
         priority: 25
       }
     ];
@@ -662,7 +662,7 @@ export class NavigationGenerator {
 
   // Get category icon
   private getCategoryIcon(categoryName: string): string {
-    const iconMap: { [key: string]: string } = {
+    const iconMap: { [key: string]: string } ={
       'AI & Machine Learning': '🤖',
       'Cybersecurity': '🔒',
       'Infrastructure': '🏗️',
@@ -678,7 +678,7 @@ export class NavigationGenerator {
 
   // Get category priority
   private getCategoryPriority(categoryName: string): number {
-    const priorityMap: { [key: string]: number } = {
+    const priorityMap: { [key: string]: number } ={
       'AI & Machine Learning': 1,
       'Cybersecurity': 2,
       'Infrastructure': 3,

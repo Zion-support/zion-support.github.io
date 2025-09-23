@@ -12,7 +12,6 @@ import { useSmartContracts } from "@/hooks/useSmartContracts";
 import { toast } from "sonner";
 import {logErrorToProduction} from '@/utils/productionLogger';
 
-
 interface SmartContractBuilderProps {
   isOpen: boolean;
   onClose: () => void;
@@ -26,8 +25,7 @@ export function SmartContractBuilder({
   onClose,
   talent,
   clientName,
-  onContractGenerated,
-}: SmartContractBuilderProps) {
+  onContractGenerated}: SmartContractBuilderProps) {
   const [activeTab, setActiveTab] = useState<string>("form");
   const [generatedContract, setGeneratedContract] = useState<string | null>(null);
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
@@ -103,7 +101,7 @@ export function SmartContractBuilder({
                 onClick={() => setTemplateManagerOpen(true)}
                 className="flex gap-1"
               >
-                <Save className="h-4 w-4" />
+                <Save className="h-4 w-4"  />
                 Templates
               </Button>
             </div>
@@ -116,7 +114,7 @@ export function SmartContractBuilder({
               initialValues={formValues}
               onFormValuesChange={setFormValues}
               onContractGenerated={handleFormSubmit}
-            />
+             />
           </TabsContent>
           
           <TabsContent value="preview" className="pt-4">
@@ -127,14 +125,14 @@ export function SmartContractBuilder({
                   talent={talent}
                   onClose={onClose}
                   deploymentInfo={deploymentInfo}
-                />
+                 />
                 
                 {!deploymentInfo && deployOptions.deployToChain && (
                   <div className="mt-6 flex justify-center">
                     <Button 
                       onClick={handleDeployContract}
                       disabled={deployStatus === 'deploying'}
-                      className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                      className="bg-gradient-to-r from-blue-60o0 to-indigo-60o0 hover:from-blue-70o0 hover:to-indigo-70o0"
                     >
                       {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
                     </Button>

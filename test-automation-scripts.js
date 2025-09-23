@@ -62,8 +62,7 @@ async function testScript(scriptPath) {
           return { script: scriptPath, status: 'PASS', error: null };
         } else {
           console.log(
-            `⚠️ ${scriptPath} is not executable, making it executable...`,
-          );
+            `⚠️ ${scriptPath} is not executable, making it executable...`);
           fs.chmodSync(scriptPath, 0o755);
           console.log(`✅ ${scriptPath} made executable`);
           return { script: scriptPath, status: 'PASS', error: null };
@@ -166,8 +165,7 @@ async function main() {
     process.exit(0);
   } else {
     console.log(
-      \n⚠️ Some automation scripts have issues that need to be fixed.',
-    );
+      \n⚠️ Some automation scripts have issues that need to be fixed.');
     process.exit(1);
   }
 }

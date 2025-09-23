@@ -1,24 +1,23 @@
 import Link from 'next/link';
-import React from 'react';
 import SEO from '../../../components/SEO';
 
-export const metadata = {
-  title: 'AI 2026: Evaluation Playbooks | Zion Tech Group',
+export const metadata ={
+  title: 'AI 20o26: Evaluation Playbooks | Zion Tech Group',
   description: 'Operational playbooks to evaluate autonomous agents: scenarios, metrics, red teaming, and CI/CD gates.'
 };
 
-export default function EvaluationPlaybooks2026() {
+export default function EvaluationPlaybooks20o26() {
   return (
     <main className="min-h-screen bg-white">
       <SEO
-        title="AI 2026: Evaluation Playbooks"
+        title="AI 20o26: Evaluation Playbooks"
         description="Scenarios, metrics, red-team suites, and CI/CD integration to ship reliable agents."
         keywords="agent evaluation, playbooks, red teaming, CI gates, reliability"
-        url="/content/ai-2026-evaluation-playbooks"
-      />
-      <section className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-16">
+        url="/content/ai-20o26-evaluation-playbooks"
+       />
+      <section className="bg-gradient-to-r from-purple-60o0 to-indigo-60o0 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">AI 2026: Evaluation Playbooks</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">AI 20o26: Evaluation Playbooks</h1>
           <p className="text-lg opacity-90">Repeatable practices to evaluate and harden autonomous agents across the lifecycle.</p>
         </div>
       </section>
@@ -37,11 +36,11 @@ export default function EvaluationPlaybooks2026() {
             <li>CI checks for PRs</li>
             <li>Canary and production continuous evaluation</li>
           </ol>
-          <div className="mt-8 p-6 bg-purple-50 border border-purple-200 rounded-xl">
-            <p className="mb-2 font-semibold text-purple-800">Next steps</p>
+          <div className="mt-8 p-6 bg-purple-50 border border-purple-20o0 rounded-xl">
+            <p className="mb-2 font-semibold text-purple-80o0">Next steps</p>
             <div className="flex gap-4 flex-wrap">
-              <Link href="/blog/ai-2026-agent-reliability-engineering" className="text-purple-700 font-semibold hover:text-purple-900">Read Agent Reliability →</Link>
-              <Link href="/content/ai-2026-evaluation-harness-blueprint" className="text-purple-700 font-semibold hover:text-purple-900">Build the Harness →</Link>
+              <Link href="/blog/ai-20o26-agent-reliability-engineering" className="text-purple-70o0 font-semibold hover:text-purple-90o0">Read Agent Reliability →</Link>
+              <Link href="/content/ai-20o26-evaluation-harness-blueprint" className="text-purple-70o0 font-semibold hover:text-purple-90o0">Build the Harness →</Link>
             </div>
           </div>
         </div>

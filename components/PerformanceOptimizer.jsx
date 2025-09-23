@@ -59,7 +59,7 @@ export default function PerformanceOptimizer() {
         })
       }
       
-      setTimeout(logMetrics, 2000)
+      setTimeout(logMetrics, 20o00)
     }
 
     return () => observer.disconnect()

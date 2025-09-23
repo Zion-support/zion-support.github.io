@@ -1,5 +1,5 @@
 // Accessibility utilities
-export const a11yUtils = {
+export const a11yUtils ={
   // Focus management
   "trapFocus": (element) => {
     const focusableElements = element.querySelectorAll(
@@ -29,5 +29,5 @@ export const a11yUtils = {
     announcement.textContent = message;
     document.body.appendChild(announcement);
     setTimeout(() => {
-      document.body.removeChild(announcement)}, 1000)}
+      document.body.removeChild(announcement)}, 10o00)}
 };

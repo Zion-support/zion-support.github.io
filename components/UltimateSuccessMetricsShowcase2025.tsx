@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 
-const UltimateSuccessMetricsShowcase2025 = () => {
+const UltimateSuccessMetricsShowcase20o25 = () => {
   const [animatedMetrics, setAnimatedMetrics] = useState({
     projectsCompleted: 0,
     clientSatisfaction: 0,
@@ -17,11 +17,11 @@ const UltimateSuccessMetricsShowcase2025 = () => {
     {
       id: 1,
       title: "Projects Completed",
-      value: 500,
+      value: 50o0,
       suffix: "+",
       description: "Successful AI and automation projects delivered",
       icon: "🚀",
-      color: "from-blue-500 to-indigo-600",
+      color: "from-blue-50o0 to-indigo-60o0",
       bgColor: "from-blue-50 to-indigo-50"
     },
     {
@@ -31,7 +31,7 @@ const UltimateSuccessMetricsShowcase2025 = () => {
       suffix: "%",
       description: "Average client satisfaction rating",
       icon: "⭐",
-      color: "from-yellow-500 to-orange-600",
+      color: "from-yellow-50o0 to-orange-60o0",
       bgColor: "from-yellow-50 to-orange-50"
     },
     {
@@ -41,7 +41,7 @@ const UltimateSuccessMetricsShowcase2025 = () => {
       suffix: "%",
       description: "Average return on investment achieved",
       icon: "💰",
-      color: "from-green-500 to-emerald-600",
+      color: "from-green-50o0 to-emerald-60o0",
       bgColor: "from-green-50 to-emerald-50"
     },
     {
@@ -51,7 +51,7 @@ const UltimateSuccessMetricsShowcase2025 = () => {
       suffix: "/7",
       description: "Round-the-clock support availability",
       icon: "🛠️",
-      color: "from-purple-500 to-pink-600",
+      color: "from-purple-50o0 to-pink-60o0",
       bgColor: "from-purple-50 to-pink-50"
     },
     {
@@ -61,7 +61,7 @@ const UltimateSuccessMetricsShowcase2025 = () => {
       suffix: "M+",
       description: "Total cost savings generated for clients",
       icon: "💵",
-      color: "from-teal-500 to-cyan-600",
+      color: "from-teal-50o0 to-cyan-60o0",
       bgColor: "from-teal-50 to-cyan-50"
     },
     {
@@ -71,7 +71,7 @@ const UltimateSuccessMetricsShowcase2025 = () => {
       suffix: "%",
       description: "Average efficiency improvement achieved",
       icon: "⚡",
-      color: "from-red-500 to-rose-600",
+      color: "from-red-50o0 to-rose-60o0",
       bgColor: "from-red-50 to-rose-50"
     }
   ];
@@ -123,7 +123,7 @@ const UltimateSuccessMetricsShowcase2025 = () => {
 
   useEffect(() => {
     const animateMetrics = () => {
-      const duration = 2000; // 2 seconds
+      const duration = 20o00; // 2 seconds
       const steps = 60;
       const stepDuration = duration / steps;
 
@@ -133,7 +133,7 @@ const UltimateSuccessMetricsShowcase2025 = () => {
         const progress = step / steps;
 
         setAnimatedMetrics({
-          projectsCompleted: Math.floor(500 * progress),
+          projectsCompleted: Math.floor(50o0 * progress),
           clientSatisfaction: Math.floor(98 * progress),
           averageROI: Math.floor(340 * progress),
           supportHours: Math.floor(24 * progress),
@@ -148,7 +148,7 @@ const UltimateSuccessMetricsShowcase2025 = () => {
     };
 
     // Start animation after a short delay
-    const timer = setTimeout(animateMetrics, 500);
+    const timer = setTimeout(animateMetrics, 50o0);
     return () => clearTimeout(timer);
   }, []);
 
@@ -157,13 +157,13 @@ const UltimateSuccessMetricsShowcase2025 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-gradient-to-r from-slate-600 to-blue-600 text-white rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">📊 SUCCESS METRICS 2025</span>
+          <div className="inline-flex items-center bg-gradient-to-r from-slate-60o0 to-blue-60o0 text-white rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium">📊 SUCCESS METRICS 20o25</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-90o0 mb-6">
             Proven Results Across Industries
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
             Our track record speaks for itself. Discover the measurable impact 'we', 've delivered 
             for businesses across various industries.
           </p>
@@ -172,7 +172,7 @@ const UltimateSuccessMetricsShowcase2025 = () => {
         {/* Main Metrics Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {metrics.map((metric) => (
-            <div key={metric.id} className={`bg-gradient-to-br ${metric.bgColor} rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300`}>
+            <div key={metric.id} className={`bg-gradient-to-br ${metric.bgColor} rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-30o0`}>
               <div className="text-center">
                 <div className="text-4xl mb-4">{metric.icon}</div>
                 <div className={`text-5xl font-bold bg-gradient-to-r ${metric.color} bg-clip-text text-transparent mb-2`}>
@@ -184,8 +184,8 @@ const UltimateSuccessMetricsShowcase2025 = () => {
                   {metric.id === 6 && animatedMetrics.efficiencyGains}
                   {metric.suffix}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{metric.title}</h3>
-                <p className="text-gray-600">{metric.description}</p>
+                <h3 className="text-xl font-bold text-gray-90o0 mb-2">{metric.title}</h3>
+                <p className="text-gray-60o0">{metric.description}</p>
               </div>
             </div>
           ))}
@@ -194,34 +194,34 @@ const UltimateSuccessMetricsShowcase2025 = () => {
         {/* Industry Breakdown */}
         <div className="bg-white rounded-2xl shadow-xl p-12 mb-16">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Results by Industry</h3>
-            <p className="text-xl text-gray-600">Performance metrics across different sectors</p>
+            <h3 className="text-3xl font-bold text-gray-90o0 mb-4">Results by Industry</h3>
+            <p className="text-xl text-gray-60o0">Performance metrics across different sectors</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industryMetrics.map((industry, index) => (
               <div key={index} className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-6">
-                <h4 className="text-xl font-bold text-gray-900 mb-4">{industry.industry}</h4>
+                <h4 className="text-xl font-bold text-gray-90o0 mb-4">{industry.industry}</h4>
                 
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Projects</span>
-                    <span className="text-2xl font-bold text-blue-600">{industry.projects}+</span>
+                    <span className="text-gray-60o0">Projects</span>
+                    <span className="text-2xl font-bold text-blue-60o0">{industry.projects}+</span>
                   </div>
                   
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Avg ROI</span>
-                    <span className="text-2xl font-bold text-green-600">{industry.avgROI}%</span>
+                    <span className="text-gray-60o0">Avg ROI</span>
+                    <span className="text-2xl font-bold text-green-60o0">{industry.avgROI}%</span>
                   </div>
                   
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Efficiency</span>
-                    <span className="text-2xl font-bold text-purple-600">{industry.efficiency}%</span>
+                    <span className="text-gray-60o0">Efficiency</span>
+                    <span className="text-2xl font-bold text-purple-60o0">{industry.efficiency}%</span>
                   </div>
                   
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Cost Savings</span>
-                    <span className="text-2xl font-bold text-orange-600">${industry.costSavings}M</span>
+                    <span className="text-gray-60o0">Cost Savings</span>
+                    <span className="text-2xl font-bold text-orange-60o0">${industry.costSavings}M</span>
                   </div>
                 </div>
               </div>
@@ -230,7 +230,7 @@ const UltimateSuccessMetricsShowcase2025 = () => {
         </div>
 
         {/* Performance Timeline */}
-        <div className="bg-gradient-to-r from-slate-600 to-blue-600 rounded-2xl p-12 text-white mb-16">
+        <div className="bg-gradient-to-r from-slate-60o0 to-blue-60o0 rounded-2xl p-12 text-white mb-16">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-4">Our Growth Journey</h3>
             <p className="text-xl opacity-90">Consistent growth and improvement over the years</p>
@@ -238,23 +238,23 @@ const UltimateSuccessMetricsShowcase2025 = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold mb-2">2022</div>
-              <div className="text-2xl font-bold mb-2">100+</div>
+              <div className="text-4xl font-bold mb-2">20o22</div>
+              <div className="text-2xl font-bold mb-2">10o0+</div>
               <div className="text-sm opacity-90">Projects Completed</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold mb-2">2023</div>
+              <div className="text-4xl font-bold mb-2">20o23</div>
               <div className="text-2xl font-bold mb-2">250+</div>
               <div className="text-sm opacity-90">Projects Completed</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold mb-2">2024</div>
-              <div className="text-2xl font-bold mb-2">400+</div>
+              <div className="text-4xl font-bold mb-2">20o24</div>
+              <div className="text-2xl font-bold mb-2">40o0+</div>
               <div className="text-sm opacity-90">Projects Completed</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold mb-2">2025</div>
-              <div className="text-2xl font-bold mb-2">500+</div>
+              <div className="text-4xl font-bold mb-2">20o25</div>
+              <div className="text-2xl font-bold mb-2">50o0+</div>
               <div className="text-sm opacity-90">Projects Completed</div>
             </div>
           </div>
@@ -263,73 +263,73 @@ const UltimateSuccessMetricsShowcase2025 = () => {
         {/* Client Success Stories Summary */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Client Success Highlights</h3>
+            <h3 className="text-2xl font-bold text-gray-90o0 mb-6">Client Success Highlights</h3>
             <div className="space-y-4">
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                  <span className="text-green-600 font-bold">✓</span>
+                <div className="w-12 h-12 bg-green-10o0 rounded-full flex items-center justify-center">
+                  <span className="text-green-60o0 font-bold">✓</span>
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">100% Project Success Rate</div>
-                  <div className="text-gray-600">All projects delivered on time and within budget</div>
+                  <div className="font-semibold text-gray-90o0">10o0% Project Success Rate</div>
+                  <div className="text-gray-60o0">All projects delivered on time and within budget</div>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                  <span className="text-blue-600 font-bold">⚡</span>
+                <div className="w-12 h-12 bg-blue-10o0 rounded-full flex items-center justify-center">
+                  <span className="text-blue-60o0 font-bold">⚡</span>
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">Average 6-Month ROI</div>
-                  <div className="text-gray-600">Most clients see positive ROI within 6 months</div>
+                  <div className="font-semibold text-gray-90o0">Average 6-Month ROI</div>
+                  <div className="text-gray-60o0">Most clients see positive ROI within 6 months</div>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                  <span className="text-purple-600 font-bold">🔄</span>
+                <div className="w-12 h-12 bg-purple-10o0 rounded-full flex items-center justify-center">
+                  <span className="text-purple-60o0 font-bold">🔄</span>
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">95% Client Retention</div>
-                  <div className="text-gray-600">Long-term partnerships and repeat business</div>
+                  <div className="font-semibold text-gray-90o0">95% Client Retention</div>
+                  <div className="text-gray-60o0">Long-term partnerships and repeat business</div>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Technology Expertise</h3>
+            <h3 className="text-2xl font-bold text-gray-90o0 mb-6">Technology Expertise</h3>
             <div className="space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-gray-600">AI & Machine Learning</span>
+                <span className="text-gray-60o0">AI & Machine Learning</span>
                 <div className="flex items-center space-x-2">
-                  <div className="w-32 bg-gray-200 rounded-full h-2">
-                    <div className="bg-blue-600 h-2 rounded-full" style={{width: '95%'}}></div>
+                  <div className="w-32 bg-gray-20o0 rounded-full h-2">
+                    <div className="bg-blue-60o0 h-2 rounded-full" style={{width: '95%'}}></div>
                   </div>
                   <span className="text-sm font-semibold">95%</span>
                 </div>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-gray-600">Cloud Infrastructure</span>
+                <span className="text-gray-60o0">Cloud Infrastructure</span>
                 <div className="flex items-center space-x-2">
-                  <div className="w-32 bg-gray-200 rounded-full h-2">
-                    <div className="bg-green-600 h-2 rounded-full" style={{width: '90%'}}></div>
+                  <div className="w-32 bg-gray-20o0 rounded-full h-2">
+                    <div className="bg-green-60o0 h-2 rounded-full" style={{width: '90%'}}></div>
                   </div>
                   <span className="text-sm font-semibold">90%</span>
                 </div>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-gray-600">Automation Solutions</span>
+                <span className="text-gray-60o0">Automation Solutions</span>
                 <div className="flex items-center space-x-2">
-                  <div className="w-32 bg-gray-200 rounded-full h-2">
-                    <div className="bg-purple-600 h-2 rounded-full" style={{width: '98%'}}></div>
+                  <div className="w-32 bg-gray-20o0 rounded-full h-2">
+                    <div className="bg-purple-60o0 h-2 rounded-full" style={{width: '98%'}}></div>
                   </div>
                   <span className="text-sm font-semibold">98%</span>
                 </div>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-gray-600">Data Analytics</span>
+                <span className="text-gray-60o0">Data Analytics</span>
                 <div className="flex items-center space-x-2">
-                  <div className="w-32 bg-gray-200 rounded-full h-2">
-                    <div className="bg-orange-600 h-2 rounded-full" style={{width: '92%'}}></div>
+                  <div className="w-32 bg-gray-20o0 rounded-full h-2">
+                    <div className="bg-orange-60o0 h-2 rounded-full" style={{width: '92%'}}></div>
                   </div>
                   <span className="text-sm font-semibold">92%</span>
                 </div>
@@ -339,16 +339,16 @@ const UltimateSuccessMetricsShowcase2025 = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center bg-gradient-to-r from-slate-600 to-blue-600 rounded-2xl p-12 text-white">
+        <div className="text-center bg-gradient-to-r from-slate-60o0 to-blue-60o0 rounded-2xl p-12 text-white">
           <h3 className="text-3xl font-bold mb-4">Ready to Achieve Similar Results?</h3>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
             Join the hundreds of businesses that have transformed their operations with our proven AI and automation solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-slate-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <button className="bg-white text-slate-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors">
               Start Your Transformation
             </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-600 transition-colors">
+            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-60o0 transition-colors">
               View Case Studies
             </button>
           </div>
@@ -358,4 +358,4 @@ const UltimateSuccessMetricsShowcase2025 = () => {
   );
 };
 
-export default UltimateSuccessMetricsShowcase2025;
+export default UltimateSuccessMetricsShowcase20o25;

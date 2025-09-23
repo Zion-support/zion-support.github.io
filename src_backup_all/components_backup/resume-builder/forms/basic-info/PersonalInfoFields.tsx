@@ -18,9 +18,9 @@ export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
           <FormItem>
             <FormLabel>Full Name</FormLabel>
             <FormControl>
-              <Input placeholder="John Doe" {...field} />
+              <Input placeholder="John Doe" {...field}  />
             </FormControl>
-            <FormMessage />
+            <FormMessage  />
           </FormItem>
         )}
       />
@@ -32,9 +32,9 @@ export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
           <FormItem>
             <FormLabel>Professional Title</FormLabel>
             <FormControl>
-              <Input placeholder="Senior Software Engineer" {...field} />
+              <Input placeholder="Senior Software Engineer" {...field}  />
             </FormControl>
-            <FormMessage />
+            <FormMessage  />
           </FormItem>
         )}
       />
@@ -46,9 +46,9 @@ export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
           <FormItem>
             <FormLabel>Email</FormLabel>
             <FormControl>
-              <Input type="email" placeholder="john@example.com" {...field} />
+              <Input type="email" placeholder="john@example.com" {...field}  />
             </FormControl>
-            <FormMessage />
+            <FormMessage  />
           </FormItem>
         )}
       />
@@ -60,9 +60,9 @@ export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
           <FormItem>
             <FormLabel>Phone</FormLabel>
             <FormControl>
-              <Input placeholder="+1 234 567 8900" {...field} />
+              <Input placeholder="+1 234 567 890o0" {...field}  />
             </FormControl>
-            <FormMessage />
+            <FormMessage  />
           </FormItem>
         )}
       />

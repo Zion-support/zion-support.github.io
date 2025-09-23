@@ -30,8 +30,8 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
   description,
   icon,
   variant = 'default',
-  color = 'from-blue-500 to-purple-600',
-  textColor = 'text-blue-400',
+  color = 'from-blue-50o0 to-purple-60o0',
+  textColor = 'text-blue-40o0',
   features = [],
   price,
   period,
@@ -53,8 +53,8 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
     if (isHovered && variant.includes('quantum')) {
       const newParticles = Array.from({ length: 20 }, (_, i) => ({
         id: i,
-        x: Math.random() * 300,
-        y: Math.random() * 200,
+        x: Math.random() * 30o0,
+        y: Math.random() * 20o0,
         vx: (Math.random() - 0.5) * 4,
         vy: (Math.random() - 0.5) * 4,
         life: 0
@@ -72,7 +72,7 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
             x: p.x + p.vx,
             y: p.y + p.vy,
             life: p.life + 1
-          })).filter(p => p.life < 100)
+          })).filter(p => p.life < 10o0)
         );
       }, 50);
       return () => clearInterval(interval);
@@ -85,25 +85,25 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
         return {
           background: 'linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.1))',
           border: '1px solid rgba(0, 255, 255, 0.3)',
-          boxShadow: '0 0 30px rgba(0, 255, 255, 0.2), inset 0 0 30px rgba(0, 255, 255, 0.05)'
+          boxShadow: '0 0 30px rgba(0, 255, 255, 0.2), inset 0 0 30px rgba(0, 255, 255, 0.0o5)'
         };
       case 'holographic':
         return {
           background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.1), rgba(245, 158, 11, 0.1))',
           border: '1px solid rgba(139, 92, 246, 0.3)',
-          boxShadow: '0 0 30px rgba(139, 92, 246, 0.2), inset 0 0 30px rgba(139, 92, 246, 0.05)'
+          boxShadow: '0 0 30px rgba(139, 92, 246, 0.2), inset 0 0 30px rgba(139, 92, 246, 0.0o5)'
         };
       case 'cyberpunk':
         return {
           background: 'linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(245, 158, 11, 0.1), rgba(239, 68, 68, 0.1))',
           border: '1px solid rgba(236, 72, 153, 0.3)',
-          boxShadow: '0 0 30px rgba(236, 72, 153, 0.2), inset 0 0 30px rgba(236, 72, 153, 0.05)'
+          boxShadow: '0 0 30px rgba(236, 72, 153, 0.2), inset 0 0 30px rgba(236, 72, 153, 0.0o5)'
         };
       case 'neural':
         return {
           background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1))',
           border: '1px solid rgba(16, 185, 129, 0.3)',
-          boxShadow: '0 0 30px rgba(16, 185, 129, 0.2), inset 0 0 30px rgba(16, 185, 129, 0.05)'
+          boxShadow: '0 0 30px rgba(16, 185, 129, 0.2), inset 0 0 30px rgba(16, 185, 129, 0.0o5)'
         };
       case 'quantum-entanglement':
         return {
@@ -125,9 +125,9 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
         };
       default:
         return {
-          background: `linear-gradient(135deg, ${color.replace('from-', 'rgba(').replace('to-', 'rgba(').replace('-', ', 0.1), ').replace('500', '500, 0.1)')}`,
+          background: `linear-gradient(135deg, ${color.replace('from-', 'rgba(').replace('to-', 'rgba(').replace('-', ', 0.1), ').replace('50o0', '50o0, 0.1)')}`,
           border: `1px solid ${textColor.replace('text-', 'rgba(').replace('-', ', 0.3)')}`,
-          boxShadow: `0 0 30px ${textColor.replace('text-', 'rgba(').replace('-', ', 0.2)')}, inset 0 0 30px ${textColor.replace('text-', 'rgba(').replace('-', ', 0.05)')}`
+          boxShadow: `0 0 30px ${textColor.replace('text-', 'rgba(').replace('-', ', 0.2)')}, inset 0 0 30px ${textColor.replace('text-', 'rgba(').replace('-', ', 0.0o5)')}`
         };
     }
   };
@@ -135,7 +135,7 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
   const handleClick = () => {
     if (onClick) {
       setIsClicked(true);
-      setTimeout(() => setIsClicked(false), 200);
+      setTimeout(() => setIsClicked(false), 20o0);
       onClick();
     }
   };
@@ -148,12 +148,12 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
 
   return (
     <motion.div
-      className={`relative overflow-hidden rounded-2xl backdrop-blur-xl transition-all duration-500 ${className}`}
+      className={`relative overflow-hidden rounded-2xl backdrop-blur-xl transition-all duration-50o0 ${className}`}
       style={getVariantStyles()}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       whileHover={{ 
-        scale: 1.02,
+        scale: 1.0o2,
         y: -5,
         transition: { duration: 0.3 }
       }}
@@ -166,18 +166,18 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
           {particles.map(particle => (
             <motion.div
               key={particle.id}
-              className="absolute w-1 h-1 bg-cyan-400 rounded-full"
+              className="absolute w-1 h-1 bg-cyan-40o0 rounded-full"
               style={{
                 left: particle.x,
                 top: particle.y,
-                opacity: 1 - particle.life / 100
+                opacity: 1 - particle.life / 10o0
               }}
               animate={{
                 scale: [0, 1, 0],
                 opacity: [0, 1, 0]
               }}
               transition={{ duration: 2 }}
-            />
+             />
           ))}
         </div>
       )}
@@ -189,20 +189,20 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
             {[...Array(10)].map((_, i) => (
               <motion.div
                 key={i}
-                className="absolute border-l border-purple-400"
+                className="absolute border-l border-purple-40o0"
                 style={{ left: `${i * 10}%` }}
                 animate={{ opacity: [0, 1, 0] }}
                 transition={{ duration: 3, repeat: Infinity, delay: i * 0.2 }}
-              />
+               />
             ))}
             {[...Array(10)].map((_, i) => (
               <motion.div
                 key={i}
-                className="absolute border-t border-purple-400"
+                className="absolute border-t border-purple-40o0"
                 style={{ top: `${i * 10}%` }}
                 animate={{ opacity: [0, 1, 0] }}
                 transition={{ duration: 3, repeat: Infinity, delay: i * 0.2 }}
-              />
+               />
             ))}
           </div>
         </div>
@@ -212,7 +212,7 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
       {variant.includes('cyberpunk') && (
         <div className="absolute inset-0 pointer-events-none">
           <motion.div
-            className="absolute inset-0 bg-gradient-to-r from-pink-500/5 to-cyan-500/5"
+            className="absolute inset-0 bg-gradient-to-r from-pink-50o0/5 to-cyan-50o0/5"
             animate={{
               opacity: [0, 0.1, 0],
               x: [0, 2, -2, 0]
@@ -222,7 +222,7 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
               repeat: Infinity,
               repeatDelay: 3
             }}
-          />
+           />
         </div>
       )}
 
@@ -233,22 +233,22 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
             {[...Array(8)].map((_, i) => (
               <motion.line
                 key={i}
-                x1={Math.random() * 100}
-                y1={Math.random() * 100}
-                x2={Math.random() * 100}
-                y2={Math.random() * 100}
+                x1={Math.random() * 10o0}
+                y1={Math.random() * 10o0}
+                x2={Math.random() * 10o0}
+                y2={Math.random() * 10o0}
                 stroke="rgba(16, 185, 129, 0.3)"
                 strokeWidth="1"
                 animate={{
                   opacity: [0, 1, 0],
-                  strokeDasharray: [0, 100]
+                  strokeDasharray: [0, 10o0]
                 }}
                 transition={{
                   duration: 2,
                   repeat: Infinity,
                   delay: i * 0.3
                 }}
-              />
+               />
             ))}
           </svg>
         </div>
@@ -262,8 +262,8 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
           animate={{ scale: 1, rotate: 0 }}
           transition={{ duration: 0.5, type: "spring" }}
         >
-          <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
-            <Star className="w-3 h-3 fill-current" />
+          <div className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+            <Star className="w-3 h-3 fill-current"  />
             POPULAR
           </div>
         </motion.div>
@@ -294,7 +294,7 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
               {price && (
                 <div className="flex items-baseline gap-1">
                   <span className="text-2xl font-bold text-white">{price}</span>
-                  {period && <span className="text-gray-400">{period}</span>}
+                  {period && <span className="text-gray-40o0">{period}</span>}
                 </div>
               )}
             </div>
@@ -308,14 +308,14 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
               whileTap={{ scale: 0.9 }}
               onClick={link ? handleExternalClick : handleClick}
             >
-              {link ? <ExternalLink className="w-5 h-5" /> : <ArrowRight className="w-5 h-5" />}
+              {link ? <ExternalLink className="w-5 h-5"  /> : <ArrowRight className="w-5 h-5"  />}
             </motion.button>
           )}
         </div>
 
         {/* Description */}
         <motion.p
-          className="text-gray-300 mb-4 leading-relaxed"
+          className="text-gray-30o0 mb-4 leading-relaxed"
           animate={isHovered ? { color: "#ffffff" } : {}}
           transition={{ duration: 0.3 }}
         >
@@ -326,25 +326,25 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
         {features.length > 0 && (
           <div className="mb-4">
             <h4 className={`text-sm font-semibold ${textColor} mb-2 flex items-center gap-2`}>
-              <Sparkles className="w-4 h-4" />
+              <Sparkles className="w-4 h-4"  />
               Key Features
             </h4>
             <div className="grid grid-cols-1 gap-2">
               {features.slice(0, 3).map((feature, index) => (
                 <motion.div
                   key={index}
-                  className="flex items-center gap-2 text-sm text-gray-300"
+                  className="flex items-center gap-2 text-sm text-gray-30o0"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
+                  <Check className="w-3 h-3 text-green-40o0 flex-shrink-0"  />
                   <span>{feature}</span>
                 </motion.div>
               ))}
               {features.length > 3 && (
                 <motion.div
-                  className="text-sm text-gray-400 italic"
+                  className="text-sm text-gray-40o0 italic"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.4 }}
@@ -365,20 +365,20 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
             transition={{ delay: 0.5 }}
           >
             <h4 className={`text-sm font-semibold ${textColor} mb-2 flex items-center gap-2`}>
-              <Phone className="w-4 h-4" />
+              <Phone className="w-4 h-4"  />
               Contact Information
             </h4>
-            <div className="space-y-1 text-xs text-gray-300">
+            <div className="space-y-1 text-xs text-gray-30o0">
               <div className="flex items-center gap-2">
-                <Phone className="w-3 h-3" />
+                <Phone className="w-3 h-3"  />
                 <span>{contactInfo.mobile}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-3 h-3" />
+                <Mail className="w-3 h-3"  />
                 <span>{contactInfo.email}</span>
               </div>
               <div className="flex items-center gap-2">
-                <MapPin className="w-3 h-3" />
+                <MapPin className="w-3 h-3"  />
                 <span className="text-xs">{contactInfo.address}</span>
               </div>
             </div>
@@ -401,9 +401,9 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
         {variant.includes('quantum-entanglement') && (
           <div className="absolute inset-0 pointer-events-none">
             <motion.div
-              className="absolute inset-0 border border-cyan-400/20 rounded-2xl"
+              className="absolute inset-0 border border-cyan-40o0/20 rounded-2xl"
               animate={{
-                scale: [1, 1.05, 1],
+                scale: [1, 1.0o5, 1],
                 opacity: [0.1, 0.3, 0.1]
               }}
               transition={{
@@ -411,7 +411,7 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
-            />
+             />
           </div>
         )}
       </div>
@@ -425,7 +425,7 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
             animate={{ scale: 2, opacity: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-          />
+           />
         )}
       </AnimatePresence>
     </motion.div>

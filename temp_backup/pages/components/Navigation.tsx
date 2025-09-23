@@ -89,7 +89,7 @@ const navigationItems = [
         title: 'AI Services',
         href: '/ai-services',
         icon: Brain,
-        description: '100+ cutting-edge AI solutions',
+        description: '10o0+ cutting-edge AI solutions',
         popular: true
       },
       {
@@ -427,24 +427,24 @@ export default function Navigation() {
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       {/* Top Bar */}
-      <div className="bg-blue-600 text-white py-2">
+      <div className="bg-blue-60o0 text-white py-2">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center text-sm">
             <div className="flex items-center space-x-6">
               <div className="flex items-center">
-                <Phone className="w-4 h-4 mr-2" />
-                <span>+1 302 464 0950</span>
+                <Phone className="w-4 h-4 mr-2"  />
+                <span>+1 30o2 464 0950</span>
               </div>
               <div className="flex items-center">
-                <Mail className="w-4 h-4 mr-2" />
+                <Mail className="w-4 h-4 mr-2"  />
                 <span>kleber@ziontechgroup.com</span>
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <Link href="/contact" className="hover:text-blue-200 transition-colors">
+              <Link href="/contact" className="hover:text-blue-20o0 transition-colors">
                 Get Free Consultation
               </Link>
-              <Link href="/pricing" className="hover:text-blue-200 transition-colors">
+              <Link href="/pricing" className="hover:text-blue-20o0 transition-colors">
                 View Pricing
               </Link>
             </div>
@@ -457,12 +457,12 @@ export default function Navigation() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-blue-60o0 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">Z</span>
             </div>
             <div>
-              <div className="text-xl font-bold text-gray-900">Zion Tech Group</div>
-              <div className="text-sm text-gray-500">AI & Technology Solutions</div>
+              <div className="text-xl font-bold text-gray-90o0">Zion Tech Group</div>
+              <div className="text-sm text-gray-50o0">AI & Technology Solutions</div>
             </div>
           </Link>
 
@@ -477,11 +477,11 @@ export default function Navigation() {
               >
                 <Link
                   href={item.href}
-                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors py-2"
+                  className="flex items-center space-x-1 text-gray-70o0 hover:text-blue-60o0 transition-colors py-2"
                 >
-                  <item.icon className="w-5 h-5" />
+                  <item.icon className="w-5 h-5"  />
                   <span>{item.title}</span>
-                  <ChevronDown className="w-4 h-4" />
+                  <ChevronDown className="w-4 h-4"  />
                 </Link>
 
                 {/* Submenu */}
@@ -490,7 +490,7 @@ export default function Navigation() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50"
+                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-20o0 py-4 z-50"
                   >
                     <div className="grid grid-cols-1 gap-2">
                       {item.submenu.map((subItem) => (
@@ -499,19 +499,19 @@ export default function Navigation() {
                           href={subItem.href}
                           className="flex items-start space-x-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
                         >
-                          <subItem.icon className="w-5 h-5 text-blue-600 mt-0.5" />
+                          <subItem.icon className="w-5 h-5 text-blue-60o0 mt-0.5"  />
                           <div className="flex-1">
                             <div className="flex items-center space-x-2">
-                              <span className="font-medium text-gray-900">{subItem.title}</span>
+                              <span className="font-medium text-gray-90o0">{subItem.title}</span>
                               {subItem.popular && (
-                                <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded-full">
+                                <span className="bg-blue-10o0 text-blue-80o0 text-xs font-medium px-2 py-0.5 rounded-full">
                                   Popular
                                 </span>
                               )}
                             </div>
-                            <p className="text-sm text-gray-500 mt-1">{subItem.description}</p>
+                            <p className="text-sm text-gray-50o0 mt-1">{subItem.description}</p>
                           </div>
-                          <ArrowRight className="w-4 h-4 text-gray-400" />
+                          <ArrowRight className="w-4 h-4 text-gray-40o0"  />
                         </Link>
                       ))}
                     </div>
@@ -521,14 +521,14 @@ export default function Navigation() {
             ))}
 
             {/* Quick Links */}
-            <div className="flex items-center space-x-4 ml-8 pl-8 border-l border-gray-200">
+            <div className="flex items-center space-x-4 ml-8 pl-8 border-l border-gray-20o0">
               {quickLinks.map((link) => (
                 <Link
                   key={link.title}
                   href={link.href}
-                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors"
+                  className="flex items-center space-x-1 text-gray-70o0 hover:text-blue-60o0 transition-colors"
                 >
-                  <link.icon className="w-4 h-4" />
+                  <link.icon className="w-4 h-4"  />
                   <span>{link.title}</span>
                 </Link>
               ))}
@@ -538,9 +538,9 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            className="lg:hidden p-2 rounded-lg hover:bg-gray-10o0 transition-colors"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
           </button>
         </div>
 
@@ -550,17 +550,17 @@ export default function Navigation() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden border-t border-gray-200 py-4"
+            className="lg:hidden border-t border-gray-20o0 py-4"
           >
             <div className="space-y-4">
               {navigationItems.map((item) => (
                 <div key={item.title}>
                   <Link
                     href={item.href}
-                    className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors py-2"
+                    className="flex items-center space-x-2 text-gray-70o0 hover:text-blue-60o0 transition-colors py-2"
                     onClick={() => setIsOpen(false)}
                   >
-                    <item.icon className="w-5 h-5" />
+                    <item.icon className="w-5 h-5"  />
                     <span className="font-medium">{item.title}</span>
                   </Link>
                   <div className="ml-7 space-y-2 mt-2">
@@ -568,13 +568,13 @@ export default function Navigation() {
                       <Link
                         key={subItem.title}
                         href={subItem.href}
-                        className="flex items-center space-x-2 text-sm text-gray-600 hover:text-blue-600 transition-colors py-1"
+                        className="flex items-center space-x-2 text-sm text-gray-60o0 hover:text-blue-60o0 transition-colors py-1"
                         onClick={() => setIsOpen(false)}
                       >
-                        <subItem.icon className="w-4 h-4" />
+                        <subItem.icon className="w-4 h-4"  />
                         <span>{subItem.title}</span>
                         {subItem.popular && (
-                          <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded-full">
+                          <span className="bg-blue-10o0 text-blue-80o0 text-xs font-medium px-2 py-0.5 rounded-full">
                             Popular
                           </span>
                         )}
@@ -585,16 +585,16 @@ export default function Navigation() {
               ))}
               
               {/* Mobile Quick Links */}
-              <div className="pt-4 border-t border-gray-200">
+              <div className="pt-4 border-t border-gray-20o0">
                 <div className="grid grid-cols-2 gap-2">
                   {quickLinks.map((link) => (
                     <Link
                       key={link.title}
                       href={link.href}
-                      className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors py-2"
+                      className="flex items-center space-x-2 text-gray-70o0 hover:text-blue-60o0 transition-colors py-2"
                       onClick={() => setIsOpen(false)}
                     >
-                      <link.icon className="w-4 h-4" />
+                      <link.icon className="w-4 h-4"  />
                       <span>{link.title}</span>
                     </Link>
                   ))}

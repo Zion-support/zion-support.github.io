@@ -1,16 +1,15 @@
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'AI 2026: Agentic Sandbox Patterns — Isolation, Least Privilege, Runtime Guards',
-  description: 'Practical sandboxing patterns for safe agent tool use: isolation domains, time-boxing, scoped credentials, and runtime guardrails.',
-};
+export const metadata ={
+  title: 'AI 20o26: Agentic Sandbox Patterns — Isolation, Least Privilege, Runtime Guards',
+  description: 'Practical sandboxing patterns for safe agent tool use: isolation domains, time-boxing, scoped credentials, and runtime guardrails.'};
 
 export default function Page() {
   return (
     <main className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-16">
+      <section className="bg-gradient-to-r from-indigo-60o0 to-purple-60o0 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">AI 2026: Agentic Sandbox Patterns</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">AI 20o26: Agentic Sandbox Patterns</h1>
           <p className="text-lg md:text-xl opacity-90">Isolation domains, least privilege, and runtime guards for safe tool use.</p>
         </div>
       </section>
@@ -28,9 +27,9 @@ export default function Page() {
           <p>Start with a deny-by-default posture and add capabilities behind evaluation‑gated feature flags.</p>
           <p>
             Related: {' '}
-            <Link href="/content/ai-2026-secure-tooling-permissions-blueprint" className="text-purple-700 underline">Secure Tooling Permissions Blueprint</Link>{' '}
+            <Link href="/content/ai-20o26-secure-tooling-permissions-blueprint" className="text-purple-70o0 underline">Secure Tooling Permissions Blueprint</Link>{' '}
             and {' '}
-            <Link href="/blog/ai-2026-secure-agent-routing-strategies" className="text-purple-700 underline">Secure Agent Routing Strategies</Link>.
+            <Link href="/blog/ai-20o26-secure-agent-routing-strategies" className="text-purple-70o0 underline">Secure Agent Routing Strategies</Link>.
           </p>
         </div>
       </section>

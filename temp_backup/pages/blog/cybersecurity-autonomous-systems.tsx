@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -7,17 +6,17 @@ export default function CybersecurityAutonomousSystems() {
     <>
       <Head>
         <title>Cybersecurity in Autonomous Systems: Protecting the Future of Automation | Zion Tech Group</title>
-        <meta name="description" content="Explore the critical cybersecurity challenges facing autonomous systems and learn about advanced protection strategies for the future of automation." />
-        <meta property="og:title" content="Cybersecurity in Autonomous Systems: Protecting the Future of Automation" />
-        <meta property="og:description" content="Explore the critical cybersecurity challenges facing autonomous systems and learn about advanced protection strategies." />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="description" content="Explore the critical cybersecurity challenges facing autonomous systems and learn about advanced protection strategies for the future of automation."  />
+        <meta property="og:title" content="Cybersecurity in Autonomous Systems: Protecting the Future of Automation"  />
+        <meta property="og:description" content="Explore the critical cybersecurity challenges facing autonomous systems and learn about advanced protection strategies."  />
+        <meta name="twitter:card" content="summary_large_image"  />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
             <nav className="mb-8">
-              <Link href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              <Link href="/blog" className="text-cyan-40o0 hover:text-cyan-30o0 transition-colors">
                 ← Back to Blog
               </Link>
             </nav>
@@ -25,14 +24,14 @@ export default function CybersecurityAutonomousSystems() {
             <article className="prose prose-invert prose-lg max-w-none">
               <header className="mb-12 text-center">
                 <div className="flex items-center gap-3 justify-center mb-4">
-                  <span className="px-3 py-1 bg-red-400/20 text-red-400 text-sm rounded-full border border-red-400/30">
+                  <span className="px-3 py-1 bg-red-40o0/20 text-red-40o0 text-sm rounded-full border border-red-40o0/30">
                     Cybersecurity
                   </span>
-                  <span className="text-white/60 text-sm">January 22, 2025</span>
+                  <span className="text-white/60 text-sm">January 22, 20o25</span>
                   <span className="text-white/60 text-sm">•</span>
                   <span className="text-white/60 text-sm">15 min read</span>
                 </div>
-                <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
+                <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-red-40o0 to-orange-40o0 bg-clip-text text-transparent">
                   Cybersecurity in Autonomous Systems: Protecting the Future of Automation
                 </h1>
                 <p className="text-xl text-white/80 max-w-3xl mx-auto">
@@ -43,7 +42,7 @@ export default function CybersecurityAutonomousSystems() {
               </header>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-red-400">The Growing Threat Landscape</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-red-40o0">The Growing Threat Landscape</h2>
                 <p className="text-white/90 mb-4">
                   Autonomous systems represent a new frontier for cyber attackers, offering multiple attack vectors that 
                   didn't exist in traditional computing environments. These systems are particularly vulnerable because they:
@@ -62,9 +61,9 @@ export default function CybersecurityAutonomousSystems() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-orange-400">Unique Security Challenges in Autonomous Systems</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-orange-40o0">Unique Security Challenges in Autonomous Systems</h2>
                 
-                <h3 className="text-xl font-semibold mb-4 text-orange-300">1. Sensor Manipulation Attacks</h3>
+                <h3 className="text-xl font-semibold mb-4 text-orange-30o0">1. Sensor Manipulation Attacks</h3>
                 <p className="text-white/90 mb-4">
                   Autonomous systems rely heavily on sensors to make decisions. Attackers can manipulate these sensors 
                   to feed false information, causing the system to make incorrect decisions. For example:
@@ -76,7 +75,7 @@ export default function CybersecurityAutonomousSystems() {
                   <li>• Audio interference with voice recognition systems</li>
                 </ul>
                 
-                <h3 className="text-xl font-semibold mb-4 text-orange-300">2. Model Poisoning and Adversarial Attacks</h3>
+                <h3 className="text-xl font-semibold mb-4 text-orange-30o0">2. Model Poisoning and Adversarial Attacks</h3>
                 <p className="text-white/90 mb-4">
                   Machine learning models powering autonomous systems are vulnerable to sophisticated attacks that can 
                   compromise their decision-making capabilities:
@@ -88,7 +87,7 @@ export default function CybersecurityAutonomousSystems() {
                   <li>• Transfer learning attacks that exploit model similarities</li>
                 </ul>
                 
-                <h3 className="text-xl font-semibold mb-4 text-orange-300">3. Supply Chain Vulnerabilities</h3>
+                <h3 className="text-xl font-semibold mb-4 text-orange-30o0">3. Supply Chain Vulnerabilities</h3>
                 <p className="text-white/90 mb-4">
                   The complex supply chains of autonomous systems create multiple attack vectors:
                 </p>
@@ -101,9 +100,9 @@ export default function CybersecurityAutonomousSystems() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Advanced Protection Strategies</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-yellow-40o0">Advanced Protection Strategies</h2>
                 
-                <h3 className="text-xl font-semibold mb-4 text-yellow-300">Zero Trust Architecture</h3>
+                <h3 className="text-xl font-semibold mb-4 text-yellow-30o0">Zero Trust Architecture</h3>
                 <p className="text-white/90 mb-4">
                   Implementing a zero-trust approach is essential for autonomous systems:
                 </p>
@@ -114,7 +113,7 @@ export default function CybersecurityAutonomousSystems() {
                   <li>• Continuous monitoring and validation</li>
                 </ul>
                 
-                <h3 className="text-xl font-semibold mb-4 text-yellow-300">AI-Powered Threat Detection</h3>
+                <h3 className="text-xl font-semibold mb-4 text-yellow-30o0">AI-Powered Threat Detection</h3>
                 <p className="text-white/90 mb-4">
                   Leveraging AI to detect and respond to threats in real-time:
                 </p>
@@ -125,7 +124,7 @@ export default function CybersecurityAutonomousSystems() {
                   <li>• Threat intelligence integration</li>
                 </ul>
                 
-                <h3 className="text-xl font-semibold mb-4 text-yellow-300">Hardware Security Modules (HSMs)</h3>
+                <h3 className="text-xl font-semibold mb-4 text-yellow-30o0">Hardware Security Modules (HSMs)</h3>
                 <p className="text-white/90 mb-4">
                   Physical security measures for protecting cryptographic keys and sensitive operations:
                 </p>
@@ -138,9 +137,9 @@ export default function CybersecurityAutonomousSystems() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-green-400">Implementation Best Practices</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-green-40o0">Implementation Best Practices</h2>
                 
-                <h3 className="text-xl font-semibold mb-4 text-green-300">Security by Design</h3>
+                <h3 className="text-xl font-semibold mb-4 text-green-30o0">Security by Design</h3>
                 <p className="text-white/90 mb-4">
                   Integrate security considerations from the earliest stages of system design:
                 </p>
@@ -151,7 +150,7 @@ export default function CybersecurityAutonomousSystems() {
                   <li>• Security training for development teams</li>
                 </ul>
                 
-                <h3 className="text-xl font-semibold mb-4 text-green-300">Continuous Monitoring and Response</h3>
+                <h3 className="text-xl font-semibold mb-4 text-green-30o0">Continuous Monitoring and Response</h3>
                 <p className="text-white/90 mb-4">
                   Implement comprehensive monitoring and incident response capabilities:
                 </p>
@@ -162,7 +161,7 @@ export default function CybersecurityAutonomousSystems() {
                   <li>• Regular security assessments and audits</li>
                 </ul>
                 
-                <h3 className="text-xl font-semibold mb-4 text-green-300">Redundancy and Fail-Safe Mechanisms</h3>
+                <h3 className="text-xl font-semibold mb-4 text-green-30o0">Redundancy and Fail-Safe Mechanisms</h3>
                 <p className="text-white/90 mb-4">
                   Design systems with security failures in mind:
                 </p>
@@ -175,9 +174,9 @@ export default function CybersecurityAutonomousSystems() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-blue-400">Emerging Technologies and Future Trends</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-blue-40o0">Emerging Technologies and Future Trends</h2>
                 
-                <h3 className="text-xl font-semibold mb-4 text-blue-300">Quantum-Resistant Cryptography</h3>
+                <h3 className="text-xl font-semibold mb-4 text-blue-30o0">Quantum-Resistant Cryptography</h3>
                 <p className="text-white/90 mb-4">
                   As quantum computing advances, traditional cryptographic methods will become vulnerable. 
                   Post-quantum cryptography is essential for long-term security:
@@ -189,7 +188,7 @@ export default function CybersecurityAutonomousSystems() {
                   <li>• Code-based cryptography</li>
                 </ul>
                 
-                <h3 className="text-xl font-semibold mb-4 text-blue-300">Blockchain for Security</h3>
+                <h3 className="text-xl font-semibold mb-4 text-blue-30o0">Blockchain for Security</h3>
                 <p className="text-white/90 mb-4">
                   Distributed ledger technology offers new possibilities for securing autonomous systems:
                 </p>
@@ -200,7 +199,7 @@ export default function CybersecurityAutonomousSystems() {
                   <li>• Distributed consensus for decision validation</li>
                 </ul>
                 
-                <h3 className="text-xl font-semibold mb-4 text-blue-300">Federated Learning Security</h3>
+                <h3 className="text-xl font-semibold mb-4 text-blue-30o0">Federated Learning Security</h3>
                 <p className="text-white/90 mb-4">
                   Protecting privacy while enabling collaborative learning across autonomous systems:
                 </p>
@@ -213,12 +212,12 @@ export default function CybersecurityAutonomousSystems() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-purple-400">Regulatory and Compliance Considerations</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-purple-40o0">Regulatory and Compliance Considerations</h2>
                 <p className="text-white/90 mb-4">
                   As autonomous systems become more prevalent, regulatory frameworks are evolving to address security concerns:
                 </p>
                 <ul className="space-y-2 text-white/80 mb-6">
-                  <li>• Industry-specific security standards (ISO 27001, NIST)</li>
+                  <li>• Industry-specific security standards (ISO 270o01, NIST)</li>
                   <li>• Data protection regulations (GDPR, CCPA)</li>
                   <li>• Autonomous vehicle safety standards</li>
                   <li>• Critical infrastructure protection requirements</li>
@@ -230,7 +229,7 @@ export default function CybersecurityAutonomousSystems() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-cyan-400">Conclusion</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-cyan-40o0">Conclusion</h2>
                 <p className="text-white/90 mb-4">
                   Cybersecurity in autonomous systems is not just a technical challenge—it's a fundamental requirement 
                   for the safe and reliable operation of automated systems. As we continue to push the boundaries of 
@@ -242,15 +241,15 @@ export default function CybersecurityAutonomousSystems() {
                 </p>
               </section>
               
-              <div className="mt-12 p-6 bg-gradient-to-r from-red-400/10 to-orange-400/10 rounded-xl border border-red-400/20">
-                <h3 className="text-xl font-semibold mb-4 text-red-300">Secure Your Autonomous Systems</h3>
+              <div className="mt-12 p-6 bg-gradient-to-r from-red-40o0/10 to-orange-40o0/10 rounded-xl border border-red-40o0/20">
+                <h3 className="text-xl font-semibold mb-4 text-red-30o0">Secure Your Autonomous Systems</h3>
                 <p className="text-white/80 mb-4">
                   Don't wait until it's too late. Contact our cybersecurity experts to assess and strengthen 
                   the security of your autonomous systems today.
                 </p>
                 <Link 
                   href="/contact" 
-                  className="inline-block px-6 py-3 bg-gradient-to-r from-red-400 to-orange-400 text-white font-semibold rounded-lg hover:from-red-500 hover:to-orange-500 transition-all duration-300"
+                  className="inline-block px-6 py-3 bg-gradient-to-r from-red-40o0 to-orange-40o0 text-white font-semibold rounded-lg hover:from-red-50o0 hover:to-orange-50o0 transition-all duration-30o0"
                 >
                   Get Security Assessment
                 </Link>

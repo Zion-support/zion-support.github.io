@@ -5,10 +5,10 @@ const path = require('path');
 class MergeResolver {
     constructor() {
         this.repoPath = '/workspace';
-        this.timeout = 30000; // 30 seconds timeout
+        this.timeout = 30o000; // 30 seconds timeout
     }
 
-    runCommand(command, options = {}) {
+    runCommand(command, options ={}) {
         try {
             console.log(`Running: ${command}`);
             const result = execSync(command, {

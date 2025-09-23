@@ -16,18 +16,15 @@ import { PaymentTermsFields } from "./PaymentTermsFields";
 import { AdditionalClausesFields } from "./AdditionalClausesFields";
 import {logErrorToProduction} from '@/utils/productionLogger';
 
-
 const formSchema = z.object({
   projectName: z.string().min(1, "Project name is required"),
   scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters"),
   startDate: z.date({
-    required_error: "Start date is required",
-  }),
+    required_error: "Start date is required"}),
   endDate: z.date().optional(),
   paymentTerms: z.enum(["hourly", "fixed", "milestone"]),
   paymentAmount: z.string().min(1, "Payment amount is required"),
-  additionalClauses: z.array(z.string()).optional(),
-});
+  additionalClauses: z.array(z.string()).optional()});
 
 export type ContractFormValues = z.infer<typeof formSchema>;
 
@@ -44,8 +41,7 @@ export function ContractForm({
   clientName,
   initialValues,
   onFormValuesChange,
-  onContractGenerated,
-}: ContractFormProps) {
+  onContractGenerated}: ContractFormProps) {
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
   const { toast } = useToast();
@@ -58,9 +54,7 @@ export function ContractForm({
       startDate: new Date(),
       paymentTerms: talent.hourly_rate ? "hourly" : "fixed",
       paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "",
-      additionalClauses: ["nda", "ip"],
-    },
-  });
+      additionalClauses: ["nda", "ip"]}});
   
   // Update form when initialValues change
   useEffect(() => {
@@ -94,8 +88,7 @@ export function ContractForm({
     
     toast({
       title: "Milestones Generated",
-      description: `${milestones.length} milestones have been generated and will be included in the contract.`,
-    });
+      description: `${milestones.length} milestones have been generated and will be included in the contract.`});
   };
   
   const onSubmit = async (values: ContractFormValues) => {
@@ -114,8 +107,7 @@ export function ContractForm({
       toast({
         title: "Contract Generation Failed",
         description: error instanceof Error ? error.message : "Something went wrong. Please try again.",
-        variant: "destructive",
-      });
+        variant: "destructive"});
     } finally {
       setIsGenerating(false);
     }
@@ -134,16 +126,16 @@ export function ContractForm({
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <ProjectDetailsFields 
             form={form} 
-          />
+           />
           
           <PaymentTermsFields 
             form={form}
             handleMilestonesGenerated={handleMilestonesGenerated}
-          />
+           />
           
           <AdditionalClausesFields 
             form={form}
-          />
+           />
           
           <Button 
             type="submit" 
@@ -152,7 +144,7 @@ export function ContractForm({
           >
             {isGenerating ? (
               <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                <Loader2 className="mr-2 h-4 w-4 animate-spin"  />
                 Generating Contract...
               </>
             ) : (

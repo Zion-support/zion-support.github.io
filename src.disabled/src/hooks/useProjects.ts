@@ -25,7 +25,7 @@ export default function Page() {};
         .eq("id", projectId);
         .single();
       if(error) throw error;
-      const transformedProject = {}} : undefined};
+      const transformedProject ={}} : undefined};
       return transformedProject as Project} catch("err": unknown) {}}
   };
   const updateProjectStatus = async("projectId": string, "status": ProjectStatus): Promise<boolean> => {;
@@ -47,7 +47,4 @@ export default function Page() {};
   // "TODO": Add dependencies if needed}, []);
     if(user) {}} else {}}
   }, [user, fetchProjects]); // Added fetchProjects;
-
-
-
 

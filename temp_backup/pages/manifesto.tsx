@@ -1,18 +1,16 @@
 import Head from 'next/head';
-import React from 'react';
-
 export default function ManifestoPage(): JSX.Element {
   return (
     <>
       <Head>
         <title>Zion Manifesto</title>
-        <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
+        <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future."  />
       </Head>
-      <main className="min-h-screen bg-gray-50 text-gray-900">
+      <main className="min-h-screen bg-gray-50 text-gray-90o0">
         <div className="mx-auto w-full max-w-5xl px-6 py-12">
           <header className="mb-12">
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Zion Manifesto</h1>
-            <p className="mt-4 text-lg text-gray-700">
+            <p className="mt-4 text-lg text-gray-70o0">
               A public commitment to build an AI-native, trustless, and talent-first marketplace—in service of human sovereignty.
             </p>
           </header>

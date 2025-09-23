@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function SustainableTechnologyGreenComputingSolutionsChatPage() {
@@ -6,7 +5,7 @@ export default function SustainableTechnologyGreenComputingSolutionsChatPage() {
     <>
       <Head>
         <title>Sustainable Technology Green Computing Solutions Chat - Zion Tech Group</title>
-        <meta name="description" content="sustainable technology green computing solutions chat page" />
+        <meta name="description" content="sustainable technology green computing solutions chat page"  />
       </Head>
       
       <main>

@@ -1,4 +1,3 @@
-import React from 'react';
 export function DisputeDashboard() {
     return (<div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6">
       <h3 className="text-xl font-bold text-white mb-4">Dispute Overview</h3>
@@ -8,7 +7,7 @@ export function DisputeDashboard() {
           <div className="text-zion-slate-light text-sm">Active Disputes</div>
         </div>
         <div className="text-center">
-          <div className="text-2xl font-bold text-green-400">16</div>
+          <div className="text-2xl font-bold text-green-40o0">16</div>
           <div className="text-zion-slate-light text-sm">Resolved This Month</div>
         </div>
       </div>

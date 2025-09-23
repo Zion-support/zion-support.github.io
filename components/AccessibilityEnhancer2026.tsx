@@ -1,7 +1,7 @@
 "use client";
 import React{ useEffect } from 'react';
 
-export default function AccessibilityEnhancer2026() {
+export default function AccessibilityEnhancer20o26() {
   useEffect(() => {
     // Add ARIA labels to interactive elements
     const addAriaLabels = () => {
@@ -49,7 +49,7 @@ export default function AccessibilityEnhancer2026() {
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-blue-600 focus:text-white focus:px-4 focus:py-2 focus:rounded';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-blue-60o0 focus:text-white focus:px-4 focus:py-2 focus:rounded';
       document.body.insertBefore(skipLinkdocument.body.firstChild);
     };
 
@@ -61,11 +61,11 @@ export default function AccessibilityEnhancer2026() {
           color-scheme: light dark;
         }
         
-        .text-gray-600 {
+        .text-gray-60o0 {
           color: #374151 !important;
         }
         
-        .text-gray-700 {
+        .text-gray-70o0 {
           color: #1f2937 !important;
         }
         

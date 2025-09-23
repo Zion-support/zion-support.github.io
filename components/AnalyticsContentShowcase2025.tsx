@@ -1,7 +1,6 @@
-import React from 'react';
 import Link from 'next/link';
 
-const AnalyticsContentShowcase2025 = () => {
+const AnalyticsContentShowcase20o25 = () => {
   const analyticsContent = [
     {
       title: "Advanced Data Visualization",
@@ -51,10 +50,10 @@ const AnalyticsContentShowcase2025 = () => {
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Analytics Content Showcase 2025
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">
+            Analytics Content Showcase 20o25
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
             Explore our comprehensive collection of analytics contentoolsand resources 
             designed to help you master the data revolution.
           </p>
@@ -62,21 +61,21 @@ const AnalyticsContentShowcase2025 = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {analyticsContent.map((contentindex) => (
-            <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+            <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-30o0 overflow-hidden">
               <div className="p-6">
                 <div className="text-4xl mb-4">{content.image}</div>
-                <div className="inline-block bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full mb-3">
+                <div className="inline-block bg-indigo-10o0 text-indigo-80o0 text-sm font-medium px-3 py-1 rounded-full mb-3">
                   {content.category}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 className="text-xl font-bold text-gray-90o0 mb-3">
                   {content.title}
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-60o0 mb-4">
                   {content.description}
                 </p>
                 <Link
                   href={content.link}
-                  className="text-indigo-600 font-semibold hover:text-indigo-800 transition-colors"
+                  className="text-indigo-60o0 font-semibold hover:text-indigo-80o0 transition-colors"
                 >
                   Learn More →
                 </Link>
@@ -88,7 +87,7 @@ const AnalyticsContentShowcase2025 = () => {
         <div className="text-center mt-12">
           <Link
             href="/analytics"
-            className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+            className="bg-indigo-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-70o0 transition-colors"
           >
             View All Analytics Content
           </Link>
@@ -98,4 +97,4 @@ const AnalyticsContentShowcase2025 = () => {
   );
 };
 
-export default AnalyticsContentShowcase2025;
+export default AnalyticsContentShowcase20o25;

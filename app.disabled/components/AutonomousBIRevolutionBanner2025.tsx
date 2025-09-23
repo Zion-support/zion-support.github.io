@@ -4,13 +4,13 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { X, ChevronRight, TrendingUp, Brain, Zap, ArrowRight } from 'lucide-react';
 
-const AutonomousBIRevolutionBanner2025: React.FC = () => {
+const AutonomousBIRevolutionBanner20o25: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isDismissed, setIsDismissed] = useState(false);
 
   useEffect(() => {
-    const dismissed = localStorage.getItem('autonomous-bi-banner-2025-dismissed');
+    const dismissed = localStorage.getItem('autonomous-bi-banner-20o25-dismissed');
     if (dismissed === 'true') {
       setIsDismissed(true);
       setIsVisible(false);
@@ -21,7 +21,7 @@ const AutonomousBIRevolutionBanner2025: React.FC = () => {
     if (!isDismissed) {
       const interval = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
-      }, 5000);
+      }, 50o00);
       return () => clearInterval(interval);
     }
   }, [isDismissed]);
@@ -29,54 +29,54 @@ const AutonomousBIRevolutionBanner2025: React.FC = () => {
   const handleDismiss = () => {
     setIsVisible(false);
     setIsDismissed(true);
-    localStorage.setItem('autonomous-bi-banner-2025-dismissed', 'true');
+    localStorage.setItem('autonomous-bi-banner-20o25-dismissed', 'true');
   };
 
   const contentSlides = [
     {
       id: 'autonomous-bi-revolution',
-      title: 'AI 2025: The Autonomous Business Intelligence Revolution',
-      subtitle: '1,800% ROI Through Self-Managing Analytics',
-      description: 'Fortune 500 companies are achieving extraordinary results with autonomous BI systems that operate independently and deliver predictive insights.',
+      title: 'AI 20o25: The Autonomous Business Intelligence Revolution',
+      subtitle: '1,80o0% ROI Through Self-Managing Analytics',
+      description: 'Fortune 50o0 companies are achieving extraordinary results with autonomous BI systems that operate independently and deliver predictive insights.',
       metrics: {
-        roi: '1,800%',
+        roi: '1,80o0%',
         savings: '$51M',
         accuracy: '94.8%',
         speed: '1,680%'
       },
-      link: '/blog/ai-2025-autonomous-business-intelligence-revolution',
+      link: '/blog/ai-20o25-autonomous-business-intelligence-revolution',
       type: 'blog',
       readingTime: '28 min read',
       featured: true
     },
     {
-      id: 'fortune-500-success',
-      title: 'Fortune 500 Autonomous BI Success Story',
-      subtitle: '$51M Annual Savings with 1,800% ROI',
-      description: 'Complete case study of a Fortune 500 manufacturing giant that transformed operations through autonomous business intelligence.',
+      id: 'fortune-50o0-success',
+      title: 'Fortune 50o0 Autonomous BI Success Story',
+      subtitle: '$51M Annual Savings with 1,80o0% ROI',
+      description: 'Complete case study of a Fortune 50o0 manufacturing giant that transformed operations through autonomous business intelligence.',
       metrics: {
-        roi: '1,800%',
+        roi: '1,80o0%',
         savings: '$51M',
         timeline: '18 months',
         reliability: '99.7%'
       },
-      link: '/case-studies/fortune-500-autonomous-bi-1800-roi-success',
+      link: '/case-studies/fortune-50o0-autonomous-bi-180o0-roi-success',
       type: 'case-study',
       readingTime: '22 min read',
       featured: true
     },
     {
       id: 'implementation-guide',
-      title: 'Autonomous BI Implementation Master Guide 2025',
-      subtitle: 'Complete Roadmap to 1,800% ROI',
+      title: 'Autonomous BI Implementation Master Guide 20o25',
+      subtitle: 'Complete Roadmap to 1,80o0% ROI',
       description: 'Comprehensive implementation guide with step-by-step roadmap, ROI framework, and best practices for autonomous BI success.',
       metrics: {
-        roi: '1,800%',
+        roi: '1,80o0%',
         success: '98%',
         timeline: '18 months',
         savings: '$51M+'
       },
-      link: '/resources/autonomous-bi-implementation-master-guide-2025',
+      link: '/resources/autonomous-bi-implementation-master-guide-20o25',
       type: 'resource',
       readingTime: '35 min read',
       featured: true
@@ -90,20 +90,20 @@ const AutonomousBIRevolutionBanner2025: React.FC = () => {
   }
 
   return (
-    <div className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white overflow-hidden">
+    <div className="relative bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-10 left-10 w-20 h-20 bg-blue-400 rounded-full animate-pulse"></div>
-        <div className="absolute top-32 right-20 w-16 h-16 bg-purple-400 rounded-full animate-bounce"></div>
-        <div className="absolute bottom-20 left-1/3 w-12 h-12 bg-pink-400 rounded-full animate-ping"></div>
-        <div className="absolute bottom-32 right-1/3 w-14 h-14 bg-indigo-400 rounded-full animate-pulse"></div>
+        <div className="absolute top-10 left-10 w-20 h-20 bg-blue-40o0 rounded-full animate-pulse"></div>
+        <div className="absolute top-32 right-20 w-16 h-16 bg-purple-40o0 rounded-full animate-bounce"></div>
+        <div className="absolute bottom-20 left-1/3 w-12 h-12 bg-pink-40o0 rounded-full animate-ping"></div>
+        <div className="absolute bottom-32 right-1/3 w-14 h-14 bg-indigo-40o0 rounded-full animate-pulse"></div>
       </div>
 
       {/* Progress Indicator */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-white bg-opacity-30">
         <div 
-          className="h-full bg-gradient-to-r from-blue-400 to-purple-400 transition-all duration-5000 ease-linear"
-          style={{ width: `${((currentSlide + 1) / contentSlides.length) * 100}%` }}
+          className="h-full bg-gradient-to-r from-blue-40o0 to-purple-40o0 transition-all duration-50o00 ease-linear"
+          style={{ width: `${((currentSlide + 1) / contentSlides.length) * 10o0}%` }}
         ></div>
       </div>
 
@@ -113,9 +113,9 @@ const AutonomousBIRevolutionBanner2025: React.FC = () => {
             {/* Content */}
             <div className="flex-1 pr-8">
               <div className="flex items-center space-x-2 mb-3">
-                <Brain className="w-5 h-5 text-blue-300" />
-                <span className="text-sm font-medium text-blue-300 uppercase tracking-wide">
-                  New 2025 Content
+                <Brain className="w-5 h-5 text-blue-30o0"  />
+                <span className="text-sm font-medium text-blue-30o0 uppercase tracking-wide">
+                  New 20o25 Content
                 </span>
               </div>
               
@@ -123,11 +123,11 @@ const AutonomousBIRevolutionBanner2025: React.FC = () => {
                 {currentContent.title}
               </h3>
               
-              <p className="text-lg md:text-xl text-purple-200 mb-4">
+              <p className="text-lg md:text-xl text-purple-20o0 mb-4">
                 {currentContent.subtitle}
               </p>
               
-              <p className="text-gray-300 mb-6 max-w-3xl">
+              <p className="text-gray-30o0 mb-6 max-w-3xl">
                 {currentContent.description}
               </p>
 
@@ -135,52 +135,52 @@ const AutonomousBIRevolutionBanner2025: React.FC = () => {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                 <div className="bg-white bg-opacity-10 rounded-lg p-3 text-center">
                   <div className="flex items-center justify-center mb-1">
-                    <TrendingUp className="w-4 h-4 text-green-300 mr-1" />
-                    <span className="text-xs text-gray-300 uppercase">ROI</span>
+                    <TrendingUp className="w-4 h-4 text-green-30o0 mr-1"  />
+                    <span className="text-xs text-gray-30o0 uppercase">ROI</span>
                   </div>
-                  <div className="text-lg font-bold text-green-300">{currentContent.metrics.roi}</div>
+                  <div className="text-lg font-bold text-green-30o0">{currentContent.metrics.roi}</div>
                 </div>
                 
                 <div className="bg-white bg-opacity-10 rounded-lg p-3 text-center">
                   <div className="flex items-center justify-center mb-1">
-                    <Zap className="w-4 h-4 text-yellow-300 mr-1" />
-                    <span className="text-xs text-gray-300 uppercase">Savings</span>
+                    <Zap className="w-4 h-4 text-yellow-30o0 mr-1"  />
+                    <span className="text-xs text-gray-30o0 uppercase">Savings</span>
                   </div>
-                  <div className="text-lg font-bold text-yellow-300">{currentContent.metrics.savings}</div>
+                  <div className="text-lg font-bold text-yellow-30o0">{currentContent.metrics.savings}</div>
                 </div>
                 
                 <div className="bg-white bg-opacity-10 rounded-lg p-3 text-center">
                   <div className="flex items-center justify-center mb-1">
-                    <ArrowRight className="w-4 h-4 text-blue-300 mr-1" />
-                    <span className="text-xs text-gray-300 uppercase">Accuracy</span>
+                    <ArrowRight className="w-4 h-4 text-blue-30o0 mr-1"  />
+                    <span className="text-xs text-gray-30o0 uppercase">Accuracy</span>
                   </div>
-                  <div className="text-lg font-bold text-blue-300">{currentContent.metrics.accuracy || currentContent.metrics.reliability}</div>
+                  <div className="text-lg font-bold text-blue-30o0">{currentContent.metrics.accuracy || currentContent.metrics.reliability}</div>
                 </div>
                 
                 <div className="bg-white bg-opacity-10 rounded-lg p-3 text-center">
                   <div className="flex items-center justify-center mb-1">
-                    <Brain className="w-4 h-4 text-purple-300 mr-1" />
-                    <span className="text-xs text-gray-300 uppercase">Timeline</span>
+                    <Brain className="w-4 h-4 text-purple-30o0 mr-1"  />
+                    <span className="text-xs text-gray-30o0 uppercase">Timeline</span>
                   </div>
-                  <div className="text-lg font-bold text-purple-300">{currentContent.metrics.timeline || currentContent.metrics.speed}</div>
+                  <div className="text-lg font-bold text-purple-30o0">{currentContent.metrics.timeline || currentContent.metrics.speed}</div>
                 </div>
               </div>
 
               <div className="flex items-center space-x-4">
                 <Link
                   href={currentContent.link}
-                  className="inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                  className="inline-flex items-center bg-gradient-to-r from-blue-50o0 to-purple-60o0 hover:from-blue-60o0 hover:to-purple-70o0 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 transform hover:scale-10o5"
                 >
                   Read {currentContent.type === 'case-study' ? 'Case Study' : currentContent.type === 'resource' ? 'Guide' : 'Article'}
-                  <ChevronRight className="w-4 h-4 ml-2" />
+                  <ChevronRight className="w-4 h-4 ml-2"  />
                 </Link>
                 
-                <div className="flex items-center space-x-2 text-sm text-gray-300">
+                <div className="flex items-center space-x-2 text-sm text-gray-30o0">
                   <span className="bg-white bg-opacity-20 px-2 py-1 rounded text-xs">
                     {currentContent.readingTime}
                   </span>
                   {currentContent.featured && (
-                    <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-2 py-1 rounded text-xs font-semibold">
+                    <span className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-2 py-1 rounded text-xs font-semibold">
                       Featured
                     </span>
                   )}
@@ -194,7 +194,7 @@ const AutonomousBIRevolutionBanner2025: React.FC = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                     index === currentSlide 
                       ? 'bg-white scale-125' 
                       : 'bg-white bg-opacity-40 hover:bg-opacity-60'
@@ -206,10 +206,10 @@ const AutonomousBIRevolutionBanner2025: React.FC = () => {
             {/* Dismiss Button */}
             <button
               onClick={handleDismiss}
-              className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-white hover:bg-opacity-10 rounded-full"
+              className="text-gray-40o0 hover:text-white transition-colors p-2 hover:bg-white hover:bg-opacity-10 rounded-full"
               aria-label="Dismiss banner"
             >
-              <X className="w-5 h-5" />
+              <X className="w-5 h-5"  />
             </button>
           </div>
         </div>
@@ -218,4 +218,4 @@ const AutonomousBIRevolutionBanner2025: React.FC = () => {
   );
 };
 
-export default AutonomousBIRevolutionBanner2025;
+export default AutonomousBIRevolutionBanner20o25;

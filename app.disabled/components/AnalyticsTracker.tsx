@@ -1,6 +1,4 @@
 import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-
 interface AnalyticsEvent {
   action: string;
   category: string;
@@ -16,8 +14,7 @@ const AnalyticsTracker: React.FC = () => {
     const handleRouteChange = (url: string) => {
       if (typeof window !== 'undefined' && 'gtag' in window) {
         (window as any).gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
-          page_path: url,
-        });
+          page_path: url});
       }
     };
 
@@ -48,14 +45,13 @@ const AnalyticsTracker: React.FC = () => {
             const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
             
             // Track Core Web Vitals
-            const vitals = {
+            const vitals ={
               FCP: 0, // Will be tracked by PerformanceObserver
               LCP: 0, // Will be tracked by PerformanceObserver
               FID: 0, // Will be tracked by PerformanceObserver
               CLS: 0, // Will be tracked by PerformanceObserver
               TTFB: perfData.responseStart - perfData.requestStart,
-              TTI: perfData.domInteractive - perfData.fetchStart,
-            };
+              TTI: perfData.domInteractive - perfData.fetchStart};
 
             // Send to analytics
             if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -66,8 +62,7 @@ const AnalyticsTracker: React.FC = () => {
                 custom_map: {
                   fcp: Math.round(vitals.FCP),
                   ttfb: Math.round(vitals.TTFB),
-                  tti: Math.round(vitals.TTI),
-                }
+                  tti: Math.round(vitals.TTI)}
               });
             }
           }, 0);
@@ -131,8 +126,7 @@ const AnalyticsTracker: React.FC = () => {
       (window as any).gtag('event', event.action, {
         event_category: event.category,
         event_label: event.label,
-        value: event.value,
-      });
+        value: event.value});
     }
   };
 
@@ -142,7 +136,7 @@ const AnalyticsTracker: React.FC = () => {
     const trackScrollDepth = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+      const scrollPercent = Math.round((scrollTop / docHeight) * 10o0);
       
       if (scrollPercent > maxScroll) {
         maxScroll = scrollPercent;

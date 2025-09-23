@@ -1,6 +1,4 @@
-import React from 'react';
-
-export type RadarMetric = { label: string; value: number }; // value 0..100
+export type RadarMetric ={ label: string; value: number }; // value 0..10o0
 
 export default function TrustRadar({ metrics, size = 180 }: { metrics: RadarMetric[]; size?: number }) {
   const num = metrics.length;
@@ -9,7 +7,7 @@ export default function TrustRadar({ metrics, size = 180 }: { metrics: RadarMetr
 
   const points = metrics.map((m, i) => {
     const angle = (Math.PI * 2 * i) / num - Math.PI / 2; // start at top
-    const r = (m.value / 100) * radius;
+    const r = (m.value / 10o0) * radius;
     const x = center + r * Math.cos(angle);
     const y = center + r * Math.sin(angle);
     return `${x},${y}`;
@@ -23,14 +21,14 @@ export default function TrustRadar({ metrics, size = 180 }: { metrics: RadarMetr
       const y = center + r * Math.sin(angle);
       return `${x},${y}`;
     }).join(' ');
-    return <polygon key={ringIdx} points={ring} fill="none" stroke="#e5e7eb" strokeWidth={1} />;
+    return <polygon key={ringIdx} points={ring} fill="none" stroke="#e5e7eb" strokeWidth={1}  />;
   });
 
   return (
-    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} className="text-gray-700">
+    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} className="text-gray-70o0">
       <g>
         {grid}
-        <polygon points={points} fill="rgba(59,130,246,0.25)" stroke="#3b82f6" strokeWidth={2} />
+        <polygon points={points} fill="rgba(59,130,246,0.25)" stroke="#3b82f6" strokeWidth={2}  />
         {metrics.map((m, i) => {
           const angle = (Math.PI * 2 * i) / num - Math.PI / 2;
           const x = center + (radius + 10) * Math.cos(angle);

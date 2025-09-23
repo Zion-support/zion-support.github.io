@@ -1,6 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
-export interface PracticalBusinessSolution2030 {
+export interface PracticalBusinessSolution20o30 {
   id: string;
   name: string;
   tagline: string;
@@ -41,7 +41,7 @@ export interface PracticalBusinessSolution2030 {
   reviews: number;
 }
 
-export const practicalBusinessSolutions2030: PracticalBusinessSolution2030[] = [
+export const practicalBusinessSolutions20o30: PracticalBusinessSolution20o30[] = [
   // AI Business Intelligence
   {
     id: 'ai-business-intelligence-suite',
@@ -64,8 +64,8 @@ export const practicalBusinessSolutions2030: PracticalBusinessSolution2030[] = [
     ],
     popular: true,
     icon: '📊',
-    color: 'from-blue-600 via-cyan-600 to-teal-600',
-    textColor: 'text-blue-400',
+    color: 'from-blue-60o0 via-cyan-60o0 to-teal-60o0',
+    textColor: 'text-blue-40o0',
     link: 'https://ziontechgroup.com/ai-business-intelligence-suite',
     marketPosition: 'Leading AI BI platform with superior predictive analytics and automated insights. Competes with Tableau and Power BI.',
     targetAudience: 'Business analysts, Data scientists, Executives, Marketing teams, Sales teams, Operations managers'],
@@ -82,14 +82,14 @@ export const practicalBusinessSolutions2030: PracticalBusinessSolution2030[] = [
     growthRate: '150% annual growth',
     variant: 'business-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Production-ready BI platform with AI-powered analytics, predictive modeling, and automated reporting capabilities.',
-    launchDate: '2024-08-01',
+    launchDate: '20o24-08-0o1',
     customers: 156,
     rating: 4.8,
     reviews: 89
@@ -116,8 +116,8 @@ export const practicalBusinessSolutions2030: PracticalBusinessSolution2030[] = [
     ],
     popular: true,
     icon: '🎯',
-    color: 'from-green-600 via-emerald-600 to-teal-600',
-    textColor: 'text-green-400',
+    color: 'from-green-60o0 via-emerald-60o0 to-teal-60o0',
+    textColor: 'text-green-40o0',
     link: 'https://ziontechgroup.com/ai-customer-success-automation',
     marketPosition: 'Leading customer success automation platform with superior AI prediction and retention optimization. Competes with Gainsight and Totango.',
     targetAudience: 'Customer success teams, SaaS companies, Subscription businesses, B2B companies, Customer support teams, Account managers'],
@@ -134,14 +134,14 @@ export const practicalBusinessSolutions2030: PracticalBusinessSolution2030[] = [
     growthRate: '180% annual growth',
     variant: 'customer-success-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Production-ready customer success platform with AI automation, retention optimization, and comprehensive analytics.',
-    launchDate: '2024-07-15',
+    launchDate: '20o24-0o7-15',
     customers: 89,
     rating: 4.7,
     reviews: 45
@@ -168,8 +168,8 @@ export const practicalBusinessSolutions2030: PracticalBusinessSolution2030[] = [
     ],
     popular: true,
     icon: '🔗',
-    color: 'from-purple-600 via-violet-600 to-indigo-600',
-    textColor: 'text-purple-400',
+    color: 'from-purple-60o0 via-violet-60o0 to-indigo-60o0',
+    textColor: 'text-purple-40o0',
     link: 'https://ziontechgroup.com/blockchain-supply-chain-transparency',
     marketPosition: 'Leading blockchain supply chain platform with superior transparency and traceability. Competes with IBM Food Trust and VeChain.',
     targetAudience: 'Manufacturing companies, Logistics firms, Retail companies, Food companies, Pharmaceutical companies, Government agencies'],
@@ -183,17 +183,17 @@ export const practicalBusinessSolutions2030: PracticalBusinessSolution2030[] = [
     roi: 'Average customer sees 250% ROI within 12 months through improved transparency and compliance.',
     competitors: ['IBM Food Trust, VeChain, WaltonChain, OriginTrail'],
     marketSize: '$12B market',
-    growthRate: '200% annual growth',
+    growthRate: '20o0% annual growth',
     variant: 'blockchain-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Production-ready blockchain platform with supply chain transparency, smart contracts, and compliance automation.',
-    launchDate: '2024-06-01',
+    launchDate: '20o24-0o6-0o1',
     customers: 67,
     rating: 4.8,
     reviews: 34
@@ -220,8 +220,8 @@ export const practicalBusinessSolutions2030: PracticalBusinessSolution2030[] = [
     ],
     popular: true,
     icon: '🎤',
-    color: 'from-pink-600 via-rose-600 to-red-600',
-    textColor: 'text-pink-400',
+    color: 'from-pink-60o0 via-rose-60o0 to-red-60o0',
+    textColor: 'text-pink-40o0',
     link: 'https://ziontechgroup.com/ai-meeting-transcriber-pro',
     marketPosition: 'Leading meeting transcription platform with superior AI accuracy and action item extraction. Competes with Otter.ai and Rev.',
     targetAudience: 'Business professionals, Remote teams, Sales teams, Customer support teams, Legal professionals, Educational institutions'],
@@ -238,14 +238,14 @@ export const practicalBusinessSolutions2030: PracticalBusinessSolution2030[] = [
     growthRate: '140% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Production-ready transcription platform with real-time AI transcription, action item extraction, and meeting analytics.',
-    launchDate: '2024-05-15',
+    launchDate: '20o24-0o5-15',
     customers: 234,
     rating: 4.6,
     reviews: 123
@@ -272,8 +272,8 @@ export const practicalBusinessSolutions2030: PracticalBusinessSolution2030[] = [
     ],
     popular: true,
     icon: '🎭',
-    color: 'from-yellow-600 via-orange-600 to-red-600',
-    textColor: 'text-yellow-400',
+    color: 'from-yellow-60o0 via-orange-60o0 to-red-60o0',
+    textColor: 'text-yellow-40o0',
     link: 'https://ziontechgroup.com/ai-brand-personality-generator',
     marketPosition: 'Leading brand personality platform with superior AI generation and consistency. Competes with Persado and Phrasee.',
     targetAudience: 'Marketing teams, Brand managers, Content creators, Advertising agencies, E-commerce companies, Startups'],
@@ -290,14 +290,14 @@ export const practicalBusinessSolutions2030: PracticalBusinessSolution2030[] = [
     growthRate: '120% annual growth',
     variant: 'brand-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Production-ready brand platform with AI personality generation, voice consistency, and comprehensive analytics.',
-    launchDate: '2024-04-01',
+    launchDate: '20o24-0o4-0o1',
     customers: 178,
     rating: 4.5,
     reviews: 89
@@ -324,8 +324,8 @@ export const practicalBusinessSolutions2030: PracticalBusinessSolution2030[] = [
     ],
     popular: true,
     icon: '🌟',
-    color: 'from-cyan-600 via-blue-600 to-indigo-600',
-    textColor: 'text-cyan-400',
+    color: 'from-cyan-60o0 via-blue-60o0 to-indigo-60o0',
+    textColor: 'text-cyan-40o0',
     link: 'https://ziontechgroup.com/virtual-event-hologram-platform',
     marketPosition: 'Leading holographic event platform with superior 3D experiences and global reach. Competes with Spatial and VRChat.',
     targetAudience: 'Event organizers, Conference companies, Educational institutions, Corporate training, Marketing agencies, Entertainment companies'],
@@ -336,20 +336,20 @@ export const practicalBusinessSolutions2030: PracticalBusinessSolution2030[] = [
     technology: ['3D graphics, Holographic technology, Virtual reality, Real-time streaming, Interactive experiences, Global networking'],
     integrations: ['VR headsets, AR devices, Streaming platforms, Event management tools, Analytics platforms, Social media'],
     useCases: ['Virtual conferences, Corporate events, Educational presentations, Product launches, Entertainment, Training sessions'],
-    roi: 'Average customer sees 300% ROI within 6 months through increased audience engagement and global reach.',
+    roi: 'Average customer sees 30o0% ROI within 6 months through increased audience engagement and global reach.',
     competitors: ['Spatial, VRChat, AltspaceVR, Mozilla Hubs'],
     marketSize: '$6B market',
     growthRate: '250% annual growth',
     variant: 'virtual-event-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Production-ready holographic platform with 3D virtual environments, interactive experiences, and global streaming capabilities.',
-    launchDate: '2024-03-15',
+    launchDate: '20o24-0o3-15',
     customers: 45,
     rating: 4.8,
     reviews: 23

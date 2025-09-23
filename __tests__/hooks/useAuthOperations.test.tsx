@@ -63,10 +63,10 @@ describe('useAuthOperations', () => {'  let _setUser: vi.Mock; // Changed vi.Moc
     supabase.rpc.mockResolvedValue({ data: null, error: null });
   });
 
-  describe('signUp', () => {'    const signUpParams = {
-      email: test@example.com',      password: password123',      display_name: Test User',    };
+  describe('signUp', () => {'    const signUpParams ={
+      email: test@example.com',      password: password123',      display_name: Test User'};
 
-    it('should call showApiError with retryCallback if supabase.auth.signUp returns an error', async () => {'      const mockError = { message: Supabase sign-up error' };      supabase.auth.signUp.mockResolvedValueOnce({ data: null, error: mockError });
+    it('should call showApiError with retryCallback if supabase.auth.signUp returns an error', async () => {'      const mockError ={ message: Supabase sign-up error' };      supabase.auth.signUp.mockResolvedValueOnce({ data: null, error: mockError });
 
       const { _result } = renderHook(() => useAuthOperations(setUser, setIsLoading, setAvatarUrl));
 
@@ -110,7 +110,7 @@ describe('useAuthOperations', () => {'  let _setUser: vi.Mock; // Changed vi.Moc
       expect(showApiError).toHaveBeenCalledTimes(1);
     });
 
-    it('should call trackReferral and increment points on successful signup', async () => {'      const mockUser = { id: user-123', email: signUpParams.email };      supabase.auth.signUp.mockResolvedValueOnce({ data: { user: mockUser }, error: null });
+    it('should call trackReferral and increment points on successful signup', async () => {'      const mockUser ={ id: user-123', email: signUpParams.email };      supabase.auth.signUp.mockResolvedValueOnce({ data: { user: mockUser }, error: null });
       (referralUtils.trackReferral as vi.Mock).mockResolvedValueOnce(true); // Simulate referral was used, changed vi.Mock
 
       const { _result } = renderHook(() => useAuthOperations(setUser, setIsLoading, setAvatarUrl));

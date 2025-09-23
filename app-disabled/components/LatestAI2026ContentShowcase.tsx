@@ -1,41 +1,41 @@
 import Link from 'next/link';
 
-export default function LatestAI2026ContentShowcase() {
+export default function LatestAI20o26ContentShowcase() {
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-purple-100 text-purple-700 rounded-full px-6 py-2 mb-4">
+          <div className="inline-flex items-center bg-purple-10o0 text-purple-70o0 rounded-full px-6 py-2 mb-4">
             <span className="text-sm font-semibold">🔥 JUST PUBLISHED</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Latest AI 2026 Content
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">
+            Latest AI 20o26 Content
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-60o0 max-w-3xl mx-auto">
             Fresh insights, frameworks, and guides on the future of AI in business operations and customer success.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-            <div className="h-48 bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center">
+            <div className="h-48 bg-gradient-to-br from-purple-50o0 to-blue-50o0 flex items-center justify-center">
               <div className="text-6xl">🤖</div>
             </div>
             <div className="p-6">
               <div className="flex items-center mb-3">
-                <span className="bg-purple-100 text-purple-700 text-xs font-semibold px-3 py-1 rounded-full">Business Operations</span>
-                <span className="text-gray-500 text-sm ml-auto">15 min read</span>
+                <span className="bg-purple-10o0 text-purple-70o0 text-xs font-semibold px-3 py-1 rounded-full">Business Operations</span>
+                <span className="text-gray-50o0 text-sm ml-auto">15 min read</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <h3 className="text-xl font-bold text-gray-90o0 mb-3">
                 Autonomous Business Operations: The Future of Enterprise AI
               </h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-60o0 mb-4">
                 Discover how autonomous AI agents will transform business operations with self-healing systems 
                 and intelligent automation.
               </p>
               <Link 
-                href="/blog/ai-2026-autonomous-business-operations" 
-                className="text-purple-600 font-semibold hover:text-purple-800 flex items-center"
+                href="/blog/ai-20o26-autonomous-business-operations" 
+                className="text-purple-60o0 font-semibold hover:text-purple-80o0 flex items-center"
               >
                 Read Article →
               </Link>
@@ -43,24 +43,24 @@ export default function LatestAI2026ContentShowcase() {
           </div>
 
           <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-            <div className="h-48 bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center">
+            <div className="h-48 bg-gradient-to-br from-blue-50o0 to-indigo-50o0 flex items-center justify-center">
               <div className="text-6xl">💼</div>
             </div>
             <div className="p-6">
               <div className="flex items-center mb-3">
-                <span className="bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">Customer Success</span>
-                <span className="text-gray-500 text-sm ml-auto">12 min read</span>
+                <span className="bg-blue-10o0 text-blue-70o0 text-xs font-semibold px-3 py-1 rounded-full">Customer Success</span>
+                <span className="text-gray-50o0 text-sm ml-auto">12 min read</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <h3 className="text-xl font-bold text-gray-90o0 mb-3">
                 Customer Success Revolution: AI-Powered Retention & Growth
               </h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-60o0 mb-4">
                 Transform customer success with AI-powered predictive analytics and proactive support 
                 that drives unprecedented retention rates.
               </p>
               <Link 
-                href="/content/ai-2026-customer-success-revolution" 
-                className="text-blue-600 font-semibold hover:text-blue-800 flex items-center"
+                href="/content/ai-20o26-customer-success-revolution" 
+                className="text-blue-60o0 font-semibold hover:text-blue-80o0 flex items-center"
               >
                 Explore Guide →
               </Link>
@@ -68,24 +68,24 @@ export default function LatestAI2026ContentShowcase() {
           </div>
 
           <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow md:col-span-2 lg:col-span-1">
-            <div className="h-48 bg-gradient-to-br from-green-500 to-teal-500 flex items-center justify-center">
+            <div className="h-48 bg-gradient-to-br from-green-50o0 to-teal-50o0 flex items-center justify-center">
               <div className="text-6xl">🚀</div>
             </div>
             <div className="p-6">
               <div className="flex items-center mb-3">
-                <span className="bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full">Coming Soon</span>
-                <span className="text-gray-500 text-sm ml-auto">Multiple</span>
+                <span className="bg-green-10o0 text-green-70o0 text-xs font-semibold px-3 py-1 rounded-full">Coming Soon</span>
+                <span className="text-gray-50o0 text-sm ml-auto">Multiple</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                More AI 2026 Content Coming Soon
+              <h3 className="text-xl font-bold text-gray-90o0 mb-3">
+                More AI 20o26 Content Coming Soon
               </h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-60o0 mb-4">
                 Stay tuned for more revolutionary AI insights, frameworks, and implementation guides 
-                throughout 2026.
+                throughout 20o26.
               </p>
               <Link 
-                href="/ai-2026" 
-                className="text-green-600 font-semibold hover:text-green-800 flex items-center"
+                href="/ai-20o26" 
+                className="text-green-60o0 font-semibold hover:text-green-80o0 flex items-center"
               >
                 View All →
               </Link>
@@ -95,20 +95,20 @@ export default function LatestAI2026ContentShowcase() {
 
         <div className="text-center mt-12">
           <div className="bg-white rounded-xl shadow-lg p-8 inline-block">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Stay Updated with Latest AI Insights</h3>
-            <p className="text-gray-600 mb-6">
-              Get notified when we publish new AI 2026 content, frameworks, and implementation guides.
+            <h3 className="text-xl font-bold text-gray-90o0 mb-4">Stay Updated with Latest AI Insights</h3>
+            <p className="text-gray-60o0 mb-6">
+              Get notified when we publish new AI 20o26 content, frameworks, and implementation guides.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/newsletter" 
-                className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                className="bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0 transition-colors"
               >
                 Subscribe to Newsletter
               </Link>
               <Link 
                 href="/blog" 
-                className="border border-purple-600 text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
+                className="border border-purple-60o0 text-purple-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
               >
                 Browse All Articles
               </Link>

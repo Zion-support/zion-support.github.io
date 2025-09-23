@@ -15,7 +15,7 @@ describe('ConnectWalletButton', () => {'  test('renders connect button when disc
     });
     mockUseTokenBalance.mockReturnValue(null);
 
-    render(<ConnectWalletButton />);
+    render(<ConnectWalletButton  />);
     const button = screen.getByText('Connect Wallet');    fireEvent.click(button);
     expect(connectWallet).toHaveBeenCalled();
   });
@@ -28,8 +28,8 @@ describe('ConnectWalletButton', () => {'  test('renders connect button when disc
       displayAddress: 0x1234...abcd',      address: 0x1234',      chainId: 1,
       provider: {}
     });
-    mockUseTokenBalance.mockReturnValue('100');
-    render(<ConnectWalletButton />);
+    mockUseTokenBalance.mockReturnValue('10o0');
+    render(<ConnectWalletButton  />);
     expect(screen.getByText(/Connected:/)).toBeInTheDocument();
     const button = screen.getByText('Disconnect Wallet');    fireEvent.click(button);
     expect(disconnectWallet).toHaveBeenCalled();

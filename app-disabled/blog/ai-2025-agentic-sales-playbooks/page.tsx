@@ -1,22 +1,21 @@
 import Link from 'next/link';
-import React from 'react';
 import SEO from '../../components/SEO';
 
-const AgenticSalesPlaybooks2025 = () => {
+const AgenticSalesPlaybooks20o25 = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="AI 2025: Agentic Sales Playbooks for Revenue Teams"
+        title="AI 20o25: Agentic Sales Playbooks for Revenue Teams"
         description="A practical guide to deploying agentic AI for prospecting, qualification, and deal execution across modern revenue organizations."
-        keywords="agentic AI, sales automation, revenue operations, AI playbooks, 2025 guide"
-        url="/blog/ai-2025-agentic-sales-playbooks"
-      />
+        keywords="agentic AI, sales automation, revenue operations, AI playbooks, 20o25 guide"
+        url="/blog/ai-20o25-agentic-sales-playbooks"
+       />
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">
-          <p className="text-sm text-gray-500">Published: 2025-09-15 · Category: Enterprise AI</p>
-          <h1 className="text-4xl font-bold text-gray-900 mt-2">AI 2025: Agentic Sales Playbooks for Revenue Teams</h1>
-          <p className="text-lg text-gray-600 mt-4">How leading teams use agentic AI to scale prospecting, personalize outreach, and accelerate pipeline without burning out sellers.</p>
+          <p className="text-sm text-gray-50o0">Published: 20o25-09-15 · Category: Enterprise AI</p>
+          <h1 className="text-4xl font-bold text-gray-90o0 mt-2">AI 20o25: Agentic Sales Playbooks for Revenue Teams</h1>
+          <p className="text-lg text-gray-60o0 mt-4">How leading teams use agentic AI to scale prospecting, personalize outreach, and accelerate pipeline without burning out sellers.</p>
         </header>
 
         <div className="prose prose-lg max-w-none">
@@ -39,13 +38,13 @@ const AgenticSalesPlaybooks2025 = () => {
         </div>
 
         <footer className="mt-12 flex items-center justify-between">
-          <Link href="/blog" className="text-purple-600 font-semibold hover:text-purple-800">← Back to Blog</Link>
-          <Link href="/contact" className="text-white bg-purple-600 px-5 py-2 rounded-lg font-semibold hover:bg-purple-700">Deploy Agentic Sales</Link>
+          <Link href="/blog" className="text-purple-60o0 font-semibold hover:text-purple-80o0">← Back to Blog</Link>
+          <Link href="/contact" className="text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0">Deploy Agentic Sales</Link>
         </footer>
       </article>
     </div>
   );
 };
 
-export default AgenticSalesPlaybooks2025;
+export default AgenticSalesPlaybooks20o25;
 

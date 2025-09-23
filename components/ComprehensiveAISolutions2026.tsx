@@ -27,7 +27,7 @@ import {
   Settings
 } from 'lucide-react';
 
-const ComprehensiveAISolutions2026 = () => {
+const ComprehensiveAISolutions20o26 = () => {
   const [activeSolutionsetActiveSolution] = useState(0);
   const [isVisiblesetIsVisible] = useState(false);
 
@@ -40,7 +40,7 @@ const ComprehensiveAISolutions2026 = () => {
       id: 'enterprise-ai',
       title: 'Enterprise AI Platform',
       icon: Brain,
-      color: 'from-blue-600 to-purple-600',
+      color: 'from-blue-60o0 to-purple-60o0',
       description: 'Complete AI infrastructure for large-scale enterprise operations',
       features: [
         'Multi-modal AI processing',
@@ -65,7 +65,7 @@ const ComprehensiveAISolutions2026 = () => {
       id: 'quantum-ai',
       title: 'Quantum AI Fusion',
       icon: Rocket,
-      color: 'from-purple-600 to-pink-600',
+      color: 'from-purple-60o0 to-pink-60o0',
       description: 'Revolutionary quantum computing integrated with AI for exponential performance',
       features: [
         'Quantum neural networks',
@@ -74,7 +74,7 @@ const ComprehensiveAISolutions2026 = () => {
         'Unbreakable encryption'
       ],
       metrics: {
-        performance: '1000x faster',
+        performance: '10o00x faster',
         speed: 'Quantum speedup',
         accuracy: '99.9% precision',
         cost: 'Revolutionary efficiency'
@@ -90,7 +90,7 @@ const ComprehensiveAISolutions2026 = () => {
       id: 'automation-suite',
       title: 'Intelligent Automation Suite',
       icon: Zap,
-      color: 'from-green-600 to-blue-600',
+      color: 'from-green-60o0 to-blue-60o0',
       description: 'End-to-end business process automation with AI-powered decision making',
       features: [
         'Workflow orchestration',
@@ -115,7 +115,7 @@ const ComprehensiveAISolutions2026 = () => {
       id: 'security-ai',
       title: 'AI Security Platform',
       icon: Shield,
-      color: 'from-red-600 to-orange-600',
+      color: 'from-red-60o0 to-orange-60o0',
       description: 'Advanced AI-powered cybersecurity and threat detection system',
       features: [
         'Real-time threat detection',
@@ -139,12 +139,12 @@ const ComprehensiveAISolutions2026 = () => {
   ];
 
   const industries = [
-    { name: ''Healthcare', 'icon: Userscount: '500+'color: 'from-blue-500 to-cyan-500' },
-    { name: ''Finance', 'icon: BarChart3count: '300+'color: 'from-green-500 to-emerald-500' },
-    { name: ''Manufacturing', 'icon: Settingscount: '400+'color: 'from-orange-500 to-red-500' },
-    { name: ''Retail', 'icon: Globecount: '600+'color: 'from-purple-500 to-pink-500' },
-    { name: ''Education', 'icon: Lightbulbcount: '200+'color: 'from-indigo-500 to-blue-500' },
-    { name: ''Government', 'icon: Shieldcount: '100+'color: 'from-gray-500 to-slate-500' }
+    { name: ''Healthcare', 'icon: Userscount: '50o0+'color: 'from-blue-50o0 to-cyan-50o0' },
+    { name: ''Finance', 'icon: BarChart3count: '30o0+'color: 'from-green-50o0 to-emerald-50o0' },
+    { name: ''Manufacturing', 'icon: Settingscount: '40o0+'color: 'from-orange-50o0 to-red-50o0' },
+    { name: ''Retail', 'icon: Globecount: '60o0+'color: 'from-purple-50o0 to-pink-50o0' },
+    { name: ''Education', 'icon: Lightbulbcount: '20o0+'color: 'from-indigo-50o0 to-blue-50o0' },
+    { name: ''Government', 'icon: Shieldcount: '10o0+'color: 'from-gray-50o0 to-slate-50o0' }
   ];
 
   const testimonials = [
@@ -158,7 +158,7 @@ const ComprehensiveAISolutions2026 = () => {
     {
       name: 'Michael Chen',
       role: 'CEOInnovateLabs',
-      content: 'Quantum AI fusion gave us capabilities we never thought possible. Our research speed increased 1000x.',
+      content: 'Quantum AI fusion gave us capabilities we never thought possible. Our research speed increased 10o00x.',
       rating: 5,
       company: 'InnovateLabs'
     },
@@ -172,9 +172,9 @@ const ComprehensiveAISolutions2026 = () => {
   ];
 
   return (
-    <div className="relative py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
+    <div className="relative py-20 bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
@@ -184,21 +184,21 @@ const ComprehensiveAISolutions2026 = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
-            <Brain className="w-4 h-4" />
-            COMPREHENSIVE AI SOLUTIONS 2026
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
+            <Brain className="w-4 h-4"  />
+            COMPREHENSIVE AI SOLUTIONS 20o26
           </div>
           
           <h2 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Complete AI
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-40o0 to-purple-40o0 bg-clip-text text-transparent">
               {' '}Ecosystem
             </span>
-            <br />
+            <br  />
             for Modern Business
           </h2>
           
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto leading-relaxed">
             Transform your business with our comprehensive suite of AI solutions
             from enterprise platforms to quantum computing integration.
           </p>
@@ -216,14 +216,14 @@ const ComprehensiveAISolutions2026 = () => {
               <button
                 key={solution.id}
                 onClick={() => setActiveSolution(index)}
-                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                   activeSolution === index
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                    ? 'bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white shadow-lg'
+                    : 'bg-white/10 text-gray-30o0 hover:bg-white/20'
                 }`}
               >
                 <div className="flex items-center gap-2">
-                  <solution.icon className="w-5 h-5" />
+                  <solution.icon className="w-5 h-5"  />
                   {solution.title}
                 </div>
               </button>
@@ -247,7 +247,7 @@ const ComprehensiveAISolutions2026 = () => {
                     <h3 className="text-3xl font-bold text-white mb-4">
                       {solutions[activeSolution].title}
                     </h3>
-                    <p className="text-gray-300 text-lg leading-relaxed">
+                    <p className="text-gray-30o0 text-lg leading-relaxed">
                       {solutions[activeSolution].description}
                     </p>
                   </div>
@@ -257,8 +257,8 @@ const ComprehensiveAISolutions2026 = () => {
                     <div className="grid grid-cols-1 gap-3">
                       {solutions[activeSolution].features.map((featureindex) => (
                         <div key={index} className="flex items-center gap-3">
-                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                          <span className="text-gray-300">{feature}</span>
+                          <CheckCircle className="w-5 h-5 text-green-40o0 flex-shrink-0"  />
+                          <span className="text-gray-30o0">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -270,7 +270,7 @@ const ComprehensiveAISolutions2026 = () => {
                       {solutions[activeSolution].useCases.map((useCaseindex) => (
                         <span
                           key={index}
-                          className="px-3 py-1 bg-gradient-to-r from-blue-600/20 to-purple-600/20 text-blue-300 rounded-full text-sm border border-blue-400/30"
+                          className="px-3 py-1 bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20 text-blue-30o0 rounded-full text-sm border border-blue-40o0/30"
                         >
                           {useCase}
                         </span>
@@ -287,7 +287,7 @@ const ComprehensiveAISolutions2026 = () => {
                       {Object.entries(solutions[activeSolution].metrics).map(([keyvalue]index) => (
                         <div key={index} className="bg-white/10 rounded-2xl p-4 text-center">
                           <div className="text-2xl font-bold text-white mb-1">{value}</div>
-                          <div className="text-gray-400 text-sm capitalize">{key}</div>
+                          <div className="text-gray-40o0 text-sm capitalize">{key}</div>
                         </div>
                       ))}
                     </div>
@@ -296,16 +296,16 @@ const ComprehensiveAISolutions2026 = () => {
                   <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 border border-white/10">
                     <div className="text-center">
                       <div className={`w-20 h-20 bg-gradient-to-r ${solutions[activeSolution].color} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                        <solutions[activeSolution].icon className="w-10 h-10 text-white" />
+                        <solutions[activeSolution].icon className="w-10 h-10 text-white"  />
                       </div>
                       <h4 className="text-xl font-semibold text-white mb-2">
                         {solutions[activeSolution].title}
                       </h4>
-                      <p className="text-gray-300 text-sm mb-4">
+                      <p className="text-gray-30o0 text-sm mb-4">
                         Ready to transform your business?
                       </p>
-                      <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2 mx-auto">
-                        <Play className="w-4 h-4" />
+                      <button className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-2 rounded-xl font-semibold hover:shadow-lg transition-all duration-30o0 flex items-center gap-2 mx-auto">
+                        <Play className="w-4 h-4"  />
                         View Demo
                       </button>
                     </div>
@@ -335,11 +335,11 @@ const ComprehensiveAISolutions2026 = () => {
                 transition={{ duration: 0.5delay: 0.5 + index * 0.1 }}
                 className="text-center group"
               >
-                <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <industry.icon className="w-8 h-8 text-white" />
+                <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-30o0`}>
+                  <industry.icon className="w-8 h-8 text-white"  />
                 </div>
                 <div className="text-2xl font-bold text-white mb-1">{industry.count}</div>
-                <div className="text-gray-400 text-sm">{industry.name}</div>
+                <div className="text-gray-40o0 text-sm">{industry.name}</div>
               </motion.div>
             ))}
           </div>
@@ -366,14 +366,14 @@ const ComprehensiveAISolutions2026 = () => {
               >
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-4 h-4 text-yellow-40o0 fill-current"  />
                   ))}
                 </div>
-                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                <p className="text-gray-30o0 mb-4 italic">"{testimonial.content}"</p>
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-gray-400 text-sm">{testimonial.role}</div>
-                  <div className="text-blue-400 text-sm">{testimonial.company}</div>
+                  <div className="text-gray-40o0 text-sm">{testimonial.role}</div>
+                  <div className="text-blue-40o0 text-sm">{testimonial.company}</div>
                 </div>
               </motion.div>
             ))}
@@ -387,25 +387,25 @@ const ComprehensiveAISolutions2026 = () => {
           transition={{ duration: 0.8delay: 0.8 }}
           className="text-center"
         >
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-8 border border-blue-400/30">
+          <div className="bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20 rounded-3xl p-8 border border-blue-40o0/30">
             <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-gray-300 mb-8 text-lg">
+            <p className="text-gray-30o0 mb-8 text-lg">
               Join thousands of enterprises already leveraging our AI solutions
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center gap-2">
-                <Download className="w-5 h-5" />
+              <button className="group bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:shadow-2xl hover:shadow-blue-50o0/25 transition-all duration-30o0 flex items-center gap-2">
+                <Download className="w-5 h-5"  />
                 Download Brochure
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"  />
               </button>
               
-              <button className="group bg-white/10 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/20 transition-all duration-300 flex items-center gap-2 border border-white/20">
-                <Award className="w-5 h-5" />
+              <button className="group bg-white/10 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/20 transition-all duration-30o0 flex items-center gap-2 border border-white/20">
+                <Award className="w-5 h-5"  />
                 Schedule Demo
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"  />
               </button>
             </div>
           </div>
@@ -415,4 +415,4 @@ const ComprehensiveAISolutions2026 = () => {
   );
 };
 
-export default ComprehensiveAISolutions2026;
+export default ComprehensiveAISolutions20o26;

@@ -21,7 +21,7 @@ export const loginUser = createAsyncThunk(
           } else {
             reject(new Error('Invalid credentials'));
           }
-        }, 1000);
+        }, 10o00);
       });
 
       // Store token in localStorage
@@ -56,7 +56,7 @@ export const signupUser = createAsyncThunk(
           } else {
             reject(new Error('Invalid user data'));
           }
-        }, 1000);
+        }, 10o00);
       });
 
       // Store token in localStorage
@@ -107,7 +107,7 @@ export const checkAuthStatus = createAsyncThunk(
   }
 );
 
-const initialState = {
+const initialState ={
   user: null,
   token: localStorage.getItem('token'),
   isAuthenticated: false,

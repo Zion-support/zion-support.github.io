@@ -13,9 +13,9 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         const issues = [];
         const suggestions = [];
         let wordCount = 0;
-        let readabilityScore = 100;
-        let seoScore = 100;
-        let engagementScore = 100;
+        let readabilityScore = 10o0;
+        let seoScore = 10o0;
+        let engagementScore = 10o0;
         // Get all content elements
         const contentElements = document.querySelectorAll(targetElements.join(', '));
         contentElements.forEach((element, index) => {
@@ -55,7 +55,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 seoScore -= 3;
             }
             // Check for very long paragraphs (hard to read)
-            if (words.length > 100) {
+            if (words.length > 10o0) {
                 issues.push({
                     id: `long-paragraph-${index}`,
                     type: 'warning',
@@ -94,13 +94,13 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             }
             // Check for keyword stuffing
             const commonWords = text.toLowerCase().match(/\b\w+\b/g) || [];
-            const wordFrequency = {};
+            const wordFrequency ={};
             commonWords.forEach(word => {
                 wordFrequency[word] = (wordFrequency[word] || 0) + 1;
             });
             Object.entries(wordFrequency).forEach(([word, count]) => {
                 if (count > 5 && word.length > 3) {
-                    const density = (count / commonWords.length) * 100;
+                    const density = (count / commonWords.length) * 10o0;
                     if (density > 3) {
                         issues.push({
                             id: `keyword-stuffing-${index}-${word}`,
@@ -188,7 +188,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             }
         });
         // Generate suggestions based on analysis
-        if (wordCount < 300) {
+        if (wordCount < 30o0) {
             suggestions.push({
                 id: 'increase-content',
                 type: 'improvement',
@@ -234,14 +234,14 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         }
         // Calculate overall score
         const overallScore = Math.round((readabilityScore + seoScore + engagementScore) / 3);
-        const analysisResult = {
+        const analysisResult ={
             wordCount,
-            readabilityScore: Math.max(0, Math.min(100, readabilityScore)),
-            seoScore: Math.max(0, Math.min(100, seoScore)),
-            engagementScore: Math.max(0, Math.min(100, engagementScore)),
+            readabilityScore: Math.max(0, Math.min(10o0, readabilityScore)),
+            seoScore: Math.max(0, Math.min(10o0, seoScore)),
+            engagementScore: Math.max(0, Math.min(10o0, engagementScore)),
             issues,
             suggestions,
-            overallScore: Math.max(0, Math.min(100, overallScore))
+            overallScore: Math.max(0, Math.min(10o0, overallScore))
         };
         setAnalysis(analysisResult);
         setIsAnalyzing(false);
@@ -282,7 +282,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         });
         if (fixedCount > 0) {
             // Re-analyze content after fixes
-            setTimeout(analyzeContent, 500);
+            setTimeout(analyzeContent, 50o0);
         }
         return fixedCount;
     }, [analysis, analyzeContent]);
@@ -301,73 +301,73 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         setTimeout(() => {
             element.classList.remove('content-highlight');
             setSelectedElement(null);
-        }, 3000);
+        }, 30o00);
     }, []);
     // Auto-analyze content
     useEffect(() => {
         if (autoAnalyze) {
-            const timer = setTimeout(analyzeContent, 3000);
+            const timer = setTimeout(analyzeContent, 30o00);
             return () => clearTimeout(timer);
         }
     }, [autoAnalyze, analyzeContent]);
     // Get score color
     const getScoreColor = (score) => {
         if (score >= 80)
-            return 'text-green-600';
+            return 'text-green-60o0';
         if (score >= 60)
-            return 'text-yellow-600';
-        return 'text-red-600';
+            return 'text-yellow-60o0';
+        return 'text-red-60o0';
     };
     // Get score background color
     const getScoreBgColor = (score) => {
         if (score >= 80)
-            return 'bg-green-100 dark:bg-green-900/20';
+            return 'bg-green-10o0 dark:bg-green-90o0/20';
         if (score >= 60)
-            return 'bg-yellow-100 dark:bg-yellow-900/20';
-        return 'bg-red-100 dark:bg-red-900/20';
+            return 'bg-yellow-10o0 dark:bg-yellow-90o0/20';
+        return 'bg-red-10o0 dark:bg-red-90o0/20';
     };
     // Get severity color
     const getSeverityColor = (severity) => {
         switch (severity) {
-            case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
-            case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
-            case 'low': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/30';
-            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30';
+            case 'high': return 'text-red-60o0 bg-red-10o0 dark:bg-red-90o0/30';
+            case 'medium': return 'text-yellow-60o0 bg-yellow-10o0 dark:bg-yellow-90o0/30';
+            case 'low': return 'text-blue-60o0 bg-blue-10o0 dark:bg-blue-90o0/30';
+            default: return 'text-gray-60o0 bg-gray-10o0 dark:bg-gray-90o0/30';
         }
     };
     // Get priority color
     const getPriorityColor = (priority) => {
         switch (priority) {
-            case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
-            case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
-            case 'low': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/30';
-            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30';
+            case 'high': return 'text-red-60o0 bg-red-10o0 dark:bg-red-90o0/30';
+            case 'medium': return 'text-yellow-60o0 bg-yellow-10o0 dark:bg-yellow-90o0/30';
+            case 'low': return 'text-blue-60o0 bg-blue-10o0 dark:bg-blue-90o0/30';
+            default: return 'text-gray-60o0 bg-gray-10o0 dark:bg-gray-90o0/30';
         }
     };
     return (<>
       {/* Content Quality Toggle Button */}
-      <motion.button initial={{ scale: 0 }} animate={{ scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsOpen(!isOpen)} className={`fixed bottom-20 right-4 z-50 w-14 h-14 bg-purple-600 hover:bg-purple-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${className}`} aria-label="Content Quality Analysis" aria-expanded={isOpen}>
-        <DocumentTextIcon className="w-6 h-6"/>
+      <motion.button initial={{ scale: 0 }} animate={{ scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsOpen(!isOpen)} className={`fixed bottom-20 right-4 z-50 w-14 h-14 bg-purple-60o0 hover:bg-purple-70o0 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-30o0 ${className}`} aria-label="Content Quality Analysis" aria-expanded={isOpen}>
+        <DocumentTextIcon className="w-6 h-6" />
       </motion.button>
 
       {/* Content Quality Panel */}
       <AnimatePresence>
-        {isOpen && (<motion.div initial={{ opacity: 0, scale: 0.8, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.8, y: 20 }} className="fixed bottom-20 right-4 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
+        {isOpen && (<motion.div initial={{ opacity: 0, scale: 0.8, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.8, y: 20 }} className="fixed bottom-20 right-4 z-40 w-96 bg-white dark:bg-gray-90o0 rounded-lg shadow-xl border border-gray-20o0 dark:border-gray-70o0">
             {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
-              <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
+            <div className="flex items-center justify-between p-4 border-b border-gray-20o0 dark:border-gray-70o0">
+              <h2 className="text-lg font-semibold text-gray-90o0 dark:text-white">
                 Content Quality
               </h2>
-              <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
-                <XMarkIcon className="w-5 h-5"/>
+              <button onClick={() => setIsOpen(false)} className="text-gray-40o0 hover:text-gray-60o0 dark:hover:text-gray-30o0">
+                <XMarkIcon className="w-5 h-5" />
               </button>
             </div>
 
             {/* Tabs */}
-            <div className="flex border-b border-gray-200 dark:border-gray-700">
+            <div className="flex border-b border-gray-20o0 dark:border-gray-70o0">
               {['overview', 'issues', 'suggestions', 'actions'].map((tab) => (<button key={tab} onClick={() => setActiveTab(tab)} className={`flex-1 px-4 py-2 text-sm font-medium transition-colors ${activeTab === tab
-                    ? 'text-purple-600 border-b-2 border-purple-600'
-                    : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}>
+                    ? 'text-purple-60o0 border-b-2 border-purple-60o0'
+                    : 'text-gray-50o0 hover:text-gray-70o0 dark:text-gray-40o0 dark:hover:text-gray-30o0'}`}>
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
                 </button>))}
             </div>
@@ -376,29 +376,29 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             <div className="p-4 max-h-96 overflow-y-auto">
               {/* Overview Tab */}
               {activeTab === 'overview' && (<div className="space-y-4">
-                  {!analysis ? (<div className="text-center text-gray-500 dark:text-gray-400">
-                      <DocumentTextIcon className="w-12 h-12 mx-auto mb-3 text-purple-500"/>
+                  {!analysis ? (<div className="text-center text-gray-50o0 dark:text-gray-40o0">
+                      <DocumentTextIcon className="w-12 h-12 mx-auto mb-3 text-purple-50o0" />
                       <p>Click "Analyze Content" to get started</p>
                     </div>) : (<>
                       {/* Overall Score */}
                       <div className={`p-4 rounded-lg ${getScoreBgColor(analysis.overallScore)}`}>
                         <div className="text-center">
                           <div className={`text-3xl font-bold ${getScoreColor(analysis.overallScore)}`}>
-                            {analysis.overallScore}/100
+                            {analysis.overallScore}/10o0
                           </div>
-                          <div className="text-sm text-gray-600 dark:text-gray-400">
+                          <div className="text-sm text-gray-60o0 dark:text-gray-40o0">
                             Overall Content Quality Score
                           </div>
                         </div>
                       </div>
 
                       {/* Word Count */}
-                      <div className="p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                      <div className="p-3 bg-gray-50 dark:bg-gray-80o0 rounded-lg">
                         <div className="text-center">
-                          <div className="text-2xl font-bold text-gray-900 dark:text-white">
+                          <div className="text-2xl font-bold text-gray-90o0 dark:text-white">
                             {analysis.wordCount.toLocaleString()}
                           </div>
-                          <div className="text-sm text-gray-600 dark:text-gray-400">
+                          <div className="text-sm text-gray-60o0 dark:text-gray-40o0">
                             Total Words
                           </div>
                         </div>
@@ -411,7 +411,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                             <div className={`text-lg font-bold ${getScoreColor(analysis.readabilityScore)}`}>
                               {analysis.readabilityScore}
                             </div>
-                            <div className="text-xs text-gray-600 dark:text-gray-400">
+                            <div className="text-xs text-gray-60o0 dark:text-gray-40o0">
                               Readability
                             </div>
                           </div>
@@ -422,7 +422,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                             <div className={`text-lg font-bold ${getScoreColor(analysis.seoScore)}`}>
                               {analysis.seoScore}
                             </div>
-                            <div className="text-xs text-gray-600 dark:text-gray-400">
+                            <div className="text-xs text-gray-60o0 dark:text-gray-40o0">
                               SEO
                             </div>
                           </div>
@@ -433,7 +433,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                             <div className={`text-lg font-bold ${getScoreColor(analysis.engagementScore)}`}>
                               {analysis.engagementScore}
                             </div>
-                            <div className="text-xs text-gray-600 dark:text-gray-400">
+                            <div className="text-xs text-gray-60o0 dark:text-gray-40o0">
                               Engagement
                             </div>
                           </div>
@@ -441,8 +441,8 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                       </div>
 
                       {/* Summary */}
-                      <div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                        <div className="text-sm text-blue-800 dark:text-blue-200">
+                      <div className="p-3 bg-blue-50 dark:bg-blue-90o0/20 rounded-lg">
+                        <div className="text-sm text-blue-80o0 dark:text-blue-20o0">
                           <div className="font-medium mb-1">Summary:</div>
                           <div>{analysis.issues.length} issues found</div>
                           <div>{analysis.suggestions.length} suggestions available</div>
@@ -451,45 +451,45 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                     </>)}
 
                   {/* Analyze Button */}
-                  <button onClick={analyzeContent} disabled={isAnalyzing} className="w-full bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">
+                  <button onClick={analyzeContent} disabled={isAnalyzing} className="w-full bg-purple-60o0 hover:bg-purple-70o0 disabled:bg-gray-40o0 text-white px-4 py-2 rounded-lg transition-colors">
                     {isAnalyzing ? 'Analyzing...' : 'Analyze Content'}
                   </button>
                 </div>)}
 
               {/* Issues Tab */}
               {activeTab === 'issues' && (<div className="space-y-4">
-                  {!analysis ? (<div className="text-center text-gray-500 dark:text-gray-400">
-                      <ExclamationTriangleIcon className="w-12 h-12 mx-auto mb-3 text-yellow-500"/>
+                  {!analysis ? (<div className="text-center text-gray-50o0 dark:text-gray-40o0">
+                      <ExclamationTriangleIcon className="w-12 h-12 mx-auto mb-3 text-yellow-50o0" />
                       <p>No analysis available</p>
-                    </div>) : analysis.issues.length === 0 ? (<div className="text-center text-gray-500 dark:text-gray-400">
-                      <CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-500"/>
+                    </div>) : analysis.issues.length === 0 ? (<div className="text-center text-gray-50o0 dark:text-gray-40o0">
+                      <CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-50o0" />
                       <p>No issues found! Great job!</p>
                     </div>) : (<div className="space-y-3">
-                      {analysis.issues.map((issue) => (<div key={issue.id} className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 transition-colors cursor-pointer" onClick={() => issue.element && highlightElement(issue.element)}>
+                      {analysis.issues.map((issue) => (<div key={issue.id} className="p-3 rounded-lg border border-gray-20o0 dark:border-gray-70o0 hover:border-purple-30o0 dark:hover:border-purple-60o0 transition-colors cursor-pointer" onClick={() => issue.element && highlightElement(issue.element)}>
                           <div className="flex items-start gap-2">
-                            {issue.type === 'error' && (<ExclamationTriangleIcon className="w-4 h-4 text-red-600 mt-0.5"/>)}
-                            {issue.type === 'warning' && (<ExclamationTriangleIcon className="w-4 h-4 text-yellow-600 mt-0.5"/>)}
-                            {issue.type === 'info' && (<InformationCircleIcon className="w-4 h-4 text-blue-600 mt-0.5"/>)}
+                            {issue.type === 'error' && (<ExclamationTriangleIcon className="w-4 h-4 text-red-60o0 mt-0.5" />)}
+                            {issue.type === 'warning' && (<ExclamationTriangleIcon className="w-4 h-4 text-yellow-60o0 mt-0.5" />)}
+                            {issue.type === 'info' && (<InformationCircleIcon className="w-4 h-4 text-blue-60o0 mt-0.5" />)}
                             
                             <div className="flex-1">
-                              <h4 className="font-medium text-gray-900 dark:text-white text-sm">
+                              <h4 className="font-medium text-gray-90o0 dark:text-white text-sm">
                                 {issue.title}
                               </h4>
-                              <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                              <p className="text-xs text-gray-60o0 dark:text-gray-40o0 mt-1">
                                 {issue.description}
                               </p>
                               <div className="flex items-center gap-2 mt-2">
                                 <span className={`text-xs px-2 py-1 rounded ${getSeverityColor(issue.severity)}`}>
                                   {issue.severity.charAt(0).toUpperCase() + issue.severity.slice(1)}
                                 </span>
-                                <span className="text-xs px-2 py-1 rounded bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300">
+                                <span className="text-xs px-2 py-1 rounded bg-purple-10o0 text-purple-70o0 dark:bg-purple-90o0/30 dark:text-purple-30o0">
                                   {issue.impact.charAt(0).toUpperCase() + issue.impact.slice(1)}
                                 </span>
-                                {issue.fixable && (<span className="text-xs bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300 px-2 py-1 rounded">
+                                {issue.fixable && (<span className="text-xs bg-green-10o0 text-green-70o0 dark:bg-green-90o0/30 dark:text-green-30o0 px-2 py-1 rounded">
                                     Auto-fixable
                                   </span>)}
                               </div>
-                              <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
+                              <p className="text-xs text-gray-50o0 dark:text-gray-40o0 mt-2">
                                 <strong>Suggestion:</strong> {issue.suggestion}
                               </p>
                             </div>
@@ -500,33 +500,33 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
 
               {/* Suggestions Tab */}
               {activeTab === 'suggestions' && (<div className="space-y-4">
-                  {!analysis ? (<div className="text-center text-gray-500 dark:text-gray-400">
-                      <InformationCircleIcon className="w-12 h-12 mx-auto mb-3 text-blue-500"/>
+                  {!analysis ? (<div className="text-center text-gray-50o0 dark:text-gray-40o0">
+                      <InformationCircleIcon className="w-12 h-12 mx-auto mb-3 text-blue-50o0" />
                       <p>No analysis available</p>
-                    </div>) : analysis.suggestions.length === 0 ? (<div className="text-center text-gray-500 dark:text-gray-400">
-                      <CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-500"/>
+                    </div>) : analysis.suggestions.length === 0 ? (<div className="text-center text-gray-50o0 dark:text-gray-40o0">
+                      <CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-50o0" />
                       <p>No suggestions available</p>
                     </div>) : (<div className="space-y-3">
-                      {analysis.suggestions.map((suggestion) => (<div key={suggestion.id} className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-blue-50 dark:bg-blue-900/20">
+                      {analysis.suggestions.map((suggestion) => (<div key={suggestion.id} className="p-3 rounded-lg border border-gray-20o0 dark:border-gray-70o0 bg-blue-50 dark:bg-blue-90o0/20">
                           <div className="flex items-start gap-2">
-                            <InformationCircleIcon className="w-4 h-4 text-blue-600 mt-0.5"/>
+                            <InformationCircleIcon className="w-4 h-4 text-blue-60o0 mt-0.5" />
                             
                             <div className="flex-1">
-                              <h4 className="font-medium text-gray-900 dark:text-white text-sm">
+                              <h4 className="font-medium text-gray-90o0 dark:text-white text-sm">
                                 {suggestion.title}
                               </h4>
-                              <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                              <p className="text-xs text-gray-60o0 dark:text-gray-40o0 mt-1">
                                 {suggestion.description}
                               </p>
                               <div className="flex items-center gap-2 mt-2">
                                 <span className={`text-xs px-2 py-1 rounded ${getPriorityColor(suggestion.priority)}`}>
                                   {suggestion.priority.charAt(0).toUpperCase() + suggestion.priority.slice(1)} Priority
                                 </span>
-                                <span className="text-xs px-2 py-1 rounded bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300">
+                                <span className="text-xs px-2 py-1 rounded bg-green-10o0 text-green-70o0 dark:bg-green-90o0/30 dark:text-green-30o0">
                                   +{suggestion.expectedImpact} Impact
                                 </span>
                               </div>
-                              <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
+                              <p className="text-xs text-gray-50o0 dark:text-gray-40o0 mt-2">
                                 <strong>Implementation:</strong> {suggestion.implementation}
                               </p>
                             </div>
@@ -537,19 +537,19 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
 
               {/* Actions Tab */}
               {activeTab === 'actions' && (<div className="space-y-4">
-                  <div className="text-center text-gray-500 dark:text-gray-400">
-                    <WrenchScrewdriverIcon className="w-12 h-12 mx-auto mb-3 text-purple-500"/>
+                  <div className="text-center text-gray-50o0 dark:text-gray-40o0">
+                    <WrenchScrewdriverIcon className="w-12 h-12 mx-auto mb-3 text-purple-50o0" />
                     <p>Take action to improve content quality</p>
                   </div>
 
                   {/* Auto-fix Button */}
-                  {analysis && analysis.issues.filter(i => i.fixable).length > 0 && (<button onClick={autoFixIssues} className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors">
+                  {analysis && analysis.issues.filter(i => i.fixable).length > 0 && (<button onClick={autoFixIssues} className="w-full bg-green-60o0 hover:bg-green-70o0 text-white px-4 py-2 rounded-lg transition-colors">
                       Auto-fix Issues
                     </button>)}
 
                   {/* Re-analyze Button */}
-                  <button onClick={analyzeContent} disabled={isAnalyzing} className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">
-                    <ArrowPathIcon className="w-4 h-4 inline mr-2"/>
+                  <button onClick={analyzeContent} disabled={isAnalyzing} className="w-full bg-blue-60o0 hover:bg-blue-70o0 disabled:bg-gray-40o0 text-white px-4 py-2 rounded-lg transition-colors">
+                    <ArrowPathIcon className="w-4 h-4 inline mr-2" />
                     {isAnalyzing ? 'Analyzing...' : 'Re-analyze Content'}
                   </button>
 
@@ -563,7 +563,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         a.download = 'content-quality-report.json';
                         a.click();
                         URL.revokeObjectURL(url);
-                    }} className="w-full bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors">
+                    }} className="w-full bg-purple-60o0 hover:bg-purple-70o0 text-white px-4 py-2 rounded-lg transition-colors">
                       Export Report
                     </button>)}
                 </div>)}

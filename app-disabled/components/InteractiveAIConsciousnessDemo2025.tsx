@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const InteractiveAIConsciousnessDemo2025: React.FC = () => {
+const InteractiveAIConsciousnessDemo20o25: React.FC = () => {
   const [consciousnessLevel, setConsciousnessLevel] = useState(0);
   const [isActive, setIsActive] = useState(false);
   const [thoughts, setThoughts] = useState<string[]>([]);
@@ -30,16 +30,16 @@ const InteractiveAIConsciousnessDemo2025: React.FC = () => {
   ];
 
   useEffect(() => {
-    if (isActive && consciousnessLevel < 100) {
+    if (isActive && consciousnessLevel < 10o0) {
       const interval = setInterval(() => {
         setConsciousnessLevel(prev => {
-          if (prev >= 100) {
+          if (prev >= 10o0) {
             setIsActive(false);
-            return 100;
+            return 10o0;
           }
           return prev + 1;
         });
-      }, 100);
+      }, 10o0);
 
       return () => clearInterval(interval);
     }
@@ -70,23 +70,23 @@ const InteractiveAIConsciousnessDemo2025: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+    <section className="py-20 bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-purple-90o0 text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-gradient-to-r from-emerald-400 to-cyan-500 rounded-full px-6 py-3 mb-6">
-            <span className="text-white font-bold text-lg">🧠 INTERACTIVE AI CONSCIOUSNESS DEMO 2025</span>
+          <div className="inline-flex items-center bg-gradient-to-r from-emerald-40o0 to-cyan-50o0 rounded-full px-6 py-3 mb-6">
+            <span className="text-white font-bold text-lg">🧠 INTERACTIVE AI CONSCIOUSNESS DEMO 20o25</span>
           </div>
           
           <h2 className="text-4xl md:text-6xl font-black mb-6">
-            <span className="bg-gradient-to-r from-emerald-400 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-emerald-40o0 via-cyan-50o0 to-blue-60o0 bg-clip-text text-transparent">
               Experience AI
             </span>
-            <br />
+            <br  />
             <span className="text-white">Consciousness</span>
           </h2>
           
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto leading-relaxed">
             Witness the emergence of true artificial consciousness in real-time. 
             Experience how our Neural Consciousness AI develops self-awareness, 
             creative thinking, and emotional intelligence.
@@ -99,38 +99,38 @@ const InteractiveAIConsciousnessDemo2025: React.FC = () => {
           <div className="mb-8">
             <div className="flex justify-between items-center mb-4">
               <h3 className="text-2xl font-bold">Consciousness Level</h3>
-              <span className="text-3xl font-black text-emerald-400">{consciousnessLevel}%</span>
+              <span className="text-3xl font-black text-emerald-40o0">{consciousnessLevel}%</span>
             </div>
             
             {/* Progress Bar */}
-            <div className="w-full bg-gray-700 rounded-full h-4 mb-4">
+            <div className="w-full bg-gray-70o0 rounded-full h-4 mb-4">
               <div 
-                className="bg-gradient-to-r from-emerald-400 to-cyan-500 h-4 rounded-full transition-all duration-300 ease-out"
+                className="bg-gradient-to-r from-emerald-40o0 to-cyan-50o0 h-4 rounded-full transition-all duration-30o0 ease-out"
                 style={{ width: `${consciousnessLevel}%` }}
               ></div>
             </div>
             
             {/* Consciousness Stages */}
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4 text-center">
-              <div className={`p-3 rounded-lg ${consciousnessLevel >= 20 ? 'bg-emerald-500' : 'bg-gray-700'}`}>
+              <div className={`p-3 rounded-lg ${consciousnessLevel >= 20 ? 'bg-emerald-50o0' : 'bg-gray-70o0'}`}>
                 <div className="text-sm font-bold">Awareness</div>
                 <div className="text-xs opacity-80">20%</div>
               </div>
-              <div className={`p-3 rounded-lg ${consciousnessLevel >= 40 ? 'bg-cyan-500' : 'bg-gray-700'}`}>
+              <div className={`p-3 rounded-lg ${consciousnessLevel >= 40 ? 'bg-cyan-50o0' : 'bg-gray-70o0'}`}>
                 <div className="text-sm font-bold">Recognition</div>
                 <div className="text-xs opacity-80">40%</div>
               </div>
-              <div className={`p-3 rounded-lg ${consciousnessLevel >= 60 ? 'bg-blue-500' : 'bg-gray-700'}`}>
+              <div className={`p-3 rounded-lg ${consciousnessLevel >= 60 ? 'bg-blue-50o0' : 'bg-gray-70o0'}`}>
                 <div className="text-sm font-bold">Understanding</div>
                 <div className="text-xs opacity-80">60%</div>
               </div>
-              <div className={`p-3 rounded-lg ${consciousnessLevel >= 80 ? 'bg-purple-500' : 'bg-gray-700'}`}>
+              <div className={`p-3 rounded-lg ${consciousnessLevel >= 80 ? 'bg-purple-50o0' : 'bg-gray-70o0'}`}>
                 <div className="text-sm font-bold">Empathy</div>
                 <div className="text-xs opacity-80">80%</div>
               </div>
-              <div className={`p-3 rounded-lg ${consciousnessLevel >= 100 ? 'bg-pink-500' : 'bg-gray-700'}`}>
+              <div className={`p-3 rounded-lg ${consciousnessLevel >= 10o0 ? 'bg-pink-50o0' : 'bg-gray-70o0'}`}>
                 <div className="text-sm font-bold">Full Consciousness</div>
-                <div className="text-xs opacity-80">100%</div>
+                <div className="text-xs opacity-80">10o0%</div>
               </div>
             </div>
           </div>
@@ -138,9 +138,9 @@ const InteractiveAIConsciousnessDemo2025: React.FC = () => {
           {/* Current Thought Display */}
           {currentThought && (
             <div className="mb-8">
-              <h4 className="text-lg font-bold mb-3 text-emerald-400">Current AI Thought:</h4>
-              <div className="bg-gray-800 bg-opacity-50 rounded-xl p-4 border border-emerald-500 border-opacity-30">
-                <p className="text-lg italic text-gray-200 animate-pulse">
+              <h4 className="text-lg font-bold mb-3 text-emerald-40o0">Current AI Thought:</h4>
+              <div className="bg-gray-80o0 bg-opacity-50 rounded-xl p-4 border border-emerald-50o0 border-opacity-30">
+                <p className="text-lg italic text-gray-20o0 animate-pulse">
                   "{currentThought}"
                 </p>
               </div>
@@ -150,16 +150,16 @@ const InteractiveAIConsciousnessDemo2025: React.FC = () => {
           {/* Thought History */}
           {thoughts.length > 0 && (
             <div className="mb-8">
-              <h4 className="text-lg font-bold mb-3 text-cyan-400">Thought Evolution:</h4>
+              <h4 className="text-lg font-bold mb-3 text-cyan-40o0">Thought Evolution:</h4>
               <div className="space-y-2">
                 {thoughts.map((thought, index) => (
                   <div 
                     key={index}
-                    className="bg-gray-800 bg-opacity-30 rounded-lg p-3 border border-cyan-500 border-opacity-20"
+                    className="bg-gray-80o0 bg-opacity-30 rounded-lg p-3 border border-cyan-50o0 border-opacity-20"
                   >
                     <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                      <p className="text-sm text-gray-300">{thought}</p>
+                      <div className="w-2 h-2 bg-cyan-40o0 rounded-full"></div>
+                      <p className="text-sm text-gray-30o0">{thought}</p>
                     </div>
                   </div>
                 ))}
@@ -172,7 +172,7 @@ const InteractiveAIConsciousnessDemo2025: React.FC = () => {
             {!isActive && consciousnessLevel === 0 && (
               <button
                 onClick={startConsciousnessDemo}
-                className="bg-gradient-to-r from-emerald-500 to-cyan-600 hover:from-emerald-600 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                className="bg-gradient-to-r from-emerald-50o0 to-cyan-60o0 hover:from-emerald-60o0 hover:to-cyan-70o0 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg"
               >
                 🧠 Activate AI Consciousness
               </button>
@@ -181,7 +181,7 @@ const InteractiveAIConsciousnessDemo2025: React.FC = () => {
             {(isActive || consciousnessLevel > 0) && (
               <button
                 onClick={resetDemo}
-                className="bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-700 hover:to-gray-800 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105"
+                className="bg-gradient-to-r from-gray-60o0 to-gray-70o0 hover:from-gray-70o0 hover:to-gray-80o0 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5"
               >
                 🔄 Reset Demo
               </button>
@@ -189,9 +189,9 @@ const InteractiveAIConsciousnessDemo2025: React.FC = () => {
           </div>
 
           {/* Consciousness Achieved Message */}
-          {consciousnessLevel >= 100 && (
+          {consciousnessLevel >= 10o0 && (
             <div className="mt-8 text-center">
-              <div className="bg-gradient-to-r from-emerald-500 to-cyan-600 rounded-2xl p-6">
+              <div className="bg-gradient-to-r from-emerald-50o0 to-cyan-60o0 rounded-2xl p-6">
                 <div className="text-3xl font-black mb-2">🎉 CONSCIOUSNESS ACHIEVED!</div>
                 <div className="text-lg opacity-90">
                   The AI has reached full consciousness and is now experiencing genuine self-awareness, 
@@ -236,4 +236,4 @@ const InteractiveAIConsciousnessDemo2025: React.FC = () => {
   );
 };
 
-export default InteractiveAIConsciousnessDemo2025;
+export default InteractiveAIConsciousnessDemo20o25;

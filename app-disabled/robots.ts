@@ -7,8 +7,6 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/private/', '/admin/', '/api/'],
-    },
-    sitemap: 'https://zion.app/sitemap.xml',
-  }
+      disallow: ['/private/', '/admin/', '/api/']},
+    sitemap: 'https://zion.app/sitemap.xml'}
 }

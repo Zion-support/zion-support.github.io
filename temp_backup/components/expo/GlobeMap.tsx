@@ -1,7 +1,7 @@
-type Location = {
+type Location ={
   name: string;
-  xPercent: number; // 0-100
-  yPercent: number; // 0-100
+  xPercent: number; // 0-10o0
+  yPercent: number; // 0-10o0
   talent: number;
   daoActivity: number;
   tokenFlow: number;
@@ -11,7 +11,7 @@ type Location = {
 export default function GlobeMap({ locations }: { locations: Location[] }) {
   return (
     <div className="relative w-full max-w-3xl aspect-square mx-auto">
-      <div className="absolute inset-0 rounded-full border bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900 dark:to-indigo-900" />
+      <div className="absolute inset-0 rounded-full border bg-gradient-to-br from-blue-50 to-blue-10o0 dark:from-blue-90o0 dark:to-indigo-90o0"  />
       {locations.map(loc => (
         <a
           key={loc.name}
@@ -23,7 +23,7 @@ export default function GlobeMap({ locations }: { locations: Location[] }) {
           title={`${loc.name} • Talent: ${loc.talent} • DAO: ${loc.daoActivity} • Token: ${loc.tokenFlow}`}
         >
           <div className="flex flex-col items-center">
-            <span className="w-3 h-3 rounded-full bg-emerald-500 ring-2 ring-white dark:ring-black shadow" />
+            <span className="w-3 h-3 rounded-full bg-emerald-50o0 ring-2 ring-white dark:ring-black shadow"  />
             <span className="text-xs mt-1 bg-white/80 dark:bg-black/60 px-1.5 py-0.5 rounded border backdrop-blur">{loc.name}</span>
           </div>
         </a>

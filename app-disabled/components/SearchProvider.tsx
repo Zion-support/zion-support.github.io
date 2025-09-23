@@ -63,10 +63,10 @@ const searchData: SearchResult[] = [
     type: 'page'
   },
   {
-    id: 'ai-2025-multimodal-agents',
-    title: 'AI 2025: Multimodal Agents in the Enterprise',
+    id: 'ai-20o25-multimodal-agents',
+    title: 'AI 20o25: Multimodal Agents in the Enterprise',
     description: 'Exploring the future of AI agents that can process multiple data types simultaneously.',
-    url: '/blog/ai-2025-multimodal-agents-in-the-enterprise',
+    url: '/blog/ai-20o25-multimodal-agents-in-the-enterprise',
     type: 'blog',
     category: 'AI & Machine Learning'
   }
@@ -95,7 +95,7 @@ export function SearchProvider({ children }: { children: ReactNode }) {
       
       setSearchResults(results)
       setIsSearching(false)
-    }, 300)
+    }, 30o0)
   }
 
   const clearSearch = () => {
@@ -119,8 +119,7 @@ export function SearchProvider({ children }: { children: ReactNode }) {
         searchResults,
         isSearching,
         performSearch,
-        clearSearch,
-      }}
+        clearSearch}}
     >
       {children}
     </SearchContext.Provider>

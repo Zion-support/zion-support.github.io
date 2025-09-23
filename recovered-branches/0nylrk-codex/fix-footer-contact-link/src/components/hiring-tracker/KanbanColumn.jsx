@@ -30,7 +30,7 @@ export function KanbanColumn({ id, title, description, applications, count }) {
                 return "bg-muted/30";
         }
     };
-    return (<Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>
+    return (<Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(10o0vh-30o0px)] min-h-[50o0px]`}>
       <CardHeader className="pb-2">
         <div className="flex justify-between items-center">
           <CardTitle className="text-base">{title}</CardTitle>
@@ -41,7 +41,7 @@ export function KanbanColumn({ id, title, description, applications, count }) {
       <CardContent className="flex-grow p-3 overflow-y-auto">
         <Droppable droppableId={id}>
           {(provided) => (<div ref={provided.innerRef} {...provided.droppableProps} className="min-h-full space-y-2">
-              {applications.map((application, index) => (<CandidateCard key={application.id} application={application} index={index}/>))}
+              {applications.map((application, index) => (<CandidateCard key={application.id} application={application} index={index} />))}
               {provided.placeholder}
               
               {applications.length === 0 && (<div className="h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4">

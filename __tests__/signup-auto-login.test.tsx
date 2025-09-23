@@ -4,9 +4,8 @@ describe('Signup Auto Login', () => {
     expect(true).toBe(true);
 });'
 
-
-module.exports = {};
-module.exports = {};
-module.exports = {};
+module.exports ={};
+module.exports ={};
+module.exports ={};
   });
 });

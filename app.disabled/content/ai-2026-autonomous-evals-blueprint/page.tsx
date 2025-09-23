@@ -1,27 +1,25 @@
-import React from 'react';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'AI 2026: Autonomous Evals Blueprint',
+export const metadata ={
+  title: 'AI 20o26: Autonomous Evals Blueprint',
   description:
-    'A practical blueprint to design eval-first, guardrail-driven autonomous AI systems with measurable reliability.',
-};
+    'A practical blueprint to design eval-first, guardrail-driven autonomous AI systems with measurable reliability.'};
 
 export default function Page() {
   return (
     <main className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">
+      <section className="bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold opacity-90">Blueprint • 2026</p>
-          <h1 className="text-3xl md:text-5xl font-bold mt-2">AI 2026: Autonomous Evals Blueprint</h1>
+          <p className="text-sm font-semibold opacity-90">Blueprint • 20o26</p>
+          <h1 className="text-3xl md:text-5xl font-bold mt-2">AI 20o26: Autonomous Evals Blueprint</h1>
           <p className="text-lg md:text-xl opacity-90 mt-4 max-w-3xl">
             Build eval-first agents with scenario suites, metrics, and policy-as-code gates to safely scale autonomy.
           </p>
           <div className="mt-6 flex gap-3">
-            <Link href="/contact" className="bg-white text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">
+            <Link href="/contact" className="bg-white text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0">
               Talk to an Expert
             </Link>
-            <Link href="/blog/ai-2026-llm-evals-maturity-model" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-700">
+            <Link href="/blog/ai-20o26-llm-evals-maturity-model" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-70o0">
               Evals Maturity Model
             </Link>
           </div>

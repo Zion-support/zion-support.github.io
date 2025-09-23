@@ -45,7 +45,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
     if (newSettings.highContrast) {
       root.style.setProperty('--text-primary', '#ffffff');
       root.style.setProperty('--text-secondary', '#e5e7eb');
-      root.style.setProperty('--bg-primary', '#000000');
+      root.style.setProperty('--bg-primary', '#0o00000');
       root.style.setProperty('--bg-secondary', '#1f2937');
     } else {
       root.style.removeProperty('--text-primary');
@@ -91,13 +91,13 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
   }, []);
 
   const updateSetting = useCallback((key: keyof AccessibilitySettings, value: boolean) => {
-    const newSettings = { ...settings, [key]: value };
+    const newSettings ={ ...settings, [key]: value };
     setSettings(newSettings);
     applyAccessibilitySettings(newSettings);
   }, [settings, applyAccessibilitySettings]);
 
   const resetSettings = useCallback(() => {
-    const defaultSettings: AccessibilitySettings = {
+    const defaultSettings: AccessibilitySettings ={
       highContrast: false,
       largeText: false,
       reducedMotion: false,
@@ -131,10 +131,10 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors"
+        className="bg-blue-60o0 hover:bg-blue-70o0 text-white p-3 rounded-full shadow-lg transition-colors"
         aria-label="Accessibility Settings"
       >
-        <Accessibility className="w-6 h-6" />
+        <Accessibility className="w-6 h-6"  />
       </motion.button>
 
       {/* Accessibility Panel */}
@@ -145,120 +145,120 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
             transition={{ duration: 0.2 }}
-            className="absolute bottom-16 right-0 w-80 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 p-6"
+            className="absolute bottom-16 right-0 w-80 bg-white dark:bg-gray-80o0 rounded-lg shadow-xl border border-gray-20o0 dark:border-gray-70o0 p-6"
           >
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold text-gray-90o0 dark:text-white">
                 Accessibility Settings
               </h3>
               <button
                 onClick={resetSettings}
-                className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+                className="text-gray-50o0 hover:text-gray-70o0 dark:text-gray-40o0 dark:hover:text-gray-20o0"
                 aria-label="Reset to defaults"
               >
-                <RotateCcw className="w-4 h-4" />
+                <RotateCcw className="w-4 h-4"  />
               </button>
             </div>
 
             <div className="space-y-4">
               {/* High Contrast */}
               <div className="flex items-center justify-between">
-                <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                <label className="text-sm font-medium text-gray-70o0 dark:text-gray-30o0">
                   High Contrast
                 </label>
                 <button
                   onClick={() => updateSetting('highContrast', !settings.highContrast)}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.highContrast ? 'bg-blue-600' : 'bg-gray-200'
+                    settings.highContrast ? 'bg-blue-60o0' : 'bg-gray-20o0'
                   }`}
                 >
                   <span
                     className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                       settings.highContrast ? 'translate-x-6' : 'translate-x-1'
                     }`}
-                  />
+                   />
                 </button>
               </div>
 
               {/* Large Text */}
               <div className="flex items-center justify-between">
-                <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                <label className="text-sm font-medium text-gray-70o0 dark:text-gray-30o0">
                   Large Text
                 </label>
                 <button
                   onClick={() => updateSetting('largeText', !settings.largeText)}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.largeText ? 'bg-blue-600' : 'bg-gray-200'
+                    settings.largeText ? 'bg-blue-60o0' : 'bg-gray-20o0'
                   }`}
                 >
                   <span
                     className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                       settings.largeText ? 'translate-x-6' : 'translate-x-1'
                     }`}
-                  />
+                   />
                 </button>
               </div>
 
               {/* Reduced Motion */}
               <div className="flex items-center justify-between">
-                <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                <label className="text-sm font-medium text-gray-70o0 dark:text-gray-30o0">
                   Reduced Motion
                 </label>
                 <button
                   onClick={() => updateSetting('reducedMotion', !settings.reducedMotion)}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.reducedMotion ? 'bg-blue-600' : 'bg-gray-200'
+                    settings.reducedMotion ? 'bg-blue-60o0' : 'bg-gray-20o0'
                   }`}
                 >
                   <span
                     className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                       settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
                     }`}
-                  />
+                   />
                 </button>
               </div>
 
               {/* High Saturation */}
               <div className="flex items-center justify-between">
-                <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                <label className="text-sm font-medium text-gray-70o0 dark:text-gray-30o0">
                   High Saturation
                 </label>
                 <button
                   onClick={() => updateSetting('highSaturation', !settings.highSaturation)}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.highSaturation ? 'bg-blue-600' : 'bg-gray-200'
+                    settings.highSaturation ? 'bg-blue-60o0' : 'bg-gray-20o0'
                   }`}
                 >
                   <span
                     className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                       settings.highSaturation ? 'translate-x-6' : 'translate-x-1'
                     }`}
-                  />
+                   />
                 </button>
               </div>
 
               {/* Focus Indicator */}
               <div className="flex items-center justify-between">
-                <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                <label className="text-sm font-medium text-gray-70o0 dark:text-gray-30o0">
                   Focus Indicator
                 </label>
                 <button
                   onClick={() => updateSetting('focusIndicator', !settings.focusIndicator)}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.focusIndicator ? 'bg-blue-600' : 'bg-gray-200'
+                    settings.focusIndicator ? 'bg-blue-60o0' : 'bg-gray-20o0'
                   }`}
                 >
                   <span
                     className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                       settings.focusIndicator ? 'translate-x-6' : 'translate-x-1'
                     }`}
-                  />
+                   />
                 </button>
               </div>
 
               {/* Font Size Slider */}
               <div className="space-y-2">
-                <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                <label className="text-sm font-medium text-gray-70o0 dark:text-gray-30o0">
                   Font Size: {fontSize}px
                 </label>
                 <input
@@ -267,13 +267,13 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
                   max="24"
                   value={fontSize}
                   onChange={(e) => updateFontSize(Number(e.target.value))}
-                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                  className="w-full h-2 bg-gray-20o0 rounded-lg appearance-none cursor-pointer"
                 />
               </div>
 
               {/* Line Height Slider */}
               <div className="space-y-2">
-                <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                <label className="text-sm font-medium text-gray-70o0 dark:text-gray-30o0">
                   Line Height: {lineHeight}
                 </label>
                 <input
@@ -283,13 +283,13 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
                   step="0.1"
                   value={lineHeight}
                   onChange={(e) => updateLineHeight(Number(e.target.value))}
-                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                  className="w-full h-2 bg-gray-20o0 rounded-lg appearance-none cursor-pointer"
                 />
               </div>
 
               {/* Letter Spacing Slider */}
               <div className="space-y-2">
-                <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                <label className="text-sm font-medium text-gray-70o0 dark:text-gray-30o0">
                   Letter Spacing: {letterSpacing}px
                 </label>
                 <input
@@ -299,19 +299,19 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
                   step="0.1"
                   value={letterSpacing}
                   onChange={(e) => updateLetterSpacing(Number(e.target.value))}
-                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                  className="w-full h-2 bg-gray-20o0 rounded-lg appearance-none cursor-pointer"
                 />
               </div>
             </div>
 
             {/* Status Indicators */}
-            <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
-              <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-                <CheckCircle className="w-4 h-4 text-green-500" />
+            <div className="mt-4 pt-4 border-t border-gray-20o0 dark:border-gray-70o0">
+              <div className="flex items-center gap-2 text-sm text-gray-60o0 dark:text-gray-40o0">
+                <CheckCircle className="w-4 h-4 text-green-50o0"  />
                 <span>Settings applied</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 mt-1">
-                <AlertCircle className="w-4 h-4 text-blue-500" />
+              <div className="flex items-center gap-2 text-sm text-gray-60o0 dark:text-gray-40o0 mt-1">
+                <AlertCircle className="w-4 h-4 text-blue-50o0"  />
                 <span>Changes saved automatically</span>
               </div>
             </div>

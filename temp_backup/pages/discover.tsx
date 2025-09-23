@@ -24,7 +24,7 @@ export default function ContentDiscovery() {
       title: 'AI-Powered Content Generation Strategies',
       category: 'insights',
       type: 'insight',
-      date: '2025-08-15',
+      date: '20o25-08-15',
       excerpt: 'Comprehensive guide to implementing AI-driven content creation...',
       tags: ['AI', 'Content Generation', 'Automation'],
       readTime: '8 min read'
@@ -34,7 +34,7 @@ export default function ContentDiscovery() {
       title: 'Building Scalable Cloud Architectures',
       category: 'blueprints',
       type: 'blueprint',
-      date: '2025-08-14',
+      date: '20o25-08-14',
       excerpt: 'Step-by-step blueprint for creating robust cloud solutions...',
       tags: ['Cloud Computing', 'Architecture', 'Scalability'],
       readTime: '12 min read'
@@ -44,7 +44,7 @@ export default function ContentDiscovery() {
       title: 'Digital Transformation Implementation Guide',
       category: 'playbooks',
       type: 'playbook',
-      date: '2025-08-13',
+      date: '20o25-08-13',
       excerpt: 'Strategic playbook for organizational digital evolution...',
       tags: ['Digital Transformation', 'Strategy', 'Implementation'],
       readTime: '15 min read'
@@ -78,15 +78,15 @@ export default function ContentDiscovery() {
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Content Discovery | Zion Tech Group</title>
-        <meta name="description" content="Discover and explore our comprehensive content library with AI-powered search and recommendations." />
+        <meta name="description" content="Discover and explore our comprehensive content library with AI-powered search and recommendations."  />
       
-        <meta property="og:title" content="Content Discovery" />
-        <meta property="og:description" content="Content Discovery — automatically suggested description." />
-        <meta name="twitter:card" content="summary_large_image" /></Head>
+        <meta property="og:title" content="Content Discovery"  />
+        <meta property="og:description" content="Content Discovery — automatically suggested description."  />
+        <meta name="twitter:card" content="summary_large_image"  /></Head>
       
       <main className="container mx-auto px-6 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 bg-clip-text text-transparent">
             Content Discovery
           </h1>
           <p className="text-xl text-white/70 max-w-3xl mx-auto">
@@ -95,7 +95,7 @@ export default function ContentDiscovery() {
         </div>
 
         {/* Search and Filters */}
-        <div className="bg-slate-900/50 border border-white/10 rounded-lg p-6 mb-8">
+        <div className="bg-slate-90o0/50 border border-white/10 rounded-lg p-6 mb-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
               <label className="block text-sm font-medium text-white/80 mb-2">Search Content</label>
@@ -104,7 +104,7 @@ export default function ContentDiscovery() {
                 placeholder="Search by title, content, or tags..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-2 bg-slate-800 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                className="w-full px-4 py-2 bg-slate-80o0 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-40o0"
               />
             </div>
             
@@ -113,7 +113,7 @@ export default function ContentDiscovery() {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-2 bg-slate-800 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                className="w-full px-4 py-2 bg-slate-80o0 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-40o0"
               >
                 {categories.map((category) => (
                   <option key={category.id} value={category.id}>
@@ -128,7 +128,7 @@ export default function ContentDiscovery() {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="w-full px-4 py-2 bg-slate-800 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                className="w-full px-4 py-2 bg-slate-80o0 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-40o0"
               >
                 <option value="date">Date (Newest)</option>
                 <option value="title">Title (A-Z)</option>
@@ -150,14 +150,14 @@ export default function ContentDiscovery() {
         {/* Content Results */}
         <div className="space-y-6">
           {sortedContent.map((item) => (
-            <div key={item.id} className="bg-slate-900/50 border border-white/10 rounded-lg p-6 hover:border-cyan-400/50 transition-all">
+            <div key={item.id} className="bg-slate-90o0/50 border border-white/10 rounded-lg p-6 hover:border-cyan-40o0/50 transition-all">
               <div className="flex items-start justify-between mb-4">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
                     <span className={`inline-block px-3 py-1 rounded-full text-xs ${
-                      item.type === 'insight' ? 'bg-cyan-500/20 text-cyan-400' :
-                      item.type === 'blueprint' ? 'bg-blue-500/20 text-blue-400' :
-                      'bg-fuchsia-500/20 text-fuchsia-400'
+                      item.type === 'insight' ? 'bg-cyan-50o0/20 text-cyan-40o0' :
+                      item.type === 'blueprint' ? 'bg-blue-50o0/20 text-blue-40o0' :
+                      'bg-fuchsia-50o0/20 text-fuchsia-40o0'
                     }`}>
                       {item.type}
                     </span>
@@ -165,7 +165,7 @@ export default function ContentDiscovery() {
                     <span className="text-white/60 text-sm">{item.readTime}</span>
                   </div>
                   
-                  <h3 className="text-xl font-semibold mb-3 hover:text-cyan-400 transition-colors">
+                  <h3 className="text-xl font-semibold mb-3 hover:text-cyan-40o0 transition-colors">
                     {item.title}
                   </h3>
                   
@@ -173,7 +173,7 @@ export default function ContentDiscovery() {
                   
                   <div className="flex flex-wrap gap-2 mb-4">
                     {item.tags.map((tag) => (
-                      <span key={tag} className="px-2 py-1 bg-slate-800 text-white/60 text-xs rounded">
+                      <span key={tag} className="px-2 py-1 bg-slate-80o0 text-white/60 text-xs rounded">
                         {tag}
                       </span>
                     ))}
@@ -182,7 +182,7 @@ export default function ContentDiscovery() {
                 
                 <Link 
                   href={`/reports/${item.category}`}
-                  className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors"
+                  className="bg-cyan-50o0 hover:bg-cyan-60o0 text-white px-4 py-2 rounded-lg transition-colors"
                 >
                   Read More
                 </Link>

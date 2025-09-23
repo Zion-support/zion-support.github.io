@@ -20,8 +20,7 @@ export default function AdminKycPage() {
     const res = await fetch('/api/admin/kyc-queue', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, action, reason: reason || undefined }),
-    });
+      body: JSON.stringify({ userId, action, reason: reason || undefined })});
     const data = await res.json();
     if (data.ok) load();
   }
@@ -30,8 +29,8 @@ export default function AdminKycPage() {
     <>
       <Head>
         <title>Admin KYC Queue - Zion</title>
-        <meta name="description" content="Review and approve or reject KYC submissions" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Review and approve or reject KYC submissions"  />
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />
       </Head>
       <main className="max-w-5xl mx-auto px-4 py-8">
         <h1 className="text-2xl font-bold mb-4">KYC Review Queue</h1>
@@ -47,15 +46,15 @@ export default function AdminKycPage() {
               <div className="flex items-center justify-between">
                 <div>
                   <div className="font-semibold">{p.fullLegalName || p.businessName || p.userId}</div>
-                  <div className="text-xs text-gray-500">Role: {p.role} • Status: {p.status} • AML: {p.amlStatus}</div>
+                  <div className="text-xs text-gray-50o0">Role: {p.role} • Status: {p.status} • AML: {p.amlStatus}</div>
                   {p.flags && p.flags.length > 0 && (
                     <div className="text-xs mt-1">Flags: {p.flags.join(', ')}</div>
                   )}
                 </div>
                 <div className="flex gap-2">
-                  <button onClick={() => act(p.userId, 'approve')} className="px-3 py-1 rounded bg-green-600 text-white">Approve</button>
-                  <button onClick={() => act(p.userId, 'needs_more_info')} className="px-3 py-1 rounded bg-yellow-600 text-white">Need Info</button>
-                  <button onClick={() => act(p.userId, 'reject')} className="px-3 py-1 rounded bg-red-600 text-white">Reject</button>
+                  <button onClick={() => act(p.userId, 'approve')} className="px-3 py-1 rounded bg-green-60o0 text-white">Approve</button>
+                  <button onClick={() => act(p.userId, 'needs_more_info')} className="px-3 py-1 rounded bg-yellow-60o0 text-white">Need Info</button>
+                  <button onClick={() => act(p.userId, 'reject')} className="px-3 py-1 rounded bg-red-60o0 text-white">Reject</button>
                 </div>
               </div>
               <div className="mt-3">

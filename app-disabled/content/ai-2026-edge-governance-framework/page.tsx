@@ -1,26 +1,24 @@
 import Link from 'next/link';
-import React from 'react';
 import SEO from '../../components/SEO';
 
-export const metadata = {
-  title: 'AI 2026: Edge AI Governance Framework | Zion Tech Group',
+export const metadata ={
+  title: 'AI 20o26: Edge AI Governance Framework | Zion Tech Group',
   description: 'A pragmatic framework to govern edge AI systems with policy-as-code, telemetry, and real-time guardrails across distributed environments.',
-  keywords: ['edge AI governance', 'policy-as-code', 'AI guardrails', 'telemetry', 'AI governance 2026'],
-};
+  keywords: ['edge AI governance', 'policy-as-code', 'AI guardrails', 'telemetry', 'AI governance 20o26']};
 
-export default function EdgeAIGovernanceFramework2026() {
+export default function EdgeAIGovernanceFramework20o26() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="AI 2026: Edge AI Governance Framework"
+        title="AI 20o26: Edge AI Governance Framework"
         description="A pragmatic framework to govern edge AI systems with policy-as-code, telemetry, and real-time guardrails across distributed environments."
-        keywords="edge AI governance, policy-as-code, AI guardrails, telemetry, AI governance 2026"
-        url="/content/ai-2026-edge-governance-framework"
-      />
+        keywords="edge AI governance, policy-as-code, AI guardrails, telemetry, AI governance 20o26"
+        url="/content/ai-20o26-edge-governance-framework"
+       />
 
-      <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">
+      <section className="bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">AI 2026: Edge AI Governance Framework</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">AI 20o26: Edge AI Governance Framework</h1>
           <p className="text-lg md:text-xl opacity-90">Govern edge-native AI with real-time policy enforcement, signed artifacts, and continuous assurance.</p>
         </div>
       </section>
@@ -52,7 +50,7 @@ export default function EdgeAIGovernanceFramework2026() {
           <div className="mt-8 p-6 bg-purple-50 rounded-xl">
             <h4 className="font-semibold mb-2">Next steps</h4>
             <p>Use this alongside our Enterprise AI Security Blueprint for layered controls.</p>
-            <Link href="/blog/ai-2026-enterprise-ai-security-blueprint" className="text-purple-700 font-semibold">Read Security Blueprint →</Link>
+            <Link href="/blog/ai-20o26-enterprise-ai-security-blueprint" className="text-purple-70o0 font-semibold">Read Security Blueprint →</Link>
           </div>
         </div>
       </section>

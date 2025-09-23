@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+module.exports ={
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -9,12 +9,7 @@ module.exports = {
     extend: {
       colors: {
         background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
-      },
+        foreground: 'hsl(var(--foreground))'},
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-      },
-    },
-  },
-  plugins: [],
-}
+        sans: ['Inter', 'sans-serif']}}},
+  plugins: []}

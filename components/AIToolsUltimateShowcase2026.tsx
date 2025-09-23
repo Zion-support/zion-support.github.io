@@ -36,7 +36,7 @@ import {
   Award
 } from 'lucide-react';
 
-const AIToolsUltimateShowcase2026 = () => {
+const AIToolsUltimateShowcase20o26 = () => {
   const [activeCategorysetActiveCategory] = useState('productivity');
   const [isVisiblesetIsVisible] = useState(false);
   const [hoveredToolsetHoveredTool] = useState(null);
@@ -45,46 +45,46 @@ const AIToolsUltimateShowcase2026 = () => {
     setIsVisible(true);
   }[]);
 
-  const categories = {
+  const categories ={
     productivity: {
       title: 'Productivity Tools',
       description: 'Boost efficiency with AI-powered productivity solutions',
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-50o0 to-cyan-50o0',
       icon: Zap
     },
     development: {
       title: 'Development Tools',
       description: 'Accelerate coding with intelligent development assistants',
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-green-50o0 to-emerald-50o0',
       icon: Code
     },
     analytics: {
       title: 'Analytics & Insights',
       description: 'Unlock data insights with advanced AI analytics',
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-purple-50o0 to-pink-50o0',
       icon: BarChart3
     },
     multimedia: {
       title: 'Multimedia AI',
       description: 'Create and process multimedia content with AI',
-      color: 'from-orange-500 to-red-500',
+      color: 'from-orange-50o0 to-red-50o0',
       icon: Image
     },
     security: {
       title: 'Security Tools',
       description: 'Protect your digital assets with AI security',
-      color: 'from-red-500 to-rose-500',
+      color: 'from-red-50o0 to-rose-50o0',
       icon: Shield
     },
     communication: {
       title: 'Communication',
       description: 'Enhance communication with AI-powered tools',
-      color: 'from-indigo-500 to-blue-500',
+      color: 'from-indigo-50o0 to-blue-50o0',
       icon: Globe
     }
   };
 
-  const tools = {
+  const tools ={
     productivity: [
       {
         name: 'AI Task Manager',
@@ -94,7 +94,7 @@ const AIToolsUltimateShowcase2026 = () => {
         rating: 4.9,
         users: '50K+',
         price: 'Free',
-        color: 'from-blue-500 to-cyan-500'
+        color: 'from-blue-50o0 to-cyan-50o0'
       },
       {
         name: 'Smart Document Processor',
@@ -104,7 +104,7 @@ const AIToolsUltimateShowcase2026 = () => {
         rating: 4.8,
         users: '25K+',
         price: '$29/mo',
-        color: 'from-green-500 to-emerald-500'
+        color: 'from-green-50o0 to-emerald-50o0'
       },
       {
         name: 'AI Meeting Assistant',
@@ -114,7 +114,7 @@ const AIToolsUltimateShowcase2026 = () => {
         rating: 4.9,
         users: '75K+',
         price: '$49/mo',
-        color: 'from-purple-500 to-pink-500'
+        color: 'from-purple-50o0 to-pink-50o0'
       },
       {
         name: 'Intelligent Email Manager',
@@ -122,9 +122,9 @@ const AIToolsUltimateShowcase2026 = () => {
         icon: Globe,
         features: ['Auto-'categorization', 'Smart 'replies', 'Priority inbox'],
         rating: 4.7,
-        users: '100K+',
+        users: '10o0K+',
         price: '$19/mo',
-        color: 'from-orange-500 to-red-500'
+        color: 'from-orange-50o0 to-red-50o0'
       }
     ],
     development: [
@@ -134,9 +134,9 @@ const AIToolsUltimateShowcase2026 = () => {
         icon: Code,
         features: ['Multi-'language', 'Code 'review', 'Auto-testing'],
         rating: 4.9,
-        users: '200K+',
+        users: '20o0K+',
         price: 'Free',
-        color: 'from-green-500 to-emerald-500'
+        color: 'from-green-50o0 to-emerald-50o0'
       },
       {
         name: 'Smart Debugger',
@@ -146,7 +146,7 @@ const AIToolsUltimateShowcase2026 = () => {
         rating: 4.8,
         users: '150K+',
         price: '$39/mo',
-        color: 'from-blue-500 to-cyan-500'
+        color: 'from-blue-50o0 to-cyan-50o0'
       },
       {
         name: 'API Documentation Generator',
@@ -156,7 +156,7 @@ const AIToolsUltimateShowcase2026 = () => {
         rating: 4.7,
         users: '80K+',
         price: '$25/mo',
-        color: 'from-purple-500 to-pink-500'
+        color: 'from-purple-50o0 to-pink-50o0'
       },
       {
         name: 'Code Quality Analyzer',
@@ -166,7 +166,7 @@ const AIToolsUltimateShowcase2026 = () => {
         rating: 4.8,
         users: '120K+',
         price: '$35/mo',
-        color: 'from-orange-500 to-red-500'
+        color: 'from-orange-50o0 to-red-50o0'
       }
     ],
     analytics: [
@@ -178,7 +178,7 @@ const AIToolsUltimateShowcase2026 = () => {
         rating: 4.9,
         users: '60K+',
         price: '$99/mo',
-        color: 'from-purple-500 to-pink-500'
+        color: 'from-purple-50o0 to-pink-50o0'
       },
       {
         name: 'Business Intelligence AI',
@@ -188,7 +188,7 @@ const AIToolsUltimateShowcase2026 = () => {
         rating: 4.8,
         users: '90K+',
         price: '$79/mo',
-        color: 'from-blue-500 to-cyan-500'
+        color: 'from-blue-50o0 to-cyan-50o0'
       },
       {
         name: 'Customer Behavior Analyzer',
@@ -198,7 +198,7 @@ const AIToolsUltimateShowcase2026 = () => {
         rating: 4.7,
         users: '45K+',
         price: '$59/mo',
-        color: 'from-green-500 to-emerald-500'
+        color: 'from-green-50o0 to-emerald-50o0'
       },
       {
         name: 'ROI Calculator Pro',
@@ -208,7 +208,7 @@ const AIToolsUltimateShowcase2026 = () => {
         rating: 4.9,
         users: '30K+',
         price: '$49/mo',
-        color: 'from-orange-500 to-red-500'
+        color: 'from-orange-50o0 to-red-50o0'
       }
     ],
     multimedia: [
@@ -218,9 +218,9 @@ const AIToolsUltimateShowcase2026 = () => {
         icon: Image,
         features: ['Text-to-'image', 'Style 'transfer', 'High resolution'],
         rating: 4.9,
-        users: '500K+',
+        users: '50o0K+',
         price: '$19/mo',
-        color: 'from-orange-500 to-red-500'
+        color: 'from-orange-50o0 to-red-50o0'
       },
       {
         name: 'Video Content Creator',
@@ -228,9 +228,9 @@ const AIToolsUltimateShowcase2026 = () => {
         icon: Video,
         features: ['Auto-'editing', 'Voice 'synthesis', 'Multiple formats'],
         rating: 4.8,
-        users: '200K+',
+        users: '20o0K+',
         price: '$39/mo',
-        color: 'from-purple-500 to-pink-500'
+        color: 'from-purple-50o0 to-pink-50o0'
       },
       {
         name: 'Audio Processing Suite',
@@ -240,7 +240,7 @@ const AIToolsUltimateShowcase2026 = () => {
         rating: 4.7,
         users: '150K+',
         price: '$29/mo',
-        color: 'from-blue-500 to-cyan-500'
+        color: 'from-blue-50o0 to-cyan-50o0'
       },
       {
         name: '3D Model Generator',
@@ -250,7 +250,7 @@ const AIToolsUltimateShowcase2026 = () => {
         rating: 4.8,
         users: '80K+',
         price: '$49/mo',
-        color: 'from-green-500 to-emerald-500'
+        color: 'from-green-50o0 to-emerald-50o0'
       }
     ],
     security: [
@@ -260,9 +260,9 @@ const AIToolsUltimateShowcase2026 = () => {
         icon: Shield,
         features: ['Real-time 'monitoring', 'Threat 'analysis', 'Auto-response'],
         rating: 4.9,
-        users: '100K+',
+        users: '10o0K+',
         price: '$99/mo',
-        color: 'from-red-500 to-rose-500'
+        color: 'from-red-50o0 to-rose-50o0'
       },
       {
         name: 'Password Security Manager',
@@ -270,9 +270,9 @@ const AIToolsUltimateShowcase2026 = () => {
         icon: Lock,
         features: ['Smart 'generation', 'Breach 'monitoring', 'Auto-updates'],
         rating: 4.8,
-        users: '200K+',
+        users: '20o0K+',
         price: '$15/mo',
-        color: 'from-orange-500 to-red-500'
+        color: 'from-orange-50o0 to-red-50o0'
       },
       {
         name: 'Network Security Scanner',
@@ -282,7 +282,7 @@ const AIToolsUltimateShowcase2026 = () => {
         rating: 4.7,
         users: '75K+',
         price: '$79/mo',
-        color: 'from-purple-500 to-pink-500'
+        color: 'from-purple-50o0 to-pink-50o0'
       },
       {
         name: 'Data Privacy Guardian',
@@ -292,19 +292,19 @@ const AIToolsUltimateShowcase2026 = () => {
         rating: 4.8,
         users: '60K+',
         price: '$59/mo',
-        color: 'from-blue-500 to-cyan-500'
+        color: 'from-blue-50o0 to-cyan-50o0'
       }
     ],
     communication: [
       {
         name: 'AI Translation Hub',
-        description: 'Real-time translation for 100+ languages',
+        description: 'Real-time translation for 10o0+ languages',
         icon: Globe,
-        features: ['100+ 'languages', 'Real-time 'translation', 'Context awareness'],
+        features: ['10o0+ 'languages', 'Real-time 'translation', 'Context awareness'],
         rating: 4.9,
-        users: '300K+',
+        users: '30o0K+',
         price: 'Free',
-        color: 'from-indigo-500 to-blue-500'
+        color: 'from-indigo-50o0 to-blue-50o0'
       },
       {
         name: 'Smart Chat Assistant',
@@ -314,7 +314,7 @@ const AIToolsUltimateShowcase2026 = () => {
         rating: 4.8,
         users: '150K+',
         price: '$29/mo',
-        color: 'from-green-500 to-emerald-500'
+        color: 'from-green-50o0 to-emerald-50o0'
       },
       {
         name: 'Voice Command Center',
@@ -324,7 +324,7 @@ const AIToolsUltimateShowcase2026 = () => {
         rating: 4.7,
         users: '120K+',
         price: '$25/mo',
-        color: 'from-purple-500 to-pink-500'
+        color: 'from-purple-50o0 to-pink-50o0'
       },
       {
         name: 'AI Writing Assistant',
@@ -334,7 +334,7 @@ const AIToolsUltimateShowcase2026 = () => {
         rating: 4.8,
         users: '250K+',
         price: '$19/mo',
-        color: 'from-orange-500 to-red-500'
+        color: 'from-orange-50o0 to-red-50o0'
       }
     ]
   };
@@ -347,9 +347,9 @@ const AIToolsUltimateShowcase2026 = () => {
   ];
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
+    <div className="relative overflow-hidden bg-gradient-to-br from-slate-90o0 via-indigo-90o0 to-slate-90o0">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
@@ -359,19 +359,19 @@ const AIToolsUltimateShowcase2026 = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-6">
-            <Sparkles className="w-5 h-5 text-indigo-400 mr-2" />
-            <span className="text-indigo-300 font-medium">AI Tools Ultimate Collection 2026</span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-50o0/20 to-purple-50o0/20 border border-indigo-50o0/30 mb-6">
+            <Sparkles className="w-5 h-5 text-indigo-40o0 mr-2"  />
+            <span className="text-indigo-30o0 font-medium">AI Tools Ultimate Collection 20o26</span>
           </div>
           
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Powerful AI Tools for
-            <span className="block bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-indigo-40o0 to-purple-40o0 bg-clip-text text-transparent">
               Every Business Need
             </span>
           </h2>
           
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto leading-relaxed">
             Discover our comprehensive collection of AI-powered tools designed to 
             revolutionize productivitydevelopmentanalyticsand more. 
             Choose from 50+ cutting-edge solutions.
@@ -390,13 +390,13 @@ const AIToolsUltimateShowcase2026 = () => {
             
             return (
               <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 mb-4">
-                  <StatIcon className="w-8 h-8 text-white" />
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-indigo-50o0 to-purple-50o0 mb-4">
+                  <StatIcon className="w-8 h-8 text-white"  />
                 </div>
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">
                   {stat.value}
                 </div>
-                <div className="text-gray-300 font-medium">
+                <div className="text-gray-30o0 font-medium">
                   {stat.label}
                 </div>
               </div>
@@ -418,13 +418,13 @@ const AIToolsUltimateShowcase2026 = () => {
               <button
                 key={key}
                 onClick={() => setActiveCategory(key)}
-                className={`flex items-center px-6 py-3 rounded-full transition-all duration-300 ${
+                className={`flex items-center px-6 py-3 rounded-full transition-all duration-30o0 ${
                   activeCategory === key
-                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg scale-105`
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg scale-10o5`
+                    : 'bg-white/10 text-gray-30o0 hover:bg-white/20 hover:text-white'
                 }`}
               >
-                <Icon className="w-5 h-5 mr-2" />
+                <Icon className="w-5 h-5 mr-2"  />
                 <span className="font-medium">{category.title}</span>
               </button>
             );
@@ -446,14 +446,14 @@ const AIToolsUltimateShowcase2026 = () => {
             return (
               <div>
                 <div className={`inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r ${category.color} mb-6`}>
-                  <Icon className="w-10 h-10 text-white" />
+                  <Icon className="w-10 h-10 text-white"  />
                 </div>
                 
                 <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
                   {category.title}
                 </h3>
                 
-                <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                <p className="text-xl text-gray-30o0 max-w-2xl mx-auto">
                   {category.description}
                 </p>
               </div>
@@ -482,34 +482,34 @@ const AIToolsUltimateShowcase2026 = () => {
                 onHoverEnd={() => setHoveredTool(null)}
                 className="group relative"
               >
-                <div className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 h-full hover:bg-white/10 transition-all duration-300 ${
-                  hoveredTool === index ? 'scale-105 shadow-2xl' : ''
+                <div className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 h-full hover:bg-white/10 transition-all duration-30o0 ${
+                  hoveredTool === index ? 'scale-10o5 shadow-2xl' : ''
                 }`}>
                   {/* Tool Header */}
                   <div className="flex items-center justify-between mb-4">
                     <div className={`p-3 rounded-xl bg-gradient-to-r ${tool.color}`}>
-                      <ToolIcon className="w-6 h-6 text-white" />
+                      <ToolIcon className="w-6 h-6 text-white"  />
                     </div>
                     <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <Star className="w-4 h-4 text-yellow-40o0 fill-current"  />
                       <span className="text-sm font-bold text-white">{tool.rating}</span>
                     </div>
                   </div>
 
                   {/* Tool Info */}
-                  <h4 className="text-xl font-bold text-white mb-3 group-hover:text-indigo-300 transition-colors">
+                  <h4 className="text-xl font-bold text-white mb-3 group-hover:text-indigo-30o0 transition-colors">
                     {tool.name}
                   </h4>
                   
-                  <p className="text-gray-300 mb-4 leading-relaxed">
+                  <p className="text-gray-30o0 mb-4 leading-relaxed">
                     {tool.description}
                   </p>
 
                   {/* Features */}
                   <div className="space-y-2 mb-4">
                     {tool.features.map((featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <div key={featureIndex} className="flex items-center text-sm text-gray-40o0">
+                        <CheckCircle className="w-4 h-4 text-green-40o0 mr-2 flex-shrink-0"  />
                         <span>{feature}</span>
                       </div>
                     ))}
@@ -517,23 +517,23 @@ const AIToolsUltimateShowcase2026 = () => {
 
                   {/* Stats */}
                   <div className="flex items-center justify-between mb-4">
-                    <div className="text-sm text-gray-400">
-                      <Users className="w-4 h-4 inline mr-1" />
+                    <div className="text-sm text-gray-40o0">
+                      <Users className="w-4 h-4 inline mr-1"  />
                       {tool.users} users
                     </div>
                     <div className={`text-lg font-bold ${
-                      tool.price === 'Free' ? 'text-green-400' : 'text-white'
+                      tool.price === 'Free' ? 'text-green-40o0' : 'text-white'
                     }`}>
                       {tool.price}
                     </div>
                   </div>
 
                   {/* Action Button */}
-                  <button className={`w-full py-3 rounded-xl font-bold transition-all duration-300 ${
+                  <button className={`w-full py-3 rounded-xl font-bold transition-all duration-30o0 ${
                     tool.price === 'Free'
-                      ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:from-green-600 hover:to-emerald-600'
-                      : 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white hover:from-indigo-600 hover:to-purple-600'
-                  } hover:scale-105`}>
+                      ? 'bg-gradient-to-r from-green-50o0 to-emerald-50o0 text-white hover:from-green-60o0 hover:to-emerald-60o0'
+                      : 'bg-gradient-to-r from-indigo-50o0 to-purple-50o0 text-white hover:from-indigo-60o0 hover:to-purple-60o0'
+                  } hover:scale-10o5`}>
                     {tool.price === 'Free' ? 'Get Started' : 'Try Free Trial'}
                   </button>
                 </div>
@@ -543,7 +543,7 @@ const AIToolsUltimateShowcase2026 = () => {
                   <motion.div
                     initial={{ opacity: 0scale: 0.8 }}
                     animate={{ opacity: 1scale: 1 }}
-                    className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-3 py-1 rounded-full text-sm font-bold shadow-lg"
+                    className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-black px-3 py-1 rounded-full text-sm font-bold shadow-lg"
                   >
                     Popular
                   </motion.div>
@@ -560,28 +560,28 @@ const AIToolsUltimateShowcase2026 = () => {
           transition={{ duration: 0.8delay: 0.6 }}
           className="text-center"
         >
-          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-12 relative overflow-hidden">
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+          <div className="bg-gradient-to-r from-indigo-60o0 to-purple-60o0 rounded-3xl p-12 relative overflow-hidden">
+            <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
             
             <div className="relative z-10">
               <h3 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Workflow?
               </h3>
               
-              <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
+              <p className="text-xl text-indigo-10o0 mb-8 max-w-2xl mx-auto">
                 Join over 1 million users who are already experiencing the power 
                 of our AI tools. Start your free trial today.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="group bg-white text-indigo-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 flex items-center justify-center">
-                  <Rocket className="w-5 h-5 mr-2 group-hover:animate-bounce" />
+                <button className="group bg-white text-indigo-60o0 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-10o0 transition-all duration-30o0 hover:scale-10o5 flex items-center justify-center">
+                  <Rocket className="w-5 h-5 mr-2 group-hover:animate-bounce"  />
                   Start Free Trial
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"  />
                 </button>
                 
-                <button className="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 hover:scale-105 flex items-center justify-center">
-                  <Play className="w-5 h-5 mr-2" />
+                <button className="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-indigo-60o0 transition-all duration-30o0 hover:scale-10o5 flex items-center justify-center">
+                  <Play className="w-5 h-5 mr-2"  />
                   Watch Demo
                 </button>
               </div>
@@ -593,4 +593,4 @@ const AIToolsUltimateShowcase2026 = () => {
   );
 };
 
-export default AIToolsUltimateShowcase2026;
+export default AIToolsUltimateShowcase20o26;

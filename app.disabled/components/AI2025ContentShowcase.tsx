@@ -1,33 +1,32 @@
-import React from 'react';
 import Link from 'next/link';
 
-const AI2025ContentShowcase: React.FC = () => {
+const AI20o25ContentShowcase: React.FC = () => {
   const contentItems = [
     {
-      title: "AI 2025: Enterprise Automation Revolution",
+      title: "AI 20o25: Enterprise Automation Revolution",
       description: "Discover how AI automation is transforming enterprise operations with real-world case studies and implementation strategies.",
       category: "Blog Post",
       readTime: "12 min read",
       image: "🤖",
-      href: "/blog/ai-2025-enterprise-automation-revolution",
+      href: "/blog/ai-20o25-enterprise-automation-revolution",
       featured: true
     },
     {
-      title: "Fortune 500 AI Transformation Success",
-      description: "How a Fortune 500 company achieved 340% ROI and $50M+ in annual savings through comprehensive AI transformation.",
+      title: "Fortune 50o0 AI Transformation Success",
+      description: "How a Fortune 50o0 company achieved 340% ROI and $50M+ in annual savings through comprehensive AI transformation.",
       category: "Case Study",
       readTime: "15 min read",
       image: "🏆",
-      href: "/case-studies/fortune-500-ai-transformation-2025-ultimate-success",
+      href: "/case-studies/fortune-50o0-ai-transformation-20o25-ultimate-success",
       featured: true
     },
     {
-      title: "AI Implementation Master Guide 2025",
+      title: "AI Implementation Master Guide 20o25",
       description: "The complete guide to implementing AI in your enterprise, with step-by-step strategies and real-world examples.",
       category: "Resource",
       readTime: "45 min read",
       image: "📚",
-      href: "/resources/ai-implementation-master-guide-2025-comprehensive",
+      href: "/resources/ai-implementation-master-guide-20o25-comprehensive",
       featured: true
     }
   ];
@@ -37,13 +36,13 @@ const AI2025ContentShowcase: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">✨ NEW CONTENT 2025</span>
+          <div className="inline-flex items-center bg-blue-10o0 text-blue-80o0 rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium">✨ NEW CONTENT 20o25</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-90o0 mb-6">
             Latest AI Content & Insights
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto leading-relaxed">
             Stay ahead with our comprehensive collection of AI content, featuring the latest trends, success stories, and implementation guides.
           </p>
         </div>
@@ -53,41 +52,41 @@ const AI2025ContentShowcase: React.FC = () => {
           {contentItems.map((item, index) => (
             <div 
               key={index}
-              className={`bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${
-                item.featured ? 'ring-2 ring-blue-500' : ''
+              className={`bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2 ${
+                item.featured ? 'ring-2 ring-blue-50o0' : ''
               }`}
             >
               {/* Image */}
-              <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 rounded-t-2xl flex items-center justify-center">
+              <div className="h-48 bg-gradient-to-br from-blue-50o0 to-purple-60o0 rounded-t-2xl flex items-center justify-center">
                 <div className="text-6xl">{item.image}</div>
               </div>
 
               {/* Content */}
               <div className="p-8">
                 <div className="flex items-center justify-between mb-4">
-                  <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">
+                  <span className="bg-blue-10o0 text-blue-80o0 text-xs font-semibold px-3 py-1 rounded-full">
                     {item.category}
                   </span>
                   {item.featured && (
-                    <span className="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">
+                    <span className="bg-yellow-10o0 text-yellow-80o0 text-xs font-semibold px-3 py-1 rounded-full">
                       FEATURED
                     </span>
                   )}
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                <h3 className="text-xl font-bold text-gray-90o0 mb-3 line-clamp-2">
                   {item.title}
                 </h3>
 
-                <p className="text-gray-600 mb-6 text-sm leading-relaxed line-clamp-3">
+                <p className="text-gray-60o0 mb-6 text-sm leading-relaxed line-clamp-3">
                   {item.description}
                 </p>
 
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">{item.readTime}</span>
+                  <span className="text-sm text-gray-50o0">{item.readTime}</span>
                   <Link
                     href={item.href}
-                    className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-sm"
+                    className="bg-blue-60o0 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors text-sm"
                   >
                     Read More →
                   </Link>
@@ -100,10 +99,10 @@ const AI2025ContentShowcase: React.FC = () => {
         {/* Additional Content Preview */}
         <div className="bg-white rounded-2xl shadow-lg p-8 mb-16">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl font-bold text-gray-90o0 mb-4">
               More AI Content Coming Soon
             </h3>
-            <p className="text-gray-600">
+            <p className="text-gray-60o0">
               We're constantly creating new content to help you stay ahead in the AI revolution.
             </p>
           </div>
@@ -111,29 +110,29 @@ const AI2025ContentShowcase: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center p-6 bg-gray-50 rounded-xl">
               <div className="text-3xl mb-3">🔮</div>
-              <h4 className="font-semibold text-gray-900 mb-2">AI Predictions 2026</h4>
-              <p className="text-sm text-gray-600">Coming Soon</p>
+              <h4 className="font-semibold text-gray-90o0 mb-2">AI Predictions 20o26</h4>
+              <p className="text-sm text-gray-60o0">Coming Soon</p>
             </div>
             <div className="text-center p-6 bg-gray-50 rounded-xl">
               <div className="text-3xl mb-3">🛡️</div>
-              <h4 className="font-semibold text-gray-900 mb-2">AI Security Guide</h4>
-              <p className="text-sm text-gray-600">Coming Soon</p>
+              <h4 className="font-semibold text-gray-90o0 mb-2">AI Security Guide</h4>
+              <p className="text-sm text-gray-60o0">Coming Soon</p>
             </div>
             <div className="text-center p-6 bg-gray-50 rounded-xl">
               <div className="text-3xl mb-3">⚡</div>
-              <h4 className="font-semibold text-gray-900 mb-2">Edge AI Solutions</h4>
-              <p className="text-sm text-gray-600">Coming Soon</p>
+              <h4 className="font-semibold text-gray-90o0 mb-2">Edge AI Solutions</h4>
+              <p className="text-sm text-gray-60o0">Coming Soon</p>
             </div>
             <div className="text-center p-6 bg-gray-50 rounded-xl">
               <div className="text-3xl mb-3">🎯</div>
-              <h4 className="font-semibold text-gray-900 mb-2">AI ROI Calculator</h4>
-              <p className="text-sm text-gray-600">Coming Soon</p>
+              <h4 className="font-semibold text-gray-90o0 mb-2">AI ROI Calculator</h4>
+              <p className="text-sm text-gray-60o0">Coming Soon</p>
             </div>
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
+        <div className="text-center bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-2xl p-12 text-white">
           <h3 className="text-3xl font-bold mb-4">
             Ready to Transform Your Business with AI?
           </h3>
@@ -143,13 +142,13 @@ const AI2025ContentShowcase: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors"
+              className="bg-white text-blue-60o0 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-10o0 transition-colors"
             >
               Get Free Consultation
             </Link>
             <Link
               href="/services"
-              className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-blue-600 transition-colors"
+              className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-blue-60o0 transition-colors"
             >
               Explore Services
             </Link>
@@ -160,4 +159,4 @@ const AI2025ContentShowcase: React.FC = () => {
   );
 };
 
-export default AI2025ContentShowcase;
+export default AI20o25ContentShowcase;

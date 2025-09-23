@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -8,10 +7,10 @@ import {
   Github, ArrowRight, Heart, Star, Award, CheckCircle
 } from 'lucide-react';
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
@@ -62,12 +61,12 @@ const serviceCategories = [
     ]
   },
   {
-    title: '🎯 2030 Innovative Micro SAAS',
+    title: '🎯 20o30 Innovative Micro SAAS',
     services: [
-      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030' },
-      { name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030' },
-      { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030' },
-      { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030' }
+      { name: 'AI Business Intelligence Suite 20o30', href: '/ai-business-intelligence-suite-20o30' },
+      { name: 'AI Customer Experience Platform 20o30', href: '/ai-customer-experience-platform-20o30' },
+      { name: 'AI Marketing Automation Suite 20o30', href: '/ai-marketing-automation-20o30' },
+      { name: 'AI HR Management Suite 20o30', href: '/ai-hr-management-suite-20o30' }
     ]
   }
 ];
@@ -102,7 +101,7 @@ const socialLinks = [
 ];
 
 const certifications = [
-  'ISO 27001 Certified',
+  'ISO 270o01 Certified',
   'SOC 2 Type II Compliant',
   'GDPR Compliant',
   'HIPAA Compliant',
@@ -110,17 +109,17 @@ const certifications = [
   'FedRAMP Authorized'
 ];
 
-export default function UltraFuturisticFooter2030() {
+export default function UltraFuturisticFooter20o30() {
   return (
-    <footer className="bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden">
+    <footer className="bg-gradient-to-br from-black via-purple-90o0/20 to-black text-white relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-50o0/5 via-transparent to-cyan-50o0/5"></div>
         <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-20 left-10 w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
-          <div className="absolute top-40 right-20 w-1 h-1 bg-cyan-400 rounded-full animate-ping"></div>
-          <div className="absolute bottom-20 left-1/4 w-1.5 h-1.5 bg-purple-300 rounded-full animate-bounce"></div>
-          <div className="absolute bottom-40 right-1/3 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
+          <div className="absolute top-20 left-10 w-2 h-2 bg-purple-40o0 rounded-full animate-pulse"></div>
+          <div className="absolute top-40 right-20 w-1 h-1 bg-cyan-40o0 rounded-full animate-ping"></div>
+          <div className="absolute bottom-20 left-1/4 w-1.5 h-1.5 bg-purple-30o0 rounded-full animate-bounce"></div>
+          <div className="absolute bottom-40 right-1/3 w-1 h-1 bg-cyan-30o0 rounded-full animate-pulse"></div>
         </div>
       </div>
 
@@ -131,43 +130,43 @@ export default function UltraFuturisticFooter2030() {
             {/* Company Info */}
             <div className="space-y-6">
               <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center">
-                  <Zap className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-50o0 to-cyan-50o0 rounded-xl flex items-center justify-center">
+                  <Zap className="w-6 h-6 text-white"  />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                  <h3 className="text-xl font-bold bg-gradient-to-r from-purple-40o0 to-cyan-40o0 bg-clip-text text-transparent">
                     Zion Tech Group
                   </h3>
-                  <p className="text-sm text-gray-400">2030 Future Technology</p>
+                  <p className="text-sm text-gray-40o0">20o30 Future Technology</p>
                 </div>
               </div>
               
-              <p className="text-gray-300 text-sm leading-relaxed">
+              <p className="text-gray-30o0 text-sm leading-relaxed">
                 Pioneering the future with cutting-edge AI, quantum computing, and emerging technologies. 
                 Transforming businesses through innovative solutions and intelligent automation.
               </p>
 
               {/* Contact Info */}
               <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-sm text-gray-300">
-                  <Phone className="w-4 h-4 text-purple-400" />
-                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-purple-400 transition-colors">
+                <div className="flex items-center space-x-3 text-sm text-gray-30o0">
+                  <Phone className="w-4 h-4 text-purple-40o0"  />
+                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-purple-40o0 transition-colors">
                     {contactInfo.mobile}
                   </a>
                 </div>
-                <div className="flex items-center space-x-3 text-sm text-gray-300">
-                  <Mail className="w-4 h-4 text-purple-400" />
-                  <a href={`mailto:${contactInfo.email}`} className="hover:text-purple-400 transition-colors">
+                <div className="flex items-center space-x-3 text-sm text-gray-30o0">
+                  <Mail className="w-4 h-4 text-purple-40o0"  />
+                  <a href={`mailto:${contactInfo.email}`} className="hover:text-purple-40o0 transition-colors">
                     {contactInfo.email}
                   </a>
                 </div>
-                <div className="flex items-center space-x-3 text-sm text-gray-300">
-                  <MapPin className="w-4 h-4 text-purple-400" />
+                <div className="flex items-center space-x-3 text-sm text-gray-30o0">
+                  <MapPin className="w-4 h-4 text-purple-40o0"  />
                   <span>{contactInfo.address}</span>
                 </div>
-                <div className="flex items-center space-x-3 text-sm text-gray-300">
-                  <Globe className="w-4 h-4 text-purple-400" />
-                  <a href={contactInfo.website} className="hover:text-purple-400 transition-colors">
+                <div className="flex items-center space-x-3 text-sm text-gray-30o0">
+                  <Globe className="w-4 h-4 text-purple-40o0"  />
+                  <a href={contactInfo.website} className="hover:text-purple-40o0 transition-colors">
                     {contactInfo.website.replace('https://', '')}
                   </a>
                 </div>
@@ -177,19 +176,19 @@ export default function UltraFuturisticFooter2030() {
             {/* Service Categories */}
             <div className="space-y-6">
               <h4 className="text-lg font-semibold text-white flex items-center space-x-2">
-                <Rocket className="w-5 h-5 text-purple-400" />
+                <Rocket className="w-5 h-5 text-purple-40o0"  />
                 <span>Our Services</span>
               </h4>
               <div className="grid grid-cols-1 gap-4">
                 {serviceCategories.slice(0, 3).map((category, index) => (
                   <div key={index} className="space-y-2">
-                    <h5 className="text-sm font-medium text-purple-300">{category.title}</h5>
+                    <h5 className="text-sm font-medium text-purple-30o0">{category.title}</h5>
                     <div className="space-y-1">
                       {category.services.map((service, serviceIndex) => (
                         <Link
                           key={serviceIndex}
                           href={service.href}
-                          className="block text-xs text-gray-400 hover:text-purple-300 transition-colors"
+                          className="block text-xs text-gray-40o0 hover:text-purple-30o0 transition-colors"
                         >
                           {service.name}
                         </Link>
@@ -203,7 +202,7 @@ export default function UltraFuturisticFooter2030() {
             {/* Quick Links */}
             <div className="space-y-6">
               <h4 className="text-lg font-semibold text-white flex items-center space-x-2">
-                <Target className="w-5 h-5 text-cyan-400" />
+                <Target className="w-5 h-5 text-cyan-40o0"  />
                 <span>Quick Links</span>
               </h4>
               <div className="space-y-2">
@@ -211,21 +210,21 @@ export default function UltraFuturisticFooter2030() {
                   <Link
                     key={index}
                     href={link.href}
-                    className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors flex items-center space-x-2 group"
+                    className="block text-sm text-gray-40o0 hover:text-cyan-30o0 transition-colors flex items-center space-x-2 group"
                   >
-                    <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform"  />
                     <span>{link.name}</span>
                   </Link>
                 ))}
               </div>
 
               <div className="space-y-2">
-                <h5 className="text-sm font-medium text-cyan-300">Company</h5>
+                <h5 className="text-sm font-medium text-cyan-30o0">Company</h5>
                 {companyInfo.map((link, index) => (
                   <Link
                     key={index}
                     href={link.href}
-                    className="block text-xs text-gray-400 hover:text-cyan-300 transition-colors"
+                    className="block text-xs text-gray-40o0 hover:text-cyan-30o0 transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -236,13 +235,13 @@ export default function UltraFuturisticFooter2030() {
             {/* Social & Certifications */}
             <div className="space-y-6">
               <h4 className="text-lg font-semibold text-white flex items-center space-x-2">
-                <Users className="w-5 h-5 text-green-400" />
+                <Users className="w-5 h-5 text-green-40o0"  />
                 <span>Connect & Trust</span>
               </h4>
               
               {/* Social Links */}
               <div className="space-y-3">
-                <h5 className="text-sm font-medium text-green-300">Follow Us</h5>
+                <h5 className="text-sm font-medium text-green-30o0">Follow Us</h5>
                 <div className="flex flex-wrap gap-2">
                   {socialLinks.map((social, index) => (
                     <a
@@ -250,9 +249,9 @@ export default function UltraFuturisticFooter2030() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:scale-110"
+                      className="w-10 h-10 bg-gray-80o0/50 hover:bg-purple-50o0/20 rounded-lg flex items-center justify-center text-gray-40o0 hover:text-purple-40o0 transition-all duration-20o0 hover:scale-110"
                     >
-                      <social.icon className="w-5 h-5" />
+                      <social.icon className="w-5 h-5"  />
                     </a>
                   ))}
                 </div>
@@ -260,14 +259,14 @@ export default function UltraFuturisticFooter2030() {
 
               {/* Certifications */}
               <div className="space-y-3">
-                <h5 className="text-sm font-medium text-green-300 flex items-center space-x-2">
-                  <Award className="w-4 h-4" />
+                <h5 className="text-sm font-medium text-green-30o0 flex items-center space-x-2">
+                  <Award className="w-4 h-4"  />
                   <span>Certifications</span>
                 </h5>
                 <div className="grid grid-cols-1 gap-2">
                   {certifications.map((cert, index) => (
-                    <div key={index} className="flex items-center space-x-2 text-xs text-gray-400">
-                      <CheckCircle className="w-3 h-3 text-green-400" />
+                    <div key={index} className="flex items-center space-x-2 text-xs text-gray-40o0">
+                      <CheckCircle className="w-3 h-3 text-green-40o0"  />
                       <span>{cert}</span>
                     </div>
                   ))}
@@ -278,22 +277,22 @@ export default function UltraFuturisticFooter2030() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-purple-500/20">
+        <div className="border-t border-purple-50o0/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-              <div className="flex items-center space-x-6 text-sm text-gray-400">
-                <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>
-                <Link href="/privacy" className="hover:text-purple-400 transition-colors">Privacy Policy</Link>
-                <Link href="/terms" className="hover:text-purple-400 transition-colors">Terms of Service</Link>
+              <div className="flex items-center space-x-6 text-sm text-gray-40o0">
+                <span>&copy; 20o24 Zion Tech Group. All rights reserved.</span>
+                <Link href="/privacy" className="hover:text-purple-40o0 transition-colors">Privacy Policy</Link>
+                <Link href="/terms" className="hover:text-purple-40o0 transition-colors">Terms of Service</Link>
               </div>
               
-              <div className="flex items-center space-x-4 text-sm text-gray-400">
+              <div className="flex items-center space-x-4 text-sm text-gray-40o0">
                 <div className="flex items-center space-x-2">
-                  <Heart className="w-4 h-4 text-red-400" />
+                  <Heart className="w-4 h-4 text-red-40o0"  />
                   <span>Made with passion for innovation</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Star className="w-4 h-4 text-yellow-400" />
+                  <Star className="w-4 h-4 text-yellow-40o0"  />
                   <span>5.0/5.0 Rating</span>
                 </div>
               </div>

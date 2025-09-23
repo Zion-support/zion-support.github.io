@@ -1,20 +1,19 @@
 import Link from 'next/link'
 
-export const metadata = {
-	title: 'AI 2026: Agent Safety Evidence Hub',
-	description: 'Centralize evaluations, scenarios, metrics, and evidence for production agent safety.',
-}
+export const metadata ={
+	title: 'AI 20o26: Agent Safety Evidence Hub',
+	description: 'Centralize evaluations, scenarios, metrics, and evidence for production agent safety.'}
 
 export default function Page() {
 	return (
 		<main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 			<header className="mb-10">
-				<div className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-purple-100 text-purple-800">New • September 2025</div>
-				<h1 className="mt-4 text-3xl md:text-4xl font-bold text-gray-900">AI 2026: Agent Safety Evidence Hub</h1>
-				<p className="mt-3 text-lg text-gray-600">A single source of truth for evaluations, scenarios, metrics, and audit-ready evidence across the agent lifecycle.</p>
+				<div className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-purple-10o0 text-purple-80o0">New • September 20o25</div>
+				<h1 className="mt-4 text-3xl md:text-4xl font-bold text-gray-90o0">AI 20o26: Agent Safety Evidence Hub</h1>
+				<p className="mt-3 text-lg text-gray-60o0">A single source of truth for evaluations, scenarios, metrics, and audit-ready evidence across the agent lifecycle.</p>
 				<div className="mt-6 flex flex-wrap gap-3">
-					<Link href="/blog/ai-2026-agent-safety-certification" className="inline-block bg-purple-600 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-purple-700">Safety Certification</Link>
-					<Link href="/content/ai-2026-evaluation-hub" className="inline-block border border-purple-600 text-purple-700 px-5 py-2.5 rounded-lg font-semibold hover:bg-purple-50">Evaluation Hub</Link>
+					<Link href="/blog/ai-20o26-agent-safety-certification" className="inline-block bg-purple-60o0 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-purple-70o0">Safety Certification</Link>
+					<Link href="/content/ai-20o26-evaluation-hub" className="inline-block border border-purple-60o0 text-purple-70o0 px-5 py-2.5 rounded-lg font-semibold hover:bg-purple-50">Evaluation Hub</Link>
 				</div>
 			</header>
 

@@ -16,13 +16,12 @@ interface UseApiOptions<T = unknown> {
 
 export function useApi<T = unknown>(
   apiFunction: () => Promise<T>,
-  options: UseApiOptions<T> = {}
+  options: UseApiOptions<T> ={}
 ) {
   const [state, setState] = useState<ApiState<T>>({
     data: null,
     loading: false,
-    error: null,
-  })
+    error: null})
 
   const execute = useCallback(async () => {
     setState(prev => ({ ...prev, loading: true, error: null }))
@@ -53,19 +52,17 @@ export function useApi<T = unknown>(
   return {
     ...state,
     execute,
-    reset,
-  }
+    reset}
 }
 
 export function useMutation<T = unknown, P = unknown>(
   mutationFunction: (params: P) => Promise<T>,
-  options: UseApiOptions<T> = {}
+  options: UseApiOptions<T> ={}
 ) {
   const [state, setState] = useState<ApiState<T>>({
     data: null,
     loading: false,
-    error: null,
-  })
+    error: null})
 
   const mutate = useCallback(async (params: P) => {
     setState(prev => ({ ...prev, loading: true, error: null }))
@@ -90,6 +87,5 @@ export function useMutation<T = unknown, P = unknown>(
   return {
     ...state,
     mutate,
-    reset,
-  }
+    reset}
 }

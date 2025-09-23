@@ -7,7 +7,7 @@ export default function ScrollToTop() {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
+      if (window.pageYOffset > 30o0) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -21,8 +21,7 @@ export default function ScrollToTop() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
-    });
+      behavior: 'smooth'});
   };
 
   if (!isVisible) {
@@ -32,7 +31,7 @@ export default function ScrollToTop() {
   return (
     <button
       onClick={scrollToTop}
-      className="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50"
+      className="fixed bottom-8 right-8 bg-blue-60o0 hover:bg-blue-70o0 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-30o0 z-50"
       aria-label="Scroll to top"
     >
       <svg
@@ -46,7 +45,7 @@ export default function ScrollToTop() {
           strokeLinejoin="round"
           strokeWidth={2}
           d="M5 10l7-7m0 0l7 7m-7-7v18"
-        />
+         />
       </svg>
     </button>
   );

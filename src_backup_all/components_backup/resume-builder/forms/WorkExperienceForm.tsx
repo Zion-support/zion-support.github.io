@@ -13,8 +13,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
-} from '@/components/ui/form';
+  FormMessage} from '@/components/ui/form';
 import { WorkExperience } from '@/types/resume';
 import { Loader2, Edit, Trash2 } from 'lucide-react'
 import { useResume } from '@/hooks/useResume';
@@ -30,8 +29,7 @@ const workExperienceSchema = z.object({
   end_date: z.string().optional(),
   is_current: z.boolean().default(false),
   description: z.string().optional(),
-  location: z.string().optional(),
-});
+  location: z.string().optional()});
 
 type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
 
@@ -62,24 +60,21 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       start_date: format(new Date(), 'yyyy-MM-dd'),
       is_current: false,
       description: '',
-      location: '',
-    },
-  });
+      location: ''}});
 
   const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {
     try {
       setError(null);
       let success;
 
-      const experienceData: WorkExperience = {
+      const experienceData: WorkExperience ={
         company_name: data.company_name, // Required field
         role_title: data.role_title, // Required field
         start_date: data.start_date, // Required field
         end_date: data.is_current ? undefined : (data.end_date || undefined),
         is_current: data.is_current,
         description: data.description,
-        location: data.location,
-      };
+        location: data.location};
 
       if (editingId) {
         success = await updateWorkExperience(editingId, experienceData);
@@ -94,8 +89,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           start_date: format(new Date(), 'yyyy-MM-dd'),
           is_current: false,
           description: '',
-          location: '',
-        });
+          location: ''});
         setEditingId(null);
       }
     } catch (err: any) {
@@ -108,8 +102,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     form.reset({
       ...work,
       start_date: formatDateValue(work.start_date),
-      end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined,
-    });
+      end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined});
   };
 
   const handleDelete = async (id: string) => {
@@ -161,7 +154,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       onClick={() => handleEdit(work)}
                       aria-label="Edit experience"
                     >
-                      <Edit className="h-4 w-4" />
+                      <Edit className="h-4 w-4"  />
                     </Button>
                     <Button
                       variant="ghost"
@@ -169,7 +162,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       onClick={() => handleDelete(work.id!)}
                       aria-label="Delete experience"
                     >
-                      <Trash2 className="h-4 w-4" />
+                      <Trash2 className="h-4 w-4"  />
                     </Button>
                   </div>
                 </div>
@@ -197,9 +190,9 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   <FormItem>
                     <FormLabel>Company Name</FormLabel>
                     <FormControl>
-                      <Input placeholder="Google, Microsoft, etc." {...field} />
+                      <Input placeholder="Google, Microsoft, etc." {...field}  />
                     </FormControl>
-                    <FormMessage />
+                    <FormMessage  />
                   </FormItem>
                 )}
               />
@@ -211,9 +204,9 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   <FormItem>
                     <FormLabel>Job Title</FormLabel>
                     <FormControl>
-                      <Input placeholder="Software Engineer, Product Manager, etc." {...field} />
+                      <Input placeholder="Software Engineer, Product Manager, etc." {...field}  />
                     </FormControl>
-                    <FormMessage />
+                    <FormMessage  />
                   </FormItem>
                 )}
               />
@@ -231,9 +224,9 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                         type="date" 
                         {...field} 
                         value={field.value || ''}
-                      />
+                       />
                     </FormControl>
-                    <FormMessage />
+                    <FormMessage  />
                   </FormItem>
                 )}
               />
@@ -248,7 +241,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                         <Checkbox
                           checked={field.value}
                           onCheckedChange={field.onChange}
-                        />
+                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
                         <FormLabel>I currently work here</FormLabel>
@@ -269,9 +262,9 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                             type="date" 
                             {...field} 
                             value={field.value || ''} 
-                          />
+                           />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage  />
                       </FormItem>
                     )}
                   />
@@ -286,9 +279,9 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                 <FormItem>
                   <FormLabel>Location (Optional)</FormLabel>
                   <FormControl>
-                    <Input placeholder="San Francisco, CA (Remote)" {...field} />
+                    <Input placeholder="San Francisco, CA (Remote)" {...field}  />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage  />
                 </FormItem>
               )}
             />
@@ -305,16 +298,16 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       enhancementType="work-description"
                       context={`Role: ${form.getValues('role_title')} at ${form.getValues('company_name')}`}
                       onEnhanced={handleEnhanceDescription}
-                    />
+                     />
                   </FormLabel>
                   <FormControl>
                     <Textarea
                       placeholder="Describe your responsibilities and accomplishments..."
-                      className="min-h-[100px]"
+                      className="min-h-[10o0px]"
                       {...field}
-                    />
+                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage  />
                 </FormItem>
               )}
             />
@@ -334,8 +327,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       start_date: format(new Date(), 'yyyy-MM-dd'),
                       is_current: false,
                       description: '',
-                      location: '',
-                    });
+                      location: ''});
                   } else {
                     onBack();
                   }
@@ -346,7 +338,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
-                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin"  />}
                   {editingId ? 'Update' : 'Add'} Experience
                 </Button>
 

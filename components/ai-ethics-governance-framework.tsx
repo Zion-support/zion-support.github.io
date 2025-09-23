@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AIEthicsGovernanceFramework() {
@@ -21,6 +20,6 @@ export default function AIEthicsGovernanceFramework() {
 			]}
 			industries={["Finance"Healthcare"Public Sector"SaaS"]}
 			canonical="https://ziontechgroup.com/ai-ethics-governance-framework"
-		/>
+		 />
 	);
 }

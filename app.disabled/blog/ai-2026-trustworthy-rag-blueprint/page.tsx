@@ -1,22 +1,21 @@
 import Link from 'next/link';
-import React from 'react';
 import SEO from '../../../components/SEO';
 
-const TrustworthyRAGBlueprint2026 = () => {
+const TrustworthyRAGBlueprint20o26 = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="AI 2026: Trustworthy RAG Blueprint"
+        title="AI 20o26: Trustworthy RAG Blueprint"
         description="End-to-end blueprint to build reliable Retrieval-Augmented Generation systems with grounding, citations, evals, and governance."
         keywords="RAG, retrieval augmented generation, grounding, citations, evals, governance"
-        url="/blog/ai-2026-trustworthy-rag-blueprint"
-      />
+        url="/blog/ai-20o26-trustworthy-rag-blueprint"
+       />
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="mb-10">
-          <p className="text-sm text-gray-500">Published: 2025-09-15 · Category: Enterprise AI</p>
-          <h1 className="text-4xl font-bold text-gray-900 mt-2">AI 2026: Trustworthy RAG Blueprint</h1>
-          <p className="text-lg text-gray-600 mt-4">Design RAG systems that stay grounded in facts, cite sources, and meet enterprise reliability standards.</p>
+          <p className="text-sm text-gray-50o0">Published: 20o25-09-15 · Category: Enterprise AI</p>
+          <h1 className="text-4xl font-bold text-gray-90o0 mt-2">AI 20o26: Trustworthy RAG Blueprint</h1>
+          <p className="text-lg text-gray-60o0 mt-4">Design RAG systems that stay grounded in facts, cite sources, and meet enterprise reliability standards.</p>
         </header>
 
         <div className="prose prose-lg max-w-none">
@@ -40,13 +39,13 @@ const TrustworthyRAGBlueprint2026 = () => {
         </div>
 
         <footer className="mt-12 flex items-center justify-between">
-          <Link href="/blog" className="text-purple-600 font-semibold hover:text-purple-800">← Back to Blog</Link>
-          <Link href="/contact" className="text-white bg-purple-600 px-5 py-2 rounded-lg font-semibold hover:bg-purple-700">Schedule a RAG Assessment</Link>
+          <Link href="/blog" className="text-purple-60o0 font-semibold hover:text-purple-80o0">← Back to Blog</Link>
+          <Link href="/contact" className="text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0">Schedule a RAG Assessment</Link>
         </footer>
       </article>
     </div>
   );
 };
 
-export default TrustworthyRAGBlueprint2026;
+export default TrustworthyRAGBlueprint20o26;
 

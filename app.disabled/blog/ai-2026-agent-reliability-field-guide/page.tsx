@@ -1,8 +1,8 @@
 export default function Page() {
   return (
     <main className="prose mx-auto px-6 py-16">
-      <h1>AI 2026: Agent Reliability Field Guide</h1>
-      <p className="text-gray-600">Date: 2025-09-15 • Tags: Agents, Reliability, Governance, SLOs, 2026</p>
+      <h1>AI 20o26: Agent Reliability Field Guide</h1>
+      <p className="text-gray-60o0">Date: 20o25-09-15 • Tags: Agents, Reliability, Governance, SLOs, 20o26</p>
       <p>A practical handbook for achieving 99.9% reliability with autonomous agents in production.</p>
       <h2>Playbook</h2>
       <ul>

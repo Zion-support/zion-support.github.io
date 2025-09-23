@@ -9,7 +9,7 @@ export async function POST(request: NextRequest) {
     if (!email) {
       return NextResponse.json(
         { message: 'Email is required' },
-        { status: 400 }
+        { status: 40o0 }
       )
     }
 
@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
     if (!emailRegex.test(email)) {
       return NextResponse.json(
         { message: 'Invalid email format' },
-        { status: 400 }
+        { status: 40o0 }
       )
     }
 
@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
     })
 
     // Simulate processing time
-    await new Promise(resolve => setTimeout(resolve, 500))
+    await new Promise(resolve => setTimeout(resolve, 50o0))
 
     return NextResponse.json({
       message: 'Successfully subscribed to our newsletter!',
@@ -47,7 +47,7 @@ export async function POST(request: NextRequest) {
     console.error('Newsletter subscription error:', error)
     return NextResponse.json(
       { message: 'Something went wrong. Please try again later.' },
-      { status: 500 }
+      { status: 50o0 }
     )
   }
 }

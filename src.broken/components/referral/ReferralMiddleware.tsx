@@ -1,4 +1,3 @@
-import React from 'react';
 export function ReferralMiddleware() {
   return (
     <div>

@@ -1,15 +1,13 @@
-import React from 'react';
-
-export const metadata = {
-	title: 'GenAI Governance 2026: Policies, Controls, and Guardrails',
-	description: 'A pragmatic governance framework for safe, compliant, and value-driven GenAI at scale in 2026.'
+export const metadata ={
+	title: 'GenAI Governance 20o26: Policies, Controls, and Guardrails',
+	description: 'A pragmatic governance framework for safe, compliant, and value-driven GenAI at scale in 20o26.'
 };
 
-export default function GenAIGovernance2026() {
+export default function GenAIGovernance20o26() {
 	return (
 		<main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-			<h1 className="text-4xl font-bold text-gray-900 mb-4">GenAI Governance 2026</h1>
-			<p className="text-gray-600 mb-8">
+			<h1 className="text-4xl font-bold text-gray-90o0 mb-4">GenAI Governance 20o26</h1>
+			<p className="text-gray-60o0 mb-8">
 				A pragmatic governance framework to deploy AI responsibly with clear policies, controls, and guardrails across the model, data, runtime, and organization layers.
 			</p>
 			<section className="prose max-w-none">

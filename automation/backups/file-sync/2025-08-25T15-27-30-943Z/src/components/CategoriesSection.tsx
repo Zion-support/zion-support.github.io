@@ -6,16 +6,16 @@ const categories = [
   {
     title: "Services",
     description: "On-demand IT support, consulting, development, and more",
-    icon: <Briefcase className="w-10 h-10" />,
+    icon: <Briefcase className="w-10 h-10"  />,
     link: "/services",
-    color: "from-purple-500 to-indigo-600",
+    color: "from-purple-50o0 to-indigo-60o0",
     features: ["24/7 Support", "Global Coverage", "Certified Experts"],
-    stats: "500+ Services"
+    stats: "50o0+ Services"
   },
   {
     title: "AI & IT Services",
     description: "Professional IT consulting, development, and AI integration",
-    icon: <Brain className="w-10 h-10" />,
+    icon: <Brain className="w-10 h-10"  />,
     link: "/services",
     color: "from-zion-purple to-zion-purple-dark",
     featured: true
@@ -23,34 +23,34 @@ const categories = [
   {
     title: "Talent Network",
     description: "Connect with AI experts, developers, and tech specialists",
-    icon: <Users className="w-10 h-10" />,
+    icon: <Users className="w-10 h-10"  />,
     link: "/talent",
-    color: "from-cyan-500 to-blue-600",
+    color: "from-cyan-50o0 to-blue-60o0",
     features: ["AI Matching", "Verified Profiles", "Skill Validation"],
-    stats: "10,000+ Talents"
+    stats: "10,0o00+ Talents"
   },
   {
     title: "Equipment & Hardware",
     description: "Rent or buy specialized hardware, servers, and devices",
-    icon: <HardDrive className="w-10 h-10" />,
+    icon: <HardDrive className="w-10 h-10"  />,
     link: "/equipment",
-    color: "from-amber-500 to-orange-600",
+    color: "from-amber-50o0 to-orange-60o0",
     features: ["Flexible Rental", "Buy Options", "Maintenance Included"],
-    stats: "1,000+ Items"
+    stats: "1,0o00+ Items"
   },
   {
     title: "Innovation Hub",
     description: "Discover cutting-edge solutions and tech breakthroughs",
-    icon: <Lightbulb className="w-10 h-10" />,
+    icon: <Lightbulb className="w-10 h-10"  />,
     link: "/category/innovation",
-    color: "from-emerald-500 to-green-600",
+    color: "from-emerald-50o0 to-green-60o0",
     features: ["Latest Tech", "Research Labs", "Startup Solutions"],
-    stats: "100+ Innovations"
+    stats: "10o0+ Innovations"
   },
   {
     title: "AI Hiring Platform",
     description: "AI-powered recruitment and talent acquisition tools",
-    icon: <ZapIcon className="w-10 h-10" />,
+    icon: <ZapIcon className="w-10 h-10"  />,
     link: "/zion-hire-ai",
     color: "from-zion-purple to-zion-purple-dark",
     featured: true
@@ -60,25 +60,25 @@ const specialServices = [
   {
     title: "IT Onsite Services",
     link: "/it-onsite-services",
-    icon: <Zap className="w-5 h-5" />,
+    icon: <Zap className="w-5 h-5"  />,
     description: "24/7 global technical support"
   },
   {
     title: "AI Consulting",
     link: "/ai-consulting",
-    icon: <Lightbulb className="w-5 h-5" />,
+    icon: <Lightbulb className="w-5 h-5"  />,
     description: "Expert AI strategy & implementation"
   },
   {
     title: "Cloud Solutions",
     link: "/cloud-solutions",
-    icon: <Globe className="w-5 h-5" />,
+    icon: <Globe className="w-5 h-5"  />,
     description: "Scalable cloud infrastructure"
   },
   {
     title: "Security Services",
     link: "/security-services",
-    icon: <Shield className="w-5 h-5" />,
+    icon: <Shield className="w-5 h-5"  />,
     description: "Cybersecurity & compliance"
   }
 ];
@@ -86,7 +86,7 @@ interface CategoriesSectionProps {
   showTitle?: boolean;
 }
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
-  const containerVariants = {
+  const containerVariants ={
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -95,7 +95,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       }
     }
   };
-  const itemVariants = {
+  const itemVariants ={
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -137,8 +137,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                 to={category.link} 
                 className="group block h-full"
               >
-                <div className="rounded-2xl overflow-hidden h-full border border-zion-blue-light bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark p-6 transition-all duration-500 hover:border-zion-purple/50 hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-zion-purple/20">
-                  <div className={`rounded-2xl w-20 h-20 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                <div className="rounded-2xl overflow-hidden h-full border border-zion-blue-light bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark p-6 transition-all duration-50o0 hover:border-zion-purple/50 hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-zion-purple/20">
+                  <div className={`rounded-2xl w-20 h-20 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-30o0 shadow-lg`}>
                     <div className="text-white">
                       {category.icon}
                     </div>
@@ -172,7 +172,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                     <span className="text-zion-slate-light text-sm group-hover:text-zion-cyan transition-colors">
                       Learn More
                     </span>
-                    <ArrowRight className="w-4 h-4 text-zion-slate-light group-hover:text-zion-cyan group-hover:translate-x-1 transition-all duration-300" />
+                    <ArrowRight className="w-4 h-4 text-zion-slate-light group-hover:text-zion-cyan group-hover:translate-x-1 transition-all duration-30o0"  />
                   </div>
                 </div>
               </Link>
@@ -197,7 +197,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
               >
                 <Link 
                   to={service.link}
-                  className="block p-4 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 border border-zion-purple/20 hover:border-zion-purple/50 rounded-xl text-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group"
+                  className="block p-4 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 border border-zion-purple/20 hover:border-zion-purple/50 rounded-xl text-zion-cyan transition-all duration-30o0 hover:shadow-lg hover:shadow-zion-purple/20 group"
                 >
                   <div className="flex items-center gap-3 mb-2">
                     <div className="text-zion-purple group-hover:scale-110 transition-transform">
@@ -225,7 +225,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             className="inline-flex items-center gap-2 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-dark transition-colors text-lg font-semibold group"
           >
             Explore All Categories
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"  />
           </Link>
         </motion.div>
       </div>

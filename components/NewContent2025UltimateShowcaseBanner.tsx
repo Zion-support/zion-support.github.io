@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const NewContent2025UltimateShowcaseBanner = () => {
+const NewContent20o25UltimateShowcaseBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -10,7 +10,7 @@ const NewContent2025UltimateShowcaseBanner = () => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 4000);
+    }, 40o00);
     return () => clearInterval(interval);
   }, []);
 
@@ -18,33 +18,33 @@ const NewContent2025UltimateShowcaseBanner = () => {
     {
       title: "Neural Superintelligence Breakthrough",
       subtitle: "Revolutionary AI achieving human-level consciousness",
-      roi: "2,400%",
+      roi: "2,40o0%",
       icon: "🧠",
-      color: "from-purple-600 to-indigo-600",
+      color: "from-purple-60o0 to-indigo-60o0",
       features: ["Consciousness AI", "Neural Networks", "Cognitive Computing"]
     },
     {
       title: "Quantum-Neural Fusion Revolution",
       subtitle: "Merging quantum computing with neural networks",
-      roi: "5,000%",
+      roi: "5,0o00%",
       icon: "⚛️",
-      color: "from-blue-600 to-cyan-600",
+      color: "from-blue-60o0 to-cyan-60o0",
       features: ["Quantum AI", "Neural Processing", "Advanced Computing"]
     },
     {
       title: "Autonomous Business Ecosystems",
       subtitle: "Self-managing business systems with minimal human intervention",
-      roi: "8,000%",
+      roi: "8,0o00%",
       icon: "🤖",
-      color: "from-green-600 to-emerald-600",
+      color: "from-green-60o0 to-emerald-60o0",
       features: ["Autonomous Operations", "Self-Healing Systems", "Intelligent Automation"]
     },
     {
       title: "Synthetic Intelligence Revolution",
       subtitle: "AI systems that create, modify, and improve themselves",
-      roi: "10,000%",
+      roi: "10,0o00%",
       icon: "🔬",
-      color: "from-orange-600 to-red-600",
+      color: "from-orange-60o0 to-red-60o0",
       features: ["Self-Improving AI", "Synthetic Intelligence", "Evolutionary Computing"]
     }
   ];
@@ -54,29 +54,29 @@ const NewContent2025UltimateShowcaseBanner = () => {
   return (
     <div className="relative overflow-hidden">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-90o0 via-blue-90o0 to-indigo-90o0">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/20 to-transparent"></div>
-          <div className="absolute bottom-0 right-0 w-full h-full bg-gradient-to-l from-blue-600/20 to-transparent"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-60o0/20 to-transparent"></div>
+          <div className="absolute bottom-0 right-0 w-full h-full bg-gradient-to-l from-blue-60o0/20 to-transparent"></div>
         </div>
       </div>
 
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-20 h-20 bg-purple-500/20 rounded-full animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-16 h-16 bg-blue-500/20 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-indigo-500/20 rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute bottom-40 right-1/3 w-24 h-24 bg-cyan-500/20 rounded-full animate-pulse delay-500"></div>
+        <div className="absolute top-20 left-10 w-20 h-20 bg-purple-50o0/20 rounded-full animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-16 h-16 bg-blue-50o0/20 rounded-full animate-pulse delay-10o00"></div>
+        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-indigo-50o0/20 rounded-full animate-pulse delay-20o00"></div>
+        <div className="absolute bottom-40 right-1/3 w-24 h-24 bg-cyan-50o0/20 rounded-full animate-pulse delay-50o0"></div>
       </div>
 
       <div className="relative z-10 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Content */}
-            <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+            <div className={`transition-all duration-10o00 ${isVisible ? 'opacity-10o0 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
               <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white rounded-full px-6 py-2 mb-6">
-                <span className="text-sm font-medium">🚀 NEW CONTENT 2025</span>
+                <span className="text-sm font-medium">🚀 NEW CONTENT 20o25</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -112,13 +112,13 @@ const NewContent2025UltimateShowcaseBanner = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/content-showcase"
-                  className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors text-center"
+                  className="bg-white text-purple-60o0 px-8 py-4 rounded-xl font-semibold hover:bg-gray-10o0 transition-colors text-center"
                 >
                   Explore Content
                 </Link>
                 <Link
                   href="/newsletter"
-                  className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors text-center"
+                  className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-center"
                 >
                   Get Updates
                 </Link>
@@ -126,10 +126,10 @@ const NewContent2025UltimateShowcaseBanner = () => {
             </div>
 
             {/* Right Side - Interactive Showcase */}
-            <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+            <div className={`transition-all duration-10o00 delay-30o0 ${isVisible ? 'opacity-10o0 translate-x-0' : 'opacity-0 translate-x-10'}`}>
               <div className="relative">
                 {/* Main Showcase Card */}
-                <div className={`bg-gradient-to-br ${currentSlideData.color} text-white rounded-3xl p-8 shadow-2xl transform transition-all duration-500 hover:scale-105`}>
+                <div className={`bg-gradient-to-br ${currentSlideData.color} text-white rounded-3xl p-8 shadow-2xl transform transition-all duration-50o0 hover:scale-10o5`}>
                   <div className="text-center mb-6">
                     <div className="text-6xl mb-4">{currentSlideData.icon}</div>
                     <h3 className="text-2xl font-bold mb-2">{currentSlideData.title}</h3>
@@ -156,7 +156,7 @@ const NewContent2025UltimateShowcaseBanner = () => {
                   <div className="mt-6">
                     <Link
                       href={`/content/${currentSlide.toLowerCase().replace(/\s+/g, '-')}`}
-                      className="block w-full bg-white text-gray-900 text-center py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors"
+                      className="block w-full bg-white text-gray-90o0 text-center py-3 rounded-xl font-semibold hover:bg-gray-10o0 transition-colors"
                     >
                       Learn More
                     </Link>
@@ -182,15 +182,15 @@ const NewContent2025UltimateShowcaseBanner = () => {
           {/* Statistics */}
           <div className="mt-20 grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">500+</div>
+              <div className="text-4xl font-bold text-white mb-2">50o0+</div>
               <div className="text-white/80">Content Items</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">50,000+</div>
+              <div className="text-4xl font-bold text-white mb-2">50,0o00+</div>
               <div className="text-white/80">Monthly Readers</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">2,400%</div>
+              <div className="text-4xl font-bold text-white mb-2">2,40o0%</div>
               <div className="text-white/80">Average ROI</div>
             </div>
             <div className="text-center">
@@ -208,7 +208,7 @@ const NewContent2025UltimateShowcaseBanner = () => {
               {[
                 { name: "AI Trends", icon: "📈", count: "150+" },
                 { name: "Case Studies", icon: "📊", count: "75+" },
-                { name: "Implementation", icon: "🛠️", count: "100+" },
+                { name: "Implementation", icon: "🛠️", count: "10o0+" },
                 { name: "Tools & Calculators", icon: "💰", count: "50+" }
               ].map((category, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-colors">
@@ -225,4 +225,4 @@ const NewContent2025UltimateShowcaseBanner = () => {
   );
 };
 
-export default NewContent2025UltimateShowcaseBanner;
+export default NewContent20o25UltimateShowcaseBanner;

@@ -1,10 +1,10 @@
 import Link from 'next/link';
 
-const RevolutionaryContentBanner2026 = () => {
+const RevolutionaryContentBanner20o26 = () => {
   return (
-    <section className="py-12 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 relative overflow-hidden">
+    <section className="py-12 bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/90 via-blue-600/90 to-indigo-600/90"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-60o0/90 via-blue-60o0/90 to-indigo-60o0/90"></div>
       <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-10"></div>
       
       {/* Animated Background Elements */}
@@ -19,13 +19,13 @@ const RevolutionaryContentBanner2026 = () => {
         <div className="text-center">
           {/* Badge */}
           <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-semibold text-white">🚀 REVOLUTIONARY CONTENT 2026</span>
+            <span className="text-sm font-semibold text-white">🚀 REVOLUTIONARY CONTENT 20o26</span>
           </div>
           
           {/* Main Heading */}
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
             The Future of Business is 
-            <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-yellow-30o0 to-orange-30o0 bg-clip-text text-transparent">
               Here Today
             </span>
           </h2>
@@ -65,20 +65,20 @@ const RevolutionaryContentBanner2026 = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
               href="/blog"
-              className="inline-flex items-center bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl"
             >
               Explore Revolutionary Content
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3"  />
               </svg>
             </Link>
             <Link
               href="/case-studies"
-              className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5"
             >
               View Success Stories
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6"  />
               </svg>
             </Link>
           </div>
@@ -108,4 +108,4 @@ const RevolutionaryContentBanner2026 = () => {
   );
 };
 
-export default RevolutionaryContentBanner2026;
+export default RevolutionaryContentBanner20o26;

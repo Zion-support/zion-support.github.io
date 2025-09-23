@@ -27,9 +27,8 @@ export default function PerformanceMonitor() {
       try {
         const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         
-        const basicMetrics: PerformanceMetrics = {
-          ttfb: perfData.responseStart - perfData.requestStart,
-        };
+        const basicMetrics: PerformanceMetrics ={
+          ttfb: perfData.responseStart - perfData.requestStart};
 
         // Measure Core Web Vitals
         if ('web-vitals' in window) {
@@ -51,11 +50,9 @@ export default function PerformanceMonitor() {
             event_category: 'Performance',
             custom_map: {
               metric_1: 'dom_content_loaded',
-              metric_2: 'total_load_time',
-            },
+              metric_2: 'total_load_time'},
             metric_1: Math.round(perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart),
-            metric_2: Math.round(perfData.loadEventEnd - perfData.fetchStart),
-          });
+            metric_2: Math.round(perfData.loadEventEnd - perfData.fetchStart)});
         }
 
         // Store metrics for debugging
@@ -105,7 +102,7 @@ export default function PerformanceMonitor() {
     // Show metrics after 3 seconds
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 3000);
+    }, 30o00);
 
     return () => {
       observer.disconnect();
@@ -117,9 +114,9 @@ export default function PerformanceMonitor() {
   if (!isVisible) return null;
 
   const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'text-green-600';
-    if (value <= thresholds.poor) return 'text-yellow-600';
-    return 'text-red-600';
+    if (value <= thresholds.good) return 'text-green-60o0';
+    if (value <= thresholds.poor) return 'text-yellow-60o0';
+    return 'text-red-60o0';
   };
 
   const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {
@@ -130,35 +127,35 @@ export default function PerformanceMonitor() {
 
   return (
     <div className="fixed bottom-4 left-4 bg-white shadow-lg rounded-lg p-4 border z-50 max-w-xs">
-      <h3 className="text-sm font-semibold mb-3 text-gray-900">Performance Metrics</h3>
+      <h3 className="text-sm font-semibold mb-3 text-gray-90o0">Performance Metrics</h3>
       <div className="space-y-2 text-xs">
         {metrics.fcp && (
           <div className="flex justify-between">
-            <span className="text-gray-600">FCP: </span>
-            <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
-              {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, poor: 3000 })})
+            <span className="text-gray-60o0">FCP: </span>
+            <span className={getScoreColor(metrics.fcp, { good: 180o0, poor: 30o00 })}>
+              {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 180o0, poor: 30o00 })})
             </span>
           </div>
         )}
         {metrics.lcp && (
           <div className="flex justify-between">
-            <span className="text-gray-600">LCP: </span>
-            <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>
-              {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500, poor: 4000 })})
+            <span className="text-gray-60o0">LCP: </span>
+            <span className={getScoreColor(metrics.lcp, { good: 250o0, poor: 40o00 })}>
+              {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 250o0, poor: 40o00 })})
             </span>
           </div>
         )}
         {metrics.fid && (
           <div className="flex justify-between">
-            <span className="text-gray-600">FID: </span>
-            <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
-              {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100, poor: 300 })})
+            <span className="text-gray-60o0">FID: </span>
+            <span className={getScoreColor(metrics.fid, { good: 10o0, poor: 30o0 })}>
+              {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 10o0, poor: 30o0 })})
             </span>
           </div>
         )}
         {metrics.cls && (
           <div className="flex justify-between">
-            <span className="text-gray-600">CLS: </span>
+            <span className="text-gray-60o0">CLS: </span>
             <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
               {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1, poor: 0.25 })})
             </span>
@@ -166,17 +163,17 @@ export default function PerformanceMonitor() {
         )}
         {metrics.ttfb && (
           <div className="flex justify-between">
-            <span className="text-gray-600">TTFB: </span>
-            <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
-              {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, poor: 1800 })})
+            <span className="text-gray-60o0">TTFB: </span>
+            <span className={getScoreColor(metrics.ttfb, { good: 80o0, poor: 180o0 })}>
+              {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 80o0, poor: 180o0 })})
             </span>
           </div>
         )}
       </div>
-      <div className="mt-3 pt-2 border-t border-gray-200">
+      <div className="mt-3 pt-2 border-t border-gray-20o0">
         <button
           onClick={() => setIsVisible(false)}
-          className="text-xs text-gray-500 hover:text-gray-700"
+          className="text-xs text-gray-50o0 hover:text-gray-70o0"
         >
           Hide
         </button>

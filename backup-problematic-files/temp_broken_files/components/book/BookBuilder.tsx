@@ -4,7 +4,7 @@ import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2 } fro
 import { buildPrintableHtml } from '../../utils/export/buildHtml';
 import type { BookProject, BookChapter, VisualAsset } from '../../utils/book/bookTypes';
 import { defaultChapters } from '../../utils/book/defaultOutline';
-const initialProject: BookProject = {
+const initialProject: BookProject ={
   meta: {
     title: 'Zion OS: Building the Civilization Protocol'
     subtitle: 'AI. Talent. Trust.'
@@ -28,23 +28,19 @@ function fileToBase64(file: File): Promise<string> {
 }
 export default function BookBuilder() {
 
-
   const [project, setProject] = useState<BookProject>(initialProject),
   const [pageSize, setPageSize] = useState<'A4' | 'LETTER'>('LETTER'),
   const [busy, setBusy] = useState<boolean>(false),
   const coverPreview = useMemo_(() => {
 
-
     return (
-      <div className="w-full max-w-2xl border rounded-lg overflow-hidden shadow bg-white text-gray-900">
+      <div className="w-full max-w-2xl border rounded-lg overflow-hidden shadow bg-white text-gray-90o0">
         <div className="p-8 space-y-2">
           <div className="text-xs uppercase tracking-widest opacity-60">Zion OS</div>
           <h1 className="text-3xl font-extrabold leading-tight">{project.meta.title}</h1>
           <div className="text-lg opacity-80">{project.meta.subtitle}</div>
           <div className="pt-6 text-sm opacity-70">By {project.meta.author}</div>
           {project.meta.isbn ? (
-
-
 
                 src={`/api/barcode/isbn?code=${encodeURIComponent(project.meta.isbn)}`}
               />
@@ -121,9 +117,8 @@ export default function BookBuilder() {
         <h1 className="text-2xl font-bold">Book Builder</h1>
         <div className="flex gap-2">
           <button className="btn btn-sm btn-outline" onClick={handleGenerateWithAI} disabled={busy}>
-            <Wand2 className="w-4 h-4 mr-1" /> AI Assist
+            <Wand2 className="w-4 h-4 mr-1"  /> AI Assist
           </button>
-
 
           <select,
 className=&quot;border rounded px-2 py-1 text-sm&quot;
@@ -132,23 +127,18 @@ className=&quot;border rounded px-2 py-1 text-sm&quot;
             <option value=&quot;LETTER&quot;>8.5x11 Letter</option>
             <option value=&quot;A4&quot;>A4</option>
 
-
-
           </select>
           <button className="btn btn-sm btn-primary" onClick={handleExportPdf} disabled={busy}>
-            <Download className="w-4 h-4 mr-1" /> PDF
+            <Download className="w-4 h-4 mr-1"  /> PDF
           </button>
-
-
 
         </div>
       </div>
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="space-y-4">
           <h2 className="font-semibold flex items-center gap-2">
-            <BookOpen className="w-4 h-4" /> Cover & Branding
+            <BookOpen className="w-4 h-4"  /> Cover & Branding
           </h2>
-
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-3&quot;>
             <label className=&quot;space-y-1&quot;>
@@ -156,21 +146,15 @@ className=&quot;border rounded px-2 py-1 text-sm&quot;
               <input,
 className=&quot;w-full border rounded px-3 py-2&quot;
 
-
-
             <label className=&quot;space-y-1&quot;>
               <div className=&quot;text-xs uppercase opacity-60&quot;>Subtitle</div>
               <input,
 className=&quot;w-full border rounded px-3 py-2&quot;
 
-
-
             <label className=&quot;space-y-1&quot;>
               <div className=&quot;text-xs uppercase opacity-60&quot;>Author</div>
               <input,
 className=&quot;w-full border rounded px-3 py-2&quot;
-
-
 
             <label className=&quot;space-y-1&quot;>
               <div className=&quot;text-xs uppercase opacity-60&quot;>ISBN (optional)</div>
@@ -178,22 +162,17 @@ className=&quot;w-full border rounded px-3 py-2&quot;
 className=&quot;w-full border rounded px-3 py-2&quot;
                 placeholder=&quot;9781234567897&quot;
 
-
-
                 value={project.meta.isbn}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, isbn: e.target.value } })}
               />
             </label>
           </div>
 
-
           <div className=&quot;pt-2&quot;>{coverPreview}</div>        </div>
 
         <div className=&quot;space-y-4&quot;>
           <h2 className=&quot;font-semibold flex items-center gap-2&quot;>
-            <Settings className=&quot;w-4 h-4&quot; /> Visual Elements
-
-
+            <Settings className=&quot;w-4 h-4&quot;  /> Visual Elements
 
           </h2>
           <div className="space-y-3">
@@ -212,8 +191,6 @@ className=&quot;w-full border rounded px-3 py-2&quot;
             <div className="grid grid-cols-3 gap-2">
               {project.visuals.timelineImages.concat(project.visuals.daoVoteCharts).concat(project.visuals.uiScreens).slice(0, 6).map((src, i) => (
 
-
-
               ))}
             </div>
           </div>
@@ -224,13 +201,10 @@ className=&quot;w-full border rounded px-3 py-2&quot;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {project.chapters.map((ch, idx) => (
 
-
             <div key={idx} className=&quot;border rounded-lg p-4 space-y-2&quot;>
               <div className=&quot;font-medium&quot;>{ch.title}</div>
               <textarea,
 className=&quot;w-full min-h-[160px] border rounded p-2&quot;
-
-
 
                 value={ch.content}
                 onChange={(e) => {
@@ -248,8 +222,6 @@ className=&quot;w-full min-h-[160px] border rounded p-2&quot;
         <div className="space-y-2">
           {project.visuals.quoteCallouts.map((q, i) => (
 
-
-
                 value={q.text}
                 onChange={(e) => {
                   const quoteCallouts = [...project.visuals.quoteCallouts]
@@ -258,20 +230,16 @@ className=&quot;w-full min-h-[160px] border rounded p-2&quot;
                 }}
               />
 
-
-
                 value={q.attribution ?? ''}
                 onChange={(e) => {
                   const quoteCallouts = [...project.visuals.quoteCallouts],
                   quoteCallouts[i] = { ...quoteCallouts[i], attribution: e.target.value },
 
-
               />
-              <div />
+              <div  />
             </div>
           ))}
         </div>
       </section>
     </div>
-
 

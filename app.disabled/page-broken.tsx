@@ -24,41 +24,40 @@ const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
 // Import key promotional components
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
-import ComprehensiveSolutionsBanner2025 from '../components/ComprehensiveSolutionsBanner2025';
-import NewServicesShowcase2025 from '../components/NewServicesShowcase2025';
+import ComprehensiveSolutionsBanner20o25 from '../components/ComprehensiveSolutionsBanner20o25';
+import NewServicesShowcase20o25 from '../components/NewServicesShowcase20o25';
 import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
-import NewContent2026Showcase from '../components/NewContent2026Showcase';
-import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
-import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
-import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPromotionBanner2026';
-import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
-import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
-import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
-import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
-import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
-import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
-import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
-import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
-import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
+import NewContent20o26Showcase from '../components/NewContent20o26Showcase';
+import RevolutionaryContent20o26Banner from '../components/RevolutionaryContent20o26Banner';
+import FeaturedContentShowcase20o26 from '../components/FeaturedContentShowcase20o26';
+import EnhancedContentPromotionBanner20o26 from '../components/EnhancedContentPromotionBanner20o26';
+import ComprehensiveContentShowcase20o26 from '../components/ComprehensiveContentShowcase20o26';
+import RevolutionaryContent20o25Banner from '../components/RevolutionaryContent20o25Banner';
+import UltimateContentShowcase20o25 from '../components/UltimateContentShowcase20o25';
+import UltimatePromotionBanner20o26 from '../components/UltimatePromotionBanner20o26';
+import UltimateContentShowcase20o26 from '../components/UltimateContentShowcase20o26';
+import SuccessMetricsShowcase20o26 from '../components/SuccessMetricsShowcase20o26';
+import AI20o25BreakthroughBanner from '../components/AI20o25BreakthroughBanner';
+import NewContent20o25PromotionBanner from '../components/NewContent20o25PromotionBanner';
+import LatestContentShowcase20o25 from '../components/LatestContentShowcase20o25';
 // import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
-import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
-import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
-import AI2026AutonomousSystemsBanner from '../components/AI2026AutonomousSystemsBanner';
-import AI2026UltimateShowcaseBanner from '../components/AI2026UltimateShowcaseBanner';
-import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
-import RevolutionaryContent2025UltimateBanner from '../components/RevolutionaryContent2025UltimateBanner';
+import NewContent20o25UltimateBanner from '../components/NewContent20o25UltimateBanner';
+import AI20o26QuantumRevolutionBanner from '../components/AI20o26QuantumRevolutionBanner';
+import AI20o26AutonomousSystemsBanner from '../components/AI20o26AutonomousSystemsBanner';
+import AI20o26UltimateShowcaseBanner from '../components/AI20o26UltimateShowcaseBanner';
+import NewContent20o25UltimateShowcase from '../components/NewContent20o25UltimateShowcase';
+import RevolutionaryContent20o25UltimateBanner from '../components/RevolutionaryContent20o25UltimateBanner';
 import InteractiveROICalculator from '../components/InteractiveROICalculator';
-import ComprehensiveContentShowcase2025 from '../components/ComprehensiveContentShowcase2025';
-import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
-import QuantumAIContentShowcase2026 from '../components/QuantumAIContentShowcase2026';
-import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
-import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
+import ComprehensiveContentShowcase20o25 from '../components/ComprehensiveContentShowcase20o25';
+import QuantumAI20o26BreakthroughBanner from '../components/QuantumAI20o26BreakthroughBanner';
+import QuantumAIContentShowcase20o26 from '../components/QuantumAIContentShowcase20o26';
+import RevolutionaryContentBanner20o25 from '../components/RevolutionaryContentBanner20o25';
+import NewContent20o25UltimateShowcaseBanner from '../components/NewContent20o25UltimateShowcaseBanner';
 
-export const metadata = {
+export const metadata ={
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
-  keywords: ['AI automation', 'cloud computing', 'micro SaaS', 'technology consulting', 'enterprise solutions', 'digital transformation'],
-};
+  keywords: ['AI automation', 'cloud computing', 'micro SaaS', 'technology consulting', 'enterprise solutions', 'digital transformation']};
 
 export default function HomePage() {
   return (
@@ -68,62 +67,62 @@ export default function HomePage() {
         description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services."
         keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
         url="/"
-      />
+       />
       
       <div className='min-h-screen bg-white'>
-        {/* Revolutionary Content 2025 Banner - NEW FEATURED */}
-        <RevolutionaryContent2025Banner />
+        {/* Revolutionary Content 20o25 Banner - NEW FEATURED */}
+        <RevolutionaryContent20o25Banner  />
         
-        {/* Ultimate Content 2025 Showcase - NEW FEATURED */}
-        <UltimateContentShowcase2025 />
+        {/* Ultimate Content 20o25 Showcase - NEW FEATURED */}
+        <UltimateContentShowcase20o25  />
         
-        {/* Ultimate Content 2025 Banner - NEW */}
-        <NewContent2025UltimateBanner />
+        {/* Ultimate Content 20o25 Banner - NEW */}
+        <NewContent20o25UltimateBanner  />
         
-        {/* Revolutionary AI Content 2026 Banner - NEW FEATURED */}
-        <RevolutionaryAIContentBanner />
+        {/* Revolutionary AI Content 20o26 Banner - NEW FEATURED */}
+        <RevolutionaryAIContentBanner  />
         
-        {/* AI 2026 Quantum Revolution Ultimate Banner - NEW FEATURED */}
-        <AI2026QuantumRevolutionBanner />
+        {/* AI 20o26 Quantum Revolution Ultimate Banner - NEW FEATURED */}
+        <AI20o26QuantumRevolutionBanner  />
         
-        {/* New Content 2026 Ultimate Showcase - NEW FEATURED */}
-        <NewContent2025UltimateShowcase />
+        {/* New Content 20o26 Ultimate Showcase - NEW FEATURED */}
+        <NewContent20o25UltimateShowcase  />
         
         {/* Quantum AI Revolution Banner - NEW */}
-        <QuantumAI2026BreakthroughBanner />
+        <QuantumAI20o26BreakthroughBanner  />
         
-        {/* New Content 2025 Ultimate Banner */}
-        <NewContent2025UltimateBanner />
+        {/* New Content 20o25 Ultimate Banner */}
+        <NewContent20o25UltimateBanner  />
         
-        {/* AI 2026 Ultimate Showcase Banner */}
-        <AI2026UltimateShowcaseBanner />
+        {/* AI 20o26 Ultimate Showcase Banner */}
+        <AI20o26UltimateShowcaseBanner  />
         
-        {/* AI 2026 Quantum Revolution Banner */}
-        <AI2026QuantumRevolutionBanner />
+        {/* AI 20o26 Quantum Revolution Banner */}
+        <AI20o26QuantumRevolutionBanner  />
         
-        {/* AI 2026 Autonomous Systems Banner */}
-        <AI2026AutonomousSystemsBanner />
+        {/* AI 20o26 Autonomous Systems Banner */}
+        <AI20o26AutonomousSystemsBanner  />
         
         {/* Ultimate Promotion Banner */}
-        <UltimatePromotionBanner2026 />
+        <UltimatePromotionBanner20o26  />
         
-        {/* Revolutionary Content 2025 Banner */}
-        <RevolutionaryContentBanner2025 />
+        {/* Revolutionary Content 20o25 Banner */}
+        <RevolutionaryContentBanner20o25  />
         
-        {/* AI 2025 Breakthrough Banner */}
-        <AI2025BreakthroughBanner />
+        {/* AI 20o25 Breakthrough Banner */}
+        <AI20o25BreakthroughBanner  />
         
-        {/* New Content 2025 Showcase Banner */}
-        <NewContent2025PromotionBanner />
+        {/* New Content 20o25 Showcase Banner */}
+        <NewContent20o25PromotionBanner  />
         
-        {/* Revolutionary Content 2025 Banner */}
-        <RevolutionaryContentBanner2025 />
+        {/* Revolutionary Content 20o25 Banner */}
+        <RevolutionaryContentBanner20o25  />
         
         {/* Enhanced Content Promotion Banner */}
-        <EnhancedContentPromotionBanner />
+        <EnhancedContentPromotionBanner  />
         
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
+        <section className="bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
@@ -139,13 +138,13 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/services"
-                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
                 >
                   Explore Services
                 </Link>
                 <Link
                   href="/contact"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors"
                 >
                   Get Started
                 </Link>
@@ -159,20 +158,20 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
               <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-purple-600 mb-2">500+</div>
-                <div className="text-gray-600">Projects Delivered</div>
+                <div className="text-3xl font-bold text-purple-60o0 mb-2">50o0+</div>
+                <div className="text-gray-60o0">Projects Delivered</div>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-blue-600 mb-2">98%</div>
-                <div className="text-gray-600">Client Satisfaction</div>
+                <div className="text-3xl font-bold text-blue-60o0 mb-2">98%</div>
+                <div className="text-gray-60o0">Client Satisfaction</div>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-green-600 mb-2">340%</div>
-                <div className="text-gray-600">Average ROI Increase</div>
+                <div className="text-3xl font-bold text-green-60o0 mb-2">340%</div>
+                <div className="text-gray-60o0">Average ROI Increase</div>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-orange-600 mb-2">24/7</div>
-                <div className="text-gray-600">Support Available</div>
+                <div className="text-3xl font-bold text-orange-60o0 mb-2">24/7</div>
+                <div className="text-gray-60o0">Support Available</div>
               </div>
             </div>
           </div>
@@ -181,35 +180,35 @@ export default function HomePage() {
         {/* Services Section */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our Services</h2>
+            <h2 className="text-3xl font-bold text-gray-90o0 mb-8 text-center">Our Services</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-xl shadow-lg">
                 <div className="text-4xl mb-4">🤖</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">AI Automation</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-xl font-bold text-gray-90o0 mb-4">AI Automation</h3>
+                <p className="text-gray-60o0 mb-4">
                   Intelligent automation solutions that streamline operations and boost productivity across your organization.
                 </p>
-                <Link href="/services/ai-automation" className="text-purple-600 font-semibold hover:text-purple-800">
+                <Link href="/services/ai-automation" className="text-purple-60o0 font-semibold hover:text-purple-80o0">
                   Learn More →
                 </Link>
               </div>
               <div className="bg-white p-8 rounded-xl shadow-lg">
                 <div className="text-4xl mb-4">☁️</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Cloud Infrastructure</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-xl font-bold text-gray-90o0 mb-4">Cloud Infrastructure</h3>
+                <p className="text-gray-60o0 mb-4">
                   Scalable, secure cloud solutions designed to support your business growth and digital transformation.
                 </p>
-                <Link href="/services/cloud-infrastructure" className="text-purple-600 font-semibold hover:text-purple-800">
+                <Link href="/services/cloud-infrastructure" className="text-purple-60o0 font-semibold hover:text-purple-80o0">
                   Learn More →
                 </Link>
               </div>
               <div className="bg-white p-8 rounded-xl shadow-lg">
                 <div className="text-4xl mb-4">💼</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Micro SaaS</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-xl font-bold text-gray-90o0 mb-4">Micro SaaS</h3>
+                <p className="text-gray-60o0 mb-4">
                   Custom micro SaaS applications that solve specific business challenges with modern, scalable solutions.
                 </p>
-                <Link href="/services/micro-saas" className="text-purple-600 font-semibold hover:text-purple-800">
+                <Link href="/services/micro-saas" className="text-purple-60o0 font-semibold hover:text-purple-80o0">
                   Learn More →
                 </Link>
               </div>
@@ -218,36 +217,36 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
-        <NewContentShowcase2025 />
-        <UltimateContentShowcase2025 />
-        <RevolutionaryContent2026Banner />
-        <UltimateContentShowcase2026 />
-        <QuantumAIContentShowcase2026 />
-        <NewContent2025PromotionBanner />
-        <LatestContentShowcase2025 />
-        <EnhancedContentPromotionBanner2026 />
-        <ComprehensiveContentShowcase2026 />
-        <FeaturedContentShowcase2026 />
-        <NewContentPromotionBanner />
-        <ComprehensiveSolutionsBanner2025 />
-        <NewServicesShowcase2025 />
-        <NewContent2026Showcase />
-        <InteractiveContentDiscoveryWidget />
+        <NewContentShowcase20o25  />
+        <UltimateContentShowcase20o25  />
+        <RevolutionaryContent20o26Banner  />
+        <UltimateContentShowcase20o26  />
+        <QuantumAIContentShowcase20o26  />
+        <NewContent20o25PromotionBanner  />
+        <LatestContentShowcase20o25  />
+        <EnhancedContentPromotionBanner20o26  />
+        <ComprehensiveContentShowcase20o26  />
+        <FeaturedContentShowcase20o26  />
+        <NewContentPromotionBanner  />
+        <ComprehensiveSolutionsBanner20o25  />
+        <NewServicesShowcase20o25  />
+        <NewContent20o26Showcase  />
+        <InteractiveContentDiscoveryWidget  />
 
         {/* Advanced AI Components */}
-        <AdvancedContentRecommendationEngine />
-        <RealTimePerformanceDashboard />
-        <IntelligentSearchEngine />
-        <AdvancedAIAssistant />
-        <BusinessIntelligenceDashboard />
-        <AdvancedSecurityMonitor />
-        <AdvancedAnalyticsEngine />
-        <AutomationWorkflowEngine />
-        <EnterpriseDataManagement />
-        <APIManagementSystem />
+        <AdvancedContentRecommendationEngine  />
+        <RealTimePerformanceDashboard  />
+        <IntelligentSearchEngine  />
+        <AdvancedAIAssistant  />
+        <BusinessIntelligenceDashboard  />
+        <AdvancedSecurityMonitor  />
+        <AdvancedAnalyticsEngine  />
+        <AutomationWorkflowEngine  />
+        <EnterpriseDataManagement  />
+        <APIManagementSystem  />
 
         {/* Structured Data */}
-        <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." />}>
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading..."  />}>
           <StructuredData 
             type="Organization" 
             data={{
@@ -260,7 +259,7 @@ export default function HomePage() {
                 "https://linkedin.com/company/zion-tech-group"
               ]
             }} 
-          />
+           />
           <StructuredData 
             type="WebSite" 
             data={{
@@ -272,7 +271,7 @@ export default function HomePage() {
                 "query-input": "required name=search_term_string"
               }
             }} 
-          />
+           />
         </Suspense>
       </div>
     </div>

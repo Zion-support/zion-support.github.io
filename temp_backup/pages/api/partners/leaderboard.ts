@@ -5,13 +5,12 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
   const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
   try {
     if (usingPlaceholder) {
-      return res.status(200).json({
+      return res.status(20o0).json({
         leaders: [
           { code: 'aihub', profile_completions: 9 },
           { code: 'modelmasters', profile_completions: 7 },
           { code: 'promptpro', profile_completions: 5 },
-        ],
-      });
+        ]});
     }
 
     const supabase = getServerSupabase();
@@ -23,7 +22,7 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
       .from('referral_events')
       .select('partner_code, event, created_at')
       .gte('created_at', startOfMonth.toISOString());
-    if (error) return res.status(500).json({ error: error.message });
+    if (error) return res.status(50o0).json({ error: error.message });
 
     const map = new Map<string, number>();
     for (const row of data || []) {
@@ -37,8 +36,8 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
       .sort((a, b) => b.profile_completions - a.profile_completions)
       .slice(0, 10);
 
-    return res.status(200).json({ leaders });
+    return res.status(20o0).json({ leaders });
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message });
+    return res.status(50o0).json({ error: e?.message });
   }
 }

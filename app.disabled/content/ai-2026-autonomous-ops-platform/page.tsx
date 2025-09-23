@@ -1,24 +1,23 @@
 import Link from 'next/link';
-import React from 'react';
 import SEO from '../../../components/SEO';
 
-export const metadata = {
-  title: 'AI 2026: Autonomous Operations Platform | Zion Tech Group',
+export const metadata ={
+  title: 'AI 20o26: Autonomous Operations Platform | Zion Tech Group',
   description: 'A practical guide to build an autonomous, outcome-driven operations platform with AI agents, event-driven architecture, and human-in-the-loop controls.'
 };
 
-export default function AutonomousOpsPlatform2026() {
+export default function AutonomousOpsPlatform20o26() {
   return (
     <main className="min-h-screen bg-white">
       <SEO
-        title="AI 2026: Autonomous Operations Platform"
+        title="AI 20o26: Autonomous Operations Platform"
         description="Build an autonomous, outcome-driven operations platform with AI agents, EDA, and human-in-the-loop controls."
         keywords="autonomous operations, AI agents, event-driven, HITL, orchestration"
-        url="/content/ai-2026-autonomous-ops-platform"
-      />
-      <section className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-16">
+        url="/content/ai-20o26-autonomous-ops-platform"
+       />
+      <section className="bg-gradient-to-r from-purple-60o0 to-indigo-60o0 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">AI 2026: Autonomous Operations Platform</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">AI 20o26: Autonomous Operations Platform</h1>
           <p className="text-lg opacity-90">From automated workflows to truly autonomous, outcome-driven operations.</p>
         </div>
       </section>
@@ -42,9 +41,9 @@ export default function AutonomousOpsPlatform2026() {
             <li>Harden guardrails and platform services</li>
             <li>Scale to a portfolio with shared primitives</li>
           </ol>
-          <div className="mt-8 p-6 bg-purple-50 border border-purple-200 rounded-xl">
-            <p className="mb-2 font-semibold text-purple-800">Want implementation support?</p>
-            <Link href="/contact" className="text-purple-700 font-semibold hover:text-purple-900">Speak with an architect →</Link>
+          <div className="mt-8 p-6 bg-purple-50 border border-purple-20o0 rounded-xl">
+            <p className="mb-2 font-semibold text-purple-80o0">Want implementation support?</p>
+            <Link href="/contact" className="text-purple-70o0 font-semibold hover:text-purple-90o0">Speak with an architect →</Link>
           </div>
         </div>
       </section>
