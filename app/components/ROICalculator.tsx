@@ -1,8 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/check-fix-push-and-merge-to-main-8f81
 "use client";
 import React from 'react';
 
+<<<<<<< HEAD
 export default function ROICalculator() {
   return (
     <div className="p-6 rounded-lg bg-white/10 text-white">
@@ -29,6 +33,8 @@ export default function ROICalculator() {
 "use client";
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
+=======
+>>>>>>> cursor/check-fix-push-and-merge-to-main-8f81
 export default function ROICalculator() {
 	return (
 		<div className="p-6 rounded-lg bg-white/10 text-white">
@@ -36,8 +42,12 @@ export default function ROICalculator() {
 			<p className="text-sm opacity-80">Coming soon.</p>
 		</div>
 	);
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-e382
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
+=======
+}
+>>>>>>> cursor/check-fix-push-and-merge-to-main-8f81

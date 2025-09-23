@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next/head'
 
 <<<<<<< HEAD
@@ -52,6 +53,20 @@ type SEOHeadProps = {
 	twitterCard?: string
 	noIndex?: boolean
 	structuredData?: object
+=======
+import Head from 'next/head';
+
+interface SEOHeadProps {
+	title?: string;
+	description?: string;
+	keywords?: string[];
+	canonical?: string;
+	ogImage?: string;
+	ogType?: string;
+	twitterCard?: string;
+	noIndex?: boolean;
+	structuredData?: object;
+>>>>>>> cursor/check-fix-push-and-merge-to-main-8f81
 }
 
 export default function SEOHead({
@@ -97,8 +112,13 @@ export default function SEOHead({
 			<link rel="preconnect" href="https://fonts.googleapis.com" />
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 		</Head>
+<<<<<<< HEAD
 	)
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-e382
 }
 
 export default SEO
+=======
+	);
+}
+>>>>>>> cursor/check-fix-push-and-merge-to-main-8f81

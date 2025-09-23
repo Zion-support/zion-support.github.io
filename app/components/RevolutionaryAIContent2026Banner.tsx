@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function RevolutionaryAIContent2026Banner() {
 	return (
 		<section className="p-8 rounded-2xl bg-white/10 text-white text-center">
@@ -7,9 +8,12 @@ export default function RevolutionaryAIContent2026Banner() {
 		</section>
 	);
 =======
+=======
+>>>>>>> cursor/check-fix-push-and-merge-to-main-8f81
 "use client";
 
 export default function RevolutionaryAIContent2026Banner() {
+<<<<<<< HEAD
   return (
     <section className="py-12 text-center text-white bg-gradient-to-r from-violet-700 to-indigo-700">
       <h3 className="text-2xl font-bold">Revolutionary AI Content 2026</h3>
@@ -18,3 +22,11 @@ export default function RevolutionaryAIContent2026Banner() {
   );
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
 }
+=======
+	return (
+		<section className="p-8 rounded-2xl bg-white/10 text-white">
+			<h3 className="text-2xl font-bold">Revolutionary AI Content 2026</h3>
+		</section>
+	);
+}
+>>>>>>> cursor/check-fix-push-and-merge-to-main-8f81
