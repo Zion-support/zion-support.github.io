@@ -2,11 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-<<<<<<< HEAD
-=======
 // Metadata moved to parent component
 
->>>>>>> origin/new-content-and-promotional-components
 interface AssessmentResults {
   overallScore: number;
   readinessLevel: string;
@@ -111,7 +108,7 @@ export default function QuantumAIReadinessAssessment() {
   };
 
   const generateRecommendations = (score: number, data: any) => {
-    const recommendations = [];
+    const recommendations: string[] = [];
     
     if (data.currentAIMaturity < 3) {
       recommendations.push('Develop foundational AI capabilities before quantum implementation');
@@ -145,7 +142,7 @@ export default function QuantumAIReadinessAssessment() {
     return recommendations;
   };
 
-  const createImplementationRoadmap = (level: string, data: any) => {
+  const createImplementationRoadmap = (level: string, _data: any) => {
     const roadmaps = {
       'Early Stage': [
         {
@@ -235,7 +232,7 @@ export default function QuantumAIReadinessAssessment() {
           ]
         }
       ]
-    };
+    } as const;
     
     return roadmaps[level as keyof typeof roadmaps] || roadmaps['Early Stage'];
   };
