@@ -55,20 +55,6 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     }
   }, [user])
 
-  const value = useMemo<UserContextValue>(() => ({
-    user,
-    setUser,
-    logout: () => setUser(null),
-    completeOnboarding: () =>
-      setUser(previousUser =>
-        previousUser ? { ...previousUser, onboardingCompleted: true } : previousUser
-      ),
-  }), [user])
-
-  return <UserContext.Provider value={value}>{children}</UserContext.Provider>
-=======
-  }, [user]);
-
   const value = useMemo<UserContextValue>(
     () => ({
       user,
@@ -81,7 +67,6 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
   );
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
->>>>>>> beb9ba4c3beb62ae70d14f97568f0482920fc042
 }
 
 export function useUser() {
