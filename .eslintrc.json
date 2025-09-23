@@ -33,15 +33,12 @@
     "automation/",
     "scripts/",
     "apps/",
-<<<<<<< HEAD
     "zion-os/**",
     "src/**",
-=======
     "recovered-branches/**",
     "**/*backup*/**",
     "**/backups/**",
     "**/backup/**",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-10d8
     "components.disabled/**",
     "pages.disabled/**",
     "pages-disabled/**",

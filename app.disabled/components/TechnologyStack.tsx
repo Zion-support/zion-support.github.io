@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-'use client';
-
-export default function TechnologyStack() {
-	return null;
-}
-=======
 "use client";
-import React from 'react';
-
-const TechnologyStack: React.FC = () => {
+export default function TechnologyStack() {
   return (
     <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,7 +13,4 @@ const TechnologyStack: React.FC = () => {
       </div>
     </section>
   );
-};
-
-export default TechnologyStack;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6fc7
+}

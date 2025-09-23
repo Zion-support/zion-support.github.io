@@ -10,13 +10,19 @@
     "dev": "next dev",
     "build": "NODE_OPTIONS='--max-old-space-size=4096 --openssl-legacy-provider' next build --no-lint",
     "start": "next start",
-    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --no-error-on-unmatched-pattern",
-    "lint:fix": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
-    "type-check": "tsc --noEmit",
+    "lint": "eslint src pages app lib components hooks --no-error-on-unmatched-pattern",
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "rm -rf .next && npm run build",
     "dev:clean": "rm -rf .next && npm run dev",
+<<<<<<< HEAD
+    "lint:fix": "eslint . --fix",
+    "type-check": "NODE_OPTIONS='--max-old-space-size=8192' tsc -p tsconfig.app.json --noEmit",
+    "test": "jest -c jest.config.smoke.cjs --runInBand --passWithNoTests --no-cache",
+=======
+    "lint:fix": "eslint src pages app lib components hooks --fix",
+    "type-check": "NODE_OPTIONS='--max-old-space-size=8192' tsc --noEmit",
     "test": "jest --runInBand --passWithNoTests --no-cache",
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0a02
     "test:watch": "jest --watch --runInBand",
     "preview": "npm run build && npm run start",
     "test:coverage": "jest --coverage",
@@ -29,7 +35,6 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@netlify/plugin-nextjs": "^5.13.3",
-    "@types/react-dom": "^18.3.7",
     "autoprefixer": "^10.4.21",
     "axios": "^1.11.0",
     "class-variance-authority": "0.7.0",
@@ -65,8 +70,8 @@
     "@testing-library/react": "12.1.5",
     "@types/jest": "^29.0.0",
     "@types/node": "^16.18.126",
-    "@types/react": "^18.3.24",
-    "@types/react-dom": "^18.3.7",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
     "babel-jest": "^29.7.0",
     "critters": "^0.0.23",
     "eslint": "^9.36.0",
@@ -81,7 +86,8 @@
     "jest-environment-jsdom": "^29.0.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.0",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.44.1"
   },
   "jest": {
     "testEnvironment": "jest-environment-jsdom",
@@ -92,13 +98,13 @@
       "^@/(.*)$": "<rootDir>/$1"
     },
     "modulePathIgnorePatterns": [
-      "<rootDir>/automation/",
-      "<rootDir>/.temp_backup_components/",
-      "<rootDir>/recovered-branches/",
-      "<rootDir>/apps.backup/",
-      "<rootDir>/components/apps/",
-      "<rootDir>/backup-problematic-files/",
-      "<rootDir>/server/"
+      "<rootDir>/automation/backups/.*",
+      "<rootDir>/.temp_backup_components/.*",
+      "<rootDir>/recovered-branches/.*",
+      "<rootDir>/apps.backup/.*",
+      "<rootDir>/components/apps/.*",
+      "<rootDir>/server/.*",
+      "<rootDir>/zion-os/.*"
     ],
     "watchPathIgnorePatterns": [
       "<rootDir>/automation/backups/.*",
@@ -108,7 +114,8 @@
       "<rootDir>/backup/.*",
       "<rootDir>/backups/.*",
       "<rootDir>/backup-merge-conflicts/.*",
-      "<rootDir>/recovered-branches/.*"
+      "<rootDir>/recovered-branches/.*",
+      "<rootDir>/zion-os/.*"
     ],
     "transform": {
       "^.+\\.(js|jsx|ts|tsx)$": [
@@ -123,19 +130,25 @@
     "testPathIgnorePatterns": [
       "<rootDir>/.next/",
       "<rootDir>/node_modules/",
-      "<rootDir>/__tests__/",
+      "<rootDir>/__tests__",
       "<rootDir>/tests/",
+      "<rootDir>/test/",
+      "<rootDir>/src.broken/",
+      "<rootDir>/src-corrupted/",
+      "<rootDir>/temp_backup/",
+      "<rootDir>/pages_backup/",
+      "<rootDir>/dao/",
       "<rootDir>/tests.disabled/",
-      "<rootDir>/.temp_backup_components/",
-      "<rootDir>/automation/backups/",
-      "<rootDir>/**/*.backup*/",
-      "<rootDir>/**/*backup*/",
-      "<rootDir>/**/*corrupt*/",
-      "<rootDir>/**/*conflict*/",
       "<rootDir>/src.disabled/",
       "<rootDir>/src_backup_temp/",
       "<rootDir>/src_backup/",
       "<rootDir>/backup-problematic-files/",
+      "<rootDir>/zion-os/",
+      "<rootDir>/zion-os.broken/",
+      "<rootDir>/zion-os.disabled/",
+      "<rootDir>/zion-os.corrupted/",
+      "<rootDir>/server/",
+      "<rootDir>/automation/",
       "<rootDir>/pages-disabled/",
       "<rootDir>/pages.bak/",
       "<rootDir>/components.disabled/",
@@ -151,8 +164,18 @@
       "<rootDir>/ts_files_backup/",
       "<rootDir>/temp_exclude/",
       "<rootDir>/corrupted_backup/",
+      "<rootDir>/App.test.ts",
+      "<rootDir>/plugins/wallet-connector/cypress/",
+      "<rootDir>/components/api/docs/",
+      "<rootDir>/data/api-docs/",
       "<rootDir>/e2e/"
     ]
   },
-  "type": "module"
+<<<<<<< HEAD
+  "packageManager": "npm@11.6.0"
 }
+=======
+  "type": "module",
+  "packageManager": "npm@11.6.0"
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0a02
