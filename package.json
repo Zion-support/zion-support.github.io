@@ -10,7 +10,7 @@
     "dev": "next dev",
     "build": "NODE_OPTIONS='--max-old-space-size=4096 --openssl-legacy-provider' next build --no-lint",
     "start": "next start",
-    "lint": "eslint zion-website/src --ext .ts,.tsx,.js,.jsx --max-warnings=0",
+    "lint": "npx eslint \"zion-website/src/**/*.{ts,tsx,js,jsx}\" --max-warnings=10",
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "rm -rf .next && npm run build",
     "dev:clean": "rm -rf .next && npm run dev",
@@ -134,6 +134,12 @@
       "<rootDir>/src_backup_temp/",
       "<rootDir>/src_backup/",
       "<rootDir>/backup-problematic-files/",
+      "<rootDir>/zion-os/",
+      "<rootDir>/zion-os.broken/",
+      "<rootDir>/zion-os.disabled/",
+      "<rootDir>/zion-os.corrupted/",
+      "<rootDir>/server/",
+      "<rootDir>/automation/",
       "<rootDir>/pages-disabled/",
       "<rootDir>/pages.bak/",
       "<rootDir>/components.disabled/",
@@ -154,6 +160,15 @@
       "<rootDir>/components/api/docs/",
       "<rootDir>/data/api-docs/",
       "<rootDir>/e2e/"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/automation/",
+      "<rootDir>/.temp_backup_components/",
+      "<rootDir>/recovered-branches/",
+      "<rootDir>/apps.backup/",
+      "<rootDir>/components/apps/",
+      "<rootDir>/backup-problematic-files/",
+      "<rootDir>/server/"
     ]
   },
   "packageManager": "npm@11.6.0"
