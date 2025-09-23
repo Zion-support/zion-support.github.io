@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // ESLint flat config for ESLint v9. Keep minimal to avoid crashes.
 =======
 // Flat ESLint config for ESLint v9+
@@ -49,6 +50,10 @@ export default [
 	},
 =======
   // Global ignores for this workspace
+=======
+// Minimal ESLint flat config for ESLint v9: ignore non-app files and backups.
+export default [
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-71e0
   {
     ignores: [
       'node_modules/**',
@@ -57,7 +62,10 @@ export default [
       'out/**',
       'dist/**',
       'build/**',
+<<<<<<< HEAD
       'coverage/**',
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-71e0
       'public/**',
       'automation/**',
       'apps.backup/**',
@@ -69,6 +77,7 @@ export default [
       'api/**',
       'server/**',
       'netlify/**',
+<<<<<<< HEAD
       'app_backup/**',
       'app-disabled/**',
       'app-minimal/**',
@@ -93,10 +102,23 @@ export default [
       'services/**',
       'solutions/**',
       'solutions.disabled/**',
+=======
+      // Backups and temp content
+      'automation/**',
+      'apps.backup/**',
+      '.temp_backup_components/**',
+      'backup-problematic-files/**',
+      'backup/**',
+      'backups/**',
+      'backup-merge-conflicts/**',
+      'recovered-branches/**',
+      'ts_files_backup/**',
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-71e0
       'src_backup/**',
       'src_backup_temp/**',
       'src/**/*.backup/**',
       'src/**/*.bak/**',
+<<<<<<< HEAD
       'src/**/*.disabled/**',
       'styles_backup/**',
       'workflow_backups/**',
@@ -126,6 +148,54 @@ export default [
       'ultimate_merge_and_improve.cjs',
       'ultimate-merge-conflict-resolver.js'
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0efa
+=======
+      'temp_*/**',
+      'temp-*/**',
+      'temp/**',
+      'temp_backup/**',
+      'temp_broken_files/**',
+      'temp_components/**',
+      'temp_components.disabled/**',
+      'temp_disabled/**',
+      'temp-disabled-pages/**',
+      'temp_exclude/**',
+      'temp-problematic-pages/**',
+      'temp_working/**',
+      // Disabled/alt app trees
+      'pages.disabled/**',
+      'pages.bak/**',
+      'pages_backup/**',
+      'pages-backup/**',
+      'pages.blog.disabled/**',
+      'pages.__backup/**',
+      'pages._archive_corrupted/**',
+      'pages._quarantine/**',
+      'pages*/**',
+      'components.disabled/**',
+      'components.disabled_full/**',
+      'hooks.disabled/**',
+      'lib.disabled/**',
+      'lib_backup/**',
+      'styles_backup/**',
+      'services_backup/**',
+      // Other projects and servers
+      'server/**',
+      'services/**',
+      'solutions/**',
+      'solutions.disabled/**',
+      'supabase/**',
+      'zion-os/**',
+      'zion-os.broken/**',
+      'zion-os.disabled/**',
+      'zion-os.corrupted/**',
+      'zion-website/**',
+      'zion-ai-assistant/**',
+      // Misc
+      '**/*.min.js',
+      '**/*.cjs',
+      '*.config.js',
+      '*.config.ts'
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-71e0
     ]
   },
   js.configs.recommended,

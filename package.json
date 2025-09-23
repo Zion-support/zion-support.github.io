@@ -83,5 +83,92 @@
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.44.1"
   },
+<<<<<<< HEAD
   "packageManager": "npm@11.6.0"
 }
+=======
+  "jest": {
+    "testEnvironment": "jest-environment-jsdom",
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.setup.js"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/$1"
+    },
+    "modulePathIgnorePatterns": [
+      "<rootDir>/automation/",
+      "<rootDir>/.temp_backup_components/",
+      "<rootDir>/recovered-branches/",
+      "<rootDir>/apps.backup/",
+      "<rootDir>/components/apps/",
+      "<rootDir>/backup-problematic-files/",
+      "<rootDir>/server/"
+    ],
+    "watchPathIgnorePatterns": [
+      "<rootDir>/automation/backups/.*",
+      "<rootDir>/apps.backup/.*",
+      "<rootDir>/components/apps/.*",
+      "<rootDir>/.temp_backup_components/.*",
+      "<rootDir>/backup/.*",
+      "<rootDir>/backups/.*",
+      "<rootDir>/backup-merge-conflicts/.*",
+      "<rootDir>/recovered-branches/.*"
+    ],
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": [
+        "babel-jest",
+        {
+          "presets": [
+            "next/babel"
+          ]
+        }
+      ]
+    },
+    "testPathIgnorePatterns": [
+      "<rootDir>/.next/",
+      "<rootDir>/node_modules/",
+      "<rootDir>/__tests__/",
+      "<rootDir>/tests/",
+      "<rootDir>/test/",
+      "<rootDir>/src.broken/",
+      "<rootDir>/src-corrupted/",
+      "<rootDir>/temp_backup/",
+      "<rootDir>/pages_backup/",
+      "<rootDir>/dao/",
+      "<rootDir>/tests.disabled/",
+      "<rootDir>/src.disabled/",
+      "<rootDir>/src_backup_temp/",
+      "<rootDir>/src_backup/",
+      "<rootDir>/backup-problematic-files/",
+      "<rootDir>/zion-os/",
+      "<rootDir>/zion-os.broken/",
+      "<rootDir>/zion-os.disabled/",
+      "<rootDir>/zion-os.corrupted/",
+      "<rootDir>/server/",
+      "<rootDir>/automation/",
+      "<rootDir>/pages-disabled/",
+      "<rootDir>/pages.bak/",
+      "<rootDir>/components.disabled/",
+      "<rootDir>/components.disabled_full/",
+      "<rootDir>/pages.disabled/",
+      "<rootDir>/pages.disabled_auto/",
+      "<rootDir>/pages.disabled_full/",
+      "<rootDir>/pages_backup_before_cleanup/",
+      "<rootDir>/pages.broken/",
+      "<rootDir>/pages.corrupted",
+      "<rootDir>/pages.corrupted.*",
+      "<rootDir>/recovered-branches/",
+      "<rootDir>/ts_files_backup/",
+      "<rootDir>/temp_exclude/",
+      "<rootDir>/corrupted_backup/",
+      "<rootDir>/App.test.ts",
+      "<rootDir>/plugins/wallet-connector/cypress/",
+      "<rootDir>/components/api/docs/",
+      "<rootDir>/data/api-docs/",
+      "<rootDir>/e2e/"
+    ]
+  },
+  "type": "module",
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-71e0
