@@ -90,7 +90,7 @@ const blogPosts: Record<string, any> = {
   }
 }
 
-export default function BlogPostPage({ params }: any) {
+export default function BlogPostPage({ params }: { params: { id: string } }) {
   const { id } = params
   const post = blogPosts[id]
   
