@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 /* Global CSS Variables */
 :root {
   --foreground-rgb: 17, 24, 39;
@@ -120,27 +119,3 @@ body {
     display: none !important;
   }
 }
-=======
-html, body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-}
-
-:root {
-	--foreground-rgb: 0, 0, 0;
-	--background-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--foreground-rgb: 255, 255, 255;
-		--background-rgb: 0, 0, 0;
-	}
-}
-
-body {
-	color: rgb(var(--foreground-rgb));
-	background-color: rgb(var(--background-rgb));
-}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-9be7
