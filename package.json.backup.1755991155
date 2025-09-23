@@ -1,0 +1,28 @@
+{
+  "name": "zion-assistant",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@9.7.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,slack -c auto \"pnpm --filter @zion/api dev\" \"pnpm --filter @zion/slack-bot dev\"",
+    "dev:api": "pnpm --filter @zion/api dev",
+    "dev:slack": "pnpm --filter @zion/slack-bot dev",
+    "build": "pnpm -r --parallel build",
+    "lint": "eslint .",
+    "typecheck": "tsc -b",
+    "generate:icons": "pnpm --filter @zion/extension generate:icons"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "@types/pg": "^8.15.5",
+    "concurrently": "^8.2.2",
+    "eslint": "^9.7.0",
+    "prettier": "^3.3.3",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.4"
+  }
+}

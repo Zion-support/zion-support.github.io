@@ -1,0 +1,73 @@
+
+import React from 'react';
+import { Milestone } from '@/hooks/useMilestones';
+<<<<<<< HEAD
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { CreditCard } from 'lucide-react';
+=======
+import { CardContentCardHeaderCardTitle } from '@/components/ui/card';
+CreditCard
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+
+interface PaymentSummaryProps {
+  milestones: Milestone[];
+  paymentTerms: string | null;
+}
+
+<<<<<<< HEAD
+export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
+  const totalPayment = milestones.reduce(
+    (sum, m) => sum + parseFloat(m.amount.toString()), 
+=======
+export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestonespaymentTerms }) => {
+  const totalPayment = milestones.reduce(
+    (sum) => sum + parseFloat(m.amount.toString())
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+    0
+  ).toFixed(2);
+  
+  const paidAmount = milestones
+    .filter(m => m.status === 'paid')
+    .reduce(
+<<<<<<< HEAD
+      (sum, m) => sum + parseFloat(m.amount.toString()), 
+=======
+      (sum) => sum + parseFloat(m.amount.toString())
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+      0
+    ).toFixed(2);
+
+  return (
+    <Card className="mb-8 bg-muted/30">
+      <CardHeader className="pb-3">
+        <CardTitle className="text-lg flex items-center">
+          <CreditCard className="h-5 w-5 mr-2 text-primary" /> Payment Summary
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div>
+            <p className="text-sm text-muted-foreground mb-1">Total Payment</p>
+            <p className="text-2xl font-semibold">
+              ${totalPayment}
+            </p>
+          </div>
+          
+          <div>
+            <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>
+            <p className="font-medium capitalize">
+              {paymentTerms || "Not specified"}
+            </p>
+          </div>
+          
+          <div>
+            <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
+            <p className="font-medium">
+              ${paidAmount}
+            </p>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+};

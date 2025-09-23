@@ -1,0 +1,11 @@
+{
+  "summary": {
+    "totalFiles": 1,
+    "filesWithIssues": 1,
+    "totalIssues": 3,
+    "totalWarnings": 1,
+    "buildBreakingFiles": 1,
+    "canBuild": false
+  },
+  "generatedAt": "2025-08-21T01:27:37.660Z"
+}

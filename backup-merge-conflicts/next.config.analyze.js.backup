@@ -1,0 +1,29 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+module.exports = {
+  "webpack": (config, { isServer }) => {
+  if (!isServer) {
+  config.plugins.push(;
+        new BundleAnalyzerPlugin({
+  "analyzerMode": "static",
+          "openAnalyzer": false,
+          "reportFilename": "bundle-analysis.html"});
+      )}
+    return config}
+}
+<<<<<<< HEAD
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",; openAnalyzer: 'false',; reportFilename: "bundle-analysis.html";,}); )} return config} }
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+=======
+>>>>>>> main
+>>>>>>> main
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }
+>>>>>>> main

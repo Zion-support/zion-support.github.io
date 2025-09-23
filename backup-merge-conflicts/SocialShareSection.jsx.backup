@@ -1,0 +1,35 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:backup-merge-conflicts/SocialShareSection.jsx.backup
+=======
+<<<<<<< HEAD
+export: function SocialShareSection () { const socialPlatforms = [ { name: "Twitter,",icon: ",url: ",https: """;",;'"'"
+<<<<<<< HEAD:backup-merge-conflicts/SocialShareSection.jsx.backup
+=======
+"export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD:src.disabled/components/SocialShareSection.jsx
+"export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+<<<<<<< HEAD
+"export\": function SocialShareSection () { const socialPlatforms = [ { name: \'Twitter,\',\"icon\": \',\"url\": \',\"https\": \''\";\",;
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> main
+=======
+"export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/components/SocialShareSection.jsx
+<<<<<<< HEAD
+=======
+"export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
+=======
+<<<<<<< HEAD
+>>>>>>> pr-11914:backup-merge-conflicts/SocialShareSection.jsx.backup
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> pr-11935
+=======
+=======
+"export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src.disabled/components/SocialShareSection.jsx
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

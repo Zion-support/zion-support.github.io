@@ -1,0 +1,24 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:backup-merge-conflicts/IntegrationsPage.jsx.backup
+<<<<<<< HEAD
+const React from "react";"""; import { IntegrationsHub } from "@/components/integrations/IntegrationsHub";"""; import SEO from "@/components/SEO";"""; import { ProtectedRoute } from "@/components/ProtectedRoute"; export {}; return null} return(); <ProtectedRoute adminOnly={true}> <div>Broken JSX</div> />"; <main className="min-h-screen bg-background"> <IntegrationsHub /> ></div> </ProtectedRoute>)} ; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage };"""
+<<<<<<< HEAD:backup-merge-conflicts/IntegrationsPage.jsx.backup
+=======
+import _React from 'react';'''; import { IntegrationsHub } from '@/components/integrations/IntegrationsHub';'''; import SEO from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute'; export {}; return null} return(); <ProtectedRoute adminOnly={true}> <div>Broken JSX</div> />"; <main className="min-h-screen bg-background"> <IntegrationsHub /> ></div> </ProtectedRoute>)} ; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage };
+=======
+<<<<<<< HEAD:src.disabled/src/pages.disabled/admin/IntegrationsPage.jsx
+import _React from 'react';'''; import { IntegrationsHub } from '@/components/integrations/IntegrationsHub';'''; import SEO from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute'; export {}; return null} return(); <ProtectedRoute adminOnly={true}> <div>Broken JSX</div> />"; <main className="min-h-screen bg-background"> <IntegrationsHub /> ></div> </ProtectedRoute>)} ; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage };
+import React from \'react\';\''\'; import { IntegrationsHub } from \'@/components/integrations/IntegrationsHub\';\''\'; import SEO from \'@/components/SEO\';\''\'; import { ProtectedRoute } from \'@/components/ProtectedRoute\'; export {}; return null} return(); <ProtectedRoute adminOnly={true}> <div>Broken JSX</div> />\"; <main className=\"min-h-screen bg-background\"> <IntegrationsHub /> ></div> </ProtectedRoute>)} ; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage };
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> main
+=======
+import _React from 'react';'''; import { IntegrationsHub } from '@/components/integrations/IntegrationsHub';'''; import SEO from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute'; export {}; return null} return(); <ProtectedRoute adminOnly={true}> <div>Broken JSX</div> />"; <main className="min-h-screen bg-background"> <IntegrationsHub /> ></div> </ProtectedRoute>)} ; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage };
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/pages.disabled/admin/IntegrationsPage.jsx
+<<<<<<< HEAD
+=======
+import _React from 'react';'''; import { IntegrationsHub } from '@/components/integrations/IntegrationsHub';'''; import SEO from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute'; export {}; return null} return(); <ProtectedRoute adminOnly={true}> <div>Broken JSX</div> />"; <main className="min-h-screen bg-background"> <IntegrationsHub /> ></div> </ProtectedRoute>)} ; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage };
+=======
+>>>>>>> pr-11914:backup-merge-conflicts/IntegrationsPage.jsx.backup
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> pr-11935

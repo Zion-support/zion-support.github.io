@@ -1,0 +1,13 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+{
+  "name": "icon-scripts",
+  "version": "1.0.0",
+  "description": "Helper scripts for the project",
+  "private": true,
+  "dependencies": {
+    "glob": "^7.2.0"
+  }
+}
