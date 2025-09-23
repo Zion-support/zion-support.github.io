@@ -1,34 +1,44 @@
 import Link from "next/link";
 
 export default function CommunityPage() {
-    <div className="min-h-screen py-20">
-      <div className="max-w-5xl mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-6">Community</h1>
-        <p className="text-gray-300 mb-8">
-          Join our community to collaborate, share knowledge, and help shape the future of Zion OS.
-        </p>
-        <div className="space-y-4">
-          <Link className="text-blue-400 hover:text-blue-300" href="/discord">Discord</Link>
-          <br />
-          <Link className="text-blue-400 hover:text-blue-300" href="/forums">Forums</Link>
-          <br />
-          <Link className="text-blue-400 hover:text-blue-300" href="/events">Events</Link>
+  return (
+    <div className="min-h-screen py-20 px-4">
+      <div className="max-w-6xl mx-auto">
+        {/* Hero Section */}
+        <section className="text-center py-16">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Community</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Connect with developers, researchers, and innovators building the future of technology
+          </p>
+        </section>
+
+        {/* Community Features */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-bold mb-4">Developer Forums</h3>
+            <p className="text-gray-600 mb-4">
+              Join discussions about AI, quantum computing, and emerging technologies
+            </p>
+            <Link href="#" className="text-blue-600 hover:underline">Visit Forums →</Link>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-bold mb-4">Open Source Projects</h3>
+            <p className="text-gray-600 mb-4">
+              Contribute to our open source initiatives and collaborative projects
+            </p>
+            <Link href="#" className="text-blue-600 hover:underline">View Projects →</Link>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-bold mb-4">Events & Meetups</h3>
+            <p className="text-gray-600 mb-4">
+              Attend virtual and in-person events to network and learn
+            </p>
+            <Link href="#" className="text-blue-600 hover:underline">See Events →</Link>
+          </div>
         </div>
       </div>
     </div>
   );
-=======
-	return (
-		<div className="min-h-screen py-20 px-4">
-			<div className="max-w-6xl mx-auto">
-				<h1 className="text-4xl font-bold mb-6">Join Our Community</h1>
-				<p className="text-lg opacity-80 mb-8">Connect with fellow developers, entrepreneurs, and innovators building the future of digital economies.</p>
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-					<Link href="https://discord.gg/ziontechgroup" className="p-6 rounded-lg border border-white/10">Discord</Link>
-					<Link href="https://linkedin.com/company/ziontechgroup" className="p-6 rounded-lg border border-white/10">LinkedIn</Link>
-					<Link href="https://github.com/ziontechgroup" className="p-6 rounded-lg border border-white/10">GitHub</Link>
-				</div>
-			</div>
-		</div>
-	);
 }
