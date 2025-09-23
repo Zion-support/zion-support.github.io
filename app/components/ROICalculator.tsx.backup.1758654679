@@ -1,5 +1,8 @@
 "use client";
+<<<<<<< HEAD
+=======
 import React from 'react';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b4fe
 
 export default function ROICalculator() {
 	return (
