@@ -58,16 +58,10 @@ module.exports = {
         },
         scaleIn: {
           '0%': { transform: 'scale(0)' },
-<<<<<<< HEAD:tailwind.config.cjs
-          '100%': { transform: 'scale(1)' },
-        },
-      },
-    },
+          '100%': { transform: 'scale(1)' }
+        }
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 }
-
-=======
-          '100%': { transform: 'scale(1)' }}}}},
-  plugins: []}
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc:tailwind.config.js

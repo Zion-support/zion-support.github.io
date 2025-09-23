@@ -3,6 +3,7 @@ import eslintReact from 'eslint-plugin-react';
 import eslintReactHooks from 'eslint-plugin-react-hooks';
 import tsEslintPlugin from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
+import tseslint from 'typescript-eslint';
 
 export default [
   {
@@ -34,7 +35,7 @@ export default [
       '**/*.min.js'
     ]
   },
-  js.configs.recommended,
+  eslintJs.configs.recommended,
   ...tseslint.configs.recommended,
   {
     files: [

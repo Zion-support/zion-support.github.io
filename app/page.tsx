@@ -1,11 +1,4 @@
-
-<<<<<<< HEAD
-import Link from 'next/link';
-
 export const metadata = {
-=======
-export const metadata ={
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
   keywords: ['AI', 'Technology', 'Cloud', 'Cybersecurity', 'Micro SaaS', 'Consulting'],
@@ -16,7 +9,6 @@ import ROICalculator from './components/ROICalculator';
 
 export default function HomePage() {
   return (
-<<<<<<< HEAD
     <main className="min-h-screen px-6 py-12">
       {/* Hero Section */}
       <div className="max-w-6xl mx-auto">
@@ -60,14 +52,6 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-=======
-    <main className="min-h-screen flex items-center justify-center px-6">
-      <div className="max-w-3xl text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-          Advanced AI and <span className="bg-gradient-to-r from-blue-40o0 to-purple-40o0 bg-clip-text text-transparent">Technology Solutions</span>
-        </h1>
-        <p className="text-base text-gray-60o0">Transform your business with cutting-edge AI, cloud, and cybersecurity solutions.</p>
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
       </div>
     </main>
   );
