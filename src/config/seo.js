@@ -1,17 +1,15 @@
 // SEO Meta Tags Configuration
 export const defaultSEO = {
-  type: 'website',
-  locale: 'en_US',
-  url: 'https://ziontechgroup.com',
   siteName: 'Zion Tech Group',
   title: 'Zion Tech Group - AI-Powered Business Solutions',
   description:
     'Transform your business with our comprehensive suite of AI-powered solutions.',
+  url: 'https://ziontechgroup.com',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://ziontechgroup.com',
-    site_name: 'Zion Tech Group',
+    siteName: 'Zion Tech Group',
     title: 'Zion Tech Group - AI-Powered Business Solutions',
     description:
       'Transform your business with our comprehensive suite of AI-powered solutions.',

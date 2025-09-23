@@ -1,163 +1,62 @@
 // Flat ESLint config for ESLint v9+
-<<<<<<< HEAD
 import js from '@eslint/js';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
 import globals from 'globals';
-import tsParser from '@typescript-eslint/parser';
-import tsPlugin from '@typescript-eslint/eslint-plugin';
-
-export default [
-	// Global ignores for this monorepo-like workspace
-	{
-		ignores: [
-			'node_modules/**',
-			'.next/**',
-			'**/.next/**',
-			'out/**',
-			'dist/**',
-			'build/**',
-			'coverage/**',
-			'public/**',
-			'automation/**',
-			'backups/**',
-			'backup/**',
-			'backup-merge-conflicts/**',
-			'backup-problematic-files/**',
-			'apps.backup/**',
-			'api/**',
-			'server/**',
-			'netlify/**',
-			'app_backup/**',
-			'app-disabled/**',
-			'app-minimal/**',
-			'components.disabled/**',
-			'components.disabled_full/**',
-			'pages-disabled/**',
-			'pages.bak/**',
-			'pages_backup_before_cleanup/**',
-			'pages.broken/**',
-			'pages.corrupted*',
-			'recovered-branches/**',
-			'temp_backup/**',
-			'temp_exclude/**',
-			'tests.disabled/**',
-			'ts_files_backup/**',
-			'zion-os/**',
-			'zion-os.*',
-			'zion-website/**',
-			'zion-ai-assistant/**',
-			'zion_academy/**',
-			'services/**',
-			'solutions/**',
-			'solutions.disabled/**',
-			'src_backup/**',
-			'src_backup_temp/**',
-			'src/**/*.backup/**',
-			'src/**/*.bak/**',
-			'src/**/*.disabled/**',
-			'styles_backup/**',
-			'workflow_backups/**',
-			'src/pages_backup/**',
-			'src/data/**',
-			'src/expandedServices.ts',
-			'src/comprehensiveServices.ts',
-			'tests/**',
-			'test/**',
-			'test_build/**',
-			'**/jest.setup.*',
-			'**/*.min.js'
-		],
-	},
-	js.configs.recommended,
-	{
-		files: ['**/*.{js,jsx,ts,tsx}'],
-		languageOptions: {
-			ecmaVersion: 'latest',
-			sourceType: 'module',
-			parser: tsParser,
-			parserOptions: { ecmaFeatures: { jsx: true } },
-			globals: { ...globals.browser, ...globals.node },
-		},
-		plugins: {
-			react,
-			'react-hooks': reactHooks,
-			'react-refresh': reactRefresh,
-			'@typescript-eslint': tsPlugin,
-		},
-		settings: { react: { version: 'detect' } },
-		rules: {
-			'no-empty': 'off',
-			'no-console': 'warn',
-			'no-undef': 'off',
-			'no-unused-vars': 'off',
-			'@typescript-eslint/no-unused-vars': [
-				'warn',
-				{ argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
-			],
-			'react/jsx-uses-react': 'off',
-			'react/react-in-jsx-scope': 'off',
-		},
-	},
-=======
-import eslintJs from '@eslint/js';
-import reactPlugin from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
+import tseslint from 'typescript-eslint';
 
 export default [
   {
+    // Limit linting to main app sources; ignore backups/other projects
     ignores: [
       'node_modules/**',
       '.next/**',
+      '**/.next/**',
       'out/**',
       'dist/**',
       'build/**',
-      'src/**',
-      'coverage/**',
+      'public/**',
       'automation/**',
-      'backups/**',
+      'apps.backup/**',
       'backup/**',
+      'backups/**',
       'backup-merge-conflicts/**',
       'backup-problematic-files/**',
-      'api/**',
-      'app_backup/**',
-      'app-disabled/**',
-      'app-minimal/**',
-      'apps.backup/**',
-      'components.disabled/**',
-      'components.disabled_full/**',
-      'pages-disabled/**',
-      'pages.bak/**',
-      'pages_backup_before_cleanup/**',
-      'pages.broken/**',
-      'pages.corrupted*',
       'recovered-branches/**',
       'server/**',
-      'temp_backup/**',
-      'temp_exclude/**',
-      'tests.disabled/**',
-      'ts_files_backup/**',
       'zion-os/**',
-      'zion-os.*',
-    ],
+      'zion-website/**',
+      'zion-ai-assistant/**',
+      'ts_files_backup/**',
+      'src_backup/**',
+      'src_backup_temp/**',
+      '**/*.min.js'
+    ]
   },
-  eslintJs.configs.recommended,
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: [
+      'app/**/*.{js,jsx,ts,tsx}',
+      'components/**/*.{js,jsx,ts,tsx}',
+      'pages/**/*.{js,jsx,ts,tsx}',
+      'src/**/*.{js,jsx,ts,tsx}'
+    ],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
-      parserOptions: { ecmaFeatures: { jsx: true } },
+      globals: { ...globals.browser, ...globals.node }
     },
-    plugins: {
-      react: reactPlugin,
-      'react-hooks': reactHooks,
-    },
+    plugins: { react, 'react-hooks': reactHooks },
+    settings: { react: { version: 'detect' } },
     rules: {
       'react/react-in-jsx-scope': 'off',
-    },
-    settings: { react: { version: 'detect' } },
-  },
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0a02
+      'no-console': 'warn',
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        { argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' }
+      ]
+    }
+  }
 ];
+

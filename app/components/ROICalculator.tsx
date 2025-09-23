@@ -1,7 +1,10 @@
 "use client";
 
-import React from 'react';
-
 export default function ROICalculator() {
-	return null;
+	return (
+		<div className="p-6 rounded-lg bg-white/10 text-white">
+			<h3 className="text-lg font-semibold">ROI Calculator</h3>
+			<p className="text-sm opacity-80">Coming soon.</p>
+		</div>
+	);
 }
