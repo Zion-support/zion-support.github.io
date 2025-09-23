@@ -70,6 +70,8 @@
     "lib/**",
     "zion-os/**",
     "utils/**",
+    "hooks/**",
+    "types/**",
     "utils.disabled/**",
     "ts_files_backup/**",
     "tests/**",
