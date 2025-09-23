@@ -92,6 +92,21 @@ export default [
       'src-corrupted/**',
       'src.corrupted/**',
       'src.disabled/**',
+      // Exclude broken/backup/disabled page directories
+      'pages.broken/**',
+      'pages_backup_before_cleanup/**',
+      'pages_backup_conflicts/**',
+      'pages_backup_conflict/**',
+      'pages.corrupted.*/**',
+      'pages.old/**',
+      'pages_disabled/**',
+      'pages_disabled*/**',
+      'pages.disabled*/**',
+      'pages_api.disabled/**',
+      // Exclude legacy or experimental solution dirs
+      'solutions.disabled/**',
+      // Exclude server code from front-end lint scope
+      'server/**',
       // Broad excludes for noisy or legacy dirs not part of active root app
       'src/**',
       'pages_backup/**',
@@ -119,7 +134,6 @@ export default [
       'backup-merge-conflicts/**',
       'backup-problematic-files/**',
       'apps.backup/**',
-      'pages.disabled*/**',
       'temp_*/**',
       'temp-*/**',
       'temp/**',
