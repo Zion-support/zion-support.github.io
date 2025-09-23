@@ -1,29 +1,7 @@
-
 import React from 'react';
 interface TeamProps {
   // Add props here as needed
 }
-
-import React from 'react';
-interface TeamProps {
-  // Add props here as needed
-
-import React from 'react';
-interface TeamProps {
-  // Add props here as needed
-}
-import React from 'react';
-interface TeamProps {
-  // Add props here as needed
-
-
-import React from 'react';
-interface TeamProps {
-  // Add props here as needed
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-
-
 export default function Team({ }: TeamProps) {
   return (
     <div>
@@ -31,42 +9,5 @@ export default function Team({ }: TeamProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}
-}
-}
-
-
-
-  );}
-
-}
-
-  );}
-
-}
-
-  );
-  );}
-
-}
-}
-}
-}
-}
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-}
-
-}
-
-}
-}
-}
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

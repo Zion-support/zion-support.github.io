@@ -1,32 +1,34 @@
 import Head from 'next/head'
 
 interface SEOProps {
-  title: string
-  description: string
+  title?: string
+  description?: string
   keywords?: string
-  canonical?: string
+  ogImage?: string
   url?: string
 }
 
-export default function SEO({ title, description, keywords, canonical, url }: SEOProps) {
+export default function SEO({
+  title = 'Zion Tech Group - Advanced AI and Technology Solutions',
+  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions.',
+  keywords = 'AI, artificial intelligence, cloud services, cybersecurity, technology solutions',
+  ogImage = '/og-image.jpg',
+  url = 'https://zion.app'
+}: SEOProps) {
   return (
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      {canonical && <link rel="canonical" href={canonical} />}
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      
-      {/* Open Graph */}
+      <meta name="keywords" content={keywords} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content="article" />
-      {url && <meta property="og:url" content={url} />}
-      
-      {/* Twitter */}
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
     </Head>
   )
 }

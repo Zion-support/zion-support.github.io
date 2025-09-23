@@ -81,8 +81,4 @@ export {};"
   this.log("\\n Fixes "Applied": ")
   this.log("\\n "Errors": ")
       this.log("\\n� TypeScript fixing completed!")
-<<<<<<< HEAD
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
-=======
-  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
