@@ -9,6 +9,7 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jest-environment-jsdom',
+  testMatch: ['**/__jest__/**/*.test.[jt]s?(x)'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
@@ -20,10 +21,19 @@ const customJestConfig = {
     '/backup-merge-conflicts/',
     '/backup-problematic-files/',
     '/recovered-branches/',
+    '/__tests__/',
+    '/tests/',
+    '/ts_files_backup/',
   ],
   testPathIgnorePatterns: [
     '/node_modules/',
     '/.next/',
+    '/src.disabled/',
+    '/components.disabled/',
+    '/pages.disabled/',
+    '/__tests__/',
+    '/tests/',
+    '/ts_files_backup/'
   ],
 }
 

@@ -96,6 +96,8 @@ export default [
     rules: {
       'no-empty': 'off',
       'no-console': 'warn',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-explicit-any': 'warn',
       'react/jsx-uses-react': 'off',
       'react/react-in-jsx-scope': 'off'
     }
