@@ -38,12 +38,22 @@ export default [
            ]
   },
   eslintJs.configs.recommended,
+<<<<<<< HEAD
          {
            files: [
              'app/**/*.{js,jsx,ts,tsx}',
              'pages/**/*.{js,jsx,ts,tsx}',
              'src/**/*.{js,jsx,ts,tsx}'
            ],
+=======
+  ...tsEslintPlugin.configs.recommended,
+  {
+    files: [
+      'app/**/*.{js,jsx,ts,tsx}',
+      'pages/**/*.{js,jsx,ts,tsx}',
+      'src/**/*.{js,jsx,ts,tsx}'
+    ],
+>>>>>>> cursor/check-fix-push-and-merge-to-main-a83b
     languageOptions: {
       parser: tsParser,
       ecmaVersion: 2021,
