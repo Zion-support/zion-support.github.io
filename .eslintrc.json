@@ -1,5 +1,26 @@
 {
   "root": true,
+  "extends": ["next", "next/core-web-vitals"],
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  },
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "import/order": "off",
+    "prefer-destructuring": "off",
+    "@next/next/no-img-element": "off"
+  },
+  "ignorePatterns": [
+    "node_modules/",
+    ".next/",
+    "dist/",
+    "coverage/",
+    "out/"
+  ]
+}
+{
   "extends": ["next/core-web-vitals", "next/typescript"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
