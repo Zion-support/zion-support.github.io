@@ -18,10 +18,13 @@
     "test:watch": "jest --watch --runInBand",
     "preview": "npm run build && npm run start",
     "test:coverage": "jest --coverage",
-    "clean": "rm -rf .next node_modules/.cache",
+    "clean": "rm -rf .next out dist build",
     "export": "npm run build && next export",
     "deploy": "npm run build && npm run export",
-    "postinstall": "echo 'Type-check skipped (non-blocking)'"
+    "postinstall": "echo 'Type-check skipped (non-blocking)'",
+    "lint:fix": "eslint . --fix",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -161,6 +164,5 @@
       "<rootDir>/e2e/"
     ]
   },
-  "packageManager": "npm@11.6.0",
   "type": "module"
 }
