@@ -1,6 +1,7 @@
 
 import "./globals.css";
 import type { ReactNode } from "react";
+import { AuthProvider } from "@/contexts/AuthContext";
 import { Metadata } from "next";
 
 export const metadata = {
@@ -53,7 +54,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </div>
         </nav>
         
-        <main className="min-h-screen">{children}</main>
+        <main className="min-h-screen">
+          <AuthProvider>
+            {children}
+          </AuthProvider>
+        </main>
         
         <footer className="border-t border-white/10 bg-zinc-900/50 mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
