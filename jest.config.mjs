@@ -42,9 +42,22 @@ const customJestConfig = {
     '<rootDir>/corrupted_backup/',
     '<rootDir>/e2e/',
   ],
-  moduleNameMapping: {
+  moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
+  modulePathIgnorePatterns: [
+    '<rootDir>/automation/',
+    '<rootDir>/automation/backups/',
+    '<rootDir>/apps.backup/',
+    '<rootDir>/components.apps/',
+    '<rootDir>/components.disabled/',
+    '<rootDir>/recovered-branches/',
+    '<rootDir>/backup-problematic-files/',
+    '<rootDir>/zion-os/',
+    '<rootDir>/zion-os.disabled/',
+    '<rootDir>/zion-ai-assistant/',
+    '<rootDir>/server/',
+  ],
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async

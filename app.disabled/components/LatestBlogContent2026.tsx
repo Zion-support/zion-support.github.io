@@ -1,8 +1,7 @@
 "use client";
 
-import React from 'react';
+import React from "react";
 
 export default function LatestBlogContent2026() {
-	return null;
+  return null;
 }
-
