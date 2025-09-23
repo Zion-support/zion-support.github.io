@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 // ESLint flat config for ESLint v9. Keep minimal to avoid crashes.
+=======
+// Flat ESLint config for ESLint v9+
+import js from '@eslint/js';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0efa
 export default [
 <<<<<<< HEAD
 	{
@@ -52,10 +60,12 @@ export default [
       'coverage/**',
       'public/**',
       'automation/**',
-      'backups/**',
+      'apps.backup/**',
       'backup/**',
+      'backups/**',
       'backup-merge-conflicts/**',
       'backup-problematic-files/**',
+<<<<<<< HEAD
       'api/**',
       'server/**',
       'netlify/**',
@@ -95,26 +105,50 @@ export default [
       'test_build/**',
       '**/jest.setup.*',
       '**/*.min.js'
+=======
+      'recovered-branches/**',
+      'server/**',
+      'zion-os/**',
+      'zion-website/**',
+      'zion-ai-assistant/**',
+      'ts_files_backup/**',
+      'types/**',
+      'types.disabled/**',
+      'utils/**',
+      'utils.disabled/**',
+      'zion_academy/**',
+      'generated-services/**',
+      'token/**',
+      'workbox-config.js',
+      'ultimate-*.js',
+      'ultimate*.cjs',
+      'verify-and-complete-merges.js',
+      'ultimate_merge_and_improve.cjs',
+      'ultimate-merge-conflict-resolver.js'
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0efa
     ]
   },
   js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ['app/**/*.{js,jsx,ts,tsx}', 'components/**/*.{js,jsx,ts,tsx}', 'pages/**/*.{js,jsx,ts,tsx}', 'src/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
+<<<<<<< HEAD
       parser: tsParser,
       parserOptions: { ecmaFeatures: { jsx: true } },
       globals: { ...globals.browser, ...globals.node }
+=======
+      parserOptions: { ecmaFeatures: { jsx: true } }
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0efa
     },
     plugins: {
       react,
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-      '@typescript-eslint': tsPlugin
+      'react-hooks': reactHooks
     },
     settings: { react: { version: 'detect' } },
     rules: {
+<<<<<<< HEAD
       'no-empty': 'off',
       'no-console': 'warn',
       'no-undef': 'off',
@@ -126,6 +160,11 @@ export default [
       'react/jsx-uses-react': 'off',
       'react/react-in-jsx-scope': 'off'
     }
+=======
+      'react/react-in-jsx-scope': 'off'
+    },
+    settings: { react: { version: 'detect' } }
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0efa
   }
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2af7
 ];
