@@ -21,7 +21,12 @@ const nextConfig: NextConfig = {
   assetPrefix: undefined,
   generateEtags: true,
 
+<<<<<<< HEAD:next.config.ts
+=======
+  // Modern experimental features for Next.js
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3530:next.config.js
   experimental: {
+    appDir: false,
     optimizePackageImports: ['lucide-react', 'framer-motion'],
     turbo: {
       rules: {

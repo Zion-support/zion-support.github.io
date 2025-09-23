@@ -81,6 +81,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "zion-os/**",
     "server",
     "server/**",
@@ -134,5 +135,12 @@
     "zion-os.disabled",
     "zion-ai-assistant"
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6fc7
+=======
+    "zion-os/**",
+    "zion-ai-assistant/**",
+    "zion-website/**",
+    "utils/**",
+    "zion-os.disabled/**"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3530
   ]
 }
