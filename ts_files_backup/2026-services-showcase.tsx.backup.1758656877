@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -329,7 +328,6 @@ export default function ServicesShowcase2026() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-=======
 "use client";
 'use client';
 
@@ -522,6 +520,5 @@ export default function ServicesShowcase2026() {
         </motion.div>
       </div>
     </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   );
 }

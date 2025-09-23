@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 const colorSchemes = {
@@ -938,4 +936,3 @@ export default EnhancedFuturisticBackground;
 export default EnhancedFuturisticBackground;
 export default EnhancedFuturisticBackground;
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

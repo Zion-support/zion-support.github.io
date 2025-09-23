@@ -14,8 +14,6 @@ export interface NextGenAi20o26Service {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const nextGenAI2026Services: NextGenAi2026Service[] = [
   {
     id: "2026-next-gen-ai",
@@ -40,4 +38,3 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

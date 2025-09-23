@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React from "react";
 import { RoutesRouteNavigate } from "react-router-dom";
 import { MobileThemeProvider } from "./theme/MobileThemeProvider";
@@ -37,4 +35,3 @@ export function MobileApp() {
     </MobileThemeProvider>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

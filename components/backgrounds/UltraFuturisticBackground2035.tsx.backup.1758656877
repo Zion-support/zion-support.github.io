@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 class ErrorBoundary extends React.Component {
@@ -24,26 +22,21 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 export default function UltraFuturisticBackground2035() {
-<<<<<<< HEAD
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-=======
 export default function UltraFuturisticBackground2035() {;
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-<<<<<<< HEAD
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const ctx = canvas.getContext('2d');
@@ -55,7 +48,6 @@ export default function UltraFuturisticBackground2035() {;
       ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
     }
 
-=======
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches,
 
@@ -123,20 +115,15 @@ if ( {) {
       coordinate_x: number;
       coordinate_y: number;
       ctx.scale(window.devicePixelRatio |1, window.devicePixelRatio |1);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     let animationFrameId: number;
     let particles: Array<{
       x: number;
       y: number;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       vx: number;
       vy: number;
       size: number;
       opacity: number;
-<<<<<<< HEAD
       color: string;
     }> = [];
 
@@ -172,7 +159,6 @@ if ( {) {
         if (particle.y < 0) particle.y = canvas.height / (window.devicePixelRatio || 1);
         if (particle.y > canvas.height / (window.devicePixelRatio || 1)) particle.y = 0;
 
-=======
 
 
       ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
@@ -252,43 +238,34 @@ if ( {) {
         if (particle.x > canvas.width / (window.devicePixelRatio |1)) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height / (window.devicePixelRatio |1);
         if (particle.y > canvas.height / (window.devicePixelRatio |1)) particle.y = 0;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fillStyle = particle.color;
         ctx.globalAlpha = particle.opacity;
         ctx.fill();
-<<<<<<< HEAD
 
         // Draw connections
         const maxDistance = prefersReducedMotion ? 0 : (window.innerWidth < 768 ? 90 : 140);
-=======
         // Draw connections
         const maxDistance = prefersReducedMotion
           ? 0
           : window.innerWidth < 768
             ? 90
             : 140;        if (maxDistance > 0) {        const maxDistance = prefersReducedMotion ? 0 : (window.innerWidth < 768 ? 90 : 140);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         if (maxDistance > 0) {
           particles.forEach((otherParticle, otherIndex) => {
             if (index !== otherIndex) {
               const dx = particle.x - otherParticle.x;
               const dy = particle.y - otherParticle.y;
               const distance = Math.sqrt(dx * dx + dy * dy);
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               if (distance < maxDistance) {
                 ctx.beginPath();
                 ctx.moveTo(particle.x, particle.y);
                 ctx.lineTo(otherParticle.x, otherParticle.y);
                 ctx.strokeStyle = particle.color;
-<<<<<<< HEAD
                 ctx.globalAlpha = (maxDistance - distance) / maxDistance * 0.08;
-=======
 
 
       for (let i = 0; i < particleCount; i++) {;
@@ -467,12 +444,10 @@ if ( {) {
 
                 ctx.globalAlpha =
                   ((maxDistance - distance) / maxDistance) * 0.08;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 ctx.lineWidth = 1;
                 ctx.stroke();
               }
             }
-<<<<<<< HEAD
           });
         }
       });
@@ -497,7 +472,6 @@ if ( {) {
 
     window.addEventListener('resize', handleResize);
 
-=======
           });        }
       });
       if (!prefersReducedMotion) {
@@ -526,13 +500,11 @@ if ( {) {
       initParticles()
     }
     window.addEventListener('resize', handleResize);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     return () => {
       window.removeEventListener('resize', handleResize);
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
       }
-<<<<<<< HEAD
     };
   }, []);
 
@@ -541,7 +513,6 @@ if ( {) {
       {/* Fixed Background Canvas */}
       <canvas
         ref={canvasRef}
-=======
     };  }, []);        cancelAnimationFrame(animationFrameId)
       }
     }
@@ -570,13 +541,10 @@ if ( {) {
             rotate: [0, 180, 360]
             opacity: [0 && 0.22, 0 && 0.45, 0 && 0.22]
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{ background: 'radial-gradient(ellipse at center, rgba(139,92,246,0.04) 0%, rgba(0,0,0,0) 70%)' }}
       />
 
-<<<<<<< HEAD
-=======
 
 
       {/* Animated Background Elements */}
@@ -592,28 +560,23 @@ if ( {) {
             duration: 8
             repeat: Infinity
             ease: 'easeInOut',      />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       {/* Animated Background Elements */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         {/* Floating Geometric Shapes */}
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-purple-500/15 rounded-full"
           animate={{
-<<<<<<< HEAD
             scale: [1, 1.15, 1],
             rotate: [0, 180, 360],
             opacity: [0.22, 0.45, 0.22]
-=======
             scale: [1, 1.15, 1];
             rotate: [0, 180, 360];
 
             opacity: [0.22, 0.45, 0.22];
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
-<<<<<<< HEAD
             ease: "easeInOut"
           }}
         />
@@ -651,7 +614,6 @@ if ( {) {
         <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl animate-pulse delay-1000" />
         <div className="absolute bottom-1/4 left-1/2 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-2000" />
 
-=======
 
             ease: "easeInOut"
 
@@ -754,25 +716,20 @@ if ( {) {
 
             }}
           />        </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         {/* Animated Grid Lines */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-<<<<<<< HEAD
               linear-gradient(rgba(139,92,246,0.3) 1px, transparent 1px),
               linear-gradient(90deg, rgba(139,92,246,0.3) 1px, transparent 1px)
             `,
-=======
               linear-gradient(rgba(139,92,246,0.3) 1px, transparent 1px);
               linear-gradient(90deg, rgba(139,92,246,0.3) 1px, transparent 1px)
             `;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             backgroundSize: '50px 50px'
           }} />
         </div>
 
-<<<<<<< HEAD
         {/* Floating Particles */}
         {[...Array(20)].map((_, i) => (
           <motion.div
@@ -788,7 +745,6 @@ if ( {) {
               scale: [0, 1, 0]
             }}
             transition={{
-=======
           }}
           transition={{
             duration: 12,
@@ -855,14 +811,11 @@ if ( {) {
               delay: Math.random() * 2
               ease: 'easeInOut',            }}              ease: "easeInOut"
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
               ease: "easeInOut"
-<<<<<<< HEAD
             }}
-=======
 
 
             }}
@@ -885,18 +838,15 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           />
         ))}
 
         {/* Energy Waves */}
-<<<<<<< HEAD
         <motion.div
           className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent"
           animate={{
             scaleX: [0, 1, 0],
             opacity: [0, 1, 0]
-=======
 
 
             opacity: [0, 1, 0],          }}
@@ -909,12 +859,10 @@ if ( {) {
           animate={{
             scale_x: [0, 1, 0];
             opacity: [0, 1, 0];
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           }}
           transition={{
             duration: 4,
             repeat: Infinity,
-<<<<<<< HEAD
             ease: "easeInOut"
           }}
         />
@@ -941,7 +889,6 @@ if ( {) {
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`
-=======
 
 
         />
@@ -1083,15 +1030,12 @@ if ( {) {
             style={{
               left: `${Math.random () * 100}%`,
               top: `${Math.random () * 100}%`,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             }}
             animate={{
               scale: [0, 1, 0],
               opacity: [0, 0.8, 0],
-<<<<<<< HEAD
               rotate: [0, 360]
             }}
-=======
 rotate: [0, 360],            }}            style={{
               left: `${Math.random () * 100}%`,
               top: `${Math.random () * 100}%`;
@@ -1105,29 +1049,23 @@ rotate: [0, 360],            }}            style={{
               repeat: Infinity
               delay: Math.random() * 5
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             transition={{
               duration: 5 + Math.random() * 3,
               repeat: Infinity,
               delay: Math.random() * 5,
-<<<<<<< HEAD
               ease: "easeInOut"
             }}
-=======
         <svg className='absolute inset-0 w-full h-full opacity-20'>
               ease: 'easeInOut',            }}
 
             }}
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           />
         ))}
 
         {/* Neural Network Connections */}
-<<<<<<< HEAD
         <svg className="absolute inset-0 w-full h-full opacity-20">
           <defs>
-=======
         <svg className='absolute inset-0 w-full h-full opacity-20'>
 
           <defs>
@@ -1153,14 +1091,12 @@ rotate: [0, 360],            }}            style={{
               animate={{
                 r: [3, 6, 3]
                 opacity: [0.3, 0.8, 0.3],              }}          <defs>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0.5" />
               <stop offset="50%" stopColor="#06b6d4" stopOpacity="0.3" />
               <stop offset="100%" stopColor="#ec4899" stopOpacity="0.5" />
             </linearGradient>
           </defs>
-<<<<<<< HEAD
           
           {[...Array(8)].map((_, i) => (
             <motion.circle
@@ -1171,7 +1107,6 @@ rotate: [0, 360],            }}            style={{
               fill="url(#neuralGradient)"
               animate={{
                 r: [3, 6, 3],
-=======
           {[...Array(8)].map((_, i) => (
             <motion.circle
                 r: [3, 6, 3],
@@ -1341,28 +1276,23 @@ rotate: [0, 360],            }}            style={{
               fill="url(#neuralGradient)"
               animate={{
                 r: [3, 6, 3];
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 opacity: [0.3, 0.8, 0.3]
               }}
               transition={{
                 duration: 4,
                 repeat: Infinity,
                 delay: i * 0.5,
-<<<<<<< HEAD
                 ease: "easeInOut"
               }}
-=======
                 ease: 'easeInOut',              }}
 
               }}
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             />
           ))}
         </svg>
 
         {/* Holographic Effects */}
-<<<<<<< HEAD
         <div className="absolute inset-0">
           <motion.div
             className="absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded-full"
@@ -1407,7 +1337,6 @@ rotate: [0, 360],            }}            style={{
                 height: [8, 32, 8],
                 opacity: [0.3, 1, 0.3]
               }}
-=======
         <div className='absolute inset-0'>
 
 
@@ -1504,15 +1433,12 @@ rotate: [0, 360],            }}            style={{
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               transition={{
                 duration: 2 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
-<<<<<<< HEAD
                 ease: "easeInOut"
               }}
-=======
 
 
 
@@ -1531,16 +1457,13 @@ rotate: [0, 360],            }}            style={{
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             />
           ))}
         </div>
       </div>
     </>
-<<<<<<< HEAD
   );
 }
-=======
 
 );  )
 }
@@ -1566,4 +1489,3 @@ rotate: [0, 360],            }}            style={{
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

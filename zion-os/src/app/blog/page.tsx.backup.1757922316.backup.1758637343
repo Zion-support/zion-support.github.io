@@ -120,8 +120,6 @@ export default function BlogPage() {
 
   const recentPosts = [
     {
-<<<<<<< HEAD
-=======
       id: 'genai-productivity-benchmarks-2025',
       title: 'GenAI Productivity Benchmarks 2025: Measuring Real Business Impact',
       excerpt: 'A benchmarking framework for time savings, quality lift, and ROI in GenAI workflows.',
@@ -139,7 +137,6 @@ export default function BlogPage() {
       date: '2025-09-15',
       readTime: '9 min read',
       image: '/blog/enterprise-agent-safety.jpg'
->>>>>>> cursor/create-and-deploy-new-content-1633
     },
     {
 >>>>>>> 2445d7df832b351361c2d9a20e071d592355fcda

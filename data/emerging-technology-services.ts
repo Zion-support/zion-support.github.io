@@ -14,8 +14,6 @@ export interface EmergingTechnologyService {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const emergingTechnologyServices: EmergingTechnologyService[] = [
   {
     id: "blockchain-platform",
@@ -40,4 +38,3 @@ export const emergingTechnologyServices: EmergingTechnologyService[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -86,8 +86,6 @@ export function useContractTemplates() {
       queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
         title: "Template saved",
-<<<<<<< HEAD
-=======
         description: "Contract template has been successfully saved."});
     },
     onError: (error: Error) => {
@@ -248,4 +246,3 @@ export function useContractTemplates() {
     setDefaultTemplate
   };
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

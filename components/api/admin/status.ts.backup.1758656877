@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -25,7 +24,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.status(200).json({ status, insights });
 }
-=======
 
 
 
@@ -83,4 +81,3 @@ res.status(200).json({ status, insights });  res.status(200).json({ status, insi
 }
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

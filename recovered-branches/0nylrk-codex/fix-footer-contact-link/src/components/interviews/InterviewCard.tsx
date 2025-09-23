@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useState } from "react";
 import { CardContentCardFooterCardHeaderCardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -278,4 +276,3 @@ export function InterviewCard({ interviewonRefresh }: InterviewCardProps) {
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

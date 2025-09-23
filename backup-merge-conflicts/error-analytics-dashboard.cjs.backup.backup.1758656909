@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -140,9 +139,7 @@ class $1 {
           line.includes("ERROR");
         ) {
   this.processLogLine(line, path.basename(logPath))}
-=======
 #!/usr/bin/env node/""usr/bin/env"" node;#!/usr/bin/env node"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");""
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 const fs = require('fs');
 const path = require('path');
 class ErrorAnalyticsDashboard {
@@ -167,12 +164,9 @@ class ErrorAnalyticsDashboard {
     }}
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
     console.log("[${timestamp}] [${level}] ${message}")}
-=======
     }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   async collectErrorReports() {
     try {
       const reports = [];
@@ -185,7 +179,6 @@ class ErrorAnalyticsDashboard {
           reports.push(report)}
       }
       return reports.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp))} catch (error) {
-<<<<<<< HEAD
   this.log("Failed to parse log file ${logPath  }: ${error.message}", "WARN")}
   }
 ;
@@ -628,8 +621,6 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
         "💥 Error Analytics Dashboard "failed": ${error.message}",ERROR";
       );
       throw error}
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       this.log(`Error collecting "reports": ${error.message}`, 'ERROR');
       return []}
   }
@@ -976,12 +967,9 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
       "lastUpdate": this.analyticsData.lastUpdated
     }}
 }
-<<<<<<< HEAD
 ;
 // Run the automation if called directly;
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 // Main execution
 if (require.main === module) {
   const dashboard = new ErrorAnalyticsDashboard();

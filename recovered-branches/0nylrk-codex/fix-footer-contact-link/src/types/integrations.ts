@@ -11,8 +11,6 @@ export interface Integration {
   status: IntegrationStatus;
   lastSync?: string;
   type: IntegrationType;
-<<<<<<< HEAD
-=======
 
 
 }
@@ -39,4 +37,3 @@ export type AtsIntegrationEvents =
   | "interview_scheduled"
   | "resume_uploaded"
   | "job_posted";
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

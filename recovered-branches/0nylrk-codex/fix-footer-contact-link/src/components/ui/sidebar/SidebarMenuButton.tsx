@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ forwardRef } from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cn } from "@/lib/utils";
@@ -34,4 +32,3 @@ export const SidebarMenuButton = forwardRef<HTMLButtonElementSidebarMenuButtonPr
 );
 
 SidebarMenuButton.displayName = "SidebarMenuButton";
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

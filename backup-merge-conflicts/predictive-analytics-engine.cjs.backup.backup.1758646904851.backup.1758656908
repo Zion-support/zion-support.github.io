@@ -4,7 +4,6 @@
  * Advanced ML-powered prediction system for system failures and optimization;
  */
 
-<<<<<<< HEAD
 const pm2 = require('pm2');
 const fs = require('fs').promises;
 const path = require('path');
@@ -707,7 +706,6 @@ if (require.main === module) {
 }
 
 module.exports = PredictiveAnalyticsEngine;
-=======
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -748,4 +746,3 @@ const { execSync } = require('child_process')
       "level"
       this.log(` ML model update "failed"`)
       this.log(` Fatal "error"`)
->>>>>>> main

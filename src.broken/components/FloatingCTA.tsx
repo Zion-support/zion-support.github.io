@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -150,4 +148,3 @@ export function FloatingCTA() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

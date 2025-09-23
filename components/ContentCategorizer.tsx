@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useStateuseEffectuseMemo } from 'react';
 import { 
@@ -528,4 +526,3 @@ const ContentCategorizer: React.FC = () => {
 };
 
 export default ContentCategorizer;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

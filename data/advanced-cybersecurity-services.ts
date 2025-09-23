@@ -38,8 +38,6 @@ export interface AdvancedCybersecurityService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
 export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
   // Advanced Threat Intelligence Platform
   {
@@ -510,4 +508,3 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     reviews: 78
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

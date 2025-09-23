@@ -1,7 +1,6 @@
 import Link from 'next/link';
 
 export default function SolutionsPage() {
-<<<<<<< HEAD
   const solutions = [
     {
       title: "AI Autonomous Business Operations",
@@ -119,7 +118,6 @@ export default function SolutionsPage() {
         "30% reduction in treatment time",
         "40% increase in patient outcomes"
       ]
-=======
   const caseStudies = [
     {
       title: "AI-Powered Manufacturing Optimization",
@@ -245,13 +243,11 @@ export default function SolutionsPage() {
       name: "Autonomous Business Intelligence",
       description: "Intelligent systems that analyze data and provide actionable business insights.",
       features: ["Real-time Analytics", "Predictive Modeling", "Data Visualization", "Automated Reporting"]
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
     }
   ];
 
   return (
     <div className="min-h-screen py-20">
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="text-center mb-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -357,7 +353,6 @@ export default function SolutionsPage() {
           <h2 className="text-3xl font-bold text-white mb-12 text-center">
             Our Implementation Process
           </h2>
-=======
       {/* Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="text-center">
@@ -489,61 +484,50 @@ export default function SolutionsPage() {
         </div>
 
         <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-xl p-8">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">1</span>
               </div>
-<<<<<<< HEAD
               <h3 className="text-xl font-semibold text-white mb-2">Discovery</h3>
               <p className="text-gray-300">We analyze your business needs and identify AI opportunities for maximum impact.</p>
             </div>
-=======
               <h3 className="text-lg font-semibold text-white mb-2">Discovery</h3>
               <p className="text-gray-300 text-sm">
                 We analyze your business needs and identify the best AI solutions for your specific challenges.
               </p>
             </div>
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">2</span>
               </div>
-<<<<<<< HEAD
               <h3 className="text-xl font-semibold text-white mb-2">Strategy</h3>
               <p className="text-gray-300">We develop a comprehensive AI strategy tailored to your business objectives.</p>
             </div>
-=======
               <h3 className="text-lg font-semibold text-white mb-2">Design</h3>
               <p className="text-gray-300 text-sm">
                 Our team designs a customized solution architecture tailored to your business requirements.
               </p>
             </div>
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">3</span>
               </div>
-<<<<<<< HEAD
               <h3 className="text-xl font-semibold text-white mb-2">Implementation</h3>
               <p className="text-gray-300">Our expert team deploys and configures your AI solutions with precision.</p>
             </div>
-=======
               <h3 className="text-lg font-semibold text-white mb-2">Deploy</h3>
               <p className="text-gray-300 text-sm">
                 We implement the solution with minimal disruption to your existing operations.
               </p>
             </div>
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">4</span>
               </div>
-<<<<<<< HEAD
               <h3 className="text-xl font-semibold text-white mb-2">Optimization</h3>
               <p className="text-gray-300">We continuously monitor and optimize your AI systems for peak performance.</p>
             </div>
@@ -570,7 +554,6 @@ export default function SolutionsPage() {
           </div>
         </div>
       </section>
-=======
               <h3 className="text-lg font-semibold text-white mb-2">Optimize</h3>
               <p className="text-gray-300 text-sm">
                 Continuous monitoring and optimization ensure maximum performance and ROI.
@@ -599,7 +582,6 @@ export default function SolutionsPage() {
           </div>
         </div>
       </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
     </div>
   );
 }

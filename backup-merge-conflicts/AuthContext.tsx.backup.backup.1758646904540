@@ -1,7 +1,5 @@
 import React, { createContext, useContext } from 'react';
-<<<<<<< HEAD:backup-merge-conflicts/AuthContext.tsx.backup
 <<<<<<< HEAD
-=======
 ;
 interface User {;
 
@@ -12,7 +10,6 @@ interface User {
   "id": string;
   email: string;
 =======
->>>>>>> pr-11913:src_backup_temp/context/auth/AuthContext.tsx
   displayName?: string;
   avatar?: string;
   role?: string;

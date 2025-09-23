@@ -3,7 +3,6 @@
  * Simple Code Quality Checker;
  * Performs basic code quality checks;
  */
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 
@@ -71,7 +70,6 @@ fs.writeFileSync('code-quality-report.json', JSON.stringify(results, null, 2));
 // Summary
 const passed = results.checks.filter(check => check.status === 'exists' || check.status === 'valid').length;
 const total = results.checks.length;
-=======
 const fs = require('fs')
 const path = require('path')
 console.log(' Running code quality checks...')
@@ -90,4 +88,3 @@ if (fs.existsSync('package.json')
   results.checks.push({ "name": 'eslint-config', "status"})
   results.checks.push({ "name": 'prettier-config', "status"})
   results.checks.push({ "name": 'prettier-config', "status"})
->>>>>>> main

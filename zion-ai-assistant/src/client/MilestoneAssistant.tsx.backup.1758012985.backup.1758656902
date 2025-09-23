@@ -2,15 +2,10 @@
 =======
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> origin/merged-prs
-<<<<<<< HEAD
 
 import React, { useMemo, useState } from "react";
 import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types";
 export interface MilestoneAssistantProps {scopeOfWork: string;
-=======
 <<<<<<< HEAD
 import React, { useMemo, useState } from "react";
 import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types";
@@ -18,7 +13,6 @@ import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } fr
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
 
 export interface MilestoneAssistantProps {
@@ -29,18 +23,14 @@ export interface MilestoneAssistantProps {
   projectType: ProjectType;
   onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void;
 }
-<<<<<<< HEAD
 export function MilestoneAssistant(props: MilestoneAssistantProps) {const [loading, setLoading] = useState(false);
-=======
 
 export function MilestoneAssistant(props: MilestoneAssistantProps) {
   const [loading, setLoading] = useState(false);
->>>>>>> origin/auto/autonomy-17186719616
   const [error, setError] = useState<string | null>(null);
   const [autoAdd, setAutoAdd] = useState(true);
   const [items, setItems] = useState<SuggestedMilestoneItem[]>([]);
   const [expandedIdx, setExpandedIdx] = useState<number | null>(0);
-<<<<<<< HEAD
   const isDisabled = useMemo(() => {;
     return !props.scopeOfWork |!props.startDateIso |!props.endDateIso |!props.projectType;
   }, [props.scopeOfWork, props.startDateIso, props.endDateIso, props.projectType]);
@@ -105,7 +95,6 @@ function MilestoneAssistant() {
 function generate() {
     set_loading (true),
     set_error (null),
-=======
 
   const isDisabled = useMemo(() => {
     return !props.scopeOfWork || !props.startDateIso || !props.endDateIso || !props.projectType;
@@ -114,13 +103,11 @@ function generate() {
   async function generate() {
     setLoading(true);
     setError(null);
->>>>>>> origin/auto/autonomy-17186719616
     try {
       const payload: MilestoneSuggestionInput = {
         scopeOfWork: props.scopeOfWork,
         startDateIso: props.startDateIso,
         endDateIso: props.endDateIso,
-<<<<<<< HEAD
         project_type: props.project_type;
       },
       const res = await fetch ("/api / ai / milestones", {
@@ -170,7 +157,6 @@ function accept() {
         <button onClick={generate} disabled={loading || isDisabled}>;
 
 <<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 =======
@@ -179,7 +165,6 @@ function accept() {
     <div className="milestone - assistant">;
       <div className="assistant - header" style={{ display: "flex", gap: 12, align_items: "center" }}>;
         <button on_click={generate} disabled={loading || is_disabled}>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -201,12 +186,9 @@ function accept() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
 
@@ -214,8 +196,6 @@ function accept() {
 
 ;
 
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 =======
@@ -233,7 +213,6 @@ function accept() {
       </div>;
       {error && <div style={{ color: "#b00", marginTop: 8 }}>{error}</div>}
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -252,11 +231,8 @@ function accept() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
 
       {error && <div style={{ color: "#b00", margin_top: 8 }}>{error}</div>}
@@ -268,10 +244,7 @@ function accept() {
 
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
 =======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -288,14 +261,11 @@ function accept() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
 
             <div;
@@ -310,13 +280,10 @@ function accept() {
 
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
 
-<<<<<<< HEAD
-=======
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
 <<<<<<< HEAD
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
@@ -369,12 +336,9 @@ function accept() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                     on_change={(e) => update_item (idx, { estimatedEffortHours: Math.max (1, parse_int (e.target.value || "0", 10)) })}
 
@@ -386,13 +350,7 @@ function accept() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
                     on_change={(e) => update_item (idx, { estimatedEffortHours: Math.max (1, parse_int (e.target.value || "0", 10)) })}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -412,18 +370,12 @@ function accept() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export default MilestoneAssistant;
 =======
 <<<<<<< HEAD
->>>>>>> origin/merged-prs
     </div>);
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/merged-prs
 ;
@@ -450,7 +402,6 @@ export default MilestoneAssistant;
     }
   }
 
-<<<<<<< HEAD
   function updateItem(idx: number, patch: Partial<SuggestedMilestoneItem>) {
     setItems((prev) => prev.map((m, i) => (i === idx ? { ...m, ...patch } : m)));
   }
@@ -548,7 +499,6 @@ export default MilestoneAssistant;
 
 >>>>>>> origin/auto/autonomy-17186719616
 export default MilestoneAssistant;
-=======
 export default MilestoneAssistant;
 export default MilestoneAssistant;
 <<<<<<< HEAD
@@ -691,7 +641,6 @@ export default MilestoneAssistant;
 }
 ;
 export default MilestoneAssistant;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 export default MilestoneAssistant;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

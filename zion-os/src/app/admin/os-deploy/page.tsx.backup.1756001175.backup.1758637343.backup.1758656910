@@ -98,7 +98,6 @@ export default function AdminDeployPage() {
 
   return (
     <div className="space-y-8">
-<<<<<<< HEAD
       {/* Header Section */}
       <div className="text-center space-y-4 pb-8 border-b border-white/10">
         <div className="flex items-center justify-center gap-3 mb-4">
@@ -144,7 +143,6 @@ export default function AdminDeployPage() {
                     placeholder="zion.example.com" 
                     className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 text-white placeholder-white/40 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-200" 
                   />
-=======
       {/* Header */}
       <div className="text-center space-y-4">
         <h1 className="text-4xl font-bold gradient-text">Unified Deployment</h1>
@@ -283,7 +281,6 @@ export default function AdminDeployPage() {
                 <label key={k} className="flex items-center space-x-3 p-3 rounded-lg bg-white/5 hover:bg-white/8 transition-colors cursor-pointer">
                   <input type="checkbox" name={k} className="checkbox-field" />
                   <span className="text-white/90 text-sm">{labelFor(k)}</span>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f7d5
                 </label>
                 <label className="block">
                   <span className="block text-sm font-medium text-white/80 mb-2">Subdomain</span>
@@ -338,7 +335,6 @@ export default function AdminDeployPage() {
             </div>
             <h2 className="text-2xl font-semibold">Governance & Economy</h2>
           </div>
-<<<<<<< HEAD
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <label className="block">
@@ -478,7 +474,6 @@ export default function AdminDeployPage() {
                     </svg>
                   </div>
                 </div>
-=======
 
           {/* Optional Add-ons */}
           <div className="space-y-6">
@@ -516,12 +511,10 @@ export default function AdminDeployPage() {
                   <option value="stripe">Stripe</option>
                   <option value="coinbase-commerce">Coinbase Commerce</option>
                 </select>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f7d5
               </label>
             </div>
           </div>
 
-<<<<<<< HEAD
         {/* Deployment Action */}
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl border border-blue-500/30 p-6">
           <div className="flex items-center justify-between">
@@ -565,7 +558,6 @@ export default function AdminDeployPage() {
           )}
         </div>
       </form>
-=======
           {/* Submit Section */}
           <div className="border-t border-white/10 pt-6">
             <div className="flex flex-col sm:flex-row items-center gap-4">
@@ -596,7 +588,6 @@ export default function AdminDeployPage() {
           </div>
         </form>
       </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f7d5
     </div>
   );
 }

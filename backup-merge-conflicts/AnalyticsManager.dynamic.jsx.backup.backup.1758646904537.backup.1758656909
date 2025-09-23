@@ -1,6 +1,4 @@
 =======
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.dynamic.jsx.backup
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -14,7 +12,6 @@ const AnalyticsManager = dynamic(() => import('./AnalyticsManager'), {',
 export default AnalyticsManager;,
 =======;
 =======
->>>>>>> pr-11935
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:components.disabled_full/AnalyticsManager.dynamic.jsx
@@ -29,13 +26,10 @@ const AnalyticsManager = dynamic(() => import('./AnalyticsManager'), {
 export default AnalyticsManager;
 =======
 <<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.dynamic.jsx.backup
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.dynamic.jsx.backup
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
-=======
 import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false',}); export default AnalyticsManager;
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:components.disabled_full/AnalyticsManager.dynamic.jsx
 =======
 import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false',}); export default AnalyticsManager;
 >>>>>>> pr-11935

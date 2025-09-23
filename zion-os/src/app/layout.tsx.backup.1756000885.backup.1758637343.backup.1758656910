@@ -4,12 +4,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-<<<<<<< HEAD
   title: "Zion Tech Group - AI-Powered Technology Solutions",
   description: "Leading provider of AI-powered technology solutions, autonomous systems, quantum computing, and innovative business platforms. Transform your business with cutting-edge AI technology.",
   keywords: "AI, artificial intelligence, autonomous systems, quantum computing, technology solutions, business automation",
   authors: [{ name: "Zion Tech Group" }],
-=======
   title: {
     default: "Zion OS - Sovereign AI-Powered Digital Economies",
     template: "%s | Zion OS"
@@ -28,7 +26,6 @@ export const metadata = {
   alternates: {
     canonical: '/',
   },
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
   viewport: "width=device-width, initial-scale=1",
   robots: {
     index: true,
@@ -42,7 +39,6 @@ export const metadata = {
     },
   },
   openGraph: {
-<<<<<<< HEAD
     title: "Zion Tech Group - AI-Powered Technology Solutions",
     description: "Leading provider of AI-powered technology solutions, autonomous systems, quantum computing, and innovative business platforms.",
     type: "website",
@@ -53,7 +49,6 @@ export const metadata = {
     card: "summary_large_image",
     title: "Zion Tech Group - AI-Powered Technology Solutions",
     description: "Leading provider of AI-powered technology solutions, autonomous systems, quantum computing, and innovative business platforms.",
-=======
     type: "website",
     locale: "en_US",
     url: "https://ziontechgroup.com",
@@ -68,7 +63,6 @@ export const metadata = {
         alt: "Zion OS - Sovereign AI-Powered Digital Economies",
       },
     ],
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
   },
   twitter: {
     card: "summary_large_image",
@@ -88,13 +82,11 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-<<<<<<< HEAD
     <html lang="en">
       <body className="min-h-screen bg-gray-50 text-gray-900">
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
-=======
     <html lang="en" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -198,7 +190,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </div>
           </div>
         </footer>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
       </body>
     </html>
   );

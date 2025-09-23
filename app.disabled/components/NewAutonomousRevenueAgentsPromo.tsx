@@ -3,9 +3,7 @@
 import React from "react";
 
 export default function NewAutonomousRevenueAgentsPromo() {
-<<<<<<< HEAD
   return null;
-=======
   return (
     <section className="py-10 bg-gradient-to-r from-purple-50 to-blue-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,5 +33,4 @@ export default function NewAutonomousRevenueAgentsPromo() {
       </div>
     </section>
   );
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
 }

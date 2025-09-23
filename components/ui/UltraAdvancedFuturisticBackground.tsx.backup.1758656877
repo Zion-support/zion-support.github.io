@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 
 interface UltraAdvancedFuturisticBackgroundProps {
@@ -34,7 +33,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
     let particles: Array<{
       x: number;
       y: number;
-=======
 "use client";
 
 
@@ -164,13 +162,11 @@ if (return) {
       coordinate_x: number;
       coordinate_y: number;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       vx: number;
       vy: number;
       size: number;
       opacity: number;
       color: string;
-<<<<<<< HEAD
       type: 'quantum' | 'holographic' | 'neon' | 'fusion';
     }> = [];
 
@@ -210,7 +206,6 @@ if (return) {
         holographic: '#ff0088'
       },
       'quantum-ai': {
-=======
 
 
     let animationFrameId: number;
@@ -282,19 +277,16 @@ if ( {) {
 
       'quantum - ai': {
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         primary: '#00d4ff',
         secondary: '#ff6b35',
         accent: '#9d4edd',
         quantum: '#00ff88',
-<<<<<<< HEAD
         holographic: '#ff0088'
       }
     };
 
     const colors = colorSchemes[colorScheme];
 
-=======
 
     window && window.addEventListener('resize', resizeCanvas);
     };
@@ -345,12 +337,10 @@ if ( {) {
       }
     }
     const colors = colorSchemes[colorScheme];
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     // Initialize particles
     const initParticles = () => {
       particles = [];
       for (let i = 0; i < particleCount; i++) {
-<<<<<<< HEAD
         const type = Math.random() > 0.7 ? 'quantum' : 
                     Math.random() > 0.5 ? 'holographic' : 
                     Math.random() > 0.3 ? 'neon' : 'fusion';
@@ -374,7 +364,6 @@ if ( {) {
     const createQuantumEntanglement = () => {
       if (!enableQuantumEffects) return;
       
-=======
         const type =
           Math.random() > 0.7
             ? 'quantum'
@@ -410,17 +399,14 @@ if ( {) {
     // Quantum entanglement effect
     const createQuantumEntanglement = () => {
       if (!enableQuantumEffects) return;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
-<<<<<<< HEAD
           
           if (distance < 100 && particles[i].type === 'quantum' && particles[j].type === 'quantum') {
             ctx.beginPath();
-=======
           if (
             distance < 100 &&
             particles[i].type === 'quantum' &&
@@ -432,14 +418,11 @@ if ( {) {
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
           if (distance < 100 && particles[i].type === 'quantum' && particles[j].type === 'quantum') {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             ctx.strokeStyle = `rgba(0, 255, 136, ${0.3 * (1 - distance / 100)})`;
             ctx.lineWidth = 1;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-<<<<<<< HEAD
             ctx.stroke();
-=======
 
           }
         }
@@ -512,12 +495,10 @@ if ( {) {
 
             ctx.stroke()
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           }
         }
       }
     };
-<<<<<<< HEAD
 
     // Holographic grid effect
     const createHolographicGrid = () => {
@@ -529,7 +510,6 @@ if ( {) {
       ctx.strokeStyle = `rgba(255, 0, 136, 0.1)`;
       ctx.lineWidth = 0.5;
       
-=======
     // Holographic grid effect;
     const createHolographicGrid = () => {;
 
@@ -538,25 +518,20 @@ if ( {) {
       const offset = (Date.now() * 0.001) % gridSize;
       ctx.strokeStyle = `rgba(255, 0, 136, 0.1)`;
       ctx.lineWidth = 0.5;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       // Vertical lines
       for (let x = offset; x < canvas.width; x += gridSize) {
         ctx.beginPath();
         ctx.moveTo(x, 0);
         ctx.lineTo(x, canvas.height);
-<<<<<<< HEAD
         ctx.stroke();
       }
       
-=======
         ctx.stroke();      }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       // Horizontal lines
       for (let y = offset; y < canvas.height; y += gridSize) {
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
-<<<<<<< HEAD
         ctx.stroke();
       }
     };
@@ -567,7 +542,6 @@ if ( {) {
       
       const nodes = particles.filter(p => p.type === 'quantum' || p.type === 'holographic');
       
-=======
         ctx.stroke();      }        ctx.stroke()
       }
     }
@@ -577,20 +551,16 @@ if ( {) {
       const nodes = particles.filter(
         p => p.type === 'quantum' |p.type === 'holographic'
       );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
           const dx = nodes[i].x - nodes[j].x;
           const dy = nodes[i].y - nodes[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
-<<<<<<< HEAD
           
-=======
           if (distance < 150) {
             const strength = 1 - distance / 150;            ctx.beginPath();          const dx = nodes[i].x - nodes[j].x;
           const dy = nodes[i].y - nodes[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           if (distance < 150) {
             const strength = 1 - (distance / 150);
             ctx.beginPath();
@@ -598,13 +568,11 @@ if ( {) {
             ctx.lineWidth = strength * 2;
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
-<<<<<<< HEAD
             ctx.stroke();
           }
         }
       }
     };
-=======
 
 
       const offset = (Date && Date.now() * 0 && 0.001) % gridSize;
@@ -633,95 +601,72 @@ if ( {) {
         }
       }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-<<<<<<< HEAD
       
-=======
 
       
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       // Create background gradient
       const gradient = ctx.createRadialGradient(
         canvas.width / 2, canvas.height / 2, 0,
         canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2
-<<<<<<< HEAD
       );
-=======
 
       );
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)');
       gradient.addColorStop(0.5, 'rgba(0, 0, 0, 0.6)');
       gradient.addColorStop(1, 'rgba(0, 0, 0, 0.9)');
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-<<<<<<< HEAD
       
-=======
 
       
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       // Create effects
       createHolographicGrid();
       createQuantumEntanglement();
       createNeuralNetwork();
-<<<<<<< HEAD
       
-=======
 
       
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       // Update and draw particles
       particles.forEach((particle, index) => {
         // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         
         // Bounce off edges
         if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
         if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
-<<<<<<< HEAD
         
         // Wrap around edges
-=======
         // Wrap around edges
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
-<<<<<<< HEAD
         
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         
-=======
 
         
         // Draw particle
 
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         // Create glow effect
         const glowGradient = ctx.createRadialGradient(
           particle.x, particle.y, 0,
           particle.x, particle.y, particle.size * 3
-<<<<<<< HEAD
         );
         glowGradient.addColorStop(0, `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`);
         glowGradient.addColorStop(0.5, `${particle.color}${Math.floor(particle.opacity * 0.5 * 255).toString(16).padStart(2, '0')}`);
@@ -730,7 +675,6 @@ if ( {) {
         ctx.fillStyle = glowGradient;
         ctx.fill();
         
-=======
 );
         glowGradient.addColorStop(0, `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`);
         glowGradient.addColorStop(0.5, `${particle.color}${Math.floor(particle.opacity * 0.5 * 255).toString(16).padStart(2, '0')}`);
@@ -740,19 +684,16 @@ if ( {) {
 
         
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         // Add sparkle effect for holographic particles
         if (particle.type === 'holographic' && Math.random() > 0.95) {
           ctx.beginPath();
           ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2);
-<<<<<<< HEAD
           ctx.strokeStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`;
           ctx.lineWidth = 2;
           ctx.stroke();
         }
       });
       
-=======
 
     };
     // Animation loop;
@@ -858,13 +799,11 @@ if ( {) {
       });
       
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       // Add intensity-based effects
       if (intensity === 'high') {
         // Add energy waves
         const time = Date.now() * 0.001;
         for (let i = 0; i < 3; i++) {
-<<<<<<< HEAD
           const waveRadius = (time * 50 + i * 100) % (Math.max(canvas.width, canvas.height) * 2);
           ctx.beginPath();
           ctx.arc(canvas.width / 2, canvas.height / 2, waveRadius, 0, Math.PI * 2);
@@ -888,7 +827,6 @@ if ( {) {
 
   return (
     <div ref={containerRef} className="relative w-full h-full overflow-hidden">
-=======
 
 
       // Add intensity-based effects;
@@ -1018,12 +956,10 @@ if ( {) {
 export default UltraAdvancedFuturisticBackground;
   return (
     <div ref={containerRef} className="relative w-full h-full overflow-hidden">;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
-<<<<<<< HEAD
       />
       
       {/* Additional CSS-based effects */}
@@ -1057,7 +993,6 @@ export default UltraAdvancedFuturisticBackground;
 };
 
 export default UltraAdvancedFuturisticBackground;
-=======
 
       />;
 
@@ -1145,4 +1080,3 @@ export default UltraAdvancedFuturisticBackground;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

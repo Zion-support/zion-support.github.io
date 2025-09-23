@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from "react";
 import { MoonSun } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -24,4 +22,3 @@ export default function ThemeToggle(): JSX.Element {
     </Button>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

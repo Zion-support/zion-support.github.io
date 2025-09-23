@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -94,7 +93,6 @@ const MOCK_SUPPORT_REQUESTS = [
 ];
 
 export default function SupportRequests() {
-=======
 
 import React, { useState } from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -229,12 +227,10 @@ export default function SupportRequests() {
 ],
 
 export default function SupportRequests() {;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const [searchQuery, setSearchQuery] = useState("");
   const [statusFilter, setStatusFilter] = useState<string | null>(null);
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
-<<<<<<< HEAD
   
   // Apply filters to the request data
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
@@ -264,7 +260,6 @@ export default function SupportRequests() {;
     return true;
   });
   
-=======
 export default function SupportRequests() {
   const [searchQuery, setSearchQuery] = useState(""),
   const [statusFilter, setStatusFilter] = useState<string | null>(null),
@@ -414,13 +409,11 @@ export default function SupportRequests() {;
 
     return true
   });
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Count by status for the summary dashboard
   const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
   const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
   const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
   const totalCount = MOCK_SUPPORT_REQUESTS.length;
-<<<<<<< HEAD
   
   const resetFilters = () => {
     setSearchQuery("");
@@ -432,7 +425,6 @@ export default function SupportRequests() {;
   return (
     <AppLayout>
       <SEO 
-=======
     
     return true
   });
@@ -457,7 +449,6 @@ export default function SupportRequests() {;
   return (
     <AppLayout>
       <SEO
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         title="Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"
       />
@@ -471,20 +462,14 @@ export default function SupportRequests() {;
               Manage and respond to user support requests and issues
             </p>
           </div>
-<<<<<<< HEAD
           
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <div className="mt-4 md:mt-0">
             <Button className="bg-zion-purple hover:bg-zion-purple-light">
               New Support Case
             </Button>
           </div>
         </div>
-<<<<<<< HEAD
         
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         {/* Status Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           <Card>
@@ -493,30 +478,21 @@ export default function SupportRequests() {;
               <CardDescription>Open Requests</CardDescription>
             </CardHeader>
           </Card>
-<<<<<<< HEAD
           
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-2xl font-bold">{inProgressCount}</CardTitle>
               <CardDescription>In Progress</CardDescription>
             </CardHeader>
           </Card>
-<<<<<<< HEAD
           
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-2xl font-bold">{resolvedCount}</CardTitle>
               <CardDescription>Resolved</CardDescription>
             </CardHeader>
           </Card>
-<<<<<<< HEAD
           
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-2xl font-bold">{totalCount}</CardTitle>
@@ -524,10 +500,7 @@ export default function SupportRequests() {;
             </CardHeader>
           </Card>
         </div>
-<<<<<<< HEAD
         
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <Tabs defaultValue="all" className="mb-8">
           <TabsList>
             <TabsTrigger value="all">All Requests</TabsTrigger>
@@ -535,7 +508,6 @@ export default function SupportRequests() {;
             <TabsTrigger value="ai-flagged">AI Flagged</TabsTrigger>
             <TabsTrigger value="need-response">Need Response</TabsTrigger>
           </TabsList>
-<<<<<<< HEAD
           
           <TabsContent value="all" className="mt-6">
             {/* Search and Filters */}
@@ -551,7 +523,6 @@ export default function SupportRequests() {;
               </div>
               
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
-=======
           <TabsContent value="all" className="mt-6">
 
 
@@ -682,7 +653,6 @@ export default function SupportRequests() {;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
                 </SelectTrigger>
@@ -693,15 +663,12 @@ export default function SupportRequests() {;
                   <SelectItem value="resolved">Resolved</SelectItem>
                 </SelectContent>
               </Select>
-<<<<<<< HEAD
               
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
-=======
 
               <Select value={priorityFilter |""} onValueChange={value => setPriorityFilter(value |null)}>
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
                 </SelectTrigger>
@@ -712,15 +679,12 @@ export default function SupportRequests() {;
                   <SelectItem value="low">Low</SelectItem>
                 </SelectContent>
               </Select>
-<<<<<<< HEAD
               
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
-=======
 
               <Select value={categoryFilter |""} onValueChange={value => setCategoryFilter(value |null)}>
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
                 </SelectTrigger>
@@ -734,18 +698,12 @@ export default function SupportRequests() {;
                   <SelectItem value="profile">Profile</SelectItem>
                 </SelectContent>
               </Select>
-<<<<<<< HEAD
               
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <Button variant="outline" onClick={resetFilters} className="md:w-auto">
                 <Filter className="h-4 w-4 mr-2" /> Reset Filters
               </Button>
             </div>
-<<<<<<< HEAD
             
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             {/* Support Requests Table */}
             <Card>
               <CardContent className="p-0">
@@ -771,14 +729,12 @@ export default function SupportRequests() {;
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>
                         <TableCell>
                           <Badge variant={
-<<<<<<< HEAD
                             request.status === 'open' 
                               ? 'default' 
                               : request.status === 'in-progress' 
                               ? 'secondary' 
                               : 'outline'
                           }>
-=======
                             request.status === 'open'
                               ? 'default'
                               : request.status === 'in-progress'
@@ -955,13 +911,11 @@ export default function SupportRequests() {;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                             {request.status}
                           </Badge>
                         </TableCell>
                         <TableCell>
                           <Badge variant={
-<<<<<<< HEAD
                             request.priority === 'high' 
                               ? 'destructive' 
                               : request.priority === 'medium' 
@@ -979,7 +933,6 @@ export default function SupportRequests() {;
                           <Button variant="ghost" size="sm">Assign</Button>
                         </TableCell>
                       </TableRow>
-=======
                             request.priority === 'high'
                               ? 'destructive'
                               : request.priority === 'medium'
@@ -1008,17 +961,13 @@ export default function SupportRequests() {;
                           <Button variant="ghost" size="sm">Assign</Button>;
                         </TableCell>;
                       </TableRow>;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     ))}
                   </TableBody>
                 </Table>
               </CardContent>
             </Card>
           </TabsContent>
-<<<<<<< HEAD
           
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <TabsContent value="escalated" className="mt-6">
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
               <h3 className="text-xl font-medium mb-4">Escalated Requests</h3>
@@ -1027,10 +976,7 @@ export default function SupportRequests() {;
               </p>
             </div>
           </TabsContent>
-<<<<<<< HEAD
           
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <TabsContent value="ai-flagged" className="mt-6">
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
               <h3 className="text-xl font-medium mb-4">AI Flagged Issues</h3>
@@ -1039,10 +985,7 @@ export default function SupportRequests() {;
               </p>
             </div>
           </TabsContent>
-<<<<<<< HEAD
           
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <TabsContent value="need-response" className="mt-6">
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
               <h3 className="text-xl font-medium mb-4">Awaiting Response</h3>
@@ -1054,14 +997,11 @@ export default function SupportRequests() {;
         </Tabs>
       </div>
     </AppLayout>
-<<<<<<< HEAD
   );
 }
-=======
   )
 
 }
 }
 ;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

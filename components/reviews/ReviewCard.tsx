@@ -6,8 +6,6 @@ type Props ={
   onReport?: (id: string) => void;
 };
 
-<<<<<<< HEAD
-=======
 const ReviewCard: React.FC<Props> = ({ reviewonReport }) => {
   return (
     <div className="enhanced-card hover:shadow-lg transition-shadow">
@@ -47,4 +45,3 @@ const ReviewCard: React.FC<Props> = ({ reviewonReport }) => {
 };
 
 export default ReviewCard;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

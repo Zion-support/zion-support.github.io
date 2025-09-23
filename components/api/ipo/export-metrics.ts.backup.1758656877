@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import { requireSuperadminApi } from '../../../utils/api/auth';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -18,7 +17,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Disposition', 'attachment; filename="ipo-metrics.csv"');
   res.status(200).send(csv);
 }
-=======
 
 import { requireSuperadminApi } from '../../../utils/api/auth';
 
@@ -45,4 +43,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

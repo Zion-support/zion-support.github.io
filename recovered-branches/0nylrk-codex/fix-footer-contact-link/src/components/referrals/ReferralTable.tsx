@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { TableBodyTableCellTableHeaderTableRow } from "@/components/ui/table";
 import { ReferralStatus } from "@/types/referrals";
 import { Badge } from "@/components/ui/badge";
@@ -87,4 +85,3 @@ export function ReferralTable({ referralsisLoading }: ReferralTableProps) {
     </Table>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

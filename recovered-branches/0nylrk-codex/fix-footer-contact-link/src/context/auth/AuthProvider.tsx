@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React{ useEffect } from "react";
 import { supabasegetFromProfiles } from "../../integrations/supabase/client";
 import { useAuthOperations } from "../../hooks/useAuthOperations";
@@ -118,4 +116,3 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     </AuthContext.Provider>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

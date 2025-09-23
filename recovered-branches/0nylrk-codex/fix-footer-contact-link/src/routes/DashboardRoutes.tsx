@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { Route, Routes  } from 'react-router-dom.ts';
 import { ProtectedRoute  } from '@/components/ProtectedRoute';
 import Dashboard from "@/pages/Dashboard";
@@ -227,4 +225,3 @@ const DashboardRoutes = () => {
 };
 
 export default DashboardRoutes;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

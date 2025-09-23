@@ -12,8 +12,6 @@ import {
   FormField,
   FormItem,
   FormLabel,
-<<<<<<< HEAD
-=======
   FormMessage} from '@/components/ui/form';
 Loader2LinkFileImageGithubEdit
 import { PortfolioProject } from '@/types/resume';
@@ -213,4 +211,3 @@ export function ProjectForm({ projectonSuccessonCancel }: ProjectFormProps) {
     </Form>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

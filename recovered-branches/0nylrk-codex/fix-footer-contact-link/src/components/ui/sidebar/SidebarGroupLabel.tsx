@@ -6,8 +6,6 @@ interface SidebarGroupLabelProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-=======
 export function SidebarGroupLabel({ classNamechildren...props }: SidebarGroupLabelProps) {
   return (
     <div 
@@ -18,4 +16,3 @@ export function SidebarGroupLabel({ classNamechildren...props }: SidebarGroupLab
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

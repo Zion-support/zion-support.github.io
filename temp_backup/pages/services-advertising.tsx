@@ -34,8 +34,6 @@ export default function ServicesAdvertisingPage() {
 					</ul>
 				</section>
 
-<<<<<<< HEAD
-=======
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Resume & Cover Letter Builder</h2>
 					<p className="text-slate-300">ATS-optimized resumes and tailored cover letters with role-aware keywording and metric suggestions.</p>
@@ -1535,4 +1533,3 @@ export default function ServicesAdvertisingPage() {
 		</div>
 	);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

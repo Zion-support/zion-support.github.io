@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
       title: 'AI Consciousness Services',
       terms: [
         'Services are provided on an "as-is" basis with no warranties',
@@ -87,7 +85,6 @@ const TermsPage: React.FC = () => {
 
   const serviceTerms = [
     {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       ]
     },
     {
@@ -106,8 +103,6 @@ const TermsPage: React.FC = () => {
         'Vulnerability reports are confidential and must not be shared',
         'Penetration testing requires written authorization',
         'Incident response follows our established protocols'
-<<<<<<< HEAD
-=======
 import Layout from '../components/layout/Layout';
 import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
@@ -169,14 +164,11 @@ const TermsPage: React.FC = () => {
         'License to use our services as intended',
         'Prohibition of reverse engineering'
 =======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       ]
     }
   ];
 
   const prohibitedActivities = [
-<<<<<<< HEAD
-=======
 =======
     'Attempting to gain unauthorized access to our systems',
     'Using services for illegal or harmful purposes',
@@ -200,7 +192,6 @@ const TermsPage: React.FC = () => {
   return (
     <>
       <SEO title="Terms of Service | Zion Tech Group" description="Terms of Service for Zion Tech Group - Learn about our service terms and conditions." url="https://ziontechgroup.com/terms/" />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { motion } from 'framer-motion';
 import { 
   FileText, Shield, CheckCircle, AlertTriangle, 
@@ -208,8 +199,6 @@ import {
   BookOpen, Lock, Zap, Building, Brain, Rocket
 } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 =======
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
@@ -421,7 +410,6 @@ export default function TermsPage() {
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Key Terms Overview
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { motion } from 'framer-motion';
 import { Shield, FileText, Scale, Lock, Eye, Users, Globe, AlertTriangle } from 'lucide-react';
 import Layout from '../components/layout/Layout';
@@ -539,8 +527,6 @@ export default function Terms() {
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 These terms govern your use of our services and establish our mutual rights and obligations.
               </p>
-<<<<<<< HEAD
-=======
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -869,7 +855,6 @@ export default function Terms() {
                 <motion.div
                   key={term.title}
                   initial={{ opacity: 0, y: 30 }}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </div>
           </div>
         </section>
@@ -1242,8 +1227,6 @@ export default function Terms() {
                           </li>
                         ))}
                       </ul>
-<<<<<<< HEAD
-=======
 =======
     'Unauthorized access to our systems or networks',
     'Interference with service operation',
@@ -1878,7 +1861,6 @@ export default function Terms() {
         </div>
       </section>
     </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <FileText className="w-16 h-16 text-cyan-400 mx-auto mb-6" />
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Terms of Service
@@ -2148,9 +2130,7 @@ export default function Terms() {
   );
 };
 
-<<<<<<< HEAD
 export default Terms;
-=======
 export default Terms;
 =======
             </div>
@@ -2204,4 +2184,3 @@ import Head from 'next/head';
       <Head><title>terms - Zion App</title><meta name="description" content="terms page" /></Head><div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-6">terms</h1><p className="text-lg mb-4">This page is under construction.</p><div className="mt-4"><a href="/" className="text-blue-600 hover:underline">;
             ← Back to Home</a></div></div></>;
   );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

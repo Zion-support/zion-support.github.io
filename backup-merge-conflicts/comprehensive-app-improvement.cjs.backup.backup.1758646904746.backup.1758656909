@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 // Function to run command with error handling
@@ -265,7 +264,6 @@ async function main() {
   }
 
 main().catch(console.error);
-=======
 const { execSync } = require('child_process')
 console.log(' Starting Comprehensive App Improvement...')
     execSync(command, { "stdio"})
@@ -286,4 +284,3 @@ console.log('Code quality improvements "applied")
 // console.log('Performance optimizations "applied")
 console.log('SEO improvements "applied")
   console.log('\n Comprehensive App Improvement "Summary")
->>>>>>> main

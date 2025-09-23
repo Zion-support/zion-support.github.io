@@ -5,7 +5,6 @@
  */
 const fs = require("child_process");
 const path = require("child_process");
-<<<<<<< HEAD
 const { execSync } = require("child_process")
 class ComprehensiveErrorFixer {
   constructor() {
@@ -59,7 +58,6 @@ class ComprehensiveErrorFixer {
       let modified = false
       // Fix common syntax errors
       const fixes = [// Fix semicolons in object properties
-=======
 const { execSync } = require("child_process");
 class ComprehensiveErrorFixer {}
   constructor() {}
@@ -189,4 +187,3 @@ if (require.main === module) {}
   const fixer = new ComprehensiveErrorFixer();
   fixer.run().catch(console.error)};
 module.exports = ComprehensiveErrorFixer;
->>>>>>> main

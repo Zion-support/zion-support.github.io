@@ -1,6 +1,5 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-<<<<<<< HEAD
 import { useMemo, useState } from 'react';
 import EnhancedLayout from '@/components/layout/EnhancedLayout';
 import EnhancedMarketplaceCard from '@/components/ui/EnhancedMarketplaceCard';
@@ -49,7 +48,6 @@ const ServicesIndex: NextPage = () => {
 };
 
 export default ServicesIndex;
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Filter, ArrowRight, Star, CheckCircle } from 'lucide-react';
@@ -644,4 +642,3 @@ export default function ServicesIndexPage() {
     </Layout>
   );
 }
->>>>>>> 000c1469fd74fcaa7bccb39743650a33da42c0cd

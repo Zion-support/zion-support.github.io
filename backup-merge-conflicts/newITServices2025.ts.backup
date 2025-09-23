@@ -1,8 +1,5 @@
 =======
-<<<<<<< HEAD:src/data/newITServices2025.ts
 <<<<<<< HEAD:backup-merge-conflicts/newITServices2025.ts.backup
-=======
->>>>>>> pr-11913:src_backup_temp/data/newITServices2025.ts
 export interface NewITService {;
   "id": "string;
   "title": string;
@@ -594,10 +591,7 @@ export const "NEW_IT_SERVICES_2025": NewITService[] = [{
     }
   };
 ];
-<<<<<<< HEAD
 ;
 export default NEW_IT_SERVICES_2025;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-=======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935

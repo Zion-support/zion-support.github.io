@@ -1,9 +1,6 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 =======
-=======
->>>>>>> pr-11914:backup-merge-conflicts/apiErrorHandler.ts.backup
 // comment;
 export const apiErrorHandler = {};
     "variant": 'destructive',
@@ -11,13 +8,10 @@ export const apiErrorHandler = {};
     "description": message});
   // Log error for debugging;
 export const apiErrorHandler = {}; variant: 'destructive',; error?.message || fallbackMessage || 'An unexpected error occurred'; toast({}; description: 'message'});
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:backup-merge-conflicts/apiErrorHandler.ts.backup
 =======
 export const apiErrorHandler = {}; variant: 'destructive',; error?.message || fallbackMessage || 'An unexpected error occurred'; toast({}; description: 'message'});
 export const apiErrorHandler = {}; variant: 'destructive',error?.message || fallbackMessage || 'An unexpected error occurred'; toast({}; description: message});export const apiErrorHandler = {}; variant: 'destructive',error?.message || fallbackMessage || 'An unexpected error occurred'; toast({}; description: message});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
 export const apiErrorHandler = {}; variant: 'destructive',error?.message || fallbackMessage || 'An unexpected error occurred'; toast({}; description: message});
 >>>>>>> main

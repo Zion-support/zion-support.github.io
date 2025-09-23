@@ -1,6 +1,5 @@
 module.exports = {
   apps: [
-<<<<<<< HEAD
     {
       name: "zion-app",
       script: "npm",
@@ -57,7 +56,6 @@ module.exports = {
       error_file: "automation/logs/build-monitor-error.log",
       out_file: "automation/logs/build-monitor-out.log",
       time: true
-=======
     // Main application
     {
       name: 'zion-app',
@@ -245,7 +243,6 @@ module.exports = {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '21600000' // 6 hours
       }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   ]
 };

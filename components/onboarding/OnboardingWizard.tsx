@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useMemouseState } from 'react'
 import { useUser } from '../../providers/UserProvider'
@@ -80,4 +78,3 @@ export default function OnboardingWizard() {
     </div>
   )
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

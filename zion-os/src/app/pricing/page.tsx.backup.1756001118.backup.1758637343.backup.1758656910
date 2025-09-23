@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 
-<<<<<<< HEAD
 const pricingData = {
   "AI & Machine Learning": [
     {
@@ -173,7 +172,6 @@ export default function PricingPage() {
           <div className="text-center">
             <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
             <div className="text-sm opacity-80">AI-Powered Automation</div>
-=======
 interface PricingTier {
   name: string;
   price: string;
@@ -525,7 +523,6 @@ export default function PricingPage() {
           <div>
             <h3 className="font-semibold">Address</h3>
             <p className="text-sm opacity-90">364 E Main St STE 1008<br />Middletown DE 19709</p>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6180
           </div>
         </div>
       </div>
@@ -535,21 +532,17 @@ export default function PricingPage() {
         <select
           value={selectedCategory}
           onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
           className="bg-zinc-900 border border-white/10 rounded-lg px-6 py-3 text-lg"
         >
           <option value="all">All Categories</option>
-=======
           className="p-3 bg-zinc-900 border border-white/10 rounded"
         >
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6180
           {categories.map(category => (
             <option key={category} value={category}>{category}</option>
           ))}
         </select>
       </div>
 
-<<<<<<< HEAD
       {/* Pricing Comparison Tables */}
       <div className="space-y-8">
         {filteredData.map(([category, services]) => (
@@ -603,7 +596,6 @@ export default function PricingPage() {
                         ))}
                       </ul>
                     </div>
-=======
       {/* Services Pricing */}
       <div className="space-y-12">
         {filteredServices.map((service, serviceIndex) => (
@@ -690,7 +682,6 @@ export default function PricingPage() {
                     >
                       {tier.cta}
                     </a>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6180
                   </div>
                 </div>
               ))}
@@ -699,7 +690,6 @@ export default function PricingPage() {
         ))}
       </div>
 
-<<<<<<< HEAD
       {/* ROI Calculator */}
       <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-lg p-8 border border-white/10">
         <h2 className="text-2xl font-semibold mb-6 text-center">ROI Calculator</h2>
@@ -785,7 +775,6 @@ export default function PricingPage() {
           >
             Get Free Consultation
           </a>
-=======
       {/* Additional Information */}
       <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8 text-white">
         <div className="text-center space-y-4">
@@ -830,7 +819,6 @@ export default function PricingPage() {
             <h3 className="font-semibold mb-2">Is there a setup fee?</h3>
             <p className="text-sm opacity-80">No setup fees for our monthly plans. One-time services may have project-based pricing.</p>
           </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6180
         </div>
       </div>
     </div>

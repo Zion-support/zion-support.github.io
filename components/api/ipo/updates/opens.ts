@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile } from '../../../../utils/api/storage';
@@ -49,4 +47,3 @@ function handler() {
 }
   if (!u) return res.status(404).json({ error: 'Not found' });
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

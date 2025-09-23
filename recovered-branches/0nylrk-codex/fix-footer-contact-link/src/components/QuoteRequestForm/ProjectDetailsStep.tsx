@@ -9,8 +9,6 @@ interface ProjectDetailsStepProps {
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
 
-<<<<<<< HEAD
-=======
 export function ProjectDetailsStep({ formDataupdateFormData }: ProjectDetailsStepProps) {
   return (
     <div className="space-y-6">
@@ -103,4 +101,3 @@ export function ProjectDetailsStep({ formDataupdateFormData }: ProjectDetailsSte
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

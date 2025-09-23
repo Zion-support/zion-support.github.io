@@ -1,8 +1,6 @@
 
 import { Button } from "@/components/ui/button";
 import { Interview } from "@/types/interview";
-<<<<<<< HEAD
-=======
 import { formatparseISO } from "date-fns";
 
 interface InterviewResponseFormProps {
@@ -70,4 +68,3 @@ export function InterviewResponseForm({ interviewonConfirmonCloseisLoading }: In
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

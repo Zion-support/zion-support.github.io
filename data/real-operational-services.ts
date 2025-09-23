@@ -14,8 +14,6 @@ export interface RealOperationalService {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const realOperationalServices: RealOperationalService[] = [
   {
     id: "operational-intelligence",
@@ -40,4 +38,3 @@ export const realOperationalServices: RealOperationalService[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { CardContent } from "@/components/ui/card";
 import { Loader2 } from "lucide-react";
 
@@ -11,4 +9,3 @@ export function LoadingState() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

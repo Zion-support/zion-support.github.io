@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
         {/* Support Categories */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1334,4 +1332,3 @@ export default Support;
 
 export default SupportPage;
 =======
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

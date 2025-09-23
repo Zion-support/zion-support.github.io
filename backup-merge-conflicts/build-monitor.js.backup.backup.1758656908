@@ -9,7 +9,6 @@ const execAsync = promisify(exec);
 
 class BuildMonitor {
   constructor() {
-<<<<<<< HEAD
     this.isRunning = false;
     this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
     this.logLevel = process.env.LOG_LEVEL || 'info';
@@ -32,7 +31,6 @@ class BuildMonitor {
   }
 
   async checkBuildStatus() {
-=======
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
     this.reportFile = path.join(__dirname, 'reports', 'build-status.json');
     this.alertThreshold = 3; // Alert after 3 consecutive failures
@@ -263,7 +261,6 @@ class BuildMonitor {
   async run() {
     this.log('Starting build health check...');
     
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     try {
       this.log('info', 'Checking build status...');
       
@@ -285,7 +282,6 @@ class BuildMonitor {
         await this.triggerBuild();
       }
       
-<<<<<<< HEAD
       return true;
     } catch (error) {
       this.log('error', `Build check failed: ${error.message}`);
@@ -528,7 +524,6 @@ class BuildMonitor {
     }
     
     this.log('info', 'Build monitor stopped');
-=======
       if (report.healthScore < 70) {
         this.log('Build health is below threshold. Consider immediate action.', 'WARN');
       }
@@ -536,7 +531,6 @@ class BuildMonitor {
     } catch (error) {
       this.log(`Error in build monitor: ${error.message}`, 'ERROR');
     }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 }
 
@@ -544,7 +538,6 @@ class BuildMonitor {
 const monitor = new BuildMonitor();
 
 if (require.main === module) {
-<<<<<<< HEAD
   const command = process.argv[2];
   
   switch (command) {
@@ -571,10 +564,8 @@ if (require.main === module) {
     default:
       console.log('Usage: node build-monitor.js [start|stop|status|check|build|stats]');
   }
-=======
   const monitor = new BuildMonitor();
   monitor.run().catch(console.error);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }
 
 module.exports = BuildMonitor;

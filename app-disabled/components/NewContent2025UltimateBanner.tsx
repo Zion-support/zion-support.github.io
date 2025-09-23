@@ -1,7 +1,5 @@
 "use client";
 
-<<<<<<< HEAD
-=======
 import React from 'react';
 
 const NewContent2025UltimateBanner: React.FC = () => {
@@ -16,4 +14,3 @@ const NewContent2025UltimateBanner: React.FC = () => {
 };
 
 export default NewContent2025UltimateBanner;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

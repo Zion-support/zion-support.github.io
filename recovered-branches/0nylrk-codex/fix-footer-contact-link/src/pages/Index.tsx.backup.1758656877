@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { TrustedBySection } from "@/components/TrustedBySection";
@@ -21,7 +20,6 @@ import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/context/LanguageContext";
 import { 
   ArrowRight, 
-=======
 
 
 
@@ -83,7 +81,6 @@ import { useTranslation } from "react-i18next",
 import { useLanguage } from "@/context/LanguageContext",
 import { 
   ArrowRight,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   Users, 
   Zap, 
   Settings, 
@@ -92,7 +89,6 @@ import {
   Sparkles,
   BarChart3,
   Smartphone
-<<<<<<< HEAD
 } from "lucide-react";
 
 export default function Index() {
@@ -150,7 +146,6 @@ export default function Index() {
       <Header />
       <HeroSection />
       
-=======
 } from "lucide-react",
 
 export default function Index() {
@@ -260,7 +255,6 @@ function Index() {
       />
       <Header />
       <HeroSection />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -272,20 +266,17 @@ function Index() {
               {t("home.tools_description")}
             </p>
           </div>
-<<<<<<< HEAD
           
           <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
             {toolsFeatures.map((feature, index) => (
               <Link 
                 key={index} 
                 to={feature.link} 
-=======
           <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
             {toolsFeatures.map((feature, index) => (
               <Link
                 key={index}
                 to={feature.link}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300"
               >
                 <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">
@@ -298,8 +289,6 @@ function Index() {
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
                 </div>
               </Link>
-<<<<<<< HEAD
-=======
 
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -417,7 +406,6 @@ export default function Index() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -430,7 +418,6 @@ export default function Index() {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       
       <CategoriesSection />
       <BenefitsSection />
@@ -438,34 +425,27 @@ export default function Index() {;
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />
       
-=======
       <CategoriesSection />
       <BenefitsSection />
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <HowItWorksSection />
       <FeaturedListingsSection />
       <TestimonialCarousel />
       <TrustedBySection />
       <BlogSection />
-<<<<<<< HEAD
       
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />
       
-=======
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <WaitlistSection />
       <FloatingCTA />
       <Footer />
     </div>
-<<<<<<< HEAD
   );
 }
-=======
   )
 }
 
@@ -581,4 +561,3 @@ export default function Index() {;
     </div>);
 }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

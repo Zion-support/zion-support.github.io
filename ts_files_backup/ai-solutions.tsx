@@ -6,8 +6,6 @@ export default function AISolutionsPage() {
     {
       id: 'machine-learning',
       title: 'Machine Learning Solutions',
-<<<<<<< HEAD
-=======
       description: 'Custom ML models for predictive analyticspattern recognitionand intelligent decision making.',
       features: ['Predictive 'Analytics', 'Pattern 'Recognition', 'Anomaly 'Detection', 'Recommendation Systems'],
       icon: '🧠',
@@ -237,4 +235,3 @@ export default function AISolutionsPage() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

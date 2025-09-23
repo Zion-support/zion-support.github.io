@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { FormFieldFormItemFormLabelFormControlFormMessage } from "@/components/ui/form";
 import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
 import { UseFormReturn } from "react-hook-form";
@@ -52,4 +50,3 @@ export function TimelineField({ form }: TimelineFieldProps) {
     />
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

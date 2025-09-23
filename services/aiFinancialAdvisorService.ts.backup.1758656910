@@ -1,17 +1,13 @@
-<<<<<<< HEAD
 export interface InvestmentPortfolio {
-=======
 
 export interface InvestmentPortfolio {
 export interface InvestmentPortfolio {;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   id: string;
   userId: string;
   name: string;
   totalValue: number;
   currency: string;
-<<<<<<< HEAD
   riskTolerance: 'conservative' | 'moderate' | 'aggressive';
   investmentHorizon: number; // in years
   targetReturn: number;
@@ -23,7 +19,6 @@ export interface InvestmentPortfolio {;
 }
 
 export interface PortfolioAsset {
-=======
 
 
 
@@ -47,13 +42,11 @@ export interface PortfolioAsset {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   id: string;
   symbol: string;
   name: string;
   type: 'stock' | 'bond' | 'etf' | 'mutual_fund' | 'crypto' | 'real_estate' | 'commodity';
   quantity: number;
-<<<<<<< HEAD
   currentPrice: number;
   marketValue: number;
   allocation: number; // percentage of portfolio
@@ -84,7 +77,6 @@ export interface PortfolioPerformance {
 export interface InvestmentRecommendation {
   id: string;
   userId: string;
-=======
 
 
   current_price: number;
@@ -128,12 +120,10 @@ export interface InvestmentRecommendation {
 
   id: string;
   user_id: string;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   type: 'buy' | 'sell' | 'hold' | 'rebalance';
   asset: {
     symbol: string;
     name: string;
-<<<<<<< HEAD
     type: string;
     currentPrice: number;
   };
@@ -169,7 +159,6 @@ export interface MarketAnalysis {
   market: string;
   analysis: string;
   keyMetrics: Record<string, number>;
-=======
 
 
     type: string,
@@ -224,13 +213,11 @@ export interface MarketAnalysis {
   analysis: string,
   key_metrics: Record < string, number>;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   trends: string[];
   risks: string[];
   opportunities: string[];
   recommendations: string[];
   confidence: number;
-<<<<<<< HEAD
   lastUpdated: Date;
   nextUpdate: Date;
 }
@@ -252,7 +239,6 @@ export interface FinancialPlan {
     savingsRate: number;
     emergencyFund: number;
   };
-=======
 
   last_updated: Date,
   next_update: Date;
@@ -284,12 +270,10 @@ export interface FinancialPlan {
     emergency_fund: number;
 
   }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   insurance: {
     life: boolean;
     health: boolean;
     disability: boolean;
-<<<<<<< HEAD
     property: boolean;
     recommendations: string[];
   };
@@ -317,7 +301,6 @@ export interface FinancialRequest {
 }
 
 export interface FinancialResponse {
-=======
 
     property: boolean,
     recommendations: string[];
@@ -349,13 +332,11 @@ export interface FinancialResponse {
 }
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   success: boolean;
   data: {
     portfolio?: InvestmentPortfolio;
     recommendations?: InvestmentRecommendation[];
     plan?: FinancialPlan;
-<<<<<<< HEAD
     analysis?: MarketAnalysis;
     goals?: FinancialGoal[];
   };
@@ -480,7 +461,6 @@ export class AIFinancialAdvisorService {
     }
   }
 
-=======
 
 
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
@@ -600,14 +580,12 @@ export class AIFinancialAdvisorService {;
       throw error
     }
   }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   async rebalancePortfolio(portfolioId: string, targetAllocation: Record<string, number>): Promise<{
     currentAllocation: Record<string, number>;
     targetAllocation: Record<string, number>;
     rebalancingActions: Array<{
       action: 'buy' | 'sell';
       symbol: string;
-<<<<<<< HEAD
       quantity: number;
       estimatedCost: number;
     }>;
@@ -720,7 +698,6 @@ export class AIFinancialAdvisorService {;
       return data.report;
     } catch (error) {
       console.error('Error generating financial report:', error);
-=======
       quantity: number
       estimatedCost: number
     }>;
@@ -1065,22 +1042,18 @@ if ( {) {
       return data.report;
     } catch (error) {
       console.error ('Error generating financial report:', error);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       throw error;
     }
   }
 }
-<<<<<<< HEAD
 
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
-=======
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService (process.env.FINANCIAL_ADVISOR_API_KEY || 'demo - key');
 ;
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 

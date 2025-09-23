@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { CardContent } from "@/components/ui/card";
 
 interface ErrorStateProps {
@@ -17,4 +15,3 @@ export function ErrorState({ error }: ErrorStateProps) {
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -5,8 +5,6 @@ import Link from 'next/link';
 export default function ResourcesPage() {
   return (
     <UltraFuturisticBackground intensity="high" variant="quantum">
-<<<<<<< HEAD
-=======
       <SEO title="Resources | Zion Tech Group" description="Guidescase studiesupportrainingand market pricing links." canonical="https://ziontechgroup.com/resources/" />
       <div className="container mx-auto px-4 py-16 text-white">
         <div className="text-center max-w-3xl mx-auto">
@@ -36,4 +34,3 @@ export default function ResourcesPage() {
 };
 
 export default ResourcesPage;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

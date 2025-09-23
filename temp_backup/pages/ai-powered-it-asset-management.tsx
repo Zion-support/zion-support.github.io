@@ -1,6 +1,4 @@
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
 
 export default function AiPoweredItAssetManagementPage() {
   return (
@@ -21,4 +19,3 @@ export default function AiPoweredItAssetManagementPage() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

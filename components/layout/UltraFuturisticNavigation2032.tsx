@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 import React, { useState, useEffect } from 'react',
@@ -1689,4 +1687,3 @@ const companyLinks = [;
 
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

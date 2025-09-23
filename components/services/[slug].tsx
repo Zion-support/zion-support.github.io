@@ -1,7 +1,5 @@
 import Head from 'next/head';
 import Layout from '../../components/layout/Layout';
-<<<<<<< HEAD
-=======
 CheckMailMapPinPhoneExternalLink
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
@@ -312,4 +310,3 @@ const ServiceDetail: NextPage = () => {
 export default ServiceDetail;
 =======
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

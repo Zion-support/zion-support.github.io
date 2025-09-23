@@ -1,7 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 "use client";
 import React from "react";
 
@@ -15,8 +14,6 @@ export default function ScrollReveal({ children }: ScrollRevealProps) {
   return <>{children}</>;
 }
 =======
-=======
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))
 'use client';
 
 import React from 'react';
@@ -37,10 +34,7 @@ export default function ScrollReveal({ children }: ScrollRevealProps) {
 	return <>{children}</>;
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-e382
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
 =======
 >>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
 =======

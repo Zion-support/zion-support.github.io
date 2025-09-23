@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useState } from 'react';
 import StarRating from './StarRating';
@@ -132,4 +130,3 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
 };
 
 export default ReviewForm;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

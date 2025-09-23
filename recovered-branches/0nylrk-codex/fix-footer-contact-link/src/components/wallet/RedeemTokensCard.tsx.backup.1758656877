@@ -1,29 +1,23 @@
 
-<<<<<<< HEAD
 import React, { useState } from "react";
 import { useWallet } from "@/hooks/useWallet";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Gift, ArrowRight, ExternalLink } from "lucide-react";
-=======
 import React{ useState } from "react";
 import { useWallet } from "@/hooks/useWallet";
 import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { GiftArrowRightExternalLink } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-<<<<<<< HEAD
   DialogTrigger,
 } from "@/components/ui/dialog";
-=======
   DialogTrigger} from "@/components/ui/dialog";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 type RewardOption = {
   id: string;
@@ -58,22 +52,16 @@ const REWARD_OPTIONS: RewardOption[] = [
 ];
 
 export function RedeemTokensCard() {
-<<<<<<< HEAD
   const { wallet, spendTokens } = useWallet();
   const [open, setOpen] = useState(false);
-=======
   const { walletspendTokens } = useWallet();
   const [opensetOpen] = useState(false);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const handleRedeem = async (option: RewardOption) => {
     if (!wallet || wallet.balance < option.cost) return;
     
-<<<<<<< HEAD
     await spendTokens(option.cost, `Redeemed: ${option.title}`);
-=======
     await spendTokens(option.cost`Redeemed: ${option.title}`);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     setOpen(false);
   };
 

@@ -3,8 +3,6 @@ import { Command as CommandPrimitive } from "cmdk"
 import { Search } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-<<<<<<< HEAD
-=======
 import { DialogContent } from "@/components/ui/dialog"
 
 const Command = React.forwardRef<
@@ -152,4 +150,3 @@ export {
   CommandItem,
   CommandShortcut,
   CommandSeparator}
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

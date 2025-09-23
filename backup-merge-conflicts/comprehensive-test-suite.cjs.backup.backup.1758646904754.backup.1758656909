@@ -7,7 +7,6 @@
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 
 class ComprehensiveTestSuite {
   constructor() {
@@ -270,7 +269,6 @@ module.exports = ComprehensiveTestSuite) {
     .catch(() => process.exit(1))}
 
 module.exports = ComprehensiveTestSuite}
-=======
     this.logDir = path.join(this.projectRoot, 'automation', 'logs')
   log(message, level = 'INFO')
   log(message, level = 'INFO')
@@ -313,4 +311,3 @@ module.exports = ComprehensiveTestSuite}
         "command": 'grep -r "aria-" --include="*.tsx" --include="*.jsx"
         "description"
       this.log(` Test suite "failed"`)
->>>>>>> main

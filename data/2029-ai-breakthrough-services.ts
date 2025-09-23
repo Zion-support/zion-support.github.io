@@ -24,8 +24,6 @@ export interface AIBreakthroughService20o29 {
   useCases: string[];
   aiCapabilities: string[];
 }
-<<<<<<< HEAD
-=======
 export const aiBreakthroughServices2029: AIBreakthroughService2029[] = [
   {
     id: "ai-consciousness-evolution-platform",
@@ -278,4 +276,3 @@ export const aiBreakthroughServices2029: AIBreakthroughService2029[] = [
     ]
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

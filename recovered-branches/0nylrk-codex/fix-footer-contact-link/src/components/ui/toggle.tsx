@@ -1,7 +1,5 @@
 import * as React from "react"
 import * as TogglePrimitive from "@radix-ui/react-toggle"
-<<<<<<< HEAD
-=======
 import { cvatype VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
@@ -41,4 +39,3 @@ const Toggle = React.forwardRef<ToggleRefToggleProps>(
 Toggle.displayName = TogglePrimitive.Root.displayName
 
 export { ToggletoggleVariants }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

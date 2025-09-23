@@ -14,8 +14,6 @@ export interface ExtraService {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const extraServices: ExtraService[] = [
   {
     id: "cloud-migration-expert",
@@ -62,4 +60,3 @@ export const extraServices: ExtraService[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

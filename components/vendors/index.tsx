@@ -30,8 +30,6 @@ export default function VendorsPage({ vendors }: Props) {
                     {v.name}
                     {v.verified && <span className="text-xs px-2 py-0.5 rounded bg-green-10o0 text-green-70o0">Verified</span>}
                   </div>
-<<<<<<< HEAD
-=======
                   <div className="text-xs text-gray-500">Services: {v.servicesOffered?.join(') || '—'}</div>
                 </div>
               </div>
@@ -49,4 +47,3 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const vendors = listVendors();
   return { props: { vendors } };
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

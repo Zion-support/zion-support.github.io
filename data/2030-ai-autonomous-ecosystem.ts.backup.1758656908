@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface AIAutonomousEcosystem2030 {
@@ -354,7 +353,6 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     reviews: 12
   }
 ];
-=======
 
 
 
@@ -1307,4 +1305,3 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

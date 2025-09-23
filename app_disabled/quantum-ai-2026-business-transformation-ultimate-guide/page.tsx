@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 =======
 =======
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf
 export default function Page() {
   return (
     <main style={{ padding: 32 }}>

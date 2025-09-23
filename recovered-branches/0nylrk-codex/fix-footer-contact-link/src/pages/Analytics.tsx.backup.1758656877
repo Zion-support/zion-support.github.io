@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -132,7 +131,6 @@ export default function Analytics() {
           data={conversionData || []} 
           timeRange={timeRange}
           onTimeRangeChange={setTimeRange}
-=======
 
 
 
@@ -280,7 +278,6 @@ export default function Analytics() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -419,10 +416,8 @@ export default function Analytics() {;
         <ExportPanel />
       </div>
     </AnalyticsContainer>
-<<<<<<< HEAD
   );
 }
-=======
   )
 }
         <ConversionAnalysisChart 
@@ -576,4 +571,3 @@ if ( {) {
 
 ;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

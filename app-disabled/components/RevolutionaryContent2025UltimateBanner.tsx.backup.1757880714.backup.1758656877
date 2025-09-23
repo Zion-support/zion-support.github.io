@@ -52,7 +52,6 @@ const RevolutionaryContent2025UltimateBanner: React.FC = () => {
       featured: true
     },
     {
-<<<<<<< HEAD
       id: "implementation-roadmap",
       title: "AI 2025 Implementation Ultimate Roadmap",
       subtitle: "From Strategy to 700% ROI in 12 Months - Comprehensive Guide",
@@ -93,13 +92,11 @@ const RevolutionaryContent2025UltimateBanner: React.FC = () => {
       url: "/case-studies/ai-2025-autonomous-systems-revolution-success-story",
       type: "case-study",
       featured: true
-=======
       title: "Neural Interface Technology",
       subtitle: "Direct Brain-Computer Integration",
       description: "Seamless human-AI collaboration through advanced neural interfaces",
       cta: "Discover Now",
       link: "/neural-interfaces-2025"
->>>>>>> 0898e5119e1743cc34bc24d7b78e613422d39ff1
     }
   ];
 
@@ -162,7 +159,6 @@ const RevolutionaryContent2025UltimateBanner: React.FC = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
-<<<<<<< HEAD
 
         {/* Progress Indicator */}
         <div className="flex justify-center mb-8">
@@ -270,8 +266,6 @@ const RevolutionaryContent2025UltimateBanner: React.FC = () => {
             ))}
           </div>
         </div>
-=======
->>>>>>> 0898e5119e1743cc34bc24d7b78e613422d39ff1
       </div>
     </div>
   );

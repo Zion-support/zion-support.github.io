@@ -8,8 +8,6 @@ import {
   Tabs,
   TabsContent,
   TabsList,
-<<<<<<< HEAD
-=======
   TabsTrigger} from "@/components/ui/tabs";
 
 export function BillingDashboard() {
@@ -44,4 +42,3 @@ export function BillingDashboard() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

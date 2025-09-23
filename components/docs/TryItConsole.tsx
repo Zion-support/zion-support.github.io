@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 
@@ -234,4 +232,3 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
 
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "timestamp": "2025-08-19T03:44:21.621Z",
   "critical": [],
   "high": [
@@ -91,46 +90,36 @@
       ]
     },
     {
-=======
   "timestamp": "2025-08-18T03:03:40.801Z",
   "critical": [],
   "high": [],
   "medium": [
     {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       "workflow": "dependencies.yml",
       "status": "active",
       "complexityScore": 30,
       "complexityLevel": "medium",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 104,
         "jobCount": 0,
         "stepCount": 8,
-=======
         "totalLines": 110,
         "jobCount": 0,
         "stepCount": 7,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "conditionalCount": 3,
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
-<<<<<<< HEAD
         "secretCount": 2,
         "actionCount": 4
-=======
         "secretCount": 3,
         "actionCount": 6
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       },
       "refactoringStrategy": [
         "Extract common functionality to reusable workflows"
       ]
     },
     {
-<<<<<<< HEAD
-=======
       "workflow": "dependency-maintenance.yml",
       "status": "active",
       "complexityScore": 35,
@@ -152,13 +141,11 @@
       ]
     },
     {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       "workflow": "exponential-agent-factory-proliferation.yml",
       "status": "active",
       "complexityScore": 35,
       "complexityLevel": "medium",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 130,
         "jobCount": 0,
         "stepCount": 9,
@@ -171,7 +158,6 @@
       },
       "refactoringStrategy": [
         "Consider parallel workflow execution",
-=======
         "totalLines": 489,
         "jobCount": 0,
         "stepCount": 13,
@@ -183,14 +169,12 @@
         "actionCount": 1
       },
       "refactoringStrategy": [
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "Extract common functionality to reusable workflows"
       ]
     },
     {
       "workflow": "maintenance.yml",
       "status": "active",
-<<<<<<< HEAD
       "complexityScore": 35,
       "complexityLevel": "medium",
       "metrics": {
@@ -206,7 +190,6 @@
       },
       "refactoringStrategy": [
         "Break down into smaller job steps",
-=======
       "complexityScore": 30,
       "complexityLevel": "medium",
       "metrics": {
@@ -323,7 +306,6 @@
         "actionCount": 5
       },
       "refactoringStrategy": [
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "Extract common functionality to reusable workflows"
       ]
     },
@@ -333,11 +315,8 @@
       "complexityScore": 35,
       "complexityLevel": "medium",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 112,
-=======
         "totalLines": 125,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 15,
         "conditionalCount": 3,
@@ -352,8 +331,6 @@
       ]
     },
     {
-<<<<<<< HEAD
-=======
       "workflow": "release.yml",
       "status": "active",
       "complexityScore": 30,
@@ -374,17 +351,13 @@
       ]
     },
     {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       "workflow": "seo-audit.yml",
       "status": "active",
       "complexityScore": 30,
       "complexityLevel": "medium",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 117,
-=======
         "totalLines": 114,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 13,
         "conditionalCount": 4,
@@ -399,7 +372,6 @@
       ]
     },
     {
-<<<<<<< HEAD
       "workflow": "test-suite.yml",
       "status": "active",
       "complexityScore": 40,
@@ -442,20 +414,15 @@
       ]
     },
     {
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       "workflow": "workflow-manager.yml",
       "status": "active",
       "complexityScore": 40,
       "complexityLevel": "medium",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 187,
         "jobCount": 0,
-=======
         "totalLines": 148,
         "jobCount": 1,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "stepCount": 12,
         "conditionalCount": 4,
         "matrixCount": 0,
@@ -467,8 +434,6 @@
       "refactoringStrategy": [
         "Extract common functionality to reusable workflows"
       ]
-<<<<<<< HEAD
-=======
     },
     {
       "workflow": "workflow-validator.yml",
@@ -529,7 +494,6 @@
       "refactoringStrategy": [
         "Extract common functionality to reusable workflows"
       ]
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   ],
   "low": []

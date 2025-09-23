@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -522,4 +520,3 @@ export default function Comprehensive2026ServicesShowcase() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

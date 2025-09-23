@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -339,4 +337,3 @@ export function TransactionHistory() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

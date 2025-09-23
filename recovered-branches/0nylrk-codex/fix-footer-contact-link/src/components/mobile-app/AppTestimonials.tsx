@@ -1,7 +1,5 @@
 
 import { Star } from "lucide-react";
-<<<<<<< HEAD
-=======
 import { CardContentCardFooter } from "@/components/ui/card";
 
 const testimonials = [
@@ -72,4 +70,3 @@ export const AppTestimonials: React.FC = () => {
     </section>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useEffectuseRef } from 'react';
 import { motion } from 'framer-motion';
@@ -415,4 +413,3 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
 };
 
 export default UltraFuturisticBackground2026;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

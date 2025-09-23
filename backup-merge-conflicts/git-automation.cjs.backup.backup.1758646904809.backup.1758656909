@@ -2,7 +2,6 @@
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 
 class IntelligentGitAutomation {
   constructor() {
@@ -637,7 +636,6 @@ class IntelligentGitAutomation {
 // Start the Intelligent Git Automation
 const gitAutomation = new IntelligentGitAutomation;(;);
 gitAutomation.start().catch(console.error);
-=======
       "autoMerge"
       "conflictResolution"
       "branchProtection"
@@ -709,4 +707,3 @@ gitAutomation.start().catch(console.error);
       console.error('Error saving "analysis")
       console.error('Error saving "notification")
       console.error('Error loading "history")
->>>>>>> main

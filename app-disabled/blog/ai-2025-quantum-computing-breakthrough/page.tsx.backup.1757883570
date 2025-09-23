@@ -1,7 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-<<<<<<< HEAD
 import SEO from '../../../components/SEO';
 
 export const metadata: Metadata = {
@@ -17,7 +16,6 @@ export default function AI2025QuantumComputingPage() {
         title="AI 2025: The Quantum Computing Breakthrough That's Reshaping Enterprise"
         description="Discover how quantum computing breakthroughs in 2025 are revolutionizing AI capabilities and creating unprecedented opportunities for enterprise transformation."
         keywords="quantum computing, AI, enterprise, breakthrough, 2025"
-=======
 =======
 import SEO from '../../components/SEO';
 
@@ -50,7 +48,6 @@ export default function AI2025QuantumComputingBreakthroughPage() {
         <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-20">
 =======
         <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-20">
->>>>>>> 0502a598e03c560839d6a6495f98d9e658772407
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
@@ -141,9 +138,6 @@ export default function AI2025QuantumComputingBreakthroughPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
->>>>>>> 0502a598e03c560839d6a6495f98d9e658772407
 >>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e:app/blog/ai-2025-quantum-computing-breakthrough/page.tsx.backup.1757883570
       </div>
     </>

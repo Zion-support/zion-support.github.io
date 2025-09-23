@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useState } from 'react';
 import Head from 'next/head';
@@ -15,7 +13,6 @@ ActivityZapTrendingUpAlertTriangleCheckCircleArrowRightMonitorGaugeBarChart3Cloc
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function WebsitePerformanceMonitorPage() {
   const [isAnalyzingsetIsAnalyzing] = useState(false);
   const [analysisResultsetAnalysisResults] = useState(null);

@@ -1,6 +1,4 @@
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { Button } from '../components/ui/Button';
 import { Bot, CheckCircle, Zap, Shield, Network, Workflow, DollarSign, ExternalLink, Phone, Mail, MapPin } from 'lucide-react';
@@ -297,4 +295,3 @@ export default function AIAssistantPage() {
     </Layout>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

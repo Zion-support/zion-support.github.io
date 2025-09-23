@@ -13,8 +13,6 @@ axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontec
 export const globalAxiosErrorHandler = (error: unknown) => {
   const contentType = typeof error === 'object' && error && 'response' in error && error.response && 'headers' in error.response ? (error.response as { headers?: Record<string, unknown> }).headers?.['content-type'] : undefined;
   if (typeof contentType === 'string' && contentType.includes('text/html')) {
-<<<<<<< HEAD
-=======
     toast.error('Server returned HTML instead of JSON');
   }
 
@@ -135,4 +133,3 @@ apiClient.interceptors.response.use(
 );
 
 export default apiClient;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

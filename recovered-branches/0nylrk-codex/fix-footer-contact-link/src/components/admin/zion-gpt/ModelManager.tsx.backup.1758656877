@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -90,7 +89,6 @@ export function ZionGPTModelManager() {
     }
   };
 
-=======
 
 
 
@@ -145,7 +143,6 @@ interface ModelVersionData extends ModelConfig {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -270,11 +267,9 @@ if (throw error) {
         await supabase
           .from('model_versions')
           .update({ active: false })
-<<<<<<< HEAD
           .eq('purpose', purpose);
       }
       
-=======
           .eq('purpose', purpose)
       }
       // Update this model
@@ -399,13 +394,11 @@ export function ZionGPTModelManager() {;
           .update({ active: false });
           .eq('purpose', purpose);
       }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       // Update this model
       await supabase
         .from('model_versions')
         .update({ active: !currentActive })
         .eq('id', modelId);
-<<<<<<< HEAD
       
       // Refresh the model list
       fetchModels();
@@ -497,7 +490,6 @@ export function ZionGPTModelManager() {;
                         )}
                       </Button>
                     ) : (
-=======
 
       // Refresh the model list;
       fetchModels();
@@ -513,7 +505,6 @@ export function ZionGPTModelManager() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
@@ -611,7 +602,6 @@ export function ZionGPTModelManager() {;
                         variant="ghost"
                         size="sm"
                         className="text-red-500"
-<<<<<<< HEAD
                         title={model.errorMessage || "Training failed"}
                       >
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
@@ -627,7 +617,6 @@ export function ZionGPTModelManager() {;
     </Card>
   );
 }
-=======
 
                         title={model && model.errorMessage || "Training failed"}>;
                         <AlertCircle className="h-4 w-4 mr-1" /> Error;
@@ -646,7 +635,6 @@ export function ZionGPTModelManager() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

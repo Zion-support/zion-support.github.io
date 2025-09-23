@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { useStateuseEffect } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
@@ -158,4 +156,3 @@ export function JobsList({ filteronSelectJob }: JobsListProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,19 +1,15 @@
-<<<<<<< HEAD
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { AlertTriangle } from 'lucide-react'
 import Link from 'next/link'
 import Head from 'next/head'
-=======
 import React from 'react';
 import Head from 'next/head';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export default function ErrorPage() {
   return (
     <>
       <Head>
-<<<<<<< HEAD
         <title>Authentication Error - Zion Tech Marketplace</title>
         <meta name="description" content="Authentication error page" />
       </Head>
@@ -64,7 +60,6 @@ export default function ErrorPage() {
     </>
   )
 } 
-=======
         <title>Error - Zion Tech Group</title>
         <meta name="description" content="error page" />
       </Head>
@@ -80,4 +75,3 @@ export default function ErrorPage() {
     </>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

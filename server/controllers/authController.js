@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const User = require('../models/User');
@@ -57,5 +56,3 @@ exports.registerUser = async function (req, res) {
 };
 // Maintain backwards compatibility if other modules still call `register`
 exports.register = exports.registerUser;
-=======
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

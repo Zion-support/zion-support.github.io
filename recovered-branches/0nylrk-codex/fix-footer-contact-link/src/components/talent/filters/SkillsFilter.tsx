@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { ChevronDownChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -64,4 +62,3 @@ export function SkillsFilter({ selectedSkillstoggleSkillexpandedtoggleSectionisM
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

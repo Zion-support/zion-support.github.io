@@ -4,8 +4,6 @@ import React, {useState, useEffect} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {Settings, FileText, Eye, Zap, Volume2, VolumeX} from 'lucide-react';
 import {Button} from "button.tsx";
-<<<<<<< HEAD
-=======
 =======
 export function AccessibilityMenu($1) {
     const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +13,6 @@ export function AccessibilityMenu($1) {
         "reducedMotion": false,
         "soundEnabled": true
     };);
->>>>>>> main
     useEffect(() => {
         // Load settings from localStorage
 >>>>>>> main

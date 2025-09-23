@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 
 export default function AboutPage() {
@@ -113,7 +112,6 @@ export default function AboutPage() {
               We envision a future where autonomous AI systems handle routine operations, 
               while human creativity and strategic thinking focus on breakthrough innovations 
               and growth opportunities.
-=======
 "use client";
 
 export default function AboutPage() {
@@ -205,13 +203,11 @@ export default function AboutPage() {
             <p className="text-sm opacity-80">
               We prioritize the security and privacy of your data, implementing enterprise-grade security 
               measures and compliance standards.
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e179
             </p>
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Company Values */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="text-center mb-12">
@@ -344,7 +340,6 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-=======
       {/* Services Overview */}
       <div className="space-y-6">
         <h2 className="text-2xl font-bold text-center">What We Do</h2>
@@ -364,12 +359,10 @@ export default function AboutPage() {
           <div className="p-4 border border-white/10 rounded-lg text-center">
             <h3 className="font-semibold mb-2">Consulting</h3>
             <p className="text-sm opacity-80">Strategic technology guidance and implementation support</p>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e179
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-white/10 rounded-xl p-12">
@@ -386,7 +379,6 @@ export default function AboutPage() {
             <Link href="/services" className="border border-white/20 hover:border-white/40 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 hover:bg-white/10">
               Explore Our Services
             </Link>
-=======
       {/* Team Section */}
       <div className="space-y-6">
         <h2 className="text-2xl font-bold text-center">Leadership Team</h2>
@@ -527,7 +519,6 @@ export default function AboutPage() {
               <p>• ISO 27001 Certified</p>
               <p>• PCI DSS Compliant</p>
             </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e179
           </div>
         </div>
       </div>

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export interface CuttingEdgeInnovationService2027 {
   id: string;
   name: string;
@@ -598,4 +596,3 @@ export const cuttingEdgeInnovationServices2027: CuttingEdgeInnovationService2027
     ]
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

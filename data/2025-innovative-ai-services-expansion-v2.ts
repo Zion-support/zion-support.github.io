@@ -49,8 +49,6 @@ export const innovativeAIServices20o25ExpansionV2 = [
     rating: 4.9,
     reviews: 34
   },
-<<<<<<< HEAD
-=======
   // Quantum AI Neural Network Platform
   {
     id: 'quantum-ai-neural-network-platform',
@@ -814,4 +812,3 @@ export const innovativeAIServices20o25ExpansionV2 = [
     reviews: 67
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

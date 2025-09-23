@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
       req && req.body || {};
 
@@ -117,4 +115,3 @@ import { createPartner } from "../../../utils/api/partnerAuth";
 }
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

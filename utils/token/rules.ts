@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { TokenConfig } from "./types",
 
 export const DEFAULT_TOKEN_CONFIG: TokenConfig = {
@@ -16,4 +14,3 @@ export const DEFAULT_TOKEN_CONFIG: TokenConfig = {
     promote_job: 150,
     resume_ai_optimization: 80,
     featured_badge: 200}},
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

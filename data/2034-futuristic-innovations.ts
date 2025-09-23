@@ -25,8 +25,6 @@ export interface Service20o34 {
   contact: string;
   website: string;
 }
-<<<<<<< HEAD
-=======
 export const futuristic2034Services: Service2034[] = [
   {
     id: 'ai-quantum-hybrid-brain',
@@ -371,4 +369,3 @@ export const futuristic2034Services: Service2034[] = [
     website: 'https://ziontechgroup.com/quantum-financial-prediction'
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

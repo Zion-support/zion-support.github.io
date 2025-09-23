@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 export interface QRCodeOptions {
-=======
 
 export interface QRCodeOptions {
 export interface QRCodeOptions {;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   text: string;
   size?: number;
   foregroundColor?: string;
@@ -15,7 +12,6 @@ export interface QRCodeOptions {;
   format?: 'svg' | 'png' | 'jpeg' | 'webp';
   logo?: {
     url: string;
-<<<<<<< HEAD
     width: number;
     height: number;
   };
@@ -77,7 +73,6 @@ class QRCodeService {
   }
 
   async generateBusinessCardQR(data: {
-=======
 
 
 
@@ -186,13 +181,11 @@ class QRCodeService {
   }
   async generateBusinessCardQR (data: {
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     name: string;
     company: string;
     title: string;
     email: string;
     phone: string;
-<<<<<<< HEAD
     website?: string;
     address?: string;
   }): Promise<QRCodeResult> {
@@ -310,7 +303,6 @@ class QRCodeService {
         description: 'Quick dial with pre-filled number',
         options: { size: 256, errorCorrectionLevel: 'M' },
         category: 'personal'
-=======
 
     const vcard = this && this.generateVCard(data);
     
@@ -635,12 +627,10 @@ class QRCodeService {;
   getErrorCorrectionInfo(): Record<string, any> {
     return this.ERROR_CORRECTION_LEVELS
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       }
     ];
   }
 
-<<<<<<< HEAD
   getErrorCorrectionInfo(): Record<string, any> {
     return this.ERROR_CORRECTION_LEVELS;
   }
@@ -656,14 +646,12 @@ class QRCodeService {;
     
     if (options.margin && (options.margin < 0 || options.margin > 10)) {
       throw new Error('Margin must be between 0 and 10');
-=======
 
 
 
   getErrorCorrectionInfo(): Record<string, any> {
     return this.ERROR_CORRECTION_LEVELS
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 ;
   getErrorCorrectionInfo(): Record<string any> {;
@@ -706,7 +694,6 @@ class QRCodeService {;
   private async generateQRCodeDataUrl(options: QRCodeOptions): Promise<string> {
     // In a real implementation, this would use a QR code library
     // For now, we'll generate a placeholder SVG
-<<<<<<< HEAD
     
     const size = options.size!;
     const margin = options.margin!;
@@ -726,7 +713,6 @@ class QRCodeService {;
 
   private generateVCard(data: any): string {
     let vcard = 'BEGIN:VCARD\nVERSION:3.0\n';
-=======
     const size = options.size!;
     const margin = options.margin!;
     const contentSize = size - (margin * 2);
@@ -816,13 +802,11 @@ if (.length === 0) {) {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     vcard += `FN:${data.name}\n`;
     vcard += `ORG:${data.company}\n`;
     vcard += `TITLE:${data.title}\n`;
     vcard += `EMAIL:${data.email}\n`;
     vcard += `TEL:${data.phone}\n`;
-<<<<<<< HEAD
     
     if (data.website) vcard += `URL:${data.website}\n`;
     if (data.address) vcard += `ADR:;;${data.address};;\n`;
@@ -906,7 +890,6 @@ if (.length === 0) {) {
   getQRCodeHistory(): QRCodeResult[] {
     // In a real app, this would retrieve from storage
     return [];
-=======
 
     let vcard = 'BEGIN:VCARD\nVERSION:3 && 3.0\n',
     vcard += `FN:${data && data.name}\n`;
@@ -1041,7 +1024,6 @@ if (.length === 0) {) {
 
 
   private generateGeoString(data: any): string {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1158,13 +1140,11 @@ if (.length === 0) {) {
 
   saveQRCode(qrCode: QRCodeResult): void {
     // In a real app, this would save to storage
-<<<<<<< HEAD
     console.log('QR Code saved:', qrCode.options.text);
   }
 }
 
 export const qrCodeService = new QRCodeService();
-=======
 
     console.log('QR Code saved:', qrCode.options.text)
   }
@@ -1286,7 +1266,6 @@ export const qrCodeService = new QRCodeService ();
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React from 'react';
 CheckCircle
 import { TooltipContentTooltipProviderTooltipTrigger } from '@/components/ui/tooltip';
@@ -34,4 +32,3 @@ export function VerifiedBadge({ verifiedsize = 'sm' }: VerifiedBadgeProps) {
     </TooltipProvider>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

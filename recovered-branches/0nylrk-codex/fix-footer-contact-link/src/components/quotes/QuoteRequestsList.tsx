@@ -9,8 +9,6 @@ type QuoteRequestsListProps = {
   isArchived: boolean;
   onViewDetails: (quote: QuoteRequest) => void;
   onMarkAsResponded: (id: string) => void;
-<<<<<<< HEAD
-=======
   onToggleArchive: (id: stringisArchived: boolean) => void;
 };
 
@@ -48,4 +46,3 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
     </div>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

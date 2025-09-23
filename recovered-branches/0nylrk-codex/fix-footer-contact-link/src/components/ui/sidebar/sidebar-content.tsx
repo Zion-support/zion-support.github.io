@@ -8,8 +8,6 @@ import type { SafeRef } from "../sidebar.types"
 export const SidebarInput = React.forwardRef<
   React.ElementRef<typeof Input>,
   React.ComponentProps<typeof Input>
-<<<<<<< HEAD
-=======
 >((propsref) => {
   return (
     <Input
@@ -102,4 +100,3 @@ export const SidebarGroup = React.forwardRef<
   )
 })
 SidebarGroup.displayName = "SidebarGroup"
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

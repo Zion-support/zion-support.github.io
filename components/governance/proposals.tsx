@@ -7,8 +7,6 @@ export async function getStaticProps(){
     const raw = fs.readFileSync(p,'utf8')
     return { props: { data: JSON.parse(raw) } }
   }catch{
-<<<<<<< HEAD
-=======
     return { props: { data: { updatedAt: nullproposals: [] } } }
   }
 }
@@ -31,4 +29,3 @@ export default function Proposals({ data }: { data: { updatedAt: string|nullprop
     </div>
   )
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

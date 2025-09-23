@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React{ useStateuseRefuseEffectDispatchSetStateAction } from 'react';
 import { motionAnimatePresence } from 'framer-motion';
 MessageCircleXSendBotUserSparklesChevronUpChevronDown
@@ -290,4 +288,3 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
 };
 
 export default AIChatbot;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

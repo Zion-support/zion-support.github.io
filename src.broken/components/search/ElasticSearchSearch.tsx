@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React{ useState } from 'react';
 
 export default function ElasticSearchSearch() {
@@ -24,4 +22,3 @@ export default function ElasticSearchSearch() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

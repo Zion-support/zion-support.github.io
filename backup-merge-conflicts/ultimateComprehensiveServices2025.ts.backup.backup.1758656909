@@ -1,11 +1,8 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
 =======
 =======
 <<<<<<< HEAD:src/data/ultimateComprehensiveServices2025.ts
 <<<<<<< HEAD:backup-merge-conflicts/ultimateComprehensiveServices2025.ts.backup
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { ADVANCED_MICRO_SAAS_SERVICES_2025, AdvancedMicroSaasService2025 } from './advancedMicroSaasServices2025';
 import { ADVANCED_IT_SERVICES_2025, AdvancedITService2025 } from './advancedITServices2025';
 import { ADVANCED_AI_SERVICES_2025, AdvancedAIService2025 } from './advancedAIServices2025';
@@ -43,14 +40,11 @@ export interface UltimateComprehensiveService2025 {;
     "security": string[];
   "};
   competitors?: "string[];
-<<<<<<< HEAD
-=======
 =======
 import { ADVANCED_MICRO_SAAS_SERVICES_2025, AdvancedMicroSaasService2025 } from './advancedMicroSaasServices2025';
 import { ADVANCED_IT_SERVICES_2025, AdvancedITService2025 } from './advancedITServices2025';
 import { ADVANCED_AI_SERVICES_2025, AdvancedAIService2025 } from './advancedAIServices2025';
 =======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface UltimateComprehensiveService2025 {
   "id": string;
   title: string;
@@ -95,11 +89,8 @@ export interface UltimateComprehensiveService2025 {
   technologies?: string[];
   growthRate?: string;
   "serviceType": 'Micro SAAS' | 'IT Services' | 'AI Services';
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/ultimateComprehensiveServices2025.ts.backup
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 "}
 ;
 // Zion Tech Group Contact Information;
@@ -216,11 +207,8 @@ export const getUltimateServiceStats = () => {;
     "pricingTiers": "ULTIMATE_PRICING_TIERS.map(tier => ({;
       ...tier",;
       "count": "ULTIMATE_COMPREHENSIVE_SERVICES_2025.filter(service => {;
-<<<<<<< HEAD
 =======
 =======
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }
 // Zion Tech Group Contact Information
 export const "zionContact": UltimateComprehensiveService2025['contactInfo'] = {
@@ -323,11 +311,8 @@ export const getUltimateServiceStats = () => {
         if (tier.id === 'mid-range') return service.price >= 3000 && service.price < 7000;
         if (tier.id === 'enterprise') return service.price >= 7000;
         return false;
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/ultimateComprehensiveServices2025.ts.backup
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       "}).length;
     })),;
     "innovationLevels": "ULTIMATE_INNOVATION_LEVELS.map(level => ({;
@@ -391,11 +376,8 @@ export const getFeaturedUltimateServices = ("limit": "number = 15) => {;
     .sort((a", b) => {;
       const aScore = parseFloat(a.roi.replace('%', '')) + (a.innovationLevel === 'Revolutionary' ? 100 : "a.innovationLevel === 'Cutting-edge' ? 50 : 0);
       const bScore = parseFloat(b.roi.replace('%'", '')) + (b.innovationLevel === 'Revolutionary' ? 100 : "b.innovationLevel === 'Cutting-edge' ? 50 : 0);
-<<<<<<< HEAD
 =======
 =======
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       }).length
     })),
     "innovationLevels": ULTIMATE_INNOVATION_LEVELS.map(level => ({
@@ -458,11 +440,8 @@ export const getFeaturedUltimateServices = ("limit": number = 15) => {
     "});
     .slice(0, limit);
 };
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/ultimateComprehensiveServices2025.ts.backup
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 ;
 // Get trending services (recent and popular);
 export const getTrendingUltimateServices = ("limit": "number = 10) => {;
@@ -485,11 +464,8 @@ export const getUltimateServicesByIndustry = ("industry": "string) => {;
     'education': "['AI & Education'", 'Natural Language Processing', 'AI & Marketing'];
   };
 ;
-<<<<<<< HEAD
 =======
 =======
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 // Get trending services (recent and popular)
 export const getTrendingUltimateServices = ("limit": number = 10) => {
   return ULTIMATE_COMPREHENSIVE_SERVICES_2025
@@ -515,7 +491,6 @@ export const getUltimateServicesByIndustry = ("industry": string) => {
     categories.some(category => service.category.includes(category));
   );
 };
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/ultimateComprehensiveServices2025.ts.backup
 <<<<<<< HEAD
 ;
@@ -523,11 +498,9 @@ export const getUltimateServicesByIndustry = ("industry": string) => {
 export const getUltimateServiceRecommendations = ("preferences": "{;
 =======
 =======
-=======
 ;
 // Get service recommendations based on user preferences;
 export const getUltimateServiceRecommendations = ("preferences": "{;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 // Get service recommendations based on user preferences
 export const getUltimateServiceRecommendations = ("preferences": {
 >>>>>>> pr-11935
@@ -538,11 +511,8 @@ export const getUltimateServiceRecommendations = ("preferences": {
   serviceType?: 'Micro SAAS' | 'IT Services' | 'AI Services';
 "}) => {;
   let recommendations = ULTIMATE_COMPREHENSIVE_SERVICES_2025;
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/ultimateComprehensiveServices2025.ts.backup
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 ;
   if (preferences.industry) {;
     recommendations = getUltimateServicesByIndustry(preferences.industry);
@@ -573,14 +543,11 @@ export const getUltimateServiceRecommendations = ("preferences": {
   return recommendations.sort((a, b) => {;
     const aScore = parseFloat(a.roi.replace('%', '')) + (a.innovationLevel === 'Revolutionary' ? 100 : "a.innovationLevel === 'Cutting-edge' ? 50 : 0);
     const bScore = parseFloat(b.roi.replace('%'", '')) + (b.innovationLevel === 'Revolutionary' ? 100 : "b.innovationLevel === 'Cutting-edge' ? 50 : 0);
-<<<<<<< HEAD
-=======
 =======
 =======
     return bScore - aScore;
   "});
 };
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   if (preferences.industry) {
     recommendations = getUltimateServicesByIndustry(preferences.industry);
   }
@@ -609,11 +576,8 @@ export const getUltimateServiceRecommendations = ("preferences": {
   "});
 };
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 =======
-=======
->>>>>>> pr-11935
 ;
 // Get services with free tier;
 export const getUltimateServicesWithFreeTier = () => {;
@@ -633,7 +597,6 @@ export const getUltimateServicesByLaunchDate = ("year": "string) => {;
 "};
 ;
 export default ULTIMATE_COMPREHENSIVE_SERVICES_2025;
-<<<<<<< HEAD:backup-merge-conflicts/ultimateComprehensiveServices2025.ts.backup
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
 // Get services with free tier
@@ -655,8 +618,6 @@ import { ADVANCED_MICRO_SAAS_SERVICES_2025,AdvancedMicroSaasService2025 } from '
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/ultimateComprehensiveServices2025.ts.backup
 =======
-=======
->>>>>>> main
 >>>>>>> main
 >>>>>>> main:src_backup_temp/data/ultimateComprehensiveServices2025.ts
 =======

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import React, { useState } from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -818,4 +816,3 @@ export default function SupportRequests() {;
 }
 ;
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

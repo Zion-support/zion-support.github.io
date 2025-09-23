@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 =======
 import React, {useState, createContext, useContext, useCallback} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
@@ -40,7 +38,6 @@ export function NotificationProvider("props": "any) {;
         // Auto-dismiss after duration
         if (newNotification.duration && newNotification.duration > 0) {
             setTimeout(() => {
->>>>>>> main
 
 =======
 >>>>>>> pr-11935
@@ -78,7 +75,6 @@ function NotificationContainer("props": "any) {;
         return null;
 =======
 =======
-<<<<<<< HEAD
     return (<div className={`fixed z-50 ${getPositionClasses(position)} max-w-sm w-full`}>;
 >>>>>>> pr-11935
     return (
@@ -208,7 +204,6 @@ function NotificationItem("props": "any) {;
       </div>;
     </motion.div>)}
 =======
-=======
 // Convenience functions for quick notifications;
 export function showInfo("props": "any) {;
     return { "type": 'info'", title, message, ...options }}
@@ -216,7 +211,6 @@ export function showInfo("props": "any) {;
 </motion>;
 </motion>;
 </NotificationContext>
->>>>>>> pr-11935
 // Convenience functions for quick notifications
 export function showInfo(props: any) {
     return { type: 'info', title, message, ...options }}

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import { ServiceVariant } from '../types/service-variants';
 
@@ -1003,7 +1001,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
   }
 ];
 

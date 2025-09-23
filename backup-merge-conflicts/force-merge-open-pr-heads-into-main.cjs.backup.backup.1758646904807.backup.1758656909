@@ -59,7 +59,6 @@ async function main() {}
     attempted++;
     const head = pr.head && pr.head.ref;
     if (!head) continue;
-<<<<<<< HEAD
     `);
     try {
       sh(`git fetch origin ${head}:${head} || true`);
@@ -74,7 +73,6 @@ async function main() {}
     }
   }
   
-=======
     console.log(`Merging head into "main": PR #${pr.number} (${head})`);
     try {}
       sh(`git fetch origin ${head}:${head} || true`);
@@ -95,4 +93,3 @@ async function main() {}
 };
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
 });
->>>>>>> main

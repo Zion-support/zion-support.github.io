@@ -14,8 +14,6 @@ export interface InnovativeMicroSaasV3 {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [
   {
     id: "ai-customer-support",
@@ -40,4 +38,3 @@ export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

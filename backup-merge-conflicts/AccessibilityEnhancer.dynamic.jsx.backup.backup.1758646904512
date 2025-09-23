@@ -1,8 +1,5 @@
 =======
-<<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11935
 const AccessibilityEnhancer = dynamic(() => import("./AccessibilityEnhancer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default AccessibilityEnhancer' ,'
 </p>'
 =======

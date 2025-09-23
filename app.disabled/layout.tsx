@@ -1,10 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 import './globals.css'
 =======
-=======
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))
 // global styles are optional; keeping layout minimal
 
 export const metadata = {

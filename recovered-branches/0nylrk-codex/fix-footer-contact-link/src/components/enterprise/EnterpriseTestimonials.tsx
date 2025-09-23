@@ -5,8 +5,6 @@ import {
   CarouselContent,
   CarouselItem,
   CarouselNext,
-<<<<<<< HEAD
-=======
   CarouselPrevious} from "@/components/ui/carousel";
 
 const testimonials = [
@@ -79,4 +77,3 @@ export function EnterpriseTestimonials() {
     </section>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

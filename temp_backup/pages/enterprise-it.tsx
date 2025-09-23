@@ -1,6 +1,4 @@
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { Button } from '../components/ui/Button';
 import { Server, CheckCircle, Database, Cloud } from 'lucide-react';
@@ -197,4 +195,3 @@ export default function EnterpriseITPage() {
     </Layout>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
     id: 'quantum - cloud - infrastructure',
     name: 'Quantum Cloud Infrastructure',
@@ -1615,4 +1613,3 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
 ];
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

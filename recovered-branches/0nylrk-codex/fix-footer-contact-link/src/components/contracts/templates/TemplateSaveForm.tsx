@@ -8,8 +8,6 @@ import { ContractFormValues } from "@/components/contracts/components/ContractFo
 import { ContractTemplate } from "@/types/contracts";
 import { useContractTemplates } from "@/hooks/useContractTemplates";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-=======
 import { FormControlFormFieldFormItemFormLabelFormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
@@ -122,4 +120,3 @@ export function TemplateSaveForm({
     </Form>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

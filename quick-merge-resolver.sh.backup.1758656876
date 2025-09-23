@@ -1,6 +1,5 @@
 #!/bin/bash
 
-<<<<<<< HEAD
 echo "🚀 Quick Merge Conflict Resolver"
 echo "====="
 echo ""
@@ -201,7 +200,6 @@ else
     log_success "All operations completed successfully!"
     exit 0
 fi
-=======
 # Quick Merge Conflict Resolver
 # This script will quickly resolve merge conflicts and merge PRs
 
@@ -301,4 +299,3 @@ echo "📤 Pushing changes to remote..."
 git push origin main
 
 echo "🎉 All merge conflicts resolved and changes pushed successfully!"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

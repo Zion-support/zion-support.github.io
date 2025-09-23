@@ -149,8 +149,6 @@ export default function ComprehensivePricing20o29() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -406,4 +404,3 @@ export default function ComprehensivePricing20o29() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

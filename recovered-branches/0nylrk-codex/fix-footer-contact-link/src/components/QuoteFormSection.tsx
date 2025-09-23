@@ -5,8 +5,6 @@ import { GradientHeading } from "./GradientHeading";
 import { useState } from "react";
 
 export function QuoteFormSection() {
-<<<<<<< HEAD
-=======
   const [isSubmittedsetIsSubmitted] = useState(false);
   const [isSubmittingsetIsSubmitting] = useState(false);
 
@@ -145,4 +143,3 @@ export function QuoteFormSection() {
     </section>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

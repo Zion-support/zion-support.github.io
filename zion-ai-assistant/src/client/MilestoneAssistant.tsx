@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import React, { useMemo, useState } from "react";
 import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types";
@@ -238,4 +236,3 @@ function accept() {
 ;
 
 export default MilestoneAssistant;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

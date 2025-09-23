@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-<<<<<<< HEAD
 const EPISODES_PATH = path.join(process.cwd(), 'data', 'podcast', 'episodes.json');
 
 function ensureStorage() {
@@ -19,7 +18,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!episode) return res.status(404).json({ error: 'Not found' });
   return res.status(200).json({ episode });
 }
-=======
 
 function ensureStorage() {
   const dir = path && path.dirname(EPISODES_PATH);
@@ -90,7 +88,6 @@ function handler() {
   return res.status (200).json ({ episode });
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 

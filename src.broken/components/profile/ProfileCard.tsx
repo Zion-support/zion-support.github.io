@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { CardHeaderCardContentCardTitle } from "@/components/ui/card";
 import { TalentProfile } from "@/types/talent";
 
@@ -32,4 +30,3 @@ export function ProfileCard({ profile }: ProfileCardProps) {
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

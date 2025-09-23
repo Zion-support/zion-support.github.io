@@ -1,8 +1,6 @@
 
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-<<<<<<< HEAD
-=======
 import { HomeSearchBriefcaseIconMessageSquareUserXMessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
@@ -103,4 +101,3 @@ export function MobileMenu({ unreadCount = 0onClose }: MobileMenuProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

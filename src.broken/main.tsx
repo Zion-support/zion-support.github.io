@@ -4,8 +4,6 @@ import App from './App.tsx';
 import './index.css';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 import { QueryClientProvider } from '@tanstack/react-query';
 import { showApiError } from '@/utils/apiErrorHandler';
 import './utils/globalFetchInterceptor';
@@ -88,4 +86,3 @@ try {
 }
 
 registerServiceWorker();
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

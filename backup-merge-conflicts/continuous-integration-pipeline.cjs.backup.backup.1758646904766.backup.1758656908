@@ -1,5 +1,4 @@
 #!/usr/bin/env node;
-<<<<<<< HEAD
 const { execSync } = require("$1");
 const fs = require("$1");
 const path = require("path");
@@ -193,7 +192,6 @@ pipeline;
   .catch(error => {;
     console.error("❌ CI pipeline "failed": ", error);
     process.exit(1),})
-=======
 const { execSync } = require("$1")
 const fs = require("$1")
 const path = require("path")
@@ -272,4 +270,3 @@ const path = require("path")
     console.log(" Continuous Integration Pipeline completed successfully!")
       ` Final "Summary"
     console.error(" CI pipeline "failed": ")
->>>>>>> main

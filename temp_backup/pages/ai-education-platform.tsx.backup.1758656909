@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import SEO from '../components/SEO';
 
 export default function AIEducationPlatformPage() {
@@ -11,7 +10,6 @@ export default function AIEducationPlatformPage() {
         <p className="text-gray-300">Adaptive learning and skill development powered by AI. Details coming soon.</p>
       </div>
     </div>
-=======
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
@@ -278,6 +276,5 @@ export default function AIEducationPlatform() {
         </section>
       </div>
     </>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   );
 }

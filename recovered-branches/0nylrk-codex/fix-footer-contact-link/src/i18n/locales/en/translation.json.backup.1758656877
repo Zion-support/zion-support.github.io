@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 {
   "general": {
     "app_name": "Zion AI Marketplace",
@@ -23,11 +20,8 @@
     "home": "Home",
     "marketplace": "Marketplace",
     "categories": "Categories",
-<<<<<<< HEAD
-=======
     "services": "Services",
     "micro-saas": "Micro SAAS",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     "talent": "Talent",
     "equipment": "Equipment",
     "dashboard": "Dashboard",

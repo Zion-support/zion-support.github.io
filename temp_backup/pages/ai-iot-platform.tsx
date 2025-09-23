@@ -1,7 +1,5 @@
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Cpu } from 'lucide-react';
-<<<<<<< HEAD
-=======
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { Button } from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
@@ -54,4 +52,3 @@ export default function AIIoTPlatformPage() {
     </UltraAdvancedFuturisticBackground>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

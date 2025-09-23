@@ -1,6 +1,4 @@
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
 import Link from 'next/link';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, BarChart3, Brain, Database, Users, Target } from 'lucide-react';
 import Button from '../components/ui/Button';
@@ -485,4 +483,3 @@ export default function AIBusinessIntelligencePage() {
     </Layout>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

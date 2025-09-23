@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 const { QrCode,Smartphone,Download,Share2,Copy,Check export const QrCodeDownload = () => { const [copied,setCopied] = useState(false) const [activeTab,setActiveTab] = useState("ios") const downloadLinks = { ios: { name: "iOS: App Store,",url: "https:""""",;'"'"
-=======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD:src.disabled/components/mobile-app/QrCodeDownload.jsx
@@ -8,7 +6,6 @@ const { QrCode,Smartphone,Download,Share2,Copy,Check export const QrCodeDownload
 const { QrCode,Smartphone,Download,Share2,Copy,Check export const QrCodeDownload = () => { const [copied,setCopied] = useState(false) const [activeTab,setActiveTab] = useState("ios") const downloadLinks = { ios: { name: "iOS: App Store,",url: "https:""""",;'"'"
 =======
 <<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
 =======
 =======

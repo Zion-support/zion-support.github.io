@@ -14,8 +14,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const { user } = useAuth();
   const currentTalentId = talentId || user?.id;
   const { 
-<<<<<<< HEAD
-=======
     isLoading
     updateJobMatchStatus
     categorizedMatches: { 
@@ -114,4 +112,3 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

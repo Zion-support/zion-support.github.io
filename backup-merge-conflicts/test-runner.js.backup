@@ -21,7 +21,6 @@ class TestRunner {
       }
     });
     if (testFilesFound === 0) {
-<<<<<<< HEAD
       console.log('⚠️ No test files found');
     } else {
       console.log(`✅ Found ${testFilesFound} test files`);
@@ -30,7 +29,6 @@ class TestRunner {
     return testFilesFound;
   }
 
-=======
       console.log('⚠️ No test files found')} else {
       console.log(`✅ Found ${testFilesFound} test files`)}
     return testFilesFound}
@@ -68,4 +66,3 @@ if (require.main === module) {
 }
 
 module.exports = TestRunner;
->>>>>>> main

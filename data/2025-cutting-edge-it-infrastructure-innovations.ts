@@ -1,6 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
 export interface CuttingEdgeITInfrastructureInnovation2025 {
   id: string;
   name: string;
@@ -263,4 +261,3 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
     slug: '/autonomous-data-center-management-platform'
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

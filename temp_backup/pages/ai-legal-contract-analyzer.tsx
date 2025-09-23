@@ -1,6 +1,4 @@
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
 import { motion } from 'framer-motion';
 import { 
   FileText, Search, Shield, Zap, Target, TrendingUp, 
@@ -268,4 +266,3 @@ export default function AILegalContractAnalyzer() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

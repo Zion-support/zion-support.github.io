@@ -39,10 +39,7 @@ export interface ResearchDevelopmentService2029 {
     address: string;
   };
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [
   {
     id: 'advanced-research-automation',

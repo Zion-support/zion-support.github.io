@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
     id: 'customer - feedback - intelligence',
@@ -1865,4 +1863,3 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 ];
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

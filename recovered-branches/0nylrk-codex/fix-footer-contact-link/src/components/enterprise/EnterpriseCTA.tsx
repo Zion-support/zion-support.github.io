@@ -1,7 +1,5 @@
 
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-=======
 import { CalendarArrowRight } from "lucide-react";
 
 export function EnterpriseCTA() {
@@ -65,4 +63,3 @@ export function EnterpriseCTA() {
     </section>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

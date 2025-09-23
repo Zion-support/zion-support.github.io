@@ -20,7 +20,6 @@ const path = require('path')
       autoCommit: process.env.AUTO_COMMIT === 'true'
       commitMessageTemplate: process.env.COMMIT_MESSAGE_TEMPLATE || 'feat: {type} - {description}'
       mergeStrategy: process.env.MERGE_STRATEGY || 'recursive'
-<<<<<<< HEAD
     };
     
     this.workflowHistory = [];
@@ -913,7 +912,6 @@ if (require.main === module) {
 }
 
 module.exports = IntelligentGitWorkflow;
-=======
       await fs.mkdir(path.join(this.projectRoot, 'logs')
       console.log('Logs directory already exists')
   log(message, level = 'INFO')
@@ -935,4 +933,3 @@ module.exports = IntelligentGitWorkflow;
       const userEmail = await this.runGitCommand('git config user.email').catch(() => ''
         await this.runGitCommand('git config user.name "AI Git Workflow")
         await this.runGitCommand('git config user.email "ai-workflow@example.com")
->>>>>>> main

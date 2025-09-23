@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useState } from 'react';
 import {
   Dialog,
@@ -219,4 +217,3 @@ export function HireConfirmationModal({
     </Dialog>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -25,8 +25,6 @@ export interface EnterpriseService20o34 {
   contact: string;
   website: string;
 }
-<<<<<<< HEAD
-=======
 export const enterprise2034Services: EnterpriseService2034[] = [
   {
     id: 'quantum-zero-trust-architecture',
@@ -371,4 +369,3 @@ export const enterprise2034Services: EnterpriseService2034[] = [
     website: 'https://ziontechgroup.com/ai-autonomous-data-center'
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -325,5 +323,4 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

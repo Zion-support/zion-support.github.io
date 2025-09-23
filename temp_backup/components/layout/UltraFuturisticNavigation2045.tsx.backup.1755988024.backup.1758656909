@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -99,8 +98,6 @@ function normalizeHref(href: string): string {
   const hasQueryOrHash = href.includes('?') || href.includes('#');
   if (hasQueryOrHash) return href;
   return href.endsWith('/') ? href : href + '/';
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e718
 }
 
 // Enhanced navigation items with better organization
@@ -131,16 +128,13 @@ const navigationItems: NavigationItem[] = [
         category: 'ai'
       },
       {
-<<<<<<< HEAD
         label: 'Quantum Computing',
         href: '/quantum-services',
-=======
         category: 'AI Services'
       },
       {
         label: 'Quantum Technology',
         href: '/services?category=quantum',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e718
         icon: <Atom className="w-4 h-4" />,
         description: 'Next-generation quantum solutions',
         featured: true,
@@ -148,16 +142,13 @@ const navigationItems: NavigationItem[] = [
         category: 'quantum'
       },
       {
-<<<<<<< HEAD
         label: 'Space Technology',
         href: '/space-technology',
-=======
         category: 'Quantum Technology'
       },
       {
         label: 'Space Technology',
         href: '/services?category=space-tech',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e718
         icon: <Rocket className="w-4 h-4" />,
         description: 'Innovative space tech applications',
         featured: true,
@@ -165,7 +156,6 @@ const navigationItems: NavigationItem[] = [
         category: 'space'
       },
       {
-<<<<<<< HEAD
         label: 'Cybersecurity',
         href: '/cybersecurity',
         icon: <Shield className="w-4 h-4" />,
@@ -188,7 +178,6 @@ const navigationItems: NavigationItem[] = [
         description: 'Next-generation edge solutions',
         neonColor: 'shadow-green-400/50',
         category: 'edge'
-=======
         category: 'Space Technology'
       },
       {
@@ -215,7 +204,6 @@ const navigationItems: NavigationItem[] = [
         description: 'Enterprise business solutions',
         neonColor: 'shadow-emerald-400/50',
         category: 'Business Solutions'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e718
       }
     ]
   },
@@ -405,14 +393,11 @@ const UltraFuturisticNavigation2045: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-<<<<<<< HEAD
-=======
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const router = useRouter();
   const navRef = useRef<HTMLElement>(null);
   const searchRef = useRef<HTMLDivElement>(null);
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e718
 
   // Handle scroll effect
   useEffect(() => {
@@ -423,7 +408,6 @@ const UltraFuturisticNavigation2045: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-<<<<<<< HEAD
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
@@ -734,7 +718,6 @@ const UltraFuturisticNavigation2045: React.FC = () => {
                     kleber@ziontechgroup.com
                   </a>
                 </div>
-=======
                   <button
                     onClick={() => toggleDropdown(item.label)}
                     className="flex items-center justify-between w-full px-3 py-2 text-white/90 hover:text-white transition-colors"
@@ -775,7 +758,6 @@ const UltraFuturisticNavigation2045: React.FC = () => {
                 >
                   Get Started
                 </Link>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e718
               </div>
             </div>
           </motion.div>

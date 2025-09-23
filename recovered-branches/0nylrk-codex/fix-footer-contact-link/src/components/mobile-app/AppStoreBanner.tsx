@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useStateuseEffect } from "react";
 import { X } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -52,4 +50,3 @@ export const AppStoreBanner: React.FC = () => {
     </div>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

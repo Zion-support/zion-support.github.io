@@ -82,12 +82,9 @@ module.exports = {
         'no-undef': 'off'}},
   ],
   "env": {
-<<<<<<< HEAD
-=======
 =======
   ],
   env: {
->>>>>>> pr-11935
     browser: true,
     node: true,
     es6: true,

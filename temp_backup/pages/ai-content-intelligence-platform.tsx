@@ -1,6 +1,4 @@
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
 
 export default function AiContentIntelligencePlatformPage() {
   return (
@@ -21,4 +19,3 @@ export default function AiContentIntelligencePlatformPage() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

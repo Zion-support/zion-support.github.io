@@ -1,11 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-<<<<<<< HEAD:app/quantum-computing-2026/page.tsx
 // import ErrorBoundary from '../../components/ErrorBoundary';
-=======
 import ErrorBoundary from '../../components/ErrorBoundary';
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e:app/quantum-computing-2026/page.tsx.disabled
 
 export const metadata = {
   title: 'Quantum Computing 2026 Ultimate - Zion Tech Group',

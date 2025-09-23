@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 import React, { useState } from 'react',
@@ -441,7 +439,6 @@ export default function UltimateServicesShowcase2029() {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               >
                 Get Started Today
               </Link>

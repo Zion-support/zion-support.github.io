@@ -1,6 +1,4 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
 import { motion } from 'framer-motion';
 import { 
   Brain, Shield, Rocket, Cpu, Database, Atom, 
@@ -275,4 +273,3 @@ const EnhancedFooter: React.FC = () => {
 };
 
 export default EnhancedFooter;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

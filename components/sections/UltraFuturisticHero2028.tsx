@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import React from 'react',
 import React from 'react';
@@ -924,4 +922,3 @@ export default function UltraFuturisticHero2028() {;
   );
 }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

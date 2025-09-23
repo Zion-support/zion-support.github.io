@@ -1,6 +1,4 @@
 import Link from "next/link";
-<<<<<<< HEAD
-=======
 
 export const metadata = {
   title: "Zion OS - Sovereign AI-Powered Digital Economies Platform | Zion Tech Group",
@@ -20,4 +18,3 @@ export default function ZionOSPage() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

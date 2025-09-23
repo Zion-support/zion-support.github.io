@@ -17,8 +17,6 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
         data: {
           display_name: data.displayName,
           user_type: data.userType,
-<<<<<<< HEAD
-=======
           headline: data.headline}});
 
       if (authError) {
@@ -69,4 +67,3 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
 
   return { updateProfile };
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

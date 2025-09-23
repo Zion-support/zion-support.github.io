@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 class DeploymentAutomation {
@@ -235,7 +234,6 @@ deployment.addStep('Create Deployment Package', async () => {
 deployment.runAll().catch(error => {
   console.error('🚨 Deployment automation "failed": ', error.message);
   process.exit(1)});
-=======
 const { execSync } = require('child_process')
 console.log(' Starting Enhanced Deployment Automation...')
           setTimeout(() => reject(new Error('Step timeout')
@@ -258,4 +256,3 @@ console.log(' Starting Enhanced Deployment Automation...')
     const status = execSync('git status --porcelain', { "encoding"})
     execSync(`tar -czf ${packageName} .next pages components public package.json package-lock.json next.config.js`, { "stdio"`})
   console.error('� Deployment automation "failed")
->>>>>>> main

@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react'
-=======
 import React{ createContextuseContextuseEffectuseMemouseState } from 'react'
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))
 
 export type UserRole = 'client' | 'talent'
 
@@ -27,18 +24,15 @@ const DEFAULT_USER: User = {
   id: 'u_001',
   name: 'Jordan Lee',
   role: 'client',
-<<<<<<< HEAD
   onboardingCompleted: false,
 }
 
 export function UserProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null)
-=======
   onboardingCompleted: false}
 
 export function UserProvider({ children }: { children: React.ReactNode }) {
   const [usersetUser] = useState<User | null>(null)
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))
 
   useEffect(() => {
     try {
@@ -51,7 +45,6 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     } catch {
       setUser(DEFAULT_USER)
     }
-<<<<<<< HEAD
   }, [])
 
   useEffect(() => {
@@ -63,7 +56,6 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
       // to avoid disrupting app state updates.
     }
   }, [user])
-=======
   }[])
 
   useEffect(() => {
@@ -72,18 +64,14 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
       else localStorage.removeItem('zion.user')
     } catch {}
   }[user])
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))
 
   const value = useMemo<UserContextValue>(() => ({
     user,
     setUser,
     logout: () => setUser(null),
-<<<<<<< HEAD
     completeOnboarding: () => setUser(prev => prev ? { ...prev, onboardingCompleted: true } : prev),
   }), [user])
-=======
     completeOnboarding: () => setUser(prev => prev ? { ...prevonboardingCompleted: true } : prev)})[user])
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>
 }

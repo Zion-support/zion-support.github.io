@@ -1,7 +1,5 @@
 
 import { useState } from "react";
-<<<<<<< HEAD
-=======
 import { CardContentCardHeaderCardTitleCardDescriptionCardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -107,4 +105,3 @@ export function JobMatchesCard({ matchonApplyonDeclineshowApplied = false }: Job
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -5,8 +5,6 @@ import { Calendar } from "@/components/ui/calendar";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { CalendarIcon } from "@/components/icons";
-<<<<<<< HEAD
-=======
 import { PopoverContentPopoverTrigger } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
 import { QuoteFormData } from "@/types/quotes";
@@ -113,4 +111,3 @@ export function TimelineStep({ formDataupdateFormData }: TimelineStepProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

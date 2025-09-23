@@ -6,8 +6,6 @@ import { cn } from "@/lib/utils"
 const Avatar = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>
-<<<<<<< HEAD
-=======
 >(({ className...props }ref) => (
   <AvatarPrimitive.Root
     ref={ref}
@@ -48,4 +46,3 @@ const AvatarFallback = React.forwardRef<
 AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName
 
 export { AvatarImageAvatarFallback }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

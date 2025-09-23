@@ -92,8 +92,6 @@ export function useSavedTalents() {
         
         toast({
           title: "Removed from favorites",
-<<<<<<< HEAD
-=======
           description: `${talent.full_name} has been removed from your favorites`});
       } else {
         // Add to saved_talents
@@ -135,4 +133,3 @@ export function useSavedTalents() {
     isTalentSaved
   };
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

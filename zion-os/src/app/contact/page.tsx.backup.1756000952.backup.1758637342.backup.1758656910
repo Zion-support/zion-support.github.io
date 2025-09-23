@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from "next/link";
 
 export const metadata = {
@@ -128,7 +127,6 @@ export default function ContactPage() {
                   <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                     Email Address
                   </label>
-=======
 'use client';
 
 import { useState } from 'react';
@@ -316,12 +314,10 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium mb-2">Email *</label>
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
                   <input
                     type="email"
                     id="email"
                     name="email"
-<<<<<<< HEAD
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="your.email@company.com"
                     required
@@ -332,7 +328,6 @@ export default function ContactPage() {
                   <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                     Company
                   </label>
-=======
                     value={formData.email}
                     onChange={handleChange}
                     required
@@ -345,12 +340,10 @@ export default function ContactPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium mb-2">Company</label>
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
                   <input
                     type="text"
                     id="company"
                     name="company"
-<<<<<<< HEAD
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Your company name"
                   />
@@ -565,7 +558,6 @@ export default function ContactPage() {
                 View Case Studies
               </Link>
             </div>
-=======
                     value={formData.company}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
@@ -627,7 +619,6 @@ export default function ContactPage() {
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
           </div>
         </div>
       </section>

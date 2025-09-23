@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import type { GetServerSidePropsNextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -53,4 +51,3 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 };
 
 export default TopicPage;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

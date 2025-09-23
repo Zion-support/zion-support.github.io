@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useState } from 'react';
 import { motion } from 'framer-motion';
@@ -880,4 +878,3 @@ export default function MarketPricing() {
 };
 
 export default MarketPricing;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

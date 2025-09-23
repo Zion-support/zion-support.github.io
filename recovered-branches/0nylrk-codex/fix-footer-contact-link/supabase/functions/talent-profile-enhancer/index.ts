@@ -7,8 +7,6 @@ const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY');
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
-<<<<<<< HEAD
-=======
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
 
 interface TalentProfileData {
@@ -120,4 +118,3 @@ serve(async (req) => {
     );
   }
 });
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

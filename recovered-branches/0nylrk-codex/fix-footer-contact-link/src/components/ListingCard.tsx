@@ -18,8 +18,6 @@ interface ListingCardProps {
 
 export function ListingCard({ 
   id,
-<<<<<<< HEAD
-=======
   title
   description
   image
@@ -84,4 +82,3 @@ export function ListingCard({
     </Link>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

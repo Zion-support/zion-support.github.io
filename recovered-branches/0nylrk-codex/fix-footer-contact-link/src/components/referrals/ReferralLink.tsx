@@ -1,8 +1,6 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-=======
 import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { CopyFacebookLinkShareTwitter } from "lucide-react";
@@ -91,4 +89,3 @@ export function ReferralLink({ referralLinkonCopyonShare }: ReferralLinkProps) {
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

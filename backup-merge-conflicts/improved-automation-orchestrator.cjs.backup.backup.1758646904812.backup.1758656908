@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 async function runImprovedAutomation() {
@@ -228,7 +227,6 @@ module.exports = { runImprovedAutomation }) {
   runImprovedAutomation().catch(console.error)}
 
 module.exports = { runImprovedAutomation }}
-=======
 const { execSync } = require('child_process')
   console.log(' Starting Improved Automation Orchestrator...')
     "overallStatus"
@@ -257,4 +255,3 @@ const { execSync } = require('child_process')
         "status"
         "status"
     console.error(' Improved automation "failed")
->>>>>>> main

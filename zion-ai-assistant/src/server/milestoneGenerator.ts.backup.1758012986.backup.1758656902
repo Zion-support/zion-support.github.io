@@ -5,10 +5,6 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/merged-prs
 <<<<<<< HEAD
 
 import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem } from "../shared/types.js";
@@ -17,8 +13,6 @@ async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMil
   const system = `You are an expert project planner. Given a scope of work, start and end date, and project type, propose 3-7 phased milestones. Each milestone must include: title, description, suggestedDueDateIso (ISO 8601 within the provided range), estimatedEffortHours (integer). Tailor phases to the project type. Prefer week-based deadlines. Output ONLY valid JSON object with key \"milestones\": [...]`;
 <<<<<<< HEAD
 =======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
@@ -197,7 +191,6 @@ async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMil
     scopeOfWork: input.scopeOfWork,
     startDateIso: input.startDateIso,
     endDateIso: input.endDateIso,
-<<<<<<< HEAD
     project_type: input.project_type;
   },
   const body = {
@@ -230,11 +223,9 @@ if (return null, ) {
     const parsed = JSON.parse (content),
     const milestones: SuggestedMilestoneItem[] = Array.is_array (parsed?.milestones);
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> origin/merged-prs
       ? parsed.milestones;
       : [],
     // Check condition
@@ -291,7 +282,6 @@ if (return null, ) {
     return null;
   }
 }
-<<<<<<< HEAD
 function createHeuristicPlan (input: MilestoneSuggestionInput): SuggestedMilestoneItem[] {
   const start = new Date (input.startDateIso),
   const end = new Date (input.endDateIso),
@@ -324,7 +314,6 @@ function createHeuristicPlan (input: MilestoneSuggestionInput): SuggestedMilesto
     }),
     phase_start = due;
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -381,7 +370,6 @@ async function callOpenAI(input:MilestoneSuggestionInput):Promise<SuggestedMiles
     })),;
   } catch {;
     return null,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
   }
@@ -390,9 +378,7 @@ async function callOpenAI(input:MilestoneSuggestionInput):Promise<SuggestedMiles
 export async function generate_milestones (input: MilestoneSuggestionInput): Promise < MilestoneSuggestionResponse> {
   const ai = await callOpenAI (input);
   const milestones = ai && ai.length ? ai : createHeuristicPlan (input);
-<<<<<<< HEAD
 
-=======
   }
   return milestones,;
 }
@@ -429,7 +415,6 @@ body: JSON.stringify (body)
 }
 }
   const milestones = ai && ai.length ? ai : createHeuristicPlan(input);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   }
   return milestones,;

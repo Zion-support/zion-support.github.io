@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import {useState, useEffect} from "react";
 import {Link, useNavigate, useParams} from "react-router-dom";
@@ -468,4 +466,3 @@ const mock_post: ForumPost = {
 }
 ;
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

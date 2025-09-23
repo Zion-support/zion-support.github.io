@@ -14,8 +14,6 @@ export interface AdditionalRealService {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const additionalEnhancedServices: AdditionalRealService[] = [
   {
     id: "ai-automation-suite",
@@ -4708,4 +4706,3 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     reviews: 6
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

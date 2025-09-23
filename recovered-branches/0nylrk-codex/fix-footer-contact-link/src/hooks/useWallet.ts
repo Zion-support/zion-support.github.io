@@ -68,8 +68,6 @@ export function useWallet() {
         amount,
         transaction_type: 'earn',
         reason: reason || null,
-<<<<<<< HEAD
-=======
         created_at: new Date().toISOString()},
       ...prev]);
   }
@@ -105,4 +103,3 @@ export function useWallet() {
     earnTokens,
     spendTokens};
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

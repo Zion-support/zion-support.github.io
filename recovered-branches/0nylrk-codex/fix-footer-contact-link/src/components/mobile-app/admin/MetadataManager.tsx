@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useState } from "react";
 import { useForm } from "react-hook-form";
 import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
@@ -112,4 +110,3 @@ export const MetadataManager: React.FC = () => {
     </div>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

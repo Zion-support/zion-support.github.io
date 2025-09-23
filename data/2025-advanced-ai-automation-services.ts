@@ -1,6 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
 export interface AdvancedAIAutomationService {
   id: string;
   name: string;
@@ -274,4 +272,3 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
   }
 ];
 export default advancedAIAutomationServices2025;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

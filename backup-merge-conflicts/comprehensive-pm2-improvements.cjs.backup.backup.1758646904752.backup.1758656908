@@ -4,7 +4,6 @@
  * This script implements advanced PM2 automations and improvements;
  */
 
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
@@ -728,7 +727,6 @@ dashboard.start();";
 // Run the improvements
 const improvements = new ComprehensivePM2Improvements();
 improvements.run().catch(console.error);
-=======
 const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')
@@ -838,4 +836,3 @@ const { execSync, spawn } = require('child_process')
                 "monitoring_tools"
             "recommendations"
             this.log('� Next "steps")
->>>>>>> main

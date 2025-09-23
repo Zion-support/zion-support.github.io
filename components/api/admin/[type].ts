@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 
 
   });
@@ -243,7 +241,6 @@ export default async function handler(
 
       }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       return res.status(200).json({ items: pageItems, total });
     }
   }

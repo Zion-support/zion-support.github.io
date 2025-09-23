@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 
 type Props = {
@@ -28,4 +26,3 @@ export default function SocialShareButtons({ url, title, description }: Props) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

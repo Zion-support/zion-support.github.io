@@ -4,7 +4,6 @@ export default function HomePage() {
   const { user, isAuthenticated } = useAuth();
 
   return (
-<<<<<<< HEAD
     <div className="space-y-12">
       {/* Hero Section */}
       <div className="text-center space-y-6 py-12">
@@ -130,7 +129,6 @@ export default function HomePage() {
           >
             Start Building Now
           </a>
-=======
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
@@ -147,7 +145,6 @@ export default function HomePage() {
               Get Consultation
             </a>
           </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f7dd
         </div>
       </div>
 

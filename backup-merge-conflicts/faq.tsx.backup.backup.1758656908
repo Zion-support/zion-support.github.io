@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import Head from 'next/head';
@@ -7,7 +6,6 @@ import { Plus, Minus, HelpCircle, Search } from 'lucide-react';
 const faqs = [
   {
     category: "General",
-=======
 
 const faqs = [;
   {}
@@ -60,7 +58,6 @@ const faqCategories = [
   {
     name: "General",
     icon: HelpCircle,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     questions: [
       {
         question: "What services does Zion Tech Group offer?",
@@ -105,7 +102,6 @@ const faqCategories = [
         answer: "Yes, we work with all major cloud providers including AWS, Azure, Google Cloud, and can help you choose the best platform for your needs."
       },
       {
-<<<<<<< HEAD
         question: "How do you ensure data security?",
         answer: "We implement comprehensive security measures including encryption, access controls, regular security audits, and compliance with industry standards like SOC 2, GDPR, and HIPAA."
       }
@@ -183,7 +179,6 @@ export default function FAQPage() {
                   className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
-=======
         question: "What cybersecurity measures do you implement?",
         answer: "We implement comprehensive cybersecurity measures including firewalls, intrusion detection systems, encryption, access controls, security monitoring, and compliance management. We also provide security audits, penetration testing, and ongoing security monitoring services."
       },
@@ -193,12 +188,10 @@ export default function FAQPage() {
       }
     ];
   },
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* FAQ Sections */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
@@ -292,11 +285,9 @@ export default function FAQPage() {
         </section>
       </div>
     </>
-=======
               </div>
             </div>
           </div>
         </section>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   );
 }

@@ -1,6 +1,5 @@
 export default function PrivacyPage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen py-20">
       {/* Hero Section */}
       <section className="relative mb-20">
@@ -13,7 +12,6 @@ export default function PrivacyPage() {
               How we collect, use, and protect your personal information when you use our services and visit our website.
             </p>
           </div>
-=======
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-gray-600 to-gray-800 text-white py-20">
@@ -24,12 +22,10 @@ export default function PrivacyPage() {
           <p className="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto">
             Your privacy is important to us. Learn how we collect, use, and protect your personal information.
           </p>
->>>>>>> origin/cursor/website-audit-and-enhancement-821c
         </div>
       </section>
 
       {/* Privacy Content */}
-<<<<<<< HEAD
       <section className="mb-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-8">
@@ -103,7 +99,6 @@ export default function PrivacyPage() {
                 <li>• The right to object to processing</li>
               </ul>
               <p className="text-white/80">
-=======
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none">
@@ -206,12 +201,10 @@ export default function PrivacyPage() {
                 <li><strong>Withdrawal:</strong> Withdraw consent where processing is based on consent</li>
               </ul>
               <p className="text-gray-600">
->>>>>>> origin/cursor/website-audit-and-enhancement-821c
                 To exercise these rights, please contact us using the information provided below.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
               <h2 className="text-2xl font-bold text-white mb-4">Cookies and Tracking</h2>
               <p className="text-white/80 mb-4">
@@ -224,7 +217,6 @@ export default function PrivacyPage() {
                 <li>• Improve website functionality and performance</li>
               </ul>
               <p className="text-white/80">
-=======
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Cookies and Tracking Technologies</h2>
               <p className="text-gray-600 mb-4">
@@ -237,12 +229,10 @@ export default function PrivacyPage() {
                 <li>Improve website functionality and performance</li>
               </ul>
               <p className="text-gray-600">
->>>>>>> origin/cursor/website-audit-and-enhancement-821c
                 You can control cookie settings through your browser preferences. However, disabling certain cookies may affect website functionality.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
               <h2 className="text-2xl font-bold text-white mb-4">Children's Privacy</h2>
               <p className="text-white/80">
@@ -284,7 +274,6 @@ export default function PrivacyPage() {
               </div>
               <p className="text-white/80 mt-4">
                 We will respond to your inquiry within 30 days of receipt.
-=======
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">International Data Transfers</h2>
               <p className="text-gray-600 mb-4">
@@ -342,7 +331,6 @@ export default function PrivacyPage() {
               </ul>
               <p className="text-gray-600">
                 Our legal basis for processing your personal information includes consent, contract performance, legal obligations, legitimate interests, and vital interests.
->>>>>>> origin/cursor/website-audit-and-enhancement-821c
               </p>
             </div>
           </div>
@@ -350,7 +338,6 @@ export default function PrivacyPage() {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Questions About Privacy?</h2>
@@ -369,7 +356,6 @@ export default function PrivacyPage() {
               className="border-2 border-white/30 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 transition-all duration-200"
             >
               Terms of Service
-=======
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -384,7 +370,6 @@ export default function PrivacyPage() {
             </a>
             <a href="/terms" className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg text-lg font-semibold hover:border-gray-400 transition-colors">
               View Terms of Service
->>>>>>> origin/cursor/website-audit-and-enhancement-821c
             </a>
           </div>
         </div>

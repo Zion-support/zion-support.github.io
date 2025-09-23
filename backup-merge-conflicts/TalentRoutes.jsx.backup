@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 const React from "react"; import TalentDirectory from "@/pages/TalentDirectory import TalentsPage from "@/pages/TalentsPage"; export default function TalentRoutes($1) { return (<> <Route path="directory" element={<TalentDirectory />}/> <Route path="list" element={<TalentsPage />}/> </>)} ;";";"""
 <<<<<<< HEAD:backup-merge-conflicts/TalentRoutes.jsx.backup
-=======
 import _React from 'react'; import TalentDirectory from '@/pages/TalentDirectory import TalentsPage from '@/pages/TalentsPage'; export default function TalentRoutes(_) { return (<> <Route path="directory" element={<TalentDirectory />}/> <Route path="list" element={<TalentsPage />}/> </>)} ;';';
 =======
 import React from 'react';
@@ -14,7 +12,6 @@ export default function TalentRoutes("props": "any) {;
       <Route path="list" element={<TalentsPage  />}/>;
     </>);
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
 =======
 import _React from 'react'; import TalentDirectory from '@/pages/TalentDirectory import TalentsPage from '@/pages/TalentsPage'; export default function TalentRoutes(_) { return (<> <Route path="directory" element={<TalentDirectory />}/> <Route path="list" element={<TalentsPage />}/> </>)} ;';';

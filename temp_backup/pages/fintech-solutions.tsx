@@ -3,8 +3,6 @@ import ServiceLanding from '../components/sections/ServiceLanding';
 export default function FintechSolutions() {
 	return (
 		<ServiceLanding
-<<<<<<< HEAD
-=======
 			title="Fintech Solutions"
 			description="AI and quantum-ready platforms for risk, fraud, trading, and customer intelligence with regulatory-grade controls."
 			subtitle="Accelerate financial innovation securely"
@@ -25,4 +23,3 @@ export default function FintechSolutions() {
 		/>
 	);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

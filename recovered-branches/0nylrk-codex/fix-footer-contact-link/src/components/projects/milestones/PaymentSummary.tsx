@@ -1,7 +1,5 @@
 
 import { Milestone } from '@/hooks/useMilestones';
-<<<<<<< HEAD
-=======
 import { CardContentCardHeaderCardTitle } from '@/components/ui/card';
 CreditCard
 
@@ -57,4 +55,3 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestonespaymen
     </Card>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

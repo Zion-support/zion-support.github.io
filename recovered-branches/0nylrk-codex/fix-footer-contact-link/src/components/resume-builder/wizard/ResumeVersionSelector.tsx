@@ -1,8 +1,6 @@
 
 import { useState } from 'react';
 import { 
-<<<<<<< HEAD
-=======
   DropdownMenu
   DropdownMenuContent
   DropdownMenuItem
@@ -107,4 +105,3 @@ export function ResumeVersionSelector({ currentResumeonResumeChange }: ResumeVer
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

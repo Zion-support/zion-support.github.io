@@ -17,8 +17,6 @@ export const useEmailAuth = (
       
       const { data, error } = await supabase.auth.signInWithPassword({
         email,
-<<<<<<< HEAD
-=======
         password});
 
       if (error) {
@@ -122,4 +120,3 @@ export const useEmailAuth = (
 
   return { login, signup, resetPassword };
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -95,7 +94,6 @@ export default function WhitelabelManager() {
                 <h3>Admin Access</h3>
                 <p>
                   You can assign tenant administrators who will have access to manage their white-label instance, 
-=======
 
 
 
@@ -148,7 +146,6 @@ export default function WhitelabelManager() {
   return (
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   including content, users, and analytics. Tenant admins cannot access data from other tenants.
                 </p>
               </div>
@@ -158,10 +155,8 @@ export default function WhitelabelManager() {
       </main>
       <Footer />
     </>
-<<<<<<< HEAD
   );
 }
-=======
   )
 
 
@@ -322,7 +317,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

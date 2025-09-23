@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { createContextuseContextuseEffectuseState } from "react"
 
 type Theme = "dark" | "light" | "system"
@@ -70,4 +68,3 @@ export const useTheme = () => {
 
   return context
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

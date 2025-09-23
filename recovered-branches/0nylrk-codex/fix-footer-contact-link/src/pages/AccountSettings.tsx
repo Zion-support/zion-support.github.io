@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import { useState, useEffect  } from 'react';
 import { Header  } from '@/components/Header';
@@ -135,7 +133,6 @@ export default function AccountSettings() {;
 
   const handleSave = () => {
     setIsSubmitting(true),
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     // Simulate API call
     setTimeout(() => {

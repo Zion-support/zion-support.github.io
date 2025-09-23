@@ -38,8 +38,6 @@ export interface BiotechAIService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
 export const biotechAIServices: BiotechAIService[] = [
   {
     id: 'ai-drug-discovery-platform',
@@ -501,4 +499,3 @@ export const biotechAIServices: BiotechAIService[] = [
     reviews: 45
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/MainLayout.dynamic.test.js.backup
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD:__tests__/MainLayout.dynamic.test.js
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 >>>>>>> pr-11913:__tests__/MainLayout.dynamic.test.js
 import React from 'react';
@@ -26,11 +23,8 @@ describe('MainLayoutdynamic', () => {
   });
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import MainLayoutdynamic from "./components/MainLayout.dynamic"; describe("MainLayoutdynamic",() => { test("renders without crashing",() => { render(<MainLayoutdynamic />); expect(screen.getByTestId("mainlayout.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<MainLayoutdynamic />)}); test("handles user interactions",() => { render(<MainLayoutdynamic />)}); test("applies correct styling",() => { render(<MainLayoutdynamic />)})});''"
-<<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD:__tests__/MainLayout.dynamic.test.js
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import _React from 'react';  import '@testing-library/jest-dom'; import MainLayoutdynamic from '../components/MainLayout.dynamic'; describe('MainLayoutdynamic',() => { test('renders without crashing',() => { render(<MainLayoutdynamic />); expect(screen.getByTestId('mainlayout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<MainLayoutdynamic />)}); test('handles user interactions',() => { render(<MainLayoutdynamic />)}); test('applies correct styling',() => { render(<MainLayoutdynamic />)})});
 >>>>>>> main
 =======

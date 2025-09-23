@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import {SEO} from "@/components/SEO";
 import {GradientHeading} from "@/components/GradientHeading";
@@ -343,7 +341,6 @@ export default function GreenIT() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 }

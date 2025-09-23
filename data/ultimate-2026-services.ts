@@ -14,8 +14,6 @@ export interface Ultimate20o26Service {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const ultimate2026Services: Ultimate2026Service[] = [
   {
     id: "2026-ultimate-service",
@@ -40,4 +38,3 @@ export const ultimate2026Services: Ultimate2026Service[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -134,7 +132,6 @@ export const ReplyCard = ({;
             )}
           </div>;
           <div className="text-xs text-muted-foreground">;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             {timeAgo}
           </div>
         </div>

@@ -1,6 +1,4 @@
 import * as React from "react"
-<<<<<<< HEAD
-=======
 import { cvatype VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
@@ -55,4 +53,3 @@ const AlertDescription = React.forwardRef<
 AlertDescription.displayName = "AlertDescription"
 
 export { AlertTitleAlertDescription }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

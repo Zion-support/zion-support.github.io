@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import React, { useEffect, useState } from "react";
 import {useNavigate} from "react-router-dom";
@@ -174,7 +172,6 @@ const OpenAppRedirect: React.FC = () => {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 

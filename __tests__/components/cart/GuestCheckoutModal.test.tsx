@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { render, screen, fireEvent, act, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -330,4 +328,3 @@ describe('GuestCheckoutModal', () => {
     });
   });
 });
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -19,7 +17,6 @@ import {;
 
 
 } from "@/components/ui/dialog";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";

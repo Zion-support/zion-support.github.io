@@ -6,7 +6,6 @@
 
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 
 class TestSuite {
   constructor() {
@@ -155,7 +154,6 @@ if ( {
     process.exit(1)})}
 
 module.exports = TestSuite;
-=======
   log(message, type = 'INFO')
       'INFO': 'ℹ'
       'SUCCESS': ''
@@ -169,4 +167,3 @@ module.exports = TestSuite;
     this.log(` "Failed"`)
     this.log(` Success "Rate"`)
     console.error('Test suite "failed")
->>>>>>> main

@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-=======
 ExternalLinkCheckStarZapUsersGlobeBarChart3BotCloudLockDatabaseCodePaletteSearchMailCalendarCreditCardFileTextVideoMusicImageGlobe2SmartphoneMonitorServerCpuHardDriveBrainTargetTrendingUpShieldRocketBriefcaseCogLightbulbChartBarClockCheckCircleAlertCircleMessageSquare
 
 export default function BusinessToolsPage() {
@@ -459,4 +457,3 @@ export default function BusinessToolsPage() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

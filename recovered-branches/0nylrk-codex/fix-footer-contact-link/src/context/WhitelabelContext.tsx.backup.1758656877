@@ -1,11 +1,8 @@
 
-<<<<<<< HEAD
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { useWhitelabelTenant, WhitelabelTenant } from '@/hooks/useWhitelabelTenant';
-=======
 import React{ createContextuseContextuseStateuseEffectReactNode } from 'react';
 import { useWhitelabelTenant } from '@/hooks/useWhitelabelTenant';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export interface WhitelabelContextType {
   isWhitelabel: boolean;
@@ -23,26 +20,20 @@ export interface WhitelabelContextType {
 
 const defaultContext: WhitelabelContextType = {
   isWhitelabel: false,
-<<<<<<< HEAD
   primaryColor: '#9b87f5', // Default Zion purple
-=======
   primaryColor: '#9b87f5'// Default Zion purple
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   logoUrl: null,
   brandName: 'Zion AI Marketplace',
   themePreset: 'light',
   landingPageCopy: {
     headline: 'AI Talent Marketplace',
     subtitle: 'Find the best AI talent for your projects',
-<<<<<<< HEAD
     cta: 'Get Started',
   },
   tenant: null,
 };
-=======
     cta: 'Get Started'},
   tenant: null};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 // The context may be undefined if the provider is not mounted.  By declaring
 // the generic as `WhitelabelContextType | null` we get proper type checking
@@ -64,13 +55,10 @@ interface WhitelabelProviderProps {
 }
 
 export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
-<<<<<<< HEAD
   const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);
   const { tenant, isLoading } = useWhitelabelTenant();
-=======
   const [contextValuesetContextValue] = useState<WhitelabelContextType>(defaultContext);
   const { tenantisLoading } = useWhitelabelTenant();
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   useEffect(() => {
     if (!isLoading && tenant) {
@@ -81,20 +69,17 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
         brandName: tenant.brand_name,
         themePreset: tenant.theme_preset,
         landingPageCopy: tenant.landing_page_copy,
-<<<<<<< HEAD
         tenant: tenant,
       });
     } else if (!isLoading) {
       setContextValue(defaultContext);
     }
   }, [tenant, isLoading]);
-=======
         tenant: tenant});
     } else if (!isLoading) {
       setContextValue(defaultContext);
     }
   }[tenantisLoading]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <WhitelabelContext.Provider value={contextValue}>

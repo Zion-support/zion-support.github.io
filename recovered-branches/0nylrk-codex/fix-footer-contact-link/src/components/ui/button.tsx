@@ -1,7 +1,5 @@
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
-<<<<<<< HEAD
-=======
 import { cvatype VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
@@ -51,4 +49,3 @@ const Button = React.forwardRef<HTMLButtonElementButtonProps>(
 Button.displayName = "Button"
 
 export { ButtonbuttonVariants }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

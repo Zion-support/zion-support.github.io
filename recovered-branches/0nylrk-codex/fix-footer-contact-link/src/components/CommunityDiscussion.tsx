@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React{ useState } from "react";
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -145,4 +143,3 @@ export const CommunityDiscussion: React.FC = () => {
     </div>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

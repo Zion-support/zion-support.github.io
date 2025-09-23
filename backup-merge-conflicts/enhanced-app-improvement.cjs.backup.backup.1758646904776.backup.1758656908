@@ -7,7 +7,6 @@
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 
 class EnhancedAppImprovement {
   constructor() {
@@ -303,7 +302,6 @@ module.exports = EnhancedAppImprovement) {
     .catch(() => process.exit(1))}
 
 module.exports = EnhancedAppImprovement}
-=======
     this.logDir = path.join(this.projectRoot, 'automation', 'logs')
   log(message, level = 'INFO')
   log(message, level = 'INFO')
@@ -344,4 +342,3 @@ module.exports = EnhancedAppImprovement}
       'git commit -m ""feat": automated improvements and fixes"
         execSync(step, { "stdio"})
       this.log(` Process "failed"`)
->>>>>>> main

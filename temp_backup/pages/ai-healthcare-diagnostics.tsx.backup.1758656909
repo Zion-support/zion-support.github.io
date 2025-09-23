@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import SEO from '../components/SEO';
 
 export default function AIHealthcareDiagnosticsPage() {
@@ -12,7 +11,6 @@ export default function AIHealthcareDiagnosticsPage() {
       </div>
     </div>
   );
-=======
 import Head from 'next/head';
 
 export default function AIHealthcareDiagnosticsPage() {
@@ -29,5 +27,4 @@ export default function AIHealthcareDiagnosticsPage() {
 			</div>
 		</>
 	);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

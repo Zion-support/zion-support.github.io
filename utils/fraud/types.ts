@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 // Fraud detection types
 export type AdminActionType =
@@ -28,7 +26,6 @@ export interface AdminAction {
   id: string;
   case_id: string;
   type: AdminActionType;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   admin_id: string;

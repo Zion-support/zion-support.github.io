@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { useStateuseEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -323,4 +321,3 @@ export function DynamicListingPage({
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Card } from '../../../components/ui/Card';
@@ -179,7 +178,6 @@ export default function AI2025UltimateBreakthroughTrends() {
                   <li>• Creative AI tools</li>
                 </ul>
               </Card>
-=======
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
 
@@ -376,14 +374,12 @@ export default function AI2025UltimateBreakthroughTrends() {
                 <div>
                   <h5 className="font-semibold text-gray-800 mb-2">Regulatory Compliance</h5>
                   <p className="text-sm text-gray-600">Meeting evolving AI regulations and standards</p>
->>>>>>> cursor/create-and-deploy-new-content-6b55
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Enterprise AI Transformation */}
         <section id="enterprise-transformation" className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
@@ -519,7 +515,6 @@ export default function AI2025UltimateBreakthroughTrends() {
           </div>
         </section>
       </div>
-=======
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">7. AI-Powered Personalization at Scale</h2>
           <div className="bg-purple-50 border-l-4 border-purple-500 p-6 mb-6">
@@ -661,7 +656,6 @@ export default function AI2025UltimateBreakthroughTrends() {
           </div>
         </div>
       </article>
->>>>>>> cursor/create-and-deploy-new-content-1664
     </div>
   );
 }

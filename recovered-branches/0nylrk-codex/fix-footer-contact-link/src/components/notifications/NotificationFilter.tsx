@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { TabsListTabsTrigger } from '@/components/ui/tabs';
 
@@ -32,4 +30,3 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
     </div>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -327,7 +325,6 @@ export default function TalentDirectory() {;
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
             {/* Results */}

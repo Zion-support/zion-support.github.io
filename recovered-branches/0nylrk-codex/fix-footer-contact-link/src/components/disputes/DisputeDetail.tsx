@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useStateuseEffect } from "react";
 import { useParamsuseNavigate } from "react-router-dom";
 import { useDisputes } from "@/hooks/useDisputes";
@@ -550,4 +548,3 @@ export function DisputeDetail() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

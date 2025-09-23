@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export default function TermsPage() {return (;
 export default function TermsPage() {;
@@ -14,7 +13,6 @@ function TermsPage() {
 
 export default function TermsPage() {;
   return (;
-=======
 
 
 =======
@@ -452,4 +450,3 @@ export default function TermsPage() {
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

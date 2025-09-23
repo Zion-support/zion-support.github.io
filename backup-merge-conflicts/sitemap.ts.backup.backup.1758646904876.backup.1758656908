@@ -1,10 +1,7 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
->>>>>>> pr-11914:backup-merge-conflicts/sitemap.ts.backup
 =======
 >>>>>>> pr-11913:pages.disabled/build-hold/api/sitemap.ts
 import { NextApiRequest, NextApiResponse } from;

@@ -1,7 +1,5 @@
 
 export interface Job {
-<<<<<<< HEAD
-=======
 export interface Job {;
 
   id: string;
@@ -60,7 +58,6 @@ export interface ApplyToJobModalProps {;
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

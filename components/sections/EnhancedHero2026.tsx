@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -911,4 +909,3 @@ export default function EnhancedHero2026(): any ({;
 
   );
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

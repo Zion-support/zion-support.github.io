@@ -1,6 +1,5 @@
 #!/bin/bash
 
-<<<<<<< HEAD
 echo "🚀 Zion Tech Group Website Merge Script"
 echo "======================================"
 
@@ -102,7 +101,6 @@ echo "3. Merge all open PRs"
 echo "4. Deploy the updated website"
 echo ""
 echo "🔍 For detailed instructions, see MERGE_GUIDE.md"
-=======
 # Execute Merge Process
 # This script will resolve all merge conflicts and merge the PR into main
 
@@ -194,4 +192,3 @@ echo "✅ All conflicts resolved"
 echo "✅ Changes pushed to remote"
 echo "✅ Branch cleaned up"
 echo "✅ Dependencies updated"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

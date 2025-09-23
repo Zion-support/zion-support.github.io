@@ -3,8 +3,6 @@ import { useState } from "react";
 import { formatDistanceToNow } from "date-fns";
 import { JobApplication } from "@/types/jobs";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-=======
 import { CardContentCardFooterCardHeaderCardTitle } from "@/components/ui/card";
 import { FileTextMessageSquareHelpCircleCalendarExternalLinkDownload } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -143,4 +141,3 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

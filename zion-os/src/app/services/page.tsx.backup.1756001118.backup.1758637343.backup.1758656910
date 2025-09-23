@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-<<<<<<< HEAD
 import Link from "next/link";
 
 // Service categories and their services
@@ -1175,7 +1174,6 @@ export default function ServicesPage() {
           <div className="flex items-center gap-2">
             <span className="font-semibold">Address:</span>
             <span>364 E Main St STE 1008 Middletown DE 19709</span>
-=======
 
 interface Service {
   id: string;
@@ -1534,12 +1532,10 @@ export default function ServicesPage() {
           <div>
             <h3 className="font-semibold">Address</h3>
             <p className="text-sm opacity-90">364 E Main St STE 1008<br />Middletown DE 19709</p>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6180
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Search and Filters */}
       <div className="space-y-4">
         <div className="flex flex-col md:flex-row gap-4">
@@ -1561,7 +1557,6 @@ export default function ServicesPage() {
             ))}
           </select>
         </div>
-=======
       {/* Search and Filter */}
       <div className="flex flex-col md:flex-row gap-4">
         <input
@@ -1580,12 +1575,10 @@ export default function ServicesPage() {
             <option key={category} value={category}>{category}</option>
           ))}
         </select>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6180
       </div>
 
       {/* Services Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<<<<<<< HEAD
         {filteredServices.map((service) => (
           <div key={service.id} className={`rounded-lg border p-6 space-y-4 transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
             service.popular 
@@ -1666,7 +1659,6 @@ export default function ServicesPage() {
                 </a>
               </div>
             </div>
-=======
         {filteredServices.map(service => (
           <div key={service.id} className="border border-white/10 rounded-lg p-6 hover:border-white/20 transition-colors">
             <div className="flex items-start justify-between mb-4">
@@ -1737,13 +1729,11 @@ export default function ServicesPage() {
             >
               Learn More
             </a>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6180
           </div>
         ))}
       </div>
 
       {/* Call to Action */}
-<<<<<<< HEAD
       <div className="text-center bg-gradient-to-r from-blue-900/20 via-purple-900/20 to-pink-900/20 rounded-lg p-8 border border-white/10">
         <h2 className="text-3xl font-semibold mb-4">Ready to Transform Your Business?</h2>
         <p className="text-lg opacity-80 mb-6 max-w-3xl mx-auto">
@@ -1790,7 +1780,6 @@ export default function ServicesPage() {
             No credit card required. Start transforming your business today!
           </p>
         </div>
-=======
       <div className="text-center space-y-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8">
         <h2 className="text-2xl font-bold">Ready to Transform Your Business?</h2>
         <p className="opacity-90">Get started with our services today and experience the power of AI-driven innovation.</p>
@@ -1808,7 +1797,6 @@ export default function ServicesPage() {
             Contact Sales
           </a>
         </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6180
       </div>
     </div>
   );

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 export type MilestoneStatus = | 'Pending' | 'In Progress' | 'Submitted' | 'Approved' | 'Paid';
 export type ProjectParticipantRole = 'client' | 'talent';
@@ -45,7 +43,6 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

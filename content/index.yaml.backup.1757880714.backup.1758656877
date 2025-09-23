@@ -65,7 +65,6 @@ content_index:
         roi: "500%"
         timeline: "12 months"
         success_rate: "94%"
-<<<<<<< HEAD
         savings: "$2.8B"
         satisfaction: "98%"
         timeline: "18 months"
@@ -316,7 +315,6 @@ content_index:
     - id: "ai-implementation-guide-2026"
       type: "resource"
       title: "AI Implementation Master Guide 2026: From Strategy to ROI"
-=======
       title: "Global Enterprise AI Transformation: $2.8B Ultimate Success Story"
       file_path: "/content/case-studies/global-enterprise-ai-transformation-2025-ultimate-success.md"
       url: "/case-studies/global-enterprise-ai-transformation-2025-ultimate-success"
@@ -362,7 +360,6 @@ content_index:
     - id: "ai-implementation-master-guide"
       type: "resource"
       title: "AI Implementation Master Guide 2026: Complete Framework for Enterprise Success"
->>>>>>> 0898e5119e1743cc34bc24d7b78e613422d39ff1
       file_path: "/content/resources/ai-implementation-master-guide-2026.md"
       url: "/resources/ai-implementation-master-guide-2026"
       status: "published"
@@ -425,7 +422,6 @@ content_index:
         phases: "3 phases"
         payback: "3.8 months"
 
-<<<<<<< HEAD
   new_2025_content_latest:
     - id: "neural-architecture-revolution"
       type: "blog"
@@ -541,14 +537,12 @@ content_index:
       status: "active"
       features:
         - "Auto-rotating 2026 content showcase with 3 new pieces"
-=======
   promotion_components:
     - name: "RevolutionaryContent2025Banner"
       file_path: "/app/components/RevolutionaryContent2025Banner.tsx"
       status: "active"
       features:
         - "Auto-rotating content showcase with 3 new pieces"
->>>>>>> cursor/create-and-deploy-new-content-040d
         - "Dismissible banner with localStorage persistence"
         - "Animated background elements and progress indicators"
         - "Success metrics display (500% ROI, $200M savings)"
@@ -725,9 +719,6 @@ content_index:
         - "Success metrics grid"
         - "Interactive content cards"
         - "Call-to-action buttons"
-<<<<<<< HEAD
-=======
->>>>>>> 0898e5119e1743cc34bc24d7b78e613422d39ff1
 
   homepage_integration:
     component: "HomePage"
@@ -739,49 +730,3 @@ content_index:
       - "Updated layout to prominently feature new 500% ROI content"
       - "Added auto-rotating content showcase with metrics"
       - "Implemented interactive content discovery and filtering"
-
-<<<<<<< HEAD
-  metrics:
-    expected_roi_mentions: 35
-    success_stories: 6
-    - name: "NewContent2025UltimateBanner"
-      file_path: "/components/NewContent2025UltimateBanner.tsx"
-      status: "active"
-      features:
-        - "Revolutionary AI Content Collection showcase"
-        - "Featured blog posts, case studies, and resources"
-        - "Interactive content cards with hover effects"
-        - "Statistics display (340% ROI, 98% satisfaction)"
-        - "Call-to-action buttons for exploration and consultation"
-        
-    - name: "QuantumAI2025RevolutionBanner"
-      file_path: "/components/QuantumAI2025RevolutionBanner.tsx"
-      status: "active"
-      features:
-        - "Quantum AI Revolution 2025 showcase"
-        - "Industry transformation highlights"
-        - "Quantum AI benefits and statistics"
-        - "Complete Quantum AI Guide promotion"
-        - "Gradient backgrounds and modern design"
-        
-    - name: "UltimateContentShowcase2025"
-      file_path: "/components/UltimateContentShowcase2025.tsx"
-      status: "active"
-      features:
-        - "Comprehensive content collection display"
-        - "Interactive content grid with featured items"
-        - "Impact statistics and success metrics"
-        - "Additional resources and tools promotion"
-        - "Multiple call-to-action options"
-
-  metrics:
-    expected_roi_mentions: 35
-    success_stories: 6
-    implementation_guides: 5
-    blog_posts: 8
-    total_word_count: "~65,000 words"
-    estimated_reading_time: "~260 minutes"
-    new_content_roi_highlights: "500% ROI featured prominently"
-    promotional_components: 9
-    homepage_integration: "Complete with auto-rotation and filtering"
->>>>>>> cursor/create-and-deploy-new-content-040d

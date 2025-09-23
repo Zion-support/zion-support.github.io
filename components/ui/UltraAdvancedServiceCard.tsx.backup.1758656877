@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -9,7 +8,6 @@ import {
 
 interface UltraAdvancedServiceCardProps {
   service: {
-=======
 "use client";
 
 class ErrorBoundary extends React.Component {
@@ -124,7 +122,6 @@ interface UltraAdvancedServiceCardProps {;
 
 interface UltraAdvancedServiceCardProps {;
   service: {;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     id: string;
     name: string;
     tagline: string;
@@ -135,7 +132,6 @@ interface UltraAdvancedServiceCardProps {;
     popular: boolean;
     icon: string;
     color: string;
-<<<<<<< HEAD
     textColor: string;
     link: string;
     marketPosition: string;
@@ -158,7 +154,6 @@ interface UltraAdvancedServiceCardProps {;
       address: string;
       website: string;
     };
-=======
 
 
 
@@ -191,18 +186,15 @@ interface UltraAdvancedServiceCardProps {;
     }
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     realImplementation: boolean;
     implementationDetails: string;
     launchDate: string;
     customers: number;
     rating: number;
-<<<<<<< HEAD
     reviews: number;
   };
 }
 
-=======
 
 
 
@@ -269,12 +261,10 @@ interface UltraAdvancedServiceCardProps {;
     reviews: number
   }
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
-<<<<<<< HEAD
   const getCategoryIcon = (category: string) => {
     if (category.includes('AI') || category.includes('Machine Learning')) return <Brain className="w-4 h-4" />;
     if (category.includes('Quantum')) return <Zap className="w-4 h-4" />;
@@ -318,7 +308,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
   };
 
   return (
-=======
 
 
 
@@ -517,30 +506,25 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
     >
       {/* Glow Effect */}
       <div  return (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     <motion.div
       className="relative group"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
       whileHover="hover"
-<<<<<<< HEAD
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
     >
       {/* Glow Effect */}
       <div 
-=======
       onHoverEnd={() => setIsHovered(false)}
     >
       {/* Glow Effect */}
       <div
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         className={`absolute inset-0 rounded-2xl blur-xl transition-all duration-500 ${
           isHovered ? 'opacity-100' : 'opacity-50'
         }`}
         style={{
-<<<<<<< HEAD
           background: `linear-gradient(135deg, ${service.color})`,
           transform: isHovered ? 'scale(1.05)' : 'scale(1)',
         }}
@@ -548,7 +532,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       
       {/* Main Card */}
       <div 
-=======
           background: `linear-gradient(135deg, ${service.color})`
           transform: isHovered ? 'scale(1.05)' : 'scale(1)'
         }}
@@ -571,15 +554,12 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
       <div 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${
           isHovered ? 'shadow-2xl' : 'shadow-lg'
         }`}
       >
-<<<<<<< HEAD
         <div className="bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full">
           {/* Header */}
-=======
 
         <div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>
           {/* Header */}
@@ -599,7 +579,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         <div className="bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full">
           {/* Header */}
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <div className="flex items-start justify-between mb-4">
             <div className="flex items-center space-x-3">
               <div className="text-3xl">{service.icon}</div>
@@ -613,12 +592,10 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                 <h3 className="text-xl font-bold text-white mt-1">{service.name}</h3>
               </div>
             </div>
-<<<<<<< HEAD
             
             {service.popular && (
               <motion.div
                 className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold"
-=======
             {service.popular && (
               <motion.div
 
@@ -682,7 +659,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 animate={{ scale: [1, 1.1, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
@@ -692,9 +668,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           </div>
 
           {/* Tagline */}
-<<<<<<< HEAD
           <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-=======
           <p className='text-gray-300 text-sm mb-4 leading-relaxed'>            {service.tagline}
           </p>
           {/* Price */}          <p className="text-gray-300 text-sm mb-4 leading-relaxed">
@@ -722,12 +696,10 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
           {/* Price */}
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             {service.tagline}
           </p>
 
           {/* Price */}
-<<<<<<< HEAD
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-baseline space-x-1">
               <span className="text-2xl font-bold text-white">{service.price}</span>
@@ -745,7 +717,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
           {/* Quick Stats */}
           <div className="grid grid-cols-2 gap-3 mb-4">
-=======
 
 
 
@@ -764,7 +735,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
           <div className="grid grid-cols-2 gap-3 mb-4">
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <div className="flex items-center space-x-2 text-sm">
               <Users className="w-4 h-4 text-blue-400" />
               <span className="text-gray-300">{service.customers.toLocaleString()}+ users</span>
@@ -772,13 +742,11 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             <div className="flex items-center space-x-2 text-sm">
               <Clock className="w-4 h-4 text-green-400" />
               <span className="text-gray-300">{service.trialDays} day trial</span>
-<<<<<<< HEAD
             </div>
           </div>
 
           {/* Market Data */}
           <div className="bg-gray-800/50 rounded-lg p-3 mb-4">
-=======
           </div>
 
           {/* Market Data */}
@@ -795,7 +763,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
           <div className="bg-gray-800/50 rounded-lg p-3 mb-4">
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <div className="flex items-center justify-between text-sm">
               <span className="text-gray-400">Market Size:</span>
               <span className="text-green-400 font-semibold">{service.marketSize}</span>
@@ -803,7 +770,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             <div className="flex items-center justify-between text-sm mt-1">
               <span className="text-gray-400">Growth Rate:</span>
               <span className="text-blue-400 font-semibold">{service.growthRate}</span>
-<<<<<<< HEAD
             </div>
           </div>
 
@@ -843,7 +809,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                   <h4 className="text-white font-semibold mb-2">ROI Promise</h4>
                   <p className="text-gray-300 text-sm">{service.roi}</p>
                 </div>
-=======
 
             </div>
 
@@ -1078,7 +1043,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           </AnimatePresence>;
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
                 {/* Contact Info */}
                 <div className="bg-gray-800/50 rounded-lg p-3">
@@ -1102,7 +1066,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             )}
           </AnimatePresence>
 
-<<<<<<< HEAD
           {/* Action Buttons */}
           <div className="flex space-x-3 mt-6">
             <motion.button
@@ -1125,7 +1088,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               whileTap={{ scale: 0.98 }}
               onClick={() => setIsExpanded(!isExpanded)}
             >
-=======
 
           {/* Action Buttons */}
           <div className='flex space-x-3 mt-6'>;
@@ -1333,12 +1295,10 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               whileTap={{ scale: 0 && 0.98 }}
               onClick={() => setIsExpanded(!isExpanded)}
             >;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               {isExpanded ? 'Show Less' : 'Details'}
             </motion.button>
           </div>
 
-<<<<<<< HEAD
           {/* Expand/Collapse Indicator */}
           <motion.div
             className="flex justify-center mt-4"
@@ -1347,7 +1307,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           >
             <ArrowRight className="w-5 h-5 text-gray-400" />
           </motion.div>
-=======
 
 
 
@@ -1365,16 +1324,13 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             transition={{ duration: 0.3 }}
           >
             <ArrowRight className='w-5 h-5 text-gray-400' />          </motion.div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         </div>
       </div>
     </motion.div>
   );
-<<<<<<< HEAD
 };
 
 export default UltraAdvancedServiceCard;
-=======
 
 }
 };
@@ -1419,4 +1375,3 @@ export default UltraAdvancedServiceCard;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

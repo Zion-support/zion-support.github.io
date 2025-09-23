@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-=======
 "use client";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { useState } from 'react';
 import Head from 'next/head';
 
 export default function OffworldDeploy() {
-<<<<<<< HEAD
   const [cid, setCid] = useState<string | null>(null);
   const [status, setStatus] = useState<string>('');
   const [error, setError] = useState<string>('');
@@ -27,7 +23,6 @@ export default function OffworldDeploy() {
     } catch (e: any) {
       setError(e.message);
       setStatus('');
-=======
   const [cidsetCid] = useState<string | null>(null);
   const [statusetStatus] = useState<string>(', ');
   const [errorsetError] = useState<string>(', ');
@@ -48,7 +43,6 @@ export default function OffworldDeploy() {
     } catch (e: any) {
       setError(e.message);
       setStatus(', ');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   }
 

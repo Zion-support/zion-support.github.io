@@ -1,7 +1,5 @@
 
 import { useState } from "react";
-<<<<<<< HEAD
-=======
 import { BriefcaseStarUser } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -80,4 +78,3 @@ export function UserTypeSelection({ onSelectselectedType }: UserTypeSelectionPro
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

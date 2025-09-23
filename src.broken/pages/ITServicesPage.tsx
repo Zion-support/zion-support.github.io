@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react',
 import { 
   Server,
@@ -574,4 +572,3 @@ export default function ITServicesPage() {
     </div>
   )
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

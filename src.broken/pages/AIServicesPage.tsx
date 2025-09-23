@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react',
 import { 
   Brain,
@@ -516,4 +514,3 @@ export default function AIServicesPage() {
     </div>
   )
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

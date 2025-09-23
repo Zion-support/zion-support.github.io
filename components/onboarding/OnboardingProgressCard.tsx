@@ -1,6 +1,4 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
 CheckCircle2CirclePartyPopper
 
 export type OnboardingStep = {
@@ -90,4 +88,3 @@ export default function OnboardingProgressCard({ titlestepshighlightColorClass =
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

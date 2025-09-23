@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 // Mock source map utility
 export function getSourceMapWithExistence() {
@@ -73,7 +71,6 @@ export interface DeployTemplateResult {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

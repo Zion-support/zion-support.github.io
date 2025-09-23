@@ -7,8 +7,6 @@ interface LogoProps {
   customColor?: string;
 }
 
-<<<<<<< HEAD
-=======
 export function Logo({ customLogocustomColor }: LogoProps) {
   const { isWhitelabelogoUrlbrandNameprimaryColor } = useWhitelabel();
   
@@ -33,4 +31,3 @@ export function Logo({ customLogocustomColor }: LogoProps) {
     </Link>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

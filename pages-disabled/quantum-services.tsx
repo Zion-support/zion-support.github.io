@@ -2,8 +2,6 @@ import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-=======
   AtomBrainRocketShieldZapTargetCpu
   LockCloudSettingsEyeAwardClockHeart
   LightbulbSearchGridListTrendingUp
@@ -307,4 +305,3 @@ export default function QuantumServices() {
 };
 
 export default QuantumServicesPage;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

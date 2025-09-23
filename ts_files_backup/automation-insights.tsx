@@ -80,8 +80,6 @@ export default function AutomationInsightsPage() {
     <>
       <Head>
         <title>Automation Insights | Zion Tech Group - AI Automation Expertise</title>
-<<<<<<< HEAD
-=======
         <meta name="description" content="Explore Zion Tech 'Group', 's automation insightstrendsand expertise in building autonomous systems." />
         <meta property="og:title" content="Automation Insights | Zion Tech Group" />
         <meta property="og:description" content="Expert insights on AI automationautonomous systemsand industry trends." />
@@ -182,4 +180,3 @@ export default function AutomationInsightsPage() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

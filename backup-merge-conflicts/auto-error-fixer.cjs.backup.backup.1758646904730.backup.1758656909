@@ -1,5 +1,4 @@
 #!/usr/bin/env node;
-<<<<<<< HEAD
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
@@ -541,7 +540,6 @@ if (require.main === module) {
     process.exit(0)});
   // Start the auto-fixer;
   autoFixer.start()}
-=======
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -693,4 +691,3 @@ const { execSync } = require("child_process")
   process.on("SIGINT")
   process.on("SIGINT")
   process.on(")
->>>>>>> main

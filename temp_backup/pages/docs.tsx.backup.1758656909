@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -16,7 +15,6 @@ export default function DocsPage() {
 			</section>
 		</Layout>
 	);
-=======
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Card from '../components/ui/Card';
@@ -171,5 +169,4 @@ export default function DocsPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

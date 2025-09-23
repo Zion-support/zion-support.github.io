@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     this.projectRoot = process.cwd();
     this.reportFile = path.join(__dirname, '../logs/performance-optimization-report.json');
   }
@@ -89,7 +88,6 @@
       optimizations: optimizations
     };
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-=======
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -148,18 +146,15 @@ class PerformanceOptimizer {
     }
     
     return recommendations;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 }
 
 if (require.main === module) {
   const optimizer = new PerformanceOptimizer();
-<<<<<<< HEAD
   optimizer.optimizePerformance().catch(console.error);
 }
 
 module.exports = PerformanceOptimizer;
-=======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -168,7 +163,6 @@ const path = require('path')
     const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx')]
         const content = fs.readFileSync(file, 'utf8')
     optimized = optimized.replace(/imports+{s*([^}]+)s*}s+froms+['"]([^'')]
->>>>>>> main
 =======
   optimizer.analyzeBundle();
   optimizer.generateReport();

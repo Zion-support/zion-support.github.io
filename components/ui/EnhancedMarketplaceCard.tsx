@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
           <div className="h-12 w-12 rounded bg-gray-200" />)},
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>,
@@ -31,4 +29,3 @@ export default function EnhancedMarketplaceCard({ title, subtitle, description, 
     </EnhancedCard>
   ),
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

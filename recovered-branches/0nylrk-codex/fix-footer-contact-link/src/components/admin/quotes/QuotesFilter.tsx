@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import React from "react";
 import {Calendar, RefreshCw} from "@/components/icons";
@@ -267,7 +265,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
 ;
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

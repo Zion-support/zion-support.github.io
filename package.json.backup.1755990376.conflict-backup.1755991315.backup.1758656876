@@ -686,7 +686,6 @@
     "https": "^1.0.0",
     "import-fresh": "^3.3.1",
     "jsdom": "^24.1.0",
-<<<<<<< HEAD
     "lucide-react": "^0.539.0",
     "next": "^14.2.31",
     "node-cron": "^4.2.1",
@@ -695,7 +694,6 @@
     "react": "18.2.0",
     "react-datepicker": "^8.4.0",
     "react-dom": "18.2.0",
-=======
     "lucide-react": "^0.536.0",
     "next": "^14.2.5",
     "node-cron": "^4.2.1",
@@ -706,7 +704,6 @@
     "react-datepicker": "^8.4.0",
     "react-dom": "^19.1.1",
     "tailwind-merge": "^3.3.1",
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
     "uuid": "^11.1.0"
   },
   "devDependencies": {

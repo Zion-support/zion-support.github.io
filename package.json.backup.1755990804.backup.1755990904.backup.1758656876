@@ -402,7 +402,6 @@
     "git:cron:start": "bash automation/git-sync-cron.sh start",
     "git:cron:stop": "bash automation/git-sync-cron.sh stop",
     "git:cron:status": "bash automation/git-sync-cron.sh status",
-<<<<<<< HEAD
     "homepage:update": "node automation/homepage-updater.cjs",
     "front:futurize": "node automation/front-futurizer.cjs",
     "front:futurize:cron": "node -e \"const cp=require('child_process'); setInterval(()=>cp.exec('node automation/front-futurizer.cjs',()=>{}), 1000*60*60*6)\"",
@@ -450,11 +449,9 @@
     "redundancy:ultimate:report": "node automation/ultimate-redundancy-master.cjs report",
     "redundancy:ultimate:recover": "node automation/ultimate-redundancy-master.cjs recover"
   },
-=======
     "home:update": "node automation/homepage-updater.cjs"
 =======
     "homepage:update": "node automation/homepage-auto-updater.cjs"
->>>>>>> origin/cursor/autonomous-cloud-page-enhancer-and-advertiser-e70a
   },
 >>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
   "dependencies": {

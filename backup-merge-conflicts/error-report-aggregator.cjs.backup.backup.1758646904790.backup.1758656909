@@ -14,9 +14,7 @@ class $1 {}
 ;
   log(message, type = "info") {}
   const timestamp = new Date().toISOString();
-<<<<<<< HEAD
     }] ${message}`)}
-=======
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`)};
 ;
   async ensureDirectoryExists(dirPath) {}
@@ -136,4 +134,3 @@ class $1 {}
 // Run the error report aggregator;
 const aggregator = new ErrorReportAggregator();
 aggregator.run().catch(console.error);
->>>>>>> main

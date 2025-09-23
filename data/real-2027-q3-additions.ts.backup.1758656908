@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const real2027Q3Additions = [
   {
     id: 'it-asset-discovery-agent',
@@ -306,7 +305,6 @@ export const real2027Q3Additions = [
     realService: true,
     roi: 'Prevent high-severity API incidents and cut MTTR.'
   }
-=======
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 export const real2027Q3Additions: EnhancedRealMicroSaasService[] = [
 	{
@@ -519,5 +517,4 @@ export const real2027Q3Additions: EnhancedRealMicroSaasService[] = [
 		rating: 4.9,
 		reviews: 2100
 	}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 ];

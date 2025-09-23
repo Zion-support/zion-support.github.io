@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -114,7 +112,6 @@ export function MobileBrowse() {
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     id: "1",
     title: "Senior React Developer",
     subtitle: "TechCorp Inc.",

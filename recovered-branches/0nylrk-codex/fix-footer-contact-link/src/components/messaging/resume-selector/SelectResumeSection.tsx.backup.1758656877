@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from 'react';
 import { FileText } from 'lucide-react';
 import { ResumeOption } from '../resume-selector/types';
@@ -14,7 +13,6 @@ interface SelectResumeSectionProps {
   isLoading: boolean;
 }
 
-=======
 
 import React from 'react';
 import { FileText  } from 'lucide-react';
@@ -55,13 +53,11 @@ interface SelectResumeSectionProps {;
 
   isLoading: boolean
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export function SelectResumeSection({
   resumeOptions,
   selectedResume,
   handleResumeSelect,
   handleDownloadResume,
-<<<<<<< HEAD
   isLoading
 }: SelectResumeSectionProps) {
   return (
@@ -99,7 +95,6 @@ export function SelectResumeSection({
     </div>
   );
 }
-=======
 
 
   isLoading
@@ -186,4 +181,3 @@ function SelectResumeSection() {
     </div>);
 }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

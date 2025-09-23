@@ -6,8 +6,6 @@ import { z } from "zod";
 import { WorkExperience } from "@/types/resume";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
-<<<<<<< HEAD
-=======
 import { FormControlFormFieldFormItemFormLabelFormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { PopoverContentPopoverTrigger } from "@/components/ui/popover";
@@ -314,4 +312,3 @@ export function WorkExperienceItemForm({
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

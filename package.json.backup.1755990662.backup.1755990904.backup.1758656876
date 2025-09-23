@@ -148,7 +148,6 @@
     "prebuild": "npm run build:health-check && npm run netlify:manifest",
     "export": "rm -rf .next out tsconfig.tsbuildinfo && mkdir -p .temp && mv pages/reports .temp/ 2>/dev/null || true && NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" next build --no-lint && mv .temp/reports pages/ 2>/dev/null || true && rm -rf .temp",
     "start": "next start",
-<<<<<<< HEAD
     "postbuild": "node automation/footer-injector.cjs || true",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "type-check": "tsc --noEmit",
@@ -169,12 +168,10 @@
     "build:smart:full": "node automation/master-build-orchestrator.cjs runSmartBuild",
     "security:scan": "node automation/security-scanner.cjs || true && (npm audit --audit-level=high || true)",
     "auto:intel": "node automation/intelligent-orchestrator.cjs run intelligent",
-=======
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "type-check": "tsc --noEmit",
     "prepare": "husky install",
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
     "autonomous": "node automation/launch-enhanced-autonomous-system.js",
     "autonomous:dev": "nodemon automation/launch-enhanced-autonomous-system.js",
     "autonomous:status": "node automation/launch-autonomous-systems-clean.js status",
@@ -523,29 +520,3 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "husky": "^9.1.7",
-<<<<<<< HEAD
-    "lint-staged": "^16.1.5",
-    "postcss": "^8.4.32",
-    "sharp": "^0.34.3",
-    "tailwindcss": "^4.1.12",
-    "ts-node": "^10.9.2",
-    "typescript": "5.9.2"
-  },
-    "lint-staged": "^16.1.4",
-          "postcss": "^8.4.32",
-      "sharp": "^0.33.4",
-      "tailwindcss": "^3.4.0",
-      "ts-node": "^10.9.2",
-      "typescript": "^5.6.3",
-      "jest": "^29.7.0",
-      "ts-jest": "^29.2.5",
-      "jest-environment-jsdom": "^29.7.0",
-      "identity-obj-proxy": "^3.0.0"
-    },
->>>>>>> origin/cursor/automate-continuous-development-processes-4d04
-  "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix"
-    ]
-  }
-}

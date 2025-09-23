@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useStateuseEffectuseCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from "sonner";
@@ -162,4 +160,3 @@ export function JobPostingForm({ jobIdonSuccess }: JobPostingFormProps) {
     </Form>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

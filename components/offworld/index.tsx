@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import { useState } from 'react';
 import Head from 'next/head';
@@ -77,4 +75,3 @@ export default function OffworldConsole() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

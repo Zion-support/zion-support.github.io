@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,12 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet" />
 <<<<<<< HEAD
-<<<<<<< HEAD
   <meta name="theme-color" content="#000000" />
   <link rel="manifest" href="/manifest.json" />
 =======
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <meta name="theme-color" content="#0a0f1f" />
   <style>
     body {
@@ -124,18 +118,12 @@
 </head>
 <body>
   <h1>Zion Tech Nexus - Offline Development</h1>
-<<<<<<< HEAD
   
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <div class="status-box offline">
     <span class="network-indicator"></span>
     <strong>OFFLINE MODE</strong> - Running with minimal functionality
   </div>
-<<<<<<< HEAD
   
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <div class="card">
     <h2>💻 Offline Development Mode</h2>
     <p>You're currently running in offline placeholder mode. This is a minimal server that doesn't require npm dependencies.</p>
@@ -143,10 +131,7 @@
       Checking network status...
     </div>
   </div>
-<<<<<<< HEAD
   
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <div class="card warning">
     <h2>⚠️ TypeScript and Dependency Errors</h2>
     <p>The errors you're seeing are expected in offline mode because the required dependencies aren't available:</p>
@@ -159,19 +144,13 @@
     </div>
     <p>We've created temporary type declarations in <code>src/types/offline-shims.d.ts</code> to help with development, but these are only placeholders.</p>
   </div>
-<<<<<<< HEAD
   
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <div class="tabs">
     <div class="tab active" onclick="showTab('online')">Online Solution</div>
     <div class="tab" onclick="showTab('offline')">Offline Workarounds</div>
     <div class="tab" onclick="showTab('proxy')">Proxy Settings</div>
   </div>
-<<<<<<< HEAD
   
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <div id="online" class="tab-content active">
     <div class="steps">
       <h2>🌐 When Internet is Available</h2>
@@ -182,10 +161,7 @@
       <div class="command">npm run dev</div>
     </div>
   </div>
-<<<<<<< HEAD
   
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <div id="offline" class="tab-content">
     <div class="steps">
       <h2>🔌 Offline Development Options</h2>
@@ -196,10 +172,7 @@
       </ol>
     </div>
   </div>
-<<<<<<< HEAD
   
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <div id="proxy" class="tab-content">
     <div class="steps">
       <h2>🔒 Behind a Corporate Proxy?</h2>
@@ -211,33 +184,24 @@ npm config set strict-ssl false  # Only if needed</div>
       <div class="command">./setup.sh npm</div>
     </div>
   </div>
-<<<<<<< HEAD
   
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <script>
     function showTab(tabId) {
       // Hide all tab contents
       document.querySelectorAll('.tab-content').forEach(content => {
         content.classList.remove('active');
       });
-<<<<<<< HEAD
       
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       // Deactivate all tabs
       document.querySelectorAll('.tab').forEach(tab => {
         tab.classList.remove('active');
       });
-<<<<<<< HEAD
       
       // Show selected tab content
       document.getElementById(tabId).classList.add('active');
       
-=======
       // Show selected tab content
       document.getElementById(tabId).classList.add('active');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       // Activate selected tab
       document.querySelectorAll('.tab').forEach(tab => {
         if (tab.textContent.toLowerCase().includes(tabId.toLowerCase())) {
@@ -245,10 +209,7 @@ npm config set strict-ssl false  # Only if needed</div>
         }
       });
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     // Check if we're online periodically
     function checkOnlineStatus() {
       fetch('/online-check')
@@ -268,10 +229,7 @@ npm config set strict-ssl false  # Only if needed</div>
           statusBox.classList.add('offline');
         });
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     // Check immediately and then every 30 seconds
     checkOnlineStatus();
     setInterval(checkOnlineStatus, 30000);

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { Routes } from "react-router-dom";
 import MobileAppPage from "../pages/MobileAppPage";
 import MobileLaunchPage from "../pages/MobileLaunchPage";
@@ -18,4 +16,3 @@ const MobileAppRoutes = () => {
 };
 
 export default MobileAppRoutes;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

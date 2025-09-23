@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 const testReport = {
@@ -62,7 +61,6 @@ runTest('Security Audit', () => {
 fs.writeFileSync('test-automation-report.json', JSON.stringify(testReport, null, 2));
 
 process.exit(testReport.summary.failed > 0 ? 1 : 0);
-=======
 const { execSync } = require('child_process')
 console.log('🧪 Running Automated Tests...')
       "status"
@@ -72,4 +70,3 @@ console.log('🧪 Running Automated Tests...')
   execSync('npm run type-check', { "stdio"})
     execSync('npm audit --audit-level=moderate', { "stdio"})
 console.log('🧪 Test "Summary")
->>>>>>> main

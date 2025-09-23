@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export default function SAASServicesPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -12,4 +10,3 @@ export default function SAASServicesPage() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

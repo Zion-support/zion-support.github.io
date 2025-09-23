@@ -1,7 +1,5 @@
 "use client";
 'use client';
-<<<<<<< HEAD
-=======
 
 import React, { useState, useEffect } from 'react';
 
@@ -537,4 +535,3 @@ const AutomationWorkflowEngine: React.FC = () => {
 };
 
 export default AutomationWorkflowEngine;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

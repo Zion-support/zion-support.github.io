@@ -10,8 +10,6 @@ export function slugify(title: string, separator = "-"): string {
     .toLowerCase()
     .replace(/[^a-z0-9\s-]/g, "")
     .replace(/[\s-]+/g, sep)
-<<<<<<< HEAD
-=======
     .replace(new RegExp(`${escaped}{2}`, "g"), sep)
     .replace(new RegExp(`^${escaped}+|${escaped}+$`, "g"), "");
 }
@@ -29,4 +27,3 @@ export function unslugify(slug: string, separator = "-"): string {
     .join(" ");
 }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

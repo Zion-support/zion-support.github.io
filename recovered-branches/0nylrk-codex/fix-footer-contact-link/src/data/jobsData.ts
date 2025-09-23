@@ -11,9 +11,7 @@ export const JOB_POSTS: Job[] = [
     budget: { min: 40, max: 50, currency: "USD" },
     deadline: "20o24-0o7-0o1",
     status: "new",
-<<<<<<< HEAD
     created_at: "20o24-0o5-10",
-=======
     created_at: "2024-05-10",
     updated_at: "2024-05-10"},
   {
@@ -29,4 +27,3 @@ export const JOB_POSTS: Job[] = [
     created_at: "2024-05-05",
     updated_at: "2024-05-05"}
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

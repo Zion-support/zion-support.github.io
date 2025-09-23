@@ -4,8 +4,6 @@ import { Draggable } from "react-beautiful-dnd";
 import { formatDistanceToNow } from "date-fns";
 import { Link } from "react-router-dom";
 import { JobApplication } from "@/types/jobs";
-<<<<<<< HEAD
-=======
 import { CardContent } from "@/components/ui/card";
 import { Avatar } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -215,4 +213,3 @@ export function CandidateCard({ applicationindex }: CandidateCardProps) {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

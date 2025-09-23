@@ -1,19 +1,15 @@
-<<<<<<< HEAD
 export const metadata = {
   title: "Terms of Service - Zion Tech Group",
   description: "Read Zion Tech Group's terms of service and conditions for using our website and services.",
   keywords: "terms of service, terms and conditions, Zion Tech Group terms, service agreement",
 };
 
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-1e9c
 export default function TermsPage() {
   return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-<<<<<<< HEAD
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             <span className="gradient-text">Terms of Service</span>
           </h1>
@@ -232,7 +228,6 @@ export default function TermsPage() {
               </p>
             </div>
           </section>
-=======
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="gradient-text">Terms of Service</span>
           </h1>
@@ -438,7 +433,6 @@ export default function TermsPage() {
               </div>
             </div>
           </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-1e9c
         </div>
       </div>
     </div>

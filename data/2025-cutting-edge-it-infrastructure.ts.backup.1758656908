@@ -1,13 +1,10 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface CuttingEdgeITInfrastructureService {
-=======
 
 import { ServiceVariant } from '../types/service-variants';
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   id: string;
   name: string;
   tagline: string;
@@ -18,7 +15,6 @@ import { ServiceVariant } from '../types/service-variants';
   popular: boolean;
   icon: string;
   color: string;
-<<<<<<< HEAD
   textColor: string;
   link: string;
   marketPosition: string;
@@ -54,7 +50,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
   {
     id: 'quantum-secure-cloud-infrastructure',
     name: 'Quantum-Secure Cloud Infrastructure Platform',
-=======
   text_color: string;
   link: string;
   market_position: string;
@@ -439,13 +434,11 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
   // Quantum-Secure Cloud Infrastructure
   {
     id: 'quantum-secure-cloud-infrastructure', name: 'Quantum-Secure Cloud Infrastructure Platform',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     tagline: 'Next-generation cloud infrastructure with quantum encryption and zero-trust security',
     price: '$4,999',
     period: '/month',
     description: 'Revolutionary cloud infrastructure platform featuring quantum-resistant encryption, zero-trust architecture, and autonomous security management for enterprise-grade applications.',
     features: [
-<<<<<<< HEAD
       'Quantum-resistant encryption algorithms',
       'Zero-trust security architecture',
       'Autonomous security management',
@@ -702,7 +695,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     reviews: 4
   }
 ];
-=======
       'Quantum-resistant encryption algorithmsZero-trust security architectureAutonomous security managementMulti-cloud orchestrationReal-time threat detectionCompliance automation (SOC2, ISO27001)AI-powered resource optimizationGlobal edge computing network';
       '99.999% uptime guarantee24/7 security monitoring'
       id: 'quantum-networking-platform'
@@ -1794,4 +1786,3 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
   }
 ];
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

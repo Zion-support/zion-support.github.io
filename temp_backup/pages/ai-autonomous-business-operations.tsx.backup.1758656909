@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AIAutonomousBusinessOperations() {
@@ -23,7 +22,6 @@ export default function AIAutonomousBusinessOperations() {
 			industries={["SaaS", "Healthcare", "Finance", "Retail"]}
 			canonical="https://ziontechgroup.com/ai-autonomous-business-operations"
 		/>
-=======
 import Head from 'next/head';
 
 export default function AIAutonomousBusinessOperationsPage() {
@@ -39,6 +37,5 @@ export default function AIAutonomousBusinessOperationsPage() {
 				<p className="text-gray-300 max-w-3xl">Automate workflows across departments using coordinated AI agents.</p>
 			</div>
 		</>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 	);
 }

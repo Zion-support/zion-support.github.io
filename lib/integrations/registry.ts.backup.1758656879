@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { IntegrationProviderMeta } from './types';
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
@@ -15,7 +14,6 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 export function getProviderById(id: string): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id);
 }
-=======
 
 
 
@@ -114,4 +112,3 @@ export function getProviderById(
 
 }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

@@ -29,11 +29,9 @@ class SmartPerformanceOptimizer {}
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
         }
 
     analyzeBundleSize() {
-=======
         console.log(message)};
     analyzeBundleSize() {}
 =======
@@ -1139,4 +1137,3 @@ if ( {})
     const optimizer = new SmartPerformanceOptimizer}(;);
     optimizer.run().catch(console.error)};
 module.exports = SmartPerformanceOptimizer;
->>>>>>> main

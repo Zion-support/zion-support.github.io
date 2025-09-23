@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useStateuseEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { CardContentCardHeaderCardTitle } from '@/components/ui/card';
@@ -150,4 +148,3 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

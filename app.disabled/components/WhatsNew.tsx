@@ -1,8 +1,6 @@
 "use client";
-<<<<<<< HEAD
 
 import React from "react";
-=======
 import Link from 'next/link';
 import { WHATS_NEW_ITEMS, type WhatsNewItem } from '../../data/whatsNew';
 
@@ -13,13 +11,10 @@ type WhatsNewProps ={
   title?: string;
   subtitle?: string;
 };
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
 
 export default function WhatsNew() {
   return null;
 }
-<<<<<<< HEAD
-=======
 
 const WhatsNew: React.FC<WhatsNewProps> = ({
   limit = 6,
@@ -79,4 +74,3 @@ const WhatsNew: React.FC<WhatsNewProps> = ({
 
 export default WhatsNew;
 
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

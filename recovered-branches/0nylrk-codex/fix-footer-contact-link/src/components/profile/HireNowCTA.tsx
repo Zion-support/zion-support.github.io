@@ -14,8 +14,6 @@ interface HireNowCTAProps {
 }
 
 export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
-<<<<<<< HEAD
-=======
   const [modalOpensetModalOpen] = useState(false);
 
   const handleOpenModal = () => {
@@ -111,4 +109,3 @@ function calculateProfileCompleteness(profile: any) {
   
   return Math.min(Math.round((completedFields / totalFields) * 100);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

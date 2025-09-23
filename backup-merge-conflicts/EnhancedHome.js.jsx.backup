@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 const React from "react"; export default EnhancedHome; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome };''"
 <<<<<<< HEAD:backup-merge-conflicts/EnhancedHome.js.jsx.backup
-=======
 import _React from 'react'; export default EnhancedHome; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome };
 =======
 <<<<<<< HEAD
@@ -12,7 +10,6 @@ import _React from 'react'; export default EnhancedHome; export { EnhancedHome }
 import _React from 'react'; export default EnhancedHome; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome };
 =======
 <<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
 =======
 =======

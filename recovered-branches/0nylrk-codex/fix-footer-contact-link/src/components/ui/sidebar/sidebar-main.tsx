@@ -1,8 +1,6 @@
 
 import * as React from "react"
 import type { CSSProperties } from "react"
-<<<<<<< HEAD
-=======
 import { SheetContent } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
 import { useSidebar } from "./sidebar-context"
@@ -143,4 +141,3 @@ export const SidebarInset = React.forwardRef<
   )
 })
 SidebarInset.displayName = "SidebarInset"
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

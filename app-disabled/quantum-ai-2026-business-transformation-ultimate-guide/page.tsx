@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 export default function Page() {
@@ -10,4 +8,3 @@ export default function Page() {
 		</div>
 	);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

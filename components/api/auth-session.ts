@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
@@ -19,4 +17,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.status(200).json({ message: 'OK', session });
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

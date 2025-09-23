@@ -4,8 +4,6 @@ export default function HealthcareAISolutions() {
 	return (
 		<ServiceLanding
 			title="Healthcare AI Solutions"
-<<<<<<< HEAD
-=======
 			description="AI platforms for diagnostics, patient intelligence, and population health—built with compliance, privacy, and safety in mind."
 			subtitle="Improve outcomes while reducing costs"
 			pricePerMonthUSD={5999}
@@ -25,4 +23,3 @@ export default function HealthcareAISolutions() {
 		/>
 	);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

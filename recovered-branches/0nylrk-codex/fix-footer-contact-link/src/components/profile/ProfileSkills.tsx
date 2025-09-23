@@ -12,8 +12,6 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {
       <h3 className="text-xl font-bold text-white mb-4">Skills</h3>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-<<<<<<< HEAD
-=======
         {skills.map((skillindex) => (
           <div key={index} className="flex flex-col">
             <div className="flex justify-between items-center mb-1">
@@ -37,4 +35,3 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

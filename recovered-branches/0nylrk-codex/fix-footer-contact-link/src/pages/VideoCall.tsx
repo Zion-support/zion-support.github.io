@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import { useState, useEffect  } from 'react';
 import { useParams, useNavigate  } from 'react-router-dom';
@@ -117,7 +115,6 @@ export default function VideoCall() {;
 
       toast && toast.success("Call joined", {;
         description: `You have joined meeting room ${roomId}`;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       });
     }, 1500);
   };

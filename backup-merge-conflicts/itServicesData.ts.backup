@@ -1,8 +1,5 @@
 =======
-<<<<<<< HEAD:src/data/itServicesData.ts
 <<<<<<< HEAD:backup-merge-conflicts/itServicesData.ts.backup
-=======
->>>>>>> pr-11913:src_backup_temp/data/itServicesData.ts
 export interface ITService {;
   "id": "string;
   "title": string;
@@ -2720,10 +2717,3 @@ export const IT_SERVICES: ITService[] = [
   }
 ];
 =======
-<<<<<<< HEAD
-    competitors: [&quot;Cisco&quot;, &quot;HPE&quot;, &quot;Dell Technologies&quot;, &quot;Juniper&quot;, &quot;Fortinet&quot;],
-    marketSize: &quot;$25.6 billion by 2025&quot;
-  }
-];
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
->>>>>>> pr-11935

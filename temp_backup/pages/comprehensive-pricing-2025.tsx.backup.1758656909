@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -346,7 +345,6 @@ export default function ComprehensivePricingPage() {
                     className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
                   >
                     Call +1 302 464 0950
-=======
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import { 
@@ -748,17 +746,14 @@ export default function ComprehensivePricing2025() {
                   >
                     Learn More
                     <ArrowRight className="ml-2 h-3 w-3" />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   </a>
                 </div>
               </div>
             </motion.div>
-<<<<<<< HEAD
           </div>
         </section>
       </div>
     </>
-=======
           ))}
         </motion.div>
 
@@ -885,6 +880,5 @@ export default function ComprehensivePricing2025() {
         </motion.div>
       </div>
     </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   );
 }

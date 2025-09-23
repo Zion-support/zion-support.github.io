@@ -45,7 +45,6 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-<<<<<<< HEAD
   const services = [
     {
       title: 'AI Autonomous Systems',
@@ -236,7 +235,6 @@ export default function HomePage() {
                   Spin up a new instance with marketplace, governance, and more
                 </p>
               </a>
-=======
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -434,12 +432,10 @@ export default function HomePage() {
                   All Quantum Services
                 </Link>
               </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-ce0d
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Featured Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="featured-services-heading">
           <div className="max-w-7xl mx-auto">
@@ -485,7 +481,6 @@ export default function HomePage() {
                 </p>
                 <a href="/services" className="text-blue-400 hover:underline text-sm mt-4 inline-block" aria-label="Learn more about cybersecurity services">Learn More →</a>
               </div>
-=======
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -504,7 +499,6 @@ export default function HomePage() {
               <Link href="/case-studies" className="btn-secondary text-lg px-8 py-4">
                 View Success Stories
               </Link>
->>>>>>> origin/cursor/website-audit-and-enhancement-ce0d
             </div>
           </div>
         </section>

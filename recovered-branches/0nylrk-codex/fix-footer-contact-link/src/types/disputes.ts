@@ -70,7 +70,4 @@ export const disputeReasonLabels: Record<DisputeReason, string> = {
   communication: 'Communication Issues',
   payment: 'Payment Dispute',
   contract_terms: 'Contract Terms Disagreement',
-<<<<<<< HEAD
-=======
   other: 'Other Issue'};
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

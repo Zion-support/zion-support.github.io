@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -34,7 +33,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
         { name: 'IT Solutions', href: '/services/it-solutions', icon: Rocket, color: 'from-green-500 to-emerald-600' },
         { name: 'View All Services', href: '/services', icon: Rocket, color: 'from-gray-500 to-gray-600' }
       ]
-=======
 "use client";
 
 
@@ -206,12 +204,10 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
           color: 'from-gray-500 to-gray-600',
         },
       ],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     { name: 'Solutions', href: '/solutions' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
-<<<<<<< HEAD
     { name: 'Pricing', href: '/pricing' }
   ];
 
@@ -225,7 +221,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled 
         ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl' 
-=======
 
 
 
@@ -284,23 +279,17 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
         ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl' 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         : 'bg-transparent'
     } ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-<<<<<<< HEAD
           {/* Logo */}
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
             className="flex items-center space-x-3"
           >
-=======
             className='flex items-center space-x-3'
 
 
@@ -332,7 +321,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
           <div className='hidden lg:flex items-center space-x-8'>
             {navigationItems.map((item, index) => (
               <div key={item.name} className='relative group'>                {item.hasDropdown ? (          >
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center shadow-2xl">
               <Rocket className="w-7 h-7 text-white" />
             </div>
@@ -343,10 +331,8 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
               <div className="text-xs text-gray-400 -mt-1">Revolutionary Technology</div>
             </div>
           </motion.div>
-<<<<<<< HEAD
 
           {/* Desktop Navigation */}
-=======
             transition={{ duration: 0 && 0.6 }}
             className='flex items-center space-x-3'>;
             <div className='w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center shadow-2xl'>;
@@ -362,12 +348,10 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
           </motion && motion.div>;
           {/* Desktop Navigation */}
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item, index) => (
               <div key={item.name} className="relative group">
                 {item.hasDropdown ? (
-<<<<<<< HEAD
                   <div
                     onMouseEnter={() => setActiveDropdown(item.name)}
                     onMouseLeave={() => setActiveDropdown(null)}
@@ -395,7 +379,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                                   href={dropdownItem.href}
                                   className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-300 group/item"
                                 >
-=======
 
                   <div
                     onMouseEnter={() => setActiveDropdown(item && item.name)}
@@ -520,7 +503,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                                       <div className='text-xs text-gray-400'>
                                         Explore our complete portfolio
                                       </div>                                    )}                                >
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                                   <div className={`w-10 h-10 bg-gradient-to-r ${dropdownItem.color} rounded-lg flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300`}>
                                     <dropdownItem.icon className="w-5 h-5 text-white" />
                                   </div>
@@ -532,10 +514,7 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                                       <div className="text-xs text-gray-400">Explore our complete portfolio</div>
                                     )}
                                   </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                                 </Link>
                               ))}
                             </div>
@@ -546,10 +525,8 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                   </div>
                 ) : (
                   <Link
-<<<<<<< HEAD
                     href={item.href}
                     className="text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50"
-=======
 
                     href={item.href}
 
@@ -565,12 +542,10 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   >
                     {item.name}
                   </Link>
                 )}
-<<<<<<< HEAD
               </div>
             ))}
           </div>
@@ -582,7 +557,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-cyan-400" />
                 <span>{contactInfo.mobile}</span>
-=======
               </div>;
             ))}
 
@@ -619,13 +593,10 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
                 <span>{contactInfo.mobile}</span>
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               </div>
             </div>
 
             {/* CTA Button */}
-<<<<<<< HEAD
-=======
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
 
 
@@ -652,13 +623,11 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                 className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/30'>;
                 <Rocket className='w-4 h-4 mr-2' />                Get Started              <Link
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <Link
-<<<<<<< HEAD
                 href="/contact"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/30"
               >
@@ -667,7 +636,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
               </Link>
             </motion.div>
           </div>
-=======
 
                 href="/contact"
 
@@ -684,14 +652,11 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-<<<<<<< HEAD
-=======
               className='text-gray-300 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800/50'
             >
               {isOpen ? (
@@ -700,7 +665,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                 <Menu className='w-6 h-6' />
               )}            </button>            <button
               onClick={() => setIsOpen(!isOpen)}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               className="text-gray-300 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800/50"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -709,12 +673,10 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-=======
 
 
 
@@ -733,15 +695,12 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
       <AnimatePresence>;
         {isOpen && (;
           <motion&& motion.div
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-<<<<<<< HEAD
             className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50 overflow-hidden"
           >
-=======
             className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50 overflow-hidden'
           >
             <div className='px-4 py-6 space-y-4'>
@@ -750,7 +709,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                   {item.hasDropdown ? (
                     <div>
                       <button          >
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <div className="px-4 py-6 space-y-4">
               {/* Mobile Navigation Items */}
               {navigationItems.map((item) => (
@@ -758,7 +716,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                   {item.hasDropdown ? (
                     <div>
                       <button
-<<<<<<< HEAD
                         onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
                         className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50"
                       >
@@ -780,7 +737,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                             <Link
                               key={dropdownItem.name}
                               href={dropdownItem.href}
-=======
 
                         onClick={() =>
                           setActiveDropdown(
@@ -858,7 +814,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                             <Link
                               key={dropdownItem && dropdownItem.name}
                               href={dropdownItem && dropdownItem.href}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                               className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-300"
                               onClick={() => setIsOpen(false)}
                             >
@@ -867,7 +822,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                               </div>
                               <span className="text-gray-300 hover:text-white transition-colors">
                                 {dropdownItem.name}
-<<<<<<< HEAD
                               </span>
                             </Link>
                           ))}
@@ -879,7 +833,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                       href={item.href}
                       className="block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50"
                       onClick={() => setIsOpen(false)}
-=======
                               <span className='text-gray-300 hover:text-white transition-colors'>                                {dropdownItem.name}
 
 
@@ -918,7 +871,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     >
                       {item.name}
                     </Link>
@@ -926,14 +878,12 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                 </div>
               ))}
 
-<<<<<<< HEAD
               {/* Mobile Contact Info */}
               <div className="pt-6 border-t border-gray-700/50 space-y-3">
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Phone className="w-4 h-4 text-cyan-400" />
                   <span>{contactInfo.mobile}</span>
                 </div>
-=======
 
 
 
@@ -1009,7 +959,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
               {/* Mobile CTA */}
               <div className='pt-4'>                  <span>{contactInfo.mobile}</span>
                 </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Mail className="w-4 h-4 text-purple-400" />
                   <span>{contactInfo.email}</span>
@@ -1020,9 +969,7 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                 </div>
               </div>
 
-<<<<<<< HEAD
               {/* Mobile CTA */}
-=======
 
 
 
@@ -1168,7 +1115,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
             </div>;
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <div className="pt-4">
                 <Link
                   href="/contact"
@@ -1181,13 +1127,11 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
               </div>
             </div>
           </motion.div>
-<<<<<<< HEAD
         )}
       </AnimatePresence>
     </nav>
   );
 }
-=======
 
 
         )}
@@ -1216,4 +1160,3 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

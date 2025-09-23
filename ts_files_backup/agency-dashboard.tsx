@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-=======
 "use client";
 import type { GetServerSideProps } from 'next';
 import { FormEventuseEffectuseState } from 'react';
 import type { Vendor } from '../utils/vendor-types';
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 

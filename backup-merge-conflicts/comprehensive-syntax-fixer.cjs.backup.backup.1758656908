@@ -1,8 +1,6 @@
-<<<<<<< HEAD
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
-=======
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -23,7 +21,6 @@ class ComprehensiveSyntaxFixer {
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
     
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 
   async runCommand(command, options = {}) {

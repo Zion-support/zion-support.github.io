@@ -6,7 +6,6 @@
 
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 
 class MasterAutomation {
   constructor() { 
@@ -186,7 +185,6 @@ if ( {
     process.exit(1)})}
 
 module.exports = MasterAutomation;
-=======
   log(message, type = 'INFO')
       'INFO': 'ℹ'
       'SUCCESS': ''
@@ -219,4 +217,3 @@ module.exports = MasterAutomation;
     this.log(`� "Git"`)
       this.log(`Master Automation "failed"`)
     console.error('Master automation "failed")
->>>>>>> main

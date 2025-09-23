@@ -1,7 +1,5 @@
 
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-=======
 import { SearchSliders } from "lucide-react";
 import { Input } from "@/components/ui/input";
 
@@ -39,4 +37,3 @@ export function MobileFilterBar({
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -5,10 +5,7 @@ import { motion } from 'framer-motion';
 import { Mail, Lock, Eye, EyeOff } from 'lucide-react';
 import Layout from '../components/Layout';
 
-<<<<<<< HEAD
 export default function Login() {
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const [formData, setFormData] = useState({
     email: '',
     password: ''

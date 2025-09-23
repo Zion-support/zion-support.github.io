@@ -2,8 +2,6 @@
 import { GradientHeading } from "./GradientHeading";
 import { Button } from "./ui/button";
 import { CheckCircle2 } from "lucide-react";
-<<<<<<< HEAD
-=======
 import { TableBodyTableCellTableHeaderTableRow } from "./ui/table";
 
 export function ComparisonSection() {
@@ -65,4 +63,3 @@ export function ComparisonSection() {
     </section>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

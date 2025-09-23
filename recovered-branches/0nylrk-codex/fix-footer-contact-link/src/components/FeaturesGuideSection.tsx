@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import { GradientHeading } from "./GradientHeading";
-<<<<<<< HEAD
-=======
 import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
 import { Button } from "./ui/button";
 import { 
@@ -220,4 +218,3 @@ export function FeaturesGuideSection() {
     </section>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

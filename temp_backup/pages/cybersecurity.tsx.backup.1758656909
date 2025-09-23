@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
@@ -78,7 +77,6 @@ export default function CybersecurityPage() {
     </Layout>
   );
 }
-=======
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Zap, Brain, Globe, Target, AlertTriangle } from 'lucide-react';
 import Layout from '../components/layout/Layout';
@@ -211,4 +209,3 @@ export default function Cybersecurity() {
 };
 
 export default CybersecurityPage;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

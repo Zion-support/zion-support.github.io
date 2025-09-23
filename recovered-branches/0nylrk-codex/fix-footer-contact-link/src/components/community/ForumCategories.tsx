@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import {Link} from "react-router-dom";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
@@ -286,5 +284,4 @@ export const ForumCategories = () => {
 
 export default ForumCategories;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

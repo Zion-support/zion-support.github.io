@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 const timestamp = new Date().toISOString(;);
@@ -371,7 +370,6 @@ async function main() {
 }
 
 main();
-=======
 const { execSync } = require('child_process')
 // console.log(' Starting Simple App Improvement Automation')
 console.log('====')
@@ -397,4 +395,3 @@ console.log('🧪 Test "Summary")
   console.log('⚠  "Alerts")
     console.log(' "Summary")
     console.error('� Automation "failed")
->>>>>>> main

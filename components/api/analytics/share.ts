@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 import fs from 'fs';
 import path from 'path';
 
@@ -89,7 +87,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
   res.status(200).json({ ok: true });
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

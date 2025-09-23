@@ -1,8 +1,6 @@
 
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
-<<<<<<< HEAD
-=======
 Globe
 import {
   DropdownMenu,
@@ -42,4 +40,3 @@ export function LanguageSelector() {
     </DropdownMenu>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

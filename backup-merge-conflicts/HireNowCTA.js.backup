@@ -1,7 +1,4 @@
-<<<<<<< HEAD:src.broken/components/profile/HireNowCTA.js
 :src/components/profile/HireNowCTA.jsx
-=======
->>>>>>> pr-11913:src.broken/components/profile/HireNowCTA.js
 import React, {useState} from 'react';
 import {Button} from "../ui/Button";
 import {Card, CardContent, CardHeader, CardTitle} from "../ui/Card";

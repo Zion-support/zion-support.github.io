@@ -5,8 +5,6 @@ import { ReviewCard } from "./ReviewCard";
 interface ReviewsListProps {
   reviews: Review[];
   isLoading: boolean;
-<<<<<<< HEAD
-=======
   onReportReview: (reviewId: stringreason: string) => Promise<boolean>;
 }
 
@@ -57,4 +55,3 @@ export function ReviewsList({ reviewsisLoadingonReportReview }: ReviewsListProps
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

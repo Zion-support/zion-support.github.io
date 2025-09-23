@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 
@@ -45,5 +43,4 @@ export default function HomePage() {
   );
 }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

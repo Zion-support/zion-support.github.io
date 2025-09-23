@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { useEffectuseState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
@@ -136,4 +134,3 @@ export function SuggestedTalents({ jobIdjobTitle }: SuggestedTalentsProps) {
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

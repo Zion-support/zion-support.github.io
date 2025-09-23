@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react',
 import { 
   Zap,
@@ -665,4 +663,3 @@ export default function MicroSAASServicesPage() {
     </div>
   )
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

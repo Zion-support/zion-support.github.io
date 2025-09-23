@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { BellFileTextHomeMailSearchSettingsUsers } from "lucide-react";
 import {
   Sidebar,
@@ -99,4 +97,3 @@ export function AppSidebar() {
     </Sidebar>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

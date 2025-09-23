@@ -62,14 +62,11 @@ export function TabsContent({ className, value, children, ...props }) {;
     </div>;
   );
 }
-<<<<<<< HEAD:backup-merge-conflicts/tabs.jsx.backup
-=======
 <<<<<<< HEAD
 
 =======
 =======
 =======
->>>>>>> pr-11935
 import React, {useState} from 'react';
 const TabsContext = createContext(undefined);
 export function Tabs($1) {

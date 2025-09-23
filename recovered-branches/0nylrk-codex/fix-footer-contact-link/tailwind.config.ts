@@ -9,8 +9,6 @@ const config: Config ={
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
-<<<<<<< HEAD
-=======
     "./src/**/*.{ts,tsx}"],
   safelist: ['border-border'],
   theme: {
@@ -94,4 +92,3 @@ const config: Config ={
     })]};
 
 export default config;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

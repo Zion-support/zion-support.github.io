@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 
 export default function AiHrAnalyticsPlatform() {
@@ -24,7 +23,6 @@ export default function AiHrAnalyticsPlatform() {
 			canonical="https://ziontechgroup.com/ai-hr-analytics-platform"
 		/>
 	);
-=======
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -293,5 +291,4 @@ export default function AIHRAnalyticsPlatform() {
       </div>
     </>
   );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

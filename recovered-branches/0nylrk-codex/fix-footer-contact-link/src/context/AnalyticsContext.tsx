@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ createContextuseStateuseContextuseEffectReactNode } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
@@ -128,4 +126,3 @@ export const useAnalytics = (): AnalyticsContextType => {
   // by `AnalyticsProvider`. The runtime check above ensures it's defined.
   return context as AnalyticsContextType;
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

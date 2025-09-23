@@ -1,7 +1,5 @@
 import * as React from "react"
 
-<<<<<<< HEAD
-=======
 
 const Input = React.forwardRef<HTMLInputElementReact.ComponentProps<"input">>(
   ({ classNametype...props }ref) => {
@@ -21,4 +19,3 @@ const Input = React.forwardRef<HTMLInputElementReact.ComponentProps<"input">>(
 Input.displayName = "Input"
 
 export { Input }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

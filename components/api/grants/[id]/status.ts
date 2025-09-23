@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 import fs from 'fs';
 import path from 'path';
 
@@ -138,7 +136,6 @@ const payload = req.body as StatusUpdatePayload;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements

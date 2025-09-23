@@ -2,18 +2,14 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Terms of Service - Zion Tech Group",
-<<<<<<< HEAD
   description: "Zion Tech Group's terms of service outlining the rules and guidelines for using our services and platforms.",
   keywords: "terms of service, terms and conditions, service agreement, Zion Tech Group",
-=======
   description: "Read the terms and conditions that govern your use of Zion Tech Group's services and website.",
   keywords: "terms of service, terms and conditions, user agreement, Zion Tech Group",
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
 };
 
 export default function TermsPage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Hero Section */}
@@ -341,7 +337,6 @@ export default function TermsPage() {
           </div>
         </section>
       </div>
-=======
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -633,7 +628,6 @@ export default function TermsPage() {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
     </div>
   );
 }

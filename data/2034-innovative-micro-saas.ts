@@ -25,8 +25,6 @@ export interface MicroSaasService20o34 {
   contact: string;
   website: string;
 }
-<<<<<<< HEAD
-=======
 export const innovativeMicroSaas2034Services: MicroSaasService2034[] = [
   {
     id: 'ai-quantum-sales-automation',
@@ -371,4 +369,3 @@ export const innovativeMicroSaas2034Services: MicroSaasService2034[] = [
     website: 'https://ziontechgroup.com/quantum-iot-edge-orchestration'
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

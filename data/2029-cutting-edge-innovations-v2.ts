@@ -1,6 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
 export interface CuttingEdge2029Service {
   id: string;
   name: string;
@@ -522,4 +520,3 @@ export const getCuttingEdge2029ServicesByPriceRange = (minPrice: number, maxPric
     return price >= minPrice && price <= maxPrice;
   });
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

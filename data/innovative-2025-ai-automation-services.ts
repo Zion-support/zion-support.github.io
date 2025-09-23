@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 export interface InnovativeAIAutomationService {
 export interface InnovativeAIAutomationService {;
@@ -667,4 +665,3 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
 
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

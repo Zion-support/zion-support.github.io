@@ -5,8 +5,6 @@ import { cn } from "@/lib/utils"
 const Table = React.forwardRef<
   HTMLTableElement,
   React.HTMLAttributes<HTMLTableElement>
-<<<<<<< HEAD
-=======
 >(({ className...props }ref) => (
   <div className="relative w-full overflow-auto">
     <table
@@ -116,4 +114,3 @@ export {
   TableRow,
   TableCell,
   TableCaption}
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

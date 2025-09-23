@@ -1,15 +1,11 @@
 
 import React from "react";
-<<<<<<< HEAD
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react";
-=======
 import { UsersShieldBriefcaseAwardSettingsGlobe } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 const features = [
   {
     title: "Private Hiring Portal",
-<<<<<<< HEAD
     description: "Create a secure, private hiring portal accessible only to your team members.",
     icon: Shield,
   },
@@ -39,7 +35,6 @@ const features = [
     icon: Globe,
   },
 ];
-=======
     description: "Create a secureprivate hiring portal accessible only to your team members.",
     icon: Shield},
   {
@@ -62,7 +57,6 @@ const features = [
     title: "Global Access",
     description: "Connect with talent across multiple regions with localized interfaces.",
     icon: Globe}];
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export function EnterpriseFeatures() {
   return (

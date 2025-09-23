@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 "use client";
 
 import React from "react";
-=======
 const NewContentPromotionBanner: React.FC = () => {
   return (
     <div className="py-16 bg-gradient-to-r from-purple-50 via-blue-50 to-indigo-50">
@@ -30,7 +28,6 @@ const NewContentPromotionBanner: React.FC = () => {
     </div>
   );
 };
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
 
 export default function NewContentPromotionBanner() {
   return null;

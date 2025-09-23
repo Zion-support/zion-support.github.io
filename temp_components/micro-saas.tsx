@@ -1,6 +1,4 @@
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
 CheckStarZapShieldUsersGlobeArrowRightExternalLinkTrendingUpClockTarget
 import Button from '../components/ui/Button';
 CheckStarZapShieldUsersGlobeTrendingUpClockDollarSignTargetArrowRightBarChart3Zap as Lightning
@@ -2400,4 +2398,3 @@ export default function MicroSaasPage() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

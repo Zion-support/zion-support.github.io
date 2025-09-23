@@ -4,8 +4,6 @@ import { useForm } from "react-hook-form";
 import type { ControllerRenderProps } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-<<<<<<< HEAD
-=======
 import { LogInUserEyeOff } from "lucide-react";
 
 import { useAuth } from "@/hooks/useAuth";
@@ -167,4 +165,3 @@ export function LoginForm() {
     </Form>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

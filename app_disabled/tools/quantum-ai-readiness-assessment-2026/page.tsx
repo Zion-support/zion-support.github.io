@@ -2,8 +2,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
 
 interface AssessmentResults {
   overallScore: number;
@@ -648,4 +646,3 @@ export default function QuantumAIReadinessAssessment() {
     </div>
   );
 // End disabled tool page
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

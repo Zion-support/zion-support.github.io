@@ -2,20 +2,13 @@
 =======
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> origin/merged-prs
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/auto/autonomy-17186719616
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import { z } from "zod";
 import { MilestoneSuggestionInput, MilestoneSuggestionResponse } from "../shared/types.js";
 import { generateMilestones } from "./milestoneGenerator.js";
-<<<<<<< HEAD
 <<<<<<< HEAD
 const app = express();
 app.use(cors());
@@ -31,10 +24,8 @@ app.post("/api/ai/milestones", async (req, res) => {try {;
     res.json(response);
   } catch (error) {if (error instanceof z.ZodError) {;
 =======
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
 
 const app = express();
@@ -62,7 +53,6 @@ app.post("/api/ai/milestones", async (req, res) => {
     res.status(500).json({ error: "Failed to generate milestones" });
   }
 });
-<<<<<<< HEAD
 const port = process.env.PORT ? Number(process.env.PORT) : 4321;
 app.listen(port, () => {// // // console.log(`zion-ai-assistant listening on http://localhost:${port}`);
 import "dotenv/config",;
@@ -100,18 +90,14 @@ app.listen(port, () => {;
   // // // console.log(`zion-ai-assistant listening on http://localhost:${port}`);
 
 <<<<<<< HEAD
-=======
 
 const port = process.env.PORT ? Number(process.env.PORT) : 4321;
 app.listen(port, () => {
   console.log(`zion-ai-assistant listening on http://localhost:${port}`);
->>>>>>> origin/auto/autonomy-17186719616
 });
 =======
 
 });
-<<<<<<< HEAD
-=======
 =======
 }),
 const port = process.env.PORT ? Number (process.env.PORT) : 4321,
@@ -158,7 +144,6 @@ app.listen(port, () => {;
 });
 });
 });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 });
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

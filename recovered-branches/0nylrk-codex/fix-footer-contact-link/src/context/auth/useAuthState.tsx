@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useState } from "react";
 import type { UserProfile } from "@/types/auth";
 
@@ -21,4 +19,3 @@ export function useAuthState() {
     setOnboardingStep
   };
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

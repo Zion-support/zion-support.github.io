@@ -1,8 +1,5 @@
 =======
-<<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11935
 import React from 'react';
 
 interface ComprehensiveServicesProps {

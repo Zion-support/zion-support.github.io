@@ -8,7 +8,6 @@ class AdvancedAppImprovementSuite {}
     this.projectRoot = projectRoot;
     this.reportsDir = path.join(this.projectRoot, "improvement-reports");
     this.logFile = path.join(this.reportsDir, "app-improvement.log");
-<<<<<<< HEAD
     this.ensureDirectories()}
 
   ensureDirectories() {
@@ -43,7 +42,6 @@ class AdvancedAppImprovementSuite {}
   }
 
   async optimizeBundleSize() {
-=======
     
     if (!fs.existsSync(this.reportsDir)) {}
       fs.mkdirSync(this.reportsDir, { recursive: true }
@@ -170,4 +168,3 @@ if (require.main === module) {}
   suite.start().catch(console.error);
 };
 module.exports = AdvancedAppImprovementSuite;
->>>>>>> main

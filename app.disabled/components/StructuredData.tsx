@@ -2,7 +2,6 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
 const StructuredData = () => {
@@ -29,8 +28,6 @@ const StructuredData = () => {
 
 export default StructuredData;
 =======
-=======
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))
 type StructuredDataProps = {
   type: string;
   data: Record<string, unknown>;

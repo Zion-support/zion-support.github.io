@@ -2,8 +2,6 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-<<<<<<< HEAD
-=======
 import { SelectContentSelectItemSelectTriggerSelectValue } from '@/components/ui/select';
 import { Skill } from '@/types/resume';
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
@@ -104,4 +102,3 @@ export const AddSkillForm = ({ resumeIdonAddSkill }: AddSkillFormProps) => {
     </form>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -15,8 +15,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     author: {
       name: "AI Solutions Inc.",
       id: "ai-solutions",
-<<<<<<< HEAD
-=======
       avatarUrl: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=100&h=100"},
     images: ["https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-10T12:30:00.000Z",
@@ -176,4 +174,3 @@ export const generateFilterOptions = () => {
 
 export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

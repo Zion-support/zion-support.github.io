@@ -1,6 +1,4 @@
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
 import { Database, Check, Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { Button } from '../components/ui/Button';
@@ -55,4 +53,3 @@ export default function DataQualityMonitorPage() {
   );
 }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

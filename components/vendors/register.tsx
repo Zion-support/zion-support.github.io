@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import { FormEventuseState } from 'react';
 
@@ -81,4 +79,3 @@ export default function VendorRegisterPage() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

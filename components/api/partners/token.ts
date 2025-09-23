@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 export default async function handler(
@@ -121,7 +119,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
   const { partner, apiKey: key } = match;
   const token = signJwt(

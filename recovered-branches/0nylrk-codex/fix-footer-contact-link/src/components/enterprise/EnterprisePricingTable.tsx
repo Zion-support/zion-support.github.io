@@ -1,7 +1,5 @@
 
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-=======
 import { CheckX } from "lucide-react";
 import {
   Table,
@@ -135,4 +133,3 @@ export function EnterprisePricingTable() {
     </section>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { MicroSaasService } from './enhanced-real-micro-saas-services';
 const contact = {
   mobile: '+1 302 464 0950',
@@ -491,4 +489,3 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
     return price >= minPrice && price <= maxPrice;
   });
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

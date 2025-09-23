@@ -1959,7 +1959,6 @@ export default function MainFrontIndex() {
           </div>
         </motion.section>
 
-<<<<<<< HEAD
         {/* AUTO-ADDED: NEW AUTONOMOUS CALLS */}
         <section id="autonomous-cloud" className="mx-auto max-w-7xl px-6 pb-16">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">New Autonomous Cloud Automations</h2>
@@ -1986,8 +1985,6 @@ export default function MainFrontIndex() {
           </div>
         </section>
         {/* END AUTO-ADDED */}
-=======
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
       </div>
       {/* Back to top */}
       {showToTop && (

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react',
 import AdminLayout from '@/components/admin/AdminLayout',
 
@@ -20,4 +18,3 @@ export default function FeatureFlagsAdminPage() {
     </AdminLayout>
   ),
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

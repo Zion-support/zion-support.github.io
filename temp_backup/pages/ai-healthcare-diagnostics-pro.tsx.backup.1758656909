@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
@@ -313,7 +312,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               </motion.button>
             </div>
           </motion.div>
-=======
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { 
@@ -402,12 +400,10 @@ export default function AIHealthcareDiagnosticsPro() {
               </Link>
             </div>
           </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         </div>
       </section>
 
       {/* Features Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -443,7 +439,6 @@ export default function AIHealthcareDiagnosticsPro() {
                 <p className="text-gray-300 leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
-=======
       <section id="features" className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -516,12 +511,10 @@ export default function AIHealthcareDiagnosticsPro() {
                 Evidence-based recommendations and clinical guidelines for healthcare providers.
               </p>
             </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Medical Specialties Section */}
       <section className="py-20 bg-black relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]"></div>
@@ -564,7 +557,6 @@ export default function AIHealthcareDiagnosticsPro() {
                 <p className="text-gray-300 leading-relaxed">{specialty.description}</p>
               </motion.div>
             ))}
-=======
       {/* Diagnostic Capabilities Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -661,12 +653,10 @@ export default function AIHealthcareDiagnosticsPro() {
                 <li>• Diagnostic algorithms</li>
               </ul>
             </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Use Cases Section */}
       <section className="py-20 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(236,73,153,0.06),transparent_50%)]"></div>
@@ -823,7 +813,6 @@ export default function AIHealthcareDiagnosticsPro() {
                 <p className="text-gray-300 text-sm">{integration.description}</p>
               </motion.div>
             ))}
-=======
       {/* How It Works Section */}
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -876,13 +865,11 @@ export default function AIHealthcareDiagnosticsPro() {
                 Learns from outcomes and feedback to continuously improve diagnostic accuracy.
               </p>
             </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-green-900/20 via-emerald-900/20 to-cyan-900/20 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -919,7 +906,6 @@ export default function AIHealthcareDiagnosticsPro() {
 };
 
 export default AIHealthcareDiagnosticsPro;
-=======
       <section className="py-20 bg-gradient-to-r from-blue-900/20 via-indigo-900/20 to-purple-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">
@@ -996,4 +982,3 @@ export default AIHealthcareDiagnosticsPro;
     </div>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

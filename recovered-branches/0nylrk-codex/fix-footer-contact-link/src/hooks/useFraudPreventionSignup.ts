@@ -57,8 +57,6 @@ export function useFraudPreventionSignup() {
           toast({
             title: "Signup blocked",
             description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",
-<<<<<<< HEAD
-=======
             variant: "destructive"});
           return false;
         }
@@ -82,4 +80,3 @@ export function useFraudPreventionSignup() {
     isCheckingFraud,
     checkFraudBeforeSignup};
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 =======
 export default function Page() {
   return (
@@ -122,7 +120,6 @@ export default function AI2025UltimateImplementationMasterGuide() {
               <Brain className="w-6 h-6 text-indigo-600" />
 =======
               <Brain className="w-6 h-6 text-indigo-600" />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf
               Guide Overview
             </h2>
             <p className="text-gray-700 leading-relaxed">

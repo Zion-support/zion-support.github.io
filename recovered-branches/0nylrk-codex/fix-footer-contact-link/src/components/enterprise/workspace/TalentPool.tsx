@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React from "react";
 import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -93,4 +91,3 @@ export function TalentPool() {
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

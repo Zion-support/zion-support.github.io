@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
 import { Button } from '../../components/ui/Button';
 import Card from '../../components/ui/Card';
@@ -334,6 +333,4 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 		</UltraFuturisticBackground>
 	);
 }
-=======
 }
->>>>>>> 2b8bbbb18a09713bdeef09b7c3a1ee123e0bd7d0

@@ -1,8 +1,6 @@
 
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-=======
 import { DownloadSettings } from "lucide-react";
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
 
@@ -67,4 +65,3 @@ export function AdminHeader() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Server, Clock, MapPin } from "lucide-react";
@@ -269,7 +267,6 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

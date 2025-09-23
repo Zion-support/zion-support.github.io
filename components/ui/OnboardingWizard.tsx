@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useEffectuseState } from 'react';
 import Link from 'next/link';
@@ -77,4 +75,3 @@ export default function OnboardingWizard() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

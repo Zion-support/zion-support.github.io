@@ -1,7 +1,6 @@
 export interface InnovativeMicroSaasService2029V2 {
   id: string;
   name: string;
-<<<<<<< HEAD
   tagline: string;
   price: string;
   description: string;
@@ -289,7 +288,6 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       "Performance management",
       "Workforce planning"
     ]
-=======
   description: string;
   category: string[];
   price: string;
@@ -648,6 +646,5 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 ];

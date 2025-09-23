@@ -5,7 +5,6 @@ const path = require('path');
 class ComprehensiveSyntaxErrorFixer {}
   constructor() {}
     this.projectRoot = path.join(__dirname, '..');
-<<<<<<< HEAD
     this.fixedFiles = []}
 
   async log(message) {
@@ -13,7 +12,6 @@ class ComprehensiveSyntaxErrorFixer {}
 
   async fixFile(filePath) {
     try {
-=======
     this.fixedFiles = []};
   async log(message) {}
     console.log(`[${new Date().toISOString()}] ${message}`)};
@@ -73,4 +71,3 @@ if (require.main === module) {}
   const fixer = new ComprehensiveSyntaxErrorFixer();
   fixer.run().catch(console.error)};
 module.exports = ComprehensiveSyntaxErrorFixer;
->>>>>>> main

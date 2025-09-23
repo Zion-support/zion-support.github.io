@@ -1,8 +1,6 @@
 
 import { ApplicationStatus } from "@/types/jobs";
 import { Progress } from "@/components/ui/progress";
-<<<<<<< HEAD
-=======
 import { CheckCircle2CircleDot } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -81,4 +79,3 @@ function StatusIcon({ statuscurrent }: { status: ApplicationStatus; current: App
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;
   }
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

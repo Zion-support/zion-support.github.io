@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import { getTrustWeights, setTrustWeights, getDefaultWeights } from '../../../utils/trust/weights';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -17,7 +16,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.setHeader('Allow', 'GET, PUT');
   return res.status(405).json({ error: 'Method not allowed' });
 }
-=======
 
 
 
@@ -110,7 +108,6 @@ if ( {) {
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 

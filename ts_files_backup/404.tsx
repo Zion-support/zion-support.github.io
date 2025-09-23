@@ -1,7 +1,5 @@
 export default function NotFoundPage() {
   return (
-<<<<<<< HEAD
-=======
 
 
     <div className="container mx-auto px-4 py-20 text-center">
@@ -10,4 +8,3 @@ export default function NotFoundPage() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

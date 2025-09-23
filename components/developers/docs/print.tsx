@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useEffect } from 'react';
 import type { GetStaticProps } from 'next';
@@ -50,4 +48,3 @@ export default function PrintDocs({ docs }: PageProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

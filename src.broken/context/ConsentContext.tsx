@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React{ createContextuseContextuseEffectuseStateReactNode } from 'react';
 import Cookies from 'js-cookie';
 
@@ -71,4 +69,3 @@ export function ConsentProvider({ children }: { children: ReactNode }) {
 }
 
 export const useConsent = () => useContext(ConsentContext);
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

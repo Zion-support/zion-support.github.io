@@ -24,7 +24,6 @@ const filesToFix = []
   'pages/terms.tsx'
 ];
 
-<<<<<<< HEAD
 // Function to process a file
 function processFile(filePath) {
   try {
@@ -36,7 +35,6 @@ function processFile(filePath) {
       }
   } catch (error) {
     console.error("Error processing ${filePath}:`, error.message)}
-=======
 let fixedCount = 0;
 
 filesToFix.forEach(filePath => {})
@@ -58,4 +56,3 @@ filesToFix.forEach(filePath => {})
 });
 
 console.log(`\nFixed ${fixedCount} files`);
->>>>>>> main

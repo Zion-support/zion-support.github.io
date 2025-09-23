@@ -1,7 +1,4 @@
-<<<<<<< HEAD:backup-merge-conflicts/HireNowCTA.js.backup
 <<<<<<< HEAD:src/components/profile/HireNowCTA.jsx
-=======
->>>>>>> pr-11913:src.broken/components/profile/HireNowCTA.js
 import React, {useState} from 'react';
 import {Button} from "../ui/Button";
 import {Card, CardContent, CardHeader, CardTitle} from "../ui/Card";
@@ -95,8 +92,6 @@ export function HireNowCTA("props": "any) {;
 ;
 
 export default HireNowCTA;
-<<<<<<< HEAD:backup-merge-conflicts/HireNowCTA.js.backup
-=======
 =======
 import React, { useState } from 'react';
 import { Button } from '../ui/Button';
@@ -113,7 +108,6 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         message: ''
         e.preventDefault();
         if (onHire) {
->>>>>>> pr-11914:backup-merge-conflicts/HireNowCTA.js.backup
             onHire(formData);
         }
         // Reset form and close
@@ -189,9 +183,6 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
       </CardContent>
     </Card>);
 }
-<<<<<<< HEAD:backup-merge-conflicts/HireNowCTA.js.backup
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.broken/components/profile/HireNowCTA.js
 >>>>>>> pr-11914:backup-merge-conflicts/HireNowCTA.js.backup
 =======
 >>>>>>> pr-11913:src.broken/components/profile/HireNowCTA.js

@@ -10,8 +10,6 @@ interface TalentResultsProps {
   viewProfile: (id: string) => void;
   handleRequestHire: (talent: TalentProfile) => void;
   savedTalents: string[];
-<<<<<<< HEAD
-=======
   handleToggleSave: (id: stringisSaved: boolean) => void;
   isAuthenticated: boolean;
   activeFiltersProps: {
@@ -65,4 +63,3 @@ export function TalentResults({
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

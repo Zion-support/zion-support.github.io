@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
 import { 
   Search, 
   Filter, 
@@ -25,7 +24,6 @@ import {
   Heart,
   Bookmark
 } from 'lucide-react';
-=======
 import { 
   Search, 
   Filter, 
@@ -46,12 +44,10 @@ import {
   X
 } from 'lucide-react';
 import Link from 'next/link';
->>>>>>> 398e7b3803392609532938c1d76a965272b05626
 
 const UltimateContentDiscoveryWidget2026 = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-<<<<<<< HEAD
   const [selectedSort, setSelectedSort] = useState('trending');
   const [showFilters, setShowFilters] = useState(false);
   const [favorites, setFavorites] = useState(new Set());
@@ -71,7 +67,6 @@ const UltimateContentDiscoveryWidget2026 = () => {
     { id: 'newest', name: 'Newest', icon: Clock },
     { id: 'popular', name: 'Most Popular', icon: Star },
     { id: 'relevance', name: 'Most Relevant', icon: Search }
-=======
   const [viewMode, setViewMode] = useState('grid');
   const [sortBy, setSortBy] = useState('trending');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
@@ -88,13 +83,11 @@ const UltimateContentDiscoveryWidget2026 = () => {
     { id: 'future-tech', name: 'Future Tech', icon: Rocket, color: 'from-orange-500 to-red-500' },
     { id: 'tutorials', name: 'Tutorials', icon: BookOpen, color: 'from-indigo-500 to-purple-500' },
     { id: 'case-studies', name: 'Case Studies', icon: TrendingUp, color: 'from-pink-500 to-rose-500' }
->>>>>>> 398e7b3803392609532938c1d76a965272b05626
   ];
 
   const featuredContent = [
     {
       id: 1,
-<<<<<<< HEAD
       title: 'AI 2026-2030 Ultimate Predictions',
       description: 'Comprehensive analysis of revolutionary AI breakthroughs that will reshape our world over the next five years.',
       category: 'ai-predictions',
@@ -272,8 +265,6 @@ const UltimateContentDiscoveryWidget2026 = () => {
     }
   });
 <<<<<<< HEAD
-=======
->>>>>>> origin/backup-main-20250913-185456
 
   const toggleFavorite = (id) => {
     setFavorites(prev => {
@@ -309,7 +300,6 @@ const UltimateContentDiscoveryWidget2026 = () => {
   };
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
@@ -335,7 +325,6 @@ const UltimateContentDiscoveryWidget2026 = () => {
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8"
         >
           <div className="flex flex-col lg:flex-row gap-4">
-=======
     <section className="py-16 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -382,7 +371,6 @@ const UltimateContentDiscoveryWidget2026 = () => {
             Discover Revolutionary
             <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               {' '}Content
->>>>>>> 398e7b3803392609532938c1d76a965272b05626
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -400,21 +388,17 @@ const UltimateContentDiscoveryWidget2026 = () => {
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
-<<<<<<< HEAD
                 placeholder="Search content, tags, or topics..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-=======
                 placeholder="Search for content, topics, or technologies..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
->>>>>>> 398e7b3803392609532938c1d76a965272b05626
               />
             </div>
 
-<<<<<<< HEAD
             {/* Category Filter */}
             <div className="relative">
               <select
@@ -711,10 +695,8 @@ const UltimateContentDiscoveryWidget2026 = () => {
             })}
           </div>
         </div>
-=======
   );
 };
->>>>>>> origin/backup-main-20250913-185456
 
         {/* Results Count */}
         <div className="flex items-center justify-between mb-6">

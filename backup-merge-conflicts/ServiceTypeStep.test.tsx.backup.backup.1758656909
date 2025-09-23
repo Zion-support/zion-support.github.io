@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface ServiceTypeStep.testProps {
@@ -13,5 +12,3 @@ export default function ServiceTypeStep.test({ }: ServiceTypeStep.testProps) {
     </div>
   );
 }
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

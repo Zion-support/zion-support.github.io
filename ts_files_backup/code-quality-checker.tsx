@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useState } from 'react';
 import Head from 'next/head';
@@ -261,7 +259,6 @@ export default function CodeQualityCheckerPage() {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       {/* Supported Languages Section */}
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">

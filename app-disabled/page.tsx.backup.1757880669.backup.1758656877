@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 
-<<<<<<< HEAD
 // Import new AI 2025 Ultimate Content Revolution components - NEWEST FEATURED
 import AI2025UltimateContentRevolution50000ROIBanner from '../components/AI2025UltimateContentRevolution50000ROIBanner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
@@ -157,7 +156,6 @@ import AI2025UltimateBreakthroughRevolutionBanner from './components/AI2025Ultim
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import AI2025UltimateBreakthroughBanner from '../components/AI2025UltimateBreakthroughBanner';
-=======
 // Import new 2026 AI breakthrough promotional components
 import AI2026RevolutionaryBreakthroughUltimatePromotionBanner from '../components/AI2026RevolutionaryBreakthroughUltimatePromotionBanner';
 import AI2026GlobalTransformation800ROISuccessBanner from '../components/AI2026GlobalTransformation800ROISuccessBanner';
@@ -175,12 +173,10 @@ import NewContent2025PromotionBanner from '../components/NewContent2025Promotion
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import AI2025UltimateBreakthroughBanner from '../components/AI2025UltimateBreakthroughBanner';
 
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
 // Import new 2025 breakthrough promotional components
 import QuantumAI2025BreakthroughPromotionBanner from '../components/QuantumAI2025BreakthroughPromotionBanner';
 import AutonomousBusinessOperationsPromotionBanner from '../components/AutonomousBusinessOperationsPromotionBanner';
 import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBanner';
-<<<<<<< HEAD
 // Import new 2026 AI breakthrough promotional components
 import AI2026RevolutionaryBreakthroughUltimatePromotionBanner from '../components/AI2026RevolutionaryBreakthroughUltimatePromotionBanner';
 import AI2026GlobalTransformation800ROISuccessBanner from '../components/AI2026GlobalTransformation800ROISuccessBanner';
@@ -766,7 +762,6 @@ export default function HomePage() {
         </Suspense>
       </div>
     </ErrorBoundary>
-=======
 
 export default function HomePage() {
   return (
@@ -812,6 +807,5 @@ export default function HomePage() {
       <EnhancedContentPromotionBanner2026 />
       <ComprehensiveContentShowcase2026 />
     </div>
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
   );
 }

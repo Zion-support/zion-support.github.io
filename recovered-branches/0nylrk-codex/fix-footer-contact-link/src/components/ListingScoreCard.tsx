@@ -19,8 +19,6 @@ interface ListingScoreCardProps {
 }
 
 export function ListingScoreCard({ 
-<<<<<<< HEAD
-=======
   title
   description
   image
@@ -114,4 +112,3 @@ export function ListingScoreCard({
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

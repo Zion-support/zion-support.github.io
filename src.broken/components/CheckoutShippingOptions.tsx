@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React{ useEffectuseState } from 'react';
 import { RadioGroupItem } from '@/components/ui/radio-group';
 
@@ -103,4 +101,3 @@ export function CheckoutShippingOptions({ toAddressonSelect }: Props) {
 }
 
 export type { ShippingRate };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

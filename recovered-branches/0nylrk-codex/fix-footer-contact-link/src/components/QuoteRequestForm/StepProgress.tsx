@@ -9,8 +9,6 @@ interface StepProgressProps {
 
 export function StepProgress({ currentStep }: StepProgressProps) {
   const steps: { id: QuoteRequestSteps; label: string }[] = [
-<<<<<<< HEAD
-=======
     { id: "service"label: "Service" },
     { id: "details"label: "Details" },
     { id: "timeline"label: "Timeline" },
@@ -74,4 +72,3 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

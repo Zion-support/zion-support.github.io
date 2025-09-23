@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface EmergingTechInnovation {
@@ -29,7 +28,6 @@ export interface EmergingTechInnovation {
   growthRate: string;
   variant: ServiceVariant;
   contactInfo: {
-=======
 export interface EmergingTechInnovationService {
   id: string;
   name: string;
@@ -73,13 +71,11 @@ export interface EmergingTechInnovationService {
   growthRate?: string;
   variant?: string;
   contactInfo?: {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     mobile: string;
     email: string;
     address: string;
     website: string;
   };
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -664,7 +660,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Threat hunting'
     ],
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
-=======
   realImplementation?: boolean;
   implementationDetails?: string;
 }
@@ -730,6 +725,5 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
     technology: ['AI', 'Quantum Computing', 'Machine Learning'],
     growthRate: '45% YoY',
     variant: 'premium'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 ];

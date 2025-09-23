@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import { Cloud, Shield, Globe, Server, Database, ArrowRight, Check } from 'lucide-react';
 
@@ -76,7 +75,6 @@ export default function CloudPlatformPage() {
                 href="/contact" className="border-white/20 hover:border-white/40">
                 View Documentation
               </a>
-=======
 import { motion } from 'framer-motion';
 import { Globe, Cloud, Server, Database, Zap, Shield, BarChart3, Rocket } from 'lucide-react';
 import Layout from '../components/layout/Layout';
@@ -240,12 +238,10 @@ export default function CloudPlatform() {
                   Learn More →
                 </a>
               </motion.div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -343,7 +339,6 @@ export default function CloudPlatform() {
     </>
   );
 }
-=======
         {/* Features */}
         <section className="py-20 px-4">
           <div className="container mx-auto max-w-6xl">
@@ -491,4 +486,3 @@ export default function CloudPlatform() {
 };
 
 export default CloudPlatformPage;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

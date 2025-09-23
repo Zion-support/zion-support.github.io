@@ -5,8 +5,6 @@ import { Progress } from "@/components/ui/progress";
 interface ReviewStatsProps {
   averageRating: number;
   totalReviews: number;
-<<<<<<< HEAD
-=======
   ratingDistribution?: Record<number>;
 }
 
@@ -63,4 +61,3 @@ export function ReviewStats({ averageRatingtotalReviewsratingDistribution }: Rev
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

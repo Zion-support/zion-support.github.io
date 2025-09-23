@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 class ErrorBoundary extends React.Component {
@@ -1336,4 +1334,3 @@ if ( {) {
 }
   );
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,8 +1,6 @@
 export default function OnboardingWalkthrough() {
   return null;
 }
-<<<<<<< HEAD
-=======
 "use client";
 
 import { useState, useEffect } from "react";
@@ -193,4 +191,3 @@ export function useWalkthroughTarget(id: string) {
     id,
   };
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

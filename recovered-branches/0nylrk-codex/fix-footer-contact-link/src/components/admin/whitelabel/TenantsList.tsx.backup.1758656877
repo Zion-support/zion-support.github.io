@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { 
@@ -11,7 +10,6 @@ import {
   TableRow 
 } from '@/components/ui/table';
 import { Button } from '@/components/ui/button';
-=======
 
 import React, { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
@@ -127,13 +125,11 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-<<<<<<< HEAD
 } from '@/components/ui/dropdown-menu';
 import { Badge } from '@/components/ui/badge';
 import { toast } from '@/hooks/use-toast';
@@ -145,7 +141,6 @@ export function TenantsList() {
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
-=======
 DropdownMenuTrigger,;
   DropdownMenuTrigger,
 
@@ -205,7 +200,6 @@ export function TenantsList() {;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   useEffect(() => {
     loadTenants();
   }, []);
@@ -214,7 +208,6 @@ export function TenantsList() {;
     try {
       setIsLoading(true);
       const { data, error } = await supabase
-<<<<<<< HEAD
         .from('whitelabel_tenants')
         .select('*')
         .order('created_at', { ascending: false });
@@ -226,7 +219,6 @@ export function TenantsList() {;
       toast({
         variant: 'destructive',
         title: 'Failed to load tenants',
-=======
         .from("whitelabel_tenants")
         .select("*")
         .order("created_at", { ascending: false });
@@ -238,7 +230,6 @@ export function TenantsList() {;
       toast({
         variant: "destructive",
         title: "Failed to load tenants",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         description: error.message,
       });
     } finally {
@@ -249,7 +240,6 @@ export function TenantsList() {;
   const toggleTenantStatus = async (tenant: WhitelabelTenant) => {
     try {
       const { error } = await supabase
-<<<<<<< HEAD
         .from('whitelabel_tenants')
         .update({ is_active: !tenant.is_active })
         .eq('id', tenant.id);
@@ -270,7 +260,6 @@ export function TenantsList() {;
       toast({
         variant: 'destructive',
         title: 'Failed to update tenant',
-=======
         .from("whitelabel_tenants")
         .update({ is_active: !tenant.is_active })
         .eq("id", tenant.id);
@@ -293,7 +282,6 @@ export function TenantsList() {;
       toast({
         variant: "destructive",
         title: "Failed to update tenant",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         description: error.message,
       });
     }
@@ -304,7 +292,6 @@ export function TenantsList() {;
       // In a real implementation, this would verify DNS records
       // For now, we'll just mark it as verified
       const { error } = await supabase
-<<<<<<< HEAD
         .from('whitelabel_tenants')
         .update({ dns_verified: true })
         .eq('id', tenant.id);
@@ -325,7 +312,6 @@ export function TenantsList() {;
       toast({
         variant: 'destructive',
         title: 'Failed to verify DNS',
-=======
         .from("whitelabel_tenants")
         .update({ dns_verified: true })
         .eq("id", tenant.id);
@@ -348,12 +334,10 @@ export function TenantsList() {;
       toast({
         variant: "destructive",
         title: "Failed to verify DNS",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         description: error.message,
       });
     }
   };
-<<<<<<< HEAD
 
   return (
     <div className="space-y-4">
@@ -437,7 +421,6 @@ export function TenantsList() {;
                       ) : (
                         <span className="text-muted-foreground text-sm">None</span>
                       )}
-=======
   RefreshCcw,
 } from "@/components/icons";
 import { format } from "date-fns";
@@ -569,7 +552,6 @@ export function TenantsList() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
@@ -994,8 +976,6 @@ if (throw error) {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 
     </div>;
   );
@@ -1005,7 +985,6 @@ if (throw error) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

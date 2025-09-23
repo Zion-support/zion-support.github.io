@@ -43,8 +43,6 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
       is_remote: false,
       category: '',
       status: '',
-<<<<<<< HEAD
-=======
       external_apply_link: ''},
     mode: "onChange"});
 
@@ -93,4 +91,3 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
     submitJob
   };
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

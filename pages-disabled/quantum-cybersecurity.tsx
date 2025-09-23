@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-=======
   ShieldLockEyeAlertTriangleZapCpu
   DatabaseGlobeArrowRightCheckCircleStarUsers
 } from 'lucide-react';
@@ -478,4 +476,3 @@ export default function QuantumCybersecurityPage() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

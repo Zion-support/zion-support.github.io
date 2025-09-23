@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { findPartnerByApiKey, signJwt } from "../../../utils/api/partnerAuth";
 
@@ -14,7 +13,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const match = await findPartnerByApiKey(apiKey);
   if (!match) {
     return res.status(401).json({ error: "Invalid API key" });
-=======
 
 
 export default async function handler(
@@ -132,7 +130,6 @@ if ( {) {
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 
@@ -142,7 +139,6 @@ if ( {) {
   const { partner, apiKey: key } = match;
   const token = signJwt(
     {
-<<<<<<< HEAD
       sub: partner.id,
       apiKeyId: key.id,
       name: partner.name,
@@ -153,11 +149,9 @@ if ( {) {
   );
   return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } });
 }
-=======
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 

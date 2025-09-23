@@ -1,6 +1,4 @@
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
 CloudShieldLockZapUsersTargetArrowRightCheckStarGlobeCpuNetwork
 import SEO from '../components/SEO';
 
@@ -26,4 +24,3 @@ export default function QuantumSecureCloudInfrastructure() {
 		/>
 	);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

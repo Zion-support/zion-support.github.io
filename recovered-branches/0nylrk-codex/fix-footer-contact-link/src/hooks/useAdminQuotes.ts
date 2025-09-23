@@ -17,8 +17,6 @@ export const useAdminQuotes = () => {
   const { data: allQuotes = [], isLoading, error } = useQuery({
     queryKey: ['quotes', 'admin'],
     queryFn: () => quoteRequestService.getAll(),
-<<<<<<< HEAD
-=======
     enabled: true});
 
   // Filter quotes based on selected filters
@@ -148,4 +146,3 @@ export const useAdminQuotes = () => {
       toggleArchiveMutation.mutate({ id, isArchived }),
     deleteQuote: (id: string) => deleteMutation.mutate(id)};
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

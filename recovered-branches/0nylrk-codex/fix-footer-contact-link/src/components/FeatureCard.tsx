@@ -8,8 +8,6 @@ interface FeatureCardProps {
   key?: string | number; // Added key prop
 }
 
-<<<<<<< HEAD
-=======
 export function FeatureCard({ titledescriptioniconclassName }: FeatureCardProps) {
   return (
     <div className={cn(
@@ -26,4 +24,3 @@ export function FeatureCard({ titledescriptioniconclassName }: FeatureCardProps)
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

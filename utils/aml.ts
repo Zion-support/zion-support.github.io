@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 export type WatchlistMatch = {
 export type WatchlistMatch = {;
@@ -23,7 +21,6 @@ export type AmlCheckResult = {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 export interface ShortUrl {
 export interface ShortUrl {;
@@ -267,7 +265,6 @@ class UrlShortenerService {;
     const urlClicks = this.clicks.get(shortCode) |[];
     urlClicks.push(clickEvent);
     this.clicks.set(shortCode, urlClicks);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     const analytics = this.analytics.get(shortCode);
     if (analytics) {
       analytics.totalClicks++;

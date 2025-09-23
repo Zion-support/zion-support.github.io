@@ -10,8 +10,6 @@ interface ActiveFiltersProps {
   toggleAvailability: (status: string) => void;
   selectedRegions: string[];
   toggleRegion: (region: string) => void;
-<<<<<<< HEAD
-=======
   priceRange: [number];
   setPriceRange: (range: [number]) => void;
   experienceRange: [number];
@@ -114,4 +112,3 @@ export function ActiveFilters({
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

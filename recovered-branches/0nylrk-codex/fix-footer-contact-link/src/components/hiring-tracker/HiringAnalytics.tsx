@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { useStateuseEffect } from "react";
 import { useJobApplications } from "@/hooks/useJobApplications";
 import { CardContentCardHeaderCardTitle } from "@/components/ui/card";
@@ -175,4 +173,3 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

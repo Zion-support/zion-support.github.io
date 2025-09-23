@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AIConsciousnessEvolution2025() {
@@ -24,7 +23,6 @@ export default function AIConsciousnessEvolution2025() {
 			canonical="https://ziontechgroup.com/ai-consciousness-evolution-2025"
 		/>
 	);
-=======
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
@@ -658,5 +656,4 @@ export default function AIConsciousnessEvolution2025() {
       </section>
     </Layout>
   );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

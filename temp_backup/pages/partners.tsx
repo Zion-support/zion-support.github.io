@@ -1,6 +1,4 @@
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
 
 export default function PartnersPage() {
 	return (
@@ -24,4 +22,3 @@ export default function PartnersPage() {
 		</div>
 	);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

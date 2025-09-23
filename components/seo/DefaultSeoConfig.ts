@@ -8,8 +8,6 @@ const config: DefaultSeoProps = {
     type: 'website',
     locale: 'en_US',
     url: 'https://ziontechgroup.netlify.app',
-<<<<<<< HEAD
-=======
     siteName: 'Zion Tech Solutions'},
   twitter: {
     handle: '@ziontech',
@@ -20,4 +18,3 @@ const config: DefaultSeoProps = {
     { name: 'theme-color', content: '#111827' }]};
 
 export default config;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

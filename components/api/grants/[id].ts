@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 import fs from 'fs';
 import path from 'path';
 
@@ -126,7 +124,6 @@ function writeGrant(record: GrantApplication) {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 function writeGrant(record: GrantApplication) {

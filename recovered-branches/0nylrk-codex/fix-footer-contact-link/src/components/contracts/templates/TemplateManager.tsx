@@ -2,8 +2,6 @@
 import { useState } from "react";
 import { useContractTemplates } from "@/hooks/useContractTemplates";
 import { ContractTemplate } from "@/types/contracts";
-<<<<<<< HEAD
-=======
 import { DialogContentDialogHeaderDialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { TemplateList } from "./TemplateList";
@@ -90,4 +88,3 @@ export function TemplateManager({
     </Dialog>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

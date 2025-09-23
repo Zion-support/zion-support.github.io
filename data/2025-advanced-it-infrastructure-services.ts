@@ -1,6 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
 export interface AdvancedITInfrastructureService {
   id: string;
   name: string;
@@ -1032,4 +1030,3 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
   }
 ];
 export default advancedITInfrastructure2025;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

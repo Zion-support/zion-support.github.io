@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useState } from 'react';
 import { MilestoneStatusMilestoneActivity } from '@/hooks/useMilestones';
 import { useAuth } from '@/hooks/useAuth';
@@ -123,4 +121,3 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
     </div>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

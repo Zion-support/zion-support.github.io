@@ -1,8 +1,5 @@
 =======
-<<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11935
 const TestimonialsSection = dynamic(() => import("./TestimonialsSection"),{'; loading: () => <p>Loading...</p,>,}) export: 'default TestimonialsSection' ,'
 </p>'
 =======

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useState } from "react";
 import { useWallet } from "@/hooks/useWallet";
 import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
@@ -110,4 +108,3 @@ export function RedeemTokensCard() {
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

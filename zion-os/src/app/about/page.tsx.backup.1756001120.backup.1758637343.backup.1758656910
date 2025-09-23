@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 
 export default function AboutPage() {
@@ -255,7 +254,6 @@ export default function AboutPage() {
                 <li>• CI/CD Pipelines</li>
                 <li>• Microservices Architecture</li>
               </ul>
-=======
 import Link from 'next/link';
 
 export default function AboutPage() {
@@ -506,13 +504,11 @@ export default function AboutPage() {
                   and industries with our comprehensive AI solutions.
                 </p>
               </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
             </div>
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Call to Action */}
       <div className="text-center space-y-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8">
         <h2 className="text-2xl font-bold">Ready to Work With Us?</h2>
@@ -532,7 +528,6 @@ export default function AboutPage() {
           >
             View Services
           </a>
-=======
       {/* CTA Section */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-white/10 rounded-xl p-12">
@@ -550,7 +545,6 @@ export default function AboutPage() {
               Explore Our Services
             </Link>
           </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
         </div>
       </div>
     </div>

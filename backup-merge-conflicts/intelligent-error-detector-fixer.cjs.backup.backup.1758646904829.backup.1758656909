@@ -4,7 +4,6 @@ const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
     this.logFile = path.join(this.reportsDir, "intelligent-error-detector.log")
-<<<<<<< HEAD
     this.fixes = []
     this.errors = []
     this.patterns = this.initializeErrorPatterns()
@@ -29,7 +28,6 @@ const { execSync } = require("child_process")
     const errorFiles = []
     try {
       // Run ESLint to find errors
-=======
       fs.mkdirSync(this.reportsDir, { "recursive"})
   log(message, level = "info")
     fs.appendFileSync(this.logFile, logMessage + "\n")
@@ -82,4 +80,3 @@ const { execSync } = require("child_process")
       this.log("� Intelligent Error Detector & Fixer completed successfully")
       return { "success": true, "errors": this.errors, "fixes"}
       this.log(`� Error detection "failed": ${error.message}`, ``)
->>>>>>> main

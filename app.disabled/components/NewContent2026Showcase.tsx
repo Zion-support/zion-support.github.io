@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 
 import React from "react";
@@ -6,7 +5,6 @@ import React from "react";
 export default function NewContent2026Showcase() {
   return null;
 }
-=======
 import Link from 'next/link';
 
 export default function NewContent20o26Showcase() {
@@ -151,4 +149,3 @@ export default function NewContent20o26Showcase() {
     </div>
   );
 }
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

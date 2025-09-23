@@ -50,8 +50,6 @@ export async function trackReferral(userId: string, email: string) {
     const response = await fetch('/api/track-referral', {
       method: 'POST',
       headers: {
-<<<<<<< HEAD
-=======
         'Content-Type': 'application/json'},
       body: JSON.stringify({
         refCode,
@@ -68,4 +66,3 @@ export async function trackReferral(userId: string, email: string) {
     console.error('Error tracking referral:', error);
   }
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

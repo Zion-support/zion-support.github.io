@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import React, { useState } from "react";
 import { Badge } from "@/components/ui/badge";
@@ -76,7 +74,6 @@ export function ZapierIntegration() {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <div className="space-y-6">
       <div className="grid md:grid-cols-3 gap-6">

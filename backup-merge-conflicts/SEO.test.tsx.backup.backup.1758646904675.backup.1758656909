@@ -1,7 +1,4 @@
-<<<<<<< HEAD:backup-merge-conflicts/SEO.test.tsx.backup
 <<<<<<< HEAD
-=======
->>>>>>> pr-11913:__tests__/SEO.test.tsx
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';

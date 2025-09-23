@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useState } from "react";
 import { CardHeaderCardTitleCardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -133,4 +131,3 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     </Card>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

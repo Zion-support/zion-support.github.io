@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { describe, it, expect, vi } from 'vitest';
@@ -32,7 +31,6 @@ describe('ProductActions', () => {
       expect(button).toHaveTextContent('Add to Cart');
     });
     
-=======
 import { render, screen, fireEvent, waitFor } from '@testing-library/react',;
 import '@testing-library/jest-dom',;
 import { describe, it, expect, vi } from 'vitest',;
@@ -59,7 +57,6 @@ describe('ProductActions', () => {;
     await waitFor(() => {;
       expect(button).toHaveTextContent('Add to Cart');
     }),;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     vi.useRealTimers();
   });
 });

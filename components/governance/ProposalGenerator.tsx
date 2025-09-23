@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useState } from 'react';
 import EnhancedLayout from '../layout/EnhancedLayout';
@@ -218,4 +216,3 @@ export default function ProposalGenerator() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

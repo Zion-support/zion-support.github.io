@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 const enhancements = {
@@ -745,7 +744,6 @@ fs.writeFileSync(reportPath, JSON.stringify(enhancements, null, 2));
 enhancements.improvements.forEach(improvement => {
   const status = improvement.status === 'success' ? '✅' : ';❌;';
   });
-=======
 const { execSync } = require('child_process')
 console.log(' Starting Advanced App Enhancer...')
       "status"
@@ -767,4 +765,3 @@ export const "Spinner"
     "lg"
     const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1")]
 console.log('\n New Features "Added")
->>>>>>> main

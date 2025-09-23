@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React from "react";
 import { CheckCircleArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -76,4 +74,3 @@ export function OnboardingTracker({
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

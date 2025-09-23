@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { renderscreen } from '@testing-library/react';
 import WalletPage from '@/pages/Wallet';
 import { vi } from 'vitest';
@@ -22,4 +20,3 @@ describe('WalletPage'() => {
     ).toBeInTheDocument();
   });
 });
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

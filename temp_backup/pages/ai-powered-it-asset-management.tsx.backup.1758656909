@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -321,7 +320,6 @@ const AIPoweredITAssetManagement = () => {
 };
 
 export default AIPoweredITAssetManagement;
-=======
 
 export default function AiPoweredItAssetManagementPage() {
   return (
@@ -342,4 +340,3 @@ export default function AiPoweredItAssetManagementPage() {
     </>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

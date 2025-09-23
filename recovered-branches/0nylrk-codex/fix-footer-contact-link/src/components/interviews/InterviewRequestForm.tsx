@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useState } from "react";
 import { Button } from "@/components/ui/button";
 import { FormFieldFormItemFormLabelFormControlFormMessage } from "@/components/ui/form";
@@ -303,4 +301,3 @@ export function InterviewRequestForm({ talentonCloseuserDetails }: InterviewRequ
     </Form>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

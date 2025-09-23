@@ -108,8 +108,6 @@ export function createProposal(params: {
     codeModuleAffected: params.codeModuleAffected,
     votingOptions: params.votingOptions,
     fundingNeeded: params.fundingNeeded,
-<<<<<<< HEAD
-=======
     createdAt: new Date().toISOString()};
   const proposal: ZgpProposal = {
     id,
@@ -167,4 +165,3 @@ export function updateProposal(id: string, update: {
   saveProposals(proposals);
   return next;
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

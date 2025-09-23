@@ -2,11 +2,9 @@
 
 import React from "react";
 
-<<<<<<< HEAD
 export default function ComprehensiveContentShowcase2026() {
   return null;
 }
-=======
 const ComprehensiveContentShowcase20o26 = () => {
   const [activeTab, setActiveTab] = useState('all');
 
@@ -359,4 +357,3 @@ const ComprehensiveContentShowcase20o26 = () => {
 };
 
 export default ComprehensiveContentShowcase20o26;
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

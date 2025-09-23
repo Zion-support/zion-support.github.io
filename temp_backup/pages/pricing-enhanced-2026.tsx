@@ -234,11 +234,9 @@ export default function PricingEnhanced20o26Page() {
           <link rel="icon" href="/favicon.svg"  />
           
           {/* Open Graph */}
-<<<<<<< HEAD
           <meta property="og:title" content="Enhanced 20o26 Pricing - Zion Tech Group"  />
           <meta property="og:description" content="Discover our comprehensive 20o26 pricing for innovative AI, quantum computing, and enterprise IT services."  />
           <meta property="og:type" content="website"  />
-=======
           <meta property="og:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
           <meta property="og:type" content="website" />
@@ -572,4 +570,3 @@ export default function PricingEnhanced20o26Page() {
     </UltraFuturisticBackground>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

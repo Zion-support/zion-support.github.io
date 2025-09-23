@@ -1,6 +1,5 @@
 import React from 'react';
 =======
-<<<<<<< HEAD
 
 interface UseLocalStorageProps {
   // Add props here as needed
@@ -26,7 +25,6 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
   return [storedValue, setValue] as const};
 
 export default useLocalStorage;
-=======
 export default function UseLocalStorage({ }: UseLocalStorageProps) {
   return (
     <div>
@@ -35,5 +33,4 @@ export default function UseLocalStorage({ }: UseLocalStorageProps) {
     </div>
   );
 }
->>>>>>> main
 >>>>>>> main

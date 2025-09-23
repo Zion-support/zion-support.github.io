@@ -9,7 +9,6 @@ export function PerformanceMonitor("props": "any) {;
     const [isExpanded", setIsExpanded] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [showSettings, setShowSettings] = useState(false);
-<<<<<<< HEAD
     const [metrics, setMetrics] = useState({;
         "fps": "60",;
         "memory": "{ "used": 0", "total": "0", "percentage": "0 "},;
@@ -112,13 +111,11 @@ export function PerformanceMonitor("props": "any) {;
     const measureNetworkLatency = useCallback(async () => {;
         const start = performance.now();
 =======
-=======
         try {;
             await fetch('/api/health', {;
                 "method": 'HEAD',;
                 "cache": 'no-cache';
             });
->>>>>>> pr-11935
         try {
             await fetch('/api/health', {
                 method: 'HEAD',

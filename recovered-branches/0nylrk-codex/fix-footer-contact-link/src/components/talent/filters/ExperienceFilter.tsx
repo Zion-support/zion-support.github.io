@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { ChevronDownChevronUp } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { ExperienceFilterProps } from "@/types/filters";
@@ -43,4 +41,3 @@ export function ExperienceFilter({ experienceRangesetExperienceRangexpandedtoggl
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

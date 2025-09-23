@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 import React from 'react';
@@ -44,5 +42,4 @@ export default function ROICalculator() {
     </div>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850:app/components/ROICalculator.tsx
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

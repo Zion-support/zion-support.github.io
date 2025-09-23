@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React from "react";
 import { HandshakeMessageSquareStar } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -142,4 +140,3 @@ export function TalentProfile({
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

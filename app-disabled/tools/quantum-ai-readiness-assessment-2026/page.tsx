@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export const metadata = { title: 'Quantum AI Readiness Assessment 2026' };
 
 export default function Page() {
@@ -10,4 +8,3 @@ export default function Page() {
 		</main>
 	);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

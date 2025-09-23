@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
@@ -55,4 +53,3 @@ export default function EdgeOrchestrationPage() {
 	);
 }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

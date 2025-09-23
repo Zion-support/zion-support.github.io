@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -136,7 +134,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       
       if (!applicationSuccess) {
         throw new Error("Failed to submit application")
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       }
       
       // Format message with proposal link if provided

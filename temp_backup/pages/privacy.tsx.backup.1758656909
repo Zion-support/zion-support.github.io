@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Layout from '../components/layout/Layout';
 import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
@@ -437,7 +436,6 @@ const PrivacyPage: React.FC = () => {
 export default PrivacyPage;
 
  
-=======
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, FileText, Calendar, Mail } from 'lucide-react';
 import { SEO } from '@/components/SEO';
@@ -678,4 +676,3 @@ export default function PrivacyPage() {
     </>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

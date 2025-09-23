@@ -2,11 +2,9 @@
 
 import React from "react";
 
-<<<<<<< HEAD
 export default function NewContent2026UltimateBanner() {
   return null;
 }
-=======
 export default function NewContent20o26UltimateBanner() {
   return (
     <section className="py-16 bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white">
@@ -90,4 +88,3 @@ export default function NewContent20o26UltimateBanner() {
     </section>
   );
 }
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

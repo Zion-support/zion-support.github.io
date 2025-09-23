@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import type { BookProject } from '../book/bookTypes',;
 export function buildPrintableHtml(project: BookProject): string {;
@@ -226,7 +224,6 @@ function paragraphize(text: string): string {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

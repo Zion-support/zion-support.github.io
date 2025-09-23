@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { useEffect, useMemo, useState } from "react";
 import Head from "next/head";
 import { v4 as uuidv4 } from "uuid";
@@ -601,4 +599,3 @@ export default function TalentPortfolioBuilder() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

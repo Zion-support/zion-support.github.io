@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 const AI2026QuantumRevolutionBanner: React.FC = () => {
   return (
     <section className="bg-gradient-to-r from-indigo-800 to-fuchsia-800 text-white py-12 rounded-xl">
@@ -23,5 +21,4 @@ export default function AI2026QuantumRevolutionBanner() {
     </section>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850:app/components/AI2026QuantumRevolutionBanner.tsx
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

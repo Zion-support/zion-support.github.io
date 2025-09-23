@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 
 export default function ServicesPage() {
@@ -217,7 +216,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-=======
 "use client";
 
 import { useState } from "react";
@@ -1555,7 +1553,6 @@ export default function ServicesPage() {
           </p>
         </div>
       </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
     </div>
   );
 }

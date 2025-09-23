@@ -19,8 +19,6 @@ export const useTalentQuotes = () => {
   const { data: allQuotes = [], isLoading, error } = useQuery({
     queryKey: ['quotes', 'talent', talentId],
     queryFn: () => quoteRequestService.getByTalentId(talentId),
-<<<<<<< HEAD
-=======
     enabled: !!talentId});
 
   // Count unread quotes
@@ -111,4 +109,3 @@ export const useTalentQuotes = () => {
     toggleArchive: (id: string, isArchived: boolean) => 
       toggleArchiveMutation.mutate({ id, isArchived })};
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

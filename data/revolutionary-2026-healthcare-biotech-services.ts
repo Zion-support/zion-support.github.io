@@ -1,6 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
 export interface Revolutionary2026HealthcareBiotechService {
   id: string;
   name: string;
@@ -303,4 +301,3 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     reviews: 123
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

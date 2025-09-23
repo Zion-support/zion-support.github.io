@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 
 export default function AISalesIntelligencePlatform() {
@@ -23,7 +22,6 @@ export default function AISalesIntelligencePlatform() {
 			canonical="https://ziontechgroup.com/ai-sales-intelligence-platform"
 		/>
 	);
-=======
 import React from 'react';
 import Head from 'next/head';
 
@@ -45,5 +43,4 @@ export default function AiSalesIntelligencePlatformPage() {
       </div>
     </>
   );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

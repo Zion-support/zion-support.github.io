@@ -1,7 +1,5 @@
 "use client";
 'use client';
-<<<<<<< HEAD
-=======
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -340,4 +338,3 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
 };
 
 export default AdvancedContentRecommendationEngine;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

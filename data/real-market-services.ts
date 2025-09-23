@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export interface RealMarketService {
   id: string;
   name: string;
@@ -505,4 +503,3 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 7
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -9,7 +7,6 @@
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 import {GradientHeading} from "@/components/GradientHeading";
 import {Clock, Map, DollarSign} from "lucide-react";

@@ -14,8 +14,6 @@ export interface ServiceExpansion20o25 {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const serviceExpansions2025: ServiceExpansion2025[] = [
   {
     id: "ai-workflow-automation",
@@ -40,4 +38,3 @@ export const serviceExpansions2025: ServiceExpansion2025[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -5,7 +5,6 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import SEO from '../components/SEO';
 import LoadingSpinner from '../components/LoadingSpinner';
 
-<<<<<<< HEAD
 // Import new AI 2025 Ultimate Content Revolution components - NEWEST FEATURED
 import AI2025UltimateContentRevolution50000ROIBanner from '../components/AI2025UltimateContentRevolution50000ROIBanner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
@@ -102,13 +101,11 @@ import AdvancedAnalyticsEngine from '../components/AdvancedAnalyticsEngine';
 import AutomationWorkflowEngine from '../components/AutomationWorkflowEngine';
 import EnterpriseDataManagement from '../components/EnterpriseDataManagement';
 import APIManagementSystem from '../components/APIManagementSystem';
-=======
 // Import working components only
 import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
 import RevolutionaryContent2025Showcase from '../components/RevolutionaryContent2025Showcase';
 import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
 
->>>>>>> 0502a598e03c560839d6a6495f98d9e658772407
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
@@ -168,18 +165,12 @@ import AI2025UltimateBreakthroughRevolutionBanner from './components/AI2025Ultim
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import AI2025UltimateBreakthroughBanner from '../components/AI2025UltimateBreakthroughBanner';
-<<<<<<< HEAD
-=======
 
->>>>>>> 0502a598e03c560839d6a6495f98d9e658772407
 // Import new 2025 breakthrough promotional components
 import QuantumAI2025BreakthroughPromotionBanner from '../components/QuantumAI2025BreakthroughPromotionBanner';
 import AutonomousBusinessOperationsPromotionBanner from '../components/AutonomousBusinessOperationsPromotionBanner';
 import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBanner';
-<<<<<<< HEAD
-=======
 
->>>>>>> 0502a598e03c560839d6a6495f98d9e658772407
 // Import new 2026 AI breakthrough promotional components
 import AI2026RevolutionaryBreakthroughUltimatePromotionBanner from '../components/AI2026RevolutionaryBreakthroughUltimatePromotionBanner';
 import AI2026GlobalTransformation800ROISuccessBanner from '../components/AI2026GlobalTransformation800ROISuccessBanner';
@@ -242,14 +233,11 @@ import EdgeComputingRevolutionBanner2025 from '../components/EdgeComputingRevolu
 import UltimateQuantumAI2025RevolutionBanner from '../components/UltimateQuantumAI2025RevolutionBanner';
 import UltimateBusinessRevolution2025Banner from '../components/UltimateBusinessRevolution2025Banner';
 import EnhancedContentDiscovery2025 from '../components/EnhancedContentDiscovery2025';
-<<<<<<< HEAD
-=======
 
 // Import new Advanced AI 2025 Breakthrough components
 import AdvancedAI2025BreakthroughBanner from '../components/AdvancedAI2025BreakthroughBanner';
 import UltimateContentShowcase2025Enhanced from '../components/UltimateContentShowcase2025Enhanced';
 
->>>>>>> 0502a598e03c560839d6a6495f98d9e658772407
 // Import new AI Business Intelligence 2025 promotional components
 import AIBusinessIntelligence2025Banner from '../components/AIBusinessIntelligence2025Banner';
 import AIBusinessIntelligenceShowcase2025 from '../components/AIBusinessIntelligenceShowcase2025';
@@ -331,16 +319,13 @@ import RevolutionaryTechTrends2025 from '../components/RevolutionaryTechTrends20
 import UltimateContentDiscoveryWidget from '../components/UltimateContentDiscoveryWidget';
 import InteractiveContentPromotionBanner from '../components/InteractiveContentPromotionBanner';
 import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
-<<<<<<< HEAD
 import NewContent2025UltimateBreakthroughPromotionBanner from '../components/NewContent2025UltimateBreakthroughPromotionBanner';
 // Import additional content components
-=======
 
 // Import new Ultimate Business Intelligence components
 import UltimateBusinessIntelligence2025Banner from '../components/UltimateBusinessIntelligence2025Banner';
 import UltimateBusinessIntelligenceShowcase2025 from '../components/UltimateBusinessIntelligenceShowcase2025';
 
->>>>>>> 0502a598e03c560839d6a6495f98d9e658772407
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -360,7 +345,6 @@ export default function HomePage() {
         />
         
         <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
           {/* AI 2025 ULTIMATE CONTENT REVOLUTION PROMOTION BANNER - NEWEST FEATURED */}
           <AI2025UltimateContentRevolutionPromotionBanner />
           {/* ULTIMATE AUTOMATION REVOLUTION 50,000% ROI BANNER - NEWEST BREAKTHROUGH */}
@@ -784,7 +768,6 @@ export default function HomePage() {
     </ErrorBoundary>
   );
 }
-=======
         {/* ADVANCED AI 2025 BREAKTHROUGH BANNER - NEWEST BREAKTHROUGH */}
         <AdvancedAI2025BreakthroughBanner />
         
@@ -802,4 +785,3 @@ export default function HomePage() {
       </ErrorBoundary>
     );
   }
->>>>>>> 0502a598e03c560839d6a6495f98d9e658772407

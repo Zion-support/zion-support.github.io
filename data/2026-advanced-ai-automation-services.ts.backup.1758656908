@@ -1,13 +1,10 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface AdvancedAIAutomationService {
-=======
 
 import { ServiceVariant } from '../types/service-variants';
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   id: string;
   name: string;
   tagline: string;
@@ -18,7 +15,6 @@ import { ServiceVariant } from '../types/service-variants';
   popular: boolean;
   icon: string;
   color: string;
-<<<<<<< HEAD
   textColor: string;
   link: string;
   marketPosition: string;
@@ -54,7 +50,6 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-=======
   text_color: string;
   link: string;
   market_position: string;
@@ -148,12 +143,10 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 };
 
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   {
-<<<<<<< HEAD
     id: 'ai-autonomous-business-processor',
     name: 'AI Autonomous Business Processor',
     tagline: 'Fully autonomous business process optimization with zero human intervention',
@@ -164,7 +157,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Autonomous process discovery and mapping',
       'Real-time optimization algorithms',
       'Cross-departmental coordination',
-=======
     id: 'ai-autonomous-business-processor'
     name: 'AI Autonomous Business Processor'
     tagline:
@@ -196,14 +188,12 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Real-time optimization algorithms',
       'Cross-departmental coordination',
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       'Predictive maintenance scheduling',
       'Resource allocation optimization',
       'Performance analytics dashboard',
       'Automated decision making',
       'Process improvement suggestions',
       'Integration with existing systems',
-<<<<<<< HEAD
       '24/7 autonomous operation'
     ],
     popular: true,
@@ -244,7 +234,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       '99.7% prediction accuracy',
       'Real-time data processing',
       'Multi-dimensional forecasting',
-=======
 
 
 
@@ -356,14 +345,12 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Real - time data processing',
       'Multi - dimensional forecasting',
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       'Risk assessment algorithms',
       'Market trend analysis',
       'Custom model training',
       'API integration capabilities',
       'Automated reporting',
       'Scenario planning tools',
-<<<<<<< HEAD
       'Executive dashboard'
     ],
     popular: true,
@@ -401,7 +388,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     period: '/month',
     description: 'AI-powered customer success platform that automatically identifies at-risk customers, predicts churn, and implements retention strategies without human intervention.',
     features: [
-=======
       'Executive dashboard',
     ],
     popular: true,
@@ -486,7 +472,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     features: [;
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       'Automatic churn prediction',
       'Personalized retention strategies',
       'Customer health scoring',
@@ -496,7 +481,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Customer journey optimization',
       'Sentiment analysis',
       'ROI measurement',
-<<<<<<< HEAD
       'Integration with CRM systems'
     ],
     popular: true,
@@ -538,7 +522,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Autonomous budget optimization',
       'Real-time performance tracking',
       'A/B testing automation',
-=======
       'Integration with CRM systems',
     ],
     popular: true,
@@ -614,12 +597,10 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Autonomous budget optimization',
       'Real - time performance tracking',
       'A / B testing automation',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       'Audience segmentation AI',
       'Content personalization',
       'ROI maximization algorithms',
       'Predictive analytics',
-<<<<<<< HEAD
       'Multi-platform integration',
       'Automated reporting'
     ],
@@ -658,7 +639,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     period: '/month',
     description: 'Intelligent sales platform that autonomously identifies high-value prospects, qualifies leads, and nurtures them through the sales funnel using advanced AI and behavioral analysis.',
     features: [
-=======
       'Multi - platform integration',
       'Automated reporting',
     ],
@@ -742,7 +722,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Intelligent sales platform that autonomously identifies high - value prospects, qualifies leads, and nurtures them through the sales funnel using advanced AI and behavioral analysis.',
     features: [;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       'Automatic lead scoring',
       'Behavioral analysis',
       'Predictive lead qualification',
@@ -752,7 +731,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Competitor intelligence',
       'Market opportunity detection',
       'ROI tracking',
-<<<<<<< HEAD
       'CRM integration'
     ],
     popular: true,
@@ -783,7 +761,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     reviews: 267
   }
 ];
-=======
       'CRM integration',
     ],
     popular: true,
@@ -1257,7 +1234,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
   }

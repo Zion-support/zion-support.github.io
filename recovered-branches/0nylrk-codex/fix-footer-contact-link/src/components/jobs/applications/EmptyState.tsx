@@ -1,7 +1,5 @@
 
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-=======
 import { CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 
@@ -20,4 +18,3 @@ export function EmptyState() {
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

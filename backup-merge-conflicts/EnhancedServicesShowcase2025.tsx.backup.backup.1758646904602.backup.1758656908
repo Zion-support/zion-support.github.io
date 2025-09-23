@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
@@ -177,7 +175,6 @@ export function EnhancedServicesShowcase2025() {
                   : 'bg-white text-gray-700 "hover": bg-blue-50 hover:text-blue-600 shadow-md'
               }`}
             >
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
               {category.name}

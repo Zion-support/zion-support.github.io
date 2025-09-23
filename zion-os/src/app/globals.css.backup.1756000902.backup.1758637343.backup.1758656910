@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 :root {
   --bg: #0a0a0a;
   --fg: #ffffff;
@@ -334,7 +333,6 @@ body {
 @media (max-width: 640px) {
   .text-balance {
     text-wrap: normal;
-=======
 @layer base {
   :root {
     --bg: #0f172a;
@@ -371,6 +369,5 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-54ae
   }
 }

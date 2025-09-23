@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import React, { useEffect, useState } from "react";
 import {useInterviews} from "@/hooks/useInterviews";
@@ -309,7 +307,6 @@ function InterviewsContent() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

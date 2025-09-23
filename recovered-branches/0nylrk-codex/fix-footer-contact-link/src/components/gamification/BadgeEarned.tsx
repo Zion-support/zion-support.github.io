@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React from "react";
 import { getBadgeMetaBadgeKey } from "./badgeConfig";
 
@@ -54,4 +52,3 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
     </div>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

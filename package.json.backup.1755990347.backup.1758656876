@@ -272,7 +272,6 @@
     "automation:pm2:cron": "npm run pm2:cron:start && npm run pm2:bootstrap:logrotate && pm2 save",
     "postautomation": "npm run automation:git-sync",
     "lint:staged": "lint-staged",
-<<<<<<< HEAD
     "ui-evolution:start": "node automation/ui-evolution-launcher.js start",
     "ui-evolution:once": "node automation/ui-evolution-launcher.js once",
     "ui-evolution:analyze": "node automation/ui-evolution-launcher.js analyze",
@@ -315,7 +314,6 @@
     "content:blog:cron:stop": "bash automation/blog-automation-cron.sh stop",
     "content:blog:cron:status": "bash automation/blog-automation-cron.sh status"
    },
-=======
     "homepage:update": "node automation/homepage-updater.cjs",
     "front:futurize": "node automation/front-futurizer.cjs",
     "front:futurize:cron": "node -e \"const cp=require('child_process'); setInterval(()=>cp.exec('node automation/front-futurizer.cjs',()=>{}), 1000*60*60*6)\"",
@@ -387,7 +385,6 @@
     "redundancy:complete:recovery": "./automation/start-complete-redundancy.sh recovery",
     "redundancy:complete:master": "node automation/complete-redundancy-master.cjs"
   },
->>>>>>> origin/auto/autonomy-17186719616
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import React from "react";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
@@ -192,7 +190,6 @@ function formatMessageWithLinks(): any (message: string): string {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 

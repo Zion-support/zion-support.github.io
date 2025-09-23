@@ -5,8 +5,6 @@ import { vi } from 'vitest';
 it('checkOnline returns false when navigator is offline', async () => {
   Object.defineProperty(window, 'navigator', {
     value: { onLine: false },
-<<<<<<< HEAD
-=======
     writable: true});
   const result = await checkOnline();
   expect(result).toBe(false);
@@ -20,4 +18,3 @@ it('safeFetch throws when fetch rejects', async () => {
   vi.spyOn(global, 'fetch').mockRejectedValue(new Error('Network error'));
   await expect(safeFetch('https://example.com')).rejects.toThrow('Failed to connect to Supabase');
 });
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

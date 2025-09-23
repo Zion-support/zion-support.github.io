@@ -6,8 +6,6 @@ interface ResultsHeaderProps {
   resultCount: number;
 }
 
-<<<<<<< HEAD
-=======
 export function ResultsHeader({ isLoadingresultCount }: ResultsHeaderProps) {
   return (
     <div className="flex items-center mb-6 text-zion-slate-light">
@@ -28,4 +26,3 @@ export function ResultsHeader({ isLoadingresultCount }: ResultsHeaderProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
 
@@ -255,4 +253,3 @@ const AdvancedAIAssistant: React.FC = () => {
 };
 
 export default AdvancedAIAssistant;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

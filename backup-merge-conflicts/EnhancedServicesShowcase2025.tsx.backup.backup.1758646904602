@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD:backup-merge-conflicts/EnhancedServicesShowcase2025.tsx.backup
 <<<<<<< HEAD
-=======
 import {;
   Star;
   Users;
@@ -176,7 +174,6 @@ export function EnhancedServicesShowcase2025() {
               }`}
             >
 =======
->>>>>>> pr-11913:src_backup_temp/components/EnhancedServicesShowcase2025.tsx
               {category.name}
               <span className="ml-2 bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-xs">;
                 {category.count}

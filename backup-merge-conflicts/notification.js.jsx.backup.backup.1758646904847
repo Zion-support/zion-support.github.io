@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 };
         setNotifications(prev => {const updated = [newNotification, ...prev];
             return updated.slice(0, maxNotifications)}
@@ -10,7 +8,6 @@
             setTimeout(() => {
 =======
 
->>>>>>> pr-11935
                 removeNotification(newNotification.id)}, newNotification.duration)}
     }, [maxNotifications, removeNotification]);
     const clearAll = useCallback(() => {setNotifications([])}, []);

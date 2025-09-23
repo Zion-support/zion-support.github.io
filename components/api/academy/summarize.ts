@@ -1,8 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 
-<<<<<<< HEAD
-=======
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
@@ -128,4 +126,3 @@ function handler() {
   }
   }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

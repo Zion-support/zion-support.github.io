@@ -10,8 +10,6 @@ const PopoverTrigger = PopoverPrimitive.Trigger
 const PopoverContent = React.forwardRef<
   React.ElementRef<typeof PopoverPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Content>
-<<<<<<< HEAD
-=======
 >(({ classNamealign = "center"sideOffset = 4...props }ref) => (
   <PopoverPrimitive.Portal>
     <PopoverPrimitive.Content
@@ -29,4 +27,3 @@ const PopoverContent = React.forwardRef<
 PopoverContent.displayName = PopoverPrimitive.Content.displayName
 
 export { PopoverTriggerPopoverContent }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

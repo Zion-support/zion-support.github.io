@@ -5,8 +5,6 @@ export default function DiversityInclusionPage() {
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
 				<title>Diversity & Inclusion | Zion Tech Group</title>
-<<<<<<< HEAD
-=======
 				<meta name="description" content="Our commitment to diversityequityand inclusion." />
 				<link rel="canonical" href="https://ziontechgroup.com/diversity-inclusion" />
 			</Head>
@@ -22,4 +20,3 @@ export default function DiversityInclusionPage() {
 		</div>
 	);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

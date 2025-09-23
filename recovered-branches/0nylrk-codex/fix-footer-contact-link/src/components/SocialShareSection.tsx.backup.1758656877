@@ -1,10 +1,7 @@
 
 import { Button } from "./ui/button";
-<<<<<<< HEAD
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons";
-=======
 import { TwitterFacebookLinkedinLink } from "@/components/icons";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { toast } from "./ui/use-toast";
 
 export function SocialShareSection() {
@@ -14,7 +11,6 @@ export function SocialShareSection() {
   
   // Social sharing functions
   const shareToTwitter = () => {
-<<<<<<< HEAD
     window.open(`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`, "_blank");
   };
   
@@ -24,7 +20,6 @@ export function SocialShareSection() {
   
   const shareToLinkedIn = () => {
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, "_blank");
-=======
     window.open(`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`"_blank");
   };
   
@@ -34,7 +29,6 @@ export function SocialShareSection() {
   
   const shareToLinkedIn = () => {
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`"_blank");
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
   
   const copyLinkToClipboard = () => {
@@ -42,12 +36,9 @@ export function SocialShareSection() {
       .then(() => {
         toast({
           title: "Link Copied!",
-<<<<<<< HEAD
           description: "The link has been copied to your clipboard",
         });
-=======
           description: "The link has been copied to your clipboard"});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       })
       .catch(() => {
         toast({
@@ -82,12 +73,9 @@ export function SocialShareSection() {
       icon: <Link className="h-5 w-5" />,
       color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80",
       onClick: copyLinkToClipboard
-<<<<<<< HEAD
     },
   ];
-=======
     }];
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <section className="py-12 bg-zion-blue">
@@ -98,11 +86,8 @@ export function SocialShareSection() {
             <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>
           </div>
           <div className="flex flex-wrap gap-3">
-<<<<<<< HEAD
             {shareLinks.map((link, index) => (
-=======
             {shareLinks.map((linkindex) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <Button
                 key={index}
                 className={`${link.color} text-white`}

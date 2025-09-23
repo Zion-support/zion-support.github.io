@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import { ADMIN_TYPES, AdminType, ListParams } from '../../../utils/admin/types';
 import { v4 as uuidv4 } from 'uuid';
 import { supabase as client } from '../../../utils/supabase/client';
@@ -16,7 +15,6 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
     if (k.startsWith('f_')) filters[k.slice(2)] = rest[k];
   });
   return {
-=======
 
 
   });
@@ -37,7 +35,6 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     search,
     sort,
     order: (order as any) || 'desc',
@@ -45,7 +42,6 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
     pageSize: pageSize ? Number(pageSize) : 20,
     filters,
     format: (format as any) || undefined,
-<<<<<<< HEAD
   };
 }
 
@@ -79,7 +75,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       if (params.filters) {
         for (const [k, v] of Object.entries(params.filters)) {
           if (v !== undefined) query = query.eq(k, v);
-=======
 
   };
 
@@ -204,7 +199,6 @@ export default async function handler(
       if (params.filters) {
         for (const [k, v] of Object.entries(params.filters)) {
           if (v !== undefined) query = query.eq(k, v)
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         }
       }
       if (params.sort) query = query.order(params.sort, { ascending: params.order === 'asc' });
@@ -214,7 +208,6 @@ export default async function handler(
       if (error) return res.status(500).json({ error: error.message });
       if (params.format === 'csv') {
         res.setHeader('Content-Type', 'text/csv');
-<<<<<<< HEAD
         res.setHeader('Content-Disposition', `attachment; filename="${type}.csv"`);
         return res.status(200).send(toCsv(data || []));
       }
@@ -232,7 +225,6 @@ export default async function handler(
           filtered = filtered.filter((r: any) => String((r as any)[k]) === String(v));
         }
       }
-=======
         res.setHeader(
           'Content-Disposition'
           `attachment; filename="${type}.csv"`
@@ -261,12 +253,10 @@ export default async function handler(
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       if (params.sort) {
         filtered.sort((a: any, b: any) => {
           const av = (a as any)[params.sort!];
           const bv = (b as any)[params.sort!];
-<<<<<<< HEAD
           return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1);
         });
       }
@@ -279,7 +269,6 @@ export default async function handler(
         res.setHeader('Content-Disposition', `attachment; filename="${type}.csv"`);
         return res.status(200).send(toCsv(pageItems));
       }
-=======
 
           return (
             (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1));        });          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1);
@@ -313,7 +302,6 @@ export default async function handler(
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   if (req.method === 'PATCH') {
     const { id, updates } = req.body as {
@@ -337,7 +325,6 @@ export default async function handler(
   }
 
   if (req.method === 'PATCH') {
-<<<<<<< HEAD
     const { id, updates } = req.body as { id: string; updates: Record<string, any> };
     if (!id) return res.status(400).json({ error: 'Missing id' });
     if (useSupabase) {
@@ -356,7 +343,6 @@ export default async function handler(
 
   if (req.method === 'DELETE') {
     const id = (req.query.id as string) || '';
-=======
     const { id, updates } = req.body as {
       id: string;
       updates: Record<string, any>;
@@ -397,7 +383,6 @@ export default async function handler(
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -410,7 +395,6 @@ export default async function handler(
     if (useSupabase) {
       const { error } = await client.from(type).delete().eq('id', id);
       if (error) return res.status(500).json({ error: error.message });
-<<<<<<< HEAD
       return res.status(200).json({ ok: true });
     } else {
       const list = MOCK_DATA[type] || [];
@@ -423,7 +407,6 @@ export default async function handler(
 
   return res.status(405).json({ error: 'Method not allowed' });
 }
-=======
 
 
 
@@ -472,7 +455,6 @@ export default async function handler(
 return res.status(405).json({ error: 'Method not allowed' });
 }return res.status (200) .send (toCsv (data |[]) );
 }return res.status (200) .send (toCsv (pageItems) );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 }

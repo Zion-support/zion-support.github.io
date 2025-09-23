@@ -1,8 +1,6 @@
 
 import { useState } from "react";
 import { useJobApplications } from "@/hooks/useJobApplications";
-<<<<<<< HEAD
-=======
 import { CardContentCardHeaderCardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -118,4 +116,3 @@ export function MyApplications() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -14,8 +14,6 @@ export interface Revolutionary20o26MicroSaasService {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasService[] = [
   {
     id: "2026-revolutionary-micro-saas",
@@ -40,4 +38,3 @@ export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasServi
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

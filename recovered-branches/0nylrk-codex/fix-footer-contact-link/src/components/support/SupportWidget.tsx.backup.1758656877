@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChatBotPanel } from "./ChatBotPanel";
@@ -44,7 +43,6 @@ export function SupportWidget() {
               </h3>
             </div>
             <div className="flex items-center gap-2">
-=======
 
 
 
@@ -128,30 +126,25 @@ export function SupportWidget() {;
               </h3>;
             </div>;
             <div className="flex items-center gap-2">;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <Button
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"
-<<<<<<< HEAD
                 onClick={() => window.location.href = "/help"}
                 aria-label="Help center"
               >
                 <Info className="h-5 w-5" />
               </Button>
-=======
                 onClick={() => window && window.location.href = "/help"}
                 aria-label="Help center";
               >;
                 <Info className="h-5 w-5" />;
               </Button>;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <Button
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"
                 onClick={() => setIsOpen(false)}
-<<<<<<< HEAD
                 aria-label="Close support"
               >
                 <X className="h-5 w-5" />
@@ -165,7 +158,6 @@ export function SupportWidget() {;
     </>
   );
 }
-=======
 
                 aria-label="Close support";
               >;
@@ -250,4 +242,3 @@ function SupportWidget() {
     </>);
 }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

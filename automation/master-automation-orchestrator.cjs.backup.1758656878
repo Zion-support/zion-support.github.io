@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
 "use strict";
 
 const { spawnSync } = require("child_process");
@@ -414,7 +413,6 @@ if (require.main === module) {
 }
 
 module.exports = MasterAutomationOrchestrator;
-=======
 
 const fs = require('fs');
 const path = require('path');
@@ -587,4 +585,3 @@ async function main() {
 }
 
 main();
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

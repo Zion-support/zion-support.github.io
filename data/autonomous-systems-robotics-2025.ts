@@ -1,6 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
 export interface AutonomousSystemsRobotics2025 {
   id: string;
   name: string;
@@ -303,4 +301,3 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
     reviews: 62
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

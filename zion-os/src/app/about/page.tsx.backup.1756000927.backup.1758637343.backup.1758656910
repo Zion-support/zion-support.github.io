@@ -1,20 +1,16 @@
 import Link from "next/link";
 
 export const metadata = {
-<<<<<<< HEAD
   title: "About Zion Tech Group - Leading AI & Quantum Technology Company",
   description: "Learn about Zion Tech Group, a pioneering technology company specializing in AI automation, quantum computing, cybersecurity, and enterprise IT solutions.",
   keywords: "about Zion Tech Group, company history, mission, vision, AI technology, quantum computing, Zion Tech Group",
-=======
   title: "About Us - Zion Tech Group | Leading Technology Innovation",
   description: "Learn about Zion Tech Group's mission to transform businesses through cutting-edge AI, quantum computing, and enterprise technology solutions.",
   keywords: "about Zion Tech Group, company history, mission, vision, technology innovation, AI company",
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
 };
 
 export default function AboutPage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
@@ -121,7 +117,6 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:bg-blue-500/30 transition-colors">
                 <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-=======
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -232,12 +227,10 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3">Innovation</h3>
               <p className="text-gray-400">
-<<<<<<< HEAD
                 We constantly push the boundaries of what's possible, exploring new frontiers in AI, 
                 quantum computing, and emerging technologies.
               </p>
@@ -262,7 +255,6 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:bg-purple-500/30 transition-colors">
                 <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-=======
                 We constantly push the boundaries of what's possible, 
                 exploring new technologies and approaches to solve complex challenges.
               </p>
@@ -272,12 +264,10 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3">Excellence</h3>
               <p className="text-gray-400">
-<<<<<<< HEAD
                 We maintain the highest standards of quality in everything we do, from research and development 
                 to client delivery and support.
               </p>
@@ -288,7 +278,6 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-yellow-500/20 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:bg-yellow-500/30 transition-colors">
                 <svg className="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
-=======
                 We maintain the highest standards in everything we do, 
                 from product development to customer service and support.
               </p>
@@ -298,12 +287,10 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3">Collaboration</h3>
               <p className="text-gray-400">
-<<<<<<< HEAD
                 We believe in the power of partnerships, working closely with clients, researchers, 
                 and industry leaders to achieve shared goals.
               </p>
@@ -447,7 +434,6 @@ export default function AboutPage() {
           </div>
         </section>
       </div>
-=======
                 We believe in the power of partnerships and teamwork, 
                 working closely with clients and partners to achieve shared success.
               </p>
@@ -566,7 +552,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
     </div>
   );
 }

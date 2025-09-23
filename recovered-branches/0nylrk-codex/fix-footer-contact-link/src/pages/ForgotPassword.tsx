@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import {useState} from "react";
 import {Link} from "react-router-dom";
@@ -516,4 +514,3 @@ export default function ForgotPassword() {;
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
                     <FormField;
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -84,7 +82,6 @@ function ClientDashboardContent() {
       <SEO
         title="Client Dashboard | Zion AI Marketplace"
         description="Manage your jobs and talent requests in the Zion AI Marketplace."
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       />
       <AppHeader />
       <main className="container mx-auto px-4 py-8">

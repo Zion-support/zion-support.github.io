@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 export type UIKitKind = 'ios' | 'android' | 'web';
 export interface TokenSet {
@@ -176,4 +174,3 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
 
 }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const {
@@ -20,7 +19,6 @@ const {
       // Ensure directories exist
       fs.mkdirSync(path.dirname(this.logFile), { "recursive": true });
       fs.mkdirSync(path.dirname(this.reportFile), { "recursive": true });
-=======
 
 const fs = // // require('fs');
 const path = // // require('path');
@@ -263,7 +261,6 @@ class IntelligentErrorFixer {
           fs.unlinkSync(duplicate);
         }
       }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
     log(message, level = 'INFO') {
       const timestamp = new Date().toISOString();
@@ -287,7 +284,6 @@ class IntelligentErrorFixer {
             return content.replace(match[0], match[0] + match[0].charAt(0));
           }},
         "mergeConflicts": {
-<<<<<<< HEAD
           pattern: /||
           "fix": content => {
             // Remove merge conflict markers
@@ -295,11 +291,9 @@ class IntelligentErrorFixer {
               .replace(/\n?/g, '')
               .replace(/\n?/g, '')
               .replace(/
-=======
           "fix": content => {
             // Remove merge conflict markers
             return content
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           }},
         "invalidJSX": {
           pattern: /return\(\)\s*</gm,
@@ -316,7 +310,6 @@ class IntelligentErrorFixer {
     }
     async runBuildCheck() {
       try {
-<<<<<<< HEAD
         this.log('Running build check...');
         const result = execSync('yarn build', {
           "encoding": 'utf8',
@@ -327,12 +320,10 @@ class IntelligentErrorFixer {
       } catch (error) {
         this.log('Build "failed": ' + error.message, 'ERROR');
         return { "success": false, "output": error.stdout || error.message };
-=======
         execSync(`yarn add ${toInstall.join(' ')}`, { stdio: 'pipe' });
         this.log('Successfully installed missing dependencies');
       } catch (error) {
         this.log(`Failed to install dependencies: ${error.message}`, 'ERROR');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       }
     }
     async runLintCheck() {
@@ -348,7 +339,6 @@ class IntelligentErrorFixer {
         this.log('Lint check found "issues": ' + error.message, 'WARN');
         return { "success": false, "output": error.stdout || error.message };
       }
-<<<<<<< HEAD
     }
     async runTypeCheck() {
       try {
@@ -555,7 +545,6 @@ class IntelligentErrorFixer {
       }
     }
   };
-=======
     };
 
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
@@ -628,17 +617,13 @@ class IntelligentErrorFixer {
   }
 }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 // Main execution
 if (require.main === module) {
   const fixer = new IntelligentErrorFixer();
   fixer.run().catch(console.error);
 }
-<<<<<<< HEAD
 module.exports = IntelligentErrorFixer;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
-=======
 
 module.exports = IntelligentErrorFixer;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main

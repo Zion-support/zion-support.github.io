@@ -9,8 +9,6 @@ const UltimateContent20o25ShowcaseBanner = () => {
 
   const featuredContent = [
     {
-<<<<<<< HEAD
-=======
       id: 'ultimate-business-transformation',
       title: 'AI 2025: The Ultimate Business Transformation Revolution',
       subtitle: '1,000% ROI Through Intelligent Automation',
@@ -262,4 +260,3 @@ const UltimateContent20o25ShowcaseBanner = () => {
 };
 
 export default UltimateContent2025ShowcaseBanner;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

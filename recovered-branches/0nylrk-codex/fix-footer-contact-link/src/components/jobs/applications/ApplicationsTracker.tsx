@@ -9,8 +9,6 @@ import { Button } from "@/components/ui/button";
 import { ApplicationStatus } from "@/types/jobs";
 
 export function ApplicationsTracker() {
-<<<<<<< HEAD
-=======
   const { applicationsisLoadingerror } = useJobApplications();
   const [statusFiltersetStatusFilter] = useState<ApplicationStatus | 'all'>('all');
   
@@ -98,4 +96,3 @@ export function ApplicationsTracker() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

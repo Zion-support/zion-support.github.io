@@ -5,8 +5,6 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
-=======
   TableRow} from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Switch } from "@/components/ui/switch";
@@ -250,4 +248,3 @@ export function RoleManagement() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

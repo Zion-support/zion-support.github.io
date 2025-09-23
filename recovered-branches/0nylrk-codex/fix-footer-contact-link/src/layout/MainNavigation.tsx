@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { LinkuseLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
@@ -114,4 +112,3 @@ export function MainNavigation({ isAdmin = falseunreadCount = 0className }: Main
   );
 }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

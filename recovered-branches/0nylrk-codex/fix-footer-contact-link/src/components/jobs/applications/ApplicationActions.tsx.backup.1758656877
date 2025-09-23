@@ -8,23 +8,17 @@ import {
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
 import { Eye, ChevronDown, Loader2 } from "lucide-react";
 import { JobApplication, ApplicationStatus } from "@/types/jobs";
-=======
 import { EyeChevronDownLoader2 } from "lucide-react";
 import { JobApplicationStatus } from "@/types/jobs";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface ApplicationActionsProps {
   application: JobApplication;
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
-<<<<<<< HEAD
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
-=======
   onStatusChange: (applicationId: stringnewStatus: ApplicationStatus) => Promise<void>;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }
 
 export function ApplicationActions({
@@ -60,38 +54,26 @@ export function ApplicationActions({
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
           <DropdownMenuItem 
-<<<<<<< HEAD
             onClick={() => onStatusChange(application.id, "shortlisted")}
-=======
             onClick={() => onStatusChange(application.id"shortlisted")}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           >
             Shortlist
           </DropdownMenuItem>
           <DropdownMenuItem 
-<<<<<<< HEAD
             onClick={() => onStatusChange(application.id, "interview")}
-=======
             onClick={() => onStatusChange(application.id"interview")}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           >
             Schedule Interview
           </DropdownMenuItem>
           <DropdownMenuItem 
-<<<<<<< HEAD
             onClick={() => onStatusChange(application.id, "hired")}
-=======
             onClick={() => onStatusChange(application.id"hired")}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           >
             Hire
           </DropdownMenuItem>
           <DropdownMenuItem 
-<<<<<<< HEAD
             onClick={() => onStatusChange(application.id, "rejected")}
-=======
             onClick={() => onStatusChange(application.id"rejected")}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             className="text-red-600"
           >
             Reject

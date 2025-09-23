@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   text?: string;
@@ -33,4 +31,3 @@ export default function LoadingSpinner({ size = 'md', text }: LoadingSpinnerProp
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

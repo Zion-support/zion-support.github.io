@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { MatchResultItem } from "@/lib/ai-matchmaking";
-<<<<<<< HEAD
-=======
 import { CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
@@ -169,4 +167,3 @@ export function AIMatchingResults({
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

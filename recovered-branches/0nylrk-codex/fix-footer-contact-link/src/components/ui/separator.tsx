@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import * as React from 'react.ts'
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
 import { cn  } from '../../utils/cn'
@@ -28,4 +26,3 @@ const Separator = React.forwardRef<
 Separator.displayName = SeparatorPrimitive.Root.displayName
 
 export { Separator }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

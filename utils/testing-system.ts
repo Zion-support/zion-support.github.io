@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 export class TestingSystem {
   static async testUserInteraction(element: HTMLElement, action: 'click' | 'type' | 'hover') {
@@ -14,4 +12,3 @@ export class TestingSystem {
     }
   }
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -16,8 +16,6 @@ const mockTalent: TalentProfile = {
   professional_title: 'Full Stack Developer',
   hourly_rate: 85,
   profile_picture_url: '',
-<<<<<<< HEAD
-=======
   skills: ['React'Node.js'Smart Contracts']};
 
 export function ContractBuilderContent() {
@@ -88,4 +86,3 @@ export function ContractBuilderContent() {
   );
 }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

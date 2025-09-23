@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FilePlus } from "lucide-react";
@@ -25,4 +23,3 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
     </Card>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

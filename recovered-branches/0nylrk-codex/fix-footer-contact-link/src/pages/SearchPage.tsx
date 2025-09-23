@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -126,7 +124,6 @@ export default function SearchPage() {;
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         {loading && <p className="text-zion-slate-light">Searching...</p>}

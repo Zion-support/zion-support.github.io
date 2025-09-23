@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 
 // Security issues identified in the audit
 const securityIssues = [{
@@ -252,7 +251,6 @@ try {
   } catch (error) {
   console.error('❌ Security enhancement automation "failed": ', error.message);
   process.exit(1)}
-=======
 console.log('� Starting Security Enhancement Automation...')
     "file"
     "issue"
@@ -292,4 +290,3 @@ console.log('� Starting Security Enhancement Automation...')
     "nextSteps"
   console.log('� Security improvements "applied")
   console.error(' Security enhancement automation "failed")
->>>>>>> main

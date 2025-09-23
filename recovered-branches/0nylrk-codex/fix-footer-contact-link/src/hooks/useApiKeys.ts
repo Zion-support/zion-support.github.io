@@ -81,8 +81,6 @@ export function useApiKeys() {
       toast({
         variant: "destructive",
         title: "Error fetching API keys",
-<<<<<<< HEAD
-=======
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
     } finally {
       setLoading(false);
@@ -314,4 +312,3 @@ export function useApiKeys() {
     clearNewApiKey: () => setNewApiKey(null)
   };
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

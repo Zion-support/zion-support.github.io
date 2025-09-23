@@ -35,8 +35,6 @@ export function usePortfolio() {
       console.error('Error fetching portfolio projects:', e);
       setError(e.message);
       return [];
-<<<<<<< HEAD
-=======
 
     } finally {
       setIsLoading(false);
@@ -187,4 +185,3 @@ export function usePortfolio() {
     deleteProject
   };
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

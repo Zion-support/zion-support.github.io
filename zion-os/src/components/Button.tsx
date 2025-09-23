@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 
 import React, { forwardRef } from 'react';
@@ -95,4 +93,3 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
     </button>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

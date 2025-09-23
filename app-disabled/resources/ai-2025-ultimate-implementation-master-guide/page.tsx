@@ -1,7 +1,5 @@
 "use client";
 
-<<<<<<< HEAD
-=======
 export default function Page() {
 	return (
 		<div className="max-w-3xl mx-auto py-16 px-4">
@@ -10,4 +8,3 @@ export default function Page() {
 		</div>
 	);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

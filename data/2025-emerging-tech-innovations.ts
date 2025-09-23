@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export interface EmergingTechInnovationService {
   id: string;
   name: string;
@@ -115,4 +113,3 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
     variant: 'premium'
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

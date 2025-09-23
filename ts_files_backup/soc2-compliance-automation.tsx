@@ -4,8 +4,6 @@ import Link from 'next/link';
 export default function SOC2ComplianceAutomationPage() {
 	return (
 		<>
-<<<<<<< HEAD
-=======
 			<SEO title="SOC 2 Compliance Automation" description="Automate evidence collectioncontrols mappingand auditor-ready reports. Reduce audit time and ensure continuous compliance." />
 			<section className="relative pt-28 pb-16 md:pt-36 md:pb-24">
 				<div className="container mx-auto px-4">
@@ -62,4 +60,3 @@ export default function SOC2ComplianceAutomationPage() {
 		</>
 	);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

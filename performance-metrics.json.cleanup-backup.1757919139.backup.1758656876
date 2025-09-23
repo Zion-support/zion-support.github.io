@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "timestamp": "2025-09-03T16:54:18.031Z",
   "score": 60,
   "bundleSize": {
@@ -37,7 +36,6 @@
   },
   "recommendations": []
 }
-=======
 [
   {
     "buildTime": "101.66ms",
@@ -67,4 +65,3 @@
     "devServerHealth": "healthy"
   }
 ]
->>>>>>> origin/auto/autonomy-17186719616

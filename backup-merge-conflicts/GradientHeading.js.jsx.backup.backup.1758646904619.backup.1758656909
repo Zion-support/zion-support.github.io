@@ -1,10 +1,7 @@
 =======
-<<<<<<< HEAD:backup-merge-conflicts/GradientHeading.js.jsx.backup
-=======
 "export function GradientHeading({ children,className,level = "h2",id }) {" const Tag = level; return (); <Tag id={id} className={cn("text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",className" )}" > ";"""
 =======
 "export function GradientHeading({ children,className,level = "h2",id }) {" const Tag = level; return (); <Tag id={id} className={cn("text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",className" )}" > ";"""
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/components/GradientHeading.js.jsx
 =======
 "export function GradientHeading({ children,className,level = "h2",id }) {" const Tag = level; return (); <Tag id={id} className={cn("text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",className" )}" > ";"""
 >>>>>>> pr-11935

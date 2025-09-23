@@ -2,8 +2,6 @@ import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
-<<<<<<< HEAD
-=======
 FileTextCheckPhoneMailMapPinExternalLinkShieldCheck
 
 export default function AuditLogVaultPage() {
@@ -72,4 +70,3 @@ export default function AuditLogVaultPage() {
   );
 }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

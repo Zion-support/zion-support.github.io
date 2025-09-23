@@ -1,11 +1,8 @@
 
 import { Badge } from "@/components/ui/badge";
 import { ShieldAlert } from "lucide-react";
-<<<<<<< HEAD
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-=======
 import { TooltipContentTooltipTrigger } from "@/components/ui/tooltip";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed';

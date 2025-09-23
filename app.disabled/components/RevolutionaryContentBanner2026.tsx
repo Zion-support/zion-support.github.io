@@ -1,12 +1,10 @@
 "use client";
 
-<<<<<<< HEAD
 import React from "react";
 
 export default function RevolutionaryContentBanner2026() {
   return null;
 }
-=======
 const RevolutionaryContentBanner20o26 = () => {
   return (
     <section className="py-12 bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 relative overflow-hidden">
@@ -116,4 +114,3 @@ const RevolutionaryContentBanner20o26 = () => {
 };
 
 export default RevolutionaryContentBanner20o26;
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

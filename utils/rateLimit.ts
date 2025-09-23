@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 
@@ -49,7 +47,6 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

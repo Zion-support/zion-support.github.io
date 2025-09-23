@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react',
 
 export default function IotPlatformsPage() {
@@ -10,4 +8,3 @@ export default function IotPlatformsPage() {
     </div>
   )
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

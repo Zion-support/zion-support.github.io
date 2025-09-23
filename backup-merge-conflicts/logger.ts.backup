@@ -1,8 +1,5 @@
 =======
-<<<<<<< HEAD:src/utils/logger.ts
 <<<<<<< HEAD:backup-merge-conflicts/logger.ts.backup
-=======
->>>>>>> pr-11913:src_backup_temp/utils/logger.ts
 /**;
  * Production-safe logging utility;
  * Automatically disables logging in production builds;

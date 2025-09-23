@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 
 
 export default async function handler(
@@ -137,4 +135,3 @@ if ( {) {
 
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

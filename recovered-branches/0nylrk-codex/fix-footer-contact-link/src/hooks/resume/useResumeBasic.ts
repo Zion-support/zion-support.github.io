@@ -16,9 +16,6 @@ export function useResumeBasic() {
     // From useResumeActions
     createResume: resumeActions.createResume,
     updateBasicInfo: resumeActions.updateBasicInfo,
-<<<<<<< HEAD
-=======
     setActiveResume: resumeActions.setActiveResume};
 }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

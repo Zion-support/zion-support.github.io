@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 export interface EmergingTechService {
-=======
 
 export interface EmergingTechService {
 export interface EmergingTechService {;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   id: string;
   name: string;
   tagline: string;
@@ -17,7 +14,6 @@ export interface EmergingTechService {;
     currency: string;
     trialDays: number;
     setupTime: string;
-<<<<<<< HEAD
     enterprise: number;
   };
   features: string[];
@@ -120,7 +116,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     name: 'Quantum Bio-Computing Platform',
     tagline: 'Quantum computing meets biological systems',
     description: 'Revolutionary platform that combines quantum computing with biological processing to solve complex biological problems, drug discovery, and genetic analysis.',
-=======
 
 
 
@@ -158,27 +153,23 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     tagline: 'Quantum computing meets biological systems',
     description:;
       'Revolutionary platform that combines quantum computing with biological processing to solve complex biological problems, drug discovery, and genetic analysis.',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     category: 'Quantum & Emerging Tech',
     price: {
       monthly: 599,
       yearly: 5990,
       currency: 'USD',
-<<<<<<< HEAD
       trialDays: 14,
       setupTime: '8 hours',
       enterprise: 2499
     },
     features: [
       'Quantum-biological hybrid processing',
-=======
       trial_days: 14,
       setup_time: '8 hours',
       enterprise: 2499,
     },
     features: [;
       'Quantum - biological hybrid processing',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       'DNA sequence analysis',
       'Protein folding simulation',
       'Drug discovery algorithms',
@@ -187,34 +178,27 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       'Quantum molecular dynamics',
       'Bioinformatics tools',
       'Custom biological models',
-<<<<<<< HEAD
       'API for research'
     ],
     benefits: [
-=======
       'API for research',
     ],
     benefits: [;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       'Solve biological problems 1000x faster',
       'Accelerate drug discovery',
       'Improve genetic analysis',
       'Enable new research capabilities',
-<<<<<<< HEAD
       'Reduce research costs'
     ],
     targetAudience: [
-=======
       'Reduce research costs',
     ],
     target_audience: [;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       'Pharmaceutical companies',
       'Research institutions',
       'Biotechnology firms',
       'Healthcare organizations',
       'Universities',
-<<<<<<< HEAD
       'Government agencies'
     ],
     marketPosition: 'Competitive with IBM Quantum ($500+), Google Quantum AI ($1000+), and specialized bio-computing platforms ($800+). Our advantage: Biological integration, quantum processing, and research optimization.',
@@ -224,7 +208,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     implementationDetails: 'Advanced quantum-bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.',
     roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.',
     useCases: [
-=======
       'Government agencies',
     ],
     market_position:;
@@ -240,13 +223,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       'Advanced quantum - bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.',
     roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.',
     use_cases: [;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       'Drug discovery',
       'Genetic analysis',
       'Protein folding',
       'Molecular dynamics',
       'Biological optimization',
-<<<<<<< HEAD
       'Research acceleration'
     ],
     integrations: ['Research databases, Laboratory equipment, Analysis tools, Cloud platforms, Scientific software'],
@@ -268,7 +249,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     name: 'Brain-Computer Interface Platform',
     tagline: 'Direct neural interface for human-computer interaction',
     description: 'Advanced platform that enables direct communication between the human brain and computers, opening new possibilities for accessibility, gaming, and medical applications.',
-=======
       'Research acceleration',
     ],
     integrations: [;
@@ -323,13 +303,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     tagline: 'Direct neural interface for human - computer interaction',
     description:;
       'Advanced platform that enables direct communication between the human brain and computers, opening new possibilities for accessibility, gaming, and medical applications.',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     category: 'Emerging Tech',
     price: {
       monthly: 399,
       yearly: 3990,
       currency: 'USD',
-<<<<<<< HEAD
       trialDays: 21,
       setupTime: '6 hours',
       enterprise: 1599
@@ -338,7 +316,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       'Neural signal processing',
       'Brain activity monitoring',
       'Thought-to-text conversion',
-=======
       trial_days: 21,
       setup_time: '6 hours',
       enterprise: 1599,
@@ -347,12 +324,10 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       'Neural signal processing',
       'Brain activity monitoring',
       'Thought - to - text conversion',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       'Mental command recognition',
       'Accessibility tools',
       'Gaming integration',
       'Medical applications',
-<<<<<<< HEAD
       'Real-time processing',
       'Custom neural models',
       'API for developers'
@@ -365,7 +340,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       'Enhance human capabilities'
     ],
     targetAudience: [
-=======
       'Real - time processing',
       'Custom neural models',
       'API for developers',
@@ -378,13 +352,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       'Enhance human capabilities',
     ],
     target_audience: [;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       'Healthcare providers',
       'Gaming companies',
       'Accessibility organizations',
       'Research institutions',
       'Technology companies',
-<<<<<<< HEAD
       'Educational institutions'
     ],
     marketPosition: 'Competitive with Neuralink ($1000+), CTRL-labs ($500+), and specialized BCI platforms ($400+). Our advantage: Advanced signal processing, comprehensive applications, and developer-friendly platform.',
@@ -394,7 +366,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     implementationDetails: 'Advanced BCI platform with neural processing, real-time analysis, and comprehensive applications. Includes hardware integration and development tools.',
     roi: 'Average customer sees 400% ROI within 12 months through new capabilities and applications.',
     useCases: [
-=======
       'Educational institutions',
     ],
     market_position:;
@@ -410,13 +381,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       'Advanced BCI platform with neural processing, real - time analysis, and comprehensive applications. Includes hardware integration and development tools.',
     roi: 'Average customer sees 400% ROI within 12 months through new capabilities and applications.',
     use_cases: [;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       'Accessibility assistance',
       'Gaming control',
       'Medical research',
       'Communication aids',
       'Prosthetic control',
-<<<<<<< HEAD
       'Cognitive enhancement'
     ],
     integrations: ['Neural hardware, Gaming platforms, Medical devices, Accessibility tools, Development platforms'],
@@ -438,7 +407,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     name: 'Quantum Energy Platform',
     tagline: 'Quantum-enhanced energy optimization and fusion simulation',
     description: 'Revolutionary platform that uses quantum computing to optimize energy systems, simulate fusion reactions, and enable breakthrough energy solutions.',
-=======
       'Cognitive enhancement',
     ],
     integrations: [;
@@ -493,65 +461,54 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     tagline: 'Quantum - enhanced energy optimization and fusion simulation',
     description:;
       'Revolutionary platform that uses quantum computing to optimize energy systems, simulate fusion reactions, and enable breakthrough energy solutions.',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     category: 'Quantum & Emerging Tech',
     price: {
       monthly: 499,
       yearly: 4990,
       currency: 'USD',
-<<<<<<< HEAD
       trialDays: 14,
       setupTime: '6 hours',
       enterprise: 1999
     },
     features: [
-=======
       trial_days: 14,
       setup_time: '6 hours',
       enterprise: 1999,
     },
     features: [;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       'Quantum energy optimization',
       'Fusion reaction simulation',
       'Grid optimization algorithms',
       'Energy storage optimization',
       'Renewable energy integration',
       'Quantum thermodynamics',
-<<<<<<< HEAD
       'Real-time monitoring',
       'Predictive analytics',
       'Custom energy models',
       'API for energy systems'
     ],
     benefits: [
-=======
       'Real - time monitoring',
       'Predictive analytics',
       'Custom energy models',
       'API for energy systems',
     ],
     benefits: [;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       'Optimize energy systems 100x faster',
       'Enable fusion power simulation',
       'Reduce energy costs by 30%',
       'Improve grid efficiency',
-<<<<<<< HEAD
       'Accelerate clean energy adoption'
     ],
     targetAudience: [
-=======
       'Accelerate clean energy adoption',
     ],
     target_audience: [;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       'Energy companies',
       'Utility providers',
       'Research institutions',
       'Government agencies',
       'Technology companies',
-<<<<<<< HEAD
       'Environmental organizations'
     ],
     marketPosition: 'Competitive with specialized energy platforms ($300+), quantum computing services ($500+), and simulation software ($400+). Our advantage: Quantum optimization, comprehensive energy modeling, and fusion simulation.',
@@ -561,7 +518,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     implementationDetails: 'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.',
     roi: 'Average customer sees 500% ROI within 15 months through energy optimization and cost reduction.',
     useCases: [
-=======
       'Environmental organizations',
     ],
     market_position:;
@@ -577,13 +533,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.',
     roi: 'Average customer sees 500% ROI within 15 months through energy optimization and cost reduction.',
     use_cases: [;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       'Energy system optimization',
       'Fusion power simulation',
       'Grid optimization',
       'Energy storage optimization',
       'Renewable integration',
-<<<<<<< HEAD
       'Energy research'
     ],
     integrations: ['Energy management systems, Grid infrastructure, Monitoring tools, Research platforms, Business applications'],
@@ -658,7 +612,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'],
     support: '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.',
     compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'],
-=======
       'Energy research',
     ],
     integrations: [;
@@ -721,7 +674,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
 
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
     ],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
     icon: '🚗',
     color: 'from-red-500 to-pink-600',
@@ -731,11 +683,9 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     rating: 4.9,
     reviews: 65,
     marketSize: '$35B autonomous vehicle market',
-<<<<<<< HEAD
     growthRate: '75% annually'
   }
 ];
-=======
     growthRate: '75% annually',
   },;
 
@@ -1226,4 +1176,3 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
 ];
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

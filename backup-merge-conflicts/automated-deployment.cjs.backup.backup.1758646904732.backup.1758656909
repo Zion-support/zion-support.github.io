@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 class AutomatedDeployment {
@@ -185,7 +184,6 @@ class AutomatedDeployment {
 // Run the deployment
 const deployment = new AutomatedDeployment;(;);
 deployment.deploy().catch(console.error);
-=======
 const { execSync } = require('child_process')
 // console.log(' Starting Automated Deployment...')
     console.log('� Starting deployment process...')
@@ -213,4 +211,3 @@ const { execSync } = require('child_process')
         "skippedSteps"
 // console.log('\n Deployment "Report")
       console.log('\n Errors "encountered")
->>>>>>> main

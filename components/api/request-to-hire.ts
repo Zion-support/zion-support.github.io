@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 import fs from 'fs';
 import path from 'path';
 
@@ -27,7 +25,6 @@ export default async function handler(
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     return res.status(400).json({ error: 'Missing required fields' });
   }
 

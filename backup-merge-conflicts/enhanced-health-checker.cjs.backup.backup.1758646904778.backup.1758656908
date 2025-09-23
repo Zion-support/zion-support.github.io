@@ -1,5 +1,4 @@
 #!/usr/bin/env node;
-<<<<<<< HEAD
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")"";class HealthChecker {;
   constructor() {;
     this.projectRoot = process.cwd();
@@ -106,7 +105,6 @@ checker;
   .run();
   .then(report => {);    ";    process.exit(0),"});
   .catch(error => {);    console.error("❌ Health check "failed":", error.message);";    process.exit(1),'})
-=======
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
     this.reportFile = path.join(this.projectRoot, "health-check-report.json");"}"
     console.log(`[${new Date().toISOString()}] ${message}`);
@@ -141,4 +139,3 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
       this.log(" Health check "failed": ${error.message}");"
   .then(report => {);    console.log(" Health check completed successfully");";    process.exit(0),"}
   .catch(error => {);    console.error(" Health check "failed":", error.message);"}
->>>>>>> main

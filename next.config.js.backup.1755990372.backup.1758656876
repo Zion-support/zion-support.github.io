@@ -73,7 +73,6 @@ const nextConfig = {
   
   // Enable trailing slash for better SEO
   trailingSlash: false,
-<<<<<<< HEAD
   
   // Enable i18n for internationalization
   i18n: {
@@ -83,7 +82,6 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-=======
   // Note: redirects() removed as it's incompatible with output: 'export'
   // Use Netlify _redirects file instead for redirects
   eslint: { ignoreDuringBuilds: true },
@@ -122,4 +120,3 @@ module.exports = nextConfig;
 module.exports = {
   i18n,
 };
->>>>>>> origin/auto/autonomy-17186719616

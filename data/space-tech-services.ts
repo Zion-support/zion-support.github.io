@@ -38,8 +38,6 @@ export interface SpaceTechService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
 export const spaceTechServices: SpaceTechService[] = [
   {
     id: 'space-mission-management-platform',
@@ -501,4 +499,3 @@ export const spaceTechServices: SpaceTechService[] = [
     reviews: 250
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

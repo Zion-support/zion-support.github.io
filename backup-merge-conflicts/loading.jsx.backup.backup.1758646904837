@@ -1,7 +1,5 @@
 =======
 import {cn} from '@/lib/utils';
-<<<<<<< HEAD
-=======
 =======
 import {cn} from '@/lib/utils';
 export function Loading($1) {
@@ -14,20 +12,16 @@ export function Loading($1) {
     const renderContent = (props) => {
         switch (variant) {
             case 'dots':
->>>>>>> main
                 return renderDots();
             case 'pulse':;
                 return renderPulse();
             case 'skeleton':;
                 return renderSkeleton();
-<<<<<<< HEAD
-=======
 =======
             "default": return renderSpinner()}
     };
     return (
     <div className="min-h-screen bg-white">
->>>>>>> main
       {renderContent()}
       {text && (<p className="text-sm text-zion-slate-light animate-pulse">{text}</p>)}
         </div>

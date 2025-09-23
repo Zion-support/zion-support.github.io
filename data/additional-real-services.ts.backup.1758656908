@@ -14,10 +14,7 @@ export interface AdditionalRealService {
     address: string;
   };
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const additionalEnhancedServices: AdditionalRealService[] = [
   {
     id: "ai-automation-suite",
@@ -42,13 +39,11 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     }
   },
   {
-<<<<<<< HEAD
     id: "data-warehouse-solution",
     name: "Data Warehouse Solution",
     tagline: "Enterprise-grade data management and analytics",
     price: "$149/month",
     description: "Scalable data warehouse solution with advanced analytics and business intelligence capabilities.",
-=======
     id: 'ai-sales-outreach-agent',
     name: 'AI Sales Outreach Agent',
     tagline: 'Personalized multi-channel sequences with compliance guardrails',
@@ -935,7 +930,6 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     price: '$99',
     period: '/month',
     description: 'Continuously analyze AWS, Azure, and GCP usage to recommend rightsizing, lifecycle policies, and scheduling. Detect anomalies and export IaC for approvals.',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     features: [
       "Data integration",
       "Real-time processing",
@@ -946,13 +940,11 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     link: "/services/data-warehouse-solution",
     category: "Data & Analytics",
     realImplementation: true,
-<<<<<<< HEAD
     contactInfo: {
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
-=======
     implementationDetails: 'SaaS analyzer with exporters for Terraform/Helm and alerting.',
     launchDate: '2025-01-15',
     customers: 90,
@@ -4723,6 +4715,5 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     customers: 7,
     rating: 4.9,
     reviews: 6
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 ];

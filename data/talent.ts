@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 // Stub talent data - placeholder for missing functionality
 
@@ -86,4 +84,3 @@ export const TALENT_PROFILES = [;
 ;
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

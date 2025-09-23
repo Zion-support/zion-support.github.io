@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -39,7 +37,6 @@ import { Check, Pencil } from "lucide-react",
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 interface GeneratedDescriptionDisplayProps {

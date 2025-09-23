@@ -72,7 +72,6 @@ const RevolutionaryContent2026Banner: React.FC = () => {
       setCurrentSlide((prev) => (prev + 1) % contentItems.length);
     }, 4000);
 
-<<<<<<< HEAD
 const RevolutionaryContent2026Banner: React.FC = () => {
   return (
     <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-16">
@@ -185,7 +184,6 @@ const RevolutionaryContent2026Banner: React.FC = () => {
           </div>
 
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all">
-=======
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
             <div className="text-4xl mb-4">⚛️</div>
@@ -235,7 +233,6 @@ const RevolutionaryContent2026Banner: React.FC = () => {
             >
               Browse All Resources
             </Link>
->>>>>>> main
           </div>
         </div>
 

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
@@ -24,7 +23,6 @@ export default function ITOnsiteServicesPage() {
   // Check for success parameter in URL
   const success = searchParams.get("success");
   
-=======
 
 
 
@@ -66,7 +64,6 @@ export default function ITOnsiteServicesPage() {
 
   
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
@@ -77,7 +74,6 @@ export default function ITOnsiteServicesPage() {
   useEffect(() => {
     if (success === "true") {
       toast({
-<<<<<<< HEAD
         title: "Payment Successful",
         description: "Your IT onsite service request has been received. Our team will contact you shortly.",
       });
@@ -90,7 +86,6 @@ export default function ITOnsiteServicesPage() {
   // Filter countries based on search query
   const filteredCountries = onsiteServicePricing
     .filter(country => 
-=======
         title: "Payment Successful"
         description: "Your IT onsite service request has been received. Our team will contact you shortly."})
     }
@@ -107,12 +102,10 @@ export default function ITOnsiteServicesPage() {
   // Filter countries based on search query
   const filteredCountries = onsiteServicePricing
     .filter(country =>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       country.country.toLowerCase().includes(searchQuery.toLowerCase())
     )
     .sort((a, b) => {
       // First, sort by popular status
-<<<<<<< HEAD
       const aIsPopular = popularCountries.includes(a.country);
       const bIsPopular = popularCountries.includes(b.country);
       
@@ -132,7 +125,6 @@ export default function ITOnsiteServicesPage() {
     }, 100);
   };
   
-=======
 
       const aIsPopular = popularCountries.includes(a.country);
       const bIsPopular = popularCountries.includes(b.country);
@@ -164,19 +156,16 @@ export default function ITOnsiteServicesPage() {
   },
   
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <AppLayout>
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
           {/* Hero Section with Features */}
           <PageHero />
           
           {/* Country Selection Tabs */}
           <div className="mb-12">
             <CountryTabs 
-=======
 
 import { useState, useEffect } from "react",;
 import { useSearchParams } from "react-router-dom",;
@@ -249,7 +238,6 @@ export default function ITOnsiteServicesPage() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -275,7 +263,6 @@ export default function ITOnsiteServicesPage() {;
               handleCountrySelect={handleCountrySelect}
               searchQuery={searchQuery}
               setSearchQuery={setSearchQuery}
-<<<<<<< HEAD
             />
           </div>
           
@@ -291,7 +278,6 @@ export default function ITOnsiteServicesPage() {;
           {/* What's Included Section */}
           <ServiceIncludes />
           
-=======
 
             />;
           </div>;
@@ -310,7 +296,6 @@ export default function ITOnsiteServicesPage() {;
           {/* What's Included Section */}
           <ServiceIncludes />;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           {/* Complete Pricing Table */}
           <div id="pricing-table" className="my-16">
             <div className="text-center mb-8">
@@ -320,7 +305,6 @@ export default function ITOnsiteServicesPage() {;
                 Additional hours are billed separately at standard rates.
               </p>
             </div>
-<<<<<<< HEAD
             
             <ITServicePricingTable />
           </div>
@@ -329,21 +313,17 @@ export default function ITOnsiteServicesPage() {;
         </div>
       </section>
       
-=======
             <ITServicePricingTable />
           </div>
           <EnterpriseCallToAction />
         </div>
       </section>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <GlobalServiceSection />
       <TrustedBySection />
       <QuoteFormSection />
     </AppLayout>
-<<<<<<< HEAD
   );
 }
-=======
   )
 
 }
@@ -444,7 +424,6 @@ if (return 1) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

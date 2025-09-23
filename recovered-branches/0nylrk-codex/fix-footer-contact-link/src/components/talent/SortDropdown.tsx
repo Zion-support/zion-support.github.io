@@ -1,8 +1,6 @@
 
 import { Button } from "@/components/ui/button";
 import { SORT_OPTIONS } from "@/data/sortOptions";
-<<<<<<< HEAD
-=======
 import { SortDescChevronDown } from "lucide-react";
 import {
   DropdownMenu,
@@ -20,7 +18,6 @@ export function SortDropdown({ sortOptionsetSortOption }: SortDropdownProps) {
 }
 
 export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

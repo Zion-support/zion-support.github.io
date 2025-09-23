@@ -2,7 +2,6 @@ import "./globals.css";
 import type { ReactNode } from "react";
 import { Metadata, Viewport } from "next";
 
-<<<<<<< HEAD
 export const metadata: Metadata = {
   title: "Zion Tech Group - AI-Powered Digital Transformation Solutions",
   description: "Leading provider of AI-powered business solutions, autonomous systems, and digital transformation services. Transform your business with cutting-edge AI technology.",
@@ -11,7 +10,6 @@ export const metadata: Metadata = {
   creator: "Zion Tech Group",
   publisher: "Zion Tech Group",
   robots: "index, follow",
-=======
 export const metadata = {
   metadataBase: new URL('https://ziontechgroup.com'),
   title: "Zion Tech Group - Leading AI-Powered Technology Solutions",
@@ -26,12 +24,10 @@ export const metadata = {
   creator: "Zion Tech Group",
   publisher: "Zion Tech Group",
   robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434f
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://ziontechgroup.com",
-<<<<<<< HEAD
     title: "Zion Tech Group - AI-Powered Digital Transformation Solutions",
     description: "Leading provider of AI-powered business solutions, autonomous systems, and digital transformation services.",
     siteName: "Zion Tech Group",
@@ -40,7 +36,6 @@ export const metadata = {
     card: "summary_large_image",
     title: "Zion Tech Group - AI-Powered Digital Transformation Solutions",
     description: "Leading provider of AI-powered business solutions, autonomous systems, and digital transformation services.",
-=======
     siteName: "Zion Tech Group",
     title: "Zion Tech Group - Leading AI-Powered Technology Solutions",
     description: "Transform your business with Zion Tech Group's cutting-edge AI solutions, autonomous systems, quantum computing, and enterprise innovation.",
@@ -68,29 +63,24 @@ export const metadata = {
     google: "your-google-verification-code",
     yandex: "your-yandex-verification-code",
     yahoo: "your-yahoo-verification-code",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434f
   },
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-<<<<<<< HEAD
   themeColor: "#0f172a",
-=======
   maximumScale: 5,
   userScalable: true,
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#8b5cf6" },
     { media: "(prefers-color-scheme: dark)", color: "#1e293b" },
   ],
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434f
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
-<<<<<<< HEAD
       <body className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white antialiased">
         {/* Navigation */}
         <nav className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50">
@@ -217,7 +207,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </div>
           </div>
         </footer>
-=======
       <head>
         {/* Structured Data */}
         <script
@@ -300,7 +289,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             `
           }}
         />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434f
       </body>
     </html>
   );

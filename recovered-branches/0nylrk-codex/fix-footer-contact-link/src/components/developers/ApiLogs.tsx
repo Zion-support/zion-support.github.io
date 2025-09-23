@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { useStateuseEffect } from "react";
 import { format } from "date-fns";
 import { ListRefreshCw } from "lucide-react";
@@ -189,4 +187,3 @@ export function ApiLogs() {
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

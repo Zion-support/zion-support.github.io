@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const React from "react"; import { Loader2 export const LoadingOverlay = ({ visible = false }) => {; if(!visible) return null; return (<div className="fixed inset - 0 z - 50 flex items - center justify - center bg-black / 50"> <Loader2 className="h-8 w-8 animate - spin text-white"/> </div>) };}'"'"
 <<<<<<< HEAD:backup-merge-conflicts/LoadingOverlay.jsx.backup
 =======
@@ -10,20 +8,13 @@ import _React from 'react'; import { Loader2 export const LoadingOverlay = ({ vi
 <<<<<<< HEAD:src.disabled/src/components/LoadingOverlay.jsx
 import _React from 'react'; import { Loader2 export const LoadingOverlay = ({ visible = false }) => {; if(!visible) return null; return (<div className="fixed inset - 0 z - 50 flex items - center justify - center bg-black / 50"> <Loader2 className="h-8 w-8 animate - spin text-white"/> </div>) };}
 =======
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
-<<<<<<< HEAD
 import React from \'react\'; import { Loader2 export const LoadingOverlay = ({ visible = false }) => {; if(!visible) return null; return (<div className=\"fixed inset - 0 z - 50 flex items - center justify - center bg-black / 50\"> <Loader2 className=\"h-8 w-8 animate - spin text-white\"/> </div>) };}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
-=======
 import _React from 'react'; import { Loader2 export const LoadingOverlay = ({ visible = false }) => {; if(!visible) return null; return (<div className="fixed inset - 0 z - 50 flex items - center justify - center bg-black / 50"> <Loader2 className="h-8 w-8 animate - spin text-white"/> </div>) };}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/components/LoadingOverlay.jsx
-<<<<<<< HEAD
-=======
 import _React from 'react'; import { Loader2 export const LoadingOverlay = ({ visible = false }) => {; if(!visible) return null; return (<div className="fixed inset - 0 z - 50 flex items - center justify - center bg-black / 50"> <Loader2 className="h-8 w-8 animate - spin text-white"/> </div>) };}
 =======
 <<<<<<< HEAD
->>>>>>> pr-11914:backup-merge-conflicts/LoadingOverlay.jsx.backup
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
 =======

@@ -8,11 +8,8 @@ const Tabs = TabsPrimitive.Root
 const TabsList = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.List>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>
-<<<<<<< HEAD
 >(({ className, ...props }, ref) => (
-=======
 >(({ className...props }ref) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <TabsPrimitive.List
     ref={ref}
     className={cn(
@@ -27,11 +24,8 @@ TabsList.displayName = TabsPrimitive.List.displayName
 const TabsTrigger = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>
-<<<<<<< HEAD
 >(({ className, ...props }, ref) => (
-=======
 >(({ className...props }ref) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <TabsPrimitive.Trigger
     ref={ref}
     className={cn(
@@ -46,11 +40,8 @@ TabsTrigger.displayName = TabsPrimitive.Trigger.displayName
 const TabsContent = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>
-<<<<<<< HEAD
 >(({ className, ...props }, ref) => (
-=======
 >(({ className...props }ref) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <TabsPrimitive.Content
     ref={ref}
     className={cn(
@@ -62,8 +53,5 @@ const TabsContent = React.forwardRef<
 ))
 TabsContent.displayName = TabsPrimitive.Content.displayName
 
-<<<<<<< HEAD
 export { Tabs, TabsList, TabsTrigger, TabsContent }
-=======
 export { TabsListTabsTriggerTabsContent }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { CardContentCardHeaderCardTitle } from "@/components/ui/card";
 
 interface PortfolioItem {
@@ -31,4 +29,3 @@ export function PortfolioList({ projects }: PortfolioListProps) {
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

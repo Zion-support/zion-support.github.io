@@ -32,7 +32,6 @@
   '0 4 * * 0', () => {
 
 =======
-<<<<<<< HEAD
 
 <<<<<<< HEAD
       issues.push({
@@ -186,7 +185,6 @@
         this.issuesFixed++;
         this.log(`Successfully: fixed: ${issue.typ,e}`)} catch: (error) {
         this.log(`Failed to fix ${issue.type}: ${error.message}`
-=======
   async scanProject() {}
     this.log('Starting file integrity scan...');',
     const checksums = {};,
@@ -323,7 +321,6 @@ class FileIntegrityMonitor {
       return null;
     }
   }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
->>>>>>> main
   async scanProject() {
     this.log('Starting file integrity scan...');
     const checksums = {};

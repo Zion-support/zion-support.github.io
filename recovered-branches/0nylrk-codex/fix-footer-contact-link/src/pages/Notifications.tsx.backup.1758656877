@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
@@ -20,7 +19,6 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { SEO } from "@/components/SEO";
 import { useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
-=======
 
 
 
@@ -55,7 +53,6 @@ class ErrorBoundary extends React.Component {
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 import React, { useState } from 'react';
@@ -110,7 +107,6 @@ import { cn } from "@/lib/utils",
 const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
   switch (type) {
     case 'message':
-<<<<<<< HEAD
       return <MessageCircle className={cn(className, "text-blue-500")} />;
     case 'quote_request':
       return <Briefcase className={cn(className, "text-purple-500")} />;
@@ -126,7 +122,6 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
       return <Bell className={cn(className, "text-gray-500")} />;
   }
 };
-=======
       return <MessageCircle className={cn(className, "text-blue-500")} />,
     case 'quote_request':
       return <Briefcase className={cn(className, "text-purple-500")} />,
@@ -145,12 +140,10 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
 }
 },
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 const getNotificationTypeBadge = (type: NotificationType) => {
   switch (type) {
     case 'message':
-<<<<<<< HEAD
       return <Badge className="bg-blue-500">Message</Badge>;
     case 'quote_request':
       return <Badge className="bg-purple-500">Quote Request</Badge>;
@@ -163,7 +156,6 @@ const getNotificationTypeBadge = (type: NotificationType) => {
     case 'system':
       return <Badge className="bg-yellow-500">System</Badge>;
     default:
-=======
       return <Badge className="bg-blue-500">Message</Badge>,
     case 'quote_request':
       return <Badge className="bg-purple-500">Quote Request</Badge>,
@@ -261,12 +253,10 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
     case 'system':;
       return <Badge className="bg-yellow-500">System</Badge>,;
     default:;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       return <Badge variant="outline">Notification</Badge>;
   }
 };
 
-<<<<<<< HEAD
 const NotificationCard: React.FC<{
   notification: {
     id: string;
@@ -319,7 +309,6 @@ const NotificationCard: React.FC<{
             
             <div className="flex items-center gap-2">
               {!notification.read && (
-=======
 
 
 
@@ -332,7 +321,6 @@ const NotificationCard: React.FC<{
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -392,25 +380,21 @@ const NotificationCard: React.FC<{
                   variant="ghost"
                   size="sm"
                   className="h-8 w-8 p-0"
-<<<<<<< HEAD
                   onClick={() => onMarkAsRead(notification.id)}
                 >
                   <Check className="h-4 w-4 text-green-400" />
                   <span className="sr-only">Mark as read</span>
                 </Button>
-=======
                   onClick={() => onMarkAsRead(notification && notification.id)}
                 >;
                   <Check className="h-4 w-4 text-green-400" />;
                   <span className="sr-only">Mark as read</span>;
                 </Button>;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               )}
               <Button
                 variant="ghost"
                 size="sm"
                 className="h-8 w-8 p-0"
-<<<<<<< HEAD
                 onClick={() => onDismiss(notification.id)}
               >
                 <Trash2 className="h-4 w-4 text-red-400" />
@@ -422,7 +406,6 @@ const NotificationCard: React.FC<{
           <p className="text-zion-slate-light mb-3">{notification.message}</p>
           
           {notification.action_url && notification.action_text && (
-=======
 
                 onClick={() => onDismiss(notification && notification.id)}
               >;
@@ -436,33 +419,27 @@ const NotificationCard: React.FC<{
 
           {notification && notification.action_url && notification && notification.action_text && (;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <Button
               variant="outline"
               size="sm"
               className="mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black"
-<<<<<<< HEAD
               onClick={handleAction}
             >
               {notification.action_text}
               <ChevronRight className="ml-1 h-4 w-4" />
             </Button>
-=======
               onClick={handleAction}>;
               {notification && notification.action_text}
               <ChevronRight className="ml-1 h-4 w-4" />;
             </Button>;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           )}
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );
 };
 
 export default function NotificationsPage() {
-=======
   )
 
 }
@@ -568,7 +545,6 @@ function NotificationsPage() {
     dismiss_notification;
     loading;
     filter;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const {
     filteredNotifications,
     unreadCount,
@@ -579,7 +555,6 @@ function NotificationsPage() {
     filter,
     setFilter
   } = useNotifications() as NotificationContextType;
-<<<<<<< HEAD
   
   return (
     <>
@@ -647,7 +622,6 @@ function NotificationsPage() {
                   ))}
                 </div>
               )}
-=======
 
   } = useNotifications() as NotificationContextType,
   
@@ -723,17 +697,14 @@ function NotificationsPage() {
                 </div>;
               )}
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </TabsContent>
           </Tabs>
         </div>
       </main>
       <Footer />
     </>
-<<<<<<< HEAD
   );
 }
-=======
   )
 }
             </TabsContent>;
@@ -748,4 +719,3 @@ function NotificationsPage() {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

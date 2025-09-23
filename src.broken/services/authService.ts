@@ -5,8 +5,6 @@ export async function loginUser(email: string, password: string) {
     const res = await fetch('/api/auth/login', {
       method: 'POST',
       headers: {
-<<<<<<< HEAD
-=======
         'Content-Type': 'application/json'},
       body: JSON.stringify({ email, password })});
     const data = await res.json().catch(() => ({}));
@@ -16,4 +14,3 @@ export async function loginUser(email: string, password: string) {
     throw error;
   }
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

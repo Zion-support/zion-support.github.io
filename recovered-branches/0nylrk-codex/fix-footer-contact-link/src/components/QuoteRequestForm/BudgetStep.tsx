@@ -7,8 +7,6 @@ interface BudgetStepProps {
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
 
-<<<<<<< HEAD
-=======
 export function BudgetStep({ formDataupdateFormData }: BudgetStepProps) {
   const handleBudgetTypeSelect = (type: "fixed" | "hourly" | "range") => {
     if (type === "range" && !formData.budget.maxAmount) {
@@ -179,4 +177,3 @@ export function BudgetStep({ formDataupdateFormData }: BudgetStepProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

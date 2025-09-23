@@ -14,8 +14,6 @@ export interface VerifiedRealService20o25Batch2 {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
   {
     id: "ai-quality-assurance",
@@ -40,4 +38,3 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

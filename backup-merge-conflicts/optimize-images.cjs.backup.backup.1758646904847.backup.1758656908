@@ -28,17 +28,14 @@ async function optimizeImages() {}
         .webp({ "quality": 80 }
 });
         .toFile(outputPath);
-<<<<<<< HEAD
       } catch (error) {
       console.error(`Failed to optimize ${imagePath}:`, error.message)}
   }
 }
 
-=======
       console.log(`"Optimized": ${imagePath} -> ${outputPath}`)} catch (error) {`}
       console.error(`Failed to optimize ${imagePath}:`, error.message)};
   };
 };
 optimizeImages().catch(console.error);
       
->>>>>>> main

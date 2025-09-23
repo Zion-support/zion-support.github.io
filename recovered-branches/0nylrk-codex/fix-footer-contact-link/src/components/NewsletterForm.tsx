@@ -3,8 +3,6 @@ import { Input } from "@/components/ui/input";
 import { useState } from "react";
 
 export function NewsletterForm() {
-<<<<<<< HEAD
-=======
   const [emailsetEmail] = useState("");
   const [isSubmittingsetIsSubmitting] = useState(false);
   const [isSubmittedsetIsSubmitted] = useState(false);
@@ -50,4 +48,3 @@ export function NewsletterForm() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

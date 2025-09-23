@@ -1,8 +1,5 @@
-<<<<<<<< HEAD:.github/workflows/release.yml.backup.1755991400
 name: Release
-========
 name: Seo Validator
->>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3:.github/workflows/seo-validator.yml.backup.1755990323
 
 on:
   workflow_dispatch: {}
@@ -10,9 +7,6 @@ on:
     - cron: '*/10 * * * *'
 
 permissions:
-<<<<<<<< HEAD:.github/workflows/release.yml.backup.1755991400
-========
->>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3:.github/workflows/seo-validator.yml.backup.1755990323
   contents: write
   actions: read
 
@@ -35,14 +29,11 @@ jobs:
 
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
-<<<<<<<< HEAD:.github/workflows/release.yml.backup.1755991400
       - name: Run workflow
         run: |
           echo "Workflow Workflow completed successfully"
-========
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
->>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3:.github/workflows/seo-validator.yml.backup.1755990323

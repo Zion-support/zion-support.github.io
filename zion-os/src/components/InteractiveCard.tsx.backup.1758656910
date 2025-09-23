@@ -3,7 +3,6 @@ import type { ReactNode } from 'react';
 export default function InteractiveCard({ children }: { children: ReactNode }) {
   return <div className="rounded-lg border border-gray-200 p-4">{children}</div>;
 }
-<<<<<<< HEAD
 type Props = { title?: string; description?: string };
 
 export default function InteractiveCard({ title = 'Card', description = '...' }: Props) {
@@ -14,7 +13,6 @@ export default function InteractiveCard({ title = 'Card', description = '...' }:
 		</div>
 	);
 }
-=======
 'use client';
 
 import React, { useState } from 'react';
@@ -174,4 +172,3 @@ export function TestimonialCard({
     </div>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047

@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import React from react';import { render, screen, fireEvent } from @testing-library/react';import @testing-library/jest-dom';import { GuestCheckoutModal } from @/components/cart/GuestCheckoutModal'; // Adjust path as necessary
 // Mock isProdDomain as it's used in the component'jest.mock('@/utils/getStripe', () => ({'  isProdDomain: jest.fn(() => false), // Default to false (not prod) to show test data warning
-=======
 import React from 'react';
 import { render, screen, fireEvent, act, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -10,28 +8,21 @@ import { GuestCheckoutModal } from '@/components/cart/GuestCheckoutModal'; // Ad
 // Mock isProdDomain as it's used in the component
 jest.mock('@/utils/getStripe', () => ({
   isProdDomain: jest.fn(() => false), // Default to false (not prod) to show test data warning
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }));
 
 // Mock alert, since the component uses it for diagnostics
 global.alert = jest.fn();
 
-<<<<<<< HEAD
 describe('GuestCheckoutModal', () => {'  const mockOnOpenChange = jest.fn();
-=======
 describe('GuestCheckoutModal', () => {
   const mockOnOpenChange = jest.fn();
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const mockOnSubmit = jest.fn();
 
   const defaultProps = {
     open: true,
     onOpenChange: mockOnOpenChange,
-<<<<<<< HEAD
     onSubmit: mockOnSubmit
-=======
     onSubmit: mockOnSubmit,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
 
   beforeEach(() => {
@@ -40,7 +31,6 @@ describe('GuestCheckoutModal', () => {
     mockOnSubmit.mockClear();
     (global.alert as jest.Mock).mockClear();
     // Reset the mock for isProdDomain if needed for specific tests
-<<<<<<< HEAD
     (jest.requireMock('@/utils/getStripe') as { isProdDomain: jest.Mock }).isProdDomain.mockReturnValue(false);  });
 
   test('Basic Rendering Test', () => {'    render(<GuestCheckoutModal {...defaultProps} />);
@@ -114,7 +104,6 @@ describe('GuestCheckoutModal', () => {
     // For this component, it directly calls `onSubmit` prop.
 
     let _emailInput: HTMLInputElement;
-=======
     (jest.requireMock('@/utils/getStripe') as { isProdDomain: jest.Mock }).isProdDomain.mockReturnValue(false);
   });
 
@@ -271,13 +260,11 @@ describe('GuestCheckoutModal', () => {
     // For this component, it directly calls `onSubmit` prop.
 
     let emailInput: HTMLInputElement;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     let addressInput: HTMLInputElement;
     let submitButton: HTMLElement;
 
     beforeEach(() => {
       render(<GuestCheckoutModal {...defaultProps} />);
-<<<<<<< HEAD
       emailInput = screen.getByPlaceholderText('your.email@example.com') as HTMLInputElement;      addressInput = screen.getByPlaceholderText('Enter your full shipping address...') as HTMLInputElement;      submitButton = screen.getByRole('button', { name: Continue to Payment' });    });
 
     test('should not submit if both fields are empty', () => {'      fireEvent.click(submitButton);
@@ -291,7 +278,6 @@ describe('GuestCheckoutModal', () => {
 
     test('should not submit if email is empty', () => {'      mockOnSubmit.mockClear();
       fireEvent.change(addressInput, { target: { value: 123 Main St' } });      fireEvent.click(submitButton);
-=======
       emailInput = screen.getByPlaceholderText('Email') as HTMLInputElement;
       addressInput = screen.getByPlaceholderText('Shipping Address') as HTMLInputElement;
       submitButton = screen.getByRole('button', { name: 'Continue to Payment' });
@@ -323,18 +309,15 @@ describe('GuestCheckoutModal', () => {
       await act(async () => {
         fireEvent.click(submitButton);
       });
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       expect(mockOnSubmit).not.toHaveBeenCalled();
     });
   });
 
   // Test for dialog close, though onOpenChange is opaque here
-<<<<<<< HEAD
   test('Dialog onOpenChange is called (simulating close), () => {'    render(<GuestCheckoutModal {...defaultProps} open={true} />);
     // This is a placeholder, actual close simulation depends on Dialog internals
   });
 
-=======
   test('Dialog onOpenChange is called (simulating close)', () => {
     render(<GuestCheckoutModal {...defaultProps} open={true} />);
     // This is a placeholder, actual close simulation depends on Dialog internals
@@ -438,5 +421,4 @@ describe('GuestCheckoutModal', () => {
       await waitFor(() => expect(submitButton).toBeEnabled());
     });
   });
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 });

@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/SecurityEnhancer.dynamic.test.js.backup
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD:__tests__/SecurityEnhancer.dynamic.test.js
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 >>>>>>> pr-11913:__tests__/SecurityEnhancer.dynamic.test.js
 import React from 'react';
@@ -26,11 +23,8 @@ describe('SecurityEnhancerdynamic', () => {
   });
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SecurityEnhancerdynamic from "./components/SecurityEnhancer.dynamic"; describe("SecurityEnhancerdynamic",() => { test("renders without crashing",() => { render(<SecurityEnhancerdynamic />); expect(screen.getByTestId("securityenhancer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SecurityEnhancerdynamic />)}); test("handles user interactions",() => { render(<SecurityEnhancerdynamic />)}); test("applies correct styling",() => { render(<SecurityEnhancerdynamic />)})});''"
-<<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD:__tests__/SecurityEnhancer.dynamic.test.js
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import _React from 'react';  import '@testing-library/jest-dom'; import SecurityEnhancerdynamic from '../components/SecurityEnhancer.dynamic'; describe('SecurityEnhancerdynamic',() => { test('renders without crashing',() => { render(<SecurityEnhancerdynamic />); expect(screen.getByTestId('securityenhancer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SecurityEnhancerdynamic />)}); test('handles user interactions',() => { render(<SecurityEnhancerdynamic />)}); test('applies correct styling',() => { render(<SecurityEnhancerdynamic />)})});
 >>>>>>> main
 =======

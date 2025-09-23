@@ -2,8 +2,6 @@ import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-=======
 MailPhoneMapPinShieldCheckRocketSparklesGlobeCpuBrain
 
 export default function AboutPage() {
@@ -339,4 +337,3 @@ export default function AboutPage() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

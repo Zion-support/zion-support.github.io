@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 
 // Security patterns to check for
 const securityPatterns = [{
@@ -118,7 +117,6 @@ const report = {
 
 fs.writeFileSync('security-validation-report.json', JSON.stringify(report, null, 2));
 
-=======
 console.log(' Starting Security Validation...')
     "issue"
     "severity"
@@ -133,4 +131,3 @@ console.log(' Starting Security Validation...')
     "high"
     "medium"
     "low"
->>>>>>> main

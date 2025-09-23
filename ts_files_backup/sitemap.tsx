@@ -2,8 +2,6 @@ import Head from 'next/head';
 
 export default function SitemapPage() {
 	const links = [
-<<<<<<< HEAD
-=======
 		{ name: ''Home', 'href: '/' },
 		{ name: ''Services', 'href: '/services' },
 		{ name: 'All Services 'Showcase', 'href: '/comprehensive-services-showcase-2025' },
@@ -32,4 +30,3 @@ export default function SitemapPage() {
 		</div>
 	);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

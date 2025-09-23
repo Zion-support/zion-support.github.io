@@ -1,8 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
-=======
 
 function main() {
   const outDir = path.join(__dirname, '../abi');
@@ -29,4 +27,3 @@ function main() {
 }
 
 main();
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

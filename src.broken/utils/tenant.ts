@@ -57,8 +57,6 @@ export function createTenant(branding: TenantBranding): Tenant {
     branding,
     members: [],
     createdAt: now,
-<<<<<<< HEAD
-=======
     updatedAt: now};
   updateJsonFile<TenantsFile>(FILE, (curr) => ({ tenants: [...(curr.tenants || []), tenant] }), FALLBACK);
   return tenant;
@@ -91,4 +89,3 @@ export function rotateTenantApiKey(tenantId: string): Tenant | undefined {
   }, FALLBACK);
   return result;
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

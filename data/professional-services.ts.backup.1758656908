@@ -14,10 +14,7 @@ export interface ProfessionalService {
     address: string;
   };
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const professionalServices: ProfessionalService[] = [
   {
     id: "it-consulting",

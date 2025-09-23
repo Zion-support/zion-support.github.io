@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export const aiAutonomousServices2026 = [] as any[];
 export interface AiAutonomousService2026 {
   id: string;
@@ -41,4 +39,3 @@ export const aiAutonomousServices2026: AiAutonomousService2026[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

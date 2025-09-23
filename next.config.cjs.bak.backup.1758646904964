@@ -22,6 +22,9 @@ const nextConfig: NextConfig = {
   generateEtags: true,
 
   experimental: {
+  // Experimental and performance settings
+  experimental: {
+    appDir: false,
     optimizePackageImports: ['lucide-react', 'framer-motion'],
     turbo: {
       rules: {

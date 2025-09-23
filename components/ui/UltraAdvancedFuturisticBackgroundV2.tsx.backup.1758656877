@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -27,7 +26,6 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
     let particles: Array<{
       x: number;
       y: number;
-=======
 "use client";
 
 canvas.width = window.innerWidth;
@@ -87,13 +85,11 @@ let particles: Array< {;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       vx: number;
       vy: number;
       size: number;
       color: string;
       life: number;
-<<<<<<< HEAD
       maxLife: number;
     }> = [];
 
@@ -106,7 +102,6 @@ let particles: Array< {;
     const initParticles = () => {
       particles = [];
       for (let i = 0; i < 150; i++) {
-=======
 
 
 
@@ -134,7 +129,6 @@ let particles: Array< {;
       life: number,
 
       for (let i = 0, i < 150, i++) {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -143,7 +137,6 @@ let particles: Array< {;
           size: Math.random() * 3 + 1,
           color: colors[Math.floor(Math.random() * colors.length)],
           life: Math.random() * 100,
-<<<<<<< HEAD
           maxLife: 100
         });
       }
@@ -156,7 +149,6 @@ let particles: Array< {;
       // Create gradient background
       const gradient = ctx.createRadialGradient(
         canvas.width / 2, canvas.height / 2, 0,
-=======
 
           maxLife: 100
         });      }          maxLife: 100
@@ -171,7 +163,6 @@ let particles: Array< {;
 
         canvas.width / 2, canvas.height / 2, 0;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         canvas.width / 2, canvas.height / 2, canvas.width / 2
       );
       gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)');
@@ -179,41 +170,32 @@ let particles: Array< {;
       gradient.addColorStop(1, 'rgba(0, 0, 0, 0.9)');
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       // Update and draw particles
       particles.forEach((particle, index) => {
         particle.x += particle.vx;
         particle.y += particle.vy;
         particle.life--;
-<<<<<<< HEAD
 
         // Bounce off edges
         if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1;
         if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1;
 
-=======
         // Bounce off edges
         if (particle.x <= 0 |particle.x >= canvas.width) particle.vx *= -1;
         if (particle.y <= 0 |particle.y >= canvas.height) particle.vy *= -1;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         // Reset particle if it dies
         if (particle.life <= 0) {
           particle.x = Math.random() * canvas.width;
           particle.y = Math.random() * canvas.height;
           particle.life = particle.maxLife;
-<<<<<<< HEAD
           particle.color = colors[Math.floor(Math.random() * colors.length)];
         }
 
-=======
 
           particle.color = colors[Math.floor(Math.random() * colors.length)]
 
         }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         // Draw particle
         const alpha = particle.life / particle.maxLife;
         ctx.globalAlpha = alpha;
@@ -221,17 +203,12 @@ let particles: Array< {;
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fill();
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         // Draw connections
         particles.forEach((otherParticle, otherIndex) => {
           if (index !== otherIndex) {
             const distance = Math.sqrt(
-<<<<<<< HEAD
               Math.pow(particle.x - otherParticle.x, 2) + 
-=======
 
 
     const colors = [;
@@ -334,7 +311,6 @@ let particles: Array< {;
 
               Math.pow(particle.x - otherParticle.x, 2) +
                 Math.pow(particle.y - otherParticle.y, 2)            );              Math.pow(particle.x - otherParticle.x, 2) +
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               Math.pow(particle.y - otherParticle.y, 2)
             );
             if (distance < 100) {
@@ -343,25 +319,21 @@ let particles: Array< {;
               ctx.beginPath();
               ctx.moveTo(particle.x, particle.y);
               ctx.lineTo(otherParticle.x, otherParticle.y);
-<<<<<<< HEAD
               ctx.stroke();
             }
           }
         });
       });
 
-=======
 
 
       });
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       // Draw quantum matrix overlay
       ctx.globalAlpha = 0.1;
       ctx.strokeStyle = '#00ffff';
       ctx.lineWidth = 0.5;
-<<<<<<< HEAD
       
       // Vertical lines
       for (let x = 0; x < canvas.width; x += 50) {
@@ -377,7 +349,6 @@ let particles: Array< {;
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
         ctx.stroke();
-=======
 
       
       // Vertical lines
@@ -394,37 +365,31 @@ let particles: Array< {;
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
         ctx.stroke()
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       }
 
       // Draw holographic circles
       ctx.globalAlpha = 0.05;
-<<<<<<< HEAD
       for (let i = 0; i < 5; i++) {
         const centerX = canvas.width / 2 + Math.sin(Date.now() * 0.001 + i) * 100;
         const centerY = canvas.height / 2 + Math.cos(Date.now() * 0.001 + i) * 100;
         const radius = 100 + Math.sin(Date.now() * 0.002 + i) * 50;
-=======
 
       for (let i = 0, i < 5, i++) {
         const centerX = canvas.width / 2 + Math.sin(Date.now() * 0.001 + i) * 100;
         const centerY = canvas.height / 2 + Math.cos(Date.now() * 0.001 + i) * 100;
         const radius = 100 + Math.sin(Date.now() * 0.002 + i) * 50;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         
         ctx.strokeStyle = `hsl(${180 + i * 60}, 100%, 50%)`;
         ctx.lineWidth = 2;
         ctx.beginPath();
         ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
-<<<<<<< HEAD
         ctx.stroke();
       }
 
       animationFrameId = requestAnimationFrame(updateParticles);
     };
 
-=======
         ctx.stroke()
 
       }
@@ -433,12 +398,10 @@ let particles: Array< {;
     };
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     // Handle resize
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-<<<<<<< HEAD
       initParticles();
     };
 
@@ -455,7 +418,6 @@ let particles: Array< {;
   }, []);
 
   return (
-=======
 
       initParticles()
     };
@@ -651,17 +613,14 @@ let particles: Array< {;
             duration: 10,
             repeat: Infinity,
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     <div className={`relative min-h-screen overflow-hidden ${className}`}>
       {/* Animated Canvas Background */}
       <canvas
         ref={canvasRef}
-<<<<<<< HEAD
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{ background: 'radial-gradient(circle at center, rgba(0,0,0,0.8) 0%, rgba(20,20,40,0.6) 50%, rgba(0,0,0,0.9) 100%)' }}
       />
       
-=======
         className='fixed inset-0 w-full h-full pointer-events-none z-0'
         style={{
           background:
@@ -680,13 +639,11 @@ let particles: Array< {;
             duration: 8
             repeat: Infinity
             ease: 'easeInOut',      />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       {/* Floating Geometric Shapes */}
       <div className="fixed inset-0 pointer-events-none z-10">
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20"
           animate={{
-<<<<<<< HEAD
             rotate: [0, 360],
             scale: [1, 1.2, 1],
             opacity: [0.1, 0.3, 0.1]
@@ -750,7 +707,6 @@ let particles: Array< {;
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`
-=======
             rotate: [0, 360];
             scale: [1, 1.2, 1];
             opacity: [0.1, 0.3, 0.1]
@@ -899,16 +855,13 @@ let particles: Array< {;
 
               left: `${Math && Math.random() * 100}%`,
               top: `${Math && Math.random() * 100}%`,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             }}
             animate={{
               y: [0, -100, 0],
               opacity: [0, 1, 0],
-<<<<<<< HEAD
               scale: [0, 1, 0]
             }}
             transition={{
-=======
 scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
           <motion&& motion.div
             key={i}
@@ -930,14 +883,11 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
               delay: Math.random() * 2
               ease: 'easeInOut',            }}              ease: "easeInOut"
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
               ease: "easeInOut"
-<<<<<<< HEAD
             }}
-=======
 
 
             }}
@@ -971,12 +921,10 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           />
         ))}
       </div>
 
-<<<<<<< HEAD
       {/* Neural Network Connections */}
       <div className="fixed inset-0 pointer-events-none z-30">
         <svg className="w-full h-full">
@@ -1006,7 +954,6 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
                 delay: Math.random() * 2,
                 ease: "easeInOut"
               }}
-=======
 
 
 
@@ -1135,13 +1082,11 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
               }}
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             />
           ))}
         </svg>
       </div>
 
-<<<<<<< HEAD
       {/* Content */}
       <div className="relative z-40">
         {children}
@@ -1151,7 +1096,6 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
 };
 
 export default UltraAdvancedFuturisticBackgroundV2;
-=======
 
 
 
@@ -1193,4 +1137,3 @@ export default UltraAdvancedFuturisticBackgroundV2;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

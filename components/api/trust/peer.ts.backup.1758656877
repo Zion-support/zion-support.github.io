@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import type { TrustPeerReview } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
 
@@ -10,7 +9,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   const { userId, reviewerId, type, note } = req.body || {};
-=======
 
 
   }
@@ -85,13 +83,11 @@ export default async function handler(
 ;
   const { userId, reviewerId, type, note } = req.body || {};
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   if (!userId || !reviewerId || (type !== 'endorse' && type !== 'flag')) {
     return res.status(400).json({ error: 'Missing or invalid fields' });
   }
 
   const review: TrustPeerReview = {
-<<<<<<< HEAD
     userId,
     reviewerId,
     type,
@@ -105,7 +101,6 @@ export default async function handler(
 
   return res.status(200).json({ ok: true, review });
 }
-=======
     userId
     reviewerId
     type
@@ -129,7 +124,6 @@ export default async function handler(
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

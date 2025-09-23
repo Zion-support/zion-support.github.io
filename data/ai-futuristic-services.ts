@@ -38,8 +38,6 @@ export interface AIFuturisticService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
 export const aiFuturisticServices: AIFuturisticService[] = [
   // AI-Powered Quantum Blockchain Analytics
   {
@@ -562,4 +560,3 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     reviews: 102
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

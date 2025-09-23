@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import { useState  } from 'react';
 import { AppHeader  } from '@/layout/AppHeader';
@@ -54,7 +52,6 @@ function PortfolioBuilderContent() {
       <SEO
         title="Portfolio Builder | Zion AI Marketplace"
         description="Create and customize your resume and portfolio to showcase your skills and experience."
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       />
       <AppHeader />
       <main className="container mx-auto px-4 py-8">

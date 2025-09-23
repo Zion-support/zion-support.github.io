@@ -3,7 +3,6 @@ const fs = require('fs');
 const path = require('path');
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 // Final targeted fixes for remaining syntax errors
 const fixes = [
   // Fix missing semicolons in import statements
@@ -77,7 +76,6 @@ const fixes = [
     pattern: /<\/div>\s*\)\s*}\s*$/gm,
     replacement: '    </div>\n  );\n}'
   }
-=======
 console.log('🔧 Fixing remaining syntax errors...');
 
 // Fix specific files with known issues
@@ -99,7 +97,6 @@ function fixFile(filePath) {
 // Function to fix remaining syntax errors in a file;
 function fixRemainingSyntax(filePath) {}
   try {}
->>>>>>> main
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     

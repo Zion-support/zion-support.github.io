@@ -14,8 +14,6 @@ export interface PracticalBusinessSolution20o28 {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
   {
     id: "2028-practical-business-solution",
@@ -40,4 +38,3 @@ export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

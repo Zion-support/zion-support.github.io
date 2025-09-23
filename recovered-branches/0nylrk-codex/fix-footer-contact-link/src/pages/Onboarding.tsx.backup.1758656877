@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
@@ -153,7 +152,6 @@ export default function Onboarding() {
 
             {currentStep === 1 && (
               <div className="mt-6">
-=======
 
 
 
@@ -395,7 +393,6 @@ export default function Onboarding() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -429,10 +426,7 @@ export default function Onboarding() {
                   variant="outline"
                   className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light"
                   onClick={() => setCurrentStep(0)}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 >
                   Back to Role Selection
                 </Button>
@@ -443,10 +437,8 @@ export default function Onboarding() {
       </div>
       <Footer />
     </>
-<<<<<<< HEAD
   );
 }
-=======
   )
 }
 
@@ -467,7 +459,6 @@ export default function Onboarding() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

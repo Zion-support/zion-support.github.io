@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -10,7 +9,6 @@ import ForumCategories from "@/components/community/ForumCategories";
 import PostCard from "@/components/community/PostCard";
 import { useAuth } from "@/hooks/useAuth";
 import { ForumPost } from "@/types/community";
-=======
 
 
 
@@ -59,7 +57,6 @@ import {ForumPost} from "@/types/community";
 
 import { useAuth } from "@/hooks/useAuth",
 import { ForumPost } from "@/types/community",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 // Mock data for featured posts
 const featuredPosts: ForumPost[] = [
@@ -97,7 +94,6 @@ const featuredPosts: ForumPost[] = [
     replyCount: 8,
     isPinned: true,
     isFeatured: true
-<<<<<<< HEAD
   }
 ];
 
@@ -160,7 +156,6 @@ export default function CommunityPage() {
         keywords="community, forum, discussion, AI marketplace, questions, answers"
       />
       
-=======
 
   }
 ];
@@ -233,7 +228,6 @@ export default function CommunityPage() {
         keywords="community, forum, discussion, AI marketplace, questions, answers"
 
       />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <div className="container py-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
           <div>
@@ -242,37 +236,28 @@ export default function CommunityPage() {
               Join the conversation, ask questions, and share your knowledge
             </p>
           </div>
-<<<<<<< HEAD
           
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <Button asChild>
             <Link to={user ? "/community/create" : "/login?next=/community/create"}>
               Create New Post
             </Link>
           </Button>
         </div>
-<<<<<<< HEAD
         
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">
           <TabsList className="mb-6">
             <TabsTrigger value="categories">Categories</TabsTrigger>
             <TabsTrigger value="featured">Featured</TabsTrigger>
             <TabsTrigger value="recent">Recent</TabsTrigger>
           </TabsList>
-<<<<<<< HEAD
           
           <TabsContent value="categories">
             <ForumCategories />
           </TabsContent>
           
-=======
           <TabsContent value="categories">
             <ForumCategories />
           </TabsContent>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <TabsContent value="featured">
             <div className="space-y-4">
               {featuredPosts.map((post) => (
@@ -280,28 +265,20 @@ export default function CommunityPage() {
               ))}
             </div>
           </TabsContent>
-<<<<<<< HEAD
           
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <TabsContent value="recent">
             <div className="space-y-4">
               {recentPosts.map((post) => (
                 <PostCard key={post.id} post={post} />
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               ))}
             </div>
           </TabsContent>
         </Tabs>
       </div>
     </AppLayout>
-<<<<<<< HEAD
   );
 }
-=======
   )
 }
 
@@ -584,7 +561,6 @@ function CommunityPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

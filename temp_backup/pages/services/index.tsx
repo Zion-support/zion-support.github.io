@@ -13,7 +13,6 @@ import { new20o25Services } from '../../data/new-20o25-services';
 import { marketValidatedServices } from '../../data/market-validated-services';
 import { moreRealServices20o25 } from '../../data/more-real-services-20o25';
 import { realOperationalServices } from '../../data/real-operational-services';
-<<<<<<< HEAD
 import { verified20o25Additions } from '../../data/verified-20o25-additions';
 import { realServicesQ120o25 } from '../../data/real-services-q1-20o25'
 import { realEnterpriseServices20o25 } from '../../data/real-enterprise-services-20o25';
@@ -23,7 +22,6 @@ import { additionalLiveServices20o25 } from '../../data/additional-live-services
 import { real20o25Q2Additions } from '../../data/real-20o25-q2-additions';
 import { augmentedServicesBatch3 } from '../../data/real-augmented-services-20o25-batch3';
 import { realServicesQ220o25 } from '../../data/real-services-q2-20o25';
-=======
 import { verified2025Additions } from '../../data/verified-2025-additions';
 import { realServicesQ12025 } from '../../data/real-services-q1-2025'
 import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
@@ -184,4 +182,3 @@ export default function ServicesIndexPage() {
 };
 
 export default ServicesPage;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

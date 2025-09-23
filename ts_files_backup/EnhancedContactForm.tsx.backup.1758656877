@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 import { FormData, FormErrors } from '../types';
 import { useToast } from './ui/Toast';
@@ -36,7 +35,6 @@ const EnhancedContactForm: React.FC = () => {
       newErrors.name = 'Name must be at least 2 characters long';
     }
 
-=======
 import { 
   Mail, Phone, MapPin, Send, CheckCircle, AlertCircle,
   User, Building, MessageSquare, Globe, Clock, Star
@@ -99,13 +97,11 @@ const EnhancedContactForm: React.FC = () => {
 
     if (!formData.firstName.trim()) newErrors.firstName = 'First name is required';
     if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address';
     }
-<<<<<<< HEAD
 
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required';
@@ -114,10 +110,8 @@ const EnhancedContactForm: React.FC = () => {
     } else if (formData.message.trim().length > 1000) {
       newErrors.message = 'Message must be less than 1000 characters';
     }
-=======
     if (!formData.company.trim()) newErrors.company = 'Company name is required';
     if (!formData.message.trim()) newErrors.message = 'Message is required';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -126,7 +120,6 @@ const EnhancedContactForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-<<<<<<< HEAD
     if (!validateForm()) {
       showError('Validation Error', 'Please fix the errors in the form');
       return;
@@ -134,17 +127,14 @@ const EnhancedContactForm: React.FC = () => {
 
     setIsSubmitting(true);
 
-=======
     if (!validateForm()) return;
 
     setIsSubmitting(true);
     
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
       
-<<<<<<< HEAD
       setIsSubmitted(true);
       showSuccess('Message Sent!', 'Thank you for contacting us. We\'ll get back to you soon.');
       
@@ -159,7 +149,6 @@ const EnhancedContactForm: React.FC = () => {
     } catch (error) {
       console.error('Error submitting form:', error);
       showError('Submission Failed', 'There was an error sending your message. Please try again.');
-=======
       // Here you would typically send the data to your backend
       console.log('Form submitted:', formData);
       
@@ -170,13 +159,11 @@ const EnhancedContactForm: React.FC = () => {
       });
     } catch (error) {
       console.error('Error submitting form:', error);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     } finally {
       setIsSubmitting(false);
     }
   };
 
-<<<<<<< HEAD
   const services = [
     'AI Business Intelligence',
     'Quantum Cybersecurity',
@@ -195,7 +182,6 @@ const EnhancedContactForm: React.FC = () => {
     }
   };
 
-=======
   const contactInfo = [
     {
       icon: Mail,
@@ -223,13 +209,11 @@ const EnhancedContactForm: React.FC = () => {
     }
   ];
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   if (isSubmitted) {
     return (
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
         className="text-center py-12"
       >
         <div className="w-20 h-20 rounded-full bg-green-500/20 mx-auto mb-6 flex items-center justify-center">
@@ -246,7 +230,6 @@ const EnhancedContactForm: React.FC = () => {
           Send Another Message
         </button>
       </div>
-=======
         className="max-w-2xl mx-auto text-center py-12"
       >
         <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
@@ -263,12 +246,10 @@ const EnhancedContactForm: React.FC = () => {
           Send Another Message
         </button>
       </motion.div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     );
   }
 
   return (
-<<<<<<< HEAD
     <div className="max-w-4xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Contact Information */}
@@ -308,7 +289,6 @@ const EnhancedContactForm: React.FC = () => {
               <div>
                 <h4 className="text-lg font-semibold text-white mb-1">Location</h4>
                 <p className="text-white/70">San Francisco, CA</p>
-=======
     <div className="max-w-6xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Contact Information */}
@@ -375,14 +355,12 @@ const EnhancedContactForm: React.FC = () => {
                   <p className="text-white font-medium text-sm">Fast Response</p>
                   <p className="text-white/60 text-xs">We'll get back to you within 24 hours</p>
                 </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               </div>
             </div>
           </div>
         </div>
 
         {/* Contact Form */}
-<<<<<<< HEAD
         <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl rounded-2xl border border-white/10 p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -539,7 +517,6 @@ const EnhancedContactForm: React.FC = () => {
         </div>
       </div>
     </section>
-=======
         <div className="lg:col-span-2">
           <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-2xl p-8 border border-white/10 backdrop-blur-xl">
             <div className="mb-8">
@@ -805,7 +782,6 @@ const EnhancedContactForm: React.FC = () => {
         </div>
       </div>
     </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   );
 };
 

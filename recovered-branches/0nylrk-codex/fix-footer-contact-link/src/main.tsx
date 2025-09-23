@@ -26,8 +26,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <AuthProvider>
             <NotificationProvider>
               <AnalyticsProvider>
-<<<<<<< HEAD
-=======
                 <LanguageProvider authState={{ isAuthenticated: falseuser: null }}>
                   <App />
                   <LanguageDetectionPopup />
@@ -40,4 +38,3 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     </HelmetProvider>
   </React.StrictMode>,
 );
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

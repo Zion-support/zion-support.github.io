@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { useStateuseEffect } from "react";
 import { DragDropContextDroppableDraggable } from "react-beautiful-dnd";
 import { useJobApplications } from "@/hooks/useJobApplications";
@@ -159,4 +157,3 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {
     </DragDropContext>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

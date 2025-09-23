@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
   X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
@@ -17,7 +16,6 @@
 
 /automation/*.json
   Cache-Control: public, max-age=300
-=======
 # Security headers
 /*
   X-Frame-Options: DENY
@@ -47,4 +45,3 @@
 
 /images/*
   Cache-Control: public, max-age=31536000, immutable
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

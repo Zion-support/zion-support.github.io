@@ -9,7 +9,6 @@ export default function HomePage() {
 
   return (
     <div className="space-y-8">
-<<<<<<< HEAD
       <div className="text-center space-y-6">
         <h1 className="text-4xl font-bold">Zion OS</h1>
         <p className="text-xl opacity-80 max-w-3xl mx-auto">
@@ -43,7 +42,6 @@ export default function HomePage() {
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors"
           >
             Explore All Services
-=======
       {/* Hero Section */}
       <div className="text-center space-y-6">
         <h1 className="text-5xl font-bold">Zion OS</h1>
@@ -62,12 +60,10 @@ export default function HomePage() {
             className="px-6 py-3 border border-white/20 hover:border-white/40 rounded-lg font-semibold transition-colors"
           >
             Explore Services
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6180
           </a>
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Contact Information */}
       <div className="bg-zinc-900/50 rounded-lg p-6 border border-white/10">
         <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
@@ -93,7 +89,6 @@ export default function HomePage() {
           <div className="text-sm opacity-80">Spin up a new instance with marketplace, governance, identity, and more.</div>
         </a>
         <a className="p-6 rounded border border-white/10 hover:border-white/20 bg-zinc-900/50" href="/admin/instances">
-=======
       {/* Quick Actions */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <a className="p-6 rounded border border-white/10 hover:border-white/20 transition-colors" href="/multiverse/launch">
@@ -101,13 +96,11 @@ export default function HomePage() {
           <div className="text-sm opacity-80">Spin up a new instance with marketplace, governance, identity, and more.</div>
         </a>
         <a className="p-6 rounded border border-white/10 hover:border-white/20 transition-colors" href="/admin/instances">
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6180
           <div className="font-semibold text-lg mb-2">Admin Instances</div>
           <div className="text-sm opacity-80">Manage deployed instances, API keys, and governance.</div>
         </a>
       </div>
 
-<<<<<<< HEAD
       {/* Call to Action */}
       <div className="text-center bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg p-8 border border-white/10">
         <h2 className="text-2xl font-semibold mb-4">Ready to Transform Your Business?</h2>
@@ -128,7 +121,6 @@ export default function HomePage() {
           >
             View All Services
           </a>
-=======
       {/* Services Overview */}
       <div className="space-y-6">
         <h2 className="text-3xl font-bold text-center">Our Comprehensive Service Portfolio</h2>
@@ -248,7 +240,6 @@ export default function HomePage() {
             <h3 className="font-semibold mb-2">Address</h3>
             <p className="text-sm opacity-80">364 E Main St STE 1008<br />Middletown DE 19709</p>
           </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6180
         </div>
       </div>
     </div>

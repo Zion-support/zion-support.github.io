@@ -134,7 +134,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-<<<<<<< HEAD
   const [showSearch, setShowSearch] = useState(false);
   const [searchResults, setSearchResults] = useState<any[]>([]);
   const router = useRouter();
@@ -466,8 +465,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
                   href="/contact"
                   className="block w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium text-center rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
                   onClick={closeAllDropdowns}
-=======
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
                 >
                   Get Started
                 </Link>

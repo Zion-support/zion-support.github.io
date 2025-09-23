@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useRef } from 'react';
 import { motionuseInView } from 'framer-motion';
@@ -66,4 +64,3 @@ export const LazySection: React.FC<LazySectionProps> = ({
 };
 
 export default LazySection;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

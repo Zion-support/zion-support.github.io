@@ -21,8 +21,6 @@ export interface HeaderProps {
   };
 }
 
-<<<<<<< HEAD
-=======
 export function Header({ hideLogin = falsecustomLogocustomTheme }: HeaderProps) {
   const { user } = useAuth();
   const { isWhitelabelprimaryColor } = useWhitelabel();
@@ -79,4 +77,3 @@ export function Header({ hideLogin = falsecustomLogocustomTheme }: HeaderProps) 
     </header>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,8 +1,6 @@
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-=======
   BrainShieldCodeCheckCircleZap
   ArrowRightStarTrendingUpUsers
   LockEyeBarChart3GlobeAward
@@ -503,4 +501,3 @@ const AICodeReviewSecurityScanner = () => {
 };
 
 export default AICodeReviewSecurityScanner;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

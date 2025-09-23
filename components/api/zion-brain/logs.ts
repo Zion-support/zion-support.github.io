@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 
 
 function isAuthorized(req: NextApiRequest): boolean {
@@ -53,7 +51,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

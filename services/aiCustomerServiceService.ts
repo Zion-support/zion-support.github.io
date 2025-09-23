@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 export interface CustomerTicket {
 export interface CustomerTicket {;
@@ -700,4 +698,3 @@ export const aiCustomerServiceService = new AICustomerServiceService(process.env
 
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

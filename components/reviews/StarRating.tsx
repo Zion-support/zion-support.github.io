@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useState } from 'react';
 
@@ -51,4 +49,3 @@ export const StarRating: React.FC<Props> = ({ valueonChangesize = 24readOnly }) 
 };
 
 export default StarRating;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

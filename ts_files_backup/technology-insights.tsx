@@ -33,8 +33,6 @@ export default function TechnologyInsightsPage() {
     {
       title: 'Autonomous Systems Research',
       description: 'Pioneering research in building truly autonomous systems that can operate independently.',
-<<<<<<< HEAD
-=======
       focus: ['Decision 'Making', 'Self-'Learning', 'Adaptive 'Behavior', 'System Integration'],
       icon: '🔬'
     },
@@ -222,4 +220,3 @@ export default function TechnologyInsightsPage() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

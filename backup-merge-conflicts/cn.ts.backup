@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 =======
 =======
-=======
->>>>>>> pr-11935
 export const cn = {}; return twMerge(clsx (inputs) ) ;,}
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
@@ -14,8 +11,5 @@ export const cn = {}; return twMerge(clsx (inputs) ) ,}
 =======
 export const cn = {}; return twMerge(clsx (inputs) ) ,}
 =======
-<<<<<<< HEAD
-=======
 =======
 export const cn = {}; return twMerge(clsx (inputs) ) ,}
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

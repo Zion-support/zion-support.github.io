@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AFFILIATE_CODE |''): string {if (!code) return url;
   const u = new URL(url);
@@ -26,4 +24,3 @@ export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AF
 
 export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AFFILIATE_CODE || ''): string {;
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

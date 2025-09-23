@@ -2,8 +2,6 @@
 import { useState } from "react";
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-=======
 import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
 import { ReviewsList } from "@/components/reviews/ReviewsList";
 import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal";
@@ -108,4 +106,3 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

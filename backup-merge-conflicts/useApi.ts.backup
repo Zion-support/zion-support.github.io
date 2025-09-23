@@ -1,6 +1,5 @@
 import React from 'react';
 =======
-<<<<<<< HEAD
 
 interface UseApiProps {
   // Add props here as needed
@@ -41,7 +40,6 @@ export const useApi = <T = any>(
   return { data, loading, error, execute }};
 
 export default useApi;
-=======
 export default function UseApi({ }: UseApiProps) {
   return (
     <div>
@@ -50,5 +48,4 @@ export default function UseApi({ }: UseApiProps) {
     </div>
   );
 }
->>>>>>> main
 >>>>>>> main

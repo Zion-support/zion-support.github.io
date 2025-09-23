@@ -1,7 +1,5 @@
 
 import { useWallet } from "@/hooks/useWallet";
-<<<<<<< HEAD
-=======
 import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
 import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -88,4 +86,3 @@ export function TransactionHistory() {
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

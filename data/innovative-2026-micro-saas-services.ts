@@ -1,6 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
 export interface Innovative2026MicroSaasService {
   id: string;
   name: string;
@@ -563,4 +561,3 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     reviews: 500
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from &apos;react&apos;; export default function DeveloperRoutes($1) { return ({} )} ;&apos;;&apos;;
-=======
 <<<<<<< HEAD
 const React from "react"; export default function DeveloperRoutes($1) { return ({} )} ;";";''"
 <<<<<<< HEAD:backup-merge-conflicts/DeveloperRoutes.jsx.backup
@@ -11,7 +9,6 @@ import _React from 'react'; export default function DeveloperRoutes(_) { return 
 import _React from 'react'; export default function DeveloperRoutes(_) { return ({} )} ;';';
 =======
 <<<<<<< HEAD
->>>>>>> pr-11935
 =======
 =======
 import _React from 'react'; export default function DeveloperRoutes(_) { return ({} )} ;';';

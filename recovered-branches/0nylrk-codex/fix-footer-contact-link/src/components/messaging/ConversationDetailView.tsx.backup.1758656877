@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';
 import { format } from 'date-fns';
 import { MessageSquare } from 'lucide-react';
@@ -17,7 +16,6 @@ export function ConversationDetailView() {
     activeConversation, 
     activeMessages, 
     sendMessage, 
-=======
 
 import React, { useState, useEffect, useRef } from 'react';
 import { format  } from 'date-fns';
@@ -56,12 +54,10 @@ export function ConversationDetailView() {;
 
     activeMessages
     sendMessage
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     loadMessages
   } = useMessaging();
   const [messageText, setMessageText] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
-<<<<<<< HEAD
   
   useEffect(() => {
     if (activeConversation) {
@@ -119,7 +115,6 @@ export function ConversationDetailView() {;
 
   return (
     <div className="flex-1 flex flex-col h-full">
-=======
   useEffect(() => {
     if (activeConversation) {
       loadMessages(activeConversation.id)
@@ -252,7 +247,6 @@ export function ConversationDetailView() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -268,15 +262,12 @@ export function ConversationDetailView() {;
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
         <div className="flex items-center gap-3">
           <Avatar className="h-10 w-10 border border-zion-purple/20">
-<<<<<<< HEAD
             <AvatarImage 
               src={activeConversation.other_user.avatar_url} 
               alt={activeConversation.other_user.name} 
-=======
             <AvatarImage
               src={activeConversation.other_user.avatar_url}
               alt={activeConversation.other_user.name}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             />
             <AvatarFallback className="bg-zion-blue-dark text-white">
               {activeConversation.other_user.name.charAt(0).toUpperCase()}
@@ -287,23 +278,19 @@ export function ConversationDetailView() {;
               {activeConversation.other_user.name}
             </div>
             <div className="text-xs text-zion-slate">
-<<<<<<< HEAD
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' : 
                activeConversation.other_user.user_type === 'employer' ? 'Employer' : 
-=======
 
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' :
                activeConversation.other_user.user_type === 'employer' ? 'Employer' :
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' : 
                activeConversation.other_user.user_type === 'employer' ? 'Employer' : 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
       
       {/* Context information (if available) */}
       {hasContextData && (
@@ -374,7 +361,6 @@ export function ConversationDetailView() {;
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
           />
           <Button 
-=======
 
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">;
         <div className="flex items-center gap-3">;
@@ -565,7 +551,6 @@ if ( {) {
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan"
           />
           <Button
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             type="submit"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
@@ -574,10 +559,8 @@ if ( {) {
         </form>
       </div>
     </div>
-<<<<<<< HEAD
   );
 }
-=======
   )
 
 
@@ -673,7 +656,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

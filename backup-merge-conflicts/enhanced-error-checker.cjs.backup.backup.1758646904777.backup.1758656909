@@ -17,7 +17,6 @@ class EnhancedErrorChecker {}
     })};
   log(message, level = "INFO") {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
     const logMessage = `[${timestamp}] [${level}] ${message}`;
     
     try {
@@ -26,7 +25,6 @@ class EnhancedErrorChecker {}
   }
 
   async checkTypeScriptErrors() {
-=======
     const logMessage = `[${timestamp}] [${level}] ${message}`;`
     console.log(logMessage);
     try {}
@@ -60,4 +58,3 @@ if (require.main === module) {}
   const checker = new EnhancedErrorChecker();
   checker.run().catch(console.error)};
 module.exports = EnhancedErrorChecker;
->>>>>>> main

@@ -7,7 +7,6 @@
     "buildBreakingFiles": 1,
     "canBuild": false
   },
-<<<<<<< HEAD
   "results": [
     {
       "file": "pages/services-enhanced.tsx",
@@ -49,8 +48,6 @@
     "pages/services-enhanced.tsx"
   ],
   "generatedAt": "2025-08-21T00:58:31.338Z"
-=======
   "buildBreakingFiles": [],
   "generatedAt": "2025-08-19T18:31:39.368Z"
->>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-494d
 }

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -39,7 +37,6 @@ function TalentDashboardContent() {;
       <SEO
         title="Talent Dashboard | Zion AI Marketplace"
         description="Your personalized talent dashboard with job matches and professional opportunities."
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       />
       <AppHeader />
       <main className="container mx-auto px-4 py-8">

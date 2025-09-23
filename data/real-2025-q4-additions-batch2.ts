@@ -16,8 +16,6 @@ export interface AdditionalQ420o25Service {
 	trialDays?: number;
 	setupTime?: string;
 }
-<<<<<<< HEAD
-=======
 export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
 	{
 		id: 'devsecops-copilot',
@@ -184,4 +182,3 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
 		setupTime: 'Same day'
 	}
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

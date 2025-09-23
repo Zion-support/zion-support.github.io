@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 import { useState } from "react";
@@ -78,4 +76,3 @@ interface AIService {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

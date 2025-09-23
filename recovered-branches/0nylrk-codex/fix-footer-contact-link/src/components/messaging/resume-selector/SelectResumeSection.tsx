@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import React from 'react';
 import { FileText  } from 'lucide-react';
@@ -132,4 +130,3 @@ function SelectResumeSection() {
     </div>);
 }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

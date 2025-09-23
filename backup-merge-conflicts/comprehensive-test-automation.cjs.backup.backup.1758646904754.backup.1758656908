@@ -21,7 +21,6 @@ class ComprehensiveTestAutomation {}
     const dirs = ['automation/logs', 'test-results', 'coverage'];
     dirs.forEach(dir => {})
       const dirPath = path.join(this.projectRoot, dir;);
-<<<<<<< HEAD
       if () {
         fs.mkdirSync(dirPath, { "recursive": true })}
     })}
@@ -42,7 +41,6 @@ class ComprehensiveTestAutomation {}
   }
 
   async runUnitTests() {
-=======
       if () {}
         fs.mkdirSync(dirPath, { "recursive": true })};
     })};
@@ -324,4 +322,3 @@ if ( {})
   const testAutomation = new ComprehensiveTestAutomation}(;);
   testAutomation.run().catch(console.error)};
 module.exports = ComprehensiveTestAutomation;
->>>>>>> main

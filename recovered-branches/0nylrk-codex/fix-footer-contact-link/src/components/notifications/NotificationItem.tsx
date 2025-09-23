@@ -1,7 +1,5 @@
 
 // Use the centralized icon wrapper to avoid missing icons
-<<<<<<< HEAD
-=======
 import { CheckTrash2ChevronRight } from '@/components/icons';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -137,4 +135,3 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
     </div>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

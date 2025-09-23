@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
@@ -609,4 +607,3 @@ app.listen(3000, () => {;
 
 export default ApiWebhooks;
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

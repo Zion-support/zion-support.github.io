@@ -6,7 +6,6 @@
 
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 class AdvancedTestingAutomation {
@@ -761,7 +760,6 @@ if ( {
     process.exit(1)})}
 
 module.exports = AdvancedTestingAutomation;
-=======
 const { execSync } = require('child_process')
   log(message, type = 'INFO')
       'INFO': 'ℹ'
@@ -834,4 +832,3 @@ const { execSync } = require('child_process')
     this.log(` Success "Rate"`)
       this.log(`Advanced Testing Automation "failed"`)
     console.error('Advanced testing automation "failed")
->>>>>>> main

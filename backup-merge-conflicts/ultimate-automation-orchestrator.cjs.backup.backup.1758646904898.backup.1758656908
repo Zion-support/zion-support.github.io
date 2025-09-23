@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 class UltimateAutomationOrchestrator {
@@ -271,7 +270,6 @@ if ( {
     process.exit(1)})}
 
 module.exports = UltimateAutomationOrchestrator;
-=======
 const { execSync } = require('child_process')
       "status"
         "status"
@@ -312,4 +310,3 @@ const { execSync } = require('child_process')
 // console.log('\n "RECOMMENDATIONS")
     console.log('\n� Final report saved "to")
     console.error('Ultimate automation orchestrator "failed")
->>>>>>> main

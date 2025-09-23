@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 import Link from "next/link";
@@ -17,4 +15,3 @@ export default function AppCTAButton({ href, label }: Props) {
     </Link>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047

@@ -4,7 +4,6 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
 
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
@@ -15,7 +14,6 @@ function resolveMergeConflicts(filePath) {
   
   
   
-=======
 console.log('🔧 Starting merge conflict resolution...');
 
 // Function to resolve merge conflicts in a file
@@ -140,4 +138,3 @@ try {
   console.error('❌ Error during merge conflict resolution:', error.message);
   process.exit(1);
 }
->>>>>>> main

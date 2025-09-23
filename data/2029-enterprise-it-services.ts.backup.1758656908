@@ -14,10 +14,7 @@ export interface EnterpriseItService2029 {
     address: string;
   };
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const enterpriseITServices2029: EnterpriseItService2029[] = [
   {
     id: "2029-enterprise-it",

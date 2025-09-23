@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 
 import React from "react";
@@ -6,7 +5,6 @@ import React from "react";
 export default function FeaturedContentShowcase2026() {
   return null;
 }
-=======
 import Link from 'next/link';
 
 const FeaturedContentShowcase20o26 = () => {
@@ -155,4 +153,3 @@ const FeaturedContentShowcase20o26 = () => {
 };
 
 export default FeaturedContentShowcase20o26;
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

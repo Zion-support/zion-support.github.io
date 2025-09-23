@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React{ useStateuseEffectuseRefReactNode } from 'react';
 import { ChatMessage } from './ChatMessage';
 import { ChatInput } from './ChatInput';
@@ -137,4 +135,3 @@ export function ChatAssistant({
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

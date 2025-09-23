@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import SEO from '../components/SEO';
 
 export default function WarehouseAcceleratorPage() {
@@ -17,7 +16,6 @@ export default function WarehouseAcceleratorPage() {
 				</div>
 			</section>
 		</>
-=======
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, BarChart2, Star } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -70,6 +68,5 @@ export default function WarehouseAcceleratorPage() {
 				</div>
 			</div>
 		</UltraAdvancedFuturisticBackground>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 	);
 }

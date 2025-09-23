@@ -11,9 +11,7 @@ export default function KubernetesRbacAuditorPage() {
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto space-y-6">
-<<<<<<< HEAD
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-sky-40o0 to-indigo-50o0 bg-clip-text text-transparent">Kubernetes RBAC Auditor</h1>
-=======
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-sky-400 to-indigo-500 bg-clip-text text-transparent">Kubernetes RBAC Auditor</h1>
           <p className="text-slate-300">Over-permission detectionwildcard checksunused bindingsand least-privilege recommendations.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -31,4 +29,3 @@ export default function KubernetesRbacAuditorPage() {
   );
 }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

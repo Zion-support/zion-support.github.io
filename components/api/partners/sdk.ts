@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
@@ -36,7 +34,6 @@ export default async function handler(
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

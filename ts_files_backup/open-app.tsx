@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import { useEffect } from 'react';
 
@@ -45,4 +43,3 @@ export default function OpenApp() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

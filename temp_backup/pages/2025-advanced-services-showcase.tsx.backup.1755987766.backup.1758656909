@@ -77,10 +77,8 @@ export default function AdvancedServicesShowcase2025() {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       <SEO 
         title="2025 Advanced Services Showcase - Zion Tech Group"
-<<<<<<< HEAD
         description="Discover our comprehensive portfolio of advanced AI services, micro SAAS solutions, and cutting-edge IT infrastructure. Real, innovative, and market-ready solutions for modern businesses."
         keywords={["AI services", "micro SAAS", "IT infrastructure", "quantum computing", "enterprise solutions", "Zion Tech Group"]}
-=======
         case 'price':
           return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''));
         case 'rating':
@@ -136,7 +134,6 @@ export default function AdvancedServicesShowcase2025() {
         description="Discover our cutting-edge 2025 advanced micro SAAS, IT, and AI services. Real, innovative, and market-ready solutions for modern businesses."
         keywords={["2025 advanced services", "micro SAAS", "IT services", "AI services", "emerging technology", "Zion Tech Group"]}
         image="/og-advanced-services-2025.jpg"
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-7c2e
       />
 
       {/* Hero Section */}

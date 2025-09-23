@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ forwardRef } from "react";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -75,4 +73,3 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ titlechildren...pro
 };
 
 export { SidebarMenuItemSidebarMenuGroup };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

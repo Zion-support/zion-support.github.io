@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React from "react";
 import { AppleGithubIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -77,4 +75,3 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
     </div>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

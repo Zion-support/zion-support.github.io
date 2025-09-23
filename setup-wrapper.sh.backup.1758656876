@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 #!/bin/bash
-=======
 #!/usr/bin/env bash
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 set -e
 
 # Check if offline shims exist and need to be cleaned up

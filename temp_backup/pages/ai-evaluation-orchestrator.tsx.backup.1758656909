@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Button from '../components/ui/Button';
 
 export default function AIEvaluationOrchestratorPage() {
@@ -36,7 +35,6 @@ export default function AIEvaluationOrchestratorPage() {
       </div>
     </>
   );
-=======
 
 export default function AIEvaluationOrchestratorPage() {
 	return (
@@ -52,5 +50,4 @@ export default function AIEvaluationOrchestratorPage() {
 			</div>
 		</>
 	);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

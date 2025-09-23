@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export interface EmergingTech2026ServiceV2 {
   id: string;
   name: string;
@@ -40,4 +38,3 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

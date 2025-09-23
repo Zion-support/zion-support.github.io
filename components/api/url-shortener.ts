@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 interface ShortUrl {
 
 
@@ -310,4 +308,3 @@ export async function getServerSideProps({
 }
   };
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -7,8 +7,6 @@ interface MarkdownProps {
   className?: string;
 }
 
-<<<<<<< HEAD
-=======
 export function Markdown({ contentclassName }: MarkdownProps) {
   return (
     <div className={cn("prose dark:prose-invert max-w-none"className)}>
@@ -16,4 +14,3 @@ export function Markdown({ contentclassName }: MarkdownProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

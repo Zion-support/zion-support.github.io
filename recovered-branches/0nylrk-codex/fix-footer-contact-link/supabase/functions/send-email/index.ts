@@ -4,8 +4,6 @@ import { Resend } from "npm:resend@2.0.0";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-<<<<<<< HEAD
-=======
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
@@ -33,4 +31,3 @@ serve(async (req) => {
       status: 500});
   }
 });
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

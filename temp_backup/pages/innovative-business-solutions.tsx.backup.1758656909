@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -416,7 +415,6 @@ export default function InnovativeBusinessSolutions() {
       </section>
     </Layout>
   );
-=======
 
 export default function InnovativeBusinessSolutionsPage() {
 	return (
@@ -432,5 +430,4 @@ export default function InnovativeBusinessSolutionsPage() {
 			</div>
 		</>
 	);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

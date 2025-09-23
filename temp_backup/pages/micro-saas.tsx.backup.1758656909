@@ -5,13 +5,10 @@ import Button from '../components/ui/Button';
 import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap as Lightning } from 'lucide-react';
 
 export default function MicroSaasPage() {
-<<<<<<< HEAD
   const detailedServices = [
-=======
   const [selectedCategory, setSelectedCategory] = useState('All');
   
   const microSaasServices = [
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     {
       name: 'AI Content Generator Pro',
       tagline: 'Professional AI-powered content creation',
@@ -87,7 +84,6 @@ export default function MicroSaasPage() {
       link: 'https://monitor.ziontechgroup.com',
       marketPosition: 'Competitive with Sentry ($26-80), LogRocket ($99-199), and New Relic ($0-99)',
       targetAudience: 'Developers, DevOps teams, and product managers',
-<<<<<<< HEAD
       marketSize: '$4.1B application performance monitoring market',
       growthRate: '18.7% CAGR expected through 2030'
     },
@@ -281,7 +277,6 @@ export default function MicroSaasPage() {
         'File sharing & storage',
         'Mobile app access',
         'API integrations'
-=======
       trialDays: 14,
       setupTime: '10 minutes',
       category: 'Development & DevOps'
@@ -463,13 +458,11 @@ export default function MicroSaasPage() {
         'Time tracking',
         'Reporting & analytics',
         'Integration with popular tools'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       ],
       popular: false,
       icon: '📋',
       color: 'from-purple-500 to-indigo-600',
       textColor: 'text-purple-400',
-<<<<<<< HEAD
       link: 'https://projects.ziontechgroup.com',
       marketPosition: 'Competitive with Asana ($10.99-24.99), Monday.com ($8-16), and ClickUp ($5-12)',
       targetAudience: 'Project managers, development teams, and creative agencies',
@@ -740,7 +733,6 @@ export default function MicroSaasPage() {
       title: 'Market Validation',
       description: 'All services are based on validated market needs with proven demand and competitive positioning.',
       stats: '12 validated solutions'
-=======
       link: 'https://ziontechgroup.com/ai-project-management',
       marketPosition: 'Competitive with Asana ($10.99-24.99), Monday.com ($8-16), and ClickUp ($5-12)',
       targetAudience: 'Project managers, development teams, and creative agencies',
@@ -2243,7 +2235,6 @@ export default function MicroSaasPage() {
       link: 'https://ziontechgroup.com/ai-social-media-automation',
       marketPosition: 'Competitive with Buffer ($15-99), Hootsuite ($29-599), and Later ($18-40)',
       targetAudience: 'Social media managers, marketers, and content creators'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   ];
 
@@ -2270,8 +2261,6 @@ export default function MicroSaasPage() {
     }
   ];
 
-<<<<<<< HEAD
-=======
   const categories = [...new Set(microSaasServices.map(service => service.category))];
 
   const competitiveAdvantages = [
@@ -2307,7 +2296,6 @@ export default function MicroSaasPage() {
     }
   ];
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <>
       <Head>
@@ -2346,7 +2334,6 @@ export default function MicroSaasPage() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400"> Every Business Need</span>
             </h1>
             <p className="text-xl text-gray-400 max-w-5xl mx-auto leading-relaxed mb-12">
-<<<<<<< HEAD
               20 specialized micro SaaS solutions covering content creation, design systems, performance monitoring, 
               SEO automation, chatbots, business intelligence, email marketing, social media management, 
               customer feedback, billing, project management, API infrastructure, video generation, e-commerce analytics,
@@ -2355,7 +2342,6 @@ export default function MicroSaasPage() {
               of enterprise platforms. Start with a free trial and scale as you grow.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
               65+ specialized micro SaaS solutions covering AI-powered content creation, video generation, design systems, performance monitoring, 
               SEO automation, chatbots, business intelligence, email marketing, social media management, 
               customer feedback, billing, project management, API infrastructure, e-commerce analytics, legal document generation, 
@@ -2387,16 +2373,12 @@ export default function MicroSaasPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <Button
                 href="#services"
                 variant="secondary"
                 size="lg"
-<<<<<<< HEAD
                 className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700"
-=======
                 className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               >
                 Explore Services
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -2407,7 +2389,6 @@ export default function MicroSaasPage() {
                 size="lg"
                 className="border-green-500 text-green-400 hover:bg-green-500 hover:text-white"
               >
-<<<<<<< HEAD
                 View Pricing
               </Button>
             </div>
@@ -2434,7 +2415,6 @@ export default function MicroSaasPage() {
                   <p className="text-gray-400 mb-6 leading-relaxed">{insight.description}</p>
                   <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium">
                     {insight.stats}
-=======
                 View All 75 Services
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
@@ -2518,7 +2498,6 @@ export default function MicroSaasPage() {
                     >
                       Visit {service.link.replace('https://', '')}
                     </a>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   </div>
                 </div>
               ))}
@@ -2526,7 +2505,6 @@ export default function MicroSaasPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Services Grid */}
         <section id="services" className="py-24 bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -2887,8 +2865,6 @@ export default function MicroSaasPage() {
           </div>
         </section>
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
@@ -2901,8 +2877,6 @@ export default function MicroSaasPage() {
               dedicated support, enterprise-grade reliability, and 14-day free trials. Start with one solution 
               and add more as your business grows.
             </p>
-<<<<<<< HEAD
-=======
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button
@@ -2923,7 +2897,6 @@ export default function MicroSaasPage() {
                 View All Pricing
               </Button>
             </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

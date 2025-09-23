@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
@@ -623,7 +622,6 @@ export default function SearchResultsPage({
               )}
             </div>
           )}
-=======
 import React from 'react';
 import Head from 'next/head';
 
@@ -641,13 +639,11 @@ export default function [slug]Page() {
           <a href="/" className="text-blue-600 hover:underline">
             ← Back to Home
           </a>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         </div>
       </div>
     </>
   );
 }
-<<<<<<< HEAD
 
 export const getServerSideProps: GetServerSideProps<
   SearchResultsPageProps
@@ -708,5 +704,3 @@ export const getServerSideProps: GetServerSideProps<
     };
   }
 };
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

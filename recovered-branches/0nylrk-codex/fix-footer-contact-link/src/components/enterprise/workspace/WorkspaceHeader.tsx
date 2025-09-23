@@ -1,8 +1,6 @@
 
 import { Button } from "@/components/ui/button";
 import { type Company } from "./CompanyDashboard";
-<<<<<<< HEAD
-=======
 import { BellUsersSettings } from "lucide-react";
 
 interface WorkspaceHeaderProps {
@@ -59,4 +57,3 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

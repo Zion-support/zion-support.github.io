@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 export interface RateLimitConfig {
 export interface RateLimitConfig {;
@@ -609,7 +607,6 @@ if ( {) {
 
           }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         }
       ];
     }

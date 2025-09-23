@@ -21,8 +21,6 @@ export default function LoadingSpinner({ size = 'md', text }: LoadingSpinnerProp
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 "use client";
 
 interface LoadingSpinnerProps {
@@ -64,4 +62,3 @@ export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinn
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export interface ComprehensiveService {
   id: string;
   name: string;
@@ -512,4 +510,3 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     reviews: 520
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

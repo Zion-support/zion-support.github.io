@@ -6,7 +6,6 @@ const { exec } = require('child_process');
 
 console.log('🚀 Starting Comprehensive App Improvement Suite...');
 
-<<<<<<< HEAD
 class ComprehensiveAppImprovementSuite {
   constructor() {
     this.reportsDir = './automation-reports';
@@ -200,7 +199,6 @@ if (require.main === module) {
 }
 
 module.exports = ComprehensiveAppImprovementSuite;
-=======
 const improvements = [
   {
     name: 'Performance Optimization',
@@ -420,4 +418,3 @@ console.log('📄 Quality report saved to automation/reports/quality-report.json
 
 // Run the improvement suite
 runAllImprovements().catch(console.error);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

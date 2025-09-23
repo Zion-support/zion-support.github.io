@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React from "react";
 import { LinkuseLocation } from "react-router-dom";
 import { HomeSearchBriefcaseMessageSquareUser } from "lucide-react";
@@ -41,4 +39,3 @@ export function BottomNavigation() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

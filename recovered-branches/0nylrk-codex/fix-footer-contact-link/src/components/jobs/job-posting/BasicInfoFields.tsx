@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React{ useState } from "react";
 import { Control } from "react-hook-form";
 import { 
@@ -158,4 +156,3 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
     </div>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

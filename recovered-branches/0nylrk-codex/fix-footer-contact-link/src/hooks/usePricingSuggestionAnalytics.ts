@@ -49,8 +49,6 @@ export function usePricingSuggestionAnalytics(days = 30) {
             { category: 'design', count: 65, acceptanceRate: 0.82 },
             { category: 'marketing', count: 42, acceptanceRate: 0.64 },
             { category: 'content', count: 18, acceptanceRate: 0.56 },
-<<<<<<< HEAD
-=======
             { category: 'data', count: 11, acceptanceRate: 0.78 }],
           recentSuggestions: Array(10).fill(null).map((_, i) => ({
             id: `suggestion-${i}`,
@@ -93,4 +91,3 @@ export function usePricingSuggestionAnalytics(days = 30) {
 
   return analytics;
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

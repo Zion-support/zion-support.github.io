@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Button from '../components/ui/Button';
 
 export default function QuantumCybersecurityPlatform() {
@@ -36,7 +35,6 @@ export default function QuantumCybersecurityPlatform() {
       </div>
     </>
   );
-=======
 
 export default function QuantumCybersecurityPlatformPage() {
 	return (
@@ -58,5 +56,4 @@ export default function QuantumCybersecurityPlatformPage() {
 			</div>
 		</div>
 	);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { render, screen, fireEvent, waitFor } from '@testing-library/react',;
 import '@testing-library/jest-dom',;
 import { describe, it, expect, vi } from 'vitest',;
@@ -29,4 +27,3 @@ describe('ProductActions', () => {;
     vi.useRealTimers();
   });
 });
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

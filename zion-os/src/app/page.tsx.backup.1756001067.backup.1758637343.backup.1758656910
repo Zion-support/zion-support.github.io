@@ -2,7 +2,6 @@ import Link from 'next/link';
 
 export default function HomePage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -160,7 +159,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-=======
     <div className="space-y-8">
       <div className="space-y-6">
         <h1 className="text-3xl font-bold">Zion OS</h1>
@@ -242,7 +240,6 @@ export default function HomePage() {
           </a>
         </div>
       </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6e4a
     </div>
   );
 }

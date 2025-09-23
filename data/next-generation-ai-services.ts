@@ -38,8 +38,6 @@ export interface NextGenerationAIService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
 export const nextGenerationAIServices: NextGenerationAIService[] = [
   {
     id: 'quantum-ai-brain-computer-interface',
@@ -348,4 +346,3 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     reviews: 298
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

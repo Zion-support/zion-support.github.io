@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react";
@@ -6,7 +5,6 @@ import { format } from "date-fns";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { Review, ReviewStatus } from "@/types/reviews";
-=======
 
 
 
@@ -35,7 +33,6 @@ import { supabase } from "@/integrations/supabase/client",
 import { Review, ReviewStatus } from "@/types/reviews",
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 import {
   Table,
@@ -43,31 +40,24 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
   TableRow,
 } from "@/components/ui/table";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-=======
   TableRow} from "@/components/ui/table",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
-<<<<<<< HEAD
   DialogTitle,
 } from "@/components/ui/dialog";
-=======
   DialogTitle} from "@/components/ui/dialog",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-<<<<<<< HEAD
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
@@ -94,7 +84,6 @@ export function ReviewsModerationTable({
     }: {
       reviewId: string;
       status: ReviewStatus;
-=======
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -125,17 +114,14 @@ interface ReviewsModerationTableProps {
       reviewId: string
 
       status: ReviewStatus
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }) => {
       const { error } = await supabase
         .from("reviews")
         .update({ status })
-<<<<<<< HEAD
         .eq("id", reviewId);
 
       if (error) throw error;
       return { reviewId, status };
-=======
 
         .eq("id", reviewId);
       if (error) throw error;
@@ -154,12 +140,10 @@ interface ReviewsModerationTableProps {
 
       if (error) throw error,
       return { reviewId, status }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     onSuccess: (data) => {
       toast({
         title: "Review updated",
-<<<<<<< HEAD
         description: `Review has been ${data.status}.`,
       });
       onRefresh();
@@ -184,7 +168,6 @@ interface ReviewsModerationTableProps {
         return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200";
     }
   };
-=======
         description: `Review has been ${data.status}.`}),
       onRefresh(),
       setViewDetailsOpen(false)
@@ -213,23 +196,19 @@ interface ReviewsModerationTableProps {
   }
   },
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const getInitials = (name: string) => {
     return name
       .split(" ")
       .map((n) => n[0])
       .join("")
-<<<<<<< HEAD
       .toUpperCase();
   };
-=======
       .toUpperCase()
 
   }
   },
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   if (isLoading) {
     return (
@@ -239,14 +218,11 @@ interface ReviewsModerationTableProps {
         <div className="h-16 w-full bg-muted rounded animate-pulse" />
         <div className="h-16 w-full bg-muted rounded animate-pulse" />
       </div>
-<<<<<<< HEAD
     );
   }
 
-=======
     )
   }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   if (reviews.length === 0) {
     return (
       <div className="py-10 text-center">
@@ -255,7 +231,6 @@ interface ReviewsModerationTableProps {
           All reviews have been processed. Check back later for new submissions.
         </p>
       </div>
-<<<<<<< HEAD
     );
   }
 
@@ -271,7 +246,6 @@ interface ReviewsModerationTableProps {
     setSelectedReview(review);
     setViewDetailsOpen(true);
   };
-=======
     )
   }
   const handleApprove = (reviewId: string) => {
@@ -293,7 +267,6 @@ interface ReviewsModerationTableProps {
   }
   },
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const renderStars = (rating: number) => {
     return (
@@ -303,19 +276,16 @@ interface ReviewsModerationTableProps {
             key={star}
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />
-<<<<<<< HEAD
         ))}
       </div>
     );
   };
-=======
 
         ))}
       </div>
     )
   }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <>
@@ -339,9 +309,7 @@ interface ReviewsModerationTableProps {
                     {review.reviewer_profile?.avatar_url ? (
                       <AvatarImage
                         src={review.reviewer_profile.avatar_url}
-<<<<<<< HEAD
                         alt={review.reviewer_profile.display_name || ""}
-=======
                         alt={review.reviewer_profile.display_name |""}
 
 import { useState } from "react",;
@@ -630,7 +598,6 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -648,7 +615,6 @@ if ( {) {
                       <AvatarFallback>
                         {review.reviewer_profile?.display_name
                           ? getInitials(review.reviewer_profile.display_name)
-<<<<<<< HEAD
                           : <User className="h-4 w-4" />}
                       </AvatarFallback>
                     )}
@@ -687,7 +653,6 @@ if ( {) {
                 <div className="flex justify-end gap-2">
                   {review.status === "pending" && (
                     <>
-=======
 
                         src={review && review.reviewer_profile.avatar_url}
                         alt={review && review.reviewer_profile.display_name || ""}
@@ -736,29 +701,24 @@ if ( {) {
                 <div className="flex justify-end gap-2">;
                   {review && review.status === "pending" && (;
                     <>;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       <Button
                         size="sm"
                         variant="outline"
                         className="h-8 w-8 p-0"
-<<<<<<< HEAD
                         onClick={() => handleApprove(review.id)}
                         disabled={isPending}
                       >
                         <Check className="h-4 w-4 text-green-500" />
                       </Button>
-=======
                         onClick={() => handleApprove(review && review.id)}
                         disabled={isPending}
                       >;
                         <Check className="h-4 w-4 text-green-500" />;
                       </Button>;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       <Button
                         size="sm"
                         variant="outline"
                         className="h-8 w-8 p-0"
-<<<<<<< HEAD
                         onClick={() => handleReject(review.id)}
                         disabled={isPending}
                       >
@@ -785,7 +745,6 @@ if ( {) {
                           Mark as rejected
                         </DropdownMenuItem>
                       )}
-=======
                         onClick={() => handleReject(review && review.id)}
                         disabled={isPending}
                       >;
@@ -908,22 +867,17 @@ if ( {) {
                         <DropdownMenuItem on_click={() => updateReviewStatus ({ review_id: review.id, status: "rejected" })}>;
                           Mark as rejected;
                         </DropdownMenuItem>)}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       {review.status === "rejected" && (
                         <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "approved" })}>
                           Mark as approved
                         </DropdownMenuItem>
                       )}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </div>
               </TableCell>
             </TableRow>
-<<<<<<< HEAD
           ))}
         </TableBody>
       </Table>
@@ -1054,7 +1008,6 @@ if ( {) {
       )}
     </>
   );
-=======
                     </DropdownMenuContent>;
                   </DropdownMenu>;
                 </div>;
@@ -1067,7 +1020,6 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import {
   onsiteServicePricing,
@@ -25,7 +23,6 @@ import { ServiceDetails } from "./ServiceDetails",
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

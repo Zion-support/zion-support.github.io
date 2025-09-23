@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 Loader2
 
@@ -17,4 +15,3 @@ export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({ visible = false 
 };
 
 export default LoadingOverlay;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 
@@ -31,7 +29,6 @@ import { motion } from 'framer-motion';
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import React from 'react',
 import Link from 'next/link';
@@ -495,4 +493,3 @@ export default function FuturisticFooter() {;
 
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -19,8 +19,6 @@ export const TALENT_PROFILES: TalentProfile[] = [
     profileImageUrl: 'https://i.pravatar.cc/30o0?img=1',
     portfolio: [
       { title: 'RAG Platform Template', url: 'https://example.com/rag' },
-<<<<<<< HEAD
-=======
       { title: 'LLM Evaluation Toolkit', url: 'https://example.com/eval' }],
     verified: true,
     rating: 4.9,
@@ -107,4 +105,3 @@ export const TALENT_PROFILES: TalentProfile[] = [
     rating: 4.5,
     reviewsCount: 9,
     createdAt: new Date().toISOString()}];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

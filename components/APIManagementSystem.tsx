@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React, { useState, useEffect } from 'react';
 
@@ -603,4 +601,3 @@ const APIManagementSystem: React.FC = () => {
 };
 
 export default APIManagementSystem;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

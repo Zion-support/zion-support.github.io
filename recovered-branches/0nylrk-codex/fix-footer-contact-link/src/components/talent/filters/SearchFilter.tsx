@@ -3,8 +3,6 @@ import { Input } from "@/components/ui/input";
 import { SearchIcon } from "lucide-react";
 import { SearchFilterProps } from "@/types/filters";
 
-<<<<<<< HEAD
-=======
 export function SearchFilter({ searchTermsetSearchTerm }: SearchFilterProps) {
   return (
     <div className="mb-6">
@@ -21,4 +19,3 @@ export function SearchFilter({ searchTermsetSearchTerm }: SearchFilterProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

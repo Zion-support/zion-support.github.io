@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 =======
 import React, { useState } from 'react';
@@ -842,4 +840,3 @@ export default function ContactPage() {
                       <p>✓ ROI analysis in progress</p>
                     </div>
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

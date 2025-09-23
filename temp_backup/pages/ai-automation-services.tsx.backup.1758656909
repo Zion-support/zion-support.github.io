@@ -83,8 +83,6 @@ const benefits = [
 ];
 
 export default function AIAutomationServices() {
-<<<<<<< HEAD
-=======
   const services = [
     {
       title: 'Intelligent Process Automation',
@@ -226,7 +224,6 @@ export default function AIAutomationServices() {
     }
   ];
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <Layout>
       <Head>

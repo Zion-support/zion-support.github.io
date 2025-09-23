@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import crypto from "crypto",
 import { ProposalVoteEntry } from "./types",
 
@@ -46,4 +44,3 @@ export function verifyVotesAgainstMerkleRoot(
   const root = computeMerkleRootFromVotes(votes),
   return root === merkleRoot
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

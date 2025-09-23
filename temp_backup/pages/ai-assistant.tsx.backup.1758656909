@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Button from '../components/ui/Button';
 
 export default function AIAssistantPage() {
@@ -35,7 +34,6 @@ export default function AIAssistantPage() {
         </div>
       </div>
     </>
-=======
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { Button } from '../components/ui/Button';
 import { Bot, CheckCircle, Zap, Shield, Network, Workflow, DollarSign, ExternalLink, Phone, Mail, MapPin } from 'lucide-react';
@@ -330,6 +328,5 @@ export default function AIAssistantPage() {
         </div>
       </section>
     </Layout>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   );
 }

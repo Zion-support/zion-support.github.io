@@ -43,8 +43,6 @@ export function useHireRequest() {
       // Show success message
       toast({
         title: "Request Submitted",
-<<<<<<< HEAD
-=======
         description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`});
       
       return { success: true, requestId: response?.request_id };
@@ -74,4 +72,3 @@ export function useHireRequest() {
     error
   };
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

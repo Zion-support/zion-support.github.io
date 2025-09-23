@@ -3,8 +3,6 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-=======
 import { CardContent } from "@/components/ui/card";
 import { GradientHeading } from "@/components/GradientHeading";
 import { StepProgress } from "@/components/QuoteRequestForm/StepProgress";
@@ -189,4 +187,3 @@ export function QuoteRequestForm() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

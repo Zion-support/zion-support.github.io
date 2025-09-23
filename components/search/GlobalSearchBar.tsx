@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import { useEffectuseMemouseRefuseState } from 'react';
 import { useRouter } from 'next/router';
@@ -89,4 +87,3 @@ export default function GlobalSearchBar() {
     </form>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

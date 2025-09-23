@@ -5,8 +5,6 @@ import { Button } from "@/components/ui/button";
 import { ChatAssistant } from "@/components/ChatAssistant";
 
 export function ChatAssistantTrigger() {
-<<<<<<< HEAD
-=======
   const [isOpensetIsOpen] = useState(false);
 
   // Handle sending messages to the AI chat assistant
@@ -59,4 +57,3 @@ export function ChatAssistantTrigger() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

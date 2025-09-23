@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react";
 import { Card } from "@/components/ui/card";
 import {
@@ -70,7 +69,6 @@ export function IntegrationsSyncLog() {
     }
   };
   
-=======
 
 import React from "react";
 import { Card } from "@/components/ui/card";
@@ -103,7 +101,6 @@ import { Badge } from "@/components/ui/badge",
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -217,19 +214,14 @@ export function IntegrationsSyncLog() {
                 <TableCell>{new Date(log.timestamp).toLocaleString()}</TableCell>
                 <TableCell className="hidden md:table-cell">{log.details}</TableCell>
               </TableRow>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             ))}
           </TableBody>
         </Table>
       </div>
     </Card>
-<<<<<<< HEAD
   );
 }
-=======
   )
 }
 
@@ -334,7 +326,6 @@ export function IntegrationsSyncLog() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 

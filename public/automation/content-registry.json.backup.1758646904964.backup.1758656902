@@ -1685,10 +1685,8 @@
       "route": "/reports/blueprints/blueprint-2025-08-14-212855"
     },
     {
-<<<<<<< HEAD
       "file": "pages/main/front/index.tsx",
       "route": "/main/front"
-=======
       "file": "pages/reports/guides/guide-2025-08-14-091210.tsx",
       "route": "/reports/guides/guide-2025-08-14-091210"
     },
@@ -10599,7 +10597,6 @@
     {
       "file": "pages/reports/updates/update-2025-08-12-1417.tsx",
       "route": "/reports/updates/update-2025-08-12-1417"
->>>>>>> origin/auto/autonomy-17186719616
     }
   ],
   "docs": [
@@ -10636,9 +10633,7 @@
       "route": "/docs/reports/unused-exports.md"
     }
   ],
-<<<<<<< HEAD
   "generatedAt": "2025-08-14T23:55:16.714Z",
-=======
   "generatedAt": "2025-08-14T11:23:18.988Z",
   "items": [
     {
@@ -10678,4 +10673,3 @@
     }
   ]
 }
->>>>>>> origin/auto/autonomy-17186719616

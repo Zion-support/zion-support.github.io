@@ -1,8 +1,6 @@
 
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-=======
 import { SparklesRefreshCcw } from "lucide-react";
 
 export interface EmptyMatchesCardProps {
@@ -40,4 +38,3 @@ export function EmptyMatchesCard({ onRefreshisProcessing }: EmptyMatchesCardProp
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,7 +1,5 @@
 import Head from 'next/head';
 import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground';
-<<<<<<< HEAD
-=======
 import { Button } from '../components/ui/Button';
 import { Database, Gauge, Check, Phone, Mail, MapPin, Rocket, Link2 } from 'lucide-react';
 
@@ -89,4 +87,3 @@ export default function AgenticRAGPage() {
 		</UltraFuturisticMatrixBackground>
 	);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

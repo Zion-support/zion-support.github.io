@@ -4,8 +4,6 @@ export default function AIContentPersonalizationEngine() {
 	return (
 		<ServiceLanding
 			title="AI Content Personalization Engine"
-<<<<<<< HEAD
-=======
 			description="Deliver hyper-personalized content across web, email, and in-app experiences with AI-driven segmentation and real-time recommendations."
 			subtitle="Increase engagement and conversions with real-time personalization"
 			pricePerMonthUSD={1499}
@@ -25,4 +23,3 @@ export default function AIContentPersonalizationEngine() {
 		/>
 	);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-=======
   FileText
   Download
   Calendar
@@ -379,4 +377,3 @@ const ReportsPage: React.FC = () => {
 };
 
 export default ReportsPage;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

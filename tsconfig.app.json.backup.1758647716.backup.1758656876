@@ -2,7 +2,6 @@
   "extends": "./tsconfig.json",
   "include": [
     "next-env.d.ts",
-<<<<<<< HEAD
     ".next/types/**/*.ts",
     "app/**/*.ts",
     "app/**/*.tsx",
@@ -75,7 +74,6 @@
     "**/backups/**",
     "**/recovered-branches/**",
     "types/**"
-=======
     "app/**/*.ts",
     "app/**/*.tsx",
     ".next/types/**/*.ts"
@@ -94,6 +92,5 @@
     "types/**",
     "src.broken/**",
     "temp_*/**"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3530
   ]
 }

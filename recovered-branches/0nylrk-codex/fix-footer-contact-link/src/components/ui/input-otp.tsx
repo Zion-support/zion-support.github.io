@@ -1,6 +1,4 @@
 import * as React from "react"
-<<<<<<< HEAD
-=======
 import { OTPInputContext } from "input-otp"
 import { Dot } from "lucide-react"
 
@@ -69,4 +67,3 @@ const InputOTPSeparator = React.forwardRef<
 InputOTPSeparator.displayName = "InputOTPSeparator"
 
 export { InputOTPGroupInputOTPSlotInputOTPSeparator }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

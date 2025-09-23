@@ -1,8 +1,6 @@
 export interface InnovativeMicroSaasService20o29V2 {
   id: string;
   name: string;
-<<<<<<< HEAD
-=======
   description: string;
   category: string[];
   price: string;
@@ -363,4 +361,3 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

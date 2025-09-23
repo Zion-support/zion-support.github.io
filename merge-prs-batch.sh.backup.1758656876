@@ -1,6 +1,5 @@
 #!/bin/bash
 
-<<<<<<< HEAD
 # Script to merge open PRs in batches
 # This script will process a limited number of branches at a time
 
@@ -137,7 +136,6 @@ fi
 git checkout main
 echo "Current branch: $(git branch --show-current)"
 echo "Next batch should start from: $((START_FROM + BATCH_SIZE))"
-=======
 # Batch merge script for PRs (processes 50 at a time)
 set -e
 
@@ -347,4 +345,3 @@ git log --oneline -20
 echo ""
 echo "🎯 First batch of PRs processed successfully!"
 echo "💡 To process more PRs, run this script again or use the comprehensive merge script."
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

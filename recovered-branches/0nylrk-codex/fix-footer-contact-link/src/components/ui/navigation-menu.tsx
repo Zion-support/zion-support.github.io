@@ -8,8 +8,6 @@ import { cn } from "@/lib/utils"
 const NavigationMenu = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
-<<<<<<< HEAD
-=======
 >(({ classNamechildren...props }ref) => (
   <NavigationMenuPrimitive.Root
     ref={ref}
@@ -127,4 +125,3 @@ export {
   NavigationMenuLink,
   NavigationMenuIndicator,
   NavigationMenuViewport}
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

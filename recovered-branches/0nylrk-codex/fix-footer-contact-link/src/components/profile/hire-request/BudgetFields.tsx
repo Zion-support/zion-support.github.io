@@ -1,7 +1,5 @@
 
 import { UseFormReturn } from "react-hook-form";
-<<<<<<< HEAD
-=======
 import { FormFieldFormItemFormLabelFormControlFormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { TalentProfile } from "@/types/talent";
@@ -59,4 +57,3 @@ export function BudgetFields({ formtalent }: BudgetFieldsProps) {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

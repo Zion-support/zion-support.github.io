@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 import React, { useState, useEffect } from 'react',
@@ -4404,4 +4402,3 @@ export default UltraFuturisticNavigation2035;  )
 export default UltraFuturisticNavigation2035;
 export default UltraFuturisticNavigation2035;
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

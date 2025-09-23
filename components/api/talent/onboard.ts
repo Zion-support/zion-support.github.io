@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import type { NextApiRequest, NextApiResponse } from 'next',
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -395,4 +393,3 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
   }
   }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

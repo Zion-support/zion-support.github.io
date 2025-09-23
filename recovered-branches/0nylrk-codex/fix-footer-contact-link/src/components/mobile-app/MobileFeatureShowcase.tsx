@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React from "react";
 import { CheckCircleSmartphoneUsersStarMail } from "lucide-react";
 
@@ -63,4 +61,3 @@ export const MobileFeatureShowcase: React.FC = () => {
     </section>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import React, { useCallback } from 'react';
 import { checkMessage, monitorContent  } from '@/services/fraud';
@@ -44,7 +42,6 @@ interface FraudDetectionContextType {;
     userEmail?: string;
   ) => Promise<{;
     isSafe: boolean,;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     explanation?: string;
   }>;
 }

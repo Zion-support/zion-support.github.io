@@ -35,8 +35,5 @@ import { useDispatch,useSelector } from 'react-redux'; ; export const useAppDisp
 
 export default Hooks;';
 "';';
-<<<<<<< HEAD:backup-merge-conflicts/hooks.ts.backup
 >>>>>>> main
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-=======
->>>>>>> pr-11913:src_backup_temp/store/hooks.ts

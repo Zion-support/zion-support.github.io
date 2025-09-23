@@ -17,8 +17,6 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       price: 4999,
       currency: "$",
       category: "AI Models",
-<<<<<<< HEAD
-=======
       tags: ["AI"NLP"Machine Learning"],
       images: ["https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=500"],
       createdAt: "2023-11-15T14:48:00.000Z",
@@ -119,4 +117,3 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
     </section>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

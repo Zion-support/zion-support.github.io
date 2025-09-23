@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { useStateuseEffect } from "react";
 import {
   Dialog,
@@ -85,4 +83,3 @@ export function LeaveReviewModal({
     </Dialog>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

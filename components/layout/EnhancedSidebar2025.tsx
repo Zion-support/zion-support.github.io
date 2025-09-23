@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { AnimatePresence, motion } from 'framer-motion';
 import {
     Atom,
@@ -506,4 +504,3 @@ export default function EnhancedSidebar2025({ isOpen, onClose, contactInfo }: En
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

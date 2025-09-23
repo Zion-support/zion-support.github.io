@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import React from "react";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
@@ -92,7 +90,6 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
   }
   if (flags.length === 0) {
     return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 
   return (

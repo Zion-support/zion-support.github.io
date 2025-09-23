@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 import fs from 'fs';
 import path from 'path';
 
@@ -75,7 +73,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       <link>${siteUrl}/media/podcast/${e && e.id}</link>
       <guid isPermaLink="false">${e && e.id}</guid>
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <pubDate>${pubDate}</pubDate>
       <enclosure url="${audioUrl}" length="0" type="audio/mpeg" />
     </item>`;

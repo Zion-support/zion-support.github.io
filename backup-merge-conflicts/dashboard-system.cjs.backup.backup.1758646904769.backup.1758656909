@@ -4,7 +4,6 @@
  * Comprehensive monitoring dashboard with real-time analytics;
  */
 
-<<<<<<< HEAD
 const pm2 = require('pm2');
 const fs = require('fs').promises;
 const path = require('path');
@@ -714,7 +713,6 @@ if (require.main === module) {
 }
 
 module.exports = IntelligentDashboard;
-=======
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -747,4 +745,3 @@ const url = require('url')
                 alertList.innerHTML = '<div class="metric"><span class="metric-label"
                     <span class="
     console.error(' Dashboard System "failed")
->>>>>>> main

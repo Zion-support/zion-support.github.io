@@ -1,7 +1,5 @@
 =======
 import {motion} from 'framer-motion';
-<<<<<<< HEAD
-=======
 =======
 import {motion} from 'framer-motion';
 =======
@@ -34,7 +32,6 @@ export function GradientHeading("props": "any) {;
 }
 ;
 </motion>
->>>>>>> pr-11935
 export function GradientHeading($1) {
     const sizeClasses = {
         "sm": 'text-sm',

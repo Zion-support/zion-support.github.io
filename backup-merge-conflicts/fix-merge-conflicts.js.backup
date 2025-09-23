@@ -1,5 +1,4 @@
 =======
-<<<<<<< HEAD
 #!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
@@ -75,7 +74,6 @@ for (const file of conflictedFiles) {
   fixMergeConflicts(file)}
 
 console.log('Merge conflict resolution complete!');
-=======
 }
 // Main execution
 console.log('Finding files with merge conflict markers...');
@@ -97,5 +95,4 @@ try {
   console.log('TypeScript check found some issues, but continuing...');
 }
 console.log('\nMerge conflict fixing complete!');
->>>>>>> main
 >>>>>>> main

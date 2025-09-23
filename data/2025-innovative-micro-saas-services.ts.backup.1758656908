@@ -1,13 +1,10 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface InnovativeMicroSaasService2025 {
-=======
 
 import { ServiceVariant } from '../types/service-variants';
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   id: string;
   name: string;
   tagline: string;
@@ -18,7 +15,6 @@ import { ServiceVariant } from '../types/service-variants';
   popular: boolean;
   icon: string;
   color: string;
-<<<<<<< HEAD
   textColor: string;
   link: string;
   marketPosition: string;
@@ -54,7 +50,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
   {
     id: 'ai-content-factory',
     name: 'AI Content Factory Platform',
-=======
   text_color: string;
   link: string;
   market_position: string;
@@ -790,13 +785,11 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
   // AI Content Factory
   {
     id: 'ai-content-factory', name: 'AI Content Factory Platform',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     tagline: 'Revolutionary AI-powered content creation and management',
     price: '$15,000',
     period: '/month',
     description: 'Advanced platform that uses AI to create, manage, and optimize content across all channels. Not just content generation - intelligent content strategy and optimization.',
     features: [
-<<<<<<< HEAD
       'AI content creation',
       'Content strategy optimization',
       'Multi-channel management',
@@ -1265,7 +1258,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     reviews: 45
   }
 ];
-=======
       'AI content creationContent strategy optimizationMulti-channel managementPerformance analyticsSEO optimizationContent personalizationBrand voice consistencyContent calendar automation';
       'Collaboration toolsROI tracking'
       id: 'project-management-intelligence'
@@ -3269,4 +3261,3 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
   }
 ];
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

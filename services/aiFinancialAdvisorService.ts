@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 export interface InvestmentPortfolio {
 export interface InvestmentPortfolio {;
@@ -694,7 +692,6 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService (process.
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 

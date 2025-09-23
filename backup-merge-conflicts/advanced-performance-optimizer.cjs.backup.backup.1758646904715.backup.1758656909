@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 class AdvancedPerformanceOptimizer {
@@ -334,7 +333,6 @@ if ( {
     process.exit(1)})}
 
 module.exports = AdvancedPerformanceOptimizer;
-=======
 const { execSync } = require('child_process')
       "status"
         "status"
@@ -364,4 +362,3 @@ const { execSync } = require('child_process')
       "status"
     console.log('\n Performance Optimization "Summary")
     console.error('Performance optimization "failed")
->>>>>>> main

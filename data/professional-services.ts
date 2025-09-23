@@ -14,8 +14,6 @@ export interface ProfessionalService {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const professionalServices: ProfessionalService[] = [
   {
     id: "it-consulting",
@@ -40,4 +38,3 @@ export const professionalServices: ProfessionalService[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

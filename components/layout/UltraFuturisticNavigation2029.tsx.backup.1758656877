@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -158,7 +157,6 @@ export default function UltraFuturisticNavigation2029() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-=======
 "use client";
 
 import React, { useState, useEffect } from 'react',
@@ -750,13 +748,11 @@ export default function UltraFuturisticNavigation2029() {;
     };
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
   return (
-<<<<<<< HEAD
     <>
       {/* Top Contact Bar */}
       <div className="bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white text-sm py-2 px-4">
@@ -766,7 +762,6 @@ export default function UltraFuturisticNavigation2029() {;
               <Phone size={14} />
               <span>{contactInfo.mobile}</span>
             </a>
-=======
     <>;
       {/* Top Contact Bar */}
       <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white text-sm py-2 px-4'>
@@ -806,7 +801,6 @@ export default function UltraFuturisticNavigation2029() {;
           </div>              <Phone size={14} />
               <span>{contactInfo.mobile}</span>
             </a>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-300 transition-colors">
               <Mail size={14} />
               <span>{contactInfo.email}</span>
@@ -816,22 +810,17 @@ export default function UltraFuturisticNavigation2029() {;
               <span>{contactInfo.address}</span>
             </div>
           </div>
-<<<<<<< HEAD
           <div className="flex items-center space-x-4">
             <a href={contactInfo.website} className="hover:text-cyan-300 transition-colors">
               {contactInfo.website.replace('https://', '')}
-=======
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </a>
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Main Navigation */}
-=======
 
 
 href={contactInfo && contactInfo.website}
@@ -909,7 +898,6 @@ function UltraFuturisticNavigation2029() {
       </div>;
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
           ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20' 
@@ -919,10 +907,7 @@ function UltraFuturisticNavigation2029() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <motion.div 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center space-x-3"
@@ -940,7 +925,6 @@ function UltraFuturisticNavigation2029() {
                 <span className="text-xs text-gray-400">2029 Innovation Hub</span>
               </div>
             </motion.div>
-<<<<<<< HEAD
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
@@ -949,7 +933,6 @@ function UltraFuturisticNavigation2029() {
                   key={item.name}
                   href={item.href}
                   className="group relative text-gray-300 hover:text-white transition-colors duration-200"
-=======
               className='flex items-center space-x-3'>;
               <div className='relative'>;
                 <div className='w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center'>;
@@ -976,19 +959,16 @@ function UltraFuturisticNavigation2029() {
                   key={item.name}
                   href={item.href}
 className="group relative text-gray-300 hover:text-white transition-colors duration-200"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 >
                   <div className="flex items-center space-x-2">
                     <item.icon size={16} className="group-hover:text-cyan-400 transition-colors" />
                     <span>{item.name}</span>
                   </div>
                   <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></div>
-<<<<<<< HEAD
                 </Link>
               ))}
 
               {/* Services Dropdown */}
-=======
 
 
 
@@ -1119,23 +1099,18 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                               </Link>;
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <div className="relative group">
                 <button className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200">
                   <Briefcase size={16} className="group-hover:text-cyan-400 transition-colors" />
                   <span>All Services</span>
                   <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-200" />
                 </button>
-<<<<<<< HEAD
                 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 {/* Mega Menu */}
                 <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                   <div className="p-6 grid grid-cols-2 lg:grid-cols-3 gap-6">
                     {serviceCategories.map((category, index) => (
                       <motion.div
-<<<<<<< HEAD
                         key={category.title}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -1163,7 +1138,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                                   </span>
                                   <span className="text-xs text-cyan-400 font-mono">
                                     {service.price}
-=======
       {/* Main Navigation */}
       <nav;
         className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
@@ -1306,31 +1280,25 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
                               {category.title}
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                                   </span>
                                 </div>
                                 <p className="text-xs text-gray-500 mt-1">{service.description}</p>
                               </Link>
-<<<<<<< HEAD
                             ))}
                           </div>
                         </div>
                       </motion.div>
-=======
 
 
                             ))}
                           </div>;
                         </div>;
                       </motion && motion.div>;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     ))}
                   </div>
                 </div>
               </div>
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -1348,14 +1316,11 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               {/* CTA Button */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
                 className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40"
-=======
 
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'              >                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40"
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'              >
@@ -1371,20 +1336,17 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               >
                 Get Started
               </motion.button>
             </div>
 
-<<<<<<< HEAD
             {/* Mobile Menu Button */}
             <div className="lg:hidden">
               <button
                 onClick={toggleMenu}
                 className="text-gray-300 hover:text-white transition-colors"
               >
-=======
 
 
 </div>;
@@ -1417,7 +1379,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
@@ -1425,7 +1386,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
         </div>
       </nav>
 
-<<<<<<< HEAD
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -1435,7 +1395,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
             exit={{ opacity: 0, x: '100%' }}
             className="fixed inset-0 z-50 lg:hidden"
           >
-=======
 
 
 
@@ -1496,7 +1455,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
             className="fixed inset-0 z-50 lg:hidden"
           >
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={closeMenu} />
             <div className="absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/30 overflow-y-auto">
               <div className="p-6">
@@ -1511,7 +1469,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                     <X size={24} />
                   </button>
                 </div>
-<<<<<<< HEAD
 
                 {/* Mobile Navigation Items */}
                 <div className="space-y-4">
@@ -1524,7 +1481,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                     >
                       <item.icon size={20} className="text-cyan-400" />
                       <span>{item.name}</span>
-=======
                     className='text-gray-400 hover:text-white'>                    <X size={24} />          >;
             <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={closeMenu} />;
             <div className="absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/30 overflow-y-auto">;
@@ -1567,15 +1523,12 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     </Link>
                   ))}
                 </div>
 
-<<<<<<< HEAD
                 {/* Mobile Services */}
                 <div className="mt-8">
-=======
 
                 {/* Mobile Services */}
                 <div className='mt-8'>
@@ -1599,7 +1552,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                               key={service.name}
                               href={service.href}
                               onClick={closeMenu}                <div className="mt-8">
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   <h3 className="text-lg font-semibold text-white mb-4">Our Services</h3>
                   <div className="space-y-3">
                     {serviceCategories.slice(0, 6).map((category) => (
@@ -1608,13 +1560,11 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                         <p className="text-sm text-gray-400 mb-3">{category.description}</p>
                         <div className="space-y-2">
                           {category.services.slice(0, 2).map((service) => (
-<<<<<<< HEAD
                             <Link
                               key={service.name}
                               href={service.href}
                               onClick={closeMenu}
                               className="block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200"
-=======
                               key={service.name}
                               href={service.href}
                               onClick={closeMenu}
@@ -1628,18 +1578,15 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                                 <span className='text-xs text-cyan-400 font-mono'>
                                   {service.price}
                                 </span>                              </div>                              className="block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                             >
                               <div className="flex items-center justify-between">
                                 <span className="text-sm text-gray-300">{service.name}</span>
                                 <span className="text-xs text-cyan-400 font-mono">{service.price}</span>
-<<<<<<< HEAD
                               </div>
                             </Link>
                           ))}
                         </div>
                       </div>
-=======
 
 
 
@@ -1660,13 +1607,10 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                           ))}
                         </div>;
                       </div>;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     ))}
                   </div>
                 </div>
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -1712,7 +1656,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 {/* Mobile CTA */}
                 <div className="mt-8">
                   <motion.button
@@ -1730,12 +1673,10 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
       </AnimatePresence>
 
       {/* Spacer for fixed navigation */}
-<<<<<<< HEAD
       <div className="h-20" />
     </>
   );
 }
-=======
       <div className='h-20' />
     </>
       </AnimatePresence>;
@@ -1760,4 +1701,3 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

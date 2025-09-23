@@ -74,8 +74,6 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-<<<<<<< HEAD
-=======
         "Authorization": `Bearer ${openaiApiKey}`},
       body: JSON.stringify({
         model: "gpt-4o-mini",
@@ -205,4 +203,3 @@ serve(async (req) => {
     );
   }
 });
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

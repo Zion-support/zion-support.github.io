@@ -22,7 +22,6 @@ module.exports = {
           800: '#1e40af',
           900: '#1e3a8a',
         },
-<<<<<<< HEAD
         secondary: {
           50: '#fdf4ff',
           100: '#fae8ff',
@@ -49,7 +48,6 @@ module.exports = {
         },
       },
       fontFamily: {
-=======
   safelist: [
     'focus:ring-2',
     'focus:ring-4',
@@ -319,7 +317,6 @@ module.exports = {
         'float': 'float 6s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
         'typing': 'typing 3.5s steps(40, end), blink-caret .75s step-end infinite',
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
       },
       keyframes: {
         fadeIn: {

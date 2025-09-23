@@ -1,12 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 export default function AI2026QuantumRevolutionBanner() {
 	return (
 		<section className="p-8 rounded-2xl bg-white/10 text-white text-center">
 =======
-=======
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))
 "use client";
 
 export default function AI2026QuantumRevolutionBanner() {

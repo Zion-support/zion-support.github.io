@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
@@ -20,7 +18,6 @@ import {DynamicListingPage} from "@/components/DynamicListingPage";
 import {ProductListing} from "@/types/listings";
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 // Sample talent listings
 const TALENT_LISTINGS: ProductListing[] = [

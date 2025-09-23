@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 
@@ -82,4 +80,3 @@ export default function FuturisticCard({ title, description, cta }: Props) {
 }
 }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

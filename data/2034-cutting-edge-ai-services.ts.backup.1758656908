@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 export type CuttingEdgeAIService = {
 	id: string;
 	name: string;
 	description: string;
-=======
 
 
 
@@ -79,7 +77,6 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 
 
@@ -96,19 +93,15 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		| 'AI Business Management'
 		| 'AI Healthcare'
 		| 'AI Neural Interfaces'
-<<<<<<< HEAD
 		| 'AI Quantum Computing';
 	pricing: { starter: string; professional?: string; enterprise?: string };
-=======
 		| 'AI Quantum Computing'
 	pricing: { starter: string, professional?: string, enterprise?: string }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 	features: string[];
 	integrations?: string[];
 	useCases?: string[];
 	link: string;
 	rating?: number;
-<<<<<<< HEAD
 	launchDate?: string;
 	realService?: boolean;
 };
@@ -151,7 +144,6 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		realService: true
 	}
 ];
-=======
 	launchDate?: string
 	realService?: boolean
 }
@@ -265,4 +257,3 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

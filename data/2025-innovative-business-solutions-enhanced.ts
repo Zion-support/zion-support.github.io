@@ -1,6 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
 export interface InnovativeBusinessSolution {
   id: string;
   name: string;
@@ -303,4 +301,3 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     reviews: 67
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

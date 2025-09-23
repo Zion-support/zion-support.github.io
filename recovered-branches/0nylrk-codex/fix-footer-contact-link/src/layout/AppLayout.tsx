@@ -7,8 +7,6 @@ interface AppLayoutProps {
   hideFooter?: boolean;
 }
 
-<<<<<<< HEAD
-=======
 export function AppLayout({ childrenhideFooter = false }: AppLayoutProps) {
   return (
 
@@ -21,4 +19,3 @@ export function AppLayout({ childrenhideFooter = false }: AppLayoutProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

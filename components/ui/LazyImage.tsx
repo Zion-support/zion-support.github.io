@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useEffectuseRefuseState } from 'react';
 import { motion } from 'framer-motion';
@@ -81,4 +79,3 @@ export const LazyImage: React.FC<LazyImageProps> = ({
 };
 
 export default LazyImage;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -5,8 +5,6 @@ export type Badge ={
 };
 
 const BADGES: Badge[] = [
-<<<<<<< HEAD
-=======
   { id: "starter"label: "Starter"threshold: 50 },
   { id: "rising"label: "Rising Star"threshold: 200 },
   { id: "pro"label: "Pro"threshold: 500 },
@@ -43,4 +41,3 @@ export default function Badges({ balance }: { balance: number }) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

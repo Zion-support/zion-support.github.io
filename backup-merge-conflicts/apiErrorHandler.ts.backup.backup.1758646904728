@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
 =======
 // comment;
 export const apiErrorHandler = {};
@@ -13,7 +11,6 @@ export const apiErrorHandler = {}; variant: 'destructive',; error?.message || fa
 =======
 <<<<<<< HEAD:backup-merge-conflicts/apiErrorHandler.ts.backup
 export const apiErrorHandler = {}; variant: 'destructive',error?.message || fallbackMessage || 'An unexpected error occurred'; toast({}; description: message});
->>>>>>> main
 =======
 export const apiErrorHandler = {}; variant: 'destructive',error?.message || fallbackMessage || 'An unexpected error occurred'; toast({}; description: message});
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/utils/apiErrorHandler.ts

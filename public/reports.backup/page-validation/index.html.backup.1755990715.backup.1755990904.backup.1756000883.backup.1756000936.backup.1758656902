@@ -14,13 +14,10 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 .build-failure{background:rgba(239,68,68,.2);border:2px solid #ef4444}
 </style>
 <h1>Next.js Page Structure Validation Report</h1>
-<<<<<<< HEAD
 <p>Generated 8/19/2025, 3:46:17 PM</p>
-=======
 <p>Generated 8/19/2025, 4:26:24 PM</p>
 =======
 <p>Generated 8/19/2025, 6:52:46 PM</p>
->>>>>>> origin/cursor/automate-redundancy-and-cleanup-d88b
 >>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
 <div class="build-status build-success">✅ BUILD READY</div>
 <div class="card success">

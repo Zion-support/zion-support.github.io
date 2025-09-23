@@ -1,6 +1,5 @@
 #!/usr/bin/env node;
 
-<<<<<<< HEAD
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
@@ -247,7 +246,6 @@ export {};";
 
 const fixer = new TypeScriptFixer();
 fixer.run().catch(console.error)
-=======
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -331,4 +329,3 @@ export {};"
   this.log("\\n "Errors": ")
       this.log("\\n� TypeScript fixing completed!")
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
->>>>>>> main

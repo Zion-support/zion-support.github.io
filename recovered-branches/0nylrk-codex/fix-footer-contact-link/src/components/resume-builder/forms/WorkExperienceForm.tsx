@@ -13,8 +13,6 @@ import {
   FormField,
   FormItem,
   FormLabel,
-<<<<<<< HEAD
-=======
   FormMessage} from '@/components/ui/form';
 import { WorkExperience } from '@/types/resume';
 Loader2EditTrash2
@@ -356,4 +354,3 @@ export function WorkExperienceForm({ resumeIdworkExperiencesonCompleteonBack }: 
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

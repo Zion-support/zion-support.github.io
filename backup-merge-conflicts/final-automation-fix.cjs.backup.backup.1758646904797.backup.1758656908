@@ -1,5 +1,4 @@
 #!/usr/bin/env node;
-<<<<<<< HEAD
 const fs = require("$1");
 const path = require("$1");
 const { execSync } = require("child_process");
@@ -155,7 +154,6 @@ if (require.main === module) {;
   fix.run(),}
 ;
 module.exports = FinalAutomationFix}}}}}}}}))
-=======
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -216,4 +214,3 @@ const { execSync } = require("child_process")
     this.log(" Starting Final Automation Fix")
       this.log("� Final Automation Fix completed successfully!")
       this.log(` Final automation fix "failed"`)
->>>>>>> main

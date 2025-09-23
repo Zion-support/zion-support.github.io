@@ -9,13 +9,11 @@ const fs = require('fs');
 const path = require('path');
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 class SyntaxErrorFixer {
   constructor() {
     this.projectRoot = process.cwd();
     this.fixedFiles = [];
     this.errors = []}
-=======
 console.log('🔧 Comprehensive Syntax Error Fixer');
 console.log('====================================');
 
@@ -301,7 +299,6 @@ const PerformanceMonitor: React.FC = () => {
         fidObserver.disconnect();
         clsObserver.disconnect();
       };
->>>>>>> main
     }
   }, []);
 

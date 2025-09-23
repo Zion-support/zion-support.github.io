@@ -1,8 +1,6 @@
 
 import { GradientHeading } from "./GradientHeading";
 import { FeatureCard } from "./FeatureCard";
-<<<<<<< HEAD
-=======
 import { BotClockGlobeTrendingDown } from "lucide-react";
 
 const benefits = [
@@ -50,4 +48,3 @@ export function BenefitsSection() {
     </section>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

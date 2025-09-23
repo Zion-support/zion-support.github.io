@@ -1,6 +1,4 @@
 import { Fragment } from "react";
-<<<<<<< HEAD
-=======
 import { Routes } from "react-router-dom";
 import { ProtectedRoute } from "../components/ProtectedRoute";
 import CommunityPage from "../pages/CommunityPage";
@@ -42,4 +40,3 @@ const CommunityRoutes = () => {
 };
 
 export default CommunityRoutes;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

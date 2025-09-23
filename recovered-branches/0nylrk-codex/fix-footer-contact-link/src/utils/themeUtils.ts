@@ -12,8 +12,6 @@ export interface ThemeColors {
 
 // Define theme presets
 export function getThemeColors(preset: ThemePreset, primaryColor: string): ThemeColors {
-<<<<<<< HEAD
-=======
 
   switch (preset) {
     case 'dark':
@@ -74,4 +72,3 @@ export function applyThemeColors(colors: ThemeColors) {
   document.body.style.backgroundColor = colors.backgroundColor;
   document.body.style.color = colors.textColor;
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

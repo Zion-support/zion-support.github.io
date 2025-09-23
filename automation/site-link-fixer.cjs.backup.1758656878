@@ -3,7 +3,6 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
 const ROOT = process.cwd();
 const REPORT_FILE = path.join(ROOT, 'data', 'reports', 'link-sentinel', 'internal-links-latest.json');
 const PAGES_DIR = path.join(ROOT, 'pages');
@@ -74,7 +73,6 @@ function main() {
 }
 
 main();
-=======
 const projectRoot = process.cwd();
 
 const requiredPages = [
@@ -108,4 +106,3 @@ const placeholder = (title, body) => `import Head from 'next/head';\nexport defa
   }
   console.log('Site link fixer completed.');
 })();
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

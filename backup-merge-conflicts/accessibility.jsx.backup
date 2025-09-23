@@ -2,14 +2,12 @@
 =======
 =======
 import React,{useState,useEffect,useCallback} from &apos;react&apos;; import {motion,AnimatePresence} from &apos;framer-motion&apos;; import {Eye,Volume2,VolumeX,Type,Contrast,ZoomIn,ZoomOut,Settings,Accessibility,X} from &apos;lucide-react&apos;; import {Button} from &quot;button.tsx&quot;; export function AccessibilityPanel($1) { const [isOpen,setIsOpen] = useState(false); const [settings,setSettings] = useState({ highContrast: false,largeText: false,reducedMotion: false,screenReader: false,fontSize: 16,colorBlindMode: &apos;normal&apos; };); useEffect(() => { if (!enabled) return; const root = document.documentElement; if (settings.highContrast) { root.classList.add(&apos;high-contrast&apos;)} else {root.classList.remove(&apos;high-contrast&apos;)} if (settings.largeText) {root.style.fontSize = &apos;18px&apos;} else {root.style.fontSize = &apos;16px&apos;} if (settings.reducedMotion) {root.style.setProperty(&apos;--reduced-motion&apos;,&apos;reduce&apos;)} else {root.style.setProperty(&apos;--reduced-motion&apos;,&apos;no-preference&apos;)} root.style.setProperty(&apos;--font-size&apos;,`${settings.fontSize}px`);&apos;; root.setAttribute(&apos;data-color-blind&apos;,settings.colorBlindMode); onSettingsChange?.(settings)},[settings,enabled,onSettingsChange]); useEffect(() => { const saved = localStorage.getItem(&apos;accessibility-settings&apos;); if (saved) { try { const parsed = JSON.parse(saved); setSettings(prev => ({ ...prev,...parsed }))} catch { const saveSettings = useCallback((newSettings) => {setSettings(newSettings); localStorage.setItem(&apos;accessibility-settings&apos;,JSON.stringify(newSettings))},[]); const toggleSetting = useCallback((key,value) => { const newSettings = { ;&apos;;&apos;;
-<<<<<<< HEAD:backup-merge-conflicts/accessibility.jsx.backup
 >>>>>>> pr-11935
 import React, {useState, useEffect, useCallback} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {Eye, Volume2, VolumeX, Type, Contrast, ZoomIn, ZoomOut, Settings, Accessibility, X} from 'lucide-react';
 import {Button} from "button.tsx";
 <<<<<<< HEAD
-=======
 =======
 export function AccessibilityPanel($1) {
     const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +26,6 @@ export function AccessibilityPanel("props": "any) {;
     // Apply accessibility settings to document;
     useEffect(() => {;
         if (!enabled);
->>>>>>> pr-11935
         "highContrast": false,
         "largeText": false,
         "reducedMotion": false,

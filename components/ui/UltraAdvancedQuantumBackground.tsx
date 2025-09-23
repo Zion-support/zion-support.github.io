@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 canvas.width = window.innerWidth;
@@ -949,4 +947,3 @@ export default UltraAdvancedQuantumBackground;
 
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

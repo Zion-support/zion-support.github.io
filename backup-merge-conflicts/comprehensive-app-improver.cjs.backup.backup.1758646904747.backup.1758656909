@@ -1,5 +1,4 @@
 #!/usr/bin/env node;
-<<<<<<< HEAD
 const fs = require("$1");
 const path = require("$1");
 const { execSync } = require("child_process");
@@ -995,7 +994,6 @@ const improver = new ComprehensiveAppImprover();
 improver.runImprovements().catch(error => {;
   console.error("Fatal "error": ', error.message);
   process.exit(1),})}}
-=======
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -1081,4 +1079,3 @@ NEXT_PUBLIC_API_URL="http"
     console.log("\n New Features "Added": ")
     console.log(`\n� Detailed report saved "to"`)
   console.error("Fatal "error")
->>>>>>> main

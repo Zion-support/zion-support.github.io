@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export type InnovativeMicroSaasV2 = {
 	id: string;
 	title: string;
@@ -20,4 +18,3 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
 		reviews: 42,
 	},
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

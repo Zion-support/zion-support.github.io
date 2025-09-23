@@ -1,8 +1,6 @@
 
 import { Badge } from "@/components/ui/badge";
 import { ShieldAlert } from "lucide-react";
-<<<<<<< HEAD
-=======
 import { TooltipContentTooltipTrigger } from "@/components/ui/tooltip";
 
 interface DisputeStatusBadgeProps {
@@ -44,4 +42,3 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
     </Tooltip>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

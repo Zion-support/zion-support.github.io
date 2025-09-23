@@ -6,8 +6,6 @@ import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
 import { additionalEnhancedServices } from '../../data/additional-real-services';
-<<<<<<< HEAD
-=======
 import { newlyAddedServices } from '../../data/newly-added-services';
 import { curatedMarketServices } from '../../data/curated-market-services';
 import { new2025Services } from '../../data/new-2025-services';
@@ -339,4 +337,3 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 	);
 }
 =======
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

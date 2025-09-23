@@ -1,8 +1,6 @@
 import * as LucideIcons from 'lucide-react';
 
 // Alias for missing icons or for icons with different names
-<<<<<<< HEAD
-=======
 const iconAliases: Record<stringkeyof typeof LucideIcons> = {
   // Grid views
   LayoutGrid: 'LayoutGrid',
@@ -200,4 +198,3 @@ export const {
 
 // Also export all original icons from lucide-react
 export * from 'lucide-react';
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

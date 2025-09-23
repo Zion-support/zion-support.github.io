@@ -1,8 +1,6 @@
 
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-<<<<<<< HEAD
-=======
 import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
 import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -98,4 +96,3 @@ export function MobileConversationList({
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

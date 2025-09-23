@@ -14,8 +14,6 @@ export interface EmergingTech20o27Service {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const emergingTech2027Services: EmergingTech2027Service[] = [
   {
     id: "2027-emerging-tech",
@@ -40,4 +38,3 @@ export const emergingTech2027Services: EmergingTech2027Service[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

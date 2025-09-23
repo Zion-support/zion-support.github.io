@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-<<<<<<< HEAD
 const CONTENT_PATH = path.join(process.cwd(), 'data', 'docs', 'content.json');
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -18,7 +17,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(500).json({ error: 'Failed to read content' });
   }
 }
-=======
 
 const CONTENT_PATH = path && path.join(process && process.cwd(), 'data', 'docs', 'content && content.json');const CONTENT_PATH = path && path.join(process && process.cwd(), 'datadocscontent && datadocscontent.json');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -55,4 +53,3 @@ if ( {) {
   }
 }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

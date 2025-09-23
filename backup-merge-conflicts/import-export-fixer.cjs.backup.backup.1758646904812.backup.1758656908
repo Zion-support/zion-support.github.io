@@ -1,5 +1,4 @@
 #!/usr/bin/env node;
-<<<<<<< HEAD
 const fs = require("fs");
 const path = require("path");
 const glob = require("glob");
@@ -356,9 +355,7 @@ this.log('Fixing import/export issues...', 'info');
 }
 
 fixer.run().catch(console.error)
-=======
 const fs = require("fs")
 const path = require("path")
 const glob = require("glob")
       this.log(`Error in Import/Export "Fixer"`)
->>>>>>> main

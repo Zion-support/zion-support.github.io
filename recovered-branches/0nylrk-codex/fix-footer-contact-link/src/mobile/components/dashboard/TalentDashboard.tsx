@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React from "react";
 import { CardContentCardHeaderCardTitleCardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -149,4 +147,3 @@ export function TalentDashboard() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

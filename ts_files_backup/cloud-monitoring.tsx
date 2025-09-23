@@ -1,15 +1,12 @@
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-=======
 ActivityBarChart3AlertTriangleClockDatabaseGlobeLockShieldTrendingUpUsersZapArrowRightPlayCheckCircleStarServerCloudEyeBellSettingsCode
 
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export default function CloudMonitoringPage() {

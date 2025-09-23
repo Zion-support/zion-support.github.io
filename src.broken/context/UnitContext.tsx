@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { createContextuseContextReactNode } from 'react';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
 import type { UnitSystem } from '@/utils/unitConversion';
@@ -36,4 +34,3 @@ export function UnitProvider({ children }: { children: ReactNode }) {
 }
 
 export const useUnitSystem = () => useContext(UnitContext);
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

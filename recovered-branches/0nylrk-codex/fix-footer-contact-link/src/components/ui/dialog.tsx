@@ -15,8 +15,6 @@ const DialogClose = DialogPrimitive.Close
 const DialogOverlay = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
-<<<<<<< HEAD
-=======
 >(({ className...props }ref) => (
   <DialogPrimitive.Overlay
     ref={ref}
@@ -119,4 +117,3 @@ export {
   DialogFooter,
   DialogTitle,
   DialogDescription}
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

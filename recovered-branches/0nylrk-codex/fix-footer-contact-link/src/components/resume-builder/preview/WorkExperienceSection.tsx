@@ -8,8 +8,6 @@ interface WorkExperienceSectionProps {
 
 export function WorkExperienceSection({ workExperience }: WorkExperienceSectionProps) {
   // Sort work experience by date (newest first)
-<<<<<<< HEAD
-=======
   const sortedWorkExperience = [...workExperience].sort((ab) => {
     if (a.is_current && !b.is_current) return -1;
     if (!a.is_current && b.is_current) return 1;
@@ -56,4 +54,3 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

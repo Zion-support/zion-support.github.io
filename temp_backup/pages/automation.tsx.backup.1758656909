@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import { RefreshCw, Zap, Bot, Workflow, ArrowRight, Check, BarChart3 } from 'lucide-react';
 
 export default function AutomationPage() {
@@ -173,7 +172,6 @@ export default function AutomationPage() {
             </div>
           </div>
         </section>
-=======
 import Link from 'next/link';
 
 export default function AutomationPage() {
@@ -367,7 +365,6 @@ export default function AutomationPage() {
             </article>
           </div>
         </main>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       </div>
     </>
   );

@@ -14,8 +14,6 @@ export interface EmergingTechService20o25 {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const emergingTechServices2025: EmergingTechService2025[] = [
   {
     id: "metaverse-platform",
@@ -40,4 +38,3 @@ export const emergingTechServices2025: EmergingTechService2025[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -19,7 +19,6 @@ const os = require('os')
       securityMode: process.env.SECURITY_MODE === 'true'
       performanceMode: process.env.PERFORMANCE_MODE === 'true'
       deploymentMode: process.env.DEPLOYMENT_MODE === 'true'
-<<<<<<< HEAD
     };
     
     this.metrics = {
@@ -1019,7 +1018,6 @@ if (require.main === module) {
 }
 
 module.exports = AIEnhancedOrchestrator;
-=======
       await fs.mkdir(path.join(this.projectRoot, 'logs')
       console.log('Logs directory already exists')
   log(message, level = 'INFO')
@@ -1038,4 +1036,3 @@ module.exports = AIEnhancedOrchestrator;
         '5min'
         '15min'
       const result = execSync('top -bn1 | grep "Cpu(s)"
->>>>>>> main

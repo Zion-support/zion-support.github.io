@@ -1,20 +1,16 @@
 import Link from "next/link";
 
 export const metadata = {
-<<<<<<< HEAD
   title: "Case Studies - Zion Tech Group | Client Success Stories",
   description: "Explore real-world examples of how Zion Tech Group has helped clients transform their businesses with AI, quantum computing, and enterprise technology solutions.",
   keywords: "case studies, client success stories, AI implementation, quantum computing, enterprise solutions, Zion Tech Group",
-=======
   title: "Case Studies - Zion Tech Group | Success Stories & Client Results",
   description: "Explore real-world case studies and success stories from Zion Tech Group's AI, quantum computing, and autonomous technology implementations.",
   keywords: "case studies, success stories, client results, AI implementation, quantum computing projects, Zion Tech Group",
->>>>>>> origin/cursor/website-audit-and-enhancement-0da5
 };
 
 export default function CaseStudiesPage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -307,7 +303,6 @@ export default function CaseStudiesPage() {
             <div className="card">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mr-4">
-=======
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
@@ -544,12 +539,10 @@ export default function CaseStudiesPage() {
             <div className="card p-6">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mr-3">
->>>>>>> origin/cursor/website-audit-and-enhancement-0da5
                   <span className="text-blue-400 font-bold">JD</span>
                 </div>
                 <div>
                   <h4 className="font-semibold">John Davis</h4>
-<<<<<<< HEAD
                   <p className="text-gray-400 text-sm">CTO, Global Manufacturing Corp</p>
                 </div>
               </div>
@@ -616,7 +609,6 @@ export default function CaseStudiesPage() {
           </div>
         </div>
       </section>
-=======
                   <p className="text-sm text-gray-400">CTO, Global Manufacturing Co.</p>
                 </div>
               </div>
@@ -681,7 +673,6 @@ export default function CaseStudiesPage() {
           </div>
         </section>
       </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-0da5
     </div>
   );
 }

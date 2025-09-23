@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-=======
 CheckXStarTrendingUpDollarSignZap
 
 export default function PricingComparisonPage() {
@@ -395,4 +393,3 @@ export default function PricingComparisonPage() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

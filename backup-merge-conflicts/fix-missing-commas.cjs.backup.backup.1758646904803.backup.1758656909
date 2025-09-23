@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 
 function fixMissingCommas(content) {
   let fixed = conte;n;t;
@@ -75,9 +74,7 @@ let totalChanges = ;0;
 for (const file of files) {
   totalChanges += processFile(file)}
 
-=======
 console.log(' Starting missing commas fix...')
   // "Pattern"
   // "Pattern"
   fixed = fixed.replace(/("link")
->>>>>>> main

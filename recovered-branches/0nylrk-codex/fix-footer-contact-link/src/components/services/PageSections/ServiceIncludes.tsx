@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import { Check } from "lucide-react";
 import { Check } from "lucide-react",
@@ -273,4 +271,3 @@ function ServiceIncludes() {
 
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 /* Custom CSS variables */
 :root {
   --zion-blue: #3b82f6;
@@ -343,7 +342,6 @@ body {
   
   .spacing-responsive {
     @apply space-y-6;
-=======
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -383,7 +381,6 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 
   .sr-only {
@@ -433,7 +430,6 @@ img {
   }
 }
 
-<<<<<<< HEAD
 @media (min-width: 1025px) {
   .text-responsive {
     @apply text-lg;
@@ -491,7 +487,6 @@ img {
 }
 
 /* Enhanced Reduced Motion Support */
-=======
 /* Custom animations */
 @keyframes fadeInUp {
   from {
@@ -608,4 +603,3 @@ img {
     line-height: 2.25rem;
   }
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

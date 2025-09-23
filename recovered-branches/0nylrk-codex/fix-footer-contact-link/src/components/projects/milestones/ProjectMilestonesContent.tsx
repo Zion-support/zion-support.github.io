@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useStateuseEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useProjects } from '@/hooks/useProjects';
@@ -163,4 +161,3 @@ export function ProjectMilestonesContent() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

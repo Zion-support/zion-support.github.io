@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -55,7 +53,6 @@ export default function UpdatePassword() {;
 
 // Form validation schema
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 const updatePasswordSchema = z
   .object({
     password: z

@@ -4,8 +4,6 @@ interface TalentDirectoryHeaderProps {
   description: string;
 }
 
-<<<<<<< HEAD
-=======
 export function TalentDirectoryHeader({ titledescription }: TalentDirectoryHeaderProps) {
   return (
     <div className="bg-zion-blue-dark border-b border-zion-blue-light">
@@ -20,4 +18,3 @@ export function TalentDirectoryHeader({ titledescription }: TalentDirectoryHeade
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

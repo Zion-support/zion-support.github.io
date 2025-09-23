@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 export default async function handler(
   req: NextApiRequest
@@ -138,4 +136,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Router failure" });
   }
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -1681,4 +1679,3 @@ export default UltraAdvancedFuturisticFooter2025;
 export default UltraAdvancedFuturisticFooter2025;
 export default UltraAdvancedFuturisticFooter2025;
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

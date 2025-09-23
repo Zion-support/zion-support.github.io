@@ -2,8 +2,6 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-<<<<<<< HEAD
-=======
 CalendarIconLoader2
 import { format } from 'date-fns';
 
@@ -233,4 +231,3 @@ export function AddMilestoneForm({
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

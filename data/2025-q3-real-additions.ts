@@ -24,8 +24,6 @@ export interface RealAdditionService20o25Q3 {
 	rating?: number;
 	reviews?: number;
 }
-<<<<<<< HEAD
-=======
 export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 	{
 		id: 'ai-email-copilot',
@@ -444,4 +442,3 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		reviews: 120
 	}
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

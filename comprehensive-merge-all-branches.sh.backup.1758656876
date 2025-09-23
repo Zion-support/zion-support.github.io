@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Comprehensive Merge All Branches Script
-<<<<<<< HEAD
 # This script will systematically merge all unmerged branches with intelligent conflict resolution
 
 set -e
@@ -206,7 +205,6 @@ log_message "⏰ Completed at: $(date)"
 echo ""
 echo "🎯 All branches have been processed! Check the log file for detailed information."
 echo "📝 Log file: $LOG_FILE"
-=======
 # This script will merge all remote branches into main, resolving conflicts automatically
 
 set -e
@@ -400,4 +398,3 @@ run_with_timeout "git log --oneline -10" 30 || true
 
 echo "Merge operation completed at $(date)" >> "$LOG_FILE"
 print_success "✅ All branches have been processed and merged into main!"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

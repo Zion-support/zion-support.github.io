@@ -12,14 +12,12 @@ function getAllFiles(dir) {}
   return files};
 function resolveConflictsKeepIncoming(filePath) {}
   const text = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
       i++;
       // skip the separator
         out.push(lines[i]);
         i++}
       // skip the end marker
       continue}
-=======
   if (!text.includes('')) return false;
   const lines = text.split('\n');
   const out = [];
@@ -62,4 +60,3 @@ function main() {}
 main();
 cursor/website-audit-and-update-with-deployment-76dc;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
->>>>>>> main

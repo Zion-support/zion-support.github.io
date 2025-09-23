@@ -22,7 +22,6 @@ import { additionalLiveServices2025 } from '../../data/additional-live-services-
 import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
 import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
 import { realServicesQ22025 } from '../../data/real-services-q2-2025';
-<<<<<<< HEAD
 import { realServicesQ32025 } from '../../data/real-services-q3-2025';
 import { realServicesQ42025 } from '../../data/real-services-q4-2025';
 
@@ -106,7 +105,6 @@ const sampleServices: Service[] = [
     link: '/space-tech'
   }
 ];
-=======
 import { real2025Q3Additions } from '../../data/real-2025-q3-additions';
 
 const mapLocalToServiceItem = (item: any): ServiceItem => ({
@@ -125,7 +123,6 @@ const ServicesPage: NextPage = () => {
   const [filters, setFilters] = React.useState<Filters>({ categories: [] });
   const [modalOpen, setModalOpen] = React.useState(false);
   const [selected, setSelected] = React.useState<ServiceItem | null>(null);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[])
@@ -148,13 +145,11 @@ export default function ServicesIndexPage() {
       real2025Q2Additions as unknown[],
       augmentedServicesBatch3 as unknown[],
       realServicesQ22025 as unknown[],
-<<<<<<< HEAD
       realServicesQ32025 as unknown[],
       realServicesQ42025 as unknown[]
     );
     return acc;
   }, {} as Record<string, Service[]>);
-=======
       real2025Q3Additions as unknown[]
     );
   const byCategory: Record<string, unknown[]> = {};
@@ -227,7 +222,6 @@ export default function ServicesIndexPage() {
       throw new Error(err?.message || 'Failed to submit');
     }
   };
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -250,7 +244,6 @@ export default function ServicesIndexPage() {
               ))}
             </div>
           </div>
-<<<<<<< HEAD
         </section>
 
             {/* Featured Services */}
@@ -587,9 +580,7 @@ export default function ServicesIndexPage() {
             </motion.div>
           </div>
         </section>
-=======
         </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       </div>
     </UltraAdvancedFuturisticBackground>
   );
@@ -603,10 +594,7 @@ export default function ServicesIndexPage() {
       />
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 };
 
 export default ServicesPage;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

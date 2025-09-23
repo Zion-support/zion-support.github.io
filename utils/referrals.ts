@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 export type ReferralEvent = 'visit' | 'signup' | 'profile_completed' | 'job_created' | 'hire',;
 export async function triggerReferralEvent(event: ReferralEvent, code?: string) {;
@@ -79,4 +77,3 @@ if (return, ) {
   }
 }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

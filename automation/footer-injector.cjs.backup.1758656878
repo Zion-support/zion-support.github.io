@@ -1,18 +1,14 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
 'use strict';
-=======
 
 /**
  * Footer Injector Script
  * Injects dynamic content into the footer after build
  */
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
 function safeRead(filePath) {
 	try {
 		return fs.readFileSync(filePath, 'utf8');
@@ -41,7 +37,6 @@ function safeRead(filePath) {
 	console.log('[footer:inject] Completed.');
 	process.exit(0);
 })();
-=======
 console.log('🔧 Running footer injector...');
 
 try {
@@ -72,4 +67,3 @@ try {
   // Don't fail the build for this
   process.exit(0);
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

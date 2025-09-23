@@ -2,18 +2,14 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Cookie Policy - Zion Tech Group",
-<<<<<<< HEAD
   description: "Zion Tech Group's cookie policy explaining how we use cookies and similar technologies on our website.",
   keywords: "cookie policy, cookies, tracking technologies, website cookies, Zion Tech Group",
-=======
   description: "Learn how Zion Tech Group uses cookies and tracking technologies to improve your experience on our website.",
   keywords: "cookie policy, cookies, tracking, privacy, Zion Tech Group",
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
 };
 
 export default function CookiesPage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Hero Section */}
@@ -327,7 +323,6 @@ export default function CookiesPage() {
           </div>
         </section>
       </div>
-=======
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -632,7 +627,6 @@ export default function CookiesPage() {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
     </div>
   );
 }

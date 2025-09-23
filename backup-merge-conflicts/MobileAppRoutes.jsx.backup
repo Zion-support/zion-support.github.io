@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 const React from "react"; import MobileLaunchPage from "@/pages/MobileLaunchPage export default function MobileAppRoutes($1) { return (<> <Route path="launch" element={<MobileLaunchPage />}/> </>)} ;";";"""
 <<<<<<< HEAD:backup-merge-conflicts/MobileAppRoutes.jsx.backup
-=======
 import _React from 'react'; import MobileLaunchPage from '@/pages/MobileLaunchPage export default function MobileAppRoutes(_) { return (<> <Route path="launch" element={<MobileLaunchPage />}/> </>)} ;';';
 =======
 import React from 'react';
@@ -12,7 +10,6 @@ export default function MobileAppRoutes("props": "any) {;
       <Route path="launch" element={<MobileLaunchPage  />"}/>;
     </>);
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
 =======
 import _React from 'react'; import MobileLaunchPage from '@/pages/MobileLaunchPage export default function MobileAppRoutes(_) { return (<> <Route path="launch" element={<MobileLaunchPage />}/> </>)} ;';';

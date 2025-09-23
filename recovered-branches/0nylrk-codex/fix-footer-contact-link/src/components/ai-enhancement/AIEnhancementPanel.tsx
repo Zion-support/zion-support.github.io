@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useState } from 'react';
 import { CardContentCardHeaderCardTitleCardFooter } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
@@ -167,4 +165,3 @@ export function AIEnhancementPanel({
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

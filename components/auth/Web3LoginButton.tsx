@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useEffectuseState } from 'react';
 import dynamic from 'next/dynamic';
@@ -65,4 +63,3 @@ export default function Web3LoginButton() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

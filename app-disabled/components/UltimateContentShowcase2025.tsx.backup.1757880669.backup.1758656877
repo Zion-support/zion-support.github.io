@@ -1,27 +1,22 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-=======
 import React from 'react';
 =======
 'use client';
 
 import React, { useState, useEffect } from 'react';
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
 import Link from 'next/link';
 
 const UltimateContentShowcase2025 = () => {
   return (
-<<<<<<< HEAD
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-purple-100 text-purple-800 rounded-full px-6 py-2 mb-6">
             <span className="text-sm font-medium">⭐ ULTIMATE CONTENT COLLECTION</span>
-=======
     <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -35,12 +30,10 @@ const UltimateContentShowcase2025 = () => {
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
             <span className="text-sm font-medium">🚀 NEW 2025 CONTENT</span>
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Everything You Need to Master AI in 2025
           </h2>
-<<<<<<< HEAD
           <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
             Our comprehensive content library provides everything from beginner guides to advanced implementation strategies. 
             Learn from real-world case studies and access practical tools to accelerate your AI transformation.
@@ -113,13 +106,11 @@ const UltimateContentShowcase2025 = () => {
                   </div>
                 </div>
               </div>
-=======
           <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
             Discover our latest AI transformation guides, case studies, and success stories featuring 
             <span className="font-bold text-yellow-300"> 1,000%+ ROI</span> results from Fortune 500 companies.
           </p>
         </div>
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
 
               <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-green-500">
                 <div className="flex items-start justify-between">
@@ -184,7 +175,6 @@ const UltimateContentShowcase2025 = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
 
             {/* Free Resources */}
             <div className="bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl p-6 text-white">
@@ -260,7 +250,6 @@ const UltimateContentShowcase2025 = () => {
               Explore All Content
             </Link>
           </div>
-=======
           ))}
         </div>
 
@@ -272,7 +261,6 @@ const UltimateContentShowcase2025 = () => {
           >
             Get Your Custom AI Strategy
           </Link>
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
         </div>
       </div>
     </section>

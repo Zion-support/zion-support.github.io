@@ -8,8 +8,6 @@ interface EducationListProps {
   onDelete: (id: string) => void;
 }
 
-<<<<<<< HEAD
-=======
 export function EducationList({ educationEntriesonEditonDelete }: EducationListProps) {
   if (!educationEntries || educationEntries.length === 0) {
     return null;
@@ -29,4 +27,3 @@ export function EducationList({ educationEntriesonEditonDelete }: EducationListP
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

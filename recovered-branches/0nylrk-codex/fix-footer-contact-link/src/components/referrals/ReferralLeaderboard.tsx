@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
 import { Award } from "lucide-react";
 
@@ -62,4 +60,3 @@ export function ReferralLeaderboard() {
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

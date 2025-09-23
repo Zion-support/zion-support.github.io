@@ -1,6 +1,4 @@
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
 
 export default function QuantumCybersecurityPlatformPage() {
 	return (
@@ -23,4 +21,3 @@ export default function QuantumCybersecurityPlatformPage() {
 		</div>
 	);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

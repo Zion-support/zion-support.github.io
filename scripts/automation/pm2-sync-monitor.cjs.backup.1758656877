@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 /**
@@ -539,7 +538,6 @@ module.exports = {
   getPM2Status,
   attemptIssueResolution
 };
-=======
 #!/""usr/bin/env"" node;
 /**;
  * PM2 Sync Monitor System;
@@ -1552,4 +1550,3 @@ if (require.main === module) {
 ;
 module.exports = PM2SyncMonitor;
 module.exports = PM2SyncMonitor
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

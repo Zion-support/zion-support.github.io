@@ -1,8 +1,6 @@
 
 import { formatDistanceToNow } from "date-fns";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-=======
 import { CalendarUserFileTextBarChart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar } from "@/components/ui/avatar";
@@ -93,4 +91,3 @@ export function ApplicationRow({
     </TableRow>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

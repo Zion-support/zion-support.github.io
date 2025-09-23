@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { ServiceVariant } from '../types/service-variants';
 export interface NextGenInnovation2025 {
   id: string;
@@ -406,4 +404,3 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     reviews: 267
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

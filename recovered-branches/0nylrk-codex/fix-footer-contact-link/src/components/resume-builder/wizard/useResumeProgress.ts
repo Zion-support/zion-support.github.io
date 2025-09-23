@@ -18,8 +18,6 @@ export const useResumeProgress = (resume: Resume | null) => {
     completed += 1;
     
     // Work experience (1 point if at least one entry)
-<<<<<<< HEAD
-=======
 
 
 
@@ -48,4 +46,3 @@ export const useResumeProgress = (resume: Resume | null) => {
 
   return progress;
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

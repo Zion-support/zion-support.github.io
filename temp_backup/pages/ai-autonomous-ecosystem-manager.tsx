@@ -4,8 +4,6 @@ export default function AIAutonomousEcosystemManager() {
 	return (
 		<ServiceLanding
 			title="AI Autonomous Ecosystem Manager"
-<<<<<<< HEAD
-=======
 			description="Coordinate and optimize complex, multi-system environments with autonomous agents that observe, decide, and act across your stack."
 			subtitle="Autonomous agents orchestrating your business operations"
 			pricePerMonthUSD={4999}
@@ -25,4 +23,3 @@ export default function AIAutonomousEcosystemManager() {
 		/>
 	);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

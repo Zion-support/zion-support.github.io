@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -19,7 +18,6 @@ const TechnologyImplementationStrategies: NextPage = () => {
 };
 
 export default TechnologyImplementationStrategies;
-=======
 export default function TechnologyImplementationStrategiesPage() {
   return (
     <div className="container mx-auto px-4 py-10">
@@ -30,5 +28,4 @@ export default function TechnologyImplementationStrategiesPage() {
 }
 =======
 export default function ChatContent10() { return <div className="py-10 text-white">Content coming soon.</div>; }
->>>>>>> origin/cursor/build-zion-ai-marketplace-service-listing-9ebf
 >>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e

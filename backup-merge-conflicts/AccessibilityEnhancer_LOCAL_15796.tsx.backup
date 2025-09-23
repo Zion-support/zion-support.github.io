@@ -1,5 +1,4 @@
 =======
-<<<<<<< HEAD:backup-merge-conflicts/AccessibilityEnhancer_LOCAL_15796.tsx.backup
 <<<<<<< HEAD:src/components/AccessibilityEnhancer_LOCAL_15796.tsx
 import React from 'react',;',';';
     ;
@@ -16,7 +15,6 @@ export default function AccessibilityEnhancerLOCAL15796("props": "any) {return (
     </div>';';
   );';';';
 "}";
-=======
 export default function AccessibilityEnhancerLOCAL15796(props: any) {return (
         <div className="min-h-screen bg-white">
       <SEO title="AccessibilityEnhancerLOCAL15796 - Zion Tech Group" description="Professional AccessibilityEnhancerLOCAL15796 services by Zion Tech Group"  />
@@ -54,7 +52,6 @@ const React from "react",;"
   ";"
   ";"
   """
->>>>>>> main:src_backup_temp/components/AccessibilityEnhancer_LOCAL_15796.tsx
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main

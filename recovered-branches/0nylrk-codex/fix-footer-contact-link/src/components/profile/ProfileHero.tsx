@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { AvatarImageAvatarFallback } from "@/components/ui/avatar";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Badge } from "@/components/ui/badge";
@@ -101,4 +99,3 @@ export function ProfileHero({
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

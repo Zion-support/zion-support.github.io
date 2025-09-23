@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
 import { 
   Mail, Phone, MapPin, Send, CheckCircle, AlertCircle,
   User, Building, MessageSquare, Globe, Clock, Star
@@ -495,4 +493,3 @@ const EnhancedContactForm: React.FC = () => {
 };
 
 export default EnhancedContactForm;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -135,8 +135,6 @@ export default function EnhancedServicesShowcase20o25() {
 
   return (
     <EnhancedFuturisticBackground 
-<<<<<<< HEAD
-=======
       intensity="high"
       colorScheme="quantum"
       particleCount={300}
@@ -449,4 +447,3 @@ export default function EnhancedServicesShowcase20o25() {
     </EnhancedFuturisticBackground>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -39,8 +39,6 @@ export interface EmergingTechService20o29V2 {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
   {
     id: 'quantum-internet-security-gateway',
@@ -299,4 +297,3 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -101,7 +100,6 @@ export default function Revolutionary2026Pricing() {
     { id: 'popularity', name: 'Most Popular' },
     { id: 'name', name: 'Name A-Z' }
   ];
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -118,7 +116,6 @@ import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovat
 export default function Revolutionary2026Pricing() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -127,7 +124,6 @@ export default function Revolutionary2026Pricing() {
     website: 'https://ziontechgroup.com'
   };
 
-<<<<<<< HEAD
   // Calculate pricing statistics
   const pricingStats = {
     totalServices: all2026Services.length,
@@ -287,7 +283,6 @@ export default function Revolutionary2026Pricing() {
                       </option>
                     ))}
                   </select>
-=======
   // Combine all services
   const allServices = [
     ...ultimate2026Services,
@@ -902,12 +897,10 @@ export default function Revolutionary2026Pricing() {
                     <h5 className="text-white font-semibold mb-1">Future-Proof Technology</h5>
                     <p className="text-gray-400">Built for the challenges and opportunities of tomorrow</p>
                   </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 </div>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
 
         {/* Services Pricing Grid */}
@@ -1182,10 +1175,8 @@ export default function Revolutionary2026Pricing() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-=======
         </div>
       </section>
     </>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   );
 }

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useState } from "react";
 import { AvatarImageAvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -168,4 +166,3 @@ export function MobileChatView({ contactmessagesonBackonSendMessage }: MobileCha
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

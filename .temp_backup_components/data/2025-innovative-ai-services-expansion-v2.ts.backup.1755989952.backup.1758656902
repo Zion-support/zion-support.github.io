@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface AIService {
   id: string;
   name: string;
@@ -29,13 +28,10 @@ export interface AIService {
   icon: string;
   color: string;
   popular: boolean;
-=======
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-a930
   launchDate: string;
   customers: number;
   rating: number;
   reviews: number;
-<<<<<<< HEAD
 }
 
 export const innovative2025AIServicesExpansionV2: AIService[] = [
@@ -623,7 +619,6 @@ export const innovative2025AIServicesExpansionV2: AIService[] = [
     customers: 450,
     rating: 4.7,
     reviews: 89
-=======
       trialDays: 14,
       setupTime: '8 hours'
     },
@@ -820,6 +815,5 @@ export const innovative2025AIServicesExpansionV2: AIService[] = [
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-a930
   }
 ];

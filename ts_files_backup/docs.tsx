@@ -15,8 +15,6 @@ export default function DocsPage() {
     {
       title: 'Getting Started',
       links: [
-<<<<<<< HEAD
-=======
         { name: ''Overview', 'href: '/enhanced-services-showcase' },
         { name: 'Pricing & Market 'Benchmarks', 'href: '/market-pricing' },
         { name: 'Contact 'Sales', 'href: '/contact' }]
@@ -150,4 +148,3 @@ export default function DocsPage() {
     </UltraAdvancedFuturisticBackground>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

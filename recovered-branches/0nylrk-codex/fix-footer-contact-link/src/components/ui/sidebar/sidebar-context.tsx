@@ -3,8 +3,6 @@ import type { CSSProperties } from "react"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { cn } from "@/lib/utils"
-<<<<<<< HEAD
-=======
 import type { SidebarContext as SidebarContextTypeSidebarState } from "../sidebar.types"
 
 const SIDEBAR_COOKIE_NAME = "sidebar:state"
@@ -133,4 +131,3 @@ export const SidebarProvider = React.forwardRef<
 SidebarProvider.displayName = "SidebarProvider"
 
 export { SidebarContext }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

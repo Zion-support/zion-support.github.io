@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
@@ -57,7 +56,6 @@ export default function SpaceTechPage() {
     </Layout>
   );
 }
-=======
 import { motion } from 'framer-motion';
 import { Rocket, Globe, Satellite, Brain, Users, Target, Atom } from 'lucide-react';
 import Layout from '../components/layout/Layout';
@@ -322,4 +320,3 @@ export default function SpaceTech() {
 };
 
 export default SpaceTech;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

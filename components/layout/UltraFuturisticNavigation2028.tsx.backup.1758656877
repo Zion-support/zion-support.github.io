@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -144,7 +143,6 @@ const serviceCategories = [
   }
 ];
 
-=======
 "use client";
 
 import React, { useState, useEffect } from 'react',
@@ -841,15 +839,12 @@ const companyLinks = [
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 const companyLinks = [
   { name: '🏠 Home', href: '/', icon: Home },
   { name: '🚀 2028 Services', href: '/2028-services-showcase', icon: Rocket },
   { name: '⭐ Ultimate 2028', href: '/ultimate-2028-services-showcase', icon: Star },
   { name: '💰 2028 Pricing', href: '/revolutionary-2028-pricing', icon: DollarSign },
   { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase },
-<<<<<<< HEAD
-=======
 
     services: [;
       {
@@ -903,14 +898,12 @@ const company_links = [;
   { name: '💰 2028 Pricing', href: '/revolutionary - 2028 - pricing', icon: DollarSign },
   { name: '📊 Case Studies', href: '/case - studies', icon: Briefcase },
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen },
   { name: '🎯 About Us', href: '/about', icon: Users },
   { name: '📞 Contact', href: '/contact', icon: MessageCircle },
   { name: '🔒 Support', href: '/support', icon: ShieldCheck }
 ];
 
-<<<<<<< HEAD
 const resourceLinks = [
   { name: '📖 Documentation', href: '/docs', icon: BookOpen },
   { name: '🎥 Video Tutorials', href: '/tutorials', icon: Video },
@@ -948,7 +941,6 @@ export default function UltraFuturisticNavigation2028() {
   return (
     <nav className="relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30">
       {/* Top Contact Bar */}
-=======
 
 
 
@@ -1036,7 +1028,6 @@ export default function UltraFuturisticNavigation2028() {
     <nav className="relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30">
       {/* Top Contact Bar */}
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 border-b border-purple-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-10 text-xs text-purple-200">
@@ -1063,7 +1054,6 @@ export default function UltraFuturisticNavigation2028() {
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Main Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -1088,7 +1078,6 @@ export default function UltraFuturisticNavigation2028() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {/* Service Categories */}
-=======
 
                 href={contactInfo && contactInfo.website}
                 className='text-purple-300 hover:text-white transition-colors'>                {contactInfo && contactInfo.website}      {/* Top Contact Bar */}
@@ -1307,14 +1296,12 @@ function UltraFuturisticNavigation2028() {
                                   {service.price}
 
                                 </span>                              </div>            {/* Service Categories */}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <div className="relative group">
               <button className="flex items-center space-x-2 text-purple-200 hover:text-white transition-colors py-2">
                 <Sparkles className="w-5 h-5" />
                 <span>Services</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
-<<<<<<< HEAD
               
               {/* Mega Menu */}
               <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
@@ -1329,7 +1316,6 @@ function UltraFuturisticNavigation2028() {
                         <p className="text-sm text-purple-300">{category.description}</p>
                         <div className="space-y-2">
                           {category.services.slice(0, 2).map((service) => (
-=======
             <div className="relative group">;
               <button className="flex items-center space-x-2 text-purple-200 hover:text-white transition-colors py-2">;
                 <Sparkles className="w-5 h-5" />;
@@ -1352,7 +1338,6 @@ function UltraFuturisticNavigation2028() {
                         <p className="text-sm text-purple-300">{category && category.description}</p>;
                         <div className="space-y-2">;
                           {category && category.services.slice(0, 2).map((service) => (;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                             <Link
                               key={service.name}
                               href={service.href}
@@ -1367,7 +1352,6 @@ function UltraFuturisticNavigation2028() {
                                 </div>
                                 <span className="text-xs text-purple-400 font-medium">{service.price}</span>
                               </div>
-<<<<<<< HEAD
                             </Link>
                           ))}
                         </div>
@@ -1375,7 +1359,6 @@ function UltraFuturisticNavigation2028() {
                     ))}
                   </div>
                   <div className="mt-6 pt-6 border-t border-purple-500/20">
-=======
                                 </span>                              </div>
 
 
@@ -1408,13 +1391,11 @@ function UltraFuturisticNavigation2028() {
                       <Link
                         href='/services'
                         className='px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'                      >                  <div className="mt-6 pt-6 border-t border-purple-500/20">
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     <div className="flex items-center justify-between">
                       <p className="text-purple-300">Explore all our cutting-edge services</p>
                       <Link
                         href="/services"
                         className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
-<<<<<<< HEAD
                       >
                         View All Services
                       </Link>
@@ -1423,7 +1404,6 @@ function UltraFuturisticNavigation2028() {
                 </div>
               </div>
             </div>
-=======
                         View All Services
 
 
@@ -1497,7 +1477,6 @@ function UltraFuturisticNavigation2028() {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
             {/* Company Links */}
             {companyLinks.slice(1, 5).map((link) => (
@@ -1509,7 +1488,6 @@ function UltraFuturisticNavigation2028() {
                 <link.icon className="w-4 h-4" />
                 <span>{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>
               </Link>
-<<<<<<< HEAD
             ))}
           </div>
 
@@ -1518,7 +1496,6 @@ function UltraFuturisticNavigation2028() {
             {/* Search */}
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />
-=======
 
             ))}
           </div>
@@ -1544,12 +1521,10 @@ function UltraFuturisticNavigation2028() {
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <input
                 type="text"
                 placeholder="Search services..."
                 value={searchQuery}
-<<<<<<< HEAD
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-64 pl-10 pr-4 py-2 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
@@ -1570,7 +1545,6 @@ function UltraFuturisticNavigation2028() {
               onClick={toggleMenu}
               className="text-purple-200 hover:text-white transition-colors p-2"
             >
-=======
 
 
             >;
@@ -1594,14 +1568,12 @@ function UltraFuturisticNavigation2028() {
               )}            </button>            <button
               onClick={toggleMenu}
               className="text-purple-200 hover:text-white transition-colors p-2">;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -1615,7 +1587,6 @@ function UltraFuturisticNavigation2028() {
               {/* Mobile Search */}
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />
-=======
 
 
 
@@ -1682,25 +1653,21 @@ function UltraFuturisticNavigation2028() {
               {/* Mobile Search */}
               <div className="relative">;
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <input
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery}
-<<<<<<< HEAD
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                 />
               </div>
 
               {/* Mobile Service Categories */}
-=======
 
 
               {/* Mobile Service Categories */}
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white border-b border-purple-500/30 pb-2">
                   Services
@@ -1713,13 +1680,11 @@ function UltraFuturisticNavigation2028() {
                     </div>
                     <div className="ml-8 space-y-2">
                       {category.services.map((service) => (
-<<<<<<< HEAD
                         <Link
                           key={service.name}
                           href={service.href}
                           onClick={closeMenu}
                           className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
-=======
 
 
                         <Link
@@ -1738,14 +1703,11 @@ function UltraFuturisticNavigation2028() {
                           <span className='text-xs text-purple-400 font-medium'>
                             {service.price}
                           </span>                        </Link>                          className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                         >
                           <h4 className="text-sm font-medium text-white">{service.name}</h4>
                           <p className="text-xs text-purple-300">{service.description}</p>
                           <span className="text-xs text-purple-400 font-medium">{service.price}</span>
-<<<<<<< HEAD
                         </Link>
-=======
 
 
                         </Link>
@@ -1775,17 +1737,14 @@ function UltraFuturisticNavigation2028() {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       ))}
                     </div>
                   </div>
                 ))}
               </div>
 
-<<<<<<< HEAD
               {/* Mobile Company Links */}
               <div className="space-y-4">
-=======
 
 
 
@@ -1804,13 +1763,11 @@ function UltraFuturisticNavigation2028() {
                       key={link.name}
                       href={link.href}
                       onClick={closeMenu}              <div className="space-y-4">
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <h3 className="text-lg font-semibold text-white border-b border-purple-500/30 pb-2">
                   Company
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
                   {companyLinks.map((link) => (
-<<<<<<< HEAD
                     <Link
                       key={link.name}
                       href={link.href}
@@ -1826,7 +1783,6 @@ function UltraFuturisticNavigation2028() {
 
               {/* Mobile CTA */}
               <div className="pt-4 border-t border-purple-500/30">
-=======
                       key={link.name}
                       href={link.href}
                       onClick={closeMenu}
@@ -2005,7 +1961,6 @@ function UltraFuturisticNavigation2028() {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <Link
                   href="/contact"
                   onClick={closeMenu}
@@ -2016,7 +1971,6 @@ function UltraFuturisticNavigation2028() {
               </div>
             </div>
           </motion.div>
-<<<<<<< HEAD
         )}
       </AnimatePresence>
 
@@ -2029,7 +1983,6 @@ function UltraFuturisticNavigation2028() {
                 <Link
                   key={service.name}
                   href={service.href}
-=======
 
         )}
       </AnimatePresence>
@@ -2074,7 +2027,6 @@ function UltraFuturisticNavigation2028() {
                     </span>                  </div>                <Link
                   key={service.name}
                   href={service.href}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
                 >
                   <div className="flex items-center justify-between">
@@ -2084,7 +2036,6 @@ function UltraFuturisticNavigation2028() {
                     </div>
                     <span className="text-xs text-purple-400 font-medium">{service.price}</span>
                   </div>
-<<<<<<< HEAD
                 </Link>
               ))}
             </div>
@@ -2094,7 +2045,6 @@ function UltraFuturisticNavigation2028() {
     </nav>
   );
 }
-=======
                     </span>                  </div>
 
 
@@ -2172,4 +2122,3 @@ function UltraFuturisticNavigation2028() {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

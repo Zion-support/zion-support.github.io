@@ -1,10 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 const EnhancedFooter = () => {
   const currentYear = new Date().getFullYear();
 

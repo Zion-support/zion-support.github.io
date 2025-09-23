@@ -25,8 +25,6 @@ export function PaymentButton({
   buttonText = "Purchase",
   className,
   onPaymentInitiated,
-<<<<<<< HEAD
-=======
   redirectUrl}: PaymentButtonProps) {
   const [isProcessingsetIsProcessing] = useState(false);
   const { isAuthenticateduser } = useAuth();
@@ -106,4 +104,3 @@ export function PaymentButton({
     </Button>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

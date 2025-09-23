@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import { useState } from "react",
 import { useForm } from "react-hook-form",
@@ -145,7 +143,6 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <Card>;

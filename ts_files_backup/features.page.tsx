@@ -1,6 +1,4 @@
 import EnhancedLayout from '../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-=======
 BotGlobe2MonitorSmartphone
 
 export default function FeaturesPage() {
@@ -27,4 +25,3 @@ export default function FeaturesPage() {
     </EnhancedLayout>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

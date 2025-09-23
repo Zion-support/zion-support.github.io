@@ -8,8 +8,6 @@ interface ExportToCSVProps {
   filename?: string;
 }
 
-<<<<<<< HEAD
-=======
 export const ExportToCSV = ({ quotesfilename = "quote-requests" }: ExportToCSVProps) => {
   const handleExport = () => {
     // Define CSV Headers
@@ -86,4 +84,3 @@ export const ExportToCSV = ({ quotesfilename = "quote-requests" }: ExportToCSVPr
     </Button>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

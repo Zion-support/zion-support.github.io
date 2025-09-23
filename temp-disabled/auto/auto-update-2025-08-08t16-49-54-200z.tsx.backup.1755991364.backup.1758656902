@@ -1,5 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
 
 export default function AutoUpdate_2025_08_08T16_49_54_200Z() {
   return (
@@ -9,7 +8,6 @@ export default function AutoUpdate_2025_08_08T16_49_54_200Z() {
     </main>
   );
 }
-=======
 import Head from "next/head";
 
 const Page: React.FC = () => {
@@ -29,5 +27,4 @@ const Page: React.FC = () => {
 export default Page;
 =======
 export default function Page() { return null; }
->>>>>>> origin/cursor/build-partner-integration-portal-and-api-da2c
 >>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import React from 'react';
 import { format  } from 'date-fns';
@@ -158,4 +156,3 @@ function MessageBubble() {
     </div>);
 }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

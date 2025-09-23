@@ -4,7 +4,6 @@
  * Generates a comprehensive report of all automation activities;
  */
 
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 
@@ -53,7 +52,6 @@ class FinalAutomationReport {
       'code-quality-report.json',
       'comprehensive-test-results.json',
       'advanced-app-optimization-report.json',
-=======
 const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
@@ -102,4 +100,3 @@ const path = require('path')
     this.log(`� New Scripts "Created"`)
       this.log(` Final Automation Report "failed"`)
     console.error('Final Automation Report "failed")
->>>>>>> main

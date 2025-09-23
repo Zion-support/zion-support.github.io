@@ -9,8 +9,6 @@ interface MainNavigationProps {
 
 export function MainNavigation({ className }: MainNavigationProps) {
   return (
-<<<<<<< HEAD
-=======
     <nav className={cn("hidden md:flex items-center space-x-6"className)}>
       <NavLink
         to="/"
@@ -64,4 +62,3 @@ export function MainNavigation({ className }: MainNavigationProps) {
     </nav>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

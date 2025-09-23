@@ -20,8 +20,6 @@ export const quoteRequestService ={
     // Format the data to include talent_name
     return data.map((item: any) => ({
       ...item,
-<<<<<<< HEAD
-=======
       talent_name: item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[];
   },
   
@@ -112,4 +110,3 @@ export const quoteRequestService ={
     return true;
   }
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

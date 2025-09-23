@@ -49,9 +49,7 @@ const contact ={
   website: 'https://ziontechgroup.com'
 };
 
-<<<<<<< HEAD
 export const innovativeMicroSaasSolutions20o25: InnovativeMicroSaasSolution[] = [
-=======
 export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
   // Minimal seed items kept for build correctness
   {
@@ -198,4 +196,3 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
 ];
 
 export default innovativeMicroSaasSolutions2025;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

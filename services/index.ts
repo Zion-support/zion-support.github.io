@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 // Export all micro SaaS services
 export { urlShortenerService } from './urlShortenerService';
@@ -25,7 +23,6 @@ export type {;
 export type {
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

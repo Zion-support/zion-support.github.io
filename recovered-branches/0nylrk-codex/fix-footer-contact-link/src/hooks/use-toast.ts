@@ -1,7 +1,5 @@
 import {
   useToast as useToastHook,
-<<<<<<< HEAD
-=======
   Toast} from "@/components/ui/toast";
 
 // Extend the Toast component props with common toast options
@@ -43,4 +41,3 @@ export const toast = baseToast as typeof baseToast & {
   error: (error: string) => void;
   success: (message: string) => void;
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

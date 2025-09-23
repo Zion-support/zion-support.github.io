@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useEffectuseState } from "react";
 import { CardContentCardHeaderCardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -161,4 +159,3 @@ export function UpcomingInterviewsCard() {
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

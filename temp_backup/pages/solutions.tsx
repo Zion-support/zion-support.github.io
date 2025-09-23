@@ -1,6 +1,4 @@
 import Layout from '../components/layout/Layout';
-<<<<<<< HEAD
-=======
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -387,4 +385,3 @@ const SolutionsPage: React.FC = () => {
 };
 
 export default Solutions;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

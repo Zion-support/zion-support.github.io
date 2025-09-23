@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { render, screen } from @testing-library/react';import ProductCard from @/components/ProductCard';// Use ProductListing from @/types/listings'; as that's what Marketplace.tsx provides'import { ProductListing } from @/types/listings';import { AuthProvider } from @/context/auth/AuthProvider';import { Provider } from react-redux';import { store } from @/store'; // Assuming store is correctly set up for tests'import { FavoritesProvider } from @/context/FavoritesContext';import { GlobalSnackbarProvider } from @/context/SnackbarContext'; // Assuming this is the correct Snackbar provider'import { captureException } from @/utils/sentry';
 // Mock next/router;
 const mockPush = jest.fn();
@@ -81,7 +80,6 @@ describe('ProductCard', () => {'  beforeEach(() => {
 
   // Add more tests for interactions like "Add to Cart", "Buy Now" (checking disabled state based on auth), wishlist toggle"  // For example:"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
   // it('calls onBuy when Buy Now is clicked and user is authenticated', () => { ... });  // it('disables Buy Now button if user is not authenticated', () => { ... });  // it('adds item to cart when Add to Cart is clicked', () => { ... });});
-=======
 import { render, screen, fireEvent } from '@testing-library/react';
 import ProductCard from '@/components/ProductCard';
 import { Product } from '@/types/product'; // Assuming this path is correct
@@ -301,4 +299,3 @@ describe('ProductCard', () => {
   });
 });
 ```
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

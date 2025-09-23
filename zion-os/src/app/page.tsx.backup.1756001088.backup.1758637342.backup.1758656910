@@ -4,7 +4,6 @@ export default function HomePage() {
   const featuredServices = services.slice(0, 6);
 
   return (
-<<<<<<< HEAD
     <div className="space-y-12">
       {/* Hero Section */}
       <div className="space-y-6">
@@ -84,7 +83,6 @@ export default function HomePage() {
           </a>
         </div>
       </div>
-=======
     <div className="space-y-8">
       <header className="text-center space-y-4">
         <h1 className="text-4xl font-bold text-high-contrast">Zion OS</h1>
@@ -157,7 +155,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/enhance-accessibility-and-site-performance-5d26
     </div>
   );
 }

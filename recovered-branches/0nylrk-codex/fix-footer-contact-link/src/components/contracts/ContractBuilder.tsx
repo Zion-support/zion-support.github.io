@@ -1,7 +1,5 @@
 
 import { useState } from "react";
-<<<<<<< HEAD
-=======
 import { DialogContent } from "@/components/ui/dialog";
 import { TabsListTabsTriggerTabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
@@ -125,4 +123,3 @@ export function ContractBuilder({
     </Dialog>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

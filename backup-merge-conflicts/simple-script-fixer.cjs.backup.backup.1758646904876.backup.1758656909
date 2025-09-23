@@ -10,7 +10,6 @@ class SimpleScriptFixer {}
   constructor() {}
     this.projectRoot = path.join(__dirname, '..');
     this.fixedCount = 0;
-<<<<<<< HEAD
     this.errorCount = 0}
 
   async log(message) {
@@ -19,7 +18,6 @@ class SimpleScriptFixer {}
   async findScriptFiles() {
     const scriptDirs = [path.join(this.projectRoot, 'scripts'),
       path.join(this.projectRoot, 'scripts/automation')
-=======
     this.errorCount = 0};
   async log(message) {}
     console.log(`[${new Date().toISOString()}] ${message}`)};
@@ -114,4 +112,3 @@ if (require.main === module) {}
   const fixer = new SimpleScriptFixer();
   fixer.run().catch(console.error)};
 module.exports = SimpleScriptFixer;
->>>>>>> main

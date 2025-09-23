@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 export interface RealMicroSaasService {
 export interface RealMicroSaasService {;
@@ -2962,7 +2960,6 @@ export const getServicesByCategory = (category: string) =>: any {
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 

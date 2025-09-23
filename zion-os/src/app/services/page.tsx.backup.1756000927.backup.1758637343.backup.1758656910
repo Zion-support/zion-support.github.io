@@ -1,20 +1,16 @@
 import Link from "next/link";
 
 export const metadata = {
-<<<<<<< HEAD
   title: "Services - Zion Tech Group - AI, Quantum Computing & Enterprise Solutions",
   description: "Comprehensive technology services including AI automation, quantum computing, cybersecurity, enterprise IT, and space technology solutions.",
   keywords: "services, AI automation, quantum computing, cybersecurity, enterprise IT, space technology, Zion Tech Group",
-=======
   title: "Services - Zion Tech Group | AI, Quantum Computing, Cybersecurity & Enterprise Solutions",
   description: "Comprehensive technology services including AI solutions, quantum computing, cybersecurity, enterprise IT, and space technology. Transform your business with Zion Tech Group.",
   keywords: "AI services, quantum computing, cybersecurity, enterprise IT, space technology, technology solutions, Zion Tech Group",
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
 };
 
 export default function ServicesPage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
@@ -34,7 +30,6 @@ export default function ServicesPage() {
             {/* AI & Automation */}
             <div className="card group">
               <div className="w-16 h-16 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-500/30 transition-colors">
-=======
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -56,12 +51,10 @@ export default function ServicesPage() {
             {/* AI Services */}
             <div className="card group">
               <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-500/30 transition-colors">
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
                 <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
               </div>
-<<<<<<< HEAD
               <h3 className="text-2xl font-bold mb-4">AI & Automation</h3>
               <p className="text-gray-400 mb-6">
                 Transform your business operations with intelligent automation solutions that learn, adapt, and scale with your needs.
@@ -94,7 +87,6 @@ export default function ServicesPage() {
             {/* Quantum Computing */}
             <div className="card group">
               <div className="w-16 h-16 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-purple-500/30 transition-colors">
-=======
               <h3 className="text-2xl font-bold mb-4">AI & Machine Learning</h3>
               <p className="text-gray-400 mb-6 leading-relaxed">
                 Harness the power of artificial intelligence to automate operations, 
@@ -134,13 +126,11 @@ export default function ServicesPage() {
             {/* Quantum Services */}
             <div className="card group">
               <div className="w-16 h-16 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-500/30 transition-colors">
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
                 <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
               <h3 className="text-2xl font-bold mb-4">Quantum Computing</h3>
-<<<<<<< HEAD
               <p className="text-gray-400 mb-6">
                 Harness the power of quantum mechanics to solve complex problems that are impossible for classical computers.
               </p>
@@ -166,7 +156,6 @@ export default function ServicesPage() {
               </div>
               <Link href="/quantum-services" className="btn-primary w-full">
                 Learn More
-=======
               <p className="text-gray-400 mb-6 leading-relaxed">
                 Leverage next-generation quantum computing to solve complex problems 
                 and gain competitive advantages in finance, logistics, and research.
@@ -199,24 +188,19 @@ export default function ServicesPage() {
               </ul>
               <Link href="/quantum-services" className="btn-primary">
                 Explore Quantum Services
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
               </Link>
             </div>
 
             {/* Cybersecurity */}
             <div className="card group">
-<<<<<<< HEAD
               <div className="w-16 h-16 bg-red-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-red-500/30 transition-colors">
                 <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-=======
               <div className="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-500/30 transition-colors">
                 <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
               <h3 className="text-2xl font-bold mb-4">Cybersecurity</h3>
-<<<<<<< HEAD
               <p className="text-gray-400 mb-6">
                 Advanced security solutions to protect your digital assets and ensure compliance with industry standards.
               </p>
@@ -242,7 +226,6 @@ export default function ServicesPage() {
               </div>
               <Link href="/cybersecurity" className="btn-primary w-full">
                 Learn More
-=======
               <p className="text-gray-400 mb-6 leading-relaxed">
                 Protect your digital assets with advanced threat detection, 
                 compliance automation, and enterprise-grade security solutions.
@@ -275,24 +258,19 @@ export default function ServicesPage() {
               </ul>
               <Link href="/cybersecurity" className="btn-primary">
                 Explore Security Services
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
               </Link>
             </div>
 
             {/* Enterprise IT */}
             <div className="card group">
-<<<<<<< HEAD
               <div className="w-16 h-16 bg-green-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-green-500/30 transition-colors">
                 <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-=======
               <div className="w-16 h-16 bg-red-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red-500/30 transition-colors">
                 <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
               </div>
               <h3 className="text-2xl font-bold mb-4">Enterprise IT</h3>
-<<<<<<< HEAD
               <p className="text-gray-400 mb-6">
                 Comprehensive IT infrastructure solutions designed for modern enterprise needs and scalability.
               </p>
@@ -354,7 +332,6 @@ export default function ServicesPage() {
               </div>
               <Link href="/ai-consciousness-evolution" className="btn-primary w-full">
                 Learn More
-=======
               <p className="text-gray-400 mb-6 leading-relaxed">
                 Build scalable, resilient infrastructure with cloud migration, 
                 digital transformation consulting, and managed IT services.
@@ -387,15 +364,12 @@ export default function ServicesPage() {
               </ul>
               <Link href="/enterprise-it" className="btn-primary">
                 Explore IT Services
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
               </Link>
             </div>
 
             {/* Space Technology */}
             <div className="card group">
-<<<<<<< HEAD
               <div className="w-16 h-16 bg-indigo-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-indigo-500/30 transition-colors">
-=======
               <div className="w-16 h-16 bg-yellow-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-yellow-500/30 transition-colors">
                 <svg className="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
@@ -440,12 +414,10 @@ export default function ServicesPage() {
             {/* Zion OS Platform */}
             <div className="card group">
               <div className="w-16 h-16 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-500/30 transition-colors">
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
                 <svg className="w-8 h-8 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                 </svg>
               </div>
-<<<<<<< HEAD
               <h3 className="text-2xl font-bold mb-4">Space Technology</h3>
               <p className="text-gray-400 mb-6">
                 Cutting-edge space technology solutions for satellite operations and space exploration missions.
@@ -606,7 +578,6 @@ export default function ServicesPage() {
           </div>
         </section>
       </div>
-=======
               <h3 className="text-2xl font-bold mb-4">Zion OS Platform</h3>
               <p className="text-gray-400 mb-6 leading-relaxed">
                 Launch sovereign AI-powered digital economies with our unified 
@@ -668,7 +639,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
     </div>
   );
 }

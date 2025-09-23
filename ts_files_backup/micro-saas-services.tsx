@@ -2,8 +2,6 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { 
-<<<<<<< HEAD
-=======
   Brain
   Monitor
   Search
@@ -542,4 +540,3 @@ export default function MicroSaasServicesPage() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

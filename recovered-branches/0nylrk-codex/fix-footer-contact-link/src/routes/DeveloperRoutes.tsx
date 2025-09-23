@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from "react";
 import { NavigateRoutes } from "react-router-dom";
 import DeveloperPortal from "../pages/DeveloperPortal";
@@ -24,4 +22,3 @@ export default function DeveloperRoutes() {
     </Routes>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

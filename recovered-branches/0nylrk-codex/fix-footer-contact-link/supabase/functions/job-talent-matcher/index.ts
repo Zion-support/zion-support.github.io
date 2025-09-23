@@ -5,8 +5,6 @@ import { processJobMatching, storeMatchResults } from "./job-matching.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-<<<<<<< HEAD
-=======
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 
 // Initialize the Supabase client
@@ -82,4 +80,3 @@ serve(async (req) => {
     );
   }
 });
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,8 +1,6 @@
 
 import { UseFormReturn } from "react-hook-form";
 import { 
-<<<<<<< HEAD
-=======
   FormField
   FormItem
   FormLabel
@@ -155,4 +153,3 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
     />
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

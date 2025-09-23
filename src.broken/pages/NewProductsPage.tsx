@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { useState } from "react",
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
@@ -24,4 +22,3 @@ export default function NewProductsPage() {
     />
   ),
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -45,7 +44,6 @@ export function WhitelabelRequestForm() {
     },
   });
   
-=======
 
 import React from 'react';
 import { useForm  } from 'react-hook-form';
@@ -87,12 +85,10 @@ export function WhitelabelRequestForm() {
       headline: 'AI Marketplace'
       subtitle: 'Find the best AI talent'
       cta: 'Get Started'}})
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const onSubmit = async (values: FormValues) => {
     try {
       // Prepare the data
       const tenantData = {
-<<<<<<< HEAD
         brand_name: values.brand_name,
         subdomain: values.subdomain,
         custom_domain: values.custom_domain || null,
@@ -105,7 +101,6 @@ export function WhitelabelRequestForm() {
         }
       };
       
-=======
         brand_name: values.brand_name
         subdomain: values.subdomain
         custom_domain: values.custom_domain |null
@@ -131,14 +126,12 @@ export function WhitelabelRequestForm() {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')
         .insert(tenantData)
         .select()
         .single();
-<<<<<<< HEAD
       
       if (error) throw error;
       
@@ -158,7 +151,6 @@ export function WhitelabelRequestForm() {
     }
   };
 
-=======
       if (error) throw error;
       toast({
         title: 'White-label tenant created!'
@@ -262,7 +254,6 @@ export function WhitelabelRequestForm() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
@@ -295,10 +286,7 @@ export function WhitelabelRequestForm() {;
                   </FormItem>
                 )}
               />
-<<<<<<< HEAD
               
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <FormField
                 control={form.control}
                 name="subdomain"
@@ -315,10 +303,7 @@ export function WhitelabelRequestForm() {;
                   </FormItem>
                 )}
               />
-<<<<<<< HEAD
               
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <FormField
                 control={form.control}
                 name="custom_domain"
@@ -332,10 +317,7 @@ export function WhitelabelRequestForm() {;
                   </FormItem>
                 )}
               />
-<<<<<<< HEAD
               
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <FormField
                 control={form.control}
                 name="primary_color"
@@ -352,18 +334,12 @@ export function WhitelabelRequestForm() {;
                   </FormItem>
                 )}
               />
-<<<<<<< HEAD
               
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <FormField
                 control={form.control}
                 name="theme_preset"
                 render={({ field }) => (
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   <FormItem>
                     <FormLabel>Theme Preset</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
@@ -384,7 +360,6 @@ export function WhitelabelRequestForm() {;
                   </FormItem>
                 )}
               />
-<<<<<<< HEAD
               
               <div className="border rounded-md p-4 space-y-4">
                 <h3 className="text-sm font-medium">Landing Page Copy</h3>
@@ -392,7 +367,6 @@ export function WhitelabelRequestForm() {;
                 <FormField
                   control={form.control}
                   name="headline"
-=======
               <div className="border rounded-md p-4 space-y-4">
                 <h3 className="text-sm font-medium">Landing Page Copy</h3>
                 <FormField
@@ -408,7 +382,6 @@ export function WhitelabelRequestForm() {;
                 <FormField;
                   control={form.control}
                   name="headline";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Headline</FormLabel>
@@ -419,10 +392,7 @@ export function WhitelabelRequestForm() {;
                     </FormItem>
                   )}
                 />
-<<<<<<< HEAD
                 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <FormField
                   control={form.control}
                   name="subtitle"
@@ -436,12 +406,10 @@ export function WhitelabelRequestForm() {;
                     </FormItem>
                   )}
                 />
-<<<<<<< HEAD
                 
                 <FormField
                   control={form.control}
                   name="cta"
-=======
                 <FormField
                   control={form && form.control}
                   name="cta"
@@ -453,7 +421,6 @@ export function WhitelabelRequestForm() {;
                 <FormField;
                   control={form.control}
                   name="cta";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>CTA Button Text</FormLabel>
@@ -466,10 +433,7 @@ export function WhitelabelRequestForm() {;
                 />
               </div>
             </div>
-<<<<<<< HEAD
             
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <Button type="submit" className="w-full" size="lg">
               Create White-Label Instance
             </Button>
@@ -483,14 +447,11 @@ export function WhitelabelRequestForm() {;
         </p>
       </CardFooter>
     </Card>
-<<<<<<< HEAD
   );
 }
-=======
   )
 
 }
 }
 ;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

@@ -133,11 +133,8 @@ function getAllServices(): Service[] {
 		.concat(realMarketServices as unknown as Service[])
 		.concat(real2029Q2Additions as unknown as Service[])
 		.concat(real2029Q3Additions as unknown as Service[])
-<<<<<<< HEAD
 		.concat(newInnovativeServices2029 as unknown as Service[]);
-=======
 		.concat(newSaasItAiServices2025 as unknown as Service[]);
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9479:pages/services/[slug].tsx
 }
 
 function toSlug(value: string): string {

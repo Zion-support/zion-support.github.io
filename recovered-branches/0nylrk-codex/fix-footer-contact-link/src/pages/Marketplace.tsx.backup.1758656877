@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -17,7 +16,6 @@ import { SearchSuggestion } from "@/types/search";
 import { AppLayout } from "@/layout/AppLayout";
 
 export default function Marketplace() {
-=======
 
 
 
@@ -65,14 +63,12 @@ import { AppLayout } from "@/layout/AppLayout";
 export default function Marketplace() {
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
-<<<<<<< HEAD
   
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions();
   const filterOptions = generateFilterOptions();
@@ -114,7 +110,6 @@ export default function Marketplace() {
     switch (filterType) {
       case 'productType':
         setSelectedProductTypes(prev => 
-=======
 
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions()
   const filterOptions = generateFilterOptions();
@@ -175,7 +170,6 @@ export default function Marketplace() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -219,16 +213,12 @@ export default function Marketplace() {;
         );
         break;
       case 'location':
-<<<<<<< HEAD
         setSelectedLocations(prev => 
-=======
         setSelectedLocations(prev =>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
         );
         break;
       case 'availability':
-<<<<<<< HEAD
         setSelectedAvailability(prev => 
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
         );
@@ -263,7 +253,6 @@ export default function Marketplace() {;
             title: listing.title,
             category: listing.category,
             image: listing.images?.[0]
-=======
         setSelectedAvailability(prev =>
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
         ),
@@ -475,12 +464,10 @@ if ( {) {
             category: listing.category,;
             image: listing.images?.[0];
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           }
         }
       });
     }
-<<<<<<< HEAD
   };
 
   return (
@@ -522,7 +509,6 @@ if ( {) {
           <div className="lg:col-span-1">
             <FilterSidebar
               filters={{
-=======
 
   }
   },
@@ -587,12 +573,10 @@ if ( {) {
                 selectedLocations;
                 selectedAvailability
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 selectedProductTypes,
                 selectedLocations,
                 selectedAvailability,
                 selectedRating
-<<<<<<< HEAD
               }}
               filterOptions={filterOptions}
               onFilterChange={handleFilterChange}
@@ -623,7 +607,6 @@ if ( {) {
               </p>
             </div>
             
-=======
                 selected_locations;
                 selected_availability,
                 selected_rating;
@@ -675,7 +658,6 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -688,13 +670,10 @@ if ( {) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredListings.length > 0 ? (
                 filteredListings.map((listing) => (
-<<<<<<< HEAD
                   <ProductListingCard 
                     key={listing.id} 
-=======
                   <ProductListingCard
                     key={listing.id}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     listing={listing}
                     onRequestQuote={handleRequestQuote}
                   />
@@ -705,7 +684,6 @@ if ( {) {
                   <p className="text-zion-slate-light max-w-md mx-auto mb-8">
                     We couldn't find any listings matching your filters. Try adjusting your search criteria.
                   </p>
-<<<<<<< HEAD
                   <Button 
                     onClick={clearAllFilters}
                     className="bg-zion-purple hover:bg-zion-purple-dark"
@@ -714,7 +692,6 @@ if ( {) {
                   </Button>
                 </div>
               )}
-=======
 
               </p>;
             </div>;
@@ -744,16 +721,13 @@ if ( {) {
                 </div>;
               )}
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </div>
           </div>
         </div>
       </main>
     </AppLayout>
-<<<<<<< HEAD
   );
 }
-=======
   )
 }
             </div>;
@@ -767,4 +741,3 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

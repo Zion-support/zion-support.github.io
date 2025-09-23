@@ -1,7 +1,5 @@
 =======
 import React, {useEffect, useRef} from 'react';
-<<<<<<< HEAD
-=======
 =======
 import React, {useEffect, useRef} from 'react';
 =======
@@ -9,7 +7,6 @@ import React,{useEffect,useRef} from &apos;react&apos;; export function Futurist
 <<<<<<< HEAD:backup-merge-conflicts/FuturisticBackground.jsx.backup
 import React, {useEffect, useRef} from 'react';
 export function FuturisticBackground("props": "any) {;
->>>>>>> pr-11935
 export function FuturisticBackground($1) {
 >>>>>>> main
     const canvasRef = useRef(null);

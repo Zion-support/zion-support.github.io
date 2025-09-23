@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -918,4 +916,3 @@ export default Enhanced2026ServicesShowcase;
 }
 export default Enhanced2026ServicesShowcase;
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

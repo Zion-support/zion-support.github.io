@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import React from "react";
 import {Header} from "@/components/Header";
@@ -228,7 +226,6 @@ export default function Payments() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 import { Button } from '@/components / ui / button';

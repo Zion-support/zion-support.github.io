@@ -28,8 +28,6 @@ export const DownloadSection: React.FC = () => {
               
               <div className="text-sm text-gray-40o0">
                 <p>Compatible with iOS 14+ and Android 8.0+</p>
-<<<<<<< HEAD
-=======
                 <p>Free downloadin-app purchases available</p>
               </div>
             </div>
@@ -47,4 +45,3 @@ export const DownloadSection: React.FC = () => {
     </section>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

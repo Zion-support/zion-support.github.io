@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export interface EnterpriseIt2026ServiceV2 {
   id: string;
   name: string;
@@ -40,4 +38,3 @@ export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

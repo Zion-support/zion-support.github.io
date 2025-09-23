@@ -11,8 +11,6 @@ export interface WishlistState {
 }
 
 const initialState: WishlistState = {
-<<<<<<< HEAD
-=======
   items: []};
 
 export const getApiUrl = () => {
@@ -50,4 +48,3 @@ const wishlistSlice = createSlice({
 
 export const { addToWishlist, removeFromWishlist } = wishlistSlice.actions;
 export default wishlistSlice.reducer;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

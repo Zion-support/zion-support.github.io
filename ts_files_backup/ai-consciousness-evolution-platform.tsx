@@ -2,8 +2,6 @@ import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-=======
   Brain
   Sparkles
   Zap
@@ -743,4 +741,3 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 };
 
 export default AIConsciousnessEvolutionPlatform;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 class ErrorBoundary extends React.Component {
@@ -981,4 +979,3 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -19,4 +17,3 @@ export default function Placeholder() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

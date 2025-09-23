@@ -17,11 +17,9 @@ class BuildHealthMonitor {}
     this.automationInterval =;
       parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes default};
 ;
-<<<<<<< HEAD
   log(message) {
   .toISOString()}] [BuildHealthMonitor] ${message}";
     )}
-=======
   log(message) {}
   console.log(`[${new Date().toISOString()}] [BuildHealthMonitor] ${message}";
     )};
@@ -127,4 +125,3 @@ class BuildHealthMonitor {}
 ;
 const monitor = new BuildHealthMonitor();
 monitor.run().catch(console.error);
->>>>>>> main

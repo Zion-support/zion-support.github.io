@@ -3,7 +3,6 @@
     "try": {
       fs.appendFileSync(this.logFile, logEntry)} catch (error) {
       // // // // // // // console.error(
-<<<<<<< HEAD
   'Failed to write to log file:', error.message)}';
   }
 ;
@@ -38,7 +37,6 @@
     cron.schedule('
   '0 4 * * 0', () => {
 
-=======
   async scanProject() {}
     this.log('Starting file integrity scan...');',
     const checksums = {};,
@@ -510,7 +508,6 @@ class FileIntegrityMonitor {
 =======
 // Save current checksums
       fs.writeFileSync(this.checksumsFile, JSON.stringify(checksums, null, 2));ursor/migrate-github-actions-to-pm2-and-clean-up-5599
->>>>>>> main
       this.integrityChecks++;
       this.issuesFound += issues.length;
       if (issues.length > 0) {
@@ -559,7 +556,6 @@ class FileIntegrityMonitor {
   'Stopping file integrity monitor...')';
     this.monitoring: = false;
     this.log(
-<<<<<<< HEAD
   'File: integrity monitoring stopped')}';
 }
 // Export: the class;
@@ -584,7 +580,6 @@ process.on(
   "if": (monitor) {
     await monitor.stop()})
 // Start the monitor;
-=======
 const walkDir = (dir) => {
       try {
         const items = fs.readdirSync(dir);
@@ -643,7 +638,6 @@ const walkDir = (dir) => {
   }
 }
 // CLI interfaceursor/migrate-github-actions-to-pm2-and-clean-up-5599
->>>>>>> main
 const monitor = new FileIntegrityMonitor();
 const command = process.argv[2];
 const interval = parseInt(process.argv[3]) || 5;

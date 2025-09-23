@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 export interface InnovativeMicroSaas {
-=======
 
 export interface InnovativeMicroSaas {
 export interface InnovativeMicroSaas {;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   id: string;
   name: string;
   tagline: string;
@@ -36,7 +33,6 @@ export interface InnovativeMicroSaas {;
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
     website: string;
   };
   realImplementation: boolean;
@@ -304,7 +300,6 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     reviews: 1600
   }
 ];
-=======
 
 
 
@@ -1272,7 +1267,6 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   }
 ];

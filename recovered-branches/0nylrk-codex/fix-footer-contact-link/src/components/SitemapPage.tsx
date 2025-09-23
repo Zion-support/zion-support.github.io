@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { completeSitemapdynamicPaths } from '@/config/sitemap';
 import { Link } from 'react-router-dom';
@@ -161,4 +159,3 @@ export const SitemapPage: React.FC = () => {
     </AppLayout>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

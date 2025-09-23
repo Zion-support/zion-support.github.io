@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 
@@ -1840,4 +1838,3 @@ icon: <Atom className="w-5 h-5" />,
 	);
 }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

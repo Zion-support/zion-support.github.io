@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 import React from &apos;react&apos;; export default function DeveloperRoutes($1) { return ({} )} ;&apos;;&apos;;
-=======
 <<<<<<< HEAD
 const React from "react"; export default function DeveloperRoutes($1) { return ({} )} ;";";''"
 <<<<<<< HEAD:backup-merge-conflicts/DeveloperRoutes.jsx.backup
 =======
 import _React from 'react'; export default function DeveloperRoutes(_) { return ({} )} ;';';
->>>>>>> main
 =======
 import _React from 'react'; export default function DeveloperRoutes(_) { return ({} )} ;';';
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/routes/DeveloperRoutes.jsx

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
@@ -32,4 +30,3 @@ export async function getServerSideProps() {
     props: {}
   };
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

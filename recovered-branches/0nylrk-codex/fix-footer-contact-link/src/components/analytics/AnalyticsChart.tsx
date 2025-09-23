@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
 import { LineChartLineXAxisYAxisCartesianGridTooltipResponsiveContainerBarChartBarLegend } from 'recharts';
 import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
@@ -135,4 +133,3 @@ export function AnalyticsChart({
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

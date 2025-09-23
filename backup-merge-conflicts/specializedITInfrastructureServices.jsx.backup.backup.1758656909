@@ -1,12 +1,9 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 export: const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [""
 <<<<<<< HEAD:backup-merge-conflicts/specializedITInfrastructureServices.jsx.backup
-=======
 "export": const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = ["]"
 =======
 "export\": const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
 =======
 "export": const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = ["]"

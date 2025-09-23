@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import Link from "next/link";
 export const metadata = {title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection";
@@ -183,7 +182,6 @@ export default function CybersecurityPage() {;
 
 
 
-=======
                 Ensure compliance with industry standards including SOC2, ISO 27001;
                 Ensure compliance with industry standards including SOC2, ISO 27001,;
 
@@ -956,4 +954,3 @@ export default function CybersecurityPage() {
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

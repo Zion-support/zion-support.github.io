@@ -2,7 +2,6 @@
 
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
 const { spawn } = require('child_process');
 
 const logsDir = path.join(__dirname, 'logs');
@@ -43,7 +42,6 @@ async function optimize() {
 }
 
 if (require.main === module) optimize();
-=======
 const { execSync } = require('child_process');
 
 class PerformanceOptimizer {
@@ -81,4 +79,3 @@ class PerformanceOptimizer {
 
 const optimizer = new PerformanceOptimizer();
 optimizer.optimizeBundle();
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

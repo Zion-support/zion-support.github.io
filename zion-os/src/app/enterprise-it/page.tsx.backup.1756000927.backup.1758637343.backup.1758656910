@@ -1,20 +1,16 @@
 import Link from "next/link";
 
 export const metadata = {
-<<<<<<< HEAD
   title: "Enterprise IT Services - Zion Tech Group",
   description: "Comprehensive enterprise IT infrastructure solutions including cloud migration, DevOps automation, and scalable technology infrastructure.",
   keywords: "enterprise IT, infrastructure, cloud migration, DevOps, IT consulting, Zion Tech Group",
-=======
   title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services",
   description: "Transform your enterprise with Zion Tech Group's comprehensive IT solutions. From cloud migration to DevOps automation, we help organizations modernize their technology infrastructure.",
   keywords: "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions",
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
 };
 
 export default function EnterpriseITPage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
@@ -193,7 +189,6 @@ export default function EnterpriseITPage() {
                 Comprehensive managed IT services including monitoring, maintenance, and 24/7 support.
               </p>
               <ul className="text-sm text-gray-300 space-y-1 mb-4">
-=======
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -400,13 +395,11 @@ export default function EnterpriseITPage() {
                 and support for enterprise infrastructure.
               </p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
                 <li>• 24/7 monitoring</li>
                 <li>• Proactive maintenance</li>
                 <li>• Help desk support</li>
                 <li>• Performance optimization</li>
               </ul>
-<<<<<<< HEAD
             </div>
           </div>
         </section>
@@ -495,7 +488,6 @@ export default function EnterpriseITPage() {
           </div>
         </section>
       </div>
-=======
               <Link href="/enterprise-it/managed-services" className="text-yellow-400 hover:text-yellow-300 text-sm font-medium">
                 Learn More →
               </Link>
@@ -675,7 +667,6 @@ export default function EnterpriseITPage() {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
     </div>
   );
 }

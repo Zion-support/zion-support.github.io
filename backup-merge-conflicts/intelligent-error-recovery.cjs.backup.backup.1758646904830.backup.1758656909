@@ -4,7 +4,6 @@
  * Automatically detects and recovers from various types of errors;
  */
 
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -140,7 +139,6 @@ class IntelligentErrorRecovery {
 // Run the error recovery system
 const errorRecovery = new IntelligentErrorRecovery();
 errorRecovery.run().catch(console.error);
-=======
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -158,4 +156,3 @@ const { execSync } = require('child_process')
                 "severity"
             execSync('npm run "lint")
             execSync('npm run "lint")
->>>>>>> main

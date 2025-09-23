@@ -1,6 +1,4 @@
 import SEO from '../components/SEO';
-<<<<<<< HEAD
-=======
 CheckExternalLink
 
 export default function SecretsRotationAutomationPage() {
@@ -42,4 +40,3 @@ export default function SecretsRotationAutomationPage() {
 		</>
 	);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

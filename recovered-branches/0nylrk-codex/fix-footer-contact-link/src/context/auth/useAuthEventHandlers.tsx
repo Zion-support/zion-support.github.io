@@ -17,8 +17,6 @@ export function useAuthEventHandlers(
     toast({
       title: "Welcome back!",
       description: `You're now signed in as ${mappedUser.displayName || mappedUser.email}`,
-<<<<<<< HEAD
-=======
       variant: "default"});
     
     // Check for new registration and send welcome email if needed
@@ -51,4 +49,3 @@ export function useAuthEventHandlers(
     handleSignedOut
   };
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -3,10 +3,8 @@ import Link from "next/link";
 export default function AutomationsPage() {
   return (
     <main className="mx-auto max-w-5xl px-4 py-12">
-<<<<<<< HEAD
       <h1 className="text-2xl font-bold text-gray-90o0">Autonomous Cloud Automations</h1>
       <p className="mt-2 text-gray-60o0">
-=======
       <h1 className="text-2xl font-bold text-gray-900">Autonomous Cloud Automations</h1>
       <p className="mt-2 text-gray-600">
         These automations run entirely in the cloudorchestrate tasks intelligentlyand sync changes back to the repository.
@@ -43,4 +41,3 @@ export default function AutomationsPage() {
     </main>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

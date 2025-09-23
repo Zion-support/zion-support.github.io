@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ createContextuseContextuseEffectuseState } from 'react';
 
@@ -40,4 +38,3 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 export function useAuth() {
   return useContext(AuthContext);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

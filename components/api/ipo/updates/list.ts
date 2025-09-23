@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!requireSuperadminApi(req, res)) return;
@@ -27,7 +25,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 

@@ -257,9 +257,6 @@ const RevolutionaryContent2025Banner = () => {
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors"
               >
                 Schedule Consultation
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
               </Link>
 =======
     <div className="relative overflow-hidden">

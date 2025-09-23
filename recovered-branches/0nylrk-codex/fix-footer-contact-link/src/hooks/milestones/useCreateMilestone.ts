@@ -22,8 +22,6 @@ export const useCreateMilestone = (projectId?: string) => {
         .insert({
           ...milestoneData,
           project_id: projectId,
-<<<<<<< HEAD
-=======
           created_by: user.id})
         .select()
         .single();
@@ -50,4 +48,3 @@ export const useCreateMilestone = (projectId?: string) => {
     isSubmitting
   };
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

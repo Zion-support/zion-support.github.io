@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { TabsListTabsTrigger } from "@/components/ui/tabs";
 import { StepProps } from "./types";
 
@@ -21,4 +19,3 @@ export const ResumeSteps = ({ stepsactiveTabonChange }: ResumeStepsProps) => {
     </TabsList>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

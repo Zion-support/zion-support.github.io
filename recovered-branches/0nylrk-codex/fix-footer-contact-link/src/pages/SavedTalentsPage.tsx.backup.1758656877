@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
@@ -26,7 +25,6 @@ export default function SavedTalentsPage() {
           return;
         }
 
-=======
 
 
 
@@ -48,7 +46,6 @@ export default function SavedTalentsPage() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -75,7 +72,6 @@ export default function SavedTalentsPage() {;
           .select(
             `
             talent_profile (
-<<<<<<< HEAD
               id,
               user_id,
               full_name,
@@ -88,7 +84,6 @@ export default function SavedTalentsPage() {;
               skills,
               location,
               availability,
-=======
 
 
         const { data, error } = await supabase;
@@ -109,27 +104,22 @@ export default function SavedTalentsPage() {;
               skills;
               location;
               availability;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               is_verified
             )
           `
           )
           .eq("user_id", user.id);
-<<<<<<< HEAD
 
         if (error) {
           throw error;
-=======
         if (error) {
           throw error
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         }
 
         if (data) {
           // Extract talent profiles and convert to TalentProfile type
           const talentProfiles = data.map(
             item => item.talent_profile as unknown as TalentProfile
-<<<<<<< HEAD
           );
           setSavedTalents(talentProfiles);
         }
@@ -141,7 +131,6 @@ export default function SavedTalentsPage() {;
           variant: "destructive",
         });
       } finally {
-=======
 
               is_verified;
             );
@@ -182,7 +171,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
@@ -362,7 +350,6 @@ if ( {) {
     fetchSavedTalents();
   }, [user]);
 
-<<<<<<< HEAD
   const handleViewProfile = (talentId: string) => {
     navigate(`/talent/${talentId}`);
   };
@@ -448,7 +435,6 @@ if ( {) {
 
   return (
     <>
-=======
   const handleViewProfile = (talentId: string) => {;
     navigate(`/talent/${talentId}`);
   };
@@ -533,7 +519,6 @@ if ( {) {
 
   return (
     <>;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <SEO
         title="Saved Talents | Zion AI Marketplace"
         description="View and manage your saved talents in the Zion AI Marketplace"
@@ -544,10 +529,7 @@ if ( {) {
         <p className="text-muted-foreground">
           Here are the talents you've saved for future reference.
         </p>
-<<<<<<< HEAD
         
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         {isLoading ? (
           <div className="text-center py-8">Loading saved talents...</div>
         ) : savedTalents.length === 0 ? (
@@ -556,8 +538,6 @@ if ( {) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             {savedTalents.map((talent) => (
               <TalentCard
-<<<<<<< HEAD
-=======
 
 ;
         setSavedTalents(prevTalents =>;
@@ -742,7 +722,6 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -755,7 +734,6 @@ if ( {) {
                 talent={talent}
                 onViewProfile={handleViewProfile}
                 onRequestHire={handleRequestHire}
-<<<<<<< HEAD
                 isSaved={true}
                 onToggleSave={handleToggleSave}
                 isAuthenticated={!!user}
@@ -768,7 +746,6 @@ if ( {) {
     </>
   );
 }
-=======
                 is_saved={true}
                 onToggleSave={handleToggleSave}
                 isAuthenticated={!!user}
@@ -790,4 +767,3 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

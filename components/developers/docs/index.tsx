@@ -19,8 +19,6 @@ type PageProps ={
 };
 
 export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
-<<<<<<< HEAD
-=======
   const contentPath = path.join(process.cwd()', 'data', 'docs'content.json');
   const raw = fs.readFileSync('contentPath', 'utf8');
   const docs = JSON.parse(raw) as DocsContent;
@@ -48,4 +46,3 @@ export default function ApiDocsPage({ docs }: PageProps) {
     </DocsLayout>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

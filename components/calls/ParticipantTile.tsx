@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useEffectuseRef } from 'react';
 import type { RemoteParticipantLocalParticipantTrackPublicationTrack } from 'livekit-client';
@@ -56,4 +54,3 @@ export default function ParticipantTile({ participantisLocaldisplayName }: Props
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

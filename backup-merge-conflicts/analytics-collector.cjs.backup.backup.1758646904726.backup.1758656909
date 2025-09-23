@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 
 function collectAnalytics() {
   const analytics = {
@@ -56,7 +55,6 @@ function getSecurityMetrics() {
     'yarn.lock',
     '.env.local',
     '.env.example',
-=======
 console.log(' Starting Analytics Collection...')
   fs.writeFileSync('analytics-report.json')
   console.log(' Analytics collected and saved to analytics-report.json')
@@ -67,4 +65,3 @@ console.log(' Starting Analytics Collection...')
     '.env.local'
     '.env.example'
     'next.config.js'
->>>>>>> main

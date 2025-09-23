@@ -13,8 +13,6 @@ const AlertDialogPortal = AlertDialogPrimitive.Portal
 const AlertDialogOverlay = React.forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Overlay>
-<<<<<<< HEAD
-=======
 >(({ className...props }ref) => (
   <AlertDialogPrimitive.Overlay
     className={cn(
@@ -139,4 +137,3 @@ export {
   AlertDialogDescription,
   AlertDialogAction,
   AlertDialogCancel}
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

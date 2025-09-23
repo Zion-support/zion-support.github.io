@@ -1,7 +1,5 @@
 import * as React from "react"
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu"
-<<<<<<< HEAD
-=======
 import { CheckChevronRightCircle } from "lucide-react"
 
 import { cn } from "@/lib/utils"
@@ -197,4 +195,3 @@ export {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuRadioGroup}
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 export interface ContentGenerationRequest {
 export interface ContentGenerationRequest {;
@@ -275,7 +273,6 @@ if ( {) {
   private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
     const mockContent = `# ${request.topic}
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
     const mockContent = `# ${request.topic}

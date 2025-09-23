@@ -8,8 +8,6 @@ const Tabs = TabsPrimitive.Root
 const TabsList = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.List>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>
-<<<<<<< HEAD
-=======
 >(({ className...props }ref) => (
   <TabsPrimitive.List
     ref={ref}
@@ -53,4 +51,3 @@ const TabsContent = React.forwardRef<
 TabsContent.displayName = TabsPrimitive.Content.displayName
 
 export { TabsListTabsTriggerTabsContent }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import { useInterviews } from "@/hooks/useInterviews";
 import { Interview } from "@/types/interview";
@@ -39,7 +38,6 @@ function InterviewsContent() {
     .sort((a, b) => 
       parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
     );
-=======
 
 import React, { useEffect, useState } from "react";
 import {useInterviews} from "@/hooks/useInterviews";
@@ -120,12 +118,10 @@ function InterviewsContent() {
   const groupInterviewsByDate = (interviews: Interview[]) => {
     const grouped: Record<string, Interview[]> = {}
     ),
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   const pendingInterviews = interviews.filter(interview => 
     interview.status === 'requested'
   );
-<<<<<<< HEAD
   
   const pastInterviews = interviews.filter(interview => {
     const interviewDate = parseISO(interview.scheduled_date);
@@ -155,7 +151,6 @@ function InterviewsContent() {
   const renderInterviewGroups = (groupedInterviews: Record<string, Interview[]>) => {
     return Object.entries(groupedInterviews)
       .sort(([dateA], [dateB]) => 
-=======
   const pastInterviews = interviews.filter(interview => {
     const interviewDate = parseISO(interview.scheduled_date);
     return !isAfter(interviewDate, now) |
@@ -280,7 +275,6 @@ function InterviewsContent() {;
 
     return Object.entries(groupedInterviews)
       .sort(([dateA], [dateB]) =>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         parseISO(dateA).getTime() - parseISO(dateB).getTime()
       )
       .map(([date, interviews]) => (
@@ -291,7 +285,6 @@ function InterviewsContent() {;
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {interviews.map((interview) => (
-<<<<<<< HEAD
               <InterviewCard 
                 key={interview.id} 
                 interview={interview}
@@ -310,7 +303,6 @@ function InterviewsContent() {;
       <SEO 
         title="Interviews | Zion AI Marketplace" 
         description="Manage your scheduled interviews with clients and talent" 
-=======
 
               <InterviewCard
                 key={interview.id}
@@ -401,7 +393,6 @@ function InterviewsContent() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -438,10 +429,7 @@ function InterviewsContent() {;
             <p className="text-muted-foreground mt-1">Schedule and manage your video interviews</p>
           </div>
         </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <Tabs defaultValue={activeTab} onValueChange={setActiveTab} className="space-y-8">
           <TabsList className="mb-6">
             <TabsTrigger value="upcoming" className="flex items-center">
@@ -451,7 +439,6 @@ function InterviewsContent() {;
                 <span className="ml-2 bg-primary rounded-full px-2 py-0.5 text-xs">
                   {upcomingInterviews.length}
                 </span>
-<<<<<<< HEAD
               )}
             </TabsTrigger>
             <TabsTrigger value="pending">
@@ -511,7 +498,6 @@ function InterviewsContent() {;
                 <p className="text-muted-foreground">Your interview history will appear here.</p>
               </div>
             )}
-=======
 
 
 
@@ -577,17 +563,14 @@ function InterviewsContent() {;
 
             )}
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           </TabsContent>
         </Tabs>
       </main>
       <Footer />
     </>
-<<<<<<< HEAD
   );
 }
 
-=======
   )
 
           </TabsContent>;
@@ -600,7 +583,6 @@ function InterviewsContent() {;
   );
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 }
@@ -610,10 +592,8 @@ export default function Interviews() {
     <ProtectedRoute>
       <InterviewsContent />
     </ProtectedRoute>
-<<<<<<< HEAD
   );
 }
-=======
   )
 }
 
@@ -653,7 +633,6 @@ export default function Interviews() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

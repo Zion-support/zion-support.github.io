@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 export interface SpaceMetaverseService {
 export interface SpaceMetaverseService {;
@@ -753,5 +751,4 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
 ];
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

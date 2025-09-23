@@ -1,5 +1,2 @@
-<<<<<<< HEAD
 ' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""
-=======
 " " export: function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()";";";"""
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

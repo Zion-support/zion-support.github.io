@@ -12,8 +12,6 @@ export interface ProtectedRouteProps {
 }
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ 
-<<<<<<< HEAD
-=======
   children
   adminOnly = false,
   tenantAdminAllowed = false,
@@ -55,4 +53,3 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 };
 
 export default ProtectedRoute;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

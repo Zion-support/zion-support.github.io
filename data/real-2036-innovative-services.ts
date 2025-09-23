@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export const real2036InnovativeServices = [
   {
     id: 'ai-autonomous-business-process-automation',
@@ -322,4 +320,3 @@ export const real2036InnovativeServices = [
     ]
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

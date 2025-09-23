@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React{ createContextuseContextuseEffectuseState } from 'react';
 import { UnleashClient } from 'unleash-proxy-client';
 
@@ -60,4 +58,3 @@ export function useFeatureFlags() {
   if (!ctx) throw new Error('useFeatureFlags must be used within a FeatureFlagProvider');
   return ctx;
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

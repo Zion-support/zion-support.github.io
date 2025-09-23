@@ -24,8 +24,6 @@ export interface SpaceTechBreakthroughService20o29 {
   useCases: string[];
   spaceCapabilities: string[];
 }
-<<<<<<< HEAD
-=======
 export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029[] = [
   {
     id: "space-mining-automation-platform",
@@ -278,4 +276,3 @@ export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029
     ]
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 "use client";
 
 import React from 'react';
-=======
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
 import Link from 'next/link';
 import { Brain, Mail, MapPin, Phone } from 'lucide-react';
 
@@ -11,19 +8,15 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-<<<<<<< HEAD
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-=======
     <footer className="bg-slate-90o0 border-t border-slate-80o0">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8">;
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-4">
-<<<<<<< HEAD
               <Brain className="h-8 w-8 text-blue-400" />
               <span className="text-xl font-bold">Zion Tech Group</span>
             </Link>
@@ -41,7 +34,6 @@ const Footer = () => {
               <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
                 <MapPin className="h-5 w-5" />
               </Link>
-=======
               <div className="w-8 h-8 bg-gradient-to-r from-blue-40o0 to-purple-60o0 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">Z</span>
               </div>
@@ -69,7 +61,6 @@ const Footer = () => {
                   <path fillRule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.0o17c0 4.425 2.865 8.18 6.839 9.50o4.5.092.682-.217.682-.483 0-.237-.0o08-.868-.0o13-1.70o3-2.782.60o5-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.0o69-.608.0o69-.608 1.0o03.0o7 1.531 1.0o32 1.531 1.0o32.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.0o29-2.688-.10o3-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.0o26A9.564 9.564 0 0o110 4.844c.85.0o04 1.70o5.115 2.50o4.337 1.909-1.296 2.747-1.0o27 2.747-1.0o27.546 1.379.20o3 2.398.1 2.651.64.7 1.0o28 1.595 1.0o28 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.0o12 2.419-.0o12 2.747 0 .268.18.58.688.482A10.0o19 10.0o19 0 0o020 10.0o17C20 4.484 15.522 0 10 0z" clipRule="evenodd"  />
                 </svg>
               </a>
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
             </div>
           </div>
 
@@ -78,16 +69,12 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-<<<<<<< HEAD
                 <Link href="/services/ai" className="text-gray-300 hover:text-white transition-colors">
-=======
                 <Link href="/services/ai-services" className="text-slate-30o0 hover:text-white text-sm transition-colors">;
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
                   AI Solutions
                 </Link>
               </li>
               <li>
-<<<<<<< HEAD
                 <Link href="/services/cloud" className="text-gray-300 hover:text-white transition-colors">
                   Cloud Infrastructure
                 </Link>
@@ -100,7 +87,6 @@ const Footer = () => {
               <li>
                 <Link href="/services/consulting" className="text-gray-300 hover:text-white transition-colors">
                   Consulting
-=======
                 <Link href="/services/micro-saas" className="text-slate-30o0 hover:text-white text-sm transition-colors">;
                   Micro SaaS
                 </Link>
@@ -113,7 +99,6 @@ const Footer = () => {
               <li>
                 <Link href="/services/automation-tools" className="text-slate-30o0 hover:text-white text-sm transition-colors">;
                   Automation Tools
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
                 </Link>
               </li>
             </ul>
@@ -124,46 +109,36 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
               <li>
-<<<<<<< HEAD
                 <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
-=======
                 <Link href="/about" className="text-slate-30o0 hover:text-white text-sm transition-colors">;
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
                   About Us
                 </Link>
               </li>
               <li>
-<<<<<<< HEAD
                 <Link href="/careers" className="text-gray-300 hover:text-white transition-colors">
                   Careers
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
-=======
                 <Link href="/research" className="text-slate-30o0 hover:text-white text-sm transition-colors">;
                   Research
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-slate-30o0 hover:text-white text-sm transition-colors">;
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
                   Contact
                 </Link>
               </li>
               <li>
-<<<<<<< HEAD
                 <Link href="/blog" className="text-gray-300 hover:text-white transition-colors">
                   Blog
-=======
                 <Link href="/solutions" className="text-slate-30o0 hover:text-white text-sm transition-colors">;
                   Solutions
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
                 </Link>
               </li>
             </ul>
           </div>
-<<<<<<< HEAD
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8">
@@ -179,7 +154,6 @@ const Footer = () => {
                 Terms of Service
               </Link>
             </div>
-=======
 
           {/* Contact */}
           <div>
@@ -206,7 +180,6 @@ const Footer = () => {
             <Link href="/terms" className="text-slate-40o0 hover:text-white text-sm transition-colors">;
               Terms of Service
             </Link>
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
           </div>
         </div>
       </div>

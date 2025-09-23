@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { useStateuseEffect } from "react";
 import { useAuth } from "./useAuth";
 import { supabase } from "@/integrations/supabase/client";
@@ -65,4 +63,3 @@ export function useOnboardingStatus() {
   
   return status;
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -3,7 +3,6 @@
  * Fix Team Page - Targeted fix for team.tsx;
  */
 
-<<<<<<< HEAD
 const fs = require('fs');
 
 function fixTeamPage() {
@@ -299,7 +298,6 @@ if (require.main === module) {
   fixTeamPage()}
 
 module.exports = fixTeamPage;
-=======
 const fs = require('fs')
   const filePath = './pages/team.tsx'
     console.log(' Team page not found')
@@ -381,4 +379,3 @@ const fs = require('fs')
               "display"
               "border"
               "transition"
->>>>>>> main

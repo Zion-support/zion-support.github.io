@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import EnhancedNavigation2025 from './layout/EnhancedNavigation2025';
 import EnhancedFooter from './layout/EnhancedFooter';
@@ -19,4 +17,3 @@ export default function Layout({ children }: LayoutProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

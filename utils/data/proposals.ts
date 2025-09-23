@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import fs from 'fs',;
 import path from 'path',;
@@ -376,7 +374,6 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
 

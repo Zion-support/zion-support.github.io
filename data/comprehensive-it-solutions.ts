@@ -14,8 +14,6 @@ export interface ComprehensiveItSolution {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const comprehensiveITSolutions: ComprehensiveItSolution[] = [
   {
     id: "full-stack-development",
@@ -40,4 +38,3 @@ export const comprehensiveITSolutions: ComprehensiveItSolution[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

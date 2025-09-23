@@ -14,8 +14,6 @@ export interface Revolutionary20o26Innovation {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const revolutionary2026Innovations: Revolutionary2026Innovation[] = [
   {
     id: "2026-revolutionary-innovation",
@@ -40,4 +38,3 @@ export const revolutionary2026Innovations: Revolutionary2026Innovation[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

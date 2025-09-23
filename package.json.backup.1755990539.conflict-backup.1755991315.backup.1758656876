@@ -309,7 +309,6 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "type-check": "tsc --noEmit",
     "prepare": "git config core.hooksPath .husky || true",
-<<<<<<< HEAD
     "fix:all": "npm run lint -- --fix || true",
     "build:heal": "npm run build || (npm run fix:all && npm run search:index || true && npm run build)",
     "ci:heal": "npm run fix:all && (npm run type-check || true) && npm run build:heal",
@@ -317,7 +316,6 @@
     "health:react": "node automation/react-component-validator.cjs",
     "health:preflight": "node automation/build-preflight-checker.cjs",
     "health:netlify": "node automation/enhanced-netlify-healer.cjs",
-=======
     "fix:all": "npm run lint -- --fix || true",
     "build:heal": "npm run build || (npm run fix:all && npm run search:index || true && npm run build)",
     "ci:heal": "npm run fix:all && (npm run type-check || true) && npm run build:heal",
@@ -332,7 +330,6 @@
     "build:orchestrator:start": "node automation/master-build-orchestrator.cjs",
     "build:orchestrator:status": "node -e \"const {MasterBuildOrchestrator} = require('./automation/master-build-orchestrator.cjs'); const o = new MasterBuildOrchestrator(); console.log(JSON.stringify(o.getStatus(), null, 2));\"",
     "build:smart:full": "node automation/master-build-orchestrator.cjs runSmartBuild",
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
     "security:scan": "node automation/security-scanner.cjs || true && (npm audit --audit-level=high || true)",
     "auto:intel": "node automation/intelligent-orchestrator.cjs run intelligent",
     "autonomous": "node automation/launch-enhanced-autonomous-system.js",

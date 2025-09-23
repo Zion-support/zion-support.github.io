@@ -1,7 +1,5 @@
 import * as React from "react"
 import useEmblaCarousel from "embla-carousel-react"
-<<<<<<< HEAD
-=======
 import { ArrowLeftArrowRight } from "lucide-react"
 
 import { cn } from "@/lib/utils"
@@ -258,4 +256,3 @@ export {
   CarouselItem,
   CarouselPrevious,
   CarouselNext}
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

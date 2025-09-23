@@ -1,7 +1,5 @@
 import * as React from "react"
 import * as MenubarPrimitive from "@radix-ui/react-menubar"
-<<<<<<< HEAD
-=======
 import { CheckChevronRightCircle } from "lucide-react"
 
 import { cn } from "@/lib/utils"
@@ -233,4 +231,3 @@ export {
   MenubarGroup,
   MenubarSub,
   MenubarShortcut}
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

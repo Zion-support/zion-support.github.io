@@ -1,7 +1,5 @@
 
 import { 
-<<<<<<< HEAD
-=======
   Dialog
   DialogContent
   DialogHeader
@@ -115,4 +113,3 @@ export const QuoteDetails = ({ quoteisOpenonClose }: QuoteDetailsProps) => {
     </Dialog>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

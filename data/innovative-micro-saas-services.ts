@@ -3,8 +3,6 @@ export interface InnovativeMicroSaasService {
   name: string;
   tagline: string;
   price: string;
-<<<<<<< HEAD
-=======
   description: string;
   features: string[];
   link: string;
@@ -40,4 +38,3 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

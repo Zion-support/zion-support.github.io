@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import {useState, useEffect} from "react";
 import {Link, useNavigate, useSearchParams} from "react-router-dom";
@@ -301,4 +299,3 @@ function CreatePostPage() {
 
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

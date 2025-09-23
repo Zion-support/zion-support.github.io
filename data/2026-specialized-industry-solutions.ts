@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 export interface SpecializedIndustrySolution2026 {
 =======
 export interface SpecializedIndustrySolution {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f
   id: string;
   name: string;
   tagline: string;

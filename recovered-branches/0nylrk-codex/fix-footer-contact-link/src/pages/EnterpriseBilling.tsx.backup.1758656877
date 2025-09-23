@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -23,7 +22,6 @@ export default function EnterpriseBilling() {
   return (
     <ProtectedRoute>
       <SEO 
-=======
 
 
 
@@ -78,7 +76,6 @@ export default function EnterpriseBilling() {
 
     <ProtectedRoute>
       <SEO
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         title="Enterprise Billing - Zion AI Marketplace"
         description="Manage your subscription, view invoice history, and download billing statements."
       />
@@ -88,10 +85,8 @@ export default function EnterpriseBilling() {
       </main>
       <Footer />
     </ProtectedRoute>
-<<<<<<< HEAD
   );
 }
-=======
   )
 
 
@@ -135,7 +130,6 @@ export default function EnterpriseBilling() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 

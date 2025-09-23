@@ -1,13 +1,10 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface EmergingTechBreakthroughServiceV2 {
-=======
 
 import { ServiceVariant } from '../types/service-variants';
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   id: string;
   name: string;
   tagline: string;
@@ -18,7 +15,6 @@ import { ServiceVariant } from '../types/service-variants';
   popular: boolean;
   icon: string;
   color: string;
-<<<<<<< HEAD
   textColor: string;
   link: string;
   marketPosition: string;
@@ -368,7 +364,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     reviews: 2
   }
 ];
-=======
   text_color: string;
   link: string;
   market_position: string;
@@ -1603,4 +1598,3 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
   }
 ];
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

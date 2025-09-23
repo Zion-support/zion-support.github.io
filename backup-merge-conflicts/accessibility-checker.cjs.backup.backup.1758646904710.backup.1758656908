@@ -29,11 +29,9 @@ class AccessibilityChecker {}
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
         }
 
     checkAccessibilityIssues() {
-=======
         console.log(message)};
     checkAccessibilityIssues() {}
         this.log('Checking accessibility issues...');
@@ -500,4 +498,3 @@ if ( {})
     const checker = new AccessibilityChecker}(;);
     checker.run().catch(console.error)};
 module.exports = AccessibilityChecker;
->>>>>>> main

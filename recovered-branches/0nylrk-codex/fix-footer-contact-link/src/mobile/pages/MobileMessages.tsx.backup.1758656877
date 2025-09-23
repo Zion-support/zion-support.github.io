@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState } from "react";
 import { MobileHeader } from "../components/common/MobileHeader";
 import { BottomNavigation } from "../components/common/BottomNavigation";
@@ -71,7 +70,6 @@ const mockMessages: Message[] = [
     status: "read",
   },
   {
-=======
 
 import React, { useState } from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
@@ -148,16 +146,13 @@ const mockMessages: Message[] = [
     timestamp: "10:40 AM"
     isMe: true
     status: "read"}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     id: "4",
     content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?",
     timestamp: "10:40 AM",
     isMe: true,
-<<<<<<< HEAD
     status: "read",
   },
   {
-=======
     status: "read"},
   {
     id: "5"
@@ -165,12 +160,10 @@ const mockMessages: Message[] = [
     timestamp: "10:45 AM"
     isMe: false
     status: "read"}]
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     id: "5",
     content: "That works for us. I'll send over a detailed brief later today. Would you be available for a quick call tomorrow to discuss further?",
     timestamp: "10:45 AM",
     isMe: false,
-<<<<<<< HEAD
     status: "read",
   },
 ];
@@ -186,7 +179,6 @@ export function MobileMessages() {
   const handleBack = () => {
     setActiveConversation(null);
   };
-=======
     status: "read"}],
 
 export function MobileMessages() {;
@@ -202,7 +194,6 @@ export function MobileMessages() {
   const handleBack = () => {
     setActiveConversation(null)
   },
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   const handleSendMessage = (content: string) => {
     const newMessage: Message = {
@@ -210,7 +201,6 @@ export function MobileMessages() {
       content,
       timestamp: "Just now",
       isMe: true,
-<<<<<<< HEAD
       status: "sent",
     };
     setMessages([...messages, newMessage]);
@@ -218,20 +208,17 @@ export function MobileMessages() {
   
   const currentContact = mockConversations.find(c => c.id === activeConversation);
   
-=======
       status: "sent"},
     setMessages([...messages, newMessage])
   },
   
   const currentContact = mockConversations.find(c => c.id === activeConversation),
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <div className="min-h-screen flex flex-col">
       {activeConversation ? (
         <MobileChatView
           contact={{
-<<<<<<< HEAD
             id: currentContact?.id || "",
             name: currentContact?.name || "",
             status: "Online"
@@ -259,7 +246,6 @@ export function MobileMessages() {
     </div>
   );
 }
-=======
 
 
             status: "Online"
@@ -382,7 +368,6 @@ export function MobileMessages() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

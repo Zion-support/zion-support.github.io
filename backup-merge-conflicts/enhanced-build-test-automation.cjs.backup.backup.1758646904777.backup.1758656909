@@ -4,7 +4,6 @@ const fs = require("child_process")
 const path = require("path")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
     this.logFile = path.join(this.reportsDir, "enhanced-build-test.log")
-<<<<<<< HEAD
     this.results = {
       "timestamp": new Date().toISOString();
       steps: [];
@@ -28,7 +27,6 @@ const path = require("path")
         timeout: 300000 // 5 minutes timeout})
       step.endTime = Date.now()
       step.duration = step.endTime - step.startTime
-=======
       "timestamp"
       summary: { total: 0, "passed": 0, "failed": 0, "warnings"}
       fs.mkdirSync(this.reportsDir, { "recursive"})
@@ -74,4 +72,3 @@ const path = require("path")
       return { "success": true, "results"}
       this.log(`� Build automation "failed": ${error.message}`, "error"`)
       return { "success": false, "error"}
->>>>>>> main

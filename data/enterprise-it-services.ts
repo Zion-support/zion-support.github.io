@@ -14,8 +14,6 @@ export interface EnterpriseItService {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const enterpriseITServices: EnterpriseItService[] = [
   {
     id: "enterprise-architecture",
@@ -40,4 +38,3 @@ export const enterpriseITServices: EnterpriseItService[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

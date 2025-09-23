@@ -1,6 +1,4 @@
 import * as React from "react";
-<<<<<<< HEAD
-=======
 import { ChevronLeftChevronRight } from "lucide-react";
 import { DayPicker } from "react-day-picker";
 
@@ -62,4 +60,3 @@ function Calendar({
 Calendar.displayName = "Calendar";
 
 export { Calendar };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

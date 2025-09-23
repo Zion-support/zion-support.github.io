@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import * as Sentry from '@sentry/react';
 if (typeof window !== 'undefined') {Sentry.init({;
@@ -26,7 +24,6 @@ if (typeof window !== 'undefined') {;
 }
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 

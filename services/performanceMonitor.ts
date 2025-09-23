@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 export interface PerformanceMetrics {
 export interface PerformanceMetrics {;
@@ -217,7 +215,6 @@ export class PerformanceMonitorService {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

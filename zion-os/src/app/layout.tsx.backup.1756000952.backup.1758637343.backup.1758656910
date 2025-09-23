@@ -1,6 +1,5 @@
 import "./globals.css";
 import type { ReactNode } from "react";
-<<<<<<< HEAD
 import { Navigation } from "@/components/Navigation";
 import Link from "next/link";
 
@@ -9,7 +8,6 @@ export const metadata = {
   description: "Zion Tech Group is a global technology leader specializing in AI, quantum computing, cybersecurity, enterprise IT, and space technology solutions. Transform your business with cutting-edge innovation.",
   keywords: "AI, artificial intelligence, quantum computing, cybersecurity, enterprise IT, space technology, Zion Tech Group, technology solutions, innovation",
   authors: [{ name: "Zion Tech Group" }],
-=======
 
 export const metadata = {
   title: "Zion Tech Group - AI-Powered Digital Economy Solutions",
@@ -18,20 +16,15 @@ export const metadata = {
   authors: [{ name: "Zion Tech Group" }],
   creator: "Zion Tech Group",
   publisher: "Zion Tech Group",
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
   robots: "index, follow",
   metadataBase: new URL('https://ziontechgroup.com'),
   openGraph: {
-<<<<<<< HEAD
     title: "Zion Tech Group - Leading AI, Quantum Computing & Enterprise Solutions",
     description: "Transform your business with cutting-edge AI, quantum computing, and enterprise technology solutions from Zion Tech Group.",
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
     type: "website",
     locale: "en_US",
     url: "https://ziontechgroup.com",
     siteName: "Zion Tech Group",
-<<<<<<< HEAD
   },
   twitter: {
     card: "summary_large_image",
@@ -45,7 +38,6 @@ export const metadata = {
     card: "summary_large_image",
     title: "Zion Tech Group - Leading AI-Powered Technology Solutions",
     description: "Transform your business with cutting-edge AI solutions, autonomous systems, and quantum computing.",
-=======
     title: "Zion Tech Group - AI-Powered Digital Economy Solutions",
     description: "Launch sovereign AI-powered digital economies with one click. Advanced AI automation, quantum computing, and autonomous business solutions for the future.",
     images: [
@@ -61,12 +53,10 @@ export const metadata = {
     card: "summary_large_image",
     title: "Zion Tech Group - AI-Powered Digital Economy Solutions",
     description: "Launch sovereign AI-powered digital economies with one click. Advanced AI automation, quantum computing, and autonomous business solutions for the future.",
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
     images: ["/og-image.jpg"],
     creator: "@ziontechgroup",
     site: "@ziontechgroup",
   },
-<<<<<<< HEAD
   alternates: {
     canonical: "https://ziontechgroup.com",
   },
@@ -91,7 +81,6 @@ export const viewport: Viewport = {
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-=======
   manifest: "/manifest.json",
   icons: {
     icon: "/favicon.ico",
@@ -103,14 +92,12 @@ export const viewport = {
   width: 'device-width',
   initialScale: 1,
   themeColor: '#000000',
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
-<<<<<<< HEAD
         {/* Structured Data */}
         <script
           type="application/ld+json"
@@ -231,7 +218,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 <a href="/cookies" className="hover:text-white transition-colors">Cookie Policy</a>
                 <a href="/accessibility" className="hover:text-white transition-colors">Accessibility</a>
               </div>
-=======
         <link rel="canonical" href="https://ziontechgroup.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -288,7 +274,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </div>
             <div className="border-t border-white/10 mt-8 pt-8 text-center text-sm opacity-80">
               <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
             </div>
           </div>
         </footer>

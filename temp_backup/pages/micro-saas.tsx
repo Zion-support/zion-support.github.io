@@ -4,8 +4,6 @@ import Button from '../components/ui/Button';
 import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap as Lightning } from 'lucide-react';
 
 export default function MicroSaasPage() {
-<<<<<<< HEAD
-=======
   const [selectedCategory, setSelectedCategory] = useState('All');
   
   const microSaasServices = [
@@ -2265,4 +2263,3 @@ export default function MicroSaasPage() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

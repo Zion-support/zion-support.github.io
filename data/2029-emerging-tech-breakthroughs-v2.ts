@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import { ServiceVariant } from '../types/service-variants';
 
@@ -1248,4 +1246,3 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
   }
 ];
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import { useEffectuseMemouseState } from 'react';
 
@@ -66,4 +64,3 @@ export default function Dashboard() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function HomePage() {
   return <div>Welcome to Zion App</div>;
 }
-=======
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -138,4 +136,3 @@ export default function HomePage() {
     </div>
   );
 }
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e

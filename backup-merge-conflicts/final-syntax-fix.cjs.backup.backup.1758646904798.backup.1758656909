@@ -3,9 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
 
-=======
 console.log('🔧 Final Syntax Fix');
 console.log('==================');
 
@@ -93,4 +91,3 @@ for (const file of filesToFix) {
 
 console.log(`\n✅ Fixed ${totalFixed} files`);
 console.log('🎉 Final syntax fix completed!');
->>>>>>> main

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -543,7 +541,6 @@ function DetailsStep() {
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Requirements</h2>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <div className="space-y-2">
         <Label htmlFor="experience">Experience Level</Label>
         <Select>

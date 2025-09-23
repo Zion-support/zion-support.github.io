@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import React from "react";
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
@@ -67,4 +65,3 @@ function CreateServiceProfile() {
 
 ;
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

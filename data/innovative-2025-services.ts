@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export interface Innovative2025Service {
   id: string;
   name: string;
@@ -40,4 +38,3 @@ export const innovative2025Services: Innovative2025Service[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

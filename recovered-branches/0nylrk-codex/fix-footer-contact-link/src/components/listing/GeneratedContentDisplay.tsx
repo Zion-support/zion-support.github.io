@@ -2,8 +2,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
-<<<<<<< HEAD
-=======
 import { CardContentCardFooterCardHeaderCardTitle } from "@/components/ui/card";
 
 interface GeneratedContent {
@@ -72,4 +70,3 @@ export function GeneratedContentDisplay({ contentonApply }: GeneratedContentDisp
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

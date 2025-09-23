@@ -1,7 +1,5 @@
 
 import { Control } from 'react-hook-form';
-<<<<<<< HEAD
-=======
 import { FormFieldFormItemFormLabelFormControlFormDescriptionFormMessage } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
 import { JobSchemaType } from './validation';
@@ -126,4 +124,3 @@ export function DescriptionFields({ controlhandleEditorChangeditorContent }: Des
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 import { v4 as uuidv4  } from 'uuid';
 import fs from 'fs';
 import path from 'path';
@@ -25,7 +23,6 @@ function writeEpisodes(episodes: any[]) {
 
   const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 // Search parser utilities
 export const parseSearchQuery = (query: string) => {
@@ -49,7 +47,6 @@ export const parseSearchQuery = (query: string) => {
   return filters;
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     keywords: [],

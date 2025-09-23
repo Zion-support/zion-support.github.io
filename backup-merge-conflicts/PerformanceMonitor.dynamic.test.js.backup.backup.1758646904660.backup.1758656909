@@ -1,7 +1,4 @@
-<<<<<<< HEAD:backup-merge-conflicts/PerformanceMonitor.dynamic.test.js.backup
 <<<<<<< HEAD
-=======
->>>>>>> pr-11913:__tests__/PerformanceMonitor.dynamic.test.js
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';

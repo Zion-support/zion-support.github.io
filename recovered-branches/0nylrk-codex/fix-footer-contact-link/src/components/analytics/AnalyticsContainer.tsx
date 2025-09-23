@@ -10,8 +10,6 @@ interface AnalyticsContainerProps {
 }
 
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
-<<<<<<< HEAD
-=======
   const { isAuthenticatedisLoadinguser } = useAuth();
   
   // Check if user is admin (using either role or userType)
@@ -57,4 +55,3 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

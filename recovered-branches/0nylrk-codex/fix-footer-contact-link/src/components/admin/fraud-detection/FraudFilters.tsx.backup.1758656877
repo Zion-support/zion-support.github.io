@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -19,7 +18,6 @@ interface FraudFiltersProps {
 }
 
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
-=======
 
 import React from "react";
 import {Input} from "@/components/ui/input";
@@ -91,7 +89,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   contentTypeFilter;
 
   setContentTypeFilter
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   searchQuery,
   setSearchQuery,
   statusFilter,
@@ -100,7 +97,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   setSeverityFilter,
   contentTypeFilter,
   setContentTypeFilter,
-<<<<<<< HEAD
   resetFilters,
 }) => {
   return (
@@ -116,7 +112,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
       </div>
       
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
-=======
 
   resetFilters}) => {
 
@@ -141,7 +136,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -157,15 +151,12 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
           <SelectItem value="actioned">Actioned</SelectItem>
         </SelectContent>
       </Select>
-<<<<<<< HEAD
       
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
-=======
 
       <Select value={severityFilter |""} onValueChange={value => setSeverityFilter(value |null)}>
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Severity" />
         </SelectTrigger>
@@ -176,15 +167,12 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
           <SelectItem value="dangerous">Dangerous</SelectItem>
         </SelectContent>
       </Select>
-<<<<<<< HEAD
       
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
-=======
 
       <Select value={contentTypeFilter |""} onValueChange={value => setContentTypeFilter(value |null)}>
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Content Type" />
         </SelectTrigger>
@@ -197,7 +185,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
           <SelectItem value="review">Reviews</SelectItem>
         </SelectContent>
       </Select>
-<<<<<<< HEAD
       
       <Button variant="outline" onClick={resetFilters} className="md:w-auto">
         <Filter className="h-4 w-4 mr-2" /> Reset Filters
@@ -205,7 +192,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
     </div>
   );
 };
-=======
       <Button variant="outline" onClick={resetFilters} className="md: w-auto">
         <Filter className="h-4 w-4 mr-2" /> Reset Filters
       </Button>
@@ -312,7 +298,6 @@ export default FraudFilters;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

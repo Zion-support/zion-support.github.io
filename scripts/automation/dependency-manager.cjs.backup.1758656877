@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -550,7 +549,6 @@ async function main() {
 
 // Start the dependency manager
 main().catch(console.error);
-=======
 #!/""usr/bin/env"" node;
 /**;
  * Dependency Manager - PM2 Automation;
@@ -1126,4 +1124,3 @@ if (require.main === module) {
 }
 ;
 module.exports = DependencyManager
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

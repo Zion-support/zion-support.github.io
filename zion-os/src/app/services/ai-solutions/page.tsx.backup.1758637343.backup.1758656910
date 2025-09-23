@@ -1,16 +1,13 @@
-<<<<<<< HEAD
 
 "use client";
 import { useState } from "react";
 interface AIService {id: string;
-=======
 "use client";
 
 import { useState } from "react";
 
 interface AIService {
   id: string;
->>>>>>> origin/auto/autonomy-17186719616
   name: string;
   description: string;
   technicalSpecs: string[];
@@ -22,7 +19,6 @@ interface AIService {
   features: string[];
   integration: string[];
 }
-<<<<<<< HEAD
 const aiServices: AIService[] = [;
   {id: "zion-gpt-enterprise";
     name: "ZionGPT Enterprise";
@@ -736,7 +732,6 @@ export default function AISolutionsPage() {;
       </div>;
     </div>);
 }
-=======
 
 const aiServices: AIService[] = [
   {
@@ -1070,4 +1065,3 @@ export default function AISolutionsPage() {
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

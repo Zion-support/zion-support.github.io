@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 import fs from 'fs';
 import path from 'path';
 
@@ -60,4 +58,3 @@ res.status(200).json({ status, insights });  res.status(200).json({ status, insi
 }
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

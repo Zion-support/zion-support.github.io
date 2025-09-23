@@ -4,7 +4,6 @@
  * Advanced monitoring with predictive analytics and smart alerting;
  */
 
-<<<<<<< HEAD
 const pm2 = require('pm2');
 const fs = require('fs').promises;
 const path = require('path');
@@ -588,7 +587,6 @@ if (require.main === module) {
 }
 
 module.exports = IntelligentMonitor;
-=======
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -618,4 +616,3 @@ const os = require('os')
         "action"
         "details"
     console.error(' Intelligent Monitor "failed")
->>>>>>> main

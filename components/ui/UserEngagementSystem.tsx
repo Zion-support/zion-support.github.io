@@ -5,8 +5,6 @@ export type EmptyStateProps ={
   action?: React.ReactNode;
 };
 
-<<<<<<< HEAD
-=======
 export default function EmptyState({ emoji = '✨'titlemessageaction }: EmptyStateProps) {
   return (
     <div className="text-center py-12">
@@ -19,4 +17,3 @@ export default function EmptyState({ emoji = '✨'titlemessageaction }: EmptySta
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

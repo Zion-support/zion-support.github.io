@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React{ ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { slugify } from "@/lib/slugify";
@@ -48,4 +46,3 @@ export function CategoryCard({ titledescriptioniconcolorcountclassName }: Catego
     </Link>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

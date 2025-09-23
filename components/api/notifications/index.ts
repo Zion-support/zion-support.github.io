@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 
 import { supabase } from '../../../utils/supabase/client';
 import {
@@ -131,4 +129,3 @@ return res.status (500).json ({ error: 'Unexpected error' });
 
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

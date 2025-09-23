@@ -1,8 +1,6 @@
 import Head from 'next/head'
 import type { ReactNode } from 'react'
 
-<<<<<<< HEAD
-=======
 type SEOHeadProps = {
 	title?: string
 	description?: string
@@ -50,7 +48,6 @@ type Props = {
 }
 
 export default function SEO({ title = 'Zion Tech Group', description = 'AI & Technology Solutions', children }: Props) {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f
 	return (
 		<Head>
 			<title>{title}</title>

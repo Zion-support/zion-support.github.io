@@ -17,8 +17,6 @@ export type Real20o36SpecializedService ={
   useCases?: string[];
   technology?: string[];
 };
-<<<<<<< HEAD
-=======
 export const real2036SpecializedServices: Real2036SpecializedService[] = [
   // Neuromorphic Computing Platform
   {
@@ -311,4 +309,3 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     technology: ['Space systems', 'Safety protocols', 'Training technology', 'Customer management']
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

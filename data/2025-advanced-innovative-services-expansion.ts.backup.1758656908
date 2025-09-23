@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface AdvancedInnovativeService {
-=======
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   id: string;
   name: string;
   tagline: string;
@@ -17,7 +14,6 @@ export interface AdvancedInnovativeService {
   popular: boolean;
   icon: string;
   color: string;
-<<<<<<< HEAD
   textColor: string;
   link: string;
   marketPosition: string;
@@ -43,7 +39,6 @@ export interface AdvancedInnovativeService {
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
-=======
   text_color: string;
   link: string;
   market_position: string;
@@ -72,28 +67,22 @@ export interface AdvancedInnovativeService {
   implementation_details: string;
   launch_date: string;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
-<<<<<<< HEAD
   marketAdvantage: string;
 }
 
-=======
 
   market_advantage: string;
 ;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
   website: 'https://ziontechgroup.com'
-=======
   website: 'https://ziontechgroup.com', }  mobile: '+1 302 464 0950';
 
   email: 'kleber@ziontechgroup.com';
@@ -137,13 +126,11 @@ const contact = {
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 };
 
 export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   // Advanced AI & Machine Learning Services
   {
-<<<<<<< HEAD
     id: 'ai-autonomous-devops-orchestrator',
     name: 'AI Autonomous DevOps Orchestrator',
     tagline: 'Self-healing DevOps with intelligent automation and predictive maintenance',
@@ -772,7 +759,6 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
   }
 ];
-=======
     id: 'ai-autonomous-devops-orchestrator'
     name: 'AI Autonomous DevOps Orchestrator'
     tagline:
@@ -2535,4 +2521,3 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
   }
 ];
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

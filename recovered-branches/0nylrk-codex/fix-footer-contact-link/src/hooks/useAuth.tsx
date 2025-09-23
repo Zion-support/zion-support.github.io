@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React{ createContextuseContextuseStateuseEffectReactNode } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { AuthContext } from "@/context/auth/AuthContext";
@@ -202,4 +200,3 @@ export function useAuth(): AuthContextType {
   }
   return context;
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

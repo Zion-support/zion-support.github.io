@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -167,7 +166,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
         <meta name="robots" content="index, follow" />
         
         {/* Open Graph */}
-=======
 
 import React from 'react',
 import Head from 'next/head',
@@ -270,7 +268,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
   Brain, Heart, Eye, MessageCircle, Users, Shield, ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
@@ -715,25 +712,18 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-emotional-intelligence-platform-2029" />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-<<<<<<< HEAD
         
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="AI Emotional Intelligence Platform 2029" />
         <meta name="twitter:description" content="Revolutionary AI platform that reads, understands, and responds to human emotions in real-time." />
         <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
-<<<<<<< HEAD
         
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         {/* Additional Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#8b5cf6" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-emotional-intelligence-platform-2029" />
       </Head>
-<<<<<<< HEAD
 
       <UltraFuturisticNavigation2029 />
 
@@ -766,7 +756,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               transition={{ duration: 1, delay: 0.3 }}
               className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
             >
-=======
       <UltraFuturisticNavigation2029 />
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden pt-32'>
@@ -895,7 +884,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -940,14 +928,12 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               <span className="text-white">Platform</span>
             </motion.h1>
 
-<<<<<<< HEAD
             {/* Subheading */}
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
               className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
-=======
 
 
 
@@ -956,7 +942,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -982,7 +967,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               Revolutionary AI platform that reads, understands, and responds to human emotions in real-time across all communication channels. Transform your business with emotional intelligence.
             </motion.p>
 
-<<<<<<< HEAD
             {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -1000,7 +984,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-violet-400 to-purple-400 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
               </Link>
-=======
 
 
 
@@ -1010,7 +993,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -1090,7 +1072,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               </Link>
             </motion.div>
 
-<<<<<<< HEAD
             {/* Key Stats */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -1098,7 +1079,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               transition={{ duration: 1, delay: 0.9 }}
               className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
             >
-=======
 
 
 
@@ -1108,7 +1088,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -1191,8 +1170,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
 
               transition={{ duration: 1, delay: 0 && 0.9 }}
               className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'>;
@@ -1257,18 +1234,14 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       {/* Features Section */}
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
 
@@ -1289,10 +1262,8 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
             className="text-center mb-16"
           >
-=======
             className='text-center mb-16'
 
 
@@ -1304,7 +1275,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1326,15 +1296,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               Our AI Emotional Intelligence Platform combines cutting-edge technology with human understanding to create truly empathetic AI systems.
             </p>
           </motion.div>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -1342,7 +1308,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 className="group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105"
               >
                 <div className={`flex justify-center mb-6`}>
-=======
               <span className='bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent'>;
                 Features;
               </span>;
@@ -1381,7 +1346,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -1440,15 +1404,12 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 <h3 className="text-xl font-bold text-white mb-4 text-center">{feature.title}</h3>
                 <p className="text-gray-300 text-center leading-relaxed">{feature.description}</p>
               </motion.div>
-<<<<<<< HEAD
-=======
 
 
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -1462,8 +1423,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -1475,7 +1434,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
@@ -1496,15 +1454,12 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-<<<<<<< HEAD
-=======
 
 
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -1517,10 +1472,8 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
             className="text-center mb-16"
           >
-=======
             className='text-center mb-16'
 
 
@@ -1532,7 +1485,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1554,7 +1506,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               Experience unprecedented improvements in customer satisfaction, team collaboration, and business outcomes.
             </p>
           </motion.div>
-<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
@@ -1569,7 +1520,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <span className="text-white text-lg">{benefit}</span>
               </motion.div>
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -1617,7 +1567,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
@@ -1627,8 +1576,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -1640,7 +1587,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
@@ -1679,15 +1625,12 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-<<<<<<< HEAD
-=======
 
 
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -1700,10 +1643,8 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
             className="text-center mb-16"
           >
-=======
             className='text-center mb-16'
 
 
@@ -1715,7 +1656,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1737,15 +1677,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               From customer service to healthcare, our platform transforms industries with emotional intelligence.
             </p>
           </motion.div>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.title}
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -1753,7 +1689,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 className="group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105"
               >
                 <div className={`flex justify-center mb-6`}>
-=======
               <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>;
                 Use Cases;
               </span>;
@@ -1791,7 +1726,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -1850,15 +1784,12 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 <h3 className="text-xl font-bold text-white mb-4 text-center">{useCase.title}</h3>
                 <p className="text-gray-300 text-center leading-relaxed">{useCase.description}</p>
               </motion.div>
-<<<<<<< HEAD
-=======
 
 
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -1872,8 +1803,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -1885,7 +1814,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
@@ -1906,15 +1834,12 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
       <section id="pricing" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-<<<<<<< HEAD
-=======
 
 
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -1927,10 +1852,8 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
             className="text-center mb-16"
           >
-=======
             className='text-center mb-16'
 
 
@@ -1942,7 +1865,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1964,7 +1886,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               Flexible pricing options designed to scale with your business needs.
             </p>
           </motion.div>
-<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {Object.entries(pricing).map(([key, plan], index) => (
@@ -2012,7 +1933,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white transform hover:scale-105'
                       : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'
-=======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {Object.entries(pricing).map(([key, plan], index) => (
               <motion.div
@@ -2075,7 +1995,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
@@ -2097,23 +2016,17 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-<<<<<<< HEAD
-=======
 
 
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -2126,10 +2039,8 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
             className="text-center mb-16"
           >
-=======
             className='text-center mb-16'
 
 
@@ -2141,7 +2052,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -2166,7 +2076,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               Contact us today to learn how our AI Emotional Intelligence Platform can revolutionize your customer experience and business outcomes.
             </p>
           </motion.div>
-<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <motion.div
@@ -2211,7 +2120,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
-=======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <motion.div
 
@@ -2284,7 +2192,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
 
@@ -2383,9 +2290,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
           >
             <Link
               href="/contact"
-<<<<<<< HEAD
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
-=======
 
 
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover: from-purple-600 hover:to-pink-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">;
@@ -2406,7 +2311,6 @@ export default AIEmotionalIntelligencePlatform2029;  );
 };
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 export default AIEmotionalIntelligencePlatform2029;
 
 
@@ -2493,7 +2397,6 @@ export default AIEmotionalIntelligencePlatform2029;
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 
       <UltraFuturisticFooter2028 />
     </>
@@ -2501,7 +2404,6 @@ export default AIEmotionalIntelligencePlatform2029;
 };
 
 export default AIEmotionalIntelligencePlatform2029;
-=======
       <UltraFuturisticFooter2028 />
     </>
   );
@@ -2518,7 +2420,6 @@ export default AIEmotionalIntelligencePlatform2029;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 

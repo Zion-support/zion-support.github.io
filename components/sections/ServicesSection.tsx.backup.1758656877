@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 
 import React from 'react';
@@ -14,7 +13,6 @@ import {
   ArrowRight,
   Zap
 } from 'lucide-react';
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -91,12 +89,10 @@ import {
   ArrowRight;
   Zap;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 const ServicesSection: React.FC = () => {
   const services = [
     {
-<<<<<<< HEAD
       icon: Brain,
       title: 'AI Development',
       description: 'Custom AI solutions and machine learning models tailored to your business needs.',
@@ -120,7 +116,6 @@ const ServicesSection: React.FC = () => {
       color: 'from-green-500 to-emerald-500',
       href: '/services/digital-transformation'
     },
-=======
 
       icon: Brain
       title: 'AI Development'
@@ -187,12 +182,10 @@ const ServicesSection: React.FC = () => {
       description: 'Connected device solutions and IoT platform development.',      href: '/services / digital - transformation';
     }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     {
       icon: Wifi,
       title: 'IoT Platforms',
       description: 'Connected device solutions and IoT platform development.',
-<<<<<<< HEAD
       features: ['Sensor Networks', 'Real-time Monitoring', 'Data Analytics', 'Edge Computing'],
       color: 'from-orange-500 to-red-500',
       href: '/services/iot-platforms'
@@ -223,7 +216,6 @@ const ServicesSection: React.FC = () => {
         staggerChildren: 0.1
       }
     }
-=======
 
     };
       features: [;
@@ -346,12 +338,10 @@ const ServicesSection: React.FC = () => {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
 
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
-<<<<<<< HEAD
     visible: { opacity: 1, y: 0 }
   };
 
@@ -365,7 +355,6 @@ const ServicesSection: React.FC = () => {
 
       <div className="relative container mx-auto px-4">
         {/* Section Header */}
-=======
 
         {/* Section Header */}
 
@@ -436,13 +425,11 @@ const ServicesSection: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
           className="text-center mb-16"
         >
           <motion.div
@@ -503,7 +490,6 @@ const ServicesSection: React.FC = () => {
                 </p>
 
                 {/* Features */}
-=======
 
 
 
@@ -646,14 +632,12 @@ const ServicesSection: React.FC = () => {
                 {/* Features */}
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <ul className="space-y-2 mb-8">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center space-x-3 text-gray-400">
                       <div className="w-2 h-2 bg-blue-400 rounded-full" />
                       <span className="text-sm">{feature}</span>
                     </li>
-<<<<<<< HEAD
                   ))}
                 </ul>
 
@@ -668,7 +652,6 @@ const ServicesSection: React.FC = () => {
 
                 {/* Hover Effect */}
                 <div className="absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300" />
-=======
 
 
                   ))}
@@ -735,13 +718,11 @@ const ServicesSection: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               </div>
             </motion.div>
           ))}
         </motion.div>
 
-<<<<<<< HEAD
         {/* Bottom CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -772,7 +753,6 @@ const ServicesSection: React.FC = () => {
 };
 
 export default ServicesSection;
-=======
 
 
 
@@ -866,4 +846,3 @@ export default ServicesSection;  );
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

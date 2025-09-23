@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import { Html, Head, Main, NextScript } from 'next/document';
-=======
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export default function Document() {
   return (

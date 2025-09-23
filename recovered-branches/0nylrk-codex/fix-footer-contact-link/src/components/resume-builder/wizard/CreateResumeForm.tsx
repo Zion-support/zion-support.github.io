@@ -1,7 +1,5 @@
 
 import { useState } from "react";
-<<<<<<< HEAD
-=======
 import { CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
@@ -55,4 +53,3 @@ export const CreateResumeForm = ({
     </Card>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

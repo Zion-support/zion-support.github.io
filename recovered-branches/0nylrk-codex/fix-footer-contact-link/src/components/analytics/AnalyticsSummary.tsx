@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { CardContent } from "@/components/ui/card";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -131,4 +129,3 @@ function StatCard({ titlevalueicon }: StatCardProps) {
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import { ServiceVariant } from '../types/service-variants';
 
@@ -2757,4 +2755,3 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
   }
 ];
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

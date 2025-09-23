@@ -6,7 +6,6 @@ const automationFiles = ['automation/dependency-fixer.cjs']
   'automation/health-check.cjs'
   'automation/security-scanner.cjs'
   'automation/performance-optimizer.cjs'
-<<<<<<< HEAD
 ];
 
 function fixAutomationFile(filePath) {
@@ -44,7 +43,6 @@ function fixAutomationFile(filePath) {
     // Fix common syntax errors
     content = content
       // Remove extra semicolons after closing braces
-=======
     let content = fs.readFileSync(filePath, 'utf8')
     const fileName = path.basename(filePath, '.cjs')
     let className = ''
@@ -78,4 +76,3 @@ function fixAutomationFile(filePath) {
       .replace(/['"]react;['"]/g, ")
       .replace(/['"]framer-motion;['"]/g, ")
       .replace(/['"]lucide-react;['"]/g, ")
->>>>>>> main

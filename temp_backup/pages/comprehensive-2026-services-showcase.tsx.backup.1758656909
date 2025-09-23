@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -21,7 +20,6 @@ export default function Comprehensive2026ServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popularity');
   const [viewMode, setViewMode] = useState('grid');
-=======
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -44,7 +42,6 @@ export default function Comprehensive2026ServicesShowcase() {
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('name');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -55,7 +52,6 @@ export default function Comprehensive2026ServicesShowcase() {
 
   // Combine all services
   const allServices = [
-<<<<<<< HEAD
     ...nextGenAIServices2026,
     ...revolutionaryITInfrastructure2026,
     ...innovativeMicroSaas2026
@@ -97,7 +93,6 @@ export default function Comprehensive2026ServicesShowcase() {
       }
     });
 
-=======
     ...real2026AdvancedServices,
     ...real2026InnovativeSolutions,
     ...real2026SpecializedServices
@@ -186,7 +181,6 @@ export default function Comprehensive2026ServicesShowcase() {
     return filtered;
   }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -209,7 +203,6 @@ export default function Comprehensive2026ServicesShowcase() {
   };
 
   return (
-<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground 
       intensity="extreme" 
       colorScheme="quantum-fusion"
@@ -222,7 +215,6 @@ export default function Comprehensive2026ServicesShowcase() {
         <meta name="keywords" content="AI services, IT infrastructure, micro SaaS, quantum computing, blockchain, 2026 technology, Zion Tech Group" />
         <meta property="og:title" content="Comprehensive 2026 Services Showcase | Zion Tech Group" />
         <meta property="og:description" content="Discover our comprehensive collection of cutting-edge AI, IT infrastructure, and micro SaaS services for 2026." />
-=======
     <>
       <Head>
         <title>Comprehensive 2026 Services Showcase - Zion Tech Group</title>
@@ -230,13 +222,11 @@ export default function Comprehensive2026ServicesShowcase() {
         <meta name="keywords" content="micro SAAS, IT services, AI services, quantum computing, blockchain, edge computing, 2026 services, Zion Tech Group" />
         <meta property="og:title" content="Comprehensive 2026 Services Showcase - Zion Tech Group" />
         <meta property="og:description" content="Discover our comprehensive portfolio of cutting-edge micro SAAS, IT, and AI services for 2026." />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <meta property="og:url" content="https://ziontechgroup.com/comprehensive-2026-services-showcase" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2026-services-showcase" />
       </Head>
 
-<<<<<<< HEAD
       <UltraAdvancedNavigation />
 
       <div className="min-h-screen relative z-10">
@@ -574,7 +564,6 @@ export default function Comprehensive2026ServicesShowcase() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <motion.div 
@@ -941,6 +930,5 @@ export default function Comprehensive2026ServicesShowcase() {
         </motion.div>
       </div>
     </>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   );
 }

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import {
 	ArrowUp,
 	Award,
@@ -267,4 +265,3 @@ const EnhancedFooter: React.FC = () => {
 };
 
 export default EnhancedFooter;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

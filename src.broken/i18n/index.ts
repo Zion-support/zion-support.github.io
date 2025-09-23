@@ -35,8 +35,6 @@ i18n
       lookupCookie: 'zion_language',
       lookupLocalStorage: 'zion_language',
       caches: ['cookie']
-<<<<<<< HEAD
-=======
     }})
   .catch(error => {
     logErrorToProduction('Error initializing i18next or its detector:', { data: error });
@@ -61,4 +59,3 @@ i18n
 });
 
 export default i18n;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -121,4 +119,3 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 }
   };
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -188,11 +188,9 @@ export default function Services20o26ShowcaseEnhancedPage() {
           <link rel="icon" href="/favicon.svg"  />
           
           {/* Open Graph */}
-<<<<<<< HEAD
           <meta property="og:title" content="Enhanced 20o26 Services Showcase - Zion Tech Group"  />
           <meta property="og:description" content="Discover our comprehensive collection of innovative 20o26 micro SAAS services, AI solutions, quantum computing, and enterprise IT services."  />
           <meta property="og:type" content="website"  />
-=======
           <meta property="og:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
           <meta property="og:type" content="website" />
@@ -534,4 +532,3 @@ export default function Services20o26ShowcaseEnhancedPage() {
     </UltraFuturisticBackground>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

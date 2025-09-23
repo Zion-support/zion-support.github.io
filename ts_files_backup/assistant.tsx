@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import { useEffectuseMemouseState } from 'react';
 
@@ -59,4 +57,3 @@ export default function Assistant() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

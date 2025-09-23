@@ -108,8 +108,6 @@ function computeHeuristicClientBudget(input: ClientBudgetRequest): BudgetSuggest
     confidence: 'Medium',
     rationale: `Estimated using heuristics. Baseline hourly ${hourly.toFixed(0)} derived from skills (${skills.join(', ')}) and experience (${exp}). ${hours} hours over ${weeks} weeks.`,
     modelUsed: 'heuristic-v1',
-<<<<<<< HEAD
-=======
     source: 'heuristic'};
 }
 
@@ -277,4 +275,3 @@ export async function generateTalentRateSuggestion(input: TalentRateRequest): Pr
     modelUsed: llm.modelUsed,
     source: 'hybrid'};
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

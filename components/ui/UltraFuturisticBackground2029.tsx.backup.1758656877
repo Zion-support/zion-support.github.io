@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
-=======
 "use client";
 
 class ErrorBoundary extends React.Component {
@@ -38,7 +36,6 @@ import { motion } from 'framer-motion';
 
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 interface Particle {
   x: number;
   y: number;
@@ -49,7 +46,6 @@ interface Particle {
   color: string;
   type: 'energy' | 'data' | 'quantum' | 'neon';
   life: number;
-<<<<<<< HEAD
   maxLife: number;
 }
 
@@ -63,7 +59,6 @@ interface EnergyField {
 }
 
 export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {
-=======
 
 
   maxLife: number;
@@ -132,14 +127,12 @@ export default function UltraFuturisticBackground2029(): any ({ children }: { ch
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-<<<<<<< HEAD
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -162,7 +155,6 @@ export default function UltraFuturisticBackground2029(): any ({ children }: { ch
 
     window.addEventListener('mousemove', handleMouseMove);
 
-=======
 interface Particle {
   x: number,
   y: number,
@@ -219,12 +211,10 @@ interface EnergyField {
 
 
     window.addEventListener('mousemove', handleMouseMove);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     // Initialize particles with different types
     const initParticles = () => {
       const particles: Particle[] = [];
       const colors = {
-<<<<<<< HEAD
         energy: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00'],
         data: ['#0080ff', '#8000ff', '#ff0080', '#80ff00'],
         quantum: ['#ff8000', '#8000ff', '#00ffff', '#ff0080'],
@@ -233,7 +223,6 @@ interface EnergyField {
       
       for (let i = 0; i < 150; i++) {
         const type = ['energy', 'data', 'quantum', 'neon'][Math.floor(Math.random() * 4)] as keyof typeof colors;
-=======
 
         energy: ['#00ffff#ff00ff#ffff00#00ff00'],
         data: ['#0080ff#8000ff#ff0080#80ff00'],
@@ -244,7 +233,6 @@ interface EnergyField {
       for (let i = 0, i < 150, i++) {
         const type = ['energydataquantumneon'][Math.floor(Math.random() * 4)] as keyof typeof colors;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -253,7 +241,6 @@ interface EnergyField {
           size: Math.random() * 4 + 1,
           opacity: Math.random() * 0.8 + 0.2,
           color: colors[type][Math.floor(Math.random() * colors[type].length)],
-<<<<<<< HEAD
           type,
           life: Math.random() * 100,
           maxLife: 100
@@ -261,7 +248,6 @@ interface EnergyField {
       }
       
       particlesRef.current = particles;
-=======
           type;
           life: Math.random() * 100,
 
@@ -270,31 +256,26 @@ interface EnergyField {
       }
       particlesRef.current = particles
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     };
 
     // Initialize energy fields
     const initEnergyFields = () => {
       const fields: EnergyField[] = [];
-<<<<<<< HEAD
       const fieldColors = ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff8000'];
       
       for (let i = 0; i < 8; i++) {
         fields.push({
-=======
 
       const fieldColors = ['#00ffff#ff00ff#ffff00#00ff00#ff8000'];
       for (let i = 0, i < 8, i++) {
         fields.push({
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
           radius: Math.random() * 200 + 100,
           intensity: Math.random() * 0.5 + 0.3,
           color: fieldColors[Math.floor(Math.random() * fieldColors.length)],
           pulse: Math.random() * Math.PI * 2
-<<<<<<< HEAD
         });
       }
       
@@ -313,7 +294,6 @@ interface EnergyField {
         field.pulse += 0.02;
         const pulseIntensity = Math.sin(field.pulse) * 0.3 + 0.7;
         
-=======
 
         })
       }
@@ -333,13 +313,11 @@ interface EnergyField {
         field.pulse += 0.02;
 
         const pulseIntensity = Math.sin(field.pulse) * 0.3 + 0.7;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         // Create radial gradient for energy field
         const gradient = ctx.createRadialGradient(field.x, field.y, 0, field.x, field.y, field.radius);
         gradient.addColorStop(0, `${field.color}${Math.floor((field.intensity * pulseIntensity) * 255).toString(16).padStart(2, '0')}`);
         gradient.addColorStop(0.5, `${field.color}${Math.floor((field.intensity * pulseIntensity * 0.5) * 255).toString(16).padStart(2, '0')}`);
         gradient.addColorStop(1, 'transparent');
-<<<<<<< HEAD
         
         ctx.fillStyle = gradient;
         ctx.beginPath();
@@ -347,34 +325,28 @@ interface EnergyField {
         ctx.fill();
       });
 
-=======
         ctx.fillStyle = gradient;
         ctx.beginPath();
         ctx.arc(field.x, field.y, field.radius, 0, Math.PI * 2);
         ctx.fill()
       });
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       // Update and draw particles
       particlesRef.current.forEach((particle, index) => {
         particle.life--;
         if (particle.life <= 0) {
           particle.life = particle.maxLife;
           particle.x = Math.random() * canvas.width;
-<<<<<<< HEAD
           particle.y = Math.random() * canvas.height;
         }
 
-=======
 
           particle.y = Math.random() * canvas.height
 
         }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         // Interactive particle behavior based on mouse position
         const dx = mousePosition.x - particle.x;
         const dy = mousePosition.y - particle.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
-<<<<<<< HEAD
         
         if (distance < 200) {
           const force = (200 - distance) / 200;
@@ -385,7 +357,6 @@ interface EnergyField {
         particle.x += particle.vx;
         particle.y += particle.vy;
 
-=======
 
         
 
@@ -399,13 +370,11 @@ interface EnergyField {
 
         particle.x += particle.vx;
         particle.y += particle.vy;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         // Wrap around edges
         if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
-<<<<<<< HEAD
 
         // Draw particle with type-specific effects
         ctx.save();
@@ -416,7 +385,6 @@ interface EnergyField {
             ctx.shadowColor = particle.color;
             ctx.shadowBlur = 15;
             ctx.globalCompositeOperation = 'screen';
-=======
         // Draw particle with type-specific effects
         ctx.save();
 
@@ -796,7 +764,6 @@ if (particle.coordinate_y = 0) {
             ctx.shadow_blur = 20;
             ctx.globalCompositeOperation = 'lighter';
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             break;
           case 'data':
             // Data particles with digital effect
@@ -813,23 +780,19 @@ if (particle.coordinate_y = 0) {
             ctx.shadowColor = particle.color;
             ctx.shadowBlur = 20;
             ctx.globalCompositeOperation = 'lighter';
-<<<<<<< HEAD
             break;
         }
 
         const lifeRatio = particle.life / particle.maxLife;
         const currentOpacity = particle.opacity * lifeRatio;
-=======
             break;        }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fillStyle = particle.color + Math.floor(currentOpacity * 255).toString(16).padStart(2, '0');
         ctx.fill();
         
-<<<<<<< HEAD
         ctx.restore();
 
         // Draw connections between nearby particles
@@ -841,7 +804,6 @@ if (particle.coordinate_y = 0) {
             Math.pow(particle.y - otherParticle.y, 2)
           );
           
-=======
 
         ctx.restore();
         // Draw connections between nearby particles
@@ -904,7 +866,6 @@ if ( {) {
 
             Math.pow(particle.y - otherParticle.y, 2)
           );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           if (distance < 120) {
             const opacity = (1 - distance / 120) * 0.3;
             ctx.strokeStyle = particle.color + Math.floor(opacity * 255).toString(16).padStart(2, '0');
@@ -912,7 +873,6 @@ if ( {) {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
-<<<<<<< HEAD
             ctx.stroke();
           }
         });
@@ -921,7 +881,6 @@ if ( {) {
       // Draw quantum wave interference patterns
       const time = Date.now() * 0.001;
       for (let i = 0; i < 5; i++) {
-=======
 
 
         const lifeRatio = particle && particle.life / particle && particle.maxLife;
@@ -1004,21 +963,16 @@ if ( {) {
 
       for (let i = 0, i < 5, i++) {
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         const waveX = (canvas.width / 6) * (i + 1);
         const waveY = canvas.height / 2;
         const amplitude = 50;
         const frequency = 0.01;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         
         ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 + 0.05 * Math.sin(time + i)})`;
         ctx.lineWidth = 2;
         ctx.beginPath();
         
-<<<<<<< HEAD
         for (let x = 0; x < canvas.width; x += 2) {
           const y = waveY + amplitude * Math.sin(frequency * x + time + i) * Math.sin(frequency * x * 0.5 + time * 0.7);
           if (x === 0) {
@@ -1036,7 +990,6 @@ if ( {) {
       ctx.lineWidth = 1;
       
       for (let i = 0; i < 20; i++) {
-=======
 
         for (let x = 0, x < canvas.width, x += 2) {
           const y = waveY + amplitude * Math.sin(frequency * x + time + i) * Math.sin(frequency * x * 0.5 + time * 0.7);
@@ -1115,12 +1068,10 @@ if ( {) {
       
 
       for (let i = 0, i < 20, i++) {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         const x1 = Math.random() * canvas.width;
         const y1 = Math.random() * canvas.height;
         const x2 = Math.random() * canvas.width;
         const y2 = Math.random() * canvas.height;
-<<<<<<< HEAD
         
         ctx.beginPath();
         ctx.moveTo(x1, y1);
@@ -1144,7 +1095,6 @@ if ( {) {
 
   return (
     <div className="relative w-full h-full overflow-hidden">
-=======
 
         
         ctx.beginPath();
@@ -1327,13 +1277,11 @@ if ( {) {
   }, [mousePosition]);
   return (
     <div className="relative w-full h-full overflow-hidden">;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       {/* Animated background canvas */}
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
-<<<<<<< HEAD
       />
       
       {/* Floating geometric shapes */}
@@ -1344,7 +1292,6 @@ if ( {) {
             rotate: 360,
             scale: [1, 1.2, 1],
             opacity: [0.2, 0.4, 0.2]
-=======
 
       />;
 
@@ -1389,14 +1336,12 @@ if ( {) {
 
             opacity: [0.2, 0.4, 0.2];
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
             ease: "easeInOut"
           }}
-<<<<<<< HEAD
         />
         
         <motion.div
@@ -1404,7 +1349,6 @@ if ( {) {
           animate={{
             y: [0, -20, 0],
             opacity: [0.2, 0.5, 0.2]
-=======
 
         />;
 
@@ -1451,14 +1395,12 @@ if ( {) {
             coordinate_y: [0, -20, 0];
             opacity: [0.2, 0.5, 0.2];
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           }}
           transition={{
             duration: 6,
             repeat: Infinity,
             ease: "easeInOut"
           }}
-<<<<<<< HEAD
         />
         
         <motion.div
@@ -1493,7 +1435,6 @@ if ( {) {
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none" />
       
       {/* Content */}
-=======
 
         />;
 
@@ -1605,17 +1546,13 @@ if ( {) {
       <div className='relative z-10'>{children}</div>
     </div>
   );      {/* Content */}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <div className="relative z-10">
         {children}
       </div>
     </div>
-<<<<<<< HEAD
   );
 }
-=======
   )
 }
   );
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

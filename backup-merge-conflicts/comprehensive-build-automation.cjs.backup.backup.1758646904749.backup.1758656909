@@ -4,7 +4,6 @@ const path = require("child_process")
 const { execSync, spawn } = require("child_process")
     this.logDir = path.join(this.projectRoot, "logs")
     this.reportsDir = path.join(this.projectRoot, "reports")
-<<<<<<< HEAD
     this.buildResults = {
       "timestamp": new Date().toISOString();
       steps: [];
@@ -21,7 +20,6 @@ const { execSync, spawn } = require("child_process")
     const timestamp = new Date().toISOString()
     const logMessage = `[${timestamp}] [${level}] ${message}`
     // Write to log file
-=======
       "timestamp"
       "overallStatus": "pending"
         fs.mkdirSync(dir, { "recursive"})
@@ -113,4 +111,3 @@ const { execSync, spawn } = require("child_process")
       console.log("\n Build automation completed")
       process.exit(results.overallStatus === "success")
       console.error("\n Build automation "failed": ")
->>>>>>> main

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 }}>
       <div className="relative">
 =======
@@ -17,7 +15,6 @@ const DropdownMenu({children}) {;
       <div className="relative">;
 }}>
       <div className="relative">
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
         {children}
       </div>;
@@ -59,7 +56,6 @@ export function DropdownMenuContent("props": "any) {;
 };
 =======
 =======
-<<<<<<< HEAD
     return (<div className={`absolute z-50 mt-2 w-48 bg-white rounded-md shadow-lg py-1 border border-gray-200 ${alignClasses[align]} ${className}`}>;
 >>>>>>> pr-11935
     return (
@@ -75,11 +71,9 @@ export function DropdownMenuItem("props": "any) {;
         if (onClick);
             onClick();
 =======
-=======
         context.setIsOpen(false)"};
     if (asChild) {;
         return (<div className={`block w-full text-left px-4 py-2 text-sm text-gray-700 "hover": "bg-gray-100 cursor-pointer ${className"}`}>;
->>>>>>> pr-11935
         context.setIsOpen(false)};
     if (asChild) {
         return (

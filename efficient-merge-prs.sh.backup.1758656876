@@ -1,6 +1,5 @@
 #!/bin/bash
 
-<<<<<<< HEAD
 # Efficient script to resolve merge conflicts and merge open PRs into main
 # Only processes branches that have actual changes and can be merged
 set -e
@@ -16,7 +15,6 @@ BACKUP_BRANCH="backup-main-$(date +%Y%m%d-%H%M%S)"
 LOG_FILE="merge-log-$(date +%Y%m%d-%H%M%S).log"
 
 # Create a backup branch
-=======
 # Efficient PR merge script focusing on recent and important branches
 set -e
 
@@ -27,7 +25,6 @@ echo "---"
 
 # Create backup
 BACKUP_BRANCH="backup-efficient-merge-$(date +%Y%m%d-%H%M%S)"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 echo "🔒 Creating backup branch: $BACKUP_BRANCH"
 git checkout -b "$BACKUP_BRANCH"
 git push origin "$BACKUP_BRANCH"
@@ -36,7 +33,6 @@ git checkout main
 # Initialize counters
 SUCCESSFUL_MERGES=0
 FAILED_MERGES=0
-<<<<<<< HEAD
 CONFLICT_RESOLUTIONS=0
 SKIPPED_BRANCHES=0
 TOTAL_PROCESSED=0
@@ -287,7 +283,6 @@ for ((i=0; i<TOTAL_BRANCHES; i+=BATCH_SIZE)); do
             log_message "⏸️  User requested to stop processing"
             break
         fi
-=======
 SKIPPED_BRANCHES=0
 
 # Get recent cursor branches (last 100)
@@ -344,21 +339,16 @@ for branch in $RECENT_BRANCHES; do
     # Progress update every 10 merges
     if [ $((SUCCESSFUL_MERGES % 10)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
         echo "📊 Progress: $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed, $SKIPPED_BRANCHES skipped"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     fi
 done
 
 # Final push
-<<<<<<< HEAD
 log_message "💾 Pushing final changes to remote..."
-=======
 echo "💾 Pushing final changes..."
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 git push origin main
 
 # Summary
 echo ""
-<<<<<<< HEAD
 log_message "🎉 Efficient merge conflict resolution completed!"
 log_message "📊 Final Summary:"
 log_message "   📋 Total branches processed: $TOTAL_PROCESSED"
@@ -379,7 +369,6 @@ log_message "   3. Delete the backup branch when satisfied: git push origin --de
 log_message "   4. Consider cleaning up old feature branches"
 log_message "   5. Run tests to ensure everything works correctly"
 log_message "   6. Review the log file: $LOG_FILE"
-=======
 echo "🎉 Efficient PR merge completed!"
 echo "📊 Summary:"
 echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
@@ -387,4 +376,3 @@ echo "   ❌ Failed merges: $FAILED_MERGES"
 echo "   ⏭️  Skipped branches: $SKIPPED_BRANCHES"
 echo "   🔒 Backup branch: $BACKUP_BRANCH"
 echo "⏰ Completed at: $(date)"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

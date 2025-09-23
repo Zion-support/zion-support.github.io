@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import React from 'react',
 import React from 'react';
@@ -107,7 +105,6 @@ interface Feature {
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         {/* Features Grid */}

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react',
 import SEO from '../components/SEO',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
@@ -37,4 +35,3 @@ export default function ResourcesPage() {
 },
 
 export default ResourcesPage,
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

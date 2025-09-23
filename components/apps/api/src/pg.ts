@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import pg from 'pg';
 const { Pool, PoolClient } = pg;
 
@@ -28,4 +26,3 @@ export async function withUser<T>(userId: string, fn: (client: any) => Promise<T
     client.release();
   }
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

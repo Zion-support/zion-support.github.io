@@ -1,7 +1,5 @@
 import Link from 'next/link';
 
-<<<<<<< HEAD
-=======
 
 const EnhancedFooter = () => {
   const currentYear = new Date().getFullYear();
@@ -62,4 +60,3 @@ const EnhancedFooter = () => {
 };
 
 export default EnhancedFooter;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

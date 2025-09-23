@@ -23,8 +23,6 @@ export const publicPages: SitemapItem[] = [
     description: 'The world\'s first free marketplace dedicated to high-tech and artificial intelligence',
     priority: 1.0,
     changeFreq: 'weekly',
-<<<<<<< HEAD
-=======
     lastmod: currentDate},
   {
     path: '/about',
@@ -326,4 +324,3 @@ export const getAccessibleRoutes = (
   
   return accessibleRoutes;
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

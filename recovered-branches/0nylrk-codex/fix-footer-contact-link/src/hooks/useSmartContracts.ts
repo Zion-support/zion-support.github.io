@@ -30,8 +30,6 @@ export function useSmartContracts() {
           endDate: values.endDate?.toISOString(),
           paymentTerms: values.paymentTerms,
           paymentAmount: values.paymentAmount,
-<<<<<<< HEAD
-=======
           additionalClauses: values.additionalClauses || []}
       });
       
@@ -103,4 +101,3 @@ export function useSmartContracts() {
     deploymentStatus
   };
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

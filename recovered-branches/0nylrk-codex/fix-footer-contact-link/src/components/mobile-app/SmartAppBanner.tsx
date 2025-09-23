@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useStateuseEffect } from "react";
 import { XArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -91,4 +89,3 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     </div>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export default function InvestorsPage() {
 	return (

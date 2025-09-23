@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -188,7 +186,6 @@ export default function Partners() {;
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
   // If not authenticated, display partner program info and signup CTA;
   if (!isAuthenticated) {;
     return (

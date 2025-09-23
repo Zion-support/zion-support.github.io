@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -12,7 +11,6 @@ import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
 import { useWhitelabel } from "@/context/WhitelabelContext";
 
 export default function CompanyWorkspace() {
-=======
 
 import React from "react";
 import {Header} from "@/components/Header";
@@ -25,12 +23,10 @@ import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
 import {useWhitelabel} from "@/context/WhitelabelContext";
 export default function CompanyWorkspace() {;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const { companySlug } = useParams() as { companySlug?: string };
   const { user } = useAuth();
   const { company, isLoading, error } = useCompanyWorkspace(companySlug);
   const { isWhitelabel, tenant, brandName } = useWhitelabel();
-<<<<<<< HEAD
   
   if (isLoading) {
     return (
@@ -56,7 +52,6 @@ export default function CompanyWorkspace() {;
 
   if (!hasAccess) {
     return <Navigate to="/unauthorized" />;
-=======
 
 import React from "react",
 import { Header } from "@/components/Header",
@@ -92,12 +87,10 @@ import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
   if (!hasAccess) {
     return <Navigate to="/unauthorized" />
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 
   return (
     <ProtectedRoute>
-<<<<<<< HEAD
       <SEO 
         title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
@@ -107,7 +100,6 @@ import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
         customTheme={effectiveTheme}
       />
       <main className="min-h-screen" style={{ backgroundColor: effectiveTheme?.backgroundColor || 'var(--background)' }}>
-=======
       <SEO
       <SEO 
 
@@ -165,7 +157,6 @@ export default function CompanyWorkspace() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -188,10 +179,8 @@ export default function CompanyWorkspace() {;
       </main>
       <Footer />
     </ProtectedRoute>
-<<<<<<< HEAD
   );
 }
-=======
   )
 
 }
@@ -207,7 +196,6 @@ export default function CompanyWorkspace() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

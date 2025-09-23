@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 
@@ -82,7 +80,6 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 	id: string, name: string,
 	description: string,
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 	category:
 		| 'AI Consciousness'
 		| 'AI Emotional Intelligence'

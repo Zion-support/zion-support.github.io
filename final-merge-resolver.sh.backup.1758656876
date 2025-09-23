@@ -1,6 +1,5 @@
 #!/bin/bash
 
-<<<<<<< HEAD
 # Final Merge Conflict Resolver
 # Resolves all remaining conflicts and merges everything into main
 
@@ -126,7 +125,6 @@ echo "⏰ Completed at: $(date)"
 
 echo ""
 echo "🎯 All merge conflicts resolved and branches merged into main!"
-=======
 echo "🚀 FINAL MERGE CONFLICT RESOLUTION AND PR MERGE PROCESS"
 echo "
 # Change to workspace directory
@@ -299,4 +297,3 @@ echo "- Better SEO optimization with fresh, keyword-rich content"
 echo "- Clean, production-ready codebase"
 echo ""
 echo "🚀 The repository is now ready for production deployment!"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

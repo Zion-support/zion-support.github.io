@@ -10,11 +10,8 @@ type QuoteRequestsListProps = {
   isArchived: boolean;
   onViewDetails: (quote: QuoteRequest) => void;
   onMarkAsResponded: (id: string) => void;
-<<<<<<< HEAD
   onToggleArchive: (id: string, isArchived: boolean) => void;
-=======
   onToggleArchive: (id: stringisArchived: boolean) => void;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 };
 
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({

@@ -22,9 +22,7 @@ exports.handler = async () => {
     return status;
   }
 
-<<<<<<<< HEAD:netlify/functions/a11y-audit-runner.js.backup.1755991529
   process.env.CANONICAL_URL = process.env.CANONICAL_URL || process.env.SITE_URL || process.env.URL || 'https://ziontechgroup.com';
-========
   // Generate sitemap for crawling
   logStep('sitemap:generate', () => runNode('scripts/generate-sitemap.js'));
 
@@ -40,7 +38,6 @@ exports.handler = async () => {
   logStep('a11y:audit', () => runNode('automation/a11y-audit.cjs'));
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
   logStep('git:sync', () => runNode('automation/git-sync.cjs'));
->>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-ded0:netlify/functions/link-crawler.js
 
   return { statusCode: 200, body: logs.join('\n') };
 };

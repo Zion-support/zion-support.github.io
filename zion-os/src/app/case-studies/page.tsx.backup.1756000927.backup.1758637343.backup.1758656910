@@ -1,20 +1,16 @@
 import Link from "next/link";
 
 export const metadata = {
-<<<<<<< HEAD
   title: "Case Studies - Zion Tech Group",
   description: "Explore real-world success stories and transformative projects delivered by Zion Tech Group across AI, quantum computing, and enterprise solutions.",
   keywords: "case studies, success stories, AI projects, quantum computing, enterprise solutions, Zion Tech Group",
-=======
   title: "Case Studies - Zion Tech Group | Client Success Stories",
   description: "Explore real-world examples of how Zion Tech Group has helped clients transform their businesses with AI, quantum computing, and enterprise technology solutions.",
   keywords: "case studies, client success stories, AI implementation, quantum computing, enterprise solutions, Zion Tech Group",
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
 };
 
 export default function CaseStudiesPage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
@@ -128,7 +124,6 @@ export default function CaseStudiesPage() {
             {/* Quantum Computing */}
             <div className="card group">
               <div className="w-16 h-16 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-500/30 transition-colors">
-=======
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -187,12 +182,10 @@ export default function CaseStudiesPage() {
             {/* Case Study 2 */}
             <div className="card group">
               <div className="w-16 h-16 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-500/30 transition-colors">
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
                 <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-<<<<<<< HEAD
               <h3 className="text-xl font-semibold mb-3">Quantum Neural Network Research</h3>
               <p className="text-gray-400 mb-4">
                 Pioneered quantum neural network research that achieved 1000x speedup in certain computational tasks.
@@ -389,7 +382,6 @@ export default function CaseStudiesPage() {
           </div>
         </section>
       </div>
-=======
               <h3 className="text-2xl font-bold mb-4">Quantum Financial Services</h3>
               <p className="text-purple-400 font-medium mb-3">Quantum Computing for Risk Assessment</p>
               <p className="text-gray-400 mb-6 leading-relaxed">
@@ -690,7 +682,6 @@ export default function CaseStudiesPage() {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
     </div>
   );
 }

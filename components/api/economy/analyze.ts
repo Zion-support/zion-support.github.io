@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 
@@ -58,7 +56,6 @@ export type AnalyzeResponse = {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 
@@ -50,4 +48,3 @@ export function signPayload(payload: any, privateKey?: string): SignatureResult 
   };
 }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

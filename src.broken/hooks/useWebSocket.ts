@@ -1,6 +1,4 @@
 import { useState, useEffect, useRef, useCallback } from react';
-<<<<<<< HEAD
-=======
 export function useWebSocket(options: unknown)  {;
   const [isConnected, setIsConnected] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -80,4 +78,3 @@ export function useWebSocket(options: unknown)  {;
     connect;
   };
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,14 +1,11 @@
 =======
-<<<<<<< HEAD:backup-merge-conflicts/listings.ts.backup
 <<<<<<< HEAD
 <<<<<<< HEAD
 export: interface Listing {
 =======
-=======
 <<<<<<< HEAD
 =======
 =======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/types/listings.ts
 >>>>>>> pr-11935
 "export": interface Listing {
 >>>>>>> main
@@ -25,9 +22,7 @@ export: interface Listing {
    name: string;
    rating: number;
 =======
-<<<<<<< HEAD:backup-merge-conflicts/listings.ts.backup
 export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number} reviews: 'numbe',r} location: 'string' ,;
-=======
    reviews: numbe,r} "location": string ,
 =======
 export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: numbe,r} location: string ,
@@ -35,7 +30,6 @@ export: interface Listing { id: string; title: string; description: string; pric
 export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number} reviews: 'numbe',r} location: 'string' ,;
    reviews: numbe,r} "location": string ,
 export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: numbe,r} location: string ,
->>>>>>> pr-11935
 =======
 =======
 export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: numbe,r} location: string ,

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 
@@ -66,7 +64,6 @@
     rating: 4.8,
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 

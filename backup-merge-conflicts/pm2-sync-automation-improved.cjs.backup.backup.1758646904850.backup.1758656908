@@ -56,13 +56,11 @@ class ImprovedPM2SyncAutomation {}
     this.successCount = 0};
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
     const logEntry = `[${timestamp}] [${level}] ${message}`;
     }
 
   async initialize() {
     try {
-=======
     const logEntry = `[${timestamp}] [${level}] ${message}`;`
     console.log(logEntry)};
   async initialize() {}
@@ -465,4 +463,3 @@ if (require.main === module) {}
     };
   }, 60000)};
 module.exports = ImprovedPM2SyncAutomation;
->>>>>>> main

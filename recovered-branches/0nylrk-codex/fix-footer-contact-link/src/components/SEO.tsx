@@ -19,8 +19,6 @@ export function SEO({
   ogImage = "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
   ogUrl,
   canonical,
-<<<<<<< HEAD
-=======
   noindex}: SEOProps) {
   const siteTitle = "Zion - The Future of Tech & AI Marketplace";
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
@@ -53,4 +51,3 @@ export function SEO({
     </Helmet>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

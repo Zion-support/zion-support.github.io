@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
@@ -107,7 +105,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 res.status (200).send (pixel);
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 

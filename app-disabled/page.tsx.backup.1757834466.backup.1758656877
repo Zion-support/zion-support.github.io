@@ -225,7 +225,6 @@ import AIPoweredContentRecommendationSystemPromotionBanner from '../components/A
 
 export default function HomePage() {
   return (
-<<<<<<< HEAD
     <ErrorBoundary>
       <SEO
         title="Zion Tech Group - AI & Technology Solutions"
@@ -555,8 +554,6 @@ export default function HomePage() {
         {/* NEW CONTENT PROMOTION BANNER 2026 */}
         <NewContentPromotionBanner2026 />
         
-=======
->>>>>>> 40caa684d731039eacbf2a57ff90b1b5728aba9d
         {/* NEW REVOLUTIONARY CONTENT SHOWCASE BANNER */}
         <NewContent2025RevolutionaryShowcaseBanner />
         
@@ -597,7 +594,6 @@ export default function HomePage() {
         {/* ULTIMATE CONTENT SHOWCASE 2026 */}
         <UltimateContentShowcase2026 />
         
-<<<<<<< HEAD
         {/* REVOLUTIONARY CONTENT SHOWCASE 2026 - FEATURED */}
         <RevolutionaryContentShowcase2026 />
         
@@ -607,8 +603,6 @@ export default function HomePage() {
         {/* ULTIMATE CONTENT DISCOVERY WIDGET 2026 */}
         <UltimateContentDiscoveryWidget2026 />
         
-=======
->>>>>>> 40caa684d731039eacbf2a57ff90b1b5728aba9d
         {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
         <InteractiveContentDiscovery2026 />
         
@@ -1078,7 +1072,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       </section>
       
       {/* Latest Content Promotion Banner */}
@@ -1098,7 +1091,6 @@ export default function HomePage() {
         title="Latest AI Insights & Case Studies"
         subtitle="Discover proven strategies, real-world success stories, and actionable guides from industry experts"
         items={featuredContent}
-=======
 
       {/* New Content Banner */}
       <NewContentBanner variant="featured" />
@@ -1108,7 +1100,6 @@ export default function HomePage() {
         title="Revolutionary AI Content Just Released"
         subtitle="Discover the latest AI transformation strategies, real-world case studies, and implementation guides that are helping businesses achieve unprecedented growth and customer satisfaction."
         items={newFeaturedContent}
->>>>>>> origin/backup-main-20250913-084930
         variant="featured"
         showViewAll={true}
         viewAllHref="/blog"
@@ -1140,7 +1131,6 @@ export default function HomePage() {
         ]}
       />
 
-<<<<<<< HEAD
       {/* New Content Promotion Banner */}
       <section className='py-16 bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 text-white relative overflow-hidden'>
         <div className='absolute inset-0 bg-black opacity-10'></div>
@@ -1736,13 +1726,11 @@ export default function HomePage() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-12'>
             <h2 className='text-3xl font-bold text-gray-900 mb-4'>
-=======
       {/* Services Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
->>>>>>> origin/backup-main-20250913-084930
               Our Services
             </h2>
             <p className='text-lg text-gray-600 max-w-2xl mx-auto'>

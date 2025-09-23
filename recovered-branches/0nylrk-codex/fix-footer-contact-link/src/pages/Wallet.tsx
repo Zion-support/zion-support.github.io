@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import { useWallet  } from '@/hooks/useWallet';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components/ui/card';
@@ -102,4 +100,3 @@ export default function WalletPage() {
 }
 ;
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

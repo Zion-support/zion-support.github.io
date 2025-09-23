@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import React from 'react';
 import { User  } from 'lucide-react';
@@ -78,7 +76,6 @@ export function ConversationsList({
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
               }}

@@ -1,6 +1,4 @@
 import ethers from 'hardhat';
-<<<<<<< HEAD
-=======
 async function main() {
   const [deployer] = await ethers.getSigners();
   console.log('Deploying with:', deployer.address);
@@ -16,4 +14,3 @@ main().catch((error) => {
   console.error(error);
   process.exitCode = 1;
 });
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

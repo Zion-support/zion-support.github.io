@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -23,7 +21,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
     return
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 
   const { username, password } = req.body || {};

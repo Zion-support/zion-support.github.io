@@ -1,8 +1,6 @@
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-=======
 import { useStateuseEffect } from "react";
 import { X } from "lucide-react";
 
@@ -63,4 +61,3 @@ export function FloatingCTA() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

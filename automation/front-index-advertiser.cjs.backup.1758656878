@@ -1,18 +1,14 @@
 #!/usr/bin/env node
 
-<<<<<<< HEAD
 'use strict';
-=======
 /**
  * Front Index Advertiser - Promotes new content on the homepage
  * Automatically updates the main page with new promotional content
  */
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
 const ROOT = process.cwd();
 const FRONT_PAGE = path.join(ROOT, 'pages', 'main', 'front', 'index.tsx');
 const START_MARKER = '/* AUTO-GENERATED: FRONT_ADS_START */';
@@ -157,7 +153,6 @@ function replaceBetweenMarkers(source, startMarker, endMarker, replacement) {
     console.log('No updates required.');
   }
 })();
-=======
 class FrontIndexAdvertiser {
   constructor() {
     this.mainPagePath = path.join(__dirname, '../app/page.tsx');
@@ -377,4 +372,3 @@ if (require.main === module) {
 }
 
 module.exports = FrontIndexAdvertiser;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import type { NextApiRequest } from 'next';
 export function extractClientIp(req: NextApiRequest): string | null {
@@ -45,7 +43,6 @@ export function getClientIp(req: any): string {;
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

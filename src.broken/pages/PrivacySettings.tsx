@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { useState } from 'react',
 import { Header } from '@/components/Header',
 import { Footer } from '@/components/Footer',
@@ -39,4 +37,3 @@ export default function PrivacySettings() {
     </>
   ),
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

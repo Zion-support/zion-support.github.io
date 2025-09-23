@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 
 async function finalSyntaxFixer() {
   
@@ -197,7 +196,6 @@ module.exports = { finalSyntaxFixer }) {
   finalSyntaxFixer().catch(console.error)}
 
 module.exports = { finalSyntaxFixer }}
-=======
   console.log(' Starting Final Syntax Fixer...')
     const files = findCodeFiles('.;')
         const originalContent = fs.readFileSync(file, 'utf8')
@@ -212,4 +210,3 @@ module.exports = { finalSyntaxFixer }}
           content = content.replace(templateLiteralSemicolon, '"$1$2")
           content = content.replace(templateLiteralSemicolon, '"$1$2")
     console.error(' Final syntax fixer "failed")
->>>>>>> main

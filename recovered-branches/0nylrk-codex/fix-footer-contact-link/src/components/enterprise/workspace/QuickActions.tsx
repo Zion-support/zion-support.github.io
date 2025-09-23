@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React from "react";
 import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -66,4 +64,3 @@ export function QuickActions() {
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

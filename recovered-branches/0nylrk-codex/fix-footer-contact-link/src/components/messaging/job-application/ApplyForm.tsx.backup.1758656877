@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
@@ -57,11 +56,9 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       
       if (!applicationSuccess) {
         throw new Error("Failed to submit application");
-=======
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 interface ApplyFormProps {
@@ -201,7 +198,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       let fullMessage = message;
       
       if (proposalLink) {
-<<<<<<< HEAD
         fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`;
       }
       
@@ -252,7 +248,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       setIsSubmitting(false);
     }
   };
-=======
         fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`
 
 import React, { useState } from 'react',;
@@ -431,7 +426,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -466,7 +460,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
             Resume
           </TabsTrigger>
         </TabsList>
-<<<<<<< HEAD
         
         <TabsContent value="message">
           <MessageTab 
@@ -486,7 +479,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       </Tabs>
       
       <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">
-=======
         <TabsContent value="message">
 
           <MessageTab
@@ -684,12 +676,10 @@ if ( {) {
 
       <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <Button
           type="button"
           variant="outline"
           onClick={onClose}
-<<<<<<< HEAD
           className="border-zion-purple/30 text-white"
         >
           Cancel
@@ -713,7 +703,6 @@ if ( {) {
     </>
   );
 }
-=======
           className="border-zion-purple/30 text-white">;
           Cancel;
         </Button>;
@@ -780,4 +769,3 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

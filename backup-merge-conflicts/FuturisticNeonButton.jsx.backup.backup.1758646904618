@@ -1,7 +1,5 @@
 =======
 import {motion} from 'framer-motion';
-<<<<<<< HEAD
-=======
 =======
 import {motion} from 'framer-motion';
 export const FuturisticNeonButton = (props) => {
@@ -47,7 +45,6 @@ export const FuturisticNeonButton = (props) => {
                 "text": 'text-red-500',
                 "glow": `shadow-[0_0_20px_rgba(239,68,68,${multiplier})]`,
                 "hoverGlow": `hover:shadow-[0_0_30px_rgba(239,68,68,${Math.min(multiplier + 0.3, 1)})]`
->>>>>>> main
             }
         };
         return baseStyles[variant];

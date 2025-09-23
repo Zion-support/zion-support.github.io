@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import SEO from '../components/SEO';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 
@@ -22,7 +21,6 @@ export default function CookiesPage() {
     </UltraAdvancedFuturisticBackground>
   );
 }
-=======
 import { motion } from 'framer-motion';
 import { Shield, Cookie, Settings, Eye, Lock, Database } from 'lucide-react';
 import Link from 'next/link';
@@ -255,4 +253,3 @@ const CookiePolicy = () => {
 };
 
 export default CookiePolicy;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 type Href = string | { pathname?: string; href?: string };
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
@@ -27,4 +25,3 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
     </a>
   );
 }
->>>>>>> main

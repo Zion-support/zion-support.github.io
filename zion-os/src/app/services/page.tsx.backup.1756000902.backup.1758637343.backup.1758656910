@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 
 export default function ServicesPage() {
@@ -24,7 +23,6 @@ export default function ServicesPage() {
           description: 'Real-time decision making powered by advanced machine learning algorithms',
           href: '/ai-autonomous-decision-engine',
           features: ['Predictive Analytics', 'Scenario Modeling', 'Risk Assessment', 'Optimization']
-=======
 export default function ServicesPage() {
   const services = [
     {
@@ -39,12 +37,10 @@ export default function ServicesPage() {
           title: "AI Analytics Copilot",
           description: "Intelligent analytics assistant that helps business users discover insights and create reports.",
           features: ["Natural Language Queries", "Automated Insights", "Smart Recommendations", "Collaborative Analysis"]
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-54ae
         }
       ]
     },
     {
-<<<<<<< HEAD
       title: 'Quantum Computing Solutions',
       description: 'Next-generation quantum computing platforms for unprecedented processing power',
       services: [
@@ -65,7 +61,6 @@ export default function ServicesPage() {
           description: 'Cloud-based quantum computing services for enterprise applications',
           href: '/quantum-cloud-infrastructure',
           features: ['Quantum Processing Units', 'Hybrid Computing', 'API Access', 'Enterprise Security']
-=======
       category: "Autonomous Systems",
       services: [
         {
@@ -77,12 +72,10 @@ export default function ServicesPage() {
           title: "AI Autonomous Ecosystem Manager",
           description: "Intelligent system for managing complex business ecosystems and partner relationships.",
           features: ["Partner Management", "Resource Optimization", "Risk Assessment", "Growth Planning"]
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-54ae
         }
       ]
     },
     {
-<<<<<<< HEAD
       title: 'Enterprise AI Solutions',
       description: 'Comprehensive AI solutions designed for enterprise-scale operations',
       services: [
@@ -103,7 +96,6 @@ export default function ServicesPage() {
           description: 'Enterprise-grade content creation and management with AI',
           href: '/ai-content-generator',
           features: ['Multi-format Content', 'Brand Consistency', 'SEO Optimization', 'Content Analytics']
-=======
       category: "AI Development & Testing",
       services: [
         {
@@ -115,12 +107,10 @@ export default function ServicesPage() {
           title: "AI Autonomous Testing",
           description: "Intelligent testing system that autonomously creates, executes, and maintains test suites.",
           features: ["Test Case Generation", "Automated Execution", "Defect Detection", "Regression Testing"]
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-54ae
         }
       ]
     },
     {
-<<<<<<< HEAD
       title: 'Specialized AI Platforms',
       description: 'Domain-specific AI solutions for specialized industries and use cases',
       services: [
@@ -176,7 +166,6 @@ export default function ServicesPage() {
       title: 'Competitive Advantage',
       description: 'Gain market leadership through AI innovation',
       icon: '🏆'
-=======
       category: "AI Research & Innovation",
       services: [
         {
@@ -205,12 +194,10 @@ export default function ServicesPage() {
           features: ["Contract Review", "Legal Research", "Compliance Checking", "Risk Assessment"]
         }
       ]
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-54ae
     }
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
@@ -246,7 +233,6 @@ export default function ServicesPage() {
                           <li key={featureIndex} className="text-gray-300 text-sm flex items-center">
                             <span className="text-purple-400 mr-2">•</span>
                             {feature}
-=======
     <div className="min-h-screen py-20">
       {/* Hero Section */}
       <section className="text-center mb-16">
@@ -288,12 +274,10 @@ export default function ServicesPage() {
                           <li key={featureIndex} className="flex items-center space-x-3 text-slate-300">
                             <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"></div>
                             <span>{feature}</span>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-54ae
                           </li>
                         ))}
                       </ul>
                     </div>
-<<<<<<< HEAD
                     
                     <Link
                       href={service.href}
@@ -301,7 +285,6 @@ export default function ServicesPage() {
                     >
                       Learn More
                     </Link>
-=======
                     <div className="mt-6">
                       <a 
                         href="/contact" 
@@ -310,14 +293,12 @@ export default function ServicesPage() {
                         Learn More
                       </a>
                     </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-54ae
                   </div>
                 ))}
               </div>
             </div>
           ))}
         </div>
-<<<<<<< HEAD
 
         {/* Benefits Section */}
         <div className="mt-20">
@@ -355,7 +336,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </div>
-=======
       </section>
 
       {/* CTA Section */}
@@ -384,7 +364,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-54ae
     </div>
   );
 }

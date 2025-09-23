@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 import fs from 'fs';
 import path from 'path';
 
@@ -96,4 +94,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   ensureStorage();
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

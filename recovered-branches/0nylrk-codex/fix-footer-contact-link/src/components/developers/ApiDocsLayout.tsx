@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React from "react";
 import { LinkuseLocation } from "react-router-dom";
 import { Search } from "lucide-react";
@@ -74,4 +72,3 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 }
 
 export default ApiDocsLayout;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

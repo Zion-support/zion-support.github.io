@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 
 import React from 'react';
@@ -48,5 +46,4 @@ export default function ScrollReveal({ children }: { children: React.ReactNode }
   return <div ref={ref}>{children}</div>;
 }
 =======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-966c:app.disabled/components/ScrollReveal.tsx
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { useEffectuseStateuseRefReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -84,4 +82,3 @@ export function LazyLoad({
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

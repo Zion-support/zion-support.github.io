@@ -1,8 +1,6 @@
 
 import { format } from "date-fns";
 import { 
-<<<<<<< HEAD
-=======
   Card
   CardContent
   CardHeader
@@ -104,4 +102,3 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
     </Card>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

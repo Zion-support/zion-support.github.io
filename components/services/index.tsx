@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -158,4 +156,3 @@ export default function ServicesIndexPage() {
 };
 
 export default ServicesPage;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

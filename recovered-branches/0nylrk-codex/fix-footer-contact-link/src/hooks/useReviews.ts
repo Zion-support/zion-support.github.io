@@ -14,8 +14,6 @@ export function useReviews(projectId?: string) {
   
   // Fetch reviews for a project
   const fetchProjectReviews = async (projectId: string) => {
-<<<<<<< HEAD
-=======
 
     if (!projectId) return;
     
@@ -246,4 +244,3 @@ export function useReviews(projectId?: string) {
     updateReview,
     reportReview};
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -6,16 +6,13 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
   TableRow,
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
-=======
   TableRow} from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIconSearch } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -28,73 +25,55 @@ export function TeamActivity() {
       action: "Posted a job",
       target: "Senior AI Engineer",
       timestamp: new Date(Date.now() - 1000 * 60 * 30),
-<<<<<<< HEAD
       category: "jobs",
     },
-=======
       category: "jobs"},
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     {
       id: 2,
       user: "Jamie Smith",
       action: "Contacted candidate",
       target: "Michael Chen",
       timestamp: new Date(Date.now() - 1000 * 60 * 120),
-<<<<<<< HEAD
       category: "candidates",
     },
-=======
       category: "candidates"},
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     {
       id: 3,
       user: "Sam Williams",
       action: "Updated job",
       target: "Frontend Developer",
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 5),
-<<<<<<< HEAD
       category: "jobs",
     },
-=======
       category: "jobs"},
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     {
       id: 4,
       user: "Alex Johnson",
       action: "Added team member",
       target: "Chris Rodriguez",
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24),
-<<<<<<< HEAD
       category: "team",
     },
-=======
       category: "team"},
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     {
       id: 5,
       user: "Taylor Brown",
       action: "Viewed candidate profile",
       target: "Sarah Kim",
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 2),
-<<<<<<< HEAD
       category: "candidates",
     },
-=======
       category: "candidates"},
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     {
       id: 6,
       user: "Jamie Smith",
       action: "Updated budget",
       target: "Monthly spending cap",
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),
-<<<<<<< HEAD
       category: "billing",
     },
   ];
-=======
       category: "billing"}];
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   // Function to format the date in a readable way
   const formatDate = (date: Date) => {
@@ -116,20 +95,17 @@ export function TeamActivity() {
   };
 
   const getCategoryBadge = (category: string) => {
-<<<<<<< HEAD
     const categoryStyles: Record<string, { variant: "default" | "outline" | "secondary" | "destructive" }> = {
       jobs: { variant: "default" },
       candidates: { variant: "outline" },
       team: { variant: "secondary" },
       billing: { variant: "destructive" },
     };
-=======
     const categoryStyles: Record<string{ variant: "default" | "outline" | "secondary" | "destructive" }> = {
       jobs: { variant: "default" },
       candidates: { variant: "outline" },
       team: { variant: "secondary" },
       billing: { variant: "destructive" }};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>;
   };

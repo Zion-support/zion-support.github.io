@@ -1,8 +1,6 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-<<<<<<< HEAD
-=======
 import { StarMapPinClockArrowRightCheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { TalentProfile } from "@/types/talent";
@@ -168,4 +166,3 @@ export function TalentCard({
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

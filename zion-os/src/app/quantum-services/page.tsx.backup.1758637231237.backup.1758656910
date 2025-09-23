@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import Link from "next/link";
 export const metadata = {title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions";
@@ -469,7 +468,6 @@ export default function QuantumServicesPage() {;
       </section>;
     </div>);
 }
-=======
 import Link from "next/link";
 
 export const metadata = {
@@ -933,4 +931,3 @@ export default function QuantumServicesPage() {
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

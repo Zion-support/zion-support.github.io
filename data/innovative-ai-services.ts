@@ -38,8 +38,6 @@ export interface InnovativeAIService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
 export const innovativeAIServices: InnovativeAIService[] = [
   {
     id: 'quantum-ai-content-generator',
@@ -348,4 +346,3 @@ export const innovativeAIServices: InnovativeAIService[] = [
     reviews: 298
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

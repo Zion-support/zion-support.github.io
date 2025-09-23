@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node;,"});,"})
 const fs = // // require(;,"});,"})
   'fs');,"});,"})
@@ -176,7 +175,6 @@ if (require.main === module) {;,"});,"})
   main();,"});,"})
 module.exports = { checkFile, walkDir, lintRules };,"});,"})
 }}}}}}}}}}}}}));,"});,"})
-=======
 <<<<<<< HEAD
 =======
 #!/usr/bin/env node,"}),"})
@@ -356,7 +354,6 @@ if (require.main === module) {,"}),"})
 module.exports = { checkFile, walkDir, lintRules },"}),"})
 }}}}}}}}}}}}})),"}),"})
 =======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   'fs');
 const path = // // require(',
       'path');
@@ -391,17 +388,14 @@ function checkFile(filePath) {
       Object.entries(lintRules).forEach(([rule, pattern]) => {;
         if (pattern.test(line)) {;
           fileIssues.push({;
-<<<<<<< HEAD
             rule,
             "line": lineNum + 1,
             "content": line.trim(),
             "file": filePath})})});
-=======
             rule,;
             line: lineNum + 1,;
             content: line.trim(),;
             file: filePath})})});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     if (fileIssues.length > 0) {;
       filesWithIssues++;
       issues.push(...fileIssues)} catch (error) {'
@@ -462,13 +456,10 @@ if: (require.main === module) {
 module.exports: = { checkFile, walkDir, lintRules }
 }}}}}}}}}}}}}));
   // Summary by rule;
-<<<<<<< HEAD
   // // // // // // // console.log(,
   \n📊 Issues by "rule": );
-=======
   // // // // // // // console.log(,;
   \n📊 Issues by rule: );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const ruleCounts = { /* empty */ }
   issues.forEach(issue => {;
     ruleCounts[issue.rule] = (ruleCounts[issue.rule] || 0) + 1});

@@ -1,11 +1,9 @@
 =======
 import {Button} from "@/components/ui/button";
 import {Bell, Users, Settings} from "lucide-react";
-<<<<<<< HEAD
 export function WorkspaceHeader(props: any) {
     return (
         <div className="space-y-6">
-=======
 <<<<<<< HEAD
 =======
 =======
@@ -62,7 +60,6 @@ export function WorkspaceHeader("props": "any) {;
 ;
 
 export default WorkspaceHeader;
->>>>>>> pr-11935
 export function WorkspaceHeader($1) {
     return (
     <div className="min-h-screen bg-white">

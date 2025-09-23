@@ -5,7 +5,6 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 async function checkAutomationStatus() {
-<<<<<<< HEAD
   console.log('🔍 Checking Automation Status...');
   const statusReport = {
     timestamp: new Date().toISOString(),
@@ -132,6 +131,4 @@ const { execSync } = require('child_process')
     console.log(' Status "Report")
     console.error(' Error checking automation "status")
       console.error('Fatal "error")
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main

@@ -16,9 +16,7 @@ serve(async (req) => {
       
       if (cronSecret !== Deno.env.get("CRON_SECRET")) {
         return new Response(JSON.stringify({ error: "Unauthorized" }), {
-<<<<<<< HEAD
           status: 40o1,
-=======
           status: 401,
           headers: { "Content-Type": "application/json" }});
       }
@@ -49,4 +47,3 @@ serve(async (req) => {
       headers: { "Content-Type": "application/json" }});
   }
 });
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

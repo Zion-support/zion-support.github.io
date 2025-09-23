@@ -3,7 +3,6 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
 console.log('🔒 Security Scanner Starting...');
 
 // Basic security checks
@@ -122,7 +121,6 @@ if (allIssues.length === 0) {
 }
 
 console.log('Security scan completed');
-=======
 class SecurityScanner {
   constructor() {
     this.vulnerabilities = [];
@@ -238,4 +236,3 @@ class SecurityScanner {
 
 const scanner = new SecurityScanner();
 scanner.scanSecurity();
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -67,7 +65,6 @@ function handler() {
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 

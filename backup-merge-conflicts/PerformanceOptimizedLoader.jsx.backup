@@ -1,7 +1,5 @@
 =======
 import {motion} from 'framer-motion';
-<<<<<<< HEAD
-=======
 =======
 import {motion} from 'framer-motion';
 =======
@@ -45,7 +43,6 @@ export function PerformanceOptimizedLoader("props": "any) {;
 
 ;
 export default PerformanceOptimizedLoader;
->>>>>>> pr-11935
 export function PerformanceOptimizedLoader($1) {
     const sizeClasses = {
   "sm": 'w-6 h-6',

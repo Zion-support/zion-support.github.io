@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -144,4 +142,3 @@ const UltimateContentShowcase2025: React.FC = () => {
 };
 
 export default UltimateContentShowcase2025;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

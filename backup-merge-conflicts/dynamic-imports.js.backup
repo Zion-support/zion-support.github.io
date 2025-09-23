@@ -1,8 +1,6 @@
 export const dynamicImport = (importFn) => { return React.lazy(importFn)}; export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}; export const preloadComponent = (importFn) => { if (typeof window !== &apos;undefined&apos;) { importFn()} };
 =======
-<<<<<<< HEAD
 module.exports = const dynamicImport = (importFn) => { return React.lazy(importFn)}; export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}; export const preloadComponent = (importFn) => { if (typeof window !== "undefined") { importFn()} };''"
-=======
 import { lazy } from 'react';
 =======
 
@@ -20,6 +18,5 @@ export const preloadComponent = (importFn) => {
   }
 };
 =======
->>>>>>> main
 >>>>>>> main
 >>>>>>> main

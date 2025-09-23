@@ -4,8 +4,6 @@ import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import { Form } from '@/components/ui/form';
 import { Certification } from '@/types/resume';
-<<<<<<< HEAD
-=======
 Loader2
 import { useResume } from '@/hooks/useResume';
 import { AlertDescription } from '@/components/ui/alert';
@@ -160,4 +158,3 @@ export function CertificationsForm({ resumeIdcertificationsonCompleteonBack }: C
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

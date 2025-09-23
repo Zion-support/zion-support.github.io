@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 
 
   const appeal: TrustAppeal = {
@@ -77,4 +75,3 @@ return res.status (200).json ({ ok: true, appeal });
 
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

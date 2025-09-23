@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -19,7 +18,6 @@ const NotFoundPage: NextPage = () => {
 };
 
 export default NotFoundPage;
-=======
 import React from 'react';
 
 export default function NotFoundPage() {
@@ -30,4 +28,3 @@ export default function NotFoundPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

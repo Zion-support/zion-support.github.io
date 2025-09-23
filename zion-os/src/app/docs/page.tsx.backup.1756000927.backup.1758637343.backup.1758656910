@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 export const metadata = {
-<<<<<<< HEAD
   title: "Documentation - Zion Tech Group",
   description: "Comprehensive documentation, API references, and technical resources for Zion Tech Group's AI, quantum computing, and technology solutions.",
   keywords: "documentation, API reference, technical docs, developer resources, Zion Tech Group",
@@ -311,7 +310,6 @@ export default function DocsPage() {
                 <Link href="/docs/api-keys" className="text-gray-300 hover:text-blue-400 block">
                   • API Key Management
                 </Link>
-=======
   title: "Documentation - Zion Tech Group | Technical Guides & Resources",
   description: "Access comprehensive technical documentation, guides, and resources for Zion Tech Group's products and services. Find API docs, tutorials, and best practices.",
   keywords: "documentation, technical guides, API docs, tutorials, Zion Tech Group, developer resources, technical resources",
@@ -507,7 +505,6 @@ export default function DocumentationPage() {
                 <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
               </div>
               <h3 className="text-xl font-semibold mb-3">Enterprise IT</h3>
               <p className="text-gray-400 mb-4">
@@ -524,7 +521,6 @@ export default function DocumentationPage() {
                 View Documentation →
               </Link>
             </div>
-<<<<<<< HEAD
             <div className="card">
               <h3 className="text-xl font-bold mb-4">Integration Guides</h3>
               <div className="space-y-3">
@@ -540,7 +536,6 @@ export default function DocumentationPage() {
                 <Link href="/docs/webhook-security" className="text-gray-300 hover:text-green-400 block">
                   • Webhook Security
                 </Link>
-=======
             
             {/* Space Technology */}
             <div className="card group hover:bg-yellow-500/10 transition-colors">
@@ -548,7 +543,6 @@ export default function DocumentationPage() {
                 <svg className="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                 </svg>
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
               </div>
               <h3 className="text-xl font-semibold mb-3">Space Technology</h3>
               <p className="text-gray-400 mb-4">
@@ -566,7 +560,6 @@ export default function DocumentationPage() {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
 
         {/* Support & Community */}
@@ -620,7 +613,6 @@ export default function DocumentationPage() {
           </div>
         </section>
       </div>
-=======
         </div>
       </section>
 
@@ -855,7 +847,6 @@ export default function DocumentationPage() {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
     </div>
   );
 }

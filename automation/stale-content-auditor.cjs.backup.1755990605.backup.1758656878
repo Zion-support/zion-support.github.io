@@ -4,7 +4,6 @@
 
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 const ROOT = process.cwd();
@@ -108,7 +107,6 @@ function classifyAge(days) {
   }
   fs.writeFileSync(MD_REPORT, mdLines.join('\n'));
   console.log(`Markdown summary written to ${MD_REPORT}`);
-=======
 function daysSince(date) {
   const ms = Date.now() - date.getTime();
   return Math.floor(ms / (1000 * 60 * 60 * 24));
@@ -197,5 +195,4 @@ function computeReferenceCounts(allFiles, fileToAnalyze) {
   fs.writeFileSync(mdOutPath, lines.join('\n'));
 
   console.log(`Stale content report written to:\n- ${jsonOutPath}\n- ${latestJsonPath}\n- ${mdOutPath}`);
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-5293
 })();

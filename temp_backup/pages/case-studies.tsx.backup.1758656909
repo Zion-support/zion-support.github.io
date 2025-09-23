@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
@@ -17,7 +16,6 @@ export default function CaseStudiesPage() {
 			</section>
 		</Layout>
 	);
-=======
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
@@ -31,5 +29,4 @@ export default function CaseStudiesPage() {
       </div>
     </UltraFuturisticBackground>
   );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

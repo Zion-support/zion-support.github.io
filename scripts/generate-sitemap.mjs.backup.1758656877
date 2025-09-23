@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-<<<<<<< HEAD
 import { writeFileSync, readdirSync, statSync } from 'fs';
 import { join, extname } from 'path';
 import { fileURLToPath } from 'url';
@@ -196,7 +195,6 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 export { generateSitemap };
-=======
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -300,4 +298,3 @@ ${urls.map(url => `  <url>
 }
 
 generateSitemap();
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

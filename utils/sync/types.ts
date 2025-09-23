@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 
@@ -197,7 +195,6 @@ export interface DaoEndorsementPayload extends BaseEventPayload {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 

@@ -1,9 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
-=======
 import { Metadata } from 'next';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import Link from 'next/link';
 import { 
   Brain, Zap, Target, BarChart3, Users, TrendingUp, 
@@ -11,7 +8,6 @@ import {
   Star, CheckCircle, Rocket, Globe, Shield, Cpu,
   FileText, Image, Video, Music, Palette, Type,
   User, Search, Eye, Heart, ShoppingCart, Code,
-<<<<<<< HEAD
   Database, Users2, Award, Lock, Server, Network, 
   Monitor, Settings, RefreshCw, Play, Pause, 
   AlertTriangle, CheckCircle2, Building, Wifi, 
@@ -356,7 +352,6 @@ export default function ZionTechGroupPage() {
               </Link>
               <Link href="/contact" className="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-purple-700">
                 Schedule Consultation
-=======
   Database, Globe, Shield, Cpu, Users2, Award,
   CheckCircle, Target, BarChart3, TrendingUp, Lock,
   Server, Network, Monitor, Settings, RefreshCw,
@@ -830,12 +825,10 @@ export default function ZionTechGroup() {
               >
                 Schedule Consultation
                 <ArrowRight className="ml-2 w-4 h-4" />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               </Link>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
 
         {/* Footer */}
         <footer className="bg-black/40">
@@ -896,9 +889,7 @@ export default function ZionTechGroup() {
         </footer>
       </div>
     </>
-=======
       </section>
     </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   );
 }

@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 
 class TargetedSyntaxFixer {
   constructor() {
@@ -159,7 +158,6 @@ fixer.run().then(() => {
   process.exit(0)}).catch(error => {
   console.error("❌ Targeted syntax fixing "failed": ", error.message);
   process.exit(1)});
-=======
       const content = fs.readFileSync(filePath, 'utf8')
       fixedContent = fixedContent.replace(/style=\{\{>/g, 'style={{'})
       fixedContent = fixedContent.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{/g, 'const $"1"}
@@ -171,4 +169,3 @@ fixer.run().then(() => {
       fixedContent = fixedContent.replace(/"\s*,/g, '')
       fixedContent = fixedContent.replace(/"\s*,/g, '')
       fixedContent = fixedContent.replace(/'\s*,/g, ')
->>>>>>> main

@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-<<<<<<< HEAD
 const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json');
 
 function readAll() {
@@ -30,7 +29,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   writeAll(items);
   res.status(200).json({ ok: true });
 }
-=======
 
   try {
     return JSON && JSON.parse(fs && fs.readFileSync(REQUESTS_PATH, 'utf-8'));
@@ -96,4 +94,3 @@ function handler() {
   $2
 }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

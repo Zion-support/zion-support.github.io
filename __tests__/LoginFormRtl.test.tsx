@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { LoginForm } from '@/components/auth/login';
 import { useAuth } from '@/hooks/useAuth';
@@ -27,4 +25,3 @@ describe('LoginForm error handling', () => {
     });
   });
 });
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

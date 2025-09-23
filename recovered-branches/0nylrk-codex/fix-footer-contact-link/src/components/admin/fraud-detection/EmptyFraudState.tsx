@@ -2,8 +2,6 @@
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
 
-<<<<<<< HEAD
-=======
 
 import React from "react",
 import { Button } from "@/components/ui/button";
@@ -95,4 +93,3 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
 };
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

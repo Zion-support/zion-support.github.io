@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 
 export default function GlowCard({ titlechildren }: { title: string; children: React.ReactNode }) {
@@ -13,4 +11,3 @@ export default function GlowCard({ titlechildren }: { title: string; children: R
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

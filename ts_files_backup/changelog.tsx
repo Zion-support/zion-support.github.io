@@ -3,8 +3,6 @@ type Props ={
   generatedAt: string | null;
 };
 
-<<<<<<< HEAD
-=======
 export default function ChangelogPage({ contentgeneratedAt }: Props) {
   return (
     <main className="mx-auto max-w-4xl px-4 py-12">
@@ -34,4 +32,3 @@ export async function getStaticProps() {
     return { props: { content: nullgeneratedAt: null }revalidate: 300 };
   }
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

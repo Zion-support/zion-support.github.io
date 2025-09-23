@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 const AI2026AutonomousSystemsBanner: React.FC = () => {
   return (
     <section className="bg-gradient-to-r from-slate-800 to-slate-900 text-white py-12 rounded-xl">
@@ -22,5 +20,4 @@ export default function AI2026AutonomousSystemsBanner() {
     </section>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850:app/components/AI2026AutonomousSystemsBanner.tsx
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from "next/link";
 
 export const metadata = {
@@ -313,7 +312,6 @@ export default function CaseStudiesPage() {
           </div>
         </section>
       </div>
-=======
 import Link from 'next/link';
 
 export default function CaseStudiesPage() {
@@ -619,7 +617,6 @@ export default function CaseStudiesPage() {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bccd
     </div>
   );
 }

@@ -1,7 +1,5 @@
 "use client";
 'use client';
-<<<<<<< HEAD
-=======
 
 import React, { useState, useEffect } from 'react';
 
@@ -415,4 +413,3 @@ const BusinessIntelligenceDashboard: React.FC = () => {
 };
 
 export default BusinessIntelligenceDashboard;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

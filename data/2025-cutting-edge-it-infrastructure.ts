@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import { ServiceVariant } from '../types/service-variants';
 
@@ -1494,4 +1492,3 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
   }
 ];
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

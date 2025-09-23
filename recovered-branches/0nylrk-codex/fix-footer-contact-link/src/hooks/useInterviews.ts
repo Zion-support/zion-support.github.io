@@ -39,8 +39,6 @@ export function useInterviews() {
           meeting_platform: interviewRequest.meeting_platform,
           interview_type: interviewRequest.interview_type,
           title: interviewRequest.title,
-<<<<<<< HEAD
-=======
           status: 'requested'})
         .select('*')
         .single();
@@ -306,4 +304,3 @@ export function useInterviews() {
     respondToInterview,
     cancelInterview};
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

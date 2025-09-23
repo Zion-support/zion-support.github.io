@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -9,7 +8,6 @@ import {
   Github, Zap, Sparkles, Shield, Cpu, Database
 } from 'lucide-react';
 
-=======
 
 import React from 'react',
 import React from 'react';
@@ -91,21 +89,18 @@ import {
   Twitter, Facebook, Linkedin, Instagram, Youtube;
   Github, Zap, Sparkles, Shield, Cpu, Database
 } from 'lucide-react';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-<<<<<<< HEAD
 
 const serviceCategories = [
   {
     title: 'AI & Machine Learning',
     icon: Brain,
     services: [
-=======
 const serviceCategories = [
   {
     title: 'AI & Machine Learning'
@@ -113,17 +108,13 @@ const serviceCategories = [
     services: [
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029' },
       { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform' },
       { name: 'Autonomous Business Operations', href: '/autonomous-business-operations-platform' },
       { name: 'AI-Powered IT Asset Management', href: '/ai-powered-it-asset-management' }
     ]
-<<<<<<< HEAD
   },
-=======
   };
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     title: '🧠 AI & Technology',
     services: [
@@ -132,30 +123,25 @@ const serviceCategories = [
       { name: 'Natural Language Processing', href: '/nlp-services' },
       { name: 'Computer Vision', href: '/computer-vision' }
     ]
-<<<<<<< HEAD
   },
   {
     title: '⚛️ Quantum & Emerging Tech',
     services: [
-=======
   };
 
   {
     title: '⚛️ Quantum & Emerging Tech'
     services: [
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       { name: 'Quantum Computing', href: '/quantum-computing' },
       { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
       { name: 'IoT Platforms', href: '/iot-platforms' },
       { name: 'Space Technology', href: '/space-tech' }
     ]
-<<<<<<< HEAD
   },
   {
     title: '🏙️ Enterprise Solutions',
     services: [
-=======
   };
 
   {
@@ -281,13 +267,11 @@ const serviceCategories = [;
   }
 ];
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       { name: 'Enterprise IT', href: '/enterprise-it' },
       { name: 'Cloud Solutions', href: '/cloud-solutions' },
       { name: 'Cybersecurity', href: '/cybersecurity' },
       { name: 'DevOps Automation', href: '/devops-automation' }
     ]
-<<<<<<< HEAD
   }
 ];
 
@@ -313,7 +297,6 @@ const footerSections = [
   {
     title: 'Company',
     links: [
-=======
 
   Phone,
   Mail,
@@ -431,13 +414,11 @@ const footer_sections = [;
     title: 'Company',
     links: [;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       { name: 'About Us', href: '/about' },
       { name: 'Our Mission', href: '/mission' },
       { name: 'Leadership Team', href: '/team' },
       { name: 'Careers', href: '/careers' },
       { name: 'Press & Media', href: '/press' },
-<<<<<<< HEAD
       { name: 'Partnerships', href: '/partnerships' }
     ]
   },
@@ -500,7 +481,6 @@ const UltraFuturisticFooter2029 = () => {
             </p>
 
             {/* Contact Information */}
-=======
 
       { name: 'Partnerships', href: '/partnerships' },
     ],
@@ -597,7 +577,6 @@ const UltraFuturisticFooter2029 = () => {
             {/* Social Links */}
             <div className='flex space-x-4'>
               {socialLinks.map(social => (            {/* Contact Information */}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
                 <Phone className="w-4 h-4" />
@@ -616,7 +595,6 @@ const UltraFuturisticFooter2029 = () => {
                 <span className="text-sm">{contactInfo.address}</span>
               </div>
             </div>
-<<<<<<< HEAD
 
             {/* Social Links */}
             <div className="flex space-x-4">
@@ -624,7 +602,6 @@ const UltraFuturisticFooter2029 = () => {
                 <a
                   key={social.name}
                   href={social.href}
-=======
             {/* Social Links */}
             <div className='flex space-x-4'>
               {socialLinks.map(social => (
@@ -638,7 +615,6 @@ const UltraFuturisticFooter2029 = () => {
                   <social.icon className='w-5 h-5' />                </a>                <a
                   key={social.name}
                   href={social.href}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`p-2 bg-slate-800/50 rounded-lg text-gray-400 ${social.color} transition-all duration-200 hover:bg-slate-700/50`}
@@ -649,9 +625,7 @@ const UltraFuturisticFooter2029 = () => {
             </div>
           </div>
 
-<<<<<<< HEAD
           {/* Service Categories */}
-=======
 
 ];
 
@@ -742,7 +716,6 @@ const UltraFuturisticFooter2029 = () => {
                       </li>;
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <div className="lg:col-span-1">
             <h4 className="text-lg font-semibold text-white mb-6">Our Services</h4>
             <div className="space-y-4">
@@ -760,8 +733,6 @@ const UltraFuturisticFooter2029 = () => {
                           <span>{service.name}</span>
                         </Link>
                       </li>
-<<<<<<< HEAD
-=======
 
                     ))}
                   </ul>;
@@ -1072,14 +1043,12 @@ const UltraFuturisticFooter2029 = () =>: any {
                           {link.name}
                         </Link>
                       </li>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     ))}
                   </ul>
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
 
           {/* Quick Links */}
           <div className="lg:col-span-1">
@@ -1110,7 +1079,6 @@ const UltraFuturisticFooter2029 = () =>: any {
                       <li key={link.name}>
                         <Link
                           href={link.href}
-=======
         </div>
       </div>
 
@@ -1193,7 +1161,6 @@ const UltraFuturisticFooter2029 = () =>: any {
 
             </div>
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                           className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
                         >
                           {link.name}
@@ -1209,7 +1176,6 @@ const UltraFuturisticFooter2029 = () =>: any {
       </div>
 
       {/* Bottom Footer */}
-<<<<<<< HEAD
       <div className="border-t border-slate-700/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -1217,7 +1183,6 @@ const UltraFuturisticFooter2029 = () =>: any {
               © 2025 Zion Tech Group. All rights reserved.
             </div>
             
-=======
       <div className='border-t border-slate-700/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
@@ -1242,7 +1207,6 @@ const UltraFuturisticFooter2029 = () =>: any {
                 className='hover:text-white transition-colors'
               >                Cookie Policy               2025 Zion Tech Group. All rights reserved.
             </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <Link href="/privacy" className="hover:text-white transition-colors">
                 Privacy Policy
@@ -1257,10 +1221,8 @@ const UltraFuturisticFooter2029 = () =>: any {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 
       {/* Newsletter Signup */}
-=======
       {/* Newsletter Signup */}
 
                 className='hover:text-white transition-colors'>                Cookie Policy              © 2025 Zion Tech Group. All rights reserved.;
@@ -1306,13 +1268,11 @@ const UltraFuturisticFooter2029 = () =>: any {
               insights.;
             </p>;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <div className="bg-gradient-to-r from-purple-600/10 to-blue-600/10 border-t border-slate-700/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-4">
               Stay Updated with Innovation
-<<<<<<< HEAD
             </h3>
             <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
               Get the latest insights on AI, quantum computing, and autonomous technology. 
@@ -1320,7 +1280,6 @@ const UltraFuturisticFooter2029 = () =>: any {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-=======
 
             </h3>
             <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
@@ -1341,12 +1300,10 @@ const UltraFuturisticFooter2029 = () =>: any {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <input
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-<<<<<<< HEAD
               />
               <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200">
                 Subscribe
@@ -1360,7 +1317,6 @@ const UltraFuturisticFooter2029 = () =>: any {
 };
 
 export default UltraFuturisticFooter2029;
-=======
 
 
 
@@ -1415,4 +1371,3 @@ export default UltraFuturisticFooter2029;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

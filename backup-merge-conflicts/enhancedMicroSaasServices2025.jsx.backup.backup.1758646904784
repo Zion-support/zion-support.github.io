@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 =======
 =======
 // Enhanced Micro SAAS Services for 2025
@@ -15,7 +13,6 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [;
     "price": 49,
     "currency": "$",
     "pricingModel": "monthly",
->>>>>>> main
     features[;
       "Automated code analysis";
       "Security vulnerability detection";

@@ -2,7 +2,6 @@
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 
 const automationTasks = [{
     "name": 'Health Check',
@@ -119,7 +118,6 @@ results.forEach((result, index) => {
 
 // Exit with appropriate code
 process.exit(criticalFailures === 0 ? 0 : 1);
-=======
 // console.log(' Comprehensive Automation Suite - Zion Tech Group')
 console.log('==')
     "name"
@@ -141,4 +139,3 @@ console.log('==')
     "failed"
   "status"
 console.log('\n� Detailed "Results")
->>>>>>> main

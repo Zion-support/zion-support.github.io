@@ -24,8 +24,6 @@ export function HeroSection() {
 
         <p className="text-xl md:text-2xl text-zion-slate-light mb-10 max-w-3xl mx-auto">
           The world's first free marketplace dedicated to high-tech and artificial intelligence. 
-<<<<<<< HEAD
-=======
           Publishconnectand thrive — all in one place.
         </p>
 
@@ -50,4 +48,3 @@ export function HeroSection() {
     </section>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

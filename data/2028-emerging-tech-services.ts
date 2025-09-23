@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTech2028Service {
   id: string;
@@ -459,4 +457,3 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     reviews: 89
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

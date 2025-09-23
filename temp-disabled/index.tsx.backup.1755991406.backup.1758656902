@@ -43,7 +43,6 @@ export default function HomePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
       <section className="rounded-2xl p-8 bg-gradient-to-br from-blue-600 to-cyan-500 text-white">
         <h2 className="text-2xl font-bold">Zero-maintenance, Cloud-native</h2>
         <p className="mt-2 text-white/90 max-w-2xl">Agents run on schedules in GitHub Actions and Netlify—fetching data, updating the site, and committing changes automatically.</p>
@@ -54,7 +53,6 @@ export default function HomePage() {
     </div>
   );
 }
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -96,4 +94,3 @@ const Home: NextPage = () => {
 };
 
 export default Home;
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e

@@ -54,8 +54,6 @@ export function detectIntent(text: string): RouterResult {
     { chain: 'daoExplainer', keywords: ['dao', 'governance token', 'proposal', 'treasury'] },
     { chain: 'tokenomicsSimulator', keywords: ['tokenomics', 'supply', 'emission', 'vesting', 'circulating'] },
     { chain: 'governanceSummarizer', keywords: ['governance', 'vote', 'snapshot', 'summary', 'forum'] },
-<<<<<<< HEAD
-=======
     { chain: 'nationAssistant', keywords: ['nation', 'citizen', 'constitution', 'charter', 'policy'] }];
 
   for (const rule of rules) {
@@ -185,4 +183,3 @@ export function writeState<T = unknown>(state: T): void {
     // ignore
   }
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

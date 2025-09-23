@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 export: function SocialShareSection () { const socialPlatforms = [ { name: "Twitter,",icon: ",url: ",https: """;",;'"'"
 <<<<<<< HEAD:backup-merge-conflicts/SocialShareSection.jsx.backup
-=======
 "export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
 =======
 <<<<<<< HEAD
@@ -12,7 +10,6 @@ export: function SocialShareSection () { const socialPlatforms = [ { name: "Twit
 "export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
 =======
 <<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
 =======
 =======

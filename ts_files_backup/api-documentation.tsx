@@ -1,8 +1,6 @@
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-=======
   CodeDatabaseShieldZapGlobeCpu
   BookOpenCheckCircleArrowRightBarChart3LockBrain
 } from 'lucide-react';
@@ -27,4 +25,3 @@ export default function APIDocumentation() {
 		</div>
 	);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

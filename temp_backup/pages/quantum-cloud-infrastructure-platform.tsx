@@ -1,6 +1,4 @@
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
 import Button from '../components/ui/Button';
 
 export default function QuantumCloudInfrastructurePlatform() {
@@ -37,4 +35,3 @@ export default function QuantumCloudInfrastructurePlatform() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

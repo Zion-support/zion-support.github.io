@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ createContextuseContextuseState } from "react";
 
 interface SidebarContextType {
@@ -41,4 +39,3 @@ export function SidebarProvider({
     </SidebarContext.Provider>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

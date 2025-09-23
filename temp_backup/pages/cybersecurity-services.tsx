@@ -4,8 +4,6 @@ import { motion } from 'framer-motion';
 import { 
   Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud, 
   CheckCircle, ArrowRight, Star, Clock, Target,
-<<<<<<< HEAD
-=======
   Zap, Users, BarChart3, Settings, Server
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
@@ -409,4 +407,3 @@ export default function CybersecurityServices() {
     </Layout>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

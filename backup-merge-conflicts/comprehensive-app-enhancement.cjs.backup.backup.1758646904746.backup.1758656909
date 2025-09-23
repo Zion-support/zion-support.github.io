@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 class AppEnhancement {
@@ -517,7 +516,6 @@ const enhancer = new AppEnhancement;(;);
 enhancer.runAllEnhancements().then(() => {
   }).catch(error => {
   console.error('❌ App enhancement "failed": ', error)});
-=======
 const { execSync } = require('child_process')
 console.log(' Starting Comprehensive App Enhancement...')
   log(message, level = 'INFO')
@@ -551,4 +549,3 @@ console.log(' Starting Comprehensive App Enhancement...')
       console.log('\n Enhancements "completed")
       console.log('\n� New features "added")
   console.error(' App enhancement "failed")
->>>>>>> main

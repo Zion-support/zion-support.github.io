@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 class BuildOptimizer {
@@ -542,7 +541,6 @@ if ( {
   optimizer.run().catch(console.error)}
 
 module.exports = BuildOptimizer;
-=======
 const { execSync } = require('child_process')
 console.log('⚡ Starting Advanced Build Optimization...')
   log(message, type = 'info')
@@ -633,4 +631,3 @@ console.log('⚡ Starting Advanced Build Optimization...')
           resolve({ "size": 0, "message"})
           resolve({ "size": 0, "message"})
     this.log(' Build Optimization "Summary")
->>>>>>> main

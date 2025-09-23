@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -370,7 +369,6 @@ export default function SpaceTechnologyAIPlatform() {
             </motion.div>
           </div>
         </section>
-=======
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { Button } from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -404,7 +402,6 @@ export default function SpaceTechnologyAIPlatformPage() {
             </Card>
           </div>
         </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       </div>
     </UltraAdvancedFuturisticBackground>
   );

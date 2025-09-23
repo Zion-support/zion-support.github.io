@@ -28,14 +28,11 @@ import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-a
 import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services';
 import { revolutionary2044AIServices } from '../data/revolutionary-2044-ai-services';
 import { realEnterpriseMicroSaas2025 } from '../data/2025-real-enterprise-micro-saas';
-<<<<<<< HEAD
 import { innovativeITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services';
 import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services';
 >>>>>>> origin/main
-=======
 import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services';
 import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services';
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
 
 const EnhancedHomepage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -78,14 +75,11 @@ const EnhancedHomepage: React.FC = () => {
     ...revolutionary2044ITServices,
     ...revolutionary2044AIServices,
     ...realEnterpriseMicroSaas2025,
-<<<<<<< HEAD
     ...innovativeITInfrastructureServices,
     ...innovative2025AIAutonomousServices
 >>>>>>> origin/main
-=======
     ...innovative2025ITInfrastructureServices,
     ...innovative2025AIAutonomousServices
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   ];
 
   // Filter services by category

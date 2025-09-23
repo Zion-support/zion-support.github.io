@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useEffectuseMemouseState } from 'react';
 import { LineChartBarChartDonutChart } from '../components/salary/InsightCharts';
@@ -277,4 +275,3 @@ export default function SalaryInsightsPage() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

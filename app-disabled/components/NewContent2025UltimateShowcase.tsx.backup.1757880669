@@ -1,8 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {/* Featured Blog Post */}
@@ -33,7 +31,6 @@ const NewContent2025UltimateShowcase = () => {
             Discover cutting-edge insights, case studies, and resources that will transform your understanding of AI in 2025. 
             From enterprise transformation to autonomous systems, explore the future of technology.
           </p>
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
         </div>
 
         {/* Success metrics */}

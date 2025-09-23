@@ -1,8 +1,6 @@
 
 import { Availability } from "@/types/profile";
 import { Badge } from "@/components/ui/badge";
-<<<<<<< HEAD
-=======
 import { CalendarClockCheck } from "lucide-react";
 
 interface ProfileAvailabilityProps {
@@ -71,4 +69,3 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

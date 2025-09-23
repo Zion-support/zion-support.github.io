@@ -864,7 +864,6 @@ const HomePage: React.FC = () => {
                      <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Live Cloud Automations</h2>
              <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Autonomous Netlify functions invent, audit, and improve continuously — changes sync to the repo automatically.</p>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-<<<<<<< HEAD
             {[
               { title: 'Autonomous Meta Orchestrator (1m)', desc: 'Triggers prioritized cloud functions and commits a heartbeat to main every minute.', href: '/.netlify/functions/autonomous-meta-orchestrator' },
               { title: 'Frontpage Enhancer', desc: 'Auto‑advertises features and refreshes homepage content hourly.', href: '/.netlify/functions/frontpage-enhancer' },
@@ -1010,7 +1009,6 @@ const HomePage: React.FC = () => {
   
          {
 /* AUTO-GENERATED: HOME_LATEST_CONTENT_START */
-=======
 import React from 'react';
 import EnhancedHomepage2025 from '../components/EnhancedHomepage2025';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -1045,7 +1043,6 @@ export default function Home() {
 };
 
       {/* AUTO-GENERATED: HOME_LATEST_CONTENT_START */}
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
 
  <section className="mx-auto max-w-7xl px-6 pb-14">
    <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Latest Autonomous Content</h2>

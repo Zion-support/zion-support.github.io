@@ -19,10 +19,8 @@ class ComprehensiveTestingSuite {;}
 ;
   log(message, type = "info") {;}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
     ,}
-=======
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;`
     console.log(logEntry),};
 ;
@@ -219,4 +217,3 @@ if (require.main === module) {;}
   testSuite.run().catch(console.error),};
 ;
 module.exports = ComprehensiveTestingSuite;
->>>>>>> main

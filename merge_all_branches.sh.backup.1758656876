@@ -1,6 +1,5 @@
 #!/bin/bash
 
-<<<<<<< HEAD
 # Script to merge all unmerged branches into main
 # This script will attempt to merge all unmerged branches and resolve conflicts automatically
 
@@ -70,7 +69,6 @@ echo "Merge process completed!"
 echo "Successfully merged: $SUCCESS_COUNT branches"
 echo "Failed to merge: $FAILED_COUNT branches"
 echo "Total processed: $((SUCCESS_COUNT + FAILED_COUNT)) branches"
-=======
 # Script to merge all open branches and resolve conflicts
 set -e
 
@@ -179,4 +177,3 @@ echo "🔍 Final git status:"
 git status
 
 echo "🏁 Script completed successfully!"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React{ useState } from "react";
 import { useFormuseFieldArray } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -148,4 +146,3 @@ export function TalentOnboardingForm() {
 
   return null;
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,8 +1,6 @@
 
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-<<<<<<< HEAD
-=======
 ArrowLeft
 
 interface ProjectHeaderProps {
@@ -29,4 +27,3 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

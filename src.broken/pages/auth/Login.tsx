@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { useNavigate } from 'react-router-dom',
 import { useForm } from 'react-hook-form',
 import { toast } from '@/hooks/use-toast',
@@ -41,4 +39,3 @@ export default function Login() {
     </form>
   ),
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

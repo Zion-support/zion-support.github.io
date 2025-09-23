@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react',
 import { useSearchParams, Link } from 'react-router-dom',
 
@@ -15,4 +13,3 @@ export default function OrderSuccess() {
     </div>
   ),
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

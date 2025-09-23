@@ -15,8 +15,6 @@ export interface APIDocumentation {
     frameworks: string[];
   };
 }
-<<<<<<< HEAD
-=======
 export interface APIEndpoint {
   id: string;
   path: string;
@@ -596,4 +594,3 @@ export class APIDocGeneratorService {
   }
 }
 export const apiDocGeneratorService = new APIDocGeneratorService();
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

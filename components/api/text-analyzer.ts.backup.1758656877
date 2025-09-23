@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 
 interface TextAnalysisResult {
   text: string;
@@ -62,7 +61,6 @@ export default async function handler(
     // Basic statistics
     const characters = text.length;
     const charactersNoSpaces = text.replace(/\s/g, '').length;
-=======
 interface TextAnalysisResult {
 
 
@@ -123,12 +121,10 @@ export default async function handler(
     const paragraphs = text
       .split(/\n\s*\n/)
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     const words = text.trim().split(/\s+/).filter(word => word.length > 0).length;
     const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0).length;
     const paragraphs = text.split(/\n\s*\n/).filter(para => para.trim().length > 0).length;
 
-<<<<<<< HEAD
     // Syllable counting (simplified)
     const syllableCount = (word: string): number => {
       word = word.toLowerCase();
@@ -148,7 +144,6 @@ export default async function handler(
     const speakingTime = Math.ceil(words / 150);
 
     // Readability scores
-=======
 
     // Syllable counting (simplified)
     const syllableCount = (word: string): number => {
@@ -271,14 +266,12 @@ export default async function handler(
     if (sentimentScore <= -3) sentimentLabel = 'very-negative';    else if (sentimentScore <= -1) sentimentLabel = 'negative';    else if (sentimentScore <= 1) sentimentLabel = 'neutral';
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     const fleschReadingEase = Math.max(0, Math.min(100, 206.835 - (1.015 * (words / sentences)) - (84.6 * (syllables / words))));
     const fleschKincaidGrade = Math.max(0, 0.39 * (words / sentences) + 11.8 * (syllables / words) - 15.59);
     const gunningFog = Math.max(0, 0.4 * ((words / sentences) + 100 * (text.split(/\s+/).filter(word => word.length > 6).length / words)));
     const smog = Math.max(0, 1.043 * Math.sqrt(text.split(/\s+/).filter(word => word.length > 2).length * (30 / sentences)) + 3.1291);
     const colemanLiau = Math.max(0, 0.0588 * (charactersNoSpaces / words * 100) - 0.296 * (sentences / words * 100) - 15.8);
     const automatedReadability = Math.max(0, 4.71 * (charactersNoSpaces / words) + 0.5 * (words / sentences) - 21.43);
-<<<<<<< HEAD
 
     const averageGrade = Math.round((fleschKincaidGrade + gunningFog + smog + colemanLiau + automatedReadability) / 5);
 
@@ -307,7 +300,6 @@ export default async function handler(
       }
     });
 
-=======
     const averageGrade = Math.round((fleschKincaidGrade + gunningFog + smog + colemanLiau + automatedReadability) / 5);
     // Sentiment analysis (simplified)
     const positiveWords = ['goodgreatexcellentamazingwonderfulfantasticbrilliantoutstanding', 'superbmarvelous'];
@@ -341,12 +333,10 @@ export default async function handler(
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     const topWords = Array.from(wordCounts.entries())
       .sort((a, b) => b[1] - a[1])
       .slice(0, 10)
       .map(([word, count]) => ({
-<<<<<<< HEAD
         word,
         count,
         frequency: Math.round((count / words) * 1000) / 10
@@ -367,7 +357,6 @@ export default async function handler(
       trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1);
     }
 
-=======
         word
         count
         frequency: Math.round((count / words) * 1000) / 10,      }));        word;
@@ -395,15 +384,12 @@ export default async function handler(
       trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1)
 
     }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     const bigrams = Array.from(bigramCounts.entries())
       .sort((a, b) => b[1] - a[1])
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count }));
-<<<<<<< HEAD
 
     const trigrams = Array.from(trigramCounts.entries())
-=======
     const trigrams = Array.from(trigramCounts.entries())
 
     for (let i = 0; i < wordsArray && wordsArray.length - 1; i++) {
@@ -423,15 +409,12 @@ export default async function handler(
     }
 
     const bigrams = Array && Array.from(bigramCounts && bigramCounts.entries())
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       .sort((a, b) => b[1] - a[1])
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count }));
 
-<<<<<<< HEAD
     // Language detection (simplified - assume English for demo)
     const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text);
-=======
     const trigrams = Array && Array.from(trigramCounts && trigramCounts.entries())
       .sort((a, b) => b[1] - a[1])
       .slice(0, 5)
@@ -442,12 +425,10 @@ export default async function handler(
     const confidence = isEnglish ? 0.95 : 0.5;
     const result: TextAnalysisResult = {
       text,    const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     const detectedLanguage = isEnglish ? 'en' : 'unknown';
     const confidence = isEnglish ? 0.95 : 0.5;
 
     const result: TextAnalysisResult = {
-<<<<<<< HEAD
       text,
       statistics: {
         characters,
@@ -480,7 +461,6 @@ export default async function handler(
         isEnglish,
       },
       keywords: {
-=======
       text
         characters
         charactersNoSpaces
@@ -509,13 +489,11 @@ export default async function handler(
 
       language: {
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         topWords,
         bigrams,
         trigrams,
       },
     };
-<<<<<<< HEAD
 
     res.status(200).json(result);
   } catch (error) {
@@ -523,7 +501,6 @@ export default async function handler(
     res.status(500).json({ error: 'Internal server error' });
   }
 }
-=======
     res && res.status(200).json(result);
 
   } catch (error) {
@@ -615,4 +592,3 @@ export default async function handler(
     const result: TextAnalysisResult = {
     const result: TextAnalysisResult = {
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

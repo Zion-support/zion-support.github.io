@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import pkg from "../package.json",;
 function normalizeRepoUrl(raw?: string): string | undefined {;
   if (!raw) return undefined,;
@@ -26,4 +24,3 @@ export function githubActionsUrl(): string | undefined {;
 export function githubRepoUrl(): string | undefined {;
   return repoWebUrl?.replace(/#.*$/, "");
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

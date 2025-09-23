@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -11,7 +10,6 @@ import {
   Star, Award, Clock, CheckCircle, Zap as ZapIcon, Phone as PhoneIcon,
   Search, User, Bell, Cog, LogOut, Home, Info, FileText, Users as UsersIcon,
   Bot, MessageCircle, Linkedin, Twitter, Github, Youtube, MapPin
-=======
 "use client";
 
 import React, { useState, useEffect } from 'react',
@@ -213,15 +211,12 @@ import {
   Github,
   Youtube,;
   MapPin,;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 } from 'lucide-react';
 
 interface NavigationItem {
   name: string;
-<<<<<<< HEAD
   href: string;
   icon?: React.ReactNode;
-=======
 
 
 
@@ -277,14 +272,12 @@ interface NavigationItem {
   icon?: React.ReactNode;
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   description?: string;
   children?: NavigationItem[];
   badge?: string;
   title?: string;
   featured?: boolean;
   category?: string;
-<<<<<<< HEAD
   color?: string;
 }
 
@@ -418,7 +411,6 @@ const navigationItems: NavigationItem[] = [
     name: 'Resources & Insights',
     href: '/blog',
     icon: <FileText className="w-5 h-5" />,
-=======
 
   color?: string
 }
@@ -454,12 +446,10 @@ const navigationItems: NavigationItem[] = [
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     description: 'Knowledge base and insights',
     category: 'resources',
     color: 'from-orange-500 to-red-500',
     children: [
-<<<<<<< HEAD
       { 
         name: 'Blog & Articles', 
         href: '/blog', 
@@ -494,14 +484,11 @@ const navigationItems: NavigationItem[] = [
     name: 'Company & Support',
     href: '/about',
     icon: <Building className="w-5 h-5" />,
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     description: 'Company information and support',
     category: 'company',
     color: 'from-gray-500 to-slate-500',
     children: [
-<<<<<<< HEAD
       { 
         name: 'About Zion Tech Group', 
         href: '/about', 
@@ -558,7 +545,6 @@ const UltraFuturisticNavigation2047 = () => {
   const handleDropdownToggle = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
-=======
       {
         href: '/about',
         description: 'Our story and mission',
@@ -616,13 +602,11 @@ const UltraFuturisticNavigation2047 = () => {
   }
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false);
-<<<<<<< HEAD
         setActiveDropdown(null);
       }
     };
@@ -636,7 +620,6 @@ const UltraFuturisticNavigation2047 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-=======
 
 
 
@@ -682,28 +665,22 @@ const UltraFuturisticNavigation2047 = () => {
   return (
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
                 <Rocket className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-<<<<<<< HEAD
-=======
 
 
     window.addEventListener('resize', handleResize);
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 Zion Tech Group
               </span>
             </Link>
           </div>
 
-<<<<<<< HEAD
-=======
 
           <div className="flex-shrink-0">;
             <Link href="/" className="flex items-center space-x-2">;
@@ -730,12 +707,10 @@ const UltraFuturisticNavigation2047 = () => {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
             {navigationItems.map((item) => (
               <div key={item.name} className="relative group">
-<<<<<<< HEAD
                 <button
                   onClick={() => handleDropdownToggle(item.name)}
                   className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200"
@@ -748,7 +723,6 @@ const UltraFuturisticNavigation2047 = () => {
                 <AnimatePresence>
                   {activeDropdown === item.name && (
                     <motion.div
-=======
 
 
 
@@ -762,13 +736,10 @@ const UltraFuturisticNavigation2047 = () => {
                   <ChevronDown className='w-4 h-4' />                </button>                <button
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
                       transition={{ duration: 0.2 }}
-<<<<<<< HEAD
-=======
                       className='absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50'
 
 
@@ -865,13 +836,11 @@ const UltraFuturisticNavigation2047 = () => {
                       <div className="space-y-4">;
                         {item && item.children?.map((child) => (;
                       transition={{ duration: 0.2 }}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       className="absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50"
                     >
                       <div className="space-y-4">
                         {item.children?.map((child) => (
                           <Link
-<<<<<<< HEAD
                             key={child.name}
                             href={child.href}
                             className="flex items-start space-x-3 p-3 rounded-lg hover:bg-slate-700/50 transition-colors duration-200"
@@ -911,7 +880,6 @@ const UltraFuturisticNavigation2047 = () => {
             </div>
             <Link
               href="/contact"
-=======
                             key={child && child.name}
                             href={child && child.href}
                             className="flex items-start space-x-3 p-3 rounded-lg hover:bg-slate-700/50 transition-colors duration-200"
@@ -1023,17 +991,14 @@ const UltraFuturisticNavigation2047 = () => {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200"
             >
               Get Started
               <ArrowRight className="ml-2 w-4 h-4" />
-<<<<<<< HEAD
             </Link>
           </div>
 
           {/* Mobile menu button */}
-=======
 
             </Link>
 
@@ -1045,7 +1010,6 @@ const UltraFuturisticNavigation2047 = () => {
           {/* Mobile menu button */}
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <div className="lg:hidden">
             <button
               onClick={toggleMenu}
@@ -1056,9 +1020,7 @@ const UltraFuturisticNavigation2047 = () => {
                 <X className="block h-6 w-6" />
               ) : (
                 <Menu className="block h-6 w-6" />
-<<<<<<< HEAD
               )}
-=======
 
 
               )}
@@ -1070,14 +1032,11 @@ const UltraFuturisticNavigation2047 = () => {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </button>
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -1159,7 +1118,6 @@ const UltraFuturisticNavigation2047 = () => {
       </div>
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -1168,10 +1126,8 @@ const UltraFuturisticNavigation2047 = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-<<<<<<< HEAD
             className="lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50"
           >
-=======
 
 
 
@@ -1229,7 +1185,6 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
                       className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : ''}`}
                     />
                   </button>          >
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigationItems.map((item) => (
                 <div key={item.name}>
@@ -1243,21 +1198,16 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
                     </div>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : ''}`} />
                   </button>
-<<<<<<< HEAD
                   
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   <AnimatePresence>
                     {activeDropdown === item.name && (
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
                         transition={{ duration: 0.2 }}
                         className="ml-4 mt-2 space-y-1"
                       >
-=======
 
 
                         transition={{ duration: 0.2 }}
@@ -1270,14 +1220,12 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
                             key={child.name}
                             href={child.href}
                             className='block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200'                            onClick={closeMenu}                      >
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                         {item.children?.map((child) => (
                           <Link
                             key={child.name}
                             href={child.href}
                             className="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200"
                             onClick={closeMenu}
-<<<<<<< HEAD
                           >
                             {child.name}
                           </Link>
@@ -1289,7 +1237,6 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
               ))}
               
               {/* Mobile Contact Info */}
-=======
                             className='block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200'                            onClick={closeMenu}
 
 
@@ -1344,7 +1291,6 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
               
               {/* Mobile Contact Info */}
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <div className="pt-4 pb-3 border-t border-slate-700/50">
                 <div className="px-3 py-2 text-sm text-gray-400">
                   <div className="flex items-center space-x-2 mb-2">
@@ -1364,7 +1310,6 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
                     <span>{contactInfo.address}</span>
                   </div>
                 </div>
-<<<<<<< HEAD
                 
                 <div className="px-3 pt-2">
                   <Link
@@ -1386,7 +1331,6 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
 };
 
 export default UltraFuturisticNavigation2047;
-=======
                 <div className="px-3 pt-2">
 
               <div className="pt-4 pb-3 border-t border-slate-700/50">;
@@ -1660,4 +1604,3 @@ export default UltraFuturisticNavigation2047;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

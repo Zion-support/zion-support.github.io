@@ -15,8 +15,6 @@ const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type, Authorization, x-client-info',
-<<<<<<< HEAD
-=======
   'Access-Control-Max-Age': '86400'};
 
 // Initialize Supabase client
@@ -124,4 +122,3 @@ serve(async (req) => {
     );
   }
 });
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

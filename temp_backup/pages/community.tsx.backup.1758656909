@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 
 export default function CommunityPage() {
@@ -32,7 +31,6 @@ export default function CommunityPage() {
 			</div>
 		</div>
 	);
-=======
 import { motion } from 'framer-motion';
 import { 
   Users, MessageCircle, Calendar, Github, 
@@ -620,5 +618,4 @@ export default function CommunityPage() {
       </section>
     </div>
   );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

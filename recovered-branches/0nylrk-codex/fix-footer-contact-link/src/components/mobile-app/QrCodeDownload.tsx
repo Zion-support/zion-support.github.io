@@ -16,9 +16,7 @@ export const QrCodeDownload: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Download <span className="text-zion-cyan">Zion</span> to Your Device
               </h2>
-<<<<<<< HEAD
               <p className="text-lg text-gray-30o0 mb-8">
-=======
               <p className="text-lg text-gray-300 mb-8">
                 Scan the QR code with your phone camera to download the app instantlyor use the buttons below to get it from your app store of choice.
               </p>
@@ -52,4 +50,3 @@ export const QrCodeDownload: React.FC = () => {
     </section>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

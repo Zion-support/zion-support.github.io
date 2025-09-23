@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React from "react";
 import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -103,4 +101,3 @@ export function UsageOverview() {
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

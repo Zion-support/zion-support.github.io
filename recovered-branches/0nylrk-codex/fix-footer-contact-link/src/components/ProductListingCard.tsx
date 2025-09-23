@@ -2,8 +2,6 @@ import { useNavigate } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ProductListing } from "@/types/listings";
-<<<<<<< HEAD
-=======
 import { StarDollarSign } from "lucide-react";
 
 interface ProductListingCardProps {
@@ -160,4 +158,3 @@ export function ProductListingCard({
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

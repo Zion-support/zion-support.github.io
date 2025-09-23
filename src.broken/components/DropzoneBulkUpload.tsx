@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { useCallbackuseState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { Button } from './ui/button';
@@ -92,4 +90,3 @@ export function DropzoneBulkUpload() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

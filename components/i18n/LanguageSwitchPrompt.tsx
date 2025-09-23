@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useEffectuseState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -57,4 +55,3 @@ export default function LanguageSwitchPrompt() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

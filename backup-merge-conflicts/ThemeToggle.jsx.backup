@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 export: const ThemeToggle = () => { useEffect ( () => { const savedTheme = localStorage.getItem ("theme") const prefersDark = window.matchMedia (" (prefers - color - scheme: dark) ) .matches"";"""",;"""
 <<<<<<< HEAD:backup-merge-conflicts/ThemeToggle.jsx.backup
-=======
 import React from';react' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {''';''}
 =======
 <<<<<<< HEAD
@@ -12,7 +10,6 @@ import React from';react' const ThemeToggle = () => { const [isDark,setIsDark] =
 import React from';react' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {''';''}
 =======
 <<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
 =======
 =======

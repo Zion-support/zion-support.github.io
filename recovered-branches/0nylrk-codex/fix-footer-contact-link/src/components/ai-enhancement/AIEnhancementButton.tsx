@@ -1,8 +1,6 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-<<<<<<< HEAD
-=======
 import { SparklesLoader2RefreshCwCheckX } from '@/components/icons';
 import { useAIContentEnhancerAIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 import { toast } from '@/hooks/use-toast';
@@ -129,4 +127,3 @@ export function AIEnhancementButton({
     </Button>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type Real2036InnovativeService = {
   id: string;
   name: string;
@@ -452,7 +451,6 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage',
     integration: ['ERP systems', 'WMS platforms', 'TMS solutions', 'IoT devices', 'Cloud services'],
     useCases: ['Demand planning', 'Inventory management', 'Logistics optimization', 'Risk management']
-=======
 export const real2036InnovativeServices = [
   {
     id: 'ai-autonomous-business-process-automation',
@@ -773,6 +771,5 @@ export const real2036InnovativeServices = [
       'Portfolio management',
       'Risk assessment'
     ]
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 ];

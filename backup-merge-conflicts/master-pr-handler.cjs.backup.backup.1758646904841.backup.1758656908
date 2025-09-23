@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '';
@@ -229,7 +228,6 @@ async function main() {
 }
 
 main();
-=======
 const { execSync } = require('child_process')
 // console.log(' Master PR Handler & Automation System')
 console.log('')
@@ -262,4 +260,3 @@ async function githubApiCall(endpoint, method = 'GET')
       "automationFailed"
     console.log('\n Final "Summary")
     console.error(' Master PR handler "failed")
->>>>>>> main

@@ -4,8 +4,6 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-<<<<<<< HEAD
-=======
   SelectValue} from "@/components/ui/select";
 import { SortFilterProps } from "@/types/filters";
 
@@ -30,4 +28,3 @@ export function SortFilter({ sortOptionsetSortOption }: SortFilterProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

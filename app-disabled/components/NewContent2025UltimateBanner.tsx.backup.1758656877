@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { TrendingUp } from 'lucide-react';
 
@@ -69,7 +68,6 @@ export default function NewContent2025UltimateBanner() {
             </Link>
           </div>
         </div>
-=======
 
 const NewContent2025UltimateBanner: React.FC = () => {
   return (
@@ -77,7 +75,6 @@ const NewContent2025UltimateBanner: React.FC = () => {
       <div className="max-w-5xl mx-auto px-4 text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-4">New Content 2025</h2>
         <p className="text-lg opacity-90">Experience our latest AI innovations and insights.</p>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-5719
       </div>
     </section>
   );

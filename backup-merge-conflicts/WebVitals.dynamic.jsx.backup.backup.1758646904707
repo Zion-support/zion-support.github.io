@@ -1,8 +1,5 @@
 =======
-<<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11935
 const WebVitals = dynamic(() => import("./WebVitals"),{'; loading: () => <p>Loading...</p,>,}) export: 'default WebVitals' ,'
 </p>'
 =======

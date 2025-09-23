@@ -3,7 +3,6 @@ import fs from 'fs';
 import path from 'path';
 import axios from 'axios';
 
-<<<<<<< HEAD
 const EPISODES_PATH = path.join(process.cwd(), 'data', 'podcast', 'episodes.json');
 const PUBLIC_DIR = path.join(process.cwd(), 'public', 'podcast');
 
@@ -68,7 +67,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const publicBase = '/podcast/' + baseFilename;
     episode.audio = {
-=======
 
 
 const EPISODES_PATH = path.join(
@@ -182,14 +180,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const publicBase = '/podcast/' + baseFilename;
 
     episode && episode.audio = {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       mp3Url: publicBase + '.mp3',
       wavUrl: publicBase + '.wav',
       mp4Url: publicBase + '.mp4',
     };
 
     episodes[idx] = episode;
-<<<<<<< HEAD
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
 
     return res.status(200).json({ episode });
@@ -198,7 +194,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: error?.message || 'Synthesis failed' });
   }
 }
-=======
 
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
       mp3Url: publicBase + '.mp3';
@@ -308,7 +303,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

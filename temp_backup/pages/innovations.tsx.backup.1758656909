@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   Brain, Rocket, Target, Cpu, Globe, Eye, 
@@ -320,7 +319,6 @@ export default function InnovationsPage() {
         <UltraFuturisticFooter2029V2 />
       </div>
     </UltraFuturisticBackground2029>
-=======
 
 export default function InnovationsPage() {
   return (
@@ -339,6 +337,5 @@ export default function InnovationsPage() {
         </div>
       </div>
     </>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   );
 }

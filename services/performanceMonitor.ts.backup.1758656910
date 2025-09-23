@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 export interface PerformanceMetrics {
-=======
 
 export interface PerformanceMetrics {
 export interface PerformanceMetrics {;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   url: string;
   timestamp: Date;
   loadTime: number;
@@ -18,13 +15,11 @@ export interface PerformanceMetrics {;
   speedIndex: number;
   performanceScore: number;
   accessibilityScore: number;
-<<<<<<< HEAD
   bestPracticesScore: number;
   seoScore: number;
 }
 
 export interface PerformanceAlert {
-=======
 
 
 
@@ -43,14 +38,12 @@ export interface PerformanceAlert {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   id: string;
   url: string;
   type: 'critical' | 'warning' | 'info';
   message: string;
   metric: string;
   threshold: number;
-<<<<<<< HEAD
   currentValue: number;
   timestamp: Date;
   resolved: boolean;
@@ -163,7 +156,6 @@ export class PerformanceMonitorService {
     }
   }
 
-=======
 
 
   current_value: number;
@@ -341,7 +333,6 @@ export class PerformanceMonitorService {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -459,7 +450,6 @@ export class PerformanceMonitorService {;
     summary: {
       averageLoadTime: number;
       averagePerformanceScore: number;
-<<<<<<< HEAD
       uptime: number;
       alertsCount: number;
     };
@@ -572,7 +562,6 @@ export class PerformanceMonitorService {;
       }
     ];
 
-=======
       uptime: number
       alertsCount: number
     }
@@ -737,7 +726,6 @@ export class PerformanceMonitorService {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1035,7 +1023,6 @@ export const PERFORMANCE_MONITOR_PRICING = {
   }
 }
 
-<<<<<<< HEAD
 // Pricing tiers for the Performance Monitor
 export const PERFORMANCE_MONITOR_PRICING = {
   starter: {
@@ -1079,7 +1066,6 @@ export const PERFORMANCE_MONITOR_PRICING = {
       'Custom dashboards',
       'White-label reporting',
       'Priority support',
-=======
 ;
 // Pricing tiers for the Performance Monitor;
 export const PERFORMANCE_MONITOR_PRICING = {;
@@ -1123,7 +1109,6 @@ export const PERFORMANCE_MONITOR_PRICING = {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -1162,7 +1147,4 @@ export const PERFORMANCE_MONITOR_PRICING = {
     ]
   }
 };
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

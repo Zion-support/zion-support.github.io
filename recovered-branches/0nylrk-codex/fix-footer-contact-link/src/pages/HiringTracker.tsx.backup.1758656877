@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { AppHeader } from "@/layout/AppHeader"; 
@@ -62,7 +61,6 @@ export default function HiringTracker() {
     </ProtectedRoute>
   );
 }
-=======
 
 import {useState} from "react";
 import {useParams} from "react-router-dom";
@@ -94,7 +92,6 @@ function HiringTrackerContent() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   return (
 

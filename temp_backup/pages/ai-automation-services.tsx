@@ -82,8 +82,6 @@ const benefits = [
 ];
 
 export default function AIAutomationServices() {
-<<<<<<< HEAD
-=======
   const services = [
     {
       title: 'Intelligent Process Automation',
@@ -550,4 +548,3 @@ export default function AIAutomationServices() {
     </Layout>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

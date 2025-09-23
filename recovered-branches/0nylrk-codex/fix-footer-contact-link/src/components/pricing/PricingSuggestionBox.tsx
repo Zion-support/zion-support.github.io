@@ -1,7 +1,5 @@
 
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-=======
 import { TooltipProviderTooltipTriggerTooltipContent } from "@/components/ui/tooltip";
 import { CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -94,4 +92,3 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
     </Card>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

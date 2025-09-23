@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { GeneratedMilestoneInputuseMilestoneGenerator } from '@/hooks/useMilestoneGenerator';
@@ -119,4 +117,3 @@ export function MilestoneSuggestions({
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

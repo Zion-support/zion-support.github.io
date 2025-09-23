@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -14,7 +12,6 @@ import {Footer} from "@/components/Footer";
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export default function CreatorDashboard() {
   return (

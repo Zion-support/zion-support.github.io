@@ -8,8 +8,6 @@ interface EducationSectionProps {
 
 export function EducationSection({ education }: EducationSectionProps) {
   // Sort education by date (newest first)
-<<<<<<< HEAD
-=======
   const sortedEducation = [...education].sort((ab) => {
     if (a.is_current && !b.is_current) return -1;
     if (!a.is_current && b.is_current) return 1;
@@ -56,4 +54,3 @@ export function EducationSection({ education }: EducationSectionProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

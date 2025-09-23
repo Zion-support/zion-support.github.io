@@ -1,6 +1,5 @@
 #!/bin/bash
 
-<<<<<<< HEAD
 # Performance optimization script triggered when URL latency exceeds threshold.
 # This script runs a build and attempts to restart the application using common
 # process managers. Adjust commands as needed for your environment.
@@ -34,7 +33,6 @@ fi
 echo "--------------------------------------------------"
 echo "Optimization complete for ${URL}."
 
-=======
 # This is a placeholder script to simulate performance optimization actions.
 # In a real-world scenario, this script would contain commands to:
 # - Enable lazy loading for components (e.g., modify config files, run build scripts)
@@ -62,4 +60,3 @@ echo "--------------------------------------------------"
 echo "Optimization simulation complete for \${URL}."
 
 exit 0
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

@@ -1,7 +1,5 @@
 
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-=======
 import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
 import { FileTextShieldCheck } from "lucide-react";
 
@@ -74,4 +72,3 @@ export function ContractTypeCards({ onStandardClickonSmartClick }: ContractTypeC
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

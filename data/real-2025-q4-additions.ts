@@ -38,8 +38,6 @@ export interface Q4Service {
   rating?: number;
   reviews?: number;
 }
-<<<<<<< HEAD
-=======
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -700,4 +698,3 @@ export const real2025Q4Additions = [
     reviews: 9
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

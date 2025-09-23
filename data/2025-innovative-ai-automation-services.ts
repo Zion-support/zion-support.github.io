@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -283,4 +281,3 @@ export const innovativeAIAutomationServices2025 = [
     compliance: ['SEC', 'FINRA', 'SOC2', 'ISO 27001', 'Financial regulations']
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -6,8 +6,6 @@ interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-=======
 export function Sidebar({ classNamechildren...props }: SidebarProps) {
   return (
     <div
@@ -21,4 +19,3 @@ export function Sidebar({ classNamechildren...props }: SidebarProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

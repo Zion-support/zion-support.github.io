@@ -1,6 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
 export interface AdvancedBlockchainWeb3Service {
   id: string;
   name: string;
@@ -318,4 +316,3 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     reviews: 35
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

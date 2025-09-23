@@ -352,7 +352,6 @@
     "redundancy:ultimate:master:stop": "node automation/ultimate-redundancy-master.cjs stop",
     "redundancy:ultimate:master:restart": "node automation/ultimate-redundancy-master.cjs restart",
     "redundancy:ultimate:master:status": "node automation/ultimate-redundancy-master.cjs status",
-<<<<<<< HEAD
     "redundancy:ultimate:master:health": "node automation/ultimate-redundancy-master.cjs health",
     "redundancy:ultimate:v2:start": "bash automation/start-ultimate-redundancy-v2.sh start",
     "redundancy:ultimate:v2:stop": "bash automation/start-ultimate-redundancy-v2.sh stop",
@@ -417,7 +416,6 @@
     "redundancy:ultimate:pm2:system": "node automation/ultimate-pm2-redundancy.cjs system",
     "redundancy:ultimate:pm2:status": "node automation/ultimate-pm2-redundancy.cjs status",
     "redundancy:ultimate:pm2:once": "node automation/ultimate-pm2-redundancy.cjs once"
-=======
     "redundancy:ultimate:master:report": "node automation/ultimate-redundancy-master.cjs report",
     "redundancy:ultimate:master:monitor": "node automation/ultimate-redundancy-master.cjs monitor",
     "redundancy:v2:start": "bash automation/start-comprehensive-redundancy-v2.sh start",
@@ -438,7 +436,6 @@
     "redundancy:all:status": "bash automation/start-all-redundancy-systems.sh status",
     "redundancy:all:health": "bash automation/start-all-redundancy-systems.sh health",
     "redundancy:all:test": "bash automation/start-all-redundancy-systems.sh test"
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",

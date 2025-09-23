@@ -6,8 +6,6 @@ import { cn } from "@/lib/utils"
 const Card = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
-<<<<<<< HEAD
-=======
 >(({ className...props }ref) => (
   <div
     ref={ref}
@@ -80,4 +78,3 @@ const CardFooter = React.forwardRef<
 CardFooter.displayName = "CardFooter"
 
 export { CardHeaderCardFooterCardTitleCardDescriptionCardContent }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

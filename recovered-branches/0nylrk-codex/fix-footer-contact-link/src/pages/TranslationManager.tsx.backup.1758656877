@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -17,7 +16,6 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 import { useTranslationService } from "@/hooks/useTranslationService";
 
 export default function TranslationManager() {
-=======
 
 
 
@@ -41,14 +39,11 @@ import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
 import {useTranslationService} from "@/hooks/useTranslationService";
 export default function TranslationManager() {;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const { t, i18n } = useTranslation();
   const isMobile = useIsMobile();
   const { supportedLanguages } = useLanguage();
   const { translateContent, isTranslating } = useTranslationService();
-<<<<<<< HEAD
   
-=======
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -74,7 +69,6 @@ export default function TranslationManager() {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const [selectedNamespace, setSelectedNamespace] = useState("translation");
   const [searchQuery, setSearchQuery] = useState("");
   const [translations, setTranslations] = useState<Record<string, any>>({});
@@ -82,8 +76,6 @@ export default function TranslationManager() {
   const [editingKey, setEditingKey] = useState<string | null>(null);
   const [editedTranslations, setEditedTranslations] = useState<Record<string, Record<SupportedLanguage, string>>>({});
   const [isSaving, setIsSaving] = useState(false);
-<<<<<<< HEAD
-=======
   // Simulated translation data - in a real app, this would come from your backend
   useEffect(() => {
     // For demo purposes, we're using the loaded translations from i18next
@@ -104,27 +96,22 @@ export default function TranslationManager() {
   const [editingKey, setEditingKey] = useState<string | null>(null),
   const [editedTranslations, setEditedTranslations] = useState<Record<string Record<SupportedLanguage string>>>({}),
   const [isSaving, setIsSaving] = useState(false),
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   // Simulated translation data - in a real app, this would come from your backend
   useEffect(() => {
     // For demo purposes, we're using the loaded translations from i18next
-<<<<<<< HEAD
     const currentTranslations: Record<string, any> = {};
     
-=======
     const currentTranslations: Record<string any> = {},
 
     
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     supportedLanguages.forEach(lang => {
       const res = i18n.getResourceBundle(lang.code, selectedNamespace);
       if (res) {
         // Flatten nested objects for easier management
         const flattenObject = (obj: any, prefix = '') => {
           return Object.keys(obj).reduce((acc, key) => {
-<<<<<<< HEAD
             const pre = prefix.length ? `${prefix}.` : '';
             if (typeof obj[key] === 'object' && obj[key] !== null) {
               Object.assign(acc, flattenObject(obj[key], `${pre}${key}`));
@@ -150,7 +137,6 @@ export default function TranslationManager() {
     setFilteredKeys(Array.from(allKeys));
   }, [selectedNamespace, i18n]);
   
-=======
 
             const pre = prefix.length ? `${prefix}.` : '',
             if (typeof obj[key] === 'object' && obj[key] !== null) {
@@ -173,14 +159,12 @@ export default function TranslationManager() {
     });
     setFilteredKeys(Array.from(allKeys))
   }, [selectedNamespace, i18n]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Filter keys based on search query
   useEffect(() => {
     if (!searchQuery.trim()) {
       // Get all unique keys across all languages
       const allKeys = new Set<string>();
       Object.values(translations).forEach(langTranslations => {
-<<<<<<< HEAD
         Object.keys(langTranslations).forEach(key => allKeys.add(key));
       });
       setFilteredKeys(Array.from(allKeys));
@@ -190,7 +174,6 @@ export default function TranslationManager() {
     const query = searchQuery.toLowerCase().trim();
     const filtered: string[] = [];
     
-=======
         Object.keys(langTranslations).forEach(key => allKeys.add(key))
       });
       setFilteredKeys(Array.from(allKeys));
@@ -198,12 +181,10 @@ export default function TranslationManager() {
     }
     const query = searchQuery.toLowerCase().trim();
     const filtered: string[] = []
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     // Search in keys and values
     Object.values(translations).forEach(langTranslations => {
       Object.entries(langTranslations).forEach(([key, value]) => {
         if (
-<<<<<<< HEAD
           key.toLowerCase().includes(query) || 
           (typeof value === 'string' && value.toLowerCase().includes(query))
         ) {
@@ -263,7 +244,6 @@ export default function TranslationManager() {
     
     for (const lang of supportedLanguages.map(l => l.code)) {
       if (translations[lang]?.[key]) {
-=======
           key.toLowerCase().includes(query) |
           (typeof value === 'string' && value.toLowerCase().includes(query))
         ) {
@@ -502,13 +482,11 @@ export default function TranslationManager() {;
     for (const lang of supportedLanguages && supportedLanguages.map(l => l && l.code)) {;
       if (translations[lang]?.[key]) {;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         sourceLanguage = lang;
         sourceText = translations[lang][key];
         break;
       }
     }
-<<<<<<< HEAD
     
     if (!sourceText) {
       toast({
@@ -579,7 +557,6 @@ export default function TranslationManager() {;
     <>
       <SEO 
         title={t('translation.manager_title')} 
-=======
     if (!sourceText) {
       toast({
         title: t('translation.no_content')
@@ -766,7 +743,6 @@ export default function TranslationManager() {;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         description={t('translation.manager_description')}
       />
       <Header />
@@ -777,7 +753,6 @@ export default function TranslationManager() {;
           </CardHeader>
           <CardContent>
             <div className="space-y-6">
-<<<<<<< HEAD
               {/* Search and filter */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <div className="relative flex-1">
@@ -785,7 +760,6 @@ export default function TranslationManager() {;
                   <Input
                     type="search"
                     placeholder={t('translation.search_placeholder')}
-=======
 
 
       toast({;
@@ -842,19 +816,15 @@ export default function TranslationManager() {;
                   <Input
                     type="search"
                     placeholder={t('translation && translation.search_placeholder')}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     className="pl-8"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                   />
                 </div>
-<<<<<<< HEAD
                 <Tabs 
                   defaultValue="translation" 
-=======
                 <Tabs
                   defaultValue="translation"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   value={selectedNamespace}
                   onValueChange={(value) => setSelectedNamespace(value)}
                   className="w-full sm:w-auto"
@@ -865,9 +835,7 @@ export default function TranslationManager() {;
                   </TabsList>
                 </Tabs>
               </div>
-<<<<<<< HEAD
               
-=======
 
               
 
@@ -880,7 +848,6 @@ export default function TranslationManager() {;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               {/* Translations table */}
               <div className="border rounded-md">
                 <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">
@@ -888,10 +855,7 @@ export default function TranslationManager() {;
                   <div className="p-3 font-medium">{t('translation.translations')}</div>
                   <div className="hidden sm:block p-3 font-medium">{t('translation.actions')}</div>
                 </div>
-<<<<<<< HEAD
                 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 {filteredKeys.length === 0 ? (
                   <div className="p-6 text-center text-muted-foreground">
                     {t('translation.no_results')}
@@ -910,33 +874,26 @@ export default function TranslationManager() {;
                                     <span>{lang.flag}</span>
                                     <span>{lang.name}</span>
                                   </div>
-<<<<<<< HEAD
                                   {editedTranslations[key][lang.code]?.includes('\n') || 
                                    editedTranslations[key][lang.code]?.length > 100 ? (
                                     <Textarea
                                       value={editedTranslations[key][lang.code] || ''}
-=======
                                   {editedTranslations[key][lang.code]?.includes('\n') |
                                    editedTranslations[key][lang.code]?.length > 100 ? (
                                     <Textarea
                                       value={editedTranslations[key][lang.code] |''}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                                       onChange={(e) => handleChange(lang.code, key, e.target.value)}
                                       dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
                                       className="min-h-20"
                                     />
                                   ) : (
                                     <Input
-<<<<<<< HEAD
                                       value={editedTranslations[key][lang.code] || ''}
-=======
                                       value={editedTranslations[key][lang.code] |''}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                                       onChange={(e) => handleChange(lang.code, key, e.target.value)}
                                       dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
                                     />
                                   )}
-<<<<<<< HEAD
                                 </div>
                               ))}
                             </div>
@@ -961,7 +918,6 @@ export default function TranslationManager() {;
                               <Button 
                                 size="sm" 
                                 variant="outline" 
-=======
                                 </div>;
                               ))}
                             </div>
@@ -991,14 +947,11 @@ export default function TranslationManager() {;
                               <Button
                                 size="sm"
                                 variant="outline"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                                 onClick={handleCancel}
                               >
                                 {t('general.cancel')}
                               </Button>
                               <Button
-<<<<<<< HEAD
-=======
                               </Button>
                               <Button 
 
@@ -1009,12 +962,10 @@ export default function TranslationManager() {;
                               </Button>;
                               <Button
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                                 size="sm"
                                 variant="secondary"
                                 onClick={() => handleTranslateKey(key)}
                                 disabled={isTranslating}
-<<<<<<< HEAD
                               >
                                 {isTranslating ? (
                                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -1050,7 +1001,6 @@ export default function TranslationManager() {;
                         )}
                         <div className="p-3 flex items-center justify-end">
                           {editingKey === key ? null : (
-=======
                               >;
                                 {isTranslating ? (;
                                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
@@ -1087,12 +1037,10 @@ export default function TranslationManager() {;
                         )}
                         <div className="p-3 flex items-center justify-end">;
                           {editingKey === key ? null : (;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                             <Button
                               size="sm"
                               variant="outline"
                               onClick={() => handleEdit(key)}
-<<<<<<< HEAD
                             >
                               {t('translation.edit')}
                             </Button>
@@ -1102,7 +1050,6 @@ export default function TranslationManager() {;
                     ))}
                   </div>
                 )}
-=======
                             >;
                               {t('translation && translation.edit')}
                             </Button>;
@@ -1113,7 +1060,6 @@ export default function TranslationManager() {;
                   </div>;
                 )}
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               </div>
             </div>
           </CardContent>
@@ -1121,10 +1067,8 @@ export default function TranslationManager() {;
       </main>
       <Footer />
     </>
-<<<<<<< HEAD
   );
 }
-=======
   )
 }
               </div>;
@@ -1140,4 +1084,3 @@ export default function TranslationManager() {;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

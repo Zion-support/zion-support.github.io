@@ -8,8 +8,6 @@ import {
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-=======
 import { EyeChevronDownLoader2 } from "lucide-react";
 import { JobApplicationStatus } from "@/types/jobs";
 
@@ -88,4 +86,3 @@ export function ApplicationActions({
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

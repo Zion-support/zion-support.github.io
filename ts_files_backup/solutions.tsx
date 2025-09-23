@@ -2,8 +2,6 @@ import Layout from '../components/layout/Layout';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-=======
   HeartDollarSignFactoryShoppingCartBuilding2
   GraduationCapLeafShieldArrowRightStarCheckCircle,
   UsersGlobeCpuDatabaseNetworkTarget
@@ -419,4 +417,3 @@ const SolutionsPage: React.FC = () => {
 };
 
 export default Solutions;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

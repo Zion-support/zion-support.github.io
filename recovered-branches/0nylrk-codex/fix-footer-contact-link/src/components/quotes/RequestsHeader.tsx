@@ -1,8 +1,6 @@
 
 import { Badge } from "@/components/ui/badge";
 import { 
-<<<<<<< HEAD
-=======
   Select
   SelectContent
   SelectItem
@@ -77,4 +75,3 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
     </div>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

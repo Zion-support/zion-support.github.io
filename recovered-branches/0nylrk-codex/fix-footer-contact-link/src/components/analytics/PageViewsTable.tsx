@@ -1,8 +1,6 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
-<<<<<<< HEAD
-=======
 import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
@@ -117,4 +115,3 @@ export function PageViewsTable() {
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

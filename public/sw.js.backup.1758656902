@@ -1,23 +1,19 @@
-<<<<<<< HEAD
 /* eslint-env serviceworker */
 /* global self, caches, Response */
 
 const CACHE_NAME = 'zion-tech-group-v1.0.0';
 const STATIC_CACHE = 'zion-static-v1.0.0';
 const DYNAMIC_CACHE = 'zion-dynamic-v1.0.0';
-=======
 // Service Worker for Zion Tech Group
 // Provides offline support, caching, and performance improvements
 
 const CACHE_NAME = 'zion-tech-group-v3.0.0';
 const STATIC_CACHE_NAME = 'zion-static-v3.0.0';
 const DYNAMIC_CACHE_NAME = 'zion-dynamic-v3.0.0';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 // Files to cache immediately
 const STATIC_FILES = [
   '/',
-<<<<<<< HEAD
   '/offline',
   '/manifest.json',
   '/favicon.ico',
@@ -34,7 +30,6 @@ const STATIC_FILES = [
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-=======
   '/index.html',
   '/manifest.json',
   '/favicon.ico'
@@ -46,12 +41,10 @@ self.addEventListener('install', (event) => {
   
   event.waitUntil(
     caches.open(STATIC_CACHE_NAME)
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       .then((cache) => {
         console.log('Caching static files');
         return cache.addAll(STATIC_FILES);
       })
-<<<<<<< HEAD
       .then(() => {
         console.log('Static files cached successfully');
         return self.skipWaiting();
@@ -75,7 +68,6 @@ self.addEventListener('fetch', (event) => {
       }
     )
   );
-=======
       .catch((error) => {
         console.error('Error caching static files:', error);
       })
@@ -83,12 +75,10 @@ self.addEventListener('fetch', (event) => {
   
   // Skip waiting to activate immediately
   self.skipWaiting();
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 });
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-<<<<<<< HEAD
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
@@ -113,7 +103,6 @@ self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
 
-=======
   console.log('Service Worker activating...');
   
   event.waitUntil(
@@ -140,21 +129,16 @@ self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
   
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Skip non-GET requests
   if (request.method !== 'GET') {
     return;
   }
-<<<<<<< HEAD
 
-=======
   
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Skip chrome-extension and other non-http requests
   if (!url.protocol.startsWith('http')) {
     return;
   }
-<<<<<<< HEAD
 
   // Handle different types of requests
   if (url.pathname === '/') {
@@ -178,7 +162,6 @@ self.addEventListener('fetch', (event) => {
 // Cache First Strategy
 async function cacheFirst(request, cacheName) {
   try {
-=======
   
   // Handle different types of requests
   if (url.pathname.startsWith('/images/') || url.pathname.startsWith('/static/')) {
@@ -236,13 +219,11 @@ async function handlePageRequest(request) {
     return networkResponse;
   } catch (error) {
     // Fallback to cache
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     const cachedResponse = await caches.match(request);
     if (cachedResponse) {
       return cachedResponse;
     }
     
-<<<<<<< HEAD
     const networkResponse = await fetch(request);
     if (networkResponse.ok) {
       const cache = await caches.open(cacheName);
@@ -387,7 +368,6 @@ self.addEventListener('notificationclick', (event) => {
 
 // Message handling from main thread
 self.addEventListener('message', (event) => {
-=======
     // Return offline page
     return caches.match('/offline.html') || new Response('Offline', { status: 503 });
   }
@@ -397,15 +377,12 @@ self.addEventListener('message', (event) => {
 self.addEventListener('message', (event) => {
   console.log('Message received in service worker:', event.data);
   
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
   }
   
-<<<<<<< HEAD
   if (event.data && event.data.type === 'GET_VERSION') {
     event.ports[0].postMessage({ version: CACHE_NAME });
-=======
   if (event.data && event.data.type === 'CACHE_URLS') {
     event.waitUntil(
       caches.open(DYNAMIC_CACHE_NAME)
@@ -413,20 +390,17 @@ self.addEventListener('message', (event) => {
           return cache.addAll(event.data.urls);
         })
     );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 });
 
 // Error handling
 self.addEventListener('error', (event) => {
-<<<<<<< HEAD
   console.error('Service worker error:', event.error);
 });
 
 self.addEventListener('unhandledrejection', (event) => {
   console.error('Service worker unhandled rejection:', event.reason);
 });
-=======
   console.error('Service Worker error:', event.error);
 });
 
@@ -435,4 +409,3 @@ self.addEventListener('unhandledrejection', (event) => {
 });
 
 console.log('Zion Tech Group Service Worker loaded successfully');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

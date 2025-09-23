@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export interface InnovativeMicroSaasService {
   id: string;
   name: string;
@@ -1077,4 +1075,3 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     reviews: 39
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

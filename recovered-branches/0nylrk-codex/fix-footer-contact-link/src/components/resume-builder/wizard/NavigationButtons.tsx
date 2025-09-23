@@ -9,8 +9,6 @@ export const NavigationButtons = ({
   isNextDisabled = false,
   backLabel = "Back",
   nextLabel = "Next",
-<<<<<<< HEAD
-=======
   isLoading = false}: NavigationButtonsProps) => {
   return (
     <div className="flex justify-between">
@@ -28,4 +26,3 @@ export const NavigationButtons = ({
     </div>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

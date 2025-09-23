@@ -3,8 +3,6 @@ import { globalToastManager, showToast, ToastType, ToastPriority } from '@/utils
 
 const variantStyles ={
   info: { background: '#1e3a8a', color: '#fff' },
-<<<<<<< HEAD
-=======
   error: { background: '#7f1d1d', color: '#fff' }};
 
 // Deduplication settings
@@ -142,4 +140,3 @@ export const useToast = () => ({
   criticalError: showToast.criticalError});
 
 export const toast = toastAdapter;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { TALENT_PROFILES, TalentProfile } from '../../data/talent';
 import OpenAI from 'openai';
@@ -11,7 +10,6 @@ type RequestBody = {
   remote: boolean;
   employmentType: 'contract' | 'freelance' | 'full-time';
 };
-=======
 
 
 }const completion = await client.chat.completions.create ({
@@ -24,7 +22,6 @@ type RequestBody = {
 }const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 type InsightResponse = {
   recommendedHourlyUsd: number;
@@ -32,13 +29,11 @@ type InsightResponse = {
   medianHourlyUsd: number;
   minHourlyUsd: number;
   maxHourlyUsd: number;
-<<<<<<< HEAD
   confidence: number; // 0..1
   trendMonthly: { label: string; value: number }[];
   regionalComparison: { region: string; medianHourlyUsd: number }[];
   tags: string[];
   gptRecommendation?: string;
-=======
 
   confidence: number; // 0..1
   trendMonthly: { label: string; value: number }[];
@@ -67,7 +62,6 @@ type InsightResponse = {
   tags: string[],
   gptRecommendation?: string
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 };
 
 function median(values: number[]): number {
@@ -75,7 +69,6 @@ function median(values: number[]): number {
   const mid = Math.floor(arr.length / 2);
   if (arr.length === 0) return 0;
   return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid];
-<<<<<<< HEAD
 }
 
 function groupBy<T, K extends string | number>(items: T[], getKey: (item: T) => K): Record<K, T[]> {
@@ -111,7 +104,6 @@ function buildTrend(baseMonthly: number, seedKey: string): { label: string; valu
   const now = new Date();
   const seed = prng(seedKey);
   const series: { label: string; value: number }[] = [];
-=======
 function groupBy<T, K extends string | number>(
   items: T[]
   getKey: (item: T) => K
@@ -213,7 +205,6 @@ function buildTrend(
   const seed = prng(seedKey);
   const series: { label: string; value: number }[] = [];
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   let current = baseMonthly * 0.92; // start slightly below base
   for (let i = 11; i >= 0; i--) {
     const date = new Date(now.getFullYear(), now.getMonth() - i, 1);
@@ -222,11 +213,9 @@ function buildTrend(
     series.push({ label: months[date.getMonth()], value: Math.round(current) });
   }
   return series;
-<<<<<<< HEAD
 }
 
 async function maybeGetGptRecommendation(input: RequestBody, stats: { median: number; min: number; max: number; country: string }) {
-=======
 async function maybeGetGptRecommendation(
   input: RequestBody
   stats: { median: number; min: number; max: number; country: string }
@@ -275,12 +264,10 @@ function buildTrend(baseMonthly: number, seedKey: string): { label: string, valu
   return series;
 }
 async function maybeGetGptRecommendation(input: RequestBody, stats: { median: number, min: number, max: number, country: string }) {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) return undefined;
   try {
     const client = new OpenAI({ apiKey });
-<<<<<<< HEAD
     const skillsStr = input.skills.join(', ');
     const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`;
 
@@ -318,7 +305,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     .sort((a, b) => b.score - a.score)
     .slice(0, 20);
 
-=======
     const skillsStr = input.skills.join(', ');    const skillsStr = input.skills.join();
     const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`;
     const completion = await client.chat.completions.create({
@@ -404,7 +390,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     .filter((s) => s.score > 0)
     .sort((a, b) => b.score - a.score)
     .slice(0, 20);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const sample = scored.length > 0 ? scored.map((s) => s.profile) : TALENT_PROFILES;
   const rates = sample.map((p) => p.hourlyRateUsd);
   const baseMedian = median(rates);
@@ -412,7 +397,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const max = Math.max(...rates);
 
   // Adjustments
-<<<<<<< HEAD
   const expMultiplier = experienceLevel === 'Junior' ? 0.8 : experienceLevel === 'Mid' ? 1.0 : experienceLevel === 'Senior' ? 1.2 : 1.35;
   const remoteMultiplier = remote ? 1.1 : 1.0;
   const typeMultiplier = employmentType === 'full-time' ? 0.9 : 1.15; // FT tends to lower hourly; contract/freelance higher
@@ -420,7 +404,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const recommendedHourly = Math.round(baseMedian * expMultiplier * remoteMultiplier * typeMultiplier);
   const recommendedMonthly = Math.round(recommendedHourly * 160);
 
-=======
   const expMultiplier =
     experienceLevel === 'Junior'
       ? 0.8
@@ -460,15 +443,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const recommendedMonthly = Math.round(recommendedHourly * 160);
   const recommendedHourly = Math.round(baseMedian * expMultiplier * remoteMultiplier * typeMultiplier);
   const recommendedMonthly = Math.round(recommendedHourly * 160);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Confidence based on sample size and dispersion
   const sampleSize = rates.length;
   const dispersion = (max - min) / Math.max(1, baseMedian);
   const confidence = Math.max(0.2, Math.min(0.95, (sampleSize / 20) * (1 - Math.min(0.6, dispersion)) + 0.2));
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Trend series and regional comparison
   const trend = buildTrend(recommendedMonthly, `${roleTitle}|${skills?.join('|')}|${region}|${experienceLevel}`);
 
@@ -478,7 +457,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
     .slice(0, 8);
 
-<<<<<<< HEAD
   // Tags
   const scarceSkills = ['RAG', 'LangChain', 'Vector DBs', 'Kubernetes', 'AppSec', 'Security'];
   const undersupplied = (skills || []).some((s) => scarceSkills.some((t) => s.toLowerCase().includes(t.toLowerCase())));
@@ -495,7 +473,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     minHourlyUsd: Math.round(min),
     maxHourlyUsd: Math.round(max),
     confidence: Number(confidence.toFixed(2)),
-=======
 
   // Tags
 
@@ -520,17 +497,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     minHourlyUsd: Math && Math.round(min),
     maxHourlyUsd: Math && Math.round(max),
     confidence: Number(confidence && confidence.toFixed(2)),
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     trendMonthly: trend,
     regionalComparison,
     tags,
     gptRecommendation,
   };
-<<<<<<< HEAD
 
   return res.status(200).json(response);
 }
-=======
   return res && res.status(200).json(response);  return res && res.status(200).json(response)
 
   const scarceSkills = ['RAGLangChainVector DBsKubernetesAppSecSecurity'];
@@ -564,4 +538,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

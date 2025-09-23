@@ -22,11 +22,9 @@ class CodeQualityAutoEnhancer {}
     this.qualityHistory = []};
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
     }
 
   async runCodeQualityChecks() {
-=======
     console.log(`[${timestamp}] [${level}] ${message}`)};
   async runCodeQualityChecks() {}
     this.log('Running code quality checks...', 'INFO');
@@ -590,4 +588,3 @@ if (require.main === module) {}
     enhancer.log(`Failed to start "enhancer": ${error.message}`, 'ERROR');
     process.exit(1)})};
 module.exports = CodeQualityAutoEnhancer;
->>>>>>> main

@@ -1,7 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD:backup-merge-conflicts/textarea.tsx.backup
 <<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD:src/components/ui/textarea.tsx
 ;
@@ -24,24 +22,17 @@ export function Textarea({ className, ...props }: TextareaProps) {
       {...props}
     />
 =======
->>>>>>> pr-11913:src_backup_temp/components/ui/textarea.tsx
   );
 }
 </textarea>';
 </HTMLTextAreaElement>;';;';
-<<<<<<< HEAD:backup-merge-conflicts/textarea.tsx.backup
 =======
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/textarea.tsx
 =======
 >>>>>>> pr-11913:src_backup_temp/components/ui/textarea.tsx
 }
 </textarea>
 </HTMLTextAreaElement>;';';
 import React from 'react'; interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> { className?: string} export function Textarea({ className,...props }: TextareaProps) { return ( <textarea className={`flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`} {...props} /> )} </textarea> </HTMLTextAreaElement>;';';
-<<<<<<< HEAD:backup-merge-conflicts/textarea.tsx.backup
 >>>>>>> main
 >>>>>>> main:src_backup_temp/components/ui/textarea.tsx
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-=======
->>>>>>> pr-11913:src_backup_temp/components/ui/textarea.tsx

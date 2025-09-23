@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -22,7 +21,6 @@ const glob = require('glob')
         if (line.includes('"') && !line.endsWith('')
           line = line + ''
         const files = glob.sync(pattern, { "ignore"})
-=======
 #!/usr/bin/env node
 
 /**
@@ -50,7 +48,6 @@ const fixes = [];
 
   log(message) {
     .toISOString()}] ${message}`)}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 function fixFile(filePath, description, fixFunction) {
     console.log(`\n🔍 Checking: ${filePath}`);
@@ -60,7 +57,6 @@ function fixFile(filePath, description, fixFunction) {
         return;
     }
     
-<<<<<<< HEAD
 console.log('🔧 Starting comprehensive syntax error fixing...');
 
 // Function to fix common syntax errors
@@ -118,7 +114,6 @@ function fixSyntaxErrors(content, filePath) {
         </div>
     );`;
     });
-=======
     return files}
 
   fixImportStatements(content) {
@@ -157,12 +152,10 @@ function fixSyntaxErrors(content, filePath) {
     content = content.replace(/title\s*=\s*['"]\s*;\s*([^'"]*)\s*['"]/g, 'title=\'$1\'');
     
     return content}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     // Fix malformed CSS in JSX
     content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
     
-<<<<<<< HEAD
     // Fix malformed function declarations
     content = content.replace(/export\s+const\s+SEO:\s*Reac\s+t\.FC<[^>]+>\s*=\s*\(/g, 'export const SEO: React.FC<SEOProps> = (');
     
@@ -171,7 +164,6 @@ function fixSyntaxErrors(content, filePath) {
 
     // Fix missing semicolons
     content = content.replace(/([^;}])\s*$/gm, '$1;');
-=======
     for (let i = 0; i < lines.length; i++) {
       let line = lines[i];
       
@@ -225,7 +217,6 @@ function fixSyntaxErrors(content, filePath) {
       this.log(`❌ Error fixing ${filePath}: ${error.message}`);
       return false}
   }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     // Fix malformed object destructuring
     content = content.replace(/const\s+\{\s*([^}]+)\s*\}\s*=\s*useAuth\(\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(\[\]\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(true\);\s*const\s+navigate\s*=\s*useNavigate\(\);\s*useEffect\(\(\)\s*=>\s*\{[^}]*\},\s*\[user\]\);\s*const\s+handleRequestHire\s*=\s*\([^)]*\)\s*=>\s*\{[^}]*\};\s*return\s*\(<div[^>]*>([^<]*)<\/div>\);\s*}/g, (match, user, savedTalents, isLoading, content) => {
@@ -235,7 +226,6 @@ function fixSyntaxErrors(content, filePath) {
     const [${isLoading}] = useState(true);
     const navigate = useNavigate();
     
-<<<<<<< HEAD
     try {
         const originalContent = fs.readFileSync(filePath, 'utf8');
         const fixedContent = fixFunction(originalContent);
@@ -249,7 +239,6 @@ function fixSyntaxErrors(content, filePath) {
         }
     } catch (error) {
         console.log(`❌ Error fixing ${filePath}: ${error.message}`);
-=======
     const srcDir = path.join(this.projectRoot, 'src');
     if (!fs.existsSync(srcDir)) {
       this.log('❌ src directory not found');
@@ -262,7 +251,6 @@ function fixSyntaxErrors(content, filePath) {
     for (const file of files) {
       if (this.fixFile(file)) {
         fixedCount++}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
 }
 
@@ -289,7 +277,6 @@ fixFile('components/ErrorBoundary.tsx', 'ErrorBoundary class syntax', (content) 
         'return { hasError: true, error };\n  }\n  \n  public componentDidCatch'
     );
     
-<<<<<<< HEAD
     useEffect(() => {
         const fetchSavedTalents = async () => {
             if (!user) return;
@@ -317,10 +304,8 @@ fixFile('components/ErrorBoundary.tsx', 'ErrorBoundary class syntax', (content) 
     });
 
     return { content, fixes };
-=======
     this.log('📊 Report saved to syntax-fix-report.json')}
 <<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 >>>>>>> main
 }

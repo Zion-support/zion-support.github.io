@@ -1,6 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
 export interface RevolutionaryITInfrastructure2026 {
   id: string;
   name: string;
@@ -279,4 +277,3 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     reviews: 34
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

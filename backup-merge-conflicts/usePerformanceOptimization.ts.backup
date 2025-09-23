@@ -1,6 +1,5 @@
 =======
 =======
-<<<<<<< HEAD:src/hooks/usePerformanceOptimization.ts
 <<<<<<< HEAD:backup-merge-conflicts/usePerformanceOptimization.ts.backup
 import { useEffect, useRef, useCallback, useMemo  } from 'react';
 ;
@@ -16,7 +15,6 @@ interface UsePerformanceOptimizationOptions {;
   enableFPSMonitoring?: boolean;
   threshold?: number"}
 export const usePerformanceOptimization = ("options": "UsePerformanceOptimizationOption s = {"}) => {;
-=======
 import { useEffect, useRef, useCallback, useMemo  } from 'react';
 =======
   const {;
@@ -127,7 +125,6 @@ const "metricsRef": "useRe f<PerformanceMetrics>({;
     if (observerRef.current) {;
 =======
 =======
->>>>>>> pr-11935
     enableLazyLoading = true,
     enableIntersectionObserver = true,
     enableMemoryManagement = true,
@@ -213,10 +210,7 @@ const "metricsRef": useRe f<PerformanceMetrics>({;
             observerRef.current.unobserve(entry.target)}
         }
 =======
-<<<<<<< HEAD:src/hooks/usePerformanceOptimization.ts
 <<<<<<< HEAD:backup-merge-conflicts/usePerformanceOptimization.ts.backup
-=======
->>>>>>> pr-11913:src_backup_temp/hooks/usePerformanceOptimization.ts
       })});
 ;
     if (observerRef.current) {;
@@ -249,12 +243,9 @@ const "metricsRef": useRe f<PerformanceMetrics>({;
     );
 
 =======
-<<<<<<< HEAD:backup-merge-conflicts/usePerformanceOptimization.ts.backup
       })});
 >>>>>>> main
 >>>>>>> main:src_backup_temp/hooks/usePerformanceOptimization.ts
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
     if (observerRef.current) {
       observerRef.current.observe(element)}

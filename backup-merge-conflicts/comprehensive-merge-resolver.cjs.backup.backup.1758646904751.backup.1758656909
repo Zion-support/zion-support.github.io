@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
 const fs = require("child_process");
 const path = require("child_process");
 const { execSync } = require("child_process")
@@ -29,7 +28,6 @@ class ComprehensiveMergeResolver {
     } catch (error) {
       this.log(`❌ Error during merge conflict "resolution": ${error.message}`)
       return { "resolvedFiles": [], "errors": [{ file: "general", "error": error.message }] }
-=======
 
 const fs = require('fs');
 const path = require('path');
@@ -242,4 +240,3 @@ async function main() {
 }
 
 main();
->>>>>>> main

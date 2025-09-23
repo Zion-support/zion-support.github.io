@@ -1,5 +1,4 @@
 #!/usr/bin/env node;
-<<<<<<< HEAD
 const fs = require("$1");
 const path = require("$1");
 const { execSync, spawn } = require("child_process");
@@ -376,7 +375,6 @@ process.on("SIGINT", () => {";  launcher.log("\n🛑 Shutting down PM2 automatio
 if (require.main === module) {;
   main(),,}
 module.exports = PM2AutomationLauncher}}}}}}}}}}}}}}}}}}
-=======
 const fs = require("$1")
 const path = require("$1")
 const { execSync, spawn } = require("child_process")
@@ -533,4 +531,3 @@ process.on("SIGINT")
       case "help":";      default"
   } catch (error) {launcher.log(` Command failed``})
 process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
->>>>>>> main

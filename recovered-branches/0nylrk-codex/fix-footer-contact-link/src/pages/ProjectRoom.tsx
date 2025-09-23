@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import React, { useState } from 'react';
 import { useParams  } from 'react-router-dom';
@@ -481,4 +479,3 @@ export default function ProjectRoom() {;
 ;
 ;
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

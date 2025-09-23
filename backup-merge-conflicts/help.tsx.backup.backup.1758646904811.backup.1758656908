@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -127,7 +126,6 @@ const helpCategories = [
         readTime: '4 min read',
         type: 'Requirements'
       }
-=======
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import Head from 'next/head';
@@ -369,14 +367,12 @@ export default function HelpPage() {
                     Learn More
                     <ExternalLink className="ml-1 w-4 h-4" />
                   </Link>
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Selected Category Articles */}
         {selectedCategory && (
           <section className="py-20 bg-white">
@@ -469,7 +465,6 @@ export default function HelpPage() {
                     <p className="text-sm font-medium text-gray-900">{channel.contact}</p>
                     <p className="text-xs text-gray-500">Response time: {channel.responseTime}</p>
                   </div>
-=======
         {/* Help Categories */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
@@ -577,6 +572,5 @@ export default function HelpPage() {
         </section>
       </div>
     </>
->>>>>>> main
   );
 }

@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 @layer base {
   :root {
     --bg: #0f172a;
@@ -33,7 +32,6 @@
   
   .button-secondary {
     @apply border-2 border-slate-400 text-slate-300 hover:text-white hover:border-white px-6 py-3 rounded-lg font-semibold transition-all duration-200;
-=======
 :root {
   --bg: #0b0e1a;
   --fg: #e6e8f0;
@@ -93,16 +91,13 @@
   
   .animate-slide-in-right {
     animation: slideInRight 0.6s ease-out;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434f
   }
 }
 
 @layer utilities {
-<<<<<<< HEAD
   .text-balance {
     text-wrap: balance;
   }
-=======
   .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -171,5 +166,4 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(45deg, var(--secondary), var(--accent));
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434f
 }

@@ -1,8 +1,6 @@
 import Fastify from 'fastify';
 import cors from '@fastify/cors';
 import rateLimit from '@fastify/rate-limit';
-<<<<<<< HEAD
-=======
 import { createOpenAIClient, generateJobPost } from './openai';
 import { withUser } from './pg';
 import dotenv from 'dotenv';
@@ -106,4 +104,3 @@ app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
   app.log.error(err);
   (process as any).exit(1);
 });
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

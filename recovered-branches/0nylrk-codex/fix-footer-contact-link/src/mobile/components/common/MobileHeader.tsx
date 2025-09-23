@@ -1,7 +1,5 @@
 
 import { useNavigate } from "react-router-dom";
-<<<<<<< HEAD
-=======
 import { ChevronLeftBellSettings } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -74,4 +72,3 @@ export function MobileHeader({
     </header>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React from "react";
 import { UsersShieldBriefcaseAwardSettingsGlobe } from "lucide-react";
 
@@ -61,4 +59,3 @@ export function EnterpriseFeatures() {
     </section>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

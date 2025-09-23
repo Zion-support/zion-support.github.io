@@ -18,7 +18,6 @@ export function AISearch("props": "any) {;
         priceRange[0, 10000],;
         "rating": "0",;
         location[],;
-<<<<<<< HEAD
         "verified": "false",;
         "featured": "false;
     "});
@@ -122,10 +121,8 @@ export function AISearch("props": "any) {;
         // Filter results based on query and filters;
         const filteredResults = mockResults.filter(result => {const matchesVerified = !searchFilters.verified || result.metadata.verified;
 =======
-=======
             return matchesQuery && matchesCategory && matchesRating && matchesVerified});
         // Sort by relevance;
->>>>>>> pr-11935
             return matchesQuery && matchesCategory && matchesRating && matchesVerified}
     );
         // Sort by relevance
@@ -199,7 +196,6 @@ export function AISearch("props": "any) {;
 =======
 =======
 =======
-<<<<<<< HEAD
     return (<div className={`relative ${className}`} ref={searchRef}>;
 >>>>>>> pr-11935
     return (
@@ -267,7 +263,6 @@ export function AISearch("props": "any) {;
 }}>;
             {/* Header */}
 =======
-=======
             <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30">;
               <div className="flex items-center gap-3">;
                 <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">;
@@ -288,7 +283,6 @@ export function AISearch("props": "any) {;
                 </Button>;
               </div>;
             </div>;
->>>>>>> pr-11935
             <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">

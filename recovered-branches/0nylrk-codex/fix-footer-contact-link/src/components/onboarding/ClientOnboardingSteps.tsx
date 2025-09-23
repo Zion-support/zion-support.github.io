@@ -1,7 +1,5 @@
 
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
-<<<<<<< HEAD
-=======
 import { PlusCircleSendIconInboxIcon } from "lucide-react";
 import { OnboardingTrackerOnboardingStep } from "./OnboardingTracker";
 
@@ -31,4 +29,3 @@ export function ClientOnboardingSteps() {
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
 }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

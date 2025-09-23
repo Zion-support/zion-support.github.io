@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -10,7 +9,6 @@ import PostCard from "@/components/community/PostCard";
 import { ForumPost, ForumCategoryInfo } from "@/types/community";
 import { Badge } from "@/components/ui/badge";
 import { useAuth } from "@/hooks/useAuth";
-=======
 
 
 
@@ -51,7 +49,6 @@ import PostCard from "@/components/community/PostCard",
 import { ForumPost, ForumCategoryInfo } from "@/types/community",
 import { Badge } from "@/components/ui/badge",
 import { useAuth } from "@/hooks/useAuth",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import {
   MessageSquare,
   Briefcase,
@@ -59,11 +56,8 @@ import {
   FileText,
   Megaphone,
   Search
-<<<<<<< HEAD
 } from "@/components/icons";
-=======
 } from "@/components/icons",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 // Mock category data
 const categoriesInfo: Record<string, ForumCategoryInfo> = {
@@ -71,7 +65,6 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     id: "getting-hired",
     name: "Getting Hired",
     description: "Tips, strategies, and questions about getting hired on the platform.",
-<<<<<<< HEAD
     adminOnly: false,
     icon: "Briefcase"
   },
@@ -104,7 +97,6 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     icon: "Megaphone"
   }
 };
-=======
 
 
 
@@ -112,7 +104,6 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -177,8 +168,6 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
 const postsByCategory: Record<string, ForumPost[]> = {
   "getting-hired": [
     {
-<<<<<<< HEAD
-=======
 
 
 
@@ -267,7 +256,6 @@ const postsByCategory: Record < string, ForumPost[]> = {
       updatedAt: "2025-04-07T11:30:00Z"
       upvotes: 19
       downvotes: 2
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       id: "2",
       title: "How to build an effective AI talent profile?",
       content: "I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?",
@@ -296,7 +284,6 @@ const postsByCategory: Record < string, ForumPost[]> = {
       updatedAt: "2025-04-07T11:30:00Z",
       upvotes: 19,
       downvotes: 2,
-<<<<<<< HEAD
       replyCount: 6
     }
   ],
@@ -315,7 +302,6 @@ const postsByCategory: Record < string, ForumPost[]> = {
       downvotes: 0,
       replyCount: 2
     },
-=======
 
       replyCount: 6
     }
@@ -362,12 +348,10 @@ const postsByCategory: Record < string, ForumPost[]> = {
       downvotes: 0,
       reply_count: 2;
     }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     {
       id: "5",
       title: "How to handle client scope creep?",
       content: "I'm working on a project where the client keeps adding requirements...",
-<<<<<<< HEAD
       authorId: "user5",
       authorName: "David Lin",
       categoryId: "project-help",
@@ -399,7 +383,6 @@ const postsByCategory: Record < string, ForumPost[]> = {
       isAnswered: true,
       isFeatured: true
     },
-=======
       author_id: "user5",
       author_name: "David Lin",
       category_id: "project - help",
@@ -464,12 +447,10 @@ const postsByCategory: Record < string, ForumPost[]> = {
       is_answered: true,
       is_featured: true;
     }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     {
       id: "7",
       title: "Comparing different vector embedding models",
       content: "I've been experimenting with these different embedding models and here are my findings...",
-<<<<<<< HEAD
       authorId: "user7",
       authorName: "Lisa Park",
       categoryId: "ai-tools",
@@ -496,7 +477,6 @@ const postsByCategory: Record < string, ForumPost[]> = {
       downvotes: 1,
       replyCount: 3
     },
-=======
       author_id: "user7",
       author_name: "Lisa Park",
       category_id: "ai - tools",
@@ -551,12 +531,10 @@ const postsByCategory: Record < string, ForumPost[]> = {
       downvotes: 1,
       reply_count: 3;
     }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     {
       id: "8",
       title: "Suggestion for improving the jobs matching algorithm",
       content: "I think the job matching could be improved by considering these additional factors...",
-<<<<<<< HEAD
       authorId: "user8",
       authorName: "Ryan Mitchell",
       categoryId: "feedback",
@@ -603,7 +581,6 @@ const postsByCategory: Record < string, ForumPost[]> = {
     }
   ]
 };
-=======
       author_id: "user8",
       author_name: "Ryan Mitchell",
       category_id: "feedback",
@@ -685,7 +662,6 @@ export default function ForumCategoryPage() {;
   ]
 },
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 const iconMap = {
   "Briefcase": Briefcase,
@@ -693,7 +669,6 @@ const iconMap = {
   "Code": Code,
   "FileText": FileText,
   "Megaphone": Megaphone
-<<<<<<< HEAD
 };
 
 export default function ForumCategoryPage() {
@@ -735,7 +710,6 @@ export default function ForumCategoryPage() {
   return (
     <AppLayout>
       <SEO 
-=======
 
 
 },
@@ -788,15 +762,11 @@ export default function ForumCategoryPage() {
   return (
     <AppLayout>
       <SEO
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         title={`${category.name} | Community Forum | Zion AI Marketplace`}
         description={category.description}
         keywords={`community, forum, ${category.id}, discussion, AI marketplace, questions, answers`}
       />
-<<<<<<< HEAD
       
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">
@@ -805,10 +775,7 @@ export default function ForumCategoryPage() {
           <span className="text-muted-foreground">/</span>
           <span className="font-medium">{category.name}</span>
         </div>
-<<<<<<< HEAD
         
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
           <div className="flex items-center gap-4">
             <div className="p-3 bg-zion-purple/10 rounded-full">
@@ -819,10 +786,7 @@ export default function ForumCategoryPage() {
               <p className="text-muted-foreground mt-1">{category.description}</p>
             </div>
           </div>
-<<<<<<< HEAD
           
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           {canCreatePost && (
             <Button asChild>
               <Link to={user ? `/community/create?category=${categoryId}` : `/login?next=/community/create?category=${categoryId}`}>
@@ -831,7 +795,6 @@ export default function ForumCategoryPage() {
             </Button>
           )}
         </div>
-<<<<<<< HEAD
         
         <div className="mb-6">
           <div className="relative">
@@ -869,7 +832,6 @@ export default function ForumCategoryPage() {
     </AppLayout>
   );
 }
-=======
         <div className="mb-6">
           <div className="relative">
             <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
@@ -1137,7 +1099,6 @@ export default function ForumCategoryPage() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

@@ -10,9 +10,7 @@ export default tseslint.config(
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
-<<<<<<< HEAD
       ecmaVersion: 20o20,
-=======
       ecmaVersion: 2020,
       globals: globals.browser},
     plugins: {
@@ -25,4 +23,3 @@ export default tseslint.config(
         { allowConstantExport: true }],
       "@typescript-eslint/no-unused-vars": "off"}}
 );
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 // Minimal setup kept intentionally empty; environment is configured in jest.setup.ts
 export {};
-=======
 const "@testing-library/jest-dom"; jest.mock("next/router",() => ({ useRouter() { return { route: "/",pathname: "/",query: {},asPath: "/",push: jest.fn(),pop: jest.fn(),reload: jest.fn(),back: jest.fn(),prefetch: jest.fn(),beforePopState: jest.fn(),events: { on: jest.fn(),off: jest.fn(),emit: jest.fn()}} }})) Object.defineProperty(window,"matchMedia",{ writable: "true",value: jest.fn().mockImplementation((query: string) => ({ matches: false,media: "query",onchange: "null",addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn()}))}) global.IntersectionObserver = class IntersectionObserver { disconnect() { return; } observe() { return; } unobserve() { return; } } as any global.ResizeObserver = class ResizeObserver { disconnect() { return; } observe() { return; } unobserve() { return; } } as any'"'"
 interface SetupProps {
   // Add props here as needed
@@ -49,4 +47,3 @@ afterEach(() => {
   // We expose it so imports compile even if we don't use it.
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   SnapshotSerializer: () => {}};
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

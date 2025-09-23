@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import Head from 'next/head';
 import { useEffectuseMemouseState } from 'react';
@@ -284,4 +282,3 @@ export default function MobileLaunchPage() {
     </EnhancedLayout>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

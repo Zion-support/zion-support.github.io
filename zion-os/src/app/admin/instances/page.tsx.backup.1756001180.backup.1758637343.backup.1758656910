@@ -23,7 +23,6 @@ interface InstanceWithCounts {
 }
 
 export default async function InstancesPage() {
-<<<<<<< HEAD
   // Temporarily commented out for build
   // const instances = await prisma.instance.findMany({
   //   include: {
@@ -32,7 +31,6 @@ export default async function InstancesPage() {
   //   },
   //   orderBy: { createdAt: "desc" },
   // });
-=======
   let instances: InstanceWithCounts[] = [];
   let error: string | null = null;
 
@@ -48,13 +46,11 @@ export default async function InstancesPage() {
     console.error("Database connection error:", err);
     error = "Unable to connect to database";
   }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a13d
 
   const instances: any[] = []; // Temporary empty array
 
 export default function InstancesPage() {
   return (
-<<<<<<< HEAD
     <div className="space-y-8">
       {/* Header */}
       <div className="text-center space-y-4">
@@ -62,7 +58,6 @@ export default function InstancesPage() {
         <p className="text-xl text-white/70 max-w-2xl mx-auto">
           Monitor and manage your deployed digital economy instances
         </p>
-=======
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -201,7 +196,6 @@ export default function InstancesPage() {
             </a>
           </div>
         )}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a13d
       </div>
 
       {/* Stats Overview */}

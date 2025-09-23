@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import React from "react";
 import {Input} from "@/components/ui/input";
@@ -107,7 +105,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Status" />
         </SelectTrigger>

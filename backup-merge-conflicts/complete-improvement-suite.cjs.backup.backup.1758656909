@@ -1,9 +1,7 @@
-<<<<<<< HEAD
       "mergeConflicts": { resolved: 0, "failed": 0 },
       "syntaxErrors": { fixed: 0, "failed": 0 },
       "prsProcessed": { merged: 0, "failed": 0 },
       "improvements": { applied: 0, "failed": 0 }};
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -22,7 +20,6 @@ class CompleteImprovementSuite {
       prsProcessed: { merged: 0, failed: 0 },
       improvements: { applied: 0, failed: 0 },
     };
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 
   ensureDirectories() {
@@ -39,20 +36,17 @@ class CompleteImprovementSuite {
     this.log(`🚀 "Starting": ${description}`);
     try {
       const result = execSync(command, {
-<<<<<<< HEAD
         "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": timeout});
       this.log(`✅ "Completed": ${description}`);
       return { "success": true, "output": result };
-=======
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: timeout,
       });
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result };
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     } catch (error) {
       this.log(`❌ "Failed": ${description} - ${error.message}`);
       return { "success": false, "error": error.message };
@@ -60,18 +54,15 @@ class CompleteImprovementSuite {
   }
 
   async resolveMergeConflicts() {
-<<<<<<< HEAD
     this.log('🔧 Phase "1": Resolving Merge Conflicts');
 
     try {
       const files = this.getAllFiles(this.projectRoot, ['.tsx',
-=======
     this.log('🔧 Phase 1: Resolving Merge Conflicts');
 
     try {
       const files = this.getAllFiles(this.projectRoot, [
         '.tsx',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         '.ts',
         '.jsx',
         '.js',
@@ -98,18 +89,15 @@ class CompleteImprovementSuite {
   }
 
   async fixSyntaxErrors() {
-<<<<<<< HEAD
     this.log('🔧 Phase "2": Fixing Syntax Errors');
 
     try {
       const files = this.getAllFiles(path.join(this.projectRoot, 'src'), ['.tsx',
-=======
     this.log('🔧 Phase 2: Fixing Syntax Errors');
 
     try {
       const files = this.getAllFiles(path.join(this.projectRoot, 'src'), [
         '.tsx',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         '.ts',
         '.jsx',
         '.js',
@@ -133,7 +121,6 @@ class CompleteImprovementSuite {
   }
 
   async applyImprovements() {
-<<<<<<< HEAD
     this.log('🔧 Phase "3": Applying Improvements');
 
     const improvements = [{
@@ -148,7 +135,6 @@ class CompleteImprovementSuite {
       {
         "name": 'Build Optimization',
         "action": () => this.createBuildOptimization()},
-=======
     this.log('🔧 Phase 3: Applying Improvements');
 
     const improvements = [
@@ -168,7 +154,6 @@ class CompleteImprovementSuite {
         name: 'Build Optimization',
         action: () => this.createBuildOptimization(),
       },
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     ];
 
     let appliedCount = 0;
@@ -188,7 +173,6 @@ class CompleteImprovementSuite {
   }
 
   async commitAndPush() {
-<<<<<<< HEAD
     this.log('🔧 Phase "4": Committing and Pushing Changes');
 
     const commands = [{ cmd: 'git add .', "desc": 'Adding all changes' },
@@ -196,7 +180,6 @@ class CompleteImprovementSuite {
         "cmd": 'git commit -m "feat: Complete improvement suite - merge conflicts, syntax fixes, and enhancements"',
         "desc": 'Committing changes'},
       { "cmd": 'git push origin main', "desc": 'Pushing to main branch' },
-=======
     this.log('🔧 Phase 4: Committing and Pushing Changes');
 
     const commands = [
@@ -206,7 +189,6 @@ class CompleteImprovementSuite {
         desc: 'Committing changes',
       },
       { cmd: 'git push origin main', desc: 'Pushing to main branch' },
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     ];
 
     let successCount = 0;
@@ -251,12 +233,9 @@ class CompleteImprovementSuite {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       return (
-<<<<<<< HEAD
-=======
         content.includes('<<<<<<< HEAD') ||
         content.includes('=======') ||
         content.includes('>>>>>>> ')
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       );
     } catch (error) {
       return false;
@@ -270,29 +249,20 @@ class CompleteImprovementSuite {
 
       // Remove merge conflict markers and keep HEAD version
       content = content.replace(
-<<<<<<< HEAD
-=======
         /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         '$1'
       );
 
       // Clean up any remaining markers
-<<<<<<< HEAD
-=======
       content = content.replace(/<<<<<<< HEAD\n/g, '');
       content = content.replace(/=======\n/g, '');
       content = content.replace(/>>>>>>> [^\n]+\n/g, '');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.log(
-<<<<<<< HEAD
           `✅ Resolved conflicts "in": ${path.relative(this.projectRoot, filePath)}`
-=======
           `✅ Resolved conflicts in: ${path.relative(this.projectRoot, filePath)}`
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         );
         return true;
       }
@@ -320,11 +290,8 @@ class CompleteImprovementSuite {
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.log(
-<<<<<<< HEAD
           `✅ Fixed syntax "in": ${path.relative(this.projectRoot, filePath)}`
-=======
           `✅ Fixed syntax in: ${path.relative(this.projectRoot, filePath)}`
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         );
         return true;
       }
@@ -340,7 +307,6 @@ class CompleteImprovementSuite {
     const config = {
       "bundleOptimization": {
         treeShaking: true,
-<<<<<<< HEAD
         "codeSplitting": true,
         "lazyLoading": true,
         "compression": true},
@@ -352,7 +318,6 @@ class CompleteImprovementSuite {
         performanceMetrics: true,
         "errorTracking": true,
         "userAnalytics": true}};
-=======
         codeSplitting: true,
         lazyLoading: true,
         compression: true,
@@ -368,7 +333,6 @@ class CompleteImprovementSuite {
         userAnalytics: true,
       },
     };
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     fs.writeFileSync(
       path.join(this.projectRoot, 'performance-optimization.json'),
@@ -384,13 +348,11 @@ class CompleteImprovementSuite {
         'X-XSS-Protection': '1; mode=block',
         'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
         'Content-Security-Policy':
-<<<<<<< HEAD
           "default-src 'self'; script-src 'self' 'unsafe-inline'"},
       "validation": {
         inputSanitization: true,
         "sqlInjectionProtection": true,
         "xssProtection": true}};
-=======
           "default-src 'self'; script-src 'self' 'unsafe-inline'",
       },
       validation: {
@@ -399,7 +361,6 @@ class CompleteImprovementSuite {
         xssProtection: true,
       },
     };
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     fs.writeFileSync(
       path.join(this.projectRoot, 'security-enhancement.json'),
@@ -411,7 +372,6 @@ class CompleteImprovementSuite {
     const config = {
       "healthChecks": {
         enabled: true,
-<<<<<<< HEAD
         "interval": 60000,
         "endpoints": ['/health', '/api/status']},
       "logging": {
@@ -421,7 +381,6 @@ class CompleteImprovementSuite {
       "alerts": {
         errorThreshold: 10,
         "responseTimeThreshold": 5000}};
-=======
         interval: 60000,
         endpoints: ['/health', '/api/status'],
       },
@@ -435,7 +394,6 @@ class CompleteImprovementSuite {
         responseTimeThreshold: 5000,
       },
     };
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     fs.writeFileSync(
       path.join(this.projectRoot, 'monitoring-config.json'),
@@ -452,14 +410,12 @@ class CompleteImprovementSuite {
             "cacheGroups": {
               vendor: {
                 test: /[\\/]node_modules[\\/]/,
-<<<<<<< HEAD
                 "name": 'vendors',
                 "chunks": 'all'}}}}},
       "nextjs": {
         experimental: {
           optimizeCss: true,
           "optimizeImages": true}}};
-=======
                 name: 'vendors',
                 chunks: 'all',
               },
@@ -474,7 +430,6 @@ class CompleteImprovementSuite {
         },
       },
     };
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     fs.writeFileSync(
       path.join(this.projectRoot, 'build-optimization.json'),
@@ -485,11 +440,8 @@ class CompleteImprovementSuite {
   async run() {
     this.log('🎯 Starting Complete Improvement Suite');
 
-<<<<<<< HEAD
     // Phase "1": Resolve merge conflicts
-=======
     // Phase 1: Resolve merge conflicts
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     await this.resolveMergeConflicts();
 
     // Phase 2: Fix syntax errors
@@ -507,17 +459,14 @@ class CompleteImprovementSuite {
       "results": this.results,
       "summary": {
         totalMergeConflictsResolved: this.results.mergeConflicts.resolved,
-<<<<<<< HEAD
         "totalSyntaxErrorsFixed": this.results.syntaxErrors.fixed,
         "totalImprovementsApplied": this.results.improvements.applied,
         "pushSuccessful": pushSuccess}};
-=======
         totalSyntaxErrorsFixed: this.results.syntaxErrors.fixed,
         totalImprovementsApplied: this.results.improvements.applied,
         pushSuccessful: pushSuccess,
       },
     };
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     fs.writeFileSync(
       path.join(this.reportsDir, 'complete-improvement-report.json'),
@@ -525,38 +474,30 @@ class CompleteImprovementSuite {
     );
 
     this.log('🎉 Complete Improvement Suite Finished');
-<<<<<<< HEAD
     this.log("📊 "Summary": ");
-=======
     this.log(`📊 Summary:`);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     this.log(
       `   - Merge conflicts resolved: ${finalReport.summary.totalMergeConflictsResolved}`
     );
     this.log(
-<<<<<<< HEAD
       `   - Syntax errors "fixed": ${finalReport.summary.totalSyntaxErrorsFixed}`
     );
     this.log(
       `   - Improvements "applied": ${finalReport.summary.totalImprovementsApplied}`
     );
     this.log(`   - Push "successful": ${finalReport.summary.pushSuccessful}`);
-=======
       `   - Syntax errors fixed: ${finalReport.summary.totalSyntaxErrorsFixed}`
     );
     this.log(
       `   - Improvements applied: ${finalReport.summary.totalImprovementsApplied}`
     );
     this.log(`   - Push successful: ${finalReport.summary.pushSuccessful}`);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 }
 
 // Run the complete improvement suite
 const suite = new CompleteImprovementSuite();
 suite.run().catch(console.error);
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -583,7 +524,6 @@ const { execSync } = require('child_process')
                 "name"
                 "chunks"
 cursor/fix-lint-push-and-merge-to-main-f3c1;
->>>>>>> main
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main

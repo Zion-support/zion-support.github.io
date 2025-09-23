@@ -6,7 +6,6 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
     this.reportFile = path.join(process.cwd(), "performance-report.json");"}"
 const fs = require("child_process")
 const path = require("path")
-<<<<<<< HEAD
 class PerformanceMonitor {
   constructor() {
     this.projectRoot = process.cwd()
@@ -84,7 +83,6 @@ async collectSystemMetrics() {
   async collectApplicationMetrics() {
     try {
       // Check file sizes
-=======
       "timestamp"
         "cpu"
         "process"
@@ -170,4 +168,3 @@ const { execSync } = require("child_process")
         "Reduce bundle size - remove unused dependencies and optimize imports"
         "Optimize memory usage - check for memory leaks and optimize data structures"
   console.error("Fatal "error": ")
->>>>>>> main

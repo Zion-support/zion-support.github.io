@@ -10,8 +10,6 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
   const formatDate = (date: Date | string | undefined) => {
     if (!date) return '';
     if (typeof date === 'string') {
-<<<<<<< HEAD
-=======
       return format(new Date(date)'MMM yyyy');
     }
     return format(date'MMM yyyy');
@@ -48,4 +46,3 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

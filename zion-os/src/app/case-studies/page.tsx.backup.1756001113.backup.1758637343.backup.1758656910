@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 
 export default function CaseStudiesPage() {
@@ -304,7 +303,6 @@ export default function CaseStudiesPage() {
           </div>
         </div>
       </section>
-=======
 "use client";
 
 import { useState } from "react";
@@ -628,7 +626,6 @@ export default function CaseStudiesPage() {
           </a>
         </div>
       </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
     </div>
   );
 }

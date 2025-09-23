@@ -22,12 +22,10 @@ class BuildErrorAutoFixer {}
     this.buildHistory = []};
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
     }
 
   async runBuildCheck() {
     try {
-=======
     console.log(`[${timestamp}] [${level}] ${message}`)};
   async runBuildCheck() {}
     try {}
@@ -363,4 +361,3 @@ if (require.main === module) {}
     fixer.log(`Failed to start auto-"fixer": ${error.message}`, 'ERROR');
     process.exit(1)})};
 module.exports = BuildErrorAutoFixer;
->>>>>>> main

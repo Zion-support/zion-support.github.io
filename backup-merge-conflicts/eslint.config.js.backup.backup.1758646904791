@@ -1,10 +1,7 @@
 import js from '@eslint/js';
 =======
-<<<<<<< HEAD
-=======
 =======
 import react from 'eslint-plugin-react';
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:eslint.config.js
 >>>>>>> pr-11914:backup-merge-conflicts/eslint.config.js.backup
 import reactHooks from 'eslint-plugin-react-hooks';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
@@ -15,7 +12,6 @@ import tsparser from '@typescript-eslint/parser';
 export default [
   {
     ignores: [
-<<<<<<< HEAD
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
@@ -93,7 +89,6 @@ export default [
         __filename: 'readonly',
         Buffer: 'readonly',
         global: 'readonly'
-=======
       },
 =======
 import react from 'eslint-plugin-react';
@@ -102,7 +97,6 @@ import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 export default [{
     "ignores": [
->>>>>>> main
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:eslint.config.js
 >>>>>>> pr-11914:backup-merge-conflicts/eslint.config.js.backup
@@ -318,12 +312,10 @@ export default [{
       'src.disabled/',
       'src.broken/',
       'src.corrupted/',
-<<<<<<< HEAD
       'pages_backup/',
       'pages_backup_conflicts/',
       'pages_disabled/',
       'pages_api.disabled/',
-=======
 =======
       'src_backup_temp/',
       'temp-backup/',
@@ -377,7 +369,6 @@ export default [{
       'pages.disabled.full/'
     ]
   },
->>>>>>> pr-11914:backup-merge-conflicts/eslint.config.js.backup
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {

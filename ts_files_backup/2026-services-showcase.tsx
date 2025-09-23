@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 'use client';
 
@@ -194,4 +192,3 @@ export default function ServicesShowcase2026() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

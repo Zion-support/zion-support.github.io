@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface InnovativeMicroSaasV2 {
@@ -299,7 +298,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     rating: 4.8,
     reviews: 912
   }
-=======
 export type InnovativeMicroSaasV2 = {
 	id: string;
 	title: string;
@@ -319,5 +317,4 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
 		rating: 4.8,
 		reviews: 42,
 	},
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 ];

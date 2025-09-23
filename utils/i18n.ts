@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 export const supportedLocales = ['en', 'pt', 'es', 'ar'] as const;
 export function isRtl(locale: string): boolean {
@@ -18,4 +16,3 @@ export const i18n = {
 };
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

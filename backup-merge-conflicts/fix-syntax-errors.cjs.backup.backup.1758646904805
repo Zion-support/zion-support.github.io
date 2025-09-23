@@ -7,7 +7,6 @@
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 
 class SyntaxErrorFixer {
   constructor() {
@@ -173,7 +172,6 @@ if (require.main === module) {
 }
 
 module.exports = SyntaxErrorFixer;
-=======
   log(message, level = 'INFO')
     this.log(' Starting syntax error fixing...')
       this.log('Running ESLint auto-fix...')
@@ -182,4 +180,3 @@ module.exports = SyntaxErrorFixer;
       execSync('npm run format', { "stdio"})
       this.log(` Syntax fixing "failed"`)
       this.log(`� Syntax error fixing "failed"`)
->>>>>>> main

@@ -1,7 +1,5 @@
 =======
 import {cn} from '@/lib/utils';
-<<<<<<< HEAD
-=======
 =======
 import {cn} from '@/lib/utils';
 =======
@@ -25,7 +23,6 @@ export function Loading("props": "any) {;
     const renderContent = ("props": "any) => {;
         switch (variant) {;
             case 'dots':;
->>>>>>> pr-11935
 export function Loading($1) {
     const sizeClasses = {
   "sm": 'w-4 h-4',
@@ -42,8 +39,6 @@ export function Loading($1) {
                 return renderPulse();
             case 'skeleton':;
                 return renderSkeleton();
-<<<<<<< HEAD
-=======
 =======
             "default": return renderSpinner()}
     };
@@ -91,7 +86,6 @@ export function CardSkeleton("props": "any) {return (<div className="bg-card bor
 
 export default loading;
 </div>
->>>>>>> pr-11935
     <div className="min-h-screen bg-white">
 >>>>>>> main
       {renderContent()}

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
     baseURL: process && process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry'};
 
@@ -51,4 +49,3 @@ default define_config ({
 });
 });
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

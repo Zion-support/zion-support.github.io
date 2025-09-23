@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 
 interface Notification {
@@ -52,4 +50,3 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
     </div>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

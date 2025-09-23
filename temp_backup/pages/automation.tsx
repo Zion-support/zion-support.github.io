@@ -1,6 +1,4 @@
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
 import Link from 'next/link';
 
 export default function AutomationPage() {
@@ -198,4 +196,3 @@ export default function AutomationPage() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

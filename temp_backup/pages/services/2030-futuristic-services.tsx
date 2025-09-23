@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import SEO from '../../components/SEO';
 import { motion } from 'framer-motion';
@@ -292,4 +290,3 @@ export default function FuturisticServices2030Page() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

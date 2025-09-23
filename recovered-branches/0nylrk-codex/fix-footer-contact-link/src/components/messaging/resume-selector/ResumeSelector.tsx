@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 
 import React, { useState, useEffect } from './react';
@@ -312,7 +310,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
           description: "Please upload a PDF file",;
           variant: "destructive",;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

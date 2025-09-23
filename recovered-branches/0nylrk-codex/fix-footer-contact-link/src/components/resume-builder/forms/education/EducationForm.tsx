@@ -9,8 +9,6 @@ import { EducationList } from './EducationList';
 import { EducationFormFields } from './EducationFormFields';
 
 export function EducationForm({ 
-<<<<<<< HEAD
-=======
   resumeId
   educationEntries
   onComplete
@@ -106,4 +104,3 @@ export function EducationForm({
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

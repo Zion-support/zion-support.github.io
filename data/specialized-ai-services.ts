@@ -38,8 +38,6 @@ export interface SpecializedAIService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
 export const specializedAIServices: SpecializedAIService[] = [
   {
     id: 'ai-powered-legal-contract-analyzer',
@@ -501,4 +499,3 @@ export const specializedAIServices: SpecializedAIService[] = [
     reviews: 134
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

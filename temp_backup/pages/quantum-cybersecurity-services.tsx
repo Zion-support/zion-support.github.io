@@ -28,8 +28,6 @@ export default function QuantumCybersecurityServices() {
         <meta name="contact:website" content="https://ziontechgroup.com"  />
       </Head>
 
-<<<<<<< HEAD
-=======
       <UltraFuturisticBackground2026 intensity="high" />
       
       {/* Hero Section */}
@@ -329,4 +327,3 @@ export default function QuantumCybersecurityServices() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

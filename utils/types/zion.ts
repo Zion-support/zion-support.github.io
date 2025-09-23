@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
 export interface Branding {logoUrl?: string;
@@ -188,7 +186,6 @@ export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

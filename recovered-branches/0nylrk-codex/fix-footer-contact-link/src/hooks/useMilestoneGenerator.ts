@@ -35,8 +35,6 @@ export function useMilestoneGenerator() {
       // Mark each milestone as AI generated
       const milestonesWithFlag = data.milestones.map((milestone: any) => ({
         ...milestone,
-<<<<<<< HEAD
-=======
 
         isAiGenerated: true}));
 
@@ -61,4 +59,3 @@ export function useMilestoneGenerator() {
     isGenerating,
     clearGeneratedMilestones};
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

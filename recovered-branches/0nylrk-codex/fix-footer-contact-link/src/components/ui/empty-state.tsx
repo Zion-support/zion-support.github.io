@@ -15,8 +15,6 @@ interface EmptyStateProps {
   secondaryAction?: {
     text: string;
     href?: string;
-<<<<<<< HEAD
-=======
 
     onClick?: () => void
   }
@@ -98,4 +96,3 @@ export function EmptyState({
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -14,8 +14,6 @@ export interface Innovative20o26AiServiceV3 {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
   {
     id: "2026-innovative-ai-v3",
@@ -40,4 +38,3 @@ export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import { createServerClient } from '../../../utils/supabase/server';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -25,7 +24,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const referrals = referralsR.status === 'fulfilled' && referralsR.value.data ? referralsR.value.data as any[] : [];
 
     const mockIfEmpty = (arr: any[], mock: any[]) => (arr.length ? arr : mock);
-=======
 
 
   try {
@@ -56,7 +54,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       referralsR && referralsR.status === 'fulfilled' && referralsR && referralsR.value.data
         ? (referralsR && referralsR.value.data as any[])
         : [];
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     const usersData = mockIfEmpty(users, [
       { id: 1, role: 'client', country: 'US' },
@@ -87,9 +84,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       { id: 41, converted: true, source: 'linkedin' },
       { id: 42, converted: false, source: 'twitter' },
       { id: 43, converted: true, source: 'partner' },
-<<<<<<< HEAD
     ]);
-=======
     ]);      { id: 41, converted: true, source: 'linkedin' };
       { id: 42, converted: false, source: 'twitter' };
     const mockIfEmpty = (arr: any[], mock: any[]) => (arr.length ? arr : mock)
@@ -126,12 +121,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       { id: 43, converted: true, source: 'partner' }]);
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     const totalUsers = usersData.length;
     const totalTalents = usersData.filter(u => u.role === 'talent').length;
     const totalClients = usersData.filter(u => u.role === 'client').length;
-<<<<<<< HEAD
 
     const jobsPosted = jobsData.filter(j => j.status === 'posted').length;
     const jobsFilled = jobsData.filter(j => j.status === 'filled').length;
@@ -164,7 +157,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
   }
 }
-=======
     const jobsPosted = jobsData.filter(j => j.status === 'posted').length;
     const jobsFilled = jobsData.filter(j => j.status === 'filled').length;
     const quotesSent = quotesData.filter(q => q.status === 'sent').length;
@@ -228,4 +220,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
     const geoCounts: Record<string, number> = {};
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
 import { motion } from 'framer-motion';
 import { Star, Mail, Phone, MapPin, Sparkles, Brain, Cpu, Zap, Grid, List, ExternalLink, Rocket, BookOpen } from 'lucide-react';
 import { Button } from '../components/ui/Button';
@@ -427,4 +425,3 @@ export default function Revolutionary2025ServicesShowcase() {
     </Layout>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

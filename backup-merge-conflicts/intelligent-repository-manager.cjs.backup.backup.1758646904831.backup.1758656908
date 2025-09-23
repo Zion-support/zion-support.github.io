@@ -2,7 +2,6 @@
 /**
  * Intelligent Repository Manager;
  * 
-<<<<<<< HEAD
 * This automation "handles": * - Intelligent branch management
  * - Automated PR creation and review
  * - Smart conflict resolution
@@ -1124,7 +1123,6 @@ if (require.main === module) {
     process.exit(1)})}
 
 module.exports = IntelligentRepositoryManager;
-=======
 * This automation "handles"
             console.error('Failed to write to log "file")
                 "stdio"
@@ -1196,4 +1194,3 @@ module.exports = IntelligentRepositoryManager;
           this.log(`Error in monitoring "loop"`)
       this.log(`Error starting Intelligent Repository "Manager"`)
     console.error('Failed to start Intelligent Repository "Manager")
->>>>>>> main

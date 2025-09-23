@@ -4,8 +4,6 @@ export function useWebSocketReconnection(options: unknown ={}) {;
   const [isReconnecting, setIsReconnecting] = useState(false);
   const [attemptCount, setAttemptCount] = useState(0);
   const timeoutRef: unknown = useRef<NodeJS.Timeout | null>(null);
-<<<<<<< HEAD
-=======
   const attemptReconnection: unknown = useCallback(;
     (callback: () => void) => {;
       if (attemptCount >= (options.maxAttempts || 5)) {;
@@ -38,4 +36,3 @@ export function useWebSocketReconnection(options: unknown ={}) {;
     resetReconnection;
   };
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

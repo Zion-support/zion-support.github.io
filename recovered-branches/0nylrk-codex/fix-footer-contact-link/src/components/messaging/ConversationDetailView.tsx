@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import React, { useState, useEffect, useRef } from 'react';
 import { format  } from 'date-fns';
@@ -185,7 +183,6 @@ export function ConversationDetailView() {;
 
   return (
     <div className="flex-1 flex flex-col h-full">;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       {/* Header */}
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
         <div className="flex items-center gap-3">

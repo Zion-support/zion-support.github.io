@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import { useConsent } from '@/context/ConsentContext';
 
 export function CookieBanner() {
-<<<<<<< HEAD
-=======
   const { acceptAllrejectNonEssential } = useConsent();
 
   return (
@@ -26,4 +24,3 @@ export function CookieBanner() {
     </CookieConsent>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

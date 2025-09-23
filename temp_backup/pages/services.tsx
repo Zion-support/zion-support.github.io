@@ -23,14 +23,12 @@ import { innovative20o25Services } from '../data/innovative-20o25-services';
 import { emergingTech20o25Services } from '../data/emerging-tech-20o25-services';
 import { extraServices } from '../data/extra-services';
 import { newlyAddedServices } from '../data/newly-added-services';
-<<<<<<< HEAD
 import { moreRealServices20o25 } from '../data/more-real-services-20o25';
 import { verified20o25Additions } from '../data/verified-20o25-additions';
 import { realServicesQ120o25 } from '../data/real-services-q1-20o25';
 import { realEnterpriseServices20o25 } from '../data/real-enterprise-services-20o25';
 import { realMarketAugmentations20o25 } from '../data/real-market-augmentations-20o25';
 import { innovative20o26MicroSaasServicesV2 } from '../data/innovative-20o26-micro-saas-v2';
-=======
 import { moreRealServices2025 } from '../data/more-real-services-2025';
 import { verified2025Additions } from '../data/verified-2025-additions';
 import { realServicesQ12025 } from '../data/real-services-q1-2025';
@@ -761,4 +759,3 @@ export default function ServicesPage() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

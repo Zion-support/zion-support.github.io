@@ -1,7 +1,5 @@
 import * as React from "react"
 import * as SelectPrimitive from "@radix-ui/react-select"
-<<<<<<< HEAD
-=======
 import { CheckChevronDownChevronUp } from "lucide-react"
 
 import { cn } from "@/lib/utils"
@@ -157,4 +155,3 @@ export {
   SelectSeparator,
   SelectScrollUpButton,
   SelectScrollDownButton}
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

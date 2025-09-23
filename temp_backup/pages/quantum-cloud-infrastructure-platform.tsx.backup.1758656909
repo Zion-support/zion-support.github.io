@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function QuantumCloudInfrastructurePlatformPage() {
@@ -31,7 +30,6 @@ export default function QuantumCloudInfrastructurePlatformPage() {
 			/>
 		</>
 	);
-=======
 import Button from '../components/ui/Button';
 
 export default function QuantumCloudInfrastructurePlatform() {
@@ -67,5 +65,4 @@ export default function QuantumCloudInfrastructurePlatform() {
       </div>
     </>
   );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

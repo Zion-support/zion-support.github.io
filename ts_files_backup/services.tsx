@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import { motionAnimatePresenceVariants } from 'framer-motion';
 import { 
@@ -845,4 +843,3 @@ export default function ServicesPage() {
     </UltraFuturisticBackground2029>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { useState } from 'react',
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
 import { Header } from '@/components/Header',
@@ -34,4 +32,3 @@ export default function SellerDashboard() {
     </div>
   ),
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

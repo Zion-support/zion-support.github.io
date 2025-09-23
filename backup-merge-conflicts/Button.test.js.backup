@@ -1,6 +1,5 @@
 =======
 =======
-<<<<<<< HEAD:__tests__/Button.test.js
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import Button from "./components/Button" describe("Button",() => {" test("renders without crashing",() => {" render(<Button / / />) expect(screen.getByTestId("button")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<Button / / />) }) test("handles user interactions",() => {" render(<Button / / />) }) test("applies correct styling",() => {" render(<Button / / />) }) })'"'"
 import _React from 'react';,
 ';
@@ -27,6 +26,4 @@ describe('Button', () => {'}
 });
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11914:backup-merge-conflicts/Button.test.js.backup
-=======
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import Button from "./components/Button" describe("Button",() => {" test("renders without crashing",() => {" render(<Button / / />) expect(screen.getByTestId("button")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<Button / / />) }) test("handles user interactions",() => {" render(<Button / / />) }) test("applies correct styling",() => {" render(<Button / / />) }) })'"'"
->>>>>>> pr-11913:__tests__/Button.test.js

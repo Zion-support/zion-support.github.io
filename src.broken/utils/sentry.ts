@@ -11,8 +11,6 @@ if (SENTRY_DSN && !SENTRY_DSN.includes('dummy') && !SENTRY_DSN.startsWith('YOUR_
     tracesSampleRate: 0.1,
     // ...
     // Note: if you want to override the automatic release value, do so here
-<<<<<<< HEAD
-=======
     //   release: process.env.npm_package_version});
 }
 
@@ -27,4 +25,3 @@ export function captureException(error: unknown, context?: any): void { // Added
 
 // It's good practice to also export Sentry itself if you need to use other Sentry methods elsewhere.
 export { Sentry };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

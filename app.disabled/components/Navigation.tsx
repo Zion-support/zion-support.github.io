@@ -18,7 +18,6 @@ const Navigation: React.FC = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled ? 'bg-black/90 backdrop-blur-md' : 'bg-transparent'
     }`}>
@@ -27,7 +26,6 @@ const Navigation: React.FC = () => {
           <Link href="/" className="flex items-center space-x-2">
             <Brain className="h-8 w-8 text-blue-400" />
             <span className="text-xl font-bold text-white">Zion Tech</span>
-=======
     <nav className="bg-slate-90o0/95 backdrop-blur-sm border-b border-slate-80o0 sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
@@ -37,12 +35,10 @@ const Navigation: React.FC = () => {
               <span className="text-white font-bold text-sm">Z</span>
             </div>
             <span className="text-white font-bold text-xl">Zion Tech Group</span>
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-<<<<<<< HEAD
             <Link href="/services" className="text-gray-300 hover:text-white transition-colors">
               Services
             </Link>
@@ -55,7 +51,6 @@ const Navigation: React.FC = () => {
             <Link 
               href="/contact" 
               className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all"
-=======
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -72,14 +67,12 @@ const Navigation: React.FC = () => {
             <Link
               href="/contact"
               className="bg-blue-60o0 hover:bg-blue-70o0 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-20o0"
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
             >
               Get Started
             </Link>
           </div>
 
           {/* Mobile menu button */}
-<<<<<<< HEAD
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -88,7 +81,6 @@ const Navigation: React.FC = () => {
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
-=======
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden text-slate-30o0 hover:text-white"
@@ -101,12 +93,10 @@ const Navigation: React.FC = () => {
               )}
             </svg>
           </button>
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-<<<<<<< HEAD
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/90 backdrop-blur-md rounded-lg mt-2">
               <Link href="/services" className="block px-3 py-2 text-gray-300 hover:text-white">
@@ -121,7 +111,6 @@ const Navigation: React.FC = () => {
               <Link 
                 href="/contact" 
                 className="block px-3 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg text-center"
-=======
           <div className="md:hidden py-4 border-t border-slate-80o0">
             <div className="flex flex-col space-y-4">
               {navigation.map((item) => (
@@ -142,7 +131,6 @@ const Navigation: React.FC = () => {
                 href="/contact"
                 className="bg-blue-60o0 hover:bg-blue-70o0 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-20o0 text-center"
                 onClick={() => setIsOpen(false)}
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
               >
                 Get Started
               </Link>

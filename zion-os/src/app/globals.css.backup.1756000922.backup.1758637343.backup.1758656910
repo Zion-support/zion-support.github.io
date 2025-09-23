@@ -123,7 +123,6 @@
 }
 
 ::-webkit-scrollbar-track {
-<<<<<<< HEAD
   background: rgba(255, 255, 255, 0.1);
 }
 
@@ -134,7 +133,6 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(45deg, var(--secondary), var(--accent));
-=======
   background: var(--bg);
   border-radius: 5px;
 }
@@ -313,5 +311,4 @@
   .animate-slide-in {
     animation-duration: 0.4s;
   }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-75a9
 }

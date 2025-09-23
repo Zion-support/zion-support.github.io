@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ createContextuseContextuseStateuseEffectReactNode } from 'react';
 import { useWhitelabelTenant } from '@/hooks/useWhitelabelTenant';
 
@@ -75,4 +73,3 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
   );
 };
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

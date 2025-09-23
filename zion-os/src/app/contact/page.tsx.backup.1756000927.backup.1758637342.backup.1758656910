@@ -1,20 +1,16 @@
 import Link from "next/link";
 
 export const metadata = {
-<<<<<<< HEAD
   title: "Contact Zion Tech Group - Get in Touch",
   description: "Contact Zion Tech Group for AI automation, quantum computing, cybersecurity, and enterprise IT solutions. Get expert consultation and support.",
   keywords: "contact Zion Tech Group, get quote, support, consultation, AI services, quantum computing, Zion Tech Group",
-=======
   title: "Contact Us - Zion Tech Group | Get in Touch",
   description: "Contact Zion Tech Group for AI, quantum computing, cybersecurity, and enterprise technology solutions. Get in touch with our expert team.",
   keywords: "contact Zion Tech Group, get quote, support, sales, technology consulting",
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
 };
 
 export default function ContactPage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
@@ -36,7 +32,6 @@ export default function ContactPage() {
               <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-=======
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -124,7 +119,6 @@ export default function ContactPage() {
               <h2 className="text-3xl font-bold mb-6">Send us a Message</h2>
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
                       First Name
@@ -133,14 +127,11 @@ export default function ContactPage() {
                       type="text"
                       id="firstName"
                       name="firstName"
-<<<<<<< HEAD
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
                       placeholder="Enter your first name"
-=======
                       className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Your first name"
                       required
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
                     />
                   </div>
                   <div>
@@ -151,14 +142,11 @@ export default function ContactPage() {
                       type="text"
                       id="lastName"
                       name="lastName"
-<<<<<<< HEAD
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
                       placeholder="Enter your last name"
-=======
                       className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Your last name"
                       required
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
                     />
                   </div>
                 </div>
@@ -171,20 +159,17 @@ export default function ContactPage() {
                     type="email"
                     id="email"
                     name="email"
-<<<<<<< HEAD
                     className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
                     placeholder="Enter your email address"
                   />
                 </div>
 
-=======
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="your.email@company.com"
                     required
                   />
                 </div>
                 
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                     Company
@@ -193,19 +178,16 @@ export default function ContactPage() {
                     type="text"
                     id="company"
                     name="company"
-<<<<<<< HEAD
                     className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
                     placeholder="Enter your company name"
                   />
                 </div>
 
-=======
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Your company name"
                   />
                 </div>
                 
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                     Service of Interest
@@ -213,7 +195,6 @@ export default function ContactPage() {
                   <select
                     id="service"
                     name="service"
-<<<<<<< HEAD
                     className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
                   >
                     <option value="">Select a service</option>
@@ -227,7 +208,6 @@ export default function ContactPage() {
                   </select>
                 </div>
 
-=======
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="">Select a service</option>
@@ -241,7 +221,6 @@ export default function ContactPage() {
                   </select>
                 </div>
                 
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                     Message
@@ -249,7 +228,6 @@ export default function ContactPage() {
                   <textarea
                     id="message"
                     name="message"
-<<<<<<< HEAD
                     rows={6}
                     className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
                     placeholder="Tell us about your project or how we can help you..."
@@ -260,7 +238,6 @@ export default function ContactPage() {
                   type="submit"
                   className="w-full btn-primary py-4 text-lg"
                 >
-=======
                     rows={4}
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Tell us about your project or inquiry..."
@@ -269,13 +246,11 @@ export default function ContactPage() {
                 </div>
                 
                 <button type="submit" className="btn-primary w-full">
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
                   Send Message
                 </button>
               </form>
             </div>
 
-<<<<<<< HEAD
             {/* Contact Details */}
             <div className="space-y-8">
               {/* General Contact */}
@@ -361,7 +336,6 @@ export default function ContactPage() {
                     <a href="mailto:partnerships@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
                       partnerships@ziontechgroup.com
                     </a>
-=======
             {/* Office Locations */}
             <div>
               <h2 className="text-3xl font-bold mb-6">Our Offices</h2>
@@ -408,13 +382,11 @@ export default function ContactPage() {
                     <p className="text-sm text-gray-400">
                       <strong>Phone:</strong> +65 6789 0123
                     </p>
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
                   </div>
                 </div>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
 
         {/* Office Locations */}
@@ -555,7 +527,6 @@ export default function ContactPage() {
                 Explore Our Services
               </Link>
               <Link href="/case-studies" className="btn-secondary">
-=======
         </div>
       </section>
 
@@ -671,18 +642,14 @@ export default function ContactPage() {
                 Explore Services
               </Link>
               <Link href="/case-studies" className="btn-secondary text-lg px-8 py-4">
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
                 View Case Studies
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
       </div>
-=======
         </div>
       </section>
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
     </div>
   );
 }

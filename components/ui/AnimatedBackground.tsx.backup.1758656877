@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 export default function AnimatedBackground() {
   return (
     <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
@@ -17,7 +16,6 @@ export default function AnimatedBackground() {
     </div>
   );
 }
-=======
 
 export default function AnimatedBackground() {
   return (
@@ -185,4 +183,3 @@ export default AnimatedBackground;
 };
 export default AnimatedBackground;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

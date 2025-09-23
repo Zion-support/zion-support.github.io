@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 module.exports = function Separator($1) { const baseClasses = orientation === "horizontal" ? "h-px w-full" : "h-full w-px"; return ("; <div role={decorative ? "none" : "separator"} aria-orientation={orientation} className={`${baseClasses} bg-gray-300 ${className}`} {.props} /> )} export default separator;"; </div>";"`"`
 <<<<<<< HEAD:backup-merge-conflicts/separator.jsx.backup
-=======
 export function Separator(_) { const baseClasses = orientation === 'horizontal' ? 'h-px w-full' : 'h-full w-px'; return ('; <div role={decorative ? 'none' : 'separator'} aria-orientation={orientation} className={`${baseClasses} bg-gray-300 ${className}`} {...props} /> )} export default separator;'; </div>';
 =======
 export function Separator("props": "any) {;
@@ -18,7 +16,6 @@ export function Separator("props": "any) {;
 
 export default separator;
 </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
 =======
 export function Separator(_) { const baseClasses = orientation === 'horizontal' ? 'h-px w-full' : 'h-full w-px'; return ('; <div role={decorative ? 'none' : 'separator'} aria-orientation={orientation} className={`${baseClasses} bg-gray-300 ${className}`} {...props} /> )} export default separator;'; </div>';

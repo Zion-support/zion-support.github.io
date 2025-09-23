@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import ReactMarkdown from 'react-markdown';
 import { useRouter } from 'next/router';
 import AdvancedSEO from '@/components/seo/AdvancedSEO';
@@ -156,7 +155,6 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({
   }
   return { props: { initialPost: post }, revalidate: 60 };
 };
-=======
 import Head from 'next/head';
 
 export default function [slug]Page() {
@@ -178,4 +176,3 @@ export default function [slug]Page() {
     </>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

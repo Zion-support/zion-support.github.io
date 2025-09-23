@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 
@@ -341,7 +339,6 @@ export const realServicesQ32025: Q3Service[] = [
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams',
     trialDays: 14,
     setupTime: '1–2 weeks',

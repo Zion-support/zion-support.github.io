@@ -7,7 +7,6 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-<<<<<<< HEAD
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
@@ -74,7 +73,6 @@
   "references": [
     { "path": "./tsconfig.node.json" }
   ]
-=======
     "target": "es5",
     "lib": ["dom", "dom.iterable", "es6"],
     "allowJs": true,
@@ -96,5 +94,4 @@
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
->>>>>>> origin/auto/autonomy-17186719616
 }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -627,7 +626,6 @@
         }
     </script>
 </body>
-=======
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -695,5 +693,4 @@
         <!-- Redirect to the main application so the SPA loads correctly -->
         <meta http-equiv="refresh" content="0; url=/request-quote" />
     </body>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 </html>

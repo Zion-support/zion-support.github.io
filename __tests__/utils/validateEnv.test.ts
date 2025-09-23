@@ -1,7 +1,5 @@
 // __tests__/utils/validateEnv.test.ts
 
-<<<<<<< HEAD
-=======
 // NOTE: DO NOT add a static import for checkEssentialEnvVars here.
 // It needs to be dynamically imported within each test after mocks are applied.
 
@@ -177,4 +175,3 @@ describe('checkEssentialEnvVars', () => {
     });
   });
 });
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

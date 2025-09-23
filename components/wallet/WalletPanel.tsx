@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useEffectuseMemouseState } from "react";
 import Badges from "./Badges";
@@ -157,4 +155,3 @@ export default function WalletPanel() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

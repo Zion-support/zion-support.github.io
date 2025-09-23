@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import type { GetServerSideProps } from 'next';
 import { FormEventuseState } from 'react';
@@ -115,4 +113,3 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const vendor = slug ? getVendorBySlug(slug) || null : null;
   return { props: { vendor } };
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

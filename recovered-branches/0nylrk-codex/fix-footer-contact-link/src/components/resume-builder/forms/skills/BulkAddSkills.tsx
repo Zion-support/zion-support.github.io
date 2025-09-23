@@ -1,8 +1,6 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-<<<<<<< HEAD
-=======
 Loader2Sparkles
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
 import { useResume } from '@/hooks/useResume';
@@ -96,4 +94,3 @@ export const BulkAddSkills = ({ resumeIdonSuccess }: BulkAddSkillsProps) => {
     </div>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

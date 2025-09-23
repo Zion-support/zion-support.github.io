@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -18,7 +17,6 @@ import {
   CloudIcon, LockIcon, ShieldIcon, GlobeIcon,
   ZapIcon, SparklesIcon, BrainIcon, AtomIcon,
   MenuIcon, CloseIcon, ChevronRightIcon
-=======
 "use client";
 
 import React, { useState, useEffect } from 'react',
@@ -209,7 +207,6 @@ import {
   Code, Wrench, Smartphone, BarChart3, Eye;
   Network, Server, HardDrive, Monitor;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 } from 'lucide-react';
 
 const contactInfo = {
@@ -219,7 +216,6 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 };
 
-<<<<<<< HEAD
 const serviceCategories = [
   {
     title: '🧠 AI & Consciousness 2030',
@@ -307,7 +303,6 @@ const mainNavigation = [
 ];
 
 const companyLinks = [
-=======
 
 const serviceCategories = [
   {
@@ -777,18 +772,15 @@ const mainNavigation = [
 ;
 const company_links = [;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   { name: 'About Us', href: '/about' },
   { name: 'Careers', href: '/careers' },
   { name: 'News', href: '/news' },
   { name: 'Partners', href: '/partners' },
   { name: 'Support', href: '/support' },
-<<<<<<< HEAD
   { name: 'Status', href: '/status' }
 ];
 
 export default function UltraFuturisticNavigation2032() {
-=======
 
 ];
 
@@ -842,12 +834,10 @@ const companyLinks = [;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
 
-<<<<<<< HEAD
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -855,7 +845,6 @@ const companyLinks = [;
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-=======
   useEffect(() => {;
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 20);
@@ -865,13 +854,11 @@ const companyLinks = [;
     };
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
   return (
-<<<<<<< HEAD
     <>
       {/* Top Contact Bar */}
       <div className="bg-gradient-to-r from-cyan-900/90 via-purple-900/90 to-pink-900/90 backdrop-blur-sm border-b border-cyan-500/20">
@@ -908,7 +895,6 @@ const companyLinks = [;
       </div>
 
       {/* Main Navigation */}
-=======
     <>;
       {/* Top Contact Bar */}
 
@@ -919,7 +905,6 @@ const companyLinks = [;
         </div>;
       </div>;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10' 
@@ -928,8 +913,6 @@ const companyLinks = [;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-<<<<<<< HEAD
-=======
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
                 <Rocket className='w-7 h-7 text-white' />
@@ -946,7 +929,6 @@ const companyLinks = [;
             <div className='hidden lg:flex items-center space-x-8'>
 
               {mainNavigation.map(item => (            {/* Logo */}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Rocket className="w-7 h-7 text-white" />
@@ -959,9 +941,7 @@ const companyLinks = [;
               </div>
             </Link>
 
-<<<<<<< HEAD
             {/* Desktop Navigation */}
-=======
 
 
 
@@ -1060,15 +1040,12 @@ const companyLinks = [;
                   <item && item.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />;
                   <span>{item && item.name}</span>;
                 </Link>;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <div className="hidden lg:flex items-center space-x-8">
               {mainNavigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-<<<<<<< HEAD
                   className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group"
-=======
 
 
 
@@ -1120,13 +1097,11 @@ const companyLinks = [;
                   className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group"
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 >
                   <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
                   <span>{item.name}</span>
                 </Link>
               ))}
-<<<<<<< HEAD
               
               {/* Services Dropdown */}
               <div className="relative group">
@@ -1137,7 +1112,6 @@ const companyLinks = [;
                 </button>
                 
                 {/* Mega Menu */}
-=======
 
 
               {/* Services Dropdown */}
@@ -1151,7 +1125,6 @@ const companyLinks = [;
 
                 {/* Mega Menu */}
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <div className="absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4">
                   <div className="bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20">
                     <div className="grid grid-cols-2 gap-8">
@@ -1167,8 +1140,6 @@ const companyLinks = [;
                             </div>
                           </div>
                           <div className="space-y-2">
-<<<<<<< HEAD
-=======
 
               {mainNavigation.map(item => (
 
@@ -1191,12 +1162,10 @@ const companyLinks = [;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                             {category.services.map((service, serviceIndex) => (
                               <Link
                                 key={serviceIndex}
                                 href={service.href}
-<<<<<<< HEAD
                                 className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
                               >
                                 <div className="flex items-center justify-between">
@@ -1212,7 +1181,6 @@ const companyLinks = [;
                             ))}
                           </div>
                         </div>
-=======
 
                                 className='block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group'
                               >
@@ -1245,7 +1213,6 @@ const companyLinks = [;
                             ))}
                           </div>;
                         </div>;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       ))}
                     </div>
                   </div>
@@ -1254,11 +1221,9 @@ const companyLinks = [;
             </div>
 
             {/* CTA Buttons */}
-<<<<<<< HEAD
             <div className="hidden lg:flex items-center space-x-4">
               <Link href="/contact">
                 <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl">
-=======
             <div className='hidden lg:flex items-center space-x-4'>
               <Link href='/contact'>
                 <button className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl'>                  Get Started            <div className="hidden lg:flex items-center space-x-4">
@@ -1282,18 +1247,15 @@ const companyLinks = [;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   Get Started
                 </button>
               </Link>
             </div>
 
-<<<<<<< HEAD
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
               className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors"
-=======
 
                     </div>;
                   </div>;
@@ -1481,7 +1443,6 @@ const companyLinks = [;
               ) : (
                 <Menu className='w-6 h-6' />
               )}            </button>              className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -1489,12 +1450,10 @@ const companyLinks = [;
         </div>
       </nav>
 
-<<<<<<< HEAD
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-=======
 
 
 
@@ -1513,12 +1472,10 @@ const companyLinks = [;
       <AnimatePresence>;
         {isOpen && (;
           <motion&& motion.div
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
-<<<<<<< HEAD
             className="fixed inset-0 z-50 lg:hidden"
           >
             <div className="absolute inset-0 bg-black/80 backdrop-blur-xl" onClick={closeMenu} />
@@ -1551,7 +1508,6 @@ const companyLinks = [;
                     >
                       <item.icon className="w-5 h-5" />
                       <span>{item.name}</span>
-=======
             className='fixed inset-0 z-50 lg:hidden'
 
 
@@ -1680,12 +1636,10 @@ const companyLinks = [;
                   {/* Services Accordion */}
                   <div className='space-y-2'>
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     </Link>
                   ))}
 
                   {/* Services Accordion */}
-<<<<<<< HEAD
                   <div className="space-y-2">
                     <button
                       onClick={() => setActiveCategory(activeCategory === 0 ? null : 0)}
@@ -1732,7 +1686,6 @@ const companyLinks = [;
                         >
                           {link.name}
                         </Link>
-=======
 
 
 
@@ -1835,12 +1788,10 @@ const companyLinks = [;
                         >;
                           {link && link.name}
                         </Link>;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       ))}
                     </div>
                   </div>
 
-<<<<<<< HEAD
                   {/* Contact Info */}
                   <div className="pt-4 border-t border-gray-700/50">
                     <div className="text-sm font-medium text-gray-400 mb-3">Contact</div>
@@ -1849,7 +1800,6 @@ const companyLinks = [;
                         <Phone className="w-4 h-4 text-cyan-400" />
                         <span>{contactInfo.mobile}</span>
                       </div>
-=======
 
 
 
@@ -1918,7 +1868,6 @@ const companyLinks = [;
                         <MapPin className='w-4 h-4 text-pink-400' />
                         <span className='text-xs'>{contactInfo.address}</span>                      </div>                        <span>{contactInfo.mobile}</span>
                       </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       <div className="flex items-center space-x-2">
                         <Mail className="w-4 h-4 text-purple-400" />
                         <span>{contactInfo.email}</span>
@@ -1930,7 +1879,6 @@ const companyLinks = [;
                     </div>
                   </div>
 
-<<<<<<< HEAD
                   {/* CTA Button */}
                   <div className="pt-4">
                     <Link href="/contact" onClick={closeMenu}>
@@ -1943,7 +1891,6 @@ const companyLinks = [;
               </div>
             </div>
           </motion.div>
-=======
                     </div>;
                   </div>;
                   {/* Contact Info */}
@@ -1991,17 +1938,14 @@ const companyLinks = [;
             </div>;
           </motion && motion.div>;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         )}
       </AnimatePresence>
 
       {/* Spacer for fixed navigation */}
-<<<<<<< HEAD
       <div className="h-20" />
     </>
   );
 }
-=======
       <div className='h-20' />
     </>
 
@@ -2036,4 +1980,3 @@ const companyLinks = [;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   Brain, BarChart3, TrendingUp, Users, Target, Zap, 
@@ -402,7 +401,6 @@ export default function AIBusinessIntelligencePage() {
 
       <EnhancedFooter />
     </>
-=======
 import Link from 'next/link';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, BarChart3, Brain, Database, Users, Target } from 'lucide-react';
 import Button from '../components/ui/Button';
@@ -885,6 +883,5 @@ export default function AIBusinessIntelligencePage() {
               </div>
       </UltraAdvancedFuturisticBackground>
     </Layout>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   );
 }

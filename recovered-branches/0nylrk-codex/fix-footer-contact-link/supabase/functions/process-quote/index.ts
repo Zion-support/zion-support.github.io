@@ -11,8 +11,6 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
-<<<<<<< HEAD
-=======
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
 
 interface Service {
@@ -140,4 +138,3 @@ serve(async (req) => {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
   }
 });
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

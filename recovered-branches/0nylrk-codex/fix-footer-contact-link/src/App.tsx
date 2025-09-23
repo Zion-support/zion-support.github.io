@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React{ Suspense } from 'react';
 import { RoutesRoute } from 'react-router-dom';
 import './App.css';
@@ -83,4 +81,3 @@ const App = () => {
 };
 
 export default App;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -13,11 +13,9 @@ function log(message, level = 'info') {
   console.log(logMessage);
   // Also log to file
   const logFile = path.join(__dirname, '..', 'automation', 'logs', 'automation.log');
-<<<<<<< HEAD
   fs.appendFileSync(logFile, logMessage + '\n');
 }
 
-=======
   fs.appendFileSync(logFile, logMessage + '\n')}
 =======
 // Error handling utility
@@ -338,4 +336,3 @@ if (require.main === module) {
 }
 
 module.exports = { automations, log, handleError };
->>>>>>> main

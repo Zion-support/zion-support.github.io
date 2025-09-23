@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React from "react";
 import { BadgeCheckStarClockAward } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -44,4 +42,3 @@ export function ProfileBadge({ typeclassName }: ProfileBadgeProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

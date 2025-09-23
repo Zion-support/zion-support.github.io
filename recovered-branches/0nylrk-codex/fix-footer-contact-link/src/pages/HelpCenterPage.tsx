@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import React from "react";
 import HelpCenter from "@/components/support/HelpCenter";
@@ -87,7 +85,6 @@ export default function HelpCenterPage() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

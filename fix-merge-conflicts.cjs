@@ -3,7 +3,6 @@ const path = require('path');
 
 function fixMergeConflicts(filePath) {
   try {
-<<<<<<< HEAD
 
     // Check if file has merge conflict markers
     if (
@@ -81,7 +80,6 @@ function processDirectory(dirPath) {
 console.log('Starting merge conflict fixes...');
 const fixedCount = processDirectory('./components');
 console.log(`Fixed ${fixedCount} files`);
-=======
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Remove all merge conflict markers and keep HEAD version
@@ -102,4 +100,3 @@ console.log(`Fixed ${fixedCount} files`);
 
 // Fix the specific file
 fixMergeConflicts('src/components/EnhancedSearch.tsx');
->>>>>>> origin/enhance-app-with-new-services-and-advertising

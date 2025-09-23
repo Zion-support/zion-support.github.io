@@ -1,10 +1,8 @@
 
-<<<<<<< HEAD
 import React from "react";
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react";
 import { 
   Table, 
-=======
 
 import React from "react";
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react";
@@ -47,13 +45,11 @@ import React from "react",
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",
 import { 
   Table,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   TableBody, 
   TableCell, 
   TableHead, 
   TableHeader, 
   TableRow 
-<<<<<<< HEAD
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import { 
@@ -83,7 +79,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
   updateStatus,
   toggleArchive,
   deleteQuote,
-=======
 } from "@/components/ui/table",
 import { Button } from "@/components/ui/button",
 import { 
@@ -101,7 +96,6 @@ import { formatDate } from "@/utils/dateUtils",
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -155,21 +149,16 @@ interface QuotesTableProps {
           ) : quotes.length === 0 ? (
             <TableRow>
               <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">
-<<<<<<< HEAD
                 {isArchived 
                   ? "No archived quote requests found." 
-=======
                 {isArchived
                   ? "No archived quote requests found."
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   : "No quote requests found."}
               </TableCell>
             </TableRow>
           ) : (
             quotes.map(quote => (
-<<<<<<< HEAD
               <TableRow 
-=======
               <TableRow
                 key={quote.id}
                 className="border-zion-blue-light hover:bg-zion-blue"
@@ -364,7 +353,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
           ) : (;
             quotes.map(quote => (;
               <TableRow;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 key={quote.id}
                 className="border-zion-blue-light hover:bg-zion-blue"
               >
@@ -378,7 +366,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                   <div className="font-medium">{quote.project_name}</div>
                   <div className="text-sm text-zion-slate-light truncate max-w-[200px]">
                     {quote.project_summary}
-<<<<<<< HEAD
                   </div>
                 </TableCell>
                 <TableCell className="text-white">
@@ -482,7 +469,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
     </div>
   );
 };
-=======
                   </div>;
                 </TableCell>;
                 <TableCell className="text-white">;
@@ -579,7 +565,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
                     )}

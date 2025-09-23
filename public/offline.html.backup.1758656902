@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Offline - Zion Tech Group</title>
-<<<<<<< HEAD
     <title>Zion Tech Group - Offline</title>
     <meta name="description" content="You're currently offline. Check your internet connection and try again.">
     <meta name="theme-color" content="#2e73ea">
@@ -15,7 +14,6 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: linear-gradient(135deg, #020617 0%, #0f172a 50%, #1e293b 100%);
             color: #ffffff;
-=======
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
@@ -55,14 +53,12 @@
     <!-- Manifest -->
     <link rel="manifest" href="/manifest.json">
     
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px;
         }
-<<<<<<< HEAD
 
         .offline-container {
             max-width: 500px;
@@ -140,7 +136,6 @@
             transition: all 0.3s ease;
             text-decoration: none;
             background: linear-gradient(135deg, #0ea5e9, #3b82f6);
-=======
             display: inline-flex;
             align-items: center;
             gap: 8px;
@@ -320,18 +315,14 @@
             font-weight: 700;
             margin-bottom: 20px;
             background: linear-gradient(135deg, #22ddd2, #8c15e9);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         }
         
         .offline-icon {
             width: 120px;
             height: 120px;
             margin: 0 auto 32px;
-<<<<<<< HEAD
             background: linear-gradient(135deg, #ff6b6b, #ee5a24);
-=======
             background: linear-gradient(135deg, #22ddd2, #0ea5e9);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -339,7 +330,6 @@
             font-size: 48px;
             animation: pulse 2s infinite;
         }
-<<<<<<< HEAD
 
         @keyframes pulse {
             0%, 100% { transform: scale(1); opacity: 1; }
@@ -351,7 +341,6 @@
             font-weight: 700;
             margin-bottom: 16px;
             background: linear-gradient(135deg, #ff6b6b, #ee5a24);
-=======
         
         @keyframes pulse {
             0%, 100% {
@@ -369,16 +358,13 @@
             font-weight: 700;
             margin-bottom: 16px;
             background: linear-gradient(135deg, #22ddd2, #0ea5e9);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-<<<<<<< HEAD
         .subtitle {
             font-size: 1.2rem;
             color: #94a3b8;
-=======
 
         .subtitle {
             font-size: 1.25rem;
@@ -407,7 +393,6 @@
         
         .btn {
             padding: 16px 32px;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             margin-bottom: 32px;
             line-height: 1.6;
         }
@@ -416,7 +401,6 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-<<<<<<< HEAD
             padding: 12px 24px;
             background: rgba(255, 107, 107, 0.1);
             border: 1px solid rgba(255, 107, 107, 0.3);
@@ -424,7 +408,6 @@
             margin-bottom: 32px;
             font-size: 0.9rem;
             color: #ff6b6b;
-=======
             background: rgba(239, 68, 68, 0.2);
             border: 1px solid rgba(239, 68, 68, 0.3);
             border-radius: 50px;
@@ -432,17 +415,13 @@
             margin-bottom: 32px;
             font-size: 0.9rem;
             color: #fca5a5;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         }
 
         .status-dot {
             width: 8px;
             height: 8px;
-<<<<<<< HEAD
             background: #ff6b6b;
-=======
             background: #ef4444;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             border-radius: 50%;
             animation: blink 1.5s infinite;
         }
@@ -451,7 +430,6 @@
             0%, 50% { opacity: 1; }
             51%, 100% { opacity: 0.3; }
         }
-<<<<<<< HEAD
 
         .features-list {
             text-align: left;
@@ -463,7 +441,6 @@
         .features-list li {
             padding: 12px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-=======
         .features-list {
             text-align: left;
             margin: 32px 0;
@@ -484,12 +461,10 @@
         .features-list li {
             padding: 8px 0;
             color: #cbd5e1;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             display: flex;
             align-items: center;
             gap: 12px;
         }
-<<<<<<< HEAD
 
         .features-list li:last-child {
             border-bottom: none;
@@ -513,7 +488,6 @@
             border: none;
             padding: 16px 32px;
             border-radius: 12px;
-=======
         .features-list li::before {
             content: "✓";
             color: #10b981;
@@ -540,12 +514,10 @@
         .btn {
             padding: 12px 24px;
             border-radius: 8px;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-<<<<<<< HEAD
             margin: 16px 8px;
         }
 
@@ -565,14 +537,11 @@
             cursor: pointer;
             transition: all 0.3s ease;
             margin: 16px 8px;
-=======
             border: none;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             text-decoration: none;
             display: inline-block;
         }
 
-<<<<<<< HEAD
         .home-button:hover {
             background: rgba(255, 255, 255, 0.2);
             transform: translateY(-2px);
@@ -659,7 +628,6 @@
                 width: 100%;
                 margin: 8px 0;
             }
-=======
         .btn-primary {
             background: linear-gradient(135deg, #22ddd2, #2e73ea);
             color: white;
@@ -740,14 +708,12 @@
         }
         .footer a:hover {
             text-decoration: underline;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         }
     </style>
 </head>
 <body>
     <div class="offline-container">
         <div class="offline-icon">📡</div>
-<<<<<<< HEAD
             const statusElement = document.getElementById('networkStatus');
             statusElement.innerHTML = '❌ Connection lost. Please check your internet.';
             statusElement.style.background = 'rgba(239, 68, 68, 0.1)';
@@ -760,7 +726,6 @@
 
         // Initial check
         checkConnection();
-=======
         // Check connection status
         function updateConnectionStatus() {
             if (navigator.onLine) {
@@ -949,12 +914,10 @@
                 statusElement.style.border = '1px solid rgba(239, 68, 68, 0.3)';
                 statusElement.style.color = '#fca5a5';
             }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         }
 
         // Listen for online/offline events
         window.addEventListener('online', () => {
-<<<<<<< HEAD
             window.location.reload();
         });
 
@@ -978,7 +941,6 @@
     </script>
 </body>
 </html>
-=======
             const statusElement = document.getElementById('networkStatus');
             statusElement.innerHTML = '✅ Connection restored! Refreshing...';
             statusElement.style.background = 'rgba(34, 221, 210, 0.1)';
@@ -1021,4 +983,3 @@
                 });
             });
         }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

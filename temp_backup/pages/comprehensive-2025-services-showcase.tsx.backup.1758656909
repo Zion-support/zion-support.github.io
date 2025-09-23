@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -370,7 +369,6 @@ export default function Comprehensive2025ServicesShowcase() {
 
       <EnhancedFooter />
     </div>
-=======
 import React from 'react';
 import Head from 'next/head';
 
@@ -391,6 +389,5 @@ export default function Comprehensive2025ServicesShowcasePage() {
         </div>
       </div>
     </>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   );
 }

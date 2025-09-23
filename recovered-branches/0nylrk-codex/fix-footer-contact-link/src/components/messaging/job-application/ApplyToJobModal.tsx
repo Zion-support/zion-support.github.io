@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React from "react";
 import {
 
@@ -98,7 +96,6 @@ function ApplyToJobModal() {
 
 
   );
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );

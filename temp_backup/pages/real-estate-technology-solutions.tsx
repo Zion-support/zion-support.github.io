@@ -1,7 +1,5 @@
 import Head from 'next/head';
 
-<<<<<<< HEAD
-=======
 export default function RealEstateTechnologySolutionsPage() {
   return (
     <>
@@ -21,4 +19,3 @@ export default function RealEstateTechnologySolutionsPage() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

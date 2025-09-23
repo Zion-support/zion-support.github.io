@@ -7,35 +7,26 @@ describe('App', () => {
   });
   it('has proper heading structure', () => {
     render(<App />);
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/App.test.tsx.backup
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD:__tests__/App.test.tsx
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 >>>>>>> pr-11913:__tests__/App.test.tsx
     const heading = screen.getByRole('heading', { level: '1' });
     expect(heading).toBeInTheDocument();
   });
 });
-<<<<<<< HEAD
-=======
 =======
 =======
 <<<<<<< HEAD:__tests__/App.test.tsx
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     const heading = screen.getByRole('heading', { level: 1 });
     expect(heading).toBeInTheDocument();
   });
 });
-<<<<<<< HEAD
-=======
     const heading = screen.getByRole('heading', { level: 1 });
     expect(heading).toBeInTheDocument();
   });
 });
->>>>>>> main
 >>>>>>> main
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11914:backup-merge-conflicts/App.test.tsx.backup

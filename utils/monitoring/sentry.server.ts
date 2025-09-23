@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import * as Sentry from '@sentry/node';
 if (!Sentry.getCurrentHub().getClient()) {Sentry.init({;
@@ -24,7 +22,6 @@ if (!Sentry.getCurrentHub().getClient()) {;
 }
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 

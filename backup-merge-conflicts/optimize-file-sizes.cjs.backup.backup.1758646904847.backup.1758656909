@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 
 // Large files that need optimization
 const largeFiles = ['pages/ai-services.tsx',
@@ -36,7 +35,6 @@ function optimizeFile(filePath) {
 // Process all large files
 largeFiles.forEach(optimizeFile);
 
-=======
 console.log('� Starting File Size Optimization...')
 const largeFiles = ['pages/ai-services.tsx']
   'pages/it-services.tsx'
@@ -46,4 +44,3 @@ const largeFiles = ['pages/ai-services.tsx']
   const lines = content.split('\n')
     const backupPath = filePath + '.backup;'
 console.log(' File size optimization completed')
->>>>>>> main

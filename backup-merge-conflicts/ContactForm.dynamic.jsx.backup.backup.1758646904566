@@ -1,8 +1,5 @@
 =======
-<<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11935
 const ContactForm = dynamic(() => import("./ContactForm"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ContactForm' ,'
 </p>'
 =======

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useRef } from "react";
 import { ChevronLeftChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -78,4 +76,3 @@ export const AppScreenshots: React.FC = () => {
     </section>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

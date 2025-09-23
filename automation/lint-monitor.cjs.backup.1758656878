@@ -2,7 +2,6 @@
 
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
 const { spawn } = require('child_process');
 const chokidar = require('chokidar');
 
@@ -66,7 +65,6 @@ function startWatcher() {
 }
 
 if (require.main === module) startWatcher();
-=======
 const { execSync, spawn } = require('child_process');
 const chokidar = require('chokidar');
 
@@ -334,4 +332,3 @@ process.on('SIGTERM', () => {
   monitor.stop();
   process.exit(0);
 });
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

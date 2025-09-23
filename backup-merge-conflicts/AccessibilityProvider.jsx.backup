@@ -1,8 +1,6 @@
 =======
 import React, {useState, useEffect} from 'react';
 const AccessibilityContext = createContext(null);
-<<<<<<< HEAD
-=======
 =======
 import React, {useState, useEffect} from 'react';
 const AccessibilityContext = createContext(null);
@@ -12,7 +10,6 @@ import React,{useState,useEffect} from &apos;react&apos;; const AccessibilityCon
 import React, {useState, useEffect} from 'react';
 const AccessibilityContext = createContext(null);
 export const useAccessibility = ("props": "any) => {;
->>>>>>> pr-11935
 export const useAccessibility = (props) => {
 >>>>>>> main
     const context = useContext(AccessibilityContext);

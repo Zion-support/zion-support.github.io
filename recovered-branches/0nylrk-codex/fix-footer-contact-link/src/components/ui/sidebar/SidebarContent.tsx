@@ -6,8 +6,6 @@ interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-=======
 export function SidebarContent({ classNamechildren...props }: SidebarContentProps) {
   return (
     <div className={cn("flex-1 px-2 py-4"className)} {...props}>
@@ -15,4 +13,3 @@ export function SidebarContent({ classNamechildren...props }: SidebarContentProp
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

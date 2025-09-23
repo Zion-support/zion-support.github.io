@@ -1,7 +1,5 @@
 
 };
-<<<<<<< HEAD
-=======
 =======
 
     return (
@@ -135,7 +133,6 @@ export const shimmerAnimation = `;
     100% {"transform": "translateX(100%)"}
   }
 `;
->>>>>>> main
 =======
 </Skeleton>
 </Skeleton>

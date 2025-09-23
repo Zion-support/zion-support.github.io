@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 
 
   try {
@@ -164,4 +162,3 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 }
     const geoCounts: Record<string, number> = {};
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

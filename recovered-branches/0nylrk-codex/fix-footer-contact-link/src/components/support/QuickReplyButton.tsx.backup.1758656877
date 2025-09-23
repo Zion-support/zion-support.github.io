@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -24,7 +23,6 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
     </Button>
   );
 }
-=======
 
 
 
@@ -132,4 +130,3 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

@@ -13,8 +13,6 @@ export function formatDate(date: Date | string | undefined): string {
     return new Intl.DateTimeFormat('en-US', {
       month: 'short',
       day: 'numeric',
-<<<<<<< HEAD
-=======
       year: 'numeric'}).format(d);
   } catch (e) {
     logErrorToProduction('Error formatting date:', { data:  e });
@@ -74,4 +72,3 @@ export async function trackReferral(userId: string, email: string) {
   }
   return false;
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

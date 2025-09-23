@@ -39,8 +39,6 @@ export interface EnterpriseITService20o29V2 {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
   {
     id: 'autonomous-devops-platform',
@@ -299,4 +297,3 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

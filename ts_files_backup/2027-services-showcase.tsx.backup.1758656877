@@ -1,16 +1,12 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
-=======
 "use client";
 'use client';
 
 import React{ useState } from 'react';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Search, Star, Users, TrendingUp, DollarSign, Clock, 
   CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe, 
   Zap, Sparkles, Shield, Target, Cpu, Database, Cloud, 
@@ -437,7 +433,6 @@ export default function ServicesShowcase2027() {
         </div>
       </footer>
     </UltraFuturisticMatrixBackground2027>
-=======
   SearchStarUsersTrendingUpDollarSignClock
   CheckCircleArrowRightZapBrainShieldGlobe
   SparklesDatabaseCloud
@@ -628,6 +623,5 @@ export default function ServicesShowcase2027() {
         </motion.div>
       </div>
     </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   );
 }

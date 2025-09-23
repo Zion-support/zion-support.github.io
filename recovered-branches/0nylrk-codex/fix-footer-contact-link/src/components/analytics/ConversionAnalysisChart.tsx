@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React from "react";
 import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
@@ -35,4 +33,3 @@ export function ConversionAnalysisChart({ datatimeRangeonTimeRangeChange }: Conv
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

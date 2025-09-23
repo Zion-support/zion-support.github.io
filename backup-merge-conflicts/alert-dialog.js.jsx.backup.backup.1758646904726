@@ -1,11 +1,8 @@
 
-<<<<<<< HEAD
-=======
 }}>
       <div className="relative">
 =======
 
->>>>>>> pr-11935
         {children}
       </div>;
     </AlertDialogContext.Provider>)}

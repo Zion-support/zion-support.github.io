@@ -6,8 +6,6 @@ import { cn } from "@/lib/utils"
 const Switch = React.forwardRef<
   React.ElementRef<typeof SwitchPrimitives.Root>,
   React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
-<<<<<<< HEAD
-=======
 >(({ className...props }ref) => (
   <SwitchPrimitives.Root
     className={cn(
@@ -27,4 +25,3 @@ const Switch = React.forwardRef<
 Switch.displayName = SwitchPrimitives.Root.displayName
 
 export { Switch }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,18 +1,14 @@
-<<<<<<< HEAD
 export interface ShortUrl {
-=======
 
 export interface ShortUrl {
 export interface ShortUrl {;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   id: string;
   originalUrl: string;
   shortCode: string;
   shortUrl: string;
   createdAt: Date;
   expiresAt?: Date;
-<<<<<<< HEAD
   isActive: boolean;
   userId?: string;
 }
@@ -20,7 +16,6 @@ export interface ShortUrl {;
 export interface UrlAnalytics {
   totalClicks: number;
   uniqueVisitors: number;
-=======
 
 
 
@@ -40,12 +35,10 @@ export interface UrlAnalytics {
   totalClicks: number;
   uniqueVisitors: number;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   referrers: string[];
   countries: string[];
   devices: string[];
   browsers: string[];
-<<<<<<< HEAD
   lastClicked: Date;
   clickHistory: ClickEvent[];
 }
@@ -55,7 +48,6 @@ export interface ClickEvent {
   timestamp: Date;
   ipAddress: string;
   userAgent: string;
-=======
 
 
   last_clicked: Date,
@@ -73,12 +65,10 @@ export interface ClickEvent {
   timestamp: Date;
   ip_address: string;
   user_agent: string;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   referrer: string;
   country: string;
   city: string;
   device: string;
-<<<<<<< HEAD
   browser: string;
   os: string;
 }
@@ -154,7 +144,6 @@ class UrlShortenerService {
     urlClicks.push(clickEvent);
     this.clicks.set(shortCode, urlClicks);
 
-=======
 
 
     const shortCode = request && request.customCode || this && this.generateShortCode(),
@@ -354,7 +343,6 @@ class UrlShortenerService {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -374,7 +362,6 @@ class UrlShortenerService {;
     if (analytics) {
       analytics.totalClicks++;
       analytics.lastClicked = new Date();
-<<<<<<< HEAD
       
       if (!analytics.referrers.includes(clickData.referrer)) {
         analytics.referrers.push(clickData.referrer);
@@ -420,7 +407,6 @@ class UrlShortenerService {;
     let result = '';
     for (let i = 0; i < 6; i++) {
       result += chars.charAt(Math.floor(Math.random() * chars.length));
-=======
       if (!analytics.referrers.includes(clickData.referrer)) {
         analytics.referrers.push(clickData.referrer)
 
@@ -521,7 +507,6 @@ class UrlShortenerService {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
     }
@@ -623,11 +608,9 @@ if ( {) {
     return result;
   }
 
-<<<<<<< HEAD
   private generateId(): string {
     return Math.random().toString(36).substr(2, 9);
   }
-=======
 
 
 
@@ -638,12 +621,10 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   // Utility methods for data persistence (in a real app, this would use a database)
   async exportData(): Promise<any> {
     return {
-<<<<<<< HEAD
       urls: Array.from(this.urls.entries()),
       analytics: Array.from(this.analytics.entries()),
       clicks: Array.from(this.clicks.entries())
@@ -658,7 +639,6 @@ if ( {) {
 }
 
 export const urlShortenerService = new UrlShortenerService();
-=======
 
       urls: Array && Array.from(this && this.urls.entries());
       analytics: Array && Array.from(this && this.analytics.entries()),
@@ -700,7 +680,6 @@ export const urlShortenerService = new UrlShortenerService ();
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 

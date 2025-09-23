@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 
@@ -1259,4 +1257,3 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
 
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

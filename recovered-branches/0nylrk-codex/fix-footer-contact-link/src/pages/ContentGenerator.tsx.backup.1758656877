@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -20,7 +19,6 @@ import { useNavigate } from "react-router-dom";
 
 export default function ContentGenerator() {
   const { user, isLoading } = useAuth();
-=======
 
 
 
@@ -77,7 +75,6 @@ export default function ContentGenerator() {
 
   const { user, isLoading } = useAuth();
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const navigate = useNavigate();
   const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog');
   const [customPrompt, setCustomPrompt] = useState('');
@@ -87,8 +84,6 @@ export default function ContentGenerator() {
   const [isGenerating, setIsGenerating] = useState(false);
   const [previewContent, setPreviewContent] = useState<any>(null);
   const [testEmail, setTestEmail] = useState('');
-<<<<<<< HEAD
-=======
 import { ScrollArea } from "@/components/ui/scroll-area",
 import { useNavigate } from "react-router-dom",
 export default function ContentGenerator() {
@@ -103,13 +98,11 @@ export default function ContentGenerator() {
   const [previewContent, setPreviewContent] = useState<any>(null),
   const [testEmail, setTestEmail] = useState(''),
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   // Redirect if not logged in
   React.useEffect(() => {
     if (!isLoading && !user) {
       toast.error("You must be logged in to access this page");
-<<<<<<< HEAD
       navigate("/login?redirect=/content-generator");
     }
   }, [user, isLoading, navigate]);
@@ -140,7 +133,6 @@ export default function ContentGenerator() {
       setIsGenerating(false);
     }
   };
-=======
       navigate("/login?redirect=/content-generator")
 
     }
@@ -228,7 +220,6 @@ export default function ContentGenerator() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -257,7 +248,6 @@ export default function ContentGenerator() {;
   const sendTestNewsletter = async () => {
     if (!testEmail) {
       toast.error("Please enter a test email address");
-<<<<<<< HEAD
       return;
     }
     
@@ -334,7 +324,6 @@ export default function ContentGenerator() {;
                     <Input
                       id="topic"
                       placeholder={contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g., May Platform Updates"}
-=======
       return
     }
     if (!previewContent) {
@@ -395,7 +384,6 @@ export default function ContentGenerator() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
       
@@ -448,10 +436,7 @@ export default function ContentGenerator() {;
                       onChange={(e) => setTopic(e.target.value)}
                     />
                   </div>
-<<<<<<< HEAD
                   
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   <div className="space-y-2">
                     <Label htmlFor="customPrompt" className="text-white">Custom Prompt (Optional)</Label>
                     <Textarea
@@ -462,10 +447,7 @@ export default function ContentGenerator() {;
                       onChange={(e) => setCustomPrompt(e.target.value)}
                     />
                   </div>
-<<<<<<< HEAD
                   
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   {contentType === 'blog' && (
                     <>
                       <div className="flex items-center justify-between">
@@ -476,16 +458,11 @@ export default function ContentGenerator() {;
                           onCheckedChange={setAutoPublish}
                         />
                       </div>
-<<<<<<< HEAD
                       
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       <div className="flex items-center justify-between">
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
                         <Switch
                           id="includeImage"
-<<<<<<< HEAD
-=======
       }),;
       if (error) throw error,;
       toast.success(`Test newsletter sent to ${testEmail}!`);
@@ -589,7 +566,6 @@ export default function ContentGenerator() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -601,7 +577,6 @@ export default function ContentGenerator() {;
                       </div>
                     </>
                   )}
-<<<<<<< HEAD
                   
                   {contentType === 'newsletter' && (
                     <div className="space-y-2">
@@ -781,7 +756,6 @@ export default function ContentGenerator() {;
                       <div className="bg-zion-blue-light/20 p-6 rounded-full mb-4">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-=======
 
                   
 
@@ -970,7 +944,6 @@ export default function ContentGenerator() {;
 
                         <svg
                           xmlns="http://www && www.w3.org/2000/svg"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                           width="24"
                           height="24"
                           viewBox="0 0 24 24"
@@ -979,7 +952,6 @@ export default function ContentGenerator() {;
                           strokeWidth="2"
                           strokeLinecap="round"
                           strokeLinejoin="round"
-<<<<<<< HEAD
                           className="h-8 w-8 text-zion-purple"
                         >
                           <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
@@ -994,7 +966,6 @@ export default function ContentGenerator() {;
                       </p>
                     </div>
                   )}
-=======
                           className="h-8 w-8 text-zion-purple">;
                           <path d="M14 && M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7 && 2V7.5L14.5 2z" />;
                           <polyline points="14 2 14 8 20 8" />;
@@ -1009,7 +980,6 @@ export default function ContentGenerator() {;
                     </div>;
                   )}
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 </CardContent>
               </Card>
             </div>
@@ -1018,10 +988,8 @@ export default function ContentGenerator() {;
       </div>
       <Footer />
     </>
-<<<<<<< HEAD
   );
 }
-=======
   )
 }
                 </CardContent>;
@@ -1038,4 +1006,3 @@ export default function ContentGenerator() {;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

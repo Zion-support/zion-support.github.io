@@ -3,7 +3,6 @@
  * Test Script for Cursor Chat Automation
  * This script tests the automation system without starting full automation
  */
-<<<<<<< HEAD
 
 const CursorInterfaceAutomation = // // require('./cursor-interface-automation');
   async function runTests() {
@@ -83,7 +82,6 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
         process.exit(1);
     }
 }
-=======
 
     try {
       // Create automation instance
@@ -235,7 +233,6 @@ async function runTests() {
     process.exit(1);
   }
 }
->>>>>>> main
 // Run tests if this script is executed directly
 if (require.main === module) {
   runTests();

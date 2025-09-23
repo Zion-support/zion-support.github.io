@@ -38,8 +38,6 @@ export interface InnovativeITService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
 export const innovativeITServices: InnovativeITService[] = [
   {
     id: 'quantum-cloud-orchestrator',
@@ -348,4 +346,3 @@ export const innovativeITServices: InnovativeITService[] = [
     reviews: 234
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

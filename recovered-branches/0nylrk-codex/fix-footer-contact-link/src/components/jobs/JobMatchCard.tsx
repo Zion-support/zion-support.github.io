@@ -1,7 +1,5 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-=======
 import { CardContent } from "@/components/ui/card";
 import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
 import { BuildingMapPinClockDollarSignStar } from "lucide-react";
@@ -140,4 +138,3 @@ export function JobMatchCard({
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -2,7 +2,6 @@
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-<<<<<<< HEAD
 class ComprehensiveSyntaxFixer {
   constructor() {
     this.fixedFiles = []
@@ -234,7 +233,6 @@ class ComprehensiveSyntaxFixer {
 // Run the fixer
 const fixer = new ComprehensiveSyntaxFixer()
 fixer.run().catch(console.error)
-=======
 // console.log(' Comprehensive Syntax Fixer v2.0')
 console.log('==')
         "pattern"
@@ -260,4 +258,3 @@ console.log('==')
       console.log('\n� Fixed "files")
 // console.log('\n� "Errors")
     console.log('\n� Report saved "to")
->>>>>>> main

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ProfileProject } from "@/types/profile";
@@ -57,4 +55,3 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

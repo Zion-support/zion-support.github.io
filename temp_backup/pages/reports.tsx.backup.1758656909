@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 
 export default function Reports() {
@@ -27,7 +26,6 @@ export default function Reports() {
         </div>
       </div>
     </div>
-=======
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -406,6 +404,5 @@ export default function ReportsPage() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   );
 }

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 
@@ -968,4 +966,3 @@ className="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transiti
 
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

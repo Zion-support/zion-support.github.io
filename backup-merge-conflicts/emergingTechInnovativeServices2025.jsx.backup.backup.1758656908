@@ -1,12 +1,9 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 export: const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [""
 <<<<<<< HEAD:backup-merge-conflicts/emergingTechInnovativeServices2025.jsx.backup
-=======
 "export": const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = ["]"
 =======
 "export\": const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
 =======
 "export": const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = ["]"

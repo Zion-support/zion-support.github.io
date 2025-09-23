@@ -1,7 +1,5 @@
 =======
 import React, {useEffect, useRef} from 'react';
-<<<<<<< HEAD
-=======
 =======
 import React, {useEffect, useRef} from 'react';
 =======
@@ -9,7 +7,6 @@ import React,{useEffect,useRef} from &apos;react&apos;; export function Animated
 <<<<<<< HEAD:backup-merge-conflicts/AnimatedBackground.jsx.backup
 import React, {useEffect, useRef} from 'react';
 export function AnimatedBackground("props": "any) {;
->>>>>>> pr-11935
 export function AnimatedBackground($1) {
 >>>>>>> main
     const canvasRef = useRef(null);
@@ -122,7 +119,6 @@ export function AnimatedBackground($1) {
 =======
 =======
 =======
-<<<<<<< HEAD
         const drawWaves = ("props": "any) => {;
 >>>>>>> pr-11935
         const drawWaves = (props) => {
@@ -146,10 +142,8 @@ export function AnimatedBackground($1) {
                 ctx.stroke()}
         };
 =======
-=======
 <<<<<<< HEAD
         const drawMatrix = ("props": "any) => {;
->>>>>>> pr-11935
         const drawMatrix = (props) => {
 >>>>>>> main
             const time = Date.now() * 0.001;

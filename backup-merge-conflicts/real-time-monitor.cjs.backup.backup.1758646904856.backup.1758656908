@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 
 function startMonitoring() {
   const monitoringData = {
@@ -46,7 +45,6 @@ function startMonitoring() {
   }
 
 startMonitoring();
-=======
 console.log(' Starting Real-time Monitoring...')
   const watchFiles = ['package.json']
     'next.config.js'
@@ -54,4 +52,3 @@ console.log(' Starting Real-time Monitoring...')
         "status"
       "directory"
       "status"
->>>>>>> main

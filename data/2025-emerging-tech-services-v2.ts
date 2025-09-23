@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 export interface EmergingTechService {
 export interface EmergingTechService {;
@@ -883,4 +881,3 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
 ];
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

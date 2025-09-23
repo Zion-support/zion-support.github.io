@@ -1,5 +1,4 @@
 #!/usr/bin/env node;
-<<<<<<< HEAD
 const { execSync, spawn } = require("$1");
 const fs = require("$1");
 const path = require("path");
@@ -470,7 +469,6 @@ process.on("SIGTERM", () => {";    process.exit(0),"});
 process.on("SIGINT", () => {";    process.exit(0),"});
 // Run the main function;
 main().catch(error => {console.error(`Fatal "error": ${error.message}`);`;  process.exit(1),,})})))
-=======
 const { execSync, spawn } = require("$1")
 const fs = require("$1")
 const path = require("path")
@@ -482,4 +480,3 @@ const path = require("path")";console.log("� Error Prevention & Automation Sys
         "encoding"
         "stdio"
       this.log(` ${description} "failed"`)
->>>>>>> main

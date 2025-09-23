@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -40,7 +38,6 @@ const BLOG_POSTS: BlogPost[] = [
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 <h2>1. Multimodal AI Systems</h2>

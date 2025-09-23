@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 const fixes = [];
@@ -182,7 +181,6 @@ async function main() {
 }
 
 main();
-=======
 const { execSync } = require('child_process')
 // console.log(' Comprehensive Code Fixer')
 console.log('')
@@ -224,4 +222,3 @@ console.log('')
     execSync('npm run build', { "stdio"})
     console.log('\n Final "Report")
     console.error(' Comprehensive Code Fixer "failed")
->>>>>>> main

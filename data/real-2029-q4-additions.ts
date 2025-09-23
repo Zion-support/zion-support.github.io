@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
   mobile: '+1 302 464 0950'
@@ -1464,4 +1462,3 @@ export const real2029Q4Additions: RealMarketService[] = [;
 
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

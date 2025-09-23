@@ -155,11 +155,8 @@ export function AccessibilityMenu(props: any) {
 
 </motion>
 </motion>
-<<<<<<< HEAD:backup-merge-conflicts/accessibility-menu.js.jsx.backup
 </motion>
-=======
 
->>>>>>> main
 =======
 </motion>
 </motion>

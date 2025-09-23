@@ -1,7 +1,5 @@
 
 import { useState } from 'react';
-<<<<<<< HEAD
-=======
 CheckCopy
 import { cn } from "@/lib/utils";
 
@@ -65,4 +63,3 @@ export function CodeBlock({
 }
 
 export default CodeBlock;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

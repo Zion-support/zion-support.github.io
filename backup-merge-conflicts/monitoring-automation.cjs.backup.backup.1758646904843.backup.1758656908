@@ -6,7 +6,6 @@
 
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 
 class MonitoringAutomation {
   constructor() {
@@ -373,7 +372,6 @@ if ( {
     process.exit(1)})}
 
 module.exports = MonitoringAutomation;
-=======
   log(message, type = 'INFO')
       'INFO': 'ℹ'
       'SUCCESS': ''
@@ -401,4 +399,3 @@ module.exports = MonitoringAutomation;
         "severity"
                 console.error('Failed to load "metrics")
     console.error('Monitoring automation "failed")
->>>>>>> main

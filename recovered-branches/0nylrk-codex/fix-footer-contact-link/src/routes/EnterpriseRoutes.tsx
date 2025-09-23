@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { Route, Routes  } from 'react-router-dom.ts';
 import EnterprisePlans from '../pages/EnterprisePlans';
 import EnterpriseAdmin from '../pages/EnterpriseAdmin';
@@ -20,4 +18,3 @@ export default function EnterpriseRoutes(...args: any[]): any {
     </Routes>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

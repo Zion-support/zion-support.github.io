@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
@@ -276,4 +274,3 @@ if (|| category === "hardware") {) {
 ;
 ;
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

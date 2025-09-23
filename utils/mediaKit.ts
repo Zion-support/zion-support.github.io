@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 
@@ -15,7 +13,6 @@
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
     {

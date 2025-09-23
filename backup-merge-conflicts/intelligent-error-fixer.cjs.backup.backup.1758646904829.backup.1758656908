@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 class IntelligentErrorFixer {
@@ -468,7 +467,6 @@ if ( {
     process.exit(1)})}
 
 module.exports = IntelligentErrorFixer;
-=======
 const { execSync } = require('child_process')
       "status"
         "status"
@@ -503,4 +501,3 @@ const { execSync } = require('child_process')
           "type"
     console.log('\n Error Fixing "Summary")
     console.error('Error fixing "failed")
->>>>>>> main

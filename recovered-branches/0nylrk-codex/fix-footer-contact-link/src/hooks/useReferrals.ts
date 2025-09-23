@@ -15,8 +15,6 @@ export function useReferrals() {
     totalReferrals: 0,
     pendingReferrals: 0,
     completedReferrals: 0,
-<<<<<<< HEAD
-=======
     totalRewards: 0});
 
   useEffect(() => {
@@ -233,4 +231,3 @@ export function useReferrals() {
     fetchRewards,   // Added this method for refreshing rewards
   };
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

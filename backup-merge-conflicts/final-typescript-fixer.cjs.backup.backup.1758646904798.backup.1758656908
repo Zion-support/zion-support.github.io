@@ -1,5 +1,4 @@
 #!/usr/bin/env node;
-<<<<<<< HEAD
 const fs = require("fs");
 const path = require("path");
 class $1 {;
@@ -99,7 +98,6 @@ export const sanitizeHtml = ("html": string): string => {;
 ;
 const fixer = new FinalTypeScriptFixer();
 fixer.run().catch(console.error)
-=======
 const fs = require("fs")
 const path = require("path")
   log(message, type = "INFO")
@@ -135,4 +133,3 @@ export const sanitizeHtml = ("html")
   this.log("\\n Fixes "Applied": ")
       this.log("\\n� Final TypeScript fixing completed!")
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
->>>>>>> main

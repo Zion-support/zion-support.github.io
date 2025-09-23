@@ -38,8 +38,6 @@ export type Database ={
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-=======
           }]
       }
       analytics_events: {
@@ -2420,4 +2418,3 @@ export const Constants = {
         "closed",
         "archived"],
       referral_status: ["pending", "completed", "expired"]}}} as const
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

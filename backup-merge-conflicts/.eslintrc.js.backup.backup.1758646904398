@@ -56,10 +56,7 @@
   ]
 };
 =======
-<<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11935
 module.exports = {
     '@typescript-eslint/no-explicit-any': 'warn',
     'no-console': 'off',

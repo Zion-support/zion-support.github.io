@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface EmergingTechService {
   id: string;
   name: string;
@@ -709,7 +708,6 @@ export const getEmergingTechServicesByCategory = (category: string) => {
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return emergingTechServices2025.filter(service => {
     const price = parseInt(service.price.monthly.toString()) || 0;
-=======
 import { MicroSaasService } from './enhanced-real-micro-saas-services';
 const contact = {
   mobile: '+1 302 464 0950',
@@ -1198,7 +1196,6 @@ export const getEmergingTechServicesByCategory = (category: string) => {
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return emergingTechServices2025.filter(service => {
     const price = parseInt(service.price.replace(/[^0-9]/g, '')) || 0;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     return price >= minPrice && price <= maxPrice;
   });
 };

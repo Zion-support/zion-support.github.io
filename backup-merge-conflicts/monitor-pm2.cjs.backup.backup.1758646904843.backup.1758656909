@@ -3,7 +3,6 @@
  * PM2 Monitoring Dashboard for Zion Application;
  * Provides real-time monitoring of all PM2 processes;
  */;
-<<<<<<< HEAD
 const { exec } = require("$1");
 const fs = require("$1");
 const path = require("path");
@@ -271,7 +270,6 @@ if (require.main === module) {;
   main().catch(console.error),}
 ;
 module.exports = PM2Monitor
-=======
 const { exec } = require("$1")
 const fs = require("$1")
 const path = require("path")
@@ -348,4 +346,3 @@ const path = require("path")"
     "default"
   process.on("SIGINT")
   process.on(")
->>>>>>> main

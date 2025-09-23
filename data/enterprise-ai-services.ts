@@ -38,8 +38,6 @@ export interface EnterpriseAIService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
 export const enterpriseAIServices: EnterpriseAIService[] = [
   // Enterprise AI Solutions
   {
@@ -510,4 +508,3 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     reviews: 52
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

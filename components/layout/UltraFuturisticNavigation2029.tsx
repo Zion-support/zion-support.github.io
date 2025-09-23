@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 import React, { useState, useEffect } from 'react',
@@ -1443,4 +1441,3 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

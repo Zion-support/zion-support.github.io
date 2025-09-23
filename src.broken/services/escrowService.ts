@@ -8,8 +8,6 @@ export async function holdInEscrow(params: {
   orderId: string;
 }) {
   const { data, error } = await supabase.functions.invoke('escrow-service', {
-<<<<<<< HEAD
-=======
     body: { action: 'hold', ...params }});
   if (error) throw error;
   return data as { paymentIntentId: string };
@@ -30,4 +28,3 @@ export async function disputeOrder(orderId: string) {
 }
 
 export type EscrowStatus = OrderStatus;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

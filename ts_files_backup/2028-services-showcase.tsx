@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import React from 'react',
 import Head from 'next/head',
@@ -102,7 +100,6 @@ import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

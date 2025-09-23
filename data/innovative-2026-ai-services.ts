@@ -1,6 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
 export interface Innovative2026AIService {
   id: string;
   name: string;
@@ -317,4 +315,3 @@ export const getAIServicesByPriceRange = (minPrice: number, maxPrice: number) =>
     return price >= minPrice && price <= maxPrice;
   });
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

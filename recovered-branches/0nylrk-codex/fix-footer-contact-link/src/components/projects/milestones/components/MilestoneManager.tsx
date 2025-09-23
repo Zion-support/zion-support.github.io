@@ -1,8 +1,6 @@
 
 import { MilestonesList } from '../MilestonesList';
 import { PaymentSummary } from '../PaymentSummary';
-<<<<<<< HEAD
-=======
 import { MilestoneStatusMilestoneActivity } from '@/hooks/useMilestones';
 import { toast } from "sonner";
 
@@ -85,4 +83,3 @@ export function MilestoneManager({
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

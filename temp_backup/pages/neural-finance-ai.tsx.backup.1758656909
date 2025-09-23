@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -11,7 +10,6 @@ import {
   BarChart, PieChart, LineChart, Activity
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-=======
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { 
@@ -64,7 +62,6 @@ export const metadata: Metadata = {
     canonical: 'https://ziontechgroup.com/neural-finance-ai',
   },
 };
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -73,7 +70,6 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 };
 
-<<<<<<< HEAD
 const features = [
   {
     title: 'Real-time Market Sentiment Analysis',
@@ -311,7 +307,6 @@ const NeuralFinanceAI: React.FC = () => {
                 </div>
               </div>
             </motion.div>
-=======
 export default function NeuralFinanceAI() {
   return (
     <div className="min-h-screen bg-black text-white">
@@ -349,13 +344,11 @@ export default function NeuralFinanceAI() {
                 Learn More
               </Link>
             </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -396,7 +389,6 @@ export default function NeuralFinanceAI() {
                 </p>
               </motion.div>
             ))}
-=======
       <section id="features" className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -701,13 +693,11 @@ export default function NeuralFinanceAI() {
                 Strategies are executed and continuously improved through machine learning.
               </p>
             </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -909,7 +899,6 @@ export default function NeuralFinanceAI() {
             <div className="text-sm text-gray-400">
               <p>✓ 30-Day Free Trial • ✓ No Credit Card Required • ✓ Instant Setup</p>
               <p className="mt-2">✓ 24/7 Support • ✓ 99.9% Uptime SLA • ✓ Global Infrastructure</p>
-=======
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -980,18 +969,15 @@ export default function NeuralFinanceAI() {
               <p className="text-gray-400">
                 Financial research teams with AI-powered market intelligence.
               </p>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
     </Layout>
   );
 };
 
 export default NeuralFinanceAI;
-=======
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/20 via-indigo-900/20 to-purple-900/20">
@@ -1070,4 +1056,3 @@ export default NeuralFinanceAI;
     </div>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

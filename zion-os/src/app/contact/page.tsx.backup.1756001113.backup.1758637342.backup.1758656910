@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 
 import { useState } from 'react';
@@ -24,7 +23,6 @@ export default function ContactPage() {
       ...prev,
       [name]: value
     }));
-=======
 "use client";
 
 import { useState } from "react";
@@ -49,13 +47,11 @@ export default function ContactPage() {
       ...formData,
       [e.target.name]: e.target.value
     });
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-<<<<<<< HEAD
     
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
@@ -372,7 +368,6 @@ export default function ContactPage() {
                   </div>
                 ))}
               </div>
-=======
     setSubmitMessage("");
 
     // Simulate form submission
@@ -681,13 +676,11 @@ export default function ContactPage() {
               >
                 Send Email
               </a>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
             </div>
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 py-20 mt-20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -707,7 +700,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-=======
       {/* Additional Contact Methods */}
       <div className="bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg p-8 border border-white/10">
         <h2 className="text-2xl font-semibold mb-6 text-center">Other Ways to Connect</h2>
@@ -762,7 +754,6 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
     </div>
   );
 }

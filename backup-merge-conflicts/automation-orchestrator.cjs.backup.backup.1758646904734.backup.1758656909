@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')
-<<<<<<< HEAD
 
 const automationTasks = [{
     "name": 'Health Check',
@@ -166,7 +165,6 @@ async function runAutomationOrchestrator() {
 runAutomationOrchestrator().catch(error => {
   console.error('Orchestrator "failed": ', error);
   process.exit(1)});
-=======
 console.log(' Starting Automation Orchestrator...')
     "name"
     "script"
@@ -191,4 +189,3 @@ console.log(' Starting Automation Orchestrator...')
 // console.log('\n "Recommendations")
     console.log('\n "Recommendations")
   console.error('Orchestrator "failed")
->>>>>>> main

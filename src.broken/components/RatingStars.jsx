@@ -1,6 +1,4 @@
 import { Star, StarHalf } from 'lucide-react';
-<<<<<<< HEAD
-=======
 export function RatingStars({ value = 0 }) {
     const filled = Math.floor(value);
     const half = value - filled >= 0.5;
@@ -16,4 +14,3 @@ export function RatingStars({ value = 0 }) {
         })}
     </div>);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

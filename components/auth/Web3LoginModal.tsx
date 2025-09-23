@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useCallbackuseEffectuseState } from 'react';
 import dynamic from 'next/dynamic';
@@ -140,4 +138,3 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {
   if (!isClient) return null;
   return <ModalInner {...props} />;
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

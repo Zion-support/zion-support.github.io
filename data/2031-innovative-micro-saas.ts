@@ -41,8 +41,6 @@ export interface InnovativeMicroSaas20o31 {
   aiCapabilities: string[];
   marketDisruption: string;
 }
-<<<<<<< HEAD
-=======
 export const innovativeMicroSaas2031: InnovativeMicroSaas2031[] = [
   // AI BUSINESS INTELLIGENCE SUITE
   {
@@ -310,4 +308,3 @@ export const innovativeMicroSaas2031: InnovativeMicroSaas2031[] = [
     marketDisruption: 'Revolutionizes business management by introducing autonomous operations, enabling fully automated strategic planning and resource optimization.'
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

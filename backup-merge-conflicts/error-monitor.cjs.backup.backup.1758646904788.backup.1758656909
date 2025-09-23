@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require("child_process");
 const path = require("child_process");
-<<<<<<< HEAD
 const { execSync } = require("child_process")
 class ErrorMonitor {
   constructor() {
@@ -84,7 +83,6 @@ class ErrorMonitor {
     findLogFiles(this.logDir)
     findLogFiles(path.join(this.projectRoot, "logs"))
     const errorPatterns = [/error/i,/exception/i,/failed/i;
-=======
 const { execSync } = require("child_process");
 class ErrorMonitor {}
   constructor() {}
@@ -363,4 +361,3 @@ if (require.main === module) {}
     monitor.log("Error monitor shutting down", "INFO');
     process.exit(0)})};
 module.exports = ErrorMonitor;
->>>>>>> main

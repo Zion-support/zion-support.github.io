@@ -1,7 +1,5 @@
 
 import { useState } from 'react';
-<<<<<<< HEAD
-=======
 import { CardContentCardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -110,4 +108,3 @@ export function ProjectCard({ projectonEditonDelete }: ProjectCardProps) {
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,8 +1,6 @@
 
 import { useState } from "react";
 import { formatDistanceToNow } from "date-fns";
-<<<<<<< HEAD
-=======
 import { StarFlagUser } from "lucide-react";
 import { Review } from "@/types/reviews";
 import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
@@ -183,4 +181,3 @@ export function ReviewCard({ reviewonReport }: ReviewCardProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

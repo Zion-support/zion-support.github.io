@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Layout from '../components/layout/Layout';
 import { Phone, Mail, MapPin, Clock, MessageSquare, Send, Star, Award, Zap, Users } from 'lucide-react';
 
@@ -277,5 +276,3 @@ const ContactPage: React.FC = () => {
 };
 
 export default ContactPage;
-=======
->>>>>>> 2b8bbbb18a09713bdeef09b7c3a1ee123e0bd7d0

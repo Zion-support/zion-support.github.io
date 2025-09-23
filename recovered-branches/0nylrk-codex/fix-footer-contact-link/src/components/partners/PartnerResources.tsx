@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { DownloadFileImageFileTextFileTypeFileVideoLink } from "lucide-react";
@@ -161,4 +159,3 @@ export function PartnerResources() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

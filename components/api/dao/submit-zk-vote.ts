@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next";
 export default async function handler(
@@ -71,7 +69,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
     // NOTE: For production, use a relayer or Batcher to aggregate votes off-chain;

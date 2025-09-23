@@ -108,8 +108,6 @@ const trustedCompanies = [
 
 export function TrustedBySection() {
   // Use state to track logos that failed to load
-<<<<<<< HEAD
-=======
   const [failedLogosetFailedLogos] = useState<Record<stringboolean>>({});
 
   const handleImageError = (companyName: string) => {
@@ -157,4 +155,3 @@ export function TrustedBySection() {
     </section>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

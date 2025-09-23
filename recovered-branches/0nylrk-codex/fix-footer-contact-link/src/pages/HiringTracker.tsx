@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import {useState} from "react";
 import {useParams} from "react-router-dom";
@@ -38,7 +36,6 @@ function HiringTrackerContent() {
   return (
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 

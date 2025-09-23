@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 
 import { authenticateRequest } from '@/utils/auth';
 import { generateText } from '@/utils/ai';
@@ -83,7 +81,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

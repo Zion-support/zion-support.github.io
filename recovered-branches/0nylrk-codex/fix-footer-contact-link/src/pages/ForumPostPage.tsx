@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import {useState} from "react";
 import {useParams, Link} from "react-router-dom";
@@ -725,7 +723,6 @@ export default function ForumPostPage() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

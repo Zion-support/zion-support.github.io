@@ -4,7 +4,6 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
 const logsDir = path.join(__dirname, 'logs');
 const logFile = path.join(logsDir, 'code-quality.log');
 const metricsFile = path.join(logsDir, 'code-quality-metrics.json');
@@ -39,7 +38,6 @@ function analyze() {
 }
 
 if (require.main === module) analyze();
-=======
 class CodeQualityMonitor {
   constructor() {
     this.metrics = {
@@ -78,4 +76,3 @@ class CodeQualityMonitor {
 
 const monitor = new CodeQualityMonitor();
 monitor.analyzeCodeQuality();
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

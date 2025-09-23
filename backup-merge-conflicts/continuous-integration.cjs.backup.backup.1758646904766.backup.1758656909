@@ -4,7 +4,6 @@
  * Comprehensive CI pipeline with build, test, and quality checks;
  */
 
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -172,7 +171,6 @@ if (require.main === module) {
       process.exit(1)})}
 
 module.exports = ContinuousIntegration;
-=======
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -203,4 +201,3 @@ const path = require('path')
         this.log(" Critical stage failed. Stopping pipeline.")
       "successRate"
       console.error('Fatal "error")
->>>>>>> main

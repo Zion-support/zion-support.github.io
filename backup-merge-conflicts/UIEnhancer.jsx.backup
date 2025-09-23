@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 export: const UIEnhancer = ({ showFloatingActions = true,enableParticles = true,enableScrollEffects = true }) => { const [theme,setTheme] = useState ("dark") const [isParticleMode,setIsParticleMode] = useState (enableParticles) const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState ("desktop") useEffect ( () => { """;"";"""
 <<<<<<< HEAD:backup-merge-conflicts/UIEnhancer.jsx.backup
-=======
 import React from';react' "export": const UIEnhancer = ({ showFloatingActions = true,enableParticles = true,enableScrollEffects = true }) => { const [theme,setTheme] = useState('dark') const [isParticleMode,setIsParticleMode] = useState(enableParticles) const [showScrollToTop,setShowScrollToTop] = useState(false) const [deviceType,setDeviceType] = useState('desktop') useEffect(() => {''';''}
 =======
 <<<<<<< HEAD
@@ -12,7 +10,6 @@ import React from';react' "export": const UIEnhancer = ({ showFloatingActions = 
 import React from';react' "export": const UIEnhancer = ({ showFloatingActions = true,enableParticles = true,enableScrollEffects = true }) => { const [theme,setTheme] = useState('dark') const [isParticleMode,setIsParticleMode] = useState(enableParticles) const [showScrollToTop,setShowScrollToTop] = useState(false) const [deviceType,setDeviceType] = useState('desktop') useEffect(() => {''';''}
 =======
 <<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
 =======
 =======

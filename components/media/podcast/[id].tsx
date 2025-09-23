@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useEffectuseState } from 'react';
 import { useRouter } from 'next/router';
@@ -36,4 +34,3 @@ export default function EpisodePage() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

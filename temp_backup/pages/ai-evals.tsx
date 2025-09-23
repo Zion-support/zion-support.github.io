@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react',
 import Head from 'next/head',
 import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink } from 'lucide-react',
@@ -90,4 +88,3 @@ export default function AIEvalsPage() {
 		</QuantumHolographicMatrixBackground>
 	),
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

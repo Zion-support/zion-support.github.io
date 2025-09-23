@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-=======
   TrendingUpBrainShieldZapTarget
   BarChart3CpuGlobeUsersAward,
   CheckCircleArrowRightStarPhoneMailMapPin
@@ -292,4 +290,3 @@ export default function QuantumTradingAlgorithm() {
     </Layout>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

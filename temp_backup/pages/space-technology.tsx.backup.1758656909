@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
@@ -123,7 +122,6 @@ const SpaceTechnologyPage: React.FC = () => {
         {/* Hero Section */}
         <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
-=======
 import { motion } from 'framer-motion';
 import { Rocket, Satellite, Globe, Star, Zap, Target, Atom, Users, ArrowRight, Shield, Brain } from 'lucide-react';
 import SEO from '../components/SEO';
@@ -186,13 +184,11 @@ export default function SpaceTechnology() {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-<<<<<<< HEAD
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-orange-600 bg-clip-text text-transparent">
                 Space Technology
               </h1>
@@ -253,7 +249,6 @@ export default function SpaceTechnology() {
                     <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
                   </div>
                   <p className="text-gray-300">{capability.description}</p>
-=======
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-orange-400 via-red-400 to-purple-400 bg-clip-text text-transparent mb-6">
                 Space Technology Solutions
               </h1>
@@ -330,14 +325,12 @@ export default function SpaceTechnology() {
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </motion.a>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Space Services */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -405,7 +398,6 @@ export default function SpaceTechnology() {
                   >
                     Get Started
                   </a>
-=======
         {/* Space Innovation Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-orange-900/20 to-red-900/20">
           <div className="max-w-7xl mx-auto">
@@ -462,7 +454,6 @@ export default function SpaceTechnology() {
                   <p className="text-gray-400">
                     {innovation.description}
                   </p>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 </motion.div>
               ))}
             </div>
@@ -470,7 +461,6 @@ export default function SpaceTechnology() {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -498,7 +488,6 @@ export default function SpaceTechnology() {
                 >
                   Schedule Consultation
                 </a>
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -527,22 +516,18 @@ export default function SpaceTechnology() {
                 >
                   Space Technology Assessment
                 </motion.button>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               </div>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
       </main>
     </Layout>
   );
 };
 
 export default SpaceTechnologyPage;
-=======
       </div>
     </>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 

@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 // Function to run a command and return result;
@@ -198,7 +197,6 @@ async function main() {
 }
 
 main();
-=======
 const { execSync } = require('child_process')
 // console.log(' Final Automation Orchestrator')
 console.log('=====')
@@ -216,4 +214,3 @@ console.log('=====')
 // console.log('\n Final Automation "Summary")
       console.log('\n "Recommendations")
     console.error(' Final automation orchestrator "failed")
->>>>>>> main

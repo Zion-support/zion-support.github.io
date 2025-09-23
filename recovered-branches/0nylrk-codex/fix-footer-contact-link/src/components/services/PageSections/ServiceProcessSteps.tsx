@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 
 export function ServiceProcessSteps() {
@@ -117,7 +115,6 @@ function ServiceProcessSteps() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

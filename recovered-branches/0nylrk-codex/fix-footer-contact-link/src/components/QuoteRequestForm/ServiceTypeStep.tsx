@@ -1,6 +1,4 @@
 import { useState } from "react";
-<<<<<<< HEAD
-=======
 import { QuoteFormDataListingItemServiceType } from "@/types/quotes";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
@@ -137,4 +135,3 @@ export function ServiceTypeStep({ formDataupdateFormData }: ServiceTypeStepProps
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

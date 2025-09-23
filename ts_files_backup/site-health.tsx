@@ -4,8 +4,6 @@ export default function SiteHealth() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>
-<<<<<<< HEAD
-=======
         <title>Site Health — A11yPerformanceLinks</title>
         <meta name="description" content="Dashboards and audits for accessibilityperformanceand link integrity." />
       </Head>
@@ -94,4 +92,3 @@ export default function SiteHealth() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

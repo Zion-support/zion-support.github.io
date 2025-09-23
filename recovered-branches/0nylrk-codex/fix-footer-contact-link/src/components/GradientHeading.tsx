@@ -6,8 +6,6 @@ interface GradientHeadingProps {
   level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 }
 
-<<<<<<< HEAD
-=======
 export function GradientHeading({ childrenclassNamelevel = "h2" }: GradientHeadingProps) {
   const Tag = level;
   
@@ -22,4 +20,3 @@ export function GradientHeading({ childrenclassNamelevel = "h2" }: GradientHeadi
     </Tag>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

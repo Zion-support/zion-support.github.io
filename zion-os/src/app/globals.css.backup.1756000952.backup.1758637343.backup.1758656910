@@ -3,20 +3,17 @@
 @tailwind utilities;
 
 :root {
-<<<<<<< HEAD
   --bg: #0b0e1a;
   --fg: #e6e8f0;
   --primary: #8b5cf6;
   --secondary: #3b82f6;
   --accent: #06b6d4;
-=======
   --bg: #000000;
   --fg: #ffffff;
   --accent: #3b82f6;
   --accent-hover: #2563eb;
   --border: rgba(255, 255, 255, 0.1);
   --border-hover: rgba(255, 255, 255, 0.2);
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
 }
 
 @layer base {
@@ -35,7 +32,6 @@
   }
 }
 
-<<<<<<< HEAD
 @layer components {
   .gradient-text {
     @apply bg-gradient-to-r from-purple-400 via-blue-400 to-purple-600 bg-clip-text text-transparent;
@@ -72,7 +68,6 @@
   .animate-slide-in-right {
     animation: slideInRight 0.6s ease-out;
   }
-=======
 html {
   scroll-behavior: smooth;
 }
@@ -84,7 +79,6 @@ body {
   background: var(--bg);
   color: var(--fg);
   line-height: 1.6;
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
 }
 
 @layer utilities {
@@ -146,7 +140,6 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-<<<<<<< HEAD
   background: var(--bg);
   border-radius: 5px;
 }
@@ -255,7 +248,6 @@ body {
 
 .input-field {
   @apply w-full bg-gray-900/50 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 focus:bg-gray-900/70;
-=======
   background: rgba(255, 255, 255, 0.05);
 }
 
@@ -285,16 +277,12 @@ h2 {
 
 h3 {
   font-size: clamp(1.5rem, 3vw, 2rem);
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
 }
 
 /* Gradient text utility */
 .gradient-text {
-<<<<<<< HEAD
   background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
-=======
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -393,7 +381,6 @@ h3 {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-<<<<<<< HEAD
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
@@ -408,7 +395,6 @@ h3 {
 }
 
 /* Text selection */
-=======
 }
 
 /* Enhanced focus states */
@@ -444,13 +430,11 @@ h3 {
 }
 
 /* Custom selection color */
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
 ::selection {
   background: rgba(59, 130, 246, 0.3);
   color: white;
 }
 
-<<<<<<< HEAD
 ::-moz-selection {
   background: rgba(59, 130, 246, 0.3);
   color: white;
@@ -486,7 +470,6 @@ h3 {
   
   .animate-slide-in {
     animation-duration: 0.4s;
-=======
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -513,6 +496,5 @@ h3 {
   
   .btn-secondary {
     @apply border-2 border-white;
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
   }
 }

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, FileText, Calendar, Mail } from 'lucide-react';
@@ -241,4 +239,3 @@ export default function PrivacyPage() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

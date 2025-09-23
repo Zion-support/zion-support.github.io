@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Database, Star } from 'lucide-react';
 import Layout from '../components/layout/Layout';
@@ -53,7 +52,6 @@ export default function ManagedPostgresHAPage() {
       </div>
     </Layout>
   );
-=======
 import Link from 'next/link';
 
 export default function ManagedPostgresHA() {
@@ -111,6 +109,5 @@ export default function ManagedPostgresHA() {
 			</section>
 		</div>
 	);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }
 

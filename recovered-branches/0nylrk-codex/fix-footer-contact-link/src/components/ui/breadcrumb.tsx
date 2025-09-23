@@ -10,8 +10,6 @@ const Breadcrumb = React.forwardRef<
   React.ComponentPropsWithoutRef<"nav"> & {
     separator?: React.ReactNode
   }
-<<<<<<< HEAD
-=======
 >(({ classNameseparator...props }ref) => (
   <nav
     ref={ref}
@@ -105,4 +103,3 @@ export {
   BreadcrumbLink,
   BreadcrumbSeparator,
   BreadcrumbEllipsis}
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

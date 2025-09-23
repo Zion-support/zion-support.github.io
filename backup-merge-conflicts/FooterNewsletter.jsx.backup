@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 "export: function FooterNewsletter () {" const [email,setEmail] = useState (") " const [isSubscribed,setIsSubscribed] = useState (false) " const handleSubmit = e => { e.preventDefault () "";"";"""
 <<<<<<< HEAD:backup-merge-conflicts/FooterNewsletter.jsx.backup
-=======
 '"export": function FooterNewsletter () {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = e => { e.preventDefault () '';"";""}
 =======
 <<<<<<< HEAD
@@ -12,7 +10,6 @@
 '"export": function FooterNewsletter () {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = e => { e.preventDefault () '';"";""}
 =======
 <<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
 =======
 =======

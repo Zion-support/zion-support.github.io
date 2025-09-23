@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useMemouseState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
@@ -94,4 +92,3 @@ export default function FeedbackWidget({ responseIdaiModel }: FeedbackWidgetProp
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

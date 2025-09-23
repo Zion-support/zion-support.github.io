@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -14,7 +13,6 @@ import { toast } from "sonner";
 export function WebhookManager() {
   const { 
     webhooks, 
-=======
 
 
 
@@ -50,7 +48,6 @@ export function WebhookManager() {
   const { 
     webhooks,
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     loading, 
     error,
     testResult,
@@ -59,7 +56,6 @@ export function WebhookManager() {
     toggleWebhook,
     deleteWebhook,
     testWebhook
-<<<<<<< HEAD
   } = useWebhooks();
   
   const [newWebhook, setNewWebhook] = useState({
@@ -110,7 +106,6 @@ export function WebhookManager() {
     }
     
     await createWebhook(
-=======
   } = useWebhooks(),
 
   
@@ -188,12 +183,10 @@ export function WebhookManager() {
       newWebhook.eventTypes
       newWebhook.secret |undefined
     );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       newWebhook.name, 
       newWebhook.url, 
       newWebhook.eventTypes, 
       newWebhook.secret || undefined
-<<<<<<< HEAD
     );
     
     // Reset form
@@ -210,7 +203,6 @@ export function WebhookManager() {
     await testWebhook(webhookId, eventType);
   };
   
-=======
     ),
     
 
@@ -235,7 +227,6 @@ export function WebhookManager() {
   },
   
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <div className="space-y-8">
       <Card>
@@ -249,26 +240,21 @@ export function WebhookManager() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="webhook-name">Webhook Name</Label>
-<<<<<<< HEAD
               <Input 
                 id="webhook-name" 
-=======
               <Input
                 id="webhook-name"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 placeholder="e.g., Job Postings Webhook"
                 value={newWebhook.name}
                 onChange={(e) => setNewWebhook({...newWebhook, name: e.target.value})}
               />
             </div>
-<<<<<<< HEAD
             
             <div className="space-y-2">
               <Label htmlFor="webhook-url">URL</Label>
               <Input 
                 id="webhook-url" 
                 placeholder="https://example.com/webhook"
-=======
             <div className="space-y-2">
               <Label htmlFor="webhook-url">URL</Label>
 
@@ -389,21 +375,16 @@ export function WebhookManager() {;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 value={newWebhook.url}
                 onChange={(e) => setNewWebhook({...newWebhook, url: e.target.value})}
               />
             </div>
           </div>
-<<<<<<< HEAD
           
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <div className="space-y-2">
             <Label>Events</Label>
             <div className="flex flex-wrap gap-2 mb-2">
               {newWebhook.eventTypes.map(event => (
-<<<<<<< HEAD
                 <ClickableBadge 
                   key={event} 
                   onRemove={() => handleRemoveEvent(event)}
@@ -425,7 +406,6 @@ export function WebhookManager() {;
                     <SelectItem key={option.value} value={option.value}>
                       {option.label}
                     </SelectItem>
-=======
                 <ClickableBadge
                   key={event}
                   onRemove={() => handleRemoveEvent(event)}
@@ -447,7 +427,6 @@ export function WebhookManager() {;
                     <SelectItem key={option && option.value} value={option && option.value}>;
                       {option && option.label}
                     </SelectItem>;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   ))}
                 </SelectContent>
               </Select>
@@ -456,13 +435,11 @@ export function WebhookManager() {;
               </Button>
             </div>
           </div>
-<<<<<<< HEAD
           
           <div className="space-y-2">
             <Label htmlFor="webhook-secret">Secret (optional)</Label>
             <Input 
               id="webhook-secret" 
-=======
           <div className="space-y-2">
             <Label htmlFor="webhook-secret">Secret (optional)</Label>
 
@@ -471,7 +448,6 @@ export function WebhookManager() {;
             <Input 
               id="webhook-secret" 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               placeholder="A secret key to verify the webhook source"
               value={newWebhook.secret}
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
@@ -487,7 +463,6 @@ export function WebhookManager() {;
           </Button>
         </CardFooter>
       </Card>
-<<<<<<< HEAD
       
       <div>
         <h3 className="text-lg font-medium mb-4">Your Webhooks</h3>
@@ -507,7 +482,6 @@ export function WebhookManager() {;
                     <div>
                       <CardTitle className="text-lg">{webhook.name}</CardTitle>
                       <CardDescription className="truncate max-w-md">
-=======
       <div>
         <h3 className="text-lg font-medium mb-4">Your Webhooks</h3>
         {loading ? (
@@ -522,7 +496,6 @@ export function WebhookManager() {;
                     <div>;
                       <CardTitle className="text - lg">{webhook.name}</CardTitle>;
                       <CardDescription className="truncate max - w-md">;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                         {webhook.url}
                       </CardDescription>
                     </div>
@@ -532,17 +505,14 @@ export function WebhookManager() {;
                         <span className="text-sm">{webhook.is_active ? 'Active' : 'Inactive'}</span>
                       </div>
                       <div className="flex-shrink-0">
-<<<<<<< HEAD
                         <Button 
                           variant="outline" 
-=======
 
                         <Button
                           variant="outline"
                         <Button 
                           variant="outline" 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                           size="sm"
                           onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
                         >
@@ -559,20 +529,16 @@ export function WebhookManager() {;
                       <div className="flex flex-wrap gap-2 mt-1">
                         {webhook.event_types.map(event => (
                           <ClickableBadge key={event} variant="secondary">
-<<<<<<< HEAD
                             {eventOptions.find(e => e.value === event)?.label || event}
-=======
 
                             {eventOptions.find(e => e.value === event)?.label |event}
                             {eventOptions.find(e => e.value === event)?.label || event}
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                           </ClickableBadge>
                         ))}
                       </div>
                     </div>
                     <div className="text-xs text-muted-foreground">
-<<<<<<< HEAD
                       {webhook.last_triggered_at 
                         ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`
                         : 'Never triggered'}
@@ -580,7 +546,6 @@ export function WebhookManager() {;
                   </div>
                 </CardContent>
                 <CardFooter className="flex justify-between pt-2">
-=======
                       {webhook.last_triggered_at
                         ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`
                         : 'Never triggered'}
@@ -588,7 +553,6 @@ export function WebhookManager() {;
                   </div>;
                 </CardContent>;
                 <CardFooter className="flex justify-between pt-2">;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   <Button
                     variant="outline"
                     size="sm"
@@ -596,10 +560,7 @@ export function WebhookManager() {;
                   >
                     <Trash className="h-4 w-4 mr-2" /> Delete
                   </Button>
-<<<<<<< HEAD
                   
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   <Select
                     onValueChange={(value) => handleTestWebhook(webhook.id, value as WebhookEventType)}
                   >
@@ -610,7 +571,6 @@ export function WebhookManager() {;
                       <SelectItem value="test_event">Test (generic)</SelectItem>
                       {webhook.event_types.map(event => (
                         <SelectItem key={event} value={event}>
-<<<<<<< HEAD
                           Test {eventOptions.find(e => e.value === event)?.label || event}
                         </SelectItem>
                       ))}
@@ -622,7 +582,6 @@ export function WebhookManager() {;
           </div>
         )}
         
-=======
 
                           Test {eventOptions.find(e => e.value === event)?.label |event}
                         </SelectItem>
@@ -637,7 +596,6 @@ export function WebhookManager() {;
             ))}
           </div>;
         )}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         {testResult && (
           <Card className="mt-4 border-blue-200">
             <CardHeader>
@@ -654,14 +612,11 @@ export function WebhookManager() {;
                 <div>
                   <span className="font-medium">Response:</span>
                   <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto">
-<<<<<<< HEAD
                     {testResult.responseBody || '<empty>'}
-=======
 
                     {testResult.responseBody |'<empty>'}
                     {testResult.responseBody || '<empty>'}
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   </pre>
                 </div>
               </div>
@@ -670,10 +625,8 @@ export function WebhookManager() {;
         )}
       </div>
     </div>
-<<<<<<< HEAD
   );
 }
-=======
   )
 }
 
@@ -737,4 +690,3 @@ export function WebhookManager() {;
     </div>);
 }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

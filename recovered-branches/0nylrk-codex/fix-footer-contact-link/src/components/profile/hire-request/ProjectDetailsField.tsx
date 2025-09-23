@@ -1,7 +1,5 @@
 
 import { UseFormReturn } from "react-hook-form";
-<<<<<<< HEAD
-=======
 import { FormFieldFormItemFormLabelFormControlFormMessage } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
 import { FormValues } from "./useHireRequestForm";
@@ -31,4 +29,3 @@ export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
     />
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,8 +1,6 @@
 
 import { ContractTemplate } from "@/types/contracts";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-=======
 import { Loader2EditTrashStarOff } from "lucide-react";
 import { useContractTemplates } from "@/hooks/useContractTemplates";
 import { CardContent } from "@/components/ui/card";
@@ -138,4 +136,3 @@ export function TemplateList({
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

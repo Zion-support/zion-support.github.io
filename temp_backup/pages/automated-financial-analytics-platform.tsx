@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -481,4 +479,3 @@ export default function AutomatedFinancialAnalyticsPlatform() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

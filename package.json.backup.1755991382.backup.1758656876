@@ -680,10 +680,8 @@
     "conflicts:cron:start": "bash automation/merge-conflict-cron.sh start",
     "conflicts:cron:stop": "bash automation/merge-conflict-cron.sh stop",
     "conflicts:cron:status": "bash automation/merge-conflict-cron.sh status",
-<<<<<<< HEAD
     "talent:optimize": "node automation/talent-profile-optimizer.cjs"
   },
-=======
     "auto:intel": "node automation/auto-market-intel.cjs",
     "auto:talent": "node automation/auto-talent-highlights.cjs",
     "auto:all": "npm run auto:intel && npm run auto:talent"
@@ -700,7 +698,6 @@
       "nextgen:cron:status": "bash automation/nextgen-cron.sh status",
       "nextgen:scheduler": "node automation/nextgen-scheduler.cjs"
     },
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
@@ -709,14 +706,11 @@
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
-<<<<<<< HEAD
     "@semaphore-protocol/contracts": "^4.13.0-beta.1",
     "@semaphore-protocol/identity": "^4.13.0-beta.1",
     "@semaphore-protocol/proof": "^4.13.0-beta.1",
-=======
     "@sentry/nextjs": "^7.120.4",
     "@sentry/node": "^7.120.4",
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.39.0",
     "@types/react-datepicker": "^6.2.0",
@@ -727,14 +721,11 @@
     "child_process": "^1.0.2",
     "chokidar": "^4.0.3",
     "cron-parser": "^5.3.0",
-<<<<<<< HEAD
     "ethers": "^6.14.0",
     "events": "^3.3.0",
     "formidable": "^3.5.4",
-=======
     "dotenv": "^16.4.5",
     "events": "^3.3.0",
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "framer-motion": "^6.5.1",
     "fs": "^0.0.1-security",
     "fs-extra": "^11.3.1",
@@ -746,7 +737,6 @@
     "mime-types": "^3.0.1",
     "next": "^11.1.4",
     "node-cron": "^4.2.1",
-<<<<<<< HEAD
     "openai": "^5.12.2",
     "path": "^0.12.7",
     "pdfkit": "^0.13.0",
@@ -756,7 +746,6 @@
     "react-dom": "^17.0.2",
     "react-json-view": "^1.21.3",
     "uuid": "^11.1.0"
-=======
     "js-yaml": "^4.1.0",
     "jsdom": "^24.1.0",
     "lucide-react": "^0.536.0",
@@ -771,7 +760,6 @@
     "react-dom": "^17.0.2",
     "resend": "^4.0.0",
     "uuid": "^11.1.0"
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
@@ -838,8 +826,5 @@
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
-<<<<<<< HEAD
-=======
   }
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
 }

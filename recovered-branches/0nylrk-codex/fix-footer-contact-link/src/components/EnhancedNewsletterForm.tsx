@@ -4,8 +4,6 @@ import { useState } from "react";
 import { Mail } from "lucide-react";
 
 export function EnhancedNewsletterForm() {
-<<<<<<< HEAD
-=======
   const [emailsetEmail] = useState("");
   const [isSubmittingsetIsSubmitting] = useState(false);
   const [isSubmittedsetIsSubmitted] = useState(false);
@@ -72,4 +70,3 @@ export function EnhancedNewsletterForm() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

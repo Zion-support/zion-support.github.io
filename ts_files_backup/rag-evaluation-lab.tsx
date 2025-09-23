@@ -4,8 +4,6 @@ import Link from 'next/link';
 export default function RAGEvaluationLabPage() {
 	return (
 		<>
-<<<<<<< HEAD
-=======
 			<SEO title="RAG Evaluation Lab" description="Measure answer qualityhallucination ratelatencyand cost of your RAG pipelines with production-grade evals and CI gates." />
 			<section className="relative pt-28 pb-16 md:pt-36 md:pb-24">
 				<div className="container mx-auto px-4">
@@ -61,4 +59,3 @@ export default function RAGEvaluationLabPage() {
 		</>
 	);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

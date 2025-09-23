@@ -7,8 +7,6 @@ import { toast } from "sonner";
 
 export function Web3Login() {
   const { loginWithWeb3 } = useAuth();
-<<<<<<< HEAD
-=======
   const [isLoadingsetIsLoading] = useState(false);
 
   const handleWeb3Login = async () => {
@@ -59,4 +57,3 @@ export function Web3Login() {
     </Button>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

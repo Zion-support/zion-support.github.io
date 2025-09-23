@@ -1,6 +1,4 @@
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
 ActivityPhoneMailMapPinCheckArrowRight
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import { Button } from '../components/ui/Button';
@@ -54,4 +52,3 @@ export default function IncidentAutomationSuitePage() {
   );
 }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

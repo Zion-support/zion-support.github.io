@@ -1,6 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
 export interface UltimateFuturisticITService {
   id: string;
   name: string;
@@ -511,4 +509,3 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     reviews: 10
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -12,9 +11,7 @@ const filesToFix = [
     'src/components/ui/card.tsx',
     'src/components/ui/input.tsx',
     'src/components/talent/TalentCard.jsx'
-=======
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");/ Function to fix remaining syntax errors in a filefunction fixRemainingSyntax(filePath) { try {" let content = fs.readFileSync(filePath, "utf8"); let originalContent = content; / Fix unterminated string constants" content = content.replace(/useState\("\)/g, "useState("")");"" content = content.replace(/useState\("\)/g, "useState("")");"" content = content.replace(/parsed\.didHandle \|\| "\)/g, "parsed.didHandle | "")");"" content = content.replace(/parsed\.didHandle \|\| "\)/g, "parsed.didHandle | "")"); / Fix extra semicolons in object properties" content = content.replace(/,\s*";";/g, ",");" content = content.replace(/,\s*";/g, ","); / Fix function parameters with TypeScript types"" content = content.replace(/\(props: any\) => \{/g, "(props) => {");" content = content.replace(/\([^)]*: any\)/g, "($1)"); / Fix supabase method calls" content = content.replace(/await supabase";/g, "await supabase");" content = content.replace(/\.from\("[^"]*"\)";";/g, (match) => match.replace(/";";$/, ""));" content = content.replace(/\.from\("[^"]*"\)";/g, (match) => match.replace(/";$/, ""));" content = content.replace(/\.delete\(\)";";/g, ".delete()");" content = content.replace(/\.delete\(\)";/g, ".delete()");" content = content.replace(/\.eq\("[^"]*",[^)]*\)";";/g, (match) => match.replace(/";";$/, ""));" content = content.replace(/\.eq\("[^"]*",[^)]*\)";/g, (match) => match.replace(/";$/, ""));" content = content.replace(/\.insert\([^)]*\)";";/g, (match) => match.replace(/";";$/, ""));" content = content.replace(/\.insert\([^)]*\)";/g, (match) => match.replace(/";$/, ""));" content = content.replace(/\.select\("[^"]*"\)";";/g, (match) => match.replace(/";";$/, ""));" content = content.replace(/\.select\("[^"]*"\)";/g, (match) => match.replace(/";$/, ""));" content = content.replace(/\.single\(\)";";/g, ".single()");" content = content.replace(/\.single\(\)";/g, ".single()"); / Fix comments with extra semicolons" content = content.replace(/\/\/ [^;]*";";/g, (match) => match.replace(/";";$/, ""));" content = content.replace(/\/\/ [^;]*";/g, (match) => match.replace(/";$/, "")); / Fix standalone semicolons and quotes" content = content.replace(/^";";?\s*$/gm, "");" content = content.replace(/^";\s*$/gm, ""); / Fix multiple consecutive semicolons" content = content.replace(/;+;+/g, ";"); / Fix multiple consecutive quotes"" content = content.replace(/[""]+[""]+/g, """); / Fix missing semicolons after statements" content = content.replace(/}\s*catch\s*\(/g, "} catch (");" content = content.replace(/}\s*finally\s*\{/g, "} finally {"); / Fix missing semicolons after variable declarations content = content.replace(/const\s+[^=]+=[^;]+(?!;)\s*}/g, (match) => {" if (!match.endsWith(";")) {" return match + ";"; } return match; }); / Fix missing semicolons after function calls content = content.replace(/setDisplayWeb3\([^)]+\)(?!;)\s*}/g, (match) => {" if (!match.endsWith(";")) {" return match + ";"; } return match; }); / Write the fixed content back if (content !== originalContent) {" fs.writeFileSync(filePath, content, "utf8");" console.log(`Fixed remaining syntax errors in: ${filePath}`); return true; } return false; } catch (error) {` console.error(`Error fixing ${filePath}:`, error.message); return false; }}/ Function to recursively find and fix filesfunction fixFilesInDirectory(dirPath) { const files = fs.readdirSync(dirPath); let fixedCount = 0; for (const file of files) { const filePath = path.join(dirPath, file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixedCount += fixFilesInDirectory(filePath);" } else if (file.endsWith(".js") | file.endsWith(".jsx") | file.endsWith(".ts") | file.endsWith(".tsx")) { if (fixRemainingSyntax(filePath)) { fixedCount++; } } } return fixedCount;}/ Main execution"console.log("Starting remaining syntax error fixing.");"const fixedCount = fixFilesInDirectory("./src");`console.log(`Fixed ${fixedCount} files with remaining syntax errors.`);'"`'"`
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 ];
 
 function fixFile(filePath) {
@@ -30,13 +27,11 @@ function fixRemainingSyntax(filePath) {}
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
-<<<<<<< HEAD
     // Fix unterminated string constants;
     content = content.replace(/useState\("\)/g, 'useState("")');
     content = content.replace(/useState\('\)/g, "useState('')");
     content = content.replace(/parsed\.didHandle \|\| "\)/g, 'parsed.didHandle || "")');
     content = content.replace(/parsed\.didHandle \|\| '\)/g, "parsed.didHandle || '')");
-=======
 <<<<<<< HEAD
     fixes.forEach(fix => {
       const newContent = content.replace(fix.pattern, fix.replacement);
@@ -44,7 +39,6 @@ function fixRemainingSyntax(filePath) {}
         content = newContent;
         modified = true}
     });
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     
     // Fix extra semicolons in object properties;
     content = content.replace(/,\s*';';/g, ',');
@@ -126,7 +120,6 @@ function fixFilesInDirectory(dirPath) {}
     const filePath = path.join(dirPath, file);
     const stat = fs.statSync(filePath);
     
-<<<<<<< HEAD
     // Fix malformed interface declarations
     content = content.replace(/interface\s+(\w+)\s*\{;/g, 'interface $1 {');
     
@@ -168,7 +161,6 @@ function fixFilesInDirectory(dirPath) {}
     
     const handleRequestHire = (talentId) => {
         // Handle hire request logic here
-=======
     if (stat.isDirectory()) {}
       fixedCount += fixFilesInDirectory(filePath);
     } else if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx')) {}
@@ -205,7 +197,6 @@ let totalFixes = 0;
 filesToFix.forEach(file => {
     totalFixes += fixFile(file);
 });
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 const fixedCount = fixFilesInDirectory('./src');

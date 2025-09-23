@@ -1,23 +1,19 @@
-<<<<<<< HEAD
 import crypto from "crypto";
 import { ProposalVoteEntry } from "./types";
 
 export function sha256Hex(input: string): string {
   return crypto.createHash("sha256").update(input).digest("hex");
-=======
 import crypto from "crypto",
 import { ProposalVoteEntry } from "./types",
 
 export function sha256Hex(input: string): string {
   return crypto.createHash("sha256").update(input).digest("hex")
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }
 
 export function leafHashForVote(vote: ProposalVoteEntry): string {
   const canonical = JSON.stringify({
     voterId: vote.voterId,
     weight: vote.weight,
-<<<<<<< HEAD
     choice: vote.choice,
   });
   return sha256Hex(canonical);
@@ -45,7 +41,6 @@ export function computeMerkleRootFromLeaves(leaves: string[]): string {
     layer = next;
   }
   return layer[0];
-=======
     choice: vote.choice}),
   return sha256Hex(canonical),
 }
@@ -72,18 +67,14 @@ export function computeMerkleRootFromLeaves(leaves: string[]): string {
     layer = next,
   }
   return layer[0],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }
 
 export function verifyVotesAgainstMerkleRoot(
   votes: ProposalVoteEntry[],
   merkleRoot: string
 ): boolean {
-<<<<<<< HEAD
   const root = computeMerkleRootFromVotes(votes);
   return root === merkleRoot;
-=======
   const root = computeMerkleRootFromVotes(votes),
   return root === merkleRoot
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

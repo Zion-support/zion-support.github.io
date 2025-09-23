@@ -1,6 +1,5 @@
 export default function TermsPage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
@@ -207,7 +206,6 @@ export default function TermsPage() {
                 <p><strong>Email:</strong> <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300 transition-colors">kleber@ziontechgroup.com</a></p>
                 <p><strong>Phone:</strong> <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300 transition-colors">+1 (302) 464-0950</a></p>
                 <p><strong>Address:</strong> Delaware, United States</p>
-=======
     <div className="min-h-screen py-20">
       {/* Hero Section */}
       <section className="relative mb-20">
@@ -352,14 +350,11 @@ export default function TermsPage() {
                 <p><strong>Email:</strong> legal@ziontechgroup.com</p>
                 <p><strong>Phone:</strong> +1 (302) 464-0950</p>
                 <p><strong>Address:</strong> Zion Tech Group, Global Operations</p>
->>>>>>> origin/cursor/website-audit-and-enhancement-8931
               </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </div>
-=======
       </section>
 
       {/* CTA Section */}
@@ -385,7 +380,6 @@ export default function TermsPage() {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/website-audit-and-enhancement-8931
     </div>
   );
 }

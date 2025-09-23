@@ -1,7 +1,5 @@
 
 import { Fragment } from "react";
-<<<<<<< HEAD
-=======
 import { Routes } from "react-router-dom";
 import NotFound from "@/pages/NotFound";
 import Unauthorized from "@/pages/Unauthorized";
@@ -17,4 +15,3 @@ const ErrorRoutes = () => {
 };
 
 export default ErrorRoutes;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

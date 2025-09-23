@@ -4,8 +4,6 @@ export default function TestPage() {
   return (
     <>
       <Head>
-<<<<<<< HEAD
-=======
         <title>Test - Zion Tech Group</title>
         <meta name="description" content="test page" />
       </Head>
@@ -21,4 +19,3 @@ export default function TestPage() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

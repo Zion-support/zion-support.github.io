@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 export interface PracticalBusinessSolution2029 {
 export interface PracticalBusinessSolution2029 {;
@@ -209,4 +207,3 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
 ];
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

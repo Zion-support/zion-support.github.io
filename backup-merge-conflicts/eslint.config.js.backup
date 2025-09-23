@@ -1,12 +1,9 @@
 import js from '@eslint/js';
-<<<<<<< HEAD
-=======
 =======
 =======
 <<<<<<< HEAD:eslint.config.js
 import globals from 'globals';
 <<<<<<< HEAD
->>>>>>> pr-11935
 import react from 'eslint-plugin-react';
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:eslint.config.js
 >>>>>>> pr-11914:backup-merge-conflicts/eslint.config.js.backup
@@ -19,17 +16,13 @@ import tsparser from '@typescript-eslint/parser';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
-<<<<<<< HEAD
 import react from 'eslint-plugin-react';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
 
 export default [
   {
     ignores: [
-<<<<<<< HEAD
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
@@ -108,7 +101,6 @@ export default [
         Buffer: 'readonly',
         global: 'readonly'
 =======
-=======
       },
 =======
 import react from 'eslint-plugin-react';
@@ -117,7 +109,6 @@ import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 export default [{
     "ignores": [
->>>>>>> main
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:eslint.config.js
 >>>>>>> pr-11914:backup-merge-conflicts/eslint.config.js.backup
@@ -130,8 +121,6 @@ export default [{
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
-<<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
-=======
 <<<<<<< HEAD:eslint.config.js
       'scripts/',
       'automation/',
@@ -227,7 +216,6 @@ export default [{
       '*.report.json',
       'temp_*/',
 =======
->>>>>>> pr-11935
       'test_build/',
       'tests.disabled/',
       'pages.disabled/',
@@ -266,7 +254,6 @@ export default [{
       'pages.__backup/',
       'pages-disabled/',
       'pages.disabled_auto/',
-<<<<<<< HEAD
       'pages.disabled.full/',
       'pages._quarantine/',
       'pages._archive_corrupted/',
@@ -503,7 +490,6 @@ export default [{
       '*.ear',
       '*.sar',
       '*.nar'
-=======
       'pages.disabled_auto/'
     ]
   },
@@ -749,7 +735,6 @@ export default [{
         "fs": 'readonly',
         "CodeQualityChecker": 'readonly'
       }
->>>>>>> main
     },
     plugins: {
       '@typescript-eslint': typescript,
@@ -774,8 +759,6 @@ export default [{
       'ux-enhancer.cjs',
       'vite.config-backup.ts',
       'types/empty.ts'
-<<<<<<< HEAD
-=======
 =======
       'pages.broken/',
       'pages.corrupted.1756905863/',
@@ -856,7 +839,6 @@ export default [{
       'components/ui/',
       '*.cjs',
       '*.js',
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:eslint.config.js
       '*.test.js',
       '*.test.ts',
       '*.test.tsx',

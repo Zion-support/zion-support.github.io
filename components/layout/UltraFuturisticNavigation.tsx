@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 
@@ -1011,4 +1009,3 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

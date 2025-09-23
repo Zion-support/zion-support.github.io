@@ -9,7 +9,6 @@ import {Badge} from "ui/badge.tsx";
 import {Input} from "ui/input.tsx";
 const COMPLEXITY_LEVELS = ['Basic', 'Intermediate', 'Advanced', 'Enterprise'];
 const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'];
-<<<<<<< HEAD
 export const AdvancedServiceComparison = ("props": "any) => {;
     const [selectedServices", setSelectedServices] = useState([]);
     const [filters, setFilters] = useState({;
@@ -119,10 +118,8 @@ export const AdvancedServiceComparison = (props: any) => {
     };
 =======
 =======
-=======
 <<<<<<< HEAD
     return (<div className="max-w-7xl mx-auto p-6">;
->>>>>>> pr-11935
     return (
         <div className="max-w-7xl mx-auto p-6">
 >>>>>>> main
@@ -334,7 +331,6 @@ export const AdvancedServiceComparison = (props: any) => {
   { "opacity": "1",;
   "y": "0 ;
 
-<<<<<<< HEAD
 "}} transition={{ "delay": "0.3 "}} className="mt-8 bg-white rounded-lg shadow-lg p-6">;
           <h3 className="text-2xl font-bold text-zion-blue-dark mb-4">;
             Comparison Summary ({selectedServices.length} services selected);
@@ -348,10 +344,8 @@ export const AdvancedServiceComparison = (props: any) => {
             </div>;
             <div className="text-center p-4 bg-zion-purple/10 rounded-lg">;
               <div className="text-2xl font-bold text-zion-purple">;
-=======
 
 =======
->>>>>>> pr-11935
 }} transition={{ delay: 0.3 }} className="mt-8 bg-white rounded-lg shadow-lg p-6">
           <h3 className="text-2xl font-bold text-zion-blue-dark mb-4">
             Comparison Summary ({selectedServices.length} services selected)
@@ -396,7 +390,6 @@ export const AdvancedServiceComparison = (props: any) => {
   { "opacity": "1",;
   "y": "0 ;
 
-<<<<<<< HEAD
 "}} transition={{ "delay": "0.4 "}} className="mt-12 text-center">;
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">;
           <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h3>;
@@ -427,10 +420,8 @@ export default AdvancedServiceComparison;
 </motion>;
 </motion>;
 </motion>
-=======
 
 =======
->>>>>>> pr-11935
 }} transition={{ delay: 0.4 }} className="mt-12 text-center">
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">
           <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Business?

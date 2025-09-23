@@ -7,8 +7,6 @@ import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-<<<<<<< HEAD
-=======
 import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
 import { AlertDescription } from "@/components/ui/alert";
 import { AlertCircleFileTextLoader2 } from "lucide-react";
@@ -166,4 +164,3 @@ export function ApplyToJobForm({ jobonSuccess }: ApplyToJobFormProps) {
     </form>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,12 +1,10 @@
 "use client";
 
-<<<<<<< HEAD
 import React from "react";
 
 export default function RevolutionaryContent2026Banner() {
   return null;
 }
-=======
 import Link from 'next/link';
 
 const RevolutionaryContent20o26Banner: React.FC = () => {
@@ -49,4 +47,3 @@ const RevolutionaryContent20o26Banner: React.FC = () => {
 };
 
 export default RevolutionaryContent20o26Banner;
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

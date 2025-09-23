@@ -113,8 +113,5 @@ export function useResumeActions() {
     error,
     createResume,
     updateBasicInfo,
-<<<<<<< HEAD
-=======
     setActiveResume};
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

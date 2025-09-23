@@ -25,32 +25,26 @@ export function PaymentButton({
   buttonText = "Purchase",
   className,
   onPaymentInitiated,
-<<<<<<< HEAD
   redirectUrl,
 }: PaymentButtonProps) {
   const [isProcessing, setIsProcessing] = useState(false);
   const { isAuthenticated, user } = useAuth();
-=======
   redirectUrl}: PaymentButtonProps) {
   const [isProcessingsetIsProcessing] = useState(false);
   const { isAuthenticateduser } = useAuth();
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const navigate = useNavigate();
   
   const handlePaymentClick = async () => {
     if (!isAuthenticated) {
       toast({
         title: "Authentication required",
-<<<<<<< HEAD
         description: "Please sign in to make a purchase.",
       });
       
       navigate("/login", { 
-=======
         description: "Please sign in to make a purchase."});
       
       navigate("/login"{ 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         state: { from: window.location.pathname } 
       });
       return;
@@ -64,24 +58,18 @@ export function PaymentButton({
       }
       
       // Call the create-checkout edge function
-<<<<<<< HEAD
       const { data, error } = await supabase.functions.invoke("create-checkout", {
-=======
       const { dataerror } = await supabase.functions.invoke("create-checkout"{
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         body: {
           amount,
           serviceId,
           providerId,
           userId: user?.id,
           successUrl: redirectUrl || window.location.href,
-<<<<<<< HEAD
           cancelUrl: window.location.href,
         },
       });
-=======
           cancelUrl: window.location.href}});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       
       if (error) {
         throw error;
@@ -89,39 +77,30 @@ export function PaymentButton({
       
       if (data?.url) {
         // Open Stripe checkout in a new tab
-<<<<<<< HEAD
         window.open(data.url, '_blank');
-=======
         window.open(data.url'_blank');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       } else {
         throw new Error("No checkout URL returned");
       }
       
     } catch (error) {
-<<<<<<< HEAD
       console.error("Payment error:", error);
       toast({
         title: "Payment error",
         description: "There was a problem initiating your payment. Please try again.",
         variant: "destructive",
       });
-=======
       console.error("Payment error:"error);
       toast({
         title: "Payment error",
         description: "There was a problem initiating your payment. Please try again.",
         variant: "destructive"});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     } finally {
       // Reset button state after a short delay
       setTimeout(() => {
         setIsProcessing(false);
-<<<<<<< HEAD
       }, 1500);
-=======
       }1500);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   };
   

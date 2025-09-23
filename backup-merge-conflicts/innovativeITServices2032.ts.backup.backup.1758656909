@@ -1,24 +1,18 @@
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/innovativeITServices2032.ts.backup
 <<<<<<< HEAD
 <<<<<<< HEAD
 export interface InnovativeITService { id: string; title: string; description: string; category: string; subcategory?: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; integration: string[]; support: string[]; link: string; badge?: string; icon: string; marketPrice: string; contactEmail: string; tags: string[]; techScore: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string; author: { name: string; id: string; avatarUrl?: string; verified: boolean}; images: string[]; createdAt: string}; export const INNOVATIVE_IT_SERVICES_2032: InnovativeITServic e[] = [;
 =======
 =======
-=======
 export interface InnovativeITService { id: string; title: string; description: string; category: string; subcategory?: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; integration: string[]; support: string[]; link: string; badge?: string; icon: string; marketPrice: string; contactEmail: string; tags: string[]; techScore: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string; author: { name: string; id: string; avatarUrl?: string; verified: boolean}; images: string[]; createdAt: string}; export const INNOVATIVE_IT_SERVICES_2032: InnovativeITServic e[] = [;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface InnovativeITService { id: string; title: string; description: string; category: string; subcategory?: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; integration: string[]; support: string[]; link: string; badge?: string; icon: string; marketPrice: string; contactEmail: string; tags: string[]; techScore: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string; author: { name: string; id: string; avatarUrl?: string; verified: boolean}; images: 'string[]; createdAt: string;' }; export const INNOVATIVE_IT_SERVICES_2032: InnovativeITServic e[] = [;
 =======
 >>>>>>> pr-11935
 export interface InnovativeITService { "id": "string; "title": string; "description": string; "category": string; subcategory?: string; "price": number; "currency": string; "pricingModel": string; "features": string[]; "benefits": string[]; "useCases": string[]; "targetAudience": string[]; "integration": string[]; "support": string[]; "link": string; badge?: string; "icon": string; "marketPrice": string; "contactEmail": string; "tags": string[]; "techScore": number; "rating": number; "reviewCount": number; "featured": boolean; "location": string; "availability": string; "author": { "name": string; "id": string; avatarUrl?: string; "verified": boolean"}; "images": 'string[]; "createdAt": "string;' "}; export const "INNOVATIVE_IT_SERVICES_2032": "InnovativeITServic e[] = [;"
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export interface InnovativeITService { "id": string; title: string; description: string; category: string; subcategory?: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; integration: string[]; support: string[]; link: string; badge?: string; icon: string; marketPrice: string; contactEmail: string; tags: string[]; techScore: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string; author: { name: string; id: string; avatarUrl?: string; verified: boolean}; "images": string[]; createdAt: string}; export const "INNOVATIVE_IT_SERVICES_2032": InnovativeITServic e[] = [;
 <<<<<<< HEAD:backup-merge-conflicts/innovativeITServices2032.ts.backup
 =======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface InnovativeITService { id: string; title: string; description: string; category: string; subcategory?: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; integration: string[]; support: string[]; link: string; badge?: string; icon: string; marketPrice: string; contactEmail: string; tags: string[]; techScore: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string; author: { name: string; id: string; avatarUrl?: string; verified: boolean}; images: string[]; createdAt: string}; export const INNOVATIVE_IT_SERVICES_2032: InnovativeITServic e[] = [;
 >>>>>>> main
 =======

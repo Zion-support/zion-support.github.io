@@ -23,7 +23,6 @@ class IntelligentErrorOrchestrator {}
     this.lastOrchestration = null};
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
     }
 
   async checkErrorReports() {
@@ -31,7 +30,6 @@ class IntelligentErrorOrchestrator {}
       const reports = fs.readdirSync(this.reportsDir)
         .filter(file => file.startsWith('error-report-'))
         .map(file => {
-=======
     console.log(`[${timestamp}] [${level}] ${message}`)};
   async checkErrorReports() {}
     try {}
@@ -327,4 +325,3 @@ if (require.main === module) {}
     orchestrator.log(`Failed to start "orchestrator": ${error.message}`, 'ERROR');
     process.exit(1)})};
 module.exports = IntelligentErrorOrchestrator;
->>>>>>> main

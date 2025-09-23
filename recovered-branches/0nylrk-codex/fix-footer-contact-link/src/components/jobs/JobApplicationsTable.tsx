@@ -1,7 +1,5 @@
 
 import { useState } from "react";
-<<<<<<< HEAD
-=======
 import { JobApplicationStatus } from "@/types/jobs";
 import { useJobApplications } from "@/hooks/useJobApplications";
 import {
@@ -88,4 +86,3 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

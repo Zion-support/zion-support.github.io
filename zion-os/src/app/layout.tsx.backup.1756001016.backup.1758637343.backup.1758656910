@@ -12,13 +12,10 @@ export const metadata = {
   viewport: "width=device-width, initial-scale=1",
   robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
   openGraph: {
-<<<<<<< HEAD
     title: "Zion OS - Sovereign AI-Powered Digital Economies",
     description: "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.",
-=======
     title: "Zion Tech Group - Sovereign AI-Powered Digital Economies",
     description: "Launch sovereign AI-powered digital economies with one click",
->>>>>>> origin/cursor/website-audit-and-enhancement-0da5
     type: "website",
     locale: "en_US",
     url: "https://ziontechgroup.com",
@@ -49,7 +46,6 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-<<<<<<< HEAD
     <html lang="en">
       <body className="min-h-screen bg-[var(--bg)] text-[var(--fg)]">
         <nav className="border-b border-white/10 sticky top-0 z-50 bg-zinc-900/50 backdrop-blur">
@@ -59,7 +55,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <a href="/multiverse/launch" className="text-sm opacity-80 hover:opacity-100">Launch</a>
             <a href="/admin/os-deploy" className="text-sm opacity-80 hover:opacity-100">Admin Deploy</a>
             <a href="/admin/instances" className="text-sm opacity-80 hover:opacity-100">Instances</a>
-=======
     <html lang="en" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -179,7 +174,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <div className="border-t border-white/10 mt-6 pt-6 text-center text-sm text-gray-400">
               <p>&copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.</p>
             </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-0da5
           </div>
         </footer>
         <Analytics />

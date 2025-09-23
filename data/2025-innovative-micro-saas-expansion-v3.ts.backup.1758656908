@@ -1,13 +1,10 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface InnovativeMicroSaasService {
-=======
 
 import { ServiceVariant } from '../types/service-variants';
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   id: string;
   name: string;
   tagline: string;
@@ -18,7 +15,6 @@ import { ServiceVariant } from '../types/service-variants';
   popular: boolean;
   icon: string;
   color: string;
-<<<<<<< HEAD
   textColor: string;
   link: string;
   marketPosition: string;
@@ -343,7 +339,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
   {
     id: 'quantum-ai-research-platform',
     name: 'Quantum AI Research Platform',
-=======
   text_color: string;
   link: string;
   market_position: string;
@@ -1618,13 +1613,11 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
   // Quantum AI Research Platform
   {
     id: 'quantum-ai-research-platform', name: 'Quantum AI Research Platform',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     tagline: 'Accelerate AI research with quantum computing capabilities',
     price: '$1,299',
     period: '/month',
     description: 'Cutting-edge research platform that combines quantum computing with artificial intelligence to solve complex problems in drug discovery, materials science, and optimization.',
     features: [
-<<<<<<< HEAD
       'Quantum algorithm development tools',
       'AI model training on quantum hardware',
       'Hybrid quantum-classical computing',
@@ -1714,7 +1707,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
   {
     id: 'space-technology-innovation',
     name: 'Space Technology Innovation Platform',
-=======
       'Quantum algorithm development toolsAI model training on quantum hardwareHybrid quantum-classical computingResearch collaboration toolsAdvanced visualization and simulationPerformance benchmarkingResearch workflow automationPublication and sharing tools';
       'Grant and funding management'
     ];
@@ -1769,13 +1761,11 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
   // Space Technology Innovation Platform
   {
     id: 'space-technology-innovation', name: 'Space Technology Innovation Platform',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     tagline: 'Accelerate space exploration with cutting-edge technology solutions',
     price: '$2,499',
     period: '/month',
     description: 'Revolutionary platform that combines space technology, AI, and quantum computing to enable next-generation space exploration, satellite management, and space resource utilization.',
     features: [
-<<<<<<< HEAD
       'Satellite constellation management',
       'Space debris tracking and avoidance',
       'AI-powered mission planning',
@@ -1912,7 +1902,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
   {
     id: 'quantum-financial-modeling',
     name: 'Quantum Financial Modeling Platform',
-=======
       'Satellite constellation managementSpace debris tracking and avoidanceAI-powered mission planningQuantum communication systemsSpace resource mappingAutonomous navigation systemsClimate monitoring and predictionSpace manufacturing automation';
       'Interplanetary communication'
     ];
@@ -1996,13 +1985,11 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
   // Quantum Financial Modeling Platform
   {
     id: 'quantum-financial-modeling', name: 'Quantum Financial Modeling Platform',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     tagline: 'Revolutionize financial modeling with quantum computing and AI',
     price: '$1,599',
     period: '/month',
     description: 'Next-generation financial modeling platform that combines quantum computing with AI to solve complex financial problems, optimize portfolios, and predict market movements.',
     features: [
-<<<<<<< HEAD
       'Quantum portfolio optimization',
       'AI-powered market prediction',
       'Risk assessment algorithms',
@@ -2323,7 +2310,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     reviews: 28
   }
 ];
-=======
       'Quantum portfolio optimizationAI-powered market predictionRisk assessment algorithmsReal-time financial analyticsMulti-asset class modelingRegulatory compliance toolsBacktesting and validationCustom financial models';
 
       'API integration capabilities'
@@ -3118,7 +3104,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
 ;

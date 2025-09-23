@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useEffect, useState } from 'react',
 import { useForm } from 'react-hook-form',
 import { useNavigate, useSearchParams } from 'react-router-dom',
@@ -147,4 +145,3 @@ export default function CheckoutV2() {
     </div>
   ),
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

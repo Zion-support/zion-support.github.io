@@ -3,7 +3,6 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
 const logsDir = path.join(__dirname, 'logs');
 const logFile = path.join(logsDir, 'seo-optimizer.log');
 const reportFile = path.join(logsDir, 'seo-report.json');
@@ -50,7 +49,6 @@ function main() {
 }
 
 if (require.main === module) main();
-=======
 class SEOOptimizer {
   constructor() {
     this.seoData = new Map();
@@ -138,4 +136,3 @@ class SEOOptimizer {
 
 const optimizer = new SEOOptimizer();
 optimizer.analyzeSEO();
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

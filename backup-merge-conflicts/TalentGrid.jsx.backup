@@ -1,9 +1,6 @@
 =======
 ' \"export\": function TalentGrid({ talents,isLoading,onTalentClick,isAuthenticated,viewProfile,clearFilters,handleBook,handleMessage }) { \''\'";\";
-<<<<<<< HEAD:backup-merge-conflicts/TalentGrid.jsx.backup
 >>>>>>> main
-=======
 " export: function TalentGrid({ talents,isLoading,onTalentClick,isAuthenticated,viewProfile,clearFilters,handleBook,handleMessage }) { """";";'"'"
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/components/talent/TalentGrid.jsx
 =======
 >>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

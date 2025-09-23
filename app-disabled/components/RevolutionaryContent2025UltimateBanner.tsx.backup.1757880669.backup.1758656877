@@ -23,13 +23,11 @@ const RevolutionaryContent2025UltimateBanner = () => {
       link: "/quantum-computing-solutions"
     },
     {
-<<<<<<< HEAD
       title: "Neural Interface Technology",
       subtitle: "Direct Brain-Computer Integration",
       description: "Seamless human-AI collaboration through advanced neural interfaces",
       cta: "Discover Now",
       link: "/neural-interfaces-2025"
-=======
       id: "implementation-roadmap",
       title: "AI 2025 Implementation Ultimate Roadmap",
       subtitle: "From Strategy to 700% ROI in 12 Months - Comprehensive Guide",
@@ -70,7 +68,6 @@ const RevolutionaryContent2025UltimateBanner = () => {
       url: "/case-studies/ai-2025-autonomous-systems-revolution-success-story",
       type: "case-study",
       featured: true
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
     }
   ];
 
@@ -153,8 +150,6 @@ const RevolutionaryContent2025UltimateBanner = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
-<<<<<<< HEAD
-=======
 
         {/* Progress Indicator */}
         <div className="flex justify-center mb-8">
@@ -262,7 +257,6 @@ const RevolutionaryContent2025UltimateBanner = () => {
             ))}
           </div>
         </div>
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
       </div>
     </section>
   );

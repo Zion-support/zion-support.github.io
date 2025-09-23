@@ -6,7 +6,6 @@ class FinalAutomationSuite {
   constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-<<<<<<< HEAD
     this.ensureDirectories();
   }
 
@@ -14,7 +13,6 @@ class FinalAutomationSuite {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
     }
-=======
     this.ensureDirectories()}
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
@@ -170,4 +168,3 @@ if (require.main === module) {
 }
 
 module.exports = FinalAutomationSuite;
->>>>>>> main

@@ -1,7 +1,5 @@
 "use client";
 'use client';
-<<<<<<< HEAD
-=======
 
 import React, { useState, useEffect } from 'react';
 
@@ -489,4 +487,3 @@ const AdvancedSecurityMonitor: React.FC = () => {
 };
 
 export default AdvancedSecurityMonitor;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

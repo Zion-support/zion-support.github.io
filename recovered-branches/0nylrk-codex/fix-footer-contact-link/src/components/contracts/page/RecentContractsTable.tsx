@@ -15,8 +15,6 @@ interface RecentContractsTableProps {
   onViewContract: (contractId: string) => void;
 }
 
-<<<<<<< HEAD
-=======
 export function RecentContractsTable({ contractsonViewContract }: RecentContractsTableProps) {
   return (
     <>
@@ -88,4 +86,3 @@ export function RecentContractsTable({ contractsonViewContract }: RecentContract
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

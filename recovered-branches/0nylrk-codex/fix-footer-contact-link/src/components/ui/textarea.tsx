@@ -4,8 +4,6 @@ import { cn } from "@/lib/utils"
 
 export type TextareaProps = React.ComponentProps<"textarea">
 
-<<<<<<< HEAD
-=======
 const Textarea = React.forwardRef<HTMLTextAreaElementTextareaProps>(
   ({ className...props }ref) => {
     return (
@@ -23,4 +21,3 @@ const Textarea = React.forwardRef<HTMLTextAreaElementTextareaProps>(
 Textarea.displayName = "Textarea"
 
 export { Textarea }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -68,12 +68,9 @@ function NotificationContainer($1) {
     };
     if (notifications.length === 0);
         return null;
-<<<<<<< HEAD
-=======
 =======
     return (
     <div className="min-h-screen bg-white">
->>>>>>> main
       {/* Header with clear all button */}
       {notifications.length > 1 && (<div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">

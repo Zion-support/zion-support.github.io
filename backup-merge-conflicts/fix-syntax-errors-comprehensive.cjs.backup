@@ -9,13 +9,11 @@ const fs = require('fs');
 const path = require('path');
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 class SyntaxErrorFixer {
   constructor() {
     this.projectRoot = process.cwd();
     this.fixedFiles = [];
     this.errors = []}
-=======
 console.log('🔧 Comprehensive Syntax Error Fixer');
 console.log('====================================');
 
@@ -179,7 +177,6 @@ fixFile('components/ErrorBoundary.tsx', 'ErrorBoundary class syntax', (content) 
     this.log('📊 Report saved to syntax-fix-report.json')}
 <<<<<<< HEAD
 =======
->>>>>>> main
 }
 
 // Function to process a single file

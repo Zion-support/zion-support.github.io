@@ -690,9 +690,7 @@
     "react-datepicker": "^8.4.0",
     "react-dom": "^17.0.2",
     "uuid": "^11.1.0",
-<<<<<<< HEAD
     "web3.storage": "^4.6.0"
-=======
     "js-yaml": "^4.1.0",
     "jsdom": "^24.1.0",
     "lucide-react": "^0.536.0",
@@ -707,7 +705,6 @@
     "react-dom": "^17.0.2",
     "react-share": "^5.2.2",
     "uuid": "^11.1.0"
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",

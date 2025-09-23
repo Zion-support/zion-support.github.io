@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-<<<<<<< HEAD
 const DATA_DIR = path.resolve(process.cwd(), 'data', 'newsletter');
 const FILE_PATH = path.resolve(DATA_DIR, 'subscribers.json');
 
@@ -21,7 +20,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8');
   res.status(200).json({ ok: true });
 }
-=======
 
 function ensure() {
   if (!fs && fs.existsSync(DATA_DIR)) fs && fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -55,7 +53,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 

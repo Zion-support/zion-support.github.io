@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-=======
   UsersRocketBrainAtomShieldCloud
   ArrowRightMapPinClockDollarSignStarZap
 } from 'lucide-react';
@@ -458,4 +456,3 @@ export default function CareersPage() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

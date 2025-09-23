@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -28,7 +27,6 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
             variant="ghost" 
             size="sm" 
             onClick={onDownload} 
-=======
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -85,7 +83,6 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
             variant="ghost"
             size="sm"
             onClick={onDownload}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             disabled={isLoading}
             className="h-8 w-8 p-0"
           >
@@ -93,7 +90,6 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
             <span className="sr-only">Download Resume</span>
           </Button>
         </div>
-<<<<<<< HEAD
         
         {resume.basic_info.summary && (
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">
@@ -101,7 +97,6 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
           </p>
         )}
         
-=======
 
         {resume.basic_info.summary && (
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">
@@ -175,7 +170,6 @@ function ResumePreviewCard() {
         
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -201,11 +195,9 @@ function ResumePreviewCard() {
             )}
           </div>
         )}
-<<<<<<< HEAD
       </CardContent>
     </Card>
   );
-=======
 
       </CardContent>
 
@@ -248,5 +240,4 @@ function ResumePreviewCard() {
   );
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

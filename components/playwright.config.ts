@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
  trace: on-first-retry'
 }
@@ -113,4 +111,3 @@ reporter: [ ['list'], ['json', {
   //     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   }
   // ]
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

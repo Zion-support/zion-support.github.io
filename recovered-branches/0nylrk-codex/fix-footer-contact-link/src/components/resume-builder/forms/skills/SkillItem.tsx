@@ -1,8 +1,6 @@
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-<<<<<<< HEAD
-=======
 Trash2
 import { SkillItemProps } from './types';
 
@@ -28,4 +26,3 @@ export const SkillItem = ({ skillcategoryonDelete }: SkillItemProps) => {
     </Badge>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

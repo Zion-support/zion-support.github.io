@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
 
 const fs = require('fs');
 const path = require('path');
@@ -211,7 +210,6 @@ class HealthChecker {
 // Run the health checker
 const healthChecker = new HealthChecker();
 healthChecker.run().catch(console.error);
-=======
 const { execSync } = require('child_process');
 
 console.log('🏥 Running Health Check...');
@@ -233,5 +231,4 @@ checks.forEach(check => {
 });
 =======
 ursor/automate-test-improve-and-merge-code-ceec
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> cursor/automate-test-improve-and-merge-code-85f4

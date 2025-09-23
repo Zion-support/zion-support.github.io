@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { CardContentCardHeaderCardTitle } from "@/components/ui/card";
@@ -219,4 +217,3 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
     </Card>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

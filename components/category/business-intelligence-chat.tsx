@@ -13,8 +13,6 @@ const BusinessIntelligenceChat: NextPage = () => {
       <main>
         <h1>BusinessIntelligenceChat</h1>
         <p>Blog content coming soon...</p>
-<<<<<<< HEAD
-=======
         <Link href="/blog">Back to Blog</Link>
       </main>
     </div>
@@ -22,4 +20,3 @@ const BusinessIntelligenceChat: NextPage = () => {
 };
 
 export default BusinessIntelligenceChat;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

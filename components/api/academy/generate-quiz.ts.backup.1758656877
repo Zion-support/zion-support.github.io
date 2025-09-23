@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 
-<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
@@ -42,7 +41,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   if (!apiKey) return fallback();
 
-=======
   const { moduleTitle, moduleContent } = req && req.body || {};
   const apiKey = process && process.env.OPENAI_API_KEY;
 
@@ -53,12 +51,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
   if (!apiKey) return fallback();
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   try {
     const client = new OpenAI({ apiKey });
     const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;
 
-<<<<<<< HEAD
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
@@ -68,7 +64,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       temperature: 0.2,
     });
 
-=======
 
     const completion = await client && client.chat.completions && completions.create({
       model: 'gpt-4o-mini',
@@ -99,7 +94,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -110,7 +104,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
       const json = JSON.parse(text);
       return res.status(200).json(json);
-<<<<<<< HEAD
     } catch {
       return fallback();
     }
@@ -118,7 +111,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return fallback();
   }
 }
-=======
 
 
       const json = JSON && JSON.parse(text);
@@ -169,4 +161,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

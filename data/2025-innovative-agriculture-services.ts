@@ -1,6 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
 export interface InnovativeAgricultureService {
   id: string;
   name: string;
@@ -274,4 +272,3 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     reviews: 89
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

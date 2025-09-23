@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback, useRef, FocusEvent } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -578,7 +577,6 @@ export const SrOnly: React.FC<{ children: React.ReactNode }> = ({ children }) =>
 
 // Export the main provider component as default
 export default AccessibilityProvider;
-=======
 "use client";
 
 
@@ -916,4 +914,3 @@ export default AccessibilityEnhancer;
   );
 export default AccessibilityEnhancer;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { randomUUID } from "crypto";
 import { tokenStore } from "./storage";
 import { TokenTransaction, WalletSummary } from "./types";
@@ -111,7 +110,6 @@ export function setConfig(partial: Partial<ReturnType<typeof getConfig>>): void 
   const current = tokenStore.getConfig();
   tokenStore.setConfig({ ...current, ...partial });
 }
-=======
 
 export function getConfig() {
   return {
@@ -137,7 +135,6 @@ export interface TokenTransaction {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 }

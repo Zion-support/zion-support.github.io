@@ -18,14 +18,12 @@ class AutomationScriptFixer {}
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
     try {}
       await fs.appendFile(this.logFile, logEntry);
-<<<<<<< HEAD
       } catch (error) {
       console.error(`Failed to write to log "file": ${error.message}`)}
   }
 
   async ensureDirectories() {
     const dirs = [path.dirname(this.logFile),
-=======
       console.log(`[${level}] ${message}`)} catch (error) {`}
       console.error(`Failed to write to log "file": ${error.message}`)};
   };
@@ -190,4 +188,3 @@ if (require.main === module) {}
   const fixer = new AutomationScriptFixer();
   fixer.run().catch(console.error)};
 module.exports = AutomationScriptFixer;
->>>>>>> main

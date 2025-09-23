@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/index.p.integration.test.js.backup
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD:__tests__/index.p.integration.test.js
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 >>>>>>> pr-11913:__tests__/index.p.integration.test.js
 import React from 'react';
@@ -26,11 +23,8 @@ describe('index.p Integration Tests', () => {
   });
 });
 const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import indexp from "./pages/index.p"; describe("index.p Integration Tests",() => { test("page renders correctly",() => { render(<indexp />); expect(screen.getByRole("main")).toBeInTheDocument()}); test("navigation works",() => { render(<indexp />)}); test("page content is accessible",() => { render(<indexp />)}); test("page loads with correct data",() => { render(<indexp />)})});''"
-<<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD:__tests__/index.p.integration.test.js
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import indexp from '../pages/index.p'; describe('index.p Integration Tests',() => { test('page renders correctly',() => { render(<indexp />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('navigation works',() => { render(<indexp />)}); test('page content is accessible',() => { render(<indexp />)}); test('page loads with correct data',() => { render(<indexp />)})});
 >>>>>>> main
 =======

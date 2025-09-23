@@ -1,6 +1,5 @@
 import React from 'react';
 =======
-<<<<<<< HEAD
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
@@ -53,7 +52,6 @@ interface A11y.specProps {
     
     // Should be able to navigate without errors;
     await expect(page.locator(':focus')).toBeVisible()})});
-=======
 export default function A11y.spec({ }: A11y.specProps) {
   return (
     <div>
@@ -62,5 +60,4 @@ export default function A11y.spec({ }: A11y.specProps) {
     </div>
   );
 }
->>>>>>> main
 >>>>>>> main

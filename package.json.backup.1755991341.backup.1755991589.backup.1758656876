@@ -714,9 +714,7 @@
     "react": "18.2.0",
     "react-datepicker": "^8.4.0",
     "react-dom": "^17.0.2",
-<<<<<<< HEAD
     "resend": "^4.0.0",
-=======
     "lucide-react": "^0.536.0",
     "mime-types": "^3.0.1",
     "next": "^11.1.4",
@@ -728,7 +726,6 @@
     "react": "^17.0.2",
     "react-datepicker": "^8.4.0",
     "react-dom": "^17.0.2",
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
     "uuid": "^11.1.0"
   },
   "devDependencies": {

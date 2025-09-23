@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AIAutonomousResearchAssistant() {
@@ -24,7 +23,6 @@ export default function AIAutonomousResearchAssistant() {
 			canonical="https://ziontechgroup.com/ai-autonomous-research-assistant"
 		/>
 	);
-=======
 import Head from 'next/head';
 
 export default function AiAutonomousResearchAssistantPage() {
@@ -45,5 +43,4 @@ export default function AiAutonomousResearchAssistantPage() {
       </div>
     </>
   );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

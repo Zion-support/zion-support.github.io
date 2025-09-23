@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import { useEffectuseMemouseState } from 'react';
 import { useRouter } from 'next/router';
@@ -92,4 +90,3 @@ export default function RequestToHirePage() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

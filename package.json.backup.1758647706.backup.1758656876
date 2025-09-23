@@ -13,7 +13,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
     "lint": "eslint src pages app lib components hooks --no-error-on-unmatched-pattern",
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "rm -rf .next && npm run build",
@@ -21,14 +20,12 @@
 <<<<<<< HEAD
     "lint:fix": "eslint src pages app lib components hooks --fix",
     "type-check": "tsc --noEmit",
-=======
     "lint": "eslint app",
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "rm -rf .next && npm run build",
     "dev:clean": "rm -rf .next && npm run dev",
     "lint:fix": "eslint app --fix",
     "type-check": "NODE_OPTIONS='--max-old-space-size=8192' tsc --noEmit",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-bd83
 =======
     "lint:fix": "next lint --fix",
     "type-check": "NODE_OPTIONS='--max-old-space-size=8192' tsc --noEmit -p tsconfig.app.json",
@@ -67,10 +64,7 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@netlify/plugin-nextjs": "^5.13.3",
-<<<<<<< HEAD
     "@types/react-dom": "^18.3.7",
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8
     "autoprefixer": "^10.4.21",
     "axios": "^1.11.0",
     "class-variance-authority": "0.7.0",
@@ -110,10 +104,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
     "@next/swc-linux-x64-gnu": "^15.5.3",
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-bd83
 =======
     "@next/swc-linux-x64-gnu": "^15.5.3",
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8
@@ -141,17 +132,14 @@
     "@testing-library/react": "12.1.5",
     "@types/jest": "^29.0.0",
     "@types/node": "^16.18.126",
-<<<<<<< HEAD
     "@types/react": "^18.3.24",
     "@types/react-dom": "^18.3.7",
-=======
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-bd83
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6fc7
 =======
@@ -175,12 +163,9 @@
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.0",
 <<<<<<< HEAD
-<<<<<<< HEAD
     "typescript": "^5.9.2"
-=======
     "typescript": "^5.0.0",
     "typescript-eslint": "^8.44.1"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-bd83
 =======
     "typescript": "^5.0.0",
     "@next/swc-linux-x64-gnu": "15.5.3"
@@ -205,7 +190,6 @@
       "^@/(.*)$": "<rootDir>/$1"
     },
 <<<<<<< HEAD
-<<<<<<< HEAD
     "modulePathIgnorePatterns": [
 <<<<<<< HEAD
       "<rootDir>/automation/",
@@ -215,7 +199,6 @@
       "<rootDir>/components/apps/",
       "<rootDir>/backup-problematic-files/",
       "<rootDir>/server/"
-=======
       "<rootDir>/automation/backups/.*",
       "<rootDir>/apps.backup/.*",
       "<rootDir>/components/apps/.*",
@@ -225,7 +208,6 @@
       "<rootDir>/backup-merge-conflicts/.*",
       "<rootDir>/recovered-branches/.*",
       "<rootDir>/zion-os/.*"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-5719
     ],
     "watchPathIgnorePatterns": [
       "<rootDir>/automation/backups/.*",
@@ -254,7 +236,6 @@
         }
       ]
     },
-<<<<<<< HEAD
     "testPathIgnorePatterns": [
       "<rootDir>/.next/",
       "<rootDir>/node_modules/",
@@ -294,9 +275,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
   "type": "module"
-=======
   "packageManager": "npm@11.6.0"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-bd83
 =======
   "packageManager": "npm@11.6.0"
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3530

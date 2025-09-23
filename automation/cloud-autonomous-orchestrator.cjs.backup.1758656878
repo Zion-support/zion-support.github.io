@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { generateMetrics, generateOperatorSummary } = require('./lib/metrics-generator.cjs');
@@ -38,7 +37,6 @@ async function main() {
 main().catch((e) => {
   console.error('Automation run failed', e);
   process.exit(1);
-=======
 
 const fs = require('fs');
 const path = require('path');
@@ -116,5 +114,4 @@ main().catch(err => {
   log(`Fatal error: ${err.message}`);
   // Don't exit with error code to prevent workflow failure
   log('Continuing despite error...');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 });

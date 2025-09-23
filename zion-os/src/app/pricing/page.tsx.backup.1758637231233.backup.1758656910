@@ -1,16 +1,13 @@
-<<<<<<< HEAD
 
 "use client";
 import { useState } from "react";
 interface PricingTier {name: string;
-=======
 "use client";
 
 import { useState } from "react";
 
 interface PricingTier {
   name: string;
->>>>>>> origin/auto/autonomy-17186719616
   price: string;
   period: string;
   description: string;
@@ -19,20 +16,16 @@ interface PricingTier {
   cta: string;
   ctaLink: string;
 }
-<<<<<<< HEAD
 interface ServicePricing {serviceName: string;
-=======
 
 interface ServicePricing {
   serviceName: string;
->>>>>>> origin/auto/autonomy-17186719616
   category: string;
   description: string;
   tiers: PricingTier[];
   features: string[];
   benefits: string[];
 }
-<<<<<<< HEAD
 const servicePricing: ServicePricing[] = [;
   {serviceName: "Zion OS Platform";
     category: "Core Platform";
@@ -1085,7 +1078,6 @@ export default function PricingPage() {;
       </div>;
     </div>);
 }
-=======
 
 const servicePricing: ServicePricing[] = [
   {
@@ -1489,4 +1481,3 @@ export default function PricingPage() {
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

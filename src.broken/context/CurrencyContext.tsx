@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React{ createContextuseContextuseEffectuseState } from 'react';
 
 export type SupportedCurrency = 'USD' | 'EUR' | 'GBP';
@@ -58,4 +56,3 @@ export const CurrencyProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 };
 
 export const useCurrency = () => useContext(CurrencyContext);
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

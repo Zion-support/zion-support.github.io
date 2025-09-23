@@ -9,8 +9,6 @@ interface ButtonProps {
 }
 
 export default function Button({ 
-<<<<<<< HEAD
-=======
   children
   variant = 'primary'
   size = 'md'
@@ -48,4 +46,3 @@ export default function Button({
     </button>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { useEffectuseState } from "react";
 import { QuoteFormData } from "@/types/quotes";
 import { CardContent } from "@/components/ui/card";
@@ -223,4 +221,3 @@ export function SummaryStep({ formDataupdateFormData }: SummaryStepProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

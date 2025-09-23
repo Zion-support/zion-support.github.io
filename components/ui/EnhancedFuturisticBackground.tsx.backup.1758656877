@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 interface EnhancedFuturisticBackgroundProps {
   children: React.ReactNode;
-=======
 "use client";
 
 const colorSchemes = {
@@ -42,12 +40,10 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface EnhancedFuturisticBackgroundProps {
   children: React.ReactNode,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   className?: string;
   intensity?: 'low' | 'medium' | 'high';
   colorScheme?: 'quantum' | 'cyberpunk' | 'holographic' | 'neural' | 'cosmic';
   particleCount?: number;
-<<<<<<< HEAD
   animationSpeed?: number;
 }
 
@@ -125,7 +121,6 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-=======
   animationSpeed?: number
 
 }
@@ -179,17 +174,14 @@ const EnhancedFuturisticBackground: React.FC<;
 
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     const colors = colorSchemes[colorScheme];
     const settings = intensitySettings[intensity];
 
-<<<<<<< HEAD
     // Enhanced particle system
     class Particle {
       x: number;
       y: number;
-=======
 
 
       x: number;
@@ -244,14 +236,12 @@ if (return) {
       coordinate_x: number;
       coordinate_y: number;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       vx: number;
       vy: number;
       size: number;
       color: string;
       opacity: number;
       life: number;
-<<<<<<< HEAD
       maxLife: number;
 
       constructor() {
@@ -266,7 +256,6 @@ if (return) {
         this.maxLife = 100;
       }
 
-=======
 
     // Enhanced particle system
     class Particle {
@@ -291,26 +280,20 @@ if (return) {
       }
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       update() {
         this.x += this.vx;
         this.y += this.vy;
         this.life--;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         // Wrap around edges
         if (this.x < 0) this.x = canvas.width;
         if (this.x > canvas.width) this.x = 0;
         if (this.y < 0) this.y = canvas.height;
         if (this.y > canvas.height) this.y = 0;
-<<<<<<< HEAD
 
         // Fade out near end of life
         if (this.life < 20) {
           this.opacity *= 0.95;
-=======
         // Fade out near end of life
         if (this.life < 20) {
 
@@ -326,17 +309,14 @@ if (return) {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         }
       }
 
       draw() {
         ctx.save();
         ctx.globalAlpha = this.opacity;
-<<<<<<< HEAD
         
         // Create gradient for particle
-=======
 
         
         // Create gradient for particle
@@ -350,20 +330,15 @@ if (return) {
         );
         gradient.addColorStop(0, this.color);
         gradient.addColorStop(1, 'transparent');        // Create gradient for particle
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
         gradient.addColorStop(0, this.color);
         gradient.addColorStop(1, 'transparent');
         
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         ctx.fillStyle = gradient;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
-<<<<<<< HEAD
         
         ctx.restore();
       }
@@ -390,7 +365,6 @@ if (return) {
           Math.pow(this.p1.x - this.p2.x, 2) + Math.pow(this.p1.y - this.p2.y, 2)
         );
 
-=======
 
 
 
@@ -526,7 +500,6 @@ constructor(p1: Particle, p2: Particle) {
           Math.pow(this.p1.x - this.p2.x, 2) + Math.pow(this.p1.y - this.p2.y, 2)
 
         );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         if (distance < 150) {
           ctx.save();
           ctx.globalAlpha = this.opacity * (1 - distance / 150);
@@ -536,7 +509,6 @@ constructor(p1: Particle, p2: Particle) {
           ctx.moveTo(this.p1.x, this.p1.y);
           ctx.lineTo(this.p2.x, this.p2.y);
           ctx.stroke();
-<<<<<<< HEAD
           ctx.restore();
         }
       }
@@ -552,7 +524,6 @@ constructor(p1: Particle, p2: Particle) {
 
     // Matrix rain effect
     const matrixRain = () => {
-=======
 
       maxLife: number;      x: number,;
       y: number,;
@@ -711,13 +682,11 @@ if ( {) {
       const columns = canvas && canvas.width / fontSize;
       const drops: number[] = [];
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
       const fontSize = 12;
       const columns = canvas.width / fontSize;
       const drops: number[] = [];
 
-<<<<<<< HEAD
       for (let i = 0; i < columns; i++) {
         drops[i] = 1;
       }
@@ -734,7 +703,6 @@ if ( {) {
           ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
           if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-=======
       for (let i = 0, i < columns, i++) {
 
         drops[i] = 1
@@ -804,12 +772,10 @@ if ( {) {
 if (> 0.975) {) {
   $2
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             drops[i] = 0;
           }
           drops[i]++;
         }
-<<<<<<< HEAD
       };
 
       return drawMatrix;
@@ -817,7 +783,6 @@ if (> 0.975) {) {
 
     const drawMatrix = matrixRain();
 
-=======
       }
       return drawMatrix;    };          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
           if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
@@ -843,13 +808,11 @@ if (> 0.975) {) {
 
 
     const drawMatrix = matrixRain();
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     // Main animation loop
     const animate = () => {
       // Clear canvas with fade effect
       ctx.fillStyle = colors.background;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-<<<<<<< HEAD
 
       // Draw matrix rain
       drawMatrix();
@@ -866,7 +829,6 @@ if (> 0.975) {) {
         particles.push(new Particle());
       }
 
-=======
       // Draw matrix rain
       drawMatrix();
       // Update and draw particles
@@ -946,19 +908,16 @@ if (> 0.975) {) {
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {        particles.push(new Particle())
       }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       // Create connections between nearby particles
       connections = [];
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const distance = Math.sqrt(
-<<<<<<< HEAD
             Math.pow(particles[i].x - particles[j].x, 2) + 
             Math.pow(particles[i].y - particles[j].y, 2)
           );
           if (distance < 150) {
             connections.push(new Connection(particles[i], particles[j]));
-=======
             Math.pow(particles[i].x - particles[j].x, 2) +
               Math.pow(particles[i].y - particles[j].y, 2)
           );
@@ -973,40 +932,30 @@ if (> 0.975) {) {
       }
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           }
         }
       }
 
       // Draw connections
       connections.forEach(connection => connection.draw());
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       // Add floating geometric shapes
       if (Math.random() < 0.02) {
         const x = Math.random() * canvas.width;
         const y = Math.random() * canvas.height;
         const size = Math.random() * 20 + 10;
-<<<<<<< HEAD
         
-=======
 
         
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         ctx.save();
         ctx.globalAlpha = 0.1;
         ctx.strokeStyle = colors.accent;
         ctx.lineWidth = 1;
-<<<<<<< HEAD
         
-=======
 
         
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         if (Math.random() < 0.5) {
           // Draw triangle
           ctx.beginPath();
@@ -1014,7 +963,6 @@ if (> 0.975) {) {
           ctx.lineTo(x - size, y + size);
           ctx.lineTo(x + size, y + size);
           ctx.closePath();
-<<<<<<< HEAD
           ctx.stroke();
         } else {
           // Draw square
@@ -1071,7 +1019,6 @@ if (> 0.975) {) {
 };
 
 export default EnhancedFuturisticBackground;
-=======
 
 
       for (let index = 0; i < particles.length; i++) {
@@ -1240,4 +1187,3 @@ export default EnhancedFuturisticBackground;
 export default EnhancedFuturisticBackground;
 export default EnhancedFuturisticBackground;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

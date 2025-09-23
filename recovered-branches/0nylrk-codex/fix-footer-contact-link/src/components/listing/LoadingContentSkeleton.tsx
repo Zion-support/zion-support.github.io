@@ -1,7 +1,5 @@
 
 import { Skeleton } from "@/components/ui/skeleton";
-<<<<<<< HEAD
-=======
 import { CardContentCardHeader } from "@/components/ui/card";
 
 export function LoadingContentSkeleton() {
@@ -27,4 +25,3 @@ export function LoadingContentSkeleton() {
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

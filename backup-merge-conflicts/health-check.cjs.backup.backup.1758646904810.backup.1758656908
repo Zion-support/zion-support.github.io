@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 const healthReport = {
@@ -74,7 +73,6 @@ runCheck('TypeScript compilation', () => {
 fs.writeFileSync('health-check-report.json', JSON.stringify(healthReport, null, 2));
 
 process.exit(healthReport.status === 'healthy' ? 0 : 1);
-=======
 const { execSync } = require('child_process')
 console.log('� Running Health Check...')
   "status"
@@ -84,4 +82,3 @@ console.log('� Running Health Check...')
     execSync('npm run lint', { "stdio"})
     execSync('npm run type-check', { "stdio"})
 console.log('� Overall "status")
->>>>>>> main

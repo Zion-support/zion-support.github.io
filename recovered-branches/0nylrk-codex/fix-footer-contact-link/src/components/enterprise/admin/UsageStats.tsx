@@ -2,8 +2,6 @@
 import { Slider } from "@/components/ui/slider";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-=======
 
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
@@ -179,4 +177,3 @@ export function UsageStats() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

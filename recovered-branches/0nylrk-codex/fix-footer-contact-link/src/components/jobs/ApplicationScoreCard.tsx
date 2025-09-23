@@ -2,8 +2,6 @@
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-=======
 import { CardHeaderCardTitleCardContentCardFooter } from "@/components/ui/card";
 import { supabase } from "@/integrations/supabase/client";
 import { Loader2StarBarChart2Lightbulb } from "lucide-react";
@@ -214,4 +212,3 @@ export function ApplicationScoreCard({ applicationScoreUpdated }: ApplicationSco
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

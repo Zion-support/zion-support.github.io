@@ -13,8 +13,6 @@ const NetworkEngineeringChat: NextPage = () => {
       <main>
         <h1>NetworkEngineeringChat</h1>
         <p>Blog content coming soon...</p>
-<<<<<<< HEAD
-=======
         <Link href="/blog">Back to Blog</Link>
       </main>
     </div>
@@ -22,4 +20,3 @@ const NetworkEngineeringChat: NextPage = () => {
 };
 
 export default NetworkEngineeringChat;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

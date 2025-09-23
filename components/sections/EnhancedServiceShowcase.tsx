@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 class ErrorBoundary extends React.Component {
@@ -1587,4 +1585,3 @@ export default EnhancedServiceShowcase;
 
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -6,8 +6,6 @@ import { cn } from "@/lib/utils"
 const Progress = React.forwardRef<
   React.ElementRef<typeof ProgressPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>
-<<<<<<< HEAD
-=======
 >(({ classNamevalue...props }ref) => (
   <ProgressPrimitive.Root
     ref={ref}
@@ -26,4 +24,3 @@ const Progress = React.forwardRef<
 Progress.displayName = ProgressPrimitive.Root.displayName
 
 export { Progress }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

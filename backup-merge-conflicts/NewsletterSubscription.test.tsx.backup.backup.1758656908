@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface NewsletterSubscription.testProps {
@@ -13,5 +12,3 @@ export default function NewsletterSubscription.test({ }: NewsletterSubscription.
     </div>
   );
 }
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

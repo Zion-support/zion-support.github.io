@@ -1,7 +1,5 @@
 
 import { Fragment } from "react";
-<<<<<<< HEAD
-=======
 import { Routes } from "react-router-dom";
 import Login from "@/pages/Login";
 import Signup from "@/pages/Signup";
@@ -51,4 +49,3 @@ const AuthRoutes = () => {
 };
 
 export default AuthRoutes;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

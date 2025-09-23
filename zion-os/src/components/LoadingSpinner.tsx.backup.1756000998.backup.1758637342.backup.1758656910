@@ -1,7 +1,6 @@
 "use client";
 
 interface LoadingSpinnerProps {
-<<<<<<< HEAD
   size?: "sm" | "md" | "lg";
   color?: "primary" | "white" | "blue" | "purple";
   text?: string;
@@ -77,7 +76,6 @@ export function LoadingBar({ progress = 0, text }: { progress?: number; text?: s
       <div className="text-center text-sm text-gray-400">
         {Math.round(progress)}%
       </div>
-=======
   size?: "small" | "medium" | "large";
   className?: string;
 }
@@ -113,7 +111,6 @@ export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinn
         />
       </svg>
       <span className="sr-only">Loading...</span>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2e5c
     </div>
   );
 }

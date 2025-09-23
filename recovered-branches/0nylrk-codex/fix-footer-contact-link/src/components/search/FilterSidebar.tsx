@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import React from "react";
 import {Button} from "@/components/ui/button";
@@ -125,7 +123,6 @@ export function FilterSidebar(): any ({;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           onClick={onClearFilters}
         >
           Clear All

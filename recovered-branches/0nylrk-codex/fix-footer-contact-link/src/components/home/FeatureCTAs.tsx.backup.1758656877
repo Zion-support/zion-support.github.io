@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -19,7 +18,6 @@ import {
   Building,
   Clock
 } from "lucide-react";
-=======
 
 
 
@@ -79,7 +77,6 @@ function FeatureCTAs() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -90,17 +87,14 @@ function FeatureCTAs() {
 export function FeatureCTAs() {
   const features = [
     {
-<<<<<<< HEAD
       title: "AI Talent Matching",
       description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.",
-=======
 
       title: "AI Talent Matching",;
       description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.";
       title: "AI Talent Matching",
       description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.",
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       icon: <Search className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />,
       link: "/marketplace",
       badge: "Popular",
@@ -120,7 +114,6 @@ export function FeatureCTAs() {
       link: "/services",
       badge: "New",
       details: "From on-demand IT support to specialized AI development, our marketplace offers verified services with transparent pricing and reviews."
-<<<<<<< HEAD
     },
     {
       title: "Equipment Catalog",
@@ -143,7 +136,6 @@ export function FeatureCTAs() {
       link: "/mobile-launch",
       badge: "Featured",
       details: "Manage your projects, communicate with clients or talents, and receive real-time updates wherever you are."
-=======
 
     },
 
@@ -236,7 +228,6 @@ export function FeatureCTAs() {
       link: "/dashboard/projects"
       details: "Our intuitive project management tools help you track progress, manage deliverables, and ensure timely completion."
     }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     {
       title: "Enterprise Solutions",
@@ -266,7 +257,6 @@ export function FeatureCTAs() {
       link: "/dashboard/projects",
       details: "Our intuitive project management tools help you track progress, manage deliverables, and ensure timely completion."
     },
-<<<<<<< HEAD
     {
       title: "Zion Hire AI",
       description: "AI-powered recruiting assistant to streamline your hiring process and find better matches.",
@@ -294,7 +284,6 @@ export function FeatureCTAs() {
                 <div className="flex justify-between items-start">
                   {feature.icon}
                   {feature.badge && (
-=======
 
     {
       title: "Zion Hire AI"
@@ -549,7 +538,6 @@ export function FeatureCTAs() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -559,7 +547,6 @@ export function FeatureCTAs() {;
                       {feature.badge}
                     </Badge>
                   )}
-<<<<<<< HEAD
                 </div>
                 <CardTitle className="mt-4">{feature.title}</CardTitle>
                 <CardDescription className="line-clamp-2">{feature.description}</CardDescription>
@@ -582,7 +569,6 @@ export function FeatureCTAs() {;
     </section>
   );
 }
-=======
                 </div>;
                 <CardTitle className="mt-4">{feature && feature.title}</CardTitle>;
                 <CardDescription className="line-clamp-2">{feature && feature.description}</CardDescription>;
@@ -630,4 +616,3 @@ export function FeatureCTAs() {;
     </section>);
 }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

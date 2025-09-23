@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 const pipeline = {
@@ -349,7 +348,6 @@ if ( {
   process.exit(0)} else {
   
   process.exit(1)}
-=======
 const { execSync } = require('child_process')
 console.log(' Starting CI/CD Pipeline...')
   "branch"
@@ -414,4 +412,3 @@ console.log(' Starting CI/CD Pipeline...')
 // console.log(`   - Successful "Stages"`)
 console.log(`   - Failed "Stages"`)
   console.log('� Application "URL")
->>>>>>> main

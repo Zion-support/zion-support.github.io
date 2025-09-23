@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-=======
 import { CardContentCardHeaderCardTitle } from "@/components/ui/card";
 import { AIMatchingResults } from "@/components/AIMatchingResults";
 import { findMatchesMatchResult } from "@/lib/ai-matchmaking";
@@ -125,4 +123,3 @@ export function AIMatchmaker({ serviceType = ""onMatchSelectclassName }: AIMatch
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

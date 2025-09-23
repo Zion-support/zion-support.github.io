@@ -1,7 +1,5 @@
 "use client";
 'use client';
-<<<<<<< HEAD
-=======
 
 import React, { useState, useEffect } from 'react';
 
@@ -492,4 +490,3 @@ const AdvancedAnalyticsEngine: React.FC = () => {
 };
 
 export default AdvancedAnalyticsEngine;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

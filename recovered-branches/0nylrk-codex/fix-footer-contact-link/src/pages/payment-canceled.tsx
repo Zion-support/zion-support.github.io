@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import React from 'react';
 import { Button  } from '@/components/ui/button';
@@ -134,4 +132,3 @@ function PaymentCanceled() {
 ;
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

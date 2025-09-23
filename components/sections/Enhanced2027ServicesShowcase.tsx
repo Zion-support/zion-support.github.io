@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 import React, { useState } from 'react',
@@ -1712,4 +1710,3 @@ export default Enhanced2027ServicesShowcase;
 
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

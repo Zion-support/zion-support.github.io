@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
@@ -53,4 +51,3 @@ function handler() {
 }
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

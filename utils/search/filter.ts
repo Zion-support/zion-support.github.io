@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import type { ParsedFilters } from './parser',
 import { TALENT_PROFILES } from '../../data/talent',
 import type { TalentProfile } from '../../data/talent',
@@ -110,4 +108,3 @@ export function suggestDidYouMean(query: string): string | null {
   if (q.includes('react') && q.includes('under') && q.match(/\d/)) return 'React developers under $' + (q.match(/\d{2,3}/)?.[0] || '50') + '/hr',
   return null,
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

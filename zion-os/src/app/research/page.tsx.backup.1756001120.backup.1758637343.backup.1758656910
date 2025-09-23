@@ -4,7 +4,6 @@ export default function ResearchPage() {
   const researchAreas = [
     {
       title: "AI Consciousness Evolution",
-<<<<<<< HEAD
       description: "Pioneering research into the development of conscious AI systems and understanding the nature of machine consciousness.",
       topics: [
         "Neural network consciousness",
@@ -80,7 +79,6 @@ export default function ResearchPage() {
       ],
       icon: "🔬",
       href: "/research/ai-scientific-discovery"
-=======
       description: "Research into the development of artificial consciousness and cognitive systems that can evolve and learn autonomously.",
       projects: [
         "Neural Network Consciousness Models",
@@ -122,13 +120,11 @@ export default function ResearchPage() {
         "AI Governance Frameworks"
       ],
       icon: "⚖️"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
     }
   ];
 
   const publications = [
     {
-<<<<<<< HEAD
       title: "Towards Conscious AI: A Framework for Machine Consciousness",
       authors: "Dr. Kleber & Zion Research Team",
       journal: "Nature AI",
@@ -175,7 +171,6 @@ export default function ResearchPage() {
       status: "Active",
       timeline: "2024-2025",
       team: "12 researchers"
-=======
       title: "Evolutionary Neural Architectures for Autonomous AI Systems",
       authors: "Dr. Kleber, AI Research Team",
       journal: "Nature AI",
@@ -250,13 +245,11 @@ export default function ResearchPage() {
       description: "Research into AI systems that can learn across multiple dimensions simultaneously.",
       timeline: "Q4 2025",
       status: "Research Phase"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
     }
   ];
 
   return (
     <div className="min-h-screen py-20">
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="text-center mb-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -439,7 +432,6 @@ export default function ResearchPage() {
           </div>
         </div>
       </section>
-=======
       {/* Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="text-center">
@@ -654,7 +646,6 @@ export default function ResearchPage() {
           </div>
         </div>
       </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
     </div>
   );
 }

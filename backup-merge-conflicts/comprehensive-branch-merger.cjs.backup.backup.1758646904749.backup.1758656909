@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 // Function to get all remote branches
@@ -197,7 +196,6 @@ async function main() {
 }
 
 main();
-=======
 const { execSync } = require('child_process')
 // console.log('� Comprehensive Branch Merger')
 console.log('==')
@@ -219,4 +217,3 @@ console.log('==')
         execSync('git push origin main', { "stdio"})
         console.error(' Failed to push "changes")
     console.error(' Comprehensive branch merger "failed")
->>>>>>> main

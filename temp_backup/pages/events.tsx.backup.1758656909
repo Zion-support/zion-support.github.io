@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import SEO from '../components/SEO';
 
 export default function EventsPage() {
@@ -12,7 +11,6 @@ export default function EventsPage() {
 			</div>
 		</>
 	);
-=======
 import Head from 'next/head';
 
 export default function EventsPage() {
@@ -195,5 +193,4 @@ export default function EventsPage() {
       </div>
     </>
   );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

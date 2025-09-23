@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 
 
 import { computeTrustScore } from '../../../utils/trust/compute';
@@ -328,4 +326,3 @@ if ( {) {
 }
   return res.status(405).json({ error: 'Method not allowed' });
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

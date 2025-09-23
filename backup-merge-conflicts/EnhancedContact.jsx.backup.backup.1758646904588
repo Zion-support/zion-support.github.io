@@ -5,8 +5,6 @@ import {motion} from 'framer-motion';
 import {Button} from '@/components/ui/button';
 import {Input} from '@/components/ui/input';
 import {Textarea} from '@/components/ui/Textarea';
-<<<<<<< HEAD
-=======
 =======
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe export const EnhancedContact = (props) => {
     const [formData, setFormData] = useState({
@@ -17,7 +15,6 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
         "service": ",
         "message": "
     };);
->>>>>>> main
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const contactMethods = [{"icon": Mail,

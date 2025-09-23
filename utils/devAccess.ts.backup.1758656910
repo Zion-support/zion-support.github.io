@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from "fs";
 import path from "path";
 import { execSync } from "child_process";
@@ -48,7 +47,6 @@ export function requireRoles(
   const hasRole = identity.roles.some((r) => allowed.includes(r));
   if (!hasRole) {
     res.status(403).json({ error: "Forbidden" });
-=======
 
 import fs from 'fs';
 import path from 'path';
@@ -161,18 +159,14 @@ export function requireRoles(
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     return undefined;
   }
   return identity;
 }
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
 

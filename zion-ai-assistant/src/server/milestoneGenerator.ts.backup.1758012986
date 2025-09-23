@@ -3,11 +3,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
   const user = {;
@@ -186,8 +183,6 @@ async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMil
     startDateIso: input.startDateIso,
     endDateIso: input.endDateIso,
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
       ? parsed.milestones;
       : [],
     // Check condition
@@ -238,15 +233,12 @@ if (return null, ) {
       suggestedDueDateIso: String(m.suggestedDueDateIso),
       estimatedEffortHours: Math.max(1, parseInt(String(m.estimatedEffortHours), 10) || 8),
       tags: ["AI Suggested"]
->>>>>>> origin/auto/autonomy-17186719616
     }));
   } catch {
     return null;
   }
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem } from "../shared/types.js",;
 ;
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || process.env.OPENAI_API_TOKEN,;
@@ -300,7 +292,6 @@ async function callOpenAI(input:MilestoneSuggestionInput):Promise<SuggestedMiles
     })),;
   } catch {;
     return null,;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
   }
   return milestones;
@@ -311,8 +302,6 @@ export async function generate_milestones (input: MilestoneSuggestionInput): Pro
   }
   return milestones,;
 }
-<<<<<<< HEAD
-=======
 ;
 export async function generateMilestones(input:MilestoneSuggestionInput):Promise<MilestoneSuggestionResponse> {;
   const ai = await callOpenAI(input),;
@@ -348,7 +337,6 @@ body: JSON.stringify (body)
   }
   return milestones,;
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 import { useEffect, useState } from 'react';
@@ -213,4 +211,3 @@ function Stat() {
 }
   );
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

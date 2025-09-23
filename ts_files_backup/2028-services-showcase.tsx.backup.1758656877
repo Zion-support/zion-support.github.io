@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -124,7 +123,6 @@ export default function ServicesShowcase2028() {
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
-=======
 
 import React from 'react',
 import Head from 'next/head',
@@ -227,7 +225,6 @@ import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
@@ -318,7 +315,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
                 <DollarSign className="w-5 h-5" />
               </Link>
             </div>
-<<<<<<< HEAD
 
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pt-16">
@@ -326,7 +322,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
                 <div className="text-3xl font-bold text-purple-400">50+</div>
                 <div className="text-purple-300">Innovative Services</div>
               </div>
-=======
             {/* Stats */}
             <div className='grid grid-cols-1 md:grid-cols-4 gap-8 pt-16'>
               <div className='text-center'>
@@ -344,7 +339,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
               <div className='text-center'>
                 <div className='text-3xl font-bold text-cyan-400'>24/7</div>
                 <div className='text-cyan-300'>Support Available</div>              </div>              </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-400">99.9%</div>
                 <div className="text-blue-300">Accuracy Rate</div>
@@ -356,15 +350,12 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400">24/7</div>
                 <div className="text-cyan-300">Support Available</div>
-<<<<<<< HEAD
-=======
 
 
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
@@ -378,9 +369,7 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Services Categories */}
-=======
 
 
 
@@ -427,33 +416,28 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
       {/* Services Categories */}
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <section className="py-20 bg-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Explore Our <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Service Categories</span>
             </h2>
-<<<<<<< HEAD
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
               Discover our comprehensive range of futuristic services designed to transform your business 
               and propel you into the future of technology.
             </p>
           </div>
 
-=======
 
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
               Discover our comprehensive range of futuristic services designed to transform your business
               and propel you into the future of technology.
             </p>
           </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.title}
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -472,7 +456,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
                     <p className="text-purple-300 mb-6">{category.description}</p>
 
                     <div className="space-y-3 mb-6">
-=======
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
                 Service Categories;
               </span>;
@@ -526,18 +509,15 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
                           <span className='text-purple-200 text-sm'>
                             {service.name}
                           </span>                        </div>                    <div className="space-y-3 mb-6">
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       {category.services.slice(0, 3).map((service) => (
                         <div key={service.id} className="flex items-center space-x-3">
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                           <span className="text-purple-200 text-sm">{service.name}</span>
-<<<<<<< HEAD
                         </div>
                       ))}
                     </div>
 
                     <Link
-=======
 
                       ))}
                     </div>
@@ -552,7 +532,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -574,16 +553,12 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
                   </div>
                 </div>
               </motion.div>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Featured Services */}
       <section className="py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -609,7 +584,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
                 <div className="relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   
-=======
 
 
 
@@ -624,7 +598,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -661,15 +634,12 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
                         <div className="text-sm text-purple-300">{service.period}</div>
                       </div>
                     </div>
-<<<<<<< HEAD
 
                     <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
                     <p className="text-purple-300 mb-4">{service.description}</p>
 
-=======
                     <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
                     <p className="text-purple-300 mb-4">{service.description}</p>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     <div className="mb-6">
                       <div className="flex items-center space-x-2 mb-2">
                         <Star className="w-4 h-4 text-yellow-400" />
@@ -683,11 +653,9 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
                         <span className="font-medium">Growth Rate:</span> {service.growthRate}
                       </div>
                     </div>
-<<<<<<< HEAD
 
                     <div className="flex items-center justify-between">
                       <Link
-=======
                     <div className="flex items-center justify-between">
                         {service && service.growthRate}
                       </div>;
@@ -697,7 +665,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
                       <Link
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                         href={service.link}
                         className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                       >
@@ -711,17 +678,13 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
                   </div>
                 </div>
               </motion.div>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Market Analysis */}
       <section className="py-20 bg-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -729,7 +692,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Market <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Insights</span>
             </h2>
-=======
 
 
 
@@ -744,7 +706,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -773,7 +734,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
               Understand the market dynamics and growth potential of our futuristic services.
             </p>
           </div>
-<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
@@ -834,7 +794,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-=======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
 
@@ -843,7 +802,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -943,7 +901,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
             className="space-y-8"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -981,7 +938,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
                 <span>24/7 Expert Support</span>
               </div>
               <div className="flex items-center space-x-2">
-=======
             className='space-y-8'
 
 
@@ -993,7 +949,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1051,13 +1006,11 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 
       <UltraFuturisticFooter2028 />
     </>
   );
 }
-=======
       <UltraFuturisticFooter2028 />
 
     </>
@@ -1224,7 +1177,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

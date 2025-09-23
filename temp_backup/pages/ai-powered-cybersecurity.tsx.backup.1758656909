@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
@@ -30,7 +29,6 @@ export default function AIPoweredCybersecurityPage() {
 				canonical="https://ziontechgroup.com/ai-powered-cybersecurity"
 			/>
 		</>
-=======
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AIPoweredCybersecurity() {
@@ -54,6 +52,5 @@ export default function AIPoweredCybersecurity() {
 			ctaHref="/contact"
 			canonical="https://ziontechgroup.com/ai-powered-cybersecurity"
 		/>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 	);
 }

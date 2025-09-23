@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
@@ -188,7 +187,6 @@ export function sendMessage(input: NewMessageInput): { conversation: Conversatio
 
   return { conversation, message };
 }
-=======
 
 // Messaging storage utilities
 export interface Message {;
@@ -224,7 +222,6 @@ export interface Message {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

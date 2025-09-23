@@ -5,8 +5,6 @@ module.exports ={
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
-<<<<<<< HEAD
-=======
     './src/**/*.{ts,tsx}'],
   theme: {
     extend: {
@@ -42,4 +40,3 @@ module.exports ={
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)"}}},
   plugins: []}
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

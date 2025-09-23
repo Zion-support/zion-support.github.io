@@ -10,8 +10,6 @@ import {
   DropdownMenuLabel,
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
-<<<<<<< HEAD
-=======
   DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
 // Use the centralized icon wrapper to avoid missing icon issues
 import { FileTextChevronDownLoader2Download } from '@/components/icons';
@@ -125,4 +123,3 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
     </DropdownMenu>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

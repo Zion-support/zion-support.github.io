@@ -41,8 +41,6 @@ export interface EnterpriseITSolution20o31 {
   aiCapabilities: string[];
   marketDisruption: string;
 }
-<<<<<<< HEAD
-=======
 export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [
   // ZERO TRUST NETWORK ARCHITECTURE
   {
@@ -310,4 +308,3 @@ export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [
     marketDisruption: 'Revolutionizes infrastructure management by enabling truly autonomous systems, eliminating manual operations and optimizing performance automatically.'
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

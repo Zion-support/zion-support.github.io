@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react";
 import { MobileHeader } from "../components/common/MobileHeader";
 import { BottomNavigation } from "../components/common/BottomNavigation";
@@ -21,7 +20,6 @@ export function MobileResumeBuilder() {
     </div>
   );
 }
-=======
 
 
 
@@ -110,4 +108,3 @@ function MobileResumeBuilder() {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

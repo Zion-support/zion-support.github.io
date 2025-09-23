@@ -54,8 +54,6 @@ const EquipmentDetail: NextPage = () => {
   );
 };
 
-<<<<<<< HEAD
-=======
 
 
 };
@@ -64,4 +62,3 @@ const EquipmentDetail: NextPage = () => {
 
 
 export default EquipmentDetail;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

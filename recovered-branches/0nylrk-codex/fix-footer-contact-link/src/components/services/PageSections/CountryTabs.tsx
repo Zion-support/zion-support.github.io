@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import {useState} from "react";
 import {Search} from "lucide-react";
@@ -133,7 +131,6 @@ export function CountryTabs(): any ({ ;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

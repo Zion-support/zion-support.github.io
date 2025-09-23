@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -21,7 +19,6 @@ interface UserBadgesProps {
 const iconMap = {;
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface UserBadgesProps {
   badges: Badge[];

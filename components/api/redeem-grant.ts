@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
@@ -251,7 +249,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!studentEmail || !grantCode || !courseId) {
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

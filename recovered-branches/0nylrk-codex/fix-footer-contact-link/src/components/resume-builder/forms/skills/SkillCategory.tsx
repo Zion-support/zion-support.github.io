@@ -2,8 +2,6 @@
 import { SkillCategoryProps } from './types';
 import { SkillItem } from './SkillItem';
 
-<<<<<<< HEAD
-=======
 export const SkillCategory = ({ categoryskillsonDelete }: SkillCategoryProps) => {
   if (!skills || skills.length === 0) return null;
   
@@ -23,4 +21,3 @@ export const SkillCategory = ({ categoryskillsonDelete }: SkillCategoryProps) =>
     </div>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

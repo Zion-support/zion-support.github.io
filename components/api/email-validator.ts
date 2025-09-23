@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
  import type { NextApiRequest, NextApiResponse } from 'next';
@@ -9,7 +7,6 @@ interface EmailValidationResult {
   email: string;
   is_valid: boolean;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface EmailValidationResult {
   email: string;

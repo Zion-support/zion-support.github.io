@@ -4,10 +4,7 @@ export interface CountryPricing {
   pricePerIncident: number;
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const onsiteServicePricing: CountryPricing[] = [
   { country: "Afghanistan", pricePerIncident: 131.04 },
   { country: "Albania", pricePerIncident: 110.41 },

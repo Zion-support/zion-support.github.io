@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 async function runComprehensiveTesting() {
@@ -435,7 +434,6 @@ module.exports = { runComprehensiveTesting }) {
   runComprehensiveTesting().catch(console.error)}
 
 module.exports = { runComprehensiveTesting }}
-=======
 const { execSync } = require('child_process')
   console.log('🧪 Starting Comprehensive Testing Automation...')
     "overallStatus"
@@ -484,4 +482,3 @@ const { execSync } = require('child_process')
       { "component": 'ContactForm', "status"}
       { "component": 'ErrorBoundary', "status"}
       { "component": 'PerformanceMonitor', "status"}
->>>>>>> main

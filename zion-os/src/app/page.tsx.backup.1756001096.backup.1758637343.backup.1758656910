@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import { services } from "@/data/services";
-=======
 import { 
   Rocket, 
   Settings, 
@@ -11,13 +9,11 @@ import {
   Zap,
   Shield
 } from "lucide-react";
->>>>>>> origin/cursor/enhance-update-item-design-and-functionality-9c4a
 
 export default function HomePage() {
   const featuredServices = services.slice(0, 6);
 
   return (
-<<<<<<< HEAD
     <div className="space-y-8">
       <header className="text-center space-y-4">
         <h1 className="text-4xl font-bold text-high-contrast">Zion OS</h1>
@@ -90,7 +86,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-=======
     <div className="min-h-screen space-y-12">
       {/* Hero Section */}
       <div className="text-center space-y-8 py-16">
@@ -285,7 +280,6 @@ export default function HomePage() {
           </a>
         </div>
       </div>
->>>>>>> origin/cursor/enhance-update-item-design-and-functionality-9c4a
     </div>
   );
 }

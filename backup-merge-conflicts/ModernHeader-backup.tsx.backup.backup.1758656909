@@ -1,4 +1,3 @@
-<<<<<<< HEAD:backup-merge-conflicts/ModernHeader-backup.tsx.backup
 <<<<<<< HEAD:src/components/header/ModernHeader-backup.tsx
 import React, { useState } from "react"
 export function ModernHeader($1) {;
@@ -464,5 +463,3 @@ import React,{ useState } from "react" export function ModernHeader($1) {; const
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main:src_backup_temp/components/header/ModernHeader-backup.tsx
-=======
->>>>>>> pr-11913:src_backup_temp/components/header/ModernHeader-backup.tsx

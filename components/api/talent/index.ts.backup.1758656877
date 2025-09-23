@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import { supabase as supabaseClient } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL } from '@/data/talent';
 import type { TalentProfile } from '@/utils/types/talent';
@@ -35,7 +34,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         rating: 0,
         reviewsCount: 0,
         createdAt: new Date().toISOString(),
-=======
 
 
 const hasSupabase =
@@ -135,7 +133,6 @@ return res
 }
         reviews_count: 0,
         created_at: new Date ().toISOString (),
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         summary: payload.summary || '',
         skills: payload.skills || [],
         name: payload.name || 'Unnamed',
@@ -143,7 +140,6 @@ return res
         location: payload.location || 'Remote',
         availability: (payload.availability as any) || 'Open',
       } as TalentProfile;
-<<<<<<< HEAD
 
       // Auto-translate
       const originalLang = payload.originalLanguage || detectLanguageSimple([item.title, item.summary, item.bio || ''].join('\n'));
@@ -166,7 +162,6 @@ return res
 
       if (hasSupabase) {
         const { error } = await supabaseClient.from('talent_profiles').insert({
-=======
 ;
       // Auto - translate;
       const original_lang =;
@@ -220,7 +215,6 @@ if ( {) {
   $2
 }
         const { error } = await supabase_client.from ('talent_profiles').insert ({
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           id: item.id,
           slug: item.slug,
           name: item.name,
@@ -233,7 +227,6 @@ if ( {) {
           summary: item.summary,
           bio: item.bio,
           hourly_rate_usd: item.hourlyRateUsd ?? null,
-<<<<<<< HEAD
           request_quote: item.requestQuote ?? null,
           availability: item.availability,
           profile_image_url: item.profileImageUrl ?? null,
@@ -260,7 +253,6 @@ if ( {) {
 
   return res.setHeader('Allow', 'GET, POST').status(405).end('Method Not Allowed');
 }
-=======
           request_quote: item.request_quote ?? null,
           availability: item.availability,
           profile_image_url: item.profileImageUrl ?? null,
@@ -385,4 +377,3 @@ return res;
 }
 }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

@@ -2,8 +2,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-=======
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, 
   Brain, Sparkles, Users, 
   BarChart3, Settings, 
@@ -414,4 +412,3 @@ export default function AdvancedAIAutomationServices() {
     </Layout>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

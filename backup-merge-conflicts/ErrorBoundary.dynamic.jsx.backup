@@ -1,17 +1,11 @@
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:components.disabled_full/ErrorBoundary.dynamic.jsx
 const ErrorBoundary = dynamic(() => import(\"./ErrorBoundary\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default ErrorBoundary\' ,
 =======
 =======
->>>>>>> pr-11935
 const ErrorBoundary = dynamic(() => import("./ErrorBoundary"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ErrorBoundary' ,'
 </p>'
-<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> main
-=======
 </p>'
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:components.disabled_full/ErrorBoundary.dynamic.jsx
 =======
 >>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11913:src_backup_temp/data/advancedAIServices2030.ts
 import React from "react"
 import { SEO } from "@/components/SEO"
 export default function advancedAIServices2030() {return (

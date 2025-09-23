@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import { ServiceVariant } from '../types/service-variants';
 
@@ -3463,7 +3461,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [;
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
   }
 ];

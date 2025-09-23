@@ -7,8 +7,6 @@ export type PaginationProps ={
   onChange: (nextPage: number) => void;
 };
 
-<<<<<<< HEAD
-=======
 export default function Pagination({ pageSizetotalonChange }: PaginationProps) {
   const totalPages = Math.max(1Math.ceil(total / pageSize));
   const canPrev = page > 1;
@@ -32,4 +30,3 @@ export default function Pagination({ pageSizetotalonChange }: PaginationProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

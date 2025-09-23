@@ -1,7 +1,5 @@
 
 import { useState } from "react";
-<<<<<<< HEAD
-=======
 import { BookOpenCodeCopyTerminal } from "lucide-react";
 import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
 import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
@@ -898,4 +896,3 @@ function EndpointSection({
   );
 }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

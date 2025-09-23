@@ -1,7 +1,5 @@
 
 import { BadgeEarned } from "./BadgeEarned";
-<<<<<<< HEAD
-=======
 import { badgeListBadgeKey } from "./badgeConfig";
 
 // Dummy data for demo: what badges this user earned (with fake dates)
@@ -31,4 +29,3 @@ export const MyBadgesPreview: React.FC = () => {
     </div>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

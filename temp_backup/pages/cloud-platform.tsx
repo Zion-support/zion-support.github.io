@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Globe, Cloud, Server, Database, Zap, Shield, BarChart3, Rocket } from 'lucide-react';
@@ -315,4 +313,3 @@ export default function CloudPlatform() {
 };
 
 export default CloudPlatformPage;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

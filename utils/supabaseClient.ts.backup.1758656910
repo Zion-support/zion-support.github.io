@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
-=======
 
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 export type ZionSupabase = SupabaseClient | undefined;
@@ -26,12 +24,10 @@ export function getSupabaseClient(): ZionSupabase {try {;
     return createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
   } catch {return undefined;
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export type ZionSupabase = SupabaseClient | undefined;
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || '';
 const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY || '';
-<<<<<<< HEAD
 
 let browserClient: SupabaseClient | undefined;
 
@@ -50,7 +46,6 @@ export function getSupabaseClient(): ZionSupabase {
     return undefined;
   }
 }
-=======
 let browserClient: SupabaseClient | undefined;
 export function getSupabaseClient(): ZionSupabase {;
   try {
@@ -77,7 +72,6 @@ export function getSupabaseClient(): ZionSupabase {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 

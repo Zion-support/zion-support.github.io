@@ -4,16 +4,12 @@ import Link from 'next/link';
 export const metadata = {
   title: 'AI 2026 Breakthrough Showcase - Revolutionary Technology Solutions',
   description: 'Discover the most advanced AI breakthroughs of 2026. Quantum-neural fusion, autonomous systems, and revolutionary enterprise solutions with proven ROI.',
-<<<<<<< HEAD
   keywords: ['AI 2026', 'breakthrough', 'quantum neural fusion', 'autonomous systems', 'enterprise AI', 'ROI'],
-=======
   keywords: ['AI 2026', 'Breakthrough Technology', 'Quantum AI', 'Neural Networks', 'Enterprise AI', 'ROI Calculator'],
->>>>>>> cursor/create-and-deploy-new-content-daa5
 };
 
 export default function AI2026BreakthroughShowcase() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Hero Section */}
       <section className="relative py-20 px-4">
@@ -43,7 +39,6 @@ export default function AI2026BreakthroughShowcase() {
               className="px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300"
             >
               Get Started Today
-=======
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100">
       {/* Hero Section */}
       <section className="relative py-20 px-4">
@@ -70,13 +65,11 @@ export default function AI2026BreakthroughShowcase() {
               className="px-8 py-4 bg-white text-purple-600 border-2 border-purple-600 rounded-lg font-semibold hover:bg-purple-50 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Calculate Your ROI
->>>>>>> cursor/create-and-deploy-new-content-daa5
             </Link>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Breakthrough Technologies */}
       <section id="breakthroughs" className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -323,7 +316,6 @@ export default function AI2026BreakthroughShowcase() {
                 className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
               >
                 Schedule Consultation
-=======
       {/* Breakthrough Technologies Grid */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -494,14 +486,12 @@ export default function AI2026BreakthroughShowcase() {
                 className="inline-block px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors"
               >
                 Take Assessment
->>>>>>> cursor/create-and-deploy-new-content-daa5
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* ROI Calculator CTA */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto text-center">
@@ -518,7 +508,6 @@ export default function AI2026BreakthroughShowcase() {
             <span className="mr-2">🧮</span>
             Launch ROI Calculator
           </Link>
-=======
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center text-white">
@@ -543,7 +532,6 @@ export default function AI2026BreakthroughShowcase() {
               Watch Webinar
             </Link>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-daa5
         </div>
       </section>
     </div>

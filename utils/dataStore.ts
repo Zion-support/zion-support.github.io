@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 // Data store utilities
 export const dataStore = {
@@ -100,4 +98,3 @@ export const getReviewsByProject = (projectId: string) => store.getReviewsByProj
 export const getAllReviews = () => store.getAllReviews();
 export const counterpartRole = (role: 'client' | 'talent') => store.counterpartRole(role);
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

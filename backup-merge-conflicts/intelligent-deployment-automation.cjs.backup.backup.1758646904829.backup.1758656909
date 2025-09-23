@@ -21,7 +21,6 @@ const http = require('http')
           healthEndpoint: '/api/health'
           url: process.env.STAGING_URL || 'http://localhost:3001'
           healthEndpoint: '/api/health'
-<<<<<<< HEAD
         }
       }
     };
@@ -576,7 +575,6 @@ const http = require('http')
     try {
       // Find last successful deployment
       const lastSuccessful = this.deploymentHistory
-=======
       await fs.mkdir(path.join(this.projectRoot, 'logs')
       console.log('Logs directory already exists')
   log(message, level = 'INFO')
@@ -668,4 +666,3 @@ const http = require('http')
       process.on('SIGINT')
         this.log('� Shutting down Deployment Automation...')
       this.log(` Fatal error: ${error.message}`, 'ERROR'`)
->>>>>>> main

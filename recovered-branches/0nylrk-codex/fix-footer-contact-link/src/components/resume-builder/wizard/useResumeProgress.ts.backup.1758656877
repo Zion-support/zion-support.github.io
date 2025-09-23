@@ -18,12 +18,9 @@ export const useResumeProgress = (resume: Resume | null) => {
     completed += 1;
     
     // Work experience (1 point if at least one entry)
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     if (resume.work_experience && resume.work_experience.length > 0) {
       completed += 1;
     }

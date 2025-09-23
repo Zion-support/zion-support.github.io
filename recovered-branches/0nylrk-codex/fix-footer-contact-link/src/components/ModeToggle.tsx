@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { MoonSun } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -28,4 +26,3 @@ export function ModeToggle() {
     </Button>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

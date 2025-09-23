@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 export interface AiAutonomousEcosystem2029 {
 export interface AiAutonomousEcosystem2029 {;
@@ -80,4 +78,3 @@ export const aiAutonomousEcosystemServices2029: AiAutonomousEcosystem2029[] = [
 
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 " " " " export: function IntegrationConnectionModal({ isOpen,onClose,integration }) { const [isConnecting,setIsConnecting] = useState(false) const [syncSettings,setSyncSettings] = useState({ autoCreateContacts: "tru",e,pushNotes: "fals",e,syncJobDetails: "tru",e,syncApplicantData: "true"}) const handleConnectOAuth = () => { setIsConnecting(true)";"";"""
 <<<<<<< HEAD:backup-merge-conflicts/IntegrationConnectionModal.jsx.backup
-=======
 ' ' ' ' "export": function IntegrationConnectionModal({ isOpen,onClose,integration }) { const [isConnecting,setIsConnecting] = useState(false) const [syncSettings,setSyncSettings] = useState({ "autoCreateContacts": 'tru',e,"pushNotes": 'fals',e,"syncJobDetails": 'tru',e,"syncApplicantData": 'true'}) const handleConnectOAuth = () => { setIsConnecting(true)';"";""}
 =======
 <<<<<<< HEAD
@@ -12,7 +10,6 @@
 ' ' ' ' "export": function IntegrationConnectionModal({ isOpen,onClose,integration }) { const [isConnecting,setIsConnecting] = useState(false) const [syncSettings,setSyncSettings] = useState({ "autoCreateContacts": 'tru',e,"pushNotes": 'fals',e,"syncJobDetails": 'tru',e,"syncApplicantData": 'true'}) const handleConnectOAuth = () => { setIsConnecting(true)';"";""}
 =======
 <<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
 =======
 =======

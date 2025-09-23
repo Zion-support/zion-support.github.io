@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AIEmotionalIntelligenceTraining() {
@@ -24,7 +23,6 @@ export default function AIEmotionalIntelligenceTraining() {
 			canonical="https://ziontechgroup.com/ai-emotional-intelligence-training"
 		/>
 	);
-=======
 import Head from 'next/head';
 
 export default function AiEmotionalIntelligenceTrainingPage() {
@@ -45,5 +43,4 @@ export default function AiEmotionalIntelligenceTrainingPage() {
       </div>
     </>
   );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

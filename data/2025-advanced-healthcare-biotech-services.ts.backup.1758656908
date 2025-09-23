@@ -1,13 +1,10 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface AdvancedHealthcareBiotechService {
-=======
 
 import { ServiceVariant } from '../types/service-variants';
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   id: string;
   name: string;
   tagline: string;
@@ -18,7 +15,6 @@ import { ServiceVariant } from '../types/service-variants';
   popular: boolean;
   icon: string;
   color: string;
-<<<<<<< HEAD
   textColor: string;
   link: string;
   marketPosition: string;
@@ -315,7 +311,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     reviews: 19
   }
 ];
-=======
   text_color: string;
   link: string;
   market_position: string;
@@ -1404,4 +1399,3 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
   }
 ];
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

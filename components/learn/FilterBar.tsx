@@ -5,8 +5,6 @@ type Props ={
   onChange: (next: { category: string; level: string; isFree: string }) => void;
 };
 
-<<<<<<< HEAD
-=======
 export default function FilterBar({ categorylevelisFreeonChange }: Props) {
   return (
 
@@ -44,4 +42,3 @@ export default function FilterBar({ categorylevelisFreeonChange }: Props) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

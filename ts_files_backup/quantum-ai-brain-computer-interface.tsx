@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 
 import Head from 'next/head';
@@ -56,4 +54,3 @@ export default function QuantumAIBCIPage() {
     </UltraAdvancedFuturisticBackground>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

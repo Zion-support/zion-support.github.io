@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // Service Worker for Zion Tech Group
 // Provides offline support, caching, and performance improvements
 
@@ -166,4 +164,3 @@ self.addEventListener('unhandledrejection', (event) => {
 });
 
 console.log('Zion Tech Group Service Worker loaded successfully');
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

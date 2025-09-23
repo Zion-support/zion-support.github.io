@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 import type { GrantApplication } from '../../../../../../types/grants';
 
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
@@ -64,7 +63,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   writeGrant(existing);
   res.status(200).json({ record: existing });
 }
-=======
 
 
 
@@ -271,4 +269,3 @@ writeGrant(existing);
   writeGrant(existing);
   res.status(200).json({ record: existing });
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

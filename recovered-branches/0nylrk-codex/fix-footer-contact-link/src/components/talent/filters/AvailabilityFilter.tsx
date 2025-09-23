@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { ChevronDownChevronUp } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
 import { AvailabilityFilterProps } from "@/types/filters";
@@ -49,4 +47,3 @@ export function AvailabilityFilter({ selectedAvailabilitytoggleAvailabilityexpan
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,52 +1,37 @@
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/AICodeGenerator.test.test.js.backup
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import AICodeGeneratortest from '../components/AICodeGenerator.test';
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AICodeGeneratortest from "./components/AICodeGenerator.test"; describe("AICodeGeneratortest",() => { test("renders without crashing",() => { render(<AICodeGeneratortest />); expect(screen.getByTestId("aicodegenerator.test")).toBeInTheDocument()}); test("displays correct content",() => { render(<AICodeGeneratortest />)}); test("handles user interactions",() => { render(<AICodeGeneratortest />)}); test("applies correct styling",() => { render(<AICodeGeneratortest />)})});''"
 =======
 =======
 =======
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AICodeGeneratortest from "./components/AICodeGenerator.test"; describe("AICodeGeneratortest",() => { test("renders without crashing",() => { render(<AICodeGeneratortest />); expect(screen.getByTestId("aicodegenerator.test")).toBeInTheDocument()}); test("displays correct content",() => { render(<AICodeGeneratortest />)}); test("handles user interactions",() => { render(<AICodeGeneratortest />)}); test("applies correct styling",() => { render(<AICodeGeneratortest />)})});''"describe('AICodeGeneratortest', () => {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import AICodeGeneratortest from '../components/AICodeGenerator.test';
 
-<<<<<<< HEAD
-=======
->>>>>>> main
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 describe('AICodeGeneratortest', () => {
   test('renders without crashing', () => {
     render(<AICodeGeneratortest />);
     expect(screen.getByTestId('aicodegenerator.test')).toBeInTheDocument();
   });
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/AICodeGenerator.test.test.js.backup
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   test('displays correct content', () => {
     render(<AICodeGeneratortest />);
   });
   test('handles user interactions', () => {
     render(<AICodeGeneratortest />);
-<<<<<<< HEAD
   });
-=======
 =======
 =======
   });  test('displays correct content', () => {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   test('displays correct content', () => {
     render(<AICodeGeneratortest />);
@@ -54,22 +39,16 @@ describe('AICodeGeneratortest', () => {
   test('handles user interactions', () => {
     render(<AICodeGeneratortest />);
   });
-<<<<<<< HEAD
   
-=======
   test('applies correct styling', () => {
     render(<AICodeGeneratortest />);
   });
 });
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   test('applies correct styling', () => {
     render(<AICodeGeneratortest />);
   });
 });
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:__tests__/AICodeGenerator.test.test.js

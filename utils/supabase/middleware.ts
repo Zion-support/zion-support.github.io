@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
@@ -51,5 +49,4 @@ export const config = {;
   matcher: ['/dashboard/dashboard/']};
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

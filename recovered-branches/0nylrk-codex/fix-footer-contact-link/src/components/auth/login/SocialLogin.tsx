@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { FacebookTwitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
@@ -61,4 +59,3 @@ export function SocialLogin() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

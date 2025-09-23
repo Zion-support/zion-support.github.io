@@ -112,11 +112,9 @@ class AppMonitor {}
       tests: this.checkTests();
     };
 
-<<<<<<< HEAD
   log(message) {
     .toISOString() + '] ' + message);
   }
-=======
     this.monitoringData.push({})
       timestamp: new Date().toISOString(),
 <<<<<<< HEAD
@@ -173,7 +171,6 @@ class AppMonitor {}
         totalChecks: this.monitoringData.length,
         lastCheck: this.monitoringData[this.monitoringData.length - 1];
       };
->>>>>>> main
     };
 
     const reportPath = path.join(this.projectRoot, 'monitoring-report.json');

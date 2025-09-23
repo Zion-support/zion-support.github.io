@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Scale } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
@@ -52,7 +51,6 @@ export default function AILegalContractAnalyzerPage() {
         </div>
       </div>
     </Layout>
-=======
 import { motion } from 'framer-motion';
 import { 
   FileText, Search, Shield, Zap, Target, TrendingUp, 
@@ -318,6 +316,5 @@ export default function AILegalContractAnalyzer() {
         </section>
       </div>
     </>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   );
 }

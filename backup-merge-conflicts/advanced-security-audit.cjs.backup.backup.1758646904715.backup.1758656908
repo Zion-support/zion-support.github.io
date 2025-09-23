@@ -4,7 +4,6 @@ const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
     this.logFile = path.join(this.reportsDir, "advanced-security.log")
-<<<<<<< HEAD
     this.ensureDirectories()}
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
@@ -50,7 +49,6 @@ const { execSync } = require("child_process")
       ".tsx"])
     for (const file of files) {
       try {
-=======
       fs.mkdirSync(this.reportsDir, { "recursive"})
     fs.appendFileSync(this.logFile, logMessage + "\n")
     this.log(" Checking dependencies for vulnerabilities...")
@@ -130,4 +128,3 @@ const { execSync } = require("child_process")
 // console.log(" Advanced Security Audit completed successfully!")
     console.log(` "Recommendations"`)
     console.error(" Security audit "failed": ")
->>>>>>> main

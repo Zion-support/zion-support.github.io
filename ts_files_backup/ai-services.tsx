@@ -1,6 +1,4 @@
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
 BrainZapTargetShieldRocketAtomCpuUsersStarArrowRight
 import SEO from '../components/SEO';
 
@@ -184,4 +182,3 @@ export default function AIServices() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

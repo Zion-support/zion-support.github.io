@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   Users, 
@@ -599,5 +598,3 @@ const AboutPage: React.FC = () => {
 };
 
 export default AboutPage;
-=======
->>>>>>> 2b8bbbb18a09713bdeef09b7c3a1ee123e0bd7d0

@@ -1,13 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 if (typeof window !== 'undefined') { window.addEventListener('load',() => { const perfData = performance.getEntriesByType('navigation')[0]; })}
 <<<<<<< HEAD
 =======
 =======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 =======
 >>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
@@ -15,8 +12,6 @@ if (typeof window !== 'undefined') { window.addEventListener('load',() => { cons
 if (typeof window !== 'undefined') {
   window.addEventListener('load', () => {
     const perfData = performance.getEntriesByType('navigation')[0];
-<<<<<<< HEAD
-=======
 if (typeof window !== 'undefined') { window.addEventListener('load',() => { const perfData = performance.getEntriesByType('navigation')[0]; console.log('Page load time:',perfData.loadEventEnd - perfData.loadEventStart)})}
 =======
 <<<<<<< HEAD:backup-merge-conflicts/performance-monitor.js.backup
@@ -24,16 +19,12 @@ if (typeof window !== 'undefined') { window.addEventListener('load',() => { cons
 <<<<<<< HEAD
     console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart)})}
 if (typeof window !== 'undefined') { window.addEventListener('load',() => { const perfData = performance.getEntriesByType('navigation')[0]; console.log('Page load time:',perfData.loadEventEnd - perfData.loadEventStart)})}
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 =======
 >>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
     console.log('Page load "time": ', perfData.loadEventEnd - perfData.loadEventStart)})}
 if (typeof window !== 'undefined') { window.addEventListener('load',() => { const perfData = performance.getEntriesByType('navigation')[0]; console.log('Page load time:',perfData.loadEventEnd - perfData.loadEventStart)})}
-<<<<<<< HEAD
-=======
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

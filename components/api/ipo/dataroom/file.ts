@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 
@@ -132,7 +130,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

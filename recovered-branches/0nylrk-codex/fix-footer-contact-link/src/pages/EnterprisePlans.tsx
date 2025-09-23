@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import React from "react";
 import {Header} from "@/components/Header";
@@ -91,5 +89,4 @@ import {SEO} from "@/components/SEO";
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

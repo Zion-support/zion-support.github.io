@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
-=======
 "use client";
 import React{ useState } from 'react';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import EnhancedLayout from '../layout/EnhancedLayout';
 
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
@@ -19,11 +16,8 @@ export type ProposalForm = {
 };
 
 export default function ProposalGenerator() {
-<<<<<<< HEAD
   const [form, setForm] = useState<ProposalForm>({
-=======
   const [formsetForm] = useState<ProposalForm>({
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     targetInstitution: 'UNDP',
     type: 'Workforce Dev',
     regionalScope: 'Global',
@@ -31,7 +25,6 @@ export default function ProposalGenerator() {
     supportingMultiverses: '',
     language: 'English',
     customPrompt:
-<<<<<<< HEAD
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
   });
   const [isGenerating, setIsGenerating] = useState(false);
@@ -42,7 +35,6 @@ export default function ProposalGenerator() {
 
   function handleChange<K extends keyof ProposalForm>(key: K, value: ProposalForm[K]) {
     setForm((prev) => ({ ...prev, [key]: value }));
-=======
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metricsocial outcomesand DAO-based governance logic.'});
   const [isGeneratingsetIsGenerating] = useState(false);
   const [draftMarkdownsetDraftMarkdown] = useState('');
@@ -52,14 +44,12 @@ export default function ProposalGenerator() {
 
   function handleChange<K extends keyof ProposalForm>(key: Kvalue: ProposalForm[K]) {
     setForm((prev) => ({ ...prev[key]: value }));
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 
   async function handleGenerate() {
     setIsGenerating(true);
     setStatusMessage('Generating draft...');
     try {
-<<<<<<< HEAD
       const res = await fetch('/api/proposals/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -67,14 +57,12 @@ export default function ProposalGenerator() {
       });
       const data = await res.json();
       setDraftMarkdown(data.markdown || '');
-=======
       const res = await fetch('/api/proposals/generate'{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form)});
       const data = await res.json();
       setDraftMarkdown(data.markdown || ', ');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       setDraftJson(data.json || null);
       setStatusMessage('Draft ready. You can edit and export.');
     } catch (e: any) {
@@ -88,27 +76,21 @@ export default function ProposalGenerator() {
   async function handleExport() {
     setStatusMessage('Exporting to PDF/Markdown/JSON...');
     try {
-<<<<<<< HEAD
       const res = await fetch('/api/proposals/export', {
-=======
       const res = await fetch('/api/proposals/export'{
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           markdown: draftMarkdown,
           json: draftJson,
-<<<<<<< HEAD
           meta: form,
         }),
       });
       const data = await res.json();
       setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl });
-=======
           meta: form})});
       const data = await res.json();
       setExportLinks({ pdfUrl: data.pdfUrljsonUrl: data.jsonUrlmdUrl: data.mdUrl });
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       setStatusMessage('Exported. Files saved.');
     } catch (e) {
       console.error(e);
@@ -119,18 +101,15 @@ export default function ProposalGenerator() {
   async function handleSubmitBridge() {
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
     try {
-<<<<<<< HEAD
       const res = await fetch('/api/proposals/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ markdown: draftMarkdown, json: draftJson, meta: form }),
       });
-=======
       const res = await fetch('/api/proposals/submit'{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ markdown: draftMarkdownjson: draftJsonmeta: form })});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       const data = await res.json();
       setStatusMessage(`Submitted. Status: ${data.status || 'queued'}. IPFS: ${data.ipfsCid || 'N/A'}`);
     } catch (e) {
@@ -148,11 +127,8 @@ export default function ProposalGenerator() {
             <input
               className="w-full border rounded px-3 py-2"
               value={form.targetInstitution}
-<<<<<<< HEAD
               onChange={(e) => handleChange('targetInstitution', e.target.value)}
-=======
               onChange={(e) => handleChange(', 'targetInstitution', 'e.target.value)}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               placeholder="UNDP / World Bank / ILO"
             />
           </div>
@@ -161,11 +137,8 @@ export default function ProposalGenerator() {
             <select
               className="w-full border rounded px-3 py-2"
               value={form.type}
-<<<<<<< HEAD
               onChange={(e) => handleChange('type', e.target.value as ProposalType)}
-=======
               onChange={(e) => handleChange(', 'type', 'e.target.value as ProposalType)}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             >
               <option>Workforce Dev</option>
               <option>AI Ethics</option>
@@ -178,11 +151,8 @@ export default function ProposalGenerator() {
             <input
               className="w-full border rounded px-3 py-2"
               value={form.regionalScope}
-<<<<<<< HEAD
               onChange={(e) => handleChange('regionalScope', e.target.value)}
-=======
               onChange={(e) => handleChange(', 'regionalScope', 'e.target.value)}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               placeholder="Global / Africa / LATAM / APAC / EU / ..."
             />
           </div>
@@ -191,13 +161,10 @@ export default function ProposalGenerator() {
             <textarea
               className="w-full border rounded px-3 py-2 min-h-[80px]"
               value={form.budgetOrGoals}
-<<<<<<< HEAD
               onChange={(e) => handleChange('budgetOrGoals', e.target.value)}
               placeholder="$5M for pilot; goals: 10k workers onboarded, 70% female youth, etc."
-=======
               onChange={(e) => handleChange(', 'budgetOrGoals', 'e.target.value)}
               placeholder="$5M for pilot; goals: 10k workers onboarded70% female youthetc."
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             />
           </div>
           <div>
@@ -205,13 +172,10 @@ export default function ProposalGenerator() {
             <input
               className="w-full border rounded px-3 py-2"
               value={form.supportingMultiverses}
-<<<<<<< HEAD
               onChange={(e) => handleChange('supportingMultiverses', e.target.value)}
               placeholder="Eg. Zion.ai, Zion.ID, Zion.Work"
-=======
               onChange={(e) => handleChange(', 'supportingMultiverses', 'e.target.value)}
               placeholder="Eg. Zion.aiZion.IDZion.Work"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -220,11 +184,8 @@ export default function ProposalGenerator() {
               <input
                 className="w-full border rounded px-3 py-2"
                 value={form.language}
-<<<<<<< HEAD
                 onChange={(e) => handleChange('language', e.target.value)}
-=======
                 onChange={(e) => handleChange(', 'language', 'e.target.value)}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 placeholder="English / French / Spanish / Arabic / ..."
               />
             </div>
@@ -233,11 +194,8 @@ export default function ProposalGenerator() {
               <textarea
                 className="w-full border rounded px-3 py-2 min-h-[80px]"
                 value={form.customPrompt}
-<<<<<<< HEAD
                 onChange={(e) => handleChange('customPrompt', e.target.value)}
-=======
                 onChange={(e) => handleChange(', 'customPrompt', 'e.target.value)}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               />
             </div>
           </div>

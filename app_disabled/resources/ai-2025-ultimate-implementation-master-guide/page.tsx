@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export default function Page() {
   return (
     <main style={{ padding: 32 }}>
@@ -444,4 +442,3 @@ export default function AI2025UltimateImplementationMasterGuide() {
     </div>
   );
 // End disabled page content
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

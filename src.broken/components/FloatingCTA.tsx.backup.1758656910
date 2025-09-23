@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
 export function FloatingCTA() {
   return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
-=======
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -153,7 +151,6 @@ export function FloatingCTA() {
           <ChevronUp className="w-6 h-6 text-zion-cyan" />
         </Button>
       </motion.div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     </div>
   );
 }

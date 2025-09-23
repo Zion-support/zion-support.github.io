@@ -1,6 +1,4 @@
 =======
-<<<<<<< HEAD:backup-merge-conflicts/integration-setup.ts.backup
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -8,7 +6,6 @@
 =======
 =======
 
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/test/integration-setup.ts
 =======
 >>>>>>> pr-11935
 =======
@@ -27,11 +24,8 @@ afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 export { server };
 =======
-<<<<<<< HEAD:backup-merge-conflicts/integration-setup.ts.backup
 import { setupServer } from 'msw/node'; import { rest } from 'msw'; const server = setupServer( rest.get('/api/*',(req,res,ctx) => { return res(ctx.json({ message: 'Mock response' }))}) ); beforeAll(() => server.listen()); afterEach(() => server.resetHandlers()); afterAll(() => server.close()); export { server };
-=======
 <<<<<<< HEAD:backup-merge-conflicts/integration-setup.ts.backup
->>>>>>> main
 import { setupServer } from 'msw/node'; import { rest } from 'msw'; const server = setupServer( rest.get('/api/*',(req,res,ctx) => { return res(ctx.json({ message: 'Mock response' }))}) ); beforeAll(() => server.listen()); afterEach(() => server.resetHandlers()); afterAll(() => server.close()); export { server };
 >>>>>>> main
 =======

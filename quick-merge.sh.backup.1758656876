@@ -1,6 +1,5 @@
 #!/bin/bash
 
-<<<<<<< HEAD
 # Quick merge script - processes just a few branches at a time
 
 set -e
@@ -126,7 +125,6 @@ echo "Cleaning up..."
 git branch | grep "temp-" | xargs -r git branch -D
 
 echo "Done!"
-=======
 # Quick merge script using existing infrastructure
 echo "🚀 Quick merge process starting..."
 
@@ -157,4 +155,3 @@ else
     
     echo "✅ Basic merge completed!"
 fi
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

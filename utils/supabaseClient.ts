@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 export type ZionSupabase = SupabaseClient | undefined;
@@ -55,7 +53,6 @@ export function getSupabaseClient(): ZionSupabase {;
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
     // Server-side: create a new client per call to avoid cross-request state;

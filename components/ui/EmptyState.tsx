@@ -9,8 +9,6 @@ export type EmptyStateProps ={
   secondaryAction?: { label: string; href: string };
 };
 
-<<<<<<< HEAD
-=======
 export default function EmptyState({ titledescriptioniconprimaryActionsecondaryAction }: EmptyStateProps) {
   return (
     <div className="w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3">
@@ -40,4 +38,3 @@ export default function EmptyState({ titledescriptioniconprimaryActionsecondaryA
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

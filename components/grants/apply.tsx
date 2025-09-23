@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import { useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -118,4 +116,3 @@ export default function ApplyGrantPage() {
     </EnhancedLayout>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -14,8 +14,6 @@ import {
 } from "@/components/ui/table";
 import { ApplicationActions } from "./ApplicationActions";
 import { StatusBadge } from "./StatusBadge";
-<<<<<<< HEAD
-=======
 import { BriefcaseUser } from "lucide-react";
 import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal";
 import { useState } from "react";
@@ -142,4 +140,3 @@ export function ApplicationsTable({
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

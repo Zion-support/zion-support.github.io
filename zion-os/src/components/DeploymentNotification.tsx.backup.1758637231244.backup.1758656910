@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 "use client";
 import { useState } from "react";
@@ -201,7 +200,6 @@ import {
   CheckCircle,
   AlertCircle,
   Clock,
-=======
 "use client";
 
 import { useState } from "react";
@@ -210,7 +208,6 @@ import {
   CheckCircle, 
   AlertCircle, 
   Clock, 
->>>>>>> origin/auto/autonomy-17186719616
   Activity,
   Play,
   Eye,
@@ -221,7 +218,6 @@ import {
   Shield,
   Building2,
   Users,
-<<<<<<< HEAD
 } from './lucide-react';,
 interface DeploymentUpdate {
   id: string,
@@ -344,7 +340,6 @@ interface DeploymentUpdate {;
   domain?: string,;
   progress?: number,;
   actions?: {;
-=======
   Zap
 } from "lucide-react";
 
@@ -360,13 +355,11 @@ interface DeploymentUpdate {
   domain?: string;
   progress?: number;
   actions?: {
->>>>>>> origin/auto/autonomy-17186719616
     label: string;
     action: 'deploy' | 'view' | 'retry' | 'configure' | 'dismiss';
     href?: string;
   }[];
 }
-<<<<<<< HEAD
 interface DeploymentNotificationProps {updates: DeploymentUpdate[];
   onDismiss?: (id: string) => void;
   onAction?: (id: string, action: string) => void;
@@ -377,7 +370,6 @@ export default function DeploymentNotification({updates;
 }: DeploymentNotificationProps) {const [expanded, setExpanded] = useState<string | null>(null);
   const getUpdateIcon = (type: string) => {;
     switch (type) {;
-=======
 
 interface DeploymentNotificationProps {
   updates: DeploymentUpdate[];
@@ -394,7 +386,6 @@ export default function DeploymentNotification({
 
   const getUpdateIcon = (type: string) => {
     switch (type) {
->>>>>>> origin/auto/autonomy-17186719616
       case 'deployment_started': return <Activity className="w-5 h-5 text-blue-400" />;
       case 'deployment_completed': return <CheckCircle className="w-5 h-5 text-green-400" />;
       case 'deployment_failed': return <AlertCircle className="w-5 h-5 text-red-400" />;
@@ -402,15 +393,12 @@ export default function DeploymentNotification({
       case 'update_available': return <Clock className="w-5 h-5 text-yellow-400" />;
       default: return <Rocket className="w-5 h-5 text-gray-400" />;
     }
-<<<<<<< HEAD
   }
   const getUpdateColor = (type: string) => {switch (type) {;
-=======
   };
 
   const getUpdateColor = (type: string) => {
     switch (type) {
->>>>>>> origin/auto/autonomy-17186719616
       case 'deployment_started': return 'border-blue-500/30 bg-blue-500/10';
       case 'deployment_completed': return 'border-green-500/30 bg-green-500/10';
       case 'deployment_failed': return 'border-red-500/30 bg-red-500/10';
@@ -418,41 +406,33 @@ export default function DeploymentNotification({
       case 'update_available': return 'border-yellow-500/30 bg-yellow-500/10';
       default: return 'border-white/20 bg-white/5';
     }
-<<<<<<< HEAD
   }
   const getVerticalIcon = (vertical: string) => {switch (vertical) {;
-=======
   };
 
   const getVerticalIcon = (vertical: string) => {
     switch (vertical) {
->>>>>>> origin/auto/autonomy-17186719616
       case "HEALTH": return <Shield className="w-4 h-4 text-blue-400" />;
       case "EDUCATION": return <Building2 className="w-4 h-4 text-green-400" />;
       case "LAW": return <Shield className="w-4 h-4 text-purple-400" />;
       case "GOV": return <Users className="w-4 h-4 text-red-400" />;
       default: return <Globe className="w-4 h-4 text-gray-400" />;
     }
-<<<<<<< HEAD
   }
   const getGovernanceIcon = (type: string) => {switch (type) {;
-=======
   };
 
   const getGovernanceIcon = (type: string) => {
     switch (type) {
->>>>>>> origin/auto/autonomy-17186719616
       case "ADMIN": return <Users className="w-4 h-4 text-yellow-400" />;
       case "DAO_LITE": return <Users className="w-4 h-4 text-blue-400" />;
       case "DAO_FULL": return <Zap className="w-4 h-4 text-purple-400" />;
       default: return <Users className="w-4 h-4 text-gray-400" />;
     }
-<<<<<<< HEAD
   }
   const formatTimestamp = (timestamp: string) => {const date = new Date(timestamp);
     const now = new Date();
     const diffInMinutes = Math.floor((now.getTime() - date.getTime()) / (1000 * 60));
-=======
   };
 
   const formatTimestamp = (timestamp: string) => {
@@ -460,12 +440,10 @@ export default function DeploymentNotification({
     const now = new Date();
     const diffInMinutes = Math.floor((now.getTime() - date.getTime()) / (1000 * 60));
     
->>>>>>> origin/auto/autonomy-17186719616
     if (diffInMinutes < 1) return 'Just now';
     if (diffInMinutes < 60) return `${diffInMinutes}m ago`;
     if (diffInMinutes < 1440) return `${Math.floor(diffInMinutes / 60)}h ago`;
     return date.toLocaleDateString();
-<<<<<<< HEAD
   }
   const handleAction = (updateId: string, action: string) => {if (onAction) {;
       onAction(updateId, action);
@@ -658,7 +636,6 @@ export function DeploymentNotificationExample() {;
         { label: "View Progress", action: "view", href: "/admin / deployments" },
         { label: "Configure", action: "configure", href: "/admin / instances" }
       ];
-=======
   };
 
   const handleAction = (updateId: string, action: string) => {
@@ -798,14 +775,12 @@ export function DeploymentNotificationExample() {
         { label: "View Progress", action: "view", href: "/admin/deployments" },
         { label: "Configure", action: "configure", href: "/admin/instances" }
       ]
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       id: "2",
       type: "instance_ready",
       title: "Instance Ready",
       message: "EduDAO Academy has been successfully deployed and is now live",
-<<<<<<< HEAD
       timestamp: new Date (Date.now () - 5 * 60 * 1000).toISOString (),
       instance_name: "EduDAO Academy",
       vertical: "EDUCATION",
@@ -834,7 +809,6 @@ export function DeploymentNotificationExample() {
       on_action={handle_action}
     />);
 }
-=======
       timestamp: new Date(Date.now() - 5 * 60 * 1000).toISOString(),
       instanceName: "EduDAO Academy",
       vertical: "EDUCATION",
@@ -864,4 +838,3 @@ export function DeploymentNotificationExample() {
     />
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

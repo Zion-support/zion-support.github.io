@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 
 
@@ -169,4 +167,3 @@ export default AnimatedBackground;
 };
 export default AnimatedBackground;
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

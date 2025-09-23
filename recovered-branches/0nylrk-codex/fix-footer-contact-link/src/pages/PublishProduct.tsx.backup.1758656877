@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -31,7 +30,6 @@ export default function PublishProduct() {
     <div className="min-h-screen flex flex-col bg-zion-blue">
       <SEO 
         title="Publish Your Product" 
-=======
 
 
 
@@ -85,7 +83,6 @@ export default function PublishProduct() {
     <div className="min-h-screen flex flex-col bg-zion-blue">
       <SEO
         title="Publish Your Product"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals."
         keywords="publish product, sell online, digital marketplace, AI tools, tech services"
       />
@@ -96,22 +93,17 @@ export default function PublishProduct() {
           <p className="text-zion-slate mb-8">
             Share your products, services, or digital assets with the Zion community.
           </p>
-<<<<<<< HEAD
           
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md:p-8">
-=======
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md: p-8">
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <ProductSubmissionForm />
           </div>
         </div>
       </main>
       <Footer />
     </div>
-<<<<<<< HEAD
   );
 }
-=======
   )
 
 
@@ -222,7 +214,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

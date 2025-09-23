@@ -11,8 +11,6 @@ type Props ={
   items: Experiment[];
 };
 
-<<<<<<< HEAD
-=======
 export default function CurationPage({ updatedAtitems }: Props) {
   return (
     <main className="mx-auto max-w-4xl px-4 py-12">
@@ -69,4 +67,3 @@ export async function getStaticProps() {
       revalidate: 300};
   }
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

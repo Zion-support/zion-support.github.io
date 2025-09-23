@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -65,15 +64,12 @@ const QuantumNeuralNetworkPlatform = () => {
     }
   ];
 
-=======
 
 export default function QuantumNeuralNetworkPlatformPage() {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <>
       <Head>
         <title>Quantum Neural Network Platform - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Revolutionary quantum neural network platform combining AI consciousness with quantum computing for unprecedented performance and capabilities." />
         <meta name="keywords" content="quantum computing, neural networks, AI consciousness, quantum AI, advanced technology" />
         <meta property="og:title" content="Quantum Neural Network Platform - Zion Tech Group" />
@@ -264,7 +260,6 @@ export default function QuantumNeuralNetworkPlatformPage() {
 };
 
 export default QuantumNeuralNetworkPlatform;
-=======
         <meta name="description" content="quantum neural network platform page" />
       </Head>
       <div className="container mx-auto px-4 py-8">
@@ -279,4 +274,3 @@ export default QuantumNeuralNetworkPlatform;
     </>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

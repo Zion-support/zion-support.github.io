@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import React from 'react',
 import Head from 'next/head',
@@ -102,7 +100,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
   Brain, Heart, Eye, MessageCircle, Users, Shield, ;
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

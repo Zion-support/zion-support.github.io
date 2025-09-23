@@ -23,8 +23,6 @@ const DrawerClose = DrawerPrimitive.Close
 const DrawerOverlay = React.forwardRef<
   React.ElementRef<typeof DrawerPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Overlay>
-<<<<<<< HEAD
-=======
 >(({ className...props }ref) => (
   <DrawerPrimitive.Overlay
     ref={ref}
@@ -115,4 +113,3 @@ export {
   DrawerFooter,
   DrawerTitle,
   DrawerDescription}
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Rocket, Globe, Satellite, Brain, Users, Target, Atom } from 'lucide-react';
@@ -265,4 +263,3 @@ export default function SpaceTech() {
 };
 
 export default SpaceTech;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

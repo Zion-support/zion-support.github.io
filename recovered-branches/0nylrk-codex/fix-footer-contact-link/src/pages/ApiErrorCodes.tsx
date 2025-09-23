@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
@@ -603,4 +601,3 @@ export default ApiErrorCodes;
 ;
 export default ApiErrorCodes;
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -4,8 +4,6 @@ export interface CountryPricing {
   pricePerIncident: number;
 }
 
-<<<<<<< HEAD
-=======
 
 export const onsiteServicePricing: CountryPricing[] = [
   { country: "Afghanistan", pricePerIncident: 131.04 },
@@ -240,4 +238,3 @@ export const onsiteServicePricing: CountryPricing[] = [
   { country: "Zambia", pricePerIncident: 62.01 },
   { country: "Zimbabwe", pricePerIncident: 60.50 }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

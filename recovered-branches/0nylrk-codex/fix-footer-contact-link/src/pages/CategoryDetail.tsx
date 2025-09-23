@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import {useParams, Link} from "react-router-dom";
 import {Header} from "@/components/header/Header";
@@ -574,7 +572,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 

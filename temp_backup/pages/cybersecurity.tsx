@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Zap, Brain, Globe, Target, AlertTriangle } from 'lucide-react';
@@ -133,4 +131,3 @@ export default function Cybersecurity() {
 };
 
 export default CybersecurityPage;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,7 +1,6 @@
 
 const fs = require("child_process")
 const path = require("path")
-<<<<<<< HEAD
 class SEOImprover {
   constructor() {
     this.projectRoot = process.cwd()}
@@ -52,7 +51,6 @@ Allow: /contact"
     fs.writeFileSync(path.join(this.projectRoot, "public/robots.txt"), robotsContent)
     }
   async addMetaTags() {
-=======
     console.log("� Generating sitemap...")
     const sitemapContent = `<?xml version="1.0" encoding="UTF-8"
 <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9"
@@ -83,4 +81,3 @@ Allow: /contact"
     fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
 // console.log(" Meta tags configuration created")
     console.log(" SEO improvement completed!")
->>>>>>> main

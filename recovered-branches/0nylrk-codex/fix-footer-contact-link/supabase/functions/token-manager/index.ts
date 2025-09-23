@@ -18,8 +18,6 @@ serve(async (req) => {
       headers: {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'POST, OPTIONS',
-<<<<<<< HEAD
-=======
         'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}});
   }
 
@@ -77,4 +75,3 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
 
   return new Response(JSON.stringify({ success: true, balance }), { status: 200 });
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

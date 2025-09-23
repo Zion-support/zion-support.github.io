@@ -4,8 +4,6 @@ export default function RetailTechnologySolutions() {
 	return (
 		<ServiceLanding
 			title="Retail Technology Solutions"
-<<<<<<< HEAD
-=======
 			description="Transform retail with AI-driven demand forecasting, personalization, and omnichannel optimization from store to logistics."
 			subtitle="Win every shelf and channel"
 			pricePerMonthUSD={3999}
@@ -25,4 +23,3 @@ export default function RetailTechnologySolutions() {
 		/>
 	);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

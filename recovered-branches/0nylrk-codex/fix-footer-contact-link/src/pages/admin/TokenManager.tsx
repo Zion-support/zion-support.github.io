@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import { useEffect, useState  } from 'react';
 import { Header  } from '@/components/Header';
@@ -257,4 +255,3 @@ export default function TokenManager() {;
     </ProtectedRoute>);
 
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

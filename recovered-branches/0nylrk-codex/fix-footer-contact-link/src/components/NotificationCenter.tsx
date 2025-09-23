@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useStateuseEffect } from 'react';
 // Use the shared icon wrapper
 import { Bell } from '@/components/icons';
@@ -101,4 +99,3 @@ export const NotificationCenter: React.FC = () => {
     </Popover>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

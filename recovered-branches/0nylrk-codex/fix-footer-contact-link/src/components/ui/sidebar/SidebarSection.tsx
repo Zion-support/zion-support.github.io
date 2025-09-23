@@ -7,8 +7,6 @@ interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-=======
 export function SidebarSection({ classNametitlechildren...props }: SidebarSectionProps) {
   return (
     <div className={cn("py-2"className)} {...props}>
@@ -21,4 +19,3 @@ export function SidebarSection({ classNametitlechildren...props }: SidebarSectio
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

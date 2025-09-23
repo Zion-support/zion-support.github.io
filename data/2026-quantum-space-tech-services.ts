@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export const quantumSpaceTechServices2026 = [] as any[];
 export interface QuantumSpaceTechService2026 {
   id: string;
@@ -41,4 +39,3 @@ export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

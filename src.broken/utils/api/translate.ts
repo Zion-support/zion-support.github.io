@@ -17,8 +17,6 @@ async function translateWithOpenAI(text: string, to: string, from?: string): Pro
     model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
     messages: [
       { role: 'system', content: system },
-<<<<<<< HEAD
-=======
       { role: 'user', content: user }],
     temperature: 0.2});
   return (completion.choices?.[0]?.message?.content || '').trim();
@@ -58,4 +56,3 @@ export function detectLanguageSimple(text: string): string {
   // Default to 'en'
   return 'en';
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

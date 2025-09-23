@@ -1,13 +1,10 @@
-<<<<<<< HEAD:backup-merge-conflicts/CommunityRoutes.jsx.backup
 <<<<<<< HEAD
 import React from &apos;react&apos;; import CommunityPage from &apos;@/pages/CommunityPage export default function CommunityRoutes($1) { return (<> <Route path=&quot; element={<CommunityPage />}/> </>)} ;&apos;;&apos;;
-=======
 <<<<<<< HEAD
 const React from "react"; import CommunityPage from "@/pages/CommunityPage export default function CommunityRoutes($1) { return (<> <Route path=" element={<CommunityPage />}/> </>)} ;";";"""
 <<<<<<< HEAD:backup-merge-conflicts/CommunityRoutes.jsx.backup
 =======
 import _React from 'react'; import CommunityPage from '@/pages/CommunityPage export default function CommunityRoutes(_) { return (<> <Route path=" element={<CommunityPage />}/> </>)} ;';';
->>>>>>> main
 >>>>>>> main
 =======
 import _React from 'react'; import CommunityPage from '@/pages/CommunityPage export default function CommunityRoutes(_) { return (<> <Route path=" element={<CommunityPage />}/> </>)} ;';';

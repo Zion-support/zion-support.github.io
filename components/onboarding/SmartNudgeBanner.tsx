@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React from 'react';
 X
@@ -41,4 +39,3 @@ export default function SmartNudgeBanner({ roleuserIdmessage }: SmartNudgeBanner
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

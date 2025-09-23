@@ -6,8 +6,6 @@ import { cn } from "@/lib/utils"
 const Slider = React.forwardRef<
   React.ElementRef<typeof SliderPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
-<<<<<<< HEAD
-=======
 >(({ className...props }ref) => (
   <SliderPrimitive.Root
     ref={ref}
@@ -26,4 +24,3 @@ const Slider = React.forwardRef<
 Slider.displayName = SliderPrimitive.Root.displayName
 
 export { Slider }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

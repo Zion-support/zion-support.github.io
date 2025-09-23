@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
  password.toLowerCase () .includes (pattern) );
 password.toLowerCase () .includes (pattern) );
@@ -114,7 +112,6 @@ export default async function handler(
     // Calculate score
     let score = 0;
     score += Math && Math.min(length * 2, 20), // Length contribution (max 20)
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     score += hasLowercase ? 10 : 0;
     score += hasNumbers ? 10 : 0;
     score += hasSymbols ? 15 : 0;

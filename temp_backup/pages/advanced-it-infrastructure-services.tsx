@@ -2,8 +2,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-=======
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, 
   Shield, Mail, Brain, Atom, 
   Cloud, 
@@ -416,4 +414,3 @@ export default function AdvancedITInfrastructureServices() {
     </Layout>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

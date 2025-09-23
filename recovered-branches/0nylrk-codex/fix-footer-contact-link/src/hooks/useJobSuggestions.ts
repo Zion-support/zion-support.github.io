@@ -10,8 +10,6 @@ export function useJobSuggestions(talentId?: string) {
   
   useEffect(() => {
     const fetchSuggestedJobs = async () => {
-<<<<<<< HEAD
-=======
 
       if (!talentId) return;
       
@@ -107,4 +105,3 @@ export function useJobSuggestions(talentId?: string) {
     }
   };
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

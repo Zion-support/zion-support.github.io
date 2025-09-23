@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 export interface CustomerTicket {
-=======
 
 export interface CustomerTicket {
 export interface CustomerTicket {;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   id: string;
   customerId: string;
   subject: string;
@@ -19,7 +16,6 @@ export interface CustomerTicket {;
   resolvedAt?: Date;
   customerSatisfaction?: number;
   tags: string[];
-<<<<<<< HEAD
   attachments: string[];
   conversationHistory: CustomerMessage[];
 }
@@ -29,7 +25,6 @@ export interface CustomerMessage {
   ticketId: string;
   senderId: string;
   senderType: 'customer' | 'agent' | 'ai';
-=======
 
 
 
@@ -49,18 +44,15 @@ export interface CustomerMessage {
   ticket_id: string;
   sender_id: string;
   sender_type: 'customer' | 'agent' | 'ai';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   message: string;
   timestamp: Date;
   attachments?: string[];
   sentiment: 'positive' | 'neutral' | 'negative';
-<<<<<<< HEAD
   intent: string;
   confidence: number;
 }
 
 export interface CustomerProfile {
-=======
 
 
   intent: string,
@@ -74,14 +66,12 @@ export interface CustomerProfile {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   id: string;
   email: string;
   name: string;
   phone?: string;
   company?: string;
   plan: string;
-<<<<<<< HEAD
   totalTickets: number;
   resolvedTickets: number;
   averageResolutionTime: number;
@@ -123,7 +113,6 @@ export interface CustomerServiceMetrics {
 
 export interface CustomerServiceRequest {
   customerId: string;
-=======
   total_tickets: number;
   resolved_tickets: number;
   averageResolutionTime: number;
@@ -182,12 +171,10 @@ export interface CustomerServiceRequest {;
 
   customerId: string;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   subject: string;
   description: string;
   priority: 'low' | 'medium' | 'high' | 'urgent';
   category: string;
-<<<<<<< HEAD
   attachments?: string[];
   preferredChannel?: 'email' | 'chat' | 'phone';
 }
@@ -455,7 +442,6 @@ export class AICustomerServiceService {
       return data.downloadUrl;
     } catch (error) {
       console.error('Error generating report:', error);
-=======
 
   attachments?: string[],
   preferred_channel?: 'email' | 'chat' | 'phone';
@@ -1025,19 +1011,15 @@ export class AICustomerServiceService {;
       return data.downloadUrl;
     } catch (error) {;
       console.error('Error generating report:', error),;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       throw error;
     }
   }
 }
-<<<<<<< HEAD
 
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
-=======
 ;
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
 
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

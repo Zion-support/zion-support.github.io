@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React from "react";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
@@ -67,7 +65,6 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <div>
         <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>
         <Input

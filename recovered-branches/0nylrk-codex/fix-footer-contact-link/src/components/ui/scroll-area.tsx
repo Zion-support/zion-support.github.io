@@ -6,8 +6,6 @@ import { cn } from "@/lib/utils"
 const ScrollArea = React.forwardRef<
   React.ElementRef<typeof ScrollAreaPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root>
-<<<<<<< HEAD
-=======
 >(({ classNamechildren...props }ref) => (
   <ScrollAreaPrimitive.Root
     ref={ref}
@@ -46,4 +44,3 @@ const ScrollBar = React.forwardRef<
 ScrollBar.displayName = ScrollAreaPrimitive.ScrollAreaScrollbar.displayName
 
 export { ScrollAreaScrollBar }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

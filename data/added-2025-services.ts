@@ -12,8 +12,6 @@ export interface AddedService {
   rating?: number;
   customerCount?: number;
 }
-<<<<<<< HEAD
-=======
 export const added2025Services: AddedService[] = [
   {
     id: 'ai-assistant-pro',
@@ -170,4 +168,3 @@ export const added2025Services: AddedService[] = [
     customerCount: 640
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

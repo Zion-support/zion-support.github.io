@@ -1,6 +1,5 @@
 export default function PrivacyPage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
@@ -172,7 +171,6 @@ export default function PrivacyPage() {
           </div>
         </div>
       </div>
-=======
     <div className="min-h-screen py-20">
       {/* Hero Section */}
       <section className="relative mb-20">
@@ -352,7 +350,6 @@ export default function PrivacyPage() {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/website-audit-and-enhancement-8931
     </div>
   );
 }

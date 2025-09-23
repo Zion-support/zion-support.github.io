@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import { Trophy } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
@@ -152,7 +150,6 @@ export const ReputationDisplay = ({ ;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

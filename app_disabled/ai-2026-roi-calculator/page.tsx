@@ -1,6 +1,4 @@
 "use client";
-<<<<<<< HEAD
-=======
 =======
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -94,7 +92,6 @@ export default function AIROICalculator() {
 =======
             <h1 className="text-3xl font-bold text-gray-900 mb-2">AI ROI Calculator 2025</h1>
             <p className="text-gray-600">Calculate the potential return on investment for your AI implementation</p>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

@@ -3,7 +3,6 @@ const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
-<<<<<<< HEAD
     this.ensureDirectories()}
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
@@ -14,7 +13,6 @@ const { execSync } = require("child_process")
     }
   analyzeCodeComplexity() {
     this.log("🔍 Analyzing code complexity...")
-=======
       fs.mkdirSync(this.reportsDir, { "recursive"})
     this.log(" Analyzing code complexity...")
     const srcDir = path.join(this.projectRoot, "src")
@@ -67,4 +65,3 @@ const { execSync } = require("child_process")
     console.log(` "Recommendations"`)
     const highPriority = recommendations.filter(r => r.priority === "high")
       console.log("\n� High Priority "Recommendations": ")
->>>>>>> main

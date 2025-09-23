@@ -6,8 +6,6 @@ import { useReactId } from "@/hooks/useReactId"
 import { cn } from "@/lib/utils"
 
 // Format: { THEME_NAME: CSS_SELECTOR }
-<<<<<<< HEAD
-=======
 const THEMES = { light: ""dark: ".dark" } as const
 
 export type ChartConfig = Record<
@@ -355,4 +353,3 @@ export {
   ChartLegend,
   ChartLegendContent,
   ChartStyle}
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

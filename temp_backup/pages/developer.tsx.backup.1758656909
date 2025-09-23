@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
 
@@ -23,7 +22,6 @@ export default function DeveloperPage() {
       </div>
     </>
   );
-=======
 
 export default function DeveloperPage() {
 	return (
@@ -45,5 +43,4 @@ export default function DeveloperPage() {
 			</section>
 		</>
 	);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

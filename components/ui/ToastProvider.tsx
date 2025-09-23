@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ createContextuseCallbackuseContextuseMemouseState } from 'react'
 import { AnimatePresencemotion } from 'framer-motion'
@@ -90,4 +88,3 @@ export function useToast() {
   if (!ctx) throw new Error('useToast must be used within ToastProvider')
   return ctx
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

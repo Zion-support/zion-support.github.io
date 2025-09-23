@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useState } from 'react';
 import Head from 'next/head';
@@ -19,7 +17,6 @@ MailLockLinkFileTextCheckCircleZapBarChart3CodePlay
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function DemosPage() {
   const [activeDemosetActiveDemo] = useState<string>('email-validator');
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

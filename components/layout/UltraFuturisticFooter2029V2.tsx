@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-=======
   PhoneMailMapPinGlobeArrowRight
   BrainRocketTargetShieldCpu
   FacebookTwitterLinkedinInstagramYoutube,
@@ -375,4 +373,3 @@ export default function UltraFuturisticFooter2029V2() {
     </footer>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

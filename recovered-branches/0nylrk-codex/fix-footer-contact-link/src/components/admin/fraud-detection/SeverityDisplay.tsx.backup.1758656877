@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react";
 import { SeverityIndicator } from "@/components/ui/severity-indicator";
 
@@ -16,11 +15,9 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) =>
     />
   );
 };
-=======
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface SeverityDisplayProps {
   severity: string
 }

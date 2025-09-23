@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 
   const terms = readJsonFile('deal/terms && terms.json', {
     round: 'Series A',
@@ -63,7 +61,6 @@ function handler() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 

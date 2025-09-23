@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/WebVitals.dynamic.test.js.backup
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD:__tests__/WebVitals.dynamic.test.js
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 >>>>>>> pr-11913:__tests__/WebVitals.dynamic.test.js
 import React from 'react';
@@ -26,11 +23,8 @@ describe('WebVitalsdynamic', () => {
   });
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import WebVitalsdynamic from "./components/WebVitals.dynamic"; describe("WebVitalsdynamic",() => { test("renders without crashing",() => { render(<WebVitalsdynamic />); expect(screen.getByTestId("webvitals.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<WebVitalsdynamic />)}); test("handles user interactions",() => { render(<WebVitalsdynamic />)}); test("applies correct styling",() => { render(<WebVitalsdynamic />)})});''"
-<<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD:__tests__/WebVitals.dynamic.test.js
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import _React from 'react';  import '@testing-library/jest-dom'; import WebVitalsdynamic from '../components/WebVitals.dynamic'; describe('WebVitalsdynamic',() => { test('renders without crashing',() => { render(<WebVitalsdynamic />); expect(screen.getByTestId('webvitals.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<WebVitalsdynamic />)}); test('handles user interactions',() => { render(<WebVitalsdynamic />)}); test('applies correct styling',() => { render(<WebVitalsdynamic />)})});
 >>>>>>> main
 =======

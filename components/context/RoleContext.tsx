@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ createContextuseContextuseEffectuseMemouseState } from 'react';
 
@@ -42,4 +40,3 @@ export function useRole(): RoleContextValue {
   if (!ctx) throw new Error('useRole must be used within RoleProvider');
   return ctx;
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

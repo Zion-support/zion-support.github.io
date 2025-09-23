@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { FormFieldFormItemFormLabelFormControlFormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Control } from "react-hook-form";
@@ -72,4 +70,3 @@ export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

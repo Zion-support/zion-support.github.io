@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useMemouseState } from 'react';
 DownloadImage as ImageIconFileTypeBookOpenSettingsWand2
@@ -271,4 +269,3 @@ export default function BookBuilder() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

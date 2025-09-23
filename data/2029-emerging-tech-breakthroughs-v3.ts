@@ -49,8 +49,6 @@ export const emergingTechBreakthroughs20o29V3: EmergingTechBreakthrough20o29V3[]
     tagline: 'Light-speed computing with photonic processors',
     price: '$699',
     period: '/month',
-<<<<<<< HEAD
-=======
     description: 'Revolutionary photonic computing infrastructure that uses light instead of electricity for computation, enabling 1000x faster processing speeds and ultra-low power consumption.',
     features: [
       'Photonic processors',
@@ -409,4 +407,3 @@ export const emergingTechBreakthroughs20o29V3: EmergingTechBreakthrough20o29V3[]
     reviews: 780
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

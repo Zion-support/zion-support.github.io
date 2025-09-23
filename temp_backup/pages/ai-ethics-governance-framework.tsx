@@ -4,8 +4,6 @@ export default function AIEthicsGovernanceFramework() {
 	return (
 		<ServiceLanding
 			title="AI Ethics & Governance Framework"
-<<<<<<< HEAD
-=======
 			description="Operationalize responsible AI with policy, risk controls, monitoring, and compliance automation aligned to global standards."
 			subtitle="Responsible AI, end-to-end"
 			pricePerMonthUSD={1999}
@@ -25,4 +23,3 @@ export default function AIEthicsGovernanceFramework() {
 		/>
 	);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

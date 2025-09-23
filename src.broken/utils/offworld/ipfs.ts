@@ -66,8 +66,6 @@ export async function addBuffer(buffer: Buffer, filename = 'file.bin'): Promise<
       ? new PinataSDK({ pinataJWTKey: pinataJwt })
       : new PinataSDK(pinataApiKey, pinataSecret);
     const res = await pinata.pinFileToIPFS(bufferToStream(buffer), {
-<<<<<<< HEAD
-=======
       pinataMetadata: { name: filename }} as any);
     return { cid: res.IpfsHash, provider: 'pinata' };
   }
@@ -166,4 +164,3 @@ export const OFFWORLD_TOPICS = {
   manifesto: 'zion.manifesto.broadcast',
   chat: 'zion.chat.messages',
   votes: 'zion.dao.votes'};
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,15 +1,11 @@
-<<<<<<< HEAD
 
 "use client";
-=======
 "use client";
 
->>>>>>> origin/auto/autonomy-17186719616
 import { useAuth } from "@/contexts/AuthContext";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import Link from "next/link";
-<<<<<<< HEAD
 export default function DashboardPage() {const { user, isAuthenticated, isLoading } = useAuth();
   const router = useRouter();
   useEffect(() => {if (!isLoading && !isAuthenticated) {;
@@ -200,7 +196,6 @@ export default function DashboardPage() {;
       </div>;
     </div>);
 }
-=======
 
 export default function DashboardPage() {
   const { user, isAuthenticated, isLoading } = useAuth();
@@ -329,4 +324,3 @@ export default function DashboardPage() {
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

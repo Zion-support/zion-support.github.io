@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React{ useStateuseMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -596,4 +594,3 @@ export default function Ultimate2026ServicesShowcase() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

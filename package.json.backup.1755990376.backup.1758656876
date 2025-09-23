@@ -318,9 +318,7 @@
     "react": "18.2.0",
     "react-datepicker": "^8.4.0",
     "react-dom": "^17.0.2",
-<<<<<<< HEAD
     "solc": "^0.8.26",
-=======
     "react-dom": "18.2.0",
 =======
     "lucide-react": "^0.536.0",
@@ -333,7 +331,6 @@
     "react-datepicker": "^8.4.0",
     "react-dom": "^19.1.1",
     "tailwind-merge": "^3.3.1",
->>>>>>> origin/auto/autonomy-17186719616
     "uuid": "^11.1.0"
   },
   "devDependencies": {

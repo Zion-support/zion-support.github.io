@@ -3,8 +3,6 @@ import { format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
 import { UseFormReturn } from "react-hook-form";
 import { 
-<<<<<<< HEAD
-=======
   FormField
   FormItem
   FormLabel
@@ -142,4 +140,3 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

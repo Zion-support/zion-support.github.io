@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -173,7 +171,6 @@ export default function BlogPost() {;
       <SEO
         title={post.title}
         description={post.excerpt}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         keywords={post.tags.join(", ")}
         ogImage={post.featuredImage}
         canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}

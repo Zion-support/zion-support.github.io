@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 export interface MarketTrend {
 export interface MarketTrend {;
@@ -530,7 +528,6 @@ export const aiMarketResearchService = new AIMarketResearchService (process.env.
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 

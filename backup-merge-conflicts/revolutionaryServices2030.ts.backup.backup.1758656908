@@ -1,20 +1,14 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD:src.disabled/src/data/revolutionaryServices2030.ts
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { ProductListing } from "@/types/listings"; export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
 , export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [""","});"})"
 ,"});"})" export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [,"});"})"@/types/listings&apos;&apos, export ;const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [&apos,&apos,",&quot,""export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [""
 """,
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 =======
 >>>>>>> pr-11935
@@ -25,8 +19,6 @@ import { ProductListing } from "@/types/listings"; export const REVOLUTIONARY_SE
 import { ProductListing } from "@/types/listings"; export const "REVOLUTIONARY_SERVICES_2030": ProductListing[] = [, export const "REVOLUTIONARY_SERVICES_2030": ProductListing[] = [""","});"})"
 ,"});"})" export const "REVOLUTIONARY_SERVICES_2030": ProductListing[] = [,"});"})"@/types/listings&apos;&apos, export ;const "REVOLUTIONARY_SERVICES_2030": ProductListing[] = [&apos,&apos,",&quot,""export const "REVOLUTIONARY_SERVICES_2030": ProductListing[] = [""
 """,
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:backup-merge-conflicts/revolutionaryServices2030.ts.backup
 import { ProductListing } from "@/types/listings"; export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [ ,export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [""","});"})" ,"});"})" export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [,"});"})"@/types/listings&apos;&apos,export ;const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [&apos,&apos,",&quot,""export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = ["" """,
 import { ProductListing } from "@/types/listings"; export const "REVOLUTIONARY_SERVICES_2030": ProductListing[] = [, export const "REVOLUTIONARY_SERVICES_2030": ProductListing[] = [""","});"})"
@@ -36,7 +28,6 @@ import { ProductListing } from "@/types/listings"; export const REVOLUTIONARY_SE
 =======
 <<<<<<< HEAD:src.disabled/src/data/revolutionaryServices2030.ts
 import { ProductListing } from "@/types/listings"; export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [ ,export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [""","});"})" ,"});"})" export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [,"});"})"@/types/listings&apos;&apos,export ;const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [&apos,&apos,",&quot,""export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = ["" """,
->>>>>>> main
 >>>>>>> main
 import { ProductListing } from "@/types/listings"; export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [ ,export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [""","});"})" ,"});"})" export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [,"});"})"@/types/listings&apos;&apos,export ;const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [&apos,&apos,",&quot,""export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = ["" """,
 >>>>>>> main

@@ -3,8 +3,6 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-<<<<<<< HEAD
-=======
   DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
 import { useCurrencySupportedCurrency } from '@/context/CurrencyContext';
 DollarSign
@@ -39,4 +37,3 @@ export function CurrencySelector() {
     </DropdownMenu>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

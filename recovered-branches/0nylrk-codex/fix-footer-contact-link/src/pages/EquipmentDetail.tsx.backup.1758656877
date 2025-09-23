@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Header } from "@/components/Header";
@@ -36,7 +35,6 @@ interface EquipmentDetails {
   returnPolicy?: string;
 }
 
-=======
 
   warranty?: string;
   returnPolicy?: string
@@ -116,13 +114,11 @@ interface EquipmentDetails {
   returnPolicy?: string;
 
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 // Sample data - in a real app this would come from an API
 const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
   "pro-camera-x1000": {
     id: "pro-camera-x1000",
     name: "Pro Camera X1000",
-<<<<<<< HEAD
     description: "Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.",
     brand: "CineTech",
     category: "Equipment",
@@ -139,7 +135,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     inStock: true,
     expectedShipping: "3-5 business days",
     specifications: [
-=======
     description: "Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light window.window.window.performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.",
     brand: "CineTech",
     category: "Equipment",
@@ -168,7 +163,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       { name: "Storage", value: "Dual CFexpress Type B" }
       { name: "Battery Life", value: "~3 hours continuous recording" }
       { name: "Weight", value: "4.5 lbs (body only)" }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       { name: "Sensor", value: "Full-frame CMOS (36 x 24 mm)" },
       { name: "Resolution", value: "8K (8192 x 4320)" },
       { name: "Dynamic Range", value: "16+ stops" },
@@ -181,8 +175,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       { name: "Connectivity", value: "HDMI 2.1, USB-C, Wi-Fi, Bluetooth" }
     ],
     features: [
-<<<<<<< HEAD
-=======
       "Advanced 8K full-frame sensor";
       "16+ stops of dynamic range";
       "Internal RAW recording";
@@ -204,7 +196,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     brand: "AudioTech"
     category: "Equipment"
     subcategory: "Audio"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       "Advanced 8K full-frame sensor",
       "16+ stops of dynamic range",
       "Internal RAW recording",
@@ -226,7 +217,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     brand: "AudioTech",
     category: "Equipment",
     subcategory: "Audio",
-<<<<<<< HEAD
     images: [
       "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800",
       "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1200&h=800"
@@ -265,7 +255,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
 };
 
 export default function EquipmentDetail() {
-=======
 
     images: [
       "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800";
@@ -294,16 +283,13 @@ export default function EquipmentDetail() {
 
 
 export default function EquipmentDetail() {;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const { equipmentId } = useParams() as { equipmentId?: string };
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [isAdding, setIsAdding] = useState(false);
-<<<<<<< HEAD
   
   // In a real app, this would fetch from an API
   const equipment = equipmentId ? SAMPLE_EQUIPMENT[equipmentId] : undefined;
-=======
 export default function EquipmentDetail() {
   const { equipmentId } = useParams() as { equipmentId?: string },
   const [selectedImageIndex, setSelectedImageIndex] = useState(0),
@@ -312,7 +298,6 @@ export default function EquipmentDetail() {
   
   // In a real app, this would fetch from an API
   const equipment = equipmentId ? SAMPLE_EQUIPMENT[equipmentId] : undefined,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   if (!equipment) {
     return (
@@ -328,7 +313,6 @@ export default function EquipmentDetail() {
         </div>
         <Footer />
       </>
-<<<<<<< HEAD
     );
   }
 
@@ -357,7 +341,6 @@ export default function EquipmentDetail() {
       });
     }, 800);
   };
-=======
     )
   }
   const handleAddToCart = () => {
@@ -388,7 +371,6 @@ export default function EquipmentDetail() {
     }, 800)
   }
   },
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <>
@@ -401,7 +383,6 @@ export default function EquipmentDetail() {
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
                 {/* Main Image */}
                 <div className="aspect-video w-full relative">
-<<<<<<< HEAD
                   <img 
                     src={equipment.images[selectedImageIndex]} 
                     alt={equipment.name} 
@@ -409,30 +390,24 @@ export default function EquipmentDetail() {
                   />
                 </div>
                 
-=======
                   <img
                     src={equipment.images[selectedImageIndex]}
                     alt={equipment.name}
                     className="w-full h-full object-contain bg-zion-blue-light/10 p-4"
                   />
                 </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 {/* Thumbnail Gallery */}
                 {equipment.images.length > 1 && (
                   <div className="flex p-4 gap-2 overflow-x-auto">
                     {equipment.images.map((image, index) => (
-<<<<<<< HEAD
                       <div 
-=======
                       <div
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
                         className={`w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 ${
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
                         }`}
                       >
-<<<<<<< HEAD
                         <img 
                           src={image} 
                           alt={`${equipment.name} - image ${index + 1}`} 
@@ -491,7 +466,6 @@ export default function EquipmentDetail() {
                             <span className="text-zion-slate-light">{feature}</span>
                           </li>
                         ))}
-=======
                         <img
                           src={image}
                           alt={`${equipment.name} - image ${index + 1}`}
@@ -806,7 +780,6 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -877,7 +850,6 @@ if ( {) {
                 </Tabs>
               </div>
             </div>
-<<<<<<< HEAD
             
             {/* Right Column - Purchase Info */}
             <div className="lg:col-span-1">
@@ -944,7 +916,6 @@ if ( {) {
                   )}
                 </div>
                 
-=======
                       </ul>;
                     </div>;
                   </TabsContent>;
@@ -957,7 +928,6 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -1057,7 +1027,6 @@ if ( {) {
                 <div className="mb-6">
                   <label className="text-sm text-zion-slate-light block mb-2">Quantity</label>
                   <div className="flex items-center border border-zion-blue-light rounded-md w-32">
-<<<<<<< HEAD
                     <button 
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
                       onClick={() => setQuantity(prev => Math.max(1, prev - 1))}
@@ -1067,7 +1036,6 @@ if ( {) {
                     </button>
                     <input 
                       type="number" 
-=======
 
                     <button
                     <button 
@@ -1080,19 +1048,15 @@ if ( {) {
                     </button>
                     <input
                       type="number"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       className="w-full text-center bg-transparent border-0 text-white focus:ring-0"
                       value={quantity}
                       readOnly
                     />
-<<<<<<< HEAD
                     <button 
-=======
 
                     <button
                     <button 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
                       onClick={() => setQuantity(prev => prev + 1)}
                       disabled={!equipment.inStock}
@@ -1101,14 +1065,12 @@ if ( {) {
                     </button>
                   </div>
                 </div>
-<<<<<<< HEAD
                 
                 {/* Purchase Buttons */}
                 <div className="space-y-3 mb-6">
                   <Button 
                     onClick={handleBuyNow}
                     disabled={isAdding || !equipment.inStock}
-=======
                 {/* Purchase Buttons */}
                 <div className="space-y-3 mb-6">
 
@@ -1117,24 +1079,20 @@ if ( {) {
 
                     onClick={handleBuyNow}
                     disabled={isAdding |!equipment.inStock}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
                   >
                     {isAdding ? "Processing..." : "Buy Now"}
                   </Button>
-<<<<<<< HEAD
                   
                   <Button 
                     onClick={handleAddToCart}
                     disabled={isAdding || !equipment.inStock}
-=======
 
                   <Button
                   <Button 
 
                     onClick={handleAddToCart}
                     disabled={isAdding |!equipment.inStock}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     variant="outline"
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
                   >
@@ -1142,7 +1100,6 @@ if ( {) {
                     Add to Cart
                   </Button>
                 </div>
-<<<<<<< HEAD
                 
                 {/* Additional Info */}
                 <div className="space-y-4 border-t border-zion-blue-light pt-4">
@@ -1166,7 +1123,6 @@ if ( {) {
                     </div>
                   )}
                   
-=======
 
                 </div>;
 
@@ -1372,7 +1328,6 @@ if ( {) {
                         <p className="text - xs">{equipment.warranty}</p>;
                       </div>;
                     </div>)}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   {/* Return Policy */}
                   {equipment.returnPolicy && (
                     <div className="flex gap-3 text-zion-slate-light">
@@ -1383,10 +1338,7 @@ if ( {) {
                       </div>
                     </div>
                   )}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 </div>
               </div>
             </div>
@@ -1395,10 +1347,8 @@ if ( {) {
       </div>
       <Footer />
     </>
-<<<<<<< HEAD
   );
 }
-=======
   )
 }
                 </div>;
@@ -1415,4 +1365,3 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

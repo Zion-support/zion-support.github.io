@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import Link from 'next/link';
-=======
 import Link from "next/link";
 import { Metadata } from "next";
 
@@ -46,7 +44,6 @@ export const metadata: Metadata = {
     google: "your-google-verification-code",
   },
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
 
 export default function HomePage() {
   const services = [
@@ -103,7 +100,6 @@ export default function HomePage() {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -185,7 +181,6 @@ export default function HomePage() {
                 </Link>
               </div>
             ))}
-=======
     <>
       {/* Structured Data for SEO */}
       <script
@@ -267,11 +262,9 @@ export default function HomePage() {
           {/* Background Elements */}
           <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-full blur-3xl animate-pulse-slow"></div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
           </div>
         </section>
 
-<<<<<<< HEAD
       {/* About Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -370,7 +363,6 @@ export default function HomePage() {
             >
               Explore Our Services
             </Link>
-=======
         {/* Quick Actions */}
         <section className="py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="quick-actions-heading">
           <div className="max-w-7xl mx-auto">
@@ -473,7 +465,6 @@ export default function HomePage() {
                 <a href="/services" className="text-blue-400 hover:underline text-sm mt-4 inline-block" aria-label="Learn more about cybersecurity services">Learn More →</a>
               </div>
             </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
           </div>
         </section>
 

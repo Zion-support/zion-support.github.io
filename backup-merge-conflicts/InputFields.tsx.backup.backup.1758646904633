@@ -1,8 +1,6 @@
 import React from 'react';
 interface InputFieldsProps {;
-<<<<<<< HEAD:backup-merge-conflicts/InputFields.tsx.backup
 <<<<<<< HEAD
-=======
   "inputData": "an y;
   "setInputData": ("data": an y) => void;
   "onNext": () => void;
@@ -39,7 +37,6 @@ const "InputFields": React.FC<InputFieldsProps> = ({ inputData, setInputData, on
       ...inputData,;
       [field]: value;
     });
->>>>>>> main:src_backup_temp/components/admin/pitch-generator/InputFields.tsx
 =======
 >>>>>>> pr-11913:src_backup_temp/components/admin/pitch-generator/InputFields.tsx
   };

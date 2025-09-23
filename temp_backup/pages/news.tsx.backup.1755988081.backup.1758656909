@@ -6,7 +6,6 @@ import {
   Calendar, 
   User, 
   Tag, 
-<<<<<<< HEAD
   ArrowRight, 
   Search, 
   Filter,
@@ -200,7 +199,6 @@ const NewsPage: React.FC = () => {
                     <Filter className="w-5 h-5" />
                   </button>
                 </div>
-=======
               <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full px-4 py-2 mb-6">
                 <Globe className="w-5 h-5 text-cyan-400" />
                 <span className="text-cyan-400 font-medium">Latest News & Updates</span>
@@ -229,13 +227,11 @@ const NewsPage: React.FC = () => {
                 >
                   <span>Get in Touch</span>
                 </Link>
->>>>>>> origin/cursor/website-audit-and-enhancement-3789
               </div>
             </motion.div>
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Featured News */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -533,7 +529,6 @@ const NewsPage: React.FC = () => {
                 >
                   Press Kit
                 </a>
-=======
         {/* Newsletter Signup */}
         <div className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -559,7 +554,6 @@ const NewsPage: React.FC = () => {
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-black font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                   Subscribe
                 </button>
->>>>>>> origin/cursor/website-audit-and-enhancement-3789
               </div>
             </motion.div>
           </div>

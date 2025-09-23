@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react";
 import { SEO } from "@/components/SEO";
 import { AppLayout } from "@/layout/AppLayout";
@@ -15,7 +14,6 @@ const MobileLaunchPage: React.FC = () => {
   return (
     <AppLayout>
       <SEO 
-=======
 
 
 
@@ -50,7 +48,6 @@ class ErrorBoundary extends React.Component {
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 import React from "react";
@@ -99,7 +96,6 @@ const MobileLaunchPage: React.FC = () => {
         keywords="Zion mobile app, AI talent app, tech job app, project management app, iOS app, Android app"
         canonical="/mobile-launch"
       />
-<<<<<<< HEAD
       
       <MobileLaunchHero />
       
@@ -119,7 +115,6 @@ const MobileLaunchPage: React.FC = () => {
 };
 
 export default MobileLaunchPage;
-=======
       <MobileLaunchHero />
       <MobileFeatureShowcase />
       <QrCodeDownload />
@@ -169,7 +164,6 @@ const MobileLaunchPage: React.FC = () => {;
 ;
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export default MobileLaunchPage;

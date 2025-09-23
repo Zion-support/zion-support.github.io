@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React from "react";
 import { DialogContentDialogHeaderDialogTitle } from "@/components/ui/dialog";
 import { HireRequestForm } from "./HireRequestForm";
@@ -39,4 +37,3 @@ export function HireRequestModal({ talentisOpenonCloseuserDetails }: HireRequest
     </Dialog>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

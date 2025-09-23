@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -15,7 +14,6 @@ export default function Profile() {
   useEffect(() => {
     if (!isLoading && !user) {
       toast.error("Please log in to view your profile");
-=======
 
 
 
@@ -64,12 +62,10 @@ export default function Profile() {
   useEffect(() => {;
     if (!isLoading && !user) {;
       toast && toast.error("Please log in to view your profile");
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       navigate("/login?redirect=/profile");
     }
   }, [user, isLoading, navigate]);
 
-<<<<<<< HEAD
   if (isLoading) {
     return (
       <>
@@ -126,7 +122,6 @@ export default function Profile() {
                   }}
                   variant="outline"
                   className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
-=======
   if (isLoading) {;
 
     return (
@@ -191,7 +186,6 @@ export default function Profile() {
                   }}
                   variant="outline"
                   className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 >
                   Logout
                 </Button>
@@ -202,10 +196,8 @@ export default function Profile() {
       </div>
       <Footer />
     </>
-<<<<<<< HEAD
   );
 }
-=======
   )
 
 }
@@ -300,7 +292,6 @@ if ( {) {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

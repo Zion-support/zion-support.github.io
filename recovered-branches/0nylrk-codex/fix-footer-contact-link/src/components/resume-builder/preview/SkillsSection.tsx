@@ -7,8 +7,6 @@ interface SkillsSectionProps {
 
 export function SkillsSection({ skills }: SkillsSectionProps) {
   // Group skills by category
-<<<<<<< HEAD
-=======
   const skillsByCategory = skills.reduce((accskill) => {
     const category = skill.category || 'Other';
     if (!acc[category]) {
@@ -36,4 +34,3 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -19,7 +18,6 @@ const AutoUpdate20250808t164954200z: NextPage = () => {
 };
 
 export default AutoUpdate20250808t164954200z;
-=======
 export default function AutoUpdate_164954200Z() {
   return (
     <div className="container mx-auto px-4 py-10">
@@ -30,5 +28,4 @@ export default function AutoUpdate_164954200Z() {
 }
 =======
 export default function AutoUpdate_6() { return <div className="py-10 text-white">Auto Update Snapshot</div>; }
->>>>>>> origin/cursor/build-zion-ai-marketplace-service-listing-9ebf
 >>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e

@@ -134,7 +134,6 @@ const benefits = [
   }
 ];
 
-<<<<<<< HEAD
 const benefits = [
   {
     title: "Competitive Compensation",
@@ -159,7 +158,6 @@ const benefits = [
   }
 ];
 
-=======
 export default function TalentPage() {
   return (
     <Layout
@@ -500,20 +498,16 @@ export default function TalentPage() {
                   <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Send Your Resume
               </Link>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </motion.div>
           </div>
         </section>
       </div>
     </Layout>
-<<<<<<< HEAD
   );
 }
   );
 }
 >>>>>>> main
-=======
     </>
   );
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-9473:pages/talent.tsx

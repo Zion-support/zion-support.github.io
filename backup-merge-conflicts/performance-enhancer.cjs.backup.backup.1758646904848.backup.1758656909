@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 
 class PerformanceEnhancer {
   constructor() {
@@ -34,10 +33,8 @@ enhancer.optimizeImages();
 enhancer.optimizeBundle();
 enhancer.addLazyLoading();
 enhancer.generateReport();
-=======
     this.optimizations.push('Image compression applied')
     this.optimizations.push('Bundle size optimized')
     this.optimizations.push('Lazy loading implemented')
     fs.writeFileSync('performance-enhancement-report.json')
     console.log(' Performance enhancement completed')
->>>>>>> main

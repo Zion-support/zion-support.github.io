@@ -7,8 +7,6 @@ export interface TalentGridProps {
   isLoading: boolean;
   onTalentClick: (id: string) => void;
   savedTalentIds: string[];
-<<<<<<< HEAD
-=======
   onToggleSave: (id: stringisSaved: boolean) => void;
   isAuthenticated: boolean;
   viewProfile?: (id: string) => void;
@@ -81,4 +79,3 @@ export function TalentGrid({
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

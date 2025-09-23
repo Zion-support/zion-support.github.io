@@ -5,8 +5,6 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { ListingScoreCard } from "@/components/ListingScoreCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-<<<<<<< HEAD
-=======
 import { SelectTriggerSelectContentSelectItem } from "@/components/ui/select";
 import { SearchFilterArrowDownAZArrowUpZA } from "lucide-react";
 
@@ -211,4 +209,3 @@ export function CategoryListingPage({
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

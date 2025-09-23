@@ -4,8 +4,6 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 export default function CaseStudiesPage() {
   return (
     <UltraFuturisticBackground intensity="high" variant="quantum">
-<<<<<<< HEAD
-=======
       <SEO title="Case Studies | Zion Tech Group" description="Proven outcomes across AIcloudand automation projects." canonical="https://ziontechgroup.com/case-studies/" />
       <div className="container mx-auto px-4 py-16 text-white">
         <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Case Studies</h1>
@@ -14,4 +12,3 @@ export default function CaseStudiesPage() {
     </UltraFuturisticBackground>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -3,7 +3,6 @@
  * Simple Performance Monitor;
  * Collects basic performance metrics;
  */
-<<<<<<< HEAD
 const fs = require('fs');
 
 const metrics = {
@@ -21,8 +20,6 @@ fs.writeFileSync('performance-metrics.json', JSON.stringify(metrics, null, 2));
 }MB`);
 }s`);
 
-=======
 const fs = require('fs')
 fs.writeFileSync('performance-metrics.json')
 console.log(' Performance metrics collected and saved to performance-metrics.json')
->>>>>>> main

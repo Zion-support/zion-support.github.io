@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 import React from 'react';
@@ -27,5 +25,4 @@ export default function RevolutionaryAIContent2026Banner() {
     </section>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850:app/components/RevolutionaryAIContent2026Banner.tsx
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,7 +1,5 @@
 
 import { Button } from "./ui/button";
-<<<<<<< HEAD
-=======
 import { TwitterFacebookLinkedinLink } from "@/components/icons";
 import { toast } from "./ui/use-toast";
 
@@ -91,4 +89,3 @@ export function SocialShareSection() {
     </section>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

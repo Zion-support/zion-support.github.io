@@ -1,6 +1,5 @@
 =======
 =======
-<<<<<<< HEAD:src/data/ultimateComprehensiveServices2025.ts
 <<<<<<< HEAD:backup-merge-conflicts/ultimateComprehensiveServices2025.ts.backup
 import { ADVANCED_MICRO_SAAS_SERVICES_2025, AdvancedMicroSaasService2025 } from './advancedMicroSaasServices2025';
 import { ADVANCED_IT_SERVICES_2025, AdvancedITService2025 } from './advancedITServices2025';
@@ -39,7 +38,6 @@ export interface UltimateComprehensiveService2025 {;
     "security": string[];
   "};
   competitors?: "string[];
-=======
 import { ADVANCED_MICRO_SAAS_SERVICES_2025, AdvancedMicroSaasService2025 } from './advancedMicroSaasServices2025';
 import { ADVANCED_IT_SERVICES_2025, AdvancedITService2025 } from './advancedITServices2025';
 import { ADVANCED_AI_SERVICES_2025, AdvancedAIService2025 } from './advancedAIServices2025';
@@ -77,7 +75,6 @@ export interface UltimateComprehensiveService2025 {
     security: string[];
   };
   competitors?: string[];
->>>>>>> pr-11935
   marketSize?: string;
   launchDate?: string;
   betaAccess?: boolean;

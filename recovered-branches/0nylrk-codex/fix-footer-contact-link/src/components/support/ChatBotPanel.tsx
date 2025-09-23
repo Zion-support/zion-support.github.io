@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import React, { useState, useRef, useEffect } from "react";
 import {Button} from "@/components/ui/button";
@@ -142,7 +140,6 @@ export function ChatBotPanel() {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   const handleSendMessage = async (text: string = inputValue) => {

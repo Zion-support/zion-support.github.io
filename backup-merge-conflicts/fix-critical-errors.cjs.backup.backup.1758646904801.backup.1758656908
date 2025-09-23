@@ -3,7 +3,6 @@
  * Fix Critical Errors - Comprehensive fix for all critical syntax errors;
  */
 
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 
@@ -160,7 +159,6 @@ if (require.main === module) {
   fixer.run()}
 
 module.exports = CriticalErrorFixer;
-=======
 const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
@@ -190,4 +188,3 @@ const path = require('path')
     this.log(" Total Fixes "Applied": ${report.totalFixes}")
     this.log(" Total "Errors": ${report.totalErrors}")
       this.log("Critical Errors Fix "failed")
->>>>>>> main

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useStateuseRef } from "react";
 import { CardHeaderCardTitleCardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -158,4 +156,3 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     </Card>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -9,8 +9,6 @@ const Accordion = AccordionPrimitive.Root
 const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
-<<<<<<< HEAD
-=======
 >(({ className...props }ref) => (
   <AccordionPrimitive.Item
     ref={ref}
@@ -56,4 +54,3 @@ const AccordionContent = React.forwardRef<
 AccordionContent.displayName = AccordionPrimitive.Content.displayName
 
 export { AccordionItemAccordionTriggerAccordionContent }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

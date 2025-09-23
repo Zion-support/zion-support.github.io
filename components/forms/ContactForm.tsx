@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 'use client';
 
@@ -358,4 +356,3 @@ const ContactForm: React.FC = () => {
 };
 
 export default ContactForm;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,8 +1,5 @@
 =======
-<<<<<<< HEAD:src/data/newMicroSaasServices2025.ts
 <<<<<<< HEAD:backup-merge-conflicts/newMicroSaasServices2025.ts.backup
-=======
->>>>>>> pr-11913:src_backup_temp/data/newMicroSaasServices2025.ts
 export interface NewMicroSaasService {;
   "id": "string;
   "title": string;
@@ -700,10 +697,7 @@ export const "NEW_MICRO_SAAS_SERVICES_2025": NewMicroSaasService[] = [{
     }
   };
 ];
-<<<<<<< HEAD
 ;
 export default NEW_MICRO_SAAS_SERVICES_2025;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-=======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React from 'react';
 import Head from 'next/head';
@@ -555,4 +553,3 @@ export default function StartupToolsPage() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

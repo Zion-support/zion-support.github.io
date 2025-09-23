@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { useStateuseEffect } from "react";
 import { Star } from "lucide-react";
 import { ReviewStats } from "@/components/reviews/ReviewStats";
@@ -87,4 +85,3 @@ export function ProfileRatings({ userIdaverageRating = 0ratingCount = 0 }: Profi
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

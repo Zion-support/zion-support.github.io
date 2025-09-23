@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { CardContentCardHeaderCardTitle } from "@/components/ui/card";
 import { ReferralStats as ReferralStatsType } from "@/types/referrals";
 import { AwardShareStarTrendingUp } from "lucide-react";
@@ -56,4 +54,3 @@ export function ReferralStats({ statsisLoading }: ReferralStatsProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -8,7 +8,6 @@ export const metadata = {
 }
 
 export default function ContactPage() {
-<<<<<<< HEAD
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-6 py-16">
@@ -23,7 +22,6 @@ export default function ContactPage() {
             </h1>
             <p className="text-lg text-gray-300">
               Ready to transform your business with cutting-edge technology? Let's start the conversation.
-=======
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -175,11 +173,9 @@ export default function ContactPage() {
             </h1>
             <p className="text-xl text-gray-30o0 mb-8 max-w-3xl mx-auto">
               Ready to transform your business with cutting-edge technology? Let's discuss how we can help you achieve your goals.
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div className="space-y-8">
@@ -243,7 +239,6 @@ export default function ContactPage() {
                 </ul>
               </div>
             </div>
-=======
         {/* Contact Info Grid */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -264,10 +259,8 @@ export default function ContactPage() {
             ))}
           </div>
         </div>
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
 
             {/* Contact Form */}
-<<<<<<< HEAD
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
               <form className="space-y-6">
@@ -275,7 +268,6 @@ export default function ContactPage() {
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
                       First Name
-=======
             <Card variant="glass" className="p-8 border-white/20">
               <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
               
@@ -298,13 +290,11 @@ export default function ContactPage() {
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-30o0 mb-2">
                       First Name *
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
                     </label>
                     <input
                       type="text"
                       id="firstName"
                       name="firstName"
-<<<<<<< HEAD
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="John"
                     />
@@ -312,7 +302,6 @@ export default function ContactPage() {
                   <div>
                     <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-2">
                       Last Name
-=======
                       value={formData.firstName}
                       onChange={handleChange}
                       required
@@ -326,17 +315,14 @@ export default function ContactPage() {
                   <div>
                     <label htmlFor="lastName" className="block text-sm font-medium text-gray-30o0 mb-2">
                       Last Name *
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
                     </label>
                     <input
                       type="text"
                       id="lastName"
                       name="lastName"
-<<<<<<< HEAD
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Doe"
                     />
-=======
                       value={formData.lastName}
                       onChange={handleChange}
                       required
@@ -346,28 +332,22 @@ export default function ContactPage() {
                       placeholder="Doe"
                      />
                     {formErrors.lastName && <p className="text-red-40o0 text-sm mt-1">{formErrors.lastName}</p>}
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
                   </div>
                 </div>
                 
                 <div>
-<<<<<<< HEAD
                   <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                     Email
-=======
                   <label htmlFor="email" className="block text-sm font-medium text-gray-30o0 mb-2">
                     Email Address *
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
                   </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
-<<<<<<< HEAD
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="john@example.com"
                   />
-=======
                     value={formData.email}
                     onChange={handleChange}
                     required
@@ -377,7 +357,6 @@ export default function ContactPage() {
                     placeholder="john@company.com"
                    />
                   {formErrors.email && <p className="text-red-40o0 text-sm mt-1">{formErrors.email}</p>}
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
                 </div>
                 
                 <div>
@@ -388,19 +367,15 @@ export default function ContactPage() {
                     type="text"
                     id="company"
                     name="company"
-<<<<<<< HEAD
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-=======
                     value={formData.company}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
                     placeholder="Your Company"
                    />
                 </div>
                 
                 <div>
-<<<<<<< HEAD
                   <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                     Service Interest
                   </label>
@@ -423,7 +398,6 @@ export default function ContactPage() {
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                     Message
-=======
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-30o0 mb-2">
                     Subject *
                   </label>
@@ -445,12 +419,10 @@ export default function ContactPage() {
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-30o0 mb-2">
                     Message *
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
                   </label>
                   <textarea
                     id="message"
                     name="message"
-<<<<<<< HEAD
                     rows={4}
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
                     placeholder="Tell us about your project..."
@@ -470,7 +442,6 @@ export default function ContactPage() {
         </div>
       </div>
     </main>
-=======
                     value={formData.message}
                     onChange={handleChange}
                     rows={5}
@@ -544,6 +515,5 @@ export default function ContactPage() {
       
       <Footer  />
     </div>
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
   )
 }

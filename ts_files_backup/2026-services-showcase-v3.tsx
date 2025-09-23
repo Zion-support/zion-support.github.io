@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 
 import React from 'react';
@@ -125,4 +123,3 @@ export default function ServicesShowcase2026V3() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

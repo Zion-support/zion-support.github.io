@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Card from '../components/ui/Card';
@@ -155,4 +153,3 @@ export default function DocsPage() {
     </UltraAdvancedFuturisticBackground>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

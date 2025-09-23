@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -121,7 +119,6 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
 }
 },
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 // Mock data for posts by category
 const postsByCategory: Record<string, ForumPost[]> = {

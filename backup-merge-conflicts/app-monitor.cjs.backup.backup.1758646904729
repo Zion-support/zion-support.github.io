@@ -114,7 +114,6 @@ class AppMonitor {}
 
     this.monitoringData.push({})
       timestamp: new Date().toISOString(),
-<<<<<<< HEAD
       status: 'healthy',
       checks: {
         filesystem: this.checkFilesystem(),
@@ -147,7 +146,6 @@ class AppMonitor {}
       message: fs.existsSync(packageJson)
         ? 'Package.json exists'
         : 'Package.json missing',
-=======
       checks: healthChecks;
     }
 });
@@ -192,4 +190,3 @@ if (require.main === module) {}
   monitor.run();
 };
 module.exports = AppMonitor;
->>>>>>> main

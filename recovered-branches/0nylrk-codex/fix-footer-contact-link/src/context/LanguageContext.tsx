@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React{ createContextuseStateuseContextuseEffectReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { supabase } from '../integrations/supabase/client';
@@ -140,4 +138,3 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     </LanguageContext.Provider>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

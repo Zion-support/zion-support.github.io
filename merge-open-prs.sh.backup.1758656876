@@ -1,6 +1,5 @@
 #!/bin/bash
 
-<<<<<<< HEAD
 # Script to merge open pull requests into main branch
 # This script will systematically go through remote branches and merge them
 
@@ -109,7 +108,6 @@ merge_branch() {
             git merge --abort 2>/dev/null || true
             git checkout main
             git branch -D "temp-merge-$branch_name" 2>/dev/null || true
-=======
 # Script to merge only the open PRs from GitHub
 set -e
 
@@ -213,13 +211,11 @@ merge_branch() {
             echo "❌ No conflicted files found, but merge failed. Aborting..."
             git merge --abort
             FAILED_MERGES=$((FAILED_MERGES + 1))
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             return 1
         fi
     fi
 }
 
-<<<<<<< HEAD
 # Process each branch
 while IFS= read -r branch; do
     if [ -n "$branch" ]; then
@@ -247,7 +243,6 @@ echo "Cleaning up temporary branches..."
 git branch | grep "temp-merge-" | xargs -r git branch -D
 
 echo "Cleanup completed!"
-=======
 # Get the list of open PRs and extract branch information
 echo "📋 Fetching open PRs from GitHub..."
 curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" > prs.json
@@ -318,4 +313,3 @@ echo "   2. Test the application thoroughly"
 echo "   3. Delete the backup branch when satisfied: git push origin --delete $BACKUP_BRANCH"
 echo "   4. Consider cleaning up old feature branches"
 echo "   5. Run tests to ensure everything works correctly"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

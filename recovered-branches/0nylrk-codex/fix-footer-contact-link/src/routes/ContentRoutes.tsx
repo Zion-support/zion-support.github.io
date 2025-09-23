@@ -1,7 +1,5 @@
 
 import { Fragment } from "react";
-<<<<<<< HEAD
-=======
 import { RoutesNavigate } from "react-router-dom";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
@@ -57,4 +55,3 @@ const ContentRoutes = () => {
 };
 
 export default ContentRoutes;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

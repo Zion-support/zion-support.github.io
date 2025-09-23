@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React from "react";
 import { LinkuseLocation } from "react-router-dom";
 import { HomeSearchBriefcaseIconMessageSquareUserMessageCircle } from "lucide-react";
@@ -86,4 +84,3 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
     </nav>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

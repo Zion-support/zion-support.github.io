@@ -1,9 +1,6 @@
 =======
 =======
-<<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11935
 "export": interface Listing {
 >>>>>>> main
    id: string;

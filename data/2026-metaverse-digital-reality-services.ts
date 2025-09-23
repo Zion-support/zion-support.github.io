@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export const metaverseDigitalRealityServices2026 = [] as any[];
 export interface MetaverseDigitalRealityService2026 {
   id: string;
@@ -41,4 +39,3 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

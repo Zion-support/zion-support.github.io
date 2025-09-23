@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 import React, { useState, useEffect } from 'react',
@@ -1426,4 +1424,3 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
 
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

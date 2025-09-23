@@ -77,7 +77,6 @@ export default function Layout({ children }: LayoutProps) {
   }
 
   return (
-<<<<<<< HEAD
     <>
       <Head>
         <title>{title}</title>
@@ -140,7 +139,6 @@ export default function Layout({ children }: LayoutProps) {
         />
       )}
     </div>
-=======
     <PerformanceOptimizer>
       <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
         {/* Skip to content link for accessibility */}
@@ -178,6 +176,5 @@ export default function Layout({ children }: LayoutProps) {
         <CookieConsentBanner />
       </div>
     </PerformanceOptimizer>
->>>>>>> 0d3d59dc48bc65c272e3c7f2106b07881fc97407
   );
 }

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import fs from 'fs';
 import path from 'path';
@@ -86,7 +84,6 @@ export interface Milestone {;
 }
 export function getAllProjects(): Project[] {
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 

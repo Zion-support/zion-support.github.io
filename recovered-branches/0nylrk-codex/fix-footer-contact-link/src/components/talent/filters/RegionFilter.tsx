@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { ChevronDownChevronUp } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
 import { RegionFilterProps } from "@/types/filters";
@@ -52,4 +50,3 @@ export function RegionFilter({ selectedRegionstoggleRegionexpandedtoggleSectioni
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

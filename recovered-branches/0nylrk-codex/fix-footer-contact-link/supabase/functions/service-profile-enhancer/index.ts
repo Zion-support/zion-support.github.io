@@ -15,8 +15,6 @@ serve(async (req) => {
     const headers = {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-<<<<<<< HEAD
-=======
       "Content-Type": "application/json"};
 
     // Handle CORS preflight request
@@ -129,4 +127,3 @@ serve(async (req) => {
     );
   }
 });
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

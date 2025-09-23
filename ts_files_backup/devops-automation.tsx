@@ -1,7 +1,5 @@
 import Head from 'next/head';
 import Card from '../components/ui/Card';
-<<<<<<< HEAD
-=======
 
 import Button from '../components/ui/Button';
 GitBranchZapShieldBarChart3CheckStarGitPullRequestCpu
@@ -343,7 +341,6 @@ export default function DevOpsAutomationPage() {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         {/* Market Comparison Section */}
         <section className="py-24 bg-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

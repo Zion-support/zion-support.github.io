@@ -24,8 +24,6 @@ export const useRecordActivity = () => {
           action,
           previous_status: previousStatus,
           new_status: newStatus,
-<<<<<<< HEAD
-=======
           comment})
         .select(`
           *,
@@ -47,4 +45,3 @@ export const useRecordActivity = () => {
     recordMilestoneActivity
   };
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

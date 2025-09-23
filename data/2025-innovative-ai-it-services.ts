@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 export interface InnovativeAIService {;
 
@@ -708,7 +706,6 @@ export interface InnovativeAIService {;
   },;
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

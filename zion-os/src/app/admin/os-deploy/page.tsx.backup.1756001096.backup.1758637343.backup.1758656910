@@ -86,7 +86,6 @@ export default function AdminDeployPage() {
 
   return (
     <div className="space-y-8">
-<<<<<<< HEAD
       <header>
         <h1 className="text-3xl font-bold text-high-contrast">Unified Deployment</h1>
         <p className="text-[var(--fg-secondary)] mt-2">
@@ -315,7 +314,6 @@ export default function AdminDeployPage() {
                   </div>
                 </div>
               </div>
-=======
       {/* Header Section */}
       <div className="text-center space-y-4 pb-8 border-b border-white/10">
         <div className="flex items-center justify-center gap-3 mb-4">
@@ -403,12 +401,10 @@ export default function AdminDeployPage() {
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 text-white focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-200" 
                 />
               </label>
->>>>>>> origin/cursor/enhance-update-item-design-and-functionality-9c4a
             </div>
           </section>
         </div>
 
-<<<<<<< HEAD
         <section className="border-t border-[var(--border)] pt-6">
           <div className="flex items-center gap-4">
             <button 
@@ -437,7 +433,6 @@ export default function AdminDeployPage() {
             Click to deploy your configured Zion instance
           </div>
         </section>
-=======
         {/* Governance & Token System Card */}
         <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-6">
           <div className="flex items-center gap-3 mb-6">
@@ -632,7 +627,6 @@ export default function AdminDeployPage() {
             </div>
           )}
         </div>
->>>>>>> origin/cursor/enhance-update-item-design-and-functionality-9c4a
       </form>
     </div>
   );

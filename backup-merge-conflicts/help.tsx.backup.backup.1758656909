@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -18,7 +17,6 @@ import {
   Clock,
   User,
   Tag
-=======
   Video,
   Download,
   ExternalLink,
@@ -48,7 +46,6 @@ const helpCategories = [;
         readTime: "15 min"";
   ChevronRight,
   ArrowRight
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -73,7 +70,6 @@ const helpCategories = [
         type: 'Tutorial'
       },
       {
-<<<<<<< HEAD
         title: 'Understanding Our Services',
         description: 'Overview of all available services and solutions',
         readTime: '7 min read',
@@ -159,7 +155,6 @@ const helpCategories = [
         description: 'Hardware and software requirements for our solutions',
         readTime: '4 min read',
         type: 'Requirements'
-=======
         title: 'First Steps with Our Services',
         description: 'Quick start guide for new users',
         type: 'Guide',
@@ -171,7 +166,6 @@ const helpCategories = [
       }
     ]
   },
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       }
 =======
 import { motion, AnimatePresence } from 'framer-motion';
@@ -205,7 +199,6 @@ const helpCategories = [
     title: 'IT Services',
     description: 'Documentation for our IT infrastructure services',
     icon: FileText,
-<<<<<<< HEAD
     articles: [
       { title: 'Cloud Infrastructure Setup', href: '/help/it-services/cloud-infrastructure' },
       { title: 'Cybersecurity Configuration', href: '/help/it-services/cybersecurity' },
@@ -220,7 +213,6 @@ const helpCategories = [
       { title: 'Common Issues', href: '/help/troubleshooting/common-issues' },
       { title: 'Error Messages', href: '/help/troubleshooting/error-messages' },
       { title: 'Performance Issues', href: '/help/troubleshooting/performance' }
-=======
     articles: [;
       {}
         title: "Understanding Your Bill","
@@ -264,33 +256,28 @@ const supportChannels = [
     description: 'Get instant help from our support team',
     availability: '24/7',
     responseTime: '2-5 minutes',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     ]
   }
 ];
 
-<<<<<<< HEAD
 const supportOptions = [
   {
     title: 'Documentation',
     description: 'Comprehensive guides and API references',
     icon: BookOpen,
     href: '/docs'
-=======
 const quickLinks = [
   {
     title: 'API Documentation',
     description: 'Complete API reference',
     href: '/api-docs',
     icon: FileText,
->>>>>>> main
     color: 'blue'
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   },
   {
     title: 'Video Tutorials',
     description: 'Step-by-step video guides',
-<<<<<<< HEAD
     icon: Video,
     href: '/tutorials'
   },
@@ -334,7 +321,6 @@ export default function HelpPage() {
         {/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto">
-=======
     href: '/tutorials',
     icon: Video,
     color: 'green'
@@ -404,14 +390,12 @@ export default function Help() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
           <div className="container mx-auto px-4">
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="text-center max-w-4xl mx-auto"
             >
-<<<<<<< HEAD
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Help <span className="text-blue-600">Center</span>
               </h1>
@@ -427,7 +411,6 @@ export default function Help() {
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
-=======
               <h1 className="text-5xl font-bold mb-6">Help Center</h1>
               <p className="text-xl text-blue-100 mb-8">
                 Find answers, get support, and learn how to make the most of our services.
@@ -445,15 +428,12 @@ export default function Help() {
                     className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-300"
                   />
                 </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               </div>
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
             <div className="grid md:grid-cols-4 gap-6">
-=======
         {/* Quick Links */}
         <section className="py-12 bg-white border-b">
           <div className="container mx-auto px-4">
@@ -548,12 +528,10 @@ export default function HelpPage() {
               Quick Links
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               {quickLinks.map((link, index) => (
                 <motion.a
                   key={index}
                   href={link.href}
-<<<<<<< HEAD
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -567,7 +545,6 @@ export default function HelpPage() {
                   <ChevronRight className="w-4 h-4 text-gray-400 mx-auto mt-2 group-hover:text-gray-600" />
                 </motion.a>
               ))}
-=======
                   className="bg-gray-50 rounded-lg p-6 text-center hover:bg-blue-50 hover:shadow-lg transition-all group""
                   whileHover={{ y: -2 }}
                 >,
@@ -616,7 +593,6 @@ export default function HelpPage() {
                   </motion.div>
                 );
               })}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </div>
           </div>
         </section>
@@ -716,7 +692,6 @@ export default function HelpPage() {
               ))}
             </div>
           </div>
-<<<<<<< HEAD
         </section>
 
         {/* Help Categories */}
@@ -785,19 +760,16 @@ export default function HelpPage() {
                       </motion.div>
                     )}
                   </AnimatePresence>
-=======
                   key={index}
                   className="bg-gray-50 rounded-lg p-6""
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
@@ -834,10 +806,8 @@ export default function HelpPage() {
         </section>
       </div>
     </>
-=======
       </div>
     </Layout>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
   );
 }

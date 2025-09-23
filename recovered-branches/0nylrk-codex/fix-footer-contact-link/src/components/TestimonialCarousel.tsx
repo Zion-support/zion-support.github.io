@@ -4,8 +4,6 @@ import {
   CarouselContent,
   CarouselItem,
   CarouselNext,
-<<<<<<< HEAD
-=======
   CarouselPrevious} from "@/components/ui/carousel";
 import { CardContent } from "@/components/ui/card";
 import { Avatar } from "@/components/ui/avatar";
@@ -88,4 +86,3 @@ export function TestimonialCarousel() {
     </section>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

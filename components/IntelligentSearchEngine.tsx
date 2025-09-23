@@ -1,7 +1,5 @@
 "use client";
 'use client';
-<<<<<<< HEAD
-=======
 
 import React{ useStateuseEffectuseRef } from 'react';
 
@@ -429,4 +427,3 @@ const IntelligentSearchEngine: React.FC = () => {
 };
 
 export default IntelligentSearchEngine;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

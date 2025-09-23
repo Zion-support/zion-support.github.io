@@ -123,7 +123,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     setupTime: '4 hours',
     category: 'AI & Testing',
     realService: true,
-<<<<<<< HEAD
     technology: ['GPT-4, Claude, Natural Language Processing, Machine Learning, SEO Tools, Content Management'],
     integrations: ['WordPress, Shopify, HubSpot, Salesforce, Mailchimp, Social Media APIs, CMS platforms'],
     useCases: ['Blog content creation, Social media marketing, Email campaigns, Product descriptions, Technical documentation'],
@@ -138,7 +137,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
-=======
     technology: ['Python, Selenium, Playwright, OpenAI, TensorFlow, Docker'],
     integrations: ['Jenkins, GitHub Actions, GitLab CI, Azure DevOps, Jira'],
     useCases: ['Automated testing, CI/CD integration, Quality assurance, Regression testing'],
@@ -148,7 +146,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     growthRate: '92% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact,
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
     realImplementation: true,
     implementationDetails: 'Distributed testing infrastructure with AI-powered test generation and execution orchestration.',
     launchDate: '2025-01-20',
@@ -275,7 +272,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     setupTime: '1-2 weeks',
     category: 'Marketing AI',
     realService: true,
-<<<<<<< HEAD
     technology: ['Machine Learning, Predictive Analytics, Natural Language Processing, Automation, CRM'],
     integrations: ['Gmail, Outlook, Slack, Zoom, Calendly, Payment gateways, Social media'],
     useCases: ['Lead management, Sales automation, Customer service, Follow-up automation, Performance tracking'],
@@ -325,19 +321,16 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     link: 'https://ziontechgroup.com/autonomous-data-analytics',
     marketPosition: 'Competes with Tableau ($70/month), Power BI ($9.99/month), Looker ($5,000/month). Our advantage: AI automation, natural language queries, and autonomous insights.',
     targetAudience: 'Data analysts, Business intelligence teams, Executives, Marketing teams, Sales teams',
-=======
     icon: '🛡️',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-autonomous-security-monitor',
     marketPosition: 'Competes with Splunk, ELK Stack, and IBM QRadar; offers AI-powered automation.',
     targetAudience: 'Security teams, SOC analysts, IT administrators',
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
     trialDays: 21,
     setupTime: '8 hours',
     category: 'AI & Security',
     realService: true,
-<<<<<<< HEAD
     technology: ['Machine Learning, Predictive Analytics, Resource Optimization, Project Management, Automation'],
     integrations: ['Slack, Microsoft Teams, Jira, Asana, Trello, Google Workspace, Office 365'],
     useCases: ['Project planning, Resource management, Team collaboration, Timeline optimization, Risk management'],
@@ -352,7 +345,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
-=======
     technology: ['Python, TensorFlow, OpenAI, Elasticsearch, Redis, PostgreSQL'],
     integrations: ['SIEM systems, Firewalls, IDS/IPS, Vulnerability scanners'],
     useCases: ['Security monitoring, Threat detection, Incident response, Compliance management'],
@@ -362,7 +354,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     growthRate: '95% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact,
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
     realImplementation: true,
     implementationDetails: 'Real-time security monitoring platform with AI-powered threat detection and automated response capabilities.',
     launchDate: '2025-02-05',
@@ -393,7 +384,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     ],
     popular: false,
     icon: '👥',
-<<<<<<< HEAD
     color: 'from-orange-600 via-red-600 to-pink-600',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/smart-hr-automation-suite',
@@ -474,7 +464,5 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     customers: 189,
     rating: 4.7,
     reviews: 95
-=======
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   }
 ];

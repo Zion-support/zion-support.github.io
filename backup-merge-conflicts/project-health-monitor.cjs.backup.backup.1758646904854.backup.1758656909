@@ -29,11 +29,9 @@ class ProjectHealthMonitor {}
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
         }
 
     checkProjectStructure() {
-=======
         console.log(message)};
     checkProjectStructure() {}
         this.log('Checking project structure...');
@@ -289,4 +287,3 @@ if ( {})
     const monitor = new ProjectHealthMonitor}(;);
     monitor.run().catch(console.error)};
 module.exports = ProjectHealthMonitor;
->>>>>>> main

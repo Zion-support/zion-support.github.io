@@ -2,8 +2,6 @@
 import { useState } from 'react';
 import { Skill } from '@/types/resume';
 import { Button } from '@/components/ui/button';
-<<<<<<< HEAD
-=======
 import { AlertDescription } from '@/components/ui/alert';
 import { useResume } from '@/hooks/useResume';
 import { SkillsFormProps } from './types';
@@ -88,4 +86,3 @@ export function SkillsForm({ resumeIdskillsonCompleteonBack }: SkillsFormProps) 
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

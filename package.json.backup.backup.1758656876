@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "project",
   "private": true,
   "version": "0.0.0",
@@ -336,7 +335,6 @@
     "automation:trigger:ai": "curl -X POST http://localhost:3002/improve -H 'Content-Type: application/json' -d '{\"target\":\"general\",\"priority\":\"normal\"}'",
     "automation:distribute:workload": "curl -X POST http://localhost:3003/api/tasks/submit -H 'Content-Type: application/json' -d '{\"task\":\"Fix all issues\",\"priority\":\"high\"}'",
     "build:optimize": "node scripts/replace-console-statements.cjs && npm run lint -- --fix && npm run build"
-=======
   "name": "bolt.new.zion.app",
   "version": "0.1.0",
   "private": true,
@@ -373,7 +371,6 @@
     "postcss": "^8.4.28",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.1.6"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   },
   "dependencies": {
     "@chakra-ui/react": "^3.22.0",

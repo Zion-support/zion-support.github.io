@@ -1,8 +1,6 @@
 
 import { BadgeDollarSign } from "lucide-react";
 import { useWallet } from "@/hooks/useWallet";
-<<<<<<< HEAD
-=======
 import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -42,4 +40,3 @@ export function TokenDisplay() {
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

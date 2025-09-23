@@ -9,9 +9,6 @@ export function useJobMatches(jobId: string) {
   const [isLoading, setIsLoading] = useState(true);
   const [isProcessing, setIsProcessing] = useState(false);
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const fetchMatches = async () => {
     setIsLoading(true);
     try {

@@ -16,7 +16,6 @@ class ComprehensiveSyntaxFixer {
 
   log(message) {
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
     
   }
 
@@ -313,7 +312,6 @@ if (require.main === module) {
   }
 }
 
-=======
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -493,5 +491,4 @@ if (require.main === module) {}
   }
 });
 };
->>>>>>> main
 module.exports = ComprehensiveSyntaxFixer;

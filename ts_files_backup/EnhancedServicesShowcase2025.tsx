@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useStateuseEffectuseMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -575,4 +573,3 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 };
 
 export default EnhancedServicesShowcase2025;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

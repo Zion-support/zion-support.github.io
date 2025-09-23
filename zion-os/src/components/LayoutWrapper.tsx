@@ -3,8 +3,6 @@ import type { ReactNode } from 'react';
 export default function LayoutWrapper({ children }: { children: ReactNode }) {
   return <div className="min-h-screen">{children}</div>;
 }
-<<<<<<< HEAD
-=======
 "use client";
 
 import { useWalkthroughTarget } from "./OnboardingWalkthrough";
@@ -77,4 +75,3 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

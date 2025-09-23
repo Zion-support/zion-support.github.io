@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { createContextuseContextuseLayoutEffectuseState } from "react"
 import { safeStorage } from "@/utils/safeStorage"
 
@@ -100,4 +98,3 @@ export const useTheme = () => {
 
   return context
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -22,8 +22,6 @@ export type InnovativeMicroSaas ={
 	rating?: number;
 	launchDate?: string;
 };
-<<<<<<< HEAD
-=======
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 	{
 		id: 'podcast-transcription-seo-suite',
@@ -77,4 +75,3 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		realService: true
 	}
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

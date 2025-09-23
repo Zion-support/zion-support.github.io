@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   Handshake, Globe, Rocket, Brain, Atom, Shield, 
@@ -340,7 +339,6 @@ export default function PartnersPage() {
       <EnhancedFooter />
     </div>
   );
-=======
 
 export default function PartnersPage() {
 	return (
@@ -363,5 +361,4 @@ export default function PartnersPage() {
 			</div>
 		</div>
 	);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

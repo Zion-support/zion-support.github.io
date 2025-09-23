@@ -1,6 +1,5 @@
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 class AutomationSystem {
@@ -265,7 +264,6 @@ const system = new AutomationSystem;(;);
 system.run().catch(error => {
     console.error('Automation system "failed": ', error);
     process.exit(1)});
-=======
 const { execSync } = require('child_process')
 console.log(' Enhanced Automation System Starting...')
         this.logDir = 'automation-reports'
@@ -307,4 +305,3 @@ console.log(' Enhanced Automation System Starting...')
         execSync(check.command, { "stdio"})
             this.log(`System "error"`)
     console.error('Automation system "failed")
->>>>>>> main

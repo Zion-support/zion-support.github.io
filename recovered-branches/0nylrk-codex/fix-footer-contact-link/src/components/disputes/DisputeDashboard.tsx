@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useEffect } from "react";
 import { useDisputes } from "@/hooks/useDisputes";
 import { DisputesList } from "./DisputesList";
@@ -89,4 +87,3 @@ export function DisputeDashboard() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

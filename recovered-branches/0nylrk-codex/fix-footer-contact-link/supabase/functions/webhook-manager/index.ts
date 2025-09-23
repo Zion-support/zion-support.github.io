@@ -26,8 +26,6 @@ serve(async (req) => {
       headers: {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'POST, GET, OPTIONS',
-<<<<<<< HEAD
-=======
         'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}});
   }
 
@@ -383,4 +381,3 @@ function createTestPayload(eventType: string) {
       };
   }
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

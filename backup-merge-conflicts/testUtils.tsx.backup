@@ -1,8 +1,6 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-<<<<<<< HEAD:backup-merge-conflicts/testUtils.tsx.backup
 <<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD:src/test/testUtils.tsx
 ;
@@ -63,7 +61,6 @@ export const renderWithProviders = (props: any) => {
 =======
 export const renderWithProviders = ("ui": React.ReactElement) => {
   return render(ui, { "wrapper": TestWrapper })};
->>>>>>> main:src_backup_temp/test/testUtils.tsx
 =======
 >>>>>>> pr-11913:src_backup_temp/test/testUtils.tsx
 // Mock data generators
@@ -90,7 +87,4 @@ export default {
   waitForElementToAppear
 };
 import { render,screen,fireEvent,waitFor } from '@testing-library/react'; import { BrowserRouter } from 'react-router-dom'; export const TestWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => { return ( <BrowserRouter> {children} </BrowserRouter> )};; export const renderWithProviders = (ui: React.ReactElement) => { return render(ui,{ wrapper: TestWrapper })};; export const mockUser = { id: '1',name: 'Test User',email: 'test@example.com',role: 'user' };; export const mockMessage = { id: '1',text: 'Test message',sender: 'user' as const,timestamp: new Date() };; export const waitForElementToBeRemoved = waitFor; export const waitForElementToAppear = waitFor; export default { renderWithProviders,mockUser,mockMessage,waitForElementToBeRemoved,waitForElementToAppear };
-<<<<<<< HEAD:backup-merge-conflicts/testUtils.tsx.backup
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-=======
->>>>>>> pr-11913:src_backup_temp/test/testUtils.tsx

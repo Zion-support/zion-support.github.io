@@ -1,8 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 
-<<<<<<< HEAD
-=======
   const { moduleTitle, moduleContent } = req && req.body || {};
   const apiKey = process && process.env.OPENAI_API_KEY;
 
@@ -52,7 +50,6 @@ import OpenAI from 'openai';
 
         { role: 'user', content: prompt }];
       temperature: 0.2});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     const text = completion.choices?.[0]?.message?.content ?? '';
     try {
       const json = JSON.parse(text);

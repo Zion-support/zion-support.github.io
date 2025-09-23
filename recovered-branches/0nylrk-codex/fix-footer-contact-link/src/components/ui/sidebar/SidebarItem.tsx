@@ -7,8 +7,6 @@ interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {
   active?: boolean;
 }
 
-<<<<<<< HEAD
-=======
 export function SidebarItem({ classNamechildrenactive...props }: SidebarItemProps) {
   return (
     <div
@@ -24,4 +22,3 @@ export function SidebarItem({ classNamechildrenactive...props }: SidebarItemProp
   );
 }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import { NextApiRequest, NextApiResponse } from 'next';
 export function getUserFromRequest(req: any): User | null {
@@ -20,7 +18,6 @@ export function getUserFromRequest(req: any): User | null {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 

@@ -9,10 +9,8 @@ export default function LocationsPage() {
 				<link rel="canonical" href="https://ziontechgroup.com/locations"  />
 			</Head>
 			<div className="max-w-4xl mx-auto space-y-6">
-<<<<<<< HEAD
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">Locations</h1>
 				<div className="p-6 rounded-2xl bg-black/40 border border-cyan-50o0/20">
-=======
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Locations</h1>
 				<div className="p-6 rounded-2xl bg-black/40 border border-cyan-500/20">
 					<h2 className="text-white text-xl font-semibold mb-2">MiddletownDE (HQ)</h2>
@@ -23,4 +21,3 @@ export default function LocationsPage() {
 		</div>
 	);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

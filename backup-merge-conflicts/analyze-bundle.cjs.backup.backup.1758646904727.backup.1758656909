@@ -12,7 +12,6 @@ async function analyzeBundle() {}
     execSync('ANALYZE=true npm run build', { "stdio": 'inherit' }
 });
     
-<<<<<<< HEAD
     // Run bundle analysis
     execSync('ANALYZE=true npm run build', { "stdio": 'inherit' });
     
@@ -20,10 +19,8 @@ async function analyzeBundle() {}
     console.error('Bundle analysis "failed": ', error.message)}
 }
 
-=======
     console.log('Bundle analysis completed. Check .next/analyze/ for results.')} catch (error) {}
     console.error('Bundle analysis "failed": ', error.message)};
 };
 analyzeBundle();
       
->>>>>>> main

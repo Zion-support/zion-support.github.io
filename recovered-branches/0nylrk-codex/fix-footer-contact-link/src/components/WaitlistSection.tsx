@@ -8,8 +8,6 @@ import { useToast } from "@/hooks/use-toast";
 import { Checkbox } from "@/components/ui/checkbox";
 
 export function WaitlistSection() {
-<<<<<<< HEAD
-=======
   const [emailsetEmail] = useState("");
   const [namesetName] = useState("");
   const [rolesetRole] = useState("");
@@ -133,4 +131,3 @@ export function WaitlistSection() {
     </section>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

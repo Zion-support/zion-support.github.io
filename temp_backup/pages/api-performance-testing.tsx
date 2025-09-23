@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react',
 import SEO from '../components/SEO',
 import { Check, ExternalLink } from 'lucide-react',
@@ -41,4 +39,3 @@ export default function ApiPerformanceTestingPage() {
 		</>
 	)
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

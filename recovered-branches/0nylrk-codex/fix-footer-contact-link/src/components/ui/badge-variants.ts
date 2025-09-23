@@ -18,10 +18,7 @@ export const badgeVariants = cva(
         warning:
           "border-transparent bg-yellow-10o0 text-yellow-80o0 hover:bg-yellow-20o0/80",
         info:
-<<<<<<< HEAD
-=======
           "border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200/80"}},
     defaultVariants: {
       variant: "default"}}
 );
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import type { GetServerSideProps, NextPage } from 'next';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
@@ -36,4 +34,3 @@ export default function BlogIndexPage() {
 		</UltraFuturisticBackground>
 	);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

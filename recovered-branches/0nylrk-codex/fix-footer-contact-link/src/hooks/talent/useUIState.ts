@@ -11,8 +11,6 @@ export function useUIState() {
     availability: true,
     region: true,
     experience: true,
-<<<<<<< HEAD
-=======
     price: true});
   
   // Toggle expanded sections in the sidebar
@@ -42,4 +40,3 @@ export function useUIState() {
     toggleSection,
     closeMobileFilter};
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

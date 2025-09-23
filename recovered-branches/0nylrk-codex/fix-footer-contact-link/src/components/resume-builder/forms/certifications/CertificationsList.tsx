@@ -1,7 +1,5 @@
 
 import { Certification } from '@/types/resume';
-<<<<<<< HEAD
-=======
 import { CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 EditTrash2
@@ -75,4 +73,3 @@ export function CertificationsList({ certificationsonEditonDelete }: Certificati
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

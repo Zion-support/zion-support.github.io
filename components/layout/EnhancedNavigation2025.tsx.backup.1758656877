@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -583,7 +582,6 @@ export default function EnhancedNavigation2025() {
                 >
                   Get Started
                 </Link>
-=======
             className="fixed inset-0 z-50 lg:hidden"
           >
             {/* Backdrop */}
@@ -937,4 +935,3 @@ export default function EnhancedNavigation2025() {
 		</nav>
 	);
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

@@ -4,8 +4,6 @@ import { Configuration, OpenAIApi } from "npm:openai@4.28.0";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-<<<<<<< HEAD
-=======
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 
 serve(async (req) => {
@@ -106,4 +104,3 @@ Format the response as a JSON object with the following structure:
     );
   }
 });
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

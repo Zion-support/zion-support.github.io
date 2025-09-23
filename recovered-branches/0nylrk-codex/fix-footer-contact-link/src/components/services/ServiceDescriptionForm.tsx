@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
@@ -312,7 +310,6 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
                   <FormControl>;
 
                     <Textarea
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       {...field}
                       placeholder="Enter key features, separated by commas"
                       className="bg-zion-blue border border-zion-blue-light text-white min-h-20"

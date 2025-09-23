@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import { defineConfig } from 'cypress';
 
@@ -211,7 +209,6 @@ export default defineConfig({;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 

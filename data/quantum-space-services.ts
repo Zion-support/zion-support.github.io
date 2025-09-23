@@ -14,8 +14,6 @@ export interface QuantumSpaceService {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const quantumSpaceServices: QuantumSpaceService[] = [
   {
     id: "quantum-computing-platform",
@@ -40,4 +38,3 @@ export const quantumSpaceServices: QuantumSpaceService[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

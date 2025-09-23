@@ -17,7 +17,6 @@ export const innovative2040AIServices = [
       'Consciousness Metrics Dashboard'
     ],
     popular: true,
-<<<<<<< HEAD
     icon: '🧠💝🤖',
     color: 'from-pink-500 to-purple-600',
     textColor: 'text-pink-300',
@@ -87,7 +86,6 @@ export const innovative2040AIServices = [
     customers: 8,
     rating: 4.9,
     reviews: 6
-=======
     category: 'AI & Consciousness',
     type: 'AI Services',
     icon: '🧠',
@@ -115,7 +113,6 @@ export const innovative2040AIServices = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   },
   {
     id: 'quantum-neural-network-platform-2040',
@@ -136,7 +133,6 @@ export const innovative2040AIServices = [
     ],
     category: 'Quantum & AI',
     realService: true,
-<<<<<<< HEAD
     technology: ['Quantum computing', 'Quantum AI algorithms', 'Machine Learning', 'Python', 'React', 'Node.js', 'Quantum APIs'],
     integrations: ['AI/ML platforms', 'Research tools', 'Scientific computing', 'Data analysis platforms', 'Quantum simulators'],
     useCases: ['Complex optimization', 'AI research', 'Scientific discovery', 'Financial modeling', 'Drug discovery'],
@@ -196,7 +192,6 @@ export const innovative2040AIServices = [
     customers: 123,
     rating: 4.8,
     reviews: 12
-=======
     type: 'AI Services',
     icon: '⚛️',
     popular: true,
@@ -223,7 +218,6 @@ export const innovative2040AIServices = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   },
   {
     id: 'autonomous-business-operations-2040',
@@ -256,7 +250,6 @@ export const innovative2040AIServices = [
     setupTime: '3 weeks',
     category: 'AI & Research',
     realService: true,
-<<<<<<< HEAD
     technology: ['Machine Learning', 'Natural Language Processing', 'Data analysis', 'Python', 'React', 'Node.js', 'Research AI'],
     integrations: ['Research databases', 'Academic platforms', 'Data sources', 'Collaboration tools', 'Publication systems'],
     useCases: ['Academic research', 'Market research', 'Scientific discovery', 'Data analysis', 'Report generation'],
@@ -272,7 +265,6 @@ export const innovative2040AIServices = [
     customers: 67,
     rating: 4.7,
     reviews: 48
-=======
     marketReady: true,
     pricing: {
       starter: 8999,
@@ -296,7 +288,6 @@ export const innovative2040AIServices = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   },
   {
     id: 'brain-computer-interface-platform-2040',
@@ -329,7 +320,6 @@ export const innovative2040AIServices = [
     setupTime: '1 week',
     category: 'AI & Personal Development',
     realService: true,
-<<<<<<< HEAD
     technology: ['Machine Learning', 'Natural Language Processing', 'Adaptive learning', 'Python', 'React', 'Node.js', 'Educational AI'],
     integrations: ['LMS platforms', 'Educational content', 'Assessment tools', 'Student information systems', 'Collaboration tools'],
     useCases: ['K-12 education', 'Higher education', 'Corporate training', 'Skill development', 'Personal learning'],
@@ -345,7 +335,6 @@ export const innovative2040AIServices = [
     customers: 234,
     rating: 4.8,
     reviews: 189
-=======
     marketReady: true,
     pricing: {
       starter: 18999,
@@ -369,7 +358,6 @@ export const innovative2040AIServices = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   },
   {
     id: 'quantum-financial-trading-platform-2040',
@@ -402,7 +390,6 @@ export const innovative2040AIServices = [
     setupTime: '2 weeks',
     category: 'AI & Creative',
     realService: true,
-<<<<<<< HEAD
     technology: ['Quantum computing', 'Quantum AI algorithms', 'Molecular modeling', 'Python', 'React', 'Node.js', 'Drug discovery AI'],
     integrations: ['Research platforms', 'Molecular databases', 'Clinical trial systems', 'Laboratory systems', 'Regulatory platforms'],
     useCases: ['Drug discovery', 'Molecular optimization', 'Clinical trial design', 'Drug development', 'Research acceleration'],
@@ -418,7 +405,6 @@ export const innovative2040AIServices = [
     customers: 156,
     rating: 4.6,
     reviews: 123
-=======
     marketReady: true,
     pricing: {
       starter: 15999,
@@ -442,7 +428,6 @@ export const innovative2040AIServices = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   },
   {
     id: 'ai-emotional-intelligence-platform-2040',
@@ -475,7 +460,6 @@ export const innovative2040AIServices = [
     setupTime: '2 weeks',
     category: 'AI & Business Intelligence',
     realService: true,
-<<<<<<< HEAD
     technology: ['Machine Learning', 'Computer Vision', 'Autonomous systems', 'Python', 'React', 'Node.js', 'Vehicle AI'],
     integrations: ['Vehicle control systems', 'Sensor networks', 'Navigation platforms', 'Safety systems', 'Traffic management'],
     useCases: ['Autonomous driving', 'Vehicle safety', 'Traffic optimization', 'Logistics automation', 'Transportation efficiency'],
@@ -508,7 +492,6 @@ export const innovative2040AIServices = [
       'Assessment automation',
       'Collaboration tools',
       'Analytics dashboard'
-=======
     marketReady: true,
     pricing: {
       starter: 12999,
@@ -520,7 +503,6 @@ export const innovative2040AIServices = [
       'Improved human-AI interaction',
       'Emotional intelligence training',
       'Context-aware responses'
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
     ],
     useCases: [
       'Customer Service',
@@ -556,7 +538,6 @@ export const innovative2040AIServices = [
     reviews: 34
   },
   {
-<<<<<<< HEAD
     id: 'autonomous-ai-business-intelligence',
     name: 'Autonomous AI Business Intelligence',
     tagline: 'Self-operating business intelligence that automatically discovers insights and generates reports',
@@ -687,12 +668,10 @@ export const innovative2040AIServices = [
     customers: 123,
     rating: 4.6,
     reviews: 89
-=======
     contactInfo: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   }
 ];

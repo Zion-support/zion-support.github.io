@@ -6,7 +6,6 @@
 
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 
 class AppEnhancementAutomation {
   constructor() {
@@ -949,7 +948,6 @@ if ( {
     process.exit(1)})}
 
 module.exports = AppEnhancementAutomation;
-=======
   log(message, type = 'INFO')
       'INFO': 'ℹ'
       'SUCCESS': ''
@@ -976,4 +974,3 @@ module.exports = AppEnhancementAutomation;
     this.log(`� New "Features"`)
       this.log(`App Enhancement Automation "failed"`)
     console.error('App enhancement automation "failed")
->>>>>>> main

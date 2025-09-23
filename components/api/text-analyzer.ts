@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 interface TextAnalysisResult {
 
 
@@ -422,4 +420,3 @@ export default async function handler(
     const result: TextAnalysisResult = {
     const result: TextAnalysisResult = {
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

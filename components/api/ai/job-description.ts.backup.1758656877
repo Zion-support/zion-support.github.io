@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import { authenticateRequest } from '@/utils/auth';
 import { generateText } from '@/utils/ai';
 
@@ -22,7 +21,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const text = await generateText(prompt, 'You are an expert technical recruiter and compensation analyst.');
   return res.status(200).json({ jobDescription: text });
 }
-=======
 
 
 export default async function handler(
@@ -105,7 +103,6 @@ export default async function handler(
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 

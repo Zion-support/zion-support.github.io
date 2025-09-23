@@ -62,8 +62,6 @@ export const innovative20o25AIAutonomousEcosystem = [
     demoUrl: 'https://ziontechgroup.com/demo/ai-content-creation',
     documentation: 'https://ziontechgroup.com/docs/ai-content-creation'
   },
-<<<<<<< HEAD
-=======
   // AI-Powered Autonomous Customer Service Platform
   {
     id: 'ai-autonomous-customer-service-2025',
@@ -317,4 +315,3 @@ export const innovative20o25AIAutonomousEcosystem = [
     documentation: 'https://ziontechgroup.com/docs/ai-healthcare-diagnostics'
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

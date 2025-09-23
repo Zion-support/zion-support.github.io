@@ -133,10 +133,8 @@ export default function AIEmotionIntelligencePlatform() {
     <>
       <Head>
         <title>AI Emotion Intelligence Platform - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Advanced AI platform that analyzes customer emotions in real-time across voice, video, and text interactions, providing intelligent responses and sentiment-driven insights."  />
         <meta name="keywords" content="AI emotion detection, sentiment analysis, customer experience, emotion AI, real-time analysis"  />
-=======
         <meta name="description" content="Advanced AI platform that analyzes customer emotions in real-time across voice, video, and text interactions, providing intelligent responses and sentiment-driven insights." />
         <meta name="keywords" content="AI emotion detection, sentiment analysis, customer experience, emotion AI, real-time analysis" />
         <link rel="icon" href="/favicon.svg" />
@@ -473,4 +471,3 @@ export default function AIEmotionIntelligencePlatform() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

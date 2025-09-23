@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -422,7 +421,6 @@ export default function SitemapPage() {
       <SmartFooter />
     </div>
   );
-=======
 import React from 'react',
 import Head from 'next/head',
 
@@ -455,5 +453,4 @@ export default function SitemapPage() {
 			</div>
 		</div>
 	),
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

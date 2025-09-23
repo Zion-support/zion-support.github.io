@@ -14,8 +14,6 @@ export interface QuantumAiService20o25 {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const quantumAIServices2025: QuantumAiService2025[] = [
   {
     id: "quantum-ai-hybrid",
@@ -40,4 +38,3 @@ export const quantumAIServices2025: QuantumAiService2025[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

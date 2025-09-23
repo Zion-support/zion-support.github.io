@@ -1,8 +1,6 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-<<<<<<< HEAD
-=======
 SparklesLoader2
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
 
@@ -62,4 +60,3 @@ export function AIEnhancementButton({
     </Button>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

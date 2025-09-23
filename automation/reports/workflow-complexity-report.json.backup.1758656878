@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "timestamp": "2025-08-19T03:44:21.259Z",
   "summary": {
     "totalWorkflows": 555,
@@ -14,7 +13,6 @@
       "high": 3,
       "medium": 9,
       "low": 543
-=======
   "timestamp": "2025-08-18T03:03:40.798Z",
   "summary": {
     "totalWorkflows": 223,
@@ -29,7 +27,6 @@
       "high": 0,
       "medium": 13,
       "low": 210
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   },
   "workflows": {
@@ -37,7 +34,6 @@
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
@@ -51,7 +47,6 @@
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/accessibility-audit.yml"
-=======
         "totalLines": 37,
         "jobCount": 1,
         "stepCount": 4,
@@ -65,7 +60,6 @@
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/accessibility-audit.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "actionlint.yml": {
       "complexityScore": 0,
@@ -74,61 +68,49 @@
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
-<<<<<<< HEAD
         "conditionalCount": 1,
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-=======
         "conditionalCount": 0,
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 1,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/actionlint.yml"
-=======
       "path": "/workspace/.github/workflows/actionlint.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "actions-keepalive.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 37,
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/actions-keepalive.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/actions-keepalive.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "agent-agent-1755379731005-0-full-stack-expert.yml": {
       "complexityScore": 0,
@@ -146,17 +128,13 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379731005-0-full-stack-expert.yml"
-=======
       "path": "/workspace/.github/workflows/agent-agent-1755379731005-0-full-stack-expert.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "agent-agent-1755379731007-1-deployment-expert.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 39,
         "jobCount": 0,
         "stepCount": 4,
@@ -175,8 +153,6 @@
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "totalLines": 35,
         "jobCount": 0,
         "stepCount": 4,
@@ -189,9 +165,7 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379731008-2-monitoring-expert.yml"
-=======
       "path": "/workspace/.github/workflows/agent-agent-1755379731007-1-deployment-expert.yml"
     },
     "agent-agent-1755379731008-2-monitoring-expert.yml": {
@@ -211,17 +185,13 @@
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/agent-agent-1755379731008-2-monitoring-expert.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "agent-agent-1755379759029-0-optimization-intermediate.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -233,21 +203,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379759029-0-optimization-intermediate.yml"
-=======
       "path": "/workspace/.github/workflows/agent-agent-1755379759029-0-optimization-intermediate.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "agent-agent-1755379759032-1-full-stack-intermediate.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -259,11 +223,8 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379759032-1-full-stack-intermediate.yml"
-=======
       "path": "/workspace/.github/workflows/agent-agent-1755379759032-1-full-stack-intermediate.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "agent-agent-1755379759033-2-deployment-expert.yml": {
       "complexityScore": 0,
@@ -281,21 +242,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379759033-2-deployment-expert.yml"
-=======
       "path": "/workspace/.github/workflows/agent-agent-1755379759033-2-deployment-expert.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "agent-agent-1755379759033-3-frontend-expert.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -307,21 +262,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379759033-3-frontend-expert.yml"
-=======
       "path": "/workspace/.github/workflows/agent-agent-1755379759033-3-frontend-expert.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "agent-agent-1755379759035-4-full-stack-intermediate.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -333,21 +282,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379759035-4-full-stack-intermediate.yml"
-=======
       "path": "/workspace/.github/workflows/agent-agent-1755379759035-4-full-stack-intermediate.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "agent-agent-1755379759035-5-frontend-basic.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -359,21 +302,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379759035-5-frontend-basic.yml"
-=======
       "path": "/workspace/.github/workflows/agent-agent-1755379759035-5-frontend-basic.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "agent-agent-1755379759036-6-monitoring-advanced.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -385,21 +322,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379759036-6-monitoring-advanced.yml"
-=======
       "path": "/workspace/.github/workflows/agent-agent-1755379759036-6-monitoring-advanced.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "agent-agent-1755379759037-7-full-stack-intermediate.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -411,21 +342,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379759037-7-full-stack-intermediate.yml"
-=======
       "path": "/workspace/.github/workflows/agent-agent-1755379759037-7-full-stack-intermediate.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "agent-agent-1755379777746-0-full-stack-advanced.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -437,21 +362,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379777746-0-full-stack-advanced.yml"
-=======
       "path": "/workspace/.github/workflows/agent-agent-1755379777746-0-full-stack-advanced.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "agent-agent-1755379777749-1-full-stack-basic.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -463,21 +382,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379777749-1-full-stack-basic.yml"
-=======
       "path": "/workspace/.github/workflows/agent-agent-1755379777749-1-full-stack-basic.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "agent-agent-1755379777750-2-monitoring-intermediate.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -489,21 +402,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379777750-2-monitoring-intermediate.yml"
-=======
       "path": "/workspace/.github/workflows/agent-agent-1755379777750-2-monitoring-intermediate.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "agent-agent-1755379777751-3-monitoring-advanced.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -515,11 +422,8 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379777751-3-monitoring-advanced.yml"
-=======
       "path": "/workspace/.github/workflows/agent-agent-1755379777751-3-monitoring-advanced.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "agent-agent-1755379777752-5-testing-expert.yml": {
       "complexityScore": 0,
@@ -537,21 +441,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379777752-5-testing-expert.yml"
-=======
       "path": "/workspace/.github/workflows/agent-agent-1755379777752-5-testing-expert.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "agent-agent-1755379777754-6-backend-expert.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -563,21 +461,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379777754-6-backend-expert.yml"
-=======
       "path": "/workspace/.github/workflows/agent-agent-1755379777754-6-backend-expert.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "agent-agent-1755379777755-7-backend-intermediate.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -589,21 +481,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379777755-7-backend-intermediate.yml"
-=======
       "path": "/workspace/.github/workflows/agent-agent-1755379777755-7-backend-intermediate.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "agent-agent-1755381089841-0-backend-expert.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -615,11 +501,8 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755381089841-0-backend-expert.yml"
-=======
       "path": "/workspace/.github/workflows/agent-agent-1755381089841-0-backend-expert.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "agent-agent-1755381089844-1-deployment-advanced.yml": {
       "complexityScore": 0,
@@ -637,7 +520,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755381089844-1-deployment-advanced.yml"
     },
     "agent-agent-1755381089845-2-full-stack-advanced.yml": {
@@ -645,7 +527,6 @@
       "complexityLevel": "low",
       "metrics": {
         "totalLines": 35,
-=======
       "path": "/workspace/.github/workflows/agent-agent-1755381089844-1-deployment-advanced.yml"
     },
     "agent-agent-1755381089845-2-full-stack-advanced.yml": {
@@ -671,7 +552,6 @@
       "complexityLevel": "low",
       "metrics": {
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -683,7 +563,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755381089845-2-full-stack-advanced.yml"
     },
     "agent-agent-1755381089846-3-optimization-expert.yml": {
@@ -703,9 +582,7 @@
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755381089846-3-optimization-expert.yml"
-=======
       "path": "/workspace/.github/workflows/agent-agent-1755381089846-3-optimization-expert.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "agent-agent-1755381089846-4-testing-advanced.yml": {
       "complexityScore": 0,
@@ -723,21 +600,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755381089846-4-testing-advanced.yml"
-=======
       "path": "/workspace/.github/workflows/agent-agent-1755381089846-4-testing-advanced.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "agent-agent-1755381089847-5-frontend-expert.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -749,11 +620,8 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755381089847-5-frontend-expert.yml"
-=======
       "path": "/workspace/.github/workflows/agent-agent-1755381089847-5-frontend-expert.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "agent-agent-1755381089848-6-testing-intermediate.yml": {
       "complexityScore": 0,
@@ -771,21 +639,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755381089848-6-testing-intermediate.yml"
-=======
       "path": "/workspace/.github/workflows/agent-agent-1755381089848-6-testing-intermediate.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "agent-agent-1755381089849-7-monitoring-intermediate.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -797,7 +659,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755381089849-7-monitoring-intermediate.yml"
     },
     "agent-agent-1755536560534-0-monitoring-basic.yml": {
@@ -1501,9 +1362,7 @@
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755542610532-2-deployment-basic.yml"
-=======
       "path": "/workspace/.github/workflows/agent-agent-1755381089849-7-monitoring-intermediate.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "agent-factory-automation.yml": {
       "complexityScore": 0,
@@ -1521,21 +1380,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-factory-automation.yml"
-=======
       "path": "/workspace/.github/workflows/agent-factory-automation.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "agent-factory-proliferation.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -1547,21 +1400,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-factory-proliferation.yml"
-=======
       "path": "/workspace/.github/workflows/agent-factory-proliferation.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "agent-of-agents-trigger.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -1573,349 +1420,283 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-of-agents-trigger.yml"
-=======
       "path": "/workspace/.github/workflows/agent-of-agents-trigger.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "ai-changelog.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 43,
         "jobCount": 1,
         "stepCount": 5,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/ai-changelog.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/ai-changelog.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "ai-content-autonomy.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 31,
         "jobCount": 0,
         "stepCount": 3,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/ai-content-autonomy.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/ai-content-autonomy.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "ai-content-factory.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 50,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/ai-content-factory.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/ai-content-factory.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "ai-it-ads-sync.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 50,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/ai-it-ads-sync.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/ai-it-ads-sync.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "ai-it-innovations.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 50,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/ai-it-innovations.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/ai-it-innovations.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "ai-it-multi-factory.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 50,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/ai-it-multi-factory.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/ai-it-multi-factory.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "ai-it-ultrafast-sync.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 50,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/ai-it-ultrafast-sync.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/ai-it-ultrafast-sync.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "ai-research-scout.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 50,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/ai-research-scout.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/ai-research-scout.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "ai-trends-radar.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 33,
         "jobCount": 0,
         "stepCount": 3,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/ai-trends-radar.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/ai-trends-radar.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "app-automation.yml": {
       "complexityScore": 20,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 67,
         "jobCount": 0,
         "stepCount": 8,
         "conditionalCount": 1,
         "matrixCount": 0,
         "dependencyCount": 1,
-=======
         "totalLines": 57,
         "jobCount": 0,
         "stepCount": 8,
         "conditionalCount": 0,
         "matrixCount": 0,
         "dependencyCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "environmentCount": 0,
         "secretCount": 1,
         "actionCount": 4
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/app-automation.yml"
-=======
       "path": "/workspace/.github/workflows/app-automation.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "app-monitoring.yml": {
       "complexityScore": 25,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 92,
-=======
         "totalLines": 83,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 15,
         "conditionalCount": 0,
@@ -1927,7 +1708,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/app-monitoring.yml"
     },
     "auto-fix-workflows.yml": {
@@ -1956,7 +1736,6 @@
         "jobCount": 0,
         "stepCount": 8,
         "conditionalCount": 4,
-=======
       "path": "/workspace/.github/workflows/app-monitoring.yml"
     },
     "auto-fix.yml": {
@@ -1967,7 +1746,6 @@
         "jobCount": 0,
         "stepCount": 7,
         "conditionalCount": 2,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
@@ -1976,66 +1754,52 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/auto-fix.yml"
-=======
       "path": "/workspace/.github/workflows/auto-fix.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "auto-heal-workflows.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 33,
         "jobCount": 0,
         "stepCount": 3,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/auto-heal-workflows.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/auto-heal-workflows.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "auto-media-release.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 43,
         "jobCount": 1,
         "stepCount": 5,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
@@ -2090,12 +1854,10 @@
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 1,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/auto-media-release.yml"
     },
     "auto-pr-automerge.yml": {
@@ -2151,19 +1913,14 @@
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/auto-semver-release.yml"
-=======
       "path": "/workspace/.github/workflows/auto-semver-release.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "auto-update-prs.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2175,21 +1932,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/auto-update-prs.yml"
-=======
       "path": "/workspace/.github/workflows/auto-update-prs.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "automation-advertiser.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2201,21 +1952,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/automation-advertiser.yml"
-=======
       "path": "/workspace/.github/workflows/automation-advertiser.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "automation-cleanup.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2227,21 +1972,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/automation-cleanup.yml"
-=======
       "path": "/workspace/.github/workflows/automation-cleanup.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "automation-dashboard.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2253,21 +1992,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/automation-dashboard.yml"
-=======
       "path": "/workspace/.github/workflows/automation-dashboard.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "automation-guardian-10min.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2279,21 +2012,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/automation-guardian-10min.yml"
-=======
       "path": "/workspace/.github/workflows/automation-guardian-10min.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "automation-orchestrator.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2305,21 +2032,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/automation-orchestrator.yml"
-=======
       "path": "/workspace/.github/workflows/automation-orchestrator.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "automations.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2331,21 +2052,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/automations.yml"
-=======
       "path": "/workspace/.github/workflows/automations.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "automerge-main.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2357,21 +2072,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/automerge-main.yml"
-=======
       "path": "/workspace/.github/workflows/automerge-main.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "autonomous-agent-orchestrator.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2383,21 +2092,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-agent-orchestrator.yml"
-=======
       "path": "/workspace/.github/workflows/autonomous-agent-orchestrator.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "autonomous-auto-discovery.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2409,21 +2112,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-auto-discovery.yml"
-=======
       "path": "/workspace/.github/workflows/autonomous-auto-discovery.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "autonomous-auto-merge-to-main.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2435,21 +2132,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-auto-merge-to-main.yml"
-=======
       "path": "/workspace/.github/workflows/autonomous-auto-merge-to-main.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "autonomous-cloud-automations.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2461,21 +2152,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-cloud-automations.yml"
-=======
       "path": "/workspace/.github/workflows/autonomous-cloud-automations.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "autonomous-cloud-fast.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2487,21 +2172,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-cloud-fast.yml"
-=======
       "path": "/workspace/.github/workflows/autonomous-cloud-fast.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "autonomous-cloud-runner.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2513,21 +2192,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-cloud-runner.yml"
-=======
       "path": "/workspace/.github/workflows/autonomous-cloud-runner.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "autonomous-cloud.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 33,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2539,21 +2212,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-cloud.yml"
-=======
       "path": "/workspace/.github/workflows/autonomous-cloud.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "autonomous-content-curation.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2565,21 +2232,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-content-curation.yml"
-=======
       "path": "/workspace/.github/workflows/autonomous-content-curation.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "autonomous-content-scanner.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2591,21 +2252,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-content-scanner.yml"
-=======
       "path": "/workspace/.github/workflows/autonomous-content-scanner.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "autonomous-deep-maintenance.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2617,21 +2272,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-deep-maintenance.yml"
-=======
       "path": "/workspace/.github/workflows/autonomous-deep-maintenance.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "autonomous-deps-upgrade.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2643,21 +2292,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-deps-upgrade.yml"
-=======
       "path": "/workspace/.github/workflows/autonomous-deps-upgrade.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "autonomous-external-links.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2669,21 +2312,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-external-links.yml"
-=======
       "path": "/workspace/.github/workflows/autonomous-external-links.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "autonomous-image-optimizer.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2695,21 +2332,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-image-optimizer.yml"
-=======
       "path": "/workspace/.github/workflows/autonomous-image-optimizer.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "autonomous-intelligence.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 33,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2721,21 +2352,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-intelligence.yml"
-=======
       "path": "/workspace/.github/workflows/autonomous-intelligence.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "autonomous-keepalive.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2747,21 +2372,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-keepalive.yml"
-=======
       "path": "/workspace/.github/workflows/autonomous-keepalive.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "autonomous-lighthouse.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2773,21 +2392,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-lighthouse.yml"
-=======
       "path": "/workspace/.github/workflows/autonomous-lighthouse.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "autonomous-marketing-seo.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2799,23 +2412,17 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-marketing-seo.yml"
-=======
       "path": "/workspace/.github/workflows/autonomous-marketing-seo.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "autonomous-meta.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 46,
         "jobCount": 0,
-=======
         "totalLines": 41,
         "jobCount": 1,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "stepCount": 5,
         "conditionalCount": 0,
         "matrixCount": 0,
@@ -2826,21 +2433,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-meta.yml"
-=======
       "path": "/workspace/.github/workflows/autonomous-meta.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "autonomous-minute-orchestrator.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2852,21 +2453,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-minute-orchestrator.yml"
-=======
       "path": "/workspace/.github/workflows/autonomous-minute-orchestrator.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "autonomous-quick-fixes.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2878,21 +2473,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-quick-fixes.yml"
-=======
       "path": "/workspace/.github/workflows/autonomous-quick-fixes.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "autonomous-release.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2904,21 +2493,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-release.yml"
-=======
       "path": "/workspace/.github/workflows/autonomous-release.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "autonomous-self-tune.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2930,21 +2513,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-self-tune.yml"
-=======
       "path": "/workspace/.github/workflows/autonomous-self-tune.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "autonomous-ultrafast.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2956,21 +2533,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-ultrafast.yml"
-=======
       "path": "/workspace/.github/workflows/autonomous-ultrafast.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "autonomous-workflow-cleanup.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -2982,21 +2553,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-workflow-cleanup.yml"
-=======
       "path": "/workspace/.github/workflows/autonomous-workflow-cleanup.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "autonomous-workflow-watchdog.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -3008,11 +2573,8 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-workflow-watchdog.yml"
-=======
       "path": "/workspace/.github/workflows/autonomous-workflow-watchdog.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "branch-cleanup.yml": {
       "complexityScore": 0,
@@ -3030,21 +2592,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/branch-cleanup.yml"
-=======
       "path": "/workspace/.github/workflows/branch-cleanup.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "branch-pruner.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -3056,21 +2612,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/branch-pruner.yml"
-=======
       "path": "/workspace/.github/workflows/branch-pruner.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "broken-images.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -3082,21 +2632,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/broken-images.yml"
-=======
       "path": "/workspace/.github/workflows/broken-images.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "ci-auto-heal.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -3108,7 +2652,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/ci-auto-heal.yml"
     },
     "ci-lint-types-build.yml": {
@@ -3128,19 +2671,14 @@
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/ci-lint-types-build.yml"
-=======
       "path": "/workspace/.github/workflows/ci-auto-heal.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "ci-merge-main.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -3152,21 +2690,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/ci-merge-main.yml"
-=======
       "path": "/workspace/.github/workflows/ci-merge-main.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "ci-quality.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 33,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -3178,7 +2710,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/ci-quality.yml"
     },
     "ci-self-heal.yml": {
@@ -3186,7 +2717,6 @@
       "complexityLevel": "low",
       "metrics": {
         "totalLines": 35,
-=======
       "path": "/workspace/.github/workflows/ci-quality.yml"
     },
     "ci-self-heal.yml": {
@@ -3212,7 +2742,6 @@
       "complexityLevel": "low",
       "metrics": {
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -3224,7 +2753,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/ci-self-heal.yml"
     },
     "ci.yml": {
@@ -3244,19 +2772,14 @@
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/ci.yml"
-=======
       "path": "/workspace/.github/workflows/ci.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "cleanup-merged-branches.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -3268,21 +2791,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/cleanup-merged-branches.yml"
-=======
       "path": "/workspace/.github/workflows/cleanup-merged-branches.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "cleanup.yml": {
       "complexityScore": 15,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 75,
-=======
         "totalLines": 83,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 7,
         "conditionalCount": 0,
@@ -3294,120 +2811,96 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/cleanup.yml"
-=======
       "path": "/workspace/.github/workflows/cleanup.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "cloud-agents-fast.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 47,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/cloud-agents-fast.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/cloud-agents-fast.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "cloud-agents.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 50,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/cloud-agents.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/cloud-agents.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "cloud-autonomous-orchestrator.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 31,
         "jobCount": 0,
         "stepCount": 3,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/cloud-autonomous-orchestrator.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/cloud-autonomous-orchestrator.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "cloud-deep-research.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -3419,7 +2912,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/cloud-deep-research.yml"
     },
     "cloud-maintenance.yml": {
@@ -3428,7 +2920,6 @@
       "metrics": {
         "totalLines": 44,
         "jobCount": 0,
-=======
       "path": "/workspace/.github/workflows/cloud-deep-research.yml"
     },
     "cloud-maintenance.yml": {
@@ -3455,7 +2946,6 @@
       "metrics": {
         "totalLines": 69,
         "jobCount": 1,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "stepCount": 9,
         "conditionalCount": 0,
         "matrixCount": 0,
@@ -3466,7 +2956,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/cloud-maintenance.yml"
     },
     "cloud-marketing.yml": {
@@ -3486,19 +2975,14 @@
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/cloud-marketing.yml"
-=======
       "path": "/workspace/.github/workflows/cloud-marketing.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "cloud-orchestrator-plus.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -3510,21 +2994,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/cloud-orchestrator-plus.yml"
-=======
       "path": "/workspace/.github/workflows/cloud-orchestrator-plus.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "codeql-analysis.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -3536,7 +3014,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/codeql-analysis.yml"
     },
     "codeql.yml": {
@@ -3546,7 +3023,6 @@
         "totalLines": 35,
         "jobCount": 0,
         "stepCount": 4,
-=======
       "path": "/workspace/.github/workflows/codeql-analysis.yml"
     },
     "codeql.yml": {
@@ -3556,35 +3032,28 @@
         "totalLines": 38,
         "jobCount": 0,
         "stepCount": 8,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "conditionalCount": 0,
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/codeql.yml"
-=======
         "actionCount": 5
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/codeql.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "commit-message-lint.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 33,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -3596,21 +3065,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/commit-message-lint.yml"
-=======
       "path": "/workspace/.github/workflows/commit-message-lint.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "commitlint.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 33,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -3622,21 +3085,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/commitlint.yml"
-=======
       "path": "/workspace/.github/workflows/commitlint.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "components-size-report.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -3648,7 +3105,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/components-size-report.yml"
     },
     "comprehensive-test.yml": {
@@ -3659,7 +3115,6 @@
         "jobCount": 0,
         "stepCount": 20,
         "conditionalCount": 1,
-=======
       "path": "/workspace/.github/workflows/components-size-report.yml"
     },
     "content-generation.yml": {
@@ -3706,7 +3161,6 @@
         "jobCount": 0,
         "stepCount": 21,
         "conditionalCount": 2,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
@@ -3715,7 +3169,6 @@
       },
       "refactoringPriority": "medium",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/comprehensive-test.yml"
     },
     "content-generation.yml": {
@@ -3759,7 +3212,6 @@
       "complexityLevel": "low",
       "metrics": {
         "totalLines": 40,
-=======
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/continuous-integration.yml"
     },
     "crawl-normalize.yml": {
@@ -3767,7 +3219,6 @@
       "complexityLevel": "low",
       "metrics": {
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -3779,7 +3230,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/continuous-deployment.yml"
     },
     "continuous-improvement.yml": {
@@ -3787,7 +3237,6 @@
       "complexityLevel": "low",
       "metrics": {
         "totalLines": 43,
-=======
       "path": "/workspace/.github/workflows/crawl-normalize.yml"
     },
     "cursor-chat.yml": {
@@ -3813,7 +3262,6 @@
       "complexityLevel": "low",
       "metrics": {
         "totalLines": 37,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 0,
@@ -3825,7 +3273,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/continuous-improvement.yml"
     },
     "continuous-service-factory.yml": {
@@ -3851,7 +3298,6 @@
       "complexityLevel": "low",
       "metrics": {
         "totalLines": 35,
-=======
       "path": "/workspace/.github/workflows/cursor-rules-autoupdate.yml"
     },
     "dead-code-report.yml": {
@@ -3859,7 +3305,6 @@
       "complexityLevel": "low",
       "metrics": {
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -3871,7 +3316,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/crawl-normalize.yml"
     },
     "cursor-chat.yml": {
@@ -3927,9 +3371,7 @@
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/dead-code-report.yml"
-=======
       "path": "/workspace/.github/workflows/dead-code-report.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "dependabot-auto-approve.yml": {
       "complexityScore": 0,
@@ -3947,7 +3389,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/dependabot-auto-approve.yml"
     },
     "dependencies.yml": {
@@ -3957,7 +3398,6 @@
         "totalLines": 104,
         "jobCount": 0,
         "stepCount": 8,
-=======
       "path": "/workspace/.github/workflows/dependabot-auto-approve.yml"
     },
     "dependencies.yml": {
@@ -3967,26 +3407,22 @@
         "totalLines": 110,
         "jobCount": 0,
         "stepCount": 7,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "conditionalCount": 3,
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
-<<<<<<< HEAD
         "secretCount": 2,
         "actionCount": 4
       },
       "refactoringPriority": "medium",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/dependencies.yml"
-=======
         "secretCount": 0,
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/dependencies.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "dependency-auto-upgrade.yml": {
       "complexityScore": 0,
@@ -4004,7 +3440,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/dependency-auto-upgrade.yml"
     },
     "dependency-maintenance.yml": {
@@ -4024,7 +3459,6 @@
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/dependency-maintenance.yml"
-=======
       "path": "/workspace/.github/workflows/dependency-auto-upgrade.yml"
     },
     "dependency-maintenance.yml": {
@@ -4044,14 +3478,11 @@
       "refactoringPriority": "medium",
       "status": "active",
       "path": "/workspace/.github/workflows/dependency-maintenance.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "dependency-management.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
-=======
         "totalLines": 38,
         "jobCount": 0,
         "stepCount": 4,
@@ -4106,7 +3537,6 @@
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "totalLines": 35,
         "jobCount": 0,
         "stepCount": 4,
@@ -4119,7 +3549,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/dependency-management.yml"
     },
     "diverse-agent-matrix.yml": {
@@ -4157,19 +3586,14 @@
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/docs-autogen.yml"
-=======
       "path": "/workspace/.github/workflows/docs-autogen.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "docs-intelligence.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 33,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -4181,21 +3605,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/docs-intelligence.yml"
-=======
       "path": "/workspace/.github/workflows/docs-intelligence.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "emergency-fix.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -4207,11 +3625,8 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/emergency-fix.yml"
-=======
       "path": "/workspace/.github/workflows/emergency-fix.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "ephemeral-branch-autorebase.yml": {
       "complexityScore": 0,
@@ -4229,17 +3644,13 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/ephemeral-branch-autorebase.yml"
-=======
       "path": "/workspace/.github/workflows/ephemeral-branch-autorebase.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "exponential-agent-factory-proliferation.yml": {
       "complexityScore": 35,
       "complexityLevel": "medium",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 130,
         "jobCount": 0,
         "stepCount": 9,
@@ -4253,7 +3664,6 @@
       "refactoringPriority": "medium",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/exponential-agent-factory-proliferation.yml"
-=======
         "totalLines": 489,
         "jobCount": 0,
         "stepCount": 13,
@@ -4267,17 +3677,13 @@
       "refactoringPriority": "medium",
       "status": "active",
       "path": "/workspace/.github/workflows/exponential-agent-factory-proliferation.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "exponential-ai-delegation.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 39,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -4289,18 +3695,13 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/exponential-ai-delegation.yml"
-=======
       "path": "/workspace/.github/workflows/exponential-ai-delegation.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "external-links.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
-=======
         "totalLines": 38,
         "jobCount": 0,
         "stepCount": 4,
@@ -4319,7 +3720,6 @@
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "totalLines": 35,
         "jobCount": 0,
         "stepCount": 4,
@@ -4332,7 +3732,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/external-links.yml"
     },
     "fast-auto-push-to-main.yml": {
@@ -4352,19 +3751,14 @@
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/fast-auto-push-to-main.yml"
-=======
       "path": "/workspace/.github/workflows/fast-auto-push-to-main.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "fast-lint-sync.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 35,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -4376,21 +3770,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/fast-lint-sync.yml"
-=======
       "path": "/workspace/.github/workflows/fast-lint-sync.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "front-scheduler.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 33,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -4402,11 +3790,8 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/front-scheduler.yml"
-=======
       "path": "/workspace/.github/workflows/front-scheduler.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "frontend-sync-continuous.yml": {
       "complexityScore": 15,
@@ -4424,23 +3809,17 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/frontend-sync-continuous.yml"
-=======
       "path": "/workspace/.github/workflows/frontend-sync-continuous.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "git-health.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 31,
         "jobCount": 0,
-=======
         "totalLines": 37,
         "jobCount": 1,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "stepCount": 4,
         "conditionalCount": 0,
         "matrixCount": 0,
@@ -4451,22 +3830,17 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/git-health.yml"
-=======
       "path": "/workspace/.github/workflows/git-health.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "git-ultrafast-sync.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 37,
         "jobCount": 0,
         "stepCount": 4,
@@ -4561,7 +3935,6 @@
         "jobCount": 1,
         "stepCount": 8,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
@@ -4570,7 +3943,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/git-ultrafast-sync.yml"
     },
     "gitleaks.yml": {
@@ -4580,7 +3952,6 @@
         "totalLines": 39,
         "jobCount": 0,
         "stepCount": 4,
-=======
       "path": "/workspace/.github/workflows/infinite-improvement-loop.yml"
     },
     "instagram-marketing.yml": {
@@ -4590,7 +3961,6 @@
         "totalLines": 33,
         "jobCount": 0,
         "stepCount": 3,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "conditionalCount": 0,
         "matrixCount": 0,
         "dependencyCount": 0,
@@ -4600,7 +3970,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/gitleaks.yml"
     },
     "guardian-scheduler.yml": {
@@ -4627,7 +3996,6 @@
       "metrics": {
         "totalLines": 41,
         "jobCount": 0,
-=======
       "path": "/workspace/.github/workflows/instagram-marketing.yml"
     },
     "instagram-six-hourly.yml": {
@@ -4636,7 +4004,6 @@
       "metrics": {
         "totalLines": 48,
         "jobCount": 1,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "stepCount": 5,
         "conditionalCount": 1,
         "matrixCount": 0,
@@ -4647,7 +4014,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/homepage-auto-advertiser.yml"
     },
     "homepage-auto-update.yml": {
@@ -4657,7 +4023,6 @@
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
-=======
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/instagram-six-hourly.yml"
     },
     "intelligent-content-generation.yml": {
@@ -4667,12 +4032,10 @@
         "totalLines": 76,
         "jobCount": 0,
         "stepCount": 7,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "conditionalCount": 1,
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
-<<<<<<< HEAD
         "secretCount": 0,
         "actionCount": 3
       },
@@ -4747,10 +4110,8 @@
         "environmentCount": 0,
         "secretCount": 0,
         "actionCount": 3
-=======
         "secretCount": 1,
         "actionCount": 2
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       },
       "refactoringPriority": "low",
       "status": "active",
@@ -4760,44 +4121,35 @@
       "complexityScore": 15,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 73,
         "jobCount": 0,
         "stepCount": 6,
         "conditionalCount": 1,
-=======
         "totalLines": 37,
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/knowledge-graph-radar.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/knowledge-graph-radar.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "labeler.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 33,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -4809,186 +4161,151 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/labeler.yml"
-=======
       "path": "/workspace/.github/workflows/labeler.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "lighthouse-budgets.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 37,
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/lighthouse-budgets.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/lighthouse-budgets.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "lighthouse-live.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 37,
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/lighthouse-live.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/lighthouse-live.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "link-auto-fix.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 36,
         "jobCount": 1,
         "stepCount": 4,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/link-auto-fix.yml"
-=======
         "actionCount": 1
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/link-auto-fix.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "link-scan-hourly.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 44,
         "jobCount": 1,
         "stepCount": 5,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/link-scan-hourly.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/link-scan-hourly.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "linkedin-marketing.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 33,
         "jobCount": 0,
         "stepCount": 3,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/linkedin-marketing.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/linkedin-marketing.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "linkedin-pro.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
-=======
         "totalLines": 33,
         "jobCount": 0,
         "stepCount": 3,
@@ -5010,13 +4327,11 @@
         "totalLines": 195,
         "jobCount": 0,
         "stepCount": 12,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "conditionalCount": 1,
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
@@ -5040,25 +4355,20 @@
       "refactoringPriority": "medium",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/maintenance.yml"
-=======
         "actionCount": 5
       },
       "refactoringPriority": "medium",
       "status": "active",
       "path": "/workspace/.github/workflows/maintenance.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "marketing-daily.yml": {
       "complexityScore": 5,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 44,
         "jobCount": 0,
-=======
         "totalLines": 45,
         "jobCount": 1,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "stepCount": 6,
         "conditionalCount": 0,
         "matrixCount": 0,
@@ -5069,65 +4379,52 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/marketing-daily.yml"
-=======
       "path": "/workspace/.github/workflows/marketing-daily.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "marketing-sync.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 33,
         "jobCount": 0,
         "stepCount": 3,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/marketing-sync.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/marketing-sync.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "media-optimizer.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 33,
         "jobCount": 0,
         "stepCount": 3,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
@@ -5139,7 +4436,6 @@
       "complexityLevel": "low",
       "metrics": {
         "totalLines": 48,
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
@@ -5151,7 +4447,6 @@
       "complexityLevel": "low",
       "metrics": {
         "totalLines": 67,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 6,
         "conditionalCount": 1,
@@ -5163,20 +4458,15 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/merge-conflict-guard.yml"
-=======
       "path": "/workspace/.github/workflows/merge-conflict-guard.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "monetization-continuous.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 44,
         "jobCount": 0,
-=======
         "totalLines": 30,
         "jobCount": 0,
         "stepCount": 4,
@@ -5197,7 +4487,6 @@
       "metrics": {
         "totalLines": 43,
         "jobCount": 1,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "stepCount": 5,
         "conditionalCount": 0,
         "matrixCount": 0,
@@ -5208,7 +4497,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/monetization-continuous.yml"
     },
     "monetization-daily.yml": {
@@ -5228,19 +4516,14 @@
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/monetization-daily.yml"
-=======
       "path": "/workspace/.github/workflows/monetization-daily.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "monetization.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 33,
-=======
         "totalLines": 38,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -5252,17 +4535,13 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/monetization.yml"
-=======
       "path": "/workspace/.github/workflows/monetization.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "netlify-auto-healer.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
@@ -5338,17 +4617,14 @@
         "totalLines": 43,
         "jobCount": 0,
         "stepCount": 4,
-=======
         "totalLines": 35,
         "jobCount": 1,
         "stepCount": 3,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "conditionalCount": 1,
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 4,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
@@ -5453,7 +4729,6 @@
         "jobCount": 0,
         "stepCount": 15,
         "conditionalCount": 3,
-=======
         "actionCount": 1
       },
       "refactoringPriority": "low",
@@ -5468,7 +4743,6 @@
         "jobCount": 1,
         "stepCount": 16,
         "conditionalCount": 1,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
@@ -5477,9 +4751,7 @@
       },
       "refactoringPriority": "medium",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/performance-monitoring.yml"
-=======
       "path": "/workspace/.github/workflows/netlify-automation.yml"
     },
     "netlify-config.yml": {
@@ -5643,15 +4915,12 @@
       "refactoringPriority": "medium",
       "status": "active",
       "path": "/workspace/.github/workflows/performance-monitoring.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "performance-weekly.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 39,
-=======
         "totalLines": 35,
         "jobCount": 0,
         "stepCount": 4,
@@ -5671,7 +4940,6 @@
       "complexityLevel": "low",
       "metrics": {
         "totalLines": 50,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 0,
@@ -5679,7 +4947,6 @@
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
@@ -5838,7 +5105,6 @@
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 1,
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
@@ -5853,7 +5119,6 @@
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
@@ -5862,7 +5127,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/rapid-sync.yml"
     },
     "readme-auto-advertiser.yml": {
@@ -5974,11 +5238,9 @@
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/release-drafter.yml"
     },
     "release.yml": {
-=======
       "path": "/workspace/.github/workflows/playwright-smoke.yml"
     },
     "pr-auto-curator.yml": {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
@@ -5994,8 +5256,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
-=======
       "path": "/workspace/.github/workflows/pr-auto-curator.yml"
     },
     "pr-quality-gate.yml": {
@@ -6176,119 +5436,97 @@
       },
       "refactoringPriority": "medium",
       "status": "active",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/release.yml"
     },
     "repo-knowledge-graph.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 42,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 2,
-=======
         "totalLines": 43,
         "jobCount": 1,
         "stepCount": 5,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/repo-knowledge-graph.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/repo-knowledge-graph.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "repo-radar.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 42,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 2,
-=======
         "totalLines": 43,
         "jobCount": 1,
         "stepCount": 5,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/repo-radar.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/repo-radar.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "responsive-content.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 33,
         "jobCount": 0,
         "stepCount": 3,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/responsive-content.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/responsive-content.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "revenue-ideas-daily.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 42,
         "jobCount": 0,
-=======
         "totalLines": 43,
         "jobCount": 1,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "stepCount": 5,
         "conditionalCount": 0,
         "matrixCount": 0,
@@ -6299,27 +5537,21 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/revenue-ideas-daily.yml"
-=======
       "path": "/workspace/.github/workflows/revenue-ideas-daily.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "search-index-autogen.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 49,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 39,
         "jobCount": 1,
         "stepCount": 5,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
@@ -6328,52 +5560,41 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/search-index-autogen.yml"
-=======
       "path": "/workspace/.github/workflows/search-index-autogen.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "security-audit.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 44,
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 1,
-=======
         "totalLines": 30,
         "jobCount": 1,
         "stepCount": 3,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 1,
-<<<<<<< HEAD
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/security-audit.yml"
-=======
         "actionCount": 1
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/security-audit.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "security-auto-heal.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
-=======
         "totalLines": 33,
         "jobCount": 0,
         "stepCount": 3,
@@ -6411,7 +5632,6 @@
       "complexityLevel": "low",
       "metrics": {
         "totalLines": 37,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -6423,7 +5643,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/security-auto-heal.yml"
     },
     "security-gates.yml": {
@@ -6468,7 +5687,6 @@
       "metrics": {
         "totalLines": 53,
         "jobCount": 0,
-=======
       "path": "/workspace/.github/workflows/security-scan.yml"
     },
     "security-weekly.yml": {
@@ -6477,7 +5695,6 @@
       "metrics": {
         "totalLines": 46,
         "jobCount": 1,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "stepCount": 5,
         "conditionalCount": 0,
         "matrixCount": 0,
@@ -6488,7 +5705,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/security-weekly.yml"
     },
     "security.yml": {
@@ -6499,7 +5715,6 @@
         "jobCount": 0,
         "stepCount": 12,
         "conditionalCount": 2,
-=======
       "path": "/workspace/.github/workflows/security-weekly.yml"
     },
     "security.yml": {
@@ -6546,12 +5761,10 @@
         "jobCount": 0,
         "stepCount": 8,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 7
       },
       "refactoringPriority": "low",
@@ -6593,23 +5806,18 @@
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/self-replicating-factory-manager.yml"
-=======
         "actionCount": 1
       },
       "refactoringPriority": "medium",
       "status": "active",
       "path": "/workspace/.github/workflows/self-replicating-factory-manager.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "seo-audit.yml": {
       "complexityScore": 30,
       "complexityLevel": "medium",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 117,
-=======
         "totalLines": 114,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 13,
         "conditionalCount": 4,
@@ -6621,32 +5829,25 @@
       },
       "refactoringPriority": "medium",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/seo-audit.yml"
-=======
       "path": "/workspace/.github/workflows/seo-audit.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "seo-validator.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 33,
         "jobCount": 0,
         "stepCount": 3,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
@@ -6665,141 +5866,112 @@
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 1,
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/simple-service-generator.yml"
-=======
       "path": "/workspace/.github/workflows/seo-validator.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "site-health-guardian.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 33,
         "jobCount": 0,
         "stepCount": 3,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/site-health-guardian.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/site-health-guardian.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "site-link.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 33,
         "jobCount": 0,
         "stepCount": 3,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/site-link.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/site-link.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "sitemap-and-search.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 42,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 2,
-=======
         "totalLines": 33,
         "jobCount": 0,
         "stepCount": 3,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/sitemap-and-search.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/sitemap-and-search.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "sitemap-auto-commit.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 49,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 36,
         "jobCount": 1,
         "stepCount": 4,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 2
-=======
         "actionCount": 1
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       },
       "refactoringPriority": "low",
       "status": "active",
@@ -6809,33 +5981,26 @@
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 43,
         "jobCount": 1,
         "stepCount": 5,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
-=======
         "actionCount": 2
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/sitemap-daily.yml"
     },
     "smart-merge-agent.yml": {
-<<<<<<< HEAD
       "complexityScore": 10,
       "complexityLevel": "low",
       "metrics": {
@@ -6847,7 +6012,6 @@
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-=======
       "complexityScore": 25,
       "complexityLevel": "low",
       "metrics": {
@@ -6859,7 +6023,6 @@
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 1,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "actionCount": 2
       },
       "refactoringPriority": "low",
@@ -6870,7 +6033,6 @@
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 42,
         "jobCount": 0,
         "stepCount": 5,
@@ -6884,7 +6046,6 @@
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/stale.yml"
-=======
         "totalLines": 43,
         "jobCount": 1,
         "stepCount": 1,
@@ -6898,17 +6059,13 @@
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/stale.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "sync-health.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
-=======
         "totalLines": 39,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 0,
@@ -6920,17 +6077,13 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/sync-health.yml"
-=======
       "path": "/workspace/.github/workflows/sync-health.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "test-auth.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 42,
         "jobCount": 0,
         "stepCount": 5,
@@ -6970,45 +6123,37 @@
         "totalLines": 34,
         "jobCount": 0,
         "stepCount": 3,
-=======
         "totalLines": 37,
         "jobCount": 0,
         "stepCount": 8,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "conditionalCount": 0,
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 1
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/test-trigger.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/test-auth.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "test.yml": {
       "complexityScore": 5,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 48,
         "jobCount": 0,
         "stepCount": 8,
         "conditionalCount": 1,
-=======
         "totalLines": 38,
         "jobCount": 0,
         "stepCount": 8,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
@@ -7017,7 +6162,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/test.yml"
     },
     "todo-issue-sync.yml": {
@@ -7037,7 +6181,6 @@
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/todo-issue-sync.yml"
-=======
       "path": "/workspace/.github/workflows/test.yml"
     },
     "todo-issue-sync.yml": {
@@ -7057,52 +6200,42 @@
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/todo-issue-sync.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "topics-and-clusters.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 33,
         "jobCount": 0,
         "stepCount": 3,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/topics-and-clusters.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/topics-and-clusters.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "ui-evolution-schedule.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 38,
         "jobCount": 0,
-=======
         "totalLines": 43,
         "jobCount": 1,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "stepCount": 5,
         "conditionalCount": 0,
         "matrixCount": 0,
@@ -7113,23 +6246,17 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/ui-evolution-schedule.yml"
-=======
       "path": "/workspace/.github/workflows/ui-evolution-schedule.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "ui-evolution-weekly-beautify.yml": {
       "complexityScore": 5,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 40,
         "jobCount": 0,
-=======
         "totalLines": 45,
         "jobCount": 1,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "stepCount": 6,
         "conditionalCount": 0,
         "matrixCount": 0,
@@ -7140,7 +6267,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/ui-evolution-weekly-beautify.yml"
     },
     "ultra-fast-agent-creation.yml": {
@@ -7152,7 +6278,6 @@
         "stepCount": 9,
         "conditionalCount": 0,
         "matrixCount": 1,
-=======
       "path": "/workspace/.github/workflows/ui-evolution-weekly-beautify.yml"
     },
     "ultra-rapid-sync.yml": {
@@ -7182,13 +6307,11 @@
         "stepCount": 7,
         "conditionalCount": 2,
         "matrixCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 1,
         "actionCount": 2
       },
-<<<<<<< HEAD
       "refactoringPriority": "medium",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/ultra-fast-agent-creation.yml"
@@ -12286,98 +11409,80 @@
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/unused-deps-cleaner.yml"
-=======
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/unused-deps-cleaner.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "unused-exports-report.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 42,
         "jobCount": 1,
         "stepCount": 5,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/unused-exports-report.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/unused-exports-report.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "variation.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 33,
         "jobCount": 0,
         "stepCount": 3,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/variation.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/variation.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     "venture.yml": {
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-<<<<<<< HEAD
         "totalLines": 41,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
         "totalLines": 33,
         "jobCount": 0,
         "stepCount": 3,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
@@ -12479,7 +11584,6 @@
       "complexityLevel": "low",
       "metrics": {
         "totalLines": 85,
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
@@ -12491,7 +11595,6 @@
       "complexityLevel": "low",
       "metrics": {
         "totalLines": 50,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -12503,7 +11606,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/workflow-validator.yml"
     },
     "workflow-watchdog.yml": {
@@ -12514,7 +11616,6 @@
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 1,
-=======
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/workflow-auto-healer.yml"
     },
     "workflow-health-monitor.yml": {
@@ -12543,7 +11644,6 @@
         "jobCount": 1,
         "stepCount": 12,
         "conditionalCount": 4,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
@@ -12552,7 +11652,6 @@
       },
       "refactoringPriority": "low",
       "status": "active",
-<<<<<<< HEAD
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/workflow-watchdog.yml"
     },
     "yaml-auto-fixer-simple.yml": {
@@ -12562,7 +11661,6 @@
         "totalLines": 53,
         "jobCount": 0,
         "stepCount": 6,
-=======
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/workflow-manager.yml"
     },
     "workflow-radar.yml": {
@@ -12608,7 +11706,6 @@
         "totalLines": 236,
         "jobCount": 0,
         "stepCount": 7,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "conditionalCount": 2,
         "matrixCount": 0,
         "dependencyCount": 0,
@@ -12616,7 +11713,6 @@
         "secretCount": 0,
         "actionCount": 3
       },
-<<<<<<< HEAD
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/yaml-auto-fixer-simple.yml"
@@ -12629,7 +11725,6 @@
         "jobCount": 0,
         "stepCount": 6,
         "conditionalCount": 2,
-=======
       "refactoringPriority": "medium",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/workflow-validator.yml"
@@ -12642,12 +11737,10 @@
         "jobCount": 1,
         "stepCount": 1,
         "conditionalCount": 0,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
@@ -12662,7 +11755,6 @@
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 2,
-=======
         "actionCount": 1
       },
       "refactoringPriority": "low",
@@ -12713,24 +11805,20 @@
         "jobCount": 0,
         "stepCount": 7,
         "conditionalCount": 3,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-<<<<<<< HEAD
         "actionCount": 3
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/yaml-validator.yml"
-=======
         "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
       "path": "/workspace/.github/workflows/yaml-validator.yml"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   }
 }

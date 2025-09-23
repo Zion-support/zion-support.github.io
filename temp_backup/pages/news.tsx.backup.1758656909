@@ -25,8 +25,6 @@ const NewsPage: React.FC = () => {
       excerpt: 'Breakthrough technology that brings emotional intelligence and self-awareness to artificial intelligence systems.',
       author: 'Press Team',
       date: '2025-01-15',
-<<<<<<< HEAD
-=======
       author: 'Zion Tech Group',
       readTime: '5 min read',
       featured: true,
@@ -253,7 +251,6 @@ export default function NewsPage() {
   Clock, BookOpen, Video, Podcast, FileText, Search
 } from 'lucide-react';
 import Link from 'next/link';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <UltraAdvancedFuturisticBackground>
       <div className="min-h-screen">
@@ -262,7 +259,6 @@ import Link from 'next/link';
           <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." />
         </Head>
 
-<<<<<<< HEAD
 export default function News() {
   const featuredNews = [
     {
@@ -275,7 +271,6 @@ export default function News() {
       readTime: '5 min read',
       image: '/api/placeholder/600/400',
       tags: ['AI', 'Quantum Computing', 'Innovation'],
-=======
 import Head from 'next/head';
 
 export default function NewsPage() {
@@ -556,7 +551,6 @@ export default function NewsPage() {
       readTime: "3 min read",
       image: "/images/news/financial-award.jpg",
       tags: ["Awards", "Financial Services", "Quantum Computing"]
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
@@ -591,7 +585,6 @@ export default function NewsPage() {
                       : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600"
 =======
 import React, { useState } from 'react';
-<<<<<<< HEAD
     'All News',
     'Company News',
     'Partnerships',
@@ -607,7 +600,6 @@ import React, { useState } from 'react';
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
-=======
 import { motion } from 'framer-motion';
 import { 
   Search, Calendar, Clock, User, Tag, 
@@ -759,21 +751,18 @@ export default function News() {
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       year: 'numeric',
       month: 'long',
       day: 'numeric'
     });
   };
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-pink-900/20"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-=======
   const getCategoryColor = (category: string) => {
     const colors = {
       ai: 'from-cyan-500 to-blue-500',
@@ -790,16 +779,12 @@ export default function News() {
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
             className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent mb-6"
-=======
             className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           >
             Latest News & Insights
           </motion.h1>
@@ -807,7 +792,6 @@ export default function News() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-<<<<<<< HEAD
             className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8"
           >
             Stay updated with the latest developments in AI, quantum computing, space technology, and more from Zion Tech Group.
@@ -840,7 +824,6 @@ export default function News() {
                   index === 0 
                     ? 'bg-purple-500 text-white' 
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
-=======
 =======
 import React from 'react';
 import Head from 'next/head';
@@ -1106,7 +1089,6 @@ export default function NewsPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 }`}
               >
                 {category}
@@ -1116,7 +1098,6 @@ export default function NewsPage() {
         </div>
       </section>
 
-<<<<<<< HEAD
                     <div className="flex items-center gap-3 mb-4">
                       <span className={`px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(article.category)} text-white`}>
                         {categories.find(c => c.id === article.category)?.name}
@@ -1161,17 +1142,14 @@ export default function NewsPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2 
-=======
       {/* Featured News */}
       <section id="featured" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
             className="text-4xl md:text-5xl font-bold text-center mb-16"
           >
             Latest News
@@ -1289,7 +1267,6 @@ export default function NewsPage() {
                       <ExternalLink className="w-4 h-4" />
                     </a>
                   </div>
-=======
       {/* News Grid */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
@@ -1562,7 +1539,6 @@ export default function NewsPage() {
       </section>
 
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 </div>
               </motion.div>
             ))}
@@ -1570,7 +1546,6 @@ export default function NewsPage() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Press Kit CTA */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
@@ -1585,7 +1560,6 @@ export default function NewsPage() {
                   </div>
                 </motion.div>
               ))}
-=======
       {/* Newsletter Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -1612,7 +1586,6 @@ export default function NewsPage() {
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                 Subscribe
               </button>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </div>
             
             <p className="text-sm text-gray-400 mt-4">
@@ -1932,8 +1905,6 @@ export default function NewsPage() {
               <a href="/about" className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
                 About Zion Tech Group
               </a>
-<<<<<<< HEAD
-=======
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1953,12 +1924,10 @@ export default function NewsPage() {
                 Contact Media Relations
               </button>
 =======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
       title: "Partnership with TechCorp Announced for Cloud Infrastructure",
       excerpt: "Strategic collaboration to deliver next-generation cloud automation solutions for enterprise clients worldwide.",
       date: "2025-01-18",
@@ -2157,7 +2126,6 @@ export default function NewsPage() {
         </main>
       </div>
     </>
-=======
         {/* Latest News */}
         <section className="py-20 bg-black/50">
           <div className="container mx-auto px-4">
@@ -2383,6 +2351,5 @@ export default function NewsPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   );
 }

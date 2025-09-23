@@ -4,7 +4,6 @@
  * Runs all automation scripts, tests, fixes, and improvements;
  */
 
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
@@ -316,7 +315,6 @@ if (require.main === module) {
   runner.runAll().catch(console.error)}
 
 module.exports = ComprehensiveAutomationRunner;
-=======
 const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')
@@ -355,4 +353,3 @@ const { execSync, spawn } = require('child_process')
     const automationScripts = [{ "path": 'scripts/health-check.cjs', "desc"}]
       { "path": 'scripts/performance-monitor.cjs', "desc"}
       { "path": 'scripts/security-audit.cjs', "desc"}
->>>>>>> main

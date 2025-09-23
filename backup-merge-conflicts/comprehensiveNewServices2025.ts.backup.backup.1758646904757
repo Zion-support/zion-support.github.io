@@ -1,9 +1,6 @@
 =======
 =======
-<<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11935
 "export": interface ComprehensiveNewService {
 >>>>>>> main
    id: string;

@@ -14,8 +14,6 @@ import { newOperationalServices20o25 } from '../data/new-operational-services-20
 import { innovative20o25Services } from '../data/innovative-20o25-services';
 import { emergingTech20o25Services } from '../data/emerging-tech-20o25-services';
 import { professionalServices } from '../data/professional-services';
-<<<<<<< HEAD
-=======
 import { real2029Q2Additions } from '../data/real-2029-q2-additions';
 export type ServiceRecord = any;
 const allServiceArrays: ServiceRecord[][] = [
@@ -74,4 +72,3 @@ export function listServicesByCategory(categoryIncludes: string): ServiceRecord[
 		return true;
 	});
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

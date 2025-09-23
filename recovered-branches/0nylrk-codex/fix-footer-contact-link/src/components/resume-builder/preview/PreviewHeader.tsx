@@ -1,7 +1,5 @@
 
 import { Button } from '@/components/ui/button';
-<<<<<<< HEAD
-=======
 ArrowLeftFileTextLink
 import { PdfExportButton } from '../PdfExportButton';
 import { Resume } from '@/types/resume';
@@ -85,4 +83,3 @@ export function PreviewHeader({ resumeonBack }: PreviewHeaderProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

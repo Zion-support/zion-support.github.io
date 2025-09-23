@@ -39,8 +39,6 @@ export interface ResearchDevelopmentService20o29 {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [
   {
     id: 'advanced-research-automation',
@@ -299,4 +297,3 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

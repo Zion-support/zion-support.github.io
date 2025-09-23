@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from "next/link";
 
 export const metadata = {
@@ -308,7 +307,6 @@ export default function ServicesPage() {
               </Link>
             </div>
           </div>
-=======
 import Link from 'next/link';
 
 export const metadata = {
@@ -500,7 +498,6 @@ export default function ServicesPage() {
           >
             Request Demo
           </Link>
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
         </div>
       </section>
     </div>

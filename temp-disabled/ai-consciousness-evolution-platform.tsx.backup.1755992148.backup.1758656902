@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Brain, Zap, Shield, Users, Target, ArrowRight, Check, Star, Globe, Cpu } from 'lucide-react';
 import SEO from '../components/SEO';
@@ -237,7 +236,6 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 };
 
 export default AIConsciousnessEvolutionPlatform;
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -586,4 +584,3 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 };
 
 export default AIConsciousnessEvolutionPlatform;
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32b6

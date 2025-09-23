@@ -1,5 +1,4 @@
 #!/usr/bin/env node;
-<<<<<<< HEAD
 const fs = require("$1");
 const path = require("path");
 class SyntaxErrorFixer {;
@@ -73,7 +72,6 @@ if (require.main === module) {;
   fixer.fixAllFiles(),}
 ;
 module.exports = SyntaxErrorFixer
-=======
 const fs = require("$1")
 const path = require("path")
       let content = fs.readFileSync(filePath, "utf8")
@@ -94,4 +92,3 @@ const path = require("path")
       "pages/pricing-guide.tsx"
       "pages/pricing.tsx"
       "
->>>>>>> main

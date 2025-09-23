@@ -54,8 +54,6 @@ export function useWhitelabelTenant(externalSubdomain?: string) {
           `${functionName}${params}`,
           {
             headers: {
-<<<<<<< HEAD
-=======
               'Content-Type': 'application/json'}}
         );
 
@@ -142,4 +140,3 @@ export function useTenantAdminStatus(tenantId?: string) {
 
   return { isAdmin, isLoading };
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

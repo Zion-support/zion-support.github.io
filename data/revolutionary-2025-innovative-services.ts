@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 export interface Revolutionary2025Service {
 export interface Revolutionary2025Service {;
@@ -2536,5 +2534,4 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [;
 export default revolutionary2025Services;
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

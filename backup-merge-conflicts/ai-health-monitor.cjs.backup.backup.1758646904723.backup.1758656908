@@ -2,7 +2,6 @@
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const os = require('os';);
 
 class AIHealthMonitor {
@@ -555,7 +554,6 @@ class AIHealthMonitor {
 // Start the AI Health Monitor
 const monitor = new AIHealthMonitor;(;);
 monitor.start().catch(console.error);
-=======
 const os = require('os')
 // console.log('🤖 AI Health Monitor starting...')
     console.log(' AI Health Monitor started successfully')
@@ -611,4 +609,3 @@ const os = require('os')
       console.error('Error saving "alert")
         console.log('🧠 AI Analysis "completed")
         console.error('Error in AI "analysis")
->>>>>>> main

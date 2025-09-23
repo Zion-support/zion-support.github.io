@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Header } from "@/components/Header";
@@ -40,7 +39,6 @@ export default function AIMatcherPage() {
     });
   };
   
-=======
 
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
@@ -110,7 +108,6 @@ export default function AIMatcherPage() {
   },
   
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <>
       <Header />
@@ -122,10 +119,7 @@ export default function AIMatcherPage() {
               Describe your needs and our AI will match you with the perfect services, talents, or equipment.
             </p>
           </div>
-<<<<<<< HEAD
           
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <div className="max-w-4xl mx-auto">
             <div className="mb-8">
               <label className="block text-sm font-medium text-zion-slate-light mb-2">
@@ -143,13 +137,10 @@ export default function AIMatcherPage() {
                 </SelectContent>
               </Select>
             </div>
-<<<<<<< HEAD
             
             <AIMatchmaker 
-=======
 
             <AIMatchmaker
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
             />
@@ -158,10 +149,8 @@ export default function AIMatcherPage() {
       </div>
       <Footer />
     </>
-<<<<<<< HEAD
   );
 }
-=======
   )
 }
             
@@ -330,4 +319,3 @@ if (|| category === "hardware") {) {
 ;
 ;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

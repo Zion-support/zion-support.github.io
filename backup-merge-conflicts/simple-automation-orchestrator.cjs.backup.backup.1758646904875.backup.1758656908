@@ -21,7 +21,6 @@ class SimpleAutomationOrchestrator {}
     const dirs = ["automation/logs", "scripts/automation/reports", "reports"];
     dirs.forEach(dir => {})
       const dirPath = path.join(this.projectRoot, dir;);
-<<<<<<< HEAD
       if () {
         fs.mkdirSync(dirPath, { "recursive": true })}
     })}
@@ -42,7 +41,6 @@ class SimpleAutomationOrchestrator {}
   }
 
   async runStep(stepName, stepFunction) {
-=======
       if () {}
         fs.mkdirSync(dirPath, { "recursive": true })};
     })};
@@ -398,4 +396,3 @@ if ( {})
   const orchestrator = new SimpleAutomationOrchestrator}(;);
   orchestrator.run().catch(console.error)};
 module.exports = SimpleAutomationOrchestrator;
->>>>>>> main

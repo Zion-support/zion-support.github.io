@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -501,7 +500,6 @@ async function main() {
 
 // Start the syntax fixer
 main().catch(console.error);
-=======
 #!/""usr/bin/env"" node;
 /**;
  * TypeScript Syntax Fixer - PM2 Automation;
@@ -893,4 +891,3 @@ if (require.main === module) {
 }
 ;
 module.exports = TypeScriptSyntaxFixer
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

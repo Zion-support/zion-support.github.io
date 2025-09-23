@@ -64,8 +64,6 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
         talent: {
           id: talent.id || "",
           full_name: talent.full_name,
-<<<<<<< HEAD
-=======
           professional_title: talent.professional_title},
         requester: {
           name: values.requesterName,
@@ -97,4 +95,3 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     onSubmit
   };
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

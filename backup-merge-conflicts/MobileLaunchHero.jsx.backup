@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 =======
 =======
 =======
@@ -24,7 +22,6 @@ export const MobileLaunchHero = ("props": "any) => {return (;
       </div>;
     </div>;
   );"};
->>>>>>> pr-11935
 export const MobileLaunchHero = (props) => {return (
     <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4 text-center">

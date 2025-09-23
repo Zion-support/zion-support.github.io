@@ -23,8 +23,6 @@ export function useAuthOperations(
       
       const { data, error } = await supabase.auth.signInWithPassword({
         email,
-<<<<<<< HEAD
-=======
         password});
 
       if (error) {
@@ -298,4 +296,3 @@ export function useAuthOperations(
     loginWithTwitter,
     loginWithWeb3};
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

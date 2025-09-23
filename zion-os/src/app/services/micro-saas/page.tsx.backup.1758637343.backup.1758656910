@@ -1,16 +1,13 @@
-<<<<<<< HEAD
 
 "use client";
 import { useState } from "react";
 interface MicroSAASService {id: string;
-=======
 "use client";
 
 import { useState } from "react";
 
 interface MicroSAASService {
   id: string;
->>>>>>> origin/auto/autonomy-17186719616
   name: string;
   description: string;
   targetMarket: string[];
@@ -23,7 +20,6 @@ interface MicroSAASService {
   integrations: string[];
   deployment: string;
 }
-<<<<<<< HEAD
 const microSAASServices: MicroSAASService[] = [;
   {id: "marketplace-platform-pro";
     name: "Digital Marketplace Platform Pro";
@@ -1058,7 +1054,6 @@ export default function MicroSAASPage() {;
       </div>;
     </div>);
 }
-=======
 
 const microSAASServices: MicroSAASService[] = [
   {
@@ -1505,4 +1500,3 @@ export default function MicroSAASPage() {
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

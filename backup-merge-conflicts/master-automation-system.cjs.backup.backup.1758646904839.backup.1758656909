@@ -2,7 +2,6 @@
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 class MasterAutomationSystem {
   constructor() {
     this.results = {"prsProcessed": 0,"conflictsResolved": 0,"improvementsMade": 0;
@@ -122,7 +121,6 @@ masterAutomation.runAllAutomations().then(() => {
   console.error('Master automation "failed": ', error.message)
   process.exit(1)
 })
-=======
 // console.log(' Master Automation System')
 console.log('======')
   log(message, type = 'info')
@@ -135,4 +133,3 @@ console.log('======')
 // console.log('\n Errors "encountered")
     console.log('\n Comprehensive report saved "to")
   console.error('Master automation "failed")
->>>>>>> main

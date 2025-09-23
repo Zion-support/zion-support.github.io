@@ -1,18 +1,12 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 const contact = {
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
 };
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {
     id: 'managed-ml-feature-store-starter',
@@ -1348,7 +1342,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 8
   },
   {
-<<<<<<< HEAD
     id: 'ai-privacy-compliance-copilot',
     name: 'AI Privacy & Compliance Copilot',
     tagline: 'Automate DPIAs, RoPA, and DSAR workflows with auditable AI',
@@ -1410,7 +1403,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     link: 'https://ziontechgroup.com/services/sales-copilot-for-outreach',
     marketPosition: 'Combines best of Outreach/Salesloft with native AI writing and logging.',
     targetAudience: 'SDRs, AEs, RevOps',
-=======
     id: 'pii-redaction-proxy',
     name: 'PII Redaction Proxy',
     tagline: 'Lossless PII masking for logs, prompts, and data pipelines',
@@ -1473,12 +1465,10 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     link: 'https://ziontechgroup.com/services/license-key-usage-metering',
     marketPosition: 'Developer-first licensing and metering without heavy ecommerce suites.',
     targetAudience: 'SaaS product and platform teams',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     trialDays: 14,
     setupTime: '1 day',
     category: 'Developer Tools',
     realService: true,
-<<<<<<< HEAD
     technology: ['Next.js', 'LLM APIs', 'Webhooks'],
     integrations: ['Salesforce', 'HubSpot', 'Gmail/Outlook'],
     useCases: ['Outbound sequences', 'Call notes', 'CRM hygiene'],
@@ -1779,7 +1769,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'Event ingestors and summarization pipelines.',
     launchDate: '2025-08-05',
     customers: 7,
-=======
     technology: ['Next.js', 'Stripe Billing', 'PostgreSQL'],
     integrations: ['Stripe', 'Webhook', 'Slack'],
     useCases: ['License distribution', 'Feature gating', 'Usage-based billing'],
@@ -1793,12 +1782,10 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'Key registry, metering counters, Stripe events, and audits.',
     launchDate: '2025-08-22',
     customers: 6,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     rating: 4.6,
     reviews: 3
   },
   {
-<<<<<<< HEAD
     id: 'ai-data-quality-monitor',
     name: 'AI Data Quality Monitor',
     tagline: 'Detect schema drifts, null spikes, and anomalies continuously',
@@ -1923,7 +1910,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   }
 ];
 
-=======
     id: 'multi-tenant-rate-limiter',
     name: 'Multi-tenant Rate Limiter & Quotas',
     tagline: 'Fairness and quotas with headers, dashboards, and alerts',
@@ -2386,4 +2372,3 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 5
   }
 ];
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

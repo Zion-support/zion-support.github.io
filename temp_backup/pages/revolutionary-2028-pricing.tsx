@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
@@ -451,4 +449,3 @@ export default function Revolutionary2028Pricing() {
     </>
   )
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   Download, 
@@ -147,7 +146,6 @@ const stats = [
   { number: '10K+', label: 'Downloads' },
   { number: '15+', label: 'Industry Experts' },
   { number: '95%', label: 'Reader Satisfaction' }
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -198,12 +196,10 @@ const whitePapers = [
     description: "Discover how to leverage data analytics to drive business decisions and growth.",
     downloadCount: 750
   }
->>>>>>> main
 ];
 
 export default function WhitePapersPage() {
   return (
-<<<<<<< HEAD
     <Layout
       title="White Papers - Zion Tech Group"
       description="Access our comprehensive collection of white papers covering AI, cybersecurity, cloud computing, and digital transformation topics."
@@ -224,7 +220,6 @@ export default function WhitePapersPage() {
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 In-depth research and insights on the latest technology trends and industry developments
-=======
     <>
       <Head>
         <title>White Papers - Zion Tech Group</title>
@@ -244,13 +239,11 @@ export default function WhitePapersPage() {
               <h1 className="text-4xl md:text-6xl font-bold mb-6">White Papers</h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Download our comprehensive white papers on technology trends and best practices.
->>>>>>> main
               </p>
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -265,7 +258,6 @@ export default function WhitePapersPage() {
                 >
                   <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
                   <div className="text-gray-600">{stat.label}</div>
-=======
         {/* White Papers List */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -346,14 +338,12 @@ export default function WhitePapersPage() {
                 >
                   <Tag className="w-6 h-6 text-blue-600 mx-auto mb-2" />
                   <span className="text-sm font-medium">{category}</span>
->>>>>>> main
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Featured White Papers */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -535,7 +525,6 @@ export default function WhitePapersPage() {
         </section>
       </div>
     </Layout>
-=======
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
@@ -570,6 +559,5 @@ export default function WhitePapersPage() {
         </section>
       </div>
     </>
->>>>>>> main
   );
 }

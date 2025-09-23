@@ -1,7 +1,5 @@
 
 import { GradientHeading } from "./GradientHeading";
-<<<<<<< HEAD
-=======
 import { ServerHardDriveNetworkClockRecycleTruck } from "@/components/icons";
 import { Button } from "./ui/button";
 
@@ -64,4 +62,3 @@ export function GlobalServiceSection() {
     </section>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

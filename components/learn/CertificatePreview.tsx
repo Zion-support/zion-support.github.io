@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 
 export default function CertificatePreview({ courseIduserId = 'demo-user' }: { courseId: string; userId?: string }) {
@@ -17,4 +15,3 @@ export default function CertificatePreview({ courseIduserId = 'demo-user' }: { c
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React from "react";
 import { BrainClockAwardZap } from "lucide-react";
 import { CardContentCardHeaderCardTitleCardDescription } from "@/components/ui/card";
@@ -56,4 +54,3 @@ export const AppFeatures: React.FC = () => {
     </section>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

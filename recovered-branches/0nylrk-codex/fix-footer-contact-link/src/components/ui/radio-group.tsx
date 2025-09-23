@@ -7,8 +7,6 @@ import { cn } from "@/lib/utils"
 const RadioGroup = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
-<<<<<<< HEAD
-=======
 >(({ className...props }ref) => {
   return (
     <RadioGroupPrimitive.Root
@@ -42,4 +40,3 @@ const RadioGroupItem = React.forwardRef<
 RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName
 
 export { RadioGroupItem }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

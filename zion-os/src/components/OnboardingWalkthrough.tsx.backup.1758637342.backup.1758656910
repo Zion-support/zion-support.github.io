@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 
 "use client";
 import { useState, useEffect } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 interface WalkthroughStep {id: string;
-=======
 "use client";
 
 import { useState, useEffect } from "react";
@@ -12,13 +10,11 @@ import { useAuth } from "@/contexts/AuthContext";
 
 interface WalkthroughStep {
   id: string;
->>>>>>> origin/auto/autonomy-17186719616
   title: string;
   description: string;
   target?: string;
   position: "top" | "bottom" | "left" | "right";
 }
-<<<<<<< HEAD
 const walkthroughSteps: WalkthroughStep[] = [;
   {id: "welcome";
     title: "Welcome to Zion OS! 🚀";
@@ -92,15 +88,12 @@ interface WalkthroughStep {;
   position: "top" | "bottom" | "left" | "right";
 }
 const walkthrough_steps: WalkthroughStep[] = [;
-=======
 
 const walkthroughSteps: WalkthroughStep[] = [
->>>>>>> origin/auto/autonomy-17186719616
   {
     id: "welcome",
     title: "Welcome to Zion OS! 🚀",
     description: "Let's take a quick tour to help you get started with launching your digital economy.",
-<<<<<<< HEAD
     position: "bottom";
   },
   {
@@ -116,7 +109,6 @@ const walkthroughSteps: WalkthroughStep[] = [
     description: "Manage your deployed instances, API keys, and governance settings from here.",
     target: "admin - instances - card",
     position: "left";
-=======
     position: "bottom"
   },
   {
@@ -132,25 +124,20 @@ const walkthroughSteps: WalkthroughStep[] = [
     description: "Manage your deployed instances, API keys, and governance settings from here.",
     target: "admin-instances-card",
     position: "left"
->>>>>>> origin/auto/autonomy-17186719616
   },
   {
     id: "navigation",
     title: "Navigation",
     description: "Use the top navigation to quickly access different sections of the platform.",
-<<<<<<< HEAD
     target: "nav - menu",
     position: "bottom";
-=======
     target: "nav-menu",
     position: "bottom"
->>>>>>> origin/auto/autonomy-17186719616
   },
   {
     id: "complete",
     title: "You're All Set! 🎉",
     description: "You now know the basics. Start building your digital economy or explore more features.",
-<<<<<<< HEAD
     position: "top";
   }
 ],
@@ -325,7 +312,6 @@ export function useWalkthroughTarget(id: string) {;
     "data-walkthrough-target": id;
     id}
 }
-=======
     position: "top"
   }
 ];
@@ -471,4 +457,3 @@ export function useWalkthroughTarget(id: string) {
     id,
   };
 }
->>>>>>> origin/auto/autonomy-17186719616

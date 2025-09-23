@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 import { v4 as uuidv4 } from 'uuid';
@@ -15,7 +14,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   writeJsonFile('updates.json', updates);
   res.status(200).json(update);
 }
-=======
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -94,4 +92,3 @@ function handler() {
 }
 }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

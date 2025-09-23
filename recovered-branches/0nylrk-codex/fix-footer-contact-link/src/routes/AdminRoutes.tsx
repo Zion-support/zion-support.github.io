@@ -1,7 +1,5 @@
 
 import { Fragment } from "react";
-<<<<<<< HEAD
-=======
 import { Routes } from "react-router-dom";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 
@@ -104,4 +102,3 @@ const AdminRoutes = () => {
 };
 
 export default AdminRoutes;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -8,8 +8,6 @@ import { useSidebar } from "./sidebar-context"
 export const SidebarTrigger = React.forwardRef<
   React.ElementRef<typeof Button>,
   React.ComponentProps<typeof Button>
-<<<<<<< HEAD
-=======
 >((propsref) => {
   const { toggleSidebar } = useSidebar()
 
@@ -33,4 +31,3 @@ export const SidebarTrigger = React.forwardRef<
   )
 })
 SidebarTrigger.displayName = "SidebarTrigger"
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,6 +1,5 @@
 #!/bin/bash
 
-<<<<<<< HEAD
 echo "🔧 Resolving merge conflicts and pushing to main..."
 
 # Change to workspace directory
@@ -34,7 +33,6 @@ echo "🚀 Pushing changes to main..."
 git push origin main
 
 echo "✅ Merge conflicts resolved and changes pushed to main!"
-=======
 # Navigate to workspace directory
 cd /workspace
 
@@ -81,4 +79,3 @@ else
 fi
 
 echo "Git operations completed successfully!"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

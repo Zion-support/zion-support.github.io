@@ -1,8 +1,6 @@
 
 import { useAuth } from "@/hooks/useAuth";
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
-<<<<<<< HEAD
-=======
 import { UserCheckStarCalendarCheckBriefcaseIcon } from "lucide-react";
 import { OnboardingTrackerOnboardingStep } from "./OnboardingTracker";
 
@@ -39,4 +37,3 @@ export function TalentOnboardingSteps() {
   return <OnboardingTracker steps={steps} />;
 }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

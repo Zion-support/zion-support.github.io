@@ -11,8 +11,6 @@ export function ContactSection() {
           <div>
             <GradientHeading>Get In Touch</GradientHeading>
             <p className="mt-4 text-zion-slate-light text-xl mb-8">
-<<<<<<< HEAD
-=======
               We have the equipmenthe partsand the maintenance services ready for you — right now. Contact us today.
             </p>
             <div className="flex items-center mb-6">
@@ -90,4 +88,3 @@ export function ContactSection() {
     </section>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

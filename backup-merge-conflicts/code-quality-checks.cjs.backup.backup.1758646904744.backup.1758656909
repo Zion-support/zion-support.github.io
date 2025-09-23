@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const { execSync } = require("child_process")
 const fs = require("fs")
-<<<<<<< HEAD
 class CodeQualityChecks {
   constructor() {
     this.results = {
@@ -54,7 +53,6 @@ class CodeQualityChecks {
     try {
       const result = execSync("npm run build", { "encoding": "utf8" })
       this.addCheck("Performance", "passed", "Build completed successfully")} catch (error) {
-=======
       "timestamp"
       summary: { passed: 0, "failed": 0, "warnings"}
 // console.log(" Running Code Quality Checks...")
@@ -89,4 +87,3 @@ class CodeQualityChecks {
 // console.log(`"Warnings"`)
     console.log("=")
     console.log(`� Report saved "to"`)
->>>>>>> main

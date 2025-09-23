@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 }}>
       <div className="relative">
 =======
@@ -23,7 +21,6 @@ const Dialog({children, open, onOpenChange}) {;
       <div className="relative">;
 }}>
       <div className="relative">
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
         {children}
       </div>;

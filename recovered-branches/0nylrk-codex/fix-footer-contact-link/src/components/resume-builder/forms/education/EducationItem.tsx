@@ -1,7 +1,5 @@
 
 import { format } from 'date-fns';
-<<<<<<< HEAD
-=======
 EditTrash2
 import { Button } from '@/components/ui/button';
 import { CardContent } from '@/components/ui/card';
@@ -56,4 +54,3 @@ export function EducationItem({ educationEditonDelete }: EducationItemProps) {
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

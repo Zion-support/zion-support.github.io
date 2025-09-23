@@ -1,11 +1,8 @@
 =======
 import React, {useEffect, useRef} from 'react';
-<<<<<<< HEAD
-=======
 =======
 import React, {useEffect, useRef} from 'react';
 export function FloatingOrbs($1) {
->>>>>>> main
     const canvasRef = useRef(null);
     useEffect(() => {;
         const canvas = canvasRef.current;

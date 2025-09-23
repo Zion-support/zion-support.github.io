@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 <<<<<<< HEAD:app.disabled/resources/ai-2025-ultimate-implementation-master-guide.disabled/page.tsx.disabled
 <<<<<<<< HEAD:app.disabled/resources/ai-2025-ultimate-implementation-master-guide.disabled/page.tsx
 "use client";
-========
 =======
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))
 export default function Page() {
   return (
     <main style={{ padding: 32 }}>

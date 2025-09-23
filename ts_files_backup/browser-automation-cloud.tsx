@@ -1,6 +1,4 @@
 import SEO from '../components/SEO';
-<<<<<<< HEAD
-=======
 CheckExternalLink
 
 export default function BrowserAutomationCloudPage() {
@@ -42,5 +40,4 @@ export default function BrowserAutomationCloudPage() {
 		</>
 	);
 }
->>>>>>> origin/auto/autonomy-17186719616
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
@@ -30,7 +29,6 @@ export default function AIPoweredDevOpsPlatformPage() {
 				canonical="https://ziontechgroup.com/ai-powered-devops-platform"
 			/>
 		</>
-=======
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AIPoweredDevOpsPlatform() {
@@ -54,6 +52,5 @@ export default function AIPoweredDevOpsPlatform() {
 			ctaHref="/contact"
 			canonical="https://ziontechgroup.com/ai-powered-devops-platform"
 		/>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 	);
 }

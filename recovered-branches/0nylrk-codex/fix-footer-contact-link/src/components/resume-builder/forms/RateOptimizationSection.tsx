@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useState } from "react";
 import { Control } from "react-hook-form";
 import { 
@@ -75,4 +73,3 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
     </div>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

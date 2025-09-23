@@ -2,11 +2,9 @@
 
 import React from "react";
 
-<<<<<<< HEAD
 export default function InteractiveContentDiscoveryWidget() {
   return null;
 }
-=======
 const InteractiveContentDiscoveryWidget = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -280,4 +278,3 @@ const InteractiveContentDiscoveryWidget = () => {
 };
 
 export default InteractiveContentDiscoveryWidget;
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import Head from 'next/head';
 
 interface SEOHeadProps {
@@ -144,4 +142,3 @@ export default function SEOHead({
     </Head>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

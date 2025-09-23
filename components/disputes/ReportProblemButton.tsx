@@ -1,7 +1,5 @@
 import Link from 'next/link';
 
-<<<<<<< HEAD
-=======
 export default function ReportProblemButton({ projectIdentityTypentityId }: { projectId: string; entityType?: 'milestone' | 'contract' | 'thread'; entityId?: string; }) {
   const query = new URLSearchParams({ projectId...(entityType ? { entityType } : {})...(entityId ? { entityId } : {}) });
   return (
@@ -12,4 +10,3 @@ export default function ReportProblemButton({ projectIdentityTypentityId }: { pr
     </Link>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

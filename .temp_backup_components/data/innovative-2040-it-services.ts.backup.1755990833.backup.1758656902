@@ -1,6 +1,5 @@
 export const innovative2040ITServices = [
   {
-<<<<<<< HEAD
     id: 'autonomous-devops-orchestrator',
     name: 'Autonomous DevOps Orchestrator',
     tagline: 'Self-healing DevOps platform that automatically resolves issues and optimizes performance',
@@ -95,14 +94,12 @@ export const innovative2040ITServices = [
     price: '$399',
     period: '/month',
     description: 'Revolutionary cybersecurity platform that leverages quantum computing to provide unprecedented threat detection, real-time response, and predictive security analytics.',
-=======
     id: 'quantum-secure-cloud-infrastructure-2040',
     name: 'Quantum-Secure Cloud Infrastructure 2040',
     tagline: 'Unbreakable quantum-secured cloud platform with AI monitoring',
     description: 'Advanced quantum-secured cloud infrastructure featuring unbreakable encryption, quantum key distribution, and AI-powered security monitoring. Provides enterprise-grade security with quantum-resistant algorithms.',
     price: 14999,
     period: 'monthly',
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
     features: [
       'Quantum Encryption',
       'Quantum Key Distribution',
@@ -124,7 +121,6 @@ export const innovative2040ITServices = [
     marketPosition: 'Leading quantum-enhanced cybersecurity platform delivering superior threat detection and response.',
     targetAudience: 'CISOs, security architects, SOC teams, enterprise security professionals',
     trialDays: 30,
-<<<<<<< HEAD
     setupTime: '3 weeks',
     category: 'Security & Networking',
     realService: true,
@@ -231,7 +227,6 @@ export const innovative2040ITServices = [
     customers: 45,
     rating: 4.9,
     reviews: 32
-=======
     marketReady: true,
     pricing: {
       starter: 14999,
@@ -255,7 +250,6 @@ export const innovative2040ITServices = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   },
   {
     id: 'autonomous-devops-platform-2040',

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { Routes } from "react-router-dom";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import Marketplace from "@/pages/Marketplace";
@@ -95,4 +93,3 @@ const MarketplaceRoutes = () => {
 };
 
 export default MarketplaceRoutes;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

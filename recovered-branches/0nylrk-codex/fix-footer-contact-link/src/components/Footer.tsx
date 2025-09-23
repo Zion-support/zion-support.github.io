@@ -1,6 +1,4 @@
 import { NewsletterForm } from "@/components/NewsletterForm";
-<<<<<<< HEAD
-=======
 import { TwitterLinkedinFacebookInstagramGithub } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -83,4 +81,3 @@ export function Footer() {
     </footer>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

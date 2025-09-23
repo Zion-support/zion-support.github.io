@@ -1,8 +1,6 @@
 
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-=======
 import {
 
   Card
@@ -25,7 +23,6 @@ import {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

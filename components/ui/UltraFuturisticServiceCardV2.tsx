@@ -1,6 +1,4 @@
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
 ArrowRightStarUsersTrendingUpZapShieldGlobeRocket
 
 interface ServiceCardProps {
@@ -270,4 +268,3 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ serviceindex
 };
 
 export default UltraFuturisticServiceCardV2;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

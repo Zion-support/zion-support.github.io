@@ -1,6 +1,5 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
-<<<<<<< HEAD
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import { 
@@ -12,19 +11,16 @@ import {
   Monitor, Smartphone, Camera, Gamepad2, Palette, 
   Music, Film, BookOpenCheck, Building, MessageCircle, 
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
-=======
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
   Heart, DollarSign, Factory, ShoppingCart, Building2, 
   GraduationCap, Leaf, Shield, ArrowRight, Star, CheckCircle,
   Users, Globe, Cpu, Database, Network, Target
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
 
-<<<<<<< HEAD
 const Solutions: NextPage = () => {
   const industrySolutions = [
     {
@@ -155,7 +151,6 @@ const Solutions: NextPage = () => {
         "Predictive maintenance cost savings"
       ],
       technologies: ["Python", "TensorFlow", "AWS IoT", "React Native"]
-=======
 const SolutionsPage: React.FC = () => {
   const industrySolutions = [
     {
@@ -325,7 +320,6 @@ const SolutionsPage: React.FC = () => {
           icon: <Network className="w-6 h-6" />
         }
       ]
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   ];
 
@@ -338,7 +332,6 @@ const SolutionsPage: React.FC = () => {
         </Head>
 
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
             <motion.div
@@ -366,7 +359,6 @@ const SolutionsPage: React.FC = () => {
                   Schedule Demo
                 </a>
               </div>
-=======
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.h1 
@@ -402,12 +394,10 @@ const SolutionsPage: React.FC = () => {
                   <div className="text-sm text-gray-400">{stat.label}</div>
                 </div>
               ))}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Solution Capabilities */}
         <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
           <div className="max-w-6xl mx-auto">
@@ -506,7 +496,6 @@ const SolutionsPage: React.FC = () => {
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
                         {feature}
-=======
         {/* Solutions Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -552,25 +541,21 @@ const SolutionsPage: React.FC = () => {
                       <li key={featureIndex} className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       </li>
                     ))}
                   </ul>
                   
-<<<<<<< HEAD
                   <a 
                     href="/contact" 
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300"
                   >
                     Get Started
-=======
                   <a
                     href={solution.href}
                     className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1"
                   >
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4" />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   </a>
                 </motion.div>
               ))}
@@ -600,7 +585,6 @@ const SolutionsPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
@@ -631,7 +615,6 @@ const SolutionsPage: React.FC = () => {
                 </a>
               </div>
             </motion.div>
-=======
       {/* Solutions Grid */}
       <section className="py-20 px-4 bg-black">
         <div className="max-w-7xl mx-auto">
@@ -696,7 +679,6 @@ const SolutionsPage: React.FC = () => {
                 </div>
               </motion.div>
             ))}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           </div>
         </section>
       </div>

@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 import { agendaItems } from '../../../../data/expo/agenda';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -102,4 +100,3 @@ if ( {) {
     return res.status (500).json ({ error: e.message || 'Failed to generate highlights' });
 }
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

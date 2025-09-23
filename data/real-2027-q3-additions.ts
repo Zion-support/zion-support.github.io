@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 export const real2027Q3Additions: EnhancedRealMicroSaasService[] = [
 	{
@@ -213,4 +211,3 @@ export const real2027Q3Additions: EnhancedRealMicroSaasService[] = [
 		reviews: 2100
 	}
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

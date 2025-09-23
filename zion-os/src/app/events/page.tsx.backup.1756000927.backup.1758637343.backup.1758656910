@@ -1,20 +1,16 @@
 import Link from "next/link";
 
 export const metadata = {
-<<<<<<< HEAD
   title: "Events - Zion Tech Group",
   description: "Join Zion Tech Group at upcoming conferences, workshops, webinars, and technology events focused on AI, quantum computing, and innovation.",
   keywords: "events, conferences, workshops, webinars, AI events, quantum computing events, Zion Tech Group",
-=======
   title: "Events - Zion Tech Group | Conferences, Webinars & Workshops",
   description: "Join Zion Tech Group at upcoming technology events, conferences, webinars, and workshops. Network with industry leaders and learn about the latest innovations.",
   keywords: "events, conferences, webinars, workshops, technology events, Zion Tech Group, AI conferences, quantum computing events",
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
 };
 
 export default function EventsPage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
@@ -379,7 +375,6 @@ export default function EventsPage() {
           </div>
         </section>
       </div>
-=======
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -806,7 +801,6 @@ export default function EventsPage() {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
     </div>
   );
 }

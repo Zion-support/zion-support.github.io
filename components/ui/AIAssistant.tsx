@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useCallbackuseEffectuseMemouseState } from 'react';
 
@@ -148,4 +146,3 @@ export default function AIAssistant({
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

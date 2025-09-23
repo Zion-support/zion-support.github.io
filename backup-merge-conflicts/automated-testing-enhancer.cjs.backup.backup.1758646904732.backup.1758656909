@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 class AutomatedTestingEnhancer {
@@ -197,7 +196,6 @@ describe('${pageName} Page', () => {
 // Run the enhancer
 const enhancer = new AutomatedTestingEnhancer;(;);
 enhancer.start().catch(console.error);
-=======
 const { execSync } = require('child_process')
   log(message, type = 'info')
     this.log('🧪 Generating component tests...')
@@ -220,4 +218,3 @@ const { execSync } = require('child_process')
         "status"
       this.log(` Tests "failed"`)
         "successRate"
->>>>>>> main

@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import { 
@@ -534,4 +532,3 @@ export default function ComprehensivePricing2025() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

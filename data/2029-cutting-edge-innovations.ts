@@ -1,6 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
 export interface CuttingEdge2029Service {
   id: string;
   name: string;
@@ -300,4 +298,3 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     reviews: 23
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

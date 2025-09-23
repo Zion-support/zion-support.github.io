@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { useStateuseEffect } from 'react';
 import { Skill } from '@/types/resume';
 import { SkillCategory } from './SkillCategory';
@@ -48,4 +46,3 @@ export const SkillsList = ({ skillsonDeleteSkill }: SkillsListProps) => {
     </div>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

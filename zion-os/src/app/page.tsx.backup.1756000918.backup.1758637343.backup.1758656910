@@ -87,7 +87,6 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -133,7 +132,6 @@ export default function HomePage() {
               >
                 Explore Services
               </Button>
-=======
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="animate-fade-in">
@@ -151,7 +149,6 @@ export default function HomePage() {
               <Link href="/services" className="btn-secondary text-lg px-8 py-4">
                 Explore Services
               </Link>
->>>>>>> origin/cursor/website-audit-and-enhancement-ef5f
             </div>
           </div>
         </div>
@@ -223,7 +220,6 @@ export default function HomePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -233,7 +229,6 @@ export default function HomePage() {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Discover our cutting-edge AI platforms that are transforming industries and reshaping the future of technology.
-=======
       {/* Services Overview */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -243,12 +238,10 @@ export default function HomePage() {
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               From AI automation to quantum computing, we provide end-to-end solutions that drive digital transformation
->>>>>>> origin/cursor/website-audit-and-enhancement-ef5f
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
             {features.map((feature, index) => (
               <InteractiveCard
                 key={index}
@@ -260,7 +253,6 @@ export default function HomePage() {
                 className="animate-fade-in"
               />
             ))}
-=======
             {/* AI & Automation */}
             <div className="card group">
               <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-500/30 transition-colors">
@@ -368,12 +360,10 @@ export default function HomePage() {
                 <Link href="/space-exploration" className="block text-indigo-400 hover:text-indigo-300 transition-colors">→ Exploration Tech</Link>
               </div>
             </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-ef5f
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Testimonials Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
         <div className="max-w-7xl mx-auto">
@@ -397,7 +387,6 @@ export default function HomePage() {
                 className="animate-fade-in"
               />
             ))}
-=======
       {/* Featured Solutions */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
         <div className="max-w-7xl mx-auto">
@@ -442,7 +431,6 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-ef5f
           </div>
         </div>
       </section>
@@ -450,7 +438,6 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 text-shadow">
             Ready to Transform Your Business?
           </h2>
@@ -483,7 +470,6 @@ export default function HomePage() {
             >
               View Case Studies
             </Button>
-=======
           <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Transform Your Business?
@@ -500,7 +486,6 @@ export default function HomePage() {
                 View Success Stories
               </Link>
             </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-ef5f
           </div>
         </div>
       </section>

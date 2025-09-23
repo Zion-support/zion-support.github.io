@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useState } from 'react';
 import Head from 'next/head';
@@ -435,7 +433,6 @@ console.log('Rate Limit Info:'{
 
 // Make API request with rate limiting
 const response = await axios.get(\`https://api.zion.tech\${endpoint}\`{
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   headers: {
     'Authorization': \`Bearer \${apiKey}\`,
     'X-RateLimit-Limit': '${rateLimit}',

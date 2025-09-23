@@ -15,8 +15,6 @@ export interface Service {
   link: string;
   tags: string[];
 }
-<<<<<<< HEAD
-=======
 export const emergingTech2027Services: Service[] = [
   {
     id: 'quantum-machine-learning',
@@ -439,4 +437,3 @@ export const emergingTech2027Services: Service[] = [
     tags: ['Climate Modeling', 'Quantum Computing', 'Environmental', 'Weather', 'Research']
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

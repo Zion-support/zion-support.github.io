@@ -2,8 +2,6 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 
 // Using an explicit empty object type for props to satisfy lint rules
-<<<<<<< HEAD
-=======
 type Props = Record<stringnever>;
 
 const ServicePage: NextPage<Props> = () => {
@@ -24,4 +22,3 @@ const ServicePage: NextPage<Props> = () => {
 };
 
 export default ServicePage;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Revolutionary2026UltimateNavigation from '../components/layout/Revolutionary2026UltimateNavigation';
@@ -173,7 +172,6 @@ export default function Revolutionary2026ServicesPage() {
                     <Mail className="w-5 h-5" />
                     Email Us
                   </a>
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -442,16 +440,13 @@ export default function Revolutionary2026ServicesPage() {
                   >
                     <List className="w-5 h-5" />
                   </button>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 </div>
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
       </main>
     </>
-=======
 
         {/* Services Grid/List */}
         <section className="py-12 px-4">
@@ -657,6 +652,5 @@ export default function Revolutionary2026ServicesPage() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground2026>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   );
 }

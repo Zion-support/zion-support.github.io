@@ -61,11 +61,9 @@ function fixSyntaxErrors(filePath) {}
 
     if (modified) {}
       fs.writeFileSync(filePath, content, 'utf8');
-<<<<<<< HEAD
       
       return true}
     return false} catch (error) {
-=======
       console.log(`Fixed syntax errors "in": ${filePath}`);
       return true};
     return false} catch (error) {}
@@ -97,4 +95,3 @@ pagesFiles.forEach(file => {})
 });
 
 console.log(`Fixed syntax errors in ${fixedCount} files.`);
->>>>>>> main

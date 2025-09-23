@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { BookOpen, FileText, Users, TrendingUp, Star, ArrowRight, CheckCircle, Zap } from 'lucide-react';
 
 const UltimateContentShowcase2026 = () => {
@@ -191,8 +190,6 @@ const UltimateContentShowcase2026 = () => {
               Get Expert Consultation
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-=======
->>>>>>> 0898e5119e1743cc34bc24d7b78e613422d39ff1
           </div>
         </div>
       </div>

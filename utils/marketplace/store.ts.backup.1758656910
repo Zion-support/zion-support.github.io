@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from "fs";
 import path from "path";
 import { MarketplaceDb, Offer, Project } from "./types";
@@ -76,13 +75,11 @@ export function getProjectById(id: string): Project | undefined {
   const db = readDb();
   return db.projects.find((p) => p.id === id);
 }
-=======
 
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

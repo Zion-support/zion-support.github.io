@@ -269,7 +269,6 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     ],
     popular: false,
     icon: '⏰',
-<<<<<<< HEAD
     color: 'from-yellow-600 to-orange-600',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-time-manipulation-platform',
@@ -332,8 +331,6 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
       'Research institutions, Government agencies, Military organizations, Space agencies, Academic institutions, Advanced research labs',
     trial_days: 120,
     setup_time: '6 - 12 months',
-=======
->>>>>>> origin/backup-main-final-20250913-063409
     category: 'Quantum & Neuroscience',
     realService: true,
     technology: ['Quantum Computing', 'Temporal Physics', 'Neural Networks', 'Quantum Mechanics', 'AI', 'Advanced Mathematics'],

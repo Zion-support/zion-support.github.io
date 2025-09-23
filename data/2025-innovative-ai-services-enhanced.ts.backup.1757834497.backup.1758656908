@@ -564,7 +564,6 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
     reviews: 89;
 
 
-<<<<<<< HEAD
   // AI-Powered Metaverse Development Studio
   {
     id: 'ai-metaverse-development-studio',
@@ -829,7 +828,6 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
     rating: 4.9,
     reviews: 12
     reviews: 89
-=======
     },
     realImplementation: true,
     implementationDetails: 'AI-powered education platform with personalized learning algorithms and adaptive curriculum generation.',
@@ -837,6 +835,5 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
     customers: 156,
     rating: 4.8,
     reviews: 89
->>>>>>> origin/backup-main-final-20250913-063409
   }
 ];

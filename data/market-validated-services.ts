@@ -1,6 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
 export interface MarketValidatedService {
 	id: string;
 	name: string;
@@ -412,4 +410,3 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		contactInfo
 	},
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

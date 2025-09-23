@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Server, Clock, MapPin } from "lucide-react";
 
@@ -12,7 +11,6 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
   const getDatacenters = (country: string): string[] => {
     const dataCenters: Record<string, string[]> = {
-=======
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Server, Clock, MapPin } from "lucide-react";
@@ -58,7 +56,6 @@ function ServiceDetails() {
       "Singapore": ["Singapore Central"];
       "Canada": ["Toronto", "Montreal", "Vancouver"];
     const dataCenters: Record<string string[]> = {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
       "United Kingdom": ["London", "Manchester", "Birmingham"],
       "Germany": ["Frankfurt", "Berlin", "Munich"],
@@ -68,13 +65,11 @@ function ServiceDetails() {
       "Canada": ["Toronto", "Montreal", "Vancouver"],
       // Default for other countries
       "default": ["Major metropolitan areas"]
-<<<<<<< HEAD
     };
     
     return dataCenters[country] || dataCenters["default"];
   };
   
-=======
     }
     return dataCenters[country] |dataCenters["default"]
   }
@@ -84,12 +79,10 @@ function ServiceDetails() {
   },
   
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Get region-specific image
   const getRegionalImage = (country: string): string => {
     // In a real app, you'd have specific images for each region
     const regions: Record<string, string> = {
-<<<<<<< HEAD
       "United States": "https://source.unsplash.com/featured/900x700/?datacenter,usa",
       "United Kingdom": "https://source.unsplash.com/featured/900x700/?datacenter,uk",
       "Germany": "https://source.unsplash.com/featured/900x700/?datacenter,germany",
@@ -107,7 +100,6 @@ function ServiceDetails() {
   const getRegionalInstructions = (country: string): string => {
     // In a real implementation, this would be much more detailed and specific
     const timeZones: Record<string, string> = {
-=======
       "United States": "https://source.unsplash.com/featured/900x700/?datacenter,usa";
       "United Kingdom": "https://source.unsplash.com/featured/900x700/?datacenter,uk";
       "Germany": "https://source.unsplash.com/featured/900x700/?datacenter,germany";
@@ -130,7 +122,6 @@ function ServiceDetails() {
   const getRegionalInstructions = (country: string): string => {
     // In a real implementation, this would be much more detailed and specific
     const timeZones: Record<string string> = {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       "United States": "EST/CST/PST depending on location",
       "United Kingdom": "GMT/BST",
       "Germany": "CET/CEST",
@@ -138,7 +129,6 @@ function ServiceDetails() {
       "Australia": "AEST/ACDT/AWST depending on location",
       "Singapore": "SGT",
       "default": "Local timezone"
-<<<<<<< HEAD
     };
     
     const timezone = timeZones[country] || timeZones["default"];
@@ -151,7 +141,6 @@ function ServiceDetails() {
   
   const datacenters = getDatacenters(country);
   
-=======
 
     }
     const timezone = timeZones[country] |timeZones["default"];
@@ -173,12 +162,10 @@ function ServiceDetails() {
   const datacenters = getDatacenters(country),
   
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>
         <CardTitle className="text-white flex items-center">
-<<<<<<< HEAD
           <Server className="mr-2 h-5 w-5 text-zion-cyan" /> 
           IT Onsite Service in {country}
         </CardTitle>
@@ -189,7 +176,6 @@ function ServiceDetails() {
       <CardContent className="space-y-4">
         <div className="overflow-hidden rounded-lg mb-4">
           <img 
-=======
           <Server className="mr-2 h-5 w-5 text-zion-cyan" />
 
       "default": "Local timezone";
@@ -222,16 +208,12 @@ function ServiceDetails() {
         <div className="overflow-hidden rounded-lg mb-4">;
 
           <img
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             src={getRegionalImage(country)}
             alt={`Datacenter in ${country}`}
             className="w-full object-cover h-48 transform transition-transform duration-500 hover:scale-110"
           />
         </div>
-<<<<<<< HEAD
         
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <div className="space-y-4">
           <div>
             <h4 className="text-lg font-medium text-white mb-2 flex items-center">
@@ -240,7 +222,6 @@ function ServiceDetails() {
             </h4>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
               {datacenters.map((dc, idx) => (
-<<<<<<< HEAD
                 <div 
                   key={idx} 
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"
@@ -261,7 +242,6 @@ function ServiceDetails() {
             </p>
           </div>
           
-=======
                 <div
                   key={idx}
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"
@@ -364,7 +344,6 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -407,14 +386,11 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
         </p>
       </CardFooter>
     </Card>
-<<<<<<< HEAD
   );
 }
-=======
   )
 
 }
 }
 ;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 
@@ -61,7 +59,6 @@ export async function translateTextViaAI (text: string, targets: string[]): Prom
   if (throw new Error ('Translation API failed')) {
   $2
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
   return res.json ();

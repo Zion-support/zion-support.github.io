@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 export interface InnovativeAIAutomationService {
-=======
 
 export interface InnovativeAIAutomationService {
 export interface InnovativeAIAutomationService {;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   id: string;
   name: string;
   tagline: string;
@@ -36,23 +33,19 @@ export interface InnovativeAIAutomationService {;
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
     website: string;
   };
-=======
 
 
     website: string;
   }
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
   reviews: number;
 }
 
@@ -322,7 +315,6 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     reviews: 28
   }
 ];
-=======
 
   reviews: number;
 export const innovative2025AIAutomationServices: InnovativeAIAutomationService[] =
@@ -945,4 +937,3 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

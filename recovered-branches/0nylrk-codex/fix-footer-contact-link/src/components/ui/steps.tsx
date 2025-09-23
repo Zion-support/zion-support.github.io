@@ -13,8 +13,6 @@ export function Step({
   status,
   label,
   description,
-<<<<<<< HEAD
-=======
   className}: StepProps) {
   return (
     <li
@@ -98,4 +96,3 @@ export function Steps({ currentStepclassNamechildren }: StepsProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

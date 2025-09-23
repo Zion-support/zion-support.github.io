@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import SEO from '../components/SEO';
 
 export default function ImageOptimizerCDNPage() {
@@ -17,7 +16,6 @@ export default function ImageOptimizerCDNPage() {
 				</div>
 			</section>
 		</>
-=======
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Image as ImageIcon, Star } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -70,6 +68,5 @@ export default function ImageOptimizerCdnPage() {
 				</div>
 			</div>
 		</UltraAdvancedFuturisticBackground>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 	);
 }

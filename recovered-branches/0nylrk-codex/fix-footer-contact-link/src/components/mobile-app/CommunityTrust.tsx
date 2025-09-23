@@ -4,8 +4,6 @@ import { Star } from "lucide-react";
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
-<<<<<<< HEAD
-=======
     { value: "4.8"label: "App Store Rating" },
     { value: "50K+"label: "Downloads" },
     { value: "96%"label: "User Satisfaction" },
@@ -53,4 +51,3 @@ export const CommunityTrust: React.FC = () => {
     </section>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

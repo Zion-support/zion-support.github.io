@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
 import { motion } from 'framer-motion';
 import { 
   Search, 
@@ -695,4 +693,3 @@ export default function Training() {
 };
 
 export default Training;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

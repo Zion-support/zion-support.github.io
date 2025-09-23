@@ -1,12 +1,9 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 export: const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [""
 <<<<<<< HEAD:backup-merge-conflicts/innovativeMicroSaasServices2024.jsx.backup
-=======
 "export": const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = ["]"
 =======
 "export\": const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
 =======
 "export": const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = ["]"

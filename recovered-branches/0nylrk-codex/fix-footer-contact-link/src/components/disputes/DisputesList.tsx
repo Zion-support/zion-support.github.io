@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useState } from "react";
 import { DisputeStatus } from "@/types/disputes";
 import { Button } from "@/components/ui/button";
@@ -187,4 +185,3 @@ export function DisputesList({ disputesisLoading }: DisputesListProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 
@@ -952,4 +950,3 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
 
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

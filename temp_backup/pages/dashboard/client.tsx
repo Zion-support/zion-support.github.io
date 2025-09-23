@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useEffect, useMemo, useState } from "react",
 import { supabase } from "../../utils/supabase/client",
 import { AnimatePresence, motion } from "framer-motion",
@@ -386,4 +384,3 @@ export default function ClientDashboardSuggestedTalents() {
     </div>
   ),
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

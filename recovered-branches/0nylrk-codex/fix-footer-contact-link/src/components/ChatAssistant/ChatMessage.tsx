@@ -1,6 +1,4 @@
 import { cn } from "@/lib/utils";
-<<<<<<< HEAD
-=======
 import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
 
 interface ChatMessageProps {
@@ -51,4 +49,3 @@ export function ChatMessage({ rolemessagetimestamp }: ChatMessageProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

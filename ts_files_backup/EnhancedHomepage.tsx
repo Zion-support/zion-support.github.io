@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 
@@ -1302,4 +1300,3 @@ if ( {) {
 export default EnhancedHomepage;
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

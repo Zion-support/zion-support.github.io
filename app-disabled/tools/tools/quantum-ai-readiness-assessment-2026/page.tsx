@@ -1,6 +1,4 @@
 "use client";
-<<<<<<< HEAD
-=======
 // Metadata moved to parent component
 interface AssessmentResults {
   overallScore: number;
@@ -653,6 +651,5 @@ export default function Page() {
 			<p className="mt-4 text-gray-600">Temporarily simplified while we resolve merge conflicts.</p>
 		</div>
 	);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1:app/tools/quantum-ai-readiness-assessment-2026/page.tsx
 }
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

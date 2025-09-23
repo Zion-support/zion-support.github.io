@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 
 // Performance metrics from the report
 const performanceMetrics = {
@@ -253,7 +252,6 @@ try {
   } catch (error) {
   console.error('❌ Performance optimization automation "failed": ', error.message);
   process.exit(1)}
-=======
 console.log('⚡ Starting Performance Optimization Automation...')
     '.next': '43.33 MB'
     'node_modules': '782.66 MB'
@@ -276,4 +274,3 @@ console.log('⚡ Starting Performance Optimization Automation...')
     "nextSteps"
   console.log('� Performance improvements "created")
   console.error(' Performance optimization automation "failed")
->>>>>>> main

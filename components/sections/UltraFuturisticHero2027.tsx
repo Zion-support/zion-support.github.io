@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import React from 'react',
 import React from 'react';
@@ -1137,4 +1135,3 @@ function UltraFuturisticHero2027() {
 
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

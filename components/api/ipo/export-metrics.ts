@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 
 import { requireSuperadminApi } from '../../../utils/api/auth';
 
@@ -27,4 +25,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

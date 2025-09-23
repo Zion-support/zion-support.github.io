@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import React, { useState } from 'react';
 import {
@@ -158,7 +156,6 @@ function MessageTalentModal() {
         image_url: talent.profile_picture_url |""
       }
       setIsSubmitting(true),
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       
       // Create context data for the conversation
       const contextData = {

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export interface EnterpriseITBreakthroughService2029 {
   id: string;
   name: string;
@@ -278,4 +276,3 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     ]
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

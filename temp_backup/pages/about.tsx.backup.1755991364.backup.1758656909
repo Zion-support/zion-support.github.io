@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 export default function AboutPage() { return null; }
-=======
 export default function About() {
   return <div>About page</div>;
 }
@@ -25,5 +23,4 @@ const Page: React.FC = () => {
 export default Page;
 =======
 export default function About() { return null; }
->>>>>>> origin/cursor/build-partner-integration-portal-and-api-da2c
 >>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Cookie, Settings, Eye, Lock, Database } from 'lucide-react';
@@ -233,4 +231,3 @@ const CookiePolicy = () => {
 };
 
 export default CookiePolicy;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

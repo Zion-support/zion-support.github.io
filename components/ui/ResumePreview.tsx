@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React{ forwardRef } from 'react';
 
 export type ResumeData = {
@@ -218,4 +216,3 @@ export const ResumePreview = forwardRef<HTMLDivElementResumePreviewProps>(
 ResumePreview.displayName = 'ResumePreview';
 
 export default ResumePreview;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

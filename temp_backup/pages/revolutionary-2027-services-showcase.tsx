@@ -3,8 +3,6 @@ import Head from 'next/head';
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, CheckCircle, ArrowRight, Rocket, Mail, Phone, MapPin, MessageSquare, Globe } from 'lucide-react';
-<<<<<<< HEAD
-=======
 import { Button } from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
@@ -451,4 +449,3 @@ export default function Revolutionary2027ServicesShowcase() {
     </UltraQuantumHolographicBackground>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

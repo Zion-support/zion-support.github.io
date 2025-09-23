@@ -116,7 +116,6 @@ const UltimateContent2025ShowcaseBanner = () => {
           <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-full px-8 py-3 mb-6 font-bold text-lg">
             ⭐ ULTIMATE CONTENT 2025 SHOWCASE
           </div>
-<<<<<<< HEAD
           <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
             Revolutionary AI Content Collection
           </h2>
@@ -185,7 +184,6 @@ const UltimateContent2025ShowcaseBanner = () => {
                   className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-indigo-900 transition-all"
                 >
                   Get Consultation
-=======
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             {/* Content Preview */}
@@ -238,12 +236,10 @@ const UltimateContent2025ShowcaseBanner = () => {
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors"
                 >
                   View All Resources
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
                 </Link>
               </div>
             </div>
 
-<<<<<<< HEAD
             {/* Content Carousel */}
             <div className="space-y-4">
               <h4 className="text-2xl font-bold text-center mb-6 text-white">Explore All Content</h4>
@@ -349,7 +345,6 @@ const UltimateContent2025ShowcaseBanner = () => {
             </Link>
           </div>
         </div>
-=======
             {/* Content Showcase */}
             <div className="space-y-4">
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
@@ -403,7 +398,6 @@ const UltimateContent2025ShowcaseBanner = () => {
             </div>
           </div>
         </div>
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
       </div>
     </div>
   );

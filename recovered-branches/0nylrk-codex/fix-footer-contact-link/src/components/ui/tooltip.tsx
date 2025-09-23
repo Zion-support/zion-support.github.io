@@ -12,8 +12,6 @@ const TooltipTrigger = TooltipPrimitive.Trigger
 const TooltipContent = React.forwardRef<
   React.ElementRef<typeof TooltipPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>
-<<<<<<< HEAD
-=======
 >(({ classNamesideOffset = 4...props }ref) => (
   <TooltipPrimitive.Content
     ref={ref}
@@ -28,4 +26,3 @@ const TooltipContent = React.forwardRef<
 TooltipContent.displayName = TooltipPrimitive.Content.displayName
 
 export { TooltipTriggerTooltipContentTooltipProvider }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

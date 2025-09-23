@@ -1,6 +1,5 @@
 #!/bin/bash
 
-<<<<<<< HEAD
 # Script to merge remaining open PRs from cursor/* and feature branches
 # This script processes the remaining branches systematically
 
@@ -115,7 +114,6 @@ done
 echo "🎉 All remaining PRs processed successfully!"
 echo "📝 Summary of changes:"
 git log --oneline -10
-=======
 # Merge Remaining PRs Script
 # This script will merge the remaining PRs in smaller batches
 
@@ -215,4 +213,3 @@ echo "🔄 Pushing changes to main..."
 git push origin main
 
 echo "✅ First batch of PRs have been processed and merged into main!"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // global styles are optional; keeping layout minimal
 
 export const metadata = {
@@ -59,4 +57,3 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   )
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

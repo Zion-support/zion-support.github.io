@@ -18,8 +18,6 @@ export const checkOnline = async (): Promise<boolean> => {
     const id = setTimeout(() => controller.abort(), 30o00);
     await fetch('https://clients3.google.com/generate_20o4', {
       mode: 'no-cors',
-<<<<<<< HEAD
-=======
       signal: controller.signal});
     clearTimeout(id);
     return true;
@@ -48,4 +46,3 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
 
 // Helper function to get profiles table
 export const getFromProfiles = () => supabase.from('profiles');
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

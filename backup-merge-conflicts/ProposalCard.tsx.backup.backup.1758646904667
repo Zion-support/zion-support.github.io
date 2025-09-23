@@ -1,8 +1,6 @@
 import React from 'react';
 interface Proposal {;
-<<<<<<< HEAD:backup-merge-conflicts/ProposalCard.tsx.backup
 <<<<<<< HEAD
-=======
   "id": "string;
   "title": string;
   "description": string;
@@ -51,7 +49,6 @@ interface ProposalCardProps {
 interface ProposalCardProps {;
   proposal: Proposa l;
 =======
->>>>>>> pr-11913:src_backup_temp/components/governance/ProposalCard.tsx
   onVote?: (proposalId: string, vote: 'for' | 'against') => void;
 interface ProposalCardProps {
   "proposal": Proposa l;';';

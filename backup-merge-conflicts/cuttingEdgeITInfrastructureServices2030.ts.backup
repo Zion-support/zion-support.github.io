@@ -1,6 +1,5 @@
 import { ProductListing } from "@/types/listings"; ;;,"});"})"""@/types/listings";&apos,"
 =======
-<<<<<<< HEAD:src.disabled/src/data/specializedHealthcareBiotechServices2025.ts
 import { ProductListing } from "@/types/listings"; ;;,"});"})"""@/types/listings";&apos,"
 ";";"
 const { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"""""";";"""
@@ -9,7 +8,6 @@ import { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listi
 ";";"
 <<<<<<< HEAD
 ";";"
-=======
 const { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"""""";";"""
 =======
 import { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"",
@@ -24,4 +22,3 @@ import { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listi
 ";";"
 =======
 =======
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

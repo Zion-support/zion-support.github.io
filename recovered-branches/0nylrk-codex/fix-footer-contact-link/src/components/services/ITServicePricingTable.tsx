@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import { useState, useMemo } from "react";
 import {
@@ -367,7 +365,6 @@ export function ITServicePricingTable() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,7 +1,5 @@
 import Head from 'next/head';
 import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check } from 'lucide-react';
-<<<<<<< HEAD
-=======
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import ServiceAds from '../components/sections/ServiceAds';
 import { Button } from '../components/ui/Button';
@@ -81,4 +79,3 @@ export default function ApiMockContractTestingPage() {
   );
 }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

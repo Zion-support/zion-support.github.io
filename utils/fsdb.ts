@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 
@@ -53,7 +51,6 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   } catch (error) {

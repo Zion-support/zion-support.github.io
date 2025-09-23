@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -281,7 +279,6 @@ export const PostForm = ({
             />;
 
             <Button type="submit" disabled={isSubmitting}>;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               {isSubmitting ? "Submitting..." : isEditing ? "Update Post" : "Create Post"}
             </Button>
           </form>

@@ -1,12 +1,9 @@
 =======
 =======
 =======
-<<<<<<< HEAD
 <<<<<<< HEAD:src.disabled/src/data/nextGenAIServices2025.ts
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/src/data/nextGenAIServices2025.ts
 >>>>>>> pr-11935
 export interface NextGenAIService {
   "id": string;

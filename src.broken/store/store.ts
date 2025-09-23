@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { configureStore  } from '@reduxjs/toolkit';
 import cartReducer from './cartSlice';
 import wishlistReducer from './wishlistSlice';
@@ -15,4 +13,3 @@ export const store = configureStore({
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

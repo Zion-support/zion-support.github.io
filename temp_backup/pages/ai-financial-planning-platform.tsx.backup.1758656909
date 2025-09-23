@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AiFinancialPlanningPlatform() {
@@ -25,7 +24,6 @@ export default function AiFinancialPlanningPlatform() {
 			canonical="https://ziontechgroup.com/ai-financial-planning-platform"
 		/>
 	);
-=======
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
@@ -308,5 +306,4 @@ export default function AIFinancialPlanningPlatform() {
       </div>
     </>
   );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

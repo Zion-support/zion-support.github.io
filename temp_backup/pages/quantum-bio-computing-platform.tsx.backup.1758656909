@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
 export default function QuantumBioComputingPlatformPage() {
@@ -22,7 +21,6 @@ export default function QuantumBioComputingPlatformPage() {
 				</ul>
 			</div>
 		</UltraFuturisticBackground>
-=======
 
 export default function QuantumBioComputingPlatformPage() {
 	return (
@@ -37,6 +35,5 @@ export default function QuantumBioComputingPlatformPage() {
 				<p className="text-gray-300 max-w-3xl">Exploration services and advisory for quantum-biological hybrid computing.</p>
 			</div>
 		</>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 	);
 }

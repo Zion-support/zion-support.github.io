@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import {useState} from "react";
 import {Link, Navigate} from "react-router-dom";
@@ -20,7 +18,6 @@ import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 import {useAuth} from "@/hooks/useAuth";

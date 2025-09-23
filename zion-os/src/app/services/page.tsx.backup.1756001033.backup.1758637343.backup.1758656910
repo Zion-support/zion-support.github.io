@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from "next/link";
 
 export const metadata = {
@@ -281,7 +280,6 @@ export default function ServicesPage() {
             </div>
           </div>
         </section>
-=======
 "use client";
 
 import { useState } from "react";
@@ -905,7 +903,6 @@ export default function ServicesPage() {
             Call Now
           </a>
         </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0b6b
       </div>
     </div>
   );

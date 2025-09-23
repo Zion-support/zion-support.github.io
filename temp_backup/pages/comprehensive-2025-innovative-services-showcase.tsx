@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
@@ -337,4 +335,3 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
 };
 
 export default Comprehensive2025InnovativeServicesShowcase;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

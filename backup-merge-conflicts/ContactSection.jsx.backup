@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 const React from "react"; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRight,Globe,Shield,Users export function ContactSection () { import { Link } from "react-router-dom"; return null} ,; {}; export {};''"
 <<<<<<< HEAD:backup-merge-conflicts/ContactSection.jsx.backup
-=======
 import _React from 'react'; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRight,Globe,Shield,Users export function ContactSection () { import { Link } from 'react-router-dom'; return null} ,; {}; export {};
 =======
 <<<<<<< HEAD
@@ -12,7 +10,6 @@ import _React from 'react'; import { Mail,Phone,MapPin,Clock,MessageSquare,Arrow
 import _React from 'react'; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRight,Globe,Shield,Users export function ContactSection () { import { Link } from 'react-router-dom'; return null} ,; {}; export {};
 =======
 <<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
 =======
 =======

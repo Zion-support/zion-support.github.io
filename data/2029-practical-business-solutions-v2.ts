@@ -1,6 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
 export interface PracticalBusinessSolution2029 {
   id: string;
   name: string;
@@ -471,4 +469,3 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
     return price >= minPrice && price <= maxPrice;
   });
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

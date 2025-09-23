@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { ShoppingCart, Brain, BarChart3, CheckCircle, ArrowRight, Package, Users, CreditCard, Smartphone, Globe, Database } from 'lucide-react';
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -33,12 +31,10 @@ import {
   DollarSign
 } from 'lucide-react';
 import Layout from '../components/Layout';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 const solutions = [
   {
     title: 'E-commerce Platform',
-<<<<<<< HEAD
     description: 'Advanced e-commerce platform with AI-powered features for personalized shopping',
     icon: ShoppingCart,
     features: ['Product Catalog', 'Shopping Cart', 'Payment Processing', 'Order Management']
@@ -60,7 +56,6 @@ const solutions = [
     description: 'Native mobile app for seamless shopping experience across devices',
     icon: Smartphone,
     features: ['Mobile Shopping', 'Push Notifications', 'Offline Support', 'Social Integration']
-=======
     description: 'Modern e-commerce solutions with AI-powered recommendations and seamless checkout.',
     icon: ShoppingCart,
     features: ['AI Recommendations', 'Mobile Optimization', 'Payment Integration', 'Inventory Management'],
@@ -86,7 +81,6 @@ const solutions = [
     icon: Globe,
     features: ['Unified Customer Data', 'Cross-channel Analytics', 'Consistent Experience', 'Real-time Sync'],
     benefits: ['50% customer satisfaction', '35% cross-channel sales', '25% operational efficiency', 'Better loyalty']
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 ];
 
@@ -94,7 +88,6 @@ const benefits = [
   {
     icon: TrendingUp,
     title: 'Increased Sales',
-<<<<<<< HEAD
     description: 'AI-powered personalization and optimization drive higher conversion rates',
     icon: ShoppingCart
   },
@@ -122,7 +115,6 @@ export default function RetailPage() {
         {/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto">
-=======
     description: 'Boost sales with AI-powered recommendations and personalized experiences.',
     metric: '40%'
   },
@@ -161,7 +153,6 @@ export default function Retail() {
             <div className="absolute top-40 right-10 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
           </div>
           <div className="container mx-auto px-4 relative z-10">
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -169,13 +160,11 @@ export default function Retail() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-<<<<<<< HEAD
                 Retail <span className="text-blue-600">Solutions</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                 Transform retail operations with e-commerce platforms, inventory management systems, 
                 and AI-powered customer analytics.
-=======
                 Retail{' '}
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Technology
@@ -323,7 +312,6 @@ export default function Retail() {
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
                 Join leading retailers in revolutionizing their operations with cutting-edge technology.
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
@@ -333,7 +321,6 @@ export default function Retail() {
                   Get Started
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
-<<<<<<< HEAD
                 <Link
                   href="/ai-services"
                   className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
@@ -450,10 +437,8 @@ export default function Retail() {
                   className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
                 >
                   View IT Services
-=======
                 <Link href="/industries" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
                   View All Industries
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 </Link>
               </div>
             </motion.div>

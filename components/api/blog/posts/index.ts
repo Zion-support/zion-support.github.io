@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 
 
 
@@ -12,7 +10,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   if (req.method === 'GET') {
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     const { status, topic, tag, author, limit, offset } = req.query;

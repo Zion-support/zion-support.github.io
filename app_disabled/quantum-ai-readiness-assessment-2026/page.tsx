@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 
 =======
 =======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf
 interface AssessmentResults {
   overallScore: number;
   readinessLevel: string;

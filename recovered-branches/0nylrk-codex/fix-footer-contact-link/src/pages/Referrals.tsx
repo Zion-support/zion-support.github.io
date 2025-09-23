@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import { useEffect  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
@@ -333,7 +331,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 }

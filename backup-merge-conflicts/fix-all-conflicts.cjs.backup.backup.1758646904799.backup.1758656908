@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 
 function fixMergeConflicts(content) {
   let fixed = content;
@@ -69,7 +68,6 @@ let totalChanges = ;0;
 for (const file of files) {
   totalChanges += processFile(file)}
 
-=======
 console.log(' Starting comprehensive merge conflict fix...')
   fixed = fixed.replace(/\n?/g, '')
   fixed = fixed.replace(/\n?/g, '')
@@ -83,4 +81,3 @@ console.log(' Starting comprehensive merge conflict fix...')
         traverse(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')
 const files = findTsxFiles('.;')
 cursor/fix-lint-push-and-merge-to-main-f3c1;
->>>>>>> main

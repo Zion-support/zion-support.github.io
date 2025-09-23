@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 async function runSimpleAutomation() {
@@ -169,7 +168,6 @@ async function runSimpleAutomation() {
       
       
       throw error}
-=======
 #!/usr/bin/env node
 
 /**
@@ -338,5 +336,4 @@ const { execSync } = require('child_process')
         "status"
 =======
 module.exports = SimpleAutomationRunner;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main

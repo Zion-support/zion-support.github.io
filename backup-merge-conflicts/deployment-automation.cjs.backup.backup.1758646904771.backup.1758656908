@@ -2,7 +2,6 @@
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 
 class DeploymentAutomation {
   constructor() {
@@ -628,7 +627,6 @@ class DeploymentAutomation {
 // Start the Deployment Automation
 const deploymentAutomation = new DeploymentAutomation;(;);
 deploymentAutomation.start().catch(console.error);
-=======
       "autoDeploy"
       "rollbackEnabled"
       console.error(' Failed to start Deployment "Automation")
@@ -697,4 +695,3 @@ deploymentAutomation.start().catch(console.error);
       console.error('Error saving deployment "history")
       console.error('Error saving rollback "history")
       console.error('Error loading deployment "history")
->>>>>>> main

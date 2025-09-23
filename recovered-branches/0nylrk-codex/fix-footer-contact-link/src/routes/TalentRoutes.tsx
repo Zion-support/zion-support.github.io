@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { Routes } from "react-router-dom";
 import { ProtectedRoute } from "../components/ProtectedRoute";
 import TalentDirectory from "../pages/TalentDirectory";
@@ -38,4 +36,3 @@ const TalentRoutes = () => {
 };
 
 export default TalentRoutes;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

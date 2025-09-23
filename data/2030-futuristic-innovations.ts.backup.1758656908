@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface FuturisticInnovation2030 {
@@ -456,7 +455,6 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     reviews: 89
   }
 ];
-=======
 
 
 
@@ -915,7 +913,6 @@ export interface FuturisticInnovation2030 {;
   reviews: number;
 
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export const futuristicInnovations2030: FuturisticInnovation2030[] = [;
   // AI Consciousness & Emotional Intelligence;
 

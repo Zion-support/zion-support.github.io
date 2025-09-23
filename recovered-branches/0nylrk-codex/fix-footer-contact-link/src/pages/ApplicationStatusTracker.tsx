@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
@@ -183,7 +181,6 @@ function ApplicationStatusTracker() {
     </ProtectedRoute>);
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

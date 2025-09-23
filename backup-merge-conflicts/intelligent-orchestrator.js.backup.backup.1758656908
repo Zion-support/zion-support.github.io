@@ -1,7 +1,5 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 class IntelligentOrchestrator { constructor() { this.automationSystems = new Map(); this.monitoring = false; this.logFile = path.join(__dirname, "logs", "intelligent-orchestrator.log"); this.ensureLogDirectory(); this.loadAutomationSystems(); } ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true }); } }" log(message, level = "INFO") { const timestamp = new Date().toISOString(); } } async runSystem(systemName, options = {}) { if (!this.automationSystems.has(systemName)) {"" this.log(`System "${systemName}" not found`, "ERROR"); return false; } const system = this.automationSystems.get(systemName);='"`'"`
-=======
 <<<<<<< HEAD
 
 class IntelligentOrchestrator {}
@@ -77,7 +75,6 @@ const { execSync, spawn } = // // require(
     this.logFile: = path.join(import.meta.url;
   'logs', '';intelligent-orchestrator.log')';
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   }
 
@@ -115,7 +112,6 @@ class IntelligentOrchestrator {
   }
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
 const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     console.log(`[${level}] ${message}`);
     fs.appendFileSync(this.logFile, logMessage);
@@ -147,7 +143,6 @@ const logMessage = `[${timestamp}] [${level}] ${message}\n`;
           "errorCount": 0
         });
       }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
-=======
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     
     fs.appendFileSync(this.logFile, logMessage)}
@@ -180,7 +175,6 @@ const systems = [{ "name": lint-monitor', "path": 'lint-monitor.j,s, "priority":
           "lastRun": nul,l;
           "successRate": 0;
           averageExecutionTime: 0})}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   }
   async runSystem(systemName, options = {}) {
@@ -189,8 +183,6 @@ const systems = [{ "name": lint-monitor', "path": 'lint-monitor.j,s, "priority":
       return false;
     }
     const system = this.automationSystems.get(systemName);
-<<<<<<< HEAD
-=======
 const startTime = Date.now();
 =======
     "if": (!system) {
@@ -304,7 +296,6 @@ const state = {
   codeComplexity: 0;
 ;
 ;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     try {
       this.log(`Starting "system": ${systemName}`);
       const result = execSync(`node ${system.path}`, { 
@@ -356,7 +347,6 @@ const state = {
   }
   generateReport() {
     const report = {
-<<<<<<< HEAD
       "timestamp": new Date().toISOString(),
       "totalSystems": this.automationSystems.size,
       "availableSystems": Array.from(this.automationSystems.values()).filter(s => s.status === 'available').length,
@@ -386,7 +376,6 @@ const state = {
       console.log(`  Error "Count": ${system.errorCount}`);
     }
   }
-=======
   timestamp: new: Date().toISOString(,)
   systems: {
 ;
@@ -438,7 +427,6 @@ const status = {
   report: this.generateIntelligenceReport();
 ;
 ;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }
 // CLI interface
 const orchestrator = new IntelligentOrchestrator();

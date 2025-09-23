@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
-=======
 "use client";
 
 import React, { useState } from 'react',
@@ -9,19 +7,16 @@ import Head from 'next/head',
 import React, { useState } from 'react';
 import Head from 'next/head';
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-<<<<<<< HEAD
   Target, Crown, Star, TrendingUp, ArrowRight,
   CheckCircle, DollarSign, Users, Clock, Award, Zap as ZapIcon,
   Search, Phone, Mail, MapPin, Heart, Leaf, Car, GraduationCap, Scale,
   Building, Factory, Camera, Video, Music, Gamepad2, Eye,
   Globe2, Satellite, Dna, Battery, Gamepad, Cpu as CpuIcon
 } from 'lucide-react';
-=======
 import {
 
   Rocket
@@ -124,7 +119,6 @@ import {
   Building, Factory, Camera, Video, Music, Gamepad2, Eye;
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 import { cuttingEdge2028MicroSaas } from '../data/2028-cutting-edge-micro-saas';
@@ -133,15 +127,11 @@ import { advancedAIAutonomousServices2028 } from '../data/2028-advanced-ai-auton
 import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovations';
 
 export default function UltimateServicesShowcase2029() {
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
 
-<<<<<<< HEAD
   const allServices = [
     ...cuttingEdge2028MicroSaas,
     ...practicalBusinessSolutions2028,
@@ -199,7 +189,6 @@ export default function UltimateServicesShowcase2029() {
         staggerChildren: 0.1
       }
     }
-=======
 
 
     visible: {
@@ -366,12 +355,10 @@ export default function UltimateServicesShowcase2029() {
       }
     }
     }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-<<<<<<< HEAD
     visible: {
       opacity: 1,
       y: 0,
@@ -458,7 +445,6 @@ export default function UltimateServicesShowcase2029() {
               <Link
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl hover:shadow-cyan-500/25 text-lg"
-=======
         stagger_children: 0.1,
       },
     },  }        stagger_children: 0.1;
@@ -598,7 +584,6 @@ export default function UltimateServicesShowcase2029() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -617,9 +602,7 @@ export default function UltimateServicesShowcase2029() {
               </Link>
             </div>
 
-<<<<<<< HEAD
             {/* Stats */}
-=======
 
 
 
@@ -628,7 +611,6 @@ export default function UltimateServicesShowcase2029() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -647,10 +629,7 @@ export default function UltimateServicesShowcase2029() {
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{allServices.length}+</div>
                 <div className="text-gray-400">Revolutionary Services</div>
               </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2">$500M+</div>
                 <div className="text-gray-400">Market Valuation</div>
@@ -668,9 +647,7 @@ export default function UltimateServicesShowcase2029() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Filters Section */}
-=======
 
 
 className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500/10 transition-all duration-200 text-lg">;
@@ -720,7 +697,6 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
       {/* Filters Section */}
 
@@ -743,17 +719,12 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
             {/* Search */}
             <div className="relative w-full lg:w-96">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <input
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm}
-<<<<<<< HEAD
-=======
 
 
 
@@ -761,7 +732,6 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
                 value={searchTerm}
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
               />
@@ -770,9 +740,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
             {/* Category Filter */}
             <div className="flex flex-wrap items-center space-x-2">
               {categories.map((category) => (
-<<<<<<< HEAD
                 <button
-=======
 
             {/* Category Filter */}
             <div className='flex flex-wrap items-center space-x-2'>;
@@ -795,7 +763,6 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
@@ -803,7 +770,6 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                       ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'
                   }`}
-<<<<<<< HEAD
                 >
                   <div className="flex items-center space-x-2">
                     <category.icon className="h-4 w-4" />
@@ -838,7 +804,6 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
       <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-=======
 
 
               ))}
@@ -851,7 +816,6 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -890,7 +854,6 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
             initial="hidden"
             animate="visible"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
-<<<<<<< HEAD
           >
             {filteredServices.map((service, index) => (
               <motion.div
@@ -922,7 +885,6 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
                   {/* Categories */}
                   <div className="mb-4">
-=======
 
 
                   {/* Categories */}
@@ -931,37 +893,31 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     <div className="flex flex-wrap gap-2">
                       {service.category.slice(0, 3).map((cat) => (
                         <span
                           key={cat}
                           className="px-2 py-1 bg-gray-700/50 text-cyan-400 text-xs rounded-lg border border-cyan-500/20"
-<<<<<<< HEAD
                         >
                           {cat}
                         </span>
                       ))}
                       {service.category.length > 3 && (
                         <span className="px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg">
-=======
                           {cat}
 
                         </span>
                       ))}
                       {service.category.length > 3 && (
                         <span className='px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg'>                          +{service.category.length - 3}                        <span className="px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg">
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                           +{service.category.length - 3}
                         </span>
                       )}
                     </div>
                   </div>
-<<<<<<< HEAD
 
                   {/* Features Preview */}
                   <div className="mb-6">
-=======
                           className='px-2 py-1 bg-gray-700/50 text-cyan-400 text-xs rounded-lg border border-cyan-500/20'                        >
 
 
@@ -993,13 +949,11 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                       ))}
                       {service.features.length > 3 && (
                         <li className='text-xs text-gray-500'>                          +{service.features.length - 3} more features                  <div className="mb-6">
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                     <ul className="space-y-1">
                       {service.features.slice(0, 3).map((feature, idx) => (
                         <li key={idx} className="flex items-center space-x-2 text-sm text-gray-300">
                           <CheckCircle className="h-3 w-3 text-cyan-400 flex-shrink-0" />
-<<<<<<< HEAD
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -1007,7 +961,6 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                         <li className="text-xs text-gray-500">
                           +{service.features.length - 3} more features
                         </li>
-=======
                         </li>
                       ))}
                       {service.features.length > 3 && (
@@ -1015,7 +968,6 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                           +{service.features.length - 3} more features
                         </li>
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
@@ -1024,12 +976,10 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                     </ul>
                   </div>
 
-<<<<<<< HEAD
                   {/* Market Info */}
                   <div className="mb-6 space-y-2">
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-gray-400">Market Size:</span>
-=======
 
 
 
@@ -1041,7 +991,6 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1074,7 +1023,6 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-gray-400">ROI:</span>
                       <span className="text-cyan-400 font-medium">{service.roi}</span>
-<<<<<<< HEAD
                     </div>
                   </div>
 
@@ -1082,7 +1030,6 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                   <div className="mt-auto">
                     <Link
                       href={`/services/${service.id}`}
-=======
 
                     </div>
 
@@ -1119,7 +1066,6 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                   {/* Hover Effect */}
                   <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                </div>                    <Link
                       href={`/services/${service.id}`}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       className="w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 text-center block group-hover:scale-105 transform transition-transform duration-200"
                     >
                       Learn More
@@ -1127,9 +1073,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                     </Link>
                   </div>
 
-<<<<<<< HEAD
                   {/* Hover Effect */}
-=======
                     </Link>
                   </div>
                       href={`/services/${service && service.id}`}
@@ -1161,7 +1105,6 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -1225,7 +1168,6 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
             ))}
           </motion.div>
 
-<<<<<<< HEAD
           {/* No Results */}
           {filteredServices.length === 0 && (
             <div className="text-center py-20">
@@ -1239,11 +1181,9 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                   setSelectedCategory('all');
                   setSearchTerm('');
                   setSelectedPriceRange('all');
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1265,17 +1205,13 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                 Reset Filters
               </button>
             </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           )}
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -1293,7 +1229,6 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
               Contact us today to discuss how we can help you achieve your goals.
             </p>
             
-=======
 
 
 
@@ -1306,7 +1241,6 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -1367,13 +1301,11 @@ Join the future of technology with our revolutionary services.
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 
       <UltraFuturisticFooter2029 />
     </>
   );
 }
-=======
       <UltraFuturisticFooter2029 />
     </>
 
@@ -1600,7 +1532,6 @@ Join the future of technology with our revolutionary services.
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 

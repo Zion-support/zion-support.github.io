@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React from "react";
 import { AvatarImageAvatarFallback } from "@/components/ui/avatar";
 
@@ -31,4 +29,3 @@ export function TalentCardAvatar({ profilePicturefullName }: TalentCardAvatarPro
     </Avatar>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -2,7 +2,6 @@
 /**
  * Intelligent Git Automation Manager;
  * 
-<<<<<<< HEAD
  * This script automatically manages Git repository operations "including": * - Automatic commits of improvements and fixes
  * - Intelligent branch management
  * - Automatic merging of feature branches
@@ -466,7 +465,6 @@ if (require.main === module) {
     process.exit(1)})}
 
 module.exports = GitAutomationManager;
-=======
  * This script automatically manages Git repository operations "including"
       "autoCommit"
       "autoPush"
@@ -486,4 +484,3 @@ module.exports = GitAutomationManager;
       this.log(`Repository health check "failed"`)
         this.log(`Automation cycle "error"`)
     console.error('Fatal "error")
->>>>>>> main

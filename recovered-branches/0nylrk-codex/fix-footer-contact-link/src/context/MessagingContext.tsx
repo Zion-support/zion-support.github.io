@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ createContextuseContextuseEffectReactNode } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { MessagingContextType } from '@/types/messaging';
@@ -104,4 +102,3 @@ export function MessagingProvider({ children }: { children: ReactNode }) {
     </MessagingContext.Provider>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

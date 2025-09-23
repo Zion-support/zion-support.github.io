@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 import fs from 'fs';
 import path from 'path';
 
@@ -209,4 +207,3 @@ writeGrant(existing);
   writeGrant(existing);
   res.status(200).json({ record: existing });
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

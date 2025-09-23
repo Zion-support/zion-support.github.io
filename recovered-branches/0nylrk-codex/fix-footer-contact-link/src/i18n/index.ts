@@ -36,8 +36,6 @@ i18n
       order: ['localStorage', 'navigator'],
       lookupLocalStorage: 'zion_language',
       caches: ['localStorage']
-<<<<<<< HEAD
-=======
     }});
 
 // For RTL language support
@@ -55,4 +53,3 @@ i18n.on('languageChanged', (lng) => {
 });
 
 export default i18n;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

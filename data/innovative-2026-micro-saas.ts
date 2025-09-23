@@ -14,8 +14,6 @@ export interface Innovative20o26MicroSaas {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const innovative2026MicroSaasServices: Innovative2026MicroSaas[] = [
   {
     id: "2026-micro-saas",
@@ -40,4 +38,3 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaas[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

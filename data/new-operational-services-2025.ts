@@ -14,8 +14,6 @@ export interface NewOperationalService20o25 {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const newOperationalServices2025: NewOperationalService2025[] = [
   {
     id: "smart-operations-center",
@@ -40,4 +38,3 @@ export const newOperationalServices2025: NewOperationalService2025[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

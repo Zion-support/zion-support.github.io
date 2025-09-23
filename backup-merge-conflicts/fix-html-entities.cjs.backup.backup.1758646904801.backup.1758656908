@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 
 function fixHtmlEntities(content) {
   // Fix common HTML entities in JavaScript/TypeScript files
@@ -72,8 +71,6 @@ for (const file of files) {
 }
 
 }
-=======
 console.log(' Starting HTML entity fixing...')
     .replace(/&apos;/g, ")
     .replace(/&quot;/g, '')
->>>>>>> main

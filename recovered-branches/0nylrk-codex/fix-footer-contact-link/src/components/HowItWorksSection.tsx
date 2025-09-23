@@ -1,7 +1,5 @@
 
 import { GradientHeading } from "./GradientHeading";
-<<<<<<< HEAD
-=======
 import { CheckHandshakeSearchSend } from "lucide-react";
 
 const steps = [
@@ -74,4 +72,3 @@ export function HowItWorksSection() {
     </section>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

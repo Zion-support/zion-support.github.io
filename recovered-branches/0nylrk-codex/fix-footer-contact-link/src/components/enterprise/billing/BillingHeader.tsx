@@ -1,7 +1,5 @@
 
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-=======
 import { DownloadFileTextMailBarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -33,4 +31,3 @@ export function BillingHeader() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

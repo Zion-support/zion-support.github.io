@@ -7,8 +7,6 @@ interface TalentCardSkillsProps {
 
 export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
   // Get top skills (limit to 4)
-<<<<<<< HEAD
-=======
   const topSkills = skills.slice(04) || [];
 
   return (
@@ -29,4 +27,3 @@ export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

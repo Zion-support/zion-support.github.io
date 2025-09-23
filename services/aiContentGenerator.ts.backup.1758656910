@@ -1,16 +1,12 @@
-<<<<<<< HEAD
 export interface ContentGenerationRequest {
-=======
 
 export interface ContentGenerationRequest {
 export interface ContentGenerationRequest {;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description';
   topic: string;
   tone: 'professional' | 'casual' | 'friendly' | 'formal';
   length: 'short' | 'medium' | 'long';
-<<<<<<< HEAD
   keywords?: string[];
   targetAudience?: string;
 }
@@ -29,7 +25,6 @@ export interface ContentGenerationResponse {
 }
 
 export interface ContentTemplate {
-=======
 
 
 
@@ -66,12 +61,10 @@ export interface ContentTemplate {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   id: string;
   name: string;
   description: string;
   type: string;
-<<<<<<< HEAD
   preview: string;
   price: number;
 }
@@ -144,7 +137,6 @@ export class AIContentGeneratorService {
       }
     ];
   }
-=======
 
 
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
@@ -363,7 +355,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -379,7 +370,6 @@ if ( {) {
     const mockContent = `# ${request.topic}
 
 This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.
-<<<<<<< HEAD
 
 ## Key Points
 
@@ -477,7 +467,6 @@ export const AI_CONTENT_PRICING = {
     ]
   }
 };
-=======
 ## Key Points
 - Point 1: ${request.topic} is essential for modern businesses
 - Point 2: Implementing ${request.topic} can improve efficiency
@@ -488,7 +477,6 @@ ${request.topic} represents a significant opportunity for organizations looking 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

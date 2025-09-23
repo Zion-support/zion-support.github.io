@@ -27,7 +27,6 @@ import { innovative2025MicroSaasExpansion } from '../data/innovative-2025-micro-
 import { innovative2025ITSolutionsExpansion } from '../data/innovative-2025-it-solutions-expansion';
 import { innovative2025AIServicesExpansion } from '../data/innovative-2025-ai-services-expansion';
 
-<<<<<<< HEAD
 // Import our new 2025 innovative services
 import { advancedEnterpriseSolutions } from '../data/2025-advanced-enterprise-solutions';
 import { innovativeAISolutions } from '../data/2025-innovative-ai-solutions';
@@ -52,13 +51,11 @@ import { specializedIndustrySolutions } from '../data/specialized-industry-solut
 import { real2037Q1InnovativeAdditions } from '../data/real-2037-q1-innovative-additions';
 import { real2037Q1ITInnovations } from '../data/real-2037-q1-it-innovations';
 import { real2037Q1MicroSaasInnovations } from '../data/real-2037-q1-micro-saas-innovations';
-=======
 // Import our new innovative 2040 services
 import { innovative2040ITServices } from '../data/innovative-2040-it-services';
 // Import our new 2025 advanced enterprise services
 import { advancedEnterpriseServices } from '../data/2025-advanced-enterprise-services-expansion';
 import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
 
 // Import existing service data
 import { realMicroSaasServices } from '../data/real-micro-saas-services';
@@ -83,15 +80,12 @@ const getServicePricing = (service: any) => {
   if (service.pricing?.starter) return service.pricing.starter;
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
   if (service.price?.monthly) return `$${service.price.monthly}/month`;
-<<<<<<< HEAD
   if (typeof service.price === 'string') return service.price;
   if (service.price && typeof service.price === 'object') {
     if (service.price.monthly) return `$${service.price.monthly}/month`;
     if (service.price.starter) return service.price.starter;
   }
-=======
   if (service.price) return service.price;
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
   return 'Contact for pricing';
 };
 

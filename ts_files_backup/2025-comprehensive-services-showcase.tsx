@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 
 import React from 'react';
@@ -29,4 +27,3 @@ const ComprehensiveServicesShowcase2025 = () => {
 };
 
 export default ComprehensiveServicesShowcase2025;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

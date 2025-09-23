@@ -1,16 +1,13 @@
-<<<<<<< HEAD
 
 "use client";
 import { useState } from "react";
 interface ITService {id: string;
-=======
 "use client";
 
 import { useState } from "react";
 
 interface ITService {
   id: string;
->>>>>>> origin/auto/autonomy-17186719616
   name: string;
   description: string;
   deliverables: string[];
@@ -23,7 +20,6 @@ interface ITService {
   technologies: string[];
   industries: string[];
 }
-<<<<<<< HEAD
 const itServices: ITService[] = [;
   {id: "cloud-migration-complete";
     name: "Complete Cloud Migration & DevOps";
@@ -1036,7 +1032,6 @@ export default function ITSolutionsPage() {;
       </div>;
     </div>);
 }
-=======
 
 const itServices: ITService[] = [
   {
@@ -1472,4 +1467,3 @@ export default function ITSolutionsPage() {
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

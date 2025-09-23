@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -24,4 +22,3 @@ export function NoJobsCard({ onUpdateProfile }: NoJobsCardProps) {
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

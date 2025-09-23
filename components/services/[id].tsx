@@ -2,8 +2,6 @@ import Head from 'next/head';
 import { getServiceById } from '../../data/micro-saas-services';
 import ServiceDetail from '../../components/sections/ServiceDetail';
 import Button from '../../components/ui/Button';
-<<<<<<< HEAD
-=======
 ArrowLeftExternalLink
 
 export default function ServiceDetailPage() {
@@ -114,4 +112,3 @@ export default function ServiceDetailPage() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

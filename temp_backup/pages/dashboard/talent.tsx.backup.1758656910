@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
 import { useEffect, useState } from 'react';
@@ -65,7 +64,6 @@ export default function TalentDashboard() {
       </EnhancedCard>
     </div>
   );
-=======
 import React, { useEffect, useMemo, useState } from "react",
 import { supabase } from "../../utils/supabase/client",
 import { AnimatePresence, motion } from "framer-motion",
@@ -369,5 +367,4 @@ export default function TalentDashboardSuggestedJobs() {
       {content}
     </div>
   ),
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

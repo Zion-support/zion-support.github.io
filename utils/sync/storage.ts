@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 
@@ -57,7 +55,6 @@ if ( {) {
   state.events.push(event);
   state.seenEventIds[event.eventId] = true;
   state.lastSyncedAt = Math.max(state.lastSyncedAt |0, event.timestamp |0);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return state;
 }
 

@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 const monitoring = {
@@ -338,7 +337,6 @@ if ( {
   }
   monitoring.alerts.forEach(alert => {
     }: ${alert.message}`)})}
-=======
 const { execSync } = require('child_process')
 console.log(' Starting Advanced Monitoring System...')
     "status"
@@ -376,4 +374,3 @@ console.log(' Starting Advanced Monitoring System...')
     throw new Error("Performance "issues")
     console.log("⚠  Performance "issues")
   return { "status": 'success', "metrics": mockPerformance, "message"}
->>>>>>> main

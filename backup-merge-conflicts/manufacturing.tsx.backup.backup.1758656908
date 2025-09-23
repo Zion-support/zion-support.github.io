@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -28,7 +27,6 @@ const solutions = [
     description: 'AI-powered supply chain management and optimization platform',
     icon: BarChart3,
     features: ['Demand Forecasting', 'Inventory Optimization', 'Supplier Management', 'Logistics Tracking']
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -114,13 +112,11 @@ const challenges = [
     description: 'Preventing equipment failures and minimizing downtime.',
     solution: 'IoT sensors, machine learning models, and predictive maintenance algorithms.',
     icon: Cpu
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 ];
 
 const benefits = [
   {
-<<<<<<< HEAD
     title: 'Increased Efficiency',
     description: 'Automated processes and AI optimization improve manufacturing efficiency',
     icon: Activity
@@ -149,7 +145,6 @@ export default function ManufacturingPage() {
         {/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto">
-=======
     icon: TrendingUp,
     title: 'Increased Productivity',
     description: 'Optimize manufacturing processes and increase overall equipment effectiveness.',
@@ -211,7 +206,6 @@ export default function Manufacturing() {
             <div className="absolute top-40 right-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
           </div>
           <div className="container mx-auto px-4 relative z-10">
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -219,13 +213,11 @@ export default function Manufacturing() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-<<<<<<< HEAD
                 Manufacturing <span className="text-blue-600">Solutions</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                 Transform manufacturing operations with smart manufacturing platforms, IoT integration, 
                 and AI-powered quality control solutions.
-=======
                 Manufacturing{' '}
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
                   Technology
@@ -476,7 +468,6 @@ export default function Manufacturing() {
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
                 Join leading manufacturers in revolutionizing their operations with smart technology solutions.
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
@@ -486,7 +477,6 @@ export default function Manufacturing() {
                   Get Started
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
-<<<<<<< HEAD
                 <Link
                   href="/ai-services"
                   className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
@@ -603,10 +593,8 @@ export default function Manufacturing() {
                   className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
                 >
                   View IT Services
-=======
                 <Link href="/industries" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
                   View All Industries
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 </Link>
               </div>
             </motion.div>

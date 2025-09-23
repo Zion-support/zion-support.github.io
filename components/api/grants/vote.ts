@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 import fs from 'fs';
 import path from 'path';
 import {v4, as, uuidv4} from 'uuid';
@@ -241,5 +239,4 @@ if ( {) {
 }
     res.status(400).json({ error: 'Missing fields' });
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

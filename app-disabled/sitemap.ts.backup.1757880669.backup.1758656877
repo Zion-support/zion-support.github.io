@@ -52,7 +52,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.7,
     },
-<<<<<<< HEAD
     // New blog posts
     {
       url: `${baseUrl}/blog/ai-2025-ultimate-business-transformation-revolution`,
@@ -117,13 +116,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.9,
     }
-=======
     {
       url: `${baseUrl}/tools`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.7,
     },
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
   ]
 }

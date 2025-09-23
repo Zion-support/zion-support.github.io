@@ -1,21 +1,17 @@
-<<<<<<< HEAD
 import Link from "next/link";
 
 export const metadata = {
   title: "Cookie Policy - Zion Tech Group",
   description: "Learn how Zion Tech Group uses cookies and tracking technologies to improve your experience on our website.",
   keywords: "cookie policy, cookies, tracking, privacy, Zion Tech Group",
-=======
 export const metadata = {
   title: "Cookie Policy - Zion Tech Group",
   description: "Learn about how Zion Tech Group uses cookies and similar technologies on our website. Understand your cookie preferences and choices.",
   keywords: "cookie policy, cookies, tracking technologies, Zion Tech Group cookies",
->>>>>>> origin/cursor/website-audit-and-enhancement-0da5
 };
 
 export default function CookiesPage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -320,7 +316,6 @@ export default function CookiesPage() {
           </div>
         </div>
       </section>
-=======
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
@@ -488,7 +483,6 @@ export default function CookiesPage() {
           </section>
         </div>
       </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-0da5
     </div>
   );
 }

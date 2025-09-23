@@ -38,8 +38,6 @@ export interface NextGenInnovativeService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
 export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   // Quantum AI & Advanced Computing
   {
@@ -562,4 +560,3 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     reviews: 26
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,7 +1,5 @@
 import Head from 'next/head';
 import { BarChart3, TrendingUp, PieChart, Activity, ArrowRight, Check, Eye } from 'lucide-react';
-<<<<<<< HEAD
-=======
 import { Button } from '../components/ui/Button';
 
 export default function AnalyticsPage() {
@@ -195,4 +193,3 @@ export default function AnalyticsPage() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

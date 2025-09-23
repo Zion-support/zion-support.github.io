@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useState } from 'react';
 import { CardContentCardDescriptionCardHeaderCardTitle } from '@/components/ui/card';
 import { Switch } from '@/components/ui/switch';
@@ -148,4 +146,3 @@ export function FraudDetectionSettings() {
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

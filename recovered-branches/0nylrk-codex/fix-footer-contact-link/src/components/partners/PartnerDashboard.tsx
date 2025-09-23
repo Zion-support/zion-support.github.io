@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BarChartDollarSignLineChartTrendingUpUsers } from "lucide-react";
@@ -96,4 +94,3 @@ export function PartnerDashboard() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

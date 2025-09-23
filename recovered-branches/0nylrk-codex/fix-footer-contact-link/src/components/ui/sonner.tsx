@@ -1,6 +1,4 @@
 import { useTheme } from "next-themes"
-<<<<<<< HEAD
-=======
 import { Toaster as Sonnertoast } from "sonner"
 
 type ToasterProps = React.ComponentProps<typeof Sonner>
@@ -27,4 +25,3 @@ const Toaster = ({ ...props }: ToasterProps) => {
 }
 
 export { Toastertoast }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -5,8 +5,6 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
-=======
   TableRow} from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -149,4 +147,3 @@ export function InvoiceHistory() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

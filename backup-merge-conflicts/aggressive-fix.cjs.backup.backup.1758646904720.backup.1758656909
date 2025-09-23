@@ -32,7 +32,6 @@ class AggressiveFix {}
       let fixed = content;
       let hasChanges = false;
 
-<<<<<<< HEAD
 function createBasicPage(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath;););
   const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1;);
@@ -114,7 +113,6 @@ filesToRewrite.forEach(filePath => {
   }
 });
 
-=======
       // Fix missing semicolons;
       if (!content.includes(';') && content.includes('from')) {}
         fixed = fixed.replace(/from\s+['"][^'"]+['"]/g, (match) => {}
@@ -186,4 +184,3 @@ if (require.main === module) {}
   fixer.run();
 };
 module.exports = AggressiveFix;
->>>>>>> main

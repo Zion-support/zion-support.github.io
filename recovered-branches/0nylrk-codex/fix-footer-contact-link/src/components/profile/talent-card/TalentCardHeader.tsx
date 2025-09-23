@@ -12,8 +12,6 @@ interface TalentCardHeaderProps {
 }
 
 export function TalentCardHeader({ 
-<<<<<<< HEAD
-=======
   fullName
   professionalTitle
   profilePicture
@@ -42,4 +40,3 @@ export function TalentCardHeader({
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React{ useMemo } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -221,4 +219,3 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed; the component resolves the service client-side.
   return { props: {} };
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

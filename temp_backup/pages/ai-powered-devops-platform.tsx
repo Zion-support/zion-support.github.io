@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
@@ -26,4 +24,3 @@ export default function AIPoweredDevOpsPlatform() {
 		/>
 	);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React from 'react';
 import type { Room } from 'livekit-client';
@@ -54,4 +52,3 @@ export default function Controls({ roomonLeaveaccent = 'cyan' }: Props) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

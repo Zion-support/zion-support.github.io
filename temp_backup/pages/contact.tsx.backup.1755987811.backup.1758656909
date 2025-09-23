@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import { 
@@ -9,7 +8,6 @@ import {
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
-=======
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import { Phone, Mail, MapPin, Clock, MessageSquare, Send, Star, Award, Zap, Users } from 'lucide-react';
@@ -47,7 +45,6 @@ const ContactPage: React.FC = () => {
   ];
 
   const contactForm = {
->>>>>>> 7d0a781e658cc5d79dae76ad53c5e567dc7e5315
     name: '',
     email: '',
     company: '',
@@ -98,7 +95,6 @@ const ContactPage: React.FC = () => {
   };
 
   const services = [
-<<<<<<< HEAD
     "AI & Machine Learning",
     "IT Infrastructure",
     "Cybersecurity",
@@ -413,7 +409,6 @@ const ContactPage: React.FC = () => {
                 </div>
               </div>
             </motion.div>
-=======
       <Head>
         <title>Contact Us | Zion Tech Group - Get Started Today</title>
         <meta name="description" content="Get in touch with Zion Tech Group to discuss your AI and automation needs. Our experts are ready to help transform your business." />
@@ -610,7 +605,6 @@ const ContactPage: React.FC = () => {
                 ))}
               </div>
             </div>
->>>>>>> origin/main
           </div>
         </div>
       </section>

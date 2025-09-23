@@ -14,8 +14,6 @@ export interface FuturisticAiService20o29 {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const futuristicAIServices2029: FuturisticAiService2029[] = [
   {
     id: "2029-futuristic-ai",
@@ -40,4 +38,3 @@ export const futuristicAIServices2029: FuturisticAiService2029[] = [
     }
   }
 ];
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

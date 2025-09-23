@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React{ useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
@@ -174,4 +172,3 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
   );
 }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

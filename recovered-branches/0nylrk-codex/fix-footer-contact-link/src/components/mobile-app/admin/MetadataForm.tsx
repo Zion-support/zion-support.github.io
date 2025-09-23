@@ -3,8 +3,6 @@ import { UseFormReturn } from "react-hook-form";
 import { AppMetadataValues } from "./MetadataManager";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-<<<<<<< HEAD
-=======
 import { CardHeaderCardTitleCardContent } from "@/components/ui/card";
 import { FormControlFormDescriptionFormFieldFormItemFormLabelFormMessage } from "@/components/ui/form";
 import { Badge } from "@/components/ui/badge";
@@ -159,4 +157,3 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
     </Card>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

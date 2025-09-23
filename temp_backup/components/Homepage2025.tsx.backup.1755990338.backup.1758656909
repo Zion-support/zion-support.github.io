@@ -1,7 +1,6 @@
 import React, { Suspense, lazy, useState, useEffect } from 'react';
 import Layout from './layout/Layout';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, Star, 
@@ -22,8 +21,6 @@ const Homepage2025: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [currentStatIndex, setCurrentStatIndex] = useState(0);
-=======
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
 
   // Enhanced animation variants for better performance
   const containerVariants = {
@@ -139,7 +136,6 @@ const Homepage2025: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
     // Add theme persistence logic here
@@ -149,8 +145,6 @@ const Homepage2025: React.FC = () => {
     setIsVideoPlaying(!isVideoPlaying);
   };
 
-=======
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   return (
     <Layout>
       {/* Main Content */}
@@ -206,7 +200,6 @@ const Homepage2025: React.FC = () => {
                 className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium backdrop-blur-sm"
                 role="banner"
                 aria-label="Company recognition"
-<<<<<<< HEAD
               >
                 <Star className="w-4 h-4" aria-hidden="true" />
                 <span>Innovation Leader 2025</span>
@@ -318,7 +311,6 @@ const Homepage2025: React.FC = () => {
                       </div>
                     </div>
                   </div>
-=======
                 className="flex flex-wrap justify-center items-center gap-6 text-sm text-gray-400"
               >
                 <div className="flex items-center gap-2">
@@ -332,7 +324,6 @@ const Homepage2025: React.FC = () => {
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-400" aria-hidden="true" />
                   <span>24/7 Support</span>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d1
 >>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
                 </div>
               </motion.div>
@@ -340,7 +331,6 @@ const Homepage2025: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Enhanced Stats Section */}
         <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
@@ -379,15 +369,12 @@ const Homepage2025: React.FC = () => {
                   </div>
                   <div className="text-gray-400">
                     {stat.description}
-=======
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
                   </div>
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-lg font-semibold text-gray-300 mb-1">{stat.label}</div>
                   <div className="text-sm text-gray-400">{stat.description}</div>
                 </motion.div>
               ))}
-<<<<<<< HEAD
             </div>
 
         {/* Enhanced Featured Services Section */}
@@ -466,15 +453,12 @@ const Homepage2025: React.FC = () => {
               className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-2xl p-12 backdrop-blur-sm"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
-=======
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Join the future of technology with Zion Tech Group. Let's build something extraordinary together.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
                 <Link href="/contact">
                   <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                     Get Started Today
@@ -483,7 +467,6 @@ const Homepage2025: React.FC = () => {
                 <Link href="/demo">
                   <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
                     Request Demo
-=======
                     Request Demo
 =======
 
@@ -955,7 +938,6 @@ const Homepage2025: React.FC = () => {
                 <Link href="/contact">
                   <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                     Book Free Consultation
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3063
 >>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
                   </button>
                 </Link>
@@ -964,49 +946,3 @@ const Homepage2025: React.FC = () => {
           </div>
         </section>
       </main>
-<<<<<<< HEAD
-    </div>
-
-      {/* Video Modal */}
-      <AnimatePresence>
-        {isVideoModalOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-            onClick={() => setIsVideoModalOpen(false)}
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="relative w-full max-w-4xl aspect-video bg-gray-900 rounded-2xl overflow-hidden"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button
-                onClick={() => setIsVideoModalOpen(false)}
-                className="absolute top-4 right-4 z-10 p-2 bg-black/50 hover:bg-black/70 rounded-full transition-colors"
-                aria-label="Close video modal"
-              >
-                <X className="w-6 h-6 text-white" />
-              </button>
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="text-center text-white">
-                  <Play className="w-20 h-20 mx-auto mb-4 text-cyan-400" />
-                  <p className="text-xl">Company Overview Video</p>
-                  <p className="text-gray-400 mt-2">Video content would be embedded here</p>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </Layout>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d1
-  );
-});
-
-Homepage2025.displayName = 'Homepage2025';
-
-export default Homepage2025;

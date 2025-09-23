@@ -1,8 +1,6 @@
 export default function StructuredData() {
   return null;
 }
-<<<<<<< HEAD
-=======
 "use client";
 
 export function StructuredData() {
@@ -62,4 +60,3 @@ export function StructuredData() {
     />
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

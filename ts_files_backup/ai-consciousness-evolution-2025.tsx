@@ -2,8 +2,6 @@ import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-=======
   BrainStarUsersTrendingUpZapShield
   CheckCircleClockAwardTargetGlobeSparkles,
   CpuLockCloudBarChart3EyeHeartLightbulb,
@@ -632,4 +630,3 @@ export default function AIConsciousnessEvolution2025() {
     </Layout>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

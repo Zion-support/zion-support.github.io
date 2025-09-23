@@ -29,11 +29,9 @@ class AICodeAnalyzer {}
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
         }
 
     analyzeCodeQuality() {
-=======
         console.log(message)};
     analyzeCodeQuality() {}
 =======
@@ -931,4 +929,3 @@ if ( {})
     const analyzer = new AICodeAnalyzer}(;);
     analyzer.run().catch(console.error)};
 module.exports = AICodeAnalyzer;
->>>>>>> main

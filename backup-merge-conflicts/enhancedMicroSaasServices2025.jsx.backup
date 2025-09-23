@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 =======
 =======
 =======
@@ -16,7 +14,6 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [;
     "price": "49;
     "currency": "$";
     "pricingModel": "monthly";
->>>>>>> pr-11935
 // Enhanced Micro SAAS Services for 2025
 export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [;
   // AI-Powered Development & DevOps Services

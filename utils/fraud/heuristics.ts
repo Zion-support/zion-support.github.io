@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types',
 
 const suspiciousLinkHosts = [
@@ -86,4 +84,3 @@ export async function evaluateHeuristics(event: FraudEvent, deps: HeuristicDeps)
     reasons,
     severity},
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

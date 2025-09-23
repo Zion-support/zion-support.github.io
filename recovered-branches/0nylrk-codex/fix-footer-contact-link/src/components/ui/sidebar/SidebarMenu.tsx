@@ -6,8 +6,6 @@ interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-=======
 export function SidebarMenu({ classNamechildren...props }: SidebarMenuProps) {
   return (
     <ul 
@@ -18,4 +16,3 @@ export function SidebarMenu({ classNamechildren...props }: SidebarMenuProps) {
     </ul>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

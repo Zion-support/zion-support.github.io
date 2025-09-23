@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AiPoweredDecisionEngine() {
@@ -24,7 +23,6 @@ export default function AiPoweredDecisionEngine() {
 			industries={["Fintech", "SaaS", "Marketplaces", "Logistics"]}
 			canonical="https://ziontechgroup.com/ai-powered-decision-engine"
 		/>
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 import { Check, ExternalLink, Settings, GitBranch, Shield } from 'lucide-react';
@@ -111,6 +109,5 @@ export default function AIPoweredDecisionEnginePage() {
 				</section>
 			</main>
 		</>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 	);
 }

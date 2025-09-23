@@ -1,21 +1,17 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 
 export const metadata = {
   title: 'Careers - Zion Tech Group',
   description: 'Join our team of innovators at Zion Tech Group. Explore exciting career opportunities in AI, quantum computing, and technology solutions.',
-=======
 export const metadata = {
   title: 'Careers - Zion Tech Group',
   description: 'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.',
   keywords: 'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs',
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
 };
 
 export default function CareersPage() {
   const openPositions = [
     {
-<<<<<<< HEAD
       id: 'ai-research-scientist',
       title: 'Senior AI Research Scientist',
       department: 'Research & Development',
@@ -234,7 +230,6 @@ export default function CareersPage() {
       positions: 7,
       icon: '🚀'
     }
-=======
       title: 'Senior AI Research Engineer',
       department: 'Research & Development',
       location: 'Remote / Global',
@@ -286,12 +281,10 @@ export default function CareersPage() {
         'Relevant certifications (CISSP, CEH, etc.)',
       ],
     },
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
   ];
 
   const benefits = [
     {
-<<<<<<< HEAD
       category: 'Health & Wellness',
       items: [
         'Comprehensive health, dental, and vision insurance',
@@ -464,7 +457,6 @@ export default function CareersPage() {
               </div>
             ))}
           </div>
-=======
       title: 'Remote First',
       description: 'Work from anywhere in the world with our distributed team.',
       icon: '🌍',
@@ -542,12 +534,10 @@ export default function CareersPage() {
               </div>
             </div>
           ))}
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
         </div>
       </section>
 
       {/* Benefits */}
-<<<<<<< HEAD
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -692,7 +682,6 @@ export default function CareersPage() {
               <h3 className="text-xl font-bold text-gray-900 mb-2">Offer</h3>
               <p className="text-gray-600">Welcome to the Zion Tech Group team!</p>
             </div>
-=======
       <section className="py-16">
         <h2 className="text-3xl font-bold text-center mb-12">Why Work With Us</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -731,13 +720,11 @@ export default function CareersPage() {
               Whether you're a seasoned expert or just starting your career, we provide the 
               support and resources you need to succeed.
             </p>
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Join Our Team?</h2>
@@ -759,7 +746,6 @@ export default function CareersPage() {
               Send Resume
             </a>
           </div>
-=======
       <section className="text-center py-16">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Make a Difference?</h2>
         <p className="text-xl opacity-80 mb-8 max-w-2xl mx-auto">
@@ -778,7 +764,6 @@ export default function CareersPage() {
           >
             Send Resume
           </a>
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
         </div>
       </section>
     </div>

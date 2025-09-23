@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import React{ useState } from 'react';
 import Head from 'next/head';
@@ -333,4 +331,3 @@ export default function Careers() {
 };
 
 export default CareersPage;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

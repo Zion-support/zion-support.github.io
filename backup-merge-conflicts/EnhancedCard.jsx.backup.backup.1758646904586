@@ -1,7 +1,5 @@
 =======
 import {cn} from '@/lib/utils';
-<<<<<<< HEAD
-=======
 =======
 import {cn} from '@/lib/utils';
 export function EnhancedCard($1) {
@@ -17,7 +15,6 @@ export function EnhancedCard($1) {
     const classes = cn(baseClasses, variantClasses[variant], hoverClasses, interactiveClasses, className);
     if (href) {
         return (<a href={href} className={classes} onClick={onClick}>
->>>>>>> main
         {children}
       </a>)}
     return (<Component className={classes} onClick={onClick}>;

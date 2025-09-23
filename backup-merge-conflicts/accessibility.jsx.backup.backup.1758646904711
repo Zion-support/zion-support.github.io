@@ -4,8 +4,6 @@ import React, {useState, useEffect, useCallback} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {Eye, Volume2, VolumeX, Type, Contrast, ZoomIn, ZoomOut, Settings, Accessibility, X} from 'lucide-react';
 import {Button} from "button.tsx";
-<<<<<<< HEAD
-=======
 =======
 export function AccessibilityPanel($1) {
     const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +15,6 @@ export function AccessibilityPanel($1) {
         "fontSize": 16,
         "colorBlindMode": 'normal'
     };);
->>>>>>> main
     // Apply accessibility settings to document
     useEffect(() => {
         if (!enabled)

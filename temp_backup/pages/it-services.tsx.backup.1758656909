@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
@@ -192,7 +191,6 @@ const ITServicesPage: React.FC = () => {
                 >
                   Schedule Demo
                 </a>
-=======
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -353,13 +351,11 @@ export default function ITServicesPage() {
                 >
                   View Pricing
                 </Link>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               </div>
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* IT Capabilities */}
         <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
           <div className="max-w-6xl mx-auto">
@@ -395,7 +391,6 @@ export default function ITServicesPage() {
                     <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
                   </div>
                   <p className="text-gray-300">{capability.description}</p>
-=======
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -414,14 +409,12 @@ export default function ITServicesPage() {
                   <div className="text-gray-600 font-medium">
                     {stat.label}
                   </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* IT Services */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -491,7 +484,6 @@ export default function ITServicesPage() {
                   </a>
                 </motion.div>
               ))}
-=======
         {/* Filter Section */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -612,13 +604,11 @@ export default function ITServicesPage() {
                   </motion.div>
                 );
               })}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -646,7 +636,6 @@ export default function ITServicesPage() {
                 >
                   Schedule Consultation
                 </a>
-=======
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <motion.div
@@ -674,12 +663,10 @@ export default function ITServicesPage() {
                 >
                   View Pricing
                 </Link>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               </div>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
       </main>
     </Layout>
   );
@@ -687,9 +674,7 @@ export default function ITServicesPage() {
 
 export default ITServicesPage;
 
-=======
       </div>
     </>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

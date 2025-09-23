@@ -1,20 +1,16 @@
-<<<<<<< HEAD
 export const metadata = {
   title: 'Terms of Service - Zion Tech Group',
   description: 'Zion Tech Group Terms of Service - Read our terms and conditions for using our AI-powered technology solutions.',
-=======
 import Link from "next/link";
 
 export const metadata = {
   title: "Terms of Service - Zion Tech Group",
   description: "Zion Tech Group's terms of service outlining the rules and guidelines for using our services and platforms.",
   keywords: "terms of service, terms and conditions, service agreement, Zion Tech Group",
->>>>>>> origin/cursor/website-audit-and-enhancement-ef5f
 };
 
 export default function TermsPage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="bg-white rounded-xl shadow-lg p-8 md:p-12">
@@ -242,7 +238,6 @@ export default function TermsPage() {
             </section>
           </div>
         </div>
-=======
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Hero Section */}
@@ -569,7 +564,6 @@ export default function TermsPage() {
             </Link>
           </div>
         </section>
->>>>>>> origin/cursor/website-audit-and-enhancement-ef5f
       </div>
     </div>
   );

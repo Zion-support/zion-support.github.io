@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import React{ useEffectuseState } from "react";
 import { cn } from "@/lib/utils";
 import { motionAnimatePresence } from "framer-motion";
@@ -62,4 +60,3 @@ export function StickyAction({
     </AnimatePresence>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -4,7 +4,6 @@
  * Advanced decision-making system for PM2 process management;
  */
 
-<<<<<<< HEAD
 const pm2 = require('pm2');
 const fs = require('fs').promises;
 const path = require('path');
@@ -471,7 +470,6 @@ if (require.main === module) {
 }
 
 module.exports = AIIntelligentOrchestrator;
-=======
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -500,4 +498,3 @@ const { execSync } = require('child_process')
         "type"
       this.log(` Learning model update "failed"`)
       this.log(` Fatal "error"`)
->>>>>>> main

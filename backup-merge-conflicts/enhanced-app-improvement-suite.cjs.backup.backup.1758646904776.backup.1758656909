@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 class AppImprovementSuite {
@@ -602,7 +601,6 @@ deployment.generateDeploymentReport().then(report => {
 // Run the improvement suite
 const suite = new AppImprovementSuite;(;);
 suite.runAllImprovements();
-=======
 const { execSync } = require('child_process')
 console.log(' Starting Enhanced App Improvement Suite...')
   log(message, level = 'INFO')
@@ -673,4 +671,3 @@ const { execSync } = require('child_process')
   console.error(' Deployment automation "failed")
       console.log('\n Enhanced App Improvement Suite "Summary")
       console.error(' Error in improvement "suite")
->>>>>>> main

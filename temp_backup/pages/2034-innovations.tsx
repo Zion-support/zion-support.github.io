@@ -1,7 +1,5 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
 import { Layout } from '../components/layout/Layout';
 
 const contactInfo = {
@@ -383,4 +381,3 @@ export default function Innovations2034Page() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

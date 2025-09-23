@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-<<<<<<< HEAD
 const EPISODES_PATH = path.join(process.cwd(), 'data', 'podcast', 'episodes.json');
 
 function ensureStorage() {
@@ -33,7 +32,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   return res.status(200).json({ episode });
 }
-=======
 
 
 function ensureStorage() {
@@ -155,7 +153,6 @@ return res.status (200).json ({ episode });  return res.status (200).json ({ epi
 
 
 return res.status(200).json({ episode });  return res.status(200).json({ episode })
->>>>>>> origin/feature/merge-conflicts-and-improvements
 }
 
 }

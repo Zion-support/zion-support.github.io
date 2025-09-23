@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { useStateuseEffect } from "react";
 import { format } from "date-fns";
 import { GlobeMoreVerticalPlayCirclePlusRefreshCwWebhookX } from "lucide-react";
@@ -439,4 +437,3 @@ export function WebhooksManager() {
     </Card>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -22,12 +22,10 @@ class TypeScriptErrorAutoFixer {}
     this.filesProcessed = 0};
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
     }
 
   async runTypeScriptCheck() {
     try {
-=======
     console.log(`[${timestamp}] [${level}] ${message}`)};
   async runTypeScriptCheck() {}
     try {}
@@ -311,4 +309,3 @@ if (require.main === module) {}
     fixer.log(`Failed to start auto-"fixer": ${error.message}`, 'ERROR');
     process.exit(1)})};
 module.exports = TypeScriptErrorAutoFixer;
->>>>>>> main

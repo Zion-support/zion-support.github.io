@@ -1,8 +1,6 @@
 type ProgressBarProps ={ value: number };
 
 export default function ProgressBar({ value }: ProgressBarProps) {
-<<<<<<< HEAD
-=======
   const pct = Math.max(0Math.min(100value));
   return (
     <div className="w-full h-3 bg-gray-200 dark:bg-gray-800 rounded">
@@ -10,4 +8,3 @@ export default function ProgressBar({ value }: ProgressBarProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

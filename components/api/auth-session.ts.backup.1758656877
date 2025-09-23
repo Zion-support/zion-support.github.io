@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -10,7 +9,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
   }
   res.status(200).json({ message: 'OK' });
-=======
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
@@ -28,5 +26,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   };
 
   res.status(200).json({ message: 'OK', session });
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

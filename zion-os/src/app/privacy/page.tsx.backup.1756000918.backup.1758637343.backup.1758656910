@@ -1,20 +1,16 @@
-<<<<<<< HEAD
 export const metadata = {
   title: 'Privacy Policy - Zion Tech Group',
   description: 'Zion Tech Group Privacy Policy - Learn how we collect, use, and protect your personal information.',
-=======
 import Link from "next/link";
 
 export const metadata = {
   title: "Privacy Policy - Zion Tech Group",
   description: "Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information.",
   keywords: "privacy policy, data protection, personal information, Zion Tech Group",
->>>>>>> origin/cursor/website-audit-and-enhancement-ef5f
 };
 
 export default function PrivacyPage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="bg-white rounded-xl shadow-lg p-8 md:p-12">
@@ -201,7 +197,6 @@ export default function PrivacyPage() {
             </section>
           </div>
         </div>
-=======
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Hero Section */}
@@ -478,7 +473,6 @@ export default function PrivacyPage() {
             </Link>
           </div>
         </section>
->>>>>>> origin/cursor/website-audit-and-enhancement-ef5f
       </div>
     </div>
   );

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -52,7 +51,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       
       // Pre-select the most recent resume
       if (options.length > 0 && selectedOption === 'recent') {
-=======
 
 
 import React, { useState, useEffect } from './react';
@@ -206,13 +204,11 @@ if ( {) {
       // Pre-select the most recent resume;
       if (options && options.length > 0 && selectedOption === "recent") {;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         setSelectedResume(options[0]);
         onResumeSelected(options[0]);
       }
     }
   }, [resume, selectedOption, onResumeSelected]);
-<<<<<<< HEAD
   
   // Handle radio option change
   const handleOptionChange = (value: 'recent' | 'select' | 'upload') => {
@@ -238,7 +234,6 @@ if ( {) {
     }
   };
   
-=======
 
 
   // Handle radio option change;
@@ -263,12 +258,10 @@ if ( {) {
       (setSelectedResume(selected), onResumeSelected(selected));
     }
   }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Handle custom file upload
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
-<<<<<<< HEAD
       
       // Check if it's a PDF file
       if (file.type !== 'application/pdf') {
@@ -288,7 +281,6 @@ if ( {) {
         file: file
       };
       
-=======
   };
 
 
@@ -372,7 +364,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -437,7 +428,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
       setSelectedResume(customOption);
       onResumeSelected(customOption);
     }
-<<<<<<< HEAD
   };
   
   // Handle resume download
@@ -482,7 +472,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
   const handleGenerateResume = () => {
     window.open('/dashboard/talent/portfolio', '_blank');
   };
-=======
 
   }
   // Handle resume download
@@ -615,22 +604,18 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
   const handleGenerateResume = () => {
     window.open('/dashboard/talent/portfolio_blank')
   },
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   return (
     <div className="space-y-4">
       <h3 className="text-lg font-medium text-white">Attach Resume</h3>
-<<<<<<< HEAD
       
       <RadioGroup 
         value={selectedOption} 
         onValueChange={(value) => handleOptionChange(value as 'recent' | 'select' | 'upload')}
-=======
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -644,7 +629,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
       >
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="recent" id="recent" />
-<<<<<<< HEAD
           <Label htmlFor="recent" className="text-white">Use most recent AI Resume</Label>
         </div>
         
@@ -670,7 +654,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
       
       {selectedOption === 'select' && (
         <SelectResumeSection
-=======
           <Label htmlFor="recent" className="text-white">
             Use most recent AI Resume
           </Label>
@@ -683,7 +666,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -1002,7 +984,6 @@ if ( {) {
           handleResumeSelect={handleResumeSelect}
           handleDownloadResume={handleDownloadResume}
           isLoading={isLoading}
-<<<<<<< HEAD
         />
       )}
       
@@ -1018,7 +999,6 @@ if ( {) {
         <Button 
           variant="outline"
           onClick={handleGenerateResume}
-=======
         />;
       )}
 
@@ -1035,7 +1015,6 @@ if ( {) {
       {selectedOption === "upload" && (
         <UploadSection
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 ;
       {selectedOption === 'upload' && (;
@@ -1130,10 +1109,7 @@ if ( {) {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
   )
 }
 ;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

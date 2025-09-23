@@ -12,8 +12,6 @@ export function EnterpriseHero() {
               Enterprise <GradientHeading className="inline">Talent Solutions</GradientHeading>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-<<<<<<< HEAD
-=======
               Scale your talent acquisition with a custom-branded hiring portaldedicated talent pooland powerful admin controls.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -52,4 +50,3 @@ export function EnterpriseHero() {
     </section>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

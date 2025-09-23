@@ -17,11 +17,9 @@ import {
   Rocket
 } from 'lucide-react';
 
-<<<<<<< HEAD
 const RevolutionaryContent2025Banner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-=======
 const RevolutionaryContent2025Banner = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
@@ -52,7 +50,6 @@ const RevolutionaryContent2025Banner = () => {
       isNew: true
     }
   ];
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
 
   useEffect(() => {
     setIsVisible(true);
@@ -123,7 +120,6 @@ const RevolutionaryContent2025Banner = () => {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
     <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 text-white">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -179,8 +175,6 @@ const RevolutionaryContent2025Banner = () => {
             that are transforming businesses worldwide in 2025.
 =======
 =======
->>>>>>> origin/main
-=======
 >>>>>>> cursor/create-and-deploy-new-content-60fa
     <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -222,7 +216,6 @@ const RevolutionaryContent2025Banner = () => {
             </p>
 >>>>>>> b57990bbef189939aa68e799cdd591a161de203f
 
-<<<<<<< HEAD
         {/* Main Content Slider */}
         <div className="relative mb-16">
           <div className="overflow-hidden rounded-3xl">
@@ -384,7 +377,6 @@ const RevolutionaryContent2025Banner = () => {
               >
                 <Download className="w-5 h-5 mr-2" />
                 Download Resources
-=======
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {/* Blog Posts */}
           <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
@@ -485,12 +477,9 @@ const RevolutionaryContent2025Banner = () => {
               >
                 Schedule Consultation
 <<<<<<< HEAD
->>>>>>> origin/main
 =======
 >>>>>>> origin/main
               </Link>
-<<<<<<< HEAD
-=======
 =======
     <div className="relative overflow-hidden">
       {/* Background with animated gradient */}
@@ -505,7 +494,6 @@ const RevolutionaryContent2025Banner = () => {
         <div className="absolute bottom-32 right-1/3 w-14 h-14 bg-white opacity-10 rounded-full animate-pulse delay-3000" />
 =======
         </div>
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
       </div>
 
       <div className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">

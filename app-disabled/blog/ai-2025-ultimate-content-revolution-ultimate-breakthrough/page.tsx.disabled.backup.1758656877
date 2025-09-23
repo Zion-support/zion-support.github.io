@@ -1,11 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-<<<<<<< HEAD:app/blog/ai-2025-ultimate-content-revolution-ultimate-breakthrough/page.tsx
 // import ErrorBoundary from '../../components/ErrorBoundary';
-=======
 import ErrorBoundary from '../../components/ErrorBoundary';
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e:app/blog/ai-2025-ultimate-content-revolution-ultimate-breakthrough/page.tsx.disabled
 
 export const metadata = {
   title: 'AI 2025: The Ultimate Content Revolution - 25,000% ROI Guide',

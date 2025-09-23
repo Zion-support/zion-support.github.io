@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -22,7 +21,6 @@ export default function EnterpriseAdmin() {
   return (
     <ProtectedRoute>
       <SEO 
-=======
 
 
 
@@ -72,7 +70,6 @@ export default function EnterpriseAdmin() {
 
     <ProtectedRoute>
       <SEO
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         title="Enterprise Admin - Zion AI Marketplace"
         description="Manage your team's access, roles, and usage on the Zion AI Marketplace."
       />
@@ -82,10 +79,8 @@ export default function EnterpriseAdmin() {
       </main>
       <Footer />
     </ProtectedRoute>
-<<<<<<< HEAD
   );
 }
-=======
   )
 
 
@@ -128,7 +123,6 @@ export default function EnterpriseAdmin() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 

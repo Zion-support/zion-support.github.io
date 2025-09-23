@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { render, screen, fireEvent } from '@testing-library/react';
 import ProductCard from '@/components/ProductCard';
 import { Product } from '@/types/product'; // Assuming this path is correct
@@ -219,4 +217,3 @@ describe('ProductCard', () => {
   });
 });
 ```
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { FormFieldFormItemFormLabelFormControlFormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { UseFormReturn } from 'react-hook-form';
@@ -113,4 +111,3 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

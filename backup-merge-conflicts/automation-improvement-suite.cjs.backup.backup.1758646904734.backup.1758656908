@@ -7,7 +7,6 @@ class AutomationImprovementSuite {}
   constructor() {}
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-<<<<<<< HEAD
     this.ensureDirectories();
   }
 
@@ -29,7 +28,6 @@ class AutomationImprovementSuite {}
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 60000, // 1 minute timeout
-=======
         "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 60000, // 1 minute timeout
@@ -173,7 +171,6 @@ class PerformanceMonitor {
     if (!fs.existsSync(this.reportsDir)) {}
       fs.mkdirSync(this.reportsDir, { recursive: true }
 });
->>>>>>> main
     };
   };
   log(message, level = 'INFO') {}
@@ -268,7 +265,6 @@ class PerformanceMonitor {
         error: error.message;
       };
     };
-<<<<<<< HEAD
     
     fs.writeFileSync(
       path.join(this.projectRoot, 'test-results-comprehensive.json'),
@@ -358,7 +354,6 @@ runner.runTests().catch(console.error);
 // Run the suite
 const suite = new AutomationImprovementSuite();
 suite.run().catch(console.error);
-=======
   };
   async runAllOptimizations() {}
     const optimizations = this.getPerformanceOptimizations().optimizations;
@@ -411,5 +406,4 @@ if (require.main === module) {}
   suite.run();
 };
 module.exports = AutomationImprovementSuite;
->>>>>>> main
 >>>>>>> main

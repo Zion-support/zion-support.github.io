@@ -2,8 +2,6 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { 
-<<<<<<< HEAD
-=======
   Code
   GitBranch
   Database
@@ -498,4 +496,3 @@ export default function DeveloperToolsPage() {
     </>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

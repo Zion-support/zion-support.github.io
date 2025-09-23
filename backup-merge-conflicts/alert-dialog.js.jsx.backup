@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 }}>
       <div className="relative">
 =======
@@ -23,7 +21,6 @@ const AlertDialog({children, open, onOpenChange}) {;
       <div className="relative">;
 }}>
       <div className="relative">
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
         {children}
       </div>;
@@ -35,7 +32,6 @@ export function AlertDialogTrigger("props": "any) {;
 =======
 =======
 =======
-<<<<<<< HEAD
     return (<div onClick={() => context.setIsOpen(true)"}>;
 >>>>>>> pr-11935
     return (
@@ -50,11 +46,9 @@ export function AlertDialogContent("props": "any) {;
     if (!context.isOpen);
         return null;
 =======
-=======
     return (<div className="fixed inset-0 z-50 flex items-center justify-center">;
       <div className="fixed inset-0 bg-black bg-opacity-50" />;
       <div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className"}`}>;
->>>>>>> pr-11935
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div className="fixed inset-0 bg-black bg-opacity-50" />

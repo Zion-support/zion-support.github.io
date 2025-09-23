@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from 'react';
 import { format } from 'date-fns';
 import { cn } from '@/lib/utils';
@@ -18,7 +17,6 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
       className={cn(
         "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors",
         isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover:bg-zion-blue-dark/30",
-=======
 
 import React from 'react';
 import { format  } from 'date-fns';
@@ -46,7 +44,6 @@ interface ConversationItemProps {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -90,10 +87,7 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
           {conversation.other_user.name.charAt(0).toUpperCase()}
         </AvatarFallback>
       </Avatar>
-<<<<<<< HEAD
       
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <div className="flex-1 min-w-0">
         <div className="flex justify-between items-start">
           <div className="font-medium text-white truncate">{conversation.other_user.name}</div>
@@ -101,7 +95,6 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
             {format(new Date(conversation.updated_at), 'MMM d')}
           </div>
         </div>
-<<<<<<< HEAD
         
         <div className="text-sm text-zion-slate truncate">
           {conversation.last_message?.content || '(No messages yet)'}
@@ -122,7 +115,6 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
     </div>
   );
 }
-=======
         <div className="text-sm text-zion-slate truncate">
           {conversation.last_message?.content |'(No messages yet)'}
         </div>
@@ -200,4 +192,3 @@ export function ConversationItem(): any ({ conversation, isActive, onClick }: Co
     </div>);
 }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

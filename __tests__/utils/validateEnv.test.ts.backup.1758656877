@@ -1,6 +1,5 @@
 // __tests__/utils/validateEnv.test.ts
 
-<<<<<<< HEAD
 // NOTE: DO NOT add a static import for checkEssentialEnvVars here.;// It needs to be dynamically imported within each test after mocks are applied.
 ;
 import { describe, it, expect, beforeEach, afterEach, vi } from vitest';
@@ -69,7 +68,6 @@ describe('checkEssentialEnvVars', () => {'  beforeEach(() => {
         const errorMessage = error.message;
         expect(errorMessage).toMatch(/NEXT_PUBLIC_REOWN_PROJECT_ID is not defined or is empty/);
         expect(errorMessage).toMatch(/NEXT_PUBLIC_SUPABASE_URL is set to a placeholder value: "your_supabase_url_here"/);"        expect(errorMessage).toMatch(/NEXT_PUBLIC_SUPABASE_ANON_KEY is not defined or is empty/);"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-=======
 // NOTE: DO NOT add a static import for checkEssentialEnvVars here.
 // It needs to be dynamically imported within each test after mocks are applied.
 
@@ -204,12 +202,10 @@ describe('checkEssentialEnvVars', () => {
         expect(errorMessage).toMatch(/VITE_REOWN_PROJECT_ID is not defined or is empty/);
         expect(errorMessage).toMatch(/VITE_SUPABASE_URL is set to a placeholder value: "your_supabase_url_here"/);
         expect(errorMessage).toMatch(/VITE_SUPABASE_ANON_KEY is not defined or is empty/);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       }
     });
   });
 
-<<<<<<< HEAD
   it('should log success message in DEV mode when variables are valid', () => {'    // The checkEssentialEnvVars function checks import.meta.env.DEV
     // This is harder to mock reliably with Jest's process.env focus.'    // For now, we'll assume if it doesn't throw, and NODE_ENV is development', it implies success.'    // A more robust test would involve deeper Jest mocking of ES modules if this were critical.
     mockProcessEnv({
@@ -273,7 +269,6 @@ describe('validateProductionEnvironment', () => {'  // ORIGINAL_ENV is already d
   it('should throw an error in production if Sentry DSN is missing', () => {'    process.env.NODE_ENV = production';    process.env.NEXT_PUBLIC_SUPABASE_URL = https://valid.supabase.co';    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = valid_anon_key';    delete process.env.NEXT_PUBLIC_SENTRY_DSN; // Missing Sentry DSN
     process.env.INTERNAL_AUTH_SERVICE_URL = https://my-auth.example.com';
     return import('@/utils/environmentConfig').then(configModule => {'      expect(() => configModule.validateProductionEnvironment()).toThrowError(/NEXT_PUBLIC_SENTRY_DSN must be configured in production for error monitoring/);
-=======
   it('should log success message in DEV mode when variables are valid', () => {
     mockImportMetaEnv({
       VITE_REOWN_PROJECT_ID: 'valid_project_id',
@@ -308,7 +303,6 @@ describe('validateProductionEnvironment', () => {'  // ORIGINAL_ENV is already d
       } finally {
         // consoleLogSpy.mockRestore(); // Done in afterEach
       }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     });
   });
 });

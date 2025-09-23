@@ -1,6 +1,5 @@
 #!/usr/bin/env node;
 const fs = require('fs')
-<<<<<<< HEAD
 
 class UXEnhancer {
   constructor() {
@@ -50,9 +49,7 @@ const enhancer = new UXEnhancer;(;);
 enhancer.addAccessibilityFeatures();
 enhancer.addResponsiveDesign();
 enhancer.generateReport();
-=======
       "features"
         "tablet"
         "desktop"
       "features"
->>>>>>> main

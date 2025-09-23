@@ -16,8 +16,6 @@ interface ResumeStepContentProps {
 }
 
 export const ResumeStepContent = ({ 
-<<<<<<< HEAD
-=======
   activeTab
   resume
   onNextStep
@@ -82,4 +80,3 @@ export const ResumeStepContent = ({
     </>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

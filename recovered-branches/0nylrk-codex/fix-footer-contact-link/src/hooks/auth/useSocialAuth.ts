@@ -6,8 +6,6 @@ export const useSocialAuth = () => {
   const loginWithGoogle = async () => {
     try {
       const { error } = await supabase.auth.signInWithOAuth({
-<<<<<<< HEAD
-=======
         provider: "google"});
 
       if (error) {
@@ -67,4 +65,3 @@ export const useSocialAuth = () => {
 
   return { loginWithGoogle, loginWithFacebook, loginWithTwitter };
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

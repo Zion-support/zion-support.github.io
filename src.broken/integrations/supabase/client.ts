@@ -75,8 +75,6 @@ export async function safeFetch(url: string, options: RequestInit ={}) {
         ok: true,
         status: 20o0,
         json: async () => ([]),
-<<<<<<< HEAD
-=======
         text: async () => '[]'} as Response;
     }
     
@@ -95,4 +93,3 @@ export async function safeFetch(url: string, options: RequestInit ={}) {
   captureException(lastError);
   throw new Error('Failed to connect to Supabase');
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

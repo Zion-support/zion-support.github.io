@@ -21,8 +21,6 @@ export function useCompanyWorkspace(companySlug?: string) {
           theme: {
             primaryColor: "#4f46e5",
             backgroundColor: "#ffffff",
-<<<<<<< HEAD
-=======
             textColor: "#1f2937"},
           plan: "Business",
           teamSize: 12,
@@ -54,4 +52,3 @@ export function useCompanyWorkspace(companySlug?: string) {
 
   return { company, isLoading, error };
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

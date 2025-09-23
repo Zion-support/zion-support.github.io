@@ -4,8 +4,6 @@ export type PdfExportButtonProps ={
   theme?: 'light' | 'dark';
 };
 
-<<<<<<< HEAD
-=======
 export default function PdfExportButton({ targetRefileName = 'resume.pdf' }: PdfExportButtonProps) {
   const onClick = async () => {
     if (!targetRef.current) return;
@@ -35,4 +33,3 @@ export default function PdfExportButton({ targetRefileName = 'resume.pdf' }: Pdf
     </button>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,10 +1,8 @@
-<<<<<<< HEAD
       "timestamp": new Date().toISOString(),
       "totalFiles": files.length,
       "fixedFiles": this.fixedFiles.length,
       "errors": this.errors,
       "fixedFileList": this.fixedFiles};
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -192,7 +190,6 @@ class BatchSyntaxFixer {
       errors: this.errors,
       fixedFileList: this.fixedFiles,
     };
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     fs.writeFileSync(
       path.join(this.projectRoot, 'batch-syntax-fix-report.json'),
@@ -206,8 +203,6 @@ class BatchSyntaxFixer {
 // Run the fixer
 const fixer = new BatchSyntaxFixer();
 fixer.run().catch(console.error);
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -237,7 +232,6 @@ const { execSync } = require('child_process')
         line.includes('')
         !line.endsWith('')
         return line + ''
->>>>>>> main
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main

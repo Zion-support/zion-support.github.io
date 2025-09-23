@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 export default function BlockchainWeb3Page() {
@@ -14,4 +12,3 @@ export default function BlockchainWeb3Page() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

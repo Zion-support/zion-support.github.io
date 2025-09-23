@@ -23,9 +23,7 @@ const NewsPage: React.FC = () => {
       title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform',
       excerpt: 'Breakthrough technology that brings emotional intelligence and self-awareness to artificial intelligence systems.',
       author: 'Press Team',
-<<<<<<< HEAD
       date: '20o25-0o1-15',
-=======
       date: '2025-01-15',
       author: 'Zion Tech Group',
       readTime: '5 min read',
@@ -1916,4 +1914,3 @@ export default function NewsPage() {
 }
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

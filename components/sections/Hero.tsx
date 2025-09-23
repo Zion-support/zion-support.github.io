@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import React from 'react',
 import React from 'react';
@@ -274,7 +272,6 @@ const Hero: React.FC<HeroProps> = ({;
                 <Button
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   href={secondaryAction.href}
                   variant="outline"
                   size="lg"

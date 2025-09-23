@@ -1,7 +1,5 @@
 =======
 import {cn} from '@/lib/utils';
-<<<<<<< HEAD
-=======
 =======
 import {cn} from '@/lib/utils';
 =======
@@ -28,7 +26,6 @@ export function EnhancedCard("props": "any) {;
     const classes = cn(baseClasses", variantClasses[variant], hoverClasses, interactiveClasses, className);
     if (href) {;
         return (<a href={href} className={classes} onClick={onClick}>;
->>>>>>> pr-11935
 export function EnhancedCard($1) {
     const baseClasses = 'rounded-xl transition-all duration-300';
     const variantClasses = {
@@ -62,11 +59,8 @@ export function EnhancedCardFooter("props": "any) {;
 // Enhanced Card Header component
 
 ;
-<<<<<<< HEAD:backup-merge-conflicts/EnhancedCard.jsx.backup
-=======
 ;
 ;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/EnhancedCard.jsx
 ;
 }>;

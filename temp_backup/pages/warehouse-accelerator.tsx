@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, BarChart2, Star } from 'lucide-react';
@@ -55,4 +53,3 @@ export default function WarehouseAcceleratorPage() {
 		</UltraAdvancedFuturisticBackground>
 	);
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,7 +1,5 @@
 
 import { GradientHeading } from "./GradientHeading";
-<<<<<<< HEAD
-=======
 import { CardContentCardFooter } from "@/components/ui/card";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
@@ -73,4 +71,3 @@ export function BlogSection() {
     </section>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

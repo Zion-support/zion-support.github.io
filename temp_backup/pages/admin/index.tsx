@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import AdminTable from '../../components/admin/AdminTable',
 
 export default function AdminDashboard() {
@@ -13,4 +11,3 @@ export default function AdminDashboard() {
     </div>
   ),
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

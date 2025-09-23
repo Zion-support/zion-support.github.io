@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 import type { GrantApplication, MilestonesUpdatePayload } from '../../../../types/grants';
 
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
@@ -46,7 +45,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json({ milestones: existing.milestones || [] });
   }
 
-=======
 
 import type {
 
@@ -184,12 +182,10 @@ function write_grant() {
     return res.status(200).json({ milestones: existing.milestones || [] })
 
   }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   if (req.method === 'POST') {
     const existing = readGrant(id);
     if (!existing) return res.status(404).json({ error: 'Not found' });
     const payload = req.body as MilestonesUpdatePayload;
-<<<<<<< HEAD
     existing.milestones = payload.milestones || [];
     existing.updatedAt = new Date().toISOString();
     writeGrant(existing);
@@ -199,7 +195,6 @@ function write_grant() {
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
 }
-=======
     existing.milestones = payload.milestones |[];
     existing.updatedAt = new Date().toISOString();
 
@@ -321,7 +316,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

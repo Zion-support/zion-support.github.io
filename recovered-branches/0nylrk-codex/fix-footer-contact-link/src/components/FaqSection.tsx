@@ -4,8 +4,6 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-<<<<<<< HEAD
-=======
   AccordionTrigger} from "@/components/ui/accordion";
 import { FileText } from "lucide-react";
 
@@ -63,4 +61,3 @@ export function FaqSection() {
     </section>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

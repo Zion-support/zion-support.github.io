@@ -31,8 +31,6 @@ export function useAISearch() {
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-<<<<<<< HEAD
-=======
           body: JSON.stringify({ query })}
       );
       const data = await response.json();
@@ -78,4 +76,3 @@ export function useAISearch() {
 
   return { results, loading, search };
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

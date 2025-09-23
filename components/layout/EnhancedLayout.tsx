@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 import React, { useEffect } from 'react',
@@ -145,4 +143,3 @@ import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
 
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

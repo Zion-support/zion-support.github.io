@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 
 export default function EntertainmentMediaSolutions() {
@@ -17,7 +16,6 @@ export default function EntertainmentMediaSolutions() {
         </section>
       </div>
     </>
-=======
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { 
@@ -499,6 +497,5 @@ export default function EntertainmentMediaSolutions() {
         </div>
       </section>
     </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   );
 }

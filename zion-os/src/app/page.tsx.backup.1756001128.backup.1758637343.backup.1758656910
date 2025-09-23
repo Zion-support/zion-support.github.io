@@ -4,7 +4,6 @@ export default function HomePage() {
   const { user, isAuthenticated } = useAuth();
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
@@ -219,7 +218,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-=======
     <div className="space-y-12">
       {/* Hero Section */}
       <div className="text-center space-y-6">
@@ -368,7 +366,6 @@ export default function HomePage() {
           Contact Us
         </a>
       </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e179
     </div>
   );
 }

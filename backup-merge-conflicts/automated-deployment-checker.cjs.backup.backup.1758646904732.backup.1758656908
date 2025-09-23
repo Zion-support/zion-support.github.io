@@ -3,7 +3,6 @@ const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
-<<<<<<< HEAD
     this.ensureDirectories()}
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
@@ -14,7 +13,6 @@ const { execSync } = require("child_process")
     }
   checkBuildOutput() {
     this.log("🔍 Checking build output...")
-=======
       fs.mkdirSync(this.reportsDir, { "recursive"})
     this.log(" Checking build output...")
     const buildDir = path.join(this.projectRoot, ".next")
@@ -62,4 +60,3 @@ const { execSync } = require("child_process")
 // console.log(` Package.json "scripts": ${Object.values(results.packageJson).filter(v => typeof v === "boolean"`})
     console.log(` Netlify "config"`)
     console.log(` Git status "clean"`)
->>>>>>> main

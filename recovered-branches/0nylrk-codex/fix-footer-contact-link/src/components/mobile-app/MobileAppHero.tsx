@@ -1,7 +1,5 @@
 
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-=======
 import { ArrowRightPhone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AppStoreButtons } from "./AppStoreButtons";
@@ -50,4 +48,3 @@ export const MobileAppHero: React.FC = () => {
     </section>
   );
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

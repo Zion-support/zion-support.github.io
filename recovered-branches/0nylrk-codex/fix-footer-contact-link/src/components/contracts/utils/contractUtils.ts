@@ -40,8 +40,6 @@ export async function generateContract(
       paymentTerms: values.paymentTerms,
       paymentAmount: values.paymentAmount,
       additionalClauses: additionalClauses,
-<<<<<<< HEAD
-=======
       milestones: milestoneData}
   });
   
@@ -55,4 +53,3 @@ export async function generateContract(
     throw new Error("Failed to generate contract");
   }
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

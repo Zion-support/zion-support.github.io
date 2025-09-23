@@ -21,8 +21,6 @@ export const MOCK_PROFILES: Record<string, ProfileData> ={
       { name: "Cloud Infrastructure", level: 4, endorsements: 62 },
       { name: "Enterprise Solutions", level: 5, endorsements: 93 },
       { name: "Data Engineering", level: 4, endorsements: 54 },
-<<<<<<< HEAD
-=======
       { name: "API Development", level: 4, endorsements: 48 }],
     projects: [
       {
@@ -166,4 +164,3 @@ export const MOCK_PROFILES: Record<string, ProfileData> ={
     }
   }
 };
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 import {MapPin} from "lucide-react";
 import {PaymentButton} from "@/components/transactions/PaymentButton";
@@ -73,7 +71,6 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

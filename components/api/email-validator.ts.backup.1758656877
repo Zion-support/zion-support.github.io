@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
  import type { NextApiRequest, NextApiResponse } from 'next';
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface EmailValidationResult {
   email: string;
   is_valid: boolean;
@@ -16,17 +13,13 @@ interface EmailValidationResult {
 interface EmailValidationResult {
   email: string;
   isValid: boolean;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   score: number;
   suggestions: string[];
   details: {
     hasValidFormat: boolean;
     hasValidDomain: boolean;
     hasValidMX: boolean;
-<<<<<<< HEAD
     isDisposable: boolean;
     isRoleBased: boolean;
     isFreeProvider: boolean;
@@ -76,7 +69,6 @@ export default async function handler(
       'icloud.com', 'protonmail.com', 'mail.com', 'yandex.com'
     ];
     const isFreeProvider = freeProviders.some(provider => domain === provider);
-=======
 
 
 
@@ -132,7 +124,6 @@ export default async function handler(
 
     const isFreeProvider = freeProviders && freeProviders.some(provider => domain === provider);
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     // Calculate score (0-100)
     let score = 100;
@@ -141,7 +132,6 @@ export default async function handler(
     if (isDisposable) score -= 30;
     if (isRoleBased) score -= 15;
     if (isFreeProvider) score -= 10;
-<<<<<<< HEAD
 
     // Generate suggestions
     const suggestions: string[] = [];
@@ -179,7 +169,6 @@ export default async function handler(
     res.status(500).json({ error: 'Internal server error' });
   }
 }
-=======
     // Generate suggestions
     const suggestions: string[] = []
     if (!hasValidFormat) {
@@ -270,4 +259,3 @@ const result: EmailValidationResult = {
   }
 }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

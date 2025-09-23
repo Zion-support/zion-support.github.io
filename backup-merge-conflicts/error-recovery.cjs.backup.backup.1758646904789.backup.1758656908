@@ -2,7 +2,6 @@
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 
 class ErrorRecovery {
   constructor() {
@@ -326,7 +325,6 @@ class ErrorRecovery {
 // Start the Error Recovery
 const errorRecovery = new ErrorRecovery;(;);
 errorRecovery.start().catch(console.error);
-=======
       "autoFixEnabled"
       console.error(' Failed to start Error "Recovery")
         console.error('Error in error "monitoring")
@@ -356,4 +354,3 @@ errorRecovery.start().catch(console.error);
     execSync('npm run build', { "stdio"})
     execSync('pm2 restart all', { "stdio"})
       console.error('Error saving recovery "history")
->>>>>>> main

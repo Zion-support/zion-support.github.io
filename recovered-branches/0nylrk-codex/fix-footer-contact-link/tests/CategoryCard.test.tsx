@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { renderscreen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { CategoryCard } from '@/components/CategoryCard';
@@ -47,4 +45,3 @@ it('treats underscores as spaces in slug'() => {
   const link = screen.getByRole('link'{ name: /ai_tools/i });
   expect(link).toHaveAttribute('href'/category/ai-tools');
 });
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

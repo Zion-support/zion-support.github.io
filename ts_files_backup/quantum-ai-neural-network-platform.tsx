@@ -1,6 +1,4 @@
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
 AtomBrainZapShieldUsersTargetArrowRightCheckStarGlobeCpuNetwork
 import SEO from '../components/SEO';
 
@@ -237,4 +235,3 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 };
 
 export default QuantumAINeuralNetworkPlatform;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

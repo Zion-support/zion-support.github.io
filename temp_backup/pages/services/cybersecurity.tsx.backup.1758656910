@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   Shield, Lock, Eye, Zap, Cpu, Database, 
@@ -203,7 +202,6 @@ export default function CybersecurityServicesPage() {
 
       <EnhancedFooter />
     </div>
-=======
 
 export default function CybersecurityPage() {
   return (
@@ -222,6 +220,5 @@ export default function CybersecurityPage() {
         </div>
       </div>
     </>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   );
 }

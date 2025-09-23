@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { CountryServiceSelector } from "../CountryServiceSelector";
 
@@ -14,7 +13,6 @@ export function ServiceDetailsSection({ selectedCountry, setSelectedCountry }: S
       {selectedCountry ? (
         <CountryServiceSelector 
           selectedCountry={selectedCountry}
-=======
 
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { CountryServiceSelector } from "../CountryServiceSelector";
@@ -43,12 +41,10 @@ export function ServiceDetailsSection({
       {selected_country ? (
         <CountryServiceSelector;
           selected_country={selected_country}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           onCountryChange={setSelectedCountry}
         />
       ) : (
         <div className="text-center">
-<<<<<<< HEAD
           <h2 className="text-2xl font-bold text-white mb-4">Select a Country for Details</h2>
           <p className="text-zion-slate-light mb-6">
             Choose a country from the options above to see service details and pricing
@@ -58,7 +54,6 @@ export function ServiceDetailsSection({
     </div>
   );
 }
-=======
           <h2 className="text-2xl font-bold text-white mb-4">
             Select a Country for Details
           </h2>
@@ -131,7 +126,6 @@ export function ServiceDetailsSection(): any ({ selectedCountry, setSelectedCoun
     </div>);
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

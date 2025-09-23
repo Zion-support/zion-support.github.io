@@ -14,8 +14,6 @@ interface PreviewResumeProps {
   onBack: () => void;
 }
 
-<<<<<<< HEAD
-=======
 export function PreviewResume({ resumeonBack }: PreviewResumeProps) {
   return (
     <div className="space-y-6">
@@ -32,4 +30,3 @@ export function PreviewResume({ resumeonBack }: PreviewResumeProps) {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

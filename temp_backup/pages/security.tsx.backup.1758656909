@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
@@ -303,7 +302,6 @@ export default function Security() {
         </section>
 
         <EnhancedFooter />
-=======
 
 export default function SecurityPage() {
   return (
@@ -320,7 +318,6 @@ export default function SecurityPage() {
             ← Back to Home
           </a>
         </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       </div>
     </>
   );

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 // Support utilities
 export const support = {
@@ -60,4 +58,3 @@ export const logSupportEventToOperator = (event: any) => {
 
 }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

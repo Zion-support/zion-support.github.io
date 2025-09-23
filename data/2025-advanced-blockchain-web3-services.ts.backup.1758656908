@@ -1,8 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface AdvancedBlockchainWeb3Service {
   id: string;
   name: string;
@@ -17,11 +14,8 @@ export interface AdvancedBlockchainWeb3Service {
   textColor: string;
   link: string;
   marketPosition: string;
-<<<<<<< HEAD
   targetAudience: string;
-=======
   targetAudience: string[];
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   trialDays: number;
   setupTime: string;
   category: string;
@@ -33,10 +27,7 @@ export interface AdvancedBlockchainWeb3Service {
   competitors: string[];
   marketSize: string;
   growthRate: string;
-<<<<<<< HEAD
   variant: string;
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   contactInfo: {
     mobile: string;
     email: string;
@@ -50,7 +41,6 @@ export interface AdvancedBlockchainWeb3Service {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
 
 export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[] = [
   // DeFi Yield Optimization Platform
@@ -316,7 +306,6 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     customers: 123,
     rating: 4.7,
     reviews: 45
-=======
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -593,6 +582,5 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     customers: 18,
     rating: 4.7,
     reviews: 35
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 ];

@@ -2,7 +2,6 @@
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-<<<<<<< HEAD
 class MergeConflictResolver {
   constructor() {
     this.resolvedFiles = []
@@ -60,7 +59,6 @@ class MergeConflictResolver {
 const resolver = new MergeConflictResolver()
 resolver.resolveConflicts().then(() => {
   })
-=======
 // console.log(' Merge Conflict Resolver')
 console.log('=====')
       const conflictFiles = execSync('git diff --name-only --diff-filter=U')
@@ -69,4 +67,3 @@ console.log('=====')
       console.error('Error resolving "conflicts")
   console.log('Run "git add ." and "git commit")
 cursor/fix-lint-push-and-merge-to-main-f3c1;
->>>>>>> main

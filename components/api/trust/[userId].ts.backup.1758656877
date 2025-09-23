@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import { computeTrustScore } from '../../../utils/trust/compute';
 import type { TrustMetricInputs, TrustScoreBreakdown } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
@@ -77,7 +76,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const analysis = await analyzeWithGPT(userId, inputs);
         reasonSummary = analysis.reasonSummary;
         riskLevelOverride = analysis.riskLevel;
-=======
 
 
 import { computeTrustScore } from '../../../utils/trust/compute';
@@ -172,13 +170,11 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
         riskLevel: riskLevelOverride || breakdown && breakdown.riskLevel,
       };        riskLevelOverride = analysis && analysis.riskLevel
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       }
 
       const breakdown = await computeTrustScore(inputs, { reasonSummary });
       const result: TrustScoreBreakdown = {
         ...breakdown,
-<<<<<<< HEAD
         riskLevel: riskLevelOverride || breakdown.riskLevel,
       };
 
@@ -193,7 +189,6 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
     }
   }
 
-=======
         riskLevel: riskLevelOverride || breakdown && breakdown.riskLevel,
       };
 
@@ -210,13 +205,11 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
     };
 
   }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   if (req.method === 'POST') {
     try {
       const body = req.body as Partial<TrustMetricInputs> | undefined;
       if (!body) return res.status(400).json({ error: 'Missing body' });
 
-<<<<<<< HEAD
       const inputs = body as TrustMetricInputs;
       const breakdown = await computeTrustScore(inputs);
 
@@ -234,7 +227,6 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
   res.setHeader('Allow', 'GET, POST');
   return res.status(405).json({ error: 'Method not allowed' });
 }
-=======
       return res && res.status(200).json(result)
     } catch (e: any) {
       return res && res.status(500).json({ error: e?.message || 'Failed to compute trust score' })
@@ -442,4 +434,3 @@ if ( {) {
 }
   return res.status(405).json({ error: 'Method not allowed' });
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

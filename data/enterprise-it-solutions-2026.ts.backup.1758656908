@@ -1,8 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface EnterpriseITSolutions2026 {
   id: string;
   name: string;
@@ -43,10 +40,7 @@ export interface EnterpriseITSolutions2026 {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
   // Zero Trust Network Architecture
   {
@@ -100,10 +94,7 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     rating: 4.9,
     reviews: 112
   },
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Edge Computing Orchestration Platform
   {
     id: 'edge-computing-orchestration-platform',
@@ -156,10 +147,7 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     rating: 4.8,
     reviews: 156
   },
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // 5G Private Network Solutions
   {
     id: '5g-private-network-solutions',
@@ -212,10 +200,7 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     rating: 4.9,
     reviews: 67
   },
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Blockchain Infrastructure Platform
   {
     id: 'blockchain-infrastructure-platform',
@@ -268,10 +253,7 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     rating: 4.8,
     reviews: 198
   },
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // AI-Powered IT Operations Center
   {
     id: 'ai-powered-it-operations-center',

@@ -3,8 +3,6 @@ import {
   Dialog,
   DialogContent,
   DialogHeader,
-<<<<<<< HEAD
-=======
   DialogTitle} from '@/components/ui/dialog';
 import { AIEnhancementPanel } from './AIEnhancementPanel';
 import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
@@ -47,4 +45,3 @@ export function AIEnhancementDialog({
     </Dialog>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

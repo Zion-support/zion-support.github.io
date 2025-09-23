@@ -2,18 +2,14 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Accessibility Statement - Zion Tech Group",
-<<<<<<< HEAD
   description: "Zion Tech Group's commitment to digital accessibility and ensuring our website is usable by people with disabilities.",
   keywords: "accessibility, digital accessibility, WCAG, disability access, Zion Tech Group",
-=======
   description: "Learn about Zion Tech Group's commitment to digital accessibility and how we ensure our website is accessible to all users.",
   keywords: "accessibility, digital accessibility, WCAG, inclusive design, Zion Tech Group",
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
 };
 
 export default function AccessibilityPage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Hero Section */}
@@ -151,7 +147,6 @@ export default function AccessibilityPage() {
                     <li>• Switch navigation devices</li>
                     <li>• Magnification software</li>
                     <li>• High contrast mode</li>
-=======
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -242,12 +237,10 @@ export default function AccessibilityPage() {
                     <li>• Audio descriptions</li>
                     <li>• Transcripts for audio content</li>
                     <li>• Pause/stop controls</li>
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
                   </ul>
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
           </section>
 
           {/* Known Issues */}
@@ -458,7 +451,6 @@ export default function AccessibilityPage() {
                 Contact Us
               </Link>
               <a href="mailto:accessibility@ziontechgroup.com" className="btn-secondary">
-=======
 
             {/* Assistive Technologies */}
             <div>
@@ -648,18 +640,14 @@ export default function AccessibilityPage() {
                 Contact Us
               </Link>
               <a href="mailto:accessibility@ziontechgroup.com" className="btn-secondary text-lg px-8 py-4">
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
                 Accessibility Feedback
               </a>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
       </div>
-=======
         </div>
       </section>
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
     </div>
   );
 }

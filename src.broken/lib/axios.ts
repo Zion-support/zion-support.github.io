@@ -31,8 +31,6 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
         : '';
       const headers = {
         ...instance.defaults.headers.common,
-<<<<<<< HEAD
-=======
         ...(init as any).headers};
       const opts = { ...init, headers } as RequestInit;
       delete (opts as any).params;
@@ -84,4 +82,3 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
 
 // Export the function instead of calling it immediately to avoid temporal dead zone issues
 export default createAxiosInstance;
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

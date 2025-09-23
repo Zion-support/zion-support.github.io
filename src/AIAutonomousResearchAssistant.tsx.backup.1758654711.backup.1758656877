@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 
 export default function AIAutonomousResearchAssistant() {
@@ -10,7 +9,6 @@ export default function AIAutonomousResearchAssistant() {
       </div>
     </div>
   );
-=======
 import React from 'react';
 
 export default function AIAutonomousResearchAssistant() {
@@ -22,5 +20,4 @@ export default function AIAutonomousResearchAssistant() {
 			</div>
 		</div>
 	);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2af7
 }

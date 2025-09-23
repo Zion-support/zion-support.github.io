@@ -33,8 +33,6 @@ function stripPii(text) {
   if (!text) return text;
   let result = text;
   // Emails
-<<<<<<< HEAD
-=======
   result = result.replace(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2}\b/gi, '[email]');
   // US-style phone numbers
   result = result.replace(/\b\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/g, '[phone]');
@@ -116,4 +114,3 @@ async function main() {
 main().catch((err) => {
   console.error('Training workflow failed', err);
 });
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

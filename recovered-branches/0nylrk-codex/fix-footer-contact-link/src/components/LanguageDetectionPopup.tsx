@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { useStateuseEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
@@ -73,4 +71,3 @@ export function LanguageDetectionPopup() {
     </AlertDialog>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

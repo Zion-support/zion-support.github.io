@@ -2,8 +2,6 @@ import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
 
 export default function BrowserAutomationCloudPage() {
-<<<<<<< HEAD
-=======
 	const features = [
 		'Parallel Playwright/Puppeteer execution',
 		'Queued jobs with retries and rate limits',
@@ -42,5 +40,4 @@ export default function BrowserAutomationCloudPage() {
 		</>
 	);
 }
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

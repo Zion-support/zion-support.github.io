@@ -9,8 +9,6 @@ type ToggleGroupContextProps = VariantProps<typeof toggleVariants>
 
 const ToggleGroupContext = React.createContext<ToggleGroupContextProps>({
   size: "default",
-<<<<<<< HEAD
-=======
   variant: "default"})
 
 const ToggleGroup = React.forwardRef<
@@ -59,4 +57,3 @@ const ToggleGroupItem = React.forwardRef<
 ToggleGroupItem.displayName = ToggleGroupPrimitive.Item.displayName
 
 export { ToggleGroupItem }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

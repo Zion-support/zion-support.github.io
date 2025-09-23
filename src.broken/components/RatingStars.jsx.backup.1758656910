@@ -1,5 +1,4 @@
 import { Star, StarHalf } from 'lucide-react';
-<<<<<<< HEAD
 
 export function RatingStars({ value = 0 }) {
   const filled = Math.floor(value);
@@ -18,7 +17,6 @@ export function RatingStars({ value = 0 }) {
       })}
     </div>
   );
-=======
 export function RatingStars({ value = 0 }) {
     const filled = Math.floor(value);
     const half = value - filled >= 0.5;
@@ -33,5 +31,4 @@ export function RatingStars({ value = 0 }) {
             return <Star key={i} data-testid="star-outline" className="h-4 w-4 text-gray-300"/>;
         })}
     </div>);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

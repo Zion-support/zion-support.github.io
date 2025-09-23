@@ -3,7 +3,6 @@
  * Comprehensive Automation Orchestrator;
  * Orchestrates all automation scripts for maximum efficiency;
  */;
-<<<<<<< HEAD
 const fs = require("$1");
 const path = require("$1");
 const { execSync, spawn } = require("child_process");
@@ -344,7 +343,6 @@ if (require.main === module) {;
   orchestrator.orchestrateAutomation().catch(console.error),}
 ;
 module.exports = ComprehensiveAutomationOrchestrator
-=======
 const fs = require("$1")
 const path = require("$1")
 const { execSync, spawn } = require("child_process")
@@ -495,4 +493,3 @@ ${report.nextSteps.map(item => `- ${item}`).join("\n"`)
     const reportPath = path.join(this.reportsDir, "comprehensive-automation-report.json")
     this.log(" Starting Comprehensive Automation Orchestrator")
       this.log(")
->>>>>>> main

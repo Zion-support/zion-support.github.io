@@ -14,10 +14,7 @@ export interface NewOperationalService2025 {
     address: string;
   };
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const newOperationalServices2025: NewOperationalService2025[] = [
   {
     id: "smart-operations-center",

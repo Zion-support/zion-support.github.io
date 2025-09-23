@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 // Mock database utility
 import fs from 'fs';
@@ -29,7 +27,6 @@ export function writeJsonFile<T>(fileName: string, data: T): void {;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const filePath = getFilePath(fileName);
   const tmpPath = `${filePath}.tmp`;
   fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8');

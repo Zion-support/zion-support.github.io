@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Scale, CheckCircle, Globe, Shield, FileText, Users, Mail, Phone, MapPin } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
@@ -352,7 +351,6 @@ export default function Compliance() {
         </section>
 
         <EnhancedFooter />
-=======
 
 export default function CompliancePage() {
   return (
@@ -369,7 +367,6 @@ export default function CompliancePage() {
             ← Back to Home
           </a>
         </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       </div>
     </>
   );

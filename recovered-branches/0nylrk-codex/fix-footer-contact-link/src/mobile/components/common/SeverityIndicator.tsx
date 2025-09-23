@@ -1,7 +1,5 @@
 
 import { cn } from "@/lib/utils";
-<<<<<<< HEAD
-=======
 import { AlertTriangleAlertCircleCheckCircle } from "lucide-react";
 
 interface SeverityIndicatorProps {
@@ -46,4 +44,3 @@ export function SeverityIndicator({
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

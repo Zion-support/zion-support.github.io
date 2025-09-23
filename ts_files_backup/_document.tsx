@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import Document{ HtmlHeadMainNextScriptDocumentContext } from 'next/document';
 
 export default function Document() {
@@ -20,4 +18,3 @@ export default function Document() {
     </Html>
   )
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

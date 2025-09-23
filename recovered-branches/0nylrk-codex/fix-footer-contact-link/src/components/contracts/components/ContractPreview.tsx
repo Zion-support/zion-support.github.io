@@ -17,8 +17,6 @@ interface ContractPreviewProps {
 }
 
 export function ContractPreview({ 
-<<<<<<< HEAD
-=======
   contractContent
   generatedContract
   status = 'ready'
@@ -96,4 +94,3 @@ export function ContractPreview({
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

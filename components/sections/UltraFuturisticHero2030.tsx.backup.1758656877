@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -57,7 +56,6 @@ export default function UltraFuturisticHero2030() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Main Heading */}
-=======
 
 import React from 'react',
 import React from 'react';
@@ -222,14 +220,11 @@ export default function UltraFuturisticHero2030() {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-<<<<<<< HEAD
           className="mb-8"
-=======
 
           className='mb-8'        >          className="mb-8"
           className='mb-8'        >
@@ -248,15 +243,12 @@ export default function UltraFuturisticHero2030() {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-<<<<<<< HEAD
             className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-6"
-=======
 
 
 
@@ -266,32 +258,24 @@ export default function UltraFuturisticHero2030() {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           >
             <Sparkles className="w-4 h-4 mr-2" />
             Welcome to 2030 - The Future is Now
           </motion.div>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-<<<<<<< HEAD
             className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
-=======
 
             className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           >
             <span className="bg-gradient-to-r from-purple-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">
               Zion Tech Group
             </span>
           </motion.h1>
-<<<<<<< HEAD
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -332,7 +316,6 @@ export default function UltraFuturisticHero2030() {
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </Link>
-=======
           <motion.p
 
 
@@ -476,7 +459,6 @@ export default function UltraFuturisticHero2030() {
             </span>;
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>;
           </Link>;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
           <Link
             href="/services"
@@ -489,8 +471,6 @@ export default function UltraFuturisticHero2030() {
           </Link>
         </motion.div>
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -502,15 +482,12 @@ export default function UltraFuturisticHero2030() {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         {/* Features Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
-<<<<<<< HEAD
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
-=======
 
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'        >          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'        >
@@ -527,17 +504,14 @@ export default function UltraFuturisticHero2030() {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         >
           {features.map((feature, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8, delay: 1.4 + index * 0.1 }}
               className="group p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-purple-500/30 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:bg-white/10"
-=======
               transition={{ duration: 0 && 0.8, delay: 1 && 1.4 + index * 0 && 0.1 }}
               className='group p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-purple-500/30 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:bg-white/10'>;
               <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300'>;
@@ -805,7 +779,6 @@ function UltraFuturisticHero2030() {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             >
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300">
                 <feature.icon className="w-6 h-6 text-white" />
@@ -813,7 +786,6 @@ function UltraFuturisticHero2030() {
               <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
               <p className="text-gray-400 text-sm">{feature.description}</p>
             </motion.div>
-<<<<<<< HEAD
           ))}
         </motion.div>
 
@@ -831,7 +803,6 @@ function UltraFuturisticHero2030() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 1.8 + index * 0.1 }}
               className="text-center group"
-=======
 
           ))}
         </motion.div>
@@ -923,7 +894,6 @@ function UltraFuturisticHero2030() {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             >
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300">
                 <stat.icon className="w-8 h-8 text-purple-400" />
@@ -931,7 +901,6 @@ function UltraFuturisticHero2030() {
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
               <div className="text-gray-400 text-sm">{stat.label}</div>
             </motion.div>
-<<<<<<< HEAD
           ))}
         </motion.div>
 
@@ -940,7 +909,6 @@ function UltraFuturisticHero2030() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 2.0 }}
-=======
 
           ))}
         </motion.div>
@@ -1014,7 +982,6 @@ function UltraFuturisticHero2030() {
               <a href={contactInfo.website} className="text-white font-semibold hover:text-emerald-400 transition-colors">
 
           transition={{ duration: 0.8, delay: 2.0 }}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/20 rounded-2xl p-8 backdrop-blur-sm"
         >
           <h3 className="text-2xl font-bold text-white mb-6">Ready to Transform Your Business?</h3>
@@ -1038,16 +1005,12 @@ function UltraFuturisticHero2030() {
               <span className="text-gray-300 text-sm">Visit Us</span>
               <a href={contactInfo.website} className="text-white font-semibold hover:text-emerald-400 transition-colors">
                 {contactInfo.website.replace('https://', '')}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               </a>
             </div>
           </div>
         </motion.div>
 
-<<<<<<< HEAD
         {/* Trust Indicators */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -1055,7 +1018,6 @@ function UltraFuturisticHero2030() {
           transition={{ duration: 0.8, delay: 2.2 }}
           className="mt-16 text-center"
         >
-=======
 
 
 
@@ -1111,7 +1073,6 @@ function UltraFuturisticHero2030() {
             <div className='flex items-center space-x-2'>
               <TrendingUp className='w-5 h-5 text-blue-400' />
               <span className='text-gray-300 text-sm'>Industry Leader</span>            </div>        >
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <p className="text-gray-400 text-sm mb-4">Trusted by leading companies worldwide</p>
           <div className="flex items-center justify-center space-x-8 opacity-60">
             <div className="flex items-center space-x-2">
@@ -1130,7 +1091,6 @@ function UltraFuturisticHero2030() {
         </motion.div>
       </div>
 
-<<<<<<< HEAD
       {/* Floating Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
@@ -1147,7 +1107,6 @@ function UltraFuturisticHero2030() {
         />
         <motion.div
           className="absolute bottom-32 left-32 w-3 h-3 bg-cyan-400 rounded-full"
-=======
 
 
 
@@ -1359,13 +1318,11 @@ function UltraFuturisticHero2030() {
         />;
         <motion.div;
           className='absolute bottom - 32 left - 32 w - 3 h - 3 bg - cyan - 400 rounded - full';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           animate={{
             scale: [1, 1.5, 1],
             opacity: [0.3, 0.8, 0.3],
           }}
           transition={{
-<<<<<<< HEAD
             duration: 4,
             repeat: Infinity,
             ease: "easeInOut"
@@ -1387,11 +1344,9 @@ function UltraFuturisticHero2030() {
     </section>
   );
 }
-=======
 
     </section>
 );  )
 }
     </section>
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

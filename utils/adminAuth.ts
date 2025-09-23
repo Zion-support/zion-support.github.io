@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 // Note: This is a Vite project, not Next.js
@@ -193,4 +191,3 @@ export const is_admin = () =>: any {
 };
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

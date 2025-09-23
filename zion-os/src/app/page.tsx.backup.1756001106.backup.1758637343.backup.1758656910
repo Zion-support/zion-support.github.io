@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 
 export default function HomePage() {
@@ -219,7 +218,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-=======
 "use client";
 
 import { useAuth } from "@/contexts/AuthContext";
@@ -357,7 +355,6 @@ export default function HomePage() {
           </Link>
         </p>
       </div>
->>>>>>> origin/cursor/improve-user-onboarding-and-guided-walkthrough-0414
     </div>
   );
 }

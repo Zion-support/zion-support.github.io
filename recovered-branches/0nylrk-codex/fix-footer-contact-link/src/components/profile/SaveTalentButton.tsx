@@ -8,8 +8,6 @@ interface SaveTalentButtonProps {
   isSaved: boolean;
 }
 
-<<<<<<< HEAD
-=======
 export function SaveTalentButton({ talentIdonSaveisSaved }: SaveTalentButtonProps) {
   return (
     <Button
@@ -23,4 +21,3 @@ export function SaveTalentButton({ talentIdonSaveisSaved }: SaveTalentButtonProp
     </Button>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

@@ -1,6 +1,4 @@
 import * as SheetPrimitive from "@radix-ui/react-dialog"
-<<<<<<< HEAD
-=======
 import { cvatype VariantProps } from "class-variance-authority"
 import { X } from "lucide-react"
 import * as React from "react"
@@ -127,4 +125,3 @@ export {
   SheetContentSheetDescriptionSheetFooterSheetHeaderSheetOverlaySheetPortalSheetTitleSheetTrigger
 }
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

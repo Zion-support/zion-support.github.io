@@ -1,9 +1,6 @@
 =======
-<<<<<<< HEAD
-=======
 =======
 "export": interface InnovativeService2027 {
->>>>>>> main
   id: string;
    name: string;
    category: string;

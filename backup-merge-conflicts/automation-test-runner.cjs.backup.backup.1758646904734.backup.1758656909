@@ -3,7 +3,6 @@
  * Automation Test Runner;
  * Tests all automation scripts and reports results;
  */
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -83,7 +82,6 @@ if (require.main === module) {
   runner.runAllTests().catch(console.error)}
 
 module.exports = AutomationTestRunner;
-=======
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -95,4 +93,3 @@ const { execSync } = require('child_process')
       { "path": 'scripts/simple-performance-monitor.cjs', "desc"}
       { "path": 'scripts/simple-code-quality.cjs', "desc"}
           "status"
->>>>>>> main

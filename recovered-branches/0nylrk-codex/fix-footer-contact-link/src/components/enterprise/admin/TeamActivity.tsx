@@ -5,8 +5,6 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
-=======
   TableRow} from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIconSearch } from "lucide-react";
@@ -150,4 +148,3 @@ export function TeamActivity() {
     </div>
   );
 }
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

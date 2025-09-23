@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 
 import {
@@ -1031,4 +1029,3 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 
 
 
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

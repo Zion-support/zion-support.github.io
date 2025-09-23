@@ -1,7 +1,5 @@
 
 };
-<<<<<<< HEAD
-=======
 =======
 
 =======
@@ -23,7 +21,6 @@ export function CardSkeleton("props": "any) {;
     return (<div className = {;
   cn('space-y-4'",;
   className);
->>>>>>> pr-11935
     return (
         <div className = {cn('bg-muted', roundedClasses[rounded], animated && 'animate-pulse',
   className)} style="{{{
