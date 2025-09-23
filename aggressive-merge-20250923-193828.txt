@@ -1,0 +1,30 @@
+🚀 Starting batch merge for cursor branches...
+⏰ Started at: Tue Sep 23 07:38:28 PM UTC 2025
+---
+🔒 Creating backup branch: backup-main-20250923-193828
+Your branch and 'origin/main' have diverged,
+and have 88 and 4 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+📋 Fetching all cursor branches...
+📊 Total branches to process: 8784
+🔄 Starting batch processing...
+---
+🚀 Starting batch 1-5 of 8784
+📊 Batch contains 5 branches
+---
+🔄 Processing batch 1-5 of 8784
+---
+📋 Processing branch 1: cursor/bc-e3d4493c-9c67-4aab-b397-735d366d858b-6298
+🔄 Attempting to merge cursor/bc-e3d4493c-9c67-4aab-b397-735d366d858b-6298...
+Auto-merging package-lock.json
+Auto-merging package.json
+CONFLICT (content): Merge conflict in package.json
+CONFLICT (modify/delete): yarn.lock deleted in origin/cursor/bc-e3d4493c-9c67-4aab-b397-735d366d858b-6298 and modified in HEAD.  Version HEAD of yarn.lock left in tree.
+Automatic merge failed; fix conflicts and then commit the result.
+⚠️  Merge conflicts detected in cursor/bc-e3d4493c-9c67-4aab-b397-735d366d858b-6298, resolving...
+📋 Conflicted files: package.json yarn.lock
+🔧 Resolving conflicts in package.json for branch cursor/bc-e3d4493c-9c67-4aab-b397-735d366d858b-6298...
+⚠️  Found conflicts in package.json, resolving...
+📦 Critical file detected, keeping main version...
+✅ Resolved conflicts in package.json
+🔧 Resolving conflicts in yarn.lock for branch cursor/bc-e3d4493c-9c67-4aab-b397-735d366d858b-6298...
