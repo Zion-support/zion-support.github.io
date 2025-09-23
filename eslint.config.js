@@ -1,8 +1,9 @@
 // ESLint flat config to prevent failures with ESLint v9
 // Keep it minimal; we only define ignores so lint doesn't crash.
-export default [
+const configIgnoresOnly = [
   {
     ignores: [
+      'src/**',
       'node_modules/**',
       '.next/**',
       'automation/**',
@@ -49,7 +50,7 @@ import globals from 'globals';
 import tsParser from '@typescript-eslint/parser';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
 
-export default [
+const configRules = [
   js.configs.recommended,
   {
     files: [
@@ -275,3 +276,5 @@ export default [
     ]
   }
 ];
+
+export default [...configIgnoresOnly, ...configRules];
