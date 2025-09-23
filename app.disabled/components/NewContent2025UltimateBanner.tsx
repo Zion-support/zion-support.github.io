@@ -1,10 +1,14 @@
 <<<<<<< HEAD:app.disabled/components/NewContent2025UltimateBanner.tsx
+<<<<<<< HEAD:app.disabled/components/NewContent2025UltimateBanner.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/check-fix-push-and-merge-to-main-8578:app/components/NewContent2025UltimateBanner.tsx
 'use client';
 
 <<<<<<< HEAD:app.disabled/components/NewContent2025UltimateBanner.tsx
 import Link from 'next/link';
+<<<<<<< HEAD:app.disabled/components/NewContent2025UltimateBanner.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { TrendingUp } from 'lucide-react';
@@ -337,6 +341,8 @@ export default function NewContent2025UltimateBanner() {
 =======
 import React from 'react';
 import Link from 'next/link';
+=======
+>>>>>>> cursor/check-fix-push-and-merge-to-main-8578:app/components/NewContent2025UltimateBanner.tsx
 
 const NewContent2025UltimateBanner: React.FC = () => {
 	return (
@@ -355,9 +361,9 @@ const NewContent2025UltimateBanner: React.FC = () => {
 			</div>
 		</section>
 	);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-966c
 };
 
+<<<<<<< HEAD:app.disabled/components/NewContent2025UltimateBanner.tsx
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8
 export default NewContent2025UltimateBanner;
@@ -405,3 +411,6 @@ export default function NewContent2025UltimateBanner() {
   );
 }
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295:app/components/NewContent2025UltimateBanner.tsx
+=======
+export default NewContent2025UltimateBanner;
+>>>>>>> cursor/check-fix-push-and-merge-to-main-8578:app/components/NewContent2025UltimateBanner.tsx
