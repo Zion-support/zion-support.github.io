@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -7,11 +8,16 @@ import Link from 'next/link';
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850:app/tools/quantum-ai-readiness-assessment-2026/page.tsx
 =======
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf
 <<<<<<< HEAD:app-disabled/tools/quantum-ai-readiness-assessment-2026/page.tsx
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf
 interface AssessmentResults {
   overallScore: number;
   readinessLevel: string;
@@ -72,13 +78,18 @@ export default function QuantumAIReadinessAssessment() {
   const calculateReadiness = () => {
     setIsCalculating(true);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
+=======
+    
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf
     setTimeout(() => {
       const orgSize = organizationSizes[formData.organizationSize as keyof typeof organizationSizes];
       const industry = industries[formData.industry as keyof typeof industries];
       const budget = budgetLevels[formData.budget as keyof typeof budgetLevels];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       const technicalScore = (formData.currentAIMaturity + formData.quantumAwareness + formData.technicalCapabilities) * 8.33;
@@ -87,6 +98,8 @@ export default function QuantumAIReadinessAssessment() {
       const overallScore = Math.round((technicalScore + businessScore + dataScore) / 3);
 
 =======
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf
       
       // Calculate overall score (0-100)
       const technicalScore = (formData.currentAIMaturity + formData.quantumAwareness + formData.technicalCapabilities) * 8.33;
@@ -96,12 +109,16 @@ export default function QuantumAIReadinessAssessment() {
       const overallScore = Math.round((technicalScore + businessScore + dataScore) / 3);
       
       // Determine readiness level
+<<<<<<< HEAD
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf
       let readinessLevel = '';
       if (overallScore >= 80) readinessLevel = 'Quantum Ready';
       else if (overallScore >= 60) readinessLevel = 'Near Ready';
       else if (overallScore >= 40) readinessLevel = 'Developing';
       else readinessLevel = 'Early Stage';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       const recommendations = generateRecommendations(overallScore, formData);
@@ -110,6 +127,8 @@ export default function QuantumAIReadinessAssessment() {
       const expectedROI = calculateExpectedROI(overallScore, industry.quantumPotential);
 
 =======
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf
       
       // Generate recommendations
       const recommendations = generateRecommendations(overallScore, formData);
@@ -121,7 +140,10 @@ export default function QuantumAIReadinessAssessment() {
       const estimatedInvestment = budget.base * orgSize.multiplier * industry.quantumPotential;
       const expectedROI = calculateExpectedROI(overallScore, industry.quantumPotential);
       
+<<<<<<< HEAD
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf
       setResults({
         overallScore,
         readinessLevel,
@@ -132,14 +154,19 @@ export default function QuantumAIReadinessAssessment() {
         timeline: formData.timeline
       });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
+=======
+      
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf
       setIsCalculating(false);
     }, 2000);
   };
 
   const generateRecommendations = (score: number, data: any) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
     const recommendations: string[] = [];
     if (data.currentAIMaturity < 3) recommendations.push('Develop foundational AI capabilities before quantum implementation');
@@ -149,6 +176,8 @@ export default function QuantumAIReadinessAssessment() {
     if (data.changeManagement < 3) recommendations.push('Develop comprehensive change management strategy');
     if (data.dataComplexity < 3) recommendations.push('Enhance data quality and complexity for quantum processing');
 =======
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf
     const recommendations = [];
     
     if (data.currentAIMaturity < 3) {
@@ -175,21 +204,29 @@ export default function QuantumAIReadinessAssessment() {
       recommendations.push('Enhance data quality and complexity for quantum processing');
     }
     
+<<<<<<< HEAD
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf
     if (score >= 80) {
       recommendations.push('Proceed with quantum AI pilot program');
       recommendations.push('Establish quantum computing partnerships');
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
+=======
+    
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf
     return recommendations;
   };
 
   const createImplementationRoadmap = (level: string, data: any) => {
     const roadmaps = {
       'Early Stage': [
+<<<<<<< HEAD
 <<<<<<< HEAD
         { phase: 'Foundation Building', duration: '6-12 months', keyActivities: ['AI maturity assessment and improvement', 'Quantum computing education programs', 'Technical team development', 'Data quality enhancement'] },
         { phase: 'Pilot Planning', duration: '3-6 months', keyActivities: ['Pilot project identification', 'Technology partner selection', 'Budget allocation and approval', 'Stakeholder engagement'] }
@@ -219,6 +256,8 @@ export default function QuantumAIReadinessAssessment() {
   const getScoreColor = (score: number) => (score >= 80 ? 'text-green-600' : score >= 60 ? 'text-blue-600' : score >= 40 ? 'text-yellow-600' : 'text-red-600');
   const getReadinessColor = (level: string) => ({ 'Quantum Ready': 'bg-green-100 text-green-800', 'Near Ready': 'bg-blue-100 text-blue-800', 'Developing': 'bg-yellow-100 text-yellow-800' }[level] || 'bg-red-100 text-red-800');
 =======
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf
         {
           phase: 'Foundation Building',
           duration: '6-12 months',
@@ -350,11 +389,15 @@ export default function QuantumAIReadinessAssessment() {
       default: return 'bg-red-100 text-red-800';
     }
   };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf
 
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Quantum AI Readiness Assessment 2026</h1>
@@ -366,6 +409,8 @@ export default function QuantumAIReadinessAssessment() {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Assessment Questions</h2>
 
 =======
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -382,7 +427,10 @@ export default function QuantumAIReadinessAssessment() {
           <div className="bg-white rounded-xl shadow-lg p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Assessment Questions</h2>
             
+<<<<<<< HEAD
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf
             {/* Organization Size */}
             <div className="mb-6">
               <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -605,10 +653,14 @@ export default function QuantumAIReadinessAssessment() {
           <div className="bg-white rounded-xl shadow-lg p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Assessment Results</h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
+=======
+            
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf
             {results ? (
               <div className="space-y-6">
                 {/* Overall Score */}
@@ -738,7 +790,10 @@ export default function QuantumAIReadinessAssessment() {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf
 =======
 export const metadata = { title: 'Quantum AI Readiness Assessment 2026' };
 
@@ -750,5 +805,8 @@ export default function Page() {
 		</main>
 	);
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8:app/tools/quantum-ai-readiness-assessment-2026/page.tsx
+<<<<<<< HEAD
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf
 }

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8d12
@@ -61,3 +62,13 @@ export default function PerformanceMetrics() {
   return null;
 }
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
+=======
+'use client';
+
+import React from 'react';
+
+export default function PerformanceMetrics() {
+  return null;
+}
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf

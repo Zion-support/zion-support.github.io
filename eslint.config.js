@@ -271,6 +271,7 @@ export default [
       'syntax-fixer.js',
       'test-*.js',
       '**/static/**',
+<<<<<<< HEAD
       '**/*.min.js',
 <<<<<<< HEAD
       // Additional problematic files
@@ -352,6 +353,32 @@ export default [
       'temp_exclude/**',
       'temp-problematic-pages/**'
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-966c
+=======
+      'temp*/**',
+      'tests/**',
+      '__tests__/**',
+      'test*/**',
+      'types/**',
+      'utils/**',
+      'token/**',
+      '**/backup/**',
+      '**/backups/**',
+      '**/backup-merge-conflicts/**',
+      '**/broken**/**',
+      '**/*.backup.*',
+      '**/*.cleanup-backup.*',
+      '**/*.disabled/**',
+      '**/*.disabled/**',
+      '**/*.disabled*',
+      '**/*.bak/**',
+      'ts_files_backup/**',
+      'types.disabled/**',
+      'utils.disabled/**',
+      'zion-os/**',
+      'zion-website/**',
+      'zion-ai-assistant/**',
+      '**/*.min.js'
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf
     ]
   }
 ];
