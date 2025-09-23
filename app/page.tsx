@@ -1,4 +1,6 @@
+import React from 'react'
 import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -8,29 +10,24 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-white">
-      <section className="max-w-5xl mx-auto px-6 py-24 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          Zion Tech Group
+    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-6">
+      <div className="max-w-3xl text-center">
+        <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          Advanced AI and
+          <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Technology Solutions</span>
         </h1>
-        <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
-          AI, cloud, and micro SaaS solutions to accelerate your business.
-        </p>
+        <p className="text-lg text-gray-300 mb-8">Transform your business with cutting-edge AI, cloud, and cybersecurity solutions.</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/services"
-            className="bg-black text-white px-6 py-3 rounded-md font-semibold"
-          >
-            Explore Services
+          <Link href="/services" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center">
+            Explore Solutions
+            <ArrowRight className="ml-2 w-5 h-5" />
           </Link>
-          <Link
-            href="/contact"
-            className="border px-6 py-3 rounded-md font-semibold"
-          >
-            Contact Us
+          <Link href="/contact" className="border border-gray-300 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all inline-flex items-center justify-center">
+            Get Started
           </Link>
         </div>
-      </section>
+      </div>
     </main>
   )
 }
+
