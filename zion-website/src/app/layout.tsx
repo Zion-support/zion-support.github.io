@@ -1,4 +1,5 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
+import type { ReactNode } from 'react'
 import Footer from '@/components/Footer'
 import Navigation from '@/components/Navigation'
 import type { Metadata, Viewport } from 'next'
