@@ -1,3 +1,4 @@
+import React, { Suspense, lazy } from 'react'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import React, { lazy, Suspense } from 'react'
@@ -7,6 +8,7 @@ import Footer from './components/Footer'
 import Testimonials from './components/Testimonials'
 import AnimatedCounter from './components/AnimatedCounter'
 import ScrollReveal from './components/ScrollReveal'
+const LazyTestimonials = dynamic(() => import('./components/Testimonials'))
 
 // Import new advanced AI components
 // Temporarily disabled heavy components for build recovery
