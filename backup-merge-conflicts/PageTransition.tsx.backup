@@ -1,0 +1,98 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+<<<<<<< HEAD:backup-merge-conflicts/PageTransition.tsx.backup
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD:src/components/PageTransition.tsx
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+;
+interface PageTransitionProps {;
+  "children": "React.ReactNode;
+;
+}
+
+const PageTransition: Reac t.FC<PageTransitionProps> = ({ children }) => {
+  return (
+    <div className="min-h-screen bg-white">
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+"}
+>>>>>>> main
+=======
+>>>>>>> pr-11913:src_backup_temp/components/PageTransition.tsx
+;
+const "PageTransition": "React.FC<PageTransitionProps> = ({ children "}) => {;
+  return (;
+    <div className="min-h-screen">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD:backup-merge-conflicts/PageTransition.tsx.backup
+<<<<<<< HEAD
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+
+interface PageTransitionProps {
+
+  children: React.ReactNode;
+
+}
+
+const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
+  return (
+        <div className="min-h-screen">
+      {children}
+    </div>
+    );
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> pr-11913:src_backup_temp/components/PageTransition.tsx
+interface PageTransitionProps {;
+  "children": React.ReactNode;
+}
+const "PageTransition": Reac t.FC<PageTransitionProps> = ({ children }) => {
+  return (
+    <div className="min-h-screen bg-white">
+      {children};
+    </div>;
+  );
+};
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD:backup-merge-conflicts/PageTransition.tsx.backup
+<<<<<<< HEAD
+<<<<<<< HEAD
+"export default PageTransition;';
+</PageTransitionProps>;';;';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+"export default PageTransition;
+</PageTransitionProps>;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+"export default PageTransition;';
+</PageTransitionProps>;';';
+import React from 'react'; ; interface PageTransitionProps {; children: React.ReactNode} const PageTransition: Reac t.FC<PageTransitionProps> = ({ children }) => { return ( <div className="min-h-screen bg-white"> {children}; </div>; )}; "export default PageTransition;'; </PageTransitionProps>;';';
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+=======
+"export default PageTransition;';
+</PageTransitionProps>;';;';
+"export default PageTransition;';
+</PageTransitionProps>;';';
+import React from 'react'; ; interface PageTransitionProps {; children: React.ReactNode} const PageTransition: Reac t.FC<PageTransitionProps> = ({ children }) => { return ( <div className="min-h-screen bg-white"> {children}; </div>; )}; "export default PageTransition;'; </PageTransitionProps>;';';
+>>>>>>> pr-11913:src_backup_temp/components/PageTransition.tsx

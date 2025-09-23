@@ -1,0 +1,12 @@
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+
+export default function OrderConfirmation() {
+  const { orderId } = useParams() as { orderId?: string };
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>Component placeholder</p>
+    </div>
+  );
+}

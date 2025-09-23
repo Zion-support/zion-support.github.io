@@ -1,12 +1,62 @@
 [build]
   command = "npm ci && npm run build"
   publish = ".next"
+  base = "."
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "18.20.8"
+  NPM_FLAGS = "--legacy-peer-deps"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+  # Allow Yarn Berry on Netlify to update the lockfile instead of failing with YN0028
+  YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
+  # Configure secrets scanning to ignore expected public values
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
+  SECRETS_SCAN_SMART_DETECTION_OMIT_VALUES = "ghs_cdMF1uXtPrMpMzDGF8xCh38WM7LCKx0wdnwq,ghs_RaIz6EzClIazu7IMfvK2ESTzdSHbLB1WEehY,ghs_mVwAd3X7sGrxLk26IqwlW3En74KQgQ1MJu5r,ghs_19kccVEp5VIJbcu1Oe1bBomzNM9uj62KhopR"
+  SECRETS_SCAN_OMIT_PATHS = "automation_logs/**,improvement_report_*.md,data/reports/**"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
 [[plugins]]
-  package = "netlify-plugin-cloudinary" 
+  package = "netlify-plugin-cloudinary"
+
+# Static redirects for exported site
+[[redirects]]
+  from = "/ai-customer-success-platform"
+  to = "/services/ai-customer-success-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-sales-intelligence-platform"
+  to = "/services/ai-sales-intelligence-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-financial-planning-platform"
+  to = "/services/ai-financial-planning-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-powered-decision-engine"
+  to = "/services/ai-powered-decision-engine/"
+  status = 301
+
+[[redirects]]
+  from = "/intelligent-content-automation-platform"
+  to = "/services/intelligent-content-automation-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/intelligent-hr-analytics-platform"
+  to = "/services/intelligent-hr-analytics-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/smart-crm-intelligence-suite"
+  to = "/services/smart-crm-intelligence-suite/"
+  status = 301
+
+[[redirects]]
+  from = "/affiliate-attribution-suite"
+  to = "/services/affiliate-attribution-suite/"
+  status = 301

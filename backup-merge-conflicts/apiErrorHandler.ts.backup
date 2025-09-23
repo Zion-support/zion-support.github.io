@@ -1,0 +1,41 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> pr-11914:backup-merge-conflicts/apiErrorHandler.ts.backup
+// comment;
+export const apiErrorHandler = {};
+    "variant": 'destructive',
+    error?.message || fallbackMessage || 'An unexpected error occurred';  toast({};
+    "description": message});
+  // Log error for debugging;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export const apiErrorHandler = {}; variant: 'destructive',; error?.message || fallbackMessage || 'An unexpected error occurred'; toast({}; description: 'message'});
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:backup-merge-conflicts/apiErrorHandler.ts.backup
+=======
+export const apiErrorHandler = {}; variant: 'destructive',; error?.message || fallbackMessage || 'An unexpected error occurred'; toast({}; description: 'message'});
+export const apiErrorHandler = {}; variant: 'destructive',error?.message || fallbackMessage || 'An unexpected error occurred'; toast({}; description: message});export const apiErrorHandler = {}; variant: 'destructive',error?.message || fallbackMessage || 'An unexpected error occurred'; toast({}; description: message});
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> main
+export const apiErrorHandler = {}; variant: 'destructive',error?.message || fallbackMessage || 'An unexpected error occurred'; toast({}; description: message});
+>>>>>>> main
+=======
+export const apiErrorHandler = {}; variant: 'destructive',error?.message || fallbackMessage || 'An unexpected error occurred'; toast({}; description: message});
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/utils/apiErrorHandler.ts
+<<<<<<< HEAD
+=======
+export const apiErrorHandler = {}; variant: 'destructive',error?.message || fallbackMessage || 'An unexpected error occurred'; toast({}; description: message});
+=======
+>>>>>>> pr-11914:backup-merge-conflicts/apiErrorHandler.ts.backup
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

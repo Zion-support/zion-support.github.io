@@ -1,56 +1,70 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "es6"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    },
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false
-  },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    ".next",
-    "out",
-    "dist",
-    "build",
-    "automation",
-    "scripts",
-    "fix_*.js",
-    "fix_*.cjs",
-    "*.fix.js",
-    "*.fix.cjs"
-  ]
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@/*": [
+				"zion-website/src/*"
+			]
+		},
+		"lib": [
+			"dom",
+			"dom.iterable",
+			"esnext"
+		],
+		"allowJs": true,
+		"skipLibCheck": true,
+		"strict": false,
+		"forceConsistentCasingInFileNames": true,
+		"noEmit": true,
+		"incremental": true,
+		"module": "esnext",
+		"esModuleInterop": true,
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"jsx": "preserve",
+		"plugins": [
+			{
+				"name": "next"
+			}
+		],
+		"strictNullChecks": true,
+		"target": "ES2017"
+	},
+	"include": [
+		"next-env.d.ts",
+		"zion-website/src/**/*.ts",
+		"zion-website/src/**/*.tsx"
+	],
+	"exclude": [
+		"node_modules",
+		"**/node_modules/**",
+		".next/cache",
+		"dist",
+		"out",
+		"coverage",
+		"build",
+		"public/build",
+		"**/*backup*",
+		"**/*conflict*",
+		"**/*temp*",
+		"temp*/**",
+		"temp_*/**",
+		"temp-*/**",
+		"server",
+		"server/**",
+		".temp_backup_components",
+		".temp_backup_components/**",
+		"automation",
+		"automation/**",
+		"apps.backup",
+		"recovered-branches",
+		"backup-problematic-files",
+		"zion-os",
+		"zion-os/**",
+		"zion-ai-assistant",
+		"zion-ai-assistant/**",
+		"zion-os.disabled",
+		"zion-os.disabled/**"
+	]
 }

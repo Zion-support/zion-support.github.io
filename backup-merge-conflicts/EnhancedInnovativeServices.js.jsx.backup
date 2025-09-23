@@ -1,0 +1,24 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:backup-merge-conflicts/EnhancedInnovativeServices.js.jsx.backup
+<<<<<<< HEAD
+const React from "react";"""; import { EnhancedInnovativeServicesShowcase } from "@/components/services/EnhancedInnovativeServicesShowcase";"""; import EnhancedSEO from "@/components/EnhancedSEO"; export {}; return null} return(); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };''"
+<<<<<<< HEAD:backup-merge-conflicts/EnhancedInnovativeServices.js.jsx.backup
+=======
+import _React from 'react';'''; import { EnhancedInnovativeServicesShowcase } from '@/components/services/EnhancedInnovativeServicesShowcase';'''; import EnhancedSEO from '@/components/EnhancedSEO'; export {}; return null} return(); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };
+=======
+<<<<<<< HEAD:src.disabled/src/pages.disabled/EnhancedInnovativeServices.jsx
+import _React from 'react';'''; import { EnhancedInnovativeServicesShowcase } from '@/components/services/EnhancedInnovativeServicesShowcase';'''; import EnhancedSEO from '@/components/EnhancedSEO'; export {}; return null} return(); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };
+import React from \'react\';\''\'; import { EnhancedInnovativeServicesShowcase } from \'@/components/services/EnhancedInnovativeServicesShowcase\';\''\'; import EnhancedSEO from \'@/components/EnhancedSEO\'; export {}; return null} return(); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> main
+=======
+import _React from 'react';'''; import { EnhancedInnovativeServicesShowcase } from '@/components/services/EnhancedInnovativeServicesShowcase';'''; import EnhancedSEO from '@/components/EnhancedSEO'; export {}; return null} return(); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/pages.disabled/EnhancedInnovativeServices.js.jsx
+<<<<<<< HEAD
+=======
+import _React from 'react';'''; import { EnhancedInnovativeServicesShowcase } from '@/components/services/EnhancedInnovativeServicesShowcase';'''; import EnhancedSEO from '@/components/EnhancedSEO'; export {}; return null} return(); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };
+=======
+>>>>>>> pr-11914:backup-merge-conflicts/EnhancedInnovativeServices.js.jsx.backup
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> pr-11935

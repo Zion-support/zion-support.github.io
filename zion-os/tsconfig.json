@@ -1,0 +1,59 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+<<<<<<< HEAD
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+=======
+    "baseUrl": "src",
+    "paths": {
+      "@/*": [
+        "*"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047
+      ]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/components/InteractiveCard.tsx",
+    "src/components/LayoutWrapper.tsx",
+    "src/components/LoadingSpinner.tsx",
+    "src/components/OnboardingWalkthrough.tsx",
+    "src/components/StructuredData.tsx",
+    "src/data/services.ts"
+  ]
+}

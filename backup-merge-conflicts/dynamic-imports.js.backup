@@ -1,0 +1,35 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export const dynamicImport = (importFn) => { return React.lazy(importFn)}; export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}; export const preloadComponent = (importFn) => { if (typeof window !== &apos;undefined&apos;) { importFn()} };
+=======
+<<<<<<< HEAD
+module.exports = const dynamicImport = (importFn) => { return React.lazy(importFn)}; export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}; export const preloadComponent = (importFn) => { if (typeof window !== "undefined") { importFn()} };''"
+=======
+import { lazy } from 'react';
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+
+export const dynamicImport = (importFn) => {
+  return lazy(importFn);
+};
+
+export const createLazyComponent = (componentPath) => {
+  return dynamicImport(() => import(componentPath));
+};
+
+export const preloadComponent = (importFn) => {
+  if (typeof window !== 'undefined') {
+    importFn();
+  }
+};
+<<<<<<< HEAD
+export const dynamicImport = (importFn) => { return React.lazy(importFn)}; export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}; export const preloadComponent = (importFn) => { if (typeof window !== 'undefined') { importFn()} };
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+=======
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

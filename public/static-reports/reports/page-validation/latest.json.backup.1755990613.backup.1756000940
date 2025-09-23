@@ -1,0 +1,10 @@
+{
+  "summary": {
+    "totalFiles": 1,
+    "filesWithIssues": 1,
+    "totalIssues": 0,
+    "totalWarnings": 1,
+    "buildBreakingFiles": 0,
+    "canBuild": true
+  },
+}
