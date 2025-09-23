@@ -1,4 +1,36 @@
 {
+  "extends": "./tsconfig.json",
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "utils/**/*.ts",
+    "utils/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/backups/**",
+    "**/*backup*",
+    "**/*conflict*",
+    "**/*temp*",
+    "apps.backup",
+    "recovered-branches",
+    "zion-os",
+    "zion-website",
+    "zion-ai-assistant",
+    "tests",
+    "__tests__",
+    "e2e"
+  ]
+}
+{
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
@@ -33,5 +65,14 @@
     "composite": true,
     "noEmit": true
   },
-  "include": ["src", "pages", "types"]
+  "include": ["src", "pages"],
+  "exclude": [
+    "node_modules",
+    "src/pages_backup/**",
+    "**/*backup*/**",
+    "**/backup/**",
+    "**/backups/**",
+    "**/recovered-branches/**",
+    "types/**"
+  ]
 }

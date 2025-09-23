@@ -1,3 +1,13 @@
+export const BLOG_POSTS = [
+  // Minimal placeholder to satisfy dynamic routes during build
+  {
+    slug: 'welcome-to-zion-tech-group',
+    title: 'Welcome to Zion Tech Group',
+    description: 'Introducing our AI and technology solutions.',
+    date: '2025-01-01',
+  },
+];
+
 export const blogPosts = [
   {
     id: 7,

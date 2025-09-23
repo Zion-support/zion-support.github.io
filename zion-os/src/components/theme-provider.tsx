@@ -33,6 +33,10 @@ export function ThemeProvider({
 
   useEffect(() => {
     setMounted(true);
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850
     if (typeof window !== "undefined") {
       const storedTheme = localStorage.getItem(storageKey) as Theme;
       if (storedTheme) setTheme(storedTheme);

@@ -2,7 +2,6 @@ import type { ReactNode } from 'react'
 import Footer from '@/components/Footer'
 import Navigation from '@/components/Navigation'
 import type { Metadata, Viewport } from 'next'
-import type { ReactNode } from 'react'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
@@ -55,7 +54,7 @@ export const viewport: Viewport = {
 export default function RootLayout({
   children,
 }: {
-  children: ReactNode
+  children: React.ReactNode
 }) {
   return (
     <html lang="en" className="scroll-smooth">

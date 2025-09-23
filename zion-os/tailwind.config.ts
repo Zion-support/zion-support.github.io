@@ -48,4 +48,8 @@ const config: Config = {
   plugins: [],
 }
 
+<<<<<<< HEAD
 export default config
+=======
+export default config
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850

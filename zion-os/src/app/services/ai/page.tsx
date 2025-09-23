@@ -5,4 +5,8 @@ export default function AIServicesPage() {
       <p className="text-gray-600">AI strategy, engineering, and deployment.</p>
     </main>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047
