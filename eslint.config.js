@@ -11,7 +11,6 @@ export default [
     ignores: [
       'node_modules/**',
       '.next/**',
-      '**/.next/**',
       'out/**',
       'dist/**',
       'build/**',
@@ -33,8 +32,6 @@ export default [
       '**/*.min.js'
     ]
   },
-  js.configs.recommended,
-  ...tseslint.configs.recommended,
   {
     files: [
       'app/**/*.{js,jsx,ts,tsx}',
