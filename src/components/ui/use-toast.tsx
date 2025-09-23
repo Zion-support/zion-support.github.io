@@ -58,7 +58,7 @@ export function useToast() {
   }
   return context;
 
-};
+}
 
 export const ToastProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [toasts, setToasts] = useState<Toast[]>([]);
