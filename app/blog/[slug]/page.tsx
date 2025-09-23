@@ -34,5 +34,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 }
 
 export async function generateStaticParams() {
-  return BLOG_POSTS.map(post => ({ slug: post.slug }));
+  if (!Array.isArray(BLOG_POSTS)) return [];
+  return BLOG_POSTS
+    .filter((p) => p && typeof p.slug === 'string' && p.slug.length > 0)
+    .map((post) => ({ slug: post.slug }));
 }

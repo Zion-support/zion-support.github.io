@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
+import React, { lazy, Suspense } from 'react'
+import LoadingSpinner from './components/LoadingSpinner'
 import { ArrowRight, Brain, Cloud, Shield, Zap, Users, Globe, Target, Sparkles, TrendingUp } from 'lucide-react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
@@ -248,7 +250,7 @@ export default function HomePage() {
 
         {/* Testimonials Section */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
-          <LazyTestimonials />
+      <Testimonials />
         </div>
       </main>
       
