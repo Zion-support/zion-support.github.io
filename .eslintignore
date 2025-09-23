@@ -77,8 +77,6 @@ coverage/
 dist/
 build/
 coverage/
-<<<<<<< HEAD
-=======
 out/
 backups/
 backup/
@@ -95,7 +93,6 @@ zion-os/
 zion-website/
 zion-ai-assistant/
 apps/
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1
 
 # Ignore backups and temp artifacts
 **/backup*/
@@ -131,10 +128,8 @@ tests/**
 test/**
 **/*.test.*
 
-<<<<<<< HEAD
 # Generated locks and artifacts
 *.tsbuildinfo
-=======
 # Temp directories
 temp-backup/
 temp_backup/
@@ -187,4 +182,3 @@ services_backup/**
 **/*.backups*/
 **/*.corrupted*/
 **/*.disabled*/
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8

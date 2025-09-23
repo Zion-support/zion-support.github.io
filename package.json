@@ -2,6 +2,7 @@
   "name": "bolt.new.zion.app",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=8.0.0"
@@ -10,12 +11,12 @@
     "dev": "next dev",
     "build": "NODE_OPTIONS='--max-old-space-size=4096 --openssl-legacy-provider' next build --no-lint",
     "start": "next start",
-    "lint": "eslint app --no-error-on-unmatched-pattern",
+    "lint": "eslint .",
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "rm -rf .next && npm run build",
     "dev:clean": "rm -rf .next && npm run dev",
-    "lint:fix": "eslint app --fix",
-    "type-check": "NODE_OPTIONS='--max-old-space-size=8192' tsc --noEmit --skipLibCheck",
+    "lint:fix": "eslint . --fix",
+    "type-check": "NODE_OPTIONS='--max-old-space-size=8192' tsc --noEmit",
     "test": "jest --runInBand --passWithNoTests --no-cache",
     "test:watch": "jest --watch --runInBand",
     "preview": "npm run build && npm run start",
@@ -80,10 +81,19 @@
     "jest-environment-jsdom": "^29.0.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.0",
-    "typescript": "^5.9.2",
-    "typescript-eslint": "^8.44.1"
+    "typescript": "^5.9.2"
   },
   "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "testMatch": [
+      "**/?(*.)+(spec|test).+(ts|tsx|js|jsx)"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
     "testEnvironment": "jest-environment-jsdom",
     "setupFilesAfterEnv": [
       "<rootDir>/jest.setup.js"
@@ -91,28 +101,6 @@
     "moduleNameMapper": {
       "^@/(.*)$": "<rootDir>/$1"
     },
-    "modulePathIgnorePatterns": [
-      "<rootDir>/automation/backups/.*",
-      "<rootDir>/apps.backup/.*",
-      "<rootDir>/components/apps/.*",
-      "<rootDir>/.temp_backup_components/.*",
-      "<rootDir>/backup/.*",
-      "<rootDir>/backups/.*",
-      "<rootDir>/backup-merge-conflicts/.*",
-      "<rootDir>/recovered-branches/.*",
-      "<rootDir>/zion-os/.*"
-    ],
-    "watchPathIgnorePatterns": [
-      "<rootDir>/automation/backups/.*",
-      "<rootDir>/apps.backup/.*",
-      "<rootDir>/components/apps/.*",
-      "<rootDir>/.temp_backup_components/.*",
-      "<rootDir>/backup/.*",
-      "<rootDir>/backups/.*",
-      "<rootDir>/backup-merge-conflicts/.*",
-      "<rootDir>/recovered-branches/.*",
-      "<rootDir>/zion-os/.*"
-    ],
     "transform": {
       "^.+\\.(js|jsx|ts|tsx)$": [
         "babel-jest",
@@ -123,49 +111,7 @@
         }
       ]
     },
-    "testPathIgnorePatterns": [
-      "<rootDir>/.next/",
-      "<rootDir>/node_modules/",
-      "<rootDir>/__tests__/",
-      "<rootDir>/tests/",
-      "<rootDir>/test/",
-      "<rootDir>/src.broken/",
-      "<rootDir>/src-corrupted/",
-      "<rootDir>/temp_backup/",
-      "<rootDir>/pages_backup/",
-      "<rootDir>/dao/",
-      "<rootDir>/tests.disabled/",
-      "<rootDir>/src.disabled/",
-      "<rootDir>/src_backup_temp/",
-      "<rootDir>/src_backup/",
-      "<rootDir>/backup-problematic-files/",
-      "<rootDir>/zion-os/",
-      "<rootDir>/zion-os.broken/",
-      "<rootDir>/zion-os.disabled/",
-      "<rootDir>/zion-os.corrupted/",
-      "<rootDir>/server/",
-      "<rootDir>/automation/",
-      "<rootDir>/pages-disabled/",
-      "<rootDir>/pages.bak/",
-      "<rootDir>/components.disabled/",
-      "<rootDir>/components.disabled_full/",
-      "<rootDir>/pages.disabled/",
-      "<rootDir>/pages.disabled_auto/",
-      "<rootDir>/pages.disabled_full/",
-      "<rootDir>/pages_backup_before_cleanup/",
-      "<rootDir>/pages.broken/",
-      "<rootDir>/pages.corrupted",
-      "<rootDir>/pages.corrupted.*",
-      "<rootDir>/recovered-branches/",
-      "<rootDir>/ts_files_backup/",
-      "<rootDir>/temp_exclude/",
-      "<rootDir>/corrupted_backup/",
-      "<rootDir>/App.test.ts",
-      "<rootDir>/plugins/wallet-connector/cypress/",
-      "<rootDir>/components/api/docs/",
-      "<rootDir>/data/api-docs/",
-      "<rootDir>/e2e/"
-    ]
+    "testPathIgnorePatterns": ["/node_modules/", "/.next/"]
   },
   "packageManager": "npm@11.6.0"
 }

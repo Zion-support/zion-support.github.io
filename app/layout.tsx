@@ -1,6 +1,8 @@
+import React from 'react';
+
 export const metadata = {
-	title: "Zion Tech Group",
-	description: "AI, cloud, and micro SaaS solutions",
+	title: 'Zion App',
+	description: 'Zion application',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
