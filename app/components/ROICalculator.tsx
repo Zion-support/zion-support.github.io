@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8d12
@@ -15,10 +16,15 @@ export default function ROICalculator() {
 }
 =======
 'use client';
+=======
+"use client";
+import React from "react";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6fc7
 
 export default function ROICalculator() {
   return null;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1
 =======
 export default function ROICalculator() {
@@ -31,3 +37,6 @@ export default function ROICalculator() {
 }
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8d12
+=======
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6fc7

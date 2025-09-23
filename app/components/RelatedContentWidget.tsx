@@ -1,14 +1,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function RelatedContentWidget() {
 	return null;
 }
 =======
 'use client';
+=======
+"use client";
+import React from 'react';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6fc7
 
 export default function RelatedContentWidget() {
   return null;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1
 =======
 "use client";
@@ -25,3 +31,6 @@ export default function RelatedContentWidget() {
 }
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8d12
+=======
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6fc7
