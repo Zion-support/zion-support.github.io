@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import React from "react";
@@ -10,3 +11,8 @@ export default function RevolutionaryAIContent2026Banner() {
   );
 }
 
+=======
+export default function RevolutionaryAIContent2026Banner() {
+  return null;
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295

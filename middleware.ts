@@ -6,6 +6,7 @@ import type { NextRequest } from 'next/server';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Public, protected, and admin paths (deduplicated)
 const publicPaths: string[] = [
 	'/',
@@ -455,4 +456,12 @@ export const config = {
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
+=======
+export function middleware(_request: NextRequest) {
+	return NextResponse.next();
+}
+
+export const config = {
+	matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
 };

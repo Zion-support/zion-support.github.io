@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8d12
@@ -55,3 +56,8 @@ export default function ROICalculator() {
 }
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
+=======
+export default function ROICalculator() {
+  return null;
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
