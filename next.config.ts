@@ -1,6 +1,6 @@
 import type { NextConfig } from 'next';
 
-const nextConfig: NextConfig ={
+const nextConfig: NextConfig = {
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
@@ -12,7 +12,8 @@ const nextConfig: NextConfig ={
   images: {
     domains: ['localhost', 'ziontechgroup.com', 'images.unsplash.com', 'via.placeholder.com'],
     formats: ['image/webp', 'image/avif'],
-    unoptimized: true},
+    unoptimized: true,
+  },
 
   distDir: '.next',
   trailingSlash: false,
@@ -20,11 +21,9 @@ const nextConfig: NextConfig ={
   assetPrefix: undefined,
   generateEtags: true,
 
-<<<<<<< HEAD
-  // Modern experimental features for Next.js 15
-  turbopack: {},
   experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion']
+    appDir: false,
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
 
   async redirects() {
@@ -82,5 +81,3 @@ const nextConfig: NextConfig ={
 };
 
 export default nextConfig;
-=======
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
