@@ -5,6 +5,7 @@ import { ArrowRight, Brain, Cloud, Shield, Zap, Users, Globe, Target, Sparkles, 
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import Testimonials from './components/Testimonials'
+const LazyTestimonials = lazy(() => import('./components/Testimonials'));
 import AnimatedCounter from './components/AnimatedCounter'
 // Fallback if optional components are missing
 let ScrollReveal: any
@@ -64,6 +65,10 @@ import AI2026AutonomousSystemsBanner from './components/AI2026AutonomousSystemsB
 import AI2026QuantumRevolutionBanner from './components/AI2026QuantumRevolutionBanner';
 import AI2026UltimateShowcaseBanner from './components/AI2026UltimateShowcaseBanner';
 import QuantumAI2026BreakthroughBanner from './components/QuantumAI2026BreakthroughBanner';
+import AdvancedContentRecommendationEngine from './components/AdvancedContentRecommendationEngine';
+import RealTimePerformanceDashboard from './components/RealTimePerformanceDashboard';
+import IntelligentSearchEngine from './components/IntelligentSearchEngine';
+import AdvancedAIAssistant from './components/AdvancedAIAssistant';
 import QuantumAIContentShowcase2026 from './components/QuantumAIContentShowcase2026';
 
 // Import new promotional components
@@ -256,7 +261,9 @@ export default function HomePage() {
 
         {/* Testimonials Section */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
-          <LazyTestimonials />
+          <Suspense fallback={<div className="text-center py-20">Loading testimonials...</div>}>
+            <LazyTestimonials />
+          </Suspense>
         </div>
       </main>
       

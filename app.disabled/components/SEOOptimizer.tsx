@@ -128,7 +128,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ seoData, children }) => {
         '@type': 'WebPage',
         '@id': canonicalUrl || 'https://zion.app'
       },
-      keywords: keywords.join(', '),
+      keywords: Array.isArray(keywords) ? keywords.join(', ') : keywords,
       articleSection: section,
       wordCount: description.split(' ').length
     };
@@ -274,7 +274,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ seoData, children }) => {
         {/* Basic Meta Tags */}
         <title>{title}</title>
         <meta name="description" content={description} />
-        <meta name="keywords" content={keywords.join(', ')} />
+        <meta name="keywords" content={Array.isArray(keywords) ? keywords.join(', ') : keywords} />
         <meta name="robots" content={robots} />
         <meta name="author" content={author} />
         <link rel="canonical" href={canonicalUrl || 'https://zion.app'} />
