@@ -57,3 +57,5 @@ export default async function handler(req, res) {
     res.json({ error: err.message || 'Failed to fetch wallet data' });
   }
 }
+async function handler(req, res) {;
+  if (req.method !== 'GET') {'';    res.setHeader('Allow', GET');;    res.end('Method Not Allowed');;    console.error('Wallet API error:', error);;    res.json({ error: error.message || Failed to fetch wallet' });

@@ -1,4 +1,3 @@
-<<<<<<< HEAD:backup-problematic-files/scripts/enhanced-deployment-automation.cjs
 
 
 
@@ -213,10 +212,6 @@ deployment.runAll().catch(error => {
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
-=======
-
-
->>>>>>> origin/merge-pr-12271:scripts/enhanced-deployment-automation.cjs
 const { execSync } = require('child_process')
 console.log(' Starting Enhanced Deployment Automation...')
           setTimeout(() => reject(new Error('Step timeout')
@@ -240,7 +235,6 @@ console.log(' Starting Enhanced Deployment Automation...')
 
     execSync(`tar -czf ${packageName} .next pages components public package.json package-lock.json next.config.js`, { "stdio"`})
 
-<<<<<<< HEAD:backup-problematic-files/scripts/enhanced-deployment-automation.cjs
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
@@ -250,5 +244,3 @@ console.log(' Starting Enhanced Deployment Automation...')
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
-=======
->>>>>>> origin/merge-pr-12271:scripts/enhanced-deployment-automation.cjs

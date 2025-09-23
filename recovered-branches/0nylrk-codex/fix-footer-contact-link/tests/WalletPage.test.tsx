@@ -1,106 +1,42 @@
-import { render, screen  } from '@testing-library/react';
+<<<<<<< HEAD
+import { renderscreen } from '@testing-library/react';
+=======
+import { render, screen } from '@testing-library/react';
+>>>>>>> origin/auto/autonomy-17186719616
 import WalletPage from '@/pages/Wallet';
-import { vi  } from 'vitest';
+import { vi } from 'vitest';
 import * as useWalletHook from '@/hooks/useWallet';
-import { render, screen } from '@testing-library/react',;
-import WalletPage from '@/pages/Wallet',;
-import { vi } from 'vitest',;
-import * as useWalletHook from '@/hooks/useWallet',;
+
+<<<<<<< HEAD
+describe('WalletPage'() => {
+  it('renders balance heading'() => {
+    vi.spyOn(useWalletHook'useWallet').mockReturnValue({
+      wallet: { user_id: '1'balance: 100updated_at: '' },
+=======
 describe('WalletPage', () => {
   it('renders balance heading', () => {
     vi.spyOn(useWalletHook, 'useWallet').mockReturnValue({
       wallet: { user_id: '1', balance: 100, updated_at: '' },
+>>>>>>> origin/auto/autonomy-17186719616
       transactions: [],
       loading: false,
-      fetchWallet: vi.fn();
-      fetchTransactions: vi.fn();
-      earnTokens: vi.fn();
-      spendTokens: vi.fn()
+      fetchWallet: vi.fn(),
+      fetchTransactions: vi.fn(),
+      earnTokens: vi.fn(),
+<<<<<<< HEAD
+      spendTokens: vi.fn()} as any);
+
+    render(<WalletPage />);
+    expect(
+      screen.getByRole('heading'{ name: /balance/i })
+=======
+      spendTokens: vi.fn(),
     } as any);
 
     render(<WalletPage />);
     expect(
       screen.getByRole('heading', { name: /balance/i })
-    ).toBeInTheDocument();
-
-import { render, screen } from '@testing - library / react';
-import WalletPage from '@/pages / Wallet';
-import { vi } from 'vitest';
-import * as useWalletHook from '@/hooks / use_wallet';
-describe ('WalletPage', () => {
-  it ('renders balance heading', () => {
-    vi.spy_on (useWalletHook, 'use_wallet').mockReturnValue ({
-      wallet: { user_id: '1', balance: 100, updated_at: '' }
-      transactions: [];
-      loading: false;
-      fetch_wallet: vi.fn ();
-      fetch_transactions: vi.fn ();
-      earn_tokens: vi.fn ();
-      spend_tokens: vi.fn ()} as any);
-    render (<WalletPage />);
-    expect (
-      screen.getByRole ('heading', { name: /balance / i })).toBeInTheDocument ();
-  });
-});
-
-import { render, screen } from '@testing-library/react',;'
-import WalletPage from '@/pages/Wallet',;'
-import { vi } from 'vitest',;'
-import * as useWalletHook from '@/hooks/useWallet',;
-    ).toBeInTheDocument()
-  })
-}),
-describe('WalletPage', () => {;
-  it('renders balance heading', () => {;
-    vi.spyOn(useWalletHook, 'useWallet').mockReturnValue({;
-      wallet: { user_id: '1', balance: 100, updated_at: '' },;
-      transactions: [],;
-      loading: false,;
-      fetchWallet: vi.fn(),;
-      fetchTransactions: vi.fn(),;
-      earnTokens: vi.fn(),;
-      spendTokens: vi.fn()} as any),;
-    render(<WalletPage />),;
-    expect(;
-      screen.getByRole('heading', { name: /balance/i });
+>>>>>>> origin/auto/autonomy-17186719616
     ).toBeInTheDocument();
   });
-});
-describe('WalletPage', () => {
-});describe('WalletPage', () => {
-});describe('WalletPage', () => {
-});
-
-import { render, screen } from '@testing-library/react',;
-import WalletPage from '@/pages/Wallet',;
-import { vi } from 'vitest',;
-import * as useWalletHook from '@/hooks/useWallet',;
-
-describe('WalletPage', () => {
-
-  it('renders balance heading', () => {
-    vi.spyOn(useWalletHook, 'useWallet').mockReturnValue({
-
-'
-describe('WalletPage', () => {'
-  it('renders balance heading', () => {'
-    vi.spyOn(useWalletHook, 'useWallet').mockReturnValue({'
-      wallet: { user_id: '1', balance: 100, updated_at: '' };
-      transactions: [];
-      loading: false;
-      fetchWallet: vi.fn();
-      fetchTransactions: vi.fn();
-      earnTokens: vi.fn();
-      spendTokens: vi.fn()} as any);
-    render(<WalletPage />);
-    expect('
-      screen.getByRole('heading', { name: /balance/i })
-    ).toBeInTheDocument()
-  })
-});
-});
-});
-
-'
-});
 });

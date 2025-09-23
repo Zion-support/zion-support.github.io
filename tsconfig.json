@@ -8,6 +8,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "incremental": true,
     "module": "esnext",
@@ -16,19 +17,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "types": [
-      "react",
-      "react-dom",
-      "node"
-    ],
     "plugins": [
       {
         "name": "next"
       }
     ],
     "strictNullChecks": true,
-    "target": "es5",
-    "forceConsistentCasingInFileNames": true
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",
@@ -37,6 +32,16 @@
     "**/*.tsx"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "data_backup",
+    "backup",
+    "backups",
+    "pages_backup_conflict",
+    "apps.backup",
+    "corrupted-files-backup",
+    "lib_backup",
+    "**/*backup*",
+    "**/*conflict*",
+    "**/*temp*"
   ]
 }

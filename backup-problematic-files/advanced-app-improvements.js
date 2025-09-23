@@ -92,6 +92,8 @@ export class HealthChecker {
     }
     return results;
 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   }
 }
@@ -372,6 +374,7 @@ if ( {) {
 
 
   }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   async getConnection() {
     if (this && this.availableConnections.length > 0) {

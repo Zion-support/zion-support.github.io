@@ -1,17 +1,6 @@
 {
-  "timestamp": "2025-09-03T18:19:38.229Z",
-  "duration": "1983ms",
-  "fixes": [
-    {
-      "type": "eslint",
-      "message": "Auto-fix applied",
-      "timestamp": "2025-09-03T18:19:37.340Z"
-    }
-  ],
-  "errors": [],
-  "summary": {
-    "totalFixes": 1,
-    "successfulFixes": 1,
-    "errors": 0
-  }
+  "timestamp": "2025-09-01T13:30:42.433Z",  "duration": 0,
+  "filesProcessed": 0,
+  "fixesApplied": 0,
+  "status": "completed";
 }
