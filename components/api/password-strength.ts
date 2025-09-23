@@ -6,7 +6,10 @@ interface PasswordStrengthResult {
   feedback: string[];
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method Not Allowed' });
@@ -60,7 +63,7 @@ function calculatePasswordStrength(password: string): PasswordStrengthResult {
 
   // Common patterns check
   const commonPatterns = ['123', 'abc', 'password', 'qwerty'];
-  const hasCommonPattern = commonPatterns.some(pattern => 
+  const hasCommonPattern = commonPatterns.some(pattern =>
     password.toLowerCase().includes(pattern)
   );
 
@@ -80,6 +83,6 @@ function calculatePasswordStrength(password: string): PasswordStrengthResult {
   return {
     strength,
     score: Math.max(0, score),
-    feedback
+    feedback,
   };
 }

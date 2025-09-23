@@ -20,31 +20,37 @@ interface TestimonialCardProps {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Sarah Chen",
-    role: "CTO",
-    company: "TechFlow Inc.",
-    content: "Zion Tech Group transformed our AI infrastructure. The results exceeded our expectations with 60% improvement in processing speed and 40% cost reduction.",
-    rating: 5
+    name: 'Sarah Chen',
+    role: 'CTO',
+    company: 'TechFlow Inc.',
+    content:
+      'Zion Tech Group transformed our AI infrastructure. The results exceeded our expectations with 60% improvement in processing speed and 40% cost reduction.',
+    rating: 5,
   },
   {
     id: 2,
-    name: "Michael Rodriguez",
-    role: "VP of Engineering",
-    company: "CloudScale Solutions",
-    content: "Their quantum computing expertise helped us solve complex optimization problems that were previously impossible. Game-changing technology implementation.",
-    rating: 5
+    name: 'Michael Rodriguez',
+    role: 'VP of Engineering',
+    company: 'CloudScale Solutions',
+    content:
+      'Their quantum computing expertise helped us solve complex optimization problems that were previously impossible. Game-changing technology implementation.',
+    rating: 5,
   },
   {
     id: 3,
-    name: "Emily Watson",
-    role: "CEO",
-    company: "DataDriven Corp",
-    content: "The cybersecurity framework they implemented has given us complete peace of mind. Zero breaches since deployment and full compliance achieved.",
-    rating: 5
-  }
+    name: 'Emily Watson',
+    role: 'CEO',
+    company: 'DataDriven Corp',
+    content:
+      'The cybersecurity framework they implemented has given us complete peace of mind. Zero breaches since deployment and full compliance achieved.',
+    rating: 5,
+  },
 ];
 
-export default function TestimonialCard({ testimonial, isActive }: TestimonialCardProps) {
+export default function TestimonialCard({
+  testimonial,
+  isActive,
+}: TestimonialCardProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -75,26 +81,24 @@ export default function TestimonialCard({ testimonial, isActive }: TestimonialCa
         isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
       }`}
     >
-      <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 max-w-2xl mx-auto">
-        <div className="flex items-center mb-4">
-          <div className="flex mr-4">
-            {renderStars(testimonial.rating)}
-          </div>
+      <div className='bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 max-w-2xl mx-auto'>
+        <div className='flex items-center mb-4'>
+          <div className='flex mr-4'>{renderStars(testimonial.rating)}</div>
         </div>
-        
-        <blockquote className="text-lg text-gray-700 dark:text-gray-300 mb-6 italic">
+
+        <blockquote className='text-lg text-gray-700 dark:text-gray-300 mb-6 italic'>
           "{testimonial.content}"
         </blockquote>
-        
-        <div className="flex items-center">
-          <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+
+        <div className='flex items-center'>
+          <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4'>
             {testimonial.name.charAt(0)}
           </div>
           <div>
-            <div className="font-semibold text-gray-900 dark:text-white">
+            <div className='font-semibold text-gray-900 dark:text-white'>
               {testimonial.name}
             </div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">
+            <div className='text-sm text-gray-600 dark:text-gray-400'>
               {testimonial.role}, {testimonial.company}
             </div>
           </div>

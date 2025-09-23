@@ -2,4 +2,3 @@
 export type PrismaClient = unknown;
 
 export const prisma: any = {};
-

@@ -12,7 +12,7 @@ export default function TestimonialsSection() {
     if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+      setCurrentIndex(prevIndex => (prevIndex + 1) % testimonials.length);
     }, 5000);
 
     return () => clearInterval(interval);
@@ -20,14 +20,14 @@ export default function TestimonialsSection() {
 
   const goToPrevious = () => {
     setIsAutoPlaying(false);
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex(prevIndex =>
       prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
     );
   };
 
   const goToNext = () => {
     setIsAutoPlaying(false);
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    setCurrentIndex(prevIndex => (prevIndex + 1) % testimonials.length);
   };
 
   const goToSlide = (index: number) => {
@@ -36,43 +36,44 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <div className="bg-gray-50 dark:bg-gray-900 py-16">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+    <div className='bg-gray-50 dark:bg-gray-900 py-16'>
+      <div className='max-w-6xl mx-auto px-6'>
+        <div className='text-center mb-12'>
+          <h2 className='text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4'>
             What Our Clients Say
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Don't just take our word for it. Here's what industry leaders say about our solutions.
+          <p className='text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto'>
+            Don't just take our word for it. Here's what industry leaders say
+            about our solutions.
           </p>
         </div>
 
-        <div className="relative">
-          <TestimonialCard 
-            testimonial={testimonials[currentIndex]} 
+        <div className='relative'>
+          <TestimonialCard
+            testimonial={testimonials[currentIndex]}
             isActive={true}
           />
-          
+
           {/* Navigation Arrows */}
           <button
             onClick={goToPrevious}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-700"
-            aria-label="Previous testimonial"
+            className='absolute left-4 top-1/2 transform -translate-y-1/2 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-700'
+            aria-label='Previous testimonial'
           >
-            <ChevronLeftIcon className="h-6 w-6 text-gray-600 dark:text-gray-300" />
+            <ChevronLeftIcon className='h-6 w-6 text-gray-600 dark:text-gray-300' />
           </button>
-          
+
           <button
             onClick={goToNext}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-700"
-            aria-label="Next testimonial"
+            className='absolute right-4 top-1/2 transform -translate-y-1/2 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-700'
+            aria-label='Next testimonial'
           >
-            <ChevronRightIcon className="h-6 w-6 text-gray-600 dark:text-gray-300" />
+            <ChevronRightIcon className='h-6 w-6 text-gray-600 dark:text-gray-300' />
           </button>
         </div>
 
         {/* Dots Indicator */}
-        <div className="flex justify-center mt-8 space-x-2">
+        <div className='flex justify-center mt-8 space-x-2'>
           {testimonials.map((_, index) => (
             <button
               key={index}
@@ -88,10 +89,10 @@ export default function TestimonialsSection() {
         </div>
 
         {/* Auto-play Toggle */}
-        <div className="text-center mt-6">
+        <div className='text-center mt-6'>
           <button
             onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-            className="text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
+            className='text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300'
           >
             {isAutoPlaying ? 'Pause' : 'Resume'} auto-play
           </button>

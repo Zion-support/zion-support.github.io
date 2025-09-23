@@ -27,7 +27,10 @@ Style:
 - Be helpful but concise
 - Provide actionable next steps when possible`;
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method Not Allowed' });
@@ -47,15 +50,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const completion = await openai.chat.completions.create({
       model: 'gpt-4o',
-      messages: [
-        { role: 'system', content: SYSTEM_PROMPT },
-        ...messages
-      ],
+      messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...messages],
       max_tokens: 500,
       temperature: 0.7,
     });
 
-    const response = completion.choices[0]?.message?.content || 'I apologize, but I was unable to generate a response.';
+    const response =
+      completion.choices[0]?.message?.content ||
+      'I apologize, but I was unable to generate a response.';
 
     return res.status(200).json({ response });
   } catch (error) {

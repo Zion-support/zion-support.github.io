@@ -2,12 +2,16 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body || {};
+  const { talentSlug, requesterName, requesterEmail, projectInfo } =
+    req.body || {};
 
   if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
     return res.status(400).json({ error: 'Missing required fields' });
@@ -22,7 +26,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       requesterEmail,
       projectInfo,
       timestamp,
-      status: 'pending'
+      status: 'pending',
     };
 
     // Persist to data/requests as a simple CMS-like log
@@ -36,11 +40,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     // TODO: Send notification email to talent
     // TODO: Send confirmation email to requester
-    
-    return res.status(201).json({ 
-      success: true, 
+
+    return res.status(201).json({
+      success: true,
       requestId: requestData.id,
-      message: 'Request submitted successfully' 
+      message: 'Request submitted successfully',
     });
   } catch (error) {
     console.error('Error processing hire request:', error);

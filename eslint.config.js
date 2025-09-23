@@ -46,9 +46,13 @@ export default [
     languageOptions: {
       parser: tseslint.parser,
       ecmaVersion: 2021,
-      sourceType: 'module'
+      sourceType: 'module',
     },
-    plugins: { react, 'react-hooks': reactHooks, '@typescript-eslint': tseslint.plugin },
+    plugins: {
+      react,
+      'react-hooks': reactHooks,
+      '@typescript-eslint': tseslint.plugin,
+    },
     settings: { react: { version: 'detect' } },
     rules: {
       'react/react-in-jsx-scope': 'off',
