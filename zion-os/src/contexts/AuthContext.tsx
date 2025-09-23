@@ -113,5 +113,8 @@ export function useAuth() {
   if (context === undefined) throw new Error("useAuth must be used within an AuthProvider");
   return context;
 }
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850

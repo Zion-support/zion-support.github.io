@@ -1,3 +1,4 @@
+<<<<<<< HEAD:app-disabled/components/RelatedContentWidget.tsx
 "use client";
 <<<<<<< HEAD
 import React from 'react';
@@ -24,13 +25,45 @@ const RelatedContentWidget: React.FC<{ items?: { title: string; href: string }[]
         {items.map((it) => (
           <li key={it.href}>
             <Link href={it.href} className="text-purple-600 hover:underline">{it.title}</Link>
+=======
+'use client';
+
+import Link from 'next/link';
+
+type Post = { title: string; slug: string; excerpt?: string };
+
+type Props = {
+  title?: string;
+  posts?: Post[];
+};
+
+export default function RelatedContentWidget({ title = 'Related Content', posts = [] }: Props) {
+  const fallback = [
+    { slug: '/blog', title: 'Latest Blog Posts' },
+    { slug: '/case-studies', title: 'Case Studies' },
+    { slug: '/services', title: 'Services' },
+  ];
+  const items = posts.length ? posts : fallback;
+
+  return (
+    <aside className="rounded-xl border border-white/10 bg-white/5 p-6 my-8">
+      <h4 className="text-lg font-semibold mb-4">{title}</h4>
+      <ul className="space-y-2">
+        {items.map((l) => (
+          <li key={l.slug}>
+            <Link className="hover:underline" href={l.slug}>{l.title}</Link>
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850:app/components/RelatedContentWidget.tsx
           </li>
         ))}
       </ul>
     </aside>
   );
+<<<<<<< HEAD:app-disabled/components/RelatedContentWidget.tsx
 };
 
 export default RelatedContentWidget;
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-5719
 
+=======
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850:app/components/RelatedContentWidget.tsx

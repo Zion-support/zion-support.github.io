@@ -1,3 +1,4 @@
+<<<<<<< HEAD:app-disabled/components/PerformanceMetrics.tsx
 <<<<<<< HEAD
 'use client';
 
@@ -27,3 +28,24 @@ const PerformanceMetrics: React.FC = () => {
 export default PerformanceMetrics;
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-5719
 
+=======
+'use client';
+
+export default function PerformanceMetrics() {
+  const items = [
+    { label: 'Uptime', value: '99.99%' },
+    { label: 'Latency', value: '45ms' },
+    { label: 'Throughput', value: '1.2k rps' },
+  ];
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      {items.map((i) => (
+        <div key={i.label} className="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
+          <div className="text-sm opacity-80">{i.label}</div>
+          <div className="text-2xl font-bold">{i.value}</div>
+        </div>
+      ))}
+    </div>
+  );
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850:app/components/PerformanceMetrics.tsx

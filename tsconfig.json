@@ -73,6 +73,7 @@
     "**/*backup*",
     "**/*conflict*",
     "**/*temp*",
+<<<<<<< HEAD
     "zion-os/**",
     "server",
     "server/**",
@@ -109,5 +110,8 @@
     "zion-ai-assistant/**",
     "zion-os.disabled",
     "zion-os.disabled/**"
+=======
+    "zion-os/**"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850
   ]
 }
