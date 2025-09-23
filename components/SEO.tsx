@@ -28,7 +28,7 @@ export default function SEOHead({
     <Head>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="keywords" content={Array.isArray(keywords) ? keywords.join(', ') : keywords} />
       <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
       <link rel="canonical" href={canonicalUrl} />
       <meta property="og:type" content={ogType} />

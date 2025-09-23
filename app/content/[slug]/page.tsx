@@ -2,10 +2,10 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import React from 'react';
-import { BLOG_POSTS } from '../../../src/data/blog-posts.js';
+import { blogPosts } from '../../../src/data/blog-posts.js';
 
 export default function ContentPage({ params }: { params: { slug: string } }) {
-  const post = BLOG_POSTS.find(p => p.slug === params.slug);
+  const post = blogPosts.find(p => p.slug === params.slug);
   if (!post) {
     notFound();
   }
@@ -33,5 +33,5 @@ export default function ContentPage({ params }: { params: { slug: string } }) {
 }
 
 export async function generateStaticParams() {
-  return BLOG_POSTS.map(post => ({ slug: post.slug }));
+  return blogPosts.map(post => ({ slug: post.slug }));
 }
