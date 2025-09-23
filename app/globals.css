@@ -1,0 +1,13 @@
+/* Minimal global styles to satisfy Next.js layout import. */
+:root {
+  color-scheme: light dark;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
